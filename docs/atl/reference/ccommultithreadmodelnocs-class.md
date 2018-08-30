@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65f8021bdc16dcfb2c4d1aa69936f27cfe7ac1df
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 09e209a7b3e81ac232d2c0441a84e55ded8faecf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884817"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212856"
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS-Klasse
 `CComMultiThreadModelNoCS` Stellt Thread-sichere-Methoden zum Inkrementieren und Dekrementieren den Wert einer Variablen, ohne kritischen Abschnitt zu sperren oder Entsperren Funktionalität.  
@@ -117,7 +117,7 @@ typedef CComFakeCriticalSection CriticalSection;
  Finden Sie unter [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).  
   
 ##  <a name="decrement"></a>  CComMultiThreadModelNoCS::Decrement  
- Diese statischen Funktion ruft die Win32-Funktion [InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580), welche dekrementiert der Wert der Variablen auf *p*.  
+ Diese statischen Funktion ruft die Win32-Funktion [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement), welche dekrementiert der Wert der Variablen auf *p*.  
   
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw();
@@ -134,7 +134,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
  **InterlockedDecrement** verhindert, dass mehrere Threads gleichzeitig verwenden diese Variable.  
   
 ##  <a name="increment"></a>  CComMultiThreadModelNoCS::Increment  
- Diese statischen Funktion ruft die Win32-Funktion [InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614), die inkrementiert des Wert der Variable verweist *p*.  
+ Diese statischen Funktion ruft die Win32-Funktion [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement), die inkrementiert des Wert der Variable verweist *p*.  
   
 ```
 static ULONG WINAPI Increment(LPLONG p) throw();

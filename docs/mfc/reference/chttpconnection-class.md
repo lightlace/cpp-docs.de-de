@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03e773e57b4cdaee09331dab651f41f1fa8db211
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bbc42f1af6dab8c34c6092e604682669ab18b9bb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336061"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211576"
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection-Klasse
 Verwaltet die Verbindung mit einem HTTP-Server.  
@@ -129,7 +129,7 @@ CHttpConnection(
 |Nicht-NULL-Zeichenfolge|Nicht-NULL-Zeichenfolge|*pstrUserName*|*pstrPassword*|  
   
  *dwFlags*  
- Eine beliebige Kombination der **INTERNET_ FLAG_\***  Flags. Finden Sie in der Tabelle in der **"Hinweise"** Abschnitt [CHttpConnection:: OpenRequest](#openrequest) eine Beschreibung der *DwFlags* Werte.  
+ Eine beliebige Kombination der `INTERNET_FLAG_*` Flags. Finden Sie in der Tabelle in der **"Hinweise"** Abschnitt [CHttpConnection:: OpenRequest](#openrequest) eine Beschreibung der *DwFlags* Werte.  
   
 ### <a name="remarks"></a>Hinweise  
  Erstellen Sie nie eine `CHttpConnection` direkt. Stattdessen erstellen Sie ein Objekt durch Aufrufen von [CInternetSession:: GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection).  

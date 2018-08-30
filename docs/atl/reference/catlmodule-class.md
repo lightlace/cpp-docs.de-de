@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5291ae4783e252341371844ca08e390958c3ff89
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4412e30316bd2d5f43eac4dddb062adb11dc6f6e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882571"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210000"
 ---
 # <a name="catlmodule-class"></a>CAtlModule-Klasse
 Diese Klasse stellt die Methoden, die durch verschiedene ATL-Modulklassen verwendet.  
@@ -167,7 +167,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
   
  In Debugbuilds wird ein Assertionsfehler auftreten, wenn *PpGIT* ist gleich NULL ist, oder wenn der globale Schnittstellentabelle Zeiger kann nicht abgerufen werden.  
   
- Finden Sie unter [IGlobalInterfaceTable](http://msdn.microsoft.com/library/windows/desktop/ms678517) Informationen auf der globalen Schnittstellentabelle.  
+ Finden Sie unter [IGlobalInterfaceTable](/windows/desktop/api/objidl/nn-objidl-iglobalinterfacetable) Informationen auf der globalen Schnittstellentabelle.  
   
 ##  <a name="getlockcount"></a>  CAtlModule::GetLockCount  
  Gibt die Anzahl der Sperren zurück.  

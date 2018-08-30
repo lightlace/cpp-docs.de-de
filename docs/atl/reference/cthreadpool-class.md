@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f55f7d676988e43216adbf6e8a0b6c21afd958a3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d8371ec583bd8b9ee4962445e4c2b6f2fbfa6280
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884086"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196961"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool-Klasse
 Diese Klasse stellt einen Pool von Arbeitsthreads, die eine Warteschlange von Arbeitsaufgaben zu verarbeiten.  
@@ -83,9 +83,9 @@ class CThreadPool : public IThreadPoolConfig
 ## <a name="remarks"></a>Hinweise  
  Threads im Pool erstellt und zerstört, wenn der Pool ist initialisiert, Größe oder Herunterfahren. Eine Instanz der Klasse *Worker* auf dem Stapel jeder Arbeitsthread im Pool erstellt werden. Jede Instanz wird für die Lebensdauer des Threads befinden.  
   
- Unmittelbar nach der Erstellung eines Threads *Worker*:: `Initialize` lautet für das Objekt, das diesem Thread zugeordnet. Unmittelbar vor der Zerstörung eines Threads *Worker*:: `Terminate` aufgerufen wird. Beide Methoden akzeptieren eine **"void"\***  Argument. Der Wert dieses Arguments wird an den Threadpool durch Übergeben der *PvWorkerParam* Parameter [CThreadPool::Initialize](#initialize).  
+ Unmittelbar nach der Erstellung eines Threads *Worker*::`Initialize` lautet für das Objekt, das diesem Thread zugeordnet. Unmittelbar vor der Zerstörung eines Threads *Worker*::`Terminate` aufgerufen wird. Beide Methoden akzeptieren eine **"void"** <strong>\*</strong> Argument. Der Wert dieses Arguments wird an den Threadpool durch Übergeben der *PvWorkerParam* Parameter [CThreadPool::Initialize](#initialize).  
   
- Wenn Arbeitsaufgaben in die Warteschlange und den Worker-Threads verfügbar sind für die Arbeit, wird ein Arbeitsthread abrufen ein Elements aus der Warteschlange und rufen die `Execute` Methode der *Worker* Objekt für diesen Thread. Drei Elemente werden dann an die Methode übergeben: das Element aus der Warteschlange, die gleiche `pvWorkerParam` übergeben *Worker*:: `Initialize` und *Worker*:: `Terminate`, und einen Zeiger auf die [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) Struktur, die für die e/a-Abschluss-Port-Warteschlange verwendet.  
+ Wenn Arbeitsaufgaben in die Warteschlange und den Worker-Threads verfügbar sind für die Arbeit, wird ein Arbeitsthread abrufen ein Elements aus der Warteschlange und rufen die `Execute` Methode der *Worker* Objekt für diesen Thread. Drei Elemente werden dann an die Methode übergeben: das Element aus der Warteschlange, die gleiche `pvWorkerParam` übergeben *Worker*:: `Initialize` und *Worker*:: `Terminate`, und einen Zeiger auf die [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) Struktur, die für die e/a-Abschluss-Port-Warteschlange verwendet.  
   
  Die *Worker* Klasse deklariert den Typ der Elemente, die für den Threadpool in Warteschlangen gestellt werden durch die Bereitstellung einer Typedef, *Worker*:: `RequestType`. Dieser Typ muss in und aus einem ULONG_PTR umgewandelt werden können.  
   
@@ -308,7 +308,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
  Die angeforderte maximale Zeit in Millisekunden, die der Threadpool für einen Thread zum Herunterfahren gewartet wird. Wenn 0 oder kein Wert angegeben wird, diese Methode verwendet den Timeout festlegen, indem [CThreadPool::SetTimeout](#settimeout).  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet eine Anforderung zum Herunterfahren für alle Threads im Pool. Wenn das Timeout abläuft, ruft diese Methode [TerminateThread](http://msdn.microsoft.com/library/windows/desktop/ms686717) in jedem Thread aus, das nicht beendet. Diese Methode wird vom Destruktor der Klasse automatisch aufgerufen.  
+ Diese Methode sendet eine Anforderung zum Herunterfahren für alle Threads im Pool. Wenn das Timeout abläuft, ruft diese Methode [TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) in jedem Thread aus, das nicht beendet. Diese Methode wird vom Destruktor der Klasse automatisch aufgerufen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [IThreadPoolConfig-Schnittstelle](../../atl/reference/ithreadpoolconfig-interface.md)   

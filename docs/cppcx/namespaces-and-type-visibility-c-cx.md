@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d09d2f60f237439f208601fe8385cf7125e1ac20
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c4bdccc14db423d7a47545c51b31ce472f0c4308
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600780"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219520"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Namespaces und Typsichtbarkeit (C++/CX)
 Ein Namespace ist ein Standard-C++-Konstrukt zum Gruppieren von Typen mit ähnlichen Funktionen und zum Verhindern von Namenskonflikten in Bibliotheken. Die Windows-Runtime-Typsystem ist erforderlich, dass alle öffentliche Windows-Runtime-Typen, einschließlich der in Ihrem eigenen Code in einem Namespace im Namespacebereich deklariert werden müssen. Öffentliche Typen, die im globalen Gültigkeitsbereich deklariert oder innerhalb einer anderen Klasse geschachtelt werden, verursachen einen Kompilierungsfehler.  
@@ -43,7 +43,7 @@ Ein Namespace ist ein Standard-C++-Konstrukt zum Gruppieren von Typen mit ähnli
 |`internal` oder `private public`|Der Member ist innerhalb der Anwendung oder Komponente öffentlich, aber nicht in den Metadaten sichtbar.|Nein|  
   
 ## <a name="windows-runtime-namespaces"></a>Windows-Runtime-namespaces  
- Die Windows-API besteht aus Typen, die in der Windows deklariert werden::\* Namespaces. Diese Namespaces werden für Windows reserviert, und es können ihnen keine Typen hinzugefügt werden. Im **Objektkatalog**können Sie diese Namespaces in der Datei Windows.winmd anzeigen. Eine Dokumentation zu diesen Namespaces finden Sie unter [Windows-API](http://msdn.microsoft.com/library/windows/apps/br211377).  
+ Die Windows-API besteht aus Typen, die in der Windows deklariert werden::\* Namespaces. Diese Namespaces werden für Windows reserviert, und es können ihnen keine Typen hinzugefügt werden. Im **Objektkatalog**können Sie diese Namespaces in der Datei Windows.winmd anzeigen. Dokumentation zu diesen Namespaces finden Sie [Windows-API](https://msdn.microsoft.com/library/windows/apps/br211377).  
   
 ## <a name="ccx-namespaces"></a>C++/CX-Namespaces  
  C++ / CX definieren bestimmte Typen in diesen Namespaces als Teil der Projektion von der Windows-Runtime-Typsystem.  

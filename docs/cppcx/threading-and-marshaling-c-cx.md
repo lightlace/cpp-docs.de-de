@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09b9e008b586b1a312770d7cdfc43dc500932158
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: da198a6a807413846fdc5b45552bb74252f8acc2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611444"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221368"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Threading und Marshalling (C++/CX)
 In der Mehrzahl der Fälle können Instanzen von Windows-Runtime-Klassen wie Standard-c++-Objekten, von jedem Thread aus zugegriffen werden. Solche Klassen werden als "agil" bezeichnet. Allerdings eine kleine Anzahl von Windows-Runtime-Klassen, die mit Windows ausgeliefert werden nicht agilen und mehr verarbeitet werden muss, z. B. com-Objekte als Standard-c++-Objekten. Sie müssen zwar kein COM-Experte sein, um nicht agile Klassen zu verwenden, aber das Threadmodell dieser Klassen sowie ihr Marshallingverhalten beachten. Dieser Artikel ist ein Leitfaden für die seltenen Fälle, in denen Sie die Instanz einer nicht agilen Klasse verarbeiten müssen.  
@@ -100,7 +100,7 @@ ref class MyOptions
  In Visual C++, wenn Sie einen Verweis auf ein in-Proc-Windows-Runtime-Klasse erstellen, die ein Marshallingverhalten von "None", hat der Compiler gibt die Warnung C4451 aus, jedoch nicht vor, dass Sie erwägen, `Platform::Agile<T>`.  Der Compiler kann über diese Warnung hinaus keine Hilfe anbieten, sodass es in Ihrer Verantwortung liegt, die Klasse richtig zu verwenden und sicherzustellen, dass der Code STA-Komponenten nur aus dem Benutzeroberflächenthread und MTA-Komponenten nur aus einem Hintergrundthread aufruft.  
   
 ## <a name="authoring-agile-windows-runtime-components"></a>Erstellen von agile-Windows-Runtime-Komponenten  
- Beim Definieren einer Verweisklasse in C++ / CX, wird sie standardmäßig agil – das heißt, er hat `ThreadingModel`= Both und `MarshallingType`= Agile.  Wenn Sie die Windows Runtime C++ Template Library verwenden, Sie können die Klasse agil machen durch Ableiten von `FtmBase`, verwendet der `FreeThreadedMarshaller`.  Wenn Sie eine Klasse erstellen, die `ThreadingModel`=Both oder `ThreadingModel`=MTA hat, überprüfen Sie, ob die Klasse threadsicher ist. Weitere Informationen finden Sie unter [Erstellen und Verwenden von Objekten (WRL)](http://msdn.microsoft.com/en-us/d5e42216-e888-4f1f-865a-b5ccd0def73e).  
+ Beim Definieren einer Verweisklasse in C++ / CX, wird sie standardmäßig agil – das heißt, er hat `ThreadingModel`= Both und `MarshallingType`= Agile.  Wenn Sie die Windows Runtime C++ Template Library verwenden, Sie können die Klasse agil machen durch Ableiten von `FtmBase`, verwendet der `FreeThreadedMarshaller`.  Wenn Sie eine Klasse erstellen, die `ThreadingModel`=Both oder `ThreadingModel`=MTA hat, überprüfen Sie, ob die Klasse threadsicher ist. Weitere Informationen finden Sie unter [erstellen und Verwenden von Objekten (WRL)](https://msdn.microsoft.com/d5e42216-e888-4f1f-865a-b5ccd0def73e).  
   
  Sie können das Threadingmodell und das Marshallingverhalten einer Verweisklasse ändern. Wenn Sie Änderungen vornehmen, die die Klasse zu "nicht agil" rendern, müssen Sie die Auswirkungen verstehen, die mit diesen Änderungen verbunden sind.  
   
@@ -127,5 +127,5 @@ public ref class MySTAClass
  Die Threading- und Marshallinginformationen, die von einer Drittanbieter-Windows-Runtime-Komponente erforderlich ist, wird in der app-manifestregistrierungsinformationen für die Komponente angegeben. Es wird empfohlen, dass Sie alle Ihre Windows-Runtime-Komponenten für agile vornehmen. Dadurch wird sichergestellt, dass Clientcode die Komponente von jedem Thread in der App aufrufen kann. Außerdem wird dadurch die Leistung dieser Aufrufe verbessert, da sie direkte Aufrufe sind, die kein Marshalling haben. Wenn Sie die Klasse auf diese Weise erstellen, braucht Clientcode `Platform::Agile<T>` nicht zu verwenden, um die Klasse zu nutzen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [ThreadingModel](http://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.threadingmodel.aspx)   
- [MarshallingBehavior](http://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.marshalingbehaviorattribute.aspx)
+ [ThreadingModel](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.threadingmodel.aspx)   
+ [MarshallingBehavior](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.marshalingbehaviorattribute.aspx)

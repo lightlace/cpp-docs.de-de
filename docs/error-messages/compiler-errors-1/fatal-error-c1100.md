@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1100 | Microsoft Docs
+title: Schwerwiegender Fehler C1100 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da442ea76d6c559213b319d3e91d447ec47bc848
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89890fdaa5c2188aff279e22ff25dfa9868382c0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198403"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220045"
 ---
 # <a name="fatal-error-c1100"></a>Schwerwiegender Fehler C1100
-OLE-Initialisierung kann nicht ausgeführt: Systemfehlermeldung  
+OLE kann nicht initialisiert: System-Fehlermeldung  
   
- Der Compiler kann das Component Object Model (COM)-Bibliothek nicht initialisieren. Finden Sie unter [CoInitialize](http://msdn.microsoft.com/library/windows/desktop/ms678543).
+ Der Compiler kann nicht die Component Object Model (COM)-Bibliothek initialisiert werden. Finden Sie unter [CoInitialize](/windows/desktop/api/objbase/nf-objbase-coinitialize).

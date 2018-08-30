@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a40cf81d0b00123692c9ea8b0e2f3111fb914fbb
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ebfbd7e8cedd522c324743abc5c28c6ac3e9f2b0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571392"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200387"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Subsystem angeben)
 ```  
@@ -37,7 +37,7 @@ ms.locfileid: "42571392"
 ```  
   
  BOOT_APPLICATION  
- Eine in der Windows-Startumgebung ausgeführte Anwendung. Weitere Informationen zu startanwendungen finden Sie unter [Informationen zu BCD](http://msdn.microsoft.com/library/windows/desktop/aa362639).  
+ Eine in der Windows-Startumgebung ausgeführte Anwendung. Weitere Informationen zu startanwendungen finden Sie unter [Informationen zu BCD](/previous-versions/windows/desktop/bcd/about-bcd).  
   
  CONSOLE  
  Win32-Zeichenmodusanwendung. Im Betriebssystem wird eine Konsole für Konsolenanwendungen zur Verfügung gestellt. Wenn `main` oder `wmain` für systemeigenen Code definiert ist, ist `int main(array<String ^> ^)` für verwalteten Code definiert. Sie können die Anwendung auch nur mithilfe von `/clr:safe` erstellen. CONSOLE ist der Standardwert.  

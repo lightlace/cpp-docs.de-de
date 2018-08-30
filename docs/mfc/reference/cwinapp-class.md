@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c756de90967b4c9178d5e6a584990cc53ad7786c
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 58509ec4f6a3773478e1bc544f28baf92d7e97b7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900937"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206891"
 ---
 # <a name="cwinapp-class"></a>CWinApp-Klasse
 
@@ -270,7 +270,7 @@ class CWinApp : public CWinThread
 |[OnIdle](#onidle)|Überschreiben Sie, um anwendungsspezifische Leerlaufzeit, Verarbeitungsvorgänge auszuführen.|
 |[CWinApp:: OpenDocumentFile](#opendocumentfile)|Vom Framework aufgerufen wird, ein Dokument aus einer Datei zu öffnen.|
 |[CWinApp::ParseCommandLine](#parsecommandline)|Analysiert einzelne Parameter und die Flags in der Befehlszeile an.|
-|[PreTranslateMessage](#pretranslatemessage)|Filtert Nachrichten, bevor sie für die Windows-Funktionen weitergeleitet werden [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934).|
+|[PreTranslateMessage](#pretranslatemessage)|Filtert Nachrichten, bevor sie für die Windows-Funktionen weitergeleitet werden [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|Bestimmte Nachrichten abfängt, bevor sie die Anwendung erreichen.|
 |[CWinApp::ProcessShellCommand](#processshellcommand)|Behandelt Befehlszeilenargumente und Flags.|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|Fängt alle nicht behandelte Ausnahmen, die von der Anwendung die Nachricht und befehlshandlern ausgelöst.|
@@ -860,7 +860,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 ### <a name="parameters"></a>Parameter
 
 *pPrintDlg*  
-Ein Zeiger auf eine [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) Struktur.
+Ein Zeiger auf eine [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -912,7 +912,7 @@ Diese Memberfunktion ist also nicht Groß-/ Kleinschreibung, die Zeichenfolgen i
 > `GetProfileBinary` weist einen Puffer und gibt dessen Adresse in \* *PpData*. Der Aufrufer ist verantwortlich für das Freigeben der Puffer mit **delete []**.
 
 > [!IMPORTANT]
-> Die von dieser Funktion zurückgegebenen Daten enden nicht notwendigerweise auf NULL, und der Aufrufer muss die Validierung ausführen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Die von dieser Funktion zurückgegebenen Daten enden nicht notwendigerweise auf NULL, und der Aufrufer muss die Validierung ausführen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Beispiel
 
@@ -953,7 +953,7 @@ Diese Memberfunktion unterstützt Hexadezimalnotation für den Wert in der INI-D
 Diese Memberfunktion ist also nicht Groß-/ Kleinschreibung, die Zeichenfolgen in die *LpszSection* und *LpszEntry* Parameter können in Fällen unterscheiden.
 
 > [!IMPORTANT]
-> Die von dieser Funktion zurückgegebenen Daten enden nicht notwendigerweise auf NULL, und der Aufrufer muss die Validierung ausführen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Die von dieser Funktion zurückgegebenen Daten enden nicht notwendigerweise auf NULL, und der Aufrufer muss die Validierung ausführen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Beispiel
 
@@ -990,7 +990,7 @@ Der Rückgabewert ist die Zeichenfolge, aus der Anwendung. INI-Datei oder *LpszD
 ### <a name="remarks"></a>Hinweise
 
 > [!IMPORTANT]
-> Die von dieser Funktion zurückgegebenen Daten enden nicht notwendigerweise auf NULL, und der Aufrufer muss die Validierung ausführen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Die von dieser Funktion zurückgegebenen Daten enden nicht notwendigerweise auf NULL, und der Aufrufer muss die Validierung ausführen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Beispiel
 
@@ -1073,7 +1073,7 @@ Initialisieren der Anwendung ist im Prinzip in zwei Abschnitte unterteilt: einma
 Außer Kraft setzen `InitInstance` zum Initialisieren der jede neue Instanz der Anwendung unter Windows ausgeführt wird. In der Regel, die Sie überschreiben `InitInstance` das Hauptfenster-Objekt zu erstellen und Festlegen der `CWinThread::m_pMainWnd` Datenmembers, der für dieses Fenster zeigen. Weitere Informationen zum Überschreiben dieser Memberfunktion finden Sie unter [CWinApp: die Anwendungsklasse](../../mfc/cwinapp-the-application-class.md).
 
 > [!NOTE]
-> MFC-Anwendungen müssen als Singlethread-Apartment (STA) initialisiert werden. Wenn Sie aufrufen [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) in Ihre `InitInstance` außer Kraft setzen, geben Sie COINIT_APARTMENTTHREADED (anstelle von COINIT_MULTITHREADED) an. Weitere Informationen finden Sie unter PRB: MFC-Anwendung nicht mehr reagiert, wenn Sie die Anwendung als eine Multithread-Apartment (828643) am initialisieren [ http://support.microsoft.com/default.aspxscid=kb; En-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).
+> MFC-Anwendungen müssen als Singlethread-Apartment (STA) initialisiert werden. Wenn Sie aufrufen [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) in Ihre `InitInstance` außer Kraft setzen, geben Sie COINIT_APARTMENTTHREADED (anstelle von COINIT_MULTITHREADED) an. Weitere Informationen finden Sie unter PRB: MFC-Anwendung nicht mehr reagiert, wenn Sie die Anwendung als eine Multithread-Apartment (828643) am initialisieren [ http://support.microsoft.com/default.aspxscid=kb; En-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).
 
 ### <a name="example"></a>Beispiel
 
@@ -1109,7 +1109,7 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 Verweist auf eine auf Null endende Zeichenfolge, die den Namen der Cursorressource enthält. Sie können eine `CString` für dieses Argument.
 
 *nIDResource*  
-Die ID der Cursorressource. Eine Liste der Ressourcen, finden Sie unter [LoadCursor](http://msdn.microsoft.com/library/windows/desktop/ms648391) im Windows SDK.
+Die ID der Cursorressource. Eine Liste der Ressourcen, finden Sie unter [LoadCursor](/windows/desktop/api/winuser/nf-winuser-loadcursora) im Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1152,7 +1152,7 @@ Ein Handle für ein Symbol, wenn erfolgreich; andernfalls NULL.
 Sie können die [LoadStandardIcon](#loadstandardicon) oder [LoadOEMIcon](#loadoemicon) Member-Funktion auf die vordefinierten Windows-Symbole.
 
 > [!NOTE]
-> Diese Memberfunktion Ruft die Win32-API-Funktion [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), kann das nur ein Symbol, dessen Größe der System-Metrikwerte SM_CXICON zugeordnet und SM_CYICON zugeordnet entspricht, laden.
+> Diese Memberfunktion Ruft die Win32-API-Funktion [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona), kann das nur ein Symbol, dessen Größe der System-Metrikwerte SM_CXICON zugeordnet und SM_CYICON zugeordnet entspricht, laden.
 
 ##  <a name="loadoemcursor"></a>  CWinApp::LoadOEMCursor
 
@@ -1262,7 +1262,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ### <a name="parameters"></a>Parameter
 
 *lpszIconName*  
-Ein manifest Konstanten Bezeichner, der angibt, ein vordefiniertes Windows-Symbol. Diese Bezeichner werden in WINDOWS definiert. H. Eine Liste der möglichen vordefinierte Werte und deren Beschreibungen finden Sie die *LpIconName* Parameter im [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072) im Windows SDK.
+Ein manifest Konstanten Bezeichner, der angibt, ein vordefiniertes Windows-Symbol. Diese Bezeichner werden in WINDOWS definiert. H. Eine Liste der möglichen vordefinierte Werte und deren Beschreibungen finden Sie die *LpIconName* Parameter im [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona) im Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1444,7 +1444,7 @@ LPCTSTR m_pszAppName;
 
 Den Namen der Anwendung aus der an übergebene Parameter stammen die [CWinApp](#cwinapp) Konstruktor oder, wenn nicht angegeben, um die Ressourcenzeichenfolge mit der ID des AFX_IDS_APP_TITLE. Wenn der Anwendungsname in der Ressource nicht gefunden wird, erfolgt über des Programms. Dateiname der EXE-Datei.
 
-Von der globalen Funktion zurückgegebene [AfxGetAppName](application-information-and-management.md#afxgetappname). `m_pszAppName` ist eine öffentliche Variable des Typs **const Char\***.
+Von der globalen Funktion zurückgegebene [AfxGetAppName](application-information-and-management.md#afxgetappname). `m_pszAppName` ist eine öffentliche Variable des Typs **const Char**<strong>\*</strong>.
 
 > [!NOTE]
 > Wenn Sie einen Wert zuzuweisen `m_pszAppName`, es muss dynamisch auf dem Heap zugeordnet werden. Die `CWinApp` Destruktoraufrufe **kostenlose**(), mit dem this-Zeiger. Sie verwenden möchten die `_tcsdup`()-Laufzeitbibliothek-Funktion der zuordnen möchten. Darüber hinaus können freigeben Sie den Speicher, der Zeiger für den aktuellen zugeordnet sind, bevor Sie einen neuen Wert zuweisen. Zum Beispiel:
@@ -1465,7 +1465,7 @@ LPCTSTR m_pszExeName;
 
 ### <a name="remarks"></a>Hinweise
 
-Im Gegensatz zu [M_pszAppName](#m_pszappname), dieser Name darf keine Leerzeichen enthalten. `m_pszExeName` ist eine öffentliche Variable des Typs **const Char\***.
+Im Gegensatz zu [M_pszAppName](#m_pszappname), dieser Name darf keine Leerzeichen enthalten. `m_pszExeName` ist eine öffentliche Variable des Typs **const Char**<strong>\*</strong>.
 
 > [!NOTE]
 > Wenn Sie einen Wert zuzuweisen `m_pszExeName`, es muss dynamisch auf dem Heap zugeordnet werden. Die `CWinApp` Destruktoraufrufe **kostenlose**(), mit dem this-Zeiger. Sie verwenden möchten die `_tcsdup`()-Laufzeitbibliothek-Funktion der zuordnen möchten. Darüber hinaus können freigeben Sie den Speicher, der Zeiger für den aktuellen zugeordnet sind, bevor Sie einen neuen Wert zuweisen. Zum Beispiel:
@@ -1482,7 +1482,7 @@ LPCTSTR m_pszHelpFilePath;
 
 ### <a name="remarks"></a>Hinweise
 
-Wird standardmäßig das Framework initialisiert `m_pszHelpFilePath` auf den Namen der Anwendung mit ". HLP"angefügt. Um den Namen der Hilfedatei zu ändern, legen `m_pszHelpFilePath` , zeigen Sie auf eine Zeichenfolge, die den vollständigen Namen der gewünschten Hilfedatei enthält. Eine bequeme Möglichkeit hierzu ist in der Anwendung [InitInstance](#initinstance) Funktion. `m_pszHelpFilePath` ist eine öffentliche Variable des Typs **const Char\***.
+Wird standardmäßig das Framework initialisiert `m_pszHelpFilePath` auf den Namen der Anwendung mit ". HLP"angefügt. Um den Namen der Hilfedatei zu ändern, legen `m_pszHelpFilePath` , zeigen Sie auf eine Zeichenfolge, die den vollständigen Namen der gewünschten Hilfedatei enthält. Eine bequeme Möglichkeit hierzu ist in der Anwendung [InitInstance](#initinstance) Funktion. `m_pszHelpFilePath` ist eine öffentliche Variable des Typs **const Char**<strong>\*</strong>.
 
 > [!NOTE]
 > Wenn Sie einen Wert zuzuweisen `m_pszHelpFilePath`, es muss dynamisch auf dem Heap zugeordnet werden. Die `CWinApp` Destruktoraufrufe **kostenlose**(), mit dem this-Zeiger. Sie verwenden möchten die `_tcsdup`()-Laufzeitbibliothek-Funktion der zuordnen möchten. Darüber hinaus können freigeben Sie den Speicher, der Zeiger für den aktuellen zugeordnet sind, bevor Sie einen neuen Wert zuweisen. Zum Beispiel:
@@ -1499,7 +1499,7 @@ LPCTSTR m_pszProfileName;
 
 ### <a name="remarks"></a>Hinweise
 
-`m_pszProfileName` ist eine öffentliche Variable des Typs **const Char\***.
+`m_pszProfileName` ist eine öffentliche Variable des Typs **const Char**<strong>\*</strong>.
 
 > [!NOTE]
 > Wenn Sie einen Wert zuzuweisen `m_pszProfileName`, es muss dynamisch auf dem Heap zugeordnet werden. Die `CWinApp` Destruktoraufrufe **kostenlose**(), mit dem this-Zeiger. Sie verwenden möchten die `_tcsdup`()-Laufzeitbibliothek-Funktion der zuordnen möchten. Darüber hinaus können freigeben Sie den Speicher, der Zeiger für den aktuellen zugeordnet sind, bevor Sie einen neuen Wert zuweisen. Zum Beispiel:
@@ -1794,7 +1794,7 @@ Eine Beschreibung der Flags, die Befehlszeile finden Sie unter [CCommandLineInfo
 
 ##  <a name="pretranslatemessage"></a>  PreTranslateMessage
 
-Außer Kraft setzen diese Funktion fenstermeldungen zu filtern, bevor sie für die Windows-Funktionen weitergeleitet werden [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) die Standardimplementierung nimmt der Zugriffstaste: Übersetzung, damit Sie aufrufen müssen die `CWinApp::PreTranslateMessage` Member-Funktion in Ihrer außer Kraft gesetzte Version.
+Außer Kraft setzen diese Funktion fenstermeldungen zu filtern, bevor sie für die Windows-Funktionen weitergeleitet werden [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) die Standardimplementierung nimmt der Zugriffstaste: Übersetzung, damit Sie aufrufen müssen die `CWinApp::PreTranslateMessage` Member-Funktion in Ihrer außer Kraft gesetzte Version.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -2131,7 +2131,7 @@ void SelectPrinter(
 Ein Handle für ein [DEVNAMES](../../mfc/reference/devnames-structure.md) Struktur, die der Treiber, Gerät und Ausgabe-Anschlussnamen, der einen bestimmten Drucker bezeichnet.
 
 *hDevMode-Feld*  
-Ein Handle für ein [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) -Struktur, die Informationen über die Initialisierung für Grafikgeräte und die Umgebung eines Druckers angibt.
+Ein Handle für ein [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) -Struktur, die Informationen über die Initialisierung für Grafikgeräte und die Umgebung eines Druckers angibt.
 
 *bFreeOld*  
 Gibt den zuvor ausgewählten Drucker frei.
@@ -2270,7 +2270,7 @@ virtual void WinHelp(
 Gibt zusätzliche Daten an. Der verwendete Wert hängt vom Wert von der *nCmd* Parameter.
 
 *nCmd*  
-Gibt den Typ der angeforderten Hilfe an. Eine Liste der möglichen Werte und deren Auswirkungen auf die *DwData* Parameter finden Sie unter den [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) Windows-Funktion.
+Gibt den Typ der angeforderten Hilfe an. Eine Liste der möglichen Werte und deren Auswirkungen auf die *DwData* Parameter finden Sie unter den [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) Windows-Funktion.
 
 ### <a name="remarks"></a>Hinweise
 

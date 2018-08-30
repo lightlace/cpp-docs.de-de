@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d45468674d274c5f20b5533d782390cf2a6cec6
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8944ecdb4f9996800264986a7a687df6020b0591
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881395"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209932"
 ---
 # <a name="device-context-global-functions"></a>Globale Gerätekontext-Funktionen
 Diese Funktion erstellt einen Gerätekontext für ein bestimmtes Gerät.  
@@ -29,7 +29,7 @@ Diese Funktion erstellt einen Gerätekontext für ein bestimmtes Gerät.
 |[AtlCreateTargetDC](#atlcreatetargetdc)|Erstellt einen Gerätekontext.|  
   
 ##  <a name="atlcreatetargetdc"></a>  AtlCreateTargetDC  
- Erstellt einen Gerätekontext für das Gerät mit dem angegeben wird, der [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) Struktur.  
+ Erstellt einen Gerätekontext für das Gerät mit dem angegeben wird, der [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) Struktur.  
   
 ```
 HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);

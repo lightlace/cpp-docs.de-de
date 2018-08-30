@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dde8693009cda20b59262034679aea1a73543401
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a6dca289631f3289a7976b6dc3482770bf5f3fe7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595661"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200617"
 ---
 # <a name="support-for-ansi"></a>Unterstützung von ANSI
 Die meisten MFC-Klassen und Methoden unterstützt die ANSI-Zeichensatz auf, aber MFC-Frameworks als Ganzes sich allmählich in Richtung unterstützen nur die Unicode-Zeichensatz. Aufgrund der laufenden Verbesserungen in Windows Vista und Windows-Standardsteuerelemente Version 6.1 ist die Unterstützung für verschiedene ANSI-Klassen und Methoden veraltet.  Weitere Informationen finden Sie unter [ANSI-APIs als veraltet markiert](../mfc/deprecated-ansi-apis.md) und [-Unterstützung für Unicode](../text/support-for-unicode.md).  
@@ -29,4 +29,4 @@ Die meisten MFC-Klassen und Methoden unterstützt die ANSI-Zeichensatz auf, aber
 ## <a name="see-also"></a>Siehe auch  
  [Unterstützung für Unicode](../text/support-for-unicode.md)   
  [Veraltete ANSI-APIs](../mfc/deprecated-ansi-apis.md)   
- [Shell und allgemeine Steuerelemente-Versionen](http://msdn.microsoft.com/library/windows/desktop/bb776779)
+ [Shell und allgemeine Steuerelemente-Versionen](https://msdn.microsoft.com/library/windows/desktop/bb776779)

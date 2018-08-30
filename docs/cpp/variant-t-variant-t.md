@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ef7551047449167ff60372da146618fbdc4e564
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 95b0931438afe8ff151d3c9f6c4727013df79478
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464161"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209341"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Microsoft-spezifisch**  
@@ -210,7 +210,7 @@ _variant_t(
   
 -   **_variant_t (VARIANT &***VarSrc***)** erstellt eine `_variant_t` Objekt aus einer Kopie der `VARIANT` Objekt.     Der Varianttyp wird beibehalten.  
   
--   **_variant_t (VARIANT\****pVarSrc***)** erstellt eine `_variant_t` Objekt aus einer Kopie der `VARIANT` Objekt.     Der Varianttyp wird beibehalten.  
+-   **_variant_t (VARIANT**<strong>\*</strong>*pVarSrc***)** erstellt eine `_variant_t` Objekt aus einer Kopie der `VARIANT` Objekt.     Der Varianttyp wird beibehalten.  
   
 -   **_variant_t (_variant_t &***Var_t_Src***)** erstellt eine `_variant_t` Objekt von einem anderen `_variant_t` Objekt.     Der Varianttyp wird beibehalten.  
   
@@ -228,15 +228,15 @@ _variant_t(
   
 -   **_variant_t (_bstr_t &**`bstrSrc`**)** erstellt eine `_variant_t` Objekt vom Typ VT_BSTR aus einem `_bstr_t` Objekt.     Ein neues `BSTR` wird zugeordnet.  
   
--   **_variant_t (Wchar_t \***  *WstrSrc***)** erstellt eine `_variant_t` Objekt vom Typ "VT_BSTR" von Unicode-Zeichenfolge.   Ein neues `BSTR` wird zugeordnet.  
+-   **_variant_t (Wchar_t** <strong>\*</strong> *WstrSrc***)** erstellt eine `_variant_t` Objekt vom Typ "VT_BSTR" von Unicode-Zeichenfolge.   Ein neues `BSTR` wird zugeordnet.  
   
--   **_variant_t (Char\***`strSrc`**)** erstellt eine `_variant_t` Objekt vom Typ VT_BSTR aus einer Zeichenfolge.     Ein neues `BSTR` wird zugeordnet.  
+-   **_variant_t (Char**<strong>\*</strong>`strSrc`**)** erstellt eine `_variant_t` Objekt vom Typ VT_BSTR aus einer Zeichenfolge.     Ein neues `BSTR` wird zugeordnet.  
   
 -   **_variant_t (Bool**`bSrc`**)** erstellt eine `_variant_t` Objekt des Typs VT_BOOL aus einer **"bool"** Wert.      
   
--   **_variant_t (IUnknown\***  `pIUknownSrc` **, "bool"**`fAddRef`**= True)** erstellt eine `_variant_t` Objekt vom Typ "VT_UNKNOWN" aus einem COM-Schnittstellenzeiger .       Wenn `fAddRef` ist **"true"**, klicken Sie dann `AddRef` für den bereitgestellten Schnittstellenzeiger auf den Aufruf von entsprechend aufgerufen wird `Release` erfolgt, die bei der `_variant_t` -Objekt zerstört wird. Es liegt bei Ihnen Aufrufen `Release` auf den bereitgestellten Schnittstellenzeiger auf. Wenn `fAddRef` ist **"false"**, übernimmt dieser Konstruktor den Besitz des angegebenen Schnittstellenzeigers, rufen Sie keine `Release` auf den bereitgestellten Schnittstellenzeiger auf.  
+-   **_variant_t (IUnknown** <strong>\*</strong> `pIUknownSrc` **, "bool"**`fAddRef`**= True)** erstellt eine `_variant_t` Objekt des Typs VT_UNKNOWN aus einem COM-Schnittstellenzeiger.       Wenn `fAddRef` ist **"true"**, klicken Sie dann `AddRef` für den bereitgestellten Schnittstellenzeiger auf den Aufruf von entsprechend aufgerufen wird `Release` erfolgt, die bei der `_variant_t` -Objekt zerstört wird. Es liegt bei Ihnen Aufrufen `Release` auf den bereitgestellten Schnittstellenzeiger auf. Wenn `fAddRef` ist **"false"**, übernimmt dieser Konstruktor den Besitz des angegebenen Schnittstellenzeigers, rufen Sie keine `Release` auf den bereitgestellten Schnittstellenzeiger auf.  
   
--   **_variant_t (IDispatch\***  `pDispSrc` **, "bool"**`fAddRef`**= True)** erstellt eine `_variant_t` Objekt vom Typ "VT_DISPATCH" aus einer COM-Schnittstelle Zeiger.       Wenn `fAddRef` ist **"true"**, klicken Sie dann `AddRef` für den bereitgestellten Schnittstellenzeiger auf den Aufruf von entsprechend aufgerufen wird `Release` erfolgt, die bei der `_variant_t` -Objekt zerstört wird. Es liegt bei Ihnen Aufrufen `Release` auf den bereitgestellten Schnittstellenzeiger auf. Wenn `fAddRef` ist **"false"**, übernimmt dieser Konstruktor den Besitz des angegebenen Schnittstellenzeigers, rufen Sie keine `Release` auf den bereitgestellten Schnittstellenzeiger auf.  
+-   **_variant_t (IDispatch** <strong>\*</strong> `pDispSrc` **, "bool"**`fAddRef`**= True)** erstellt eine `_variant_t` Objekt Geben Sie "VT_DISPATCH" aus einem COM-Schnittstellenzeiger.       Wenn `fAddRef` ist **"true"**, klicken Sie dann `AddRef` für den bereitgestellten Schnittstellenzeiger auf den Aufruf von entsprechend aufgerufen wird `Release` erfolgt, die bei der `_variant_t` -Objekt zerstört wird. Es liegt bei Ihnen Aufrufen `Release` auf den bereitgestellten Schnittstellenzeiger auf. Wenn `fAddRef` ist **"false"**, übernimmt dieser Konstruktor den Besitz des angegebenen Schnittstellenzeigers, rufen Sie keine `Release` auf den bereitgestellten Schnittstellenzeiger auf.  
   
 -   **_variant_t (DECIMAL &**`decSrc`**)** erstellt eine `_variant_t` Objekt des Typs VT_DECIMAL aus einem `DECIMAL` Wert.      
   

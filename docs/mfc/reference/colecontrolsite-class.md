@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c6f84f575edbcaf8ecc64f424f3225d969d6a7f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f79917e34a749048696f320a8311978acc2739f4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850354"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202854"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite-Klasse
 Stellt Unterstützung für benutzerdefinierte clientseitige Steuerelement-Schnittstellen bereit.  
@@ -205,7 +205,7 @@ class COleControlSite : public CCmdTarget
 |[COleControlSite::m_rect](#m_rect)|Die Dimensionen von der Website des Steuerelements.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Unterstützung ist das primäre Mittel, mit dem ein eingebettetes ActiveX-Steuerelement ruft Informationen über den Speicherort und den Umfang der anzeigensite, des Monikers, seine Benutzeroberfläche, die ambient-Eigenschaften und andere Ressourcen, die vom Container bereitgestellt werden ab. `COleControlSite` vollständig implementiert die [IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502), [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706), [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), `IBoundObjectSite`, `INotifyDBEvents`, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) Schnittstellen. Darüber hinaus wird die IDispatch-Schnittstelle (mit Unterstützung für die ambient-Eigenschaften und Ereignissenken) ebenfalls implementiert.  
+ Diese Unterstützung ist das primäre Mittel, mit dem ein eingebettetes ActiveX-Steuerelement ruft Informationen über den Speicherort und den Umfang der anzeigensite, des Monikers, seine Benutzeroberfläche, die ambient-Eigenschaften und andere Ressourcen, die vom Container bereitgestellt werden ab. `COleControlSite` vollständig implementiert die [IOleControlSite](/windows/desktop/api/ocidl/nn-ocidl-iolecontrolsite), [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleClientSite](/windows/desktop/api/oleidl/nn-oleidl-ioleclientsite), [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), `IBoundObjectSite`, `INotifyDBEvents`, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) Schnittstellen. Darüber hinaus wird die IDispatch-Schnittstelle (mit Unterstützung für die ambient-Eigenschaften und Ereignissenken) ebenfalls implementiert.  
   
  Um eine Website mit ActiveX-Steuerelement erstellen `COleControlSite`, leiten eine Klasse von `COleControlSite`. In Ihrer `CWnd`-abgeleitete Klasse für den Container (z. B. ein Dialogfenster) überschreiben die `CWnd::CreateControlSite` Funktion.  
   
@@ -406,7 +406,7 @@ virtual HRESULT DoVerb(
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion ruft direkt über des Steuerelements `IOleObject` Schnittstelle für das angegebene Verb aufzurufen. Wenn als Ergebnis dieses Funktionsaufrufs eine Ausnahme ausgelöst wird, wird ein HRESULT-Fehlercode zurückgegeben.  
   
- Weitere Informationen finden Sie unter [IOleObject](http://msdn.microsoft.com/library/windows/desktop/ms694508) im Windows SDK.  
+ Weitere Informationen finden Sie unter [IOleObject](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) im Windows SDK.  
   
 ##  <a name="enabledsc"></a>  COleControlSite::EnableDSC  
  Ermöglicht die Daten, die als Quelle für die Website des Steuerelements.  
@@ -676,7 +676,7 @@ CONTROLINFO m_ctlInfo;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Informationen werden gespeichert, einem [CONTROLINFO](http://msdn.microsoft.com/library/windows/desktop/ms680734) Struktur.  
+ Diese Informationen werden gespeichert, einem [CONTROLINFO](/windows/desktop/api/ocidl/ns-ocidl-tagcontrolinfo) Struktur.  
   
 ##  <a name="m_dweventsink"></a>  COleControlSite::m_dwEventSink  
  Enthält den Verbindungspunkt-Cookie aus der Ereignissenke des Steuerelements an.  
@@ -693,10 +693,10 @@ DWORD m_dwMiscStatus;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497)im Windows SDK.  
+ Weitere Informationen finden Sie unter [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc)im Windows SDK.  
   
 ##  <a name="m_dwpropnotifysink"></a>  COleControlSite::m_dwPropNotifySink  
- Enthält die [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) Cookie.  
+ Enthält die [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) Cookie.  
   
 ```  
 DWORD m_dwPropNotifySink;  
@@ -731,7 +731,7 @@ UINT m_nID;
 ```  
   
 ##  <a name="m_pactiveobject"></a>  COleControlSite::m_pActiveObject  
- Enthält die [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299) Schnittstelle des Steuerelements.  
+ Enthält die [IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject) Schnittstelle des Steuerelements.  
   
 ```  
 LPOLEINPLACEACTIVEOBJECT m_pActiveObject;  
@@ -745,7 +745,7 @@ COleControlContainer* m_pCtrlCont;
 ```  
   
 ##  <a name="m_pinplaceobject"></a>  COleControlSite::m_pInPlaceObject  
- Enthält die `IOleInPlaceObject` [IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646) Schnittstelle des Steuerelements.  
+ Enthält die `IOleInPlaceObject` [IOleInPlaceObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceobject) Schnittstelle des Steuerelements.  
   
 ```  
 LPOLEINPLACEOBJECT m_pInPlaceObject;  
@@ -759,7 +759,7 @@ LPOLEOBJECT m_pObject;
 ```  
   
 ##  <a name="m_pwindowlessobject"></a>  COleControlSite::m_pWindowlessObject  
- Enthält die `IOleInPlaceObjectWindowless` [IOleInPlaceObjectWindowless](http://msdn.microsoft.com/library/windows/desktop/ms687304) Schnittstelle des Steuerelements.  
+ Enthält die `IOleInPlaceObjectWindowless` [IOleInPlaceObjectWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless) Schnittstelle des Steuerelements.  
   
 ```  
 IOleInPlaceObjectWindowless* m_pWindowlessObject;  
@@ -797,7 +797,7 @@ virtual BOOL ModifyStyle(
  Die Formate aus der aktuellen Window-Stile hinzugefügt werden.  
   
  *nFlags*  
- Fenster, die Positionierung von Flags. Eine Liste der möglichen Werte, finden Sie unter den [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) -Funktion in das Windows SDK.  
+ Fenster, die Positionierung von Flags. Eine Liste der möglichen Werte, finden Sie unter den [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) -Funktion in das Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL ist, wenn die Stile geändert werden, andernfalls 0 (null).  
@@ -805,7 +805,7 @@ virtual BOOL ModifyStyle(
 ### <a name="remarks"></a>Hinweise  
  Des Steuerelements Stock Enabled-Eigenschaft wird die Einstellung für WS_DISABLED entsprechend geändert werden. Rahmenart Eigenschaft des Steuerelements wird entsprechend die angeforderte Einstellung für WS_BORDER geändert werden. Alle anderen Formate werden direkt auf das Fensterhandle des Steuerelements, angewendet werden, wenn ein solcher vorhanden ist.  
   
- Ändert das Window-Stile des Steuerelements an. Stile hinzugefügt oder entfernt werden soll, können mit dem bitweisen OR kombiniert werden ( &#124; ) Operator. Finden Sie unter den [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Funktion im Windows SDK für Informationen über die verfügbaren Fenster.  
+ Ändert das Window-Stile des Steuerelements an. Stile hinzugefügt oder entfernt werden soll, können mit dem bitweisen OR kombiniert werden ( &#124; ) Operator. Finden Sie unter den [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Funktion im Windows SDK für Informationen über die verfügbaren Fenster.  
   
  Wenn *nFlags* ungleich NULL ist, `ModifyStyle` wird die Win32-Funktion `SetWindowPos`, und das Fenster durch Kombinieren von zeichnet *nFlags* mit den vier folgenden Flags:  
   
@@ -837,7 +837,7 @@ virtual BOOL ModifyStyleEx(
  Die erweiterten Stile aus der aktuellen Window-Stile hinzugefügt werden.  
   
  *nFlags*  
- Fenster, die Positionierung von Flags. Eine Liste der möglichen Werte, finden Sie unter den [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) -Funktion in das Windows SDK.  
+ Fenster, die Positionierung von Flags. Eine Liste der möglichen Werte, finden Sie unter den [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) -Funktion in das Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL ist, wenn die Stile geändert werden, andernfalls 0 (null).  
@@ -845,7 +845,7 @@ virtual BOOL ModifyStyleEx(
 ### <a name="remarks"></a>Hinweise  
  Des Steuerelements Stock Appearance-Eigenschaft wird die Einstellung für WS_EX_CLIENTEDGE entsprechend geändert werden. Alle anderen erweiterten Fensterstile werden direkt auf das Fensterhandle des Steuerelements, angewendet, wenn ein solcher vorhanden ist.  
   
- Ändert das Fenster Erweiterte Stile des Website-Steuerelements. Stile hinzugefügt oder entfernt werden soll, können mit dem bitweisen OR kombiniert werden ( &#124; ) Operator. Finden Sie unter den [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Funktion im Windows SDK für Informationen über die verfügbaren Fenster.  
+ Ändert das Fenster Erweiterte Stile des Website-Steuerelements. Stile hinzugefügt oder entfernt werden soll, können mit dem bitweisen OR kombiniert werden ( &#124; ) Operator. Finden Sie unter den [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Funktion im Windows SDK für Informationen über die verfügbaren Fenster.  
   
  Wenn *nFlags* ungleich NULL ist, `ModifyStyleEx` wird die Win32-Funktion `SetWindowPos`, und das Fenster durch Kombinieren von zeichnet *nFlags* mit den vier folgenden Flags:  
   
@@ -1051,7 +1051,7 @@ virtual BOOL SetWindowPos(
  Die neue Höhe des Fensters.  
   
  *nFlags*  
- Gibt an, das Fenster größenanpassung und Positionierung von Flags. Mögliche Werte finden Sie im Abschnitt "Hinweise" für [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) im Windows SDK.  
+ Gibt an, das Fenster größenanpassung und Positionierung von Flags. Mögliche Werte finden Sie im Abschnitt "Hinweise" für [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL Wenn erfolgreich, andernfalls NULL.  

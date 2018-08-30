@@ -1,7 +1,7 @@
 ---
-title: Compilerwarnung (Stufe 4) C4565 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4565 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3c4249783686c1fabb44395d3c092eca0d9230a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c25f2f1fc16c6d45a7d1eddec8d3efe62db142f2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293359"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211261"
 ---
 # <a name="compiler-warning-level-4-c4565"></a>Compilerwarnung (Stufe 4) C4565
-'Funktion': Neudefinition; Das Symbol wurde zuvor mit __declspec(Modifizierer) deklariert.  
-  
- Ein Symbol wurde neu definiert oder erneut deklariert, und die zweite Definition oder Deklaration, im Gegensatz zu den ersten Definition oder Deklaration verfügte nicht über eine `__declspec` Modifizierer (***Modifizierer***). Diese Warnung dient nur zu Informationszwecken. Um diese Warnung zu beheben, löschen Sie eine der Definitionen.  
-  
- Im folgenden Beispiel wird C4565 generiert:  
-  
-```  
-// C4565.cpp  
-// compile with: /W4 /LD  
-__declspec(noalias) void f();  
-void f();   // C4565  
+
+> "*Funktion*": Neudefinition; das Symbol wurde zuvor mit __declspec deklariert (*Modifizierer*)
+
+## <a name="remarks"></a>Hinweise
+
+Ein Symbol wurde neu definiert oder erneut deklariert und die zweite Definition oder Deklaration, im Gegensatz zu den ersten Definition oder Deklaration keine `__declspec` Modifizierer (*Modifizierer*). Diese Warnung dient nur zu Informationszwecken. Um diese Warnung zu beheben, löschen Sie eine der Definitionen.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C4565 generiert:
+
+```cpp
+// C4565.cpp
+// compile with: /W4 /LD
+__declspec(noalias) void f();
+void f();   // C4565
 ```

@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ffd2a8969b4cd0edb5845310300e3b42148f816
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c74bc6a134ea31f3184912192ccbcb3908e64cd3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337615"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221524"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket-Klasse
 Stellt ein Windows Socket dar – ein Endpunkt der Netzwerkkommunikation.  
@@ -173,7 +173,7 @@ class CAsyncSocket : public CObject
 > [!NOTE]
 >  Wenn Sie MFC-Sockets in sekundären Threads in einer statisch verknüpften MFC-Anwendung verwenden zu können, müssen Sie aufrufen `AfxSocketInit` in jeder Thread, der Sockets verwendet, um die Socket-Bibliotheken zu initialisieren. In der Standardeinstellung `AfxSocketInit` nur im primären Thread aufgerufen wird.  
   
- Weitere Informationen finden Sie unter [Windows Sockets: CAsyncSocket-Klasse unter Verwendung](../../mfc/windows-sockets-using-class-casyncsocket.md) und zugehörigen Artikeln., als auch [Windows Sockets-2-API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
+ Weitere Informationen finden Sie unter [Windows Sockets: CAsyncSocket-Klasse unter Verwendung](../../mfc/windows-sockets-using-class-casyncsocket.md) und zugehörigen Artikeln., als auch [Windows Sockets-2-API](/windows/desktop/WinSock/windows-sockets-start-page-2).  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -515,7 +515,7 @@ BOOL Create(
 > [!IMPORTANT]
 > `Create` ist **nicht** threadsicher.  Wenn der Aufruf es in einer Multithread-Umgebung, in dem können sie gleichzeitig von verschiedenen Threads aufgerufen werden, achten Sie darauf, dass Sie jeden Aufruf mit einem Mutex oder andere Synchronisierungssperre zu schützen.  
   
- Weitere Informationen zu Stream und Datagramm-Sockets, finden Sie in den Artikeln [Windows Sockets: Hintergrund](../../mfc/windows-sockets-background.md) und [Windows Sockets: Ports und Socketadressen](../../mfc/windows-sockets-ports-and-socket-addresses.md) und [API für die Windows Sockets-2](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
+ Weitere Informationen zu Stream und Datagramm-Sockets, finden Sie in den Artikeln [Windows Sockets: Hintergrund](../../mfc/windows-sockets-background.md) und [Windows Sockets: Ports und Socketadressen](../../mfc/windows-sockets-ports-and-socket-addresses.md) und [API für die Windows Sockets-2](/windows/desktop/WinSock/windows-sockets-start-page-2).  
   
 ##  <a name="detach"></a>  CAsyncSocket::Detach  
  Rufen Sie diese Memberfunktion zum Trennen der SOCKET-Handle in die *M_hSocket* Datenmember aus der `CAsyncSocket` Objekt, und legen *M_hSocket* auf NULL.  
@@ -554,7 +554,7 @@ static int PASCAL GetLastError();
 ### <a name="remarks"></a>Hinweise  
  Wenn eine bestimmte Member-Funktion gibt an, dass ein Fehler aufgetreten ist, `GetLastError` aufgerufen werden, um den entsprechenden Fehlercode abzurufen. Finden Sie unter den Beschreibungen der einzelnen Mitgliedsdatenbanken Funktionen für eine Liste der entsprechenden Fehlercodes.  
   
- Weitere Informationen zu den Fehlercodes finden Sie unter [Windows Sockets-2-API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
+ Weitere Informationen zu den Fehlercodes finden Sie unter [Windows Sockets-2-API](/windows/desktop/WinSock/windows-sockets-start-page-2).  
   
 ##  <a name="getpeername"></a>  CAsyncSocket::GetPeerName  
  Rufen Sie diese Memberfunktion zum Abrufen der Adresse für den Peer-Socket, mit dem diesen Socket verbunden ist.  

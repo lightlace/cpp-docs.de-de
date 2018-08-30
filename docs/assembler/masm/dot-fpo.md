@@ -1,5 +1,5 @@
 ---
-title: . FPO | Microsoft Docs
+title: . FPO | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df5185c0dc699764427989b2f46345d90ded1729
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 234ec5bd703a390d1e2ee60e48d99d346d4aad95
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055930"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203112"
 ---
 # <a name="fpo"></a>.FPO
-Die. FPO-Richtlinie steuert die Emissionen der Debug-Datensätze zum .debug$ F Segment oder Abschnitt.  
+Die. FPO-Richtlinie steuert die Ausgabe der Compilerdiagnose eines Debug-Datensätze zum .debug$ F-Segment oder Abschnitt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,19 +51,19 @@ cbFrame
  Die Anzahl der lokalen Variablen, eine vorzeichenlose 32-Bit-Wert.  
   
  `cdwParams`  
- Die Größe der Parameter im DWORDS eine vorzeichenlose 16-Bit-Wert.  
+ Die Größe der Parameter in DWORDS, eine vorzeichenlose 16-Bit-Wert.  
   
  *cbProlog*  
- Anzahl der Bytes in der funktionsprologcodes einen nicht signierten 8-Bit-Wert.  
+ Anzahl der Bytes im Prolog Funktionscode, eine vorzeichenlose 8-Bit-Wert.  
   
  `cbRegs`  
- Die Anzahl der Register gespeichert.  
+ Anzahl der gespeicherten Register.  
   
  `fUseBP`  
  Gibt an, ob das EBP-Register zugeordnet wurde. 0 oder 1.  
   
  *cbFrame*  
- Gibt den Rahmentyp an.  Finden Sie unter [FPO_DATA](http://msdn.microsoft.com/library/windows/desktop/ms679352) für Weitere Informationen.  
+ Gibt den Rahmentyp.  Finden Sie unter [FPO_DATA](/windows/desktop/api/winnt/ns-winnt-_fpo_data) für Weitere Informationen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)

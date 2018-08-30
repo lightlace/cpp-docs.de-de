@@ -1,5 +1,5 @@
 ---
-title: Bilderliste für das Struktursteuerelement | Microsoft Docs
+title: Bilderliste für das Struktursteuerelement | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef74b656cc85fbdcc29c7965b9398a5cbd2f44e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 184a68ec29e806b5bb914d8744ff5c1f334db5ea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382192"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203765"
 ---
 # <a name="tree-control-image-lists"></a>Bilderliste für das Struktursteuerelement
-Jedes Element in einem Strukturansicht-Steuerelement ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) kann ein Paar von Bitmapbildern zugeordnet haben. Die Bilder werden auf der linken Seite der Bezeichnung eines Elements angezeigt. Ein Bild wird angezeigt, wenn das Element ausgewählt ist, und der andere wird angezeigt, wenn das Element nicht ausgewählt ist. Beispielsweise kann ein Element angezeigt einen Ordner öffnen, wenn diese Option ausgewählt ist und einen geschlossenen Ordner, wenn es nicht aktiviert ist.  
+Jedes Element in einem Strukturansicht-Steuerelement ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) kann ein Paar von Bitmapbildern zugeordnet haben. Die Bilder werden auf der linken Seite der die Bezeichnung eines Elements angezeigt. Ein Bild wird angezeigt, wenn das Element ist ausgewählt, und der andere wird angezeigt, wenn das Element nicht ausgewählt ist. Beispielsweise kann ein Element anzuzeigen einen geöffneten Ordner, wenn diese Option ausgewählt ist und einen geschlossenen Ordner, wenn es nicht aktiviert ist.  
   
- Um Element Images verwenden zu können, müssen Sie eine Bildliste erstellen, durch das Erstellen einer [CImageList](../mfc/reference/cimagelist-class.md) Objekt und Verwenden der [CImageList:: Create](../mfc/reference/cimagelist-class.md#create) Funktion, um die zugeordnete Bildliste zu erstellen. Klicken Sie dann der Liste die gewünschte Bitmaps hinzu, und ordnen Sie die Liste mithilfe des Strukturansicht-Steuerelements die [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist) Memberfunktion. Standardmäßig werden alle Elemente das erste Bild in der Bildliste für die ausgewählten und nicht ausgewählten Status angezeigt. Sie können das Standardverhalten für ein bestimmtes Element ändern, indem Sie die Indizes der ausgewählten und nicht ausgewählten Bilder angeben, wenn Sie das Element dem Strukturansicht-Steuerelement mit Hinzufügen der [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) Memberfunktion. Sie können die Indizes nach dem Hinzufügen eines Elements mit ändern die [Memberfunktion SetItemImage](../mfc/reference/ctreectrl-class.md#setitemimage) Memberfunktion.  
+ Zum Elementbilder verwenden zu können, müssen Sie eine Bildliste erstellen, durch das Erstellen einer [CImageList](../mfc/reference/cimagelist-class.md) -Objekt, und Verwenden der [CImageList:: Create](../mfc/reference/cimagelist-class.md#create) Funktion, um die zugeordnete Bildliste zu erstellen. Klicken Sie dann die gewünschte Bitmaps zur Liste hinzufügen, und ordnen Sie die Liste das Strukturansicht-Steuerelement, indem die [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist) Member-Funktion. Standardmäßig zeigen alle Elemente das erste Bild in der Bildliste für die ausgewählte und nicht ausgewählten Status. Sie können das Standardverhalten für ein bestimmtes Element ändern, indem Sie die Indizes der ausgewählten und nicht ausgewählten Bilder angeben, beim Hinzufügen des Elements, das Strukturansicht-Steuerelement mithilfe der [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) Member-Funktion. Sie können die Indizes nach dem Hinzufügen eines Elements mit Ändern der [Memberfunktion SetItemImage](../mfc/reference/ctreectrl-class.md#setitemimage) Member-Funktion.  
   
- Bilderliste für das Strukturansicht-Steuerelements können auch Overlaybilder enthalten, die entwickelt wurden, um das Elementbilder überlagert werden. Ein Wert ungleich NULL in Bits 8 bis 11 für eine Strukturansicht-Steuerelement ein Element des Status Gibt den einsbasierten Index ein Overlaybild (0 bedeutet keine Overlay-Image). Da ein 4-Bit, einsbasierten Index verwendet wird, müssen zwischen der ersten 15-Images in der Bildliste Overlaybilder sein. Weitere Informationen über Elementzustände des struktursteuerung-Steuerelements finden Sie unter [Struktur Steuerelement Übersicht über Elementzustände](../mfc/tree-control-item-states-overview.md) weiter oben in diesem Thema.  
+ Bilderliste für das ein Strukturansicht-Steuerelement können auch Overlay-Images enthalten, die entwickelt wurden, um auf Elementbilder angezeigt werden. Ein Wert ungleich NULL in Zustandsbits, 8 bis 11 ein Strukturansicht-Steuerelement-Element gibt den einsbasierten Index eines Overlaybildes an (0 bedeutet kein Overlay-Image). Da ein 4-Bit-, 1 basierenden Index verwendet wird, muss die Overlay-Images für die ersten 15 Bilder in der Bildliste. Weitere Informationen über Elementzustände des struktursteuerung-Steuerelements finden Sie unter [Strukturansicht-Steuerelement Übersicht über Elementzustände](../mfc/tree-control-item-states-overview.md) weiter oben in diesem Thema.  
   
- Wenn eine Bildliste Status angegeben ist, reserviert eine Strukturansicht Speicherplatz auf der linken Seite des Symbols jedes Element, für die Image-Status. Status-Bilder, z. B. Kontrollkästchen aktiviert und deaktiviert, können eine Anwendung anwendungsdefinierte Elementzustände angegeben. Ein Wert ungleich NULL in Bits 12 bis 15 gibt den einsbasierten Index eines statusbilds (0 bedeutet keine statusbilds).  
+ Wenn eine Bildliste Status angegeben wird, reserviert ein Strukturansicht-Steuerelement Speicherplatz auf der linken Seite jedes Elements Symbol für die Image-Zustand. Eine Anwendung kann Zustandsgrafiken, z. B. Kontrollkästchen aktiviert und deaktiviert, an der Anwendung definierte Element-Zustände verwenden. Ein Wert ungleich NULL in Bits 12 bis 15 gibt den einsbasierten Index eines Zustandsbildes (0 bedeutet kein Zustandsbild).  
   
- Durch Angabe der **I_IMAGECALLBACK** Wert anstelle der Index eines Bilds, können Sie verzögern, ausgewählte oder nicht ausgewählten Bild angeben, bis das Element ist zu neu gezeichnet wird. **I_IMAGECALLBACK** leitet des Strukturansicht-Steuerelements zum Abfragen von der Anwendung für den Index durch Senden der [TVN_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773518) Benachrichtigung.  
+ Durch Angabe der **I_IMAGECALLBACK** Wert anstatt den Index eines Bildes kann verzögert werden ausgewählte oder nicht ausgewählten Bild angeben, bis das Element ist zu neu gezeichnet wird. **I_IMAGECALLBACK** leitet das Strukturansicht-Steuerelement, um die Anwendung für den Index senden abzufragen der [TVN_GETDISPINFO](/windows/desktop/Controls/tvn-getdispinfo) Benachrichtigung.  
   
- Die [Memberfunktion GetImageList](../mfc/reference/ctreectrl-class.md#getimagelist) Memberfunktion Ruft das Handle der Bildliste ein Strukturansicht-Steuerelement ab. Diese Funktion ist nützlich, wenn Sie weitere Images zur Liste hinzufügen müssen. Weitere Informationen zu Bildlisten, finden Sie unter [Verwenden von CImageList](../mfc/using-cimagelist.md), [CImageList](../mfc/reference/cimagelist-class.md) in der *MFC-Referenz*, und [Bilderlisten](http://msdn.microsoft.com/library/windows/desktop/bb761389) in der Windows SDK.  
+ Die [Memberfunktion GetImageList](../mfc/reference/ctreectrl-class.md#getimagelist) Memberfunktion Ruft das Handle der Bildliste ein Strukturansicht-Steuerelement ab. Diese Funktion ist nützlich, wenn die Liste weitere Bilder hinzugefügt werden sollen. Weitere Informationen zu Bildlisten, finden Sie unter [Verwenden von CImageList](../mfc/using-cimagelist.md), [CImageList](../mfc/reference/cimagelist-class.md) in die *MFC-Referenz*, und [Bilderlisten](https://msdn.microsoft.com/library/windows/desktop/bb761389) in der Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CTreeCtrl](../mfc/using-ctreectrl.md)   

@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f00bfbcb02e05ac2c0eeac5aed9485607e0309a4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 246ca30c63596dd463889947a4dba9c350d449e4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954934"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202208"
 ---
 # <a name="ccombstr-class"></a>CComBSTR-Klasse
 Diese Klasse ist ein Wrapper für BSTR.  
@@ -411,7 +411,7 @@ bool LoadString(UINT nID) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- Finden Sie unter [LoadString](http://msdn.microsoft.com/library/windows/desktop/ms647486) in das Windows SDK.  
+ Finden Sie unter [LoadString](/windows/desktop/api/winuser/nf-winuser-loadstringa) in das Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt TRUE zurück, wenn die Zeichenfolge erfolgreich geladen wird. Andernfalls wird FALSE zurückgegeben.  
@@ -604,7 +604,7 @@ HRESULT ReadFromStream(IStream* pStream) throw();
   
 ### <a name="parameters"></a>Parameter  
  *pStream*  
- [in] Ein Zeiger auf die [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Schnittstelle für den Stream, der die Daten enthält.  
+ [in] Ein Zeiger auf die [IStream](/windows/desktop/api/objidl/nn-objidl-istream) Schnittstelle für den Stream, der die Daten enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein standard HRESULT-Wert.  
@@ -650,7 +650,7 @@ HRESULT WriteToStream(IStream* pStream) throw();
   
 ### <a name="parameters"></a>Parameter  
  *pStream*  
- [in] Ein Zeiger auf die [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Schnittstelle für einen Datenstrom.  
+ [in] Ein Zeiger auf die [IStream](/windows/desktop/api/objidl/nn-objidl-istream) Schnittstelle für einen Datenstrom.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein standard HRESULT-Wert.  

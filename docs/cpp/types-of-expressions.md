@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c9d823b74762c4b35f25fd2daa94b5fc7c0ce32
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0827aa34a0812281b3aa4f70b78a14a0336b8921
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462026"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204721"
 ---
 # <a name="types-of-expressions"></a>Ausdruckstypen
 C++-Ausdrücke werden in verschiedene Kategorien unterteilt:  
@@ -36,7 +36,7 @@ C++-Ausdrücke werden in verschiedene Kategorien unterteilt:
   
 -   [Konstante Ausdrücke](../cpp/cpp-constant-expressions.md). Konstante Ausdrücke werden vollständig aus konstanten Daten aufgebaut.  
   
--   [Ausdrücke mit expliziten typkonvertierungen](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae). Explizite Typkonvertierungen oder "Umwandlungen" können in Ausdrücken verwendet werden.  
+-   [Ausdrücke mit expliziten typkonvertierungen](https://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae). Explizite Typkonvertierungen oder "Umwandlungen" können in Ausdrücken verwendet werden.  
   
 -   [Ausdrücke mit Zeiger-auf-Member-Operatoren](../cpp/pointer-to-member-operators-dot-star-and-star.md).  
   

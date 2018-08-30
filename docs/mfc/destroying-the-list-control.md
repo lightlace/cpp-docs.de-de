@@ -1,5 +1,5 @@
 ---
-title: Zerstören des Listensteuerelements | Microsoft Docs
+title: Zerstören des Listensteuerelements | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edb26671ba775cfa7daf98d39c7eccc9fd4111bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 01cdbc0f404c34a8c5ebc3ae09adf30e0cea0851
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343281"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215041"
 ---
 # <a name="destroying-the-list-control"></a>Zerstören des Listensteuerelements
-Wenn Sie einbetten Ihre [CListCtrl](../mfc/reference/clistctrl-class.md) als Datenmember einer Klasse Ansichts- oder Dialogfeldobjekt-Objekt zerstört wird, wenn der Besitzer zerstört wird. Bei Verwendung einer [CListView](../mfc/reference/clistview-class.md), das Framework zerstört das Steuerelement aus, wenn sie die Ansicht zerstört.  
+Wenn Sie einbetten Ihrer [CListCtrl](../mfc/reference/clistctrl-class.md) als Datenmember einer Klasse Ansichts- oder Dialogfeldobjekt Objekt zerstört wird, wenn der Besitzer zerstört wird. Bei Verwendung einer [CListView](../mfc/reference/clistview-class.md), das Framework zerstört das Steuerelement beim Zerstören der Ansicht.  
   
- Wenn Sie für Ihre Liste Daten in das Strukturelement-Steuerelement, statt die Anwendung zu speichernde anordnen möchten, müssen Sie für die Aufhebung der Zuordnung anordnen. Weitere Informationen finden Sie unter [Rückrufelemente und Rückrufmaske](http://msdn.microsoft.com/library/windows/desktop/bb774736) im Windows SDK.  
+ Wenn Sie für Ihre Liste-Daten in die Anwendung statt auf das Strukturelement-Steuerelement zu speichernde anordnen möchten, müssen Sie für deren Freigabe gesorgt. Weitere Informationen finden Sie unter [Rückrufelemente und Rückrufmaske](/windows/desktop/Controls/using-list-view-controls) im Windows SDK.  
   
- Darüber hinaus sind Sie verantwortlich für das Freigeben von jeder Bilderliste für das, die Sie erstellt und dem Listensteuerelement-Objekt zugeordnet.  
+ Darüber hinaus sind Sie verantwortlich für das Aufheben der Zuordnung Bildlisten, die Sie erstellt und mit dem Listensteuerelement-Objekt verknüpft.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CListCtrl](../mfc/using-clistctrl.md)   

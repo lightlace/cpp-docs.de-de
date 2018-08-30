@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 724772c0057d5defc8bfa3e2207df85d3a207f31
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e9a946689d563f1c681fee305ec05438bc5eb687
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590293"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204737"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Exemplarische Vorgehensweise: Erstellen einer herkömmlichen Windows-Desktop-Anwendung (C++)
 
@@ -219,7 +219,7 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-desktop-Anwendung
    }
    ```
 
-   Diese Funktion gibt ein `HWND`, dies ist ein Handle für ein Fenster. Ein Handle ist etwas wie ein Zeiger, die Windows verwendet, um zu verfolgen geöffneten Fenster. Weitere Informationen finden Sie unter [Windows-Datentypen](https://msdn.microsoft.com/library/windows/desktop/aa383751).
+   Diese Funktion gibt ein `HWND`, dies ist ein Handle für ein Fenster. Ein Handle ist etwas wie ein Zeiger, die Windows verwendet, um zu verfolgen geöffneten Fenster. Weitere Informationen finden Sie unter [Windows-Datentypen](/windows/desktop/WinProg/windows-data-types).
 
 1. An diesem Punkt das Fenster erstellt wurde, aber wir müssen noch mitteilen von Windows, um es sichtbar zu machen. Das ist die Funktionsweise dieses Codes:
 
@@ -340,9 +340,9 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-desktop-Anwendung
 
 1. Damit die `WndProc` -Funktion die Nachrichten behandeln kann, die von der Anwendung empfangen werden, implementieren Sie eine switch-Anweisung.
 
-   Eine wichtige Meldung verarbeiten wird die [WM_PAINT](https://msdn.microsoft.com/library/windows/desktop/dd145213) Nachricht. Die Anwendung empfängt diese Nachricht, wenn ein Teil des angezeigten Fenster aktualisiert werden muss. Dieses Ereignis kann auftreten, wenn ein Benutzer ein Fenster vor das Fenster verschiebt, dann verschiebt ihn wieder entfernt. Ihre Anwendung klar nicht auftreten, wenn Ereignisse wie folgt. nur Windows bekannt ist, damit Sie mit benachrichtigt `WM_PAINT`. Wenn das Fenster erstmals angezeigt wird, müssen alle Daten aktualisiert werden.
+   Eine wichtige Meldung verarbeiten wird die [WM_PAINT](/windows/desktop/gdi/wm-paint) Nachricht. Die Anwendung empfängt diese Nachricht, wenn ein Teil des angezeigten Fenster aktualisiert werden muss. Dieses Ereignis kann auftreten, wenn ein Benutzer ein Fenster vor das Fenster verschiebt, dann verschiebt ihn wieder entfernt. Ihre Anwendung klar nicht auftreten, wenn Ereignisse wie folgt. nur Windows bekannt ist, damit Sie mit benachrichtigt `WM_PAINT`. Wenn das Fenster erstmals angezeigt wird, müssen alle Daten aktualisiert werden.
 
-   Behandelt ein `WM_PAINT` Nachricht, der erste Aufruf ["BeginPaint"](https://msdn.microsoft.com/library/windows/desktop/dd183362), behandeln Sie anschließend die gesamte Logik, um das Layout von Text, Schaltflächen und anderen Steuerelementen im Fenster, und rufen dann ["EndPaint"](https://msdn.microsoft.com/library/windows/desktop/dd162598). Ist für diese Anwendung die Logik zwischen dem Anfangs- und dem Beendigungsanruf zur Anzeige der Zeichenfolge "Hello, Windows Desktop!" im Fenster. In den folgenden Code, beachten Sie, dass die [TextOut](https://msdn.microsoft.com/library/windows/desktop/dd145133) Funktion wird verwendet, um die Anzeige der Zeichenfolge.
+   Behandelt ein `WM_PAINT` Nachricht, der erste Aufruf ["BeginPaint"](/windows/desktop/api/winuser/nf-winuser-beginpaint), behandeln Sie anschließend die gesamte Logik, um das Layout von Text, Schaltflächen und anderen Steuerelementen im Fenster, und rufen dann ["EndPaint"](/windows/desktop/api/winuser/nf-winuser-endpaint). Ist für diese Anwendung die Logik zwischen dem Anfangs- und dem Beendigungsanruf zur Anzeige der Zeichenfolge "Hello, Windows Desktop!" im Fenster. In den folgenden Code, beachten Sie, dass die [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) Funktion wird verwendet, um die Anzeige der Zeichenfolge.
 
    ```cpp
    PAINTSTRUCT ps;
@@ -369,7 +369,7 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-desktop-Anwendung
 
    `HDC` In diesem Code ist ein Handle für einen Gerätekontext, eine Datenstruktur, die Windows verwendet, um Ihre Anwendung für die Kommunikation mit dem grafiksubsystem zu ermöglichen. Die `BeginPaint` und `EndPaint` Funktionen stellen Sie sicher, dass Ihre Anwendung verhält sich wie ein "guter Bürger", und den Gerätekontext nicht länger verwenden als notwendig zu. Dadurch wird sichergestellt, dass das Graphics-Subsystem für die Verwendung durch andere Anwendungen verfügbar ist.
 
-1. Eine Anwendung behandelt normalerweise viele andere Meldungen, z. B. [WM_CREATE](https://msdn.microsoft.com/library/windows/desktop/ms632619) , wenn ein Fenster erstellt wird, und [WM_DESTROY](https://msdn.microsoft.com/library/windows/desktop/ms632620) Wenn das Fenster geschlossen wird. Der folgende Code zeigt eine grundlegende, jedoch vollständige `WndProc` -Funktion.
+1. Eine Anwendung behandelt normalerweise viele andere Meldungen, z. B. [WM_CREATE](/windows/desktop/winmsg/wm-create) , wenn ein Fenster erstellt wird, und [WM_DESTROY](/windows/desktop/winmsg/wm-destroy) Wenn das Fenster geschlossen wird. Der folgende Code zeigt eine grundlegende, jedoch vollständige `WndProc` -Funktion.
 
    ```cpp
    LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)

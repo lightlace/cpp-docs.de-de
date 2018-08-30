@@ -1,5 +1,5 @@
 ---
-title: CAccelerateDecelerateTransition-Class1 | Microsoft Docs
+title: CAccelerateDecelerateTransition-Klasse 1 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4342ed03991317bd030d308dbac9945734dcbd9e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: a9dad6f6e5353c1adef19d5040984520df7f6239
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954707"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220133"
 ---
 # <a name="cacceleratedeceleratetransition-class"></a>CAccelerateDecelerateTransition-Klasse
 Implementiert einen Übergang mit Beschleunigung/Verlangsamung.  
@@ -39,25 +39,25 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CAccelerateDecelerateTransition::CAccelerateDecelerateTransition](#cacceleratedeceleratetransition)|Erstellt ein Übergangsobjekt.|  
+|[CAccelerateDecelerateTransition::CAccelerateDecelerateTransition](#cacceleratedeceleratetransition)|Erstellt einen Übergangsobjekt.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CAccelerateDecelerateTransition::Create](#create)|Ruft den Übergangsbibliothek, um die gekapselte COM-Übergangsobjekt zu erstellen. (Überschreibt [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CAccelerateDecelerateTransition::Create](#create)|Ruft den Übergangsbibliothek, um gekapselte COM-Übergangsobjekt zu erstellen. (Überschreibt [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|Das Verhältnis der die Zeit für die Dauer zu beschleunigen.|  
-|[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|Das Verhältnis der Zeit verstrichenen die Dauer.|  
+|[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|Das Verhältnis der Zeit, für die Dauer zu beschleunigen.|  
+|[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|Das Verhältnis der Zeit damit verbracht, verlangsamen, die für die Dauer verwendet wird.|  
 |[CAccelerateDecelerateTransition::m_duration](#m_duration)|Die Dauer des Übergangs.|  
 |[CAccelerateDecelerateTransition::m_finalValue](#m_finalvalue)|Der Wert der Animationsvariablen am Ende des Übergangs.|  
   
 ## <a name="remarks"></a>Hinweise  
- Während eine Beschleunigung-Übergang verlangsamen, Animationsvariablen beschleunigt, und klicken Sie dann über die Dauer des Übergangs, endend mit einem angegebenen Wert verlangsamt. Sie können steuern, wie schnell die Variable beschleunigt und verlangsamt unabhängig, indem verschiedene Beschleunigung und Verlangsamung Verhältnissen. Bei die ursprüngliche Geschwindigkeit 0 (null) ist, ist das Verhältnis Acceleration den Anteil der Dauer, die die Variable ausgeben zu beschleunigen. Ebenso mit der Verlangsamungsrate. Wenn die ursprüngliche Geschwindigkeit ungleich NULL ist, ist es der Bruchteil der Zeit zwischen der Geschwindigkeit erreichen von 0 (null) und das Ende des Übergangs an. Das Beschleunigungsverhältnis und der Verlangsamungsrate sollte auf ein Maximum von 1.0 Summe. Da alle Übergänge automatisch gelöscht werden, es wird empfohlen, belegt sie mit dem Operator new. Das gekapselte IUIAnimationTransition-COM-Objekt wird von CAnimationController:: erst erstellt, ist es auf NULL. Ändern Membervariablen, nach der Erstellung dieses COM-Objekt hat keine Auswirkung.  
+ Bei einer Beschleunigung-Übergang zu verlangsamen, Animationsvariablen beschleunigt, und klicken Sie dann die Dauer des Übergangs, endet mit einem angegebenen Wert verlangsamt. Sie können steuern, wie schnell die Variable beschleunigt und unabhängig voneinander und durch Angabe von verschiedenen Beschleunigung und Verlangsamung Verhältnisse verlangsamt. Wenn die ursprüngliche Geschwindigkeit 0 (null) ist, ist das Beschleunigungsverhältnis der Anteil für die Dauer, die die Variable investieren wird beschleunigt. Ebenso mit der Verlangsamungsrate. Wenn die ursprüngliche Geschwindigkeit ungleich NULL ist, ist es der Bruchteil der Zeit zwischen der Geschwindigkeit, 0 (null) und das Ende des Übergangs zu erreichen. Die Acceleration-Verhältnis und der Verlangsamungsrate sollte auf ein Maximum von 1,0 summieren. Da alle Übergänge automatisch gelöscht werden, es wird empfohlen, sie mit dem Operator new. Das gekapselte IUIAnimationTransition COM-Objekt wird von CAnimationController:: erst erstellt, ist es auf NULL. Ändern Membervariablen des Typs an, nach der Erstellung dieses COM-Objekt hat keine Auswirkungen.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -70,7 +70,7 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
  **Header:** afxanimationcontroller.h  
   
 ##  <a name="cacceleratedeceleratetransition"></a>  CAccelerateDecelerateTransition::CAccelerateDecelerateTransition  
- Erstellt ein Übergangsobjekt.  
+ Erstellt einen Übergangsobjekt.  
   
 ```  
 CAccelerateDecelerateTransition(
@@ -88,13 +88,13 @@ CAccelerateDecelerateTransition(
  Der Wert der Animationsvariablen am Ende des Übergangs.  
   
  *accelerationRatio*  
- Das Verhältnis der die Zeit für die Dauer zu beschleunigen.  
+ Das Verhältnis der Zeit, für die Dauer zu beschleunigen.  
   
- *"DecelerationRatio"*  
- Das Verhältnis der Zeit verstrichenen die Dauer.  
+ *decelerationRatio*  
+ Das Verhältnis der Zeit damit verbracht, verlangsamen, die für die Dauer verwendet wird.  
   
 ##  <a name="create"></a>  CAccelerateDecelerateTransition::Create  
- Ruft den Übergangsbibliothek, um die gekapselte COM-Übergangsobjekt zu erstellen.  
+ Ruft den Übergangsbibliothek, um gekapselte COM-Übergangsobjekt zu erstellen.  
   
 ```  
 virtual BOOL Create(
@@ -104,20 +104,20 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parameter  
 *pLibrary*  
- Ein Zeiger auf ein [IUIAnimationTransitionLibrary-Schnittstelle](https://msdn.microsoft.com/library/windows/desktop/dd371897), die eine Bibliothek mit standard-Übergänge definiert.  
+ Ein Zeiger auf ein [IUIAnimationTransitionLibrary Schnittstelle](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), das eine Bibliothek mit standard-Übergänge definiert.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Übergang erfolgreich erstellt wurde. andernfalls "false".  
   
 ##  <a name="m_accelerationratio"></a>  CAccelerateDecelerateTransition::m_accelerationRatio  
- Das Verhältnis der die Zeit für die Dauer zu beschleunigen.  
+ Das Verhältnis der Zeit, für die Dauer zu beschleunigen.  
   
 ```  
 DOUBLE m_accelerationRatio;  
 ```  
   
 ##  <a name="m_decelerationratio"></a>  CAccelerateDecelerateTransition::m_decelerationRatio  
- Das Verhältnis der Zeit verstrichenen die Dauer.  
+ Das Verhältnis der Zeit damit verbracht, verlangsamen, die für die Dauer verwendet wird.  
   
 ```  
 DOUBLE m_decelerationRatio;  

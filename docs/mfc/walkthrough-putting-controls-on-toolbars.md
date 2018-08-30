@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 236c7df60fc023710139c8975486428fd7cd7cfd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2dd920f3dd8d08d6ceb766b9c10969137b8bf03c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027124"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199263"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Exemplarische Vorgehensweise: Steuerelemente in eine Symbolleiste einfügen
 In diesem Thema wird das Hinzufügen einer Symbolleistenschaltfläche beschrieben, die ein Windows-Steuerelement für eine Symbolleiste enthält. In MFC muss eine Symbolleisten-Schaltfläche einer [CMFCToolBarButton-Klasse](../mfc/reference/cmfctoolbarbutton-class.md)-abgeleitete Klasse sein, z. B. [CMFCToolBarComboBoxButton-Klasse](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [CMFCToolBarEditBoxButton-Klasse](../mfc/reference/cmfctoolbareditboxbutton-class.md), [CMFCDropDownToolbarButton-Klasse](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), oder [CMFCToolBarMenuButton-Klasse](../mfc/reference/cmfctoolbarmenubutton-class.md).  
@@ -65,7 +65,7 @@ In diesem Thema wird das Hinzufügen einer Symbolleistenschaltfläche beschriebe
   
 2.  Erstellen Sie eine neue Klasse `CFindComboBox`, abgeleitet von [CComboBox-Klasse](../mfc/reference/ccombobox-class.md).  
   
-3.  Überschreiben Sie in der Klasse `CFindComboBox` die virtuelle Methode `PreTranslateMessage`. Diese Methode ermöglicht das Kombinationsfeld zum Verarbeiten der [WM_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280) Nachricht. Wenn der Benutzer die ESC-TASTE (`VK_ESCAPE`) drückt, kehren Sie zum Hauptrahmenfenster zurück. Wenn der Benutzer die EINGABETASTE drückt (`VK_ENTER`), senden an das Hauptrahmenfenster eine WM_COMMAND-Meldung, enthält die `ID_EDIT_FIND_COMBO` Befehls-ID  
+3.  Überschreiben Sie in der Klasse `CFindComboBox` die virtuelle Methode `PreTranslateMessage`. Diese Methode ermöglicht das Kombinationsfeld zum Verarbeiten der [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) Nachricht. Wenn der Benutzer die ESC-TASTE (`VK_ESCAPE`) drückt, kehren Sie zum Hauptrahmenfenster zurück. Wenn der Benutzer die EINGABETASTE drückt (`VK_ENTER`), senden an das Hauptrahmenfenster eine WM_COMMAND-Meldung, enthält die `ID_EDIT_FIND_COMBO` Befehls-ID  
   
 4.  Erstellen Sie eine Klasse für den **finden** kombinationsfeldschaltfläche, abgeleitet [CMFCToolBarComboBoxButton-Klasse](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). In diesem Beispiel hat sie den Namen `CFindComboButton`.  
   
@@ -73,7 +73,7 @@ In diesem Thema wird das Hinzufügen einer Symbolleistenschaltfläche beschriebe
   
     1.  Übergeben Sie `ID_EDIT_FIND_COMBO` als Befehls-ID.  
   
-    2.  Verwendung [CCommandManager::GetCmdImage](http://msdn.microsoft.com/4094d08e-de74-4398-a483-76d27a742dca) mit `ID_EDIT_FIND` den Bildindex abgerufen.  
+    2.  Verwendung [CCommandManager::GetCmdImage](https://msdn.microsoft.com/4094d08e-de74-4398-a483-76d27a742dca) mit `ID_EDIT_FIND` den Bildindex abgerufen.  
   
     3.  Eine Liste der verfügbaren kombinationsfeldformate, finden Sie unter [Kombinationsfeldstile](../mfc/reference/styles-used-by-mfc.md#combo-box-styles).  
   

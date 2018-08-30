@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efebe74f0f2735b9f32b0114a3db68d0839b90f2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 857c0614288240aeaf3001d03aa5d6372ccee1c9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965008"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196304"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap-Klasse
 
@@ -122,13 +122,17 @@ class hash_multimap
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* Geben Sie die wichtigen Daten in der Hash_multimap gespeichert werden.
+*Key*<br/>
+ Der im hash_multimap-Element zu speichernde Schlüsseldatentyp.
 
-*Typ* die Datentyp der Elemente in der Hash_multimap gespeichert werden.
+*Type*<br/>
+ Der im hash_multimap-Element zu speichernde Elementdatentyp.
 
-*"Traits"* der Typ, der zwei Funktionsobjekte, eines der Klasse enthält *"traits"* , der zwei Elementwerte als Sortierschlüssel, um zu ermitteln, deren relative Reihenfolge und eine Hashfunktion, die ein unäres Prädikat Zuordnung Schlüssel vergleichen kann Werte der Elemente zu vorzeichenlosen ganzen Zahlen vom Typ `size_t`. Das Argument ist optional und `hash_compare<Key, less<Key>>` ist der Standardwert.
+*Merkmale*<br/>
+ Der Typ, der zwei Funktionsobjekte, eines der Klasse enthält *"traits"* werden zwei Elementwerte als Sortierschlüssel, um zu ermitteln, deren relative Reihenfolge und eine Hashfunktion, die ein unäres Prädikat Zuordnung der Schlüsselwerte der Elemente, die vergleichen können ganze Zahlen des Typs ohne Vorzeichen `size_t`. Das Argument ist optional und `hash_compare<Key, less<Key>>` ist der Standardwert.
 
-*Allocator* der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers des hash_multimap Elements kapselt. Dieses Argument ist optional, und der Standardwert ist `allocator<pair <const Key, Type>>`.
+*Zuweisung*<br/>
+ Der Typ, mit dem das gespeicherte Zuordnungsobjekt darstellt wird, mit dem Details zum Belegen und Freigeben des Arbeitsspeichers des hash_multimap-Elements gekapselt werden. Dieses Argument ist optional, und der Standardwert ist `allocator<pair <const Key, Type>>`.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -474,11 +478,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 Ein `const_iterator`-Typ kann nicht zum Ändern des Werts eines Elements verwendet werden.
 
-Die `const_iterator` durch hash_multimap auf Objekte des definierten [Value_type](#value_type), des Typs `pair` *\< ***ConstKey, Type*** >*. Der Wert des Schlüssels ist durch das erste Memberpaar verfügbar, und der Wert des zugeordneten Elements ist durch das zweite Memberpaar verfügbar.
+Die `const_iterator` durch hash_multimap auf Objekte des definierten [Value_type](#value_type), des Typs `pair<const Key, Type>`. Der Wert des Schlüssels ist durch das erste Memberpaar verfügbar, und der Wert des zugeordneten Elements ist durch das zweite Memberpaar verfügbar.
 
 Dereferenziert eine `const_iterator` `cIter` auf ein Element in einer Hash_multimap zeigt, verwenden Sie die `->` Operator.
 
-Verwenden Sie `cIter` -> **first**, das (\* `cIter`). **first** entspricht, um auf den Wert des Schlüssels für das Element zuzugreifen. Verwenden Sie `cIter` -> **second**, das (\* `cIter`). **first** entspricht, um auf den Wert des zugeordneten Datums für das Element zuzugreifen.
+Um den Wert des Schlüssels für das Element zuzugreifen, verwenden `cIter->first`, dies entspricht dem `(*cIter).first`. Um den Wert des zugeordneten Datums für das Element zuzugreifen, verwenden `cIter->second`, dies entspricht dem `(*cIter).second`.
 
 ### <a name="example"></a>Beispiel
 
@@ -572,11 +576,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 Ein `const_reverse_iterator`-Typ kann nicht den Wert eines Elements ändern und wird verwendet, um die hash_multimap in umgekehrter Reihenfolge zu durchlaufen.
 
-Der `const_reverse_iterator`, der durch hash_multimap definiert wird, zeigt auf Elemente, die Objekte eines [value_type](#value_type) sind, die von Typ `pair`*\<***const Key, Type>** sind. Dessen erste Member ist der Schlüssel zum Element, und dessen zweiter Member ist das zugeordnete Datum, das vom Element gehalten wird.
+Die `const_reverse_iterator` durch hash_multimap auf Objekte des definierten [Value_type](#value_type), des Typs `pair<const Key, Type>`, dessen erster Member ist der Schlüssel zum Element und dessen zweiter Member ist das zugeordnete Datum, das vom Element gehalten.
 
 Dereferenziert eine `const_reverse_iterator` `crIter` auf ein Element in einer Hash_multimap zeigt, verwenden Sie die `->` Operator.
 
-Verwenden Sie `crIter` -> **first**, das (\* `crIter`). **first** entspricht, um auf den Wert des Schlüssels für das Element zuzugreifen. Verwenden Sie `crIter` -> **second**, das (\* `crIter`). **first** entspricht, um auf den Wert des zugeordneten Datums für das Element zuzugreifen.
+Um den Wert des Schlüssels für das Element zuzugreifen, verwenden `crIter->first`, dies entspricht dem `(*crIter).first`. Um den Wert des zugeordneten Datums für das Element zuzugreifen, verwenden `crIter->second`, dies entspricht dem `(*crIter).second`.
 
 ### <a name="example"></a>Beispiel
 
@@ -595,7 +599,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* der Schlüssel der Elemente, die aus der Hash_multimap zu entfernenden.
+*key*<br/>
+ Der Schlüssel des Elements mit einem übereinstimmenden Schlüssel aus der hash_multimap-Klasse.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1090,7 +1095,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Hash_multimap verglichen werden soll.
+*key*<br/>
+ Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden hash_multimap verglichen wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1180,13 +1186,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parameter
 
-*_Where* Position des Elements aus der Hash_multimap entfernt werden soll.
+*_Where*<br/>
+ Die Position des aus der hash_multimap zu entfernenden Elements.
 
-*erste* Position des ersten Elements aus der Hash_multimap entfernt werden.
+*Erste*<br/>
+ Die Position des ersten Elements, das aus der hash_multimap entfernt werden soll.
 
-*letzte* die Position direkt hinter dem letzten Element aus der Hash_multimap entfernt.
+*last*<br/>
+ Die Position direkt hinter dem letzten aus der hash_multimap entfernten Element.
 
-*Schlüssel* der Schlüssel der Elemente aus der Hash_multimap entfernt werden soll.
+*key*<br/>
+ Der Schlüssel des aus der hash_multimap zu entfernenden Elements.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1300,7 +1310,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* der Schlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Hash_multimap übereinstimmt.
+*key*<br/>
+ Der Schlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden hash_multimap übereinstimmt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1750,7 +1761,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Hash_multimap verglichen werden soll.
+*key*<br/>
+ Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden hash_multimap verglichen wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2303,7 +2315,8 @@ void swap(hash_multimap& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* das hash_multimap-Element, in dem Elemente ausgetauscht werden sollen oder die Hash_multimap, deren Elemente mit denen der Hash_multimap ausgetauscht werden sollen.
+*right*<br/>
+ Die hash_multimap, in der die auszutauschenden Elemente bereitgestellt werden, oder die hash_multimap, deren Elemente mit denen der hash_multimap ausgetauscht werden sollen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2376,7 +2389,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Hash_multimap verglichen werden soll.
+*key*<br/>
+ Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden hash_multimap verglichen wird.
 
 ### <a name="return-value"></a>Rückgabewert
 

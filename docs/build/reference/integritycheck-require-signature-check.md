@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a10594391b0f3be490608f7dfa006b0c32aa2e0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: acc43bc4175f42282014e94426717527143dc059
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609279"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197055"
 ---
 # <a name="integritycheck-require-signature-check"></a>/INTEGRITYCHECK (Signaturprüfung erforderlich)
 Gibt an, dass die digitale Signatur des Binärimages zur Ladezeit überprüft werden muss.  
@@ -47,5 +47,5 @@ Gibt an, dass die digitale Signatur des Binärimages zur Ladezeit überprüft we
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Optionen des Linkers](../../build/reference/linker-options.md)   
  [Erzwungene Integrität Signieren der portierbare ausführbare Datei (PE)-Dateien](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)   
- [Exemplarische Vorgehensweise für Kernelmodus-Codesignatur](http://msdn.microsoft.com/windows/hardware/gg487328.aspx)   
- [AppInit-DLLs in Windows 7 und WindowsServer 2008](http://msdn.microsoft.com/windows/hardware/gg463040.aspx)
+ [Exemplarische Vorgehensweise für Kernelmodus-Codesignatur](https://msdn.microsoft.com/windows/hardware/gg487328.aspx)   
+ [AppInit-DLLs in Windows 7 und WindowsServer 2008](https://msdn.microsoft.com/windows/hardware/gg463040.aspx)

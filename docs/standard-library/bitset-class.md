@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01a3d5aa898dccd680ea575a5753bc5cc3b8abf9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ef37b3bae0fa6bff9353b4415a614d252ddf661e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962828"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205339"
 ---
 # <a name="bitset-class"></a>bitset-Klasse
 
@@ -64,7 +64,8 @@ class bitset
 
 ### <a name="parameters"></a>Parameter
 
-*N* gibt die Anzahl der Bits in Bitset-Objekt eine ganze Zahl ungleich NULL vom Typ `size_t` , die zum Zeitpunkt der Kompilierung bekannt sein muss.
+*N*<br/>
+ Gibt die Anzahl der Bits in Bitset-Objekt eine ganze Zahl ungleich NULL vom Typ `size_t` , die zum Zeitpunkt der Kompilierung bekannt sein muss.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -237,19 +238,26 @@ explicit bitset(
 
 ### <a name="parameters"></a>Parameter
 
-*Val* die Ganzzahl ohne Vorzeichen, deren Darstellung zur Basis 2 wird verwendet, um das Initialisieren der Bits im Bitset erstellt wird.
+*val*<br/>
+ Die ganze Zahl ohne Vorzeichen, deren Darstellung zur Basis 2 verwendet wird, um die Bits im zu erstellenden Bitset zu initialisieren.
 
-*Str* die Zeichenfolge von Nullen und Einsen verwendet, um die Bitwerte des bitsets zu initialisieren.
+*str*<br/>
+ Die Zeichenfolge von Nullen und Einsen, die verwendet wird, um die Bitwerte des Bitsets zu initialisieren.
 
-*_CStr* eine C-Stil-Zeichenfolge von Nullen und Einsen verwendet, um die Bitwerte des bitsets zu initialisieren.
+*_CStr*<br/>
+ Eine Zeichenfolge von Nullen und Einsen im C-Format, die verwendet wird, um die Bitwerte des Bitsets zu initialisieren.
 
-*_Pos* die Position des Zeichens in der Zeichenfolge, die von links nach rechts und beginnend mit 0 (null), gezählt verwendet, um das erste Bit im Bitset zu initialisieren.
+*_Pos*<br/>
+ Die Position des Zeichens in der Zeichenfolge, von links nach rechts gezählt und beginnend mit 0 (null), die verwendet wird, um das erste Bit im Bitset zu initialisieren.
 
-*Anzahl* die Anzahl der Zeichen in der Zeichenfolge, die verwendet wird, um Anfangswerte für die Bits im Bitset bereitzustellen.
+*count*<br/>
+ Die Anzahl der Zeichen in der Zeichenfolge, die verwendet wird, um Anfangswerte für die Bits im Bitset bereitzustellen.
 
-*_Zero* das Zeichen, das verwendet wird, um eine 0 (null) darzustellen. Standardmäßig ist dies '0'.
+*_Zero*<br/>
+ Das Zeichen, das verwendet wird, um eine 0 (null) darzustellen. Standardmäßig ist dies '0'.
 
-*_Ein* das Zeichen, das verwendet wird, um eine Eins darzustellen. Standardmäßig ist dies '1'.
+*_Ein*<br/>
+ Das Zeichen, das verwendet wird, um eine Eins darzustellen. Standardmäßig ist dies '1'.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -465,7 +473,8 @@ bitset\<N>& flip(size_t _Pos);
 
 ### <a name="parameters"></a>Parameter
 
-*_Pos* die Position eines der Bits, dessen Wert umgekehrt werden soll.
+*_Pos*<br/>
+ Die Position des Bits, dessen Wert umgekehrt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -473,7 +482,7 @@ Eine Kopie des geänderten Bitsets, für das die Memberfunktion aufgerufen wurde
 
 ### <a name="remarks"></a>Hinweise
 
-Die zweite Memberfunktion löst eine [Out_of_range](../standard-library/out-of-range-class.md) -Ausnahme aus, wenn die als Parameter angegebene Position größer als die Größe wird *N* von der **Bitset\<***N***  >**  , dessen Bit umgekehrt wurde.
+Die zweite Memberfunktion löst eine [Out_of_range](../standard-library/out-of-range-class.md) -Ausnahme aus, wenn die als Parameter angegebene Position größer als die Größe wird *N* von der **Bitset\<**  *N* **>** , dessen Bit umgekehrt wurde.
 
 ### <a name="example"></a>Beispiel
 
@@ -593,7 +602,8 @@ bool operator!=(const bitset\<N>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* das Bitset, das mit dem zielbitset auf Ungleichheit verglichen werden soll.
+*right*<br/>
+ Das Bitset, das mit dem Zielbitset auf Ungleichheit verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -654,7 +664,8 @@ bitset\<N>& operator&=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* das Bitset, das bitweise mit dem zielbitset kombiniert werden soll.
+*right*<br/>
+ Das Bitset, das bitweise mit dem Zielbitset kombiniert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -720,7 +731,8 @@ bitset\<N> operator<<(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Pos* die Anzahl von Positionen nach links verschoben werden sollen, die die Bits im Bitset.
+*_Pos*<br/>
+ Die Anzahl von Positionen, die Bits im Bitset nach links verschoben werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -771,7 +783,8 @@ bitset\<N>& operator<<=(size_t _Pos);
 
 ### <a name="parameters"></a>Parameter
 
-*_Pos* die Anzahl von Positionen auf der linken Seite die Bits im Bitset sind verschoben werden sollen.
+*_Pos*<br/>
+ Die Anzahl der Positionen, um die die Bits im Bitset nach links verschoben werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -817,7 +830,8 @@ bool operator==(const bitset\<N>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* das Bitset, das mit dem zielbitset auf Gleichheit verglichen werden soll.
+*right*<br/>
+ Das Bitset, das mit dem Zielbitset auf Gleichheit verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -877,7 +891,8 @@ bitset\<N> operator>>(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Pos* die Anzahl von Positionen nach rechts, die die Bits im Bitset sind verschoben werden sollen.
+*_Pos*<br/>
+ Die Anzahl der Positionen, um die die Bits im Bitset nach rechts verschoben werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -929,7 +944,8 @@ bitset\<N>& operator>>=(size_t _Pos);
 
 ### <a name="parameters"></a>Parameter
 
-*_Pos* die Anzahl von Positionen nach rechts, die die Bits im Bitset sind verschoben werden sollen.
+*_Pos*<br/>
+ Die Anzahl der Positionen, um die die Bits im Bitset nach rechts verschoben werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -977,7 +993,8 @@ reference operator[](size_t _Pos);
 
 ### <a name="parameters"></a>Parameter
 
-*_Pos* die Position des Bits innerhalb des bitsets.
+*_Pos*<br/>
+ Die Position des Bits innerhalb des Bitsets.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1019,7 +1036,8 @@ bitset\<N>& operator^=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* das Bitset, das bitweise mit dem zielbitset kombiniert werden soll.
+*right*<br/>
+ Das Bitset, das bitweise mit dem Zielbitset kombiniert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1084,7 +1102,8 @@ bitset\<N>& operator|=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* das Bitset, das bitweise mit dem zielbitset kombiniert werden soll.
+*right*<br/>
+ Das Bitset, das bitweise mit dem Zielbitset kombiniert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1203,9 +1222,11 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*Val* den Wert des Objekts vom Typ **"bool"** , etwas in einem Bitset zugewiesen werden soll.
+*val*<br/>
+ Der Wert des Objekts vom Typ **"bool"** , etwas in einem Bitset zugewiesen werden soll.
 
-*_Bitref* einen Verweis im Format *X [i]* , der dem Bit an Position *ich* in Bitset *x*.
+*_Bitref*<br/>
+ Ein Verweis im Format *x [ i ]* auf das Bit an Position *i* in Bitset *x*.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1213,7 +1234,7 @@ Ein Verweis auf das Bit in dem Bitset, das durch die Argumentposition für die e
 
 ### <a name="remarks"></a>Hinweise
 
-Die Klasse `reference` existiert nur als Hilfsprogrammklasse für das Bitset `operator[]`. Die Memberklasse beschreibt ein Objekt, das auf ein einzelnes Bit in einem Bitset zugreifen kann. Lassen Sie *b* sich um ein Objekt des Typs **"bool"**, *x* und *y* Objekte des Typs **Bitset\<***N***  >** , und *ich* und *j* gültige Positionen innerhalb eines solchen Objekts. Die Notation *x [i]* verweist auf das Bit an Position *i* in Bitset *x*. Die Memberfunktionen der Klasse `reference` stellen in der genannten Reihenfolge die folgenden Vorgänge bereit:
+Die Klasse `reference` existiert nur als Hilfsprogrammklasse für das Bitset `operator[]`. Die Memberklasse beschreibt ein Objekt, das auf ein einzelnes Bit in einem Bitset zugreifen kann. Lassen Sie *b* sich um ein Objekt des Typs **"bool"**, *x* und *y* Objekte des Typs **Bitset\<**  *N* **>**, und *ich* und *j* gültige Positionen innerhalb eines solchen Objekts. Die Notation *x [i]* verweist auf das Bit an Position *i* in Bitset *x*. Die Memberfunktionen der Klasse `reference` stellen in der genannten Reihenfolge die folgenden Vorgänge bereit:
 
 |Vorgang|Definition|
 |---------------|----------------|
@@ -1316,7 +1337,8 @@ bitset\<N>& reset(size_t _Pos);
 
 ### <a name="parameters"></a>Parameter
 
-*_Pos* die Position des Bits im Bitset auf 0 zurückgesetzt werden soll.
+*_Pos*<br/>
+ Die Position des auf 0 zurückzusetzenden Bits im Bitset.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1378,9 +1400,11 @@ bitset\<N>& set(
 
 ### <a name="parameters"></a>Parameter
 
-*_Pos* die Position des Bits im Bitset festgelegt werden, um ein Wert zugewiesen.
+*_Pos*<br/>
+ Die Position des Bits im Bitset, das auf einen zugewiesenen Wert gesetzt werden soll.
 
-*Val* der Wert, der dem Bit an der angegebenen Position zugewiesen werden soll.
+*val*<br/>
+ Der Wert, der dem Bit an der angegebenen Position zugewiesen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1482,7 +1506,8 @@ bool test(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Pos* die Position des Bits im Bitset auf dessen Wert überprüft werden soll.
+*_Pos*<br/>
+ Die Position des auf seinen Wert zu prüfenden Bits im Bitset.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1491,4 +1516,3 @@ bool test(size_t _Pos) const;
 ### <a name="remarks"></a>Hinweise
 
 Die Memberfunktion gibt [out_of_range](../standard-library/out-of-range-class.md) aus.
-

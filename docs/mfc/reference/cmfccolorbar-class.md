@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3da308e92554bd573e9efccdd47aa6e6fd71e26a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 08d7edc11584f7a7c6d2b218d9bfbbcf8d3020a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850234"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212103"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar-Klasse
 Die `CMFCColorBar` -Klasse stellt eine andockbare Steuerleiste, die Farben in einem Dokument oder die Anwendung auswählen können.  
@@ -161,11 +161,11 @@ class CMFCColorBar : public CMFCPopupMenuBar
 |`m_BoxSize`|Ein [CSize](../../atl-mfc-shared/reference/csize-class.md) -Objekt, das die Größe einer Zelle in einem Raster Farbleiste angibt.|  
 |`m_bShowDocColorsWhenDocked`|Ein boolescher Wert, der angibt, ob Dokumentfarben angezeigt, wenn der Farbleiste angedockt wird. Weitere Informationen finden Sie unter [CMFCColorBar::SetDocumentColors](#setdocumentcolors).|  
 |`m_bStdColorDlg`|Ein boolescher Wert, der angibt, ob das Dialogfeld Farbe standardsystembenachrichtigung angezeigt oder [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) Dialogfeld. Weitere Informationen finden Sie unter [CMFCColorBar::EnableOtherButton](#enableotherbutton).|  
-|`m_ColorAutomatic`|Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) , speichert die aktuelle Farbe. Weitere Informationen finden Sie unter [CMFCColorBar::EnableOtherButton](#enableotherbutton).|  
+|`m_ColorAutomatic`|Ein [COLORREF](/windows/desktop/gdi/colorref) , speichert die aktuelle Farbe. Weitere Informationen finden Sie unter [CMFCColorBar::EnableOtherButton](#enableotherbutton).|  
 |`m_ColorNames`|Ein [CMap](../../mfc/reference/cmap-class.md) -Objekt, das ordnet einen Satz von RGB-Farben, mit ihren Namen.|  
-|`m_colors`|Ein [CArray](../../mfc/reference/carray-class.md) von [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Werte, die die Farben enthält, die im Steuerelement Farbleiste angezeigt werden.|  
-|`m_ColorSelected`|Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert, der die Farbe, die der Benutzer gerade aus dem Steuerelement Farbleiste ausgewählt hat.|  
-|`m_lstDocColors`|Ein [CList](../../mfc/reference/clist-class.md) von [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Werte, die die Farben enthält, die derzeit in einem Dokument verwendet werden.|  
+|`m_colors`|Ein [CArray](../../mfc/reference/carray-class.md) von [COLORREF](/windows/desktop/gdi/colorref) Werte, die die Farben enthält, die im Steuerelement Farbleiste angezeigt werden.|  
+|`m_ColorSelected`|Ein [COLORREF](/windows/desktop/gdi/colorref) Wert, der die Farbe, die der Benutzer gerade aus dem Steuerelement Farbleiste ausgewählt hat.|  
+|`m_lstDocColors`|Ein [CList](../../mfc/reference/clist-class.md) von [COLORREF](/windows/desktop/gdi/colorref) Werte, die die Farben enthält, die derzeit in einem Dokument verwendet werden.|  
 |`m_nCommandID`|Eine ganze Zahl ohne Vorzeichen, die die Befehls-ID, der eine Schaltfläche "Farbe" ist.|  
 |`m_nHorzMargin`|Eine ganze Zahl, die der horizontalen Rand zwischen den Schaltflächen Farbe in einem Raster von Farben ist.|  
 |`m_nHorzOffset`|Eine ganze Zahl, die den horizontalen Offset in die Mitte der Schaltfläche für die Farbe ist. Dieser Wert ist wichtig, wenn die Schaltfläche Text oder ein Bild zusätzlich zu einer Farbe angezeigt.|  

@@ -1,7 +1,7 @@
 ---
-title: Projektbuildfehler prj0026 | Microsoft Docs
+title: Projektbuildfehler prj0026 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28f74b3c12520e16dad8306b16833544c34f925b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2402ee3f8e099a58c236ad7055a1a1487773dd9f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318440"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195049"
 ---
 # <a name="project-build-error-prj0026"></a>Projektbuildfehler PRJ0026
-Antwortdatei "File" enthält die Unicode-Inhalte, die nicht in ANSI-Codepage des Benutzers übersetzt werden konnte.  
-  
- ***Unicode-Inhalt der Datei***  
-  
- Das Projektsystem gefunden Unicode-Inhalt in einer Antwortdatei, die ordnungsgemäß für aktuelle ANSI-Codepage des Benutzers übersetzt werden kann.  
-  
- Die Auflösung für diesen Fehler besteht darin, aktualisieren den Inhalt der Antwortdatei unter Verwendung von ANSI oder die Codepage auf dem Computer installieren und als dem als Standard festgelegt.
+
+> Die Antwortdatei "*Datei*" enthält Unicodeinhalt, der nicht in ANSI-Codepage des Benutzers übersetzt werden konnte.
+>
+> *Unicode-Inhalt der Datei*
+
+Das Projektsystem hat Unicode-Inhalt in einer Antwortdatei, die ordnungsgemäß auf der aktuellen ANSI-Codepage des Benutzers übersetzt werden, kann nicht gefunden.
+
+Die Auflösung für diesen Fehler ist, aktualisieren Sie den Inhalt der Antwortdatei mit ANSI oder zu installieren. die Codepage auf dem Computer als dem als Standard festgelegt.

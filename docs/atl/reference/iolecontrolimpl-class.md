@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34bdb0af5965b300e77a02858af3708c90fa63d0
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6e3ba537568ba59c241378aeba83450db536511a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879282"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201336"
 ---
 # <a name="iolecontrolimpl-class"></a>IOleControlImpl-Klasse
 Diese Klasse stellt eine Standardimplementierung von der `IOleControl` -Schnittstelle und implementiert `IUnknown`.  
@@ -57,7 +57,7 @@ class IOleControlImpl
 |[IOleControlImpl::OnMnemonic](#onmnemonic)|Informiert dem Steuerelement, dass ein Benutzer eine angegebene Tastenkombination gedrückt hat. Die ATL-Implementierung gibt E_NOTIMPL zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- Klasse `IOleControlImpl` stellt eine Standardimplementierung von der [IOleControl](http://msdn.microsoft.com/library/windows/desktop/ms694320) -Schnittstelle und implementiert `IUnknown` durch Senden von Informationen an das Speicherabbild Gerät im Debugmodus wird erstellt.  
+ Klasse `IOleControlImpl` stellt eine Standardimplementierung von der [IOleControl](/windows/desktop/api/ocidl/nn-ocidl-iolecontrol) -Schnittstelle und implementiert `IUnknown` durch Senden von Informationen an das Speicherabbild Gerät im Debugmodus wird erstellt.  
   
  **Verwandte Artikel** [ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md), [Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md)  
   
@@ -79,7 +79,7 @@ HRESULT FreezeEvents(BOOL bFreeze);
 ### <a name="remarks"></a>Hinweise  
  `FreezeEvents` dann gibt S_OK zurück.  
   
- Finden Sie unter [IOleControl:: FreezeEvents](http://msdn.microsoft.com/library/windows/desktop/ms678482) in das Windows SDK.  
+ Finden Sie unter [IOleControl:: FreezeEvents](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-freezeevents) in das Windows SDK.  
   
 ##  <a name="getcontrolinfo"></a>  IOleControlImpl::GetControlInfo  
  Fügt Informationen über die Tastaturverhalten des Steuerelements.  
@@ -89,7 +89,7 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IOleControl:GetControlInfo](http://msdn.microsoft.com/library/windows/desktop/ms693730) in das Windows SDK.  
+ Finden Sie unter [IOleControl:GetControlInfo](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo) in das Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt E_NOTIMPL zurück.  
@@ -105,7 +105,7 @@ HRESULT OnAmbientPropertyChange(DISPID dispid);
  Gibt S_OK zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175) in das Windows SDK.  
+ Finden Sie unter [IOleControl::OnAmbientPropertyChange](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-onambientpropertychange) in das Windows SDK.  
   
 ##  <a name="onmnemonic"></a>  IOleControlImpl::OnMnemonic  
  Informiert dem Steuerelement, dass ein Benutzer eine angegebene Tastenkombination gedrückt hat.  
@@ -118,9 +118,9 @@ HRESULT OnMnemonic(LPMSG pMsg);
  Gibt E_NOTIMPL zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IOleControl::OnMnemonic](http://msdn.microsoft.com/library/windows/desktop/ms680699) in das Windows SDK.  
+ Finden Sie unter [IOleControl::OnMnemonic](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-onmnemonic) in das Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [IOleObjectImpl-Klasse](../../atl/reference/ioleobjectimpl-class.md)   
- [ActiveX-Steuerelemente Schnittstellen](http://msdn.microsoft.com/library/windows/desktop/ms692724)   
+ [ActiveX-Steuerelemente Schnittstellen](/windows/desktop/com/activex-controls-interfaces)   
  [Übersicht über die Klasse](../../atl/atl-class-overview.md)

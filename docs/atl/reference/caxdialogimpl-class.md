@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd019112e846875bfa8e27faac5088fbcf1cdaef
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 88cb742464507fe7040b38d88355ab473b366bac
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881986"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196009"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl-Klasse
 Diese Klasse implementiert ein Dialogfeld (gebunden oder ungebunden), die ActiveX-Steuerelemente hostet.  
@@ -170,7 +170,7 @@ INT_PTR DoModal(
   
 ### <a name="parameters"></a>Parameter  
  *hWndParent*  
- [in] Das Handle für das besitzende Fenster. Der Standardwert ist der Rückgabewert von der [GetActiveWindow](http://msdn.microsoft.com/library/windows/desktop/ms646292) Win32-Funktion.  
+ [in] Das Handle für das besitzende Fenster. Der Standardwert ist der Rückgabewert von der [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) Win32-Funktion.  
   
  *dwInitParam*  
  [in] Gibt den Wert zu übergeben, um das Dialogfeld in der *lParam* -Parameter der WM_INITDIALOG-Meldung.  
@@ -235,7 +235,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
   
 ### <a name="parameters"></a>Parameter  
  *pMsg*  
- Zeiger auf eine [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) -Struktur, die der Nachricht, die überprüft werden soll.  
+ Zeiger auf eine [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) -Struktur, die der Nachricht, die überprüft werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt TRUE zurück, wenn die Nachricht verarbeitet wurde, FALSE andernfalls wurde.  

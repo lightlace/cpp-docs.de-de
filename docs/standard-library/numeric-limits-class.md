@@ -80,12 +80,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70e980a33e88920afef9c6f19dcd8b2ecfca5071
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: cbcc47bf7b8eff276135bb5eb2f6206471fee524
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131437"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206474"
 ---
 # <a name="numericlimits-class"></a>numeric_limits-Klasse
 
@@ -100,11 +100,12 @@ class numeric_limits
 
 ### <a name="parameters"></a>Parameter
 
-*Typ* der grundlegende Elementdatentyp, dessen Eigenschaften, getestet, abgefragt oder festgelegt.
+*Type*<br/>
+ Der grundlegende Elementdatentyp, dessen Eigenschaften getestet, abgefragt oder festgelegt werden.
 
 ## <a name="remarks"></a>Hinweise
 
-Der Header definiert explizite spezialisierungen für die Typen **"wchar_t"**, **"bool"**, **Char**, **signiert Char**, **ohne Vorzeichen Char**, **kurze**, **unsigned short**, **Int**, **ganze Zahl ohne Vorzeichen**, **lang**, **unsigned long**, **"float"**, **doppelte**, **long Double ***,** **long Long**, **long long ohne Vorzeichen**, `char16_t`, und `char32_t`. Für diese expliziten spezialisierungen ist der Member [numeric_limits:: is_specialized](#is_specialized) ist **"true"**, und alle relevanten Elemente haben sinnvolle Werte. Das Programm kann zusätzliche explizite Spezialisierungen bereitstellen. Die meisten Memberfunktionen der Klasse beschreiben oder testen mögliche Implementierungen von **"float"**.
+Der Header definiert explizite spezialisierungen für die Typen **"wchar_t"**, **"bool"**, **Char**, **signiert Char**, **ohne Vorzeichen Char**, **kurze**, **unsigned short**, **Int**, **ganze Zahl ohne Vorzeichen**, **lang**, **unsigned long**, **"float"**, **doppelte**, **long double**, **long Long**, **long long ohne Vorzeichen**, **char16_t**, und **char32_t**. Für diese expliziten spezialisierungen ist der Member [numeric_limits:: is_specialized](#is_specialized) ist **"true"**, und alle relevanten Elemente haben sinnvolle Werte. Das Programm kann zusätzliche explizite Spezialisierungen bereitstellen. Die meisten Memberfunktionen der Klasse beschreiben oder testen mögliche Implementierungen von **"float"**.
 
 Für eine beliebige Spezialisierung gibt es keine Member, die sinnvolle Werte haben. Ein Memberobjekt, das keinen sinnvollen Wert speichert 0 (null) (oder **"false"**) und gibt eine Memberfunktion, die keinen sinnvollen Wert zurückgibt `Type(0)`.
 

@@ -52,12 +52,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c7b1771b065d7a0acc4db73eb188884086ff3b1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 959f39df33c2cdcd40a71a801ca715ab7c0eccf0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414167"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213645"
 ---
 # <a name="vscprintf-vscprintfl-vscwprintf-vscwprintfl"></a>_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l
 
@@ -101,18 +101,18 @@ Weitere Informationen finden Sie unter [Formatangaben](../../c-runtime-library/f
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_vscprintf** gibt die Anzahl der Zeichen, die durch die Liste der Argumente, wenn die Zeichenfolge mit gezeigt generiert werden würde gedruckt oder in eine Datei gesendet wurde oder mit der angegebenen Formatierung Puffer codes zurück. Der Rückgabewert umfasst nicht das abschließende NULL-Zeichen. **_vscwprintf** führt dieselbe Funktion für Breitzeichen.
+**_vscprintf** gibt die Anzahl der Zeichen, die erzeugt wird, wenn die Zeichenfolge, zeigt die Liste der Argumente, gedruckt oder an eine Datei gesendet wurde oder Puffer, die mit der angegebenen Formatierung Fehlercodes zurück. Der Rückgabewert umfasst nicht das abschließende NULL-Zeichen. **_vscwprintf** führt dieselbe Funktion für Breitzeichen.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter, der übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas.
+Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
 
-Wenn *Format* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben die Funktionen – 1 zurück und legen Sie **Errno** auf **EINVAL**.
+Wenn *Format* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
 
 ## <a name="remarks"></a>Hinweise
 
-Jede *Argument* (sofern vorhanden) wird entsprechend der jeweiligen Formatangabe in konvertiert *Format*. Das Format besteht aus normalen Zeichen und hat die gleiche form und Funktion wie die *Format* Argument für [Printf](printf-printf-l-wprintf-wprintf-l.md).
+Jede *Argument* (sofern vorhanden) wird entsprechend der jeweiligen Formatangabe in konvertiert *Format*. Das Format besteht aus normalen Zeichen und hat die gleiche form und Funktion wie der *Format* Argument für [Printf](printf-printf-l-wprintf-wprintf-l.md).
 
 > [!IMPORTANT]
-> Stellen Sie sicher, dass bei *Format* eine benutzerdefinierte Zeichenfolge ist er Null-terminiert ist und die richtige Anzahl und Typen der Parameter hat. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Stellen Sie sicher, dass bei *Format* eine benutzerdefinierte Zeichenfolge ist, ist es Null-Terminierung und die richtige Anzahl und Typ der Parameter. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -123,7 +123,7 @@ Jede *Argument* (sofern vorhanden) wird entsprechend der jeweiligen Formatangabe
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_vscprintf**, **_vscprintf_l**|\<stdio.h>|
 |**_vscwprintf**, **_vscwprintf_l**|\<stdio.h> oder \<wchar.h>|

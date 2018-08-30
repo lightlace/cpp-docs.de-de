@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a53b865d054948d9ee22acbfbec0b6ddf807ec0c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e63f13c07ceb6220ba3dc8e7932c7357ed649188
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954759"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199237"
 ---
 # <a name="priorityqueue-class"></a>priority_queue-Klasse
 
@@ -50,11 +50,14 @@ class priority_queue
 
 ### <a name="parameters"></a>Parameter
 
-*Typ* die Datentyp der Elemente in der Warteschlange mit hoher Priorität gespeichert werden.
+*Type*<br/>
+ Der in der Warteschlange mit hoher Priorität zu speichernde Elementdatentyp.
 
-*Container* den Typ des zugrunde liegenden Container verwendet, um die Warteschlange mit hoher Priorität zu implementieren.
+*Container*<br/>
+ Der Typ des zugrunde liegenden Containers, der verwendet wird, um die Warteschlange mit hoher Priorität zu implementieren.
 
-*Vergleichen Sie* der Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel, um deren relative Reihenfolge in die Warteschlange mit hoher Priorität zu bestimmen, vergleichen kann. Dieses Argument ist optional und das binäre Prädikat **weniger***\<*** Typename** *Container ***:: Value_type*** >* ist der Standardwert.
+*Compare*<br/>
+ Der Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der Warteschlange mit hoher Priorität zu bestimmen. Dieses Argument ist optional, und das binäre Prädikat `less<typename Container::value_type>` ist der Standardwert.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -249,15 +252,20 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
 
 ### <a name="parameters"></a>Parameter
 
-*_ Comp* die Vergleichsfunktion des Typs **ConstTraits** verwendet, um die Elemente in der Priority_queue zu sortieren, deren Standard, Funktion, der den basiscontainer verglichen werden soll.
+*_ comp*<br/>
+ Die Vergleichsfunktion des Typs **constTraits** wird verwendet, um Elemente in der priority_queue zu sortieren, deren Standard die Vergleichsfunktion des Basiscontainer ist.
 
-*_Cont* des Basiscontainers, der den basiscontainer ist eine Kopie.
+*_Cont*<br/>
+ Der Basiscontainer, dessen Kopie die Warteschlange mit hoher Priorität sein soll.
 
-*richtige* der Warteschlange mit hoher Priorität, die der erstellte Satz ist eine Kopie.
+*right*<br/>
+ Die Warteschlange mit hoher Priorität, deren Kopie der erstellte Satz sein soll.
 
-*erste* die Position des ersten Elements im Bereich der zu kopierenden Elemente.
+*Erste*<br/>
+ Die Position des ersten Elements in dem zu kopierenden Elementbereich.
 
-*letzte* die Position des ersten Elements außerhalb des Bereichs von Elementen kopiert werden soll.
+*last*<br/>
+ Die Position des ersten Elements nach dem zu kopierenden Elementbereich.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -388,7 +396,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parameter
 
-*Val* am Anfang der Warteschlange mit hoher Priorität hinzugefügte Element.
+*val*<br/>
+ Das am Anfang zur Warteschlange mit hoher Priorität hinzugefügte Element.
 
 ### <a name="remarks"></a>Hinweise
 

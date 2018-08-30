@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0322d6b304366e598fc3db206d4c2e4b9b9d6315
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 114ccb875c1551528eb77edb9c2fae0ecb27edd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336604"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212042"
 ---
 # <a name="event-sink-maps"></a>Ereignissenkenzuordnungen
 Wenn eingebettete OLE-Steuerelements ein Ereignis ausgelöst wird, erhält der Container des Steuerelements das Ereignis mithilfe von sogenannten, eine "Event-Senke-Zuordnung," von MFC bereitgestellten. Diese Senke ereigniszuordnung kennzeichnet Handlerfunktionen für jedes Ereignis als auch die Parameter dieser Ereignisse. Weitere Informationen zu ereignissenkenzuordnungen, finden Sie im Artikel [ActiveX-Steuerelementcontainer](../../mfc/activex-control-containers.md).  
@@ -222,7 +222,7 @@ ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
  Die Dispatch-ID von der Eigenschaft, die in der Benachrichtigung zum.  
   
  *pfnRequest*  
- Zeiger auf eine Memberfunktion, die behandelt die `OnRequestEdit` Benachrichtigung für diese Eigenschaft. Diese Funktion müssen Rückgabetyp "bool" und ein **"bool"\***  Parameter. Diese Funktion sollte der Parameter auf "true", sodass die Eigenschaft geändert und "false", um keine zuzulassen festgelegt. Die Funktion sollte "true", um anzugeben, dass die Benachrichtigung behandelt wurde zurückgegeben wird. andernfalls "false".  
+ Zeiger auf eine Memberfunktion, die behandelt die `OnRequestEdit` Benachrichtigung für diese Eigenschaft. Diese Funktion müssen Rückgabetyp "bool" und ein **"bool"** <strong>\*</strong> Parameter. Diese Funktion sollte der Parameter auf "true", sodass die Eigenschaft geändert und "false", um keine zuzulassen festgelegt. Die Funktion sollte "true", um anzugeben, dass die Benachrichtigung behandelt wurde zurückgegeben wird. andernfalls "false".  
   
  *pfnChanged*  
  Zeiger auf eine Memberfunktion, die behandelt die `OnChanged` Benachrichtigung für diese Eigenschaft. Die Funktion muss "bool", Typ und ein UINT-Parameter zurückgegeben haben. Die Funktion sollte "true", um anzugeben, dass Benachrichtigungen behandelt wurde zurückgegeben wird. andernfalls "false".  
@@ -259,10 +259,10 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
  Die Dispatch-ID von der Eigenschaft, die in der Benachrichtigung zum.  
   
  *pfnRequest*  
- Zeiger auf eine Memberfunktion, die behandelt die `OnRequestEdit` Benachrichtigung für diese Eigenschaft. Diese Funktion müssen Rückgabetyp "bool" und "uint", und **"bool"\***  Parameter. Die Funktion sollte der Parameter auf "true", sodass die Eigenschaft geändert und "false", um keine zuzulassen festgelegt. Die Funktion sollte "true", um anzugeben, dass Benachrichtigungen behandelt wurde zurückgegeben wird. andernfalls "false".  
+ Zeiger auf eine Memberfunktion, die behandelt die `OnRequestEdit` Benachrichtigung für diese Eigenschaft. Diese Funktion müssen einen `BOOL` Rückgabetyp und `UINT` und `BOOL*` Parameter. Die Funktion sollte der Parameter auf "true", sodass die Eigenschaft geändert und "false", um keine zuzulassen festgelegt. Die Funktion sollte "true", um anzugeben, dass Benachrichtigungen behandelt wurde zurückgegeben wird. andernfalls "false".  
   
  *pfnChanged*  
- Zeiger auf eine Memberfunktion, die behandelt die `OnChanged` Benachrichtigung für diese Eigenschaft. Die Funktion muss "bool", Typ und ein UINT-Parameter zurückgegeben haben. Die Funktion sollte "true", um anzugeben, dass Benachrichtigungen behandelt wurde zurückgegeben wird. andernfalls "false".  
+ Zeiger auf eine Memberfunktion, die behandelt die `OnChanged` Benachrichtigung für diese Eigenschaft. Die Funktion müssen einen `BOOL` Rückgabetyp und `UINT` Parameter. Die Funktion sollte "true", um anzugeben, dass Benachrichtigungen behandelt wurde zurückgegeben wird. andernfalls "false".  
   
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
@@ -284,7 +284,7 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
  Die Dispatch-ID von der Eigenschaft, die in der Benachrichtigung zum.  
   
  *pfnRequest*  
- Zeiger auf eine Memberfunktion, die behandelt die `OnRequestEdit` Benachrichtigung für diese Eigenschaft. Diese Funktion müssen Rückgabetyp "bool" und ein **"bool"\***  Parameter. Diese Funktion sollte der Parameter auf "true", sodass die Eigenschaft geändert und "false", um keine zuzulassen festgelegt. Die Funktion sollte "true", um anzugeben, dass die Benachrichtigung behandelt wurde zurückgegeben wird. andernfalls "false".  
+ Zeiger auf eine Memberfunktion, die behandelt die `OnRequestEdit` Benachrichtigung für diese Eigenschaft. Diese Funktion müssen Rückgabetyp "bool" und ein **"bool"** <strong>\*</strong> Parameter. Diese Funktion sollte der Parameter auf "true", sodass die Eigenschaft geändert und "false", um keine zuzulassen festgelegt. Die Funktion sollte "true", um anzugeben, dass die Benachrichtigung behandelt wurde zurückgegeben wird. andernfalls "false".  
   
  *pfnChanged*  
  Zeiger auf eine Memberfunktion, die behandelt die `OnChanged` Benachrichtigung für diese Eigenschaft. Die Funktion sollte einen boolescher Wert, der Typ und keine Parameter haben. Die Funktion sollte "true", um anzugeben, dass die Benachrichtigung behandelt wurde zurückgegeben wird. andernfalls "false".  

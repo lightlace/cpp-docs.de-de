@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cf41a5d827bd3834cffdd7d229d01d4a4889c9b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 396043d78ae1b93f7089d1518c26e982d0ad3974
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610001"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205111"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 
@@ -36,7 +36,7 @@ Für die Optimierung für Visual Basic-Code verwendet.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Defaultcollelem** C++-Attribut hat die gleiche Funktionalität wie die [Defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) MIDL-Attribut.
+Die **Defaultcollelem** C++-Attribut hat die gleiche Funktionalität wie die [Defaultcollelem](/windows/desktop/Midl/defaultcollelem) MIDL-Attribut.
 
 ## <a name="example"></a>Beispiel
 

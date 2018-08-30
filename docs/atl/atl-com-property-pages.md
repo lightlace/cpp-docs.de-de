@@ -19,21 +19,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fdf0d53cca00424c2c933e2578fb5c70b7d07e1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3ec1fb89817da663dd088dadc9b667a3ff0aef46
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572472"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200977"
 ---
 # <a name="atl-com-property-pages"></a>ATL COM-Eigenschaftenseiten
 Com-Eigenschaftenseiten bieten eine Benutzeroberfläche zum Festlegen der Eigenschaften (oder Aufrufen der Methoden) von ein oder mehrere COM-Objekten. Eigenschaftenseiten werden häufig von ActiveX-Steuerelementen verwendet, für die Bereitstellung umfassender Benutzeroberflächen, mit die Eigenschaften des Steuerelements zur Entwurfszeit festgelegt werden können.  
   
- Eigenschaftenseiten sind COM-Objekte, implementieren die [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) oder [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) Schnittstelle. Diese Schnittstellen bieten Methoden, mit denen die Seite zugeordnet werden können. eine `site` (ein COM-Objekt, das den Container der Seite darstellt) und eine Reihe von *Objekte* (COM-Objekte, deren Methoden, als Reaktion auf Änderungen aufgerufen werden, vom Benutzer vorgenommene der Eigenschaftenseite auf). Die Seite Eigenschaftencontainer ist verantwortlich für das Aufrufen von Methoden für die Schnittstelle der Eigenschaftenseite auf die Seite informiert, wenn es sich bei ein- oder Ausblenden der Benutzeroberfläche und beim Anwenden die Änderungen durch den Benutzer an der zugrunde liegenden Objekten vorgenommen.  
+ Eigenschaftenseiten sind COM-Objekte, implementieren die [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) oder [IPropertyPage2](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage2) Schnittstelle. Diese Schnittstellen bieten Methoden, mit denen die Seite zugeordnet werden können. eine `site` (ein COM-Objekt, das den Container der Seite darstellt) und eine Reihe von *Objekte* (COM-Objekte, deren Methoden, als Reaktion auf Änderungen aufgerufen werden, vom Benutzer vorgenommene der Eigenschaftenseite auf). Die Seite Eigenschaftencontainer ist verantwortlich für das Aufrufen von Methoden für die Schnittstelle der Eigenschaftenseite auf die Seite informiert, wenn es sich bei ein- oder Ausblenden der Benutzeroberfläche und beim Anwenden die Änderungen durch den Benutzer an der zugrunde liegenden Objekten vorgenommen.  
   
  Jede Eigenschaftenseite kann vollständig unabhängig von der Objekte erstellt werden, dessen Eigenschaften festgelegt werden können. Alles ist auf einer Eigenschaftenseite muss zu einer bestimmten Schnittstelle (oder eine Gruppe von Schnittstellen) und eine Benutzeroberfläche bereitstellen, für das Aufrufen von Methoden in dieser Schnittstelle.  
   
- Weitere Informationen finden Sie unter [Eigenschaftenblätter und Eigenschaftenseiten](http://msdn.microsoft.com/library/windows/desktop/ms686577) im Windows SDK.  
+ Weitere Informationen finden Sie unter [Eigenschaftenblätter und Eigenschaftenseiten](/windows/desktop/com/property-sheets-and-property-pages) im Windows SDK.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Festlegen der Eigenschaftenseiten](../atl/specifying-property-pages.md)  

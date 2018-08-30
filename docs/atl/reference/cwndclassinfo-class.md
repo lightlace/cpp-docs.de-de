@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b328cb869f971afb0251750d7847d6850688731
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 11f61e89ab888b678bf54f65b999c0fd4394dbea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879834"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201661"
 ---
 # <a name="cwndclassinfo-class"></a>CWndClassInfo-Klasse
 Diese Klasse stellt Methoden zum Erfassen von Informationen für eine Fensterklasse.  
@@ -79,7 +79,7 @@ class CWndClassInfo
   
  [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]  
   
- Weitere Informationen zu Klassen, finden Sie unter [Fensterklassen](http://msdn.microsoft.com/library/windows/desktop/ms632596) im Windows SDK.  
+ Weitere Informationen zu Klassen, finden Sie unter [Fensterklassen](https://msdn.microsoft.com/library/windows/desktop/ms632596) im Windows SDK.  
   
  Weitere Informationen zum Verwenden von Fenstern in ATL finden Sie im Artikel [ATL-Fensterklassen](../../atl/atl-window-classes.md).  
   
@@ -138,7 +138,7 @@ TCHAR m_szAutoName[13];
  `CWndClassInfo` verwendet `m_szAutoName` nur dann, wenn NULL, um übergeben wird die `WndClassName` Parameter [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class), [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) oder [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) . ATL wird einen Namen zu erstellen, wenn die Fensterklasse registriert ist.  
   
 ##  <a name="m_wc"></a>  CWndClassInfo::m_wc  
- Verwaltet die fensterklasseninformationen in einem [WNDCLASSEX](http://msdn.microsoft.com/library/windows/desktop/ms633577) Struktur.  
+ Verwaltet die fensterklasseninformationen in einem [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577) Struktur.  
   
 ```
 WNDCLASSEX m_wc;

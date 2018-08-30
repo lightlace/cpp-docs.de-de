@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bed065eb959d959086133a757b7ca3594214719
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a2cc139fa0aa933131e4e19b8efa397e4bddee50
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883279"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209227"
 ---
 # <a name="server-registration-global-functions"></a>Globale Funktionen für Server-Registrierung
 Diese Funktionen bieten Unterstützung für das Registrieren und Aufheben der Registrierung für Server-Objekte in der objektzuordnung.  
@@ -113,10 +113,10 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
  Zeiger auf die COM-Modul.  
   
  *dwClsContext*  
- Gibt den Kontext, in dem das Klassenobjekt ist, ausgeführt werden. Mögliche Werte sind CLSCTX_INPROC_SERVER CLSCTX_INPROC_HANDLER oder CLSCTX_LOCAL_SERVER. Finden Sie unter [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) Weitere Details.  
+ Gibt den Kontext, in dem das Klassenobjekt ist, ausgeführt werden. Mögliche Werte sind CLSCTX_INPROC_SERVER CLSCTX_INPROC_HANDLER oder CLSCTX_LOCAL_SERVER. Finden Sie unter [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) Weitere Details.  
   
  *dwFlags*  
- Bestimmt die Art der Verbindung mit dem Klassenobjekt. Mögliche Werte sind REGCLS_SINGLEUSE REGCLS_MULTIPLEUSE oder REGCLS_MULTI_SEPARATE. Finden Sie unter [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) Weitere Details.  
+ Bestimmt die Art der Verbindung mit dem Klassenobjekt. Mögliche Werte sind REGCLS_SINGLEUSE REGCLS_MULTIPLEUSE oder REGCLS_MULTI_SEPARATE. Finden Sie unter [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) Weitere Details.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.  

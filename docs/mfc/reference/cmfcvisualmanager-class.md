@@ -354,12 +354,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9ac21e909c8286ef6a7d1973837b0caf69b711c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0eb6e8da3caa9286e14072726488ad1c16f47b1e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539651"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203641"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager-Klasse
 Bietet Unterstützung zum Ändern der Darstellung der Anwendung auf einer globalen Ebene. Die `CMFCVisualManager` -Klasse arbeitet mit einer Klasse zusammen, die Anweisungen bereitstellt, um die GUI-Steuerelemente der Anwendung in einem konsistenten Stil zu zeichnen. Diese anderen Klassen werden als visuelle Manager bezeichnet, sie erben von `CMFCBaseVisualManager`.  
@@ -790,7 +790,7 @@ virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
  Ein Zeiger auf eine Schaltfläche zum automatischen ausblenden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, der angibt, der die Textfarbe des *pButton*.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) Parameter, der angibt, der die Textfarbe des *pButton*.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse die Textfarbe einer Schaltfläche zum automatischen Ausblenden in Ihrer Anwendung anpassen. Zu diesem Zweck geben Sie die gewünschte Farbe, Ihrer Anwendung zur Verwendung als Farbe des Textes zurück.  
@@ -820,7 +820,7 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
  Ein Zeiger auf die Titelleiste.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, der die Farbe des Texts im angibt *pBar*.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) Parameter, der die Farbe des Texts im angibt *pBar*.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in der abgeleiteten Klasse die Textfarbe für eine Titelleiste anpassen. Geben Sie in der überschriebenen Methode die gewünschte Farbe zurück.  
@@ -998,7 +998,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
  Ein Zeiger auf die Eigenschaftenliste, die das Framework gezeichnet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, der die Farbe des Hintergrunds angibt *pPropList*.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) Parameter, der die Farbe des Hintergrunds angibt *pPropList*.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, um die Farbe des Hintergrunds einer Eigenschaftenliste in Ihrer Anwendung anpassen.  
@@ -1015,7 +1015,7 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
  Ein Zeiger auf die Eigenschaftenliste.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, der die Textfarbe der Eigenschaftenliste angibt.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) Parameter, der die Textfarbe der Eigenschaftenliste angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, um die Textfarbe einer Eigenschaftenliste in Ihrer Anwendung anpassen.  
@@ -1214,7 +1214,7 @@ virtual void GetTabFrameColors(
  Ein Zeiger auf die Fenster im Registerkartenformat, in dem der Frame eine Registerkarte zeichnet.  
   
  [out] *ClrDark*  
- Ein Verweis auf eine [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, in dem diese Methode die Farbe für den dunklen Rahmen einer Registerkarte speichert.  
+ Ein Verweis auf eine [COLORREF](/windows/desktop/gdi/colorref) Parameter, in dem diese Methode die Farbe für den dunklen Rahmen einer Registerkarte speichert.  
   
  [out] *ClrBlack*  
  Ein Verweis auf eine COLORREF-Parameter, in dem diese Methode die Farbe für den Rand des Fensters Registerkarte speichert. Die Standardfarbe für den Rahmen ist "Schwarz".  
@@ -1778,7 +1778,7 @@ virtual BOOL OnDrawBrowseButton(
  Ein Enumerationswert, der den Zustand der Schaltfläche angibt.  
   
  [out] *ClrText*  
- Ein Verweis auf eine [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter. Dies ist ein reservierter Wert und wird derzeit nicht verwendet.  
+ Ein Verweis auf eine [COLORREF](/windows/desktop/gdi/colorref) Parameter. Dies ist ein reservierter Wert und wird derzeit nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn erfolgreich, andernfalls FALSE.  
@@ -2578,7 +2578,7 @@ virtual COLORREF OnDrawPaneCaption(
  Ein Rechteck, das die Grenzen von Schaltflächen mit der Beschriftung angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, der die Textfarbe der Beschriftung angibt.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) Parameter, der die Textfarbe der Beschriftung angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einen abgeleiteten visuellen Manager anpassen die Darstellung der Bereich Beschriftungen.  
@@ -2805,7 +2805,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
  Ein Zeiger auf die Titelleiste. Visuelle Manager zeichnet diese [CMFCRibbonContextCaption-Klasse](../../mfc/reference/cmfcribboncontextcaption-class.md) Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, der die Farbe des Texts in der Titelleiste angibt.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) Parameter, der die Farbe des Texts in der Titelleiste angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse, die die Darstellung der Titelleiste für eine Menübandkategorie anpassen. Weitere Informationen zu der Titelleiste, finden Sie unter [CMFCRibbonContextCaption-Klasse](../../mfc/reference/cmfcribboncontextcaption-class.md).  
@@ -3590,7 +3590,7 @@ virtual void OnDrawStatusBarProgress(
  Der aktuelle Status für die Statusanzeige.  
   
  [in] *ClrBar*  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, der die Ausgangsfarbe, die für die Statusanzeige angibt. Der Wert ist entweder den Anfang ein Farbverlauf oder die vollständige Farbe der Statusleiste.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) Parameter, der die Ausgangsfarbe, die für die Statusanzeige angibt. Der Wert ist entweder den Anfang ein Farbverlauf oder die vollständige Farbe der Statusleiste.  
   
  [in] *ClrProgressBarDest*  
  Eine COLORREF-Parameter, der das Ende einer-Anfangsfarbe des Farbverlaufs für die Statusanzeige angibt. Wenn *ClrProgressBarDest* -1 ist, zeichnet das Framework keine Statusanzeige als einem Farbverlauf. Stattdessen füllt die gesamte Statusanzeige mit der Farbe anhand des *ClrBar*.  
@@ -4250,7 +4250,7 @@ virtual void OnFillOutlookBarCaption(
  Ein Rechteck, das die Grenzen der Titelleiste angibt.  
   
  [out] *ClrText*  
- Ein Verweis auf eine [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter. Die Methode schreibt die Farbe des Texts in der Titelleiste an diesen Parameter an.  
+ Ein Verweis auf eine [COLORREF](/windows/desktop/gdi/colorref) Parameter. Die Methode schreibt die Farbe des Texts in der Titelleiste an diesen Parameter an.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardimplementierung dieser Methode füllt die Titelleiste, durch die Farbe für den Schatten basierend auf dem aktuellen Design. Überschreiben Sie diese Methode in einem abgeleiteten visual-Manager, um die Farbe der Beschriftung Outlook-Leiste anzupassen.  
@@ -4281,7 +4281,7 @@ virtual void OnFillOutlookPageButton(
  Ein boolescher Parameter, der angibt, ob die Schaltfläche gedrückt wird.  
   
  [out] *ClrText*  
- Ein Verweis auf eine [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter. Diese Methode speichert die Textfarbe für die Outlook-Seite-Schaltfläche in diesem Parameter.  
+ Ein Verweis auf eine [COLORREF](/windows/desktop/gdi/colorref) Parameter. Diese Methode speichert die Textfarbe für die Outlook-Seite-Schaltfläche in diesem Parameter.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion in einen abgeleiteten visuellen Manager anpassen die Darstellung von Outlook Seitenschaltflächen.  

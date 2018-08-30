@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7458a82cce22830dd16525a5f33ed12c6c1b6e0d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3c56cdcf59c6dad891029e21e14940598e0cfeae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957966"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209083"
 ---
 # <a name="basicstring-class"></a>basic_string-Klasse
 
@@ -881,7 +881,7 @@ Ein Zeiger auf die im C-Stil angegebene Version der aufrufenden Zeichenfolge.  D
 
 ### <a name="remarks"></a>Hinweise
 
-Objekte des Typs „String“, die zur C++-Vorlagenklasse „basic_string\<char>“ gehören, enden nicht unbedingt auf NULL. Das NULL-Zeichen „\0„ wird als Sonderzeichen in einer C-Zeichenfolge verwendet, um das Ende einer Zeichenfolge zu markieren. Es hat allerdings keine besondere Bedeutung in einem Objekt des Typs „string“ und kann genau wie jedes andere Zeichen ein Teil der Zeichenfolge sein. Es gibt eine automatische Konvertierung von const **char\*** in Zeichenfolgen, die Klasse „string“ bietet jedoch keine automatische Konvertierung von Zeichenfolgen im C-Format in Objekte des Typs **basic_string\<char>**.
+Objekte des Typs „String“, die zur C++-Vorlagenklasse „basic_string\<char>“ gehören, enden nicht unbedingt auf NULL. Das NULL-Zeichen „\0„ wird als Sonderzeichen in einer C-Zeichenfolge verwendet, um das Ende einer Zeichenfolge zu markieren. Es hat allerdings keine besondere Bedeutung in einem Objekt des Typs „string“ und kann genau wie jedes andere Zeichen ein Teil der Zeichenfolge sein. Es wird eine automatische Konvertierung von **const Char** <strong>\*</strong> in Zeichenfolgen, sondern die Zeichenfolge-Klasse bietet keine automatische Konvertierung von Zeichenfolgen im C-Format in Objekte des Typs **"basic_string"\<Char >**.
 
 Die zurückgegebene Zeichenfolge im C-Format darf nicht geändert werden, weil dadurch der Zeiger auf die Zeichenfolge ungültig oder gelöscht werden könnte. Das liegt daran, dass die Lebensdauer des Zeigers eingeschränkt und sein Besitzer die Klasse „string“ ist.
 
@@ -1652,7 +1652,7 @@ Ein Zeiger auf das erste Element des Arrays, das die Inhalte der Zeichenfolge en
 
 Objekte des Typs „String“, die zur C++-Vorlagenklasse „basic_string \<char>“ gehören, enden nicht unbedingt auf NULL. Der Rückgabetyp für `data` ist nicht gültige C-Zeichenfolge ist, da kein Null-Zeichen angehängt wird. Das NULL-Zeichen „\0“ wird als Sonderzeichen in einer C-Zeichenfolge verwendet, um das Ende einer Zeichenfolge zu markieren. Es hat allerdings keine besondere Bedeutung in einem Objekt des Typs „string“ und kann genau wie jedes andere Zeichen ein Teil des Zeichenfolgenobjekts sein.
 
-Es gibt eine automatische Konvertierung von const **char\*** in Zeichenfolgen, die Klasse „string“ bietet jedoch keine automatische Konvertierung von Zeichenfolgen im C-Format in Objekte des Typs **basic_string \<char>**.
+Es wird eine automatische Konvertierung von **const Char** <strong>\*</strong> in Zeichenfolgen, sondern die Zeichenfolge-Klasse bietet keine automatische Konvertierung von Zeichenfolgen im C-Format in Objekte des Typs **"basic_string" \<Char >**.
 
 Die zurückgegebene Zeichenfolge sollte nicht geändert werden, da dadurch der Zeiger auf die Zeichenfolge für ungültig erklärt oder gelöscht werden könnte, da die Lebensdauer des Zeigers eingeschränkt ist, und er im Besitz der Klasse „string“ ist.
 
@@ -3528,7 +3528,7 @@ typedef typename allocator_type::pointer pointer;
 
 Der Typ ist ein Synonym für `allocator_type::pointer`.
 
-Für den Typ `string`, dies ist äquivalent zum **Char\***.
+Für den Typ `string`, dies ist äquivalent zum **Char**<strong>\*</strong>.
 
 ### <a name="example"></a>Beispiel
 

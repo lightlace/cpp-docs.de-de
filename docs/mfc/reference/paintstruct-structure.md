@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75a3db6c6beb18afe2303b464fcab290b2e132fc
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: dddf9c117f2366496609f8bdf4ffc2f069f66ace
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338209"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199572"
 ---
 # <a name="paintstruct-structure"></a>PAINTSTRUCT-Struktur
 Die `PAINTSTRUCT` Struktur enthält Informationen, die verwendet werden kann, um den Clientbereich eines Fensters zu zeichnen.  
@@ -44,7 +44,7 @@ typedef struct tagPAINTSTRUCT {
  Identifiziert den Anzeigekontext, die zum Zeichnen verwendet werden.  
   
  *fErase*  
- Gibt an, ob der Hintergrund neu gezeichnet werden muss. Es ist nicht 0, wenn die Anwendung neu Hintergrund gezeichnet werden soll. Die Anwendung ist verantwortlich für den Hintergrund zeichnen, wenn eine Windows-Fensterklasse ohne ein Hintergrundpinsel erstellt wird (finden Sie in der Beschreibung der `hbrBackground` Mitglied der [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) Struktur im Windows SDK).  
+ Gibt an, ob der Hintergrund neu gezeichnet werden muss. Es ist nicht 0, wenn die Anwendung neu Hintergrund gezeichnet werden soll. Die Anwendung ist verantwortlich für den Hintergrund zeichnen, wenn eine Windows-Fensterklasse ohne ein Hintergrundpinsel erstellt wird (finden Sie in der Beschreibung der `hbrBackground` Mitglied der [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) Struktur im Windows SDK).  
   
  *rcPaint*  
  Gibt an, der oberen linken und unteren linken Ecke des Rechtecks in dem das Zeichnen angefordert wird.  

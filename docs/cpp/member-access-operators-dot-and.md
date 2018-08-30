@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91ec7e11272e0a7286d77e3fc96b7437007a0f8d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a4af9fa780aca1bc1c1304b45d226984fbb5eb7e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408785"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201444"
 ---
 # <a name="member-access-operators--and--gt"></a>Operatoren für den Memberzugriff:. "und" -&gt;
 ## <a name="syntax"></a>Syntax  
@@ -46,7 +46,7 @@ postfix-expression -> name
   
 1.  In der ersten Form stellt *Postfix-Expression* stellt einen Wert aus der Struktur, Klasse oder union-Typs und *Namen* Namen eines Members der angegebenen Struktur, Union oder Klasse. Der Wert des Vorgangs ist der *Namen* und ist ein l-Wert, wenn *Postfix-Expression* ist ein l-Wert.  
   
-2.  In der zweiten Form stellt *Postfix-Expression* stellt einen Zeiger auf eine Struktur, Union oder Klasse und *Namen* Namen eines Members der angegebenen Struktur, Union oder Klasse. Der Wert ist der *Namen* und ist ein l-Wert. Die **->** Operator dereferenziert den Zeiger. Daher sind die Begriffe * e ***->** `member` und **(\****e***)**.`member` (wobei *e* stellt einen Zeiger) ergeben identische Ergebnisse (Ausnahme: Wenn die Operatoren **->** oder **\*** sind überladen).  
+2.  In der zweiten Form stellt *Postfix-Expression* stellt einen Zeiger auf eine Struktur, Union oder Klasse und *Namen* Namen eines Members der angegebenen Struktur, Union oder Klasse. Der Wert ist der *Namen* und ist ein l-Wert. Die **->** Operator dereferenziert den Zeiger. Daher sind die Begriffe `e->member` und `(*e).member` (, in denen *e* stellt einen Zeiger) ergeben identische Ergebnisse (Ausnahme: Wenn die Operatoren **->** oder <strong>\*</strong> sind überladen).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden beide Formen des Memberzugriffsoperators dargestellt.  

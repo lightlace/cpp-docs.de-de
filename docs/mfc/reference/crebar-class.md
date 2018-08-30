@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1acc2d5918bea040e1f004e8a1d11ceee3146f89
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 61601baca7a91d76f473281184c335cc5277f815
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848618"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201853"
 ---
 # <a name="crebar-class"></a>CReBar-Klasse
 Eine Steuerleiste, die Layout-, Persistenz- und Zustandsinformationen für Grundleisten-Steuerelemente bereitstellt.  
@@ -105,7 +105,7 @@ BOOL AddBar(
  Ein Zeiger auf eine `CBitmap` Objekte über die Hintergründe grundleiste angezeigt werden. Standardmäßig NULL.  
   
  *dwStyle*  
- Ein DWORD, das den Stil enthält grundleiste zuweisen. Finden Sie unter den `fStyle` funktionsbeschreibung in der Struktur Win32 [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) für eine vollständige Liste der Stile von Band.  
+ Ein DWORD, das den Stil enthält grundleiste zuweisen. Finden Sie unter den `fStyle` funktionsbeschreibung in der Struktur Win32 [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) für eine vollständige Liste der Stile von Band.  
   
  *clrFore*  
  Eine COLORREF-Wert, der die Vordergrundfarbe der Infoleiste darstellt.  
@@ -135,7 +135,7 @@ virtual BOOL Create(
  Zeiger auf die `CWnd` -Objekt, dessen Windows-Fenster das übergeordnete Element der Statusleiste ist. Normalerweise Ihr Rahmenfenster.  
   
  *dwCtrlStyle*  
- Das Format des Grundleisten-Steuerelement. In der Standardeinstellung RBS_BANDBORDERS, die schmale Linien zum Trennen der benachbarte Bänder innerhalb des Infoleistensteuerelements anzeigt. Finden Sie unter [Stile für Grundleisten-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb774377) im Windows SDK für eine Liste der Formate.  
+ Das Format des Grundleisten-Steuerelement. In der Standardeinstellung RBS_BANDBORDERS, die schmale Linien zum Trennen der benachbarte Bänder innerhalb des Infoleistensteuerelements anzeigt. Finden Sie unter [Stile für Grundleisten-Steuerelemente](/windows/desktop/Controls/rebar-control-styles) im Windows SDK für eine Liste der Formate.  
   
  *dwStyle*  
  Die Infoleiste Window-Stile.  

@@ -1,7 +1,7 @@
 ---
-title: Projektbuildfehler prj0002 | Microsoft Docs
+title: Projektbuildfehler prj0002 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54e1870ce9137ba172f848a499dd31133119eea0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc0e48130c17e04c2671395161452c9e66000047
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318275"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195714"
 ---
 # <a name="project-build-error-prj0002"></a>Projektbuildfehler PRJ0002
-Das Fehlerergebnis von "Befehlszeile" zurückgegeben.  
-  
- Ein Befehl ***Befehlszeile***, wurde die Vervollständigung der Benutzereingabe in formatiert die **Eigenschaftenseiten** (Dialogfeld), ein Fehlercode, jedoch keine Informationen zurückgegeben werden im Ausgabefenster angezeigt.  
-  
- Die Behebung dieses Fehlers hängt davon ab, welches Tool den Fehler generiert hat. Für "MIDL" erhalten Sie einen Überblick über die Ursache des Problems, wenn/o (Ausgabe umleiten) definiert ist.  
-  
- Eine Batchdatei, z. B. einen benutzerdefinierten Buildschritt oder Buildereignis, die keine Informationen über Fehlerzustände ist möglicherweise auch die Ursache dieses Fehlers.
+
+> Fehlerergebnis Merry "*Befehlszeile*".
+
+Ein Befehl *Befehlszeile*, die aus der Benutzereingabe in gebildet wurde die **Eigenschaftenseiten** zurückgegebenen Fehlercode jedoch keine Informationen im Dialogfeld wird angezeigt, der **Ausgabe** Fenster .
+
+Die Behebung dieses Fehlers hängt davon ab, welches Tool den Fehler generiert hat. Für MIDL erhalten Sie eine Vorstellung davon, welches Problem liegt vor, wenn/o (Ausgabe umleiten) definiert ist.
+
+Eine Batchdatei, z. B. einen benutzerdefinierten Buildschritt oder Buildereignis, die keine Informationen über fehlerbedingungen enthält möglicherweise auch der Grund für diesen Fehler.

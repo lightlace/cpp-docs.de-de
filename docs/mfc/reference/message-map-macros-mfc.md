@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e68cdc236759776fa327b4602343ec9ac73b9bba
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 61599d9080bf5cdce56f30ed38e6b20064032512
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338367"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216702"
 ---
 # <a name="message-map-macros-mfc"></a>Meldungszuordnungsmakros (MFC)
 Um meldungszuordnungen zu unterstützen, stellt MFC die folgenden Makros:  
@@ -307,7 +307,7 @@ ON_MESSAGE( message, memberFxn )
  Der Typ der Funktion muss `afx_msg LRESULT (CWnd::*)(WPARAM, LPARAM)`.  
   
 ### <a name="remarks"></a>Hinweise  
- Benutzerdefinierte Meldungen sind alle Nachrichten, die nicht standardmäßige Windows-WM_MESSAGE Nachrichten sind. Wenn Sie eine Meldungs-ID auswählen zu können, müssen Sie Werte in den Bereich der WM_USER (0 x 0400) zu 0xBFFF 0x7FFF oder WM_APP (0 x 8000) verwenden. Weitere Informationen in Bezug auf die Meldungs-IDs finden Sie unter [WM_APP](http://msdn.microsoft.com/library/windows/desktop/ms644930).  
+ Benutzerdefinierte Meldungen sind alle Nachrichten, die nicht standardmäßige Windows-WM_MESSAGE Nachrichten sind. Wenn Sie eine Meldungs-ID auswählen zu können, müssen Sie Werte in den Bereich der WM_USER (0 x 0400) zu 0xBFFF 0x7FFF oder WM_APP (0 x 8000) verwenden. Weitere Informationen in Bezug auf die Meldungs-IDs finden Sie unter [WM_APP](/windows/desktop/winmsg/wm-app).  
   
  Es sollte genau eine ON_MESSAGE-Makro-Anweisung in der meldungszuordnung für jede benutzerdefinierte Nachricht, die eine Message-Handler-Funktion zugeordnet werden muss.  
   
@@ -505,7 +505,7 @@ END_MESSAGE_MAP()
  **Header:** afxmsg_.h  
   
 ### <a name="see-also"></a>Siehe auch  
- [RegisterWindowMessage registriert](http://msdn.microsoft.com/library/windows/desktop/ms644947)   
+ [RegisterWindowMessage registriert](https://msdn.microsoft.com/library/windows/desktop/ms644947)   
  [Benutzerdefinierte Handler](user-defined-handlers.md)
 
 ## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE    

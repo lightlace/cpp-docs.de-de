@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b65bed61f864bc5515c2639be6afe5984702ae29
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: d2e9e13f7b5838cb13497dd874f7f0cf42f34e98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42901087"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200145"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet-Klasse
 
@@ -117,13 +117,13 @@ class CPropertySheet : public CWnd
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CPropertySheet::m_psh](#m_psh)|Die Windows [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) Struktur. Bietet Zugriff auf dem Blatt "einfache Property"-Parameter an.|
+|[CPropertySheet::m_psh](#m_psh)|Die Windows [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) Struktur. Bietet Zugriff auf dem Blatt "einfache Property"-Parameter an.|
 
 ## <a name="remarks"></a>Hinweise
 
 Ein Eigenschaftenblatt besteht aus einem `CPropertySheet` Objekt und einer oder mehrerer [CPropertyPage](../../mfc/reference/cpropertypage-class.md) Objekte. Das Framework zeigt ein Eigenschaftenblatt, als ein Fenster mit einem Satz von Registerkartenindizes und ein Bereich, der die aktuell ausgewählte Seite enthält. Der Benutzer navigiert zu einer bestimmten Seite mithilfe der entsprechenden Registerkarte.
 
-`CPropertySheet` bietet Unterstützung für den erweiterten [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) Struktur, die in Windows 98 und Windows NT, 2000 eingeführt wurden. Die Struktur enthält die zusätzliche Flags und Member, die mithilfe einer Bitmap im Hintergrund "Wasserzeichens" zu unterstützen.
+`CPropertySheet` bietet Unterstützung für den erweiterten [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) Struktur, die in Windows 98 und Windows NT, 2000 eingeführt wurden. Die Struktur enthält die zusätzliche Flags und Member, die mithilfe einer Bitmap im Hintergrund "Wasserzeichens" zu unterstützen.
 
 Um diese neue Images automatisch in Ihrer Eigenschaftenblattobjekt anzuzeigen, übergeben Sie gültige Werte für die Bitmap und Paletteninformationen Bilder im Aufruf von [CPropertySheet::Construct](#construct) oder [CPropertySheet::CPropertySheet](#cpropertysheet).
 
@@ -601,7 +601,7 @@ Rufen Sie z. B. diese Memberfunktion auf, wenn Sie die Bitmaps auf den Registerk
 
 ##  <a name="m_psh"></a>  CPropertySheet::m_psh
 
-Eine Struktur, deren Mitglieder, die Merkmale des speichern [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546).
+Eine Struktur, deren Mitglieder, die Merkmale des speichern [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2).
 
 ### <a name="remarks"></a>Hinweise
 
@@ -624,13 +624,13 @@ void MapDialogRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parameter
 
 *lpRect*  
-Verweist auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur oder [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das das Dialogfeld enthält koordiniert, konvertiert werden soll.
+Verweist auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur oder [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das das Dialogfeld enthält koordiniert, konvertiert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
 Dialogfeld-Einheiten sind im Hinblick auf die aktuellen Dialogfeld-Basiseinheit abgeleitet, die durchschnittliche Breite und Höhe der Zeichen in die Schriftart für Dialogfeld-Text angegeben. Eine horizontale Einheit ist ein Viertel der im Dialogfeld Basis-Width-Komponente und eine vertikale Einheit ist ein Achtel der Dialogfeld-Basis Height-Komponente.
 
-Die [GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) Windows-Funktion gibt die Größeninformationen für die Systemschriftart, aber Sie können eine andere Schriftart für jedes Eigenschaftenblatt angeben, bei der Verwendung des DS_SETFONT-Stils in der Ressourcendefinition Datei. Die [MapDialogRect](http://msdn.microsoft.com/library/windows/desktop/ms645502) Windows-Funktion, beschrieben in das Windows SDK, verwendet die passende Schriftart für das Dialogfeld zu öffnen.
+Die [GetDialogBaseUnits](/windows/desktop/api/winuser/nf-winuser-getdialogbaseunits) Windows-Funktion gibt die Größeninformationen für die Systemschriftart, aber Sie können eine andere Schriftart für jedes Eigenschaftenblatt angeben, bei der Verwendung des DS_SETFONT-Stils in der Ressourcendefinition Datei. Die [MapDialogRect](/windows/desktop/api/winuser/nf-winuser-mapdialogrect) Windows-Funktion, beschrieben in das Windows SDK, verwendet die passende Schriftart für das Dialogfeld zu öffnen.
 
 Die `MapDialogRect` Memberfunktion ersetzt die Dialogfeld-Einheiten in *LpRect* mit Bildschirm von Einheiten (in Pixel), damit das Rechteck verwendet werden kann, erstellen ein Dialogfeld oder ein Steuerelement innerhalb eines Felds zu positionieren.
 
@@ -683,9 +683,9 @@ Nschaltfläche: identifiziert die Schaltfläche gedrückt wird. Dieser Parameter
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [PSM_PRESSBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb774597) für Weitere Informationen über die Windows SDK Pressbutton-Meldung.
+Finden Sie unter [PSM_PRESSBUTTON](/windows/desktop/Controls/psm-pressbutton) für Weitere Informationen über die Windows SDK Pressbutton-Meldung.
 
-Ein Aufruf von `PressButton` sendet keinen der [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552) Benachrichtigung auf einer Eigenschaftenseite für das Framework. Rufen Sie zum Senden dieser Benachrichtigung [CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok).
+Ein Aufruf von `PressButton` sendet keinen der [PSN_APPLY](/windows/desktop/Controls/psn-apply) Benachrichtigung auf einer Eigenschaftenseite für das Framework. Rufen Sie zum Senden dieser Benachrichtigung [CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok).
 
 ### <a name="example"></a>Beispiel
 

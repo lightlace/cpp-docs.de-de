@@ -1,5 +1,5 @@
 ---
-title: -Fp (Name. PCH-Datei) | Microsoft Docs
+title: -Fp (Name. PCH-Datei) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,50 +25,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f59477695b83b33dd3cfa2b37837c5b52c8002
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 723bf8d6f49157a2cdc02376e1a628ba697eceb2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376331"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217990"
 ---
 # <a name="fp-name-pch-file"></a>/Fp (Name der PCH-Datei)
-Stellt einen Pfadnamen für einen vorkompilierten Header statt mit dem Standardnamen für den Pfad an.  
+Stellt einen Pfadnamen für einen vorkompilierten Header anstelle des Standardpfadnamens bereit.  
   
 ## <a name="syntax"></a>Syntax  
   
-> **/ Fp**_Pfadnamen_  
+> **/ Fp**<em>Pfadname</em>  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Option mit [/Yc (Datei der vorkompilierten Header erstellen)](../../build/reference/yc-create-precompiled-header-file.md) oder [/Yu (vorkompilierte Headerdatei verwenden)](../../build/reference/yu-use-precompiled-header-file.md) einen Pfadnamen für einen vorkompilierten Header statt mit dem Standardnamen für den Pfad angeben. Sie können auch **/fp** mit **"/ Yc"** die Verwendung einer vorkompilierten Headerdatei an, die nicht die **"/ Yc" *** Filename* Argument und aus der Basisname der Quelldatei.  
+ Verwenden Sie diese Option mit ["/ Yc" (Erstellen vorkompilierter Headerdatei)](../../build/reference/yc-create-precompiled-header-file.md) oder [/Yu (vorkompilierte Headerdatei verwenden)](../../build/reference/yu-use-precompiled-header-file.md) um einen Pfadnamen für einen vorkompilierten Header anstelle des Standardpfadnamens bereitzustellen. Sie können auch **/fp** mit **"/ Yc"** die Verwendung einer vorkompilierten Headerdatei an, die von unterscheidet der **"/ Yc"**<em>Dateiname</em> Argument und von der Basisname der Quelldatei.  
   
- Wenn Sie eine Erweiterung nicht als Teil des Pfadnamens angeben, wird davon ausgegangen, dass eine Erweiterung PCH. Wenn Sie ein Verzeichnis ohne einen Dateinamen angeben, wird der Standarddateiname VC*x*0.pch, wobei *x* die Hauptversion von Visual C++ verwendet wird.  
+ Wenn Sie eine Erweiterung nicht als Teil des Pfadnamens angeben, wird davon ausgegangen, dass eine Erweiterung des PCH. Wenn Sie ein Verzeichnis ohne einen Dateinamen angeben, wird der Standarddateiname VC*x*0.pch, wobei *x* ist die Hauptversion von Visual C++ verwendet.  
   
  Sie können auch die **/fp** mit option **"/ Yu"**.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).  
   
 2.  Klicken Sie auf den Ordner **C/C++** .  
   
 3.  Klicken Sie auf die **vorkompilierte Header** Eigenschaftenseite.  
   
-4.  Ändern der **vorkompilierten Headerdatei** Eigenschaft.  
+4.  Ändern der **vorkompilierte Headerdatei** Eigenschaft.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
 -   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderFile%2A>.  
   
 ## <a name="example"></a>Beispiel  
- Wenn eine vorkompilierte Headerdatei für eine Debugversion des Programms erstellt werden soll, und Sie Header-Dateien und Quellcode kompilieren, können Sie z. B. einen Befehl angeben:  
+ Wenn eine vorkompilierte Headerdatei für eine Debugversion des Programms erstellt werden soll, und Sie die Headerdateien und Quellcode kompiliert werden, können Sie z. B. einen Befehl angeben:  
   
 ```  
 CL /DDEBUG /Zi /Yc /FpDPROG.PCH PROG.CPP  
 ```  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Befehl spezifiziert die Verwendung einer vorkompilierten Headerdatei mit dem Namen MYPCH.pch. Der Compiler davon ausgegangen, dass der Quellcode in PROG.cpp MyApp.h vorkompiliert wurde vorkompilierte Code in MYPCH.pch befindet. Er verwendet den Inhalt des MYPCH.pch und den Rest von PROG.cpp zur Erstellung einer OBJ-Datei kompiliert. Die Ausgabe dieses Beispiels ist eine Datei namens PROG.exe.  
+ Der folgende Befehl gibt die Verwendung einer vorkompilierten Headerdatei mit dem Namen MYPCH.pch. Der Compiler wird davon ausgegangen, dass der Quellcode im PROG.cpp MYAPP.h vorkompiliert wurde und der vorkompilierte Code in MYPCH.pch befindet. Er verwendet den Inhalt des MYPCH.pch und kompiliert die restlichen PROG.cpp eine .obj-Datei zu erstellen. Die Ausgabe dieses Beispiels wird eine Datei namens PROG.exe.  
   
 ```  
 CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP  

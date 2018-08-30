@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c6a5b0e031aebb658b4da20d3aa9a6dd47f8c2a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 632e8c0039dc0cac35fe46cff1fc539e534f8e20
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851560"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203402"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage-Klasse
 Stellt die einzelnen Seiten eines Eigenschaftenblatts dar; wird auch als "Dialogfeld im Registerformat" bezeichnet.  
@@ -80,7 +80,7 @@ class CPropertyPage : public CDialog
 |----------|-----------------|  
 |[CPropertyPage::CancelToClose](#canceltoclose)|Ändert die Schaltfläche "OK", zum Lesen von schließen und die Schaltfläche "Abbrechen" nach einer nicht behebbaren Änderung auf der Seite ein modales Eigenschaftsblatt deaktiviert.|  
 |[CPropertyPage::Construct](#construct)|Erstellt ein `CPropertyPage`-Objekt. Verwendung `Construct` , wenn Sie die Parameter zur Laufzeit angeben möchten oder bei Verwendung von Arrays.|  
-|[CPropertyPage::GetPSP](#getpsp)|Ruft ab, die Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548) Struktur zugeordnet ist die `CPropertyPage` Objekt.|  
+|[CPropertyPage::GetPSP](#getpsp)|Ruft ab, die Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2) Struktur zugeordnet ist die `CPropertyPage` Objekt.|  
 |[CPropertyPage::OnApply](#onapply)|Wird vom Framework aufgerufen, wenn auf die Schaltfläche "jetzt übernehmen" geklickt wird.|  
 |[CPropertyPage::OnCancel](#oncancel)|Wird vom Framework aufgerufen, wenn auf die Schaltfläche "Abbrechen" geklickt wird.|  
 |[CPropertyPage:: OnKillActive](#onkillactive)|Wird von Framework aufgerufen, wenn die aktuelle Seite nicht mehr zur aktiven Seite wird. Führen Sie die datenvalidierung hier ein.|  
@@ -98,7 +98,7 @@ class CPropertyPage : public CDialog
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CPropertyPage::m_psp](#m_psp)|Die Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548) Struktur. Bietet Zugriff auf grundlegende Eigenschaft Seitenparameter.|  
+|[CPropertyPage::m_psp](#m_psp)|Die Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2) Struktur. Bietet Zugriff auf grundlegende Eigenschaft Seitenparameter.|  
   
 ## <a name="remarks"></a>Hinweise  
  Wie Sie mit der Standarddialogfelder, Ableiten einer Klasse von `CPropertyPage` für jede Seite in Ihrem Eigenschaftenblatt. Mit `CPropertyPage`-abgeleitete Objekte, erstellen Sie zunächst eine [CPropertySheet](../../mfc/reference/cpropertysheet-class.md) Objekt aus, und erstellen Sie ein Objekt für jede Seite, die im Eigenschaftenblatt gesendet wird. Rufen Sie [CPropertySheet::AddPage](../../mfc/reference/cpropertysheet-class.md#addpage) für jede Seite in der Tabelle, und klicken Sie dann das Eigenschaftenfenster anzuzeigen, durch den Aufruf [CPropertySheet:: DoModal](../../mfc/reference/cpropertysheet-class.md#domodal) für ein modales Eigenschaftsblatt, oder [CPropertySheet:: Erstellen Sie](../../mfc/reference/cpropertysheet-class.md#create) für eines nicht modalen Eigenschaftenblatts.  
@@ -263,7 +263,7 @@ CPropertyPage(
  [!code-cpp[NVC_MFCDocView#113](../../mfc/codesnippet/cpp/cpropertypage-class_2.cpp)]  
   
 ##  <a name="getpsp"></a>  CPropertyPage::GetPSP  
- Ruft ab, die Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548) Struktur zugeordnet ist die `CPropertyPage` Objekt.  
+ Ruft ab, die Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2) Struktur zugeordnet ist die `CPropertyPage` Objekt.  
   
 ```  
 const PROPSHEETPAGE& GetPSP() const;  
@@ -275,7 +275,7 @@ PROPSHEETPAGE& GetPSP();
  Ein Verweis auf die `PROPSHEETPAGE` Struktur.  
   
 ##  <a name="m_psp"></a>  CPropertyPage::m_psp  
- `m_psp` ist eine Struktur, deren Mitglieder, die Merkmale des speichern [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548).  
+ `m_psp` ist eine Struktur, deren Mitglieder, die Merkmale des speichern [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2).  
   
 ```  
 PROPSHEETPAGE m_psp;  
@@ -306,7 +306,7 @@ virtual BOOL OnApply();
   
  Die standardmäßige Implementierung des `OnApply` Aufrufe `OnOK`.  
   
- Weitere Informationen zu den benachrichtigungsmeldungen gesendet werden, wenn der Benutzer in einem Eigenschaftenblatt die jetzt übernehmen oder Schaltfläche "OK" drückt, finden Sie unter [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552) im Windows SDK.  
+ Weitere Informationen zu den benachrichtigungsmeldungen gesendet werden, wenn der Benutzer in einem Eigenschaftenblatt die jetzt übernehmen oder Schaltfläche "OK" drückt, finden Sie unter [PSN_APPLY](/windows/desktop/Controls/psn-apply) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPropertyPage::OnOK](#onok).  
@@ -352,7 +352,7 @@ virtual void OnOK();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn der Benutzer entweder "OK" oder "die Schaltfläche" jetzt übernehmen "auswählt, erhält das Framework die [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552) Benachrichtigung auf der Eigenschaftenseite. Der Aufruf von `OnOK` wird nicht hergestellt werden, wenn Sie aufrufen [CPropertySheet::PressButton](../../mfc/reference/cpropertysheet-class.md#pressbutton) , da die Eigenschaftenseite die Benachrichtigung nicht in diesem Fall sendet.  
+ Wenn der Benutzer entweder "OK" oder "die Schaltfläche" jetzt übernehmen "auswählt, erhält das Framework die [PSN_APPLY](/windows/desktop/Controls/psn-apply) Benachrichtigung auf der Eigenschaftenseite. Der Aufruf von `OnOK` wird nicht hergestellt werden, wenn Sie aufrufen [CPropertySheet::PressButton](../../mfc/reference/cpropertysheet-class.md#pressbutton) , da die Eigenschaftenseite die Benachrichtigung nicht in diesem Fall sendet.  
   
  Überschreiben Sie diese Memberfunktion, um zusätzlich zur aktiven Seite spezifische Verhalten zu implementieren, wenn der Benutzer das gesamte Eigenschaftenblatt schließt.  
   
@@ -447,7 +447,7 @@ virtual BOOL OnWizardFinish();
   
  Sie können diese Member-Funktion, um eine Aktion anzugeben, die der Benutzer ausführen muss, wenn die Schaltfläche "Fertig stellen" gedrückt wird, überschreiben. Wenn Sie diese Funktion zu überschreiben, geben Sie "false", um zu verhindern, dass das Eigenschaftenblatt zerstört zurück.  
   
- Weitere Informationen zu den benachrichtigungsmeldungen gesendet werden, wenn der Benutzer die Schaltfläche "Fertig stellen" in einem Eigenschaftenblatt Assistenten drückt, finden Sie unter [PSN_WIZFINISH](http://msdn.microsoft.com/library/windows/desktop/bb774571) im Windows SDK.  
+ Weitere Informationen zu den benachrichtigungsmeldungen gesendet werden, wenn der Benutzer die Schaltfläche "Fertig stellen" in einem Eigenschaftenblatt Assistenten drückt, finden Sie unter [PSN_WIZFINISH](/windows/desktop/Controls/psn-wizfinish) im Windows SDK.  
   
  Weitere Informationen dazu, wie ein Eigenschaftenblatt des Benutzens eines assistentartigen vornehmen, finden Sie unter [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode).  
   

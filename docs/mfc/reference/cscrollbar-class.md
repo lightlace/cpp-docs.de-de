@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c37e8cb4d69e93fd0842aa7cb2149331f502eae
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 03588a0c41633f632c99c8c178d6b69b39b00e48
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850043"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199200"
 ---
 # <a name="cscrollbar-class"></a>CScrollBar-Klasse
 Stellt die Funktionalität eines Windows-Bildlaufleisten-Steuerelements bereit.  
@@ -195,13 +195,13 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
   
 ### <a name="parameters"></a>Parameter  
  *pScrollInfo*  
- Ein Zeiger auf die [SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787535) Struktur.  
+ Ein Zeiger auf die [SCROLLBARINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollbarinfo) Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt "true" bei Erfolg bei "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion emuliert die Funktionen des die [SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545) Nachricht, wie im Windows SDK beschrieben.  
+ Diese Memberfunktion emuliert die Funktionen des die [SBM_SCROLLBARINFO](/windows/desktop/Controls/sbm-getscrollbarinfo) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="getscrollinfo"></a>  CScrollBar::GetScrollInfo  
  Ruft die Informationen ab, die von der `SCROLLINFO`-Struktur über eine Scrollleiste verwaltet werden.  
@@ -214,7 +214,7 @@ BOOL GetScrollInfo(
   
 ### <a name="parameters"></a>Parameter  
  *lpScrollInfo*  
- Ein Zeiger auf eine [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) Struktur. Finden Sie im Windows-SDK Weitere Informationen zu dieser Struktur aus.  
+ Ein Zeiger auf eine [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) Struktur. Finden Sie im Windows-SDK Weitere Informationen zu dieser Struktur aus.  
   
  *nMask*  
  Gibt die Scroll-Leiste Parameter abrufen. Typische Verwendung, SIF_ALL, gibt eine Kombination von SIF_PAGE, SIF_POS, SIF_TRACKPOS und SIF_RANGE an. Finden Sie unter `SCROLLINFO` für Weitere Informationen zu den nMask-Werten.  
@@ -225,7 +225,7 @@ BOOL GetScrollInfo(
 ### <a name="remarks"></a>Hinweise  
  `GetScrollInfo` ermöglicht Anwendungen die 32-Bit-Bildlaufpositionen zu verwenden.  
   
- Die [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) Struktur enthält Informationen über eine scrollleiste an, einschließlich des minimalen und maximalen Bildlauf Positionen, die Seitengröße und die Position des Bildlauffelds (Ziehpunkt). Finden Sie unter den `SCROLLINFO` Struktur Thema im Windows SDK für Weitere Informationen zum Ändern der Standardeinstellungen für die Struktur.  
+ Die [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) Struktur enthält Informationen über eine scrollleiste an, einschließlich des minimalen und maximalen Bildlauf Positionen, die Seitengröße und die Position des Bildlauffelds (Ziehpunkt). Finden Sie unter den `SCROLLINFO` Struktur Thema im Windows SDK für Weitere Informationen zum Ändern der Standardeinstellungen für die Struktur.  
   
  Die MFC-Windows message-Handler, die kennzeichnen der Position, [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) und [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), geben Sie nur 16 Bits des Position-Daten. `GetScrollInfo` und `SetScrollInfo` 32 Bits der scrollleiste an Position-Daten bereitstellen. Daher kann eine Anwendung aufrufen `GetScrollInfo` während der Verarbeitung entweder `CWnd::OnHScroll` oder `CWnd::OnVScroll` zum Abrufen von Daten für 32-Bit-Scroll-Leiste Position.  
   
@@ -294,7 +294,7 @@ BOOL SetScrollInfo(
   
 ### <a name="parameters"></a>Parameter  
  *lpScrollInfo*  
- Ein Zeiger auf eine [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) Struktur.  
+ Ein Zeiger auf eine [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) Struktur.  
   
  *bRedraw*  
  Gibt an, ob die Bildlaufleiste neu gezeichnet werden muss, um die neuen Informationen widerzuspiegeln. Wenn *bRedraw* ist "true", die Bildlaufleiste neu gezeichnet wird. Wenn sie auf "FALSE" ist, wird er nicht neu gezeichnet. Standardmäßig aktualisiert der Bildlaufleiste angezeigt wird.  
@@ -305,7 +305,7 @@ BOOL SetScrollInfo(
 ### <a name="remarks"></a>Hinweise  
  Sie müssen die erforderlichen Werte angeben der `SCROLLINFO` Struktur Parametern – einschließlich der Flagwerte.  
   
- Die `SCROLLINFO` Struktur enthält Informationen über eine scrollleiste an, einschließlich des minimalen und maximalen Bildlauf Positionen, die Seitengröße und die Position des Bildlauffelds (Ziehpunkt). Finden Sie unter den [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) Struktur Thema im Windows SDK für Weitere Informationen zum Ändern der Standardeinstellungen für die Struktur.  
+ Die `SCROLLINFO` Struktur enthält Informationen über eine scrollleiste an, einschließlich des minimalen und maximalen Bildlauf Positionen, die Seitengröße und die Position des Bildlauffelds (Ziehpunkt). Finden Sie unter den [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) Struktur Thema im Windows SDK für Weitere Informationen zum Ändern der Standardeinstellungen für die Struktur.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  

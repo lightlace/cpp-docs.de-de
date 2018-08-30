@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcd02396fa76e9e68fce628783fb17bc6adab36e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 74a5e50eae425340bcb0f9a455422b43db0be0b2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848401"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207109"
 ---
 # <a name="messagehandler"></a>Meldungshandler
 `MessageHandler` ist der Name der Funktion durch den zweiten Parameter, der das Makro MESSAGE_HANDLER aus, in der meldungszuordnung identifiziert.  
@@ -61,5 +61,5 @@ ms.locfileid: "37848401"
 ## <a name="see-also"></a>Siehe auch  
  [Implementieren eines Fensters](../atl/implementing-a-window.md)   
  [Meldungszuordnungen](../atl/message-maps-atl.md)   
- [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
+ [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

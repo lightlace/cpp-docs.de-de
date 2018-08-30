@@ -47,12 +47,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f634e713bcf87aa6d97ed4e49595e4c0f8b72ab3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c33c8dbfe55008c084daf8f6b9f4700f13281012
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417232"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195428"
 ---
 # <a name="vaarg-vacopy-vaend-vastart"></a>va_arg, va_copy, va_end, va_start
 
@@ -93,7 +93,7 @@ Zeiger auf die Liste der Argumente.
 Zeiger auf die Liste von Argumenten, die vom initialisierenden *Src*
 
 *src*<br/>
-Zeiger auf die initialisierte Liste von Argumenten, die zum Kopieren *Dest*.
+Zeiger auf die initialisierte Liste von Argumenten, die zum Kopieren von *Dest*.
 
 *prev_param*<br/>
 Parameter, der dem ersten optionalen Argument vorausgeht.
@@ -110,13 +110,13 @@ Diese Makros setzen voraus, dass die Funktion eine feste Anzahl von erforderlich
 
 Die in STDARG.H definierten C-Standardmakros werden wie folgt verwendet:
 
-- **Va_start** legt *Arg_ptr* auf das erste optionale Argument in der Liste der Argumente, die an die Funktion übergeben wird. Das Argument *Arg_ptr* benötigen die **Va_list** Typ. Das Argument *Prev_param* ist der Name des erforderlichen Parameters, der das erste optionale Argument in der Argumentliste direkt vorausgeht. Wenn *Prev_param* deklariert mit der registerspeicherklasse Verhalten für das Makro ist nicht definiert ist. **Va_start** muss verwendet werden, bevor **Va_arg** zum ersten Mal verwendet wird.
+- **Va_start** legt *Arg_ptr* auf das erste optionale Argument in der Liste der Argumente, die an die Funktion übergeben wird. Das Argument *Arg_ptr* müssen die **Va_list** Typ. Das Argument *Prev_param* ist der Name des erforderlichen Parameters, der sofort das erste optionale Argument in der Argumentliste vorausgeht. Wenn *Prev_param* deklariert mit der registerspeicherklasse, das Verhalten des Makros ist nicht definiert ist. **Va_start** muss verwendet werden, bevor **Va_arg** zum ersten Mal verwendet wird.
 
-- **Va_arg** Ruft den Wert eines *Typ* aus dem die vom angegebenen Speicherort *Arg_ptr*, und inkrementiert *Arg_ptr* , zeigen Sie auf das folgende Argument in der Liste von Mithilfe des Umfangs der *Typ* um zu bestimmen, wo das folgende Argument beginnt. **Va_arg** kann oft in der Funktion verwendet, um Argumente aus der Liste abzurufen.
+- **Va_arg** Ruft einen Wert von *Typ* aus dem Speicherort, die vom angegebenen *Arg_ptr*, und inkrementiert *Arg_ptr* auf das nächste Argument in der Liste von verweisen Mithilfe des Umfangs der *Typ* bestimmen, in dem das nächste Argument beginnt. **Va_arg** kann oft in der Funktion verwendet, um Argumente aus der Liste abzurufen.
 
-- **Va_copy** erstellt eine Kopie einer Liste von Argumenten im aktuellen Zustand. Die *Src* Parameter muss bereits mit initialisiert werden **Va_start**; er wurde möglicherweise mit aktualisiert **Va_arg** aufruft, jedoch muss nicht zurückgesetzt wurden mit **Va_end** . Das folgende Argument, das durch abgerufenen **Va_arg** aus *Dest* ist identisch mit dem folgenden Argument, die aus abgerufen *Src*.
+- **Va_copy** erstellt eine Kopie einer Liste von Argumenten im aktuellen Zustand. Die *Src* Parameter muss bereits mit initialisiert werden **Va_start**; er wurde möglicherweise mit aktualisiert **Va_arg** aufruft, aber muss nicht zurückgesetzt wurden mit **Va_end** . Das nächste Argument aus, die von abgerufen **Va_arg** aus *Dest* ist identisch mit das nächste Argument aus, die entnommen *Src*.
 
-- Nach dem Abruf aller Argumente **Va_end** setzt den Zeiger auf **NULL**. **Va_end** muss aufgerufen werden, auf jeder Argumentliste, die mit initialisiert wird **Va_start** oder **Va_copy** vor der Rückkehr der Funktion.
+- Nach dem Abruf aller Argumente **Va_end** setzt den Zeiger auf **NULL**. **Va_end** muss aufgerufen werden für jede Argumentliste, die mit initialisiert wird **Va_start** oder **Va_copy** vor der Rückgabe der Funktion.
 
 > [!NOTE]
 > Die in VARARGS.H definierten Makros sind als veraltet markiert und werden nur beibehalten, weil sie für Code abwärts kompatibel sind, der vor dem ANSI-Standard C89 geschrieben wurde. Verwenden Sie in allen anderen Fällen die Makros in STDARGS.H.
@@ -153,7 +153,7 @@ int main()
 }
 ```
 
-Beachten Sie, dass **Testit** erwartet als zweiten Parameter entweder ein **Int** oder ein **Char\***. Die übergebenen Argumente sind 0xffffffff (ein **ohne Vorzeichen** **Int**, sondern eine **Int**) und **NULL** (tatsächlich ein **Int**, sondern eine **Char\***). Wenn das Programm für nativen Code kompiliert wird, erzeugt es diese Ausgabe:
+Beachten Sie, dass **Testit** erwartet als zweiten Parameter entweder eine **Int** oder **Char**<strong>\*</strong>. Die übergebenen Argumente sind 0xffffffff (ein **ohne Vorzeichen** **Int**, sondern eine **Int**) und **NULL** (tatsächlich ein **Int**, sondern eine **Char**<strong>\*</strong>). Wenn das Programm für nativen Code kompiliert wird, erzeugt es diese Ausgabe:
 
 ```Output
 -1

@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 3) C4191 | Microsoft Docs
+title: Compilerwarnung (Stufe 3) C4191 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 892bf76a8480e573a71e768fbe24778e7e66f88b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3b0198971064bec114e4665a499e070ddb61501
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291491"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197497"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>Compilerwarnung (Stufe 3) C4191
 'operator/operation': unsichere Konvertierung von 'type of expression' zu 'type required'  
@@ -36,7 +36,7 @@ ms.locfileid: "33291491"
   
 -   Verschiedene Länge von Argumentlisten (in `__cdecl`nur bei der Typumwandlung von längerer zu kürzer Liste, auch wenn die kürzere 'varargs' aufweist).  
   
--   Zeiger auf Daten (außer **"void"\***) als Alias für einen Zeiger auf eine Funktion.  
+-   Zeiger auf Daten (außer **"void"**<strong>\*</strong>) als Alias für einen Zeiger auf Funktion.  
   
 -   Alle anderen Typunterschiede, die einen Fehler oder eine Warnung bei einem `reinterpret_cast`hervorrufen würden.  
   

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0445939c7437e4978ee698005cc2f7541e6684b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c528e2a80894db1da82d7b07ba34a7c62b6237da
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339305"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219018"
 ---
 # <a name="ccolordialog-class"></a>CColorDialog-Klasse
 Können Sie ein Farbauswahl-Dialogfeld in Ihre Anwendung integrieren.  
@@ -80,13 +80,13 @@ class CColorDialog : public CCommonDialog
   
  Zum Erstellen einer `CColorDialog` Objekt, verwenden Sie den bereitgestellten Konstruktor oder eine neue Klasse ableiten und Ihre eigenen benutzerdefinierten Konstruktor verwenden.  
   
- Nachdem Sie das Dialogfeld erstellt wurde, können Sie festlegen oder ändern Sie alle Werte in der [M_cc](#m_cc) Struktur zum Initialisieren der Werte der Dialogfeld-Steuerelemente. Die *M_cc* Struktur ist vom Typ [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830).  
+ Nachdem Sie das Dialogfeld erstellt wurde, können Sie festlegen oder ändern Sie alle Werte in der [M_cc](#m_cc) Struktur zum Initialisieren der Werte der Dialogfeld-Steuerelemente. Die *M_cc* Struktur ist vom Typ [CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora).  
   
  Rufen Sie nach dem initialisieren das Dialogfeld-Steuerelemente, die `DoModal` Memberfunktion, um das Dialogfeld anzuzeigen, und ermöglicht dem Benutzer, eine Farbe auszuwählen. `DoModal` Gibt die Auswahl des Benutzers, der entweder das Dialogfeld die Schaltfläche "OK (IDOK) oder abzubrechen (IDCANCEL)" zurück.  
   
  Wenn `DoModal` gibt IDOK, können Sie eine der `CColorDialog`Member-Funktionen zum Abrufen der Informationen, die vom Benutzer eingegebene.  
   
- Sie können die Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) -Funktion zu bestimmen, ob ein während der Initialisierung des Dialogfelds Fehler und Weitere Informationen zum Fehler.  
+ Sie können die Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) -Funktion zu bestimmen, ob ein während der Initialisierung des Dialogfelds Fehler und Weitere Informationen zum Fehler.  
   
  `CColorDialog` basiert auf der COMMDLG. DLL-Datei, die in Windows-Versionen 3.1 und höher enthalten ist.  
   
@@ -130,7 +130,7 @@ CColorDialog(
  Die Standardauswahl für die Farbe. Wenn kein Wert angegeben wird, ist die Standardeinstellung RGB(0,0,0) (Schwarz).  
   
  *dwFlags*  
- Ein Satz von Flags, die die Funktion und die Darstellung des Dialogfelds anpassen. Weitere Informationen finden Sie unter den [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830) Struktur im Windows SDK.  
+ Ein Satz von Flags, die die Funktion und die Darstellung des Dialogfelds anpassen. Weitere Informationen finden Sie unter den [CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora) Struktur im Windows SDK.  
   
  *pParentWnd*  
  Ein Zeiger auf das übergeordnete Element oder Besitzer des Dialogfelds-Fenster.  
@@ -146,7 +146,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- IDOK oder IDCANCEL. Wenn IDCANCEL zurückgegeben wird, rufen Sie die Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) Funktion, um zu bestimmen, ob ein Fehler aufgetreten ist.  
+ IDOK oder IDCANCEL. Wenn IDCANCEL zurückgegeben wird, rufen Sie die Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) Funktion, um zu bestimmen, ob ein Fehler aufgetreten ist.  
   
  IDOK und IDCANCEL sind Konstanten, die angeben, ob der Benutzer die Schaltfläche "OK" oder "Abbrechen" aktiviert.  
   
@@ -166,7 +166,7 @@ COLORREF GetColor() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) -Wert, der den RGB-Informationen für das Dialogfeld "Farbe" ausgewählte Farbe an.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) -Wert, der den RGB-Informationen für das Dialogfeld "Farbe" ausgewählte Farbe an.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#50](../../mfc/codesnippet/cpp/ccolordialog-class_2.cpp)]  
@@ -190,7 +190,7 @@ static COLORREF* PASCAL GetSavedCustomColors();
  [!code-cpp[NVC_MFCDocView#51](../../mfc/codesnippet/cpp/ccolordialog-class_3.cpp)]  
   
 ##  <a name="m_cc"></a>  CColorDialog::m_cc  
- Eine Struktur des Typs [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830), die Merkmale und die Werte im Dialogfeld, deren Mitglieder zu speichern.  
+ Eine Struktur des Typs [CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora), die Merkmale und die Werte im Dialogfeld, deren Mitglieder zu speichern.  
   
 ```  
 CHOOSECOLOR m_cc;  

@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04217a03defcecf990a943d5d99f8370a966a5f7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 125b15062fc46850ad9b0d2512f9f7cc2e2095e1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540024"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204211"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu-Klasse
 Implementiert die Funktionalität eines Windows-Popupmenüs und erweitert sie durch zusätzliche Funktionen wie abtrennbare Menüs und QuickInfos.
@@ -510,7 +510,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
  TRUE, um den Sound, andernfalls "false" aktivieren.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie Sound aktivieren, um das Framework Ruft die [PlaySound](http://msdn.microsoft.com/library/windows/desktop/bb774426) Methode, wenn ein Benutzer ein Popupmenü oder einen Befehl auswählt. Standardmäßig ist dieses Feature aktiviert.  
+ Wenn Sie Sound aktivieren, um das Framework Ruft die [PlaySound](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iusernotification-playsound) Methode, wenn ein Benutzer ein Popupmenü oder einen Befehl auswählt. Standardmäßig ist dieses Feature aktiviert.  
   
 ##  <a name="enableresize"></a>  CMFCPopupMenu::EnableResize  
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9837b42148062bdd2c44855c129f085ca47cdec0
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 00265d3ce0f8ea867021500777d93991d245be47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848793"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204812"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL-Auflistungen und -Enumerationen
 Ein `collection` ist eine COM-Objekt, das eine Schnittstelle bereitstellt, die Zugriff auf eine Gruppe von Datenelementen (unformatierte Daten oder andere Objekte) ermöglicht. Eine Schnittstelle, die den Standards entspricht, für den Zugriff auf eine Gruppe von Objekten als bekannt ist, eine *sammlungsschnittstelle*.  
@@ -31,7 +31,7 @@ Ein `collection` ist eine COM-Objekt, das eine Schnittstelle bereitstellt, die Z
   
  Ein `enumerator` ein COM-Objekt, das eine Schnittstelle zum Durchlaufen der Elemente in einer Auflistung bereitstellt. Enumeratorschnittstellen bieten seriellen Zugriff auf die Elemente einer Sammlung über vier Methoden für die erforderlichen: `Next`, `Skip`, `Reset`, und `Clone`.  
   
- Sie können weitere Informationen zu Enumeratorschnittstellen lesen das Verkaufspersonal (aber vollständig imaginären) [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx) Schnittstelle.  
+ Erfahren Sie mehr über Enumeratorschnittstellen lesen referenzinhalt wie z. B. [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) Schnittstelle.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [ATL-Auflistungen und -Enumeratorklassen](../atl/atl-collection-and-enumerator-classes.md)  

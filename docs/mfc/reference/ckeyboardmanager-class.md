@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105a6310968844336ead5c787586d547f3952e57
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 82447c14209f2f47fb6224df7e1daeb18ed6048e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338985"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212890"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager-Klasse
 Verwaltet Tastenkombinationstabellen für das Hauptrahmenfenster und die untergeordneten Rahmenfenster.  
@@ -169,7 +169,7 @@ static BOOL __stdcall IsKeyHandled(
 |-|-|  
 |Parameter|Beschreibung|  
 |[in] *nKey*|Der zu überprüfende Schlüssel.|  
-|[in] *fVirt*|Gibt das Verhalten der Tastenkombination. Eine Liste der möglichen Werte, finden Sie unter [ACCELERATION Struktur](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
+|[in] *fVirt*|Gibt das Verhalten der Tastenkombination. Eine Liste der möglichen Werte, finden Sie unter [ACCELERATION Struktur](/windows/desktop/api/winuser/ns-winuser-tagaccel).|  
 |[in] *pWndFrame*|Ein Rahmenfenster. Diese Methode bestimmt, ob eine Tastenkombination, die in diesem Frame behandelt wird.|  
 |[in] *bIsDefaultFrame*|Ein boolescher Parameter, der angibt, ob *pWndFrame* ist das Standard-Rahmenfenster.|  
   
@@ -197,7 +197,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
  Ungleich NULL, wenn das Zeichen "druckbaren" ist, ist dies nicht.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode schlägt fehl, wenn ein Aufruf von [GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299) ein Fehler auftritt.  
+ Diese Methode schlägt fehl, wenn ein Aufruf von [GetKeyboardState](https://msdn.microsoft.com/library/windows/desktop/ms646299) ein Fehler auftritt.  
   
 ##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators  
  Gibt an, ob alle Befehle im Menü zugeordneten Tastenkombinationen oder nur die Standardtastenkombinationen Menüs angezeigt werden.  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 468eb677a0073e25c9ef33182aea0d321cded352
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4855ca5c461b7437345150f5d199521c48f0b253
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335617"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196552"
 ---
 # <a name="registering-ole-controls"></a>Registrieren des OLE-Steuerelements
 OLE-Steuerelemente, wie andere OLE-Server-Objekte, können von anderen OLE-fähige Anwendungen zugegriffen werden. Dies erfolgt durch die Registrierung der Typbibliothek und der Klasse des Steuerelements.  
@@ -83,7 +83,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
   
 - `afxRegFreeThreading` Legt das threading-Modell in der Registrierung ThreadingModel = frei.  
   
-     Sie können die beiden Flags kombinieren `afxRegApartmentThreading` und `afxRegFreeThreading` festzulegende ThreadingModel = Both. Finden Sie unter [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) im Windows SDK für Weitere Informationen zum threading modellregistrierung.  
+     Sie können die beiden Flags kombinieren `afxRegApartmentThreading` und `afxRegFreeThreading` festzulegende ThreadingModel = Both. Finden Sie unter [InprocServer32](/windows/desktop/com/inprocserver32) im Windows SDK für Weitere Informationen zum threading modellregistrierung.  
   
 > [!NOTE]
 >  In MFC-Versionen vor MFC 4.2 die **Int** *nRegFlags* Parameter wurde ein Parameter "bool" *bInsertable*, die zulässige bzw. nicht Sie das Steuerelement, aus dem Einfügevorgang eingefügt werden soll Dialogfeld "Objekt".  
@@ -142,7 +142,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
  Ungleich NULL, wenn die Control-Klasse registriert wurde; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Dadurch wird das Steuerelement von Containern verwendet werden, die OLE-Control-bewusst sind. `AfxOleRegisterControlClass` aktualisiert die Registrierung mit dem Namen und Speicherort auf dem System des Steuerelements, und legt auch fest, das threading-Modell, das das Steuerelement in der Registrierung unterstützt. Weitere Informationen finden Sie unter [technischen Hinweis 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment-Modell Threading in OLE-Steuerelemente," und [zu Prozessen und Threads](http://msdn.microsoft.com/library/windows/desktop/ms681917) im Windows SDK.  
+ Dadurch wird das Steuerelement von Containern verwendet werden, die OLE-Control-bewusst sind. `AfxOleRegisterControlClass` aktualisiert die Registrierung mit dem Namen und Speicherort auf dem System des Steuerelements, und legt auch fest, das threading-Modell, das das Steuerelement in der Registrierung unterstützt. Weitere Informationen finden Sie unter [technischen Hinweis 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment-Modell Threading in OLE-Steuerelemente," und [zu Prozessen und Threads](/windows/desktop/ProcThread/about-processes-and-threads) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]  
@@ -189,7 +189,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
  Ungleich NULL, wenn die Control-Klasse registriert wurde; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Dadurch wird die Eigenschaftenseite von Containern verwendet werden, die OLE-Control-bewusst sind. `AfxOleRegisterPropertyPageClass` aktualisiert die Registrierung mit dem Namen der Seite und den Speicherort auf dem System, und legt auch fest, das threading-Modell, das das Steuerelement in der Registrierung unterstützt. Weitere Informationen finden Sie unter [technischen Hinweis 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment-Modell Threading in OLE-Steuerelemente," und [zu Prozessen und Threads](http://msdn.microsoft.com/library/windows/desktop/ms681917) im Windows SDK.  
+ Dadurch wird die Eigenschaftenseite von Containern verwendet werden, die OLE-Control-bewusst sind. `AfxOleRegisterPropertyPageClass` aktualisiert die Registrierung mit dem Namen der Seite und den Speicherort auf dem System, und legt auch fest, das threading-Modell, das das Steuerelement in der Registrierung unterstützt. Weitere Informationen finden Sie unter [technischen Hinweis 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment-Modell Threading in OLE-Steuerelemente," und [zu Prozessen und Threads](/windows/desktop/ProcThread/about-processes-and-threads) im Windows SDK.  
   
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  

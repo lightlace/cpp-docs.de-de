@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e9d212e74f77d21efa1b2ed030f8a1446d111fc
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 74f1f0f88828b5d6355c692aa8eaeecd5869bf57
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882948"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202933"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Unterstützung für Unicode- und Multibyte-Zeichensätze (MBCS)
 
@@ -67,9 +67,9 @@ Um Unicode-Programmierung der Anwendung durchzuführen, benötigen Sie auch Folg
 
    - Verwenden Sie hier Sie verwenden TCHAR **Char**.
 
-   - Verwenden Sie hier Sie verwenden LPTSTR **Char\***.
+   - Verwenden Sie hier Sie verwenden LPTSTR **Char**<strong>\*</strong>.
 
-   - Verwenden Sie hier Sie verwenden LPCTSTR **const Char\***. `CString` Stellt den Operator LPCTSTR zum Konvertieren zwischen `CString` und LPCTSTR.
+   - Verwenden Sie hier Sie verwenden LPCTSTR **const Char**<strong>\*</strong>. `CString` Stellt den Operator LPCTSTR zum Konvertieren zwischen `CString` und LPCTSTR.
 
 `CString` stellt außerdem Unicode-kompatible Konstruktoren, Zuweisungsoperatoren und Vergleichsoperatoren bereit.
 
@@ -101,7 +101,7 @@ Unter DBCS kann eine angegebene Zeichenfolge alle Einzelbyte-ANSI-Zeichen, alle 
 
 Funktionszuordnungen für generischen Text für alle zur Behandlung von Zeichenfolgen-Laufzeitroutinen finden Sie im [C Run-Time Library Reference](../c-runtime-library/c-run-time-library-reference.md). Eine Liste finden Sie unter [Internationalisierung](../c-runtime-library/internationalization.md).
 
-Auf ähnliche Weise `CString` Methoden mit generischen datentypzuordnungen implementiert werden. Um sowohl Unicode als auch MBCS zu aktivieren, verwendet MFC TCHAR für **Char** oder `wchar_t`, LPTSTR für **Char\***  oder `wchar_t*`, und LPCTSTR für **const Char\***  oder `const wchar_t*`. Diese stellen die richtigen Zuordnungen für Unicode oder MBCS sicher.
+Auf ähnliche Weise `CString` Methoden mit generischen datentypzuordnungen implementiert werden. Um sowohl Unicode als auch MBCS zu aktivieren, verwendet MFC TCHAR für **Char** oder `wchar_t`, LPTSTR für **Char** <strong>\*</strong> oder `wchar_t*`, und LPCTSTR für **const Char** <strong>\*</strong> oder `const wchar_t*`. Diese stellen die richtigen Zuordnungen für Unicode oder MBCS sicher.
 
 ## <a name="see-also"></a>Siehe auch
 

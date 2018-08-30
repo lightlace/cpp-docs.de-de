@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57dc254bab0acd875378dfd26ba3fe6e8d5650f4
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: afecaafc5a9d3c1eb9a9466cce303a493d355ce0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407509"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196206"
 ---
 # <a name="based-pointers-c"></a>Basierte Zeiger (C++)
 **Microsoft-spezifisch**  
@@ -56,7 +56,7 @@ struct llist_t {
  Dem Zeiger `vpBuffer` wird die Adresse des später im Programm zugewiesenen Arbeitsspeichers zugeteilt. Die verknüpfte Liste wird relativ zum Wert von `vpBuffer` verschoben.  
   
 > [!NOTE]
->  Beibehalten von Bezeichnern, die Zeiger können auch vorgenommen werden, indem Sie mithilfe von [Speicherabbilddateien](http://msdn.microsoft.com/library/windows/desktop/aa366556).  
+>  Beibehalten von Bezeichnern, die Zeiger können auch vorgenommen werden, indem Sie mithilfe von [Speicherabbilddateien](/windows/desktop/Memory/file-mapping).  
   
  Beim Dereferenzieren eines basierten Zeigers muss die Basis explizit angegeben werden oder implizit durch die Deklaration bekannt sein.  
   

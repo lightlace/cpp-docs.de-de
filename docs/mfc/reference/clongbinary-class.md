@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b75016c6c783ae19d8e0f6739adaa34b8da977db
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ed0603482ffccf1bcb827d67b174768cfd3e3168
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338436"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196796"
 ---
 # <a name="clongbinary-class"></a>CLongBinary-Klasse
 Vereinfacht die Verwendung sehr großen Binärdatenobjekte (oft "BLOBs" oder "Binary Large Objects" genannt) in einer Datenbank.  
@@ -86,7 +86,7 @@ SQLULEN m_dwDataLength;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Größe möglicherweise kleiner als die Größe des Speicherblocks, der für die Daten. Rufen Sie die Win32 [GlobalSize ist](http://msdn.microsoft.com/library/windows/desktop/aa366593) Funktion, um die zugeordnete Größe abzurufen.  
+ Diese Größe möglicherweise kleiner als die Größe des Speicherblocks, der für die Daten. Rufen Sie die Win32 [GlobalSize ist](/windows/desktop/api/winbase/nf-winbase-globalsize) Funktion, um die zugeordnete Größe abzurufen.  
   
 ##  <a name="m_hdata"></a>  CLongBinary::m_hData  
  Speichert ein HGLOBAL für Windows-Handle für die tatsächliche binary large Object-Daten.  

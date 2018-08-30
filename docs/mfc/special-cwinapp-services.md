@@ -1,5 +1,5 @@
 ---
-title: Spezielle CWinApp-Dienste | Microsoft Docs
+title: Spezielle CWinApp-Dienste | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,51 +40,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd6af2ab524711c591772c28ed47742e6aa406ad
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: beac10db09fefdf38d8e038855eb62ba8af80dbe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955871"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218611"
 ---
 # <a name="special-cwinapp-services"></a>Spezielle CWinApp-Dienste
-Neben die Nachrichtenschleife ausführen und und Sie haben die Gelegenheit, die Anwendung zu initialisieren und bereinigen, [CWinApp](../mfc/reference/cwinapp-class.md) mehrere andere Dienste bereitstellt.  
+Neben dem die Meldungsschleife ausführt, und bietet Ihnen die Möglichkeit, initialisieren Sie die Anwendung aus, und bereinigen Sie nach, [CWinApp](../mfc/reference/cwinapp-class.md) mehrere andere Dienste bereitstellt.  
   
 ##  <a name="_core_shell_registration"></a> Shell-Registrierung  
- Standardmäßig ermöglicht der Anwendung MFC-Assistent für den Benutzer zum Öffnen von Datendateien, die Ihre Anwendung durch Doppelklicken in der Datei-Explorer oder Datei-Manager erstellt wurden. Wenn die Anwendung eine MDI-Anwendung ist, und geben Sie eine Erweiterung für die Dateien die Anwendung erstellt, fügt der MFC-Anwendung-Assistent Aufrufe an die [RegisterShellFileTypes](../mfc/reference/cwinapp-class.md#registershellfiletypes) und [EnableShellOpen](../mfc/reference/cwinapp-class.md#enableshellopen)Memberfunktionen der [CWinApp](../mfc/reference/cwinapp-class.md) auf die `InitInstance` überschreiben, die für Sie geschrieben.  
+ Standardmäßig ermöglicht der MFC-Anwendung-Assistent für den Benutzer zum Öffnen von Datendateien, die Ihre Anwendung durch Doppelklicken in Datei-Explorer oder Datei-Manager erstellt wurden. Wenn Ihre Anwendung eine MDI-Anwendung ist, und geben Sie eine Erweiterung für die Dateien der Anwendung erstellt, fügt die MFS-Anwendungsassistenten Aufrufe an die [RegisterShellFileTypes](../mfc/reference/cwinapp-class.md#registershellfiletypes) und [EnableShellOpen](../mfc/reference/cwinapp-class.md#enableshellopen)Memberfunktionen der [CWinApp](../mfc/reference/cwinapp-class.md) auf die `InitInstance` außer Kraft setzen, die es für Sie schreibt.  
   
- `RegisterShellFileTypes` registriert die Anwendung Dokumenttypen mit Datei-Explorer oder Datei-Manager. Die Funktion hinzugefügt der Registration-Datenbank, die zur Verwaltung von Windows Einträge. Die Einträge registrieren jeden Dokumenttyp, der Dateityp Erweiterung zuordnen, geben Sie eine Befehlszeile, um die Anwendung zu öffnen und geben Sie einen Befehl für dynamischen Datenaustausch (DDE), ein Dokument dieses Typs öffnen.  
+ `RegisterShellFileTypes` Datei-Explorer oder Datei-Manager registriert Dokumenttypen Ihrer Anwendung. Die Funktion hinzugefügt der Registrierungsdatenbank, in der Windows verwaltet Einträge. Die Einträge registrieren jeden Dokumenttyp, den Dateityp eine Dateierweiterung zuordnen, geben Sie eine Befehlszeile zum Öffnen der Anwendung und geben Sie einen dynamischen Datenaustausch (DDE) Befehl, ein Dokument dieses Typs öffnen.  
   
- `EnableShellOpen` Schließt den Prozess Ihrer Anwendung DDE-Befehle aus dem Datei-Explorer oder Datei-Manager zum Öffnen der Datei, die vom Benutzer ausgewählten empfangen können.  
+ `EnableShellOpen` Schließt den Prozess durch, sodass Ihre Anwendung zum Empfangen von DDE-Befehle von Datei-Explorer oder Datei-Manager, um die vom Benutzer ausgewählten Datei öffnen.  
   
- Diese Unterstützung für die automatische Registrierung in `CWinApp` entfällt die Notwendigkeit eine REG-Datei mit Ihrer Anwendung zu senden oder zu besondere Installationsarbeit zu erledigen.  
+ Diese Unterstützung der automatischen Registrierung in `CWinApp` entfällt die Notwendigkeit eine REG-Datei mit Ihrer Anwendung zu senden oder eine besondere Installation Aktion auszuführen.  
   
- Initialisieren von GDI + für Ihre Anwendung verwendet werden sollen (durch Aufrufen von [GdiplusStartup](https://msdn.microsoft.com/library/ms534077) in Ihrer [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) Funktion), müssen Sie die GDI +-Hintergrundthread zu unterdrücken.  
+ Wenn GDI + für Ihre Anwendung nicht initialisiert werden sollen (durch Aufrufen von [GdiplusStartup](/windows/desktop/api/gdiplusinit/nf-gdiplusinit-gdiplusstartup) in Ihre [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) Funktion), müssen Sie die GDI +-Hintergrundthread zu unterdrücken.  
   
- Hierzu können Sie durch Festlegen der `SuppressBackgroundThread` Mitglied der [GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067) -Struktur an **"true"**. Wenn Unterdrücken von GDI + Hintergrundthread, der `NotificationHook` und `NotificationUnhook` sollte aufgerufen werden direkt vor der eingeben, und beenden die Anwendung die Meldungsschleife. Weitere Informationen zu diesen aufrufen, finden Sie unter [GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068). Aus diesem Grund ist eine gute Aufrufen `GdiplusStartup` und die Benachrichtigung Hookfunktionen wäre in einer Überschreibung der virtuellen Funktion [CWinApp:: Run](../mfc/reference/cwinapp-class.md#run), wie unten dargestellt:  
+ Sie erreichen dies durch Festlegen der `SuppressBackgroundThread` Mitglied der [GdiplusStartupInput](/windows/desktop/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupinput) -Struktur in **"true"**. Wenn Unterdrücken von GDI +-Thread im Hintergrund die `NotificationHook` und `NotificationUnhook` sollte aufgerufen werden nur vor betreten und beendet die Nachrichtenschleife der Anwendung wird. Weitere Informationen zu diesen aufrufen, finden Sie unter [GdiplusStartupOutput](/windows/desktop/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupoutput). Aus diesem Grund eine gute Möglichkeit zum Aufrufen `GdiplusStartup` und die Hookfunktionen für die Benachrichtigung in einer Überschreibung der virtuellen Funktion wäre [CWinApp:: Run](../mfc/reference/cwinapp-class.md#run), wie unten dargestellt:  
   
  [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]  
   
- Wenn Sie den Hintergrund GDI +-Thread nicht unterdrücken, können DDE-Befehle an die Anwendung vorzeitig ausgestellt werden, bevor das Hauptfenster erstellt wurde. Die DDE-Befehle, die von der Shell können Fehlermeldungen resultierende vorzeitig abgebrochen werden.  
+ Wenn Sie den Hintergrund GDI +-Thread nicht unterdrücken, können DDE-Befehle an die Anwendung vorzeitig ausgestellt werden, bevor das Hauptfenster erstellt wurde. Die DDE-Befehle, die von der Shell ausgegeben können führt Fehlermeldungen vorzeitig abgebrochen werden.  
   
 ##  <a name="_core_file_manager_drag_and_drop"></a> Manager für Dateiserver Drag & Drop  
- Dateien können in einem Fenster in der Anwendung aus dem Dateiansichtsfenster im Datei-Manager oder Datei-Explorer gezogen werden. Sie können z. B. eine oder mehrere Dateien auf eine MDI-Anwendung Hauptfenster gezogen werden, in dem die Anwendung die Dateinamen abrufen konnte, und öffnen Sie untergeordnete MDI-Fenster für diese Dateien aktivieren.  
+ Dateien können in einem Fenster in Ihrer Anwendung aus dem Fenster Datei anzeigen, in dem Datei-Manager oder Datei-Explorer gezogen werden. Sie können z. B. eine oder mehrere Dateien zum Hauptfenster für eine MDI-Anwendung, gezogen werden, dem die Anwendung rufen Sie die Dateinamen und Öffnen von untergeordneten MDI-Fenster für diese Dateien kann aktivieren.  
   
- Zum Aktivieren Datei Drag und drop in Ihrer Anwendung, schreibt der MFC-Anwendung-Assistent einen Aufruf der [CWnd](../mfc/reference/cwnd-class.md) Memberfunktion [DragAcceptFiles](../mfc/reference/cwnd-class.md#dragacceptfiles) für das Hauptrahmenfenster in Ihre `InitInstance`. Sie können diesen Aufruf entfernen, wenn Sie nicht, um den Drag & Drop-Funktion zu implementieren möchten.  
+ Zur Aktivierung der Datei Drag & drop in Ihrer Anwendung, schreibt die MFS-Anwendungsassistenten einen Aufruf der [CWnd](../mfc/reference/cwnd-class.md) Memberfunktion [DragAcceptFiles](../mfc/reference/cwnd-class.md#dragacceptfiles) für das Hauptrahmenfenster in Ihre `InitInstance`. Sie können diesen Aufruf entfernen, wenn Sie nicht, für die Implementierung der Drag & Drop-Funktion möchten.  
   
 > [!NOTE]
->  Sie können auch weitere allgemeine Drag-and-Drop-Funktionen implementieren – Ziehen von Daten zwischen oder innerhalb von Dokumenten – mit OLE. Informationen finden Sie im Artikel [Drag & Drop (OLE)](../mfc/drag-and-drop-ole.md).  
+>  Sie können auch weitere allgemeine Drag & Drop-Funktionen implementieren: Ziehen von Daten zwischen oder innerhalb von Dokumenten – mit OLE. Informationen finden Sie im Artikel [Drag & Drop (OLE)](../mfc/drag-and-drop-ole.md).  
   
-##  <a name="_core_keeping_track_of_the_most_recently_used_documents"></a> Nachverfolgen der am meisten zuletzt verwendete Dokumente  
- Der Benutzer öffnet und schließt Dateien, der nachverfolgt das Anwendungsobjekt die vier zuletzt verwendeten Dateien. Die Namen dieser Dateien sind im Menü Datei hinzugefügt und aktualisiert, wenn sich diese ändern. Das Framework speichert diese Dateinamen in der Registrierung oder in der INI-Datei mit dem gleichen Namen wie das Projekt und aus der Datei gelesen, wenn die Anwendung wird gestartet. Die `InitInstance` außer Kraft gesetzt, die MFC-Anwendungs-Assistent erstellt, Sie enthält einen Aufruf von der [CWinApp](../mfc/reference/cwinapp-class.md) Memberfunktion [LoadStdProfileSettings](../mfc/reference/cwinapp-class.md#loadstdprofilesettings), lädt die Informationen aus der Registrierung oder der INI- Datei, einschließlich der zuletzt verwendeten Dateinamen.  
+##  <a name="_core_keeping_track_of_the_most_recently_used_documents"></a> Nachverfolgen der am häufigsten zuletzt verwendete Dokumente  
+ Da der Benutzer öffnet und Dateien schließt, verfolgt des das Anwendungsobjekt der vier zuletzt verwendeten Dateien. Die Namen dieser Dateien sind im Menü Datei hinzugefügt und aktualisiert, wenn sie ändern. Das Framework speichert diesen Dateinamen aus, in der Registrierung oder in der Initialisierungsdatei mit dem gleichen Namen wie Ihr Projekt, und liest diese aus der Datei ein, wenn die Anwendung wird gestartet. Die `InitInstance` außer Kraft setzen, dass die MFC-Anwendungs-Assistent erstellt, für Sie einen Aufruf enthält der [CWinApp](../mfc/reference/cwinapp-class.md) Memberfunktion [LoadStdProfileSettings](../mfc/reference/cwinapp-class.md#loadstdprofilesettings), lädt die Informationen, aus der Registrierung oder der INI- -Datei, einschließlich der zuletzt verwendeten Dateinamen.  
   
  Diese Einträge werden wie folgt gespeichert:  
   
--   In Windows NT, Windows 2000 und höher, wird der Wert an einem Registrierungsschlüssel gespeichert.  
+-   In Windows NT, Windows 2000 und höher, wird der Wert auf einen Registrierungsschlüssel gespeichert.  
   
--   In Windows 3.x, den Wert in der WIN gespeichert ist. INI-Datei.  
+-   In Windows 3.x, der Wert befindet sich in der Windows-Taste. INI-Datei.  
   
--   In Windows 95 und höher wird der Wert in eine zwischengespeicherte Version der WIN gespeichert. INI.  
+-   In Windows 95 und höher wird der Wert in eine zwischengespeicherte Version des Windows-Taste gespeichert. INI.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CWinApp: Die Anwendungsklasse](../mfc/cwinapp-the-application-class.md)

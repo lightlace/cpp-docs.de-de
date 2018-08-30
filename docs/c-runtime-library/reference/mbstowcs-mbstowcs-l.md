@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c14beb076a83952529155fa0a4b1da780efae3c7
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: d179e53967817bb622074987e3309e159547e819
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451861"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218104"
 ---
 # <a name="mbstowcs-mbstowcsl"></a>mbstowcs, _mbstowcs_l
 
@@ -90,26 +90,26 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn **Mbstowcs** die Quellzeichenfolge erfolgreich konvertiert wird die Anzahl von konvertierten Multibytezeichen zurückgegeben. Wenn die *Wcstr* Argument ist **NULL**, die Funktion gibt die erforderliche Größe (in Zeichen) der Zielzeichenfolge zurück. Wenn **Mbstowcs** findet ein ungültiges Multibytezeichen wird-1 zurückgegeben. Wenn der Rückgabewert ist *Anzahl*, die Breitzeichen-Zeichenfolge ist nicht für die Null-terminiert.
+Wenn **Mbstowcs** die Quellzeichenfolge erfolgreich konvertiert wird, dass die Anzahl von konvertierten Multibytezeichen. Wenn die *Wcstr* Argument **NULL**, die Funktion gibt die erforderliche Größe (in Breitzeichen), der die Zielzeichenfolge zurück. Wenn **Mbstowcs** ein ungültiges Multibytezeichen erkennt, wird-1 zurückgegeben. Wenn der Rückgabewert ist *Anzahl*, die Breitzeichen-Zeichenfolge ist kein Null-terminiert.
 
 > [!IMPORTANT]
 > Sicherstellen, dass *Wcstr* und *Mbstr* nicht überlappen und dass *Anzahl* die Anzahl zu konvertierendermultibytezeichen korrekt darstellt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Mbstowcs** -Funktion konvertiert wird, bis eine maximale Anzahl von *Anzahl* Multibytezeichen verweist *Mbstr* in eine Zeichenfolge der entsprechende Breitzeichen, die durch das aktuelle Gebietsschema bestimmt. Er speichert die resultierende Breitzeichen-Zeichenfolge an der Adresse dargestellte *Wcstr*. Das Ergebnis ähnelt einer Reihe von Aufrufen an [Mbtowc](mbtowc-mbtowc-l.md). Wenn **Mbstowcs** Einzelbyte-Null-Zeichen ('\0') erkennt, entweder vor oder bei *Anzahl* auftritt, konvertiert Sie den Null-Zeichen auf ein Nullzeichen Breitzeichen (L '\0') und beendet. Daher die Breitzeichen-Zeichenfolge bei *Wcstr* ist Null-terminierte nur, wenn ein Null-Zeichen, die während der Konvertierung aufgetreten ist. Wenn die Sequenzen auf verweist *Wcstr* und *Mbstr* überlappen, ist das Verhalten nicht definiert.
+Die **Mbstowcs** -Funktion konvertiert wird, bis eine maximale Anzahl von *Anzahl* Multibytezeichen verweist *Mbstr* in eine entsprechende Breitzeichenfolge, die Zeichenfolge durch das aktuelle Gebietsschema bestimmt. Sie speichert die resultierende Breitzeichen-Zeichenfolge an der Adresse durch dargestellt *Wcstr*. Das Ergebnis ähnelt einer Reihe von Aufrufen an [Mbtowc](mbtowc-mbtowc-l.md). Wenn **Mbstowcs** das Einzelbyte-Null-Zeichen ('\0') erkennt, entweder vor oder bei *Anzahl* auftritt, konvertiert der Null-Zeichen, ein Breitzeichen Null-Zeichen (L '\0') und beenden. Daher wird die Breitzeichen-Zeichenfolge an *Wcstr* ist Null-terminierte nur dann, wenn ein Null-Zeichen, die während der Konvertierung erkannt wird. Wenn die Sequenzen, zeigt *Wcstr* und *Mbstr* überlappen, ist das Verhalten nicht definiert.
 
-Wenn die *Wcstr* Argument ist **NULL**, **Mbstowcs** gibt die Anzahl der Breitzeichen, die von der Konvertierung, nicht einschließlich null-Abschlusszeichen führen würde. Die Quellzeichenfolge muss auf NULL enden, damit der korrekte Wert zurückgegeben wird. Wenn Sie wollen, dass die resultierende Breitzeichenfolge auf NULL endet, fügen Sie dem Rückgabewert 1 hinzu.
+Wenn die *Wcstr* Argument **NULL**, **Mbstowcs** gibt die Anzahl der Breitzeichen, die von der Konvertierung, einschließlich nicht auf einen null-Terminator führen würden. Die Quellzeichenfolge muss auf NULL enden, damit der korrekte Wert zurückgegeben wird. Wenn Sie wollen, dass die resultierende Breitzeichenfolge auf NULL endet, fügen Sie dem Rückgabewert 1 hinzu.
 
-Wenn die *Mbstr* Argument ist **NULL**, oder wenn *Anzahl* ist > **INT_MAX**, Handler für ungültige Parameter aufgerufen, wie beschrieben in [ Überprüfen der Parameter](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen,-Wert Errno von **EINVAL** und die Funktion gibt-1 zurück.
+Wenn die *Mbstr* Argument ist **NULL**, oder wenn *Anzahl* ist > **INT_MAX**, Handler für ungültige Parameter aufgerufen, siehe [ Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, wird Errno auf festgelegt **EINVAL** und die Funktion gibt-1 zurück.
 
-**Mbstowcs** verwendet das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten; **_mbstowcs_l** ist nahezu identisch, das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+**Mbstowcs** verwendet das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten; **_mbstowcs_l** ist identisch, außer dass sie das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**mbstowcs**|\<stdlib.h>|
 |**_mbstowcs_l**|\<stdlib.h>|
@@ -220,4 +220,4 @@ Convert back to wide-character string:
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
-[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)<br/>
+[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>

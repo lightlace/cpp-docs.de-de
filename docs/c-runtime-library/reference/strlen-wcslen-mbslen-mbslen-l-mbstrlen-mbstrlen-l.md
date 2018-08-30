@@ -58,19 +58,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35885dfb6a7432796688e35032e06d0aec863687
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c92c43a820bc1c8694689c9d99a47b0c46b484e1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451588"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209448"
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
 Ruft die Länge einer Zeichenfolge mithilfe des aktuellen Gebietsschemas oder einem angegebenen Gebietsschema ab. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l](strnlen-strnlen-s.md)
 
 > [!IMPORTANT]
-> **_mbslen**, **_mbslen_l**, **_mbstrlen**, und **_mbstrlen_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbslen**, **_mbslen_l**, **_mbstrlen**, und **_mbstrlen_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -107,13 +107,13 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt die Anzahl der Zeichen in *str*, mit Ausnahme den Terminaldienste Null. Kein Rückgabewert ist zur Anzeige ein Fehlers, mit Ausnahme von reserviert **_mbstrlen** und **_mbstrlen_l**, welche Return `((size_t)(-1))` , wenn die Zeichenfolge ein ungültiges Multibytezeichen enthält.
+Jede dieser Funktionen gibt die Anzahl der Zeichen in *str*, mit Ausnahme den Terminaldienste Null. Kein Rückgabewert ist, mit Ausnahme von Fehleranzeige reserviert **_mbstrlen** und **_mbstrlen_l**, zurückgeben `((size_t)(-1))` Wenn die Zeichenfolge ein ungültiges Multibytezeichen enthält.
 
 ## <a name="remarks"></a>Hinweise
 
-**Strlen** interpretiert die Zeichenfolge als Einzelbyte-Zeichenfolge, also der Rückgabewert immer gleich der Anzahl von Bytes, auch wenn die Zeichenfolge Multibytezeichen enthält. **Wcslen** ist eine Breitzeichen-Version von **Strlen**; das Argument der **Wcslen** ist eine Breitzeichen-Zeichenfolge und die Anzahl von Zeichen in Breitzeichen (zwei Byte) ist. **Wcslen** und **Strlen** Verhalten sich andernfalls identisch.
+**Strlen** interpretiert die Zeichenfolge als Einzelbyte-Zeichenfolge, sodass der Rückgabewert immer gleich der Anzahl von Bytes, ist auch wenn die Zeichenfolge Multibytezeichen enthält. **Wcslen** ist eine Breitzeichen-Version von **Strlen**; das Argument der **Wcslen** ist eine Breitzeichen-Zeichenfolge und die Anzahl von Zeichen in Breite Zeichen (zwei Bytes) ist. **Wcslen** und **Strlen** Verhalten sich andernfalls identisch.
 
-**Sicherheitshinweis**: Diese Funktionen stellen eine mögliche Bedrohung aufgrund eines Pufferüberlaufproblems dar. Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Sicherheitshinweis**: Diese Funktionen stellen eine mögliche Bedrohung aufgrund eines Pufferüberlaufproblems dar. Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -123,13 +123,13 @@ Jede dieser Funktionen gibt die Anzahl der Zeichen in *str*, mit Ausnahme den Te
 |**_tcsclen**|**strlen**|**_mbslen**|**wcslen**|
 |**_tcsclen_l**|**strlen**|**_mbslen_l**|**wcslen**|
 
-**_mbslen** und **_mbslen_l** Geben Sie die Anzahl von Multibytezeichen in einer Multibyte Zeichenfolge zurück, jedoch nicht für die Gültigkeit von Multibytezeichen testen. **_mbstrlen** und **_mbstrlen_l** test für die Gültigkeit von Multibytezeichen und erkennen Multibyte-Zeichenfolgen. Wenn die Zeichenfolge übergeben **_mbstrlen** oder **_mbstrlen_l** enthält ein ungültiges Multibytezeichen für die Codepage, die Funktion gibt-1 zurück und stellt **Errno** auf **EILSEQ**.
+**_mbslen** und **_mbslen_l** Geben Sie die Anzahl von Multibytezeichen in einer Multibyte Zeichenfolge zurück, überprüfen jedoch nicht für die Gültigkeit der Multibytezeichen. **_mbstrlen** und **_mbstrlen_l** test für die Gültigkeit von Multibytezeichen und erkennen Multibyte-Zeichenfolgen. Wenn die Zeichenfolge, um übergeben **_mbstrlen** oder **_mbstrlen_l** enthält ein ungültiges Multibytezeichen für die Codepage, die Funktion gibt-1 zurück und legt **Errno** zu **EILSEQ**.
 
 Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**strlen**|\<string.h>|
 |**wcslen**|\<string.h> oder \<wchar.h>|

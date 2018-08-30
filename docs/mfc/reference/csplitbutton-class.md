@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7fd35c351639d4b7b5f3b9dbbbce1c5e7cbcb79
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 38a624aacc302812865a785c537eb906a0489379
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543171"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207640"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton-Klasse
 Die `CSplitButton` Klasse stellt einen SplitButton-Steuerelement dar. Das Steuerelement mit einer unterteilten Schaltfläche führt ein Standardverhalten aus, wenn ein Benutzer auf den Hauptteil der Schaltfläche klickt, und zeigt ein Dropdownmenü an, wenn ein Benutzer auf den Dropdownpfeil der Schaltfläche klickt.  
@@ -62,7 +62,7 @@ class CSplitButton : public CButton
 |[CSplitButton::OnDropDown](#ondropdown)|Verarbeitet die BCN_DROPDOWN-Benachrichtigungen, die das System sendet, wenn ein Benutzer auf die Dropdown-Pfeil, der das aktuelle SplitButton-Steuerelement klickt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `CSplitButton` abgeleitete Klasse wird die [CButton](../../mfc/reference/cbutton-class.md) Klasse. Das SplitButton-Steuerelement ist ein Schaltflächensteuerelement, dessen Stil BS_SPLITBUTTON ist. Ein benutzerdefiniertes Menü angezeigt, wenn ein Benutzer auf den Dropdown-Pfeil klickt. Weitere Informationen finden Sie auf die BS_SPLITBUTTON und BS_DEFSPLITBUTTON Formatvorlagen in [Button-Stile](http://msdn.microsoft.com/library/windows/desktop/bb775951).  
+ Die `CSplitButton` abgeleitete Klasse wird die [CButton](../../mfc/reference/cbutton-class.md) Klasse. Das SplitButton-Steuerelement ist ein Schaltflächensteuerelement, dessen Stil BS_SPLITBUTTON ist. Ein benutzerdefiniertes Menü angezeigt, wenn ein Benutzer auf den Dropdown-Pfeil klickt. Weitere Informationen finden Sie auf die BS_SPLITBUTTON und BS_DEFSPLITBUTTON Formatvorlagen in [Button-Stile](/windows/desktop/Controls/button-styles).  
   
  Die folgende Abbildung zeigt ein Dialogfeld, das in einem Pagersteuerelement und einem (1) SplitButton-Steuerelement enthält. (2) Dropdown-Pfeil bereits geklickt wurde, und klicken Sie im Untermenü (3) wird angezeigt.  
   
@@ -102,7 +102,7 @@ virtual BOOL Create(
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
 |[in] *DwStyle*|Eine bitweise Kombination (OR) von Formatvorlagen, die auf das Steuerelement angewendet werden. Weitere Informationen finden Sie unter [Button-Stile](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
-|[in] *Rect*|Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Position und Größe des Steuerelements enthält.|  
+|[in] *Rect*|Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Position und Größe des Steuerelements enthält.|  
 |[in] *pParentWnd*|Ein nicht-Null-Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) -Objekt, das das übergeordnete Fenster des Steuerelements ist.|  
 |[in] *nID*|Die ID des Steuerelements.|  
   
@@ -146,8 +146,8 @@ afx_msg void OnDropDown(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *pNMHDR*|Zeiger auf ein [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) -Struktur, die Informationen der [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) Benachrichtigung.|  
-|[out] *pResult*|(Nicht verwendet; es wird kein Wert zurückgegeben.) Rückgabewert von der [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) Benachrichtigung.|  
+|[in] *pNMHDR*|Zeiger auf ein [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) -Struktur, die Informationen der [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) Benachrichtigung.|  
+|[out] *pResult*|(Nicht verwendet; es wird kein Wert zurückgegeben.) Rückgabewert von der [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) Benachrichtigung.|  
   
 ### <a name="remarks"></a>Hinweise  
  Klickt der Benutzer auf die Dropdown-Pfeil auf einem SplitButton-Steuerelement, System eine BCN_DROPDOWN-Benachrichtigung sendet Nachrichten, die die `OnDropDown` verarbeitet. Allerdings die `CSplitButton` Objekt nicht weiter die BCN_DROPDOWN-Benachrichtigung, um das Steuerelement, das SplitButton-Steuerelement enthält. Daher kann nicht das enthaltende Steuerelement eine benutzerdefinierte Aktion als Reaktion auf die Benachrichtigung nicht unterstützt.  

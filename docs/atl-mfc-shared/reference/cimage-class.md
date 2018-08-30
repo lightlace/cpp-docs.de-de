@@ -64,12 +64,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8217ee5bdcad15a2c0b89f95000360b979e094ea
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3443c85ce7f3f12e334e074e1ce37c9cab2ce9d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883618"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213613"
 ---
 # <a name="cimage-class"></a>CImage-Klasse
 `CImage` Bietet erweiterte Bitmapunterstützung, einschließlich der Möglichkeit zum Laden und Speichern von Bildern in JPEG, GIF, BMP und Portable Network Graphics (PNG).  
@@ -263,7 +263,7 @@ BOOL AlphaBlend(
  Die Alpha-blending-Funktion für Quelle und Zielbitmaps, eine globale alpha-Wert, auf das gesamte Quell-Bitmap, und der Formatierungsinformationen für die Quell-Bitmap angewendet werden. Die Quelle und Ziel Blend-Funktionen sind derzeit auf AC_SRC_OVER beschränkt.  
   
  *pointDest*  
- Ein Verweis auf eine [Punkt](http://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, die die oben links das Zielrechteck, in logischen Einheiten bezeichnet.  
+ Ein Verweis auf eine [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, die die oben links das Zielrechteck, in logischen Einheiten bezeichnet.  
   
  *nDestWidth*  
  Die Breite in logischen Einheiten des Zielrechtecks.  
@@ -284,7 +284,7 @@ BOOL AlphaBlend(
  Die Höhe in logischen Einheiten des Quellrechtecks.  
   
  *rectDest*  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die das Ziel zu identifizieren.  
+ Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die das Ziel zu identifizieren.  
   
  *rectSrc*  
  Ein Verweis auf eine `RECT` Struktur, die die Quelle zu identifizieren.  
@@ -363,10 +363,10 @@ BOOL BitBlt(
  Die logische y-Koordinate der oberen linken Ecke des Zielrechtecks.  
   
  *dwROP*  
- Der rastervorgang ausgeführt werden. Raster-Operationscodes definieren genau, wie die Bits von der Quelle, Ziel und das Muster kombinieren (gemäß der aktuell ausgewählten Pinsel), um das Ziel bilden. Finden Sie unter [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) im Windows SDK für eine Liste mit anderen rastervorgang Codes und deren Beschreibungen aufgeführt.  
+ Der rastervorgang ausgeführt werden. Raster-Operationscodes definieren genau, wie die Bits von der Quelle, Ziel und das Muster kombinieren (gemäß der aktuell ausgewählten Pinsel), um das Ziel bilden. Finden Sie unter [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) im Windows SDK für eine Liste mit anderen rastervorgang Codes und deren Beschreibungen aufgeführt.  
   
  *pointDest*  
- Ein [Punkt](http://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, der angibt, in der oberen linken Ecke des Zielrechtecks.  
+ Ein [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, der angibt, in der oberen linken Ecke des Zielrechtecks.  
   
  *nDestWidth*  
  Die Breite in logischen Einheiten des Zielrechtecks.  
@@ -381,7 +381,7 @@ BOOL BitBlt(
  Die logische y-Koordinate der oberen linken Ecke des Quellrechtecks.  
   
  *rectDest*  
- Ein [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die das Zielrechteck angibt.  
+ Ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die das Zielrechteck angibt.  
   
  *pointSrc*  
  Ein `POINT` Struktur, der angibt, in der oberen linken Ecke des Quellrechtecks.  
@@ -390,7 +390,7 @@ BOOL BitBlt(
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) im Windows SDK.  
+ Weitere Informationen finden Sie unter [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) im Windows SDK.  
   
 ##  <a name="cimage"></a>  CImage::CImage  
  Erstellt ein `CImage`-Objekt.  
@@ -469,7 +469,7 @@ BOOL CreateEx(
 - BI_BITFIELDS Format werden nicht komprimiert, und die Farbtabelle besteht aus drei der folgenden DWORD-Farbe Masken, mit die die Komponenten roten, grünen und blauen bzw. der einzelnen Pixel angegeben. Dies ist gültig, wenn mit 16 und 32-Bpp-Bitmaps verwendet.  
   
  *pdwBitfields*  
- Nur verwendet, wenn *eCompression* festgelegt ist, BI_BITFIELDS, andernfalls diese muss NULL sein. Ein Zeiger auf ein Array von drei DWORD Bitmasken, die angeben, welche Bits der einzelnen Pixel bzw. für die Rot-, Grün- und blauen-Komponenten der Farbe verwendet werden. Weitere Informationen zu den Einschränkungen für die Bitfelder finden Sie unter [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) im Windows SDK.  
+ Nur verwendet, wenn *eCompression* festgelegt ist, BI_BITFIELDS, andernfalls diese muss NULL sein. Ein Zeiger auf ein Array von drei DWORD Bitmasken, die angeben, welche Bits der einzelnen Pixel bzw. für die Rot-, Grün- und blauen-Komponenten der Farbe verwendet werden. Weitere Informationen zu den Einschränkungen für die Bitfelder finden Sie unter [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) im Windows SDK.  
   
  *dwFlags*  
  Gibt an, wenn das Bitmapobjekt einen alpha-Kanal verfügt. Eine Kombination von 0 (null) oder mehrere der folgenden Werte sind möglich:  
@@ -578,13 +578,13 @@ BOOL Draw(
  Die Höhe in logischen Einheiten des Quellrechtecks.  
   
  *rectDest*  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die das Ziel zu identifizieren.  
+ Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die das Ziel zu identifizieren.  
   
  *rectSrc*  
  Ein Verweis auf eine `RECT` Struktur, die die Quelle zu identifizieren.  
   
  *pointDest*  
- Ein Verweis auf eine [Punkt](http://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, die die oben links das Zielrechteck, in logischen Einheiten bezeichnet.  
+ Ein Verweis auf eine [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, die die oben links das Zielrechteck, in logischen Einheiten bezeichnet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -623,7 +623,7 @@ int GetBPP() const throw();
 ### <a name="remarks"></a>Hinweise  
  Dieser Wert bestimmt die Anzahl der Bits, die jedes Pixel zu definieren und die maximale Anzahl von Farben in der Bitmap.  
   
- Die Bits pro Pixel ist in der Regel 1, 4, 8, 16, 24 oder 32. Finden Sie unter den `biBitCount` Mitglied [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) im Windows SDK für Weitere Informationen zu diesen Wert.  
+ Die Bits pro Pixel ist in der Regel 1, 4, 8, 16, 24 oder 32. Finden Sie unter den `biBitCount` Mitglied [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) im Windows SDK für Weitere Informationen zu diesen Wert.  
   
 ##  <a name="getcolortable"></a>  CImage::GetColorTable  
  Ruft die Rot, Grün, Blau (RGB) Farbwerte aus einem Bereich von Einträgen in der Palette des Abschnitts DIB ab.  
@@ -642,7 +642,7 @@ void GetColorTable(UINT iFirstColor,
  Die Anzahl der Farbtabelleneinträge abrufen.  
   
  *prgbColors*  
- Ein Zeiger auf das Array von [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) Strukturen, um die Farbe abrufen Tabelle Einträge.  
+ Ein Zeiger auf das Array von [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad) Strukturen, um die Farbe abrufen Tabelle Einträge.  
   
 ##  <a name="getdc"></a>  CImage::GetDC  
  Ruft den Gerätekontext, die dem Image darin ausgewählt verfügt derzeit über ab.  
@@ -1179,10 +1179,10 @@ BOOL PlgBlt(
  Die y-Koordinate der oberen linken Ecke der monochrome Bitmap.  
   
  *rectSrc*  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die mit den angegebenen Koordinaten des Quellrechtecks.  
+ Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die mit den angegebenen Koordinaten des Quellrechtecks.  
   
  *pointMask*  
- Ein [Punkt](http://msdn.microsoft.com/library/windows/desktop/dd162805) -Struktur, die links oben auf der Maskenbitmap für die angibt.  
+ Ein [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) -Struktur, die links oben auf der Maskenbitmap für die angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn erfolgreich, andernfalls 0.  
@@ -1190,7 +1190,7 @@ BOOL PlgBlt(
 ### <a name="remarks"></a>Hinweise  
  Wenn *HbmMask* identifiziert eine gültige monochrome Bitmap `PlgBit` diese Bitmap verwendet, um die Bits der Farbdaten vom Quellrechtecks zu maskieren.  
   
- Diese Methode gilt für Windows NT, Version 4.0 und höher vorgesehen. Finden Sie unter [PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804) im Windows SDK für ausführlichere Informationen.  
+ Diese Methode gilt für Windows NT, Version 4.0 und höher vorgesehen. Finden Sie unter [PlgBlt](/windows/desktop/api/wingdi/nf-wingdi-plgblt) im Windows SDK für ausführlichere Informationen.  
   
 ##  <a name="releasedc"></a>  CImage::ReleaseDC  
  Gibt den Gerätekontext frei.  
@@ -1268,7 +1268,7 @@ void SetColorTable(
  Die Anzahl der Farbtabelleneinträge festlegen.  
   
  *prgbColors*  
- Ein Zeiger auf das Array von [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) Strukturen, die die Farbe festgelegt Tabelle Einträge.  
+ Ein Zeiger auf das Array von [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad) Strukturen, die die Farbe festgelegt Tabelle Einträge.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode unterstützt nur Bitmaps, Abschnitt DIB.  
@@ -1408,10 +1408,10 @@ BOOL StretchBlt(
  Die Höhe in logischen Einheiten des Zielrechtecks.  
   
  *dwROP*  
- Der rastervorgang ausgeführt werden. Raster-Operationscodes definieren genau, wie die Bits von der Quelle, Ziel und das Muster kombinieren (gemäß der aktuell ausgewählten Pinsel), um das Ziel bilden. Finden Sie unter [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) im Windows SDK für eine Liste mit anderen rastervorgang Codes und deren Beschreibungen aufgeführt.  
+ Der rastervorgang ausgeführt werden. Raster-Operationscodes definieren genau, wie die Bits von der Quelle, Ziel und das Muster kombinieren (gemäß der aktuell ausgewählten Pinsel), um das Ziel bilden. Finden Sie unter [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) im Windows SDK für eine Liste mit anderen rastervorgang Codes und deren Beschreibungen aufgeführt.  
   
  *rectDest*  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die das Ziel zu identifizieren.  
+ Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die das Ziel zu identifizieren.  
   
  *xSrc*  
  Die X-Koordinate in logischen Einheiten der oberen linken Ecke des Quellrechtecks.  
@@ -1432,7 +1432,7 @@ BOOL StretchBlt(
  Ungleich NULL, wenn erfolgreich, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) im Windows SDK.  
+ Weitere Informationen finden Sie unter [StretchBlt](/windows/desktop/api/wingdi/nf-wingdi-stretchblt) im Windows SDK.  
   
 ##  <a name="transparentblt"></a>  CImage::TransparentBlt  
  Kopiert eine Bitmap aus dem Quellgerätekontext für diese aktuelle Gerätekontext.  
@@ -1490,7 +1490,7 @@ BOOL TransparentBlt(
  Die Farbe in der Quell-Bitmap, als transparent behandelt werden sollen. Standardmäßig CLR_INVALID, sollte die Option gibt an, dass derzeit als transparente Farbe des Bilds der Farbe festlegen verwendet werden.  
   
  *rectDest*  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die das Ziel zu identifizieren.  
+ Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die das Ziel zu identifizieren.  
   
  *xSrc*  
  Die X-Koordinate in logischen Einheiten der oberen linken Ecke des Quellrechtecks.  
@@ -1548,10 +1548,10 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 ## <a name="see-also"></a>Siehe auch  
  [MMXSwarm-Beispiel](../../visual-cpp-samples.md)   
  [SimpleImage-Beispiel](../../visual-cpp-samples.md)   
- [Geräteunabhängige Bitmaps](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
- [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
- [ATL COM Desktop Components](../../atl/atl-com-desktop-components.md) [geräteunabhängige Bitmaps](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
- [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
+ [Geräteunabhängige Bitmaps](/windows/desktop/gdi/device-independent-bitmaps)   
+ [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
+ [ATL COM Desktop Components](../../atl/atl-com-desktop-components.md) [geräteunabhängige Bitmaps](/windows/desktop/gdi/device-independent-bitmaps)   
+ [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
 
 
 

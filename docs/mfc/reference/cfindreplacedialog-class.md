@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c88a517d600536d4f89b1621e225ad80666885a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: cabd6f331ed7348fe84a585a863ccb7e90b992fc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338648"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204004"
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog-Klasse
 Können Sie Standardzeichenfolge in Dateien suchen/ersetzen-Dialogfelder in Ihrer Anwendung zu implementieren.  
@@ -95,9 +95,9 @@ class CFindReplaceDialog : public CCommonDialog
   
  Einmal eine `CFindReplaceDialog` -Objekts, rufen Sie die [erstellen](#create) Member-Funktion zum Erstellen und das Dialogfeld anzuzeigen.  
   
- Verwenden der [M_fr](#m_fr) Struktur zum Initialisieren des Dialogfelds vor dem Aufruf `Create`. Die `m_fr` Struktur ist vom Typ [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Weitere Informationen zu dieser Struktur finden Sie im Windows-SDK.  
+ Verwenden der [M_fr](#m_fr) Struktur zum Initialisieren des Dialogfelds vor dem Aufruf `Create`. Die `m_fr` Struktur ist vom Typ [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea). Weitere Informationen zu dieser Struktur finden Sie im Windows-SDK.  
   
- In der Reihenfolge für das übergeordnete Fenster, in Dateien suchen/ersetzen-Anforderungen benachrichtigt zu werden, müssen Sie die Windows verwenden [RegisterWindowMessage registriert](http://msdn.microsoft.com/library/windows/desktop/ms644947) -Funktion und die Nutzung der [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) meldungszuordnung Makro in Ihrem Frame Fenster, das diese registrierte Meldung verarbeitet.  
+ In der Reihenfolge für das übergeordnete Fenster, in Dateien suchen/ersetzen-Anforderungen benachrichtigt zu werden, müssen Sie die Windows verwenden [RegisterWindowMessage registriert](https://msdn.microsoft.com/library/windows/desktop/ms644947) -Funktion und die Nutzung der [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) meldungszuordnung Makro in Ihrem Frame Fenster, das diese registrierte Meldung verarbeitet.  
   
  Sie können bestimmen, ob der Benutzer entschieden hat, um das Dialogfeld zu beenden. die `IsTerminating` Member-Funktion.  
   
@@ -165,7 +165,7 @@ virtual BOOL Create(
  Zeiger auf die Ersetzungszeichenfolge standardmäßigen, wenn das Dialogfeld wird angezeigt. Wenn der Wert NULL ist, enthält das Dialogfeld keine Ersetzungszeichenfolge standardmäßigen.  
   
  *dwFlags*  
- Ein oder mehrere Flags, die Sie, zum Anpassen der Einstellungen im Dialogfeld verwenden können, mit dem bitweisen OR-Operator kombiniert. Der Standardwert ist FR_DOWN, der angibt, dass bei der Suche wird die weitere Vorgehensweise nach unten durchgeführt. Finden Sie unter den [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835) Struktur im Windows SDK für Weitere Informationen zu diesen Flags.  
+ Ein oder mehrere Flags, die Sie, zum Anpassen der Einstellungen im Dialogfeld verwenden können, mit dem bitweisen OR-Operator kombiniert. Der Standardwert ist FR_DOWN, der angibt, dass bei der Suche wird die weitere Vorgehensweise nach unten durchgeführt. Finden Sie unter den [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea) Struktur im Windows SDK für Weitere Informationen zu diesen Flags.  
   
  *pParentWnd*  
  Ein Zeiger auf das übergeordnete Element oder Besitzer des Dialogfelds-Fenster. Dies ist das Fenster, das erhält die Sondermeldung gibt an, dass eine Suchen/Ersetzen-Aktion angefordert wird. Wenn der Wert NULL ist, wird das Hauptfenster der Anwendung verwendet.  
@@ -174,7 +174,7 @@ virtual BOOL Create(
  Ungleich NULL, wenn das Dialogfeld wurde erfolgreich erstellt wurde; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- In der Reihenfolge für das übergeordnete Fenster, in Dateien suchen/ersetzen-Anforderungen benachrichtigt zu werden, müssen Sie die Windows verwenden [RegisterWindowMessage registriert](http://msdn.microsoft.com/library/windows/desktop/ms644947) Funktion, deren Rückgabewert ist die Nummer einer Anwendungsinstanz eindeutig. Ihr Rahmenfenster müssen einen Zuordnungseintrag für Nachrichten, die die Callback-Funktion deklariert ( `OnFindReplace` in das folgende Beispiel), die diese registrierten Nachricht verarbeitet. Das folgende Codefragment ist ein Beispiel für ein Rahmenfenster (Klasse) mit dem Namen `CMyRichEditView`:  
+ In der Reihenfolge für das übergeordnete Fenster, in Dateien suchen/ersetzen-Anforderungen benachrichtigt zu werden, müssen Sie die Windows verwenden [RegisterWindowMessage registriert](https://msdn.microsoft.com/library/windows/desktop/ms644947) Funktion, deren Rückgabewert ist die Nummer einer Anwendungsinstanz eindeutig. Ihr Rahmenfenster müssen einen Zuordnungseintrag für Nachrichten, die die Callback-Funktion deklariert ( `OnFindReplace` in das folgende Beispiel), die diese registrierten Nachricht verarbeitet. Das folgende Codefragment ist ein Beispiel für ein Rahmenfenster (Klasse) mit dem Namen `CMyRichEditView`:  
   
  [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]  
   
@@ -269,7 +269,7 @@ FINDREPLACE m_fr;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `m_fr` ist eine Struktur vom Typ [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Member speichern Sie die Eigenschaften des Objekts im Dialogfeld. Nach dem Erstellen einer `CFindReplaceDialog` -Objekts verwenden Sie `m_fr` verschiedene Werte im Dialogfeld ändern.  
+ `m_fr` ist eine Struktur vom Typ [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea). Member speichern Sie die Eigenschaften des Objekts im Dialogfeld. Nach dem Erstellen einer `CFindReplaceDialog` -Objekts verwenden Sie `m_fr` verschiedene Werte im Dialogfeld ändern.  
   
  Weitere Informationen zu dieser Struktur finden Sie unter den `FINDREPLACE` Struktur im Windows SDK.  
   

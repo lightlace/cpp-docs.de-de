@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80fdbe14539c5b32c2da80a5de75fbe0a2b64241
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a23951697a5f736305734c6d49044a2e33ac4783
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409125"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200492"
 ---
 # <a name="indirection-operator-"></a>Dereferenzierungsoperator: *
 ## <a name="syntax"></a>Syntax  
@@ -32,7 +32,7 @@ ms.locfileid: "39409125"
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Der unäre Dereferenzierungsoperator (**\***) dereferenziert einen Zeiger, d. h. einen Zeigerwert in einen l-Wert konvertiert. Der Operand des Dereferenzierungsoperators muss ein Zeiger auf einen Typ sein. Das Ergebnis des Dereferenzierungsausdrucks ist der Typ, aus dem der Zeigertyp abgeleitet wird. Die Verwendung der **\*** -Operators in diesem Kontext unterscheidet sich von seiner Bedeutung als binärer Operator, der Multiplikation ist.  
+ Der unäre Dereferenzierungsoperator (<strong>\*</strong>) dereferenziert einen Zeiger, d. h. einen Zeigerwert in einen l-Wert konvertiert. Der Operand des Dereferenzierungsoperators muss ein Zeiger auf einen Typ sein. Das Ergebnis des Dereferenzierungsausdrucks ist der Typ, aus dem der Zeigertyp abgeleitet wird. Die Verwendung der <strong>\*</strong> -Operators in diesem Kontext unterscheidet sich von seiner Bedeutung als binärer Operator, der Multiplikation ist.  
   
  Wenn der Operand auf eine Funktion verweist, ist das Ergebnis ein Funktionsbezeichner. Wenn an einen Speicherort verwiesen wird, ist das Ergebnis ein l-Wert, der den Speicherort festlegt.  
   

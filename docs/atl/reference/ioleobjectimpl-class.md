@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aec4de071df8dcca960a0f1cb802375e5553ceb3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3646a640cb3873ec32f6284f8d2be99469ef7633
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880303"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220902"
 ---
 # <a name="ioleobjectimpl-class"></a>IOleObjectImpl-Klasse
 Diese Klasse implementiert `IUnknown` und ist die Dienstprinzipale-Schnittstelle über die ein Container, die mit einem Steuerelement kommuniziert.  
@@ -131,7 +131,7 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 |[IOleObjectImpl::Update](#update)|Aktualisiert das Steuerelement an. Es gibt S_OK zurück, die ATL-Implementierung.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die [IOleObject](http://msdn.microsoft.com/library/windows/desktop/dd542709) Schnittstelle ist der Prinzipal über die ein Container, die mit einem Steuerelement kommuniziert. Klasse `IOleObjectImpl` stellt eine Standardimplementierung dieser Schnittstelle bereit und implementiert `IUnknown` durch Senden von Informationen an das Speicherabbild Gerät im Debugmodus wird erstellt.  
+ Die [IOleObject](/windows/desktop/api/oleidl/nn-oleidl-ioleobject) Schnittstelle ist der Prinzipal über die ein Container, die mit einem Steuerelement kommuniziert. Klasse `IOleObjectImpl` stellt eine Standardimplementierung dieser Schnittstelle bereit und implementiert `IUnknown` durch Senden von Informationen an das Speicherabbild Gerät im Debugmodus wird erstellt.  
   
  **Verwandte Artikel** [ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md), [Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md)  
   
@@ -153,7 +153,7 @@ STDMETHOD(Advise)(
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573) in das Windows SDK.  
+ Finden Sie unter [IOleObject::Advise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-advise) in das Windows SDK.  
   
 ##  <a name="close"></a>  IOleObjectImpl::Close  
  Ändert den Zustand des Steuerelements ausgeführt geladen.  
@@ -167,7 +167,7 @@ STDMETHOD(Close)(DWORD dwSaveOption);
   
  Die Zeiger frei, die in die Steuerelement-Klassendatenmember [CComControlBase::m_spInPlaceSite](../../atl/reference/ccomcontrolbase-class.md#m_spinplacesite) und [CComControlBase::m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink) freigegeben werden, und die Datenelemente [CComControlBase:: M_bNegotiatedWnd](../../atl/reference/ccomcontrolbase-class.md#m_bnegotiatedwnd), [CComControlBase::m_bWndless](../../atl/reference/ccomcontrolbase-class.md#m_bwndless), und [CComControlBase::m_bInPlaceSiteEx](../../atl/reference/ccomcontrolbase-class.md#m_binplacesiteex) auf "false" festgelegt sind.  
   
- Finden Sie unter [IOleObject::Close](http://msdn.microsoft.com/library/windows/desktop/ms683922) in das Windows SDK.  
+ Finden Sie unter [IOleObject::Close](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-close) in das Windows SDK.  
   
 ##  <a name="doverb"></a>  IOleObjectImpl::DoVerb  
  Weist das Steuerelement an eine der aufgelisteten Aktionen ausführen.  
@@ -196,7 +196,7 @@ STDMETHOD(DoVerb)(
 |OLEIVERB_SHOW|[DoVerbShow](#doverbshow)|  
 |OLEIVERB_UIACTIVATE|[DoVerbUIActivate](#doverbuiactivate)|  
   
- Finden Sie unter [IOleObject](http://msdn.microsoft.com/library/windows/desktop/ms694508) in das Windows SDK.  
+ Finden Sie unter [IOleObject](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) in das Windows SDK.  
   
 ##  <a name="doverbdiscardundo"></a>  IOleObjectImpl::DoVerbDiscardUndo  
  Weist das Steuerelement in einem beliebigen Zustand rückgängig zu verwerfen, den er verwaltet.  
@@ -250,7 +250,7 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
  Einer der standardmäßigen HRESULT-Werte.  
   
 ### <a name="remarks"></a>Hinweise  
- Aktiviert die Kontrolle durch den Aufruf [CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). Es sei denn, die Control-Klasse-Datenmember `m_bWindowOnly` ist "true", `DoVerbInPlaceActivate` zunächst versucht, auf das Steuerelement als fensterloses Steuerelement aktivieren (möglich, nur dann, wenn der Container unterstützt [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300)). Wenn dies fehlschlägt, wird die Funktion versucht, auf das Steuerelement mit erweiterten Features aktivieren (möglich, nur dann, wenn der Container unterstützt [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)). Wenn dies fehlschlägt, wird die Funktion versucht, das Steuerelement keine erweiterten Features aktivieren (möglich, nur dann, wenn der Container unterstützt [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)). Wenn die Aktivierung erfolgreich ist, benachrichtigt die Funktion den Container, dass das Steuerelement aktiviert wurde.  
+ Aktiviert die Kontrolle durch den Aufruf [CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). Es sei denn, die Control-Klasse-Datenmember `m_bWindowOnly` ist "true", `DoVerbInPlaceActivate` zunächst versucht, auf das Steuerelement als fensterloses Steuerelement aktivieren (möglich, nur dann, wenn der Container unterstützt [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless)). Wenn dies fehlschlägt, wird die Funktion versucht, auf das Steuerelement mit erweiterten Features aktivieren (möglich, nur dann, wenn der Container unterstützt [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex)). Wenn dies fehlschlägt, wird die Funktion versucht, das Steuerelement keine erweiterten Features aktivieren (möglich, nur dann, wenn der Container unterstützt [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite)). Wenn die Aktivierung erfolgreich ist, benachrichtigt die Funktion den Container, dass das Steuerelement aktiviert wurde.  
   
 ##  <a name="doverbopen"></a>  IOleObjectImpl::DoVerbOpen  
  Bewirkt, dass das Steuerelement bearbeitet werden, öffnen Sie in einem separaten Fenster geöffnet werden.  
@@ -331,7 +331,7 @@ STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IOleObject::EnumAdvise](http://msdn.microsoft.com/library/windows/desktop/ms682355) in das Windows SDK.  
+ Finden Sie unter [IOleObject::EnumAdvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumadvise) in das Windows SDK.  
   
 ##  <a name="enumverbs"></a>  IOleObjectImpl::EnumVerbs  
  Stellt eine Enumeration registrierter Aktionen (Verben) für dieses Steuerelement durch Aufrufen von `OleRegEnumVerbs`.  
@@ -343,7 +343,7 @@ STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
 ### <a name="remarks"></a>Hinweise  
  Sie können RGS-Datei Ihres Projekts Verben hinzufügen. Sehen Sie z. B. CIRCCTL. RGS konnte nicht in der [CIRC](../../visual-cpp-samples.md) Beispiel.  
   
- Finden Sie unter [IOleObject:: EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781) in das Windows SDK.  
+ Finden Sie unter [IOleObject:: EnumVerbs](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumverbs) in das Windows SDK.  
   
 ##  <a name="getclientsite"></a>  IOleObjectImpl::GetClientSite  
  Setzt den Mauszeiger in die Steuerelement-Klassendatenmember [CComControlBase::m_spClientSite](../../atl/reference/ccomcontrolbase-class.md#m_spclientsite) in *PpClientSite* und inkrementiert den Verweiszähler für den Zeiger.  
@@ -353,7 +353,7 @@ STDMETHOD(GetClientSite)(IOleClientSite** ppClientSite);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IOleObject::GetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms692603) in das Windows SDK.  
+ Finden Sie unter [IOleObject::GetClientSite](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getclientsite) in das Windows SDK.  
   
 ##  <a name="getclipboarddata"></a>  IOleObjectImpl::GetClipboardData  
  Ruft Daten aus der Zwischenablage ab.  
@@ -368,7 +368,7 @@ STDMETHOD(GetClipboardData)(
  Gibt E_NOTIMPL zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IOleObject::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/ms682288) in das Windows SDK.  
+ Finden Sie unter [IOleObject::GetClipboardData](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getclipboarddata) in das Windows SDK.  
   
 ##  <a name="getextent"></a>  IOleObjectImpl::GetExtent  
  Ruft die Größe des Steuerelements auf einer ausgeführten in HIMETRIC-Einheiten (0,01 Millimeter pro Einheit) ab.  
@@ -382,7 +382,7 @@ STDMETHOD(GetExtent)(
 ### <a name="remarks"></a>Hinweise  
  Die Größe wird gespeichert, in der Steuerelement-Klassendatenmember [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).  
   
- Finden Sie unter [IOleObject::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms692325) in das Windows SDK.  
+ Finden Sie unter [IOleObject::GetExtent](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getextent) in das Windows SDK.  
   
 ##  <a name="getmiscstatus"></a>  IOleObjectImpl::GetMiscStatus  
  Gibt einen Zeiger auf registrierte Statusinformationen für das Steuerelement durch Aufrufen von `OleRegGetMiscStatus`.  
@@ -396,7 +396,7 @@ STDMETHOD(GetMiscStatus)(
 ### <a name="remarks"></a>Hinweise  
  Die Statusinformationen handelt es sich um Verhaltensweisen, die von den Daten des Steuerelements und die Darstellung unterstützt. Sie können Statusinformationen RGS-Datei Ihres Projekts hinzufügen.  
   
- Finden Sie unter [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) in das Windows SDK.  
+ Finden Sie unter [IOleObject::GetMiscStatus](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) in das Windows SDK.  
   
 ##  <a name="getmoniker"></a>  IOleObjectImpl::GetMoniker  
  Ruft das Steuerelement den Moniker ab.  
@@ -412,7 +412,7 @@ STDMETHOD(GetMoniker)(
  Gibt E_NOTIMPL zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IOleObject::GetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms686576) in das Windows SDK.  
+ Finden Sie unter [IOleObject::GetMoniker](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmoniker) in das Windows SDK.  
   
 ##  <a name="getuserclassid"></a>  IOleObjectImpl::GetUserClassID  
  Gibt die Klassenbezeichner des Steuerelements zurück.  
@@ -422,7 +422,7 @@ STDMETHOD(GetUserClassID)(CLSID* pClsid);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IOleObject::GetUserClassID](http://msdn.microsoft.com/library/windows/desktop/ms682313) in das Windows SDK.  
+ Finden Sie unter [IOleObject::GetUserClassID](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getuserclassid) in das Windows SDK.  
   
 ##  <a name="getusertype"></a>  IOleObjectImpl::GetUserType  
  Gibt den Namen des Steuerelements Benutzertyp durch Aufrufen von `OleRegGetUserType`.  
@@ -436,7 +436,7 @@ STDMETHOD(GetUserType)(
 ### <a name="remarks"></a>Hinweise  
  Der Benutzertyp-Name ist für die Anzeige in Benutzeroberflächen-Elemente wie Menüs und Dialogfelder verwendet. Sie können die Benutzer-Typnamen in der RGS-Datei des Projekts ändern.  
   
- Finden Sie unter [IOleObject::GetUserType](http://msdn.microsoft.com/library/windows/desktop/ms688643) in das Windows SDK.  
+ Finden Sie unter [IOleObject::GetUserType](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getusertype) in das Windows SDK.  
   
 ##  <a name="initfromdata"></a>  IOleObjectImpl::InitFromData  
  Initialisiert das Steuerelement aus der ausgewählten Daten.  
@@ -452,7 +452,7 @@ STDMETHOD(InitFromData)(
  Gibt E_NOTIMPL zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) in das Windows SDK.  
+ Finden Sie unter [InitFromData](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-initfromdata) in das Windows SDK.  
   
 ##  <a name="isuptodate"></a>  IOleObjectImpl::IsUpToDate  
  Überprüft, ob das Steuerelement auf dem neuesten Stand ist.  
@@ -465,7 +465,7 @@ STDMETHOD(IsUpToDate)(void);
  Gibt S_OK zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IOleObject::IsUpToDate](http://msdn.microsoft.com/library/windows/desktop/ms686624) in das Windows SDK.  
+ Finden Sie unter [IOleObject::IsUpToDate](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-isuptodate) in das Windows SDK.  
   
 ##  <a name="onpostverbdiscardundo"></a>  IOleObjectImpl::OnPostVerbDiscardUndo  
  Wird aufgerufen, indem [DoVerbDiscardUndo](#doverbdiscardundo) nach, wieder rückgängig zu machen verworfen wird.  
@@ -633,7 +633,7 @@ STDMETHOD(SetClientSite)(IOleClientSite* pClientSite);
 ### <a name="remarks"></a>Hinweise  
  Die Methode gibt S_OK zurück.  
   
- Finden Sie unter [IOleObject:: SetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms684013) in das Windows SDK.  
+ Finden Sie unter [IOleObject:: SetClientSite](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setclientsite) in das Windows SDK.  
   
 ##  <a name="setcolorscheme"></a>  IOleObjectImpl::SetColorScheme  
  Empfiehlt ein Farbschema des Steuerelements-Anwendung, sofern vorhanden.  
@@ -646,7 +646,7 @@ STDMETHOD(SetColorScheme)(LOGPALETTE* /* pLogPal */);
  Gibt E_NOTIMPL zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) in das Windows SDK.  
+ Finden Sie unter [IOleObject::SetColorScheme](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) in das Windows SDK.  
   
 ##  <a name="setextent"></a>  IOleObjectImpl::SetExtent  
  Legt den Umfang der Anzeigebereich des Steuerelements fest.  
@@ -664,7 +664,7 @@ STDMETHOD(SetExtent)(
   
  Wenn das Steuerelement Datenmember Klasse [CComControlBase::m_bRecomposeOnResize](../../atl/reference/ccomcontrolbase-class.md#m_brecomposeonresize) ist "true", `SetExtent` Aufrufe `SendOnDataChange` und `SendOnViewChange` benachrichtigt alle Advise-Senken der Advise-Inhaber, die die Größe des Steuerelements wurde registriert geändert.  
   
- Finden Sie unter [IOleObject:: SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330) in das Windows SDK.  
+ Finden Sie unter [IOleObject:: SetExtent](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setextent) in das Windows SDK.  
   
 ##  <a name="sethostnames"></a>  IOleObjectImpl::SetHostNames  
  Teilt dem Steuerelement die Namen der Anwendung mit Containern und Containerdokument an.  
@@ -677,7 +677,7 @@ STDMETHOD(SetHostNames)(LPCOLESTR /* szContainerApp */, LPCOLESTR /* szContainer
  Gibt S_OK zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IOleObject::SetHostNames](http://msdn.microsoft.com/library/windows/desktop/ms680642) in das Windows SDK.  
+ Finden Sie unter [IOleObject::SetHostNames](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-sethostnames) in das Windows SDK.  
   
 ##  <a name="setmoniker"></a>  IOleObjectImpl::SetMoniker  
  Teilt dem Steuerelement was des Monikers ist.  
@@ -692,7 +692,7 @@ STDMETHOD(SetMoniker)(
  Gibt E_NOTIMPL zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IOleObject::SetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679671) in das Windows SDK.  
+ Finden Sie unter [IOleObject::SetMoniker](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setmoniker) in das Windows SDK.  
   
 ##  <a name="unadvise"></a>  IOleObjectImpl::Unadvise  
  Löscht die Advise-Verbindung gespeichert, in der Steuerelementklasse `m_spOleAdviseHolder` -Datenmember.  
@@ -702,7 +702,7 @@ STDMETHOD(Unadvise)(DWORD dwConnection);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749) in das Windows SDK.  
+ Finden Sie unter [IOleObject::Unadvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-unadvise) in das Windows SDK.  
   
 ##  <a name="update"></a>  IOleObjectImpl::Update  
  Aktualisiert das Steuerelement an.  
@@ -715,9 +715,9 @@ STDMETHOD(Update)(void);
  Gibt S_OK zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IOleObject::Update](http://msdn.microsoft.com/library/windows/desktop/ms679699) in das Windows SDK.  
+ Finden Sie unter [IOleObject::Update](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-update) in das Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CComControl-Klasse](../../atl/reference/ccomcontrol-class.md)   
- [ActiveX-Steuerelemente Schnittstellen](http://msdn.microsoft.com/library/windows/desktop/ms692724)   
+ [ActiveX-Steuerelemente Schnittstellen](/windows/desktop/com/activex-controls-interfaces)   
  [Übersicht über die Klasse](../../atl/atl-class-overview.md)

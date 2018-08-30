@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d13503ff19c4c7c132bd100921ff716ca3abca0
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 495f5b415aac2a59eeae45720944a03251b0faa5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541242"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210696"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Exemplarische Vorgehensweise: Erstellen einer Menübandanwendung mithilfe von MFC
 In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie mit der **MFS-Anwendungsassistenten** zum Erstellen einer Anwendung, die ein Menüband in der Standardeinstellung verfügt. Sie können dann im Menüband erweitern, durch das Hinzufügen einer **benutzerdefinierte** Menübandkategorie ein **Favoriten** Bereich, und das anschließende Hinzufügen einige häufig verwendete Befehle aus, um den Bereich des Menübands.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
- In dieser exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie Visual Studio für die Verwendung festgelegt haben **allgemeine Entwicklungseinstellungen**. Wenn Sie andere Einstellungen verwenden, werden möglicherweise einige Elemente der Benutzeroberfläche, auf die in den folgenden Anweisungen verwiesen wird, nicht angezeigt. Informationen dazu, wie Sie die Einstellungen zu ändern, finden Sie unter [wie: Zurücksetzen der Einstellungen](http://msdn.microsoft.com/c95c51be-e609-4769-abba-65e6beedec76).  
+ In dieser exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie Visual Studio für die Verwendung festgelegt haben **allgemeine Entwicklungseinstellungen**. Wenn Sie andere Einstellungen verwenden, werden möglicherweise einige Elemente der Benutzeroberfläche, auf die in den folgenden Anweisungen verwiesen wird, nicht angezeigt. Informationen dazu, wie Sie die Einstellungen zu ändern, finden Sie unter [wie: Zurücksetzen der Einstellungen](https://msdn.microsoft.com/c95c51be-e609-4769-abba-65e6beedec76).  
   
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>So erstellen Sie eine MFC-Anwendung mit einem Menüband  
   

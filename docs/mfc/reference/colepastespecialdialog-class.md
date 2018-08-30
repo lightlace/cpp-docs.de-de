@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42f4a45dc2b49b784f74175203e892c253ea1f5e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9c3dff52e3607125493c956d46e1bd38c399565e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851431"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213338"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog-Klasse
 Wird für das OLE-Dialogfeld "Inhalte einfügen" verwendet.  
@@ -85,7 +85,7 @@ class COlePasteSpecialDialog : public COleDialog
 ## <a name="remarks"></a>Hinweise  
  Erstellen Sie ein Objekt der Klasse `COlePasteSpecialDialog` Wenn das Dialogfeld aufgerufen werden soll. Nach einem `COlePasteSpecialDialog` -Objekts wird, können Sie mit der [AddFormat](#addformat) und [AddStandardFormats](#addstandardformats) Memberfunktionen zum Hinzufügen von Standardformaten der Zwischenablage in das Dialogfeld. Sie können auch die [M_ps](#m_ps) Struktur, um die Werte oder Zustände von Steuerelementen im Dialogfeld zu initialisieren. Die `m_ps` Struktur des Typs OLEUIPASTESPECIAL ist.  
   
- Weitere Informationen finden Sie unter den [OLEUIPASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/ms692434) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUIPASTESPECIAL](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipastespeciala) Struktur im Windows SDK.  
   
  Weitere Informationen zu OLE-spezifische Dialogfelder, finden Sie im Artikel [Dialogfelder in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -157,9 +157,9 @@ void AddFormat(
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion kann aufgerufen werden, zum Hinzufügen von entweder standard-Formate wie z. B. HIERSVR oder CF_TIFF oder benutzerdefinierte Formate, die Ihre Anwendung mit dem System registriert wurden. Weitere Informationen zum Einfügen von Datenobjekten in Ihrer Anwendung, finden Sie im Artikel [Datenobjekte und Datenquellen: Bearbeitung](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Weitere Informationen finden Sie unter den [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) Enumerationstyp und [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) Enumerationstyp und [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Struktur im Windows SDK.  
   
- Weitere Informationen finden Sie unter den [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) Enumerationstyp im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) Enumerationstyp im Windows SDK.  
   
 ##  <a name="addlinkentry"></a>  COlePasteSpecialDialog::AddLinkEntry  
  Fügt einen neuen Eintrag zur Liste der unterstützten Zwischenablageformate an.  
@@ -173,7 +173,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
  Das Zwischenablageformat hinzufügen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) Struktur, die die Informationen für den neuen linkeintrag enthält.  
+ Ein [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) Struktur, die die Informationen für den neuen linkeintrag enthält.  
   
 ##  <a name="addstandardformats"></a>  COlePasteSpecialDialog::AddStandardFormats  
  Rufen Sie diese Funktion, um die Liste der Formate die folgenden Formate der Zwischenablage hinzugefügt, die Ihre Anwendung in einem Inhalte einfügen-Vorgang unterstützen kann:  
@@ -231,7 +231,7 @@ COlePasteSpecialDialog(
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion erstellt, nur eine `COlePasteSpecialDialog` Objekt. Um das Dialogfeld anzuzeigen, rufen die [DoModal](#domodal) Funktion.  
   
- Weitere Informationen finden Sie unter den [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) Enumerationstyp im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) Enumerationstyp im Windows SDK.  
   
 ##  <a name="createitem"></a>  COlePasteSpecialDialog::CreateItem  
  Erstellt das neue Element, das das Dialogfeld "Inhalte einfügen" ausgewählt wurde.  
@@ -264,7 +264,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL, wenn der Benutzer das Dialogfeld abgebrochen hat.  
   
-- IDABORT, wenn ein Fehler aufgetreten. Wenn IDABORT zurückgegeben wird, rufen Sie die `COleDialog::GetLastError` Memberfunktion, um weitere Informationen zu den Typ des Fehlers zu erhalten, die aufgetreten sind. Eine Liste der möglichen Fehler, finden Sie unter den [OleUIPasteSpecial](http://msdn.microsoft.com/library/windows/desktop/ms694512) -Funktion in das Windows SDK.  
+- IDABORT, wenn ein Fehler aufgetreten. Wenn IDABORT zurückgegeben wird, rufen Sie die `COleDialog::GetLastError` Memberfunktion, um weitere Informationen zu den Typ des Fehlers zu erhalten, die aufgetreten sind. Eine Liste der möglichen Fehler, finden Sie unter den [OleUIPasteSpecial](/windows/desktop/api/oledlg/nf-oledlg-oleuipastespeciala) -Funktion in das Windows SDK.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie die verschiedenen Dialogfeldsteuerelemente zu initialisieren, indem Sie Mitglieder festlegen möchten die [M_ps](#m_ps) Struktur, sollten Sie dies tun, vor dem Aufruf `DoModal`, allerdings nachdem das Dialogfeldobjekt erstellt wird.  
@@ -288,7 +288,7 @@ DVASPECT GetDrawAspect() const;
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion nach [DoModal](#domodal) IDOK zurückgibt.  
   
- Weitere Informationen zum Zeichnen der Aspekt, finden Sie unter den [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur im Windows SDK.  
+ Weitere Informationen zum Zeichnen der Aspekt, finden Sie unter den [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Struktur im Windows SDK.  
   
 ##  <a name="geticonicmetafile"></a>  COlePasteSpecialDialog::GetIconicMetafile  
  Ruft ab, der Metadatei, die vom Benutzer ausgewählten Element zugeordnet.  
@@ -311,7 +311,7 @@ int GetPasteIndex() const;
  Der Index im Array von `OLEUIPASTEENTRY` Strukturen, die vom Benutzer ausgewählt wurde. Das Format, das den ausgewählten Index entspricht, sollte verwendet werden, wenn den Einfügevorgang ausgeführt.  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter den [OLEUIPASTEENTRY](http://msdn.microsoft.com/library/windows/desktop/ms690165) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUIPASTEENTRY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipasteentrya) Struktur im Windows SDK.  
   
 ##  <a name="getselectiontype"></a>  COlePasteSpecialDialog::GetSelectionType  
  Bestimmt den Typ der Auswahl des Benutzers hergestellt.  
@@ -355,7 +355,7 @@ OLEUIPASTESPECIAL m_ps;
 ### <a name="remarks"></a>Hinweise  
  Mitglieder dieser Struktur können direkt oder über Memberfunktionen geändert werden.  
   
- Weitere Informationen finden Sie unter den [OLEUIPASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/ms692434) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUIPASTESPECIAL](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipastespeciala) Struktur im Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [MFC-Beispiel OCLIENT](../../visual-cpp-samples.md)   

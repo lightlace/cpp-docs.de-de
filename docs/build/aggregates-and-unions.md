@@ -1,5 +1,5 @@
 ---
-title: Aggregate und Unions | Microsoft Docs
+title: Aggregate und Unions | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,55 +14,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b1afd3be89e1d18da9889d88dbbbef3fb104e02
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a22fae86c48a0dcbfb43c0de79a44195945aa25a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363258"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223110"
 ---
 # <a name="aggregates-and-unions"></a>Aggregate und Unions
-Andere Typen, z. B. Arrays, Strukturen und Unions, gelten strengere Ausrichtung, die konsistent aggregieren und union-Speicher und zum Datenabruf zu gewährleisten. Hier werden die Definitionen für Arrays, Struktur und Union:  
+Andere Typen wie Arrays, Strukturen und Unions, gelten strengere Ausrichtung, die die konsistente aggregieren und union-Speicher und Datenabruf zu gewährleisten. Hier sind die Definitionen für Arrays, Struktur und Union:  
   
  Array  
- Enthält eine geordnete Gruppe von angrenzenden Datenobjekte. Jedes Objekt wird ein Element aufgerufen werden. Alle Elemente in einem Array haben die gleichen Größe und Datentyp.  
+ Enthält eine geordnete Gruppe von benachbarten Datenobjekten. Jedes Objekt wird ein Element aufgerufen werden. Alle Elemente in einem Array haben die gleiche Größe und Datentyp.  
   
  Struktur  
- Enthält eine geordnete Gruppe von Datenobjekten an. Im Gegensatz zu der Elemente eines Arrays können die Datenobjekte in einer Struktur unterschiedliche Datentypen und Größen haben. Jedes Datenobjekt in eine Struktur ist ein Member aufgerufen werden.  
+ Enthält eine geordnete Gruppe von Datenobjekten. Im Gegensatz zu den Elementen eines Arrays können die Datenobjekte in einer Struktur unterschiedlichen Typen und Größen haben. Jedes Datenobjekt in einer Struktur wird als Member bezeichnet.  
   
  Union  
- Ein Objekt, das einen Satz von benannten Elementen eines enthält. Die Elemente der benannten Menge können einen beliebigen Typ aufweisen. Der Speicher für eine Union zugeordnet ist gleich Speicher für den größten Member der Union sowie eines möglichen Abstands aus, für die Ausrichtung erforderlich.  
+ Ein Objekt, das eine benannte Elemente enthält. Die Elemente der benannten Menge können einen beliebigen Typ sein. Der Speicher zugewiesen werden, damit eine Union ist der Speicherbedarf für den größten Member dieser Union zuzüglich möglicher Abstände, die erforderlich sind, für die Ausrichtung gleich.  
   
  Die folgende Tabelle zeigt die empfohlene Ausrichtung für die skalaren Member von Unions und Strukturen.  
   
 ||||  
 |-|-|-|  
-|Skalaren Typ|C-Datentyp|Erforderliche Ausrichtung|  
-|**INT8**|`char`|Byte|  
-|**UINT8**|`unsigned char`|Byte|  
+|Skalaren Typ|C-Datentyp|Erforderlichen Ausrichtung ergibt|  
+|**INT8**|**char**|Byte|  
+|**UINT8**|**unsigned char**|Byte|  
 |**INT16**|**short**|Word|  
 |**UINT16**|**unsigned short**|Word|  
-|**INT32**|**Int, long**|Doppelwort|  
-|**UINT32**|**unsigned Int unsigned long**|Doppelwort|  
-|**INT64**|`__int64`|Vierfachwort|  
+|**INT32**|**Int**, **lange**|Zeigt Doppelwort|  
+|**UINT32**|**ganze Zahl ohne Vorzeichen, unsigned long**|Zeigt Doppelwort|  
+|**INT64**|**__int64**|Vierfachwort|  
 |**UINT64**|**__int64 ohne Vorzeichen**|Vierfachwort|  
-|**FP32 (einfache Genauigkeit)**|**float**|Doppelwort|  
+|**FP32-Vorgänge (einfache Genauigkeit)**|**float**|Zeigt Doppelwort|  
 |**FP64 (doppelte Genauigkeit)**|**double**|Vierfachwort|  
-|**ZEIGER**|**\***|Vierfachwort|  
-|`__m64`|**Struktur __m64**|Vierfachwort|  
-|`__m128`|**Struktur __m128**|Octaword|  
+|**ZEIGER**|<strong>\*</strong>|Vierfachwort|  
+|**__m64**|**Struktur __m64**|Vierfachwort|  
+|**__m128**|**Struktur __m128**|Octaword|  
   
  Die folgenden aggregierten Ausrichtung Regeln gelten:  
   
--   Die Ausrichtung eines Arrays ist identisch mit der Ausrichtung eines der Elemente des Arrays.  
+-   Die Ausrichtung eines Arrays ist identisch mit die Ausrichtung eines der Elemente des Arrays.  
   
--   Die Ausrichtung des Anfangs einer Struktur oder Union ist die maximale Ausrichtung eines einzelnen Member. Jedes Element innerhalb der Struktur oder Union muss an die richtige Ausrichtung eingefügt werden, wie in der vorherigen Tabelle definiert, die implizite interne Auffüllung, je nachdem das vorherige Element möglicherweise erforderlich sind.  
+-   Die Ausrichtung des Anfangs einer Struktur oder Union ist die maximale Ausrichtung eines einzelnen Member. Jedes Element in der Struktur oder Union muss korrekt ausgerichtet platziert werden, gemäß der vorstehenden Tabelle ist möglicherweise eine implizite interne Abstände, je nachdem das vorherige Element erforderlich.  
   
--   Die Größe der Struktur muss eine ganzzahlige Vielfache seiner Ausrichtung die Auffüllung nach dem letzten Element erfordern. Da Strukturen und Unions in Arrays gruppiert werden können, muss jedes Arrayelement einer Struktur oder Union beginnen und enden, an die richtige Ausrichtung, die zuvor bestimmt.  
+-   Die Größe der Struktur muss ein ganzzahliges Vielfaches seiner Ausrichtung Abstand hinter das letzte Element ist möglicherweise erforderlich. Da Strukturen und Unions in Arrays gruppiert werden können, muss jedes Arrayelement eine Struktur oder Union beginnen und enden auf die richtige Ausrichtung, die zuvor ermittelt.  
   
--   Es ist möglich, zum Ausrichten von Daten in so, dass die ausrichtungsanforderungen größer sein als die oben aufgeführten Regeln verwaltet werden.  
+-   Es ist möglich, Ausrichten von Daten in so, dass der ausrichtungsanforderungen größer sein, solange alle zuvor genannten Regeln verwaltet werden.  
   
--   Ein einzelne Compiler kann die Komprimierung einer Struktur aus Gründen der Größe anpassen. Z. B. [/Zp (Ausrichten des Strukturmembers)](../build/reference/zp-struct-member-alignment.md) ermöglicht das Anpassen der Komprimierung von Strukturen.  
+-   Ein einzelner Compiler kann die Komprimierung einer Struktur aus Gründen der Größe anpassen. Z. B. [/Zp (Strukturmemberausrichtung)](../build/reference/zp-struct-member-alignment.md) ermöglicht das Anpassen der Komprimierung von Strukturen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Typen und Speicher](../build/types-and-storage.md)

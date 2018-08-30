@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e32312e8c6f3dc149f6e5e1f8dc37b1395732d02
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 52550df1ca89ec1252fc2910bf27598d51302495
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408189"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212260"
 ---
 # <a name="const-and-volatile-pointers"></a>const- und volatile-Zeiger
 Die [const](../cpp/const-cpp.md) und [flüchtige](../cpp/volatile-cpp.md) Schlüsselwörter zu ändern, wie Zeiger behandelt werden. Die **const** -Schlüsselwort Gibt an, dass der Zeiger nach der Initialisierung nicht geändert werden kann; der Zeiger ist danach vor Änderungen geschützt.  
@@ -96,7 +96,7 @@ errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *str
  Die vorhergehende Anweisung deklariert eine Funktion, [Strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), wobei zwei der drei Argumente des Typs Zeiger zu sind **Char**. Da die Argumente als Verweis übergeben werden und nicht anhand des Werts sähe die Funktion beide ändern `strDestination` und `strSource` Wenn `strSource` wurden nicht als deklariert **const**. Die Deklaration von `strSource` als **const** stellt sicher, dass dem Aufrufer `strSource` kann nicht von der aufgerufenen Funktion geändert werden.  
   
 > [!NOTE]
->  Da es eine standardkonvertierung von ist *Typename* **\*** zu **const** *Typename* **\***, es ist zulässig, ein Argument des Typs übergeben `char *` zu [Strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Das Gegenteil ist jedoch nicht "true"; keine implizite Konvertierung existiert, zum Entfernen der **const** Attribut aus einem Objekt oder Zeiger.  
+> Da es eine standardkonvertierung von ist *Typename* <strong>\*</strong> zu **const** *Typename* <strong>\*</strong>, es ist zulässig, ein Argument des Typs übergeben `char *` zu [Strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Das Gegenteil ist jedoch nicht "true"; keine implizite Konvertierung existiert, zum Entfernen der **const** Attribut aus einem Objekt oder Zeiger.  
   
  Ein **const** Zeiger eines bestimmten Typs in einen Zeiger des gleichen Typs zugewiesen werden kann. Ein Zeiger, die ist jedoch nicht **const** kann nicht zugewiesen werden, um eine **const** Zeiger. Der folgende Code zeigt korrekte und inkorrekte Zuweisungen:  
   

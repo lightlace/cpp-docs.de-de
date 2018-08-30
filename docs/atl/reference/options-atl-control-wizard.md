@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1fa026ecb0b25c17a793c31c3f64dcd0186f0e1
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 92c3ece3ddef00161a769c0c45a4d31712d6f691
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880094"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208760"
 ---
 # <a name="options-atl-control-wizard"></a>Optionen, ATL-Steuerelement-Assistent
 Fügen Sie hier "Suchergebnisse" Zusammenfassung.  
@@ -78,7 +78,7 @@ Fügen Sie hier "Suchergebnisse" Zusammenfassung.
   
 -   **Benutzerdefinierte**: erstellt eine Schnittstelle, die Methoden, die direkt durch eine VTBL verfügbar macht.  
   
-     Bei Auswahl von **benutzerdefinierte**, können Sie angeben, dass das Steuerelement **Automatisierungskompatibel**. Bei Auswahl von **Automatisierungskompatibel**, fügt der Assistent die [Oleautomation](../../windows/oleautomation.md) -Attribut auf die Schnittstelle in der IDL-Datei, und die Schnittstelle durch den universellen Marshaller in oleaut32.dll gemarshallt werden kann. Finden Sie unter [Marshaling Details](http://msdn.microsoft.com/library/windows/desktop/ms692621) im Windows SDK für Weitere Informationen.  
+     Bei Auswahl von **benutzerdefinierte**, können Sie angeben, dass das Steuerelement **Automatisierungskompatibel**. Bei Auswahl von **Automatisierungskompatibel**, fügt der Assistent die [Oleautomation](../../windows/oleautomation.md) -Attribut auf die Schnittstelle in der IDL-Datei, und die Schnittstelle durch den universellen Marshaller in oleaut32.dll gemarshallt werden kann. Finden Sie unter [Marshaling Details](/windows/desktop/com/marshaling-details) im Windows SDK für Weitere Informationen.  
   
      Darüber hinaus bei Auswahl von **Automatisierungskompatibel**, und klicken Sie dann alle Parameter für alle Methoden des Steuerelements Variant-Wert sein müssen kompatibel.  
   
@@ -87,7 +87,7 @@ Fügen Sie hier "Suchergebnisse" Zusammenfassung.
   
 -   **Verbindungspunkte**: können Sie dazu die Klasse des Objekts abgeleitet Verbindungspunkte für Ihr Objekt [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) und ermöglicht es, eine Schnittstelle verfügbar zu machen.  
   
--   **Lizenzierte**: Fügt Unterstützung für das Steuerelement für [Lizenzierung](http://msdn.microsoft.com/library/windows/desktop/ms690543). Lizenzierte Steuerelemente können nur gehostet werden, wenn der Client-Computer die richtige Lizenz verfügt.  
+-   **Lizenzierte**: Fügt Unterstützung für das Steuerelement für [Lizenzierung](/windows/desktop/com/licensing). Lizenzierte Steuerelemente können nur gehostet werden, wenn der Client-Computer die richtige Lizenz verfügt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [ATL-Steuerelement-Assistent](../../atl/reference/atl-control-wizard.md)

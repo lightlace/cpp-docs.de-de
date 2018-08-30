@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82639ff7d4c4f6c6e33778b47509a2744cb12f13
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 796a717faf86d10e789dec8ea0ca0e77517414a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337394"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215279"
 ---
 # <a name="cfilefind-class"></a>CFileFind-Klasse
 Führt lokale Dateisuchen und ist die Basisklasse für [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) und [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md), die internetdateisuchen ausführen.  
@@ -207,7 +207,7 @@ virtual BOOL FindFile(
  Reserviert, um die stellen `FindFile` von abgeleiteten Klassen polymorph. 0 muss sein.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Um erweiterte Fehlerinformationen abzurufen, rufen Sie die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Um erweiterte Fehlerinformationen abzurufen, rufen Sie die Win32-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Hinweise  
  Nach dem Aufruf `FindFile` rufen Sie zunächst die Dateisuche [FindNextFile](#findnextfile) nachfolgende Dateien abgerufen. Rufen Sie `FindNextFile` einmal, bevor Sie eine der folgenden Attributs Memberfunktionen aufrufen:  
@@ -261,7 +261,7 @@ virtual BOOL FindNextFile();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich NULL ist, wenn weitere Dateien vorhanden sind; NULL, wenn die Datei im Verzeichnis das letzte ist oder ein Fehler aufgetreten ist. Um erweiterte Fehlerinformationen abzurufen, rufen Sie die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360). Wenn die Datei die letzte Datei im Verzeichnis ist, oder wenn keine übereinstimmenden Dateien gefunden werden können, die `GetLastError` Funktionsergebnis ERROR_NO_MORE_FILES.  
+ Ungleich NULL ist, wenn weitere Dateien vorhanden sind; NULL, wenn die Datei im Verzeichnis das letzte ist oder ein Fehler aufgetreten ist. Um erweiterte Fehlerinformationen abzurufen, rufen Sie die Win32-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360). Wenn die Datei die letzte Datei im Verzeichnis ist, oder wenn keine übereinstimmenden Dateien gefunden werden können, die `GetLastError` Funktionsergebnis ERROR_NO_MORE_FILES.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie `FindNextFile` einmal, bevor Sie eine der folgenden Attributs Memberfunktionen aufrufen:  
@@ -304,7 +304,7 @@ virtual BOOL FindNextFile();
   
 - [MatchesMask](#matchesmask)  
   
- `FindNextFile` Dient als Wrapper für die Win32-Funktion [FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428).  
+ `FindNextFile` Dient als Wrapper für die Win32-Funktion [FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea).  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CFileFind::IsDirectory](#isdirectory).  
@@ -319,7 +319,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
   
 ### <a name="parameters"></a>Parameter  
  *pTimeStamp*  
- Ein Zeiger auf eine [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) -Struktur, enthält die Zeit, die die Datei erstellt wurde.  
+ Ein Zeiger auf eine [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) -Struktur, enthält die Zeit, die die Datei erstellt wurde.  
   
  *refTime*  
  Ein Verweis auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt.  
@@ -331,7 +331,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
  Rufen Sie [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf `GetCreationTime`.  
   
 > [!NOTE]
->  Nicht alle Dateisysteme verwenden die gleiche Semantik, um den Zeitstempel, der von dieser Funktion zurückgegebenen zu implementieren. Diese Funktion kann den gleichen Wert von anderen Time Stamp-Funktionen zurückgegeben werden, wenn der zugrunde liegenden Dateisystem oder Server nicht unterstützt wird das zeitattribut beibehalten zurückgeben. Finden Sie unter den [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur für Informationen zu Zeitformaten. Unter einigen Betriebssystemen ist die zurückgegebene Zeit, in der Zeit, die Zone lokal auf dem Computer wurden, wenn sich die Datei befindet. Finden Sie unter Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) -API für Weitere Informationen.  
+>  Nicht alle Dateisysteme verwenden die gleiche Semantik, um den Zeitstempel, der von dieser Funktion zurückgegebenen zu implementieren. Diese Funktion kann den gleichen Wert von anderen Time Stamp-Funktionen zurückgegeben werden, wenn der zugrunde liegenden Dateisystem oder Server nicht unterstützt wird das zeitattribut beibehalten zurückgeben. Finden Sie unter den [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) Struktur für Informationen zu Zeitformaten. Unter einigen Betriebssystemen ist die zurückgegebene Zeit, in der Zeit, die Zone lokal auf dem Computer wurden, wenn sich die Datei befindet. Finden Sie unter Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) -API für Weitere Informationen.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CFileFind::GetLength](#getlength).  
@@ -439,7 +439,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
  Ein Verweis auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt.  
   
  *pTimeStamp*  
- Ein Zeiger auf eine [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) Struktur, die beim Zugriff auf die Datei wurde zuletzt enthält.  
+ Ein Zeiger auf eine [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) Struktur, die beim Zugriff auf die Datei wurde zuletzt enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL Wenn erfolgreich; 0, wenn der Vorgang fehlschlägt. `GetLastAccessTime` Gibt 0 zurück, wenn nur [FindNextFile](#findnextfile) noch nie aufgerufen wurde, dazu `CFileFind` Objekt.  
@@ -448,7 +448,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
  Rufen Sie [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf `GetLastAccessTime`.  
   
 > [!NOTE]
->  Nicht alle Dateisysteme verwenden die gleiche Semantik, um den Zeitstempel, der von dieser Funktion zurückgegebenen zu implementieren. Diese Funktion kann den gleichen Wert von anderen Time Stamp-Funktionen zurückgegeben werden, wenn der zugrunde liegenden Dateisystem oder Server nicht unterstützt wird das zeitattribut beibehalten zurückgeben. Finden Sie unter den [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur für Informationen zu Zeitformaten. Unter einigen Betriebssystemen ist die zurückgegebene Zeit, in der Zeit, die Zone lokal auf dem Computer wurden, wenn sich die Datei befindet. Finden Sie unter Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) -API für Weitere Informationen.  
+>  Nicht alle Dateisysteme verwenden die gleiche Semantik, um den Zeitstempel, der von dieser Funktion zurückgegebenen zu implementieren. Diese Funktion kann den gleichen Wert von anderen Time Stamp-Funktionen zurückgegeben werden, wenn der zugrunde liegenden Dateisystem oder Server nicht unterstützt wird das zeitattribut beibehalten zurückgeben. Finden Sie unter den [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) Struktur für Informationen zu Zeitformaten. Unter einigen Betriebssystemen ist die zurückgegebene Zeit, in der Zeit, die Zone lokal auf dem Computer wurden, wenn sich die Datei befindet. Finden Sie unter Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) -API für Weitere Informationen.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CFileFind::GetLength](#getlength).  
@@ -463,7 +463,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
   
 ### <a name="parameters"></a>Parameter  
  *pTimeStamp*  
- Ein Zeiger auf eine [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) -Struktur, enthält die Datei zum letzten geschrieben wurde.  
+ Ein Zeiger auf eine [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) -Struktur, enthält die Datei zum letzten geschrieben wurde.  
   
  *refTime*  
  Ein Verweis auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt.  
@@ -475,7 +475,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
  Rufen Sie [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf `GetLastWriteTime`.  
   
 > [!NOTE]
->  Nicht alle Dateisysteme verwenden die gleiche Semantik, um den Zeitstempel, der von dieser Funktion zurückgegebenen zu implementieren. Diese Funktion kann den gleichen Wert von anderen Time Stamp-Funktionen zurückgegeben werden, wenn der zugrunde liegenden Dateisystem oder Server nicht unterstützt wird das zeitattribut beibehalten zurückgeben. Finden Sie unter den [Win32_Find_Data](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur für Informationen zu Zeitformaten. Unter einigen Betriebssystemen ist die zurückgegebene Zeit, in der Zeit, die Zone lokal auf dem Computer wurden, wenn sich die Datei befindet. Finden Sie unter Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) -API für Weitere Informationen.  
+>  Nicht alle Dateisysteme verwenden die gleiche Semantik, um den Zeitstempel, der von dieser Funktion zurückgegebenen zu implementieren. Diese Funktion kann den gleichen Wert von anderen Time Stamp-Funktionen zurückgegeben werden, wenn der zugrunde liegenden Dateisystem oder Server nicht unterstützt wird das zeitattribut beibehalten zurückgeben. Finden Sie unter den [Win32_Find_Data](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) Struktur für Informationen zu Zeitformaten. Unter einigen Betriebssystemen ist die zurückgegebene Zeit, in der Zeit, die Zone lokal auf dem Computer wurden, wenn sich die Datei befindet. Finden Sie unter Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) -API für Weitere Informationen.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CFileFind::GetLength](#getlength).  
@@ -493,7 +493,7 @@ ULONGLONG GetLength() const;
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf `GetLength`.  
   
- `GetLength` verwendet die Win32-Struktur [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) abrufen, und geben Sie den Wert der Größe der Datei, in Bytes zurück.  
+ `GetLength` verwendet die Win32-Struktur [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) abrufen, und geben Sie den Wert der Größe der Datei, in Bytes zurück.  
   
 > [!NOTE]
 >  Ab MFC 7.0 `GetLength` 64-Bit-Integer-Typen unterstützt. Zuvor kann vorhandener Code, der durch diese neuere Version der Bibliothek erstellt Abschneiden Warnungen führen.  
@@ -530,7 +530,7 @@ BOOL IsArchived() const;
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Anwendungen kennzeichnen eine Archivdatei, die gesichert oder entfernt werden, mit FILE_ATTRIBUTE_ARCHIVE, ein Dateiattribut-identifiziert wird die [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur.  
+ Anwendungen kennzeichnen eine Archivdatei, die gesichert oder entfernt werden, mit FILE_ATTRIBUTE_ARCHIVE, ein Dateiattribut-identifiziert wird die [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) Struktur.  
   
  Rufen Sie [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf `IsArchived`.  
   
@@ -550,7 +550,7 @@ BOOL IsCompressed() const;
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Eine komprimierte Datei mit FILE_ATTRIBUTE_COMPRESSED markiert ist, die ein Dateiattribut identifiziert werden, der [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur. Bei einer Datei gibt dieses Attribut an, dass alle Daten in der Datei komprimiert wird. Für ein Verzeichnis gibt dieses Attribut an, dass die Komprimierung der Standardwert für neu erstellte Dateien und Unterverzeichnisse ist.  
+ Eine komprimierte Datei mit FILE_ATTRIBUTE_COMPRESSED markiert ist, die ein Dateiattribut identifiziert werden, der [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) Struktur. Bei einer Datei gibt dieses Attribut an, dass alle Daten in der Datei komprimiert wird. Für ein Verzeichnis gibt dieses Attribut an, dass die Komprimierung der Standardwert für neu erstellte Dateien und Unterverzeichnisse ist.  
   
  Rufen Sie [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf `IsCompressed`.  
   
@@ -570,7 +570,7 @@ BOOL IsDirectory() const;
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Eine Datei, die ein Verzeichnis ist mit FILE_ATTRIBUTE_DIRECTORY ein Dateiattribut-identifiziert markiert die [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur.  
+ Eine Datei, die ein Verzeichnis ist mit FILE_ATTRIBUTE_DIRECTORY ein Dateiattribut-identifiziert markiert die [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) Struktur.  
   
  Rufen Sie [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf `IsDirectory`.  
   
@@ -608,7 +608,7 @@ BOOL IsHidden() const;
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Ausgeblendete Dateien, die mit FILE_ATTRIBUTE_HIDDEN gekennzeichnet sind, ein Dateiattribut identifiziert, der [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur. Eine versteckte Datei ist nicht in einer normalen Verzeichnisliste enthalten.  
+ Ausgeblendete Dateien, die mit FILE_ATTRIBUTE_HIDDEN gekennzeichnet sind, ein Dateiattribut identifiziert, der [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) Struktur. Eine versteckte Datei ist nicht in einer normalen Verzeichnisliste enthalten.  
   
  Rufen Sie [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf `IsHidden`.  
   
@@ -628,7 +628,7 @@ BOOL IsNormal() const;
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Dateien mit FILE_ATTRIBUTE_NORMAL markiert ein Dateiattribut identifiziert, der [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur. Eine normale Datei verfügt über keine anderen Attribute festgelegt. Alle anderen Dateiattribute Überschreiben dieses Attribut.  
+ Dateien mit FILE_ATTRIBUTE_NORMAL markiert ein Dateiattribut identifiziert, der [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) Struktur. Eine normale Datei verfügt über keine anderen Attribute festgelegt. Alle anderen Dateiattribute Überschreiben dieses Attribut.  
   
  Rufen Sie [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf `IsNormal`.  
   
@@ -648,7 +648,7 @@ BOOL IsReadOnly() const;
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Eine schreibgeschützte Datei mit FILE_ATTRIBUTE_READONLY markiert ist, die ein Dateiattribut identifiziert werden, der [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur. Anwendungen können eine solche Datei lesen, aber nicht in ihn schreiben oder löschen.  
+ Eine schreibgeschützte Datei mit FILE_ATTRIBUTE_READONLY markiert ist, die ein Dateiattribut identifiziert werden, der [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) Struktur. Anwendungen können eine solche Datei lesen, aber nicht in ihn schreiben oder löschen.  
   
  Rufen Sie [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf `IsReadOnly`.  
   
@@ -668,7 +668,7 @@ BOOL IsSystem() const;
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Eine Systemdatei mit FILE_ATTRIBUTE_SYSTEM markiert ist, wird ein Dateiattribut identifiziert, der [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur. Eine Systemdatei ist Teil, oder Sie wird ausschließlich durch das Betriebssystem verwendet.  
+ Eine Systemdatei mit FILE_ATTRIBUTE_SYSTEM markiert ist, wird ein Dateiattribut identifiziert, der [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) Struktur. Eine Systemdatei ist Teil, oder Sie wird ausschließlich durch das Betriebssystem verwendet.  
   
  Rufen Sie [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf `IsSystem`.  
   
@@ -688,7 +688,7 @@ BOOL IsTemporary() const;
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Eine temporäre Datei mit FILE_ATTRIBUTE_TEMPORARY markiert ist, die ein Dateiattribut identifiziert werden, der [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur. Eine temporäre Datei wird für die temporäre Speicherung verwendet. Anwendungen sollten in die Datei schreiben, der nur, wenn es unbedingt erforderlich ist. Die meisten der die Daten der Datei verbleibt im Arbeitsspeicher, ohne auf die Medien geleert werden, da die Datei wird bald gelöscht werden.  
+ Eine temporäre Datei mit FILE_ATTRIBUTE_TEMPORARY markiert ist, die ein Dateiattribut identifiziert werden, der [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) Struktur. Eine temporäre Datei wird für die temporäre Speicherung verwendet. Anwendungen sollten in die Datei schreiben, der nur, wenn es unbedingt erforderlich ist. Die meisten der die Daten der Datei verbleibt im Arbeitsspeicher, ohne auf die Medien geleert werden, da die Datei wird bald gelöscht werden.  
   
  Rufen Sie [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf `IsTemporary`.  
   
@@ -715,7 +715,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
   
 ### <a name="parameters"></a>Parameter  
  *dwMask*  
- Gibt an, eine oder mehrere Dateiattribute in identifiziert die [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) -Struktur, für die gefundene Datei. Um für mehrere Attribute zu suchen, verwenden Sie bitweise OR (&#124;) Operator. Es ist eine beliebige Kombination der folgenden Attribute zulässig:  
+ Gibt an, eine oder mehrere Dateiattribute in identifiziert die [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) -Struktur, für die gefundene Datei. Um für mehrere Attribute zu suchen, verwenden Sie bitweise OR (&#124;) Operator. Es ist eine beliebige Kombination der folgenden Attribute zulässig:  
   
 -   FILE_ATTRIBUTE_ARCHIVE die Datei ist eine Archivdatei. Anwendungen verwenden Sie dieses Attribut zum Markieren von Dateien für die Sicherung oder zum Entfernen.  
   
@@ -734,7 +734,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 -   FILE_ATTRIBUTE_TEMPORARY die Datei wird für die temporäre Speicherung verwendet. Anwendungen sollten in die Datei schreiben, der nur, wenn es unbedingt erforderlich ist. Die meisten der die Daten der Datei verbleibt im Arbeitsspeicher, ohne auf die Medien geleert werden, da die Datei wird bald gelöscht werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Um erweiterte Fehlerinformationen abzurufen, rufen Sie die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Um erweiterte Fehlerinformationen abzurufen, rufen Sie die Win32-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf `MatchesMask`.  

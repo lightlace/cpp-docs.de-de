@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f6fb0cc519b7c03b84122b24e23e4ea9b49bc71
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 09cc987b583bdddd78604f75bd07bc9e2743a1dc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880702"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206640"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl-Klasse
 Diese Klasse stellt Methoden zum Erstellen ein modales oder nicht modales Dialogfeld an.  
@@ -102,7 +102,7 @@ template <class T,
 |Erstellen von Steuerelementen|[ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md)|  
 |Mithilfe der Dialogfelder in ATL|[ATL-Fensterklassen](../../atl/atl-window-classes.md)|  
 |ATL-Projekt-Assistent|[Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md)|  
-|Dialogfelder|[Dialogfelder](http://msdn.microsoft.com/library/windows/desktop/ms632588) und weiteren Themen im Windows SDK|  
+|Dialogfelder|[Dialogfelder](https://msdn.microsoft.com/library/windows/desktop/ms632588) und weiteren Themen im Windows SDK|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden  
@@ -126,7 +126,7 @@ HWND Create(
  [in] Das Handle für das besitzende Fenster.  
   
  **RECT &** *Rect*  
- [in] Ein [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die Größe und Position des Dialogfelds angibt.  
+ [in] Ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die Größe und Position des Dialogfelds angibt.  
   
  *dwInitParam*  
  [in] Gibt den Wert zu übergeben, um das Dialogfeld in der *lParam* -Parameter der WM_INITDIALOG-Meldung.  
@@ -199,7 +199,7 @@ INT_PTR DoModal(
   
 ### <a name="parameters"></a>Parameter  
  *hWndParent*  
- [in] Das Handle für das besitzende Fenster. Der Standardwert ist der Rückgabewert von der [GetActiveWindow](http://msdn.microsoft.com/library/windows/desktop/ms646292) Win32-Funktion.  
+ [in] Das Handle für das besitzende Fenster. Der Standardwert ist der Rückgabewert von der [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) Win32-Funktion.  
   
  *dwInitParam*  
  [in] Gibt den Wert zu übergeben, um das Dialogfeld in der *lParam* -Parameter der WM_INITDIALOG-Meldung.  

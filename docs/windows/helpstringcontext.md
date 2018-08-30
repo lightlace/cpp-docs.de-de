@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 34aed4325d2e946f59a4f17275d6b0aabe4de06c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 49fada071661bd647e012bfdfac2aeedabba68fa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589972"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206601"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -43,7 +43,7 @@ Eine 32-Bit-Hilfekontextbezeichner in die **Hilfe** Datei.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Helpstringcontext** C++-Attribut hat die gleiche Funktionalität wie die [Helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL-Attribut.
+Die **Helpstringcontext** C++-Attribut hat die gleiche Funktionalität wie die [Helpstringcontext](/windows/desktop/Midl/helpstringcontext) ODL-Attribut.
 
 ## <a name="example"></a>Beispiel
 

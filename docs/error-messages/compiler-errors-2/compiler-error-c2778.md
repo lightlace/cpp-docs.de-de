@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2778 generiert | Microsoft Docs
+title: Compilerfehler C2778 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f8747c0f2d0434f034ac0a0b84dcce510de0e96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d68180e2fc0c7c33e742f0ffdb3776baa50976f6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235090"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209712"
 ---
-# <a name="compiler-error-c2778"></a>Compiler-Fehler C2778 generiert
-falsch formatierte GUID im __declspec(uuid())  
+# <a name="compiler-error-c2778"></a>Compilerfehler C2778
+nicht ordnungsgemäß formatierte GUID in __declspec(UUID()) falsch formatiert  
   
- Eine falsche GUID angegeben wird, um die [Uuid](../../cpp/uuid-cpp.md) erweiterten Attribute.  
+ Eine falsche GUID angegeben wird, um die [Uuid](../../cpp/uuid-cpp.md) erweitertes Attribut.  
   
- Die GUID muss eine Zeichenfolge von Hexadezimalzahlen, die mit dem folgenden Format:  
+ Die GUID muss es sich um eine Zeichenfolge aus hexadezimalen Zahlen mit dem folgenden Format sein:  
   
 ```  
 // C2778a.cpp  
@@ -37,9 +37,9 @@ struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
 struct __declspec(uuid("{00000000-0000-0000-0000-000000000000}")) B{};  
 ```  
   
- Die `uuid` erweitertes Attribut akzeptiert die Zeichenfolgen, die vom erkannt [CLSIDFromString](http://msdn.microsoft.com/library/windows/desktop/ms680589)mit oder ohne Klammertrennzeichen.  
+ Die `uuid` erweitertes Attribut akzeptiert von [CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring)mit oder ohne Klammern eingeschlossen.  
   
- Im folgende Beispiel wird C2778 generiert:  
+ Im folgende Beispiel wird die C2778 generiert:  
   
 ```  
 // C2778b.cpp  

@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49e07fd632459e1d668d0201c821065bfaeea72c
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e4bdae31c3a2f84dd959baf49fae7e43a6cc9eb0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571597"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206396"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -93,7 +93,7 @@ Stapelgröße für einen neuen Thread oder 0.
 Argumentliste, die an einem neuen Thread übergeben werden oder **NULL**.
 
 *Sicherheit*<br/>
-Zeiger auf eine [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) -Struktur, die bestimmt, ob das zurückgegebene Handle von untergeordneten Prozessen geerbt werden kann. Wenn *Sicherheit* ist **NULL**, das Handle nicht geerbt werden. Muss **NULL** für Windows 95-Anwendungen.
+Zeiger auf eine [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) -Struktur, die bestimmt, ob das zurückgegebene Handle von untergeordneten Prozessen geerbt werden kann. Wenn *Sicherheit* ist **NULL**, das Handle nicht geerbt werden. Muss **NULL** für Windows 95-Anwendungen.
 
 *initflag*<br/>
 Flags, die den anfänglichen Zustand eines neuen Threads steuern. Legen Sie *Initflag* um 0 sofort ausgeführt oder **CREATE_SUSPENDED** um den Thread in einem angehaltenen Zustand zu erstellen verwenden [ResumeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-resumethread) um den Thread auszuführen. Legen Sie *Initflag* zu **STACK_SIZE_PARAM_IS_A_RESERVATION** Flag mit *Stack_size* wie der ursprüngliche Größe des Stapels in Byte zu reservieren, ist dieses Flag nicht angegeben ist, *Stack_size* gibt an, die Commitgröße.
@@ -131,7 +131,7 @@ Es ist sicherer, verwenden Sie **_beginthreadex** als **_beginthread**. Wenn der
 
 Rufen Sie [_endthread](endthread-endthreadex.md) oder **_endthreadex** explizit auf einen Thread zu beenden. allerdings **_endthread** oder **_endthreadex** aufgerufen wird automatisch bei der Thread von der Routine zurück, der als Parameter übergeben wird. Beenden eines Threads durch einen Aufruf von **_endthread** oder **_endthreadex** sichergestellt korrekte Wiederherstellung der Ressourcen, die für den Thread zugewiesen werden.
 
-**_endthread** schließt das Threadhandle automatisch, während **_endthreadex** nicht. Aus diesem Grund bei Verwendung von **_beginthread** und **_endthread**, explizit schließen Sie nicht das Threadhandle durch Aufrufen der Win32- ["CloseHandle"](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API. Dieses Verhalten unterscheidet sich von dem der [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) -Win32-API.
+**_endthread** schließt das Threadhandle automatisch, während **_endthreadex** nicht. Aus diesem Grund bei Verwendung von **_beginthread** und **_endthread**, explizit schließen Sie nicht das Threadhandle durch Aufrufen der Win32- ["CloseHandle"](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API. Dieses Verhalten unterscheidet sich von dem der [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) -Win32-API.
 
 > [!NOTE]
 > Für eine mit "LIBCMT.lib" verknüpfte ausführbare Datei, rufen Sie nicht die Win32 **ExitThread** API, damit Sie das Laufzeitsystem Freigabe zu verhindern, dass keine zugeordneten Ressourcen. **_endthread** und **_endthreadex** zugeordnete Threadressourcen, und rufen dann **ExitThread**.
@@ -335,4 +335,4 @@ Counter should be 1000000; it is-> 1000000
 - [_endthread, _endthreadex](endthread-endthreadex.md)
 - [abort](abort.md)
 - [exit, _Exit, _exit](exit-exit-exit.md)
-- [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)
+- [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)

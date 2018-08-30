@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f31d5d04638685b6d7636f40108b7e95bbd5d37
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 301549e26212448ae0392a356aa556358dcf6f47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338824"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205462"
 ---
 # <a name="cevent-class"></a>CEvent-Klasse
 Stellt ein Ereignis, d.h. ein Synchronisierungsobjekt, das es einem Thread ermöglicht anderen darüber zu benachrichtigen, die ein Ereignis aufgetreten ist.  
@@ -113,7 +113,7 @@ CEvent(
  Name des `CEvent`-Objekts. Muss angegeben werden, wenn das Objekt über Prozessgrenzen hinweg verwendet werden soll. Der Name ein vorhandenes Ereignisses übereinstimmt, der Konstruktor erstellt ein neues `CEvent` Objekt, das das Ereignis mit diesem Namen verweist. Wenn der Name einer vorhandenen Synchronisierungsobjekt, die nicht auf ein Ereignis ist übereinstimmt, schlägt die Erstellung fehl. Wenn der Wert NULL ist, wird der Name null sein.  
   
  *lpsaAttribute*  
- Von Sicherheitsattributen für das Ereignisobjekt. Eine vollständige Beschreibung dieser Struktur finden Sie unter [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) im Windows SDK.  
+ Von Sicherheitsattributen für das Ereignisobjekt. Eine vollständige Beschreibung dieser Struktur finden Sie unter [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) im Windows SDK.  
   
 ### <a name="remarks"></a>Hinweise  
  Zum Zugreifen auf oder release eine `CEvent` Objekt, das Erstellen einer [CMultiLock](../../mfc/reference/cmultilock-class.md) oder [CSingleLock](../../mfc/reference/csinglelock-class.md) Objekt, und rufen die [Sperre](../../mfc/reference/csinglelock-class.md#lock) und [Unlock](../../mfc/reference/csinglelock-class.md#unlock) Member-Funktionen.  
@@ -121,7 +121,7 @@ CEvent(
  So ändern Sie den Status des eine `CEvent` auf die Signalisierung (Threads müssen nicht warten), rufen Sie [SetEvent](#setevent) oder [PulseEvent](#pulseevent). Zum Festlegen des Status von einem `CEvent` Objekt, das "nicht signalisiert" (Threads müssen warten), rufen Sie [ResetEvent](#resetevent).  
   
 > [!IMPORTANT]
->  Nach dem Erstellen der `CEvent` -Objekts [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) um sicherzustellen, dass das Mutex nicht vorhanden. Wenn der Mutex unerwartet vorhanden war, kann dies bedeuten, ein nicht autorisierten Prozess ist squatting und möglicherweise beabsichtigt Mutex in böswilliger Absicht verwendet werden. Die empfohlene Vorgehensweise für sicherheitsorientierten werden in diesem Fall das Handle geschlossen und fortgesetzt, als wäre der Fehler beim Erstellen des Objekts.  
+>  Nach dem Erstellen der `CEvent` -Objekts [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) um sicherzustellen, dass das Mutex nicht vorhanden. Wenn der Mutex unerwartet vorhanden war, kann dies bedeuten, ein nicht autorisierten Prozess ist squatting und möglicherweise beabsichtigt Mutex in böswilliger Absicht verwendet werden. Die empfohlene Vorgehensweise für sicherheitsorientierten werden in diesem Fall das Handle geschlossen und fortgesetzt, als wäre der Fehler beim Erstellen des Objekts.  
   
 ##  <a name="pulseevent"></a>  CEvent::PulseEvent  
  Legt den Zustand des Ereignisses auf signalisiert (verfügbar), alle wartenden Threads frei und damit "nicht signalisiert" (nicht verfügbar) automatisch zurückgesetzt.  
@@ -138,7 +138,7 @@ BOOL PulseEvent();
   
  Wenn keine Threads warten, oder keine Threads können, sofort freigegeben werden `PulseEvent` legt den Zustand des Ereignisses auf "nicht signalisiert" und gibt.  
   
- `PulseEvent` verwendet die zugrunde liegende Win32 `PulseEvent` -Funktion, die von einem asynchronen im Kernelmodus-Prozeduraufruf vorübergehend vom Zustand "Warten" entfernt werden kann. Aus diesem Grund `PulseEvent` nicht zuverlässig ist und nicht durch neue Anwendungen verwendet werden soll. Weitere Informationen finden Sie unter den [PulseEvent Funktion](http://msdn.microsoft.com/library/windows/desktop/ms684914).  
+ `PulseEvent` verwendet die zugrunde liegende Win32 `PulseEvent` -Funktion, die von einem asynchronen im Kernelmodus-Prozeduraufruf vorübergehend vom Zustand "Warten" entfernt werden kann. Aus diesem Grund `PulseEvent` nicht zuverlässig ist und nicht durch neue Anwendungen verwendet werden soll. Weitere Informationen finden Sie unter den [PulseEvent Funktion](/windows/desktop/api/winbase/nf-winbase-pulseevent).  
   
 ##  <a name="resetevent"></a>  CEvent::ResetEvent  
  Legt den Zustand des Ereignisses, das "nicht signalisiert", bis explizit durch auf signalisiert festgelegt, die [SetEvent](#setevent) Member-Funktion.  

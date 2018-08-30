@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17a6d1e618dc9345266cb3c0d618fda1c4f78c44
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b3a80cf072a4f95885ef0bc9a0b28a385fde085f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339461"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206082"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog-Klasse
 Wird verwendet, um Dialogfelder zu erstellen, verwenden HTML, statt der Dialogfeldressourcen ihre Benutzeroberfläche zu implementieren.  
@@ -171,7 +171,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |[CDHtmlDialog::GetControlProperty](#getcontrolproperty)|Ruft die angeforderte Eigenschaft des angegebenen ActiveX-Steuerelements ab.|  
 |[CDHtmlDialog::GetCurrentUrl](#getcurrenturl)|Ruft den Uniform Resource Locator (URL), die das aktuelle Dokument zugeordnet ist.|  
 |[CDHtmlDialog::GetDHtmlDocument](#getdhtmldocument)|Ruft die IHTMLDocument2-Schnittstelle für das derzeit geladene HTML-Dokument ab.|  
-|[CDHtmlDialog::GetDropTarget](#getdroptarget)|Vom WebBrowser-Steuerelement enthaltene aufgerufen wird, wenn es um das Dialogfeld eines alternativen zu ermöglichen als Drop-Ziel verwendet wird [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679).|  
+|[CDHtmlDialog::GetDropTarget](#getdroptarget)|Vom WebBrowser-Steuerelement enthaltene aufgerufen wird, wenn es um das Dialogfeld eines alternativen zu ermöglichen als Drop-Ziel verwendet wird [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).|  
 |[CDHtmlDialog::GetElement](#getelement)|Ruft eine Schnittstelle für ein HTML-Element ab.|  
 |[CDHtmlDialog::GetElementHtml](#getelementhtml)|Ruft die `innerHTML` Eigenschaft eines HTML-Elements.|  
 |[CDHtmlDialog::GetElementInterface](#getelementinterface)|Ruft den angeforderten Schnittstellenzeiger aus einem HTML-Element ab.|  
@@ -678,7 +678,7 @@ HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
  Ein standard-HRESULT. Gibt S_OK zurück, wenn erfolgreich.  
   
 ##  <a name="getdroptarget"></a>  CDHtmlDialog::GetDropTarget  
- Vom WebBrowser-Steuerelement enthaltene aufgerufen wird, wenn es um das Dialogfeld eines alternativen zu ermöglichen als Drop-Ziel verwendet wird [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679).  
+ Vom WebBrowser-Steuerelement enthaltene aufgerufen wird, wenn es um das Dialogfeld eines alternativen zu ermöglichen als Drop-Ziel verwendet wird [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).  
   
 ```  
 STDMETHOD(GetDropTarget)(

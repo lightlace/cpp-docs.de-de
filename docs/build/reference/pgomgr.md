@@ -1,5 +1,5 @@
 ---
-title: Pgomgr | Microsoft Docs
+title: "\"pgomgr\" | Microsoft-Dokumentation"
 ms.custom: ''
 ms.date: 03/14/2018
 ms.technology:
@@ -15,16 +15,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bf7567cfe9f21effda913606ca3af9a19464f9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70a0615debabb056110dd9d6f7a6aac86e9d464a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377205"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198314"
 ---
 # <a name="pgomgr"></a>pgomgr
 
-Die PGD-Datei hinzugefügt Profildaten aus einer oder mehreren PGC-Dateien.
+Die .pgd-Datei hinzugefügt Profildaten von einer oder mehreren PGC-Dateien.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,24 +33,24 @@ Die PGD-Datei hinzugefügt Profildaten aus einer oder mehreren PGC-Dateien.
 ### <a name="parameters"></a>Parameter
 
 *Optionen*<br/>
-Die folgenden Optionen können angegeben werden, um **Pgomgr**:
+Die folgenden Optionen können angegeben werden, um **"pgomgr"**:
 
-- **/ help** oder **/?** Zeigt die verfügbare **Pgomgr** Optionen.
+- **/ help** oder **/?** Zeigt die verfügbare **"pgomgr"** Optionen.
 
-- **/ clear** bewirkt, dass die PGD-Datei aller Profilinformationen gelöscht werden. Sie können eine PGC nicht angeben Datei wann **/clear** angegeben ist.
+- **/ clear** bewirkt, dass die PGD-Datei aller Profilinformationen gelöscht werden sollen. Sie nicht angeben, dass eine PGC-Datei beim **/clear** angegeben ist.
 
-- **/ detail** zeigt detaillierte Statistiken, einschließlich Informationen zum Ausführungsfluss Graph Coverage.
+- **/ detail** zeigt detaillierte Statistiken, einschließlich eines Diagramms Abdeckungsinformationen.
 
 - **/ summary** zeigt pro Funktion Statistiken.
 
-- **/ eindeutige** bei Verwendung mit **/summary**, ergänzte Funktionsnamen angezeigt. Die Standardeinstellung, wenn **/ eindeutige** nicht verwendet wird, wird für nicht ergänzten Funktionsnamen angezeigt werden.
+- **/ unique** bei Verwendung mit **/summary**, ergänzte Funktionsnamen anzeigen. Der Standardwert, wenn **/ eindeutige** nicht verwendet wird, wird für nicht ergänzte Funktionsnamen, die angezeigt werden.
 
-- **/ merge**[**: *** n*] bewirkt, dass die Daten in der PGC-Datei oder die Dateien die PGD-Datei hinzugefügt werden. Der optionale Parameter *n*, können Sie angeben, dass die Daten hinzugefügt werden sollen *n* Zeiten. Beispielsweise wäre ein Szenario häufig "Fertig" ändert sechs Mal widerspiegeln, wie oft von Kunden erfolgt, Sie können dafür in einem Testlauf einmal und sechs Mal mit der PGD-Datei hinzugefügt **Pgomgr/Merge: 6**.
+- **/ merge**\[**:**<em>n</em>] führt dazu, dass die Daten in der PGC-Datei oder Dateien, die die PGD-Datei hinzugefügt werden. Der optionale Parameter *n*, können Sie angeben, dass die Daten hinzugefügt werden sollen *n* Zeiten. Z. B. wenn ein Szenario im Allgemeinen fertig sechs Mal ist um widerzuspiegeln, wie oft dies durch den Kunden erfolgt, Sie können sie nur einmal in einem Testlauf und Hinzufügen der PGD-Datei mit sechsmal **"pgomgr" / Merge: 6**.
 
 *pgcfiles*<br/>
-Eine oder mehrere PGC-Dateien, deren Profil für Daten in die PGD-Datei zusammengeführt werden sollen. Sie können eine einzelne PGC-Datei oder mehrere PGC-Dateien angeben. Wenn Sie keine PGC-Dateien angeben **Pgomgr** alle PGC-Dateien, deren Dateinamen identisch mit der PGD-Datei sind, zusammengeführt.
+Eine oder mehrere PGC-Dateien, deren Profildaten in die PGD-Datei zusammengeführt werden sollen. Sie können eine einzelne PGC-Datei oder mehrere PGC-Dateien angeben. Wenn Sie keine PGC-Dateien, angeben **"pgomgr"** alle PGC-Dateien, deren Dateinamen identisch mit der PGD-Datei sind, zusammengeführt.
 
-*Pgdfile* die PGD-Datei, in dem Sie Daten aus dem PGC-Datei oder Dateien zusammengeführt werden.
+*Pgdfile* die PGD-Datei, in dem Sie Daten aus der PGC-Datei oder Dateien zusammengeführt werden.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -59,15 +59,15 @@ Eine oder mehrere PGC-Dateien, deren Profil für Daten in die PGD-Datei zusammen
 
 ## <a name="example"></a>Beispiel
 
-Mit diesem Beispielbefehl werden die Datei myapp.pgd von Profildaten gelöscht:
+Dieser Befehl im Beispiel wird die Datei myapp.pgd von Profildaten gelöscht:
 
 `pgomgr /clear myapp.pgd`
 
-Mit diesem Beispielbefehl hinzugefügt Profildaten in myapp1.pgc die PGD-Datei dreimal:
+Dieser Beispielbefehl hinzugefügt Profildaten in myapp1.pgc die PGD-Datei drei Mal:
 
 `pgomgr /merge:3 myapp1.pgc myapp.pgd`
 
-In diesem Beispiel werden die Datei myapp.pgd Profildaten aus allen "MyApp" # .pgc-Dateien hinzugefügt.
+In diesem Beispiel werden der Datei myapp.pgd Profildaten aus allen Myapp # .pgc-Dateien hinzugefügt.
 
 `pgomgr -merge myapp1.pgd`
 

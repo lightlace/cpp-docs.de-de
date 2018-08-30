@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 359a7ff75b2036960d8d8ffd40200f9175ccc21c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c0fbc3914f10bacdd286fe89c3e82de78b726cfc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960699"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216860"
 ---
 # <a name="coledatetime-class"></a>COleDateTime-Klasse
 Kapselt die `DATE` -Datentyp, der in der OLE-Automatisierung verwendet wird.  
@@ -74,7 +74,7 @@ class COleDateTime
 |----------|-----------------|  
 |[COleDateTime::Format](#format)|Generiert eine formatierte Zeichenfolgendarstellung einer `COleDateTime` Objekt.|  
 |[COleDateTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|Rufen Sie diese Methode zum Abrufen der Zeit in die `COleDateTime` als Objekt ein `DBTIMESTAMP` Datenstruktur.|  
-|[COleDateTime::GetAsSystemTime](#getassystemtime)|Rufen Sie diese Methode zum Abrufen der Zeit in die `COleDateTime` als Objekt ein [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Datenstruktur.|  
+|[COleDateTime::GetAsSystemTime](#getassystemtime)|Rufen Sie diese Methode zum Abrufen der Zeit in die `COleDateTime` als Objekt ein [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Datenstruktur.|  
 |[COleDateTime::GetAsUDATE](#getasudate)|Rufen Sie diese Methode zum Abrufen der Zeit in die `COleDateTime` als eine `UDATE` Datenstruktur.|  
 |[COleDateTime::GetCurrentTime](#getcurrenttime)|Erstellt eine `COleDateTime` -Objekt, das die aktuelle Uhrzeit (statische Memberfunktion) darstellt.|  
 |[COleDateTime::GetDay](#getday)|Gibt den Tag dies `COleDateTime` Objekt darstellt (1-31).|  
@@ -217,7 +217,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
  Ein `SYSTEMTIME` Struktur in einen Datum/Uhrzeit-Wert konvertiert werden, und kopiert in das neue `COleDateTime` Objekt.  
   
  *filetimeSrc*  
- Ein `FILETIME` Struktur in einen Datum/Uhrzeit-Wert konvertiert werden, und kopiert in das neue `COleDateTime` Objekt. Beachten Sie, dass `FILETIME` verwendet die koordinierte Weltzeit (UTC), also wenn Sie eine lokale Zeit in der Struktur übergeben, die Ergebnisse nicht korrekt. Finden Sie unter [Dateizeitangaben](http://msdn.microsoft.com/library/windows/desktop/ms724290) im Windows SDK für Weitere Informationen.  
+ Ein `FILETIME` Struktur in einen Datum/Uhrzeit-Wert konvertiert werden, und kopiert in das neue `COleDateTime` Objekt. Beachten Sie, dass `FILETIME` verwendet die koordinierte Weltzeit (UTC), also wenn Sie eine lokale Zeit in der Struktur übergeben, die Ergebnisse nicht korrekt. Finden Sie unter [Dateizeitangaben](/windows/desktop/SysInfo/file-times) im Windows SDK für Weitere Informationen.  
   
  *nYear*, *nMonth*, *NChronoplan Midi*, *Nuhrzeitangabe*, *nmin*, *nSec*  
  Geben Sie Werte für Datum und Uhrzeit in die neue kopiert werden `COleDateTime` Objekt.  
@@ -256,7 +256,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
   
 - `COleDateTime(` *SystimeSrc* **)** erstellt eine `COleDateTime` -Objekt aus einem `SYSTEMTIME` Wert.  
   
-- `COleDateTime(` `filetimeSrc` **)** Erstellt eine `COleDateTime` -Objekt aus einem `FILETIME` Wert. sein. Beachten Sie, dass `FILETIME` verwendet die koordinierte Weltzeit (UTC), also wenn Sie eine lokale Zeit in der Struktur übergeben, die Ergebnisse nicht korrekt. Finden Sie unter [Dateizeitangaben](http://msdn.microsoft.com/library/windows/desktop/ms724290) im Windows SDK für Weitere Informationen.  
+- `COleDateTime(` `filetimeSrc` **)** Erstellt eine `COleDateTime` -Objekt aus einem `FILETIME` Wert. sein. Beachten Sie, dass `FILETIME` verwendet die koordinierte Weltzeit (UTC), also wenn Sie eine lokale Zeit in der Struktur übergeben, die Ergebnisse nicht korrekt. Finden Sie unter [Dateizeitangaben](/windows/desktop/SysInfo/file-times) im Windows SDK für Weitere Informationen.  
   
 - `COleDateTime(` `nYear``nMonth`, `nDay`, `nHour`, `nMin`, `nSec` **)** Erstellt eine `COleDateTime` Objekt aus der angegebenen numerischen Werte.  
   
@@ -264,7 +264,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
   
  Weitere Informationen zu den `time_t` -Datentyp, finden Sie die [Zeit](../../c-runtime-library/reference/time-time32-time64.md) Funktion in der *Run-Time Library Reference*.  
   
- Weitere Informationen finden Sie unter den [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) und [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) Strukturen im Windows SDK.  
+ Weitere Informationen finden Sie unter den [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) und [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) Strukturen im Windows SDK.  
   
  Weitere Informationen über die Grenzen für `COleDateTime` Werte finden Sie im Artikel [Datum und Uhrzeit: Automatisierungsunterstützung](../../atl-mfc-shared/date-and-time-automation-support.md).  
   
@@ -294,7 +294,7 @@ CString Format(UINT nFormatID) const;
 - VAR_DATEVALUEONLY ignorieren den Time-Teil, bei der Analyse.  
   
  *lcid*  
- Gibt die Gebietsschema-ID, für die Konvertierung verwendet. Weitere Informationen zu Sprachen-IDs finden Sie unter [Sprachen-IDs](http://msdn.microsoft.com/library/windows/desktop/dd318691).  
+ Gibt die Gebietsschema-ID, für die Konvertierung verwendet. Weitere Informationen zu Sprachen-IDs finden Sie unter [Sprachen-IDs](/windows/desktop/Intl/language-identifiers).  
   
  *lpszFormat*  
  Eine Formatierungszeichenfolge ähnelt der `printf` Formatierungszeichenfolge. Jede Formatieren von Code, der Prozentsatz vorangestellt ( `%`) anmelden, wird mit den entsprechenden ersetzt `COleDateTime` Komponente. Andere Zeichen in der Formatierungszeichenfolge werden auf die zurückgegebene Zeichenfolge unverändert kopiert. Finden Sie unter der Run-Time-Funktion [Strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für Weitere Informationen. Der Wert und die Bedeutung der Formatierungscodes für `Format` sind:  
@@ -359,7 +359,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
   
 ### <a name="parameters"></a>Parameter  
  *sysTime*  
- Ein Verweis auf eine [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur zum Empfangen der konvertierte Datums-/Uhrzeitwert aus der `COleDateTime` Objekt.  
+ Ein Verweis auf eine [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur zum Empfangen der konvertierte Datums-/Uhrzeitwert aus der `COleDateTime` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt true zurück, wenn erfolgreich; "False", wenn die Konvertierung schlägt fehl, oder wenn die `COleDateTime` Objekt ist NULL oder ungültig.  
@@ -772,17 +772,17 @@ COleDateTime& operator=(const UDATE& udate) throw();
   
 - **Operator = (** `timeSrc` **)** der `time_t` oder `__time64_t` Wert konvertiert und in diese kopiert `COleDateTime` Objekt. Wenn die Konvertierung erfolgreich ist, wird der Status des Objekts gültig auf festgelegt. Wenn dies nicht gelingt, sie festgelegt ist, ungültig.  
   
-- **Operator = (** *SystimeSrc* **)** der [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Wert konvertiert und in diese kopiert `COleDateTime` Objekt. Wenn die Konvertierung erfolgreich ist, wird der Status des Objekts gültig auf festgelegt. Wenn dies nicht gelingt, sie festgelegt ist, ungültig.  
+- **Operator = (** *SystimeSrc* **)** der [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Wert konvertiert und in diese kopiert `COleDateTime` Objekt. Wenn die Konvertierung erfolgreich ist, wird der Status des Objekts gültig auf festgelegt. Wenn dies nicht gelingt, sie festgelegt ist, ungültig.  
   
 - **Operator = (** `udate` **)** der `UDATE` Wert konvertiert und in diese kopiert `COleDateTime` Objekt. Wenn die Konvertierung erfolgreich ist, wird der Status des Objekts gültig auf festgelegt. Wenn dies nicht gelingt, sie festgelegt ist, ungültig. Ein `UDATE` -Struktur stellt ein "lose" Datum dar. Finden Sie unter der Funktion [VarDateFromUdate](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate) Weitere Details.  
   
-- **Operator = (** `filetimeSrc` **)** der [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) Wert konvertiert und in diese kopiert `COleDateTime` Objekt. Wenn die Konvertierung erfolgreich ist, wird der Status des Objekts gültig auf festgelegt. andernfalls als ungültig. `FILETIME` Koordinierte Weltzeit (UTC) verwendet, wenn Sie eine UTC-Zeit in der Struktur übergeben, die Ergebnisse von UTC-Zeit in die Ortszeit konvertiert und als variant-Zeit gespeichert werden. Dieses Verhalten ist der gleiche wie in Visual C++ 6.0 und Visual C++ .NET 2003 Service Pack 2. Finden Sie unter [Dateizeitangaben](http://msdn.microsoft.com/library/windows/desktop/ms724290) im Windows SDK für Weitere Informationen.  
+- **Operator = (** `filetimeSrc` **)** der [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) Wert konvertiert und in diese kopiert `COleDateTime` Objekt. Wenn die Konvertierung erfolgreich ist, wird der Status des Objekts gültig auf festgelegt. andernfalls als ungültig. `FILETIME` Koordinierte Weltzeit (UTC) verwendet, wenn Sie eine UTC-Zeit in der Struktur übergeben, die Ergebnisse von UTC-Zeit in die Ortszeit konvertiert und als variant-Zeit gespeichert werden. Dieses Verhalten ist der gleiche wie in Visual C++ 6.0 und Visual C++ .NET 2003 Service Pack 2. Finden Sie unter [Dateizeitangaben](/windows/desktop/SysInfo/file-times) im Windows SDK für Weitere Informationen.  
   
  Weitere Informationen finden Sie unter den [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Eintrag in das Windows SDK.  
   
  Weitere Informationen zu den `time_t` -Datentyp, finden Sie die [Zeit](../../c-runtime-library/reference/time-time32-time64.md) Funktion in der *Run-Time Library Reference*.  
   
- Weitere Informationen finden Sie unter den [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) und [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) Strukturen im Windows SDK.  
+ Weitere Informationen finden Sie unter den [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) und [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) Strukturen im Windows SDK.  
   
  Weitere Informationen über die Grenzen für `COleDateTime` Werte finden Sie im Artikel [Datum und Uhrzeit: Automatisierungsunterstützung](../../atl-mfc-shared/date-and-time-automation-support.md).  
   

@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67e4c1755a4d7e5da451305260d4f88ac2c938bf
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e9932f8814855213f133323f2102e0cacf1e69c8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027887"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196710"
 ---
 # <a name="cbutton-class"></a>CButton-Klasse
 Stellt die Funktionalität von Windows-Schaltflächensteuerelementen bereit.  
@@ -360,7 +360,7 @@ BOOL GetIdealSize(SIZE* psize);
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion emuliert die Funktionen der Nachricht BCM_GETIDEALSIZE aus, unter dem [Schaltflächen](http://msdn.microsoft.com/library/windows/desktop/bb775943) Abschnitt des Windows SDK.  
+ Diese Memberfunktion emuliert die Funktionen der Nachricht BCM_GETIDEALSIZE aus, unter dem [Schaltflächen](https://msdn.microsoft.com/library/windows/desktop/bb775943) Abschnitt des Windows SDK.  
   
 ##  <a name="getimagelist"></a>  CButton::GetImageList  
  Rufen Sie diese Methode, um die Liste der Bilder aus dem Schaltflächen-Steuerelement zu erhalten.  
@@ -377,7 +377,7 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion emuliert die Funktionen der Nachricht BCM_GETIMAGELIST aus, unter dem [Schaltflächen](http://msdn.microsoft.com/library/windows/desktop/bb775943) Abschnitt des Windows SDK.  
+ Diese Memberfunktion emuliert die Funktionen der Nachricht BCM_GETIMAGELIST aus, unter dem [Schaltflächen](https://msdn.microsoft.com/library/windows/desktop/bb775943) Abschnitt des Windows SDK.  
   
 ##  <a name="getnote"></a>  CButton::GetNote  
  Ruft den dem aktuellen Befehl Link-Steuerelement zugeordnete Notiztext ab.  
@@ -407,7 +407,7 @@ BOOL GetNote(
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode nur mit Steuerelementen, deren Schaltflächen-Formatvorlage BS_COMMANDLINK oder BS_DEFCOMMANDLINK ist.  
   
- Diese Methode sendet die [BCM_GETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775965) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [BCM_GETNOTE](/windows/desktop/Controls/bcm-getnote) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="getnotelength"></a>  CButton::GetNoteLength  
  Ruft die Länge des Texts Hinweis für den aktuellen Befehl Link-Steuerelement ab.  
@@ -422,7 +422,7 @@ UINT GetNoteLength() const;
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode nur mit Steuerelementen, deren Schaltflächen-Formatvorlage BS_COMMANDLINK oder BS_DEFCOMMANDLINK ist.  
   
- Diese Methode sendet die [BCM_GETNOTELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb775967) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [BCM_GETNOTELENGTH](/windows/desktop/Controls/bcm-getnotelength) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="getsplitglyph"></a>  CButton::GetSplitGlyph  
  Ruft ab, das das aktuelle SplitButton-Steuerelement zugeordnete Symbol.  
@@ -439,7 +439,7 @@ TCHAR GetSplitGlyph() const;
   
  Verwenden Sie diese Methode nur mit Steuerelementen, deren Schaltflächen-Formatvorlage BS_SPLITBUTTON oder BS_DEFSPLITBUTTON ist.  
   
- Diese Methode initialisiert die `mask` Mitglied einer [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur mit dem BCSIF_GLYPH-Flag, und klicken Sie dann gesendet, die in der Struktur der [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, das beschrieben ist die Windows SDK. Wenn die Nachricht-Funktion zurückgibt, wird diese Methode ruft das Symbol aus der `himlGlyph` Member der Struktur.  
+ Diese Methode initialisiert die `mask` Mitglied einer [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) Struktur mit dem BCSIF_GLYPH-Flag, und klicken Sie dann gesendet, die in der Struktur der [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) Nachricht, das beschrieben ist die Windows SDK. Wenn die Nachricht-Funktion zurückgibt, wird diese Methode ruft das Symbol aus der `himlGlyph` Member der Struktur.  
   
 ##  <a name="getsplitimagelist"></a>  CButton::GetSplitImageList  
  Ruft die [Bildliste](../../mfc/reference/cimagelist-class.md) für das aktuelle SplitButton-Steuerelement.  
@@ -454,7 +454,7 @@ CImageList* GetSplitImageList() const;
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode nur mit Steuerelementen, deren Schaltflächen-Formatvorlage BS_SPLITBUTTON oder BS_DEFSPLITBUTTON ist.  
   
- Diese Methode initialisiert die `mask` Mitglied einer [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur mit dem BCSIF_IMAGE-Flag, und klicken Sie dann gesendet, die in der Struktur der [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, das beschrieben ist die Windows SDK. Wenn die Nachricht-Funktion zurückgibt, diese Methode ruft die Liste der Bilder aus ab der `himlGlyph` Member der Struktur.  
+ Diese Methode initialisiert die `mask` Mitglied einer [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) Struktur mit dem BCSIF_IMAGE-Flag, und klicken Sie dann gesendet, die in der Struktur der [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) Nachricht, das beschrieben ist die Windows SDK. Wenn die Nachricht-Funktion zurückgibt, diese Methode ruft die Liste der Bilder aus ab der `himlGlyph` Member der Struktur.  
   
 ##  <a name="getsplitinfo"></a>  CButton::GetSplitInfo  
  Ruft ab die Parameter, die bestimmen, wie das aktuelle SplitButton-Steuerelement von Windows zieht.  
@@ -467,7 +467,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] *"pInfo"*|Zeiger auf eine [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) -Struktur, die Informationen über das aktuelle SplitButton-Steuerelement empfängt. Der Aufrufer ist verantwortlich für die Zuordnung von der Struktur.|  
+|[out] *"pInfo"*|Zeiger auf eine [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) -Struktur, die Informationen über das aktuelle SplitButton-Steuerelement empfängt. Der Aufrufer ist verantwortlich für die Zuordnung von der Struktur.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -475,7 +475,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode nur mit Steuerelementen, deren Schaltflächen-Formatvorlage BS_SPLITBUTTON oder BS_DEFSPLITBUTTON ist.  
   
- Diese Methode sendet die [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="getsplitsize"></a>  CButton::GetSplitSize  
  Ruft das umschließende Rechteck der Dropdown-Komponente des die aktuelle SplitButton-Steuerelement ab.  
@@ -488,7 +488,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] *pSize*|Zeiger auf eine [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) -Struktur, die Beschreibung eines Rechtecks empfängt.|  
+|[out] *pSize*|Zeiger auf eine [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) -Struktur, die Beschreibung eines Rechtecks empfängt.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -498,7 +498,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
  Wenn das SplitButton-Steuerelement erweitert ist, können sie eine Dropdown-Komponente, z. B. ein Listensteuerelement oder Pager-Steuerelement anzeigen. Diese Methode ruft das umschließende Rechteck, das Dropdown-Komponente enthält.  
   
- Diese Methode initialisiert die `mask` Mitglied einer [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur mit dem BCSIF_SIZE-Flag, und klicken Sie dann gesendet, die in der Struktur der [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, das beschrieben ist die Windows SDK. Wenn die Nachricht-Funktion zurückgibt, ruft diese Methode das umschließende Rechteck von der `size` Member der Struktur.  
+ Diese Methode initialisiert die `mask` Mitglied einer [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) Struktur mit dem BCSIF_SIZE-Flag, und klicken Sie dann gesendet, die in der Struktur der [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) Nachricht, das beschrieben ist die Windows SDK. Wenn die Nachricht-Funktion zurückgibt, ruft diese Methode das umschließende Rechteck von der `size` Member der Struktur.  
   
 ##  <a name="getsplitstyle"></a>  CButton::GetSplitStyle  
  Ruft ab, der Split-Button-Stile, die das aktuelle SplitButton-Steuerelement zu definieren.  
@@ -508,14 +508,14 @@ UINT GetSplitStyle() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Eine bitweise Kombination der Split-Button-Stile. Weitere Informationen finden Sie unter den `uSplitStyle` Mitglied der [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur.  
+ Eine bitweise Kombination der Split-Button-Stile. Weitere Informationen finden Sie unter den `uSplitStyle` Mitglied der [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode nur mit Steuerelementen, deren Schaltflächen-Formatvorlage BS_SPLITBUTTON oder BS_DEFSPLITBUTTON ist.  
   
  Der Split-Button-Stile Geben Sie die Ausrichtung, Seitenverhältnis und grafischen Format mit dem Windows ein Split-Schaltflächensymbol zeichnet.  
   
- Diese Methode initialisiert die `mask` Mitglied einer [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur mit dem BCSIF_STYLE-Flag, und klicken Sie dann gesendet, die in der Struktur der [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, das beschrieben ist die Windows SDK. Wenn die Nachricht-Funktion zurückgibt, wird diese Methode ruft die Split-Button-Stile in die `uSplitStyle` Member der Struktur.  
+ Diese Methode initialisiert die `mask` Mitglied einer [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) Struktur mit dem BCSIF_STYLE-Flag, und klicken Sie dann gesendet, die in der Struktur der [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) Nachricht, das beschrieben ist die Windows SDK. Wenn die Nachricht-Funktion zurückgibt, wird diese Methode ruft die Split-Button-Stile in die `uSplitStyle` Member der Struktur.  
   
 ##  <a name="getstate"></a>  CButton::GetState  
  Ruft den Zustand eines Schaltflächen-Steuerelements ab.  
@@ -559,7 +559,7 @@ BOOL GetTextMargin(RECT* pmargin);
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion emuliert die Funktionen der Nachricht BCM_GETTEXTMARGIN aus, unter dem [Schaltflächen](http://msdn.microsoft.com/library/windows/desktop/bb775943) Abschnitt des Windows SDK.  
+ Diese Memberfunktion emuliert die Funktionen der Nachricht BCM_GETTEXTMARGIN aus, unter dem [Schaltflächen](https://msdn.microsoft.com/library/windows/desktop/bb775943) Abschnitt des Windows SDK.  
   
 ##  <a name="setbitmap"></a>  CButton:: SetBitmap  
  Rufen Sie diese Memberfunktion, um eine neue Bitmap mit der Schaltfläche zu verknüpfen.  
@@ -693,9 +693,9 @@ BOOL SetDropDownState(BOOL fDropDown);
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Ein Trennschaltflächen-Steuerelement verfügt über einen Stil BS_SPLITBUTTON oder BS_DEFSPLITBUTTON und besteht aus einer Schaltfläche und ein Dropdown-Pfeil rechts davon. Weitere Informationen finden Sie unter [Button-Stile](http://msdn.microsoft.com/library/windows/desktop/bb775951). In der Regel wird der Status für die Dropdown-festgelegt, wenn der Benutzer auf den Dropdown-Pfeil klickt. Verwenden Sie diese Methode zum programmgesteuerten Festlegen der Dropdown-Zustands des Steuerelements. Die Dropdown-Pfeil gezeichnet wird schattiert, um den Status anzugeben.  
+ Ein Trennschaltflächen-Steuerelement verfügt über einen Stil BS_SPLITBUTTON oder BS_DEFSPLITBUTTON und besteht aus einer Schaltfläche und ein Dropdown-Pfeil rechts davon. Weitere Informationen finden Sie unter [Button-Stile](/windows/desktop/Controls/button-styles). In der Regel wird der Status für die Dropdown-festgelegt, wenn der Benutzer auf den Dropdown-Pfeil klickt. Verwenden Sie diese Methode zum programmgesteuerten Festlegen der Dropdown-Zustands des Steuerelements. Die Dropdown-Pfeil gezeichnet wird schattiert, um den Status anzugeben.  
   
- Diese Methode sendet die [BCM_SETDROPDOWNSTATE](http://msdn.microsoft.com/library/windows/desktop/bb775973) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [BCM_SETDROPDOWNSTATE](/windows/desktop/Controls/bcm-setdropdownstate) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable *M_splitButton*, d. h. verwendet, um das SplitButton-Steuerelement programmgesteuert zugreifen. Diese Variable wird im folgenden Beispiel verwendet.  
@@ -726,7 +726,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 ### <a name="remarks"></a>Hinweise  
  Wenn eine Schaltfläche oder Link-Steuerelement mit erhöhter Sicherheitsberechtigung zum Ausführen einer Aktion erforderlich ist, legen Sie das Steuerelement auf `elevation required` Zustand. Anschließend zeigt Windows das Shield-Symbol (User Account Control, UAC) auf dem Steuerelement. Weitere Informationen finden Sie unter "User Account Control" [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507).  
   
- Diese Methode sendet die [BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [BCM_SETSHIELD](/windows/desktop/Controls/bcm-setshield) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="seticon"></a>  CButton::SetIcon  
  Rufen Sie diese Memberfunktion, um ein neues Symbol mit der Schaltfläche zu verknüpfen.  
@@ -777,7 +777,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
  Gibt "true" bei Erfolg bei "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion emuliert die Funktionen der Nachricht BCM_SETIMAGELIST aus, unter dem [Schaltflächen](http://msdn.microsoft.com/library/windows/desktop/bb775943) Abschnitt des Windows SDK.  
+ Diese Memberfunktion emuliert die Funktionen der Nachricht BCM_SETIMAGELIST aus, unter dem [Schaltflächen](https://msdn.microsoft.com/library/windows/desktop/bb775943) Abschnitt des Windows SDK.  
   
 ##  <a name="setnote"></a>  CButton::SetNote  
  Legt den Text der Hinweis für den aktuellen Befehl Link-Steuerelement.  
@@ -798,7 +798,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode nur mit Steuerelementen, deren Schaltflächen-Formatvorlage BS_COMMANDLINK oder BS_DEFCOMMANDLINK ist.  
   
- Diese Methode sendet die [BCM_SETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775977) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [BCM_SETNOTE](/windows/desktop/Controls/bcm-setnote) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable *M_cmdLink*, d. h. verwendet, um die befehlslinksteuerelement programmgesteuert zugreifen. Diese Variable wird im folgenden Beispiel verwendet.  
@@ -831,7 +831,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
  Ein Symbol ist die physikalische Darstellung eines Zeichens in einer bestimmten Schriftart an. Die *ChGlyph* Parameter wird nicht als die Glyphe verwendet, jedoch wird eine Reihe von systemdefinierte Symbolen ein Symbol aus. Das standardmäßige Dropdown-Pfeil-Symbol wird angegeben, durch das Zeichen '6' und das Unicode-Zeichen Schwarz nach unten ZEIGENDEN DREIECK (U + 25BC) ähnelt.  
   
- Diese Methode initialisiert die `mask` Mitglied einer [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur mit dem Kennzeichen BCSIF_GLYPH und die `himlGlyph` Member mit der *ChGlyph* -Parameter und sendet dann diese Struktur, die der [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode initialisiert die `mask` Mitglied einer [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) Struktur mit dem Kennzeichen BCSIF_GLYPH und die `himlGlyph` Member mit der *ChGlyph* -Parameter und sendet dann diese Struktur, die der [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="setsplitimagelist"></a>  CButton::SetSplitImageList  
  Ordnet eine [Bildliste](../../mfc/reference/cimagelist-class.md) mit der aktuellen SplitButton-Steuerelement.  
@@ -852,7 +852,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode nur mit Steuerelementen, deren Schaltflächen-Formatvorlage BS_SPLITBUTTON oder BS_DEFSPLITBUTTON ist.  
   
- Diese Methode initialisiert die `mask` Mitglied einer [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur mit dem Kennzeichen BCSIF_IMAGE und `himlGlyph` Member mit der *pSplitImageList* -Parameter, und anschließendes senden Diese Struktur in der [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode initialisiert die `mask` Mitglied einer [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) Struktur mit dem Kennzeichen BCSIF_IMAGE und `himlGlyph` Member mit der *pSplitImageList* -Parameter, und anschließendes senden Diese Struktur in der [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="setsplitinfo"></a>  CButton::SetSplitInfo  
  Gibt Parameter an, die bestimmen, wie das aktuelle SplitButton-Steuerelement von Windows zieht.  
@@ -865,7 +865,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *"pInfo"*|Zeiger auf eine [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur, die das aktuelle SplitButton-Steuerelement definiert.|  
+|[in] *"pInfo"*|Zeiger auf eine [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) Struktur, die das aktuelle SplitButton-Steuerelement definiert.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -873,7 +873,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode nur mit Steuerelementen, deren Schaltflächen-Formatvorlage BS_SPLITBUTTON oder BS_DEFSPLITBUTTON ist.  
   
- Diese Methode sendet die [BCM_SETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775981) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [BCM_SETSPLITINFO](/windows/desktop/Controls/bcm-setsplitinfo) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable `m_splitButton`, d. h. verwendet, um das SplitButton-Steuerelement programmgesteuert zugreifen.  
@@ -896,7 +896,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *pSize*|Zeiger auf eine [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur, die ein umschließendes Rechteck beschreibt.|  
+|[in] *pSize*|Zeiger auf eine [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur, die ein umschließendes Rechteck beschreibt.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -906,7 +906,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
  Wenn das SplitButton-Steuerelement erweitert ist, können sie eine Dropdown-Komponente, z. B. ein Listensteuerelement oder Pager-Steuerelement anzeigen. Diese Methode gibt die Größe des umschließenden Rechtecks, das Dropdown-Komponente enthält.  
   
- Diese Methode initialisiert die `mask` Mitglied einer [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur mit dem Kennzeichen BCSIF_SIZE und `size` Member mit der *pSize* -Parameter, und anschließendes senden, die Struktur in der [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode initialisiert die `mask` Mitglied einer [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) Struktur mit dem Kennzeichen BCSIF_SIZE und `size` Member mit der *pSize* -Parameter, und anschließendes senden, die Struktur in der [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable `m_splitButton`, d. h. verwendet, um das SplitButton-Steuerelement programmgesteuert zugreifen. Diese Variable wird im folgenden Beispiel verwendet.  
@@ -929,7 +929,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *uSplitStyle*|Eine bitweise Kombination der Split-Button-Stile. Weitere Informationen finden Sie unter den `uSplitStyle` Mitglied der [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur.|  
+|[in] *uSplitStyle*|Eine bitweise Kombination der Split-Button-Stile. Weitere Informationen finden Sie unter den `uSplitStyle` Mitglied der [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) Struktur.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -937,9 +937,9 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode nur mit Steuerelementen, deren Schaltflächen-Formatvorlage BS_SPLITBUTTON oder BS_DEFSPLITBUTTON ist.  
   
- Der Split-Button-Stile Geben Sie die Ausrichtung, Seitenverhältnis und grafischen Format mit dem Windows ein Split-Schaltflächensymbol zeichnet. Weitere Informationen finden Sie unter den `uSplitStyle` Mitglied der [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur.  
+ Der Split-Button-Stile Geben Sie die Ausrichtung, Seitenverhältnis und grafischen Format mit dem Windows ein Split-Schaltflächensymbol zeichnet. Weitere Informationen finden Sie unter den `uSplitStyle` Mitglied der [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) Struktur.  
   
- Diese Methode initialisiert die `mask` Mitglied einer [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur mit dem Kennzeichen BCSIF_STYLE und die `uSplitStyle` Member mit der *uSplitStyle* -Parameter und sendet dann diese Struktur, die der [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode initialisiert die `mask` Mitglied einer [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) Struktur mit dem Kennzeichen BCSIF_STYLE und die `uSplitStyle` Member mit der *uSplitStyle* -Parameter und sendet dann diese Struktur, die der [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable `m_splitButton`, d. h. verwendet, um das SplitButton-Steuerelement programmgesteuert zugreifen.  
@@ -985,7 +985,7 @@ BOOL SetTextMargin(RECT* pmargin);
  Gibt "true" bei Erfolg bei "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion emuliert die Funktionen der Nachricht BCM_SETTEXTMARGIN aus, unter dem [Schaltflächen](http://msdn.microsoft.com/library/windows/desktop/bb775943) Abschnitt des Windows SDK.  
+ Diese Memberfunktion emuliert die Funktionen der Nachricht BCM_SETTEXTMARGIN aus, unter dem [Schaltflächen](https://msdn.microsoft.com/library/windows/desktop/bb775943) Abschnitt des Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CWnd-Klasse](../../mfc/reference/cwnd-class.md)   

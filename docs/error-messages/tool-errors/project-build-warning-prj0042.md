@@ -1,7 +1,7 @@
 ---
-title: Projektbuildwarnung prj0042 | Microsoft Docs
+title: Projektbuildwarnung PRJ0042 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c0465b160615af96da8f489bbde63684598cffc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 260da8ac336c640ea875610b2c62e6c42c7d335e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316828"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211349"
 ---
 # <a name="project-build-warning-prj0042"></a>Projektbuildwarnung PRJ0042
-**Die Outputs-Eigenschaft für den benutzerdefinierten Buildschritt für die Datei"**   
- ***Datei* "ist nicht festgelegt. Der benutzerdefinierte Buildschritt wird übersprungen.**  
-  
- Ein benutzerdefinierten Buildschritt wurde nicht ausgeführt werden, da keine Ausgabe angegeben wurde.  
-  
- Um diesen Fehler zu beheben, führen Sie eine der folgenden:  
-  
--   Schließen Sie den benutzerdefinierten Buildschritt aus dem Build.  
-  
--   Fügen Sie eine Ausgabe hinzu.  
-  
--   Löschen Sie den Inhalt der benutzerdefinierte Buildschritt-Befehl.
+
+> Die 'Outputs-Eigenschaft für den benutzerdefinierten Buildschritt für die Datei"*Datei*' ist nicht festgelegt. Der benutzerdefinierte Buildschritt wird übersprungen.
+
+Ein benutzerdefinierter Buildschritt wurde nicht ausgeführt werden, da keine Ausgabe angegeben wurde.
+
+Um diesen Fehler zu beheben, führen Sie eine der folgenden:
+
+- Schließen Sie den benutzerdefinierten Buildschritt aus dem Build.
+
+- Fügen Sie eine Ausgabe hinzu.
+
+- Löschen Sie den Inhalt des Befehls für den benutzerdefinierten Buildschritt an.

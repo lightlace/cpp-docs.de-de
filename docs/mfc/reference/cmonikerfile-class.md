@@ -28,15 +28,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 296e288f017373563b867b02ad26f25ec6bc6227
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b3aab8fe3dac8cb58884861a83e41d09b493a375
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853646"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212116"
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile-Klasse
-Stellt einen Datenstrom ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) mit dem Namen durch ein [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
+Stellt einen Datenstrom ( [IStream](/windows/desktop/api/objidl/nn-objidl-istream)) mit dem Namen durch ein [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -74,7 +74,7 @@ class CMonikerFile : public COleStreamFile
   
  `CMonikerFile` kann nicht zum Binden an etwas anderes als ein Datenstrom verwendet werden. Wenn Sie an Speicher oder ein Objekt zu binden möchten, müssen Sie verwenden die `IMoniker` -Schnittstelle direkt.  
   
- Weitere Informationen zu Streams und den Moniker, finden Sie unter [COleStreamFile](../../mfc/reference/colestreamfile-class.md) in die *MFC-Referenz* und [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) und [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705) in der Windows SDK.  
+ Weitere Informationen zu Streams und den Moniker, finden Sie unter [COleStreamFile](../../mfc/reference/colestreamfile-class.md) in die *MFC-Referenz* und [IStream](/windows/desktop/api/objidl/nn-objidl-istream) und [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker) in der Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -117,7 +117,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
  Ein Zeiger auf eine Ausnahme für die Datei. Im Falle eines Fehlers wird es auf die Ursache festgelegt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf den Bindungskontext [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) mit gebunden werden soll, wenn erfolgreich; andernfalls NULL. Wenn Sie mit die Instanz geöffnet wurde ein `IBindHost` -Schnittstelle, aus dem Bindungskontext abgerufen wird die `IBindHost`. Es ist keine `IBindHost` Schnittstelle oder ein Fehler auftritt, um einen Bindungskontext zurückzugeben, einen Bindungskontext wird erstellt. Eine Beschreibung der [IBindHost](http://msdn.microsoft.com/library/ie/ms775076) Schnittstelle, finden Sie im Windows SDK.  
+ Ein Zeiger auf den Bindungskontext [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) mit gebunden werden soll, wenn erfolgreich; andernfalls NULL. Wenn Sie mit die Instanz geöffnet wurde ein `IBindHost` -Schnittstelle, aus dem Bindungskontext abgerufen wird die `IBindHost`. Es ist keine `IBindHost` Schnittstelle oder ein Fehler auftritt, um einen Bindungskontext zurückzugeben, einen Bindungskontext wird erstellt. Eine Beschreibung der [IBindHost](https://msdn.microsoft.com/library/ie/ms775076) Schnittstelle, finden Sie im Windows SDK.  
   
 ### <a name="remarks"></a>Hinweise  
  Ein Bindungskontext ist ein Objekt, das Informationen zu einem bestimmten Monikerbindungsvorgang gespeichert werden. Sie können dieser Funktion können Sie einen benutzerdefinierte Bindungskontext bereitzustellen, überschreiben.  
@@ -144,10 +144,10 @@ IMoniker* GetMoniker() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf den aktuellen Moniker-Schnittstelle ( [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)).  
+ Ein Zeiger auf den aktuellen Moniker-Schnittstelle ( [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)).  
   
 ### <a name="remarks"></a>Hinweise  
- Da `CMonikerFile` ist keine Schnittstelle, der zurückgegebene Zeiger nicht inkrementiert den Verweiszähler (über ["AddRef"](http://msdn.microsoft.com/library/windows/desktop/ms691379)), und der Moniker wird freigegeben. wenn die `CMonikerFile` Objekt freigegeben wird. Wenn Sie nicht auf den Moniker oder selbst freigeben möchten, müssen Sie `AddRef` es.  
+ Da `CMonikerFile` ist keine Schnittstelle, der zurückgegebene Zeiger nicht inkrementiert den Verweiszähler (über ["AddRef"](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)), und der Moniker wird freigegeben. wenn die `CMonikerFile` Objekt freigegeben wird. Wenn Sie nicht auf den Moniker oder selbst freigeben möchten, müssen Sie `AddRef` es.  
   
 ##  <a name="open"></a>  CMonikerFile::Open  
  Rufen Sie diese Memberfunktion zum Öffnen einer Datei oder Moniker-Objekts.  

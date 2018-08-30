@@ -1,7 +1,7 @@
 ---
-title: 'Ressourcencompiler: Schwerwiegender Fehler RC1101 | Microsoft Docs'
+title: 'Ressourcencompiler: Schwerwiegender Fehler RC1101 | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef8024ebb2058e9bce2a3b911ead23ca1c131a13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a989184af03de460c006606c40d82e59c50fd924
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320826"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214222"
 ---
 # <a name="resource-compiler-fatal-error-rc1101"></a>Ressourcencompiler: Schwerwiegender Fehler RC1101
-keine binäre Ressource-Dateiname angegeben  
-  
- Umbenennen der Ausgabe (/ fo) Option folgte ein Dateiname.  
-  
- Verwenden Sie die folgende Syntax für die/Fo-Option:  
-  
- **RC/Fo**   
- ***Ausgabedateiname Infilename.*  rc**
+
+> kein Name für die Binärdatei angegeben
+
+Umbenennen der Ausgabe (/ fo) Option wurde nicht, gefolgt vom Dateinamen.
+
+Verwenden Sie die folgende Syntax für die/Fo-Option:
+
+> **RC/Fo** *Ausgabedateiname* <em>Infilename</em>**RC**

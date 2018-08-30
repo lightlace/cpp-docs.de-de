@@ -1,7 +1,7 @@
 ---
-title: Projektbuildfehler prj0035 | Microsoft Docs
+title: Projektbuildfehler prj0035 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52d4726cd6fc8091225532b2cfda33c6115c673a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd36604763e28fc3f228adec27d0c3775a327d66
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321859"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213024"
 ---
 # <a name="project-build-error-prj0035"></a>Projektbuildfehler PRJ0035
-XML-Datei "File" enthält die Unicode-Inhalte, die nicht in ANSI-Codepage des Benutzers übersetzt werden konnte.  
-  
- ***Unicode-Inhalt der Datei***  
-  
- ***Datei*** ist die XML-Datei als die Befehlszeile für das Web Deploy-Tool erstellt.  
-  
- Das Projektsystem hat Unicode-Zeichen in eine bestimmte Eigenschaft gefunden, auf der Seite der Web Deploy-Eigenschaft, die ordnungsgemäß für ANSI übersetzt werden kann.  
-  
- Die Auflösung für diesen Fehler besteht darin, aktualisieren den Inhalt der Eigenschaft für die von ANSI verwenden oder die Codepage auf dem Computer installieren und als dem als Standard festgelegt.
+
+> XML-Datei "*Datei*" enthält Unicodeinhalt, der nicht in ANSI-Codepage des Benutzers übersetzt werden konnte.
+>
+> *Unicode-Inhalt der Datei*
+
+*Datei* ist die XML-Datei, die als die Befehlszeile für das Web Deployment Tool erstellt.
+
+Das Projektsystem hat Unicode-Zeichen in eine Eigenschaft gefunden, auf der Eigenschaftenseite für Webbereitstellung, die nicht ordnungsgemäß für ANSI übersetzt werden kann.
+
+Die Auflösung für diesen Fehler ist, aktualisieren Sie den Inhalt der Eigenschaft mit ANSI oder zu installieren. die Codepage auf dem Computer als dem als Standard festgelegt.

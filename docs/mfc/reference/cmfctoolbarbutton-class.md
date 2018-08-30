@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c79c2260b03d0530595100ba8f4c42a392900aa7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: bb6cc740577dfcb5921332c24e3cec2d2d6cb100
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851378"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210849"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton-Klasse
 Stellt Schaltflächenfunktionalität auf Symbolleisten bereit.  
@@ -230,19 +230,19 @@ class CMFCToolBarButton : public CObject
 |[CMFCToolBarButton::IsOwnerOf](#isownerof)|Bestimmt, ob die Schaltfläche mit den Besitzer des das bereitgestellte Fensterhandle ist.|  
 |[CMFCToolBarButton::IsVisible](#isvisible)|Bestimmt, ob die Symbolleisten-Schaltfläche sichtbar ist.|  
 |[CMFCToolBarButton::IsWindowVisible](#iswindowvisible)|Bestimmt, ob das zugrunde liegende Fensterhandle der Schaltfläche angezeigt wird.|  
-|[CMFCToolBarButton::NotifyCommand](#notifycommand)|Gibt an, ob die Schaltfläche mit der verarbeitet die [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachricht.|  
+|[CMFCToolBarButton::NotifyCommand](#notifycommand)|Gibt an, ob die Schaltfläche mit der verarbeitet die [WM_COMMAND](/windows/desktop/menurc/wm-command) Nachricht.|  
 |[CMFCToolBarButton::OnAddToCustomizePage](#onaddtocustomizepage)|Vom Framework aufgerufen, wenn die Schaltfläche hinzugefügt wird eine **anpassen** Dialogfeld.|  
 |[CMFCToolBarButton::OnBeforeDrag](#onbeforedrag)|Gibt an, ob die Schaltfläche gezogen werden kann.|  
 |[CMFCToolBarButton::OnBeforeDrop](#onbeforedrop)|Gibt an, ob ein Benutzer die Schaltfläche auf der Symbolleiste des Ziels gelöscht werden kann.|  
 |[CMFCToolBarButton::OnCalculateSize](#oncalculatesize)|Wird aufgerufen, durch das Framework die Größe der Schaltfläche für den angegebenen Gerätekontext und Andockstatus berechnet.|  
-|[CMFCToolBarButton::OnCancelMode](#oncancelmode)|Wird aufgerufen, durch das Framework, behandeln die [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) Nachricht.|  
+|[CMFCToolBarButton::OnCancelMode](#oncancelmode)|Wird aufgerufen, durch das Framework, behandeln die [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) Nachricht.|  
 |[CMFCToolBarButton::OnChangeParentWnd](#onchangeparentwnd)|Vom Framework aufgerufen, wenn die Schaltfläche mit der in eine neue Symbolleiste eingefügt wird.|  
 |[CMFCToolBarButton::OnClick](#onclick)|Vom Framework aufgerufen, wenn der Benutzer die Maustaste klickt.|  
 |[CMFCToolBarButton::OnClickUp](#onclickup)|Vom Framework aufgerufen, wenn der Benutzer die Maustaste loslässt.|  
 |[CMFCToolBarButton::OnContextHelp](#oncontexthelp)|Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste eine WM_HELPHITTEST-Meldung verarbeitet.|  
 |[CMFCToolBarButton::OnCtlColor](#onctlcolor)|Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste WM_CTLCOLOR-Meldung verarbeitet.|  
 |[CMFCToolBarButton::OnCustomizeMenu](#oncustomizemenu)|Können die Schaltfläche, um das angegebene Menü geändert werden, wenn die Anwendung auf der Symbolleiste des übergeordneten wird ein Kontextmenü angezeigt.|  
-|[CMFCToolBarButton::OnDblClk](#ondblclk)|Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste verarbeitet eine [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) Nachricht.|  
+|[CMFCToolBarButton::OnDblClk](#ondblclk)|Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste verarbeitet eine [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) Nachricht.|  
 |[CMFCToolBarButton::OnDraw](#ondraw)|Wird aufgerufen, durch das Framework zum Zeichnen der Schaltfläche mit der angegebenen Formate und -Optionen.|  
 |[CMFCToolBarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Wird aufgerufen, durch das Framework zum Zeichnen der Schaltfläche der **Befehle** im Bereich der **anpassen** im Dialogfeld.|  
 |[CMFCToolBarButton::OnGetCustomToolTipText](#ongetcustomtooltiptext)|Wird aufgerufen, durch das Framework zum Abrufen des benutzerdefinierten QuickInfo-Texts für die Schaltfläche.|  
@@ -446,7 +446,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
  Legen Sie diesen Parameter auf "true" Enable-Eingabe, oder auf "false", um Eingaben zu deaktivieren.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode ruft die `EnableWindow` Funktion aktivieren oder deaktivieren die Eingabe. Weitere Informationen finden Sie unter [EnableWindow](http://msdn.microsoft.com/library/windows/desktop/ms646291) im Windows SDK.  
+ Diese Methode ruft die `EnableWindow` Funktion aktivieren oder deaktivieren die Eingabe. Weitere Informationen finden Sie unter [EnableWindow](https://msdn.microsoft.com/library/windows/desktop/ms646291) im Windows SDK.  
   
 ##  <a name="exporttomenubutton"></a>  CMFCToolBarButton::ExportToMenuButton  
  Kopiert den Text aus der Symbolleisten-Schaltfläche zu einem Menü.  
@@ -884,7 +884,7 @@ CString m_strText;
  Dieses Datenelement enthält die Beschriftung der Schaltfläche. Die textbezeichnung kann leer sein.  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarButton::NotifyCommand  
- Gibt an, ob die Schaltfläche mit der verarbeitet die [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachricht.  
+ Gibt an, ob die Schaltfläche mit der verarbeitet die [WM_COMMAND](/windows/desktop/menurc/wm-command) Nachricht.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
@@ -898,7 +898,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
  Diese Methode gibt FALSE zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Framework ruft diese Methode aus, wenn es zu senden ist ein [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachricht für das übergeordnete Fenster.  
+ Das Framework ruft diese Methode aus, wenn es zu senden ist ein [WM_COMMAND](/windows/desktop/menurc/wm-command) Nachricht für das übergeordnete Fenster.  
   
  Standardmäßig gibt diese Methode FALSE zurück. Überschreiben Sie diese Methode, um TRUE zurückgeben, wenn zu verarbeitende die WM_COMMAND-Meldung oder "false", um anzugeben, dass die Nachricht von die übergeordneten Symbolleiste verarbeitet werden soll.  
   
@@ -977,14 +977,14 @@ virtual SIZE OnCalculateSize(
  Überschreiben Sie diese Methode, wenn Sie die Größe einer nicht standardmäßigen Schaltfläche (z. B. eine Schaltfläche "Bearbeiten im Feld") bereitstellen möchten.  
   
 ##  <a name="oncancelmode"></a>  CMFCToolBarButton::OnCancelMode  
- Wird aufgerufen, durch das Framework, behandeln die [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) Nachricht.  
+ Wird aufgerufen, durch das Framework, behandeln die [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) Nachricht.  
   
 ```  
 virtual void OnCancelMode();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Standardimplementierung dieser Methode führt keine Aktion. Diese Methode überschreiben, wenn Sie behandeln möchten die [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) Nachricht.  
+ Die Standardimplementierung dieser Methode führt keine Aktion. Diese Methode überschreiben, wenn Sie behandeln möchten die [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) Nachricht.  
   
 ##  <a name="onchangeparentwnd"></a>  CMFCToolBarButton::OnChangeParentWnd  
  Vom Framework aufgerufen, wenn die Schaltfläche mit der in eine neue Symbolleiste eingefügt wird.  
@@ -1104,7 +1104,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
  Die Standardimplementierung führt keine Aktion aus und gibt FALSE zurück. Diese Methode überschreiben, und geben Sie einen Wert ungleich NULL zurück, wenn Sie den Inhalt des angegebenen Menüs ändern möchten.  
   
 ##  <a name="ondblclk"></a>  CMFCToolBarButton::OnDblClk  
- Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste verarbeitet eine [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) Nachricht.  
+ Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste verarbeitet eine [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) Nachricht.  
   
 ```  
 virtual void OnDblClk(CWnd* pWnd);
@@ -1115,7 +1115,7 @@ virtual void OnDblClk(CWnd* pWnd);
  -   Das übergeordnete Fenster der Schaltfläche.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode wird aufgerufen, indem die `CMFCToolBar::OnLButtonDblClk` Methode, wenn die übergeordneten Symbolleiste verarbeitet eine [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) Nachricht.  
+ Diese Methode wird aufgerufen, indem die `CMFCToolBar::OnLButtonDblClk` Methode, wenn die übergeordneten Symbolleiste verarbeitet eine [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) Nachricht.  
   
  Die Standardimplementierung dieser Methode führt keine Aktion.  
   

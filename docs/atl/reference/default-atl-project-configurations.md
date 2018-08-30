@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52f74ec15c6bc6d58f9f092a24faf66d0cef3740
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 0c6a7b077c66940f98ce37c0d4b07bbab3dfd9ae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026471"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201940"
 ---
 # <a name="default-atl-project-configurations"></a>Standardmäßige ATL-Projektkonfigurationen
 ATL-Projektassistenten erstellt zwei Projektkonfigurationen standardmäßig:  
@@ -35,6 +35,6 @@ ATL-Projektassistenten erstellt zwei Projektkonfigurationen standardmäßig:
 ## <a name="see-also"></a>Siehe auch  
  [Programmieren mit ATL- und C-Laufzeitcode](../../atl/programming-with-atl-and-c-run-time-code.md)   
  [Arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md)   
- [Configuration Manager (Dialogfeld)](http://msdn.microsoft.com/fa182dca-282e-4ae5-bf37-e155344ca18b)   
+ [Configuration Manager (Dialogfeld)](https://msdn.microsoft.com/fa182dca-282e-4ae5-bf37-e155344ca18b)   
  [Kompilieren und Erstellen](/visualstudio/ide/compiling-and-building-in-visual-studio)
 

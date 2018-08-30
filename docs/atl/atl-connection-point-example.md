@@ -1,5 +1,5 @@
 ---
-title: ATL-Connection Point Beispiel | Microsoft Docs
+title: Beispiel für ATL-Verbindungspunkt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a265d26e8733a7eb2982fb84e8d69ed621922d36
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3a35b1e40718c26eb094eddb420f885a37907071
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355180"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212593"
 ---
 # <a name="atl-connection-point-example"></a>Beispiel für ATL-Verbindungspunkt
-Dieses Beispiel zeigt ein Objekt, das unterstützt [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) als Ausgangsschnittstelle:  
+Dieses Beispiel zeigt ein Objekt, das unterstützt [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) als Ausgangsschnittstelle:  
   
  [!code-cpp[NVC_ATL_Windowing#84](../atl/codesnippet/cpp/atl-connection-point-example_1.h)]  
   
- Beim Angeben von `IPropertyNotifySink` als eine Ausgangsschnittstelle können Klasse [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) anstelle von `IConnectionPointImpl`. Zum Beispiel:  
+ Beim Angeben von `IPropertyNotifySink` als Ausgangsschnittstelle, können Sie Klasse [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) anstelle von `IConnectionPointImpl`. Zum Beispiel:  
   
  [!code-cpp[NVC_ATL_Windowing#85](../atl/codesnippet/cpp/atl-connection-point-example_2.h)]  
   

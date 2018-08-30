@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2f4a6962ee70882ba85a15ea213f7fe6ffe11f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3984ebc1568c831420e11bd7b3c9004dabcc316b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42544478"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222093"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo-Klasse
 Die `CMFCFontInfo` Klasse beschreibt die Namen und andere Attribute einer Schriftart.  
@@ -95,16 +95,16 @@ CMFCFontInfo(const CMFCFontInfo& src);
   
 ### <a name="parameters"></a>Parameter  
  [in] *Wert*  
- Der Name der Schriftart. Weitere Informationen finden Sie unter den `lfFaceName` Mitglied der ["LogFont"](http://msdn.microsoft.com/library/windows/desktop/dd145037) Struktur.  
+ Der Name der Schriftart. Weitere Informationen finden Sie unter den `lfFaceName` Mitglied der ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) Struktur.  
   
  [in] *LpszScript*  
  Der Name des Skripts (Zeichensatz) der Schriftart.  
   
  [in] *nCharSet*  
- Ein Wert, der den Zeichensatz (Skript) der Schriftart angibt. Weitere Informationen finden Sie unter den `lfCharSet` Mitglied der ["LogFont"](http://msdn.microsoft.com/library/windows/desktop/dd145037) Struktur.  
+ Ein Wert, der den Zeichensatz (Skript) der Schriftart angibt. Weitere Informationen finden Sie unter den `lfCharSet` Mitglied der ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) Struktur.  
   
  [in] *nPitchAndFamily*  
- Ein Wert, der die Schriftbreite und die Familie der Schriftart angibt. Weitere Informationen finden Sie unter den `lfPitchAndFamily` Mitglied der ["LogFont"](http://msdn.microsoft.com/library/windows/desktop/dd145037) Struktur.  
+ Ein Wert, der die Schriftbreite und die Familie der Schriftart angibt. Weitere Informationen finden Sie unter den `lfPitchAndFamily` Mitglied der ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) Struktur.  
   
  [in] *nType*  
  Ein Wert, der die Schriftart angibt. Dieser Parameter kann eine bitweise Kombination (OR) von DEVICE_FONTTYPE, RASTER_FONTTYPE, und TRUETYPE_FONTTYPE sein.  
@@ -115,7 +115,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="return-value"></a>Rückgabewert  
   
 ### <a name="remarks"></a>Hinweise  
- In dieser Dokumentation werden die Begriffe verwendet *Zeichensatz* und *Skript* Synonym verwenden lassen. Ein *Skript*, auch bekannt als ein Schriftsystem, d.h. ist eine Sammlung von Zeichen und Regeln für diese Zeichen in eine oder mehrere Sprachen schreiben. Die Auflistung von Zeichen enthält, die Alphabet und Satzzeichen im Skript verwendet. Lateinischer Schrift wird z. B. für Englisch verwendet, wie es in den Vereinigten Staaten gesprochen wird, und die Buchstaben, die Zeichen von A bis Z enthält. Die `lfCharSet` Mitglied der ["LogFont"](http://msdn.microsoft.com/library/windows/desktop/dd145037) Struktur gibt einen Zeichensatz an. Der Wert ANSI_CHARSET gibt beispielsweise die ANSI-Zeichensatz, der des lateinischen Alphabets enthält.  
+ In dieser Dokumentation werden die Begriffe verwendet *Zeichensatz* und *Skript* Synonym verwenden lassen. Ein *Skript*, auch bekannt als ein Schriftsystem, d.h. ist eine Sammlung von Zeichen und Regeln für diese Zeichen in eine oder mehrere Sprachen schreiben. Die Auflistung von Zeichen enthält, die Alphabet und Satzzeichen im Skript verwendet. Lateinischer Schrift wird z. B. für Englisch verwendet, wie es in den Vereinigten Staaten gesprochen wird, und die Buchstaben, die Zeichen von A bis Z enthält. Die `lfCharSet` Mitglied der ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) Struktur gibt einen Zeichensatz an. Der Wert ANSI_CHARSET gibt beispielsweise die ANSI-Zeichensatz, der des lateinischen Alphabets enthält.  
   
 ##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName  
  Ruft die verketteten Namen einer Schriftart und das Zeichen legen Sie (Skript).  

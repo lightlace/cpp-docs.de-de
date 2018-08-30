@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dbaa4631e50b14131418b902dd008e74060dbf6
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 94532b40bb44094290eab29a2b8a1f6095a225c5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881923"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221100"
 ---
 # <a name="ccomallocator-class"></a>CComAllocator-Klasse
 Diese Klasse stellt Methoden zum Verwalten von Speicher mithilfe von COM-Arbeitsspeicher-Routinen.  
@@ -67,7 +67,7 @@ static void* Allocate(size_t nBytes) throw();
  Gibt einen void-Zeiger auf den belegten Speicherplatz oder NULL zurück, wenn nicht genügend Speicher verfügbar ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Belegt Arbeitsspeicher. Finden Sie unter [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727) Weitere Details.  
+ Belegt Arbeitsspeicher. Finden Sie unter [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) Weitere Details.  
   
 ##  <a name="free"></a>  CComAllocator::Free  
  Rufen Sie diese statischen Funktion um zugeordneten Arbeitsspeicher freizugeben.  
@@ -81,7 +81,7 @@ static void Free(void* p) throw();
  Zeiger auf zugewiesenen Speicher.  
   
 ### <a name="remarks"></a>Hinweise  
- Gibt den zugeordneten Arbeitsspeicher frei. Finden Sie unter [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) Weitere Details.  
+ Gibt den zugeordneten Arbeitsspeicher frei. Finden Sie unter [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) Weitere Details.  
   
 ##  <a name="reallocate"></a>  CComAllocator::Reallocate  
  Rufen Sie diese statischen Funktion auf, um Arbeitsspeicher neu zuzuordnen.  
@@ -101,7 +101,7 @@ static void* Reallocate(void* p, size_t nBytes) throw();
  Gibt einen void-Zeiger auf den zugeordneten Speicherplatz oder NULL zurück, wenn nicht genügend Arbeitsspeicher  
   
 ### <a name="remarks"></a>Hinweise  
- Ändert die Größe des belegten Speichers. Finden Sie unter [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280) Weitere Details.  
+ Ändert die Größe des belegten Speichers. Finden Sie unter [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc) Weitere Details.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CComHeapPtr-Klasse](../../atl/reference/ccomheapptr-class.md)   

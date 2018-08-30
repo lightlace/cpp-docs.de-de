@@ -1,5 +1,5 @@
 ---
-title: Behandeln der TTN_NEEDTEXT-Benachrichtigung für QuickInfos | Microsoft Docs
+title: Behandeln der TTN_NEEDTEXT-Benachrichtigung für QuickInfos | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,37 +18,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5879082ddc23630e5ee497d8abf6b65873a2b6d4
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 65278571fabf24011960ad577461347f1dfebf73
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931963"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200517"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Behandeln der TTN_NEEDTEXT-Benachrichtigung für QuickInfos
-Im Rahmen des [von QuickInfos](../mfc/enabling-tool-tips.md), behandeln Sie das **TTN_NEEDTEXT** Nachricht, indem Sie den folgenden Eintrag meldungszuordnung Ihres Besitzerfensters hinzufügen:  
+Als Teil des [QuickInfos](../mfc/enabling-tool-tips.md), Sie behandeln die **TTN_NEEDTEXT** Nachricht, indem Sie den folgenden Eintrag zur meldungszuordnung Ihres Besitzerfensters hinzufügen:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_1.cpp)]  
   
  `memberFxn`  
- Die Memberfunktion aufgerufen werden, wenn diese Schaltfläche Text erforderlich ist.  
+ Die Memberfunktion aufgerufen werden, wenn der Text für diese Schaltfläche benötigt wird.  
   
- Beachten Sie, dass die ID einer QuickInfo immer 0.  
+ Beachten Sie, dass die ID der QuickInfo immer 0.  
   
  Deklarieren Sie die Handlerfunktion wird in der Klassendefinition wie folgt:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#53](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_2.h)]  
   
- wobei kursiv Parameter sind:  
+ die kursiv Parameter lauten:  
   
  `id`  
  Der Bezeichner des Steuerelements, das die Benachrichtigung gesendet. Nicht verwendet. Die Steuerelement-Id stammt aus dem **NMHDR** Struktur.  
   
  `pNMHDR`  
- Ein Zeiger auf die [NMTTDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760258) Struktur. Diese Struktur wird ebenfalls erläutert in weiteren [der TOOLTIPTEXT-Struktur](../mfc/tooltiptext-structure.md).  
+ Ein Zeiger auf die [NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa) Struktur. Diese Struktur wird ebenfalls erläutert. im weiteren [der TOOLTIPTEXT-Struktur](../mfc/tooltiptext-structure.md).  
   
  `pResult`  
- Ein Zeiger auf den Ergebniscode können Sie festlegen, bevor Sie zurückkehren. **TTN_NEEDTEXT** Handler können ignorieren die *pResult* Parameter.  
+ Ein Zeiger auf Ergebniscode können Sie festlegen, bevor Sie zurückkehren. **TTN_NEEDTEXT** Handler können ignorieren die *pResult* Parameter.  
   
  Als Beispiel für eine Formularansicht Benachrichtigungshandler:  
   

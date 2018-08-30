@@ -1,5 +1,5 @@
 ---
-title: Verwenden von CListCtrl | Microsoft Docs
+title: Verwenden von CListCtrl | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce28c5be7ff87d9ebad38d35bf19b7d182531ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 52ec0bcda66ec8f1a166351682b163a09ffb55d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382985"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210489"
 ---
 # <a name="using-clistctrl"></a>Verwenden von CListCtrl
-Verwenden Sie ein Listenfeld-Steuerelement, um eine Anordnung von Symbolen mit Bezeichnungen, wie in der Datei-Explorer oder spaltenweise Listen von Text mit oder ohne Symbole anzuzeigen. Eine Beschreibung der vier möglichen "Ansichten" (nicht zu verwechseln mit MFC-Ansichten) können Sie in einem Listensteuerelement haben – Symbolansicht, Ansicht mit kleinen Symbolen, Listenansicht und Berichtsansicht – finden Sie unter Ansichten in der [CListCtrl](../mfc/reference/clistctrl-class.md) -Klassenübersicht.  
+Verwenden Sie ein Listensteuerelement, um alle Anordnung von Symbolen mit Bezeichnungen wie in der Datei-Explorer oder spaltenbasierte Listen von Text mit oder ohne Symbole anzuzeigen. Eine Beschreibung der vier möglichen "Ansichten" (nicht zu verwechseln mit MFC-Ansichten), die Sie in einem Listensteuerelement haben können – Symbolansicht, kleine Symbole angezeigt, Listenansicht und Berichtsansicht – finden Sie unter Ansichten in der [CListCtrl](../mfc/reference/clistctrl-class.md) Übersicht über die Klasse.  
   
- In einigen Ansichten können Benutzer Symbole an andere Positionen ziehen oder Bearbeiten von Bezeichnungen Symbol. Beispielsweise finden Sie unter dem rechten Bereich im Datei-Explorer, der ein Listenfeld-Steuerelement in einem Dialogfenster verwendet. Sie können mit den verfügbaren Ansichten im Explorer Menü "Ansicht" experimentieren.  
+ In einigen Ansichten können Benutzer Symbole an andere Positionen ziehen oder Symbol Bezeichnungen bearbeiten. Beispielsweise finden Sie im rechten Bereich im Datei-Explorer, die einem Steuerelement in einer nicht-Dialogfenster verwendet. Sie können mit den verfügbaren Ansichten im Explorer Menü "Ansicht" experimentieren.  
   
- Weitere Informationen finden Sie unter [zur Listenansicht Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb774735) im Windows SDK.  
+ Weitere Informationen finden Sie unter [zur Listenansicht-Steuerelemente](/windows/desktop/Controls/list-view-controls-overview) im Windows SDK.  
   
 > [!NOTE]
->  Das Windows SDK bezieht sich auf Listensteuerelemente als "Listensteuerelemente anzeigen." Diese Verwendung von "View" verweist nicht auf MFC-Ansicht-Klassen, insbesondere `CListView`. Weitere Informationen finden Sie unter [Listensteuerelement und Listenansichtsteuerelement](../mfc/list-control-and-list-view.md).  
+>  Das Windows SDK verweist für Listensteuerelemente, als "Listenansicht-Steuerelemente." Diese Verwendung von "View" verweist nicht auf MFC-Klassen, insbesondere `CListView`. Weitere Informationen finden Sie unter [Listensteuerelement und Listenansichtsteuerelement](../mfc/list-control-and-list-view.md).  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
   

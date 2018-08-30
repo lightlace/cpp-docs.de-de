@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 505049d6580f41253a483dfe1c64608d0ea9ed3d
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 0b5a352d10c1fd1f825cecbe3d6a1083f6efd425
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110007"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212168"
 ---
 # <a name="reflection-ccli"></a>Reflektion (C++/CLI)
 
@@ -42,12 +42,12 @@ Die Reflektion ermöglicht die Überprüfung von bekannten Datentypen zur Laufze
 
 Beachten Sie, dass der angegebene Assemblyname des starken Namens ist (finden Sie unter [erstellen und Assemblys mit starkem Namen](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)), darunter die Assemblyversion, Kultur und Signierungsinformationen. Beachten Sie auch, dass der Name des Namespaces, in dem der Datentyp definiert ist, zusammen mit dem Namen der Basisklasse abgerufen werden kann.
 
-Am häufigsten wird über die <xref:System.Object.GetType%2A>-Methode auf Reflektionsfunktionen zugegriffen. Diese Methode wird bereitgestellt, indem [System:: Object](https://msdn.microsoft.com/en-us/library/system.object.aspx), aus der alle Garbage Collection-Klassen abgeleitet werden.
+Am häufigsten wird über die <xref:System.Object.GetType%2A>-Methode auf Reflektionsfunktionen zugegriffen. Diese Methode wird bereitgestellt, indem [System:: Object](https://msdn.microsoft.com/library/system.object.aspx), aus der alle Garbage Collection-Klassen abgeleitet werden.
 
 > [!NOTE]
 > Reflektion einer mit Visual C++-Compiler erstellte .exe ist nur zulässig, wenn die .exe mit erstellt wurde die **/CLR: pure** oder **/CLR: safe** Compileroptionen. Die **/CLR: pure** und **/CLR: safe** Compileroptionen sind in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht verfügbar. Finden Sie unter [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md) für Weitere Informationen.
 
-Weitere Informationen finden Sie unter [System.Reflection-Namespace](https://msdn.microsoft.com/en-us/library/system.reflection.aspx)
+Weitere Informationen finden Sie unter [System.Reflection-Namespace](https://msdn.microsoft.com/library/system.reflection.aspx)
 
 ## <a name="example-gettype"></a>Beispiel: GetType
 
@@ -188,9 +188,9 @@ public:
 
 ## <a name="example-inspection-of-assemblies"></a>Beispiel: Überprüfung von Assemblys
 
-Wenn der obige Code in eine DLL mit dem Namen vcpp_reflection_6.dll kompiliert wird, können Sie mithilfe der Reflektion den Inhalt dieser Assembly überprüfen. Dies umfasst die statische Reflektions-API-Funktion [Reflektions](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.load.aspx) zum Laden der Assembly. Diese Funktion gibt die Adresse einer **Assembly** -Objekt, das über die Module und Typen abgefragt werden kann.
+Wenn der obige Code in eine DLL mit dem Namen vcpp_reflection_6.dll kompiliert wird, können Sie mithilfe der Reflektion den Inhalt dieser Assembly überprüfen. Dies umfasst die statische Reflektions-API-Funktion [Reflektions](https://msdn.microsoft.com/library/system.reflection.assembly.load.aspx) zum Laden der Assembly. Diese Funktion gibt die Adresse einer **Assembly** -Objekt, das über die Module und Typen abgefragt werden kann.
 
-Sobald das Reflektionssystem die Assembly, ein Array von erfolgreich lädt **Typ** Objekte wird abgerufen, mit der [Assembly:: GetTypes](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.gettypes.aspx) Funktion. Jedes Arrayelement enthält Informationen zu einem anderen Typ, obwohl in diesem Fall nur eine Klasse definiert ist. Mithilfe einer Schleife jeden **Typ** wird in diesem Array die Typmember mit abgefragt der **GetMembers** Funktion. Diese Funktion gibt ein Array von **MethodInfo** Objekten, jedes Objekt, das Informationen über die Memberfunktion, Datenmember oder Eigenschaft im Typ enthält.
+Sobald das Reflektionssystem die Assembly, ein Array von erfolgreich lädt **Typ** Objekte wird abgerufen, mit der [Assembly:: GetTypes](https://msdn.microsoft.com/library/system.reflection.assembly.gettypes.aspx) Funktion. Jedes Arrayelement enthält Informationen zu einem anderen Typ, obwohl in diesem Fall nur eine Klasse definiert ist. Mithilfe einer Schleife jeden **Typ** wird in diesem Array die Typmember mit abgefragt der **GetMembers** Funktion. Diese Funktion gibt ein Array von **MethodInfo** Objekten, jedes Objekt, das Informationen über die Memberfunktion, Datenmember oder Eigenschaft im Typ enthält.
 
 Beachten Sie, dass die Liste der Methoden explizit die Funktionen enthält, die in definierten **TestClass** und die Funktionen implizit geerbt wird, von der **System:: Object** Klasse. Bedingt dadurch, dass Eigenschaften in .NET- anstatt in Visual C++-Syntax beschrieben sind, werden sie als die zugrunde liegenden Datenmember angezeigt, auf die von den get-/set-Funktionen zugegriffen wird. Die get-/set-Funktionen werden in dieser Liste als reguläre Methoden angezeigt. Die Reflektion wird durch die Common Language Runtime und nicht durch den Visual C++-Compiler unterstützt.
 

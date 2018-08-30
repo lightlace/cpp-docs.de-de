@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb1e8085810eea78d18a5ef68f18e4323ec9d3f4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 936777adf9863c233303c4b78ffd9e45aa0f3b95
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605420"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209530"
 ---
 # <a name="lcid"></a>lcid
 
@@ -36,7 +36,7 @@ Sie können einen Gebietsschemabezeichner an eine Funktion übergeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Lcid** C++-Attribut implementiert die Funktionalität der [Lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) MIDL-Attribut. Wenn Sie das Gebietsschema für ein bibliotheksblock implementieren möchten, verwenden Sie die **Lcid =** `lcid` Parameter, um die [Modul](../windows/module-cpp.md) Attribut.
+Die **Lcid** C++-Attribut implementiert die Funktionalität der [Lcid](/windows/desktop/Midl/lcid) MIDL-Attribut. Wenn Sie das Gebietsschema für ein bibliotheksblock implementieren möchten, verwenden Sie die **Lcid =** `lcid` Parameter, um die [Modul](../windows/module-cpp.md) Attribut.
 
 ## <a name="example"></a>Beispiel
 

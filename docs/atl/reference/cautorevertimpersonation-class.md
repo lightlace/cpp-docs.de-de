@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af604ac6afce91dc865cfbb465e8c27acea8f775
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9d4c752dc2a139d1e0bac38d9c307154cdc32fe6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885320"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196318"
 ---
 # <a name="cautorevertimpersonation-class"></a>CAutoRevertImpersonation-Klasse
 Diese Klasse setzt [CAccessToken](../../atl/reference/caccesstoken-class.md) Objekte in einem nonimpersonating Zustand, wenn sie den Gültigkeitsbereich verlässt.  
@@ -55,11 +55,11 @@ class CAutoRevertImpersonation
 |[CAutoRevertImpersonation::GetAccessToken](#getaccesstoken)|Ruft die diesem Objekt zugeordneten aktuellen Access token ab.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein [Zugriffstoken](http://msdn.microsoft.com/library/windows/desktop/aa374909) ist ein Objekt, das beschreibt den Sicherheitskontext eines Prozesses oder Threads. zudem ist jeder Benutzer, die ein Windows NT oder Windows 2000-System angemeldet zugeordnet ist. Diese Zugriffstoken dargestellt werden können, mit der `CAccessToken` Klasse.  
+ Ein [Zugriffstoken](/windows/desktop/SecAuthZ/access-tokens) ist ein Objekt, das beschreibt den Sicherheitskontext eines Prozesses oder Threads. zudem ist jeder Benutzer, die ein Windows NT oder Windows 2000-System angemeldet zugeordnet ist. Diese Zugriffstoken dargestellt werden können, mit der `CAccessToken` Klasse.  
   
  Manchmal ist es erforderlich, für den Identitätswechsel des Zugangs-Token. Diese Klasse wird zur Vereinfachung bereitgestellt, aber den Identitätswechsel des Zugangs-Token wird nicht ausgeführt; Sie führt nur die automatische Zurücksetzung zu einem nonimpersonated Zustand. Dies ist da tokenzugriff Identitätswechsel für verschiedene Arten ausgeführt werden kann.  
   
- Eine Einführung in das Zugriffssteuerungsmodell in Windows, finden Sie unter [Zugriffssteuerung](http://msdn.microsoft.com/library/windows/desktop/aa374860) im Windows SDK.  
+ Eine Einführung in das Zugriffssteuerungsmodell in Windows, finden Sie unter [Zugriffssteuerung](/windows/desktop/SecAuthZ/access-control) im Windows SDK.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h  
@@ -130,5 +130,5 @@ const CAccessToken* GetAccessToken() throw();
   
 ## <a name="see-also"></a>Siehe auch  
  [ATLSecurity-Beispiel](../../visual-cpp-samples.md)   
- [Zugriffstoken](http://msdn.microsoft.com/library/windows/desktop/aa374909)   
+ [Zugriffstoken](/windows/desktop/SecAuthZ/access-tokens)   
  [Übersicht über die Klasse](../../atl/atl-class-overview.md)

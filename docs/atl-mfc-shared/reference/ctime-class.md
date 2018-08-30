@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b68ebd20d449c11ac8c62a6a01c086dbe566811
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: ccfb9c8873ff7e954e4e8169fafb94c53e6a311e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027672"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205986"
 ---
 # <a name="ctime-class"></a>CTime-Klasse
 Stellt eine absolute Zeit und Datum dar.  
@@ -66,7 +66,7 @@ class CTime
 |[CTime::Format](#format)|Konvertiert eine `CTime` Objekt in eine formatierte Zeichenfolge – basierend auf der lokalen Zeitzone.|  
 |[CTime::FormatGmt](#formatgmt)|Konvertiert eine `CTime` Objekt in eine formatierte Zeichenfolge – basierend auf UTC.|  
 |[CTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|Die gespeicherten Uhrzeitinformationen konvertiert die `CTime` Objekt in eine Win32-kompatibles DBTIMESTAMP-Struktur.|  
-|[CTime::GetAsSystemTime](#getassystemtime)|Die gespeicherten Uhrzeitinformationen konvertiert die `CTime` Objekt in ein Win32-kompatibles [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur.|  
+|[CTime::GetAsSystemTime](#getassystemtime)|Die gespeicherten Uhrzeitinformationen konvertiert die `CTime` Objekt in ein Win32-kompatibles [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur.|  
 |[CTime:: GetCurrentTime](#getcurrenttime)|Erstellt eine `CTime` -Objekt, das die aktuelle Uhrzeit (statische Memberfunktion) darstellt.|  
 |[CTime::GetDay](#getday)|Gibt den Tag darstellt, durch die `CTime` Objekt.|  
 |[CTime::GetDayOfWeek](#getdayofweek)|Gibt den Tag des Wochentags, dargestellt durch die `CTime` Objekt.|  
@@ -210,7 +210,7 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
     > [!NOTE]
     >  Der Konstruktor mit `DBTIMESTAMP` Parameter ist nur verfügbar, wenn "OleDb.h" enthalten ist.  
   
- Weitere Informationen finden Sie unter den [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) und [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) Struktur im Windows SDK. Siehe auch die [MS-DOS-Datum und Uhrzeit](http://msdn.microsoft.com/library/windows/desktop/ms724503) Eintrag in das Windows SDK.  
+ Weitere Informationen finden Sie unter den [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) und [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) Struktur im Windows SDK. Siehe auch die [MS-DOS-Datum und Uhrzeit](/windows/desktop/SysInfo/ms-dos-date-and-time) Eintrag in das Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities#148](../../atl-mfc-shared/codesnippet/cpp/ctime-class_2.cpp)]  
@@ -288,7 +288,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
  [!code-cpp[NVC_ATLMFC_Utilities#150](../../atl-mfc-shared/codesnippet/cpp/ctime-class_4.cpp)]  
   
 ##  <a name="getassystemtime"></a>  CTime::GetAsSystemTime  
- Rufen Sie diese Memberfunktion zum Konvertieren der gespeicherten Uhrzeitinformationen dem `CTime` Objekt in ein Win32-kompatibles [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur.  
+ Rufen Sie diese Memberfunktion zum Konvertieren der gespeicherten Uhrzeitinformationen dem `CTime` Objekt in ein Win32-kompatibles [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur.  
   
 ```  
 bool GetAsSystemTime(SYSTEMTIME& st) const throw();
@@ -296,7 +296,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
   
 ### <a name="parameters"></a>Parameter  
  *timeDest*  
- Ein Verweis auf eine [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die den konvertierten Datum/Uhrzeit-Wert, der enthalten, wird die `CTime` Objekt.  
+ Ein Verweis auf eine [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die den konvertierten Datum/Uhrzeit-Wert, der enthalten, wird die `CTime` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn erfolgreich, andernfalls FALSE.  

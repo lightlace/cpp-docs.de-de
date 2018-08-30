@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a23ed1283241d3582c0bd548553cb2fed9a47fa
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 532f1e060398b20d4714f461c2d687031756c910
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596794"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201121"
 ---
 # <a name="general-mbcs-programming-advice"></a>Allgemeine Ratschläge für die MBCS-Programmierung
 Verwenden Sie die folgenden Tipps:  
@@ -41,7 +41,7 @@ Verwenden Sie die folgenden Tipps:
   
 -   Achten Sie darauf beim Auswählen von Schriftarten für Ihre Anwendung, da es sich bei einigen Schriftarten nicht auf allen Systemen verfügbar sind.  
   
--   Verwenden Sie bei der Auswahl der Schriftart für Dialogfelder [MS Shell Dlg](http://msdn.microsoft.com/library/windows/desktop/dd374112) anstelle von MS Sans Serif oder Helvetica. MS Shell Dlg wird durch die richtige Schriftart vom System ersetzt, vor dem Erstellen des Dialogfelds. Mithilfe von MS Shell Dlg wird sichergestellt, dass alle Änderungen an der das Betriebssystem für den Umgang mit dieser Schriftart automatisch zur Verfügung stehen. (MFC haben MS Shell Dlg DEFAULT_GUI_FONT oder Systemschriftart auf Windows 95, Windows 98 und Windows NT 4 ersetzt, da diese Systeme MS Shell Dlg nicht ordnungsgemäß behandelt werden.)  
+-   Verwenden Sie bei der Auswahl der Schriftart für Dialogfelder [MS Shell Dlg](/windows/desktop/Intl/using-ms-shell-dlg-and-ms-shell-dlg-2) anstelle von MS Sans Serif oder Helvetica. MS Shell Dlg wird durch die richtige Schriftart vom System ersetzt, vor dem Erstellen des Dialogfelds. Mithilfe von MS Shell Dlg wird sichergestellt, dass alle Änderungen an der das Betriebssystem für den Umgang mit dieser Schriftart automatisch zur Verfügung stehen. (MFC haben MS Shell Dlg DEFAULT_GUI_FONT oder Systemschriftart auf Windows 95, Windows 98 und Windows NT 4 ersetzt, da diese Systeme MS Shell Dlg nicht ordnungsgemäß behandelt werden.)  
   
 -   Beim Entwerfen Ihrer Anwendung entscheiden Sie, welche Zeichenfolgen lokalisiert werden können. Im Zweifelsfall wird davon ausgegangen Sie, dass jedes lokalisiert wird. Kombinieren Sie Zeichenfolgen, die lokalisiert werden können, nicht mit denjenigen, die nicht.  
   

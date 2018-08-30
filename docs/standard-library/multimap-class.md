@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c5bf13a675280b12872c5a5e7bbf19367ff0143
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 29e94acf4b8fad401077a5530d4b6296c30c2740
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027731"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220107"
 ---
 # <a name="multimap-class"></a>multimap-Klasse
 
@@ -119,15 +119,19 @@ class multimap;
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* Geben Sie die wichtigen Daten in der mehrfachzuordnung zu speichernde.
+*Key*<br/>
+ Der in der Mehrfachzuordnung zu speichernde Schlüsseldatentyp.
 
-*Typ* die Datentyp der Elemente in der mehrfachzuordnung zu speichernde.
+*Type*<br/>
+ Der in der Mehrfachzuordnung zu speichernde Elementdatentyp.
 
-*"Traits"* der Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel, um deren relative Reihenfolge in der mehrfachzuordnung zu bestimmen, vergleichen können. Das binäre Prädikat `less<Key>` ist der Standardwert.
+*Merkmale*<br/>
+ Der Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der Mehrfachzuordnung zu bestimmen. Das binäre Prädikat `less<Key>` ist der Standardwert.
 
 In C ++ 14 können Sie heterogenes Nachschlagen durch Angabe des `std::less<>` oder `std::greater<>` Prädikats, das keine Typparameter aufweist, aktivieren. Weitere Informationen finden Sie unter [Heterogenes Nachschlagen in assoziativen Containern](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14)
 
-*Allocator* der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers der Zuordnung kapselt. Dieses Argument ist optional, und der Standardwert ist `allocator<pair <const Key, Type> >`.
+*Zuweisung*<br/>
+ Der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers der Zuordnung kapselt. Dieses Argument ist optional, und der Standardwert ist `allocator<pair <const Key, Type> >`.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -404,11 +408,11 @@ typedef implementation-defined const_iterator;
 
 Ein `const_iterator`-Typ kann nicht zum Ändern des Werts eines Elements verwendet werden.
 
-Die `const_iterator` durch mehrfachzuordnung verweist auf Objekte des definierten [Value_type](#value_type), des Typs `pair` * \< * **const Key**, **Typ *** >*. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.
+Die `const_iterator` durch mehrfachzuordnung verweist auf Objekte des definierten [Value_type](#value_type), des Typs `pair<const Key, Type>`. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.
 
-Dereferenziert eine `const_iterator` `cIter` auf ein Element in einer mehrfachzuordnung zeigt, verwenden Sie die **->** Operator.
+Dereferenziert eine `const_iterator` *cIter* auf ein Element in einer mehrfachzuordnung zeigt, verwenden Sie die **->** Operator.
 
-Verwenden Sie `cIter` -> **first**, das (\* `cIter`). **first** entspricht, um auf den Wert des Schlüssels für das Element zuzugreifen. Verwenden Sie `cIter` -> **second**, das (\* `cIter`). **second**.
+Um den Wert des Schlüssels für das Element zuzugreifen, verwenden `cIter->first`, dies entspricht dem `(*cIter).first`. Um den Wert des zugeordneten Datums für das Element zuzugreifen, verwenden `cIter->second`, dies entspricht dem `(*cIter).second`.
 
 ### <a name="example"></a>Beispiel
 
@@ -490,11 +494,11 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 Ein `const_reverse_iterator`-Typ kann nicht den Wert eines Elements ändern. Er wird verwendet, um die Mehrfachzuordnung in umgekehrter Reihenfolge zu durchlaufen.
 
-Die `const_reverse_iterator` durch mehrfachzuordnung verweist auf Objekte des definierten [Value_type](#value_type), des Typs `pair` * \< * **const Key**, **Typ *** >*. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.
+Die `const_reverse_iterator` durch mehrfachzuordnung verweist auf Objekte des definierten [Value_type](#value_type), des Typs `pair<const Key, Type>`. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.
 
-Dereferenziert eine `const_reverse_iterator` `crIter` auf ein Element in einer mehrfachzuordnung zeigt, verwenden Sie die **->** Operator.
+Dereferenziert eine `const_reverse_iterator` *CrIter* auf ein Element in einer mehrfachzuordnung zeigt, verwenden Sie die **->** Operator.
 
-Verwenden Sie `crIter` -> **first**, das (\* `crIter`). **first** entspricht, um auf den Wert des Schlüssels für das Element zuzugreifen. Verwenden Sie `crIter` -> **second**, das (\* `crIter`). **first** entspricht, um auf den Wert des zugeordneten Datums für das Element zuzugreifen.
+Um den Wert des Schlüssels für das Element zuzugreifen, verwenden `crIter->first`, dies entspricht dem `(*crIter).first`. Um den Wert des zugeordneten Datums für das Element zuzugreifen, verwenden `crIter->second`, dies entspricht dem `(*crIter).first`.
 
 ### <a name="example"></a>Beispiel
 
@@ -510,7 +514,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* der Schlüssel der Elemente, die aus der mehrfachzuordnung abgeglichen werden.
+*key*<br/>
+ Der Schlüssel der Elemente, die aus der Mehrfachzuordnung abgeglichen werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -910,7 +915,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden mehrfachzuordnung verglichen werden soll.
+*key*<br/>
+ Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Mehrfachzuordnung verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -996,13 +1002,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Parameter
 
-*Wo* Position des Elements entfernt werden soll.
+*Where*<br/>
+ Die Position des zu entfernenden Elements.
 
-*Erste* Position des ersten Elements entfernt werden soll.
+*Erste*<br/>
+ Die Position des ersten zu entfernenden Elements.
 
-*Letzte* die Position direkt hinter dem letzten Element entfernt werden soll.
+*letzte*<br/>
+ Die Position direkt hinter dem letzten zu entfernenden Element.
 
-*Schlüssel* der Schlüssel der Elemente, die entfernt werden soll.
+*Key*<br/>
+ Der Schlüssel der zu entfernenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1027,7 +1037,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* den Schlüsselwert, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden mehrfachzuordnung übereinstimmt.
+*key*<br/>
+ Der Schlüsselwert, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Mehrfachzuordnung übereinstimmt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1350,11 +1361,11 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Hinweise
 
-Die `iterator` durch mehrfachzuordnung verweist auf Objekte des definierten [Value_type](#value_type), des Typs `pair` * \< * **const Key**, **Typ *** >*. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.
+Die `iterator` durch mehrfachzuordnung verweist auf Objekte des definierten [Value_type](#value_type), des Typs `pair<const Key, Type>`. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.
 
-Dereferenziert eine **Iterator** `Iter` auf ein Element in einer mehrfachzuordnung zeigt, verwenden Sie die `->` Operator.
+Dereferenziert eine `iterator` *Iter* auf ein Element in einer mehrfachzuordnung zeigt, verwenden Sie die **->** Operator.
 
-Verwenden Sie `Iter` -> **first**, das (\* `Iter`). **first** entspricht, um auf den Wert des Schlüssels für das Element zuzugreifen. Verwenden Sie `Iter` -> **second**, das (\* `Iter`). **second**.
+Um den Wert des Schlüssels für das Element zuzugreifen, verwenden `Iter->first`, dies entspricht dem `(*Iter).first`. Um den Wert des zugeordneten Datums für das Element zuzugreifen, verwenden `Iter->second`, dies entspricht dem `(*Iter).second`.
 
 Ein Typ `iterator` kann zum Ändern des Werts eines Elements verwendet werden.
 
@@ -1378,7 +1389,7 @@ Gibt das Funktionsobjekt zurück, das eine Mehrfachzuordnung zum Sortieren der j
 
 Das gespeicherte Objekt definiert die Memberfunktion
 
-**bool operator**( **const Key&** *x*, **const Key&** *y*);
+`bool operator( const Key& x, const Key& y);`
 
 Sie gibt nur dann TRUE zurück, wenn *x* in der Sortierreihenfolge *y* vorausgeht.
 
@@ -1481,7 +1492,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden mehrfachzuordnung verglichen werden soll.
+*key*<br/>
+ Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Mehrfachzuordnung verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2099,11 +2111,11 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 Mit einem `reverse_iterator`-Typ lässt sich die Mehrfachzuordnung in umgekehrter Reihenfolge durchlaufen.
 
-Die `reverse_iterator` durch mehrfachzuordnung verweist auf Objekte des definierten [Value_type](#value_type), des Typs `pair` * \< * **const Key**, **Typ *** >*. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.
+Die `reverse_iterator` durch mehrfachzuordnung verweist auf Objekte des definierten [Value_type](#value_type), des Typs `pair<const Key, Type>`. Der Wert des Schlüssels ist über das erste Memberpaar verfügbar. Der Wert des zugeordneten Elements ist über das zweite Memberpaar verfügbar.
 
-Zu dereferenzieren einer `reverse_iterator` `rIter` auf ein Element in einer mehrfachzuordnung zeigt, verwenden Sie die Operator ->.
+Dereferenziert eine `reverse_iterator` *rIter* auf ein Element in einer mehrfachzuordnung zeigt, verwenden Sie die **->** Operator.
 
-Verwenden Sie `rIter` -> **first**, das (\* `rIter`). **first** entspricht, um auf den Wert des Schlüssels für das Element zuzugreifen. Verwenden Sie `rIter` -> **second**, das (\* `rIter`). **first** entspricht, um auf den Wert des zugeordneten Datums für das Element zuzugreifen.
+Um den Wert des Schlüssels für das Element zuzugreifen, verwenden `rIter->first`, dies entspricht dem `(*rIter).first`. Um den Wert des zugeordneten Datums für das Element zuzugreifen, verwenden `rIter->second`, dies entspricht dem `(*rIter).second`.
 
 ### <a name="example"></a>Beispiel
 
@@ -2176,7 +2188,8 @@ void swap(
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* das multimap-Klasse, die Elemente ausgetauscht werden sollen, oder die multimap-Klasse, deren Elemente mit denen der mehrfachzuordnung ausgetauscht werden `left`.
+*right*<br/>
+ Die multimap-Klasse, in der die auszutauschenden Elemente bereitgestellt werden, oder die multimap-Klasse, deren Elemente mit denen des multimap-Objekts `left` ausgetauscht werden sollen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2245,7 +2258,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden mehrfachzuordnung verglichen werden soll.
+*key*<br/>
+ Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Mehrfachzuordnung verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2445,7 +2459,7 @@ The values of the mapped elements are: 10 20.
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<Map > Elemente](http://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
+[\<Map > Elemente](https://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
 [Container](../cpp/containers-modern-cpp.md)<br/>
 [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>

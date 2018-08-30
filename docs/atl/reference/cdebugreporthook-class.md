@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac3c020bbb5ff46f4684c9ed089a2fe327de252e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8de1f44b079b269d76054b1a221a8ec3e36daf5e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884362"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209324"
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook-Klasse
 Verwenden Sie diese Klasse zum Senden von debugberichten und einer named Pipe an.  
@@ -61,7 +61,7 @@ class CDebugReportHook
 ## <a name="remarks"></a>Hinweise  
  Erstellen Sie eine Instanz dieser Klasse im Debug-Builds für Ihre Dienste oder Anwendungen zum Senden von debugberichten und einer named Pipe an. Debug-Berichte werden generiert, durch den Aufruf [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) oder über einen Wrapper für diese Funktion z. B. die [ATLTRACE](debugging-and-error-reporting-macros.md#atltrace) und [ATLASSERT](debugging-and-error-reporting-macros.md#atlassert) Makros.  
   
- Verwendung dieser Klasse können Sie interaktiv Debuggen von Komponenten, die im nicht interaktiven [Fenster Stationen](http://msdn.microsoft.com/library/windows/desktop/ms687096).  
+ Verwendung dieser Klasse können Sie interaktiv Debuggen von Komponenten, die im nicht interaktiven [Fenster Stationen](/windows/desktop/winstation/window-stations).  
   
  Beachten Sie, dass debugberichten gesendet werden, mithilfe des zugrunde liegenden Sicherheitskontexts des Threads. Identitätswechsel wird vorübergehend deaktiviert, sodass debugberichten in Situationen angezeigt werden können, in dem Identitätswechsel von Benutzern mit geringen Rechten, wie z. B. in Webanwendungen stattfindet.  
   

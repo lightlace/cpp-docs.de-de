@@ -1,5 +1,5 @@
 ---
-title: Bildlauf und Skalierung für Ansichten | Microsoft Docs
+title: Bildlauf und Skalierung für Ansichten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9758c63562a19d6b9e458fd434108a92bbc8576
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89a899c7604f3342564a315ba704fc2fcd31ec36
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379267"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206937"
 ---
 # <a name="scrolling-and-scaling-views"></a>Bildlauf und Skalierung für Ansichten
-MFC unterstützt, Sichten, die Bildlauf und Ansichten, die automatisch auf die Größe des Rahmenfensters skaliert werden, in dem diese angezeigt wird. Klasse `CScrollView` unterstützt beide Arten von Ansichten.  
+MFC unterstützt, Ansichten, die einen Bildlauf durchführen und Ansichten, die automatisch auf die Größe des Rahmenfensters skaliert werden, in der sie angezeigt wird. Klasse `CScrollView` unterstützt beide Arten von Ansichten.  
   
- Weitere Informationen zu den Bildlauf und Skalierung finden Sie in der Klasse [CScrollView](../mfc/reference/cscrollview-class.md) in der *MFC-Referenz*. Ein fortlaufendes Beispiel finden Sie unter der [Scribble-Beispiel](../visual-cpp-samples.md).  
+ Weitere Informationen zu den Bildlauf und Skalierung, finden Sie unter Klasse [CScrollView](../mfc/reference/cscrollview-class.md) in die *MFC-Referenz*. Ein Beispiel für Bildlauf, finden Sie unter den [Scribble-Beispiels](../visual-cpp-samples.md).  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
   
@@ -36,23 +36,23 @@ MFC unterstützt, Sichten, die Bildlauf und Ansichten, die automatisch auf die G
   
 -   Skalieren einer Ansicht  
   
--   [Koordinaten](http://msdn.microsoft.com/library/windows/desktop/dd145205)  
+-   [Koordinaten der Strukturansicht](/windows/desktop/gdi/window-coordinate-system)  
   
 ##  <a name="_core_scrolling_a_view"></a> Bildlauf in einer Ansicht  
- Häufig ist die Größe eines Dokuments größer als die Größe, die der Ansicht angezeigt werden kann. Dies kann auftreten, weil die Daten des Dokuments erhöht oder der Benutzer verkleinert das Fenster, das die Sicht frames. In solchen Fällen muss die Sicht Durchführen eines Bildlaufs unterstützen.  
+ Häufig ist die Größe eines Dokuments größer als die Größe, die seine Ansicht anzeigen kann. Dies kann auftreten, da die Daten des Dokuments erhöht oder der Benutzer verkleinert das Fenster, das die Ansicht von frames. In solchen Fällen muss die Ansicht einen Bildlauf unterstützen.  
   
- Jeder Ansicht kann behandeln Bildlaufleisten-Nachrichten in seiner `OnHScroll` und `OnVScroll` Memberfunktionen. Können Sie entweder implementieren Bildlaufleisten-Behandlung in diese Funktionen ausführen die gesamte Arbeit selbst, oder Sie können die `CScrollView` -Klasse zur Verarbeitung von Bildlauf für Sie.  
+ Jeder Ansicht kann behandeln, Bildlaufleisten-Nachrichten in der `OnHScroll` und `OnVScroll` Memberfunktionen. Können Sie entweder implementieren Bildlaufleisten--Nachrichtenverarbeitung in dieser Funktionen, die gesamte Arbeit tun sich selbst, oder Sie können die `CScrollView` -Klasse zur Verarbeitung von Bildlauf für Sie.  
   
  `CScrollView` führt Folgendes aus:  
   
--   Verwaltet die Fenster-und Viewport und Zuordnungsmodi  
+-   Verwaltet Fenster-und Viewport und Zuordnungsmodi  
   
--   Verschiebt automatisch als Reaktion auf Bildlaufleisten-Nachrichten  
+-   Führt einen Bildlauf automatisch als Reaktion auf Bildlaufleisten-Nachrichten  
   
- Sie können wie viel angeben, um einen Bildlauf für einen "Seite" (wenn der Benutzer in einer Bildlaufleiste klickt) und eine "Linie" (wenn der Benutzer in einen Bildlaufpfeil klickt). Planen Sie diese Werte entsprechend den Charakter Ihrer Ansicht an. Sie möchten z. B. einen Bildlauf in Schritten von 1 Pixel für eine Grafikansicht jedoch in Inkrementen von basierend auf der Zeilenhöhe im Text-Dokumenten.  
+ Sie können wie viel angeben, um das Scrollen für ein "Page" (wenn der Benutzer in einer Bildlaufleiste klickt) und eine "Linie" (wenn der Benutzer in einen Bildlaufpfeil klickt). Planen Sie diese Werte entsprechend die Art Ihrer Ansicht an. Beispielsweise empfiehlt es sich in 1-Pixel-Schritten für eine Grafikansicht jedoch in acht Inkrementen basierend auf der Zeilenhöhe im Text-Dokumenten zu scrollen.  
   
 ##  <a name="_core_scaling_a_view"></a> Skalieren einer Ansicht  
- Wenn Sie die Ansicht, um automatisch die Größe des zugehörigen Rahmenfenster anpassen möchten, können Sie `CScrollView` für die Skalierung statt Durchführen eines Bildlaufs. Die logische Sicht wird gestreckt oder verkleinert Clientbereich des Fensters genau angepasst. Eine skalierte Ansicht besitzt keine Bildlaufleisten.  
+ Wenn die Ansicht, um automatisch die Größe des zugehörigen Rahmenfenster angepasst werden soll, können Sie `CScrollView` für die Skalierung, anstatt das Durchführen eines Bildlaufs. Die logische Ansicht wird gestreckt oder verkleinert werden, genau entsprechend Clientbereich des Fensters. Eine skalierte Ansicht besitzt keine Bildlaufleisten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von Ansichten](../mfc/using-views.md)

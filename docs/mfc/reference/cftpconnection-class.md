@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5e0c902b9de9ea4d742d96b88f86d47231597f7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c539504e7bb6e2b02b86d99c890ed5d6ecf1fc27
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337332"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217857"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection-Klasse
 Verwaltet die FTP-Verbindung mit einem Internetserver und ermöglicht die direkte Bearbeitung von Verzeichnissen und Dateien auf dem Server.  
@@ -179,7 +179,7 @@ CInternetFile* Command(
 - `CmdRespRead` Es wird eine Antwort erwartet.  
   
  *dwFlags*  
- Ein Wert mit den Flags, die diese Funktion steuern. Eine vollständige Liste finden Sie unter [FTPCommand](http://msdn.microsoft.com/library/windows/desktop/aa384133).  
+ Ein Wert mit den Flags, die diese Funktion steuern. Eine vollständige Liste finden Sie unter [FTPCommand](/windows/desktop/api/wininet/nf-wininet-ftpcommanda).  
   
  *dwContext*  
  Ein Zeiger auf einen Wert mit einem anwendungsdefinierten Wert, der zur Identifizierung des Anwendungskontexts in Rückrufen verwendet wird.  
@@ -188,7 +188,7 @@ CInternetFile* Command(
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion emuliert die Funktionen des die [FTPCommand](http://msdn.microsoft.com/library/windows/desktop/aa384133) Funktion, wie im Windows SDK beschrieben.  
+ Diese Memberfunktion emuliert die Funktionen des die [FTPCommand](/windows/desktop/api/wininet/nf-wininet-ftpcommanda) Funktion, wie im Windows SDK beschrieben.  
   
  Wenn ein Fehler auftritt, löst MFC eine Ausnahme vom Typ [CInternetException](../../mfc/reference/cinternetexception-class.md).  
   
@@ -204,7 +204,7 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
  Ein Zeiger auf eine Zeichenfolge, die mit dem Namen des Verzeichnisses, das erstellt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Windows-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
+ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Windows-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwendung `GetCurrentDirectory` um das aktuelle Arbeitsverzeichnis für diese Verbindung an den Server zu ermitteln. Gehen Sie nicht, dass Sie das Remotesystem in das Stammverzeichnis verbunden ist.  
@@ -238,7 +238,7 @@ BOOL GetCurrentDirectory(
 |Bei der Rückgabe|Die Anzahl der Zeichen gespeichert, um *PstrDirName*. Wenn die Member-Funktion ein Fehler auftritt und ERROR_INSUFFICIENT_BUFFER, klicken Sie dann zurückgegeben wird *LpdwLen* enthält die Anzahl der Bytes, die die Anwendung reserviert werden muss, um die Zeichenfolge zu erhalten.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
+ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
   
 ### <a name="remarks"></a>Hinweise  
  Um den Namen des Verzeichnisses stattdessen als eine URL zu erhalten, rufen [GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl).  
@@ -272,7 +272,7 @@ BOOL GetCurrentDirectoryAsURL(
 |Bei der Rückgabe|Die Anzahl der Zeichen gespeichert, um *PstrDirName*. Wenn die Member-Funktion ein Fehler auftritt und ERROR_INSUFFICIENT_BUFFER, klicken Sie dann zurückgegeben wird *LpdwLen* enthält die Anzahl der Bytes, die die Anwendung reserviert werden muss, um die Zeichenfolge zu erhalten.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
+ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
   
 ### <a name="remarks"></a>Hinweise  
  `GetCurrentDirectoryAsURL` verhält sich wie [GetCurrentDirectory](#getcurrentdirectory)  
@@ -322,13 +322,13 @@ BOOL GetFile(
 -   FILE_ATTRIBUTE_TEMPORARY die Datei wird für die temporäre Speicherung verwendet. Anwendungen sollten in die Datei schreiben, der nur, wenn es unbedingt erforderlich ist. Die meisten der die Daten der Datei verbleibt im Arbeitsspeicher, ohne auf die Medien geleert werden, da die Datei wird bald gelöscht werden.  
   
  *dwFlags*  
- Gibt die Bedingungen, unter denen die Übertragung erfolgt. Dieser Parameter kann sein, eines der *DwFlags* Werte, die in beschriebenen [FtpGetFile](http://msdn.microsoft.com/library/windows/desktop/aa384157) im Windows SDK.  
+ Gibt die Bedingungen, unter denen die Übertragung erfolgt. Dieser Parameter kann sein, eines der *DwFlags* Werte, die in beschriebenen [FtpGetFile](/windows/desktop/api/wininet/nf-wininet-ftpgetfilea) im Windows SDK.  
   
  *dwContext*  
  Der Kontextbezeichner für den Dateiabruf. Finden Sie unter **"Hinweise"** für Weitere Informationen zu *DwContext*.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
+ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
   
 ### <a name="remarks"></a>Hinweise  
  `GetFile` ist eine Routine auf oberster Ebene, die alle der Overhead beim Lesen einer Datei aus einem FTP-Server, und speichern es lokal verarbeitet. Anwendungen, die nur Daten abzurufen, oder schließen Kontrolle über die Dateiübertragung erfordern, sollten verwenden `OpenFile` und [CInternetFile:: Read](../../mfc/reference/cinternetfile-class.md#read) stattdessen.  
@@ -410,7 +410,7 @@ BOOL PutFile(
  Der Kontextbezeichner für die Platzierung der das. Finden Sie unter **"Hinweise"** für Weitere Informationen zu *DwContext*.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
+ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
   
 ### <a name="remarks"></a>Hinweise  
  `PutFile` ist eine Routine auf oberster Ebene, die vollständig von der Operationen, die für das Speichern einer Datei auf einem FTP-Server übernommen wird. Anwendungen, die nur Daten senden, oder erfordern eine bessere Kontrolle über die Dateiübertragung, sollten verwenden [OpenFile](#openfile) und [CInternetFile:: Write](../../mfc/reference/cinternetfile-class.md#write).  
@@ -429,7 +429,7 @@ BOOL Remove(LPCTSTR pstrFileName);
  Ein Zeiger auf eine Zeichenfolge, die mit dem Dateinamen entfernen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
+ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
   
 ### <a name="remarks"></a>Hinweise  
  Die *PstrFileName* Parameter kann entweder einen teilweise qualifizierten Dateinamen in das aktuelle Verzeichnis relativen oder vollqualifizierten sein. Ein umgekehrter Schrägstrich (\\) oder einen Schrägstrich (/) als das Verzeichnistrennzeichen entweder Namen verwendet werden kann. Die `Remove` Funktion Verzeichnistrennzeichen Namen in die entsprechenden Zeichen übersetzt, bevor sie verwendet werden.  
@@ -446,7 +446,7 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
  Ein Zeiger auf eine Zeichenfolge, die mit dem Verzeichnis entfernt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
+ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwendung [GetCurrentDirectory](#getcurrentdirectory) zum aktuellen Verzeichnis des Servers zu bestimmen. Gehen Sie nicht, dass Sie das Remotesystem in das Stammverzeichnis verbunden ist.  
@@ -470,7 +470,7 @@ BOOL Rename(
  Ein Zeiger auf eine Zeichenfolge mit dem neuen Dateinamen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
+ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
   
 ### <a name="remarks"></a>Hinweise  
  Die *PstrExisting* und *PstrNew* Parameter können entweder einen teilweise qualifizierten Dateinamen in das aktuelle Verzeichnis relativen oder vollqualifizierten sein. Ein umgekehrter Schrägstrich (\\) oder einen Schrägstrich (/) als das Verzeichnistrennzeichen entweder Namen verwendet werden kann. `Rename` Verzeichnistrennzeichen Namen in die entsprechenden Zeichen übersetzt, bevor sie verwendet werden.  
@@ -487,7 +487,7 @@ BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
  Ein Zeiger auf eine Zeichenfolge, die mit dem Namen des Verzeichnisses.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
+ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
   
 ### <a name="remarks"></a>Hinweise  
  Die *PstrDirName* Parameter kann entweder ein Teil- oder vollqualifizierter Dateiname relativ zum aktuellen Verzeichnis sein. Ein umgekehrter Schrägstrich (\\) oder einen Schrägstrich (/) als das Verzeichnistrennzeichen entweder Namen verwendet werden kann. `SetCurrentDirectory` Verzeichnistrennzeichen Namen in die entsprechenden Zeichen übersetzt, bevor sie verwendet werden.  

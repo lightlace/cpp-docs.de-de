@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8eb030bb6827fd8df5a7f4826c4c1e4b3b47b5a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 83ff74a460c7cb34a50d0fbdf338eccc3da27f98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337169"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197438"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession-Klasse
 
@@ -237,7 +237,7 @@ Weitere Informationen zu asynchronen Vorgängen finden Sie im Artikel [Internetg
 
 ## <a name="getcookie"></a>  CInternetSession::GetCookie
 
-Diese Memberfunktion auf, die das Verhalten der Win32-Funktion [InternetGetCookie](http://msdn.microsoft.com/library/windows/desktop/aa384710), wie im Windows SDK beschrieben.
+Diese Memberfunktion auf, die das Verhalten der Win32-Funktion [InternetGetCookie](/windows/desktop/api/wininet/nf-wininet-internetgetcookiea), wie im Windows SDK beschrieben.
 
 ```cpp
 static BOOL GetCookie(
@@ -269,7 +269,7 @@ Die Variable angeben der Größe der *PstrCookieData* Puffer. Wenn die Funktion 
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt true zurück, wenn erfolgreich, oder "false" andernfalls. Wenn der Aufruf fehlschlägt, rufen Sie die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) um die Ursache des Fehlers zu bestimmen. Die folgenden Fehlerwerte gelten:
+Gibt true zurück, wenn erfolgreich, oder "false" andernfalls. Wenn der Aufruf fehlschlägt, rufen Sie die Win32-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) um die Ursache des Fehlers zu bestimmen. Die folgenden Fehlerwerte gelten:
 
 - ERROR_NO_MORE_ITEMS besteht kein Cookie für die angegebene URL und alle übergeordneten.
 
@@ -476,7 +476,7 @@ Die *DwInternetStatus* Parameter gibt den Vorgang ausgeführt wird und bestimmt,
 |INTERNET_STATUS_RESPONSE_RECEIVED|Erfolgreich empfangen eine Antwort vom Server. Die *LpvStatusInformation* Parameter NULL ist.|
 |INTERNET_STATUS_CLOSING_CONNECTION|Das Schließen der Verbindung mit dem Server. Die *LpvStatusInformation* Parameter NULL ist.|
 |INTERNET_STATUS_CONNECTION_CLOSED|Die Verbindung an den Server erfolgreich geschlossen. Die *LpvStatusInformation* Parameter NULL ist.|
-|INTERNET_STATUS_HANDLE_CREATED|Der Win32-API-Funktion verwendet [InternetConnect erhalten](http://msdn.microsoft.com/library/windows/desktop/aa384363) , um anzugeben, dass sie das neue Handle erstellt wurde. Dadurch können die Anwendung Aufruf der Win32-Funktion [InternetCloseHandle](http://msdn.microsoft.com/library/windows/desktop/aa384350) aus einem anderen Thread auf, wenn die Verbindung zu lange dauert. Finden Sie weitere Informationen zu diesen Funktionen in der Windows-SDKfor.|
+|INTERNET_STATUS_HANDLE_CREATED|Der Win32-API-Funktion verwendet [InternetConnect erhalten](/windows/desktop/api/wininet/nf-wininet-internetconnecta) , um anzugeben, dass sie das neue Handle erstellt wurde. Dadurch können die Anwendung Aufruf der Win32-Funktion [InternetCloseHandle](/windows/desktop/api/wininet/nf-wininet-internetclosehandle) aus einem anderen Thread auf, wenn die Verbindung zu lange dauert. Finden Sie weitere Informationen zu diesen Funktionen in der Windows-SDKfor.|
 |INTERNET_STATUS_HANDLE_CLOSING|Erfolgreich beendet diese Handlewert.|
 
 Überschreiben Sie diese Memberfunktion, um eine Aktion erfordern, bevor eine Rückrufroutine Status ausgeführt wird.
@@ -589,7 +589,7 @@ Gibt true zurück, wenn erfolgreich, oder "false" andernfalls. Um den spezifisch
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [InternetSetCookie](http://msdn.microsoft.com/library/windows/desktop/aa385107), wie im Windows SDK beschrieben.
+Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [InternetSetCookie](/windows/desktop/api/wininet/nf-wininet-internetsetcookiea), wie im Windows SDK beschrieben.
 
 ## <a name="setoption"></a>  CInternetSession:: SetOption
 
@@ -612,7 +612,7 @@ BOOL SetOption(
 ### <a name="parameters"></a>Parameter
 
 *dwOption*  
-Die Internet-Option festgelegt werden soll. Finden Sie unter [Optionsflags](http://msdn.microsoft.com/library/windows/desktop/aa385328) in der Windows-SDKfor eine Liste der möglichen Optionen.
+Die Internet-Option festgelegt werden soll. Finden Sie unter [Optionsflags](/windows/desktop/WinInet/option-flags) in der Windows-SDKfor eine Liste der möglichen Optionen.
 
 *lpBuffer*  
 Ein Puffer, der die Einstellung der Option enthält.
@@ -632,7 +632,7 @@ Gibt an, verschiedene Cacheoptionen. Der Standardwert ist auf 0 festgelegt. Die 
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn der Vorgang erfolgreich war, wird der Wert "true" zurückgegeben. Wenn ein Fehler aufgetreten ist, wird der Wert "false" zurückgegeben. Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.
+Wenn der Vorgang erfolgreich war, wird der Wert "true" zurückgegeben. Wenn ein Fehler aufgetreten ist, wird der Wert "false" zurückgegeben. Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.
 
 ## <a name="see-also"></a>Siehe auch
 

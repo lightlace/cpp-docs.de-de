@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48bc0f76ce5b8b3c1bafe3fcd0d6d793a217ae63
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1731c32506ec0e9c4c392ff9429e28e5b71b3c7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849691"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221131"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 Kapselt Windows-API-Funktionen und stellt eine objektorientierte Schnittstelle für den Zugriff auf die Registrierung bereit.  
@@ -130,7 +130,7 @@ CSettingsStore(
 ### <a name="remarks"></a>Hinweise  
  Wenn *bAdminpfad* ist auf TRUE festgelegt, die `m_hKey` Membervariable nastaven NA hodnotu **HKEY_LOCAL_MACHINE**. Setzen Sie *bAdminpfad* auf "FALSE" `m_hKey` nastaven NA hodnotu **HKEY_CURRENT_USER**.  
   
- Hängt von der Sicherheitszugriff der *bReadOnly* Parameter. Wenn *bReadonly* ist "false", der Sicherheitszugriff auf gesetzt **KEY_ALL_ACCESS**. Wenn *bReadyOnly* TRUE ist, wird eine Kombination aus der Sicherheitszugriff festgelegt **KEY_QUERY_VALUE, KEY_NOTIFY** und **KEY_ENUMERATE_SUB_KEYS nicht**. Weitere Informationen zu den Sicherheitszugriff, zusammen mit der Registrierung, finden Sie unter [Schlüssel Registrierungssicherheit und Zugriffsrechte](http://msdn.microsoft.com/library/windows/desktop/ms724878).  
+ Hängt von der Sicherheitszugriff der *bReadOnly* Parameter. Wenn *bReadonly* ist "false", der Sicherheitszugriff auf gesetzt **KEY_ALL_ACCESS**. Wenn *bReadyOnly* TRUE ist, wird eine Kombination aus der Sicherheitszugriff festgelegt **KEY_QUERY_VALUE, KEY_NOTIFY** und **KEY_ENUMERATE_SUB_KEYS nicht**. Weitere Informationen zu den Sicherheitszugriff, zusammen mit der Registrierung, finden Sie unter [Schlüssel Registrierungssicherheit und Zugriffsrechte](/windows/desktop/SysInfo/registry-key-security-and-access-rights).  
   
  Der Destruktor für `CSettingsStore` frei `m_hKey` automatisch.  
   

@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4d8961cc929196c21838fd21132146deddabcc1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2933ed9fbb9a464b4458ce357ce196f2ae9df8f6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42544471"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196381"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar-Klasse
 Eine Menüleiste, die Andocken implementiert.  
@@ -387,7 +387,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Funktion statt des [CMFCMenuBar::Create](#create) Wenn Sie Formatvorlagen zusätzlich zu den Stil der Symbolleiste angeben möchten. Einige häufig verwendete Weitere Formate sind TBSTYLE_TRANSPARENT und CBRS_TOP.  
   
- Der zusätzliche Formate finden Sie unter [Toolbar-Steuerelement und Button-Stile](http://msdn.microsoft.com/library/windows/desktop/bb760439), [Steuerelementtypen für die allgemeine](http://msdn.microsoft.com/library/windows/desktop/bb775498), und [allgemeine Fensterstile](http://msdn.microsoft.com/library/windows/desktop/ms632600).  
+ Der zusätzliche Formate finden Sie unter [Toolbar-Steuerelement und Button-Stile](/windows/desktop/Controls/toolbar-control-and-button-styles), [Steuerelementtypen für die allgemeine](/windows/desktop/Controls/common-control-styles), und [allgemeine Fensterstile](https://msdn.microsoft.com/library/windows/desktop/ms632600).  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie die `CreateEx` Methode der `CMFCMenuBar` Klasse. Dieser Codeausschnitt ist Teil der [IE Demobeispiel](../../visual-cpp-samples.md).  
@@ -964,7 +964,7 @@ static BOOL SetMenuFont(
   
 ### <a name="parameters"></a>Parameter  
  [in] *LpLogFont*  
- Ein Zeiger auf eine ["LogFont"](http://msdn.microsoft.com/library/windows/desktop/bb773327) Struktur, die die Schriftart fest definiert.  
+ Ein Zeiger auf eine ["LogFont"](/windows/desktop/api/dimm/ns-dimm-__midl___midl_itf_dimm_0000_0000_0003) Struktur, die die Schriftart fest definiert.  
   
  [in] *bHorz*  
  TRUE, wenn Sie möchten die *LpLogFont* Parameter, um für die vertikale Schriftart "false" verwendet werden, wenn Sie für die horizontale Schriftart verwendet werden soll.  

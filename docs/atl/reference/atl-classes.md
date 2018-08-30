@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bb96db2ff3a927885bdb914665147dc0e7ce8da
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 71025785fbc9eab2b962e0f9e48ba9170edf1de1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881291"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204189"
 ---
 # <a name="atl-classes-and-structs"></a>ATL-Klassen und Strukturen
 Die Active Template Library (ATL) umfasst die folgenden Klassen und Strukturen. Um eine bestimmte Klasse nach Kategorien suchen zu können, finden Sie unter den [ATL-Klassenübersicht](../../atl/atl-class-overview.md).  
@@ -71,20 +71,20 @@ Die Active Template Library (ATL) umfasst die folgenden Klassen und Strukturen. 
 |[CAxWindow](../../atl/reference/caxwindow-class.md)|Diese Klasse stellt Methoden zum Bearbeiten eines Fensters, das Hosten eines ActiveX-Steuerelements.|atlwin.h vorhanden|  
 |[CAxWindow2T](../../atl/reference/caxwindow2t-class.md)|Diese Klasse stellt Methoden zum Bearbeiten eines Fensters, das ein ActiveX-Steuerelement hostet und auch Unterstützung für das Hosten von lizenzierter ActiveX-Steuerelementen.|atlwin.h vorhanden|  
 |[CBindStatusCallback](../../atl/reference/cbindstatuscallback-class.md)|Diese Klasse implementiert die `IBindStatusCallback`-Schnittstelle.|atlctl.h|  
-|[CComAggObject](../../atl/reference/ccomaggobject-class.md)|Diese Klasse implementiert [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) für ein zusammengesetztes Objekt.|Atlcom.h|  
+|[CComAggObject](../../atl/reference/ccomaggobject-class.md)|Diese Klasse implementiert [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) für ein zusammengesetztes Objekt.|Atlcom.h|  
 |[CComAllocator](../../atl/reference/ccomallocator-class.md)|Diese Klasse stellt Methoden zum Verwalten von Speicher mithilfe von COM-Arbeitsspeicher-Routinen.|Atlbase.h|  
 |[CComApartment](../../atl/reference/ccomapartment-class.md)|Diese Klasse bietet Unterstützung für die Verwaltung von einem Apartment in einem Thread Pooling-EXE-Modul.|Atlbase.h|  
 |[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)|Diese Klasse stellt Methoden zum Abrufen und Freigeben des Besitzes eines kritischen Abschnitts-Objekts.|atlcore.h|  
 |[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)|Zum Zeitpunkt der ATL 7.0 `CComAutoThreadModule` ist veraltet: finden Sie unter [ATL-Module](../../atl/atl-module-classes.md) Weitere Details.|Atlbase.h|  
 |[CComBSTR](../../atl/reference/ccombstr-class.md)|Diese Klasse ist ein Wrapper für BSTR.|Atlbase.h|  
-|[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)|Diese Klasse implementiert [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) für eine Tearoff Schnittstelle.|Atlcom.h|  
-|[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)|Diese Klasse implementiert die [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) Schnittstelle.|Atlcom.h|  
-|[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)|Diese Klasse implementiert die [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) Schnittstelle.|Atlcom.h|  
-|[CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)|Diese Klasse implementiert die [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) Schnittstelle und ermöglicht es Objekten, die in mehreren Apartments erstellt werden.|Atlcom.h|  
+|[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)|Diese Klasse implementiert [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) für eine Tearoff Schnittstelle.|Atlcom.h|  
+|[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)|Diese Klasse implementiert die [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) Schnittstelle.|Atlcom.h|  
+|[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)|Diese Klasse implementiert die [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2) Schnittstelle.|Atlcom.h|  
+|[CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)|Diese Klasse implementiert die [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) Schnittstelle und ermöglicht es Objekten, die in mehreren Apartments erstellt werden.|Atlcom.h|  
 |[CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)|Diese Klasse wird von [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) und verwendet [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) um ein einzelnes Objekt zu erstellen.|Atlcom.h|  
 |[CComCoClass](../../atl/reference/ccomcoclass-class.md)|Diese Klasse stellt Methoden zum Erstellen von Instanzen einer Klasse und ihre Eigenschaften abrufen.|Atlcom.h|  
 |[CComCompositeControl](../../atl/reference/ccomcompositecontrol-class.md)|Diese Klasse stellt die Methoden erforderlich, um ein zusammengesetztes Steuerelement zu implementieren.|atlctl.h|  
-|[CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)|Diese Klasse implementiert [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) delegiert Vorgänge an den des Besitzerobjekts `IUnknown`.|Atlcom.h|  
+|[CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)|Diese Klasse implementiert [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) delegiert Vorgänge an den des Besitzerobjekts `IUnknown`.|Atlcom.h|  
 |[CComControl](../../atl/reference/ccomcontrol-class.md)|Diese Klasse stellt Methoden zum Erstellen und Verwalten von ATL-Steuerelementen.|atlctl.h|  
 |[CComControlBase](../../atl/reference/ccomcontrolbase-class.md)|Diese Klasse stellt Methoden zum Erstellen und Verwalten von ATL-Steuerelementen.|atlctl.h|  
 |[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)|Diese Klasse stellt Methoden zum Abrufen und Freigeben des Besitzes eines kritischen Abschnitts-Objekts.|atlcore.h|  
@@ -208,20 +208,20 @@ Die Active Template Library (ATL) umfasst die folgenden Klassen und Strukturen. 
 |[IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)|Diese Klasse implementiert `IUnknown` und ist die Dienstprinzipale-Schnittstelle über die ein Container, die mit einem Steuerelement kommuniziert.|atlctl.h|  
 |[IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md)|Diese Klasse implementiert `IUnknown` und ermöglicht es einem Client auf die Informationen in den Eigenschaftenseiten eines Objekts zugreifen.|atlctl.h|  
 |[IPersistPropertyBagImpl](../../atl/reference/ipersistpropertybagimpl-class.md)|Diese Klasse implementiert `IUnknown` und ermöglicht einem Objekt, dessen Eigenschaften in einen vom Client bereitgestellter Eigenschaftenbehälter zu speichern.|Atlcom.h|  
-|[IPersistStorageImpl](../../atl/reference/ipersiststorageimpl-class.md)|Diese Klasse implementiert die [IPersistStorage](http://msdn.microsoft.com/library/windows/desktop/ms679731) Schnittstelle.|Atlcom.h|  
-|[IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)|Diese Klasse implementiert `IUnknown` und stellt eine Standardimplementierung von der [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273) Schnittstelle.|Atlcom.h|  
-|[IPointerInactiveImpl](../../atl/reference/ipointerinactiveimpl-class.md)|Diese Klasse implementiert `IUnknown` und [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712) Schnittstellenmethoden.|atlctl.h|  
-|[IPropertyNotifySinkCP](../../atl/reference/ipropertynotifysinkcp-class.md)|Diese Klasse stellt die [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) Schnittstelle als Ausgangsschnittstelle auf einem verbindungsfähigen Objekt.|atlctl.h|  
+|[IPersistStorageImpl](../../atl/reference/ipersiststorageimpl-class.md)|Diese Klasse implementiert die [IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage) Schnittstelle.|Atlcom.h|  
+|[IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)|Diese Klasse implementiert `IUnknown` und stellt eine Standardimplementierung von der [IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit) Schnittstelle.|Atlcom.h|  
+|[IPointerInactiveImpl](../../atl/reference/ipointerinactiveimpl-class.md)|Diese Klasse implementiert `IUnknown` und [IPointerInactive](/windows/desktop/api/ocidl/nn-ocidl-ipointerinactive) Schnittstellenmethoden.|atlctl.h|  
+|[IPropertyNotifySinkCP](../../atl/reference/ipropertynotifysinkcp-class.md)|Diese Klasse stellt die [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) Schnittstelle als Ausgangsschnittstelle auf einem verbindungsfähigen Objekt.|atlctl.h|  
 |[IPropertyPage2Impl](../../atl/reference/ipropertypage2impl-class.md)|Diese Klasse implementiert `IUnknown` und erbt von der Standardimplementierung von [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md).|atlctl.h|  
-|[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)|Diese Klasse implementiert `IUnknown` und stellt eine Standardimplementierung von der [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) Schnittstelle.|atlctl.h|  
-|[IProvideClassInfo2Impl](../../atl/reference/iprovideclassinfo2impl-class.md)|Diese Klasse stellt eine Standardimplementierung von der [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) und [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) Methoden.|Atlcom.h|  
+|[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)|Diese Klasse implementiert `IUnknown` und stellt eine Standardimplementierung von der [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) Schnittstelle.|atlctl.h|  
+|[IProvideClassInfo2Impl](../../atl/reference/iprovideclassinfo2impl-class.md)|Diese Klasse stellt eine Standardimplementierung von der [IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo) und [IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2) Methoden.|Atlcom.h|  
 |[IQuickActivateImpl](../../atl/reference/iquickactivateimpl-class.md)|Diese Klasse kombiniert die Initialisierung des Container-Steuerelements in einem einzigen Aufruf.|atlctl.h|  
-|[IRunnableObjectImpl](../../atl/reference/irunnableobjectimpl-class.md)|Diese Klasse implementiert `IUnknown` und stellt eine Standardimplementierung von der [IRunnableObject](http://msdn.microsoft.com/library/windows/desktop/ms692783) Schnittstelle.|atlctl.h|  
+|[IRunnableObjectImpl](../../atl/reference/irunnableobjectimpl-class.md)|Diese Klasse implementiert `IUnknown` und stellt eine Standardimplementierung von der [IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject) Schnittstelle.|atlctl.h|  
 |[IServiceProviderImpl](../../atl/reference/iserviceproviderimpl-class.md)|Diese Klasse stellt eine Standardimplementierung von der `IServiceProvider` Schnittstelle.|Atlcom.h|  
-|[ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)|Diese Klasse implementiert `IUnknown` und stellt eine Standardimplementierung von der [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) Schnittstelle.|Atlcom.h|  
+|[ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)|Diese Klasse implementiert `IUnknown` und stellt eine Standardimplementierung von der [ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages) Schnittstelle.|Atlcom.h|  
 |[ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md)|Diese Klasse stellt eine Standardimplementierung von der `ISupportErrorInfo Interface` Schnittstelle und kann verwendet werden, wenn nur eine einzelne Schnittstelle Fehler bei einem Objekt generiert.|Atlcom.h|  
 |[IThreadPoolConfig-Schnittstelle](../../atl/reference/ithreadpoolconfig-interface.md)|Diese Schnittstelle bietet Methoden zum Konfigurieren eines Threadpools.|"atlutil.h"|  
-|[IViewObjectExImpl](../../atl/reference/iviewobjecteximpl-class.md)|Diese Klasse implementiert `IUnknown` und stellt standardimplementierungen der [IViewObject](http://msdn.microsoft.com/library/windows/desktop/ms680763), [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318), und [IViewObjectEx](http://msdn.microsoft.com/library/windows/desktop/ms682375) Schnittstellen.|atlctl.h|  
+|[IViewObjectExImpl](../../atl/reference/iviewobjecteximpl-class.md)|Diese Klasse implementiert `IUnknown` und stellt standardimplementierungen der [IViewObject](/windows/desktop/api/oleidl/nn-oleidl-iviewobject), [IViewObject2](/windows/desktop/api/oleidl/nn-oleidl-iviewobject2), und [IViewObjectEx](/windows/desktop/api/ocidl/nn-ocidl-iviewobjectex) Schnittstellen.|atlctl.h|  
 |[IWorkerThreadClient-Schnittstelle](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient` ist die Schnittstelle implementiert, die von Clients von der [CWorkerThread](../../atl/reference/cworkerthread-class.md) Klasse.|"atlutil.h"|  
 |[_U_MENUorID](../../atl/reference/u-menuorid-class.md)|Diese Klasse stellt den Wrapper für `CreateWindow` und `CreateWindowEx`.|atlwin.h vorhanden|  
 |[_U_RECT](../../atl/reference/u-rect-class.md)|Dieses Argument-Adapterklasse ermöglicht `RECT` Zeigern oder verweisen auf eine Funktion übergeben werden, die im Hinblick auf Zeigern implementiert wird.|atlwin.h vorhanden|  

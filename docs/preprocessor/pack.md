@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39d19749f44645d30d9a3826758f54737d3e68af
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 0bcbd8dcc64d26f124a7b6443a79f01aa4329414
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538266"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207491"
 ---
 # <a name="pack"></a>pack
 Gibt die Komprimierungsausrichtung für Struktur, Union und Klassenmember an.  
@@ -38,7 +38,7 @@ Gibt die Komprimierungsausrichtung für Struktur, Union und Klassenmember an.
 
 Das Packen einer Klasse entspricht dem Platzieren ihrer Member direkt nacheinander im Arbeitsspeicher, was bedeutet kann, dass einige oder alle Member an einer Grenze, die kleiner als die standardmäßige Ausrichtung der Zielarchitektur ist, ausgerichtet werden können. **Pack** Steuerung auf der datendeklarationsebene. Dies unterscheidet sich von der Compileroption [/Zp](../build/reference/zp-struct-member-alignment.md), die nur modulebenensteuerung bereitstellt. **Pack** wirksam bei der ersten **Struktur**, **Union**, oder **Klasse** Deklaration, nachdem das Pragma angezeigt wird. **Pack** hat keine Auswirkungen auf Definitionen. Aufrufen von **Pack** ohne Argumente legt *n* den Wert in der Compileroption `/Zp`. Wenn die Compileroption nicht festgelegt ist, ist der Standardwert 8.  
   
-Wenn Sie die Ausrichtung einer Struktur ändern, belegt sie vielleicht nicht so viel Platz im Arbeitsspeicher, aber Sie werden eine Abnahme der Leistung feststellen oder sogar eine von der Hardware generierte Ausnahme für einen nicht ausgerichteten Zugriff erhalten.  Sie können dieses Ausnahmeverhalten mithilfe ändern [SetErrorMode](http://msdn.microsoft.com/library/windows/desktop/ms680621).  
+Wenn Sie die Ausrichtung einer Struktur ändern, belegt sie vielleicht nicht so viel Platz im Arbeitsspeicher, aber Sie werden eine Abnahme der Leistung feststellen oder sogar eine von der Hardware generierte Ausnahme für einen nicht ausgerichteten Zugriff erhalten.  Sie können dieses Ausnahmeverhalten mithilfe ändern [SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621).  
   
 *anzeigen* (optional)  
 Zeigt den aktuellen Bytewert für die Verpackungsausrichtung an. Der Wert wird von einer Warnmeldung angezeigt.  

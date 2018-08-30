@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a629f372058e3e6688a57043d73e29717f3601d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 212637b55a422c11d82ae6ad9f548d9e429c41dd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540646"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198567"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 Implementiert die Basisfunktionalität für Fenster im Registerkartenformat.  
@@ -357,7 +357,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||  
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||  
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||  
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Wird von der [CWinApp](../../mfc/reference/cwinapp-class.md) -Klasse verwendet, um Fenstermeldungen zu übersetzen, bevor diese an die Windows-Funktionen [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) gesendet werden. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Von Klasse verwendeten [CWinApp](../../mfc/reference/cwinapp-class.md) um fenstermeldungen zu übersetzen, bevor sie um weitergeleitet werden die [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows-Funktionen. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|Berechnet das interne Layout eines Fensters im Registerkartenformat neu.|  
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|Entfernt alle Registerkarten aus dem Fenster im Registerkartenformat.|  
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|Entfernt alle Registerkarten aus einem Fenster im Registerkartenformat.|  
@@ -776,7 +776,7 @@ virtual COLORREF GetActiveTabColor() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert, der die Hintergrundfarbe der aktiven Registerkarte angibt.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) Wert, der die Hintergrundfarbe der aktiven Registerkarte angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig ist die Hintergrundfarbe der aktiven Registerkarte COLOR_WINDOW. Sie können die Farbe des Hintergrunds für die aktive Registerkarte ändern, indem Sie mit der Methode [CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor).  
@@ -789,7 +789,7 @@ virtual COLORREF GetActiveTabTextColor() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert, der die Textfarbe der aktiven Registerkarte angibt.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) Wert, der die Textfarbe der aktiven Registerkarte angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig ist die Textfarbe für aktive Registerkarten COLOR_WINDOWTEXT. Sie können die Textfarbe ändern, mit der Methode [CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor).  
@@ -812,7 +812,7 @@ const CArray<COLORREF,COLORREF>& GetAutoColors() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Verweis auf ein Array von [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Werte, die [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) Objekt verwendet wird, für die automatische registerkartenfärbung.  
+ Ein Verweis auf ein Array von [COLORREF](/windows/desktop/gdi/colorref) Werte, die [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) Objekt verwendet wird, für die automatische registerkartenfärbung.  
   
 ### <a name="remarks"></a>Hinweise  
  In der Standardeinstellung initialisiert das Framework das Array von Farben zu einer Bibliothek definierten Farben. Sie können ein benutzerdefiniertes Array von Farben angeben, durch Aufrufen der Methode [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).  
@@ -958,7 +958,7 @@ virtual COLORREF GetTabBkColor(int iTab) const;
  Der nullbasierte Index der Registerkarte.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert, der die Hintergrundfarbe der angegebenen Registerkarte angibt; 1, wenn *iTab* liegt außerhalb des Bereichs.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) Wert, der die Hintergrundfarbe der angegebenen Registerkarte angibt; 1, wenn *iTab* liegt außerhalb des Bereichs.  
   
 ##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize  
  Ruft die Größe der registerkartenrahmen im Registerkarten-Steuerelement ab.  
@@ -1176,7 +1176,7 @@ virtual COLORREF GetTabTextColor(int iTab) const;
  Der nullbasierte Index der Registerkarte.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, der die Textfarbe für die angegebene Registerkarte angibt; 1, wenn *iTab* liegt außerhalb des Bereichs.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) Parameter, der die Textfarbe für die angegebene Registerkarte angibt; 1, wenn *iTab* liegt außerhalb des Bereichs.  
   
 ##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd  
  Gibt den Zeiger auf den Bereich, der auf die angegebene Registerkarte befindet.  
@@ -1844,7 +1844,7 @@ virtual void SetActiveTabColor(COLORREF clr);
  Die neue Hintergrundfarbe angibt.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Framework Ruft die Standardhintergrundfarbe für aktive Registerkarten aus der [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)Methode.  
+ Das Framework Ruft die Standardhintergrundfarbe für aktive Registerkarten aus der [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)Methode.  
   
 ##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor  
  Legt die Textfarbe für aktive Registerkarten fest.  
@@ -1855,10 +1855,10 @@ virtual void SetActiveTabTextColor(COLORREF clr);
   
 ### <a name="parameters"></a>Parameter  
  [in] *Clr*  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, der die neue Farbe des Textes angibt.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) Parameter, der die neue Farbe des Textes angibt.  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßig erhält das Framework die Textfarbe aus [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371). Diese Standardfarbe überschreiben, indem die `SetActiveTabTextColor` Methode.  
+ Standardmäßig erhält das Framework die Textfarbe aus [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371). Diese Standardfarbe überschreiben, indem die `SetActiveTabTextColor` Methode.  
   
 ##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors  
  Legt die Farben des Registerkarten-Steuerelements, das Framework verwendet, automatische Färbung aktiviert.  
@@ -1929,7 +1929,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
  Die Breite jedes Bilds in Pixel.  
   
  [in] *ClrTransp*  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, der die transparente Farbe des Bilds angibt.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) Parameter, der die transparente Farbe des Bilds angibt.  
   
  [in] *hImageList*  
  Ein Handle für einen vorab geladenen Bildliste.  
@@ -2114,7 +2114,7 @@ virtual BOOL SetTabTextColor(
  Der nullbasierte Index der Registerkarte.  
   
  [in] *Farbe*  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, der die neue Farbe des Textes angibt.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) Parameter, der die neue Farbe des Textes angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL Wenn erfolgreich; andernfalls 0.  

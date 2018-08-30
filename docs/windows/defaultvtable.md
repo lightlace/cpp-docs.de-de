@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5bbbc225e4fee1aba380694fc3b39a7f59e1a294
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4cec0e02a6a61638f8aed1b4015fea065cbfd343
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611485"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207687"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
@@ -43,7 +43,7 @@ Die angegebene-Schnittstelle, die Sie die Standard-Vtable für das COM-Objekt m�
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Defaultvtable** C++-Attribut hat die gleiche Funktionalität wie die [Defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) MIDL-Attribut.
+Die **Defaultvtable** C++-Attribut hat die gleiche Funktionalität wie die [Defaultvtable](/windows/desktop/Midl/defaultvtable) MIDL-Attribut.
 
 ## <a name="example"></a>Beispiel
 

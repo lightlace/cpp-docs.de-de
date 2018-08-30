@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b5cff88aab5a4b069d96808755ce92d61f32fff
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9b739a2c4388877bc463a6345dcfe347d8638b27
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571873"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206371"
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject-Klasse
 Diese Klasse implementiert `IUnknown` für ein Objekt zusammengesetzten oder aggregiert.  
@@ -76,7 +76,7 @@ class CComPolyObject : public IUnknown,
 |[CComPolyObject::m_contained](#m_contained)|Delegaten `IUnknown` an die äußere unbekannte aufgerufen wird, wenn das Objekt aggregiert wird, oder um die `IUnknown` des Objekts, wenn das Objekt nicht aggregiert werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CComPolyObject` implementiert [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) für ein Objekt zusammengesetzten oder aggregiert.  
+ `CComPolyObject` implementiert [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) für ein Objekt zusammengesetzten oder aggregiert.  
   
  Wenn eine Instanz des `CComPolyObject` erstellt wird, wird den Wert des äußeren unbekannt aktiviert ist. Wenn auf NULL, `IUnknown` für einen zusammengesetzten Objekt implementiert wird. Wenn die äußere unbekannte ungleich NULL ist `IUnknown` wird für ein zusammengesetztes Objekt implementiert.  
   

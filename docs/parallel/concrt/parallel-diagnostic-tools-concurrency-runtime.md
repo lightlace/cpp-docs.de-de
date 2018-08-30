@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb41f9630e22d9067743b106aed49ea9c51ee4ae
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6243bd4167ec640553a6cb55d7d6f67319315e19
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538302"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217345"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Diagnosetools für die parallele Ausführung (Concurrency Runtime)
 Visual Studio bietet umfangreiche Unterstützung für das Debuggen und die Profilerstellung in Multithreadanwendungen.  
@@ -31,7 +31,7 @@ Visual Studio bietet umfangreiche Unterstützung für das Debuggen und die Profi
  Die Profilerstellungstools bieten drei Datenansichten, die grafischer, tabellarischer und numerische Informationen zur Interaktion einer Multithreadanwendung mit sich selbst und mit anderen Programmen anzeigen. Die Ansichten ermöglichen es Ihnen, schnell Problembereiche zu identifizieren, und rufen zum Navigieren zwischen den Punkten auf der grafischen angezeigt, auf dem Stapel, rufen Websites und Quellcode. Weitere Informationen finden Sie unter [Parallelitätsschnellansicht](/visualstudio/profiling/concurrency-visualizer).  
   
 ## <a name="event-tracing"></a>Ereignisablaufverfolgung  
- Die Concurrency Runtime [Ereignisablaufverfolgung für Windows-Ereignis](http://msdn.microsoft.com/library/windows/desktop/bb968803) (ETW), um Instrumentation-Tools, z. B. den Profiler zu benachrichtigen, wenn verschiedene Ereignisse eintreten. Diese Ereignisse enthalten, wenn ein Planer aktiviert oder deaktiviert wird, wenn ein Kontext beginnt, beendet, blockiert, Blockierung aufgehoben wird oder ergibt und bei ein paralleler Algorithmus beginnt oder endet.  
+ Die Concurrency Runtime [Ereignisablaufverfolgung für Windows-Ereignis](/windows/desktop/ETW/event-tracing-portal) (ETW), um Instrumentation-Tools, z. B. den Profiler zu benachrichtigen, wenn verschiedene Ereignisse eintreten. Diese Ereignisse enthalten, wenn ein Planer aktiviert oder deaktiviert wird, wenn ein Kontext beginnt, beendet, blockiert, Blockierung aufgehoben wird oder ergibt und bei ein paralleler Algorithmus beginnt oder endet.  
   
  Tools, z. B. die [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer) nutzen diese Funktionalität; aus diesem Grund, Sie in der Regel müssen nicht direkt mit diesen Ereignissen arbeiten. Diese Ereignisse sind jedoch hilfreich, wenn Sie einen benutzerdefinierten Profiler entwickeln oder wenn Sie Ereignis-Ablaufverfolgungstools wie z. B. [Xperf](http://go.microsoft.com/fwlink/p/?linkid=160628).  
   

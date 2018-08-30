@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6749c62a5d8de0bd1da3a5d619a85a0ec874a21a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e72c7ea788085f25dc2a4ec1b2f8682df9e20b25
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338417"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209126"
 ---
 # <a name="cgdiobject-class"></a>CGdiObject-Klasse
 Stellt eine Basisklasse für verschiedene Arten von Objekten der Windows GDI (Graphics Device Interface) wie Bitmaps, Bereiche, Pinsel, Stifte, Paletten und Schriftwarten bereit.  
@@ -139,7 +139,7 @@ BOOL CreateStockObject(int nIndex);
   
 ### <a name="parameters"></a>Parameter  
  *nIndex*  
- Eine Konstante, die den Typ des gewünschten Bestandsobjekt angibt. Der Parameter *FnObject* für [GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925) im Windows SDK für eine Beschreibung der entsprechenden Werte.  
+ Eine Konstante, die den Typ des gewünschten Bestandsobjekt angibt. Der Parameter *FnObject* für [GetStockObject](/windows/desktop/api/wingdi/nf-wingdi-getstockobject) im Windows SDK für eine Beschreibung der entsprechenden Werte.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfalls null (0).  
@@ -230,14 +230,14 @@ int GetObject(
 |------------|-----------------|  
 |`CPen`|[LOGPEN](../../mfc/reference/logpen-structure.md)|  
 |`CBrush`|[LOGBRUSH](../../mfc/reference/logbrush-structure.md)|  
-|`CFont`|["LOGFONT"](http://msdn.microsoft.com/library/windows/desktop/dd145037)|  
+|`CFont`|["LOGFONT"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)|  
 |`CBitmap`|[BITMAP](../../mfc/reference/bitmap-structure.md)|  
 |`CPalette`|WORD|  
 |`CRgn`|Nicht unterstützt|  
   
  Wenn das Objekt ist ein `CBitmap` Objekt `GetObject` gibt nur die Breite, Höhe und Farbe Formatierungsinformationen der Bitmap. Die eigentlichen Bits können abgerufen werden, mithilfe von [CBitmap::GetBitmapBits](../../mfc/reference/cbitmap-class.md#getbitmapbits).  
   
- Wenn das Objekt ist ein `CPalette` Objekt `GetObject` Ruft ein Wort, das die Anzahl der Einträge in der Palette angibt. Ruft die Funktion nicht die [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) Struktur, die die Palette definiert. Eine Anwendung erhalten Sie Informationen zur Paletteneinträge durch Aufrufen von [CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries).  
+ Wenn das Objekt ist ein `CPalette` Objekt `GetObject` Ruft ein Wort, das die Anzahl der Einträge in der Palette angibt. Ruft die Funktion nicht die [LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette) Struktur, die die Palette definiert. Eine Anwendung erhalten Sie Informationen zur Paletteneinträge durch Aufrufen von [CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries).  
   
 ##  <a name="getobjecttype"></a>  CGdiObject::GetObjectType  
  Ruft den Typ der GDI-Objekt ab.  

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e77284d36a7290f5d9070bb355a8affae9ba864f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 186a6705649cee7095d3d2e4c4bb237498fdcea0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336860"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221270"
 ---
 # <a name="exception-processing"></a>Ausnahmeverarbeitung
 Wenn ein Programm ausgeführt wird, kann eine Reihe von nicht ordnungsgemäßen Bedingungen und dem Namen "Ausnahmen" Fehler auftreten. Dazu können gehören, auf unzureichenden Arbeitsspeicher aufgrund von Zuordnungsfehlern der Ressource und Fehler, um Dateien zu suchen.  
@@ -350,7 +350,7 @@ void AfxThrowMemoryException();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion aufrufen, wenn Aufrufe an die zugrunde liegende System-speicherzuordnungen (z. B. **"malloc"** und [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows-Funktion) fehl. Sie müssen nicht für nenne **neue** da **neue** löst eine Speicherausnahme automatisch, wenn die speicherbelegung fehlschlägt.  
+ Diese Funktion aufrufen, wenn Aufrufe an die zugrunde liegende System-speicherzuordnungen (z. B. **"malloc"** und [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) Windows-Funktion) fehl. Sie müssen nicht für nenne **neue** da **neue** löst eine Speicherausnahme automatisch, wenn die speicherbelegung fehlschlägt.  
   
 ### <a name="requirements"></a>Anforderungen  
   **Header** afx.h  
@@ -444,7 +444,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
  Handle für ein Ergebniscode, der den Grund für die Ausnahme angibt.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Version, die ein HRESULT als Argument akzeptiert konvertiert, Ergebnis: in die entsprechende SCODE an. Weitere Informationen zu HRESULT und SCODE, finden Sie unter [Struktur von COM-Fehlercodes](http://msdn.microsoft.com/library/windows/desktop/ms690088) im Windows SDK.  
+ Die Version, die ein HRESULT als Argument akzeptiert konvertiert, Ergebnis: in die entsprechende SCODE an. Weitere Informationen zu HRESULT und SCODE, finden Sie unter [Struktur von COM-Fehlercodes](/windows/desktop/com/structure-of-com-error-codes) im Windows SDK.  
   
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdao.h  

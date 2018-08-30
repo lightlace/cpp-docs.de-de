@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 050b11050cc280fc6d3aa8900487442bd723a57f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fda9cab73088746ec64caf482f9e606d713eaa4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592772"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222742"
 ---
 # <a name="delegates-ccx"></a>Delegaten (C++/CX)
 Die `delegate` Schlüsselwort wird verwendet, um einen Verweistyp deklarieren, die die Windows-Runtime-Entsprechung eines Funktionsobjekts in Standard-c++ ist. Eine Delegatdeklaration ähnlich einer Funktionssignatur; sie gibt den Rückgabetyp und die Parametertypen an, über die die umschlossene Funktion verfügen muss. Dies ist eine benutzerdefinierte Delegatdeklaration:  
@@ -29,7 +29,7 @@ Die `delegate` Schlüsselwort wird verwendet, um einen Verweistyp deklarieren, d
 event PrimeFoundHandler^ primeFoundEvent;  
 ```  
   
- Verwenden Sie beim Deklarieren von Delegaten, die verfügbar gemacht werden für Clients über die anwendungsbinärdateischnittstelle der Windows-Runtime, [Windows::Foundation::TypedEventHandler\<TSender, TResult >](http://msdn.microsoft.com/library/windows/apps/br225997.aspx). Dieser Delegat besitzt vordefinierte Proxy- und Stubbinärdateien, die es ermöglichen, dass er von JavaScript-Clients verwendet wird.  
+ Verwenden Sie beim Deklarieren von Delegaten, die verfügbar gemacht werden für Clients über die anwendungsbinärdateischnittstelle der Windows-Runtime, [Windows::Foundation::TypedEventHandler\<TSender, TResult >](https://msdn.microsoft.com/library/windows/apps/br225997.aspx). Dieser Delegat besitzt vordefinierte Proxy- und Stubbinärdateien, die es ermöglichen, dass er von JavaScript-Clients verwendet wird.  
   
 ## <a name="consuming-delegates"></a>Verwenden von Delegaten  
  Wenn Sie eine universelle Windows-Plattform-app erstellen, arbeiten Sie häufig mit einem Delegaten als Typ eines Ereignisses, das eine Windows-Runtime-Klasse verfügbar macht. Um ein Ereignis zu abonnieren, erstellen Sie eine Instanz des Delegattyps durch Angabe einer Funktion (oder Lambda), die mit der Delegatsignatur übereinstimmt. Verwenden Sie dann den `+=` -Operator, um das Delegatobjekt an den Ereignismember in der Klasse zu übergeben. Dies wird als Abonnieren des Ereignisses bezeichnet. Wenn die Klasseninstanz das Ereignis auslöst, wird Ihre Funktion aufgerufen, zusammen mit allen anderen Handlern, die von Ihrem Objekt oder anderen Objekten hinzugefügt wurden.  

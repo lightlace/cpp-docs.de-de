@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1365e950077a65150d8f71fd640f69d1750068c9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 87c8cb1bbd007022a5c01b2aaacdb0233a59068f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462309"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220787"
 ---
 # <a name="standard-conversions"></a>Standardkonvertierungen
-Die Programmiersprache C++ definiert Konvertierungen zwischen ihren grundlegenden Typen. Sie definiert auch Konvertierungen für Zeiger- und Verweistypen sowie und für abgeleitete "pointer-to-member"-Typen. Diese Konvertierungen werden als Standardkonvertierungen bezeichnet. (Weitere Informationen zu Typen, Standardtypen und abgeleiteten Typen finden Sie unter [Typen](http://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
+Die Programmiersprache C++ definiert Konvertierungen zwischen ihren grundlegenden Typen. Sie definiert auch Konvertierungen für Zeiger- und Verweistypen sowie und für abgeleitete "pointer-to-member"-Typen. Diese Konvertierungen werden als Standardkonvertierungen bezeichnet. (Weitere Informationen zu Typen, Standardtypen und abgeleiteten Typen finden Sie unter [Typen](https://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
   
  In diesem Abschnitt werden die folgenden Standardkonvertierungen erläutert:  
   
@@ -210,7 +210,7 @@ Vererbungsdiagramm für Abbildung der Basisklasse-Barrierefreiheit
 ||Protected|Ja|  
 ||Öffentlich|Ja|  
   
- Im zweiten Fall, in dem ein Zeiger auf eine Klasse in einen Zeiger auf eine Basisklasse konvertiert werden kann, wird eine explizite Typkonvertierung verwendet. (Finden Sie unter [Ausdrücke mit expliziten Typkonvertierungen](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) für Weitere Informationen zu expliziten typkonvertierungen.)  
+ Im zweiten Fall, in dem ein Zeiger auf eine Klasse in einen Zeiger auf eine Basisklasse konvertiert werden kann, wird eine explizite Typkonvertierung verwendet. (Finden Sie unter [Ausdrücke mit expliziten Typkonvertierungen](https://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) für Weitere Informationen zu expliziten typkonvertierungen.)  
   
  Das Ergebnis einer solchen Konvertierung ist ein Zeiger auf das "Unterobjekt", den Teil des Objekts, der vollständig von der Basisklasse beschrieben wird.  
   
@@ -249,7 +249,7 @@ int main()
  Ein Zeiger auf eine Funktion konvertiert werden kann, Typ `void *`, wenn Typ `void *` ist groß genug, um diesen Zeiger aufzunehmen.  
   
 ### <a name="pointer-to-void"></a>Zeiger auf void  
- Zeiger vom Typ **"void"** konvertiert werden kann, auf die Zeiger in einen anderen Typ, aber nur mit einer expliziten Typumwandlung (im Gegensatz zu c). (Finden Sie unter [Ausdrücke mit expliziten Typkonvertierungen](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) für Weitere Informationen zu Typumwandlungen.) Ein Zeiger auf einen beliebigen Typ kann implizit konvertiert werden, um einen Zeiger auf den Typ **"void"**. Ein Zeiger auf ein unvollständiges Objekt eines Typs konvertiert werden kann, auf einen Zeiger auf **"void"** (implizit) und zurück (explizit). Das Ergebnis einer solchen Konvertierung entspricht dem Wert des ursprünglichen Zeigers. Ein Objekt gilt als unvollständig, wenn es zwar deklariert ist, die Informationen zur Bestimmung seiner Größe oder Basisklasse jedoch unzureichend sind.  
+ Zeiger vom Typ **"void"** konvertiert werden kann, auf die Zeiger in einen anderen Typ, aber nur mit einer expliziten Typumwandlung (im Gegensatz zu c). (Finden Sie unter [Ausdrücke mit expliziten Typkonvertierungen](https://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) für Weitere Informationen zu Typumwandlungen.) Ein Zeiger auf einen beliebigen Typ kann implizit konvertiert werden, um einen Zeiger auf den Typ **"void"**. Ein Zeiger auf ein unvollständiges Objekt eines Typs konvertiert werden kann, auf einen Zeiger auf **"void"** (implizit) und zurück (explizit). Das Ergebnis einer solchen Konvertierung entspricht dem Wert des ursprünglichen Zeigers. Ein Objekt gilt als unvollständig, wenn es zwar deklariert ist, die Informationen zur Bestimmung seiner Größe oder Basisklasse jedoch unzureichend sind.  
   
  Ein Zeiger auf ein Objekt, das nicht ist **const** oder **flüchtige** implizit in einen Zeiger vom Typ konvertiert werden kann `void *`.  
   

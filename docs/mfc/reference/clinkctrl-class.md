@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a384f79944ace90fcb289511e18297de7a7da233
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 422326f03674c541c4fdc45529bee45bf0ff5df6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208009"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201003"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-SysLink-Steuerelements bereit.  
@@ -91,7 +91,7 @@ class CLinkCtrl : public CWnd
   
  Dieses Steuerelement (und somit die `CLinkCtrl` Klasse) ist nur für Programme unter Windows XP und höher verfügbar.  
   
- Weitere Informationen finden Sie unter [SysLink-Steuerelement](http://msdn.microsoft.com/library/windows/desktop/bb760706) im Windows SDK.  
+ Weitere Informationen finden Sie unter [SysLink-Steuerelement](/windows/desktop/Controls/syslink-overview) im Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -132,10 +132,10 @@ virtual BOOL Create(DWORD dwStyle,
   
 ### <a name="parameters"></a>Parameter  
  *lpszLinkMarkup*  
- Zeiger auf eine 0 (null) endende Zeichenfolge, die anzuzeigenden Text gekennzeichnet enthält. Weitere Informationen finden Sie im Abschnitt "Markup and Link Access" im Thema [Übersicht der SysLink-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
+ Zeiger auf eine 0 (null) endende Zeichenfolge, die anzuzeigenden Text gekennzeichnet enthält. Weitere Informationen finden Sie im Abschnitt "Markup and Link Access" im Thema [Übersicht der SysLink-Steuerelemente](/windows/desktop/Controls/syslink-overview).  
   
  *dwStyle*  
- Gibt die Link-Steuerelement-Stil. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen. Finden Sie unter [allgemeinen Stile von Listensteuerelementen](http://msdn.microsoft.com/library/windows/desktop/bb775498) in die `Windows SDK` für Weitere Informationen.  
+ Gibt die Link-Steuerelement-Stil. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen. Finden Sie unter [allgemeinen Stile von Listensteuerelementen](/windows/desktop/Controls/common-control-styles) in die `Windows SDK` für Weitere Informationen.  
   
  *Rect*  
  Gibt an, den des Linksteuerelements Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](../../mfc/reference/rect-structure1.md) Struktur.  
@@ -186,13 +186,13 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
   
 ### <a name="parameters"></a>Parameter  
  *lpszLinkMarkup*  
- Zeiger auf eine 0 (null) endende Zeichenfolge, die anzuzeigenden Text gekennzeichnet enthält. Weitere Informationen finden Sie im Abschnitt "Markup and Link Access" im Thema [Übersicht der SysLink-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
+ Zeiger auf eine 0 (null) endende Zeichenfolge, die anzuzeigenden Text gekennzeichnet enthält. Weitere Informationen finden Sie im Abschnitt "Markup and Link Access" im Thema [Übersicht der SysLink-Steuerelemente](/windows/desktop/Controls/syslink-overview).  
   
  *dwExStyle*  
- Gibt den erweiterten Stil des Linksteuerelements an. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ Gibt den erweiterten Stil des Linksteuerelements an. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
   
  *dwStyle*  
- Gibt die Link-Steuerelement-Stil. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen. Weitere Informationen finden Sie unter [allgemeinen Stile von Listensteuerelementen](http://msdn.microsoft.com/library/windows/desktop/bb775498) im Windows SDK.  
+ Gibt die Link-Steuerelement-Stil. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen. Weitere Informationen finden Sie unter [allgemeinen Stile von Listensteuerelementen](/windows/desktop/Controls/common-control-styles) im Windows SDK.  
   
  *Rect*  
  Gibt an, den des Linksteuerelements Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](../../mfc/reference/rect-structure1.md) Struktur.  
@@ -222,7 +222,7 @@ int GetIdealHeight() const;
  Die optimale Höhe des Steuerelements in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [LM_GETIDEALHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb760716), wie im Windows SDK beschrieben.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [LM_GETIDEALHEIGHT](/windows/desktop/Controls/lm-getidealheight), wie im Windows SDK beschrieben.  
   
 ##  <a name="getidealsize"></a>  CLinkCtrl::GetIdealSize  
  Berechnet die bevorzugte Höhe der Text des Links für das aktuelle Linksteuerelement, abhängig von der angegebenen Breite des Links.  
@@ -238,7 +238,7 @@ int GetIdealSize(
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
 |[in] *CxMaxWidth*|Die maximale Breite des Links in Pixeln.|  
-|[out] \* *pSize*|Ein Zeiger auf ein Windows [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur. Bei der Rückgabe dieser Methode die *cy* Mitglied der `SIZE` Struktur enthält die Höhe des idealen Link-Text für die Breite der Link-Text, der angegeben wird *CxMaxWidth*. Die *Cx* Member der Struktur enthält die Breite der Link-Text, der tatsächlich benötigt wird.|  
+|[out] \* *pSize*|Ein Zeiger auf ein Windows [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur. Bei der Rückgabe dieser Methode die *cy* Mitglied der `SIZE` Struktur enthält die Höhe des idealen Link-Text für die Breite der Link-Text, der angegeben wird *CxMaxWidth*. Die *Cx* Member der Struktur enthält die Breite der Link-Text, der tatsächlich benötigt wird.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die bevorzugte Höhe der Text des Links in Pixeln. Der Rückgabewert ist identisch mit dem Wert, der die *cy* Mitglied der `SIZE` Struktur.  
@@ -246,7 +246,7 @@ int GetIdealSize(
 ### <a name="remarks"></a>Hinweise  
  Ein Beispiel für die `GetIdealSize` -Methode, siehe das Beispiel in [CLinkCtrl::Create](#create).  
   
- Diese Methode sendet die [LM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760718) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [LM_GETIDEALSIZE](/windows/desktop/Controls/lm-getidealsize) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="getitem"></a>  CLinkCtrl::GetItem  
  Ruft ab, die Status und Attribute eines Elements der Link-Steuerelement.  
@@ -257,13 +257,13 @@ BOOL GetItem(PLITEM pItem) const;
   
 ### <a name="parameters"></a>Parameter  
  *pItem*  
- Ein Zeiger auf eine [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) -Struktur mit Informationen zu erhalten.  
+ Ein Zeiger auf eine [LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem) -Struktur mit Informationen zu erhalten.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt "true" bei Erfolg bei "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720), wie im Windows SDK beschrieben.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [LM_GETITEM](/windows/desktop/Controls/lm-getitem), wie im Windows SDK beschrieben.  
   
 ##  <a name="getitemid"></a>  CLinkCtrl::GetItemID  
  Ruft die ID des Elements eine Link-Steuerelement ab.  
@@ -299,7 +299,7 @@ BOOL GetItemID(
 >  Diese Funktion gibt auch FALSE zurück, wenn der Puffer des *SzID oder StrID* MAX_LINKID_TEXT kleiner ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Ruft die ID des Elements einen bestimmten Link-Steuerelement ab. Weitere Informationen finden Sie auf die Win32-Meldung [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) im Windows SDK.  
+ Ruft die ID des Elements einen bestimmten Link-Steuerelement ab. Weitere Informationen finden Sie auf die Win32-Meldung [LM_GETITEM](/windows/desktop/Controls/lm-getitem) im Windows SDK.  
   
 ##  <a name="getitemstate"></a>  CLinkCtrl::GetItemState  
  Ruft den Zustand des Elements die Link-Steuerelement ab.  
@@ -319,13 +319,13 @@ BOOL GetItemState(
  Der Wert des Elements angegebenen Zustand.  
   
  *stateMask*  
- Die Kombination von Flags, die der, der abzurufende Zustandselement beschreiben. Eine Liste von Werten, finden Sie unter der Beschreibung des der `state` Element in der [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) Struktur. Zulässigen Elemente sind identisch mit denen innerhalb von `state`.  
+ Die Kombination von Flags, die der, der abzurufende Zustandselement beschreiben. Eine Liste von Werten, finden Sie unter der Beschreibung des der `state` Element in der [LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem) Struktur. Zulässigen Elemente sind identisch mit denen innerhalb von `state`.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt "true" bei Erfolg bei "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Ruft den Wert des Elements angegebenen Status einen bestimmten Link-Steuerelement ein Element. Weitere Informationen finden Sie auf die Win32-Meldung [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) im Windows SDK.  
+ Ruft den Wert des Elements angegebenen Status einen bestimmten Link-Steuerelement ein Element. Weitere Informationen finden Sie auf die Win32-Meldung [LM_GETITEM](/windows/desktop/Controls/lm-getitem) im Windows SDK.  
   
 ##  <a name="getitemurl"></a>  CLinkCtrl::GetItemUrl  
  Ruft die URL, die durch die Link-Steuerelement ein Element dargestellt wird.  
@@ -361,7 +361,7 @@ BOOL GetItemUrl(
 >  Diese Funktion gibt auch FALSE zurück, wenn der Puffer des *SzUrl oder StrUrl* MAX_LINKID_TEXT kleiner ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Ruft die URL, die durch den angegebenen Link-Steuerelement ein Element dargestellt wird. Weitere Informationen finden Sie auf die Win32-Meldung [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) im Windows SDK.  
+ Ruft die URL, die durch den angegebenen Link-Steuerelement ein Element dargestellt wird. Weitere Informationen finden Sie auf die Win32-Meldung [LM_GETITEM](/windows/desktop/Controls/lm-getitem) im Windows SDK.  
   
 ##  <a name="hittest"></a>  CLinkCtrl::HitTest  
  Bestimmt, ob der Benutzer den angegebenen Link geklickt hat.  
@@ -378,7 +378,7 @@ BOOL HitTest(PLHITTESTINFO phti) const;
  Gibt "true" bei Erfolg bei "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [LM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb760722), wie im Windows SDK beschrieben.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [LM_HITTEST](/windows/desktop/Controls/lm-hittest), wie im Windows SDK beschrieben.  
   
 ##  <a name="setitem"></a>  CLinkCtrl::SetItem  
  Legt fest, die Status und Attribute eines Elements der Link-Steuerelement.  
@@ -389,13 +389,13 @@ BOOL SetItem(PLITEM pItem);
   
 ### <a name="parameters"></a>Parameter  
  *pItem*  
- Ein Zeiger auf eine [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) Struktur mit Informationen über das festlegen.  
+ Ein Zeiger auf eine [LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem) Struktur mit Informationen über das festlegen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt "true" bei Erfolg bei "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724), wie im Windows SDK beschrieben.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [LM_SETITEM](/windows/desktop/Controls/lm-setitem), wie im Windows SDK beschrieben.  
   
 ##  <a name="setitemid"></a>  CLinkCtrl::SetItemID  
  Ruft die ID des Elements eine Link-Steuerelement ab.  
@@ -417,7 +417,7 @@ BOOL SetItemID(
  Gibt "true" bei Erfolg bei "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Legt die ID des Elements einen bestimmten Link-Steuerelement fest. Weitere Informationen finden Sie auf die Win32-Meldung [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) im Windows SDK.  
+ Legt die ID des Elements einen bestimmten Link-Steuerelement fest. Weitere Informationen finden Sie auf die Win32-Meldung [LM_SETITEM](/windows/desktop/Controls/lm-setitem) im Windows SDK.  
   
 ##  <a name="setitemstate"></a>  CLinkCtrl::SetItemState  
  Ruft den Zustand des Elements die Link-Steuerelement ab.  
@@ -437,13 +437,13 @@ BOOL SetItemState(
  Der Wert des Elements angegebenen Status festgelegt wird.  
   
  *stateMask*  
- Kombination von Flags, die beschreiben die Status-Element, das festgelegt wird. Eine Liste von Werten, finden Sie unter der Beschreibung des der `state` Element in der [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) Struktur. Zulässigen Elemente sind identisch mit denen innerhalb von `state`.  
+ Kombination von Flags, die beschreiben die Status-Element, das festgelegt wird. Eine Liste von Werten, finden Sie unter der Beschreibung des der `state` Element in der [LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem) Struktur. Zulässigen Elemente sind identisch mit denen innerhalb von `state`.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt "true" bei Erfolg bei "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Legt den Wert des Elements angegebenen Status einen bestimmten Link-Steuerelement ein Element. Weitere Informationen finden Sie auf die Win32-Meldung [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) im Windows SDK.  
+ Legt den Wert des Elements angegebenen Status einen bestimmten Link-Steuerelement ein Element. Weitere Informationen finden Sie auf die Win32-Meldung [LM_SETITEM](/windows/desktop/Controls/lm-setitem) im Windows SDK.  
   
 ##  <a name="setitemurl"></a>  CLinkCtrl::SetItemUrl  
  Legt fest, die URL, die durch die Link-Steuerelement ein Element dargestellt wird.  
@@ -465,7 +465,7 @@ BOOL SetItemUrl(
  Gibt "true" bei Erfolg bei "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Legt fest, die URL, die durch den angegebenen Link-Steuerelement ein Element dargestellt wird. Weitere Informationen finden Sie auf die Win32-Meldung [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) im Windows SDK.  
+ Legt fest, die URL, die durch den angegebenen Link-Steuerelement ein Element dargestellt wird. Weitere Informationen finden Sie auf die Win32-Meldung [LM_SETITEM](/windows/desktop/Controls/lm-setitem) im Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

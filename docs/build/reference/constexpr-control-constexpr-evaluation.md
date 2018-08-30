@@ -1,5 +1,5 @@
 ---
-title: -Constexpr (Steuerelement Constexpr evaluieren) | Microsoft Docs
+title: -Constexpr (Constexpr-Auswertung steuern) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/15/2017
 ms.technology:
@@ -19,47 +19,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f83f1d9a505ebc4c05ce4e367bb1e978d6a14b78
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 475702792686a3de8d1ae52bd9e40ef113c49da1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373958"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202573"
 ---
-# <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (Steuerelement Constexpr evaluieren)  
+# <a name="constexpr-control-constexpr-evaluation"></a>/ constexpr (Constexpr-Auswertung steuern)  
   
-Verwenden der **/constexpr** Compileroptionen in Steuerelementparameter für `constexpr` Auswertung zum Zeitpunkt der Kompilierung.  
+Verwenden der **/constexpr** Compileroptionen Steuerparameter für **"constexpr"** Auswertung zum Zeitpunkt der Kompilierung.  
   
 ## <a name="syntax"></a>Syntax  
   
-> /constexpr:Depth*N*  
-> /constexpr:Backtrace*N*  
-> /constexpr:Steps*N*  
+> **Depth**<em>N</em>  
+> **/ constexpr: Backtrace**<em>N</em>  
+> **/ constexpr: Steps**<em>N</em>  
   
 ## <a name="arguments"></a>Argumente  
   
-**Tiefe *** N*  
-Begrenzen der Tiefe von rekursiven `constexpr` Funktionsaufruf auf *N* Ebenen. Der Standardwert ist 512.  
+**Tiefe**<em>N</em>  
+Schränken Sie die Tiefe von rekursiven **"constexpr"** Funktionsaufruf auf *N* Ebenen. Der Standardwert ist 512.  
   
-**Backtrace *** N*  
-Anzeigen von bis zu *N* `constexpr` auswertungen in der Diagnose. Der Standard ist 10.  
+**Backtrace**<em>N</em>  
+Anzeigen von bis zu *N* **"constexpr"** auswertungen bei der Diagnose. Der Standard ist 10.  
   
-**Schritte *** N*  
-Beenden `constexpr` Auswertung nach *N* Schritte. Der Standardwert ist 100.000.  
+**Schritte**<em>N</em>  
+Beenden Sie **"constexpr"** Auswertung nach *N* Schritte. Der Standardwert ist 100.000.  
   
 ## <a name="remarks"></a>Hinweise  
   
-Die **/constexpr** Compileroptionen steuern kompilierzeitauswertung von `constexpr` Ausdrücke. Auswertung Schritte, Rekursionsebenen und Backtrace Tiefe werden gesteuert, um zu verhindern, dass den Compiler die Ausgaben zu viel Zeit für `constexpr` Auswertung. Weitere Informationen zu den `constexpr` Language-Element finden Sie unter [Constexpr (C++)](../../cpp/constexpr-cpp.md).  
+Die **/constexpr** Compileroptionen steuern kompilierzeitauswertung von **"constexpr"** Ausdrücke. Evaluierungsschritte, Rekursionsebenen und Backtrace Tiefe werden gesteuert, um zu verhindern, dass den Compiler Ausgaben zu viel Zeit für **"constexpr"** Auswertung. Weitere Informationen zu den **"constexpr"** Language-Element, finden Sie unter ["constexpr" (C++)](../../cpp/constexpr-cpp.md).  
 
-Die **/constexpr** Optionen sind ab Visual Studio 2015.  
+Die **/constexpr** Optionen sind verfügbar ab der in Visual Studio 2015.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1. Öffnen Sie das Projekt **Eigenschaftenseiten** (Dialogfeld).   
+1. Öffnen des Projekts **Eigenschaftenseiten** Dialogfeld.   
   
 2. Unter **Konfigurationseigenschaften**, erweitern Sie die **C/C++-** Ordner, und wählen Sie die **Befehlszeile** Eigenschaftenseite.  
   
-3. Geben Sie ein beliebiges **/constexpr** Compileroptionen die **Zusatzoptionen** Feld. Wählen Sie **OK** oder **übernehmen** zum Speichern der Änderungen.  
+3. Geben Sie ein beliebiges **/constexpr** Compileroptionen der **zusätzliche Optionen** Feld. Wählen Sie **OK** oder **übernehmen** zum Speichern der Änderungen.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   

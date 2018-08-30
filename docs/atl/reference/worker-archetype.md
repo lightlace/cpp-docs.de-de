@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75f9e974a2969fa817598556e3e043626a826970
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd9e665a83db3b824e03eb960baf54f296d15d4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881304"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204853"
 ---
 # <a name="worker-archetype"></a>Worker-Archetype
 Klassen, die entsprechen, den *Worker* Archetyp Geben Sie der Code zum Arbeitsaufgaben Prozess in der Warteschlange eines Threadpools.  
@@ -31,8 +31,8 @@ Klassen, die entsprechen, den *Worker* Archetyp Geben Sie der Code zum Arbeitsau
 |Methode|Beschreibung|  
 |------------|-----------------|  
 |[Initialize](#initialize)|Wird aufgerufen, um die Worker-Objekt zu initialisieren, bevor Anforderungen an übergeben werden [Execute](#execute).|  
-|[Führen Sie](#execute)|Wird aufgerufen, um eine Arbeitsaufgabe zu verarbeiten.|  
-|[Beenden](#terminate)|Wird aufgerufen, um die Worker-Objekt Initialisierung aufheben, nachdem auf alle Anforderungen übergeben wurden [Execute](#execute).|  
+|[Execute](#execute)|Wird aufgerufen, um eine Arbeitsaufgabe zu verarbeiten.|  
+|[Terminate](#terminate)|Wird aufgerufen, um die Worker-Objekt Initialisierung aufheben, nachdem auf alle Anforderungen übergeben wurden [Execute](#execute).|  
   
 |TypeDef|Beschreibung|  
 |-------------|-----------------|  
@@ -82,7 +82,7 @@ void Execute(
  Einen benutzerdefinierten Parameter, der verstanden werden, durch die Workerklasse. Auch an übergeben `WorkerArchetype::Initialize` und `Terminate`.  
   
  *"pOverlapped"*  
- Ein Zeiger auf die [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) Struktur verwendet, um die Warteschlange zu erstellen, auf welche Elemente wurden in die Warteschlange eingereiht.  
+ Ein Zeiger auf die [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) Struktur verwendet, um die Warteschlange zu erstellen, auf welche Elemente wurden in die Warteschlange eingereiht.  
   
 ## <a name="initialize"></a> WorkerArchetype::Initialize
 Wird aufgerufen, um die Worker-Objekt zu initialisieren, bevor Anforderungen an übergeben werden `WorkerArchetype::Execute`.  

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2c53ceb50057e789856aa8e7f67c9f788aa5a0a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: ebbb33a4f17f5b4d458c4add4d59040d698dd4b8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42541796"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222193"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Verwenden von accelerator-Objekten und accelerator_view-Objekten
 Können Sie die [Accelerator](../../parallel/amp/reference/accelerator-class.md) und ["accelerator_view"](../../parallel/amp/reference/accelerator-view-class.md) Klassen an das Gerät oder Emulator C++ AMP-Code ausgeführt. Ein System kann über mehrere Geräte oder Emulatoren verfügen, die sich im Hinblick auf die Größe des Arbeitsspeichers, Unterstützung von freigegebenem Arbeitsspeicher, Debugunterstützung oder Unterstützung doppelter Genauigkeit unterscheiden. C++ Accelerated Massive Parallelism (C++ AMP) stellt APIs bereit, die Sie verwenden können, um die verfügbaren Zugriffstasten zu prüfen, eine als Standardvorlage festzulegen, mehrere accelerator_view-Objekte für mehrere Aufrufe von parallel_for_each festzulegen und spezielle Debugaufgaben auszuführen.  
@@ -184,7 +184,7 @@ Die Gerätepfade von drei speziellen Zugriffstasten sind als Eigenschaften der `
   
 ## <a name="interoperability"></a>Interoperabilität  
  
-Die C++ AMP-Laufzeit unterstützt Interoperabilität zwischen den `accelerator_view` -Klasse und der Direct3D [ID3D11Device-Schnittstelle](http://go.microsoft.com/fwlink/p/?linkId=248488). Die [Create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) -Methode übernimmt eine `IUnknown` -Schnittstelle und gibt eine `accelerator_view` Objekt. Die [Get_device](http://msdn.microsoft.com/8194125e-8396-4d62-aa8a-65831dea8439) -Methode übernimmt eine `accelerator_view` Objekt und gibt eine `IUknown` Schnittstelle.  
+Die C++ AMP-Laufzeit unterstützt Interoperabilität zwischen den `accelerator_view` -Klasse und der Direct3D [ID3D11Device-Schnittstelle](http://go.microsoft.com/fwlink/p/?linkId=248488). Die [Create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) -Methode übernimmt eine `IUnknown` -Schnittstelle und gibt eine `accelerator_view` Objekt. Die [Get_device](https://msdn.microsoft.com/8194125e-8396-4d62-aa8a-65831dea8439) -Methode übernimmt eine `accelerator_view` Objekt und gibt eine `IUknown` Schnittstelle.  
   
 ## <a name="see-also"></a>Siehe auch  
  

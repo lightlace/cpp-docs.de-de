@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15bddcf3d94935f56fa2e23b6ebd0398ed379c54
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 88cf46d6352f0f58a91f4e5571006090ec693c42
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569848"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215697"
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
@@ -61,11 +61,11 @@ Eine vorhandener Dateideskriptor.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Betriebssystem Dateihandle zurück, wenn *fd* gültig ist. Ansonsten wird der ungültige Parameterhandler, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, aufgerufen. Diese Funktion gibt zurück, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **INVALID_HANDLE_VALUE** (-1) und legt **Errno** auf **EBADF**, der angibt, eines ungültiges Dateihandle. Um eine compilerwarnung zu vermeiden, wenn das Ergebnis in Routinen verwendet wird, die ein Win32-Dateihandle zu erwarten, wandeln Sie sie in einem **BEHANDELN** Typ.
+Gibt einen Betriebssystem-Dateihandle zurück, wenn *fd* gültig ist. Ansonsten wird der ungültige Parameterhandler, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, aufgerufen. Diese Funktion gibt zurück, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **INVALID_HANDLE_VALUE** (-1) und legt **Errno** zu **EBADF**, der angibt, eines ungültigen Dateihandles. Um eine compilerwarnung zu vermeiden, wenn das Ergebnis in Routinen verwendet wird, die ein Win32-Dateihandle zu erwarten, wandeln Sie sie in einem **BEHANDELN** Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Um eine Datei zu schließen, deren Dateihandle des Betriebssystems (BS) erhalten, indem Sie **_get_osfhandle**, rufen Sie [_close](close.md) auf den Dateideskriptor *fd*. Rufen Sie nicht **CloseHandle** für den Rückgabewert dieser Funktion. Das zugrunde liegende Betriebssystem-Dateihandle ist im Besitz der *fd* Dateideskriptor und wird geschlossen, wenn [_close](close.md) heißt auf *fd*. Wenn der Dateideskriptor Besitz ist ein **Datei \***  Stream und anschließend durch Aufrufen [Fclose](fclose-fcloseall.md) darauf **Datei \***  Stream schließt sowohl den Dateideskriptor und das zugrunde liegende Betriebssystem-Dateihandle. Rufen Sie in diesem Fall nicht [_close](close.md) auf den Dateideskriptor.
+Um eine Datei zu schließen, dessen Betriebssystem (OS)-Datei-Handle, indem abgerufen wird **_get_osfhandle**, rufen Sie [_close](close.md) auf den Dateideskriptor *fd*. Rufen Sie keine **"CloseHandle"** für den Rückgabewert dieser Funktion. Das zugrunde liegende Betriebssystem-Dateihandle ist im Besitz der *fd* Dateideskriptor und wird geschlossen, wenn [_close](close.md) heißt auf *fd*. Wenn der Dateideskriptor Besitz ist eine `FILE *` Stream, rufen Sie dann [Fclose](fclose-fcloseall.md) , `FILE *` Stream geschlossen wird, sowohl der Dateideskriptor und das zugrunde liegende Betriebssystem-Dateihandle. Rufen Sie in diesem Fall nicht [_close](close.md) auf den Dateideskriptor.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb8dd6fbb4cbbcea6e452afadff5b0c0e081d34e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ff3bc9ea331be6c25be80b21c14a309d47718c8e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339409"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217332"
 ---
 # <a name="cdialog-class"></a>CDialog-Klasse
 Die Basisklasse für die Anzeige von Dialogfeldern auf dem Bildschirm verwendet.  
@@ -115,7 +115,7 @@ class CDialog : public CWnd
   
  Um ein modales Dialogfeld erstellen möchten, erstellen Sie ein Objekt im Stapel mithilfe des Konstruktors für die Dialogfeldklasse abgeleiteten, und rufen Sie anschließend `DoModal` um das Dialogfeld und dessen Steuerelemente zu erstellen. Wenn Sie ein nicht modales Dialogfeld erstellen möchten, rufen Sie `Create` im Konstruktor der Dialogfeldklasse.  
   
- Sie können auch eine Vorlage im Speicher erstellen, mit einem [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Daten strukturieren, wie im Windows SDK beschrieben. Wenn Sie erstellt haben, eine `CDialog` Objekt, rufen Sie [CreateIndirect](#createindirect) ein ohne Modus zu erstellen (Dialogfeld), oder rufen [InitModalIndirect](#initmodalindirect) und [DoModal](#domodal) zum Erstellen eines modales Das Dialogfeld.  
+ Sie können auch eine Vorlage im Speicher erstellen, mit einem [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) Daten strukturieren, wie im Windows SDK beschrieben. Wenn Sie erstellt haben, eine `CDialog` Objekt, rufen Sie [CreateIndirect](#createindirect) ein ohne Modus zu erstellen (Dialogfeld), oder rufen [InitModalIndirect](#initmodalindirect) und [DoModal](#domodal) zum Erstellen eines modales Das Dialogfeld.  
   
  Die datenzuordnung Dialogdatenaustausch und-Validierung hat eine Überschreibung der `CWnd::DoDataExchange` , die die neue Dialogfeldklasse hinzugefügt wird. Finden Sie unter den [DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange) -Memberfunktion im `CWnd` Weitere Informationen zu den Dialogdatenaustausch und-Validierung-Funktionalität.  
   
@@ -220,7 +220,7 @@ virtual BOOL Create(
   
  Die `Create` Memberfunktion gibt sofort, nachdem Sie das Dialogfeld erstellt.  
   
- Verwenden Sie WS_VISIBLE-Stil in der Vorlage im Dialogfeld aus, wenn das Dialogfeld angezeigt werden soll, wenn das übergeordnete Fenster erstellt wird. Andernfalls müssen Sie aufrufen `ShowWindow`. Weitere Dialogfeld-Stile und ihre Anwendung finden Sie in der [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Struktur im Windows SDK und [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles) in die *MFC-Referenz*.  
+ Verwenden Sie WS_VISIBLE-Stil in der Vorlage im Dialogfeld aus, wenn das Dialogfeld angezeigt werden soll, wenn das übergeordnete Fenster erstellt wird. Andernfalls müssen Sie aufrufen `ShowWindow`. Weitere Dialogfeld-Stile und ihre Anwendung finden Sie in der [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) Struktur im Windows SDK und [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles) in die *MFC-Referenz*.  
   
  Verwenden der `CWnd::DestroyWindow` Funktion zerstört ein Dialogfeld erstellt die `Create` Funktion.  
   
@@ -244,7 +244,7 @@ virtual BOOL CreateIndirect(
   
 ### <a name="parameters"></a>Parameter  
  *lpDialogTemplate*  
- Verweist auf Arbeitsspeicher, eine Dialogfeld-Vorlage verwendet enthält, um das Dialogfeld zu erstellen. Diese Vorlage ist in Form einer [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Struktur und das Steuerelement Informationen wie beschrieben in das Windows SDK.  
+ Verweist auf Arbeitsspeicher, eine Dialogfeld-Vorlage verwendet enthält, um das Dialogfeld zu erstellen. Diese Vorlage ist in Form einer [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) Struktur und das Steuerelement Informationen wie beschrieben in das Windows SDK.  
   
  *pParentWnd*  
  Verweist auf das Dialogfeldobjekt übergeordnete Window-Objekt (des Typs [CWnd](../../mfc/reference/cwnd-class.md)). Wenn es NULL ist, wird das Dialogfeldobjekt übergeordnete Fenster auf das Hauptanwendungsfenster festgelegt.  
@@ -261,7 +261,7 @@ virtual BOOL CreateIndirect(
 ### <a name="remarks"></a>Hinweise  
  Die `CreateIndirect` Memberfunktion gibt sofort, nachdem Sie das Dialogfeld erstellt.  
   
- Verwenden Sie WS_VISIBLE-Stil in der Vorlage im Dialogfeld aus, wenn das Dialogfeld angezeigt werden soll, wenn das übergeordnete Fenster erstellt wird. Andernfalls müssen Sie aufrufen `ShowWindow` verursachen angezeigt werden. Weitere Informationen dazu, wie Sie andere Dialogfeld-Formatvorlagen in der Vorlage angeben können, finden Sie unter den [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Struktur im Windows SDK.  
+ Verwenden Sie WS_VISIBLE-Stil in der Vorlage im Dialogfeld aus, wenn das Dialogfeld angezeigt werden soll, wenn das übergeordnete Fenster erstellt wird. Andernfalls müssen Sie aufrufen `ShowWindow` verursachen angezeigt werden. Weitere Informationen dazu, wie Sie andere Dialogfeld-Formatvorlagen in der Vorlage angeben können, finden Sie unter den [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) Struktur im Windows SDK.  
   
  Verwenden der `CWnd::DestroyWindow` Funktion zerstört ein Dialogfeld erstellt die `CreateIndirect` Funktion.  
   
@@ -275,7 +275,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein **Int** -Wert, der der Wert gibt an die *%nergebnis* Parameter, der übergeben wurde die [CDialog::EndDialog](#enddialog) Member-Funktion, die verwendet wird, um das Dialogfeld zu schließen. Der zurückgegebene Wert ist 1, wenn die Funktion nicht erstellen konnte, die im Dialogfeld oder IDABORT Wenn ein anderer Fehler aufgetreten ist, in diesem Fall das Fenster "Ausgabe" Fehlerinformationen von enthält, [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Ein **Int** -Wert, der der Wert gibt an die *%nergebnis* Parameter, der übergeben wurde die [CDialog::EndDialog](#enddialog) Member-Funktion, die verwendet wird, um das Dialogfeld zu schließen. Der zurückgegebene Wert ist 1, wenn die Funktion nicht erstellen konnte, die im Dialogfeld oder IDABORT Wenn ein anderer Fehler aufgetreten ist, in diesem Fall das Fenster "Ausgabe" Fehlerinformationen von enthält, [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion verarbeitet die gesamte Interaktion mit dem Benutzer, während das Dialogfeld aktiv ist. Dies ist, was die modales Dialogfeld. der Benutzer kann nicht, also mit anderen Windows interagieren, bis das Dialogfeld geschlossen wird.  
@@ -358,7 +358,7 @@ BOOL InitModalIndirect(
   
 ### <a name="parameters"></a>Parameter  
  *lpDialogTemplate*  
- Verweist auf Arbeitsspeicher, eine Dialogfeld-Vorlage verwendet enthält, um das Dialogfeld zu erstellen. Diese Vorlage ist in Form einer [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Struktur und das Steuerelement Informationen wie beschrieben in das Windows SDK.  
+ Verweist auf Arbeitsspeicher, eine Dialogfeld-Vorlage verwendet enthält, um das Dialogfeld zu erstellen. Diese Vorlage ist in Form einer [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) Struktur und das Steuerelement Informationen wie beschrieben in das Windows SDK.  
   
  *hDialogTemplate*  
  Enthält ein Handle für den globalen Arbeitsspeicher, die mit einer Vorlage im Dialogfeld an. Diese Vorlage ist in Form einer `DLGTEMPLATE` Struktur und die Daten für jedes Steuerelement im Dialogfeld.  

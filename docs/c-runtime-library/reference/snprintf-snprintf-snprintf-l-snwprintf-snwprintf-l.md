@@ -58,12 +58,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90f931153b4328c404fa4a0e6be8f0c3548c4d95
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: fe100cbd38581b733c07b5d129d215f368e27aa7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451744"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203517"
 ---
 # <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 Schreibt formatierte Daten in eine Zeichenfolge. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
@@ -158,30 +158,30 @@ Weitere Informationen finden Sie unter [Format Specification Syntax: printf and 
 
 Lassen Sie **Len** die Länge der formatierten Datenzeichenfolge ist, ohne das abschließende Nullzeichen. Beide **Len** und *Anzahl* sind Bytes für **Snprintf** und **_snprintf**, Breitzeichen für **_snwprintf**.
 
-Für alle Funktionen an Wenn **Len** < *Anzahl*, **Len** Zeichen sind gespeichert *Puffer*, ein Null-Terminator angefügt, und **Len** zurückgegeben wird.
+Für alle Funktionen Wenn **Len** < *Anzahl*, **Len** Zeichen befinden sich im *Puffer*, ein Null-Terminator angefügt, und **Len** zurückgegeben wird.
 
-Die **Snprintf** Funktion schneidet die Ausgabe bei **Len** ist größer als oder gleich *Anzahl*, platziert eine Null-Terminators an `buffer[count-1]`. Der zurückgegebene Wert ist **Len**, die Anzahl der Zeichen, die Ausgabe Wenn befunden hätte *Anzahl* groß genug war. Die **Snprintf** Funktion gibt einen negativen Wert zurück, wenn ein Codierungsfehler auftritt.
+Die **Snprintf** Funktion schneidet die Ausgabe beim **Len** ist größer als oder gleich *Anzahl*, platzieren Sie einen Null-Terminators an `buffer[count-1]`. Der zurückgegebene Wert ist **Len**, die Anzahl der Zeichen, die Ausgabe Wenn gewesen wäre *Anzahl* groß genug war. Die **Snprintf** Funktion gibt einen negativen Wert zurück, wenn ein Codierungsfehler auftritt.
 
-Für alle Funktionen anderen Funktionen als **Snprintf**, wenn **Len** = *Anzahl*, **Len** Zeichen sind gespeichert  *Puffer*, kein Null-Terminator angefügt, und **Len** zurückgegeben wird. Wenn **Len** > *Anzahl*, *Anzahl* Zeichen sind gespeichert *Puffer*, kein Null-Terminator angefügt, und eine Negative zu ist der Wert zurückgegeben.
+Für alle Funktionen anderen Funktionen als **Snprintf**, wenn **Len** = *Anzahl*, **Len** Zeichen befinden sich im  *Puffer*, kein Null-Terminator angefügt, und **Len** zurückgegeben wird. Wenn **Len** > *Anzahl*, *Anzahl* Zeichen befinden sich im *Puffer*, kein Null-Terminator ist, angefügt, und einen negativen Wert der Wert zurückgegeben.
 
-Wenn *Puffer* ist ein null-Zeiger und *Anzahl* ist 0 (null), **Len** wird zurückgegeben, als die Anzahl der Zeichen, die zur Formatierung der Ausgabe, ohne das abschließende Nullzeichen erforderlich sind. Um einen erfolgreichen Aufruf mit dem gleichen *Argument* und *Gebietsschema* -Parametern durchzuführen, ordnen mindestens einen Puffer **Len** + 1 Zeichen enthält.
+Wenn *Puffer* ist ein null-Zeiger und *Anzahl* ist 0 (null), **Len** wird zurückgegeben, als die Anzahl der Zeichen zum Formatieren der Ausgabe, ohne das abschließende Nullzeichen erforderlich sind. Um einen erfolgreichen Aufruf mit dem gleichen machen *Argument* und *Gebietsschema* -Parametern durchzuführen, ordnen Sie einen Puffer mit mindestens **Len** + 1 Zeichen.
 
-Wenn *Puffer* ist ein null-Zeiger und *Anzahl* ungleich NULL ist oder wenn *Format* ist ein null-Zeiger der Handler für ungültige Parameter aufgerufen, wie in beschrieben [ Überprüfen der Parameter](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen – 1 zurück und legen Sie **Errno** auf **EINVAL**.
+Wenn *Puffer* ist ein null-Zeiger und *Anzahl* ungleich NULL ist, oder wenn *Format* ist ein null-Zeiger der Handler für ungültige Parameter aufgerufen, siehe [ Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr (errno, _doserrno, _sys_errlist und _sys_nerr)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Snprintf** Funktion und die **_snprintf** Betriebssystemfamilie formatieren und speichern *Anzahl* oder weniger Zeichen in *Puffer*. Die **Snprintf** -Funktion speichert immer ein abschließendes Nullzeichen, wird die Ausgabe abgeschnitten, falls erforderlich. Die **_snprintf** Funktionsreihe Fügt ein abschließendes Nullzeichen nur, wenn die Länge der formatierten Zeichenfolge streng genommen weniger als *Anzahl* Zeichen. Jede *Argument* (sofern vorhanden) wird konvertiert und ausgegeben entsprechend der jeweiligen Formatangabe in *Format*. Das Format besteht aus normalen Zeichen und hat die gleiche form und Funktion wie die *Format* Argument für [Printf](printf-printf-l-wprintf-wprintf-l.md). Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
+Die **Snprintf** Funktion und die **_snprintf** -Methodenfamilie formatieren und speichern *Anzahl* oder weniger Zeichen in *Puffer*. Die **Snprintf** Funktion speichert immer ein abschließendes Nullzeichen, wird die Ausgabe abgeschnitten, falls erforderlich. Die **_snprintf** -Funktionsfamilie Fügt ein abschließendes Zeichen Null nur, wenn die Länge der formatierten Zeichenfolge streng genommen weniger als *Anzahl* Zeichen. Jede *Argument* (sofern vorhanden) in konvertiert wird und die Ausgabe entsprechend der jeweiligen Formatangabe in *Format*. Das Format besteht aus normalen Zeichen und hat die gleiche form und Funktion wie der *Format* Argument für [Printf](printf-printf-l-wprintf-wprintf-l.md). Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
 
 > [!IMPORTANT]
-> Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist. Da die **_snprintf** Funktionen garantieren nicht null-Terminierung – insbesondere, wenn der Rückgabewert ist *Anzahl*– stellen Sie sicher, dass ihnen Code folgt sind, die null-Terminator hinzufügt. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist. Da die **_snprintf** Funktionen können nicht garantiert werden null-Terminierung – insbesondere, wenn der Rückgabewert ist *Anzahl*– stellen Sie sicher, dass ihnen Code folgt sind, die die null-Terminator hinzufügt. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-Beginnend mit der UCRT in Visual Studio 2015 und Windows 10, **Snprintf** ist nicht mehr identisch mit **_snprintf**. Die **Snprintf** Funktionsverhalten ist jetzt mit dem Standard C99 konform.
+Beginnend mit der UCRT in Visual Studio 2015 und Windows 10, **Snprintf** ist nicht mehr identisch mit **_snprintf**. Die **Snprintf** Funktionsverhalten ist jetzt Standard C99 konform.
 
-**_snwprintf** ist eine Breitzeichen-Version von **_snprintf**; die Zeigerargumente zu **_snwprintf** sind Zeichenfolgen mit Breitzeichen. Erkennung von Codierungsfehlern in **_snwprintf** unterscheiden sich von der in **_snprintf**. **_snwprintf**, ebenso wie **Swprintf**, schreibt die Ausgabe in eine Zeichenfolge anstatt in ein Ziel vom Typ **Datei**.
+**_snwprintf** ist eine Breitzeichen-Version von **_snprintf**; die Zeigerargumente zu **_snwprintf** sind Breitzeichen Zeichenfolgen. Erkennung von Codierungsfehlern in **_snwprintf** unterscheiden sich von der in **_snprintf**. **_snwprintf**, genau wie **Swprintf**, schreibt die Ausgabe in eine Zeichenfolge anstelle eines Ziels vom Typ **Datei**.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter, der übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas.
+Die Versionen dieser Funktionen, die **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
 
 In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -194,7 +194,7 @@ In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sich
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**Snprintf**, **_snprintf**, **_snprintf_l**|\<stdio.h>|
 |**_snwprintf**, **_snwprintf_l**|\<stdio.h> oder \<wchar.h>|

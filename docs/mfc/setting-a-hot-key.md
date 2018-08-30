@@ -1,5 +1,5 @@
 ---
-title: Festlegen einer Abkürzungstaste | Microsoft Docs
+title: Festlegen einer Abkürzungstaste | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3987ddee98ae35e02a181e38cd71f181801aeb61
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 254d7532b83a4f30c0029b2488bb0b2111cce31d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379644"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219396"
 ---
 # <a name="setting-a-hot-key"></a>Festlegen einer Abkürzungstaste
-Die Anwendung kann mithilfe den Informationen von einer Abkürzungstaste ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) Steuerelement in einer von zwei Methoden:  
+Die Anwendung kann mithilfe die Informationen von einer Abkürzungstaste ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) Steuerelement auf zwei Arten:  
   
--   Richten Sie eine globale Abkürzungstaste für die Aktivierung eines nicht untergeordneten Fensters durch Senden einer [WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) Nachricht an das Fenster aktiviert werden.  
+-   Richten Sie eine globale Abkürzungstaste für die Aktivierung eines nicht untergeordneten Fensters durch Senden einer [WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey) Nachricht an das Fenster aktiviert wird.  
   
--   Richten Sie eine threadspezifische Abkürzungstaste durch Aufrufen der Windows-Funktion [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309).  
+-   Festlegen einer Abkürzungstaste threadspezifische durch Aufrufen der Windows-Funktion [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   

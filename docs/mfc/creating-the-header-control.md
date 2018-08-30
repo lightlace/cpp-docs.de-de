@@ -1,5 +1,5 @@
 ---
-title: Erstellen des Headersteuerelements | Microsoft Docs
+title: Erstellen des Headersteuerelements | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,39 +15,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 465c880c480f9ccd3a52f6319ee97ed203c3bd74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18517f969dc64b0c1d9a51bcdc67a1655ec82d7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344512"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214008"
 ---
 # <a name="creating-the-header-control"></a>Erstellen des Headersteuerelements
-Das Headersteuerelement ist nicht direkt im Dialog-Editor verfügbar sind, (obwohl Sie ein Listenfeld-Steuerelement, einschließlich dem Headersteuerelement hinzufügen können).  
+(Obwohl Sie ein Listensteuerelement, einschließlich einem Kopfzeilen-Steuerelement hinzufügen können), ist das Kopfzeilen-Steuerelement nicht direkt im Dialog-Editor verfügbar sind.  
   
-### <a name="to-put-a-header-control-in-a-dialog-box"></a>Um ein Headersteuerelement in einem Dialogfeld einfügen  
+### <a name="to-put-a-header-control-in-a-dialog-box"></a>Einfügen von einem Kopfzeilen-Steuerelement in einem Dialogfeld  
   
-1.  Betten Sie eine Membervariable des Typs [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) in der Dialogfeldklasse.  
+1.  Betten Sie manuell eine Membervariable des Typs [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) in der Dialogfeldklasse.  
   
-2.  In [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)erstellen, und legen Sie die Formate für die `CHeaderCtrl`, positionieren Sie es, und zeigen Sie es.  
+2.  In [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), erstellen, und legen Sie die Formate für die `CHeaderCtrl`, positionieren Sie es, und zeigen Sie es.  
   
-3.  Das Headersteuerelement Elemente hinzugefügt.  
+3.  Das Kopfzeilen-Steuerelement Elemente hinzugefügt.  
   
-4.  Verwendet Eigenschaftenfenster Handlerfunktionen in Dialogklasse zuordnen für Benachrichtigungen Headersteuerelements Nachrichten verarbeiten müssen (siehe [Zuordnen von Meldungen zu Funktionen](../mfc/reference/mapping-messages-to-functions.md)).  
+4.  Verwendet im Eigenschaftenfenster in Handlerfunktionen in die Dialogfeldklasse zuordnen, für das Kopfzeilen-Steuerelement Benachrichtigungen angezeigt werden, behandeln müssen (finden Sie unter [Zuordnen von Meldungen zu Funktionen](../mfc/reference/mapping-messages-to-functions.md)).  
   
-### <a name="to-put-a-header-control-in-a-view-not-a-clistview"></a>Um ein Headersteuerelement in einer Ansicht (nicht in einer CListView) einfügen  
+### <a name="to-put-a-header-control-in-a-view-not-a-clistview"></a>Einfügen von einem Kopfzeilen-Steuerelement in einer Ansicht (nicht in einer CListView)  
   
 1.  Einbetten einer [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) Objekt in Ihrer Ansichtsklasse.  
   
-2.  Formatieren, positionieren und die Header-Steuerelement-Fenster auch anzeigen, in der Ansicht [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) Memberfunktion.  
+2.  Stil und position anzeigen Steuerelementfensters der Header in der Ansicht [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) Member-Funktion.  
   
-3.  Das Headersteuerelement Elemente hinzugefügt.  
+3.  Das Kopfzeilen-Steuerelement Elemente hinzugefügt.  
   
-4.  Verwendet Eigenschaftenfenster Handlerfunktionen in Ansichtsklasse zuordnen für Benachrichtigungen Headersteuerelements Nachrichten verarbeiten müssen (siehe [Zuordnen von Meldungen zu Funktionen](../mfc/reference/mapping-messages-to-functions.md)).  
+4.  Verwendet im Eigenschaftenfenster in Handlerfunktionen in der Ansichtsklasse zuordnen, für das Kopfzeilen-Steuerelement Benachrichtigungen angezeigt werden, behandeln müssen (finden Sie unter [Zuordnen von Meldungen zu Funktionen](../mfc/reference/mapping-messages-to-functions.md)).  
   
- In beiden Fällen wird das eingebettete Steuerelement-Objekt erstellt, wenn das Objekt Ansichts- oder Dialogfeldobjekt erstellt wird. Sie aufrufen müssen [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md#create) um das Fenster des Steuerelements zu erstellen. Aufrufen, um das Steuerelement zu positionieren, [CHeaderCtrl:: Layout](../mfc/reference/cheaderctrl-class.md#layout) ursprüngliche Größe und Position des Steuerelements bestimmt und [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos) auf die Position festgelegt werden sollen. Klicken Sie dann Elemente hinzufügen, wie in beschrieben [Hinzufügen von Elementen zum Headersteuerelement](../mfc/adding-items-to-the-header-control.md).  
+ In beiden Fällen wird das eingebettete Steuerelement-Objekt erstellt, wenn die Ansichts- oder Dialogfeldobjekt-Objekt erstellt wird. Sie aufrufen müssen [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md#create) um das Fenster des Steuerelements zu erstellen. Aufrufen, um das Steuerelement zu positionieren, [CHeaderCtrl:: Layout](../mfc/reference/cheaderctrl-class.md#layout) anfängliche Größe und Position des Steuerelements zu bestimmen und [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos) auf die Position festgelegt werden sollen. Klicken Sie dann Elemente hinzufügen, wie in beschrieben [Hinzufügen von Elementen zum Headersteuerelement](../mfc/adding-items-to-the-header-control.md).  
   
- Weitere Informationen finden Sie unter [erstellen eine Headersteuerelements](http://msdn.microsoft.com/library/windows/desktop/bb775238) im Windows SDK.  
+ Weitere Informationen finden Sie unter [einem Kopfzeilen-Steuerelement erstellen](/windows/desktop/Controls/header-controls) im Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CHeaderCtrl](../mfc/using-cheaderctrl.md)   

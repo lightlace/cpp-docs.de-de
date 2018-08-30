@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0521d09f4f96c73c20022d88621671564e7ada78
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3294730f8f1cc835af49ee003d8f81830d64c9a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965525"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198301"
 ---
 # <a name="valarray-class"></a>valarray-Klasse
 
@@ -131,9 +131,11 @@ valarray<Type> apply(Type _Func(constType&)) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Func(Type)* das Funktionsobjekt auf jedes Element des Valarray-Operanden angewendet werden.
+*_Func(Type)*<br/>
+ Das Funktionsobjekt, das auf alle Elemente des valarray-Operanden angewendet werden soll.
 
-*_Func(const Type&)* das Funktionsobjekt für Const, das auf die einzelnen Elemente des Valarray-Operanden angewendet werden.
+*_Func(const Type&)*<br/>
+ Das Funktionsobjekt für const, das auf alle Elemente des valarray-Operanden angewendet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -141,7 +143,7 @@ Ein valarray-Objekt, dessen Elemente `_Func` elementweise auf die Elemente des v
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt ein Objekt der Klasse [valarray](../standard-library/valarray-class.md)**\<Type>** mit der Länge [size](#size) zurück, dessen Elemente `I` jeweils **func**(( **\*this**)[ `I`]) sind.
+Die Memberfunktion gibt ein Objekt der Klasse [Valarray](../standard-library/valarray-class.md)**\<Typ >**, Länge [Größe](#size), jedes, deren Elemente *ich*ist `_Func((*this)[I])`.
 
 ### <a name="example"></a>Beispiel
 
@@ -1247,7 +1249,7 @@ Ein Verweis auf ein Element oder auf den Wert, den es am angegebenen Index oder 
 
 ### <a name="remarks"></a>Hinweise
 
-Der Memberoperator wird überladen, um bieten verschiedene Möglichkeiten zum Auswählen von Sequenzen von Elementsequenzen aus denjenigen von gesteuert *\****dies**. Die erste Gruppe von fünf Memberoperatoren werden zusammen mit verschiedenen Überladungen von [operator=](#op_eq) (und anderen zuweisenden Operatoren) verwendet, um ein selektives Ersetzen (Slicing) der gesteuerten Sequenz zu ermöglichen. Dabei müssen die ausgewählten Elemente vorhanden sein.
+Der Memberoperator wird überladen, um bieten verschiedene Möglichkeiten zum Auswählen von Sequenzen von Elementsequenzen aus denjenigen von gesteuert  <strong>\*dies</strong>. Die erste Gruppe von fünf Memberoperatoren werden zusammen mit verschiedenen Überladungen von [operator=](#op_eq) (und anderen zuweisenden Operatoren) verwendet, um ein selektives Ersetzen (Slicing) der gesteuerten Sequenz zu ermöglichen. Dabei müssen die ausgewählten Elemente vorhanden sein.
 
 Wenn [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) beim Kompilieren als 1 oder 2 definiert ist, tritt beim Zugriff auf ein Element außerhalb des valarray-Objekts ein Laufzeitfehler auf.  Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
 

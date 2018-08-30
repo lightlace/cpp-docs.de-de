@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von Elementen zum Headersteuerelement | Microsoft Docs
+title: Hinzufügen von Elementen zum Headersteuerelement | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69d64265a94df2770e3a234ab992130b4809f9e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6450d99b8df436c64337e52fc14244ecbb0edfc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342734"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206146"
 ---
 # <a name="adding-items-to-the-header-control"></a>Hinzufügen von Elementen zum Headersteuerelement
-Nach dem Erstellen der Headersteuerelement ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) in das übergeordnete Fenster, wie viele Headerelemente hinzufügen, "" wie erforderlich: in der Regel eine pro Spalte.  
+Nach dem Erstellen Ihrer Kopfzeilen-Steuerelements ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) in das übergeordnete Fenster, wie viele Headerelemente hinzufügen, "" wie Sie benötigen: in der Regel eine pro Spalte.  
   
 ### <a name="to-add-a-header-item"></a>Ein Headerelement hinzufügen  
   
-1.  Vorbereiten einer [HD_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) Struktur.  
+1.  Vorbereiten einer [HD_ITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) Struktur.  
   
-2.  Rufen Sie [InsertItem](../mfc/reference/cheaderctrl-class.md#insertitem), die Struktur übergeben wird.  
+2.  Rufen Sie [InsertItem](../mfc/reference/cheaderctrl-class.md#insertitem), indem Sie die Struktur.  
   
-3.  Wiederholen Sie die Schritte 1 und 2 für zusätzliche Objekte gibt.  
+3.  Wiederholen Sie die Schritte 1 und 2 für zusätzliche Elemente.  
   
- Weitere Informationen finden Sie unter [Hinzufügen eines Elements zu einem Headersteuerelement](http://msdn.microsoft.com/library/windows/desktop/bb775238) im Windows SDK.  
+ Weitere Informationen finden Sie unter [Hinzufügen eines Elements zu einem Kopfzeilen-Steuerelement](/windows/desktop/Controls/header-controls) im Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CHeaderCtrl](../mfc/using-cheaderctrl.md)   

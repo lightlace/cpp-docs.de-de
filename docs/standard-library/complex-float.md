@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af6d3ce3beca7d9bb3b14ee9c9373a8505623376
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bf266e11f975e3ce01e5359c1dac65b46a42435a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954004"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221342"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
-Beschreibt ein Objekt, das ein geordnetes Paar von Objekten des Typs speichert **"float" **** das erste Objekt den reellen Teil einer komplexen Zahl und das zweite Objekt dem imaginären Teil.
+Beschreibt ein Objekt, das ein geordnetes Paar von Objekten des Typs speichert **"float"**, wird das erste Objekt den reellen Teil einer komplexen Zahl und das zweite Objekt dem imaginären Teil.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,11 +51,14 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parameter
 
-*_RealVal* der Wert des Typs **"float"** für den Realteil der komplexen Zahl, die erstellt wird.
+*_RealVal*<br/>
+Der Wert vom Typ **float** für den Realteil der zu erstellenden komplexen Zahl.
 
-*_ImagVal* der Wert des Typs **"float"** für den imaginären Teil der komplexen Zahl, die erstellt wird.
+*_ImagVal*<br/>
+Der Wert vom Typ **float** für den Imaginärteil der zu erstellenden komplexen Zahl.
 
-*ComplexNum* die komplexe Zahl vom Typ **doppelte** oder eines Typs **long double** , deren tatsächliche und imaginäre Teile werden verwendet, um eine komplexe Zahl des Typs initialisieren **"float"** erstellt wird.
+*complexNum*<br/>
+Die komplexe Zahl vom Typ **doppelte** oder eines Typs **long double** , deren tatsächliche und imaginäre Teile werden verwendet, um eine komplexe Zahl des Typs initialisieren **"float"** erstellt wird.
 
 ## <a name="return-value"></a>Rückgabewert
 

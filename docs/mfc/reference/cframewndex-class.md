@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97548fca6b47e8d765eb7744a86ab0d4cfa27b17
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 50bb4061a13a9057a695b25ca32421c4dd7ed88b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337480"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207823"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx-Klasse
 Implementiert die Funktionalität eines Windows-SDI-Rahmenfensters (Single Document Interface), wobei es sich um ein überlappendes oder ein Popupfenster handeln kann. Ebenfalls bereitgestellt werden Member zum Verwalten des Fensters. Es erweitert die [CFrameWnd](../../mfc/reference/cframewnd-class.md) Klasse.  
@@ -250,7 +250,7 @@ class CFrameWndEx : public CFrameWnd
 |[CFrameWndEx::OnCreate](#oncreate)|Vom Framework aufgerufen, nachdem der Frame erstellt wurde.|  
 |[CFrameWndEx::OnDestroy](#ondestroy)|Vom Framework aufgerufen, wenn der Frame zerstört wird.|  
 |[CFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Wird vom Framework aufgerufen, wenn die Anwendung, das ein Menüelement zugeordnete Bild zeichnet.|  
-|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Vom Framework aufgerufen, wenn eine `CMFCPopupMenu` Objekt Prozesse eine [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) Nachricht.|  
+|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Vom Framework aufgerufen, wenn eine `CMFCPopupMenu` Objekt Prozesse eine [WM_PAINT](/windows/desktop/gdi/wm-paint) Nachricht.|  
 |[CFrameWndEx::OnDWMCompositionChanged](#ondwmcompositionchanged)|Vom Framework aufgerufen, wenn die Komposition für Desktop Window Manager (DWM) aktiviert oder deaktiviert wurde.|  
 |[CFrameWndEx::OnExitSizeMove](#onexitsizemove)|Vom Framework aufgerufen, wenn der Frame beendet wird, verschieben oder dessen Größe ändern.|  
 |[CFrameWndEx::OnGetMinMaxInfo](#ongetminmaxinfo)|Vom Framework aufgerufen, wenn der Frame zum Festlegen der Grenzwerte für Fenster-Dimension geändert wird.|  
@@ -358,7 +358,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
  Ein Handle für eine Struktur, die Positionen der mehrere Fenster enthält. sein.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Struktur Hdwp wird initialisiert, indem die [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) Methode.  
+ Die Struktur Hdwp wird initialisiert, indem die [BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672) Methode.  
   
 ##  <a name="delayupdateframemenu"></a>  CFrameWndEx::DelayUpdateFrameMenu  
  Legt das Menü "Frame", und wird dann aktualisiert, wenn befehlsverarbeitung im Leerlauf befindet.  
@@ -1093,7 +1093,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
   
 ### <a name="parameters"></a>Parameter  
  [in] *LpMMI*  
- Zeiger auf eine [MINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632605) Struktur.  
+ Zeiger auf eine [MINMAXINFO](https://msdn.microsoft.com/library/windows/desktop/ms632605) Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1129,7 +1129,7 @@ afx_msg void OnLButtonDown(
   
 ### <a name="parameters"></a>Parameter  
  [in] *nFlags*  
- Gibt an, ob der Benutzer der Modifizierertasten gedrückt. Mögliche Werte finden Sie in den Parameter *wParam* in [WM_LBUTTONDOWN Benachrichtigung](http://msdn.microsoft.com/library/windows/desktop/ms645607).  
+ Gibt an, ob der Benutzer der Modifizierertasten gedrückt. Mögliche Werte finden Sie in den Parameter *wParam* in [WM_LBUTTONDOWN Benachrichtigung](/windows/desktop/inputdev/wm-lbuttondown).  
   
  [in] *zeigen*  
  Gibt an, die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.  
@@ -1147,7 +1147,7 @@ afx_msg void OnLButtonUp(
   
 ### <a name="parameters"></a>Parameter  
  [in] *nFlags*  
- Gibt an, ob der Benutzer der Modifizierertasten gedrückt. Mögliche Werte finden Sie in den Parameter *wParam* in [WM_LBUTTONUP Benachrichtigung](http://msdn.microsoft.com/library/windows/desktop/ms645608).  
+ Gibt an, ob der Benutzer der Modifizierertasten gedrückt. Mögliche Werte finden Sie in den Parameter *wParam* in [WM_LBUTTONUP Benachrichtigung](/windows/desktop/inputdev/wm-lbuttonup).  
   
  [in] *zeigen*  
  Gibt an, die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.  
@@ -1221,7 +1221,7 @@ afx_msg void OnMouseMove(
   
 ### <a name="parameters"></a>Parameter  
  [in] *nFlags*  
- Gibt an, ob ein Benutzer der Modifizierertasten gedrückt. Mögliche Werte finden Sie in den Parameter *wParam* in [WM_MOUSEMOVE-Benachrichtigung](http://msdn.microsoft.com/library/windows/desktop/ms645616).  
+ Gibt an, ob ein Benutzer der Modifizierertasten gedrückt. Mögliche Werte finden Sie in den Parameter *wParam* in [WM_MOUSEMOVE-Benachrichtigung](/windows/desktop/inputdev/wm-mousemove).  
   
  [in] *zeigen*  
  Gibt an, die x- und y die Koordinaten des Mauszeigers relativ zu der oberen linken Ecke des Fensters.  
@@ -1290,7 +1290,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
  Die Position des Mauszeigers in Bildschirmkoordinaten.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger erreicht Enumerationswert. Eine Liste der möglichen Werte finden Sie unter [eine WM_NCHITTEST-Benachrichtigung](http://msdn.microsoft.com/library/windows/desktop/ms645618).  
+ Ein Zeiger erreicht Enumerationswert. Eine Liste der möglichen Werte finden Sie unter [eine WM_NCHITTEST-Benachrichtigung](/windows/desktop/inputdev/wm-nchittest).  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1305,7 +1305,7 @@ afx_msg void OnNcMouseMove(
   
 ### <a name="parameters"></a>Parameter  
  [in] *nHitTest*  
- Ein Zeiger erreicht Enumerationswert. Eine Liste der möglichen Werte finden Sie unter [eine WM_NCHITTEST-Benachrichtigung](http://msdn.microsoft.com/library/windows/desktop/ms645618).  
+ Ein Zeiger erreicht Enumerationswert. Eine Liste der möglichen Werte finden Sie unter [eine WM_NCHITTEST-Benachrichtigung](/windows/desktop/inputdev/wm-nchittest).  
   
  [in] *zeigen*  
  Die Position des Mauszeigers in Bildschirmkoordinaten.  
@@ -1369,7 +1369,7 @@ afx_msg LRESULT OnPowerBroadcast(
   
 ### <a name="parameters"></a>Parameter  
  [in] *wp*  
- Das Power Management-Ereignis. Eine Liste der möglichen Werte finden Sie unter [WM_POWERBROADCAST-Meldung](http://msdn.microsoft.com/library/windows/desktop/aa373247).  
+ Das Power Management-Ereignis. Eine Liste der möglichen Werte finden Sie unter [WM_POWERBROADCAST-Meldung](/windows/desktop/Power/wm-powerbroadcast).  
   
  [in] *Lp*  
  Dieser Parameter wird nicht verwendet.  
@@ -1442,7 +1442,7 @@ afx_msg LRESULT OnSetText(
  Zeiger auf den Text für das Fenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Rückgabewert von einem Aufruf von [DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572).  
+ Rückgabewert von einem Aufruf von [DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572).  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1518,7 +1518,7 @@ afx_msg void OnSize(
   
 ### <a name="parameters"></a>Parameter  
  [in] *nType*  
- Der Typ des Ändern der Größe. Mögliche Werte finden Sie in den Parameter *wParam* in [WM_SIZE-Benachrichtigung](http://msdn.microsoft.com/library/windows/desktop/ms632646).  
+ Der Typ des Ändern der Größe. Mögliche Werte finden Sie in den Parameter *wParam* in [WM_SIZE-Benachrichtigung](/windows/desktop/winmsg/wm-size).  
   
  [in] *Cx*  
  Neue Breite des Rahmens in Pixel.  
@@ -1539,7 +1539,7 @@ afx_msg void OnSizing(
   
 ### <a name="parameters"></a>Parameter  
  [in] *FwSide*  
- Der Rand des Frames, die verschoben werden. Der Parameter *wParam* in [WM_SIZING Benachrichtigung](http://msdn.microsoft.com/library/windows/desktop/ms632647).  
+ Der Rand des Frames, die verschoben werden. Der Parameter *wParam* in [WM_SIZING Benachrichtigung](/windows/desktop/winmsg/wm-sizing).  
   
  [in, out] *pRect*  
  Zeiger auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) oder [RECT](../../mfc/reference/rect-structure1.md) Struktur, des Frames Koordinaten enthält.  
@@ -1896,10 +1896,10 @@ virtual void WinHelp(
   
 ### <a name="parameters"></a>Parameter  
  *dwData*  
- Daten, die hängt die *nCmd* Parameter. Eine Liste der möglichen Werte finden Sie unter [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
+ Daten, die hängt die *nCmd* Parameter. Eine Liste der möglichen Werte finden Sie unter [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa).  
   
  *nCmd*  
- Der Help-Befehl. Eine Liste der möglichen Werte finden Sie unter [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
+ Der Help-Befehl. Eine Liste der möglichen Werte finden Sie unter [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa).  
   
 ### <a name="remarks"></a>Hinweise  
   
