@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ddb4396d5ba2b7057286e1a0730eb4baa3fdd0d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fc66a63478c07ee47ae32f536ebad6f9ee6f20e2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598397"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194332"
 ---
 # <a name="uidefault"></a>uidefault
 
@@ -36,7 +36,7 @@ Gibt an, dass der Typinformationsmember das Standardelement für die Anzeige in 
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Uidefault** C++-Attribut hat die gleiche Funktionalität wie die [Uidefault](http://msdn.microsoft.com/library/windows/desktop/aa367292) MIDL-Attribut.
+Die **Uidefault** C++-Attribut hat die gleiche Funktionalität wie die [Uidefault](/windows/desktop/Midl/uidefault) MIDL-Attribut.
 
 ## <a name="example"></a>Beispiel
 

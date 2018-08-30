@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a1e7abe1fbbf3667999852dd1810a8a337cac79
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 3ab0e457f90f3130295d287ae9a32d18ab212d50
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208662"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202602"
 ---
 # <a name="cfiletime-class"></a>CFileTime-Klasse
 Diese Klasse stellt Methoden zum Verwalten von einer Datei zugeordneten Werte für Datum und Uhrzeit.  
@@ -107,7 +107,7 @@ class CFileTime :  public FILETIME
 |Day|Stunde \* 24|  
 |Woche|Tag \* 7|  
   
- **Beachten Sie** nicht alle Dateisysteme können Erstellung aufzeichnen, und notieren Sie sie nicht alle Dateisysteme und Zeitpunkt des letzten Zugriffs auf die gleiche Weise. Erstellen Sie beispielsweise im Windows NT-FAT-Dateisystem, genügend Zeit hat eine Auflösung von 10 Millisekunden, Schreibzeit hat eine Auflösung von 2 Sekunden und Zugriffszeit hat eine Auflösung von 1 Tag (das Access-Datum). Für NTFS hat Zugriff auf eine Auflösung von 1 Stunde. Darüber hinaus FAT zeichnet Zeiten auf dem Datenträger in der lokalen Zeit auf, sondern NTFS zeichnet Zeiten auf dem Datenträger in UTC. Weitere Informationen finden Sie unter [Dateizeitangaben](http://msdn.microsoft.com/library/windows/desktop/ms724290).  
+ **Beachten Sie** nicht alle Dateisysteme können Erstellung aufzeichnen, und notieren Sie sie nicht alle Dateisysteme und Zeitpunkt des letzten Zugriffs auf die gleiche Weise. Erstellen Sie beispielsweise im Windows NT-FAT-Dateisystem, genügend Zeit hat eine Auflösung von 10 Millisekunden, Schreibzeit hat eine Auflösung von 2 Sekunden und Zugriffszeit hat eine Auflösung von 1 Tag (das Access-Datum). Für NTFS hat Zugriff auf eine Auflösung von 1 Stunde. Darüber hinaus FAT zeichnet Zeiten auf dem Datenträger in der lokalen Zeit auf, sondern NTFS zeichnet Zeiten auf dem Datenträger in UTC. Weitere Informationen finden Sie unter [Dateizeitangaben](/windows/desktop/SysInfo/file-times).  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `FILETIME`  
@@ -128,7 +128,7 @@ CFileTime(ULONGLONG nTime) throw();
   
 ### <a name="parameters"></a>Parameter  
  *FT*  
- Ein [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) Struktur.  
+ Ein [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) Struktur.  
   
  *nTime*  
  Das Datum und Uhrzeit als 64-Bit-Wert.  
@@ -418,7 +418,7 @@ static const ULONGLONG Week = Day* 7;
  Siehe das Beispiel für [CFileTime::Millisecond](#millisecond).  
   
 ## <a name="see-also"></a>Siehe auch  
- [FILETIME-ELEMENT](http://msdn.microsoft.com/library/windows/desktop/ms724284)   
+ [FILETIME-ELEMENT](https://msdn.microsoft.com/library/windows/desktop/ms724284)   
  [CFileTimeSpan-Klasse](../../atl-mfc-shared/reference/cfiletimespan-class.md)   
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
  [Freigegebene ATL-/MFC-Klassen](../../atl-mfc-shared/atl-mfc-shared-classes.md)

@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ff939abc93c38be198bf6edb21cbb3e3dc9fbaa
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 6a1c3e55f6045b0096ef614e1d3b4b054db60265
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900851"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202394"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -837,7 +837,7 @@ Die Standardimplementierung gibt S_OK zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode ruft [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) vor wird S_OK zurückgegeben.
+Diese Methode ruft [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) vor wird S_OK zurückgegeben.
 
 Überschreiben Sie diese Methode in einer abgeleiteten Klasse, um benutzerdefiniertes Verhalten zu implementieren.
 
@@ -1619,7 +1619,7 @@ Die Werte für *wParam* und *lParam* richten sich nach den spezifischen generier
 |TDN_CREATED|Nicht verwendet.|Nicht verwendet.|
 |TDN_NAVIGATED|Nicht verwendet.|Nicht verwendet.|
 |TDN_BUTTON_CLICKED|Die Schaltfläche "Befehl" Kontroll-ID usw.|Nicht verwendet.|
-|TDN_HYPERLINK_CLICKED|Nicht verwendet.|Ein [LPCWSTR](http://msdn.microsoft.com/library/windows/desktop/aa383751) -Struktur, die den Link enthält.|
+|TDN_HYPERLINK_CLICKED|Nicht verwendet.|Ein [LPCWSTR](/windows/desktop/WinProg/windows-data-types) -Struktur, die den Link enthält.|
 |TDN_TIMER|Zeit in Millisekunden seit dem `CTaskDialog` erstellt wurde oder der Zeitgeber zurückgesetzt wurde.|Nicht verwendet.|
 |TDN_DESTROYED|Nicht verwendet.|Nicht verwendet.|
 |TDN_RADIO_BUTTON_CLICKED|Die Sender-Schaltfläche-ID.|Nicht verwendet.|

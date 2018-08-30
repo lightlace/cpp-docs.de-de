@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28501c0105ce9d62c72dc9013b881029f4bc8bfb
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: faa2a3be7260eecb16599db967336bcb7b774c99
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590665"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200125"
 ---
 # <a name="switchtype"></a>switch_type
 
@@ -43,9 +43,9 @@ Der Switchtyp kann es sich um eine ganze Zahl "," Zeichen "," Boolesch "oder" En
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Switch_type** C++-Attribut hat die gleiche Funktionalität wie die [Switch_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) MIDL-Attribut.
+Die **Switch_type** C++-Attribut hat die gleiche Funktionalität wie die [Switch_type](/windows/desktop/Midl/switch-type) MIDL-Attribut.
 
-C++-Attribute unterstützen keine [gekapselt Unions](http://msdn.microsoft.com/library/windows/desktop/aa366811). [Nonencapsulated Unions](http://msdn.microsoft.com/library/windows/desktop/aa367119) werden nur in der folgenden Form unterstützt:
+C++-Attribute unterstützen keine [gekapselt Unions](/windows/desktop/Midl/encapsulated-unions). [Nonencapsulated Unions](/windows/desktop/Midl/nonencapsulated-unions) werden nur in der folgenden Form unterstützt:
 
 ```cpp
 // cpp_attr_ref_switch_type.cpp
