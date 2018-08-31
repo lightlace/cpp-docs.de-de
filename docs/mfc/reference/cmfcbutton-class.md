@@ -1,7 +1,7 @@
 ---
 title: CMFCButton-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/28/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 155aa704efe0686fc03be6e2b12c076656fad7a1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8385320b51efedd214424385babc5f03d5559873
+ms.sourcegitcommit: 220fd4fda829f810e15fc1a1d98ab43c46201b47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217508"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43352715"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton-Klasse
 Die `CMFCButton` Klasse fügt Funktionen für die [CButton](../../mfc/reference/cbutton-class.md) Klasse wie z. B. das Ausrichten des Schaltflächentexts, Kombinieren von Schaltflächentext mit einem Bild, Auswählen eines Cursors und Festlegen einer QuickInfo.  
@@ -165,12 +165,17 @@ class CMFCButton : public CButton
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|Gibt an, ob ein Fokusrechteck um eine Schaltfläche zu zeichnen.|  
-|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|Gibt an, ob eine BS_CHECKBOX-Schaltfläche zu markieren, wenn der Cursor darauf gezeigt wird.|  
-|[CMFCButton::m_bRightImage](#m_brightimage)|Gibt an, ob ein Bild auf der rechten Seite der Schaltfläche angezeigt werden soll.|  
-|[CMFCButton::m_bTransparent](#m_btransparent)|Gibt an, ob die Schaltfläche transparent ist.|  
 |[CMFCButton::m_nAlignStyle](#m_nalignstyle)|Gibt die Ausrichtung des Schaltflächentexts.|  
+|[CMFCButton::m_bDontUseWinXPTheme](#m_bDontUseWinXPTheme)|Gibt an, ob Windows XP-Designs verwendet werden soll.|
+|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|Gibt an, ob ein Fokusrechteck um eine Schaltfläche zu zeichnen.| 
 |[CMFCButton::m_nFlatStyle](#m_nflatstyle)|Gibt den Stil der Schaltfläche, z. B. randlose, Flatfiles, durch flachen oder 3D.|  
+|[CMFCButton::m_bGrayDisabled](#m_bGrayDisabled)|Bei "true", können eine nicht aktive Schaltfläche als abgeblendeten gezeichnet werden soll.|
+|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|Gibt an, ob eine BS_CHECKBOX-Schaltfläche zu markieren, wenn der Cursor darauf gezeigt wird.|  
+|[CMFCButton::m_bResponseOnButtonDown](#m_bResponseOnButtonDown)|Gibt an, ob auf Tastendruck Ereignisse zu reagieren.|
+|[CMFCButton::m_bRightImage](#m_brightimage)|Gibt an, ob ein Bild auf der rechten Seite der Schaltfläche angezeigt werden soll.|
+|[CMFCButton::m_bTopImage](#m_bTopImage)| Gibt an, ob das Bild auf die Schaltfläche ist.|
+|[CMFCButton::m_bTransparent](#m_btransparent)|Gibt an, ob die Schaltfläche transparent ist.|  
+|[CMFCButton::m_bWasDblClk](#m_bWasDblClk)| Gibt an, ob die letzte klicken Sie auf Ereignis ein Doppelklick wurde.|
   
 ## <a name="remarks"></a>Hinweise  
  Andere Arten von Schaltflächen davon abgeleitet sind die `CMFCButton` Klasse, z. B. die [CMFCURLLinkButton](../../mfc/reference/cmfclinkctrl-class.md) -Klasse, die Links unterstützt, und die `CMFCColorButton` Klasse, die ein Farben-Auswahldialogfeld unterstützt.  
@@ -376,7 +381,16 @@ static BOOL IsWindowsThemingEnabled();
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Stil des Rahmens der Schaltfläche für das aktuelle Windows-Design entspricht. andernfalls "false".  
-  
+
+
+
+## <a name="a-namembdontusewinxptheme-cmfcbuttonmbdontusewinxptheme"></a><a name="m_bDontUseWinXPTheme"/> CMFCButton::m_bDontUseWinXPTheme
+Gibt an, ob Windows XP-Designs zu verwenden, wenn die Schaltfläche zu zeichnen.
+
+```  
+BOOL m_bDontUseWinXPTheme;  
+```
+
 ##  <a name="m_bdrawfocus"></a>  CMFCButton::m_bDrawFocus  
  Gibt an, ob ein Fokusrechteck um eine Schaltfläche zu zeichnen.  
   
@@ -388,7 +402,15 @@ BOOL m_bDrawFocus;
  Legen Sie die `m_bDrawFocus` Member auf "true", um anzugeben, dass das Framework wird ein auf der Text der Schaltfläche Fokusrechteck und image, wenn die Schaltfläche den Fokus erhält.  
   
  Die `CMFCButton` Konstruktor initialisiert dieses Member auf "true".  
-  
+
+##  <a name="m_bGrayDisabled"></a>  CMFCButton::m_bGrayDisabled
+Bei "true", können eine nicht aktive Schaltfläche als abgeblendeten gezeichnet werden soll.
+
+
+```  
+BOOL m_bGrayDisabled;  
+```
+
 ##  <a name="m_bhighlightchecked"></a>  CMFCButton::m_bHighlightChecked  
  Gibt an, ob eine BS_CHECKBOX-Schaltfläche zu markieren, wenn der Cursor darauf gezeigt wird.  
   
@@ -398,14 +420,29 @@ BOOL m_bHighlightChecked;
   
 ### <a name="remarks"></a>Hinweise  
  Legen Sie die `m_bHighlightChecked` Member auf "true", um anzugeben, dass das Framework eine BS_CHECKBOX-Schaltfläche hervorgehoben wird, wenn die Maus darüber bewegt wird.  
-  
+
+##  <a name="m_bResponseOnButtonDown"></a> CMFCButton::m_bResponseOnButtonDown
+Gibt an, ob auf Tastendruck Ereignisse zu reagieren.
+
+```  
+BOOL m_bResponseOnButtonDown;  
+```  
+
 ##  <a name="m_brightimage"></a>  CMFCButton::m_bRightImage  
  Gibt an, ob ein Bild auf der rechten Seite der Schaltfläche angezeigt werden soll.  
   
 ```  
 BOOL m_bRightImage;  
 ```  
-  
+
+
+##  <a name="m_bTopImage"></a>  CMFCButton::m_bTopImage](#m_bTopImage)
+Gibt an, ob das Bild auf die Schaltfläche ist.
+
+```  
+BOOL m_bTopImage;  
+```
+
 ### <a name="remarks"></a>Hinweise  
  Legen Sie die `m_bRightImage` Member auf "true", um anzugeben, dass das Framework das Bild der Schaltfläche rechts neben der Schaltfläche die Bezeichnung angezeigt wird.  
   
@@ -436,7 +473,14 @@ AlignStyle m_nAlignStyle;
 |ALIGN_RIGHT|Richtet den Text der Schaltfläche rechts neben der Schaltfläche aus.|  
   
  Die `CMFCButton` Konstruktor initialisiert dieses Member zu ALIGN_CENTER.  
-  
+
+##  <a name="m_bWasDblClk"></a>  CMFCButton::m_bWasDblClk](#m_bWasDblClk) | 
+Gibt an, ob die letzte klicken Sie auf wurde Ereignis einen Doppelklick. |
+
+```  
+BOOL m_bWasDblClk;  
+```  
+
 ##  <a name="m_nflatstyle"></a>  CMFCButton::m_nFlatStyle  
  Gibt den Stil der Schaltfläche, z. B. randlose, Flatfiles, durch flachen oder 3D.  
   
