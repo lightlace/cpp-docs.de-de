@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bc6080bf66ad9bb9d436832b1066214f8cdbfb7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7b3db7fbcf190aa2dda05cabd2d1553824fb076e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42575478"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194726"
 ---
 # <a name="appearance-atl-control-wizard"></a>Darstellung, ATL-Steuerelement-Assistent
 Fügen Sie hier "Suchergebnisse" Zusammenfassung.  
@@ -32,7 +32,7 @@ Fügen Sie hier "Suchergebnisse" Zusammenfassung.
 **Anzeigestatus**  
 Legt fest, die Darstellung des Steuerelements innerhalb des Containers.  
   
- -   **Nicht transparente**: setzt das bit im VIEWSTATUS_OPAQUE der [VIEWSTATUS](http://msdn.microsoft.com/library/windows/desktop/ms687201) Enumeration und zeichnet das gesamte Steuerelement Rechteck an der [CComControlBase:: OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) Methode. Das Steuerelement wird vollständig deckend und keines der Container zeigt hinter der Steuerelementgrenzen.      
+ -   **Nicht transparente**: setzt das bit im VIEWSTATUS_OPAQUE der [VIEWSTATUS](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) Enumeration und zeichnet das gesamte Steuerelement Rechteck an der [CComControlBase:: OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) Methode. Das Steuerelement wird vollständig deckend und keines der Container zeigt hinter der Steuerelementgrenzen.      
       
         Mit dieser Einstellung können den Container schnell das Steuerelement zu zeichnen. Wenn diese Option nicht ausgewählt ist, kann das Steuerelement eine transparente Teile enthalten.  
       
@@ -82,7 +82,7 @@ Zusätzliche Aussehen und Verhalten-Optionen für das Steuerelement fest.
   
  -   **Zur Laufzeit unsichtbar**: Legt fest, das Steuerelement zur Laufzeit nicht sichtbar sein. Sie können Unsichtbare Steuerelemente verwenden, um Vorgänge im Hintergrund, wie z. B. das Auslösen von Ereignissen in festgelegten Intervallen auszuführen.  
       
- -   **Verhält sich wie Schaltfläche**: setzt das bit im OLEMISC_ACTSLIKEBUTTON der [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) Enumeration, um ein Steuerelement, das Verhalten zu aktivieren, wie eine Schaltfläche. Wenn der Container des Steuerelements Clientstandort als Standardschaltfläche gekennzeichnet wurde, ermöglicht die Auswahl dieser Option das Schaltflächen-Steuerelement selbst als Standardschaltfläche angezeigt, selbst mit einem breiteren Rahmen zu zeichnen. Finden Sie unter [CComControlBase:: GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) für Weitere Informationen.  
+ -   **Verhält sich wie Schaltfläche**: setzt das bit im OLEMISC_ACTSLIKEBUTTON der [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) Enumeration, um ein Steuerelement, das Verhalten zu aktivieren, wie eine Schaltfläche. Wenn der Container des Steuerelements Clientstandort als Standardschaltfläche gekennzeichnet wurde, ermöglicht die Auswahl dieser Option das Schaltflächen-Steuerelement selbst als Standardschaltfläche angezeigt, selbst mit einem breiteren Rahmen zu zeichnen. Finden Sie unter [CComControlBase:: GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) für Weitere Informationen.  
       
   -   **Verhält sich wie Bezeichnung**: Legt das OLEMISC_ACTSLIKELABEL bit in der OLEMISC-Enumeration zum Aktivieren eines Steuerelements für die systemeigene Bezeichnung des Containers zu ersetzen. Der Container bestimmt mit diesem Flag, wenn überhaupt.  
   

@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0ce8b2cc412c576b0eded9662d8e70b34cf2ec
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1469bef0ef41c72e2ff5e59017088cd63f0f9c79
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850812"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194597"
 ---
 # <a name="reference-counting"></a>Zählen der Verweise
 COM selbst versucht automatisch nicht, ein Objekt aus dem Arbeitsspeicher entfernen, wenn er davon ausgeht, dass das Objekt nicht mehr verwendet wird. Stattdessen muss der Objektprogrammierer, das nicht verwendete Objekt entfernen. Der Programmierer bestimmt, ob ein Objekt basierend auf einen Verweiszähler entfernt werden kann.  
   
- COM verwendet die `IUnknown` Methoden ["AddRef"](http://msdn.microsoft.com/library/windows/desktop/ms691379) und [Version](http://msdn.microsoft.com/library/windows/desktop/ms682317), um den Verweiszähler der Schnittstellen für ein Objekt zu verwalten. Die allgemeinen Regeln für das Aufrufen dieser Methoden sind:  
+ COM verwendet die `IUnknown` Methoden ["AddRef"](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) und [Version](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release), um den Verweiszähler der Schnittstellen für ein Objekt zu verwalten. Die allgemeinen Regeln für das Aufrufen dieser Methoden sind:  
   
 -   Wenn ein Client einen Schnittstellenzeiger, empfängt `AddRef` muss für die Schnittstelle aufgerufen werden.  
   
@@ -43,5 +43,5 @@ COM selbst versucht automatisch nicht, ein Objekt aus dem Arbeitsspeicher entfer
   
 ## <a name="see-also"></a>Siehe auch  
  [Einführung in COM](../atl/introduction-to-com.md)   
- [Verwalten der Lebensdauer von Objekten über die Verweiszählung](http://msdn.microsoft.com/library/windows/desktop/ms687260)
+ [Verwalten der Lebensdauer von Objekten über die Verweiszählung](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)
 

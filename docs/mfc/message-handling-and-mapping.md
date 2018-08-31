@@ -1,5 +1,5 @@
 ---
-title: Message-Behandlung und Zuordnung | Microsoft Docs
+title: Nachrichten, behandeln und Zuordnung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 906d84d70b3bf2ae2a9da14ce9e5b06ed92d3730
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 11ac9e794aef374012f2b15faa7e93b907f6a15c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931033"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194540"
 ---
 # <a name="message-handling-and-mapping"></a>Meldungsbehandlung und -zuordnung
-Diese Artikelreihe wird beschrieben, wie Meldungen und Befehle durch MFC-Frameworks verarbeitet werden und wie Sie sie mit Ihren jeweiligen Handlerfunktionen zu verbinden.  
+In diesen Abschnitten wird beschrieben, wie Meldungen und Befehle von MFC-Frameworks verarbeitet werden und wie Sie sie mit Ihren jeweiligen Handlerfunktionen verbinden.  
   
- In herkömmlichen Programmen für Windows Windows-Meldungen in einer großen Switch-Anweisung in eine Fensterprozedur behandelt werden. Stattdessen verwendet MFC [meldungszuordnungen](../mfc/message-categories.md) , direkte Nachrichten unterschiedliche Klassenmemberfunktionen zuzuordnen. Meldungszuordnungen sind effizienter als virtuelle Funktionen für diesen Zweck, und ermöglichen den Nachrichten von den am besten geeigneten C++-Objekt behandelt werden: Anwendung, Dokument anzeigen und So weiter. Sie können eine einzelne Nachricht oder eine Reihe von Nachrichten, die Befehls-IDs zuordnen oder Steuerelement-IDs.  
+ In herkömmlichen Programmen für Windows werden die Windows-Nachrichten in einer großen Switch-Anweisung in eine Fensterprozedur verarbeitet. Stattdessen verwendet MFC [meldungszuordnungen](../mfc/message-categories.md) , direkte Nachrichten unterschiedliche Klassenmemberfunktionen zuzuordnen. Meldungszuordnungen sind effizienter als virtuelle Funktionen, die für diesen Zweck und ermöglichen Nachrichten von der am besten geeignete C++-Objekt behandelt werden, Anwendung, Dokument, anzeigen und So weiter. Sie können eine einzelne Nachricht oder einen Bereich von Nachrichten, die Befehls-IDs zuordnen oder Steuerelement-IDs.  
   
- WM_COMMAND-Meldungen – in der Regel von Menüs, Symbolleisten-Schaltflächen und Zugriffstasten generiert – auch die meldungszuordnungsmechanismus verwenden. MFC definiert einen Standard [routing](../mfc/command-routing.md) von befehlsmeldungen zwischen der Anwendung, frame-Fensters, Ansicht und aktive Dokumente in Ihrem Programm. Sie können die dieses routing bei Bedarf überschreiben.  
+ WM_COMMAND-Meldungen, in der Regel von Menüs, Symbolleisten-Schaltflächen und Zugriffstasten generiert – auch verwenden, der meldungszuordnungsmechanismus. MFC definiert einen Standard [routing](../mfc/command-routing.md) der Command-Meldungen zwischen der Anwendung, frame-Fensters, Ansicht und aktive Dokumente in Ihrem Programm. Sie können die dieses routing bei Bedarf überschreiben.  
   
- Meldungszuordnungen geben auch eine Möglichkeit zum Aktualisieren von Benutzeroberflächenobjekten (z. B. Menüs und Symbolleisten-Schaltflächen), aktivieren oder deaktivieren sie entsprechend den aktuellen Kontext.  
+ Meldungszuordnungen geben auch eine Möglichkeit zum Aktualisieren von Benutzeroberflächenobjekten (z. B. Menüs und Symbolleisten-Schaltflächen), aktivieren oder deaktivieren diese entsprechend den aktuellen Kontext.  
   
- Allgemeine Informationen über Nachrichten und Warteschlangen in Windows finden Sie unter [Nachrichten und Warteschlangen](http://msdn.microsoft.com/library/windows/desktop/ms632590) im Windows SDK.  
+ Allgemeine Informationen über Nachrichten und Warteschlangen in Windows finden Sie unter [Nachrichten und Warteschlangen](https://msdn.microsoft.com/library/windows/desktop/ms632590) im Windows SDK.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
   
@@ -48,7 +48,7 @@ Diese Artikelreihe wird beschrieben, wie Meldungen und Befehle durch MFC-Framewo
   
 -   [Vorgehensweise beim Anzeigen von Befehlsinformationen in der Statusleiste](../mfc/how-to-display-command-information-in-the-status-bar.md)  
   
--   [Dynamische Aktualisierung von Benutzeroberflächenobjekten](../mfc/how-to-update-user-interface-objects.md)  
+-   [Dynamische Updates von Benutzeroberflächenobjekten](../mfc/how-to-update-user-interface-objects.md)  
   
 -   [Vorgehensweise: Erstellen einer Meldungszuordnung für eine Vorlagenklasse](../mfc/how-to-create-a-message-map-for-a-template-class.md)  
   
