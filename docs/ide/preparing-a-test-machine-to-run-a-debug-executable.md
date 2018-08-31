@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33683ebe349fbfdcb3fd51179ed6bc3140510c00
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 3600e5541c095b3879fe60404c9a5994c2a91088
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330296"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42578428"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Vorbereiten eines Testcomputers zum Ausführen einer ausführbaren Debugdatei
 Um einen Computer zum Testen der Debugversion einer Anwendung vorzubereiten, die in Visual C++ erstellt wurde, müssen Sie Debugversionen der Visual C++-Bibliothek-DLLs bereitstellen, die für die Anwendung erforderlich sind. Führen Sie die Anweisungen unter [Understanding the Dependencies of a Visual C++ Application (Grundlegendes zu den Abhängigkeiten einer Visual C++-Anwendung)](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md) aus, um zu ermitteln, welche DLLs bereitgestellt werden müssen. Die Namen der Debugversionen der DLLs für Visual C++-Bibliotheken enden in der Regel auf "d". Beispielsweise hat die Debugversion der "msvcr100.dll" den Namen "msvcr100d.dll".  
@@ -43,5 +43,5 @@ Um einen Computer zum Testen der Debugversion einer Anwendung vorzubereiten, die
 ## <a name="see-also"></a>Siehe auch  
  
  [Deployment in Visual C++ (Bereitstellung in Visual C++)](../ide/deployment-in-visual-cpp.md)   
- [Windows Installer Command line options (Windows Installer-Befehlszeilenoptionen)](http://msdn.microsoft.com/library/windows/desktop/aa367988.aspx)   
+ [Windows Installer Command line options (Windows Installer-Befehlszeilenoptionen)](/windows/desktop/Msi/command-line-options)   
  [Deployment Examples (Bereitstellungsbeispiele)](../ide/deployment-examples.md) [Remote Debugging (Remotedebuggen)](/visualstudio/debugger/remote-debugging.md)
