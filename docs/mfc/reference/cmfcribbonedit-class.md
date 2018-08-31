@@ -83,12 +83,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a27548d51d3de1a27da0b765bd85439467c024
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 46d96d574fedf9af2fe7eb46c872819cf54a364e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850221"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216458"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit-Klasse
 Implementiert ein Bearbeitungssteuerelement, das ist ein Menüband.  
@@ -224,7 +224,7 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
  Ein Zeiger auf das übergeordnete Fenster der `CMFCRibbonEdit` Objekt.  
   
  [in] *DwEditStyle*  
- Gibt die Art des Textfelds. Sie können die Window-Stile, die im Abschnitt "Hinweise" mit aufgeführten kombinieren die [Bearbeiten der Stile von Listensteuerelementen](http://msdn.microsoft.com/library/windows/desktop/bb775464) , werden im Windows SDK beschrieben.  
+ Gibt die Art des Textfelds. Sie können die Window-Stile, die im Abschnitt "Hinweise" mit aufgeführten kombinieren die [Bearbeiten der Stile von Listensteuerelementen](/windows/desktop/Controls/edit-control-styles) , werden im Windows SDK beschrieben.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf das neue Textfeld ein, wenn die Methode erfolgreich war; andernfalls NULL.  
@@ -345,7 +345,7 @@ int GetTextAlign() const;
   
 - **ES_RIGHT** für Rechts-Ausrichtung  
   
- Weitere Informationen zu dieser Stile, finden Sie unter [Bearbeiten der Stile von Listensteuerelementen](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
+ Weitere Informationen zu dieser Stile, finden Sie unter [Bearbeiten der Stile von Listensteuerelementen](/windows/desktop/Controls/edit-control-styles).  
   
 ##  <a name="getwidth"></a>  CMFCRibbonEdit::GetWidth  
  Ruft die Breite in Pixel ab, der die [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Steuerelement.  
@@ -601,7 +601,7 @@ virtual void Redraw();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode zeichnet das Anzeigerechteck für die `CMFCRibbonEdit` Objekt, indem Sie indirekt aufrufen [CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) mit RDW_INVALIDATE RDW_ERASE und RDW_UPDATENOW Flags festgelegt.  
+ Diese Methode zeichnet das Anzeigerechteck für die `CMFCRibbonEdit` Objekt, indem Sie indirekt aufrufen [CWnd::RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) mit RDW_INVALIDATE RDW_ERASE und RDW_UPDATENOW Flags festgelegt.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonEdit::SetACCData  
  Legt die barrierefreiheitsdaten für das [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Objekt.  
@@ -655,7 +655,7 @@ void SetTextAlign(int nAlign);
   
 - ES_RIGHT für Rechts-Ausrichtung  
   
- Weitere Informationen zu dieser Stile, finden Sie unter [Bearbeiten der Stile von Listensteuerelementen](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
+ Weitere Informationen zu dieser Stile, finden Sie unter [Bearbeiten der Stile von Listensteuerelementen](/windows/desktop/Controls/edit-control-styles).  
   
 ##  <a name="setwidth"></a>  CMFCRibbonEdit::SetWidth  
  Legt die Breite des Textfelds, das für die [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Steuerelement.  
