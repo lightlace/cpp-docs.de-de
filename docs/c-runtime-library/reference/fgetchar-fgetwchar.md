@@ -42,12 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b5b42c72f4ea2756358208f85d9c01f7863dba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d3d83c1e86c574f56b08eecdf2c29e7ab20a28b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400563"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194317"
 ---
 # <a name="fgetchar-fgetwchar"></a>_fgetchar, _fgetwchar
 
@@ -62,13 +62,13 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_fgetchar** gibt das gelesene Zeichen als ein **Int** oder zurückgeben **EOF** um einen Fehler oder ein Dateiende anzugeben. **_ *** Fgetwchar** zurückgegeben wird, als ein [Wint_t](../../c-runtime-library/standard-types.md), der Breitzeichen, das das gelesene Zeichen entspricht, oder gibt **WEOF** um einen Fehler oder ein Dateiende anzugeben. Verwenden Sie für beide Funktionen **Feof** oder **Ferror** ein Fehler auftritt und eine End-of-File-Bedingung unterscheiden.
+**\_Fgetchar** gibt das gelesene Zeichen als ein **Int** fest oder gibt `EOF` auf einen Fehler oder ein Dateiende anzugeben. **\_Fgetwchar** zurückgegeben wird, als eine [Wint_t](../../c-runtime-library/standard-types.md), das Breitzeichen, die das gelesene Zeichen entspricht, oder gibt `WEOF` auf einen Fehler oder ein Dateiende anzugeben. Verwenden Sie für beide Funktionen **Feof** oder **Ferror** ein Fehler auftritt und eine End-of-File-Bedingung unterscheiden.
 
 ## <a name="remarks"></a>Hinweise
 
 Diese Funktionen lesen ein einzelnes Zeichen aus **Stdin**. Die Funktion erhöht dann den zugeordneten Dateizeiger (sofern definiert), um auf das nächste Zeichen zu zeigen. Wenn der Stream am Dateiende ist, wird der Dateiende-Indikator für den Stream festgelegt.
 
-**_fgetchar** entspricht `fgetc( stdin )`. Dies entspricht auch **Getchar**, jedoch nur als Funktion anstelle einer Funktion und Makro implementiert. **_fgetwchar** ist die Breitzeichen-Version des **_fgetchar**.
+**_fgetchar** entspricht `fgetc( stdin )`. Dies entspricht auch **Getchar**, jedoch nur als Funktion anstelle einer Funktion und Makro implementiert. **_fgetwchar** ist die Breitzeichen-Version von **_fgetchar**.
 
 Diese Funktionen sind nicht dem ANSI-Standard kompatibel.
 
@@ -85,7 +85,7 @@ Diese Funktionen sind nicht dem ANSI-Standard kompatibel.
 |**_fgetchar**|\<stdio.h>|
 |**_fgetwchar**|\<stdio.h> oder \<wchar.h>|
 
-Die Konsole wird in apps der universellen Windows-Plattform (UWP) nicht unterstützt. Standardstream Handles, die mit der Konsole verknüpften sind –**Stdin**, **"stdout"**, und **"stderr"**– umgeleitet werden müssen, damit C-Laufzeitfunktionen in uwp-apps verwendet werden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Die mit der Konsole verknüpften standardstreamhandles,**Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

@@ -1,7 +1,7 @@
 ---
-title: Compilerwarnung (Stufe 1) C4953 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4953 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0af5a16ebbf7851eceb2f2cd355f953b14c4bd38
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e53808d4ad97bad4eccdf81b0a863277f8f7796
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293061"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194631"
 ---
 # <a name="compiler-warning-level-1-c4953"></a>Compilerwarnung (Stufe 1) C4953
-Inlinee "function" wurde bearbeitet, seit die Konfigurationsdaten erfasst wurden. Die Profildaten werden nicht verwendet  
-  
- Bei Verwendung von [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md)hat der Compiler ein Eingabemodul erkannt, das nach `/LTCG:PGINSTRUMENT` neu kompiliert wurde und eine Funktion (***function***) aufweist, die bearbeitet wurde und die in vorhandenen Testläufen als Kandidat für Inlining identifiziert wurde. Infolge der Neukompilierung des Moduls ist die Funktion jedoch kein Kandidat für Inlining mehr.  
-  
- Diese Warnung dient nur zu Informationszwecken. Um diese Warnung zu beheben, führen Sie `/LTCG:PGINSTRUMENT`aus, wiederholen alle Testläufe und führen `/LTCG:PGOPTIMIZE`aus.  
-  
- Bei Verwendung von `/LTCG:PGOPTIMIZE` würde diese Warnung durch einen Fehler ersetzt.
+
+> Inlinee "*Funktion*" wurde bearbeitet wurde, seit die Profildaten erfasst Daten wurden, Profildaten werden nicht verwendet
+
+Bei Verwendung [/LTCG: PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), der Compiler ein Eingabemodul, die nach der neu kompilierten `/LTCG:PGINSTRUMENT` und verfügt über eine Funktion (*Funktion*), die bearbeitet wurde und in vorhandenen Testläufen identifiziert die Funktion als Kandidat für inlining. Infolge der Neukompilierung des Moduls ist die Funktion jedoch kein Kandidat für Inlining mehr.
+
+Diese Warnung dient nur zu Informationszwecken. Um diese Warnung zu beheben, führen Sie `/LTCG:PGINSTRUMENT`aus, wiederholen alle Testläufe und führen `/LTCG:PGOPTIMIZE`aus.
+
+Bei Verwendung von `/LTCG:PGOPTIMIZE` würde diese Warnung durch einen Fehler ersetzt.

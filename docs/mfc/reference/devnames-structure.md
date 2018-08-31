@@ -1,5 +1,5 @@
 ---
-title: DEVNAMES-Struktur | Microsoft Docs
+title: DEVNAMES-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c13167c42c6acbfcc5f3af500205eed6ab884d9
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: e2ba459a2ee98a89e264be452b04f116072d41e6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121574"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194610"
 ---
 # <a name="devnames-structure"></a>DEVNAMES-Struktur
-Die `DEVNAMES` Struktur enthält die Zeichenfolgen, die die Treiber, Geräte und Ausgabe-Anschlussnamen für einen Drucker zu identifizieren.  
+Die `DEVNAMES` Struktur enthält Zeichenfolgen, die die Treiber, Gerät und die Namen der Ausgabe-Anschlüsse für einen Drucker zu identifizieren.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,19 +41,19 @@ typedef struct tagDEVNAMES { /* dvnm */
   
 #### <a name="parameters"></a>Parameter  
  *wDriverOffset*  
- (Eingabe/Ausgabe) Gibt den Offset in Zeichen, die eine auf Null endende Zeichenfolge, die den Dateinamen (ohne Erweiterung) für den Gerätetreiber enthält. Bei der Eingabe wird diese Zeichenfolge verwendet, um zu bestimmen, den Drucker anfänglich im Dialogfeld angezeigt.  
+ (Eingabe/Ausgabe) Gibt den Offset in Zeichen, um eine auf Null endende Zeichenfolge, die den Dateinamen (ohne Erweiterung) für den Gerätetreiber enthält. Bei der Eingabe wird diese Zeichenfolge verwendet, um zu bestimmen, den Drucker mit der ursprünglich im Dialogfeld angezeigt.  
   
  *wDeviceOffset*  
- (Eingabe/Ausgabe) Gibt den Offset in Zeichen, die Null-terminierte Zeichenfolge (maximal 32 Byte, einschließlich der Null) mit dem Namen des Geräts an. Diese Zeichenfolge muss identisch mit der `dmDeviceName` Mitglied der [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) Struktur.  
+ (Eingabe/Ausgabe) Gibt den Offset in Zeichen, die Null-terminierte Zeichenfolge (maximal 32 Bytes, einschließlich Null), die den Namen des Geräts enthält. Diese Zeichenfolge muss identisch mit der `dmDeviceName` Mitglied der [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) Struktur.  
   
  *wOutputOffset*  
- (Eingabe/Ausgabe) Gibt den Offset in Zeichen, die auf Null endende Zeichenfolge, die der DOS-Gerätename für das physikalische Ausgabemedium (Ausgabeport) enthält.  
+ (Eingabe/Ausgabe) Gibt den Offset in Zeichen, die Null-terminierte Zeichenfolge, die den DOS-Gerätenamen für das physische Ausgabemedium (Ausgabe-Anschluss) enthält.  
   
  *wDefault*  
- Gibt an, ob die Zeichenfolgen in enthalten die `DEVNAMES` Struktur als Standarddrucker zu identifizieren. Diese Zeichenfolge wird verwendet, um sicherzustellen, dass seit der letzten Druckvorgang nicht als Standarddrucker geändert hat. Bei der Eingabe, wenn das DN_DEFAULTPRN-Flag festgelegt ist, die andere Werte der `DEVNAMES` Struktur anhand der aktuellen Standarddrucker überprüft. Wenn eine der Zeichenfolgen nicht übereinstimmen, wird eine Warnmeldung angezeigt informiert den Benutzer, den das Dokument neu formatiert werden muss. Bei der Ausgabe der `wDefault` Element geändert wird, nur, wenn das Dialogfeld Drucken Setup angezeigt wurde und der Benutzer die Schaltfläche "OK hat". Das DN_DEFAULTPRN-Flag wird festgelegt, wenn als Standarddrucker ausgewählt wurde. Wenn Sie ein bestimmter Drucker ausgewählt ist, wird das Flag nicht festgelegt. Alle anderen Bits in diesem Element sind durch die Print-Standarddialogfelder für die interne Verwendung reserviert.  
+ Gibt an, ob die Zeichenfolgen in enthalten die `DEVNAMES` Struktur identifizieren den Standarddrucker. Diese Zeichenfolge wird verwendet, um sicherzustellen, dass es sich bei der Standarddrucker seit der letzten Druckvorgang nicht geändert hat. Bei der Eingabe, wenn die DN_DEFAULTPRN-Flag festgelegt ist, die andere Werte der `DEVNAMES` Struktur werden mit den aktuellen Standarddrucker verglichen. Wenn einer der Zeichenfolgen nicht übereinstimmen, wird eine Warnmeldung angezeigt, den Benutzer, den das Dokument möglicherweise umformatiert werden darüber informiert. Bei der Ausgabe der `wDefault` Element geändert wird, nur, wenn das Dialogfeld Drucken-Setup angezeigt wurde und der Benutzer die Schaltfläche "OK hat". Die DN_DEFAULTPRN-Flag wird festgelegt, wenn der Standarddrucker ausgewählt wurde. Wenn Sie ein bestimmten Drucker aktiviert ist, wird das Flag nicht festgelegt. Alle anderen Bits in diesem Member sind von der Print-Dialogfeldprozedur für die interne Verwendung reserviert.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `PrintDlg` Funktion verwendet diese Zeichenfolgen zum Initialisieren von Membern im System definierte Drucken-Dialogfeld. Wenn der Benutzer das Dialogfeld wird geschlossen, werden Informationen über den ausgewählten Drucker in dieser Struktur zurückgegeben.  
+ Die `PrintDlg` Funktion verwendet diese Zeichenfolgen zum Initialisieren von Membern im System definierte Dialogfeld Drucken. Wenn der Benutzer das Dialogfeld schließt, werden Informationen über den ausgewählten Drucker in dieser Struktur zurückgegeben.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** commdlg.h  
