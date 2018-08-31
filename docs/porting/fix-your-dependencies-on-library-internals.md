@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 148db60c7a3b1ae3f71269feec8024f6ff22a118
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c80bad11a13c454d8b4025e5cc0745514696a0f7
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839059"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578276"
 ---
 # <a name="fix-your-dependencies-on-library-internals"></a>Beheben Ihrer Abhängigkeiten von bibliotheksinternen Elementen
 
@@ -34,9 +34,9 @@ Die interne Hash-Funktion `std::_Hash_seq(const unsigned char *, size_t)`, die z
   
 Um diese Abhängigkeit zu entfernen, haben Sie eine Reihe von Optionen.  
 
--   Wenn Ihre Absicht darin besteht, eine `const char *`-Sequenz mithilfe des gleichen Hashcode-Mechanismus wie `basic_string` in einen ungeordneten Container einzufügen, können Sie dafür die `std::hash`-Vorlagenüberladung verwenden, die `std::string_view` verwendet, wodurch dieser Hashcode auf portierbare Weise zurückgegeben wird. Der Zeichenfolgen-Bibliothekscode beruht möglicherweise auf der Verwendung eines FNV-1a-Hashs in der Zukunft. Dies ist daher die beste Weise, eine Abhängigkeit von einem bestimmten Hashalgorithmus zu vermeiden. 
+- Wenn Ihre Absicht darin besteht, eine `const char *`-Sequenz mithilfe des gleichen Hashcode-Mechanismus wie `basic_string` in einen ungeordneten Container einzufügen, können Sie dafür die `std::hash`-Vorlagenüberladung verwenden, die `std::string_view` verwendet, wodurch dieser Hashcode auf portierbare Weise zurückgegeben wird. Der Zeichenfolgen-Bibliothekscode beruht möglicherweise auf der Verwendung eines FNV-1a-Hashs in der Zukunft. Dies ist daher die beste Weise, eine Abhängigkeit von einem bestimmten Hashalgorithmus zu vermeiden. 
   
--   Wenn Ihre Absicht darin besteht, einen FNV-1a-Hash über beliebigen Speicher zu generieren, finden Sie diesen Code auf GitHub im [VCSamples]( https://github.com/Microsoft/vcsamples)-Repository in einer eigenständigen Headerdatei, [fnv1a.hpp](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq), unter einer [MIT-Lizenz](https://github.com/Microsoft/VCSamples/blob/master/license.txt). Der Einfachheit halber haben wir auch hier eine Kopie eingefügt. Sie können diesen Code in eine Headerdatei kopieren, den Header zu betroffenem Code hinzufügen und dann `_Hash_seq` suchen und durch `fnv1a_hash_bytes` ersetzen. Dies führt zu dem gleichen Verhalten wie bei der internen Implementierung in `_Hash_seq`. 
+- Wenn Ihre Absicht darin besteht, einen FNV-1a-Hash über beliebigen Speicher zu generieren, finden Sie diesen Code auf GitHub im [VCSamples]( https://github.com/Microsoft/vcsamples)-Repository in einer eigenständigen Headerdatei, [fnv1a.hpp](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq), unter einer [MIT-Lizenz](https://github.com/Microsoft/VCSamples/blob/master/license.txt). Der Einfachheit halber haben wir auch hier eine Kopie eingefügt. Sie können diesen Code in eine Headerdatei kopieren, den Header zu betroffenem Code hinzufügen und dann `_Hash_seq` suchen und durch `fnv1a_hash_bytes` ersetzen. Dies führt zu dem gleichen Verhalten wie bei der internen Implementierung in `_Hash_seq`. 
 
 ```cpp  
 /*
