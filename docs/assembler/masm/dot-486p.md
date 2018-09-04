@@ -1,7 +1,7 @@
 ---
-title: .486P | Microsoft Docs
+title: .486P | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cea4aff2c3ab444598860f823973f99c37e096b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 1089331725a18a96fd56ec8564ac3403d4e11fd9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049056"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690728"
 ---
 # <a name="486p"></a>.486P
-Aktiviert die Assembly alle Anweisungen, die (einschließlich der privilegierten) für 80486-Prozessor.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-.486P  
-  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+
+Können 80486 des Prozessors für die Assembly des alle-Anweisungen (einschließlich der Berechtigungen).
+
+## <a name="syntax"></a>Syntax
+
+> .486P
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

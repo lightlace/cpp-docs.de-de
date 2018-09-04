@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38ceffd8a5f01cdc97ee162cc92fce319f771dbe
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ea90d30a492fc19020a3309a994f885ab5916be2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221571"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690546"
 ---
 # <a name="errorcode-class"></a>error_code-Klasse
 
@@ -172,7 +172,7 @@ error_code(_Enum _Errcode,
 
 Der erste Konstruktor speichert einen Fehlercodewert „Null“ und einen Zeiger auf [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-Der zweite Konstruktor speichert *Val* als Fehlercodewert und einen Zeiger auf [Error_category](https://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
+Der zweite Konstruktor speichert *Val* als Fehlercodewert und einen Zeiger auf [Error_category](../standard-library/error-category-class.md).
 
 Der dritte Konstruktor speichert `(value_type)_Errcode` als Fehlercodewert und einen Zeiger auf [generic_category](../standard-library/system-error-functions.md#generic_category).
 
@@ -238,7 +238,7 @@ Der Memberoperator gibt `!(*this == right)`zurück.
 
 ## <a name="op_lt"></a> error_code::operator bool&lt;
 
-Testet, ob ein [error_code](https://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31)-Objekt kleiner ist als das Objekt `error_code`, das für den Vergleich übergeben wurde.
+Testet, ob das `error_code`-Objekt kleiner ist als das `error_code`-Objekt, das für den Vergleich übergeben wurde.
 
 ```cpp
 bool operator<(const error_code& right) const;
@@ -260,7 +260,7 @@ Der Memberoperator gibt `category() < right.category() || category() == right.ca
 
 ## <a name="op_eq"></a> error_code::operator=
 
-Weist dem [error_code](https://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31)-Objekt einen neuen Enumerationswert zu.
+Weist dem `error_code`-Objekt einen neuen Enumerationswert zu.
 
 ```cpp
 template <class _Enum>

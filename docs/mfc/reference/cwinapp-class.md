@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58509ec4f6a3773478e1bc544f28baf92d7e97b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c940ec56b0f522e90410b786d595f4cbf929ed89
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206891"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688544"
 ---
 # <a name="cwinapp-class"></a>CWinApp-Klasse
 
@@ -270,7 +270,7 @@ class CWinApp : public CWinThread
 |[OnIdle](#onidle)|Überschreiben Sie, um anwendungsspezifische Leerlaufzeit, Verarbeitungsvorgänge auszuführen.|
 |[CWinApp:: OpenDocumentFile](#opendocumentfile)|Vom Framework aufgerufen wird, ein Dokument aus einer Datei zu öffnen.|
 |[CWinApp::ParseCommandLine](#parsecommandline)|Analysiert einzelne Parameter und die Flags in der Befehlszeile an.|
-|[PreTranslateMessage](#pretranslatemessage)|Filtert Nachrichten, bevor sie für die Windows-Funktionen weitergeleitet werden [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).|
+|[PreTranslateMessage](#pretranslatemessage)|Filtert Nachrichten, bevor sie für die Windows-Funktionen weitergeleitet werden [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|Bestimmte Nachrichten abfängt, bevor sie die Anwendung erreichen.|
 |[CWinApp::ProcessShellCommand](#processshellcommand)|Behandelt Befehlszeilenargumente und Flags.|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|Fängt alle nicht behandelte Ausnahmen, die von der Anwendung die Nachricht und befehlshandlern ausgelöst.|
@@ -1794,7 +1794,7 @@ Eine Beschreibung der Flags, die Befehlszeile finden Sie unter [CCommandLineInfo
 
 ##  <a name="pretranslatemessage"></a>  PreTranslateMessage
 
-Außer Kraft setzen diese Funktion fenstermeldungen zu filtern, bevor sie für die Windows-Funktionen weitergeleitet werden [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) die Standardimplementierung nimmt der Zugriffstaste: Übersetzung, damit Sie aufrufen müssen die `CWinApp::PreTranslateMessage` Member-Funktion in Ihrer außer Kraft gesetzte Version.
+Außer Kraft setzen diese Funktion fenstermeldungen zu filtern, bevor sie für die Windows-Funktionen weitergeleitet werden [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) die Standardimplementierung nimmt der Zugriffstaste: Übersetzung, damit Sie aufrufen müssen die `CWinApp::PreTranslateMessage` Member-Funktion in Ihrer außer Kraft gesetzte Version.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);

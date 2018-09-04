@@ -1,7 +1,7 @@
 ---
-title: IFDIF] | Microsoft Docs
+title: IFDIF] | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f28485cfb8749c40741f5067689ef7a8ee494a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 38a6510a339ec07b32e873aec072d8124138c6ac
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050801"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690793"
 ---
 # <a name="ifdif"></a>IFDIF]
-Gewährt Assembly, wenn die Textelemente unterscheiden.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-IFDIF[[I]] textitem1, textitem2  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Wenn **ich** wird angegeben, beim Vergleich wird die Groß-/Kleinschreibung beachtet. Finden Sie unter [IF](../../assembler/masm/if-masm.md) für die vollständige Syntax.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+
+Gewährt-Assembly, wenn die Textelemente unterscheiden.
+
+## <a name="syntax"></a>Syntax
+
+> IFDIF [[I]] textitem1, textitem2
+
+## <a name="remarks"></a>Hinweise
+
+Wenn **ich** wird angegeben, beim Vergleich wird die Groß-/Kleinschreibung. Finden Sie unter [IF](../../assembler/masm/if-masm.md) für die vollständige Syntax.
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

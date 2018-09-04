@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca7cfb6a3d83e69c4b447a9e953581285ffaaf0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c9ada8396f9d5473213f726acd27691a97a59847
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219172"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684792"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx-Klasse
 Diese Klasse stellt Methoden zur Behandlung von Objekt Anzahl verweisverwaltung für aggregierte und zusammengesetzten Objekte.  
@@ -279,7 +279,7 @@ IUnknown*
  Wenn das Objekt aggregiert wird, befindet sich der Zeiger auf die äußere unbekannte in `m_pOuterUnknown`. Wenn das Objekt nicht aggregiert werden, Zugriff auf der Verweiszähler von `AddRef` und `Release` befindet sich in [M_dwRef](#m_dwref).  
   
 ##  <a name="objectmain"></a>  CComObjectRootEx::ObjectMain  
- Für jede Klasse aufgeführt, die der [objektzuordnung](https://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f), diese Funktion wird aufgerufen, sobald beim Initialisieren des Moduls, und es wenn er beendet.  
+ Diese Funktion wird für jede Klasse, die in der objektzuordnung aufgeführt wird, aufgerufen, sobald beim Initialisieren des Moduls, und es wenn er beendet.  
   
 ```
 static void WINAPI ObjectMain(bool bStarting);

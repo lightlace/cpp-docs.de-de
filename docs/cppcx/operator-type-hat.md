@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8530a3c896d5c1dfa6568e166b9a0a43c0f0b0fc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8abccf48219b70040ce728ba0dff9fa02b57bfc0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208086"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688464"
 ---
 # <a name="operator-type"></a>Operator Type^
 Ermöglicht die Konvertierung von [TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) zu `Platform::Type`.  
@@ -49,7 +49,7 @@ Type^ tx2 = (Type^)(tn);
 ```  
   
 ## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- .NET Framework-Programm-Projekts `TypeName` als [System.Type](assetId:///System.Type?qualifyHint=False&autoUpgrade=True).  
+ .NET Framework-Programm-Projekts `TypeName` als <xref:System.Type>
   
 ### <a name="requirements"></a>Anforderungen  
   

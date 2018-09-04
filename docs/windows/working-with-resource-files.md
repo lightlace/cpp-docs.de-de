@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d96b9430cd5a6a4a9f3d65ab60c49a38b0530db7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c0cbc2e88bc123b4de82ca69a41a17a41729bb4a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211096"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691191"
 ---
 # <a name="working-with-resource-files"></a>Arbeiten mit Ressourcendateien
 
 > [!WARNING]
-> Dieser Abschnitt gilt für in C++ erstellte Windows-Desktopanwendungen. Weitere Informationen zu Ressourcen in die universelle Windows-Plattform-apps in C++ geschrieben wurden, finden Sie unter [Definieren von App-Ressourcen](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
+> Dieser Abschnitt gilt für in C++ erstellte Windows-Desktopanwendungen. Weitere Informationen zu Ressourcen in die universelle Windows-Plattform-apps in C++ geschrieben wurden, finden Sie unter [Definieren von App-Ressourcen](/windows/uwp/app-resources/).
 >
 > Informationen zum Hinzufügen von Ressourcen zu C++ / CLI-Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.
 
@@ -52,9 +52,6 @@ Beschreibt die Ressourcen-Editoren, die in Visual Studio bereitgestellt werden, 
 
 [Visual C++](../visual-cpp-in-visual-studio.md)  
 Enthält Links zur Visual C++-Dokumentation
-
-[Einführung in Visual Studio](https://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
-Beschreibt den vollständigen Satz an Entwicklungstools, die alle die gleiche integrierte Entwicklungsumgebung (IDE) verwenden, sodass sie Tools freigeben können und die Erstellung von Projektmappen in verschiedenen Sprachen erleichtern.
 
 [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)  
 Bietet Links zu Informationen über die Verwendung des Dokumentationssatzes, Support-Kontaktdaten sowie über die Bereitstellung von Barrierefreiheitsfunktionen.

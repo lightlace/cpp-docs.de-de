@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a54774193c0274c2ee9e4f79c389cee3ffe5c49
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 272921d0a9ac00ec5ee69fb50a17a34e257b1725
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608332"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692587"
 ---
 # <a name="quick-reference-ccx"></a>Kurzreferenz (C++/CX)
-Die Windows-Runtime unterstützt apps für universelle Windows-Plattform (UWP), die nur in einer vertrauenswürdigen betriebssystemumgebung ausgeführt und verwenden autorisierte Funktionen, Datentypen und Geräte über den Microsoft Store verteilt werden. C++ / CX vereinfacht das Schreiben von apps für die Windows-Runtime. In diesem Artikel ist eine kurze Übersicht. eine umfassendere Dokumentation finden Sie unter [Typsystem](../cppcx/type-system-c-cx.md) und [Komponentenerweiterungen für Laufzeitplattformen](http://go.microsoft.com/fwlink/p/?linkid=228720).  
+Die Windows-Runtime unterstützt apps für universelle Windows-Plattform (UWP), die nur in einer vertrauenswürdigen betriebssystemumgebung ausgeführt und verwenden autorisierte Funktionen, Datentypen und Geräte über den Microsoft Store verteilt werden. C++ / CX vereinfacht das Schreiben von apps für die Windows-Runtime. In diesem Artikel ist eine kurze Übersicht. eine umfassendere Dokumentation finden Sie unter [Typsystem](../cppcx/type-system-c-cx.md).  
   
  Wenn Sie in der Befehlszeile erstellen, verwenden die **/Zw** -Compileroption verwenden, um eine UWP-app oder Komponente für Windows-Runtime zu erstellen. Geben Sie für Windows-Runtime-Deklarationen, die in den Windows-Runtime-Metadatendatei (.winmd)-Dateien definiert sind den Zugriff auf, die `#using` Richtlinie oder die **/FU** -Compileroption. Wenn Sie ein Projekt für eine UWP-app erstellen, wird Visual Studio standardmäßig legt diese fest und fügt Verweise auf alle Windows-Runtime-Bibliotheken hinzu.  
   

@@ -1,5 +1,5 @@
 ---
-title: -Qvec-Report (Auto-Vektorisierer Reporting Stufe) | Microsoft Docs
+title: -Qvec-Report (Auto-Vektorisierer Berichtsebene) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ddbb68c20ade9f66215d3a60f2db7ea545409a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85f9d1c63f41b28982018bbe4507ff6bf87158fb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377482"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685852"
 ---
 # <a name="qvec-report-auto-vectorizer-reporting-level"></a>/Qvec-report (Auto-Vectorizer-Berichtsebene)
 Ermöglicht die Berichtsfunktion des Compilers [Auto-Vektorisierer](../../parallel/auto-parallelization-and-auto-vectorization.md) und gibt die Ebene der informationsmeldungen für die Ausgabe während der Kompilierung.  
@@ -30,22 +30,22 @@ Ermöglicht die Berichtsfunktion des Compilers [Auto-Vektorisierer](../../parall
   
 ## <a name="remarks"></a>Hinweise  
  **/ Qvec-Report: 1**  
- Gibt eine informationsmeldung für Schleifen, die vektorisiert werden.  
+ Gibt eine informationsmeldung für Schleifen an, die vektorisiert werden.  
   
- **/ Qvec-Bericht: 2**  
- Gibt eine informationsmeldung für Schleifen, die vektorisiert werden und for-Schleifen, die nicht, zusammen mit einen Ursachencode vektorisiert werden.  
+ **/ Qvec-Report: 2**  
+ Gibt eine informationsmeldung für Schleifen an, die vektorisiert werden und für Schleifen an, die nicht, zusammen mit einen Ursachencode vektorisiert werden.  
   
- Informationen zu Ursachencodes und Meldungen finden Sie unter [Vectorizer- and Parallelizer-Meldungen](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
+ Weitere Informationen zu Ursachencodes und Meldungen, finden Sie unter [Vectorizer- and Parallelizer-Meldungen](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
   
 ### <a name="to-set-the-qvec-report-compiler-option-in-visual-studio"></a>So legen Sie die /Qvec-report-Compileroption in Visual Studio fest  
   
 1.  Öffnen Sie im **Projektmappen-Explorer**das Kontextmenü für das Projekt, und wählen Sie **Eigenschaften**aus.  
   
-2.  In der **Eigenschaftenseiten** Dialogfeld unter **C/C++-** Option **Befehlszeile**.  
+2.  In der **Eigenschaftenseiten** Dialogfeld **C/C++-** Option **Befehlszeile**.  
   
-3.  In der **Zusatzoptionen** geben `/Qvec-report:1` oder `/Qvec-report:2`.  
+3.  In der **zusätzliche Optionen** geben `/Qvec-report:1` oder `/Qvec-report:2`.  
   
-### <a name="to-set-the-qvec-report-compiler-option-programmatically"></a>So legen Sie die /Qvec-report-Compileroption programmgesteuert fest  
+### <a name="to-set-the-qvec-report-compiler-option-programmatically"></a>So legen Sie die /Qvec-report Compileroption programmgesteuert fest  
   
 -   Verwenden Sie hierzu das Codebeispiel unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
@@ -53,4 +53,4 @@ Ermöglicht die Berichtsfunktion des Compilers [Auto-Vektorisierer](../../parall
  [/ Q-Optionen (Operationen auf niedriger Ebene)](../../build/reference/q-options-low-level-operations.md)   
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)   
- [Parallele Programmierung in systemeigenem Code](http://go.microsoft.com/fwlink/p/?linkid=263662)
+ [Parallele Programmierung in systemeigenem Code](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

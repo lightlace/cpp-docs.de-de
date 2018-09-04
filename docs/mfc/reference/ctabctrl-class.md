@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c9ea52115cf5921aab4cc7f6cefb939f3e6e461
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ac6e8215cc46fd190703981869a065df8d46b18d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207179"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690470"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Registerkarten-Steuerelements bereit.  
@@ -240,7 +240,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parameter  
  *dwExStyle*  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) im Windows SDK.  
   
  *dwStyle*  
  Gibt das Registerkarten-Steuerelement-Stil. Wenden Sie eine beliebige Kombination von [Registerkarte Stile von Listensteuerelementen](/windows/desktop/Controls/tab-control-styles), die im Windows SDK beschrieben. Finden Sie unter **"Hinweise"** in [erstellen](#create) eine Liste der Window-Stile, die Sie auch auf das Steuerelement anwenden können.  

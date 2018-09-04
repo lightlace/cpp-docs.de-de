@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c3626fbdba9fcf34364237e8970e5b941ecce9d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cd480e7b1ffb0923e33361c545bca68202ec3f4f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201525"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687715"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx-Klasse
 Erweitert das Kombinationsfeld-Steuerelement durch die Unterstützung für Bildlisten.  
@@ -200,7 +200,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parameter  
  *dwExStyle*  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) im Windows SDK.  
   
  *dwStyle*  
  Das Kombinationsfeld-Steuerelement Stil. Finden Sie unter [erstellen](#create) für eine Liste der Formate.  
@@ -381,7 +381,7 @@ CImageList* SetImageList(CImageList* pImageList);
  Ein Zeiger auf eine [CImageList](../../mfc/reference/cimagelist-class.md) -Objekt, das die zuvor vom verwendeten Images enthält die `CComboBoxEx` Steuerelement. NULL, wenn keine Bildliste zuvor festgelegt wurde.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert die Funktionalität der Nachricht [CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist), wie im Windows SDK beschrieben. Wenn Sie die Höhe des Standard-Edit-Steuerelements ändern, rufen Sie die Win32-Funktion [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Ihres Steuerelements ändern der Größe nach dem Aufruf von `SetImageList`, oder es wird nicht korrekt angezeigt.  
+ Diese Memberfunktion implementiert die Funktionalität der Nachricht [CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist), wie im Windows SDK beschrieben. Wenn Sie die Höhe des Standard-Edit-Steuerelements ändern, rufen Sie die Win32-Funktion [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Ihres Steuerelements ändern der Größe nach dem Aufruf von `SetImageList`, oder es wird nicht korrekt angezeigt.  
   
  Die `CImageList` Objekt der Rückgabewert ist ein temporäres Objekt und während der nächsten Verarbeitung Leerlaufzeit zerstört wird.  
   

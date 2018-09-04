@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f311f7b73e72f47f363cfd5645c97b57eda5b480
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b7fd978390a2b991da2bddedbab1c05497709d67
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200875"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688142"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl-Klasse
 Die Klasse `CPagerCtrl` kapselt das Windows-Pagersteuerelement, in dem der Benutzer einen Bildlauf durchführen kann, um ein Fenster innerhalb eines anderen Fensters in den sichtbaren Bereich zu verschieben, sofern es größer ist als das umgebende Fenster.  
@@ -183,7 +183,7 @@ virtual BOOL CreateEx(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *DwExStyle*|Eine bitweise Kombination von erweiterten Stile, die auf das Steuerelement angewendet werden. Weitere Informationen finden Sie unter den *DwExStyle* Parameter, der die [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Funktion.|  
+|[in] *DwExStyle*|Eine bitweise Kombination von erweiterten Stile, die auf das Steuerelement angewendet werden. Weitere Informationen finden Sie unter den *DwExStyle* Parameter, der die [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Funktion.|  
 |[in] *DwStyle*|Eine bitweise Kombination (OR) von [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles) und [Stile von Listensteuerelementen Pager](/windows/desktop/Controls/pager-control-styles) auf das Steuerelement angewendet werden.|  
 |[in] *Rect*|Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Position und Größe des Steuerelements in Clientkoordinaten enthält.|  
 |[in] *pParentWnd*|Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) -Objekt, das das übergeordnete Fenster des Steuerelements ist. Dieser Parameter darf nicht NULL sein.|  

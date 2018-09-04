@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6f73e37c8fddc54e91be13d83c54f126ab6b5a0
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: f4b6dcdee1d30274e8cc4baf3de70e4c6cbb611d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540023"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692701"
 ---
 # <a name="lidt"></a>__lidt
 **Microsoft-spezifisch**  
@@ -52,7 +52,7 @@ void __lidt(
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Die `__lidt` -Funktion ist gleichbedeutend mit der `LIDT` computeranweisung und steht nur im Kernelmodus ausgeführt. Weitere Informationen zu suchen, nach dem Dokument "Intel Architecture-Softwareentwickler manuell, Volume 2: Instruction Set Reference," auf die [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) Standort.  
+ Die `__lidt` -Funktion ist gleichbedeutend mit der `LIDT` computeranweisung und steht nur im Kernelmodus ausgeführt. Weitere Informationen zu suchen, nach dem Dokument "Intel Architecture-Softwareentwickler manuell, Volume 2: Instruction Set Reference," auf die [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) Standort.  
   
 **Ende Microsoft-spezifisch**  
   

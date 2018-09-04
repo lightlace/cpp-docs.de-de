@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf9133965a9009421c28f64c1f4157b4a6a6d6b3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 16411db184b568051484554548cdfcc6119002f1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223294"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688075"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Text und Zeichenfolgen in Visual C++
 Ein wichtiger Aspekt bei der Entwicklung von Anwendungen für internationale Märkte ist die korrekte Darstellung lokaler Zeichensätze. Mit dem ASCII-Zeichensatz werden Zeichen im Bereich zwischen 0 x 00 und 0 x 7 F definiert. Von anderen Zeichensätzen (hauptsächlich europäischer Herkunft) werden wie beim ASCII-Zeichensatz die Zeichen innerhalb des Bereichs von 0 x 00 bis 0 x 7 F definiert; zusätzlich wird ein erweiterter Zeichensatz im Bereich von 0 x 80 bis 0 x FF definiert. Daher ist ein Einzelbyte-Zeichensatz (Single-Byte Character Set, SBCS) mit 8 Bits ausreichend, um den ASCII-Zeichensatz sowie viele andere Zeichensätze für europäische Sprachen darzustellen. Einige außereuropäische Zeichensätze, z. B. das japanische Kanji, enthalten jedoch so viele Zeichen, dass sie nicht mehr in Einzelbytecodierung dargestellt werden können. Sie müssen daher mit einem Mehrbyte-Zeichensatz (Multibyte Character Set, MBCS) codiert werden.  
@@ -64,7 +64,7 @@ Ein wichtiger Aspekt bei der Entwicklung von Anwendungen für internationale Mä
  [Internationalisierung](../c-runtime-library/internationalization.md)  
  Beschreibt die internationale Unterstützung in der C-Laufzeitbibliothek.  
   
- [Internationale Beispiele](https://msdn.microsoft.com/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
+ [Internationale Beispiele](https://github.com/Microsoft/VCSamples)  
  Enthält Verknüpfungen mit Beispielen, die die Internationalisierung in Visual C++ demonstrieren.  
   
  [Zeichenfolgen in Sprach- und Länder-/Regionseinstellungen](../c-runtime-library/locale-names-languages-and-country-region-strings.md)  

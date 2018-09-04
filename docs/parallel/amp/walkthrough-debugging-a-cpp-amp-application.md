@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bec76b407221fb9029662ba982a10edc4ca9c77
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3a8c5affeaee73be7dd464ea44ea62db35257f7b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604919"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689755"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Exemplarische Vorgehensweise: Debuggen einer C++ AMP-Anwendung
 Dieses Thema veranschaulicht, wie Sie eine Anwendung zu debuggen, die C++ Accelerated Massive Parallelism (C++-AMP) verwendet wird, auf der grafikverarbeitungseinheit (GPU) nutzen. Zur Reduzierung von parallelen Programm, die addiert, um ein großes Array von ganzen Zahlen verwendet. In dieser exemplarischen Vorgehensweise werden die folgenden Aufgaben veranschaulicht:  
@@ -398,4 +398,4 @@ Ausführen alle Threads in einer bestimmten Kachel auf die Zeile mit den Cursor 
 [Debuggen von GPU-Code](/visualstudio/debugger/debugging-gpu-code)   
 [Vorgehensweise: Verwenden Sie das GPU-Threadfenster](/visualstudio/debugger/how-to-use-the-gpu-threads-window)   
 [Vorgehensweise: Verwenden des parallelen Überwachungsfensters](/visualstudio/debugger/how-to-use-the-parallel-watch-window)   
-[Analysieren von C++ AMP-Code mit der Nebenläufigkeitsschnellansicht](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)
+[Analysieren von C++ AMP-Code mit der Nebenläufigkeitsschnellansicht](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)

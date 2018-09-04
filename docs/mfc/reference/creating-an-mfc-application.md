@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ba0930d0d1441801d18152a5ece4ace70f70425
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 90b66cf87610409e171cad25d891b0ca99ecd9a2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207336"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689946"
 ---
 # <a name="creating-an-mfc-application"></a>Erstellen einer MFC-Anwendung
 Eine MFC-Anwendung ist eine ausführbare Anwendung für Windows, die auf der Microsoft Foundation Class (MFC)-Bibliothek basiert. Der MFC-Anwendungs-Assistent bietet die einfachste Möglichkeit, eine MFC-Anwendung zu erstellen.  
@@ -59,8 +59,7 @@ Eine MFC-Anwendung ist eine ausführbare Anwendung für Windows, die auf der Mic
  Nachdem das Projekt erstellt wurde, sehen Sie die Dateien im **Projektmappen-Explorer**. Weitere Informationen zu den vom Assistenten erstellten Dateien im Projekt finden Sie in der projekteigenen Datei "Readme.txt". Weitere Informationen zu den Dateitypen finden Sie unter [für Visual C++-Projekte erstellte Dateitypen](../../ide/file-types-created-for-visual-cpp-projects.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Vorbereitung zum Debuggen: Visual C++-Windows-Anwendungen](https://msdn.microsoft.com/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
  [Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Eigenschaftenseiten](../../ide/property-pages-visual-cpp.md)   
- [Bereitstellen von Anwendungen](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+
 

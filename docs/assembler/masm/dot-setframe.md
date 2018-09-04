@@ -1,7 +1,7 @@
 ---
-title: . SETFRAME | Microsoft Docs
+title: . SETFRAME | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,60 +16,62 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c49d512534a11f01376deac41006e55c6b7b9d89
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 956a49e40c38310819d66e89fa6bf4492443a29c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052585"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691288"
 ---
 # <a name="setframe"></a>.SETFRAME
-Füllt das Feld und einem festen Offset in die Entladung-Informationen, die mit dem angegebenen Register registrieren (`reg`) und Offset (`offset`). Der Offset muss ein Vielfaches von 16 sein und kleiner oder gleich 240. Diese Direktive generiert auch eine `UWOP_SET_FPREG` Entladen von Codeeintrag für den angegebenen registriert unter Verwendung der aktuellen Prolog Verschiebung.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-.SETFRAME reg, offset  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- . SETFRAME ermöglicht Benutzern das ml64.exe angeben, wie eine Funktion Frame entlädt und ist nur zulässig, innerhalb der Prolog, die aus erweitert die [PROC](../../assembler/masm/proc.md) FRAME-Deklaration, um die [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) Richtlinie. Diese Direktiven generieren keine Code; Es werden nur generiert, `.xdata` und `.pdata`. . SETFRAME sollte Anweisungen vorangestellt werden, die die Aktionen, entladen werden tatsächlich implementieren. Es wird empfohlen, die Direktiven entladen und der Code, den sie in einem Makro Entladung vorgesehen sind, um sicherzustellen, dass Vereinbarung zu umschließen.  
-  
- Weitere Informationen finden Sie unter [MASM für X64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
-  
-## <a name="sample"></a>Beispiel  
-  
-### <a name="description"></a>Beschreibung  
- Das folgende Beispiel zeigt, wie Sie einen Frame-Pointer verwenden:  
-  
-### <a name="code"></a>Code  
-  
-```  
-; ml64 frmex2.asm /link /entry:frmex2 /SUBSYSTEM:CONSOLE  
-_text SEGMENT  
-frmex2 PROC FRAME  
-   push rbp  
-.pushreg rbp  
-   sub rsp, 010h  
-.allocstack 010h  
-   mov rbp, rsp  
-.setframe rbp, 0  
-.endprolog  
-   ; modify the stack pointer outside of the prologue (similar to alloca)  
-   sub rsp, 060h  
-  
-   ; we can unwind from the following AV because of the frame pointer     
-   mov rax, 0  
-   mov rax, [rax] ; AV!  
-  
-   add rsp, 060h  
-   add rsp, 010h  
-   pop rbp  
-   ret  
-frmex2 ENDP  
-_text ENDS  
-END  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+
+Füllt das Feld und den Offset der Entladung-Informationen, die unter Verwendung der angegebene Register zu registrieren (`reg`) und Offset (`offset`). Der Offset muss ein Vielfaches von 16 sein und kleiner als oder gleich 240. Diese Direktive generiert außerdem eine `UWOP_SET_FPREG` Entladen von Codeeintrag für den angegebenen registriert, mit der aktuelle Prologoffset.
+
+## <a name="syntax"></a>Syntax
+
+> . SETFRAME Reg, offset
+
+## <a name="remarks"></a>Hinweise
+
+. SETFRAME ermöglicht ml64.exe angeben, wie eine Funktion des Frames entladen ist nur zulässig, in der Prolog, die von erweitert die [PROC](../../assembler/masm/proc.md) FRAME-Deklaration, um die [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) Richtlinie. Diese Direktiven generieren Sie Code nicht; Generieren sie nur `.xdata` und `.pdata`. . Indem Sie die Anweisungen, die die Aktionen, entladen werden implementieren, sollte SETFRAME vorangestellt werden. Es hat sich bewährt, sowohl den Code, den sie auf die Entladung in einem Makro gedacht sind, um sicherzustellen, dass Vereinbarung als auch die Entladung Anweisungen zu umschließen.
+
+Weitere Informationen finden Sie unter [MASM für X64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+
+## <a name="sample"></a>Beispiel
+
+### <a name="description"></a>Beschreibung
+
+Das folgende Beispiel zeigt, wie Sie die Frame-Pointer verwenden:
+
+### <a name="code"></a>Code
+
+```asm
+; ml64 frmex2.asm /link /entry:frmex2 /SUBSYSTEM:CONSOLE
+_text SEGMENT
+frmex2 PROC FRAME
+   push rbp
+.pushreg rbp
+   sub rsp, 010h
+.allocstack 010h
+   mov rbp, rsp
+.setframe rbp, 0
+.endprolog
+   ; modify the stack pointer outside of the prologue (similar to alloca)
+   sub rsp, 060h
+
+   ; we can unwind from the following AV because of the frame pointer
+   mov rax, 0
+   mov rax, [rax] ; AV!
+
+   add rsp, 060h
+   add rsp, 010h
+   pop rbp
+   ret
+frmex2 ENDP
+_text ENDS
+END
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

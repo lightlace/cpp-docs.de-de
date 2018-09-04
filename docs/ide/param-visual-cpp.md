@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8fae2d8af1b7121290bfbd42b2668afc50034c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 69e2950fcc0b29fb819445f3216ef262a2657e4a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217252"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686420"
 ---
 # <a name="ltparamgt-visual-c"></a>&lt;param&gt; (Visual C++)
 Das \<param>-Tag sollte im Kommentar für eine Methodendeklaration verwendet werden, um einen der Methodenparameter zu beschreiben.  
@@ -42,7 +42,7 @@ Das \<param>-Tag sollte im Kommentar für eine Methodendeklaration verwendet wer
  Eine Beschreibung für den Parameter  
   
 ## <a name="remarks"></a>Hinweise  
- Der Text für das \<param>-Tag wird in IntelliSense, dem [Objektkatalog](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470), und im Webbericht für Codekommentare angezeigt.  
+ Der Text für das \<param>-Tag wird in IntelliSense, dem [Objektkatalog](/visualstudio/ide/viewing-the-structure-of-code), und im Webbericht für Codekommentare angezeigt.  
   
  Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
   

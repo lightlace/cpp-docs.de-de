@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d20611d2cc5e4b391e2dafdef614dd5173d32ef7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dade9987358c1c160dffd0221b0421b4fab92c24
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207297"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687641"
 ---
 # <a name="adding-a-member-variable--visual-c"></a>Hinzufügen einer Membervariablen (Visual C++)
-Mithilfe der Klassenansicht können Sie einer Klasse eine Membervariable hinzufügen. Membervariablen können generisch sein oder für [Datenaustausch und Datenvalidierung](../mfc/dialog-data-exchange-and-validation.md) verwendet werden. Der Assistent für Datenmembervariablen ist spezifisch dafür ausgelegt, die relevanten Informationen zu verwenden, um Elemente an den entsprechenden Stellen in Quelldateien einzufügen. Sie können eine Membervariable aus dem [Dialog-Editor](../windows/dialog-editor.md) oder der [Klassenansicht](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) in die [Ressourcenansicht](../windows/resource-view-window.md) hinzufügen.  
+Mithilfe der Klassenansicht können Sie einer Klasse eine Membervariable hinzufügen. Membervariablen können generisch sein oder für [Datenaustausch und Datenvalidierung](../mfc/dialog-data-exchange-and-validation.md) verwendet werden. Der Assistent für Datenmembervariablen ist spezifisch dafür ausgelegt, die relevanten Informationen zu verwenden, um Elemente an den entsprechenden Stellen in Quelldateien einzufügen. Sie können eine Membervariable aus dem [Dialog-Editor](../windows/dialog-editor.md) oder der [Klassenansicht](/visualstudio/ide/viewing-the-structure-of-code) in die [Ressourcenansicht](../windows/resource-view-window.md) hinzufügen.  
   
 > [!NOTE]
 >  Wenn Sie ein Dialogfeld entwerfen und implementieren, kann es sich als effizienter erweisen, den Dialog-Editor zum Hinzufügen der Dialogfeld-Steuerelemente zu verwenden und dann die Membervariablen der Steuerelemente zu implementieren.  
@@ -49,7 +49,7 @@ Mithilfe der Klassenansicht können Sie einer Klasse eine Membervariable hinzuf�
   
 ### <a name="to-add-a-member-variable-from-class-view-using-the-add-member-variable-wizard"></a>So fügen Sie eine Membervariable aus der Klassenansicht mithilfe des Assistenten zum Hinzufügen von Membervariablen hinzu  
   
-1.  Erweitern Sie in der [Klassenansicht](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) den Projektknoten, um die Projektklassen anzuzeigen.  
+1.  Erweitern Sie in der [Klassenansicht](/visualstudio/ide/viewing-the-structure-of-code) den Projektknoten, um die Projektklassen anzuzeigen.  
   
 2.  Klicken Sie mit der rechten Maustaste auf die Klasse, der eine Variable hinzugefügt werden soll.  
   

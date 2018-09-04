@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a990acd8f27be476ce35d682a19912dcc85bbeed
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 340a21a3bbcb1853d66de01bddf9425fed0c8183
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539050"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689843"
 ---
 # <a name="c-amp-c-accelerated-massive-parallelism"></a>C++ AMP (C++ Accelerated Massive Parallelism)
 (C++ AMP Accelerated Massive Parallelism) beschleunigt die Ausführung von C++-Code, indem die Vorteile Daten parallel verarbeitender Hardware, beispielsweise ein Grafikprozessor (Graphics Processing Unit, GPU) auf einer separaten Grafikkarte, genutzt werden. Das C++ AMP-Programmiermodell enthält Unterstützung für mehrdimensionale Arrays, Indizierung, Arbeitsspeicherübertragung und Tiling. Außerdem umfasst es eine Bibliothek mathematischer Funktionen. Mithilfe von C++ AMP-Sprachenerweiterungen können Sie steuern, wie Daten von der CPU auf die GPU bzw. zurück verschoben werden.  
@@ -48,4 +48,4 @@ ms.locfileid: "42539050"
  
 [Parallele Programmierung in systemeigenem Code (Blog)](http://go.microsoft.com/fwlink/p/?linkid=238472)  
 [C++ AMP-Beispielprojekte zum download](http://go.microsoft.com/fwlink/p/?linkid=248508)  
-[Analysieren von C++ AMP-Code mit der Nebenläufigkeitsschnellansicht](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)
+[Analysieren von C++ AMP-Code mit der Nebenläufigkeitsschnellansicht](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)

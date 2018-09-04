@@ -1,5 +1,5 @@
 ---
-title: / NXCOMPAT (kompatibel mit Datenausführungsverhinderung) | Microsoft Docs
+title: / NXCOMPAT (kompatibel mit Datenausführungsverhinderung) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb4f8a91545a196bc92fdc0ec44e89a7d5680185
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9f6e2c3f1c297493b2af72f280ac5eabcb6f17ce
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374803"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690318"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (kompatibel mit Datenausführungsverhinderung)
 
-Gibt an, dass eine ausführbare Datei mit der Funktion zur Datenausführungsverhinderung kompatibel ist.
+Gibt an, dass eine ausführbare Datei mit der Windows-Datenausführungsverhinderung kompatibel ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,25 +34,25 @@ Gibt an, dass eine ausführbare Datei mit der Funktion zur Datenausführungsverh
 
 ## <a name="remarks"></a>Hinweise
 
-Standardmäßig **NXCOMPAT** befindet sich auf.
+In der Standardeinstellung **/NXCOMPAT** ist.
 
-**/NXCOMPAT:No** können verwendet werden, um eine ausführbare Datei explizit als nicht kompatibel mit Datenausführungsverhinderung angeben.
+**: No** können verwendet werden, um eine ausführbare Datei explizit als nicht kompatibel mit Datenausführungsverhinderung angeben.
 
 Weitere Informationen über die Datenausführungsverhinderung finden Sie in diesen Artikeln:
 
-- [Eine ausführliche Beschreibung der Funktion (Data Execution Prevention, DEP)](http://go.microsoft.com/fwlink/p/?linkid=157771)
+- [Eine ausführliche Beschreibung des Features (Data Execution Prevention, DEP)](https://support.microsoft.com/en-us/help/875352/a-detailed-description-of-the-data-execution-prevention-dep-feature-in)
 
-- [Datenausführungsverhinderung](http://go.microsoft.com/fwlink/p/?linkid=157770)
+- [Datenausführungsverhinderung](/windows/desktop/Memory/data-execution-prevention)
 
-- [Datenausführungsverhinderung (Windows Embedded)](http://go.microsoft.com/fwlink/p/?linkid=157768)
+- [Datenausführungsverhinderung (Windows Embedded)](/previous-versions/windows/embedded/ms913190\(v=winembedded.5\))
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>So legen Sie diese Linkeroption in Visual Studio fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **Befehlszeile** Eigenschaftenseite.
 
-1. Geben Sie die Option in der **Zusatzoptionen** Feld. Wählen Sie **OK** oder **übernehmen** um die Änderung zu übernehmen.
+1. Geben Sie die Option in der **zusätzliche Optionen** Feld. Wählen Sie **OK** oder **übernehmen** um die Änderung zu übernehmen.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
 

@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 171fdfe8e174d0d3b5d1c69e9aa5a777a3148ee0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d872df7294e33ef47247609af4606da842bb6184
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612530"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686546"
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections-Namespace
 
-Platform:: Collections-Namespace enthält die `Map`, `MapView`, `Vector`, und `VectorView` Klassen. Diese Klassen sind konkrete Implementierungen der entsprechenden Schnittstellen, die im Namespace [Windows::Foundation::Collections](http://go.microsoft.com/fwlink/p/?LinkId=262645) definiert sind. Die konkreten Auflistungstypen können nicht über die ABI hinweg portiert werden (z. B. beim Aufruf eines Javascript- oder C#-Programms in eine C++-Komponente). Sie sind allerdings implizit in ihre entsprechenden Schnittstellentypen konvertierbar. Wenn Sie z. B. eine öffentliche Methode implementieren, die eine Auflistung füllt und zurückgibt, verwenden Sie [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) , um die Auflistung intern zu implementieren. Verwenden Sie [Windows::Foundation::Collections::IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410) als Rückgabetyp. Weitere Informationen finden Sie unter [Sammlungen](../cppcx/collections-c-cx.md) und [Erstellen von Windows-Runtime-Komponenten in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+Platform:: Collections-Namespace enthält die `Map`, `MapView`, `Vector`, und `VectorView` Klassen. Diese Klassen sind konkrete Implementierungen der entsprechenden Schnittstellen, die definiert sind die [Collections](/uwp/api/Windows.Foundation.Collections) Namespace. Die konkreten Auflistungstypen können nicht über die ABI hinweg portiert werden (z. B. beim Aufruf eines Javascript- oder C#-Programms in eine C++-Komponente). Sie sind allerdings implizit in ihre entsprechenden Schnittstellentypen konvertierbar. Z. B. Wenn Sie eine öffentliche Methode, die eine Auflistung füllt und zurückgibt implementieren, verwenden Sie dann [Vector](../cppcx/platform-collections-vector-class.md) die Auflistung intern zu implementieren und verwenden [Collections: : IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) als Rückgabetyp. Weitere Informationen finden Sie unter [Sammlungen](../cppcx/collections-c-cx.md) und [Erstellen von Windows-Runtime-Komponenten in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 Sie können Platform::Collections::Vector aus [std::vector](../standard-library/vector-class.md) und [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) aus [std::map](../standard-library/map-class.md)erstellen.
 

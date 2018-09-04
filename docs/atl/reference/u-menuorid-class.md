@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9853cbcecd691f0ea16358259c8a0ac7b213433
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 333bdbd88d554e3fe3e3f233ce9968df75d73dfc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211186"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690889"
 ---
 # <a name="umenuorid-class"></a>_U_MENUorID-Klasse
 Diese Klasse stellt den Wrapper für `CreateWindow` und `CreateWindowEx`.  
@@ -55,7 +55,7 @@ class _U_MENUorID
 ## <a name="remarks"></a>Hinweise  
  Dieses Argument-Adapterklasse ermöglicht entweder-IDs (jenem) oder im Menü-Handles (HMENUs) an eine Funktion übergeben werden, ohne eine explizite Umwandlung seitens des Aufrufers.  
   
- Diese Klasse zum Implementieren der Windows-API-Wrapper dient insbesondere die [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) und [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Funktionen, die beide ein HMENU-Argument, das ein untergeordnetes Fenster möglicherweise akzeptieren Bezeichner (UINT), anstatt ein Menühandle. Beispielsweise sehen Sie diese Klasse verwendet als Parameter an [CWindowImpl:: Create](cwindowimpl-class.md#create).  
+ Diese Klasse zum Implementieren der Windows-API-Wrapper dient insbesondere die [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) und [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Funktionen, die beide ein HMENU-Argument, das ein untergeordnetes Fenster möglicherweise akzeptieren Bezeichner (UINT), anstatt ein Menühandle. Beispielsweise sehen Sie diese Klasse verwendet als Parameter an [CWindowImpl:: Create](cwindowimpl-class.md#create).  
 
   
  Die Klasse definiert zwei Konstruktorüberladungen: eine ein UINT-Argument akzeptiert und die andere ein HMENU-Argument akzeptiert. Das Argument "uint" umgewandelt wird nur ein HMENU im Konstruktor und in das Ergebnis gespeichert werden, in der Klasse der einzelnen Datenmember, [M_hMenu](#_u_menuorid__m_hmenu). Das Argument für das HMENU-Konstruktor wird direkt ohne Konvertierung gespeichert.  

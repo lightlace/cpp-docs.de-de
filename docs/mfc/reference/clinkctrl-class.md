@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 422326f03674c541c4fdc45529bee45bf0ff5df6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a167b228b054a24a812ce5099f396521adda0d08
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201003"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690420"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-SysLink-Steuerelements bereit.  
@@ -189,7 +189,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
  Zeiger auf eine 0 (null) endende Zeichenfolge, die anzuzeigenden Text gekennzeichnet enthält. Weitere Informationen finden Sie im Abschnitt "Markup and Link Access" im Thema [Übersicht der SysLink-Steuerelemente](/windows/desktop/Controls/syslink-overview).  
   
  *dwExStyle*  
- Gibt den erweiterten Stil des Linksteuerelements an. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ Gibt den erweiterten Stil des Linksteuerelements an. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) im Windows SDK.  
   
  *dwStyle*  
  Gibt die Link-Steuerelement-Stil. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen. Weitere Informationen finden Sie unter [allgemeinen Stile von Listensteuerelementen](/windows/desktop/Controls/common-control-styles) im Windows SDK.  

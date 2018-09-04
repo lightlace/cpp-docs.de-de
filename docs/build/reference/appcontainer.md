@@ -1,5 +1,5 @@
 ---
-title: -APPCONTAINER | Microsoft Docs
+title: -APPCONTAINER | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c47154d7a5eddd26573612708462c0352da30ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea6f08a141d48183d96dba6cb02fcf31909af0ae
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368433"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686252"
 ---
 # <a name="appcontainer"></a>/APPCONTAINER
-Kennzeichnet eine ausführbare Datei, die in einem app-Container ausgeführt werden muss, z. B. eine Microsoft-Store- oder universellen Windows-app.  
+Markiert eine ausführbare Datei, die in einem app-Container ausgeführt werden muss, z. B. ein Microsoft Store oder eine universelle Windows-app.  
   
 ```  
   
@@ -34,8 +34,8 @@ Kennzeichnet eine ausführbare Datei, die in einem app-Container ausgeführt wer
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Eine ausführbare Datei, bei der die **/APPCONTAINER** -Option festgelegt wurde, kann nur in einem App-Container ausgeführt werden. Das ist die in Windows 8 eingeführte Prozessisolationsumgebung. Bei Microsoft Store und universelle Windows-apps muss diese Option festgelegt werden.  
+ Eine ausführbare Datei, bei der die **/APPCONTAINER** -Option festgelegt wurde, kann nur in einem App-Container ausgeführt werden. Das ist die in Windows 8 eingeführte Prozessisolationsumgebung. Für Microsoft Store und universelle Windows-apps muss diese Option festgelegt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [EDITBIN-Optionen](../../build/reference/editbin-options.md)   
- [Was ist eine universelle Windows-App?](http://go.microsoft.com/fwlink/p/?LinkID=522074)
+ [Was ist eine universelle Windows-App?](/windows/uwp/get-started/universal-application-platform-guide)

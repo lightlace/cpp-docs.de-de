@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c0f72fd7a359654ffdb32ae0030a82216384207
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0ec8840e4a379ce50b9474c114f0a2879d2e7bca
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197612"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686156"
 ---
 # <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox-Klasse
 Die `CMFCFontComboBox` Klasse erstellt ein Kombinationsfeld-Steuerelement, das eine Liste von Schriftarten enthält.  
@@ -59,7 +59,7 @@ class CMFCFontComboBox : public CComboBox
 |`CMFCFontComboBox::DrawItem`|Wird aufgerufen, durch das Framework um ein angegebenes Element in der aktuellen Schriftart Kombinationsfeld-Steuerelement zu zeichnen. (Überschreibt [CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem).)|  
 |[CMFCFontComboBox::GetSelFont](#getselfont)|Ruft Informationen zu den aktuell ausgewählten Schriftart ab.|  
 |`CMFCFontComboBox::MeasureItem`|Wird aufgerufen, durch das Framework, Windows, der die Dimensionen des ListBox-Felds in der aktuellen Schriftart Kombinationsfeld-Steuerelement zu informieren. (Überschreibt [CComboBox::MeasureItem](../../mfc/reference/ccombobox-class.md#measureitem).)|  
-|`CMFCFontComboBox::PreTranslateMessage`|Übersetzt fenstermeldungen, bevor sie um weitergeleitet werden die [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows-Funktionen. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMFCFontComboBox::PreTranslateMessage`|Übersetzt fenstermeldungen, bevor sie um weitergeleitet werden die [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows-Funktionen. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCFontComboBox::SelectFont](#selectfont)|Wählt die Schriftart, die den angegebenen Kriterien aus der Schriftarten-Kombinationsfeld entspricht.|  
 |[CMFCFontComboBox::Setup](#setup)|Initialisiert die Liste der Elemente in der Schriftarten-Kombinationsfeld.|  
   

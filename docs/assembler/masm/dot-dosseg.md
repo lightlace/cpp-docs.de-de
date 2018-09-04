@@ -1,7 +1,7 @@
 ---
-title: . DOSSEG | Microsoft Docs
+title: . DOSSEG | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3817cfe98758faf86ea87d74e02657598c3e806b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 33ee0b0b049ece65786c4d4857c2e082a067fee4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054884"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693231"
 ---
 # <a name="dosseg"></a>.DOSSEG
-Sortiert die Segmente gemäß der Konvention des MS-DOS-Segment: CODE zuerst, dann nicht im DGROUP Segmente und klicken Sie dann im DGROUP Segmente.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-.DOSSEG  
-  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Die Segmente in DGROUP befolgen Sie diese Reihenfolge: Segmente nicht in BSS oder Stapel, und klicken Sie dann BSS Segmente und schließlich für den Stapel Segmente. In erster Linie verwendet zum Sicherstellen der Codeansichtsinformationen-Unterstützung in MASM eigenständige Programme. Identisch mit [DOSSEG](../../assembler/masm/dosseg.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+
+Sortiert die Segmente gemäß der Konvention des MS-DOS-Segment: CODE zuerst dann nicht in DGROUP Segmente, und klicken Sie dann im DGROUP Segmente.
+
+## <a name="syntax"></a>Syntax
+
+> .DOSSEG
+
+## <a name="remarks"></a>Hinweise
+
+Die Segmente in DGROUP befolgen Sie diese Reihenfolge: Segmente nicht in BSS oder Stapel, und klicken Sie dann BSS-Segmente und schließlich STACK Segmente. In erster Linie verwendet dafür CodeView-Unterstützung in MASM eigenständige Programme. Identisch mit [DOSSEG](../../assembler/masm/dosseg.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

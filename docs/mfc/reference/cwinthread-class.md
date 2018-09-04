@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02bfbe474d30088c887e7a16b6dcea079dfd9821
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 784425246c3be99acde2942633ce5190807c59b4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213065"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689557"
 ---
 # <a name="cwinthread-class"></a>CWinThread-Klasse
 Stellt einen Ausführungsthread innerhalb einer Anwendung dar.  
@@ -96,10 +96,10 @@ class CWinThread : public CCmdTarget
 |[CWinThread::IsIdleMessage](#isidlemessage)|Überprüft, ob besondere Nachrichten.|  
 |[CWinThread::OnIdle](#onidle)|Überschreiben Sie, um die threadspezifische leerlaufzeitverarbeitung ausführen.|  
 |[CWinThread::PostThreadMessage](#postthreadmessage)|Sendet eine Meldung an einen anderen `CWinThread` Objekt.|  
-|[CWinThread::PreTranslateMessage](#pretranslatemessage)|Filtert Nachrichten, bevor sie für die Windows-Funktionen weitergeleitet werden [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).|  
+|[CWinThread::PreTranslateMessage](#pretranslatemessage)|Filtert Nachrichten, bevor sie für die Windows-Funktionen weitergeleitet werden [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).|  
 |[CWinThread::ProcessMessageFilter](#processmessagefilter)|Bestimmte Nachrichten abfängt, bevor sie die Anwendung erreichen.|  
 |[CWinThread::ProcessWndProcException](#processwndprocexception)|Fängt alle nicht behandelte Ausnahmen, die von der Thread die Nachricht und befehlshandlern ausgelöst.|  
-|[CWinThread::PumpMessage](#pumpmessage)|Enthält die Nachrichtenschleife des Threads.|  
+|[CWinThread::PumpMessage](#pumpmessage)|enthält die Nachrichtenschleife des Threads.|  
 |[CWinThread:: ResumeThread](#resumethread)|Wird ein Thread den Unterbrechungszähler.|  
 |[Hauptmeldungsschleife](#run)|Die Steuerungsfunktion für Threads mit der eine Meldungsverteilschleife. Überschreiben Sie, um die Standardnachrichtenschleife anpassen.|  
 |[CWinThread::SetThreadPriority](#setthreadpriority)|Legt die Priorität des aktuellen Threads fest.|  
@@ -411,7 +411,7 @@ BOOL PostThreadMessage(
 >  Beim Aufrufen der Windows [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946) Funktion in einer MFC-Anwendung die MFC-Nachricht, die Handler werden nicht aufgerufen. Weitere Informationen finden Sie im Knowledge Base-Artikel "PRB: MFC-Message-Handler nicht aufgerufen mit PostThreadMessage()" (Q142415).  
   
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage  
- Außer Kraft setzen diese Funktion fenstermeldungen zu filtern, bevor sie für die Windows-Funktionen weitergeleitet werden [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).  
+ Außer Kraft setzen diese Funktion fenstermeldungen zu filtern, bevor sie für die Windows-Funktionen weitergeleitet werden [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -485,7 +485,7 @@ virtual LRESULT ProcessWndProcException(
  Diese Memberfunktion ist nur in Threads verwendet, die eine Meldungsverteilschleife.  
   
 ##  <a name="pumpmessage"></a>  CWinThread::PumpMessage  
- Enthält die Nachrichtenschleife des Threads.  
+ enthält die Nachrichtenschleife des Threads.  
   
 ```  
 virtual BOOL PumpMessage();
@@ -520,7 +520,7 @@ virtual int Run();
  Ein **Int** -Wert, der durch den Thread zurückgegeben wird. Dieser Wert kann abgerufen werden, durch den Aufruf [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread).  
   
 ### <a name="remarks"></a>Hinweise  
- `Run` reserviert und Windows-Meldungen sendet, bis die Anwendung empfängt eine [WM_QUIT](/windows/desktop/winmsg/wm-quit) Nachricht. Wenn der Thread die Warteschlange derzeit keine Nachrichten von der enthält `Run` Aufrufe `OnIdle` auszuführenden leerlaufzeitverarbeitung. Eingehende Nachrichten werden an die [PreTranslateMessage](#pretranslatemessage) Memberfunktion zur speziellen Verarbeitung, und klicken Sie dann an die Windows-Funktion [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) für die Standardtastatur Übersetzung. Zum Schluss die [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows-Funktion wird aufgerufen.  
+ `Run` reserviert und Windows-Meldungen sendet, bis die Anwendung empfängt eine [WM_QUIT](/windows/desktop/winmsg/wm-quit) Nachricht. Wenn der Thread die Warteschlange derzeit keine Nachrichten von der enthält `Run` Aufrufe `OnIdle` auszuführenden leerlaufzeitverarbeitung. Eingehende Nachrichten werden an die [PreTranslateMessage](#pretranslatemessage) Memberfunktion zur speziellen Verarbeitung, und klicken Sie dann an die Windows-Funktion [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) für die Standardtastatur Übersetzung. Zum Schluss die [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows-Funktion wird aufgerufen.  
   
  `Run` nur selten überschrieben wird, kann jedoch überschrieben werden, um besonderes Verhalten zu implementieren.  
   

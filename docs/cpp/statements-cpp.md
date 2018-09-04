@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9458e427c1954a351ffcedfa2fce0a39634d8369
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 845ca21dc4de4263c9063712b372c70cfb022059
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216364"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685804"
 ---
 # <a name="statements-c"></a>Anweisungen (C++)
 C++-Anweisungen sind die Programmelemente, die steuern, wie und in welcher Reihenfolge Objekte bearbeitet werden. Dieser Abschnitt umfasst Folgendes:  
@@ -42,7 +42,7 @@ C++-Anweisungen sind die Programmelemente, die steuern, wie und in welcher Reihe
   
     -   [Sprunganweisungen](../cpp/jump-statements-cpp.md). Diese Anweisungen übertragen entweder das Steuerelement sofort an eine andere Position in der Funktion oder geben das Steuerelement aus der Funktion zurück.  
   
-    -   [Deklarationsanweisungen](https://msdn.microsoft.com/14538558-356f-450e-9e1e-3cd62ba952b9). Deklarationen führen einen Namen in ein Programm ein. ([Deklarationen und Definitionen](declarations-and-definitions-cpp.md) bietet Ausführlichere Informationen über Deklarationen.)  
+    -   [Deklarationsanweisungen](declarations-and-definitions-cpp.md). Deklarationen führen einen Namen in ein Programm ein.  
   
  Informationen zu ausnahmebehandlungsanweisungen finden Sie unter [Exception Handling](../cpp/exception-handling-in-visual-cpp.md).  
   

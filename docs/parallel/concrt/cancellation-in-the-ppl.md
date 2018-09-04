@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd12bff6638ef86205b1037a8a7c7e348767ae9a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 287e540f73b202229c0355aec55aa0d8f5e0421f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221754"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690448"
 ---
 # <a name="cancellation-in-the-ppl"></a>Abbruch in der PPL
 In diesem Dokument wird die Rolle des Abbruchs in der Parallel Patterns Library (PPL) erläutert und beschrieben, wie Sie die parallele Arbeitsvorgänge abbrechen, und wie Sie erkennen können, ob parallele Arbeitsvorgänge abgebrochen wurden.  
@@ -150,7 +150,7 @@ In diesem Dokument wird die Rolle des Abbruchs in der Parallel Patterns Library 
   
 #### <a name="cancellation-tokens-and-task-composition"></a>Abbruchtoken und Aufgabenkomposition  
 
- Die [Concurrency:: HYPERLINK "https://msdn.microsoft.com/library/system.threading.tasks.task.whenall(v=VS.110).aspx" When_all](reference/concurrency-namespace-functions.md#when_all) und [Concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all) Funktionen können Sie die compose-mehrere Aufgaben aus, um allgemeine Muster zu implementieren. In diesem Abschnitt wird beschrieben, wie diese Funktionen mit Abbruchtoken verwendet werden können.  
+ Die [Concurrency:: when_all](reference/concurrency-namespace-functions.md#when_all) und [Concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all) Funktionen können Sie die compose-mehrere Aufgaben aus, um allgemeine Muster zu implementieren. In diesem Abschnitt wird beschrieben, wie diese Funktionen mit Abbruchtoken verwendet werden können.  
   
  Wenn ein Abbruchtoken an die `when_all`- oder `when_any`-Funktion übergeben wird, wird diese Funktion nur abgebrochen, wenn dieses Abbruchtoken abgebrochen wird, oder wenn eine der beteiligten Aufgaben in einem abgebrochenen Zustand endet oder eine Ausnahme auslöst.  
   

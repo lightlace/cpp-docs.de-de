@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca5a5e4d7bda9fe14362696d44137273cc020c7f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3d162aea1d000aa9e65aea253f974c38ffc85bcd
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203129"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686185"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Upgrading eines vorhandenen ActiveX-Steuerelements
 Vorhandene ActiveX-Steuerelemente (früher OLE-Steuerelemente) kann über das Internet ohne Änderung verwendet werden. Allerdings sollten Sie so ändern Sie die Steuerelemente, um die Leistung zu verbessern. Wenn Sie das Steuerelement auf einer Webseite verwenden, gibt es weitere Überlegungen. Die OCX-Datei und alle zugehörigen Dateien müssen auf dem Zielcomputer oder über das Internet heruntergeladen werden. Dadurch wird die Codegröße als auch herunterladen, die Zeit eines wichtigen Aspekt. Downloads können in einer signierten CAB-Datei verpackt werden. Sie können das Steuerelement als sicher für Skripting und als sicher für die Initialisierung kennzeichnen.  
@@ -89,7 +89,7 @@ CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
   
  Die CAB-Datei verweist `CODEBASE` OCX-Datei für das ActiveX-Steuerelement und eine INF-Datei zur Steuerung der Installation enthalten. Erstellen Sie die CAB-Datei den Namen der Steuerelementdatei angeben und eine INF-Datei. Fügen Sie keine abhängigen DLLs, die möglicherweise bereits auf dem System in der CAB-Datei vorhanden sind. MFC-DLLs sind z. B. in einer separaten CAB-Datei verpackt und auf die steuernde INF-Datei verweist.  
   
- Weitere Informationen darüber, wie Sie eine CAB-Datei zu erstellen, finden Sie unter [erstellen eine CAB-Datei](https://msdn.microsoft.com/cc52fd09-bdf6-4410-a693-149a308f36a3).  
+ Weitere Informationen darüber, wie Sie eine CAB-Datei zu erstellen, finden Sie unter [erstellen eine CAB-Datei](/windows/desktop/devnotes/cabinet-api-functions).  
   
 ### <a name="the-inf-file"></a>Die INF-Datei  
  Das folgende Beispiel, spindial.inf, Listen benötigt die unterstützenden Dateien und die Versionsinformationen für die MFC-Spindial steuern. Beachten Sie, dass der Speicherort für die MFC-DLLs ist eine Microsoft-Website. Die mfc42.cab ist bereitgestellt und von Microsoft signiert.  
@@ -221,7 +221,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 ##  <a name="_core_signing_code"></a> Signieren von Code  
  Signieren von Code dient zum Identifizieren des Quell-Code, und um sicherzustellen, dass der Code nicht, seit es geändert hat signiert wurde. Abhängig von den Browsereinstellungen für Sicherheit können Benutzer gewarnt, bevor der Code heruntergeladen wird. Benutzer die Möglichkeit, vertrauen bestimmte Inhabern oder Unternehmen, in denen Fall eine Codesignatur von den vertrauenswürdigen ohne Warnung heruntergeladen werden. Code wird digital signiert, um Manipulationen zu vermeiden.  
   
- Stellen Sie sicher, dass der resultierende Code signiert ist, damit das Steuerelement automatisch heruntergeladen werden kann, ohne Vertrauensstellung Warnmeldungen an. Weitere Informationen zum Signieren von Code finden Sie in der Dokumentation auf das Authenticode im ActiveX-SDK, und finden Sie unter [eine CAB-Datei signieren](https://msdn.microsoft.com/04d8b47a-8f1c-4b54-ab90-730fcdc03747).  
+ Stellen Sie sicher, dass der resultierende Code signiert ist, damit das Steuerelement automatisch heruntergeladen werden kann, ohne Vertrauensstellung Warnmeldungen an. Weitere Informationen zum Signieren von Code finden Sie in der Dokumentation auf das Authenticode im ActiveX-SDK, und finden Sie unter [eine CAB-Datei signieren](/windows/desktop/devnotes/cabinet-api-functions).  
   
  Abhängig von der Vertrauensstellung und Browser auf die Sicherheitseinstellungen kann ein Zertifikat angezeigt werden, um die signierende Person oder Firma zu identifizieren. Wenn die Sicherheitsstufe auf None festgelegt ist oder das Vorzeichen des Steuerelements Zertifikatsbesitzers als vertrauenswürdig eingestuft wird, wird ein Zertifikat nicht angezeigt werden. Finden Sie unter [Sicherheitsstufen für Internet Explorer-Browser und Verhalten des Steuerelements](#_core_internet_explorer_browser_safety_levels_and_control_behavior) Einzelheiten, wie der Browser-sicherheitseinstellung bestimmt, ob das Steuerelement heruntergeladen wird und ein Zertifikat angezeigt.  
   

@@ -1,7 +1,7 @@
 ---
-title: ML nicht schwerwiegende Fehler A2069 | Microsoft Docs
+title: Schwerwiegender ML--Fehler A2069 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d63d942c148b2255275ddcba21b2a3e3f616d6a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: dbf2f4f4723d9a83d89a343ebc501db07dd23db9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054720"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692256"
 ---
 # <a name="ml-nonfatal-error-a2069"></a>Nicht schwerwiegender ML-Fehler A2069
-**keine Operanden, die für diese Anweisung zulässig**  
-  
- Einem oder mehreren Operanden wurden mit einer Anweisung angegeben, die keinen Operanden akzeptiert.  
-  
-## <a name="see-also"></a>Siehe auch  
- [ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)
+
+**keine Operanden, die für diese Anweisung zulässig**
+
+Einem oder mehreren Operanden wurden mit einer Anweisung angegeben, die keinen Operanden verwendet.
+
+## <a name="see-also"></a>Siehe auch
+
+[ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)<br/>

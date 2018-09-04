@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc0bc1789e4fc4f11b9d0becfda656a42d0ec95
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 29ab603001405056626af0debbde7b6f8ef78704
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214195"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690574"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Für Visual C++-Projekte erstellte Dateitypen
 In diesem Thema werden alle mit Visual C++-Projekten für klassische Desktopcomputeranwendungen verknüpften Dateitypen beschrieben. Die in Ihrem Projekt tatsächlich enthaltenen Dateien sind vom Projekttyp und von Ihnen mithilfe eines Assistenten ausgewählten Optionen abhängig.  
@@ -73,7 +73,7 @@ In diesem Thema werden alle mit Visual C++-Projekten für klassische Desktopcomp
 |.HxC|Projekt|Hilfsprojektdatei.|  
 |.ico|Ressource|Symbolbitmap-Grafikdatei.|  
 |.idb|Kompilieren|Die die Abhängigkeitsinformationen zwischen den Quelldateien und Klassendefinitionen enthaltende Statusdatei, die durch den Compiler während der minimalen Neuerstellung und der inkrementellen Kompilierung verwendet werden kann. Verwenden Sie die Compileroption [/Fd](../build/reference/fd-program-database-file-name.md) zum Angeben des Namens der IDB-Datei. Weitere Informationen finden Sie unter [/Gm (Minimale Neuerstellung aktivieren)](../build/reference/gm-enable-minimal-rebuild.md) .|  
-|.idl|Kompilieren|Eine IDL-Datei. Weitere Informationen finden Sie im Windows SDK unter [Interface Definition (IDL) File (Schnittstellendefinitionsdatei)](https://msdn.microsoft.com/library/windows/desktop/aa378712).|  
+|.idl|Kompilieren|Eine IDL-Datei. Weitere Informationen finden Sie im Windows SDK unter [Interface Definition (IDL) File (Schnittstellendefinitionsdatei)](/windows/desktop/Rpc/the-interface-definition-language-idl-file).|  
 |.ilk|Verknüpfen|Datei für inkrementelle Verknüpfung. Weitere Informationen finden Sie unter [/INCREMENTAL](../build/reference/incremental-link-incrementally.md) .|  
 |.map|Verknüpfen|Eine Textdatei mit Linkerinformationen. Verwenden Sie die Compileroption [/Fm](../build/reference/fm-name-mapfile.md) , um die MAP-Datei zu benennen. Weitere Informationen finden Sie unter [/MAP](../build/reference/map-generate-mapfile.md) .|  
 |.mfcribbon-ms|Ressource|Eine den die Schaltflächen, Steuerelemente und Attribute im Menüband definierenden XML-Code enthaltende Ressourcendatei. Weitere Informationen finden Sie unter [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md).|  
@@ -81,7 +81,7 @@ In diesem Thema werden alle mit Visual C++-Projekten für klassische Desktopcomp
 |.pch|Debug|Vorkompilierte Headerdatei.|  
 |.rc, .rc2|Ressource|[Ressourcenskriptdateien](../windows/working-with-resource-files.md) zum Generieren von Ressourcen.|  
 |.sbr|Kompilieren|Zwischendatei des Quellbrowsers. Die Eingabedatei für [BSCMAKE](../build/reference/bscmake-options.md).|  
-|.sln|Lösung|Die [Projektmappendatei](https://msdn.microsoft.com/a45c299d-69f5-4b67-879d-1383417df0a7).|  
+|.sln|Lösung|Die [Projektmappendatei](/visualstudio/ide/solutions-and-projects-in-visual-studio).|  
 |.suo|Lösung|Die Datei mit den Projektmappenoptionen.|  
 |.txt|Ressource|Eine Textdatei, in der Regel die Infodatei.|  
 |.vap|Projekt|Eine Visual Studio Analyzer-Projektdatei.|  

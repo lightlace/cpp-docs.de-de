@@ -1,7 +1,7 @@
 ---
-title: ALIAS (MASM) | Microsoft Docs
+title: ALIAS (MASM) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,34 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b14e1c41a448d0cb7014dabc50a42305249938f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c6a977d35040d8ca25cd3bd4ae4def233092b37a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049166"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691061"
 ---
 # <a name="alias-masm"></a>ALIAS (MASM)
-Die **ALIAS** Richtlinie erstellt, einen alternativen Name für eine Funktion.  Dadurch können Sie mehrere Namen für eine Funktion erstellen, oder erstellen Sie Bibliotheken, mit die den Linker (LINK.exe) eine alte Funktion in eine neue Funktion zuordnen können.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-ALIAS  <  
-alias  
-> = <  
-actual-name  
->  
-  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `actual-name`  
- Der tatsächliche Name der Funktion oder Prozedur.  Die spitzen Klammern sind erforderlich.  
-  
- `alias`  
- Der Name des alternativen oder Alias.  Die spitzen Klammern sind erforderlich.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+
+Die **ALIAS** Richtlinie erstellt einen alternativen Name für eine Funktion.  Dadurch können Sie mehrere Namen für eine Funktion erstellen, oder erstellen Sie Bibliotheken, die den Linker (LINK.exe) Zuordnen von einer alten Funktion in eine neue Funktion zu ermöglichen.
+
+## <a name="syntax"></a>Syntax
+
+> ALIAS \< *Alias*> = \< *tatsächliche-Name*>
+
+#### <a name="parameters"></a>Parameter
+
+*tatsächliche-name*<br/>
+Der tatsächliche Name der Funktion oder Prozedur.  Die spitzen Klammern sind erforderlich.
+
+*alias*<br/>
+Der alternative oder Alias-Name.  Die spitzen Klammern sind erforderlich.
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

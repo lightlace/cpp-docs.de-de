@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a26394a906f40d6dc194118bb312cfe1a0ce834e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6719d7b104c5dd520a8c4e8a027ea47bd76a95bc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219883"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689509"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Gewusst wie: Marshallen von Strukturen mit PInvoke
 In diesem Dokument wird erläutert, wie native Funktionen, akzeptieren die C-Stil Strukturen aus verwalteten Funktionen durch mit P/Invoke aufgerufen werden können. Obwohl es wird empfohlen, dass Sie die C++-Interop-Funktionen nicht verwenden P/Invoke da P/Invoke wenig Fehler während der Kompilierung, berichterstellung, bietet ist nicht typsicher, und kann mühsam sein, wenn die nicht verwaltete API als DLL verpackt wird und der Quellcode nicht ist zu implementieren, P/Invoke verfügbar ist, ist die einzige Option. Andernfalls finden Sie unter den folgenden Dokumenten:  
@@ -34,7 +34,7 @@ In diesem Dokument wird erläutert, wie native Funktionen, akzeptieren die C-Sti
   
  Standardmäßig werden systemeigene und verwaltete Strukturen unterschiedlich im Arbeitsspeicher angeordnet erfolgreich zusätzliche Schritte, um die Datenintegrität beizubehalten übergeben von Strukturen über die verwalteten und nicht verwalteten Grenze erfordert werden.  
   
- Dieses Dokument erläutert die erforderlichen Schritte zum Definieren der verwalteter Entsprechungen der systemeigenen Strukturen und wie die so erhaltenen Strukturen an nicht verwaltete Funktionen übergeben werden können. In diesem Dokument wird vorausgesetzt, dass einfache Strukturen, die, die keine Zeichenfolgen oder Zeiger enthalten – verwendet werden. Informationen über die Interoperabilität von nicht blitfähigen finden Sie unter [mithilfe C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md). P/Invoke sind keine nicht blitfähige Typen als Rückgabewert. Blitfähige Typen haben die gleiche Darstellung in verwaltetem und nicht verwaltetem Code. Weitere Informationen finden Sie unter [blitfähige und nicht blitfähige Typen](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3).  
+ Dieses Dokument erläutert die erforderlichen Schritte zum Definieren der verwalteter Entsprechungen der systemeigenen Strukturen und wie die so erhaltenen Strukturen an nicht verwaltete Funktionen übergeben werden können. In diesem Dokument wird vorausgesetzt, dass einfache Strukturen, die, die keine Zeichenfolgen oder Zeiger enthalten – verwendet werden. Informationen über die Interoperabilität von nicht blitfähigen finden Sie unter [mithilfe C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md). P/Invoke sind keine nicht blitfähige Typen als Rückgabewert. Blitfähige Typen haben die gleiche Darstellung in verwaltetem und nicht verwaltetem Code. Weitere Informationen finden Sie unter [blitfähige und nicht blitfähige Typen](/dotnet/framework/interop/blittable-and-non-blittable-types).  
   
  Marshallen von einfachen blitfähigen Strukturen über die verwalteten und nicht verwalteten Grenze erfordert, dass verwalteten Versionen der einzelnen systemeigenen Struktur definiert werden. Diese Strukturen, können alle gültigen Namen haben. Es gibt keine Beziehung zwischen der nativen und verwalteten Version der beiden Strukturen als ihr Datenlayout. Aus diesem Grund ist es wichtig, dass die verwaltete Version Felder enthält, die gleiche Größe und in der gleichen Reihenfolge wie die native Version. (Es gibt keinen Mechanismus dafür, dass die verwalteten und systemeigenen Versionen der Struktur äquivalent sind, damit Inkompatibilitäten nicht offensichtlich bis zur Laufzeit werden soll. Es ist der Programmierer dafür verantwortlich sicherzustellen, dass die beiden Strukturen das gleiche Layout verfügen.)  
   

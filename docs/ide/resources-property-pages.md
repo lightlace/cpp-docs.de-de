@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bc63eede971bed0b726c633f0ef7d52793f39ba
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1b5160061233f9d0a474385bccd324333ed9549a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219467"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686286"
 ---
 # <a name="resources-property-pages"></a>Resources-Eigenschaftenseiten
-Weitere Informationen über die Verwendung des Ressourcencompilers finden Sie unter [Using RC (The RC Command Line) (Verwenden des Ressourcencompilers (die RC-Befehlszeile))](https://msdn.microsoft.com/library/windows/desktop/aa381055).  
+Weitere Informationen über die Verwendung des Ressourcencompilers finden Sie unter [Using RC (The RC Command Line) (Verwenden des Ressourcencompilers (die RC-Befehlszeile))](/windows/desktop/menurc/using-rc-the-rc-command-line-).  
   
  Informationen über das Zugreifen auf die **Ressourceneigenschaftenseiten** finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md).  
   

@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8385320b51efedd214424385babc5f03d5559873
-ms.sourcegitcommit: 220fd4fda829f810e15fc1a1d98ab43c46201b47
+ms.openlocfilehash: 23b830ca8a7fb7f2e799cae17209a9fa089d1881
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43352715"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690874"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton-Klasse
 Die `CMFCButton` Klasse fügt Funktionen für die [CButton](../../mfc/reference/cbutton-class.md) Klasse wie z. B. das Ausrichten des Schaltflächentexts, Kombinieren von Schaltflächentext mit einem Bild, Auswählen eines Cursors und Festlegen einer QuickInfo.  
@@ -137,7 +137,7 @@ class CMFCButton : public CButton
 |[CMFCButton::IsRadioButton](#isradiobutton)|Gibt an, ob eine Schaltfläche ein Optionsfeld ist.|  
 |[CMFCButton::IsWindowsThemingEnabled](#iswindowsthemingenabled)|Gibt an, ob der Stil des Rahmens der Schaltfläche für das aktuelle Windows-Design entspricht.|  
 |`CMFCButton::OnDrawParentBackground`|Zeichnet den Hintergrund einer Schaltfläche des übergeordneten Elements im angegebenen Bereich. (Überschreibt [AFX_GLOBAL_DATA::DrawParentBackground](../../mfc/reference/afx-global-data-structure.md)|  
-|`CMFCButton::PreTranslateMessage`|Übersetzt fenstermeldungen, bevor sie um weitergeleitet werden die [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows-Funktionen. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMFCButton::PreTranslateMessage`|Übersetzt fenstermeldungen, bevor sie um weitergeleitet werden die [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows-Funktionen. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCButton::SetAutorepeatMode](#setautorepeatmode)|Legt eine Schaltfläche zum automatischen als dem Wiederholungsmodus fest.|  
 |[CMFCButton::SetCheckedImage](#setcheckedimage)|Legt das Bild für die aktivierte Schaltfläche fest.|  
 |[CMFCButton::SetFaceColor](#setfacecolor)|Legt die Hintergrundfarbe für den Text der Schaltfläche fest.|  

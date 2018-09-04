@@ -1,7 +1,7 @@
 ---
-title: Operator &lt; (MASM-Laufzeit) | Microsoft Docs
+title: Operator &lt; (MASM-Laufzeit) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,22 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abeed358bed3d3131ba66bd863bd9a48e4bf153d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a2b0b958031dbdc3ddf21fad290322e45d690471
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057733"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688285"
 ---
 # <a name="operator-lt-masm-run-time"></a>Operator &lt; (MASM-Laufzeit)
-Ist kleiner als. Verwendet nur in [. IF](../../assembler/masm/dot-if.md), [. WÄHREND](../../assembler/masm/dot-while.md), oder [. Wiederholen Sie die](../../assembler/masm/dot-repeat.md) blockiert und zur Laufzeit nicht zum Zeitpunkt der Assembly ausgewertet.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-expression1 < expression2  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Operatoren – Referenz](../../assembler/masm/operators-reference.md)
+
+Ist kleiner als. Verwendet nur in [. IF](../../assembler/masm/dot-if.md), [. WÄHREND](../../assembler/masm/dot-while.md), oder [. Wiederholen Sie die](../../assembler/masm/dot-repeat.md) blockiert und nicht zum Zeitpunkt der Assembly zur Laufzeit ausgewertet.
+
+## <a name="syntax"></a>Syntax
+
+> expression1 < expression2
+
+## <a name="see-also"></a>Siehe auch
+
+[Operatoren – Referenz](../../assembler/masm/operators-reference.md)<br/>
