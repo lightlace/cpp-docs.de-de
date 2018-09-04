@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a50c0cf224104f720a73a4830405e7114cda74ed
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 16c1bdf088e0545292a672458c066364b5a47ff4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33338766"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206294"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Grundlagen benutzerdefinierter Buildschritte und Buildereignisse
 Innerhalb der Visual C++-Entwicklungsumgebung gibt es drei grundlegende Möglichkeiten, den Buildprozess anzupassen:  
@@ -73,4 +73,4 @@ Innerhalb der Visual C++-Entwicklungsumgebung gibt es drei grundlegende Möglich
 ## <a name="see-also"></a>Siehe auch  
  [Building C++ Projects in Visual Studio (Erstellen von C++-Projekten in Visual Studio)](../ide/building-cpp-projects-in-visual-studio.md)   
  [Common Macros for Build Commands and Properties (Gängige Makros für Buildbefehle und -eigenschaften)](../ide/common-macros-for-build-commands-and-properties.md)   
- [Dialogfeld „Toolbuildreihenfolge“](http://msdn.microsoft.com/en-us/6204c5b1-7ce9-4948-9ff6-0268642ee14c)
+ [Dialogfeld „Toolbuildreihenfolge“](https://msdn.microsoft.com/6204c5b1-7ce9-4948-9ff6-0268642ee14c)

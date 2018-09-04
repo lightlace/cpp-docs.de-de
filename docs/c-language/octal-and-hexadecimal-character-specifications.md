@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f5709ef6fdcaaceecc79cd635374ee77d537100
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eeb1f8e08fbb1d4f30517485c9296febab5a0de0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387387"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198755"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>Spezifikationen von Oktal- und Hexadezimalzeichen
-Die Sequenz **\\***ooo* bedeutet, dass jedes Zeichen im ASCII-Zeichensatz als dreistelliger oktaler Zeichencode angeben werden kann. Der numerische Wert der oktalen ganzen Zahl gibt den Wert des gewünschten Zeichens oder Breitzeichens an.  
+Die Sequenz **\\**<em>ooo</em> bedeutet, dass jedes Zeichen im ASCII-Zeichensatz als dreistelliger oktaler Zeichencode angeben werden kann. Der numerische Wert der oktalen ganzen Zahl gibt den Wert des gewünschten Zeichens oder Breitzeichens an.  
   
- Ebenso können Sie mit der Sequenz **\x***hhh* jedes beliebige ASCII-Zeichen als Hexadezimalzeichencode angeben. Beispielsweise können Sie das Zeichen für die ASCII-Rücktaste als die normale C-Escapesequenz (**\b**) zuweisen, oder Sie können es als **\010** (oktal) oder **\x008** (hexadezimal) codieren.  
+ Ebenso können Sie mit der Sequenz **\x**<em>hhh</em> jedes beliebige ASCII-Zeichen als Hexadezimalzeichencode angeben. Beispielsweise können Sie das Zeichen für die ASCII-Rücktaste als die normale C-Escapesequenz (**\b**) zuweisen, oder Sie können es als **\010** (oktal) oder **\x008** (hexadezimal) codieren.  
   
  Sie können in einer oktalen Escapesequenz nur die Ziffern 0 bis 7 verwenden. Oktale Escapesequenzen können nie mehr als drei Ziffern aufweisen und werden vom ersten Zeichen, das keine oktale Ziffer ist, beendet. Sie müssen zwar nicht alle drei Ziffern verwenden, jedoch mindestens eine. Beispielsweise ist die oktale Darstellung **\10** für das ASCII-Rücktastenzeichen und **\101** für den Buchstaben A, wie in einem ASCII-Diagramm angegeben.  
   

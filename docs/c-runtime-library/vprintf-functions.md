@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d63e5da79b0f78e701f3ababaf54bef41fbf88a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 127cf8683d4d2627bdc19bef4a9ddfa93e3d7387
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418379"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216933"
 ---
 # <a name="vprintf-functions"></a>vprintf-Funktionen
 Jede dieser `vprintf`-Funktionen verwendet einen Zeiger auf eine Argumentliste und formatiert und schreibt dann die angegebenen Daten in ein bestimmtes Ziel. Die Funktionen unterscheiden sich von der durchgeführten Parameterüberprüfung, unabhängig davon, ob die Funktionen Breit- oder Einzelbyte-Zeichenfolgen annehmen. Auch das Ausgabeziel und die Unterstützung für die Angabe der Reihenfolge, in der Parameter in der Formatzeichenfolge verwendet werden, spielen keine Rolle.  
@@ -89,7 +89,7 @@ Jede dieser `vprintf`-Funktionen verwendet einen Zeiger auf eine Argumentliste u
  Wenn bei **vsprintf**, `vswprintf`, `_vsnprintf` und `_vsnwprintf` der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.  
   
 > [!IMPORTANT]
->  Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795). Wenn die sicheren Versionen dieser Funktionen (entweder die Suffixe **_s** oder **_p**) verwendet werden, könnte eine benutzerdefinierte Formatzeichenfolge eine Ausnahme aufgrund ungültiger Parameter auslösen, sofern die vom Benutzer bereitgestellte Zeichenfolge ungültige Formatierungszeichen enthält.  
+>  Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns). Wenn die sicheren Versionen dieser Funktionen (entweder die Suffixe **_s** oder **_p**) verwendet werden, könnte eine benutzerdefinierte Formatzeichenfolge eine Ausnahme aufgrund ungültiger Parameter auslösen, sofern die vom Benutzer bereitgestellte Zeichenfolge ungültige Formatierungszeichen enthält.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Stream-E/A](../c-runtime-library/stream-i-o.md)   

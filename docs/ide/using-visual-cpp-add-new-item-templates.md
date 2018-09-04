@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50bf1bdeeed862ecbc03270e403ccafaf32bfde8
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 94da3456cc7c4723875b6376d5d9b2411f3f7ca8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332815"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197902"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Verwenden von Vorlagen zum Hinzufügen neuer Elemente in Visual C++
 Sie können problemlos Elemente hinzufügen, die in Visual C++-Projekten gleich sind, indem Sie den Befehl **Neues Element hinzufügen** verwenden. Wenn Sie den Befehl **Neues Element hinzufügen** verwenden, wird das Dialogfeld `Add New Item` mit einer Liste von Elementvorlagen angezeigt, die die entsprechenden Dateien in das Projekt einfügen.  
   
  Die folgende Tabelle enthält eine alphabetische Liste von Vorlagen zum Hinzufügen neuer Elemente in Visual C++.  
   
-|Vorlage|description|  
+|Vorlage|Beschreibung |  
 |--------------|-----------------|  
 |Assemblyressourcendatei (.resx)|Erstellt eine Datei mit CLR-Ressourcen.|  
 |Bitmapdatei (.bmp)|Erstellt eine Win32-Bitmapdatei.|  
@@ -44,7 +44,7 @@ Sie können problemlos Elemente hinzufügen, die in Visual C++-Projekten gleich 
 |Headerdatei (.h)|Erstellt eine C++-Headerdatei.|  
 |HTML-Seite (.htm)|Erstellt eine leere HTML-Datei.|  
 |Symboldatei (.ico)|Erstellt eine Win32-Symboldatei.|  
-|Installerklasse|Fügt eine Klasse hinzu, die mithilfe von CLR-Features von der [Installerklasse](https://msdn.microsoft.com/en-us/library/system.configuration.install.installer.aspx) erbt.|  
+|Installerklasse|Fügt eine Klasse hinzu, die mithilfe von CLR-Features von der [Installerklasse](https://msdn.microsoft.com/library/system.configuration.install.installer.aspx) erbt.|  
 |MIDL-Datei (.idl)|Erstellt eine IDL-Datei.|  
 |Moduldefinitionsdatei (.def)|Erstellt eine DLL-Exportdefinitionsdatei.|  
 |Eigenschaftenblatt (.props)|Erstellt eine Eigenschaftenblattdatei für das Visual C++.|  

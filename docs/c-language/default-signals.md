@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4295c0fbd0542ad6c7c819b6ef7024b2384304d5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8a9465a51646dae16ae2a487a77206c712fef681
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382889"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204449"
 ---
 # <a name="default-signals"></a>Standardsignale
-**ANSI 4.7.1.1** Wenn die Entsprechung von **signal (***sig***, SIG_DFL)** nicht vor dem Aufruf eines Signalhandlers ausgeführt wird, die Blockierung des Signals, das ausgeführt wird  
+**ANSI 4.7.1.1** Wenn die Entsprechung von **signal (**<em>sig</em>**, SIG_DFL)** nicht vor dem Aufruf eines Signalhandlers ausgeführt wird, die Blockierung des Signals, das ausgeführt wird  
   
  Signale werden auf ihren Standardstatus festgelegt, wenn die Ausführung eines Programms beginnt.  
   

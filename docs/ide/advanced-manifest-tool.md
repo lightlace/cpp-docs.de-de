@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47d4dc3ab325a7346d0e787a15d69d646896827d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1b12c53f2793f7ac083ca06143be18aa6234f1de
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33326936"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201583"
 ---
 # <a name="advanced-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Erweitert, Manifesttool, Konfigurationseigenschaften, Dialogfeld „&lt;Projektname&gt;-Eigenschaftenseiten“
-Verwenden Sie dieses Dialogfeld, um erweiterte Optionen für die Datei [Mt.exe](http://msdn.microsoft.com/library/aa375649) anzugeben.  
+Verwenden Sie dieses Dialogfeld, um erweiterte Optionen für die Datei [Mt.exe](https://msdn.microsoft.com/library/aa375649) anzugeben.  
   
  Öffnen Sie die Eigenschaftenseiten für Ihr Projekt oder Ihr Eigenschaftenblatt, um auf das Dialogfeld „Eigenschaftenseite“ zuzugreifen. Erweitern Sie den Knoten **Manifesttool** unter **Konfigurationseigenschaften**, und klicken Sie dann auf **Erweitert**.  
   

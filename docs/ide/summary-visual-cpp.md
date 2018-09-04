@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0dff1d6ce31f6b26c0f8a46ef2ff620a4d40f93
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 69421faced2873a4083cc6edbf7dd86e15f3cd9e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33322288"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199082"
 ---
 # <a name="ltsummarygt-visual-c"></a>&lt;summary&gt; (Visual C++)
 Das \<summary>-Tag sollte verwendet werden, um einen Typ oder einen Typmember zu beschreiben. Verwenden Sie [\<remarks>](../ide/remarks-visual-cpp.md), um zusätzliche Informationen zu einer Typbeschreibung hinzuzufügen.  
@@ -39,7 +39,7 @@ Das \<summary>-Tag sollte verwendet werden, um einen Typ oder einen Typmember zu
  Eine Übersicht des Objekts.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Text für das \<summary>-Tag ist die einzige Informationsquelle über den Typ in IntelliSense und wird auch im [Objektkatalog](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) und im Webbericht über Codekommentare angezeigt.  
+ Der Text für das \<summary>-Tag ist die einzige Informationsquelle über den Typ in IntelliSense und wird auch im [Objektkatalog](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470) und im Webbericht über Codekommentare angezeigt.  
   
  Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
   

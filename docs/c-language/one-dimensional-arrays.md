@@ -20,23 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8d7366a2c0a1b8ae9ed4e37eaaa89de9baf794d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbb47eae81df8b1080480843bfa5a444f6eb989f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388905"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196975"
 ---
 # <a name="one-dimensional-arrays"></a>Eindimensionale Arrays
 Ein Postfixausdruck, gefolgt von einem Ausdruck in eckigen Klammern (**[ ]**), ist eine indizierte Darstellung eines Elements eines Arrayobjekts. Ein Indexausdruck stellt den Wert an der Adresse dar, welche die *expression* hinter *postfix-expression* positioniert, wenn diese ausgedrückt wird als  
   
 ```  
-  
-postfix-expression  
-[  
-expression  
-]  
-  
+postfix-expression [ expression ]
 ```  
   
  Normalerweise ist der von *postfix-expression* dargestellte Wert ein Zeigerwert, z. B. ein Arraybezeichner, und *expression* ist ein Ganzzahlwert. Syntaktisch erforderlich ist allerdings nur, dass einer der Ausdrücke vom Zeigertyp und der andere Ausdruck vom Ganzzahltyp ist. Daher kann der ganzzahlige Wert an der *postfix-expression*-Position sein, und der Zeigerwert kann in eckigen Klammern an der *expression*- oder der „Index“-Position sein. Beispielsweise ist folgender Code gültig:  
@@ -52,7 +47,7 @@ int main() {
   
  Indexausdrücke werden im Allgemeinen verwendet, um auf Arrayelemente zu verweisen. Sie können einen Index jedoch auf jeden Zeiger anwenden. Ungeachtet der Reihenfolge der Werte muss *expression* in eckige Klammern (**[ ]**) eingeschlossen werden.  
   
- Der Indexausdruck wird ausgewertet, indem der Zeigerwert zum ganzzahligen Wert hinzugefügt wird, bevor der Dereferenzierungsoperator (**\***) auf das Ergebnis angewandt wird. (Eine Erläuterung des Dereferenzierungsoperators finden Sie unter [Dereferenzierungs- und Address-of-Operatoren](../c-language/indirection-and-address-of-operators.md).) Für ein eindimensionales Array sind die folgenden vier Ausdrücke gleichwertig, vorausgesetzt, dass `a` ein Zeiger ist und `b` eine ganze Zahl darstellt:  
+ Der Indexausdruck wird ausgewertet, indem der Zeigerwert zum ganzzahligen Wert hinzugefügt wird, bevor der Dereferenzierungsoperator (<strong>\*</strong>) auf das Ergebnis angewandt wird. (Eine Erläuterung des Dereferenzierungsoperators finden Sie unter [Dereferenzierungs- und Address-of-Operatoren](../c-language/indirection-and-address-of-operators.md).) Für ein eindimensionales Array sind die folgenden vier Ausdrücke gleichwertig, vorausgesetzt, dass `a` ein Zeiger ist und `b` eine ganze Zahl darstellt:  
   
 ```  
 a[b]  

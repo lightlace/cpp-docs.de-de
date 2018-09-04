@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2844e9051c5e6adf14085bcd7bfcd8096c6f8f7
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: b69c2318ec5b1dd986a71bc684e1c9adc0f4ef0f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332581"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194963"
 ---
 # <a name="creating-a-com-interface-visual-c"></a>Erstellen einer COM-Schnittstelle (Visual C++)
 Visual C++ stellt Assistenten und Vorlagen zum Erstellen von Projekten bereit, die definierende COM-Schnittstellen und Disp-Schnittstellen für Ihre COM-Objekte und Automatisierungsklassen verwenden.  
@@ -67,7 +67,7 @@ interface IMyInterface {
   
  Weitere Informationen finden Sie unter [Implementing an Interface (Implementieren einer Schnittstelle)](../ide/implementing-an-interface-visual-cpp.md) und [Adding Objects and Controls to an ATL Project (Hinzufügen von Objekten und Steuerelementen zu einem ATL-Projekt)](../atl/reference/adding-objects-and-controls-to-an-atl-project.md).  
   
- Visual C++ bietet mehrere Möglichkeiten zum Anzeigen und [Bearbeiten der COM-Schnittstellen](../ide/editing-a-com-interface.md), die für Ihre Projekte definiert sind. Die [Klassenansicht](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) zeigt Symbole für Schnittstellen oder Disp-Schnittstellen an, die in einer IDL-Datei in Ihrem Projekt definiert sind.  
+ Visual C++ bietet mehrere Möglichkeiten zum Anzeigen und [Bearbeiten der COM-Schnittstellen](../ide/editing-a-com-interface.md), die für Ihre Projekte definiert sind. Die [Klassenansicht](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) zeigt Symbole für Schnittstellen oder Disp-Schnittstellen an, die in einer IDL-Datei in Ihrem Projekt definiert sind.  
   
  Bei ATL-basierten COM-Objektklassen liest die Klassenansicht die COM-Zuordnung in der ATL-Klasse zum Anzeigen der Beziehung zwischen der ATL-Klasse und allen Schnittstellen, die sie implementiert.  
   

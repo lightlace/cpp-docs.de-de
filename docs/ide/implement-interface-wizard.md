@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf2ddf83b7a03f8d4e01b61f82e46e0d26a5547b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c43619fcb1d684d7e0d2d6645b7a5feaac61e472
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340540"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195194"
 ---
 # <a name="implement-interface-wizard"></a>Assistent zum Implementieren von Schnittstellen
 Dieser Assistent implementiert eine Schnittstelle für ein COM-Projekt. Implementierungen vieler Schnittstellen sind in den COM-Bibliotheken enthalten, die in Visual Studio und Windows verfügbar sind. Eine Schnittstellen-Implementierung wird einem Objekt zugeordnet, wenn eine Schnittstelle dieses Objekts erstellt wird. Diese stellt die Dienste bereit, die das Objekt anbietet.  
   
- Eine Erläuterung der Schnittstellen und Implementierungen finden Sie im Windows SDK unter [Interfaces and Interface Implementations (Schnittstellen und Schnittstellenimplementierungen)](http://msdn.microsoft.com/library/windows/desktop/ms694356).  
+ Eine Erläuterung der Schnittstellen und Implementierungen finden Sie im Windows SDK unter [Interfaces and Interface Implementations (Schnittstellen und Schnittstellenimplementierungen)](/windows/desktop/com/interfaces-and-interface-implementations).  
   
  **Implement interface from** (Schnittstelle implementieren aus)  
  Gibt den Speicherort der Typbibliothek an, aus der die Schnittstelle erstellt wird.  
   
-|Option|description|  
+|Option|Beschreibung |  
 |------------|-----------------|  
 |**Projekt**|Die Typbibliothek ist ein Teil des Projekts.|  
 |**Registry**|Die Typbibliothek ist im System registriert. Registrierte Typbibliotheken werden unter **Verfügbare Typbibliotheken** aufgeführt.|  
@@ -49,7 +49,7 @@ Dieser Assistent implementiert eine Schnittstelle für ein COM-Projekt. Implemen
 > [!NOTE]
 >  Schnittstellen mit dem gleichen Namen wie die, die bereits vom ausgewählten Objekt implementiert wurden, werden nicht im Feld **Schnittstellen** angezeigt.  
   
-|Schaltfläche „Übertragen“|description|  
+|Schaltfläche „Übertragen“|Beschreibung |  
 |---------------------|-----------------|  
 |**>**|Fügt den Namen der aktuell in der Liste **Schnittstellen** ausgewählten Schnittstelle der Liste **Schnittstellen implementieren** hinzu.|  
 |**>>**|Fügt alle Namen der in der Liste **Schnittstellen** verfügbaren Schnittstellen der Liste **Schnittstellen implementieren** hinzu.|  

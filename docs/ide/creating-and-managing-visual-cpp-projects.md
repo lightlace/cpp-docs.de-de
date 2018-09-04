@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3afbd2019965d859895462cfdad57292bc2e0b3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 41b3565893d65990955f0fd28c6cccce7fcb1f32
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332422"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222242"
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Erstellen und Verwalten von MSBuild-basierten Visual C++-Projekten
 MSBuild ist das native Buildsystem für Visual C++ und im Allgemeinen das beste Buildsystem für die Verwendung von UWP-Apps und Desktopanwendungen, die MFC- oder ATL-Bibliotheken verwenden. MSBuild ist eng in die Visual Studio-IDE und das Projektsystem integriert. Sie können MSBuild jedoch auch über die Befehlszeile verwenden. Ab Visual Studio 2017 unterstützt Visual C++ [CMake- und andere nicht MSBuild-Systeme mithilfe des Features „Ordner öffnen“](non-msbuild-projects.md).
@@ -68,8 +68,8 @@ Sie können Visual C++-Projekte erstellen, indem Sie **Datei > Neu > Projekt** a
  [Erstellen von C/C++-Programmen](../build/building-c-cpp-programs.md)  
  Bietet Links zu Themen, in denen das Erstellen von Programmen über die Befehlszeile oder die integrierte Entwicklungsumgebung von Visual Studio beschrieben sind.  
   
- [Visual C++-Referenz](http://msdn.microsoft.com/en-us/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
+ [Visual C++-Referenz](https://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
  Enthält Links zu Themen, in denen die C- und C++-Sprachreferenzen, die im Lieferumfang von Visual C++ enthaltenen Bibliotheken, das Visual C++-Erweiterbarkeitsobjektmodell und der Microsoft Macro Assembler (MASM) beschrieben werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Visual Studio SDK](http://msdn.microsoft.com/vstudio/extend)
+ [Visual Studio SDK](https://msdn.microsoft.com/vstudio/extend)

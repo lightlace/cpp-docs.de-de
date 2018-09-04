@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6c4f108b30babcc30ffc5f2fc4c63fe764db2e3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4c9ab0120b3aad3f4f4470ca9094f8a975dbb12d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339773"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200319"
 ---
 # <a name="add-class-dialog-box"></a>Klasse hinzufügen (Dialogfeld)
 Das Dialogfeld **Klasse hinzufügen** enthält Vorlagen, die Ihnen folgende Möglichkeiten bieten:  
@@ -32,7 +32,7 @@ Das Dialogfeld **Klasse hinzufügen** enthält Vorlagen, die Ihnen folgende Mög
   
 -   Erstellen Sie die neue Klasse automatisch durch Hinzufügen der entsprechenden Dateien und des Quellcodes zum Projekt.  
   
- Sie können über das Menü **Projekt**, den **Projektmappen-Explorer** oder die [Klassenansicht](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) auf das Dialogfeld **Klasse hinzufügen** zugreifen.  
+ Sie können über das Menü **Projekt**, den **Projektmappen-Explorer** oder die [Klassenansicht](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) auf das Dialogfeld **Klasse hinzufügen** zugreifen.  
   
 > [!NOTE]
 >  Wenn Sie versuchen, eine Klasse hinzuzufügen, die für das aktuelle Projekt nicht geeignet ist, erhalten Sie eine Fehlermeldung. Klicken Sie auf **OK** , um zum Dialogfeld **Klasse hinzufügen** zurückzukehren.  

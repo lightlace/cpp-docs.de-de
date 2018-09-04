@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f8e76930eb9191d27085d92a9d3a678812715fc
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 20a20002397e285680927fe519e4eac7b68cc343
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33323614"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216561"
 ---
 # <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>Ausführen einer C++ /clr-Anwendung unter einer früheren Laufzeitversion
 Sofern nicht anders angegeben, ist eine C++-Anwendung für .NET Framework darauf ausgelegt, auf der CLR-Version (Common Language Runtime) ausgeführt zu werden, die der Compiler zum Erstellen der Anwendung verwendet. Es ist jedoch möglich, dass eine EXE-Anwendung für eine Version der Runtime erstellt wurde, um auf allen anderen Versionen ausgeführt zu werden, die die erforderlichen Funktionen bereitstellen.  
@@ -37,7 +37,7 @@ Sofern nicht anders angegeben, ist eine C++-Anwendung für .NET Framework darauf
   
  Wenn Sie mehr als eine Runtimeversion angeben, und die Anwendung auf einem Computer ausgeführt wird, auf dem mehr als eine Runtimeversion installiert ist, verwendet die Anwendung die erste Version, die in der Konfigurationsdatei angegeben und installiert ist.  
   
- Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren einer App für die Ausrichtung auf eine .NET Framework-Version](http://msdn.microsoft.com/en-us/5247b307-89ca-417b-8dd0-e8f9bd2f4717).  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren einer App für die Ausrichtung auf eine .NET Framework-Version](https://msdn.microsoft.com/5247b307-89ca-417b-8dd0-e8f9bd2f4717).  
   
  Für die Ausführung auf Version 1.0 oder Version 1.1 der CLR muss eine Anwendung, die mit dem Visual C++-Compiler erstellt wurde, mithilfe von [/clr:initialAppDomain](../build/reference/clr-common-language-runtime-compilation.md) kompiliert werden.  
   

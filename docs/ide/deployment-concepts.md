@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0960e94acdbe660474efbeeddd0f72fa4f0606f6
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 16f135011f7b67debdf51f6ddbde00a79d130602
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34257061"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199690"
 ---
 # <a name="deployment-concepts"></a>Bereitstellungskonzepte
 
@@ -61,4 +61,4 @@ Beispiele für die Bereitstellung und Vorschläge zur Problembehandlung finden S
 
 - [Deploying Desktop Applications (Bereitstellen von Desktopanwendungen)](../ide/deploying-native-desktop-applications-visual-cpp.md)
 - [Grundlegendes zu den Abhängigkeiten einer Visual C++-Anwendung](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)
-- [Windows Installer-Bereitstellung](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)
+- [Windows Installer-Bereitstellung](https://msdn.microsoft.com/121be21b-b916-43e2-8f10-8b080516d2a0)

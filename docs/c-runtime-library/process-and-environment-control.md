@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e52284db986ec642724f97aae75a9af004339b40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0fbbe1f7feca0b2c8d21bfaf5da3e758e2c6c0bb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392470"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200962"
 ---
 # <a name="process-and-environment-control"></a>Prozess- und Umgebungssteuerung
 
@@ -56,7 +56,7 @@ Verwenden Sie die Prozesssteuerungsroutinen, um Prozesse aus einem Programm hera
 |[exit](../c-runtime-library/reference/exit-exit-exit.md)|Ruft von **atexit** und **_onexit** registrierte Funktionen auf, leert alle Puffer, schließt alle offenen Dateien und beendet den Prozess.|
 |[_exit](../c-runtime-library/reference/exit-exit-exit.md)|Beendet den Prozess sofort, ohne **atexit** oder **_onexit** aufzurufen oder Puffer zu leeren.|
 |[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md), [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|Ruft den Wert der Umgebungsvariablen ab.|
-|[_getpid](../c-runtime-library/reference/getpid.md)|Ruft die Prozess-ID-Nummer ab.|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.id.aspx)|
+|[_getpid](../c-runtime-library/reference/getpid.md)|Ruft die Prozess-ID-Nummer ab.|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/library/system.diagnostics.process.id.aspx)|
 |[longjmp](../c-runtime-library/reference/longjmp.md)|Stellt die gespeicherte Stapelumgebung wieder her. Wird zur Ausführung eines nicht lokalen **goto**-Befehls verwendet.|
 |[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|Plant Routinen für die Ausführung bei Beendigung des Programms, wird zur Kompatibilität mit Microsoft C/C++ Version 7.0 und früher verwendet.|
 |[_pclose](../c-runtime-library/reference/pclose.md)|Wartet auf einen neuen Befehlsprozessor und schließt den Stream auf der zugeordneten Pipe.|
