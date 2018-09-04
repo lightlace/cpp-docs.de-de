@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dfe64e627fd3ca37ab1e1d2d820cafaf3a6a4258
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 65a3c4da1664e34e40e0961655c130f320efb17b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199964"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690702"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Verwenden überprüfbarer Assemblys mit SQL Server (C++/CLI)
-Erweiterte gespeicherte Prozeduren, die als Dynamic Link Libraries (DLLs), bieten Sie eine Möglichkeit zum Erweitern der Funktionalität von SQL Server über Funktionen, die mit Visual C++ entwickelt wurden. Erweiterte gespeicherte Prozeduren werden als Funktionen in DLLs implementiert. Zusätzlich zu Funktionen, erweiterte gespeicherte Prozeduren können auch definieren [-benutzerdefinierte Typen](../cpp/classes-and-structs-cpp.md) und [Aggregatfunktionen](https://msdn.microsoft.com/de255454-f45e-4281-81f9-bc61893ac5da) (z. B. SUM oder AVG).  
+Erweiterte gespeicherte Prozeduren, die als Dynamic Link Libraries (DLLs), bieten Sie eine Möglichkeit zum Erweitern der Funktionalität von SQL Server über Funktionen, die mit Visual C++ entwickelt wurden. Erweiterte gespeicherte Prozeduren werden als Funktionen in DLLs implementiert. Zusätzlich zu Funktionen, erweiterte gespeicherte Prozeduren können auch definieren [-benutzerdefinierte Typen](../cpp/classes-and-structs-cpp.md) und Aggregatfunktionen (z. B. SUM oder AVG).  
   
  Wenn ein Client eine erweiterte gespeicherte Prozedur ausgeführt wird, sucht SQL Server für die DLL der erweiterten gespeicherten Prozedur zugeordnet, und lädt die DLL. SQL Server die angeforderte erweiterte gespeicherte Prozedur aufruft und in einem angegebenen Sicherheitskontext ausgeführt. Die erweiterte gespeicherte Prozedur, und klicken Sie dann übergibt Ergebnis und Parameter an den Server gibt.  
   

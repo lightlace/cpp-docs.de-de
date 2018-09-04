@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0baf6eb87cd73293bc02b670e915bfd4a10cbfd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a05eddd4f0ed75db4e122b1544b0347ad922eba3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219151"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688759"
 ---
 # <a name="string-and-character-literals--c"></a>Zeichenfolgen- und Zeichenliterale (C++)
 C++ unterstützt verschiedene Zeichenfolgen- und Zeichentypen und bietet Möglichkeiten Literalwerte dieser einzelnen Typen auszudrücken. In Ihrem Quellcode stellen Sie die Inhalte Ihrer Zeichen- und Zeichenfolgenliterale mit einem Zeichensatz dar. Universelle Zeichennamen und Escapezeichen ermöglichen es Ihnen, eine beliebige Zeichenfolge darzustellen, indem Sie nur den grundlegenden Quellzeichensatz verwenden. Ein unformatiertes Zeichenfolgenliteral ermöglicht es Ihnen, die Verwendung von Escapezeichen zu vermeiden, und kann verwendet werden, um alle Typen von Zeichenfolgenliteralen auszudrücken. Sie können auch std::string-Literale erstellen, ohne zusätzliche Erstellungs- oder Konvertierungsschritte ausführen zu müssen.  
@@ -248,7 +248,7 @@ auto s4 = U"hello"; // const char32_t*
 ```  
   
 ### <a name="raw-string-literals-c11"></a>Unformatierte Zeichenfolgenliterale (C++11)  
- Ein unformatiertes Zeichenfolgenliteral ist ein mit Null endendes Array – eines beliebigen Zeichentyps –, das jedes Schriftzeichen, einschließlich der doppelte Anführungszeichen ("), umgekehrtem Schrägstrich enthält (\\), oder die Zeilenendemarke enthält. Unformatierte Zeichenfolgenliterale werden häufig in regulären Ausdrücken, die Zeichenklassen verwenden, und in HTML-Zeichenfolgen und XML-Zeichenfolgen verwendet. Beispiele finden Sie im folgenden Artikel: [Bjarne Stroustrups FAQ zu C ++ 11](http://go.microsoft.com/fwlink/p/?linkid=401172).  
+ Ein unformatiertes Zeichenfolgenliteral ist ein mit Null endendes Array – eines beliebigen Zeichentyps –, das jedes Schriftzeichen, einschließlich der doppelte Anführungszeichen ("), umgekehrtem Schrägstrich enthält (\\), oder die Zeilenendemarke enthält. Unformatierte Zeichenfolgenliterale werden häufig in regulären Ausdrücken, die Zeichenklassen verwenden, und in HTML-Zeichenfolgen und XML-Zeichenfolgen verwendet. Beispiele finden Sie im folgenden Artikel: [Bjarne Stroustrups FAQ zu C ++ 11](http://www.stroustrup.com/C++11FAQ.html).  
   
 ```cpp  
 // represents the string: An unescaped \ character  

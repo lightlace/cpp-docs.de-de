@@ -1,7 +1,7 @@
 ---
-title: EVEN- und ALIGN-Direktiven | Microsoft Docs
+title: EVEN- und ALIGN-Anweisungen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -21,18 +21,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a43425a4038ffb140eeaa0a9d111a39fc5c11ff0
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 06a1007c50e3490e5b14e4da886494557be0d37e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057954"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688300"
 ---
 # <a name="even-and-align-directives"></a>EVEN- und ALIGN-Anweisungen
-## <a name="microsoft-specific"></a>Microsoft-spezifisch  
- Obwohl der Inlineassembler von den meisten MASM-makroanweisungen nicht unterstützt, unterstützt es `EVEN` und **AUSRICHTEN**. Diese Direktiven put **NOP** (kein Vorgang) Anweisungen in der Assemblycode nach Bedarf, um Bezeichnungen zu bestimmten Grenzen ausgerichtet. Dies wird Anweisung-Abrufvorgänge für einige Prozessoren effizienter.  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden der Assemblysprache in __asm-Blöcken](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Microsoft-spezifisch**
+
+Obwohl der Inlineassembler von den meisten MASM-makroanweisungen unterstützt, unterstützt es `EVEN` und **AUSRICHTEN**. Fügen Sie diese Direktiven **NOP** (kein Vorgang) Anweisungen in der Code für die Assembly nach Bedarf, um Bezeichnungen zu bestimmten Grenzen ausgerichtet. Dies wird Anweisung-Abrufvorgänge für einige Prozessoren effizienter.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden der Assemblysprache in __asm-Blöcken](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

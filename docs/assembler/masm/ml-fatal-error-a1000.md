@@ -1,7 +1,7 @@
 ---
-title: ML-Schwerwiegender Fehler A1000 | Microsoft Docs
+title: ML-Schwerwiegender Fehler A1000 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cc6fe8013fa36063031aba9bfc3dc02de40b092
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 2ecd72e749be8ff4325e644376e312206756d1b4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054802"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691449"
 ---
 # <a name="ml-fatal-error-a1000"></a>Schwerwiegender ML-Fehler A1000
-**Öffnen der Datei: Dateiname**  
-  
- Der Assembler konnte nicht zum Öffnen einer Quelle, einschließen oder Ausgabedatei.  
-  
- Eine der folgenden möglicherweise eine Ursache:  
-  
--   Die Datei ist nicht vorhanden.  
-  
--   Die Datei wird von einem anderen Prozess verwendet wird.  
-  
--   Der Dateiname ist ungültig.  
-  
--   Eine schreibgeschützte Datei mit dem Ausgabedateinamen ist bereits vorhanden.  
-  
--   Das aktuelle Laufwerk ist voll.  
-  
--   Das aktuelle Verzeichnis ist der Stamm und voll ist.  
-  
--   Das Gerät kann nicht geschrieben werden.  
-  
--   Das Laufwerk ist nicht bereit.  
-  
-## <a name="see-also"></a>Siehe auch  
- [ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)
+
+**Datei kann nicht geöffnet werden: Dateiname**
+
+Der Assembler konnte nicht zum Öffnen einer Quelle, einschließen oder Ausgabedatei.
+
+Eine der folgenden möglicherweise eine Ursache:
+
+- Die Datei ist nicht vorhanden.
+
+- Die Datei wird von einem anderen Prozess verwendet wird.
+
+- Der Dateiname ist ungültig.
+
+- Eine schreibgeschützte Datei mit der Name der Ausgabedatei ist bereits vorhanden.
+
+- Das aktuelle Laufwerk ist voll.
+
+- Das aktuelle Verzeichnis ist der Stamm und ist voll.
+
+- Das Gerät kann nicht geschrieben werden.
+
+- Das Laufwerk ist nicht bereit.
+
+## <a name="see-also"></a>Siehe auch
+
+[ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)<br/>

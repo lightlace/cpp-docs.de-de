@@ -1,7 +1,7 @@
 ---
-title: MAKRO | Microsoft Docs
+title: MAKRO | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2b7469314bc1b65f960df1ca582acb6dbb4624e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 9d957935c9ca91d2d09a093350c8d23a848e58b2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054444"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688867"
 ---
 # <a name="macro"></a>MACRO
-Markiert einen Makro-Block aufgerufen *Namen* und richtet *Parameter* Platzhalter für Argumente zu übergeben, wenn das Makro aufgerufen wird.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-   name MACRO [[parameter [[:REQ | :=default | :VARARG]]]]...  
-statements  
-ENDM [[value]]  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Eine Makrofunktion gibt *Wert* an die aufrufende Anweisung.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+
+Markiert einen Makro-Block aufgerufen *Namen* und richtet *Parameter* Platzhalter für Argumente zu übergeben, wenn das Makro aufgerufen wird.
+
+## <a name="syntax"></a>Syntax
+
+> *Namen* MAKRO [[*Parameter* [[: REQ |: =*Standard* |: VARARG]]]]...<br/>
+> *Anweisungen*<br/>
+> ENDM [[*Wert*]]
+
+## <a name="remarks"></a>Hinweise
+
+Funktionsergebnis ist ein Makro *Wert* an die aufrufende Anweisung.
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

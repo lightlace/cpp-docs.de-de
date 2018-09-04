@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac4a2c7bafc25aaaf8591f38cad47df199e74c30
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0801fab2ef5cec0da42cb40e28cd5124141c1007
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196589"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686084"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Symbolleisten-Steuerelements bereit.  
@@ -622,7 +622,7 @@ virtual BOOL Create(
   
 - WS_DISABLED selten  
   
- Finden Sie unter [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) im Windows SDK für eine Beschreibung des Window-Stile.  
+ Finden Sie unter [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) im Windows SDK für eine Beschreibung des Window-Stile.  
   
  Wenden Sie optional eine Kombination von [Steuerelementtypen für die allgemeine](/windows/desktop/Controls/common-control-styles), wie im Windows SDK beschrieben.  
   
@@ -646,7 +646,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parameter  
  *dwExStyle*  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) im Windows SDK.  
   
  *dwStyle*  
  Gibt das Symbolleisten-Steuerelement-Stil. Symbolleisten müssen immer das WS_CHILD-Format haben. Darüber hinaus können Sie eine beliebige Kombination von Toolbar-Stile und Window-Stile angeben, unter dem **"Hinweise"** Abschnitt [erstellen](#create).  

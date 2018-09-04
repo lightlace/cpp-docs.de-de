@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50bb4061a13a9057a695b25ca32421c4dd7ed88b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2854199796f5d75cc4b24016def3c63327a5d511
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207823"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692041"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx-Klasse
 Implementiert die Funktionalität eines Windows-SDI-Rahmenfensters (Single Document Interface), wobei es sich um ein überlappendes oder ein Popupfenster handeln kann. Ebenfalls bereitgestellt werden Member zum Verwalten des Fensters. Es erweitert die [CFrameWnd](../../mfc/reference/cframewnd-class.md) Klasse.  
@@ -1442,7 +1442,7 @@ afx_msg LRESULT OnSetText(
  Zeiger auf den Text für das Fenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Rückgabewert von einem Aufruf von [DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572).  
+ Rückgabewert von einem Aufruf von [DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca).  
   
 ### <a name="remarks"></a>Hinweise  
   

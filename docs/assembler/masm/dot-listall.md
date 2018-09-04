@@ -1,7 +1,7 @@
 ---
-title: . LISTALL | Microsoft Docs
+title: . LISTALL | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 525f7af2b4b0fe7dce2e4adacfa8b01f862c46bc
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e5fa0f90abeaae6b0b24ec780de7108bec58dd66
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057289"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691174"
 ---
 # <a name="listall"></a>.LISTALL
-Startet das Auflisten aller Anweisungen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-.LISTALL  
-  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Entspricht der Kombination [. Liste](../../assembler/masm/dot-list.md), [. LISTIF](../../assembler/masm/dot-listif.md), und [. LISTMACROALL](../../assembler/masm/dot-listmacroall.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+
+Startet das Auflisten aller Anweisungen.
+
+## <a name="syntax"></a>Syntax
+
+> .LISTALL
+
+## <a name="remarks"></a>Hinweise
+
+Entspricht der Kombination [. Liste](../../assembler/masm/dot-list.md), [. LISTIF](../../assembler/masm/dot-listif.md), und [. LISTMACROALL](../../assembler/masm/dot-listmacroall.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

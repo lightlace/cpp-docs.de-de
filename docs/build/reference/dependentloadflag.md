@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94f7667d7da8d8e9cd7ef38cb01d0f03b0da82e3
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 0b6d5099e90e4a4bf83874fe8e761280bc277830
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571704"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688116"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/ DEPENDENTLOADFLAG (festgelegte Standardwert abhängiger Ladevorgang Flags)
 
@@ -39,17 +39,17 @@ Legt die Standard-Load-Flags verwendet wird, wenn `LoadLibrary` wird verwendet, 
 
 |||
 |-|-|
-*loadflags*|Ein optionaler "C"-Style-16-Bit-Ganzzahl-Wert in Dezimal, mit einer führenden Null Oktal- oder Hexadezimalformat, mit einem vorangestellten `0x`, die angibt, dass die abhängiger Ladevorgang-Flags, die auf alle anwenden [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187) aufrufen. Der Standardwert ist 0.
+*loadflags*|Ein optionaler "C"-Style-16-Bit-Ganzzahl-Wert in Dezimal, mit einer führenden Null Oktal- oder Hexadezimalformat, mit einem vorangestellten `0x`, die angibt, dass die abhängiger Ladevorgang-Flags, die auf alle anwenden [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) aufrufen. Der Standardwert ist 0.
 
 ## <a name="remarks"></a>Hinweise
 
 Diese Option ist neu in Visual Studio 2017, und gilt nur für apps, die auf Windows 10 RS1 oder höher ausgeführt wird. Diese Option wird von anderen Betriebssystemen ignoriert, die die app ausführen.
 
-Auf unterstützten Betriebssystemen, diese Option hat die Auswirkungen der Änderung Aufrufe `LoadLibrary("dependent.dll")` , der die Entsprechung `LoadLibraryEx("dependent.dll", 0, loadflags)`. Aufrufe von [LoadLibraryEx](https://go.microsoft.com/fwlink/p/?LinkID=236091) sind davon nicht betroffen. Diese Option gilt nicht rekursiv auf DLLs, die von Ihrer app geladen werden.
+Auf unterstützten Betriebssystemen, diese Option hat die Auswirkungen der Änderung Aufrufe `LoadLibrary("dependent.dll")` , der die Entsprechung `LoadLibraryEx("dependent.dll", 0, loadflags)`. Aufrufe von [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) sind davon nicht betroffen. Diese Option gilt nicht rekursiv auf DLLs, die von Ihrer app geladen werden.
 
 Dieses Flag kann verwendet werden, um DLL Pflanzen Angriffe zu verhindern. Wenn eine app verwendet z. B. `LoadLibrary` um eine abhängige DLL zu laden, ein Angreifer eine DLL mit dem gleichen Namen in den Suchpfad, der von verwendeten generieren kann `LoadLibrary`, z. B. das aktuelle Verzeichnis, das möglicherweise werden vor dem überprüft Systemverzeichnisse, wenn der sichere Modus der DLL-Suche ist deaktiviert. Abgesicherter Modus von DLL-Suche wird der aktuelle Verzeichnis des Benutzers weiter unten in den Suchergebnissen, und ist auf Windows XP SP2 und höher standardmäßig aktiviert. Weitere Informationen finden Sie unter [Dynamic Link Library Search Order](/windows/desktop/Dlls/dynamic-link-library-search-order).
 
-Wenn Sie die Linkoption angeben `/DEPENDENTLOADFLAG:0xA00` (der Wert der kombinierte Flags `LOAD_LIBRARY_SEARCH_APPLICATION_DIR | LOAD_LIBRARY_SEARCH_SYSTEM32`), und selbst wenn Abgesicherter Modus von DLL-Suche auf dem Computer des Benutzers deaktiviert ist, die DLL-Suchpfad auf geschützte Verzeichnisse beschränkt ist, die für einen Angreifer schwieriger sind Ändern Sie. Weitere Informationen zu den verfügbaren Flags und deren Werte von numerischen und symbolischen, finden Sie unter den *DwFlags* parameterbeschreibung in [LoadLibraryEx](https://go.microsoft.com/fwlink/p/?LinkID=236091).
+Wenn Sie die Linkoption angeben `/DEPENDENTLOADFLAG:0xA00` (der Wert der kombinierte Flags `LOAD_LIBRARY_SEARCH_APPLICATION_DIR | LOAD_LIBRARY_SEARCH_SYSTEM32`), und selbst wenn Abgesicherter Modus von DLL-Suche auf dem Computer des Benutzers deaktiviert ist, die DLL-Suchpfad auf geschützte Verzeichnisse beschränkt ist, die für einen Angreifer schwieriger sind Ändern Sie. Weitere Informationen zu den verfügbaren Flags und deren Werte von numerischen und symbolischen, finden Sie unter den *DwFlags* parameterbeschreibung in [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa).
 
 ### <a name="to-set-the-dependentloadflag-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie die DEPENDENTLOADFLAG-Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
@@ -69,6 +69,5 @@ Wenn Sie die Linkoption angeben `/DEPENDENTLOADFLAG:0xA00` (der Wert der kombini
 - [Linkeroptionen](linker-options.md)
 - [Implizit mit einer DLL verknüpfen](../linking-an-executable-to-a-dll.md#linking-implicitly)
 - [Bestimmen Sie welche Verknüpfungsmethode verwendet werden](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
-- [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187)
-- [LoadLibraryEx](https://go.microsoft.com/fwlink/p/?LinkID=236091)
+- [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)
 - [Dynamic Link Library Search Order](/windows/desktop/Dlls/dynamic-link-library-search-order)

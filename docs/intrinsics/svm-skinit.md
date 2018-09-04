@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0912b7a1ff41bf7a21da198268dbd4b8dc920a9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: d8c59ad4af53a38ee28450e51adf9cdf81ec7bad
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538878"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687284"
 ---
 # <a name="svmskinit"></a>__svm_skinit
 **Microsoft-spezifisch**  
@@ -48,7 +48,7 @@ void __svm_skinit(
   
  Die `SLB` Parameter gibt an, die physische Adresse eines Blocks 64 KB Arbeitsspeicher wird aufgerufen, die *sichere Ladeprogramm Block* (SLB). Der SLB enthält, ein Programm, das sichere Ladeprogramm, das die betriebsumgebung für den Computer her und lädt anschließend den Security-Kernel aufgerufen wird.  
   
- Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen zu suchen, für das Dokument, "AMD64 Architecture Programmers manuelle Volume 2: System-Programmierung" Dokumentnummer 24593, Version 3.11, auf die [AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) Standort.  
+ Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen zu suchen, für das Dokument, "AMD64 Architecture Programmers manuelle Volume 2: System-Programmierung" Dokumentnummer 24593, Version 3.11, auf die [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) Standort.  
   
 ## <a name="requirements"></a>Anforderungen  
   

@@ -33,19 +33,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb308e527cc955d91af0b12547d52aa5e6316af5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 299801cc4276118fc73a4be625a3df8cc84d58b2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407274"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692933"
 ---
 # <a name="setabortbehavior"></a>_set_abort_behavior
 
 Gibt die Aktion an, die ausgeführt werden soll, wenn ein Programm nicht normal beendet wird.
 
 > [!NOTE]
-> Verwenden Sie nicht die [abort](abort.md) Funktion, um eine Microsoft Store-app mit Ausnahme von Herunterfahren in Test- oder Debugszenarien. Programmgesteuerte oder UI-Methoden zum Schließen einer Store-app sind nicht zulässig, gemäß der [Microsoft Store-Richtlinien](http://go.microsoft.com/fwlink/?LinkId=865936). Weitere Informationen finden Sie unter [uwp-app-Lebenszyklus](http://go.microsoft.com/fwlink/p/?LinkId=865934).
+> Verwenden Sie nicht die [Abbrechen](abort.md) Funktion, um eine Microsoft Store-app, mit Ausnahme von Herunterfahren in Test- oder Debugszenarien. Programmgesteuerte oder UI-Methoden zum Schließen einer Store-app sind nicht zulässig, gemäß der [Microsoft Store Richtlinien](/legal/windows/agreements/store-policies). Weitere Informationen finden Sie unter [UWP-app-Lebenszyklus](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,10 +59,10 @@ unsigned int _set_abort_behavior(
 ### <a name="parameters"></a>Parameter
 
 *flags*<br/>
-Der neue Wert der [abort](abort.md) Flags.
+Der neue Wert der die [Abbrechen](abort.md) Flags.
 
 *Maske*<br/>
-Maske für die [abort](abort.md) kennzeichnet festzulegenden Bits.
+Maske für die [Abbrechen](abort.md) flags festzulegenden Bits.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -70,11 +70,11 @@ Der alte Wert der Flags.
 
 ## <a name="remarks"></a>Hinweise
 
-Es gibt zwei [abort](abort.md) Flags: **_WRITE_ABORT_MSG** und **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** bestimmt, ob eine informative textmeldung gedruckt wird, wenn ein Programm nicht normal beendet wird. Die Meldung besagt, dass die Anwendung aufgerufen hat die [abort](abort.md) Funktion. Beim Standardverhalten wird die Meldung ausgeben. **_CALL_REPORTFAULT**, sofern festgelegt, gibt an, dass ein Watson-Absturzabbild generiert und, wenn gemeldet [abort](abort.md) aufgerufen wird. Standardmäßig ist die Absturzabbildberichterstellung in den Nichtdebugversionen aktiviert.
+Es gibt zwei [Abbrechen](abort.md) Flags: **_WRITE_ABORT_MSG** und **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** bestimmt, ob eine informative textmeldung gedruckt wird, wenn ein Programm nicht normal beendet wird. Die Meldung besagt, dass die Anwendung aufgerufen hat die [Abbrechen](abort.md) Funktion. Beim Standardverhalten wird die Meldung ausgeben. **_CALL_REPORTFAULT**, sofern festgelegt, gibt an, dass ein Dr. Watson-Absturzabbild generiert und, wenn gemeldet [Abbrechen](abort.md) aufgerufen wird. Standardmäßig ist die Absturzabbildberichterstellung in den Nichtdebugversionen aktiviert.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_set_abort_behavior**|\<stdlib.h>|
 

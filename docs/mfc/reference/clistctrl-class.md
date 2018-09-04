@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d798f78addcc457303b42d80f79f77aef67305a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 094cf61c2535ef40991d2ab6ab9a1bc4a9dff014
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199779"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684956"
 ---
 # <a name="clistctrl-class"></a>CListCtrl-Klasse
 Kapselt die Funktionalität eines Listenansichtsteuerelements, das eine Auflistung von Elementen anzeigt, von denen jedes aus einem Symbol (aus einer Bildliste) und einer Bezeichnung besteht.  
@@ -653,7 +653,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parameter  
  *dwExStyle*  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) im Windows SDK.  
   
  *dwStyle*  
  Gibt an, die Listensteuerelement-Stil. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen, an das Steuerelement. Eine vollständige Liste dieser Stile, finden Sie unter [Liste View Window-Stile](/windows/desktop/Controls/list-view-window-styles) im Windows SDK.  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b63afd3c63fbcb05c7172a30a5a23b0418269eca
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5b227f9d2fdd43b576f89b74f43e4cdce8476bf9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201458"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692382"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar-Klasse
 Eine Symbolleiste, die angezeigt wird, wenn der Benutzer eine Symbolleisten-Schaltfläche der obersten Ebene drückt und gedrückt hält.  
@@ -59,7 +59,7 @@ class CMFCDropDownToolBar : public CMFCToolBar
 |[CMFCDropDownToolBar::OnLButtonUp](#onlbuttonup)||  
 |[CMFCDropDownToolBar::OnMouseMove](#onmousemove)||  
 |[CMFCDropDownToolBar::OnSendCommand](#onsendcommand)|(Überschreibt `CMFCToolBar::OnSendCommand`.)|  
-|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(Überschreibt [CMFCToolBar::OnUpdateCmdUI](https://msdn.microsoft.com/571a38ab-2a56-4968-9796-273516126f80).)|  
+|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(Überschreibt [CMFCToolBar::OnUpdateCmdUI](cmfctoolbar-class.md).|  
   
 ### <a name="remarks"></a>Hinweise  
  Ein `CMFCDropDownToolBar` -Objekt kombiniert die visuelle Darstellung des eine Symbolleiste mit dem Verhalten eines Popup-Menüs. Wenn ein Benutzer drückt und gedrückt hält eine Dropdown-Symbolleisten-Schaltfläche (finden Sie unter [CMFCDropDownToolbarButton-Klasse](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)), wird eine Dropdown-Symbolleiste angezeigt, und der Benutzer kann aus der Dropdown-Symbolleiste eine Schaltfläche auswählen, indem Sie einen Bildlauf dorthin durchführen und Freigeben der Maus Schaltfläche ". Nachdem der Benutzer eine Schaltfläche in der Dropdown-Symbolleiste ausgewählt hat, wird diese Schaltfläche als die aktuelle Schaltfläche auf der Symbolleiste der obersten Ebene angezeigt.  

@@ -1,5 +1,5 @@
 ---
-title: C-Laufzeit-R6002 bis R6035 | Microsoft Docs
+title: C-Laufzeitfehler von R6002 bis einschließlich R6035 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/17/2017
 ms.technology:
@@ -14,20 +14,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d856fef8e8915683b77ada2bb8f669e303f1b5a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e7a8c7c544ef89f1b54459a7f02b90424e6c7c5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300019"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693560"
 ---
 # <a name="c-runtime-errors-r6002-through-r6035"></a>C-Laufzeitfehler von R6002 bis einschließlich R6035
 
-In diesem Abschnitt wird auf die Fehler verwiesen, die von der C-Laufzeitbibliothek (C Runtime Library; CRT) generiert werden können, wenn Ihre App geladen oder ausgeführt wird. Verweisen auf diese Fehler, obwohl die Nachricht an den Microsoft Visual C++ Runtime verweist, entweder einen Fehler im Code Ihrer app oder eine Bedingung, die die Common Language Runtime-Bibliothek behandeln kann, z. B. nicht genügend Arbeitsspeicher. Endbenutzer der app kann diese Fehler anzuzeigen, wenn Sie keinen Ihrer app Code, um zu verhindern, dass die Bedingungen, die sie verursacht werden oder Code schreiben, um diese Fehler zu erfassen und eine benutzerfreundliche Meldung für Ihre Benutzer vorhanden.
+In diesem Abschnitt wird auf die Fehler verwiesen, die von der C-Laufzeitbibliothek (C Runtime Library; CRT) generiert werden können, wenn Ihre App geladen oder ausgeführt wird. Auch wenn die Nachricht an die Microsoft Visual C++-Laufzeit bezieht, geben diese Fehler entweder einen Fehler im Code Ihrer app oder eine Bedingung, die die Laufzeitbibliothek, z.B. zu wenig Arbeitsspeicher nicht verarbeiten kann. Endbenutzer Ihrer App möglicherweise dieser Fehler angezeigt, wenn Sie nicht Ihre app, um zu verhindern, dass die Bedingungen, die dazu führen, sie dass code oder Code schreiben, um diese Fehler zu erfassen und präsentieren eine benutzerfreundliche Meldung für Ihre Benutzer.
 
-Sie können zusätzliche Hilfe für Fehler und Warnungen finden Sie in Microsofts öffentlichen Foren. Sie können für den Fehler oder die Warnungsnummer suchen, auf die [Entwicklercommunity](https://go.microsoft.com/fwlink/p/?linkid=820594) Standort. Die [Visual C++-Sprache](http://go.microsoft.com/fwlink/p/?linkid=158195) Forum für Fragen und Diskussionen über die C++-Sprachsyntax und der Compiler MSVC ist. Die [Visual C++ Allgemein](http://go.microsoft.com/fwlink/p/?linkid=158194) -Forum eignet sich für Fragen zu Visual C++, die in anderen Foren nicht diskutiert werden. Kann auch für Fehler und Warnungen zu suchen und Ihre Fragen [Stack Overflow](http://stackoverflow.com/) Lösungen gefunden.
+Finden Sie unter Umständen zusätzliche Unterstützung für Fehler und Warnungen in öffentlichen Foren von Microsoft. Sie können für den Fehler oder die Nummer der codeanalysewarnung suchen, auf die [Entwicklercommunity](https://developercommunity.visualstudio.com) Standort. Die [Visual C++ – Allgemeines](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vcgeneral) Forum finden Sie Fragen zu Visual C++, die in anderen Foren nicht behandelt werden. Sie können auch suchen Sie nach Fehlern und Warnungen, und Fragen [Stack Overflow](http://stackoverflow.com/) um Lösungen zu finden.
 
-Links für weitere Hilfe und Community-Ressourcen, finden Sie unter [Visual C++-Hilfe und Community](../../visual-cpp-help-and-community.md).
+Links zu zusätzlichen Hilfe und Community-Ressourcen, finden Sie unter [Visual C++-Hilfe und Community](../../visual-cpp-help-and-community.md).
 
 ## <a name="c-runtime-errors"></a>C-Laufzeitfehler
 

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 48a337ab82045543035c2612c707d8c47186ed2d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c7fe0665db01d1a2cd7a1da10b495ba86bc17469
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195451"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690861"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Unterschiede beim Programmieren mit Windows Forms und MFC
 Die Themen in [verwenden ein Windows Form-Benutzersteuerelements in MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md) beschrieben, die MFC-Unterstützung für Windows Forms. Wenn Sie mit .NET Framework oder MFC nicht vertraut sind, bietet Ihnen dieses Thema Hintergrundinformationen zu den Unterschieden zwischen diesen beiden Arten der Programmierung.  
@@ -65,5 +65,4 @@ Die Themen in [verwenden ein Windows Form-Benutzersteuerelements in MFC](../dotn
      MFC verfügt über einen Mechanismus zur Befehlsaktualisierung. Aus diesem Grund ist die aktive Ansicht oder das aktive Dokument für den Zustand der Benutzeroberflächenelemente verantwortlich (z. B. das Aktivieren bzw. Deaktivieren eines Menüelements oder einer Symbolleisten-Schaltfläche sowie der Aktivierungsstatus). Windows Forms bieten keinen gleichwertigen Mechanismus für die Befehlsaktualisierung.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden ein Windows Form-Benutzersteuerelements in MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)   
- [Exemplarische Vorgehensweisen für Windows Forms](https://msdn.microsoft.com/fd44d13d-4733-416f-aefc-32592e59e5d9)
+ [Verwenden eines Windows Form-Benutzersteuerelements in MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)   

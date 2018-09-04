@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b41646dbde21f68c2cc23dfbcf977d9f5ad06c1e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ce106727fac6b3b9903a53fae64bee94441aa038
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467838"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685075"
 ---
 # <a name="safebuffers"></a>safebuffers
 **Microsoft-spezifisch**  
@@ -36,7 +36,7 @@ __declspec( safebuffers )
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die **/GS** -Compileroption bewirkt, dass der Compiler Pufferüberläufe zu testen, indem sicherheitsüberprüfungen im Stapel eingefügt. Die Typen der Datenstrukturen, die für sicherheitsüberprüfungen freigegeben sind, werden in beschrieben [/GS (Puffer-Sicherheitsüberprüfung)](../build/reference/gs-buffer-security-check.md). Weitere Informationen zur pufferüberlauferkennung finden Sie unter [Compiler-Sicherheitsprüfungen im Detail](http://go.microsoft.com/fwlink/p/?linkid=7260) auf der MSDN-Website.  
+ Die **/GS** -Compileroption bewirkt, dass der Compiler Pufferüberläufe zu testen, indem sicherheitsüberprüfungen im Stapel eingefügt. Die Typen der Datenstrukturen, die für sicherheitsüberprüfungen freigegeben sind, werden in beschrieben [/GS (Puffer-Sicherheitsüberprüfung)](../build/reference/gs-buffer-security-check.md). Weitere Informationen zur pufferüberlauferkennung finden Sie unter [Sicherheitsfunktionen in MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/).  
   
  Ein fachmännischer manueller Codereview oder eine externe Analyse kann bestimmen, dass eine Funktion vor einem Pufferüberlauf sicher ist. In diesem Fall können Sie sicherheitsüberprüfungen für eine Funktion unterdrücken, indem Sie die Anwendung die **__declspec(safebuffers)** Schlüsselwort, um die Funktionsdeklaration.  
   

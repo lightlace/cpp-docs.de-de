@@ -1,7 +1,7 @@
 ---
-title: _emit Pseudoinstruction | Microsoft Docs
+title: _emit-pseudoanweisung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -17,33 +17,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ad75f4abf2e86cb08ba646e50e9390650993d05
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c8c11165e8b6632488d29e5fe79aa945332c25e9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050697"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689361"
 ---
 # <a name="emit-pseudoinstruction"></a>_emit Pseudoinstruction
-## <a name="microsoft-specific"></a>Microsoft-spezifisch  
- Die **_emit** Pseudoinstruction ein Byte an der aktuellen Position in der aktuellen Textsegment definiert. Die **_emit** Pseudoinstruction ähnelt der [DB](../../assembler/masm/db.md) -Direktive der MASM.  
-  
- Das folgende Fragment platziert die Bytes 0x4A 0x43 und 0x4B in den Code ein:  
-  
-```  
-#define randasm __asm _emit 0x4A __asm _emit 0x43 __asm _emit 0x4B  
- .  
- .  
- .  
-__asm {  
-     randasm  
-     }  
-```  
-  
+
+**Microsoft-spezifisch**
+
+Die **_emit** Pseudoinstruction definiert ein Byte an der aktuellen Position in der aktuellen Textsegment. Die **_emit** Pseudoinstruction ähnelt der [DB](../../assembler/masm/db.md) -Direktive der MASM.
+
+Das folgende Fragment platziert die Bytes 0x4A, 0 x 43 und 0x4B in den Code ein:
+
+```cpp
+#define randasm __asm _emit 0x4A __asm _emit 0x43 __asm _emit 0x4B
+.
+.
+.
+__asm {
+     randasm
+     }
+```
+
 > [!CAUTION]
->  Wenn `_emit` werden Anweisungen erzeugt, die Register, ändern und kompilieren Sie die Anwendung mit aktivierten Optimierungen, das der Compiler nicht ermitteln, welche Register betroffen sind. Z. B. wenn `_emit` generiert eine Anweisung, die ändert die **Rax** registrieren, der Compiler ist nicht bekannt, die **Rax** hat sich geändert. Der Compiler kann dann, eine falsche Annahme über den Wert in diesem registrieren, nachdem die Inlineassemblercode ausgeführt wird. Daher kann die Anwendung unvorhersehbares Verhalten aufweisen, bei der Ausführung.  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden der Assemblysprache in __asm-Blöcken](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+> Wenn `_emit` Anweisungen generiert, die Register, ändern Sie kompilieren die Anwendung mit aktivierten Optimierungen und der Compiler nicht ermitteln, welche Register betroffen sind. Z. B. wenn `_emit` generiert eine Anweisung, die ändert die **Rax** registrieren, der Compiler ist nicht bekannt, die **Rax** hat sich geändert. Der Compiler kann dann, die falsche Annahme über den Wert, nach der Ausführung der Inlineassemblercode zu registrieren. Daher kann Ihre Anwendung unvorhersehbares Verhalten aufweisen, wenn er ausgeführt wird.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden der Assemblysprache in __asm-Blöcken](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

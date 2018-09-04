@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0ccc526b196982402ca3b795276df8c790ad35a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45c03ed2c057781c082988ac15e838249db0f28a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404250"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689714"
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
 
@@ -79,30 +79,30 @@ Wenn das angegebene Laufwerk nicht verfügbar ist oder die Art des Laufwerks (z.
 *buffer*<br/>
 Speicherort für den Pfad, oder **NULL**.
 
-Wenn **NULL** angegeben ist, wird diese Funktion weist einen Puffer von mindestens *Maxlen* mit Größe **"malloc"**, und der Rückgabewert der **_getdcwd**ist ein Zeiger auf den zugeordneten Puffer. Der Puffer kann freigegeben werden, durch den Aufruf **freien** und der Zeiger übergeben wird.
+Wenn **NULL** angegeben ist, wird diese Funktion weist einen Puffer mit mindestens *Maxlen* mit Größe **Malloc**, und der Rückgabewert von **_getdcwd**ist ein Zeiger auf den zugeordneten Puffer. Der Puffer kann freigegeben werden, durch den Aufruf **kostenlose** und der Zeiger übergeben wird.
 
 *maxlen*<br/>
-Eine positive ganze Zahl ungleich NULL, der angibt, die maximale Länge des Pfads in Zeichen: **Char** für **_getdcwd** und **Wchar_t** für **_wgetdcwd**.
+Eine positive ganze Zahl ungleich NULL, der angibt, die maximale Länge des Pfads in Zeichen: **Char** für **_getdcwd** und **"wchar_t"** für **_wgetdcwd**.
 
-Wenn *Maxlen* ist nicht größer als 0 (null), wird der Handler für ungültige Parameter, dies wird im beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md), aufgerufen wird.
+Wenn *Maxlen* ist nicht größer als 0 (null), den Handler für ungültige Parameter, dies wird im beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md), aufgerufen wird.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Zeiger auf eine Zeichenfolge, die den vollständigen Pfad des aktuellen Arbeitsverzeichnisses auf dem angegebenen Laufwerk darstellt oder **NULL**, wodurch ein Fehler.
+Zeiger auf eine Zeichenfolge, die den vollständigen Pfad des aktuellen Arbeitsverzeichnisses auf dem angegebenen Laufwerk, darstellt oder **NULL**, wodurch ein Fehler.
 
-Wenn *Puffer* angegeben ist, als **NULL** und es ist nicht genügend Arbeitsspeicher zum Zuordnen *Maxlen* Zeichen, die ein Fehler auftritt und **Errno** ist Legen Sie auf **ENOMEM**. Überschreitet die Länge des Pfads, der das abschließende Nullzeichen enthält, *Maxlen*, ein Fehler auftritt und **Errno** festgelegt ist, um **ERANGE**. Weitere Informationen zu diesen Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Wenn *Puffer* angegeben ist, als **NULL** und es ist nicht genügend Arbeitsspeicher zum Zuordnen *Maxlen* -Zeichen, die ein Fehler auftritt und **Errno** ist Legen Sie auf **ENOMEM**. Überschreitet die Länge des Pfads, einschließlich des abschließenden Zeichens Null *Maxlen*, ein Fehler auftritt und **Errno** nastaven NA hodnotu **ERANGE**. Weitere Informationen zu diesen Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
 Die **_getdcwd** Funktion ruft den vollständigen Pfad des aktuellen Arbeitsverzeichnisses auf dem angegebenen Laufwerk ab und speichert ihn unter *Puffer*. Wenn das aktuelle Arbeitsverzeichnis auf das Stammverzeichnis festgelegt ist, endet die Zeichenfolge mit einem umgekehrten Schrägstrich (\\). Wenn das aktuelle Arbeitsverzeichnis nicht auf das Stammverzeichnis festgelegt ist, endet die Zeichenfolge mit dem Namen des Verzeichnisses und nicht mit einem umgekehrten Schrägstrich.
 
-**_wgetdcwd** ist eine Breitzeichen-Version von **_getdcwd**, und die zugehörige *Puffer* Parameter und der Rückgabewert sind Breitzeichen Zeichenfolgen. Andernfalls **_wgetdcwd** und **_getdcwd** Verhalten sich identisch.
+**_wgetdcwd** ist eine Breitzeichen-Version von **_getdcwd**, und die zugehörige *Puffer* Parameter und Rückgabewert sind Breitzeichen Zeichenfolgen. Andernfalls **_wgetdcwd** und **_getdcwd** Verhalten sich identisch.
 
-Diese Funktion ist threadsicher, obwohl sie von der Funktion **GetFullPathName**abhängig ist, die selbst nicht threadsicher ist. Es kann jedoch zu einer Verletzung der Threadsicherheit kommen, wenn die Multithreadanwendung sowohl diese Funktion als auch **GetFullPathName**aufruft. Weitere Informationen finden Sie in der [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) . Suchen Sie dort nach **GetFullPathName**.
+Diese Funktion ist threadsicher, obwohl sie von der Funktion **GetFullPathName**abhängig ist, die selbst nicht threadsicher ist. Aber Sie können Verletzung der Threadsicherheit kommen, wenn die Multithreadanwendung sowohl diese Funktion aufruft und [GetFullPathNameA](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).
 
-Die Version von dieser Funktion mit dem **_nolock** Suffix verhält sich ebenso wie dieser Funktion identisch, allerdings nicht threadsicher ist und nicht vor Störungen durch andere Threads geschützt. Weitere Informationen finden Sie unter [_getdcwd_nolock, _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md).
+Die Version dieser Funktion, die die **_nolock** -Suffix für diese Funktion mit dem Unterschied, dass es nicht threadsicher und nicht vor Störungen durch andere Threads geschützt. Weitere Informationen finden Sie unter [_getdcwd_nolock, _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md).
 
-Wenn **_DEBUG** und **_CRTDBG_MAP_ALLOC** definiert sind, werden Aufrufe von **_getdcwd** und **_wgetdcwd** werden durch Aufrufe von ersetzt **_getdcwd_dbg** und **_wgetdcwd_dbg** , sodass Sie speicherbelegungen Debuggen können. Weitere Informationen finden Sie unter[_getdcwd_dbg, _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md).
+Wenn **_DEBUG** und **_CRTDBG_MAP_ALLOC** definiert sind, werden Aufrufe von **_getdcwd** und **_wgetdcwd** werden durch Aufrufe von ersetzt **_getdcwd_dbg** und **_wgetdcwd_dbg** , damit Sie speicherbelegungen Debuggen können. Weitere Informationen finden Sie unter[_getdcwd_dbg, _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -112,7 +112,7 @@ Wenn **_DEBUG** und **_CRTDBG_MAP_ALLOC** definiert sind, werden Aufrufe von **_
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_getdcwd**|\<direct.h>|
 |**_wgetdcwd**|\<direct.h> oder \<wchar.h>|

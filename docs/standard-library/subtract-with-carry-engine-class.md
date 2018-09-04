@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6bd4a7827ec5223297f3ec3195724b62d4dc72c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bfb0c3c0544a9c58801f98567825e7e97e48b13c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955305"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687986"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine-Klasse
 
@@ -84,7 +84,7 @@ Obwohl Sie direkt aus dieser Engine einen Generator konstruieren können, könne
 `ranlux48_base`: Wird als Grundlage für `ranlux48` verwendet.
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`
 
-Ausführliche Informationen über den Algorithmus „subtract with carry engine“ erhalten Sie im Wikipedia-Artikel [Lagged Fibonacci generator (Kongruenzgenerator, in englischer Sprache)](http://go.microsoft.com/fwlink/p/?linkid=402445).
+Ausführliche Informationen über den Algorithmus „subtract with carry engine“ erhalten Sie im Wikipedia-Artikel [Lagged Fibonacci generator (Kongruenzgenerator, in englischer Sprache)](https://en.wikipedia.org/wiki/Lagged_Fibonacci_generator).
 
 ## <a name="requirements"></a>Anforderungen
 

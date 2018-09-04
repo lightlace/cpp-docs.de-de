@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7dbd74a8f216efb64d220747155a619d2084b3b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b022c4c42a7373f9bfc23c1fff5be2c1317709de
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211761"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692447"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: Zuordnen von Fensterhandles zu Objekten
 In diesem Hinweis wird beschrieben, die MFC-Bibliothek Objekt Routinen, die Unterstützung für die Zuordnung von Windows-Handles für C++-Objekte.  
@@ -74,7 +74,7 @@ CWnd myWnd;
 myWnd.Attach(hWnd);
 ```  
   
- Dadurch wird einen Eintrag in das Zuordnen der permanenten Zuordnung *MyWnd* und *hWnd*. Aufrufen von `CWnd::FromHandle(hWnd)` gibt nun einen Zeiger auf *MyWnd*. Wenn *MyWnd* wird gelöscht, werden automatisch der Destruktor zerstört *hWnd* durch Aufrufen der Windows [DestroyWindow](https://msdn.microsoft.com/library/windows/desktop/ms632682) Funktion. Wenn dies nicht erwünscht ist, *hWnd* muss getrennt von *MyWnd* vor *MyWnd* zerstört wird (normalerweise beim Verlassen des Bereichs mit der *MyWnd*definiert wurde). Die `Detach` Methode hierfür.  
+ Dadurch wird einen Eintrag in das Zuordnen der permanenten Zuordnung *MyWnd* und *hWnd*. Aufrufen von `CWnd::FromHandle(hWnd)` gibt nun einen Zeiger auf *MyWnd*. Wenn *MyWnd* wird gelöscht, werden automatisch der Destruktor zerstört *hWnd* durch Aufrufen der Windows [DestroyWindow](/windows/desktop/api/winuser/nf-winuser-destroywindow) Funktion. Wenn dies nicht erwünscht ist, *hWnd* muss getrennt von *MyWnd* vor *MyWnd* zerstört wird (normalerweise beim Verlassen des Bereichs mit der *MyWnd*definiert wurde). Die `Detach` Methode hierfür.  
   
 ```  
 myWnd.Detach();

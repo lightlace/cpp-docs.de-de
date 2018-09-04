@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c610e8dcd8cf5b06dfb22540c304e84446c75438
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 96ecae8445368357da3bc7b271156f961c1c1dca
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198687"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687145"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Erstellen eines MFC-ActiveX-Steuerelements
 ActiveX-Steuerelementprogramme sind modulare Programme, die einer übergeordneten Anwendung eine bestimmte Funktionalität verleihen. Steuerelemente sind beispielsweise Schaltflächen, die in einem Dialogfeld verwendet werden, oder Symbolleisten, die auf einer Webseite verwendet werden.  
@@ -49,5 +49,5 @@ ActiveX-Steuerelementprogramme sind modulare Programme, die einer übergeordnete
 ## <a name="see-also"></a>Siehe auch  
  [Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Eigenschaftenseiten](../../ide/property-pages-visual-cpp.md)   
- [Bereitstellen von Anwendungen](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+
 

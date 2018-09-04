@@ -1,7 +1,7 @@
 ---
-title: . SAVEXMM128 | Microsoft Docs
+title: . SAVEXMM128 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d50d4bbc7f9c89e9ef36a1dd8cf3dfeb56de79b5
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 0d44855d3449000c588f7e840753bd734af4b1af
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057938"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689906"
 ---
 # <a name="savexmm128"></a>.SAVEXMM128
-Entweder generiert eine `UWOP_SAVE_XMM128` oder ein `UWOP_SAVE_XMM128_FAR` Entladen von Codeeintrag für den angegebenen XMM-Register und offset unter Verwendung der aktuellen Prolog Verschiebung. MASM wird die effizienteste Codierung auswählen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-.savexmm128 xmmreg , offset  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- . SAVEXMM128 ermöglicht Benutzern das ml64.exe angeben, wie eine Funktion Frame entlädt und ist nur zulässig, innerhalb der Prolog, die aus erweitert die [PROC](../../assembler/masm/proc.md) FRAME-Deklaration, um die [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) Richtlinie. Diese Direktiven generieren keine Code; Es werden nur generiert, `.xdata` und `.pdata`. . SAVEXMM128 sollte Anweisungen vorangestellt werden, die die Aktionen, entladen werden tatsächlich implementieren. Es wird empfohlen, die Direktiven entladen und der Code, den sie in einem Makro Entladung vorgesehen sind, um sicherzustellen, dass Vereinbarung zu umschließen.  
-  
- `offset` ein Vielfaches von 16 muss sein.  
-  
- Weitere Informationen finden Sie unter [MASM für X64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+
+Generiert Sie entweder eine `UWOP_SAVE_XMM128` oder `UWOP_SAVE_XMM128_FAR` Entladen von Codeeintrag für den angegebenen XMM-Register und offset, den aktuelle Prologoffset verwenden. Die effizienteste Codierung wählen MASM.
+
+## <a name="syntax"></a>Syntax
+
+> . savexmm128 Xmmreg, offset
+
+## <a name="remarks"></a>Hinweise
+
+. SAVEXMM128 ermöglicht ml64.exe angeben, wie eine Funktion des Frames entladen ist nur zulässig, in der Prolog, die von erweitert die [PROC](../../assembler/masm/proc.md) FRAME-Deklaration, um die [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) Richtlinie. Diese Direktiven generieren Sie Code nicht; Generieren sie nur `.xdata` und `.pdata`. . Indem Sie die Anweisungen, die die Aktionen, entladen werden implementieren, sollte SAVEXMM128 vorangestellt werden. Es hat sich bewährt, sowohl den Code, den sie auf die Entladung in einem Makro gedacht sind, um sicherzustellen, dass Vereinbarung als auch die Entladung Anweisungen zu umschließen.
+
+*Offset* muss ein Vielfaches von 16 sein.
+
+Weitere Informationen finden Sie unter [MASM für X64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

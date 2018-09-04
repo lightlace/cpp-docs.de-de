@@ -1,7 +1,7 @@
 ---
-title: COMM | Microsoft Docs
+title: COMM | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1df6c729ab130a7ff38d7f7cf83224e7425e7dba
-ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
+ms.openlocfilehash: 87bf6d91de052d7ecaf637100b455e66819c748b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463022"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690031"
 ---
 # <a name="comm"></a>COMM
 
-Erstellt eine Internetcafés Variable mit den Attributen, die im angegebenen *Definition*.
+Erstellt eine kommunales Variable mit den Attributen, die im angegebenen *Definition*.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,22 +33,22 @@ Erstellt eine Internetcafés Variable mit den Attributen, die im angegebenen *De
 
 ## <a name="remarks"></a>Hinweise
 
-Internetcafés Variablen werden vom Linker zugeordnet und können nicht initialisiert werden. Dies bedeutet, dass der Speicherort oder eine Sequenz solcher Variablen abhängen dürfen.
+Kommunales Variablen werden durch den Linker zugeordnet und können nicht initialisiert werden. Dies bedeutet, dass Sie auf den Speicherort oder eine Sequenz solcher Variablen abhängen dürfen.
 
-Jede *Definition* weist folgende Form:
+Jede *Definition* hat folgendes Format:
 
-[*Langtype*] [**NEAR** &#124; **FAR**] _Bezeichnung_**:**_Typ_[**:**_Anzahl_]
+[*Langtype*] [**NEAR** &#124; **weit**] _Bezeichnung_**:**_Typ_[**:**_Anzahl_]
 
-Das optionale *Langtype* legt die Benennungskonventionen für folgende Name. Jeder angegebene Sprache überschreibt die **. Modell** Richtlinie. Das optionale **NEAR** oder **FAR** Überschreiben des aktuellen Modells von Arbeitsspeicher. Die *Bezeichnung* ist der Name der Variablen. Die *Typ* kann einem beliebigen Typspezifizierer ([BYTE](../../assembler/masm/byte-masm.md), [WORD](../../assembler/masm/word.md)usw.) oder eine ganze Zahl, die die Anzahl von Bytes angibt. Das optionale *Anzahl* gibt die Anzahl der Elemente in das deklarierte Objekt; der Standardwert ist 1.
+Der optionale *Langtype* legt die Namenskonventionen der folgende Name. Überschreibt es mit einer beliebigen Sprache gemäß der **. Modell** Richtlinie. Der optionale **NEAR** oder **weit** Überschreiben der aktuellen Speichermodell. Die *Bezeichnung* ist der Name der Variablen. Die *Typ* kann einem beliebigen Typspezifizierer sein ([BYTE](../../assembler/masm/byte-masm.md), [WORD](../../assembler/masm/word.md)usw.) oder eine ganze Zahl, die die Anzahl von Bytes angibt. Der optionale *Anzahl* gibt die Anzahl der Elemente in das deklarierte Objekt; der Standardwert ist 1.
 
 ## <a name="example"></a>Beispiel
 
-Dieses Beispiel erstellt ein Array von 512-BYTE-Elemente:
+In diesem Beispiel wird ein Array von 512-BYTE-Elementen erstellt:
 
-```masm
+```asm
 COMM FAR ByteArray:BYTE:512
 ```
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

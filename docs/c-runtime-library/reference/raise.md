@@ -33,19 +33,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3a41f88bc6883af1db4bbde8729a3638ded64a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1bc3f52b97159a9caba6f80b4798d9588ec341d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405795"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685907"
 ---
 # <a name="raise"></a>raise
 
 Sendet ein Signal an das ausführende Programm.
 
 > [!NOTE]
-> Verwenden Sie diese Methode nicht, eine Microsoft Store-app mit Ausnahme von Herunterfahren in Test- oder Debugszenarien. Programmgesteuerte oder UI-Methoden zum Schließen einer Store-app sind nicht zulässig, gemäß der [Microsoft Store-Richtlinien](http://go.microsoft.com/fwlink/?LinkId=865936). Weitere Informationen finden Sie unter [uwp-app-Lebenszyklus](http://go.microsoft.com/fwlink/p/?LinkId=865934).
+> Verwenden Sie diese Methode nicht, eine Microsoft Store-app, mit Ausnahme von Herunterfahren in Test- oder Debugszenarien. Programmgesteuerte oder UI-Methoden zum Schließen einer Store-app sind nicht zulässig, gemäß der [Microsoft Store Richtlinien](/legal/windows/agreements/store-policies). Weitere Informationen finden Sie unter [UWP-app-Lebenszyklus](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Syntax
 
@@ -77,11 +77,11 @@ Die **raise**-Funktion sendet *sig* an das ausführende Programm. Wenn ein vorhe
 |**SIGSEGV**|Ungültiger Speicherzugriff|Beendet das aufrufende Programm|
 |**SIGTERM**|An das Programm gesendete Beendigungsanforderung|Ignoriert das Signal|
 
-Wenn das Argument kein gültiges Signal gemäß den oberen Angaben ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Die Funktion legt fest, wenn nicht behandelt, **Errno** auf **EINVAL** und gibt einen Wert ungleich NULL zurück.
+Wenn das Argument kein gültiges Signal gemäß den oberen Angaben ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Die Funktion legt fest, wenn nicht behandelt, **Errno** zu **EINVAL** und gibt einen Wert ungleich NULL zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**raise**|\<signal.h>|
 
