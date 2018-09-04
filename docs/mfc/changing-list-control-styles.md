@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4919d9fd947a489ee9535abd5aa57d7861ba5a37
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2fdb2bbb3681fab2bae42866df40d0ca363b7935
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197993"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676766"
 ---
 # <a name="changing-list-control-styles"></a>Ändern der Stile von Listensteuerelementen
 Sie können ändern, dass den Fensterstil eines Listensteuerelements ([CListCtrl](../mfc/reference/clistctrl-class.md)) zu einem beliebigen Zeitpunkt nach Abschluss des Erstellungsvorgangs. Ändern Sie den Fensterstil, ändern Sie die Art der Ansicht, die das Steuerelement verwendet. Z. B. um den Explorer zu emulieren, Sie möglicherweise angeben Menüelemente und Symbolleisten-Schaltflächen des Steuerelements zwischen verschiedenen Ansichten zu wechseln: Symbolansicht, Listenansicht und So weiter.  
   
- Angenommen, wenn der Benutzer das Menüelement auswählt, Sie konnten, einen Aufruf von [GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) den aktuellen Stil des Steuerelements abzurufen, und rufen Sie anschließend [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) der Stil. Weitere Informationen finden Sie unter [Listenansicht-Steuerelemente mithilfe von](/windows/desktop/Controls/using-list-view-controls) im Windows SDK.  
+ Angenommen, wenn der Benutzer das Menüelement auswählt, Sie konnten, einen Aufruf von [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) den aktuellen Stil des Steuerelements abzurufen, und rufen Sie anschließend [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) der Stil. Weitere Informationen finden Sie unter [Listenansicht-Steuerelemente mithilfe von](/windows/desktop/Controls/using-list-view-controls) im Windows SDK.  
   
  Verfügbaren Formate finden Sie in [erstellen](../mfc/reference/clistctrl-class.md#create). Die Stile **LVS_ICON**, **LVS_SMALLICON**, **LVS_LIST**, und **LVS_REPORT** die vier Listenansichten des Steuerelements festlegen.  
   

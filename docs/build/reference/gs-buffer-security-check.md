@@ -1,5 +1,5 @@
 ---
-title: -GS (Puffer-Sicherheitsüberprüfung) | Microsoft Docs
+title: – GS (Puffer-Sicherheitsüberprüfung) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aa1204a6959121b3f6280433c0414f81c038548
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fdb08515d20a4de00ea35373670887e48b835e28
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379483"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678391"
 ---
 # <a name="gs-buffer-security-check"></a>/GS (Puffer-Sicherheitsüberprüfung)  
   
@@ -43,11 +43,11 @@ Erkennt einige Pufferüberläufe, welche die Rückgabeadresse einer Funktion, ei
   
 ## <a name="remarks"></a>Hinweise  
   
-**/ GS** ist standardmäßig aktiviert. Wenn Sie erwarten, die Anwendung keinerlei Sicherheitsrisiken ausgesetzt ist dass, verwenden Sie **/GS-**. Weitere Informationen zu **/GS**, finden Sie unter [Compiler Security überprüft In Depth](http://go.microsoft.com/fwlink/p/?linkid=7260). Weitere Informationen zum Unterdrücken von Pufferüberlauf-Erkennung, finden Sie unter [Safebuffers](../../cpp/safebuffers.md).  
+**/ GS** ist standardmäßig aktiviert. Wenn Sie erwarten, die Anwendung keinerlei Sicherheitsrisiken ausgesetzt ist dass, verwenden Sie **/GS-**. Weitere Informationen zum Unterdrücken der pufferüberlauferkennung finden Sie unter [Safebuffers](../../cpp/safebuffers.md).  
   
 ## <a name="security-checks"></a>Sicherheitsüberprüfungen  
   
-Bei Funktionen, die vom Compiler als überlaufgefährdet und problematisch eingestuft werden, reserviert der Compiler vor der Rückgabeadresse Speicherplatz auf dem Stapel. Beim Funktionsstart, der zugewiesene Speicherplatz mit geladen wurde eine *Sicherheitscookie* einmal beim Laden des Moduls berechnet wird. Bei Funktionsende und beim Entladen von Rahmen auf 64-Bit-Betriebssystemen wird dann eine Hilfsfunktion aufgerufen, die sicherstellt, dass sich der Wert des Cookies nicht geändert hat. Ein abweichender Wert gibt an, dass der Stapel möglicherweise überschrieben wurde. Ein abweichender Wert führt dazu, dass der Prozess beendet wird.  
+Bei Funktionen, die vom Compiler als überlaufgefährdet und problematisch eingestuft werden, reserviert der Compiler vor der Rückgabeadresse Speicherplatz auf dem Stapel. Beim Funktionsstart wird mit der zugeordnete Platz bearbeiten geladen eine *Sicherheitscookie* einmal beim Laden des Moduls berechnet wird. Bei Funktionsende und beim Entladen von Rahmen auf 64-Bit-Betriebssystemen wird dann eine Hilfsfunktion aufgerufen, die sicherstellt, dass sich der Wert des Cookies nicht geändert hat. Ein abweichender Wert gibt an, dass der Stapel möglicherweise überschrieben wurde. Ein abweichender Wert führt dazu, dass der Prozess beendet wird.  
   
 ## <a name="gs-buffers"></a>GS-Puffer  
   
@@ -57,7 +57,7 @@ Eine Pufferüberlauf-sicherheitsüberprüfung erfolgt auf einer *GS-Puffer*. Ein
   
 -   Eine Datenstruktur, die größer als 8 Bytes ist und keine Zeiger enthält.  
   
--   Ein Pufferspeicher mithilfe der [_alloca](../../c-runtime-library/reference/alloca.md) Funktion.  
+-   Ein Puffer zugeordnet werden, mithilfe der [_alloca](../../c-runtime-library/reference/alloca.md) Funktion.  
   
 -   Eine beliebige Klasse oder Struktur, die einen GS-Puffer enthält.  
   
@@ -82,7 +82,7 @@ struct { int a; int b; };
   
 ## <a name="initialize-the-security-cookie"></a>Initialisieren des Sicherheitscookies  
   
-Die **/GS** -Compileroption erfordert, dass das Sicherheitscookie initialisiert werden, bevor eine Funktion, die das Cookie wird verwendet, ausgeführt wird. Das Sicherheitscookie muss beim Einstieg in eine EXE oder DLL sofort initialisiert werden. Dies erfolgt automatisch bei der Verwendung der Standardeinstellung VCRuntime-Einstiegspunkte: MainCRTStartup, WmainCRTStartup, WinMainCRTStartup, wWinMainCRTStartup, oder den _DllMainCRTStartup. Wenn Sie einen alternativen Einstiegspunkt verwenden, müssen Sie das Sicherheitscookie manuell initialisieren, durch den Aufruf [__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md).  
+Die **/GS** -Compileroption erfordert, dass das Sicherheitscookie initialisiert werden, bevor alle Funktionen, die das Cookie wird verwendet, die ausgeführt wird. Das Sicherheitscookie muss beim Einstieg in eine EXE oder DLL sofort initialisiert werden. Dies erfolgt automatisch bei der Verwendung der standardmäßigen VCRuntime-Einstiegspunkte: MainCRTStartup, WmainCRTStartup, WinMainCRTStartup, wWinMainCRTStartup, oder _DllMainCRTStartup. Wenn Sie einen alternativen Einstiegspunkt verwenden, müssen Sie das Sicherheitscookie manuell initialisieren, durch den Aufruf ["__security_init_cookie"](../../c-runtime-library/reference/security-init-cookie.md).  
   
 ## <a name="what-is-protected"></a>Geschützte Informationen  
   
@@ -98,7 +98,7 @@ Auf allen Plattformen **/GS** versucht, Pufferüberläufe in die Rücksprungadre
   
 Wird auf x86-Systemen ein Ausnahme-Handler verwendet, fügt der Compiler ein Sicherheitscookie ein, um die Adresse des Ausnahmehandlers zu schützen. Dieses Cookie wird beim Entladen von Rahmen überprüft.  
   
-**/ GS** schützt *verwundbaren Parametern* , die in eine Funktion übergeben werden. Ein verwundbarer Parameter ist ein Zeiger, ein C++-Verweis oder eine C-Struktur (C++-POD-Typ), die einen Zeiger oder einen GS-Puffer enthält.  
+**/ GS** schützt *verwundbarer Parameter* , die an eine Funktion übergeben werden. Ein verwundbarer Parameter ist ein Zeiger, ein C++-Verweis oder eine C-Struktur (C++-POD-Typ), die einen Zeiger oder einen GS-Puffer enthält.  
   
 Ein verwundbarer Parameter wird vor dem Cookie und den lokalen Variablen zugeordnet. Durch einen Pufferüberlauf kann dieser Parameter überschrieben werden. Und der in der Funktion enthaltene Code, der diesen Parameter verwendet, könnte einen Angriff verursachen, bevor der Rücksprung aus der Funktion erfolgt und die Sicherheitsprüfung ausgeführt wird. Um diese Gefahr zu minimieren, erstellt der Compiler während des Funktionsprologs eine Kopie der verwundbaren Parameter und legt diese unterhalb des Speicherbereichs ab, in dem sich sämtliche Puffer befinden.  
   
@@ -110,7 +110,7 @@ Der Compiler erstellt keine Kopien verwundbarer Parameter, wenn folgende Bedingu
   
 -   Funktionen verfügen über eine variable Argumentliste (...).  
   
--   Funktionen, die mit markiert sind [naked](../../cpp/naked-cpp.md).  
+-   Funktionen, die mit markierten Felder [naked](../../cpp/naked-cpp.md).  
   
 -   Funktionen enthalten Inlineassemblycode in der ersten Anweisung.  
   
@@ -118,17 +118,17 @@ Der Compiler erstellt keine Kopien verwundbarer Parameter, wenn folgende Bedingu
   
 ## <a name="what-is-not-protected"></a>Nicht geschützte Informationen  
   
-Die **/GS** -Compileroption schützt nicht vor allen Sicherheitsangriffen durch Pufferüberläufe Angriffen. Wenn ein Objekt beispielsweise einen Puffer und eine vtable enthält, könnte der Pufferüberlauf die vtable beschädigen.  
+Die **/GS** -Compileroption bietet keinen Schutz vor allen Angriffen Pufferüberlauf. Wenn ein Objekt beispielsweise einen Puffer und eine vtable enthält, könnte der Pufferüberlauf die vtable beschädigen.  
   
-Selbst bei Verwendung von **/GS**, versuchen Sie immer, sicheren Code zu schreiben, der keine Pufferüberläufe.  
+Auch wenn Sie **/GS**, versuchen immer, sicheren Code zu schreiben, der keine Pufferüberläufe hat.  
   
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>So legen Sie diese Compileroption in Visual Studio fest  
   
 1.  In **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt, und klicken Sie dann auf **Eigenschaften**.  
   
-     Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
+     Weitere Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).  
   
-2.  In der **Eigenschaftenseiten** (Dialogfeld), klicken Sie auf die **C/C++-** Ordner.  
+2.  In der **Eigenschaftenseiten** Dialogfeld klicken Sie auf die **C/C++-** Ordner.  
   
 3.  Klicken Sie auf die **Codegenerierung** Eigenschaftenseite.  
   

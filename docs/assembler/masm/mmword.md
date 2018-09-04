@@ -1,7 +1,7 @@
 ---
-title: MMWORD | Microsoft Docs
+title: DIE MMWORD | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,35 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e97b1e58116d633519b1a780928e05862ac1771d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 7314c6d0861195e312c7f72481d2e195e041965d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054779"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679233"
 ---
 # <a name="mmword"></a>MMWORD
-Für 64-Bit-multimedia-Operanden mit MMX- und SSE (XMM)-Anweisungen verwendet.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-MMWORD  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- `MMWORD` ist ein Typ.  Vor dem MMWORD MASM hinzugefügt wird konnte entsprechende Funktionalität mit erreicht wurden:  
-  
-```  
-mov mm0, qword ptr [ebx]  
-```  
-  
- Zwar beide Anweisungen in 64-Bit-Operanden, funktioniert `QWORD` ist der Typ für 64-Bit-Ganzzahlen ohne Vorzeichen und `MMWORD` ist der Typ für einen 64-Bit-multimedia-Wert.  
-  
- `MMWORD` Dient zur Darstellung der vom selben Typs wie [__m64](../../cpp/m64.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-movq     mm0, mmword ptr [ebx]  
+
+Für 64-Bit-multimediaoperanden MMX- und SSE (XMM)-Anweisungen verwendet.
+
+## <a name="syntax"></a>Syntax
+
+> MMWORD
+
+## <a name="remarks"></a>Hinweise
+
+`MMWORD` ist ein Typ.  Vor dem MMWORD MASM hinzugefügt wird kann entsprechende Funktionalität mit erreicht wurden:
+
+```asm
+    mov mm0, qword ptr [ebx]
+```
+
+Zwar beide Anweisungen für 64-Bit-Operanden funktionieren `QWORD` ist der Typ für 64-Bit-Ganzzahlen ohne Vorzeichen und `MMWORD` ist der Typ für einen 64-Bit-multimedia-Wert.
+
+`MMWORD` Dient zum Darstellen des gleichen Typs wie [__m64](../../cpp/m64.md).
+
+## <a name="example"></a>Beispiel
+
+```asm
+    movq     mm0, mmword ptr [ebx]
 ```

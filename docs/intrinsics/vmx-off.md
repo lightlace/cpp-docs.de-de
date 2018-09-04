@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae7d672cf592514d60c9ec68bbf4464507b94ff
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 924cd8f502b6fe41aa4733df3dc59a372c27e6cb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539431"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683634"
 ---
 # <a name="vmxoff"></a>__vmx_off
 **Microsoft-spezifisch**  
@@ -36,7 +36,7 @@ void __vmx_off();
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die `__vmx_off` -Funktion ist gleichbedeutend mit der `VMXOFF` computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Dokumentieren Sie weitere Informationen suchen Sie nach dem Dokument "Intel Virtualization Technical Specification for the IA-32 Intel Architecture," Dokumentnummer C97063-002 auf der [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) Standort.  
+ Die `__vmx_off` -Funktion ist gleichbedeutend mit der `VMXOFF` computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Dokumentieren Sie weitere Informationen suchen Sie nach dem Dokument "Intel Virtualization Technical Specification for the IA-32 Intel Architecture," Dokumentnummer C97063-002 auf der [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) Standort.  
   
 ## <a name="requirements"></a>Anforderungen  
   

@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9644882f537285b27fa376afa65581d6d4c3c9f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1015d35bea25ceaf23a822c9edea4da121583c61
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216287"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678813"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx-Klasse
 Erweitert die Funktionalität von [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), ein Rahmenfenster Windows Schnittstelle MDI (Multiple Document).  
@@ -252,7 +252,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Wird vom Framework aufgerufen, wenn ein Menü mit abtrennbarer Leiste aktiviert wird.|  
 |[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Wird aufgerufen, durch das Framework, um das Menü "Frame" zu aktualisieren. (Überschreibt `CMDIFrameWnd::OnUpdateFrameMenu`.)|  
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|Gibt zurück, andockbaren Bereich, der den angegebenen Punkt enthält.|  
-|`CMDIFrameWndEx::PreTranslateMessage`|Von Klasse verwendeten [CWinApp](../../mfc/reference/cwinapp-class.md) um fenstermeldungen zu übersetzen, bevor sie um weitergeleitet werden die [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows-Funktionen.  (Überschreibt `CMDIFrameWnd::PreTranslateMessage`.)|  
+|`CMDIFrameWndEx::PreTranslateMessage`|Von Klasse verwendeten [CWinApp](../../mfc/reference/cwinapp-class.md) um fenstermeldungen zu übersetzen, bevor sie um weitergeleitet werden die [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows-Funktionen.  (Überschreibt `CMDIFrameWnd::PreTranslateMessage`.)|  
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Wird aufgerufen, durch das Framework, das Layout des Rahmenfensters neu zu berechnen. (Überschreibt [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|  
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Hebt die Registrierung für eines Bereichs, und entfernt sie aus dem Dock-Manager.|  
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Speichert das aktuelle Layout der MDI-Gruppen im Registerkartenformat und die Liste der bisher geöffneten Dokumente.|  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dceca7ead0910474b2277538066d3cbae4bc791e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c732bcf45f2dfbd4927366670aed6bfbdcfb4721
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213827"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679986"
 ---
 # <a name="using-manual-accessors"></a>Verwenden von manuellen Zugriffsmethoden
 Es gibt vier Schritte erforderlich, bei der Verarbeitung eines unbekannten Befehls:  
@@ -53,7 +53,7 @@ Es gibt vier Schritte erforderlich, bei der Verarbeitung eines unbekannten Befeh
   
 6.  Rufen Sie `GetNextResult` zu bestimmen, ob weitere Rowsets verfügbar sind. Wiederholen Sie Schritte 2 bis 5.  
   
- Ein Beispiel für einen manuellen Accessor finden Sie unter `CDBListView::CallProcedure` in die [DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) Beispiel.  
+ Ein Beispiel für einen manuellen Accessor finden Sie unter `CDBListView::CallProcedure` in die [DBVIEWER](https://github.com/Microsoft/VCSamples) Beispiel.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von Zugriffsmethoden](../../data/oledb/using-accessors.md)

@@ -1,7 +1,7 @@
 ---
-title: ML nicht schwerwiegende Fehler A2019 | Microsoft Docs
+title: Schwerwiegender ML--Fehler A2019 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 829ec55616dad97d9cbaabadbb16559aa73fd56e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 1991e32a3ae0e4bb67f698b25aece643dc53d39c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057564"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681790"
 ---
 # <a name="ml-nonfatal-error-a2019"></a>Nicht schwerwiegender ML-Fehler A2019
-**Operand muss Datensatztyp oder ein Feld sein.**  
-  
- Die folgenden Operanden der [Breite](../../assembler/masm/operator-width.md) oder [MASKE](../../assembler/masm/operator-mask.md) Operator war ungültig.  
-  
- Die [Breite](../../assembler/masm/operator-width.md) Operator erfordert ein Operand, der den Namen eines Felds oder eines Datensatzes ist. Die [MASKE](../../assembler/masm/operator-mask.md) Operator erfordert ein Operand, der den Namen eines Felds oder eines Typs ist.  
-  
-## <a name="see-also"></a>Siehe auch  
- [ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)
+
+**Operand muss RECORD-Typ oder ein Feld sein.**
+
+Die folgenden Operanden der [Breite](../../assembler/masm/operator-width.md) oder [MASKE](../../assembler/masm/operator-mask.md) Operator war ungültig.
+
+Die [Breite](../../assembler/masm/operator-width.md) -Operator hat ein Operand, der den Namen eines Felds oder eines Datensatzes ist. Die [MASKE](../../assembler/masm/operator-mask.md) -Operator hat ein Operand, der den Namen der ein Feld oder einen Datensatztyp ist.
+
+## <a name="see-also"></a>Siehe auch
+
+[ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)<br/>

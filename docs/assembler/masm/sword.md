@@ -1,7 +1,7 @@
 ---
-title: SWORD | Microsoft Docs
+title: "\"SWORD\" | Microsoft-Dokumentation"
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61f3e50db7c9ac7358190885d9e5b453126c8487
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a004148476f6eb0d63e91dfac5ebcc4ca2c8ad92
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057389"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676157"
 ---
 # <a name="sword"></a>SWORD
-Zum Belegen und optional ein mit Vorzeichen Wort (2 Bytes) des Speichers für die einzelnen initialisiert `initializer`. Kann auch verwendet werden, als Typspezifizierer an einer beliebigen Stelle ist ein Typ zulässig.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-name SWORD initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Direktiven – Referenz](../../assembler/masm/directives-reference.md)   
- [WORD](../../assembler/masm/word.md)
+
+Zugewiesen und initialisiert Sie optional ein Vorzeichen Wort (2 Byte) des Speichers für die einzelnen `initializer`. Kann auch als Typspezifizierer verwendet werden ein Typ ist überall zulässig.
+
+## <a name="syntax"></a>Syntax
+
+> Name "sword"-Initialisierer [[, Initialisierer]]...
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>
+[WORD](../../assembler/masm/word.md)<br/>

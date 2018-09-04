@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f79917e34a749048696f320a8311978acc2739f4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1c1d483f6ba532a6d8eeee1a8ec831cfd1d94b62
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202854"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678008"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite-Klasse
 Stellt Unterstützung für benutzerdefinierte clientseitige Steuerelement-Schnittstellen bereit.  
@@ -797,7 +797,7 @@ virtual BOOL ModifyStyle(
  Die Formate aus der aktuellen Window-Stile hinzugefügt werden.  
   
  *nFlags*  
- Fenster, die Positionierung von Flags. Eine Liste der möglichen Werte, finden Sie unter den [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) -Funktion in das Windows SDK.  
+ Fenster, die Positionierung von Flags. Eine Liste der möglichen Werte, finden Sie unter den [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) -Funktion in das Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL ist, wenn die Stile geändert werden, andernfalls 0 (null).  
@@ -805,7 +805,7 @@ virtual BOOL ModifyStyle(
 ### <a name="remarks"></a>Hinweise  
  Des Steuerelements Stock Enabled-Eigenschaft wird die Einstellung für WS_DISABLED entsprechend geändert werden. Rahmenart Eigenschaft des Steuerelements wird entsprechend die angeforderte Einstellung für WS_BORDER geändert werden. Alle anderen Formate werden direkt auf das Fensterhandle des Steuerelements, angewendet werden, wenn ein solcher vorhanden ist.  
   
- Ändert das Window-Stile des Steuerelements an. Stile hinzugefügt oder entfernt werden soll, können mit dem bitweisen OR kombiniert werden ( &#124; ) Operator. Finden Sie unter den [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Funktion im Windows SDK für Informationen über die verfügbaren Fenster.  
+ Ändert das Window-Stile des Steuerelements an. Stile hinzugefügt oder entfernt werden soll, können mit dem bitweisen OR kombiniert werden ( &#124; ) Operator. Finden Sie unter den [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Funktion im Windows SDK für Informationen über die verfügbaren Fenster.  
   
  Wenn *nFlags* ungleich NULL ist, `ModifyStyle` wird die Win32-Funktion `SetWindowPos`, und das Fenster durch Kombinieren von zeichnet *nFlags* mit den vier folgenden Flags:  
   
@@ -837,7 +837,7 @@ virtual BOOL ModifyStyleEx(
  Die erweiterten Stile aus der aktuellen Window-Stile hinzugefügt werden.  
   
  *nFlags*  
- Fenster, die Positionierung von Flags. Eine Liste der möglichen Werte, finden Sie unter den [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) -Funktion in das Windows SDK.  
+ Fenster, die Positionierung von Flags. Eine Liste der möglichen Werte, finden Sie unter den [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) -Funktion in das Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL ist, wenn die Stile geändert werden, andernfalls 0 (null).  
@@ -845,7 +845,7 @@ virtual BOOL ModifyStyleEx(
 ### <a name="remarks"></a>Hinweise  
  Des Steuerelements Stock Appearance-Eigenschaft wird die Einstellung für WS_EX_CLIENTEDGE entsprechend geändert werden. Alle anderen erweiterten Fensterstile werden direkt auf das Fensterhandle des Steuerelements, angewendet, wenn ein solcher vorhanden ist.  
   
- Ändert das Fenster Erweiterte Stile des Website-Steuerelements. Stile hinzugefügt oder entfernt werden soll, können mit dem bitweisen OR kombiniert werden ( &#124; ) Operator. Finden Sie unter den [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Funktion im Windows SDK für Informationen über die verfügbaren Fenster.  
+ Ändert das Fenster Erweiterte Stile des Website-Steuerelements. Stile hinzugefügt oder entfernt werden soll, können mit dem bitweisen OR kombiniert werden ( &#124; ) Operator. Finden Sie unter den [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Funktion im Windows SDK für Informationen über die verfügbaren Fenster.  
   
  Wenn *nFlags* ungleich NULL ist, `ModifyStyleEx` wird die Win32-Funktion `SetWindowPos`, und das Fenster durch Kombinieren von zeichnet *nFlags* mit den vier folgenden Flags:  
   
@@ -1051,7 +1051,7 @@ virtual BOOL SetWindowPos(
  Die neue Höhe des Fensters.  
   
  *nFlags*  
- Gibt an, das Fenster größenanpassung und Positionierung von Flags. Mögliche Werte finden Sie im Abschnitt "Hinweise" für [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) im Windows SDK.  
+ Gibt an, das Fenster größenanpassung und Positionierung von Flags. Mögliche Werte finden Sie im Abschnitt "Hinweise" für [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL Wenn erfolgreich, andernfalls NULL.  

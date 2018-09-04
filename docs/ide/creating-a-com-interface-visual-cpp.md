@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b69c2318ec5b1dd986a71bc684e1c9adc0f4ef0f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c31dfc72e6d552cacd46f3e0b49aedc18bf4c7f2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194963"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683312"
 ---
 # <a name="creating-a-com-interface-visual-c"></a>Erstellen einer COM-Schnittstelle (Visual C++)
 Visual C++ stellt Assistenten und Vorlagen zum Erstellen von Projekten bereit, die definierende COM-Schnittstellen und Disp-Schnittstellen für Ihre COM-Objekte und Automatisierungsklassen verwenden.  
@@ -67,7 +67,7 @@ interface IMyInterface {
   
  Weitere Informationen finden Sie unter [Implementing an Interface (Implementieren einer Schnittstelle)](../ide/implementing-an-interface-visual-cpp.md) und [Adding Objects and Controls to an ATL Project (Hinzufügen von Objekten und Steuerelementen zu einem ATL-Projekt)](../atl/reference/adding-objects-and-controls-to-an-atl-project.md).  
   
- Visual C++ bietet mehrere Möglichkeiten zum Anzeigen und [Bearbeiten der COM-Schnittstellen](../ide/editing-a-com-interface.md), die für Ihre Projekte definiert sind. Die [Klassenansicht](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) zeigt Symbole für Schnittstellen oder Disp-Schnittstellen an, die in einer IDL-Datei in Ihrem Projekt definiert sind.  
+ Visual C++ bietet mehrere Möglichkeiten zum Anzeigen und [Bearbeiten der COM-Schnittstellen](../ide/editing-a-com-interface.md), die für Ihre Projekte definiert sind. Die [Klassenansicht](/visualstudio/ide/viewing-the-structure-of-code) zeigt Symbole für Schnittstellen oder Disp-Schnittstellen an, die in einer IDL-Datei in Ihrem Projekt definiert sind.  
   
  Bei ATL-basierten COM-Objektklassen liest die Klassenansicht die COM-Zuordnung in der ATL-Klasse zum Anzeigen der Beziehung zwischen der ATL-Klasse und allen Schnittstellen, die sie implementiert.  
   

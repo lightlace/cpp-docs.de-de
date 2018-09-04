@@ -1,5 +1,5 @@
 ---
-title: -Qpar (automatische Parallelisierung) | Microsoft Docs
+title: -Qpar (automatische Parallelisierung) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430bf1ebc79008d97435ecbcb3b15cf19dda5f8d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 24c3501422a0bfbaba8aea0e45c102f63948b7db
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375687"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684504"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar (Automatische Parallelisierung)
-Ermöglicht die [Auto-Parallelisierer](../../parallel/auto-parallelization-and-auto-vectorization.md) Funktion des Compilers, Schleifen im Code automatisch zu parallelisieren.  
+Ermöglicht die [Auto-Parallelisierer](../../parallel/auto-parallelization-and-auto-vectorization.md) Funktion des Compilers, Schleifen in Ihrem Code automatisch zu parallelisieren.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -31,21 +31,21 @@ Ermöglicht die [Auto-Parallelisierer](../../parallel/auto-parallelization-and-a
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Compiler automatisch Schleifen im Code parallelisiert, byteweise in mehrere Prozessorkerne Berechnung. Nur, wenn der Compiler bestimmt, dass es dazu rechtliche und diese Parallelisierung würde die Leistung verbessern, ist eine Schleife parallelisiert.  
+ Wenn der Compiler automatisch Schleifen im Code parallelisiert, verteilt er über mehrere Prozessorkerne Berechnung. Eine Schleife ist parallelisiert, nur dann, wenn der Compiler bestimmt, dass es zulässig ist, dazu, und diese Parallelisierung Leistung verbessert.  
   
- Die `#pragma loop()` Direktiven sind verfügbar, in denen den Optimierer bestimmte Schleifen zu parallelisieren. Weitere Informationen finden Sie unter [Schleife](../../preprocessor/loop.md).  
+ Die `#pragma loop()` Direktiven sind verfügbar, mit denen den Optimierer bestimmte Schleifen zu parallelisieren. Weitere Informationen finden Sie unter [Schleife](../../preprocessor/loop.md).  
   
- Informationen zum Aktivieren der ausgehende Nachrichten für den Auto-parallelisierer finden Sie unter [/qpar-Report (Auto-Parallelisierer Reporting Stufe)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md).  
+ Informationen zum Aktivieren von ausgehenden Nachrichten für den Auto-parallelisierer finden Sie unter [/qpar-Report (Auto-Parallelizer-Berichtsebene)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md).  
   
 ### <a name="to-set-the-qpar-compiler-option-in-visual-studio"></a>So legen Sie die /Qpar-Compileroption in Visual Studio fest  
   
 1.  Öffnen Sie im **Projektmappen-Explorer**das Kontextmenü für das Projekt, und wählen Sie **Eigenschaften**aus.  
   
-2.  In der **Eigenschaftenseiten** Dialogfeld unter **C/C++-** Option **Befehlszeile**.  
+2.  In der **Eigenschaftenseiten** Dialogfeld **C/C++-** Option **Befehlszeile**.  
   
-3.  In der **Zusatzoptionen** geben `/Qpar`.  
+3.  In der **zusätzliche Optionen** geben `/Qpar`.  
   
-### <a name="to-set-the-qpar-compiler-option-programmatically"></a>So legen Sie die /Qpar-Compileroption programmgesteuert fest  
+### <a name="to-set-the-qpar-compiler-option-programmatically"></a>So legen Sie die /Qpar Compileroption programmgesteuert fest  
   
 -   Verwenden Sie hierzu das Codebeispiel unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
@@ -55,4 +55,4 @@ Ermöglicht die [Auto-Parallelisierer](../../parallel/auto-parallelization-and-a
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)   
  [#pragma loop()](../../preprocessor/loop.md)   
- [Parallele Programmierung in systemeigenem Code](http://go.microsoft.com/fwlink/p/?linkid=263662)
+ [Parallele Programmierung in systemeigenem Code](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

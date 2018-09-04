@@ -17,21 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23266ca4b4d32146ed8627c6ce3ab1cc878d59cd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c313a72a3c76b65476659e463076d61383dd43a5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600651"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682082"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>Wie Benutzerkontensteuerung (UAC) die Anwendung beeinflusst
 Benutzerkontensteuerung (UAC) ist eine Funktion von Windows Vista, in der Benutzerkonten eingeschränkte Berechtigungen haben. Ausführliche Informationen über UAC finden Sie auf diesen Sites:  
   
--   [Windows Vista Schritt-Handbuch der Benutzerkontensteuerung](http://go.microsoft.com/fwlink/p/?linkid=53781)  
-  
--   [Developer Best Practices and Guidelines for Applications in einer Umgebung mit geringsten rechten](http://go.microsoft.com/fwlink/p/?linkid=82444)  
-  
--   [Verstehen und Konfigurieren der Benutzerkontensteuerung in Windows Vista](http://go.microsoft.com/fwlink/p/?linkid=82445)  
+-   [Developer Best Practices and Guidelines for Applications in einer Umgebung mit geringsten rechten](/windows/desktop/uxguide/winenv-uac)  
   
 ## <a name="building-projects-after-enabling-uac"></a>Erstellen von Projekten nach der Aktivierung von UAC  
  Wenn Sie ein Visual C++-Projekt unter Windows Vista erstellen, UAC bei der Erstellung deaktiviert ist und später aktiviert wird, müssen Sie das Projekt bereinigen und erneut erstellen, damit es ordnungsgemäß funktioniert.  

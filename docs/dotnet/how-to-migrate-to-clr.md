@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 47914999a48b4d5924a25ad1688ee83c533398f3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cfdf224ed96484af52a84c270c93df87821a444f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218897"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684598"
 ---
 # <a name="how-to-migrate-to-clr"></a>Gewusst wie: Migrieren zu /clr
 Dieses Thema behandelt Probleme, die beim Kompilieren mit auftreten **"/ CLR"** (finden Sie unter [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md) Informationen). **"/ CLR"** Visual C++ Module aufgerufen und die Beibehaltung der Kompatibilität mit nicht verwalteten Modulen von .NET-Assemblys aus aufgerufen werden können. Finden Sie unter [gemischte (Native und verwaltete) Assemblys](../dotnet/mixed-native-and-managed-assemblies.md) und [Native und .NET Interoperabilität](../dotnet/native-and-dotnet-interoperability.md) für Weitere Informationen zu den Vorteilen der Kompilierung mit **"/ CLR"**.  
@@ -90,7 +90,7 @@ COMObj2->Method(args);  // C++ equivalent
  Nachdem das Projekt kompiliert und ausgeführt, in Visual Studio 2010 wird sollten Sie für neue Projektkonfigurationen erstellen **"/ CLR"** statt die Standardkonfigurationen zu ändern. **"/ CLR"** ist mit einigen Compileroptionen nicht kompatibel, und Erstellen separater Konfigurationen können Sie das Projekt als systemeigen oder verwaltet erstellen. Wenn **"/ CLR"** ausgewählt ist, in der Eigenschaft Seiten (Dialogfeld), projekteinstellungen nicht kompatibel mit **"/ CLR"** sind deaktiviert (und deaktivierte Optionen werden nicht automatisch wiederhergestellt, wenn **"/ CLR"** Auswahl).  
   
 ### <a name="create-new-project-configurations"></a>Erstellen neuer Projektkonfigurationen  
- Können Sie **Einstellungen Kopieren von** option die [neue im Dialogfeld Projektkonfiguration](https://msdn.microsoft.com/cca616dc-05a6-4fe3-bdc1-40c72a66f2be) eine Projektkonfiguration, die basierend auf der vorhandenen projekteinstellungen zu erstellen. Führen Sie dies einmal für die Debugkonfiguration und einmal für die Releasekonfiguration durch. Nachfolgende Änderungen klicken Sie dann auf angewendet werden können die **"/ CLR"** -spezifischen Konfigurationen, die ursprünglichen Projektkonfigurationen erhalten bleibt.  
+ Können Sie **Einstellungen Kopieren von** option die **neue im Dialogfeld Projektkonfiguration** (**erstellen** > **Configuration Manager**  >  **Aktive Projektmappenkonfiguration** > **neu**) zum Erstellen einer Projektkonfiguration, die basierend auf der vorhandenen projekteinstellungen. Führen Sie dies einmal für die Debugkonfiguration und einmal für die Releasekonfiguration durch. Nachfolgende Änderungen klicken Sie dann auf angewendet werden können die **"/ CLR"** -spezifischen Konfigurationen, die ursprünglichen Projektkonfigurationen erhalten bleibt.  
   
  Projekte, die benutzerdefinierte Buildregeln verwenden, erfordern möglicherweise zusätzliche Aufmerksamkeit.  
   

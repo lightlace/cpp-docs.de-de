@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b30aa51f284d216332225664d07d7692bd042a1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 456772306c854d4450a7be3996285e90a1d5783f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223064"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679463"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 Implementiert einen Bereich, der entweder in eine Docksite angedockt oder in einer Seite im Registerformat enthalten sein kann.  
@@ -213,7 +213,7 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|Gibt an, ob die Registerkarten oben oder unteren Rand des Bereichs befinden.|  
 |[CDockablePane::IsTracked](#istracked)|Gibt an, ob ein Bereich vom Benutzer gezogen wird.|  
 |[CDockablePane::IsVisible](#isvisible)|Bestimmt, ob der aktuelle Bereich angezeigt wird.|  
-|[CDockablePane:: LoadState](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|Wird intern verwendet.|  
+|[CDockablePane:: LoadState](#loadstate)|Wird intern verwendet.|  
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|Wird vom Framework aufgerufen, wenn das übergeordnete Element eines Bereichs geändert wurde. (Überschreibt [CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent).)|  
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|Vom Framework aufgerufen, wenn eine unverankerte andockleiste an ein Framefenster angedockt.|  
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|Vom Framework aufgerufen, wenn das übergeordnete Element des Bereichs geändert wird. (Überschreibt [CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent).)|  
@@ -1153,7 +1153,18 @@ virtual BOOL IsVisible() const;
  Wenn der andockbare Bereich in den Hintergrundmodus ist und `IsHideInAutoHideMode` gibt TRUE zurück, der Sichtbarkeitszustand hängt von den Sichtbarkeitsstatus der zugehörigen automatisch im Hintergrund-Symbolleiste.  
   
  Ist der andockbare Bereich nicht in den Hintergrundmodus, wird durch der Sichtbarkeitszustand bestimmt die [CBasePane::IsVisible](../../mfc/reference/cbasepane-class.md#isvisible) Methode.  
-  
+
+## ##  <a name="loadstate"></a>  CDockablePane:: LoadState  
+Nur für interne Verwendung. Ausführliche Informationen finden Sie im Quellcode des Ordners VC\atlmfc\src\mfc der Visual Studio-Installation.
+
+```
+virtual BOOL LoadState(
+   LPCTSTR lpszProfileName = NULL,
+   int nIndex = -1,
+   UINT uiID = (UINT) -1
+);  
+```
+
 ##  <a name="m_bdisableanimation"></a>  CDockablePane::m_bDisableAnimation  
  Gibt an, ob die Animation andockbaren Bereich automatisch im Hintergrund deaktiviert ist.  
   

@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ed19dd2a1b62a3682d96f8c9a596fa6a4b1b377
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 715fcc37c41251b0a42fd6508f8a358758105a1f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209432"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680194"
 ---
 # <a name="tiledindex-class"></a>tiled_index-Klasse
 Stellt einen Index in einer [Tiled_extent](tiled-extent-class.md) Objekt. Diese Klasse verfügt über Eigenschaften, über die auf Elemente relativ zum lokalen Kachelursprung und relativ zum globalen Ursprung zugegriffen werden kann. Weitere Informationen zu gekachelten Bereichen finden Sie unter [mithilfe von Kacheln](../../../parallel/amp/using-tiles.md).  
@@ -94,7 +94,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 |----------|-----------------|  
 |[Barrier-Konstante](#tiled_index__barrier)|Speichert eine [Tile_barrier](tile-barrier-class.md) Objekt, das eine Grenze in der aktuellen Kachel mit Threads darstellt.|  
 |||  
-|[(globale Konstante)](#tiled_index__global)|Speichert ein [Index](index-class.md) -Objekt von Rang 1, 2 oder 3, die die globale darstellt Index in einer [Raster](https://msdn.microsoft.com/f7d1b6a6-586c-4345-b09a-bfc26c492cb0) Objekt.|  
+|[(globale Konstante)](#tiled_index__global)|Speichert ein [Index](index-class.md) -Objekt von Rang 1, 2 oder 3, die den globalen Index in einem Grid-Objekt darstellt.|  
 |[lokale Konstante](#tiled_index__local)|Speichert ein `index` -Objekt von Rang 1, 2 oder 3, der die Relative Index in der aktuellen Kachel mit einer [Tiled_extent](tiled-extent-class.md) Objekt.|  
 |[Rank-Konstante](#tiled_index__rank)|Speichert den Rang des `tiled_index`-Objekts.|  
 |[anordnungskonstante](#tiled_index__tile)|Speichert ein `index`-Objekt von Rang 1, 2 oder 3, das die Koordinaten der aktuellen Kachel eines `tiled_extent`-Objekts darstellt.|  

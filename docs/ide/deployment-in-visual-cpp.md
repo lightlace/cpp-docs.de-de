@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d7e82a384e3b2e8ca446843c91984e78754d6cc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 468ce7d65e31a70192e1a48bf21126dd96a1936e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204059"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678911"
 ---
 # <a name="deployment-in-visual-c"></a>Bereitstellung in Visual C++
 
@@ -58,7 +58,7 @@ Zusätzlich zu den dynamisch verknüpften Bibliotheken stellt Visual Studio die 
 
 ## <a name="troubleshooting-deployment-issues"></a>Beheben von Problemen bei der Bereitstellung
 
-Die Ladereihenfolge von Visual C++-Bibliotheken hängt vom System ab. Verwenden Sie "depends.exe" oder "where.exe", um Ladeprogrammprobleme zu diagnostizieren. Weitere Informationen finden Sie unter [Dynamic-Link Library Search Order (Windows) (Dynamic Link Library-Suchreihenfolge (Windows))](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx).
+Die Ladereihenfolge von Visual C++-Bibliotheken hängt vom System ab. Verwenden Sie "depends.exe" oder "where.exe", um Ladeprogrammprobleme zu diagnostizieren. Weitere Informationen finden Sie unter [Dynamic-Link Library Search Order (Windows) (Dynamic Link Library-Suchreihenfolge (Windows))](/windows/desktop/Dlls/dynamic-link-library-search-order).
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,7 +1,7 @@
 ---
 title: Operator SIGN? | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,23 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfa7aac72687201771001c93698d78f5ffe6489d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 1ffbf6443e10a15cb0a7f29bb3ed36cc9b50d714
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057694"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683986"
 ---
 # <a name="operator-sign"></a>Operator SIGN?
-Status der Anmelde-Flag. Verwendet nur in [. IF](../../assembler/masm/dot-if.md), [. WÄHREND](../../assembler/masm/dot-while.md), oder [. Wiederholen Sie die](../../assembler/masm/dot-repeat.md) blockiert und zur Laufzeit nicht zum Zeitpunkt der Assembly ausgewertet.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-SIGN?  
-  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Operatoren – Referenz](../../assembler/masm/operators-reference.md)
+
+Status des SSO-Flags. Verwendet nur in [. IF](../../assembler/masm/dot-if.md), [. WÄHREND](../../assembler/masm/dot-while.md), oder [. Wiederholen Sie die](../../assembler/masm/dot-repeat.md) blockiert und nicht zum Zeitpunkt der Assembly zur Laufzeit ausgewertet.
+
+## <a name="syntax"></a>Syntax
+
+> MELDEN SIE SICH?
+
+## <a name="see-also"></a>Siehe auch
+
+[Operatoren – Referenz](../../assembler/masm/operators-reference.md)<br/>

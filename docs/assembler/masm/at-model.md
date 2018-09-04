@@ -1,7 +1,7 @@
 ---
-title: '@Model | Microsoft Docs'
+title: '@Model | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88132e1c83ebea33282390fa2de35d40bdf4ff03
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f49d2a4a6dd04931ad1d9bf09ffe8bfeafad8150
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050661"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684063"
 ---
 # <a name="model"></a>@Model
-1 für **sehr klein** zu modellieren, 2 für **kleine** zu modellieren, 3 für **COMPACT** -Modell und 4 für **Mittel** zu modellieren, 5 für **groß**-Modell und 6 für **sehr groß** Modell und 7 für **Flatfile** Modell (numerische entsprechen).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-@Model  
-  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Symbole – Verweis](../../assembler/masm/symbols-reference.md)
+
+1 für **WINZIG** modellieren, 2 für **kleine** modellieren, 3 für **COMPACT** modellieren, wobei 4 für **Mittel** modellieren, 5 für **groß**modellieren, 6 für **sehr groß** Modell und 7 für **Flatfile** Modell (numerisch gleichgesetzt).
+
+## <a name="syntax"></a>Syntax
+
+> @Model
+
+## <a name="see-also"></a>Siehe auch
+
+[Symbole – Verweis](../../assembler/masm/symbols-reference.md)<br/>

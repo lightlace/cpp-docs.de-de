@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e61b6a9b967cc62bf8ba028783a019b8ecda7878
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 08b8aa623f79c32303a0d5fb84c9b865bff918d9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200269"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683576"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager-Klasse
 Implementiert die Kernfunktionen, die das Andocklayout in einem Hauptrahmenfenster steuern.  
@@ -924,7 +924,7 @@ CSmartDockingManager* GetSmartDockingManager();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die [intelligente Dock-Manager](https://msdn.microsoft.com/f537a1a6-fb9e-41d7-952f-0f25d5ee7534).  
+ Ein Zeiger auf den intelligenten Dock-Manager.  
   
 ##  <a name="getsmartdockingmanagerpermanent"></a>  CDockingManager::GetSmartDockingManagerPermanent  
  Ruft einen Zeiger auf den intelligenten Dock-Manager ab.  

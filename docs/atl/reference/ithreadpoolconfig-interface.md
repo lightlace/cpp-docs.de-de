@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b144e08e0f87165c284310afc86267f67b1c124
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5f23e46f2ef8de61e6dccc16a24e8c4bcfaa8f2e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222053"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677083"
 ---
 # <a name="ithreadpoolconfig-interface"></a>IThreadPoolConfig-Schnittstelle
 Diese Schnittstelle bietet Methoden zum Konfigurieren eines Threadpools.  
@@ -105,7 +105,7 @@ STDMETHOD(SetSize)int nNumThreads);
   
  Wenn *nNumThreads* ist negativ, der Absolute Wert multipliziert die Anzahl der Prozessoren auf dem Computer, der die Gesamtzahl der Threads abzurufen.  
   
- Wenn *nNumThreads* ist 0 (null), [ATLS_DEFAULT_THREADSPERPROC](https://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571) multipliziert die Anzahl der Prozessoren auf dem Computer, der die Gesamtzahl der Threads abzurufen.  
+ Wenn *nNumThreads* ist 0 (null), ATLS_DEFAULT_THREADSPERPROC multipliziert die Anzahl der Prozessoren auf dem Computer, der die Gesamtzahl der Threads abzurufen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.  

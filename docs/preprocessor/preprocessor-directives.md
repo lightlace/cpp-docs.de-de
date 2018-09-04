@@ -15,18 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a401cb74c07815f511ad37e53ac5be267029319c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7e218002171b7ad2d141be227ab277851487f0f5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212220"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678799"
 ---
 # <a name="preprocessor-directives"></a>Präprozessoranweisungen
 
 Präprozessoranweisungen wie z. B. `#define` und `#ifdef`, werden in der Regel verwendet, einfach und leicht zu kompilieren in verschiedenen ausführungsumgebungen zu vereinfachen. Anweisungen in der Quelldatei weisen den Präprozessor an, bestimmte Aktionen auszuführen. Beispielsweise kann der Präprozessor Token im Text ersetzen, den Inhalt von anderen Dateien in die Quelldatei einfügen oder die Kompilierung eines Teils der Datei unterdrücken, indem er Textabschnitte entfernt. Präprozessorzeilen werden vor der Makroerweiterung erkannt und ausgeführt. Wenn also die Erweiterung eines Makros aussieht wie ein Präprozessorbefehl, wird dieser Befehl nicht vom Präprozessor erkannt.
 
-Präprozessoranweisungen verwenden den gleichen Zeichensatz wie Quelldateianweisungen, mit der Ausnahme, dass Escapesequenzen nicht unterstützt werden. Der Zeichensatz, der in präprozessoranweisungen verwendet ist identisch mit der [ausführungszeichensatz](https://msdn.microsoft.com/a7901c61-524d-47c6-beb6-d9dacc2e72ed). Der Präprozessor erkennt auch negative Zeichenwerte.
+Präprozessoranweisungen verwenden den gleichen Zeichensatz wie Quelldateianweisungen, mit der Ausnahme, dass Escapesequenzen nicht unterstützt werden. Der Zeichensatz, der in Präprozessoranweisungen verwendet wird, ist mit dem Ausführungszeichensatz identisch. Der Präprozessor erkennt auch negative Zeichenwerte.
 
 Der Präprozessor erkennt die folgenden Anweisungen:
 

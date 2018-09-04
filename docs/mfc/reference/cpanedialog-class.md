@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 677518f45fdfb721027cc67b0210e9b437bed859
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cc74f89708132b0895c8980538b852c15087b5e6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213149"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682326"
 ---
 # <a name="cpanedialog-class"></a>CPaneDialog-Klasse
 Die `CPaneDialog` Klasse unterstützt ein nicht modales, andockbares Dialogfeld.  
@@ -58,7 +58,7 @@ class CPaneDialog : public CDockablePane
 |`CPaneDialog::OnEraseBkgnd`|Verarbeitet die [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) Nachricht. (Neu definiert [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|  
 |`CPaneDialog::OnLButtonDblClk`|Verarbeitet die [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) Nachricht. (Neu definiert [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
 |`CPaneDialog::OnLButtonDown`|Verarbeitet die [WM_LBUTTONDOWN](/windows/desktop/inputdev/wm-lbuttondown) Nachricht. (Neu definiert [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|  
-|`CPaneDialog::OnUpdateCmdUI`|Wird aufgerufen, durch das Framework das Dialogfeldfenster zu aktualisieren. (Überschreibt [CDockablePane:: OnUpdateCmdUI](https://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
+|`CPaneDialog::OnUpdateCmdUI`|Wird aufgerufen, durch das Framework das Dialogfeldfenster zu aktualisieren. (Überschreibt [CDockablePane:: OnUpdateCmdUI](cdockablepane-class.md).)|  
 |`CPaneDialog::OnWindowPosChanging`|Verarbeitet die [WM_WINDOWPOSCHANGING](/windows/desktop/winmsg/wm-windowposchanging) Nachricht. (Neu definiert [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
 |[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|Gibt die Vorlage für ein Dialogfeld, das einen OLE-Container-Steuerelement ist.|  
   

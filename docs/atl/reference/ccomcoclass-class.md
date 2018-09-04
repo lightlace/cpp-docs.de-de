@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 693a0e63e5fe67b1a3837ae71945ccc60b5fb247
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 475a4f4d5f39f7fdfa569441fb2cb0fc72b745a0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204342"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677881"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass-Klasse
 Diese Klasse stellt Methoden zum Erstellen von Instanzen einer Klasse und ihre Eigenschaften abrufen.  
@@ -58,7 +58,7 @@ class CComCoClass
 |[CComCoClass::GetObjectDescription](#getobjectdescription)|(Statisch) Überschreiben Sie, um die Beschreibung des Objekts zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CComCoClass` Stellt Methoden zum Abrufen von CLSID des Objekts, das Festlegen von Fehlerinformationen und Erstellen von Instanzen der Klasse. Jede Klasse registriert wird, der [objektzuordnung](https://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f) abgeleitet werden sollte `CComCoClass`.  
+ `CComCoClass` Stellt Methoden zum Abrufen von CLSID des Objekts, das Festlegen von Fehlerinformationen und Erstellen von Instanzen der Klasse. Jede Klasse, die in der objektzuordnung registriert abgeleitet werden sollte `CComCoClass`.  
   
  `CComCoClass` definiert außerdem das Klasse Factory und Aggregation Standardmodell für Ihr Objekt aus. `CComCoClass` verwendet die folgenden beiden Makros:  
   

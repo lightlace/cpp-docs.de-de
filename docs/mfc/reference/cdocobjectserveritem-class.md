@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e660144808c3e9abf8f8c090b9af5ff2eb73d9e9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 985333deaeceeed594e11223c417f3217e8b0322
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211804"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682042"
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem-Klasse
 Implementiert OLE-Serververben speziell für DocObject-Server.  
@@ -58,11 +58,12 @@ class CDocObjectServerItem : public COleServerItem
   
 |Name|Beschreibung|  
 |----------|-----------------|  
+|[CDocObjectServerItem::OnDoVerb](#ondoverb)|Löst eine Ausnahme aus, wenn das Framework wird versucht, eine DocObject-Element auszublenden.|
 |[CDocObjectServerItem::OnHide](#onhide)|Löst eine Ausnahme aus, wenn das Framework wird versucht, eine DocObject-Element auszublenden.|  
 |[CDocObjectServerItem::OnShow](#onshow)|Aufgerufen, um das Objekt Element direktes machen aktiv. Wenn das Element nicht DocObject ist, ruft [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|  
   
 ## <a name="remarks"></a>Hinweise  
- `CDocObjectServerItem` überschreibbare Memberfunktionen definiert: [OnHide](#onhide), [OnOpen](https://msdn.microsoft.com/7a9b1363-6ad8-4732-9959-4e35c07644fd), und [OnShow](#onshow).  
+ `CDocObjectServerItem` überschreibbare Memberfunktionen definiert: [OnHide](#onhide), [OnDoVerb](#ondoverb), und [OnShow](#onshow).  
   
  Verwendung von `CDocObjectServerItem`, stellen sicher, dass die [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) außer Kraft setzen, Ihre `COleServerDoc`-abgeleiteten Klasse gibt eine neue `CDocObjectServerItem` Objekt. Wenn Sie alle Funktionen in Ihren Artikel ändern müssen, können Sie erstellen eine neue Instanz Ihrer eigenen `CDocObjectServerItem`-abgeleitete Klasse.  
   

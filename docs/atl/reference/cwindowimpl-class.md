@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb99d0cb37fff5abe5a7eb54d3ba9c4226e5fd1c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 27ce284bee21d17101c9e93627841f2dcd6c00d4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197200"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678627"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl-Klasse
 Stellt Methoden für das Erstellen eines Fensters oder von Unterklassen eines Fensters bereit  
@@ -156,16 +156,16 @@ HWND Create(
  [in] Gibt den Namen des Fensters. Der Standardwert ist NULL.  
   
  *dwStyle*  
- [in] Der Stil des Fensters. Dieser Wert wird mit der Formatvorlage, die von der "traits"-Klasse bereitgestellt wird, für das Fenster kombiniert. Der Standardwert bietet die "traits"-Klasse vollständige Kontrolle über den Stil an. Eine Liste der möglichen Werte, finden Sie unter [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) im Windows SDK.  
+ [in] Der Stil des Fensters. Dieser Wert wird mit der Formatvorlage, die von der "traits"-Klasse bereitgestellt wird, für das Fenster kombiniert. Der Standardwert bietet die "traits"-Klasse vollständige Kontrolle über den Stil an. Eine Liste der möglichen Werte, finden Sie unter [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) im Windows SDK.  
   
  *dwExStyle*  
- [in] Der erweiterte Fensterstil. Dieser Wert wird mit der Formatvorlage, die von der "traits"-Klasse bereitgestellt wird, für das Fenster kombiniert. Der Standardwert bietet die "traits"-Klasse vollständige Kontrolle über den Stil an. Eine Liste der möglichen Werte, finden Sie unter [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ [in] Der erweiterte Fensterstil. Dieser Wert wird mit der Formatvorlage, die von der "traits"-Klasse bereitgestellt wird, für das Fenster kombiniert. Der Standardwert bietet die "traits"-Klasse vollständige Kontrolle über den Stil an. Eine Liste der möglichen Werte, finden Sie unter [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) im Windows SDK.  
   
  *MenuOrID*  
  [in] Für ein untergeordnetes Fenster den Fenster-Bezeichner. Für ein Fenster der obersten Ebene ein Menühandle für das Fenster. Der Standardwert ist **0 HE**.  
   
  *lpCreateParam*  
- [in] Ein Zeiger auf die fenstererstellung Daten. Eine vollständige Beschreibung finden Sie unter der Beschreibung für den letzten Parameter um [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680).  
+ [in] Ein Zeiger auf die fenstererstellung Daten. Eine vollständige Beschreibung finden Sie unter der Beschreibung für den letzten Parameter um [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa).  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wenn erfolgreich, das Handle für das neu erstellte Fenster. Andernfalls NULL.  
@@ -262,7 +262,7 @@ WNDPROC m_pfnSuperWindowProc;
   
 |Typ des Fensters|Die Fensterprozedur|  
 |--------------------|----------------------|  
-|Ein Fenster auf der Grundlage von einer neue Fensterklasse, die durch die angegebenen die [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) Makro.|Die [DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572) Win32-Funktion.|  
+|Ein Fenster auf der Grundlage von einer neue Fensterklasse, die durch die angegebenen die [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) Makro.|Die [DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca) Win32-Funktion.|  
 |Ein Fenster auf der Grundlage von einer Fensterklasse, die eine vorhandene Klasse, die durch die angegebenen ändert die [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) Makro.|Die Fensterprozedur der vorhandene Fensterklasse.|  
 |Ein untergeordnetes Fenster.|Der als Unterklasse ursprüngliche Fensterprozedur von Windows.|  
   

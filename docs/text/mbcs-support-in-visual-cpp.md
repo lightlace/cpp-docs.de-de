@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51472ba9c0bc15d6b12ddcd3a3b88b65a3a2682b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1e66254e9e2e0090fafb1a1c0d2aa061d6e70806
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205195"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680858"
 ---
 # <a name="mbcs-support-in-visual-c"></a>MBCS-Unterstützung in Visual C++
 Wenn in einer MBCS-aktivierten Version von Windows ausführen, ist das Visual C++-Entwicklungssystem (einschließlich der integrierten Quellcode-Code-Editor, Debugger und über die Befehlszeile-Tools) MBCS-aktiviert, mit Ausnahme der Fenster "Arbeitsspeicher".  
@@ -47,13 +47,13 @@ Wenn in einer MBCS-aktivierten Version von Windows ausführen, ist das Visual C+
  Visual C++ akzeptiert Double-Byte-Zeichen, wo es angemessen ist. Dies schließt Pfad und Dateinamen in Dialogfeldern und Einträge in der Visual C++ Ressourcen-Editor (z. B. statischer Text in den Dialog-Editor) und statischen Texteinträge in der Symbol-Editor. Der Präprozessor erkennt darüber hinaus einige Doppelbyte-Direktiven, z. B. den Dateinamen in `#include` -Anweisungen, und als Argumente für die `code_seg` und `data_seg` Pragmas. In der Quellcode-Editor werden Double-Byte-Zeichen in Kommentaren und Zeichenfolgenliterale akzeptiert, jedoch nicht in C/C++-Sprachelemente (z. B. Variablennamen).  
   
 ##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a> Unterstützung für den Eingabemethoden-Editor (IME)  
- Anwendungen, die geschrieben wurden, für die ostasiatischen Märkte, die MBCS (z. B. Japan) in der Regel verwenden den Windows-IME-Unterstützung für beide Single und Double-Byte-Zeichen eingeben. Die Entwicklungsumgebung von Visual C++ enthält die vollständige Unterstützung für den IME. Weitere Informationen finden Sie unter [IME-Beispiel: veranschaulicht, wie Steuerelement IME-Modus und Implementieren von IME Level 3](https://msdn.microsoft.com/87ebdf65-cef0-451d-a6fc-d5fb64178b14).  
+ Anwendungen, die geschrieben wurden, für die ostasiatischen Märkte, die MBCS (z. B. Japan) in der Regel verwenden den Windows-IME-Unterstützung für beide Single und Double-Byte-Zeichen eingeben. Die Entwicklungsumgebung von Visual C++ enthält die vollständige Unterstützung für den IME.
   
  Japanische Tastaturen unterstützen keine direkte Kanji-Zeichen. Der IME konvertiert phonetische String, als möglichen Kanji-Darstellungen eines der anderen japanische Alphabet (Romaji, Katakana-Zeichen oder Hiragana) eingetragen. Wenn die Mehrdeutigkeit vorliegt, können Sie verschiedene Möglichkeiten zur Auswahl auswählen. Wenn Sie das beabsichtigte Kanji Zeichen ausgewählt haben, der IME übergibt zwei `WM_CHAR` Nachrichten an die Anwendung steuern.  
   
  Der IME aktiviert, indem die ALT-Taste +\` Tastenkombination, die als eine Reihe von Schaltflächen (eine Indicator) und eine Konvertierungsfenster angezeigt wird. Im Fenster auf der die Einfügemarke positioniert. Die Anwendung muss behandeln `WM_MOVE` und `WM_SIZE` Nachrichten durch Neupositionieren der Konvertierung-Fenster, um die neue Position und Größe des Zielfensters entsprechen.  
   
- Wenn Sie die Benutzer der Anwendung, um die Möglichkeit haben, Kanji Zeichen eingeben möchten, muss die Anwendung Windows IME behandeln. Weitere Informationen zu IME-Programmierung, finden Sie unter [Eingabemethoden-Editor](/previous-versions/windows/desktop/ms776145\(v=vs.85\)).  
+ Wenn Sie die Benutzer der Anwendung, um die Möglichkeit haben, Kanji Zeichen eingeben möchten, muss die Anwendung Windows IME behandeln. Weitere Informationen zu IME-Programmierung, finden Sie unter [Eingabe-Methodenmanager](/windows/desktop/intl/input-method-manager).  
   
 ## <a name="visual-c-debugger"></a>Visual C++-Debugger  
  Visual C++-Debugger ermöglicht das Festlegen von Haltepunkten für den IME-Nachrichten. Darüber hinaus kann das Fenster "Arbeitsspeicher" Double-Byte-Zeichen anzeigen.  

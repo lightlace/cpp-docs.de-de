@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5b080945309732bec06c63eb665bbf6dd5f4acb5
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2b0a5c568a774d0aed05d702454664e653989401
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340562"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676835"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Fragen zum OLE DB-Architekturdesign
 Die folgenden Probleme sollten vor dem Starten der OLE DB-Anwendung:  
@@ -39,15 +39,9 @@ Die folgenden Probleme sollten vor dem Starten der OLE DB-Anwendung:
  **Haben Sie älteren Code mit einem anderen datenzugriffstechnologie (ADO, ODBC oder DAO)?**  
  Angesichts der möglichen Kombinationen von Technologien (z. B. Verwenden von ADO-Komponenten mit OLE DB-Komponenten, und Migrieren von ODBC-Code zu OLE DB), ist würde den Rahmen der Visual C++-Dokumentation in allen Situationen abdecken. Stehen jedoch zahlreiche Artikel, die für verschiedene Szenarien auf den folgenden Microsoft-Websites:  
   
--   [Microsoft-Hilfe und -Support](http://go.microsoft.com/fwlink/p/?linkid=148218)  
+-   [Microsoft-Hilfe und -Support](https://support.microsoft.com/)  
   
--   [Microsoft Data Access – technische Artikel (Übersicht)](http://go.microsoft.com/fwlink/p/?linkid=148217)  
-  
--   [Visual Studio Solution Center](http://go.microsoft.com/fwlink/p/?linkid=148215)  
-  
--   [Auf Microsoft.com suchen](http://search.microsoft.com/)  
-  
- Wenn Sie eine Suche ausführen, geben Sie eine Kombination der Schlüsselwörter, die Ihr Szenario am besten geeignet ist: zum Beispiel: Wenn Sie ADO-Objekte mit einem OLE DB-Anbieter verwendet haben, versuchen Sie es mit eine boolesche Suche mit **ADO und "OLE DB"**. Wenn Sie ältere DAO-Code zu ODBC zu migrieren möchten, wählen Sie "alle Wörter", und geben Sie z. B. Zeichenfolgen **Migrieren von DAO**.  
+-   [Microsoft Data Access – technische Artikel (Übersicht)](https://msdn.microsoft.com/en-us/library/ms810811.aspx)  
   
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB-Programmierung](../../data/oledb/ole-db-programming.md)   

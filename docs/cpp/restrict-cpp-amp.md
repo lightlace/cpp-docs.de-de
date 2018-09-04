@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 758862d5296cf0a51cc0e04d849b044b3694e087
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e3385e68b7a5a112e5ff63b63afe5dd83603cf72
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461887"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678195"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 Der Einschränkungsspezifizierer kann auf Funktions- und Lambda-Deklarationen angewendet werden. Er erzwingt Einschränkungen für den Code in der Funktion und das Verhalten der Funktion in Anwendungen, die C++ Accelerated Massive Parallelism(C++ AMP)-Laufzeit verwenden.  
@@ -87,7 +87,7 @@ Der Einschränkungsspezifizierer kann auf Funktions- und Lambda-Deklarationen an
   
     -   Varargs.  
   
- Eine Erläuterung der funktionseinschränkungen, finden Sie unter [Restrict(amp)-Einschränkungen](http://go.microsoft.com/fwlink/p/?LinkId=251089).  
+ Eine Erläuterung der funktionseinschränkungen, finden Sie unter [einschränken (Amp)-Einschränkungen](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/12/19/restrictamp-restrictions-part-0-of-n-introduction/).  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt, wie Sie mit der `restrict(amp)`Klausel.  

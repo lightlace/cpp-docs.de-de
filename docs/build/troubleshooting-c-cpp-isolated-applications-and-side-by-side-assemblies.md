@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4550d523a4410734c391e2e4d266ae536b4610b4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3768056a240bb8ad647287b4ca2b60f8e7ede484
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218668"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681384"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Problembehandlung bei isolierten Anwendungen und parallelen Assemblys (C/C++)
 Beim Laden einer C/C++-Anwendung kann ein Fehler auftreten, wenn abhängige Bibliotheken nicht gefunden werden. In diesem Artikel werden einige häufige Ursachen für Fehler beim Laden einer C/C++-Anwendung beschrieben und Schritte zur Lösung des jeweiligen Problems vorgeschlagen.  
@@ -46,7 +46,7 @@ Beim Laden einer C/C++-Anwendung kann ein Fehler auftreten, wenn abhängige Bibl
   
 3.  Wenn die Anwendung von parallelen Assemblys abhängig ist und kein Manifest vorhanden ist, müssen Sie sicherstellen, dass der Linker ein Manifest für das Projekt generiert. Überprüfen Sie die Linkeroption **Manifest generieren** in die **Projekteigenschaften** im Dialogfeld für das Projekt.  
   
-4.  Wenn das Manifest in die Binärdatei eingebettet ist, stellen Sie sicher, dass die ID von RT_MANIFEST für diesen Typ von Binärdatei korrekt ist. Weitere Informationen, welche Ressourcen-ID verwenden, finden Sie unter [verwenden-Seite-an-Seite-Assemblys als Ressource (Windows)](https://msdn.microsoft.com/library/windows/desktop/aa376617.aspx). Wenn sich das Manifest in einer separaten Datei befindet, öffnen Sie es in einem XML- oder Text-Editor. Weitere Informationen zu Manifesten und Regeln für die Bereitstellung finden Sie unter [Manifeste](https://msdn.microsoft.com/library/aa375365).  
+4.  Wenn das Manifest in die Binärdatei eingebettet ist, stellen Sie sicher, dass die ID von RT_MANIFEST für diesen Typ von Binärdatei korrekt ist. Weitere Informationen, welche Ressourcen-ID verwenden, finden Sie unter [verwenden-Seite-an-Seite-Assemblys als Ressource (Windows)](/windows/desktop/SbsCs/using-side-by-side-assemblies-as-a-resource). Wenn sich das Manifest in einer separaten Datei befindet, öffnen Sie es in einem XML- oder Text-Editor. Weitere Informationen zu Manifesten und Regeln für die Bereitstellung finden Sie unter [Manifeste](https://msdn.microsoft.com/library/aa375365).  
   
     > [!NOTE]
     >  Wenn sowohl ein eingebettetes Manifest als auch eine separate Manifestdatei vorhanden sind, verwendet das Ladeprogramm des Betriebssystems das eingebettete Manifest und ignoriert die separate Datei. Unter Windows XP trifft allerdings das Gegenteil zu – die separate Manifestdatei wird verwendet und das eingebettete Manifest ignoriert.  

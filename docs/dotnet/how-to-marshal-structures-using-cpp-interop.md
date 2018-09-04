@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e135dd1cbfc3aeb164449a1f09e6c1cdf6287582
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bbf85f8da0477de2483ee2ce4b981d832421da95
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215119"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680901"
 ---
 # <a name="how-to-marshal-structures-using-c-interop"></a>Gewusst wie: Marshallen von Strukturen mit C++-Interop
 In diesem Thema wird veranschaulicht, einen Aspekt der Visual C++-Interoperabilität. Weitere Informationen finden Sie unter [mithilfe C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
@@ -32,7 +32,7 @@ In diesem Thema wird veranschaulicht, einen Aspekt der Visual C++-Interoperabili
  Im folgenden code, Beispiele für die Verwendung der [verwaltete, unverwaltete](../preprocessor/managed-unmanaged.md) #pragma-Anweisungen zum Implementieren verwaltet und nicht verwaltete Funktionen in der gleichen Datei, aber diese Funktionen auf die gleiche Weise interagieren, wenn in separaten Dateien definiert. Dateien, die ausschließlich nicht verwaltete Funktionen müssen nicht für die Kompilierung mit [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt eine Struktur an eine nicht verwaltete Funktion, von einer verwalteten übergeben, sowohl als Wert und als Verweis. Da die Struktur in diesem Beispiel nur einfache, systeminterne Datentypen enthält (finden Sie unter [blitfähige und nicht blitfähige Typen](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), kein besonderes Marshalling ist erforderlich. Marshallen von nicht blitfähigen Strukturen, z. B. die, die Zeiger enthalten finden Sie unter [Vorgehensweise: Marshallen eingebetteter Zeiger mithilfe C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+ Das folgende Beispiel zeigt eine Struktur an eine nicht verwaltete Funktion, von einer verwalteten übergeben, sowohl als Wert und als Verweis. Da die Struktur in diesem Beispiel nur einfache, systeminterne Datentypen enthält (finden Sie unter [blitfähige und nicht blitfähige Typen](/dotnet/framework/interop/blittable-and-non-blittable-types)), kein besonderes Marshalling ist erforderlich. Marshallen von nicht blitfähigen Strukturen, z. B. die, die Zeiger enthalten finden Sie unter [Vorgehensweise: Marshallen eingebetteter Zeiger mithilfe C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct1.cpp  
@@ -89,7 +89,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht das Übergeben einer Struktur aus einer nicht verwalteten für eine verwaltete Funktion, ein, nach Wert und Verweis. Da die Struktur in diesem Beispiel nur einfache, systeminterne Datentypen enthält (finden Sie unter [blitfähige und nicht blitfähige Typen](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), kein besonderes marshalling ist erforderlich. Marshallen von nicht blitfähigen Strukturen, z. B. die, die Zeiger enthalten finden Sie unter [Vorgehensweise: Marshallen eingebetteter Zeiger mithilfe C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+ Das folgende Beispiel veranschaulicht das Übergeben einer Struktur aus einer nicht verwalteten für eine verwaltete Funktion, ein, nach Wert und Verweis. Da die Struktur in diesem Beispiel nur einfache, systeminterne Datentypen enthält (finden Sie unter [blitfähige und nicht blitfähige Typen](/dotnet/framework/interop/blittable-and-non-blittable-types)), kein besonderes marshalling ist erforderlich. Marshallen von nicht blitfähigen Strukturen, z. B. die, die Zeiger enthalten finden Sie unter [Vorgehensweise: Marshallen eingebetteter Zeiger mithilfe C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct2.cpp  

@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b7ec520d27d52bb3e50a58780d822363016ef76
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ff46958afea8825f29941d9f3cbead20c533c76c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606862"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676984"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Common Language Runtime-Kompilierung)
 Ermöglicht Anwendungen und Komponenten, Funktionen aus der Common Language Runtime (CLR) zu verwenden.  
@@ -68,9 +68,7 @@ Ermöglicht Anwendungen und Komponenten, Funktionen aus der Common Language Runt
  Vor Visual C++ 2005 war bei Verwendung von **/clr:noAssembly** die Angabe von **/LD**erforderlich. **/LD** ist jetzt bei der Angabe von **/clr:noAssembly**impliziert.  
   
  **/clr:initialAppDomain**  
- Ermöglicht Visual C++-Anwendung auf Version 1 der CLR ausgeführt. Bei Verwendung von **InitialAppDomain**, einige der Probleme angezeigt werden kann, die hier erörtert werden [Fehler: AppDomainUnloaded-Ausnahme bei der Verwendung verwalteter Erweiterungen für Visual C++-Komponenten](http://go.microsoft.com/fwlink/p/?linkid=169465) auf der Microsoft Support-Website.  
-  
- Eine Anwendung, die mit **initialAppDomain** kompiliert wurde, sollte nicht mit einer Anwendung verwendet werden, die ASP.NET verwendet, da Version 1 von CLR die Unterstützung hierfür fehlt.  
+ Ermöglicht Visual C++-Anwendung auf Version 1 der CLR ausgeführt.  Eine Anwendung, die mit **initialAppDomain** kompiliert wurde, sollte nicht mit einer Anwendung verwendet werden, die ASP.NET verwendet, da Version 1 von CLR die Unterstützung hierfür fehlt.  
   
  **/clr:nostdlib**  
  Weist den Compiler an, das Standardverzeichnis für \clr zu ignorieren. Der Compiler erzeugt Fehler, wenn Sie mehrere Versionen einer DLL wie „System.dll“ einschließen. Mit dieser Option können Sie angeben, welches Framework während der Kompilierung verwendet wird.  

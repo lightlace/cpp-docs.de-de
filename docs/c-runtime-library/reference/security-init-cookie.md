@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e6bfafa1322d9730923867c86f754153f641460
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 84edc9fb461a6f0721abb648a88e1d81a4a19d07
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406575"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678956"
 ---
 # <a name="securityinitcookie"></a>__security_init_cookie
 
@@ -55,9 +55,9 @@ void __security_init_cookie(void);
 
 Das globale Sicherheitscookie wird zum Schutz vor Pufferüberlauf in dem Code verwendet, der mit [/GS (Puffer-Sicherheitsüberprüfung)](../../build/reference/gs-buffer-security-check.md) kompiliert wurde, sowie in Code mit Ausnahmebehandlung. Beim Einstieg in eine vor Pufferüberlauf geschützte Funktion wird das Cookie auf dem Stapel abgelegt, und bei Funktionsende wird der Wert auf dem Stapel mit dem globalen Cookie verglichen. Jeglicher Unterschied zwischen diesen Werten weist darauf hin, dass ein Pufferüberlauf eingetreten ist. Das Programm wird daraufhin sofort beendet.
 
-In der Regel **__security_init_cookie** wird von der CRT aufgerufen, wenn es initialisiert wird. Wenn Sie CRT-Initialisierung umgehen – z. B. bei Verwendung von [/Entry](../../build/reference/entry-entry-point-symbol.md) an einen Einstiegspunkt – Sie aufrufen müssen **__security_init_cookie** selbst. Wenn **__security_init_cookie** nicht aufgerufen wird, das globale Sicherheitscookie auf den Standardwert festgelegt ist und zum Schutz vor Pufferüberlauf ist beeinträchtigt. Da ein Angreifer diesen Cookie-Standardwert zum der pufferüberlaufprüfungen nutzen kann, empfiehlt es sich, dass Sie immer Aufrufen **__security_init_cookie** beim Definieren Ihres eigenen Einstiegspunkts.
+In der Regel **"__security_init_cookie"** wird von der CRT aufgerufen, wenn es initialisiert wird. Wenn Sie die CRT-Initialisierung umgehen, z. B. bei Verwendung von [/Entry](../../build/reference/entry-entry-point-symbol.md) zum Angeben eines einstiegpunkts – Sie aufrufen müssen **"__security_init_cookie"** selbst. Wenn **"__security_init_cookie"** nicht aufgerufen wird, das globale Sicherheitscookie auf den Standardwert festgelegt ist, und Schutz vor Pufferüberlauf ist beeinträchtigt. Da ein Angreifer diesen Cookie-Standardwert zum der pufferüberlaufprüfungen nutzen kann, es wird empfohlen, dass Sie immer Aufrufen **"__security_init_cookie"** beim Definieren Ihres eigenen Einstiegspunkts.
 
-Der Aufruf von **__security_init_cookie** muss erfolgen, bevor eine vor Pufferüberlauf geschützte Funktion eingegeben wird; andernfalls wird ein unechter Pufferüberlauf erkannt. Weitere Informationen finden Sie unter [C-Laufzeitfehler R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md).
+Der Aufruf von **"__security_init_cookie"** müssen vorgenommen werden, bevor eine vor Pufferüberlauf geschützte Funktion eingegeben wird; andernfalls wird ein unechter Pufferüberlauf erkannt. Weitere Informationen finden Sie unter [C-Laufzeitfehler R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -65,12 +65,12 @@ Beispiele finden Sie unter [C-Laufzeitfehler R6035](../../error-messages/tool-er
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**__security_init_cookie**|\<process.h>|
 
-**__security_init_cookie** ist eine Microsoft-Erweiterung der standard-C-Laufzeitbibliothek. Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+**"__security_init_cookie"** ist eine Microsoft-Erweiterung für die standard-C-Laufzeitbibliothek. Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compiler-Sicherheitsprüfungen im Detail](http://go.microsoft.com/fwlink/p/?linkid=7260)<br/>
+[Microsoft Security Response Center](https://www.microsoft.com/en-us/msrc?rtc=1)

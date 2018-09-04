@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2e9d9fc72791572d840b88f1d74eb736e3ad65c7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d6397e6e8355e8361ea95f03fc9b67d2f3211478
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213709"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685572"
 ---
 # <a name="commands-and-tables"></a>Befehle und Tabellen
 Befehle und Tabellen können Sie auf Rowsets zugreifen; d. h. Rowsets öffnen, führen Sie Befehle und Binden von Spalten. Die [CCommand](../../data/oledb/ccommand-class.md) und [CTable](../../data/oledb/ctable-class.md) Klassen instanziieren der Befehls- und Tabellenobjekte. Diese Klassen werden aus [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) wie in der folgenden Abbildung dargestellt.  
@@ -43,7 +43,7 @@ Befehls- und Tabellenklassen
   
 -   Für Datenquellen, die Befehle unterstützen, können Sie die `CCommand` stattdessen. Um einen Befehl auszuführen, rufen [öffnen](../../data/oledb/ccommand-open.md) für diese Klasse. Als Alternative können Sie aufrufen können `Prepare` um einen Befehl vorzubereiten, die mehr als einmal ausgeführt werden soll.  
   
-     `CCommand` verfügt über drei Argumente: ein Accessortyp, ein Rowset und einen Ergebnistyp (`CNoMultipleResults`, in der Standardeinstellung oder `CMultipleResults`). Bei Angabe von `CMultipleResults`, `CCommand` -Klasse unterstützt die `IMultipleResults` Schnittstelle und behandelt mehrere Rowsets. Die [DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) Beispiel wird veranschaulicht, die mehrere Ergebnisse zu behandeln.  
+     `CCommand` verfügt über drei Argumente: ein Accessortyp, ein Rowset und einen Ergebnistyp (`CNoMultipleResults`, in der Standardeinstellung oder `CMultipleResults`). Bei Angabe von `CMultipleResults`, `CCommand` -Klasse unterstützt die `IMultipleResults` Schnittstelle und behandelt mehrere Rowsets. Die [DBVIEWER](https://github.com/Microsoft/VCSamples) Beispiel wird veranschaulicht, die mehrere Ergebnisse zu behandeln.  
   
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)

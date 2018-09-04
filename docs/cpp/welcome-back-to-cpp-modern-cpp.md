@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d626385523cb957b44589784c2e69539b5ed8fca
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4c659262d11d929e94958cee687103648270db23
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572078"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679280"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Willkommen zurück bei C++ (Modern C++)
 C++ ist eine der am häufigsten verwendeten Programmiersprachen der Welt. Gut geschriebene C++-Programme sind schnell und effizient. Die Sprache ist flexibler als andere Sprachen, da sie verwendet werden kann, um eine breite Palette von Apps zu erstellen: lustige und aufregende Spiele, leistungsstarke wissenschaftliche Software, Gerätetreiber, eingebettete Programme und Windows-Clientapps. Seit mehr als 20 Jahren wird C++ zum Lösen von Problemen wie dieser und vieler anderer. Ihnen ist möglicherweise nicht bekannt, dass eine zunehmende Anzahl von C++-Programmierern sich von der uneleganten Programmierung im C-Stil von einst abgewandt haben, hin zu einem modernen C++.  
@@ -133,7 +133,7 @@ void f()
   
 -   [Portabilität an ABI-Grenzen](../cpp/portability-at-abi-boundaries-modern-cpp.md)  
   
- Weitere Informationen finden Sie im StackOverflow-Artikel [welche C++-Idiome in C ++ 11 als veraltet markiert werden](http://go.microsoft.com/fwlink/p/?linkid=402836)  
+ Weitere Informationen finden Sie im StackOverflow-Artikel [welche C++-Idiome in C ++ 11 veraltet sind](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11).  
   
 ## <a name="see-also"></a>Siehe auch  
  [C++ Language Reference (C++-Programmiersprachenreferenz)](../cpp/cpp-language-reference.md)   

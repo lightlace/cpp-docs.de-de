@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13d163ad8de9ef3ee6c8c1375c234a412c70de7d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ebda52eaa4deab6ddf8535da9b4c5a94a2cbc77b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213135"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679404"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Hinzufügen neuer Funktionen mit Code-Assistenten (C++)
 Nachdem Sie ein Projekt erstellt haben, sollten Sie Funktionen zum Projekt hinzufügen oder diese ändern. Dazu zählt das Erstellen neuer Klassen, das Hinzufügen von neuen Memberfunktionen und -variablen sowie das Hinzufügen von Automatisierungsmethoden und -eigenschaften. Die Code-Assistenten wurden dafür entwickelt, diese Aktionen auszuführen.  
@@ -56,7 +56,7 @@ Nachdem Sie ein Projekt erstellt haben, sollten Sie Funktionen zum Projekt hinzu
   
 -   Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf einen beliebigen Ordner, und klicken Sie im Kontextmenü auf **Hinzufügen**, um neue oder vorhandene Dateien, weitere Ordner, Elemente, Klassen, Ressourcen oder Webverweise zum Projekt hinzuzufügen.  
   
--   Klicken Sie im Fenster [Klassenansicht](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) mit der rechten Maustaste auf den entsprechenden Knoten, und klicken Sie im Kontextmenü auf **Hinzufügen**, um Funktionen, Variablen, Klassen, Eigenschaften, Methoden, Ereignisse, Schnittstellen, Verbindungspunkte oder anderen Code zu Ihrem Projekt hinzuzufügen.  
+-   Klicken Sie im Fenster [Klassenansicht](/visualstudio/ide/viewing-the-structure-of-code) mit der rechten Maustaste auf den entsprechenden Knoten, und klicken Sie im Kontextmenü auf **Hinzufügen**, um Funktionen, Variablen, Klassen, Eigenschaften, Methoden, Ereignisse, Schnittstellen, Verbindungspunkte oder anderen Code zu Ihrem Projekt hinzuzufügen.  
   
     > [!NOTE]
     >  Visual Studio stellt keinen Assistenten dafür bereit, Schnittstellen zu einem Projekt hinzuzufügen. Sie können Schnittstellen zu einem ATL-Projekt oder zu einem [MFC-Projekt](../mfc/reference/adding-atl-support-to-your-mfc-project.md) hinzufügen, indem Sie mithilfe des [ATL-Assistenten für einfache Objekte](../atl/reference/atl-simple-object-wizard.md) ein einfaches Objekt hinzufügen. Öffnen Sie alternativ die IDL-Datei des Projekts, und erstellen Sie die Schnittstelle, indem Sie Folgendes eingeben:  

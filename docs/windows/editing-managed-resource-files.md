@@ -19,18 +19,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba809b4522637fd7307a403601f4621a5cb53ce8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4fe7dac220838841179096e8fe40d2c04dfcad1b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215239"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677270"
 ---
 # <a name="editing-managed-resource-files"></a>Bearbeiten von verwalteten Ressourcendateien
 
 Verwaltete Ressourcendateien (.resx) sind XML-Dateien. Wenn Sie eine verwaltete Ressourcendatei hinzufügen, um das Projekt aus der **neues Element hinzufügen** im Dialogfeld die **verwaltete Ressourcen-Editor** wird standardmäßig geöffnet.
-
-Weitere Informationen finden Sie unter [Ressourcen. RESX-Dateiformat](https://msdn.microsoft.com/0c476133-87e4-47e8-b0ef-4b88f4ef3dc5).
 
 ## <a name="see-also"></a>Siehe auch
 

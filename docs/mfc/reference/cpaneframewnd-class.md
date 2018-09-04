@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcc4ec99ea8dc7dfc0706237e274b6b96f437829
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: fe0d8b5b0679e8770bda715d3d0da0eaa3b5cce3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214990"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682855"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd-Klasse
 Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
@@ -210,7 +210,7 @@ class CPaneFrameWnd : public CWnd
 |[CPaneFrameWnd::OnShowPane](#onshowpane)|Wird vom Framework aufgerufen, wenn ein Bereich im Minirahmenfenster angezeigt oder ausgeblendet wird.|  
 |[CPaneFrameWnd::PaneFromPoint](#panefrompoint)|Gibt einen Bereich zurück, wenn er einen vom Benutzer angegebenen Punkt innerhalb einer Minirahmenfensters enthält.|  
 |[CPaneFrameWnd::Pin](#pin)||  
-|`CPaneFrameWnd::PreTranslateMessage`|Von Klasse verwendeten [CWinApp](../../mfc/reference/cwinapp-class.md) um fenstermeldungen zu übersetzen, bevor sie um weitergeleitet werden die [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows-Funktionen.|  
+|`CPaneFrameWnd::PreTranslateMessage`|Von Klasse verwendeten [CWinApp](../../mfc/reference/cwinapp-class.md) um fenstermeldungen zu übersetzen, bevor sie um weitergeleitet werden die [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows-Funktionen.|  
 |[CPaneFrameWnd::RedrawAll](#redrawall)|Zeichnet alle Minirahmenfenster neu.|  
 |[CPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|Wird vom Framework aufgerufen, um ungültige Bereiche zu entfernen.|  
 |[CPaneFrameWnd::RemovePane](#removepane)|Entfernt einen Bereich aus dem Minirahmenfenster.|  
@@ -532,7 +532,7 @@ virtual int GetCaptionHeight() const;
  Die Höhe in Pixel, der das Minirahmenfenster.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode, um die Höhe eines Minirahmenfensters bestimmt. Standardmäßig ist die Höhe auf SM_CYSMCAPTION festgelegt. Weitere Informationen finden Sie unter [GetSystemMetrics Funktion](https://msdn.microsoft.com/library/windows/desktop/ms724385).  
+ Rufen Sie diese Methode, um die Höhe eines Minirahmenfensters bestimmt. Standardmäßig ist die Höhe auf SM_CYSMCAPTION festgelegt. Weitere Informationen finden Sie unter [GetSystemMetrics Funktion](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics).  
   
 ##  <a name="getcaptionrect"></a>  CPaneFrameWnd::GetCaptionRect  
  Berechnet das umschließende Rechteck der Beschriftung eines Minirahmenfensters.  

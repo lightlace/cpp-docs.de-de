@@ -1,7 +1,7 @@
 ---
-title: PUSHCONTEXT | Microsoft Docs
+title: PUSHCONTEXT | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c16d0de0848a9ceb61330498b12a9a4322e6604
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 16a76f80f72ab2d7f1ec0cfc86c102249330bf16
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056378"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677427"
 ---
 # <a name="pushcontext"></a>PUSHCONTEXT
-Speichert die aktuelle ganz oder teilweise `context`: Segmentregister geht davon aus, Wurzel, auflisten und Cref-Flags oder Prozessor-Coprozessor Werte. Die `context` kann **setzt**, `RADIX`, **auflisten**, **CPU**, oder **alle**.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-PUSHCONTEXT context  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+
+Speichert Teils oder aller aktuellen `context`: Segmentregister davon ausgeht, Basis, auflisten und Cref-Flags oder der Prozessor/Coprozessor-Werte. Die `context` kann **setzt**, `RADIX`, **auflisten**, **CPU**, oder **alle**.
+
+## <a name="syntax"></a>Syntax
+
+> PUSHCONTEXT-Kontext
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

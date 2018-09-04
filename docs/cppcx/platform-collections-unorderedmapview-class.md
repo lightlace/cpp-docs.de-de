@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c463dbcb68b5a4b875dbb109eedc07a3b4b27c86
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2251703307c5f6ed5787227a4def42dfbcd3fc18
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203027"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684008"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView-Klasse
 Stellt eine schreibgeschützte Ansicht einer *Zuordnung*dar, die eine Auflistung von Schlüssel-Wert-Paaren ist.  
@@ -42,7 +42,7 @@ ref class UnorderedMapView sealed;
  Ein Typ, der ein Funktionsobjekt bereitstellt, das zwei Schlüsselwerte vergleichen kann, um deren Gleichzeit zu bestimmen. In der Standardeinstellung [Std:: equal_to\<K >](../standard-library/equal-to-struct.md)  
   
 ### <a name="remarks"></a>Hinweise  
- UnorderedMapView ist eine konkrete C++ Implementierung der [Windows::Foundation::Collections::IMapView\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) -Schnittstelle, die über die anwendungsbinärdateischnittstelle (ABI) übergeben wird. Weitere Informationen finden Sie unter [Auflistungen (C++/CX)](../cppcx/collections-c-cx.md).  
+ UnorderedMapView ist eine konkrete C++ Implementierung der [Windows::Foundation::Collections::IMapView\<K, V >](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) -Schnittstelle, die über die anwendungsbinärdateischnittstelle (ABI) übergeben wird. Weitere Informationen finden Sie unter [Auflistungen (C++/CX)](../cppcx/collections-c-cx.md).  
   
 ### <a name="members"></a>Member  
   
@@ -221,7 +221,7 @@ UnorderedMapView(
  Der Typname der UnorderedMapView.  
   
  `H`  
- Ein Funktionsobjekt, das einen Hashwert für einen Schlüssel haben kann. Standardmäßig [Std:: Hash\<K >](https://msdn.microsoft.com/54f67435-af9d-4217-a29d-fa4d2491a104) für die Typen, die `std::hash` unterstützt.  
+ Ein Funktionsobjekt, das einen Hashwert für einen Schlüssel haben kann. Standardmäßig [Std:: Hash\<K >](../standard-library/hash-class.md) für die Typen, die `std::hash` unterstützt.  
   
  `P`  
  Ein Typ, der ein Funktionsobjekt bereitstellt, das zwei Schlüssel vergleichen kann, um deren Gleichheit zu bestimmen. Standardmäßig [Std:: equal_to\<K >](../standard-library/equal-to-struct.md).  
@@ -237,4 +237,4 @@ UnorderedMapView(
    
 ## <a name="see-also"></a>Siehe auch  
  [Platform:: Collections-Namespace](../cppcx/platform-collections-namespace.md)   
- [Windows::Foundation::IMapView](http://go.microsoft.com/fwlink/p/?LinkId=262409)
+ [Windows::Foundation::IMapView](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)

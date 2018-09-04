@@ -1,7 +1,7 @@
 ---
-title: ML nicht schwerwiegende Fehler A2059 | Microsoft Docs
+title: Schwerwiegender ML--Fehler A2059 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8e978873a8c93cf4f7db636eb0daae79931a12c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 68ccc1381af84928a3bff11aacdfb434d18cc740
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055635"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678702"
 ---
 # <a name="ml-nonfatal-error-a2059"></a>Nicht schwerwiegender ML-Fehler A2059
-**Fehler erzwungen: Zeichenfolgen gleich**  
-  
- Die bedingte Error-Direktive [. ERRIDN](../../assembler/masm/dot-erridn.md) oder **. ERRIDNI** wurde verwendet, um diesen Fehler zu generieren.  
-  
-## <a name="see-also"></a>Siehe auch  
- [ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)
+
+**Fehler beim erzwungenen: Zeichenfolgen gleich**
+
+Das Conditional-Error-Anweisung [. ERRIDN](../../assembler/masm/dot-erridn.md) oder **. ERRIDNI** wurde verwendet, um diesen Fehler zu generieren.
+
+## <a name="see-also"></a>Siehe auch
+
+[ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)<br/>

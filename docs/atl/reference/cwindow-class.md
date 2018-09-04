@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a0ef98a17cdbc262ac8db90eba089601d8f8841
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b989cc55a76c1a982e0739a15d91544e5aeb4ddf
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216721"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678661"
 ---
 # <a name="cwindow-class"></a>CWindow-Klasse
 Diese Klasse stellt Methoden zum Bearbeiten eines Fensters bereit.  
@@ -547,10 +547,10 @@ HWND Create(
  [in] Gibt den Namen des Fensters. Der Standardwert ist NULL.  
   
  *dwStyle*  
- [in] Der Stil des Fensters. Der Standardwert 0 ist, ist d. h. kein Stil angegeben. Eine Liste der möglichen Werte, finden Sie unter [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) im Windows SDK.  
+ [in] Der Stil des Fensters. Der Standardwert 0 ist, ist d. h. kein Stil angegeben. Eine Liste der möglichen Werte, finden Sie unter [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) im Windows SDK.  
   
  *dwExStyle*  
- [in] Der erweiterte Fensterstil. Der Standardwert 0 ist, ist d. h. keine erweiterten Stil angegeben. Eine Liste der möglichen Werte, finden Sie unter [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ [in] Der erweiterte Fensterstil. Der Standardwert 0 ist, ist d. h. keine erweiterten Stil angegeben. Eine Liste der möglichen Werte, finden Sie unter [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) im Windows SDK.  
   
  *MenuOrID*  
  [in] Eine Variable vom Typ [_U_MENUorID](../../atl/reference/u-menuorid-class.md) ein Handle für ein Menü oder einen Fenster-Bezeichner angeben. Der Standardwert ist 0 HE.  
@@ -564,7 +564,7 @@ HWND Create(
 ### <a name="remarks"></a>Hinweise  
  `CWindow::rcDefault` wird definiert als `__declspec(selectany) RECT CWindow::rcDefault = {CW_USEDEFAULT, CW_USEDEFAULT, 0, 0};`.  
   
- Finden Sie unter [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) im Windows SDK für Weitere Informationen.  
+ Finden Sie unter [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) im Windows SDK für Weitere Informationen.  
   
  **Beachten Sie** Wenn 0, als Wert für verwendet wird die *MenuOrID* -Parameter muss als 0 HE angegeben werden (Standardwert), einen Compilerfehler zu vermeiden.  
   
@@ -617,7 +617,7 @@ CWindow(HWND hWnd = NULL) throw();
  Initialisiert die [M_hWnd](#m_hwnd) Member *hWnd*, die in der Standardeinstellung ist NULL.  
   
 > [!NOTE]
-> `CWindow::CWindow` ein Fenster wird nicht erstellt werden. Klassen [CWindowImpl](../../atl/reference/cwindowimpl-class.md), [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md), und [CDialogImpl](../../atl/reference/cdialogimpl-class.md) (alle abgeleitet `CWindow`) bieten eine Methode, um ein Feld oder ein Dialogfeld erstellen, die ist Klicken Sie dann zum zugewiesenen `CWindow::m_hWnd`. Sie können auch die [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Win32-Funktion.  
+> `CWindow::CWindow` ein Fenster wird nicht erstellt werden. Klassen [CWindowImpl](../../atl/reference/cwindowimpl-class.md), [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md), und [CDialogImpl](../../atl/reference/cdialogimpl-class.md) (alle abgeleitet `CWindow`) bieten eine Methode, um ein Feld oder ein Dialogfeld erstellen, die ist Klicken Sie dann zum zugewiesenen `CWindow::m_hWnd`. Sie können auch die [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Win32-Funktion.  
   
 ##  <a name="deferwindowpos"></a>  CWindow::DeferWindowPos  
  Aktualisiert die angegebene mehrere Fensterposition Struktur für das angegebene Fenster an.  
@@ -644,7 +644,7 @@ BOOL DestroyWindow() throw();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [DestroyWindow](https://msdn.microsoft.com/library/windows/desktop/ms632682) in das Windows SDK.  
+ Finden Sie unter [DestroyWindow](/windows/desktop/api/winuser/nf-winuser-destroywindow) in das Windows SDK.  
   
  Es wird nicht zerstört die `CWindow` Objekt selbst.  
   
@@ -1201,7 +1201,7 @@ LONG GetWindowLong(int nIndex) const throw();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) in das Windows SDK.  
+ Finden Sie unter [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) in das Windows SDK.  
   
 > [!NOTE]
 >  Verwenden Sie zum Schreiben von Code, der mit 32-Bit- und 64-Bit-Versionen von Windows kompatibel ist, [CWindow::GetWindowLongPtr](#getwindowlongptr).  
@@ -1328,7 +1328,7 @@ WORD GetWindowWord(int nIndex) const throw();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) in das Windows SDK.  
+ Finden Sie unter [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) in das Windows SDK.  
   
 ##  <a name="gotodlgctrl"></a>  CWindow::GotoDlgCtrl  
  Legt den Tastaturfokus auf ein Steuerelement im Dialogfeld fest.  
@@ -1606,13 +1606,13 @@ BOOL ModifyStyle(
  [in] Gibt das Window-Stile, die während der Änderung der Stil hinzugefügt werden.  
   
  *nFlags*  
- [in] Flags, Fenster-Positionierung. Eine Liste der möglichen Werte, finden Sie unter den [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) -Funktion in das Windows SDK.  
+ [in] Flags, Fenster-Positionierung. Eine Liste der möglichen Werte, finden Sie unter den [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) -Funktion in das Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Window-Stile geändert werden. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Stile hinzugefügt oder entfernt werden soll, können mit dem bitweisen OR kombiniert werden ( &#124; ) Operator. Finden Sie unter den [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) -Funktion in der Windows-SDKfor Informationen über die verfügbaren Fenster.  
+ Stile hinzugefügt oder entfernt werden soll, können mit dem bitweisen OR kombiniert werden ( &#124; ) Operator. Finden Sie unter den [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) -Funktion in der Windows-SDKfor Informationen über die verfügbaren Fenster.  
   
  Wenn *nFlags* ungleich NULL ist, `ModifyStyle` wird die Win32-Funktion `SetWindowPos`, und das Fenster durch Kombinieren von zeichnet *nFlags* mit den vier folgenden Flags:  
   
@@ -1647,13 +1647,13 @@ BOOL ModifyStyleEx(
  [in] Gibt an, die erweiterten Stile, die während der Änderung der Stil hinzugefügt werden.  
   
  *nFlags*  
- [in] Flags, Fenster-Positionierung. Eine Liste der möglichen Werte, finden Sie unter den [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) -Funktion in das Windows SDK.  
+ [in] Flags, Fenster-Positionierung. Eine Liste der möglichen Werte, finden Sie unter den [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) -Funktion in das Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die erweiterten Fensterstile geändert werden. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Stile hinzugefügt oder entfernt werden soll, können mit dem bitweisen OR kombiniert werden ( &#124; ) Operator. Finden Sie unter den [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) -Funktion in der Windows-SDKfor-Informationen zu den verfügbaren Erweiterte Stile.  
+ Stile hinzugefügt oder entfernt werden soll, können mit dem bitweisen OR kombiniert werden ( &#124; ) Operator. Finden Sie unter den [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) -Funktion in der Windows-SDKfor-Informationen zu den verfügbaren Erweiterte Stile.  
   
  Wenn *nFlags* ungleich NULL ist, `ModifyStyleEx` wird die Win32-Funktion `SetWindowPos`, und das Fenster durch Kombinieren von zeichnet *nFlags* mit den vier folgenden Flags:  
   
@@ -2230,7 +2230,7 @@ LONG SetWindowLong(int nIndex, LONG dwNewLong) throw();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) in das Windows SDK.  
+ Finden Sie unter [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) in das Windows SDK.  
   
 > [!NOTE]
 >  Verwenden Sie zum Schreiben von Code, der mit 32-Bit- und 64-Bit-Versionen von Windows kompatibel ist, [CWindow::SetWindowLongPtr](#setwindowlongptr).  
@@ -2276,7 +2276,7 @@ BOOL SetWindowPos(
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) in das Windows SDK.  
+ Finden Sie unter [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) in das Windows SDK.  
   
  Die zweite Version dieser Methode verwendet eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die neue Position, Breite und Höhe des Fensters festzulegen.  
   
@@ -2311,7 +2311,7 @@ WORD SetWindowWord(int nIndex, WORD wNewWord) throw();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) in das Windows SDK.  
+ Finden Sie unter [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) in das Windows SDK.  
   
 ##  <a name="showcaret"></a>  CWindow::ShowCaret  
  Zeigt den Systemzeiger an.  

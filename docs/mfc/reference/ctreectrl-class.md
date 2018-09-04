@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60eed80d9f26ad33ce7f2af48cfca0a90c7d26b6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6ebae1828d102881d866e05d41f1831e35e01a51
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210250"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679246"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 Stellt die Funktionalität des allgemeinen Windows-Strukturansicht-Steuerelements bereit.  
@@ -318,7 +318,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parameter  
  *dwStyle*  
- Gibt den Strukturansicht-Steuerelement Stil. Anwenden von Window-Stile, die in beschriebenen [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679), und eine beliebige Kombination von [Struktur Ansicht der Stile von Listensteuerelementen](/windows/desktop/Controls/tree-view-control-window-styles) wie beschrieben in das Windows SDK.  
+ Gibt den Strukturansicht-Steuerelement Stil. Anwenden von Window-Stile, die in beschriebenen [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa), und eine beliebige Kombination von [Struktur Ansicht der Stile von Listensteuerelementen](/windows/desktop/Controls/tree-view-control-window-styles) wie beschrieben in das Windows SDK.  
   
  *Rect*  
  Gibt an, des Strukturansicht-Steuerelements die Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.  
@@ -356,10 +356,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parameter  
  *dwExStyle*  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) im Windows SDK.  
   
  *dwStyle*  
- Gibt den Strukturansicht-Steuerelement Stil. Anwenden von Window-Stile, die in beschriebenen [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679), und eine beliebige Kombination von [Struktur Ansicht der Stile von Listensteuerelementen](/windows/desktop/Controls/tree-view-control-window-styles) wie beschrieben in das Windows SDK.  
+ Gibt den Strukturansicht-Steuerelement Stil. Anwenden von Window-Stile, die in beschriebenen [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa), und eine beliebige Kombination von [Struktur Ansicht der Stile von Listensteuerelementen](/windows/desktop/Controls/tree-view-control-window-styles) wie beschrieben in das Windows SDK.  
   
  *Rect*  
  Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.  

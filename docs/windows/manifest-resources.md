@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1520cd301fa46fb4d9521fd6d4180ebd3710f67
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0f06e2d430867d04600547312fbc484ec6257c53
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218249"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685151"
 ---
 # <a name="manifest-resources"></a>Manifestressourcen
 
@@ -45,9 +45,9 @@ Manifestressourcen sind XML-Dateien zur Beschreibung der von einer Anwendung ver
 
 Für eine Windows XP oder Windows Vista-Anwendung gibt die Manifestressource nicht nur, dass die Anwendung die aktuellste Version der allgemeinen Windows-Steuerelemente (v6. 0, wie oben gezeigt), sondern zudem unterstützt die [Syslink-Steuerelement](/windows/desktop/Controls/syslink-overview).
 
-Zum Anzeigen der Version, und geben Sie in einer Manifestressource enthaltenen Informationen, können Sie die Datei öffnen, in einem XML-Viewer oder im Visual Studio [Text-Editor](https://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1). Weitere Informationen finden Sie unter [Öffnen einer Manifestressource im Text-Editor von Visual Studio](../windows/how-to-open-a-manifest-resource.md).
+Zum Anzeigen der Version, und geben Sie in einer Manifestressource enthaltenen Informationen, können Sie die Datei in einem XML-Viewer oder im Visual Studio-Text-Editor öffnen. Weitere Informationen finden Sie unter [Öffnen einer Manifestressource im Text-Editor von Visual Studio](../windows/how-to-open-a-manifest-resource.md).
 
-Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Walkthrough: Using Resources for Localization with ASP.NET](https://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.
 
 ## <a name="limitations"></a>Einschränkungen
 

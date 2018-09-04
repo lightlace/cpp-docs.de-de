@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0886f020be80ae417cd44a5b5cb5116198ce6a1e
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: f0a812ff5304288a2a7c25edeb07d76a4d06ded8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541429"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683014"
 ---
 # <a name="ribbon-designer-mfc"></a>Menüband-Designer (MFC)
-Mit dem Menüband-Designer können Sie Menübänder in MFC-Anwendungen erstellen und anpassen. Ein Menüband ist ein Element der Benutzeroberfläche (UI), auf dem Befehle in logischen Gruppen organisiert werden. Diese Gruppen werden auf separaten Registerkarten in einem Streifen entlang des oberen Fensterrahmens angezeigt. Das Menüband ersetzt die Menü- und Symbolleisten. Mit einem Menüband kann die Benutzerfreundlichkeit von Anwendungen erheblich verbessert werden. Weitere Informationen finden Sie unter [Menübänder](http://go.microsoft.com/fwlink/p/?linkid=129233). Die folgende Abbildung zeigt ein Menüband.  
+Mit dem Menüband-Designer können Sie Menübänder in MFC-Anwendungen erstellen und anpassen. Ein Menüband ist ein Element der Benutzeroberfläche (UI), auf dem Befehle in logischen Gruppen organisiert werden. Diese Gruppen werden auf separaten Registerkarten in einem Streifen entlang des oberen Fensterrahmens angezeigt. Das Menüband ersetzt die Menü- und Symbolleisten. Mit einem Menüband kann die Benutzerfreundlichkeit von Anwendungen erheblich verbessert werden. Weitere Informationen finden Sie unter [Menübänder](/windows/desktop/uxguide/cmd-ribbons). Die folgende Abbildung zeigt ein Menüband.  
   
  ![MFC-Menüband-Ressourcensteuerung](../mfc/media/ribbon_no_callouts.png "Ribbon_no_callouts")  
   
