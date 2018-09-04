@@ -21,17 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08cf1386ef177823c37bc285392309ec47f3c464
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 282fd41602b70f743926b0fe5322346e9cdfd3fc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340696"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203294"
 ---
 # <a name="project-and-solution-files"></a>Projekt- und Projektmappendateien
 Die folgenden Dateien werden erstellt, wenn Sie ein Projekt in Visual Studio erstellen. Sie werden verwendet, um die Projektdateien in der Projektmappe zu verwalten.  
   
-|Dateiname|Speicherort für das Verzeichnis|Speicherort für den Projektmappen-Explorer|description|  
+|Dateiname|Speicherort für das Verzeichnis|Speicherort für den Projektmappen-Explorer|Beschreibung |  
 |--------------|------------------------|--------------------------------|-----------------|  
 |*Solname*.sln|*Projname*|Wird im Projektmappen-Explorer nicht angezeigt.|Die *Projektmappendatei*. Es werden alle Elemente eines Projekts oder mehrerer Projekte in einer einzigen Projektmappe organisiert.|  
 |*Projname*.suo|*Projname*|Wird im Projektmappen-Explorer nicht angezeigt.|Die Datei mit den *Projektmappenoptionen*. Darin werden die Anpassungen für die Projektmappe gespeichert, damit jedes Mal, wenn Sie ein Projekt oder eine Datei in der Projektmappe öffnen, die gewünschte Darstellung und das gewünschte Verhalten vorhanden ist.|  
@@ -40,7 +40,7 @@ Die folgenden Dateien werden erstellt, wenn Sie ein Projekt in Visual Studio ers
 |*Projname*.sdf|*Projname*|Wird im Projektmappen-Explorer nicht angezeigt.|Die Datei zum *Durchsuchen der Datenbank*. Sie unterstützt Such-und Navigationsfeatures, wie z.B. **Gehe zu Definition**, **Alle Verweise suchen** und **Klassenansicht**. Sie wird durch die Analyse der Headerdateien generiert.|  
 |*Projname.* vcxproj.filters|*Projname*|Wird im Projektmappen-Explorer nicht angezeigt.|Die *Filterdatei*. Sie gibt an, wo eine Datei, die der Projektmappe hinzugefügt wird, abgelegt werden soll. Zum Beispiel wird eine H-Datei im Knoten **Headerdateien** abgelegt.|  
 |*Projname.* vcxproj.user|*Projname*|Wird im Projektmappen-Explorer nicht angezeigt.|Die *Migrationsbenutzerdatei*. Nachdem ein Projekt von Visual Studio 2008 migriert wurde, enthält diese Datei Informationen, die aus einer beliebigen .vsprops-Datei konvertiert wurden.|  
-|*Projname*.idl|*Projname*|Quelle|(Projektspezifisch) Enthält den Interface Description Language (IDL)-Quellcode für eine Steuerelement-Typbibliothek. Diese Datei wird von Visual C++ verwendet, um eine Typbibliothek zu generieren. Mithilfe der generierten Bibliothek wird die Schnittstelle des Steuerelements anderen Automatisierungsclients zur Verfügung gestellt. Weitere Informationen finden Sie im Windows SDK unter [Interface Definition (IDL) File (Schnittstellendefinitionsdatei)](http://msdn.microsoft.com/library/windows/desktop/aa378712).|  
+|*Projname*.idl|*Projname*|Quelle|(Projektspezifisch) Enthält den Interface Description Language (IDL)-Quellcode für eine Steuerelement-Typbibliothek. Diese Datei wird von Visual C++ verwendet, um eine Typbibliothek zu generieren. Mithilfe der generierten Bibliothek wird die Schnittstelle des Steuerelements anderen Automatisierungsclients zur Verfügung gestellt. Weitere Informationen finden Sie im Windows SDK unter [Interface Definition (IDL) File (Schnittstellendefinitionsdatei)](https://msdn.microsoft.com/library/windows/desktop/aa378712).|  
 |Readme.txt|*Projname*|Projekt|Die *Infodatei*. Sie wird vom Anwendungs-Assistenten generiert und beschreibt die Dateien in einem Projekt.|  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c425a71f8bb8a7972ade29fb0d18cf3eab7debb5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 59b19a35a70b3bdadd935f06ff7d9ae1ce7d7d95
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330180"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216379"
 ---
 # <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Isolated COM, Manifesttool, Konfigurationseigenschaften, &lt;Projektname&gt;-Eigenschaftenseiten (Dialogfeld)
-Verwenden Sie dieses Dialogfeld, um **Isolated COM**-Optionen für die Datei [Mt.exe](http://msdn.microsoft.com/library/aa375649) anzugeben.  
+Verwenden Sie dieses Dialogfeld, um **Isolated COM**-Optionen für die Datei [Mt.exe](https://msdn.microsoft.com/library/aa375649) anzugeben.  
   
  Öffnen Sie die Eigenschaftenseiten für Ihr Projekt oder Ihr Eigenschaftenblatt, um auf das Dialogfeld „Eigenschaftenseite“ zuzugreifen. Erweitern Sie den Knoten **Manifesttool** unter **Allgemeine Eigenschaften**, und klicken Sie dann auf **Isolated COM**.  
   
@@ -47,7 +47,7 @@ Verwenden Sie dieses Dialogfeld, um **Isolated COM**-Optionen für die Datei [Mt
  Verwendet die Option „/replacements“, um den vollständigen Pfad zu der Datei anzugeben, die Werte für ersetzbare Zeichenfolgen in der RGS-Datei enthält.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Isolated Applications (Isolierte Anwendungen)](http://msdn.microsoft.com/library/aa375190)   
+ [Isolated Applications (Isolierte Anwendungen)](/windows/desktop/SbsCs/isolated-applications)   
  [ClickOnce Application Manifest (ClickOnce-Anwendungsmanifest)](/visualstudio/deployment/clickonce-application-manifest)   
  [Manifesttooleigenschaftenseiten](../ide/manifest-tool-property-pages.md)   
  [Arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md)   

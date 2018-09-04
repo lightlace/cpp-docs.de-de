@@ -25,35 +25,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e1709c878a0b5f5325798b874e5549c5c8cb83f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: eae97f795898c97bfb371637fc52a27c9e39039d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33329981"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204688"
 ---
 # <a name="midl-property-pages-general"></a>Eigenschaftenseiten "MIDL": "Allgemein"
 Die Eigenschaftenseite **Allgemein** im Ordner **MIDL** gibt die folgenden MIDL-Compileroptionen an:  
   
--   Präprozessordefinitionen ([/D](http://msdn.microsoft.com/library/windows/desktop/aa367321))  
+-   Präprozessordefinitionen ([/D](https://msdn.microsoft.com/library/windows/desktop/aa367321))  
   
--   Zusätzliche Includeverzeichnisse ([/I](http://msdn.microsoft.com/library/windows/desktop/aa367328))  
+-   Zusätzliche Includeverzeichnisse ([/I](https://msdn.microsoft.com/library/windows/desktop/aa367328))  
   
--   Standardincludepfad ignorieren ([/no_def_idir](http://msdn.microsoft.com/library/windows/desktop/aa367347))  
+-   Standardincludepfad ignorieren ([/no_def_idir](https://msdn.microsoft.com/library/windows/desktop/aa367347))  
   
--   MkTypLib-kompatibel ([/mktyplib203](http://msdn.microsoft.com/library/windows/desktop/aa367332))  
+-   MkTypLib-kompatibel ([/mktyplib203](https://msdn.microsoft.com/library/windows/desktop/aa367332))  
   
--   Warnungsstufe ([/W](http://msdn.microsoft.com/library/windows/desktop/aa367383))  
+-   Warnungsstufe ([/W](https://msdn.microsoft.com/library/windows/desktop/aa367383))  
   
--   Warnung als Fehler anzeigen ([/WX](http://msdn.microsoft.com/library/windows/desktop/aa367387))  
+-   Warnung als Fehler anzeigen ([/WX](https://msdn.microsoft.com/library/windows/desktop/aa367387))  
   
--   Startbanner unterdrücken ([/nologo](http://msdn.microsoft.com/library/windows/desktop/aa367341))  
+-   Startbanner unterdrücken ([/nologo](https://msdn.microsoft.com/library/windows/desktop/aa367341))  
   
--   MIDL-Char-Datentyp ([/char](http://msdn.microsoft.com/library/windows/desktop/aa367314))  
+-   MIDL-Char-Datentyp ([/char](https://msdn.microsoft.com/library/windows/desktop/aa367314))  
   
--   Zielumgebung ([/env](http://msdn.microsoft.com/library/windows/desktop/aa367323))  
+-   Zielumgebung ([/env](https://msdn.microsoft.com/library/windows/desktop/aa367323))  
   
--   Proxys ohne Stubs generieren ([/Oicf](http://msdn.microsoft.com/library/windows/desktop/aa367352))  
+-   Proxys ohne Stubs generieren ([/Oicf](https://msdn.microsoft.com/library/windows/desktop/aa367352))  
   
  Informationen über das Zugreifen auf die Eigenschaftenseite **Allgemein** im Ordner **MIDL** finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md).  
   

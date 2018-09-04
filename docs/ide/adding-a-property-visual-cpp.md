@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45eda098202fdf9286905bdc967b6aa1d7bd7035
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 00b19fa7166e6edad05d729c5a738a2a827086ae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327579"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212794"
 ---
 # <a name="adding-a-property-visual-c"></a>Hinzufügen einer lokalen Eigenschaft (Visual C++)
 Sie können den [Assistenten zum Hinzufügen von Eigenschaften](../ide/names-add-property-wizard.md) verwenden, um einer Schnittstelle in Ihrem Projekt eine Eigenschaft hinzuzufügen.  
   
 ### <a name="to-add-a-property-to-your-object"></a>So fügen Sie Ihrem Objekt eine Eigenschaft hinzu  
   
-1.  Klicken Sie in der [Klassenansicht](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) mit der rechten Maustaste auf den Namen der Schnittstelle, der die Eigenschaft hinzugefügt werden soll.  
+1.  Klicken Sie in der [Klassenansicht](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) mit der rechten Maustaste auf den Namen der Schnittstelle, der die Eigenschaft hinzugefügt werden soll.  
   
     > [!NOTE]
     >  Sie können Eigenschaften auch zu Disp-Schnittstellen hinzufügen, die im Bibliotheksknoten geschachtelt sind, sofern das Projekt nicht attributiert ist.  
@@ -49,5 +49,5 @@ Sie können den [Assistenten zum Hinzufügen von Eigenschaften](../ide/names-add
 ## <a name="see-also"></a>Siehe auch  
  [Creating a COM Interface (Erstellen einer COM-Schnittstelle)](../ide/creating-a-com-interface-visual-cpp.md)   
  [Editing a COM Interface (Bearbeiten einer COM-Schnittstelle)](../ide/editing-a-com-interface.md)   
- [The Component Object Model (Das Component Object Model)](http://msdn.microsoft.com/library/windows/desktop/ms694363)   
- [Interface Pointers and Interfaces (Schnittstellenzeiger und Schnittstellen)](http://msdn.microsoft.com/library/windows/desktop/ms688484)
+ [The Component Object Model (Das Component Object Model)](/windows/desktop/com/the-component-object-model)   
+ [Interface Pointers and Interfaces (Schnittstellenzeiger und Schnittstellen)](/windows/desktop/com/interface-pointers-and-interfaces)

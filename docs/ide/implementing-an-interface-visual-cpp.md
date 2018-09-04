@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 309ae9dc576f93574836ab4916e87c5232b37a6c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1f7d7bed9725e4ec1cc8ad0fc66673ce5c6212e1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332766"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211211"
 ---
 # <a name="implementing-an-interface-visual-c"></a>Implementieren einer Schnittstelle (Visual C++)
 Zum Implementieren einer Schnittstelle müssen Sie ein Projekt als ATL COM-Anwendung oder MFC-Anwendung, die ATL-Unterstützung enthält, erstellt haben. Sie können den [ATL-Projekt-Assistenten](../atl/reference/atl-project-wizard.md) zum Erstellen einer ATL-Anwendung verwenden, oder [Ihrer MFC-Anwendung ein ATL-Objekt hinzufügen](../mfc/reference/adding-atl-support-to-your-mfc-project.md), um die ATL-Unterstützung in einer MFC-Anwendung zu implementieren.  
@@ -46,7 +46,7 @@ Zum Implementieren einer Schnittstelle müssen Sie ein Projekt als ATL COM-Anwen
 4.  Erweitern Sie in der Klassenansicht den Knoten „Basen und Schnittstellen“, um die implementierte Schnittstelle anzuzeigen, erweitern Sie dann den Knoten der Schnittstelle, um die verfügbaren Eigenschaften, Methoden und Ereignisse anzuzeigen.  
   
     > [!NOTE]
-    >  Sie können auch den [Objektkatalog](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) verwenden, um die Members der Schnittstelle zu überprüfen.  
+    >  Sie können auch den [Objektkatalog](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470) verwenden, um die Members der Schnittstelle zu überprüfen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Creating a COM Interface (Erstellen einer COM-Schnittstelle)](../ide/creating-a-com-interface-visual-cpp.md)   

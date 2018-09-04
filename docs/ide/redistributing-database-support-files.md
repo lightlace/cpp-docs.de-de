@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a51697367480569e2d27a4cb67791f5fe4d39a8f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 55888388158cbe005709cbe8a4989071213b5c77
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33323874"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195727"
 ---
 # <a name="redistributing-database-support-files"></a>Neuverteilen von Datenbankunterstützungsdateien
 Sie können wie Unterstützungsdateien für Datenzugriffsobjekte (DAO) und für die Datenbanktechnologien im Microsoft Data Access SDK weiterverteilen.  
@@ -31,7 +31,7 @@ Sie können wie Unterstützungsdateien für Datenzugriffsobjekte (DAO) und für 
 ## <a name="installing-microsoft-data-access-sdk-support-files"></a>Installieren von Unterstützungsdateien für das Microsoft Data Access SDK  
  Verwenden Sie "Mdac_typ.exe" zum Installieren von Unterstützung für ODBC, OLE DB, ActiveX Data Objects (ADO) und Remote Data Services (RDS). "Mdac_typ.exe" befindet sich auf den Visual Studio-Installationsmedien unter "\WCU\MDAC28\". Sie können die Datei „Mdac_typ.exe“ von der [Microsoft Download Center-Website](http://go.microsoft.com/fwlink/p/?linkid=198015) herunterladen.  
   
- Weitere Informationen finden Sie, indem Sie auf der [MSDN-Website](http://go.microsoft.com/fwlink/p/?linkid=198016) nach „Redistributing MDAC 2.8 SP1“ suchen. Informationen über die Verwendung von Visual Studio-Setupprojekten zum Bereitstellen Ihrer Anwendung finden Sie unter [Deployment and Dependencies (Bereitstellung und Abhängigkeiten)](http://msdn.microsoft.com/en-us/49e9b84d-bd6a-4388-b9ac-46ea79cf0733).  
+ Weitere Informationen finden Sie, indem Sie auf der [MSDN-Website](http://go.microsoft.com/fwlink/p/?linkid=198016) nach „Redistributing MDAC 2.8 SP1“ suchen. Informationen über die Verwendung von Visual Studio-Setupprojekten zum Bereitstellen Ihrer Anwendung finden Sie unter [Deployment and Dependencies (Bereitstellung und Abhängigkeiten)](https://msdn.microsoft.com/49e9b84d-bd6a-4388-b9ac-46ea79cf0733).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verteilen von Visual C++-Dateien](../ide/redistributing-visual-cpp-files.md)

@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c15ba418657dde291c6833caafae071ca0260a65
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfb885a5d29c26f4a40d5b93490a06652eff1ffc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392535"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216671"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Syntax der Formatangabe: printf- und wprintf-Funktionen
 
@@ -85,7 +85,7 @@ Ganzzahlige Typen wie `short`, `int`, `long`, `long long` und ihre `unsigned`-Va
 |**p**|Zeigertyp|Zeigt das Argument als Adresse in Hexadezimalziffern an.|
 |**s**|Zeichenfolge|Gibt bei Verwendung mit `printf`-Funktionen eine Einzelbyte- oder Multibyte-Zeichenfolge und bei Verwendung mit `wprintf`-Funktionen eine Breitzeichenfolge an. Zeichen werden bis zum ersten NULL-Zeichen oder bis zum *precision*-Wert angezeigt.|
 |**S**|Zeichenfolge|Gibt bei Verwendung mit `printf`-Funktionen eine Breitzeichenfolge und bei Verwendung mit `wprintf`-Funktionen eine Einzelbyte- oder Multibyte-Zeichenfolge an. Zeichen werden bis zum ersten NULL-Zeichen oder bis zum *precision*-Wert angezeigt.|
-|**Z**|`ANSI_STRING`- oder `UNICODE_STRING`-Struktur|Wenn die Adresse einer [ANSI_STRING](http://msdn.microsoft.com/library/windows/hardware/ff540605.aspx)- oder [UNICODE_STRING](http://msdn.microsoft.com/library/windows/hardware/ff564879.aspx)-Struktur als Argument übergeben wird, wird die Zeichenfolge, die im Puffer angezeigt wird und auf die vom `Buffer`-Feld der Struktur gezeigt wird, übergeben. Verwenden Sie ein *size*-Längenpräfix von **w**, um ein `UNICODE_STRING`-Argument anzugeben, z.B. `%wZ`. Das `Length`-Feld der Struktur muss auf die Länge der Zeichenfolge in Bytes festgelegt sein. Das `MaximumLength`-Feld der Struktur muss auf die Länge des Puffers in Bytes festgelegt sein.<br /><br /> In der Regel wird das **Z**-Typzeichen nur in Treiberdebugfunktionen mit einer Formatangabe verwendet, z.B. `dbgPrint` und `kdPrint`.|
+|**Z**|`ANSI_STRING`- oder `UNICODE_STRING`-Struktur|Wenn die Adresse einer [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string)- oder [UNICODE_STRING](https://msdn.microsoft.com/library/windows/hardware/ff564879.aspx)-Struktur als Argument übergeben wird, wird die Zeichenfolge, die im Puffer angezeigt wird und auf die vom `Buffer`-Feld der Struktur gezeigt wird, übergeben. Verwenden Sie ein *size*-Längenpräfix von **w**, um ein `UNICODE_STRING`-Argument anzugeben, z.B. `%wZ`. Das `Length`-Feld der Struktur muss auf die Länge der Zeichenfolge in Bytes festgelegt sein. Das `MaximumLength`-Feld der Struktur muss auf die Länge des Puffers in Bytes festgelegt sein.<br /><br /> In der Regel wird das **Z**-Typzeichen nur in Treiberdebugfunktionen mit einer Formatangabe verwendet, z.B. `dbgPrint` und `kdPrint`.|
 
 Ab Visual Studio 2015 entspricht die formatierte Ausgabe dem C99-Standard, wenn das Argument, das einem Gleitkomma-Konvertierungsspezifizierer (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) entspricht, unendlich, unbestimmt oder NaN ist. In dieser Tabelle ist die formatierte Ausgabe aufgeführt:
 

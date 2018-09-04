@@ -55,12 +55,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0abf64c95e4293710226b2f4f38bc1fcf481b287
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 0e5a71faae381bc17b92d6b23047b9632913c2fe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451770"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201262"
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn-, _wspawn-Funktionen
 Jede der `_spawn`-Funktionen erstellt einen neuen Prozess und führt ihn aus:  
@@ -134,7 +134,7 @@ Jede der `_spawn`-Funktionen erstellt einen neuen Prozess und führt ihn aus:
 >  Die in den Zeichenfolgen eingebetteten Leerzeichen können zu einem unerwarteten Verhalten führen. Zum Beispiel führt die Zeichenfolge `_spawn` durch die Übergabe von `"hi there"` dazu, dass der neue Prozess zwei Argumente erhält: `"hi"` und `"there"`. Wenn der neue Prozess die benannte Datei "hi there" öffnen sollte, schlägt der Prozess fehl. Sie können dies verhindern, indem Sie die Zeichenfolge in Anführungszeichen setzen: `"\"hi there\""`.  
   
 > [!IMPORTANT]
->  Übergeben Sie Benutzereingaben nicht an `_spawn`, ohne den Inhalt explizit zu überprüfen. `_spawn` führt zu einem Aufruf von [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425). Beachten Sie daher, dass nicht qualifizierte Pfadnamen zu potenziellen Sicherheitslücken führen können.  
+>  Übergeben Sie Benutzereingaben nicht an `_spawn`, ohne den Inhalt explizit zu überprüfen. `_spawn` führt zu einem Aufruf von [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa). Beachten Sie daher, dass nicht qualifizierte Pfadnamen zu potenziellen Sicherheitslücken führen können.  
   
  Sie können Argumentzeiger als separate Parameter übergeben (in `_spawnl`, `_spawnle`, `_spawnlp` und `_spawnlpe`) oder als ein Array von Zeigern (in `_spawnv`, `_spawnve`, `_spawnvp` und `_spawnvpe`). Sie müssen mindestens ein Argument, `arg0` oder `argv`[0], an den erzeugten Prozess übergeben. Gemäß Konvention ist dieses Argument der Name des Programms so, wie Sie ihn auf der Befehlszeile eingeben würden. Ein anderer Wert erzeugt keinen Fehler.  
   
@@ -154,7 +154,7 @@ Jede der `_spawn`-Funktionen erstellt einen neuen Prozess und führt ihn aus:
 ## <a name="redirecting-output"></a>Umleitung der Ausgabe  
  Wenn Sie `_spawn` über eine DLL- oder eine GUI-Anwendung aufrufen und die Ausgabe zu einer Pipe umleiten möchten, haben Sie zwei Möglichkeiten:  
   
--   Verwenden Sie die Win32-API zum Erstellen einer Pipe, rufen Sie dann [AllocConsole](http://msdn.microsoft.com/library/windows/desktop/ms681944) auf, legen Sie die Handlewerte in der Startstruktur fest, und rufen Sie [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425) auf.  
+-   Verwenden Sie die Win32-API zum Erstellen einer Pipe, rufen Sie dann [AllocConsole](https://msdn.microsoft.com/library/windows/desktop/ms681944) auf, legen Sie die Handlewerte in der Startstruktur fest, und rufen Sie [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) auf.  
   
 -   Rufen Sie [_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md) auf, das eine Pipe erstellt und die Anwendung mit **cmd.exe/c** (oder **command.exe/c**) aufruft.  
   

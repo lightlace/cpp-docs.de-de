@@ -170,12 +170,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0865aaf418fb6d8624f3dec9c853c32c1e3bbc83
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: a502ae93b43320fb3a8f43b36b5bc4ef43c23dd2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208779"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217003"
 ---
 # <a name="standard-types"></a>Standardtypen
 Die Microsoft-Laufzeitbibliothek definiert die folgenden Standardtypen und TypeDefs.  
@@ -211,7 +211,7 @@ Die Microsoft-Laufzeitbibliothek definiert die folgenden Standardtypen und TypeD
 |`div_t`-, `ldiv_t`- und `lldiv_t`-Strukturen|Speichern Werte, die von [div](../c-runtime-library/reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md) und [lldiv](../c-runtime-library/reference/ldiv-lldiv.md) zurückgegeben werden.|STDLIB.H|  
 |`errno_t`-Integer|Wird für einen Parameter oder einen Funktionsrückgabetyp verwendet, der Fehlercodes von `errno` behandelt.|STDDEF.H,<br /><br /> CRTDEFS.H|  
 |`_exception`-Struktur|Speichert Fehlerinformationen für [_matherr](../c-runtime-library/reference/matherr.md).|MATH.H|  
-|`_EXCEPTION_POINTERS`|Enthält einen Ausnahmedatensatz. Weitere Informationen finden Sie unter [EXCEPTION_POINTERS](http://msdn.microsoft.com/library/windows/desktop/ms679331).|FPIEEE.H|  
+|`_EXCEPTION_POINTERS`|Enthält einen Ausnahmedatensatz. Weitere Informationen finden Sie unter [EXCEPTION_POINTERS](/windows/desktop/api/winnt/ns-winnt-_exception_pointers).|FPIEEE.H|  
 |`FILE`-Struktur|Speichert Informationen zum aktuellen Zustand des Streams; wird in allen E/A-Operationen eines Streams verwendet.|STDIO.H|  
 |`_finddata_t`-, `_wfinddata_t`-, `_finddata32_t`-, `_wfinddata32_t`-, `_finddatai64_t`-, `_wfinddatai64_t`-, `__finddata64_t`-, `__wfinddata64_t`-, `__finddata32i64_t`-, `__wfinddata32i64_t`-, `__finddata64i32_t`-, `__wfinddata64i32_t`-Strukturen|Speichern Dateiattributinformationen, die von [_findfirst, _wfindfirst und verwandten Funktionen](../c-runtime-library/reference/findfirst-functions.md) sowie [_findnext, _wfindnext und verwandten Funktionen](../c-runtime-library/reference/findnext-functions.md) zurückgegeben werden. Informationen über Strukturmember finden Sie unter [Dateinamen-Suchfunktionen](../c-runtime-library/filename-search-functions.md).|IO.H, WCHAR.H|  
 |`_FPIEEE_RECORD`-Struktur|Enthält Informationen zur IEEE-Gleitkommaausnahme; wird an einen benutzerdefinierten Traphandler durch [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md) übergeben.|FPIEEE.H|  

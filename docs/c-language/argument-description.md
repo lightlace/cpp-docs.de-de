@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 615fc3a68153386174ce0477ee5c946f50f37d90
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cecc47bc4633aa40f38bda23d1aee0007ea34ab4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385083"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201881"
 ---
 # <a name="argument-description"></a>Argumentbeschreibung
 Der `argc`-Parameter in den **main**- und **wmain**-Funktionen ist eine ganze Zahl, die angibt, wie viele Argumente über die Befehlszeile an das Programm übergeben werden. Da der Programmname als ein Argument gilt, ist der Wert von `argc` mindestens 1.  
@@ -31,7 +31,7 @@ Der `argc`-Parameter in den **main**- und **wmain**-Funktionen ist eine ganze Za
 ## <a name="remarks"></a>Hinweise  
  Der `argv`-Parameter ist ein Array von Zeigern auf auf NULL endende Zeichenfolgen, die die Programmargumente darstellen. Jedes Element des Arrays zeigt auf eine Zeichenfolgendarstellung eines Arguments, das an **main** (oder **wmain**) übergeben wird. (Informationen zu Arrays finden Sie unter [Arraydeklarationen](../c-language/array-declarations.md).) Der `argv`-Parameter kann entweder als Array von Zeigern auf Typ `char` (`char *argv[]`) oder als Zeiger auf Zeiger vom Typ `char` (`char **argv`) deklariert werden. Bei **wmain** kann der `argv`-Parameter entweder als Array von Zeigern auf Typ `wchar_t` (`wchar_t *argv[]`) oder als Zeiger auf Zeiger vom Typ `wchar_t` (`wchar_t **argv`) deklariert werden.  
   
- Gemäß der Konvention ist `argv`**[0]** der Befehl, mit dem das Programm aufgerufen wird.  Allerdings ist es möglich, einen Prozess mit [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425) zu erstellen, und wenn Sie sowohl das erste als auch das zweite Argument (`lpApplicationName` und `lpCommandLine`) verwenden, ist `argv`**[0]** möglicherweise kein ausführbarer Name. Verwenden Sie [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197), um den ausführbaren Namen abzurufen.  
+ Gemäß der Konvention ist `argv`**[0]** der Befehl, mit dem das Programm aufgerufen wird.  Allerdings ist es möglich, einen Prozess mit [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) zu erstellen, und wenn Sie sowohl das erste als auch das zweite Argument (`lpApplicationName` und `lpCommandLine`) verwenden, ist `argv`**[0]** möglicherweise kein ausführbarer Name. Verwenden Sie [GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197), um den ausführbaren Namen abzurufen.  
   
  Der letzte Zeiger (`argv[argc]`) ist **NULL**. (Unter [getenv](../c-runtime-library/reference/getenv-wgetenv.md) in der *Laufzeitbibliotheksreferenz* finden Sie Informationen über eine alternative Möglichkeit zum Abrufen von Umgebungsvariablen.)  
   
