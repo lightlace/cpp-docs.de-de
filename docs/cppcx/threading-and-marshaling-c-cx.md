@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da198a6a807413846fdc5b45552bb74252f8acc2
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4cf37857e12eb795ebfa4c5c115bc80a1688d69e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221368"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677151"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Threading und Marshalling (C++/CX)
 In der Mehrzahl der Fälle können Instanzen von Windows-Runtime-Klassen wie Standard-c++-Objekten, von jedem Thread aus zugegriffen werden. Solche Klassen werden als "agil" bezeichnet. Allerdings eine kleine Anzahl von Windows-Runtime-Klassen, die mit Windows ausgeliefert werden nicht agilen und mehr verarbeitet werden muss, z. B. com-Objekte als Standard-c++-Objekten. Sie müssen zwar kein COM-Experte sein, um nicht agile Klassen zu verwenden, aber das Threadmodell dieser Klassen sowie ihr Marshallingverhalten beachten. Dieser Artikel ist ein Leitfaden für die seltenen Fälle, in denen Sie die Instanz einer nicht agilen Klasse verarbeiten müssen.  
@@ -100,7 +100,7 @@ ref class MyOptions
  In Visual C++, wenn Sie einen Verweis auf ein in-Proc-Windows-Runtime-Klasse erstellen, die ein Marshallingverhalten von "None", hat der Compiler gibt die Warnung C4451 aus, jedoch nicht vor, dass Sie erwägen, `Platform::Agile<T>`.  Der Compiler kann über diese Warnung hinaus keine Hilfe anbieten, sodass es in Ihrer Verantwortung liegt, die Klasse richtig zu verwenden und sicherzustellen, dass der Code STA-Komponenten nur aus dem Benutzeroberflächenthread und MTA-Komponenten nur aus einem Hintergrundthread aufruft.  
   
 ## <a name="authoring-agile-windows-runtime-components"></a>Erstellen von agile-Windows-Runtime-Komponenten  
- Beim Definieren einer Verweisklasse in C++ / CX, wird sie standardmäßig agil – das heißt, er hat `ThreadingModel`= Both und `MarshallingType`= Agile.  Wenn Sie die Windows Runtime C++ Template Library verwenden, Sie können die Klasse agil machen durch Ableiten von `FtmBase`, verwendet der `FreeThreadedMarshaller`.  Wenn Sie eine Klasse erstellen, die `ThreadingModel`=Both oder `ThreadingModel`=MTA hat, überprüfen Sie, ob die Klasse threadsicher ist. Weitere Informationen finden Sie unter [erstellen und Verwenden von Objekten (WRL)](https://msdn.microsoft.com/d5e42216-e888-4f1f-865a-b5ccd0def73e).  
+ Beim Definieren einer Verweisklasse in C++ / CX, wird sie standardmäßig agil – das heißt, er hat `ThreadingModel`= Both und `MarshallingType`= Agile.  Wenn Sie die Windows Runtime C++ Template Library verwenden, Sie können die Klasse agil machen durch Ableiten von `FtmBase`, verwendet der `FreeThreadedMarshaller`.  Wenn Sie eine Klasse erstellen, die `ThreadingModel`=Both oder `ThreadingModel`=MTA hat, überprüfen Sie, ob die Klasse threadsicher ist.   
   
  Sie können das Threadingmodell und das Marshallingverhalten einer Verweisklasse ändern. Wenn Sie Änderungen vornehmen, die die Klasse zu "nicht agil" rendern, müssen Sie die Auswirkungen verstehen, die mit diesen Änderungen verbunden sind.  
   
