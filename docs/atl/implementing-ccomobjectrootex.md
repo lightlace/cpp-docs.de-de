@@ -1,5 +1,5 @@
 ---
-title: Implementierung von CComObjectRootEx | Microsoft Docs
+title: Implementieren von CComObjectRootEx | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44c62e7589b9b300ceaa2886760bf2c3d85550ce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fefc7c3ed9177fb756e6298b54121a638ac8e253
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356533"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767477"
 ---
-# <a name="implementing-ccomobjectrootex"></a>Implementierung von CComObjectRootEx
-[CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) unbedingt; alle ATL-Objekten benötigen eine Instanz des `CComObjectRootEx` oder [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) in ihre Vererbung. `CComObjectRootEx` Stellt den Standardwert `QueryInterface` Mechanismus auf der Grundlage von COM-Zuordnungseinträge.  
-  
- Über die COM-Zuordnung sind die Schnittstellen eines Objekts für einen Client verfügbar, wenn der Client nach einer Schnittstelle fragt. Die Abfrage wird mittels `CComObjectRootEx::InternalQueryInterface` durchgeführt. `InternalQueryInterface` Nur behandelt Schnittstellen in der COM-Zuordnungstabelle.  
-  
- Geben Sie den Schnittstellen, in der COM-Zuordnungstabelle mit der [COM_INTERFACE_ENTRY](reference/com-interface-entry-macros.md#com_interface_entry) -Makro oder einer dessen Varianten. Mit dem folgenden Code werden beispielsweise die Schnittstellen `IDispatch`, `IBeeper` und `ISupportErrorInfo` in die COM-Zuordnungstabelle eingegeben:  
-  
- [!code-cpp[NVC_ATL_COM#1](../atl/codesnippet/cpp/implementing-ccomobjectrootex_1.h)]  
-  
-## <a name="see-also"></a>Siehe auch  
- [Grundlagen von ATL-COM-Objekten](../atl/fundamentals-of-atl-com-objects.md)   
- [COM-Zuordnungs-Makros](../atl/reference/com-map-macros.md)
+# <a name="implementing-ccomobjectrootex"></a>Implementieren von CComObjectRootEx
+
+[CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) ist wesentlich; alle ATL-Objekte müssen eine Instanz des `CComObjectRootEx` oder [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) bei der Vererbung. `CComObjectRootEx` Stellt den Standardwert `QueryInterface` -Mechanismus basierend auf COM-Zuordnungseinträgen.
+
+Über die COM-Zuordnung sind die Schnittstellen eines Objekts für einen Client verfügbar, wenn der Client nach einer Schnittstelle fragt. Die Abfrage wird mittels `CComObjectRootEx::InternalQueryInterface` durchgeführt. `InternalQueryInterface` behandelt nur Schnittstellen in der COM-Zuordnungstabelle.
+
+Sie können Schnittstellen eingeben, in die COM-Zuordnungstabelle mit der [COM_INTERFACE_ENTRY](reference/com-interface-entry-macros.md#com_interface_entry) Makro oder eine ihrer Varianten. Mit dem folgenden Code werden beispielsweise die Schnittstellen `IDispatch`, `IBeeper` und `ISupportErrorInfo` in die COM-Zuordnungstabelle eingegeben:
+
+[!code-cpp[NVC_ATL_COM#1](../atl/codesnippet/cpp/implementing-ccomobjectrootex_1.h)]
+
+## <a name="see-also"></a>Siehe auch
+
+[Grundlagen von ARL COM-Objekten](../atl/fundamentals-of-atl-com-objects.md)   
+[COM-Zuordnungs-Makros](../atl/reference/com-map-macros.md)
 

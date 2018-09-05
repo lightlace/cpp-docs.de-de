@@ -17,23 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acfbf8379512513e59528a6eb2855b9caed7d298
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5d9f9359bb6dfa1204c32e6902e12c62423291db
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964196"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765880"
 ---
 # <a name="composite-controls-classes"></a>Klassen für zusammengesetzte Steuerelemente
-Die folgende Klasse bietet Unterstützung für das Erstellen von zusammengesetzten Steuerelementen  
-  
--   [CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md) ActiveX-Steuerelemente, die von abgeleiteten `CComCompositeControl` von ein Standarddialogfeld gehostet werden. Diese Arten von Steuerelementen sind zusammengesetzte Steuerelemente wird aufgerufen, da sie andere Steuerelemente (systemeigene Windows-Steuerelemente und ActiveX-Steuerelemente) hosten können.  
-  
-## <a name="related-articles"></a>Verwandte Artikel  
- [Grundlagen von zusammengesetzten Steuerelementen](../atl/atl-composite-control-fundamentals.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../atl/atl-class-overview.md)   
- [Makros zusammengesetzter Steuerelemente](../atl/reference/composite-control-macros.md)   
- [Globale Funktionen zusammengesetzter Steuerelemente](../atl/reference/composite-control-global-functions.md)
+
+Die folgende Klasse bietet Unterstützung für das Erstellen von zusammengesetzten Steuerelementen
+
+- [CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md) ActiveX-Steuerelemente, die von abgeleiteten `CComCompositeControl` von ein Standarddialogfeld gehostet werden. Diese Arten von Steuerelementen sind zusammengesetzte Steuerelemente wird aufgerufen, da sie andere Steuerelemente (systemeigene Windows-Steuerelemente und ActiveX-Steuerelemente) hosten können.
+
+## <a name="related-articles"></a>Verwandte Artikel
+
+[Grundlagen von zusammengesetzten Steuerelementen](../atl/atl-composite-control-fundamentals.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../atl/atl-class-overview.md)   
+[Makros zusammengesetzter Steuerelemente](../atl/reference/composite-control-macros.md)   
+[Globale Funktionen zusammengesetzter Steuerelemente](../atl/reference/composite-control-global-functions.md)
 
