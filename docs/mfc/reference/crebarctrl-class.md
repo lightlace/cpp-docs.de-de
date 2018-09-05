@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656a19b6cddfb7e8353bb0eabf8975c733129a52
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 702cc504032f7c4702dcc1b317c517d53b9cccc9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207909"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693879"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl-Klasse
 Kapselt die Funktionalität eines Grundleisten-Steuerelements. Dabei handelt es sich um einen Container für ein untergeordnetes Fenster.  
@@ -293,7 +293,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parameter  
  *dwExStyle*  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) im Windows SDK.  
   
  *dwStyle*  
  Gibt die Kombination der Grundleisten-Steuerelement-Formate, die auf das Steuerelement angewendet. Eine Liste der unterstützten Formate, finden Sie unter [Stile für Grundleisten-Steuerelemente](/windows/desktop/Controls/rebar-control-styles) im Windows SDK.  

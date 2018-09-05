@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08cde95cf7ce680137aa932eb9642b9cd910318a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e7a337743ece9edfa71a052ee9d6e19728b0c051
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223212"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693715"
 ---
 # <a name="ipersiststorageimpl-class"></a>IPersistStorageImpl-Klasse
 Diese Klasse implementiert die [IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage) Schnittstelle.  
@@ -66,7 +66,7 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 ## <a name="remarks"></a>Hinweise  
  `IPersistStorageImpl` implementiert die [IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage) Schnittstelle, die kann ein Client anfordern, die Ihre laden und speichern Sie ihre permanenten Daten, die mit einem Speicher.  
   
- Die Implementierung dieser Klasse ist eine Klasse erforderlich `T` , stellen eine Implementierung der `IPersistStreamInit` Schnittstelle, die über `QueryInterface`. In der Regel bedeutet dies die Klasse `T` ableiten sollten [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md), geben Sie einen Eintrag für `IPersistStreamInit` in die [COM-Zuordnung](https://msdn.microsoft.com/library/ead2a1e3-334d-44ad-bb1f-b94bb14c2333), und Verwenden einer [eigenschaftenzuordnung](https://msdn.microsoft.com/library/bfe30be6-62c3-4dc2-bd49-21ef96f15427) persistenten Daten von der Klasse beschreiben.  
+ Die Implementierung dieser Klasse ist eine Klasse erforderlich `T` , stellen eine Implementierung der `IPersistStreamInit` Schnittstelle, die über `QueryInterface`. In der Regel bedeutet dies die Klasse `T` ableiten sollten [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md), geben Sie einen Eintrag für `IPersistStreamInit` in die [COM-Zuordnung](com-map-macros.md), und Verwenden einer [eigenschaftenzuordnung](property-map-macros.md) persistenten Daten von der Klasse beschreiben.  
   
  **Verwandte Artikel** [ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md), [Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md)  
   

@@ -1,7 +1,7 @@
 ---
-title: GOTO (MASM) | Microsoft Docs
+title: "\"GOTO\" (MASM) | Microsoft-Dokumentation"
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eecdab2fe91de0aae656b37c6fddafe658e60c0
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b0be678e2d39389cbc551c386c1890f799124b5b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43694003"
 ---
 # <a name="goto-masm"></a>GOTO (MASM)
-Überträgt die Assembly in die Zeile markiert **: *** Macrolabel*.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-GOTO   
-macrolabel  
-  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- **GOTO** ist zulässig, nur innerhalb der [MAKRO](../../assembler/masm/macro.md), [für](../../assembler/masm/for-masm.md), [FORC](../../assembler/masm/forc.md), [wiederholen](../../assembler/masm/repeat.md), und **beim**blockiert. Die Bezeichnung muss die einzige Anweisung in der Zeile sein und muss einen führenden Doppelpunkt vorangestellt werden.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+
+Überträgt die Assembly in die Zeile markiert **:**_Macrolabel_.
+
+## <a name="syntax"></a>Syntax
+
+> **"GoTo"** *Macrolabel*
+
+## <a name="remarks"></a>Hinweise
+
+**"GoTo"** ist zulässig, nur in [MAKRO](macro.md), [für](for-masm.md), [Erzwungene](forc.md), [wiederholen](repeat.md), und [beim](while-masm.md)Blöcke. Die *Macrolabel* Ziel muss die einzige Anweisung in der Zeile sein und muss einen führenden Doppelpunkt vorangestellt werden.
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

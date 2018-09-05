@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 212637b55a422c11d82ae6ad9f548d9e429c41dd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dbd12c98014e2adfe9617f0bdaac891f33ebc600
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198567"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693925"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 Implementiert die Basisfunktionalität für Fenster im Registerkartenformat.  
@@ -357,7 +357,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||  
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||  
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||  
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Von Klasse verwendeten [CWinApp](../../mfc/reference/cwinapp-class.md) um fenstermeldungen zu übersetzen, bevor sie um weitergeleitet werden die [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows-Funktionen. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Von Klasse verwendeten [CWinApp](../../mfc/reference/cwinapp-class.md) um fenstermeldungen zu übersetzen, bevor sie um weitergeleitet werden die [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows-Funktionen. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|Berechnet das interne Layout eines Fensters im Registerkartenformat neu.|  
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|Entfernt alle Registerkarten aus dem Fenster im Registerkartenformat.|  
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|Entfernt alle Registerkarten aus einem Fenster im Registerkartenformat.|  
@@ -1844,7 +1844,7 @@ virtual void SetActiveTabColor(COLORREF clr);
  Die neue Hintergrundfarbe angibt.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Framework Ruft die Standardhintergrundfarbe für aktive Registerkarten aus der [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)Methode.  
+ Das Framework Ruft die Standardhintergrundfarbe für aktive Registerkarten aus der [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)Methode.  
   
 ##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor  
  Legt die Textfarbe für aktive Registerkarten fest.  
@@ -1858,7 +1858,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
  Ein [COLORREF](/windows/desktop/gdi/colorref) Parameter, der die neue Farbe des Textes angibt.  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßig erhält das Framework die Textfarbe aus [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371). Diese Standardfarbe überschreiben, indem die `SetActiveTabTextColor` Methode.  
+ Standardmäßig erhält das Framework die Textfarbe aus [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor). Diese Standardfarbe überschreiben, indem die `SetActiveTabTextColor` Methode.  
   
 ##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors  
  Legt die Farben des Registerkarten-Steuerelements, das Framework verwendet, automatische Färbung aktiviert.  

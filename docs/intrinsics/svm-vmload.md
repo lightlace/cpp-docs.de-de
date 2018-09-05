@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ff94cddb6c286fa651b1ba728238e0d38ab3b17
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4d3f82633c9bd48ede71853dbe383352b0b3d6f5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545819"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692863"
 ---
 # <a name="svmvmload"></a>__svm_vmload
 **Microsoft-spezifisch**  
@@ -44,7 +44,7 @@ void __svm_vmload(
 |[in] `VmcbPhysicalAddress`|Die physische Adresse der VMCB.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `__svm_vmload` -Funktion ist gleichbedeutend mit der `VMLOAD` computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen zu suchen, für das Dokument, "AMD64 Architecture Programmers manuelle Volume 2: System-Programmierung" Dokumentnummer 24593, Version 3.11, auf die [AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) Standort.  
+ Die `__svm_vmload` -Funktion ist gleichbedeutend mit der `VMLOAD` computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen zu suchen, für das Dokument, "AMD64 Architecture Programmers manuelle Volume 2: System-Programmierung" Dokumentnummer 24593, Version 3.11, auf die [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) Standort.  
   
 ## <a name="requirements"></a>Anforderungen  
   

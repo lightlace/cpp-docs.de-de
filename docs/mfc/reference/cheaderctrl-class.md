@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7edfe929a742e5ff33e76840fa1abdfd496908e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ebe4b604958220a846ee3a91b1a6251f6f461de9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211553"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693466"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Headersteuerelements bereit.  
@@ -283,7 +283,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parameter  
  *dwExStyle*  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) im Windows SDK.  
   
  *dwStyle*  
  Format des Headersteuerelements. Eine Beschreibung der Header der Stile von Listensteuerelementen, finden Sie unter [Steuerelementstile Kopfzeile](/windows/desktop/Controls/header-control-styles) im Windows SDK. Finden Sie unter [erstellen](#create) eine Liste der zusätzlichen Formatvorlagen.  

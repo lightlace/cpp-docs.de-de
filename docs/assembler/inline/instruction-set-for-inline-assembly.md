@@ -1,7 +1,7 @@
 ---
-title: Anweisungsset für Inlineassembly | Microsoft Docs
+title: Anweisungsset für Inlineassembly | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,18 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 622f5aea757506dd3bf48056a139f381e9d8a883
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 02fe69fad2e1ef9fb8aa0c5aa23913ccf403e15a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051116"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693994"
 ---
 # <a name="instruction-set-for-inline-assembly"></a>Anweisungsset für Inlineassembly
-## <a name="microsoft-specific"></a>Microsoft-spezifisch  
- Visual C++-Compiler unterstützt alle Opcodes über die Pentium 4 und AMD Athlon. Weitere Anweisungen, die von dem Zielprozessor unterstützt können erstellt werden, mit der [_emit Pseudoinstruction](../../assembler/inline/emit-pseudoinstruction.md).  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden der Assemblysprache in __asm-Blöcken](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Microsoft-spezifisch**
+
+Visual C++-Compiler unterstützt alle über die Pentium 4 und AMD Athlon-Opcodes. Zusätzliche Anweisungen, die von dem Zielprozessor unterstützt können erstellt werden, mit der [_emit Pseudoinstruction](../../assembler/inline/emit-pseudoinstruction.md).
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden der Assemblysprache in __asm-Blöcken](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>
