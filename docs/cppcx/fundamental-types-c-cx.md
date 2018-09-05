@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1e30e7ced4f4e761f7342811c533c1f361d0b1df
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597872"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754194"
 ---
 # <a name="fundamental-types-ccx"></a>Grundlegende Typen (C++/CX)
 Zusätzlich zu den standard C++ integrierte Typen, C++ / CX unterstützt das System der Typen, die von der Windows-Runtime-Architektur definiert ist, durch die Bereitstellung von Typdefinitionen für die grundlegende Windows-Runtime-, die C++-Standardtypen zugeordnet Typen... C++ / CX implementiert boolesche Ausdrücke, Zeichen und grundlegende numerische Typen. Dieser Typdefinitionen werden im `default` -Namespace definiert, der nicht explizit angegeben werden muss. Darüber hinaus C++ / CX stellt Wrapper und konkrete Implementierungen für bestimmte Windows-Runtime-Typen und Schnittstellen bereit.  

@@ -1,5 +1,5 @@
 ---
-title: CAtlDebugInterfacesModule Klasse | Microsoft Docs
+title: CAtlDebugInterfacesModule-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 265bc9c59e240dc11ecf71b67719fc8dd1ea5ad4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6dbac5c07f04725400423e72d1cc38eb0f25e48f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359221"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755522"
 ---
 # <a name="catldebuginterfacesmodule-class"></a>CAtlDebugInterfacesModule-Klasse
-Diese Klasse bietet Unterstützung für das Debuggen von Schnittstellen.  
-  
-## <a name="syntax"></a>Syntax  
-  
+
+Diese Klasse bietet Unterstützung für das Debuggen von Schnittstellen.
+
+## <a name="syntax"></a>Syntax
+
 ```
 class CAtlDebugInterfacesModule
-```  
-  
-## <a name="remarks"></a>Hinweise  
- `CAtlDebugInterfacesModule` bietet Unterstützung für das Debuggen von Schnittstellen erforderlich. Es ist in jedem Projekt, das das Symbol definiert enthalten [_ATL_DEBUG_QI](debugging-and-error-reporting-macros.md#_atl_debug_qi).  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** atlbase.h  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../../atl/atl-class-overview.md)   
- [Modulklassen](../../atl/atl-module-classes.md)
+```
+
+## <a name="remarks"></a>Hinweise
+
+`CAtlDebugInterfacesModule` bietet Unterstützung für das Debuggen von Schnittstellen erforderlich. Es befindet sich in jedem Projekt, das das Symbol definiert [_ATL_DEBUG_QI](debugging-and-error-reporting-macros.md#_atl_debug_qi).
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** atlbase.h
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)   
+[Modulklassen](../../atl/atl-module-classes.md)

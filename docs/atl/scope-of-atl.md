@@ -1,5 +1,5 @@
 ---
-title: Geltungsbereich von ATL | Microsoft Docs
+title: ATL-Bereich | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,19 +14,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec7af04df819ed64c7c693392ee03b30893ce3d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 35256dcf1d43b2e176c722e7dfa1b2087029e277
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360030"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761780"
 ---
-# <a name="scope-of-atl"></a>Geltungsbereich von ATL
-ATL ermöglicht die einfache Erstellung von COM-Objekten, Automatisierungsserver und ActiveX-Steuerelemente. ATL stellt integrierten Unterstützung für viele grundlegenden COM-Schnittstellen.  
-  
- ATL wird als Quellcode ausgeliefert, die Sie in der Anwendung einschließen. ATL stellt außerdem eine DLL zur Verfügung (atl90.dll), die Code enthält, die in Komponenten gemeinsam genutzt werden kann. Diese DLL ist jedoch nicht erforderlich.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Einführung in ATL](../atl/introduction-to-atl.md)   
- [ATL-Projekt-Assistent](../atl/reference/atl-project-wizard.md)
+# <a name="scope-of-atl"></a>ATL-Bereich
+
+ATL ermöglicht Ihnen das einfache Erstellen von COM-Objekte, Automatisierungsserver und ActiveX-Steuerelemente. ATL bietet integrierten Unterstützung für viele der grundlegenden COM-Schnittstellen.
+
+ATL wird als Quellcode ausgeliefert, die Sie in Ihrer Anwendung enthalten. ATL stellt außerdem eine DLL zur Verfügung (atl90.dll), das Code enthält, die in Komponenten gemeinsam genutzt werden können. Diese DLL-Datei ist jedoch nicht erforderlich.
+
+## <a name="see-also"></a>Siehe auch
+
+[Einführung in ATL](../atl/introduction-to-atl.md)   
+[ATL-Projekt-Assistent](../atl/reference/atl-project-wizard.md)
 

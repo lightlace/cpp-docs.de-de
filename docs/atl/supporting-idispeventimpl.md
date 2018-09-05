@@ -1,5 +1,5 @@
 ---
-title: Unterstützung von IDispEventImpl | Microsoft Docs
+title: Unterstützen von IDispEventImpl | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,71 +22,77 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 680396ae912cca5f19e87697e7de0033213cc963
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9b6e62f90cfca34e92d76294e7deb5e79e8dbd12
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362218"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756008"
 ---
-# <a name="supporting-idispeventimpl"></a>Unterstützung von IDispEventImpl
-Die Vorlagenklasse [IDispEventImpl](../atl/reference/idispeventimpl-class.md) können verwendet werden, um zur Verbindung Punkt senken in Ihrer Klasse ATL-Unterstützung bereit. Connection Point Senke ermöglicht, Ihre Klasse zum Behandeln von Ereignissen aus externen COM-Objekten, das ausgelöst wird. Diese Verbindung Punkt senken werden mit einer Senke ereigniszuordnung bereitgestellt, die von Ihrer Klasse zugeordnet.  
-  
- Um eine Verbindung zeigen eine Ereignissenke für Ihre Klasse ordnungsgemäß zu implementieren, müssen die folgenden Schritte ausgeführt werden:  
-  
--   Importieren Sie für jedes Objekt externen Typbibliotheken  
-  
--   Deklarieren der `IDispEventImpl` Schnittstellen  
-  
--   Deklarieren Sie eine Senke ereigniszuordnung  
-  
--   Melden Sie an und die Verbindungspunkte  
-  
- Die Schritte zum Implementieren einer Connection Point Senke, die alle durch das Ändern der nur der Headerdatei (. h) der Klasse erreicht werden.  
-  
-## <a name="importing-the-type-libraries"></a>Importieren von Typbibliotheken  
- Für jedes externe Objekt, dessen Ereignisse Sie behandeln möchten, müssen Sie die Typbibliothek importieren. Dieser Schritt definiert die Ereignisse, die behandelt werden können und enthält Informationen, die verwendet wird, wenn die Senke ereigniszuordnung deklarieren. Die [#import](../preprocessor/hash-import-directive-cpp.md) -Direktive kann verwendet werden, um dies zu erreichen. Fügen Sie die erforderlichen `#import` Richtlinie Zeilen für jede Dispatchschnittstelle die Headerdatei (. h) der Klasse unterstützt.  
-  
- Im folgende Beispiel wird die Typbibliothek, die von einer externen COM-Server importiert (`MSCAL.Calendar.7`):  
-  
- [!code-cpp[NVC_ATL_Windowing#141](../atl/codesnippet/cpp/supporting-idispeventimpl_1.h)]  
-  
+# <a name="supporting-idispeventimpl"></a>Unterstützen von IDispEventImpl
+
+Die Vorlagenklasse [IDispEventImpl](../atl/reference/idispeventimpl-class.md) kann verwendet werden, um Unterstützung für die Verbindung Punkt senken in der ATL-Klasse bereitzustellen. Connection Point Senke können Ihre Klasse zum Behandeln von Ereignissen, die von externen COM-Objekten ausgelöst. Diese Verbindung Punkt senken werden mit einer Senke ereigniszuordnung bereitgestellt, die von Ihrer Klasse zugeordnet.
+
+Um eine Verbindung Punkt Senke für die Klasse ordnungsgemäß zu implementieren, müssen die folgenden Schritte ausgeführt werden:
+
+- Importieren Sie die Typbibliotheken für die einzelnen externen Objekte
+
+- Deklarieren Sie die `IDispEventImpl` Schnittstellen
+
+- Deklarieren Sie eine Senke ereigniszuordnung
+
+- Melden Sie an und die Verbindungspunkte
+
+Die Schritte zum Implementieren einer Connection Point-Senke werden alle erreicht, indem nur die Header-Datei (. h) der Klasse ändern.
+
+## <a name="importing-the-type-libraries"></a>Importieren von Typbibliotheken
+
+Für jedes externe-Objekt, dessen Ereignisse, die Sie behandeln möchten, müssen Sie die Bibliothek importieren. Dieser Schritt definiert die Ereignisse, die verarbeitet werden können, und enthält Informationen, die verwendet wird, wenn die Senke ereigniszuordnung deklarieren. Die [#import](../preprocessor/hash-import-directive-cpp.md) -Direktive kann verwendet werden, um dies zu erreichen. Fügen Sie die erforderlichen `#import` -Direktive Zeilen für jede Dispatchschnittstelle, die Sie in der Headerdatei (. h) der Klasse unterstützt.
+
+Das folgende Beispiel importiert die Typbibliothek eines externen COM-Servers (`MSCAL.Calendar.7`):
+
+[!code-cpp[NVC_ATL_Windowing#141](../atl/codesnippet/cpp/supporting-idispeventimpl_1.h)]
+
 > [!NOTE]
->  Sie benötigen ein separates `#import` -Anweisung für jede externe Typbibliothek, die Sie unterstützen.  
-  
-## <a name="declaring-the-idispeventimpl-interfaces"></a>Deklarieren Sie die IDispEventImpl-Schnittstellen  
- Nun, dass Sie die Typbibliotheken der einzelnen Verteilschnittstelle importiert haben, müssen Sie separate deklarieren `IDispEventImpl` Schnittstellen für jede externe Dispatchschnittstelle. Ändern Sie die Deklaration der Klasse durch Hinzufügen einer `IDispEventImpl` -Schnittstellendeklaration für jedes externe Objekt. Weitere Informationen zu den Parametern finden Sie unter [IDispEventImpl](../atl/reference/idispeventimpl-class.md).  
-  
- Der folgende Code deklariert zwei Connection Point senken, für die `DCalendarEvents` -Schnittstelle, für die COM-Objekt, das von der Klasse implementiert `CMyCompositCtrl2`:  
-  
- [!code-cpp[NVC_ATL_Windowing#142](../atl/codesnippet/cpp/supporting-idispeventimpl_2.h)]  
-  
-## <a name="declaring-an-event-sink-map"></a>Deklarieren Sie eine Senke Ereigniszuordnung  
- Damit die ereignisbenachrichtigungen von der ordnungsgemäßen Funktion behandelt werden kann muss Ihre Klasse jedes Ereignis zu seinem richtigen Ereignishandler weitergeleitet werden. Dies erfolgt durch Deklarieren einer Senke ereigniszuordnung.  
-  
- ATL stellt mehrere Makros [BEGIN_SINK_MAP](reference/composite-control-macros.md#begin_sink_map), [END_SINK_MAP](reference/composite-control-macros.md#end_sink_map), und [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex), erleichtern diese Zuordnung. Das Standardformat lautet wie folgt:  
-  
- `BEGIN_SINK_MAP(comClass)`  
-  
- `SINK_ENTRY_EX(id, iid, dispid, func)`  
-  
- `. . . //additional external event entries`  
-  
- `END_SINK_MAP()`  
-  
- Das folgende Beispiel deklariert ein Ereignissenke Karte mit zwei Ereignishandler:  
-  
- [!code-cpp[NVC_ATL_Windowing#136](../atl/codesnippet/cpp/supporting-idispeventimpl_3.h)]  
-  
- Die Implementierung ist fast abgeschlossen. Der letzte Schritt betrifft das anmelden und Abmelden der externen Schnittstellen.  
-  
-## <a name="advising-and-unadvising-the-idispeventimpl-interfaces"></a>Anmelden und Abmelden der IDispEventImpl-Schnittstellen  
- Der letzte Schritt besteht eine Methode, die (alle Verbindungspunkte senkereigniszuordnung oder wird) zu den entsprechenden Zeitpunkten implementieren. Diese Anmeldung muss ausgeführt werden, bevor die Kommunikation zwischen den externen Clients und dem Objekt durchgeführt werden kann. Bevor das Objekt sichtbar ist, wird jede externe Dispatchschnittstelle, die vom Objekt unterstützte für Ausgangsschnittstellen abgefragt. Eine Verbindung hergestellt und ein Verweis auf die Ausgangsschnittstelle wird verwendet, um Ereignisse aus dem Objekt zu behandeln. Diese Prozedur spricht man von "Anmelden".  
-  
- Nachdem das Objekt mit den externen Schnittstellen abgeschlossen ist, sollte die Ausgangsschnittstellen benachrichtigt werden, dass sie nicht mehr von der Klasse verwendet werden. Dieser Prozess wird als "Abmelden" bezeichnet  
-  
- Aufgrund der eindeutigen Natur von COM-Objekten variiert dieses Verfahren im Detail und Ausführung zwischen Implementierungen. Diese Details sind nicht Gegenstand dieses Themas und nicht eingegangen.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Grundlagen von ARL COM-Objekten](../atl/fundamentals-of-atl-com-objects.md)
+>  Sie benötigen eine Separate `#import` -Anweisung für jede externe Typbibliothek, die Sie unterstützen.
+
+## <a name="declaring-the-idispeventimpl-interfaces"></a>Deklarieren Sie die Schnittstellen von IDispEventImpl
+
+Nachdem Sie die Typbibliotheken der einzelnen Dispatchschnittstelle importiert haben, müssen Sie separate deklarieren `IDispEventImpl` Schnittstellen für die einzelnen externen Dispatch-Schnittstellen. Ändern Sie die Deklaration der Klasse, durch das Hinzufügen einer `IDispEventImpl` Schnittstellendeklaration für jedes externe Objekt. Weitere Informationen zu den Parametern finden Sie unter [IDispEventImpl](../atl/reference/idispeventimpl-class.md).
+
+Der folgende Code deklariert zwei Connection Point senken, für die `DCalendarEvents` Schnittstelle, für das COM-Objekt, das von der Klasse implementiert `CMyCompositCtrl2`:
+
+[!code-cpp[NVC_ATL_Windowing#142](../atl/codesnippet/cpp/supporting-idispeventimpl_2.h)]
+
+## <a name="declaring-an-event-sink-map"></a>Deklarieren Sie eine Senke Ereigniszuordnung
+
+Damit die ereignisbenachrichtigungen von der ordnungsgemäßen Funktion behandelt werden kann muss die Klasse jedes Ereignis an die richtigen Handler weitergeleitet werden. Dies erfolgt durch eine Senke ereigniszuordnung deklarieren.
+
+ATL stellt mehrere Makros [BEGIN_SINK_MAP](reference/composite-control-macros.md#begin_sink_map), [END_SINK_MAP](reference/composite-control-macros.md#end_sink_map), und [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex), erleichtern diese Zuordnung. Das Standardformat lautet wie folgt aus:
+
+`BEGIN_SINK_MAP(comClass)`
+
+`SINK_ENTRY_EX(id, iid, dispid, func)`
+
+`. . . //additional external event entries`
+
+`END_SINK_MAP()`
+
+Das folgende Beispiel deklariert eine Senke ereigniszuordnung mit zwei Ereignishandler:
+
+[!code-cpp[NVC_ATL_Windowing#136](../atl/codesnippet/cpp/supporting-idispeventimpl_3.h)]
+
+Die Implementierung ist fast abgeschlossen. Der letzte Schritt betrifft das anmelden und Abmelden von externen Schnittstellen.
+
+## <a name="advising-and-unadvising-the-idispeventimpl-interfaces"></a>Anmelden und Abmelden von IDispEventImpl-Schnittstellen
+
+Der letzte Schritt ist eine Methode, die alle Verbindungspunkte empfehlen Sie (oder abzumelden) wird zu den richtigen Zeitpunkten implementieren. Diese Anmeldung muss ausgeführt werden, bevor die Kommunikation zwischen externen Clients und das Objekt durchgeführt werden kann. Bevor das Objekt angezeigt wird, wird jede externe Dispatchschnittstelle, die vom Objekt unterstützte für Ausgangsschnittstellen abgefragt. Eine Verbindung hergestellt wird, und ein Verweis auf die Ausgangsschnittstelle wird verwendet, um Ereignisse aus dem Objekt zu behandeln. Dieses Verfahren wird als "Anmelden" bezeichnet
+
+Nachdem das Objekt mit den externen Schnittstellen fertig ist, sollte die Ausgangsschnittstellen benachrichtigt werden, dass sie von Ihrer Klasse nicht mehr verwendet werden. Dieser Prozess wird als "Abmelden". um bezeichnet.
+
+Aufgrund der eindeutigen Natur von COM-Objekten variiert diese Prozedur im Detail und Ausführung zwischen Implementierungen. Diese Informationen werden über den Rahmen dieses Themas hinaus und sind nicht Gegenstand.
+
+## <a name="see-also"></a>Siehe auch
+
+[Grundlagen von ARL COM-Objekten](../atl/fundamentals-of-atl-com-objects.md)
 

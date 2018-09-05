@@ -1,5 +1,5 @@
 ---
-title: CAutoVectorPtrElementTraits Klasse | Microsoft Docs
+title: CAutoVectorPtrElementTraits-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,72 +19,80 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52c450a1a261224cf87ea125a6f01259da0e9f1b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd39f56d69aef836714d70b50f6e2c882cad9448
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357882"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754825"
 ---
 # <a name="cautovectorptrelementtraits-class"></a>CAutoVectorPtrElementTraits-Klasse
-Diese Klasse enthält Methoden, statische Funktionen und Typdefinitionen hilfreich beim Erstellen von Sammlungen von intelligenten Zeigern, die mit der neue Vektor und "delete".  
-  
+
+Diese Klasse stellt die Methoden, statische Funktionen und Typdefinitionen hilfreich beim Erstellen von Sammlungen von intelligenten Zeigern, die mit der neuen Vektor und "delete".
+
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
-  
-## <a name="syntax"></a>Syntax  
-  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
+
+## <a name="syntax"></a>Syntax
+
 ```
 template <typename T>  
 class CAutoVectorPtrElementTraits : 
    public CDefaultElementTraits<ATL::CAutoVectorPtr<T>>
-```    
-  
-#### <a name="parameters"></a>Parameter  
- `T`  
- Der Zeigertyp.  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-typedefs"></a>Öffentliche Typedefs  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CAutoVectorPtrElementTraits::INARGTYPE](#inargtype)|Der Datentyp zum Hinzufügen von Elementen auf das Klassenobjekt Auflistung verwendet werden soll.|  
-|[CAutoVectorPtrElementTraits::OUTARGTYPE](#outargtype)|Der Datentyp zum Abrufen von Elementen aus der Auflistung-Klassenobjekt verwendet werden soll.|  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Klasse enthält Methoden, statische Funktionen und Typdefinitionen für die Erstellung von Auflistungsobjekten-Klasse mit intelligenten Zeigern Beihilfe. Im Gegensatz zu [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md), dieser neue Vektor und "delete"-Klasse verwendet.  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
-  
- [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)  
-  
- [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)  
-  
- [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)  
-  
- `CAutoVectorPtrElementTraits`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** atlcoll.h  
-  
-##  <a name="inargtype"></a>  CAutoVectorPtrElementTraits::INARGTYPE  
- Der Datentyp zum Hinzufügen von Elementen auf das Klassenobjekt Auflistung verwendet werden soll.  
-  
+```
+
+#### <a name="parameters"></a>Parameter
+
+`T`  
+Der Zeigertyp.
+
+## <a name="members"></a>Member
+
+### <a name="public-typedefs"></a>Öffentliche Typedefs
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CAutoVectorPtrElementTraits::INARGTYPE](#inargtype)|Der Datentyp, zum Hinzufügen von Elementen für das Objekt der Sammlung-Klasse verwendet werden soll.|
+|[CAutoVectorPtrElementTraits::OUTARGTYPE](#outargtype)|Der Datentyp für das Abrufen von Elementen aus dem Auflistungsobjekt-Klasse.|
+
+## <a name="remarks"></a>Hinweise
+
+Diese Klasse stellt die Methoden, statische Funktionen und Typedefs für dadurch die Erstellung von Auflistungsobjekten-Klasse, die intelligente Zeiger. Im Gegensatz zu [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md), diese Klasse verwendet vector-new und delete-Operator.
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+[CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
+
+[CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
+
+[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
+
+[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
+
+`CAutoVectorPtrElementTraits`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** atlcoll.h
+
+##  <a name="inargtype"></a>  CAutoVectorPtrElementTraits::INARGTYPE
+
+Der Datentyp, zum Hinzufügen von Elementen für das Objekt der Sammlung-Klasse verwendet werden soll.
+
 ```
 typedef CAutoVectorPtr<T>& INARGTYPE;
-```  
-  
-##  <a name="outargtype"></a>  CAutoVectorPtrElementTraits::OUTARGTYPE  
- Der Datentyp zum Abrufen von Elementen aus der Auflistung-Klassenobjekt verwendet werden soll.  
-  
+```
+
+##  <a name="outargtype"></a>  CAutoVectorPtrElementTraits::OUTARGTYPE
+
+Der Datentyp für das Abrufen von Elementen aus dem Auflistungsobjekt-Klasse.
+
 ```
 typedef T*& OUTARGTYPE;
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [CDefaultElementTraits-Klasse](../../atl/reference/cdefaultelementtraits-class.md)   
- [CAutoVectorPtr-Klasse](../../atl/reference/cautovectorptr-class.md)   
- [Klassenübersicht](../../atl/atl-class-overview.md)
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[CDefaultElementTraits-Klasse](../../atl/reference/cdefaultelementtraits-class.md)   
+[CAutoVectorPtr-Klasse](../../atl/reference/cautovectorptr-class.md)   
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)

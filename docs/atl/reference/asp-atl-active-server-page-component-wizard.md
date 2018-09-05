@@ -1,5 +1,5 @@
 ---
-title: ASP, ATL-Assistent für Active Server Page-Komponenten | Microsoft Docs
+title: ASP, ATL Active Server Page-Komponenten-Assistent | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfe27a64a2086f08c5a29e2961d069771fdbc4e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63f945f90f6a862a3b16cd3dcc41859b0c21b984
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356138"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761942"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, ATL-Assistent für Active Server Page-Komponenten
-Mit der optionale Einstellungen angeben, für die Behandlung von Informationen und Status, die im Zusammenhang mit der ASP-Komponente auf dieser Seite des ATL-Assistenten für Active Server Page-Komponente.  
-  
- **Optionale Methoden**  
- Fügt die optionalen ASP-Methoden **OnStartPage** und **OnEndPage**, für Ihr Objekt. Diese Option muss ausgewählt werden, alle systeminternen Objekten von Active Server Pages festlegen. Es ist standardmäßig ausgewählt.  
-  
--   **OnStartPage/OnEndPage** [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx) zum ersten Mal das Skript versucht, auf das Objekt aufgerufen wird. **OnEndPage** wird aufgerufen, wenn das Objekt beendet, wird das Skript zu verarbeiten.  
-  
- **Systeminterne Objekt**  
- Wählen Sie die **OnStartPage/OnEndPage** Option aus, um alle ASP-Objekte festgelegt.  
-  
-|Option|Beschreibung|  
-|------------|-----------------|  
-|**Anforderung**|Bietet Zugriff auf die systeminterne Funktion der Active Server Pages **anfordern** Objekt. Das Request-Objekt wird verwendet, um eine HTTP-Anforderung übergeben.|  
-|**Antwort**|Bietet Zugriff auf die systeminterne Funktion der Active Server Pages **Antwort** Objekt. Als Antwort auf eine Anforderung sendet das Antwortobjekt Informationen an den Browser, den Benutzer angezeigt.|  
-|**Sitzung**|Bietet Zugriff auf die systeminterne Funktion der Active Server Pages **Sitzung** Objekt. Die **Sitzung** Objekt enthält Informationen über die aktuelle benutzersitzung, z. B. speichern und Abrufen von Statusinformationen.|  
-|**Anwendung**|Bietet Zugriff auf die systeminterne Funktion der Active Server Pages **Anwendung** Objekt. Die **Anwendung** Objekt verwaltet den Zustand, die für mehrere ASP-Objekte freigegeben wird.|  
-|**Server**|Bietet Zugriff auf die systeminterne Funktion der Active Server Pages **Server** Objekt. Die **Server** Objekts können Sie zum Erstellen anderer ASP-Objekte.|  
-  
-## <a name="see-also"></a>Siehe auch  
- [ATL-Assistent für Active Server Page-Komponenten](../../atl/reference/atl-active-server-page-component-wizard.md)   
- [ATL Active Server Page-Komponenten](../../atl/reference/adding-an-atl-active-server-page-component.md)
+
+Verwenden Sie auf dieser Seite des ATL-Assistenten für Active Server Page-Komponente, um die optionale Einstellungen angeben, für die Behandlung von Informationen und Zustände, die im Zusammenhang mit der ASP-Komponente.
+
+**Optionale Methoden**  
+Fügt den optionalen ASP-Methoden **OnStartPage** und **OnEndPage**, auf das Objekt. Diese Option muss ausgewählt werden, damit alle Active Server Pages-Objekte festgelegt werden kann. Es ist standardmäßig ausgewählt.
+
+- **OnStartPage/OnEndPage** [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx) wird zum ersten Mal das Skript versucht, Zugriff auf das Objekt aufgerufen. **OnEndPage** wird aufgerufen, wenn das Objekt wurde das Skript zu verarbeiten.
+
+**Systeminterne-Objekt**  
+Sie müssen auswählen, die **OnStartPage/OnEndPage** Option aus, um alle ASP-Objekte festgelegt.
+
+|Option|Beschreibung|
+|------------|-----------------|
+|**Anforderung**|Bietet Zugriff auf die systeminternen Active Server Pages **anfordern** Objekt. Das Request-Objekt wird verwendet, um eine HTTP-Anforderung zu übergeben.|
+|**Antwort**|Bietet Zugriff auf die systeminternen Active Server Pages **Antwort** Objekt. Als Antwort auf eine Anforderung sendet das Antwortobjekt Informationen an den Browser, um den Benutzer anzuzeigen.|
+|**Sitzung**|Bietet Zugriff auf die systeminternen Active Server Pages **Sitzung** Objekt. Die **Sitzung** Objekt enthält Informationen über die aktuelle benutzersitzung, z. B. speichern und Abrufen von Statusinformationen.|
+|**Anwendung**|Bietet Zugriff auf die systeminternen Active Server Pages **Anwendung** Objekt. Die **Anwendung** Objekt verwaltet Status, der mehrere ASP-Objekte gemeinsam genutzt wird.|
+|**Server**|Bietet Zugriff auf die systeminternen Active Server Pages **Server** Objekt. Die **Server** Objekt können Sie andere ASP-Objekte zu erstellen.|
+
+## <a name="see-also"></a>Siehe auch
+
+[ATL Active Server Page-Komponenten-Assistent](../../atl/reference/atl-active-server-page-component-wizard.md)   
+[ATL Active Server Page-Komponente](../../atl/reference/adding-an-atl-active-server-page-component.md)
 

@@ -1,5 +1,5 @@
 ---
-title: MFC-ATL freigegebenen Klassen | Microsoft Docs
+title: Freigegebene ATL-MFC-Klassen | Microsoft-Dokumentation
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -31,26 +31,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3517e193effd88e1ebc9afb66268dcb60ba6932
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2080aae34a69b18286953bfa48a269b81a5a5e65
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357199"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761812"
 ---
 # <a name="atlmfc-shared-classes"></a>Freigegebene ATL-/MFC-Klassen
-Diese Hilfsklassen können ohne MFC-DLL in systemeigenem C++-Projekte verwendet werden.  
-  
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Klassen, die gemeinsam von MFC und ATL](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)  
- Enthält Links zu den Klassen, die gemeinsam von MFC und ATL  
-  
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [Active Template Library (ATL)-Referenz](../atl/atl-com-desktop-components.md)  
- Enthält Referenzmaterial zur ATL-Bibliothek, einer Gruppe vorlagenbasierter Visual C++-Klassen, die die Programmierung von COM-Objekten vereinfachen.  
-  
- [Microsoft Foundation Class (MFC)-Bibliothek Reference](../mfc/mfc-desktop-applications.md)  
- Enthält Referenzmaterial für die MFC-Bibliothek, die eine Reihe von Klassen in, das ein Anwendungsframework, wiederum das Framework einer für die Windows-API geschriebenen Anwendung darstellt.  
-  
- [Debuggen](/visualstudio/debugger/debugging-in-visual-studio)  
- Stellt Links zum Visual Studio-Debugger für die Behebung logischer Fehler in Ihrer Anwendung oder in gespeicherten Prozeduren bereit.
+
+Diese Hilfsklassen können in jedem nativen C++-Projekt verwendet werden, ohne dass alle MFC-DLL.
+
+## <a name="in-this-section"></a>In diesem Abschnitt
+
+[Von MFC und ATL freigegebenen Klassen](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)  
+Enthält Links zu den von MFC und ATL freigegebenen Klassen
+
+## <a name="related-sections"></a>Verwandte Abschnitte
+
+[Active Template Library (ATL)-Referenz](../atl/atl-com-desktop-components.md)  
+Enthält Referenzmaterial zur ATL-Bibliothek, einer Gruppe vorlagenbasierter Visual C++-Klassen, die die Programmierung von COM-Objekten vereinfachen.
+
+[Microsoft Foundation Class (MFC)-Bibliothek Reference](../mfc/mfc-desktop-applications.md)  
+Enthält Referenzmaterial für die MFC-Bibliothek, die ein Satz von Klassen, bilden ein Anwendungsframework, das Framework einer Anwendung, die für die Windows-API geschrieben wird.
+
+[Debuggen](/visualstudio/debugger/debugging-in-visual-studio)  
+Stellt Links zum Visual Studio-Debugger für die Behebung logischer Fehler in Ihrer Anwendung oder in gespeicherten Prozeduren bereit.

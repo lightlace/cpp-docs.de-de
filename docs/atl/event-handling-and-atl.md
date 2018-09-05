@@ -1,5 +1,5 @@
 ---
-title: Ereignisbehandlung und ATL | Microsoft Docs
+title: Ereignisbehandlung und ATL | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,38 +14,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6586c4fd54e9e968f3d7571bc61e866f07c8f2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f5d78ea68606513b2fe8491137e29fb45afb36e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354931"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761497"
 ---
 # <a name="event-handling-and-atl"></a>Ereignisbehandlung und ATL
-In diesem Abschnitt wird gezeigt, wie zum Auffangen von Ereignissen, die mit ATL Es umfasst die Prinzipien der COM-Ereignisbehandlung und die Einzelheiten der Auffangen von Ereignissen, die mit der Unterstützung von ATL  
-  
- Informationen zum Auslösen von Ereignissen und Implementieren von Verbindungspunkten lesen [ATL-Verbindungspunkte](../atl/atl-connection-points.md).  
-  
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Ereignisbehandlungsrichtlinien](../atl/event-handling-principles.md)  
- Erläutert die Schritte, die häufig an alle Ereignis übergeben.  
-  
- [Implementieren der Ereignisbehandlungsschnittstelle](../atl/implementing-the-event-handling-interface.md)  
- Beschreibt die Klassen zum Implementieren von Ereignisschnittstelle verwendet.  
-  
- [Verwenden von IDispEventImpl](../atl/using-idispeventimpl.md)  
- Listet die Schritte für die Verwendung von `IDispEventImpl` und ein Codebeispiel gezeigt.  
-  
- [Verwenden von IDispEventSimpleImpl](../atl/using-idispeventsimpleimpl.md)  
- Listet die Schritte für die Verwendung von `IDispEventSimpleImpl` und ein Codebeispiel gezeigt.  
-  
- [Zusammenfassung der ATL-Ereignisbehandlung](../atl/atl-event-handling-summary.md)  
- Zusammengefasst, die mit Tabellen, die verschiedene Arten zum Implementieren einer Ereignisschnittstelle und zum Anmelden und Abmelden von der Ereignisquelle mit ATL  
-  
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- Enthält Links zu konzeptionellen Themen über die Programmierung mit der Active Template Library.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Konzepte](../atl/active-template-library-atl-concepts.md)
+
+In diesem Abschnitt wird gezeigt, wie in die Senke Ereignisse mit ATL Hierin sind die Prinzipien des COM-Ereignisbehandlung sowie die Einzelheiten des Auffangen von Ereignissen, die mit der ATL-Unterstützung
+
+Informationen zum Auslösen von Ereignissen und Implementieren von Verbindungspunkten finden [ATL-Verbindungspunkte](../atl/atl-connection-points.md).
+
+## <a name="in-this-section"></a>In diesem Abschnitt
+
+[Ereignisbehandlungsrichtlinien](../atl/event-handling-principles.md)  
+Erläutert die Schritte, die allgemeine, um alle Ereignis übergeben.
+
+[Implementieren der Ereignisbehandlungsschnittstelle](../atl/implementing-the-event-handling-interface.md)  
+Erläutert die Klassen zum Implementieren der Schnittstelle an.
+
+[Verwenden von IDispEventImpl](../atl/using-idispeventimpl.md)  
+Listet die Schritte für die Verwendung von `IDispEventImpl` und zeigt ein Beispiel.
+
+[Verwenden von IDispEventSimpleImpl](../atl/using-idispeventsimpleimpl.md)  
+Listet die Schritte für die Verwendung von `IDispEventSimpleImpl` und zeigt ein Beispiel.
+
+[Zusammenfassung der ATL-Ereignisbehandlung](../atl/atl-event-handling-summary.md)  
+Fasst zusammen, mit Tabellen, die Hauptverfahren zum Implementieren von einer Ereignisschnittstelle und zum Anmelden und Abmelden von der Ereignisquelle mit ATL
+
+## <a name="related-sections"></a>Verwandte Abschnitte
+
+[ATL](../atl/active-template-library-atl-concepts.md)  
+Enthält Links zu konzeptionellen Themen über die Programmierung mit der Active Template Library.
+
+## <a name="see-also"></a>Siehe auch
+
+[Konzepte](../atl/active-template-library-atl-concepts.md)
 

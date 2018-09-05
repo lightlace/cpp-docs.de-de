@@ -14,49 +14,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 158d279106538fd059252f8e8dcd19aeb6a20f6d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8b70589829ec75712eedde86b71d90f0eec46fba
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198191"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754659"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, ATL COM+ 1.0-Komponenten-Assistent
-Verwenden Sie auf dieser Seite des ATL COM+ 1.0 Komponenten-Assistenten, geben Sie den Schnittstellentyp und weitere Schnittstellen unterstützt werden.  
-  
- Weitere Informationen zu ATL-Projekte und ATL-COM-Klassen finden Sie unter [ATL COM Desktop Components](../../atl/atl-com-desktop-components.md).  
-  
- **Interface**  
- Gibt den Typ der Schnittstelle, die das Objekt unterstützt. Das Objekt unterstützt standardmäßig eine duale Schnittstelle.  
-  
-|Option|Beschreibung|  
-|------------|-----------------|  
-|**Dual**|Gibt an, dass das Objekt eine duale Schnittstelle unterstützt (die Vtable besitzt, benutzerdefinierte Funktionen und späte Bindung `IDispatch` Methoden). Ermöglicht es COM-Clients sowohl Automatisierungscontroller auf das Objekt zuzugreifen.|  
-|**Benutzerdefiniert**|Gibt an, dass das Objekt eine benutzerdefinierte Schnittstelle unterstützt (die Vtable hat benutzerdefinierte Funktionen). Eine benutzerdefinierte Schnittstelle kann vor allem über Prozessgrenzen hinweg schneller als das duale Schnittstelle sein.<br /><br /> -   **Automatisierungskompatibel** die benutzerdefinierte Schnittstelle-Unterstützung hinzugefügt. Legt für die attributierte Projekte die **Oleautomation** -Attribut in der Co-Klasse.|  
-  
- **Queueable**  
- Gibt an, dass Clients auf diese Komponente, die mithilfe von Nachrichtenwarteschlangen asynchron aufrufen können. Fügt die Komponente, die attributiert Custom (TLBATTR_QUEUEABLE-Komponentenattributmakro, 0) der h-Datei (attributierte Projekte) oder der IDL-Datei (nicht attributierte Projekte) hinzu.  
-  
- **Unterstützung**  
- Gibt zusätzliche Unterstützung für die Behandlung und Objekt-Steuerelement für Fehlermeldungen an.  
-  
-|Option|Beschreibung|  
-|------------|-----------------|  
-|**ISupportErrorInfo**|Stellt die Unterstützung der [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) Schnittstelle, damit das Objekt Fehlerinformationen an den Client zurückgeben kann.|  
-|**IObjectControl**|Ermöglicht dem Objektzugriff auf die drei [IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol) Methoden: [aktivieren](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled), und [deaktivieren](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|  
-|**IObjectConstruct**|Stellt die Unterstützung der [IObjectConstruct](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectconstruct) Schnittstelle zum Verwalten von in-Parameter von anderen Methoden oder Objekten übergeben.|  
-  
- **Transaktion**  
- Gibt an, dass das Objekt Transaktionen unterstützt. Die mtxattr.h Datei IDL-Datei (nicht attributierte Projekte).  
-  
-|Option|Beschreibung|  
-|------------|-----------------|  
-|**Unterstützt**|Gibt an, dass das Objekt nie den Stamm eines Streams für die Transaktion durch das Hinzufügen von der Komponente Attribut Makro custom(TLBATTR_TRANS_SUPPORTED,0) der h-Datei (attributierte Projekte) oder der IDL-Datei (nicht attributierte Projekte).|  
-|**Erforderlich**|Gibt an, dass das Objekt kann möglicherweise nicht den Stamm eines Streams für die Transaktion durch das Hinzufügen von der Komponente Attribut Makro custom(TLBATTR_TRANS_REQUIRED,0) der h-Datei (attributierte Projekte) oder der IDL-Datei (nicht attributierte Projekte).|  
-|**Nicht unterstützt**|Gibt an, dass das Objekt Transaktionen ausschließt. Fügt der Custom(TLBATTR_TRANS_NOTSUPP,0)-Komponentenattributmakro der h-Datei (attributierte Projekte) oder der IDL-Datei (nicht attributierte Projekte) hinzu.|  
-|**Neue erfordert**|Gibt an, dass das Objekt immer den Stamm eines Streams für die Transaktion durch das Hinzufügen von der Komponente Attribut Makro custom(TLBATTR_TRANS_REQNEW,0) der h-Datei (attributierte Projekte) oder der IDL-Datei (nicht attributierte Projekte).|  
-  
-## <a name="see-also"></a>Siehe auch  
- [ATL COM+ 1.0 Komponenten-Assistent](../../atl/reference/atl-com-plus-1-0-component-wizard.md)   
- [ATL COM+ 1.0-Komponente](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
+
+Verwenden Sie auf dieser Seite des ATL COM+ 1.0 Komponenten-Assistenten, geben Sie den Schnittstellentyp und weitere Schnittstellen unterstützt werden.
+
+Weitere Informationen zu ATL-Projekte und ATL-COM-Klassen finden Sie unter [ATL COM Desktop Components](../../atl/atl-com-desktop-components.md).
+
+**Interface**  
+Gibt den Typ der Schnittstelle, die das Objekt unterstützt. Das Objekt unterstützt standardmäßig eine duale Schnittstelle.
+
+|Option|Beschreibung|
+|------------|-----------------|
+|**Dual**|Gibt an, dass das Objekt eine duale Schnittstelle unterstützt (die Vtable besitzt, benutzerdefinierte Funktionen und späte Bindung `IDispatch` Methoden). Ermöglicht es COM-Clients sowohl Automatisierungscontroller auf das Objekt zuzugreifen.|
+|**Benutzerdefiniert**|Gibt an, dass das Objekt eine benutzerdefinierte Schnittstelle unterstützt (die Vtable hat benutzerdefinierte Funktionen). Eine benutzerdefinierte Schnittstelle kann vor allem über Prozessgrenzen hinweg schneller als das duale Schnittstelle sein.<br /><br /> -   **Automatisierungskompatibel** die benutzerdefinierte Schnittstelle-Unterstützung hinzugefügt. Legt für die attributierte Projekte die **Oleautomation** -Attribut in der Co-Klasse.|
+
+**Queueable**  
+Gibt an, dass Clients auf diese Komponente, die mithilfe von Nachrichtenwarteschlangen asynchron aufrufen können. Fügt die Komponente, die attributiert Custom (TLBATTR_QUEUEABLE-Komponentenattributmakro, 0) der h-Datei (attributierte Projekte) oder der IDL-Datei (nicht attributierte Projekte) hinzu.
+
+**Unterstützung**  
+Gibt zusätzliche Unterstützung für die Behandlung und Objekt-Steuerelement für Fehlermeldungen an.
+
+|Option|Beschreibung|
+|------------|-----------------|
+|**ISupportErrorInfo**|Stellt die Unterstützung der [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) Schnittstelle, damit das Objekt Fehlerinformationen an den Client zurückgeben kann.|
+|**IObjectControl**|Ermöglicht dem Objektzugriff auf die drei [IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol) Methoden: [aktivieren](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled), und [deaktivieren](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|
+|**IObjectConstruct**|Stellt die Unterstützung der [IObjectConstruct](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectconstruct) Schnittstelle zum Verwalten von in-Parameter von anderen Methoden oder Objekten übergeben.|
+
+**Transaktion**  
+Gibt an, dass das Objekt Transaktionen unterstützt. Die mtxattr.h Datei IDL-Datei (nicht attributierte Projekte).
+
+|Option|Beschreibung|
+|------------|-----------------|
+|**Unterstützt**|Gibt an, dass das Objekt nie den Stamm eines Streams für die Transaktion durch das Hinzufügen von der Komponente Attribut Makro custom(TLBATTR_TRANS_SUPPORTED,0) der h-Datei (attributierte Projekte) oder der IDL-Datei (nicht attributierte Projekte).|
+|**Erforderlich**|Gibt an, dass das Objekt kann möglicherweise nicht den Stamm eines Streams für die Transaktion durch das Hinzufügen von der Komponente Attribut Makro custom(TLBATTR_TRANS_REQUIRED,0) der h-Datei (attributierte Projekte) oder der IDL-Datei (nicht attributierte Projekte).|
+|**Nicht unterstützt**|Gibt an, dass das Objekt Transaktionen ausschließt. Fügt der Custom(TLBATTR_TRANS_NOTSUPP,0)-Komponentenattributmakro der h-Datei (attributierte Projekte) oder der IDL-Datei (nicht attributierte Projekte) hinzu.|
+|**Neue erfordert**|Gibt an, dass das Objekt immer den Stamm eines Streams für die Transaktion durch das Hinzufügen von der Komponente Attribut Makro custom(TLBATTR_TRANS_REQNEW,0) der h-Datei (attributierte Projekte) oder der IDL-Datei (nicht attributierte Projekte).|
+
+## <a name="see-also"></a>Siehe auch
+
+[ATL COM+ 1.0 Komponenten-Assistent](../../atl/reference/atl-com-plus-1-0-component-wizard.md)   
+[ATL COM+ 1.0-Komponente](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
 

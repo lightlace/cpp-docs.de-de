@@ -1,5 +1,5 @@
 ---
-title: Tipps zum (ATL) Debuggen | Microsoft Docs
+title: Tipps zum (ATL) Debuggen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d35a05fc54f3358c567e293573a9a5352b359a95
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfbc23250acf751072e14b75f18944a5083e18cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355193"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756810"
 ---
 # <a name="debugging-tips"></a>Tipps zum Debuggen
-In den folgenden Themen werden einige hilfreiche Schritte für das Debuggen des Diensts:  
-  
--   [Verwenden des Task-Managers](../atl/using-task-manager.md)  
-  
--   [Anzeigeassertionen](../atl/displaying-assertions.md)  
-  
--   [Ausführen des Programms als lokaler Server](../atl/running-the-program-as-a-local-server.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Dienste](../atl/atl-services.md)
+
+Einige hilfreiche Schritte für das Debuggen des Diensts wird in den folgenden Themen beschrieben:
+
+- [Verwenden des Task-Managers](../atl/using-task-manager.md)
+
+- [Anzeigeassertionen](../atl/displaying-assertions.md)
+
+- [Ausführen des Programms als lokaler Server](../atl/running-the-program-as-a-local-server.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Dienste](../atl/atl-services.md)
 

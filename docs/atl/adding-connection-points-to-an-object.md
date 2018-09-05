@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von Verbindungspunkten zu einem Objekt | Microsoft Docs
+title: Hinzufügen von Verbindungspunkten zu einem Objekt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,60 +15,62 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71f9d136ccdeded02303894195c7b8126acafd9c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bdaf4cf8e1c2f6a062c133ab9e0427cab1d3d094
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356591"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762547"
 ---
 # <a name="adding-connection-points-to-an-object"></a>Hinzufügen von Verbindungspunkten zu einem Objekt
-Die [ATL-Lernprogramm](../atl/active-template-library-atl-tutorial.md) veranschaulicht, wie ein Steuerelement mit Unterstützung für Verbindungspunkte erstellt, zum Hinzufügen von Ereignissen und klicken Sie dann zum Verbindungspunkt zu implementieren. ATL implementiert Verbindungspunkte mit der [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) Klasse.  
-  
- Um einen Verbindungspunkt zu implementieren, haben Sie zwei Optionen:  
-  
--   Implementieren Sie eigene ausgehenden Ereignisquelle durch Hinzufügen von Verbindungspunkten auf das Steuerelement oder Objekt.  
-  
--   Wiederverwenden einer Verbindungspunkt-Schnittstelle in eine andere Typbibliothek definiert.  
-  
- In beiden Fällen verwendet der Assistent zum Implementieren von Verbindung eine Typbibliothek Transformationsalgorithmus an.  
-  
-### <a name="to-add-a-connection-point-to-a-control-or-object"></a>So fügen Sie einen Verbindungspunkt zu einem Steuerelement oder Objekt hinzu  
-  
-1.  Definieren Sie eine Dispinterface in den bibliotheksblock der IDL-Datei. Wenn Sie Unterstützung für Verbindungspunkte aktiviert, wenn Sie das Steuerelement mit der ATL-Steuerelement-Assistent erstellt, wird die Dispinterface bereits erstellt worden sein. Wenn Sie nicht Unterstützung für Verbindungspunkte aktiviert haben, wenn Sie das Steuerelement erstellt haben, müssen Sie manuell eine Dispinterface der IDL-Datei hinzufügen. Im folgenden ist ein Beispiel für eine Disp-Schnittstelle. Ausgangsschnittstellen sind nicht erforderlich, um die Dispatch-Schnittstellen werden jedoch viele Skriptsprachen wie VBScript und JScript werden muss, damit dieses Beispiel zwei Disp-Schnittstellen verwendet:  
-  
-     [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/cpp/adding-connection-points-to-an-object_1.idl)]  
-  
-     Verwenden Sie die uuidgen.exe oder guidgen.exe-Hilfsprogramm zum Generieren eines GUIDs.  
-  
-2.  Fügen Sie die Dispinterface als die `[default,source]` -Schnittstelle in der Co-Klasse für das Objekt in der IDL-Datei des Projekts. Erneut, wenn Sie Unterstützung für Verbindungspunkte aktiviert, wenn Sie das Steuerelement erstellt, die ATL-Steuerelement-Assistent erstellt die `[default,source`] Eintrag. Um diesen Eintrag manuell hinzuzufügen, fügen Sie die Zeile in Fettschrift angezeigt:  
-  
-     [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]  
-  
-     Finden Sie in der IDL-Datei in die [Circ](../visual-cpp-samples.md) ATL-Beispiel für ein Beispiel.  
-  
-3.  Verwenden Sie Klassenansicht Ereignisschnittstelle Methoden und Eigenschaften hinzu. Mit der rechten Maustaste in der Klasse in der Klassenansicht, zeigen Sie auf **hinzufügen** auf das Kontextmenü, und klicken Sie auf **Verbindungspunkt hinzufügen**.  
-  
-4.  In der **Schnittstellen** implementieren Connection Point Assistenten die Option im Listenfeld **des Projekts Schnittstellen**. Eine Schnittstelle für das Steuerelement und drücken Sie auf Wunsch **OK**, sehen Sie:  
-  
-    -   Generieren Sie eine Headerdatei mit eine Proxy-Ereignisklasse, die den Code implementiert, der die ausgehende Aufrufe für das Ereignis erkennen lässt.  
-  
-    -   Fügen Sie einen Eintrag zur Zuordnung Punkt Verbindung an.  
-  
-     Sie sehen auch eine Liste aller von Typbibliotheken auf Ihrem Computer. Sie sollten nur anhand einer anderen Typbibliotheken Ihrer Verbindungspunkt definieren, wenn Sie die genaue gleichen Ausgangsschnittstelle in eine andere Typbibliothek gefunden implementieren möchten.  
-  
-### <a name="to-reuse-a-connection-point-interface-defined-in-another-type-library"></a>Wiederverwenden von einem Verbindungspunkt-Schnittstelle definiert, in eine andere Typbibliothek  
-  
-1.  In der Klassenansicht Maustaste eine Klasse, die implementiert eine **BEGIN_COM_MAP** -Makro, zeigen Sie auf **hinzufügen** auf das Kontextmenü, und klicken Sie auf **Verbindungspunkt hinzufügen**.  
-  
-2.  Im implementieren Connection Point-Assistenten wählen Sie in der Typbibliothek einer Typbibliothek und eine Schnittstelle, und klicken Sie auf **hinzufügen**.  
-  
-3.  Bearbeiten Sie die IDL-Datei entweder:  
-  
-    -   Kopieren Sie die Dispinterface aus der IDL-Datei für das Objekt, dessen Ereignisquelle verwendet wird.  
-  
-    -   Verwenden der **Importlib** Anweisung auf die Typbibliothek.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verbindungspunkt](../atl/atl-connection-points.md)
+
+Die [ATL-Lernprogramm](../atl/active-template-library-atl-tutorial.md) wird veranschaulicht, wie Sie ein Steuerelement mit Unterstützung von Verbindungspunkten erstellen, wie Sie Ereignisse hinzufügen und wie Sie den Verbindungspunkt implementieren. ATL implementiert Verbindungspunkte, die mit der [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) Klasse.
+
+Um einen Verbindungspunkt implementieren zu können, haben Sie zwei Möglichkeiten:
+
+- Implementieren Sie eigene ausgehenden Ereignisquelle, durch das Hinzufügen von eines Verbindungspunkts an das Steuerelement oder das Objekt.
+
+- Wiederverwenden von einem Verbindungspunkt-Schnittstelle in einer anderen Typbibliothek definiert.
+
+In beiden Fällen verwendet der Assistent zum Implementieren von Verbindungspunkten eine Typbibliothek, um seine Arbeit zu erledigen.
+
+### <a name="to-add-a-connection-point-to-a-control-or-object"></a>Um ein Steuerelement oder das Objekt einen Verbindungspunkt hinzufügen
+
+1. Definieren Sie eine Disp-Schnittstelle, in den bibliotheksblock der IDL-Datei. Wenn Sie Unterstützung von Verbindungspunkten aktiviert, wenn Sie das Steuerelement mit dem ATL-Steuerelement-Assistenten erstellt, wird die Disp-Schnittstelle bereits erstellt worden sein. Wenn Sie nicht Unterstützung für Verbindungspunkte aktiviert haben, wenn Sie das Steuerelement erstellt haben, müssen Sie manuell eine Disp-Schnittstelle der IDL-Datei hinzufügen. Folgendes ist ein Beispiel für eine Disp-Schnittstelle. Ausgangsschnittstellen sind nicht erforderlich, um die Dispatch-Schnittstellen werden jedoch viele Skriptsprachen wie VBScript und JScript erforderlich, damit dieses Beispiel zwei Disp-Schnittstellen verwendet:
+
+     [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/cpp/adding-connection-points-to-an-object_1.idl)]
+
+     Verwenden Sie entweder die uuidgen.exe oder guidgen.exe-Hilfsprogramm zum Generieren eines GUIDs.
+
+2. Fügen Sie die Disp-Schnittstelle als die `[default,source]` -Schnittstelle in der Co-Klasse für das Objekt in die IDL-Datei des Projekts. In diesem Fall, wenn Sie Unterstützung von Verbindungspunkten aktiviert, wenn Sie das Steuerelement erstellt, die ATL-Steuerelement-Assistent erstellt die `[default,source`] Eintrag. Um diesen Eintrag manuell hinzuzufügen, fügen Sie die Zeile in Fettschrift angezeigt:
+
+     [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]
+
+     Finden Sie in der IDL-Datei in die [Circ](../visual-cpp-samples.md) ATL-Beispiel für ein Beispiel.
+
+3. Mithilfe der Klassenansicht so Ereignisschnittstelle Methoden und Eigenschaften hinzu. Mit der rechten Maustaste in der Klasse in der Klassenansicht, zeigen Sie auf **hinzufügen** auf das Kontextmenü, und klicken Sie auf **Verbindungspunkt hinzufügen**.
+
+4. In der **Quellschnittstellen** Listenfeld implementieren Verbindung zeigen Assistenten die Option **Projektschnittstellen**. Eine Schnittstelle für Ihr Steuerelement, und drücken Sie auf Wunsch **OK**, Sie werden:
+
+   - Erstellen Sie eine Headerdatei mit einer Ereignis-Proxy-Klasse, die den Code implementiert, der die ausgehende Aufrufe für das Ereignis machen werden.
+
+   - Fügen Sie einen Eintrag, der Connection Point-Zuordnung.
+
+     Sie sehen auch eine Liste aller der Typbibliotheken auf Ihrem Computer. Sie sollten nur anhand einer anderen Typbibliotheken Connection Point zu definieren, wenn Sie genaue dieselbe Ausgangsschnittstelle finden Sie in einer anderen Typbibliothek implementieren möchten.
+
+### <a name="to-reuse-a-connection-point-interface-defined-in-another-type-library"></a>Wiederverwenden von einem Verbindungspunkt-Schnittstelle definiert, in einer anderen Typbibliothek
+
+1. In der Klassenansicht mit der Maustaste einer Klasse, implementiert eine **BEGIN_COM_MAP** -Makro, zeigen Sie auf **hinzufügen** auf das Kontextmenü, und klicken Sie auf **Verbindungspunkt hinzufügen**.
+
+2. Klicken Sie in der Verbindung Assistent zum Implementieren, wählen Sie in der Typbibliothek einer Typbibliothek und eine Schnittstelle, und klicken Sie auf **hinzufügen**.
+
+3. Bearbeiten der IDL-Datei entweder an:
+
+   - Kopieren Sie die Disp-Schnittstelle aus der .idl-Datei für das Objekt, dessen Ereignisquelle verwendet wird.
+
+   - Verwenden der **Importlib** Anweisung auf die Typbibliothek.
+
+## <a name="see-also"></a>Siehe auch
+
+[Verbindungspunkt](../atl/atl-connection-points.md)
 

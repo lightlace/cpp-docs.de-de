@@ -16,36 +16,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c2830584ea3c54ec0963dc115318be7b7d5880c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 77849366ecfbdaee819eff6b8938b2dadb7b8db3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881213"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761003"
 ---
 # <a name="options-atl-property-page-wizard"></a>Optionen, ATL-Eigenschaftenseiten-Assistent
-Mithilfe dieser Seite des Assistenten für das threading und die Aggregation auf der Eigenschaftenseite zu definieren, die Sie erstellen.  
-  
- **Threading-Modell**  
- Gibt das Threadingmodell an, die von der Eigenschaftenseite verwendet.  
-  
- Finden Sie unter [angeben des Projekts. Threading-Modell](../../atl/specifying-the-threading-model-for-a-project-atl.md) für Weitere Informationen.  
-  
-|Option|Beschreibung|  
-|------------|-----------------|  
-|**Single**|Die Eigenschaftenseite wird nur im primären COM-Thread ausgeführt.|  
-|**Apartment**|Die Eigenschaftenseite kann in jedem Singlethread-Apartment erstellt werden. Der Standardwert.|  
-  
- **Aggregation**  
- Fügt die Unterstützung für die Eigenschaftenseite, die Sie erstellen. Finden Sie unter [Aggregation](../../atl/aggregation.md) für Weitere Informationen.  
-  
-|Option|Beschreibung|  
-|------------|-----------------|  
-|**Ja**|Erstellen Sie eine Eigenschaftenseite, die aggregiert werden können.|  
-|**No**|Erstellen Sie eine Eigenschaftenseite, die nicht aggregiert werden kann.|  
-|**Nur**|Erstellen Sie eine Eigenschaftenseite, die durch die Aggregation nur instanziiert werden kann.|  
-  
-## <a name="see-also"></a>Siehe auch  
- [ATL-Eigenschaftenseiten-Assistent](../../atl/reference/atl-property-page-wizard.md)   
- [Zeichenfolgen, ATL-Eigenschaftenseiten-Assistent](../../atl/reference/strings-atl-property-page-wizard.md)
+
+Mithilfe dieser Seite des Assistenten für das threading und die Aggregation auf der Eigenschaftenseite zu definieren, die Sie erstellen.
+
+**Threading-Modell**  
+Gibt das Threadingmodell an, die von der Eigenschaftenseite verwendet.
+
+Finden Sie unter [angeben des Projekts. Threading-Modell](../../atl/specifying-the-threading-model-for-a-project-atl.md) für Weitere Informationen.
+
+|Option|Beschreibung|
+|------------|-----------------|
+|**Single**|Die Eigenschaftenseite wird nur im primären COM-Thread ausgeführt.|
+|**Apartment**|Die Eigenschaftenseite kann in jedem Singlethread-Apartment erstellt werden. Der Standardwert.|
+
+**Aggregation**  
+Fügt die Unterstützung für die Eigenschaftenseite, die Sie erstellen. Finden Sie unter [Aggregation](../../atl/aggregation.md) für Weitere Informationen.
+
+|Option|Beschreibung|
+|------------|-----------------|
+|**Ja**|Erstellen Sie eine Eigenschaftenseite, die aggregiert werden können.|
+|**No**|Erstellen Sie eine Eigenschaftenseite, die nicht aggregiert werden kann.|
+|**Nur**|Erstellen Sie eine Eigenschaftenseite, die durch die Aggregation nur instanziiert werden kann.|
+
+## <a name="see-also"></a>Siehe auch
+
+[ATL-Eigenschaftenseiten-Assistent](../../atl/reference/atl-property-page-wizard.md)   
+[Zeichenfolgen, ATL-Eigenschaftenseiten-Assistent](../../atl/reference/strings-atl-property-page-wizard.md)
 

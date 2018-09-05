@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e330beda4770f60d5358ed8baf8d3b2fae260d3a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: e4c5d7ad570d9745e10107f0df09faccd9eb42e3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883033"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761552"
 ---
 # <a name="atlwinmodule70-structure"></a>_ATL_WIN_MODULE70-Struktur
-Windowing-Code in ATL verwendet  
-  
-## <a name="syntax"></a>Syntax  
-  
+
+Windowing-Code in ATL verwendet
+
+## <a name="syntax"></a>Syntax
+
 ```
 struct _ATL_WIN_MODULE70 {
     UNIT cbSize; 
@@ -38,31 +39,31 @@ struct _ATL_WIN_MODULE70 {
     _AtlCreateWndData* m_pCreateWndList;
     CSimpleArray<ATOM> m_rgWindowClassAtoms;
 };
-```  
-  
-## <a name="members"></a>Member  
- `cbSize`  
- Die Größe der Struktur, die für die versionsverwaltung verwendet werden soll.  
-  
- `m_csWindowCreate`  
- Verwendet, um die Serialisierung des Zugriffs auf Fenster-Registrierungscode. Wird intern verwendet, von ATL  
-  
- `m_pCreateWndList`  
- Zum Binden von Windows in ihre Objekte verwendet. Wird intern verwendet, von ATL  
-  
- `m_rgWindowClassAtoms`  
- Verwendet, um die Registrierungen für Fenster-Klasse nachverfolgt, damit sie ordnungsgemäß bei Beendigung des aufgehoben werden können. Wird intern verwendet, von ATL  
-  
-## <a name="remarks"></a>Hinweise  
- [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) ist definiert als Typedef von `_ATL_WIN_MODULE70`.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** atlbase.h  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassen und Strukturen](../../atl/reference/atl-classes.md)
+```
 
+## <a name="members"></a>Member
 
+`cbSize`  
+Die Größe der Struktur, die für die versionsverwaltung verwendet werden soll.
 
+`m_csWindowCreate`  
+Verwendet, um die Serialisierung des Zugriffs auf Fenster-Registrierungscode. Wird intern verwendet, von ATL
 
+`m_pCreateWndList`  
+Zum Binden von Windows in ihre Objekte verwendet. Wird intern verwendet, von ATL
+
+`m_rgWindowClassAtoms`  
+Verwendet, um die Registrierungen für Fenster-Klasse nachverfolgt, damit sie ordnungsgemäß bei Beendigung des aufgehoben werden können. Wird intern verwendet, von ATL
+
+## <a name="remarks"></a>Hinweise
+
+[_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) ist definiert als Typedef von `_ATL_WIN_MODULE70`.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** atlbase.h
+
+## <a name="see-also"></a>Siehe auch
+
+[Klassen und Strukturen](../../atl/reference/atl-classes.md)
 

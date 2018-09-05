@@ -21,55 +21,62 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6eb783c35704f87a0bfed57e05f22c3b9b035498
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 2333c56586d20bc5ec114b8ea8a8811e72fcd755
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851539"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763418"
 ---
 # <a name="implementing-a-window-with-cwindowimpl"></a>Implementieren eines Fensters mit CWindowImpl
-Um ein Fenster zu implementieren, leiten Sie eine Klasse von `CWindowImpl`. Deklarieren Sie in der abgeleiteten Klasse einer meldungszuordnung und die Meldungshandlerfunktionen aus. Sie können nun Ihre Klasse auf drei verschiedene Arten verwenden:  
-  
--   [Erstellen Sie ein Fenster, die basierend auf einer neuen Windows-Klasse](#_atl_creating_a_window_based_on_a_new_windows_class)  
-  
--   [Übergeordnete Klasse einer vorhandenen Windows-Klasse](#_atl_superclassing_an_existing_windows_class)  
-  
--   [Ein vorhandenes Fenster-Unterklasse](#_atl_subclassing_an_existing_window)  
-  
-##  <a name="_atl_creating_a_window_based_on_a_new_windows_class"></a> Erstellen eines Fensters, das basierend auf einer neuen Windows-Klasse  
- `CWindowImpl` enthält die [DECLARE_WND_CLASS](reference/window-class-macros.md#declare_wnd_class) Makro zum Deklarieren von Klasseninformationen für Windows. Dieses Makro implementiert die `GetWndClassInfo` -Funktion, die verwendet [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) die Informationen zu einer neuen Windows-Klasse definieren. Wenn `CWindowImpl::Create` aufgerufen wird, wird dieser Windows-Klasse registriert und ein neues Fenster erstellt wird.  
-  
+
+Um ein Fenster zu implementieren, leiten Sie eine Klasse von `CWindowImpl`. Deklarieren Sie in der abgeleiteten Klasse einer meldungszuordnung und die Meldungshandlerfunktionen aus. Sie können nun Ihre Klasse auf drei verschiedene Arten verwenden:
+
+- [Erstellen Sie ein Fenster, die basierend auf einer neuen Windows-Klasse](#_atl_creating_a_window_based_on_a_new_windows_class)
+
+- [Übergeordnete Klasse einer vorhandenen Windows-Klasse](#_atl_superclassing_an_existing_windows_class)
+
+- [Ein vorhandenes Fenster-Unterklasse](#_atl_subclassing_an_existing_window)
+
+##  <a name="_atl_creating_a_window_based_on_a_new_windows_class"></a> Erstellen eines Fensters, das basierend auf einer neuen Windows-Klasse
+
+`CWindowImpl` enthält die [DECLARE_WND_CLASS](reference/window-class-macros.md#declare_wnd_class) Makro zum Deklarieren von Klasseninformationen für Windows. Dieses Makro implementiert die `GetWndClassInfo` -Funktion, die verwendet [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) die Informationen zu einer neuen Windows-Klasse definieren. Wenn `CWindowImpl::Create` aufgerufen wird, wird dieser Windows-Klasse registriert und ein neues Fenster erstellt wird.
+
 > [!NOTE]
->  `CWindowImpl` übergeben Sie NULL, um die `DECLARE_WND_CLASS` Makro, das bedeutet, dass ATL generiert einen Windows-Klassennamen. Um einen eigenen Namen anzugeben, übergeben Sie eine Zeichenfolge an DECLARE_WND_CLASS in Ihre `CWindowImpl`-abgeleitete Klasse.  
-  
-## <a name="example"></a>Beispiel  
- Es folgt ein Beispiel für eine Klasse, die ein Fenster, die basierend auf einer neuen Windows-Klasse implementiert:  
-  
- [!code-cpp[NVC_ATL_Windowing#64](../atl/codesnippet/cpp/implementing-a-window-with-cwindowimpl_1.h)]  
-  
- Um ein Fenster zu erstellen, erstellen Sie eine Instanz von `CMyWindow` und rufen Sie dann die `Create` Methode.  
-  
+>  `CWindowImpl` übergeben Sie NULL, um die `DECLARE_WND_CLASS` Makro, das bedeutet, dass ATL generiert einen Windows-Klassennamen. Um einen eigenen Namen anzugeben, übergeben Sie eine Zeichenfolge an DECLARE_WND_CLASS in Ihre `CWindowImpl`-abgeleitete Klasse.
+
+## <a name="example"></a>Beispiel
+
+Es folgt ein Beispiel für eine Klasse, die ein Fenster, die basierend auf einer neuen Windows-Klasse implementiert:
+
+[!code-cpp[NVC_ATL_Windowing#64](../atl/codesnippet/cpp/implementing-a-window-with-cwindowimpl_1.h)]
+
+Um ein Fenster zu erstellen, erstellen Sie eine Instanz von `CMyWindow` und rufen Sie dann die `Create` Methode.
+
 > [!NOTE]
->  Um die Standard-Windows-Klasseninformationen überschreiben möchten, implementieren die `GetWndClassInfo` -Methode in der abgeleiteten Klasse durch Festlegen der `CWndClassInfo` Mitglieder auf die entsprechenden Werte.  
-  
-##  <a name="_atl_superclassing_an_existing_windows_class"></a> Erstellung einer übergeordneten Klasse einer vorhandenen Windows-Klasse  
- Die [DECLARE_WND_SUPERCLASS](reference/window-class-macros.md#declare_wnd_superclass) Makro können Sie beim Erstellen eines Fensters, eine übergeordnete Klasse für eine vorhandene Windows Klasse. Geben Sie dieses Makro in Ihre `CWindowImpl`-abgeleitete Klasse. Wie alle anderen ATL-Fenster werden Nachrichten von einer meldungszuordnung behandelt.  
-  
- Wenn Sie DECLARE_WND_SUPERCLASS verwenden, wird eine neue Windows-Klasse registriert. Diese neue Klasse wird die vorhandene Klasse, die Sie angeben, aber ersetzt die Fensterprozedur mit identisch sein `CWindowImpl::WindowProc` (oder mit Ihrer Funktion, die diese Methode überschreibt).  
-  
-## <a name="example"></a>Beispiel  
- Folgende ist ein Beispiel für eine Klasse, eine übergeordnete Klasse der standardmäßigen Edit Klasse:  
-  
- [!code-cpp[NVC_ATL_Windowing#65](../atl/codesnippet/cpp/implementing-a-window-with-cwindowimpl_2.h)]  
-  
- Um das Bearbeitungsfenster zu erstellen, erstellen Sie eine Instanz von `CMyEdit` und rufen Sie dann die `Create` Methode.  
-  
-##  <a name="_atl_subclassing_an_existing_window"></a> Erstellen von Unterklassen für ein vorhandenes Fenster  
- Um eine Unterklasse ein vorhandenes Fenster, leiten Sie eine Klasse von `CWindowImpl` und eine meldungszuordnung, wie in den beiden vorherigen Fällen deklarieren. Beachten Sie jedoch, dass Sie alle Informationen für den Windows-Klasse, da Sie Unterklasse ein bereits vorhandenes Fenster werden nicht angeben.  
-  
- Statt `Create`, rufen Sie `SubclassWindow` und übergeben sie das Handle zum vorhandenen Fenster Unterklasse werden sollen. Nachdem das Fenster als Unterklasse definiert ist, verwenden sie `CWindowImpl::WindowProc` (oder die Funktion, den diese Methode überschreibt) zum Weiterleiten von Nachrichten an die meldungszuordnung. Um ein untergeordnetes Fenster von Ihrem Objekt trennen möchten, rufen Sie `UnsubclassWindow`. Die ursprüngliche Fensterprozedur von Windows wird wiederhergestellt.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Implementieren eines Fensters](../atl/implementing-a-window.md)
+>  Um die Standard-Windows-Klasseninformationen überschreiben möchten, implementieren die `GetWndClassInfo` -Methode in der abgeleiteten Klasse durch Festlegen der `CWndClassInfo` Mitglieder auf die entsprechenden Werte.
+
+##  <a name="_atl_superclassing_an_existing_windows_class"></a> Erstellung einer übergeordneten Klasse einer vorhandenen Windows-Klasse
+
+Die [DECLARE_WND_SUPERCLASS](reference/window-class-macros.md#declare_wnd_superclass) Makro können Sie beim Erstellen eines Fensters, eine übergeordnete Klasse für eine vorhandene Windows Klasse. Geben Sie dieses Makro in Ihre `CWindowImpl`-abgeleitete Klasse. Wie alle anderen ATL-Fenster werden Nachrichten von einer meldungszuordnung behandelt.
+
+Wenn Sie DECLARE_WND_SUPERCLASS verwenden, wird eine neue Windows-Klasse registriert. Diese neue Klasse wird die vorhandene Klasse, die Sie angeben, aber ersetzt die Fensterprozedur mit identisch sein `CWindowImpl::WindowProc` (oder mit Ihrer Funktion, die diese Methode überschreibt).
+
+## <a name="example"></a>Beispiel
+
+Folgende ist ein Beispiel für eine Klasse, eine übergeordnete Klasse der standardmäßigen Edit Klasse:
+
+[!code-cpp[NVC_ATL_Windowing#65](../atl/codesnippet/cpp/implementing-a-window-with-cwindowimpl_2.h)]
+
+Um das Bearbeitungsfenster zu erstellen, erstellen Sie eine Instanz von `CMyEdit` und rufen Sie dann die `Create` Methode.
+
+##  <a name="_atl_subclassing_an_existing_window"></a> Erstellen von Unterklassen für ein vorhandenes Fenster
+
+Um eine Unterklasse ein vorhandenes Fenster, leiten Sie eine Klasse von `CWindowImpl` und eine meldungszuordnung, wie in den beiden vorherigen Fällen deklarieren. Beachten Sie jedoch, dass Sie alle Informationen für den Windows-Klasse, da Sie Unterklasse ein bereits vorhandenes Fenster werden nicht angeben.
+
+Statt `Create`, rufen Sie `SubclassWindow` und übergeben sie das Handle zum vorhandenen Fenster Unterklasse werden sollen. Nachdem das Fenster als Unterklasse definiert ist, verwenden sie `CWindowImpl::WindowProc` (oder die Funktion, den diese Methode überschreibt) zum Weiterleiten von Nachrichten an die meldungszuordnung. Um ein untergeordnetes Fenster von Ihrem Objekt trennen möchten, rufen Sie `UnsubclassWindow`. Die ursprüngliche Fensterprozedur von Windows wird wiederhergestellt.
+
+## <a name="see-also"></a>Siehe auch
+
+[Implementieren eines Fensters](../atl/implementing-a-window.md)
 
