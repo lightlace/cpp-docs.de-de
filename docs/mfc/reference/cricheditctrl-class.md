@@ -162,12 +162,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2847bf32a51a63e39d80839fed1b46fac18f29dc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3ad17396a9c82532d46ea04f88b637828fe6f460
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215790"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678496"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl-Klasse
 Stellt die Funktionalität des Rich-Edit-Steuerelements bereit.  
@@ -443,7 +443,7 @@ virtual BOOL Create(
   
 - Schließen WS_TABSTOP, Edit-Steuerelements, in die Tab-Reihenfolge.  
   
- Weitere Informationen zu Window-Stile, finden Sie unter [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) im Windows SDK.  
+ Weitere Informationen zu Window-Stile, finden Sie unter [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CRichEditCtrl#5](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_5.cpp)]  
@@ -462,7 +462,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parameter  
  *dwExStyle*  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) im Windows SDK.  
   
  *dwStyle*  
  Gibt das Steuerelement zum Bearbeiten des Stils an. Eine Kombination aus den in aufgeführten Window-Stile anwenden der **"Hinweise"** Abschnitt [erstellen](#create) und [Bearbeiten der Stile von Listensteuerelementen](/windows/desktop/Controls/edit-control-styles), die im Windows SDK beschrieben.  

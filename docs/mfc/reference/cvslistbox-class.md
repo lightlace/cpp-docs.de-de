@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 453eb66fd062aa3e4df510925d2c9b0e6732b98b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 946c82d4f558974d548a40af0b14e63f7ccebf4e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212398"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680579"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox-Klasse
 Die `CVSListBox` Klasse unterstützt ein bearbeitbares Listensteuerelement.  
@@ -73,7 +73,7 @@ class CVSListBox : public CVSListBoxBase
 |[CVSListBox::GetItemData](#getitemdata)|Ruft ab eine anwendungsspezifische 32-Bit-Wert, der ein bearbeitbares Listenelement-Steuerelement zugeordnet ist. (Überschreibt `CVSListBoxBase::GetItemData`.)|  
 |[CVSListBox::GetItemText](#getitemtext)|Ruft den Text ein bearbeitbares Listenelement-Steuerelement. (Überschreibt `CVSListBoxBase::GetItemText`.)|  
 |[CVSListBox::GetSelItem](#getselitem)|Ruft ab, der nullbasierte Index des derzeit ausgewählten Elements in ein bearbeitbares Listensteuerelement. (Überschreibt `CVSListBoxBase::GetSelItem`.)|  
-|`CVSListBox::PreTranslateMessage`|Übersetzt fenstermeldungen, bevor sie um weitergeleitet werden die [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows-Funktionen. Weitere Informationen und Methodensyntax finden Sie unter [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Überschreibt `CVSListBoxBase::PreTranslateMessage`.)|  
+|`CVSListBox::PreTranslateMessage`|Übersetzt fenstermeldungen, bevor sie um weitergeleitet werden die [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows-Funktionen. Weitere Informationen und Methodensyntax finden Sie unter [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Überschreibt `CVSListBoxBase::PreTranslateMessage`.)|  
 |[CVSListBox::RemoveItem](#removeitem)|Entfernt ein Element aus der ein bearbeitbares Listensteuerelement. (Überschreibt `CVSListBoxBase::RemoveItem`.)|  
 |[CVSListBox::SelectItem](#selectitem)|Wählt eine bearbeitbare Liste-Zeichenfolge. (Überschreibt `CVSListBoxBase::SelectItem`.)|  
 |[CVSListBox::SetItemData](#setitemdata)|Ordnet einen anwendungsspezifische 32-Bit-Wert ein bearbeitbares Listenelement-Steuerelement. (Überschreibt `CVSListBoxBase::SetItemData`.)|  

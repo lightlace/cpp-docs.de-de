@@ -1,7 +1,7 @@
 ---
-title: . ALLOCSTACK | Microsoft Docs
+title: . ALLOCSTACK | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,61 +16,63 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00fd3028a38ff33edf7a721d2efb57fc3581152c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 292a7fcdb0a1d7c4ecccab895c643479397b4a98
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050866"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681930"
 ---
 # <a name="allocstack"></a>.ALLOCSTACK
-Generiert eine **UWOP_ALLOC_SMALL** oder ein **UWOP_ALLOC_LARGE** mit der angegebenen Größe für den aktuellen Offset im Prolog.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-.ALLOCSTACK size  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- MASM wird die effizienteste Codierung für eine bestimmte Größe auswählen.  
-  
- . ALLOCSTACK ist nur zulässig, innerhalb der Prolog, die von erweitert und ermöglicht ml64.exe angeben, wie eine Funktion Frame entlädt die [PROC](../../assembler/masm/proc.md) FRAME-Deklaration, um die [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) Richtlinie. Diese Direktiven generieren keine Code; Es werden nur generiert, `.xdata` und `.pdata`. . ALLOCSTACK sollte Anweisungen vorangestellt werden, die die Aktionen, entladen werden tatsächlich implementieren. Es wird empfohlen, die Direktiven entladen und der Code, den sie in einem Makro Entladung vorgesehen sind, um sicherzustellen, dass Vereinbarung zu umschließen.  
-  
- Die `size` Operand muss ein Vielfaches von 8 sein.  
-  
- Weitere Informationen finden Sie unter [MASM für X64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
-  
-## <a name="sample"></a>Beispiel  
- Das folgende Beispiel zeigt, wie einen Entladung/Ausnahmehandler angegeben wird:  
-  
-```  
-; ml64 ex3.asm /link /entry:Example1  /SUBSYSTEM:Console  
-text SEGMENT  
-PUBLIC Example3  
-PUBLIC Example3_UW  
-Example3_UW PROC NEAR  
-   ; exception/unwind handler body  
-  
-   ret 0  
-  
-Example3_UW ENDP  
-  
-Example3 PROC FRAME : Example3_UW  
-  
-   sub rsp, 16  
-.allocstack 16  
-  
-.endprolog  
-  
-   ; function body  
-    add rsp, 16  
-   ret 0  
-  
-Example3 ENDP  
-text ENDS  
-END  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+
+Generiert eine **UWOP_ALLOC_SMALL** oder **UWOP_ALLOC_LARGE** mit der angegebenen Größe für den aktuellen Offset im Prolog.
+
+## <a name="syntax"></a>Syntax
+
+> . ALLOCSTACK Größe
+
+## <a name="remarks"></a>Hinweise
+
+MASM wird die effizienteste Codierung für eine bestimmte Größe auswählen.
+
+. ALLOCSTACK ist nur zulässig, in der Prolog, die von erweitert und ermöglicht ml64.exe angeben, wie eine Funktion des Frames entlädt die [PROC](../../assembler/masm/proc.md) FRAME-Deklaration, um die [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) Richtlinie. Diese Direktiven generieren Sie Code nicht; Generieren sie nur `.xdata` und `.pdata`. . Indem Sie die Anweisungen, die die Aktionen, entladen werden implementieren, sollte ALLOCSTACK vorangestellt werden. Es hat sich bewährt, sowohl den Code, den sie auf die Entladung in einem Makro gedacht sind, um sicherzustellen, dass Vereinbarung als auch die Entladung Anweisungen zu umschließen.
+
+Die `size` Operand muss ein Vielfaches von 8 sein.
+
+Weitere Informationen finden Sie unter [MASM für X64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+
+## <a name="sample"></a>Beispiel
+
+Das folgende Beispiel zeigt, wie Sie einen Entladung/Ausnahmehandler angeben:
+
+```asm
+; ml64 ex3.asm /link /entry:Example1  /SUBSYSTEM:Console
+text SEGMENT
+PUBLIC Example3
+PUBLIC Example3_UW
+Example3_UW PROC NEAR
+   ; exception/unwind handler body
+
+   ret 0
+
+Example3_UW ENDP
+
+Example3 PROC FRAME : Example3_UW
+
+   sub rsp, 16
+.allocstack 16
+
+.endprolog
+
+   ; function body
+    add rsp, 16
+   ret 0
+
+Example3 ENDP
+text ENDS
+END
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

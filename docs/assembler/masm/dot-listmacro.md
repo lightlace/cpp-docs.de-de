@@ -1,7 +1,7 @@
 ---
-title: . LISTMACRO | Microsoft Docs
+title: . LISTMACRO | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d74228abccf70b969c0d1feed6a987baf35c8171
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4df49ef00b07f3e95b9acbcd02aa4ae023a1ea87
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050960"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676481"
 ---
 # <a name="listmacro"></a>.LISTMACRO
-Startet eine Liste der Makro Expansion-Anweisungen, die Code- oder Datenmenge zu generieren.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-.LISTMACRO  
-  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Dies ist die Standardeinstellung. Identisch mit [. XALL](../../assembler/masm/dot-xall.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+
+Startet eine Liste der Makro-Erweiterung-Anweisungen, die Code oder Daten zu generieren.
+
+## <a name="syntax"></a>Syntax
+
+> .LISTMACRO
+
+## <a name="remarks"></a>Hinweise
+
+Dies ist die Standardeinstellung. Identisch mit [. XALL](../../assembler/masm/dot-xall.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

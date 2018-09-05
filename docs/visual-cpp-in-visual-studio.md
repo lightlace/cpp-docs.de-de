@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb826c89106358c338230d46dc8743e1ee4d60f4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6116a1b27595c6400edfcb79daafb362fb7aec5f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200451"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684490"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ in Visual Studio
 
@@ -144,7 +144,7 @@ Asynchrone und parallele Algorithmen, die auf der CPU ausgeführt werden.
 [C++ AMP (C++ Accelerated Massive Parallelism)](parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 Enorm parallele Algorithmen, die auf der GPU ausgeführt werden.
 
-[Windows Runtime Template Library (WRL)](https://msdn.microsoft.com/library/windows/apps/hh438466.aspx)<br/>
+[Windows Runtime Template Library (WRL)](windows/windows-runtime-cpp-template-library-wrl.md)<br/>
 Apps und Komponenten für UWP (Universelle Windows-Plattform).
 
 [.NET-Programmierung mit C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>

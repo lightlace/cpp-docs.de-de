@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f966491603ad1fda04bef34181ebb4937df6a65e
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: eedbc29b5012c3a4355178d0fbd83aad81e9cb95
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209286"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680411"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>Liste der intrinsischen Funktionen für x64 (amd64)
 
@@ -32,13 +32,13 @@ Weitere Informationen über einzelne systeminterne Funktionen finden Sie in dies
 
 - [Die systeminternen Funktionen Handbuch Intel](https://software.intel.com/sites/landingpage/IntrinsicsGuide). Verwenden Sie das Suchfeld, um nach spezifischen systeminternen Funktionen zu suchen.
 
-- [Intel 64 und IA-32-Architekturen Software-Entwickler-Handbücher](https://go.microsoft.com/fwlink/p/?LinkID=510021)
+- [Intel 64 und IA-32-Architekturen Software-Entwickler-Handbücher](https://software.intel.com/articles/intel-sdm)
 
-- [Intel Architektur Instruction Set Extensions Programming Reference](https://go.microsoft.com/fwlink/p/?linkid=874960)
+- [Intel Architektur Instruction Set Extensions Programming Reference](https://software.intel.com/isa-extensions)
 
-- [Einführung in die Intel Advanced Vector Extensions](https://go.microsoft.com/fwlink/p/?linkid=874961)
+- [Einführung in die Intel Advanced Vector Extensions](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
-- [AMD Developer Guides, Handbücher und ISA-Dokumente](https://go.microsoft.com/fwlink/p/?linkid=874958)
+- [AMD Developer Guides, Handbücher und ISA-Dokumente](https://developer.amd.com/resources/developer-guides-manuals/)
 
 Die folgende Tabelle enthält die systeminternen Funktionen, die auf x64-Prozessoren verfügbar sind. In der Spalte "Technologie" ist die erforderliche Anweisungssatzunterstützung aufgeführt. Verwenden Sie die systeminterne Funktion [__cpuid](../intrinsics/cpuid-cpuidex.md) , um die Anweisungssatzunterstützung zur Laufzeit zu bestimmen. Wenn sich zwei Einträge in einer Zeile befinden, stellen sie verschiedene Einstiegspunkte für dieselbe systeminterne Funktion dar. [1] gibt an, dass die systeminterne Funktion nur auf AMD-Prozessoren verfügbar ist. [2] gibt an, dass die systeminterne Funktion nur auf Intel-Prozessoren verfügbar ist. [3] gibt an, dass der Prototyp ein Makro ist. Der für den Funktionsprototyp erforderliche Header ist in der Spalte „Header“ aufgeführt. Der Header „intrin.h“ umfasst aus Gründen der Einfachheit „immintrin.h“ und „ammintrin.h“.
 

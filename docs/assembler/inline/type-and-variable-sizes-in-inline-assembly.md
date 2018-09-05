@@ -1,7 +1,7 @@
 ---
-title: Typen- und Variablengrößen in der Inlineassembly | Microsoft Docs
+title: Typen- und Variablengrößen in der Inlineassembly | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -25,39 +25,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3466158c507e618e701df5aed35db7e5814abe52
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3defb0b11a55258aa0a7d8c050d5a59bb6b8eb5a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050586"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683621"
 ---
 # <a name="type-and-variable-sizes-in-inline-assembly"></a>Typen- und Variablengrößen in der Inlineassembly
-**Microsoft-spezifisch**  
-  
- Die **Länge**, **Größe**, und **Typ** Operatoren haben eine begrenzte Bedeutung in der Inlineassembly. Nicht verwendet werden alle mit der `DUP` Operator (da Sie Daten mit MASM-Direktiven und Operatoren definieren können). Jedoch können Sie Sie verwenden, um die Größe von C- oder C++-Variablen oder Typen zu ermitteln:  
-  
--   Die **Länge** Operator kann die Anzahl der Elemente in einem Array zurückgeben. Es gibt den Wert 1 für nicht-arrayattribute Variablen zurück.  
-  
--   Die **Größe** Operator kann die Größe des eine C- oder C++-Variable zurückgeben. Eine Variable Größe ist das Produkt der **Länge** und **Typ**.  
-  
--   Die **Typ** Operator kann die Größe des eine C- oder C++-Typ oder eine Variable zurückgeben. Wenn die Variable ein Array ist **Typ** gibt die Größe der ein einzelnes Element des Arrays zurück.  
-  
- Angenommen, wenn das Programm ein 8-Element muss `int` Array  
-  
-```  
-int arr[8];  
-```  
-  
- die folgenden Ausdrücke für C- und Assembly ergeben, die Größe des `arr` und die zugehörigen Elemente.  
-  
-|__asm|C|Größe|  
-|-------------|-------|----------|  
-|**Länge** Arr|`sizeof`(Arr) /`sizeof`(arr[0])|8|  
-|**Größe** Arr|`sizeof`(Arr)|32|  
-|**Typ** Arr|`sizeof`(arr[0])|4|  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden der Assemblysprache in __asm-Blöcken](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Microsoft-spezifisch**
+
+Die **Länge**, **Größe**, und **Typ** Operatoren haben eine begrenzte Bedeutung in der Inlineassembly. Sie können nicht mit überhaupt verwendet werden die `DUP` Operator (da Sie Daten mit MASM-Anweisungen und Operatoren definieren können). Jedoch können sie um die Größe von C- oder C++-Variablen oder Typen zu ermitteln:
+
+- Die **Länge** Operator kann die Anzahl der Elemente in einem Array zurückgeben. Es gibt den Wert 1 für nicht-Array-Variablen zurück.
+
+- Die **Größe** Operator kann die Größe einer C- oder C++-Variablen zurück. Eine Variable, die Größe ist das Produkt aus der **Länge** und **Typ**.
+
+- Die **Typ** Operator kann die Größe des eine C- oder C++-Typ oder eine Variable zurückgeben. Wenn die Variable ein Array, **Typ** gibt die Größe eines einzelnen Elements des Arrays zurück.
+
+Wenn das Programm ein 8-Element weist z. B. **Int** Array
+
+```cpp
+int arr[8];
+```
+
+die folgenden C "und" Assembly-Ausdrücke zu erhalten, die Größe des `arr` und die zugehörigen Elemente.
+
+|__asm|C|Größe|
+|-------------|-------|----------|
+|**Länge** Arr|`sizeof`(Arr) /`sizeof`(arr[0])|8|
+|**Größe** Arr|`sizeof`(Arr)|32|
+|**Typ** Arr|`sizeof`(arr[0])|4|
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden der Assemblysprache in __asm-Blöcken](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

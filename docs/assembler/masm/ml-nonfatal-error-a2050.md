@@ -1,7 +1,7 @@
 ---
-title: ML-Schwerwiegender Fehler A2050 | Microsoft Docs
+title: Schwerwiegender ML--Fehler A2050 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 159ed131c13166435114234b3b16a82cd4d41d1f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: bd2e0e6c2fc818ef9286fd303c07a26bdd8b4e5a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056193"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680670"
 ---
 # <a name="ml-nonfatal-error-a2050"></a>Nicht schwerwiegender ML-Fehler A2050
-**Real oder BCD-Nummer nicht zulässig**  
-  
- Eine Gleitkommazahl (real) oder Binary Coded Decimal (BCD)-Konstante wurde außer verwendet als einen Initialisierer Daten.  
-  
- Eine der folgenden aufgetreten ist:  
-  
--   Eine reelle Zahl oder einen BCD wurde in einem Ausdruck verwendet.  
-  
--   Eine reelle Zahl wurde verwendet, um eine Direktive außer initialisieren [DWORD](../../assembler/masm/dword.md), [QWORD](../../assembler/masm/qword.md), oder [TBYTE](../../assembler/masm/tbyte.md).  
-  
--   Eine BCD wurde verwendet, um eine Direktive außer initialisieren `TBYTE`.  
-  
-## <a name="see-also"></a>Siehe auch  
- [ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)
+
+**Real oder BCD-Anzahl, die nicht zulässig**
+
+Eine Gleitkommazahl (tatsächlichen) oder die Binary Coded Decimal (BCD)-Konstante wurde als verwendet als dateninitialisierer.
+
+Eine der folgenden aufgetreten ist:
+
+- Eine reelle Zahl oder einen BCD wurde in einem Ausdruck verwendet.
+
+- Eine reelle Zahl wurde verwendet, um eine Direktive außer initialisieren [DWORD](../../assembler/masm/dword.md), [QWORD](../../assembler/masm/qword.md), oder [TBYTE](../../assembler/masm/tbyte.md).
+
+- Einen BCD wurde verwendet, um eine Direktive außer initialisieren `TBYTE`.
+
+## <a name="see-also"></a>Siehe auch
+
+[ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)<br/>

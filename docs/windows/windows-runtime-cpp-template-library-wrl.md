@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b40576e1b5613bfda19987167e7e43353e6b5802
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3c758226935151bd11faec12aed459aeb2606ca9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211703"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684823"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows Runtime C++ Template Library (WRL)
 
@@ -157,5 +157,5 @@ Ein `WeakRef` -Objekt stellt in der Regel ein Objekt dar, dessen Vorhandensein v
 |-|-|
 |[Schlüssel-APIs nach Kategorie](../windows/key-wrl-apis-by-category.md)|Hebt die primären Windows Runtime C++ Template Library-Typen, Funktionen und Makros.|
 |[Referenz](../windows/wrl-reference.md)|Enthält Referenzinformationen für die Windows Runtime C++ Template Library.|
-|[Kurzreferenz (Windows-Runtime und Visual C++)](http://go.microsoft.com/fwlink/p/?linkid=229180)|Beschreibt C++ / CX-Features, die die Windows-Runtime unterstützen.|
-|[Verwenden von Windows-Runtime-Komponenten in Visual C++](http://go.microsoft.com/fwlink/p/?linkid=229155)|Zeigt, wie C++ / CX verwenden, um das Erstellen einer grundlegenden Komponente für Windows-Runtime.|
+|[Kurzreferenz (Windows-Runtime und Visual C++)](../cppcx/quick-reference-c-cx.md)|Beschreibt C++ / CX-Features, die die Windows-Runtime unterstützen.|
+|[Verwenden von Windows-Runtime-Komponenten in Visual C++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Zeigt, wie C++ / CX verwenden, um das Erstellen einer grundlegenden Komponente für Windows-Runtime.|

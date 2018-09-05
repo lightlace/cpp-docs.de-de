@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656d5c357874a7b470eb2fd630c91ad0aefa5a0d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c79409ae6e4c7447050c26246768c0074c4e4e92
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205372"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677194"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>Hinzufügen einer MFC-Klasse aus einer Typbibliothek
 Verwenden Sie diesen Assistenten zum Erstellen einer MFC-Klasse von einer Schnittstelle in einer Bibliothek verfügbar. Sie können eine MFC-Klasse in eine [MFC-Anwendung](../../mfc/reference/creating-an-mfc-application.md), eine [MFC-DLL](../../mfc/reference/creating-an-mfc-dll-project.md) oder ein [MFC-ActiveX-Steuerelement](../../mfc/reference/creating-an-mfc-activex-control.md) einfügen.  
@@ -33,7 +33,7 @@ Verwenden Sie diesen Assistenten zum Erstellen einer MFC-Klasse von einer Schnit
   
 ### <a name="to-add-an-mfc-class-from-a-type-library"></a>Hinzufügen eine MFC-Klasse aus einer Typbibliothek  
   
-1.  In einem **Projektmappen-Explorer** oder [Klassenansicht](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), mit der rechten Maustaste in des Namens des Projekts, dem Sie die Klasse hinzufügen möchten.  
+1.  In einem **Projektmappen-Explorer** oder [Klassenansicht](/visualstudio/ide/viewing-the-structure-of-code), mit der rechten Maustaste in des Namens des Projekts, dem Sie die Klasse hinzufügen möchten.  
   
 2.  Klicken Sie im Kontextmenü auf die Option **Hinzufügen**, und klicken Sie danach auf **Klasse hinzufügen**.  
   

@@ -1,7 +1,7 @@
 ---
-title: FWORD | Microsoft Docs
+title: FWORD | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfe4a590c9f425ef405d735a6192f5a7873c175b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 375e822f5d8b0b9c6440b92509469a75fac3b5b4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051250"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682027"
 ---
 # <a name="fword"></a>FWORD
-Zum Belegen und optional initialisiert 6 Bytes des Speichers für die einzelnen `initializer`.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-[[name]] FWORD initializer [[, initializer]]...  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Kann auch verwendet werden, als Typspezifizierer an einer beliebigen Stelle ist ein Typ zulässig.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Direktiven – Referenz](../../assembler/masm/directives-reference.md)   
- [DF](../../assembler/masm/df.md)
+
+Zugewiesen und initialisiert Sie optional 6 Bytes Speicherplatz für die einzelnen `initializer`.
+
+## <a name="syntax"></a>Syntax
+
+> [[Name]] FWORD-Initialisierer [[, Initialisierer]]...
+
+## <a name="remarks"></a>Hinweise
+
+Kann auch verwendet werden, als Typspezifizierer an einer beliebigen Stelle ist ein Typ zulässig.
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>
+[DF](../../assembler/masm/df.md)<br/>

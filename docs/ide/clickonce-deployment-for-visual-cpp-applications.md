@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59649aeee3b0f63b496b967722205001a3de1619
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 82a290eb7695bbcd7c03cda0351445519352e80a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213532"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677723"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>ClickOnce-Bereitstellung für Visual C++-Anwendungen
 Visual Studio verfügt über zwei verschiedene Technologien zum Bereitstellen von Windows-Anwendungen: ClickOnce-Bereitstellung oder [Windows Installer](/windows/desktop/Msi/windows-installer-portal)-Bereitstellung.  
@@ -53,7 +53,6 @@ Visual Studio verfügt über zwei verschiedene Technologien zum Bereitstellen vo
  [Makecert.exe (Certificate Creation-Tool)](https://msdn.microsoft.com/library/windows/desktop/aa386968)   
  [Deploying Desktop Applications (Bereitstellen von Desktopanwendungen)](../ide/deploying-native-desktop-applications-visual-cpp.md)   
  [Deploying Applications, Services, and Components (Bereitstellen von Anwendungen, Diensten und Komponenten)](/visualstudio/deployment/deploying-applications-services-and-components)   
- [Windows Installer-Bereitstellung](https://msdn.microsoft.com/121be21b-b916-43e2-8f10-8b080516d2a0)   
  [ClickOnce-Sicherheit und -Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment)   
  [Erstellen von Bootstrapperpaketen](/visualstudio/deployment/creating-bootstrapper-packages)   
  [.NET Programming with C++/CLI (Visual C++) (.NET-Programmierung mit C++/CLI (Visual C++))](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   

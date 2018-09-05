@@ -1,7 +1,7 @@
 ---
-title: . ENDIF | Microsoft Docs
+title: . ENDIF | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfaba995f9191e13859b5ca66a8f4b3432689902
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 2b448f0a51bd9b3dcb33c3e2c38cde792055087c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050398"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678836"
 ---
 # <a name="endif"></a>.ENDIF
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-.ENDIF  
-  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Finden Sie unter [. IF](../../assembler/masm/dot-if.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+
+## <a name="syntax"></a>Syntax
+
+> .ENDIF
+
+## <a name="remarks"></a>Hinweise
+
+Finden Sie unter [. IF](../../assembler/masm/dot-if.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4fb22334e809215f5f00b7d06170f6a018e3312
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 299ade4aa557a40331fb983f645aa2764c3bf9d4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462387"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679771"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Rvalue-Verweisdeklarator: &amp;&amp;
 Enthält einen Verweis auf einen rvalue-Ausdruck.  
@@ -60,7 +60,7 @@ int main()
   
  Vor Visual C++ 2010 hat jeder Aufruf von **Operator +-** belegt und gibt ein neues temporäres `string` -Objekt (einem Rvalue). **Operator +-** einer Zeichenfolge kann nicht in den anderen angefügt werden, da er nicht weiß, ob die Quellzeichenfolgen Lvalues oder Rvalues sind. Wenn die Quellzeichenfolgen beide lvalues sind, wird möglicherweise an anderer Stelle im Programm auf sie verwiesen, und sie dürfen deshalb nicht geändert werden. Mit Rvalue-Referenzen, **Operator +-** Rvalues, werden die an anderer Stelle im Programm verwiesen werden, kann nicht geändert werden können. Aus diesem Grund **Operator +-** können jetzt eine Zeichenfolge in eine andere anfügen. Dadurch kann die Anzahl dynamischer Speicherbelegungen beträchtlich reduziert werden, die die `string`-Klasse ausführen muss. Weitere Informationen zu den `string` Klasse, finden Sie unter [Basic_string-Klasse](../standard-library/basic-string-class.md).  
   
- Die Verschiebesemantik ist auch hilfreich, wenn der Compiler keine Rückgabewertoptimierung (Return Value Optimization, RVO) oder benannte Rückgabewertoptimierung (Named Return Value Optimization, NRVO) verwenden kann. In diesen Fällen ruft der Compiler den Verschiebekonstruktor auf, wenn der Typ diesen definiert. Weitere Informationen zur benannten Rückgabewertoptimierung finden Sie unter [benannte Rückgabewertoptimierung in Visual C++ 2005](http://go.microsoft.com/fwlink/p/?linkid=131571).  
+ Die Verschiebesemantik ist auch hilfreich, wenn der Compiler keine Rückgabewertoptimierung (Return Value Optimization, RVO) oder benannte Rückgabewertoptimierung (Named Return Value Optimization, NRVO) verwenden kann. In diesen Fällen ruft der Compiler den Verschiebekonstruktor auf, wenn der Typ diesen definiert. Weitere Informationen zur benannten Rückgabewertoptimierung finden Sie unter [benannte Rückgabewertoptimierung in Visual C++ 2005](https://msdn.microsoft.com/en-us/library/ms364057.aspx).  
   
  Das Beispiel zum Einfügen eines Elements in ein `vector`-Objekt hilft Ihnen, die Verschiebesemantik besser zu verstehen. Wenn die Kapazität des `vector`-Objekts überschritten wird, muss das `vector`-Objekt Speicher für seine Elemente neu zuteilen und dann jedes Element an einen anderen Speicherort kopieren, um für das eingefügte Element Platz zu schaffen. Wenn ein Einfügevorgang ein Element kopiert, wird ein neues Element erstellt, der Kopierkonstruktor aufgerufen, um die Daten aus dem vorherigen Element in das neue Element zu kopieren, und anschließend das vorherige Element zerstört. Mithilfe der Verschiebesemantik können Sie Objekte direkt verschieben, ohne speicherintensive Speicherbelegungs- und Kopiervorgänge ausführen zu müssen.  
   

@@ -1,7 +1,7 @@
 ---
-title: ML-Fehlermeldungen | Microsoft Docs
+title: ML-Fehlermeldungen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,48 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbc2ae6388ad11a411850d03de421d2f6820fc03
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 836daf438fa5a7f4c797b5b15ffab89720a7af98
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057096"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43675964"
 ---
 # <a name="ml-error-messages"></a>ML-Fehlermeldungen
-MASM-Komponenten generierten Fehlermeldungen werden in drei Kategorien eingeteilt:  
-  
--   **Schwerwiegender Fehler.** Diese Werte zeigen ein schwerwiegendes Problem aufgetreten, das verhindert, dass das Hilfsprogramm die normalen Prozess ausführen.  
-  
--   **Nicht schwerwiegende Fehler.** Das Hilfsprogramm kann seine abzuschließen. Wenn dies der Fall ist, wird das Ergebnis wahrscheinlich nicht auf die gewünschte.  
-  
--   **Warnungen.** Diese Meldungen geben Bedingungen an, die verhindern, können Sie die gewünschten Ergebnisse abrufen.  
-  
- Alle Fehlermeldungen weisen das folgende Format:  
-  
-```  
-  
-Utility: Filename (Line) : [Error_type} (Code): Message_text  
-```  
-  
- Dabei gilt:  
-  
- `Utility`  
- Das Programm, das die Fehlermeldung gesendet.  
-  
- *Filename*  
- Die Datei, die den Fehler generiert Bedingung enthält.  
-  
- *Line*  
- Die ungefähre Zeile, in dem die fehlerbedingung vorhanden ist.  
-  
- *Error_type*  
- Schwerwiegender Fehler, Fehler oder Warnung.  
-  
- *Code*  
- Der Fehlercode für den eindeutigen 5 oder 6 Ziffern.  
-  
- `Message_text`  
- Eine kurze und allgemeine Beschreibung des Fehlerzustands.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Referenz zum Microsoft-Makroassembler](../../assembler/masm/microsoft-macro-assembler-reference.md)
+
+Die Fehlermeldungen, die von MASM-Komponenten generiert werden, fallen in drei Kategorien:
+
+- **Schwerwiegender Fehler.** Diese weisen ein schwerwiegendes Problem, das verhindert, dass das Hilfsprogramm die normalen Prozess.
+
+- **Nicht schwerwiegende Fehler.** Das Hilfsprogramm kann der Prozess abgeschlossen werden. Wenn dies der Fall, wird das Ergebnis wahrscheinlich nicht auf die gewünschte.
+
+- **Warnungen.** Diese Meldungen zeigen die Bedingungen, die verhindern, können Sie die gewünschten Ergebnisse an.
+
+Alle Fehlermeldungen führen Sie das folgende Format:
+
+> *Hilfsprogramm*: *Filename* (*Zeile*): {*Error_type*} (*Code*): *Message_text*
+
+Dabei gilt:
+
+*Hilfsprogramm*<br/>
+Die Anwendung, die die Fehlermeldung gesendet.
+
+*Filename*<br/>
+Die Datei, die den Fehler generiert Bedingung enthält.
+
+*Line*<br/>
+Die ungefähre Zeile, in denen die fehlerbedingung vorhanden ist.
+
+*Error_type*<br/>
+Schwerwiegender Fehler, Fehler oder Warnung.
+
+*Code*<br/>
+Der Fehlercode für die eindeutige 5 oder 6 Ziffern.
+
+*Message_text*<br/>
+Eine kurze und allgemeine Beschreibung des Fehlerzustands.
+
+## <a name="see-also"></a>Siehe auch
+
+[Referenz zum Microsoft-Makroassembler](../../assembler/masm/microsoft-macro-assembler-reference.md)<br/>

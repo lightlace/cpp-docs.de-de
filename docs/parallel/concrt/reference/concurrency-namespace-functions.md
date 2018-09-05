@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e5ddaf0f3368f9542fbbd04a8a16c56223aefd5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1535ccda7b53a4fe87c496e2749e382413e32d0a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219578"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677787"
 ---
 # <a name="concurrency-namespace-functions"></a>Concurrency-Namespace-Funktionen
 ||||  
@@ -179,12 +179,12 @@ IResourceManager* __cdecl CreateResourceManager();
  Eine `IResourceManager`-Schnittstelle.  
   
 ### <a name="remarks"></a>Hinweise  
- Mehrere nachfolgende Aufrufe dieser Methode geben die gleiche Instanz des Ressourcen-Managers zurück. Jeder Aufruf der Methode inkrementiert einen Verweis auf die Ressourcen-Manager, und muss mit einem Aufruf von abgeglichen werden die [IResourceManager:: Release](https://msdn.microsoft.com/5d1356ec-fbd3-4284-a361-1e9e20bbb522) Methode, wenn der Planer erfolgt Kommunikation mit dem Resource Manager.  
+ Mehrere nachfolgende Aufrufe dieser Methode geben die gleiche Instanz des Ressourcen-Managers zurück. Jeder Aufruf der Methode inkrementiert einen Verweis auf die Ressourcen-Manager, und muss mit einem Aufruf von abgeglichen werden die [IResourceManager:: Release](iresourcemanager-structure.md) Methode, wenn der Planer erfolgt Kommunikation mit dem Resource Manager.  
   
  [Unsupported_os](unsupported-os-class.md) wird ausgelöst, wenn das Betriebssystem nicht von der Concurrency Runtime unterstützt wird.  
   
 ##  <a name="create_task"></a>  create_task  
- Erstellt ein PPL- [Aufgabe](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f) Objekt. Das Element `create_task` kann überall dort verwendet werden, wo Sie einen Aufgabenkonstruktor verwendet hätten. Es wird hauptsächlich der Einfachheit halber bereitgestellt, da es beim Erstellen eines Tasks die Verwendung des `auto`-Schlüsselwort ermöglicht.  
+ Erstellt ein PPL- [Aufgabe](task-class.md) Objekt. Das Element `create_task` kann überall dort verwendet werden, wo Sie einen Aufgabenkonstruktor verwendet hätten. Es wird hauptsächlich der Einfachheit halber bereitgestellt, da es beim Erstellen eines Tasks die Verwendung des `auto`-Schlüsselwort ermöglicht.  
   
 ```
 template<typename T>

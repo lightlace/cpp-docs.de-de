@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49362fa02005ce44100b0248d25ffc364a68da16
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0177d350d37b7fb1afe27d8aa4aad98dd985ec13
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222337"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679177"
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Steuerelements für IP-Adressen bereit.  
@@ -120,7 +120,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parameter  
  *dwStyle*  
- Format des IP-Adresse-Steuerelements. Wenden Sie eine Kombination von Window-Stile. Sie müssen das Format WS_CHILD einschließen, da das Steuerelement ein untergeordnetes Fenster sein muss. Finden Sie unter [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) im Windows SDK für eine Liste der Windows-Formate.  
+ Format des IP-Adresse-Steuerelements. Wenden Sie eine Kombination von Window-Stile. Sie müssen das Format WS_CHILD einschließen, da das Steuerelement ein untergeordnetes Fenster sein muss. Finden Sie unter [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) im Windows SDK für eine Liste der Windows-Formate.  
   
  *Rect*  
  Ein Verweis auf die IP-Adresse des Steuerelements Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.  
@@ -157,10 +157,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parameter  
  *dwExStyle*  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) im Windows SDK.  
   
  *dwStyle*  
- Format des IP-Adresse-Steuerelements. Wenden Sie eine Kombination von Window-Stile. Sie müssen das Format WS_CHILD einschließen, da das Steuerelement ein untergeordnetes Fenster sein muss. Finden Sie unter [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) im Windows SDK für eine Liste der Windows-Formate.  
+ Format des IP-Adresse-Steuerelements. Wenden Sie eine Kombination von Window-Stile. Sie müssen das Format WS_CHILD einschließen, da das Steuerelement ein untergeordnetes Fenster sein muss. Finden Sie unter [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) im Windows SDK für eine Liste der Windows-Formate.  
   
  *Rect*  
  Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.  

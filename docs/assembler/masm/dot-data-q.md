@@ -1,7 +1,7 @@
 ---
 title: .DATA? | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 022994186f58f86037f756ff8e771b9a40086a3b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 51dc83fbeace435cb5f37de54720df9597305948
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052101"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682300"
 ---
 # <a name="data"></a>.DATA?
-Bei Verwendung mit [. Modell](../../assembler/masm/dot-model.md), startet eine near Datensegment für nicht initialisierte Daten (Segment Namen _BSS).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-.DATA?  
-  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+
+Bei Verwendung mit [. Modell](../../assembler/masm/dot-model.md), startet ein nahezu Datensegment für nicht initialisierte Daten (Segment Namen _BSS).
+
+## <a name="syntax"></a>Syntax
+
+> .DATA?
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

@@ -1,7 +1,7 @@
 ---
-title: ML-Schwerwiegender Fehler A1010 | Microsoft Docs
+title: ML-Schwerwiegender Fehler A1010 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b622595b6994c4c4eaa74ed8f824f28dffe89b1a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 12b7e8698951e8ef59e0433134ec992af5d5f77f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057681"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676296"
 ---
 # <a name="ml-fatal-error-a1010"></a>Schwerwiegender ML-Fehler A1010
-**nicht übereinstimmende Block Schachtelung:**  
-  
- Eine Block beginnt verfügte nicht über ein zugehöriges End oder eine Block End verfügte nicht über eine entsprechende beginnt. Eine der folgenden möglicherweise beteiligt sind:  
-  
--   Eine allgemeine Richtlinie z. B. [. IF](../../assembler/masm/dot-if.md), [. Wiederholen Sie die](../../assembler/masm/dot-repeat.md), oder [. WÄHREND](../../assembler/masm/dot-while.md).  
-  
--   Ein bedingter-Assemblydirektive wie z. B. [IF](../../assembler/masm/if-masm.md), [wiederholen](../../assembler/masm/repeat.md), oder **während**.  
-  
--   Eine Struktur oder Union-Definition.  
-  
--   Die Definition einer Prozedur.  
-  
--   Eine Definition des Segments.  
-  
--   Ein [POPCONTEXT](../../assembler/masm/popcontext.md) Richtlinie.  
-  
--   Eine bedingte-Assembly, z. B. die Richtlinie ein [ELSE](../../assembler/masm/else-masm.md), [ELSEIF](../../assembler/masm/elseif-masm.md), oder **ENDIF** ohne ein passendes [IF](../../assembler/masm/if-masm.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)
+
+**nicht übereinstimmende Block schachteln:**
+
+Eine Block beginnt verfügte nicht über ein zugehöriges End oder ein Block End verfügte nicht über eine übereinstimmende beginnt. Eine der folgenden möglicherweise beteiligt:
+
+- Eine allgemeine Richtlinie z. B. [. IF](../../assembler/masm/dot-if.md), [. Wiederholen Sie die](../../assembler/masm/dot-repeat.md), oder [. WÄHREND](../../assembler/masm/dot-while.md).
+
+- Eine bedingte-Assembly-Anweisung, wie z. B. [IF](../../assembler/masm/if-masm.md), [wiederholen](../../assembler/masm/repeat.md), oder **während**.
+
+- Eine Struktur oder Union-Definition.
+
+- Die Definition einer Prozedur.
+
+- Eine Definition des Segments.
+
+- Ein [POPCONTEXT](../../assembler/masm/popcontext.md) Richtlinie.
+
+- Eine bedingte-Assembly, z. B. die Richtlinie ein [ELSE](../../assembler/masm/else-masm.md), [ELSEIF](../../assembler/masm/elseif-masm.md), oder **ENDIF** ohne ein entsprechendes [IF](../../assembler/masm/if-masm.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)<br/>

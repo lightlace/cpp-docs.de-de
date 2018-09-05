@@ -1,5 +1,5 @@
 ---
-title: -DEBUGTYPE (Debuginformationsoptionen) | Microsoft Docs
+title: -DEBUGTYPE (Debuginformationsoptionen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66868f7648d20b890f3c1e8c40802d77e3af4544
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce4db4403f034a5795237393a8f1465fdf31982b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375369"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681080"
 ---
 # <a name="debugtype-debug-info-options"></a>/ DEBUGTYPE (Debuginformationsoptionen)
 Die Option „/DEBUGTYPE“ gibt die Typen der durch die Option „/DEBUG“ generierten Debuginformationen an.  
@@ -34,23 +34,23 @@ Die Option „/DEBUGTYPE“ gibt die Typen der durch die Option „/DEBUG“ gen
   
 ## <a name="arguments"></a>Argumente  
  CV  
- Weist den Linker an, Debuginformationen für Symbole, Zeilennummern und andere Objektkompilierungsinformationen in der PDB-Datei auszugeben. Diese Option ist standardmäßig aktiviert beim **/DEBUG** angegeben ist und **DEBUGTYPE** nicht angegeben wird.  
+ Weist den Linker an, Debuginformationen für Symbole, Zeilennummern und andere Objektkompilierungsinformationen in der PDB-Datei auszugeben. Diese Option ist standardmäßig aktiviert Wenn **/DEBUG** angegeben ist und **/DEBUGTYPE** nicht angegeben ist.  
   
  PDATA  
- Weist den Linker an, den Debugstreaminformationen in der PDB-Datei PDATA- und XDATA-Einträge hinzuzufügen. Diese Option ist standardmäßig aktiviert Wenn sowohl die **/DEBUG** und **/Driver** Optionen angegeben werden. Wenn **/DEBUGTYPE:PDATA** angegeben wird, der Linker Debugsymbole automatisch in der PDB-Datei. Wenn **/DEBUGTYPE:PDATA FIXUP** angegeben ist, wird der Linker enthält keine Debugsymbole in die PDB-Datei.  
+ Weist den Linker an, den Debugstreaminformationen in der PDB-Datei PDATA- und XDATA-Einträge hinzuzufügen. Diese Option ist standardmäßig aktiviert Wenn sowohl die **/DEBUG** und **/Driver** Optionen angegeben werden. Wenn **/DEBUGTYPE:PDATA** wird angegeben, der Linker automatisch die Debugsymbole in die PDB-Datei. Wenn **/DEBUGTYPE:PDATA, FIXUP** angegeben ist, wird der Linker enthält keine Debugsymbole in die PDB-Datei.  
   
  FIXUP  
- Weist den Linker an, den Debugstreaminformationen in der PDB-Datei Umsetzungstabelleneinträge hinzuzufügen. Diese Option ist standardmäßig aktiviert Wenn sowohl die **/DEBUG** und **/PROFILE** Optionen angegeben werden. Wenn **/DEBUGTYPE:FIXUP** oder **/DEBUGTYPE:FIXUP PDATA** angegeben ist, wird der Linker enthält keine Debugsymbole in die PDB-Datei.  
+ Weist den Linker an, den Debugstreaminformationen in der PDB-Datei Umsetzungstabelleneinträge hinzuzufügen. Diese Option ist standardmäßig aktiviert Wenn sowohl die **/DEBUG** und **/PROFILE** Optionen angegeben werden. Wenn **/DEBUGTYPE:FIXUP** oder **/DEBUGTYPE:FIXUP, PDATA** angegeben ist, wird der Linker enthält keine Debugsymbole in die PDB-Datei.  
   
- Argumente für **DEBUGTYPE** können in beliebiger Reihenfolge kombiniert werden, indem Sie sie durch ein Komma. Die **DEBUGTYPE** Option und ihrer Argumente wird keine Groß-/Kleinschreibung beachtet.  
+ Argumente für **/DEBUGTYPE** kann in einer beliebigen Reihenfolge kombiniert werden, indem Sie sie durch ein Komma trennen. Die **/DEBUGTYPE** Option und ihrer Argumente wird keine Groß-/Kleinschreibung beachtet.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der **DEBUGTYPE** Option aus, um die Einbindung der Verschiebung-Tabelle- oder der pdata- und XData-Headerinformationen im Debugstream anzugeben. Dadurch schließt der Linker Informationen über Benutzermoduscode mit ein, der in einem Kerneldebugger sichtbar ist, wenn die Aufschlüsselung in einen Kernelmoduscode erfolgt. Um Debugsymbole zur Verfügung stellen, wenn **FIXUP** wird angegeben, umfassen die **CV** Argument.  
+ Verwenden der **/DEBUGTYPE** Option aus, um die Einbindung der Verschiebung-Tabelle-Daten oder der pdata- und XData-Headerinformationen im Debugstream anzugeben. Dadurch schließt der Linker Informationen über Benutzermoduscode mit ein, der in einem Kerneldebugger sichtbar ist, wenn die Aufschlüsselung in einen Kernelmoduscode erfolgt. Wenn Debugsymbole zur Verfügung stellen **FIXUP** wird angegeben, umfassen die **CV** Argument.  
   
- So debuggen Sie Code im Benutzermodus, der für Anwendungen typisch ist, die **DEBUGTYPE** Option ist nicht erforderlich. Wird standardmäßig der Compilerschalter, die angeben, Debuggen von Ausgabe (["/ Z7", / Zi, / Zi](../../build/reference/z7-zi-zi-debug-information-format.md)) alle Informationen benötigt durch den Visual Studio debugger ausgeben. Verwendung **/DEBUGTYPE:PDATA** oder **/DEBUGTYPE:CV, PDATA FIXUP** , Code zu debuggen, die im Benutzermodus und im Kernelmodus-Komponenten, z. B. eine Konfigurations-app für einen Gerätetreiber kombiniert. Weitere Informationen über kernelmodusdebugger finden Sie unter [Debugtools für Windows (WinDbg, KD, CDB, NTSD)](http://go.microsoft.com/fwlink/p?LinkID=285651)  
+ So debuggen Sie Code im Benutzermodus, der für Anwendungen typisch ist, die **/DEBUGTYPE** Option ist nicht erforderlich. In der Standardeinstellung die Compilerschaltern, die angeben, Debuggen von Ausgabe ([/Z7, / Zi, / Zi](../../build/reference/z7-zi-zi-debug-information-format.md)) alle die Informationen vom Visual Studio debugger benötigt-ausgeben. Verwendung **/DEBUGTYPE:PDATA** oder **/DEBUGTYPE:CV, PDATA, FIXUP** , Code zu debuggen, der Benutzermodus- und Kernelmodus-Komponenten, z. B. eine Konfigurations-app für einen Gerätetreiber kombiniert. Weitere Informationen über kernelmodusdebugger finden Sie unter [Debugging-Tools für Windows (WinDbg, KD, CDB, NTSD)](/windows-hardware/drivers/debugger/index)  
   
 ## <a name="see-also"></a>Siehe auch  
  [/ DEBUG (Debuginfo generieren)](../../build/reference/debug-generate-debug-info.md)   
  [/ DRIVER (Treiber für Windows NT-Kernel-Modus)](../../build/reference/driver-windows-nt-kernel-mode-driver.md)   
- [/ PROFILE (Leistungstools-Profiler)](../../build/reference/profile-performance-tools-profiler.md)   
- [Debugtools für Windows (WinDbg, KD, CDB, NTSD)](http://go.microsoft.com/fwlink/p?LinkID=285651)
+ [/ PROFILE (Performance Tools Profiler)](../../build/reference/profile-performance-tools-profiler.md)   
+ [Debugtools für Windows (WinDbg, KD, CDB, NTSD)](/windows-hardware/drivers/debugger/index)

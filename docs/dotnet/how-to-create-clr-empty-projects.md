@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bcb104b5265d79c6eac41b7632a12d99a8ec236b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c46aacc776c60b7deb03495187d08a3227f43aa4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212708"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677366"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>Gewusst wie: Erstellen von leeren CLR-Projekten
 Verwenden Sie zum Erstellen einer leeren CLR-Projekts die **leeres CLR-Projekt** Vorlage, die in der **neues Projekt** im Dialogfeld.  
   
 > [!NOTE]
->  Die in der IDE dargestellten Funktionen können sich je nach den aktiven Einstellungen oder der verwendeten Version von den in der Hilfe beschriebenen Funktionen unterscheiden. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Die in der IDE dargestellten Funktionen können sich je nach den aktiven Einstellungen oder der verwendeten Version von den in der Hilfe beschriebenen Funktionen unterscheiden. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-create-a-clr-empty-project"></a>Zum Erstellen eines leeren CLR-Projekts  
   

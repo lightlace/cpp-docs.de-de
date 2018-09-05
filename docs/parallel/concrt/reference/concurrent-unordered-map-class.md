@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7d31203069fe6916c485586fdfb62ee48559727
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c6fddd90eaa6259cd2552dddbeafb405d90580ac
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195887"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684351"
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map-Klasse
 Die `concurrent_unordered_map`- Klasse ist ein parallelitätssicherer Container, mit dem eine Folge von Elementen variierender Länge des Typs `std::pair<const K, _Element_type>` gesteuert wird. Die Sequenz wird so dargestellt, dass parallelitätssichere Vorgänge für Anfügen, Elementzugriff, Iteratorzugriff und Iteratordurchläufe ermöglicht werden.  
@@ -328,7 +328,7 @@ std::pair<const_iterator,
  Der Schlüsselwert, der gesucht werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [Paar](https://msdn.microsoft.com/c5a37023-d939-4eb2-ae24-ce8e0cd4505d) , in dem das erste Element ist ein Iterator am Anfang und das zweite Element ist ein Iterator an das Ende des Bereichs.  
+ Ein [Paar](../../../standard-library/pair-structure.md) , in dem das erste Element ist ein Iterator am Anfang und das zweite Element ist ein Iterator an das Ende des Bereichs.  
   
 ### <a name="remarks"></a>Hinweise  
  Es ist möglich, dass gleichzeitige einfügungen, die dazu führen, dass zusätzliche Product Keys, nach der Begin-Iterator und vor dem Enditerator eingefügt werden soll.  

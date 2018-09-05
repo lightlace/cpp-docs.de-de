@@ -1,7 +1,7 @@
 ---
-title: '@Interface | Microsoft Docs'
+title: '@Interface | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eabf66eba14fd8abd56cd79d7eca8816530a3d4
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 98f02265650648d02afc5121864b4c9f62dd5294
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050648"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684470"
 ---
 # <a name="interface"></a>@Interface
-Informationen über die Language-Parameter (numerische entsprechen).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-@Interface  
-  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Symbole – Verweis](../../assembler/masm/symbols-reference.md)
+
+Informationen über die Language-Parameter (numerisch gleichgesetzt).
+
+## <a name="syntax"></a>Syntax
+
+> @Interface
+
+## <a name="see-also"></a>Siehe auch
+
+[Symbole – Verweis](../../assembler/masm/symbols-reference.md)<br/>

@@ -1,7 +1,7 @@
 ---
-title: AUFRUFEN | Microsoft Docs
+title: RUFEN SIE | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27c18c83b623ce1a22ffcb5e1a9f1ce98ee6eb20
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3e5698acf9986903a1d6d731c1047484a0ce6904
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055169"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676516"
 ---
 # <a name="invoke"></a>INVOKE
-Die Prozedur aufruft, bei der Adresse, die vom *Ausdruck*, wobei die Argumente übergeben werden, auf dem Stapel oder in Registern gemäß dem standard Aufrufkonventionen des Typs Language.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-INVOKE   
-expression [[, arguments]]  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Jedes Argument an die Prozedur übergebenen möglicherweise einen Ausdruck, ein Registerpaar oder einen Adressausdruck (ein Ausdruck vorangestellt `ADDR`).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+
+Ruft die Prozedur unter der Adresse, die vom *Ausdruck*, wobei die Argumente übergeben werden, auf dem Stapel oder in Registern gemäß den Konventionen für den standard Aufrufen des Typs Language.
+
+## <a name="syntax"></a>Syntax
+
+> INVOKE *Ausdruck* [[, *Argumente*]]
+
+## <a name="remarks"></a>Hinweise
+
+Jedes Argument an die Prozedur übergeben möglicherweise einen Ausdruck, ein paar registrieren oder einen Adressausdruck (ein Ausdruck vorangestellt `ADDR`).
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

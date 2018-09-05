@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebbb33a4f17f5b4d458c4add4d59040d698dd4b8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 58eb907841abf63d77817e106ee339ad6c49bd7b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222193"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681202"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Verwenden von accelerator-Objekten und accelerator_view-Objekten
 Können Sie die [Accelerator](../../parallel/amp/reference/accelerator-class.md) und ["accelerator_view"](../../parallel/amp/reference/accelerator-view-class.md) Klassen an das Gerät oder Emulator C++ AMP-Code ausgeführt. Ein System kann über mehrere Geräte oder Emulatoren verfügen, die sich im Hinblick auf die Größe des Arbeitsspeichers, Unterstützung von freigegebenem Arbeitsspeicher, Debugunterstützung oder Unterstützung doppelter Genauigkeit unterscheiden. C++ Accelerated Massive Parallelism (C++ AMP) stellt APIs bereit, die Sie verwenden können, um die verfügbaren Zugriffstasten zu prüfen, eine als Standardvorlage festzulegen, mehrere accelerator_view-Objekte für mehrere Aufrufe von parallel_for_each festzulegen und spezielle Debugaufgaben auszuführen.  
@@ -180,11 +180,11 @@ Die Gerätepfade von drei speziellen Zugriffstasten sind als Eigenschaften der `
   
 - [Accelerator:: direct3d_warp-Datenmember](reference/accelerator-class.md#direct3d_warp): diese Zugriffstaste stellt eine fallbacklösung für die Ausführung von C++ AMP-Codes auf Multikern-CPUs, die Streaming SIMD Extensions (SSE) verwenden.  
   
-- [Accelerator:: cpu_accelerator-Datenmember](reference/accelerator-class.md#cpu_accelerator): Sie können diese Zugriffstaste zum Einrichten von stagingarrays verwenden. Sie kann keinen C++ AMP-Code ausführen. Weitere Informationen finden Sie unter den [Staging-Arrays in C++ AMP](http://go.microsoft.com/fwlink/p/?linkId=248485) Beitrag im Blog zur parallelen Programmierung in systemeigenem Code (Blog).  
+- [Accelerator:: cpu_accelerator-Datenmember](reference/accelerator-class.md#cpu_accelerator): Sie können diese Zugriffstaste zum Einrichten von stagingarrays verwenden. Sie kann keinen C++ AMP-Code ausführen. Weitere Informationen finden Sie unter den [Staging-Arrays in C++ AMP](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/) Beitrag im Blog zur parallelen Programmierung in systemeigenem Code (Blog).  
   
 ## <a name="interoperability"></a>Interoperabilität  
  
-Die C++ AMP-Laufzeit unterstützt Interoperabilität zwischen den `accelerator_view` -Klasse und der Direct3D [ID3D11Device-Schnittstelle](http://go.microsoft.com/fwlink/p/?linkId=248488). Die [Create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) -Methode übernimmt eine `IUnknown` -Schnittstelle und gibt eine `accelerator_view` Objekt. Die [Get_device](https://msdn.microsoft.com/8194125e-8396-4d62-aa8a-65831dea8439) -Methode übernimmt eine `accelerator_view` Objekt und gibt eine `IUknown` Schnittstelle.  
+Die C++ AMP-Laufzeit unterstützt Interoperabilität zwischen den `accelerator_view` -Klasse und der Direct3D [ID3D11Device-Schnittstelle](/windows/desktop/api/d3d11/nn-d3d11-id3d11device). Die [Create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) -Methode übernimmt eine `IUnknown` -Schnittstelle und gibt eine `accelerator_view` Objekt. Die [Get_device](reference/concurrency-direct3d-namespace-functions-amp.md#get_device) -Methode übernimmt eine `accelerator_view` Objekt und gibt eine `IUnknown` Schnittstelle.  
   
 ## <a name="see-also"></a>Siehe auch  
  

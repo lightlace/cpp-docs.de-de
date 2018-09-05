@@ -1,7 +1,7 @@
 ---
-title: . BASIS | Microsoft Docs
+title: . BASIS | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dba4fcfd3d589727cc4fc76ec9dd6a2890ae983
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 95617e9d99b2f07c8aadde94e0b1a74614d34efd
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056661"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685644"
 ---
 # <a name="radix"></a>.RADIX
-Legt die Standardbasis im Bereich 2 bis 16 auf den Wert von *Ausdruck*.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-.RADIX expression  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+
+Legt die Standardbasis im Bereich von 2 und 16, auf den Wert der *Ausdruck*.
+
+## <a name="syntax"></a>Syntax
+
+> . Basis-Ausdruck
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

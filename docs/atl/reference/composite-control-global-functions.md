@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d433c76e054b16491ab7586d6107b4931dc2915
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cf8c5bf4336df95caabd26d5ba4a395190c9591a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203715"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677847"
 ---
 # <a name="composite-control-global-functions"></a>Globale Funktionen zusammengesetzter Steuerelemente
 Diese Funktionen bieten Unterstützung für das Erstellen von Dialogfeldern, und klicken Sie zum Erstellen, hosten und Lizenzierung von ActiveX-Steuerelementen.  
@@ -442,7 +442,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
  Ungleich NULL, wenn die Initialisierung des Steuerelements Hostcode erfolgreich war; andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion muss aufgerufen werden, bevor Sie mit dem ATL-Steuerelement, das hosting-API. Nach einem Aufruf dieser Funktion die **"AtlAxWin"** Window-Klasse kann verwendet werden, in Aufrufen von [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) oder [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)gemäß der Beschreibung in das Windows SDK.  
+ Diese Funktion muss aufgerufen werden, bevor Sie mit dem ATL-Steuerelement, das hosting-API. Nach einem Aufruf dieser Funktion die **"AtlAxWin"** Window-Klasse kann verwendet werden, in Aufrufen von [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) oder [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)gemäß der Beschreibung in das Windows SDK.  
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinInit  
  Diese Funktion hebt die Initialisierung ATLs Steuerelements durch Aufheben der Registrierung der **"AtlAxWin80"** und **"AtlAxWinLic80"** Fensterklassen.  

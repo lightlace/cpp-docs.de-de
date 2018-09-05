@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1c75c8821a04c0270a79800e77cd4b57bf49c00
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e427d6469df3a3b82f25a26a0f9ce70642b8514c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202347"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679551"
 ---
 # <a name="strings-ccx"></a>Zeichenfolgen (C++/CX)
 Text in der Windows-Runtime wird dargestellt, in C++ / CX, durch die [Platform:: String-Klasse](../cppcx/platform-string-class.md). Verwenden der `Platform::String Class` Wenn Sie Zeichenfolgen hin und her an Methoden in Windows-Runtime-Klassen übergeben oder wenn Sie mit anderen Windows-Runtime-Komponenten über die Grenze der anwendungsbinärschnittstelle (ABI) hinaus interagieren. Die `Platform::String Class` stellt Methoden für einige allgemeine Zeichenfolgenoperationen bereit, aber sie ist nicht als umfassende Zeichenfolgenklasse gedacht. Verwenden Sie in Ihrem C++-Modul Standard-C++-Zeichenfolgentypen wie [wstring](../standard-library/basic-string-class.md) für sämtliche wesentliche Textverarbeitung und konvertieren Sie dann das Endergebnis zu [Platform::String](../cppcx/platform-string-class.md) , bevor Sie es zu oder von einer öffentlichen Schnittstelle übergeben. Das Konvertieren zwischen `wstring` oder `wchar_t*` und `Platform::String`ist einfach und effizient.  
@@ -75,5 +75,3 @@ void GetDecodedStrings(std::vector<std::wstring> strings)
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Integrierte Typen](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f)

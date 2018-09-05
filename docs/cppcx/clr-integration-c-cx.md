@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0c2acf17831e5cb3a2e0118ffe3606bc7beef25
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d75b8cb328ec69d5c322538a073fac5fc1761aed
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212987"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683677"
 ---
 # <a name="clr-integration-ccx"></a>CLR-Integration (C++/CX)
 Einige Windows-Runtime-Typen erhalten Sie spezielle Behandlung in C++ / CX und die Sprachen an, die auf die common Language Runtime (CLR) basieren. Dieser Artikel behandelt, wie verschiedene Typen in einer Sprache einer anderen Sprache zugeordnet werden. Beispielsweise ordnet die CLR „Windows.Foundation.IVector“ zu „System.Collections.IList“, „Windows.Foundation.IMap“ zu „System.Collections.IDictionary“ zu usw. Auf ähnliche Weise C + c++ / CX ordnet Typen wie z. B. Delegate "und" Platform:: String.  
@@ -22,7 +22,7 @@ Einige Windows-Runtime-Typen erhalten Sie spezielle Behandlung in C++ / CX und d
 ## <a name="mapping-the-windows-runtime-to-ccx"></a>Zuordnen von der Windows-Runtime für C++ / CX  
  Wenn C++ / CX liest eine Windows-Metadatendatei (.winmd), ordnet der Compiler automatisch gemeinsame Windows-Runtime-Namespaces und Typen für C++ / CX-Namespaces und Typen. Z. B. den numerischen Typ Windows-Runtime `UInt32` automatisch zugeordnet ist `default::uint32`.  
   
- C++ / CX ordnet mehrere andere Windows-Runtime-Typen an die **Plattform** Namespace. Z. B. die **Windows:: Foundation** HSTRING-Handle, das eine schreibgeschützte Unicode-Textzeichenfolge darstellt, zugeordnet ist C++ / CX `Platform::String` Klasse. Ein Windows-Runtime-Vorgang einen Fehler HRESULT zurückgibt, zugeordnet, um C++ / CX `Platform::Exception`. Weitere Informationen finden Sie unter [integrierten Typen](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f).  
+ C++ / CX ordnet mehrere andere Windows-Runtime-Typen an die **Plattform** Namespace. Z. B. die **Windows:: Foundation** HSTRING-Handle, das eine schreibgeschützte Unicode-Textzeichenfolge darstellt, zugeordnet ist C++ / CX `Platform::String` Klasse. Ein Windows-Runtime-Vorgang einen Fehler HRESULT zurückgibt, zugeordnet, um C++ / CX `Platform::Exception`.   
   
  C++ / CX ordnet darüber hinaus bestimmte Typen in Windows-Runtime-Namespaces, um die Funktionalität des Typs zu verbessern. Für diese Typen stellt C++ / CX stellt hilfskonstruktoren und Methoden, die für C++ spezifisch sind, und sind in den Typ der standardmäßigen winmd-Datei nicht verfügbar.  
   
