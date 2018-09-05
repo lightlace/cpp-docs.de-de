@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67dab7c8e280f8fbbdcc66beef031d1e9430ac1f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f3838fc2888567fa700eebd127bc7990175bdbc8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215807"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693587"
 ---
 # <a name="tn014-custom-controls"></a>TN014: Benutzerdefinierte Steuerelemente
 
@@ -122,7 +122,7 @@ Das häufigste Beispiel eine selbst zeichnen-Schaltfläche ist eine Bitmapschalt
 
 Gelegentlich möchten Sie die Funktionalität eines Objekts zu ändern, die bereits vorhanden ist. In den vorherigen Beispielen mussten Sie die Steuerelemente anpassen, bevor sie erstellt wurden. Dynamische Unterklassen können Sie einem Steuerelement anpassen, die bereits erstellt wurde.
 
-Unterklasse ist der Windows-Begriff für das Ersetzen der [WndProc](https://msdn.microsoft.com/94ba8ffa-3c36-46d4-ac74-9bd10b1ffd26) eines Fensters mit einer benutzerdefinierten `WndProc` und das Aufrufen der alten `WndProc` für Standardfunktionen.
+Unterklasse ist der Windows-Begriff für das Ersetzen der <xref:System.Windows.Forms.Control.WndProc%2A> eines Fensters mit einer benutzerdefinierten `WndProc` und das Aufrufen der alten `WndProc` für Standardfunktionen.
 
 Dies sollte nicht mit der Ableitung von C++-Klassen verwechselt werden. Um Informationen, die C++-Begriffe *Basisklasse* und *abgeleitete Klasse* sind analog zu den *übergeordnete Klasse* und *Unterklasse* in die Windows Das Objektmodell. C++-Ableitung mit Unterklassen von MFC und Windows sind mit ähnlichen, außer dynamische Unterklassen von C++ nicht unterstützt wird.
 

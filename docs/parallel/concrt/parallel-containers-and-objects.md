@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8256a6d49166b5a002a400892f0808706c66eba9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0e0bade8cc233b438f98c3b73b04bf644bb37cbf
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212461"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692288"
 ---
 # <a name="parallel-containers-and-objects"></a>Parallele Container und Objekte
 Die Parallel Patterns Library (PPL) enthält mehrere Container und Objekte, die threadsicheren Zugriff auf ihre Elemente bereitstellen.  
@@ -186,14 +186,14 @@ Die Parallel Patterns Library (PPL) enthält mehrere Container und Objekte, die 
   
 |Operator|Beschreibung|  
 |--------------|-----------------|  
-|[operator++](https://msdn.microsoft.com/4cfdd07e-927a-42f8-aaa0-d6881687f413)|Wechselt zum nächsten Element in der Warteschlange. Dieser Operator wird überladen, um sowohl Präinkrement- und Postinkrement-Semantik bereitzustellen.|  
-|[operator*](https://msdn.microsoft.com/a0e671fc-76e6-4fb4-b95c-ced4dd2b2017)|Ruft einen Verweis auf das aktuelle Element ab.|  
-|[operator->](https://msdn.microsoft.com/41fa393d-ae1e-4a38-bb4b-19e8df709ca9)|Ruft einen Zeiger auf das aktuelle Element ab.|  
+|`operator++`|Wechselt zum nächsten Element in der Warteschlange. Dieser Operator wird überladen, um sowohl Präinkrement- und Postinkrement-Semantik bereitzustellen.|  
+|`operator*`|Ruft einen Verweis auf das aktuelle Element ab.|  
+|`operator->`|Ruft einen Zeiger auf das aktuelle Element ab.|  
   
  [[Nach oben](#top)]  
   
 ##  <a name="unordered_map"></a> Concurrent_unordered_map-Klasse  
- Die [HYPERLINK "file:///C:\\\Users\\\thompet\\\AppData\\\Local\\\Temp\\\DxEditor\\\DduePreview\\\Default \\\798d7037-df37-4310-858b-6f590bbf6ebf\\\HTM\\\html\\\a217b4ac-af2b-4d41-94eb-09a75ee28622 "Concurrency:: concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md) -Klasse ist ein assoziative Containerklasse, die genau wie die [Std:: unordered_map](../../standard-library/unordered-map-class.md) Klasse, das eine Elementsequenz variabler Länge Sequenz von Elementen des Typs steuert [Std:: Pair\<const Key, Ty >](../../standard-library/pair-structure.md). Stellen Sie sich eine nicht geordnete Zuordnung als ein Wörterbuch, das Sie das Suchen nach Werten nach Schlüssel oder ein Schlüssel-Wert-Paar hinzu hinzufügen können. Diese Klasse ist hilfreich, wenn Sie über mehrere Threads oder Tasks, die gleichzeitig Zugriff auf einen gemeinsamen Container, in diese einfügen oder aktualisieren verfügen.  
+ Die [Concurrency:: concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md) -Klasse ist ein assoziativer Container-Klasse, die genau wie die [Std:: unordered_map](../../standard-library/unordered-map-class.md) Klasse, das eine Elementsequenz variabler Länge Sequenz von Elementen des Typs steuert[Std:: Pair\<const Key, Ty >](../../standard-library/pair-structure.md). Stellen Sie sich eine nicht geordnete Zuordnung als ein Wörterbuch, das Sie das Suchen nach Werten nach Schlüssel oder ein Schlüssel-Wert-Paar hinzu hinzufügen können. Diese Klasse ist hilfreich, wenn Sie über mehrere Threads oder Tasks, die gleichzeitig Zugriff auf einen gemeinsamen Container, in diese einfügen oder aktualisieren verfügen.  
   
  Das folgende Beispiel zeigt die grundlegende Struktur für die Verwendung von `concurrent_unordered_map`. In diesem Beispiel fügt die Zeichen im Bereich ["a", "i"]. Da die Reihenfolge der Vorgänge nicht festgelegt ist, ist der endgültige Wert für jeden Schlüssel auch unbestimmt. Allerdings ist es sicher ist, Einfügevorgänge parallel auszuführen.  
   
