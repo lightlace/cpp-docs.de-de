@@ -21,115 +21,135 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f23e46f2ef8de61e6dccc16a24e8c4bcfaa8f2e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 747fe2cd742686a7fda1f5031224cf7ab1607fb2
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677083"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754617"
 ---
 # <a name="ithreadpoolconfig-interface"></a>IThreadPoolConfig-Schnittstelle
-Diese Schnittstelle bietet Methoden zum Konfigurieren eines Threadpools.  
-  
+
+Diese Schnittstelle bietet Methoden zum Konfigurieren eines Threadpools.
+
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
-  
-## <a name="syntax"></a>Syntax  
-  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
+
+## <a name="syntax"></a>Syntax
+
 ```
 __interface
     __declspec(uuid("B1F64757-6E88-4fa2-8886-7848B0D7E660")) IThreadPoolConfig : public IUnknown
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="methods"></a>Methoden  
-  
-|||  
-|-|-|  
-|[GetSize](#getsize)|Rufen Sie diese Methode, um die Anzahl der Threads im Pool verfügbar machen.|  
-|[GetTimeout](#gettimeout)|Rufen Sie diese Methode rufen Sie die maximale Zeit in Millisekunden, die der Threadpool für einen Thread zum Herunterfahren gewartet wird.|  
-|[SetSize](#setsize)|Rufen Sie diese Methode, um die Anzahl der Threads im Pool festlegen.|  
-|[SetTimeout](#settimeout)|Rufen Sie diese Methode zum Festlegen der maximalen Zeit in Millisekunden, die der Threadpool für einen Thread zum Herunterfahren gewartet wird.|  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Schnittstelle wird implementiert von [CThreadPool](../../atl/reference/cthreadpool-class.md).  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** "atlutil.h"  
-  
-##  <a name="getsize"></a>  IThreadPoolConfig::GetSize  
- Rufen Sie diese Methode, um die Anzahl der Threads im Pool verfügbar machen.  
-  
+```
+
+## <a name="members"></a>Member
+
+### <a name="methods"></a>Methoden
+
+|||
+|-|-|
+|[GetSize](#getsize)|Rufen Sie diese Methode, um die Anzahl der Threads im Pool verfügbar machen.|
+|[GetTimeout](#gettimeout)|Rufen Sie diese Methode rufen Sie die maximale Zeit in Millisekunden, die der Threadpool für einen Thread zum Herunterfahren gewartet wird.|
+|[SetSize](#setsize)|Rufen Sie diese Methode, um die Anzahl der Threads im Pool festlegen.|
+|[SetTimeout](#settimeout)|Rufen Sie diese Methode zum Festlegen der maximalen Zeit in Millisekunden, die der Threadpool für einen Thread zum Herunterfahren gewartet wird.|
+
+## <a name="remarks"></a>Hinweise
+
+Diese Schnittstelle wird implementiert von [CThreadPool](../../atl/reference/cthreadpool-class.md).
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** "atlutil.h"
+
+##  <a name="getsize"></a>  IThreadPoolConfig::GetSize
+
+Rufen Sie diese Methode, um die Anzahl der Threads im Pool verfügbar machen.
+
 ```
 STDMETHOD(GetSize)(int* pnNumThreads);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *pnNumThreads*  
- [out] Die Adresse der Variablen, die bei Erfolg die Anzahl der Threads im Pool empfängt.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.  
-  
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]  
-  
-##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout  
- Rufen Sie diese Methode rufen Sie die maximale Zeit in Millisekunden, die der Threadpool für einen Thread zum Herunterfahren gewartet wird.  
-  
+```
+
+### <a name="parameters"></a>Parameter
+
+*pnNumThreads*  
+[out] Die Adresse der Variablen, die bei Erfolg die Anzahl der Threads im Pool empfängt.
+
+### <a name="return-value"></a>Rückgabewert
+
+Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+
+### <a name="example"></a>Beispiel
+
+[!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]
+
+##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout
+
+Rufen Sie diese Methode rufen Sie die maximale Zeit in Millisekunden, die der Threadpool für einen Thread zum Herunterfahren gewartet wird.
+
 ```
 STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *pdwMaxWait*  
- [out] Die Adresse der Variablen, die bei Erfolg die maximale Zeit in Millisekunden empfängt, die der Threadpool für einen Thread zum Herunterfahren gewartet wird.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.  
-  
-### <a name="example"></a>Beispiel  
- Finden Sie unter [IThreadPoolConfig::GetSize](#getsize).  
-  
-##  <a name="setsize"></a>  IThreadPoolConfig::SetSize  
- Rufen Sie diese Methode, um die Anzahl der Threads im Pool festlegen.  
-  
+```
+
+### <a name="parameters"></a>Parameter
+
+*pdwMaxWait*  
+[out] Die Adresse der Variablen, die bei Erfolg die maximale Zeit in Millisekunden empfängt, die der Threadpool für einen Thread zum Herunterfahren gewartet wird.
+
+### <a name="return-value"></a>Rückgabewert
+
+Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+
+### <a name="example"></a>Beispiel
+
+Finden Sie unter [IThreadPoolConfig::GetSize](#getsize).
+
+##  <a name="setsize"></a>  IThreadPoolConfig::SetSize
+
+Rufen Sie diese Methode, um die Anzahl der Threads im Pool festlegen.
+
 ```
 STDMETHOD(SetSize)int nNumThreads);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *nNumThreads*  
- Die angeforderte Anzahl von Threads im Pool.  
-  
- Wenn *nNumThreads* ist negativ, der Absolute Wert multipliziert die Anzahl der Prozessoren auf dem Computer, der die Gesamtzahl der Threads abzurufen.  
-  
- Wenn *nNumThreads* ist 0 (null), ATLS_DEFAULT_THREADSPERPROC multipliziert die Anzahl der Prozessoren auf dem Computer, der die Gesamtzahl der Threads abzurufen.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.  
-  
-### <a name="example"></a>Beispiel  
- Finden Sie unter [IThreadPoolConfig::GetSize](#getsize).  
-  
-##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout  
- Rufen Sie diese Methode zum Festlegen der maximalen Zeit in Millisekunden, die der Threadpool für einen Thread zum Herunterfahren gewartet wird.  
-  
+```
+
+### <a name="parameters"></a>Parameter
+
+*nNumThreads*  
+Die angeforderte Anzahl von Threads im Pool.
+
+Wenn *nNumThreads* ist negativ, der Absolute Wert multipliziert die Anzahl der Prozessoren auf dem Computer, der die Gesamtzahl der Threads abzurufen.
+
+Wenn *nNumThreads* ist 0 (null), ATLS_DEFAULT_THREADSPERPROC multipliziert die Anzahl der Prozessoren auf dem Computer, der die Gesamtzahl der Threads abzurufen.
+
+### <a name="return-value"></a>Rückgabewert
+
+Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+
+### <a name="example"></a>Beispiel
+
+Finden Sie unter [IThreadPoolConfig::GetSize](#getsize).
+
+##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout
+
+Rufen Sie diese Methode zum Festlegen der maximalen Zeit in Millisekunden, die der Threadpool für einen Thread zum Herunterfahren gewartet wird.
+
 ```
 STDMETHOD(SetTimeout)(DWORD dwMaxWait);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *dwMaxWait*  
- Die angeforderte maximale Zeit in Millisekunden, die der Threadpool für einen Thread zum Herunterfahren gewartet wird.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.  
-  
-### <a name="example"></a>Beispiel  
- Finden Sie unter [IThreadPoolConfig::GetSize](#getsize).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassen](../../atl/reference/atl-classes.md)   
- [CThreadPool-Klasse](../../atl/reference/cthreadpool-class.md)
+```
+
+### <a name="parameters"></a>Parameter
+
+*dwMaxWait*  
+Die angeforderte maximale Zeit in Millisekunden, die der Threadpool für einen Thread zum Herunterfahren gewartet wird.
+
+### <a name="return-value"></a>Rückgabewert
+
+Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+
+### <a name="example"></a>Beispiel
+
+Finden Sie unter [IThreadPoolConfig::GetSize](#getsize).
+
+## <a name="see-also"></a>Siehe auch
+
+[Klassen](../../atl/reference/atl-classes.md)   
+[CThreadPool-Klasse](../../atl/reference/cthreadpool-class.md)

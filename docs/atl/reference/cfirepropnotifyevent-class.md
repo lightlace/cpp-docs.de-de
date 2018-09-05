@@ -21,83 +21,95 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ec6fb0d54cd748b707c81b88e09fb7d846aaa2f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 88c816fecf71b94d25ac676f8169eeb26a2982fc
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194423"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760216"
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent-Klasse
-Diese Klasse stellt Methoden für die Benachrichtigung des Containers-Senke in Bezug auf Änderungen von Steuerelement-Eigenschaften.  
-  
+
+Diese Klasse stellt Methoden für die Benachrichtigung des Containers-Senke in Bezug auf Änderungen von Steuerelement-Eigenschaften.
+
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
-  
-## <a name="syntax"></a>Syntax  
-  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
+
+## <a name="syntax"></a>Syntax
+
 ```
 class CFirePropNotifyEvent
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|(Statisch) Benachrichtigt den Container-Senke, die eine Steuerelementeigenschaft geändert wurde.|  
-|[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|(Statisch) Benachrichtigt den Container-Senke, die eine Steuerelementeigenschaft geändert wird.|  
-  
-## <a name="remarks"></a>Hinweise  
- `CFirePropNotifyEvent` verfügt über zwei Methoden, mit die des Containers Senke benachrichtigt werden, die eine Steuerelementeigenschaft geändert hat oder zu ändern.  
-  
- Wenn die Klasse implementiert das Steuerelement abgeleitet wird `IPropertyNotifySink`, `CFirePropNotifyEvent` Methoden werden aufgerufen, wenn Sie aufrufen `FireOnRequestEdit` oder `FireOnChanged`. Wenn eine Klasse nicht abgeleitet ist `IPropertyNotifySink`, Aufrufe dieser Funktionen gibt S_OK zurück.  
-  
- Weitere Informationen zum Erstellen von Steuerelementen finden Sie unter den [ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md).  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** atlctl.h  
-  
-##  <a name="fireonchanged"></a>  CFirePropNotifyEvent::FireOnChanged  
- Benachrichtigt alle verbundenen [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) Schnittstellen (auf jeder Verbindungspunkt des Objekts), die die Eigenschaft des angegebenen Objekts geändert wurde.  
-  
+```
+
+## <a name="members"></a>Member
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|(Statisch) Benachrichtigt den Container-Senke, die eine Steuerelementeigenschaft geändert wurde.|
+|[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|(Statisch) Benachrichtigt den Container-Senke, die eine Steuerelementeigenschaft geändert wird.|
+
+## <a name="remarks"></a>Hinweise
+
+`CFirePropNotifyEvent` verfügt über zwei Methoden, mit die des Containers Senke benachrichtigt werden, die eine Steuerelementeigenschaft geändert hat oder zu ändern.
+
+Wenn die Klasse implementiert das Steuerelement abgeleitet wird `IPropertyNotifySink`, `CFirePropNotifyEvent` Methoden werden aufgerufen, wenn Sie aufrufen `FireOnRequestEdit` oder `FireOnChanged`. Wenn eine Klasse nicht abgeleitet ist `IPropertyNotifySink`, Aufrufe dieser Funktionen gibt S_OK zurück.
+
+Weitere Informationen zum Erstellen von Steuerelementen finden Sie unter den [ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md).
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** atlctl.h
+
+##  <a name="fireonchanged"></a>  CFirePropNotifyEvent::FireOnChanged
+
+Benachrichtigt alle verbundenen [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) Schnittstellen (auf jeder Verbindungspunkt des Objekts), die die Eigenschaft des angegebenen Objekts geändert wurde.
+
 ```
 static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *pUnk*  
- [in] Zeiger auf die `IUnknown` des Objekts, das die Benachrichtigung gesendet.  
-  
- *dispID*  
- [in] Der Bezeichner der Eigenschaft, die geändert wurde.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Einer der standardmäßigen HRESULT-Werte.  
-  
-### <a name="remarks"></a>Hinweise  
- Diese Funktion ist sicher aufgerufen werden, auch wenn das Steuerelement Verbindungspunkte nicht unterstützt.  
-  
-##  <a name="fireonrequestedit"></a>  CFirePropNotifyEvent::FireOnRequestEdit  
- Benachrichtigt alle verbundenen [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) Schnittstellen (auf jeder Verbindungspunkt des Objekts), die die angegebene geändert wird.  
-  
+```
+
+### <a name="parameters"></a>Parameter
+
+*pUnk*  
+[in] Zeiger auf die `IUnknown` des Objekts, das die Benachrichtigung gesendet.
+
+*dispID*  
+[in] Der Bezeichner der Eigenschaft, die geändert wurde.
+
+### <a name="return-value"></a>Rückgabewert
+
+Einer der standardmäßigen HRESULT-Werte.
+
+### <a name="remarks"></a>Hinweise
+
+Diese Funktion ist sicher aufgerufen werden, auch wenn das Steuerelement Verbindungspunkte nicht unterstützt.
+
+##  <a name="fireonrequestedit"></a>  CFirePropNotifyEvent::FireOnRequestEdit
+
+Benachrichtigt alle verbundenen [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) Schnittstellen (auf jeder Verbindungspunkt des Objekts), die die angegebene geändert wird.
+
 ```
 static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *pUnk*  
- [in] Zeiger auf die `IUnknown` des Objekts, das die Benachrichtigung gesendet.  
-  
- *dispID*  
- [in] Der Bezeichner der Eigenschaft zu ändern.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Einer der standardmäßigen HRESULT-Werte.  
-  
-### <a name="remarks"></a>Hinweise  
- Diese Funktion ist sicher aufgerufen werden, auch wenn das Steuerelement Verbindungspunkte nicht unterstützt.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Parameter
+
+*pUnk*  
+[in] Zeiger auf die `IUnknown` des Objekts, das die Benachrichtigung gesendet.
+
+*dispID*  
+[in] Der Bezeichner der Eigenschaft zu ändern.
+
+### <a name="return-value"></a>Rückgabewert
+
+Einer der standardmäßigen HRESULT-Werte.
+
+### <a name="remarks"></a>Hinweise
+
+Diese Funktion ist sicher aufgerufen werden, auch wenn das Steuerelement Verbindungspunkte nicht unterstützt.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)

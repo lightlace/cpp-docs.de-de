@@ -18,26 +18,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c9176d6ac22b4b9f802efabbb53d64fee3e3fef
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 19c3dd32a99eee7b2bb460598de5b5edeb03aeda
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961797"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761734"
 ---
 # <a name="interface-pointers-classes"></a>Schnittstellenzeigerklassen
-Die folgenden Klassen verwalten ein gegebenen Schnittstellenzeigers:  
-  
--   [CComPtr](../atl/reference/ccomptr-class.md) führt automatische verweiszählung.  
-  
--   [CComQIPtr](../atl/reference/ccomqiptr-class.md) ähnlich wie `CComPtr`, auch eine automatische Abfrage von Schnittstellen.  
-  
--   [CInterfaceArray](../atl/reference/cinterfacearray-class.md) verfügt über Methoden nützlich beim Erstellen ein Array von COM-Schnittstellenzeigern.  
-  
--   [CInterfaceList](../atl/reference/cinterfacelist-class.md) verfügt über Methoden nützlich beim Erstellen einer Liste von COM-Schnittstellenzeigern.  
-  
--   [CComGITPtr](../atl/reference/ccomgitptr-class.md) stellt Methoden für den Umgang mit Schnittstellenzeiger und der globale Schnittstellentabelle (GIT).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../atl/atl-class-overview.md)
+
+Die folgenden Klassen verwalten ein gegebenen Schnittstellenzeigers:
+
+- [CComPtr](../atl/reference/ccomptr-class.md) führt automatische verweiszählung.
+
+- [CComQIPtr](../atl/reference/ccomqiptr-class.md) ähnlich wie `CComPtr`, auch eine automatische Abfrage von Schnittstellen.
+
+- [CInterfaceArray](../atl/reference/cinterfacearray-class.md) verfügt über Methoden nützlich beim Erstellen ein Array von COM-Schnittstellenzeigern.
+
+- [CInterfaceList](../atl/reference/cinterfacelist-class.md) verfügt über Methoden nützlich beim Erstellen einer Liste von COM-Schnittstellenzeigern.
+
+- [CComGITPtr](../atl/reference/ccomgitptr-class.md) stellt Methoden für den Umgang mit Schnittstellenzeiger und der globale Schnittstellentabelle (GIT).
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../atl/atl-class-overview.md)
 

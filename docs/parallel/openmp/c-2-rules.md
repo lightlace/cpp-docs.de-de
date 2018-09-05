@@ -1,5 +1,5 @@
 ---
-title: C. 2 Regeln | Microsoft Docs
+title: C. 2 Regeln | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,308 +12,216 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3bdf26435fdfeea2196b9ef281d656805f51bf2
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: bb83b35a03608e272e9af67159b61e5dbf4e1ec6
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694991"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755020"
 ---
 # <a name="c2-rules"></a>C.2 Regeln
-Die Notation wird im Abschnitt 6.1 der C-standard beschrieben. Dieser Anhang Grammatik zeigt die Erweiterungen der Basissprache-Grammatik für die OpenMP-C- und C++-Direktiven.  
-  
- **/\* in C++ (ISO/IEC 14882:1998) \*/**  
-  
- *Anweisung Seq*:  
-  
- *statement*  
-  
- *OpenMP-Direktive*  
-  
- *Anweisung Seq-Anweisung*  
-  
- *Anweisung Seq-Direktive (OpenMP)*  
-  
- **/\* in C90 (ISO/IEC 9899:1990) \*/**  
-  
- *statement-list*:  
-  
- *statement*  
-  
- *OpenMP-Direktive*  
-  
- *statement-list-Anweisung*  
-  
- *Anweisung-List-Anweisung (OpenMP)*  
-  
- **/\* in C99 (ISO/IEC 9899: 1999) \*/**  
-  
- *Block-Element*:  
-  
- *declaration*  
-  
- *statement*  
-  
- *OpenMP-Direktive*  
-  
- *Anweisung*:  
-  
- **/\* Standard-Anweisungen \*/**  
-  
- *OpenMP-Konstrukt*  
-  
- *OpenMP-Konstrukt*:  
-  
- *Parallel-Konstrukt*  
-  
- *für Konstrukt*  
-  
- *Abschnitte-Konstrukt*  
-  
- *Single-Konstrukt*  
-  
- *Parallel-für-Konstrukt*  
-  
- *Parallel-Abschnitten-Konstrukt*  
-  
- *Master-construc*  
-  
- *Critical-Konstrukt*  
-  
- *Atomic-Konstrukt*  
-  
- *geordnete-Konstrukt*  
-  
- *OpenMP-Direktive*:  
-  
- *Barrier-Direktive*  
-  
- *Flush-Direktive*  
-  
- *strukturierten Block*:  
-  
- *statement*  
-  
- *Parallel-Konstrukt*:  
-  
- *Parallel-Direktive strukturierten block*  
-  
- *Parallel-Direktive*:  
-  
- **# Pragma Omp parallel***Parallel-Klausel*Optseq *neue-Zeile*   
-  
- *Parallel-Klausel*:  
-  
- *eindeutige-Parallel-Klausel*  
-  
- *Data-Klausel*  
-  
- *eindeutige-Parallel-Klausel*:  
-  
- **Wenn (** *Ausdruck* **)**  
-  
- **Num_threads (** *Ausdruck* **)**  
-  
- *für Konstrukt*:  
-  
- *für die Richtlinie-iterationsanweisung*  
-  
- *für die Richtlinie*:  
-  
- **# Pragma Omp für** *for-Klausel*Optseq *neue-Zeile*  
-  
- *for-Klausel*:  
-  
- *eindeutige-für-Klausel*  
-  
- *Data-Klausel*  
-  
- **nowait**  
-  
- *eindeutige für Klausel*:  
-  
- **sortiert**  
-  
- **Zeitplan (** *Plantyp* **)**  
-  
- **Zeitplan (** *Plantyp* **,** *Ausdruck* **)**  
-  
- *Plantyp*:  
-  
- **static**  
-  
- **dynamic**  
-  
- **Einführung**  
-  
- **Common Language Runtime**  
-  
- *Abschnitte-Konstrukt*:  
-  
- *Abschnitte-Direktive Abschnitt-Bereich*  
-  
- *Abschnitte-Direktive*:  
-  
- **# Pragma Omp Abschnitte** *Abschnitte-Klausel*Optseq *neue-Zeile*  
-  
- *Abschnitte-Klausel*:  
-  
- *Data-Klausel*  
-  
- **nowait**  
-  
- *Abschnitt Bereich*:  
-  
- *{Abschnitt sequenzielles}*  
-  
- *Abschnitt Sequenz*:  
-  
- *abschnittsdirektive*opt *strukturierten Block*  
-  
- *strukturierte abschnittsdirektive Abschnitt Sequenz-block*  
-  
- *abschnittsdirektive*:  
-  
- **# Pragma Omp Abschnitt** *neue-Zeile*  
-  
- *Single-Konstrukt*:  
-  
- *Single-Direktive strukturierten block*  
-  
- *Single-Direktive*:  
-  
- **# Pragma Omp einzelne** *Single-Klausel*Optseq *neue-Zeile*  
-  
- *Single-Klausel*:  
-  
- *Data-Klausel*  
-  
- **nowait**  
-  
- *Parallel-für-Konstrukt*:  
-  
- *Parallel-für-Direktive-iterationsanweisung*  
-  
- *Parallel-für-Direktive*:  
-  
- **# Pragma Omp parallel für** *Parallel-for-Klausel*Optseq *neue-Zeile*  
-  
- *Parallel-for-Klausel*:  
-  
- *eindeutige-Parallel-Klausel*  
-  
- *eindeutige-für-Klausel*  
-  
- *Data-Klausel*  
-  
- *Parallel-Abschnitten-Konstrukt*:  
-  
- *Parallel-Abschnitten-Direktive Abschnitt-Bereich*  
-  
- *Parallel-Abschnitten-Direktive*:  
-  
- **# Pragma Omp parallel Abschnitte** *Parallel-Abschnitten-Klausel*Optseq *neue-Zeile*  
-  
- *Parallel-Abschnitten-Klausel*:  
-  
- *eindeutige-Parallel-Klausel*  
-  
- *Data-Klausel*  
-  
- *Master-Konstrukt*:  
-  
- *Master-Direktive strukturierten block*  
-  
- *Master-Direktive*:  
-  
- **# Pragma Omp Master** *neue-Zeile*  
-  
- *Critical-Konstrukt*:  
-  
- *Critical-Direktive strukturierten block*  
-  
- *Critical-Direktive*:  
-  
- **# Pragma Omp kritische** *Region-Satz*opt *neue-Zeile*  
-  
- *Region-Satz*:  
-  
- *(Bezeichner)*  
-  
- *Barrier-Direktive*:  
-  
- **# Pragma Omp Barriere** *neue-Zeile*  
-  
- *Atomic-Konstrukt*:  
-  
- *Ausdrucksanweisung Atomic-Direktive*  
-  
- *Atomic-Direktive*:  
-  
- **# Pragma Omp atomic** *neue-Zeile*  
-  
- *Flush-Direktive*:  
-  
- **# Pragma Omp flush** *leeren var*opt *neue-Zeile*  
-  
- *Flush-var*:  
-  
- *(Variablenliste)*  
-  
- *geordnete Konstrukt*:  
-  
- *sortiert-Direktive strukturierten block*  
-  
- *geordnete Richtlinie*:  
-  
- **# Pragma Omp sortiert** *neue-Zeile*  
-  
- *Deklaration*:  
-  
- **/\* Standard-Deklarationen \*/**  
-  
- *Threadprivate-Direktive*  
-  
- *Threadprivate-Direktive*:  
-  
- **# Pragma Omp Threadprivate (** *Variablenliste***)** *neue-Zeile*   
-  
- *Data-Klausel*:  
-  
- **Private (** *Variablenliste* **)**  
-  
- **Copyprivate (***Variablenliste***)**   
-  
- **Firstprivate (***Variablenliste***)**   
-  
- **Lastprivate (** *Variablenliste***)**   
-  
- **Freigegebene (** *Variablenliste* **)**  
-  
- **Standard (freigegeben)**  
-  
- **Standard (keine)**  
-  
- **Verringerung (***Reduction-Operator***:***Variablenliste***)**   
-  
- **Copyin (***Variablenliste***)**   
-  
- *Reduction-Operator*:  
-  
- *Einer der*:  **+  \* -& ^ &#124; & &&#124;&#124;**  
-  
- **/\* in C \*/**  
-  
- *Variablenliste*:  
-  
- *identifier*  
-  
- *Variablenliste* **,** *Bezeichner*  
-  
- **/\* in C++ \*/**  
-  
- *Variablenliste*:  
-  
- *ID-Ausdruck*  
-  
- *Variablenliste* **,** *-Id-Ausdruck*
+Die Notation wird in Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang Grammatik zeigt die Erweiterungen die Basissprache-Grammatik für die OpenMP-C- und C++-Anweisungen.
+
+**/\* in C++ (ISO/IEC 14882:1998) \*/**
+
+*Anweisung-Seq*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Anweisung*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Anweisung (OpenMP)*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Anweisung-Seq-Anweisung*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Anweisung-Seq-Anweisung (OpenMP)*
+
+**/\* in C90 (ISO/IEC 9899:1990) \*/**
+
+*statement-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Anweisung*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Anweisung (OpenMP)*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Statement-List-Anweisung*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Anweisung-List-Anweisung (OpenMP)*
+
+**/\* in C99 (ISO/IEC 9899: 1999) \*/**
+
+*Block-Element*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Deklaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Anweisung*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Anweisung (OpenMP)*
+
+**/\* Standard-Anweisungen \*/**
+
+*Anweisung*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*OpenMP-Konstrukt*
+
+*OpenMP-Konstrukt*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Parallel-Konstrukt*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*für die-Konstrukt*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Abschnitte-Konstrukt*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Single-Konstrukt*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Parallel-für-Konstrukt*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Parallel-Abschnitten-Konstrukt*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Master-Konstrukt*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Critical-Konstrukt:*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Atomic-Konstrukt*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*geordnete-Konstrukt*
+
+*OpenMP-Direktive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Barrier-Direktive*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Flush-Direktive*
+
+*strukturierte-Block*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Anweisung*
+
+*Parallel-Konstrukt*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Parallel-Direktive strukturiert-block*
+
+*Parallel-Direktive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# Pragma Omp parallel** *Parallel-Klausel*<sub>Optseq</sub> *neue-Zeile*
+
+*Parallel-Klausel*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*eindeutige-Parallel-Klausel*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Data-Klausel*
+
+*eindeutige-Parallel-Klausel*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Wenn (** *Ausdruck* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Num_threads (** *Ausdruck* **)**
+
+*für Konstrukt*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*für die Richtlinie Iteration-Anweisung*
+
+*für die Richtlinie*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# Pragma Omp für** *for-Klausel*<sub>Optseq</sub> *neue-Zeile*
+
+*for-Klausel*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*eindeutige-für-Klausel*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Data-Klausel*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**NOWAIT**
+
+*eindeutige-für-Klausel*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Sortiert**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Zeitplan (** *Plantyp* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Zeitplan (** *Plantyp* **,** *Ausdruck* **)**
+
+*Plantyp*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Statische**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Dynamische**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**geführtes**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Common Language Runtime**
+
+*Abschnitte-Konstrukt*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Abschnitt-Scope-Abschnitten-Richtlinie*
+
+*Abschnitte-Direktive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# Pragma-Omp-Abschnitten** *Abschnitte-Klausel*<sub>Optseq</sub> *neue-Zeile*
+
+*Abschnitte-Klausel*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Data-Klausel*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**NOWAIT**
+
+*im Abschnitt Bereich*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*{Abschnitt-Sequenz}*
+
+*Abschnitt-Sequenz*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Section-Direktive*<sub>opt</sub> *strukturiert-Block*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*strukturierte abschnittsdirektive Abschnitt-Sequence-block*
+
+*Section-Direktive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**im Abschnitt Omp-Pragma** *neue-Zeile*
+
+*Single-Konstrukt*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*strukturierte Single-Directive-block*
+
+*Single-Direktive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# Pragma Omp einzelne** *einzigen Klausel*<sub>Optseq</sub> *neue-Zeile*
+
+*Single-Klausel*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Data-Klausel*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**NOWAIT**
+
+*Parallel-für-Konstrukt*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Parallel-für-Directive-Iteration-Anweisung*
+
+*Parallel-für-Directive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# Pragma Omp parallel für** *Parallel-for--Klausel*<sub>Optseq</sub> *neue-Zeile*
+
+*Parallel-for--Klausel*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*eindeutige-Parallel-Klausel*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*eindeutige-für-Klausel*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Data-Klausel*
+
+*Parallel-Abschnitten-Konstrukt*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Parallel-Abschnitten-Richtlinie im Abschnitt Bereich*
+
+*Parallel-Abschnitten-Directive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# Pragma Omp parallelen Abschnitten** *Parallel-Abschnitten-Klausel*<sub>Optseq</sub> *neue-Zeile*
+
+*Parallel-Abschnitten-Klausel*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*eindeutige-Parallel-Klausel*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Data-Klausel*
+
+*Master-Konstrukt*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Master-Direktive strukturiert-block*
+
+*Master-Direktive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# Pragma Omp Master** *neue-Zeile*
+
+*Critical-Konstrukts*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*die Critical-Direktive von strukturierten block*
+
+*die Critical-Direktive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# Pragma Omp kritische** *Region-Satz*<sub>opt</sub> *neue-Zeile*
+
+*Region-Satz*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*(ID)*
+
+*Barrier-Direktive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# Pragma Omp Barriere** *neue-Zeile*
+
+*Atomic-Konstrukt*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Atomic-Direktive Ausdruck-Anweisung*
+
+*Atomic-Direktive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# Pragma Omp atomic** *neue-Zeile*
+
+*Flush-Direktive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# Pragma Omp leeren** *Flush-Vars*<sub>opt</sub> *neue-Zeile*
+
+*Flush-Vars*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*(Variablen-Liste)*
+
+*geordnete-Konstrukt*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*strukturierte sortiert-Directive-block*
+
+*geordnete Richtlinie*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# Pragma Omp sortiert** *neue-Zeile*
+
+**/\* Standard-Deklarationen \*/**
+
+*Deklaration*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Threadprivate-Direktive*
+
+*Threadprivate-Direktive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# Pragma Omp Threadprivate (** *Variablenliste***)** *neue-Zeile* 
+
+*Data-Klausel*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Private (** *Variablenliste* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Copyprivate (***Variablenliste***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Firstprivate (***Variablenliste***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Lastprivate (** *Variablenliste***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Freigegebene (** *Variablenliste* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Standard (freigegeben)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Standard (keine)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Verringerung der (***Reduction-Operator***:***Variablenliste***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Copyin (***Variablenliste***)** 
+
+*Reduction-Operator*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Einer der:  **+  \* -& ^ &#124; & &&#124;&#124;**
+
+**/\* in C \*/**
+
+*Variablenliste*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Bezeichner*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Variablenliste* **,** *Bezeichner*
+
+**/\* in C++ \*/**
+
+*Variablenliste*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ID-Ausdruck*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Variablenliste* **,** *-Id-Ausdruck*

@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48d863cdbe8e5528824b3ffbad10e1117277e0c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fb7218d7fc8886cffdcce13f09a682fdc635f84f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885339"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759927"
 ---
 # <a name="atlbasemodule70-structure"></a>_ATL_BASE_MODULE70-Struktur
-Ein, die Projekte, die ATL verwendet.  
-  
-## <a name="syntax"></a>Syntax  
-  
+
+Ein, die Projekte, die ATL verwendet.
+
+## <a name="syntax"></a>Syntax
+
 ```
 struct _ATL_BASE_MODULE70 {
     UINT cbSize;
@@ -42,43 +43,43 @@ struct _ATL_BASE_MODULE70 {
     CRITICAL_SECTION m_csResource;
     CSimpleArray<HINSTANCE> m_rgResourceInstance;
 };
-```  
-  
-## <a name="members"></a>Member  
- `cbSize`  
- Die Größe der Struktur, die für die versionsverwaltung verwendet werden soll.  
-  
- `m_hInst`  
- Die `hInstance` für dieses Modul (Exe oder Dll).  
-  
- `m_hInstResource`  
- Ressourcenhandle für Standard-Instanz.  
-  
- `m_bNT5orWin98`  
- Versionsinformationen zum Betriebssystem. Wird intern verwendet, von ATL  
-  
- `dwAtlBuildVer`  
- Speichert die Version von ATL Derzeit 0x0700.  
-  
- `pguidVer`  
- Interne des ATL-GUID.  
-  
- `m_csResource`  
- Zum Synchronisieren des Zugriffs auf die `m_rgResourceInstance` Array. Wird intern verwendet, von ATL  
-  
- `m_rgResourceInstance`  
- Das Array verwendet, um die Suche nach Ressourcen in allen Ressourceninstanzen die ATL fähig ist. Wird intern verwendet, von ATL  
-  
-## <a name="remarks"></a>Hinweise  
- [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) als Typdefinition von _ATL_BASE_MODULE70 definiert ist.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** atlcore.h  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassen und Strukturen](../../atl/reference/atl-classes.md)
+```
 
+## <a name="members"></a>Member
 
+`cbSize`  
+Die Größe der Struktur, die für die versionsverwaltung verwendet werden soll.
 
+`m_hInst`  
+Die `hInstance` für dieses Modul (Exe oder Dll).
 
+`m_hInstResource`  
+Ressourcenhandle für Standard-Instanz.
+
+`m_bNT5orWin98`  
+Versionsinformationen zum Betriebssystem. Wird intern verwendet, von ATL
+
+`dwAtlBuildVer`  
+Speichert die Version von ATL Derzeit 0x0700.
+
+`pguidVer`  
+Interne des ATL-GUID.
+
+`m_csResource`  
+Zum Synchronisieren des Zugriffs auf die `m_rgResourceInstance` Array. Wird intern verwendet, von ATL
+
+`m_rgResourceInstance`  
+Das Array verwendet, um die Suche nach Ressourcen in allen Ressourceninstanzen die ATL fähig ist. Wird intern verwendet, von ATL
+
+## <a name="remarks"></a>Hinweise
+
+[_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) als Typdefinition von _ATL_BASE_MODULE70 definiert ist.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** atlcore.h
+
+## <a name="see-also"></a>Siehe auch
+
+[Klassen und Strukturen](../../atl/reference/atl-classes.md)
 

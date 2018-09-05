@@ -16,50 +16,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74a5e50eae425340bcb0f9a455422b43db0be0b2
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 37564920e2ffb4c2526631cd04864db1971a6f02
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207109"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757210"
 ---
 # <a name="messagehandler"></a>Meldungshandler
-`MessageHandler` ist der Name der Funktion durch den zweiten Parameter, der das Makro MESSAGE_HANDLER aus, in der meldungszuordnung identifiziert.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
- 
-    LRESULT 
-    MessageHandler 
- (
+
+`MessageHandler` ist der Name der Funktion durch den zweiten Parameter, der das Makro MESSAGE_HANDLER aus, in der meldungszuordnung identifiziert.
+
+## <a name="syntax"></a>Syntax
+
+```
+LRESULT MessageHandler(
     UINT uMsg,  
     WPARAM wParam,  
     LPARAM lParam,  
     BOOL& bHandled);
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *uMsg*  
- Gibt die Meldung.  
-  
- *wParam-Parameter*  
- Zusätzliche meldungsspezifische Informationen.  
-  
- *lParam*  
- Zusätzliche meldungsspezifische Informationen.  
-  
- *bHandled*  
- Die Zuordnung Nachrichtensätze *bHandled* auf "true", bevor Sie `MessageHandler` aufgerufen wird. Wenn `MessageHandler` ist nicht vollständig verarbeitet die Nachricht sollte *bHandled* auf "false", um anzugeben, die Nachricht noch weitere Verarbeitung erforderlich.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Das Ergebnis der Nachrichtenverarbeitung. Bei Erfolg 0.  
-  
-## <a name="remarks"></a>Hinweise  
- Ein Beispiel für die Verwendung dieser Nachrichtenhandler in einer meldungszuordnung, finden Sie unter [MESSAGE_HANDLER aus](reference/message-map-macros-atl.md#message_handler).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Implementieren eines Fensters](../atl/implementing-a-window.md)   
- [Meldungszuordnungen](../atl/message-maps-atl.md)   
- [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
+```
 
+### <a name="parameters"></a>Parameter
+
+*uMsg*  
+Gibt die Meldung.
+
+*wParam-Parameter*  
+Zusätzliche meldungsspezifische Informationen.
+
+*lParam*  
+Zusätzliche meldungsspezifische Informationen.
+
+*bHandled*  
+Die Zuordnung Nachrichtensätze *bHandled* auf "true", bevor Sie `MessageHandler` aufgerufen wird. Wenn `MessageHandler` ist nicht vollständig verarbeitet die Nachricht sollte *bHandled* auf "false", um anzugeben, die Nachricht noch weitere Verarbeitung erforderlich.
+
+## <a name="return-value"></a>Rückgabewert
+
+Das Ergebnis der Nachrichtenverarbeitung. Bei Erfolg 0.
+
+## <a name="remarks"></a>Hinweise
+
+Ein Beispiel für die Verwendung dieser Nachrichtenhandler in einer meldungszuordnung, finden Sie unter [MESSAGE_HANDLER aus](reference/message-map-macros-atl.md#message_handler).
+
+## <a name="see-also"></a>Siehe auch
+
+[Implementieren eines Fensters](../atl/implementing-a-window.md)   
+[Meldungszuordnungen](../atl/message-maps-atl.md)   
+[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)

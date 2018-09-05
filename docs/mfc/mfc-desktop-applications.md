@@ -1,5 +1,5 @@
 ---
-title: MFC-Desktopanwendungen | Microsoft Docs
+title: MFC-Desktopanwendungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c3afd68e8407d1e02fa39b76316da66fcfe56b8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350234"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754994"
 ---
 # <a name="mfc-desktop-applications"></a>MFC-Desktopanwendungen
 Die MFC-Bibliothek (Microsoft Foundation Class) stellt einen objektorientierten Wrapper für den Großteil der Win32 und COM APIs bereit. Obwohl sie zum Erstellen sehr einfacher Desktopanwendungen verwendet werden kann, ist sie besonders hilfreich, wenn Sie komplexere Benutzeroberflächen mit mehreren Steuerelementen entwickeln müssen. Sie können MFC zum Erstellen von Anwendungen mit Benutzeroberflächen im Stil von Office verwenden.  
@@ -38,7 +38,7 @@ Die MFC-Bibliothek (Microsoft Foundation Class) stellt einen objektorientierten 
  Öffentliche und geschützte Klassenmember werden nur dokumentiert, wenn sie in Anwendungen oder abgeleiteten Klassen normalerweise verwendet werden. Eine vollständige Liste der Klassenmember finden Sie bei den Klassenheaderdateien.  
   
 > [!IMPORTANT]
->  Die MFC-Klassen und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime-Umgebung ausgeführt.  
+>  Die MFC-Klassen und deren Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime-Umgebung ausgeführt.  
 >   
 >  MFC-Bibliotheken (DLLs) zur Codierung in Multibyte-Zeichenfolgen (MBCS) sind nicht mehr in Visual Studio enthalten. Sie sind jedoch als Visual Studio-Add-On verfügbar. Weitere Informationen finden Sie unter [MFC MBCS DLL-Add-On](mfc-mbcs-dll-add-on.md).  
   
@@ -49,7 +49,7 @@ Die MFC-Bibliothek (Microsoft Foundation Class) stellt einen objektorientierten 
  [Hierarchiediagramm](hierarchy-chart.md)  
  Die Klassenbeziehungen werden visuell in der Klassenbibliothek aufgeführt.  
   
- [Klassenübersicht](class-library-overview.md)  
+ [Übersicht über die Klasse](class-library-overview.md)  
  Die Klassen in der MFC-Bibliothek werden nach Kategorie aufgeführt.  
   
  [Exemplarische Vorgehensweisen](walkthroughs-mfc.md)  

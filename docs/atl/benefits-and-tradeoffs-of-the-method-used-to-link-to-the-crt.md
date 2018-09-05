@@ -1,5 +1,5 @@
 ---
-title: Vorteile und Nachteile der Methode zum Verknüpfen mit der CRT verwendet | Microsoft Docs
+title: Vor- und Nachteile der Methode, um eine Verknüpfung zu der CRT | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,25 +14,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2835e88da11b8d8332226080eb860afd41c0702
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4b90259a942ea785cfbfee4bfda803d9d7b568d4
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355386"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753876"
 ---
-# <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>Vorteile und Nachteile der Methode zum Verknüpfen mit der CRT verwendet
-Das Projekt kann statisch oder dynamisch mit der CRT verknüpfen. In der folgenden Tabelle werden die vor- und Nachteile bei der Auswahl der zu verwendenden Methode.  
-  
-|Methode|Vorteil|Kompromiss|  
-|------------|-------------|--------------|  
-|Das statische Verknüpfen mit der CRT<br /><br /> (**-Laufzeitbibliothek** festgelegt **Singlethread-**)|Die CRT-DLL muss nicht auf dem System, in dem das Abbild ausgeführt wird.|Das Abbild erheblich erhöhen die Größe ca. 25 KB Startcode hinzugefügt.|  
-|Dynamisches Verknüpfen mit der CRT<br /><br /> (**-Laufzeitbibliothek** festgelegt **Multithreaded**)|Das Bild erfordert keine den CRT-Startcode, daher ist es wesentlich kleiner.|Die CRT-DLL muss auf dem System, das Abbild ausgeführt werden.|  
-  
- Das Thema [Verknüpfen mit der CRT in ATL-Projekt](../atl/linking-to-the-crt-in-your-atl-project.md) erläutert, wie auf die Art und Weise, in, das mit der CRT verknüpft.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Programmieren mit ATL- und C-Laufzeitcode](../atl/programming-with-atl-and-c-run-time-code.md)   
- [DLLs und Verhalten von Visual C++-Laufzeitbibliothek](../build/run-time-library-behavior.md)   
- [CRT-Bibliotheksfunktionen](../c-runtime-library/crt-library-features.md)
+# <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>Vor- und Nachteile der Methode, um eine Verknüpfung zu der CRT
+
+Das Projekt kann entweder dynamisch oder statisch mit der CRT verknüpft. In der folgenden Tabelle wird beschrieben, die vor- und Nachteile bei der Auswahl der zu verwendenden Methode.
+
+|Methode|Vorteil|Abwägung|
+|------------|-------------|--------------|
+|Mit der CRT verknüpft statisch.<br /><br /> (**Laufzeitbibliothek** festgelegt **Singlethread-**)|Die CRT-DLL ist nicht auf dem System erforderlich, in dem das Image ausgeführt wird.|Ca. 25 KB Startcode wird wesentlich erhöht die Größe des Abbilds, hinzugefügt.|
+|Dynamisches Verknüpfen mit der CRT<br /><br /> (**Laufzeitbibliothek** festgelegt **mit mehreren Threads**)|Ihr Image erfordert keine den CRT-Startcode, daher ist es wesentlich kleiner ist.|Die CRT-DLL muss auf dem System, das Image ausführen.|
+
+Das Thema [Verlinkung mit der CRT in ATL-Projekt](../atl/linking-to-the-crt-in-your-atl-project.md) wird erläutert, wie wählen Sie die Art und Weise, in dem mit der CRT verknüpft.
+
+## <a name="see-also"></a>Siehe auch
+
+[Programmieren mit ATL- und C-Laufzeitcode](../atl/programming-with-atl-and-c-run-time-code.md)   
+[DLLs und Verhalten von Visual C++-Laufzeitbibliothek](../build/run-time-library-behavior.md)   
+[CRT-Bibliotheksfunktionen](../c-runtime-library/crt-library-features.md)
 

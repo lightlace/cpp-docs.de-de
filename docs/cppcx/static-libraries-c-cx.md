@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5bb69b65d78b6369d872fd6f953f6ddde382c21b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602288"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759443"
 ---
 # <a name="static-libraries-ccx"></a>Statische Bibliotheken (C++/CX)
 Eine statische Bibliothek, die in einer app (Universelle Windows Plattform) verwendet wird, kann ISO-Standard C++-Code, einschließlich der STL-Typen, und außerdem Aufrufe für Win32-APIs, die von der Windows-Runtime-app-Plattform nicht ausgeschlossen sind enthalten. Eine statische Bibliothek nutzt Windows-Runtime-Komponenten und kann Windows-Runtime-Komponenten mit bestimmten Einschränkungen erstellen.  

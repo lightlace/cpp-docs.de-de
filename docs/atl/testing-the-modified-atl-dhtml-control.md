@@ -1,5 +1,5 @@
 ---
-title: Testen des geänderten ATL-DHTML-Steuerelements | Microsoft Docs
+title: Prüfen des geänderten ATL-DHTML-Steuerelements | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b140788cd409aa5a11f93689e96fa40c1a167dfe
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9730f8ef9bfc89d65ffb89ddbbfe67ce247138e9
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360344"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755596"
 ---
-# <a name="testing-the-modified-atl-dhtml-control"></a>Testen des geänderten ATL-DHTML-Steuerelements
-Probieren Sie das neue Steuerelement zu sehen, wie er nun funktioniert.  
-  
-#### <a name="to-build-and-test-the-modified-control"></a>So erstellen und testen das geänderte Steuerelement  
-  
-1.  Das Projekt neu, und öffnen Sie es im Testcontainer. Finden Sie unter [Testen von Eigenschaften und Ereignisse mit Test Container](../mfc/testing-properties-and-events-with-test-container.md) Informationen zum Testcontainer zugreifen.  
-  
-     Ändern Sie die Größe des Steuerelements, um alle Schaltflächen anzeigen, die Sie hinzugefügt haben.  
-  
-2.  Überprüfen Sie die zwei Schaltflächen, die Sie durch Ändern des HTML-Codes eingefügt. Jede Schaltfläche trägt die Bezeichnung, die Sie in identifizierten [ändern das ATL-DHTML-Steuerelement](../atl/modifying-the-atl-dhtml-control.md): **aktualisieren** und **HelloHTML**.  
-  
-3.  Die zwei neue Schaltflächen bereit, ihre Funktionsweise zu testen.  
-  
- Testen Sie nun die Methoden, die nicht Teil der Benutzeroberfläche sind.  
-  
-1.  Markieren Sie das Steuerelement aus, damit der Rahmen aktiviert wird.  
-  
-2.  Auf der **Steuerelement** Menü klicken Sie auf **Methoden aufrufen**.  
-  
- Die Methoden in der Liste mit der Bezeichnung **Methodennamen** sind die Methoden, die der Container aufrufen können: `MethodInvoked` und `GoToURL`. Alle anderen Methoden werden über die Benutzeroberfläche gesteuert.  
-  
-1.  Wählen Sie eine Methode aufrufen, und klicken Sie auf `Invoke` um die Methode Meldungsfeld anzuzeigen oder zu www.microsoft.com zu navigieren.  
-  
-2.  In der **Methoden aufrufen** (Dialogfeld), klicken Sie auf **schließen**.  
-  
- Weitere Informationen finden Sie Informationen zu den verschiedenen Elementen und Dateien, aus denen ein ATL-DHTML-Steuerelement besteht, finden Sie unter [identifizieren die Elemente eines DHTML-Steuerelementprojekts](../atl/identifying-the-elements-of-the-dhtml-control-project.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Unterstützung für DHTML-Steuerelemente](../atl/atl-support-for-dhtml-controls.md)
+# <a name="testing-the-modified-atl-dhtml-control"></a>Prüfen des geänderten ATL-DHTML-Steuerelements
+
+Testen Sie das neue Steuerelement zu sehen, wie es jetzt funktioniert.
+
+#### <a name="to-build-and-test-the-modified-control"></a>Zum Erstellen und testen das geänderte-Steuerelement
+
+1. Das Projekt neu, und öffnen Sie sie im Test-Container. Finden Sie unter [Testen von Eigenschaften und Ereignisse mit Test Container](../mfc/testing-properties-and-events-with-test-container.md) Informationen zum Zugriff auf Testcontainer.
+
+     Größe des Steuerelements, um alle Schaltflächen anzuzeigen, die Sie hinzugefügt haben.
+
+2. Überprüfen Sie die zwei Schaltflächen, die Sie durch Ändern des HTML-Codes eingefügt. Jede Schaltfläche trägt die Bezeichnung, die Sie in identifiziert [Ändern des ATL-DHTML-Steuerelements](../atl/modifying-the-atl-dhtml-control.md): **aktualisieren** und **HelloHTML**.
+
+3. Testen Sie die zwei neuen Schaltflächen um anzuzeigen, wie sie funktionieren.
+
+Testen Sie jetzt die Methoden, die nicht Teil der Benutzeroberfläche sind.
+
+1. Markieren Sie das Steuerelement aus, damit der Rand aktiviert ist.
+
+2. Auf der **Steuerelement** Menü klicken Sie auf **Methoden aufrufen**.
+
+Die Methoden in der Liste mit der Bezeichnung **Methodenname** sind die Methoden, die der Container aufrufen können: `MethodInvoked` und `GoToURL`. Alle anderen Methoden werden über die Benutzeroberfläche gesteuert.
+
+1. Wählen Sie eine Methode aufzurufen, und klicken Sie auf `Invoke` der Methode Meldungsfeld anzuzeigen oder zu www.microsoft.com zu navigieren.
+
+2. In der **Methoden aufrufen** Dialogfeld klicken Sie auf **schließen**.
+
+Informationen zu den verschiedenen Elementen und Dateien, aus denen ein ATL-DHTML-Steuerelement besteht, finden Sie unter [Identifizieren von Elementen des DHTML-Steuerelementprojekts](../atl/identifying-the-elements-of-the-dhtml-control-project.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Unterstützung für DHTML-Steuerelement](../atl/atl-support-for-dhtml-controls.md)
 

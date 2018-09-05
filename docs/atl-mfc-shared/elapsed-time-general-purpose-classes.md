@@ -21,17 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98e3c07522ead22467455ce2d601270e7b624be0
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: ff07c1b26649ffd591bcab9917cf45fa4c67f30a
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131613"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756515"
 ---
 # <a name="elapsed-time-general-purpose-classes"></a>Verstrichene Zeit: Allgemeine Klassen
-Das folgende Verfahren zeigt, wie zur Berechnung der Differenz zwischen zwei `CTime` Objekte an, und erhalten eine `CTimeSpan` Ergebnis. Verwenden der `CTime` und `CTimeSpan` Objekte, die verstrichene Zeit folgendermaßen berechnen:  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#174](../atl-mfc-shared/codesnippet/cpp/elapsed-time-general-purpose-classes_1.cpp)]  
-  
+
+Das folgende Verfahren zeigt, wie zur Berechnung der Differenz zwischen zwei `CTime` Objekte an, und erhalten eine `CTimeSpan` Ergebnis. Verwenden der `CTime` und `CTimeSpan` Objekte, die verstrichene Zeit folgendermaßen berechnen:
+
+   [!code-cpp[NVC_ATLMFC_Utilities#174](../atl-mfc-shared/codesnippet/cpp/elapsed-time-general-purpose-classes_1.cpp)]
+
 Nachdem Sie berechnet haben `elapsedTime`, können Sie die Memberfunktionen der `CTimeSpan` die Bestandteile der verstrichene Zeit-Wert zu extrahieren.  
 
