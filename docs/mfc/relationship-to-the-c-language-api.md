@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d0bb7aa4f647ceeb61c20cccd626d9da999b241
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f291a05b1347254989e4876af66c5d8137864020
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200111"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684160"
 ---
 # <a name="relationship-to-the-c-language-api"></a>Beziehung zum C-Sprachen-API
-Die einzigen Merkmals, die die Microsoft Foundation Class (MFC)-Bibliothek neben anderen Klassenbibliotheken für Windows zu festlegt ist, die sehr nahe Zuordnung für die Windows-API, die in der Programmiersprache C geschrieben wird. Darüber hinaus können Sie in der Regel Aufrufe auf die Klassenbibliothek frei mit direkten Aufrufen an die Windows-API kombinieren. Diesen direkte Zugriff bedeutet nicht, jedoch sind die Klassen kein vollständiger Ersatz für diese API. Entwickler müssen immer noch gelegentlich, direkte Aufrufe einiger Windows-Funktionen, z. B. [SetCursor](/windows/desktop/api/winuser/nf-winuser-setcursor) und [GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385), z. B. Eine Windows-Funktion wird durch eine Klassenmemberfunktion eingeschlossen, nur, wenn ein eindeutiger Vorteil zu tun.  
+Die einzigen Merkmals, die die Microsoft Foundation Class (MFC)-Bibliothek neben anderen Klassenbibliotheken für Windows zu festlegt ist, die sehr nahe Zuordnung für die Windows-API, die in der Programmiersprache C geschrieben wird. Darüber hinaus können Sie in der Regel Aufrufe auf die Klassenbibliothek frei mit direkten Aufrufen an die Windows-API kombinieren. Diesen direkte Zugriff bedeutet nicht, jedoch sind die Klassen kein vollständiger Ersatz für diese API. Entwickler müssen immer noch gelegentlich, direkte Aufrufe einiger Windows-Funktionen, z. B. [SetCursor](/windows/desktop/api/winuser/nf-winuser-setcursor) und [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics), z. B. Eine Windows-Funktion wird durch eine Klassenmemberfunktion eingeschlossen, nur, wenn ein eindeutiger Vorteil zu tun.  
   
  Da in einigen Fällen Sie systemeigene Windows-Funktionsaufrufen müssen, sollten Sie in der Programmiersprache C Windows API-Dokumentation zugreifen. Diese Dokumentation ist im Lieferumfang von Microsoft Visual C++.  
   

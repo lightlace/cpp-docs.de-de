@@ -75,7 +75,6 @@
 ## [Verteilen von Visual C++-Dateien](redistributing-visual-cpp-files.md)
 ### [Neuverteilen von Komponenten mit Mergemodulen](redistributing-components-by-using-merge-modules.md)
 ### [Neuverteilen von Visual C++ ActiveX-Steuerelementen](redistributing-visual-cpp-activex-controls.md)
-### [Neuverteilen von Datenbankunterstützungsdateien](redistributing-database-support-files.md)
 ### [Neuverteilen der MFC-Bibliothek](redistributing-the-mfc-library.md)
 ### [Neuverteilen von ATL-Anwendungen](redistributing-an-atl-application.md)
 ## [Bereitstellungsbeispiele](deployment-examples.md)
