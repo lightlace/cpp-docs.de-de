@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ba5ce5b5cb2f55caf00ea6094cb4e14b2b08c236
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584119"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767606"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Verweisklassen und Strukturen (C++/CX)
 C++ / CX unterstützt benutzerdefinierte *Verweisklassen* und *referenzstrukturen*, prozessvorlagendefiniert und Benutzerdefiniert *Wert Klassen* und *Wert Strukturen*. Diese Datenstrukturen sind die primären Container von der C++ / CX unterstützt die Windows-Runtime-Typsystem. Ihre Inhalte werden an Metadaten ausgegeben werden nach bestimmten Regeln, und dadurch übergeben werden, zwischen Windows-Runtime-Komponenten und die universelle Windows-Plattform-apps, die in C++ oder anderen Sprachen geschrieben wurden.  

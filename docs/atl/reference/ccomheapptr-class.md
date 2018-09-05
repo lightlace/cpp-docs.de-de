@@ -18,65 +18,74 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3cc64804dbd628669b31de070b0f30aa92a77a3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c7a5b30ca507387b1529c9e9726e48735c844fac
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884781"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764828"
 ---
 # <a name="ccomheapptr-class"></a>CComHeapPtr-Klasse
-Eine intelligente Zeiger-Klasse für die Verwaltung von Heap-Zeiger.  
-  
-## <a name="syntax"></a>Syntax  
-  
+
+Eine intelligente Zeiger-Klasse für die Verwaltung von Heap-Zeiger.
+
+## <a name="syntax"></a>Syntax
+
 ```
 template<typename T>  
 class CComHeapPtr : public CHeapPtr<T, CComAllocator>
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *T*  
- Der Objekttyp, auf dem Heap gespeichert werden.  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CComHeapPtr::CComHeapPtr](#ccomheapptr)|Der Konstruktor.|  
-  
-## <a name="remarks"></a>Hinweise  
- `CComHeapPtr` leitet sich von `CHeapPtr`, verwendet jedoch [CComAllocator](../../atl/reference/ccomallocator-class.md) zur speicherbelegung mithilfe von COM-Routinen. Finden Sie unter [CHeapPtr](../../atl/reference/cheapptr-class.md) und [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) für die Methoden zur Verfügung.  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)  
-  
- [CHeapPtr](../../atl/reference/cheapptr-class.md)  
-  
- `CComHeapPtr`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** atlbase.h  
-  
-##  <a name="ccomheapptr"></a>  CComHeapPtr::CComHeapPtr  
- Der Konstruktor.  
-  
+```
+
+#### <a name="parameters"></a>Parameter
+
+*T*  
+Der Objekttyp, auf dem Heap gespeichert werden.
+
+## <a name="members"></a>Member
+
+### <a name="public-constructors"></a>Öffentliche Konstruktoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CComHeapPtr::CComHeapPtr](#ccomheapptr)|Der Konstruktor.|
+
+## <a name="remarks"></a>Hinweise
+
+`CComHeapPtr` leitet sich von `CHeapPtr`, verwendet jedoch [CComAllocator](../../atl/reference/ccomallocator-class.md) zur speicherbelegung mithilfe von COM-Routinen. Finden Sie unter [CHeapPtr](../../atl/reference/cheapptr-class.md) und [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) für die Methoden zur Verfügung.
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)
+
+[CHeapPtr](../../atl/reference/cheapptr-class.md)
+
+`CComHeapPtr`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** atlbase.h
+
+##  <a name="ccomheapptr"></a>  CComHeapPtr::CComHeapPtr
+
+Der Konstruktor.
+
 ```
 CComHeapPtr() throw();
 explicit CComHeapPtr(T* pData) throw();
-```  
-  
-### <a name="parameters"></a>Parameter  
- *pData*  
- Ein vorhandenes `CComHeapPtr`-Objekt.  
-  
-### <a name="remarks"></a>Hinweise  
- Der Heapzeiger kann optional erstellt werden unter Verwendung einer vorhandenen `CComHeapPtr` Objekt. Wenn dies der Fall ist, die neue `CComHeapPtr` Objekt übernimmt die Verantwortung für die Verwaltung der neue Zeiger und Ressourcen.  
-  
-## <a name="see-also"></a>Siehe auch  
- [CHeapPtr-Klasse](../../atl/reference/cheapptr-class.md)   
- [CHeapPtrBase-Klasse](../../atl/reference/cheapptrbase-class.md)   
- [CComAllocator-Klasse](../../atl/reference/ccomallocator-class.md)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Parameter
+
+*pData*  
+Ein vorhandenes `CComHeapPtr`-Objekt.
+
+### <a name="remarks"></a>Hinweise
+
+Der Heapzeiger kann optional erstellt werden unter Verwendung einer vorhandenen `CComHeapPtr` Objekt. Wenn dies der Fall ist, die neue `CComHeapPtr` Objekt übernimmt die Verantwortung für die Verwaltung der neue Zeiger und Ressourcen.
+
+## <a name="see-also"></a>Siehe auch
+
+[CHeapPtr-Klasse](../../atl/reference/cheapptr-class.md)   
+[CHeapPtrBase-Klasse](../../atl/reference/cheapptrbase-class.md)   
+[CComAllocator-Klasse](../../atl/reference/ccomallocator-class.md)   
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)

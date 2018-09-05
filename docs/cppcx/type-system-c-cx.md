@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6137203176722316b802a1da5bb2e67dba36848a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594020"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767776"
 ---
 # <a name="type-system-ccx"></a>Typsystem (C++/CX)
 Die Windows-Runtime-Architektur, Sie können mithilfe C++ / CX-, Visual Basic, Visual C#- und JavaScript zu schreiben, apps und Komponenten, die direkt auf die Windows-API zugreifen und mit anderen Windows-Runtime-apps und-Komponenten zusammenarbeiten. Apps der universellen Windows-Plattform, die in C++ geschrieben sind, Kompilieren in systemeigenen Code, der direkt in der CPU ausgeführt wird. Apps der universellen Windows-Plattform, die in c# oder Visual Basic geschrieben werden Microsoft intermediate Language (MSIL) kompiliert, und führen in der common Language Runtime (CLR). Apps der universellen Windows-Plattform, die in JavaScript geschrieben sind, die in einer Laufzeit-Umgebung ausführen werden. Die Windows-Runtime--Betriebssystemkomponenten selbst sind in C++ geschrieben und als systemeigener Code ausgeführt. Alle diese Komponenten und apps der universellen Windows-Plattform kommunizieren direkt über die Windows-Runtime-anwendungsbinärdateischnittstelle (ABI).  

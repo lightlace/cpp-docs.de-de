@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d8ed06b84ec53cddac2d76488f7d1540a92c1d52
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592551"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764441"
 ---
 # <a name="interfaces-ccx"></a>Schnittstellen (C++/CX)
 Obwohl eine Verweisklasse nur von einer konkreten Basisklasse erben kann, kann sie eine beliebige Anzahl von Schnittstellenklassen implementieren. Eine Schnittstellenklasse (oder Schnittstellenstruktur) kann (oder muss) mehrere Schnittstellenklassen erben, kann ihre Memberfunktionen überladen und darf Typparameter besitzen.  

@@ -1,5 +1,5 @@
 ---
-title: C. 1-Notation | Microsoft Docs
+title: C. 1-Notation | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,24 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39e8610524e20aa99ea316d62f36b512700e377e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3d3ada700955c3acd2e96aa3e8a98c25c51393c1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686814"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766151"
 ---
 # <a name="c1-notation"></a>C.1 Notation
-Die Grammatikregeln für bestehen aus den Namen für eine nicht-Terminal, gefolgt von einem Doppelpunkt, gefolgt von Ersatz alternativen in separaten Zeilen.  
-  
- Die syntaktischen Ausdruck Termopt gibt an, dass der Begriff in die Ersetzung optional ist.  
-  
- Die syntaktischen Ausdruck *Begriff*Optseq entspricht *Begriff-Seq*opt in die folgenden zusätzlichen Regeln:  
-  
- *Begriff-Seq* :  
-  
- *Begriff*  
-  
- *Begriff-Seq-Begriff*  
-  
- *Begriff-Seq* , *Begriff*
+Der Grammatikregeln für den bestehen aus des Namens für eine nicht-Terminal, gefolgt von einem Doppelpunkt, gefolgt von Ersatz alternativen in separaten Zeilen.
+
+Die syntaktische Ausdruck<sub>opt</sub> gibt an, dass der Begriff innerhalb die Ersetzung optional ist.
+
+Der syntaktischen Ausdruck *Begriff*<sub>Optseq</sub> entspricht *Begriff-Seq*<sub>opt</sub> mit den folgenden zusätzlichen Regeln:
+
+*Laufzeit-Seq* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Begriff*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Laufzeit-Seq* *Begriff*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Laufzeit-Seq* **,** *Begriff*

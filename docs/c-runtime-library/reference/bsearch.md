@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77d7576b5e8914148a8c67d8df82573c1f379e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1128834e49de75feba37409101a9ffe2a3e2ece2
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394693"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764786"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -74,11 +74,11 @@ Rückruffunktion, die zwei Elemente vergleicht. Da erste ist ein Zeiger auf den 
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Bsearch** gibt einen Zeiger auf ein Vorkommen von *Schlüssel* im Array verweist *Basis*. Wenn *Schlüssel* nicht gefunden wird, gibt die Funktion **NULL**. Wenn das Array nicht in aufsteigender Reihenfolge sortiert ist oder doppelte Datensätze mit identischen Schlüsseln enthält, ist das Ergebnis nicht vorhersehbar.
+**Bsearch** gibt einen Zeiger auf ein Vorkommen von *Schlüssel* in das Array verweist *Basis*. Wenn *Schlüssel* nicht gefunden wird, wird die Funktion gibt **NULL**. Wenn das Array nicht in aufsteigender Reihenfolge sortiert ist oder doppelte Datensätze mit identischen Schlüsseln enthält, ist das Ergebnis nicht vorhersehbar.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Bsearch** Funktion führt eine binäre Suche eines sortierten Arrays aus *Anzahl* Elementen, von denen jedes *Breite* Byte lang. Die *Basis* Wert ist ein Zeiger auf die Basis des zu durchsuchenden, Arrays und *Schlüssel* ist der gesuchte Wert. Die *vergleichen* Parameter ist ein Zeiger auf eine vom Benutzer bereitgestellte Routine, die den angeforderten Schlüssel auf ein Arrayelement vergleicht und einen der folgenden Werte Angabe ihrer Beziehung zurückgibt:
+Die **Bsearch** Funktion führt eine binäre Suche eines sortierten Arrays von *Anzahl* Elementen, die jeweils von *Breite* Bytes groß. Die *Basis* Wert ist ein Zeiger auf die Basis des Arrays, das gesucht werden soll, und *Schlüssel* ist der Wert, der gesucht wird. Die *vergleichen* Parameter ist ein Zeiger auf eine benutzerdefinierte Routine, die den angeforderten Schlüssel auf ein Arrayelement vergleicht und gibt einen der folgenden Werte, der ihre Beziehung angibt:
 
 |Rückgabewert von *vergleichen* Routine|Beschreibung|
 |-----------------------------------------|-----------------|
@@ -86,11 +86,11 @@ Die **Bsearch** Funktion führt eine binäre Suche eines sortierten Arrays aus *
 |0|Schlüssel und Arrayelement sind gleich.|
 |> 0|Der Schlüssel ist größer als das Arrayelement.|
 
-Diese Funktion überprüft ihre Parameter. Wenn *vergleichen*, *Schlüssel* oder *Anzahl* ist **NULL**, oder wenn *Basis* ist **NULL**und **Anzahl* ungleich NULL ist oder wenn *Breite* NULL ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und die Funktion gibt **NULL**.
+Diese Funktion überprüft ihre Parameter. Wenn *vergleichen*, *Schlüssel* oder *Anzahl* ist **NULL**, oder wenn *Basis* ist **NULL**und *Anzahl* ungleich NULL ist, oder wenn *Breite* ist 0 (null), Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu `EINVAL` und die Funktion gibt **NULL**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**bsearch**|\<stdlib.h> und \<search.h>|
 
