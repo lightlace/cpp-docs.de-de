@@ -18,65 +18,73 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c33e0783acfba1b460894ac8f5dde80e61780762
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 64b6266ac31e2d6dec6eabc847b67b080b250837
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882713"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751422"
 ---
 # <a name="cinterfacearray-class"></a>CInterfaceArray-Klasse
-Diese Klasse stellt nützliche Methoden aus, wenn Sie ein Array von COM-Schnittstellenzeiger zu erstellen.  
-  
-## <a name="syntax"></a>Syntax  
-  
+
+Diese Klasse stellt nützliche Methoden aus, wenn Sie ein Array von COM-Schnittstellenzeiger zu erstellen.
+
+## <a name="syntax"></a>Syntax
+
 ```
 template <class I, const IID* piid=& __uuidof(I)>  
 class CInterfaceArray : 
    public CAtlArray<ATL::CComQIPtr<I, piid>,
                     CComQIPtrElementTraits<I, piid>>
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *I*  
- Eine COM-Schnittstelle, die den Typ des Zeigers gespeichert werden.  
-  
- *piid*  
- Ein Zeiger auf die IID der *ich*.  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|Der Konstruktor für das schnittstellenarray.|  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Klasse stellt einen Konstruktor und die abgeleiteten Methoden zum Erstellen eines Arrays von COM-Schnittstellenzeiger. Verwendung [CInterfaceList](../../atl/reference/cinterfacelist-class.md) Wenn eine Liste erforderlich ist.  
-  
- Weitere Informationen finden Sie unter [ATL-Auflistungsklassen](../../atl/atl-collection-classes.md).  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `CAtlArray`  
-  
- `CInterfaceArray`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** atlcoll.h  
-  
-##  <a name="cinterfacearray"></a>  CInterfaceArray::CInterfaceArray  
- Der Konstruktor.  
-  
+```
+
+#### <a name="parameters"></a>Parameter
+
+*I*  
+Eine COM-Schnittstelle, die den Typ des Zeigers gespeichert werden.
+
+*piid*  
+Ein Zeiger auf die IID der *ich*.
+
+## <a name="members"></a>Member
+
+### <a name="public-constructors"></a>Öffentliche Konstruktoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|Der Konstruktor für das schnittstellenarray.|
+
+## <a name="remarks"></a>Hinweise
+
+Diese Klasse stellt einen Konstruktor und die abgeleiteten Methoden zum Erstellen eines Arrays von COM-Schnittstellenzeiger. Verwendung [CInterfaceList](../../atl/reference/cinterfacelist-class.md) Wenn eine Liste erforderlich ist.
+
+Weitere Informationen finden Sie unter [ATL-Auflistungsklassen](../../atl/atl-collection-classes.md).
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`CAtlArray`
+
+`CInterfaceArray`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** atlcoll.h
+
+##  <a name="cinterfacearray"></a>  CInterfaceArray::CInterfaceArray
+
+Der Konstruktor.
+
 ```
 CInterfaceArray() throw();
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Initialisiert den intelligenten Zeiger-Array.  
-  
-## <a name="see-also"></a>Siehe auch  
- [CAtlArray-Klasse](../../atl/reference/catlarray-class.md)   
- [CComQIPtr-Klasse](../../atl/reference/ccomqiptr-class.md)   
- [CComQIPtrElementTraits-Klasse](../../atl/reference/ccomqiptrelementtraits-class.md)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+```
+
+### <a name="remarks"></a>Hinweise
+
+Initialisiert den intelligenten Zeiger-Array.
+
+## <a name="see-also"></a>Siehe auch
+
+[CAtlArray-Klasse](../../atl/reference/catlarray-class.md)   
+[CComQIPtr-Klasse](../../atl/reference/ccomqiptr-class.md)   
+[CComQIPtrElementTraits-Klasse](../../atl/reference/ccomqiptrelementtraits-class.md)   
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)

@@ -20,50 +20,54 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5d94f92d21ea435bf7d73a6e28470babd293ed3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7b8b481c917292c672711c308ac39c052ed4ea1d
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206914"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752120"
 ---
 # <a name="win32threadtraits-class"></a>Win32ThreadTraits-Klasse
-Diese Klasse stellt die Erstellungsfunktion für einen Windows-Thread. Verwenden Sie diese Klasse aus, wenn der Thread nicht CRT-Funktionen nutzen.  
-  
+
+Diese Klasse stellt die Erstellungsfunktion für einen Windows-Thread. Verwenden Sie diese Klasse aus, wenn der Thread nicht CRT-Funktionen nutzen.
+
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
-  
-## <a name="syntax"></a>Syntax  
-  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
+
+## <a name="syntax"></a>Syntax
+
 ```
 class Win32ThreadTraits
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[Win32ThreadTraits::CreateThread](#createthread)|(Statisch) Rufen Sie diese Funktion zur Erstellung eines Threads, das keine CRT-Funktionen verwenden sollten.|  
-  
-## <a name="remarks"></a>Hinweise  
- Thread "traits" sind Klassen, die eine Funktion für einen bestimmten Typ des Threads zu ermöglichen. Die Erstellungsfunktion weist die gleiche Signatur und die gleiche Semantik wie die Windows [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) Funktion.  
-  
- Thread "traits" werden die folgenden Klassen verwendet:  
-  
-- [CThreadPool](../../atl/reference/cthreadpool-class.md)  
-  
-- [CWorkerThread](../../atl/reference/cworkerthread-class.md)  
-  
- Wenn der Thread CRT-Funktionen verwenden, verwenden Sie [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) stattdessen.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** atlbase.h  
-  
-##  <a name="createthread"></a>  Win32ThreadTraits::CreateThread  
- Rufen Sie diese Funktion zur Erstellung eines Threads, das keine CRT-Funktionen verwenden sollten.  
-  
+```
+
+## <a name="members"></a>Member
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[Win32ThreadTraits::CreateThread](#createthread)|(Statisch) Rufen Sie diese Funktion zur Erstellung eines Threads, das keine CRT-Funktionen verwenden sollten.|
+
+## <a name="remarks"></a>Hinweise
+
+Thread "traits" sind Klassen, die eine Funktion für einen bestimmten Typ des Threads zu ermöglichen. Die Erstellungsfunktion weist die gleiche Signatur und die gleiche Semantik wie die Windows [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) Funktion.
+
+Thread "traits" werden die folgenden Klassen verwendet:
+
+- [CThreadPool](../../atl/reference/cthreadpool-class.md)
+
+- [CWorkerThread](../../atl/reference/cworkerthread-class.md)
+
+Wenn der Thread CRT-Funktionen verwenden, verwenden Sie [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) stattdessen.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** atlbase.h
+
+##  <a name="createthread"></a>  Win32ThreadTraits::CreateThread
+
+Rufen Sie diese Funktion zur Erstellung eines Threads, das keine CRT-Funktionen verwenden sollten.
+
 ```
 static HANDLE CreateThread(
     LPSECURITY_ATTRIBUTES lpsa,
@@ -72,34 +76,38 @@ static HANDLE CreateThread(
     void* pvParam,
     DWORD dwCreationFlags,
     DWORD* pdwThreadId) throw();
-```  
-  
-### <a name="parameters"></a>Parameter  
- *lpsa*  
- Die Sicherheitsattribute für den neuen Thread.  
-  
- *dwStackSize*  
- Die Stapelgröße für den neuen Thread.  
-  
- *pfnThreadProc*  
- Die Threadprozedur des neuen Threads.  
-  
- *pvParam*  
- Der Parameter an die Threadprozedur übergeben werden.  
-  
- *"dwCreationFlags"*  
- Die Erstellung flags ("0" oder "CREATE_SUSPENDED").  
-  
- *pdwThreadId*  
- [out] Adresse der DWORD-Variable, die bei Erfolg die Thread-ID des neu erstellten Threads empfängt.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Gibt das Handle auf das neu erstellte Thread oder NULL bei einem Fehler zurück. Rufen Sie [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) um erweiterte Fehlerinformationen abzurufen.  
-  
-### <a name="remarks"></a>Hinweise  
- Finden Sie unter [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) für Weitere Informationen zu den Parametern für diese Funktion.  
-  
- Diese Funktion ruft `CreateThread` um den Thread erstellen.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Parameter
+
+*lpsa*  
+Die Sicherheitsattribute für den neuen Thread.
+
+*dwStackSize*  
+Die Stapelgröße für den neuen Thread.
+
+*pfnThreadProc*  
+Die Threadprozedur des neuen Threads.
+
+*pvParam*  
+Der Parameter an die Threadprozedur übergeben werden.
+
+*"dwCreationFlags"*  
+Die Erstellung flags ("0" oder "CREATE_SUSPENDED").
+
+*pdwThreadId*  
+[out] Adresse der DWORD-Variable, die bei Erfolg die Thread-ID des neu erstellten Threads empfängt.
+
+### <a name="return-value"></a>Rückgabewert
+
+Gibt das Handle auf das neu erstellte Thread oder NULL bei einem Fehler zurück. Rufen Sie [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) um erweiterte Fehlerinformationen abzurufen.
+
+### <a name="remarks"></a>Hinweise
+
+Finden Sie unter [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) für Weitere Informationen zu den Parametern für diese Funktion.
+
+Diese Funktion ruft `CreateThread` um den Thread erstellen.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)

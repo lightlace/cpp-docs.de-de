@@ -17,21 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcbc0820f98052ee29c489ca9cb556e1c913d07c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 32d1363f845014bd10e6f0126e676c12477cea16
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958571"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752312"
 ---
 # <a name="running-objects-classes"></a>Klasse für auszuführende Objekte
-Die folgende Klasse bietet Unterstützung für die Ausführung von Objekten:  
-  
--   [IRunnableObjectImpl](../atl/reference/irunnableobjectimpl-class.md) bestimmt, wenn ein Objekt ausgeführt wird, erzwingt, dass er ausgeführt wird, oder sperrt diese, in den ausgeführten Status.  
-  
-## <a name="related-articles"></a>Verwandte Artikel  
- [ATL-Lernprogramm](../atl/active-template-library-atl-tutorial.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../atl/atl-class-overview.md)
+
+Die folgende Klasse bietet Unterstützung für die Ausführung von Objekten:
+
+- [IRunnableObjectImpl](../atl/reference/irunnableobjectimpl-class.md) bestimmt, wenn ein Objekt ausgeführt wird, erzwingt, dass er ausgeführt wird, oder sperrt diese, in den ausgeführten Status.
+
+## <a name="related-articles"></a>Verwandte Artikel
+
+[ATL-Lernprogramm](../atl/active-template-library-atl-tutorial.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../atl/atl-class-overview.md)
 
