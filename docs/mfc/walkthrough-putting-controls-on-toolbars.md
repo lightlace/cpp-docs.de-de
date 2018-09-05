@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dd920f3dd8d08d6ceb766b9c10969137b8bf03c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 258d8f10238db58be26743694943ae3bd6abc20e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199263"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693574"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Exemplarische Vorgehensweise: Steuerelemente in eine Symbolleiste einfügen
 In diesem Thema wird das Hinzufügen einer Symbolleistenschaltfläche beschrieben, die ein Windows-Steuerelement für eine Symbolleiste enthält. In MFC muss eine Symbolleisten-Schaltfläche einer [CMFCToolBarButton-Klasse](../mfc/reference/cmfctoolbarbutton-class.md)-abgeleitete Klasse sein, z. B. [CMFCToolBarComboBoxButton-Klasse](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [CMFCToolBarEditBoxButton-Klasse](../mfc/reference/cmfctoolbareditboxbutton-class.md), [CMFCDropDownToolbarButton-Klasse](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), oder [CMFCToolBarMenuButton-Klasse](../mfc/reference/cmfctoolbarmenubutton-class.md).  
@@ -73,7 +73,7 @@ In diesem Thema wird das Hinzufügen einer Symbolleistenschaltfläche beschriebe
   
     1.  Übergeben Sie `ID_EDIT_FIND_COMBO` als Befehls-ID.  
   
-    2.  Verwendung [CCommandManager::GetCmdImage](https://msdn.microsoft.com/4094d08e-de74-4398-a483-76d27a742dca) mit `ID_EDIT_FIND` den Bildindex abgerufen.  
+    2.  Verwendung [CCommandManager::GetCmdImage](reference/internal-classes.md) mit `ID_EDIT_FIND` den Bildindex abgerufen.  
   
     3.  Eine Liste der verfügbaren kombinationsfeldformate, finden Sie unter [Kombinationsfeldstile](../mfc/reference/styles-used-by-mfc.md#combo-box-styles).  
   

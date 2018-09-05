@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d543ca2d908f59487572f5abc68dc5b04223b88f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4ffea5b097460dbed2b6d5dd4ea4e79f283cd412
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207614"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693958"
 ---
 # <a name="concurrentunorderedset-class"></a>concurrent_unordered_set-Klasse
 Die `concurrent_unordered_set` Klasse ist ein parallelitätssicherer Container, das eine Elementsequenz variabler Länge-Sequenz von Elementen des Typs k steuert Die Sequenz wird dargestellt, auf eine Weise, die es parallelitätssichere ermöglicht anfügen, Elementzugriff, Iteratorzugriff und Iteratordurchläufe sind.  
@@ -293,7 +293,7 @@ std::pair<const_iterator,
  Der Schlüsselwert, der gesucht werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [Paar](https://msdn.microsoft.com/32e72d66-3020-4cb9-92c3-f7a5fa7998ff) , in dem das erste Element ist ein Iterator am Anfang und das zweite Element ist ein Iterator an das Ende des Bereichs.  
+ Ein [Paar](../../../standard-library/pair-structure.md) , in dem das erste Element ist ein Iterator am Anfang und das zweite Element ist ein Iterator an das Ende des Bereichs.  
   
 ### <a name="remarks"></a>Hinweise  
  Es ist möglich, dass gleichzeitige einfügungen, die dazu führen, dass zusätzliche Product Keys, nach der Begin-Iterator und vor dem Enditerator eingefügt werden soll.  
