@@ -21,106 +21,121 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4e2b1fe58ab7ea408438b703b9fe803996fa791
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1684c8fa380a7d17c802ad404c38c59f2257c979
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219037"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752026"
 ---
 # <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl-Klasse
-Diese Klasse stellt die Methoden, dass ein Objekt mit dem Standort kommunizieren.  
-  
-## <a name="syntax"></a>Syntax  
-  
+
+Diese Klasse stellt die Methoden, dass ein Objekt mit dem Standort kommunizieren.
+
+## <a name="syntax"></a>Syntax
+
 ```
 template <class T>
     class ATL_NO_VTABLE IObjectWithSiteImpl :
     public IObjectWithSite
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *T*  
- Abgeleitet von die Klasse `IObjectWithSiteImpl`.  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[IObjectWithSiteImpl::GetSite](#getsite)|Fragt den Standort für einen Schnittstellenzeiger auf.|  
-|[IObjectWithSiteImpl::SetChildSite](#setchildsite)|Stellt das Objekt mit des Standorts des `IUnknown` Zeiger.|  
-|[IObjectWithSiteImpl::SetSite](#setsite)|Stellt das Objekt mit des Standorts des `IUnknown` Zeiger.|  
-  
-### <a name="public-data-members"></a>Öffentliche Datenmember  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|Verwaltet den Standort des `IUnknown` Zeiger.|  
-  
-## <a name="remarks"></a>Hinweise  
- Die [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) Schnittstelle ermöglicht es, ein Objekt mit dem Standort kommunizieren. Klasse `IObjectWithSiteImpl` stellt eine Standardimplementierung dieser Schnittstelle bereit und implementiert `IUnknown` durch Senden von Informationen an das Speicherabbild Gerät im Debugmodus wird erstellt.  
-  
- `IObjectWithSiteImpl` gibt zwei Methoden an. Der Client ruft zuerst `SetSite`, und übergeben des Standorts `IUnknown` Zeiger. This-Zeiger wird innerhalb des Objekts gespeichert und können später abgerufen werden, durch einen Aufruf von `GetSite`.  
-  
- In der Regel, leiten Sie Ihre Klasse von `IObjectWithSiteImpl` ein Objekt, das für die Erstellung ist kein Steuerelement. Für Steuerelemente, leiten Sie Ihre Klasse von [IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md), die bietet auch eines Standort-Zeigers. Leiten Sie die Klasse nicht von beiden `IObjectWithSiteImpl` und `IOleObjectImpl`.  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `IObjectWithSite`  
-  
- `IObjectWithSiteImpl`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** atlcom.h  
-  
-##  <a name="getsite"></a>  IObjectWithSiteImpl::GetSite  
- Fragt den Standort für einen Zeiger auf die Schnittstelle identifizierte `riid`.  
-  
+```
+
+#### <a name="parameters"></a>Parameter
+
+*T*  
+Abgeleitet von die Klasse `IObjectWithSiteImpl`.
+
+## <a name="members"></a>Member
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[IObjectWithSiteImpl::GetSite](#getsite)|Fragt den Standort für einen Schnittstellenzeiger auf.|
+|[IObjectWithSiteImpl::SetChildSite](#setchildsite)|Stellt das Objekt mit des Standorts des `IUnknown` Zeiger.|
+|[IObjectWithSiteImpl::SetSite](#setsite)|Stellt das Objekt mit des Standorts des `IUnknown` Zeiger.|
+
+### <a name="public-data-members"></a>Öffentliche Datenmember
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|Verwaltet den Standort des `IUnknown` Zeiger.|
+
+## <a name="remarks"></a>Hinweise
+
+Die [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) Schnittstelle ermöglicht es, ein Objekt mit dem Standort kommunizieren. Klasse `IObjectWithSiteImpl` stellt eine Standardimplementierung dieser Schnittstelle bereit und implementiert `IUnknown` durch Senden von Informationen an das Speicherabbild Gerät im Debugmodus wird erstellt.
+
+`IObjectWithSiteImpl` gibt zwei Methoden an. Der Client ruft zuerst `SetSite`, und übergeben des Standorts `IUnknown` Zeiger. This-Zeiger wird innerhalb des Objekts gespeichert und können später abgerufen werden, durch einen Aufruf von `GetSite`.
+
+In der Regel, leiten Sie Ihre Klasse von `IObjectWithSiteImpl` ein Objekt, das für die Erstellung ist kein Steuerelement. Für Steuerelemente, leiten Sie Ihre Klasse von [IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md), die bietet auch eines Standort-Zeigers. Leiten Sie die Klasse nicht von beiden `IObjectWithSiteImpl` und `IOleObjectImpl`.
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`IObjectWithSite`
+
+`IObjectWithSiteImpl`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** atlcom.h
+
+##  <a name="getsite"></a>  IObjectWithSiteImpl::GetSite
+
+Fragt den Standort für einen Zeiger auf die Schnittstelle identifizierte `riid`.
+
 ```
 STDMETHOD(GetSite)(
     REFIID riid,
     void** ppvSite);
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Wenn der Standort über diese Schnittstelle unterstützt, wird der Zeiger über zurückgegeben `ppvSite`. Andernfalls `ppvSite` auf NULL festgelegt ist.  
-  
- Finden Sie unter [IObjectWithSite::GetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-getsite) in das Windows SDK.  
-  
-##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite  
- Verwaltet den Standort des `IUnknown` Zeiger.  
-  
+```
+
+### <a name="remarks"></a>Hinweise
+
+Wenn der Standort über diese Schnittstelle unterstützt, wird der Zeiger über zurückgegeben `ppvSite`. Andernfalls `ppvSite` auf NULL festgelegt ist.
+
+Finden Sie unter [IObjectWithSite::GetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-getsite) in das Windows SDK.
+
+##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite
+
+Verwaltet den Standort des `IUnknown` Zeiger.
+
 ```
 CComPtr<IUnknown> m_spUnkSite;
-```  
-  
-### <a name="remarks"></a>Hinweise  
- `m_spUnkSite` anfänglich empfängt diese Zeiger durch einen Aufruf von [SetSite](#setsite).  
-  
-##  <a name="setchildsite"></a>  IObjectWithSiteImpl::SetChildSite  
- Stellt das Objekt mit des Standorts des `IUnknown` Zeiger.  
-  
+```
+
+### <a name="remarks"></a>Hinweise
+
+`m_spUnkSite` anfänglich empfängt diese Zeiger durch einen Aufruf von [SetSite](#setsite).
+
+##  <a name="setchildsite"></a>  IObjectWithSiteImpl::SetChildSite
+
+Stellt das Objekt mit des Standorts des `IUnknown` Zeiger.
+
 ```
 HRESULT SetChildSite(IUnknown* pUnkSite);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *pUnkSite*  
- [in] Zeiger auf die `IUnknown` -Schnittstellenzeiger des Standorts, der dieses Objekt zu verwalten. Wenn der Wert NULL ist, sollte das Objekt aufrufen `IUnknown::Release` an einem vorhandenen Standort, die zu diesem Zeitpunkt das Objekt nicht mehr den Standort weiß.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Gibt S_OK zurück.  
-  
-##  <a name="setsite"></a>  IObjectWithSiteImpl::SetSite  
- Stellt das Objekt mit des Standorts des `IUnknown` Zeiger.  
-  
+```
+
+### <a name="parameters"></a>Parameter
+
+*pUnkSite*  
+[in] Zeiger auf die `IUnknown` -Schnittstellenzeiger des Standorts, der dieses Objekt zu verwalten. Wenn der Wert NULL ist, sollte das Objekt aufrufen `IUnknown::Release` an einem vorhandenen Standort, die zu diesem Zeitpunkt das Objekt nicht mehr den Standort weiß.
+
+### <a name="return-value"></a>Rückgabewert
+
+Gibt S_OK zurück.
+
+##  <a name="setsite"></a>  IObjectWithSiteImpl::SetSite
+
+Stellt das Objekt mit des Standorts des `IUnknown` Zeiger.
+
 ```
 STDMETHOD(SetSite)(IUnknown* pUnkSite);
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite) in das Windows SDK.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+```
+
+### <a name="remarks"></a>Hinweise
+
+Finden Sie unter [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite) in das Windows SDK.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)

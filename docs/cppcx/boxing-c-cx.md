@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8ed67496189388b869d7d9491ac4baad3de810ca
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203591"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751977"
 ---
 # <a name="boxing-ccx"></a>Boxing (C++/CX)
 *Boxing* wird eine Werttypvariable wie z. B. wrapping [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)– oder ein grundlegender Skalartyp wie z. B. `int`– in einer Verweisklasse, wenn die Variable an eine Methode übergeben wird, die akzeptiert [ Platform:: Object ^](../cppcx/platform-object-class.md) als Eingabetyp.  

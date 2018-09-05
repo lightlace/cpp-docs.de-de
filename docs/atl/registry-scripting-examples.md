@@ -1,5 +1,5 @@
 ---
-title: Registrierung Skriptbeispielen | Microsoft Docs
+title: Registrierung Skriptbeispielen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,106 +17,110 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c192e8bec1d32dd7d7a7953e5da72a139c7520e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6dc28d8a0d5dc24d0f0c665e5a17fc38e0c9d08f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361888"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753148"
 ---
-# <a name="registry-scripting-examples"></a>Beispiele für die Registrierung Scripting
-Skripts in diesem Thema wird erklärt, wie fügen Sie einen Schlüssel in der systemregistrierung, registrieren Sie den Registrierungsstelle COM-Server und mehrere Analyse Strukturen angeben.  
-  
-## <a name="add-a-key-to-hkeycurrentuser"></a>Fügen Sie einen Schlüssel in HKEY_CURRENT_USER  
- Die folgenden Analysestruktur zeigt ein einfaches Skript, das einen einzelnen Schlüssel in der systemregistrierung hinzufügt. Insbesondere das Skript fügt den Schlüssel `MyVeryOwnKey`in `HKEY_CURRENT_USER`. Außerdem weist er den Standard-Zeichenfolgenwert des `HowGoesIt` auf den neuen Schlüssel:  
-  
+# <a name="registry-scripting-examples"></a>Beispiele für die Registrierungsskripterstellung
+
+Skript in diesem Thema wird gezeigt, wie fügen Sie einen Schlüssel in die systemregistrierung, registrieren Sie den Registrierungsstelle COM-Server und mehrere analysestrukturen angeben.
+
+## <a name="add-a-key-to-hkeycurrentuser"></a>Fügen Sie einen Schlüssel in HKEY_CURRENT_USER
+
+Die folgenden Analysestruktur veranschaulicht ein einfaches Skript, das einen einzelnen Schlüssel in die systemregistrierung hinzufügt. Insbesondere das Skript fügt den Schlüssel `MyVeryOwnKey`zu `HKEY_CURRENT_USER`. Außerdem weist den Standardwert des `HowGoesIt` auf den neuen Schlüssel:
+
 ```  
 HKEY_CURRENT_USER  
 {  
- 'MyVeryOwnKey' = s 'HowGoesIt'  
+'MyVeryOwnKey' = s 'HowGoesIt'  
 }  
-```  
-  
- Dieses Skript kann leicht erweitert werden, um mehrere Unterschlüssel wie folgt definieren:  
-  
+```
+
+Dieses Skript kann problemlos erweitert werden, um mehrere Unterschlüssel wird wie folgt definieren:
+
 ```  
 HKCU  
 {  
- 'MyVeryOwnKey' = s 'HowGoesIt'  
- {  
- 'HasASubkey'  
- {  
- 'PrettyCool' = d '55'  
-    val 'ANameValue' = s 'WithANamedValue'  
- }  
- }  
+    'MyVeryOwnKey' = s 'HowGoesIt'  
+    {  
+        'HasASubkey'  
+        {  
+            'PrettyCool' = d '55'  
+            val 'ANameValue' = s 'WithANamedValue'  
+        }  
+    }  
 }  
-```  
-  
- Das Skript fügt nun einen Unterschlüssel `HasASubkey`in `MyVeryOwnKey`. Unterschlüssel, fügt er sowohl die `PrettyCool` Unterschlüssel (hat den Standardwert `DWORD` Wert von 55) und die `ANameValue` benannten Wert (mit einem Zeichenfolgenwert von `WithANamedValue`).  
-  
-##  <a name="_atl_register_the_registrar_com_server"></a> Registrieren Sie den Registrierungsstelle COM-Server  
- Das folgende Skript registriert die Registrierungsstelle COM-Server selbst.  
-  
+```
+
+Nun, das Skript fügt einen Unterschlüssel, `HasASubkey`zu `MyVeryOwnKey`. Unterschlüssel, fügt es sowohl den `PrettyCool` Unterschlüssel (hat den Standardwert `DWORD` Wert von 55) und die `ANameValue` benannten Wert (mit einem Zeichenfolgenwert des `WithANamedValue`).
+
+##  <a name="_atl_register_the_registrar_com_server"></a> Die Registrierungsstelle COM-Server registrieren
+
+Das folgende Skript registriert den Registrierungsstelle COM-Server selbst.
+
 ```  
 HKCR  
 {  
     ATL.Registrar = s 'ATL Registrar Class'  
- {  
-    CLSID = s '{44EC053A-400F-11D0-9DCD-00A0C90391D3}'  
- }  
+    {  
+        CLSID = s '{44EC053A-400F-11D0-9DCD-00A0C90391D3}'  
+    }  
     NoRemove CLSID  
- {  
-    ForceRemove {44EC053A-400F-11D0-9DCD-00A0C90391D3} = 
-    s 'ATL Registrar Class'  
- {  
-    ProgID = s 'ATL.Registrar'  
-    InprocServer32 = s '%MODULE%'  
- {  
-    val ThreadingModel = s 'Apartment'  
- }  
- }  
- }  
+    {  
+        ForceRemove {44EC053A-400F-11D0-9DCD-00A0C90391D3} = s 'ATL Registrar Class'  
+        {  
+            ProgID = s 'ATL.Registrar'  
+            InprocServer32 = s '%MODULE%'  
+            {  
+                val ThreadingModel = s 'Apartment'  
+            }  
+        }  
+    }  
 }  
-```  
-  
- Zur Laufzeit wird dieser Analysestruktur fügt die `ATL.Registrar` um `HKEY_CLASSES_ROOT`. In diesem neuen Schlüssel dann It:  
-  
--   Gibt an, `ATL Registrar Class` als Standard-Zeichenfolgenwert des Schlüssels.  
-  
--   Fügt `CLSID` als einen Unterschlüssel.  
-  
--   Gibt an, `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` für `CLSID`. (Dieser Wert ist der Registrierungsstelle CLSID für die Verwendung mit `CoCreateInstance`.)  
-  
- Da `CLSID` wird freigegeben, es sollte nicht entfernt werden im Modus für Registrierung aufheben. Die Anweisung `NoRemove CLSID`, zeigt an, dass Sie hierfür `CLSID` im Modus für Registrierung geöffnet und im Modus für Registrierung ignoriert werden soll.  
-  
- Die `ForceRemove` Anweisung bietet eine Housekeeping-Funktion entfernen, indem ein Schlüssel und alle seine Unterschlüssel vor dem erneuten Erstellen des Schlüssels. Dies kann nützlich sein, wenn die Namen der Unterschlüssel geändert wurden. In diesem Beispiel scripting `ForceRemove` überprüft, ob `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` ist bereits vorhanden. Wenn dies der Fall, `ForceRemove`:  
-  
--   Löscht rekursiv `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` und alle seine Unterschlüssel.  
-  
--   Neuerstellen `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.  
-  
--   Fügt `ATL Registrar Class` als den Standardwert für `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.  
-  
- Fügt die Analysestruktur nun zwei neue Unterschlüssel `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`. Der erste Schlüssel `ProgID`, ruft einen Standard-Zeichenfolgenwert, der die ProgID-Wert. Der zweite Schlüssel `InprocServer32`, ruft einen Standard-Zeichenfolgenwert `%MODULE%`, d. h. ein Präprozessor Wert erläutert wird, klicken Sie im Abschnitt [mithilfe von ersetzbaren Parametern (die Registrierungsstelle Präprozessor)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md), dieses Artikels. `InprocServer32` Ruft auch einen benannten Wert `ThreadingModel`, mit einem Zeichenfolgenwert von `Apartment`.  
-  
-## <a name="specify-multiple-parse-trees"></a>Geben Sie mehrere Parserstrukturen  
- Um mehr als eine Analysestruktur in ein Skript angeben, müssen platzieren Sie eine Struktur einfach am Ende eines anderen. Das folgende Skript fügt z. B. den Schlüssel `MyVeryOwnKey`, um die Analyse Strukturen für beide `HKEY_CLASSES_ROOT` und `HKEY_CURRENT_USER`:  
-  
+```
+
+Bei der Ausführung dieser Analysestruktur fügt die `ATL.Registrar` um `HKEY_CLASSES_ROOT`. In diesem neuen Schlüssel klicken Sie dann die It:
+
+- Gibt an, `ATL Registrar Class` als Standard-Zeichenfolgenwert des Schlüssels.
+
+- Fügt `CLSID` als einen Unterschlüssel.
+
+- Gibt an, `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` für `CLSID`. (Dieser Wert ist der Registrierungsstelle die CLSID für die Verwendung mit `CoCreateInstance`.)
+
+Da `CLSID` wird freigegeben, er sollte nicht entfernt werden in der Aufhebung der Registrierung. Die Anweisung `NoRemove CLSID`, gibt an, dass Sie hierfür `CLSID` im Register-Modus geöffnet und in die Aufhebung der Registrierung ignoriert werden sollten.
+
+Die `ForceRemove` Anweisung bietet eine organisatorische-Funktion entfernen, indem ein Schlüssel und alle seine Unterschlüssel vor dem erneuten Erstellen des Schlüssels. Dies kann nützlich sein, wenn die Namen der Unterschlüssel geändert haben. In diesem Beispiel scripting `ForceRemove` überprüft, ob `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` ist bereits vorhanden. Wenn dies der Fall, `ForceRemove`:
+
+- Rekursiv löscht `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` und alle seine Unterschlüssel.
+
+- Neu erstellt `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.
+
+- Fügt `ATL Registrar Class` als den Standardwert für `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.
+
+Die Analysestruktur bietet nun zwei neue Unterschlüssel `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`. Der erste Schlüssel, `ProgID`, ruft Sie einen Standardwert für die Zeichenfolge, die die ProgID ist. Der zweite Schlüssel, `InprocServer32`, einen Standardwert für die Zeichenfolge, ruft `%MODULE%`, d. h. ein Präprozessor Wert erläutert wird, klicken Sie im Abschnitt [mithilfe von ersetzbaren Parametern (der Registrierungspräprozessor)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md), dieses Artikels. `InprocServer32` Ruft auch einen benannten Wert `ThreadingModel`, mit einem Zeichenfolgenwert des `Apartment`.
+
+## <a name="specify-multiple-parse-trees"></a>Geben Sie mehrere in Analysestrukturen
+
+Um mehr als eine Analysestruktur in einem Skript anzugeben, fügen Sie eine Struktur einfach am Ende eines anderen. Das folgende Skript fügt beispielsweise den Schlüssel, `MyVeryOwnKey`, um die analysestrukturen für beide `HKEY_CLASSES_ROOT` und `HKEY_CURRENT_USER`:
+
 ```  
 HKCR  
 {  
- 'MyVeryOwnKey' = s 'HowGoesIt'  
+    'MyVeryOwnKey' = s 'HowGoesIt'  
 }  
 HKEY_CURRENT_USER  
 {  
- 'MyVeryOwnKey' = s 'HowGoesIt'  
+    'MyVeryOwnKey' = s 'HowGoesIt'  
 }  
-```  
-  
+```
+
 > [!NOTE]
->  In einem Skript Registrierungsstelle beträgt 4 KB maximale Tokengröße. (Ein Token ist jedes erkennbare Element in der Syntax.) In der vorherigen Beispielskript `HKCR`, `HKEY_CURRENT_USER`, `'MyVeryOwnKey'`, und `'HowGoesIt'` werden alle Token.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Erstellen von Registrierungsskripts](../atl/creating-registrar-scripts.md)
+> In einem Skript Registrierungsstelle beträgt 4 KB für die maximale Größe des Tokens. (Ein Token ist erkennbare Element in der Syntax.) Im vorherigen Beispiel scripting `HKCR`, `HKEY_CURRENT_USER`, `'MyVeryOwnKey'`, und `'HowGoesIt'` alle Token werden.
+
+## <a name="see-also"></a>Siehe auch
+
+[Erstellen von Registrierungsskripts](../atl/creating-registrar-scripts.md)
 

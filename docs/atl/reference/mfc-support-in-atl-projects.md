@@ -1,5 +1,5 @@
 ---
-title: MFC-Unterstützung in ATL-Projekte | Microsoft Docs
+title: MFC-Unterstützung in ATL-Projekte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,51 +16,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d42afec863695b1cab05c2d3cf2f65f3d64a1507
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb6a3c5bae4d973ba74155ab018ebea69b0e2b93
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360640"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751399"
 ---
 # <a name="mfc-support-in-atl-projects"></a>MFC-Unterstützung in ATL-Projekte
-Bei Auswahl des **MFC unterstützen** im ATL-Projekt-Assistenten Ihrem Projekt die Anwendung als ein MFC-Anwendungsobjekt (Klasse) deklariert. Das Projekt initialisiert die MFC-Bibliothek und instanziiert die Klasse (Klasse *ProjName*), stammt aus [CWinApp](../../mfc/reference/cwinapp-class.md).  
-  
- Diese Option ist nicht attributierte ATL-DLL nur für Projekte verfügbar.  
-  
+
+Bei Auswahl von **MFC unterstützen** im ATL-Projekt-Assistenten Ihrem Projekt die Anwendung als MFC-Anwendungsobjekt (Klasse) deklariert. Das Projekt die MFC-Bibliothek initialisiert und instanziiert die Klasse (Klasse *ProjName*), ergibt sich aus [CWinApp](../../mfc/reference/cwinapp-class.md).
+
+Diese Option ist nicht attributierte ATL-DLL nur für Projekte verfügbar.
+
 ```  
 class CProjNameApp : public CWinApp  
 {  
 public:  
- 
+
 // Overrides  
     virtual BOOL InitInstance();
 virtual int ExitInstance();
 DECLARE_MESSAGE_MAP() 
 };  
- 
+
 BEGIN_MESSAGE_MAP(CProjNameApp, CWinApp)  
 END_MESSAGE_MAP()  
- 
+
 CProjNameApp theApp;  
- 
+
 BOOL CProjNameApp::InitInstance()  
 {  
     return CWinApp::InitInstance();
 
 }  
- 
+
 int CProjNameApp::ExitInstance()  
 {  
     return CWinApp::ExitInstance();
 
 }  
-```  
-  
- Sie können die Anwendungsobjektklasse anzeigen und die zugehörige `InitInstance` und `ExitInstance` Funktionen in der Klassenansicht.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Hinzufügen einer Klasse](../../ide/adding-a-class-visual-cpp.md)   
- [Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md)   
- [Standardmäßige ATL-Projektkonfigurationen](../../atl/reference/default-atl-project-configurations.md)
+```
+
+Sehen Sie die Anwendung-Objektklasse und die zugehörige `InitInstance` und `ExitInstance` Funktionen in der Klassenansicht.
+
+## <a name="see-also"></a>Siehe auch
+
+[Adding a Class (Hinzufügen einer Klasse)](../../ide/adding-a-class-visual-cpp.md)   
+[Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md)   
+[Standardmäßige ATL-Projektkonfigurationen](../../atl/reference/default-atl-project-configurations.md)
 

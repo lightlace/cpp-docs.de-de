@@ -18,22 +18,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70254f05dc871a8073d82f1870b30f178e0f7276
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d1039f93d28db118dafadd88b074d788a1b861de
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959003"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752179"
 ---
 # <a name="thread-pooling-classes"></a>Klassen Pooling von Threads
-Die folgenden Klassen unterstützen das pooling von Threads:  
-  
--   [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md) ein EXE-Modul mit Unterstützung für mehrere Thread Pooling-Apartments implementiert.  
-  
--   [CComApartment](../atl/reference/ccomapartment-class.md) eine Wohnung in einem Thread Pooling-EXE-Modul verwaltet.  
-  
--   [CComSimpleThreadAllocator](../atl/reference/ccomsimplethreadallocator-class.md) threadauswahl für eine EXE-Modul verwaltet.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../atl/atl-class-overview.md)
+
+Die folgenden Klassen unterstützen das pooling von Threads:
+
+- [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md) ein EXE-Modul mit Unterstützung für mehrere Thread Pooling-Apartments implementiert.
+
+- [CComApartment](../atl/reference/ccomapartment-class.md) eine Wohnung in einem Thread Pooling-EXE-Modul verwaltet.
+
+- [CComSimpleThreadAllocator](../atl/reference/ccomsimplethreadallocator-class.md) threadauswahl für eine EXE-Modul verwaltet.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../atl/atl-class-overview.md)
 

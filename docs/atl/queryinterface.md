@@ -18,21 +18,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a0f00e9ad0a94aaa96afb3031b57e1c7da703dc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ff08e5f527d9ef1be99b788ef05beb7ef58da53b
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208188"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752536"
 ---
 # <a name="queryinterface"></a>QueryInterface
-Es gibt, aber Mechanismen mit dem express ein Objekt kann die Funktionalität bietet statisch (vor er instanziiert wird) der grundlegende Mechanismus für die COM-ist die Verwendung der `IUnknown` aufgerufene Methode [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)).  
-  
- Jede Schnittstelle stammt aus `IUnknown`, sodass jede Schnittstelle keine Implementierung von besitzt `QueryInterface`. Unabhängig von der Implementierung fragt diese Methode ein Objekt mit die IID der Schnittstelle, die vom Aufrufer eines Zeigers, auf. Wenn das Objekt über die Schnittstelle unterstützt `QueryInterface` ruft Sie einen Zeiger auf die Schnittstelle, bei gleichzeitigem Aufrufen `AddRef`. Andernfalls wird den Fehlercode E_NOINTERFACE zurückgegeben.  
-  
- Beachten Sie, die Sie bei der standardeinhaltung [Verweiszählung](../atl/reference-counting.md) Regeln immer. Wenn Sie aufrufen `Release` auf einen Schnittstellenzeiger, den Verweiszähler auf 0 (null) dekrementiert werden soll, verwenden Sie nicht diesen Zeiger erneut aus. Gelegentlich müssen Sie möglicherweise einen schwachen Verweis auf ein Objekt zu erhalten (d. h. möglicherweise möchten Sie einen Zeiger auf eine der Schnittstellen abzurufen, ohne den Verweiszähler zu inkrementieren), aber es ist nicht zulässig, durch den Aufruf dazu `QueryInterface` gefolgt von `Release`. Der Zeiger auf diese Weise erhalten ist ungültig und sollte nicht verwendet werden. Dadurch wird schneller deutlich Wenn [_ATL_DEBUG_INTERFACES](reference/debugging-and-error-reporting-macros.md#_atl_debug_interfaces) definiert ist, ist dieses Makro definieren eine gute Möglichkeit für das Zählen von Fehlern suchen von verweisen.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Einführung in COM](../atl/introduction-to-com.md)   
- [QueryInterface: Navigieren in einem Objekt](/windows/desktop/com/queryinterface--navigating-in-an-object)
+
+Es gibt, aber Mechanismen mit dem express ein Objekt kann die Funktionalität bietet statisch (vor er instanziiert wird) der grundlegende Mechanismus für die COM-ist die Verwendung der `IUnknown` aufgerufene Methode [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)).
+
+Jede Schnittstelle stammt aus `IUnknown`, sodass jede Schnittstelle keine Implementierung von besitzt `QueryInterface`. Unabhängig von der Implementierung fragt diese Methode ein Objekt mit die IID der Schnittstelle, die vom Aufrufer eines Zeigers, auf. Wenn das Objekt über die Schnittstelle unterstützt `QueryInterface` ruft Sie einen Zeiger auf die Schnittstelle, bei gleichzeitigem Aufrufen `AddRef`. Andernfalls wird den Fehlercode E_NOINTERFACE zurückgegeben.
+
+Beachten Sie, die Sie bei der standardeinhaltung [Verweiszählung](../atl/reference-counting.md) Regeln immer. Wenn Sie aufrufen `Release` auf einen Schnittstellenzeiger, den Verweiszähler auf 0 (null) dekrementiert werden soll, verwenden Sie nicht diesen Zeiger erneut aus. Gelegentlich müssen Sie möglicherweise einen schwachen Verweis auf ein Objekt zu erhalten (d. h. möglicherweise möchten Sie einen Zeiger auf eine der Schnittstellen abzurufen, ohne den Verweiszähler zu inkrementieren), aber es ist nicht zulässig, durch den Aufruf dazu `QueryInterface` gefolgt von `Release`. Der Zeiger auf diese Weise erhalten ist ungültig und sollte nicht verwendet werden. Dadurch wird schneller deutlich Wenn [_ATL_DEBUG_INTERFACES](reference/debugging-and-error-reporting-macros.md#_atl_debug_interfaces) definiert ist, ist dieses Makro definieren eine gute Möglichkeit für das Zählen von Fehlern suchen von verweisen.
+
+## <a name="see-also"></a>Siehe auch
+
+[Einführung in COM](../atl/introduction-to-com.md)   
+[QueryInterface: Navigieren in einem Objekt](/windows/desktop/com/queryinterface--navigating-in-an-object)
 
