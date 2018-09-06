@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a951c45da8c5c6b672540c03bc1d97b5d54d9338
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e7ab8ad911869cab56df12b08b9688b9912f2a63
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403140"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895161"
 ---
 # <a name="postfix-expressions"></a>Postfixausdrücke
 Postfixausdrücke bestehen aus primären Ausdrücken bzw. Ausdrücken, in denen Postfixoperatoren einem primären Ausdruck folgen. Die Postfix-Operatoren sind in der folgenden Tabelle aufgeführt.  
@@ -50,7 +50,7 @@ postfix-expression[expression]postfix-expression(expression-list)simple-type-nam
 func(1)->GetValue()++  
 ```  
   
- Im obigen Ausdruck `func` ist ein primärer Ausdruck, `func(1)` ist eine Funktions-postfixausdruck, `func(1)->GetData` ist ein postfixausdruck, der einen Member der Klasse `func(1)->GetData()` ist eine andere Funktions-postfixausdruck, und die gesamte Ausdruck ist ein postfixausdruck, den Rückgabewert von GetData.  Die Bedeutung des Ausdrucks als Ganzes ist „Funktion aufrufen, dabei 1 als Argument übergeben und einen Zeiger für eine Klasse als Rückgabewert erhalten.  Rufen Sie anschließend `GetValue()` für diese Klasse, klicken Sie dann den zurückgegebenen Wert erhöhen.  
+ Im obigen Ausdruck `func` ist ein primärer Ausdruck, `func(1)` ist eine Funktions-postfixausdruck, `func(1)->GetValue` ist ein postfixausdruck, der einen Member der Klasse `func(1)->GetValue()` ist eine andere Funktions-postfixausdruck, und die gesamte Ausdruck ist ein postfixausdruck, den Rückgabewert von "GetValue".  Die Bedeutung des Ausdrucks als Ganzes ist „Funktion aufrufen, dabei 1 als Argument übergeben und einen Zeiger für eine Klasse als Rückgabewert erhalten.  Rufen Sie anschließend `GetValue()` für diese Klasse, klicken Sie dann den zurückgegebenen Wert erhöhen.  
   
  Die oben aufgeführten Ausdrücke sind Zuweisungsausdrücke, was bedeutet, dass das Ergebnis dieser Ausdrücke ein "r-value" sein muss.  
   

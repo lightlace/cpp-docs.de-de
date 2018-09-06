@@ -1,7 +1,7 @@
 ---
-title: Ausführen von NMAKE | Microsoft Docs
+title: Ausführen von NMAKE | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -20,31 +20,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29516dcbcf650225ec3b86eee9e135a35bff82f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9eb3ba676da2de9790fc992b9f788963f8dcdbc1
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379704"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894641"
 ---
 # <a name="running-nmake"></a>Ausführen von NMAKE
-## <a name="syntax"></a>Syntax  
-  
-```  
-NMAKE [option...] [macros...] [targets...] [@commandfile...]  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- NMAKE-Builds nur angegebene *Ziele* oder, wenn keine Angabe erfolgt, wird die erste im Makefile Ziel. Das erste Makefileziel kann ein [Pseudoziel](../build/pseudotargets.md) andere Ziele wird erstellt. NMAKE verwendet mit/f angegebene Makefiles. Wenn/f nicht angegeben ist, verwendet er die Makefile-Datei im aktuellen Verzeichnis. Wenn kein Makefile angegeben wird, verwendet er Rückschlussregeln für Befehlszeilen erstellen *Ziele*.  
-  
- Die `commandfile` Text (oder Antwortdatei) enthält die Befehlszeileneingabe. Andere Eingabe kann vorausgehen oder folgen Sie`commandfile`. Ein Pfad ist zulässig. In `commandfile`, Zeilenumbrüche als Leerzeichen behandelt werden. Schließen Sie Makrodefinitionen in Anführungszeichen ein, wenn diese Leerzeichen enthalten.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?  
- [NMAKE-Optionen](../build/nmake-options.md)  
-  
- [Tools.ini und NMAKE](../build/tools-ini-and-nmake.md)  
-  
- [Exitcodes von NMAKE](../build/exit-codes-from-nmake.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [NMAKE-Referenz](../build/nmake-reference.md)
+
+## <a name="syntax"></a>Syntax
+
+> **NMAKE:** [*Option* ...] [*Makros* ...] [*Ziele* ...] [**\@**<em>Commandfile</em> ...]
+
+## <a name="remarks"></a>Hinweise
+
+NMAKE-Builds, die nur angegebenen *Ziele* oder, wenn keine Angabe erfolgt, wird die erste in das Makefile Ziel. Das erste Makefileziel möglich einen [Pseudoziel](../build/pseudotargets.md) , das anderen Zielen erstellt. NMAKE verwendet Makefiles, die mit/f angegeben. Wenn/f nicht angegeben ist, wird die Makefile-Datei im aktuellen Verzeichnis. Wenn kein Makefile angegeben ist, verwendet es Rückschlussregeln zum Erstellen von Befehlszeilen *Ziele*.
+
+Die *Commandfile* -Text-Datei (oder Antwortdatei) enthält die Befehlszeileneingabe. Vor oder nach einem anderen Eingaben \@ *Commandfile*. Ein Pfad ist zulässig. In *Commandfile*, Zeilenumbrüche werden als Leerzeichen behandelt. Schließen Sie Makrodefinitionen in Anführungszeichen ein, wenn diese Leerzeichen enthalten.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?
+
+[NMAKE-Optionen](../build/nmake-options.md)  
+
+[Tools.ini und NMAKE](../build/tools-ini-and-nmake.md)  
+
+[Exitcodes von NMAKE](../build/exit-codes-from-nmake.md)  
+
+## <a name="see-also"></a>Siehe auch
+
+[NMAKE-Referenz](../build/nmake-reference.md)

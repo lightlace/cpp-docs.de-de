@@ -1,7 +1,7 @@
 ---
 title: Ergebnisse des Aufrufbeispiels | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,35 +18,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c49457aecb93b16ffb294f88e4f6643826492e2
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 5687adfada8657ae26edd9001db8990ff08864e9
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465692"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894694"
 ---
 # <a name="results-of-calling-example"></a>Ergebnisse des Aufrufbeispiels
-## <a name="microsoft-specific"></a>Microsoft-spezifisch  
-  
-## <a name="cdecl"></a>__cdecl  
- Der ergänzte C-Funktionsname ist "_MyFunc".  
-  
- ![CDECL-Aufrufkonvention](../cpp/media/vc37i01.gif "vc37I01")  
-Die **__cdecl** Aufrufkonvention  
-  
-## <a name="stdcall-and-thiscall"></a>thiscall und __stdcall  
- Der ergänzte C-Name (**__stdcall**) ist "_MyFunc@20." Der ergänzte C++-Name ist herstellereigen.  
-  
- ![&#95;&#95;StdCall und Thiscall-Aufrufkonventionen](../cpp/media/vc37i02.gif "vc37I02")  
-__stdcall- und thiscall-Aufrufkonventionen  
-  
-## <a name="fastcall"></a>__fastcall  
- Der ergänzte C-Name (**__fastcall**) ist "@MyFunc@20." Der ergänzte C++-Name ist herstellereigen.  
-  
- ![Aufrufkonvention für &#95; &#95;Fastcall](../cpp/media/vc37i03.gif "vc37I03")  
-__fastcall-Aufrufkonvention  
-  
-**Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Aufrufbeispiel:Funktionsprototyp und Aufruf](../cpp/calling-example-function-prototype-and-call.md)
+
+**Microsoft-spezifisch**
+
+## <a name="cdecl"></a>__cdecl
+Der ergänzte C-Funktionsname ist `_MyFunc`.
+
+![CDECL-Aufrufkonvention](../cpp/media/vc37i01.gif "vc37I01")  
+Die **__cdecl** Aufrufkonvention
+
+## <a name="stdcall-and-thiscall"></a>thiscall und __stdcall
+
+Der ergänzte C-Name (**__stdcall**) ist `_MyFunc@20`. Der ergänzte C++-Name ist implementierungsspezifisch.
+
+![&#95;&#95;StdCall und Thiscall-Aufrufkonventionen](../cpp/media/vc37i02.gif "vc37I02")  
+__stdcall- und thiscall-Aufrufkonventionen
+
+## <a name="fastcall"></a>__fastcall
+
+Der ergänzte C-Name (**__fastcall**) ist `@MyFunc@20`. Der ergänzte C++-Name ist implementierungsspezifisch.
+
+![Aufrufkonvention für &#95; &#95;Fastcall](../cpp/media/vc37i03.gif "vc37I03")  
+__fastcall-Aufrufkonvention
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Aufrufbeispiel:Funktionsprototyp und Aufruf](../cpp/calling-example-function-prototype-and-call.md)
