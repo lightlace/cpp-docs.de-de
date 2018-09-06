@@ -18,38 +18,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6aa18936497f0415da331697aceb26f26345500
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: d86c49c8d7d0cda91ba2415167cc79c810a96b3d
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539608"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895304"
 ---
 # <a name="charizing-operator-"></a>Zeichenoperator (#@)
-**Microsoft-spezifisch**  
-  
-Der Zeichenoperator kann nur mit Argumenten von Makros verwendet werden. Wenn `#@` steht einen formalen Parameter in der Definition des Makros ist das tatsächliche Argument in einfache Anführungszeichen eingeschlossen und als Zeichen behandelt wird, wenn das Makro erweitert wird. Zum Beispiel:  
-  
-```  
-#define makechar(x)  #@x  
-```  
-  
-führt dazu, dass die Anweisung  
-  
-```  
-a = makechar(b);  
-```  
-  
-erweitert wird auf  
-  
-```  
-a = 'b';  
-```  
-  
-Das einfache Anführungszeichen kann nicht mit dem Zeichenoperator verwendet werden.  
-  
-**Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- 
+**Microsoft-spezifisch**
+
+Der Zeichenoperator kann nur mit Argumenten von Makros verwendet werden. Wenn `#@` steht einen formalen Parameter in der Definition des Makros ist das tatsächliche Argument in einfache Anführungszeichen eingeschlossen und als Zeichen behandelt wird, wenn das Makro erweitert wird. Zum Beispiel:
+
+```
+#define makechar(x)  #@x
+```
+
+führt dazu, dass die Anweisung
+
+```
+a = makechar(b);
+```
+
+erweitert wird auf
+
+```
+a = 'b';
+```
+
+Das einfache Anführungszeichen kann nicht mit dem Zeichenoperator verwendet werden.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
 [Präprozessoroperatoren](../preprocessor/preprocessor-operators.md)

@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0babb0932fc059a91fd8da79f649039bcaebc457
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 02453ae14ab6e8cd4a75a9f2d8725ce69e2b7f02
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753729"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895291"
 ---
 # <a name="curl-class"></a>CUrl-Klasse
 
@@ -116,11 +116,11 @@ class CUrl
 
 `CUrl` können Sie die Felder einer URL, z. B. den Pfad oder Port ändern. `CUrl` versteht URLs im folgenden Format an:
 
-\<Schema > ://\<UserName >:\<Kennwort > @\<HostName >:\<PortNumber > /\<UrlPath >\<ExtraInfo >
+\<Schema > ://\<UserName >:\<Kennwort >\@\<HostName >:\<PortNumber > /\<UrlPath >\<ExtraInfo >
 
 (Einige Felder sind optional.) Betrachten Sie beispielsweise diese URL ein:
 
-http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents
+`http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents`
 
 [CUrl::CrackUrl](#crackurl) wie folgt analysiert:
 
@@ -130,7 +130,7 @@ http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents
 
 - Kennwort: "geheimer Schlüssel"
 
-- HostName: "www.microsoft.com"
+- HostName: "`www.microsoft.com`"
 
 - Portnummer: 80
 
@@ -235,7 +235,7 @@ Gibt "true" bei Erfolg bei "false".
 
 Diese Methode fügt die einzelnen Felder, um die vollständige URL-Zeichenfolge, die mithilfe des folgenden Formats zu erstellen:
 
-**\<Schema > ://\<Benutzer >:\<übergeben > @\<Domäne >:\<Port >\<Pfad >\<zusätzliche >**
+**\<Schema > ://\<Benutzer >:\<übergeben >\@\<Domäne >:\<Port >\<Pfad >\<zusätzliche >**
 
 Beim Aufrufen dieser Methode, die *PdwMaxLength* -Parameter enthalten die maximale Länge des Zeichenfolgenpuffers verwiesen wird, indem Sie zunächst die *LpszUrl* Parameter. Der Wert des der *PdwMaxLength* Parameter mit der tatsächlichen Länge der URL-Zeichenfolge, aktualisiert werden.
 

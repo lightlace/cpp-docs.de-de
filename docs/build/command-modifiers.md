@@ -15,21 +15,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9e1d883e0c7a2b214842b096fdf697ffc7d0192
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: fd86adc94de90222e0775d89543a4dc25486f74f
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221740"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894498"
 ---
 # <a name="command-modifiers"></a>Befehlsmodifizierer
-Sie können eine oder mehrere Befehlsmodifizierer vor einem Befehl, der optional durch Leerzeichen oder Tabstopps getrennt angeben. Wie bei Befehlen müssen Modifizierer eingerückt werden.  
-  
-|Modifizierer|Zweck|  
-|--------------|-------------|  
-|@*Befehl*|Verhindert die Anzeige des Befehls. Anzeigen von Befehlen wird nicht unterdrückt. Standardmäßig werden alle ausgeführten Befehle von NMAKE ausgegeben. Verwenden Sie/s Anzeige für das gesamte Makefile unterdrückt werden soll. Verwenden Sie **. AUTOMATISCHE** Anzeige für den Teil des Makefiles unterdrückt werden soll.|  
-|**-**\[*Anzahl*] *Befehl*|Fehler beim Überprüfen auf deaktiviert *Befehl*. Standardmäßig wird Sie NMAKE angehalten, wenn ein Befehl einen Exitcode ungleich NULL zurückgibt. IF -*Anzahl* ist NMAKE verwendet wird, beendet werden, wenn der Exitcode überschreitet *Anzahl*. Leerzeichen oder Tabstopps können nicht verwendet werden, zwischen den Bindestrich und *Anzahl.* Mindestens ein Leerzeichen oder Tabstopp muss angezeigt werden, zwischen `number` und *Befehl*. Verwenden Sie/i, um die Fehler beim Überprüfen der für das gesamte Makefile zu deaktivieren; Verwenden Sie **. IGNORIEREN Sie** fehlerüberprüfung für Teil des Makefiles deaktivieren.|  
-|**!** *command*|Führt *Befehl* für jede abhängige Datei Wenn *Befehl* verwendet <strong>$ \* \*</strong> (alle abhängigen Dateien in der Abhängigkeit) oder **$?** (alle abhängigen Dateien in der Abhängigkeit mit dem späteren Zeitstempel, als das Ziel).|  
-  
-## <a name="see-also"></a>Siehe auch  
- [Befehle in einem Makefile](../build/commands-in-a-makefile.md)
+
+Sie können eine oder mehrere Befehlsmodifizierer vor einem Befehl, der optional durch Leerzeichen oder Tabstopps getrennt angeben. Wie bei Befehlen müssen Modifizierer eingerückt werden.
+
+|Modifizierer|Zweck|
+|--------------|-------------|
+|\@*Befehl*|Verhindert die Anzeige des Befehls. Anzeigen von Befehlen wird nicht unterdrückt. Standardmäßig werden alle ausgeführten Befehle von NMAKE ausgegeben. Verwenden Sie/s Anzeige für das gesamte Makefile unterdrückt werden soll. Verwenden Sie **. AUTOMATISCHE** Anzeige für den Teil des Makefiles unterdrückt werden soll.|
+|**-**\[*Anzahl*] *Befehl*|Fehler beim Überprüfen auf deaktiviert *Befehl*. Standardmäßig wird Sie NMAKE angehalten, wenn ein Befehl einen Exitcode ungleich NULL zurückgibt. IF -*Anzahl* ist NMAKE verwendet wird, beendet werden, wenn der Exitcode überschreitet *Anzahl*. Leerzeichen oder Tabstopps können nicht verwendet werden, zwischen den Bindestrich und *Anzahl.* Mindestens ein Leerzeichen oder Tabstopp muss angezeigt werden, zwischen `number` und *Befehl*. Verwenden Sie/i, um die Fehler beim Überprüfen der für das gesamte Makefile zu deaktivieren; Verwenden Sie **. IGNORIEREN Sie** fehlerüberprüfung für Teil des Makefiles deaktivieren.|
+|**!** *command*|Führt *Befehl* für jede abhängige Datei Wenn *Befehl* verwendet <strong>$ \* \*</strong> (alle abhängigen Dateien in der Abhängigkeit) oder **$?** (alle abhängigen Dateien in der Abhängigkeit mit dem späteren Zeitstempel, als das Ziel).|
+
+## <a name="see-also"></a>Siehe auch
+
+[Befehle in einem Makefile](../build/commands-in-a-makefile.md)
