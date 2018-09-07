@@ -15,38 +15,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a318b9608fdf57291444e7b6331e2c2c36f118b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 049b8afe83209412391dd41c39d62d02512ab382
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764341"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110817"
 ---
 # <a name="platformmetadataflagsattribute-attribute"></a>Platform::Metadata::FlagsAttribute-Attribut
-Gibt an, dass eine Enumeration als Bitfeld, d. h. als Gruppe von Flags, behandelt werden kann.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-  
-public ref class Flags abstract : Attribute  
-```  
-  
-## <a name="inheritance"></a>Vererbung  
- [Platform::Object](../cppcx/platform-object-class.md)   
-  
- [Platform::Metadata::Attribute](../cppcx/platform-metadata-attribute-attribute.md)  
-  
-### <a name="remarks"></a>Hinweise  
-  
-### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client (Min.):** Windows 8  
-  
- **Unterstützter Server (Min.):** Windows Server 2012  
-  
- **Namespace:** Platform::Metadata  
-  
- **Metadaten:** platform.winmd  
-  
-## <a name="see-also"></a>Siehe auch  
- [Platform::Metadata-Namespace](../cppcx/platform-metadata-namespace.md)
+
+Gibt an, dass eine Enumeration als Bitfeld, d. h. als Gruppe von Flags, behandelt werden kann.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+public ref class Flags abstract : Attribute
+```
+
+## <a name="inheritance"></a>Vererbung
+
+[Platform::Object](../cppcx/platform-object-class.md)
+
+[Platform::Metadata::Attribute](../cppcx/platform-metadata-attribute-attribute.md)
+
+### <a name="remarks"></a>Hinweise
+
+### <a name="requirements"></a>Anforderungen
+
+**Unterstützter Client (Min.):** Windows 8
+
+**Unterstützter Server (Min.):** Windows Server 2012
+
+**Namespace:** Platform::Metadata
+
+**Metadaten:** platform.winmd
+
+## <a name="see-also"></a>Siehe auch
+
+[Platform::Metadata-Namespace](../cppcx/platform-metadata-namespace.md)

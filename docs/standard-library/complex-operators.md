@@ -19,12 +19,12 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: 2491cb859de8908bbe0710f03d12f836bbd80e2f
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: de26779c569326f46794ba76b7b886f994cd8b11
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208675"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110189"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt;-Operatoren
 
@@ -58,9 +58,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* eine komplexe Zahl oder ein Objekt des zugehörigen Parametertyps auf Ungleichheit getestet werden soll.
+*left*<br/>
+Eine komplexe Zahl oder ein Objekt des zugehörigen Parametertyps, die bzw. das auf Ungleichheit getestet wird.
 
-*richtige* eine komplexe Zahl oder ein Objekt des zugehörigen Parametertyps auf Ungleichheit getestet werden soll.
+*right*<br/>
+Eine komplexe Zahl oder ein Objekt des zugehörigen Parametertyps, die bzw. das auf Ungleichheit getestet wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -196,9 +198,11 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* die erste von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die multipliziert werden die \* Vorgang.
+*left*<br/>
+Die erste von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die multipliziert werden die \* Vorgang.
 
-*richtige* die zweite von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die multipliziert werden die \* Vorgang.
+*right*<br/>
+Die zweite von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die multipliziert werden die \* Vorgang.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -295,9 +299,11 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parameter
 
-*linken* die erste von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die hinzugefügt werden, durch die + -Vorgang.
+*left*<br/>
+Die erste von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die mit dem +-Operator hinzugefügt werden soll
 
-*richtige* die zweite von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die hinzugefügt werden, durch die + -Vorgang.
+*right*<br/>
+Die zweite von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die mit dem +-Operator hinzugefügt werden soll
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -402,7 +408,7 @@ The argument of cs3 is: 0.463648 radians, which is 26.5651 degrees.
 
 The right-side complex number is cr4 = (3,4)
 The result of the unary application of + to the right-side
- complex number is: cs4 = (3,4)
+complex number is: cs4 = (3,4)
 The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```
@@ -433,9 +439,11 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parameter
 
-*linken* die erste von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die mit dem --Operator subtrahiert werden soll.
+*left*<br/>
+Die erste von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die mit dem --Operator subtrahiert werden soll
 
-*richtige* die zweite von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die mit dem --Operator subtrahiert werden soll.
+*right*<br/>
+Die zweite von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die mit dem --Operator subtrahiert werden soll
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -542,7 +550,7 @@ The argument of cs3 is: -1.10715 radians, which is -63.4349 degrees.
 
 The right-side complex number is cr4 = (3,4)
 The result of the unary application of - to the right-side
- complex number is: cs4 = (-3,-4)
+complex number is: cs4 = (-3,-4)
 The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```
@@ -570,9 +578,11 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* eine komplexe Zahl oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die dem Zähler entspricht, durch den Nenner mit geteilt werden, ist die / Vorgang.
+*left*<br/>
+Eine komplexe Zahl oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die dem Zähler entspricht, der mit dem /-Operator durch den Nenner dividiert werden soll
 
-*richtige* eine komplexe Zahl oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die den Nenner auf verwendet werden, um den Zähler mit Teilen der / Vorgang.
+*right*<br/>
+Eine komplexe Zahl oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die dem Nenner entspricht, der mit dem /-Operator durch den Zähler dividiert werden soll
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -678,9 +688,11 @@ basic_ostream<Elem, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parameter
 
-*Ostr* den Ausgabestream, in denen die komplexe Zahl eingegeben wird.
+*Ostr*<br/>
+Der Ausgabestream, in den die komplexe Zahl eingegeben wird
 
-*richtige* die komplexe Zahl, die in den Ausgabestream eingegeben werden
+*right*<br/>
+Die komplexe Zahl, die in den Ausgabestream eingegeben werden soll
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -749,9 +761,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* eine komplexe Zahl oder ein Objekt des zugehörigen Parametertyps auf Ungleichheit getestet werden soll.
+*left*<br/>
+Eine komplexe Zahl oder ein Objekt des zugehörigen Parametertyps, die bzw. das auf Ungleichheit getestet wird.
 
-*richtige* eine komplexe Zahl oder ein Objekt des zugehörigen Parametertyps auf Ungleichheit getestet werden soll.
+*right*<br/>
+Eine komplexe Zahl oder ein Objekt des zugehörigen Parametertyps, die bzw. das auf Ungleichheit getestet wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -877,9 +891,11 @@ basic_istream<Elem, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parameter
 
-*ISTR* den Eingabestream aus dem die komplexe Zahl extrahiert wird.
+*ISTR*<br/>
+Der Eingabestream, aus dem die komplexe Zahl extrahiert wird
 
-*richtige* die komplexe Zahl, die aus dem Eingabestream extrahiert wird.
+*right*<br/>
+Die komplexe Zahl, die aus dem Eingabestream extrahiert wird
 
 ### <a name="return-value"></a>Rückgabewert
 

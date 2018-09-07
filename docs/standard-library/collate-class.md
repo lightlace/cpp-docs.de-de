@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 604d8a2082d609e85e4c55f1d4ae3b6d15c4ce22
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 054246ce78601abf61f36d070500845275b61761
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966458"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110372"
 ---
 # <a name="collate-class"></a>collate-Klasse
 
@@ -52,7 +52,8 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType* den Typ innerhalb eines Programms zum Codieren von Zeichen verwendet.
+*CharType*<br/>
+Der Typ, der innerhalb eines Programms verwendet wird, um Zeichen zu codieren.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -111,15 +112,17 @@ public:
 
 protected:
     collate(
- const char* _Locname,
+const char* _Locname,
     size_t _Refs = 0);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*_Refs* Ganzzahlwert verwendet, um den Typ für die Speicherverwaltung für das Objekt anzugeben.
+*_Refs*<br/>
+Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
 
-*_Locname* den Namen des Gebietsschemas.
+*_Locname*<br/>
+Der Name des Gebietsschemas.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -146,13 +149,17 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parameter
 
-*first1* Zeiger auf das erste Element in der ersten Sequenz verglichen werden soll.
+*first1*<br/>
+Zeiger auf das erste Element in der ersten zu vergleichenden Sequenz.
 
-*Last1* Zeiger auf das letzte Element in der ersten Sequenz verglichen werden soll.
+*Last1*<br/>
+Zeiger auf das letzte Element in der ersten zu vergleichenden Sequenz.
 
-*first2* Zeiger auf das erste Element in der zweiten Sequenz verglichen werden soll.
+*first2*<br/>
+Zeiger auf das erste Element in der zweiten zu vergleichenden Sequenz.
 
-*Last2* Zeiger auf das letzte Element in der zweiten Sequenz verglichen werden soll.
+*Last2*<br/>
+Zeiger auf das letzte Element in der zweiten zu vergleichenden Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -208,13 +215,17 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parameter
 
-*first1* Zeiger auf das erste Element in der ersten Sequenz verglichen werden soll.
+*first1*<br/>
+Zeiger auf das erste Element in der ersten zu vergleichenden Sequenz.
 
-*Last1* Zeiger auf das letzte Element in der ersten Sequenz verglichen werden soll.
+*Last1*<br/>
+Zeiger auf das letzte Element in der ersten zu vergleichenden Sequenz.
 
-*first2* Zeiger auf das erste Element in der zweiten Sequenz verglichen werden soll.
+*first2*<br/>
+Zeiger auf das erste Element in der zweiten zu vergleichenden Sequenz.
 
-*Last2* Zeiger auf das letzte Element in der zweiten Sequenz verglichen werden soll.
+*Last2*<br/>
+Zeiger auf das letzte Element in der zweiten zu vergleichenden Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -244,9 +255,11 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*erste* werden, dass ein Zeiger auf das erste Zeichen in der Sequenz, dessen Hashwert, bestimmt werden.
+*Erste*<br/>
+Ein Zeiger auf das erste Zeichen in der Sequenz, dessen Hashwert bestimmt werden soll.
 
-*letzte* werden, dass ein Zeiger auf das letzte Zeichen in der Sequenz, dessen Hashwert, bestimmt werden.
+*last*<br/>
+Ein Zeiger auf das letzte Zeichen in der Sequenz, dessen Hashwert bestimmt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -270,9 +283,11 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Parameter
 
-*erste* ein Zeiger auf das erste Zeichen in der zu konvertierenden Sequenz.
+*Erste*<br/>
+Ein Zeiger auf das erste Zeichen in der zu konvertierenden Sequenz.
 
-*letzte* ein Zeiger auf das letzte Zeichen in der zu konvertierenden Sequenz.
+*last*<br/>
+Ein Zeiger auf das letzte Zeichen in der zu konvertierenden Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -296,9 +311,11 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*erste* werden, dass ein Zeiger auf das erste Zeichen in der Sequenz, dessen Hashwert, bestimmt werden.
+*Erste*<br/>
+Ein Zeiger auf das erste Zeichen in der Sequenz, dessen Hashwert bestimmt werden soll.
 
-*letzte* werden, dass ein Zeiger auf das letzte Zeichen in der Sequenz, dessen Hashwert, bestimmt werden.
+*last*<br/>
+Ein Zeiger auf das letzte Zeichen in der Sequenz, dessen Hashwert bestimmt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -364,9 +381,11 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*erste* ein Zeiger auf das erste Zeichen in der zu konvertierenden Sequenz.
+*Erste*<br/>
+Ein Zeiger auf das erste Zeichen in der zu konvertierenden Sequenz.
 
-*letzte* ein Zeiger auf das letzte Zeichen in der zu konvertierenden Sequenz.
+*last*<br/>
+Ein Zeiger auf das letzte Zeichen in der zu konvertierenden Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
 

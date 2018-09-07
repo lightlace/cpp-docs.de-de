@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac444680a22a99f292b1728181103789435a150
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 87e9ba6ef9bcb4a909e97466d7ea71ee18374991
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404707"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110194"
 ---
 # <a name="qsort"></a>qsort
 
@@ -59,19 +59,23 @@ void qsort(
 
 ### <a name="parameters"></a>Parameter
 
-*Basis* Anfang des Zielarrays.
+<br/>
+Start des Zielarrays.
 
-*Anzahl* Array-Größe von Elementen führen.
+*Anzahl*<br/>
+Arraygröße in Elementen.
 
-*Breite* Elementgröße in Bytes.
+*width*<br/>
+Elementgröße in Bytes.
 
-*Vergleichen Sie* Zeiger auf eine vom Benutzer bereitgestellte Routine, die vergleicht zwei Elemente des Arrays und gibt einen Wert, der ihre Beziehung angibt.
+*compare*<br/>
+Zeiger auf eine benutzerdefinierte Routine, die zwei Elemente des Arrays vergleicht und einen Wert zurückgibt, der ihre Beziehung angibt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Qsort** -Funktion implementiert einen Schnellsortierungsalgorithmus um ein Array von sortieren *Anzahl* Elementen, von denen jedes *Breite* Bytes. Das Argument *Basis* ist ein Zeiger auf der Basis des Arrays sortiert werden. **Qsort** überschreibt dieses Array mit den sortierten Elementen.
+Die **Qsort** -Funktion implementiert einen Schnellsortierungsalgorithmus, um ein Array von sortieren *Anzahl* Elementen, die jeweils von *Breite* Bytes. Das Argument *Basis* ist ein Zeiger auf die Basis des Arrays, das sortiert werden. **Qsort** überschreibt dieses Array mit den sortierten Elementen.
 
-**Qsort** Aufrufe der *vergleichen* Routine eine oder mehrere Zeiten während der Sortierung und Zeiger auf zwei Arrayelemente bei jedem Aufruf übergibt.
+**Qsort** Aufrufe der *vergleichen* -Routine einmal oder mehrere Male während der Sortierung und Zeiger auf zwei Arrayelemente übergeben, bei jedem Aufruf.
 
 ```C
 compare( (void *) & elem1, (void *) & elem2 );
@@ -87,11 +91,11 @@ Die Routine vergleicht die Elemente und gibt einen der folgenden Werte zurück.
 
 Das Array wird in aufsteigender Reihenfolge sortiert, wie von der Vergleichsfunktion definiert. Kehren Sie den Sinn der „größer als“ und „kleiner als“ in der Vergleichsfunktion um, um ein Array in absteigender Reihenfolge zu sortieren.
 
-Diese Funktion überprüft ihre Parameter. Wenn *vergleichen* oder *Anzahl* ist **NULL**, oder wenn *Basis* ist **NULL** und **Anzahl* ungleich NULL ist oder wenn *Breite* ist kleiner als 0 (null), die Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion und **Errno** festgelegt ist, um **EINVAL**.
+Diese Funktion überprüft ihre Parameter. Wenn *vergleichen* oder *Anzahl* ist **NULL**, oder wenn *Basis* ist **NULL** und **Anzahl* ungleich NULL ist, oder wenn *Breite* ist kleiner als 0 (null), Handler für ungültige Parameter aufgerufen wird, der unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion und **Errno** nastaven NA hodnotu **EINVAL**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**qsort**|\<stdlib.h> und \<search.h>|
 
