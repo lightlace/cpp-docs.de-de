@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1735f890c0f106d82884a5ad7d63a5a3f0f8920
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 359c9d3f72ffa87abf49c6e3ca90743ad0fc80a3
+ms.sourcegitcommit: 9be4b66efa45dc132cef06eb3b258c2252ea23a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322367"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42583894"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Melden eines Problems mit dem Visual C++-Toolset oder der -Dokumentation
 
@@ -335,7 +335,7 @@ Bei einer *Linkreproduktion* handelt es sich um die vom Linker generierten Inhal
 
 1. Geben Sie **mkdir linkrepro** ein, um ein Verzeichnis für die Linkreproduktion zu erstellen.
 
-1. Geben Sie den Befehl **set link\_repro=linkrepro** ein, um die Umgebungsvariable **link\_repro** auf das Verzeichnis festzulegen, das Sie gerade erstellt haben.
+1. Geben Sie den Befehl **set link\_repro=linkrepro** ein, um die Umgebungsvariable **link\_repro** auf das Verzeichnis festzulegen, das Sie gerade erstellt haben. Wenn Ihr Build von einem anderen Verzeichnis aus ausgeführt wird, was bei komplexeren Projekten häufig der Fall ist, legen Sie für **link\_repro** stattdessen den vollständigen Pfad zu Ihrem linkrepro-Verzeichnis fest.
 
 1. Geben Sie im Konsolenfenster der Developer-Eingabeaufforderung den Befehl **devenv** ein, um das reproduzierte Projekt in Visual Studio zu erstellen. Dadurch wird sichergestellt, dass der Wert der Umgebungsvariablen **link\_repro** für Visual Studio sichtbar ist. Verwenden Sie zum Erstellen des Projekts über die Befehlszeile die oben erfassten Befehlszeilenargumente, um den reproduzierten Build zu duplizieren.
 

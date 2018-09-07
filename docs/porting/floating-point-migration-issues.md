@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e6578486ada758482b270cd5505338e2acf3eb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eb8f7d4835fe50dba2cb7eb6d4e7cb6a54efdbba
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841901"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578204"
 ---
 # <a name="floating-point-migration-issues"></a>Gleitkomma-Migrationsprobleme  
   
@@ -33,7 +33,7 @@ Wenn die mathematischen Funktionen in die universelle CRT in Visual Studio 2015 
   
 Viele der Gleitkommafunktionen in der mathematischen Bibliothek haben unterschiedliche Implementierungen für verschiedene CPU-Architekturen. Die 32-Bit-x86-CRT hat möglicherweise eine andere Implementierung als die 64-Bit x64 CRT. Darüber hinaus haben möglicherweise einige der Funktionen mehrere Implementierungen für eine bestimmte CPU-Architektur. Eine möglichst effiziente Implementierung wird je nach den von der CPU unterstützten Anweisungssets dynamisch zur Laufzeit ausgewählt. In der 32-Bit-x86-CRT haben einige Funktionen eine x87- und eine SSE2-Implementierung. Wenn eine CPU verwendet wird, die SSE2 unterstützt, wird die schnellere SSE2-Implementierung verwendet. Wenn eine CPU verwendet wird, die SSE2 nicht unterstützt, wird die langsamere x87-Implementierung verwendet. Möglicherweise sehen Sie dies bei der Migration von altem Code, da in Visual Studio 2012 die Standardoption der x86-Compilerarchitektur in [/arch:SSE2](../build/reference/arch-x86.md) geändert wurde. Da verschiedene Implementierungen der Funktionen der mathematischen Bibliothek verschiedene CPU-Anweisungen und andere Algorithmen verwenden, um Ergebnisse zu erzielen, unterscheiden sich die Ergebnisse auf den verschiedenen Plattformen möglicherweise. In den meisten Fällen liegen die Ergebnisse innerhalb +/-1 ULP des korrekt gerundeten Ergebnisses, die tatsächlichen Ergebnisse können jedoch in den CPUs variieren.  
   
-Die Verbesserungen für Richtigkeit bei der Codeerstellung in verschiedenen Gleitkomma-Modi in Visual Studio können auch die Ergebnisse der Operationen mit Gleitkomma beeinflussen, wenn der alte Code mit dem neuen verglichen wird, auch bei Verwendung der gleichen Compilerflags. Der von Visual Studio 2010 generierte Code beim Festlegen von [/fp:precise](../build/reference/fp-specify-floating-point-behavior.md) (Standard) oder **/fp:strict** hat möglicherweise die fortgeschrittenen NaN-Werte durch die Ausdrücke nicht korrekt weitergegeben. Daher können einige Ausdrücke, die in älteren Compilern ein numerisches Ergebnis ausgegeben haben, jetzt ordnungsgemäß ein NaN-Ergebnis erzeugen. Sie sehen möglicherweise auch Unterschiede, da die für die Codeoptimierungen aktivierte **/fp:fast** jetzt weitere Funktionen des Prozessors nutzt. Diese Optimierungen können weniger Anweisungen verwenden, aber Sie können die generierten Ergebnissen beeinflussen, da einige zuvor sichtbare intermediate-Vorgänge entfernt wurden.  
+Die Verbesserungen für Richtigkeit bei der Codeerstellung in verschiedenen Gleitkomma-Modi in Visual Studio können auch die Ergebnisse der Operationen mit Gleitkomma beeinflussen, wenn der alte Code mit dem neuen verglichen wird, auch bei Verwendung der gleichen Compilerflags. Der von Visual Studio 2010 generierte Code beim Festlegen von [/fp:precise](../build/reference/fp-specify-floating-point-behavior.md) (Standard) oder `/fp:strict` hat möglicherweise die fortgeschrittenen NaN-Werte durch die Ausdrücke nicht korrekt weitergegeben. Daher können einige Ausdrücke, die in älteren Compilern ein numerisches Ergebnis ausgegeben haben, jetzt ordnungsgemäß ein NaN-Ergebnis erzeugen. Sie sehen möglicherweise auch Unterschiede, da die für `/fp:fast` aktivierten Codeoptimierungen jetzt weitere Features des Prozessors nutzen. Diese Optimierungen können weniger Anweisungen verwenden, aber Sie können die generierten Ergebnissen beeinflussen, da einige zuvor sichtbare intermediate-Vorgänge entfernt wurden.  
   
 ## <a name="how-to-get-identical-results"></a>So rufen Sie identische Ergebnisse ab  
   

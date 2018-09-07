@@ -8,16 +8,16 @@ ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cac05b17d470cdb593f4d7e1e1943f812022906
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d36f56161e352d67838bfaf68c8e2d1dcee0f33e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33851635"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583984"
 ---
 # <a name="visual-c-help-and-community"></a>Hilfe und Community für Visual C++
 
@@ -25,16 +25,16 @@ So erhalten Sie Informationen über das Schreiben von C++-Code und die Verwendun
 
 ## <a name="samples"></a>Beispiele
 
-|Titel|description|
+|Titel|Beschreibung |
 |-----------|-----------------|
 |[Entwickler-Codebeispiele](http://go.microsoft.com/fwlink/p/?LinkId=256533)|Enthält herunterladbaren Beispielcode von Microsoft und Mitwirkenden aus der Community.|
 
 ## <a name="product-documentation"></a>Produktdokumentation
 
-|Titel|description|
+|Titel|Beschreibung |
 |-----------|-----------------|
 |[Visual C++](visual-cpp-in-visual-studio.md)|Enthält Verweise auf und Dokumentation zu Visual C++. Teil der MSDN Library.|
-|[Windows Developer Center](http://go.microsoft.com/fwlink/p/?LinkId=256534)|Enthält Informationen über die Verwendung von C++ und anderen Sprachen zum Entwickeln von Apps für [!INCLUDE[win8](build/reference/includes/win8_md.md)]. Teil des Windows Developer Centers. Der C++-Inhalt befindet sich unter dem Knoten Dokumente > Sprachverzeichnis.|
+|[Windows Developer Center](http://go.microsoft.com/fwlink/p/?LinkId=256534)|Enthält Informationen zur Verwendung von C++ und anderen Sprachen zum Entwickeln von Apps für Windows 8. Teil des Windows Developer Centers. Der C++-Inhalt befindet sich unter dem Knoten Dokumente > Sprachverzeichnis.|
 
 ### <a name="online-and-offline-documentation"></a>Online- und Offlinedokumentation
 
@@ -46,7 +46,7 @@ Viele Abschnitte der Dokumentation sind auch im PDF-Format verfügbar. Diese Abs
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
-|Titel|description|
+|Titel|Beschreibung |
 |-----------|-----------------|
 |[Visual C++-Team-Blog](http://go.microsoft.com/fwlink/p/?LinkId=256537)|Enthält Beiträge zu verschiedenen Themen von Experten aus dem Visual C++-Produktteam.|
 |[Channel 9](http://go.microsoft.com/fwlink/p/?LinkId=251694)|Enthält Videointerviews und -vorlesungen. Verwenden Sie das Suchfeld auf der Channel 9-Homepage, um C++-Inhalt zu suchen.|

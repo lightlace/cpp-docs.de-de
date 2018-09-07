@@ -12,16 +12,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e1a67ce57e4ddf726ba64923bbe5a95b5b2f1c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78f76b6f61eb5d8e7370e61e9cc1f466bdfb4c43
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410839"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592718"
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>UWP-Apps, Windows-Runtime und die C-Laufzeit
 
-UWP-Apps (Universelle Windows-Plattform) sind in Windows-Runtime ausgeführte Programme, die auf [!INCLUDE[win8](../build/reference/includes/win8_md.md)] ausgeführt werden. Bei der Windows-Runtime handelt es sich um eine vertrauenswürdige Umgebung, die die Funktionen, Variablen und Ressourcen steuert, die für eine UWP-App verfügbar sind. Standardmäßig verhindern Windows-Runtime-Einschränkungen jedoch die Verwendung der meisten Funktionen der C-Laufzeitbibliothek (CRT) in UWP-Apps.
+UWP-Apps (Universelle Windows-Plattform) sind in Windows-Runtime ausgeführte Programme, die unter Windows 8 ausgeführt werden. Bei der Windows-Runtime handelt es sich um eine vertrauenswürdige Umgebung, die die Funktionen, Variablen und Ressourcen steuert, die für eine UWP-App verfügbar sind. Standardmäßig verhindern Windows-Runtime-Einschränkungen jedoch die Verwendung der meisten Funktionen der C-Laufzeitbibliothek (CRT) in UWP-Apps.
 
 Die folgenden CRT-Funktionen werden durch die Windows-Runtime nicht unterstützt:
 

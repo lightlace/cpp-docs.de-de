@@ -8,35 +8,36 @@ ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 76798022-5886-48e7-a7f2-f99352b15cbf
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80ebe431e6fa8cfa69bffcf4709b42c22e0bec9d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ee8e06636a7d02ac0f34940031d9f0cac3fbef6c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612424"
 ---
 # <a name="visual-c-samples"></a>Visual C++-Beispiele
 
 Die unten aufgeführten Visual C++-Beispiele zeigen verschiedene Funktionen in mehreren Technologien.
 
-[Visual Studio-Beispiele](http://code.msdn.microsoft.com/vstudio/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B)
+[Visual C++ samples (Beispiele zu Visual C++)](https://github.com/Microsoft/vcsamples)
 
-[Windows auf GitHub](http://microsoft.github.io/windows/)
+[Visual Studio-Beispiele](https://code.msdn.microsoft.com/vstudio/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B)
+
+[Windows auf GitHub](https://microsoft.github.io/windows/)
 
 [Beispiele für universelle Windows-Apps](https://code.msdn.microsoft.com/windowsapps/Universal-Windows-app-cb3248c3)
 
-[Das All-In-One Code Framework](http://1code.codeplex.com/)
+[Das All-In-One Code Framework](https://1code.codeplex.com/)
 
-[Windows Desktop code samples](http://code.msdn.microsoft.com/windowsdesktop/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B&f%5B0%5D.Text=C%2B%2B)
+[Windows Desktop-Codebeispiele](https://code.msdn.microsoft.com/windowsdesktop/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B&f%5B0%5D.Text=C%2B%2B)
 
-[MFC-Beispiele](http://code.msdn.microsoft.com/site/search?query=mfc&f%5B0%5D.Value=mfc&f%5B0%5D.Type=SearchText&ac=4)
+[MFC-Beispiele](https://code.msdn.microsoft.com/site/search?query=mfc&f%5B0%5D.Value=mfc&f%5B0%5D.Type=SearchText&ac=4)
 
-[CodePlex-Beispiele](http://www.codeplex.com/site/search?query=C%2B%2B&ac=4)
-
-[MFC-Beispiele auf CodePlex](http://www.codeplex.com/site/search?query=mfc&ac=4)
+[CodePlex-Beispiele](https://archive.codeplex.com/)
 
 [ADO-Codebeispiele](https://msdn.microsoft.com/library/jj249212.aspx)
 

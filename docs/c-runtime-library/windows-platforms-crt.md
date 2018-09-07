@@ -21,19 +21,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d53e8020bbb7649d78232025ef9c63c1dc868fee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f360cd075ac4a86c39f5c33391e974e62f481455
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409006"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613481"
 ---
 # <a name="windows-platforms-crt"></a>Windows-Plattformen (CRT)
 
-Die C-Laufzeitbibliotheken für Visual Studio unterstützen die aktuellen Versionen von Windows und Windows Server, [!INCLUDE[win8](../build/reference/includes/win8_md.md)], [!INCLUDE[winserver8](../build/reference/includes/winserver8_md.md)], [!INCLUDE[win7](../build/includes/win7_md.md)], [!INCLUDE[winsvr08](../build/reference/includes/winsvr08_md.md)], und Windows Vista, optional unterstützen sie [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 3 (SP3) für x86, [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 2 (SP2) für x64 und [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] Service Pack 2 (SP2) für x86 und x64. All diese Betriebssysteme unterstützen die Windows-Desktop-API (Win32) und Unicode. Darüber hinaus kann jede Win32-Anwendung einen Multibyte-Zeichensatz (Multibyte Character Set, MBCS) verwenden.
+Die C-Laufzeitbibliotheken für Visual Studio unterstützen die aktuellen Versionen von Windows und Windows Server, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 und Windows Vista, optional unterstützen sie Windows XP Service Pack 3 (SP3) für x86, Windows XP Service Pack 2 (SP2) für x64 sowie Windows Server 2003 Service Pack 2 (SP2) für x86 und x64. All diese Betriebssysteme unterstützen die Windows-Desktop-API (Win32) und Unicode. Darüber hinaus kann jede Win32-Anwendung einen Multibyte-Zeichensatz (Multibyte Character Set, MBCS) verwenden.
 
 > [!NOTE]
-> Die Standardinstallation der Workload **Desktopentwicklung mit C++** in Visual Studio 2017 bietet keine Unterstützung für die Entwicklung mit [!INCLUDE[winxp](../build/includes/winxp_md.md)] und [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Sie müssen die optionale Komponente **Windows XP-Unterstützung für C++** installieren, um ein Windows XP-Plattformtoolset zu aktivieren.
+> Die Standardinstallation der Workload **Desktopentwicklung mit C++** in Visual Studio 2017 bietet keine Unterstützung für die Entwicklung mit Windows XP und Windows Server 2003. Sie müssen die optionale Komponente **Windows XP-Unterstützung für C++** installieren, um ein Windows XP-Plattformtoolset zu aktivieren.
 
 ## <a name="see-also"></a>Siehe auch
 
