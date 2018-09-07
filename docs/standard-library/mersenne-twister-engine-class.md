@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb03b35ed792bda7c506fd06d6102dda83c768e6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f868a6f2ec63e38573d49a1dc4b3b7a122f4d8f2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959270"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100221"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine-Klasse
 
@@ -39,23 +39,32 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>Parameter
 
-*UIntType* der Ergebnistyp für die ganze Zahl ohne Vorzeichen. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*UIntType*<br/>
+Der unsigned integer-Ergebnistyp. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
-*W* **Wortgröße**. Größe jedes einzelnen Wortes der Zustandssequenz in Bits. **Vorbedingung**:`2u < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**Wortgröße**. Größe jedes einzelnen Wortes der Zustandssequenz in Bits. **Vorbedingung**:`2u < W ≤ numeric_limits<UIntType>::digits`
 
-*N* **Zustandsgröße**. Die Anzahl von Elementen (Werten) in der Zustandssequenz.
+*N*<br/>
+**Zustandsgröße**. Die Anzahl von Elementen (Werten) in der Zustandssequenz.
 
-*M* **Verschiebungsgröße**. Die Anzahl von Elementen, die während jeder Verzerrung übersprungen werden sollen. **Vorbedingung**:`0 < M ≤ N`
+*M*<br/>
+**Verschiebungsgröße**. Die Anzahl von Elementen, die während jeder Verzerrung übersprungen werden sollen. **Vorbedingung**:`0 < M ≤ N`
 
-*R* **Maskenbits**. **Vorbedingung**:`R ≤ W`
+*R*<br/>
+**Maskenbits**. **Vorbedingung**:`R ≤ W`
 
-*Ein* **XOR-Maske**. **Vorbedingung**:`A ≤ (1u<<W) - 1u`
+*A*<br/>
+**XOR-Maske**. **Vorbedingung**:`A ≤ (1u<<W) - 1u`
 
-*U*, *S*, *T*, *L* **Tempering verschiebungsparameter**. Werden während der Verschlüsselung (Tempering) als Verschiebungswerte verwendet. Vorbedingung: `U,S,T,L ≤ W`
+*U*, *S*, *T*, *L*<br/>
+**Tempering der Verschiebungsparameter**. Werden während der Verschlüsselung (Tempering) als Verschiebungswerte verwendet. Vorbedingung: `U,S,T,L ≤ W`
 
-*D*, *B*, *C* **Tempering von bitmaskenparametern**. Werden während der Verschlüsselung (Tempering) als Maskenwerte verwendet. Vorbedingung: `D,B,C ≤ (1u<<W) - 1u`
+*D*, *B*, *C*<br/>
+**Tempering von Bitmaskenparametern**. Werden während der Verschlüsselung (Tempering) als Maskenwerte verwendet. Vorbedingung: `D,B,C ≤ (1u<<W) - 1u`
 
-*F* **initialisierungsmultiplikator**. Wird verwendet, um die Initialisierung der Sequenz zu unterstützen. Vorbedingung: `F ≤ (1u<<W) - 1u`
+*F*<br/>
+**Initialisierungsmultiplikator**. Wird verwendet, um die Initialisierung der Sequenz zu unterstützen. Vorbedingung: `F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Mitglieder
 
@@ -78,8 +87,7 @@ Das Vorlagenargument `UIntType`muss groß genug sein, um Werte bis zu `2`<sup>W<
 
 Obwohl Sie direkt aus dieser Engine einen Generator konstruieren können, wird empfohlen, eine dieser voreingestellten Typedefs zu verwenden:
 
-
-  `mt19937`: 32-Bit-Mersenne-Twister-Engine (Matsumoto und Nishimura, 1998).
+`mt19937`: 32-Bit-Mersenne-Twister-Engine (Matsumoto und Nishimura, 1998).
 
 ```cpp
 typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
@@ -90,8 +98,7 @@ typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
     18, 1812433253> mt19937;
 ```
 
-
-  `mt19937_64`: 64-Bit-Mersenne-Twister-Engine (Matsumoto und Nishimura, 2000).
+`mt19937_64`: 64-Bit-Mersenne-Twister-Engine (Matsumoto und Nishimura, 2000).
 
 ```cpp
 typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,

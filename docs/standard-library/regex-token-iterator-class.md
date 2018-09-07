@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5e02f1cfd7b35244c347ef0f07542e61938d7b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5d4dd1f7b428e3b19f86445bf0b191fb840ecdb9
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960966"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101001"
 ---
 # <a name="regextokeniterator-class"></a>regex_token_iterator-Klasse
 
@@ -87,11 +87,14 @@ private:
 
 ### <a name="parameters"></a>Parameter
 
-*BidIt* der itertatortyp für teilübereinstimmungen.
+*BidIt*<br/>
+Der Itertatortyp für Teilübereinstimmungen.
 
-*Elem* den Typ der Elemente übereinstimmen.
+*Elem*<br/>
+Der zu entsprechende Elementtyp.
 
-*RXtraits* "traits"-Klasse für Elemente.
+*RXtraits*<br/>
+Merkmalklasse für Elemente.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -335,7 +338,8 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* der Iterator verglichen werden soll.
+*right*<br/>
+Der Iterator für den Vergleich.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -679,7 +683,8 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* der Iterator verglichen werden soll.
+*right*<br/>
+Der Iterator für den Vergleich.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1144,13 +1149,17 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>Parameter
 
-*erste* Anfang der Sequenz, die übereinstimmen.
+*Erste*<br/>
+Anfang der Sequenz, die übereinstimmen soll.
 
-*letzte* Ende der Sequenz übereinstimmen.
+*last*<br/>
+Ende der Sequenz, die übereinstimmen soll.
 
-*Re* regulärer Ausdruck für Übereinstimmungen.
+*RE*<br/>
+Regulärer Ausdruck für Übereinstimmungen.
 
-*f* Flags für Übereinstimmungen.
+*f*<br/>
+Flags für Übereinstimmungen.
 
 ### <a name="remarks"></a>Hinweise
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6484d70488da834d0acea79cbe9b02968e0e2a35
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d979cab4dc25898b772c434f5a50682573ce4016
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957284"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099537"
 ---
 # <a name="istrstream-class"></a>istrstream-Klasse
 
@@ -82,9 +82,11 @@ istrstream(
 
 ### <a name="parameters"></a>Parameter
 
-*Anzahl* die Länge des Puffers (*Ptr*).
+*count*<br/>
+Die Länge des Puffers (*Ptr*).
 
-*PTR* den Inhalt, der mit dem der Puffer initialisiert wird.
+*ptr*<br/>
+Der Inhalt, mit dem der Puffer initialisiert wird.
 
 ### <a name="remarks"></a>Hinweise
 

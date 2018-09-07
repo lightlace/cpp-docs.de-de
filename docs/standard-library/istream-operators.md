@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fdad6f34fed49ec851f027cba4c53ea08b48902
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 82a5a02ed85e3a02c1131a413eb8588dd49dee90
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195402"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100897"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;iStream&gt;-Operatoren
 
@@ -64,13 +64,17 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>Parameter
 
-*CH* ein Zeichen.
+*CH*<br/>
+Ein Zeichen.
 
-*ISTR* einen Stream.
+*ISTR*<br/>
+Ein Stream.
 
-*Str* eine Zeichenfolge.
+*str*<br/>
+Eine Zeichenfolge.
 
-*Val* eines Typs.
+*val*<br/>
+Ein Typ.
 
 ### <a name="return-value"></a>Rückgabewert
 

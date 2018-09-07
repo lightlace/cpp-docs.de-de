@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 545fda08a027b1610f82d17c89ae98241ee5502b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 04c4ac6b599e294f5514f8a2f487ed9072f3f875
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958129"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099563"
 ---
 # <a name="codecvtutf8utf16"></a>codecvt_utf8_utf16
 
@@ -34,9 +34,12 @@ class codecvt_utf8_utf16 : public _STD codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>Parameter
 
-*Elem* der Breitzeichen-Elementtyp.
-*Maxcode* die maximale Anzahl von Zeichen für das gebietsschemafacet.
-*Modus* Konfigurationsinformationen für das gebietsschemafacet.
+*Elem*<br/>
+Der Breitzeichen-Elementtyp.
+*Maxcode*<br/>
+Die maximale Anzahl der Zeichen für das Gebietsschemafacet.
+*Modus*<br/>
+Konfigurationsinformationen für das Gebietsschemafacet.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -44,4 +47,5 @@ Der Bytestream kann in eine Binärdatei oder eine Textdatei geschrieben werden.
 
 ## <a name="requirements"></a>Anforderungen
 
-Header: <codecvt> Namespace: std
+Header: \<Codecvt >  
+Namespace: Standard

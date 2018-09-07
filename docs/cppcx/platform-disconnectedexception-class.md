@@ -16,35 +16,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a84d07db2e3fe48d981641d2803352d90268d93a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e46ddc82f867d3c126b9a7e8d259ba0c3c22bfde
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754064"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101975"
 ---
 # <a name="platformdisconnectedexception-class"></a>Platform::DisconnectedException-Klasse
-Wird ausgelöst, wenn ein COM-Proxyobjekt versucht, auf einen COM-Server zu verweisen, der nicht mehr vorhanden ist.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-public ref class DisconnectedException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Wenn Klasse A auf eine andere Klasse verweist (Klasse B), die sich in einem gesonderten Prozess befindet, erfordert Klasse A ein Proxyobjekt für die Kommunikation mit dem prozessexternen COM-Server, der die Klasse B enthält. Manchmal kann der Server über keinen Arbeitsspeicher mehr verfügen, ohne dass Klasse A dies bemerkt. In diesem Fall wird die RPC_E_DISCONNECTED-Ausnahme ausgelöst, und sie wird in "Platform::DisconnectedException" übersetzt. Ein Szenario, in dem dies auftritt, ist, wenn eine Ereignisquelle einen Delegaten aufruft, der an sie übergeben wurde, wobei der Delegat aber zu einem Zeitpunkt, nachdem er das Ereignis abonniert hatte, zerstört wurde. Wenn es hierzu kommt, entfernt die Ereignisquelle diesen Delegaten aus ihrer Aufrufliste.  
-  
- Weitere Informationen finden Sie unter der [COMException](../cppcx/platform-comexception-class.md) -Klasse.  
-  
-### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client (Min.):** Windows 8  
-  
- **Unterstützter Server (Min.):** Windows Server 2012  
-  
- **Namespace:** Platform  
-  
- **Metadaten:** platform.winmd  
-  
-## <a name="see-also"></a>Siehe auch  
- [Platform::COMException-Klasse](../cppcx/platform-comexception-class.md)
+
+Wird ausgelöst, wenn ein COM-Proxyobjekt versucht, auf einen COM-Server zu verweisen, der nicht mehr vorhanden ist.
+
+## <a name="syntax"></a>Syntax
+
+```
+public ref class DisconnectedException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Hinweise
+
+Wenn Klasse A auf eine andere Klasse verweist (Klasse B), die sich in einem gesonderten Prozess befindet, erfordert Klasse A ein Proxyobjekt für die Kommunikation mit dem prozessexternen COM-Server, der die Klasse B enthält. Manchmal kann der Server über keinen Arbeitsspeicher mehr verfügen, ohne dass Klasse A dies bemerkt. In diesem Fall wird die RPC_E_DISCONNECTED-Ausnahme ausgelöst, und sie wird in "Platform::DisconnectedException" übersetzt. Ein Szenario, in dem dies auftritt, ist, wenn eine Ereignisquelle einen Delegaten aufruft, der an sie übergeben wurde, wobei der Delegat aber zu einem Zeitpunkt, nachdem er das Ereignis abonniert hatte, zerstört wurde. Wenn es hierzu kommt, entfernt die Ereignisquelle diesen Delegaten aus ihrer Aufrufliste.
+
+Weitere Informationen finden Sie unter der [COMException](../cppcx/platform-comexception-class.md) -Klasse.
+
+### <a name="requirements"></a>Anforderungen
+
+**Unterstützter Client (Min.):** Windows 8
+
+**Unterstützter Server (Min.):** Windows Server 2012
+
+**Namespace:** Platform
+
+**Metadaten:** platform.winmd
+
+## <a name="see-also"></a>Siehe auch
+
+[Platform::COMException-Klasse](../cppcx/platform-comexception-class.md)

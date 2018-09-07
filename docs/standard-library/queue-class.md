@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d50b53f9c06c5edbd159e7e2bac112f6f30432df
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 20566e34200b5c0e89b532d7096821d58a5f564f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954915"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103698"
 ---
 # <a name="queue-class"></a>queue-Klasse
 
@@ -52,9 +52,11 @@ class queue
 
 ### <a name="parameters"></a>Parameter
 
-*Typ* die Datentyp der Elemente in der Warteschlange gespeichert werden
+*Type*<br/>
+Der in der Warteschlange zu speichernde Elementdatentyp.
 
-*Container* den Typ des zugrunde liegenden Container verwendet, um die Warteschlange zu implementieren.
+*Container*<br/>
+Der Typ des zugrunde liegenden Containers, der verwendet wird, um die Warteschlange zu implementieren.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -331,7 +333,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parameter
 
-*Val* am Ende der Warteschlange hinzugefügte Element.
+*val*<br/>
+Das Element, das am Ende der Warteschlange hinzugefügt wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -381,7 +384,8 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* der **const** Container von denen die erstellte Warteschlange eine Kopie sein soll.
+*right*<br/>
+Der **const**-Container, dessen Kopie die erstellte Warteschlange sein soll.
 
 ### <a name="remarks"></a>Hinweise
 

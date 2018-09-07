@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be74641b229fbf888504df72a97f8a5c025d9b7b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f30e2b226524e1d4a62c9f8cc950f4dd30846861
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963715"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100975"
 ---
 # <a name="basicostream-class"></a>basic_ostream-Klasse
 
@@ -50,9 +50,11 @@ class basic_ostream : virtual public basic_ios<Elem, Tr>
 
 ### <a name="parameters"></a>Parameter
 
-*Elem* ein `char_type`.
+*Elem*<br/>
+Ein `char_type`.
 
-*TR* das Zeichen `traits_type`.
+*Tr*<br/>
+Der `traits_type` eines Zeichens.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -63,16 +65,16 @@ iostate state = goodbit;
 const sentry ok(*this);
 
 if (ok)
- {try
- {<convert and insert elements
+{try
+{<convert and insert elements
     accumulate flags in state> }
     catch (...)
- {try
- {setstate(badbit);
+{try
+{setstate(badbit);
 
 }
     catch (...)
- {}
+{}
     if ((exceptions()& badbit) != 0)
     throw; }}
 width(0);
@@ -91,16 +93,16 @@ const sentry ok(*this);
 if (!ok)
     state |= badbit;
 else
- {try
- {<obtain and insert elements
+{try
+{<obtain and insert elements
     accumulate flags in state> }
     catch (...)
- {try
- {setstate(badbit);
+{try
+{setstate(badbit);
 
 }
     catch (...)
- {}
+{}
     if ((exceptions()& badbit) != 0)
     throw; }}
 setstate(state);
@@ -161,11 +163,14 @@ basic_ostream(basic_ostream&& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Strbuf* ein Objekt des Typs ["basic_streambuf"](../standard-library/basic-streambuf-class.md).
+*strbuf*<br/>
+Ein Objekt vom Typ [basic_streambuf](../standard-library/basic-streambuf-class.md).
 
-*_Isstd* **"true"** Wenn dies einen Standardstream handelt; andernfalls **"false"**.
+*_Isstd*<br/>
+**"true"** Wenn dies einen Standardstream handelt; andernfalls **"false"**.
 
-*richtige* einen Rvalue-Verweis auf ein Objekt des Typs `basic_ostream`.
+*right*<br/>
+Ein rvalue-Verweis auf ein Objekt des Typs `basic_ostream`.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -242,11 +247,14 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="parameters"></a>Parameter
 
-*Pfn* einen Funktionszeiger.
+*pfn*<br/>
+Ein Funktionszeiger.
 
-*Strbuf* ein Zeiger auf eine `stream_buf` Objekt.
+*strbuf*<br/>
+Ein Zeiger auf eine `stream_buf` Objekt.
 
-*Val* ein Element, in den Stream geschrieben werden.
+*val*<br/>
+Ein Element, das in den Stream geschrieben werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -360,7 +368,8 @@ basic_ostream& operator=(basic_ostream&& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* ein `rvalue` Verweis auf eine `basic_ostream` Objekt.
+*right*<br/>
+Ein `rvalue`-Verweis auf ein `basic_ostream`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -376,7 +385,8 @@ basic_ostream<Elem, Tr>& put(char_type _Ch);
 
 ### <a name="parameters"></a>Parameter
 
-*_Ch* ein Zeichen.
+*_Ch*<br/>
+Ein Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -419,11 +429,14 @@ basic_ostream<Elem, Tr>& seekp(off_type _Off, ios_base::seekdir _Way);
 
 ### <a name="parameters"></a>Parameter
 
-*_Pos* die Position im Stream.
+*_Pos*<br/>
+Die Position im Stream.
 
-*_Off* das Offset relativ zu *_Way*.
+*_Off*<br/>
+Das Offset relativ zu *_Way*.
 
-*_Way* eines der [ios_base:: seekdir](../standard-library/ios-base-class.md#seekdir) Enumerationen.
+*_Way*<br/>
+Eine der [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir)-Enumerationen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -485,7 +498,8 @@ void swap(basic_ostream& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* einen Verweis auf eine `basic_ostream` Objekt.
+*right*<br/>
+Ein Verweis auf ein `basic_ostream`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -521,9 +535,11 @@ basic_ostream<Elem, Tr>& write(const char_type* str, streamsize count);
 
 ### <a name="parameters"></a>Parameter
 
-*Anzahl* Anzahl von Zeichen in den Stream zu versetzen.
+*count*<br/>
+Die Anzahl der Zeichen, die in den Stream geschrieben werden sollen.
 
-*Str* Zeichen in den Stream zu versetzen.
+*str*<br/>
+Die Zeichen, die in den Stream geschrieben werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 

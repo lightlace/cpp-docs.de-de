@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e41abbc4d7fa3cd18363982b806811b0698b44f4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e565d5f10bdb06bff6ad8c17047ed3e11070364d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959860"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099589"
 ---
 # <a name="istreamiterator-class"></a>istream_iterator-Klasse
 
@@ -38,7 +38,7 @@ Beschreibt ein Eingabeiteratorobjekt. Es werden Objekte der Klasse `Type` aus ei
 ```cpp
 template <class Type, class CharType = char, class Traits = char_traits<CharType>, class Distance = ptrdiff_t,>
 class istream_iterator
- : public iterator<
+: public iterator<
     input_iterator_tag, Type, Distance,
     const Type *,
     const Type&>;
@@ -46,13 +46,17 @@ class istream_iterator
 
 ### <a name="parameters"></a>Parameter
 
-*Typ* den Typ des Objekts aus dem Eingabestream extrahiert werden soll.
+*Type*<br/>
+Der Typ des Objekts, das aus dem Eingabestream extrahiert werden soll.
 
-*CharType* der Typ, der den Zeichentyp für das `istream_iterator`. Dieses Argument ist optional, und der Standardwert ist **Char**.
+*CharType*<br/>
+Der Typ, der den Zeichentyp für `istream_iterator` darstellt. Dieses Argument ist optional, und der Standardwert ist **Char**.
 
-*"Traits"* der Typ, der den Zeichentyp für das `istream_iterator`. Dieses Argument ist optional, und der Standardwert ist `char_traits`< `CharType`.
+*Merkmale*<br/>
+Der Typ, der den Zeichentyp für `istream_iterator` darstellt. Dieses Argument ist optional, und der Standardwert ist `char_traits`< `CharType`.
 
-*Abstand* ein ganzzahligen Typ mit Vorzeichen, die den Differenztyp für stellt die `istream_iterator`. Dieses Argument ist optional, und der Standardwert ist `ptrdiff_t`.
+*Distance*<br/>
+Ein ganzzahliger Typ mit Vorzeichen, der den Differenztyp für den `istream_iterator` darstellt. Dieses Argument ist optional, und der Standardwert ist `ptrdiff_t`.
 
 Nachdem ein Objekt der Klasse istream_iterator mit einem ungleich NULL gespeicherten Zeiger erstellt oder erhöht wurde, versucht das Objekt, ein Objekt vom Typ `Type` aus dem zugewiesenen Eingabestream zu extrahieren und zu speichern. Wenn die Extraktion fehlschlägt, ersetzt das Objekt den gespeicherten Zeiger durch einen NULL-Zeiger und erstellt so einen Indikator für das Ende der Sequenz.
 
@@ -144,7 +148,8 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="parameters"></a>Parameter
 
-*_Istr* den Eingabedatenstrom zu lesenden verwenden zum Initialisieren der `istream_iterator`.
+*_Istr*<br/>
+Der zu lesende Eingabestream verwendet `istream_iterator` zum Initialisieren.
 
 ### <a name="remarks"></a>Hinweise
 

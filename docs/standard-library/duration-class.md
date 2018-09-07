@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::chrono [C++], duration
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4b85fd369e82ceab0a6b5255267e32d864eab67
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bb4d2c813b53a180f13d5047dc0d78dae98fe59f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956865"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100910"
 ---
 # <a name="duration-class"></a>duration-Klasse
 
@@ -120,13 +120,17 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>Parameter
 
-*Rep2* ein arithmetischer Typ, der die Anzahl von Zeiteinheiten darstellt.
+*Rep2*<br/>
+Ein arithmetischer Typ, der die Anzahl von Zeiteinheiten darstellt.
 
-*Period2* ein `std::ratio` der vorlagenspezialisierung zum Darstellen der teilstrichperiode in Einheiten von Sekunden.
+*Period2*<br/>
+Eine `std::ratio`-Vorlagenspezialisierung zur Darstellung des Zeitraums von Zeiteinheiten in Sekunden.
 
-*R* die Anzahl der Zeiteinheiten der Standardperiode.
+*R*<br/>
+Die Anzahl der Zeiteinheiten der Standardperiode.
 
-*Dur* die Anzahl von Zeiteinheiten des Zeitraums, der von *Period2*.
+*Abfragedauer*<br/>
+Die Anzahl von Zeiteinheiten des Zeitraums, der von *Period2*.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -202,7 +206,8 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parameter
 
-*Div* für die erste Methode, *Div* eine Taktanzahl dar. Für die zweite Methode *Div* ist eine `duration` -Objekt, das eine Taktanzahl enthält.
+*Div*<br/>
+Bei der ersten Methode *Div* eine Taktanzahl dar. Für die zweite Methode *Div* ist eine `duration` -Objekt, das eine Taktanzahl enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -218,7 +223,8 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>Parameter
 
-*Mult* einen Wert des Typs, der angegebenen `duration::rep`.
+*Mult*<br/>
+Ein Wert des von `duration::rep` angegebenen Typs.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -234,7 +240,8 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>Parameter
 
-*Div* einen Wert des Typs, der angegebenen `duration::rep`.
+*Div*<br/>
+Ein Wert des von `duration::rep` angegebenen Typs.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -274,7 +281,8 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parameter
 
-*Dur* ein `duration` Objekt.
+*Abfragedauer*<br/>
+Ein `duration`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -290,7 +298,8 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parameter
 
-*Dur* ein `duration` Objekt.
+*Abfragedauer*<br/>
+Ein `duration`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -314,7 +323,8 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parameter
 
-*Div* der Divisor, der entweder ein Duration-Objekt oder ein Wert, der taktanzahlen darstellt.
+*Div*<br/>
+Der Divisor, der ein Duration-Objekt oder ein Wert ist, der Taktzähler darstellt.
 
 ### <a name="remarks"></a>Hinweise
 

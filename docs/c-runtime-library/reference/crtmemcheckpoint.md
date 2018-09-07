@@ -33,16 +33,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ca83a9b9b48302e9ff4974d083d0a95796a1ef3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1418278f4b6756db4e747162f090545c3e9f3ae
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395512"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107567"
 ---
 # <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
 
-Ruft den aktuellen Zustand des Debugheaps ab und speichert ihn in einer Anwendung bereitgestellten **_CrtMemState** -Struktur (nur Debugversion).
+Ruft den aktuellen Zustand des Debugheaps und speichert Sie in einer Anwendung bereitgestellten **_CrtMemState** Struktur (nur Debugversion).
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,21 +54,22 @@ void _CrtMemCheckpoint(
 
 ### <a name="parameters"></a>Parameter
 
-*Status* Zeiger auf **_CrtMemState** Struktur, die mit dem arbeitsspeicherprüfpunkt ausgefüllt.
+*state*<br/>
+Zeiger auf **_CrtMemState** Struktur mit dem arbeitsspeicherprüfpunkt ausgefüllt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_CrtMemCheckpoint** -Funktion erstellt eine Momentaufnahme des aktuellen Zustands des Debugheaps eines beliebigen Moments. Diese Momentaufnahme kann von anderen Heapzustandsfunktionen wie [_CrtMemDifference](crtmemdifference.md) verwendet werden, um das Erkennen von Speicherverlusten und anderen Problemen zu unterstützen. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtMemState** während der vorverarbeitung entfernt.
+Die **_CrtMemCheckpoint** -Funktion erstellt eine Momentaufnahme des aktuellen Zustands des Debugheaps zu einem bestimmten Zeitpunkt. Diese Momentaufnahme kann von anderen Heapzustandsfunktionen wie [_CrtMemDifference](crtmemdifference.md) verwendet werden, um das Erkennen von Speicherverlusten und anderen Problemen zu unterstützen. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtMemState** werden während der vorverarbeitung entfernt.
 
-Die Anwendung muss einen Zeiger auf eine zuvor zugeordnete Instanz von übergeben der **_CrtMemState** Struktur, die in Crtdbg.h definiert, in der *Zustand* Parameter. Wenn **_CrtMemCheckpoint** prüfpunkterstellung einen Fehler während der Erstellung des Prüfpunkts erkennt, generiert die Funktion einen **_CRT_WARN** Debugbericht, der das Problem beschreibt.
+Die Anwendung muss einen Zeiger auf eine zuvor zugeordnete Instanz von übergeben die **_CrtMemState** Struktur, definiert in "CRTDBG.h" definiert, in der *Zustand* Parameter. Wenn **_CrtMemCheckpoint** einen Fehler bei der prüfpunkterstellung erkennt, generiert die Funktion eine **_CRT_WARN** Debugbericht, die Beschreibung des Problems.
 
-Weitere Informationen über heapzustandsfunktionen und die **_CrtMemState** -Struktur, finden Sie unter [den Heapzustand](/visualstudio/debugger/crt-debug-heap-details). Weitere Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Weitere Informationen über heapzustandsfunktionen und die **_CrtMemState** Struktur, siehe [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Weitere Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
-Wenn *Status* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, [Errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) festgelegt ist, um **EINVAL** und die Funktion zurückgibt.
+Wenn *Zustand* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, [Errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) nastaven NA hodnotu **EINVAL** und die Funktion zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_CrtMemCheckpoint**|\<crtdbg.h>, \<errno.h>|
 

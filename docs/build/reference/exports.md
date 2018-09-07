@@ -1,7 +1,7 @@
 ---
 title: EXPORTE | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/20/2018
+ms.date: 09/07/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 299d300cb3b2247a4dfa698a53c486bcef6164e3
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: f3ea5c28fe54e5d117ef40430912ef3f8ea0efd8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894550"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104289"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -38,9 +38,7 @@ Die erste *Definition* auf derselben Zeile wie möglich die `EXPORTS` Schlüssel
 
 Die Syntax für einen Export *Definition* ist:
 
-```DEF
-entryname[=internal_name|other_module.another_exported_name] [@Ordinal [NONAME]] [[PRIVATE] | [DATA]]
-```
+> *Eintragsname*\[__=__*Internal_name*|*other_module.exported_name*] \[ **\@** _ordinal_ \[ **NONAME**]] \[ \[ **PRIVATE**] | \[ **Daten**]]
 
 *Eintragsname* ist der Name der Funktion oder Variable, die Sie exportieren möchten. Dieser ist erforderlich. Wenn der Name, den Sie exportieren, aus dem Namen in der DLL unterscheidet, geben Sie den Namen des Exports in der DLL mit *Internal_name*. Wenn Ihre DLL beispielsweise eine Funktion `func1` exportiert und Sie möchten, dass Aufrufer sie als `func2` verwenden, würden Sie Folgendes angeben:
 
@@ -56,18 +54,18 @@ EXPORTS
    func2=other_module.func1
 ```
 
-Ist der Name, den Sie exportieren aus einem anderen Modul, die anhand der Ordinalzahl exportieren, geben Sie der Export die Ordnungszahl in der DLL können Sie mit *Other_module. #Ordinal_number*. Angenommen, Ihre DLL-Exporte eine Funktion aus dem anderen Modul, in denen ordinal 42, und Sie Aufrufern die Verwendung als `func2`, würden Sie angeben:
+Ist der Name, den Sie exportieren aus einem anderen Modul, die anhand der Ordinalzahl exportieren, geben Sie der Export die Ordnungszahl in der DLL können Sie mit *Other_module*.__#__ *ordinal*. Angenommen, Ihre DLL-Exporte eine Funktion aus dem anderen Modul, in denen ordinal 42, und Sie Aufrufern die Verwendung als `func2`, würden Sie angeben:
 
 ```DEF
 EXPORTS
    func2=other_module.#42
 ```
 
-Da Visual C++-Compiler die namensergänzung für C++-Funktionen verwendet, müssen Sie entweder die ergänzten Namen Internal_name oder definieren die exportierten Funktionen unter Verwendung von Extern "C" im Quellcode. Der Compiler ergänzt auch C-Funktionen, mit denen die [__stdcall](../../cpp/stdcall.md) -Aufrufkonvention mit einem Unterstrich (\_) Präfix und einem Suffix bestehen die at-Zeichen (\@) gefolgt von der Anzahl von Bytes (als Dezimalzahl) in der Argumentliste.
+Da Visual C++-Compiler die namensergänzung für C++-Funktionen verwendet, müssen Sie entweder die ergänzten Namen verwenden *Internal_name* oder definieren Sie die exportierten Funktionen mithilfe von `extern "C"` im Quellcode. Der Compiler ergänzt auch C-Funktionen, mit denen die [__stdcall](../../cpp/stdcall.md) -Aufrufkonvention mit einem Unterstrich (\_) Präfix und einem Suffix bestehen die at-Zeichen (\@) gefolgt von der Anzahl von Bytes (als Dezimalzahl) in der Argumentliste.
 
 Um die vom Compiler erzeugten, ergänzten Namen zu suchen, verwenden die [DUMPBIN](../../build/reference/dumpbin-reference.md) Tool oder den Linker [/MAP](../../build/reference/map-generate-mapfile.md) Option. Die ergänzten Namen sind compilerspezifisch. Wenn Sie die ergänzten Namen in der .DEF-Datei exportieren, müssen die ausführbaren Dateien, die zur DLL verknüpfen, ebenfalls mit derselben Version des Compilers erstellt werden. Damit wird sichergestellt, dass die ergänzten Namen im Aufrufer den exportierten Namen in der .DEF-Datei entsprechen.
 
-Sie können \@ *ordinal* um anzugeben, dass eine Zahl und nicht der Funktionsname in der Exporttabelle der DLL geht. Viele Windows-DLLs exportieren Ordinalzahlen, um Legacycode zu unterstützen. Es war üblich, Ordinalzahlen in 16-Bit-Windows-Code zu verwenden, weil das dazu beitragen kann, die Größe einer DLL zu minimieren. Es wird nicht empfohlen, Funktionen anhand der Ordinalzahl zu exportieren, es sei denn, die Clients Ihrer DLL benötigen sie zur Legacyunterstützung. Da die .LIB-Datei die Zuordnung zwischen der Ordinalzahl und der Funktion enthält, können Sie den Funktionsnamen verwenden, wie Sie es normalerweise in Projekten tun würden, die die DLL verwenden.
+Sie können \@ *ordinal* um anzugeben, dass eine Zahl und nicht der Funktionsname wird in der Exporttabelle der. Viele Windows-DLLs exportieren Ordinalzahlen, um Legacycode zu unterstützen. Es war üblich, Ordinalzahlen in 16-Bit-Windows-Code zu verwenden, weil das dazu beitragen kann, die Größe einer DLL zu minimieren. Es wird nicht empfohlen, Funktionen anhand der Ordinalzahl zu exportieren, es sei denn, die Clients Ihrer DLL benötigen sie zur Legacyunterstützung. Da die .LIB-Datei die Zuordnung zwischen der Ordinalzahl und der Funktion enthält, können Sie den Funktionsnamen verwenden, wie Sie es normalerweise in Projekten tun würden, die die DLL verwenden.
 
 Mithilfe des optionalen **NONAME** -Schlüsselwort, Sie können nur anhand der Ordinalzahl exportieren und die Größe der Exporttabelle in der resultierenden DLL reduzieren. Allerdings sollten Sie verwenden [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) in der DLL, müssen Sie die Ordinalzahl kennen, da der Name nicht gültig ist.
 
@@ -88,9 +86,16 @@ Es gibt vier Möglichkeiten für das Exportieren einer Definition, aufgelistet i
 
 3. Ein [/EXPORT](../../build/reference/export-exports-a-function.md) Spezifikation in einem LINK-Befehl
 
-4. Ein [Kommentar](../../preprocessor/comment-c-cpp.md) -Anweisung im Quellcode des Formulars `#pragma comment(linker, "/export: definition ")`  
+4. Ein [Kommentar](../../preprocessor/comment-c-cpp.md) -Anweisung im Quellcode, der das Formular `#pragma comment(linker, "/export: definition ")`. Das folgende Beispiel zeigt eine #pragma Comment-Anweisung vor der Deklaration einer Funktion, in denen `PlainFuncName` ist von der nicht ergänzte Namen, und `_PlainFuncName@4` ist der ergänzte Name der Funktion:
 
-Alle vier Methoden können im selben Programm verwendet werden. Wenn LINK ein Programm erstellt, das Exporte enthält, wird auch eine Importbibliothek erstellt, es sei denn, im Build wird eine .EXP-Datei verwendet.
+    ```cpp
+    #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")
+    BOOL CALLBACK PlainFuncName( Things * lpParams)
+    ```
+
+#Pragma-Direktive ist nützlich, wenn Sie müssen einen nicht ergänzten Funktionsnamen exportieren und anderen Exporte abhängig von der Buildkonfiguration (z. B. in 32-Bit oder 64-Bit-Builds).
+
+Alle vier Methoden können im selben Programm verwendet werden. Wenn LINK ein Programm erstellt, das Exporte enthält, wird auch eine Importbibliothek erstellt, es sei denn, im Build wird eine .EXP-Datei verwendet. 
 
 Hier ist ein Beispiel für einen EXPORTS-Abschnitt:
 

@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53760cd2d69067fd93a76a35b0ba29fcc82a4664
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9580068474eba77bcf50067efefb98b5949d464f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960068"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109888"
 ---
 # <a name="basicistringstream-class"></a>basic_istringstream-Klasse
 
@@ -44,11 +44,14 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>Parameter
 
-*Alloc* Allocator-Klasse.
+*Alloc*<br/>
+Die Zuweisungsklasse.
 
-*Elem* den Typ des grundlegenden Elements der Zeichenfolge.
+*Elem*<br/>
+Der Typ des grundlegenden Elements der Zeichenfolge.
 
-*TR* spezialisierten Zeichenmerkmale für das grundlegende Element der Zeichenfolge.
+*Tr*<br/>
+Die für das grundlegende Element der Zeichenfolge spezialisierten Zeichenmerkmale.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -112,11 +115,14 @@ basic_istringstream(
 
 ### <a name="parameters"></a>Parameter
 
-*_Modus* eine der Enumerationen in [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
+*_Modus*<br/>
+Eine der Enumerationen in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*Str* ein Objekt des Typs `basic_string`.
+*str*<br/>
+Ein Objekt vom Typ `basic_string`.
 
-*richtige* einen Rvalue-Verweis, der eine `basic_istringstream` Objekt.
+*right*<br/>
+Ein rvalue-Verweis auf ein `basic_istringstream`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -136,7 +142,8 @@ basic_istringstream& operator=(basic_istringstream&& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* ein Rvalue-Verweis auf eine `basic_istringstream` Objekt.
+*right*<br/>
+Ein rvalue-Verweis auf ein `basic_istringstream`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -172,7 +179,8 @@ void str(
 
 ### <a name="parameters"></a>Parameter
 
-*_Newstr* die neue Zeichenfolge.
+*_Newstr*<br/>
+Die neue Zeichenfolge.
 
 ### <a name="return-value"></a>Rückgabewert
 

@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 366a0ec46b69567e9f03f1e0667555acd08f31be
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a3e3b61de731b518d965d3b7d1473489f6e863f0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960953"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100857"
 ---
 # <a name="cauchydistribution-class"></a>cauchy_distribution-Klasse
 
@@ -80,10 +80,11 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*RealType* der gleitkommaergebnistyp standardmäßig **doppelte**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType*<br/>
+Der gleitkommaergebnistyp standardmäßig **doppelte**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
-
-  *URNG* Die einheitliche Zufallszahlengenerator-Engine. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*URNG*<br/>
+Die einheitliche Zufallszahlengenerator-Engine. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
@@ -260,11 +261,14 @@ explicit cauchy_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*eine* der `a` verteilungsparameter.
+*a*<br/>
+Der `a`-Verteilungsparameter.
 
-*b* der `b` verteilungsparameter.
+*b*<br/>
+Der `b`-Verteilungsparameter.
 
-*Parm* der `param_type` Struktur verwendet, um die Verteilung erstellen.
+*parm*<br/>
+Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -292,11 +296,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*eine* der `a` verteilungsparameter.
+*a*<br/>
+Der `a`-Verteilungsparameter.
 
-*b* der `b` verteilungsparameter.
+*b*<br/>
+Der `b`-Verteilungsparameter.
 
-*richtige* der `param_type` zu zu vergleichende Objekt.
+*right*<br/>
+Das mit diesem `param_type`-Objekt zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
 

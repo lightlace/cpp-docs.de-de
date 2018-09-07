@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a7be40c729faff78c75c4ee751737a7b53592aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 705210881faed70a32c1ddd52d7257b5b5e5f161
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400657"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107462"
 ---
 # <a name="lockfile"></a>_lock_file
 
-Sperrt ein **Datei** Objekt zur Gewährleistung der Konsistenz für Threads, die Zugriff auf die **Datei** gleichzeitig-Objekt.
+Sperrt eine **Datei** Objekt zur Gewährleistung der Konsistenz für Threads, die Zugriff auf die **Datei** Objekt gleichzeitig.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,15 +53,16 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>Parameter
 
-*Datei* Dateihandle.
+*datei*<br/>
+Dateihandle.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_lock_file** Sperren-Funktion die **Datei** angegebene Objekt *Datei*. Die zugrunde liegende Datei nicht durch gesperrt **_lock_file**. Verwenden Sie [_unlock_file](unlock-file.md), um die Sperre der Datei aufzuheben. Aufrufe von **_lock_file** und **_unlock_file** müssen in einem Thread zugeordnet werden.
+Die **_lock_file** -Funktion sperrt die **Datei** angegebene Objekt *Datei*. Die zugrunde liegende Datei ist nicht gesperrt, indem **_lock_file**. Verwenden Sie [_unlock_file](unlock-file.md), um die Sperre der Datei aufzuheben. Aufrufe von **_lock_file** und **_unlock_file** muss in einem Thread übereinstimmen.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_lock_file**|\<stdio.h>|
 

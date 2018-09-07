@@ -7,12 +7,12 @@ f1_keywords:
 - map/std::swap (map)
 - map/std::swap (multimap)
 ms.assetid: 7cb3d1a5-7add-4726-a73f-61927eafd466
-ms.openlocfilehash: 3c6cb7d0308e4bafc531fe0baf0c5d666228c3ec
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 36af7eb87f777686a0a83fab98032ce36e75c906
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966367"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102524"
 ---
 # <a name="ltmapgt-functions"></a>&lt;map&gt;-Funktionen
 
@@ -33,9 +33,11 @@ void swap(
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* der Karte, in dem Elemente ausgetauscht werden sollen, oder die Zuordnung, deren Elemente ausgetauscht werden, mit denen der Zuordnung *linken*.
+*right*<br/>
+Die Zuordnung, in dem Elemente ausgetauscht werden sollen, oder die Zuordnung, deren Elemente ausgetauscht werden, mit denen der Zuordnung *linken*.
 
-*linken* die Zuordnung, deren Elemente ausgetauscht werden, mit denen der Zuordnung *rechten*.
+*left*<br/>
+Die Zuordnung, deren Elemente ausgetauscht werden, mit denen der Zuordnung *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -58,9 +60,11 @@ void swap(
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* das multimap-Klasse, die Elemente ausgetauscht werden sollen, oder die multimap-Klasse, deren Elemente mit denen der mehrfachzuordnung ausgetauscht werden *linken*.
+*right*<br/>
+Die multimap-Klasse, die Elemente ausgetauscht werden sollen, oder die multimap-Klasse, deren Elemente mit denen der mehrfachzuordnung ausgetauscht werden *linken*.
 
-*linken* das multimap-Klasse, deren Elemente ausgetauscht werden, mit denen der mehrfachzuordnung *rechten*.
+*left*<br/>
+Die multimap-Klasse, deren Elemente ausgetauscht werden, mit denen der mehrfachzuordnung *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 
