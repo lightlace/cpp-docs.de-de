@@ -50,12 +50,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bae212ec3d8edfacc7cd3afb37ab3c13dc11aef
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fb00f7205dcb470785c9682335341ca07935aae5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962445"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110437"
 ---
 # <a name="allocatortraits-class"></a>allocator_traits-Klasse
 
@@ -116,11 +116,14 @@ static pointer allocate(Alloc& al, size_type count,
 
 ### <a name="parameters"></a>Parameter
 
-*Al* ein Zuweisungsobjekt.
+*Al*<br/>
+Ein Zuweisungsobjekt.
 
-*Anzahl* die Anzahl der zuzuweisenden Elemente.
+*count*<br/>
+Die Anzahl der zuzuweisenden Elemente.
 
-*Hinweis* ein `const_pointer` , die möglicherweise das Zuordnungsobjekt dabei hilft, die Anforderung von Speicherplatz durch Suchen der Adresse der ein zugeordnetes Objekt vor der Anforderung zu erfüllen. Ein NULL-Zeiger wird nicht als Hinweis behandelt.
+*Hinweis*<br/>
+Ein `const_pointer`, der dem Zuweisungsobjekt möglicherweise dabei hilft, die Anforderung von Speicherplatz zu erfüllen. Dazu sucht er die Adresse eines vor der Anforderung zugewiesenen Objekts. Ein NULL-Zeiger wird nicht als Hinweis behandelt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -141,11 +144,14 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 ### <a name="parameters"></a>Parameter
 
-*Al* ein Zuweisungsobjekt.
+*Al*<br/>
+Ein Zuweisungsobjekt.
 
-*PTR* ein Zeiger auf den Speicherort, an dem das Objekt erstellt werden.
+*ptr*<br/>
+Ein Zeiger auf den Speicherort, in dem das Objekt erstellt werden soll.
 
-*Args* eine Liste von Argumenten, die an den Objektkonstruktor übergeben wird.
+*args*<br/>
+Eine Liste von Argumenten, die an den Objektkonstruktor übergeben wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -163,11 +169,14 @@ static void deallocate(Alloc al,
 
 ### <a name="parameters"></a>Parameter
 
-*Al* ein Zuweisungsobjekt.
+*Al*<br/>
+Ein Zuweisungsobjekt.
 
-*PTR* ein Zeiger auf die Startposition der Objekte aufgehoben werden.
+*ptr*<br/>
+Ein Zeiger auf den Anfangsort des Objekts, dessen Zuweisung aufzuheben ist.
 
-*Anzahl* die Anzahl der Objekte beim Aufheben der Zuordnung.
+*count*<br/>
+Die Anzahl von Objekten, deren Zuweisung aufzuheben ist.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -186,9 +195,11 @@ static void destroy(Alloc& al, Uty* ptr);
 
 ### <a name="parameters"></a>Parameter
 
-*Al* ein Zuweisungsobjekt.
+*Al*<br/>
+Ein Zuweisungsobjekt.
 
-*PTR* ein Zeiger auf den Speicherort des Objekts.
+*ptr*<br/>
+Ein Zeiger auf den Speicherort des Objekts.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -204,7 +215,8 @@ static size_type max_size(const Alloc& al);
 
 ### <a name="parameters"></a>Parameter
 
-*Al* ein Zuweisungsobjekt.
+*Al*<br/>
+Ein Zuweisungsobjekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -220,7 +232,8 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 ### <a name="parameters"></a>Parameter
 
-*Al* ein Zuweisungsobjekt.
+*Al*<br/>
+Ein Zuweisungsobjekt.
 
 ### <a name="return-value"></a>Rückgabewert
 

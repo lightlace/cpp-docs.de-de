@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fac73456108669950f59f2399495526b8b319f07
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3198a2d3ef91df80429f7cd245e5616ebe7af43a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956806"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110629"
 ---
 # <a name="codecvt-class"></a>codecvt-Klasse
 
@@ -70,11 +70,14 @@ class codecvt : public locale::facet, codecvt_base;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType* den Typ innerhalb eines Programms zum Codieren von Zeichen verwendet.
+*CharType*<br/>
+Der Typ, der innerhalb eines Programms verwendet wird, um Zeichen zu codieren.
 
-*Byte* ein Typ, der zum Codieren von Zeichen außerhalb eines Programms verwendet.
+*Byte*<br/>
+Ein Typ, mit dem Zeichen außerhalb eines Programms codiert werden.
 
-*StateType* ein Typ, der verwendet werden kann, um Zwischenzustände einer Konvertierung zwischen internen und externen zeichendarstellungen darzustellen.
+*StateType*<br/>
+Ein Typ, der verwendet werden kann, um Zwischenzustände einer Konvertierung zwischen internen und externen Zeichendarstellungen darzustellen.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -206,7 +209,8 @@ explicit codecvt(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parameter
 
-*_Refs* Ganzzahlwert verwendet, um den Typ für die Speicherverwaltung für das Objekt anzugeben.
+*_Refs*<br/>
+Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -216,7 +220,7 @@ Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
 
 - 1: Die Lebensdauer des Objekts muss manuell verwaltet werden.
 
-- \> 1: Diese Werte sind nicht definiert.
+- 2: Diese Werte sind nicht definiert.
 
 Der Konstruktor initialisiert seine `locale::facet` Basisobjekt mit **Locale::**[Facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
@@ -277,19 +281,26 @@ virtual result do_in(
 
 ### <a name="parameters"></a>Parameter
 
-*_State* der konvertierungszustand, der zwischen den Aufrufen der Memberfunktion beibehalten wird.
+*_State*<br/>
+Der Konvertierungszustand, der zwischen den Aufrufen der Memberfunktion beibehalten wird.
 
-*first1* Zeiger auf den Anfang der Sequenz, die konvertiert werden.
+*first1*<br/>
+Zeiger auf den Anfang der zu konvertierenden Sequenz.
 
-*Last1* Zeiger auf das Ende der Sequenz, die konvertiert werden.
+*Last1*<br/>
+Zeiger auf das Ende der zu konvertierenden Sequenz.
 
-*next1* Zeiger hinter das Ende der konvertierten Sequenz auf das erste nicht konvertierte Zeichen.
+*next1*<br/>
+Zeiger hinter das Ende der konvertierten Sequenz auf das erste nicht konvertierte Zeichen.
 
-*first2* Zeiger am Anfang der konvertierten Sequenz.
+*first2*<br/>
+Zeiger auf den Anfang der konvertierten Sequenz.
 
-*Last2* Zeiger auf das Ende der konvertierten Sequenz.
+*Last2*<br/>
+Zeiger auf das Ende der konvertierten Sequenz.
 
-*next2* Zeiger auf die `CharType` , die wird nach dem letzten konvertierten `CharType`, auf das erste unveränderte Zeichen in der Zielsequenz.
+*next2*<br/>
+Zeiger auf die `CharType` , die wird nach dem letzten konvertierten `CharType`, auf das erste unveränderte Zeichen in der Zielsequenz.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -325,13 +336,17 @@ virtual int do_length(
 
 ### <a name="parameters"></a>Parameter
 
-*_State* der konvertierungszustand, der zwischen den Aufrufen der Memberfunktion beibehalten wird.
+*_State*<br/>
+Der Konvertierungszustand, der zwischen den Aufrufen der Memberfunktion beibehalten wird.
 
-*first1* Zeiger auf den Anfang der externen Sequenz.
+*first1*<br/>
+Zeiger auf den Anfang der externen Sequenz.
 
-*Last1* Zeiger auf das Ende der externen Sequenz.
+*Last1*<br/>
+Zeiger auf das Ende der externen Sequenz.
 
-*_Len2* die maximale Anzahl von `Byte`s, die von der Memberfunktion zurückgegeben werden kann.
+*_Len2*<br/>
+Die maximale Anzahl von `Byte`s, die von der Memberfunktion zurückgegeben werden kann.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -386,19 +401,26 @@ virtual result do_out(
 
 ### <a name="parameters"></a>Parameter
 
-*_State* der konvertierungszustand, der zwischen den Aufrufen der Memberfunktion beibehalten wird.
+*_State*<br/>
+Der Konvertierungszustand, der zwischen den Aufrufen der Memberfunktion beibehalten wird.
 
-*first1* Zeiger auf den Anfang der Sequenz, die konvertiert werden.
+*first1*<br/>
+Zeiger auf den Anfang der zu konvertierenden Sequenz.
 
-*Last1* Zeiger auf das Ende der Sequenz, die konvertiert werden.
+*Last1*<br/>
+Zeiger auf das Ende der zu konvertierenden Sequenz.
 
-*next1* Verweis auf einen Zeiger auf das erste nicht konvertierte `CharType`, nach dem letzten `CharType` konvertiert.
+*next1*<br/>
+Verweis auf einen Zeiger auf das erste nicht konvertierte `CharType`, nach dem letzten `CharType` konvertiert.
 
-*first2* Zeiger am Anfang der konvertierten Sequenz.
+*first2*<br/>
+Zeiger auf den Anfang der konvertierten Sequenz.
 
-*Last2* Zeiger auf das Ende der konvertierten Sequenz.
+*Last2*<br/>
+Zeiger auf das Ende der konvertierten Sequenz.
 
-*next2* Verweis auf einen Zeiger auf das erste nicht konvertierte `Byte`, nach dem letzten `Byte` konvertiert.
+*next2*<br/>
+Verweis auf einen Zeiger auf das erste nicht konvertierte `Byte`, nach dem letzten `Byte` konvertiert.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -434,13 +456,17 @@ virtual result do_unshift(
 
 ### <a name="parameters"></a>Parameter
 
-*_State* der konvertierungszustand, der zwischen den Aufrufen der Memberfunktion beibehalten wird.
+*_State*<br/>
+Der Konvertierungszustand, der zwischen den Aufrufen der Memberfunktion beibehalten wird.
 
-*first2* Zeiger auf die erste Position im Zielbereich.
+*first2*<br/>
+Zeiger auf die erste Position im Zielbereich.
 
-*Last2* Zeiger auf die letzte Position im Zielbereich.
+*Last2*<br/>
+Zeiger auf die letzte Position im Zielbereich.
 
-*next2* Zeiger auf das erste unveränderte Element in der Zielsequenz.
+*next2*<br/>
+Zeiger auf das erste unveränderte Element in der Zielsequenz.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -544,19 +570,26 @@ result in(
 
 ### <a name="parameters"></a>Parameter
 
-*_State* der konvertierungszustand, der zwischen den Aufrufen der Memberfunktion beibehalten wird.
+*_State*<br/>
+Der Konvertierungszustand, der zwischen den Aufrufen der Memberfunktion beibehalten wird.
 
-*first1* Zeiger auf den Anfang der Sequenz, die konvertiert werden.
+*first1*<br/>
+Zeiger auf den Anfang der zu konvertierenden Sequenz.
 
-*Last1* Zeiger auf das Ende der Sequenz, die konvertiert werden.
+*Last1*<br/>
+Zeiger auf das Ende der zu konvertierenden Sequenz.
 
-*next1* Zeiger hinter das Ende der konvertierten Sequenz auf das erste nicht konvertierte Zeichen.
+*next1*<br/>
+Zeiger hinter das Ende der konvertierten Sequenz auf das erste nicht konvertierte Zeichen.
 
-*first2* Zeiger am Anfang der konvertierten Sequenz.
+*first2*<br/>
+Zeiger auf den Anfang der konvertierten Sequenz.
 
-*Last2* Zeiger auf das Ende der konvertierten Sequenz.
+*Last2*<br/>
+Zeiger auf das Ende der konvertierten Sequenz.
 
-*next2* Zeiger auf die `CharType` , die wird nach dem letzten konvertierten `Chartype` auf das erste unveränderte Zeichen in der Zielsequenz.
+*next2*<br/>
+Zeiger auf die `CharType` , die wird nach dem letzten konvertierten `Chartype` auf das erste unveränderte Zeichen in der Zielsequenz.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -610,7 +643,7 @@ int main( )
 
 ```Output
 It worked! The converted string is:
- [This is the string to be converted!]
+[This is the string to be converted!]
 ```
 
 ## <a name="intern_type"></a> codecvt::intern_type
@@ -639,13 +672,17 @@ int length(
 
 ### <a name="parameters"></a>Parameter
 
-*_State* der konvertierungszustand, der zwischen den Aufrufen der Memberfunktion beibehalten wird.
+*_State*<br/>
+Der Konvertierungszustand, der zwischen den Aufrufen der Memberfunktion beibehalten wird.
 
-*first1* Zeiger auf den Anfang der externen Sequenz.
+*first1*<br/>
+Zeiger auf den Anfang der externen Sequenz.
 
-*Last1* Zeiger auf das Ende der externen Sequenz.
+*Last1*<br/>
+Zeiger auf das Ende der externen Sequenz.
 
-*_Len2* die maximale Anzahl von Bytes, die von der Memberfunktion zurückgegeben werden können.
+*_Len2*<br/>
+Die maximale Anzahl von Bytes, die von der Memberfunktion zurückgegeben werden kann.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -740,19 +777,26 @@ result out(
 
 ### <a name="parameters"></a>Parameter
 
-*_State* der konvertierungszustand, der zwischen den Aufrufen der Memberfunktion beibehalten wird.
+*_State*<br/>
+Der Konvertierungszustand, der zwischen den Aufrufen der Memberfunktion beibehalten wird.
 
-*first1* Zeiger auf den Anfang der Sequenz, die konvertiert werden.
+*first1*<br/>
+Zeiger auf den Anfang der zu konvertierenden Sequenz.
 
-*Last1* Zeiger auf das Ende der Sequenz, die konvertiert werden.
+*Last1*<br/>
+Zeiger auf das Ende der zu konvertierenden Sequenz.
 
-*next1* Verweis auf einen Zeiger auf das erste nicht konvertierte `CharType` nach dem letzten `CharType` konvertiert.
+*next1*<br/>
+Verweis auf einen Zeiger auf das erste nicht konvertierte `CharType` nach dem letzten `CharType` konvertiert.
 
-*first2* Zeiger am Anfang der konvertierten Sequenz.
+*first2*<br/>
+Zeiger auf den Anfang der konvertierten Sequenz.
 
-*Last2* Zeiger auf das Ende der konvertierten Sequenz.
+*Last2*<br/>
+Zeiger auf das Ende der konvertierten Sequenz.
 
-*next2* Verweis auf einen Zeiger auf das erste nicht konvertierte `Byte` nach dem letzten konvertierten `Byte`.
+*next2*<br/>
+Verweis auf einen Zeiger auf das erste nicht konvertierte `Byte` nach dem letzten konvertierten `Byte`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -796,7 +840,7 @@ int main( )
 
 ```Output
 It worked: The converted string is:
- [This is the wchar_t string to be converted.]
+[This is the wchar_t string to be converted.]
 ```
 
 ## <a name="state_type"></a> codecvt::state_type
@@ -825,13 +869,17 @@ result unshift(
 
 ### <a name="parameters"></a>Parameter
 
-*_State* der konvertierungszustand, der zwischen den Aufrufen der Memberfunktion beibehalten wird.
+*_State*<br/>
+Der Konvertierungszustand, der zwischen den Aufrufen der Memberfunktion beibehalten wird.
 
-*first2* Zeiger auf die erste Position im Zielbereich.
+*first2*<br/>
+Zeiger auf die erste Position im Zielbereich.
 
-*Last2* Zeiger auf die letzte Position im Zielbereich.
+*Last2*<br/>
+Zeiger auf die letzte Position im Zielbereich.
 
-*next2* Zeiger auf das erste unveränderte Element in der Zielsequenz.
+*next2*<br/>
+Zeiger auf das erste unveränderte Element in der Zielsequenz.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -857,5 +905,5 @@ Die Memberfunktion gibt [do_unshift](#do_unshift)( `_State`, `first2`, `last2`, 
 
 [\<locale>](../standard-library/locale.md)<br/>
 [Codepages](../c-runtime-library/code-pages.md)<br/>
-[Gebietsschemanamen, Sprachen und Zeichenfolgen für Länder/Regionen](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[Gebietsschema-Namen, Sprachen und Zeichenfolgen für Länder und Regionen](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

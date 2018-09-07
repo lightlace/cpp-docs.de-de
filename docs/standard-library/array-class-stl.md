@@ -106,12 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf54b113e5eb3750d02b887945345880dca94775
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ac07884d3ac7390bdb3aba4144c1c436041434f0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960042"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110057"
 ---
 # <a name="array-class-c-standard-library"></a>array-Klasse (C++-Standardvorlagenbibliothek)
 
@@ -202,7 +202,8 @@ array(const array& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* Objekt oder Bereich eingefügt.
+*right*<br/>
+Einzufügendes Objekt bzw. einzufügender Bereich.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -257,7 +258,8 @@ void assign(const Ty& val);
 
 ### <a name="parameters"></a>Parameter
 
-*Val* zuzuweisende Wert.
+*val*<br/>
+Der Wert, der zugewiesen werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -313,7 +315,8 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Off* den Zugriff auf die Position des Elements.
+*Ausschalten*<br/>
+Position des Elements, auf das zugegriffen wird
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1173,7 +1176,8 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Off* den Zugriff auf die Position des Elements.
+*Ausschalten*<br/>
+Position des Elements, auf das zugegriffen wird
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1225,7 +1229,8 @@ array <Value>%  operator=(array <Value>% right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* zu kopierende Container.
+*right*<br/>
+Der zu kopierende Container.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1602,7 +1607,8 @@ void swap(array& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* Inhalte mit auszutauschende Array.
+*right*<br/>
+Container für den Tausch von Inhalten.
 
 ### <a name="remarks"></a>Hinweise
 

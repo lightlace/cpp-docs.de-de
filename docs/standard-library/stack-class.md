@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b933029f7180292e1c9e392bf2ab09e8dbcb204
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e4f1f34e43f04d19efb38ba32488b43845d42260
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963224"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110411"
 ---
 # <a name="stack-class"></a>stack-Klasse
 
@@ -50,9 +50,11 @@ class stack
 
 ### <a name="parameters"></a>Parameter
 
-*Typ* die Datentyp der Elemente im Stapel gespeichert werden.
+*Type*<br/>
+Der Datentyp der Elemente, die im Stapel gespeichert werden sollen.
 
-*Container* den Typ des zugrunde liegenden Container verwendet, um den Stapel zu implementieren. Der Standardwert ist die Klasse `deque`*\<Type>*.
+*Container*<br/>
+Der Typ des zugrunde liegenden Containers, der verwendet wird, um den Stapel zu implementieren. Der Standardwert ist die Klasse `deque`*\<Type>*.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -227,7 +229,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parameter
 
-*Val* das am Anfang des Stacks hinzugefügte Element.
+*val*<br/>
+Das am Anfang des Stacks hinzugefügte Element.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -334,7 +337,8 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* den Container dem der erstellte Stack ist eine Kopie.
+*right*<br/>
+Der Container, dessen Kopie der erstellte Stack sein soll.
 
 ### <a name="example"></a>Beispiel
 

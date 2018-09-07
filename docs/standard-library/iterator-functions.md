@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::make_unchecked_array_iterator [C++]
 - std::next [C++]
 - std::prev [C++]
-ms.openlocfilehash: 995aa846af4642070150f2dd41d4bf6463f46ee8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d14bba0e38e49145ccd7d0078f4bbfd731e08827
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964459"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110424"
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterator&gt;-Funktionen
 
@@ -64,9 +64,11 @@ void advance(
 
 ### <a name="parameters"></a>Parameter
 
-*InIt* der Iterator inkrementiert werden soll und die Anforderungen für einen eingabeiterator erfüllen muss.
+*InIt*<br/>
+Der Iterator, der vorwärts verschoben werden soll und die Anforderungen für einen Eingabeiterator erfüllen muss.
 
-*Off* ein ganzzahliger Typ, der Differenztyp des Iterators konvertierbar ist und festlegt, die Anzahl der Schritte, die die Position des Iterators ist, verschoben werden soll.
+*Off*<br/>
+Ein Ganzzahltyp, der in den Differenztyp des Iterators konvertierbar ist und die Anzahl von Schritten angibt, um die die Position des Iterators vorwärts verschoben werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -134,7 +136,8 @@ back_insert_iterator<Container> back_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>Parameter
 
-*_Cont* der Container, in dem die Einfügung ausgeführt werden.
+*_Cont*<br/>
+Der Container, in dem die Einfügung am Ende ausgeführt werden sollte.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -172,9 +175,9 @@ int main( )
 
    // Insertions can be done with template function
    back_insert_iterator<vector<int> > backiter ( vec );
- *backiter = 30;
+*backiter = 30;
    backiter++;
- *backiter = 40;
+*backiter = 40;
 
    // Alternatively, insertions can be done with the
    // back_insert_iterator member function
@@ -212,9 +215,11 @@ Ty *begin(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Parameter
 
-*bietet* einen Container.
+*Inhalt*<br/>
+Ein Container.
 
-*Array* ein Array von Objekten des Typs `Ty`.
+*array*<br/>
+Ein Array von Objekten des Typs `Ty`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -305,7 +310,8 @@ auto cbegin(const Container& cont)
 
 ### <a name="parameters"></a>Parameter
 
-*bietet* einen Container oder ein initializer_list-Element.
+*Inhalt*<br/>
+Ein Container oder ein initializer_list-Element.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -337,7 +343,8 @@ auto cend(const Container& cont)
 
 ### <a name="parameters"></a>Parameter
 
-*bietet* einen Container oder ein initializer_list-Element.
+*Inhalt*<br/>
+Ein Container oder ein initializer_list-Element.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -368,9 +375,11 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 
 ### <a name="parameters"></a>Parameter
 
-*erste* der erste Iterator, deren Abstand zu der zweiten ist, bestimmt werden soll.
+*Erste*<br/>
+Der erste Iterator, dessen Abstand zum zweiten ermittelt werden soll.
 
-*letzte* der zweite Iterator ist, deren Abstand von der ersten ermittelt werden.
+*last*<br/>
+Der zweite Iterator, dessen Abstand zum ersten ermittelt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -447,9 +456,11 @@ Ty *end(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Parameter
 
-*bietet* einen Container.
+*Inhalt*<br/>
+Ein Container.
 
-*Array* ein Array von Objekten des Typs `Ty`.
+*array*<br/>
+Ein Array von Objekten des Typs `Ty`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -472,7 +483,8 @@ front_insert_iterator<Container> front_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>Parameter
 
-*_Cont* das Container-Objekt, dessen Front ein Element hat, eingefügt.
+*_Cont*<br/>
+Das Containerobjekt, dessen Front ein eingefügtes Element hat.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -512,7 +524,7 @@ int main( )
 
    // Using the template function to insert an element
    front_insert_iterator< list < int> > Iter(L);
- *Iter = 100;
+*Iter = 100;
 
    // Alternatively, you may use the front_insert member function
    front_inserter ( L ) = 200;
@@ -526,9 +538,9 @@ int main( )
 
 ```Output
 The list L is:
- ( -1 0 1 2 3 4 5 6 7 8 ).
+( -1 0 1 2 3 4 5 6 7 8 ).
 After the front insertions, the list L is:
- ( 200 100 -1 0 1 2 3 4 5 6 7 8 ).
+( 200 100 -1 0 1 2 3 4 5 6 7 8 ).
 ```
 
 ## <a name="inserter"></a> inserter
@@ -545,9 +557,11 @@ inserter(
 
 ### <a name="parameters"></a>Parameter
 
-*_Cont* den Container, werden neue Elemente hinzugefügt werden.
+*_Cont*<br/>
+Der Container, zu dem neue Elemente hinzugefügt werden sollen.
 
-*_Where* ein Iterator, der Suche nach der Einfügemarke.
+*_Where*<br/>
+Ein Iterator, der nach der Einfügemarke sucht.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -581,7 +595,7 @@ int main( )
 
    // Using the template version to insert an element
    insert_iterator<list <int> > Iter( L, L.begin ( ) );
- *Iter = 1;
+*Iter = 1;
 
    // Alternatively, using the member function to insert an element
    inserter ( L, L.end ( ) ) = 500;
@@ -595,9 +609,9 @@ int main( )
 
 ```Output
 The list L is:
- ( 20 30 40 ).
+( 20 30 40 ).
 After the insertions, the list L is:
- ( 1 20 30 40 500 ).
+( 1 20 30 40 500 ).
 ```
 
 ## <a name="make_checked_array_iterator"></a> make_checked_array_iterator
@@ -611,18 +625,21 @@ Erstellt einen [checked_array_iterator](../standard-library/checked-array-iterat
 template <class Iter>
 checked_array_iterator<Iter>
     make_checked_array_iterator(
- Iter Ptr,
+Iter Ptr,
     size_t Size,
     size_t Index = 0);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*PTR* ein Zeiger auf das Zielarray.
+*PTR*<br/>
+Ein Zeiger auf das Zielarray.
 
-*Größe* die Größe des Zielarrays.
+*Size*<br/>
+Die Größe des Zielarrays.
 
-*Index* Optionaler Index im Array.
+*Index*<br/>
+Optionaler Index im Array.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -704,7 +721,8 @@ make_move_iterator(const Iterator& _It);
 
 ### <a name="parameters"></a>Parameter
 
-*_It* der Iterator in der neuen gespeicherten Iterator zu verschieben.
+*_It*<br/>
+Der Iterator, der im neuen Move-Iterator gespeichert ist.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -725,7 +743,8 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>Parameter
 
-*PTR* ein Zeiger auf das Zielarray.
+*PTR*<br/>
+Ein Zeiger auf das Zielarray.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -802,9 +821,11 @@ InputIterator next(
 
 ### <a name="parameters"></a>Parameter
 
-*erste* der aktuellen Position.
+*Erste*<br/>
+Die aktuelle Position.
 
-*_Off* die Anzahl der Iterationen.
+*_Off*<br/>
+Die Anzahl der Iterationen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -827,9 +848,11 @@ BidirectionalIterator prev(
 
 ### <a name="parameters"></a>Parameter
 
-*erste* der aktuellen Position.
+*Erste*<br/>
+Die aktuelle Position.
 
-*_Off* die Anzahl der Iterationen.
+*_Off*<br/>
+Die Anzahl der Iterationen.
 
 ### <a name="remarks"></a>Hinweise
 

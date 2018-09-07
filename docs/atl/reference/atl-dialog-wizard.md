@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3311e46ea28424717a0274fbe9e956610cdc54
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3a6854a3b11d5c5850d790e749789e91a7cb986a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767711"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110036"
 ---
 # <a name="atl-dialog-wizard"></a>ATL-Dialogfeld-Assistent
 
@@ -35,7 +35,7 @@ Der Assistent fügt die Header-Datei eine [meldungszuordnung](../../atl/message-
 **Kurzname**  
 Legt fest, den abgekürzten Namen für das ATL-Dialogfeld-Objekt. Der Name, den Sie angeben, bestimmt den Klassennamen und den Dateinamen (cpp- und .h), wenn Sie die Felder einzeln ändern.
 
-`Class`  
+**Klasse**  
 Legt den Namen der Klasse erstellt werden. Dieser Name basiert auf den Namen, die Sie, in angeben **Kurznamen**ist 'C', das typische Präfix für einen Klassennamen vorangestellt.
 
 **H-Datei**  
