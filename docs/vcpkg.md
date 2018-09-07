@@ -14,12 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af51ee7c6fa4e1243b400be58ac22ba833cfae80
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 043ad3a0767cc6769be1d20fe6e6d31cc5c119fb
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705437"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42583901"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Ein C++-Paket-Manager für Windows, Linux und macOS
 
@@ -91,7 +91,7 @@ Additional packages (*) will be installed to complete this operation.
 
 ```
 
-Verwenden Sie bei CMAKE-Projekten CMAKE_TOOLCHAIN_FILE, um Bibliotheken mit `find_package()` verfügbar zu machen. Zum Beispiel:  
+Verwenden Sie bei CMAKE-Projekten CMAKE_TOOLCHAIN_FILE, um Bibliotheken mit `find_package()` zur Verfügung zu stellen. Zum Beispiel:  
 
 ```cmd
 cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
@@ -217,7 +217,7 @@ Der Inhalt einer vcpkg-Instanz sieht folgendermaßen aus:
 
 ## <a name="command-line-reference"></a>Befehlszeilenreferenz
 
-|Befehl|description|
+|Befehl|Beschreibung |
 |---------|---------|
 |**vcpkg search [pat]**|Suchen nach installationsbereiten Paketen|
 |**vcpkg install \<pkg>...**|Installieren eines Pakets|
@@ -239,7 +239,7 @@ Der Inhalt einer vcpkg-Instanz sieht folgendermaßen aus:
 
 ### <a name="options"></a>Optionen
 
-|Option|description|
+|Option|Beschreibung |
 |---------|---------|
 |**--triplet \<t>**|Angeben der Dreiergruppe der Zielarchitektur (Standard: `%VCPKG_DEFAULT_TRIPLET%`, siehe auch **vcpkg help triplet**)|
 |**--vcpkg-root \<path>**|Angeben des vcpkg-Stammverzeichnisses (Standard: `%VCPKG_ROOT%`)|

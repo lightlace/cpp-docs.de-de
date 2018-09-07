@@ -1,7 +1,7 @@
 ---
 title: CRT-Bibliotheksfunktionen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/13/2018
+ms.date: 08/20/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8ba56f0b4fa6d7d6ac56f3f118edeaad03643b5
-ms.sourcegitcommit: 0ce270566769cba76d763dd69b304a55eb375d01
+ms.openlocfilehash: 5785d06a09c823140362fa4afc6a8b12954e5ac3
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34799193"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42578447"
 ---
 # <a name="crt-library-features"></a>CRT-Bibliotheksfunktionen
 
@@ -64,6 +64,8 @@ In der folgenden Tabelle sind die Bibliotheken aufgelistet, die die vcruntime-Bi
 |libvcruntimed.lib|Keiner|Die Debugversion für statisches Linken. Nicht neu verteilbar.|**/MTd**|_MT, _DEBUG|
 |vcruntime.lib|vcruntime\<Version>.dll|DLL-Importbibliothek für die vcruntime.|**/MD**|_MT, _DLL|
 |vcruntimed.lib|vcruntime\<Version>d.dll|DLL-Importbibliothek für die Debug-vcruntime. Nicht neu verteilbar.|**/MDd**|_DEBUG, _MT, _DLL|
+
+Beim UCRT-Refactoring wurden die Concurrency Runtime-Funktionen in „concrt140.dll“ verschoben, was ein Bestandteil von C++ Redistributable Package ist. Diese DLL ist für parallele C++-Container und -Algorithmen wie `concurrency::parallel_for` erforderlich. Darüber hinaus ist diese DLL unter Windows XP für die C++-Standardbibliothek zur Unterstützung von Synchronisierungsprimitiven erforderlich, da Windows XP über keine Bedingungsvariablen verfügt.
 
 Der Code, von dem die CRT initialisiert wird, befindet sich in einer von mehreren Bibliotheken, je nachdem, ob die CRT-Bibliothek statisch oder dynamisch gebunden wird oder als systemeigener, verwalteter oder gemischter Code vorliegt. Dieser Code verwaltet den CRT-Start, die interne threadbezogene Dateninitialisierung und die Beendigung. Der Code ist speziell entsprechend der Version des verwendeten Compilers. Diese Bibliothek wird immer statisch gebunden, auch wenn eine dynamisch gebundene UCRT verwendet wird.
 

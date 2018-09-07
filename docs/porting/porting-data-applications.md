@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c148c805cb4ddc5e012e9de5e8e5f7e207f47dc3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c20b9b6e8c1e96736485f302203156f627ef6794
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839880"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578473"
 ---
 # <a name="porting-data-applications"></a>Portieren von Datenanwendungen
 Über die Jahre hinweg hat Visual C++ mehrere Möglichkeiten zum Arbeiten mit Datenbanken bereitgestellt. 2011 kündigte Microsoft an, dass das Ausrichten auf ODBC als bevorzugte Technologie für den Zugriff auf SQL Server-Produkte über nativen Code angewendet wird. ODBC ist ein Branchenstandard, durch dessen Verwendung Sie die maximale Portabilität Ihres Codes über mehrere Plattformen und Datenquellen erreichen. Die meisten SQL-Datenbankprodukte und viele NoSQL-Produkte unterstützen ODBC. Sie können ODBC direkt verwenden, indem Sie die ODBC-APIs auf niedriger Ebene aufrufen, oder Sie können die MFC-ODBC-Wrapperklassen oder eine C++-Wrapperbibliothek eines Drittanbieters verwenden. 
@@ -36,11 +36,12 @@ Die SQL Native Client-Komponente (SNAC), die OLE DB- und ODBC-Treiber in eine ei
 
 Wenn Sie C++/CLI verwenden, können Sie weiterhin wie gewohnt ADO.NET verwenden. Weitere Informationen finden Sie unter [Datenzugriff mit ADO.NET (C++/CLI)](../dotnet/data-access-using-adonet-cpp-cli.md) und [Zugreifen auf Daten in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).  
   
--   Zusätzlich zu den ODBC-Wrapperklassen stellt MFC auch Datenzugriffsobjekt-Wrapperklassen (Data Access Object, DAO) zum Herstellen einer Verbindung mit Access-Datenbanken bereit.  DAO ist jedoch veraltet. Jeglicher Code, der auf CDaoDatabase oder CDaoRecordset basiert, sollte upgegradet werden. 
+- Zusätzlich zu den ODBC-Wrapperklassen stellt MFC auch Datenzugriffsobjekt-Wrapperklassen (Data Access Object, DAO) zum Herstellen einer Verbindung mit Access-Datenbanken bereit.  DAO ist jedoch veraltet. Jeder Code, der auf `CDaoDatabase` oder `CDaoRecordset` basiert sollte aktualisiert werden. 
 
 Weitere Informationen zur Geschichte von Datenzugriffstechnologien unter Windows finden Sie unter [Microsoft Data Access Components (Wikipedia) (Microsoft-Datenzugriffskomponenten)](https://en.wikipedia.org/wiki/Microsoft_Data_Access_Components).  
 
 ## <a name="see-also"></a>Siehe auch  
- [Datenzugriff in Visual C++](../data/data-access-in-cpp.md)  
- [Microsoft Open Database Connectivity (ODBC)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc)  
- [Data Access Technologies Road Map (Überblick über Datenzugriffstechnologien)](https://msdn.microsoft.com/en-us/library/ms810810.aspx)  
+ 
+[Datenzugriff in Visual C++](../data/data-access-in-cpp.md)  
+[Microsoft Open Database Connectivity (ODBC)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc)  
+[Data Access Technologies Road Map (Überblick über Datenzugriffstechnologien)](https://msdn.microsoft.com/library/ms810810.aspx)  

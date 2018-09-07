@@ -8,12 +8,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2057f3dc8abc3f661010300671b67ad5c37a87d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1091a28448aa6531aa909117e0284e19bbcc7cd8
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850599"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578424"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Upgraden Ihres Codes auf die Universal CRT
 
@@ -35,7 +35,7 @@ Die eigentlichen UCRT-DLLs und diejenigen zum Debuggen befinden sich an anderen 
 
 Der compilerspezifische C- und C++Unterstützungsbibliothek für die Laufzeit, **vcruntime**, enthält den erforderlichen Code für die Unterstützung des Programmstarts und Features wie die Ausnahmebehandlung und Interna. Die Bibliothek und deren Headerdateien befinden sich noch immer im versionsspezifischen Microsoft Visual Studio-Ordner in Ihrem Verzeichnis „Programme“ oder „Programme (x86)“. In Visual Studio 2017 befinden sich die Header unter „Microsoft Visual Studio\\2017\\_edition_\\VC\\Tools\\MSVC\\_lib-version_\\include (Einschließen)“, und die Link Libraries befinden sich unter „Microsoft Visual Studio\\2017\\_edition_\\VC\\Tools\\MSVC\\_lib-version_\\lib\\_architecture_“, wobei _edition_ die Edition der installierten Visual Studio-Version ist. _lib-version_ ist die Version der Bibliotheken und _architecture_ ist die Prozessorarchitektur. Link Libraries für OneCore und Store sind auch im Bibliotheksordner vorhanden. Die Retail- und Debugversionen der statischen Bibliothek sind „libvcruntime.lib“ und „libvcruntimed.lib“. Die Retail- und Debug-Stub-Bibliotheken der dynamischen Verknüpfung sind jeweils „vcruntime.lib“ und „vcruntimed.lib“.  
   
-Wenn Sie Ihre Visual C++-Projekte aktualisieren und Sie die **Linker** -Eigenschaft **Alle Standardbibliotheken ignorieren** des Projekts auf **Ja** festgelegt haben oder die /NODEFAULTLIB-Linkeroption in der Befehlszeile verwenden, müssen Sie die Liste der Bibliotheken so aktualisieren, dass sie die neuen umgestalteten Bibliotheken enthält. Ersetzen Sie die alte CRT-Bibliothek (z.B. libcmt.lib, libcmtd.lib, msvcrt.lib oder msvcrtd.lib) mit den entsprechenden umgestalteten Bibliotheken. Informationen zu den bestimmten Bibliotheken, die Sie verwenden können, finden Sie unter [CRT Library Features (Features der CRT-Bibliothek)](../c-runtime-library/crt-library-features.md).  
+Wenn Sie Ihre Visual C++-Projekte aktualisieren und Sie die **Linker** -Eigenschaft **Alle Standardbibliotheken ignorieren** des Projekts auf **Ja** festgelegt haben oder die Linkeroption `/NODEFAULTLIB` in der Befehlszeile verwenden, müssen Sie die Liste der Bibliotheken so aktualisieren, dass sie die neuen umgestalteten Bibliotheken enthält. Ersetzen Sie die alte CRT-Bibliothek (z.B. libcmt.lib, libcmtd.lib, msvcrt.lib oder msvcrtd.lib) mit den entsprechenden umgestalteten Bibliotheken. Informationen zu den bestimmten Bibliotheken, die Sie verwenden können, finden Sie unter [CRT Library Features (Features der CRT-Bibliothek)](../c-runtime-library/crt-library-features.md).  
   
 ## <a name="deployment-and-redistribution-of-the-universal-crt"></a>Bereitstellung und Neuverteilung der Universal CRT
   

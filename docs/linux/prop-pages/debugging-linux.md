@@ -12,16 +12,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 55f07d8903d8110410648e352d364151bf6d2a73
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df57a884186fe33d91de78647cc225f3a63a6f9f
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331099"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578300"
 ---
 # <a name="c-debugging-properties-linux-c"></a>C++-Debugeigenschaften (Linux C++)
 
-Eigenschaft | description | Auswahlmöglichkeiten
+Eigenschaft | Beschreibung  | Auswahlmöglichkeiten
 --- | ---| ---
 Befehl vor dem Start | Ein Befehl, der für die Shell ausgeführt wird, bevor das Debuggen beginnt und bevor der Debugger ausgeführt wird. Er kann verwendet werden, um die Debugumgebung zu beeinflussen.
 Program | Der vollständige Pfad zu dem auf dem Remotesystem zu debuggenden Programm. Dies ist ein Pfad auf dem Remotesystem. Wenn die Angabe leer oder unverändert gelassen wird, wird standardmäßig die aktuelle Projektausgabe verwendet.

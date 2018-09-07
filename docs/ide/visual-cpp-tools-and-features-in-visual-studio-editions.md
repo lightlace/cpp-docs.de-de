@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5eace3ef3cfd07847c995151554ba70ca23f820
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 79814d96bac185e73cc1c42a98be6d7b35e9a75d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337248"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42578146"
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Visual C++-Tools und -Features in Visual Studio-Editionen
 
@@ -45,8 +45,8 @@ Die folgenden Tabellen zeigen die Visual C++-Funktionen, die in Visual Studio ve
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |32-Bit-X86-Compiler|X|X|X|X|
 |X86_arm-Cross-Compiler|X||X|X|
-|64-Bit-[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]-Compiler|||X|X|
-|X86_-[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]-Cross-Compiler|X|X|X|X|
+|64-Bit x64-Compiler|||X|X|
+|x86_x64-Cross-Compiler|X|X|X|X|
 
 ## <a name="libraries-and-headers"></a>Bibliotheken und Header
 

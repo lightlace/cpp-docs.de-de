@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f05d7d3d3d3fd6b40a5477b7765b89409747d3ce
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5789e353a6e15d4da3f5754d9d4d91821359d14
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845865"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42578186"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Einführung in Visual C++ für UNIX-Benutzer
 
@@ -37,7 +37,7 @@ Um die Vorteile leistungsfähigerer Features wie den Visual Studio-Debugger, die
   
 ## <a name="debugging-your-code"></a>Debuggen von Code  
 
-Wenn Sie die Befehlszeile verwenden und die Anwendungen auf der Entwicklungsarbeitsstation ausführen, wird ein Dialogfeld zur Ausführung des [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]-Debuggers angezeigt, sobald im Code eine Speicherzugriffsverletzung, eine nicht behandelte Ausnahme oder ein anderer nicht behebbarer Fehler auftritt. Wenn Sie auf **OK** klicken, wird die Entwicklungsumgebung von Visual Studio gestartet, und der Debugger wird an dem Punkt geöffnet, an dem der Fehler auftrat. Sie können Anwendungen auf diese Weise debuggen. Der Quellcode steht in diesem Fall jedoch nur dann zur Verfügung, wenn beim Kompilieren der [/Z7, /Zi, /ZI (Debuginformationsformat)](../build/reference/z7-zi-zi-debug-information-format.md)-Schalter verwendet wurde. Weitere Informationen finden Sie unter [Debuggen von nativem Code](/visualstudio/debugger/debugging-native-code) und [Verwenden der Visual Studio-IDE für C++-Desktopentwicklung](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
+Wenn Sie die Befehlszeile verwenden und die Anwendungen auf der Entwicklungsarbeitsstation ausführen, wird ein Dialogfeld zur Ausführung des Visual Studio-Debuggers angezeigt, sobald im Code eine Speicherzugriffsverletzung, eine nicht behandelte Ausnahme oder ein anderer nicht behebbarer Fehler auftritt. Wenn Sie auf **OK** klicken, wird die Entwicklungsumgebung von Visual Studio gestartet, und der Debugger wird an dem Punkt geöffnet, an dem der Fehler auftrat. Sie können Anwendungen auf diese Weise debuggen. Der Quellcode steht in diesem Fall jedoch nur dann zur Verfügung, wenn beim Kompilieren der [/Z7, /Zi, /ZI (Debuginformationsformat)](../build/reference/z7-zi-zi-debug-information-format.md)-Schalter verwendet wurde. Weitere Informationen finden Sie unter [Debuggen von nativem Code](/visualstudio/debugger/debugging-native-code) und [Verwenden der Visual Studio-IDE für C++-Desktopentwicklung](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
 ## <a name="using-the-development-environment"></a>Verwenden der Entwicklungsumgebung  
 
@@ -47,7 +47,7 @@ Eine Anwendung, die aus mehreren Bibliotheken und ausführbaren Dateien besteht,
   
 ## <a name="importing-your-existing-code"></a>Importieren von vorhandenem Code 
  
-Sie können den C++-Compiler verwenden, um vorhandenen Code zu erstellen, der für die Kompilierung mit oder ohne Makefile eingerichtet wurde, und Sie können diesen Code in ein [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]-Projekt einfügen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines C++-Projekts aus vorhandenem Code](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
+Sie können den C++-Compiler verwenden, um vorhandenen Code zu erstellen, der für die Kompilierung mit oder ohne Makefile eingerichtet wurde. Sie können ihn außerdem in ein Visual Studio-Projekt einfügen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines C++-Projekts aus vorhandenem Code](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
   
 ## <a name="creating-a-new-project"></a>Erstellen eines neuen Projekts  
 
@@ -61,13 +61,13 @@ Beim Erstellen eines Projekts müssen Sie dem Projekt einen Namen geben. Standar
 
 Der Microsoft Visual C++-Compiler implementiert mehrere Erweiterungen der C++-Standardprogrammiersprache, um die Programmierung für Windows-Betriebssysteme zu unterstützen. Diese Erweiterungen werden unter anderem zum Angeben von Speicherklassenattributen, Funktionsaufrufknventionen sowie der Adressierungsart verwendet. Eine vollständige Liste aller unterstützten C++-Erweiterungen finden Sie unter [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md).  
   
-Sie können alle Microsoft-spezifischen Erweiterungen von C++ deaktivieren, indem Sie die **/Za**-Compileroption verwenden. Diese Option wird für das Schreiben von Code empfohlen, der auf mehreren Plattformen ausgeführt werden soll. Weitere Informationen zur **/Za**-Compileroption finden Sie unter [/Za, /Ze (Spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md). Weitere Informationen zu Konformität des C++-Compilers finden Sie in den Artikeln zur [Visual C++-Sprachkonformität](../visual-cpp-language-conformance.md) und zu [Verhalten, das nicht dem Standard entspricht](../cpp/nonstandard-behavior.md).  
+Sie können alle Microsoft-spezifischen Erweiterungen von C++ deaktivieren, indem Sie die `/Za`-Compileroption verwenden. Diese Option wird für das Schreiben von Code empfohlen, der auf mehreren Plattformen ausgeführt werden soll. Weitere Informationen zur `/Za`-Compileroption finden Sie unter [/Za, /Ze (Disable Language Extensions) (/Za, /Ze (Spracherweiterungen deaktivieren))](../build/reference/za-ze-disable-language-extensions.md). Weitere Informationen zu Konformität des C++-Compilers finden Sie in den Artikeln zur [Visual C++-Sprachkonformität](../visual-cpp-language-conformance.md) und zu [Verhalten, das nicht dem Standard entspricht](../cpp/nonstandard-behavior.md).  
   
 ## <a name="precompiled-headers"></a>Vorkompilierte Header  
 
 Die Microsoft C- und C++-Compiler stellen Optionen für das Vorkompilieren von beliebigem C- oder C++-Code bereit, einschließlich Inlinecode. Mithilfe dieser leistungsstarken Funktion können Sie einen stabilen Codeabschnitt kompilieren, den Code im kompilierten Zustand in einer Datei speichern und bei nachfolgenden Kompilierungen den vorkompilierten Code mit dem noch in Entwicklung befindlichen Code kombinieren. So können nachfolgende Kompilierungen beschleunigt werden, da der bereits stabile Code nicht neu kompiliert werden muss.  
   
-Standardmäßig wird sämtlicher vorkompilierter Code in den Dateien **stdafx.h** und **stdafx.cpp** angegeben. Der **Assistent für neue Projekte** erstellt diese Dateien automatisch, sofern Sie die Option **Vorkompilierte Headerdatei** nicht deaktivieren. Weitere Informationen zu vorkompilierten Headern finden Sie unter [Erstellen vorkompilierter Headerdateien](../build/reference/creating-precompiled-header-files.md).  
+Sämtlicher vorkompilierter Code wird standardmäßig in den Dateien „stdafx.h“ und „stdafx.cpp“ angegeben. Der **Assistent für neue Projekte** erstellt diese Dateien automatisch, sofern Sie die Option **Vorkompilierte Headerdatei** nicht deaktivieren. Weitere Informationen zu vorkompilierten Headern finden Sie unter [Erstellen vorkompilierter Headerdateien](../build/reference/creating-precompiled-header-files.md).  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 

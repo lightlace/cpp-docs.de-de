@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6fcb14a91aadb01d3962758b19ce636fddfbe13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3d04265e27cd569b8b390bb19377a3111fbb9c8c
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391534"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42578138"
 ---
 # <a name="obsolete-functions"></a>Veraltete Funktionen
 Bestimmte Bibliotheksfunktionen sind veraltet, und es stehen äquivalente neuere Funktionen zur Verfügung. Wir empfehlen, die aktualisierten Versionen zu verwenden. Andere veraltete Versionen wurden aus der CRT entfernt. In diesem Thema werden die als veraltet eingestuften und die in einer bestimmten Version von Visual Studio entfernten Funktionen aufgelistet.  
@@ -51,12 +51,12 @@ Bestimmte Bibliotheksfunktionen sind veraltet, und es stehen äquivalente neuere
 |Veraltete Funktion|Alternative|  
 |-----------------------|-----------------|  
 |`is_wctype`|[iswctype](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|  
-|`_loaddll`|[LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187), [LoadLibraryEx](http://go.microsoft.com/fwlink/p/?LinkID=236091)oder [LoadPackagedLibrary](https://msdn.microsoft.com/library/windows/desktop/hh447159\(v=vs.85\).aspx)|  
+|`_loaddll`|[LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187), [LoadLibraryEx](http://go.microsoft.com/fwlink/p/?LinkID=236091) oder [LoadPackagedLibrary](/windows/desktop/api/winbase/nf-winbase-loadpackagedlibrary)|  
 |`_unloaddll`|[FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188)|  
 |`_getdllprocaddr`|[GetProcAddress](../build/getprocaddress.md)|  
 |`_seterrormode`|[SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkID=255242)|  
 |`_beep`|[Beep](https://msdn.microsoft.com/library/windows/desktop/ms679277\(v=vs.85\).aspx)|  
-|`_sleep`|[Sleep](https://msdn.microsoft.com/library/windows/desktop/ms686298\(v=vs.85\).aspx)|  
+|`_sleep`|[Sleep](/windows/desktop/api/synchapi/nf-synchapi-sleep)|  
 |`_getsystime`|[GetLocalTime](https://msdn.microsoft.com/library/windows/desktop/ms724338\(v=vs.85\).aspx)|  
 |`_setsystime`|[GetLocalTime](https://msdn.microsoft.com/library/windows/desktop/ms724936\(v=vs.85\).aspx)|  
   
