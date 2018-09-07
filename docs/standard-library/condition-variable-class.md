@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::condition_variable::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca85765d6fed21938a61f52f25c1a377ec43c499
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0e4d31a93ac8e0f7785ea567821c0ac6b0ad6a58
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965177"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109835"
 ---
 # <a name="conditionvariable-class"></a>condition_variable-Klasse
 
@@ -125,9 +125,11 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Parameter
 
-*Lck* ein [Unique_lock\<Mutex >](../standard-library/unique-lock-class.md) Objekt.
+*Lck*<br/>
+Ein [unique_lock\<mutex>](../standard-library/unique-lock-class.md)-Objekt
 
-*Pred* ein Ausdruck, der gibt **"true"** oder **"false"**.
+*Pred*<br/>
+Ein Ausdruck, der gibt **"true"** oder **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -159,11 +161,14 @@ bool wait_for(
 
 ### <a name="parameters"></a>Parameter
 
-*Lck* ein [Unique_lock\<Mutex >](../standard-library/unique-lock-class.md) Objekt.
+*Lck*<br/>
+Ein [unique_lock\<mutex>](../standard-library/unique-lock-class.md)-Objekt
 
-*Rel_time* ein `chrono::duration` -Objekt, das gibt an, die Zeitspanne, bevor der Thread reaktiviert.
+*Rel_time*<br/>
+Ein `chrono::duration`-Objekt, das die Zeitdauer vor der Aktivierung des Threads angibt.
 
-*Pred* ein Ausdruck, der gibt **"true"** oder **"false"**.
+*Pred*<br/>
+Ein Ausdruck, der gibt **"true"** oder **"false"**.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -214,11 +219,14 @@ bool wait_until(
 
 ### <a name="parameters"></a>Parameter
 
-*Lck* ein [Unique_lock\<Mutex >](../standard-library/unique-lock-class.md) Objekt.
+*Lck*<br/>
+Ein [unique_lock\<mutex>](../standard-library/unique-lock-class.md)-Objekt
 
-*Abs_time* ein [chrono:: time_point](../standard-library/time-point-class.md) Objekt.
+*Abs_time*<br/>
+Ein [chrono::time_point](../standard-library/time-point-class.md)-Objekt
 
-*Pred* ein Ausdruck, der gibt **"true"** oder **"false"**.
+*Pred*<br/>
+Ein Ausdruck, der gibt **"true"** oder **"false"**.
 
 ### <a name="return-value"></a>Rückgabewert
 

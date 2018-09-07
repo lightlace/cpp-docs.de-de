@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ea34ac38b70defc873278ce964ff10b8383dcc5
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 526ed4340446e78a723af97f43fbed401f574764
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966578"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106043"
 ---
 # <a name="ostrstream-class"></a>ostrstream-Klasse
 
@@ -77,7 +77,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Parameter
 
-*_Freezeit* ein **"bool"** , der angibt, ob den Stream fixiert werden soll.
+*_Freezeit*<br/>
+Ein **"bool"** , der angibt, ob den Stream fixiert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -101,11 +102,14 @@ ostrstream(char* ptr,
 
 ### <a name="parameters"></a>Parameter
 
-*PTR* Puffer.
+*ptr*<br/>
+Der Puffer.
 
-*Anzahl* die Größe des Puffers in Bytes.
+*count*<br/>
+Die Größe des Puffers in Byte.
 
-*_Modus* der Eingabe- und den Modus des Puffers. Weitere Informationen finden Sie unter [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Modus*<br/>
+Der Eingabe- und Ausgabemodus des Puffers. Weitere Informationen finden Sie unter [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="remarks"></a>Hinweise
 

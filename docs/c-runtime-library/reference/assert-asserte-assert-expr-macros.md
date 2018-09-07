@@ -36,16 +36,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa84e5c032cefa49ef3a9d21d3bbfc2073d02e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 254550acf94acb846826bc0efe76ef26753c54b8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399737"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107587"
 ---
 # <a name="assert-asserte-assertexpr-macros"></a>_ASSERT-, _ASSERTE-, _ASSERT_EXPR-Makros
 
-Auswerten eines Ausdrucks und erzeugt einen Debugbericht, wenn das Ergebnis ist **"false"** (nur Debugversion).
+Wertet einen Ausdruck ein, und erzeugt einen Debugbericht, wenn das Ergebnis ist **"false"** (nur Debugversion).
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,19 +58,21 @@ _ASSERTE( booleanExpression );
 
 ### <a name="parameters"></a>Parameter
 
-*boolescher Ausdruck* ein skalarer Ausdruck (einschließlich zeigerausdrücken), der ungleich Null (True) oder 0 (False) ergibt.
+*boolescher Ausdruck*<br/>
+Ein skalarer Ausdruck (einschließlich Zeigerausdrücken) der zu ungleich null (true) oder „0“ (false) ausgewertet wird.
 
-*Nachricht* eine Breite Zeichenfolge als Teil des Berichts angezeigt.
+*message*<br/>
+Eine Breitzeichenfolge, die als Teil des Berichts angezeigt werden soll.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_ASSERT_EXPR**, **_ASSERT** und **_ASSERTE** Makros stellen Anwendungen einen sauberen und einfachen Mechanismus für die Überprüfung von Annahmen während des Debugprozesses. Sie sind sehr flexibel, da sie nicht in `#ifdef` -Anweisungen eingeschlossen werden müssen, um ihren Aufruf in der Verkaufsversion einer Anwendung zu verhindern. Diese Flexibilität wird mithilfe des [_DEBUG](../../c-runtime-library/debug.md) -Makros erreicht. **_ASSERT_EXPR**, **_ASSERT** und **_ASSERTE** sind nur verfügbar, wenn **_DEBUG** zum Zeitpunkt der Kompilierung definiert ist. Wenn **_DEBUG** ist nicht definiert ist, werden Aufrufe dieser Makros während der vorverarbeitung entfernt.
+Die **_ASSERT_EXPR**, **_ASSERT** und **_ASSERTE** Makros stellen Anwendungen einen sauberen und einfachen Mechanismus für die Überprüfung von Annahmen während des Debuggens. Sie sind sehr flexibel, da sie nicht in `#ifdef` -Anweisungen eingeschlossen werden müssen, um ihren Aufruf in der Verkaufsversion einer Anwendung zu verhindern. Diese Flexibilität wird mithilfe des [_DEBUG](../../c-runtime-library/debug.md) -Makros erreicht. **_ASSERT_EXPR**, **_ASSERT** und **_ASSERTE** sind nur verfügbar, wenn **_DEBUG** zum Zeitpunkt der Kompilierung definiert ist. Wenn **_DEBUG** ist nicht definiert ist, werden Aufrufe dieser Makros während der vorverarbeitung entfernt.
 
-**_ASSERT_EXPR**, **_ASSERT** und **_ASSERTE** bewerten ihre *boolescher* Argument und wenn das Ergebnis ist **"false"**(0), auch eine diagnosemeldung aus und rufen gedruckt [_CrtDbgReportW](crtdbgreport-crtdbgreportw.md) um einen Debugbericht zu generieren. Die **_ASSERT** -Makro gibt eine einfache diagnosemeldung **_ASSERTE** enthält eine Zeichenfolgendarstellung des fehlerausdrucks in der Nachricht und **_ASSERT_EXPR** enthält die *Nachricht* Zeichenfolge in die diagnosemeldung. Diese Makros führen keine Aktion beim *boolescher* ungleich null ergibt.
+**_ASSERT_EXPR**, **_ASSERT** und **_ASSERTE** bewerten ihre *boolescher Ausdruck* Argument und wenn das Ergebnis ist **"false"**(0), sie zu drucken, eine diagnosemeldung aus und rufen [_CrtDbgReportW](crtdbgreport-crtdbgreportw.md) um einen Debugbericht zu generieren. Die **_ASSERT** -Makro gibt eine einfache diagnosemeldung **_ASSERTE** enthält eine Zeichenfolgendarstellung des fehlerausdrucks in der Nachricht und **_ASSERT_EXPR** enthält die *Nachricht* Zeichenfolge in die diagnosemeldung. Diese Makros führen keine Aktion beim *boolescher Ausdruck* ungleich null ergibt.
 
-**_ASSERT_EXPR**, **_ASSERT** und **_ASSERTE** Aufrufen **_CrtDbgReportW**, wodurch Ausgabewerte in Breitzeichen sein. **_ASSERTE** ordnungsgemäß gibt Unicode-Zeichen in *boolescher* und **_ASSERT_EXPR** gibt Unicode-Zeichen in *Nachricht*.
+**_ASSERT_EXPR**, **_ASSERT** und **_ASSERTE** Aufrufen **_CrtDbgReportW**, die Ausgabewerte in Breitzeichen bewirkt. **_ASSERTE** ordnungsgemäß gibt Unicode-Zeichen in *boolescher Ausdruck* und **_ASSERT_EXPR** gibt Unicode-Zeichen in *Nachricht*.
 
-Da die **_ASSERTE** Makro gibt den fehlerausdruck und **_ASSERT_EXPR** können Sie eine Nachricht in der generierte Bericht angeben, sie ermöglichen Benutzern, das Problem zu identifizieren, ohne auf die Quellcode der Anwendung. Allerdings ein Nachteil ist, dass jeder *Nachricht* von gedruckte **_ASSERT_EXPR** und jeder Ausdruck ausgewertet, indem **_ASSERTE** ist in der Ausgabe (Debugversion) enthalten die Datei der Anwendung als Zeichenfolgenkonstante. Aus diesem Grund, wenn eine große Anzahl der Aufrufe von **_ASSERT_EXPR** oder **_ASSERTE**, diesen Ausdrücken können die Größe Ihrer Ausgabedatei erheblich erhöhen.
+Da die **_ASSERTE** Makro gibt den fehlerausdruck und **_ASSERT_EXPR** können Sie eine Nachricht im generierten Bericht angeben, sie ermöglichen es Benutzern, um das Problem zu identifizieren, ohne auf die Quellcode der Anwendung. Jedoch ein Nachteil ist, dass jede *Nachricht* ausgegebene **_ASSERT_EXPR** und jeder Ausdruck ausgewertet, indem **_ASSERTE** befindet sich in der Ausgabe (Debugversion) die Datei der Anwendung als eine Zeichenfolgenkonstante. Aus diesem Grund werden, wenn eine große Anzahl von Aufrufe von **_ASSERT_EXPR** oder **_ASSERTE**, diese Ausdrücke können die Größe Ihrer Ausgabedatei stark erhöhen.
 
 Sofern Sie es nicht mithilfe der Funktionen [_CrtSetReportMode](crtsetreportmode.md) und [_CrtSetReportFile](crtsetreportfile.md) anders festlegen, werden Meldungen in einem Popupdialogfeld angezeigt, entsprechend der Einstellung:
 
@@ -78,15 +80,15 @@ Sofern Sie es nicht mithilfe der Funktionen [_CrtSetReportMode](crtsetreportmode
 _CrtSetReportMode(CRT_ASSERT, _CRTDBG_MODE_WNDW);
 ````
 
-**_CrtDbgReportW** generiert den Debugbericht und bestimmt sein Ziel oder die Ziele, basierend auf den aktuellen Berichtsmodus oder die Modi und die Datei, die definiert, die für die **_CRT_ASSERT** Berichtstyp. Standardmäßig werden Assertionsfehler und Fehler an ein Debugmeldungsfenster geleitet. Die Funktionen [_CrtSetReportMode](crtsetreportmode.md) und [_CrtSetReportFile](crtsetreportfile.md) werden verwendet, um die Ziele für jeden Berichtstyp zu definieren.
+**_CrtDbgReportW** generiert den Debugbericht und bestimmt sein Ziel oder seine Ziele, basierend auf den aktuellen Berichtsmodus oder den Modi und die Datei, die für definiert die **_CRT_ASSERT** Berichtstyp. Standardmäßig werden Assertionsfehler und Fehler an ein Debugmeldungsfenster geleitet. Die Funktionen [_CrtSetReportMode](crtsetreportmode.md) und [_CrtSetReportFile](crtsetreportfile.md) werden verwendet, um die Ziele für jeden Berichtstyp zu definieren.
 
-Wenn das Ziel ein debugmeldungsfenster und der Benutzer klickt der **wiederholen** Schaltfläche **_CrtDbgReportW** gibt 1 zurück, verursacht die **_ASSERT_EXPR**, **_ ASSERT** und **_ASSERTE** Makros, um den Debugger zu starten, vorausgesetzt, dass der Just-in-Time (JIT)-Debuggen aktiviert ist.
+Wenn das Ziel ein debugmeldungsfenster und dem Benutzer klickt der **wiederholen** Schaltfläche **_CrtDbgReportW** gibt 1 zurück, verursacht die **_ASSERT_EXPR**, **_ ASSERT** und **_ASSERTE** Makros den Debugger zu starten, vorausgesetzt, dass die just-in-Time (JIT)-Debuggen aktiviert ist.
 
 Weitere Informationen zum Berichtstellungsverfahren finden Sie bei der Funktion [_CrtDbgReport, _CrtDbgReportW](crtdbgreport-crtdbgreportw.md). Weitere Informationen zum Beheben von Assertionsfehlern und zum Verwenden dieser Makros als Behandlungsmechanismus für Debugfehler finden Sie unter [Verwenden von Makros zur Überprüfung und Berichterstellung](/visualstudio/debugger/macros-for-reporting).
 
-Zusätzlich zu den **_ASSERT** Makros, die [assert](assert-macro-assert-wassert.md) Makro kann zum Prüfen von Programmlogik verwendet werden. Dieses Makro steht sowohl in der Debug- als auch in der endgültigen Version der Bibliotheken zur Verfügung. Die Debugmakros [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) sind ebenfalls für die Erstellung eines Debugberichts verfügbar, werten aber keinen Ausdruck aus. Die **_RPT** -Makros erstellen einen einfachen Bericht. Die **_RPTF** Makros umfassen die, in das Berichtsmakro aufgerufen wurde, und die Zeilennummer an, in den generierten Bericht. Breitzeichenversionen dieser Makros sind verfügbar (**_RPTW**, **_RPTFW**). Die Breitzeichenversionen sind mit den Versionen mit schmalen Zeichen identisch, mit dem Unterschied, dass für alle Zeichenfolgenparameter und Ausgaben Breitzeichen-Zeichenfolgen verwendet werden.
+Zusätzlich zu den **_ASSERT** Makros, die [assert](assert-macro-assert-wassert.md) -Makro zum Prüfen von Programmlogik verwendet werden kann. Dieses Makro steht sowohl in der Debug- als auch in der endgültigen Version der Bibliotheken zur Verfügung. Die Debugmakros [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) sind ebenfalls für die Erstellung eines Debugberichts verfügbar, werten aber keinen Ausdruck aus. Die **_RPT** -Makros erstellen einen einfachen Bericht. Die **_RPTF** Makros sind die Quell- und die Zeilennummer Anzahl, in denen das Berichtsmakro aufgerufen wurde, im generierten Bericht. Die Breitzeichenversionen dieser Makros sind verfügbar (**_RPTW**, **_RPTFW**). Die Breitzeichenversionen sind mit den Versionen mit schmalen Zeichen identisch, mit dem Unterschied, dass für alle Zeichenfolgenparameter und Ausgaben Breitzeichen-Zeichenfolgen verwendet werden.
 
-Obwohl **_ASSERT_EXPR**, **_ASSERT** und **_ASSERTE** Makros sind und verwenden möchten, einschließlich \<"CRTDBG.h" >, die Anwendung muss mit einem Debugbuild verknüpfen Version der C-Laufzeitbibliothek beim **_DEBUG** definiert ist, da diese Makros andere Laufzeitfunktionen aufrufen.
+Obwohl **_ASSERT_EXPR**, **_ASSERT** und **_ASSERTE** Makros sind und sind verfügbar, einschließlich \<crtdbg.h >, die Anwendung muss eine Verknüpfung mit einer Debugversion Version der C-Laufzeitbibliothek beim **_DEBUG** definiert ist, da diese Makros andere Laufzeitfunktionen aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,7 +98,7 @@ Obwohl **_ASSERT_EXPR**, **_ASSERT** und **_ASSERTE** Makros sind und verwenden 
 
 ## <a name="example"></a>Beispiel
 
-In diesem Programm Aufrufe von der **_ASSERT** und **_ASSERTE** Makros zum Testen der Bedingung `string1 == string2`. Wenn bei der Bedingung ein Fehler auftritt, geben diese Makros eine Diagnosemeldung aus. Die **_RPT** und **_RPTF** Gruppe von Makros ist auch an diesem Programm ausgeführt, als Alternative zu den **Printf** Funktion.
+In diesem Programm Aufrufe von der **_ASSERT** und **_ASSERTE** Makros zum Testen der Bedingung `string1 == string2`. Wenn bei der Bedingung ein Fehler auftritt, geben diese Makros eine Diagnosemeldung aus. Die **_RPT** und **_RPTF** Gruppe von Makros ist auch in diesem Programm ausgeführt, als Alternative zu den **Printf** Funktion.
 
 ```C
 // crt_ASSERT_macro.c

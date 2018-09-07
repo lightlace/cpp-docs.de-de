@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f13dfb45073a1a21e8d6a7b4585f0dfc5c71b8e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 372dc829810fd08e3cc872abfb769221b2ca2a58
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959747"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100884"
 ---
 # <a name="basicregex-class"></a>basic_regex-Klasse
 
@@ -84,9 +84,11 @@ class basic_regex {
 
 ### <a name="parameters"></a>Parameter
 
-*Elem* den Typ der Elemente übereinstimmen.
+*Elem*<br/>
+Der zu entsprechende Elementtyp.
 
-*RXtraits* "traits"-Klasse für Elemente.
+*RXtraits*<br/>
+Merkmalklasse für Elemente.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -148,27 +150,37 @@ basic_regex& assign(
 
 ### <a name="parameters"></a>Parameter
 
-*STtraits* "traits"-Klasse für eine zeichenfolgequelle.
+*STtraits*<br/>
+Merkmalklasse für eine Zeichenfolgequelle.
 
-*STalloc* Allocator-Klasse für eine zeichenfolgequelle.
+*STalloc*<br/>
+Zuweisungsklasse für eine Zeichenfolgequelle.
 
-*InIt* Eingabeiteratortyp für eine bereichsquelle.
+*InIt*<br/>
+Eingabeiteratortyp für eine Bereichsquelle.
 
-*richtige* Regex-Quelle zu kopieren.
+*right*<br/>
+Zu kopierende RegEx-Quelle.
 
-*PTR* zu kopierende Zeiger zum Anfang der Sequenz.
+*ptr*<br/>
+Zeiger zum Anfang der zu kopierenden Sequenz.
 
-*Flags* syntaxoptionsflags, die beim Kopieren hinzugefügt.
+*flags*<br/>
+Syntaxoptionsflags, die beim Kopieren hinzugefügt werden.
 
 *Len/TD >* Länge der zu kopierenden Sequenz.
 
-*Str* zu kopierende Zeichenfolge.
+*str*<br/>
+Zu kopierende Zeichenfolge.
 
-*erste* ab, der zu kopierenden Sequenz.
+*Erste*<br/>
+Anfang der zu kopierenden Sequenz.
 
-*letzte* Ende der Sequenz zu kopieren.
+*last*<br/>
+Ende der zu kopierenden Sequenz.
 
-*IList* das initializer_list-Element zu kopieren.
+*IList*<br/>
+Das zu kopierende initializer_list-Element.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -293,27 +305,37 @@ explicit basic_regex(
 
 ### <a name="parameters"></a>Parameter
 
-*STtraits* "traits"-Klasse für eine zeichenfolgequelle.
+*STtraits*<br/>
+Merkmalklasse für eine Zeichenfolgequelle.
 
-*STalloc* Allocator-Klasse für eine zeichenfolgequelle.
+*STalloc*<br/>
+Zuweisungsklasse für eine Zeichenfolgequelle.
 
-*InIt* Eingabeiteratortyp für eine bereichsquelle.
+*InIt*<br/>
+Eingabeiteratortyp für eine Bereichsquelle.
 
-*richtige* Regex-Quelle zu kopieren.
+*right*<br/>
+Zu kopierende RegEx-Quelle.
 
-*PTR* zu kopierende Zeiger zum Anfang der Sequenz.
+*ptr*<br/>
+Zeiger zum Anfang der zu kopierenden Sequenz.
 
-*Flags* syntaxoptionsflags, die beim Kopieren hinzugefügt.
+*flags*<br/>
+Syntaxoptionsflags, die beim Kopieren hinzugefügt werden.
 
 *Len/TD >* Länge der zu kopierenden Sequenz.
 
-*Str* zu kopierende Zeichenfolge.
+*str*<br/>
+Zu kopierende Zeichenfolge.
 
-*erste* ab, der zu kopierenden Sequenz.
+*Erste*<br/>
+Anfang der zu kopierenden Sequenz.
 
-*letzte* Ende der Sequenz zu kopieren.
+*last*<br/>
+Ende der zu kopierenden Sequenz.
 
-*IList* das initializer_list-Element zu kopieren.
+*IList*<br/>
+Das zu kopierende initializer_list-Element.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -706,7 +728,8 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parameter
 
-*LOC* das zu speichernde Gebietsschemaobjekt.
+*Loc*<br/>
+Das zu speichernde Gebietsschemaobjekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1006,13 +1029,17 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 ### <a name="parameters"></a>Parameter
 
-*STtraits* "traits"-Klasse für eine zeichenfolgequelle.
+*STtraits*<br/>
+Merkmalklasse für eine Zeichenfolgequelle.
 
-*STalloc* Allocator-Klasse für eine zeichenfolgequelle.
+*STalloc*<br/>
+Zuweisungsklasse für eine Zeichenfolgequelle.
 
-*richtige* Regex-Quelle zu kopieren.
+*right*<br/>
+Zu kopierende RegEx-Quelle.
 
-*Str* zu kopierende Zeichenfolge.
+*str*<br/>
+Zu kopierende Zeichenfolge.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1113,7 +1140,8 @@ void swap(basic_regex& right) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* regular Expression-Objekt, mit dem getauscht.
+*right*<br/>
+Das Objekt mit regulärem Ausdruck, gegen das getauscht werden soll.
 
 ### <a name="remarks"></a>Hinweise
 

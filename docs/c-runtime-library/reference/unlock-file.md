@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d000dce4c0009341c787a211ed8ef41d1728b51b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63b0950aaea5520849f9a32b2b08ab138cd8099b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407771"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107537"
 ---
 # <a name="unlockfile"></a>_unlock_file
 
@@ -56,15 +56,16 @@ void _unlock_file(
 
 ### <a name="parameters"></a>Parameter
 
-*Datei* Dateihandle.
+*datei*<br/>
+Dateihandle.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_unlock_file** Funktion entsperrt angegebene Datei *Datei*. Das Entsperren einer Datei ermöglicht anderen Prozessen den Zugriff auf die Datei. Diese Funktion darf nicht aufgerufen werden, es sei denn, **_lock_file** hieß früher auf den *Datei* Zeiger. Aufrufen von **_unlock_file** auf eine Datei, die nicht gesperrt ist, kann zu einem Deadlock führen. Ein Beispiel finden Sie unter [_lock_file](lock-file.md).
+Die **_unlock_file** Funktion entsperrt angegebene Datei *Datei*. Das Entsperren einer Datei ermöglicht anderen Prozessen den Zugriff auf die Datei. Diese Funktion sollte nicht aufgerufen werden, es sei denn, **_lock_file** hieß früher auf den *Datei* Zeiger. Aufrufen von **_unlock_file** für eine Datei, die nicht gesperrt ist möglicherweise zu einem Deadlock führen. Ein Beispiel finden Sie unter [_lock_file](lock-file.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_unlock_file**|\<stdio.h>|
 

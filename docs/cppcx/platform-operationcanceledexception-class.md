@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e937625530c6dc8576ce8e850a97d11ea24ca05
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d2f4cea4199615ccaecf9d3de915c4666a20d1a9
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763505"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108506"
 ---
 # <a name="platformoperationcanceledexception-class"></a>Platform::OperationCanceledException-Klasse
-Wird nach dem Abbrechen eines Vorgangs ausgelöst.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-public ref class OperationCanceledException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter der [COMException](../cppcx/platform-comexception-class.md) -Klasse.  
-  
-### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client (Min.):** Windows 8  
-  
- **Unterstützter Server (Min.):** Windows Server 2012  
-  
- **Namespace:** Platform  
-  
- **Metadaten:** platform.winmd  
-  
-## <a name="see-also"></a>Siehe auch  
- [Platform::COMException-Klasse](../cppcx/platform-comexception-class.md)
+
+Wird nach dem Abbrechen eines Vorgangs ausgelöst.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+public ref class OperationCanceledException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Hinweise
+
+Weitere Informationen finden Sie unter der [COMException](../cppcx/platform-comexception-class.md) -Klasse.
+
+### <a name="requirements"></a>Anforderungen
+
+**Unterstützter Client (Min.):** Windows 8
+
+**Unterstützter Server (Min.):** Windows Server 2012
+
+**Namespace:** Platform
+
+**Metadaten:** platform.winmd
+
+## <a name="see-also"></a>Siehe auch
+
+[Platform::COMException-Klasse](../cppcx/platform-comexception-class.md)

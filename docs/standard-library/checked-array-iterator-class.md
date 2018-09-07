@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7091ba3c7f4d40a2b16c48afadfd5068bcd794bb
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d74c9930816f353be7594bb67bf5e44b5251aa6c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961739"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106726"
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator-Klasse
 
@@ -145,7 +145,7 @@ int main()
     return 0;
 }
 \* Output:
- 0 1 2 3 4 5 6 7 8 9
+0 1 2 3 4 5 6 7 8 9
 *\
 ```
 
@@ -253,11 +253,14 @@ checked_array_iterator(
 
 ### <a name="parameters"></a>Parameter
 
-*PTR* ein Zeiger auf das Array.
+*ptr*<br/>
+Ein Zeiger auf den Array.
 
-*Größe* die Größe des Arrays.
+*size*<br/>
+Die Größe des Arrays.
 
-*Index* (Optional) ein Element im Array zur Initialisierung des Iterators.  Der Iterator wird standardmäßig mit dem ersten Element im Array initialisiert.
+*index*<br/>
+(Optional) Ein Element im Array zur Initialisierung des Iterators.  Der Iterator wird standardmäßig mit dem ersten Element im Array initialisiert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -325,7 +328,8 @@ bool operator==(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* der `checked_array_iterator` anhand der Gleichheit verglichen werden soll.
+*right*<br/>
+Der `checked_array_iterator` für die Durchführung von Gleichheitsüberprüfungen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -380,7 +384,8 @@ bool operator!=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* der `checked_array_iterator` für die Durchführung von ungleichheitsüberprüfungen.
+*right*<br/>
+Der `checked_array_iterator` für die Durchführung von Ungleichheitsüberprüfungen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -435,7 +440,8 @@ bool operator<(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* der `checked_array_iterator` für die Durchführung von ungleichheitsüberprüfungen.
+*right*<br/>
+Der `checked_array_iterator` für die Durchführung von Ungleichheitsüberprüfungen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -490,7 +496,8 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* der `checked_array_iterator` zum Vergleich.
+*right*<br/>
+`checked_array_iterator` für den Vergleich.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -508,7 +515,8 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* der `checked_array_iterator` zum Vergleich.
+*right*<br/>
+`checked_array_iterator` für den Vergleich.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -526,7 +534,8 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* der `checked_array_iterator` zum Vergleich.
+*right*<br/>
+`checked_array_iterator` für den Vergleich.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -756,7 +765,8 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Parameter
 
-*_Off* der Offset, der Iterator inkrementiert werden soll.
+*_Off*<br/>
+Der Offset, um den der Iterator inkrementiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -803,7 +813,8 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Off* der Offset, der hinzugefügt werden die `checked_array_iterator`.
+*_Off*<br/>
+Der zum `checked_array_iterator` hinzuzufügende Offset.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -850,7 +861,8 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
 
 ### <a name="parameters"></a>Parameter
 
-*_Off* der Offset, der Iterator inkrementiert werden soll.
+*_Off*<br/>
+Der Offset, um den der Iterator inkrementiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -900,7 +912,8 @@ difference_type operator-(const checked_array_iterator& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Off* den Offset von dekrementiert werden soll die `checked_array_iterator`.
+*_Off*<br/>
+Der von `checked_array_iterator` zu dekrementierende Offset.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -922,7 +935,8 @@ reference operator[](difference_type _Off) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Off* der Offset, ab der `checked_array_iterator` Adresse.
+*_Off*<br/>
+Der Offset von der `checked_array_iterator`-Adresse.
 
 ### <a name="return-value"></a>Rückgabewert
 

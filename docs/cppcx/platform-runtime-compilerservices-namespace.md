@@ -15,55 +15,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39d708d2464ba74ecd78421599c8c039bb02c214
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 400730ab08f2e8e294859b60a69c216fdb336cd5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755486"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102181"
 ---
 # <a name="platformruntimecompilerservices-namespace"></a>Platform::Runtime::CompilerServices-Namespace
-Dieser Namespace ist nur für den internen Gebrauch vorgesehen und nicht zur Verwendung bei der Entwicklung bestimmt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-  
-namespace Platform {  
-   namespace CompilerServices{  
-}}  
-```  
-  
-### <a name="members"></a>Member  
- Obwohl dieser Namespace für die interne Verwendung vorgesehen ist, können Browser die folgenden Member dieses Namespace anzeigen.  
-  
-|name|Hinweis|  
-|----------|------------|  
-|CallConvCdecl||  
-|CallConvFastcall||  
-|CallConvStdcall||  
-|CallConvThiscall||  
-|IndexerNameAttribute||  
-|IsBoxed||  
-|IsByValue||  
-|IsConst||  
-|IsCopyConstructed||  
-|IsExplicitlyDereferenced||  
-|IsImplicitlyDereferenced||  
-|IsLong||  
-|IsSignUnspecifiedByte||  
-|IsSigned||  
-|IsUdtReturn||  
-|IsVolatile||  
-|OnePhaseConstructedAttribute||  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `Platform`  
-  
-### <a name="requirements"></a>Anforderungen  
- **Metadaten:** platform.winmd  
-  
- **Namespace:** Platform::CompilerServices  
-  
-## <a name="see-also"></a>Siehe auch  
- [Plattform-Namespace](platform-namespace-c-cx.md)
+
+Dieser Namespace ist nur für den internen Gebrauch vorgesehen und nicht zur Verwendung bei der Entwicklung bestimmt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+namespace Platform {
+   namespace CompilerServices{
+}}
+```
+
+### <a name="members"></a>Member
+
+Obwohl dieser Namespace für die interne Verwendung vorgesehen ist, können Browser die folgenden Member dieses Namespace anzeigen.
+
+|name|Hinweis|
+|----------|------------|
+|CallConvCdecl||
+|CallConvFastcall||
+|CallConvStdcall||
+|CallConvThiscall||
+|IndexerNameAttribute||
+|IsBoxed||
+|IsByValue||
+|IsConst||
+|IsCopyConstructed||
+|IsExplicitlyDereferenced||
+|IsImplicitlyDereferenced||
+|IsLong||
+|IsSignUnspecifiedByte||
+|IsSigned||
+|IsUdtReturn||
+|IsVolatile||
+|OnePhaseConstructedAttribute||
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`Platform`
+
+### <a name="requirements"></a>Anforderungen
+
+**Metadaten:** platform.winmd
+
+**Namespace:** Platform::CompilerServices
+
+## <a name="see-also"></a>Siehe auch
+
+[Plattform-Namespace](platform-namespace-c-cx.md)

@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9192f52b35ec50c7acb1672e03ea248d140c7f71
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 999b4bcee00c633184795e22865bc5c75ee64846
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957521"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109874"
 ---
 # <a name="sharedptr-class"></a>shared_ptr-Klasse
 
@@ -351,9 +351,11 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>Parameter
 
-*SP* die zu kopierende gemeinsame Zeiger.
+*SP*<br/>
+Der zu kopierende gemeinsame Zeiger
 
-*AP* der zu kopierende automatische Zeiger.
+*AP*<br/>
+Der zu kopierende automatische Zeiger
 
 ### <a name="remarks"></a>Hinweise
 
@@ -441,7 +443,8 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Parameter
 
-*PTR* ein `lvalue` -Verweis auf ein `shared_ptr` oder `weak_ptr`.
+*ptr*<br/>
+Ein `lvalue`-Verweis auf `shared_ptr` oder `weak_ptr`.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -466,17 +469,23 @@ void reset(Other *ptr, D dtor, A alloc);
 
 ### <a name="parameters"></a>Parameter
 
-*Andere* vom argumentzeiger gesteuerte Typ.
+*Andere*<br/>
+Der vom Argumentzeiger gesteuerte Typ.
 
-*D* den Typ der Deleter.
+*D*<br/>
+Der Deleter-Typ.
 
-*PTR* der zu kopierende Zeiger.
+*ptr*<br/>
+Der zu kopierende Zeiger.
 
-*DTOR* der zu kopierende Deleter.
+*DTOR*<br/>
+Der zu kopierende Deleter.
 
-*Ein* den Typ der Zuweisung.
+*A*<br/>
+Der Zuweisungstyp.
 
-*Alloc* der zu kopierende zuweiser.
+*Alloc*<br/>
+Der zu kopierende Zuweiser.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -581,23 +590,32 @@ shared_ptr(const unique_ptr<Other, D>& up) = delete;
 
 ### <a name="parameters"></a>Parameter
 
-*Andere* vom argumentzeiger gesteuerte Typ.
+*Andere*<br/>
+Der vom Argumentzeiger gesteuerte Typ.
 
-*PTR* der zu kopierende Zeiger.
+*ptr*<br/>
+Der zu kopierende Zeiger.
 
-*D* den Typ der Deleter.
+*D*<br/>
+Der Deleter-Typ.
 
-*Ein* den Typ der Zuweisung.
+*A*<br/>
+Der Zuweisungstyp.
 
-*DTOR* die Deleter.
+*DTOR*<br/>
+Der Deleter.
 
-*Vergleichsoperators* die allocator-Klasse.
+*Vergleichsoperators*<br/>
+Die Zuweisung.
 
-*SP* der zu kopierende intelligente Zeiger.
+*SP*<br/>
+Der zu kopierende intelligente Zeiger.
 
-*WP* der schwache Zeiger.
+*WP*<br/>
+Der schwache Zeiger.
 
-*AP* der zu kopierende automatische Zeiger.
+*AP*<br/>
+Der zu kopierende automatische Zeiger
 
 ### <a name="remarks"></a>Hinweise
 
@@ -722,7 +740,8 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>Parameter
 
-*SP* der gemeinsame Zeiger, mit dem getauscht.
+*SP*<br/>
+Der gemeinsame Zeiger, mit dem getauscht werden soll.
 
 ### <a name="remarks"></a>Hinweise
 

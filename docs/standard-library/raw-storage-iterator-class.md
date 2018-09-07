@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 470fb497bb52fa51fec06ac0edb3e1996aa1e5e8
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 527213eb8e696caa97e307c643929118dd954965
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208525"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101014"
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator-Klasse
 
@@ -40,9 +40,11 @@ class raw_storage_iterator
 
 ### <a name="parameters"></a>Parameter
 
-*OutputIterator* gibt den Ausgabeiterator für das Objekt gespeichert wird.
+*OutputIterator*<br/>
+Gibt den Ausgabeiterator für das Objekt an, das gespeichert wird.
 
-*Typ* den Typ des Objekts, die für den Speicher belegt wird.
+*Type*<br/>
+Der Typ des Objekts, dem Speicher zugeordnet wird.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -159,9 +161,9 @@ int main( void)
 {
    Int *pInt = ( Int* ) malloc( sizeof( Int ) );
    memset( pInt, 0, sizeof( Int ) ); // Set bIsConstructed to false;
- *pInt = 5;
+*pInt = 5;
    raw_storage_iterator< Int*, Int > it( pInt );
- *it = 5;
+*it = 5;
 }
 \* Output:
 Not constructed.
@@ -181,7 +183,8 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
 
 ### <a name="parameters"></a>Parameter
 
-`val` Der Wert des Objekts vom Typ `Type` in den Speicher eingefügt werden soll.
+*val*<br/>
+Der Wert des Objekts vom Typ `Type` in den Speicher eingefügt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -233,7 +236,7 @@ int main( void )
 *pInt = 5;
 
    raw_storage_iterator<Int*, Int> it( pInt );
- *it = 5;
+*it = 5;
 }
 \* Output:
 Not constructed.
@@ -282,7 +285,7 @@ int main( void )
    int *pInt = new int[5];
    std::raw_storage_iterator<int*,int> it( pInt );
    for ( int i = 0; i < 5; i++, it++ ) {
- *it = 2 * i;
+*it = 2 * i;
 };
 
    for ( int i = 0; i < 5; i++ ) cout << "array " << i << " = " << pInt[i] << endl;;
@@ -308,7 +311,8 @@ explicit raw_storage_iterator(ForwardIterator first);
 
 ### <a name="parameters"></a>Parameter
 
-*erste* der forward-Iterator, der mit der `raw_storage_iterator` -Objekt erstellt wird.
+*Erste*<br/>
+Der Forward-Iterator, mit dem das `raw_storage_iterator`-Objekt erstellt wird.
 
 ### <a name="example"></a>Beispiel
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fdbcc396b77c6e0eb13262b80ca30df704f0c62
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2cb03720238ee9b0eccdb7d996d1cc8e20a85b4e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959104"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099498"
 ---
 # <a name="minus-struct"></a>minus-Struktur
 
@@ -44,16 +44,18 @@ struct minus<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const`
     -> decltype(std::forward<T>(Left) - std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *Typ*, *T*, *U* ein Typ, eine Binärdatei unterstützt `operator-` , das Operanden angegebener oder abgeleiteter Typen akzeptiert.
 
-*Links* der linke Operand des Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
+*Links*<br/>
+Der linke Operand des Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
 
-*Rechts* der Rechte Operand des Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
+*Rechts*<br/>
+Der rechte Operand des Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
 
 ## <a name="return-value"></a>Rückgabewert
 

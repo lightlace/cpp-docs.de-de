@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22f96b81836a8c1a9daa971ff8fb1961edb60cfb
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 87eb15654be3f709da92d561d048b3a7961c985f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209003"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099615"
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator-Klasse
 
@@ -40,7 +40,8 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>Parameter
 
-*Container* sind, dass der Typ des Containers, an dessen Ende Elemente einfügen, eine `back_insert_iterator`.
+*Container*<br/>
+Der Typ des Containers, an dessen Ende Elemente von einem `back_insert_iterator` eingefügt werden sollen.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -83,7 +84,8 @@ explicit back_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Parameter
 
-*_Cont* den Container, die die `back_insert_iterator` besteht darin, ein Element einfügen soll.
+*_Cont*<br/>
+Der Container, in den `back_insert_iterator` ein Element einfügen soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -121,9 +123,9 @@ int main( )
 
    // Alternatively, insertions can be done with template function
    back_insert_iterator<vector<int> > backiter ( vec );
- *backiter = 600;
+*backiter = 600;
    backiter++;
- *backiter = 700;
+*backiter = 700;
 
    cout << "After the insertions, the vector vec is: ( ";
    for ( vIter = vec.begin ( ) ; vIter != vec.end ( ); vIter++)
@@ -234,9 +236,9 @@ int main( )
    cout << ")." << endl;
 
    back_insert_iterator<vector<int> > backiter ( vec );
- *backiter = 10;
+*backiter = 10;
    backiter++;      // Increment to the next element
- *backiter = 20;
+*backiter = 20;
    backiter++;
 
    cout << "After the insertions, the vector vec becomes: ( ";
@@ -295,9 +297,9 @@ int main( )
    cout << ")." << endl;
 
    back_insert_iterator<vector<int> > backiter ( vec );
- *backiter = 30;
+*backiter = 30;
    backiter++;      // Increment to the next element
- *backiter = 40;
+*backiter = 40;
    backiter++;
 
    cout << "After the insertions, the vector vec becomes: ( ";
@@ -323,7 +325,8 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>Parameter
 
-*Val* den Wert in den Container eingefügt werden soll.
+*val*<br/>
+Der Wert, der in den Container eingefügt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -366,9 +369,9 @@ int main( )
    cout << ")." << endl;
 
    back_insert_iterator<vector<int> > backiter ( vec );
- *backiter = 10;
+*backiter = 10;
    backiter++;      // Increment to the next element
- *backiter = 20;
+*backiter = 20;
    backiter++;
 
    cout << "After the insertions, the vector vec becomes: ( ";

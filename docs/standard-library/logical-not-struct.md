@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf93d84534671cb65c873555d70fea756036fe06
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5ea50f3e8ad70de8473df88bde60673f7b5caa35
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961638"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108706"
 ---
 # <a name="logicalnot-struct"></a>logical_not-Struktur
 
@@ -44,14 +44,16 @@ struct logical_not<void>
   template <class Type>
   auto operator()(Type&& Left) const`
      -> decltype(!std::forward<Type>(Left));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*Typ* jeder Typ, unterstützt eine `operator!` , die einen Operanden des Typs angegebener oder abgeleiteter akzeptiert.
+*Type*<br/>
+Jeder Typ, der ein `operator!`-Element unterstützt, das einen Operanden des angegebenen oder abgeleiteten Typs akzeptiert.
 
-*Links* der Operand des logischen not-Operation. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *Typ*.
+*Links*<br/>
+Der Operand des logischen NOT-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *Typ*.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -96,10 +98,10 @@ int main( )
 }
 /* Output:
 Original deque:
- d1 = ( false true false true false true false )
+d1 = ( false true false true false true false )
 The deque with its values negated is:
- d2 = ( true false true false true false true )
- */
+d2 = ( true false true false true false true )
+*/
 ```
 
 ## <a name="requirements"></a>Anforderungen
