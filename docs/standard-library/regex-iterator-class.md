@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6f45f8a445420d85c539de2f5ba485c0a47127b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 264f61ede0fb47e198459593b2eea154846cc7b9
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962555"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108282"
 ---
 # <a name="regexiterator-class"></a>regex_iterator-Klasse
 
@@ -75,11 +75,14 @@ private:
 
 ### <a name="parameters"></a>Parameter
 
-*BidIt* der itertatortyp für teilübereinstimmungen.
+*BidIt*<br/>
+Der Itertatortyp für Teilübereinstimmungen.
 
-*Elem* den Typ der Elemente übereinstimmen.
+*Elem*<br/>
+Der zu entsprechende Elementtyp.
 
-*RXtraits* "traits"-Klasse für Elemente.
+*RXtraits*<br/>
+Merkmalklasse für Elemente.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -223,7 +226,8 @@ bool operator!=(const regex_iterator& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* der Iterator verglichen werden soll.
+*right*<br/>
+Der Iterator für den Vergleich.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -395,7 +399,8 @@ bool operator==(const regex_iterator& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* der Iterator verglichen werden soll.
+*right*<br/>
+Der Iterator für den Vergleich.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -625,13 +630,17 @@ regex_iterator(BidIt first,
 
 ### <a name="parameters"></a>Parameter
 
-*erste* Anfang der Sequenz, die übereinstimmen.
+*Erste*<br/>
+Anfang der Sequenz, die übereinstimmen soll.
 
-*letzte* Ende der Sequenz übereinstimmen.
+*last*<br/>
+Ende der Sequenz, die übereinstimmen soll.
 
-*Re* regulärer Ausdruck für Übereinstimmungen.
+*RE*<br/>
+Regulärer Ausdruck für Übereinstimmungen.
 
-*f* Flags für Übereinstimmungen.
+*f*<br/>
+Flags für Übereinstimmungen.
 
 ### <a name="remarks"></a>Hinweise
 

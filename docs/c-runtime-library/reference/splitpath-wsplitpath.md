@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69123bfd07d992d96c504e538ded157c49991dab
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 46d29b55e215ce426bbfd465b3d54e1d267a1bb1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221607"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103917"
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
 
@@ -75,15 +75,20 @@ void _wsplitpath(
 
 ### <a name="parameters"></a>Parameter
 
-*Pfad* vollständiger Pfad.
+*path*<br/>
+Vollständiger Pfad
 
-*Laufwerk* Laufwerkbuchstabe, gefolgt von einem Doppelpunkt (**:**). Sie können übergeben **NULL** für diesen Parameter, wenn Sie nicht der Buchstabe des Laufwerks erforderlich ist.
+*Laufwerk*<br/>
+Laufwerkbuchstabe, gefolgt von einem Doppelpunkt (**:**). Sie können übergeben **NULL** für diesen Parameter, wenn Sie nicht der Buchstabe des Laufwerks erforderlich ist.
 
-*Dir* Verzeichnispfad, einschl. nachstehenden Schrägstrich. Schrägstriche ( **/** ), umgekehrte Schrägstriche ( **\\** ), oder beides verwendet werden können. Sie können übergeben **NULL** für diesen Parameter, wenn Sie den Verzeichnispfad nicht erforderlich ist.
+*dir*<br/>
+Verzeichnispfad, einschl. nachstehender Schrägstrich. Schrägstriche ( **/** ), umgekehrte Schrägstriche ( **\\** ), oder beides verwendet werden können. Sie können übergeben **NULL** für diesen Parameter, wenn Sie den Verzeichnispfad nicht erforderlich ist.
 
-*Fname* Dateiname (ohne Erweiterung) basieren. Sie können übergeben **NULL** für diesen Parameter, wenn Sie den Dateinamen nicht erforderlich ist.
+*fname*<br/>
+Basisdateiname (ohne Erweiterung). Sie können übergeben **NULL** für diesen Parameter, wenn Sie den Dateinamen nicht erforderlich ist.
 
-*Ext* Dateierweiterung, einschl. führender Punkt (**.**). Sie können übergeben **NULL** für diesen Parameter, wenn Sie die Dateierweiterung nicht erforderlich ist.
+*ext*<br/>
+Dateierweiterung, einschl. führender Punkt (**.**). Sie können übergeben **NULL** für diesen Parameter, wenn Sie die Dateierweiterung nicht erforderlich ist.
 
 ## <a name="remarks"></a>Hinweise
 

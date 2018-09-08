@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (bitset)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d01a9ad5ef0b5cc3198231ae2b361e04856449f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 83e6e1bc3d35f076d3a1b8fd2151ad4c94c060cb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955019"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107653"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt;-Operatoren
 
@@ -48,9 +48,11 @@ operator&(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* das erste der beiden Bitsets, dessen jeweilige Elemente werden mit dem bitweisen `AND`.
+*left*<br/>
+Das erste der beiden Bitsets, dessen jeweilige Elemente mit dem bitweisen `AND` kombiniert werden sollen.
 
-*richtige* das zweite der beiden valarray-Objekte, deren jeweilige Elemente mit dem bitweisen `AND`.
+*right*<br/>
+Die zweite der beiden valarray-Klassen, deren jeweilige Elemente mit dem bitweisen `AND` kombiniert werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -98,7 +100,8 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* ein Objekt des Typs **Bitset\<N >** das ist in den Ausgabestream als Zeichenfolge eingefügt werden soll.
+*right*<br/>
+Ein Objekt vom Typ **bitset\<N>**, das als Zeichenfolge in den Ausgabestream eingefügt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -157,9 +160,11 @@ _Istr,
 
 ### <a name="parameters"></a>Parameter
 
-*_Istr* die Zeichenfolge, die in den Eingabestream in das Bitset eingefügt werden soll eingegeben werden.
+*_Istr*<br/>
+Die in den Eingabestream eingegebene Zeichenfolge, die in das Bitset eingefügt werden soll.
 
-*richtige* das Bitset, das die Bits aus dem Eingabestream empfängt.
+*right*<br/>
+Das Bitset, das die Bits aus dem Eingabestream empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -240,9 +245,11 @@ operator^(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* das erste der beiden Bitsets, dessen jeweilige Elemente werden mit dem bitweisen `EXCLUSIVE-OR`.
+*left*<br/>
+Das erste der beiden Bitsets, dessen jeweilige Elemente mit dem bitweisen `EXCLUSIVE-OR` kombiniert werden sollen.
 
-*richtige* das zweite der beiden valarray-Objekte, deren jeweilige Elemente mit dem bitweisen `EXCLUSIVE-OR`.
+*right*<br/>
+Die zweite der beiden valarray-Klassen, deren jeweilige Elemente mit dem bitweisen `EXCLUSIVE-OR` kombiniert werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -290,9 +297,11 @@ operator|(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* das erste der beiden Bitsets, dessen jeweilige Elemente werden mit dem bitweisen `OR`.
+*left*<br/>
+Das erste der beiden Bitsets, dessen jeweilige Elemente mit dem bitweisen `OR` kombiniert werden sollen.
 
-*richtige* das zweite der beiden valarray-Objekte, deren jeweilige Elemente mit dem bitweisen `OR`.
+*right*<br/>
+Die zweite der beiden valarray-Klassen, deren jeweilige Elemente mit dem bitweisen `OR` kombiniert werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 

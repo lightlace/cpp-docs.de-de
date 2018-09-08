@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfe7f0c579e0e22e3de98a9e5edf3abee6cfc2b3
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fb6c0051fbf4a1d5b58cb53891325058effb0db1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953168"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108992"
 ---
 # <a name="lessequal-struct"></a>less_equal-Struktur
 
@@ -51,9 +51,11 @@ struct less_equal<void>
 
 *Typ*, *T*, *U* jeder Typ, unterstützt eine `operator<=` , das Operanden angegebener oder abgeleiteter Typen akzeptiert.
 
-*Links* der linke Operand des kleiner-als-oder-gleich-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
+*Links*<br/>
+Der linke Operand des kleiner-oder-gleich-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
 
-*Rechts* der Rechte Operand des kleiner-als-oder-gleich-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
+*Rechts*<br/>
+Der rechte Operand des kleiner-oder-gleich-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
 
 ## <a name="return-value"></a>Rückgabewert
 

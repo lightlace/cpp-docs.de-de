@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e02a48fddfb2e5ff8f85b59b1ff241492461e521
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 8be70ac575d5459ea6f88ed19d60dbfe0ddfda14
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966354"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108784"
 ---
 # <a name="notequalto-struct"></a>not_equal_to-Struktur
 
@@ -51,9 +51,11 @@ struct not_equal_to<void>
 
 *Typ*, *T*, *U* jeder Typ, unterstützt eine `operator!=` , das Operanden angegebener oder abgeleiteter Typen akzeptiert.
 
-*Links* der linke Operand des ungleichheitsvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
+*Links*<br/>
+Der linke Operand des Ungleichheitsvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
 
-*Rechts* der Rechte Operand des ungleichheitsvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
+*Rechts*<br/>
+Der rechte Operand des Ungleichheitsvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
 
 ## <a name="return-value"></a>Rückgabewert
 

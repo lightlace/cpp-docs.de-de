@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f8592e8008fa78402ced307b60188ea8610960a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea1c979b261b81f80d95e4219f948dd2a3f5849e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407313"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100352"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -54,19 +54,21 @@ void setbuf(
 
 ### <a name="parameters"></a>Parameter
 
-*Stream* Zeiger auf **Datei** Struktur.
+*Stream*<br/>
+Zeiger auf die **FILE**-Struktur.
 
-*Puffer* Benutzer zugeordneten Puffer.
+*buffer*<br/>
+Vom Benutzer zugewiesener Puffer.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Setbuf** Funktion Pufferung für Steuerelemente *Stream*. Die *Stream* Argument muss finden Sie in einer geöffneten Datei, die nicht gelesen oder geschrieben wurde. Wenn die *Puffer* Argument ist **NULL**, der Datenstrom ist nicht gepuffert. Wenn nicht, der Puffer in ein Zeichenarray Länge zeigen muss **BUFSIZ**, wobei **BUFSIZ** ist die Größe des Puffers in STDIO definiert. H. Für den E/A-Pufferbetrieb wird anstelle des systemseitig für den gegebenen Stream reservierten Puffers der vom Benutzer angegebene Puffer verwendet. Die **"stderr"** Datenstrom ist nicht standardmäßig gepuffert, aber Sie können **Setbuf** Zuweisen von Puffern, **"stderr"**.
+Die **Setbuf** -Funktion steuert die Pufferung für *Stream*. Die *Stream* -Argument muss verweisen auf eine geöffnete Datei, die nicht gelesen oder geschrieben wurde. Wenn die *Puffer* Argument **NULL**, der Stream nicht gepuffert wird. Wenn nicht, der Puffer auf ein Zeichenarray der Länge zeigen muss **BUFSIZ**, wobei **BUFSIZ** in STDIO definiert die Größe des Puffers entspricht. H. Für den E/A-Pufferbetrieb wird anstelle des systemseitig für den gegebenen Stream reservierten Puffers der vom Benutzer angegebene Puffer verwendet. Die **"stderr"** ist standardmäßig ungepuffert, aber Sie können **Setbuf** Puffer zuweisen **"stderr"**.
 
-**Setbuf** wurde ersetzt durch [Setvbuf](setvbuf.md), dies ist die bevorzugte Routine für neuen Code. **Setbuf** für die Kompatibilität mit vorhandenen Code beibehalten wird.
+**Setbuf** wurde ersetzt durch [Setvbuf](setvbuf.md), dies ist die bevorzugte Routine für neuen Code. **Setbuf** für Kompatibilität mit vorhandenem Code beibehalten.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**setbuf**|\<stdio.h>|
 

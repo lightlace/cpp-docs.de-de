@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 455bf63cdac425217c40068853b302edefb94f16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1df9e064ac7af761a858c6e18d99526a9b3c7ffb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404281"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103787"
 ---
 # <a name="perror-wperror"></a>perror, _wperror
 
@@ -64,11 +64,12 @@ void _wperror(
 
 ### <a name="parameters"></a>Parameter
 
-*Nachricht* Zeichenfolgennachricht zu drucken.
+*message*<br/>
+Zu druckende Zeichenfolgennachricht.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Perror** -Funktion gibt eine Fehlermeldung an **"stderr"**. **_wperror** ist eine Breitzeichen-Version von **_perror**; das *Nachricht* Argument **_wperror** ist eine Breitzeichen-Zeichenfolge. **_wperror** und **_perror** Verhalten sich andernfalls identisch.
+Die **Perror** -Funktion druckt eine Fehlermeldung an **"stderr"**. **_wperror** ist eine Breitzeichen-Version von **_perror**; die *Nachricht* Argument **_wperror** ist eine Breitzeichen-Zeichenfolge. **_wperror** und **_perror** Verhalten sich andernfalls identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -76,17 +77,17 @@ Die **Perror** -Funktion gibt eine Fehlermeldung an **"stderr"**. **_wperror** i
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tperror**|**perror**|**perror**|**_wperror**|
 
-*Nachricht* gedruckt wird zuerst, gefolgt von einem Doppelpunkt, die Systemfehlermeldung zu dem letzten Bibliotheksaufruf, die den Fehler verursacht hat, und schließlich ein neue-Zeile-Zeichen. Wenn *Nachricht* ist ein null-Zeiger oder ein Zeiger auf eine null-Zeichenfolge **Perror** druckt nur die Systemfehlermeldung.
+*Nachricht* wird zuerst gedruckt, gefolgt von einem Doppelpunkt und dann nach der Systemfehlermeldung für den letzten Bibliotheksaufruf, der den Fehler erzeugt und schließlich ein neue-Zeile-Zeichen. Wenn *Nachricht* ist ein null-Zeiger oder ein Zeiger auf eine null-Zeichenfolge **Perror** druckt nur die System-Fehlermeldung.
 
-Die Fehlernummer wird in der Variablen [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (in ERRNO.H definiert) gespeichert. Über die Variable [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) wird auf die Systemfehlermeldungen zugegriffen, die als Array von Meldungen nach Fehlernummern geordnet sind. **pError** druckt die entsprechende Fehlermeldung mit der **Errno** Wert als Index für **_sys_errlist**. Der Wert der Variablen [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) ist definiert als die maximale Anzahl von Elementen in der **_sys_errlist** Array.
+Die Fehlernummer wird in der Variablen [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (in ERRNO.H definiert) gespeichert. Über die Variable [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) wird auf die Systemfehlermeldungen zugegriffen, die als Array von Meldungen nach Fehlernummern geordnet sind. **pError** druckt die entsprechende Fehlermeldung, indem die **Errno** Wert als Index für **_sys_errlist**. Der Wert der Variablen [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) ist definiert als die maximale Anzahl von Elementen in der **_sys_errlist** Array.
 
-Rufen Sie für die genauesten Ergebnisse, **Perror** sofort, nachdem eine Bibliotheksroutine einen Fehler zurückgibt. Andernfalls können nachfolgende Aufrufe überschreiben die **Errno** Wert.
+Rufen Sie für genaue Ergebnisse zu erhalten **Perror** sofort, nachdem eine Bibliotheksroutine einen Fehler zurückgibt. Andernfalls können nachfolgende Aufrufe überschreiben die **Errno** Wert.
 
-Im Windows-Betriebssystem, einige **Errno** Werte in ERRNO aufgeführt. H werden nicht verwendet. Diese Werte sind für die Verwendung des UNIX-Betriebssystems reserviert. Finden Sie unter [_doserrno, Errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) eine Liste der **Errno** Werte, die von Windows-Betriebssystems verwendet. **pError** druckt eine leere Zeichenfolge für eine beliebige **Errno** Wert nicht von diesen Plattformen verwendet wird.
+In der Windows Betriebssystem werden einige **Errno** Werte in ERRNO aufgeführt. H werden nicht verwendet. Diese Werte sind für die Verwendung des UNIX-Betriebssystems reserviert. Finden Sie unter [_doserrno, Errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) eine Liste der **Errno** Werte, die von der Windows-Betriebssystem verwendet. **pError** druckt eine leere Zeichenfolge für eine beliebige **Errno** Wert, der nicht von diesen Plattformen verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**perror**|\<stdio.h > oder \<stdlib.h >|
 |**_wperror**|\<stdio.h> oder \<wchar.h>|

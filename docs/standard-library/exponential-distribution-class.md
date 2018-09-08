@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40c06d2dc95366e154f4299dda0087c42698312
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 018af5d544e38485dc38608f280d57ce595db49c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960195"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103278"
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution-Klasse
 
@@ -77,10 +77,11 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*RealType* der gleitkommaergebnistyp standardmäßig **doppelte**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType*<br/>
+Der gleitkommaergebnistyp standardmäßig **doppelte**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
-
-  *URNG* Die Zufallszahlengenerator-Engine. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*URNG*<br/>
+Die zufällige Zufallszahlengenerator-Engine. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
@@ -192,9 +193,11 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*Lambda* der `lambda` verteilungsparameter.
+*Lambda*<br/>
+Der `lambda`-Verteilungsparameter.
 
-*Parm* das parameterpaket verwendet, um die Verteilung erstellen.
+*parm*<br/>
+Das für die Erstellung der Verteilung verwendete Parameterpaket.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -221,9 +224,11 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*Lambda* der `lambda` verteilungsparameter.
+*Lambda*<br/>
+Der `lambda`-Verteilungsparameter.
 
-*richtige* der `param_type` zu zu vergleichende Objekt.
+*right*<br/>
+Das mit diesem `param_type`-Objekt zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
 

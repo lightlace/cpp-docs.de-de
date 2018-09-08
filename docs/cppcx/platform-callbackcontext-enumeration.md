@@ -15,34 +15,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b80fe7749fdb2f91e300cff007c01001edfa557
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fe988a7dee7fb358d9454c06811d7baf2cd4ace0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755111"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101962"
 ---
 # <a name="platformcallbackcontext-enumeration"></a>Platform::CallbackContext-Enumeration
-Gibt den Threadkontext an, in dem eine Rückruffunktion (Ereignishandler) ausgeführt wird.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-enum class CallbackContext {};  
-```  
-  
-### <a name="members"></a>Member  
-  
-|Typcode|Beschreibung|  
-|---------------|-----------------|  
-|Beliebig|Die Rückruffunktion kann in jedem beliebigen Threadkontext ausgeführt werden.|  
-|Gleiche Voraussetzung|Die Rückruffunktion kann nur in dem Threadkontext ausgeführt werden, der den asynchronen Vorgang gestartet hat.|  
-  
-### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client (Min.):** Windows 8  
-  
- **Unterstützter Server (Min.):** Windows Server 2012  
-  
- **Namespace:** Platform  
-  
- **Metadaten:** platform.winmd
+
+Gibt den Threadkontext an, in dem eine Rückruffunktion (Ereignishandler) ausgeführt wird.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+enum class CallbackContext {};
+```
+
+### <a name="members"></a>Member
+
+|Typcode|Beschreibung|
+|---------------|-----------------|
+|Beliebig|Die Rückruffunktion kann in jedem beliebigen Threadkontext ausgeführt werden.|
+|Gleiche Voraussetzung|Die Rückruffunktion kann nur in dem Threadkontext ausgeführt werden, der den asynchronen Vorgang gestartet hat.|
+
+### <a name="requirements"></a>Anforderungen
+
+**Unterstützter Client (Min.):** Windows 8
+
+**Unterstützter Server (Min.):** Windows Server 2012
+
+**Namespace:** Platform
+
+**Metadaten:** platform.winmd

@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1d2bef607e80e2e972915bd8a8b0517b7c6e5eb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 67fef1231d4488b1714cc2f0f2f0e892737e627d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200666"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101936"
 ---
 # <a name="assert-macro-assert-wassert"></a>assert-Makro, _assert, _wassert
 
@@ -69,13 +69,17 @@ void _wassert(
 
 ### <a name="parameters"></a>Parameter
 
-*Ausdruck* ein skalarer Ausdruck (einschließlich zeigerausdrücken), der zu ungleich null ergibt (**"true"**) oder 0 (**"false"**).
+*Ausdruck*<br/>
+Ein skalarer Ausdruck (einschließlich zeigerausdrücken), der zu ungleich null ergibt (**"true"**) oder 0 (**"false"**).
 
-*Nachricht* die anzuzeigende Meldung.
+*message*<br/>
+Die anzuzeigende Meldung.
 
-*FileName* der Namen der Quelle der Datei bei der Assertion.
+*filename*<br/>
+Der Name der Quelldatei, in der der Assertionsfehler aufgetreten ist.
 
-*Zeile* die Zeilennummer in der Quelldatei mit dem Assertionsfehler.
+*Zeile*<br/>
+Die Zeilennummer in der Quelldatei mit dem Assertionsfehler.
 
 ## <a name="remarks"></a>Hinweise
 

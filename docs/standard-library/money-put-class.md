@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de84f708957074878fba84ebfe3db600a1b6ed86
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 299d11ea29afa5331ef79c7947ccd2684713b29e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954811"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108901"
 ---
 # <a name="moneyput-class"></a>money_put-Klasse
 
@@ -47,9 +47,11 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType* den Typ innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet.
+*CharType*<br/>
+Der Typ, der innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet wird.
 
-*OutputIterator* der Typ des Iterators, in den die monetären-Funktionen PUT, ihre Ausgabe schreiben.
+*OutputIterator*<br/>
+Der Typ des Iterators, in den die monetären Put-Funktionen ihre Ausgabe schreiben.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -117,15 +119,20 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parameter
 
-*nächste* ein Iterator, der das erste Element des eingefügten Zeichenfolge adressiert.
+*next*<br/>
+Ein Iterator, der das erste Element in der eingefügten Zeichenfolge adressiert.
 
-*_Intl* ein boolescher Wert, der angibt, des Typs des Currency Symbols in der Sequenz erwartet: **"true"** Wenn international; **"false"** Wenn National.
+*_Intl*<br/>
+Ein boolescher Wert, der den Typ des in der Sequenz vorgesehenen Währungssymbols angibt (**TRUE**, wenn international; **FALSE**, wenn national).
 
-*"_Iosbase"* ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist; andernfalls ist es erforderlich
+*"_Iosbase"*<br/>
+Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
-*_Fill* ein Zeichen das für Abstand verwendet wird.
+*_Fill*<br/>
+Ein Zeichen, das Leerzeichen einfügt.
 
-*Val* eine String-Objekt konvertiert werden.
+*val*<br/>
+Ein zu konvertierendes Zeichenfolgenobjekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -195,7 +202,8 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parameter
 
-*_Refs* Ganzzahlwert verwendet, um den Typ für die Speicherverwaltung für das Objekt anzugeben.
+*_Refs*<br/>
+Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -234,15 +242,20 @@ iter_type put(
 
 ### <a name="parameters"></a>Parameter
 
-*nächste* ein Iterator, der das erste Element des eingefügten Zeichenfolge adressiert.
+*next*<br/>
+Ein Iterator, der das erste Element in der eingefügten Zeichenfolge adressiert.
 
-*_Intl* ein boolescher Wert, der angibt, des Typs des Currency Symbols in der Sequenz erwartet: **"true"** Wenn international; **"false"** Wenn National.
+*_Intl*<br/>
+Ein boolescher Wert, der den Typ des in der Sequenz vorgesehenen Währungssymbols angibt (**TRUE**, wenn international; **FALSE**, wenn national).
 
-*"_Iosbase"* ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist; andernfalls ist es erforderlich
+*"_Iosbase"*<br/>
+Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
-*_Fill* ein Zeichen das für Abstand verwendet wird.
+*_Fill*<br/>
+Ein Zeichen, das Leerzeichen einfügt.
 
-*Val* eine String-Objekt konvertiert werden.
+*val*<br/>
+Ein zu konvertierendes Zeichenfolgenobjekt.
 
 ### <a name="return-value"></a>Rückgabewert
 

@@ -17,91 +17,97 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a97d77f0b84366c83f09f6a6c72afe1bbb25dc6d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d0c6f7bc2cdc6b1478aba26c1ce0db48464a9ef2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758829"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104036"
 ---
 # <a name="platformintptr-value-class"></a>Platform::IntPtr-Wertklasse
-Stellt einen Zeiger oder ein Handle mit Vorzeichen dar, dessen Größe plattformspezifisch ist (32-Bit oder 64-Bit).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-public value struct IntPtr  
-```  
-  
-### <a name="members"></a>Member  
- IntPtr hat die folgenden Mitglieder:  
-  
-|Member|Beschreibung|  
-|------------|-----------------|  
-|[IntPtr::IntPtr](#ctor)|Initialisiert eine neue Instanz von IntPtr.|  
-|[IntPtr::op_explicit-Operator](#op-explicit)|Konvertiert den angegebenen Parameter in einen IntPtr oder einen Zeiger auf einen IntPtr-Wert.|  
-|[IntPtr::ToInt32](#toint32)|Konvertiert den aktuellen IntPtr in eine 32-Bit-Ganzzahl.|  
-  
-### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client (Min.):** Windows 8  
-  
- **Unterstützter Server (Min.):** Windows Server 2012  
-  
- **Namespace:** Platform  
-  
- **Metadaten:** platform.winmd  
+
+Stellt einen Zeiger oder ein Handle mit Vorzeichen dar, dessen Größe plattformspezifisch ist (32-Bit oder 64-Bit).
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+public value struct IntPtr
+```
+
+### <a name="members"></a>Member
+
+IntPtr hat die folgenden Mitglieder:
+
+|Member|Beschreibung|
+|------------|-----------------|
+|[IntPtr::IntPtr](#ctor)|Initialisiert eine neue Instanz von IntPtr.|
+|[IntPtr::op_explicit-Operator](#op-explicit)|Konvertiert den angegebenen Parameter in einen IntPtr oder einen Zeiger auf einen IntPtr-Wert.|
+|[IntPtr::ToInt32](#toint32)|Konvertiert den aktuellen IntPtr in eine 32-Bit-Ganzzahl.|
+
+### <a name="requirements"></a>Anforderungen
+
+**Unterstützter Client (Min.):** Windows 8
+
+**Unterstützter Server (Min.):** Windows Server 2012
+
+**Namespace:** Platform
+
+**Metadaten:** platform.winmd
 
 ## <a name="ctor"> </a> IntPtr::IntPtr-Konstruktor
-Initialisiert eine neue Instanz von IntPtr mit dem angegebenen Wert.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```cpp  
-IntPtr( __int64 handle-or-pointer );   IntPtr( void* value );   IntPtr( int 32-bit_value );  
-```  
-  
-### <a name="parameters"></a>Parameter  
- Wert  
- Ein 64-Bit-Handle oder -Zeiger oder ein Zeiger auf einen 64-Bit-Wert oder einen 32-Bit-Wert, der in einen 64-Bit-Wert konvertiert werden kann.  
-  
 
+Initialisiert eine neue Instanz von IntPtr mit dem angegebenen Wert.
+
+### <a name="syntax"></a>Syntax
+
+```cpp
+IntPtr( __int64 handle-or-pointer );   IntPtr( void* value );   IntPtr( int 32-bit_value );
+```
+
+### <a name="parameters"></a>Parameter
+
+*Wert*<br/>
+Ein 64-Bit-Handle oder -Zeiger oder ein Zeiger auf einen 64-Bit-Wert oder einen 32-Bit-Wert, der in einen 64-Bit-Wert konvertiert werden kann.
 
 ## <a name="op-explicit"> </a> IntPtr::op_explicit-Operator
-Konvertiert den angegebenen Parameter in einen IntPtr oder einen Zeiger auf einen IntPtr-Wert.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```cpp  
-static IntPtr::operator IntPtr( void* value1);   static IntPtr::operator IntPtr( int value2);   static IntPtr::operator void*( IntPtr value3 );  
-```  
-  
-### <a name="parameters"></a>Parameter  
- value1  
- Ein Zeiger auf ein Handle oder einem IntPtr.  
-  
- value2  
- Eine 32-Bit-Ganzzahl, die in einen IntPtr konvertiert werden kann.  
-  
- value3  
- Ein IntPtr.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Der erste und zweite Operator gibt ein IntPtr zurück. Der dritte Operator gibt einen Zeiger auf den Wert zurück, der durch das aktuelle IntPtr dargestellt wird.  
-  
 
+Konvertiert den angegebenen Parameter in einen IntPtr oder einen Zeiger auf einen IntPtr-Wert.
+
+### <a name="syntax"></a>Syntax
+
+```cpp
+static IntPtr::operator IntPtr( void* value1);   static IntPtr::operator IntPtr( int value2);   static IntPtr::operator void*( IntPtr value3 );
+```
+
+### <a name="parameters"></a>Parameter
+
+*Wert1*<br/>
+Ein Zeiger auf ein Handle oder einem IntPtr.
+
+*Wert2*<br/>
+Eine 32-Bit-Ganzzahl, die in einen IntPtr konvertiert werden kann.
+
+*Wert3*<br/>
+Ein IntPtr.
+
+### <a name="return-value"></a>Rückgabewert
+
+Der erste und zweite Operator gibt ein IntPtr zurück. Der dritte Operator gibt einen Zeiger auf den Wert zurück, der durch das aktuelle IntPtr dargestellt wird.
 
 ## <a name="toint32"> </a> IntPtr:: Toint32-Methode
-Konvertiert den aktuellen IntPtr-Wert in eine 32-Bit-Ganzzahl.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```cpp  
-int32 IntPtr::ToInt32();  
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Eine 32-Bit-Ganzzahl  
-  
-  
-## <a name="see-also"></a>Siehe auch  
- [Platform-namespace](../cppcx/platform-namespace-c-cx.md)
+
+Konvertiert den aktuellen IntPtr-Wert in eine 32-Bit-Ganzzahl.
+
+### <a name="syntax"></a>Syntax
+
+```cpp
+int32 IntPtr::ToInt32();
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Eine 32-Bit-Ganzzahl
+
+## <a name="see-also"></a>Siehe auch
+
+[Platform-namespace](../cppcx/platform-namespace-c-cx.md)

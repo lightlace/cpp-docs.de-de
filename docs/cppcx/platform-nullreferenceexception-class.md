@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78d0cf9ec994d21845e1910b5affc9e3b5d74a8d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 50f85d1c246c52121c1cadbe68e1df944130a2a3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763801"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103971"
 ---
 # <a name="platformnullreferenceexception-class"></a>Platform::NullReferenceException-Klasse
-Wird ausgelöst, wenn der Versuch gemacht wird, einen Verweis auf ein NULL-Objekt zu dereferenzieren.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-public ref class NullReferenceException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter der [COMException](../cppcx/platform-comexception-class.md) -Klasse.  
-  
-### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client (Min.):** Windows 8  
-  
- **Unterstützter Server (Min.):** Windows Server 2012  
-  
- **Namespace:** Platform  
-  
- **Metadaten:** platform.winmd  
-  
-## <a name="see-also"></a>Siehe auch  
- [Platform::COMException-Klasse](../cppcx/platform-comexception-class.md)
+
+Wird ausgelöst, wenn der Versuch gemacht wird, einen Verweis auf ein NULL-Objekt zu dereferenzieren.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+public ref class NullReferenceException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Hinweise
+
+Weitere Informationen finden Sie unter der [COMException](../cppcx/platform-comexception-class.md) -Klasse.
+
+### <a name="requirements"></a>Anforderungen
+
+**Unterstützter Client (Min.):** Windows 8
+
+**Unterstützter Server (Min.):** Windows Server 2012
+
+**Namespace:** Platform
+
+**Metadaten:** platform.winmd
+
+## <a name="see-also"></a>Siehe auch
+
+[Platform::COMException-Klasse](../cppcx/platform-comexception-class.md)

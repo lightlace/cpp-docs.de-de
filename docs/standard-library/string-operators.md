@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: 728a0f643a77b47bf857d409517407bec3a1b8b4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0b4ec7d6d79f70423b2d7c30e1de73e05eb04d9c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966620"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101801"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt;-Operatoren
 
@@ -107,9 +107,11 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` , verkettet werden soll.
+*left*<br/>
+Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
-*richtige* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` , verkettet werden soll.
+*right*<br/>
+Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -194,9 +196,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*left*<br/>
+Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
-*richtige* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*right*<br/>
+Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -283,9 +287,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*left*<br/>
+Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
-*richtige* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*right*<br/>
+Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -372,9 +378,11 @@ bool operator<(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*left*<br/>
+Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
-*richtige* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*right*<br/>
+Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -466,9 +474,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*left*<br/>
+Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
-*richtige* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*right*<br/>
+Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -557,9 +567,11 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parameter
 
-*_Ostr* den Ausgabestream geschrieben wird.
+*_Ostr*<br/>
+Der Ausgabestream, in den geschrieben wird.
 
-*Str* die Zeichenfolge, die in den Ausgabestream eingegeben werden.
+*str*<br/>
+Die in den Ausgabestream einzugebende Zeichenfolge.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -592,9 +604,11 @@ bool operator>(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*left*<br/>
+Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
-*richtige* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*right*<br/>
+Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -693,9 +707,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*left*<br/>
+Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
-*richtige* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*right*<br/>
+Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -784,9 +800,11 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parameter
 
-*_Istr* der Eingabestream, um die Sequenz zu extrahieren.
+*_Istr*<br/>
+Der Eingabestream, mit dem die Sequenz extrahiert wird
 
-*richtige* die Zeichenfolge, die aus dem Eingabestream extrahiert wird.
+*right*<br/>
+Die Zeichenfolge, die aus dem Eingabestream extrahiert wird.
 
 ### <a name="return-value"></a>Rückgabewert
 

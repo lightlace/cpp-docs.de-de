@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f27162b1dfc96b4797184b3fefc1ad8ecc464f55
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c3f59bcb792d17f031b7a8ce7363158630d87506
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954993"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100779"
 ---
 # <a name="sharedfuture-class"></a>shared_future-Klasse
 
@@ -115,7 +115,8 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>Parameter
 
-*Rechts* ein `shared_future` Objekt.
+*Rechts*<br/>
+Ein `shared_future`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -140,7 +141,8 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>Parameter
 
-*Rechts* ein [zukünftige](../standard-library/future-class.md) oder `shared_future` Objekt.
+*Rechts*<br/>
+Ein [zukünftiges](../standard-library/future-class.md) oder `shared_future`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -186,7 +188,8 @@ future_status wait_for(
 
 ### <a name="parameters"></a>Parameter
 
-*Rel_time* ein [chrono:: Duration](../standard-library/duration-class.md) Objekt, das ein maximales Zeitintervall angibt, die der Thread blockiert.
+*Rel_time*<br/>
+Ein [chrono::duration](../standard-library/duration-class.md)-Objekt, das ein maximales Zeitintervall angibt, das der Thread blockiert.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -208,7 +211,8 @@ future_status wait_until(
 
 ### <a name="parameters"></a>Parameter
 
-*Abs_time* ein [chrono:: time_point](../standard-library/time-point-class.md) -Objekt, das eine Uhrzeit angibt, nach dem der Thread die Blockierung aufheben kann.
+*Abs_time*<br/>
+Ein [chrono::time_point](../standard-library/time-point-class.md)-Objekt, das eine Zeit angibt, nach der der Thread die Blockierung aufheben kann.
 
 ### <a name="return-value"></a>Rückgabewert
 
