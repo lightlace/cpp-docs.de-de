@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58f8eddd2cae672f2a3677ebc9af87987889d166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 37f54ff6b2c3738550c707887f2068986ca4abd6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406832"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100286"
 ---
 # <a name="rewind"></a>rewind
 
@@ -55,25 +55,26 @@ void rewind(
 
 ### <a name="parameters"></a>Parameter
 
-*Stream* Zeiger auf **Datei** Struktur.
+*Stream*<br/>
+Zeiger auf die **FILE**-Struktur.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **zurückspulen** Funktion positioniert den zugeordneten Dateizeiger *Stream* am Anfang der das. Der Aufruf **rewind** ist vergleichbar mit
+Die **rewind** Funktion automatisch neu positioniert und den zugeordneten Dateizeiger *Stream* an den Anfang der das. Der Aufruf **rewind** ist vergleichbar mit
 
 **(void) Fseek (** _Stream_**, 0 L, SEEK_SET);**
 
-Anders als bei [Fseek](fseek-fseeki64.md), **zurückspulen** löscht die Fehlerindikatoren für den Stream sowie der Dateiende-Indikator. Darüber hinaus im Gegensatz zu [Fseek](fseek-fseeki64.md), **zurückspulen** gibt einen Wert, der angibt, ob der Zeiger erfolgreich verschoben wurde keinen zurück.
+Anders als bei [Fseek](fseek-fseeki64.md), **rewind** löscht die Fehlerindikatoren für den Stream und den Dateiende-Indikator. Darüber hinaus im Gegensatz zu [Fseek](fseek-fseeki64.md), **rewind** gibt einen Wert aus, um anzugeben, ob der Zeiger erfolgreich verschoben wurde nicht zurück.
 
-Der Tastaturpuffer verwenden, um **zurückspulen** mit dem Datenstrom **Stdin**, der Tastatur standardmäßig zugeordnet ist.
+Um den Tastaturpuffer zu löschen, verwenden **rewind** mit dem Datenstrom **Stdin**, der Tastatur standardmäßig zugeordnet ist.
 
-Wenn der Stream ist ein **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Diese Funktion gibt zurück, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, und **Errno** festgelegt ist, um **EINVAL**.
+Wenn der Stream einen **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Diese Funktion gibt zurück, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, und **Errno** nastaven NA hodnotu **EINVAL**.
 
 Weitere Informationen über diese und andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr (_doserrno, errno, _sys_errlist und _sys_nerr)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**rewind**|\<stdio.h>|
 

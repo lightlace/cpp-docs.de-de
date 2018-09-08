@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e199df62aa6bc0c3dc670bd2951a7af2667e7faa
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9eccefff291dc509f846bce951cfe9508834876e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758377"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103878"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map-Klasse
 
@@ -46,17 +46,16 @@ ref class Map sealed;
 
 ### <a name="parameters"></a>Parameter
 
-*K*  
- Der Typ des Schlüssels im Schlüssel-Wert-Paar.
+*K*<br/>
+Der Typ des Schlüssels im Schlüssel-Wert-Paar.
 
-*V*  
+*V*<br/>
 Der Typ des Werts im Schlüssel-Wert-Paar.
 
-*C*  
+*C*<br/>
 Ein Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der Map zu bestimmen. In der Standardeinstellung [Std:: less\<K >](../standard-library/less-struct.md).
 
-*__is_valid_winrt_type()*  
-Eine vom Compiler generierten-Funktion, die überprüft, den Typ des ob *K* und *V* und bietet eine benutzerfreundliche Fehlermeldung, wenn der Typ in der Zuordnung gespeichert werden kann.
+*__is_valid_winrt_type()* eine vom Compiler generierten-Funktion, die überprüft, den Typ des ob *K* und *V* und bietet eine benutzerfreundliche Fehlermeldung, wenn der Typ in der Zuordnung gespeichert werden kann.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -169,7 +168,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>Parameter
 
-*key*  
+*key*<br/>
 Der zum Suchen des Map-Elements verwendete Schlüssel. Der Typ des *Schlüssel* ist der Typname *K*.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -188,10 +187,10 @@ virtual bool Insert(K key, V value);
 
 ### <a name="parameters"></a>Parameter
 
-*key*  
+*key*<br/>
 Der Schlüsselteil des Schlüssel-Wert-Paars. Der Typ des *Schlüssel* ist der Typname *K*.
 
-*Wert*  
+*Wert*<br/>
 Der Wertteil des Schlüssel-Wert-Paars. Der Typ des *Wert* ist der Typname *V*.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -210,7 +209,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>Parameter
 
-*key*  
+*key*<br/>
 Der zum Suchen eines in der Zuordnung vorhandenen Elements verwendete Schlüssel. Der Typ des *Schlüssel* ist der Typname *K*.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -240,19 +239,19 @@ Map(
 
 ### <a name="parameters"></a>Parameter
 
-*InIt*  
+*InIt*<br/>
 Der Typname der aktuellen Map.
 
-*comp*  
+*comp*<br/>
 Ein Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der Map zu bestimmen.
 
-*m*  
+*m*<br/>
 Ein Verweis oder [Lvalues und Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) zu einem `map Class` , wird verwendet, um die aktuelle Map zu initialisieren.
 
-*Erste*  
+*Erste*<br/>
 Der Eingabeiterator des ersten Elements in einem Bereich von Elementen, die verwendet werden, um die aktuelle Map zu initialisieren.
 
-*last*  
+*last*<br/>
 Der Eingabeiterator des ersten Elements nach einem Bereich von Elementen, die verwendet werden, um die aktuelle Map zu initialisieren.
 
 ## <a name="mapchanged"></a>  Map:: mapchanged-Ereignis
@@ -285,7 +284,7 @@ virtual void Remove(K key);
 
 ### <a name="parameters"></a>Parameter
 
-*key*  
+*key*<br/>
 Der Schlüsselteil des Schlüssel-Wert-Paars. Der Typ des *Schlüssel* ist der Typname *K*.
 
 ## <a name="size"></a>  Map:: size-Methode
@@ -304,5 +303,5 @@ Die Anzahl von Elementen in der Zuordnung.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Plattform-Namespace](platform-namespace-c-cx.md)  
-[Erstellen von Windows-Runtime-Komponenten in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[Plattform-Namespace](platform-namespace-c-cx.md)<br/>
+[Erstellen von Windows-Runtime-Komponenten in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

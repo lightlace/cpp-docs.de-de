@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad33ff04c688ab79fa4a73234829d3e13fd1b44d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e37d1506fd713f90b793c6f3f9a04b39bf53f7a4
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954234"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100469"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt;-Operatoren
 
@@ -56,13 +56,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* eines der Objekte auf Ungleichheit getestet werden soll.
+*left*<br/>
+Eines der Objekte, die auf Ungleichheit geprüft werden sollen.
 
-*richtige* eines der Objekte auf Ungleichheit getestet werden soll.
+*right*<br/>
+Eines der Objekte, die auf Ungleichheit geprüft werden sollen.
 
-*Ty1* der Typ, der von der linken Seite gesteuert freigegebene Zeiger.
+*Ty1*<br/>
+Der vom linken gemeinsamen Zeiger gesteuerte Typ.
 
-*Ty2* vom rechts gesteuerte Typ freigegebene Zeiger.
+*Ty2*<br/>
+Der vom rechten gemeinsamen Zeiger gesteuerte Typ.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -154,13 +158,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* eines der Objekte auf Gleichheit getestet werden soll.
+*left*<br/>
+Eines der Objekte, die auf Gleichheit geprüft werden sollen.
 
-*richtige* eines der Objekte auf Gleichheit getestet werden soll.
+*right*<br/>
+Eines der Objekte, die auf Gleichheit geprüft werden sollen.
 
-*Ty1* der Typ, der von der linken Seite gesteuert freigegebene Zeiger.
+*Ty1*<br/>
+Der vom linken gemeinsamen Zeiger gesteuerte Typ.
 
-*Ty2* vom rechts gesteuerte Typ freigegebene Zeiger.
+*Ty2*<br/>
+Der vom rechten gemeinsamen Zeiger gesteuerte Typ.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -258,13 +266,17 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* eines der Objekte verglichen werden soll.
+*left*<br/>
+Eines der zu vergleichenden Objekte.
 
-*richtige* eines der Objekte verglichen werden soll.
+*right*<br/>
+Eines der zu vergleichenden Objekte.
 
-*Ty1* der Typ, der von der linken Seite gesteuert freigegebene Zeiger.
+*Ty1*<br/>
+Der vom linken gemeinsamen Zeiger gesteuerte Typ.
 
-*Ty2* vom rechts gesteuerte Typ freigegebene Zeiger.
+*Ty2*<br/>
+Der vom rechten gemeinsamen Zeiger gesteuerte Typ.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -288,13 +300,17 @@ bool operator<(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* eines der Objekte verglichen werden soll.
+*left*<br/>
+Eines der zu vergleichenden Objekte.
 
-*richtige* eines der Objekte verglichen werden soll.
+*right*<br/>
+Eines der zu vergleichenden Objekte.
 
-*Ty1* vom linken Zeiger gesteuerte Typ.
+*Ty1*<br/>
+Der vom linken Zeiger gesteuerte Typ.
 
-*Ty2* vom rechten Zeiger gesteuerte Typ.
+*Ty2*<br/>
+Der vom rechten Zeiger gesteuerte Typ.
 
 ## <a name="op_lt_eq"></a> operator&lt;=
 
@@ -314,13 +330,17 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* eines der Objekte verglichen werden soll.
+*left*<br/>
+Eines der zu vergleichenden Objekte.
 
-*richtige* eines der Objekte verglichen werden soll.
+*right*<br/>
+Eines der zu vergleichenden Objekte.
 
-*Ty1* der Typ, der von der linken Seite gesteuert freigegebene Zeiger.
+*Ty1*<br/>
+Der vom linken gemeinsamen Zeiger gesteuerte Typ.
 
-*Ty2* vom rechts gesteuerte Typ freigegebene Zeiger.
+*Ty2*<br/>
+Der vom rechten gemeinsamen Zeiger gesteuerte Typ.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -344,13 +364,17 @@ bool operator>(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* eines der Objekte verglichen werden soll.
+*left*<br/>
+Eines der zu vergleichenden Objekte.
 
-*richtige* eines der Objekte verglichen werden soll.
+*right*<br/>
+Eines der zu vergleichenden Objekte.
 
-*Ty1* der Typ, der von der linken Seite gesteuert freigegebene Zeiger.
+*Ty1*<br/>
+Der vom linken gemeinsamen Zeiger gesteuerte Typ.
 
-*Ty2* vom rechts gesteuerte Typ freigegebene Zeiger.
+*Ty2*<br/>
+Der vom rechten gemeinsamen Zeiger gesteuerte Typ.
 
 ## <a name="op_lt_lt"></a> operator&lt;&lt;
 
@@ -364,15 +388,20 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>Parameter
 
-*Elem* den Typ des streamelements.
+*Elem*<br/>
+Der Typ des Streamelements.
 
-*TR* den Typ des streamelements.
+*Tr*<br/>
+Der Typ des Streamelements.
 
-*Ty* vom gemeinsamen Zeiger gesteuerte Typ.
+*Ty*<br/>
+Der vom freigegebenen Zeiger gesteuerte Typ.
 
-*out* den Ausgabestream.
+*out*<br/>
+Der Ausgabestream.
 
-*SP* der freigegebene Zeiger.
+*SP*<br/>
+Der freigegebene Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 

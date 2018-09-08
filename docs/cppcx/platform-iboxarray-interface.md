@@ -16,56 +16,64 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78815ed42833c48074abbb4b0c0fa0203f8c35a1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 66e3ff5a2daf0ddef41ea478b55ca2fc67298c01
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765693"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108447"
 ---
 # <a name="platformiboxarray-interface"></a>Platform::IBoxArray-Schnittstelle
-,`IBoxArray` ist der Wrapper für Arrays von Werttypen, die über die Anwendungsbinärdateischnittstelle (ABI) übergeben werden oder in Auflistungen von `Platform::Object^` -Elementen, wie die in XAML-Steuerelementen, gespeichert werden.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-template <typename T>  
-interface class IBoxArray  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `T`  
- Der Typ des geschachtelten Werts in jedem Arrayelement.  
-  
-### <a name="remarks"></a>Hinweise  
- `IBoxArray` ist die C++ / CX-Namen für `Windows::Foundation::IReferenceArray`.  
-  
-### <a name="members"></a>Member  
- Die `IBoxArray` -Schnittstelle erbt von der `IValueType` -Schnittstelle. `IBoxArray` umfasst auch folgende Member:  
-  
-|Methode|Beschreibung|  
-|------------|-----------------|  
-|[Wert](#value)|Gibt das nicht geschachtelte Array zurück, das zuvor in dieser `IBoxArray` -Instanz gespeichert wurde.|  
+
+,`IBoxArray` ist der Wrapper für Arrays von Werttypen, die über die Anwendungsbinärdateischnittstelle (ABI) übergeben werden oder in Auflistungen von `Platform::Object^` -Elementen, wie die in XAML-Steuerelementen, gespeichert werden.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+template <typename T>
+interface class IBoxArray
+```
+
+#### <a name="parameters"></a>Parameter
+
+*T*<br/>
+Der Typ des geschachtelten Werts in jedem Arrayelement.
+
+### <a name="remarks"></a>Hinweise
+
+`IBoxArray` ist die C++ / CX-Namen für `Windows::Foundation::IReferenceArray`.
+
+### <a name="members"></a>Member
+
+Die `IBoxArray` -Schnittstelle erbt von der `IValueType` -Schnittstelle. `IBoxArray` umfasst auch folgende Member:
+
+|Methode|Beschreibung|
+|------------|-----------------|
+|[Wert](#value)|Gibt das nicht geschachtelte Array zurück, das zuvor in dieser `IBoxArray` -Instanz gespeichert wurde.|
 
 ## <a name="value"></a> Iboxarray:: Value-Eigenschaft
-Gibt den ursprünglich in diesem Objekt gespeicherten Wert zurück.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```cpp  
-property T Value {T get();}  
-```  
-  
-### <a name="parameters"></a>Parameter  
- `T`  
- Der Typ des geschachtelten Werts.  
-  
-### <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
- Gibt den ursprünglich in diesem Objekt gespeicherten Wert zurück.  
-  
-### <a name="remarks"></a>Hinweise  
- Ein Beispiel finden Sie unter [Boxing](../cppcx/boxing-c-cx.md).  
-  
-  
-## <a name="see-also"></a>Siehe auch  
- [Array und WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)
+
+Gibt den ursprünglich in diesem Objekt gespeicherten Wert zurück.
+
+### <a name="syntax"></a>Syntax
+
+```cpp
+property T Value {T get();}
+```
+
+### <a name="parameters"></a>Parameter
+
+*T*<br/>
+Der Typ des geschachtelten Werts.
+
+### <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert
+
+Gibt den ursprünglich in diesem Objekt gespeicherten Wert zurück.
+
+### <a name="remarks"></a>Hinweise
+
+Ein Beispiel finden Sie unter [Boxing](../cppcx/boxing-c-cx.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Array und WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

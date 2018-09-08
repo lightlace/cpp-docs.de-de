@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62e0fea9154801f850640234355af53dc1154160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: afcd461446f98024e04e44e28facae4fba65b0aa
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408914"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100400"
 ---
 # <a name="searchenv-wsearchenv"></a>_searchenv, _wsearchenv
 
@@ -87,27 +87,30 @@ void _wsearchenv(
 
 ### <a name="parameters"></a>Parameter
 
-*FileName* Name der Datei gesucht.
+*filename*<br/>
+Der Name der zu suchenden Datei.
 
-*VarName* zu durchsuchende Umgebung.
+*Variablenname*<br/>
+Zu durchsuchende Umgebung.
 
-*PathName* Puffer zum Speichern des vollständigen Pfades.
+*Pfadname*<br/>
+Puffer zum Speichern des vollständigen Pfades.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_searchenv** -Routine sucht nach der Zieldatei, in der angegebenen Domäne. Die *Varname* Variable kann jede beliebige Umgebungsvariable oder benutzerdefinierte Variable sein – z. B. **Pfad**, **LIB**, oder **INCLUDE**–, die angibt, eine Liste von Verzeichnispfaden. Da **_searchenv** wird Groß-/Kleinschreibung beachtet, *Varname* sollte die Groß-/Kleinschreibung der Umgebungsvariablen übereinstimmen.
+Die **_searchenv** -Routine sucht für die Zieldatei in der angegebenen Domäne. Die *Varname* Variable kann jede beliebige Umgebungsvariable oder benutzerdefinierte Variable sein, z. B. **Pfad**, **LIB**, oder **INCLUDE**–, der angibt ein Liste von Verzeichnispfaden. Da **_searchenv** wird Groß-/Kleinschreibung beachtet, *Varname* sollte die Groß-/Kleinschreibung der Umgebungsvariablen.
 
-Die Routine sucht zuerst im aktuellen Arbeitsverzeichnis nach der Datei. Wenn die Datei dort nicht gefunden wird, werden die in der Umgebungsvariablen angegebenen Verzeichnisse durchsucht. Wenn die Zieldatei in einem dieser Verzeichnisse ist, wird der neu erstellte Pfad in kopiert *Pathname*. Wenn die *Filename* Datei wurde nicht gefunden, *Pathname* enthält eine leere Null endende Zeichenfolge.
+Die Routine sucht zuerst im aktuellen Arbeitsverzeichnis nach der Datei. Wenn die Datei dort nicht gefunden wird, werden die in der Umgebungsvariablen angegebenen Verzeichnisse durchsucht. Wenn die Zieldatei in einem dieser Verzeichnisse ist, wird in der neu erstellte Pfad kopiert *Pfadnamen*. Wenn die *Filename* Datei wurde nicht gefunden, *Pfadnamen* enthält eine leere Null-terminierte Zeichenfolge.
 
-Die *Pathname* Puffer muss mindestens **_MAX_PATH** Zeichen lang sein, um die volle Länge des erstellten Pfadnamens zu unterstützen. Andernfalls **_searchenv** möglicherweise einem Überlauf der *Pathname* gepuffert und unerwartetes Verhalten verursachen.
+Die *Pfadnamen* Puffer muss mindestens **_MAX_PATH** Zeichen lang sein, um die volle Länge des erstellten Pfadnamens aufzunehmen. Andernfalls **_searchenv** möglicherweise Überlauf der *Pfadnamen* Puffern und unerwartetes Verhalten verursachen.
 
-**_wsearchenv** ist eine Breitzeichen-Version von **_searchenv**, und die Argumente für **_wsearchenv** sind Zeichenfolgen mit Breitzeichen. **_wsearchenv** und **_searchenv** Verhalten sich andernfalls identisch.
+**_wsearchenv** ist eine Breitzeichen-Version von **_searchenv**, und die Argumente für **_wsearchenv** sind Breitzeichen Zeichenfolgen. **_wsearchenv** und **_searchenv** Verhalten sich andernfalls identisch.
 
-Wenn *Filename* ist eine leere Zeichenfolge ist, geben diese Funktionen zurück **ENOENT**.
+Wenn *Filename* ist eine leere Zeichenfolge ist, werden diese Funktionen geben **ENOENT**.
 
-Wenn *Filename* oder *Pathname* ist ein **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen – 1 zurück und legen Sie **Errno** auf **EINVAL**.
+Wenn *Filename* oder *Pfadnamen* ist eine **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
 
-Weitere Informationen zu **Errno** und andere Fehlercodes finden Sie unter [Errno-Konstanten](../../c-runtime-library/errno-constants.md).
+Weitere Informationen zu **Errno** und Fehlercodes finden Sie unter [Errno-Konstanten](../../c-runtime-library/errno-constants.md).
 
 In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -119,7 +122,7 @@ In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sich
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_searchenv**|\<stdlib.h>|
 |**_wsearchenv**|\<stdlib.h> oder \<wchar.h>|

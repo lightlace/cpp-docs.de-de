@@ -13,21 +13,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2f1e83c285274326be2501a8f9b006c8df05204
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fcf251a67e787f9cf935c9482d444031db96b879
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751526"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104211"
 ---
 # <a name="platformivaluetype-interface"></a>Platform::IValueType-Schnittstelle
-`Platform::IValueType` ist eine Infrastrukturschnittstelle, die von Wertklassen und Wertstrukturen implementiert wird. Nicht für die explizite Verwendung in Ihrem Code gedacht.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-interface class IValueType  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Platform-namespace](../cppcx/platform-namespace-c-cx.md)
+
+`Platform::IValueType` ist eine Infrastrukturschnittstelle, die von Wertklassen und Wertstrukturen implementiert wird. Nicht für die explizite Verwendung in Ihrem Code gedacht.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+interface class IValueType
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Platform-namespace](../cppcx/platform-namespace-c-cx.md)

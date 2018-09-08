@@ -9,40 +9,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ed67496189388b869d7d9491ac4baad3de810ca
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7e9ab84bf840f01fbb22ef3b2510056338d10c74
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751977"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108376"
 ---
 # <a name="boxing-ccx"></a>Boxing (C++/CX)
-*Boxing* wird eine Werttypvariable wie z. B. wrapping [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)– oder ein grundlegender Skalartyp wie z. B. `int`– in einer Verweisklasse, wenn die Variable an eine Methode übergeben wird, die akzeptiert [ Platform:: Object ^](../cppcx/platform-object-class.md) als Eingabetyp.  
-  
-## <a name="passing-a-value-type-to-an-object-parameter"></a>Übergeben eines Werttyps an einen Object^-Parameter  
- Obwohl Sie für eine Variable nicht explizit Boxing anwenden müssen, um sie an einen Methodenparameter des Typs [Platform::Object^](../cppcx/platform-object-class.md)zu übergeben, müssen Sie eine Umwandlung zum ursprünglichen Typ explizit vornehmen, wenn Sie Werte abrufen, die zuvor geschachtelt wurden.  
-  
- [!code-cpp[cx_boxing#01](../cppcx/codesnippet/CPP/cx_boxing/class1.cpp#01)]  
-  
-### <a name="using-platformiboxt-to-support-nullable-value-types"></a>Verwenden von Platform:: ibox\<T > zur Unterstützung von auf NULL festlegbare Werttypen  
- C# und Visual Basic unterstützen das Konzept von Typen, die NULL-Werte zulassen. In C++ / CX können Sie die `Platform::IBox<T>` Typ um öffentliche Methoden verfügbar zu machen, die Werttypparameter unterstützen. Das folgende Beispiel zeigt C++ / CX-öffentliche Methode, die null zurückgibt, wenn ein C#-Aufrufer für eines der Argumente null übergibt.  
-  
- [!code-cpp[cx_boxing#02](../cppcx/codesnippet/CPP/cx_boxing/class1.h#02)]  
-  
- In einem C#-XAML-Client können Sie diese Methode wie folgt verwenden:  
-  
-```  
-  
-// C# client code  
-    BoxingDemo.Class1 obj = new BoxingDemo.Class1();  
-    int? a = null;  
-    int? b = 5;  
-    var result = obj.Multiply(a,b); //result = null  
-  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Typsystem (C++/CX)](../cppcx/type-system-c-cx.md)   
- [Umwandlung (C++ / CX)](../cppcx/casting-c-cx.md)   
- [Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
- [Namespaceverweis](../cppcx/namespaces-reference-c-cx.md)
+
+*Boxing* wird eine Werttypvariable wie z. B. wrapping [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)– oder ein grundlegender Skalartyp wie z. B. `int`– in einer Verweisklasse, wenn die Variable an eine Methode übergeben wird, die akzeptiert [ Platform:: Object ^](../cppcx/platform-object-class.md) als Eingabetyp.
+
+## <a name="passing-a-value-type-to-an-object-parameter"></a>Übergeben eines Werttyps an einen Object^-Parameter
+
+Obwohl Sie für eine Variable nicht explizit Boxing anwenden müssen, um sie an einen Methodenparameter des Typs [Platform::Object^](../cppcx/platform-object-class.md)zu übergeben, müssen Sie eine Umwandlung zum ursprünglichen Typ explizit vornehmen, wenn Sie Werte abrufen, die zuvor geschachtelt wurden.
+
+[!code-cpp[cx_boxing#01](../cppcx/codesnippet/CPP/cx_boxing/class1.cpp#01)]
+
+### <a name="using-platformiboxt-to-support-nullable-value-types"></a>Verwenden von Platform:: ibox\<T > zur Unterstützung von auf NULL festlegbare Werttypen
+
+C# und Visual Basic unterstützen das Konzept von Typen, die NULL-Werte zulassen. In C++ / CX können Sie die `Platform::IBox<T>` Typ um öffentliche Methoden verfügbar zu machen, die Werttypparameter unterstützen. Das folgende Beispiel zeigt C++ / CX-öffentliche Methode, die null zurückgibt, wenn ein C#-Aufrufer für eines der Argumente null übergibt.
+
+[!code-cpp[cx_boxing#02](../cppcx/codesnippet/CPP/cx_boxing/class1.h#02)]
+
+In einem C#-XAML-Client können Sie diese Methode wie folgt verwenden:
+
+```
+
+// C# client code
+    BoxingDemo.Class1 obj = new BoxingDemo.Class1();
+    int? a = null;
+    int? b = 5;
+    var result = obj.Multiply(a,b); //result = null
+
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Typsystem (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
+[Typumwandlung (C++-CX)](../cppcx/casting-c-cx.md)<br/>
+[Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Namespaceverweis](../cppcx/namespaces-reference-c-cx.md)

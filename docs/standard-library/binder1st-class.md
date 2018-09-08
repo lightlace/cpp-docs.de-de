@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8191b572595b8ada96f59357af095baf5d846bc4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a9e53d9344e56f9efc4f20b834ce31bcb05f9fbb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961720"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103984"
 ---
 # <a name="binder1st-class"></a>binder1st-Klasse
 
@@ -53,11 +53,14 @@ protected:
 
 ### <a name="parameters"></a>Parameter
 
-*Func* die binäres Funktionsobjekt in ein unäres Funktionsobjekt konvertiert werden.
+*Func*<br/>
+Das binäre Funktionsobjekt, das in ein unäres Funktionsobjekt konvertiert werden soll.
 
-*linken* den Wert, ist das erste Argument des binären Funktionsobjekts gebunden werden soll.
+*left*<br/>
+Der Wert, an den das erste Argument des binären Funktionsobjekts gebunden werden soll.
 
-*richtige* den Wert des Arguments, das das angepasste binäre Objekt mit dem festen Wert des zweiten Arguments vergleicht.
+*right*<br/>
+Der Wert des Arguments, den das angepasste binäre Objekt mit dem festen Wert des zweiten Arguments vergleicht.
 
 ## <a name="return-value"></a>Rückgabewert
 

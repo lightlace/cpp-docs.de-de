@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00114711f93fcc1ec057ea50b1ce681523db3a9c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 945de6e2ef7e9ec3967091f88b1d0cfeaa8df5e3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958002"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108888"
 ---
 # <a name="autoptr-class"></a>auto_ptr-Klasse
 
@@ -65,9 +65,11 @@ public:
 ```
 ### <a name="parameters"></a>Parameter
 
-*richtige* der `auto_ptr` aus dem eine vorhandene Ressource abgerufen.
+*right*<br/>
+Der `auto_ptr`, aus dem eine vorhandene Ressource abgerufen werden soll.
 
-*PTR* der Zeiger, der den gespeicherten Zeiger ersetzen soll.
+*ptr*<br/>
+Der Zeiger, der den gespeicherten Zeiger ersetzen soll.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -130,9 +132,11 @@ auto _ptr(auto _ptr<Other>& right) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*PTR* der Zeiger auf das Objekt, das `auto_ptr` kapselt.
+*ptr*<br/>
+Der Zeiger auf das Objekt, das `auto_ptr` kapselt.
 
-*richtige* der `auto_ptr` Objekt, das vom Konstruktor kopiert werden.
+*right*<br/>
+Das `auto_ptr`-Objekt, das vom Konstruktor kopiert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -282,7 +286,8 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* ein Objekt des Typs `auto_ptr`.
+*right*<br/>
+Ein Objekt vom Typ `auto_ptr`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -499,7 +504,8 @@ void reset(Type* ptr = 0);
 
 ### <a name="parameters"></a>Parameter
 
-*PTR* der Zeiger, der den gespeicherten Zeiger ersetzen `myptr`.
+*ptr*<br/>
+Der Zeiger, der den gespeicherten Zeiger ersetzen `myptr`.
 
 ### <a name="example"></a>Beispiel
 

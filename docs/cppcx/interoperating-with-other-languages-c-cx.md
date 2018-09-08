@@ -9,22 +9,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d4aec775dc716a5e88e6b421a7cd7f818730c23
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c74508c114b7815ac8eded9daa8e968fa7588c28
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767542"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101821"
 ---
 # <a name="interoperating-with-other-languages-ccx"></a>Interoperabilität mit anderen Sprachen (C++/CX)
-Dieser Teil der Dokumentation beschreibt, wie C++ / CX verwenden, um die Windows-Runtime-Komponenten zu erstellen, die von anderen Programmiersprachen und Bibliotheken genutzt werden können. Sie können auch Komponenten schreiben, die nicht von allen Sprachen genutzt werden können. Dieser Abschnitt beschreibt verschiedene Aspekte zu berücksichtigen sind, wenn Ihr C + c++ / CX-Anwendung interagiert mit Komponenten, die mithilfe von JavaScript, .NET Framework verwalteten Sprache oder der Windows Runtime C++ Template Library geschrieben wurden.  
-  
-## <a name="related-topics"></a>Verwandte Themen  
-  
--   [JavaScript-integration](../cppcx/javascript-integration-c-cx.md)  
-  
--   [CLR-integration](../cppcx/clr-integration-c-cx.md)  
-  
--   [WRL-integration](../cppcx/wrl-integration-c-cx.md)  
-  
--   [Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)
+
+Dieser Teil der Dokumentation beschreibt, wie C++ / CX verwenden, um die Windows-Runtime-Komponenten zu erstellen, die von anderen Programmiersprachen und Bibliotheken genutzt werden können. Sie können auch Komponenten schreiben, die nicht von allen Sprachen genutzt werden können. Dieser Abschnitt beschreibt verschiedene Aspekte zu berücksichtigen sind, wenn Ihr C + c++ / CX-Anwendung interagiert mit Komponenten, die mithilfe von JavaScript, .NET Framework verwalteten Sprache oder der Windows Runtime C++ Template Library geschrieben wurden.
+
+## <a name="related-topics"></a>Verwandte Themen
+
+- [JavaScript-integration](../cppcx/javascript-integration-c-cx.md)
+
+- [CLR-integration](../cppcx/clr-integration-c-cx.md)
+
+- [WRL-integration](../cppcx/wrl-integration-c-cx.md)
+
+- [Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)

@@ -15,49 +15,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e874b3dc479755f688128b3e6690eee89929c1c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cb19a922655a77a2f7a2b5806c9b721f17e028f8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760135"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104172"
 ---
 # <a name="platformtypecode-enumeration"></a>Platform::TypeCode-Enumeration
-Gibt eine numerische Kategorie an, die einen integrierten Typ darstellt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-enum class TypeCode {};  
-```  
-  
-### <a name="members"></a>Member  
-  
-|Typcode|Beschreibung|  
-|---------------|-----------------|  
-|Boolesch|Ein Platform::Boolean-Typ.|  
-|Char16|Ein default::char16-Typ.|  
-|DateTime|Ein DateTime-Typ.|  
-|Decimal|Ein numerischer Typ.|  
-|Double|Ein default::float64-Typ.|  
-|Empty|Void|  
-|Int16|Ein default::int16-Typ.|  
-|Int32|Ein default::int32-Typ.|  
-|Int64|Ein default::int64-Typ.|  
-|Int8|Ein default::int8-Typ.|  
-|Object|Ein Platform::Object-Typ.|  
-|Single|Ein default::float32-Typ.|  
-|Zeichenfolge|Ein Platform::String-Typ.|  
-|UInt16|Ein default::uint16-Typ.|  
-|UInt32|Ein default::uint32-Typ.|  
-|UInt64|Ein default::uint64-Typ.|  
-|UInt8|Ein default::uint8-Typ.|  
-  
-### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client (Min.):** Windows 8  
-  
- **Unterstützter Server (Min.):** Windows Server 2012  
-  
- **Namespace:** Platform  
-  
- **Metadaten:** platform.winmd
+
+Gibt eine numerische Kategorie an, die einen integrierten Typ darstellt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+enum class TypeCode {};
+```
+
+### <a name="members"></a>Member
+
+|Typcode|Beschreibung|
+|---------------|-----------------|
+|Boolesch|Ein Platform::Boolean-Typ.|
+|Char16|Ein default::char16-Typ.|
+|DateTime|Ein DateTime-Typ.|
+|Decimal|Ein numerischer Typ.|
+|Double|Ein default::float64-Typ.|
+|Empty|Void|
+|Int16|Ein default::int16-Typ.|
+|Int32|Ein default::int32-Typ.|
+|Int64|Ein default::int64-Typ.|
+|Int8|Ein default::int8-Typ.|
+|Object|Ein Platform::Object-Typ.|
+|Single|Ein default::float32-Typ.|
+|Zeichenfolge|Ein Platform::String-Typ.|
+|UInt16|Ein default::uint16-Typ.|
+|UInt32|Ein default::uint32-Typ.|
+|UInt64|Ein default::uint64-Typ.|
+|UInt8|Ein default::uint8-Typ.|
+
+### <a name="requirements"></a>Anforderungen
+
+**Unterstützter Client (Min.):** Windows 8
+
+**Unterstützter Server (Min.):** Windows Server 2012
+
+**Namespace:** Platform
+
+**Metadaten:** platform.winmd
