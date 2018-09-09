@@ -1,7 +1,7 @@
 ---
-title: Compilerwarnung (Stufe 1) C4627 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4627 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/09/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,17 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcde9e6707465fd95dbcb10e073a852624f0de0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f6be9ba8ba45adecfe5355848126dcb4b3b2fd1
+ms.sourcegitcommit: 592a2f402fef502450a45571a846175cc3ab1ceb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284185"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44249619"
 ---
 # <a name="compiler-warning-level-1-c4627"></a>Compilerwarnung (Stufe 1) C4627
-"\<Bezeichner >": bei der Suche nach Verwendung des vorkompilierten Headers übersprungen  
+
+> "*Header_file*": beim Suchen nach Verwendung des vorkompilierten Headers übersprungen
+
+Wenn es sich bei die aktuellen Quelldatei wurde die ["/ Yu" \(Verwendung des vorkompilierten Headerdatei)](../../build/reference/yu-use-precompiled-header-file.md) Optionssatz, und klicken Sie dann der Compiler ignoriert alles, was in der Datei, bevor der vorkompilierte Header enthalten ist. Warnung **C4627** wird in Visual Studio 2015 und früheren Versionen generiert, wenn *Header_file* enthalten ist, bevor Sie die vorkompilierte Headerdatei, und wenn der vorkompilierte Header auch keine umfasst*Header_file*.
+
+## <a name="example"></a>Beispiel
+
+In diesem Beispiel wird veranschaulicht, wie der Fehler kann auftreten, und zeigt, wie Sie diesen Fehler beheben:
+ 
+```cpp
+// c4627.cpp
+#include <iostream>       // C4627 - iostream not included by pch.h
+#include "pch.h"          // precompiled header file that does not include iostream
+// #include <iostream>    // To fix, move the iostream header include here from above
+int main()
+{
+    std::cout << "std::cout is defined!\n";
+}
+```
   
- Bei der Suche nach dem Ort, in dem ein vorkompilierter Header verwendet wird, der Compiler hat festgestellt ein `#include` Richtlinie für die  *\<Bezeichner >* Includedatei. Der Compiler ignoriert die `#include` Richtlinie, gibt aber die Warnung **C4627** , wenn der vorkompilierte Header nicht bereits enthält die  *\<Bezeichner >* Includedatei.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Erstellen vorkompilierter Headerdateien](../../build/reference/creating-precompiled-header-files.md)
+## <a name="see-also"></a>Siehe auch
+
+[Erstellen vorkompilierter Headerdateien](../../build/reference/creating-precompiled-header-files.md)
