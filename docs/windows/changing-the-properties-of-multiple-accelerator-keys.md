@@ -1,5 +1,5 @@
 ---
-title: Ändern der Eigenschaften mehrerer Zugriffstasten | Microsoft-Dokumentation
+title: Ändern der Eigenschaften mehrerer Zugriffstasten (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b24d69a080e9022f7682ba89b6cdf7cb99ce5ca
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bf70622dc901842a74cf8718d9447f899defb57d
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592150"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313519"
 ---
-# <a name="changing-the-properties-of-multiple-accelerator-keys"></a>Ändern der Eigenschaften mehrerer Zugriffstasten
+# <a name="changing-the-properties-of-multiple-accelerator-keys-c"></a>Ändern der Eigenschaften mehrerer Zugriffstasten (C++)
 
 ### <a name="to-change-the-properties-of-multiple-accelerator-keys"></a>Zum Ändern der Eigenschaften mehrerer Zugriffstasten
 

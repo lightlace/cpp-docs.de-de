@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von Steuerelementen zu einem Dialogfeld bewirkt, dass das Dialogfeld nicht mehr funktioniert | Microsoft-Dokumentation
+title: Hinzufügen von Steuerelementen zu einem Dialogfeld bewirkt, dass das Dialogfeld nicht mehr funktioniert (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,10 +9,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], troubleshooting
-- common controls, troubleshooting
-- troubleshooting controls
-- dialog boxes, troubleshooting
-- dialog box controls, troubleshooting
+- dialog boxes [C++], troubleshooting
 - InitCommonControls
 ms.assetid: b2dd4574-ea59-4343-8d65-b387cead5da6
 author: mikeblome
@@ -20,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d27c12b491fc5f05da58a84703ea13e84e9e9c6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 88990595fdf1f6cbb88efd40ec6247b70d90c586
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215369"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314897"
 ---
-# <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>Das Dialogfeld funktioniert nach dem Hinzufügen von Steuerelementen nicht mehr
+# <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function-c"></a>Hinzufügen von Steuerelementen zu einem Dialogfeld bewirkt, dass das Dialogfeld nicht mehr funktioniert (C++)
 
 Nach dem Hinzufügen einer allgemeinen Steuerelements oder rich-Edit-Steuerelement in einem Dialogfeld an, es nicht angezeigt, wenn Sie Sie das Dialogfeld Testen oder das Dialogfeld nicht angezeigt.
 

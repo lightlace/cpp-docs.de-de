@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verwenden von Ressourcenvorlagen | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Verwenden von Ressourcenvorlagen (C++) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,27 +8,27 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- language-specific template files
+- language-specific template files [C++]
 - resource templates
-- resources [Visual Studio], creating
-- rct files
+- resources [C++], creating
+- rct files [C++]
 - templates, resource templates
-- resources [Visual Studio], templates
-- .rct files
+- resources [C++], templates
+- .rct files [C++]
 ms.assetid: bdfe7060-f98e-4859-8285-9c8570360e9d
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5bd85dd5c5b6468ca8246fdf11f4068eae928107
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 90c94e87693929c2ae33d65fe3f3a4b2dd55d48b
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602439"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313974"
 ---
-# <a name="how-to-use-resource-templates"></a>Gewusst wie: Verwenden von Ressourcenvorlagen
+# <a name="how-to-use-resource-templates-c"></a>Vorgehensweise: Verwenden von Ressourcenvorlagen (C++)
 
 Eine Ressourcenvorlage ist eine benutzerdefinierte Ressource, die Sie als RCT-Datei gespeichert haben. Eine Ressourcenvorlage kann dann als Ausgangspunkt für die Erstellung weiterer Ressourcen dienen. Ressourcenvorlagen sparen Zeit bei der Entwicklung von zusätzlichen Ressourcen oder Gruppen von Ressourcen, die Funktionen wie Standardsteuerelemente oder andere wiederkehrende Elemente gemeinsam nutzen. Zum Beispiel können Sie eine Hilfeschaltfläche und ein Symbol eines Firmenlogos in mehrere Dialogfelder einfügen. Um dies schnell zu tun, erstellen Sie eine neue Dialogfeldvorlage, und passen Sie sie mit dem Logo und der Hilfeschaltfläche an.
 

@@ -1,5 +1,5 @@
 ---
-title: Bearbeiten von Zugriffstastentabellen | Microsoft-Dokumentation
+title: Bearbeiten von Zugriffstastentabellen (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c258f691b7dbea814c707cbf1f3825b9db5ba42
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 14f9e82e87d395341dc1f05f1de49a20d58fec52
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596402"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314884"
 ---
-# <a name="editing-accelerator-tables"></a>Bearbeiten von Zugriffstastentabellen
+# <a name="editing-accelerator-tables-c"></a>Bearbeiten von Zugriffstastentabellen (C++)
 
-Sie können eine Zugriffstastentabelle in Visual C++ bearbeiten, direkt mit der direkten Bearbeitung in der **Accelerator** Editor.
+Sie können eine Zugriffstastentabelle in eine C++-Projekt bearbeiten, direkt mit der direkten Bearbeitung in der **Accelerator** Editor.
 
 Die folgenden Verfahren beziehen sich auf die Verwendung von standard-Eigenschaftenseiten können jedoch die direkte Bearbeitung und der Seitenmethode für das gleiche Ergebnis. Änderungen mithilfe von Eigenschaftenseiten oder mithilfe der direkten Bearbeitung werden sofort in der tastenkombinationstabelle dargestellt.
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6d8780c249fdf768c322e3026240642c4da43c4
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 538a376dd14eae32864b494b7e79db1c89686b84
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338720"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315014"
 ---
 # <a name="application-control"></a>Anwendungssteuerelement
 OLE erfordert erhebliche Kontrolle über die Anwendungen und ihre Objekte. Die OLE-System-DLLs muss Lage starten und automatische Veröffentlichung von Anwendungen, koordinieren die Produktion und Ändern von Objekten und so weiter. Die Funktionen in diesem Thema werden diese Anforderungen erfüllen. Zusätzlich zu der durch die OLE-System-DLLs aufgerufen wird, müssen diese Funktionen manchmal von Anwendungen sowie aufgerufen werden. 
@@ -186,7 +186,7 @@ AfxOleLockControl(_T("MSCAL.Calendar"));
 ```
    
 ### <a name="requirements"></a>Anforderungen  
- **Header:** < afxwin.h >  
+ **Header:** afxwin.h  
    
 ### <a name="see-also"></a>Siehe auch  
  [Makros und globale Variablen](mfc-macros-and-globals.md)   
@@ -332,7 +332,7 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 ```
    
 ### <a name="requirements"></a>Anforderungen  
- **Header:** < afxwin.h >  
+ **Header:** afxwin.h  
    
 ### <a name="see-also"></a>Siehe auch  
  [Makros und globale Variablen](mfc-macros-and-globals.md)  

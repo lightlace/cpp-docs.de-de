@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c83e644d8544b7919c0f61199197574d03b13ff8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ec6c778c46998ba8e324fcf97c209598cc2f99dd
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763067"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315371"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL-OLE DB-Consumer-Assistent
 
@@ -106,23 +106,23 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
 
    Nachdem Sie eine Datenquelle ausgewählt haben, dieses Feld wird gefüllt mit einem Standardnamen-Klasse anhand der Tabelle oder eine gespeicherte Prozedur, die Sie ausgewählt haben (finden Sie unter **Vybrat zdroj DAT** unten). Sie können den Namen der Klasse bearbeiten.
 
-- **H-Datei**  
+- **H-Datei**
 
    Nachdem Sie eine Datenquelle ausgewählt haben, dieses Feld wird gefüllt mit einem Standard-Header-Klassennamen basierend auf der Tabelle oder eine gespeicherte Prozedur, die Sie ausgewählt haben (finden Sie unter **Vybrat zdroj DAT** unten). Sie können die Namen für die Header-Datei bearbeiten oder eine vorhanden Headerdatei auswählen.
 
-- **Zugeordnet sind**  
+- **Zugeordnet sind**
 
    Diese Option gibt an, ob der Assistent vom Consumer-Klassen, die mithilfe von Attributen oder Vorlagendeklarationen erstellt. Wenn Sie diese Option auswählen, verwendet der Assistent Attribute anstatt von Vorlagendeklarationen (Dies ist die Standardoption) aus. Wenn Sie diese Option deaktivieren, verwendet der Assistent Vorlagendeklarationen anstelle von Attributen.
 
    - Bei Auswahl von einem Consumer **Typ** von **Tabelle**, verwendet der Assistent die `db_source` und `db_table` Attribute, um die Tabelle und die Tabellenaccessor Klassendeklarationen erstellen, und verwendet `db_column` auf die spaltenzuordnung zu erstellen. Beispielsweise wird diese Zuordnung erstellt:
 
         ```cpp
-        // Inject table class and table accessor class declarations  
-        [db_source("<initialization_string>"), db_table("dbo.Orders")]  
-        ... 
-        // Column map  
-        [ db_column(1, status=m_dwOrderIDStatus, length=m_dwOrderIDLength) ] LONG m_OrderID;  
-        [ db_column(2, status=m_dwCustomerIDStatus, length=m_dwCustomerIDLength) ] TCHAR m_CustomerID[6];  
+        // Inject table class and table accessor class declarations
+        [db_source("<initialization_string>"), db_table("dbo.Orders")]
+        ...
+        // Column map
+        [ db_column(1, status=m_dwOrderIDStatus, length=m_dwOrderIDLength) ] LONG m_OrderID;
+        [ db_column(2, status=m_dwCustomerIDStatus, length=m_dwCustomerIDLength) ] TCHAR m_CustomerID[6];
         ...
         ```
 
@@ -133,20 +133,20 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
             class COrdersAccessor; // Table class
             class COrders : public CTable<CAccessor<COrdersAccessor>>;
         // ...
-        // Column map  
+        // Column map
             BEGIN_COLUMN_MAP(COrderDetailsAccessor)
                 COLUMN_ENTRY_LENGTH_STATUS(1, m_OrderID, m_dwOrderIDLength, m_dwOrderIDStatus)
                 COLUMN_ENTRY_LENGTH_STATUS(2, m_CustomerID, m_dwCustomerIDLength, m_dwCustomerIDStatus)
-                // ...  
+                // ...
             END_COLUMN_MAP()
         ```
 
    - Bei Auswahl von einem Consumer **Typ** von **Befehl**, verwendet der Assistent die `db_source` und `db_command` Attribute aus, und verwendet `db_column` die spaltenzuordnung zu erstellen. Beispielsweise wird diese Zuordnung erstellt:
 
         ```cpp
-        [db_source("<initialization_string>"), db_command("SQL_command")]  
-        ... 
-        // Column map using db_column is the same as for consumer type of 'table'  
+        [db_source("<initialization_string>"), db_command("SQL_command")]
+        ...
+        // Column map using db_column is the same as for consumer type of 'table'
         ```
 
       anstatt den Befehl und den Befehl Accessor Klassendeklarationen in die Befehlsklasse .h-Datei, z. B.:
@@ -193,6 +193,6 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
 
 ## <a name="see-also"></a>Siehe auch
 
-[ATL-OLE DB-Consumers](../../atl/reference/adding-an-atl-ole-db-consumer.md)  
-[Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../../ide/adding-functionality-with-code-wizards-cpp.md)  
+[ATL-OLE DB-Consumers](../../atl/reference/adding-an-atl-ole-db-consumer.md)
+[Hinzufügen neuer Funktionen mit Code-Assistenten](../../ide/adding-functionality-with-code-wizards-cpp.md)
 [Verbindungszeichenfolgen und Datenverknüpfungen (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))

@@ -76,18 +76,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba97d3bcd356a044245e7613470bead1cc42eb25
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0da454b2b980be3565ee27fde4ee14d7eadd42fb
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417128"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313626"
 ---
 # <a name="strnicmp-wcsnicmp-mbsnicmp-strnicmpl-wcsnicmpl-mbsnicmpl"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 Vergleicht die angegebene Anzahl von Zeichen zweier Zeichenfolgen ohne Berücksichtigung von Groß-/Kleinbuchstaben.
 
 > [!IMPORTANT]
-> **_mbsnicmp** und **_mbsnicmp_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnicmp** und **_mbsnicmp_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -129,7 +129,7 @@ int _mbsnicmp_l(
 
 ### <a name="parameters"></a>Parameter
 
-*String1*, *Zeichenfolge2*<br/>
+*Zeichenfolge1*, *Zeichenfolge2*<br/>
 Zu vergleichende mit NULL endende Zeichenfolgen.
 
 *count*<br/>
@@ -144,21 +144,21 @@ Gibt die Beziehung zwischen den untergeordneten Zeichenfolgen wie folgt an.
 
 |Rückgabewert|Beschreibung|
 |------------------|-----------------|
-|< 0|*String1* Teilzeichenfolge ist kleiner als *Zeichenfolge2* Teilzeichenfolge.|
-|0|*String1* Teilzeichenfolge ist identisch mit *Zeichenfolge2* Teilzeichenfolge.|
-|> 0|*String1* Teilzeichenfolge ist größer als *Zeichenfolge2* Teilzeichenfolge.|
+|< 0|*Zeichenfolge1* Teilzeichenfolge ist kleiner als *Zeichenfolge2* Teilzeichenfolge.|
+|0|*Zeichenfolge1* Teilzeichenfolge ist identisch mit *Zeichenfolge2* Teilzeichenfolge.|
+|> 0|*Zeichenfolge1* Teilzeichenfolge ist größer als *Zeichenfolge2* Teilzeichenfolge.|
 
-Bei einem parametervalidierungsfehler geben diese Funktionen zurück **_NLSCMPERROR**, definiert \<string.h > und \<mbstring.h >.
+Bei einem parameterüberprüfungsfehler geben diese Funktionen zurück **_NLSCMPERROR**, definiert in \<string.h > und \<mbstring.h >.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_strnicmp** -Funktion vergleicht Ordinal höchstens die ersten *Anzahl* Zeichen des *string1* und *Zeichenfolge2*. Der Vergleich erfolgt ohne Berücksichtigung der Groß-/Kleinschreibung, indem jedes Zeichen in Kleinbuchstaben konvertiert wird. **_strnicmp** ist eine Groß-/Kleinschreibung Version von **Strncmp**. Der Vergleich endet, wenn ein abschließendes Nullzeichen, in jeder Zeichenfolge vor dem erreicht wird *Anzahl* Zeichen verglichen wurden. Wenn die Zeichenfolgen gleich sind. wenn ein abschließendes Nullzeichen erreicht ist in jeder Zeichenfolge vor dem *Anzahl* Zeichen verglichen wurden, ist die kürzere Zeichenfolge kleiner.
+Die **_strnicmp** -Funktion vergleicht Ordinal höchstens die ersten *Anzahl* Zeichen *string1* und *Zeichenfolge2*. Der Vergleich erfolgt ohne Berücksichtigung der Groß-/Kleinschreibung, indem jedes Zeichen in Kleinbuchstaben konvertiert wird. **_strnicmp** ist eine Groß-/Kleinschreibung Version **Strncmp**. Der Vergleich endet, wenn ein abschließendes Nullzeichen, in jeder Zeichenfolge vor dem erreicht ist *Anzahl* Zeichen verglichen wurden. Wenn die Zeichenfolgen gleich sind. wenn ein abschließendes Nullzeichen erreicht ist in jeder Zeichenfolge vor dem *Anzahl* Zeichen verglichen wurden, die kürzere Zeichenfolge kleiner ist.
 
 Die Zeichen von 91 bis 96 in der ASCII-Tabelle ('[', '\\', ']', '^', '_' und '\`') werden als kleiner als jedes beliebige alphabetische Zeichen ausgewertet. Diese Reihenfolge ist identisch mit der **Stricmp**.
 
-**_wcsnicmp** und **_mbsnicmp** sind Breitzeichen- und multibytezeichenversionen von **_strnicmp**. Die Argumente der **_wcsnicmp** sind Breitzeichen-Zeichenfolgen, die von **_mbsnicmp** sind Multibyte Zeichenfolgen. **_mbsnicmp** erkennt Multibyte-Zeichenfolgen entsprechend der aktuellen multibyte-Codepage und gibt **_NLSCMPERROR** bei einem Fehler. Weitere Informationen finden Sie unter [Codepages](../../c-runtime-library/code-pages.md). Diese drei Funktionen verhalten sich andernfalls identisch. Diese Funktionen werden von der gebietsschemaeinstellung beeinflusst – die Versionen nicht mit der **_l** -Suffix verwenden das aktuelle Gebietsschema für ihr vom Gebietsschema abhängige Verhalten; die Versionen, auf denen die **_l** Suffix Verwenden Sie stattdessen die *Gebietsschema* übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+**_wcsnicmp** und **_mbsnicmp** sind Breitzeichen- und multibytezeichenversionen von Versionen von **_strnicmp**. Die Argumente des **_wcsnicmp** sind Breitzeichen-Zeichenfolgen, die von **_mbsnicmp** sind Multibyte Zeichenfolgen. **_mbsnicmp** erkennt multibytezeichensequenzen gemäß der aktuellen multibyte-Codepage und gibt **_NLSCMPERROR** bei einem Fehler. Weitere Informationen finden Sie unter [Codepages](../../c-runtime-library/code-pages.md). Diese drei Funktionen verhalten sich andernfalls identisch. Diese Funktionen werden von der gebietsschemaeinstellung beeinflusst: die Versionen, die nicht die **_l** -Suffix verwenden das aktuelle Gebietsschema für ihr vom Gebietsschema abhängige Verhalten; die Versionen, auf denen die **_l** Suffix Verwenden Sie stattdessen die *Gebietsschema* , das übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Mit allen diesen Funktionen werden ihre Parameter überprüft. Wenn entweder *string1* oder *Zeichenfolge2* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **_NLSCMPERROR** und **Errno** auf **EINVAL**.
+Mit allen diesen Funktionen werden ihre Parameter überprüft. Wenn entweder *string1* oder *Zeichenfolge2* ist ein null-Zeiger der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **_NLSCMPERROR** und **Errno** zu **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -170,10 +170,10 @@ Mit allen diesen Funktionen werden ihre Parameter überprüft. Wenn entweder *st
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
-|**_strnicmp**, **_strnicmp_l**|<string.h>|
-|**_wcsnicmp**, **_wcsnicmp_l**|<string.h> oder <wchar.h>|
+|**_strnicmp**, **_strnicmp_l**|\<string.h>|
+|**_wcsnicmp**, **_wcsnicmp_l**|\<string.h> oder \<wchar.h>|
 |**_mbsnicmp**, **_mbsnicmp_l**|\<mbstring.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).

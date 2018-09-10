@@ -1,5 +1,5 @@
 ---
-title: Steuerelemente in Dialogfeldern | Microsoft-Dokumentation
+title: Steuerelemente in Dialogfeldern (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,7 +9,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], dialog boxes
-- dialog box controls, about dialog box controls
+- dialog box controls [C++], about dialog box controls
 - dialog box controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
 author: mikeblome
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70e3bcfb644893f1dc8b41b9c11a3aee5c92103d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d8128859f2b136fb945376eeea8afa0d1ef8e6e1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591957"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317107"
 ---
-# <a name="controls-in-dialog-boxes"></a>Steuerelemente in Dialogfeldern
+# <a name="controls-in-dialog-box-ces"></a>Steuert, es im Dialogfeld (C++)
 
 Sie können Steuerelemente hinzufügen, um ein Dialogfeld unter Verwendung der [Registerkarte "Dialog-Editor"](../windows/dialog-editor-tab-toolbox.md) in die [Fenster "Toolbox"](/visualstudio/ide/reference/toolbox), können Sie wählen Sie das Steuerelement, Sie möchten, und ziehen Sie es in das Dialogfeld. Standardmäßig wird das Fenster "Toolbox" automatisch im Hintergrund festgelegt. Es wird als eine Registerkarte am linken Rand Ihrer Lösung angezeigt, wenn der Dialog-Editor geöffnet ist. Sie können jedoch anheften der **Toolbox** Einblick in die Position, indem Sie auf die **automatisch im Hintergrund** Schaltfläche in der oberen rechten Ecke des Fensters. Weitere Informationen zum Steuern des Verhaltens des in diesem Fenster finden Sie unter [Fensterverwaltung](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 

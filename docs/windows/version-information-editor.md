@@ -1,5 +1,5 @@
 ---
-title: Versionsinfo-Editor | Microsoft-Dokumentation
+title: Versionsinfo-Editor (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,23 +10,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Version Information editor, about Version Information editor
+- Version Information editor [C++], about Version Information editor
 - editors, Version Information
-- resource editors, Version Information editor
+- resource editors [C++], Version Information editor
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7eb767d3969f964f2605aaebc8c4adb743cd1fc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1d8a4eb57996bcc2afd9ddc92a9eecf354f88116
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199765"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313695"
 ---
-# <a name="version-information-editor"></a>Versionsinfo-Editor
+# <a name="version-information-editor-c"></a>Versionsinfo-Editor (C++)
 
 Versionsinformationen bestehen aus einer Firmen- und einer Produkt-ID, einer Produktseriennummer und Copyright- und Markenbestimmungen. Mit der **Versionsinformationen** -Editor erstellt und verwaltet diese Daten, die in der Versionsinformationsressource gespeichert wird. Die Versionsinformationsressource ist für eine Anwendung nicht erforderlich, sie stellt aber einen sinnvollen Ort dar, alle Informationen zusammenzuführen, die zur Identifizierung der Anwendung dienen. Versionsinformationen werden auch von Setup-APIs verwendet.
 

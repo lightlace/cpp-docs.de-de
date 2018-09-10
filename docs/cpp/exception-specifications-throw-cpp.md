@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15e872faab5beee296e4543c8404141428345842
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1dfc9c50503fcd277f34e8f5dfc4a630d888eebf
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402402"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318270"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Ausnahmespezifikationen (Throw, "noexcept") (C++)
 
@@ -43,7 +43,7 @@ In der folgende Tabelle sind die Microsoft Visual C++-Implementierung von Ausnah
 
 |Ausnahmespezifikation|Bedeutung|
 |-----------------------------|-------------|
-|`noexcept`<br>`noexcept(true)`<br>`throw()`|Die Funktion löst keine Ausnahme aus. In [/Std: c ++ 14](../build/reference/std-specify-language-standard-version.md) -Modus (der Standardwert ist), `noexcept` und `noexcept(true)` entsprechen. Wenn eine Ausnahme ausgelöst wird, von einer Funktion, die deklariert wird `noexcept` oder `noexcept(true)`, [Std:: Terminate](../standard-library/exception-functions.md#terminate) aufgerufen wird. Wenn eine Ausnahme ausgelöst wird, von einer Funktion deklariert, als `throw()` in **/Std: c ++ 14** Modus wird das Ergebnis ist nicht definiertes Verhalten. Es wird keine bestimmte Funktion aufgerufen. Dies ist eine Abweichung von der C ++ 14-standard, die den Compiler aufzurufende erforderlich [std::unexpected](../standard-library/exception-functions.md#unexpected).  <br> **Visual Studio 2017 Version 15.5 und höher**: In **/Std: c ++ 17** Modus `noexcept`, `noexcept(true)`, und `throw()` alle gleich sind. In **/Std: c ++ 17** Modus `throw()` ist ein Alias für `noexcept(true)`. In **/Std: c ++ 17** Modus, wenn eine Ausnahme, von einer Funktion deklariert, die mit den Spezifikationen ausgelöst wird [Std:: Terminate](../standard-library/exception-functions.md#terminate) wird aufgerufen, wie für den C ++ 17-standard erforderlich.|
+|`noexcept`<br/>`noexcept(true)`<br/>`throw()`|Die Funktion löst keine Ausnahme aus. In [/Std: c ++ 14](../build/reference/std-specify-language-standard-version.md) -Modus (der Standardwert ist), `noexcept` und `noexcept(true)` entsprechen. Wenn eine Ausnahme ausgelöst wird, von einer Funktion, die deklariert wird `noexcept` oder `noexcept(true)`, [Std:: Terminate](../standard-library/exception-functions.md#terminate) aufgerufen wird. Wenn eine Ausnahme ausgelöst wird, von einer Funktion deklariert, als `throw()` in **/Std: c ++ 14** Modus wird das Ergebnis ist nicht definiertes Verhalten. Es wird keine bestimmte Funktion aufgerufen. Dies ist eine Abweichung von der C ++ 14-standard, die den Compiler aufzurufende erforderlich [std::unexpected](../standard-library/exception-functions.md#unexpected).  <br/> **Visual Studio 2017 Version 15.5 und höher**: In **/Std: c ++ 17** Modus `noexcept`, `noexcept(true)`, und `throw()` alle gleich sind. In **/Std: c ++ 17** Modus `throw()` ist ein Alias für `noexcept(true)`. In **/Std: c ++ 17** Modus, wenn eine Ausnahme, von einer Funktion deklariert, die mit den Spezifikationen ausgelöst wird [Std:: Terminate](../standard-library/exception-functions.md#terminate) wird aufgerufen, wie für den C ++ 17-standard erforderlich.|
 |`noexcept(false)`<br/>`throw(...)`<br/>Keine Angabe|Die Funktion kann einer Ausnahme eines beliebigen Typs.|
 |`throw(type)`| (**C ++ 14 und früher**) die Funktion kann eine Ausnahme vom Typ `type`. Der Compiler die Syntax akzeptiert, aber interpretiert ihn als `noexcept(false)`. In **/Std: c ++ 17** Modus der Compiler die Warnung C5040 ausgegeben.|
 

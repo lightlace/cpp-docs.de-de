@@ -1,5 +1,5 @@
 ---
-title: Bearbeiten von Grafischen Ressourcen (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
+title: Bearbeiten von Grafischen Ressourcen (Bildbearbeitung für Symbole C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d66345685dbb6780b0ecf11d91d699c8b6866c47
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c46f8391f39d65c84860f8c0ca62f69288d834c8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608860"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44312635"
 ---
-# <a name="editing-graphical-resources-image-editor-for-icons"></a>Bearbeiten von grafischen Ressourcen (Bildbearbeitung für Symbole)
+# <a name="editing-graphical-resources-c-image-editor-for-icons"></a>Bearbeiten von Grafischen Ressourcen (C++-Bildbearbeitung für Symbole)
 
 Grafische Ressourcen sind die Images, die Sie für Ihre Anwendung zu definieren. Sie können freehand zeichnen oder Formen zu zeichnen. Sie können auswählen, Bestandteilen eines Bilds für die Bearbeitung, kippen oder Ändern der Größe oder können Sie benutzerdefinierten Pinsel aus einem ausgewählten Teil eines Images erstellen und zeichnen Sie mit dieser Pinsel. Sie können Eigenschaften zu definieren, speichern Sie Bilder in verschiedenen Formaten und Konvertieren von Bildern von einem Format in eine andere.
 
