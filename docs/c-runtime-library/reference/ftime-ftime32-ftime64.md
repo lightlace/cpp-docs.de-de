@@ -45,12 +45,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fd388e2963a0e28389fbf7cc2c4bd146ac9b61e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8942dbaddcc1f4ab1ec5d571d08d95d8669d302d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401437"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107054"
 ---
 # <a name="ftime-ftime32-ftime64"></a>_ftime, _ftime32, _ftime64
 
@@ -66,24 +66,25 @@ void _ftime64( struct __timeb64 *timeptr );
 
 ### <a name="parameters"></a>Parameter
 
-*Timeptr* Zeiger auf eine **_timeb**, **__timeb32**, oder **__timeb64** Struktur.
+*timeptr*<br/>
+Zeiger auf eine **_timeb**, **__timeb32**, oder **__timeb64** Struktur.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_ftime** Funktion ruft die aktuelle lokale Zeit ab und speichert ihn in der Struktur verweist *Timeptr*. Die **_timeb**, **__timeb32**, und **__timeb64** Strukturen werden definiert \<Sys\\timeb.h >. Sie enthalten vier Felder, die in der folgenden Tabelle aufgeführt werden.
+Die **_ftime** Funktion ruft die aktuelle Ortszeit ab und speichert sie in der Struktur verweist *Timeptr*. Die **_timeb**, **__timeb32**, und **__timeb64** in Strukturen definiert sind \<Sys\\timeb.h >. Sie enthalten vier Felder, die in der folgenden Tabelle aufgeführt werden.
 
 |Feld|Beschreibung|
 |-|-|
 |**dstflag**|Ein Wert ungleich null, wenn die Sommerzeit zurzeit für die lokale Zeitzone gültig ist. (Eine Erläuterung dazu, wie die Sommerzeit festgelegt wird, finden Sie unter [_tzset](tzset.md).)|
 |**millitm**|Sekundenbruchteile in Millisekunden|
 |**time**|Die Zeit in Sekunden seit dem 1. Januar 1970, Mitternacht (00: 00: 00) im UTC-Format|
-|**Zeitzone**|Differenz in Minuten, westwärts zwischen UTC und der Ortszeit Der Wert der **Timezone** festgelegt ist, aus dem Wert der globalen Variablen **_timezone** (finden Sie unter **_tzset**).|
+|**Zeitzone**|Differenz in Minuten, westwärts zwischen UTC und der Ortszeit Der Wert des **Timezone** festgelegt ist, aus dem Wert der globalen Variablen **_timezone** (finden Sie unter **_tzset**).|
 
-Die **_ftime64** -Funktion, die mithilfe der **__timeb64** -Struktur, -dateierstellung Datumsangaben oben bis 23:59:59, 31. Dezember 3000, UTC; ausgedrückt werden ermöglicht, während die **_ftime32**nur Datumsangaben bis 23:59:59 am 18. Januar 2038 UTC darstellt. Der 1. Januar 1970 (Mitternacht) ist der älteste mögliche Datumsbereich für all diese Funktionen.
+Die **_ftime64** -Funktion auf, die mithilfe der **__timeb64** Struktur, die Datumsangaben der dateierstellung bis 23:59:59, 31. Dezember 3000 UTC; ausgedrückt werden können, während **_ftime32**nur Datumsangaben bis 23:59:59 am 18. Januar 2038, UTC darstellt. Der 1. Januar 1970 (Mitternacht) ist der älteste mögliche Datumsbereich für all diese Funktionen.
 
-Die **_ftime** -Funktion ist gleichbedeutend mit **_ftime64**, und **_timeb** enthält einen 64-Bit-Uhrzeitwert, es sei denn, **_USE_32BIT_TIME_T** definiert ist, in wobei das alte Verhalten ist wirksam. **_ftime** verwendet eine 32-Bit-Zeit und **_timeb** enthält einen 32-Bit-Uhrzeitwert.
+Die **_ftime** -Funktion ist gleichbedeutend mit **_ftime64**, und **_timeb** enthält einen 64-Bit-Uhrzeitwert, es sei denn, **_USE_32BIT_TIME_T** definiert ist, in wobei das alte Verhalten ist wirksam. **_ftime** verwendet einen 32-Bit-Uhrzeitwert und **_timeb** enthält einen 32-Bit-Uhrzeitwert.
 
-**_ftime** überprüft die eigenen Parameter. Wenn einen null-Zeiger als übergeben *Timeptr*, die Funktion wird den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt der Funktion **Errno** auf **EINVAL**.
+**_ftime** überprüft die eigenen Parameter. Wenn ein null-Zeiger als *Timeptr*, die Funktion ruft der Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Die Funktion legt fest, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** zu **EINVAL**.
 
 ## <a name="requirements"></a>Anforderungen
 

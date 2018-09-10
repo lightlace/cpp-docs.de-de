@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce85d846d142e2c15a0fba6d2d3fb76c924b97f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 914f3623e3ac288a27554edac848686efc025896
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966601"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105880"
 ---
 # <a name="fpos-class"></a>fpos-Klasse
 
@@ -47,7 +47,8 @@ class fpos
 
 ### <a name="parameters"></a>Parameter
 
-*Statetype* Zustandsinformationen.
+*Statetype*<br/>
+Zustandsinformationen.
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -92,11 +93,14 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>Parameter
 
-*_Off* der Offset in den Stream.
+*_Off*<br/>
+Der Offset in den Stream
 
-*_State* den Status der `fpos` Objekt.
+*_State*<br/>
+Der Startzustand des `fpos`-Objekts
 
-*_Filepos* der Offset in den Stream.
+*_Filepos*<br/>
+Der Offset in den Stream
 
 ### <a name="remarks"></a>Hinweise
 
@@ -114,7 +118,8 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* der dateipositionsindikator, gegen den verglichen.
+*right*<br/>
+Der Dateipositionsindikator, gegen den verglichen werden soll
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -186,7 +191,8 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Off* der Offset, der durch den der dateipositionsindikator erhöht werden sollen.
+*_Off*<br/>
+Der Offset, um den der Dateipositionsindikator erhöht werden soll
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -210,7 +216,8 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>Parameter
 
-*_Off* der Offset, der durch den der dateipositionsindikator erhöht werden sollen.
+*_Off*<br/>
+Der Offset, um den der Dateipositionsindikator erhöht werden soll
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -236,9 +243,11 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* Dateiposition.
+*right*<br/>
+Dateiposition
 
-*_Off* Stream Offset.
+*_Off*<br/>
+Streamoffset
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -258,7 +267,8 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>Parameter
 
-*_Off* Stream Offset.
+*_Off*<br/>
+Streamoffset
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -282,7 +292,8 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* der dateipositionsindikator, gegen den verglichen.
+*right*<br/>
+Der Dateipositionsindikator, gegen den verglichen werden soll
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -355,7 +366,8 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>Parameter
 
-*_State* der neue Konvertierungsstatus.
+*_State*<br/>
+Der neue Konvertierungsstatus
 
 ### <a name="return-value"></a>Rückgabewert
 

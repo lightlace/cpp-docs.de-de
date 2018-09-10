@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e792233e9ce9b1fbbf2e63142caaeba37f8b4976
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9f5e61c5555a59b4842d109eec5c7cbb060abe46
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760684"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106976"
 ---
 # <a name="javascript-integration-ccx"></a>JavaScript-Integration (C++/CX)
 
@@ -22,4 +22,4 @@ Weitere Informationen finden Sie unter [Erstellen von Windows-Runtime-Komponente
 
 ## <a name="see-also"></a>Siehe auch
 
-[Interoperabilität mit anderen Sprachen](../cppcx/interoperating-with-other-languages-c-cx.md)  
+[Interoperabilität mit anderen Sprachen](../cppcx/interoperating-with-other-languages-c-cx.md)

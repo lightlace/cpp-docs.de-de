@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70a0615debabb056110dd9d6f7a6aac86e9d464a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 217346a08f4dc800c3d335baa77c355e0f327336
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198314"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105314"
 ---
 # <a name="pgomgr"></a>pgomgr
 
@@ -32,7 +32,7 @@ Die .pgd-Datei hinzugefügt Profildaten von einer oder mehreren PGC-Dateien.
 
 ### <a name="parameters"></a>Parameter
 
-*Optionen*<br/>
+*options*<br/>
 Die folgenden Optionen können angegeben werden, um **"pgomgr"**:
 
 - **/ help** oder **/?** Zeigt die verfügbare **"pgomgr"** Optionen.
@@ -50,7 +50,8 @@ Die folgenden Optionen können angegeben werden, um **"pgomgr"**:
 *pgcfiles*<br/>
 Eine oder mehrere PGC-Dateien, deren Profildaten in die PGD-Datei zusammengeführt werden sollen. Sie können eine einzelne PGC-Datei oder mehrere PGC-Dateien angeben. Wenn Sie keine PGC-Dateien, angeben **"pgomgr"** alle PGC-Dateien, deren Dateinamen identisch mit der PGD-Datei sind, zusammengeführt.
 
-*Pgdfile* die PGD-Datei, in dem Sie Daten aus der PGC-Datei oder Dateien zusammengeführt werden.
+*pgdfile*<br/>
+Die .pgd-Datei, in der Sie Daten aus der PGC-Datei oder Dateien zusammengeführt werden.
 
 ## <a name="remarks"></a>Hinweise
 

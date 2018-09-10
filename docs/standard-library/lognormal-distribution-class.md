@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c2f2351d55a4b4f868021bd0c44a0b942633c68
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fb8a30f8dde14801b89b1e2d36e349ea8e93a5c6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958529"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107107"
 ---
 # <a name="lognormaldistribution-class"></a>lognormal_distribution-Klasse
 
@@ -78,7 +78,8 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*RealType* der gleitkommaergebnistyp standardmäßig **doppelte**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType*<br/>
+Der gleitkommaergebnistyp standardmäßig **doppelte**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
@@ -204,11 +205,14 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*m* der `m` verteilungsparameter.
+*m*<br/>
+Der `m`-Verteilungsparameter.
 
-*s* der `s` verteilungsparameter.
+*s*<br/>
+Der `s`-Verteilungsparameter.
 
-*Parm* der `param_type` Struktur verwendet, um die Verteilung erstellen.
+*parm*<br/>
+Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -236,11 +240,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*m* der `m` verteilungsparameter.
+*m*<br/>
+Der `m`-Verteilungsparameter.
 
-*s* der `s` verteilungsparameter.
+*s*<br/>
+Der `s`-Verteilungsparameter.
 
-*richtige* der `param_type` Struktur, mit der verglichen werden soll.
+*right*<br/>
+Die `param_type`-Struktur, mit der verglichen wird.
 
 ### <a name="remarks"></a>Hinweise
 

@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c78355277fbb987d82bed46fb0b5f4ffd848b6a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4bfc37a53e3b2b4e3c185c101685b7009d9d354
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395301"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105275"
 ---
 # <a name="clearerr"></a>clearerr
 
@@ -54,19 +54,20 @@ void clearerr(
 
 ### <a name="parameters"></a>Parameter
 
-*Stream* Zeiger auf **Datei** Struktur.
+*Stream*<br/>
+Zeiger auf die **FILE**-Struktur.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Clearerr** Funktion setzt den Fehlerindikator und Dateiende-Indikator für *Stream*. Fehlerindikatoren werden nicht automatisch gelöscht; nach des Fehlerindikators für einen angegebenen Stream festlegen weiterhin Vorgänge für diesen Datenstrom zurückgeben ein fehlerhaften Werts bis **Clearerr**, [Fseek](fseek-fseeki64.md), **Fsetpos**, oder [zurückspulen](rewind.md) aufgerufen wird.
+Die **Clearerr** Funktion setzt den Fehlerindikator und den Dateiende-Indikator für *Stream*. Fehlerindikatoren werden nicht automatisch gelöscht; Sobald der Fehlerindikator für einen bestimmten Stream festgelegt wurde, Operationen in diesem Stream weiterhin einen Fehlerwert bis zurück **Clearerr**, [Fseek](fseek-fseeki64.md), **Fsetpos**, oder [rewind](rewind.md) aufgerufen wird.
 
-Wenn *Stream* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** auf **EINVAL** und zurückgibt. Weitere Informationen zu **Errno** und andere Fehlercodes finden Sie unter [Errno-Konstanten](../../c-runtime-library/errno-constants.md).
+Wenn *Stream* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** zu **EINVAL** und zurückgibt. Weitere Informationen zu **Errno** und Fehlercodes finden Sie unter [Errno-Konstanten](../../c-runtime-library/errno-constants.md).
 
 Es ist eine sicherere Version dieser Funktion verfügbar. Informationen dazu finden Sie unter [clearerr_s](clearerr-s.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**clearerr**|\<stdio.h>|
 

@@ -15,39 +15,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62d531418e4729c34907cb65d446f89bfa60fb63
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 54959b293752ac0453ba383f86ab225e0b45e471
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754708"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106995"
 ---
 # <a name="platformmetadatadefaultmemberattribute-attribute"></a>Platform::Metadata::DefaultMemberAttribute-Attribut
-Gibt die bevorzugte Funktion an, um unter mehreren möglichen überladenen Funktionen aufzurufen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-  
-public ref class DefaultMember abstract : Attribute  
-```  
-  
-## <a name="inheritance"></a>Vererbung  
- [Platform::Object](../cppcx/platform-object-class.md)   
-  
- [Platform::Metadata::Attribute](../cppcx/platform-metadata-attribute-attribute.md)  
-  
-### <a name="remarks"></a>Hinweise  
- Wenden Sie das DefaultMember-Attribut auf eine Methode an, die von einer JavaScript-Anwendung verwendet wird.  
-  
-### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client (Min.):** Windows 8  
-  
- **Unterstützter Server (Min.):** Windows Server 2012  
-  
- **Namespace:** Platform::Metadata  
-  
- **Metadaten:** platform.winmd  
-  
-## <a name="see-also"></a>Siehe auch  
- [Platform::Metadata-Namespace](../cppcx/platform-metadata-namespace.md)
+
+Gibt die bevorzugte Funktion an, um unter mehreren möglichen überladenen Funktionen aufzurufen.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+public ref class DefaultMember abstract : Attribute
+```
+
+## <a name="inheritance"></a>Vererbung
+
+[Platform::Object](../cppcx/platform-object-class.md)
+
+[Platform::Metadata::Attribute](../cppcx/platform-metadata-attribute-attribute.md)
+
+### <a name="remarks"></a>Hinweise
+
+Wenden Sie das DefaultMember-Attribut auf eine Methode an, die von einer JavaScript-Anwendung verwendet wird.
+
+### <a name="requirements"></a>Anforderungen
+
+**Unterstützter Client (Min.):** Windows 8
+
+**Unterstützter Server (Min.):** Windows Server 2012
+
+**Namespace:** Platform::Metadata
+
+**Metadaten:** platform.winmd
+
+## <a name="see-also"></a>Siehe auch
+
+[Platform::Metadata-Namespace](../cppcx/platform-metadata-namespace.md)

@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a2b776fb155d8927b610de38bdd79370f4c0803
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 5c93f32a7684d32cba0d2822571bd138f9206f46
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208649"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107400"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt;-Funktionen
 
@@ -70,13 +70,17 @@ unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
 
 ### <a name="parameters"></a>Parameter
 
-*Fty* den Typ des aufzurufenden Objekts.
+*Fty*<br/>
+Der Typ des aufzurufenden Objekts.
 
-*TN* den Typ des der n-te Aufrufargument.
+*TN*<br/>
+Der Typ des n-ten Aufrufarguments.
 
-*fn* aufzurufenden Objekts.
+*fn*<br/>
+Das aufzurufende Objekt.
 
-*tN* der n-te Aufrufargument.
+*TN*<br/>
+Das n-te Aufrufargument.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -165,9 +169,11 @@ binder1st <Operation> bind1st (const Operation& func, const Type& left);
 
 ### <a name="parameters"></a>Parameter
 
-*Func* die binäres Funktionsobjekt in ein unäres Funktionsobjekt konvertiert werden.
+*func*<br/>
+Das binäre Funktionsobjekt, das in ein unäres Funktionsobjekt konvertiert werden soll.
 
-*linken* den Wert, ist das erste Argument des binären Funktionsobjekts gebunden werden soll.
+*left*<br/>
+Der Wert, an den das erste Argument des binären Funktionsobjekts gebunden werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -257,9 +263,11 @@ binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Func* die binäres Funktionsobjekt in ein unäres Funktionsobjekt konvertiert werden.
+*func*<br/>
+Das binäre Funktionsobjekt, das in ein unäres Funktionsobjekt konvertiert werden soll.
 
-*richtige* den Wert, ist das zweite Argument des binären Funktionsobjekts gebunden werden soll.
+*right*<br/>
+Der Wert, an den das zweite Argument des binären Funktionsobjekts gebunden werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -348,7 +356,7 @@ struct bit_and : public binary_function<Type, Type, Type> {
     Type operator()(
     const Type& Left,
     const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator&
 template <>
@@ -364,9 +372,11 @@ struct bit_and<void>
 
 *Typ*, *T*, *U* jeder Typ, unterstützt eine `operator&` , das Operanden angegebener oder abgeleiteter Typen akzeptiert.
 
-*Links* der linke Operand des bitweisen AND-Operation. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
+*Links*<br/>
+Der linke Operand des bitweisen AND-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
 
-*Rechts* der Rechte Operand des bitweisen AND-Operation. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
+*Rechts*<br/>
+Der rechte Operand des bitweisen AND-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -383,24 +393,26 @@ Ein vordefiniertes Funktionsobjekt, mit dem der bitweise komplementäre (NOT) Vo
 ```cpp
 template <class Type = void>
 struct bit_not : public unary_function<Type, Type>
- {
+{
     Type operator()(const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator~
 template <>
 struct bit_not<void>
- {
+{
     template <class Type>
     auto operator()(Type&& Right) const  ->  decltype(~std::forward<Type>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*Typ* ein Typ, der ein unäres unterstützt `operator~`.
+*Type*<br/>
+Ein Typ, der ein unäres `operator~`-Element unterstützt.
 
-*Rechts* der Operand des bitweisen komplementären Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von eines Lvalue- oder eines Rvalue-Verweis-Arguments des abgeleiteten Typs *Typ*.
+*Rechts*<br/>
+Der Operand des bitweisen komplementären Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von eines Lvalue- oder eines Rvalue-Verweis-Arguments des abgeleiteten Typs *Typ*.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -420,7 +432,7 @@ struct bit_or : public binary_function<Type, Type, Type> {
     Type operator()(
     const Type& Left,
     const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator|
 template <>
@@ -436,9 +448,11 @@ struct bit_or<void>
 
 *Typ*, *T*, *U* jeder Typ, unterstützt eine `operator|` , das Operanden angegebener oder abgeleiteter Typen akzeptiert.
 
-*Links* der linke Operand des bitweisen OR-Operation. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
+*Links*<br/>
+Der linke Operand des bitweisen OR-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
 
-*Rechts* der Rechte Operand des bitweisen OR-Operation. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
+*Rechts*<br/>
+Der rechte Operand des bitweisen OR-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -458,7 +472,7 @@ struct bit_xor : public binary_function<Type, Type, Type> {
     Type operator()(
     const Type& Left,
     const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator^
 template <>
@@ -474,9 +488,11 @@ struct bit_xor<void>
 
 *Typ*, *T*, *U* jeder Typ, unterstützt eine `operator^` , das Operanden angegebener oder abgeleiteter Typen akzeptiert.
 
-*Links* der linke Operand des bitweisen XOR-Operation. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
+*Links*<br/>
+Der linke Operand des bitweisen XOR-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
 
-*Rechts* der Rechte Operand des bitweisen XOR-Operation. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
+*Rechts*<br/>
+Der rechte Operand des bitweisen XOR-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -500,9 +516,11 @@ reference_wrapper<const Ty> cref(const reference_wrapper<Ty>& arg);
 
 ### <a name="parameters"></a>Parameter
 
-*Ty* den Typ des zu umschließenden Arguments.
+*Ty*<br/>
+Der Typ des zu umschließenden Arguments.
 
-*Arg* zu umschließenden Arguments.
+*arg*<br/>
+Das zu umschließende Argument.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -552,9 +570,11 @@ unspecified mem_fn(Ret Ty::*pm);
 
 ### <a name="parameters"></a>Parameter
 
-*Ret* der Rückgabetyp der umschlossenen Funktion.
+*ret*<br/>
+Der Rückgabetyp der umschlossenen Funktion.
 
-*Ty* den Typ des memberfunktionszeigers.
+*Ty*<br/>
+Der Typ des Memberfunktionszeigers.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -623,7 +643,8 @@ const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pmem)(Arg) const);
 
 ### <a name="parameters"></a>Parameter
 
-*pMem* ein Zeiger auf die Memberfunktion der Klasse `Type` in ein Funktionsobjekt konvertiert werden.
+*pMem*<br/>
+Ein Zeiger auf die Memberfunktion der Klasse `Type`, die in ein Funktionsobjekt konvertiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -709,7 +730,8 @@ const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pmem)(Arg) cons
 
 ### <a name="parameters"></a>Parameter
 
-*pMem* ein Zeiger auf die Memberfunktion der Klasse `Type` in ein Funktionsobjekt konvertiert werden.
+*pMem*<br/>
+Ein Zeiger auf die Memberfunktion der Klasse `Type`, die in ein Funktionsobjekt konvertiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -804,7 +826,8 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
 
 ### <a name="parameters"></a>Parameter
 
-*Pred* der zu negierende unäre Prädikat.
+*Pred*<br/>
+Das zu negierende unäre Prädikat.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -875,7 +898,8 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 
 ### <a name="parameters"></a>Parameter
 
-*Func* das binäre Prädikat, das negiert werden soll.
+*func*<br/>
+Das zu negierende binäre Prädikat.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -953,7 +977,8 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 ### <a name="parameters"></a>Parameter
 
-*Pfunc* der unäre oder binäre Funktionszeiger in eine anwendbare Funktion konvertiert werden soll.
+*pfunc*<br/>
+Der unäre oder binäre Funktionszeiger, der in eine anwendbare Funktion konvertiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1072,11 +1097,14 @@ void swap(function<Fty>& f1, function<Fty>& f2);
 
 ### <a name="parameters"></a>Parameter
 
-*Fty* der vom Funktionsobjekt gesteuerte Typ.
+*Fty*<br/>
+Der vom Funktionsobjekt gesteuerte Typ.
 
-*F1* das erste Funktionsobjekt.
+*F1*<br/>
+Das erste Funktionsobjekt.
 
-*F2* das zweite Funktionsobjekt.
+*F2*<br/>
+Das zweite Funktionsobjekt.
 
 ### <a name="remarks"></a>Hinweise
 
