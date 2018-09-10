@@ -1,5 +1,5 @@
 ---
-title: Verknüpfen eines Menübefehls mit einer Zugriffstaste | Microsoft-Dokumentation
+title: Verknüpfen eines Menübefehls mit einer Zugriffstaste (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,23 +8,23 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- keyboard shortcuts, menu association
-- commands, associating menu commands with accelerator keys
-- menu commands, associating with keyboard shortcuts
+- keyboard shortcuts [C++], menu association
+- commands [C++], associating menu commands with accelerator keys
+- menu commands [C++], associating with keyboard shortcuts
 ms.assetid: ad2de43f-b20a-4c9f-bda8-0420179da48c
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b1411617df3736300536e84e07da0bb5df3a856
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b55535e9306d272d47f098e7cf15d28a764f3620
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599949"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316288"
 ---
-# <a name="associating-a-menu-command-with-an-accelerator-key"></a>Verknüpfen eines Menübefehls mit einer Zugriffstaste
+# <a name="associating-a-menu-command-with-an-accelerator-key-c"></a>Verknüpfen eines Menübefehls mit einer Zugriffstaste (C++)
 
 Häufig ist es wünschenswert, dass ein Menübefehl und eine Tastenkombination den gleichen Programmbefehl ausgeben. Verwenden Sie hierzu die **Menü** -Editor, um den gleichen Ressourcenbezeichner des Menübefehls und ein Eintrag in der Zugriffstastentabelle Ihrer Anwendung zugewiesen. Anschließend bearbeiten Sie die [Beschriftung](../windows/menu-command-properties.md) des Menübefehls so, dass sie den Namen der Zugriffstaste anzeigt.
 

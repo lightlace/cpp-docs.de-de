@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eb91708545d2303304177093e79ea49e8fa9208
-ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
+ms.openlocfilehash: 6645bb81a1fd4a2b42eb7419a0d008b9ac7692ad
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37850419"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319083"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Compilerwarnungen nach Compilerversion
 
@@ -404,7 +404,7 @@ C4694|"*Typ*': eine versiegelte abstrakte Klasse einer Basisklasse sind keine*Ty
 C4720|Inline-Inlineassembler meldet: "*Beschreibung*"
 C4721|"*Beschreibung*': nicht als systeminterne Funktion verfügbar
 C4722|"*Beschreibung*": Destruktor gibt nie Werte zurück, mögliche Speicherverluste
-C4726|ARM arch4/4 t unterstützt nur "< Cpsr_f > oder < Spsr_f >" mit unmittelbarem Wert
+C4726|ARM arch4/4 t unterstützt nur "\<Cpsr_f > oder \<Spsr_f >" mit unmittelbarem Wert
 C4727|PCH, die mit dem Namen *Namen* mit dem gleichen Zeitstempel finden Sie im *Namen* und *Namen*.  Verwenden zuerst gefundene wird verwendet.
 C4729|Die Funktion ist zu groß für auf Verlaufdiagrammen basierende Warnungen.
 C4730|"*Beschreibung*': Kombinieren von _m64 und Gleitkommaausdrücken kann zu fehlerhaftem Code

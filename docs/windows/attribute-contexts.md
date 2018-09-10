@@ -8,19 +8,19 @@ ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- attributes [C++], contexts
+- attributes [C++/CLI], contexts
 ms.assetid: 3086351f-77a8-4048-99e9-3b6b041b9437
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7635f49a494648f18bcd59eb8d212cc76d1f1539
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0e3935b168220b528afaecd2e1438cfe49496b1b
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600799"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313662"
 ---
 # <a name="attribute-contexts"></a>Attributkontexte
 C++-Attribute können mithilfe von vier grundlegende Felder beschrieben werden: das Ziel, die sie auf angewendet werden können (**gilt für**), wenn sie wiederholbar oder nicht sind (**wiederholbare**), wird die Vorhandenseins anderer Attribute (erforderlich **Erforderliche Attribute**), und die Inkompatibilitäten mit anderen Attributen (**ungültige Attribute**). Diese Felder sind in einer zugehörigen Tabelle im Referenzthema für jedes Attribut des aufgeführt. Jedes dieser Felder wird unten beschrieben.

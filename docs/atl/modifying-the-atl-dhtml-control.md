@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0652ca867ba49243ca5c87caa1dec98da929cf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8a08563396a77dec5f72ea35e10dd8a349095077
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764549"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314234"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>Ändern des ATL-DHTML-Steuerelements
 
@@ -51,7 +51,7 @@ Der ATL-Steuerelement-Assistent bietet Startcode, damit können Sie erstellen un
 
    Sie können die **IWebBrowser2** Methoden da ATL einen Zeiger auf die Schnittstelle für die Sie in der h-Datei bereitstellt.
 
-Als Nächstes ändern Sie die HTML-Ressource, um die Methoden aufzurufen, die Sie erstellt haben. Fügen Sie drei Schaltflächen zum Aufrufen dieser Methoden.  
+Als Nächstes ändern Sie die HTML-Ressource, um die Methoden aufzurufen, die Sie erstellt haben. Fügen Sie drei Schaltflächen zum Aufrufen dieser Methoden.
 
 #### <a name="to-modify-the-html-resource"></a>So ändern Sie die HTML-Ressource
 
@@ -72,9 +72,9 @@ Als Nächstes ändern Sie die HTML-Ressource, um die Methoden aufzurufen, die Si
 3. Fügen Sie den Aufruf von der `HelloHTML` Methode, die Sie erstellt haben. Zum Beispiel:
 
     ```html
-    <br>  
-    <br>  
-    <BUTTON onclick='window.external.HelloHTML();'>HelloHTML</BUTTON>  
+    <br>
+    <br>
+    <BUTTON onclick='window.external.HelloHTML();'>HelloHTML</BUTTON>
     ```
 
    Diese Methode erstellt eine Schaltfläche, mit der Bezeichnung **HelloHTML**, die der Benutzer klicken kann, zum Anzeigen der `HelloHTML` Meldungsfeld.

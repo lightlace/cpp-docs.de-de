@@ -1,5 +1,5 @@
 ---
-title: Symbolleisten-Editor | Microsoft-Dokumentation
+title: Symbolleisten-Editor (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,7 +10,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- resource editors, Toolbar editor
+- resource editors [C++], Toolbar editor
 - editors, toolbars
 - toolbars [C++], editing
 - Toolbar editor
@@ -20,16 +20,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b0f9c4977ff82bd3f4af40af657a4bfed3a90568
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c51c8a5dc321d61b6167fb6a1e5b71d52145d81d
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197875"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316951"
 ---
-# <a name="toolbar-editor"></a>Symbolleisten-Editor
+# <a name="toolbar-editor-c"></a>Symbolleisten-Editor (C++)
 
-Die **Symbolleiste** -Editor können Sie Symbolleistenressourcen erstellen und Bitmaps in Symbolleistenressourcen konvertieren. Die **Symbolleiste** Editor verwendet eine grafische Übersicht, um anzuzeigen, eine Symbolleiste und Schaltflächen, mit denen ähneln, wie sie in einer fertigen Anwendung aussehen werden.
+Die **Symbolleiste** -Editor können Sie C++-Symbolleistenressourcen erstellen und Bitmaps in Symbolleistenressourcen konvertieren. Die **Symbolleiste** Editor verwendet eine grafische Übersicht, um anzuzeigen, eine Symbolleiste und Schaltflächen, mit denen ähneln, wie sie in einer fertigen Anwendung aussehen werden.
 
 Mit der **Symbolleiste** -Editor können Sie:
 

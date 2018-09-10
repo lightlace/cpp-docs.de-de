@@ -255,12 +255,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1a157bcd3ecdce16a25d5bb6523ed6962a94a18
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 49677077761a11df93a540a749e140485fa9485f
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540215"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319070"
 ---
 # <a name="compiler-errors-c3500-through-c3999"></a>Compilerfehler C3500 bis C3999
 
@@ -496,7 +496,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerfehler C3721](compiler-error-c3721.md)|"*Signatur*': nicht kompatible Signatur für das Ereignis|
 |[Compilerfehler C3722](compiler-error-c3722.md)|ein generisches Ereignis ist nicht zulässig.|
 |[Compilerfehler C3723](compiler-error-c3723.md)|"*Funktion*': Ereignis konnte nicht aufgelöst|
-|[Compilerfehler C3724](compiler-error-c3724.md)|muss #include < windows.h > Verwendung von Multithreading mit Ereignissen|
+|[Compilerfehler C3724](compiler-error-c3724.md)|muss #include \<windows.h > Verwendung von Multithreading mit Ereignissen|
 |Compilerfehler Fehler C3725|Veraltet.|
 |Compilerfehler Fehler C3726|Veraltet.|
 |[Compilerfehler C3727](compiler-error-c3727.md)|"*Ereignis*": ein verwaltetes Ereignis muss eine Memberfunktion oder ein Datenmember, die einen Zeiger auf ein Delegat ist.|

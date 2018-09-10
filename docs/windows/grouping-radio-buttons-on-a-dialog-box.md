@@ -1,5 +1,5 @@
 ---
-title: Gruppieren von Optionsfeldern in einem Dialogfeld | Microsoft-Dokumentation
+title: Gruppieren von Optionsfeldern in einem Dialogfeld (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,23 +12,23 @@ dev_langs:
 helpviewer_keywords:
 - member variables, adding to radio button groups
 - variables, dialog box control member variables
-- dialog box controls, grouping radio buttons
+- dialog box controls [C++], grouping radio buttons
 - grouping controls
-- radio buttons, grouping on dialog boxes
+- radio buttons [C++], grouping on dialog boxes
 ms.assetid: 3cc43f9e-56c8-4faa-9930-ce81733c69de
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d0846d87273920f72598a1ea5bc4bd83d4c952d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ad05e9448af9148965ca2f0137d3e0d666d48871
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599884"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315391"
 ---
-# <a name="grouping-radio-buttons-on-a-dialog-box"></a>Gruppieren von Optionsfeldern in einem Dialogfeld
+# <a name="grouping-radio-buttons-on-a-dialog-box-c"></a>Gruppieren von Optionsfeldern in einem Dialogfeld (C++)
 
 Wenn Sie ein Dialogfeld Optionsschaltflächen hinzufügen, behandeln sie als Gruppe durch Festlegen einer **Gruppe** -Eigenschaft in der **Eigenschaften** Fenster für die erste Schaltfläche in der Gruppe. Eine Steuerelement-ID für das betreffende Optionsfeld wird dann im [Assistent zum Hinzufügen von Membervariablen](../ide/add-member-variable-wizard.md)angezeigt und ermöglicht das Hinzufügen einer Membervariablen zur Gruppe der Optionsfelder.
 

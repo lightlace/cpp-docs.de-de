@@ -1,5 +1,5 @@
 ---
-title: Ein- oder Ausblenden der Symbolleiste des Dialog-Editor | Microsoft-Dokumentation
+title: Ein- oder Ausblenden der Symbolleiste des Dialog-Editor (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,23 +11,23 @@ helpviewer_keywords:
 - controls [C++], showing or hiding Dialog editor toolbar
 - toolbars [C++], showing
 - toolbars [C++], hiding
-- Dialog editor, showing or hiding toolbar
+- Dialog Editor [C++], showing or hiding toolbar
 ms.assetid: 93c255e1-90eb-48b6-8602-450acda75bed
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1aa9e84e1f03f0299d25ec43b91c93531179ab6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9b7b6c8b01665da1effb1b3bd056c99bd82163c0
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599411"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316015"
 ---
-# <a name="showing-or-hiding-the-dialog-editor-toolbar"></a>Ein- oder Ausblenden der Symbolleiste des Dialog-Editors
+# <a name="showing-or-hiding-the-dialog-editor-toolbar-c"></a>Ein- oder Ausblenden der Symbolleiste des Dialog-Editor (C++)
 
-Beim Öffnen der **Dialogfeld** -Editor die **Dialog-Editor** Symbolleiste wird automatisch am oberen Rand der Projektmappe angezeigt.
+Beim Öffnen der **Dialogfeld** -Editor in ein C++-Projekt die **Dialog-Editor** Symbolleiste wird automatisch am oberen Rand der Projektmappe angezeigt.
 
 ### <a name="dialog-editor-toolbar"></a>Symbolleiste des Dialog-Editors
 

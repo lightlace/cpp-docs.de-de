@@ -1,5 +1,5 @@
 ---
-title: Zuordnen von Tastenkombinationen zu Menübefehlen | Microsoft-Dokumentation
+title: Zuordnen von Tastenkombinationen zu Menübefehlen (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,12 +9,12 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - access keys [C++], checking
-- menus, shortcut keys
+- menus [C++], shortcut keys
 - keyboard shortcuts [C++], command assignments
 - access keys [C++], assigning
-- mnemonics, adding to menus
+- mnemonics [C++], adding to menus
 - keyboard shortcuts [C++], uniqueness checking
-- mnemonics, uniqueness checking
+- mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: fbcf1a00-af6a-4171-805a-0ac01d4e8b0d
 author: mikeblome
@@ -22,16 +22,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab8ebb204b30883894e04c5d5d8a90f12c63a29b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 80a3480039330e85f468cfd46ba3901dd1c15dee
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591467"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318771"
 ---
-# <a name="assigning-access-keys-to-menu-commands"></a>Zuordnen von Tastenkombinationen zu Menübefehlen
+# <a name="assigning-access-keys-to-menu-commands-c"></a>Zuordnen von Tastenkombinationen zu Menübefehlen (C++)
 
-Sie können Ihren Menüs und Menübefehlen eine Zugriffstaste (ein mnemonisches Zeichen, das dem Benutzer die Auswahl des Menüs mit der Tastatur ermöglicht) zuweisen.
+In einem C++-Projekt können Sie eine Zugriffstaste (ein mnemonisches Zeichen, die dem Benutzer ermöglicht, wählen Sie im Menü mit der Tastatur) zuweisen, Ihren Menüs und Menübefehlen.
 
 ### <a name="to-assign-an-access-shortcut-key-to-a-menu-command"></a>So weisen Sie einem Menübefehl eine Zugriffstaste (Tastenkombination) zu
 

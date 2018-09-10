@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen eines Eintrags zu einer Zugriffstastentabelle | Microsoft-Dokumentation
+title: Hinzufügen eines Eintrags zu einer Zugriffstastentabelle (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d463dc59e88dbd5c302de632d5261f29d8a4aab
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7055c21a2b9e7d0e32f3dac56641513b19953e18
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595566"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315579"
 ---
-# <a name="adding-an-entry-to-an-accelerator-table"></a>Hinzufügen eines Eintrags zu einer Zugriffstastentabelle
+# <a name="adding-an-entry-to-an-accelerator-table-c"></a>Hinzufügen eines Eintrags zu einer Zugriffstastentabelle (C++)
 
 ### <a name="to-add-an-entry-to-an-accelerator-table"></a>So fügen Sie einer Zugriffstastentabelle einen Eintrag hinzu
 
-1. Öffnen Sie die Zugriffstastentabelle durch Doppelklicken auf das Symbol im [Ressourcenansicht](../windows/resource-view-window.md).
+1. In einem C++-Projekt, öffnen Sie die Zugriffstastentabelle durch Doppelklicken auf das Symbol im [Ressourcenansicht](../windows/resource-view-window.md).
 
    > [!NOTE]
    > Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).

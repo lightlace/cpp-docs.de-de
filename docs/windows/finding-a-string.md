@@ -1,5 +1,5 @@
 ---
-title: Suchen von Zeichenfolgen | Microsoft-Dokumentation
+title: Suchen eine Zeichenfolgenressource (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e04caa4aa927bd24bc1a5cd86f5d390e1c376b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1e331401a3a2a789b13bc21b76c9b1cbfcb30e33
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197534"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318499"
 ---
-# <a name="finding-a-string"></a>Suchen von Zeichenfolgen
+# <a name="finding-a-string-resource-c"></a>Suchen eine Zeichenfolgenressource (C++)
 
 Sie können eine oder mehrere Zeichenfolgen in der Zeichenfolgentabelle suchen und verwenden Sie [reguläre Ausdrücke](/visualstudio/ide/using-regular-expressions-in-visual-studio) mit der **in Dateien suchen** Befehl (**bearbeiten** Menü), suchen Sie alle Vorkommnisse von Zeichenfolgen die einem Muster entsprechen.
 

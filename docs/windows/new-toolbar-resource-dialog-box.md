@@ -1,5 +1,5 @@
 ---
-title: Neue Symbolleiste Ressource (Dialogfeld) | Microsoft-Dokumentation
+title: Neue Symbolleiste Ressource (Dialogfeld) (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,23 +10,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- New Toolbar Resource dialog box
+- New Toolbar Resource dialog box [C++]
 ms.assetid: 52dd01ad-e748-4ab2-b3eb-59f5df990ca6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6952fa51115d5bec9650ef6d6012e3c7aff2d127
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6ca09463a2934db0097c09d6a4f928f108fd0760
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602169"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316301"
 ---
-# <a name="new-toolbar-resource-dialog-box"></a>Neue Symbolleistenressource (Dialogfeld)
+# <a name="new-toolbar-resource-dialog-box-c"></a>Neue Symbolleiste Ressource (Dialogfeld) (C++)
 
-Die **neue Symbolleistenressource** Dialogfeld können Sie angeben, die Breite und Höhe der Schaltflächen einer Symbolleistenressource hinzufügen. Der Standardwert ist 16 × 15 Pixel.
+Die **neue Symbolleistenressource** Dialogfeld können Sie angeben, die Breite und Höhe der Schaltflächen einer Symbolleistenressource in einem C++-Projekt hinzufügen. Der Standardwert ist 16 × 15 Pixel.
 
 Eine Bitmap, die zum Erstellen einer Symbolleiste verwendet wird, hat eine maximale Breite von 2048. Wenn Sie festlegen, also die **Schaltflächenbreite** auf 512, können Sie nur vier Schaltflächen haben. Wenn Sie die Breite auf 513 festlegen, können Sie nur drei Schaltflächen verwenden.
 

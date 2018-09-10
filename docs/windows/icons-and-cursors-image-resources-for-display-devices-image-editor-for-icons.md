@@ -1,5 +1,5 @@
 ---
-title: 'Symbole und Cursor: Bildressourcen für Anzeigegeräte (Bildbearbeitung für Symbole) | Microsoft-Dokumentation'
+title: 'Symbole und Cursor: Bildressourcen für Anzeigegeräte (Bildbearbeitung für Symbole C++) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,13 +11,13 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - cursors [C++], creating
-- image resources, display devices
+- image resources [C++], display devices
 - icons [C++], creating
 - cursors [C++], types
 - icons [C++]
 - Image editor [C++], icons and cursors
 - cursors [C++]
-- display devices, creating icons for
+- display devices [C++], creating icons for
 - cursors [C++], hot spots
 - icons [C++], types
 ms.assetid: 8f0809a8-0cf0-4da9-b23d-51f28bf15f5b
@@ -26,14 +26,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9b90337b48c46d335bfccf405b2ba7e0628b9f99
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 03c3b64cfbf93260c1195fa028d05bb8085c9b09
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209491"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313584"
 ---
-# <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>Symbole und Cursor: Bildressourcen für Anzeigegeräte (Bildbearbeitung für Symbole)
+# <a name="icons-and-cursors-image-resources-for-display-devices-c-image-editor-for-icons"></a>Symbole und Cursor: Bildressourcen für Anzeigegeräte (Bildbearbeitung für Symbole C++)
 
 Symbole und Cursor sind grafische Ressourcen, die mehrere Bilder in verschiedenen Größen und Farbschemas für verschiedene Arten von Anzeigegeräten enthalten können. Außerdem weist ein Cursor einen „Hotspot“ auf, den Ort, den Windows zum Nachverfolgen seiner Position verwendet. Sowohl Symbole und Cursor werden erstellt und bearbeitet, mithilfe der **Image** -Editor wie Bitmaps und andere Bilder auch.
 
