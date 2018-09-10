@@ -13,144 +13,163 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7def63199666a9dba0a1628031129ce584e0fcec
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 133c8ebabe3e67526086661ab459bb6e96c4e727
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753528"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106508"
 ---
 # <a name="platformbox-class"></a>Platform::Box-Klasse
-Aktiviert einen Werttyp wie `Windows::Foundation::DateTime` oder einen skalaren Typ wie `int` , der in einem `Platform::Object` -Typ gespeichert wird. Es ist normalerweise nicht erforderlich, `Box` explizit zu verwenden, da das Boxing implizit geschieht, wenn Sie einen Werttyp in `Object^`umwandeln.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```cpp  
-ref class Box abstract;  
-```  
-  ### <a name="remarks"></a>Hinweise  
-  
-### <a name="requirements"></a>Anforderungen  
- **Header:** vccorlib.h  
-  
- **Namespace:** Platform
-|Member|Beschreibung|  
+
+Aktiviert einen Werttyp wie `Windows::Foundation::DateTime` oder einen skalaren Typ wie `int` , der in einem `Platform::Object` -Typ gespeichert wird. Es ist normalerweise nicht erforderlich, `Box` explizit zu verwenden, da das Boxing implizit geschieht, wenn Sie einen Werttyp in `Object^`umwandeln.
+
+### <a name="syntax"></a>Syntax
+
+```cpp
+ref class Box abstract;
+```
+  ### <a name="remarks"></a>Hinweise
+
+### <a name="requirements"></a>Anforderungen
+
+**Header:** vccorlib.h
+
+**Namespace:** Platform
+|Member|Beschreibung|
 |------------|-----------------|
 |[Box](#ctor)|Erstellt eine `Box` , die einen Wert vom angegebenen Typ kapseln kann.|
 |[Operator Box&lt;const T&gt;^](#box-const-t)|Ermöglicht Boxingkonvertierungen von einer `const`-Wertklasse `T` oder `enum`-Klasse `T` in `Box<T>`.|
 |[Operator Box&lt;const volatile T&gt;^](#box-const-volatile-t)|Ermöglicht Boxingkonvertierungen von einer `const volatile`-Wertklasse `T` oder einem `enum`-Typ `T` in `Box<T>`. |
 |[Operator Box&lt;T&gt;^](#box-t)|Ermöglicht Boxingkonvertierungen von einer `T`-Wertklasse in `Box<T>`.|
 |[Operator Box&lt;volatile T&gt;^](#box-volatile-t)|Ermöglicht Boxingkonvertierungen von einer `volatile`-Wertklasse `T` oder einem `enum`-Typ `T` in `Box<T>`.|
-|[Box:: T](#t)|Ermöglicht Boxingkonvertierungen von einer `T`-Wertklasse oder `enum`-Klasse `T` in `Box<T>`.| 
+|[Box:: T](#t)|Ermöglicht Boxingkonvertierungen von einer `T`-Wertklasse oder `enum`-Klasse `T` in `Box<T>`.|
 ## <a name="ctor"></a> Box:: Box-Konstruktor
-Erstellt eine `Box` , die einen Wert vom angegebenen Typ kapseln kann. | |[ Value-Eigenschaft](#value)| Gibt den Wert zurück, die in gekapselt ist die `Box` Objekt. |  
-### <a name="syntax"></a>Syntax  
-  
-```cpp  
-Box(T valueArg);  
-```  
-  
-### <a name="parameters"></a>Parameter  
- `valueArg`  
- Der Typ des Werts geschachtelt werden, z. B. `int`, `bool`, `float64`, `DateTime`.  
-  
+
+Erstellt eine `Box` , die einen Wert vom angegebenen Typ kapseln kann. | |[ Value-Eigenschaft](#value)| Gibt den Wert zurück, die in gekapselt ist die `Box` Objekt. |
+### <a name="syntax"></a>Syntax
+
+```cpp
+Box(T valueArg);
+```
+
+### <a name="parameters"></a>Parameter
+
+*valueArg*<br/>
+Der Typ des Werts geschachtelt werden, z. B. `int`, `bool`, `float64`, `DateTime`.
 
 ## <a name="box-const-t"></a> Box:: Box&lt;const T&gt;^-Operator
-Ermöglicht Boxingkonvertierungen von einer `const`-Wertklasse `T` oder `enum`-Klasse `T` in `Box<T>`.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```cpp  
-operator Box<const T>^(const T valueType);  
-```  
-  
-### <a name="parameters"></a>Parameter  
- `T`  
- Eine Wertklasse, eine Wertstruktur oder ein Enumerationstyp. Schließt die integrierten Typen in der [Standardnamespace](../cppcx/default-namespace.md).  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein `Platform::Box<T>^` Instanz, die den ursprünglichen Wert steht in einer Verweisklasse geschachtelt.  
-  
+
+Ermöglicht Boxingkonvertierungen von einer `const`-Wertklasse `T` oder `enum`-Klasse `T` in `Box<T>`.
+
+### <a name="syntax"></a>Syntax
+
+```cpp
+operator Box<const T>^(const T valueType);
+```
+
+### <a name="parameters"></a>Parameter
+
+*T*<br/>
+Eine Wertklasse, eine Wertstruktur oder ein Enumerationstyp. Schließt die integrierten Typen in der [Standardnamespace](../cppcx/default-namespace.md).
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein `Platform::Box<T>^` Instanz, die den ursprünglichen Wert steht in einer Verweisklasse geschachtelt.
+
 ## <a name="box-const-volatile-t"></a> Box:: Box&lt;const volatile T&gt;^-Operator
-Ermöglicht Boxingkonvertierungen von einer `const volatile`-Wertklasse `T` oder einem `enum`-Typ `T` in `Box<T>`.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```cpp  
-operator Box<const volatile T>^(const volatile T valueType);  
-```  
-  
-### <a name="parameters"></a>Parameter  
- `T`  
- Ein Enumerationstyp, eine Wertklasse oder eine Wertstruktur. Schließt die integrierten Typen in der [Standardnamespace](../cppcx/default-namespace.md).  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein `Platform::Box<T>^` Instanz, die den ursprünglichen Wert steht in einer Verweisklasse geschachtelt.  
-  
+
+Ermöglicht Boxingkonvertierungen von einer `const volatile`-Wertklasse `T` oder einem `enum`-Typ `T` in `Box<T>`.
+
+### <a name="syntax"></a>Syntax
+
+```cpp
+operator Box<const volatile T>^(const volatile T valueType);
+```
+
+### <a name="parameters"></a>Parameter
+
+*T*<br/>
+Ein Enumerationstyp, eine Wertklasse oder eine Wertstruktur. Schließt die integrierten Typen in der [Standardnamespace](../cppcx/default-namespace.md).
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein `Platform::Box<T>^` Instanz, die den ursprünglichen Wert steht in einer Verweisklasse geschachtelt.
+
 ## <a name="box-t"></a> Box:: Box&lt;T&gt;^-Operator
-Ermöglicht Boxingkonvertierungen von einer `T`-Wertklasse in `Box<T>`.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```cpp  
-operator Box<const T>^(const T valueType);  
-```  
-  
-### <a name="parameters"></a>Parameter  
- `T`  
- Ein Enumerationstyp, eine Wertklasse oder eine Wertstruktur. Schließt die integrierten Typen in der [Standardnamespace](../cppcx/default-namespace.md).  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein `Platform::Box<T>^` Instanz, die den ursprünglichen Wert steht in einer Verweisklasse geschachtelt.  
-  
+
+Ermöglicht Boxingkonvertierungen von einer `T`-Wertklasse in `Box<T>`.
+
+### <a name="syntax"></a>Syntax
+
+```cpp
+operator Box<const T>^(const T valueType);
+```
+
+### <a name="parameters"></a>Parameter
+
+*T*<br/>
+Ein Enumerationstyp, eine Wertklasse oder eine Wertstruktur. Schließt die integrierten Typen in der [Standardnamespace](../cppcx/default-namespace.md).
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein `Platform::Box<T>^` Instanz, die den ursprünglichen Wert steht in einer Verweisklasse geschachtelt.
+
 ## <a name="box-volatile-t"></a> Box:: Box&lt;volatile T&gt;^-Operator
-Ermöglicht Boxingkonvertierungen von einer `volatile`-Wertklasse `T` oder einem `enum`-Typ `T` in `Box<T>`.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```cpp  
-operator Box<volatile T>^(volatile T valueType);  
-```  
-  
-### <a name="parameters"></a>Parameter  
- `T`  
- Ein Enumerationstyp, eine Wertklasse oder eine Wertstruktur. Schließt die integrierten Typen in der [Standardnamespace](../cppcx/default-namespace.md).  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein `Platform::Box<T>^` Instanz, die den ursprünglichen Wert steht in einer Verweisklasse geschachtelt.  
-  
+
+Ermöglicht Boxingkonvertierungen von einer `volatile`-Wertklasse `T` oder einem `enum`-Typ `T` in `Box<T>`.
+
+### <a name="syntax"></a>Syntax
+
+```cpp
+operator Box<volatile T>^(volatile T valueType);
+```
+
+### <a name="parameters"></a>Parameter
+
+*T*<br/>
+Ein Enumerationstyp, eine Wertklasse oder eine Wertstruktur. Schließt die integrierten Typen in der [Standardnamespace](../cppcx/default-namespace.md).
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein `Platform::Box<T>^` Instanz, die den ursprünglichen Wert steht in einer Verweisklasse geschachtelt.
+
 ## <a name="t"></a>  Box:: T-Operator
-Ermöglicht Boxingkonvertierungen von einer `T`-Wertklasse oder `enum`-Klasse `T` in `Box<T>`.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```cpp  
-operator Box<T>^(T valueType);  
-```  
-  
-### <a name="parameters"></a>Parameter  
- `T`  
- Ein Enumerationstyp, eine Wertklasse oder eine Wertstruktur. Schließt die integrierten Typen in der [Standardnamespace](../cppcx/default-namespace.md).  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein `Platform::Box<T>^` Instanz, die den ursprünglichen Wert steht in einer Verweisklasse geschachtelt.  
-  
+
+Ermöglicht Boxingkonvertierungen von einer `T`-Wertklasse oder `enum`-Klasse `T` in `Box<T>`.
+
+### <a name="syntax"></a>Syntax
+
+```cpp
+operator Box<T>^(T valueType);
+```
+
+### <a name="parameters"></a>Parameter
+
+*T*<br/>
+Ein Enumerationstyp, eine Wertklasse oder eine Wertstruktur. Schließt die integrierten Typen in der [Standardnamespace](../cppcx/default-namespace.md).
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein `Platform::Box<T>^` Instanz, die den ursprünglichen Wert steht in einer Verweisklasse geschachtelt.
 
 ## <a name="value"></a> Box:: Value-Eigenschaft
-Gibt den im `Box`-Objekt gekapselten Wert zurück.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```cpp  
-virtual property T Value{  
-   T get();  
-}  
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Gibt den durch Boxing konvertierten Wert in dem Typ zurück, den er vor dem Boxing besaß.  
-  
-  
-## <a name="see-also"></a>Siehe auch  
- [Platform-namespace](../cppcx/platform-namespace-c-cx.md)   
- [Boxing](../cppcx/boxing-c-cx.md)
+
+Gibt den im `Box`-Objekt gekapselten Wert zurück.
+
+### <a name="syntax"></a>Syntax
+
+```cpp
+virtual property T Value{
+   T get();
+}
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Gibt den durch Boxing konvertierten Wert in dem Typ zurück, den er vor dem Boxing besaß.
+
+## <a name="see-also"></a>Siehe auch
+
+[Platform-namespace](../cppcx/platform-namespace-c-cx.md)<br/>
+[Boxing](../cppcx/boxing-c-cx.md)

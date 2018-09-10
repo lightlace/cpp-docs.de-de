@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f7f45d76e69f3eaaf94bdb66a0da0e4d3b78069
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e1a7fad8f4d0bdc0c91dab50f5737b6aa4476438
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751497"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105769"
 ---
 # <a name="platformoutofboundsexception-class"></a>Platform::OutOfBoundsException-Klasse
-Wird ausgelöst, wenn ein Vorgang versucht, auf Daten außerhalb des gültigen Bereichs zuzugreifen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-public ref class OutOfBoundsException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter der [COMException](../cppcx/platform-comexception-class.md) -Klasse.  
-  
-### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client (Min.):** Windows 8  
-  
- **Unterstützter Server (Min.):** Windows Server 2012  
-  
- **Namespace:** Platform  
-  
- **Metadaten:** platform.winmd  
-  
-## <a name="see-also"></a>Siehe auch  
- [Platform::COMException-Klasse](../cppcx/platform-comexception-class.md)
+
+Wird ausgelöst, wenn ein Vorgang versucht, auf Daten außerhalb des gültigen Bereichs zuzugreifen.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+public ref class OutOfBoundsException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Hinweise
+
+Weitere Informationen finden Sie unter der [COMException](../cppcx/platform-comexception-class.md) -Klasse.
+
+### <a name="requirements"></a>Anforderungen
+
+**Unterstützter Client (Min.):** Windows 8
+
+**Unterstützter Server (Min.):** Windows Server 2012
+
+**Namespace:** Platform
+
+**Metadaten:** platform.winmd
+
+## <a name="see-also"></a>Siehe auch
+
+[Platform::COMException-Klasse](../cppcx/platform-comexception-class.md)

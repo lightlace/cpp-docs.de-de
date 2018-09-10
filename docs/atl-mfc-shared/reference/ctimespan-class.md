@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6703c177b20230d7308ebd22b3b54edbdb1d2a14
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c06da499ed463404cc917fef7c8aebd52695061e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758705"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109731"
 ---
 # <a name="ctimespan-class"></a>CTimeSpan-Klasse
 
@@ -79,7 +79,7 @@ class CTimeSpan
 |-|-|
 |[Operator + -](#operator_add_-)|Fügt und subtrahiert `CTimeSpan` Objekte.|
 |[Operator += =](#operator_add_eq_-_eq)|Fügt und subtrahiert einen `CTimeSpan` Objekt auf und aus diesem `CTimeSpan`.|
-|[Operator == < usw..](#ctimespan_comparison_operators)|Vergleicht zwei Werte für relative Zeit.|
+|[Operator == < usw.](#ctimespan_comparison_operators)|Vergleicht zwei Werte für relative Zeit.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -114,8 +114,7 @@ bool operator>=(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*umfassen*
-
+*umfassen*  
 Das zu vergleichende Objekt.
 
 ### <a name="return-value"></a>Rückgabewert

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58599777f3e680b7ea124d9e9dfa427fd55b4051
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0a826d258cf9b88294a2d870cf802763a588520e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956933"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105723"
 ---
 # <a name="negate-struct"></a>negate-Struktur
 
@@ -44,14 +44,16 @@ struct negate<void>
   template <class Type>
   auto operator()(Type&& Left) const`
     -> decltype(-std::forward<Type>(Left));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*Typ* jeder Typ, unterstützt eine `operator-` , die einen Operanden des Typs angegebener oder abgeleiteter akzeptiert.
+*Type*<br/>
+Jeder Typ, der ein `operator-`-Element unterstützt, das einen Operanden des angegebenen oder abgeleiteten Typs akzeptiert.
 
-*Links* der zu negierende Operand. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *Typ*.
+*Links*<br/>
+Der zu negierende Operand. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *Typ*.
 
 ## <a name="return-value"></a>Rückgabewert
 

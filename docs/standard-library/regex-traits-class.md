@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31f3f2a4c01645df17af8992cc7f6b92dd57966a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ab9674ffafbf6563f566778d11991f8aa95c44d8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960930"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106469"
 ---
 # <a name="regextraits-class"></a>regex_traits-Klasse
 
@@ -92,7 +92,8 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*Elem* der Zeichenfolgentyp zu beschreiben.
+*Elem*<br/>
+Der zu beschreibende Zeichenfolgentyp.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -365,7 +366,8 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parameter
 
-*LOC* das zu speichernde Gebietsschemaobjekt.
+*Loc*<br/>
+Das zu speichernde Gebietsschemaobjekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -452,9 +454,11 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>Parameter
 
-*CH* das zu testende Element.
+*ch*<br/>
+Das zu testende Element.
 
-*CLS* der Klassen zum Testen.
+*CLS*<br/>
+Die Klassen, für die der Test ausgeführt wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -541,7 +545,7 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*
+*str*<br/>
 
 Die nullterminierte Sequenz.
 
@@ -714,9 +718,11 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*erste* Anfang der Sequenz zu suchen.
+*Erste*<br/>
+Anfang der Sequenz, die gesucht werden soll.
 
-*letzte* Ende der Sequenz zu suchen.
+*last*<br/>
+Ende der Sequenz, die gesucht werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -808,9 +814,11 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*erste* Anfang der Sequenz zu suchen.
+*Erste*<br/>
+Anfang der Sequenz, die gesucht werden soll.
 
-*letzte* Ende der Sequenz zu suchen.
+*last*<br/>
+Ende der Sequenz, die gesucht werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1149,9 +1157,11 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*erste* Anfang der umzuwandelnden Sequenz.
+*Erste*<br/>
+Der Anfang der umzuwandelnden Sequenz.
 
-*letzte* Ende der Sequenz zu transformieren.
+*last*<br/>
+Das Ende der umzuwandelnden Sequenz.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1239,9 +1249,11 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*erste* Anfang der umzuwandelnden Sequenz.
+*Erste*<br/>
+Der Anfang der umzuwandelnden Sequenz.
 
-*letzte* Ende der Sequenz zu transformieren.
+*last*<br/>
+Das Ende der umzuwandelnden Sequenz.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1328,7 +1340,8 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>Parameter
 
-*CH* das zu konvertierende Element.
+*ch*<br/>
+Das zu konvertierende Element.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1415,7 +1428,8 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>Parameter
 
-*CH* das zu konvertierende Element.
+*ch*<br/>
+Das zu konvertierende Element.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1502,9 +1516,11 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>Parameter
 
-*CH* das zu konvertierende Element.
+*ch*<br/>
+Das zu konvertierende Element.
 
-*Basis* die zu verwendende arithmetische Basis.
+*radix*<br/>
+Die zu verwendende arithmetische Basis.
 
 ### <a name="remarks"></a>Hinweise
 

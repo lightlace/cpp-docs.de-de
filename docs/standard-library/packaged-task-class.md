@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], valid
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7eb5b8d003682f5b941dd805f424afbe4a36cc85
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3d64c848e69cd7670b966159128ff340ac7dbf5f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964794"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107094"
 ---
 # <a name="packagedtask-class"></a>packaged_task-Klasse
 
@@ -123,7 +123,8 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="parameters"></a>Parameter
 
-*Rechts* ein `packaged_task` Objekt.
+*Rechts*<br/>
+Ein `packaged_task`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -178,11 +179,14 @@ template <class Fn, class Alloc>
 
 ### <a name="parameters"></a>Parameter
 
-*Rechts* ein `packaged_task` Objekt.
+*Rechts*<br/>
+Ein `packaged_task`-Objekt.
 
-*Alloc* eine speicherbelegung. Siehe [\<allocators>](../standard-library/allocators-header.md) für weitere Informationen.
+*Alloc*<br/>
+Eine Speicherbelegung. Siehe [\<allocators>](../standard-library/allocators-header.md) für weitere Informationen.
 
-*fn* ein Function-Objekt.
+*fn*<br/>
+Ein Funktionsobjekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -228,7 +232,8 @@ void swap(packaged_task& Right) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*Rechts* ein `packaged_task` Objekt.
+*Rechts*<br/>
+Ein `packaged_task`-Objekt.
 
 ## <a name="valid"></a> packaged_task::valid
 

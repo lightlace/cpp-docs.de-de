@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20985ce09d301002e6db3164cc3e99f36b03717b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 21cfcfb8a1c82fb351b85b0fb169a94dd3c2c5d4
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204903"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105093"
 ---
 # <a name="makepath-wmakepath"></a>_makepath, _wmakepath
 
@@ -75,15 +75,20 @@ void _wmakepath(
 
 ### <a name="parameters"></a>Parameter
 
-*Pfad* vollständigen pfadpuffers.
+*path*<br/>
+Vollständiger Pfadpuffer
 
-*Laufwerk* enthält einen Buchstaben (A, B und So weiter), der das gewünschte Laufwerk und einen optionalen nachgestellten Doppelpunkt entspricht. **_makepath** fügt den Doppelpunkt automatisch in den zusammengesetzten Pfad, wenn sie nicht vorhanden ist. Wenn *Laufwerk* ist **NULL** oder auf eine leere Zeichenfolge verweist, erscheint kein Laufwerksbuchstabe in die zusammengesetzte *Pfad* Zeichenfolge.
+*Laufwerk*<br/>
+Enthält einen Buchstaben (A, B usw.) für das gewünschte Laufwerk und einen optionalen nachgestellten Doppelpunkt. **_makepath** fügt den Doppelpunkt automatisch in den zusammengesetzten Pfad, wenn sie nicht vorhanden ist. Wenn *Laufwerk* ist **NULL** oder auf eine leere Zeichenfolge verweist, erscheint kein Laufwerksbuchstabe in die zusammengesetzte *Pfad* Zeichenfolge.
 
-*Dir* enthält den Pfad der Verzeichnisse, ausgenommen die Laufwerkkennzeichner oder den tatsächlichen Dateinamen. Der nachstehende Schrägstrich ist optional, und einem Schrägstrich (/) oder einen umgekehrten Schrägstrich (\\) oder beide können verwendet werden, in einem einzelnen *Dir* Argument. Wenn kein nachstehender Schrägstrich (/ oder \\) angegeben ist, wird er automatisch eingefügt. Wenn *Dir* ist **NULL** oder verweist auf eine leere Zeichenfolge und kein Verzeichnispfad in die zusammengesetzte eingefügt wird *Pfad* Zeichenfolge.
+*dir*<br/>
+Enthält den Pfad der Verzeichnisse, ausgenommen die Laufwerkkennzeichner oder den tatsächlichen Dateinamen. Der nachstehende Schrägstrich ist optional, und einem Schrägstrich (/) oder einen umgekehrten Schrägstrich (\\) oder beide können verwendet werden, in einem einzelnen *Dir* Argument. Wenn kein nachstehender Schrägstrich (/ oder \\) angegeben ist, wird er automatisch eingefügt. Wenn *Dir* ist **NULL** oder verweist auf eine leere Zeichenfolge und kein Verzeichnispfad in die zusammengesetzte eingefügt wird *Pfad* Zeichenfolge.
 
-*Fname* enthält den Basisdateinamen ohne Dateinamenerweiterungen. Wenn *Fname* ist **NULL** oder verweist auf eine leere Zeichenfolge und kein Dateiname wird eingefügt, in die zusammengesetzte *Pfad* Zeichenfolge.
+*fname*<br/>
+Enthält den Basisdateinamen ohne Dateinamenerweiterungen. Wenn *Fname* ist **NULL** oder verweist auf eine leere Zeichenfolge und kein Dateiname wird eingefügt, in die zusammengesetzte *Pfad* Zeichenfolge.
 
-*Ext* enthält die eigentliche Dateinamenerweiterung mit oder ohne führenden Punkt (.). **_makepath** fügt automatisch den Punkt, wenn es nicht, in angezeigt wird *Ext*. Wenn *Ext* ist **NULL** oder verweist auf eine leere Zeichenfolge, die keine Erweiterung eingefügt wird, in die zusammengesetzte *Pfad* Zeichenfolge.
+*ext*<br/>
+Enthält die eigentliche Dateinamenerweiterung mit oder ohne führenden Punkt (.). **_makepath** fügt automatisch den Punkt, wenn es nicht, in angezeigt wird *Ext*. Wenn *Ext* ist **NULL** oder verweist auf eine leere Zeichenfolge, die keine Erweiterung eingefügt wird, in die zusammengesetzte *Pfad* Zeichenfolge.
 
 ## <a name="remarks"></a>Hinweise
 

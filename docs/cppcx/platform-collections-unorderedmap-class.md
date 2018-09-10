@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e12028d91d488aed635adfeedc206eaffe08ae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2050be008f89ff2d125842d5919407dc292eed40
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205812"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105834"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap-Klasse
 
@@ -35,13 +35,13 @@ ref class Map sealed;
 
 #### <a name="parameters"></a>Parameter
 
-*K*  
+*K*<br/>
 Der Typ des Schlüssels im Schlüssel-Wert-Paar.
 
-*V*  
+*V*<br/>
 Der Typ des Werts im Schlüssel-Wert-Paar.
 
-*C*  
+*C*<br/>
 Ein Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der Map zu bestimmen. In der Standardeinstellung [Std:: equal_to\<K >](../standard-library/equal-to-struct.md).
 
 ### <a name="remarks"></a>Hinweise
@@ -118,7 +118,7 @@ Gibt einen Iterator, der angibt, die erste [Windows::Foundation::Collections::IK
 
 ```cpp
 virtual Windows::Foundation::Collections::IIterator<
-   Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ 
+   Windows::Foundation::Collections::IKeyValuePair<K, V>^>^
    First();
 ```
 
@@ -158,7 +158,7 @@ bool HasKey(
 
 ### <a name="parameters"></a>Parameter
 
-*key*  
+*key*<br/>
 Der zum Suchen des UnorderedMap-Elements verwendete Schlüssel. Der Typ des *Schlüssel* ist der Typname *K*.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -180,10 +180,10 @@ virtual bool Insert(
 
 ### <a name="parameters"></a>Parameter
 
-*key*  
+*key*<br/>
 Der Schlüsselteil des Schlüssel-Wert-Paars. Der Typ des *Schlüssel* ist der Typname *K*.
 
-*Wert*  
+*Wert*<br/>
 Der Wertteil des Schlüssel-Wert-Paars. Der Typ des *Wert* ist der Typname *V*.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -204,7 +204,7 @@ V Lookup(
 
 ### <a name="parameters"></a>Parameter
 
-*key*  
+*key*<br/>
 Der zum Suchen eines in der UnorderedMap vorhandenen Elements verwendete Schlüssel. Der Typ des *Schlüssel* ist der Typname *K*.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -242,7 +242,7 @@ virtual void Remove(
 
 ### <a name="parameters"></a>Parameter
 
-*key*  
+*key*<br/>
 Der Schlüsselteil des Schlüssel-Wert-Paars. Der Typ des *Schlüssel* ist der Typname *K*.
 
 ## <a name="size"></a>  Unorderedmap:: size-Methode
@@ -346,31 +346,32 @@ UnorderedMap(
 
 ### <a name="parameters"></a>Parameter
 
-*InIt*  
+*InIt*<br/>
 Der Typname der aktuellen UnorderedMap.
 
-*P*  
+*P*<br/>
 Ein Funktionsobjekt, das zwei Schlüssel vergleichen kann, um zu bestimmen, ob sie gleich sind. Dieser Parameter ist standardmäßig [Std:: equal_to\<K >](../standard-library/equal-to-struct.md).
 
-*H*  
+*H*<br/>
 Ein Funktionsobjekt, das einen Hashwert für Schlüssel erzeugt. Dieser Parameter ist standardmäßig [hash-Klasse 1](../standard-library/hash-class.md) für die Typen die Klasse unterstützt.
 
-*m*  
+*m*<br/>
 Ein Verweis oder [Lvalues und Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) zu einem [Std:: unordered_map](../standard-library/unordered-map-class.md) , wird verwendet, um die aktuelle UnorderedMap zu initialisieren.
 
-*IL* ein [Std:: initializer_list](../standard-library/initializer-list-class.md) von [Std:: Pair](../standard-library/pair-structure.md) Objekte, die zum Initialisieren der Zuordnung verwendet wird.
+*il*<br/>
+Ein [Std:: initializer_list](../standard-library/initializer-list-class.md) von [Std:: Pair](../standard-library/pair-structure.md) Objekte, die zum Initialisieren der Zuordnung verwendet wird.
 
-*Erste*  
+*Erste*<br/>
 Der Eingabeiterator des ersten Elements in einem Bereich von Elementen, die verwendet werden, um die aktuelle UnorderedMap zu initialisieren.
 
-*last*  
+*last*<br/>
 Der Eingabeiterator des ersten Elements nach einem Bereich von Elementen, die verwendet werden, um die aktuelle UnorderedMap zu initialisieren.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Plattform-Namespace](platform-namespace-c-cx.md)  
-[Platform::Collections-Namespace](../cppcx/platform-collections-namespace.md)  
-[Platform::Collections::Map-Klasse](../cppcx/platform-collections-map-class.md)  
-[Platform::Collections::UnorderedMapView-Klasse](../cppcx/platform-collections-unorderedmapview-class.md)  
-[Sammlungen](../cppcx/collections-c-cx.md)  
-[Erstellen von Windows-Runtime-Komponenten in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[Plattform-Namespace](platform-namespace-c-cx.md)<br/>
+[Platform::Collections-Namespace](../cppcx/platform-collections-namespace.md)<br/>
+[Platform::Collections::Map-Klasse](../cppcx/platform-collections-map-class.md)<br/>
+[Platform::Collections::UnorderedMapView-Klasse](../cppcx/platform-collections-unorderedmapview-class.md)<br/>
+[Sammlungen](../cppcx/collections-c-cx.md)<br/>
+[Erstellen von Windows-Runtime-Komponenten in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

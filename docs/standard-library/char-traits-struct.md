@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c2346ed8a7d9cc2359c0bdf984b52993a13b05a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bc8f906c4c084ef4cabef9b26ef9e6b48e9e33cd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956881"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106082"
 ---
 # <a name="chartraits-struct"></a>char_traits-Struktur
 
@@ -57,7 +57,8 @@ struct char_traits;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType* der Elementtyp der Daten.
+*CharType*<br/>
+Der Datentyp des Elements.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -116,11 +117,13 @@ static char_type *assign(char_type* strTo,
 
 **_** *CharFrom* der Zeichen, dessen Wert zugewiesen werden soll.
 
-*_CharTo* das Element, das den Zeichenwert zugewiesen werden soll.
+*_CharTo*<br/>
+Das Element, dem der Zeichenwert zugewiesen werden soll.
 
 * StrTo * Zeichenfolgen- oder Zeichenarray Arrays sind, dass, dessen ersten Elementen Zeichenwerte zugewiesen werden.
 
-*_Num* die Anzahl der Elemente, denen Werte zugewiesen werden.
+*_Num*<br/>
+Die Anzahl der Elemente, denen Werte zugewiesen werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -199,7 +202,8 @@ static int compare(const char_type* str1,
 
 * str2 * die zweite von zwei Zeichenfolgen miteinander verglichen werden soll.
 
-*_Num* die Anzahl der Elemente in den Zeichenfolgen verglichen werden soll.
+*_Num*<br/>
+Die Anzahl der Elemente in den Zeichenfolgen, die miteinander verglichen werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -258,11 +262,14 @@ static char_type *copy(char_type* _To,
 
 ### <a name="parameters"></a>Parameter
 
-*_Bin* das Element am Anfang des Zeichenfolgen- oder Zeichenarray Arrays, die auf die kopierte Zeichenfolgensequenz empfangen gerichtet sind.
+*_Bin*<br/>
+Das Element am Anfang des Zeichenfolgen- oder Zeichenarrays, das die kopierte Zeichenfolgensequenz empfangen soll.
 
-*_Aus* das Element am Anfang des Zeichenfolgen- oder Zeichenarray Quellarray kopiert werden soll.
+*_Aus*<br/>
+Das Element am Anfang des Quellzeichenfolgen- oder -zeichenarrays, das kopiert werden soll.
 
-*_Num* die Anzahl der Elemente kopiert werden soll.
+*_Num*<br/>
+Die Anzahl der zu kopierenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -317,13 +324,17 @@ static char_type *_Copy_s(
 
 ### <a name="parameters"></a>Parameter
 
-*Dest* Array Zeichenfolgen- oder Zeichenarray, die auf die kopierte Zeichenfolgensequenz empfangen gerichtet sind.
+*dest*<br/>
+Das Zeichenfolgen- oder Zeichenarray, das die kopierte Zeichenfolgensequenz empfangen soll.
 
-*Dest_size* die Größe des *Dest*. Wenn `char_type` ist **Char**, und klicken Sie dann diese Größe in Byte ist. Wenn `char_type` ist **"wchar_t"**, sich diese Größe in Wörtern.
+*dest_size*<br/>
+Die Größe des *Dest*. Wenn `char_type` ist **Char**, und klicken Sie dann diese Größe in Byte ist. Wenn `char_type` ist **"wchar_t"**, sich diese Größe in Wörtern.
 
-*_Aus* das Quellarray Zeichenfolgen- oder Zeichenarray kopiert werden soll.
+*_Aus*<br/>
+Das zu kopierende Quellzeichenfolgen- oder -zeichenarray.
 
-*Anzahl* die Anzahl der Elemente kopiert werden soll.
+*count*<br/>
+Die Anzahl der zu kopierenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -425,9 +436,11 @@ static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>Parameter
 
-*_Ch1* das erste von zwei Zeichen auf Gleichheit getestet werden soll.
+*_Ch1*<br/>
+Das erste von zwei Zeichen, die auf Gleichheit getestet werden.
 
-*_Ch2* das zweite von zwei Zeichen auf Gleichheit getestet werden sollen.
+*_Ch2*<br/>
+Das zweite von zwei Zeichen, die auf Gleichheit getestet werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -483,9 +496,11 @@ static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 
 ### <a name="parameters"></a>Parameter
 
-*_Ch1* das erste der beiden Zeichen auf Gleichheit als getestet werden `int_type`s.
+*_Ch1*<br/>
+Das erste der beiden Zeichen auf Gleichheit als getestet werden `int_type`s.
 
-*_Ch2* das zweite der beiden Zeichen auf Gleichheit als getestet werden `int_type`s.
+*_Ch2*<br/>
+Das zweite der beiden zwei Zeichen, die auf Gleichheit als `int_type` getestet werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -551,9 +566,9 @@ The char_types and corresponding int_types are:
     ch3 = x corresponding to int1 = 120.
 
 The int_type representation of character ch1
- is not equal to the int_type representation of ch2.
+is not equal to the int_type representation of ch2.
 The int_type representation of character ch1
- is equal to the int_type representation of ch3.
+is equal to the int_type representation of ch3.
 ```
 
 ## <a name="find"></a> char_traits::find
@@ -568,11 +583,14 @@ static const char_type* find(const char_type* str,
 
 ### <a name="parameters"></a>Parameter
 
-*Str* das erste Zeichen in die Zeichenfolge, die gesucht werden soll.
+*str*<br/>
+Das erste zu suchende Zeichen in der Zeichenfolge.
 
-*_Num* die Anzahl von Positionen – beginnend ab der ersten – im zu durchsuchenden Bereich.
+*_Num*<br/>
+Die Anzahl von Positionen – beginnend ab der ersten – im zu durchsuchenden Bereich.
 
-*_Ch* das Zeichen, das in den Bereich gesucht werden.
+*_Ch*<br/>
+Das Zeichen, nach dem im Bereich gesucht werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -616,7 +634,7 @@ int main( )
 The string to be searched is: f2d-1234-abcd
 The character searched for in s1 is: d
 The string beginning with the first occurrence
- of the character 'd' is: d-1234-abcd
+of the character 'd' is: d-1234-abcd
 The result2 of the search is NULL.
 ```
 
@@ -646,7 +664,8 @@ static size_t length(const char_type* str);
 
 ### <a name="parameters"></a>Parameter
 
-*Str* der C-Zeichenfolge, deren Länge gemessen wird.
+*str*<br/>
+Die C-Zeichenfolge, deren Länge gemessen wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -688,9 +707,11 @@ static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>Parameter
 
-*_Ch1* das erste der beiden Zeichen, die getestet werden soll kleiner als.
+*_Ch1*<br/>
+Das erste von zwei Zeichen, die auf „kleiner als“ geprüft werden.
 
-*_Ch2* die zweite von zwei Zeichen für getestet werden kleiner als.
+*_Ch2*<br/>
+Das zweite von zwei Zeichen, die auf „kleiner als“ geprüft werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -749,11 +770,14 @@ static char_type *move(char_type* _To,
 
 ### <a name="parameters"></a>Parameter
 
-*_Bin* das Element am Anfang des Zeichenfolgen- oder Zeichenarray Arrays, die auf die kopierte Zeichenfolgensequenz empfangen gerichtet sind.
+*_Bin*<br/>
+Das Element am Anfang des Zeichenfolgen- oder Zeichenarrays, das die kopierte Zeichenfolgensequenz empfangen soll.
 
-*_Aus* das Element am Anfang des Zeichenfolgen- oder Zeichenarray Quellarray kopiert werden soll.
+*_Aus*<br/>
+Das Element am Anfang des Quellzeichenfolgen- oder -zeichenarrays, das kopiert werden soll.
 
-*_Num* die Anzahl der Elemente aus der Quellzeichenfolge kopiert werden.
+*_Num*<br/>
+Die Anzahl von Elementen, die aus der Quellzeichenfolge kopiert werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -823,13 +847,17 @@ static char_type *_Move_s(
 
 ### <a name="parameters"></a>Parameter
 
-*Dest* das Element am Anfang des Zeichenfolgen- oder Zeichenarray Arrays, die auf die kopierte Zeichenfolgensequenz empfangen gerichtet sind.
+*dest*<br/>
+Das Element am Anfang des Zeichenfolgen- oder Zeichenarrays, das die kopierte Zeichenfolgensequenz empfangen soll.
 
-*Dest_size* die Größe des *Dest*. Wenn `char_type` ist **Char**, ist dies in Byte. Wenn `char_type` ist **"wchar_t"**, ist dies in Wörtern.
+*dest_size*<br/>
+Die Größe des *Dest*. Wenn `char_type` ist **Char**, ist dies in Byte. Wenn `char_type` ist **"wchar_t"**, ist dies in Wörtern.
 
-*_Aus* das Element am Anfang des Zeichenfolgen- oder Zeichenarray Quellarray kopiert werden soll.
+*_Aus*<br/>
+Das Element am Anfang des Quellzeichenfolgen- oder -zeichenarrays, das kopiert werden soll.
 
-*Anzahl* die Anzahl der Elemente aus der Quellzeichenfolge kopiert werden.
+*count*<br/>
+Die Anzahl von Elementen, die aus der Quellzeichenfolge kopiert werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -895,7 +923,8 @@ static int_type not_eof(const int_type& _Ch);
 
 ### <a name="parameters"></a>Parameter
 
-*_Ch* das Zeichen als ein `int_type` , geprüft werden soll, ob es das EOF-Zeichen ist.
+*_Ch*<br/>
+Das als `int_type` dargestellte Zeichen, für das geprüft werden soll, ob es das EOF-Zeichen ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1002,7 +1031,8 @@ static char_type to_char_type(const int_type& _Ch);
 
 ### <a name="parameters"></a>Parameter
 
-*_Ch* der `int_type` Zeichen als dargestellt werden eine `char_type`.
+*_Ch*<br/>
+Das `int_type`-Zeichen, das als `char_type` dargestellt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1107,7 +1137,8 @@ static int_type to_int_type(const char_type& _Ch);
 
 ### <a name="parameters"></a>Parameter
 
-*_Ch* der `char_type` Zeichen als dargestellt werden ein `int_type`.
+*_Ch*<br/>
+Das `char_type`-Zeichen, das als `int_type` dargestellt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 

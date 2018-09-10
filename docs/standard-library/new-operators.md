@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 11c4f3d1c994ee7a29ee47e35881d533f8c8715a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 31db26453efbecceb136b614b8eabf178a0cdfea
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216187"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100365"
 ---
 # <a name="ltnewgt-operators"></a>&lt;new&gt;-Operatoren
 
@@ -39,7 +39,8 @@ void operator delete(void* ptr,
 
 ### <a name="parameters"></a>Parameter
 
-*PTR* den Zeiger, dessen Wert durch den Löschvorgang ungültig gerendert werden soll.
+*ptr*<br/>
+Der Zeiger, dessen Wert durch den Löschvorgang als ungültig gerendert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -71,7 +72,8 @@ void operator delete[](void* ptr,
 
 ### <a name="parameters"></a>Parameter
 
-*PTR* den Zeiger, dessen Wert durch den Löschvorgang ungültig gerendert werden soll.
+*ptr*<br/>
+Der Zeiger, dessen Wert durch den Löschvorgang als ungültig gerendert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -101,9 +103,11 @@ void* operator new(std::size_t count,
 
 ### <a name="parameters"></a>Parameter
 
-*Anzahl* die Anzahl der Bytes der Speicher zugeordnet wird.
+*count*<br/>
+Der zu belegende Speicherplatz in Bytes.
 
-*PTR* der Zeiger zurückgegeben werden.
+*ptr*<br/>
+Der Zeiger, der zurückgegeben werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -198,9 +202,11 @@ void* operator new[](std::size_t count,
 
 ### <a name="parameters"></a>Parameter
 
-*Anzahl* die Anzahl der Bytes der Speicher für das Arrayobjekt zugeordnet wird.
+*count*<br/>
+Der Speicherplatz in Bytes, der für ein Array-Objekt belegt werden soll.
 
-*PTR* der Zeiger zurückgegeben werden.
+*ptr*<br/>
+Der Zeiger, der zurückgegeben werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 

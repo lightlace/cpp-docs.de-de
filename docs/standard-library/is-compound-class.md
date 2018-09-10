@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91132492ab6173d9d462eeb74d6393dce41f6833
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 8916d92abcfb05dbef68e8909b8a52a82c35af24
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961590"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106993"
 ---
 # <a name="iscompound-class"></a>is_compound-Klasse
 
@@ -37,7 +37,8 @@ struct is_compound;
 
 ### <a name="parameters"></a>Parameter
 
-*Ty* der abzufragende Typ.
+*Ty*<br/>
+Der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 

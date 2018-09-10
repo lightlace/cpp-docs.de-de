@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52f9c1335304cc3eefec76abde641e62932eb727
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 7d2035a1146c5e620d8f75dd6bba5095a7630e0a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964407"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103996"
 ---
 # <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution-Klasse
 
@@ -81,7 +81,8 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*IntType* standardmäßig der ganzzahligen Ergebnistyp **Int**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*IntType*<br/>
+Der Ergebnistyp für ganze Zahl, Standardwert **Int**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
@@ -242,11 +243,14 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*k* der `k` verteilungsparameter.
+*k*<br/>
+Der `k`-Verteilungsparameter.
 
-*p* der `p` verteilungsparameter.
+*p*<br/>
+Der `p`-Verteilungsparameter.
 
-*Parm* die Parameterstruktur verwendet, um die Verteilung erstellen.
+*parm*<br/>
+Die für die Erstellung der Verteilung verwendete Parameterstruktur.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -266,11 +270,14 @@ Struktur Param_type {Typedef Negative_binomial_distribution`<`Result_type > Dist
 
 ### <a name="parameters"></a>Parameter
 
-*k* der `k` verteilungsparameter.
+*k*<br/>
+Der `k`-Verteilungsparameter.
 
-*p* der `p` verteilungsparameter.
+*p*<br/>
+Der `p`-Verteilungsparameter.
 
-*richtige* der `param_type` Struktur, mit der verglichen werden soll.
+*right*<br/>
+Die `param_type`-Struktur, mit der verglichen wird.
 
 ### <a name="remarks"></a>Hinweise
 
