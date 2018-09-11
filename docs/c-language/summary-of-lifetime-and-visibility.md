@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f2c8b6f9c6be0b07dba710e50f71f96bdf3f0eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dcda68906e281bdf33ebe95a8019851bcb3cdb11
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389779"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752299"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Zusammenfassung von Lebensdauer und Sichtbarkeit
 Die folgende Tabelle ist eine Zusammenfassung der Lebensdauer- und Sichtbarkeitseigenschaften der meisten Bezeichner. Die ersten drei Spalten geben die Attribute an, die die Lebensdauer und die Sichtbarkeit definieren. Ein Bezeichner mit den Attributen, die durch die ersten drei Spalten angegeben sind, weist die Lebensdauer und Sichtbarkeit auf, die in der vierten und fünften Spalte angezeigt werden. Allerdings deckt die Tabelle nicht alle möglichen Fälle ab. Weitere Informationen finden Sie unter [Speicherklassen](../c-language/c-storage-classes.md).  
@@ -30,17 +30,17 @@ Die folgende Tabelle ist eine Zusammenfassung der Lebensdauer- und Sichtbarkeits
 |Attribute:<br /><br /> Ebene|Element|Speicherklasse<br /><br /> Bezeichner|Ergebnis: <br /><br /> Lebensdauer|Sichtbarkeit|  
 |---------------------------|----------|----------------------------------|--------------------------|----------------|  
 |Dateibereich|Variablendefinition|**static**|Global|Rest der Quelldatei der Ausführung|  
-||Variablendeklaration|`extern`|Global|Rest der Quelldatei der Ausführung|  
+||Variablendeklaration|**extern**|Global|Rest der Quelldatei der Ausführung|  
 ||Funktionsprototyp oder Definition|**static**|Global|Einzelne Quelldatei|  
-||Funktionsprototyp|`extern`|Global|Rest der Quelldatei|  
-|Blockbereich|Variablendeklaration|`extern`|Global|Block|  
+||Funktionsprototyp|**extern**|Global|Rest der Quelldatei|  
+|Blockbereich|Variablendeklaration|**extern**|Global|Block|  
 ||Variablendefinition|**static**|Global|Block|  
 ||Variablendefinition|**auto** oder **register**|Lokal|Block|  
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>description  
- Im folgenden Beispiel werden Blöcke, Verschachtelung und die Sichtbarkeit von Variablen veranschaulicht:  
+### <a name="description"></a>Beschreibung   
+Im folgenden Beispiel werden Blöcke, Verschachtelung und die Sichtbarkeit von Variablen veranschaulicht:  
   
 ### <a name="code"></a>Code  
   
@@ -71,7 +71,7 @@ int main()  // main function defined at external level
 ```  
   
 ### <a name="comments"></a>Kommentare  
- In diesem Beispiel gibt es vier Sichtbarkeitsebenen: die externe Ebene und drei Blockebenen. Die Werte werden auf dem Bildschirm gemäß den Kommentaren nach der jeweiligen Anweisung ausgegeben.  
+In diesem Beispiel gibt es vier Sichtbarkeitsebenen: die externe Ebene und drei Blockebenen. Die Werte werden auf dem Bildschirm gemäß den Kommentaren nach der jeweiligen Anweisung ausgegeben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Lebensdauer, Bereich, Sichtbarkeit und Verknüpfung](../c-language/lifetime-scope-visibility-and-linkage.md)
+[Lebensdauer, Bereich, Sichtbarkeit und Verknüpfung](../c-language/lifetime-scope-visibility-and-linkage.md)
