@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95c2bff6aa96ad5c2eea127fa643641d268e3cd9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4aaf456e83968cf47573a9ea2e765f9e7d552625
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392574"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760249"
 ---
 # <a name="ismbc-routines"></a>_ismbc-Routinen
 Jede **_ismbc**-Routine prüft ein angegebenes Multibytezeichen `c` auf eine bestimmte Bedingung.  
@@ -43,9 +43,9 @@ Jede **_ismbc**-Routine prüft ein angegebenes Multibytezeichen `c` auf eine bes
 |[_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|[_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Testergebnis jeder **_ismbc**-Routine hängt von der gültigen Multibyte-Codepage ab. Multibyte-Codepages verfügen über Einzelbytebuchstaben. Standardmäßig wird die Multibyte-Codepage auf die Standard-ANSI-Codepage des Systems festgelegt, die vom Betriebssystem beim Programmstart abgerufen wird. Sie können die verwendete Multibyte-Codepage mit [_getmbcp](../c-runtime-library/reference/getmbcp.md) oder [_setmbcp](../c-runtime-library/reference/setmbcp.md) abfragen bzw. ändern.  
+Das Testergebnis jeder **_ismbc**-Routine hängt von der gültigen Multibyte-Codepage ab. Multibyte-Codepages verfügen über Einzelbytebuchstaben. Standardmäßig wird die Multibyte-Codepage auf die Standard-ANSI-Codepage des Systems festgelegt, die vom Betriebssystem beim Programmstart abgerufen wird. Sie können die verwendete Multibyte-Codepage mit [_getmbcp](../c-runtime-library/reference/getmbcp.md) oder [_setmbcp](../c-runtime-library/reference/setmbcp.md) abfragen bzw. ändern.  
   
- Der Ausgabewert ist von der `LC_CTYPE`-Kategorieeinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter.  
+Der Ausgabewert ist von der `LC_CTYPE`-Kategorieeinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter.  
   
 |-Routine zurückgegebener Wert|Testbedingung|Beispiel für Codepage 932|  
 |-------------|--------------------|---------------------------|  
@@ -62,9 +62,9 @@ Jede **_ismbc**-Routine prüft ein angegebenes Multibytezeichen `c` auf eine bes
 |[_ismbcsymbol, _ismbcsymbol_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|Multibytesymbol|Gibt nur dann einen Wert ungleich null zurück, wenn 0x8141<=`c`<=0x81AC ist.|  
 |[_ismbcupper, _ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|Großbuchstaben alphabetisch|Gibt nur dann einen Wert ungleich null zurück, wenn `c` eine Einzelbytedarstellung eines englischen ASCII-Großbuchstabens ist: 0x41<=`c`<=0x5A.|  
   
- **Codepage 932-spezifisch**  
+**Codepage 932-spezifisch**  
   
- Die folgenden Routinen gelten speziell für Codepage 932.  
+Die folgenden Routinen gelten speziell für Codepage 932.  
   
 |-Routine zurückgegebener Wert|Testbedingung (nur Codepage 932)|  
 |-------------|-------------------------------------------|  
@@ -74,11 +74,11 @@ Jede **_ismbc**-Routine prüft ein angegebenes Multibytezeichen `c` auf eine bes
 |[_ismbcl1, _ismbcl1_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS, Ebene 1: 0x889F<=`c`<= 0x9872.|  
 |[_ismbcl2, _ismbcl2_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS, Ebene 2: 0x989F<=`c`<=0xEA9E|  
   
- `_ismbcl0`, `_ismbcl1` und `_ismbcl2` überprüfen, ob der angegebene Wert `c` den in der vorigen Tabelle beschriebenen Testbedingungen entspricht. Es wird jedoch nicht überprüft, ob `c` ein gültiges Multibytezeichen ist. Wenn das untere Byte in den Bereichen 0x00–0x3F, 0x7F oder 0xFD–0xFF liegt, geben diese Funktionen einen Wert ungleich 0 (null) zurück. Dies gibt an, dass das Zeichen die Testbedingung erfüllt. Verwenden Sie [_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md), um zu prüfen, ob das Multibytezeichen definiert ist.  
+`_ismbcl0`, `_ismbcl1` und `_ismbcl2` überprüfen, ob der angegebene Wert `c` den in der vorigen Tabelle beschriebenen Testbedingungen entspricht. Es wird jedoch nicht überprüft, ob `c` ein gültiges Multibytezeichen ist. Wenn das untere Byte in den Bereichen 0x00–0x3F, 0x7F oder 0xFD–0xFF liegt, geben diese Funktionen einen Wert ungleich 0 (null) zurück. Dies gibt an, dass das Zeichen die Testbedingung erfüllt. Verwenden Sie [_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md), um zu prüfen, ob das Multibytezeichen definiert ist.  
   
- **Ende Codepage 932-spezifisch**  
+**Ende Codepage 932-spezifisch**  
   
 ## <a name="see-also"></a>Siehe auch  
- [Zeichenklassifizierung](../c-runtime-library/character-classification.md)   
- [is- und isw-Routinen](../c-runtime-library/is-isw-routines.md)   
- [_ismbb-Routinen](../c-runtime-library/ismbb-routines.md)
+[Zeichenklassifizierung](../c-runtime-library/character-classification.md)   
+[is- und isw-Routinen](../c-runtime-library/is-isw-routines.md)   
+[_ismbb-Routinen](../c-runtime-library/ismbb-routines.md)
