@@ -1,7 +1,7 @@
 ---
 title: directory_iterator-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -35,24 +35,24 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36cbf9e8d4ebdf62cbbfdc5a37ca1c49d7106a42
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 09970c0d3cf8771317c93670c0ec7f029e1ace2a
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105203"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691587"
 ---
 # <a name="directoryiterator-class"></a>directory_iterator-Klasse.
 
-Beschreibt einen Eingabeiterator, der alle Dateinamen in einem Verzeichnis durchläuft. Für einen Iterator „X“ wird der Ausdruck „*X“ zu einem „directory_entry“-Objekt ausgewertet, das den Dateinamen und alles umschließt, was zu dessen Status bekannt ist.
+Beschreibt einen Eingabeiterator, der alle Dateinamen in einem Verzeichnis durchläuft. Für einen Iterator `X`, den Ausdruck `*X` ergibt ein Objekt der Klasse `directory_entry` , umschließt den Dateinamen und alles, was zu dessen Status bekannt.
 
-Die Klasse speichert ein Objekt vom Typ "Path" namens `mydir` hier für den Zweck der Darstellung, steht für den Namen des Verzeichnisses werden sollen, und ein Objekt des Typs "directory_entry" wird aufgerufen, `myentry` hier steht für den aktuellen Dateinamen in der verzeichnissequenz. Ein standardmäßig erstelltes Objekt des Typs "directory_entry" verfügt über eine leere `mydir` Pfadnamen und den Sequenzende Iterator darstellt.
+Die Klasse speichert ein Objekt des Typs `path`namens `mydir` hier zum Zweck der Darstellung, die den Namen der zu sequenzierenden Verzeichnisses darstellt, und ein Objekt des Typs `directory_entry` namens `myentry` hier steht die aktuelle Dateiname in der verzeichnissequenz. Ein standardmäßig erstelltes Objekt des Typs `directory_entry` verfügt über eine leere `mydir` Pfadnamen und den Sequenzende Iterator darstellt.
 
-Für das Verzeichnis „abc“ mit den Einträgen „def“ und „ghi“ würde der Code:
+Angenommen, das Verzeichnis `abc` Einträge `def` und `ghi`, den Code:
 
 `for (directory_iterator next(path("abc")), end; next != end; ++next)     visit(next->path());`
 
-Ruft `visit` mit den Argumenten Path("abc/def")"und Path("abc/ghi")".
+Ruft `visit` mit den Argumenten `path("abc/def")` und `path("abc/ghi")`.
 
 Weitere Informationen und Codebeispiele finden Sie unter [Dateisystemnavigation (C++)](../standard-library/file-system-navigation.md).
 
@@ -72,7 +72,7 @@ class directory_iterator;
 
 |Member-Funktion|Beschreibung|
 |-|-|
-|[Inkrement](#increment)|Die Funktion versucht, zum nächsten Dateinamen im Verzeichnis zu gelangen.|
+|[Inkrement](#increment)|Versucht, gelangen zum nächsten Dateinamen im Verzeichnis.|
 
 ### <a name="operators"></a>Operatoren
 

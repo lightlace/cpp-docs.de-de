@@ -1,7 +1,7 @@
 ---
 title: path-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4559bec84d7e6051155ad73f68a1ef8ae13ca6cc
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e47310a93a3901f072330a57619c2655aefb7ff5
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104159"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691509"
 ---
 # <a name="path-class"></a>path-Klasse
 
-Die **path**-Klasse speichert ein Objekt vom Typ string\_type namens „myname“. Dies erfolgt hier zum Zweck der Darstellung, die zur Verwendung als Pfadname geeignet ist. string\_type ist ein Synonym für basic\_string\<value_type>, wobei value\_type unter Windows ein Synonym für char oder unter Posix ein Synonym für wchar_t ist.
+Die **Pfad** Klasse speichert ein Objekt des Typs `string_type`namens `myname` hier zum Zweck der Darstellung, die für die Verwendung als Pfadname geeignet ist. `string_type` ist ein Synonym für `basic_string<value_type>`, wobei `value_type` ist ein Synonym für **Char** unter Windows oder **"wchar_t"** unter Posix.
 
 Weitere Informationen und Codebeispiele finden Sie unter [Datei Dateisystemnavigation (C++)](../standard-library/file-system-navigation.md).
 
@@ -443,7 +443,7 @@ Für `pval` ein Objekt des Typs `path`:
 
 ## <a name="make_preferred"></a> Path:: make_preferred
 
-Konvertiert jedes Trennzeichen in ein "preferred_separator" ein, nach Bedarf.
+Konvertiert jedes Trennzeichen, um eine `preferred_separator` je nach Bedarf.
 
 ```cpp
 path& make_preferred();
@@ -529,7 +529,7 @@ Die Memberfunktionen verhalten sich wie die folgenden entsprechenden Ausdrücke:
 
 1. `concat(source);`
 
-1. `concat(path(basic_string\<Elem>(1, elem)));`
+1. `concat(path(basic_string<Elem>(1, elem)));`
 
 ## <a name="op_divide"></a> Path:: Operator / =
 
@@ -576,7 +576,7 @@ path parent_path() const;
 
 ### <a name="remarks"></a>Hinweise
 
-Gibt die übergeordnete Pfadkomponente von `myname`, insbesondere das Präfix des `myname` nach dem Entfernen `filename().native()` und aller unmittelbar vorangehenden Verzeichnistrennzeichen. (Gleich aus, wenn `begin() != end()`, es ist die Kombination aller Elemente im Bereich [begin(),--End())"übergegangenen:: Operator / = Operator kombiniert.) Die Komponente kann leer sein.
+Gibt die übergeordnete Pfadkomponente von `myname`, insbesondere das Präfix des `myname` nach dem Entfernen `filename().native()` und aller unmittelbar vorangehenden Verzeichnistrennzeichen. (Gleich aus, wenn `begin() != end()`, es ist die Kombination aller Elemente im Bereich von `[begin(), --end())` übergegangenen `operator/=`.) Die Komponente kann leer sein.
 
 ## <a name="path"></a> Path:: Path
 
@@ -687,7 +687,7 @@ Die neue Erweiterung.
 
 ### <a name="remarks"></a>Hinweise
 
-Entfernt zuerst das Suffix `extension().native()` aus `myname`. Dann, wenn `!newext.empty() && newext[0] != dot` (wobei `dot` ist `*path(".").c_str()`), klicken Sie dann `dot` wird angefügt `myname`. Klicken Sie dann `newext` wird angefügt `myname`.
+Entfernt zuerst das Suffix `extension().native()` aus `myname`. Dann, wenn `!newext.empty() && newext[0] != dot` (wobei `dot` ist `*path(".").c_str()`), klicken Sie dann `dot` wird angefügt `myname`. Klicken Sie dann *"newext"* wird angefügt `myname`.
 
 ## <a name="replace_filename"></a> Path:: replace_filename
 
@@ -747,7 +747,7 @@ path root_path() const;
 
 ### <a name="remarks"></a>Hinweise
 
-Gibt die stammpfadkomponente von `myname`, insbesondere root_name() / Root_directory. Die Komponente kann leer sein.
+Gibt die stammpfadkomponente von `myname`, insbesondere `root_name()`  /  `root_directory`. Die Komponente kann leer sein.
 
 ## <a name="stem"></a> Path:: stem
 
@@ -773,7 +773,7 @@ string string() const;
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste (Vorlagen-) Memberfunktion konvertiert die in „mypath“ gespeicherte Sequenz genauso wie:
+Die erste (Vorlagen-) Memberfunktion konvertiert die Sequenz, die in gespeicherten `mypath` die gleiche Weise wie:
 
 1. `string()` für `string<char, Traits, Alloc>()`
 
@@ -783,7 +783,7 @@ Die erste (Vorlagen-) Memberfunktion konvertiert die in „mypath“ gespeichert
 
 1. `u32string()` für `string<char32_t, Traits, Alloc>()`
 
-Die zweite Memberfunktion konvertiert die Sequenz, die in gespeicherten `mypath` in die Codierung, die vom Hostsystem für eine Char-Sequenz und gibt es in einem Objekt vom Typzeichenfolge gespeicherten bevorzugt wird.
+Die zweite Memberfunktion konvertiert die Sequenz, die in gespeicherten `mypath` in die Codierung, die vom Hostsystem für bevorzugt eine **Char** Sequenz und gibt es in ein Objekt des Typs gespeichert `string`.
 
 ## <a name="string_type"></a> Path::string_type
 
@@ -827,7 +827,7 @@ string u8string() const;
 
 ## <a name="value_type"></a> Path::value_type
 
-Der Typ beschreibt die Pfadelemente, die vom Hostbetriebssystem bevorzugt werden.
+Der Typ beschreibt die `path` Elemente, die vom Hostbetriebssystem bevorzugt wird.
 
 ```cpp
 #if _WIN32_C_LIB
@@ -839,7 +839,7 @@ typedef char value_type;
 
 ## <a name="wstring"></a> Path::wstring
 
-Konvertiert die Sequenz, die in gespeicherten `mypath` in die Codierung, die vom Hostsystem für bevorzugt eine `wchar_t` Sequenz und gibt es in ein Objekt des Typs gespeichert `wstring`.
+Konvertiert die Sequenz, die in gespeicherten `mypath` in die Codierung, die vom Hostsystem für bevorzugt eine **"wchar_t"** Sequenz und gibt es in ein Objekt des Typs gespeichert `wstring`.
 
 ```cpp
 wstring wstring() const;
