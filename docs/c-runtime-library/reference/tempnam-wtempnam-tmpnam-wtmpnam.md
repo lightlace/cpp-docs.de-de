@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdd853affc343a4f07c64d025cd73122fdb8d458
-ms.sourcegitcommit: 32fd693d092ea0b43c3916703364f494a5b502cf
+ms.openlocfilehash: ce1b0a495c2556b39a18937635d9109eaaeb2433
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44389483"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691418"
 ---
 # <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
 
@@ -100,7 +100,7 @@ Jede dieser Funktionen gibt einen Zeiger auf den erzeugten Namen zurück oder **
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen gibt den Namen einer Datei zurück, die derzeit nicht vorhanden ist. **Tmpnam** gibt einen eindeutigen Namen in das angegebene temporäre Verzeichnis mit Windows zurückgegebenes [GetTempPathW](/windows/desktop/api/fileapi/nf-fileapi-gettemppathw). **\_Tempnam** generiert einen eindeutigen Namen in einem Verzeichnis als dem angegebenen. Wenn einem Dateinamen ohne Pfadinformationen ein umgekehrter Schrägstrich vorangestellt ist, wie z.B. \fname21, weist dies darauf hin, dass der Name für das aktuelle Arbeitsverzeichnis gültig ist. 
+Jede dieser Funktionen gibt den Namen einer Datei zurück, die derzeit nicht vorhanden ist. **Tmpnam** gibt einen eindeutigen Namen in das angegebene temporäre Verzeichnis mit Windows zurückgegebenes [GetTempPathW](/windows/desktop/api/fileapi/nf-fileapi-gettemppathw). **\_Tempnam** generiert einen eindeutigen Namen in einem Verzeichnis als dem angegebenen. Wenn einem Dateinamen ohne Pfadinformationen ein umgekehrter Schrägstrich vorangestellt ist, wie z.B. \fname21, weist dies darauf hin, dass der Name für das aktuelle Arbeitsverzeichnis gültig ist.
 
 Für **Tmpnam**, können Sie in diesen generierten Dateinamen speichern *str*. Wenn *str* ist **NULL**, klicken Sie dann **Tmpnam** bewirkt, dass das Ergebnis in einem internen statischen Puffer. Alle nachfolgenden Aufrufe zerstören deshalb diesen Wert. Der Name, der vom **Tmpnam** besteht aus einem Programm generierten Dateinamen und nach dem ersten Aufruf von **Tmpnam**, eine Dateierweiterung aus aufeinanderfolgenden Zahlen mit Basis 32 (.1-.vvu, wenn **TMP_MAX**  in STDIO. H beträgt 32.767.).
 
@@ -141,44 +141,69 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 // crt_tempnam.c
 // compile with: /W3
 // This program uses tmpnam to create a unique filename in the
-// current working directory, then uses _tempnam to create
-// a unique filename with a prefix of stq.
+// temporary directory, and _tempname to create a unique filename
+// in C:\\tmp.
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int main( void )
+int main(void)
 {
-   char* name1 = NULL;
-   char* name2 = NULL;
+   char * name1 = NULL;
+   char * name2 = NULL;
+   char * name3 = NULL;
 
    // Create a temporary filename for the current working directory:
-   if( ( name1 = tmpnam( NULL ) ) != NULL ) // C4996
+   if ((name1 = tmpnam(NULL)) != NULL) { // C4996
    // Note: tmpnam is deprecated; consider using tmpnam_s instead
-      printf( "%s is safe to use as a temporary file.\n", name1 );
-   else
-      printf( "Cannot create a unique filename\n" );
+      printf("%s is safe to use as a temporary file.\n", name1);
+   } else {
+      printf("Cannot create a unique filename\n");
+   }
 
    // Create a temporary filename in temporary directory with the
    // prefix "stq". The actual destination directory may vary
    // depending on the state of the TMP environment variable and
    // the global variable P_tmpdir.
 
-   if( ( name2 = _tempnam( "c:\\tmp", "stq" ) ) != NULL )
-      printf( "%s is safe to use as a temporary file.\n", name2 );
-   else
-      printf( "Cannot create a unique filename\n" );
+   if ((name2 = _tempnam("c:\\tmp", "stq")) != NULL) {
+      printf("%s is safe to use as a temporary file.\n", name2);
+   } else {
+      printf("Cannot create a unique filename\n");
+   }
 
-   // When name2 is no longer needed :
-   if(name2)
-     free(name2);
+   // When name2 is no longer needed:
+   if (name2) {
+      free(name2);
+   }
 
+   // Unset TMP environment variable, then create a temporary filename in C:\tmp.
+   if (_putenv("TMP=") != 0) {
+      printf("Could not remove TMP environment variable.\n");
+   }
+
+   // With TMP unset, we will use C:\tmp as the temporary directory.
+   // Create a temporary filename in C:\tmp with prefix "stq".
+   if ((name3 = _tempnam("c:\\tmp", "stq")) != NULL) {
+      printf("%s is safe to use as a temporary file.\n", name3);
+   }
+   else {
+      printf("Cannot create a unique filename\n");
+   }
+
+   // When name3 is no longer needed:
+   if (name3) {
+      free(name3);
+   }
+
+   return 0;
 }
 ```
 
 ```Output
-\s1gk. is safe to use as a temporary file.
-C:\DOCUME~1\user\LOCALS~1\Temp\2\stq2 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\sriw.0 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\stq2 is safe to use as a temporary file.
+c:\tmp\stq3 is safe to use as a temporary file.
 ```
 
 ## <a name="see-also"></a>Siehe auch
