@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7d305b2bc74455abd6fdbcfb29ed7ef4103bf19
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ffb239db12111f80e894c68cff568338bb3ed038
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391899"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207269"
 ---
 # <a name="structure-declarations"></a>Strukturdeklarationen
 Eine "Strukturdeklaration" benennt einen Typ und gibt eine Sequenz von Variablenwerten an (so genannte "Member" oder "Felder" der Struktur), die unterschiedliche Typen aufweisen können. Ein optionaler Bezeichner, "Tag" genannt, gibt den Namen des Strukturtyps an und kann in nachfolgenden Verweisen für den Strukturtyp verwendet werden. Eine Variable des Strukturtyps enthält die gesamte Sequenz, die durch diesen Typ definiert ist. Strukturen in C ähneln den Typen, die als "Datensätze" in anderen Sprachen bekannt sind.  
@@ -163,7 +163,7 @@ struct somestruct
   
  Der Compiler lässt ein Array ohne Größenangabe oder ein Array der Größe 0 (null) als letzten Member einer Struktur zu. Dies kann hilfreich sein, wenn sich die Größe eines konstanten Arrays in verschiedenen Situationen unterscheidet. Die Deklaration einer solchen Struktur sieht wie folgt aus:  
   
- `struct` *identifier***{** *set-of-declarations* *type array-name***[ ];};**  
+**struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em>**\[]; };**  
   
  Arrays ohne Größenangabe können nur als letzter Member einer Struktur angegeben werden. Die Strukturen, die Arraydeklarationen ohne Größenangabe enthalten, können in andere Strukturen geschachtelt werden, solange keine weiteren Member in anderen einschließenden Strukturen deklariert werden. Arrays von solchen Strukturen sind nicht zulässig. Der `sizeof`-Operator nimmt bei Anwendung auf eine Variable dieses Typs oder auf den Typ selbst 0 für die Größe des Arrays an.  
   

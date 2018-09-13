@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19a49bf18721f605abe0c6e496d3532012c9c92c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 6e23358e17558c436d82a3226f84c35a59bf63a1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340397"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43694030"
 ---
 # <a name="redistributing-the-mfc-library"></a>Verteilen der MFC-Bibliothek
 Wenn Sie Ihre Anwendung dynamisch mit der MFC-Bibliothek verknüpfen, müssen Sie die entsprechende MFC-DLL verteilen. Wenn Ihre MFC-App beispielsweise mithilfe der Version von MFC erstellt wurde, die in Visual Studio 2015 enthalten ist, müssen Sie je nachdem, ob Ihre App für schmale Zeichen oder Unicode-Unterstützung kompiliert wird, „mfc140.dll“ oder „mfc140u.dll“ verteilen.  
@@ -36,7 +36,7 @@ Wenn Sie Ihre Anwendung dynamisch mit der MFC-Bibliothek verknüpfen, müssen Si
   
  Wenn die Anwendung die MFC-Klassen verwendet, die das WebBrowser-Steuerelement implementieren (z.B. [CHtmlView Class](../mfc/reference/chtmlview-class.md) oder [CHtmlEditView Class](../mfc/reference/chtmleditview-class.md)), sollte auch die aktuellste Version von Microsoft Internet Explorer installiert werden, damit auf dem Zielcomputer die aktuellen allgemeinen Steuerungsdateien vorhanden sind. (Dazu wird mindestens Internet Explorer 4.0 benötigt.) Informationen zur Installation von Internet Explorer-Komponenten finden Sie im Artikel 185375 zur Erstellung einer einzelnen EXE-Installation von Internet Explorer auf der Microsoft Support-Website.  
   
- Wenn in der Anwendung die MFC-Datenbankklassen (z.B. [CRecordset Class](../mfc/reference/crecordset-class.md) und [CRecordView Class](../mfc/reference/crecordview-class.md)) verwendet werden, müssen Sie ODBC und alle in der Anwendung verwendeten ODBC-Treiber verteilen. Weitere Informationen finden Sie unter [Redistributing Database Support Files (Verteilen von Datenbankunterstützungsdateien)](../ide/redistributing-database-support-files.md).  
+ Wenn in der Anwendung die MFC-Datenbankklassen (z.B. [CRecordset Class](../mfc/reference/crecordset-class.md) und [CRecordView Class](../mfc/reference/crecordview-class.md)) verwendet werden, müssen Sie ODBC und alle in der Anwendung verwendeten ODBC-Treiber verteilen.  
   
  Wenn die MFC-Anwendung Windows Forms-Steuerelemente verwendet, müssen Sie mfcmifc80.dll mit der Anwendung verteilen. Diese DLL ist eine mit einem starken Namen signierte .NET-Assembly, die mit einer Anwendung in deren lokalem Ordner oder durch Bereitstellung im globalen Assemblycache (GAC) mit [Gacutil.exe (Tool für globale Assemblycaches)](/dotnet/framework/tools/gacutil-exe-gac-tool) verteilt werden kann.  
   
@@ -49,7 +49,7 @@ Wenn Sie Ihre Anwendung dynamisch mit der MFC-Bibliothek verknüpfen, müssen Si
   
  Die weiterverteilbaren MSM-Dateien enthalten die DLLs, die für die Lokalisierung verwendet werden. Es gibt eine DLL für jede unterstützte Sprache. Beim Installationsvorgang werden diese DLLs im Ordner "%WINDIR%\system32\" auf dem Zielcomputer installiert.  
   
- Weitere Informationen zur Lokalisierung von MFC-Anwendungen finden Sie unter [TN057: Localization of MFC Components (TN057: Lokalisierung von MFC-Komponenten)](../mfc/tn057-localization-of-mfc-components.md) und im Artikel [How to Using MFC LOC DLLs (Verwenden von MFC-DLLs für die Lokalisierung)](http://go.microsoft.com/fwlink/p/?linkid=198025) auf der Microsoft Support-Website.  
+ Weitere Informationen zum Lokalisieren von MFC-Anwendungen finden Sie unter [TN057: Lokalisierung von MFC-Komponenten](../mfc/tn057-localization-of-mfc-components.md).
   
  Sie können MFC-Lokalisierungs-DLLs verteilen, indem Sie die MFC-DLL im lokalen Anwendungsordner bereitstellen. Weitere Informationen zum Verteilen von Visual C++-Bibliotheken finden Sie unter [Redistributing Visual C++ Files (Verteilen von Visual C++-Dateien)](../ide/redistributing-visual-cpp-files.md).  
   

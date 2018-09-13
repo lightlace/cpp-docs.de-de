@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccdec81251589ba36209f878f1fa8b727d7d2b98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8cd45a20557eb3a7b2af3b1c2ecba3cc858af503
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409276"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205259"
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>SBCS- und MBCS-Datentypen
 
@@ -34,7 +34,7 @@ Jede Microsoft MBCS-Laufzeitbibliotheksroutine, die nur ein Multibytezeichen ode
 
 Aus diesem Grund empfiehlt sich, ein Byte eines Multibytezeichens als 8-Bit-`unsigned char` darzustellen. Zum Vermeiden eines negativen Ergebnisses können Sie alternativ ein Einzelbytezeichen vom Typ **char** in `unsigned char` konvertieren, bevor Sie es in den Datentyp **int** oder **long** konvertieren.
 
-Da für einige SBCS-Funktionen zur Zeichenfolgenbehandlung bei **char\***-Parametern (mit Vorzeichen) erforderlich sind, wird bei der Definition von **_MBCS** eine Compilerwarnung ausgegeben, die auf einen Typenkonflikt hinweist. Es gibt drei Möglichkeiten, diese Warnung zu vermeiden, die in der Reihenfolge ihrer Effizienz aufgeführt werden:
+Da für einige SBCS-Funktionen zur Zeichenfolgenbehandlung **char**<strong>\*</strong>-Parameter (mit Vorzeichen) erforderlich sind, wird bei der Definition von **_MBCS** eine Compilerwarnung ausgegeben, die auf einen Typenkonflikt hinweist. Es gibt drei Möglichkeiten, diese Warnung zu vermeiden, die in der Reihenfolge ihrer Effizienz aufgeführt werden:
 
 1. Verwenden Sie die typsicheren Inlinefunktionen in TCHAR.H. Dies ist das Standardverhalten.
 

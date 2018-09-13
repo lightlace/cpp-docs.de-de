@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46062043959c3ea525273e8bcf1a4112a0f42a67
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb5ba3c26355917d993f1d82b945c77bde918b0f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391960"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206132"
 ---
 # <a name="is-isw-routines"></a>is- und isw-Routinen
 |||  
@@ -80,7 +80,7 @@ ms.locfileid: "32391960"
  `__iscsymf`  
  Buchstabe oder Unterstrich.  
   
- **isdigit**  
+ `isdigit`  
  Eine Dezimalstelle (0-9)  
   
  `isgraph`  
@@ -121,17 +121,16 @@ ms.locfileid: "32391960"
  `iswcntrl`  
  Steuerbreitzeichen.  
   
- **__iswcsym**  
- Ein beliebiges Breitzeichen, für das **isalnum** „TRUE“ oder das „_“-Zeichen ist.  
+ `__iswcsym`  
+ Beliebiges Breitzeichen, für das `isalnum` "true" ist oder das '_'-Zeichen.  
   
- **__iswcsymf**  
+ `__iswcsymf`  
  Beliebiges Breitzeichen, für das `iswalpha` "true" ist oder das '_'-Zeichen.  
   
  `iswctype`  
  Das Zeichen hat die Eigenschaft, die vom `desc`-Argument angegeben wird. Für jeden gültigen Wert des `desc`-Arguments von `iswctype` gibt es eine entsprechende Breitzeichenklassifizierungs-Routine, wie in der folgenden Tabelle dargestellt:  
   
- **Äquivalent von iswctype(**   
- ***c, desc*) in anderen isw-Testroutinen**  
+ ### <a name="equivalence-of-iswctypec-desc-to-other-isw-testing-routines"></a>Äquivalent von iswctype(c, desc) zu anderen isw-Testroutinen
   
 |Der Wert des *desc*-Arguments|iswctype(*c, desc*)-Äquivalent|  
 |------------------------------|----------------------------------------|  

@@ -17,44 +17,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d9600c27f40a43105ae9a8fc2fd1579907891cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f7e5f8933aabe36362938a23c28ed1cd562a579
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391912"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205392"
 ---
 # <a name="pointer-declarations"></a>Zeigerdeklarationen
 Eine "Zeigerdeklaration" benennt eine Zeigervariable und gibt den Typ des Objekts an, auf das die Variable zeigt. Eine Variable, die als Zeiger deklariert ist, enthält eine Speicheradresse.  
   
-## <a name="syntax"></a>Syntax  
- *declarator*:  
- &nbsp;&nbsp;*pointer*<sub>-Opt</sub> *direct-declarator*  
-  
- *direct-declarator*:  
- &nbsp;&nbsp;*identifier*  
-  
- &nbsp;&nbsp;**(** *declarator* **)**  
-  
- &nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>opt</sub> **]**  
-  
- &nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**  
-  
- &nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**  
-  
- *pointer*:  
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>-Opt</sub>  
-  
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>-Opt</sub> *pointer*  
-  
- *type-qualifier-list*:  
- &nbsp;&nbsp;*type-qualifier*  
-  
- &nbsp;&nbsp;*type-qualifier-list* *type-qualifier*  
+## <a name="syntax"></a>Syntax
+
+*declarator*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*  
+
+*direct-declarator*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*  
+&nbsp;&nbsp;&nbsp;&nbsp;**(** *declarator* **)**  
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>opt</sub> **]**  
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**  
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**  
+
+*pointer*:  
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub>  
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub> *pointer*  
+
+*type-qualifier-list*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier*  
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier-list* *type-qualifier*  
   
  *type-specifier* gibt den Typ des Objekts an, wobei es sich um jeden Basis-, Struktur- oder Union-Typ handeln kann. Zeigervariablen können auf Funktionen, Arrays und andere Zeiger zeigen. (Weitere Informationen zum Deklarieren und Interpretieren komplexerer Zeigertypen finden Sie unter [Interpretieren von komplexeren Deklaratoren](../c-language/interpreting-more-complex-declarators.md).)  
   
- Sie können die Spezifikation des vom Zeiger referenzierten Typs verzögern, indem Sie *void* für den **type-specifier** angeben. Ein solches Element wird als „Zeiger auf **void**“ bezeichnet und in der Form `void *` geschrieben. Mit einer Variable, die als Zeiger auf *void* deklariert wird, können Sie auf ein Objekt beliebigen Typs verweisen. Zum Ausführen der meisten Vorgänge für den Zeiger oder das Objekt, auf das dieser zeigt, müssen Sie jedoch den Typ, auf den der Zeiger zeigt, explizit pro Vorgang angeben. (Variablen des Typs **char\*** und des Typs **void\*** sind ohne eine Typumwandlung zuweisungskompatibel.) Diese Konvertierung kann durch eine Typumwandlung geschehen (weitere Informationen finden Sie unter [Typumwandlungskonvertierungen](../c-language/type-cast-conversions.md)).  
+ Sie können die Spezifikation des vom Zeiger referenzierten Typs verzögern, indem Sie *void* für den **type-specifier** angeben. Ein solches Element wird als „Zeiger auf **void**“ bezeichnet und in der Form `void *` geschrieben. Mit einer Variable, die als Zeiger auf *void* deklariert wird, können Sie auf ein Objekt beliebigen Typs verweisen. Zum Ausführen der meisten Vorgänge für den Zeiger oder das Objekt, auf das dieser zeigt, müssen Sie jedoch den Typ, auf den der Zeiger zeigt, explizit pro Vorgang angeben. (Variablen des Typs **char** <strong>\*</strong> und des Typs **void** <strong>\*</strong> sind ohne eine Typumwandlung zuweisungskompatibel.) Diese Konvertierung kann durch eine Typumwandlung geschehen (weitere Informationen finden Sie unter [Typumwandlungskonvertierungen](../c-language/type-cast-conversions.md)).  
   
  Der *type-qualifier* kann entweder **const** oder **volatile** oder beides sein. Diese Typqualifizierer geben an, dass der Zeiger nicht vom Programm selbst geändert werden kann (**const**) bzw. dass der Zeiger von einem Prozess, der nicht vom Programm gesteuert wird, zulässigerweise geändert werden kann (**volatile**). (Weitere Informationen zu **const** und **volatile** finden Sie unter [Typqualifizierer](../c-language/type-qualifiers.md).)  
   

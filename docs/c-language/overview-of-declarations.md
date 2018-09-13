@@ -15,43 +15,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd8670815b908f66a6e2ed400bc87ca07c369ee4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ac843ef83d2de4f9cf84a44c67859becaead6ec6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392626"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218503"
 ---
 # <a name="overview-of-declarations"></a>Übersicht über Deklarationen
 Eine "Deklaration" gibt die Interpretation und die Attribute eines Satzes von Bezeichnern an. Eine Deklaration, die auch bewirkt, dass Speicher für Objekte oder Funktionen reserviert wird, die vom Bezeichner benannt werden, wird "Definition" genannt. C-Deklarationen für Variablen, Funktionen und Typen haben diese Syntax:  
   
-## <a name="syntax"></a>Syntax  
- `declaration`:  
- *declaration-specifiers* *attribute-seq*opt*init-declarator-list*opt **;**  
-  
- /\* *attribute-seq*opt ist Microsoft-spezifisch */  
-  
- *declaration-specifiers*:  
- *storage-class-specifier declaration-specifiers*opt  
-  
- *type-specifier declaration-specifiers*opt  
-  
- *type-qualifier declaration-specifiers*opt  
-  
- *init-declarator-list*:  
- *init-declarator*  
-  
- *init-declarator-list* , *init-declarator*  
-  
- *init-declarator*:  
- *declarator*  
-  
- *declarator*  **=**  *initializer*  
+## <a name="syntax"></a>Syntax
+
+*declaration*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub>**;**
+
+/\* *attribute-seq*<sub>opt</sub> ist Microsoft-spezifisch */
+
+*declaration-specifiers*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub>  
+&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declaration-specifiers*<sub>opt</sub>  
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>  
+
+*init-declarator-list*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*  
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list* **,** *init-declarator*  
+
+*init-declarator*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*declarator*  
+&nbsp;&nbsp;&nbsp;&nbsp;*declarator* **=** *initializer*  
   
 > [!NOTE]
->  Diese Syntax für `declaration` wird in den folgenden Abschnitten nicht wiederholt. Die Syntax in den folgenden Abschnitten beginnt normalerweise mit dem `declarator`-Nichtterminal.  
+> Diese Syntax für *declaration* wird in den folgenden Abschnitten nicht wiederholt. Die Syntax in den folgenden Abschnitten beginnt normalerweise mit dem *declarator*-Nichtterminal.  
   
- Die Deklarationen in der *init-declarator-list* enthalten die Bezeichner, die benannt werden. *init* ist eine Abkürzung für Initialisierer. Die *init-declarator-list* ist eine durch Komma getrennte Sequenz von Deklaratoren, die jeweils zusätzliche Typinformationen oder einen Initialisierer oder beides enthalten können. Der `declarator` enthält die Bezeichner, sofern vorhanden, die deklariert werden. Das Nichtterminal *declaration-specifiers* besteht aus einer Sequenz aus Typ- und Speicherklassenspezifizierern, mit denen die Bindung, die Speicherdauer und mindestens der Teil des Typs der Entitäten angegeben werden, die von den Deklaratoren festgelegt werden. Daher bestehen Deklarationen aus einer Kombination aus Speicherklassenspezifizierern, Typspezifizierern, Typqualifizierern, Deklaratoren und Initialisierern.  
+ Die Deklarationen in der *init-declarator-list* enthalten die Bezeichner, die benannt werden. *init* ist eine Abkürzung für Initialisierer. Die *init-declarator-list* ist eine durch Komma getrennte Sequenz von Deklaratoren, die jeweils zusätzliche Typinformationen oder einen Initialisierer oder beides enthalten können. *declarator* enthält die Bezeichner, sofern vorhanden, die deklariert werden. Das Nichtterminal *declaration-specifiers* besteht aus einer Sequenz aus Typ- und Speicherklassenspezifizierern, mit denen die Bindung, die Speicherdauer und mindestens der Teil des Typs der Entitäten angegeben werden, die von den Deklaratoren festgelegt werden. Daher bestehen Deklarationen aus einer Kombination aus Speicherklassenspezifizierern, Typspezifizierern, Typqualifizierern, Deklaratoren und Initialisierern.  
   
  Deklarationen können mindestens eines der optionalen Attribute enthalten, die in *attribute-seq* aufgelistet sind. *seq* ist eine Abkürzung für Sequenz. Diese Microsoft-spezifischen Attribute führen eine Vielzahl von Funktionen aus, die in diesem Buch im Detail besprochen werden.  
   
@@ -63,7 +60,7 @@ int const *fp;
   
  deklariert eine Variable mit dem Namen `fp` als Zeiger auf einen nicht veränderbaren (**const**) `int`-Wert. Sie können mehr als eine Variable in einer Deklaration definieren, indem Sie mehrere Deklaratoren verwenden, die durch Kommas getrennt werden.  
   
- Eine Deklaration muss mindestens einen Deklarator aufweisen, oder ihr Typspezifizierer muss ein Struktur-Tag, ein Union-Tag oder Member einer Enumeration deklarieren. Deklaratoren stellen alle verbleibenden Informationen über einen Bezeichner bereit. Ein Deklarator ist ein Bezeichner, der mit eckigen Klammern (**[ ]**), Sternchen (**\***) oder runden Klammern ( **( )** ) geändert werden kann, um jeweils ein Array, einen Zeiger oder einen Funktionstyp zu deklarieren. Wenn Sie einfache Variablen (wie Zeichen, ganze Zahlen und Gleitkommawerte) oder Strukturen und Unions einfacher Variablen deklarieren, ist `declarator` nur ein Bezeichner. Weitere Informationen über Deklaratoren finden Sie im Artikel über [Deklaratoren und Variablendeklarationen](../c-language/declarators-and-variable-declarations.md).  
+ Eine Deklaration muss mindestens einen Deklarator aufweisen, oder ihr Typspezifizierer muss ein Struktur-Tag, ein Union-Tag oder Member einer Enumeration deklarieren. Deklaratoren stellen alle verbleibenden Informationen über einen Bezeichner bereit. Ein Deklarator ist ein Bezeichner, der mit eckigen Klammern (**[ ]**), Sternchen (<strong>\*</strong>) oder runden Klammern ( **( )** ) geändert werden kann, um jeweils ein Array, einen Zeiger oder einen Funktionstyp zu deklarieren. Wenn Sie einfache Variablen (wie Zeichen, ganze Zahlen und Gleitkommawerte) oder Strukturen und Unions einfacher Variablen deklarieren, ist `declarator` nur ein Bezeichner. Weitere Informationen über Deklaratoren finden Sie im Artikel über [Deklaratoren und Variablendeklarationen](../c-language/declarators-and-variable-declarations.md).  
   
  Alle Definitionen sind implizite Deklarationen, aber nicht alle Deklarationen sind Definitionen. So sind beispielsweise Variablendeklarationen, die mit dem `extern`-Speicherklassenspezifizierer beginnen, eher "verweisende" als "definierende" Deklarationen. Wenn auf eine externe Variable verwiesen wird, bevor sie definiert wurde, oder wenn sie in einer anderen Quelldatei als derjenigen definiert wird, in der sie verwendet wird, ist eine `extern`-Deklaration erforderlich. Der Speicher wird nicht durch "verweisende" Deklarationen zugeordnet. Außerdem können Variablen nicht in Deklarationen initialisiert werden.  
   

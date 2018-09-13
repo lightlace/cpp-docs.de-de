@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f48d9a013240dddc95fbd977cdf383c3ebff188b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d040f3ce29f78b614c60d815cac16362374bddb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391027"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205609"
 ---
 # <a name="type-cast-conversions"></a>Typumwandlungskonvertierungen
 Sie können Typumwandlungen verwenden, um Typen explizit zu konvertieren.  
@@ -47,14 +47,14 @@ Sie können Typumwandlungen verwenden, um Typen explizit zu konvertieren.
 |-----------------------|-----------------------|  
 |Ganzzahlige Typen|Ein beliebiger ganzzahliger Typ oder Gleitkommatyp oder Zeiger auf ein Objekt|  
 |Gleitkomma|Beliebiger arithmetischer Typ|  
-|Ein Zeiger auf ein Objekt oder (**void \***)|Ein beliebiger ganzzahliger Typ (**void \***), ein Zeiger auf ein Objekt oder ein Funktionszeiger|  
+|Ein Zeiger auf ein Objekt oder (**void** <strong>\*</strong>)|Ein beliebiger ganzzahliger Typ (**void** <strong>\*</strong>), ein Zeiger auf ein Objekt oder ein Funktionszeiger|  
 |Funktionszeiger|Ein beliebiger ganzzahliger Typ, ein Zeiger auf ein Objekt oder einen Funktionszeiger|  
 |Eine Struktur, Union oder ein Array|Keiner|  
 |void-Typ|Beliebiger Typ|  
   
  Jeder Bezeichner kann in den `void`-Typ umgewandelt werden. Wenn jedoch der Typ, der in einem Typumwandlungsausdruck angegeben ist, nicht `void` ist, kann der Bezeichner, der in diesen Typ umgewandelt wird, kein `void`-Ausdruck sein. Jeder Ausdruck kann in `void` umgewandelt werden, aber ein Ausdruck vom Typ `void` kann nicht in einen anderen Typ umgewandelt werden. Beispielsweise kann die Rückgabe einer Funktion mit dem Rückgabetyp `void` nicht in einen anderen Typ umgewandelt werden.  
   
- Beachten Sie, dass ein **void \***-Ausdruck einen Typzeiger auf `void`, nicht den Typ `void` aufweist. Wenn ein Objekt in einen `void`-Typ umgewandelt wird, kann der resultierende Ausdruck keinem Element zugewiesen werden. Ebenso ist ein Typumwandlungsobjekt kein zulässiger l-Wert, sodass keine Zuweisung zu einem Typumwandlungsobjekt durchgeführt werden kann.  
+ Beachten Sie, dass ein **void** <strong>\*</strong>-Ausdruck einen Typzeiger auf `void`, nicht den Typ `void` aufweist. Wenn ein Objekt in einen `void`-Typ umgewandelt wird, kann der resultierende Ausdruck keinem Element zugewiesen werden. Ebenso ist ein Typumwandlungsobjekt kein zulässiger l-Wert, sodass keine Zuweisung zu einem Typumwandlungsobjekt durchgeführt werden kann.  
   
  **Microsoft-spezifisch**  
   
@@ -62,7 +62,7 @@ Sie können Typumwandlungen verwenden, um Typen explizit zu konvertieren.
   
  **Ende Microsoft-spezifisch**  
   
- Sie können einen Ausdruck durch eine Umwandlung in den Typ `void` konvertieren, der resultierende Ausdruck kann jedoch nur verwendet werden, wenn kein Wert erforderlich ist. Ein Objektzeiger, der in **void \*** und zurück in den ursprünglichen Typ konvertiert wird, kehrt zum ursprünglichen Wert zurück.  
+ Sie können einen Ausdruck durch eine Umwandlung in den Typ `void` konvertieren, der resultierende Ausdruck kann jedoch nur verwendet werden, wenn kein Wert erforderlich ist. Ein Objektzeiger, der in **void** <strong>\*</strong> und zurück in den ursprünglichen Typ konvertiert wird, kehrt zum ursprünglichen Wert zurück.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Typkonvertierungen](../c-language/type-conversions-c.md)
