@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81cfe434397d45ef42b2f8ee3ebceae61098e36f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8ddcaa55e3b88e715428ea8fa44c897ab5f8b4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384294"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216097"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>Konvertierungen in und aus Zeigertypen
 Ein Zeiger auf einen Werttyp kann in einen Zeiger auf einen anderen Typ konvertiert werden. Allerdings ist das Ergebnis möglicherweise aufgrund der Ausrichtungsanforderungen und Größen unterschiedlicher Typen im Speicher nicht definiert. Ein Zeiger auf ein Objekt kann in einen Zeiger auf ein Objekt konvertiert werden, dessen Typ eine weniger oder gleich strenge Speicherausrichtung erfordert, und unverändert wieder zurück konvertiert werden kann.  
@@ -43,7 +43,7 @@ Ein Zeiger auf einen Werttyp kann in einen Zeiger auf einen anderen Typ konverti
   
 -   Wenn die Größe des ganzzahligen Typs von der Größe des Zeigertyps abweicht, wird der ganzzahlige Typ zuerst auf die Größe des Zeigers konvertiert. Dies wird mithilfe der Konvertierungspfade erreicht, die in den Tabellen [Konvertierungen von ganzzahligen Typen mit Vorzeichen](../c-language/conversions-from-signed-integral-types.md) und [Konvertierungen von ganzzahligen Typen ohne Vorzeichen](../c-language/conversions-from-unsigned-integral-types.md) angegeben sind. Es wird dann als Zeigerwert behandelt.  
   
- Ein ganzzahliger konstanter Ausdruck mit dem Wert 0 oder ein solcher Ausdruck, der in den Typ **void \*** umgewandelt wird, kann durch eine Typumwandlung, eine Zuweisung oder einen Vergleich mit einem beliebigen Zeiger konvertiert werden. Dies erzeugt einen NULL-Zeiger, der gleich einem anderen NULL-Zeiger desselben Typs ist, aber dieser NULL-Zeiger ist nicht gleich einem Zeiger auf eine Funktion oder ein Objekt. Ganze Zahlen, die nicht die Konstante 0 sind, können in den Zeigertyp konvertiert werden, aber das Ergebnis ist nicht übertragbar.  
+ Ein ganzzahliger konstanter Ausdruck mit dem Wert 0 (null) oder ein solcher Ausdruck, der in den Typ **void** <strong>\*</strong> umgewandelt wird, kann durch eine Typumwandlung, eine Zuweisung oder einen Vergleich mit einem beliebigen Zeiger konvertiert werden. Dies erzeugt einen NULL-Zeiger, der gleich einem anderen NULL-Zeiger desselben Typs ist, aber dieser NULL-Zeiger ist nicht gleich einem Zeiger auf eine Funktion oder ein Objekt. Ganze Zahlen, die nicht die Konstante 0 sind, können in den Zeigertyp konvertiert werden, aber das Ergebnis ist nicht übertragbar.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zuweisungskonvertierungen](../c-language/assignment-conversions.md)

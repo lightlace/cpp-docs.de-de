@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e37ac421627d4c4503d75eaf65188bbe234af015
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f965481ae1d3abea40577680b1af72004f793123
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388382"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197227"
 ---
 # <a name="c-type-specifiers"></a>C-Typspezifizierer
 
@@ -79,7 +79,7 @@ pi = pu;  /* Now generates warning */
 
 Ausdrücke vom Typ **void** werden im Hinblick auf Nebeneffekte ausgewertet. Sie können den (nicht vorhandenen) Wert eines Ausdrucks, der vom Typ **void** ist, in keiner Weise verwenden, noch können Sie einen **void**-Ausdruck (durch implizite oder explizite Konvertierung) in einen beliebigen Typ außer **void** konvertieren. Wenn Sie einen Ausdruck eines anderen Typs in einem Kontext verwenden, in dem ein **void**-Ausdruck erforderlich ist, wird dessen Wert verworfen.
 
-Zur Einhaltung der ANSI-Spezifikation darf **void\*\*** nicht als **int\*\*** verwendet werden. Nur **void\*** kann als Zeiger auf einen nicht angegebenen Typ verwendet werden.
+Zur Einhaltung der ANSI-Spezifikation darf <strong>void\*\*</strong> nicht als <strong>int\*\*</strong> verwendet werden. Nur **void**<strong>\*</strong> kann als Zeiger auf einen nicht angegebenen Typ verwendet werden.
 
 **Ende Microsoft-spezifisch**
 
