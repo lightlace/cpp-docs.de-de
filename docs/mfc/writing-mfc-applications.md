@@ -1,7 +1,7 @@
 ---
-title: Schreiben von MFC-Anwendungen | Microsoft Docs
+title: Schreiben von MFC-Anwendungen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/16/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -17,35 +17,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 267fee7f3309cf5cbc4daa48f65e647c4d85a47d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f3f542fc1ff45a80f4d198c58255d91388a30ce
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385988"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535170"
 ---
 # <a name="writing-mfc-applications"></a>Schreiben von MFC-Anwendungen
-Dieser Artikel beschreibt die ersten Schritte, die Sie ergreifen, um Ihre Anwendung zu entwickeln. Zunächst müssen Sie entscheiden, welche Art von Anwendung Sie schreiben. Einige der Optionen im erläutert wurden [Anwendungsentwurf](../mfc/application-design-choices.md). Die Anwendung läuft sein:  
+Dieser Artikel beschreibt die ersten Schritte, die Sie ergreifen, um Ihre Anwendung zu entwickeln. Zunächst müssen Sie entscheiden, welche Art von Anwendung Sie schreiben. Wurden einige der Wahlmöglichkeiten erläutert [Anwendungsentwurf](../mfc/application-design-choices.md). Sie werden Ihre Anwendung:  
   
--   Auf das Internet oder in einem Intranet ausgeführt wird  
+-   Auf das Internet oder Intranet ausgeführt wird  
   
--   Ausführen auf einem Client oder auf einem server  
+-   Auf einem Client oder auf einem Server ausgeführt wird  
   
--   In einem Browser oder als eigenständige Anwendung ausführen  
+-   In einem Browser oder als eigenständige Anwendung ausgeführt wird  
   
--   Mit der Technologie von COM oder aktiv  
+-   Mithilfe der COM- oder aktiv-Technologie  
   
 -   Herunterladen von Daten mit WinInet oder asynchronen Monikern  
   
- Ihre Entscheidungen bestimmen, welche Klassen für Ihre Anwendung geeignet sind. Ihre Antworten helfen Ihnen auch die Auswahl zu bestimmen, die Sie vornehmen, beim Ausführen des Assistenten zum Erstellen Ihrer Anwendungsstatus beginnen.  
+ Ihre Entscheidungen bestimmen, welche Klassen für Ihre Anwendung geeignet sind. Ihre Antworten helfen auch die Auswahl zu bestimmen, die Sie, beim Ausführen der Anwendung-Assistenten vornehmen, um zu beginnen, erstellen Ihre Anwendung.  
   
- Nachdem Sie Ihre erste entwurfsentscheidungen über Ihre Internet-Anwendung vorgenommen haben, können Sie der Anwendungs-Assistent, um zu beginnen. Verwenden Sie den Assistenten zum, um eine skelettanwendung zu erstellen und ändern Sie den Code aus, wie in den folgenden Artikeln beschrieben:  
+ Nachdem Sie Ihre erste entwurfsentscheidungen zu Ihrer Anwendung Internet vorgenommen haben, können Sie der Anwendungs-Assistent, um zu beginnen. Verwenden Sie der Anwendungs-Assistent, um eine Gerüstdatei Anwendung erstellen und ändern Sie den Code ein, wie in den folgenden Artikeln beschrieben:  
   
--   Ein ActiveX-Steuerelement finden Sie unter [ActiveX-Steuerelemente für das Internet](../mfc/activex-controls-on-the-internet.md).  
+-   Ein ActiveX-Steuerelement, finden Sie unter [ActiveX-Steuerelemente für das Internet](../mfc/activex-controls-on-the-internet.md).  
   
--   Eines aktiven Dokuments finden Sie unter [Active Documents für das Internet](../mfc/active-documents-on-the-internet.md).  
-  
- Die folgenden Artikel bieten auch Anleitungen, wie Sie Ihre Programmieraufgaben zu starten:  
+ Die folgenden Artikel enthalten auch Anweisungen zum Beginn der Programmierung:  
   
 -   [Überlegungen zum Anwendungsentwurf](../mfc/application-design-choices.md)  
   

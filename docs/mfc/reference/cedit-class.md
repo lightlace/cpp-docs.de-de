@@ -1,7 +1,7 @@
 ---
 title: CEdit-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27ea5ccb0d15bd57a526c78cd3c57a4e83369ed0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4d3c7f9e1d638c547b2b340a610a52af9318c714
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757789"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535404"
 ---
 # <a name="cedit-class"></a>CEdit Class
 Stellt die Funktionalität eines Windows-Bearbeitungssteuerelements bereit.  
@@ -520,7 +520,7 @@ BOOL GetHighlight(
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [EM_GETHILITE](/windows/desktop/Controls/em-gethilite) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [EM_GETHILITE](/windows/desktop/Controls/em-gethilite) -Nachricht, die im Windows SDK beschrieben wird. Beide `SetHighlight` und `GetHighlight` derzeit für nur UNICODE-builds aktiviert sind. 
   
 ##  <a name="getlimittext"></a>  CEdit::GetLimitText  
  Rufen Sie diese Memberfunktion rufen Sie den Text-Grenzwert für diesen `CEdit` Objekt.  
@@ -985,7 +985,7 @@ void SetHighlight(
 |[in] *IchEnd*|Nullbasierte Index des letzten Zeichens in den Textbereich hervorheben.|  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) -Nachricht, die im Windows SDK beschrieben wird.  Diese Methode sendet die [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) -Nachricht, die im Windows SDK beschrieben wird. Beide `SetHighlight` und `GetHighlight` für nur UNICODE-builds aktiviert sind. 
   
 ##  <a name="setlimittext"></a>  CEdit::SetLimitText  
  Rufen Sie diese Memberfunktion zum Festlegen der textlimit für diesen `CEdit` Objekt.  

@@ -1,7 +1,7 @@
 ---
-title: 'MFC-ActiveX-Steuerelemente: Verteilen von ActiveX-Steuerelemente | Microsoft Docs'
+title: 'MFC-ActiveX-Steuerelemente: Verteilen von ActiveX-Steuerelemente | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -35,50 +35,54 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d052b2d77df8b3209671b4330347ef642877e47a
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: d400bf09d2fd3484b573112d87735ce0a74d944e
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928881"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534897"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC-ActiveX-Steuerelemente: Weitergabe von ActiveX-Steuerelementen
-Dieser Artikel beschreibt mehrere Probleme beim Verteilen von ActiveX-Steuerelemente:  
+In diesem Artikel werden mehrere Probleme beim Verteilen von ActiveX-Steuerelementen behandelt:  
   
--   [ANSI- oder Unicode-Steuerelement](#_core_ansi_or_unicode_control_versions)  
+-   [ANSI oder Unicode-Versionen](#_core_ansi_or_unicode_control_versions)  
   
--   [Installieren von ActiveX-Steuerelemente und DDLs](#_core_installing_activex_controls_and_redistributable_dlls)  
+-   [Installieren von ActiveX-Steuerelemente und verteilbare DLLs](#_core_installing_activex_controls_and_redistributable_dlls)  
   
 -   [Registrieren von Steuerelementen](#_core_registering_controls)  
+
+
+>[!IMPORTANT]
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
   
-##  <a name="_core_ansi_or_unicode_control_versions"></a> ANSI- oder Unicode-Steuerelement  
- Sie müssen entscheiden, ob eine ANSI- oder Unicode-Version des Steuerelements oder beides zu liefern. Diese Entscheidung basiert auf Portabilität Faktoren ANSI- und Unicode-Zeichensätze eine inhärente Eigenschaft.  
+##  <a name="_core_ansi_or_unicode_control_versions"></a> ANSI oder Unicode-Versionen  
+ Sie müssen entscheiden, ob eine ANSI- oder Unicode-Version des Steuerelements, oder beide senden. Diese Entscheidung basiert auf Portabilität Faktoren, die sich von der ANSI- und Unicode-Zeichensätze.  
   
- ANSI-Steuerelemente, die auf alle Win32-Betriebssysteme zu arbeiten, können zur maximalen Portabilität zwischen verschiedenen Win32-Betriebssysteme. Unicode-Steuerelemente können nur unter Windows NT (Version 3.51 oder höher), jedoch nicht auf Windows 95 oder Windows 98. Wenn die Portabilität Ihr Hauptanliegen Ship ANSI-Steuerelemente ist. Wenn die Steuerelemente, die nur unter Windows NT ausgeführt werden, können Unicode-Steuerelemente ausgeliefert werden. Sie können auch auswählen, werden jeweils und die Anwendung, die für das Betriebssystem des Benutzers am besten geeignete Version zu installieren.  
+ ANSI-Steuerelemente, die für alle Win32-Betriebssysteme zu arbeiten, können zur maximalen Portabilität zwischen verschiedenen Win32-Betriebssysteme. Unicode-Steuerelemente funktionieren für nur Windows NT (Version 3.51 oder höher), jedoch nicht für Windows 95 oder Windows 98. Wenn Portabilität Ihre Hauptsorge Ship-ANSI-Steuerelemente ist. Wenn die Steuerelemente nur unter Windows NT ausgeführt werden, können Unicode-Steuerelemente geliefert werden. Sie können auch auswählen, werden jeweils und Ihre Anwendung, die die Version, die am besten für das Betriebssystem des Benutzers zu installieren.  
   
-##  <a name="_core_installing_activex_controls_and_redistributable_dlls"></a> Installieren von ActiveX-Steuerelemente und DDLs  
- Das Setup-Programm an die ActiveX-Steuerelemente erstellen ein Unterverzeichnis des Windows-Verzeichnisses, und installieren die Steuerelemente. OCX-Dateien zu.  
+##  <a name="_core_installing_activex_controls_and_redistributable_dlls"></a> Installieren von ActiveX-Steuerelemente und verteilbare DLLs  
+ Das Setupprogramm der ActiveX-Steuerelemente bieten sollte ein Unterverzeichnis des Verzeichnisses Windows und installieren die Steuerelemente. OCX-Dateien darin.  
   
 > [!NOTE]
->  Verwenden Sie das Fenster `GetWindowsDirectory` -API im Setup-Programm, um den Namen des Windows-Verzeichnisses zu erhalten. Möglicherweise möchten den Namen des Unterverzeichnisses nicht mit dem Namen Ihres Unternehmens oder Produkt abgeleitet werden.  
+>  Verwenden Sie die Windows `GetWindowsDirectory` API in Ihrem Setup-Programm, um den Namen des Windows-Verzeichnisses erhalten. Möglicherweise möchten den Namen Ihres Unternehmens oder das Produkt der Name des Unterverzeichnisses abgeleitet.  
   
- Das Setup-Programm muss die erforderlichen weitervertreibbaren DLL-Dateien in das Windows-Systemverzeichnis installieren. Wenn eine der DLLs bereits auf dem Computer des Benutzers vorhanden sind, sollte das Setupprogramm ihre Versionen auszuweiten, mit den Versionen vergleichen, das Sie installieren. Installieren Sie eine Datei nur dann, wenn dessen Versionsnummer höher als die Datei bereits installiert ist.  
+ Das Setup-Programm, muss die erforderlichen weitervertreibbaren DLL-Dateien im Systemverzeichnis von Windows installieren. Wenn eine der DLLs bereits auf dem Computer des Benutzers vorhanden sind, sollte das Setup-Programm ihre Versionen mit den Versionen vergleichen, die Sie installieren. Installieren Sie eine Datei nur dann, wenn die Versionsnummer höher als die Datei bereits installiert ist.  
   
- Da ActiveX-Steuerelemente nur in der OLE-containeranwendungen verwendet werden können, ist es nicht erforderlich, um den vollständigen Satz von OLE-DLLs mit Ihrer Steuerelemente zu verteilen. Sie können davon ausgehen, dass die enthaltende Anwendung (oder das Betriebssystem selbst) der standard OLE-DLLs installiert wurde.  
+ Da ActiveX-Steuerelemente nur in der OLE-containeranwendungen verwendet werden können, ist es nicht erforderlich, um den vollständigen Satz von OLE-DLLs mit der Steuerelemente zu verteilen. Sie können davon ausgehen, dass die enthaltende Anwendung (oder das Betriebssystem selbst) der standard OLE-DLLs installiert hat.  
   
 ##  <a name="_core_registering_controls"></a> Registrieren von Steuerelementen  
- Bevor ein Steuerelement verwendet werden kann, müssen dafür in der Datenbank der Windows-Registrierung entsprechende Einträge erstellt werden. Einige ActiveX-Steuerelementcontainer Geben Sie ein Menüelement für Benutzer beim Registrieren der neuen Steuerelemente, aber diese Funktion kann nicht in allen Containern verfügbar sein. Aus diesem Grund sollten Sie das Setupprogramm die Steuerelemente zu registrieren, wenn diese installiert werden.  
+ Bevor ein Steuerelement verwendet werden kann, müssen dafür in der Datenbank der Windows-Registrierung entsprechende Einträge erstellt werden. Geben Sie ein Menüelement für Benutzer zum Registrieren neuer Steuerelemente einige ActiveX-Steuerelementcontainer, aber diese Funktion kann nicht in allen Containern verfügbar sein. Aus diesem Grund sollten Sie das Setupprogramm aus, um die Steuerelemente zu registrieren, installiert werden.  
   
- Falls gewünscht, können Sie das Setupprogramm aus, um das Steuerelement direkt registrieren Sie stattdessen schreiben.  
+ Falls gewünscht, können Sie das Setupprogramm aus, um das Steuerelement direkt stattdessen registrieren schreiben.  
   
- Verwenden der `LoadLibrary` Windows-API zum Laden der DLL des Steuerelements. Verwenden Sie als Nächstes `GetProcAddress` die Adresse der Funktion "DllRegisterServer" beziehen. Rufen Sie zum Schluss die `DllRegisterServer` Funktion. Das folgende Codebeispiel veranschaulicht eine mögliche Methode, wobei `hLib` speichert das Handle für die Steuerelementbibliothek und `lpDllEntryPoint` speichert die Adresse der Funktion "DllRegisterServer".  
+ Verwenden der `LoadLibrary` Windows-API, um die Steuerelement-DLL zu laden. Verwenden Sie als Nächstes `GetProcAddress` zum Abrufen der Adresse der Funktion "DllRegisterServer". Rufen Sie abschließend die `DllRegisterServer` Funktion. Das folgende Codebeispiel veranschaulicht eine mögliche Methode, in denen `hLib` speichert das Handle für die Steuerelementbibliothek und `lpDllEntryPoint` speichert die Adresse der Funktion "DllRegisterServer".  
   
  [!code-cpp[NVC_MFC_AxCont#16](../mfc/codesnippet/cpp/mfc-activex-controls-distributing-activex-controls_1.cpp)]  
   
- Der Vorteil, dass das Steuerelement direkt registriert ist, müssen keine aufrufen und Laden einen separaten Prozess (nämlich "regsvr32"), Installationsdauer zu reduzieren. Darüber hinaus da die Registrierung ein interner Prozess ist, wird das Setup-Programm behandeln Sie Fehler und unvorhergesehene Situationen besser als ein externer Prozess können.  
+ Der Vorteil der direkten Registrierung des Steuerelements ist, dass Sie nicht benötigen, aufzurufen, und Laden einen separaten Prozess (nämlich REGSVR32), verringern der Installationszeit. Darüber hinaus da die Registrierung ein interner Prozess ist, wird das Setup-Programm Fehler behandeln, und unvorhergesehene Situationen besser als ein externer Prozess können.  
   
 > [!NOTE]
->  Bevor Sie das Setupprogramm ein ActiveX-Steuerelement installiert, sollte es aufrufen `OleInitialize`. Wenn das Setupprogramm abgeschlossen ist, rufen Sie `OleUnitialize`. Dadurch wird sichergestellt, dass der OLE-System-DLLs sind in den richtigen Status zum Registrieren von ActiveX-Steuerelement.  
+>  Bevor das Setupprogramm ein ActiveX-Steuerelement installiert wird, sollte es aufrufen `OleInitialize`. Wenn das Setupprogramm abgeschlossen ist, rufen Sie `OleUnitialize`. Dadurch wird sichergestellt, dass die OLE-System-DLLs sind im richtigen Zustand für ein ActiveX-Steuerelement.  
   
  Sie sollten MFCx0.DLL registrieren.  
   

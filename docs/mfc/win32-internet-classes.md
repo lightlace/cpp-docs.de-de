@@ -1,7 +1,7 @@
 ---
-title: Win32-Internetklassen | Microsoft Docs
+title: Win32-Internetklassen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -19,30 +19,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1fa996ad36970faa97c9c6d248060a8121680a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1e93c2c3ea9efeb8be6ec5d79b9f2ef7729b9e9
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383223"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534936"
 ---
 # <a name="win32-internet-classes"></a>Win32- Internetklassen
-MFC dient als Wrapper für die Win32-Internet (WinInet) und ActiveX-Technologie, um internetprogrammierung zu vereinfachen.  
+MFC dient als Wrapper für die Win32-Internet (WinInet) und ActiveX-Technologie, um Internet-Programmierung zu erleichtern.
+
+>[!IMPORTANT]
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
+  
   
  [CInternetSession](../mfc/reference/cinternetsession-class.md)  
- Erstellt und initialisiert ein Internet-Sitzung oder mehrere gleichzeitige internetsitzungen und beschreibt ggf. die Verbindung mit einem Proxyserver befinden.  
+ Erstellt und initialisiert eine Internet-Sitzung oder mehrere gleichzeitige internetsitzungen und beschreibt ggf. die Verbindung mit einem Proxyserver.  
   
  [CInternetConnection](../mfc/reference/cinternetconnection-class.md)  
  Verwaltet die Verbindung mit einem Internetserver.  
   
  [CInternetFile](../mfc/reference/cinternetfile-class.md)  
- Diese Klasse und abgeleitete Klassen ermöglichen den Zugriff auf Dateien auf Remotesystemen, die Internetprotokolle verwenden.  
+ Diese Klasse und ihrer abgeleiteten Klassen können den Zugriff auf Dateien auf Remotesystemen, die Internetprotokolle verwenden.  
   
  [CHttpConnection](../mfc/reference/chttpconnection-class.md)  
  Verwaltet die Verbindung mit einem HTTP-Server.  
   
  [CHttpFile](../mfc/reference/chttpfile-class.md)  
- Stellt die Funktionalität zum Suchen und Lesen von Dateien auf einem HTTP-Server bereit.  
+ Bietet Funktionen zum Suchen und Lesen von Dateien auf einem HTTP-Server.  
   
  [CGopherFile](../mfc/reference/cgopherfile-class.md)  
  Stellt die Funktionalität bereit, um Dateien auf einem Gopherserver zu suchen und zu lesen.  
@@ -54,7 +58,7 @@ MFC dient als Wrapper für die Win32-Internet (WinInet) und ActiveX-Technologie,
  Verwaltet die Verbindung zu einem Gopherserver.  
   
  [CFileFind](../mfc/reference/cfilefind-class.md)  
- Führt die lokale und nach Dateien auf.  
+ Führt die lokale und internetdateisuchen.  
   
  [CFtpFileFind](../mfc/reference/cftpfilefind-class.md)  
  Unterstützt die Internetsuche nach Dateien auf FTP-Servern.  
@@ -69,5 +73,5 @@ MFC dient als Wrapper für die Win32-Internet (WinInet) und ActiveX-Technologie,
  Stellt eine Ausnahmebedingung dar, die sich auf einen Internetvorgang bezieht.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+ [Übersicht über die Klasse](../mfc/class-library-overview.md)
 

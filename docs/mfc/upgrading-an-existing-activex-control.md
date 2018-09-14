@@ -1,7 +1,7 @@
 ---
 title: Upgrading eines vorhandenen ActiveX-Steuerelements | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -22,15 +22,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d162aea1d000aa9e65aea253f974c38ffc85bcd
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0bca0cca66f7f8b9c59dcea4911550abfc2024c8
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686185"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535268"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Upgrading eines vorhandenen ActiveX-Steuerelements
-Vorhandene ActiveX-Steuerelemente (früher OLE-Steuerelemente) kann über das Internet ohne Änderung verwendet werden. Allerdings sollten Sie so ändern Sie die Steuerelemente, um die Leistung zu verbessern. Wenn Sie das Steuerelement auf einer Webseite verwenden, gibt es weitere Überlegungen. Die OCX-Datei und alle zugehörigen Dateien müssen auf dem Zielcomputer oder über das Internet heruntergeladen werden. Dadurch wird die Codegröße als auch herunterladen, die Zeit eines wichtigen Aspekt. Downloads können in einer signierten CAB-Datei verpackt werden. Sie können das Steuerelement als sicher für Skripting und als sicher für die Initialisierung kennzeichnen.  
+Vorhandene ActiveX-Steuerelemente (früher OLE-Steuerelemente) kann über das Internet ohne Änderung verwendet werden. Allerdings sollten Sie so ändern Sie die Steuerelemente, um die Leistung zu verbessern. 
+
+>[!IMPORTANT]
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
+
+Wenn Sie das Steuerelement auf einer Webseite verwenden, gibt es weitere Überlegungen. Die OCX-Datei und alle zugehörigen Dateien müssen auf dem Zielcomputer oder über das Internet heruntergeladen werden. Dadurch wird die Codegröße als auch herunterladen, die Zeit eines wichtigen Aspekt. Downloads können in einer signierten CAB-Datei verpackt werden. Sie können das Steuerelement als sicher für Skripting und als sicher für die Initialisierung kennzeichnen.  
   
  In diesem Artikel werden die folgenden Themen behandelt:  
   
