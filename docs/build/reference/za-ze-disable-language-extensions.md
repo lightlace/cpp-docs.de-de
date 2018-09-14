@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e30fb37be6738b7100b84a1898c02ab4230c41b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 63c4998ae0ff6efc6fa520c66a4cabff2476f0d0
+ms.sourcegitcommit: 6e479e33e8fd8e30ea32801edbff2e3415f31bf7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597572"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45556753"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za, /Ze (Spracherweiterungen deaktivieren)
 Die **/Za** Compileroption gibt einen Fehler für Sprachkonstrukte, die nicht mit ANSI-C89 oder ISO C ++ 11 kompatibel sind. Die **/Ze** -Compileroption verwenden, die standardmäßig aktiviert ist, ermöglicht Microsoft-Erweiterungen.  
@@ -54,8 +54,8 @@ Die **/Za** Compileroption gibt einen Fehler für Sprachkonstrukte, die nicht mi
   
  Es wird empfohlen, dass Sie spracherweiterungen werden, indem deaktiviert die **/Za** option, wenn Sie Ihr Programm in andere Umgebungen zu portieren möchten. Bei der **/Za** angegeben ist, behandelt der Compiler-Schlüsselwörter als einfache Bezeichner erweiterte Microsoft, die anderen Microsoft-Erweiterungen deaktiviert und definiert automatisch die `__STDC__` vordefiniertes Makro für die C-Programmen.  
   
- Andere Compileroptionen verwendet mit **/Za** kann beeinflussen, wie der Compiler stellt sicher, Einhaltung von Standards. Z. B. **/Za** und [/fp (Festlegen des Gleitkommaverhaltens)](../../build/reference/fp-specify-floating-point-behavior.md) kann vom Typ Gleitkommazahl heraufstufung zu Verhalten führen, die nicht entspricht, die ISO C99 oder C ++ 11-Standards.  
-  
+ Andere Compileroptionen verwendet mit **/Za** kann beeinflussen, wie der Compiler stellt sicher, Einhaltung von Standards.
+
  Möglichkeiten zum Angeben von Einstellungen für das bestimmte standardkonforme Verhalten, finden Sie unter den [/Zc](../../build/reference/zc-conformance.md) -Compileroption.  
   
  Weitere Informationen über Konformitätsprobleme mit Visual C++ finden Sie unter [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).  

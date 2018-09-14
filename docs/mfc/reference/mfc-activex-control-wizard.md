@@ -1,7 +1,7 @@
 ---
-title: MFC-ActiveX-Steuerelement-Assistent | Microsoft Docs
+title: MFC-ActiveX-Steuerelement-Assistent | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -20,27 +20,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45af43a98244e90f52075817fc9e17a905cbf065
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b7dcd6d1924281f5a283a86211e49b338b6bc42
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375062"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535131"
 ---
 # <a name="mfc-activex-control-wizard"></a>MFC-ActiveX-Steuerelement-Assistent
-Ein ActiveX-Steuerelement ist ein spezieller Typ einer [Automatisierungsservers](../../mfc/automation-servers.md); es ist eine wiederverwendbare Komponente sein. Die Anwendung, die ActiveX-Steuerelement ist die [Automatisierungsclient](../../mfc/automation-clients.md) dieses Steuerelements. Wenn Ihr Ziel ist eine solche wiederverwendbare Komponente zu erstellen, verwenden Sie diesen Assistenten, um das Steuerelement zu erstellen. Finden Sie unter [MFC-ActiveX-Steuerelemente](../../mfc/mfc-activex-controls.md) für Weitere Informationen.  
+Ein ActiveX-Steuerelement ist ein spezieller Typ einer [Automatisierungsserver](../../mfc/automation-servers.md); es ist eine wiederverwendbare Komponente. Die Anwendung hosten des ActiveX-Steuerelements ist die [Automatisierungsclient](../../mfc/automation-clients.md) des Steuerelements. Wenn Ihr Ziel ist eine wieder verwendbare Komponente erstellen, verwenden Sie diesen Assistenten, um das Steuerelement zu erstellen. Finden Sie unter [MFC-ActiveX-Steuerelemente](../../mfc/mfc-activex-controls.md) für Weitere Informationen.
+
+>[!IMPORTANT]
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](../activex-controls.md).  
   
- Alternativ können Sie erstellen, eine Automatisierung Server MFC-Anwendung mit der [MFC-Anwendung-Assistent](../../mfc/reference/mfc-application-wizard.md).  
+ Alternativ können Sie erstellen, ein Automation Server MFC-Anwendung mit der [MFS-Anwendungsassistenten](../../mfc/reference/mfc-application-wizard.md).  
   
- Mit diesem Assistenten erstellte ActiveX-Steuerelement kann über eine Benutzeroberfläche verfügen oder unsichtbar sein. Sie können angeben, dass diese Option in der [Steuerelementeinstellungen](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) Seite des Assistenten. Ein Zeitgeber-Steuerelement ist ein Beispiel für ein ActiveX-Steuerelement, das Sie nicht sichtbar sein soll.  
+ Ein ActiveX-Steuerelement mit diesem Assistenten erstellen, kann über eine Benutzeroberfläche verfügen oder unsichtbar sein. Sie können mit dieser Option angeben der [Steuerelementeinstellungen](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) Seite des Assistenten. Ein Zeitgeber-Steuerelement ist ein Beispiel für ein ActiveX-Steuerelement, das nicht sichtbar sein sollen.  
   
- ActiveX-Steuerelemente können eine komplexe Benutzeroberfläche haben. Einige Steuerelemente wie gekapselte Formulare möglicherweise: ein einzelnes Steuerelement mit vielen Feldern, von denen jedes ein Windows-Steuerelement vollkommen. Beispielsweise kann ein Auto Teile-Objekt als ein MFC-ActiveX-Steuerelement implementiert eine Formular-ähnliche Benutzeroberfläche vorhanden, durch die Benutzer zu lesen und bearbeiten die Teilenummer, mehrteiligen Namen und andere Informationen konnte. Finden Sie unter [MFC-ActiveX-Steuerelemente](../../mfc/mfc-activex-controls.md) für Weitere Informationen.  
+ ActiveX-Steuerelemente können eine komplexen Benutzeroberfläche verwenden. Einige Steuerelemente wie gekapselten Formulare werden können: ein einzelnes Steuerelement mit vielen Felder, von denen jede ein eigenes Windows-Steuerelement. Beispielsweise kann ein Auto-Teile-Objekt als ein MFC-ActiveX-Steuerelement implementiert eine Formular-ähnliche-Benutzeroberfläche anzeigen, Benutzer können über der lesen und bearbeiten, die Teilenummer, Teilen und andere Informationen. Finden Sie unter [MFC-ActiveX-Steuerelemente](../../mfc/mfc-activex-controls.md) für Weitere Informationen.  
   
- Wenn Sie einen Container für ActiveX-Objekte erstellen möchten, finden Sie unter [Erstellen eines ActiveX-Steuerelementcontainers](../../mfc/reference/creating-an-mfc-activex-control-container.md).  
+ Wenn Sie einen Container für ActiveX-Objekte erstellen möchten, finden Sie unter [erstellen Sie einen ActiveX-Steuerelementcontainer](../../mfc/reference/creating-an-mfc-activex-control-container.md).  
   
- Das MFC-Startprogramm enthält C++-Quelldateien (.cpp), Ressourcendateien (.rc) und eine Projektdatei (.vcxproj). In diesen Startdateien generierte Code basiert auf MFC.  
+ Die MFC-Startprogramm enthält C++-Quelldateien (.cpp), Ressourcendateien (.rc) und eine Projektdatei (.vcxproj). In diesen Startdateien generierte Code basiert auf MFC.  
   
- Das folgende Beispielliste enthält Aufgaben und Typen von Erweiterungen für ActiveX-Steuerelements:  
+ Die folgende Beispielliste enthält Aufgaben und Typen von Erweiterungen für ActiveX-Steuerelement:  
   
 -   [Optimieren der ActiveX-Steuerelement](../../mfc/mfc-activex-controls-optimization.md)  
   
@@ -59,16 +62,16 @@ Ein ActiveX-Steuerelement ist ein spezieller Typ einer [Automatisierungsservers]
 -   [Programmieren von ActiveX-Steuerelementen in einem ActiveX-Steuerelementcontainer](../../mfc/programming-activex-controls-in-a-activex-control-container.md)  
   
 ## <a name="overview"></a>Übersicht  
- Diese Seite des Assistenten wird beschrieben, die aktuellen Anwendungseinstellungen für das MFC-ActiveX-Steuerelement-Projekt, das Sie erstellen. Der Assistent erstellt ein Projekt standardmäßig wie folgt:  
+ Diese Seite des Assistenten wird beschrieben, die aktuellen Einstellungen für die MFC-ActiveX-Steuerelement, die Sie erstellen. Der Assistent erstellt ein Projekt standardmäßig wie folgt:  
   
--   Das Standardprojekt generiert keine Dateien zur Laufzeit, Lizenz- oder -Hilfe. Sie können diese Standardeinstellungen ändern, auf die [Anwendungseinstellungen](../../mfc/reference/application-settings-mfc-activex-control-wizard.md) Seite. Nur die Auswahl Sie treffen Sie auf dieser Seite des ActiveX-Steuerelement-Assistenten auf wiedergegeben werden die **Übersicht** Seite.  
+-   Das Standardprojekt generiert keine Laufzeit-Lizenz oder Hilfe-Dateien. Sie können diese Standardeinstellungen ändern, auf die [Anwendungseinstellungen](../../mfc/reference/application-settings-mfc-activex-control-wizard.md) Seite. Nur die Auswahl, die Sie, auf dieser Seite des ActiveX-Steuerelement-Assistenten vornehmen werden übernommen, auf die **Übersicht** Seite.  
   
--   Das Projekt enthält eine Steuerelementklasse und eine Eigenschaft Page-Klasse, basierend auf den Namen des Projekts. Sie können die Namen der Namen des Projekts und Datei bearbeiten, auf die [Steuerelementnamen](../../mfc/reference/control-names-mfc-activex-control-wizard.md) Seite.  
+-   Das Projekt enthält eine Steuerelementklasse und eine Eigenschaftenseitenklasse, die basierend auf den Namen des Projekts. Sie können den Namen der Ihr Projekt und die Datei bearbeiten, auf die [Steuerelementnamen](../../mfc/reference/control-names-mfc-activex-control-wizard.md) Seite.  
   
--   Das Steuerelement basiert auf keinem vorhandenen Windows-Steuerelement, aktiviert wird, wenn es sichtbar wird, verfügt über eine Benutzeroberfläche und enthält eine **zu** (Dialogfeld). Sie können diese Standardeinstellungen ändern, auf die [Steuerelementeinstellungen](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) Seite.  
+-   Das Steuerelement wird basierend auf keine vorhandenen Windows-Steuerelement, aktiviert wird, wenn es sichtbar wird, verfügt über eine Benutzeroberfläche und enthält eine **zu** Dialogfeld. Sie können diese Standardeinstellungen ändern, auf die [Steuerelementeinstellungen](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) Seite.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Verwalten von Visual C++-Projekten](../../ide/creating-and-managing-visual-cpp-projects.md)   
- [Visual C++-Projekttypen](../../ide/visual-cpp-project-types.md)   
+ [Visual C++ Project Types (Visual C++-Projekttypen)](../../ide/visual-cpp-project-types.md)   
  [Konzepte](../../atl/active-template-library-atl-concepts.md)
 

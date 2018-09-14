@@ -1,7 +1,7 @@
 ---
 title: MFC COM | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e8c3af361e1ffb5928132727fa124f03a99e81e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 026e8b39d751a352830b37ae0b5692882e2daa3f
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205648"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534832"
 ---
 # <a name="mfc-com"></a>MFC COM
 Eine Teilmenge von MFC dient zur Unterstützung von COM, während die meisten von der Active Template Library (ATL) dient für COM-Programmierung. Dieser Abschnitt der Themen befasst, MFC Unterstützung für COM.  
@@ -34,8 +34,6 @@ Eine Teilmenge von MFC dient zur Unterstützung von COM, während die meisten vo
  Active Technologien (z. B. ActiveX-Steuerelemente, Active Document-Container, OLE und So weiter), die das Component Object Model (COM) verwenden, um Softwarekomponenten, die miteinander interagieren mit dem sie waren, in einer vernetzten Umgebung, unabhängig von der Sprache ermöglichen erstellt. Active Technology können verwendet werden, zum Erstellen von Anwendungen, die auf dem Desktop oder im Internet ausgeführt wird. Weitere Informationen finden Sie unter [Einführung in COM](../atl/introduction-to-com.md) oder [das Component Object Model](/windows/desktop/com/the-component-object-model).  
   
  Active Technology umfassen sowohl Client-als auch Technologien, einschließlich der folgenden:  
-  
--   [Active Document-Container](../mfc/active-document-containment.md), unterstützt MFC-Version 4.2 und höher ermöglicht Benutzern das Anzeigen von [aktive Dokumente](../mfc/active-documents.md) (z. B. Microsoft Excel oder Word-Dateien), und aktivieren Sie die gesamte Schnittstelle des Dokuments systemeigenen in den gesamten Clientbereich der Anwendung ein [active Document-Container](../mfc/active-document-containers.md) z. B. Microsoft Office Binder oder Microsoft Internet Explorer. Die Container fungieren als Clients, während Dokumente von bereitgestellten [aktive Dokumentserver](../mfc/active-document-servers.md). Weitere Informationen zur Verwendung von aktive Dokumente in der Internet-Anwendungen finden Sie unter: [Active Documents für das Internet](../mfc/active-documents-on-the-internet.md).  
   
 -   ActiveX-Steuerelemente sind interaktive Objekte, die in Containern, z. B. eine Website verwendet werden können. Weitere Informationen zu ActiveX-Steuerelementen finden Sie unter:  
   

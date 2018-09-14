@@ -1,7 +1,7 @@
 ---
 title: Internetinformation – nach Vorgang | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -14,15 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87cca4472ebc0cf5f6b31d377fd82f2c51d25946
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: a0e9fc861340f4289e7f50ebc59248b1ed317db3
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677546"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535001"
 ---
 # <a name="internet-information-by-task"></a>Internetinformation – nach Aufgaben geordnet
 In diesem Thema aufgeführten Tasks werden basierend auf den Task sortiert, die Sie ausführen möchten.  
+
+>[!IMPORTANT]
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
   
  Die folgenden Kategorien von Aufgaben sind in diesem Thema aufgeführt:  
   
@@ -34,13 +37,9 @@ In diesem Thema aufgeführten Tasks werden basierend auf den Task sortiert, die 
   
 ###  <a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a> ActiveX-Steuerelemente, Dokumente und asynchrone Moniker-Aufgaben  
   
--   [Erfahren Sie mehr über aktive Dokumente](../mfc/active-documents-on-the-internet.md)  
-  
 -   [Erfahren Sie mehr über asynchrone Moniker](../mfc/asynchronous-monikers-on-the-internet.md)  
   
 -   [Erfahren Sie mehr über den ActiveX-Steuerelementen in der Internet-Kontext](../mfc/activex-controls-on-the-internet.md)  
-  
--   [Erfahren Sie mehr über aktive Dokumente in der Internet-Kontext](../mfc/active-documents-on-the-internet.md)  
   
 -   [Optimieren der ActiveX-Steuerelement](../mfc/mfc-activex-controls-optimization.md)  
   

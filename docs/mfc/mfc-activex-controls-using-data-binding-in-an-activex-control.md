@@ -1,7 +1,7 @@
 ---
-title: 'MFC-ActiveX-Steuerelemente: Verwenden der Datenbindung in einem ActiveX-Steuerelement | Microsoft Docs'
+title: 'MFC-ActiveX-Steuerelemente: Verwenden der Datenbindung in einem ActiveX-Steuerelement | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 12/09/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -24,84 +24,87 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 267d47b7e061e3bde39b199cd948ba9875dea16b
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 1170d312fa6416ba051574022ace21795bf2567f
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929730"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535209"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Verwenden der Datenbindung in einem ActiveX-Steuerelement
-Einer der leistungsfähigeren von ActiveX-Steuerelementen ist Datenbindung, wodurch eine Eigenschaft des Steuerelements an ein bestimmtes Feld in einer Datenbank gebunden werden soll. Wenn ein Benutzer Daten in dieser gebundenen Eigenschaft ändert, benachrichtigt das Steuerelement an die Datenbank und fordert an, dass der Datensatz das Feld aktualisiert werden. Anschließend benachrichtigt die Datenbank, die Kontrolle über den Erfolg oder Fehler der Anforderung.  
+Einer der leistungsfähigere Verwendungszwecke von ActiveX-Steuerelementen ist die Datenbindung, wodurch eine Eigenschaft des Steuerelements an ein bestimmtes Feld in einer Datenbank gebunden werden soll. Wenn ein Benutzer Daten in dieser gebundenen Eigenschaft ändert, benachrichtigt das Steuerelement an die Datenbank und fordert an, dass der Datensatz das Feld aktualisiert werden. Anschließend benachrichtigt die Datenbank, die Kontrolle über den Erfolg oder Misserfolg der Anforderung.
+
+>[!IMPORTANT]
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).  
   
- Dieser Artikel behandelt die Steuerelement-Seite der Aufgabe. Implementieren die Daten binden von Interaktionen mit der Datenbank liegt in der Verantwortung des Steuerelementcontainers. Zum Verwalten von Datenbankinteraktionen im Container ist, würde den Rahmen dieser Dokumentation sprengen. Wie Sie das Steuerelement für die Datenbindung vorbereiten werden in den weiteren Verlauf dieses Artikels erläutert.  
+ Dieser Artikel behandelt die Steuerelement-Seite Ihrer Aufgabe. Implementieren die Daten binden von Interaktionen mit der Datenbank ist die Verantwortung für den Steuerelementcontainer. Wie Sie die Interaktionen mit der Datenbank in Ihrem Container verwalten, ist über den Rahmen dieser Dokumentation hinaus. Wie Sie das Steuerelement für die Datenbindung vorbereiten, werden im Rest dieses Artikels erläutert.  
   
- ![Konzeptionelle Darstellung der Daten&#45;gebundenes Steuerelement](../mfc/media/vc374v1.gif "vc374v1")  
-Konzeptionelles Diagramm eines datengebundenen Steuerelements  
+ ![Konzeptuelles Diagramm eines&#45;gebundenes Steuerelement](../mfc/media/vc374v1.gif "vc374v1")  
+Konzeptuelles Diagramm eines datengebundenen Steuerelements  
   
- Die `COleControl` Klasse bietet zwei Memberfunktionen, die Datenbindung für ein einfacher Vorgang implementiert. Die erste Funktion [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), wird verwendet, um die Berechtigung zum Ändern des Werts der Eigenschaft angefordert werden. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), die zweite Funktion wird aufgerufen, nachdem der Eigenschaftswert erfolgreich geändert wurde.  
+ Die `COleControl` Klasse enthält zwei Memberfunktionen, mit denen einen einfachen Prozess zum Implementieren der Datenbindung. Die erste Funktion, [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), zum Anfordern von Berechtigungen so ändern Sie den Wert der Eigenschaft verwendet wird. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), die zweite Funktion wird aufgerufen, nachdem Sie den Wert der Eigenschaft erfolgreich geändert wurde.  
   
  In diesem Artikel werden die folgenden Themen behandelt:  
   
--   [Erstellen eine bindbare Systemeigenschaft](#vchowcreatingbindablestockproperty)  
+-   [Erstellen eine bindbare Eigenschaft](#vchowcreatingbindablestockproperty)  
   
--   [Erstellen eine bindbare Get/Set-Methode](#vchowcreatingbindablegetsetmethod)  
+-   [Erstellen eine bindbare Get-/Set-Methode](#vchowcreatingbindablegetsetmethod)  
   
-##  <a name="vchowcreatingbindablestockproperty"></a> Erstellen eine bindbare Systemeigenschaft  
- Es ist möglich, eine datengebundene-Systemeigenschaft erstellen, obwohl es wahrscheinlicher ist, Sie sollten eine [bindbare Get/Set-Methode](#vchowcreatingbindablegetsetmethod).  
+##  <a name="vchowcreatingbindablestockproperty"></a> Erstellen eine bindbare Eigenschaft  
+ Es ist möglich, eine datengebundene Eigenschaft, zu erstellen, obwohl es wahrscheinlicher ist, dass Sie sollten eine [bindbare Get/Set-Methode](#vchowcreatingbindablegetsetmethod).  
   
 > [!NOTE]
 >  Vordefinierte Eigenschaften haben die `bindable` und `requestedit` Attribute standardmäßig.  
   
-#### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>So fügen Sie eine bindbare Systemeigenschaft mithilfe des Assistenten zum Hinzufügen von Eigenschaften hinzu  
+#### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>Um eine bindbare Eigenschaft mithilfe des Assistenten zum Hinzufügen von Eigenschaften hinzuzufügen.  
   
-1.  Starten Sie ein Projekt mit der [MFC-ActiveX-Steuerelement-Assistent](../mfc/reference/mfc-activex-control-wizard.md).  
+1.  Beginnen Sie ein Projekt mit der [MFC-ActiveX-Steuerelement-Assistent](../mfc/reference/mfc-activex-control-wizard.md).  
   
-2.  Klicken Sie auf den Schnittstellenknoten des Steuerelements.  
+2.  Mit der rechten Maustaste in des Schnittstellenknoten für das Steuerelement.  
   
      Dadurch wird das Kontextmenü geöffnet.  
   
 3.  Klicken Sie im Kontextmenü auf **hinzufügen** , und klicken Sie dann auf **Eigenschaft hinzufügen**.  
   
-4.  Wählen Sie einen der Einträge aus der **Eigenschaftsname** Dropdown-Liste. Sie können beispielsweise auswählen **Text**.  
+4.  Wählen Sie einen der Einträge aus der **Eigenschaftennamen** Dropdown-Liste. Sie können beispielsweise auswählen **Text**.  
   
-     Da **Text** eine Systemeigenschaft ist die **bindbare** und **Requestedit** Attribute sind automatisch ausgewählt.  
+     Da **Text** ist eine vordefinierte Eigenschaft, die **bindbare** und **Requestedit** Attribute sind automatisch ausgewählt.  
   
-5.  Die folgenden Kontrollkästchen aus der **IDL-Attribute** Registerkarte: **Displaybind** und **Defaultbind** um die Attribute auf die Eigenschaftsdefinition in des Projekts hinzuzufügen. IDL-Datei. Diese Attribute stellen das Steuerelement für den Benutzer sichtbar und der Systemeigenschaft bindbare Standardeigenschaft.  
+5.  Wählen Sie die folgenden Kontrollkästchen aus der **IDL-Attribute** Registerkarte: **Displaybind** und **Defaultbind** die Attribute der Eigenschaftsdefinition im des Projekts hinzu. IDL-Datei. Diese Attribute stellen das Steuerelement für den Benutzer sichtbar und der vordefinierten Eigenschaft die bindbare Standardeigenschaft.  
   
- Zu diesem Zeitpunkt das Steuerelement kann Daten aus einer Datenquelle anzeigen, aber der Benutzer wird nicht in der Lage, Datenfelder zu aktualisieren. Wenn Sie möchten das Steuerelement in der auch in der Lage, Daten aktualisieren, ändern Sie die `OnOcmCommand` [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) Funktion wie folgt aussehen:  
+ An diesem Punkt wird das Steuerelement kann Daten aus einer Datenquelle anzeigen, aber der Benutzer wird nicht in der Lage, die Datenfelder zu aktualisieren. Wenn Sie möchten das Steuerelement in der auch in der Lage, Daten aktualisieren, ändern Sie die `OnOcmCommand` [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) Funktion, die wie folgt aussehen:  
   
  [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]  
   
- Sie können jetzt das Projekt erstellen, das das Steuerelement zu registrieren. Wenn Sie das Steuerelement in einem Dialogfeld Einfügen der **Feld "Daten"** und **Datenquelle** Eigenschaften werden hinzugefügt wurden, und Sie können jetzt auswählen, eine Datenquelle und die im Steuerelement anzuzeigende Feld.  
+ Sie können jetzt das Projekt erstellen, das das Steuerelement registriert wird. Beim Einfügen des Steuerelements in einem Dialogfeld der **Datenfeld** und **Datenquelle** werden wurden Eigenschaften hinzugefügt, und Sie können jetzt auswählen, eine Datenquelle und ein Feld in das Steuerelement angezeigt.  
   
-##  <a name="vchowcreatingbindablegetsetmethod"></a> Erstellen eine bindbare Get/Set-Methode  
- Sie können auch erstellen, zusätzlich zu einem datengebundenen Get/Set-Methode, eine [bindbare Systemeigenschaft](#vchowcreatingbindablestockproperty).  
+##  <a name="vchowcreatingbindablegetsetmethod"></a> Erstellen eine bindbare Get-/Set-Methode  
+ Sie können auch erstellen, zusätzlich zu einem datengebundenen get-/Set-Methode, eine [bindbare Eigenschaft](#vchowcreatingbindablestockproperty).  
   
 > [!NOTE]
->  Dieses Verfahren setzt voraus, dass Sie ein ActiveX-Steuerelement, Unterklassen ein Windows-Steuerelements Projekt haben.  
+>  Dieses Verfahren setzt voraus, dass Sie ein ActiveX-Steuerelement, Unterklassen ein Steuerelements für die Windows-Projekt verfügen.  
   
-#### <a name="to-add-a-bindable-getset-method-using-the-add-property-wizard"></a>So fügen Sie eine bindbare Get/Set-Methode, die mithilfe des Assistenten zum Hinzufügen von Eigenschaften hinzu  
+#### <a name="to-add-a-bindable-getset-method-using-the-add-property-wizard"></a>Zum Hinzufügen einer bindbaren get-/Set-Methode, die mithilfe des Assistenten zum Hinzufügen von Eigenschaften  
   
 1.  Laden Sie das Steuerelementprojekt.  
   
-2.  Auf der **Steuerelementeinstellungen** Seite, wählen Sie eine Fensterklasse für das Steuerelement auf die Unterklasse. Z. B. empfiehlt das Erstellen einer Unterklasse ein Bearbeitungssteuerelement.  
+2.  Auf der **Steuerelementeinstellungen** Seite, wählen Sie eine Fensterklasse für das Steuerelement, um eine Unterklasse. Z. B. empfiehlt um eine Unterklasse ein Bearbeitungssteuerelement.  
   
 3.  Laden Sie das Steuerelementprojekt.  
   
-4.  Klicken Sie auf den Schnittstellenknoten des Steuerelements.  
+4.  Mit der rechten Maustaste in des Schnittstellenknoten für das Steuerelement.  
   
      Dadurch wird das Kontextmenü geöffnet.  
   
 5.  Klicken Sie im Kontextmenü auf **hinzufügen** , und klicken Sie dann auf **Eigenschaft hinzufügen**.  
   
-6.  Geben Sie den Eigenschaftennamen in der **Eigenschaftsname** Feld. Verwendung `MyProp` für dieses Beispiel.  
+6.  Geben Sie den Namen der Eigenschaft in der **Eigenschaftennamen** Feld. Verwendung `MyProp` für dieses Beispiel.  
   
-7.  Wählen Sie einen Datentyp aus der **Eigenschaftentyp** Dropdown Listenfeld aus. Verwendung **kurze** für dieses Beispiel.  
+7.  Wählen Sie einen Datentyp aus der **Eigenschaftentyp** im Dropdown Listenfeld. Verwendung **kurze** für dieses Beispiel.  
   
 8.  Klicken Sie unter **Implementierungstyp**auf **Get/Set-Methoden**.  
   
-9. Die folgenden Kontrollkästchen auf der Registerkarte IDL-Attribute: **bindbare**, **Requestedit**, **Displaybind**, und **Defaultbind** hinzufügen die Attribute auf die Eigenschaftsdefinition des Projekts. IDL-Datei. Diese Attribute stellen das Steuerelement für den Benutzer sichtbar und der Systemeigenschaft bindbare Standardeigenschaft.  
+9. Wählen Sie auf der Registerkarte "IDL-Attribute" die folgenden Kontrollkästchen: **bindbare**, **Requestedit**, **Displaybind**, und **Defaultbind** hinzufügen die Attribute auf die Eigenschaftsdefinition des Projekts. IDL-Datei. Diese Attribute stellen das Steuerelement für den Benutzer sichtbar und der vordefinierten Eigenschaft die bindbare Standardeigenschaft.  
   
 10. Klicken Sie auf **Fertig stellen**.  
   
@@ -109,9 +112,9 @@ Konzeptionelles Diagramm eines datengebundenen Steuerelements
   
      [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]  
   
-12. Der Parameter zu übergeben, um die `BoundPropertyChanged` und `BoundPropertyRequestEdit` Funktionen ist die Dispid der-Eigenschaft, die der übergebene an die für die Eigenschaft in Parameter der. IDL-Datei.  
+12. Der Parameter zu übergeben, um die `BoundPropertyChanged` und `BoundPropertyRequestEdit` Functions ist die Dispid der Eigenschaft, das den Parameter an die übergeben werden, für die Eigenschaft in der. IDL-Datei.  
   
-13. Ändern der [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) funktionieren, damit sie den folgenden Code enthält:  
+13. Ändern der [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) funktionieren, sodass sie den folgenden Code enthält:  
   
      [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]  
   
@@ -119,11 +122,11 @@ Konzeptionelles Diagramm eines datengebundenen Steuerelements
   
      [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]  
   
-15. Fügen Sie dem öffentlichen Abschnitt der Headerdatei die Headerdatei für eine Klasse die folgenden Definitionen (Konstruktoren) für Membervariablen hinzu:  
+15. Fügen Sie mit dem öffentlichen Abschnitt der Headerdatei die Headerdatei für eine Klasse die folgenden Definitionen (Konstruktoren) für die Membervariablen hinzu:  
   
      [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]  
   
-16. Stellen Sie der folgenden Zeile in die letzte Zeile der `DoPropExchange` Funktion:  
+16. Stellen Sie der folgenden Zeile die letzte Zeile in der `DoPropExchange` Funktion:  
   
      [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]  
   
@@ -135,7 +138,7 @@ Konzeptionelles Diagramm eines datengebundenen Steuerelements
   
      [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]  
   
- Sie können jetzt das Projekt erstellen, das das Steuerelement zu registrieren. Wenn Sie das Steuerelement in einem Dialogfeld Einfügen der **Feld "Daten"** und **Datenquelle** Eigenschaften werden hinzugefügt wurden, und Sie können jetzt auswählen, eine Datenquelle und die im Steuerelement anzuzeigende Feld.  
+ Sie können jetzt das Projekt erstellen, das das Steuerelement registriert wird. Beim Einfügen des Steuerelements in einem Dialogfeld der **Datenfeld** und **Datenquelle** werden wurden Eigenschaften hinzugefügt, und Sie können jetzt auswählen, eine Datenquelle und ein Feld in das Steuerelement angezeigt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)   

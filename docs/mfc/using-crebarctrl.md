@@ -1,5 +1,5 @@
 ---
-title: Verwenden von CReBarCtrl | Microsoft Docs
+title: Verwenden von CReBarCtrl | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5fbd58954e5b5b0bf16a052e3a667e28f6bc981
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29f678eb776e17fc9dc7cbd07e9a0fa91eef530c
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/13/2018
 ms.locfileid: "33383308"
 ---
 # <a name="using-crebarctrl"></a>Verwenden von CReBarCtrl
-Einem Grundleisten-Steuerelement fungiert als Container für untergeordnete Fenster. Diese untergeordneten Fenster häufig andere Steuerelemente sind ein Grundleisten-Steuerelementband zugewiesen. Einem Grundleisten-Steuerelement kann eine oder mehrere Bänder für jedes Band an, dass eine beliebige Kombination von ziehelements-Leiste, eine Bitmap, einer textbezeichnung und ein untergeordnetes Fenster enthalten. Allerdings darf keine Bänder mehr als ein untergeordnetes Fenster enthalten.  
+Einem Grundleisten-Steuerelement fungiert als Container für untergeordnete Fenster. Diese untergeordnete Fenster, die häufig für andere Steuerelemente, werden ein Infoleistenband-Steuerelements zugewiesen. Einem Grundleisten-Steuerelement kann eine oder mehrere Bänder, die für jedes Band müssen eine beliebige Kombination von eine Ziehpunktleiste, eine Bitmap, einer textbezeichnung und einem untergeordneten Fenster enthalten. Allerdings darf keine Bänder mehr als ein untergeordnetes Fenster enthalten.  
   
- Die folgende Abbildung zeigt ein Grundleistensteuerelement, das zwei Bändern. Eine enthält einen ziehelements Balken, eine Beschriftung ("Address") und ein Kombinationsfeld ein untergeordnetes Fenster. Das andere Band enthält einen Balken ziehelements, einer textbezeichnung und eine flache Symbolleiste (implementiert mit einem untergeordneten Fenster).  
+ Die folgende Abbildung zeigt ein Grundleistensteuerelement, das zwei Bändern. Eine enthält das eine Ziehpunktleiste, eine Beschriftung ("Address") und ein Kombinationsfeld Feld untergeordnetes Fenster. Das andere Band enthält eine Ziehpunktleiste einer textbezeichnung und eine flache Symbolleiste (implementiert mit einem untergeordneten Fenster).  
   
- ![Grundleisten-Steuerelement, das zwei Bändern](../mfc/media/vc4ruz1.gif "vc4ruz1")  
+ ![Grundleisten-Steuerelement mit zwei Bändern](../mfc/media/vc4ruz1.gif "vc4ruz1")  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
   

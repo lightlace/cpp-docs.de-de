@@ -1,5 +1,5 @@
 ---
-title: Erstellen vorkompilierter Headerdateien | Microsoft Docs
+title: Erstellen vorkompilierter Headerdateien | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31d9708f203c3d79d4cf369583c75d348278d06a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 893fc8a88a4a0d28aa5b98cfc7bacffbe0556ee0
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/13/2018
 ms.locfileid: "32379210"
 ---
 # <a name="creating-precompiled-header-files"></a>Erstellen vorkompilierter Headerdateien
   
 Die Microsoft C- und C++-Compiler stellen Optionen für das Vorkompilieren von beliebigem C- oder C++-Code bereit, einschließlich Inlinecode. Mithilfe dieser leistungsstarken Funktion können Sie einen stabilen Codeabschnitt kompilieren, den Code im kompilierten Zustand in einer Datei speichern und bei nachfolgenden Kompilierungen den vorkompilierten Code mit dem noch in Entwicklung befindlichen Code kombinieren. So können nachfolgende Kompilierungen beschleunigt werden, da der bereits stabile Code nicht neu kompiliert werden muss.  
   
-Dieses Thema enthält die folgenden Aspekte der vorkompilierten Headerdatei an:  
+Dieses Thema behandelt die folgenden Themen der vorkompilierten Headerdatei:  
   
 -   [Wann sollte Quellcode vorkompiliert werden?](#when-to-precompile-source-code)  
   
@@ -50,21 +50,21 @@ Dieses Thema enthält die folgenden Aspekte der vorkompilierten Headerdatei an:
   
 -   [Beispielcode für PCH](#example-code-for-pch)  
   
-Referenzinformationen zu den Compileroptionen, die im Zusammenhang mit der vorkompilierte Header finden Sie unter [/y (Vorkompilierte Header)](../../build/reference/y-precompiled-headers.md).  
+Referenzinformationen zu den Compileroptionen, die im Zusammenhang mit vorkompilierten Headern finden Sie unter [/y (Vorkompilierte Header)](../../build/reference/y-precompiled-headers.md).  
   
 <a name="when-to-precompile-source-code"></a>  
   
 ## <a name="when-to-precompile-source-code"></a>Wann sollte Quellcode vorkompiliert werden?  
   
-Vorkompilierter Code eignet während des Entwicklungszyklus zum Zeitpunkt der Kompilierung, reduzieren sich insbesondere dann, wenn:  
+Vorkompilierter Code ist nützlich während des Entwicklungszyklus, Zeitpunkt der Kompilierung, zu reduzieren, insbesondere dann, wenn:  
   
--   Sie verwenden immer eine große Menge an Code, die sich selten ändern.  
+-   Sie verwenden immer eine große Menge von Code, die sich selten ändern.  
   
--   Das Programm besteht aus mehreren Modulen, die einen Standardsatz von Include-Dateien und die gleichen Kompilierungsoptionen verwenden. In diesem Fall alle Includedateien in einem vorkompilierten Header vorkompiliert werden.  
+-   Das Programm umfasst mehrere Module, die einen Standardsatz von Include-Dateien und die gleichen Kompilierungsoptionen verwenden. In diesem Fall sind alle Dateien in einem vorkompilierten Header vorkompiliert werden.  
   
-Der ersten Kompilierung – das Abonnement, das die vorkompilierte Headerdatei (PCH) erstellt – dauert etwas länger als bei nachfolgenden Kompilierungen. Nachfolgende Kompilierungen können schneller mit vorkompilierter Code fortzufahren.  
+Die erste Kompilierung, derjenige, der die vorkompilierte Headerdatei (PCH) erstellt, dauert etwas länger als nachfolgende Kompilierungen. Nachfolgende Kompilierungen können schneller von vorkompilierter Code fortfahren.  
   
-Sie können C- und C++-Programme vorkompilieren. In C++-Programmierung ist es gängige Praxis, Informationen über die connectorklasse-Schnittstelle in Headerdateien zu trennen. Diese Headerdateien können später in Programmen eingefügt werden, die die Klasse verwenden. Durch das Vorkompilieren von diese Header, können Sie die Zeit reduzieren, die ein Programm zum Kompilieren benötigt.  
+Sie können C- und C++-Programme vorkompilieren. In C++-Programmierung ist es üblich, Informationen von Klasse-Schnittstelle in Headerdateien zu trennen. Dieser Header-Dateien können später in Programme enthalten sein, die die Klasse zu verwenden. Durch eine Vorkompilierung diese Header, können Sie die Zeit reduzieren dauert ein Programm um zu kompilieren.  
   
 > [!NOTE]
 >  Obwohl Sie nur eine vorkompilierte Headerdatei (.pch) pro Quelldatei verwenden können, können Sie mehrere PCH-Dateien in einem Projekt verwenden.  
@@ -73,59 +73,59 @@ Sie können C- und C++-Programme vorkompilieren. In C++-Programmierung ist es g�
   
 # <a name="two-choices-for-precompiling-code"></a>Zwei Methoden für das Vorkompilieren von Code  
   
-Mit Visual C++ können Sie alle C- oder C++-Code Vorkompilieren; Sie sind nicht zum Vorkompilieren der Header-Dateien beschränkt.  
+Mit Visual C++ können Sie jeder C- oder C++-Code Vorkompilieren; Sie sind nicht auf das Vorkompilieren von nur-Header-Dateien beschränkt.  
   
-Vorkompilieren von Planung erforderlich, aber bedeutend schnellere Kompilierungen bietet, wenn Sie den Quellcode als einfache Headerdateien vorkompilieren.  
+Das Vorkompilieren erfordert Planung, aber es bietet wesentlich schnellere Kompilierungen, wenn Sie Quellcode als einfache Headerdateien vorkompilieren.  
   
-Vorkompilieren Sie Code an, wenn Sie wissen, dass die Quelldateien gemeinsame Headerdateien verwenden, aber Sie sie nicht in der gleichen Reihenfolge schließen oder wenn der Quellcode in die Vorkompilierung enthalten sein sollen.  
+Vorkompilieren Sie Code an, wenn Sie wissen, dass die Quelldateien, Headerdateien gemeinsame verwenden, aber Sie sie nicht in der gleichen Reihenfolge schließen oder wenn Sie Quellcode in die Vorkompilierung einbeziehen möchten.  
   
-Die Optionen für vorkompilierte Header sind [/Yc (Datei der vorkompilierten Header erstellen)](../../build/reference/yc-create-precompiled-header-file.md) und [/Yu (vorkompilierte Headerdatei verwenden)](../../build/reference/yu-use-precompiled-header-file.md). Verwendung **"/ Yc"** einen vorkompilierten Header zu erstellen. Bei Verwendung mit dem optionalen [Hdrstop](../../preprocessor/hdrstop.md) Pragma **"/ Yc"** können Sie beide Headerdateien vorkompilieren und Quellcode. Wählen Sie **"/ Yu"** auf eine vorhandene vorkompilierte Headerdatei in der bestehenden Kompilierung zu verwenden. Sie können auch **/fp** mit der **"/ Yc"** und **"/ Yu"** Optionen aus, um einen alternativen Namen für die vorkompilierte Headerdatei anzugeben.  
+Die Optionen für vorkompilierte Header sind ["/ Yc" (Erstellen vorkompilierter Headerdatei)](../../build/reference/yc-create-precompiled-header-file.md) und [/Yu (vorkompilierte Headerdatei verwenden)](../../build/reference/yu-use-precompiled-header-file.md). Verwendung **"/ Yc"** einen vorkompilierten Header erstellen. Bei Verwendung mit dem optionalen [Hdrstop](../../preprocessor/hdrstop.md) Pragma **"/ Yc"** können Sie beide Headerdateien vorkompilieren und Quellcode. Wählen Sie **"/ Yu"** auf eine vorhandene vorkompilierte Headerdatei in der vorhandenen Kompilierung verwenden. Sie können auch **/fp** mit der **"/ Yc"** und **"/ Yu"** Optionen, um einen alternativen Namen für die vorkompilierte Headerdatei anzugeben.  
   
-Der Compiler Option Referenzthemen für **"/ Yu"** und **"/ Yc"** wird erläutert, wie den Zugriff auf diese Funktionen in der Entwicklungsumgebung.  
+Die Compiler-Option-Referenzthemen für **"/ Yu"** und **"/ Yc"** beschrieben, wie diese Funktionalität in der Entwicklungsumgebung zugreifen.  
   
 <a name="precompiled-header-consistency-rules"></a>  
   
 ## <a name="precompiled-header-consistency-rules"></a>Konsistenzregeln für vorkompilierte Header  
   
-Da PCH-Dateien Informationen über die Umgebung des Computers sowie Arbeitsspeicher Adressinformationen über das Programm enthalten, sollten Sie nur eine PCH-Datei auf dem Computer verwenden, in dem es erstellt wurde.  
+Da PCH-Dateien mit Informationen über die computerumgebung sowie die Arbeitsspeicher-Adressinformationen über das Programm enthält, sollten Sie nur eine PCH-Datei auf dem Computer verwenden, der es erstellt wurde.  
   
 <a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>  
   
 ## <a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>Konsistenzregeln zur Verwendung einer vorkompilierten Headerdatei
 
-Die ["/ Yu"](../../build/reference/yu-use-precompiled-header-file.md) -Compileroption können Sie angeben, welche PCH-Datei zu verwenden.  
+Die ["/ Yu"](../../build/reference/yu-use-precompiled-header-file.md) -Compileroption können Sie angeben, welche PCH-Datei verwendet.  
   
-Wenn Sie eine PCH-Datei verwenden, nimmt der Compiler an die gleichen kompilierungsumgebung – denen eine konsistente Compileroptionen, Pragmas usw. –, die gültig war beim Erstellen der PCH-Datei, sofern nicht anders angegeben. Wenn der Compiler eine Inkonsistenz erkannt wird, eine Warnung ausgegeben und Inkonsistenzen bezeichnet, sofern möglich. Solche Warnungen deuten nicht zwangsläufig auf ein Problem mit der PCH-Datei auf; Sie warnen lediglich vor möglichen Konflikten. Konsistenzanforderungen für PCH-Dateien werden in den folgenden Abschnitten beschrieben.  
+Wenn Sie eine PCH-Datei verwenden, nimmt der Compiler an die gleichen kompilierungsumgebung – konsistente Compileroptionen, Pragmas, usw. verwendet –, die gültig war bei der Erstellung der PCH-Datei, es sei denn, Sie nichts anderes angeben. Wenn der Compiler eine Inkonsistenz erkannt wird, eine Warnung ausgegeben und Inkonsistenzen identifiziert, wenn möglich. Diese Warnungen bedeuten nicht unbedingt ein Problem mit der PCH-Datei; Diese Warnung einfach über mögliche Konflikte. Konsistenzanforderungen für PCH-Dateien werden in den folgenden Abschnitten beschrieben.  
   
 ### <a name="compiler-option-consistency"></a>Konsistenz von Compileroptionen  
   
-Die folgenden Compileroptionen können eine Inkonsistenz Warnung ausgeben, wenn es sich bei einer PCH-Datei:  
+Die folgenden Compileroptionen können Sie bei Verwendung einer PCH-Datei eine Inkonsistenz Warnung auslösen:  
   
--   Makros, die mit der Präprozessor erstellt (/ D) Option muss zwischen der Kompilierung, die die PCH-Datei erstellt und der aktuellen Kompilierung identisch sein. Der Status der definierten Konstanten nicht aktiviert ist, jedoch zu unvorhersehbaren Ergebnissen führt können auftreten, wenn diese ändern.  
+-   Makros, die mit der Präprozessor erstellt (/ D)-Option muss der Kompilierung, die die PCH-Datei erstellt und der aktuellen Kompilierung identisch sein. Der Status der definierten Konstanten nicht aktiviert ist, jedoch zu unvorhersehbaren Ergebnissen können auftreten, wenn diese ändern.  
   
--   PCH-Dateien funktionieren nicht mit den Optionen/e und/EP.  
+-   PCH-Dateien funktionieren nicht mit den Optionen/e "und" / EP.  
   
--   PCH-Dateien müssen erstellt werden, entweder die generieren durchsuchen Info verwenden (/ FR)-Option oder der lokalen Variablen ausschließen (/ Fr) option vor der nachfolgende Kompilierungen, die die PCH-Datei verwenden, diese Optionen verwenden können.  
+-   PCH-Dateien müssen erstellt werden, verwenden entweder die generieren durchsuchen Informationen (/ FR)-Option oder der lokalen Variablen ausschließen (/ "fr") option, damit nachfolgende Kompilierungen, die die PCH-Datei verwenden, diese Optionen verwenden können.  
   
-### <a name="c-70-compatible-z7"></a>C 7.0-kompatibel (/ Z7)  
+### <a name="c-70-compatible-z7"></a>C# 7.0-kompatibel (/ Z7)  
   
 Wenn diese Option aktiviert ist, wenn die PCH-Datei erstellt wird, können nachfolgende Kompilierungen, die die PCH-Datei verwenden, die Debuginformationen.  
   
-Wenn die C 7.0-kompatibel (/ Z7) Option ist nicht gültig, wenn die PCH-Datei erstellt wird, Kompilierungen, die PCH-Datei, und "/ Z7" verwenden, eine Warnung ausgelöst. Die Debuginformationen werden in der aktuellen OBJ-Datei, und lokale Symbole in der PCH-Datei definiert sind nicht verfügbar, die im Debugger.  
+Wenn die C# 7.0-kompatibel (/ Z7) Option ist nicht gültig, wenn die PCH-Datei erstellt wird, die nachfolgende Kompilierungen, die PCH-Datei, und "/ Z7" verwenden, eine Warnung ausgelöst. Die Debuginformationen werden in der aktuellen OBJ-Datei, und lokale Symbole in der PCH-Datei definiert sind nicht an den Debugger verfügbar.  
   
-### <a name="include-path-consistency"></a>Pfad Konsistenz einschließen  
+### <a name="include-path-consistency"></a>Pfad-Konsistenz einschließen  
   
-PCH-Datei enthält Informationen zum Includepfad keine, die gültig war, wenn er erstellt wurde. Wenn Sie eine PCH-Datei verwenden, verwendet der Compiler immer den Include-Pfad in der aktuellen Kompilierung angegeben.  
+PCH-Datei enthält keine Informationen zu den Includepfad, die gültig war, wenn es erstellt wurde. Wenn Sie eine PCH-Datei verwenden, verwendet der Compiler immer die Include-Pfad, in der aktuellen Kompilierung angegeben.  
   
-### <a name="source-file-consistency"></a>Quelle Konsistenz  
+### <a name="source-file-consistency"></a>Konsistenz der Source-Datei  
   
-Wenn Sie die Option für die vorkompilierte Headerdatei verwenden (/ Yu) angeben, ignoriert der Compiler alle Präprozessordirektiven (einschließlich Pragmas) im Quellcode, der vorkompiliert werden soll. Durch solche Präprozessordirektiven festgelegte Kompilierung muss identisch mit der Kompilierung für die vorkompilierte Headerdatei erstellen (/ Yc)-Option verwendet werden.  
+Wenn Sie die Option für die vorkompilierte Headerdatei verwenden (/ Yu) angeben, ignoriert der Compiler alle Präprozessordirektiven (einschließlich Pragmas), die im Quellcode angezeigt werden, die vorkompiliert werden soll. Die Kompilierung durch solche Präprozessordirektiven angegeben muss identisch mit der Kompilierung für die vorkompilierte Headerdatei erstellen (/ Yc)-Option verwendet werden.  
   
 ### <a name="pragma-consistency"></a>Pragma-Konsistenz    
   
-Pragmas, die in der Regel während der Erstellung einer PCH-Datei verarbeitet wirken sich auf die Datei, mit der die PCH-Datei anschließend verwendet wird. Die `comment` und `message` Pragmas wirken sich nicht auf den Rest der Kompilierung.  
+Pragmas, die in der Regel während der Erstellung einer PCH-Datei verarbeitet Auswirkungen auf die Datei mit der später die PCH-Datei verwendet wird. Die `comment` und `message` Pragmas wirken sich nicht auf den Rest der Kompilierung.  
   
-Diese Pragmas beeinflussen nur den Code innerhalb der PCH-Datei; Sie haben keine Auswirkungen auf Code, der anschließend die PCH-Datei verwendet:  
+Diese Pragmas beeinflussen nur den Code in die PCH-Datei; Sie haben keine Auswirkungen auf Code, der anschließend die PCH-Datei verwendet:  
   
 ||||  
 |-|-|-|  
@@ -133,7 +133,7 @@ Diese Pragmas beeinflussen nur den Code innerhalb der PCH-Datei; Sie haben keine
 |`linesize`|`pagesize`|`title`|  
 |`message`|`skip`||  
   
-Diese Pragmas als Teil einer vorkompilierten Headerdatei beibehalten werden und Einfluss auf den Rest der Kompilierung, die des vorkompilierten Headers verwendet:  
+Diese Pragmas, die als Teil eines vorkompilierten Headers beibehalten werden und Auswirkungen auf den Rest der Kompilierung, die in der vorkompilierten Headerdatei verwendet:  
   
 ||||  
 |-|-|-|  
@@ -148,61 +148,61 @@ Diese Pragmas als Teil einer vorkompilierten Headerdatei beibehalten werden und 
   
 ## <a name="consistency-rules-for-yc-and-yu"></a>Konsistenzregeln für "/Yc" und "/Yu"  
   
-Bei Verwendung einer vorkompilierten Headerdatei, die mit "/ Yc" oder "/ Yu" erstellt vergleicht der Compiler der aktuellen kompilierungsumgebung demjenigen, den befanden, während Sie die PCH-Datei erstellt. Achten Sie darauf, dass Sie eine Umgebung, die konsistent mit der vorherigen Abfrage (mit konsistenten Compileroptionen, Pragmas, usw.) für die aktuelle Kompilierung angeben. Wenn der Compiler eine Inkonsistenz erkannt wird, eine Warnung ausgegeben und Inkonsistenzen bezeichnet, sofern möglich. Solche Warnungen nicht unbedingt auf ein Problem mit der PCH-Datei hinweisen; Sie warnen lediglich vor möglichen Konflikten. In den folgenden Abschnitten wird erläutert, die konsistenzanforderungen für vorkompilierten Header.  
+Bei Verwendung ein vorkompiliertes Headers, der mit "/ Yc" oder "/ Yu" erstellt, vergleicht der Compiler der aktuellen kompilierungsumgebung demjenigen, den vorhanden waren, als Sie die PCH-Datei erstellt. Achten Sie darauf, um eine Umgebung, die konsistent mit dem vorherigen Beispiel (mit konsistenten Compileroptionen, Pragmas, usw.) für die aktuelle Kompilierung anzugeben. Wenn der Compiler eine Inkonsistenz erkannt wird, eine Warnung ausgegeben und Inkonsistenzen identifiziert, wenn möglich. Diese Warnungen angeben nicht unbedingt ein Problem mit der PCH-Datei; Diese Warnung einfach über mögliche Konflikte. In den folgenden Abschnitten wird erläutert, die konsistenzanforderungen für vorkompilierte Header.  
   
 ### <a name="compiler-option-consistency"></a>Konsistenz von Compileroptionen  
   
-Diese Tabelle enthält Optionen für den Compiler, die eine Inkonsistenz Warnung auslösen könnte bei Verwendung einer vorkompilierten Headerdatei an:  
+Diese Tabelle enthält die Compileroptionen, die eine Inkonsistenz Warnung auslösen könnte, wenn Sie einen vorkompilierten Header verwenden:  
   
 |Option|name|Regel|  
 |------------|----------|----------|  
-|/D|Definieren von Konstanten und Makros|Zwischen der Kompilierung, die den vorkompilierten Header erstellt und der aktuellen Kompilierung identisch sein muss. Der Status der definierten Konstanten wird nicht überprüft, aber zu unvorhersehbaren Ergebnissen führt können auftreten, wenn die Dateien von den Werten der geänderten Konstanten abhängen.|  
-|/ E oder/EP|Kopieren der Präprozessorausgabe in die Standardausgabe|Vorkompilierte Header funktionieren nicht mit der Option/e oder/EP.|  
-|/ FR oder/fr|Microsoft Source Browserinformationen generieren|Für die Optionen "/ fr und/fr" mit der Option "/ Yu" gültig ist muss auch faktisch gewesen, wenn der vorkompilierte Header erstellt wurde. Nachfolgende Kompilierungen, die Verwendung des vorkompilierten Headers generieren auch Browserinformationen Quelle. Browserinformationen befindet sich in einer einzelnen SBR-Datei und anderen Dateien auf die gleiche Weise wie Codeansichtsinformationen verwiesen wird. Sie können die Platzierung der Quelle Browserinformationen nicht überschreiben.|  
-|/ GA/GD, / ge/GW oder/GW|Windows-Protokolloptionen|Zwischen der Kompilierung, die den vorkompilierten Header erstellt und der aktuellen Kompilierung identisch sein muss. Wenn diese Optionen voneinander abweichen, führt eine Warnmeldung angezeigt.|  
-|/ZI|Vollständige Debuginformationen generieren|Wenn diese Option aktiviert ist, wenn der vorkompilierte Header erstellt wird, können nachfolgende Kompilierungen, die die Vorkompilierung verwenden, Debuginformationen zu verwenden. Kompilierungen, die Vorkompilierung und die/ZI-Option verwenden, wenn/Zi nicht aktiviert ist, wenn der vorkompilierte Header erstellt wird, eine Warnung ausgelöst. Die Debuginformationen in der aktuellen Objektdatei platziert wird, und lokale Symbole im vorkompilierten Header definiert sind nicht verfügbar, die im Debugger.|  
+|/D|Definieren von Konstanten und Makros|Zwischen der Kompilierung, die Erstellen des vorkompilierten Headers und der aktuellen Kompilierung identisch sein muss. Der Status der definierten Konstanten nicht aktiviert ist, jedoch zu unvorhersehbaren Ergebnissen können auftreten, wenn Ihre Dateien auf den Werten der Konstanten geänderten abhängig sind.|  
+|/ E "oder" / EP|Kopieren der Präprozessorausgabe in die Standardausgabe|Vorkompilierte Header funktionieren nicht mit der Option/e "oder" / EP.|  
+|/ FR oder/fr|Microsoft Source Browserinformationen generieren|Für die Optionen "/ fr und/fr" mit der Option "/ Yu" gültig ist müssen sie in Kraft bereits haben als die vorkompilierte Header erstellt wurde. Nachfolgende Kompilierungen, die Verwendung des vorkompilierten Headers generieren auch Quellbrowser Informationen. Browserinformationen in einer einzelnen SBR-Datei befindet und von anderen Dateien verwiesen wird, auf die gleiche Weise wie CodeView-Informationen. Die Platzierung von Browserinformationen Quelle kann nicht überschrieben werden.|  
+|/ GA, / GD, / ge, "/ GW" oder "/ GW"|Windows-Protokoll-Optionen|Zwischen der Kompilierung, die Erstellen des vorkompilierten Headers und der aktuellen Kompilierung identisch sein muss. Wenn diese Optionen unterscheiden, führt eine Warnmeldung angezeigt.|  
+|/ZI|Vollständige Debuginformationen generieren|Wenn diese Option aktiviert ist, wenn der vorkompilierte Header erstellt wird, können nachfolgende Kompilierungen, die die Vorkompilierung zu verwenden, Informationen zum Debuggen verwenden. Wenn "/ Zi" nicht aktiviert ist, wenn der vorkompilierte Header erstellt wird, wird eine Warnung von Kompilierungen, die verwenden die Vorkompilierung sowie die Option "/ Zi" ausgelöst. Die Debuginformationen in der aktuellen Objektdatei platziert wird, und in der vorkompilierten Headerdatei definierte lokale Symbole sind nicht an den Debugger verfügbar.|  
   
 > [!NOTE]
->  Die vorkompilierte Header-Funktion ist nur in C und C++-Quelldateien vorgesehen.  
+>  Die vorkompilierte Header-Funktion dient nur in C und C++-Quelldateien.  
   
 <a name="using-precompiled-headers-in-a-project"></a>  
   
 ## <a name="using-precompiled-headers-in-a-project"></a>Verwenden von vorkompilierten Headern in einem Projekt  
   
-Vorherigen Abschnitte enthalten eine Übersicht über vorkompilierter Header: "/ Yc" und "/ Yu", die/Fp-Option und die [Hdrstop](../../preprocessor/hdrstop.md) Pragma. In diesem Abschnitt wird beschrieben, eine Methode für die Verwendung der manuellen Optionen für vorkompilierte Header in einem Projekt; Der Abschnitt endet mit einer Beispiel-Makefile und den Code, den er verwaltet.  
+Frühere Abschnitte enthalten eine Übersicht über vorkompilierte Header: "/ Yc" und "/ Yu" die Option/fp und [Hdrstop](../../preprocessor/hdrstop.md) Pragma. In diesem Abschnitt wird beschrieben, eine Methode für die manuellen Optionen für vorkompilierte Header in einem Projekt verwenden; Es endet mit einer Beispiel-Makefile und den Code, den er verwaltet.  
   
-Untersuchen Sie für einen anderen Ansatz, verwenden die manuellen Optionen für vorkompilierte Header in einem Projekt den Makefiles befindet sich im Verzeichnis MFC\SRC, das bei der Standardinstallation von Visual C++ erstellt wird. Diese Makefiles einen ähnlichen Ansatz mit dem in diesem Abschnitt dargestellt werden, aber größer Nutzen von Microsoft Program Maintenance Utility (NMAKE) Makros und bieten mehr Kontrolle des Buildprozesses.  
+Sehen Sie sich für einen anderen Ansatz verwenden Sie die manuellen Optionen für vorkompilierte Header in einem Projekt den Makefiles MFC\SRC im Verzeichnis, das bei der Standardinstallation von Visual C++ erstellt wird. Diese Makefiles nehmen einen ähnlichen Ansatz, mit dem in diesem Abschnitt dargestellt, aber stärkerer Einsatz der Microsoft Program Maintenance Utility (NMAKE) Makros und bieten mehr Kontrolle des Buildprozesses.  
   
 <a name="pch-files-in-the-build-process"></a>  
   
 ## <a name="pch-files-in-the-build-process"></a>PCH-Dateien im Erstellungsvorgang  
   
-Die Codebasis des einem Softwareprojekt ist normalerweise in mehrere C oder C++-Quelldateien, Objektdateien, Bibliotheken und Header-Dateien enthalten. In der Regel koordiniert ein Makefile die Kombination dieser Elemente in einer ausführbaren Datei. Die folgende Abbildung zeigt die Struktur eines Makefiles, das eine vorkompilierte Headerdatei verwendet. Die Namen der NMAKE-Makros und die Dateinamen in diesem Diagramm sind mit denen in für Beispielcode, der konsistent [Beispielmakefile für PCH](#sample-makefile-for-pch) und [Beispielcode für PCH](#example-code-for-pch).  
+Die Codebasis eines Softwareprojekts ist in mehrere C oder C++-Quelldateien, Objektdateien, Bibliotheken und Headerdateien in der Regel enthalten. Makefile-Koordinaten in der Regel die Kombination dieser Elemente in eine ausführbare Datei. Die folgende Abbildung zeigt die Struktur eines Makefiles, das eine vorkompilierte Headerdatei verwendet. Die Namen der NMAKE-Makros und die Dateinamen in diesem Diagramm sind konsistent zu denjenigen sind im Beispielcode finden Sie im [Beispielmakefile für PCH](#sample-makefile-for-pch) und [Beispielcode für PCH](#example-code-for-pch).  
   
-Die Abbildung verwendet drei Verbindungskabel als Diagramm Medien, um den Fluss des Buildprozesses anzuzeigen. Jede Datei bzw. das Makro die benannt werden Rechtecke darstellen. die drei Makros stellen eine oder mehrere Dateien dar. Schattierte Bereiche darstellen, jede Kompilier- oder Aktion. Pfeile zeigen, welche Dateien und Makros während der Kompilierung oder Verknüpfungsvorgang kombiniert werden.  
+In der Abbildung verwendet drei DSL-Geräte, um den Fluss des Buildprozesses anzuzeigen. Jede Datei bzw. das Makro die benannt werden Rechtecke darstellen. die drei Makros stellen eine oder mehrere Dateien dar. Schattierte Flächen darstellen, jede Kompilier- oder Aktion. Pfeile zeigen, welche Dateien und Makros während der Kompilierung oder Verknüpfungsvorgang kombiniert werden.  
   
-![Makefiles, das eine vorkompilierte Headerdatei verwendet](../../build/reference/media/vc30ow1.gif "Struktur eines Makefiles, das eine vorkompilierte Headerdatei verwendet")  
+![Makefile mit vorkompilierter Headerdatei](../../build/reference/media/vc30ow1.gif "Struktur eines Makefiles, das eine vorkompilierte Headerdatei verwendet")  
 ##### <a name="structure-of-a-makefile-that-uses-a-precompiled-header-file"></a>Struktur eines Makefiles, das eine vorkompilierte Headerdatei verwendet  
   
-Am oberen Rand des Diagramms sind STABLEHDRS und ist NMAKE-Makros, die in denen Sie Dateien, die wahrscheinlich nicht benötigt, die Neukompilierung auflisten. Diese Dateien werden von der Befehlszeichenfolge kompiliert.  
+Am oberen Rand der Abbildung befinden sich sowohl STABLEHDRS und ist NMAKE-Makros, die in denen Sie Dateien, die wahrscheinlich nicht benötigen eine Neukompilierung aufgelistet. Diese Dateien werden durch die Befehlszeichenfolge kompiliert.  
   
 `CL /c /W3 /Yc$(BOUNDRY) applib.cpp myapp.cpp`  
   
-nur, wenn die vorkompilierte Headerdatei (STABLE.pch) nicht vorhanden ist oder wenn Sie die Dateien ändern, die in die beiden Makros aufgelistet werden. In beiden Fällen enthält die vorkompilierte Headerdatei Code nur aus den Dateien im Makro STABLEHDRS aufgelistet. Liste der letzten Datei, in dem ist-Makro vorkompiliert werden soll.  
+nur, wenn die vorkompilierte Headerdatei (STABLE.pch) nicht vorhanden ist oder wenn Sie Änderungen an Dateien vornehmen, die in die beiden Makros aufgelistet werden. In beiden Fällen enthält die vorkompilierten Header-Datei Code nur aus den Dateien in das Makro STABLEHDRS aufgelistet. Führen Sie die letzte Datei, in das Makro ist vorkompiliert werden soll.  
   
-Die Dateien, die Sie in diesen Makros auflisten möglich Headerdateien oder C- oder C++-Quelldateien. (Eine einzelne PCH-Datei kann nicht mit C- und C++-Modulen verwendet werden.) Beachten Sie, die Sie verwenden können, die **Hdrstop** Makro Vorkompilierung irgendwann in der Datei ist beendet. Finden Sie unter [Hdrstop](../../preprocessor/hdrstop.md) für Weitere Informationen.  
+Die Dateien, die Sie in diesen Makros auflisten können entweder "Headerdateien" oder "C oder C++-Quelldateien sein. (Eine einzelne PCH-Datei kann nicht mit C und C++ Module verwendet werden.) Beachten Sie, mit denen Sie die **Hdrstop** Makro zum Beenden der Vorkompilierung an einem bestimmten Punkt in der Datei ist. Finden Sie unter [Hdrstop](../../preprocessor/hdrstop.md) für Weitere Informationen.  
   
-Fortfahren nach unten im Diagramm stellt APPLIB.obj Unterstützungscode, die in der endgültigen Anwendung verwendet. Sie wird aus APPLIB.cpp erstellt, die Dateien im Makro UNSTABLEHDRS aufgeführt und vorkompilierter Code aus dem vorkompilierten Header.  
+Im Diagramm abwärts APPLIB.obj die stellt Unterstützungscode dar, die in der fertigen Anwendung verwendet. Sie wird aus APPLIB.cpp erstellt, die Dateien in das Makro UNSTABLEHDRS aufgeführt und vorkompiliertem Code aus dem vorkompilierten Header.  
   
-MYAPP.obj stellt die endgültige Anwendung dar. Sie wird aus MYAPP.cpp erstellt, die Dateien im Makro UNSTABLEHDRS aufgeführt und vorkompilierter Code aus dem vorkompilierten Header.  
+MYAPP.obj stellt die endgültige Anwendung dar. Sie wird aus MYAPP.cpp erstellt, die Dateien in das Makro UNSTABLEHDRS aufgeführt und vorkompiliertem Code aus dem vorkompilierten Header.  
   
-Zum Schluss die ausführbare Datei ("MyApp". EXE-Datei) wird erstellt, indem Sie eine Verknüpfung im OBJS Makro (APPLIB.obj und MYAPP.obj) aufgelisteten Dateien.  
+Zum Schluss die ausführbare Datei ("MyApp". EXE-Datei) wird durch die aufgelisteten Dateien in der OBJ-Dateien-Makro (APPLIB.obj und MYAPP.obj) erstellt.  
   
 <a name="sample-makefile-for-pch"></a>  
   
 ## <a name="sample-makefile-for-pch"></a>Beispielmakefile für PCH  
   
-Die folgenden Makefile verwendet Makros und ein! IF-! #ELSE! ENDIF flusssteuerung Befehl-Struktur, die die Anpassung an das Projekt zu vereinfachen.  
+Das folgende Makefile verwendet Makros und ein! IF! #ELSE! ENDIF-flusssteuerung-Befehl-Struktur, die die Anpassung an das Projekt zu vereinfachen.  
   
 ```NMAKE  
 # Makefile : Illustrates the effective use of precompiled  
@@ -248,15 +248,15 @@ stable.pch : $(STABLEHDRS)
     $(CPP) $(CLFLAGS) /Yc$(BOUNDRY)    applib.cpp myapp.cpp  
 ```  
   
-Abgesehen von den STABLEHDRS ist und UNSTABLEHDRS Makros, die in der Abbildung "Struktur von einer Makefile, verwendet eine vorkompilierte Headerdatei" dargestellt wird, [PCH-Dateien im Erstellungsvorgang](#pch-files-in-the-build-process), dieses Makefile bietet ein CLFLAGS-Makro sowie ein LINKFLAGS Makro. Sie müssen diese Makros verwenden, um die Liste von Linkeroptionen für Compiler und, die angewendet werden, ob eine Debug- oder eine endgültige Version der ausführbaren Datei der Anwendung erstellt werden. Es gibt auch ein Makro BIBLIOTHEKEN, in dem Sie die Bibliotheken auflisten, das Projekt erforderlich ist.  
+Abgesehen von den STABLEHDRS ist und UNSTABLEHDRS Makros, die in der Abbildung "Struktur von ein Makefile, verwendet eine vorkompilierte Headerdatei" dargestellt wird, [PCH-Dateien im Erstellungsvorgang](#pch-files-in-the-build-process), dieses Makefile bietet ein CLFLAGS-Makro und ein LINKFLAGS -Makro. Sie müssen diese Makros verwenden, um aufzulisten, Compiler- und Linkeroptionen, die angewendet werden, ob eine Debug- oder endgültige Version der ausführbaren Datei der Anwendung erstellt werden. Darüber hinaus wird ein Makro BIBLIOTHEKEN, in dem Sie die Bibliotheken Ihrem Projekt ist erforderlich.  
   
-Das Makefile verwendet auch! IF-! #ELSE! ENDIF, um festzustellen, ob Sie eine DEBUG-Symbol in der Befehlszeile NMAKE definieren:  
+Das Makefile verwendet auch! IF! #ELSE! ENDIF, um festzustellen, ob Sie über ein DEBUG-Symbol in der Befehlszeile NMAKE definieren:  
   
 ```NMAKE  
 NMAKE DEBUG=[1|0]  
 ```  
   
-Diese Funktion ermöglicht das für die Verwendung der gleichen Makefiles während der Entwicklung und für die letzten Versionen des Programms – verwenden Sie DEBUG = 0 für den endgültigen Produktversionen. Die folgenden Befehlszeilen sind gleichwertig:  
+Dieses Feature ermöglicht es für Sie mit der gleichen Makefile während der Entwicklung und für die endgültigen Versionen des Programms – verwenden Sie DEBUG = 0 für die endgültigen Versionen. Die folgenden Befehlszeilen sind gleichwertig:  
   
 ```NMAKE  
 NMAKE   
@@ -269,7 +269,7 @@ Weitere Informationen zu Makefiles finden Sie unter [NMAKE-Referenz](../../build
   
 ## <a name="example-code-for-pch"></a>Beispielcode für PCH  
   
-Die folgenden Quelldateien werden in die in beschriebenen Makefile verwendet [PCH-Dateien im Erstellungsvorgang](#pch-files-in-the-build-process) und [Beispielmakefile für PCH](#sample-makefile-for-pch). Beachten Sie, dass die Kommentare wichtige Informationen enthalten.  
+Die folgenden Quelldateien werden verwendet, in dem beschriebenen Makefile [PCH-Dateien im Erstellungsvorgang](#pch-files-in-the-build-process) und [Beispielmakefile für PCH](#sample-makefile-for-pch). Beachten Sie, dass die Kommentare wichtige Informationen enthalten.  
   
 ```cpp  
 // ANOTHER.H : Contains the interface to code that is not  
