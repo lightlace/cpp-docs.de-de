@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d1055c0865988edf9b54539c0d214cebcda13735
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6baefb7ef0af5054cb46ed4ad74b6a6bf80fbb61
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220419"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699920"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -46,8 +46,8 @@ Die Standardschnittstelle, die für Skriptumgebungen verfügbar gemacht wird, di
 
 Wenn keine Standardschnittstelle angegeben wird, wird das erste Vorkommen einer Nicht-Quellschnittstelle als Standard verwendet.
 
-*interface2*(optional)  
-Die Standard-Quellschnittstelle. Sie müssen diese Schnittstelle auch beim [source](../windows/source-cpp.md) -Attribut angeben.
+*Interface2*<br/>
+(Optional) Die Standard-Quellschnittstelle. Sie müssen diese Schnittstelle auch beim [source](../windows/source-cpp.md) -Attribut angeben.
 
 Wenn keine Standard-Quellschnittstelle angegeben ist, wird die erste Quellschnittstelle als Standard verwendet.
 
