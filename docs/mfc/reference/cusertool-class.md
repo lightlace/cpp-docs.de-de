@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90972e39bbad812f820452816ff3df982174539f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 577e4b4e7bf54742035c8b4333d345ca894501ac
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202975"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708993"
 ---
 # <a name="cusertool-class"></a>CUserTool-Klasse
 Ein Benutzertool ist ein Menüelement, das eine externe Anwendung ausführt. Die **Tools** auf der Registerkarte die **anpassen** (Dialogfeld) ( [CMFCToolBarsCustomizeDialog-Klasse](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) ermöglicht es dem Benutzer, Benutzertools hinzuzufügen, und geben den Namen, den Befehl, die Argumente und ursprüngliche Verzeichnis für jedes benutzertool.  
@@ -122,11 +122,11 @@ void DrawToolIcon(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *RectImage*  
- Gibt die Koordinaten des Bereichs, um das Symbol anzuzeigen.  
+*rectImage*<br/>
+[in] Gibt die Koordinaten des Bereichs, um das Symbol anzuzeigen.  
   
 ##  <a name="getcommand"></a>  CUserTool::GetCommand  
  Gibt eine Zeichenfolge mit dem Text des Befehls mit dem benutzertool verknüpft ist.  
@@ -223,8 +223,8 @@ void SetCommand(LPCTSTR lpszCmd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszCmd*  
- Gibt die neue Anwendung mit dem benutzertool zugeordnet werden soll.  
+*lpszCmd*<br/>
+[in] Gibt die neue Anwendung mit dem benutzertool zugeordnet werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um eine neue Anwendung festlegen, die die benutzertool ausgeführt wird. Die Methode zerstört das alte Symbol und ein neues Symbol aus der angegebenen Anwendung lädt. Wenn sie ein Symbol aus der Anwendung nicht geladen werden kann, laden Sie das Standardsymbol für ein Tool durch Aufrufen von [CUserTool::LoadDefaultIcon](#loaddefaulticon).  

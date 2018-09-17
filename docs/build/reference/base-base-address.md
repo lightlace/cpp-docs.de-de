@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c43e01a1417710751bf0604e5365beaf143a293
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 1f6f287f98b542a3d8eb24f9cc2b5e725e27dceb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895213"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725971"
 ---
 # <a name="base-base-address"></a>/BASE (Basisadresse)
 
@@ -60,11 +60,11 @@ In der Befehlszeile ist eine weitere Möglichkeit zum Angeben der Basisadresse m
 
 Die *Schlüssel* ist eine Zeichenfolge mit alphanumerischen Zeichen und wird Groß-/ Kleinschreibung nicht berücksichtigt. Dies ist normalerweise der Name einer DLL, aber nicht zwingend erforderlich. Die *Schlüssel* gefolgt von einer Basis *Adresse* in der Programmiersprache C, Hexadezimal- oder Dezimalformat Notation und optional eine maximale Größe *Größe*. Alle drei Argumente werden durch Leerzeichen oder Tabstopps getrennt. Der Linker eine Warnung ausgibt, wenn das angegebene *Größe* ist kleiner als der virtuelle Adressraum von der Anwendung erforderlich sind. Ein *Kommentar* angegeben ist, durch ein Semikolon (**;**) und kann auf demselben oder auf einer separaten Zeile. Der Linker ignoriert allen Text aus dem Semikolon am Ende der Zeile. In diesem Beispiel zeigt einen Teil einer solchen Datei:
 
-```  
+```
 main   0x00010000    0x08000000    ; for PROJECT.exe
 one    0x28000000    0x00100000    ; for DLLONE.DLL
 two    0x28100000    0x00300000    ; for DLLTWO.DLL
-```  
+```
 
 Wenn die Datei, die folgenden Zeilen enthält DLLS.txt aufgerufen wird, werden diese Informationen von der folgende Beispielbefehl angewendet:
 
@@ -88,5 +88,5 @@ Eine weitere Möglichkeit zum Festlegen der Basisadresse ist die Verwendung der 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)  
+[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
 [Linkeroptionen](../../build/reference/linker-options.md)

@@ -1,5 +1,5 @@
 ---
-title: -PDBALTPATH (mit alternativen PDB-Pfad) | Microsoft Docs
+title: -PDBALTPATH (alternativen PDB-Pfad verwenden) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,29 +20,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dec06c3d6a8a981a059f173700e716431acc53a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 72c494745fa33c8feeb4955f4542e9db5ed22307
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374088"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718385"
 ---
 # <a name="pdbaltpath-use-alternate-pdb-path"></a>/PDBALTPATH (Use Alternate PDB Path)
-```  
-/PDBALTPATH:pdb_file_name  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Dabei gilt:  
-  
- *pdb_file_name*  
- Der Pfad und der Dateiname für die .pdb-Datei.  
-  
-## <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Option, um einen alternativen Speicherort für die Programmdatenbankdatei (.pdb) in einer kompilierten Binärdatei bereitzustellen. Normalerweise zeichnet der Linker den Speicherort der .pdb-Dateien in den Binärdateien auf, die er produziert. Sie können diese Option verwenden, um einen anderen Pfad und Dateinamen für die .pdb-Datei bereitzustellen. Die mit /PDBALTPATH bereitgestellten Informationen ändern weder den Standort noch den Namen der tatsächlichen .pdb-Datei, sondern sie ändern die Informationen, die der Linker in die Binärdatei schreibt. Damit können Sie einen Pfad bereitstellen, der unabhängig von der Dateistruktur des Buildcomputers ist. Zwei typische Verwendungszwecke für die Option ist die Bereitstellung eines Netzwerkpfads oder einer Datei, die keine Pfadinformationen hat.  
-  
- Der Wert der *Pdb_file_name* kann eine beliebige Zeichenfolge, eine Umgebungsvariable oder **%_PDB%**. Der Linker erweitert eine Umgebungsvariable wie z. B. **"% SystemRoot%"**, auf den Wert. Der Linker definiert die Umgebungsvariablen **%_PDB%** und **%_EXT%**. **%_PDB%** auf den Dateinamen der tatsächlichen .pdb-Datei ohne Pfadinformationen erweitert und **%_EXT%** ist die Erweiterung der generierten ausführbaren Datei.  
-  
-## <a name="see-also"></a>Siehe auch  
- [DUMPBIN-Optionen](../../build/reference/dumpbin-options.md)   
- [/PDBPATH](../../build/reference/pdbpath.md)
+
+```
+/PDBALTPATH:pdb_file_name
+```
+
+## <a name="arguments"></a>Argumente
+
+*pdb_file_name*<br/>
+Der Pfad und der Dateiname für die .pdb-Datei.
+
+## <a name="remarks"></a>Hinweise
+
+Verwenden Sie diese Option, um einen alternativen Speicherort für die Programmdatenbankdatei (.pdb) in einer kompilierten Binärdatei bereitzustellen. Normalerweise zeichnet der Linker den Speicherort der .pdb-Dateien in den Binärdateien auf, die er produziert. Sie können diese Option verwenden, um einen anderen Pfad und Dateinamen für die .pdb-Datei bereitzustellen. Die mit /PDBALTPATH bereitgestellten Informationen ändern weder den Standort noch den Namen der tatsächlichen .pdb-Datei, sondern sie ändern die Informationen, die der Linker in die Binärdatei schreibt. Damit können Sie einen Pfad bereitstellen, der unabhängig von der Dateistruktur des Buildcomputers ist. Zwei typische Verwendungszwecke für die Option ist die Bereitstellung eines Netzwerkpfads oder einer Datei, die keine Pfadinformationen hat.
+
+Der Wert des *Pdb_file_name* kann eine beliebige Zeichenfolge, die eine Umgebungsvariable sein oder **%_PDB%**. Der Linker erweitert eine Umgebungsvariable, wie z. B. **%SystemRoot%**, auf den Wert. Der Linker definiert die Umgebungsvariablen **%_PDB%** und **%_EXT%**. **%_PDB%** wird auf den Namen der tatsächlichen .pdb-Datei ohne Pfadinformationen erweitert und **%_EXT%** ist die Erweiterung der generierten ausführbaren Datei.
+
+## <a name="see-also"></a>Siehe auch
+
+[DUMPBIN-Optionen](../../build/reference/dumpbin-options.md)<br/>
+[/PDBPATH](../../build/reference/pdbpath.md)

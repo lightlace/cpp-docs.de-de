@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: befbf65c8faa74e889d837a0b310eda4bc6fe576
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 227c7d43334419326670dae5fabad28d18ec58a0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676779"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716169"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl-Klasse
 Implementiert eine QuickInfo zu steuern, die die [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md) verwendet, um QuickInfos anzuzeigen.  
@@ -106,8 +106,8 @@ BOOL Create(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWndParent*  
- Ein Zeiger auf das übergeordnete Fenster.  
+*pWndParent*<br/>
+[in] Ein Zeiger auf das übergeordnete Fenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Fenster erfolgreich erstellt wurde. andernfalls "false".  
@@ -130,8 +130,8 @@ void GetLastRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *Rect*  
- Enthält die letzte Position des QuickInfo-Steuerelements.  
+*Rect*<br/>
+[out] Enthält die letzte Position des QuickInfo-Steuerelements.  
   
 ##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
  Blendet das QuickInfo-Steuerelement.  
@@ -148,8 +148,8 @@ void SetTextMargin(int nTextMargin);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nTextMargin*  
- Gibt den Abstand zwischen der QuickInfo-Text-Steuerelement und dem Rahmen des QuickInfo-Fensters. Der Standardwert ist 10 Pixel.  
+*nTextMargin*<br/>
+[in] Gibt den Abstand zwischen der QuickInfo-Text-Steuerelement und dem Rahmen des QuickInfo-Fensters. Der Standardwert ist 10 Pixel.  
   
 ##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
  Zeigt das QuickInfo-Steuerelement.  
@@ -161,11 +161,11 @@ void Track(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Rect*  
- Gibt an, die Position und Größe des QuickInfo-Steuerelements.  
+*Rect*<br/>
+[in] Gibt an, die Position und Größe des QuickInfo-Steuerelements.  
   
- [in] *StrText*  
- Gibt den Text in der QuickInfo angezeigt werden.  
+*strText*<br/>
+[in] Gibt den Text in der QuickInfo angezeigt werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode zeigt das QuickInfo-Steuerelement an die Position und Größe, die anhand des *Rect*. Wenn die Position, Größe und Text nicht seit dem letzten geändert haben, die diese Methode aufgerufen wurde, hat diese Methode keine Auswirkungen.  

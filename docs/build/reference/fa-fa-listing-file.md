@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4014c58a7e562aa632dba62dcac04c835352cbf
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 03b2f4e746632cc91b652ca76587ddad18afd165
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101728"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717963"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (Listendatei)
 
@@ -49,38 +49,38 @@ Standardmäßig jede Listendatei Ruft den gleichen Basisnamen wie die Quelldatei
 
 ### <a name="fa-arguments"></a>/ FA-Argumente
 
-Keine  
+Keine<br/>
 Nur die Assembler-Sprache ist in der Auflistung enthalten.
 
-**c**  
+**c**<br/>
 Dies ist optional. Enthält Computercode in der Auflistung.
 
-**s**  
+**s**<br/>
 Dies ist optional. Enthält Quellcode in der Auflistung.
 
-**n**  
+**n**<br/>
 Dies ist optional. Codiert im UTF-8-Format Listendatei und umfasst eine Bytereihenfolge. Standardmäßig wird die Datei als ANSI codiert. Verwenden `u` um eine Listendatei zu erstellen, die auf alle Systeme ordnungsgemäß anzeigt, oder wenn Sie Unicode verwenden Quellcodedateien als Eingabe für den Compiler.
 
 Wenn beide **s** und **u** angegeben werden, und wenn eine Quellcodedatei verwendet eine Unicode-Codierung außer UTF-8, und klicken Sie dann auf die Codezeilen in die ASM-Datei eventuell nicht korrekt angezeigt.
 
 ### <a name="fa-argument"></a>/ FA-argument
 
-Keine  
+Keine<br/>
 Eine *Quelle*ASM-Datei wird für jede Quellcodedatei in der Kompilierung erstellt.
 
-*filename*  
+*filename*<br/>
 Eine Listendatei mit dem Namen *Filename*.asm wird im aktuellen Verzeichnis abgelegt. Dies ist nur gültig, beim Kompilieren einer einzelnen Quellcodedatei.
 
-*filename.Extension*  
+*filename.Extension*<br/>
 Eine Listendatei mit dem Namen *filename.extension* befindet sich im aktuellen Verzeichnis. Dies ist nur gültig, beim Kompilieren einer einzelnen Quellcodedatei.
 
-*Verzeichnis*__\\__  
+*Verzeichnis*__\\__<br/>
 Eine *Source_file*ASM-Datei erstellt und platziert Sie in der angegebenen *Directory* für jede Quellcodedatei in der Kompilierung. Beachten Sie den erforderlichen nachgestellten umgekehrten Schrägstrich ein. Nur die Pfade auf dem aktuellen Datenträger sind zulässig.
 
-*Directory*__\\__*Dateiname*  
+*Directory*__\\__*Dateiname*<br/>
 Eine Listendatei mit dem Namen *Filename*.asm befindet sich in der angegebenen *Directory*. Dies ist nur gültig, beim Kompilieren einer einzelnen Quellcodedatei.
 
-*Directory*__\\__*filename.extension*  
+*Directory*__\\__*filename.extension*<br/>
 Eine Listendatei mit dem Namen *filename.extension* befindet sich in der angegebenen *Directory*. Dies ist nur gültig, beim Kompilieren einer einzelnen Quellcodedatei.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
@@ -98,6 +98,7 @@ Das Festlegen sowohl **Assemblyausgabe** und **verwenden Unicode für Assembler 
 - Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerListingLocation%2A> oder <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerOutput%2A>. An **/FAu**, finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="example"></a>Beispiel
+
 Die folgende Befehlszeile produziert eine kombinierte mit Quellcode und Computer-Codelisting HELLO.cod:
 
 ```cmd
@@ -106,7 +107,7 @@ CL /FAcs HELLO.CPP
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ausgabedatei (/ F) Optionen](../../build/reference/output-file-f-options.md)   
-[Compileroptionen](../../build/reference/compiler-options.md)   
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)   
+[Ausgabedatei (/ F) Optionen](../../build/reference/output-file-f-options.md)
+[Compileroptionen](../../build/reference/compiler-options.md)<br/>
+[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
 [Festlegen des Pfadnamens](../../build/reference/specifying-the-pathname.md)

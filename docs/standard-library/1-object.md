@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afb57f408c52f6884c68e93af88671d49815ef69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 156eca047946ad13b1e4f09057edceb9f0bc6b34
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840341"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719185"
 ---
 # <a name="1-object"></a>_1-Objekt
 
@@ -35,12 +35,12 @@ Platzhalter für austauschbare Argumente.
 namespace placeholders {
     extern unspecified _1,
     _2, ... _M
- } // namespace placeholders (within std)
+} // namespace placeholders (within std)
 ```
 
 ## <a name="remarks"></a>Hinweise
 
-Die Objekte `_1, _2, ... _M` sind Platzhalter Festlegen der ersten, zweiten,..., Monat Argument bzw. in einem Funktionsaufruf in ein zurückgegebenes Objekt [binden](../standard-library/functional-functions.md#bind). Sie verwenden `_N`, um anzugeben, wo das n-te Argument bei Auswertung des Bindungsausdrucks eingefügt werden soll.
+Die Objekte `_1, _2, ... _M` sind Platzhalter festlegen, das das erste, zweite,..., n-te Argument in einem Funktionsaufruf in ein Objekt, das von zurückgegebene [binden](../standard-library/functional-functions.md#bind). Sie verwenden `_N`, um anzugeben, wo das n-te Argument bei Auswertung des Bindungsausdrucks eingefügt werden soll.
 
 In dieser Implementierung lautet der Wert von `M` 20.
 

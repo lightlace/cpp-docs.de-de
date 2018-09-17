@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d99f0b2ea50e84e3eb5e89d1f2e24a181653893c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 38dcb010df79e0a5c5a54079b4c98021cc406c8d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852472"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720270"
 ---
 # <a name="cmousemanager-class"></a>CMouseManager-Klasse
 Ermöglicht einem Benutzer, unterschiedliche Befehle einem bestimmten zuordnen [CView](../../mfc/reference/cview-class.md) Objekt, wenn der Benutzer in dieser Ansicht doppelklickt.  
@@ -93,20 +93,20 @@ BOOL AddView(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iViewId*  
- Eine Sicht-ID.  
+*iViewId*<br/>
+[in] Eine Sicht-ID.  
   
- [in] *UiViewNameResId*  
- Eine Zeichenfolge Ressourcen-ID, die den Namen der Sicht verweist.  
+*uiViewNameResId*<br/>
+[in] Eine Zeichenfolge Ressourcen-ID, die den Namen der Sicht verweist.  
   
- [in] *UiIconId*  
- Eine Sicht Symbol-ID.  
+*uiIconId*<br/>
+[in] Eine Sicht Symbol-ID.  
   
- [in] *iId*  
- Eine Sicht-ID.  
+*iId*<br/>
+[in] Eine Sicht-ID.  
   
- [in] *LpszViewName*  
- Der Name einer Ansicht.  
+*lpszViewName*<br/>
+[in] Der Name einer Ansicht.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -131,8 +131,8 @@ UINT GetViewDblClickCommand(int iId) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iId*  
- Die Sicht-ID.  
+*iId*<br/>
+[in] Die Sicht-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Befehls-ID, wenn die Ansicht mit einem Befehl zugeordnet ist; andernfalls 0.  
@@ -145,8 +145,8 @@ UINT GetViewIconId(int iViewId) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iViewId*  
- Die Sicht-ID.  
+*iViewId*<br/>
+[in] Die Sicht-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Ressourcenbezeichner Symbol, wenn erfolgreich; andernfalls 0.  
@@ -162,8 +162,8 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Wert*  
- Name der Ansicht.  
+*Wert*<br/>
+[in] Name der Ansicht.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Eine Sicht mit der ID bei erfolgreicher Ausführung; andernfalls 0.  
@@ -179,8 +179,8 @@ void GetViewNames(CStringList& listOfNames) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *ListOfNames*  
- Ein Verweis auf `CStringList` Objekt.  
+*listOfNames*<br/>
+[out] Ein Verweis auf `CStringList` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode füllt den Parameter `listOfNames` mit den Namen aller Ansichten, die mit registriert [CMouseManager::AddView](#addview).  
@@ -193,8 +193,8 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- Ein Pfad eines Registrierungsschlüssels.  
+*lpszProfileName*<br/>
+[in] Ein Pfad eines Registrierungsschlüssels.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -212,8 +212,8 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- Ein Pfad eines Registrierungsschlüssels.  
+*lpszProfileName*<br/>
+[in] Ein Pfad eines Registrierungsschlüssels.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -233,11 +233,11 @@ void SetCommandForDblClk(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iViewId*  
- Der Ansichtsbezeichner.  
+*iViewId*<br/>
+[in] Der Ansichtsbezeichner.  
   
- [in] *UiCmd*  
- Der Befehlsbezeichner.  
+*uiCmd*<br/>
+[in] Der Befehlsbezeichner.  
   
 ### <a name="remarks"></a>Hinweise  
  Um eine Ansicht für einen benutzerdefinierten Befehl zugeordnet werden soll, müssen Sie zuerst die Ansicht registrieren, mit [CMouseManager::AddView](#addview). Die `AddView` Methode erfordert ein Ansichtsbezeichner als Eingabeparameter. Wenn Sie eine Ansicht registriert haben, können Sie aufrufen `CMouseManager::SetCommandForDblClk` mit der gleichen Ansicht Bezeichner Eingabeparameter, die Sie an `AddView`. Danach, wenn der Benutzer den Mauszeiger über die registrierten Ansicht doppelklickt, die Anwendung wird führen Sie den Befehl erkennbar *UiCmd.* Um das benutzerdefinierte Maus-Verhalten zu unterstützen, müssen Sie auch anpassen, die Ansicht mit der Maus-Manager registriert. Weitere Informationen zu benutzerdefinierten Mausverhalten, finden Sie unter [Anpassen von Tastatur und Maus](../keyboard-and-mouse-customization.md).  

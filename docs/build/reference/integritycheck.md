@@ -1,5 +1,5 @@
 ---
-title: / INTEGRITYCHECK | Microsoft Docs
+title: / INTEGRITYCHECK | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/28/2017
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b0adf9add2d191ae89aec0a5d756ade8e9f7725
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 062ce019fe1b622661be880d8a06eac9c5971103
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370247"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709202"
 ---
 # <a name="integritycheck"></a>/INTEGRITYCHECK
 
@@ -32,8 +32,8 @@ Gibt an, dass die digitale Signatur des Binärimages zur Ladezeit überprüft we
 
 ## <a name="remarks"></a>Hinweise
 
-Mit dieser Option wird im Header der DLL-Datei oder der ausführbaren Datei ein Flag festgelegt, das eine Überprüfung der digitalen Signatur mithilfe des Speicher-Managers erfordert, um das Image in Windows zu laden. Windows-Versionen vor Windows Vista ignorieren dieses Flag. Diese Option muss für 64-Bit-DLLs festgelegt werden, die den Kernelmoduscode implementieren, und wird für alle Gerätetreiber empfohlen. Weitere Informationen finden Sie unter [Kernelmodus-Code Signieren von Anforderungen](/windows-hardware/drivers/install/kernel-mode-code-signing-requirements--windows-vista-and-later-).
+Mit dieser Option wird im Header der DLL-Datei oder der ausführbaren Datei ein Flag festgelegt, das eine Überprüfung der digitalen Signatur mithilfe des Speicher-Managers erfordert, um das Image in Windows zu laden. Windows-Versionen vor Windows Vista ignorieren dieses Flag. Diese Option muss für 64-Bit-DLLs festgelegt werden, die den Kernelmoduscode implementieren, und wird für alle Gerätetreiber empfohlen. Weitere Informationen finden Sie unter [Kernelmodus-Code: Signieren von Anforderungen an](/windows-hardware/drivers/install/kernel-mode-code-signing-requirements--windows-vista-and-later-).
 
 ## <a name="see-also"></a>Siehe auch
 
-[EDITBIN-Optionen](../../build/reference/editbin-options.md)  
+[EDITBIN-Optionen](../../build/reference/editbin-options.md)

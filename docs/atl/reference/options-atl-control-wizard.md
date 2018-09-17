@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28342c71602409f3d62023e6d7923d49ca63a96f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 25116b0750016fdbb4ffd792d0b16efb6c6c1793
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766242"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711939"
 ---
 # <a name="options-atl-control-wizard"></a>Optionen, ATL-Steuerelement-Assistent
 
@@ -31,10 +31,11 @@ Mithilfe dieser Seite des Assistenten können Sie um den Typ des Steuerelements 
 
 ## <a name="uielement-list"></a>UIElement-Liste
 
-**Steuerelementtyp**  
+### <a name="control-type"></a>Steuerelementtyp
+
 Die Art des Steuerelements, das Sie erstellen möchten.
 
-- **Standardsteuerelement: ein ActiveX-Steuerelement.**
+- **Standardsteuerelement**: ein ActiveX-Steuerelement.
 
 - **Zusammengesetztes Steuerelement**: ein ActiveX-Steuerelement, das (ähnlich wie ein Dialogfeld, das) enthalten, kann andere ActiveX-Steuerelemente oder Windows-Steuerelemente. Ein zusammengesetztes Steuerelement umfasst Folgendes:
 
@@ -54,10 +55,12 @@ Die Art des Steuerelements, das Sie erstellen möchten.
 
      Weitere Informationen finden Sie unter [Identifizieren von Elementen des DHTML-Steuerelementprojekts](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).
 
-**Nur minimale Kontrolle**  
+### <a name="minimal-control"></a>Nur minimale Kontrolle
+
 Unterstützt nur die Schnittstellen, die meisten Container absolut erforderlich sind. Sie können festlegen, **nur minimale Kontrolle** für alle der Steuerelementtypen: Sie können ein minimal standard-Steuerelement, einem minimalen zusammengesetzten Steuerelement oder ein minimal DHTML-Steuerelement erstellen.
 
-**Aggregation**  
+### <a name="aggregation"></a>Aggregation
+
 Fügt die Unterstützung für das Steuerelement, das Sie erstellen. Weitere Informationen finden Sie unter [Aggregation](../../atl/aggregation.md).
 
 - **Ja**: Erstellen eines Steuerelements, die aggregiert werden können.
@@ -66,25 +69,28 @@ Fügt die Unterstützung für das Steuerelement, das Sie erstellen. Weitere Info
 
 - **Nur**: Erstellen Sie ein Steuerelement, das durch die Aggregation nur instanziiert werden kann.
 
-**Threading-Modell**  
+### <a name="threading-model"></a>Threadmodell
+
 Gibt an, dass das Threadingmodell vom Steuerelement verwendet.
 
 - **Einzelne**: das Steuerelement wird nur im primären COM-Thread ausgeführt.
 
 - **Apartment**: das Steuerelement kann in jedem Singlethread-Apartment erstellt werden. Der Standardwert.
 
-**Interface**  
+### <a name="interface"></a>Interface
+
 Der Typ der Schnittstelle, die dieses Steuerelement in den Container verfügbar macht.
 
 - **Duale**: erstellt eine Schnittstelle, die Eigenschaften und Methoden über verfügbar macht `IDispatch` und direkt über von der VTBL.
 
 - **Benutzerdefinierte**: erstellt eine Schnittstelle, die Methoden, die direkt durch eine VTBL verfügbar macht.
 
-     Bei Auswahl von **benutzerdefinierte**, können Sie angeben, dass das Steuerelement **Automatisierungskompatibel**. Bei Auswahl von **Automatisierungskompatibel**, fügt der Assistent die [Oleautomation](../../windows/oleautomation.md) -Attribut auf die Schnittstelle in der IDL-Datei, und die Schnittstelle durch den universellen Marshaller in oleaut32.dll gemarshallt werden kann. Finden Sie unter [Marshaling Details](/windows/desktop/com/marshaling-details) im Windows SDK für Weitere Informationen.
+   Bei Auswahl von **benutzerdefinierte**, können Sie angeben, dass das Steuerelement **Automatisierungskompatibel**. Bei Auswahl von **Automatisierungskompatibel**, fügt der Assistent die [Oleautomation](../../windows/oleautomation.md) -Attribut auf die Schnittstelle in der IDL-Datei, und die Schnittstelle durch den universellen Marshaller in oleaut32.dll gemarshallt werden kann. Finden Sie unter [Marshaling Details](/windows/desktop/com/marshaling-details) im Windows SDK für Weitere Informationen.
 
-     Darüber hinaus bei Auswahl von **Automatisierungskompatibel**, und klicken Sie dann alle Parameter für alle Methoden des Steuerelements Variant-Wert sein müssen kompatibel.
+   Darüber hinaus bei Auswahl von **Automatisierungskompatibel**, und klicken Sie dann alle Parameter für alle Methoden des Steuerelements Variant-Wert sein müssen kompatibel.
 
-**Unterstützung**  
+### <a name="support"></a>Unterstützung
+
 Legt zusätzliche sonstige Unterstützung für das Steuerelement fest.
 
 - **Verbindungspunkte**: können Sie dazu die Klasse des Objekts abgeleitet Verbindungspunkte für Ihr Objekt [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) und ermöglicht es, eine Schnittstelle verfügbar zu machen.

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5be60ff1f0aa8b2ceff7517a9af968e0b7690478
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6d3adeff7c0c242d9e83b2e71afff78ec130f950
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214678"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712949"
 ---
 # <a name="diagnostic-services"></a>Diagnosedienste
 Die Microsoft Foundation Class-Bibliothek bietet viele Diagnosedienste, die das Debuggen von Programmen erleichtern. Zu diesen Diagnosediensten zählen Makros und globale Funktionen, die Ihnen das Nachverfolgen der Speicherzuweisungen von Programmen, das Sichern des Inhalts von Objekten zur Laufzeit und das Ausgeben von Debugmeldungen zur Laufzeit ermöglichen. Die Makros und globalen Funktionen für Diagnosedienste sind in folgende Kategorien gruppiert:  
@@ -619,8 +619,8 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bDump*  
- TRUE gibt an, dass das Speicherabbild des Arbeitsspeicherverlusts aktiviert ist; FALSE gibt an, dass das Speicherabbild des Arbeitsspeicherverlusts deaktiviert ist.  
+*bDump*<br/>
+[in] TRUE gibt an, dass das Speicherabbild des Arbeitsspeicherverlusts aktiviert ist; FALSE gibt an, dass das Speicherabbild des Arbeitsspeicherverlusts deaktiviert ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der vorherige Wert für dieses Flag.  

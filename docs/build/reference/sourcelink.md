@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 876373b5646790f9f8de0042442b2ab56d9d2971
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: dff53f7a4db12e32bca2494ba99f5b3b8203d48f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40242867"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706666"
 ---
 # <a name="sourcelink-include-sourcelink-file-in-pdb"></a>/ SOURCELINK (umfassen Sourcelink-Datei in die PDB-Datei)
 
@@ -33,7 +33,7 @@ Gibt eine SourceLink-Konfigurationsdatei in der vom Linker generierte PDB-Datei 
 
 ## <a name="arguments"></a>Argumente
 
-*filename*  
+*filename*<br/>
 Gibt eine JSON-formatierte Konfigurationsdatei, die eine einfache Zuordnung der lokalen Dateipfade, URLs enthält, in dem die Quelldatei abgerufen werden kann, für die Anzeige durch den Debugger. Weitere Informationen zum Format dieser Datei finden Sie unter [JSON-Schema der Datenquellensicht-Link](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md#source-link-json-schema).
 
 ## <a name="remarks"></a>Hinweise
@@ -48,11 +48,11 @@ SourceLink ist eine Sprache – und unabhängig Quellcodeverwaltungssystem für 
 
 1. In der **zusätzliche Optionen** fügen **/SOURCELINK:**_Filename_ und wählen Sie dann **OK** oder **übernehmen**zum Speichern der Änderungen.
 
-### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
-  
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
+
 - Diese Option ist keine programmgesteuerte Variante verfügbar sein.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)  
-[Linkeroptionen](../../build/reference/linker-options.md)  
+[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
+[Linkeroptionen](../../build/reference/linker-options.md)

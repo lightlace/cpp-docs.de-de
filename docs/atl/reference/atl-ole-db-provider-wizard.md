@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4bb77489a610d9331378e523b6983dcf14d996c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 15104e0252ad6994b6220b433c7324085199440c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762978"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717209"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>ATL-OLE DB-Anbieter-Assistent
 
@@ -34,49 +34,63 @@ Ab Visual Studio 2008 wird von diesem Assistenten erstellte Registrierungsskript
 
 Die folgende Tabelle beschreibt die Optionen für die der ATL-OLE DB-Anbieter-Assistent:
 
-**Kurzname**  
-Geben Sie den kurzen Namen des Anbieters erstellt werden. Die anderen Eingabefelder im Assistenten werden automatisch aufgefüllt. basierend auf Ihrer Eingabe. Sie können die anderen Namensfelder bearbeiten, wenn Sie möchten.
+- **Kurzname**
 
-**Co-Klasse**  
-Der Name der Co-Klasse. Die ProgID-Name ändert sich entsprechend diesem Namen.
+   Geben Sie den kurzen Namen des Anbieters erstellt werden. Die anderen Eingabefelder im Assistenten werden automatisch aufgefüllt. basierend auf Ihrer Eingabe. Sie können die anderen Namensfelder bearbeiten, wenn Sie möchten.
 
-**Zugeordnet sind**  
-Diese Option gibt an, ob der Assistent mithilfe von Attributen oder Vorlagendeklarationen Anbieterklassen erstellt. Wenn Sie diese Option auswählen, verwendet der Assistent Attribute anstatt von Vorlagendeklarationen (Dies ist die Standardoption, wenn Sie ein attributiertes Projekt erstellt haben). Wenn Sie diese Option deaktivieren, verwendet der Assistent Vorlagendeklarationen anstelle von Attributen (Dies ist die Standardoption, wenn Sie ein nicht attributierten Projekt erstellt haben).
+- **Co-Klasse**
 
-Wenn Sie diese Option auswählen, wenn Sie ein nicht attributierten Projekt erstellt haben, werden Sie in der Assistenten gewarnt, dass das Projekt in einem attributierten Projekt konvertiert wird und gefragt wird, ob Sie fortfahren.
+   Der Name der Co-Klasse. Die ProgID-Name ändert sich entsprechend diesem Namen.
 
-**ProgID**  
-Die ProgID oder programmgesteuerte Bezeichner, ist die Zeichenfolge, die Ihre Anwendung nicht auf einer GUID verwenden können. Die ProgID-Name weist das Format *Projectname.Coclassname*.
+- **Zugeordnet sind**
 
-**Version**  
-Die Versionsnummer des Anbieters. Der Standard ist 1.
+   Diese Option gibt an, ob der Assistent mithilfe von Attributen oder Vorlagendeklarationen Anbieterklassen erstellt. Wenn Sie diese Option auswählen, verwendet der Assistent Attribute anstatt von Vorlagendeklarationen (Dies ist die Standardoption, wenn Sie ein attributiertes Projekt erstellt haben). Wenn Sie diese Option deaktivieren, verwendet der Assistent Vorlagendeklarationen anstelle von Attributen (Dies ist die Standardoption, wenn Sie ein nicht attributierten Projekt erstellt haben).
 
-**DataSource-Klasse**  
-Der Name der Datenquellklasse im C-Format*Shortname*Quelle.
+   Wenn Sie diese Option auswählen, wenn Sie ein nicht attributierten Projekt erstellt haben, werden Sie in der Assistenten gewarnt, dass das Projekt in einem attributierten Projekt konvertiert wird und gefragt wird, ob Sie fortfahren.
 
-**DataSource-h-Datei**  
-Die Headerdatei für die Datenquellenklasse. Sie können den Dateinamen bearbeiten oder eine vorhanden Headerdatei auswählen.
+- **ProgID**
 
-**Sitzungsklasse**  
-Der Name der Sitzungsklasse des Formulars C*Shortname*Sitzung.
+   Die ProgID oder programmgesteuerte Bezeichner, ist die Zeichenfolge, die Ihre Anwendung nicht auf einer GUID verwenden können. Die ProgID-Name weist das Format *Projectname.Coclassname*.
 
-**Sitzung .h-Datei**  
-Die Headerdatei für die Sitzungsklasse. Sie können den Dateinamen bearbeiten oder eine vorhanden Headerdatei auswählen.
+- **Version**
 
-**Command-Klasse**  
-Der Name der Befehlsklasse, im Format C*Shortname*Befehl.
+   Die Versionsnummer des Anbieters. Der Standard ist 1.
 
-**Befehl .h-Datei**  
-Die Headerdatei für die Klasse des Befehls. Dieser Name kann nicht bearbeitet werden und hängt von den Namen der Rowset-Headerdatei.
+- **DataSource-Klasse**
 
-**Rowset-Klasse**  
-Der Name der Rowset-Klasse des Formulars C*Shortname*Rowset.
+   Der Name der Datenquellklasse im C-Format*Shortname*Quelle.
 
-**Rowset-h-Datei**  
-Die Headerdatei für die Rowsetklasse. Sie können den Dateinamen bearbeiten oder eine vorhanden Headerdatei auswählen.
+- **DataSource-h-Datei**
 
-**Rowset-cpp-Datei**  
-Der Anbieter Implementierungsdatei einschließen. Sie können den Dateinamen bearbeiten oder eine vorhandene Implementierungsdatei auswählen.
+   Die Headerdatei für die Datenquellenklasse. Sie können den Dateinamen bearbeiten oder eine vorhanden Headerdatei auswählen.
+
+- **Sitzungsklasse**
+
+   Der Name der Sitzungsklasse des Formulars C*Shortname*Sitzung.
+
+- **Sitzung .h-Datei**
+
+   Die Headerdatei für die Sitzungsklasse. Sie können den Dateinamen bearbeiten oder eine vorhanden Headerdatei auswählen.
+
+- **Command-Klasse**
+
+   Der Name der Befehlsklasse, im Format C*Shortname*Befehl.
+
+- **Befehl .h-Datei**
+
+   Die Headerdatei für die Klasse des Befehls. Dieser Name kann nicht bearbeitet werden und hängt von den Namen der Rowset-Headerdatei.
+
+- **Rowset-Klasse**
+
+   Der Name der Rowset-Klasse des Formulars C*Shortname*Rowset.
+
+- **Rowset-h-Datei**
+
+   Die Headerdatei für die Rowsetklasse. Sie können den Dateinamen bearbeiten oder eine vorhanden Headerdatei auswählen.
+
+- **Rowset-cpp-Datei**
+
+   Der Anbieter Implementierungsdatei einschließen. Sie können den Dateinamen bearbeiten oder eine vorhandene Implementierungsdatei auswählen.
 
 ## <a name="see-also"></a>Siehe auch
 

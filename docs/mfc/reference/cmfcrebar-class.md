@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af74ab381293e04c08a1fa8c601558edaeacf6c4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0336cb9bd2f0e12c834615647cb4a442ab261316
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689191"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721512"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar-Klasse
 Ein `CMFCReBar` Objekt ist eine Steuerleiste, die Layout-, Persistenz- und Zustandsinformationen für Grundleisten-Steuerelemente bereitstellt.  
@@ -113,20 +113,20 @@ BOOL AddBar(
  [in] [out] *pBar*  
  Ein Zeiger auf das untergeordnete Fenster, in die Infoleiste eingefügt werden soll. Das referenzierte Objekt müssen die **WS_CHILD** Fensterstil.  
   
- [in] *PszText*  
- Gibt den Text auf der grundleiste angezeigt werden. Der Text ist nicht Teil des untergeordneten Fensters. Stattdessen wird er auf sich selbst grundleiste angezeigt.  
+*pszText*<br/>
+[in] Gibt den Text auf der grundleiste angezeigt werden. Der Text ist nicht Teil des untergeordneten Fensters. Stattdessen wird er auf sich selbst grundleiste angezeigt.  
   
  [in] [out] *Pbmp*  
  Gibt an, die Bitmap auf den Hintergrund der Infoleiste angezeigt werden.  
   
- [in] *DwStyle*  
- Enthält die Formatvorlage, die auf dem Band angewendet. Eine vollständige Liste der-Band-Formate, finden Sie in der Beschreibung für `fStyle` in die [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) Struktur in der Windows SDK-Dokumentation.  
+*dwStyle*<br/>
+[in] Enthält die Formatvorlage, die auf dem Band angewendet. Eine vollständige Liste der-Band-Formate, finden Sie in der Beschreibung für `fStyle` in die [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) Struktur in der Windows SDK-Dokumentation.  
   
- [in] *ClrFore*  
- Stellt die Vordergrundfarbe der Infoleiste dar.  
+*clrFore*<br/>
+[in] Stellt die Vordergrundfarbe der Infoleiste dar.  
   
- [in] *ClrBack*  
- Stellt die Hintergrundfarbe der Infoleiste dar.  
+*clrBack*<br/>
+[in] Stellt die Hintergrundfarbe der Infoleiste dar.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Band der Infoleiste wurde erfolgreich hinzugefügt wurde. andernfalls "false".  
@@ -146,14 +146,14 @@ BOOL Create(
  [in] [out] *pParentWnd*  
  Ein Zeiger auf das übergeordnete Fenster dieses Grundleisten-Steuerelements.  
   
- [in] *DwCtrlStyle*  
- Gibt den Stil für das Grundleistensteuerelement. Der Standardwert für das Format ist **RBS_BANDBORDERS**, zeigt Einschränken der Zeilen aus, um benachbarte Bänder für das Grundleistensteuerelement zu trennen. Eine Liste der gültigen Stile, finden Sie unter [Stile für Grundleisten-Steuerelemente](/windows/desktop/Controls/rebar-control-styles) in der Windows SDK-Dokumentation.  
+*dwCtrlStyle*<br/>
+[in] Gibt den Stil für das Grundleistensteuerelement. Der Standardwert für das Format ist **RBS_BANDBORDERS**, zeigt Einschränken der Zeilen aus, um benachbarte Bänder für das Grundleistensteuerelement zu trennen. Eine Liste der gültigen Stile, finden Sie unter [Stile für Grundleisten-Steuerelemente](/windows/desktop/Controls/rebar-control-styles) in der Windows SDK-Dokumentation.  
   
- [in] *DwStyle*  
- Der Fensterstil des Infoleisten-Steuerelements. Eine Liste der gültigen Stile, finden Sie unter [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] Der Fensterstil des Infoleisten-Steuerelements. Eine Liste der gültigen Stile, finden Sie unter [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *nID*  
- Die Infoleiste untergeordneten Fensters-ID.  
+*nID*<br/>
+[in] Die Infoleiste untergeordneten Fensters-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Infoleiste wurde erfolgreich erstellt wurde. andernfalls "false".  
@@ -183,8 +183,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -248,8 +248,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- [in] *pTI*  
+*Zeigen Sie*<br/>
+[in] [in] *pTI*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -265,8 +265,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pTarget*  
- [in] *bDisableIfNoHndler*  
+*pTarget*<br/>
+[in] [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Hinweise  
   

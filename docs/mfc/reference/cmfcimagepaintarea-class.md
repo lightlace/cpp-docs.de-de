@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 449d79119b15e814485f3b7e0c3eb7472d314d19
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ee3bf6b087777bc550a34234a8969e2127c8ec2d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852476"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720251"
 ---
 # <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea-Klasse
 Die Bildbereich, mit denen Sie so ändern Sie ein Bild in einem Bild-Editor-Dialogfeld zur Verfügung.  
@@ -98,7 +98,7 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *pParentDlg*|Ein Zeiger auf das Dialogfeld, das das übergeordnete Element des Grafik-Editor.|  
+|*pParentDlg*|[in] Ein Zeiger auf das Dialogfeld, das das übergeordnete Element des Grafik-Editor.|  
   
 ##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode  
  Ruft den Zeichnungsmodus des aktuellen ab.  
@@ -122,7 +122,7 @@ void SetBitmap(CBitmap* pBitmap);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *pBitmap*|Die neue Bitmap-Bild angezeigt.|  
+|*pBitmap*|[in] Die neue Bitmap-Bild angezeigt.|  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn *pBitmap* NULL ist, diese Methode legt die Größe des änderbar Paint Bereichs auf 0 (null). Andernfalls wird die Größe des änderbar Paint Bereichs auf die Größe des bereitgestellten Bitmapbilds.  
@@ -139,7 +139,7 @@ void SetColor(COLORREF color);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *Farbe*|Die neue Zeichnung Farbe.|  
+|*Farbe*|[in] Die neue Zeichnung Farbe.|  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie eine Farbe aus der Palette-Leiste von Bild-Editor auswählen oder Farbauswahl angezeigt, das Framework ruft diese Methode, um die aktuelle zeichnen Farbe zu aktualisieren. Die Ausgangsfarbe zeichnen ist Schwarz (COLORREF Wert 0).  
@@ -158,7 +158,7 @@ void SetMode(IMAGE_EDIT_MODE mode);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *Modus*|Ein [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) Wert, der den Zeichnungsmodus des aktuellen angibt.|  
+|*mode*|[in] Ein [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) Wert, der den Zeichnungsmodus des aktuellen angibt.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

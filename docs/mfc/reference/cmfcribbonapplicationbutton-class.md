@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eddce134c3cda27e57a6a20d709bc4eab08d6e80
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 17efa63488a736089c988e6cfbb7bd97330816aa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849014"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701388"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton-Klasse
 Implementiert eine spezielle Schaltfläche in der oberen linken Ecke des Anwendungsfensters. Wenn sie angeklickt wird, öffnet die Schaltfläche ein Menü, das normalerweise allgemeine **Datei** -Befehle wie **Öffnen**, **Speichern**und **Beenden**enthält.  
@@ -98,11 +98,11 @@ void SetImage(HBITMAP hBmp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiBmpResID*  
- Die Ressourcen-ID des Images, die auf die Schaltfläche "Anwendung" angezeigt.  
+*uiBmpResID*<br/>
+[in] Die Ressourcen-ID des Images, die auf die Schaltfläche "Anwendung" angezeigt.  
   
- [in] *hBmp*  
- Ein Handle für eine Bitmap, die auf die Schaltfläche "Anwendung" angezeigt.  
+*hBmp*<br/>
+[in] Ein Handle für eine Bitmap, die auf die Schaltfläche "Anwendung" angezeigt.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode die Menübandschaltfläche für die Anwendung nach der Erstellung der Schaltfläche ein neues Abbild zuweisen. Die Schaltfläche "Anwendung" befindet sich in der oberen linken Ecke des Anwendungsfensters.  

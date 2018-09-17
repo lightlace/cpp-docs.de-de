@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac06722b675af5e8ac8d4136cc2938ac772befc9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9c519d4f6d903453ce9fea6965a8f954243bab97
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848582"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703832"
 ---
 # <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel-Klasse
 Implementiert eine nicht anklickbare Bezeichnung für ein Menüband.  
@@ -80,11 +80,11 @@ CMFCRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszText*  
- Der Text in der Bezeichnung angezeigt werden.  
+*lpszText*<br/>
+[in] Der Text in der Bezeichnung angezeigt werden.  
   
- [in] *bIsMultiLine*  
- True, um anzugeben, dass die Bezeichnung eine mehrzeilige Bezeichnung ist. andernfalls "false".  
+*bIsMultiLine*<br/>
+[in] True, um anzugeben, dass die Bezeichnung eine mehrzeilige Bezeichnung ist. andernfalls "false".  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
  Bestimmt die barrierefreiheitsdaten für das aktuelle Element der Menüband-Bezeichnung an.  
@@ -96,11 +96,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pParent*  
- Stellt das übergeordnete Fenster des die aktuelle Menüband-Bezeichnung an.  
+*pParent*<br/>
+[in] Stellt das übergeordnete Fenster des die aktuelle Menüband-Bezeichnung an.  
   
- [out] *Daten*  
- Ein Objekt des Typs `CAccessibilityData` , die mit den Zugriff auf Daten des die aktuelle Menüband-Bezeichnung aufgefüllt wird.  
+*data*<br/>
+[out] Ein Objekt des Typs `CAccessibilityData` , die mit den Zugriff auf Daten des die aktuelle Menüband-Bezeichnung aufgefüllt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn die *Daten* Parameter wurde erfolgreich mit den Zugriff auf Daten des die aktuelle Menüband-Bezeichnung aufgefüllt ist, andernfalls "false".  

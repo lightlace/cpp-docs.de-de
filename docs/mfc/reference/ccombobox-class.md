@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fc2eb252c81e903174d99d4a55b2f3c1eed321
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4b0226e38b34268217b4f21a1f5262cd1f1afbec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205286"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702090"
 ---
 # <a name="ccombobox-class"></a>CComboBox-Klasse
 Stellt die Funktionalität eines Windows-Kombinationsfelds bereit.  
@@ -612,8 +612,8 @@ BOOL GetCueBanner(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] *LpszText*|Zeiger auf einen Puffer, der den hinweisbannertext empfängt.|  
-|[in] *CchText*|Größe des Puffers, der die *LpszText* -Parameter zeigt.|  
+|*lpszText*|[out] Zeiger auf einen Puffer, der den hinweisbannertext empfängt.|  
+|*cchText*|[in] Größe des Puffers, der die *LpszText* -Parameter zeigt.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  In der ersten Überladung ist eine [CString](../../atl-mfc-shared/using-cstring.md) Objekt, das den hinweisbannertext enthält, sofern vorhanden, andernfalls eine `CString` -Objekt, das keine Länge verfügt.  
@@ -1048,7 +1048,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *LpszText*|Zeiger auf eine auf Null endende Puffer, der den Hinweistext enthält.|  
+|*lpszText*|[in] Zeiger auf eine auf Null endende Puffer, der den Hinweistext enthält.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich ist. andernfalls "false".  
@@ -1291,7 +1291,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *iMinVisible*|Gibt die minimale Anzahl der sichtbaren Elemente.|  
+|*iMinVisible*|[in] Gibt die minimale Anzahl der sichtbaren Elemente.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  

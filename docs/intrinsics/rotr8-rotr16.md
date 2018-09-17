@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a667f857621c01900165f6e93de7f7bddc837915
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 936113d2b59bf089179c6f0c016c8a91c5edc74d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541010"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715818"
 ---
 # <a name="rotr8-rotr16"></a>_rotr8, _rotr16
 **Microsoft-spezifisch**  
@@ -44,11 +44,11 @@ unsigned short _rotr16(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `value`  
- Der zu drehende Wert.  
+*Wert*<br/>
+[in] Der zu drehende Wert.  
   
- [in] `shift`  
- Die Anzahl der Bits für die Drehung.  
+*shift*<br/>
+[in] Die Anzahl der Bits für die Drehung.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Der gedrehte Wert.  

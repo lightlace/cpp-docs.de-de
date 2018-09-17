@@ -1,5 +1,5 @@
 ---
-title: Verbunddokumentunterstützung, MFC-Anwendung-Assistenten | Microsoft Docs
+title: Verbunddokumentunterstützung, MFC-Anwendung-Assistent | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,41 +14,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 361ad662ed0bc0f499b35c102502f86d063b8e5d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d15522581b67a78cbbe3925d9166cd8cd9e00b1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368308"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720212"
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>Verbunddokumentunterstützung, MFC-Anwendungs-Assistent
-Geben Sie auf dieser Seite des Assistenten für MFC-Anwendung an, zu welchem Grad die Anwendung zusammengesetzten und active Document-Unterstützung bietet. Die Anwendung muss die Dokument-/Ansichtarchitektur zur Unterstützung von Verbunddokumente und Dokumentvorlagen unterstützen.  
+Geben Sie auf dieser Seite des Assistenten für MFC-Anwendung an, zu welchem Grad Ihrer Anwendung zusammengesetzten und active Document-Unterstützung bereitgestellt. Ihre Anwendung muss die Dokument-/Ansichtarchitektur zur Unterstützung von zusammengesetzten Dokumenten und Dokumentvorlagen unterstützen.  
   
- Standardmäßig enthält die Anwendung keine Unterstützung für Verbunddokumente. Wenn Sie diese Standardeinstellung übernehmen, kann nicht für Ihre Anwendung die aktive Dokumente oder Verbunddateien unterstützen.  
+ Standardmäßig enthält die Anwendung keine Unterstützung für Verbunddokumente benötigt. Wenn Sie diese Standardeinstellung akzeptieren, kann nicht für Ihre Anwendung die aktive Dokumente oder compound-Dateien unterstützen.  
   
- **Unterstützung für Verbunddokumente**  
- Bestimmt, ob Ihre Anwendung Container-Unterstützung, Unterstützung für Server oder beides enthält. Weitere Informationen zu diesem Bereich finden Sie unter:  
+- **Unterstützung für Verbunddokumente**
+
+   Bestimmt, ob Ihre Anwendung, Container-Unterstützung, Unterstützung für Server oder beides bereitstellt. Weitere Informationen zu diesem Bereich finden Sie unter:  
   
--   [Container: Implementieren eines Containers](../../mfc/containers-implementing-a-container.md)  
+   - [Container: Implementieren eines Containers](../../mfc/containers-implementing-a-container.md)  
   
--   [Server: Implementieren eines Servers](../../mfc/servers-implementing-a-server.md)  
+   - [Server: Implementieren eines Servers](../../mfc/servers-implementing-a-server.md)  
   
-|Option|Beschreibung|  
-|------------|-----------------|  
-|**Keine**|Gibt keine Unterstützung für Object Linking and Embedding (OLE). Standardmäßig erstellt der Anwendungs-Assistent eine Anwendung ohne ActiveX-Unterstützung.|  
-|**Container**|Enthält verknüpfte oder eingebettete Objekte.|  
-|**Mini-server**|Gibt an, die Anwendung erstellen und Verwalten von zusammengesetzten Document-Objekte kann. Beachten Sie, dass Mini-Server können nicht eigenständig und nur eingebettete Elemente unterstützen.|  
-|**Vollständiger server**|Gibt an, die Anwendung erstellen und Verwalten von zusammengesetzten Document-Objekte kann. Vollserver werden eigenständig und unterstützen sowohl verknüpfte eingebettete Elemente ausgeführt.|  
-|**Container/vollständigen server**|Gibt an, dass die Anwendung einen Container und einem Server sein kann. Ein Container ist eine Anwendung, die eingebettete oder verknüpfte Elemente in einem eigenen Dokumente integrieren kann. Ein Server ist eine Anwendung, die Automation-Elemente für die Verwendung von containeranwendungen erstellen können.|  
+   |Option|Beschreibung|  
+   |------------|-----------------|  
+   |**Keine**|Gibt keine Unterstützung für Object Linking and Embedding (OLE). Der Anwendungs-Assistent erstellt standardmäßig eine Anwendung ohne ActiveX-Unterstützung.|  
+   |**Container**|Enthält verknüpfte und eingebettete Objekte.|  
+   |**Miniserver**|Gibt an, die Anwendung erstellen und Verwalten von Verbunddokumentobjekte. Beachten Sie, die Mini-Server nicht ausgeführt werden können eigenständig und unterstützt nur eingebettete Elemente.|  
+   |**Vollserver**|Gibt an, die Anwendung erstellen und Verwalten von Verbunddokumentobjekte. Vollständige Servern werden können eigenständige und unterstützen sowohl verknüpfte eingebettete Elemente ausgeführt.|  
+   |**Container/Vollserver**|Gibt an, dass die Anwendung sowohl einen Container und einem Server kann. Ein Container ist eine Anwendung, die eingebettete oder verknüpfte Elemente in ihre eigenen Dokumente integrieren kann. Ein Server ist eine Anwendung, die Automation-Elemente für die Verwendung von containeranwendungen erstellen können.|  
   
- **Zusätzliche Optionen**  
- Gibt an, ob Ihre Anwendung aktive Dokumente unterstützt. Finden Sie unter [aktive Dokumente](../../mfc/active-documents.md) für Weitere Informationen zu dieser Funktion.  
+- **Zusätzliche Optionen**
+
+   Gibt an, ob Ihre Anwendung aktive Dokumente unterstützt. Finden Sie unter [aktive Dokumente](../../mfc/active-documents.md) für Weitere Informationen zu diesem Feature.  
   
-|Option|Beschreibung|  
-|------------|-----------------|  
-|**Active Document-server**|Gibt an, die Anwendung erstellen und verwalten aktive Dokumente kann. Wenn Sie diese Option auswählen, müssen Sie eine Dateierweiterung angeben, für den Server für aktive Dokument in der **Dateierweiterung** Feld der [Zeichenfolgen für Dokumentvorlagen](../../mfc/reference/document-template-strings-mfc-application-wizard.md) Seite des Assistenten. Finden Sie unter [aktive Dokumentserver](../../mfc/active-document-servers.md) für Weitere Informationen.|  
-|**Active Document-container**|Gibt an, dass die Anwendung in deren Rahmen aktive Dokumente enthalten kann. Active Documents können z. B. Internet Explorer-Dokumente oder Office-Dokumente, wie z. B. Microsoft Word-Dateien oder Excel-Kalkulationstabellen, enthalten. Finden Sie unter [Active Document-Container](../../mfc/active-document-containment.md) für Weitere Informationen.|  
-|**Unterstützung für Verbunddateien**|Die containeranwendung-Dokumenten, die mithilfe von Compound-Dateiformat wird nicht serialisiert werden. Diese Option erzwingt das Laden von einer vollständigen Datei, die mit Objekten in den Arbeitsspeicher. Inkrementelle speichert auf einzelne Objekte sind nicht verfügbar. Wenn ein Objekt geändert und anschließend gespeichert ist, werden alle Objekte in der Datei gespeichert.|  
+   |Option|Beschreibung|  
+   |------------|-----------------|  
+   |**Active Document-server**|Gibt an, die Anwendung erstellen und verwalten aktive Dokumente. Wenn Sie diese Option auswählen, müssen Sie eine Dateierweiterung angeben, für den Server für aktive Dokument in der **Dateierweiterung** im Feld der [Zeichenfolgen für Dokumentvorlagen](../../mfc/reference/document-template-strings-mfc-application-wizard.md) Seite des Assistenten. Finden Sie unter [Active Document-Server](../../mfc/active-document-servers.md) für Weitere Informationen.|  
+   |**Active Document-container**|Gibt an, dass die Anwendung aktiv Dokumente innerhalb des Rahmens enthalten kann. Aktive Dokumente können, z. B. Internet Explorer oder, Office-Dokumenten, z. B. Microsoft Word-Dateien oder Excel-Tabellen enthalten. Finden Sie unter [Active Document-Container](../../mfc/active-document-containment.md) für Weitere Informationen.|  
+   |**Unterstützung für Verbunddateien**|Die Container-Anwendung-Dokumente, die das zusammengesetzte-Dateiformat wird nicht serialisiert werden. Diese Option erzwingt das Laden von einer vollständigen Datei, die Objekte in den Arbeitsspeicher enthält. Inkrementelle speichert zu individuellen Objekten sind nicht verfügbar. Ein Objekt wurde geändert und anschließend gespeichert, werden dann alle Objekte in der Datei gespeichert.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [MFC-Anwendungs-Assistent](../../mfc/reference/mfc-application-wizard.md)

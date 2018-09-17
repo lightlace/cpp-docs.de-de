@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ae4ddf3c3b17023f3a6968e3498c178813d039
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e0cab78f1f35ab003d8457c0e185aa031a112e09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765344"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702597"
 ---
 # <a name="service-map-macros"></a>Servicezuordnungs-Makros
 
@@ -123,14 +123,14 @@ STDMETHOD(QueryService)(
 
 ### <a name="parameters"></a>Parameter
 
-[IN] *GuidService*  
-Zeiger auf eine Dienst-ID (SID).
+*guidService*<br/>
+[in] Zeiger auf eine Dienst-ID (SID).
 
-[IN] *Riid*  
-Der Bezeichner der Schnittstelle, die der Aufrufer ist, um Zugriff zu erhalten.
+*riid*<br/>
+[in] Der Bezeichner der Schnittstelle, die der Aufrufer ist, um Zugriff zu erhalten.
 
-[OUT] *PpvObj*  
-Indirekter Zeiger auf die angeforderte Schnittstelle.
+*ppvObj*<br/>
+[out] Indirekter Zeiger auf die angeforderte Schnittstelle.
 
 ### <a name="return-value"></a>Rückgabewert
 

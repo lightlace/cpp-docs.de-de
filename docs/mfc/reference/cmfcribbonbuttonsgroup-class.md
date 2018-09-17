@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 855bc48da10e8ca4dd83cf091e155746450a33f1
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0d9b730e9cb1ca78b5247ea09f1f24a9bb8c307c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848518"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709786"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup-Klasse
 Die `CMFCRibbonButtonsGroup` -Klasse ermöglicht es Ihnen, einen Satz von Schaltflächen auf dem Menüband in einer Gruppe zu organisieren. Alle Schaltflächen der Gruppe liegen innerhalb eines Rahmens direkt horizontal nebeneinander.  
@@ -106,8 +106,8 @@ void AddButton(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pButton*  
- Ein Zeiger auf eine Schaltfläche zum Hinzufügen.  
+*pButton*<br/>
+[in] Ein Zeiger auf eine Schaltfläche zum Hinzufügen.  
   
 ##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons  
  Fügt eine Liste der Schaltflächen zu einer Gruppe hinzu.  
@@ -118,8 +118,8 @@ void AddButtons(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LstButtons*  
- Eine Liste von Zeigern auf die Schaltflächen, die Sie hinzufügen möchten.  
+*lstButtons*<br/>
+[in] Eine Liste von Zeigern auf die Schaltflächen, die Sie hinzufügen möchten.  
   
 ##  <a name="cmfcribbonbuttonsgroup"></a>  CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
  Erstellt ein `CMFCRibbonButtonsGroup`-Objekt.  
@@ -130,8 +130,8 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pButton*  
- Gibt an, eine Schaltfläche zum Hinzufügen auf das neu erstellte `CMFCRibbonButtonsGroup` Objekt.  
+*pButton*<br/>
+[in] Gibt an, eine Schaltfläche zum Hinzufügen auf das neu erstellte `CMFCRibbonButtonsGroup` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -145,8 +145,8 @@ CMFCRibbonBaseElement* GetButton(int i) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *ich*  
- Ein nullbasierter Index, eine Schaltfläche zurückgegeben werden soll.  
+*i*<br/>
+[in] Ein nullbasierter Index, eine Schaltfläche zurückgegeben werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die Schaltfläche, die sich am angegebenen Index befindet. NULL, wenn der angegebene Index außerhalb des gültigen Bereichs befindet.  
@@ -183,8 +183,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Zeiger auf den Gerätekontext der Menübandgruppe.  
+*pDC*<br/>
+[in] Zeiger auf den Gerätekontext der Menübandgruppe.  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -214,17 +214,17 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Zeiger auf den Gerätekontext, der die `CMFCRibbonButtonsGroup` Objekt.  
+*pDC*<br/>
+[in] Zeiger auf den Gerätekontext, der die `CMFCRibbonButtonsGroup` Objekt.  
   
- [in] *RectImage*  
- Das Rechteck, in dem das Bild gezeichnet werden soll.  
+*rectImage*<br/>
+[in] Das Rechteck, in dem das Bild gezeichnet werden soll.  
   
- [in] *pButton*  
- Die Schaltfläche für die zum Zeichnen des Bilds.  
+*pButton*<br/>
+[in] Die Schaltfläche für die zum Zeichnen des Bilds.  
   
- [in] *nImageIndex*  
- Der Index des Bildes, das auf die Schaltfläche "(in einem der drei Images Arrays für normale, hervorgehobene oder deaktivierte Schaltflächen) zu zeichnen.  
+*nImageIndex*<br/>
+[in] Der Index des Bildes, das auf die Schaltfläche "(in einem der drei Images Arrays für normale, hervorgehobene oder deaktivierte Schaltflächen) zu zeichnen.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -248,14 +248,14 @@ void SetImages(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pImages*  
- Regulären Abbildern.  
+*pImages*<br/>
+[in] Regulären Abbildern.  
   
- [in] *pHotImages*  
- Hot-Images.  
+*pHotImages*<br/>
+[in] Hot-Images.  
   
- [in] *pDisabledImages*  
- Deaktivierte Bilder.  
+*pDisabledImages*<br/>
+[in] Deaktivierte Bilder.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie `SetImages` vor dem Hinzufügen von Schaltflächen zu einer Gruppe. Die Anzahl der Abbilder muss größer oder gleich der Anzahl der Schaltflächen, um der Gruppe hinzugefügt werden.  
@@ -271,8 +271,8 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pCategory*  
- Zeiger auf die übergeordnete Kategorie festlegen (der Gruppen im Registerkartenformat im Menübandsteuerelemente werden Kategorien genannt).  
+*pCategory*<br/>
+[in] Zeiger auf die übergeordnete Kategorie festlegen (der Gruppen im Registerkartenformat im Menübandsteuerelemente werden Kategorien genannt).  
   
 ### <a name="remarks"></a>Hinweise  
   

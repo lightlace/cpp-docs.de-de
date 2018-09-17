@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b32317f4fd67a627a272ea8eefcc949d1b0e63c8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 32dd81b005570761088cdeb874ad0524bc543df2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852993"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721863"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu-Klasse
 Stellt ein Popup-Menü, das Benutzer verwenden, um die Farben in einem Dokument oder die Anwendung auswählen.  
@@ -133,51 +133,51 @@ CMFCColorPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Farben*  
- Ein Array von Farben, die das Framework auf dem Popup-Menü angezeigt werden soll.  
+*Farben*<br/>
+[in] Ein Array von Farben, die das Framework auf dem Popup-Menü angezeigt werden soll.  
   
- [in] *Farbe*  
- Die standardmäßig ausgewählten Farbe.  
+*Farbe*<br/>
+[in] Die standardmäßig ausgewählten Farbe.  
   
- [in] *LpszAutoColor*  
- Die textbezeichnung des der *automatische* farbenschaltfläche (Standard), oder NULL.  
+*lpszAutoColor*<br/>
+[in] Die textbezeichnung des der *automatische* farbenschaltfläche (Standard), oder NULL.  
   
  Die standardmäßige Bezeichnung für die automatische Schaltfläche ist **automatische**.  
   
- [in] *LpszOtherColor*  
- Die textbezeichnung des der *andere* Schaltfläche, welche zeigt weitere Farben, oder NULL.  
+*lpszOtherColor*<br/>
+[in] Die textbezeichnung des der *andere* Schaltfläche, welche zeigt weitere Farben, oder NULL.  
   
  Die standardmäßige Bezeichnung für die andere Schaltfläche ist **Weitere Farben...** .  
   
- [in] *LpszDocColors*  
- Die Beschriftung der Schaltfläche Dokument Farben. Die Farben (Palette) Dokument Listet alle Farben, die das Dokument derzeit verwendet.  
+*lpszDocColors*<br/>
+[in] Die Beschriftung der Schaltfläche Dokument Farben. Die Farben (Palette) Dokument Listet alle Farben, die das Dokument derzeit verwendet.  
   
- [in] *LstDocColors*  
- Eine Liste von Farben, die das Dokument derzeit verwendet werden soll.  
+*lstDocColors*<br/>
+[in] Eine Liste von Farben, die das Dokument derzeit verwendet werden soll.  
   
- [in] *nColumns*  
- Die Anzahl der Spalten, die das Array von Farben aufweist.  
+*nColumns*<br/>
+[in] Die Anzahl der Spalten, die das Array von Farben aufweist.  
   
- [in] *nHorzDockRows*  
- Die Anzahl der Zeilen, die über der Farbleiste verfügt, wenn er horizontal angedockt ist.  
+*nHorzDockRows*<br/>
+[in] Die Anzahl der Zeilen, die über der Farbleiste verfügt, wenn er horizontal angedockt ist.  
   
- [in] *nVertDockColumns*  
- Die Anzahl der Spalten, die der Farbleiste hat, wenn sie vertikal angedockt wird.  
+*nVertDockColumns*<br/>
+[in] Die Anzahl der Spalten, die der Farbleiste hat, wenn sie vertikal angedockt wird.  
   
- [in] *ColorAutomatic*  
- Die Standardfarbe, die das Framework gilt, wenn Sie die automatische Schaltfläche klicken.  
+*colorAutomatic*<br/>
+[in] Die Standardfarbe, die das Framework gilt, wenn Sie die automatische Schaltfläche klicken.  
   
- [in] *UiCommandID*  
- Der Befehl der Farbleiste-Control-ID.  
+*uiCommandID*<br/>
+[in] Der Befehl der Farbleiste-Control-ID.  
   
- [in] *bStdColorDlg*  
- Ein boolescher Wert, der angibt, ob das Dialogfeld Farbe standardsystembenachrichtigung angezeigt oder [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) Dialogfeld.  
+*bStdColorDlg*<br/>
+[in] Ein boolescher Wert, der angibt, ob das Dialogfeld Farbe standardsystembenachrichtigung angezeigt oder [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) Dialogfeld.  
   
- [in] *pParentBtn*  
- Ein Zeiger auf eine Schaltfläche "übergeordneten".  
+*pParentBtn*<br/>
+[in] Ein Zeiger auf eine Schaltfläche "übergeordneten".  
   
- [in] *nID*  
- Die Befehls-ID.  
+*nID*<br/>
+[in] Die Befehls-ID.  
   
 ### <a name="remarks"></a>Hinweise  
  Jede überladene Konstruktor legt die `m_bEnabledInCustomizeMode` Member auf "false".  
@@ -202,9 +202,9 @@ virtual CPane* CreateTearOffBar(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *pWndMain*|Zeiger auf das übergeordnete Fenster der abtrennbarer Leiste.|  
-|[in] *UiID*|Die Befehls-ID der abtrennbarer Leiste.|  
-|[in] *Wert*|Der Fenstertext im der abtrennbarer Leiste.|  
+|*pWndMain*|[in] Zeiger auf das übergeordnete Fenster der abtrennbarer Leiste.|  
+|*uiID*|[in] Die Befehls-ID der abtrennbarer Leiste.|  
+|*Wert*|[in] Der Fenstertext im der abtrennbarer Leiste.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die neue abtrennbare Steuerleistenobjekt.  
@@ -233,8 +233,8 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWndList*  
- Zeiger auf ein Eigenschaftenobjekt der Grid-Steuerelement.  
+*pWndList*<br/>
+[in] Zeiger auf ein Eigenschaftenobjekt der Grid-Steuerelement.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

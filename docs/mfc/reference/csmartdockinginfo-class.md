@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a900ab0e0307cd059aaeb6f4333ef6d28f98dad6
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: efd214e4368e122a800e51e9bd90cb72a6a4616b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849814"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725854"
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo-Klasse
 Definiert die Darstellung von intelligenten Andockmarkern.  
@@ -119,8 +119,8 @@ void CopyTo(CSmartDockingInfo& params);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *Params*  
- Ein Objekt des Typs `CSmartDockingInfo` , die mit den aktuellen smart-docking-Parametern aufgefüllt wird.  
+*params*<br/>
+[out] Ein Objekt des Typs `CSmartDockingInfo` , die mit den aktuellen smart-docking-Parametern aufgefüllt wird.  
   
 ##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading  
  Gibt an, ob das aktuelle Farbdesign verwendet wird, wenn das Framework intelligente andockmarker angezeigt wird.  

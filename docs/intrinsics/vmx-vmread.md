@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f03ea1ea39b9202d4bb7b850bb81354a4a47f1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: c0c8b5a22cfef8ebde74fbe6d1f6920a969e7bc6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677379"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706380"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 **Microsoft-spezifisch**  
@@ -42,8 +42,8 @@ unsigned char __vmx_vmread(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `Field`|Das zu lesende VMCS-Feld.|  
-|[in] `FieldValue`|Ein Zeiger auf den Speicherort zum Speichern des Werts zu lesen, aus dem vom angegebenen VMCS-Feld der `Field` Parameter.|  
+|*Feld*|[in] Das zu lesende VMCS-Feld.|  
+|*FieldValue*|[in] Ein Zeiger auf den Speicherort zum Speichern des Werts zu lesen, aus dem vom angegebenen VMCS-Feld der `Field` Parameter.|  
   
 ## <a name="return-value"></a>Rückgabewert  
   

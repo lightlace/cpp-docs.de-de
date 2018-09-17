@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55ef22eec84b4d7e5e4ea27abe611cf2d18f2a1b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 889a6f083cb4aace6e93d221a33caef29155d7f1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545817"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725009"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>CMFCRibbonStatusBarPane-Klasse
 Die `CMFCRibbonStatusBarPane` -Klasse implementiert ein Menübandelement, das eine Menüband-Statusleiste hinzugefügt werden können.  
@@ -136,32 +136,32 @@ CMFCRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nCmdID*  
- Gibt die Befehls-ID des Bereichs an.  
+*nCmdID*<br/>
+[in] Gibt die Befehls-ID des Bereichs an.  
   
- [in] *LpszText*  
- Gibt an, Textzeichenfolge, die im Bereich angezeigt werden.  
+*lpszText*<br/>
+[in] Gibt an, Textzeichenfolge, die im Bereich angezeigt werden.  
   
- [in] *bIsStatic*  
- Wenn "true" kann nicht im Statusbereich hervorgehoben oder ausgewählt werden, indem Sie darauf klicken.  
+*bIsStatic*<br/>
+[in] Wenn "true" kann nicht im Statusbereich hervorgehoben oder ausgewählt werden, indem Sie darauf klicken.  
   
- [in] *hIcon*  
- Gibt ein Handle für ein Symbol im Bereich angezeigt werden.  
+*hIcon*<br/>
+[in] Gibt ein Handle für ein Symbol im Bereich angezeigt werden.  
   
- [in] *LpszAlmostLargeText*  
- Gibt an, die längste Zeichenfolge, die von dem Bereich angezeigt werden kann.  
+*lpszAlmostLargeText*<br/>
+[in] Gibt an, die längste Zeichenfolge, die von dem Bereich angezeigt werden kann.  
   
- [in] *hBmpAnimationList*  
- Gibt ein Handle einer Bildliste an, die für die Animation verwendet wird.  
+*hBmpAnimationList*<br/>
+[in] Gibt ein Handle einer Bildliste an, die für die Animation verwendet wird.  
   
- [in] *CxAnimation*  
- Gibt die Breite in Pixel des Symbols in der Bildliste an, die für die Animation verwendet wird.  
+*cxAnimation*<br/>
+[in] Gibt die Breite in Pixel des Symbols in der Bildliste an, die für die Animation verwendet wird.  
   
- [in] *ClrTrnsp*  
- Gibt die transparente Farbe des Images in der Bildliste an, die für die Animation verwendet werden.  
+*clrTrnsp*<br/>
+[in] Gibt die transparente Farbe des Images in der Bildliste an, die für die Animation verwendet werden.  
   
- [in] *UiAnimationListResID*  
- Gibt eine Ressourcen-ID, der eine Liste der Bilder, die für die Animation verwendet wird.  
+*uiAnimationListResID*<br/>
+[in] Gibt eine Ressourcen-ID, der eine Liste der Bilder, die für die Animation verwendet wird.  
   
 ##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText  
  Ruft die längste Zeichenfolge, die den Statusleistenbereich anzeigen können.  
@@ -253,8 +253,8 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszAlmostLargeText*  
- Gibt die Länge der Zeichenfolge, die für den Statusleistenbereich ungekürzt angezeigt werden kann.  
+*lpszAlmostLargeText*<br/>
+[in] Gibt die Länge der Zeichenfolge, die für den Statusleistenbereich ungekürzt angezeigt werden kann.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Bibliothek berechnet die Größe des Texts, *LpszAlmostLargeText* gibt an, und den Bereich entsprechend ändert. Der Text wird abgeschnitten, wenn er noch nicht im Bereich passt.  
@@ -275,17 +275,17 @@ BOOL SetAnimationList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *hBmpAnimationList*  
- Gibt ein Handle einer Bildliste.  
+*hBmpAnimationList*<br/>
+[in] Gibt ein Handle einer Bildliste.  
   
- [in] *CxAnimation*  
- Gibt die Breite in Pixel des Rahmens in der Bildliste an.  
+*cxAnimation*<br/>
+[in] Gibt die Breite in Pixel des Rahmens in der Bildliste an.  
   
- [in] *ClrTransp*  
- Gibt die transparente Farbe in der Liste der Bilder an.  
+*clrTransp*<br/>
+[in] Gibt die transparente Farbe in der Liste der Bilder an.  
   
- [in] *UiAnimationListResID*  
- Gibt die Ressourcen-ID der Liste der Bilder an.  
+*uiAnimationListResID*<br/>
+[in] Gibt die Ressourcen-ID der Liste der Bilder an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Bildliste erfolgreich dem Statusleistenbereich zugeordnet ist. "False" andernfalls.  
@@ -298,8 +298,8 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nAlign*  
- Gibt die Ausrichtung des Texts an.  
+*nAlign*<br/>
+[in] Gibt die Ausrichtung des Texts an.  
   
 ### <a name="remarks"></a>Hinweise  
  *nAlign* kann einen der folgenden Werte aufweisen:  
@@ -320,11 +320,11 @@ void StartAnimation(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nFrameDelay*  
- Gibt die Animation Framerate, in Millisekunden an.  
+*nFrameDelay*<br/>
+[in] Gibt die Animation Framerate, in Millisekunden an.  
   
- [in] *nDuration*  
- Gibt an, wie lange zur Wiedergabe der Animation, in Millisekunden. Verwenden Sie-1 für eine Endlosschleife.  
+*nDuration*<br/>
+[in] Gibt an, wie lange zur Wiedergabe der Animation, in Millisekunden. Verwenden Sie-1 für eine Endlosschleife.  
   
 ### <a name="remarks"></a>Hinweise  
  Sie müssen ein Handle einer Bildliste angeben, vor dem Aufruf `StartAnimation` mit `SetAnimationList`.  

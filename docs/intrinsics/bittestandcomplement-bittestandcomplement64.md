@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74040260149b6a22dcb673eb26f4561c4f324e61
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e52bb1fcd0b8d7321ead43c79003032a089a22fb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541254"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723358"
 ---
 # <a name="bittestandcomplement-bittestandcomplement64"></a>_bittestandcomplement, _bittestandcomplement64
 **Microsoft-spezifisch**  
@@ -47,11 +47,11 @@ unsigned char _bittestandcomplement64(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in, out] `a`  
- Ein Zeiger auf den zu untersuchenden Speicher.  
+*a*<br/>
+[in, out] Ein Zeiger auf den zu untersuchenden Speicher.  
   
- [in] `b`  
- Die zu testende Bitposition.  
+*b*<br/>
+[in] Die zu testende Bitposition.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Das Bit an der angegebenen Position.  

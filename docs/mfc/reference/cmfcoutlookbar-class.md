@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b9de076f4682bd3649f62940a0dd492eb801e28
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9ed3a07b7994d2c7adc7a5d708d31abe9c49437f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850182"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717105"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar-Klasse
 Eine Seite im Registerformat mit dem Aussehen des **Navigationsbereichs** in Microsoft Outlook 2000 oder Outlook 2003. Die `CMFCOutlookBar` Objekt enthält eine [CMFCOutlookBarTabCtrl-Klasse](../../mfc/reference/cmfcoutlookbartabctrl-class.md) Objekt und eine Reihe von Registerkarten. Die Registerkarten können es sich um [CMFCOutlookBarPane-Klasse](../../mfc/reference/cmfcoutlookbarpane-class.md) Objekte oder `CWnd`--abgeleitete Objekte. Für den Benutzer wird die Outlook-Leiste in Form einer Reihe von Schaltflächen und eines Anzeigebereichs dargestellt. Wenn der Benutzer auf eine Schaltfläche klickt, wird der entsprechende Steuerelement- oder Schaltflächenbereich angezeigt.  
@@ -210,8 +210,8 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- Ein Zeiger auf einen anderen Bereich, der in diesen Bereich angedockt wird.  
+*pBar*<br/>
+[in] Ein Zeiger auf einen anderen Bereich, der in diesen Bereich angedockt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn ein weiterer Bereich, um die Outlook-Leistenbereich angedockt werden kann. andernfalls "false".  
@@ -253,26 +253,26 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszCaption*  
- Gibt an, die fensterbeschriftung.  
+*lpszCaption*<br/>
+[in] Gibt an, die fensterbeschriftung.  
   
- [in] *pParentWnd*  
- Gibt einen Zeiger auf ein übergeordnetes Fenster. Es darf nicht NULL sein.  
+*pParentWnd*<br/>
+[in] Gibt einen Zeiger auf ein übergeordnetes Fenster. Es darf nicht NULL sein.  
   
- [in] *Rect*  
- Gibt an, die Outlook-Leiste Größe und Position in Pixel.  
+*Rect*<br/>
+[in] Gibt an, die Outlook-Leiste Größe und Position in Pixel.  
   
- [in] *nID*  
- Gibt an, die Steuerelement-ID. Muss sich von anderen Steuerelement-IDs, die in der Anwendung verwendet werden.  
+*nID*<br/>
+[in] Gibt an, die Steuerelement-ID. Muss sich von anderen Steuerelement-IDs, die in der Anwendung verwendet werden.  
   
- [in] *DwStyle*  
- Gibt das gewünschte Steuerelement Standardstil der Statusleiste an. Mögliche Werte finden Sie unter [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] Gibt das gewünschte Steuerelement Standardstil der Statusleiste an. Mögliche Werte finden Sie unter [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *DwControlBarStyle*  
- Gibt an, die besondere Bibliothek definierten Stile.  
+*dwControlBarStyle*<br/>
+[in] Gibt an, die besondere Bibliothek definierten Stile.  
   
- [in] *"pContext"*  
- Erstellen von Kontext.  
+*"pContext"*<br/>
+[in] Erstellen von Kontext.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn die Methode erfolgreich ist; andernfalls 0.  
@@ -300,17 +300,17 @@ CMFCOutlookBarPane* CreateCustomPage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszPageName*  
- Die Beschriftung "".  
+*lpszPageName*<br/>
+[in] Die Beschriftung "".  
   
- [in] *bActivatePage*  
- Wenn TRUE, wird die Seite bei der Erstellung aktiviert.  
+*bActivatePage*<br/>
+[in] Wenn TRUE, wird die Seite bei der Erstellung aktiviert.  
   
- [in] *DwEnabledDocking*  
- Eine Kombination von CBRS_ALIGN_-Flags, die angibt, die aktiviert Andocken Seiten auf, wenn die Seite getrennt wird.  
+*dwEnabledDocking*<br/>
+[in] Eine Kombination von CBRS_ALIGN_-Flags, die angibt, die aktiviert Andocken Seiten auf, wenn die Seite getrennt wird.  
   
- [in] *bEnableTextLabels*  
- Wenn TRUE, sind die Bezeichnungen für die Schaltflächen aktiviert, die sich auf der Seite befinden.  
+*bEnableTextLabels*<br/>
+[in] Wenn TRUE, sind die Bezeichnungen für die Schaltflächen aktiviert, die sich auf der Seite befinden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die neu erstellte Seite oder NULL, wenn die Erstellung ist fehlgeschlagen.  
@@ -350,17 +350,17 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- Ein Zeiger auf den Bereich, um "float".  
+*pBar*<br/>
+[in] Ein Zeiger auf den Bereich, um "float".  
   
- [in] *nTabID*  
- Der nullbasierte Index der Registerkarte "float".  
+*nTabID*<br/>
+[in] Der nullbasierte Index der Registerkarte "float".  
   
- [in] *DockMethod*  
- Gibt die Methode zu verwenden, um den Bereich "float".  Weitere Informationen finden Sie unter [cbasetabbedpane:: Floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab).  
+*dockMethod*<br/>
+[in] Gibt die Methode zu verwenden, um den Bereich "float".  Weitere Informationen finden Sie unter [cbasetabbedpane:: Floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab).  
   
- [in] *bHide*  
- True, um den Bereich ausblenden, bevor Sie die floating. andernfalls "false". Im Gegensatz zu die Basisklassenversion dieser Methode ist dieser Parameter keinen Standardwert aufweisen.  
+*bHide*<br/>
+[in] True, um den Bereich ausblenden, bevor Sie die floating. andernfalls "false". Im Gegensatz zu die Basisklassenversion dieser Methode ist dieser Parameter keinen Standardwert aufweisen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Bereich abgedockt. andernfalls "false".  
@@ -391,11 +391,11 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *RectTabAreaTop*  
- Enthält die Größe und Position (in Clientkoordinaten) des Bereichs, Registerkarte "Top", bei Rückgabe der Funktion.  
+*rectTabAreaTop*<br/>
+[out] Enthält die Größe und Position (in Clientkoordinaten) des Bereichs, Registerkarte "Top", bei Rückgabe der Funktion.  
   
- [out] *RectTabAreaBottom*  
- Enthält die Größe und Position (in Clientkoordinaten) des Registerkartenbereichs unten an, bei Rückgabe der Funktion.  
+*rectTabAreaBottom*<br/>
+[out] Enthält die Größe und Position (in Clientkoordinaten) des Registerkartenbereichs unten an, bei Rückgabe der Funktion.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Methode, um den Typ auf den Bereich "Ziel" Andocken zu bestimmen. Wenn das Framework feststellt, dass der Benutzer den Bereich, um über den Registerkartenbereich im Ziel-Bereich angedockt werden zieht, versucht, den ersten Bereich als eine neue Registerkarte, der den Bereich "Ziel" hinzufügen. Andernfalls versucht, den ersten Bereich einen entsprechenden auf der der Bereich "Ziel" andocken. Das Framework erstellt einen neuen Container mit einem Schieberegler, um den zusätzlichen angedockten Bereich zu berücksichtigen.  
@@ -425,8 +425,8 @@ virtual void OnAfterAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *. nSeite*  
- Der nullbasierte Index der Registerkarte, die aktiven vorgenommen wurde.  
+*. nSeite*<br/>
+[in] Der nullbasierte Index der Registerkarte, die aktiven vorgenommen wurde.  
   
 ### <a name="remarks"></a>Hinweise  
  Der visuelle Effekt der aktive Registerkarte festlegen, hängt davon ab, ob Sie die Animation aktiviert haben. Weitere Informationen finden Sie unter [CMFCOutlookBarTabCtrl::EnableAnimation](../../mfc/reference/cmfcoutlookbartabctrl-class.md#enableanimation).  
@@ -439,8 +439,8 @@ virtual BOOL OnBeforeAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *. nSeite*  
- Der nullbasierte Index der Registerkarte, die aktiv festgelegt wird.  
+*. nSeite*<br/>
+[in] Der nullbasierte Index der Registerkarte, die aktiv festgelegt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt zurück, TRUE, wenn die Animation beim Festlegen der neuen aktiven Registerkarte verwendet werden soll, oder FALSE, wenn die Animation deaktiviert werden soll.  
@@ -455,8 +455,8 @@ virtual void OnScroll(BOOL bDown);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bDown*  
- TRUE, wenn die Outlook-Leiste wird nach unten scrollen, oder FALSE, wenn sie nach oben Scrollen wird.  
+*bDown*<br/>
+[in] TRUE, wenn die Outlook-Leiste wird nach unten scrollen, oder FALSE, wenn sie nach oben Scrollen wird.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -470,11 +470,11 @@ BOOL RemoveCustomPage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *uipage fehlgeschlagen*  
- Nullbasierte Index der Seite in das übergeordnete Outlook-Fenster.  
+*uipage fehlgeschlagen*<br/>
+[in] Nullbasierte Index der Seite in das übergeordnete Outlook-Fenster.  
   
- [in] *pTargetWnd*  
- Pointerto das übergeordnete Outlook-Fenster.  
+*pTargetWnd*<br/>
+[in] Pointerto das übergeordnete Outlook-Fenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Legen Sie ungleich NULL, wenn es sich bei die benutzerdefinierte Seite erfolgreich entfernt wurde; andernfalls 0.  
@@ -496,11 +496,11 @@ void SetButtonsFont(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pFont*  
- Gibt die neue Schriftart an.  
+*pFont*<br/>
+[in] Gibt die neue Schriftart an.  
   
- [in] *bRedraw*  
- Wenn TRUE, wird die Outlook-Leiste neu gezeichnet werden.  
+*bRedraw*<br/>
+[in] Wenn TRUE, wird die Outlook-Leiste neu gezeichnet werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um eine Schriftart für den Text auf Outlook Registerkarte Seitenschaltflächen festzulegen.  
@@ -513,8 +513,8 @@ void SetMode2003(BOOL bMode2003=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bMode2003*  
- Bei "true", ist Office 2003-Modus aktiviert.  
+*bMode2003*<br/>
+[in] Bei "true", ist Office 2003-Modus aktiviert.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Funktion aktivieren oder Deaktivieren von Office 2003-Modus. In diesem Modus hat die Outlook-Leiste eine zusätzliche Toolbar mit einer Schaltfläche "anpassen". Das Verhalten der Outlook-Leiste entspricht dem Verhalten der in Microsoft Office 2003 Outlook-Leiste.  

@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a12e5abcc02017acbd06c841cc9ab62a9d25bdf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 810b59bb85d374b1cf65985a64be32c645e6f3b5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757100"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718073"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Drehfeld-Steuerelements bereit.  
@@ -352,9 +352,10 @@ void SetRange32(
     int nUpper);
 ```  
   
-### <a name="parameters"></a>Parameter  
- *nLower* und *nUpper*  
- Obere und untere Grenze für das Steuerelement. Für `SetRange`weder Grenzwert UD_MAXVAL größer bzw. kleiner als UD_MINVAL; darüber hinaus den Unterschied zwischen den zwei Grenzen nicht überschreiten UD_MAXVAL. `SetRange32` Schränkt die Grenzwerte; Verwenden Sie einen Integer.  
+### <a name="parameters"></a>Parameter
+
+*nLower* und *nUpper*<br/>
+Obere und untere Grenze für das Steuerelement. Für `SetRange`weder Grenzwert UD_MAXVAL größer bzw. kleiner als UD_MINVAL; darüber hinaus den Unterschied zwischen den zwei Grenzen nicht überschreiten UD_MAXVAL. `SetRange32` Schränkt die Grenzwerte; Verwenden Sie einen Integer.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Memberfunktion `SetRange32` legt den 32-Bit-Bereich für das Drehfeld-Steuerelement fest.  

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d67f4fb4fdb6a46d00ef8cdf21559cf6043932e2
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1339b291c92879beb7606b0dabe77904ad9f462e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336519"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713595"
 ---
 # <a name="cfileexception-class"></a>CFileException-Klasse
 Stellt eine dateibezogene Ausnahmebedingung dar.  
@@ -148,14 +148,14 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in, out] *LpszError*  
- Zeiger auf einen Puffer, der eine Fehlermeldung empfängt.  
+*lpszError*<br/>
+[in, out] Zeiger auf einen Puffer, der eine Fehlermeldung empfängt.  
   
- [in] *nMaxError*  
- Die maximale Anzahl von Zeichen, die der angegebene Puffer gespeichert werden kann. Dies schließt das abschließende Nullzeichen.  
+*nMaxError*<br/>
+[in] Die maximale Anzahl von Zeichen, die der angegebene Puffer gespeichert werden kann. Dies schließt das abschließende Nullzeichen.  
   
- [in, out] *PnHelpContext*  
- Zeiger auf eine Ganzzahl ohne Vorzeichen, die empfängt die Hilfekontext-ID. Wenn `NULL`, keine ID zurückgegeben.  
+*pnHelpContext*<br/>
+[in, out] Zeiger auf eine Ganzzahl ohne Vorzeichen, die empfängt die Hilfekontext-ID. Wenn `NULL`, keine ID zurückgegeben.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich war. andernfalls "false".  

@@ -1,5 +1,5 @@
 ---
-title: -FC (vollständiger Pfad der Quellcodedatei in Diagnose) | Microsoft Docs
+title: -FC (vollständiger Pfad der Quellcodedatei in Diagnose) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a721b6887b6c5c07d96a79b06f05e6d7855250b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4d34fe85354d218d2499dbece70964c2e55e2592
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373204"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702706"
 ---
 # <a name="fc-full-path-of-source-code-file-in-diagnostics"></a>/FC (Vollständiger Pfad der Quellcodedatei in Diagnostik)
 
-Bewirkt, dass den Compiler den vollständigen Pfad der Quellcodedateien, die an den Compiler bei der Diagnose übergebene anzeigen.
+Bewirkt, dass den Compiler den vollständigen Pfad der Quellcodedateien, die an den Compiler bei der Diagnose anzeigen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -35,7 +35,7 @@ Bewirkt, dass den Compiler den vollständigen Pfad der Quellcodedateien, die an 
 
 ## <a name="remarks"></a>Hinweise
 
-Betrachten Sie das folgende Codebeispiel:
+Betrachten Sie das folgende Codebeispiel herunter:
 
 ```cpp
 // compiler_option_FC.cpp
@@ -44,23 +44,23 @@ int main( ) {
 }
 ```
 
-Ohne **/FC**, die Diagnosetext würde diese Diagnosetext ähnelt:
+Ohne **/FC**, die Diagnosetext sieht etwa wie folgt Diagnose:
 
-- compiler_option_FC.cpp(5): Fehler C2143: Syntaxfehler: Fehlender ";" vor "}"
+- compiler_option_FC.cpp(5): Fehler C2143: Syntaxfehler: Fehlender ';' vor '}'
 
-Mit **/FC**, die Diagnosetext würde diese Diagnosetext ähnelt:
+Mit **/FC**, die Diagnosetext sieht etwa wie folgt Diagnose:
 
-- c:\test\compiler_option_FC.cpp(5): Fehler C2143: Syntaxfehler: Fehlender ";" vor "}"
+- c:\test\compiler_option_FC.cpp(5): Fehler C2143: Syntaxfehler: Fehlender ';' vor '}'
 
- **/ FC** ist auch erforderlich, wenn Sie den vollständigen Pfad eines Dateinamens finden Sie unter Verwendung möchten der &#95; &#95;Datei&#95; &#95; Makro. Finden Sie unter [vordefinierte Makros](../../preprocessor/predefined-macros.md) Weitere Informationen zu &#95; &#95;Datei&#95;&#95;.
+**/ FC** ist auch erforderlich, sollten Sie den vollständigen Pfad eines Dateinamens finden Sie unter Verwendung der &#95; &#95;Datei&#95; &#95; Makro. Finden Sie unter [Predefined Macros](../../preprocessor/predefined-macros.md) für Weitere Informationen zu &#95; &#95;Datei&#95;&#95;.
 
-Die **/FC** Option impliziert, durch die **/Zi**. Weitere Informationen zu **/Zi**, finden Sie unter ["/ Z7", / Zi, / Zi (Debuginformationsformat)](../../build/reference/z7-zi-zi-debug-information-format.md).
+Die **/FC** Option impliziert wird, durch die **"/ Zi"**. Weitere Informationen zu **"/ Zi"**, finden Sie unter [/Z7, / Zi, / Zi (Debuginformationsformat)](../../build/reference/z7-zi-zi-debug-information-format.md).
 
 **/ FC** gibt vollständige Pfade in Kleinbuchstaben.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **erweitert** Eigenschaftenseite.
 
@@ -72,5 +72,5 @@ Die **/FC** Option impliziert, durch die **/Zi**. Weitere Informationen zu **/Zi
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)   
+[Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

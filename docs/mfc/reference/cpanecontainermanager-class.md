@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3a0372d5892ec4b563275d0a5bb8f309cf6fc47
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 679445f9d80a971f0febe2ba92e7826c3ada5ca1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540835"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721616"
 ---
 # <a name="cpanecontainermanager-class"></a>CPaneContainerManager-Klasse
 Die `CPaneContainerManager` Klasse verwaltet die Speicherung und die Anzeige des aktuellen andocklayouts.  
@@ -237,10 +237,10 @@ virtual BOOL AddPaneContainerManager(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *SrcManager*  
- [in] *bOuterEdge*  
- [in] *pTargetControlBar*  
- [in] *DwAlignment*  
+*srcManager*<br/>
+[in] [in] *bOuterEdge*  
+*pTargetControlBar*<br/>
+[in] [in] *DwAlignment*  
  [in] *bCopy*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -257,8 +257,8 @@ virtual BOOL AddPaneContainerManagerToDockablePane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pTargetControlBar*  
- [in] *SrcManager*  
+*pTargetControlBar*<br/>
+[in] [in] *SrcManager*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -274,8 +274,8 @@ void AddPanesToList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *PlstControlBars*  
- [in] *PlstSliders*  
+*plstControlBars*<br/>
+[in] [in] *PlstSliders*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -301,8 +301,8 @@ virtual CDockablePane* AddPaneToRecentPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBarToAdd*  
- [in] *pRecentContainer*  
+*pBarToAdd*<br/>
+[in] [in] *pRecentContainer*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -323,12 +323,12 @@ void CalcRects(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *RectOriginal*  
- [in] *RectInserted*  
- [in] *RectSlider*  
- [in] *DwSliderStyle*  
- [in] *DwAlignment*  
- [in] *SizeMinOriginal*  
+*rectOriginal*<br/>
+[in] [in] *RectInserted*  
+*rectSlider*<br/>
+[in] [in] *DwSliderStyle*  
+*dwAlignment*<br/>
+[in] [in] *SizeMinOriginal*  
  [in] *SizeMinInserted*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -368,8 +368,8 @@ virtual BOOL CheckForMiniFrameAndCaption(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- [in] *PpTargetControlBar*  
+*Zeigen Sie*<br/>
+[in] [in] *PpTargetControlBar*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -386,8 +386,8 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pParentWnd*  
- [in] *pDefaultSlider*  
+*pParentWnd*<br/>
+[in] [in] *pDefaultSlider*  
  [in] *pContainerRTC*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -438,8 +438,8 @@ virtual CPaneContainer* FindPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- [in] *bLeftBar*  
+*pBar*<br/>
+[in] [in] *bLeftBar*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -527,10 +527,10 @@ virtual void GetMinMaxOffset(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pSlider*  
- [in] *nMinOffset*  
- [in] *nMaxOffset*  
- [in] *nStep*  
+*pSlider*<br/>
+[in] [in] *nMinOffset*  
+*nMaxOffset*<br/>
+[in] [in] *nStep*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -635,10 +635,10 @@ virtual BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pControlBarToInsert*  
- [in] *pTargetControlBar*  
- [in] *DwAlignment*  
- [in] *LpRect*  
+*pControlBarToInsert*<br/>
+[in] [in] *pTargetControlBar*  
+*dwAlignment*<br/>
+[in] [in] *LpRect*  
  [in] *DockMethod*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -699,10 +699,10 @@ virtual int OnPaneDividerMove(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pSlider*  
- [in] *uFlags*  
- [in] *nOffset*  
- [in] *Hdwp*  
+*pSlider*<br/>
+[in] [in] *uFlags*  
+*nOffset*<br/>
+[in] [in] *Hdwp*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -718,8 +718,8 @@ virtual BOOL OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- [in] *bShow*  
+*pBar*<br/>
+[in] [in] *bShow*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -738,10 +738,10 @@ virtual CDockablePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- [in] *nSensitivity*  
- [in] *bExactBar*  
- [in] *bIsTabArea*  
+*Zeigen Sie*<br/>
+[in] [in] *nSensitivity*  
+*bExactBar*<br/>
+[in] [in] *bIsTabArea*  
  [in] *bCaption*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -811,8 +811,8 @@ virtual BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBarOld*  
- [in] *pBarNew*  
+*pBarOld*<br/>
+[in] [in] *pBarNew*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -835,10 +835,10 @@ virtual void ResizePaneContainers(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *n*  
- [in] *bExpand*  
- [in] *nOffset*  
- [in] *Hdwp*  
+*n*<br/>
+[in] [in] *bExpand*  
+*nOffset*<br/>
+[in] [in] *Hdwp*  
  [in] *Rect*  
   
 ### <a name="remarks"></a>Hinweise  

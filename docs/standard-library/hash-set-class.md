@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f40fbed217bde0cfe0e917100a18bbdea91f0a8f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 142b88cf58369f09be4e06ed47fef94b845dfe71
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200345"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726023"
 ---
 # <a name="hashset-class"></a>hash_set-Klasse
 
@@ -122,13 +122,13 @@ class hash_set
 ### <a name="parameters"></a>Parameter
 
 *Key*<br/>
- Der im hash_set-Objekt zu speichernde Elementdatentyp.
+Der im hash_set-Objekt zu speichernde Elementdatentyp.
 
 *Merkmale*<br/>
- Der Typ, der zwei Funktionsobjekte enthält: eines der Klasse "compare", ein binäres Prädikat, das zwei Elementwerte als Sortierschlüssel, um zu ermitteln, deren relative Reihenfolge und eine Hashfunktion, die eine unäre Prädikat Zuordnung Schlüsselwerte der Elemente, die ohne Vorzeichen ist vergleichen können ganzen Zahlen vom Typ `size_t`. Das Argument ist optional und `hash_compare<Key, less<Key> >` ist der Standardwert.
+Der Typ, der zwei Funktionsobjekte enthält: eines der Klasse "compare", ein binäres Prädikat, das zwei Elementwerte als Sortierschlüssel, um zu ermitteln, deren relative Reihenfolge und eine Hashfunktion, die eine unäre Prädikat Zuordnung Schlüsselwerte der Elemente, die ohne Vorzeichen ist vergleichen können ganzen Zahlen vom Typ `size_t`. Das Argument ist optional und `hash_compare<Key, less<Key> >` ist der Standardwert.
 
 *Zuweisung*<br/>
- Der Typ, mit dem das gespeicherte allocator-Objekt dargestellt wird, mit dem Details zum Belegen und Freigeben von Arbeitsspeicher für das hash_set-Element gekapselt werden. Dieses Argument ist optional, und der Standardwert ist `allocator<Key>`.
+Der Typ, mit dem das gespeicherte allocator-Objekt dargestellt wird, mit dem Details zum Belegen und Freigeben von Arbeitsspeicher für das hash_set-Element gekapselt werden. Dieses Argument ist optional, und der Standardwert ist `allocator<Key>`.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -563,7 +563,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parameter
 
 *key*<br/>
- Der Schlüssel des Elements mit einem übereinstimmenden Schlüssel aus der hash_set-Klasse.
+Der Schlüssel des Elements mit einem übereinstimmenden Schlüssel aus der hash_set-Klasse.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1030,7 +1030,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parameter
 
 *key*<br/>
- Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus dem zu durchsuchenden hash_set verglichen wird.
+Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus dem zu durchsuchenden hash_set verglichen wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1117,16 +1117,16 @@ size_type erase(const key_type& key);
 ### <a name="parameters"></a>Parameter
 
 *_Where*<br/>
- Die Position des aus hash_set zu entfernenden Elements.
+Die Position des aus hash_set zu entfernenden Elements.
 
 *Erste*<br/>
- Die Position des ersten Elements, das aus hash_set entfernt werden soll.
+Die Position des ersten Elements, das aus hash_set entfernt werden soll.
 
 *last*<br/>
- Die Position direkt hinter dem letzten aus hash_set entfernten Element.
+Die Position direkt hinter dem letzten aus hash_set entfernten Element.
 
 *key*<br/>
- Der Schlüssel des aus hash_set zu entfernenden Elements.
+Der Schlüssel des aus hash_set zu entfernenden Elements.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1235,7 +1235,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parameter
 
 *key*<br/>
- Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus dem zu durchsuchenden hash_set übereinstimmt.
+Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus dem zu durchsuchenden hash_set übereinstimmt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1661,7 +1661,7 @@ iterator lower_bound(const Key& key);
 ### <a name="parameters"></a>Parameter
 
 *key*<br/>
- Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus dem zu durchsuchenden hash_set verglichen wird.
+Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus dem zu durchsuchenden hash_set verglichen wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2151,7 +2151,7 @@ void swap(hash_set& right);
 ### <a name="parameters"></a>Parameter
 
 *right*<br/>
- Das hash_set-Argument, das die Elemente bereitstellt mit der das Ziel-hash_set getauscht werden soll.
+Das hash_set-Argument, das die Elemente bereitstellt mit der das Ziel-hash_set getauscht werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2227,7 +2227,7 @@ iterator upper_bound(const Key& key);
 ### <a name="parameters"></a>Parameter
 
 *key*<br/>
- Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus dem zu durchsuchenden hash_set verglichen wird.
+Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus dem zu durchsuchenden hash_set verglichen wird.
 
 ### <a name="return-value"></a>Rückgabewert
 

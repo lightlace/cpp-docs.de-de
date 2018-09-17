@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ee0763608edde0f7ceff81983a324190b605ff7
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: b3e0fef319fbe119118e3a915a66bea3546bbb9a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43130890"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702896"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Installieren von C++-Unterstützung in Visual Studio
 
@@ -37,9 +37,9 @@ Weitere Informationen zu den freien Speicherplatz und den Anforderungen des Betr
 
 ## <a name="visual-studio-2015-installation"></a>Visual Studio 2015-Installation
 
- Wechseln Sie zu um Visual Studio 2015 zu installieren, [ältere Versionen von Visual Studio herunterladen](https://www.visualstudio.com/vs/older-downloads/). Führen Sie Setup aus, und wählen Sie **benutzerdefinierte Installation** und wählen Sie dann auf die C++-Komponente. 
+Auf der Seite [Downloads älterer Versionen von Visual Studio](https://www.visualstudio.com/vs/older-downloads/) können Sie Visual Studio 2015 herunterladen. Führen Sie das Setupprogramm aus, klicken Sie auf **Benutzerdefinierte Installation**, und wählen Sie die C++-Komponente aus.
 
- Im Allgemeinen wird dringend empfohlen, Visual Studio 2017 verwenden, auch wenn Ihr Code mit dem Visual Studio 2015-Compiler kompiliert werden sollen. Weitere Informationen finden Sie unter [Use native multi-targeting in Visual Studio to build old projects (Verwenden der nativen Festlegung von Zielversionen in Visual Studio, um alte Projekte zu erstellen)](../porting/use-native-multi-targeting.md).
+In der Regel wird die Verwendung von Visual Studio 2017 empfohlen, auch wenn Sie dann Ihren Code mithilfe des Visual Studio 2015-Compilers kompilieren müssen. Weitere Informationen finden Sie unter [Use native multi-targeting in Visual Studio to build old projects (Verwenden der nativen Festlegung von Zielversionen in Visual Studio, um alte Projekte zu erstellen)](../porting/use-native-multi-targeting.md).
 
 ## <a name="visual-studio-2017-installation"></a>Visual Studio 2017-Installation
 
@@ -59,13 +59,13 @@ Weitere Informationen zu den freien Speicherplatz und den Anforderungen des Betr
 
    ![Desktopentwicklung mit C++](../build/media/desktop-development-with-cpp.png "Desktopentwicklung mit C++")
 
-    Wählen Sie für C++, die **Desktopentwicklung mit C++** Workload und wählen Sie dann **installieren**.
+   Wählen Sie für C++, die **Desktopentwicklung mit C++** Workload und wählen Sie dann **installieren**.
 
    ![Installieren Sie die Desktopentwicklung mit C++-Arbeitslast](../build/media/vscpp-concierge-choose-workload.gif "installieren Sie die Desktopentwicklung mit C++-Arbeitslast")
 
 1. Wählen Sie nach Abschluss der Installation der **starten** Schaltfläche zum Starten von Visual Studio.
 
-   Beim ersten Ausführen von Visual Studio werden Sie aufgefordert, sich mit einem Microsoft Account anmelden. Wenn Sie über keins verfügen, können Sie es kostenloses erstellen. Sie müssen auch ein Design auswählen. Keine Sorge, Sie können ihn später ändern, wenn Sie möchten. 
+   Beim ersten Ausführen von Visual Studio werden Sie aufgefordert, sich mit einem Microsoft Account anmelden. Wenn Sie über keins verfügen, können Sie es kostenloses erstellen. Sie müssen auch ein Design auswählen. Keine Sorge, Sie können ihn später ändern, wenn Sie möchten.
 
    Es dauert Visual Studio mehrere Minuten auf vorzubereiten verwenden den ersten, die sie ausführen. So sieht es wie in der eine schnelle, die mit:
 

@@ -1,5 +1,5 @@
 ---
-title: __addfsbyte, __addfsword, __addfsdword | Microsoft Docs
+title: __addfsbyte, __addfsword, __addfsdword | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,17 +23,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4c2b4a9e185f709ff829a3b88ea9cb67741fa1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 08a9948bb986ae57e42e37253b3b54737cf4d3f9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330245"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714219"
 ---
 # <a name="addfsbyte-addfsword-addfsdword"></a>__addfsbyte, __addfsword, __addfsdword
 **Microsoft-spezifisch**  
   
- Fügen Sie einen Wert an einem Speicherort angegeben, indem ein Offset relativ zum Anfang der `FS` Segment.  
+ Fügen Sie einen Wert an einem Speicherort, der als Offset relativ zum Beginn der `FS` Segment.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,11 +53,11 @@ void __addfsdword(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `Offset`  
- Der Offset vom Anfang des `FS`.  
+*Offset*<br/>
+[in] Der Offset vom Anfang des `FS`.  
   
- [in] `Data`  
- Der Wert, auf die Speicheradresse hinzufügen.  
+*Data*<br/>
+[in] Der Wert der Speicheradresse hinzu.  
   
 ## <a name="requirements"></a>Anforderungen  
   

@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8f906c4c084ef4cabef9b26ef9e6b48e9e33cd
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: ba56cef1ecdcee246b9041b930eeb5bf04728def
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106082"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724606"
 ---
 # <a name="chartraits-struct"></a>char_traits-Struktur
 
@@ -120,7 +120,8 @@ static char_type *assign(char_type* strTo,
 *_CharTo*<br/>
 Das Element, dem der Zeichenwert zugewiesen werden soll.
 
-* StrTo * Zeichenfolgen- oder Zeichenarray Arrays sind, dass, dessen ersten Elementen Zeichenwerte zugewiesen werden.
+*strTo*<br/>
+Das Zeichenfolgen- oder Zeichenarray, dessen ersten Elementen Zeichenwerte zugewiesen werden sollen.
 
 *_Num*<br/>
 Die Anzahl der Elemente, denen Werte zugewiesen werden sollen.
@@ -198,9 +199,11 @@ static int compare(const char_type* str1,
 
 ### <a name="parameters"></a>Parameter
 
-* str1 * die erste von zwei Zeichenfolgen miteinander verglichen werden soll.
+*str1*<br/>
+Die erste von zwei Zeichenfolgen, die miteinander verglichen werden.
 
-* str2 * die zweite von zwei Zeichenfolgen miteinander verglichen werden soll.
+*str2*<br/>
+Die zweite von zwei Zeichenfolgen, die miteinander verglichen werden.
 
 *_Num*<br/>
 Die Anzahl der Elemente in den Zeichenfolgen, die miteinander verglichen werden sollen.

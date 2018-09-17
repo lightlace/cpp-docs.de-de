@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f411f9f50b1a498dba718b41245f8fbb7c6e79
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a6bed16f338c5ee3333529613189fe03ad7e3ec3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851586"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709552"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl-Klasse
 Die `CMFCLinkCtrl` Klasse zeigt eine Schaltfläche als Hyperlink an und ruft das Ziel des Links auf, wenn die Schaltfläche geklickt wird.  
@@ -91,11 +91,11 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *RectClient*  
- Ein Rechteck, das die Link-Steuerelement umschließt.  
+*rectClient*<br/>
+[in] Ein Rechteck, das die Link-Steuerelement umschließt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, wenn Sie Ihren eigenen Code zu verwenden, um die Schaltfläche "das Fokusrechteck gezeichnet werden soll.  
@@ -108,8 +108,8 @@ void SetURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszURL*  
- Der Text der Schaltfläche angezeigt.  
+*lpszURL*<br/>
+[in] Der Text der Schaltfläche angezeigt.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -121,8 +121,8 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszPrefix*  
- Das Präfix des URL-Protokoll.  
+*lpszPrefix*<br/>
+[in] Das Präfix des URL-Protokoll.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um das URL-Präfix festzulegen. Das Präfix wird nicht auf die Schaltfläche "Gesicht angezeigt, aber Sie können es an die URL Ziel suchen.  
@@ -137,11 +137,11 @@ virtual CSize SizeToContent(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bVCenter*  
- True, um Text und der Schaltfläche Bitmap vertikal zwischen dem oberen und den unteren Rand des Steuerelements Links zentriert. andernfalls "false". Der Standardwert ist "false".  
+*bVCenter*<br/>
+[in] True, um Text und der Schaltfläche Bitmap vertikal zwischen dem oberen und den unteren Rand des Steuerelements Links zentriert. andernfalls "false". Der Standardwert ist "false".  
   
- [in] *bHCenter*  
- True, um den Text der Schaltfläche und die Bitmap horizontal zwischen der linken und rechten Seite des Linksteuerelements center. andernfalls "false". Der Standardwert ist "false".  
+*bHCenter*<br/>
+[in] True, um den Text der Schaltfläche und die Bitmap horizontal zwischen der linken und rechten Seite des Linksteuerelements center. andernfalls "false". Der Standardwert ist "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt, das die neue Größe des Linksteuerelements enthält.  

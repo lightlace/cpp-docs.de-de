@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1be97919f0f5b55d6e63eca8e59eb15e8ef9dff
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 9841b74d7bef74a117350b84747a606043d05d67
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42545779"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707667"
 ---
 # <a name="dataseg"></a>data_seg
 Gibt das Datensegment an, in dem initialisierte Variablen in der OBJ-Datei gespeichert werden.  
@@ -34,31 +34,33 @@ Gibt das Datensegment an, in dem initialisierte Variablen in der OBJ-Datei gespe
 #pragma data_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
+### <a name="parameters"></a>Parameter
+
+**push**<br/>
+(Optional) Legt einen Datensatz auf dem internen compilerstapel ab. Ein **Push** kann ein *Bezeichner* und *Segment-Name*.  
+
+**pop**<br/>
+(Optional) Entfernt einen Datensatz von der obersten Position des internen Compilerstapels.  
+  
+*identifier*<br/>
+(Optional) Bei Verwendung mit **Push**, den Datensatz im internen compilerstapel ein Name zugewiesen. Bei Verwendung mit **pop**, Datensätze vom internen Stapel bis *Bezeichner* wird entfernt; Wenn *Bezeichner* wurde nicht gefunden im internen Stapel, nichts per pop ausgelesen wird.  
+  
+*Bezeichner* ermöglicht, mehrere Datensätze mit einem einzelnen entfernen **pop** Befehl.  
+  
+*"Segment-Name"*<br/>
+(Optional) Der Name eines Segments. Bei Verwendung mit **pop**, wird das Element im Stapel geholt und *Segment-Name* wird zum aktiven Segmentnamen.  
+  
+*"Segment-Class"*<br/>
+(Optional) Für die Kompatibilität mit C++ vor Version 2.0 enthalten. Wird ignoriert.  
+  
 ## <a name="remarks"></a>Hinweise 
 
 Die Bedeutung der Begriffe *Segment* und *Abschnitt* sind austauschbar, in diesem Thema.  
   
 OBJ-Dateien können angezeigt werden, mit der [Dumpbin](../build/reference/dumpbin-command-line.md) Anwendung. Das Standardsegment für initialisierte Variablen in der OBJ-Datei ist ".data". Nicht initialisierte Variablen werden als mit Null initialisiert behandelt und in ".bss" gespeichert.  
   
-**Data_seg** ohne Parameter setzt das Segment auf ".Data".  
-  
-*Push* (optional)  
-Legt einen Datensatz auf den internen Compilerstapel. Ein *Push* kann ein *Bezeichner* und *Segment-Name*.  
-  
-*POP* (optional)  
-Entfernt einen Datensatz von der obersten Position des internen Compilerstapels.  
-  
-*Bezeichner* (optional)  
-Bei Verwendung mit *Push*, den Datensatz im internen compilerstapel ein Name zugewiesen. Bei Verwendung mit *pop*, Datensätze vom internen Stapel bis *Bezeichner* wird entfernt; Wenn *Bezeichner* wurde nicht gefunden im internen Stapel, nichts per pop ausgelesen wird.  
-  
-*Bezeichner* ermöglicht, mehrere Datensätze mit einem einzelnen entfernen *pop* Befehl.  
-  
-*"Segment-Name"*(optional)  
-Der Name eines Segments. Bei Verwendung mit *pop*, wird das Element im Stapel geholt und *Segment-Name* wird zum aktiven Segmentnamen.  
-  
-*"Segment-Class"* (optional)  
-Zum Gewährleisten der Kompatibilität mit C++ vor Version 2.0 eingeführt. Wird ignoriert.  
-  
+**Data_seg** ohne Parameter setzt das Segment auf ".Data".
+
 ## <a name="example"></a>Beispiel  
   
 ```cpp  

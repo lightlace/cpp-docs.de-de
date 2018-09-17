@@ -1,5 +1,5 @@
 ---
-title: -ERRORREPORT (internen Linkerfehlern) | Microsoft Docs
+title: -ERRORREPORT (interne Linkerfehler melden) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/28/2017
 ms.technology:
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72e620e5347d422a8de66cba3ea9cfd601bb3f29
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 30cc9cbab9a3575eee2f791b0af7dfcaffc1538d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374335"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701089"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (Weiterleiten von internen Linkerfehlern)
 
@@ -32,31 +32,31 @@ ms.locfileid: "32374335"
 
 ## <a name="arguments"></a>Argumente
 
-**none**  
+**none**<br/>
 Berichte zu internen Compilerfehlern werden nicht gesammelt oder an Microsoft gesendet.
 
-**Aufforderung**  
-Sie werden aufgefordert, einen Bericht zu senden, wenn Sie einen internen Compilerfehler empfangen. **Eingabeaufforderung** ist die Standardeinstellung, wenn eine Anwendung in der Entwicklungsumgebung kompiliert wird.
+**Aufforderung**<br/>
+Sie werden aufgefordert, einen Bericht zu senden, wenn Sie einen internen Compilerfehler empfangen. **Eingabeaufforderung** ist die Standardeinstellung, bei der Kompilierung einer Anwendung in der Entwicklungsumgebung.
 
-**Warteschlange**  
-Der Fehlerbericht wird in die Warteschlange gesetzt. Wenn Sie sich mit Administratorrechten anmelden, wird ein Fenster angezeigt, sodass Sie alle Fehler seit der letzten Ausführung melden können, wurden Sie sich angemeldet (nicht werden Sie aufgefordert, Fehlerberichte Senden von mehr als einmal alle drei Tage). **Warteschlange** ist die Standardeinstellung, wenn eine Anwendung in einer Befehlszeile kompiliert wird.
+**Warteschlange**<br/>
+Der Fehlerbericht wird in die Warteschlange gesetzt. Wenn Sie sich mit Administratorberechtigungen anmelden, wird ein Fenster angezeigt, sodass Sie alle Fehler seit dem letzten melden können, Sie wurden angemeldet (nicht werden Sie aufgefordert, Fehlerberichte mehr als einmal alle drei Tage zu senden). **Warteschlange** ist die Standardeinstellung, wenn eine Anwendung an der Befehlszeile kompiliert wird.
 
-**Senden**  
-Automatisch Berichte über interne Compilerfehler an Microsoft gesendet, sofern reporting durch die Einstellungen für Windows-Fehlerberichterstattung aktiviert ist.
+**Senden**<br/>
+Sendet automatisch Berichte über interne Compilerfehler an Microsoft, wenn die berichterstellung durch die Windows Error Reporting Service-Einstellungen aktiviert ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **/errorreport** Option können Sie die Informationen interner Compilerfehler (ICE) direkt an Microsoft zu senden.
+Die **/errorreport** Option können Sie die Informationen interne Compilerfehler (ICE) direkt an Microsoft zu senden.
 
-Die Option **/errorreport: Send** automatisch Fehlerinformationen an Microsoft sendet, wenn von Windows Error Reporting Service-Einstellungen aktiviert.
+Die Option **/errorreport: Send** Fehlerinformationen automatisch an Microsoft sendet, wenn von Windows Error Reporting Service-Einstellungen aktiviert.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
 
 1. Öffnen der **Konfigurationseigenschaften** > **Linker** > **erweitert** Eigenschaftenseite.
 
-1. Ändern der **-Fehlerberichterstattung** Eigenschaft.
+1. Ändern der **Fehlerberichterstattung** Eigenschaft.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
 
@@ -64,6 +64,6 @@ Die Option **/errorreport: Send** automatisch Fehlerinformationen an Microsoft s
 
 ## <a name="see-also"></a>Siehe auch
 
-[/errorReport (Interne Compilerfehler melden)](../../build/reference/errorreport-report-internal-compiler-errors.md)  
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)  
-[Linkeroptionen](../../build/reference/linker-options.md)  
+[/ errorreport (interne Compilerfehler Bericht)](../../build/reference/errorreport-report-internal-compiler-errors.md)
+[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
+[Linkeroptionen](../../build/reference/linker-options.md)

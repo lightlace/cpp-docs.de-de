@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1015d35bea25ceaf23a822c9edea4da121583c61
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 91ca6c6a2d00bb377fe5b4980ea821184627826f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678813"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708239"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx-Klasse
 Erweitert die Funktionalität von [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), ein Rahmenfenster Windows Schnittstelle MDI (Multiple Document).  
@@ -314,11 +314,11 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pControlBar*  
- Zeiger auf den Bereich, um zu registrieren.  
+*pControlBar*<br/>
+[in] Zeiger auf den Bereich, um zu registrieren.  
   
- [in] *bTail*  
- Gibt an, ob das Ende der Liste der in diesem Bereich hinzugefügt werden soll.  
+*bTail*<br/>
+[in] Gibt an, ob das Ende der Liste der in diesem Bereich hinzugefügt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Wert ungleich NULL zurück, wenn der Bereich erfolgreich registriert wurde. Gibt 0 zurück, wenn der Bereich bereits beim Dock-Manager registriert ist.  
@@ -341,8 +341,8 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Hdwp*  
- Gibt die Struktur mehrere-Fenster-Position. Sie erhalten diesen Wert durch den Aufruf `BeginDeferWindowPos`.  
+*hdwp*<br/>
+[in] Gibt die Struktur mehrere-Fenster-Position. Sie erhalten diesen Wert durch den Aufruf `BeginDeferWindowPos`.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Memberfunktion, um das Layout der alle Bereiche, die an das Rahmenfenster angedockt neu zu berechnen.  
@@ -355,8 +355,8 @@ BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *PnMDITabsType*  
- Ein Zeiger auf eine ganzzahlige Variable, die angibt, welche Features aktiviert sind:  
+*pnMDITabsType*<br/>
+[out] Ein Zeiger auf eine ganzzahlige Variable, die angibt, welche Features aktiviert sind:  
   
 -   0: alle Funktionen werden deaktiviert.  
   
@@ -414,11 +414,11 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpcszDocName*  
- Eine Textzeichenfolge, die eine Dokument-ID enthält. In der Regel ist es sich um den vollständigen Pfad einer Datei des Dokuments.  
+*lpcszDocName*<br/>
+[in] Eine Textzeichenfolge, die eine Dokument-ID enthält. In der Regel ist es sich um den vollständigen Pfad einer Datei des Dokuments.  
   
- [in] *pObj*  
- Ein Zeiger auf ein benutzerdefiniertes Objekt. Beispielsweise kann ein Entwickler den Erstellen einer anwendungsspezifische Datenstruktur zur Beschreibung des Dokuments, und dort angebe, wie das Dokument beim Start initialisiert werden soll.  
+*pObj*<br/>
+[in] Ein Zeiger auf ein benutzerdefiniertes Objekt. Beispielsweise kann ein Entwickler den Erstellen einer anwendungsspezifische Datenstruktur zur Beschreibung des Dokuments, und dort angebe, wie das Dokument beim Start initialisiert werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf `CMDIChildWndEx`.  
@@ -445,11 +445,11 @@ virtual CMDIChildWndEx* CreateNewWindow(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpcszDocName*  
- Den Namen des Dokuments.  
+*lpcszDocName*<br/>
+[in] Den Namen des Dokuments.  
   
- [in] *pObj*  
- Für zukünftige Verwendung reserviert.  
+*pObj*<br/>
+[in] Für die zukünftige Verwendung reserviert.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf das neue Fenster.  
@@ -465,14 +465,14 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- Zeiger auf den Bereich anzudocken.  
+*pBar*<br/>
+[in] Zeiger auf den Bereich anzudocken.  
   
- [in] *nDockBarID*  
- Gibt an, welche Seiten des Rahmenfensters angedockt.  
+*nDockBarID*<br/>
+[in] Gibt an, welche Seiten des Rahmenfensters angedockt.  
   
- [in] *LpRect*  
- Nicht verwendet.  
+*lpRect*<br/>
+[in] Nicht verwendet.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode das angegebene Dockt den Bereich, um eine der Seiten des Rahmenfensters, das war angegeben, wenn [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) und [CMDIFrameWndEx::EnableDocking](#enabledocking) aufgerufen wurden.  
@@ -492,11 +492,11 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- Ein Zeiger auf die andockbaren Bereich.  
+*pBar*<br/>
+[in] Ein Zeiger auf die andockbaren Bereich.  
   
- [in] *pLeftOf*  
- Ein Zeiger auf den Bereich, der als der DockPosition dient. sein.  
+*pLeftOf*<br/>
+[in] Ein Zeiger auf den Bereich, der als der DockPosition dient. sein.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt TRUE zurück, wenn der Vorgang erfolgreich ist. Andernfalls wird false ZURÜCKGEGEBEN.  
@@ -517,8 +517,8 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwDockStyle*  
- Gibt die Seiten im Hauptrahmenfenster, die konfiguriert werden. Verwenden Sie eine oder mehrere der folgenden Flags.  
+*dwDockStyle*<br/>
+[in] Gibt die Seiten im Hauptrahmenfenster, die konfiguriert werden. Verwenden Sie eine oder mehrere der folgenden Flags.  
   
 - CBRS_ALIGN_LEFT  
   
@@ -546,8 +546,8 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwDockStyle*  
- Gibt den andockstil, den Sie anwenden möchten.  
+*dwDockStyle*<br/>
+[in] Gibt den andockstil, den Sie anwenden möchten.  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -567,8 +567,8 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bEnableMenu*  
- "True", zeigen im Hauptmenü in den Vollbildmodus oder "false", um es auszublenden.  
+*bEnableMenu*<br/>
+[in] "True", zeigen im Hauptmenü in den Vollbildmodus oder "false", um es auszublenden.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -580,8 +580,8 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiFullScreenCmd*  
- Die ID eines Befehls, der aktiviert oder deaktiviert den Vollbildmodus.  
+*uiFullScreenCmd*<br/>
+[in] Die ID eines Befehls, der aktiviert oder deaktiviert den Vollbildmodus.  
   
 ### <a name="remarks"></a>Hinweise  
  Klicken Sie im Vollbildmodus alle andockbaren Steuerleisten, Symbolleisten und Menüs werden ausgeblendet, und die aktive Ansicht wird angepasst, um den Vollbildmodus zu belegen. Wenn Sie den Vollbildmodus aktivieren, müssen Sie eine Befehls-ID angeben, die aktiviert oder deaktiviert wird. Rufen Sie `EnableFullScreenMode` aus des Hauptframe `OnCreate` Funktion. Wenn ein Rahmenfenster in den Vollbild-Modus gewechselt werden wird, erstellt das Framework verankerte Symbolleiste eine Schaltfläche, die die angegebene Befehls-ID Wenn Sie im Hauptmenü auf dem Bildschirm angezeigt werden sollen, rufen Sie [CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu).  
@@ -594,8 +594,8 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- TRUE, um das Laden von den andockzustand, "false" zu aktivieren, um das Laden der Andockstatus zu deaktivieren.  
+*bAktivieren*<br/>
+[in] TRUE, um das Laden von den andockzustand, "false" zu aktivieren, um das Laden der Andockstatus zu deaktivieren.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -609,11 +609,11 @@ void EnableMDITabbedGroups(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- True gibt an, ist das MDI-Gruppen im Registerkartenformat-Feature aktiviert; Wenn "FALSE" ist das MDI-Gruppen im Registerkartenformat Feature deaktiviert.  
+*bAktivieren*<br/>
+[in] True gibt an, ist das MDI-Gruppen im Registerkartenformat-Feature aktiviert; Wenn "FALSE" ist das MDI-Gruppen im Registerkartenformat Feature deaktiviert.  
   
- [in] *Params*  
- Gibt Parameter an, denen das Framework an untergeordneten Fenster angewendet, die in den Bereich des MDI-Client erstellt werden.  
+*params*<br/>
+[in] Gibt Parameter an, denen das Framework an untergeordneten Fenster angewendet, die in den Bereich des MDI-Client erstellt werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode zum Aktivieren oder deaktivieren das Feature der MDI-Gruppen im Registerkartenformat. Dieses Feature ermöglicht MDI-Anwendungen zum Anzeigen der untergeordneten Fenster im Clientbereich MDI-Fenstern im Registerkartenformat, die vertikal ausgerichtet werden oder horizontal. Gruppen von Fenstern im Registerkartenformat werden durch Splitterfenstern getrennt. Der Benutzer kann Gruppen im Registerkartenformat mithilfe eines Splitters ändern.  
@@ -695,8 +695,8 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bLastActiveTab*  
- True gibt an, aktivieren Sie die Aktivierung der letzten aktiven Registerkarte. Wenn "FALSE" Deaktivieren der Aktivierung der letzten aktiven Registerkarte.  
+*bLastActiveTab*<br/>
+[in] True gibt an, aktivieren Sie die Aktivierung der letzten aktiven Registerkarte. Wenn "FALSE" Deaktivieren der Aktivierung der letzten aktiven Registerkarte.  
   
 ### <a name="remarks"></a>Hinweise  
  Es gibt zwei Möglichkeiten, eine Registerkarte zu öffnen, wenn die aktive Registerkarte geschlossen wird:  
@@ -723,23 +723,23 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- Wenn "true", wird die automatische Behandlung von im Menü aktiviert ist; Wenn "FALSE" ist die automatische Behandlung deaktiviert.  
+*bAktivieren*<br/>
+[in] Wenn "true", wird die automatische Behandlung von im Menü aktiviert ist; Wenn "FALSE" ist die automatische Behandlung deaktiviert.  
   
- [in] *UiCustomizeCmd*  
- Befehls-ID, der die **anpassen** Menüelement. Dieses Menüelement wird in der Regel am Ende der Liste der Bereiche hinzugefügt.  
+*uiCustomizeCmd*<br/>
+[in] Befehls-ID, der die **anpassen** Menüelement. Dieses Menüelement wird in der Regel am Ende der Liste der Bereiche hinzugefügt.  
   
- [in] *StrCustomizeLabel*  
- Der Text, der für angezeigt werden soll die **anpassen** Menüelement (für Lokalisierung).  
+*strCustomizeLabel*<br/>
+[in] Der Text, der für angezeigt werden soll die **anpassen** Menüelement (für Lokalisierung).  
   
- [in] *UiViewToolbarsMenuEntryID*  
- Gibt die ID von einer Symbolleisten-Menüelement, das im Menü der geöffnet wird. In der Regel ist dies die **Symbolleisten** Untermenü die **Ansicht** Menü.  
+*uiViewToolbarsMenuEntryID*<br/>
+[in] Gibt die ID von einer Symbolleisten-Menüelement, das im Menü der geöffnet wird. In der Regel ist dies die **Symbolleisten** Untermenü die **Ansicht** Menü.  
   
- [in] *bContextMenuShowsToolbarsOnly*  
- Bei "true", wird im Menü der nur eine Liste der Symbolleisten angezeigt. False gibt an, zeigt das Menü eine Liste der Symbolleisten und Andocken Balken an.  
+*bContextMenuShowsToolbarsOnly*<br/>
+[in] Bei "true", wird im Menü der nur eine Liste der Symbolleisten angezeigt. False gibt an, zeigt das Menü eine Liste der Symbolleisten und Andocken Balken an.  
   
- [in] *bViewMenuShowsToolbarsOnly*  
- Bei "true", wird im Menü der nur eine Liste der Symbolleisten angezeigt. False gibt an, zeigt das Menü eine Liste der Symbolleisten und Andocken Balken an.  
+*bViewMenuShowsToolbarsOnly*<br/>
+[in] Bei "true", wird im Menü der nur eine Liste der Symbolleisten angezeigt. False gibt an, zeigt das Menü eine Liste der Symbolleisten und Andocken Balken an.  
   
 ### <a name="remarks"></a>Hinweise  
  Menü der Popup zeigt die Liste der Bereiche von der Anwendung und ermöglicht dem Benutzer das Anzeigen oder Ausblenden der einzelnen Bereiche.  
@@ -768,17 +768,17 @@ void EnableWindowsDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiMenuId*  
- Gibt die Ressourcen-ID eines Menüs an.  
+*uiMenuId*<br/>
+[in] Gibt die Ressourcen-ID eines Menüs an.  
   
- [in] *LpszMenuText*  
- Gibt den Text des Elements an.  
+*lpszMenuText*<br/>
+[in] Gibt den Text des Elements an.  
   
- [in] *bShowHelpButton*  
- Gibt an, ob eine **Hilfe** auf das Dialogfeld "Windows-Verwaltung" auf die Schaltfläche.  
+*bShowHelpButton*<br/>
+[in] Gibt an, ob eine **Hilfe** auf das Dialogfeld "Windows-Verwaltung" auf die Schaltfläche.  
   
- [in] *UiMenuTextResId*  
- Der Ressourcenbezeichner des Zeichenfolge, die Zeichenfolge des Elements enthält.  
+*uiMenuTextResId*<br/>
+[in] Der Ressourcenbezeichner des Zeichenfolge, die Zeichenfolge des Elements enthält.  
   
 ### <a name="remarks"></a>Hinweise  
  Mit dieser Methode können Sie ein Menüelement einfügen, dessen Befehl ein MDI-untergeordneten Fenster Management-Dialogfeld ruft ( [CMFCWindowsManagerDialog-Klasse](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). Das neue Element eingefügt wird, in das Menü gemäß *UiMenuId*. Rufen Sie `EnableWindowsDialog` beim Verarbeiten der WM_CREATE-Nachricht.  
@@ -884,8 +884,8 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- Die Steuerelement-ID.  
+*nID*<br/>
+[in] Die Steuerelement-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf den Bereich, die die angegebene Steuerelement-ID, sofern vorhanden. Andernfalls NULL.  
@@ -925,11 +925,11 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pButton*  
- Ein Zeiger auf eine Symbolleisten-Schaltfläche.  
+*pButton*<br/>
+[in] Ein Zeiger auf eine Symbolleisten-Schaltfläche.  
   
- [in] *StrTTText*  
- Der QuickInfo-Text, der für die Schaltfläche angezeigt werden soll.  
+*strTTText*<br/>
+[in] Der QuickInfo-Text, der für die Schaltfläche angezeigt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn die QuickInfo angezeigt wurde. "False" andernfalls.  
@@ -947,14 +947,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pControlBar*  
- Ein Zeiger auf den Bereich eingefügt werden soll.  
+*pControlBar*<br/>
+[in] Ein Zeiger auf den Bereich eingefügt werden soll.  
   
- [in] *pTarget*  
- Ein Zeiger auf den Bereich vor oder nach dem Bereich eingefügt werden soll.  
+*pTarget*<br/>
+[in] Ein Zeiger auf den Bereich vor oder nach dem Bereich eingefügt werden soll.  
   
- [in] *bNach*  
- True gibt an, *pControlBar* eingefügt wird, nach dem *pTarget*. False gibt an, *pControlBar* eingefügt wird, bevor Sie *pTarget*.  
+*bNach*<br/>
+[in] True gibt an, *pControlBar* eingefügt wird, nach dem *pTarget*. False gibt an, *pControlBar* eingefügt wird, bevor Sie *pTarget*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn die Methode erfolgreich im Bereich "false" wird registriert, wenn der Bereich bereits beim Dock-Manager registriert wurde.  
@@ -996,8 +996,8 @@ BOOL IsMemberOfMDITabGroup(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Ein Zeiger auf Fenster im Registerkartenformat.  
+*Aufnehmen*<br/>
+[in] Ein Zeiger auf Fenster im Registerkartenformat.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der angegebene Registerkartenfenster in der Liste von Fenstern im Registerkartenformat, die MDI-Gruppen im Registerkartenformat zu bilden. Andernfalls "false".  
@@ -1023,14 +1023,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Der angegebene Punkt in Bildschirmkoordinaten.  
+*Zeigen Sie*<br/>
+[in] Der angegebene Punkt in Bildschirmkoordinaten.  
   
- [in] *DwBarAlignment*  
- Gibt an, welchen Rand, in der Nähe der Punkt ist. Mögliche Werte sind CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP und CBRS_ALIGN_BOTTOM  
+*dwBarAlignment*<br/>
+[in] Gibt an, welchen Rand, in der Nähe der Punkt ist. Mögliche Werte sind CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP und CBRS_ALIGN_BOTTOM  
   
- [in] *bOuterEdge*  
- True, wenn der Punkt in der Nähe von der äußere Rahmen der DockPosition ist. "False" andernfalls.  
+*bOuterEdge*<br/>
+[in] True, wenn der Punkt in der Nähe von der äußere Rahmen der DockPosition ist. "False" andernfalls.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Punkt in der Nähe der DockPosition ist. andernfalls "false".  
@@ -1062,17 +1062,17 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIDResource*  
- Die ID einer freigegebenen Ressource, die das Rahmenfenster zugeordnet werden soll.  
+*nIDResource*<br/>
+[in] Die ID einer freigegebenen Ressource, die das Rahmenfenster zugeordnet werden soll.  
   
- [in] *DwDefaultStyle*  
- Der Stil des Rahmenfensters.  
+*dwDefaultStyle*<br/>
+[in] Der Stil des Rahmenfensters.  
   
- [in] *pParentWnd*  
- Ein Zeiger auf den Rand des übergeordneten.  
+*pParentWnd*<br/>
+[in] Ein Zeiger auf den Rand des übergeordneten.  
   
- [in] *"pContext"*  
- Ein Zeiger auf eine [CCreateContext-Struktur](../../mfc/reference/ccreatecontext-structure.md). Dieser Parameter kann NULL sein.  
+*"pContext"*<br/>
+[in] Ein Zeiger auf eine [CCreateContext-Struktur](../../mfc/reference/ccreatecontext-structure.md). Dieser Parameter kann NULL sein.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn die Methode erfolgreich ist, andernfalls "false".  
@@ -1085,8 +1085,8 @@ virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- Gibt den Namen des Profils an.  
+*lpszProfileName*<br/>
+[in] Gibt den Namen des Profils an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Ladevorgang erfolgreich war. "False", wenn Fehler beim Laden, oder es keine Daten sind laden.  
@@ -1115,8 +1115,8 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bWeiter*  
- True gibt an, verschieben Sie die Registerkarte zur nächsten Gruppe im Registerkartenformat. False gibt an, verschieben Sie sie in der vorherigen Registerkartengruppe an.  
+*bWeiter*<br/>
+[in] True gibt an, verschieben Sie die Registerkarte zur nächsten Gruppe im Registerkartenformat. False gibt an, verschieben Sie sie in der vorherigen Registerkartengruppe an.  
   
 ##  <a name="mditabnewgroup"></a>  CMDIFrameWndEx::MDITabNewGroup  
  Erstellt eine neue Gruppe im Registerkartenformat, die ein einziges Fenster.  
@@ -1126,8 +1126,8 @@ void MDITabNewGroup(BOOL bVert=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bHoriz*  
- Gibt die Ausrichtung der neuen Gruppe. Wenn TRUE, wird die neue Gruppe vertikal ausgerichtet. Wenn "FALSE" ist die neue Gruppe horizontal ausgerichtet.  
+*bHoriz*<br/>
+[in] Gibt die Ausrichtung der neuen Gruppe. Wenn TRUE, wird die neue Gruppe vertikal ausgerichtet. Wenn "FALSE" ist die neue Gruppe horizontal ausgerichtet.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Funktion zum Erstellen eines neuen im Registerkartenformat Fenster (neue Gruppe im Registerkartenformat), und fügen Sie die erste Registerkarte hinzu.  
@@ -1178,8 +1178,8 @@ virtual BOOL NegotiateBorderSpace(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nBorderCmd*  
- Enthält einen der folgenden Werte aus der Enumeration `CFrameWnd::BorderCmd`:  
+*nBorderCmd*<br/>
+[in] Enthält einen der folgenden Werte aus der Enumeration `CFrameWnd::BorderCmd`:  
   
 - `borderGet` = 1  
   
@@ -1187,8 +1187,8 @@ virtual BOOL NegotiateBorderSpace(
   
 - `borderSet` = 3  
   
- [in, out] *LpRectBorder*  
- Zeiger auf eine [RECT-Struktur](../../mfc/reference/rect-structure1.md) oder [CRect-Klasse](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das die Koordinaten des Rahmens angibt.  
+*lpRectBorder*<br/>
+[in, out] Zeiger auf eine [RECT-Struktur](../../mfc/reference/rect-structure1.md) oder [CRect-Klasse](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das die Koordinaten des Rahmens angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn die Methode erfolgreich war; andernfalls 0.  
@@ -1204,8 +1204,8 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Zeiger auf den Bereich geschlossen wird.  
+*Aufnehmen*<br/>
+[in] Zeiger auf den Bereich geschlossen wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn die andockbare Bereich geschlossen werden kann. Andernfalls "false".  
@@ -1223,8 +1223,8 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Zeiger auf das Minirahmenfenster, das geschlossen wird.  
+*Aufnehmen*<br/>
+[in] Zeiger auf das Minirahmenfenster, das geschlossen wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn das unverankertes Minirahmenfenster geschlossen werden kann. Andernfalls "false".  
@@ -1242,8 +1242,8 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pMenuPopup*  
- Zeiger auf ein Popup-Menü.  
+*pMenuPopup*<br/>
+[in] Zeiger auf ein Popup-Menü.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode überschreiben, wenn Sie Benachrichtigungen von verarbeiten möchten [CMFCPopupMenu-Klasse](../../mfc/reference/cmfcpopupmenu-class.md) Objekte, die an das MDI-Rahmenfenster gehören, wenn diese Objekte WM_DESTROY-Nachrichten verarbeiten.  
@@ -1260,17 +1260,17 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- Die Befehls-ID.  
+*nID*<br/>
+[in] Die Befehls-ID.  
   
- [in] *nCode*  
- Identifiziert den Befehlscode-Benachrichtigung an. Finden Sie unter [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) für Weitere Informationen zu den Werten für *nCode*.  
+*nCode*<br/>
+[in] Identifiziert den Befehlscode-Benachrichtigung an. Finden Sie unter [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) für Weitere Informationen zu den Werten für *nCode*.  
   
- [in] *pExtra*  
- Nach dem Wert des verwendet *nCode*. Finden Sie unter [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) für Weitere Informationen zu *pExtra*.  
+*pExtra*<br/>
+[in] Nach dem Wert des verwendet *nCode*. Finden Sie unter [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) für Weitere Informationen zu *pExtra*.  
   
- [in, out] *pHandlerInfo*  
- In der Regel sollte dieser Parameter NULL sein. Falls ungleich NULL, `OnCmdMsg` füllt die `pTarget` und `pmf` Mitglied der *pHandlerInfo* Struktur anstatt den Befehl zu verteilen.  
+*pHandlerInfo*<br/>
+[in, out] In der Regel sollte dieser Parameter NULL sein. Falls ungleich NULL, `OnCmdMsg` füllt die `pTarget` und `pmf` Mitglied der *pHandlerInfo* Struktur anstatt den Befehl zu verteilen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn die Nachricht behandelt wird; andernfalls 0.  
@@ -1286,14 +1286,14 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Zeiger auf einen Gerätekontext.  
   
- [in] *pMenuButton*  
- Zeiger auf die Menüschaltfläche.  
+*pMenuButton*<br/>
+[in] Zeiger auf die Menüschaltfläche.  
   
- [in] *RectImage*  
- Umschließende Rechteck des Bilds.  
+*rectImage*<br/>
+[in] Umschließende Rechteck des Bilds.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn die Methode auf das Bild zeichnet. Die Standardimplementierung gibt "false" zurück.  
@@ -1337,11 +1337,11 @@ virtual BOOL OnMenuButtonToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pButton*  
- Die Symbolleisten-Schaltfläche.  
+*pButton*<br/>
+[in] Die Symbolleisten-Schaltfläche.  
   
- [out] *pTI*  
- Zeiger auf eine [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) Struktur.  
+*PTI*<br/>
+[out] Zeiger auf eine [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn die Anwendung füllt die *pTI* Parameter. Die Standardimplementierung gibt "false" zurück.  
@@ -1357,8 +1357,8 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pFrame*  
- Ein Zeiger auf ein Minirahmenfenster.  
+*pFrame*<br/>
+[in] Ein Zeiger auf ein Minirahmenfenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn die Methode erfolgreich ist, andernfalls "false".  
@@ -1373,11 +1373,11 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bPreview*  
- True gibt an, legt die Seitenansicht-Modus fest. False gibt an, eine Vorschau abgebrochen Modus anzeigen.  
+*bPreview*<br/>
+[in] True gibt an, legt die Seitenansicht-Modus fest. False gibt an, eine Vorschau abgebrochen Modus anzeigen.  
   
- [in] *pState*  
- Ein Zeiger auf eine `CPrintPreviewState` Struktur.  
+*pState*<br/>
+[in] Ein Zeiger auf eine `CPrintPreviewState` Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode überschreibt [CFrameWnd:: Onsetpreviewmode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).  
@@ -1392,11 +1392,11 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pMenuPane*  
- Ein Zeiger auf den Bereich schnell anpassen.  
+*pMenuPane*<br/>
+[in] Ein Zeiger auf den Bereich schnell anpassen.  
   
- [in] *UiToolbarID*  
- Steuerelement-ID der Symbolleiste anpassen.  
+*uiToolbarID*<br/>
+[in] Steuerelement-ID der Symbolleiste anpassen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt immer "true" zurück.  
@@ -1417,11 +1417,11 @@ virtual BOOL OnShowMDITabContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Die Position des Menüs in Bildschirmkoordinaten.  
+*Zeigen Sie*<br/>
+[in] Die Position des Menüs in Bildschirmkoordinaten.  
   
- [in] *DwAllowedItems*  
- Eine bitweise OR-Kombination von Flags, die angibt, welche Aktionen für die aktuelle Registerkarte zulässig sind:  
+*dwAllowedItems*<br/>
+[in] Eine bitweise OR-Kombination von Flags, die angibt, welche Aktionen für die aktuelle Registerkarte zulässig sind:  
   
 - BCGP_MDI_CREATE_VERT_GROUP - können eine vertikale Registerkartengruppe erstellen.  
   
@@ -1433,8 +1433,8 @@ virtual BOOL OnShowMDITabContextMenu(
   
 - BCGP_MDI_CAN_BE_DOCKED - wechseln Sie ein Dokument im Registerkartenformat zu angedockten Zustand (für Dokumente im Registerformat nur relevant).  
   
- [in] *bTabDrop*  
- TRUE, um das Menü durch Ziehen die Registerkarte auf eine andere Gruppe von im Registerkartenformat angezeigt werden soll. "False", um das Menü als Kontextmenü für die aktuelle aktive Registerkarte anzuzeigen.  
+*bTabDrop*<br/>
+[in] TRUE, um das Menü durch Ziehen die Registerkarte auf eine andere Gruppe von im Registerkartenformat angezeigt werden soll. "False", um das Menü als Kontextmenü für die aktuelle aktive Registerkarte anzuzeigen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Überschreiben Sie diese Methode in einer [CBCGPMDIFrameWnd](../../mfc/reference/cmdiframewndex-class.md)-abgeleitete Klasse.  
@@ -1455,8 +1455,8 @@ virtual BOOL OnShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bShow*  
- TRUE, um Bereiche anzeigen "false", um Bereiche auszublenden.  
+*bShow*<br/>
+[in] TRUE, um Bereiche anzeigen "false", um Bereiche auszublenden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Status der Bereiche durch Aufrufen dieser Methode wird "false", wenn die Bereiche bereits vom angegebenen Zustand werden ändert *bShow*. Wenn die Bereiche ausgeblendet werden, z. B. und *bShow* ist "false", "false" zurückgegeben wird.  
@@ -1491,11 +1491,11 @@ virtual void OnSizeMDIClient(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *RectOld*  
- Die aktuelle Größe der MDI-Clientfenster.  
+*rectOld*<br/>
+[in] Die aktuelle Größe der MDI-Clientfenster.  
   
- [in] *RectNew*  
- Die neue Größe des MDI-Clientfenster.  
+*rectNew*<br/>
+[in] Die neue Größe des MDI-Clientfenster.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1509,11 +1509,11 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pMenuPopup*  
- Ein Zeiger auf das Popup-Menü.  
+*pMenuPopup*<br/>
+[in] Ein Zeiger auf das Popup-Menü.  
   
- [in] *pBar*  
- Ein Zeiger auf die abtrennbarer Leiste.  
+*pBar*<br/>
+[in] Ein Zeiger auf die abtrennbarer Leiste.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, um das Popup-Menü mit den abtrennbarer Leiste aktiviert vorgenommen werden können. andernfalls "false". Der Standardwert ist "true".  
@@ -1529,8 +1529,8 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *hMenuAlt*  
- Ein Handle für ein Menü.  
+*hMenuAlt*<br/>
+[in] Ein Handle für ein Menü.  
   
 ##  <a name="panefrompoint"></a>  CMDIFrameWndEx::PaneFromPoint  
  Gibt zurück, andockbaren Bereich, der den angegebenen Punkt enthält.  
@@ -1550,20 +1550,20 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Der Punkt (in Bildschirmkoordinaten).  
+*Zeigen Sie*<br/>
+[in] Der Punkt (in Bildschirmkoordinaten).  
   
- [in] *nSensitivity*  
- Das fensterrechtecke jedes aktivierte Bereichs wird in alle Richtungen durch diesen Wert vergrößert.  
+*nSensitivity*<br/>
+[in] Das fensterrechtecke jedes aktivierte Bereichs wird in alle Richtungen durch diesen Wert vergrößert.  
   
- [in] *bExactBar*  
- True gibt an, die *nSensitivity* Parameter wird ignoriert.  
+*bExactBar*<br/>
+[in] True gibt an, die *nSensitivity* Parameter wird ignoriert.  
   
- [in] *pRTCBarType*  
- Wenn nicht NULL ist, durchläuft die Methode nur die Bereiche des angegebenen Typs ab.  
+*pRTCBarType*<br/>
+[in] Wenn nicht NULL ist, durchläuft die Methode nur die Bereiche des angegebenen Typs ab.  
   
- [out] *DwAlignment*  
- Wenn ein Bereich gefunden wird, wird diesen Parameter angeben, welche Seite des Bereichs, die den angegebenen Punkt am nächsten ist.  
+*dwAlignment*<br/>
+[out] Wenn ein Bereich gefunden wird, wird diesen Parameter angeben, welche Seite des Bereichs, die den angegebenen Punkt am nächsten ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf einen andockbaren Bereich oder NULL, wenn kein Steuerelement mit den vom angegebenen Punkt enthält *zeigen*.  
@@ -1579,8 +1579,8 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bNotify*  
- Bestimmt, ob das aktive direkte-Element für das Rahmenfenster Benachrichtigung von der layoutänderung empfängt. Das Element wird benachrichtigt, wenn "true"; andernfalls "false".  
+*bNotify*<br/>
+[in] Bestimmt, ob das aktive direkte-Element für das Rahmenfenster Benachrichtigung von der layoutänderung empfängt. Das Element wird benachrichtigt, wenn "true"; andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode überschreibt [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).  
@@ -1598,20 +1598,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pControlBar*  
- Ein Zeiger auf einen Bereich entfernt werden soll.  
+*pControlBar*<br/>
+[in] Ein Zeiger auf einen Bereich entfernt werden soll.  
   
- [in] *bDestroy*  
- "True" zu zerstörenden Bereich entfernten werden. "False" nicht zerstören.  
+*bDestroy*<br/>
+[in] "True" zu zerstörenden Bereich entfernten werden. "False" nicht zerstören.  
   
- [in] *bAdjustLayout*  
- TRUE, um das Layout des Docks sofort anpassen. False gibt an, die Anpassung erfolgt nur bei Neuzeichnen eintritt eines Ereignisses aus einem anderen Grund (der Benutzer ändert die Größe des Fensters, zieht der Hauptframe usw.).  
+*bAdjustLayout*<br/>
+[in] TRUE, um das Layout des Docks sofort anpassen. False gibt an, die Anpassung erfolgt nur bei Neuzeichnen eintritt eines Ereignisses aus einem anderen Grund (der Benutzer ändert die Größe des Fensters, zieht der Hauptframe usw.).  
   
- [in] *bAutoHide*  
- TRUE, um den Bereich aus der Liste automatisch im Hintergrund Bereiche zu entfernen. "False", um den Bereich aus der Liste der regulären Bereiche zu entfernen.  
+*bAutoHide*<br/>
+[in] TRUE, um den Bereich aus der Liste automatisch im Hintergrund Bereiche zu entfernen. "False", um den Bereich aus der Liste der regulären Bereiche zu entfernen.  
   
- [in] *pBarReplacement*  
- Ein Zeiger auf einen Bereich, der Bereich entfernten ersetzt.  
+*pBarReplacement*<br/>
+[in] Ein Zeiger auf einen Bereich, der Bereich entfernten ersetzt.  
   
 ### <a name="remarks"></a>Hinweise  
  Sie müssen jeden Bereich beim Dock-Manager auf das Layout des Docks teilnehmen registrieren. Verwendung [CMDIFrameWndEx::AddPane](#addpane) oder [CMDIFrameWndEx::InsertPane](#insertpane) Bereiche zu registrieren.  
@@ -1626,8 +1626,8 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- Gibt den Namen des Profils an.  
+*lpszProfileName*<br/>
+[in] Gibt den Namen des Profils an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Speichervorgang war erfolgreich. "False", wenn das Speichern fehlgeschlagen.  
@@ -1660,8 +1660,8 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Zeiger auf ein Rahmenfenster für die Seitenansicht.  
+*Aufnehmen*<br/>
+[in] Zeiger auf ein Rahmenfenster für die Seitenansicht.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1676,14 +1676,14 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Menü*  
- Ein Verweis auf eine [CMenu-Klasse](../../mfc/reference/cmenu-class.md) Objekt geändert werden.  
+*Menü "*<br/>
+[in] Ein Verweis auf eine [CMenu-Klasse](../../mfc/reference/cmenu-class.md) Objekt geändert werden.  
   
- [in] *UiViewUserToolbarCmdFirst*  
- Gibt den ersten benutzerdefinierten-Befehl.  
+*uiViewUserToolbarCmdFirst*<br/>
+[in] Gibt den ersten benutzerdefinierten-Befehl.  
   
- [in] *UiViewUserToolbarCmdLast*  
- Gibt an, mit dem letzten benutzerdefinierte-Befehl.  
+*uiViewUserToolbarCmdLast*<br/>
+[in] Gibt an, mit dem letzten benutzerdefinierte-Befehl.  
   
 ##  <a name="showfullscreen"></a>  CMDIFrameWndEx::ShowFullScreen  
  Schaltet den Hauptframe vom normalen Modus, um den Vollbildmodus.  
@@ -1706,17 +1706,17 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- Zeiger auf den Bereich, um ein- oder ausgeblendet werden.  
+*pBar*<br/>
+[in] Zeiger auf den Bereich, um ein- oder ausgeblendet werden.  
   
- [in] *bShow*  
- TRUE, um im Bereich angezeigt. "False" zum Ausblenden des Fensters.  
+*bShow*<br/>
+[in] TRUE, um im Bereich angezeigt. "False" zum Ausblenden des Fensters.  
   
- [in] *bDelay*  
- "True", um die neuberechnung von Layout des Docks zu verzögern. "False", um das Layout des Docks neuberechnung sofort auszuführen.  
+*bDelay*<br/>
+[in] "True", um die neuberechnung von Layout des Docks zu verzögern. "False", um das Layout des Docks neuberechnung sofort auszuführen.  
   
- [in] *bActivate*  
- "True" Show sollte im Bereich als aktiv. "False" im Bereich als inaktiv angezeigt werden.  
+*bActivate*<br/>
+[in] "True" Show sollte im Bereich als aktiv. "False" im Bereich als inaktiv angezeigt werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode zum Anzeigen oder Ausblenden des Bereichs. Verwenden Sie keine `ShowWindow` für andockbare Bereiche.  
@@ -1786,11 +1786,11 @@ virtual void WinHelp(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwData*  
- Gibt an, Daten nach Bedarf für den Typ der Hilfe, die anhand des *nCmd*.  
+*dwData*<br/>
+[in] Gibt an, Daten nach Bedarf für den Typ der Hilfe, die anhand des *nCmd*.  
   
- [in] *nCmd*  
- Gibt den Typ der angeforderten Hilfe an. Eine Liste der möglichen Werte und deren Auswirkungen auf die *DwData* Parameter finden Sie unter den [WinHelp-Funktion](/windows/desktop/api/winuser/nf-winuser-winhelpa) im Windows SDK.  
+*nCmd*<br/>
+[in] Gibt den Typ der angeforderten Hilfe an. Eine Liste der möglichen Werte und deren Auswirkungen auf die *DwData* Parameter finden Sie unter den [WinHelp-Funktion](/windows/desktop/api/winuser/nf-winuser-winhelpa) im Windows SDK.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode überschreibt [CWnd:: WinHelp](../../mfc/reference/cwnd-class.md#winhelp).  

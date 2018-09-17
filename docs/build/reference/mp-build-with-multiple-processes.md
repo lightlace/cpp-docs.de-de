@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e61f1ac30c2a50cbbefe6c0cbd9e28011a0d0bd
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bb24ed970d3b02835d5545cb0eaf1d9fd8e81c7e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572661"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713426"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (Erstellen mit mehreren Prozessen)
 
@@ -127,7 +127,7 @@ Visual Studio verwendet die [MSBuild.exe](/visualstudio/msbuild/msbuild-referenc
 
 Die Buildzeit der Projektmappe hängt teilweise von der Anzahl der Prozesse ab, die den Build ausführen. Die *Anzahl* Argument der [maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) MSBuild-Option gibt die maximale Anzahl der Projekte gleichzeitig erstellen. Auf ähnliche Weise die *ProcessMax* Argument der **/MP** Compiler-Option gibt die maximale Anzahl von Kompilierungseinheiten gleichzeitig erstellen. Wenn die **maxcpucount** Option gibt an, *P* Projekte und die **/MP** Option gibt an, *C* verarbeitet wird, maximal *P*  x *C* Prozesse zur gleichen Zeit ausführen.
 
- Die Richtlinie für die Entscheidung, ob zum Verwenden von MSBuild oder **/MP** Technologie lautet wie folgt:
+Die Richtlinie für die Entscheidung, ob zum Verwenden von MSBuild oder **/MP** Technologie lautet wie folgt:
 
 - Wenn viele Projekte mit wenigen Dateien in jedem Projekt vorhanden sind, verwenden Sie das MSBuild-Tool.
 

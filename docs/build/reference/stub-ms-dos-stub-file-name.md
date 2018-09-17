@@ -1,5 +1,5 @@
 ---
-title: -STUB (MS-DOS-Stub-Dateiname) | Microsoft Docs
+title: -STUB (Name der MS-DOS-Stubdatei) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,53 +22,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4302040f7d18dcffc07ddd054c34b62c22e400d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0c279d6f33befb4c308afe0c92b7dcca3d45ba66
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379015"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707719"
 ---
 # <a name="stub-ms-dos-stub-file-name"></a>/STUB (Name der MS-DOS-Stubdatei)
-```  
-/STUB:filename  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Dabei gilt:  
-  
- *filename*  
- Eine MS-DOS-Anwendung.  
-  
-## <a name="remarks"></a>Hinweise  
- Die Option/Stub Fügt ein MS-DOS-Stubprogramm an ein Win32-Programm.  
-  
- Ein Stub-Programms wird aufgerufen, wenn die Datei im MS-DOS-ausgeführt wird. Dabei wird in der Regel eine entsprechende Meldung angezeigt. Allerdings kann jede gültige MS-DOS-Anwendung ein Stub-Programms.  
-  
- Geben Sie einen *Filename* für die Stub-Programms nach einem Doppelpunkt (:) in der Befehlszeile angegeben. Der Linker überprüft *Filename* und eine Fehlermeldung ausgegeben, wenn die Datei nicht ausführbar ist. Das Programm muss eine .exe-Datei sein. eine Datei ".com" ist ungültig für ein Stub-Programms.  
-  
- Wenn diese Option nicht verwendet wird, fügt der Linker eine Standard-Stub-Programms, der die folgende Meldung ausgibt:  
-  
-```  
-This program cannot be run in MS-DOS mode.  
-```  
-  
- Wenn Sie einen virtuellen Gerätetreiber erstellen *Filename* ermöglicht dem Benutzer, einen Dateinamen angeben, die eine Anweisung-Struktur (definiert in WINNT. H), die in der VXD, anstatt das Standardheader verwendet werden.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
-  
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).  
-  
-2.  Klicken Sie auf die **Linker** Ordner.  
-  
-3.  Klicken Sie auf die Eigenschaftenseite **Befehlszeile** .  
-  
-4.  Geben Sie die Option in der **Zusatzoptionen** Feld.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
-  
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
- [Linkeroptionen](../../build/reference/linker-options.md)
+
+```
+/STUB:filename
+```
+
+## <a name="arguments"></a>Argumente
+
+*filename*<br/>
+Eine MS-DOS-Anwendung.
+
+## <a name="remarks"></a>Hinweise
+
+Die/Stub-Option Fügt ein MS-DOS-Stubprogramm an ein Win32-Programm.
+
+Ein Stub-Programm wird aufgerufen, wenn die Datei in MS-DOS-ausgeführt wird. Dabei wird in der Regel eine entsprechende Meldung angezeigt. Allerdings kann jeder gültige MS-DOS-Anwendung ein Stub-Programm sein.
+
+Geben Sie einen *Filename* für die Stub-Programm nach einem Doppelpunkt (:) in der Befehlszeile. Der Linker überprüft *Filename* und eine Fehlermeldung ausgegeben, wenn die Datei nicht ausführbar ist. Die Anwendung muss eine .exe-Datei sein. eine COM-Datei ist ungültig für ein Stubprogramm.
+
+Wenn diese Option nicht verwendet wird, fügt der Linker ein Standard-Stub-Programm, das die folgende Meldung gibt:
+
+```
+This program cannot be run in MS-DOS mode.
+```
+
+Beim Erstellen eines virtuellen Gerätetreibers *Filename* ermöglicht dem Benutzer, die einen Dateinamen angeben, die eine Anweisung-Struktur (definiert in WINNT. enthält. H), die in der VXD, anstatt der Standardheader verwendet werden.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
+
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+
+1. Klicken Sie auf die **Linker** Ordner.
+
+1. Klicken Sie auf die Eigenschaftenseite **Befehlszeile** .
+
+1. Geben Sie die Option in der **zusätzliche Optionen** Feld.
+
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
+
+- Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Siehe auch
+
+[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
+[Linkeroptionen](../../build/reference/linker-options.md)

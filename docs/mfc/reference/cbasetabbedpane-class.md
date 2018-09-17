@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5585ad86b0c55a7ab47cd026fd0bb7032db11b9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: fa9af83ce4f18f4e4f2e916c5d9bacf724720814
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690433"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718444"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane-Klasse
 Erweitert die Funktionalität von [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) , um die Erstellung von Fenstern im Registerkartenformat zu unterstützen  
@@ -176,14 +176,14 @@ virtual BOOL AddTab(
  [in] [out] *pNewBar*  
  Ein Zeiger auf den Bereich, um Sie hinzuzufügen. This-Zeiger kann ungültig werden, nachdem Sie diese Methode aufrufen. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
   
- [in] *bVisible*  
- True, um die Registerkarte sichtbar zu machen. andernfalls "false".  
+*bVisible*<br/>
+[in] True, um die Registerkarte sichtbar zu machen. andernfalls "false".  
   
- [in] *bSetActive*  
- True, um der Registerkarte der aktiven Registerkarte machen. andernfalls "false".  
+*bSetActive*<br/>
+[in] True, um der Registerkarte der aktiven Registerkarte machen. andernfalls "false".  
   
- [in] *bDetachable*  
- True, damit die lösbaren Registerkarte; andernfalls "false".  
+*bDetachable*<br/>
+[in] True, damit die lösbaren Registerkarte; andernfalls "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  "True", wenn der Bereich erfolgreich als Registerkarte hinzugefügt wurde und wurde im Prozess nicht zerstört. FALSE, wenn der Bereich, der hinzugefügt wird ein Objekt des Typs ist `CBaseTabbedPane`. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
@@ -212,8 +212,8 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bUseTabIndexes*  
- Dieser Parameter wird intern vom Framework verwendet.  
+*bUseTabIndexes*<br/>
+[in] Dieser Parameter wird intern vom Framework verwendet.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird vom Framework aufgerufen, wenn es Andocken Zustandsinformationen aus der Registrierung erneut geladen. Die Methode ruft Informationen über die Tab-Reihenfolge und die Namen von Registern in einem Bereich im Registerkartenformat ab.  
@@ -249,8 +249,8 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bActiveTabOnly*  
- Wenn Sie einen Bereich im Registerkartenformat konvertieren, geben Sie "true", um nur die aktive Registerkarte zu konvertieren. Geben Sie "false", um alle Registerkarten in den Bereich zu konvertieren.  
+*bActiveTabOnly*<br/>
+[in] Wenn Sie einen Bereich im Registerkartenformat konvertieren, geben Sie "true", um nur die aktive Registerkarte zu konvertieren. Geben Sie "false", um alle Registerkarten in den Bereich zu konvertieren.  
   
 ##  <a name="detachpane"></a>  Cbasetabbedpane:: Detachpane  
  Trennt einen Bereich von Bereich im Registerkartenformat.  
@@ -262,11 +262,11 @@ virtual BOOL DetachPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- Zeiger auf den Bereich zu trennen.  
+*pBar*<br/>
+[in] Zeiger auf den Bereich zu trennen.  
   
- [in] *bHide*  
- Boolescher Parameter, der angibt, ob das Framework den Bereich wird ausgeblendet, nachdem sie getrennt wird.  
+*bHide*<br/>
+[in] Boolescher Parameter, der angibt, ob das Framework den Bereich wird ausgeblendet, nachdem sie getrennt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Framework die im Bereich erfolgreich getrennt. FALSE, wenn *pBar* NULL ist oder bezieht sich auf einen Bereich, der nicht in den Bereich im Registerkartenformat ist.  
@@ -282,8 +282,8 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- True, um die Beschriftung für die Seite im Registerformat mit der Beschriftung für die aktive Registerkarte zu synchronisieren. andernfalls "false".  
+*bAktivieren*<br/>
+[in] True, um die Beschriftung für die Seite im Registerformat mit der Beschriftung für die aktive Registerkarte zu synchronisieren. andernfalls "false".  
   
 ##  <a name="filldefaulttabsorderarray"></a>  CBaseTabbedPane::FillDefaultTabsOrderArray  
  Stellt die internen Aktivierreihenfolge zu einem Standardzustand.  
@@ -303,8 +303,8 @@ virtual CWnd* FindPaneByID(UINT uBarID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *uBarID*  
- Gibt die ID des Bereichs zu suchen.  
+*uBarID*<br/>
+[in] Gibt die ID des Bereichs zu suchen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf den Bereich, wenn es gefunden wurde; andernfalls NULL.  
@@ -322,11 +322,11 @@ virtual CWnd* FindBarByTabNumber(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nTabNum*  
- Gibt an, der nullbasierte Index der abzurufenden Registerkarte.  
+*nTabNum*<br/>
+[in] Gibt an, der nullbasierte Index der abzurufenden Registerkarte.  
   
- [in] *bGetWrappedBar*  
- True, um das zugrunde liegende (umschlossene) Fenster im Bereich im Bereich selbst zurückgeben. andernfalls "false". Dies gilt nur für Bereiche, die von abgeleiteten [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md).  
+*bGetWrappedBar*<br/>
+[in] True, um das zugrunde liegende (umschlossene) Fenster im Bereich im Bereich selbst zurückgeben. andernfalls "false". Dies gilt nur für Bereiche, die von abgeleiteten [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md).  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wenn der Bereich; gefunden wird wird ein gültiger Zeiger auf den Bereich gesucht wird zurückgegeben, andernfalls NULL.  
@@ -349,14 +349,14 @@ virtual BOOL FloatTab(
  [in] [out] *pBar*  
  Ein Zeiger auf den Bereich, um "float".  
   
- [in] *nTabID*  
- Gibt an, der nullbasierte Index der Registerkarte "float".  
+*nTabID*<br/>
+[in] Gibt an, der nullbasierte Index der Registerkarte "float".  
   
- [in] *DockMethod*  
- Gibt die Methode zu verwenden, um den Bereich "float". Weitere Informationen finden Sie im Abschnitt "Hinweise".  
+*dockMethod*<br/>
+[in] Gibt die Methode zu verwenden, um den Bereich "float". Weitere Informationen finden Sie im Abschnitt "Hinweise".  
   
- [in] *bHide*  
- True, um den Bereich ausblenden, bevor Sie die floating. andernfalls "false".  
+*bHide*<br/>
+[in] True, um den Bereich ausblenden, bevor Sie die floating. andernfalls "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Bereich abgedockt. andernfalls "false".  
@@ -387,8 +387,8 @@ virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iTabNum*  
- Ein Verweis auf eine ganze Zahl. Diese Methode schreibt dem nullbasierten Index des ersten angezeigten Registerkarte an diesen Parameter, oder -1, wenn Nein, die angezeigt, dass die Registerkarte befindet.  
+*iTabNum*<br/>
+[in] Ein Verweis auf eine ganze Zahl. Diese Methode schreibt dem nullbasierten Index des ersten angezeigten Registerkarte an diesen Parameter, oder -1, wenn Nein, die angezeigt, dass die Registerkarte befindet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Bei Erfolg einen Zeiger auf die erste angezeigte Registerkarte; andernfalls NULL.  
@@ -401,8 +401,8 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *Größe*  
- Ein `CSize` -Objekt, das mit den minimal zulässigen Größe gefüllt ist.  
+*size*<br/>
+[out] Ein `CSize` -Objekt, das mit den minimal zulässigen Größe gefüllt ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn der einheitlichen Handhabung der Größen der minimalen Bereich aktiv ist ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *Größe* mit den minimal zulässigen Größe für die aktive Registerkarte gefüllt ist. Andernfalls *Größe* wird gefüllt, bei dem Rückgabewert der [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
@@ -415,8 +415,8 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *Größe*  
- Ein `CSize` -Objekt, das mit den minimal zulässigen Größe gefüllt ist.  
+*size*<br/>
+[out] Ein `CSize` -Objekt, das mit den minimal zulässigen Größe gefüllt ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn der einheitlichen Handhabung der Größen der minimalen Bereich aktiv ist ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *Größe* mit den minimal zulässigen Größe für die aktive Registerkarte gefüllt ist. Andernfalls *Größe* wird gefüllt, bei dem Rückgabewert der [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
@@ -431,11 +431,11 @@ virtual void GetPaneList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *Lst*  
- Ein `CObList` , gefüllt ist, mit die Bereiche, die im Bereich mit Registerkarten enthalten sind.  
+*lst*<br/>
+[out] Ein `CObList` , gefüllt ist, mit die Bereiche, die im Bereich mit Registerkarten enthalten sind.  
   
- [in] *pRTCFilter*  
- Wenn er nicht NULL ist, enthält die zurückgegebene Liste nur die Bereiche, die die angegebene Runtime-Klasse.  
+*pRTCFilter*<br/>
+[in] Wenn er nicht NULL ist, enthält die zurückgegebene Liste nur die Bereiche, die die angegebene Runtime-Klasse.  
   
 ##  <a name="gettabarea"></a>  CBaseTabbedPane::GetTabArea  
  Gibt zurück, das die umschließenden Rechtecke für die oberen und unteren Registerkarte Bereiche.  
@@ -447,11 +447,11 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *RectTabAreaTop*  
- Empfängt die Bildschirmkoordinaten des oberen Registerkartenbereichs.  
+*rectTabAreaTop*<br/>
+[out] Empfängt die Bildschirmkoordinaten des oberen Registerkartenbereichs.  
   
- [out] *RectTabAreaBottom*  
- Empfängt die Bildschirmkoordinaten des im unteren Registerkartenbereich an.  
+*rectTabAreaBottom*<br/>
+[out] Empfängt die Bildschirmkoordinaten des im unteren Registerkartenbereich an.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um die umschließenden Rechtecke, in Bildschirmkoordinaten, für die oberen und unteren Registerkarte Bereiche zu bestimmen.  
@@ -540,8 +540,8 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAutoDestroy*  
- True, wenn der Bereich im Registerkartenformat dynamisch erstellt wurde, und Sie nicht, dessen Lebensdauer steuern sind. andernfalls "false".  
+*bAutoDestroy*<br/>
+[in] True, wenn der Bereich im Registerkartenformat dynamisch erstellt wurde, und Sie nicht, dessen Lebensdauer steuern sind. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Legen Sie die Auto-Modus auf "true", wenn Sie einen Bereich im Registerkartenformat dynamisch erstellen und zerstören, wenn Sie nicht seine Lebensdauer steuern, sind. Wenn Auto-löschen-Modus ist "true", wird der Bereich im Registerkartenformat automatisch durch das Framework zerstört werden.  
@@ -558,17 +558,17 @@ virtual BOOL ShowTab(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- Ein Zeiger auf den Bereich, um Sie anzuzeigen oder auszublenden.  
+*pBar*<br/>
+[in] Ein Zeiger auf den Bereich, um Sie anzuzeigen oder auszublenden.  
   
- [in] *bShow*  
- True, um im Bereich angezeigt. "False" zum Ausblenden des Fensters.  
+*bShow*<br/>
+[in] True, um im Bereich angezeigt. "False" zum Ausblenden des Fensters.  
   
- [in] *bDelay*  
- True, um die Anpassung von der Registerkartenlayout zu verzögern. andernfalls "false".  
+*bDelay*<br/>
+[in] True, um die Anpassung von der Registerkartenlayout zu verzögern. andernfalls "false".  
   
- [in] *bActivate*  
- True, um der Registerkarte der aktiven Registerkarte machen. andernfalls "false".  
+*bActivate*<br/>
+[in] True, um der Registerkarte der aktiven Registerkarte machen. andernfalls "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Registerkarte wurde entweder angezeigt oder ausgeblendet erfolgreich. andernfalls "false".  
@@ -600,17 +600,17 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bMode*  
- True, um die automatisch ausblendbare-Modus zu aktivieren. "False", um reguläre Andockmodus zu aktivieren.  
+*bMode*<br/>
+[in] True, um die automatisch ausblendbare-Modus zu aktivieren. "False", um reguläre Andockmodus zu aktivieren.  
   
- [in] *DwAlignment*  
- Gibt die Ausrichtung der automatisch ausblendbaren Bereich, der erstellt werden soll. Eine Liste der möglichen Werte, finden Sie unter [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).  
+*dwAlignment*<br/>
+[in] Gibt die Ausrichtung der automatisch ausblendbaren Bereich, der erstellt werden soll. Eine Liste der möglichen Werte, finden Sie unter [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).  
   
  [in] [out] *pCurrAutoHideBar*  
  Ein Zeiger auf der Symbolleiste des aktuellen automatisch im Hintergrund. NULL kann sein.  
   
- [in] *bUseTimer*  
- Gibt an, ob den automatisch ausblendbaren Effekt zu verwenden, wenn der Benutzer im Bereich in den Modus "automatisch ausblenden" wechselt, oder sofort Ausblenden des Fensters.  
+*bUseTimer*<br/>
+[in] Gibt an, ob den automatisch ausblendbaren Effekt zu verwenden, wenn der Benutzer im Bereich in den Modus "automatisch ausblenden" wechselt, oder sofort Ausblenden des Fensters.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf der Symbolleiste des automatischen Ausblenden, die erstellt wird, beim Wechseln zur automatischen Ausblendemodus oder NULL, wenn keine Symbolleiste erstellt wird.  

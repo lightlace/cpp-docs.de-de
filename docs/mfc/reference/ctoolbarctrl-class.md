@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0801fab2ef5cec0da42cb40e28cd5124141c1007
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1f97559dd962fefbb4e727c0e75d0102898c8f13
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686084"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724073"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Symbolleisten-Steuerelements bereit.  
@@ -532,8 +532,8 @@ BOOL ChangeBitmap(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *IdButton*|Befehl Bezeichner der Schaltfläche, die eine neue Bitmap zu erhalten.|  
-|[in] *iBitmap*|Nullbasierte Index eines Bildes in der Bildliste der aktuellen Symbolleisten-Steuerelement.|  
+|*idButton*|[in] Befehl Bezeichner der Schaltfläche, die eine neue Bitmap zu erhalten.|  
+|*iBitmap*|[in] Nullbasierte Index eines Bildes in der Bildliste der aktuellen Symbolleisten-Steuerelement.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -841,7 +841,7 @@ CString GetButtonText(int idButton) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *IdButton*|Der Bezeichner für die Schaltfläche deren Anzeigetext abgerufen werden.|  
+|*idButton*|[in] Der Bezeichner für die Schaltfläche deren Anzeigetext abgerufen werden.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein [CString](../../atl-mfc-shared/using-cstring.md) , der den Anzeigetext der angegebenen Schaltfläche enthält.  
@@ -860,7 +860,7 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] *LpColorScheme*|Zeiger auf eine [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) Struktur, die die Farbinformationen für das Schema empfängt. Wenn diese Methode zurückgegeben wird, beschreibt die Struktur die Hervorhebungsfarbe und die Farbe des Schattens des Symbolleisten-Steuerelements.|  
+|*lpColorScheme*|[out] Zeiger auf eine [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) Struktur, die die Farbinformationen für das Schema empfängt. Wenn diese Methode zurückgegeben wird, beschreibt die Struktur die Hervorhebungsfarbe und die Farbe des Schattens des Symbolleisten-Steuerelements.|  
   
 ### <a name="return-value"></a>Rückgabewert  
 True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -1053,8 +1053,8 @@ BOOL GetPadding(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] *PnHorzPadding*|Eine ganze Zahl, die den horizontalen Abstand der Symbolleisten-Steuerelements in Pixel empfängt.|  
-|[out] *PnVertPadding*|Eine ganze Zahl, die den vertikalen Abstand die Symbolleisten-Steuerelements in Pixel empfängt.|  
+|*pnHorzPadding*|[out] Eine ganze Zahl, die den horizontalen Abstand der Symbolleisten-Steuerelements in Pixel empfängt.|  
+|*pnVertPadding*|[out] Eine ganze Zahl, die den vertikalen Abstand die Symbolleisten-Steuerelements in Pixel empfängt.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -1349,8 +1349,8 @@ BOOL IsButtonHighlighted(int nID) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- Die Befehls-ID für das Symbolleisten-Schaltfläche.  
+*nID*<br/>
+[in] Die Befehls-ID für das Symbolleisten-Schaltfläche.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Positive ganze Zahl, wenn die Schaltfläche markiert wird, tritt ein, 0, wenn die Schaltfläche nicht hervorgehoben ist, oder -1, wenn ein Fehler.  
@@ -1363,8 +1363,8 @@ BOOL IsButtonIndeterminate(int nID) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- Befehls-ID der Schaltfläche auf der Symbolleiste.  
+*nID*<br/>
+[in] Befehls-ID der Schaltfläche auf der Symbolleiste.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Positive ganze Zahl, wenn die Schaltfläche ist nicht unbestimmten oder -1, wenn ein Fehler auftritt, wenn die Schaltfläche unbestimmt ist NULL.  
@@ -1491,11 +1491,11 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- Bezeichner der Schaltfläche zu drücken oder release-Befehl.  
+*nID*<br/>
+[in] Bezeichner der Schaltfläche zu drücken oder release-Befehl.  
   
- [in] *bPress*  
- True, um die angegebene Taste drücken. FALSE, wenn die angegebene Schaltfläche freigegeben werden soll. Der Standardwert ist "true".  
+*bPress*<br/>
+[in] True, um die angegebene Taste drücken. FALSE, wenn die angegebene Schaltfläche freigegeben werden soll. Der Standardwert ist "true".  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich ist. andernfalls "false".  
@@ -1516,7 +1516,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *pReplaceBitmap*|Zeiger auf eine [TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap) Struktur, die die Bitmap ersetzt werden und der neuen Bitmap beschreibt.|  
+|*pReplaceBitmap*|[in] Zeiger auf eine [TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap) Struktur, die die Bitmap ersetzt werden und der neuen Bitmap beschreibt.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -1593,8 +1593,8 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *fAnchor*  
- Gibt an, ob Anker Hervorhebung aktiviert oder deaktiviert ist. Wenn dieser Wert ungleich NULL ist, wird die Hervorhebung der Anker aktiviert. Wenn dieser Wert 0 (null) ist, wird Anker Hervorhebung deaktiviert  
+*fAnchor*<br/>
+[in] Gibt an, ob Anker Hervorhebung aktiviert oder deaktiviert ist. Wenn dieser Wert ungleich NULL ist, wird die Hervorhebung der Anker aktiviert. Wenn dieser Wert 0 (null) ist, wird Anker Hervorhebung deaktiviert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die vorherige Anchor-Einstellung. Wenn die Hervorhebung aktiviert wurde, ist dieser Wert ungleich NULL. Wenn Hervorhebung nicht aktiviert wurde, ist dieser Wert 0 (null).  
@@ -1729,7 +1729,7 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *LpColorScheme*|Zeiger auf eine [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) Struktur, die die Farbe zum Hervorheben und Schattenfarbe des Symbolleisten-Steuerelements beschreibt.|  
+|*lpColorScheme*|[in] Zeiger auf eine [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) Struktur, die die Farbe zum Hervorheben und Schattenfarbe des Symbolleisten-Steuerelements beschreibt.|  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode hat keine Auswirkungen, wenn ein Windows Vista-visual-Design festgelegt ist.  
@@ -1952,8 +1952,8 @@ DWORD SetPadding(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *nHorzPadding*|Gibt den horizontalen Abstand des Symbolleisten-Steuerelements, in Pixel an.|  
-|[in] *nVertPadding*|Gibt den vertikalen Abstand die Symbolleisten-Steuerelements in Pixel an.|  
+|*nHorzPadding*|[in] Gibt den horizontalen Abstand des Symbolleisten-Steuerelements, in Pixel an.|  
+|*nVertPadding*|[in] Gibt den vertikalen Abstand die Symbolleisten-Steuerelements in Pixel an.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein DWORD, deren niedrige Word enthält den vorherigen Abstandswert für den horizontalen, und deren hohe Word enthält den vorherigen Abstandswert für den vertikalen. Die Auffüllung-Werte werden in Pixel gemessen.  
@@ -1979,8 +1979,8 @@ CImagelist* SetPressedImageList(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *iImageID*|Der nullbasierte Index der Liste der Bilder. Legen Sie diesen Parameter auf 0 (null), wenn Sie nur eine Liste der Images verwenden.|  
-|[in] *pImageList*|Zeiger auf eine [CImageList](../../mfc/reference/cimagelist-class.md) , enthält die Liste der neuen Bilder.|  
+|*iImageID*|[in] Der nullbasierte Index der Liste der Bilder. Legen Sie diesen Parameter auf 0 (null), wenn Sie nur eine Liste der Images verwenden.|  
+|*pImageList*|[in] Zeiger auf eine [CImageList](../../mfc/reference/cimagelist-class.md) , enthält die Liste der neuen Bilder.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf eine [CImageList](../../mfc/reference/cimagelist-class.md) , enthält die vorherigen Bildliste für das aktuelle Steuerelement, oder NULL, wenn keine solchen Image-Liste festgelegt wurde.  

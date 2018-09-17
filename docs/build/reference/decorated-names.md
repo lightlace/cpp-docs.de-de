@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b6adcfe68536394b8dce5712cebc12c82a027c3
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 32c8a91442e55325b35d1067ec5009c9bd5cf4a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894719"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700725"
 ---
 # <a name="decorated-names"></a>Ergänzte Namen
 
@@ -104,5 +104,5 @@ is :- "private: void __thiscall a::func1(int)"
 
 ## <a name="see-also"></a>Siehe auch
 
-[C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md)  
+[C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md)<br/>
 [Verwenden von "extern" zur Angabe der Verknüpfung](../../cpp/using-extern-to-specify-linkage.md)

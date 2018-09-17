@@ -20,14 +20,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 952933f72ae5d3f65aa646964ec6e04e758a27c6
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 244fea4b776f0713b6fb2281563e39d27a910a2d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103774"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704245"
 ---
 # <a name="f-set-stack-size"></a>/F (Stapelgröße festlegen)
+
 Legt die Stapelgröße der Anwendung in Bytes fest.
 
 ## <a name="syntax"></a>Syntax
@@ -47,9 +48,9 @@ Sie müssen möglicherweise die Größe des Stapels zu erhöhen, wenn das Progra
 
 Sie können auch die Stapelgröße festlegen, durch:
 
--   Mithilfe der **/STACK** -Linkeroption. Weitere Informationen finden Sie unter [/STACK](../../build/reference/stack.md).
+- Mithilfe der **/STACK** -Linkeroption. Weitere Informationen finden Sie unter [/STACK](../../build/reference/stack.md).
 
--   Verwenden von EDITBIN für die .exe-Datei. Weitere Informationen finden Sie unter [EDITBIN-Referenz](../../build/reference/editbin-reference.md).
+- Verwenden von EDITBIN für die .exe-Datei. Weitere Informationen finden Sie unter [EDITBIN-Referenz](../../build/reference/editbin-reference.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
@@ -65,5 +66,5 @@ Sie können auch die Stapelgröße festlegen, durch:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)   
+[Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

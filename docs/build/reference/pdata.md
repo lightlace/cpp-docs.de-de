@@ -1,5 +1,5 @@
 ---
-title: -PDATA | Microsoft Docs
+title: -PDATA | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,24 +18,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b507acdcdc299f0cb187d8e63decf079b1fc3eaf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e64dbaeaa94e8705357bf75b4b80e55e830c6702
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372268"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720316"
 ---
 # <a name="pdata"></a>/PDATA
-```  
-/PDATA  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Nur RISC-Prozessoren.  
-  
- Diese Option gibt die Ausnahmetabellen (.pdata) aus einem Bild oder ein Objekt.  
-  
- Nur die [/Headers](../../build/reference/headers.md) DUMPBIN-Option ist verfügbar für die Verwendung in den Dateien erstellt wird, mit der [/GL](../../build/reference/gl-whole-program-optimization.md) -Compileroption.  
-  
-## <a name="see-also"></a>Siehe auch  
- [DUMPBIN-Optionen](../../build/reference/dumpbin-options.md)
+
+```
+/PDATA
+```
+
+## <a name="remarks"></a>Hinweise
+
+Nur RISC-Prozessoren.
+
+Diese Option gibt die Ausnahmetabellen (.pdata-Datensatz) aus einem Bild oder das Objekt.
+
+Nur die [/Headers](../../build/reference/headers.md) DUMPBIN-Option ist verfügbar für die Verwendung in Dateien mit der ["/ GL"](../../build/reference/gl-whole-program-optimization.md) -Compileroption.
+
+## <a name="see-also"></a>Siehe auch
+
+[DUMPBIN-Optionen](../../build/reference/dumpbin-options.md)

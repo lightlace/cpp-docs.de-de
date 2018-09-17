@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fc3be9fb25b6593f4b69f846394544b7b7d756a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 73047962daf32eae6c01bb0ea6f6688a83e19402
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220464"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715532"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -49,26 +49,26 @@ function declaration
 *name*  
 Ein benutzerdefinierter Name für den Codeblock, der in der IDL-Datei angezeigt wird.
 
-*DllName* (optional)  
-Die DLL-Datei, die den Export enthält.
+*DLL-Name*  
+(Optional) Die DLL-Datei, die den Export enthält.
 
-*UUID* (optional)  
-Eine eindeutige ID.
+*uuid*  
+(Optional) Eine eindeutige ID.
 
-*Helpstring* (optional)  
-Eine Zeichenfolge, die die Typbibliothek beschrieben wird.
+*helpstring*  
+(Optional) Eine Zeichenfolge, die die Typbibliothek beschrieben wird.
 
-*Helpstringcontext* (optional)  
-Die ID eines Hilfethemas in eine .hlp oder CHM-Datei.
+*helpstringcontext*  
+(Optional) Die ID eines Hilfethemas in eine .hlp oder CHM-Datei.
 
-*HelpContext* (optional)  
-Die Hilfe-ID für diese Typbibliothek.
+*helpcontext*  
+(Optional) Die Hilfe-ID für diese Typbibliothek.
 
-*Ausgeblendete* (optional)  
-Ein Parameter, der verhindert, dass die Bibliothek angezeigt wird. Finden Sie unter den [ausgeblendeten](/windows/desktop/Midl/hidden) MIDL-Attribut für Weitere Informationen.
+*hidden*  
+(Optional) Ein Parameter, der verhindert, dass die Bibliothek angezeigt wird. Finden Sie unter den [ausgeblendeten](/windows/desktop/Midl/hidden) MIDL-Attribut für Weitere Informationen.
 
-*Eingeschränkte* (optional)  
-Mitglieder der Bibliothek können nicht beliebig aufgerufen werden. Finden Sie unter den [eingeschränkten](/windows/desktop/Midl/restricted) MIDL-Attribut für Weitere Informationen.
+*restricted*  
+(Optional) Mitglieder der Bibliothek können nicht beliebig aufgerufen werden. Finden Sie unter den [eingeschränkten](/windows/desktop/Midl/restricted) MIDL-Attribut für Weitere Informationen.
 
 *Funktionsdeklaration*  
 Die Funktion, die Sie definieren.

@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18f26f9ac0cd00758d1259ac368b2408a7a2e8cf
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a8ea3976a510817e183271921c6730692e5b0b3c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214620"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711059"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedCompareExchangePointer“
 **Microsoft-spezifisch**  
@@ -87,14 +87,14 @@ long _InterlockedCompareExchangePointer_rel (
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in, out] `Destination`  
- Zeiger auf einen Zeiger auf den Zielwert. Das Zeichen wird ignoriert.  
+*Ziel*<br/>
+[in, out] Zeiger auf einen Zeiger auf den Zielwert. Die Zeichen wird ignoriert.  
   
- [in] `Exchange`  
- Exchange-Zeiger. Das Zeichen wird ignoriert.  
+*Exchange*<br/>
+[in] Exchange-Zeiger. Die Zeichen wird ignoriert.  
   
- [in] `Comparand`  
- Zeiger zum Vergleich mit dem Ziel. Die Zeichen wird ignoriert.  
+*Comparand-Parameter*<br/>
+[in] Zeiger auf den Vergleich mit dem Ziel. Die Zeichen wird ignoriert.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Der Rückgabewert ist der Anfangswert des Ziels.  

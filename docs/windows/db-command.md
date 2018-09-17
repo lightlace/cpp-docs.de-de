@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0b34cbd2cebea2b1c4d6bf32e61a7f496b70d7a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 47fcbdb82501744c8155432e4f4cf220ed945dec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596267"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709903"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -99,26 +99,26 @@ TCHAR m_state[3] = 'CA';
 ]
 ```
 
-*name* (optional)  
-Der Name des Handles, den Sie für die Arbeit mit dem Rowset verwenden. Wenn Sie *name*angeben, generiert **db_command** eine Klasse mit dem angegebenen *Namen*, das verwendet werden kann, um das Rowset zu traversieren oder mehrere Aktionsabfragen auszuführen. Wenn Sie *name*nicht angeben, ist es nicht möglich, mehr als eine Zeile mit Ergebnissen an den Benutzer zurückzugeben.
+*name*  
+(Optional) Der Name des Handles, die Sie verwenden, um die Arbeit mit dem Rowset. Wenn Sie *name*angeben, generiert **db_command** eine Klasse mit dem angegebenen *Namen*, das verwendet werden kann, um das Rowset zu traversieren oder mehrere Aktionsabfragen auszuführen. Wenn Sie *name*nicht angeben, ist es nicht möglich, mehr als eine Zeile mit Ergebnissen an den Benutzer zurückzugeben.
 
-*source_name* (optional)  
-Die Variable `CSession` oder die Instanz einer Klasse, auf die das `db_source` -Attribut angewendet wird, auf Grundlage dessen der Befehl ausgeführt wird. Informationen hierzu finden Sie unter [db_source](../windows/db-source.md).
+*source_name*  
+(Optional) Die `CSession` Variable oder eine Instanz einer Klasse, die die `db_source` -Attribut angewendet, auf dem der Befehl ausgeführt wird. Informationen hierzu finden Sie unter [db_source](../windows/db-source.md).
 
 **db_command** stellt sicher, dass die Variable für *source_name* gültig ist, um den Gültigkeitsbereich der angegebenen Variablen auf eine Funktion oder als global festzulegen.
 
-*HRESULT* (optional)  
-Identifiziert die Variable, die das HRESULT des diesem Datenbankbefehl erhält. Wenn die Variable nicht existiert, wird sie automatisch durch das Attribut eingefügt.
+*HRESULT*  
+(Optional) Identifiziert die Variable, die das HRESULT des diesem Datenbankbefehl erhält. Wenn die Variable nicht existiert, wird sie automatisch durch das Attribut eingefügt.
 
-*bindings* (optional)  
-Ermöglicht die Trennung der Bindungsparameter vom OLE DB-Befehl.
+*bindings*  
+(Optional) Ermöglicht Ihnen die Bindungsparameter vom OLE DB-Befehl zu trennen.
 
 Bei Angabe ein Werts für *Bindungen*, **Db_command** analysiert den zugeordneten Wert und nicht die \[ *Bindtype*] Parameter. Dies ermöglicht Ihnen die Verwendung der OLE DB-Anbietersyntax. Geben Sie zum Deaktivieren der Analyse ohne Bindungsparameter `Bindings=""`.
 
 Wenn Sie einen Wert für nicht angeben *Bindungen*, **Db_command** analysiert Bindung Parameterblock, Suche nach "**(**", gefolgt von **\[** _Bindtype_**]** in Klammern, gefolgt von einem oder mehreren zuvor deklarierten C++-Membervariablen, gefolgt von "**)**". Der in Klammern gefasste Text wird aus dem sich ergebenden Befehl entfernt, und diese Parameter werden verwendet, um die Spalten- und Parameterbindungen für diesen Befehl zu erstellen.
 
-*Bulk_fetch* (optional)  
-Ein Integer-Wert, der die Anzahl der abzurufenden Zeilen angibt.
+*bulk_fetch*  
+(Optional) Ein ganzzahliger Wert, der die Anzahl der abzurufenden Zeilen angibt.
 
 Mit dem Standardwert 1 werden die Zeilen einzeln abgerufen (das Rowset ist vom Typ [CRowset](../data/oledb/crowset-class.md)).
 

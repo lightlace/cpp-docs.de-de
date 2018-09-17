@@ -1,5 +1,5 @@
 ---
-title: -Q-Optionen (Operationen auf niedriger Ebene) | Microsoft Docs
+title: -Q-Optionen (Operationen auf niedriger Ebene) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 1/23/2018
 ms.technology:
@@ -17,34 +17,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8a18c5d790cf21e8eb130a2b2baa152e20d79a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 15854333a9f26f87d20f7819327e68050ab37bf6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375034"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717779"
 ---
 # <a name="q-options-low-level-operations"></a>/Q-Optionen (Operationen auf niedriger Ebene)
 
-Sie können die **/q /** -Compileroptionen zur Durchführung der folgenden Compilervorgänge:
+Sie können die **/q /** Compileroptionen, die zum Ausführen der folgenden Compilervorgänge:
 
 - [/ Qfast_transcendentals (Erzwingen von schnellen transzendenten)](../../build/reference/qfast-transcendentals-force-fast-transcendentals.md): generiert schnelle Transzendente.
 
-- [/ QIfist (_ftol unterdrücken)](../../build/reference/qifist-suppress-ftol.md): unterdrückt `_ftol` Wenn eine Konvertierung von einem Gleitkommatyp zu einem ganzzahligen Typ erforderlich (nur X86) ist.
+- [/ QIfist (_ftol unterdrücken)](../../build/reference/qifist-suppress-ftol.md): unterdrückt `_ftol` Wenn eine Konvertierung von einem Gleitkommatyp in Ganzzahltyp ist erforderlich (nur X86).
 
-- [/ Qimprecise_fwaits (Entfernen von Fwaits in Try-Blöcken)](../../build/reference/qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): entfernt `fwait` -Befehle in `try` blockiert.
+- [/ Qimprecise_fwaits (Entfernen von Fwaits in Try-Blöcken)](../../build/reference/qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): entfernt `fwait` -Befehle in `try` Blöcke.
 
-- [/ Qpar (automatische Parallelisierung)](../../build/reference/qpar-auto-parallelizer.md): ermöglicht automatische Parallelisierung von Schleifen, die mit markiert sind die [#pragma loop()](../../preprocessor/loop.md) Richtlinie.
+- [/ Qpar (automatische Parallelisierung)](../../build/reference/qpar-auto-parallelizer.md): ermöglicht automatische Parallelisierung von Schleifen, die mit markierten Felder der [#pragma loop()](../../preprocessor/loop.md) Richtlinie.
 
-- [/ Qpar-Report (Auto-Parallelisierer Reporting Stufe)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md): aktiviert die Berichterstellungsebenen für die automatische Parallelisierung.
+- [/ Qpar-Report (Auto-Parallelizer-Berichtsebene)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md): aktiviert die Berichterstellungsebenen für die automatische Parallelisierung.
 
-- [/ Qsafe_fp_loads](../../build/reference/qsafe-fp-loads.md): unterdrückt Optimierungen für Gleitkommaregister lädt und für wechselt zwischen Arbeitsspeicher und MMX registriert.
+- [/ Qsafe_fp_loads](../../build/reference/qsafe-fp-loads.md): unterdrückt Optimierungen aus, für die Gleitkommaregister lädt und für Verschiebungen zwischen Arbeitsspeicher und MMX registriert wird.
 
-- [/ Qspectre](../../build/reference/qspectre.md): generiert Anweisungen, um bestimmte Absorptionsspektrum Sicherheitsrisiken zu minimieren.
+- [/ Qspectre](../../build/reference/qspectre.md): generiert Anweisungen, um bestimmte Spectre-Sicherheitsrisiken zu verringern.
 
-- [/ Qvec-Report (Auto-Vektorisierer Reporting Stufe)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md): aktiviert die Berichterstellungsebenen für die automatische Vektorisierung.
+- [/ Qvec-Report (Auto-Vektorisierer Berichtsebene)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md): aktiviert die Berichterstellungsebenen für die automatische Vektorisierung.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)  
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)  
+[Compileroptionen](../../build/reference/compiler-options.md)<br/>
+[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

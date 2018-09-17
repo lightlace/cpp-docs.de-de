@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonCustomizeDialog Klasse | Microsoft Docs
+title: CMFCRibbonCustomizeDialog-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e693a0e6a2353693f676ed0d63d7087d3e57455
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: d342ec75fd45224dcd36ba3fc17aa1a6f8c12e33
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040898"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720654"
 ---
 # <a name="cmfcribboncustomizedialog-class"></a>CMFCRibbonCustomizeDialog-Klasse
 Zeigt das Menüband **anpassen** Seite.  
@@ -47,14 +47,14 @@ class CMFCRibbonCustomizeDialog : public CMFCPropertySheet
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|`CMFCRibbonCustomizeDialog::GetThisClass`|Durch das Framework verwendet wird, um einen Zeiger auf die [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das diesem Klassentyp zugeordnet ist.|  
+|`CMFCRibbonCustomizeDialog::GetThisClass`|Durch das Framework verwendet wird, einen Zeiger zum Abrufen der [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das diesem Klassentyp zugeordnet ist.|  
   
 ## <a name="remarks"></a>Hinweise  
- MFC instanziiert diese Klasse automatisch, wenn Sie keine die AFX_WM_ON_RIBBON_CUSTOMIZE Nachricht verarbeiten oder wenn Sie 0 aus der Message-Handler zurückgegeben.  
+ MFC instanziiert diese Klasse automatisch, wenn Sie keine die AFX_WM_ON_RIBBON_CUSTOMIZE Nachricht verarbeiten, oder wenn Sie 0 aus der Message-Handler zurückgegeben.  
   
- Wenn Sie diese Klasse in der Anwendung zu verwenden, um das Menüband anzeigen möchten **anpassen** Dialogfeld Feld, einfach zu instanziieren und Aufrufen der `DoModal` Methode.  
+ Wenn Sie diese Klasse in Ihrer Anwendung verwenden, um das Menüband anzeigen möchten **anpassen** Dialogfeld Feld, einfach zu instanziieren und Aufrufen der `DoModal` Methode.  
   
- Da von dieser Klasse abgeleitetes [CMFCPropertySheet Klasse](../../mfc/reference/cmfcpropertysheet-class.md), können Sie benutzerdefinierte Seiten hinzufügen, mit der `CMFCPropertySheet` API.  
+ Da von dieser Klasse abgeleitet ist [CMFCPropertySheet-Klasse](../../mfc/reference/cmfcpropertysheet-class.md), Sie können benutzerdefinierte Seiten hinzufügen, indem Sie mit der `CMFCPropertySheet` API.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -82,11 +82,11 @@ CMFCRibbonCustomizeDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWndParent*  
- Ein Zeiger auf das übergeordnete Fenster (normalerweise der Hauptframe).  
+*pWndParent*<br/>
+[in] Ein Zeiger auf das übergeordnete Fenster (in der Regel den Hauptframe).  
   
- [in] *pRibbon*  
- Ein Zeiger auf die `CMFCRibbonBar` also angepasst werden.  
+*pRibbon*<br/>
+[in] Ein Zeiger auf die `CMFCRibbonBar` das heißt, die angepasst werden.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht das Erstellen einer `CMFCRibbonCustomizeDialog` Objekt.  
@@ -94,7 +94,7 @@ CMFCRibbonCustomizeDialog(
  [!code-cpp[NVC_MFC_RibbonApp#18](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizedialog-class_1.cpp)]  
   
 ### <a name="remarks"></a>Hinweise  
- Der Konstruktor instanziiert eine [CMFCRibbonCustomizePropertyPage Klasse](../../mfc/reference/cmfcribboncustomizepropertypage-class.md) -Objekt und fügt es der Auflistung der Sheet-Eigenschaftenseiten hinzu.  
+ Der Konstruktor instanziiert ein [CMFCRibbonCustomizePropertyPage-Klasse](../../mfc/reference/cmfcribboncustomizepropertypage-class.md) Objekt und die Auflistung der Eigenschaftenblattseiten hinzugefügt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

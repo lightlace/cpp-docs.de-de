@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40d9ad442e4838ee837c93ada0352f230fc0cbed
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 3ae77e769672dcc88a9dd41c901424c8c8150e6b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894433"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709358"
 ---
 # <a name="special-characters-in-a-makefile"></a>Sonderzeichen in einem Makefile
 
 Um eine NMAKE-Sonderzeichen als Literalzeichen zu verwenden, platzieren Sie ein Caretzeichen (^) vor. NMAKE: ignoriert Caretzeichen an, die vor anderen Zeichen. Die Sonderzeichen sind:
 
-`:  ;  #  (  )  $  ^  \  {  }  !  @  —`  
+`:  ;  #  (  )  $  ^  \  {  }  !  @  —`
 
 Ein Caretzeichen (^) in eine Zeichenfolge in Anführungszeichen wird als literal Zirkumflexzeichen behandelt. Eine Einfügemarke am Ende einer Zeile Fügt ein literales Zeilenumbruchzeichen in eine Zeichenfolge oder ein Makro.
 

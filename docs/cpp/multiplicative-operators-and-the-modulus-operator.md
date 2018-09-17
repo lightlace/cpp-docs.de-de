@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a51544f1e367e1db0b5ae72948af68fbedfa7504
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cc842aa40b732543c496bb209b4b163635a19bb1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209727"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713855"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Multiplikationsoperatoren und der Modulus-Operator
 ## <a name="syntax"></a>Syntax  
@@ -72,11 +72,13 @@ f / 0.0
 > [!NOTE]
 >  Da Konvertierungen, die von den Multiplikationsoperatoren ausgeführt werden, keine Überlauf- oder Unterlaufbedingungen vorsehen, gehen Informationen möglicherweise verloren, wenn das Ergebnis eines Multiplikationsvorgangs nach der Konvertierung nicht im Typ der Operanden dargestellt werden kann.  
   
-## <a name="microsoft-specific"></a>Microsoft-spezifisch  
- In Microsoft C++ ist das Ergebnis eines Modulo-Ausdrucks immer dasselbe wie das Vorzeichen des ersten Operanden.  
-  
-**Ende Microsoft-spezifisch**  
- Wenn die berechnete Division von zwei ganzen Zahlen ungenau ist und nur ein Operand negativ ist, ist das Ergebnis der Betrags (Wert ohne Vorzeichen) der größten Ganzzahl, die kleiner ist als der exakte Wert, den die Division ergeben würde. Angenommen, der berechnete Wert des-11 / 3 ist-3.666666666. Das Ergebnis dieser ganzzahligen Division ist-3.  
+**Microsoft-spezifisch**
+
+In Microsoft C++ ist das Ergebnis eines Modulo-Ausdrucks immer dasselbe wie das Vorzeichen des ersten Operanden.
+
+**Ende Microsoft-spezifisch**
+
+Wenn die berechnete Division von zwei ganzen Zahlen ungenau ist und nur ein Operand negativ ist, ist das Ergebnis der Betrags (Wert ohne Vorzeichen) der größten Ganzzahl, die kleiner ist als der exakte Wert, den die Division ergeben würde. Angenommen, der berechnete Wert des-11 / 3 ist-3.666666666. Das Ergebnis dieser ganzzahligen Division ist-3.  
   
  Die Beziehung zwischen den Multiplikationsoperatoren ist von der Identität angegeben (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*.  
   

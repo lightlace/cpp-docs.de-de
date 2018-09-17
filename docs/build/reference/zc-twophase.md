@@ -1,5 +1,5 @@
 ---
-title: /Zc:twoPhase-(Zweiphasen-Namenssuche deaktivieren) | Microsoft Docs
+title: /Zc:twoPhase-(Zweiphasen-Namenssuche deaktivieren) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
@@ -19,16 +19,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5653959b25105f10ae98768217524dc0ff0cbe2a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 30647ab07984c393b10d7c0fb74d0e2be35cdf26
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389100"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723293"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-(Zweiphasen-Namenssuche deaktivieren)
 
-Wenn die **/Zc:twoPhase-** angegeben wird, der Compiler analysiert und Klassen- und Funktionsvorlagen nicht konforme genauso wie in Versionen von Visual Studio vor Visual Studio 2017 Version 15.3 instanziiert. 
+Wenn die **/Zc:twoPhase-** angegeben wurde, wird der Compiler analysiert und Klassen- und Funktionsvorlagen nicht konforme genauso wie Versionen von Visual Studio vor Visual Studio 2017 Version 15.3 instanziiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,31 +36,31 @@ Wenn die **/Zc:twoPhase-** angegeben wird, der Compiler analysiert und Klassen- 
 
 ## <a name="remarks"></a>Hinweise
 
-In Visual Studio 2017 Version 15,3 und höher standardmäßig verwendet der Compiler zweiphasigen Namenssuche für die namensauflösung für die Vorlage an. Wenn **/Zc:twoPhase-** angegeben ist, wird der Compiler auf das vorherige nicht konforme Klasse Vorlage und die Funktion Vorlage Namen auflösen und Ersetzung Verhalten zurückgesetzt.
+In Visual Studio 2017 Version 15.3 und höher standardmäßig verwendet der Compiler Zweiphasen-Namenssuche für die namensauflösung für die Vorlage an. Wenn **/Zc:twoPhase-** angegeben ist, wird der Compiler setzt das vorherige nicht konforme Klasse Vorlage und die Funktion Vorlage Namen auflösen und-Ersetzung Verhalten.
 
-Die **/Zc:twoPhase-** Option aus, um nicht konforme Verhalten zu aktivieren, wird nicht standardmäßig festgelegt. Die [/ liberalen-](permissive-standards-conformance.md) Option wird implizit die Konformität Compilerverhalten Zweiphasen-Suche, jedoch können sie mithilfe von außer Kraft gesetzt werden **/Zc:twoPhase-**.
+Die **/Zc:twoPhase-** Option aus, um nicht konforme Verhalten zu aktivieren, wird standardmäßig nicht festgelegt. Die [/ PERMISSIVE--](permissive-standards-conformance.md) implizit Optionssätze konforme Verhalten des Zweiphasen-Lookup-Compilers, aber sie kann überschrieben werden, mithilfe von **/Zc:twoPhase-**.
 
-Das Windows SDK-Headerdateien in 10.0.15063.0 (Ersteller-Update oder Redstone 2), Version und früheren Versionen funktionieren in Konformitätsmodus nicht ordnungsgemäß. Verwenden Sie **/Zc:twoPhase-** zum Kompilieren von Code für die SDK-Versionen, bei der Verwendung von Visual Studio 2017 Version 15.3 und höheren Versionen. Versionen des Windows SDK ab Version 10.0.15254.0 (Redstone 3 oder Herbst Ersteller Update) in Konformitätsmodus ordnungsgemäß funktioniert und erfordern keine der **/Zc:twoPhase-** Option.
+Die Windows SDK-Header-Dateien in Version 10.0.15063.0 (Creators Update oder Redstone 2) und frühere Versionen funktionieren nicht ordnungsgemäß im Standards-Modus. Verwenden Sie **/Zc:twoPhase-** zum Kompilieren von Code für die SDK-Versionen, bei der Verwendung von Visual Studio 2017 Version 15.3 und höher. Versionen des Windows SDK ab Version 10.0.15254.0 (Redstone 3 oder Fall Creators Update) funktionieren ordnungsgemäß in Übereinstimmung mit Standards-Modus und erfordern keine der **/Zc:twoPhase-** Option.
 
-Verwendung **/Zc:twoPhase-** Wenn Sie den Code ordnungsgemäß kompiliert das alte Verhalten erforderlich ist. Sollten Sie möglicherweise Aktualisierung des Codes, um den Standard zu entsprechen.
+Verwendung **/Zc:twoPhase-** Wenn Ihr Code ordnungsgemäß kompiliert das alte Verhalten erforderlich ist. Sollten Sie die Aktualisierung des Codes, um den Standard zu entsprechen.
 
-### <a name="compiler-behavior-under-zctwophase-"></a>Compilerverhalten unter /Zc:twoPhase-
+### <a name="compiler-behavior-under-zctwophase-"></a>Compilerverhalten unter/Zc: twophase-
 
 In Versionen des Compilers vor Visual Studio 2017 Version 15.3 und wann **/Zc:twoPhase-** angegeben ist, verwendet der Compiler dieses Verhalten:
 
-- Es analysiert nur die Vorlagendeklaration, die Klasse Head und der Basisklassenliste. Der Textkörper der Vorlage wird als ein Tokenstream erfasst. Keine Funktionsrümpfen, Initialisierer, Standardargumente oder Noexcept-Argumente werden analysiert. Die Klassenvorlage wird Pseudo-instanziiert auf eine vorläufige zu überprüfenden Datentyps an, dass die Deklarationen in der Klassenvorlage richtig sind. Betrachten Sie diese Klassenvorlage:
+- Nur der Vorlagendeklaration des Klassenhead und der Basisklassenliste analysiert. Der Vorlagentext wird als token-Stream erfasst. Keine funktionsrümpfe, Initialisierer, Standardargumente oder Noexcept-Argumente werden analysiert. Die Klassenvorlage ist unechte instanziiertes auf eine vorläufige zu überprüfenden Datentyps an, dass die Deklarationen in der Klassenvorlage richtig sind. Betrachten Sie diese Klassenvorlage ein:
 
    ```cpp
    template <typename T> class Derived : public Base<T> { ... }
    ```
 
-   Der Vorlagendeklaration `template <typename T`>, die Klasse Head `class Derived`, und der Liste der Basisklassen `public Base<T>` analysiert werden, aber der Textkörper der Vorlage wird als ein Tokenstream erfasst.
+   Der Vorlagendeklaration `template <typename T`>, des Klassenhead `class Derived`, und der Liste der Basisklasse `public Base<T>` werden analysiert, aber als token-Stream Vorlagentext aufgezeichnet wird.
 
-- Wenn eine Funktionsvorlage zu analysieren, analysiert der Compiler nur die Funktionssignatur. Hauptteil der Funktion wird nicht analysiert werden. Es wird stattdessen als eine Tokenstream erfasst.
+- Bei der Analyse einer Funktionsvorlage, analysiert der Compiler nur die Funktionssignatur. Hauptteil der Funktion wird nicht analysiert werden. Stattdessen wird es als token-Stream erfasst.
 
-Daher werden, wenn die Vorlage-Text Syntaxfehler enthält und nie die Vorlage instanziiert wird, nie die Fehler diagnostiziert.
+Daher werden Wenn Vorlagentext Syntaxfehler und nie die Vorlage instanziiert wird, nie die Fehler diagnostiziert.
 
-Ein weiterer Effekt dieses Verhalten ist an der überladungsauflösung. Aufgrund der Art und Weise, die am Standort der Instanziierung der Tokenstream erweitert wird, Symbole, die nicht an die Vorlagendeklaration sichtbar waren möglicherweise zum Zeitpunkt der Instanziierung sichtbar und überladungsauflösung beteiligt. Dies kann zu Vorlagen führen, die basierend auf den Code, der nicht sichtbar war, wenn die Vorlage, entgegen der Standard definiert wurde-Verhalten ändern.
+Eine weitere Auswirkung dieses Verhalten ist an der überladungsauflösung. Aufgrund der Art und Weise, die am Standort der Instanziierung der Tokenstream erweitert wird, Symbole, die nicht unter der Vorlagendeklaration sichtbar waren möglicherweise zum Zeitpunkt der Instanziierung sichtbar und überladungsauflösung beteiligt. Dies kann zu Vorlagen führen, die Verhalten basierend auf den Code, der nicht sichtbar war, wenn die Vorlage, im Gegensatz zu den Standard definiert wurde ändern.
 
 Betrachten Sie beispielsweise folgenden Code:
 
@@ -76,15 +76,15 @@ template<typename T> void g(T x)
 
 void func(int) { std::puts("The call resolves to int"); }
 
-int main() 
+int main()
 {
     g(3.14);
 }
 ```
 
-Beim Kompilieren unter **/Zc:twoPhase-**, dieses Programm druckt "der Aufruf aufgelöst zu Int". In Konformitätsmodus unter **/ liberalen-**, dieses Programm druckt "der Aufruf aufgelöst, als" void "*", da die zweite Überladung der `func` ist nicht sichtbar, wenn der Compiler die Vorlage auftritt.
+Beim Kompilieren unter **/Zc:twoPhase-**, dieses Programm druckt "in ganzzahligen Typ löst der Aufruf auf". In Übereinstimmung mit Standards-Modus unter **/ PERMISSIVE--**, dieses Programm druckt "löst der Aufruf, Void *", da die zweite Überladung der `func` ist nicht sichtbar, wenn der Compiler die Vorlage erkennt.
 
-*Abhängige Namen*, Namen, die von einem Vorlagenparameter abhängig sind, haben Suchverhalten, der auch unter unterscheidet **/Zc:twoPhase-**. Abhängige Namen im Konformitätsmodus nicht zum Zeitpunkt der Definition der Vorlage gebunden. Stattdessen werden diese Namen gesucht, wenn die Vorlage instanziiert wird. Für Funktionsaufrufe mit einem Funktionsnamen der abhängigen ist der Name der Satz von Funktionen gebunden, die zum Zeitpunkt der Aufruf in der Vorlagendefinition wie oben angezeigt werden. Auf dem Zeitpunkt der Definition der Vorlage und der Punkt, in dem die Vorlage instanziiert wird, werden zusätzliche Überladungen aus einer argumentbezogenen Suche hinzugefügt. Die beiden Phasen des Zweiphasen-Suche werden die Suche von nicht abhängigen Namen zum Zeitpunkt der Definition der Vorlagenfunktion und die Suche nach abhängigen Namen zum Zeitpunkt der Vorlageninstanziierung. Klicken Sie unter **/Zc:twoPhase-**, der Compiler keine einer argumentbezogenen Suche getrennt vom normalen, nicht qualifizierte Suche (d. h. nicht Zweiphasen-Suche), damit die Ergebnisse der Auflösung von funktionsüberladungen unterscheiden können.
+*Abhängige Namen*, Namen, die von einem Vorlagenparameter abhängig sind aufweisen, der auch unter anderen ist das Suchverhalten **/Zc:twoPhase-**. In Übereinstimmung mit Standards-Modus werden abhängige Namen nicht zum Zeitpunkt der Definition von der Vorlage gebunden. Stattdessen werden diese Namen gesucht, wenn die Vorlage instanziiert wird. Für Funktionsaufrufe mit dem Funktionsnamen der abhängigen ist der Name der Satz von Funktionen gebunden, die zum Zeitpunkt des Aufrufs in der Vorlagendefinition wie oben angezeigt werden. Auf dem Zeitpunkt der Definition der Vorlage und dem Zeitpunkt der, in dem die Vorlage instanziiert wird, werden zusätzliche Überladungen von argumentbezogenen Suche hinzugefügt. Die beiden Phasen des Zweiphasen-Suche gibt die Suche nach nicht abhängigen Namen zum Zeitpunkt der Template-Definition und die Suche nach abhängigen Namen zum Zeitpunkt der Vorlageninstanziierung. Klicken Sie unter **/Zc:twoPhase-**, der Compiler keine argumentbezogenen Suche separat aus normalen, nicht qualifizierte Suche (d. h. es nicht zwei-Phasen-Suche), damit die Ergebnisse der Auflösung von funktionsüberladungen abweichen können.
 
 Hier ist ein weiteres Beispiel:
 
@@ -116,35 +116,35 @@ int main() {
 }
 ```
 
-Bei der Kompilierung ohne **/Zc:twoPhase-**, dies ausgibt
+Bei der Kompilierung ohne **/Zc:twoPhase-**, dies druckt
 
 ```Output
 func(long)
 NS::func(NS::S)
 ```
 
-Beim Kompilieren mit **/Zc:twoPhase-**, dies ausgibt
+Bei der Kompilierung mit **/Zc:twoPhase-**, dies druckt
 
 ```Output
 func(int)
 NS::func(NS::S)
 ```
 
-In Konformitätsmodus unter **/ liberalen-**, den Aufruf `tfunc(1729)` löst in der `void func(long)` überladen, nicht `void func(int)` überladen, wie unter **/Zc:twoPhase-**, da der nicht qualifizierte `func(int)` nach der Definition der Vorlage deklariert und nicht durch einer argumentbezogenen Suche gefunden wurden. Aber `void func(S)` ist beteiligt einer argumentbezogenen Suche, damit es an die Überladung, legen Sie für den Aufruf hinzugefügt wird `tfunc(s)` , obwohl sie nach der Vorlagenfunktion deklariert ist.
+In Übereinstimmung mit Standards-Modus unter **/ PERMISSIVE--**, den Aufruf `tfunc(1729)` löst in der `void func(long)` überladen, nicht `void func(int)` überladen auf **/Zc:twoPhase-**, da der nicht qualifizierte `func(int)` nach der Definition der Vorlage deklariert und nicht durch argumentbezogenen Suche gefunden wurden. Aber `void func(S)` ist beteiligt argumentbezogenen Suche, damit sie die Überladung, legen Sie für den Aufruf hinzugefügt wird `tfunc(s)` , obwohl sie nach der Vorlagenfunktion deklariert wurde.
 
-### <a name="update-your-code-for-two-phase-conformance"></a>Aktualisieren Sie den Code für Zweiphasen-Konformität
+### <a name="update-your-code-for-two-phase-conformance"></a>Aktualisieren Sie den Code für die Zweiphasen-Konformität
 
-Ältere Versionen des Compilers erfordern keine Schlüsselwörter `template` und `typename` überall im C++-Standard benötigt werden. Diese Schlüsselwörter sind in einigen Positionen erforderlich, um die Mehrdeutigkeit aufzulösen, wie der Compiler einen abhängigen Name während der ersten Phase der Suche analysieren soll. Zum Beispiel:
+Ältere Versionen des Compilers erfordern keine Schlüsselwörter `template` und `typename` überall auf der C++-Standard erfordert diese. Diese Schlüsselwörter werden in einige Positionen benötigt, um zu unterscheiden, wie der Compiler einen abhängigen Name während der ersten Phase der Suche analysieren soll. Zum Beispiel:
 
 `T::Foo<a || b>(c);`
 
-Ein übereinstimmenden Compiler analysiert `Foo` als Variable in den Bereich der `T`, d. h. dieser Code ist eine logische- oder einen Ausdruck mit `T::foo < a` wie der linke Operand und `b > (c)` als der Rechte Operand. Wenn Sie mit meinen `Foo` als Funktionsvorlage, müssen Sie angeben, dass dies durch Hinzufügen einer Vorlage ist die `template` Schlüsselwort:
+Ein konforme Compiler analysiert `Foo` als Variable in den Bereich der `T`, d. h. dieser Code ist eine logische- oder einen Ausdruck mit `T::foo < a` wie der linke Operand und `b > (c)` als der Rechte Operand. Wenn Sie mit meinen `Foo` als Funktionsvorlage, müssen Sie angeben, dass dies durch das Hinzufügen einer Vorlage ist die `template` Schlüsselwort:
 
 `T::template Foo<a || b>(c);`
 
-In Versionen vor Visual Studio 2017 Version 15.3 und wann **/Zc:twoPhase-** angegeben ist, wird der Compiler lässt dieser Code ohne die `template` Schlüsselwort und interpretiert ihn als Aufruf an eine Funktionsvorlage mit dem Argument `a || b`, da sie Vorlagen auf ein sehr eingeschränkter Weise analysiert. Der obige Code ist nicht in der ersten Phase überhaupt analysiert. In der zweiten Phase besteht genügend Kontext für die entsprechende `T::Foo` ist eine Vorlage anstatt einer Variablen, damit der Compiler nicht mithilfe des Schlüsselworts erzwingt.
+In Versionen vor Visual Studio 2017 Version 15.3 und wann **/Zc:twoPhase-** angegeben ist, wird der Compiler kann diesen Code ohne die `template` Schlüsselwort und interpretiert ihn als Aufruf an eine Funktionsvorlage, die mit einem Argument von `a || b`, da sie die Vorlagen in einer sehr begrenzten Weise analysiert. Der obige Code ist nicht in der ersten Phase überhaupt analysiert. In der zweiten Phase wird es genügend Kontext an, die Sie informieren `T::Foo` ist eine Variable, statt eine Vorlage, damit der Compiler die Verwendung des Schlüsselworts nicht erzwingt.
 
-Dieses Verhalten kann auch angezeigt werden, durch den Wegfall des Schlüsselworts `typename` vor dem Namen in den Funktionsrümpfen der Vorlage, Initialisierer Standardargumente und Noexcept-Argumente. Zum Beispiel:
+Dieses Verhalten kann auch anzeigen, indem das Schlüsselwort eliminieren `typename` vor dem Namen in der Vorlage funktionsrümpfe, Initialisierer, Standardargumente und Noexcept-Argumente. Zum Beispiel:
 
 ```cpp
 template<typename T>
@@ -154,9 +154,9 @@ typename T::TYPE func(typename T::TYPE*)
 }
 ```
 
-Wenn Sie nicht das Schlüsselwort verwenden `typename` im Hauptteil Funktion kompiliert diesen Code unter **/Zc:twoPhase-**, aber nicht unter **/ liberalen-**. Die `typename` Schlüsselwort ist erforderlich, um anzugeben, dass die `TYPE` richtet. Da der Text nicht unter analysiert wird **/Zc:twoPhase-**, der Compiler ab erfordern das Schlüsselwort. In **/ liberalen-** Konformitätsmodus, Code ohne die `typename` Schlüsselwort generiert Fehler. Migrieren von Code in Visual Studio 2017 Version 15.3 und darüber hinaus, fügen Sie der `typename` Schlüsselwort, in denen er fehlt.
+Wenn Sie nicht das Schlüsselwort verwenden `typename` im Hauptteil Funktion dieser Code kompiliert wird, klicken Sie unter **/Zc:twoPhase-**, aber nicht unter **/ PERMISSIVE--**. Die `typename` Schlüsselwort ist erforderlich, um anzugeben, dass die `TYPE` richtet. Da der Text nicht, klicken Sie unter analysiert wird **/Zc:twoPhase-**, den Compiler ist nicht erforderlich, das Schlüsselwort. In **/ PERMISSIVE--** Konformitätsmodus, Code ohne die `typename` Schlüsselwort generiert Fehler. Migrieren Ihres Codes zu Visual Studio 2017 Version 15.3 und höher, fügen Sie der `typename` Schlüsselwort, es nicht vorhanden ist.
 
-Ebenso sollten Sie dieses Codebeispiel:
+Ebenso sollten Sie in diesem Codebeispiel wird ein:
 
 ```cpp
 template<typename T>
@@ -166,17 +166,17 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 }
 ```
 
-Klicken Sie unter **/Zc:twoPhase-** und in älteren Compilern, erfordert der Compiler nur die `template` für Zeile 2-Schlüsselwort. Standardmäßig, und in Konformitätsmodus, erfordert der Compiler jetzt auch die `template` -Schlüsselwort in Zeile 4 gibt an, dass `T::X<T>` ist eine Vorlage. Suchen Sie nach dem Code, der dieses Schlüsselwort fehlt, und geben Sie an, um den Code, der dem Standard zu gestalten.
+Klicken Sie unter **/Zc:twoPhase-** und in älteren Compilern, erfordert der Compiler nur die `template` -Schlüsselwort in Zeile 2. Standardmäßig, und in Übereinstimmung mit Standards-Modus, erfordert der Compiler jetzt auch die `template` Schlüsselwort in Zeile 4 gibt an, dass `T::X<T>` ist eine Vorlage. Suchen Sie nach Code, der dieses Schlüsselwort nicht vorhanden ist, und geben Sie an, um den Code, der dem Standard entsprechen zu gestalten.
 
-Weitere Informationen über Konformitätsprobleme finden Sie unter [konformitätsverbesserungen in Visual Studio C++](../../cpp-conformance-improvements-2017.md) und [nicht standardmäßigem Verhalten](../../cpp/nonstandard-behavior.md).
+Weitere Informationen über Konformitätsprobleme finden Sie unter [C++-konformitätsverbesserungen in Visual Studio](../../cpp-conformance-improvements-2017.md) und [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Befehlszeile** Eigenschaftenseite.
 
-1. Ändern der **Zusatzoptionen** Eigenschaft einschließen **/Zc:twoPhase-** und wählen Sie dann **OK**.
+1. Ändern der **zusätzliche Optionen** Eigenschaft sollen **/Zc:twoPhase-** und wählen Sie dann **OK**.
 
 ## <a name="see-also"></a>Siehe auch
 

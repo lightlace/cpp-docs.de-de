@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02c4c537f1a420a096fbcd979580ff7b10076845
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 27a200ba94be8c4937342820fadf89e4225ba97d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106755"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719952"
 ---
 # <a name="timeput-class"></a>time_put-Klasse
 
@@ -45,10 +45,10 @@ class time_put : public locale::facet;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType*  
+*CharType*<br/>
 Der Typ, der innerhalb eines Programms verwendet wird, um Zeichen zu codieren.
 
-*OutputIterator*  
+*OutputIterator*<br/>
 Der Typ des Iterators, in den die Time-Put-Funktionen ihre Ausgabe schreiben.
 
 ## <a name="remarks"></a>Hinweise
@@ -108,19 +108,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parameter
 
-*next*  
+*next*<br/>
 Ein Ausgabeiterator, in den die Zeichensequenz für Zeit und Datum eingefügt werden soll.
 
-*"_Iosbase"*  
+*"_Iosbase"*<br/>
 Nicht verwendet.
 
-*_Pt*  
+*_Pt*<br/>
 Die Zeit- und Datumsinformationen, die ausgegeben werden.
 
-*_Fmt*  
+*_Fmt*<br/>
 Das Format der Ausgabe. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
 
-*Auf _Mod*  
+*Auf _Mod*<br/>
 Ein Modifizierer für das Format. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -171,28 +171,28 @@ iter_type put(iter_type next,
 
 ### <a name="parameters"></a>Parameter
 
-*next*  
+*next*<br/>
 Ein Ausgabeiterator, in den die Zeichensequenz für Zeit und Datum eingefügt werden soll.
 
-*"_Iosbase"*  
+*"_Iosbase"*<br/>
 Nicht verwendet.
 
-*_Fill*  
+*_Fill*<br/>
 Das Zeichen vom Typ `CharType` für Abstand verwendet.
 
-*_Pt*  
+*_Pt*<br/>
 Die Zeit- und Datumsinformationen, die ausgegeben werden.
 
-*_Fmt*  
+*_Fmt*<br/>
 Das Format der Ausgabe. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
 
-*Auf _Mod*  
+*Auf _Mod*<br/>
 Ein Modifizierer für das Format. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
 
-*Erste*  
+*Erste*<br/>
 Der Anfang der Formatierungszeichenfolge für die Ausgabe. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
 
-*last*  
+*last*<br/>
 Das Ende der Formatierungszeichenfolge für die Ausgabe. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
 
 ### <a name="return-value"></a>Rückgabewert

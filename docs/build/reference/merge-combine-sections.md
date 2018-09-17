@@ -1,5 +1,5 @@
 ---
-title: -MERGE (Abschnitte kombinieren) | Microsoft Docs
+title: -MERGE (Abschnitte kombinieren) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,39 +22,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ece36de793b17b8cc064ec3837ea481a1ce870a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 01768ffcfd647d3e05c0b96647d544e3d68e77d0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373474"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722662"
 ---
 # <a name="merge-combine-sections"></a>/MERGE (Abschnitte kombinieren)
-```  
-/MERGE:from=to  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Die Option/Merge kombiniert den ersten Abschnitt (*aus*) mit dem zweiten Abschnitt (*auf*), benennen die daraufhin angezeigte Abschnitt *auf*. Beispielsweise `/merge:.rdata=.text`.  
-  
- Wenn der zweite Abschnitt nicht vorhanden ist, benennt LINK im Abschnitt *aus* als *auf*.  
-  
- Der Merge-Option ist nützlich zum Erstellen von VxDs und überschreiben die vom Compiler generierten Abschnittsnamen.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
-  
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).  
-  
-2.  Klicken Sie auf die **Linker** Ordner.  
-  
-3.  Klicken Sie auf die **erweitert** Eigenschaftenseite.  
-  
-4.  Ändern der **Abschnitte zusammenfügen** Eigenschaft.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
-  
-1.  Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MergeSections%2A>.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
- [Linkeroptionen](../../build/reference/linker-options.md)
+
+```
+/MERGE:from=to
+```
+
+## <a name="remarks"></a>Hinweise
+
+Die Option "/ Merge" kombiniert den ersten Abschnitt (*aus*) mit dem zweiten Abschnitt (*zu*), den so entstehende Abschnitt Benennung *zu*. Beispielsweise `/merge:.rdata=.text`.
+
+Wenn der zweite Abschnitt nicht vorhanden ist, benennt der LINK im Abschnitt *aus* als *zu*.
+
+Die Option "/ Merge" eignet sich zum Erstellen von VxDs und überschreiben die vom Compiler generierter Abschnittsnamen.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
+
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+
+1. Klicken Sie auf die **Linker** Ordner.
+
+1. Klicken Sie auf die **erweitert** Eigenschaftenseite.
+
+1. Ändern der **Abschnitte zusammenfügen** Eigenschaft.
+
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
+
+1. Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MergeSections%2A>.
+
+## <a name="see-also"></a>Siehe auch
+
+[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
+[Linkeroptionen](../../build/reference/linker-options.md)

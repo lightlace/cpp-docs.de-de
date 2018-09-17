@@ -1,5 +1,5 @@
 ---
-title: Suchpfade für abhängige Dateien | Microsoft Docs
+title: Suchpfade für abhängige Dateien | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,24 +15,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 577fc7e44bfff35cf7efdcff20dc4cdca1c7001e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d1fd407f99abb98fb949b6d5bcc45b10c6ff9121
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380484"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706298"
 ---
 # <a name="search-paths-for-dependents"></a>Suchpfade für abhängige Dateien
-Jede abhängige Datei besitzt einen optionalen Suchpfad, der wie folgt angegeben:  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-{directory[;directory...]}dependent  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- NMAKE sucht eine abhängige Datei zuerst im aktuellen Verzeichnis, und klicken Sie dann in den Verzeichnissen in der angegebenen Reihenfolge aus. Makros kann einem Suchpfad ganz oder teilweise angeben. Schließen Sie Verzeichnisnamen in der geschweiften Klammern ({}); Trennen Sie mehrere Verzeichnisse mit einem Semikolon (;). Es sind keine Leerzeichen oder Tabstopps zulässig.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Abhängige Dateien](../build/dependents.md)
+
+Jedes abhängige hat einen optionalen Suchpfad, die wie folgt angegeben:
+
+## <a name="syntax"></a>Syntax
+
+```
+{directory[;directory...]}dependent
+```
+
+## <a name="remarks"></a>Hinweise
+
+NMAKE: Sucht ein abhängiges Element zunächst im aktuellen Verzeichnis, und klicken Sie dann in Verzeichnissen, in der angegebenen Reihenfolge aus. Ein Makro kann teilweise oder vollständig einen Suchpfad angeben. Schließen Sie Verzeichnisnamen in geschweifte Klammern ({}); Trennen Sie mehrere Verzeichnisse durch ein Semikolon (;). Es sind keine Leerzeichen oder Tabstopps zulässig.
+
+## <a name="see-also"></a>Siehe auch
+
+[Abhängige Dateien](../build/dependents.md)

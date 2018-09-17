@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc5f5c987f8e448490a0d337517d7a0699619849
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 4ea4a0c17422823f306942bc7d02514456bf8310
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540805"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712087"
 ---
 # <a name="tuple-class"></a>Tupelklasse
 
@@ -52,8 +52,8 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*TN*  
- Der Typ des N-ten Tupelelements.
+*TN*<br/>
+Der Typ des N-ten Tupelelements.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -154,11 +154,11 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parameter
 
-*AUFHEBEN*  
- Der Typ des N-ten kopierten Tupelelements.
+*AUFHEBEN*<br/>
+Der Typ des N-ten kopierten Tupelelements.
 
-*right*  
- Das Tupel, aus dem kopiert werden soll.
+*right*<br/>
+Das Tupel, aus dem kopiert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -263,11 +263,11 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parameter
 
-*AUFHEBEN*  
- Der Typ des N-ten kopierten Tupelelements.
+*AUFHEBEN*<br/>
+Der Typ des N-ten kopierten Tupelelements.
 
-*right*  
- Das Tupel, aus dem kopiert werden soll.
+*right*<br/>
+Das Tupel, aus dem kopiert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 

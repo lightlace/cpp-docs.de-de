@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9932f8814855213f133323f2102e0cacf1e69c8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a55623c28ca7114f43f208e5c660b9df38d1242b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196710"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701832"
 ---
 # <a name="cbutton-class"></a>CButton-Klasse
 Stellt die Funktionalität von Windows-Schaltflächensteuerelementen bereit.  
@@ -394,8 +394,8 @@ BOOL GetNote(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] *LpszNote*|Zeiger auf einen Puffer, die der Aufrufer für das zuordnen und Freigeben von zuständig ist. Wenn der zurückgegebene Wert TRUE ist, enthält der Puffer die Hinweis-Text, der den aktuellen Befehl Link-Steuerelement zugeordnet ist; Andernfalls ist der Puffer nicht geändert.|  
-|[in, out] *CchNote*|Ein Zeiger auf die Variable eine ganze Zahl ohne Vorzeichen.<br /><br /> Wenn diese Methode aufgerufen wird, wird die Variable enthält die Größe des Puffers gemäß der *LpszNote* Parameter.<br /><br /> Wenn diese Methode beendet wird, ist der zurückgegebene Wert "true" die Variable enthält die Größe des Hinweises mit den aktuellen Befehl Link-Steuerelement verknüpft ist. Wenn der Rückgabewert FALSE ist, enthält die Variable die Größe des Puffers erforderlich, um den Hinweis enthalten.|  
+|*lpszNote*|[out] Zeiger auf einen Puffer, die der Aufrufer für das zuordnen und Freigeben von zuständig ist. Wenn der zurückgegebene Wert TRUE ist, enthält der Puffer die Hinweis-Text, der den aktuellen Befehl Link-Steuerelement zugeordnet ist; Andernfalls ist der Puffer nicht geändert.|  
+|*cchNote*|[in, out] Ein Zeiger auf die Variable eine ganze Zahl ohne Vorzeichen.<br /><br /> Wenn diese Methode aufgerufen wird, wird die Variable enthält die Größe des Puffers gemäß der *LpszNote* Parameter.<br /><br /> Wenn diese Methode beendet wird, ist der zurückgegebene Wert "true" die Variable enthält die Größe des Hinweises mit den aktuellen Befehl Link-Steuerelement verknüpft ist. Wenn der Rückgabewert FALSE ist, enthält die Variable die Größe des Puffers erforderlich, um den Hinweis enthalten.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  In der ersten Überladung ist eine [CString](../../atl-mfc-shared/using-cstring.md) -Objekt, den dem aktuellen Befehl Link-Steuerelement zugeordneten Notiztext enthält.  
@@ -467,7 +467,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] *"pInfo"*|Zeiger auf eine [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) -Struktur, die Informationen über das aktuelle SplitButton-Steuerelement empfängt. Der Aufrufer ist verantwortlich für die Zuordnung von der Struktur.|  
+|*"pInfo"*|[out] Zeiger auf eine [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) -Struktur, die Informationen über das aktuelle SplitButton-Steuerelement empfängt. Der Aufrufer ist verantwortlich für die Zuordnung von der Struktur.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -488,7 +488,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] *pSize*|Zeiger auf eine [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) -Struktur, die Beschreibung eines Rechtecks empfängt.|  
+|*pSize*|[out] Zeiger auf eine [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) -Struktur, die Beschreibung eines Rechtecks empfängt.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -687,7 +687,7 @@ BOOL SetDropDownState(BOOL fDropDown);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *fDropDown*|True, um BST_DROPDOWNPUSHED Status festgelegt. andernfalls "false".|  
+|*fDropDown*|[in] True, um BST_DROPDOWNPUSHED Status festgelegt. andernfalls "false".|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -718,7 +718,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *fElevationRequired*|"True" Set `elevation required` Status; andernfalls "false".|  
+|*fElevationRequired*|[in] "True" Set `elevation required` Status; andernfalls "false".|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -790,7 +790,7 @@ BOOL SetNote(LPCTSTR lpszNote);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *LpszNote*|Zeiger auf eine Unicode-Zeichenfolge, die als Hinweis Text für die befehlslinksteuerelement festgelegt ist.|  
+|*lpszNote*|[in] Zeiger auf eine Unicode-Zeichenfolge, die als Hinweis Text für die befehlslinksteuerelement festgelegt ist.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -821,7 +821,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *ChGlyph*|Ein Zeichen, die das Symbol für die Verwendung als Dropdownpfeil für das Split-Schaltfläche angibt.|  
+|*chGlyph*|[in] Ein Zeichen, die das Symbol für die Verwendung als Dropdownpfeil für das Split-Schaltfläche angibt.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -844,7 +844,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *pSplitImageList*|Zeiger auf eine [CImageList](../../mfc/reference/cimagelist-class.md) Objekt, das das aktuelle SplitButton-Steuerelement zugewiesen.|  
+|*pSplitImageList*|[in] Zeiger auf eine [CImageList](../../mfc/reference/cimagelist-class.md) Objekt, das das aktuelle SplitButton-Steuerelement zugewiesen.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -865,7 +865,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *"pInfo"*|Zeiger auf eine [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) Struktur, die das aktuelle SplitButton-Steuerelement definiert.|  
+|*"pInfo"*|[in] Zeiger auf eine [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) Struktur, die das aktuelle SplitButton-Steuerelement definiert.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -896,7 +896,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *pSize*|Zeiger auf eine [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur, die ein umschließendes Rechteck beschreibt.|  
+|*pSize*|[in] Zeiger auf eine [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur, die ein umschließendes Rechteck beschreibt.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -929,7 +929,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *uSplitStyle*|Eine bitweise Kombination der Split-Button-Stile. Weitere Informationen finden Sie unter den `uSplitStyle` Mitglied der [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) Struktur.|  
+|*uSplitStyle*|[in] Eine bitweise Kombination der Split-Button-Stile. Weitere Informationen finden Sie unter den `uSplitStyle` Mitglied der [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) Struktur.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  

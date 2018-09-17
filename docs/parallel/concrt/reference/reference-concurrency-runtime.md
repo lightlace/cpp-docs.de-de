@@ -1,5 +1,5 @@
 ---
-title: Referenz (Concurrency Runtime) | Microsoft Docs
+title: Referenz (Concurrency Runtime) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -463,21 +463,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3caa4ed0cb4a14cea913d141a88d9f2dd079f9bb
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d06bac8aef674472b817817fde4191f1d655365e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693451"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723228"
 ---
 # <a name="reference-concurrency-runtime"></a>Referenz (Concurrency Runtime)
 Dieser Abschnitt enthält Referenzinformationen für die Concurrency Runtime.
-**Hinweis** C++ Standardprogrammiersprache ist die Verwendung von Bezeichnern, die mit einem Unterstrich (_) Implementierungen wie Bibliotheken zu beginnen. Verwenden Sie diese Namen nicht im Code. Die Eindeutigkeit des Verhaltens von Codeelementen mit Namen dieser Art kann nicht gewährleistet werden, und für zukünftige Versionen muss mit Änderungen gerechnet werden. Aus diesen Gründen werden solche Codeelemente in der Concurrency Runtime-Dokumentation nicht beschrieben.
+
+> [!Note]
+> Die C++-Sprachstandard reserviert die Verwendung von Bezeichnern, die mit einem Unterstrich (_) für Implementierungen wie Bibliotheken zu beginnen. Verwenden Sie diese Namen nicht im Code. Die Eindeutigkeit des Verhaltens von Codeelementen mit Namen dieser Art kann nicht gewährleistet werden, und für zukünftige Versionen muss mit Änderungen gerechnet werden. Aus diesen Gründen werden solche Codeelemente in der Dokumentation für die Concurrency Runtime weggelassen.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
-[Concurrency-Namespace](concurrency-namespace.md) Concurrency-Namespace stellt Klassen und Funktionen, mit denen Sie erhalten Zugriff auf die Concurrency Runtime, ein Framework zur parallelen Programmierung für C++. Weitere Informationen finden Sie unter [Concurrency Runtime](../concurrency-runtime.md).
 
-[Std-Namespace](std-namespace.md)
-[Stdx-Namespace](stdx-namespace.md)
+[Concurrency-Namespace](concurrency-namespace.md) Concurrency-Namespace stellt Klassen bereit, und Funktionen, mit denen Sie Zugriff auf die Concurrency Runtime, ein Framework zur parallelen Programmierung für C++. Weitere Informationen finden Sie unter [Concurrency Runtime](../concurrency-runtime.md).
 
+[Std-namespace](std-namespace.md)
 
+[Stdx-namespace](stdx-namespace.md)

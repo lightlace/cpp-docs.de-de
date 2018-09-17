@@ -1,5 +1,5 @@
 ---
-title: Zeitplan | Microsoft Docs
+title: Zeitplan | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d00db7daf5c2c9882c1d54ac054ee285de1fdac4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 32c05f2c4740e978d58540727067ea0d76d95871
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691832"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712152"
 ---
 # <a name="schedule"></a>schedule
 Gilt für die [für](../../../parallel/openmp/reference/for-openmp.md) Richtlinie.  
@@ -44,8 +44,8 @@ schedule(type[,size])
   
 -   `static`  
   
- `size` (optional)  
- Gibt die Größe der Iterationen. `size` eine ganze Zahl muss sein. Nicht gültig, wenn `type` ist `runtime`.  
+*size*<br/>
+(Optional) Gibt die Größe der Iterationen. `size` eine ganze Zahl muss sein. Nicht gültig, wenn `type` ist `runtime`.  
   
 ## <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [2.4.1 for-Konstrukt](../../../parallel/openmp/2-4-1-for-construct.md).  

@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e24997fa2eb6e6e5c3d8438b137e168c2f70b1f
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 7dfcf1839048f3c110bbca6754d1549161b63301
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034737"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716533"
 ---
 # <a name="arm64-exception-handling"></a>ARM64-Ausnahmebehandlung
 
@@ -129,7 +129,7 @@ Für Funktionen der Frame verkettet kann das fp-Lr-Paar an beliebiger Position i
         sub    sp,#framesz-72           // allocate the remaining local area
     ```
 
-    Nur r19 gespeichert:
+   Nur r19 gespeichert:
 
     ```asm
         sub    sp, sp, #16              // reg save area allocation*
@@ -636,5 +636,5 @@ Hinweis: EpilogStart Index [4] verweist, in die Mitte des Prolog-entladungscodes
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über die ARM64-ABI-Konventionen](arm64-windows-abi-conventions.md)  
-[ARM-Ausnahmebehandlung](../build/arm-exception-handling.md)  
+[Übersicht über die ARM64-ABI-Konventionen](arm64-windows-abi-conventions.md)<br/>
+[ARM-Ausnahmebehandlung](../build/arm-exception-handling.md)

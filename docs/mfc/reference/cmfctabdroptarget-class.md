@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2991135d7cbb7e2e9df66e871b5d047e69b93d16
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 717be77589e31292fe6adbb4920a704794979a57
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852967"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711632"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget-Klasse
 Stellt den Kommunikationsmechanismus zwischen einem Registerkarten-Steuerelement und die OLE-Bibliotheken bereit.  
@@ -100,10 +100,10 @@ virtual DROPEFFECT OnDragEnter(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *aufnehmen*|Nicht verwendet.|  
-|[in] *pDataObject*|Ein Zeiger auf das Objekt, das der Benutzer zieht.|  
-|[in] *DwKeyState*|Enthält den Status der Modifizierertasten. Eine Kombination aus einer beliebigen Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON.|  
-|[in] *zeigen*|Die Position des Cursors in Clientkoordinaten.|  
+|*Aufnehmen*|[in] Nicht verwendet.|  
+|*pDataObject*|[in] Ein Zeiger auf das Objekt, das der Benutzer zieht.|  
+|*dwKeyState*|[in] Enthält den Status der Modifizierertasten. Eine Kombination aus einer beliebigen Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON.|  
+|*Zeigen Sie*|[in] Die Position des Cursors in Clientkoordinaten.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Auswirkungen, die sich ergibt, wenn das ablegen, an dem vom angegebenen Speicherort geschieht *zeigen*. Sie können eine oder mehrere der folgenden sein:  
@@ -135,7 +135,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *aufnehmen*|Nicht verwendet.|  
+|*Aufnehmen*|[in] Nicht verwendet.|  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ruft die `CMFCBaseTabCtrl::OnDragLeave` Methode, um den Ziehvorgang entsteht durchzuführen.  
@@ -156,10 +156,10 @@ virtual DROPEFFECT OnDragOver(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *aufnehmen*|Nicht verwendet.|  
-|[in] *pDataObject*|Ein Zeiger auf das Objekt, das der Benutzer zieht.|  
-|[in] *DwKeyState*|Enthält den Status der Modifizierertasten. Eine Kombination aus einer beliebigen Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON.|  
-|[in] *zeigen*|Die Position des Mauszeigers in Clientkoordinaten.|  
+|*Aufnehmen*|[in] Nicht verwendet.|  
+|*pDataObject*|[in] Ein Zeiger auf das Objekt, das der Benutzer zieht.|  
+|*dwKeyState*|[in] Enthält den Status der Modifizierertasten. Eine Kombination aus einer beliebigen Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON.|  
+|*Zeigen Sie*|[in] Die Position des Mauszeigers in Clientkoordinaten.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Auswirkungen, die sich ergibt, wenn das ablegen, an dem vom angegebenen Speicherort geschieht *zeigen*. Sie können eine oder mehrere der folgenden sein:  
@@ -196,11 +196,11 @@ virtual DROPEFFECT OnDropEx(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *aufnehmen*|Nicht verwendet.|  
-|[in] *pDataObject*|Ein Zeiger auf das Objekt, das der Benutzer zieht.|  
-|[in] *-DropEffect-*|Der Standard-Drop-Vorgang.|  
-|[in] *Dropdownliste*|Nicht verwendet.|  
-|[in] *zeigen*|Die Position des Mauszeigers in Clientkoordinaten.|  
+|*Aufnehmen*|[in] Nicht verwendet.|  
+|*pDataObject*|[in] Ein Zeiger auf das Objekt, das der Benutzer zieht.|  
+|*-DropEffect-*|[in] Der Standard-Drop-Vorgang.|  
+|*Dropdownliste*|[in] Nicht verwendet.|  
+|*Zeigen Sie*|[in] Die Position des Mauszeigers in Clientkoordinaten.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der resultierende Drop-Effekt. Sie können eine oder mehrere der folgenden sein:  
@@ -232,7 +232,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *pOwner*|Das Registerkarten-Steuerelement als Ablageziel zu registrieren.|  
+|*pOwner*|[in] Das Registerkarten-Steuerelement als Ablageziel zu registrieren.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL ist, wenn die Registrierung erfolgreich war; andernfalls 0.  

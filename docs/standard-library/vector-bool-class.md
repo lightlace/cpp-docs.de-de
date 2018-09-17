@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5f0d38ebd24c38579f73bceea0fff50ab361638
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b158f6bedd2dba2d65f7b0778758eafe08e88851
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962779"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702909"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt;-Klasse
 
@@ -293,11 +293,11 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Parameter
 
-*Rechts*  
- Der Elementverweis, dessen Wert dem Bit zugewiesen werden soll.
+*Rechts*<br/>
+Der Elementverweis, dessen Wert dem Bit zugewiesen werden soll.
 
-*val*  
- Der boolesche Wert, der dem Bit zugewiesen werden soll.
+*val*<br/>
+Der boolesche Wert, der dem Bit zugewiesen werden soll.
 
 #### <a name="example"></a>Beispiel
 
@@ -382,11 +382,11 @@ static void swap(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*  
- Das Element, das mit ausgetauscht werden, die *rechts* Element.
+*Links*<br/>
+Das Element, das mit ausgetauscht werden, die *rechts* Element.
 
-*Rechts*  
- Das Element, das mit ausgetauscht werden, die *Links* Element.
+*Rechts*<br/>
+Das Element, das mit ausgetauscht werden, die *Links* Element.
 
 ### <a name="remarks"></a>Hinweise
 

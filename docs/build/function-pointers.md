@@ -1,5 +1,5 @@
 ---
-title: -Funktionszeiger | Microsoft Docs
+title: -Funktionszeiger | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57c61dc8599ece5020e854b045f9634c1d732a6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 96bca27f56122f677eb790e4fbc9140a27b01668
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367146"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703465"
 ---
 # <a name="function-pointers"></a>Funktionszeiger
-Funktionszeiger sind einfache Zeiger auf die Bezeichnung der jeweiligen Funktion. Es ist kein Inhaltsverzeichnis Anforderungen für Funktionszeiger.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Aufrufkonvention](../build/calling-convention.md)
+
+Funktionszeiger sind einfach Zeiger auf die Bezeichnung der jeweiligen Funktion. Es ist kein Inhalt (TOC)-Anforderungen für Funktionszeiger.
+
+## <a name="see-also"></a>Siehe auch
+
+[Aufrufkonvention](../build/calling-convention.md)

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38a624aacc302812865a785c537eb906a0489379
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 42f7eb1864c2839ecce88785dfaef8ab62d0b423
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207640"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705275"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton-Klasse
 Die `CSplitButton` Klasse stellt einen SplitButton-Steuerelement dar. Das Steuerelement mit einer unterteilten Schaltfläche führt ein Standardverhalten aus, wenn ein Benutzer auf den Hauptteil der Schaltfläche klickt, und zeigt ein Dropdownmenü an, wenn ein Benutzer auf den Dropdownpfeil der Schaltfläche klickt.  
@@ -101,10 +101,10 @@ virtual BOOL Create(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *DwStyle*|Eine bitweise Kombination (OR) von Formatvorlagen, die auf das Steuerelement angewendet werden. Weitere Informationen finden Sie unter [Button-Stile](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
-|[in] *Rect*|Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Position und Größe des Steuerelements enthält.|  
-|[in] *pParentWnd*|Ein nicht-Null-Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) -Objekt, das das übergeordnete Fenster des Steuerelements ist.|  
-|[in] *nID*|Die ID des Steuerelements.|  
+|*dwStyle*|[in] Eine bitweise Kombination (OR) von Formatvorlagen, die auf das Steuerelement angewendet werden. Weitere Informationen finden Sie unter [Button-Stile](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
+|*Rect*|[in] Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Position und Größe des Steuerelements enthält.|  
+|*pParentWnd*|[in] Ein nicht-Null-Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) -Objekt, das das übergeordnete Fenster des Steuerelements ist.|  
+|*nID*|[in] Die ID des Steuerelements.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -126,9 +126,9 @@ CSplitButton(CMenu* pMenu)
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *nMenuId*|Die Ressourcen-ID der Menüleiste.|  
-|[in] *nSubMenuId*|Die Ressourcen-ID eines Untermenüs darstellt.|  
-|[in] *pMenu*|Ein Zeiger auf eine [CMenu](../../mfc/reference/cmenu-class.md) Objekt, das ein Untermenü angibt. Die `CSplitButton` Objekt löscht die `CMenu` -Objekt und seine zugehörigen HMENU bei der `CSplitButton` Objekt den Gültigkeitsbereich verlässt.|  
+|*nMenuId*|[in] Die Ressourcen-ID der Menüleiste.|  
+|*nSubMenuId*|[in] Die Ressourcen-ID eines Untermenüs darstellt.|  
+|*pMenu*|[in] Ein Zeiger auf eine [CMenu](../../mfc/reference/cmenu-class.md) Objekt, das ein Untermenü angibt. Die `CSplitButton` Objekt löscht die `CMenu` -Objekt und seine zugehörigen HMENU bei der `CSplitButton` Objekt den Gültigkeitsbereich verlässt.|  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden der [CSplitButton::Create](#create) Methode erstellen ein Trennschaltflächen-Steuerelement, und fügen Sie ihn auf die `CSplitButton` Objekt.  
@@ -146,8 +146,8 @@ afx_msg void OnDropDown(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *pNMHDR*|Zeiger auf ein [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) -Struktur, die Informationen der [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) Benachrichtigung.|  
-|[out] *pResult*|(Nicht verwendet; es wird kein Wert zurückgegeben.) Rückgabewert von der [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) Benachrichtigung.|  
+|*pNMHDR*|[in] Zeiger auf ein [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) -Struktur, die Informationen der [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) Benachrichtigung.|  
+|*pResult*|[out] (Nicht verwendet; es wird kein Wert zurückgegeben.) Rückgabewert von der [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) Benachrichtigung.|  
   
 ### <a name="remarks"></a>Hinweise  
  Klickt der Benutzer auf die Dropdown-Pfeil auf einem SplitButton-Steuerelement, System eine BCN_DROPDOWN-Benachrichtigung sendet Nachrichten, die die `OnDropDown` verarbeitet. Allerdings die `CSplitButton` Objekt nicht weiter die BCN_DROPDOWN-Benachrichtigung, um das Steuerelement, das SplitButton-Steuerelement enthält. Daher kann nicht das enthaltende Steuerelement eine benutzerdefinierte Aktion als Reaktion auf die Benachrichtigung nicht unterstützt.  
@@ -178,9 +178,9 @@ void SetDropDownMenu(CMenu* pMenu);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *nMenuId*|Die Ressourcen-ID der Menüleiste.|  
-|[in] *nSubMenuId*|Die Ressourcen-ID eines Untermenüs darstellt.|  
-|[in] *pMenu*|Zeiger auf eine [CMenu](../../mfc/reference/cmenu-class.md) Objekt, das ein Untermenü angibt. Die `CSplitButton` Objekt löscht die `CMenu` -Objekt und seine zugehörigen HMENU bei der `CSplitButton` Objekt den Gültigkeitsbereich verlässt.|  
+|*nMenuId*|[in] Die Ressourcen-ID der Menüleiste.|  
+|*nSubMenuId*|[in] Die Ressourcen-ID eines Untermenüs darstellt.|  
+|*pMenu*|[in] Zeiger auf eine [CMenu](../../mfc/reference/cmenu-class.md) Objekt, das ein Untermenü angibt. Die `CSplitButton` Objekt löscht die `CMenu` -Objekt und seine zugehörigen HMENU bei der `CSplitButton` Objekt den Gültigkeitsbereich verlässt.|  
   
 ### <a name="remarks"></a>Hinweise  
  Die *nMenuId* Parameter identifiziert eine Menüleiste, das eine horizontale Liste von Menüleistenelementen ist. Die *nSubMenuId* -Parameter ist eine nullbasierte Indexnummer, die ein Untermenü, erfahren Sie, welche die Dropdown-Liste von Menüelementen, die jede Menüleistenelement zugeordnet ist. Eine typische Anwendung enthält beispielsweise ein Menü mit den Menüleistenelementen "File", "Bearbeiten" und "Help". Die "Datei" Menüleistenelement verfügt über ein Untermenü, das die Menüelemente enthält "Öffnen", "Schließen" und "Exit". Wenn der Dropdown-Pfeil des unterteilte Schaltfläche des Steuerelements geklickt wird, zeigt das Steuerelement im angegebene Untermenü, nicht in der Menüleiste aus.  

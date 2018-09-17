@@ -1,5 +1,5 @@
 ---
-title: Compilergesteuerte Linkoptionen | Microsoft Docs
+title: Compilergesteuerte Linkoptionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,37 +20,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d99a05b5f9c4d97fd42328a41ad3fe054ab42cd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ee952fe5152d98aa33c4ef7e98f8a2eb3ef077be
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371995"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726426"
 ---
 # <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
-CL-Compiler ruft automatisch LINK, es sei denn, Sie die Option/c angeben. CL stellt eine gewisse Kontrolle über den Linker über Befehlszeilenoptionen und Argumenten bereit. In der folgenden Tabelle werden die Funktionen in der Berechnungsliste, die verknüpfen beeinflussen, zusammengefasst.  
-  
-|CL-Spezifikation|CL-Aktion, die Verknüpfung wirkt sich auf|  
-|----------------------|---------------------------------|  
-|Eine beliebige Dateinamenerweiterung als c, .cxx, .cpp oder DEF|Übergibt einen Dateinamen als Eingabe an LINK|  
-|*FileName*DEF|/ DEF übergibt:*Filename*DEF|  
-|/ F*Anzahl*|Übergibt/Stack:*Anzahl*|  
-|/ Fd*Dateiname*|Übergibt/PDB:*Dateiname*|  
-|/ FE*Dateiname*|Übergibt/OUT:*Dateiname*|  
-|/ FM*Dateiname*|Übergibt/Map:*Dateiname*|  
-|/Gy|Erstellt Paketfunktionen (COMDATs); Aktiviert Funktionslevel-Linking|  
-|/LD|Übergibt die/DLL|  
-|/LDd|Übergibt die/DLL|  
-|/link|Übergibt den Rest der Befehlszeile an LINK|  
-|/ MD oder/MT|Wird einen Standard-Bibliotheksnamen in der OBJ-Datei|  
-|/ MDd oder/MTd|Platziert einen Standard-Bibliotheksnamen in der OBJ-Datei an. Definiert das Symbol **_DEBUG**|  
-|/nologo|/ Nologo übergibt|  
-|"/ Zd"|Übergibt "/ Debug"|  
-|/ Zi oder "/ Z7"|Übergibt "/ Debug"|  
-|/Zl|Lässt die Standard-Bibliotheksnamen aus der OBJ-Datei|  
-  
- Weitere Informationen finden Sie unter [Compileroptionen](../../build/reference/compiler-options.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
- [Linkeroptionen](../../build/reference/linker-options.md)
+
+Der CL-Compiler ruft automatisch LINK aus, es sei denn, Sie geben die Option. CL stellt eine gewisse Kontrolle über den Linker über Befehlszeilenoptionen und Argumente bereit. Die folgende Tabelle enthält die Funktionen in der Berechnungsliste, die Verknüpfung zu beeinflussen.
+
+|CL-Spezifikation|CL-Aktion, die Verknüpfung wirkt sich auf|
+|----------------------|---------------------------------|
+|Eine beliebige Dateinamenerweiterung als c, .cxx, cpp oder DEF|Übergibt einen Dateinamen als Eingabe für den LINK|
+|*FileName*DEF|Übergibt/DEF:*Filename*DEF|
+|/ F*Anzahl*|Übergibt/Stack:*Anzahl*|
+|/ Fd*Dateiname*|Übergibt der/PDB:*Dateiname*|
+|/ FE*Dateiname*|Übergibt/OUT:*Dateiname*|
+|/ FM*Dateiname*|Übergibt/Map:*Dateiname*|
+|/Gy|Erstellt von Paketfunktionen (COMDATs); Aktiviert Funktionslevel-linking.|
+|/LD|/ DLL übergeben|
+|/LDd|/ DLL übergeben|
+|/link|Übergibt den Rest der Befehlszeile Link|
+|/ MD oder/MT|Wird einen Standard-Bibliotheksnamen in der OBJ-Datei|
+|/ MDd "oder" / MTd|Platziert einen Standard-Bibliotheksnamen in der OBJ-Datei an. Definiert das Symbol **_DEBUG**|
+|/nologo|/ Nologo übergibt|
+|"/ Zd"|Übergibt "/ Debug"|
+|"/ Zi" oder "/ Z7"|Übergibt "/ Debug"|
+|/Zl|Lässt Standardbibliotheksname in OBJ-Datei|
+
+Weitere Informationen finden Sie unter [Compileroptionen](../../build/reference/compiler-options.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
+[Linkeroptionen](../../build/reference/linker-options.md)

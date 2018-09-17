@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 282d8bbd55bec8053961c709eb3733a65972b187
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 5c37e010caa6c7cfb44ddaf2f7dd1e28bbb5c291
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693112"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717703"
 ---
 # <a name="arm-assembler-directives"></a>ARM-Assemblyanweisungen
 
@@ -25,89 +25,113 @@ Der Microsoft-ARM-Assembler verwendet zum größten Teil der ARM-Assemblysprache
 
 ## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Microsoft-Implementierungen von ARM-Assemblyanweisungen
 
-`AREA`<br/>
-Der Microsoft-ARM-Assembler unterstützt die folgenden `AREA` Attribute: `ALIGN`, `CODE`, `CODEALIGN`, `DATA`, `NOINIT`, `READONLY`, `READWRITE`, `THUMB`, `ARM`.
+- BEREICH
 
-Alle außer `THUMB` und `ARM` funktioniert wie in der dokumentiert die [ARM Compiler Armasm Referenzhandbuch](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html).
+   Der Microsoft-ARM-Assembler unterstützt die folgenden `AREA` Attribute: `ALIGN`, `CODE`, `CODEALIGN`, `DATA`, `NOINIT`, `READONLY`, `READWRITE`, `THUMB`, `ARM`.
 
-In der Microsoft-ARM-Assembler `THUMB` gibt an, dass eine `CODE` Abschnitt Thumb-Code enthält, und ist die Standardeinstellung für `CODE` Abschnitte.  `ARM` Gibt an, dass im Abschnitt über ARM-Code enthält.
+   Alle außer `THUMB` und `ARM` funktioniert wie in der dokumentiert die [ARM Compiler Armasm Referenzhandbuch](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html).
 
-`ATTR`<br/>
-Wird nicht unterstützt.
+   In der Microsoft-ARM-Assembler `THUMB` gibt an, dass eine `CODE` Abschnitt Thumb-Code enthält, und ist die Standardeinstellung für `CODE` Abschnitte.  `ARM` Gibt an, dass im Abschnitt über ARM-Code enthält.
 
-`CODE16`<br/>
-Nicht unterstützt, da impliziert Pre-UAL-Thumb-Syntax, die der Microsoft-ARM-Assembler nicht zulässt.  Verwenden der `THUMB` stattdessen zusammen mit der Syntax für die Benutzerzugriffsprotokollierung die Richtlinie.
+- ATTR
 
-`COMMON`<br/>
-Eine Ausrichtung für den allgemeinen Bereich wird nicht unterstützt.
+   Wird nicht unterstützt.
 
-`DCDO`<br/>
-Wird nicht unterstützt.
+- CODE16
 
-`DN`, `QN`, `SN`<br/>
-Die Spezifikation eines Typs oder einen Bereich auf den Register-Alias wird nicht unterstützt.
+   Nicht unterstützt, da impliziert Pre-UAL-Thumb-Syntax, die der Microsoft-ARM-Assembler nicht zulässt.  Verwenden der `THUMB` stattdessen zusammen mit der Syntax für die Benutzerzugriffsprotokollierung die Richtlinie.
 
-`ENTRY`<br/>
-Wird nicht unterstützt.
+- ALLGEMEINE
 
-`EQU`<br/>
-Die Spezifikation eines Typs für die definiertes Symbol wird nicht unterstützt.
+   Eine Ausrichtung für den allgemeinen Bereich wird nicht unterstützt.
 
-`EXPORT` und `GLOBAL`
+- DCDO
 
-> **EXPORTIEREN Sie** <em>Sym</em>{**[**<em>Typ</em>**]**}
+   Wird nicht unterstützt.
 
-*SYM* ist das Symbol für die exportiert werden.  [*Typ*], sofern angegeben, kann es sich um `[DATA]` , um anzugeben, dass das Symbol auf Daten verweist oder `[FUNC]` , um anzugeben, dass das Symbol auf Code verweist.
+- `DN`, `QN`, `SN`
 
-`GLOBAL` ist ein Synonym für `EXPORT`.
+   Die Spezifikation eines Typs oder einen Bereich auf den Register-Alias wird nicht unterstützt.
 
-`EXPORTAS`<br/>
-Wird nicht unterstützt.
+- EINTRAG
 
-`FRAME`<br/>
-Wird nicht unterstützt.
+   Wird nicht unterstützt.
 
-`FUNCTION` und `PROC`<br/>
-Obwohl die Assembly-Syntax die Angabe eines benutzerdefinierten unterstützt Aufrufkonvention für Prozeduren durch die Register, die Aufrufer-speichern und die aufgerufenen speichern, Auflisten der Microsoft-ARM-Assembler die Syntax akzeptiert ignoriert jedoch die Register-Listen.  Die Debuginformationen, die von der Assembler erstellt wird, unterstützt nur die Standardaufrufkonvention.
+- EQU
 
-`IMPORT` und `EXTERN`
+   Die Spezifikation eines Typs für die definiertes Symbol wird nicht unterstützt.
 
-> **IMPORT** *Sym*{**, SCHWACHE** *Alias*{**, Typ** *t*}}
+- `EXPORT` und `GLOBAL`
 
-*SYM* ist der Name des Symbols, das importiert werden.
+   Gibt an, Exporte, die mit der folgenden Syntax:
 
-Wenn `WEAK` *Alias* angegeben ist, bedeutet dies, dass *Sym* eine schwache externe Adresse ist. Wenn zum Zeitpunkt der Verknüpfung keine Definition gefunden wird, alle Verweise darauf binden Sie stattdessen an *Alias*.
+   > **EXPORTIEREN Sie**|**GLOBAL** <em>Sym</em>{**[**<em>Typ</em>**]**}
 
-Wenn `TYPE` *t* angegeben ist, klicken Sie dann *t* gibt an, wie der Linker zum Auflösen versuchen *Sym*.  Diese Werte für *t* sind möglich:<br/>
-1 – Führen Sie eine Bibliothek Suche nach nicht *Sym*<br/>
-2 – führen Sie eine Bibliothek Suche nach *Sym*<br/>
-3 –*Sym* ist ein Alias für *Alias* (Standard)
+   *SYM* ist das Symbol für die exportiert werden.  [*Typ*], sofern angegeben, kann es sich um `[DATA]` , um anzugeben, dass das Symbol auf Daten verweist oder `[FUNC]` , um anzugeben, dass das Symbol auf Code verweist. `GLOBAL` ist ein Synonym für `EXPORT`.
 
-`EXTERN` ist ein Synonym für `IMPORT`, außer dass *Sym* ist nur importiert, wenn Verweise darauf in der aktuellen Assembly vorhanden sind.
+- EXPORTAS
 
-`MACRO`<br/>
-Die Verwendung von eine Variable für den Code der Bedingung eines Makros wird nicht unterstützt. Standardwerte für die Makro-Parameter werden nicht unterstützt.
+   Wird nicht unterstützt.
 
-`NOFP`<br/>
-Wird nicht unterstützt.
+- FRAME
 
-`OPT`, `TTL`, `SUBT`<br/>
-Nicht unterstützt, da der Microsoft-ARM-Assembler keine Angebote erzeugt werden.
+   Wird nicht unterstützt.
 
-`PRESERVE8`<br/>
-Wird nicht unterstützt.
+- `FUNCTION` und `PROC`
 
-`RELOC`<br/>
-`RELOC n` können Sie nur eine Anweisung oder eine Data Definition-Anweisung folgen. Es gibt keine "Anonym"Symbol", die verschoben werden kann.
+   Obwohl die Assembly-Syntax die Angabe eines benutzerdefinierten unterstützt Aufrufkonvention für Prozeduren durch die Register, die Aufrufer-speichern und die aufgerufenen speichern, Auflisten der Microsoft-ARM-Assembler die Syntax akzeptiert ignoriert jedoch die Register-Listen.  Die Debuginformationen, die von der Assembler erstellt wird, unterstützt nur die Standardaufrufkonvention.
 
-`REQUIRE`<br/>
-Wird nicht unterstützt.
+- `IMPORT` und `EXTERN`
 
-`REQUIRE8`<br/>
-Wird nicht unterstützt.
+   Gibt an, Importe, die mit der folgenden Syntax:
 
-`THUMBX`<br/>
-Nicht unterstützt, da der Microsoft-ARM-Assembler nicht den Thumb-2ee zurück-Anweisungssatz unterstützt.
+   > **IMPORT**|**"extern"** *Sym*{**, SCHWACHE** *Alias*{**, Typ** *t*}}
+
+   *SYM* ist der Name des Symbols, das importiert werden.
+
+   Wenn `WEAK` *Alias* angegeben ist, bedeutet dies, dass *Sym* eine schwache externe Adresse ist. Wenn zum Zeitpunkt der Verknüpfung keine Definition gefunden wird, alle Verweise darauf binden Sie stattdessen an *Alias*.
+
+   Wenn `TYPE` *t* angegeben ist, klicken Sie dann *t* gibt an, wie der Linker zum Auflösen versuchen *Sym*.  Diese Werte für *t* sind möglich:
+
+   |Wert|Beschreibung|
+   |-|-|
+   |1|Führen Sie eine Bibliothek Suche nach nicht *Sym*|
+   |2|Führen Sie eine Bibliothek Suche nach *Sym*|
+   |3|*SYM* ist ein Alias für *Alias* (Standard)|
+
+   `EXTERN` ist ein Synonym für `IMPORT`, außer dass *Sym* ist nur importiert, wenn Verweise darauf in der aktuellen Assembly vorhanden sind.
+
+- MACRO
+
+   Die Verwendung von eine Variable für den Code der Bedingung eines Makros wird nicht unterstützt. Standardwerte für die Makro-Parameter werden nicht unterstützt.
+
+- NOFP
+
+   Wird nicht unterstützt.
+
+- `OPT`, `TTL`, `SUBT`
+
+   Nicht unterstützt, da der Microsoft-ARM-Assembler keine Angebote erzeugt werden.
+
+- PRESERVE8
+
+   Wird nicht unterstützt.
+
+- UMSETZUNG
+
+   `RELOC n` können Sie nur eine Anweisung oder eine Data Definition-Anweisung folgen. Es gibt keine "Anonym"Symbol", die verschoben werden kann.
+
+- ERFORDERN
+
+   Wird nicht unterstützt.
+
+- REQUIRE8
+
+   Wird nicht unterstützt.
+
+- THUMBX
+
+   Nicht unterstützt, da der Microsoft-ARM-Assembler nicht den Thumb-2ee zurück-Anweisungssatz unterstützt.
 
 ## <a name="see-also"></a>Siehe auch
 

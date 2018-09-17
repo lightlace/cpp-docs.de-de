@@ -1,5 +1,5 @@
 ---
-title: -BINDEN VON | Microsoft Docs
+title: -BINDUNG | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,24 +21,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b77c778017dc78235948e8d23db136c1f63ab12d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a47004ce41d6bae3d91a81c4a61a712bc31dfbdb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372430"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725893"
 ---
 # <a name="bind"></a>/BIND
-```  
-/BIND[:PATH=path]  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Option wird die Adressen der Einstiegspunkte in die importieren Local Address Table für eine ausführbare Datei oder DLL an. Verwenden Sie diese Option, um die Ladezeit eines Programms zu reduzieren.  
-  
- Geben Sie des Programms ausführbare Datei und -DLLs in den *Dateien* Argument in der EDITBIN-Befehlszeile. Das optionale *Pfad*  /BIND Argument gibt den Speicherort der DLLs, die von den angegebenen Dateien verwendet. Trennen Sie mehrere Verzeichnisse mit einem Semikolon (**;**). Wenn *Pfad* nicht angegeben wird, EDITBIN durchsucht, die in der PATH-Umgebungsvariablen angegebenen Verzeichnisse. Wenn *Pfad* angegeben wird, EDITBIN ignoriert die PATH-Umgebungsvariable.  
-  
- Standardmäßig legt das Ladeprogramm die Adressen der Einstiegspunkte, beim Laden eines Programms. Dieser Vorgang dauert lange variiert, je nach der Anzahl der DLLs und die Anzahl der verschiedenen Punkten im Programm verwiesen wird. Wenn ein Programm mit/BIND geändert wurde und die Basisadressen für die ausführbare Datei und die DLLs nicht in Konflikt mit DLLs, die bereits geladen sind, muss das Betriebssystem nicht diese Adressen festgelegt. In einer Situation, in dem die Dateien fälschlicherweise basieren, wird das Betriebssystem verschiebt die DLLs des Programms und berechnet die Einstiegspunkt Adressen, die zur Ladezeit des Programms hinzugefügt.  
-  
-## <a name="see-also"></a>Siehe auch  
- [EDITBIN-Optionen](../../build/reference/editbin-options.md)
+
+```
+/BIND[:PATH=path]
+```
+
+## <a name="remarks"></a>Hinweise
+
+Diese Option wird die Adressen der Einstiegspunkte in die Importadresstabelle für eine ausführbare Datei oder DLL an. Verwenden Sie diese Option, um die Ladezeit eines Programms zu reduzieren.
+
+Geben Sie die ausführbare Datei des Programms und die-DLLs in den *Dateien* Argument in der EDITBIN-Befehlszeile. Der optionale *Pfad*  /BIND Argument gibt den Speicherort der DLLs, die von den angegebenen Dateien verwendet. Trennen Sie mehrere Verzeichnisse durch ein Semikolon (**;**). Wenn *Pfad* nicht angegeben ist, EDITBIN durchsucht, die in der PATH-Umgebungsvariablen angegebenen Verzeichnisse. Wenn *Pfad* angegeben ist, EDITBIN ignoriert der PATH-Variablen.
+
+Standardmäßig legt das Ladeprogramm die Adressen von Einstiegspunkten, beim Laden eines Programms. Die Zeitspanne, die dieser Vorgang dauert hängt, von der Anzahl der DLLs und die Anzahl von Einstiegspunkten, die im Programm verwiesen wird. Wenn ein Programm mit/BIND geändert wurde, und die Basisadressen für die ausführbare Datei und die DLLs nicht in Konflikt mit DLLs, die bereits geladen sind, muss das Betriebssystem nicht diese Adressen festlegen. In einer Situation, in dem die Dateien nicht ordnungsgemäß basieren, das Betriebssystem die DLLs des Programms verschiebt und berechnet die Einstiegspunkt Adressen, die zur Ladezeit des Programms hinzugefügt.
+
+## <a name="see-also"></a>Siehe auch
+
+[EDITBIN-Optionen](../../build/reference/editbin-options.md)

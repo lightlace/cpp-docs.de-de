@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a1c3e55f6045b0096ef614e1d3b4b054db60265
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 51970f99a05b587bcdbccc5d24ad21b036d87f74
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202394"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710813"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -274,17 +274,17 @@ void AddCommandControl(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nCommandControlID*  
-Die ID der Befehl-Steuerelement.
+*nCommandControlID*<br/>
+[in] Die ID der Befehl-Steuerelement.
 
-[in] *StrCaption*  
-Die Zeichenfolge, die die `CTaskDialog` zeigt dem Benutzer an. Verwenden Sie diese Zeichenfolge, um den Zweck des Befehls zu erläutern.
+*strCaption*<br/>
+[in] Die Zeichenfolge, die die `CTaskDialog` zeigt dem Benutzer an. Verwenden Sie diese Zeichenfolge, um den Zweck des Befehls zu erläutern.
 
-[in] *bAktiviert*  
-Ein boolescher Parameter, der angibt, ob die Schaltfläche "neue" aktiviert oder deaktiviert ist.
+*bAktiviert*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Schaltfläche "neue" aktiviert oder deaktiviert ist.
 
-[in] *bRequiresElevation*  
-Ein boolescher Parameter, der angibt, ob ein Befehl erhöhte Rechte erforderlich sind.
+*bRequiresElevation*<br/>
+[in] Ein boolescher Parameter, der angibt, ob ein Befehl erhöhte Rechte erforderlich sind.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -309,14 +309,14 @@ void CTaskDialog::AddRadioButton(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nRadioButtonID*  
-Die ID des Optionsfelds.
+*nRadioButtonID*<br/>
+[in] Die ID des Optionsfelds.
 
-[in] *StrCaption*  
-Die Zeichenfolge, die die `CTaskDialog` wird neben das Optionsfeld "angezeigt.
+*strCaption*<br/>
+[in] Die Zeichenfolge, die die `CTaskDialog` wird neben das Optionsfeld "angezeigt.
 
-[in] *bAktiviert*  
-Ein boolescher Parameter, der angibt, ob das Optionsfeld aktiviert ist.
+*bAktiviert*<br/>
+[in] Ein boolescher Parameter, der angibt, ob das Optionsfeld aktiviert ist.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -339,8 +339,8 @@ void ClickCommandControl(int nCommandControlID) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nCommandControlID*  
-Die Befehls-ID des Steuerelements klicken.
+*nCommandControlID*<br/>
+[in] Die Befehls-ID des Steuerelements klicken.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -357,8 +357,8 @@ void ClickRadioButton(int nRadioButtonID) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nRadioButtonID*  
-Die ID des Optionsfelds auf.
+*nRadioButtonID*<br/>
+[in] Die ID des Optionsfelds auf.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -391,29 +391,29 @@ CTaskDialog(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *StrContent*  
-Die Zeichenfolge, die für den Inhalt des verwenden die `CTaskDialog`.
+*strContent*<br/>
+[in] Die Zeichenfolge, die für den Inhalt des verwenden die `CTaskDialog`.
 
-[in] *StrMainInstruction*  
-Anweisungen von der `CTaskDialog`.
+*strMainInstruction*<br/>
+[in] Anweisungen von der `CTaskDialog`.
 
-[in] *StrTitle*  
-Der Titel des der `CTaskDialog`.
+*strTitle*<br/>
+[in] Der Titel des der `CTaskDialog`.
 
-[in] *nCommonButtons*  
-Eine Maske der allgemeinen Schaltflächen, um das Hinzufügen der `CTaskDialog`.
+*nCommonButtons*<br/>
+[in] Eine Maske der allgemeinen Schaltflächen, um das Hinzufügen der `CTaskDialog`.
 
-[in] *nTaskDialogOptions*  
-Der Satz von Optionen für die Verwendung der `CTaskDialog`.
+*nTaskDialogOptions*<br/>
+[in] Der Satz von Optionen für die Verwendung der `CTaskDialog`.
 
-[in] *StrFooter*  
-Die Zeichenfolge, die als die Fußzeile verwendet werden soll.
+*strFooter*<br/>
+[in] Die Zeichenfolge, die als die Fußzeile verwendet werden soll.
 
-[in] *nIDCommandControlsFirst*  
-Die Zeichenfolgen-ID des ersten Befehls.
+*nIDCommandControlsFirst*<br/>
+[in] Die Zeichenfolgen-ID des ersten Befehls.
 
-[in] *nIDCommandControlsLast*  
-Die Zeichenfolgen-ID, der dem letzten Befehl werden soll.
+*nIDCommandControlsLast*<br/>
+[in] Die Zeichenfolgen-ID, der dem letzten Befehl werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -437,8 +437,8 @@ INT_PTR DoModal (HWND hParent = ::GetActiveWindow());
 
 ### <a name="parameters"></a>Parameter
 
-[in] *hParent*  
-Das übergeordnete Fenster für die `CTaskDialog`.
+*hParent*<br/>
+[in] Das übergeordnete Fenster für die `CTaskDialog`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -482,8 +482,8 @@ int GetCommonButtonFlag(int nButtonId) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nButtonId*  
-Der standardmäßige Windows-Schaltfläche-Wert.
+*nButtonId*<br/>
+[in] Der standardmäßige Windows-Schaltfläche-Wert.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -499,8 +499,8 @@ int GetCommonButtonId(int nFlag);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nFlag*  
-Der allgemeine Schaltflächentyp zugeordnet der `CTaskDialog` Klasse.
+*nFlag*<br/>
+[in] Der allgemeine Schaltflächentyp zugeordnet der `CTaskDialog` Klasse.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -592,8 +592,8 @@ BOOL IsCommandControlEnabled(int nCommandControlID) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nCommandControlID*  
-Die ID des Befehls Schaltflächen-Steuerelement oder eine Schaltfläche zum Testen.
+*nCommandControlID*<br/>
+[in] Die ID des Befehls Schaltflächen-Steuerelement oder eine Schaltfläche zum Testen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -619,8 +619,8 @@ BOOL IsRadioButtonEnabled(int nRadioButtonID) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nRadioButtonID*  
-Die ID des Optionsfelds, um zu testen.
+*nRadioButtonID*<br/>
+[in] Die ID des Optionsfelds, um zu testen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -666,11 +666,11 @@ void LoadCommandControls(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nIDCommandControlsFirst*  
-Die Zeichenfolgen-ID des ersten Befehls.
+*nIDCommandControlsFirst*<br/>
+[in] Die Zeichenfolgen-ID des ersten Befehls.
 
-[in] *nIDCommandControlsLast*  
-Die Zeichenfolgen-ID, der dem letzten Befehl werden soll.
+*nIDCommandControlsLast*<br/>
+[in] Die Zeichenfolgen-ID, der dem letzten Befehl werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -694,11 +694,11 @@ void LoadRadioButtons(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nIDRadioButtonsFirst*  
-Die Zeichenfolgen-ID, der das erste Optionsfeld.
+*nIDRadioButtonsFirst*<br/>
+[in] Die Zeichenfolgen-ID, der das erste Optionsfeld.
 
-[in] *nIDRadioButtonsLast*  
-Die Zeichenfolgen-ID des letzten Optionsfelds.
+*nIDRadioButtonsLast*<br/>
+[in] Die Zeichenfolgen-ID des letzten Optionsfelds.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -721,8 +721,8 @@ void NavigateTo(CTaskDialog& oTaskDialog) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *oTaskDialog*  
-Die `CTaskDialog` , die den Fokus erhält.
+*oTaskDialog*<br/>
+[in] Die `CTaskDialog` , die den Fokus erhält.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -738,8 +738,8 @@ virtual HRESULT OnCommandControlClick(int nCommandControlID);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nCommandControlID*  
-Die ID des Befehls Button-Steuerelements, die der Benutzer ausgewählt.
+*nCommandControlID*<br/>
+[in] Die ID des Befehls Button-Steuerelements, die der Benutzer ausgewählt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -791,8 +791,8 @@ virtual HRESULT OnExpandButtonClicked(BOOL bExpanded);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *bExpanded*  
-Ein Wert ungleich Null gibt an, dass die zusätzliche Informationen angezeigt werden; 0 gibt an, dass die zusätzliche Informationen ausgeblendet ist.
+*bExpanded*<br/>
+[in] Ein Wert ungleich Null gibt an, dass die zusätzliche Informationen angezeigt werden; 0 gibt an, dass die zusätzliche Informationen ausgeblendet ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -828,8 +828,8 @@ virtual HRESULT OnHyperlinkClick(const CString& strHref);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *StrHref*  
-Die Zeichenfolge, die den Link darstellt.
+*strHref*<br/>
+[in] Die Zeichenfolge, die den Link darstellt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -883,8 +883,8 @@ virtual HRESULT OnRadioButtonClick(int nRadioButtonID);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nRadioButtonID*  
-Die ID der das Optionsfeld-Steuerelement, das der Benutzer geklickt hat.
+*nRadioButtonID*<br/>
+[in] Die ID der das Optionsfeld-Steuerelement, das der Benutzer geklickt hat.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -904,8 +904,8 @@ virtual HRESULT OnTimer(long lTime);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *lTime*  
-Zeit in Millisekunden seit dem `CTaskDialog` erstellt wurde oder der Zeitgeber zurückgesetzt wurde.
+*lTime*<br/>
+[in] Zeit in Millisekunden seit dem `CTaskDialog` erstellt wurde oder der Zeitgeber zurückgesetzt wurde.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -925,8 +925,8 @@ virtual HRESULT OnVerificationCheckboxClick(BOOL bChecked);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *bChecked*  
-TRUE gibt an, dass das Kontrollkästchen für die Überprüfung aktiviert ist; FALSE gibt an, dass es nicht ist.
+*bChecked*<br/>
+[in] TRUE gibt an, dass das Kontrollkästchen für die Überprüfung aktiviert ist; FALSE gibt an, dass es nicht ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -973,14 +973,14 @@ void SetCommandControlOptions(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nCommandControlID*  
-Die ID des Steuerelements zu aktualisieren.
+*nCommandControlID*<br/>
+[in] Die ID des Steuerelements zu aktualisieren.
 
-[in] *bAktiviert*  
-Ein boolescher Parameter, der angibt, ob der angegebene Befehl Schaltflächen-Steuerelement aktiviert oder deaktiviert ist.
+*bAktiviert*<br/>
+[in] Ein boolescher Parameter, der angibt, ob der angegebene Befehl Schaltflächen-Steuerelement aktiviert oder deaktiviert ist.
 
-[in] *bRequiresElevation*  
-Ein boolescher Parameter, der angibt, ob das Schaltflächen-Steuerelement des angegebenen Befehl erhöhte Rechte erforderlich sind.
+*bRequiresElevation*<br/>
+[in] Ein boolescher Parameter, der angibt, ob das Schaltflächen-Steuerelement des angegebenen Befehl erhöhte Rechte erforderlich sind.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1002,11 +1002,11 @@ void SetCommonButtonOptions(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nDisabledButtonMask*  
-Eine Maske für die allgemeinen Schaltflächen zu deaktivieren.
+*nDisabledButtonMask*<br/>
+[in] Eine Maske für die allgemeinen Schaltflächen zu deaktivieren.
 
-[in] *nElevationButtonMask*  
-Eine Maske für die allgemeinen Schaltflächen, die erhöhte Rechte erfordern.
+*nElevationButtonMask*<br/>
+[in] Eine Maske für die allgemeinen Schaltflächen, die erhöhte Rechte erfordern.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1033,14 +1033,14 @@ void SetCommonButtons(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nButtonMask*  
-Eine Maske der Schaltflächen zum Hinzufügen der `CTaskDialog`.
+*nButtonMask*<br/>
+[in] Eine Maske der Schaltflächen zum Hinzufügen der `CTaskDialog`.
 
-[in] *nDisabledButtonMask*  
-Eine Maske der Schaltflächen, um Sie zu deaktivieren.
+*nDisabledButtonMask*<br/>
+[in] Eine Maske der Schaltflächen, um Sie zu deaktivieren.
 
-[in] *nElevationButtonMask*  
-Eine Maske der Schaltflächen, die erhöhte Rechte erfordern.
+*nElevationButtonMask*<br/>
+[in] Eine Maske der Schaltflächen, die erhöhte Rechte erfordern.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1066,8 +1066,8 @@ void SetContent(const CString& strContent);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *StrContent*  
-Die Zeichenfolge, die für den Benutzer anzuzeigen.
+*strContent*<br/>
+[in] Die Zeichenfolge, die für den Benutzer anzuzeigen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1087,8 +1087,8 @@ void SetDefaultCommandControl(int nCommandControlID);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nCommandControlID*  
-Die ID des Schaltflächen-Steuerelement der Standardprojekt.
+*nCommandControlID*<br/>
+[in] Die ID des Schaltflächen-Steuerelement der Standardprojekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1110,8 +1110,8 @@ void SetDefaultRadioButton(int nRadioButtonID);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nRadioButtonID*  
-Die ID des Optionsfelds Standardprojekt.
+*nRadioButtonID*<br/>
+[in] Die ID des Optionsfelds Standardprojekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1133,8 +1133,8 @@ void SetDialogWidth(int nWidth = 0);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nWidth*  
-Die Breite des Dialogfelds, in Pixel.
+*nWidth*<br/>
+[in] Die Breite des Dialogfelds, in Pixel.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1159,14 +1159,14 @@ void SetExpansionArea(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *StrExpandedInformation*  
-Die Zeichenfolge, die die `CTaskDialog` im Hauptteil des Dialogfelds angezeigt wird, klickt der Benutzer die Schaltfläche "Erweiterung".
+*strExpandedInformation*<br/>
+[in] Die Zeichenfolge, die die `CTaskDialog` im Hauptteil des Dialogfelds angezeigt wird, klickt der Benutzer die Schaltfläche "Erweiterung".
 
-[in] *StrCollapsedLabel*  
-Die Zeichenfolge, die die `CTaskDialog` neben der Schaltfläche "Expansion" zeigt an, wenn der erweiterte Bereich reduziert wird.
+*strCollapsedLabel*<br/>
+[in] Die Zeichenfolge, die die `CTaskDialog` neben der Schaltfläche "Expansion" zeigt an, wenn der erweiterte Bereich reduziert wird.
 
-[in] *StrExpandedLabel*  
-Die Zeichenfolge, die die `CTaskDialog` neben der Schaltfläche "Expansion" zeigt an, wenn der erweiterte Bereich angezeigt wird.
+*strExpandedLabel*<br/>
+[in] Die Zeichenfolge, die die `CTaskDialog` neben der Schaltfläche "Expansion" zeigt an, wenn der erweiterte Bereich angezeigt wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1189,11 +1189,11 @@ void SetFooterIcon(LPCWSTR lpszFooterIcon);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *hFooterIcon*  
-Das Symbol "Neu", für die `CTaskDialog`.
+*hFooterIcon*<br/>
+[in] Das Symbol "Neu", für die `CTaskDialog`.
 
-[in] *LpszFooterIcon*  
-Das Symbol "Neu", für die `CTaskDialog`.
+*lpszFooterIcon*<br/>
+[in] Das Symbol "Neu", für die `CTaskDialog`.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1217,8 +1217,8 @@ void SetFooterText(const CString& strFooterText);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *StrFooterText*  
-Der neue Text für die Fußzeile.
+*strFooterText*<br/>
+[in] Der neue Text für die Fußzeile.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1239,11 +1239,11 @@ void SetMainIcon(LPCWSTR lpszMainIcon);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *hMainIcon*  
-Das Symbol "Neu".
+*hMainIcon*<br/>
+[in] Das Symbol "Neu".
 
-[in] *LpszMainIcon*  
-Das Symbol "Neu".
+*lpszMainIcon*<br/>
+[in] Das Symbol "Neu".
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1265,8 +1265,8 @@ void SetMainInstruction(const CString& strInstructions);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *StrInstructions*  
-Die neue Haupt-Anweisung.
+*strInstructions*<br/>
+[in] Die neue Haupt-Anweisung.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1286,8 +1286,8 @@ void SetOptions(int nOptionFlag);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nOptionFlag*  
-Der Satz von Flags für die Verwendung der `CTaskDialog`.
+*nOptionFlag*<br/>
+[in] Der Satz von Flags für die Verwendung der `CTaskDialog`.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1330,11 +1330,11 @@ void SetProgressBarMarquee(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *bAktiviert*  
-True, um die Marquee-Leiste zu aktivieren. "False" zum Deaktivieren der Marquee-Leiste, und entfernen Sie sie aus der `CTaskDialog`.
+*bAktiviert*<br/>
+[in] True, um die Marquee-Leiste zu aktivieren. "False" zum Deaktivieren der Marquee-Leiste, und entfernen Sie sie aus der `CTaskDialog`.
 
-[in] *nMarqueeSpeed*  
-Eine ganze Zahl, die die Geschwindigkeit der Marquee-Leiste angibt.
+*nMarqueeSpeed*<br/>
+[in] Eine ganze Zahl, die die Geschwindigkeit der Marquee-Leiste angibt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1358,8 +1358,8 @@ void SetProgressBarPosition(int nProgressPos);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nProgressPos*  
-Die Position der Statusanzeige.
+*nProgressPos*<br/>
+[in] Die Position der Statusanzeige.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1381,11 +1381,11 @@ void SetProgressBarRange(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nRangeMin*  
-Die untere Grenze der Statusanzeige.
+*nRangeMin*<br/>
+[in] Die untere Grenze der Statusanzeige.
 
-[in] *nRangeMax*  
-Die obere Grenze der Statusanzeige.
+*nRangeMax*<br/>
+[in] Die obere Grenze der Statusanzeige.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1409,8 +1409,8 @@ void SetProgressBarState(int nState = PBST_NORMAL);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nState*  
-Der Zustand der Statusanzeige. Finden Sie im Abschnitt "Hinweise" für die möglichen Werte.
+*nState*<br/>
+[in] Der Zustand der Statusanzeige. Finden Sie im Abschnitt "Hinweise" für die möglichen Werte.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1442,11 +1442,11 @@ void SetRadioButtonOptions(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nRadioButtonID*  
-Die ID der das Optionsfeld-Steuerelement.
+*nRadioButtonID*<br/>
+[in] Die ID der das Optionsfeld-Steuerelement.
 
-[in] *bAktiviert*  
-True, um das Optionsfeld zu aktivieren. So deaktivieren Sie das Optionsfeld wird false ZURÜCKGEGEBEN.
+*bAktiviert*<br/>
+[in] True, um das Optionsfeld zu aktivieren. So deaktivieren Sie das Optionsfeld wird false ZURÜCKGEGEBEN.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1466,8 +1466,8 @@ void SetVerificationCheckbox(BOOL bChecked);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *bChecked*  
-Wert true haben das Kontrollkästchen für die Überprüfung ausgewählt, wenn die `CTaskDialog` wird angezeigt. "False", damit Sie das Kontrollkästchen für die Überprüfung nicht ausgewählt, wenn die `CTaskDialog` wird angezeigt.
+*bChecked*<br/>
+[in] Wert true haben das Kontrollkästchen für die Überprüfung ausgewählt, wenn die `CTaskDialog` wird angezeigt. "False", damit Sie das Kontrollkästchen für die Überprüfung nicht ausgewählt, wenn die `CTaskDialog` wird angezeigt.
 
 ### <a name="example"></a>Beispiel
 
@@ -1483,8 +1483,8 @@ void SetVerificationCheckboxText(CString& strVerificationText);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *StrVerificationText*  
-Der Text, den neben dem Kontrollkästchen für die Überprüfung dieser Methode wird angezeigt.
+*strVerificationText*<br/>
+[in] Der Text, den neben dem Kontrollkästchen für die Überprüfung dieser Methode wird angezeigt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1504,8 +1504,8 @@ void SetWindowTitle(CString& strWindowTitle);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *StrWindowTitle*  
-Den neuen Titel für die `CTaskDialog`.
+*strWindowTitle*<br/>
+[in] Den neuen Titel für die `CTaskDialog`.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1531,29 +1531,29 @@ static INT_PTR ShowDialog(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *StrContent*  
-Die Zeichenfolge, die für den Inhalt des verwenden die `CTaskDialog`.
+*strContent*<br/>
+[in] Die Zeichenfolge, die für den Inhalt des verwenden die `CTaskDialog`.
 
-[in] *StrMainInstruction*  
-Anweisungen von der `CTaskDialog`.
+*strMainInstruction*<br/>
+[in] Anweisungen von der `CTaskDialog`.
 
-[in] *StrTitle*  
-Der Titel des der `CTaskDialog`.
+*strTitle*<br/>
+[in] Der Titel des der `CTaskDialog`.
 
-[in] *nIDCommandControlsFirst*  
-Die Zeichenfolgen-ID des ersten Befehls.
+*nIDCommandControlsFirst*<br/>
+[in] Die Zeichenfolgen-ID des ersten Befehls.
 
-[in] *nIDCommandControlsLast*  
-Die Zeichenfolgen-ID, der dem letzten Befehl werden soll.
+*nIDCommandControlsLast*<br/>
+[in] Die Zeichenfolgen-ID, der dem letzten Befehl werden soll.
 
-[in] *nCommonButtons*  
-Eine Maske der Schaltflächen zum Hinzufügen der `CTaskDialog`.
+*nCommonButtons*<br/>
+[in] Eine Maske der Schaltflächen zum Hinzufügen der `CTaskDialog`.
 
-[in] *nTaskDialogOptions*  
-Der Satz von Optionen für die Verwendung der `CTaskDialog`.
+*nTaskDialogOptions*<br/>
+[in] Der Satz von Optionen für die Verwendung der `CTaskDialog`.
 
-[in] *StrFooter*  
-Die Zeichenfolge, die als die Fußzeile verwendet werden soll.
+*strFooter*<br/>
+[in] Die Zeichenfolge, die als die Fußzeile verwendet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1589,20 +1589,20 @@ HRESULT TaskDialogCallback(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Hwnd*  
-Ein Handle für die `m_hWnd` -Struktur für die `CTaskDialog`.
+*HWND*<br/>
+[in] Ein Handle für die `m_hWnd` -Struktur für die `CTaskDialog`.
 
-[in] *uNotification*  
-Der Benachrichtigungscode, der angibt, die generierte Nachricht.
+*uNotification*<br/>
+[in] Der Benachrichtigungscode, der angibt, die generierte Nachricht.
 
-[in] *wParam-Parameter*  
-Weitere Informationen zur Meldung.
+*wParam-Parameter*<br/>
+[in] Weitere Informationen zur Meldung.
 
-[in] *lParam*  
-Weitere Informationen zur Meldung.
+*lParam*<br/>
+[in] Weitere Informationen zur Meldung.
 
-[in] *DwRefData*  
-Ein Zeiger auf die `CTaskDialog` -Objekt, das die Rückrufnachricht gilt.
+*dwRefData*<br/>
+[in] Ein Zeiger auf die `CTaskDialog` -Objekt, das die Rückrufnachricht gilt.
 
 ### <a name="return-value"></a>Rückgabewert
 

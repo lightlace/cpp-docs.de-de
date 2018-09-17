@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6793cbb120b44456a880a47ffd114c346662376
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a3aee777cf7d003beb2d1f76d57bf029d358aba6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208884"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726790"
 ---
 # <a name="application-information-and-management"></a>Anwendungsinformationen und Anwendungsverwaltung
 Wenn Sie eine Anwendung schreiben, erstellen Sie eine einzelne [CWinApp](../../mfc/reference/cwinapp-class.md)-abgeleitetes Objekt. In einigen Fällen sollten Sie zum Abrufen von Informationen über dieses Objekt außerhalb der `CWinApp`-abgeleitetes Objekt. Oder benötigen Sie möglicherweise Zugriff auf andere globale "Manager"-Objekte.
@@ -406,8 +406,8 @@ Bestimmt, ob das jeweilige Fenster ein erweitertes Rahmenobjekt ist.
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );  
 ```
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Ein Zeiger auf ein Objekt, das von `CWnd`abgeleitet ist.  
+*Aufnehmen*<br/>
+[in] Ein Zeiger auf ein Objekt, das von abgeleitet ist `CWnd`.  
    
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das angegebene Fenster ein erweitertes rahmenobjekt ist; andernfalls "false".  
@@ -442,8 +442,8 @@ Bestimmt, ob das angegebene Fenster ein Symbolleistenobjekt.
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);  
 ```
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Ein Zeiger auf ein Objekt, das von `CWnd`abgeleitet ist.  
+*Aufnehmen*<br/>
+[in] Ein Zeiger auf ein Objekt, das von abgeleitet ist `CWnd`.  
    
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das angegebene Fenster ein Symbolleistenobjekt. andernfalls "false".  
@@ -636,8 +636,8 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- TRUE gibt an, dass die Informationen in der Registrierung auf den HKCU-Knoten geleitet wird; FALSE gibt an, dass die Anwendung Informationen in der Registrierung auf den Standardknoten schreibt. Der Standardknoten ist **HKEY_CLASSES_ROOT** ( **HKCR**).  
+*bAktivieren*<br/>
+[in] TRUE gibt an, dass die Informationen in der Registrierung auf den HKCU-Knoten geleitet wird; FALSE gibt an, dass die Anwendung Informationen in der Registrierung auf den Standardknoten schreibt. Der Standardknoten ist **HKEY_CLASSES_ROOT** ( **HKCR**).  
   
 ### <a name="remarks"></a>Hinweise  
 

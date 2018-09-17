@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7b21651bdab6bf2e4603a8fa012480a6201e34b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: db5c1ee0a381d45ce951c627d5f59bfb6eb97ea3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336217"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724827"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager-Klasse
 Eine Ebene zwischen abgeleiteten Erscheinungsbild-Manager und der Windows-Design-API.  
@@ -136,25 +136,25 @@ virtual BOOL DrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger auf einen Gerätekontext  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext  
   
- [in] *Rect*  
- Das umschließende Rechteck des Kontrollkästchens.  
+*Rect*<br/>
+[in] Das umschließende Rechteck des Kontrollkästchens.  
   
- [in] *bHighlighted*  
- Gibt an, ob das Kontrollkästchen markiert ist.  
+*bHighlighted*<br/>
+[in] Gibt an, ob das Kontrollkästchen markiert ist.  
   
- [in] *nState*  
- 0 für deaktiviert, 1 für Normal aktiviert,  
+*nState*<br/>
+[in] 0 für deaktiviert, 1 für Normal aktiviert,  
   
  2 für gemischte Normal.  
   
- [in] *bAktiviert*  
- Gibt an, ob das Kontrollkästchen aktiviert ist.  
+*bAktiviert*<br/>
+[in] Gibt an, ob das Kontrollkästchen aktiviert ist.  
   
- [in] *bPressed*  
- Gibt an, ob das Kontrollkästchen geklickt wird.  
+*bPressed*<br/>
+[in] Gibt an, ob das Kontrollkästchen geklickt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Design-API aktiviert ist. andernfalls "false".  
@@ -181,20 +181,20 @@ virtual BOOL DrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Umschließende Rechteck des Rahmen des Kombinationsfelds.  
+*Rect*<br/>
+[in] Umschließende Rechteck des Rahmen des Kombinationsfelds.  
   
- [in] *bDeaktiviert*  
- Gibt an, ob der Rahmen des Kombinationsfelds deaktiviert ist.  
+*bDeaktiviert*<br/>
+[in] Gibt an, ob der Rahmen des Kombinationsfelds deaktiviert ist.  
   
- [in] *bIsDropped*  
- Gibt an, ob der Rahmen des Kombinationsfelds nach unten gelöscht wird.  
+*bIsDropped*<br/>
+[in] Gibt an, ob der Rahmen des Kombinationsfelds nach unten gelöscht wird.  
   
- [in] *bIsHighlighted*  
- Gibt an, ob der Rahmen des Kombinationsfelds markiert wird.  
+*bIsHighlighted*<br/>
+[in] Gibt an, ob der Rahmen des Kombinationsfelds markiert wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Design-API aktiviert ist. andernfalls "false".  
@@ -215,11 +215,11 @@ virtual BOOL DrawComboDropButton(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *pDC*|Ein Zeiger zu einem Gerätekontext.|  
-|[in] *Rect*|Das umschließende Rechteck von der Dropdown-kombinationsfeldschaltfläche.|  
-|[in] *bDeaktiviert*|Gibt an, ob der Dropdown-kombinationsfeldschaltfläche deaktiviert ist.|  
-|[in] *bIsDropped*|Gibt an, ob der Dropdown-kombinationsfeldschaltfläche, nach unten gelöscht wird.|  
-|[in] *bIsHighlighted*|Gibt an, ob der Dropdown-kombinationsfeldschaltfläche hervorgehoben ist.|  
+|*pDC*|[in] Ein Zeiger auf einen Gerätekontext.|  
+|*Rect*|[in] Das umschließende Rechteck von der Dropdown-kombinationsfeldschaltfläche.|  
+|*bDeaktiviert*|[in] Gibt an, ob der Dropdown-kombinationsfeldschaltfläche deaktiviert ist.|  
+|*bIsDropped*|[in] Gibt an, ob der Dropdown-kombinationsfeldschaltfläche, nach unten gelöscht wird.|  
+|*bIsHighlighted*|[in] Gibt an, ob der Dropdown-kombinationsfeldschaltfläche hervorgehoben ist.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Design-API aktiviert ist. andernfalls "false".  
@@ -236,17 +236,17 @@ virtual BOOL DrawPushButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Das umschließende Rechteck von der Schaltfläche.  
+*Rect*<br/>
+[in] Das umschließende Rechteck von der Schaltfläche.  
   
- [in] *pButton*  
- Ein Zeiger auf die [CMFCButton-Klasse](../../mfc/reference/cmfcbutton-class.md) Objekt, das gezeichnet werden soll.  
+*pButton*<br/>
+[in] Ein Zeiger auf die [CMFCButton-Klasse](../../mfc/reference/cmfcbutton-class.md) Objekt, das gezeichnet werden soll.  
   
- [in] *UiState*  
- Ignoriert. Der Status stammt aus *pButton*.  
+*uiState*<br/>
+[in] Ignoriert. Der Status stammt aus *pButton*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Design-API aktiviert ist. andernfalls "false".  
@@ -265,23 +265,23 @@ virtual BOOL DrawRadioButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Das umschließende Rechteck des Optionsfelds.  
+*Rect*<br/>
+[in] Das umschließende Rechteck des Optionsfelds.  
   
- [in] *bHighlighted*  
- Gibt an, ob das Optionsfeld "hervorgehoben ist.  
+*bHighlighted*<br/>
+[in] Gibt an, ob das Optionsfeld "hervorgehoben ist.  
   
- [in] *bChecked*  
- Gibt an, ob das Optionsfeld aktiviert ist.  
+*bChecked*<br/>
+[in] Gibt an, ob das Optionsfeld aktiviert ist.  
   
- [in] *bAktiviert*  
- Gibt an, ob das Optionsfeld aktiviert ist.  
+*bAktiviert*<br/>
+[in] Gibt an, ob das Optionsfeld aktiviert ist.  
   
- [in] *bPressed*  
- Gibt an, ob das Optionsfeld gedrückt wird.  
+*bPressed*<br/>
+[in] Gibt an, ob das Optionsfeld gedrückt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Design-API aktiviert ist. andernfalls "false".  
@@ -303,32 +303,32 @@ virtual BOOL DrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pStatusBar*  
- Ein Zeiger auf die Statusleiste. Dieser Wert wird ignoriert.  
+*pStatusBar*<br/>
+[in] Ein Zeiger auf die Statusleiste. Dieser Wert wird ignoriert.  
   
- [in] *RectProgress*  
- Das umschließende Rechteck der Statusanzeige in *pDC* Koordinaten.  
+*rectProgress*<br/>
+[in] Das umschließende Rechteck der Statusanzeige in *pDC* Koordinaten.  
   
- [in] *nProgressTotal*  
- Der gesamte Statuswert.  
+*nProgressTotal*<br/>
+[in] Der gesamte Statuswert.  
   
- [in] *nProgressCurr*  
- Der aktuelle Status-Wert.  
+*nProgressCurr*<br/>
+[in] Der aktuelle Status-Wert.  
   
- [in] *ClrBar*  
- Die Startfarbe. `CMFCBaseVisualManager` ignoriert diese. Abgeleitete Klassen können sie für Farbverläufe verwenden.  
+*clrBar*<br/>
+[in] Die Startfarbe. `CMFCBaseVisualManager` ignoriert diese. Abgeleitete Klassen können sie für Farbverläufe verwenden.  
   
- [in] *ClrProgressBarDest*  
- Die Endfarbe. `CMFCBaseVisualManager` ignoriert diese. Abgeleitete Klassen können sie für Farbverläufe verwenden.  
+*clrProgressBarDest*<br/>
+[in] Die Endfarbe. `CMFCBaseVisualManager` ignoriert diese. Abgeleitete Klassen können sie für Farbverläufe verwenden.  
   
- [in] *ClrProgressText*  
- Textfarbe des Status. `CMFCBaseVisualManager` ignoriert diese. Die Textfarbe wird definiert, indem `afxGlobalData.clrBtnText`.  
+*clrProgressText*<br/>
+[in] Textfarbe des Status. `CMFCBaseVisualManager` ignoriert diese. Die Textfarbe wird definiert, indem `afxGlobalData.clrBtnText`.  
   
- [in] *bProgressText*  
- Gibt an, ob der Text angezeigt werden soll.  
+*bProgressText*<br/>
+[in] Gibt an, ob der Text angezeigt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Design-API aktiviert ist. andernfalls "false".  
@@ -344,14 +344,14 @@ virtual void FillReBarPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pBar*  
- Ein Zeiger auf einen Bereich, dessen Hintergrund gezeichnet werden soll.  
+*pBar*<br/>
+[in] Ein Zeiger auf einen Bereich, dessen Hintergrund gezeichnet werden soll.  
   
- [in] *RectClient*  
- Das umschließende Rechteck des Bereichs, der gefüllt werden soll.  
+*rectClient*<br/>
+[in] Das umschließende Rechteck des Bereichs, der gefüllt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Design-API aktiviert ist. andernfalls "false".  

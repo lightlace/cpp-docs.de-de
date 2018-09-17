@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e47310a93a3901f072330a57619c2655aefb7ff5
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: fd8fa524d0c41d437575a61ff4e4456fd9933404
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691509"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725308"
 ---
 # <a name="path-class"></a>path-Klasse
 
@@ -638,7 +638,7 @@ Für `template<class InIt> path(InIt first, InIt last, const locale& loc)` ist `
 
 ## <a name="preferred_separator"></a> Path::preferred_separator
 
-Das konstante Objekt gibt je nach Betriebssystem des Hosts das bevorzugte Zeichen zum Trennen von Pfadkomponenten zurück. 
+Das konstante Objekt gibt je nach Betriebssystem des Hosts das bevorzugte Zeichen zum Trennen von Pfadkomponenten zurück.
 
 ```cpp
 #if _WIN32_C_LIB
@@ -654,7 +654,7 @@ Beachten Sie, dass es in den meisten Kontexten unter Windows gleichermaßen zul�
 
 ## <a name="relative_path"></a> Path:: RELATIVE_PATH
 
-Gibt die relative Pfadkomponente von `myname`. 
+Gibt die relative Pfadkomponente von `myname`.
 
 ```cpp
 path relative_path() const;
@@ -674,7 +674,7 @@ path& remove_filename();
 
 ## <a name="replace_extension"></a> Path:: replace_extension
 
-Ersetzt die Erweiterung der `myname`. 
+Ersetzt die Erweiterung der `myname`.
 
 ```cpp
 path& replace_extension(const path& newext = path());
@@ -715,7 +715,7 @@ return (*this);
 
 ## <a name="root_directory"></a> Path:: root_directory
 
-Gibt die stammverzeichniskomponente von `myname`. 
+Gibt die stammverzeichniskomponente von `myname`.
 
 ```cpp
 path root_directory() const;
@@ -727,7 +727,7 @@ Die Komponente kann leer sein.
 
 ## <a name="root_name"></a> Path:: root_name
 
-Gibt die stammnamenkomponente von `myname`. 
+Gibt die stammnamenkomponente von `myname`.
 
 ```cpp
 path root_name() const;

@@ -1,5 +1,5 @@
 ---
-title: BSCMAKE-Exitcodes | Microsoft Docs
+title: BSCMAKE-Exitcodes | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 022fc0e2bcb73e8aad00fd3cb74eb534409384c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fbb5b5f9e61cab7abdd1ba9a8594176680e95f77
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369227"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720862"
 ---
 # <a name="bscmake-exit-codes"></a>BSCMAKE-Exitcodes
-BSCMAKE gibt einen Exitcode (auch als einen Rückgabecode oder Fehlercode bezeichnet) auf dem Betriebssystem oder das aufrufende Programm zurück.  
-  
-|Code|Bedeutung|  
-|----------|-------------|  
-|0|Kein Fehler|  
-|1|Fehler in der Befehlszeile|  
-|4|Schwerwiegender Fehler während des Builds|  
-  
-## <a name="see-also"></a>Siehe auch  
- [BSCMAKE-Referenz](../../build/reference/bscmake-reference.md)
+
+BSCMAKE gibt einen Exitcode (wird auch als Rückgabecode oder Fehlercode bezeichnet) auf dem Betriebssystem oder das aufrufende Programm zurück.
+
+|Code|Bedeutung|
+|----------|-------------|
+|0|Kein Fehler|
+|1|Fehler in der Befehlszeile|
+|4|Schwerwiegender Fehler während des Buildvorgangs|
+
+## <a name="see-also"></a>Siehe auch
+
+[BSCMAKE-Referenz](../../build/reference/bscmake-reference.md)

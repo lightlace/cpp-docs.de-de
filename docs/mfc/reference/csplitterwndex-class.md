@@ -1,5 +1,5 @@
 ---
-title: CSplitterWndEx Klasse | Microsoft Docs
+title: CSplitterWndEx-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ae4a24424acc4385927e0f7c99735bd50a6d472
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: a2b7abb9cbc3f75c2b4f50f87a1bfdd818e6a3f8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121649"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707342"
 ---
 # <a name="csplitterwndex-class"></a>CSplitterWndEx-Klasse
 
@@ -50,15 +50,15 @@ class CSplitterWndEx : public CSplitterWnd
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Wird aufgerufen, durch das Framework ein unterteiltes Fenster gezeichnet werden soll. (Überschreibt [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|  
+|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Wird aufgerufen, durch das Framework zum Zeichnen eines unterteilten Fensters. (Überschreibt [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|  
   
 ## <a name="remarks"></a>Hinweise  
- Überschreiben Sie die `OnDrawSplitter` Methode, um die Darstellung der Grafikkomponenten eines unterteilten Fensters anpassen.  
+ Überschreiben der `OnDrawSplitter` Methode, um die Darstellung der grafischen Komponenten eines unterteilten Fensters anpassen.  
   
- Die `CSplitterWndEx` Klasse dient zusammen mit den [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), und [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) -Methoden, die sind durch einen visuellen Manager implementiert. Um einen visuellen Manager zum Zeichnen einer unterteiltes Fenster in Ihrer Anwendung zu verursachen, ersetzen Sie die Deklarationen von der `CSplitterWnd` -Klasse mit der `CSplitterWndEx` Klasse. Für Anwendungen der Frame-Fenster ist die Fensterklasse Splitter in CMainFrame-Klasse deklariert, die in "MainFrm.h" befindet. Ein Beispiel finden Sie die `OutlookDemo` im Verzeichnis "Samples" Sample.  
+ Die `CSplitterWndEx` -Klasse dient zusammen mit den [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), und [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) -Methoden, die sind durch einen visuellen Manager implementiert. Um einen visuellen Manager zum Zeichnen ein Teilungsfenster in Ihrer Anwendung zu verursachen, ersetzen Sie die Deklarationen der `CSplitterWnd` -Klasse mit der `CSplitterWndEx` Klasse. Für Anwendungen der Frame-Fenster ist die Fensterklasse des Splitters in der CMainFrame-Klasse deklariert, die in "MainFrm.h" befindet. Ein Beispiel finden Sie unter den `OutlookDemo` Beispiel im Verzeichnis "Samples".  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [CObject](cobject-class.md)  
+ [Von CObject](cobject-class.md)  
   
  [CCmdTarget](ccmdtarget-class.md)  
   
@@ -70,7 +70,7 @@ class CSplitterWndEx : public CSplitterWnd
  **Header:** afxsplitterwndex.h  
   
 ##  <a name="ondrawsplitter"></a>  CSplitterWndEx::OnDrawSplitter  
- Wird aufgerufen, durch das Framework ein unterteiltes Fenster gezeichnet werden soll.  
+ Wird aufgerufen, durch das Framework zum Zeichnen eines unterteilten Fensters.  
   
 ```  
 virtual void OnDrawSplitter(  
@@ -81,14 +81,14 @@ virtual void OnDrawSplitter(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger auf den Gerätekontext. Wenn dieser Parameter NULL ist, zeichnet das Framework des aktiven Fensters.  
+*pDC*<br/>
+[in] Zeiger auf den Gerätekontext. Wenn dieser Parameter NULL ist, zeichnet das Framework des aktiven Fensters.  
   
- [in] *%nbenachrichtigungen zu*  
- Eines der `CSplitterWnd::ESplitType` Enumerationswerte, der angibt, der Splitter Fensterelement gezeichnet werden soll. Gültige Werte sind `splitBox`, `splitBar`, `splitIntersection` und `splitBorder`.  
+*nType*<br/>
+[in] Eines der `CSplitterWnd::ESplitType` Enumerationswerte, der angibt, das Splitter-Fenster-Element zu zeichnen. Gültige Werte sind `splitBox`, `splitBar`, `splitIntersection` und `splitBorder`.  
   
- [in] *Rect*  
- Ein umschließendes Rechteck, das angibt, die Abmessungen und Position der angegebenen Splitter Fensterelement gezeichnet werden soll.  
+*Rect*<br/>
+[in] Ein umgebendes Rechteck, das die Abmessungen und Position Zeichnen des Elements der angegebenen Splitter Fenster angibt.  
   
 ### <a name="remarks"></a>Hinweise  
   

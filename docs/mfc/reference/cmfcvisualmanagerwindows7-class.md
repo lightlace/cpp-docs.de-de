@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58772f3690a68dc3a0d22c2db863fc7ad4904a1c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c17a9b6970f612c31ba9491ca2e3483b4a3fa37b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539439"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720550"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7-Klasse
 Die `CMFCVisualManagerWindows7` ermöglicht es einer Anwendung die Darstellung einer Windows 7-Anwendung.  
@@ -149,17 +149,17 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pEdit*  
- Ein Zeiger auf das Steuerelement zum Bearbeiten. Dieser Wert darf nicht NULL sein.  
+*pEdit*<br/>
+[in] Ein Zeiger auf das Steuerelement zum Bearbeiten. Dieser Wert darf nicht NULL sein.  
   
- [out] *bIsHighlighted*  
- Gibt zurück, ob das Menübandfeld hervorgehoben ist.  
+*bIsHighlighted*<br/>
+[out] Gibt zurück, ob das Menübandfeld hervorgehoben ist.  
   
- [out] *bIsPaneHighlighted*  
- Gibt true zurück, wenn das Menüband, die im Bereich enthält *pEdit* wird hervorgehoben.  
+*bIsPaneHighlighted*<br/>
+[out] Gibt true zurück, wenn das Menüband, die im Bereich enthält *pEdit* wird hervorgehoben.  
   
- [out] *bIsDisabled*  
- Gibt zurück, ob *pEdit* ist deaktiviert.  
+*bIsDisabled*<br/>
+[out] Gibt zurück, ob *pEdit* ist deaktiviert.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Hintergrundfarbe des Bearbeitungsfelds *pEdit*.  
@@ -178,17 +178,17 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger auf den Gerätekontext einer Menüschaltfläche.  
+*pDC*<br/>
+[in] Ein Zeiger auf den Gerätekontext einer Menüschaltfläche.  
   
- [in] *pButton*  
- Ein Zeiger auf eine `CMFCToolBarButton`. Das Framework füllt den Hintergrund für diese Schaltfläche.  
+*pButton*<br/>
+[in] Ein Zeiger auf eine `CMFCToolBarButton`. Das Framework füllt den Hintergrund für diese Schaltfläche.  
   
- [in] *Rect*  
- Ein Rechteck, das die Begrenzungen des Image im Menübereich-Schaltfläche angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Begrenzungen des Image im Menübereich-Schaltfläche angibt.  
   
- [in] *Zustand*  
- Den Zustand der Schaltfläche.  
+*state*<br/>
+[in] Den Zustand der Schaltfläche.  
   
 ### <a name="remarks"></a>Hinweise  
   

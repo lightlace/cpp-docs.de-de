@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e6ec22be873dcec06f224913eb905a2779e4efd
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: dac2df26f393b7491d94abdb6d987a8e424723e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540793"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715557"
 ---
 # <a name="region-endregion"></a>region, endregion
 `#pragma region` können Sie angeben, dass einen Codeblock, der Sie können erweitert oder reduziert werden, wenn Sie verwenden die [Gliederungsfunktion](/visualstudio/ide/outlining) von Visual Studio Code-Editor.  
@@ -40,11 +40,11 @@ ms.locfileid: "42540793"
 ```  
   
 ### <a name="parameters"></a>Parameter  
-*Kommentar* (optional)  
-Ein Kommentar, der im Code-Editor angezeigt wird.  
+*comment*  
+(Optional) Ein Kommentar, der im Code-Editor angezeigt wird.  
   
-*name* (optional)  
-Der Name der Region.  Dieser Name wird im Code-Editor angezeigt.  
+*name*  
+(Optional) Der Name des Bereichs.  Dieser Name wird im Code-Editor angezeigt.  
   
 ## <a name="remarks"></a>Hinweise  
  

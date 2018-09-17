@@ -1,5 +1,5 @@
 ---
-title: / FUNCTIONPADMIN (erstellen Hotpatch-fähiges Abbild) | Microsoft Docs
+title: / FUNCTIONPADMIN (Hotpatchfähiges Image erstellen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2018
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0a5ecfcc336e198de0adcc2393f740072d70cae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a82611c453a96e9247e414d6adb777c07320482
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376753"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703988"
 ---
 # <a name="functionpadmin-create-hotpatchable-image"></a>/FUNCTIONPADMIN (Erstellen eines Hotpatch-fähigen Abbildes)
 
@@ -30,16 +30,16 @@ Bereitet ein Image für Hotpatching vor.
 
 ## <a name="syntax"></a>Syntax
 
-> **/ FUNCTIONPADMIN**[**:**_Speicherplatz_]  
+> **/ FUNCTIONPADMIN**[**:**_Speicherplatz_]
 
 ### <a name="arguments"></a>Argumente
 
 *space*<br/>
-Die den Abstand für die hinzuzufügende am Anfang jeder Funktion in Bytes. Auf X86 standardmäßig 5 Bytes Abstand und auf X64 standardmäßig 6 Bytes. Für andere Ziele muss ein Wert angegeben werden.
+Die Größe der Auffüllung, die am Anfang jeder Funktion in Bytes hinzugefügt werden soll. Auf X86 der Standardwert lautet 5 Byte-Auffüllung und standardmäßig auf X64 und 6 Bytes. Von anderen Zielen muss ein Wert angegeben werden.
 
 ## <a name="remarks"></a>Hinweise
 
-Damit der Linker ein Hotpatch-fähiges Abbild erstellt werden kann, die OBJ-Dateien müssen wurden kompiliert mit [/hotpatch (Erstellen eines Hotpatch-fähigen Abbildes)](../../build/reference/hotpatch-create-hotpatchable-image.md).
+In der Reihenfolge für den Linker an, ein Bild eines Hotpatch-fähigen zu erzeugen, die OBJ-Dateien müssen bereits kompiliert wurden mit [/hotpatch (Erstellen eines Hotpatch-fähigen Abbildes)](../../build/reference/hotpatch-create-hotpatchable-image.md).
 
 Wenn Sie kompilieren und verknüpfen ein Bild mit einem einzelnen Aufruf von cl.exe, **/hotpatch** impliziert **/functionpadmin**.
 
@@ -49,7 +49,7 @@ Wenn Sie kompilieren und verknüpfen ein Bild mit einem einzelnen Aufruf von cl.
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **Befehlszeile** Eigenschaftenseite.
 
-1. Geben Sie die **/FUNCTIONPADMIN** option **Zusatzoptionen**. Wählen Sie **OK** zum Speichern der Änderungen.
+1. Geben Sie die **/FUNCTIONPADMIN** option **zusätzliche Optionen**. Wählen Sie **OK** zum Speichern der Änderungen.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
 

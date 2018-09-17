@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 824bb7059e13c76af0c2f739676d32afc04aa0c7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 41bc9c9771622b1778abc5bf86a8ebb6e67d3fbd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572165"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716902"
 ---
 # <a name="main-program-startup"></a>main: Programmstart
 Eine spezielle Funktion mit dem Namen **main** ist der Ausgangspunkt der Ausführung von C- und C++-Programme. Wenn Sie das Schreiben von Code sind, die Unicode-Programmiermodell entspricht, können Sie `wmain`, dies ist die Breitzeichen-Version von **main**.  
@@ -63,7 +63,8 @@ int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);
   
  Sie können auch die **main** und `wmain` Funktionen können deklariert werden, als Rückgabewert **"void"** (keinen Wert zurückgibt). Wenn Sie deklarieren **main** oder `wmain` als Rückgabewert **"void"**, Sie können nicht an den übergeordneten Prozess oder das Betriebssystem einen Exitcode zurückgeben, indem eine [zurückgeben](../cpp/return-statement-in-program-termination-cpp.md) Anweisung. Zurückzugebenden einen Exitcode beim **main** oder `wmain` wird deklariert als **"void"**, verwenden Sie die [beenden](../cpp/exit-function.md) Funktion.  
   
-**Ende Microsoft-spezifisch**  
+**Ende Microsoft-spezifisch**
+
  Die Typen für `argc` und `argv` werden von der Programmiersprache definiert. Die Namen `argc`, `argv` und `envp` sind üblich, für den Compiler jedoch nicht erforderlich. Weitere Informationen und ein Beispiel finden Sie unter [Argumentdefinitionen](../cpp/argument-definitions.md).  
   
 ## <a name="see-also"></a>Siehe auch  

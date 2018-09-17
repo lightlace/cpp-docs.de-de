@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09f086673ba015b168211261bed68db479ef77a9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: efe15f53cda42089b35d620ae9965050595121c7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540830"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720225"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 Die `CMFCDesktopAlertWnd` Klasse implementiert die Funktion ein nicht modales Dialogfeld wird angezeigt, auf dem Bildschirm, um den Benutzer zu einem Ereignis zu informieren.  
@@ -166,20 +166,20 @@ virtual BOOL Create(
  [in] [out] *pWndOwner*  
  Gibt den Besitzer des Fensters Warnung. Dieser Besitzer erhält alle Benachrichtigungen für die desktop-Benachrichtigungsfenster. Dieser Wert darf nicht NULL sein.  
   
- [in] *UiDlgResID*  
- Gibt die Ressourcen-ID des Fensters Warnung an.  
+*uiDlgResID*<br/>
+[in] Gibt die Ressourcen-ID des Fensters Warnung an.  
   
- [in] *hMenu*  
- Gibt an, das Menü, das angezeigt wird, wenn der Benutzer die Schaltfläche klickt. Wenn der Wert NULL ist, wird die Schaltfläche nicht angezeigt.  
+*hMenu*<br/>
+[in] Gibt an, das Menü, das angezeigt wird, wenn der Benutzer die Schaltfläche klickt. Wenn der Wert NULL ist, wird die Schaltfläche nicht angezeigt.  
   
- [in] *PtPos*  
- Gibt die Ausgangsposition an, in dem die Warnung wird angezeigt, die anhand der Bildschirmkoordinaten. Wenn dieser Parameter ist (1, -1), wird die Warnung im Fenster in der unteren rechten Ecke des Bildschirms angezeigt.  
+*ptPos*<br/>
+[in] Gibt die Ausgangsposition an, in dem die Warnung wird angezeigt, die anhand der Bildschirmkoordinaten. Wenn dieser Parameter ist (1, -1), wird die Warnung im Fenster in der unteren rechten Ecke des Bildschirms angezeigt.  
   
- [in] *pRTIDlgBar*  
- Laufzeit-Klasseninformationen für eine benutzerdefinierte Dialogfeldklasse, die Clientbereich des Fensters auf die Warnung abdeckt.  
+*pRTIDlgBar*<br/>
+[in] Laufzeit-Klasseninformationen für eine benutzerdefinierte Dialogfeldklasse, die Clientbereich des Fensters auf die Warnung abdeckt.  
   
- [in] *Params*  
- Gibt Parameter an, die verwendet werden, um eine Warnung im Fenster zu erstellen.  
+*params*<br/>
+[in] Gibt Parameter an, die verwendet werden, um eine Warnung im Fenster zu erstellen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn Sie das Benachrichtigungsfenster erfolgreich erstellt wurde. andernfalls "false".  
@@ -311,8 +311,8 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmdID*  
- Dieser Parameter wird nicht verwendet.  
+*uiCmdID*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Immer "false".  
@@ -330,8 +330,8 @@ virtual BOOL OnCommand(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *wParam-Parameter*  
- [in] *lParam*  
+*wParam-Parameter*<br/>
+[in] [in] *lParam*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -371,8 +371,8 @@ void SetAnimationSpeed(UINT nSpeed);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nSpeed*  
- Gibt die neue animationsgeschwindigkeit, in Millisekunden an.  
+*nSpeed*<br/>
+[in] Gibt die neue animationsgeschwindigkeit, in Millisekunden an.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um die Geschwindigkeit der Animation für das Benachrichtigungsfenster festgelegt. Die animationsgeschwindigkeit Standardwert ist 30 Millisekunden.  
@@ -385,8 +385,8 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Typ*  
- Gibt den Animationstyp.  
+*Typ*<br/>
+[in] Gibt den Animationstyp.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um die Animation festgelegt. Sie können einen der folgenden Werte angeben:  
@@ -409,8 +409,8 @@ void SetAutoCloseTime(int nTime);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nTime*  
- Die Zeit in Millisekunden, Ablauf, der die Warnung im Fenster automatisch geschlossen wird.  
+*nTime*<br/>
+[in] Die Zeit in Millisekunden, Ablauf, der die Warnung im Fenster automatisch geschlossen wird.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Warnung im Fenster wird automatisch nach der angegebenen Zeit geschlossen, wenn der Benutzer nicht mit dem Fenster interagieren.  
@@ -423,8 +423,8 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bSmallCaption*  
- True, um anzugeben, dass die Warnung eine kleine Beschriftung angezeigt. andernfalls "false", um anzugeben, dass die Warnung eine Beschriftung für die reguläre Größe angezeigt.  
+*bSmallCaption*<br/>
+[in] True, um anzugeben, dass die Warnung eine kleine Beschriftung angezeigt. andernfalls "false", um anzugeben, dass die Warnung eine Beschriftung für die reguläre Größe angezeigt.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um die Beschriftung für kleine oder reguläre Größe angezeigt. Standardmäßig ist der kleinen Überschrift 7 Pixel hoch. Sie können die Größe der regulären Beschriftung abrufen, indem Sie die Windows-API-Funktion aufrufen `GetSystemMetrics(SM_CYCAPTION)`.  
@@ -437,8 +437,8 @@ void SetTransparency(BYTE nTransparency);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nTransparency*  
- Gibt die der Transparenzebene. Dieser Wert muss zwischen 0 und 255 (einschließlich) liegen. Je größer der Wert, der den undurchsichtigeren des Fensters.  
+*nTransparency*<br/>
+[in] Gibt die der Transparenzebene. Dieser Wert muss zwischen 0 und 255 (einschließlich) liegen. Je größer der Wert, der den undurchsichtigeren des Fensters.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion zum Festlegen der der Transparenzebene der Popup-Fenster.  

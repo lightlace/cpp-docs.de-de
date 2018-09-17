@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e513b0397a41a19c9a8088332eb3d1793b6b6647
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: ce4c5159a66963268ae83e0c0adfdc082dfcc81c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894589"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706939"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Optionen für MIDL-Befehlszeile festlegen)
 
@@ -38,7 +38,7 @@ Legt eine Antwortdatei für die Optionen für MIDL-Befehlszeile
 
 ## <a name="arguments"></a>Argumente
 
-*datei*  
+*datei*<br/>
 Der Name der Datei, die enthält [MIDL-Befehlszeilenoptionen](/windows/desktop/Midl/general-midl-command-line-syntax).
 
 ## <a name="remarks"></a>Hinweise
@@ -61,9 +61,9 @@ Die Datei sollte eine MIDL-Befehlszeilenoption pro Zeile enthalten.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
-[Optionen des Linkers](../../build/reference/linker-options.md)   
-[/ IDLOUT (Namen der MIDL-Ausgabedateien)](../../build/reference/idlout-name-midl-output-files.md)   
-[/ IGNOREIDL (keine Attribute in MIDL verarbeiten)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
-[/ TLBOUT (Name. TLB-Datei)](../../build/reference/tlbout-name-dot-tlb-file.md)   
+[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
+[Linkeroptionen](../../build/reference/linker-options.md)<br/>
+[/ IDLOUT (Namen der MIDL-Ausgabedateien)](../../build/reference/idlout-name-midl-output-files.md)
+[/IGNOREIDL (Attribute nicht in verarbeiten MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
+ [ /TLBOUT (Name. TLB-Datei)](../../build/reference/tlbout-name-dot-tlb-file.md)
 [Erstellen eines attributierten Programms](../../windows/building-an-attributed-program.md)

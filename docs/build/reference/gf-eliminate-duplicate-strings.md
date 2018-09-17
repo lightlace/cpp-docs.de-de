@@ -1,5 +1,5 @@
 ---
-title: -GF (Doppelte Zeichenfolgen beseitigen) | Microsoft Docs
+title: -GF (Doppelte Zeichenfolgen beseitigen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,56 +24,59 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e2710fe8c5cc444d9e2681620f6813312a1d65a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e19915485bddb32ac993bd0f0cbb4c3e2f9bc517
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375892"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718496"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (Doppelte Zeichenfolgen beseitigen)
-Kann der Compiler eine einzige Kopie identischer Zeichenfolgen während der Ausführung im Programmabbild und im Arbeitsspeicher zu erstellen. Dies ist eine Optimierung namens *Stringpooling* kleinere Programme erstellen kann.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-/GF  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Bei Verwendung von **/GF**, das Betriebssystem wird nicht die Zeichenfolgenteil des Arbeitsspeichers austauschen und können die Zeichenfolgen zurück, aus der Image-Datei gelesen.  
-  
- **/ GF** Zeichenfolgen als nur-Lese pools. Wenn Sie versuchen, die Zeichenfolgen unter Ändern **/GF**, tritt ein Fehler auf.  
-  
- Stringpooling kann als mehrere Verweise auf mehrere Puffer beabsichtigt waren mehrere Zeiger auf einen einzelnen Puffer sein. Im folgenden Code `s` und `t` mit derselben Zeichenfolge initialisiert werden. Stringpooling bewirkt, dass sie den gleichen Arbeitsspeicher auf:  
-  
-```  
-char *s = "This is a character buffer";  
-char *t = "This is a character buffer";  
-```  
-  
+
+Kann der Compiler eine einzige Kopie identischer Zeichenfolgen im Programmimage und im Speicher während der Ausführung zu erstellen. Dies ist eine Optimierung namens *Stringpooling* kleinere Programme erstellen können.
+
+## <a name="syntax"></a>Syntax
+
+```
+/GF
+```
+
+## <a name="remarks"></a>Hinweise
+
+Bei Verwendung von **/GF**, das Betriebssystem wird die Zeichenfolgenteil des Arbeitsspeichers nicht ausgetauscht, und erhalten die Zeichenfolgen aus der Imagedatei sichern.
+
+**/ GF** Zeichenfolgen als nur-Lese pools. Wenn Sie versuchen, die Zeichenfolgen unter Ändern **/GF**, ein Fehler auftritt.
+
+Stringpooling ermöglicht es, was als mehrere Verweise auf mehrere Puffer werden mehrere Verweise auf einen einzelnen Puffer vorgesehen war. In den folgenden Code `s` und `t` mit derselben Zeichenfolge initialisiert werden. Stringpooling bewirkt, dass sie auf den gleichen Speicher zu verweisen:
+
+```
+char *s = "This is a character buffer";
+char *t = "This is a character buffer";
+```
+
 > [!NOTE]
->  Die [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) -Option zum Bearbeiten und fortfahren, setzt automatisch das **/GF** Option.  
-  
+>  Die ["/ Zi"](../../build/reference/z7-zi-zi-debug-information-format.md) -Option zum Bearbeiten und fortfahren, setzt automatisch das **/GF** Option.
+
 > [!NOTE]
->  Die **/GF** -Compileroption erstellt einen adressierbaren Abschnitt für jede eindeutige Zeichenfolge. Und standardmäßig kann eine Objektdatei bis zu 65.536 adressierbare Abschnitte enthalten. Wenn das Programm mehr als 65.536 Zeichenfolgen enthält, verwenden Sie die [/bigobj](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md) Compileroption, um weitere Abschnitte zu erstellen.  
-  
- **/ GF** ist wirksam, wenn [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md) oder **/O2** verwendet wird.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
-  
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
-  
-2.  Klicken Sie auf den Ordner **C/C++** .  
-  
-3.  Klicken Sie auf die **Codegenerierung** Eigenschaftenseite.  
-  
-4.  Ändern der **Stringpooling aktivieren** Eigenschaft.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
-  
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StringPooling%2A>.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Compileroptionen](../../build/reference/compiler-options.md)   
- [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+>  Die **/GF** Compileroption erstellt einen adressierbaren Abschnitt für jede eindeutige Zeichenfolge. Und in der Standardeinstellung kann eine Objektdatei bis zu 65.536 adressierbare Abschnitte enthalten. Wenn Ihr Programm mehr als 65.536 Zeichenfolgen enthält, verwenden Sie die [/bigobj](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md) -Compileroption verwenden, um mehr Abschnitte zu erstellen.
+
+**/ GF** ist gültig, wenn ["/ O1"](../../build/reference/o1-o2-minimize-size-maximize-speed.md) oder **"/ O2"** verwendet wird.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
+
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+
+1. Klicken Sie auf den Ordner **C/C++** .
+
+1. Klicken Sie auf die **Codegenerierung** Eigenschaftenseite.
+
+1. Ändern der **Stringpooling aktivieren** Eigenschaft.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
+
+- Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StringPooling%2A>.
+
+## <a name="see-also"></a>Siehe auch
+
+[Compileroptionen](../../build/reference/compiler-options.md)<br/>
+[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

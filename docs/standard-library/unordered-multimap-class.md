@@ -147,12 +147,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f455ce1f09822d4705a8c700e9dbc93d4a2e79c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 52073a97e062d4ab96e50fed534edc24add0f8c5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104605"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715597"
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap-Klasse
 
@@ -369,7 +369,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*keyVal*  
+*keyVal*<br/>
 Der zuzuordnende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
@@ -514,7 +514,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parameter
 
-*nbucket*  
+*nbucket*<br/>
 Die Bucketnummer.
 
 ### <a name="remarks"></a>Hinweise
@@ -880,7 +880,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*keyVal*  
+*keyVal*<br/>
 Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
@@ -1201,7 +1201,7 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Parameter
 
-*keyVal*  
+*keyVal*<br/>
 Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
@@ -1277,16 +1277,16 @@ size_type erase(
 
 ### <a name="parameters"></a>Parameter
 
-*Where*  
+*Where*<br/>
 Die Position des zu entfernenden Elements.
 
-*Erste*  
+*Erste*<br/>
 Die Position des ersten zu entfernenden Elements.
 
-*letzte*  
+*letzte*<br/>
 Die Position direkt hinter dem letzten zu entfernenden Element.
 
-*Key*  
+*Key*<br/>
 Der Schlüsselwert der zu entfernenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1309,7 +1309,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*keyVal*  
+*keyVal*<br/>
 Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
@@ -2011,7 +2011,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parameter
 
-*factor*  
+*factor*<br/>
 Der neue maximale Lastfaktor.
 
 ### <a name="remarks"></a>Hinweise
@@ -2291,7 +2291,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parameter
 
-*nbuckets*  
+*nbuckets*<br/>
 Die angeforderte Anzahl von Buckets.
 
 ### <a name="remarks"></a>Hinweise

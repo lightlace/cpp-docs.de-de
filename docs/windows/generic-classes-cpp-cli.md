@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76dc54662fac3dc769e0bbf72c672908196ef351
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 09390e25ffe06ce6702aef68d73c352e063a48ef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598246"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716780"
 ---
 # <a name="generic-classes-ccli"></a>Generische Klassen (C++/CLI)
 
@@ -47,8 +47,8 @@ class-body
 
 In der obigen Syntax werden die folgenden Begriffe verwendet:
 
-*Attribute* (optional)  
-Zusätzliche deklarative Informationen. Weitere Informationen zu Attributen und Attributklassen finden Sie unter "Attribute".
+*Attribute*  
+(Optional) Zusätzliche deklarative Informationen. Weitere Informationen zu Attributen und Attributklassen finden Sie unter "Attribute".
 
 *Klassenschlüssel*  
 Entweder **Klasse** oder **Typename**
@@ -58,7 +58,7 @@ Entweder **Klasse** oder **Typename**
 *Einschränkungsklauseln*  
 Eine Liste (nicht durch Trennzeichen getrennt) der **, in denen** Klauseln, die die Einschränkungen für die Typparameter angeben. Hat das Format an:
 
-`where`  *Type-Parameter-Identifier*`:`*Einschränkungsliste*  `...`
+> **wo** *Type-Parameter-Identifier* **:** *Einschränkungsliste***...** 
 
 *Liste der Einschränkung*  
 *Klasse oder Schnittstelle*[`,` *...* ]
@@ -69,8 +69,8 @@ Der Zugriffsmodifizierer für die generische Klasse. Für die Windows-Runtime is
 *identifier*  
 Der Name der generischen Klasse, jeder gültige C++-Bezeichner.
 
-*Modifizierer* (optional)  
-Zulässige Modifizierer sind **versiegelten** und **abstrakte**.
+*Modifizierer*  
+(Optional) Zulässige Modifizierer sind **versiegelten** und **abstrakte**.
 
 *Base-list*  
 Eine Liste mit der eine Basisklasse und alle implementierten Schnittstellen, die alle durch Kommas getrennt.

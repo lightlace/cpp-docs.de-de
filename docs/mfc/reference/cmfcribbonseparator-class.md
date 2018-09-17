@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12f4b9019a79b6ff57da6905b6ad9329788b4ec9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: e9112a6790175709a2575319c6f71a55d1303a83
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849763"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705314"
 ---
 # <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator-Klasse
 Implementiert das Menüband-Trennzeichen.  
@@ -113,11 +113,11 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWndListBox*  
- Ein Zeiger auf die **Befehle** Liste, in dem das Trennzeichen wird hinzugefügt.  
+*pWndListBox*<br/>
+[in] Ein Zeiger auf die **Befehle** Liste, in dem das Trennzeichen wird hinzugefügt.  
   
- [in] *bDeep*  
- Ignoriert.  
+*bDeep*<br/>
+[in] Ignoriert.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Nullbasierte Index in die Zeichenfolge in das Listenfeld gemäß *pWndListBox*.  
@@ -130,8 +130,8 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bIsHoriz*  
- Bei "true", ist das Trennzeichen horizontal; Wenn "FALSE" ist das Trennzeichen vertikal.  
+*bIsHoriz*<br/>
+[in] Bei "true", ist das Trennzeichen horizontal; Wenn "FALSE" ist das Trennzeichen vertikal.  
   
 ### <a name="remarks"></a>Hinweise  
  Horizontale Trennzeichen werden in Anwendungsmenüs verwendet. Vertikale Trennzeichen werden in Symbolleisten verwendet.  
@@ -149,8 +149,8 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Src*  
- Das Quellelement des Menübands zum Kopieren aus.  
+*src*<br/>
+[in] Das Quellelement des Menübands zum Kopieren aus.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize  
  Gibt die Größe eines Trennzeichens zurück.  
@@ -160,8 +160,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger auf ein Gerät.  
+*pDC*<br/>
+[in] Ein Zeiger auf ein Gerät.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Größe des Trennzeichens für den angegebenen Gerätekontext.  
@@ -197,8 +197,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
 ##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList  
  Wird aufgerufen, durch das System zeichnet die Trennlinie der **Befehle** Liste.  
@@ -218,12 +218,12 @@ virtual void OnDrawOnList(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *pDC*|Ein Zeiger zu einem Gerätekontext.|  
-|[in] *StrText*|Text in der Liste angezeigt wird.|  
-|[in] *nTextOffset*|Der Abstand zwischen dem Text und der linken Seite des umschließenden Rechtecks.|  
-|[in] *Rect*|Gibt das umschließende Rechteck.|  
-|[in] *bIsSelected*|Ignoriert.|  
-|[in] *bHighlighted*|Ignoriert.|  
+|*pDC*|[in] Ein Zeiger auf einen Gerätekontext.|  
+|*strText*|[in] Text in der Liste angezeigt wird.|  
+|*nTextOffset*|[in] Der Abstand zwischen dem Text und der linken Seite des umschließenden Rechtecks.|  
+|*Rect*|[in] Gibt das umschließende Rechteck.|  
+|*bIsSelected*|[in] Ignoriert.|  
+|*bHighlighted*|[in] Ignoriert.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

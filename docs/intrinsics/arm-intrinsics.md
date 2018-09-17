@@ -1941,12 +1941,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 030ac6bb2e6fb7acd9745d4fa818e89d29ee1832
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1a504df1dfb2826b5056b5feb5b13ac3555515ae
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208974"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712802"
 ---
 # <a name="arm-intrinsics"></a>Systeminterne ARM-Funktionen
 Der Visual C++-Compiler stellt die folgenden systeminternen Funktionen in der ARM-Architektur zur Verfügung. Weitere Informationen zu ARM finden Sie unter den [ARM-Architektur-Reference Manuals](http://go.microsoft.com/fwlink/p/?LinkId=522049) und [ARM Assembler Tools Guide](http://go.microsoft.com/fwlink/p/?LinkId=246102) auf der ARM-Infocenter-Website.  
@@ -2165,8 +2165,8 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
  `Location`  
  Die Adresse eines Speicherbereichs für Lese- oder Schreibvorgänge.  
   
- `Value`(nur systeminterne Funktionen zum Speichern)  
- Der Wert, der an den angegebenen Speicherbereich geschrieben werden soll.  
+ `Value`  
+ Der Wert, der in der angegebenen Speicheradresse (nur systeminterne Store Funktionen) zu schreiben.  
   
  **Der Rückgabewert (systeminterne Funktionen zum Laden nur)**  
   
@@ -2176,9 +2176,8 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
   
  Sie können die systeminternen Funktionen `__iso_volatile_load8/16/32/64` und `__iso_volatile_store8/16/32/64` verwenden, um explizit Speicherzugriffe durchzuführen, die nicht Compileroptimierungen unterliegen. Der Compiler kann die relative Reihenfolge dieser Vorgänge nicht entfernen, zusammenfassen oder ändern, es werden jedoch keine impliziten Hardwarespeicherabgrenzungen generiert. Aus diesem Grund kann die Hardware die sichtbaren Speicherzugriffe möglicherweise immer noch über mehrere Threads hinweg neu anordnen. Genauer gesagt, diese systeminternen Funktionen entsprechen den folgenden Ausdrücken wie unter kompilierten **/volatile:iso**.  
   
-```  
-  
-      int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;   
+```cpp
+int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;   
 __iso_volatile_store32(p, a);        // equivalent to: *(volatile __int32*)p = a;  
 ```  
   

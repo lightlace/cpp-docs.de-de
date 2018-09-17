@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71d89020869db10b45688dbaae71f38711d2667c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 68534770419bd8d688c282b6d837c55983e33c27
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676362"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712074"
 ---
 # <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter-Klasse
 Bietet Andockunterstützung für von `CWnd`abgeleitete Bereiche.  
@@ -90,14 +90,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- Der Profilname.  
+*lpszProfileName*<br/>
+[in] Der Profilname.  
   
- [in] *nIndex*  
- Der Index des Profils.  
+*nIndex*<br/>
+[in] Der Index des Profils.  
   
- [in] *UiID*  
- Der Bereich-ID  
+*uiID*<br/>
+[in] Der Bereich-ID  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -114,14 +114,14 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- Der Profilname.  
+*lpszProfileName*<br/>
+[in] Der Profilname.  
   
- [in] *nIndex*  
- Der Profil-Index (standardmäßig die Steuerelement-ID des Fensters).  
+*nIndex*<br/>
+[in] Der Profil-Index (standardmäßig die Steuerelement-ID des Fensters).  
   
- [in] *UiID*  
- Der Bereich-ID  
+*uiID*<br/>
+[in] Der Bereich-ID  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -135,8 +135,8 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Ein Zeiger auf das Fenster für den Bereich-Adapter zum umschließen.  
+*Aufnehmen*<br/>
+[in] Ein Zeiger auf das Fenster für den Bereich-Adapter zum umschließen.  
   
 ### <a name="return-value"></a>Rückgabewert  
   

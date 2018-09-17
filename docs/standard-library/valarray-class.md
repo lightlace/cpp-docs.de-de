@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02bd6b1c5ed9cf29b87dc2a218f7a5e9eda3e3dc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9f95c9d85ab3649c1710881c73df1ae325f9cb60
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44319057"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724814"
 ---
 # <a name="valarray-class"></a>valarray-Klasse
 
@@ -132,10 +132,10 @@ valarray<Type> apply(Type _Func(constType&)) const;
 ### <a name="parameters"></a>Parameter
 
 *_Func(Type)*<br/>
- Das Funktionsobjekt, das auf alle Elemente des valarray-Operanden angewendet werden soll.
+Das Funktionsobjekt, das auf alle Elemente des valarray-Operanden angewendet werden soll.
 
 *_Func(const Type&)*<br/>
- Das Funktionsobjekt für const, das auf alle Elemente des valarray-Operanden angewendet werden soll.
+Das Funktionsobjekt für const, das auf alle Elemente des valarray-Operanden angewendet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -204,8 +204,8 @@ valarray<Type> cshift(int count) const;
 
 ### <a name="parameters"></a>Parameter
 
-*count*  
- Die Anzahl der Stellen, um die die Elemente nach vorn verschoben werden.
+*count*<br/>
+Die Anzahl der Stellen, um die die Elemente nach vorn verschoben werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -463,8 +463,8 @@ valarray<Type>& operator%=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Division des valarray-Operanden identisch ist.
+*right*<br/>
+Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Division des valarray-Operanden identisch ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -528,8 +528,8 @@ valarray<Type>& operator&=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Das valarray-Objekts oder der Wert eines Elementtyps identisch mit dem des Valarray-Operanden, die kombiniert werden, durch den logischen elementweise `AND` mit dem Valarray-Operanden.
+*right*<br/>
+Das valarray-Objekts oder der Wert eines Elementtyps identisch mit dem des Valarray-Operanden, die kombiniert werden, durch den logischen elementweise `AND` mit dem Valarray-Operanden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -599,8 +599,8 @@ valarray<Type>& operator>>=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Der Wert, der den Betrag angibt, um den die Bits nach rechts verschoben werden, oder das valarray-Objekt, dessen Elemente den elementweisen Betrag angeben, um den die Bits nach rechts verschoben werden.
+*right*<br/>
+Der Wert, der den Betrag angibt, um den die Bits nach rechts verschoben werden, oder das valarray-Objekt, dessen Elemente den elementweisen Betrag angeben, um den die Bits nach rechts verschoben werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -668,8 +668,8 @@ valarray<Type>& operator<<=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Der Wert, der den Betrag angibt, um den die Bits nach links verschoben werden, oder das valarray-Objekt, dessen Elemente den elementweisen Betrag angeben, um den die Bits nach links verschoben werden.
+*right*<br/>
+Der Wert, der den Betrag angibt, um den die Bits nach links verschoben werden, oder das valarray-Objekt, dessen Elemente den elementweisen Betrag angeben, um den die Bits nach links verschoben werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -738,8 +738,8 @@ valarray<Type>& operator*=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Multiplikation des valarray-Operanden identisch ist.
+*right*<br/>
+Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Multiplikation des valarray-Operanden identisch ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -854,8 +854,8 @@ valarray<Type>& operator+=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Addition mit dem valarray-Operanden identisch ist.
+*right*<br/>
+Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Addition mit dem valarray-Operanden identisch ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -970,8 +970,8 @@ valarray<Type>& operator-=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Subtraktion vom valarray-Operanden identisch ist.
+*right*<br/>
+Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Subtraktion vom valarray-Operanden identisch ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1035,8 +1035,8 @@ valarray<Type>& operator/=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Division durch den valarray-Operanden identisch ist.
+*right*<br/>
+Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Division durch den valarray-Operanden identisch ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1110,23 +1110,23 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Das valarray-Objekt, das in den valarray-Operanden kopiert wird.
+*right*<br/>
+Das valarray-Objekt, das in den valarray-Operanden kopiert wird.
 
-*val*  
- Der Wert, der den Elementen des valarray-Operanden zugewiesen wird.
+*val*<br/>
+Der Wert, der den Elementen des valarray-Operanden zugewiesen wird.
 
-*_Slicearray*  
- Das slice_array-Element, das in den valarray-Operanden kopiert wird.
+*_Slicearray*<br/>
+Das slice_array-Element, das in den valarray-Operanden kopiert wird.
 
-*_Gslicearray*  
- Das gslice_array-Element, das in den valarray-Operanden kopiert wird.
+*_Gslicearray*<br/>
+Das gslice_array-Element, das in den valarray-Operanden kopiert wird.
 
-*_Maskarray*  
- Das mask_array-Element, das in den valarray-Operanden kopiert wird.
+*_Maskarray*<br/>
+Das mask_array-Element, das in den valarray-Operanden kopiert wird.
 
-*_Indarray*  
- Das indirect_array-Element, das in den valarray-Operanden kopiert wird.
+*_Indarray*<br/>
+Das indirect_array-Element, das in den valarray-Operanden kopiert wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1228,20 +1228,20 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Off*  
- Der Index des Elements, das einem Wert zugewiesen werden soll.
+*_Off*<br/>
+Der Index des Elements, das einem Wert zugewiesen werden soll.
 
-*_Slicearray*  
- Ein slice_array-Element eines valarray-Objekts, das eine Teilmenge angibt, die ausgewählt oder an ein neues valarray-Objekt zurückgegeben werden soll.
+*_Slicearray*<br/>
+Ein slice_array-Element eines valarray-Objekts, das eine Teilmenge angibt, die ausgewählt oder an ein neues valarray-Objekt zurückgegeben werden soll.
 
-*_Gslicearray*  
- Ein gslice_array-Element eines valarray-Objekts, das eine Teilmenge angibt, die ausgewählt oder an ein neues valarray-Objekt zurückgegeben werden soll.
+*_Gslicearray*<br/>
+Ein gslice_array-Element eines valarray-Objekts, das eine Teilmenge angibt, die ausgewählt oder an ein neues valarray-Objekt zurückgegeben werden soll.
 
-*_Boolarray*  
- Ein bool_array-Element eines valarray-Objekts, das eine Teilmenge angibt, die ausgewählt oder an ein neues valarray-Objekt zurückgegeben werden soll.
+*_Boolarray*<br/>
+Ein bool_array-Element eines valarray-Objekts, das eine Teilmenge angibt, die ausgewählt oder an ein neues valarray-Objekt zurückgegeben werden soll.
 
-*_Indarray*  
- Ein indirect_array-Element eines valarray-Objekts, das eine Teilmenge angibt, die ausgewählt oder an ein neues valarray-Objekt zurückgegeben werden soll.
+*_Indarray*<br/>
+Ein indirect_array-Element eines valarray-Objekts, das eine Teilmenge angibt, die ausgewählt oder an ein neues valarray-Objekt zurückgegeben werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1269,8 +1269,8 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem valarray-Operanden identisch ist, der durch den logischen **XOR**-Operator mit dem valarray-Operanden elementweise verknüpft werden soll.
+*right*<br/>
+Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem valarray-Operanden identisch ist, der durch den logischen **XOR**-Operator mit dem valarray-Operanden elementweise verknüpft werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1342,8 +1342,8 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem valarray-Operanden identisch ist, der durch den bitweisen `OR`-Operator mit dem valarray-Operanden elementweise verknüpft werden soll.
+*right*<br/>
+Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem valarray-Operanden identisch ist, der durch den bitweisen `OR`-Operator mit dem valarray-Operanden elementweise verknüpft werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1518,11 +1518,11 @@ void resize(
 
 ### <a name="parameters"></a>Parameter
 
-*_Newsize*  
- Die Anzahl der Elemente im „valarray“, dessen Größe angepasst wird.
+*_Newsize*<br/>
+Die Anzahl der Elemente im „valarray“, dessen Größe angepasst wird.
 
-*val*  
- Der Wert, der an die Elemente des „valarray“ übergeben wird, dessen Größe angepasst wird.
+*val*<br/>
+Der Wert, der an die Elemente des „valarray“ übergeben wird, dessen Größe angepasst wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1589,8 +1589,8 @@ valarray<Type> shift(int count) const;
 
 ### <a name="parameters"></a>Parameter
 
-*count*  
- Die Anzahl der Stellen, um die die Elemente nach vorn verschoben werden.
+*count*<br/>
+Die Anzahl der Stellen, um die die Elemente nach vorn verschoben werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1839,32 +1839,32 @@ valarray(
 
 ### <a name="parameters"></a>Parameter
 
-*Anzahl*  
- Die Anzahl von Elementen im Wertarray.
+*Anzahl*<br/>
+Die Anzahl von Elementen im Wertarray.
 
-*val*  
- Der beim Initialisieren der Elemente im Wertarray zu verwendende Wert.
+*val*<br/>
+Der beim Initialisieren der Elemente im Wertarray zu verwendende Wert.
 
-*PTR*  
- Zeiger auf die beim Initialisieren der Elemente im Wertarray zu verwendenden Werte.
+*PTR*<br/>
+Zeiger auf die beim Initialisieren der Elemente im Wertarray zu verwendenden Werte.
 
-*Rechts*  
- Ein vorhandenes Wertarray, mit dem das neue Wertarray initialisiert wird.
+*Rechts*<br/>
+Ein vorhandenes Wertarray, mit dem das neue Wertarray initialisiert wird.
 
-*SliceArray*  
- Ein slice_array-Element, dessen Elementwerte beim Initialisieren der Elemente des zu erstellenden Wertarrays verwendet werden sollen.
+*SliceArray*<br/>
+Ein slice_array-Element, dessen Elementwerte beim Initialisieren der Elemente des zu erstellenden Wertarrays verwendet werden sollen.
 
-*GsliceArray*  
- Ein gslice_array-Element, dessen Elementwerte beim Initialisieren der Elemente des zu erstellenden Wertarrays verwendet werden sollen.
+*GsliceArray*<br/>
+Ein gslice_array-Element, dessen Elementwerte beim Initialisieren der Elemente des zu erstellenden Wertarrays verwendet werden sollen.
 
-*MaskArray*  
- Ein mask_array-Element, dessen Elementwerte beim Initialisieren der Elemente des zu erstellenden Wertarrays verwendet werden sollen.
+*MaskArray*<br/>
+Ein mask_array-Element, dessen Elementwerte beim Initialisieren der Elemente des zu erstellenden Wertarrays verwendet werden sollen.
 
-*IndArray*  
- Ein indirect_array-Element, dessen Elementwerte beim Initialisieren der Elemente des zu erstellenden Wertarrays verwendet werden sollen.
+*IndArray*<br/>
+Ein indirect_array-Element, dessen Elementwerte beim Initialisieren der Elemente des zu erstellenden Wertarrays verwendet werden sollen.
 
-*IList*  
- Das initializer_list-Element, in dem die zu kopierenden Elemente enthalten sind.
+*IList*<br/>
+Das initializer_list-Element, in dem die zu kopierenden Elemente enthalten sind.
 
 ### <a name="remarks"></a>Hinweise
 

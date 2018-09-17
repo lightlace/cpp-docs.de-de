@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdf2134b334c259a6543af279ee058b659cf21d6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9eb3b70851cb5e51ef2ddc0e99347c81fe632b6d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210186"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726660"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl-Klasse
 Kapselt die Funktionalität eines Steuerelements für die Datums- und Zeitauswahl.  
@@ -192,7 +192,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] *pDateTimePickerInfo*|Ein Zeiger auf eine [DATETIMEPICKERINFO](/windows/desktop/api/commctrl/ns-commctrl-tagdatetimepickerinfo) Struktur, die eine Beschreibung der aktuellen Datums- / Zeitauswahl-Steuerelement empfängt.<br /><br /> Der Aufrufer ist verantwortlich für die Zuordnung von dieser Struktur. Aber diese Methode initialisiert die *CbSize* Member der Struktur.|  
+|*pDateTimePickerInfo*|[out] Ein Zeiger auf eine [DATETIMEPICKERINFO](/windows/desktop/api/commctrl/ns-commctrl-tagdatetimepickerinfo) Struktur, die eine Beschreibung der aktuellen Datums- / Zeitauswahl-Steuerelement empfängt.<br /><br /> Der Aufrufer ist verantwortlich für die Zuordnung von dieser Struktur. Aber diese Methode initialisiert die *CbSize* Member der Struktur.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -347,7 +347,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] *Psize*|Zeiger auf eine [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) -Struktur, die optimale Größe für das Steuerelement enthält.|  
+|*psize*|[out] Zeiger auf eine [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) -Struktur, die optimale Größe für das Steuerelement enthält.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Rückgabewert ist immer "true".  
@@ -458,7 +458,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *DwStyle*|Einen neuen Monat Monatskalender Steuerelementstil, die eine bitweise Kombination (OR) von Month Calendar-Steuerelement-Stile ist. Weitere Informationen finden Sie unter [Month Calendar-Steuerelement-Stile](/windows/desktop/Controls/month-calendar-control-styles).|  
+|*dwStyle*|[in] Einen neuen Monat Monatskalender Steuerelementstil, die eine bitweise Kombination (OR) von Month Calendar-Steuerelement-Stile ist. Weitere Informationen finden Sie unter [Month Calendar-Steuerelement-Stile](/windows/desktop/Controls/month-calendar-control-styles).|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Den vorherigen Stil des im Dropdown-Monatskalender-Steuerelement.  

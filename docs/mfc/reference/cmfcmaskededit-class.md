@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b903946a2e907b67d70e5008bff602670f1751e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a0bb29fdaff72370ec197fc9b3f651b5ff574c32
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849470"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717430"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit-Klasse
 Die `CMFCMaskedEdit` Klasse unterstützt ein maskiertes Bearbeitungssteuerelement, das Benutzereingaben anhand einer Maske überprüft und die überprüften Ergebnisse einer Vorlage entsprechend angezeigt.  
@@ -132,8 +132,8 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- "True", die angeben, dass die [CMFCMaskedEdit::GetWindowText](#getwindowtext) Methode abrufen maskiert nur Zeichen. "False", um anzugeben, dass die Methode den gesamten Text abrufen. Der Standardwert ist "true".  
+*bAktivieren*<br/>
+[in] "True", die angeben, dass die [CMFCMaskedEdit::GetWindowText](#getwindowtext) Methode abrufen maskiert nur Zeichen. "False", um anzugeben, dass die Methode den gesamten Text abrufen. Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode zum Aktivieren der maskierte Zeichen abgerufen werden sollen. Dann erstellen Sie ein maskiertes Bearbeitungssteuerelement, das die Telefonnummer an, wie z. B. (425) 555-0187 entspricht. Wenn Sie beim Aufrufen der `GetWindowText` -Methode gibt "4255550187". Wenn Sie das Abrufen von maskierte Zeichen Deaktivieren der `GetWindowText` Methode gibt den Text zurück, die in das Bearbeitungssteuerelement, z. B. "(425) 555-0187" angezeigt wird.  
@@ -150,17 +150,17 @@ void EnableMask(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszMask*  
- Eine Maskenzeichenfolge, die den Typ von Zeichen angibt, die an jede Position in der Benutzereingabe angezeigt werden können. Die Länge der *LpszInputTemplate* und *LpszMask* Parameterzeichenfolgen müssen identisch sein. Finden Sie im Abschnitt "Hinweise" Weitere Informationen zu Zeichen maskiert.  
+*lpszMask*<br/>
+[in] Eine Maskenzeichenfolge, die den Typ von Zeichen angibt, die an jede Position in der Benutzereingabe angezeigt werden können. Die Länge der *LpszInputTemplate* und *LpszMask* Parameterzeichenfolgen müssen identisch sein. Finden Sie im Abschnitt "Hinweise" Weitere Informationen zu Zeichen maskiert.  
   
- [in] *LpszInputTemplate*  
- Eine Maske Vorlagenzeichenfolge, die angibt, dass das Literal Zeichen kann an jeder Position in der Benutzereingabe angezeigt werden. Verwenden Sie den Unterstrich ("_") als zeichenplatzhalter ein. Die Länge der *LpszInputTemplate* und *LpszMask* Parameterzeichenfolgen müssen identisch sein.  
+*lpszInputTemplate*<br/>
+[in] Eine Maske Vorlagenzeichenfolge, die angibt, dass das Literal Zeichen kann an jeder Position in der Benutzereingabe angezeigt werden. Verwenden Sie den Unterstrich ("_") als zeichenplatzhalter ein. Die Länge der *LpszInputTemplate* und *LpszMask* Parameterzeichenfolgen müssen identisch sein.  
   
- [in] *ChMaskInputTemplate*  
- Ein Standardzeichen, die das Framework für jedes ungültige Zeichen in der Benutzereingabe ersetzt. Der Standardwert dieses Parameters ist Unterstrich ("_").  
+*chMaskInputTemplate*<br/>
+[in] Ein Standardzeichen, die das Framework für jedes ungültige Zeichen in der Benutzereingabe ersetzt. Der Standardwert dieses Parameters ist Unterstrich ("_").  
   
- [in] *LpszValid*  
- Eine Zeichenfolge, die einen Satz von gültigen Zeichen enthält. NULL gibt an, dass alle Zeichen gültig sind. Der Standardwert dieses Parameters ist NULL.  
+*lpszValid*<br/>
+[in] Eine Zeichenfolge, die einen Satz von gültigen Zeichen enthält. NULL gibt an, dass alle Zeichen gültig sind. Der Standardwert dieses Parameters ist NULL.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um die Maske für den MaskedEdit-Steuerelement zu erstellen. Leiten Sie eine Klasse aus der `CMFCMaskedEdit` Klasse, und überschreiben die [CMFCMaskedEdit::IsMaskedChar](#ismaskedchar) Methode, um Ihren eigenen Code für die benutzerdefinierte Maske Verarbeitung verwenden.  
@@ -186,8 +186,8 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- "True", um nur Gruppen auszuwählen; "False", um den gesamten Text auszuwählen. Der Standardwert ist "true".  
+*bAktivieren*<br/>
+[in] "True", um nur Gruppen auszuwählen; "False", um den gesamten Text auszuwählen. Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Funktion, um anzugeben, ob das MaskedEdit-Steuerelement ein Benutzer nach Gruppe oder den gesamten Text auswählen kann.  
@@ -218,8 +218,8 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- True, um das Validieren der Benutzereingabe für nur Zeichen maskiert. "False", um für die gesamte Maske zu überprüfen. Der Standardwert ist "true".  
+*bAktivieren*<br/>
+[in] True, um das Validieren der Benutzereingabe für nur Zeichen maskiert. "False", um für die gesamte Maske zu überprüfen. Der Standardwert ist "true".  
   
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
  Ruft überprüft Text aus dem MaskedEdit-Steuerelement.  
@@ -233,14 +233,14 @@ void GetWindowText(CString& rstrString) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *LpszStringBuf*  
- Ein Zeiger auf einen Puffer, der den Text von der Edit-Steuerelements empfängt.  
+*lpszStringBuf*<br/>
+[out] Ein Zeiger auf einen Puffer, der den Text von der Edit-Steuerelements empfängt.  
   
- [in] *nMaxCount*  
- Die maximale Anzahl von Zeichen empfangen.  
+*nMaxCount*<br/>
+[in] Die maximale Anzahl von Zeichen empfangen.  
   
- [out] *RstrString*  
- Ein Verweis auf das Zeichenfolgenobjekt, das den Text von der Edit-Steuerelements empfängt.  
+*rstrString*<br/>
+[out] Ein Verweis auf das Zeichenfolgenobjekt, das den Text von der Edit-Steuerelements empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die erste methodenüberladung gibt die Anzahl der Bytes der Zeichenfolge, die in kopiert wird die *LpszStringBuf* Parameterpuffer; 0, wenn es sich bei der MaskedEdit-Steuerelement keinen Text enthält.  
@@ -260,11 +260,11 @@ virtual BOOL IsMaskedChar(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *ChChar*  
- Das zu überprüfende Zeichen.  
+*chChar*<br/>
+[in] Das zu überprüfende Zeichen.  
   
- [in] *ChMaskChar*  
- Das entsprechende Zeichen aus der Maskenzeichenfolge.  
+*chMaskChar*<br/>
+[in] Das entsprechende Zeichen aus der Maskenzeichenfolge.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn die *ChChar* Parameter ist der Typ des von der zugelassenen Zeichen der *ChMaskChar* Parameter ist, andernfalls FALSE.  
@@ -280,8 +280,8 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszValid*  
- Eine Zeichenfolge, die den Satz von gültigen Eingabe-Zeichen enthält. NULL bedeutet, dass alle Zeichen gültig sind. Der Standardwert dieses Parameters ist NULL.  
+*lpszValid*<br/>
+[in] Eine Zeichenfolge, die den Satz von gültigen Eingabe-Zeichen enthält. NULL bedeutet, dass alle Zeichen gültig sind. Der Standardwert dieses Parameters ist NULL.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um eine Liste der gültigen Zeichen definieren. Wenn ein Eingabezeichen nicht in dieser Liste enthalten ist, wird es nicht vom MaskedEdit-Steuerelement akzeptiert werden.  
@@ -298,8 +298,8 @@ void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszString*  
- Verweist auf eine auf Null endende Zeichenfolge, die als Eingabeaufforderung verwendet werden.  
+*lpszString*<br/>
+[in] Verweist auf eine auf Null endende Zeichenfolge, die als Eingabeaufforderung verwendet werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird der Text des Steuerelements.  

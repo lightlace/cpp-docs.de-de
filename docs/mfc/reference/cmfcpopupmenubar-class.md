@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9dc88b6b4488115390f4e6be57fbba2caadcc01
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 02806f26f623b2f4ad7f19cd67216018da984e42
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853633"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713699"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar-Klasse
 Eine Menüleiste, die in einem Popupmenü eingebettet ist.  
@@ -140,8 +140,8 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bRecalcLayout*  
- True, um das Layout des Menübereichs Leiste Popup automatisch neu berechnet. andernfalls "false".  
+*bRecalcLayout*<br/>
+[in] True, um das Layout des Menübereichs Leiste Popup automatisch neu berechnet. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -153,8 +153,8 @@ BOOL BuildOrigItems(UINT uiMenuResID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiMenuResID*  
- Gibt an, die Menü-ID der Menüressource laden.  
+*uiMenuResID*<br/>
+[in] Gibt an, die Menü-ID der Menüressource laden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt "true" bei Erfolg oder FALSE zurück.  
@@ -190,8 +190,8 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Ein Punkt auf dem Bildschirm.  
+*Zeigen Sie*<br/>
+[in] Ein Punkt auf dem Bildschirm.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt ein Handle für die Symbolleiste, wo liegt der Punkt, sofern vorhanden, oder NULL, wenn nicht.  
@@ -257,11 +257,11 @@ virtual BOOL ImportFromMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *hMenu*  
- Klicken Sie im Menü aus der die Popup-Menüschaltflächen importiert werden soll.  
+*hMenu*<br/>
+[in] Klicken Sie im Menü aus der die Popup-Menüschaltflächen importiert werden soll.  
   
- [in] *bShowAllCommands*  
- TRUE, wenn alle Befehle in diesem Menü werden importiert, oder FALSE, wenn Sie nur selten verwendeten ausgeblendet werden können.  
+*bShowAllCommands*<br/>
+[in] TRUE, wenn alle Befehle in diesem Menü werden importiert, oder FALSE, wenn Sie nur selten verwendeten ausgeblendet werden können.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt TRUE zurück, wenn die Menüschaltflächen, nicht erfolgreich aus dem Menü, oder FALSE, wenn importiert wurden.  
@@ -325,8 +325,8 @@ BOOL LoadFromHash(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *hMenu*  
- Ein Handle für das archivierte Menü geladen werden.  
+*hMenu*<br/>
+[in] Ein Handle für das archivierte Menü geladen werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt TRUE zurück, wenn das Menü erfolgreich geladen wurde, oder FALSE, wenn nicht wird.  
@@ -364,11 +364,11 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Der nullbasierte Index der Symbolleisten-Schaltfläche, dessen Stil ist, festgelegt werden.  
+*nIndex*<br/>
+[in] Der nullbasierte Index der Symbolleisten-Schaltfläche, dessen Stil ist, festgelegt werden.  
   
- [in] *nStyle*  
- Der Stil der Schaltfläche. Finden Sie unter [ToolBar-Steuerelement-Stile](../../mfc/reference/toolbar-control-styles.md) für die Liste der Formatvorlagen für Symbolleistenschaltflächen von verfügbar.  
+*nStyle*<br/>
+[in] Der Stil der Schaltfläche. Finden Sie unter [ToolBar-Steuerelement-Stile](../../mfc/reference/toolbar-control-styles.md) für die Liste der Formatvorlagen für Symbolleistenschaltflächen von verfügbar.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -380,8 +380,8 @@ void SetOffset(int iOffset);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iOffset*  
- Die Anzahl der Zeilen an, die die Menüleiste "Popup" versetzt werden sollen.  
+*iOffset*<br/>
+[in] Die Anzahl der Zeilen an, die die Menüleiste "Popup" versetzt werden sollen.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -395,11 +395,11 @@ void StartPopupMenuTimer(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pMenuButton*  
- Zeiger auf die Schaltfläche für das der verzögerungszeitgeber festgelegt.  
+*pMenuButton*<br/>
+[in] Zeiger auf die Schaltfläche für das der verzögerungszeitgeber festgelegt.  
   
- [in] *nDelayFactor*  
- Verzögerung der Faktor, gleich mit mindestens einem durch die standardmäßige Menü-Verzögerungszeit (in der Regel zwischen einer halben Sekunde und fünf Sekunden) multipliziert.  
+*nDelayFactor*<br/>
+[in] Verzögerung der Faktor, gleich mit mindestens einem durch die standardmäßige Menü-Verzögerungszeit (in der Regel zwischen einer halben Sekunde und fünf Sekunden) multipliziert.  
   
 ### <a name="remarks"></a>Hinweise  
   

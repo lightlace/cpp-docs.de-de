@@ -1,5 +1,5 @@
 ---
-title: -FI (Name Forced Include-Datei) | Microsoft Docs
+title: -FI (Name der erzwungenen Includedatei) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,41 +22,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b85bfaebe09203f7aad76c24e8f8fbccfe009d80
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa06eaf8f16a80b849ce911468fc0001366b9e29
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373373"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725464"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (Name der expliziten Includedatei)
-Bewirkt, dass den Präprozessor verarbeitet den angegebenen Header-Datei.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-/FI[ ]pathname  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Option hat dieselbe Wirkung wie das Angeben der das mit doppelten Anführungszeichen in eine `#include` Richtlinie in der ersten Zeile von jeder Quellcodedatei, die in der Befehlszeile angegeben, in der CL-Umgebungsvariablen oder in einer Befehlsdatei angegeben. Bei Verwendung mehrerer **/Fi** sind Optionen, die Dateien enthalten, in der Reihenfolge von CL verarbeitet werden.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
-  
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
-  
-2.  Klicken Sie auf den Ordner **C/C++** .  
-  
-3.  Klicken Sie auf die **erweitert** Eigenschaftenseite.  
-  
-4.  Ändern der **Force enthält** Eigenschaft.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
-  
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForcedIncludeFiles%2A>.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Ausgabedatei (/ F) Optionen](../../build/reference/output-file-f-options.md)   
- [Compileroptionen](../../build/reference/compiler-options.md)   
- [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)   
- [Festlegen des Pfadnamens](../../build/reference/specifying-the-pathname.md)
+
+Weist den Präprozessor zum Verarbeiten der angegebenen Header-Datei.
+
+## <a name="syntax"></a>Syntax
+
+```
+/FI[ ]pathname
+```
+
+## <a name="remarks"></a>Hinweise
+
+Diese Option hat dieselbe Wirkung wie die Datei angeben, in doppelte Anführungszeichen in eine `#include` -Direktive in der ersten Zeile von jeder Quelldatei, die in der Befehlszeile oder in einer Befehlsdatei in der CL-Umgebungsvariablen angegeben. Bei Verwendung mehrerer **/Fi** Optionen, die Dateien befinden sich in der Reihenfolge von CL verarbeitet werden.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
+
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+
+1. Klicken Sie auf den Ordner **C/C++** .
+
+1. Klicken Sie auf die **erweitert** Eigenschaftenseite.
+
+1. Ändern der **Includes erzwingen** Eigenschaft.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
+
+- Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForcedIncludeFiles%2A>.
+
+## <a name="see-also"></a>Siehe auch
+
+[Ausgabedatei (/ F) Optionen](../../build/reference/output-file-f-options.md)
+[Compileroptionen](../../build/reference/compiler-options.md)<br/>
+[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
+[Festlegen des Pfadnamens](../../build/reference/specifying-the-pathname.md)

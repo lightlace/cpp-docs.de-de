@@ -1,5 +1,5 @@
 ---
-title: Exitcodes von NMAKE | Microsoft Docs
+title: Exitcodes von NMAKE | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,26 +15,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e71442e1e36dbd69afa65051cbf08f403bf8b31
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b5a593e38efb5230630ed01e65f4bfb1f2ba92a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367094"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722617"
 ---
 # <a name="exit-codes-from-nmake"></a>Exitcodes von NMAKE
-Die folgenden Exitcodes von NMAKE zurückgegeben:  
-  
-|Code|Bedeutung|  
-|----------|-------------|  
-|0|Kein Fehler (möglicherweise eine Warnung)|  
-|1|Unvollständige Build (ausgegeben, wenn/k verwendet wird)|  
-|2|Programmfehler, möglicherweise aufgrund eines der folgenden:|  
-||– Ein Syntaxfehler in Makefiles|  
-||-Ein Fehler oder Beendigung Statuscode von einem Befehl|  
-||-Eine Unterbrechung durch den Benutzer|  
-|4|Systemfehler:: nicht genügend Arbeitsspeicher|  
-|255|Ziel ist nicht aktuell (wird nur bei der/q / ausgegeben)|  
-  
-## <a name="see-also"></a>Siehe auch  
- [Ausführen von NMAKE](../build/running-nmake.md)
+
+NMAKE: Gibt die folgenden Exitcodes zurück:
+
+|Code|Bedeutung|
+|----------|-------------|
+|0|Kein Fehler (möglicherweise eine Warnung)|
+|1|Unvollständige Build (wird nur bei der/k ausgegeben)|
+|2|Programmfehler, möglicherweise aufgrund einer der folgenden:|
+||– Ein Syntaxfehler in das makefile|
+||– Ein Code Fehler- oder Beenden eines Befehls|
+||-Eine Unterbrechung durch den Benutzer|
+|4|Systemfehler: nicht genügend Arbeitsspeicher|
+|255|Ziel ist nicht auf dem neuesten Stand (wird nur bei der/q / ausgegeben)|
+
+## <a name="see-also"></a>Siehe auch
+
+[Ausführen von NMAKE](../build/running-nmake.md)

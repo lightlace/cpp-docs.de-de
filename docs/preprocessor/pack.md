@@ -1,7 +1,7 @@
 ---
 title: Pack | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bcbd8dcc64d26f124a7b6443a79f01aa4329414
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d75b62716066d1df94b0072b00254dc96ec450df
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207491"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720615"
 ---
 # <a name="pack"></a>pack
 Gibt die Komprimierungsausrichtung für Struktur, Union und Klassenmember an.  
@@ -34,29 +34,31 @@ Gibt die Komprimierungsausrichtung für Struktur, Union und Klassenmember an.
 #pragma pack( [ show ] | [ push | pop ] [, identifier ] , n  )  
 ```  
   
+### <a name="parameters"></a>Parameter
+
+**Anzeigen**<br/>
+(Optional) Zeigt den aktuellen Bytewert für die verpackungsausrichtung an. Der Wert wird von einer Warnmeldung angezeigt.  
+
+**push**<br/>
+(Optional) Schiebt den aktuellen verpackungsausrichtungswert auf dem internen compilerstapel ab und legt den aktuellen verpackungsausrichtungswert auf *n*. Wenn *n* nicht angegeben ist, den aktuellen verpackungsausrichtungswert wird mithilfe von Push übertragen.  
+  
+**pop**<br/>
+(Optional) Entfernt den Datensatz von der obersten Position des internen Compilerstapels. Wenn *n* nicht mit angegeben **pop**, dann ist der Paketwert, der mit dem resultierenden Datensatz oben auf dem Stapel verknüpft ist die neue verpackungsausrichtungswert. Wenn *n* angegeben ist, z. B. `#pragma pack(pop, 16)`, *n* der neue verpackungsausrichtungswert. Wenn Sie per POP auslesen *Bezeichner*, z. B. `#pragma pack(pop, r1)`, und klicken Sie dann alle Datensätze auf dem Stapel per POP bis zu dem Datensatz ausgelesen werden, die *Bezeichner* gefunden wird. Dieser Datensatz wird per pop ausgelesen, und der Paketwert, der mit dem resultierenden Datensatz oben auf dem Stapel verknüpft ist, ist der neue Verpackungsausrichtungswert. Wenn Sie per POP auslesen ein *Bezeichner* , die in keinem Datensatz auf dem Stapel nicht gefunden wird und dann die **pop** wird ignoriert.  
+  
+*identifier*<br/>
+(Optional) Bei Verwendung mit *Push*, den Datensatz im internen compilerstapel ein Name zugewiesen. Bei Verwendung mit **pop**, Datensätze vom internen Stapel bis *Bezeichner* wird entfernt; Wenn *Bezeichner* wurde nicht gefunden im internen Stapel, nichts per pop ausgelesen wird.  
+  
+*n*<br/>
+(Optional) Gibt den Wert in Bytes, die für die Komprimierung verwendet werden. Wenn die Compileroption [/Zp](../build/reference/zp-struct-member-alignment.md) ist nicht festgelegt, für das Modul, der Standardwert für *n* ist 8. Gültige Werte sind 1, 2, 4, 8 und 16. Die Ausrichtung eines Elements werden an einer Grenze, die entweder ein Vielfaches von *n* oder ein Vielfaches der Größe des Members, welcher Wert kleiner ist.  
+  
+`#pragma pack(pop, identifier, n)` ist nicht definiert.  
+  
 ## <a name="remarks"></a>Hinweise  
 
 Das Packen einer Klasse entspricht dem Platzieren ihrer Member direkt nacheinander im Arbeitsspeicher, was bedeutet kann, dass einige oder alle Member an einer Grenze, die kleiner als die standardmäßige Ausrichtung der Zielarchitektur ist, ausgerichtet werden können. **Pack** Steuerung auf der datendeklarationsebene. Dies unterscheidet sich von der Compileroption [/Zp](../build/reference/zp-struct-member-alignment.md), die nur modulebenensteuerung bereitstellt. **Pack** wirksam bei der ersten **Struktur**, **Union**, oder **Klasse** Deklaration, nachdem das Pragma angezeigt wird. **Pack** hat keine Auswirkungen auf Definitionen. Aufrufen von **Pack** ohne Argumente legt *n* den Wert in der Compileroption `/Zp`. Wenn die Compileroption nicht festgelegt ist, ist der Standardwert 8.  
   
-Wenn Sie die Ausrichtung einer Struktur ändern, belegt sie vielleicht nicht so viel Platz im Arbeitsspeicher, aber Sie werden eine Abnahme der Leistung feststellen oder sogar eine von der Hardware generierte Ausnahme für einen nicht ausgerichteten Zugriff erhalten.  Sie können dieses Ausnahmeverhalten mithilfe ändern [SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621).  
-  
-*anzeigen* (optional)  
-Zeigt den aktuellen Bytewert für die Verpackungsausrichtung an. Der Wert wird von einer Warnmeldung angezeigt.  
-  
-*Push* (optional)  
-Schiebt den aktuellen verpackungsausrichtungswert auf dem internen compilerstapel ab und legt den aktuellen verpackungsausrichtungswert auf *n*. Wenn *n* nicht angegeben ist, den aktuellen verpackungsausrichtungswert wird mithilfe von Push übertragen.  
-  
-*POP* (optional)  
-Entfernt den Datensatz von der obersten Position des internen Compilerstapels. Wenn *n* nicht mit angegeben *pop*, dann ist der Paketwert, der mit dem resultierenden Datensatz oben auf dem Stapel verknüpft ist die neue verpackungsausrichtungswert. Wenn *n* angegeben ist, z. B. `#pragma pack(pop, 16)`, *n* der neue verpackungsausrichtungswert. Wenn Sie per POP auslesen *Bezeichner*, z. B. `#pragma pack(pop, r1)`, und klicken Sie dann alle Datensätze auf dem Stapel per POP bis zu dem Datensatz ausgelesen werden, die *Bezeichner* gefunden wird. Dieser Datensatz wird per pop ausgelesen, und der Paketwert, der mit dem resultierenden Datensatz oben auf dem Stapel verknüpft ist, ist der neue Verpackungsausrichtungswert. Wenn Sie per POP auslesen ein *Bezeichner* , die in keinem Datensatz auf dem Stapel nicht gefunden wird und dann die *pop* wird ignoriert.  
-  
-*Bezeichner* (optional)  
-Bei Verwendung mit *Push*, den Datensatz im internen compilerstapel ein Name zugewiesen. Bei Verwendung mit *pop*, Datensätze vom internen Stapel bis *Bezeichner* wird entfernt; Wenn *Bezeichner* wurde nicht gefunden im internen Stapel, nichts per pop ausgelesen wird.  
-  
-*n* (optional)  
-Gibt den Wert in Bytes an, der für die Komprimierung verwendet werden soll. Wenn die Compileroption [/Zp](../build/reference/zp-struct-member-alignment.md) ist nicht festgelegt, für das Modul, der Standardwert für *n* ist 8. Gültige Werte sind 1, 2, 4, 8 und 16. Die Ausrichtung eines Elements werden an einer Grenze, die entweder ein Vielfaches von *n* oder ein Vielfaches der Größe des Members, welcher Wert kleiner ist.  
-  
-`#pragma pack(pop, identifier, n)` ist nicht definiert.  
-  
+Wenn Sie die Ausrichtung einer Struktur ändern, belegt sie vielleicht nicht so viel Platz im Arbeitsspeicher, aber Sie werden eine Abnahme der Leistung feststellen oder sogar eine von der Hardware generierte Ausnahme für einen nicht ausgerichteten Zugriff erhalten.  Sie können dieses Ausnahmeverhalten mithilfe ändern [SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621).
+
 Weitere Informationen zur Änderung der Ausrichtung finden Sie unter folgenden Themen:  
   
 - [__alignof](../cpp/alignof-operator.md)  
@@ -67,8 +69,8 @@ Weitere Informationen zur Änderung der Ausrichtung finden Sie unter folgenden T
   
 - [Beispiele für die Strukturausrichtung](../build/examples-of-structure-alignment.md) (X64 bestimmte)  
   
-    > [!WARNING]
-    > Beachten Sie, dass Sie in Visual Studio 2015 und höher die standardmäßigen „alignas“- und „alignof“-Operatoren verwenden können, die im Gegensatz zu `__alignof` und `declspec( align )` über Compiler portiert werden. Der C++-Standard behandelt nicht packen, sodass Sie weiterhin verwenden müssen **Pack** (oder die entsprechende Erweiterung auf anderen Compilern) um Ausrichtungen, die kleiner als die Wortgröße der Zielarchitektur anzugeben.  
+   > [!WARNING]
+   > Beachten Sie, dass Sie in Visual Studio 2015 und höher die standardmäßigen „alignas“- und „alignof“-Operatoren verwenden können, die im Gegensatz zu `__alignof` und `declspec( align )` über Compiler portiert werden. Der C++-Standard behandelt nicht packen, sodass Sie weiterhin verwenden müssen **Pack** (oder die entsprechende Erweiterung auf anderen Compilern) um Ausrichtungen, die kleiner als die Wortgröße der Zielarchitektur anzugeben.  
   
 ## <a name="examples"></a>Beispiele
 

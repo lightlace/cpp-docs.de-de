@@ -16,32 +16,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3629b65b8f6373b20fc35dd6d90133d7377e674
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cb248442a1d687b98e8e97c8846d07a50e484564
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766560"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717508"
 ---
 # <a name="interfaces-atl-control-wizard"></a>Schnittstellen, ATL-Steuerelement-Assistent
 
 Auf dieser Seite des Assistenten identifiziert, die Schnittstellen, die das Steuerelement unterstützt wird. Standardmäßig sind die unterstützten Schnittstellen in der Regel von den meisten Containern verwendet werden.
 
 > [!NOTE]
->  Wenn Sie ausgewählt haben **nur minimale Kontrolle** auf die [Optionen](../../atl/reference/options-atl-control-wizard.md) Registerkarte keine Schnittstellen angezeigt wird, wird standardmäßig in der **unterstützte** Listenfeld.
+> Wenn Sie ausgewählt haben **nur minimale Kontrolle** auf die [Optionen](../../atl/reference/options-atl-control-wizard.md) Registerkarte keine Schnittstellen angezeigt wird, wird standardmäßig in der **unterstützte** Listenfeld.
 
-**Nicht unterstützt**  
-Gibt an, die verfügbaren Schnittstellen, die derzeit nicht für das Steuerelement unterstützt werden.
+- **Nicht unterstützt**
 
-**Unterstützt**  
-Gibt an, die Schnittstellen, die derzeit für das Steuerelement unterstützt werden.
+   Gibt an, die verfügbaren Schnittstellen, die derzeit nicht für das Steuerelement unterstützt werden.
 
-|Schaltfläche „Übertragen“|Beschreibung|
-|---------------------|-----------------|
-|**>**|Hinzugefügt, die **unterstützte** Name der Schnittstelle, die derzeit im ausgewählten Liste der **nicht unterstützt** Liste.|
-|**>>**|Hinzugefügt, die **unterstützte** Liste alle Schnittstellennamen zur Verfügung, in der **nicht unterstützt** Liste.|
-|**<**|Entfernt die derzeit im ausgewählten Schnittstelle die **unterstützte** Liste.|
-|**<<**|Entfernt alle Schnittstellennamen, die derzeit in aufgeführt sind die **unterstützte** Liste.|
+- **Unterstützt**
+
+   Gibt an, die Schnittstellen, die derzeit für das Steuerelement unterstützt werden.
+
+   |Schaltfläche „Übertragen“|Beschreibung|
+   |---------------------|-----------------|
+   |**>**|Hinzugefügt, die **unterstützte** Name der Schnittstelle, die derzeit im ausgewählten Liste der **nicht unterstützt** Liste.|
+   |**>>**|Hinzugefügt, die **unterstützte** Liste alle Schnittstellennamen zur Verfügung, in der **nicht unterstützt** Liste.|
+   |**\<**|Entfernt die derzeit im ausgewählten Schnittstelle die **unterstützte** Liste.|
+   |**\<\<**|Entfernt alle Schnittstellennamen, die derzeit in aufgeführt sind die **unterstützte** Liste.|
 
 ## <a name="see-also"></a>Siehe auch
 

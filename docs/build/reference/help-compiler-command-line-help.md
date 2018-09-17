@@ -1,5 +1,5 @@
 ---
-title: -HELP (Compiler-Befehlszeilenhilfe) | Microsoft Docs
+title: -HELP (Compiler-Befehlszeilenhilfe) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,34 +22,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40246db2d70d69fc2dab576ef5c7da9c7829ab80
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc21ac544a7f30dd193ca571fcd82e1078fb44dc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371384"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713231"
 ---
 # <a name="help-compiler-command-line-help"></a>/HELP (Compiler-Befehlszeilenhilfe)
-Zeigt eine Liste der Compileroptionen in die Standardausgabe.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-/HELP  
-/help  
-/?  
-```  
-  
-## <a name="remarks"></a>Hinweise  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
-  
--   Diese Compileroption sollte nur von der Befehlszeile aus zugegriffen werden.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
-  
--   Diese Compileroption kann programmgesteuert geändert werden.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Compileroptionen](../../build/reference/compiler-options.md)   
- [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+
+Zeigt eine Liste der Compileroptionen an die Standardausgabe.
+
+## <a name="syntax"></a>Syntax
+
+```
+/HELP
+/help
+/?
+```
+
+## <a name="remarks"></a>Hinweise
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
+
+- Diese Compileroption sollte nur über die Befehlszeile zugegriffen werden.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
+
+- Diese Compileroption kann nicht programmgesteuert geändert werden.
+
+## <a name="see-also"></a>Siehe auch
+
+[Compileroptionen](../../build/reference/compiler-options.md)<br/>
+[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

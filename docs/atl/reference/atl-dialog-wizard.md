@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a6854a3b11d5c5850d790e749789e91a7cb986a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 8a10d97d366203da8addbff45a436094abc384cb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110036"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710124"
 ---
 # <a name="atl-dialog-wizard"></a>ATL-Dialogfeld-Assistent
 
@@ -32,21 +32,25 @@ Der Assistent erstellt eine Dialogfeldressource Standardwert **OK** und **Abbrec
 
 Der Assistent fügt die Header-Datei eine [meldungszuordnung](../../atl/message-maps-atl.md) und Deklarationen für die Behandlung von Standard auf Ereignisse. Finden Sie unter [Implementieren eines Dialogfelds](../../atl/implementing-a-dialog-box.md) für Weitere Informationen über ATL-Dialogfelder.
 
-**Kurzname**  
-Legt fest, den abgekürzten Namen für das ATL-Dialogfeld-Objekt. Der Name, den Sie angeben, bestimmt den Klassennamen und den Dateinamen (cpp- und .h), wenn Sie die Felder einzeln ändern.
+- **Kurzname**
 
-**Klasse**  
-Legt den Namen der Klasse erstellt werden. Dieser Name basiert auf den Namen, die Sie, in angeben **Kurznamen**ist 'C', das typische Präfix für einen Klassennamen vorangestellt.
+   Legt fest, den abgekürzten Namen für das ATL-Dialogfeld-Objekt. Der Name, den Sie angeben, bestimmt den Klassennamen und den Dateinamen (cpp- und .h), wenn Sie die Felder einzeln ändern.
 
-**H-Datei**  
-Legt den Namen der Headerdatei für die neue Klasse des Objekts fest. Standardmäßig basiert auf den Namen, die Sie, in angeben diesen Namen **Kurznamen**. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um den Dateinamen am gewünschten Speicherort zu speichern oder um die Klassendeklaration an eine vorhandene Datei anzufügen. Wenn Sie eine vorhandene Datei auswählen, speichert der Assistent diese nicht am ausgewählten Speicherort, bis Sie im Assistenten auf **Fertig stellen** klicken.
+- **Klasse**
 
-Der Assistent überschreibt Dateien nicht. Wenn Sie den Namen einer vorhandenen Datei auswählen, fordert der Assistent Sie dazu auf, anzugeben, ob die Klassendeklaration an die Inhalte der Datei angefügt werden sollen, wenn Sie auf **Fertig stellen** klicken. Klicken Sie auf **Ja**, um die Datei anzufügen. Klicken Sie auf **Nein**, um zum Assistenten zurückzukehren und einen anderen Dateinamen anzugeben.
+   Legt den Namen der Klasse erstellt werden. Dieser Name basiert auf den Namen, die Sie, in angeben **Kurznamen**ist 'C', das typische Präfix für einen Klassennamen vorangestellt.
 
-**CPP-Datei**  
-Legt den Namen der Implementierungsdatei für die neue Klasse des Objekts fest. Standardmäßig basiert auf den Namen, die Sie, in angeben diesen Namen **Kurznamen**. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um den Dateinamen am gewünschten Speicherort zu speichern. Die Datei wird nicht am ausgewählten Speicherort gespeichert, bis Sie im Assistenten auf **Fertig stellen** klicken.
+- **H-Datei**
 
-Der Assistent überschreibt Dateien nicht. Wenn Sie den Namen einer vorhandenen Datei auswählen, fordert der Assistent Sie dazu auf, anzugeben, ob die Klassenimplementierung an die Inhalte der Datei angefügt werden sollen, wenn Sie auf **Fertig stellen** klicken. Klicken Sie auf **Ja**, um die Datei anzufügen. Klicken Sie auf **Nein**, um zum Assistenten zurückzukehren und einen anderen Dateinamen anzugeben.
+   Legt den Namen der Headerdatei für die neue Klasse des Objekts fest. Standardmäßig basiert auf den Namen, die Sie, in angeben diesen Namen **Kurznamen**. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um den Dateinamen am gewünschten Speicherort zu speichern oder um die Klassendeklaration an eine vorhandene Datei anzufügen. Wenn Sie eine vorhandene Datei auswählen, speichert der Assistent diese nicht am ausgewählten Speicherort, bis Sie im Assistenten auf **Fertig stellen** klicken.
+
+   Der Assistent überschreibt Dateien nicht. Wenn Sie den Namen einer vorhandenen Datei auswählen, fordert der Assistent Sie dazu auf, anzugeben, ob die Klassendeklaration an die Inhalte der Datei angefügt werden sollen, wenn Sie auf **Fertig stellen** klicken. Klicken Sie auf **Ja**, um die Datei anzufügen. Klicken Sie auf **Nein**, um zum Assistenten zurückzukehren und einen anderen Dateinamen anzugeben.
+
+- **CPP-Datei**
+
+   Legt den Namen der Implementierungsdatei für die neue Klasse des Objekts fest. Standardmäßig basiert auf den Namen, die Sie, in angeben diesen Namen **Kurznamen**. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um den Dateinamen am gewünschten Speicherort zu speichern. Die Datei wird nicht am ausgewählten Speicherort gespeichert, bis Sie im Assistenten auf **Fertig stellen** klicken.
+
+   Der Assistent überschreibt Dateien nicht. Wenn Sie den Namen einer vorhandenen Datei auswählen, fordert der Assistent Sie dazu auf, anzugeben, ob die Klassenimplementierung an die Inhalte der Datei angefügt werden sollen, wenn Sie auf **Fertig stellen** klicken. Klicken Sie auf **Ja**, um die Datei anzufügen. Klicken Sie auf **Nein**, um zum Assistenten zurückzukehren und einen anderen Dateinamen anzugeben.
 
 ## <a name="see-also"></a>Siehe auch
 

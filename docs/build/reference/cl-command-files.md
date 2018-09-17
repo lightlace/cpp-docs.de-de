@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a1e2b25330bd326ac32dbe1c1b8abcc37c89d09
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 8458462304a9b739c61997505724d21bb56763f6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894758"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708668"
 ---
 # <a name="cl-command-files"></a>CL-Befehlsdateien
 
@@ -37,25 +37,25 @@ Eine Befehlsdatei wird angegeben, indem ein at-Zeichen (**\@**) gefolgt von eine
 
 Beispielsweise in einer Datei mit dem Namen RESP ist der folgende Befehl aus:
 
-```  
+```
 /Og /link LIBC.LIB
-```  
+```
 
 und geben Sie den folgenden CL-Befehl:
 
-```  
+```
 CL /Ob2 @RESP MYAPP.C
-```  
+```
 
 der Befehl für CL lautet wie folgt aus:
 
-```  
+```
 CL /Ob2 /Og MYAPP.C /link LIBC.LIB
-```  
+```
 
 Beachten Sie, dass die Befehlszeile und die Befehlsdatei Befehle effektiv kombiniert werden.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
 [Compileroptionen](../../build/reference/compiler-options.md)

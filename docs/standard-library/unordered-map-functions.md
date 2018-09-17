@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::swap (unordered_map/multimap)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76210e9ae860f8a7de0f22db2b7108e90e09e5be
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3a6d8a925f493a8299cf1afd8e851456277a68e9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965551"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715519"
 ---
 # <a name="ltunorderedmapgt-functions"></a>&lt;unordered_map&gt;-Funktionen
 
@@ -42,26 +42,26 @@ void swap(
 
 ### <a name="parameters"></a>Parameter
 
-*Key*  
- Der Schlüsseltyp.
+*Key*<br/>
+Der Schlüsseltyp.
 
-*Ty*  
- Der zugeordnete Typ.
+*Ty*<br/>
+Der zugeordnete Typ.
 
-*Hash*  
- Der Hashfunktionsobjekttyp.
+*Hash*<br/>
+Der Hashfunktionsobjekttyp.
 
-*Pred*  
- Der Gleichheitsvergleich-Funktionsobjekttyp.
+*Pred*<br/>
+Der Gleichheitsvergleich-Funktionsobjekttyp.
 
-*Alloc*  
- Die Zuweisungsklasse.
+*Alloc*<br/>
+Die Zuweisungsklasse.
 
-*left*  
- Der erste zu tauschende Container.
+*left*<br/>
+Der erste zu tauschende Container.
 
-*right*  
- Der zweite zu tauschende Container.
+*right*<br/>
+Der zweite zu tauschende Container.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -136,26 +136,26 @@ void swap(
 
 ### <a name="parameters"></a>Parameter
 
-*Key*  
- Der Schlüsseltyp.
+*Key*<br/>
+Der Schlüsseltyp.
 
-*Ty*  
- Der zugeordnete Typ.
+*Ty*<br/>
+Der zugeordnete Typ.
 
-*Hash*  
- Der Hashfunktionsobjekttyp.
+*Hash*<br/>
+Der Hashfunktionsobjekttyp.
 
-*Pred*  
- Der Gleichheitsvergleich-Funktionsobjekttyp.
+*Pred*<br/>
+Der Gleichheitsvergleich-Funktionsobjekttyp.
 
-*Alloc*  
- Die Zuweisungsklasse.
+*Alloc*<br/>
+Die Zuweisungsklasse.
 
-*left*  
- Der erste zu tauschende Container.
+*left*<br/>
+Der erste zu tauschende Container.
 
-*right*  
- Der zweite zu tauschende Container.
+*right*<br/>
+Der zweite zu tauschende Container.
 
 ### <a name="remarks"></a>Hinweise
 

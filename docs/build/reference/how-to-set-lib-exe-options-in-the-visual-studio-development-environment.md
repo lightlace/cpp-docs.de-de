@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Festlegen der LIB. EXE-Optionen in der Visual Studio-Entwicklungsumgebung | Microsoft Docs'
+title: 'Vorgehensweise: Festlegen der LIB. Optionen für die EXE-Datei in der Visual Studio-Entwicklungsumgebung | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,23 +14,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38b04fb40c62efdf5a8dd0ae3e3d8b6b4529b017
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8319ac7a40af4b43248c402306040c15f04a225
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372359"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707214"
 ---
 # <a name="how-to-set-libexe-options-in-the-visual-studio-development-environment"></a>Gewusst wie: Festlegen der LIB.EXE-Optionen in der Visual Studio-Entwicklungsumgebung
-### <a name="to-set-libexe-options-in-the-visual-studio-development-environment"></a>LIB festlegen. EXE-Optionen in der Visual Studio-Entwicklungsumgebung  
-  
-1.  Zugriff auf das Projekt [Eigenschaftenseite](../../ide/working-with-project-properties.md) (Dialogfeld).  
-  
-2.  Wählen Sie ein statisches Bibliotheksprojekt active der **Bibliothekar** Knoten.  
-  
-3.  Wählen Sie die allgemeine oder die Eingabe/Ausgabe-Eigenschaftenseite.  
-  
-4.  Ändern Sie die Eigenschaften nach Bedarf.  
-  
-## <a name="see-also"></a>Siehe auch  
- [LIB-Referenz](../../build/reference/lib-reference.md)
+
+### <a name="to-set-libexe-options-in-the-visual-studio-development-environment"></a>LIB festlegen. Optionen für die EXE-Datei in der Visual Studio-Entwicklungsumgebung
+
+1. Zugriff auf des Projekts des [Eigenschaftenseite](../../ide/working-with-project-properties.md) Dialogfeld.
+
+1. Wählen Sie bei einem statischen Bibliotheksprojekt active der **Bibliothekar** Knoten.
+
+1. Wählen Sie die allgemeine oder Eingabe/Ausgabe-Eigenschaftenseite.
+
+1. Ändern Sie die Eigenschaften nach Bedarf.
+
+## <a name="see-also"></a>Siehe auch
+
+[LIB-Referenz](../../build/reference/lib-reference.md)

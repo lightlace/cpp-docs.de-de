@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e76bd39477c92d075f1dba8cf14b912c0f616e0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 571885410363aee55d15e68b81ba4fd9e2b8e54b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955909"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705587"
 ---
 # <a name="badalloc-class"></a>bad_alloc-Klasse
 
@@ -80,4 +80,5 @@ bad allocation
 
 ## <a name="see-also"></a>Siehe auch
 
-[Exception-Klasse](../standard-library/exception-class.md) [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[exception-Klasse](../standard-library/exception-class.md)<br/>
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

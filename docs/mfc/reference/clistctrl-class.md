@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 094cf61c2535ef40991d2ab6ab9a1bc4a9dff014
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f1e869fd70fb8f2d0b52d69dedb555c600fd390b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684956"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726816"
 ---
 # <a name="clistctrl-class"></a>CListCtrl-Klasse
 Kapselt die Funktionalität eines Listenansichtsteuerelements, das eine Auflistung von Elementen anzeigt, von denen jedes aus einem Symbol (aus einer Bildliste) und einer Bezeichnung besteht.  
@@ -1276,8 +1276,8 @@ BOOL GetGroupInfoByIndex(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *iIndex*|Nullbasierte Index der einer Gruppe.|  
-|[out] *pGroup*|Zeiger auf ein [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) -Struktur, die Informationen zur angegebenen Gruppe erhält die *iIndex* Parameter.<br /><br /> Der Aufrufer ist verantwortlich für die die Elemente der Initialisierung der [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) Struktur. Festlegen der `cbSize` Element die Größe der Struktur und die Flags der der `mask` Member an der abzurufenden Informationen.|  
+|*iIndex*|[in] Nullbasierte Index der einer Gruppe.|  
+|*pGroup*|[out] Zeiger auf ein [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) -Struktur, die Informationen zur angegebenen Gruppe erhält die *iIndex* Parameter.<br /><br /> Der Aufrufer ist verantwortlich für die die Elemente der Initialisierung der [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) Struktur. Festlegen der `cbSize` Element die Größe der Struktur und die Flags der der `mask` Member an der abzurufenden Informationen.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -1353,9 +1353,9 @@ BOOL GetGroupRect(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *iGroupId*|Gibt eine Gruppe.|  
-|[in, out] *LpRect*|Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Wenn diese Methode erfolgreich ist, erhält die Struktur die Rechteck-Koordinaten der Gruppe, die angegebenen *iGroupId*.|  
-|[in] *iCoords*|Gibt die Koordinaten für das Rechteck abgerufen. Verwenden Sie eine der folgenden Werte:<br /><br /> -LVGGR_GROUP - (Standard)-Koordinaten der gesamten Gruppe "Erweitert".<br />-LVGGR_HEADER - Koordinaten der nur den Header (reduzierten Gruppe).<br />-LVGGR_SUBSETLINK - Koordinaten der nur die Teilmenge Hyperlink (Markup Teilmenge).|  
+|*iGroupId*|[in] Gibt eine Gruppe.|  
+|*lpRect*|[in, out] Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Wenn diese Methode erfolgreich ist, erhält die Struktur die Rechteck-Koordinaten der Gruppe, die angegebenen *iGroupId*.|  
+|*iCoords*|[in] Gibt die Koordinaten für das Rechteck abgerufen. Verwenden Sie eine der folgenden Werte:<br /><br /> -LVGGR_GROUP - (Standard)-Koordinaten der gesamten Gruppe "Erweitert".<br />-LVGGR_HEADER - Koordinaten der nur den Header (reduzierten Gruppe).<br />-LVGGR_SUBSETLINK - Koordinaten der nur die Teilmenge Hyperlink (Markup Teilmenge).|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -1406,8 +1406,8 @@ UINT GetGroupState(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *iGroupId*|Nullbasierte Index der einer Gruppe.|  
-|[in] *DwMask*|Eine Maske, der angibt, den Statuswert, für die angegebene Gruppe abgerufen. Weitere Informationen finden Sie unter den `mask` Mitglied der [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) Struktur.|  
+|*iGroupId*|[in] Nullbasierte Index der einer Gruppe.|  
+|*dwMask*|[in] Eine Maske, der angibt, den Statuswert, für die angegebene Gruppe abgerufen. Weitere Informationen finden Sie unter den `mask` Mitglied der [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) Struktur.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der angeforderte Zustand für die angegebene Gruppe oder 0, wenn die Gruppe nicht gefunden werden kann.  
@@ -1660,10 +1660,10 @@ BOOL GetItemIndexRect(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *pItemIndex*|Zeiger auf ein [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur für das übergeordnete Element des Unterelements ab.<br /><br /> Der Aufrufer ist verantwortlich für das zuordnen und Festlegen der Member, der die [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur. Dieser Parameter darf nicht NULL sein.|  
-|[in] *der iColumn*|Nullbasierte Index der einer Spalte im Steuerelement.|  
-|[in] *RectType*|Der Teil des Listenansicht-Unterelements für die das umschließende Rechteck abgerufen wird. Geben Sie einen der folgenden Werte an:<br /><br /> LVIR_BOUNDS - gibt das umschließende Rechteck des gesamten Unterelements, einschließlich das Symbol und die Bezeichnung zurück.<br /><br /> LVIR_ICON - gibt das umschließende Rechteck des Symbols oder des Minisymbols des Unterelements ab.<br /><br /> LVIR_LABEL - gibt das umschließende Rechteck für den Text des Unterelements.|  
-|[out] *pRect*|Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die Informationen über das umschließende Rechteck des Unterelements empfängt.<br /><br /> Der Aufrufer ist verantwortlich für die Zuordnung der [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Dieser Parameter darf nicht NULL sein.|  
+|*pItemIndex*|[in] Zeiger auf ein [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur für das übergeordnete Element des Unterelements ab.<br /><br /> Der Aufrufer ist verantwortlich für das zuordnen und Festlegen der Member, der die [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur. Dieser Parameter darf nicht NULL sein.|  
+|*der iColumn*|[in] Nullbasierte Index der einer Spalte im Steuerelement.|  
+|*rectType*|[in] Der Teil des Listenansicht-Unterelements für die das umschließende Rechteck abgerufen wird. Geben Sie einen der folgenden Werte an:<br /><br /> LVIR_BOUNDS - gibt das umschließende Rechteck des gesamten Unterelements, einschließlich das Symbol und die Bezeichnung zurück.<br /><br /> LVIR_ICON - gibt das umschließende Rechteck des Symbols oder des Minisymbols des Unterelements ab.<br /><br /> LVIR_LABEL - gibt das umschließende Rechteck für den Text des Unterelements.|  
+|*pRect*|[out] Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die Informationen über das umschließende Rechteck des Unterelements empfängt.<br /><br /> Der Aufrufer ist verantwortlich für die Zuordnung der [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Dieser Parameter darf nicht NULL sein.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -1821,9 +1821,9 @@ BOOL GetItemSpacing(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *fSmall*|Ansicht für die der den Abstand des Elements abgerufen werden soll. Geben Sie "true", für kleine Symbole angezeigt, oder "false" für Symbole angezeigt.|  
-|[out] *PnHorzSpacing*|Enthält den horizontalen Abstand zwischen Elementen an.|  
-|[out] *PnVertSpacing*|Enthält den vertikalen Abstand zwischen Elementen an.|  
+|*fSmall*|[in] Ansicht für die der den Abstand des Elements abgerufen werden soll. Geben Sie "true", für kleine Symbole angezeigt, oder "false" für Symbole angezeigt.|  
+|*pnHorzSpacing*|[out] Enthält den horizontalen Abstand zwischen Elementen an.|  
+|*pnVertSpacing*|[out] Enthält den vertikalen Abstand zwischen Elementen an.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -1944,8 +1944,8 @@ BOOL GetNextItemIndex(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in, out] *pItemIndex*|Zeiger auf die [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur, die das Element beschreibt, an dem die Suche beginnt, oder -1, um das erste Element zu suchen, die Flags in entspricht, der *nFlags* Parameter.<br /><br /> Wenn diese Methode erfolgreich ist, ist die `LVITEMINDEX` Struktur beschreibt die von der Suche gefundenen Elements.|  
-|[in] *nFlags*|Eine bitweise Kombination (OR) von Flags, die angeben, wie die Suche auszuführen.<br /><br /> Die Suche kann sich je nach dem Index, den Zustand oder die Darstellung das Zielelement oder das Zielelement physische Position relativ zu das Element angegeben wird, durch die *pItemIndex* Parameter. Weitere Informationen finden Sie unter den *Flags* Parameter in der [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) Nachricht.|  
+|*pItemIndex*|[in, out] Zeiger auf die [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur, die das Element beschreibt, an dem die Suche beginnt, oder -1, um das erste Element zu suchen, die Flags in entspricht, der *nFlags* Parameter.<br /><br /> Wenn diese Methode erfolgreich ist, ist die `LVITEMINDEX` Struktur beschreibt die von der Suche gefundenen Elements.|  
+|*nFlags*|[in] Eine bitweise Kombination (OR) von Flags, die angeben, wie die Suche auszuführen.<br /><br /> Die Suche kann sich je nach dem Index, den Zustand oder die Darstellung das Zielelement oder das Zielelement physische Position relativ zu das Element angegeben wird, durch die *pItemIndex* Parameter. Weitere Informationen finden Sie unter den *Flags* Parameter in der [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) Nachricht.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -2647,7 +2647,7 @@ BOOL IsItemVisible(int index) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *Index*|Nullbasierte Index eines Elements in der aktuellen Listenansicht-Steuerelement.|  
+|*index*|[in] Nullbasierte Index eines Elements in der aktuellen Listenansicht-Steuerelement.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn das angegebene Element sichtbar ist, andernfalls "false" ist.  
@@ -2666,7 +2666,7 @@ UINT MapIDToIndex(UINT id) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *Id*|Die eindeutige ID eines Elements.|  
+|*ID*|[in] Die eindeutige ID eines Elements.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der aktuelle Index für die angegebene ID.  
@@ -2689,7 +2689,7 @@ UINT MapIndexToID(UINT index) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *Index*|Der nullbasierte Index eines Elements.|  
+|*index*|[in] Der nullbasierte Index eines Elements.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Eine eindeutige ID für das angegebene Element.  
@@ -2773,11 +2773,11 @@ void MoveItemToGroup(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *IdItemFrom*  
- Der Index des Elements, das verschoben werden.  
+*idItemFrom*<br/>
+[in] Der Index des Elements, das verschoben werden.  
   
- [in] *IdGroupTo*  
- Der Bezeichner der Gruppe wird auf das Element verschoben werden.  
+*idGroupTo*<br/>
+[in] Der Bezeichner der Gruppe wird auf das Element verschoben werden.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -3496,9 +3496,9 @@ BOOL SetItemIndexState(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *pItemIndex*|Zeiger auf ein [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur, die ein Element beschreibt. Der Aufrufer ist für diese Struktur zuordnen und Festlegen von Membern verantwortlich.|  
-|[in] *dwState-Datenmember*|Der Zustand, der das Element festgelegt. Dies ist eine bitweise Kombination von [Liste anzeigen-Element-Zustände](/windows/desktop/Controls/list-view-item-states). Geben Sie 0 (null), zum Zurücksetzen oder dem einen legen, einen Status.|  
-|[in] *DwMask*|Eine Maske, der die gültigen Bits der vom angegebenen Zustand der *dwState-Datenmember* Parameter. Geben Sie eine bitweise Kombination (OR) von [Liste anzeigen-Element-Zustände](/windows/desktop/Controls/list-view-item-states).|  
+|*pItemIndex*|[in] Zeiger auf ein [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur, die ein Element beschreibt. Der Aufrufer ist für diese Struktur zuordnen und Festlegen von Membern verantwortlich.|  
+|*dwState-Datenmember*|[in] Der Zustand, der das Element festgelegt. Dies ist eine bitweise Kombination von [Liste anzeigen-Element-Zustände](/windows/desktop/Controls/list-view-item-states). Geben Sie 0 (null), zum Zurücksetzen oder dem einen legen, einen Status.|  
+|*dwMask*|[in] Eine Maske, der die gültigen Bits der vom angegebenen Zustand der *dwState-Datenmember* Parameter. Geben Sie eine bitweise Kombination (OR) von [Liste anzeigen-Element-Zustände](/windows/desktop/Controls/list-view-item-states).|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -3838,13 +3838,13 @@ BOOL SortItems(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *PfnCompare*  
- Die Adresse der Anwendung definierte Vergleichsfunktion.  
+*pfnCompare*<br/>
+[in] Die Adresse der Anwendung definierte Vergleichsfunktion.  
   
  Sort-Vorgangs ruft die Vergleichsfunktion auf jedes Mal, wenn die relative Position von zwei Listenelementen ermittelt werden soll. Die Vergleichsfunktion muss entweder ein statischer Member einer Klasse oder eine eigenständige Funktion, die nicht Mitglied einer beliebigen Klasse ist.  
   
- [in] *DwData*  
- Der Anwendung definierter Wert, der der Vergleich-Funktion übergeben wird.  
+*dwData*<br/>
+[in] Der Anwendung definierter Wert, der der Vergleich-Funktion übergeben wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn die Methode erfolgreich ist; andernfalls "false".  
@@ -3899,8 +3899,8 @@ BOOL SortItemsEx(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *PfnCompare*|Die Adresse der Anwendung definierte Vergleichsfunktion.<br /><br /> Sort-Vorgangs ruft die Vergleichsfunktion auf jedes Mal, wenn die relative Position von zwei Listenelementen ermittelt werden soll. Die Vergleichsfunktion muss entweder ein statischer Member einer Klasse oder eine eigenständige Funktion, die nicht Mitglied einer beliebigen Klasse ist.|  
-|[in] *DwData*|Der Anwendung definierter Wert, die an die Vergleichsfunktion übergeben werden.|  
+|*pfnCompare*|[in] Die Adresse der Anwendung definierte Vergleichsfunktion.<br /><br /> Sort-Vorgangs ruft die Vergleichsfunktion auf jedes Mal, wenn die relative Position von zwei Listenelementen ermittelt werden soll. Die Vergleichsfunktion muss entweder ein statischer Member einer Klasse oder eine eigenständige Funktion, die nicht Mitglied einer beliebigen Klasse ist.|  
+|*dwData*|[in] Der Anwendung definierter Wert, die an die Vergleichsfunktion übergeben werden.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  

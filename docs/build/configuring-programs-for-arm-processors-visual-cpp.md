@@ -12,35 +12,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dd54543f4fc35a204aaa349ce2ac8f41f912caf
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 3ce0e7e1f7c0936daed0fa6a51f6e254403205e0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026318"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714960"
 ---
 # <a name="configure-visual-c-for-arm-processors"></a>Konfigurieren von Visual C++ für ARM-Prozessoren
 
-Dieser Abschnitt der Dokumentation enthält Informationen darüber, wie die Visual C++-Buildtools zum Abstimmen auf ARM-Hardware verwendet werden.  
-  
-## <a name="in-this-section"></a>In diesem Abschnitt  
+Dieser Abschnitt der Dokumentation enthält Informationen darüber, wie die Visual C++-Buildtools zum Abstimmen auf ARM-Hardware verwendet werden.
 
-[Übersicht über ARM-ABI-Konventionen](../build/overview-of-arm-abi-conventions.md)  
-Beschreibt die Binärschnittstelle, die von Windows on ARM für die Registernutzung, die Aufrufkonventionen und die Ausnahmebehandlung verwendet wird.  
-  
-[Übersicht über die ABI-Konventionen für ARM64](../build/arm64-windows-abi-conventions.md)  
-Beschreibt die Application binary Interface, das von Windows auf ARM64 für die registernutzung, die Aufrufkonventionen und Ausnahmebehandlung verwendet.  
-  
-[Häufig auftretende ARM-Migrationsprobleme bei Visual C++](../build/common-visual-cpp-arm-migration-issues.md)  
-Beschreibt C++-Codeelemente, von denen üblicherweise angenommen wird, dass sie von einer Architektur auf die andere übertragbar sind, die jedoch für ARM andere Ergebnisse erzeugen als für x86 und x64.  
-  
-[ARM-Ausnahmebehandlung](../build/arm-exception-handling.md)  
-Beschreibt das Codierungsschema für die Stackentladung während der strukturierten Ausnahmebehandlung in Windows on ARM.  
+## <a name="in-this-section"></a>In diesem Abschnitt
 
-[ARM64-Ausnahmebehandlung](../build/arm64-exception-handling.md)  
-Beschreibt das Codierungsschema für die Stackentladung während der strukturierten Ausnahmebehandlung in Windows auf ARM64.  
+[Übersicht über ARM-ABI-Konventionen](../build/overview-of-arm-abi-conventions.md) wird beschrieben, die Application binary Interface, das von Windows auf ARM für die registernutzung, die Aufrufkonventionen und Ausnahmebehandlung verwendet.
 
-## <a name="related-sections"></a>Verwandte Abschnitte  
-  
-[Intrinsische ARM-Funktionen](../intrinsics/arm-intrinsics.md)  
-Beschreibt systeminterne Funktionen des Compilers für Prozessoren, die die ARM-Architektur verwenden.  
+[Übersicht über die ABI-Konventionen für ARM64](../build/arm64-windows-abi-conventions.md) wird beschrieben, die Application binary Interface, das von Windows auf ARM64 für die registernutzung, die Aufrufkonventionen und Ausnahmebehandlung verwendet.
+
+[Allgemeine Visual C++ ARM-Migrationsprobleme](../build/common-visual-cpp-arm-migration-issues.md) beschreibt C++-Codeelemente, die im Allgemeinen wird angenommen, dass über Architekturen portabel sein, aber das für ARM als für X86 und X64 zu unterschiedlichen Ergebnissen führen.
+
+[ARM-Ausnahmebehandlung](../build/arm-exception-handling.md) beschreibt das Codierungsschema für die Stackentladung während der strukturierten Ausnahmebehandlung in Windows auf ARM.
+
+[ARM64-Ausnahmebehandlung](../build/arm64-exception-handling.md) beschreibt das Codierungsschema für die Stackentladung während der strukturierten Ausnahmebehandlung in Windows auf ARM64.
+
+## <a name="related-sections"></a>Verwandte Abschnitte
+
+[Systeminterne ARM-Funktionen](../intrinsics/arm-intrinsics.md) beschreibt intrinsische Compilerfunktionen für Prozessoren, die die ARM-Architektur verwenden.

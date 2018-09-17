@@ -1,5 +1,5 @@
 ---
-title: -PROFILE (Leistungstools-Profiler) | Microsoft Docs
+title: -Profil (Performance Tools Profiler) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,53 +17,56 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15379914b4c4852e3065d1abc03c2ce1b17fb044
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 859ea4091502fa6c339a809a5b9e439c91462bd7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377117"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707762"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (Leistungstools-Profiler)
-Erstellt eine Ausgabedatei, die mit dem Leistungstoolprofiler verwendet werden kann.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-/PROFILE  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- / PROFILE impliziert die folgenden Optionen des Linkers an:  
-  
--   [/ OPT: REF](../../build/reference/opt-optimizations.md)  
-  
--   / OPT: NOICF  
-  
--   [/ INCREMENTAL: NO](../../build/reference/incremental-link-incrementally.md)  
-  
--   [/ FIXED: NO](../../build/reference/fixed-fixed-base-address.md)  
-  
- / PROFILE bewirkt, dass den Linker ein Verschiebungsabschnitt im Programmabbild zu generieren.  Ein Verschiebungsabschnitt ermöglicht dem Profiler zum Transformieren des Bilds Programm zum Abrufen von Profildaten.  
-  
- **/ PROFILE** ist nur in Enterprise (Teamentwicklung)-Versionen verfügbar.  Weitere Informationen zu PREfast finden Sie unter [Codeanalyse für C/C++-Übersicht](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
-  
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
-  
-2.  Erweitern Sie die **Konfigurationseigenschaften** Knoten.  
-  
-3.  Erweitern Sie die **Linker** Knoten.  
-  
-4.  Wählen Sie die **erweitert** Eigenschaftenseite.  
-  
-5.  Ändern der **Profil** Eigenschaft.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
-  
-1.  Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Profile%2A>.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
- [Linkeroptionen](../../build/reference/linker-options.md)
+
+Erstellt eine Ausgabedatei, die mit dem Leistungstoolprofiler verwendet werden kann.
+
+## <a name="syntax"></a>Syntax
+
+```
+/PROFILE
+```
+
+## <a name="remarks"></a>Hinweise
+
+/ PROFILE impliziert die folgenden Optionen des Linkers:
+
+- [/ OPT: REF](../../build/reference/opt-optimizations.md)
+
+- / OPT: NOICF
+
+- [/ INCREMENTAL: NO](../../build/reference/incremental-link-incrementally.md)
+
+- [/ FIXED: NO](../../build/reference/fixed-fixed-base-address.md)
+
+/ PROFILE bewirkt, dass der Linker ein Verschiebungsabschnitt im Programmimage generiert.  Umsetzungsabschnitt kann der Profiler die Programm-Images zum Abrufen von Profildaten zu transformieren.
+
+**/ PROFILE** ist nur in Enterprise (Entwicklung im Team)-Versionen verfügbar.  Weitere Informationen zu PREfast finden Sie unter [Codeanalyse für C/C++-Übersicht](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
+
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+
+1. Erweitern Sie den Knoten **Konfigurationseigenschaften**.
+
+1. Erweitern Sie die **Linker** Knoten.
+
+1. Wählen Sie die **erweitert** Eigenschaftenseite.
+
+1. Ändern der **Profil** Eigenschaft.
+
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
+
+1. Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Profile%2A>.
+
+## <a name="see-also"></a>Siehe auch
+
+[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
+[Linkeroptionen](../../build/reference/linker-options.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: ac9a436637f9acf5f3818454706eb146d814b3bc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5c9eba152ddaf0ab35fc1a331905a457ff339f28
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964813"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725984"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt;-Operatoren
 
@@ -49,11 +49,11 @@ bool operator>= (
 
 ### <a name="parameters"></a>Parameter
 
-*Links*  
- Das linke `thread::id`-Objekt.
+*Links*<br/>
+Das linke `thread::id`-Objekt.
 
-*Rechts*  
- Das rechte `thread::id`-Objekt.
+*Rechts*<br/>
+Das rechte `thread::id`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -75,11 +75,11 @@ bool operator> (
 
 ### <a name="parameters"></a>Parameter
 
-*Links*  
- Das linke `thread::id`-Objekt.
+*Links*<br/>
+Das linke `thread::id`-Objekt.
 
-*Rechts*  
- Das rechte `thread::id`-Objekt.
+*Rechts*<br/>
+Das rechte `thread::id`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -101,11 +101,11 @@ bool operator<= (
 
 ### <a name="parameters"></a>Parameter
 
-*Links*  
- Das linke `thread::id`-Objekt.
+*Links*<br/>
+Das linke `thread::id`-Objekt.
 
-*Rechts*  
- Das rechte `thread::id`-Objekt.
+*Rechts*<br/>
+Das rechte `thread::id`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -127,11 +127,11 @@ bool operator<(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*  
- Das linke `thread::id`-Objekt.
+*Links*<br/>
+Das linke `thread::id`-Objekt.
 
-*Rechts*  
- Das rechte `thread::id`-Objekt.
+*Rechts*<br/>
+Das rechte `thread::id`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -155,11 +155,11 @@ bool operator!= (
 
 ### <a name="parameters"></a>Parameter
 
-*Links*  
- Das linke `thread::id`-Objekt.
+*Links*<br/>
+Das linke `thread::id`-Objekt.
 
-*Rechts*  
- Das rechte `thread::id`-Objekt.
+*Rechts*<br/>
+Das rechte `thread::id`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -180,12 +180,12 @@ bool operator== (
 ```
 
 ### <a name="parameters"></a>Parameter
- 
-*Links*  
- Das linke `thread::id`-Objekt.
 
-*Rechts*  
- Das rechte `thread::id`-Objekt.
+*Links*<br/>
+Das linke `thread::id`-Objekt.
+
+*Rechts*<br/>
+Das rechte `thread::id`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -207,11 +207,11 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>Parameter
 
-*Ostr*  
- Ein [basic_ostream](../standard-library/basic-ostream-class.md)-Objekt.
+*Ostr*<br/>
+Ein [basic_ostream](../standard-library/basic-ostream-class.md)-Objekt.
 
-*Id*  
- Ein `thread::id`-Objekt.
+*Id*<br/>
+Ein `thread::id`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 

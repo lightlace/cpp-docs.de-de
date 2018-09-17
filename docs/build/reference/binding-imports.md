@@ -1,5 +1,5 @@
 ---
-title: Binden von Importen | Microsoft Docs
+title: Binden von Importen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7519fb18ac7f24e79a5f7f664cb35f8eb5b3fd77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 551028999d11379c06d3319f01e882a33ad57936
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368927"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705197"
 ---
 # <a name="binding-imports"></a>Binden von Importen
-Das Standardverhalten der Linker ist eine bindbare Importadresstabelle für die verzögert geladenen DLL zu erstellen. Wenn die DLL gebunden ist, versucht die Hilfsfunktion, die gebundene Informationen verwenden, statt **GetProcAddress** auf jedem der referenzierten Importe. Wenn der Zeitstempel oder die bevorzugte Adresse nicht den der geladenen DLL übereinstimmen, wird die Hilfsfunktion davon ausgegangen werden, die gebundenen Import Local Address Table ist veraltet und wird fortgesetzt, als wäre sie nicht vorhanden ist.  
-  
- Wenn Sie nie die DLL verzögert geladenen Importen binden möchten, die Angabe [/delay](../../build/reference/delay-delay-load-import-settings.md): Nobind in der Linker-Befehlszeile verhindert werden, dass die gebundene Import Local Address Table erzeugten und verwendeten Speicherplatz in der Bilddatei enthaltenen wird.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Linkerunterstützung für verzögertes Laden von DLLs](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+
+Das Standardverhalten der Linker ist eine bindbare Importadresstabelle für den verzögert geladenen DLL zu erstellen. Wenn die DLL gebunden ist, versucht die Hilfsfunktion, die die gebundene Informationen zu verwenden, statt **GetProcAddress** auf jedem der referenzierten Importe. Wenn entweder der Zeitstempel oder die Adresse des bevorzugten nicht denen der geladenen DLL übereinstimmen, geht die Hilfsfunktion davon aus, die gebundene Importadresstabelle ist veraltet und wird fortgesetzt, als ob er nicht vorhanden ist.
+
+Wenn Sie nicht mehr der DLL verzögert geladenen Importen binden möchten, wird durch Angabe [/delay](../../build/reference/delay-delay-load-import-settings.md): Nobind in der Befehlszeile des Linkers verhindert werden, dass die gebundene Importadresstabelle wird generiert und verwendeten Speicherplatz in der Imagedatei.
+
+## <a name="see-also"></a>Siehe auch
+
+[Linkerunterstützung für verzögertes Laden von DLLs](../../build/reference/linker-support-for-delay-loaded-dlls.md)

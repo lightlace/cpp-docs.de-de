@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82447c14209f2f47fb6224df7e1daeb18ed6048e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3026e614b00f48b7668420aee20fd5915c270da2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212890"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707485"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager-Klasse
 Verwaltet Tastenkombinationstabellen für das Hauptrahmenfenster und die untergeordneten Rahmenfenster.  
@@ -134,17 +134,17 @@ static BOOL FindDefaultAccelerator(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmd*  
- Die Befehls-ID.  
+*uiCmd*<br/>
+[in] Die Befehls-ID.  
   
- [out] *str*  
- Ein Verweis auf ein `CString`-Objekt.  
+*str*<br/>
+[out] Ein Verweis auf eine `CString` Objekt.  
   
- [in] *pWndFrame*  
- Ein Zeiger auf ein Rahmenfenster.  
+*pWndFrame*<br/>
+[in] Ein Zeiger auf ein Rahmenfenster.  
   
- [in] *bIsDefaultFrame*  
- Gibt an, ob das Rahmenfenster, das Standard-Rahmenfenster ist.  
+*bIsDefaultFrame*<br/>
+[in] Gibt an, ob das Rahmenfenster, das Standard-Rahmenfenster ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL ist, wenn die Verknüpfung gefunden wird; andernfalls 0.  
@@ -168,10 +168,10 @@ static BOOL __stdcall IsKeyHandled(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *nKey*|Der zu überprüfende Schlüssel.|  
-|[in] *fVirt*|Gibt das Verhalten der Tastenkombination. Eine Liste der möglichen Werte, finden Sie unter [ACCELERATION Struktur](/windows/desktop/api/winuser/ns-winuser-tagaccel).|  
-|[in] *pWndFrame*|Ein Rahmenfenster. Diese Methode bestimmt, ob eine Tastenkombination, die in diesem Frame behandelt wird.|  
-|[in] *bIsDefaultFrame*|Ein boolescher Parameter, der angibt, ob *pWndFrame* ist das Standard-Rahmenfenster.|  
+|*nKey*|[in] Die zu überprüfende Taste.|  
+|*fVirt*|[in] Gibt das Verhalten der Tastenkombination. Eine Liste der möglichen Werte, finden Sie unter [ACCELERATION Struktur](/windows/desktop/api/winuser/ns-winuser-tagaccel).|  
+|*pWndFrame*|[in] Ein Rahmenfenster. Diese Methode bestimmt, ob eine Tastenkombination, die in diesem Frame behandelt wird.|  
+|*bIsDefaultFrame*|[in] Ein boolescher Parameter, der angibt, ob *pWndFrame* ist das Standard-Rahmenfenster.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn die Tastenkombination behandelt wird. "False", wenn der Schlüssel nicht behandelt wird oder wenn *pWndFrame* ist NULL.  
@@ -191,7 +191,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *nChar*|Das Zeichen, das diese Methode überprüft.|  
+|*NChar*|[in] Das Zeichen, das diese Methode überprüft.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn das Zeichen "druckbaren" ist, ist dies nicht.  
@@ -222,11 +222,11 @@ BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- Im Registrierungspfad befinden, in denen `CKeyboardManager` Daten werden gespeichert.  
+*lpszProfileName*<br/>
+[in] Im Registrierungspfad befinden, in denen `CKeyboardManager` Daten werden gespeichert.  
   
- [in] *pDefaultFrame*  
- Ein Zeiger auf ein Rahmenfenster, das als das Standardfenster verwendet werden soll.  
+*pDefaultFrame*<br/>
+[in] Ein Zeiger auf ein Rahmenfenster, das als das Standardfenster verwendet werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn der Zustand erfolgreich geladen wurde, oder 0 ist.  
@@ -256,11 +256,11 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- Der Registrierungspfad zum Speichern der `CKeyboardManager` Zustand.  
+*lpszProfileName*<br/>
+[in] Der Registrierungspfad zum Speichern der `CKeyboardManager` Zustand.  
   
- [in] *pDefaultFrame*  
- Ein Zeiger auf ein Rahmenfenster, das den Standardwert wird.  
+*pDefaultFrame*<br/>
+[in] Ein Zeiger auf ein Rahmenfenster, das den Standardwert wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn der Zustand der Tastatur-Manager erfolgreich gespeichert wurde oder andernfalls 0.  
@@ -280,11 +280,11 @@ static void ShowAllAccelerators(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bShowAll*  
- Bei TRUE werden alle Tastenkombinationen angezeigt. Wenn "FALSE" werden nur die ersten Tastenkombination angezeigt.  
+*bShowAll*<br/>
+[in] Bei TRUE werden alle Tastenkombinationen angezeigt. Wenn "FALSE" werden nur die ersten Tastenkombination angezeigt.  
   
- [in] *LpszDelimiter*  
- Eine Zeichenfolge, die zwischen Tastenkombinationen eingefügt werden soll. Diese Trennzeichen hat keine Auswirkungen, wenn nur eine Tastenkombination angezeigt wird.  
+*lpszDelimiter*<br/>
+[in] Eine Zeichenfolge, die zwischen Tastenkombinationen eingefügt werden soll. Diese Trennzeichen hat keine Auswirkungen, wenn nur eine Tastenkombination angezeigt wird.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig verfügt ein Befehl mehr als eine Tastenkombination zugeordnet, wird nur die ersten Tastenkombination angezeigt. Diese Funktion können Sie alle Tastenkombinationen zugeordnet alle Befehle auflisten.  
@@ -299,8 +299,8 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nChar*  
- Das zu konvertierende Zeichen.  
+*NChar*<br/>
+[in] Das zu konvertierende Zeichen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Das Zeichen, das den oberen Register des input-Parameters ist.  
@@ -323,20 +323,20 @@ BOOL UpdateAccelTable(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pTemplate*  
- Ein Zeiger auf eine Dokumentvorlage.  
+*pTemplate*<br/>
+[in] Ein Zeiger auf eine Dokumentvorlage.  
   
- [in] *LpAccel*  
- Ein Zeiger auf die neue Zugriffstaste.  
+*lpAccel*<br/>
+[in] Ein Zeiger auf die neue Zugriffstaste.  
   
- [in] *nSize*  
- Die Größe der neuen Tabelle Verknüpfung.  
+*nSize*<br/>
+[in] Die Größe der neuen Tabelle Verknüpfung.  
   
- [in] *pDefaultFrame*  
- Ein Zeiger auf das Standard-Rahmenfenster.  
+*pDefaultFrame*<br/>
+[in] Ein Zeiger auf das Standard-Rahmenfenster.  
   
- [in] *hAccelNew*  
- Ein Handle für die neue Tabelle für die Verknüpfung.  
+*hAccelNew*<br/>
+[in] Ein Handle für die neue Tabelle für die Verknüpfung.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn die Methode erfolgreich ist; andernfalls 0.  

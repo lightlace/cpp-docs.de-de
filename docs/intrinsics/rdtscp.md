@@ -18,14 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a98f1e84f3ef09d3cef5d45028374b93887fc6d4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3702dcafbc93e34852d5d8fd4a0f1d3c222ea1a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538481"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706952"
 ---
 # <a name="rdtscp"></a>__rdtscp
+
 **Microsoft-spezifisch**  
   
  Generiert die `rdtscp` -Anweisung, schreibt `TSC_AUX[31:0`], Arbeitsspeicher und gibt die 64-Bit-Time Stamp Counter (`TSC)` Ergebnis.  
@@ -39,8 +40,8 @@ unsigned __int64 __rdtscp(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [out] `Aux`  
- Zeiger auf einen Speicherort, der den Inhalt des Registers computerspezifische enthält `TSC_AUX[31:0]`.  
+*AUX*<br/>
+[out] Zeiger auf einen Speicherort, der den Inhalt des Registers computerspezifische enthält `TSC_AUX[31:0]`.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Eine 64-Bit-Ganzzahl ohne Vorzeichen-Taktanzahl.  
@@ -84,7 +85,8 @@ TSC_AUX was 0
 ```  
   
 **Ende Microsoft-spezifisch**  
- Copyright 2007 erweiterten Micro-Geräte, Inc. Alle Rechte vorbehalten. Reproduziert werden, mit der Berechtigung, die von erweiterten Micro-Geräte, Inc.  
+
+Copyright 2007 erweiterten Micro-Geräte, Inc. Alle Rechte vorbehalten. Reproduziert werden, mit der Berechtigung, die von erweiterten Micro-Geräte, Inc.  
   
 ## <a name="see-also"></a>Siehe auch  
  [__rdtsc](../intrinsics/rdtsc.md)   

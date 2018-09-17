@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84e8a7e2cd3d05795e35b97069491f3fdc57c3f1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c01adc1893d73840ecbec7a2e2251c8e55beb582
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753265"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701726"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Registrierung und TypeLib globale Funktionen
 
@@ -78,8 +78,8 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 
 ### <a name="parameters"></a>Parameter
 
-[out] *pEnabled*  
-TRUE gibt an, dass die Registrierungsinformationen, um geleitet wird die **HKCU** Knoten FALSE gibt an, dass die Anwendung Informationen in der Registrierung auf den Standardknoten schreibt. Der Standardknoten ist **HKEY_CLASSES_ROOT** (**HKCR**).
+*pEnabled*<br/>
+[out] TRUE gibt an, dass die Registrierungsinformationen, um geleitet wird die **HKCU** Knoten FALSE gibt an, dass die Anwendung Informationen in der Registrierung auf den Standardknoten schreibt. Der Standardknoten ist **HKEY_CLASSES_ROOT** (**HKCR**).
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -309,8 +309,8 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *bAktivieren*  
-TRUE gibt an, dass die Registrierungsinformationen, um geleitet wird die **HKCU** Knoten FALSE gibt an, dass die Anwendung Informationen in der Registrierung auf den Standardknoten schreibt. Der Standardknoten ist **HKEY_CLASSES_ROOT** (**HKCR**).
+*bAktivieren*  
+[in] TRUE gibt an, dass die Registrierungsinformationen, um geleitet wird die **HKCU** Knoten FALSE gibt an, dass die Anwendung Informationen in der Registrierung auf den Standardknoten schreibt. Der Standardknoten ist **HKEY_CLASSES_ROOT** (**HKCR**).
 
 ### <a name="return-value"></a>Rückgabewert
 

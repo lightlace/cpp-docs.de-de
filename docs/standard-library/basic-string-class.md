@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a44cccd38d64f3e6b0c2b7af390d06292f70157
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e6c22d91bafc45699371dd40d317b66cf3d1ca11
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105665"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706614"
 ---
 # <a name="basicstring-class"></a>basic_string-Klasse
 
@@ -3979,9 +3979,11 @@ Die C-Zeichenfolge, die als Quelle für die Zeichen für die Operandenzeichenfol
 *_Ch*<br/>
 Das Zeichen, das in die Operandenzeichenfolge kopiert werden soll.
 
-* first0 * ein Iterator, der das erste Zeichen adressiert, in der Operandenzeichenfolge entfernt werden soll.
+*first0*<br/>
+Ein Iterator, der das erste Zeichen adressiert, das in der Operandenzeichenfolge entfernt werden soll.
 
-* Last0 * ein Iterator, der das letzte Zeichen adressiert, in der Operandenzeichenfolge entfernt werden soll.
+*Last0*<br/>
+Ein Iterator, der das letzte Zeichen adressiert, das in der Operandenzeichenfolge entfernt werden soll.
 
 *Erste*<br/>
 Ein Iterator, const_pointer oder const_iterator, der das erste Zeichen adressiert, das in die Parameterzeichenfolge eingefügt werden soll.

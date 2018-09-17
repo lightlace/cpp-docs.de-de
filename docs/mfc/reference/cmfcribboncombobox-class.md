@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2ccefbc435cac5b48cd2c9509831699dcec70af
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 68746d76c9c7842e9fc8c16addeca2cb44f31211
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849668"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701739"
 ---
 # <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox-Klasse
 Die `CMFCRibbonComboBox` -Klasse implementiert ein Kombinationsfeld-Steuerelement, das einer menübandleiste, einem Menübandbereich oder einem Menüband-Popupmenü hinzugefügt werden können.  
@@ -127,11 +127,11 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszItem*  
- Die Zeichenfolge des hinzuzufügenden Elements.  
+*lpszItem*<br/>
+[in] Die Zeichenfolge des hinzuzufügenden Elements.  
   
- [in] *DwData*  
- Die Daten, die das hinzuzufügende Element zugeordnet wird.  
+*dwData*<br/>
+[in] Die Daten, die das hinzuzufügende Element zugeordnet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index des hinzugefügten Elements.  
@@ -153,20 +153,20 @@ CMFCRibbonComboBox();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- Die ID des Kombinationsfelds.  
+*nID*<br/>
+[in] Die ID des Kombinationsfelds.  
   
- [in] *bHasEditBox*  
- True, wenn ein Bearbeitungsfeld innerhalb des Steuerelements verwendet werden soll. "False" andernfalls.  
+*bHasEditBox*<br/>
+[in] True, wenn ein Bearbeitungsfeld innerhalb des Steuerelements verwendet werden soll. "False" andernfalls.  
   
- [in] *nWidth*  
- Die Breite des Kombinationsfelds in Pixel; oder -1 für die Standardbreite.  
+*nWidth*<br/>
+[in] Die Breite des Kombinationsfelds in Pixel; oder -1 für die Standardbreite.  
   
- [in] *LpszLabel*  
- Die Bezeichnung der Anzeige des Kombinationsfelds.  
+*lpszLabel*<br/>
+[in] Die Bezeichnung der Anzeige des Kombinationsfelds.  
   
- [in] *Nbild*  
- Der Index der Miniaturansicht des Kombinationsfelds.  
+*Nbild*<br/>
+[in] Der Index der Miniaturansicht des Kombinationsfelds.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardbreite beträgt 108 Pixel.  
@@ -182,14 +182,14 @@ BOOL DeleteItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iIndex*  
- Der nullbasierte Index des Elements, das gelöscht werden.  
+*iIndex*<br/>
+[in] Der nullbasierte Index des Elements, das gelöscht werden.  
   
- [in] *DwData*  
- Die Daten, die zu löschenden Elements zugeordnet.  
+*dwData*<br/>
+[in] Die Daten, die zu löschenden Elements zugeordnet.  
   
- [in] *LpszText*  
- Die Zeichenfolge des Elements, das gelöscht werden. Wenn mehrere Elemente mit derselben Zeichenfolge vorhanden sind, wird das erste Element gelöscht.  
+*lpszText*<br/>
+[in] Die Zeichenfolge des Elements, das gelöscht werden. Wenn mehrere Elemente mit derselben Zeichenfolge vorhanden sind, wird das erste Element gelöscht.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das angegebene Element gelöscht wurde. andernfalls "false".  
@@ -204,8 +204,8 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- "True" Ändern der Größe von aktivieren; So deaktivieren Sie das Ändern der Größe wird false ZURÜCKGEGEBEN.  
+*bAktivieren*<br/>
+[in] "True" Ändern der Größe von aktivieren; So deaktivieren Sie das Ändern der Größe wird false ZURÜCKGEGEBEN.  
   
 ### <a name="remarks"></a>Hinweise  
  Beim Ändern der Größe aktiviert ist, ändert das Listenfeld Größe der Elemente, die angezeigt.  
@@ -218,8 +218,8 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszText*  
- Die Zeichenfolge ein Element im Listenfeld.  
+*lpszText*<br/>
+[in] Die Zeichenfolge ein Element im Listenfeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index des Elements ist; oder -1, wenn das Element nicht gefunden wird.  
@@ -268,8 +268,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Zeiger auf einen Gerätekontext für das Kombinationsfeld.  
+*pDC*<br/>
+[in] Zeiger auf einen Gerätekontext für das Kombinationsfeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Größe des Kombinationsfelds.  
@@ -285,8 +285,8 @@ LPCTSTR GetItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iIndex*  
- Der nullbasierte Index eines Elements in das Listenfeld.  
+*iIndex*<br/>
+[in] Der nullbasierte Index eines Elements in das Listenfeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die Zeichenfolge, die dem Element zugeordnet ist; andernfalls, NULL, wenn der Indexparameter ungültig ist, oder wenn der Indexparameter ist-1, und es ist kein Element im Kombinationsfeld ausgewählt.  
@@ -301,8 +301,8 @@ DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iIndex*  
- Der nullbasierte Index eines Elements in das Listenfeld.  
+*iIndex*<br/>
+[in] Der nullbasierte Index eines Elements in das Listenfeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Daten, die dem Element zugeordnet, oder 0, wenn das Element nicht vorhanden ist oder wenn der Indexparameter ist-1 und gibt es kein ausgewähltes Element im Listenfeld ist.  
@@ -340,8 +340,8 @@ virtual void OnSelectItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nItem*  
- Der Index des ausgewählten Elements.  
+*nItem*<br/>
+[in] Der Index des ausgewählten Elements.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, wenn Sie eine Eingabe Benutzerauswahl verarbeiten möchten.  
@@ -366,14 +366,14 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iIndex*  
- Der nullbasierte Index eines Elements in das Listenfeld.  
+*iIndex*<br/>
+[in] Der nullbasierte Index eines Elements in das Listenfeld.  
   
- [in] *DwData*  
- Die Daten, die einem Element im Listenfeld zugeordnet wird.  
+*dwData*<br/>
+[in] Die Daten, die einem Element im Listenfeld zugeordnet wird.  
   
- [in] *LpszText*  
- Die Zeichenfolge ein Element im Listenfeld.  
+*lpszText*<br/>
+[in] Die Zeichenfolge ein Element im Listenfeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich war. andernfalls "false".  
@@ -388,8 +388,8 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nHeight*  
- Die Höhe in Pixel des Listenfelds.  
+*nHeight*<br/>
+[in] Die Höhe in Pixel des Listenfelds.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardhöhe ist 150 Pixel.  
