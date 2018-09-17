@@ -16,24 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63f945f90f6a862a3b16cd3dcc41859b0c21b984
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 10a57271c143a42f9bafaef5fa53f780fa03164f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761942"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700649"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, ATL-Assistent für Active Server Page-Komponenten
 
 Verwenden Sie auf dieser Seite des ATL-Assistenten für Active Server Page-Komponente, um die optionale Einstellungen angeben, für die Behandlung von Informationen und Zustände, die im Zusammenhang mit der ASP-Komponente.
 
-**Optionale Methoden**  
-Fügt den optionalen ASP-Methoden **OnStartPage** und **OnEndPage**, auf das Objekt. Diese Option muss ausgewählt werden, damit alle Active Server Pages-Objekte festgelegt werden kann. Es ist standardmäßig ausgewählt.
+- **Optionale Methoden**  
 
-- **OnStartPage/OnEndPage** [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx) wird zum ersten Mal das Skript versucht, Zugriff auf das Objekt aufgerufen. **OnEndPage** wird aufgerufen, wenn das Objekt wurde das Skript zu verarbeiten.
+   Fügt den optionalen ASP-Methoden **OnStartPage** und **OnEndPage**, auf das Objekt. Diese Option muss ausgewählt werden, damit alle Active Server Pages-Objekte festgelegt werden kann. Es ist standardmäßig ausgewählt.
 
-**Systeminterne-Objekt**  
-Sie müssen auswählen, die **OnStartPage/OnEndPage** Option aus, um alle ASP-Objekte festgelegt.
+- **OnStartPage/OnEndPage**
+
+   [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx) wird zum ersten Mal das Skript versucht, Zugriff auf das Objekt aufgerufen. **OnEndPage** wird aufgerufen, wenn das Objekt wurde das Skript zu verarbeiten.
+
+- **Systeminterne-Objekt**  
+
+   Sie müssen auswählen, die **OnStartPage/OnEndPage** Option aus, um alle ASP-Objekte festgelegt.
 
 |Option|Beschreibung|
 |------------|-----------------|

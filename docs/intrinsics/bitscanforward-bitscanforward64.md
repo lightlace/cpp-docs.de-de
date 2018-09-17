@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4720ca4a65a543ca09412ac0c1eb1e65bf6cdd23
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e563e7240c1797bf863ee0762f923e91a6f05bb0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541428"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699885"
 ---
 # <a name="bitscanforward-bitscanforward64"></a>_BitScanForward, _BitScanForward64
 **Microsoft-spezifisch**  
@@ -47,11 +47,11 @@ unsigned char _BitScanForward64(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [out] `Index`  
- Geladen mit der Bitposition des ersten festgelegten Bits (1), das ermittelt wurde.  
+*Index*<br/>
+[out] Geladen mit der Bitposition des ersten festgelegten Bits (1) wurde gefunden.  
   
- [in] `Mask`  
- Der zu suchende 32-Bit- oder 64-Bit-Wert.  
+*Maske*<br/>
+[in] Der 32-Bit oder 64-Bit-Wert zu suchen.  
   
 ## <a name="return-value"></a>Rückgabewert  
  0, wenn die Maske null ist; andernfalls ungleich null.  

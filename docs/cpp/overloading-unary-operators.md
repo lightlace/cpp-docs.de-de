@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c00f9d40fedd084afa2da6e2e7bfaf0ee831b3a9
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 54529bed25fc60815f80ea8660bcf5786cb2887c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401879"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700679"
 ---
 # <a name="overloading-unary-operators"></a>Überladen von unären Operatoren
 Die unären Operatoren, die überladen werden können, sind Folgende:  
@@ -55,15 +55,15 @@ Die unären Operatoren, die überladen werden können, sind Folgende:
   
  Die folgenden Regeln sind für alle anderen unären Operatoren erfüllt. Um eine Funktion für einen unären Operator als nicht statischen Member zu deklarieren, müssen Sie sie im folgenden Format deklarieren:  
   
- `ret-type operator` `op` `()`  
+> *ret-Type* **Operator** *Op* **)**  
   
- dabei ist `ret-type` der Rückgabetyp und `op` ist einer der in der vorhergehenden Tabelle aufgelisteten Operatoren.  
+ in denen *ret-Type* ist der Rückgabetyp und *Op* ist einer der Operatoren in der obigen Tabelle aufgeführt.  
   
  Um eine Funktion für einen unären Operator als globale Funktion zu deklarieren, müssen Sie sie im folgenden Format deklarieren:  
   
- `ret-type operator` `op` (`arg` )  
+> *ret-Type* **Operator** *Op* **(** *Arg* **)**  
   
- wo `ret-type` und `op`, wie beschrieben, für Memberoperatorfunktionen sind und das `arg` ein Argument des Klassentyps ist, mit dem Vorgänge ausgeführt werden sollen.  
+ in denen *ret-Type* und *Op* sind für Member-Operatorfunktionen beschrieben und die *Arg* ist ein Argument des Klassentyps, mit denen Sie arbeiten.  
   
 > [!NOTE]
 >  Es gibt keine Einschränkung für die Rückgabetypen der unären Operatoren. Beispielsweise macht es Sinn für ein logisches NOT (`!`), einen Ganzzahlwert zurückzugeben. Das wird aber nicht erzwungen.  

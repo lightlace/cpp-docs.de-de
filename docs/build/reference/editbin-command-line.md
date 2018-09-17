@@ -1,5 +1,5 @@
 ---
-title: EDITBIN-Befehlszeile | Microsoft Docs
+title: EDITBIN-Befehlszeile | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23fb39a614854912a8de52ac606009f3de19b497
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a8868b455c135d12d2fffaf0ae5ab5632c51a324
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371176"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700593"
 ---
 # <a name="editbin-command-line"></a>EDITBIN-Befehlszeile
-Um EDITBIN auszuführen, verwenden Sie die folgende Syntax:  
-  
-```  
-EDITBIN [options] files...  
-```  
-  
- Geben Sie eine oder mehrere Dateien für die Objekte oder Bilder, die geändert werden und eine oder mehrere Optionen zum Ändern der Dateien.  
-  
- Bei der Eingabe des Befehls `editbin` ohne alle anderen Befehlszeileneingabe EDITBIN zeigt eine nutzungsanweisung an, die die Optionen zusammengefasst sind.  
-  
-## <a name="see-also"></a>Siehe auch  
- [C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md)   
- [EDITBIN-Referenz](../../build/reference/editbin-reference.md)
+
+Um EDITBIN auszuführen, verwenden Sie die folgende Syntax:
+
+```
+EDITBIN [options] files...
+```
+
+Geben Sie eine oder mehrere Dateien für die Objekte oder Bilder geändert werden und eine oder mehrere Optionen für die Dateien ändern.
+
+Bei der Eingabe des Befehls `editbin` ohne weitere Eingaben,-EDITBIN zeigt eine nutzungsanweisung an, die die verfügbaren Optionen zusammengefasst sind.
+
+## <a name="see-also"></a>Siehe auch
+
+[C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md)<br/>
+[EDITBIN-Referenz](../../build/reference/editbin-reference.md)
