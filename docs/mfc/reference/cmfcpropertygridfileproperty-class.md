@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79089a7457d1a3f08c58c374ae2501a48feca79d
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 82d1b4c3790f50032ac9775febf920e0e8c6c547
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42541829"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700833"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty-Klasse
 Die `CMFCPropertyGridFileProperty` Klasse unterstützt, einem Eigenschaftenlisten-Steuerelement ein Element, das ein Dialogfeld zur Dateiauswahl geöffnet wird.  
@@ -78,29 +78,29 @@ CMFCPropertyGridFileProperty(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *StrName*  
- Der Eigenschaftenname.  
+*strName*<br/>
+[in] Der Eigenschaftenname.  
   
- [in] *bOpenFileDialog*  
- "True" Öffnen Sie eine **Datei öffnen** Dialogfeld "False" zum Öffnen einer **Datei speichern** Dialogfeld.  
+*bOpenFileDialog*<br/>
+[in] "True" Öffnen Sie eine **Datei öffnen** Dialogfeld "False" zum Öffnen einer **Datei speichern** Dialogfeld.  
   
- [in] *StrFileName*  
- Der ursprüngliche Dateiname.  
+*strFileName*<br/>
+[in] Der ursprüngliche Dateiname.  
   
- [in] *LpszDefExt*  
- Eine Zeichenfolge mit einer oder mehreren Dateierweiterungen. Der Standardwert ist NULL.  
+*lpszDefExt*<br/>
+[in] Eine Zeichenfolge, der eine oder mehrere Dateierweiterungen. Der Standardwert ist NULL.  
   
- [in] *DwFlags*  
- Dialogfeldflags. Der Standardwert ist eine bitweise Kombination (OR) von OFN_HIDEREADONLY und OFN_OVERWRITEPROMPT.  
+*dwFlags*<br/>
+[in] Dialogfeldflags. Der Standardwert ist eine bitweise Kombination (OR) von OFN_HIDEREADONLY und OFN_OVERWRITEPROMPT.  
   
- [in] *LpszFilter*  
- Eine Zeichenfolge mit einer oder mehreren Dateinfiltern. Der Standardwert ist NULL.  
+*lpszFilter*<br/>
+[in] Eine Zeichenfolge mit einem oder mehreren dateinfiltern. Der Standardwert ist NULL.  
   
- [in] *LpszDescr*  
- Die Beschreibung des Eigenschaftenelements. Der Standardwert ist NULL.  
+*lpszDescr*<br/>
+[in] Die Beschreibung des Eigenschaftenelements. Der Standardwert ist NULL.  
   
- [in] *DwData*  
- Anwendungsspezifische Daten, die dem Eigenschaftenelement zugeordnet sind. Zum Beispiel eine 32-Bit-Ganzzahl oder ein Zeiger auf andere Daten. Der Standardwert ist 0.  
+*dwData*<br/>
+[in] Anwendungsspezifische Daten, die dem Eigenschaftenelement zugeordnet ist. Zum Beispiel eine 32-Bit-Ganzzahl oder ein Zeiger auf andere Daten. Der Standardwert ist 0.  
   
 ### <a name="return-value"></a>Rückgabewert  
   

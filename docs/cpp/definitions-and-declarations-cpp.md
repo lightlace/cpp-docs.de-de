@@ -12,15 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d192234a2b3cd3d72bef15e11678ebc41ccede0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 54754e465f3a153b769b7619ff2bfb70a1872907
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462887"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699614"
 ---
 # <a name="definitions-and-declarations-c"></a>Definitionen und Deklarationen (C++)
-**Microsoft Specific** die DLL-Schnittstelle bezieht sich auf alle Elemente (Funktionen und Daten), von denen bekannt, die durch ein Programm im System exportiert werden, d. h., alle Elemente, die als deklariert sind **Dllimport** oder **Dllexport** . Alle Deklarationen, die in der DLL-Schnittstelle eingeschlossen geben die **Dllimport** oder **Dllexport** Attribut. Die Definition muss jedoch angeben, nur die **Dllexport** Attribut. Beispielsweise verursacht die folgende Funktionsdefinition einen Compilerfehler:
+**Microsoft-spezifisch**
+
+ Die DLL-Schnittstelle bezieht sich auf alle Elemente (Funktionen und Daten), die bekanntermaßen von einem Programm im System exportiert werden. d. h. alle Elemente, die als deklariert sind **Dllimport** oder **Dllexport**. Alle Deklarationen, die in der DLL-Schnittstelle eingeschlossen geben die **Dllimport** oder **Dllexport** Attribut. Die Definition muss jedoch angeben, nur die **Dllexport** Attribut. Beispielsweise verursacht die folgende Funktionsdefinition einen Compilerfehler:
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport
