@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 648b1084b978e4a7ab38775aefcdc7026fee1243
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d301f2bc7464d52be643d252e4febf7049657c2b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206460"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724759"
 ---
 # <a name="event--c-component-extensions"></a>event (Komponentenerweiterungen für C++)
 
@@ -157,7 +157,7 @@ Die folgenden Schritte müssen durchgeführt werden, um Ereignisse in Visual C++
 
    - Ein aus dem Delegaten erstelltes Ereignis.
 
-   - (optional) Eine Methode, die stellt sicher, dass eine Instanz des Delegaten mit deklariert die **Ereignis** Schlüsselwort vorhanden ist. Andernfalls muss diese Logik im Code eingefügt werden, durch den das Ereignis ausgelöst wird.
+   - (Optional) Eine Methode, die stellt sicher, dass eine Instanz des Delegaten mit deklariert die **Ereignis** Schlüsselwort vorhanden ist. Andernfalls muss diese Logik im Code eingefügt werden, durch den das Ereignis ausgelöst wird.
 
    - Methoden, die das Ereignis aufrufen. Diese Methoden können Überschreibungen von Funktionen der Basisklasse sein.
 

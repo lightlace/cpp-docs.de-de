@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd8189f15f38d5d3008c1f20959573ca9d2337c9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8df70d0ba5c0f957620ee204256b6c92ce4c01f1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539262"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722071"
 ---
 # <a name="llrshift"></a>__ll_rshift
 **Microsoft-spezifisch**  
@@ -40,11 +40,11 @@ __int64 __ll_rshift(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `Mask`  
- Der 64-Bit-Ganzzahl-Wert, um nach rechts verschoben werden soll.  
+*Maske*<br/>
+[in] Der 64-Bit-Ganzzahl-Wert, um nach rechts verschoben werden soll.  
   
- [in] `nBit`  
- Die Anzahl der zu verschiebenden, modulo 64 auf X64 und modulo 32 auf X86 Bits.  
+*nBit*<br/>
+[in] Die Anzahl der zu verschiebenden, modulo 64 auf X64 und modulo 32 auf X86 Bits.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Die Maske verschoben werden, indem `nBit` Bits.  

@@ -1,5 +1,5 @@
 ---
-title: CRecentDockSiteInfo Klasse | Microsoft Docs
+title: CRecentDockSiteInfo-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,15 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01fec88a49852ba46c8feb68f18842d2a1de437f
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 42fd0c5df1731ded5e48bda74cb280b282e6b0cb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078999"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702610"
 ---
 # <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo-Klasse
-Die `CRecentDockSiteInfo` Klasse ist eine Hilfsklasse, die neuesten Statusinformationen für speichert die [CPane-Klasse](../../mfc/reference/cpane-class.md).  
+Die `CRecentDockSiteInfo` Klasse ist eine Hilfsklasse, die aktuelle Zustandsinformationen für speichert die [CPane-Klasse](../../mfc/reference/cpane-class.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -85,7 +85,7 @@ class CRecentDockSiteInfo : public CObject
 ## <a name="remarks"></a>Hinweise  
  Die `CRecentDockSiteInfo`-Klasse ist eine Datenverwaltungsklasse. Sie verfolgt den letzten Status eines `CPane` während des Übergangs zwischen angedockt und unverankert nach. Wenn ein Benutzer auf einen unverankerten andockbaren Bereich klickt, wird der Bereich angedockt. Durch das Doppelklicken auf den angedockten Bereich wird dieser zu seiner vorherigen Position, Größe und zum vorherigen Status zurückversetzt. Gleiches gilt, wenn der Bereich erneut angedockt wird, wird er an seine vorherige Andockposition zurückversetzt. Dies wird durch diese Datenklasse ermöglicht. Da die Member dieser Klasse Statusinformationen für den angedockten Bereich speichern können, sollten sie nicht direkt durch Ihre Anwendung geändert werden.  
   
- Ein `CRecentDockSiteInfo`-Objekt wird erstellt, sobald ein Bereich erstellt wird. Jede `CPane` Objekt verfügt über eine Membervariable [cpane:: M_recentdockinfo](../../mfc/reference/cpane-class.md#m_recentdockinfo), um diese Informationen speichern.  
+ Ein `CRecentDockSiteInfo`-Objekt wird erstellt, sobald ein Bereich erstellt wird. Jede `CPane` Objekt verfügt über eine Membervariable zu [cpane:: M_recentdockinfo](../../mfc/reference/cpane-class.md#m_recentdockinfo), um diese Informationen zu speichern.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -244,8 +244,8 @@ void SaveListOfRecentPanes(CList<HWND,
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *CList < HWND*  
- [in] *LstOrg*  
+*CList < HWND*<br/>
+[in] [in] *LstOrg*  
  [in] *bForSlider*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -260,8 +260,8 @@ virtual void SetInfo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bForSlider*  
- [in] *SrcInfo*  
+*bForSlider*<br/>
+[in] [in] *SrcInfo*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -275,8 +275,8 @@ virtual void StoreDockInfo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pRecentContainer*  
- [in] *pTabbedBar*  
+*pRecentContainer*<br/>
+[in] [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>Hinweise  
   

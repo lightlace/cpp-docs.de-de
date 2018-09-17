@@ -1,5 +1,5 @@
 ---
-title: Malloc-Ausrichtung | Microsoft Docs
+title: Malloc-Ausrichtung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,19 +12,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d503d0dd891c651a405cb79bb5ce50996f46cff6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa6e2748691eeb8a11834bcf8e6962252be7ab3f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368664"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712061"
 ---
 # <a name="malloc-alignment"></a>malloc-Ausrichtung
-["malloc"](../c-runtime-library/reference/malloc.md) wird sichergestellt, dass Arbeitsspeicher zurückgeben, die zeigt, passend ausgerichtet ist, für das Speichern jedes Objekt, das eine grundlegende Ausrichtung und die hat hinsichtlich der Menge an Arbeitsspeicher passt konnte, der zugeordnet ist. Ein *grundlegende Ausrichtung* ist eine Ausrichtung, die kleiner oder gleich der größten Ausrichtung, die von der Implementierung ohne Ausrichtungsspezifikation unterstützt wird. (In Visual C++ ist dies die Ausrichtung, die für einen `double` oder 8 Bytes erforderlich ist. In einem Code, der auf 64-Bit-Plattformen ausgerichtet ist, sind es 16 Bytes.) Beispielsweise kann eine Vier-Byte-Speicherbelegung an einer Begrenzung ausgerichtet werden, die ein Objekt unterstützt, das maximal vier Byte groß ist.  
-  
- Visual C++ unterstützt Typen mit *Erweiterte Ausrichtung*, auch bekannt als sind *ausgerichtete* Typen. Z. B. die SSE-Typen [__m128](../cpp/m128.md) und `__m256`, sowie Typen, die mithilfe von deklariert werden `__declspec(align( n ))` , in denen `n` ist größer als 8, Ausrichtung erweitert haben. Eine Speicherausrichtung an einer Grenze, die für ein Objekt geeignet ist, das eine erweiterte Ausrichtung erfordert, wird von `malloc` nicht gewährleistet. Verwenden Sie zum Reservieren von Speicher für ausgerichtetes Typen [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) und verwandte Funktionen verweisen.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwendung von Stapeln](../build/stack-usage.md)   
- [Ausrichten](../cpp/align-cpp.md)   
- [__declspec](../cpp/declspec.md)
+
+["malloc"](../c-runtime-library/reference/malloc.md) ist immer, den Speicher zurück, die passend ausgerichtet ist, für das Speichern eines beliebigen Objekts, die eine grundlegende Ausrichtung und die hinsichtlich der Menge des Arbeitsspeichers unterbringen konnten, die zugeordnet wird. Ein *grundlegende Ausrichtung* ist eine Ausrichtung, die kleiner oder gleich der größten Ausrichtung, die von der Implementierung ohne Ausrichtungsspezifikation unterstützt wird. (In Visual C++ ist dies die Ausrichtung, die für einen `double` oder 8 Bytes erforderlich ist. In einem Code, der auf 64-Bit-Plattformen ausgerichtet ist, sind es 16 Bytes.) Beispielsweise kann eine Vier-Byte-Speicherbelegung an einer Begrenzung ausgerichtet werden, die ein Objekt unterstützt, das maximal vier Byte groß ist.
+
+Visual C++ unterstützt Typen mit *über eine erweiterte Ausrichtung*, welche sind auch bekannt als *über-ausgerichtete* Typen. Beispielsweise die SSE-Typen [__m128](../cpp/m128.md) und `__m256`, sowie Typen, die mithilfe von deklariert werden `__declspec(align( n ))` , in denen `n` ist größer als 8, verfügen über eine erweiterte Ausrichtung. Eine Speicherausrichtung an einer Grenze, die für ein Objekt geeignet ist, das eine erweiterte Ausrichtung erfordert, wird von `malloc` nicht gewährleistet. Um Arbeitsspeicher für über-ausgerichtete Typen zuzuordnen, verwenden Sie [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) und verwandte Funktionen.
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwendung von Stapeln](../build/stack-usage.md)<br/>
+[align](../cpp/align-cpp.md)<br/>
+[__declspec](../cpp/declspec.md)

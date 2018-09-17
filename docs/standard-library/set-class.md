@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7a04710d900aa9eb5889c19fbdc419a3b7f3cbc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b3b697901ac564a88f48cdbc3154f29089c23acc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204609"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706159"
 ---
 # <a name="set-class"></a>set-Klasse
 
@@ -119,15 +119,15 @@ class set
 ### <a name="parameters"></a>Parameter
 
 *Key*<br/>
- Der in dem Satz zu speichernde Elementdatentyp.
+Der in dem Satz zu speichernde Elementdatentyp.
 
 *Merkmale*<br/>
- Der Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in dem Satz zu bestimmen. Dieses Argument ist optional, und das binäre Prädikat **less** *\<Key>* ist der Standardwert.
+Der Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in dem Satz zu bestimmen. Dieses Argument ist optional, und das binäre Prädikat **less** *\<Key>* ist der Standardwert.
 
 In C ++ 14 können Sie heterogenes Nachschlagen durch Angabe des `std::less<>` oder `std::greater<>` Prädikats, das keine Typparameter aufweist, aktivieren. Weitere Informationen finden Sie unter [Heterogenes Nachschlagen in assoziativen Containern](../standard-library/stl-containers.md#sequence_containers)
 
 *Zuweisung*<br/>
- Der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers des Satzes kapselt. Dieses Argument ist optional, und der Standardwert ist `allocator<Key>`.
+Der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers des Satzes kapselt. Dieses Argument ist optional, und der Standardwert ist `allocator<Key>`.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -488,7 +488,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parameter
 
 *key*<br/>
- Der Schlüssel der Elemente, die aus einem Satz abgeglichen werden.
+Der Schlüssel der Elemente, die aus einem Satz abgeglichen werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -934,7 +934,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parameter
 
 *key*<br/>
- Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der Menge verglichen wird, die durchsucht wird.
+Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der Menge verglichen wird, die durchsucht wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1019,16 +1019,16 @@ size_type erase(
 ### <a name="parameters"></a>Parameter
 
 *Where*<br/>
- Die Position des zu entfernenden Elements.
+Die Position des zu entfernenden Elements.
 
 *Erste*<br/>
- Die Position des ersten zu entfernenden Elements.
+Die Position des ersten zu entfernenden Elements.
 
 *letzte*<br/>
- Die Position direkt hinter dem letzten zu entfernenden Element.
+Die Position direkt hinter dem letzten zu entfernenden Element.
 
 *Key*<br/>
- Der Schlüsselwert der zu entfernenden Elemente.
+Der Schlüsselwert der zu entfernenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1131,7 +1131,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parameter
 
 *key*<br/>
- Der Schlüsselwert, der mit dem Sortierschlüssel eines Elements aus dem zu durchsuchenden Satz übereinstimmt.
+Der Schlüsselwert, der mit dem Sortierschlüssel eines Elements aus dem zu durchsuchenden Satz übereinstimmt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1595,7 +1595,7 @@ iterator lower_bound(const Key& key);
 ### <a name="parameters"></a>Parameter
 
 *key*<br/>
- Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der Menge verglichen wird, die durchsucht wird.
+Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der Menge verglichen wird, die durchsucht wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2215,7 +2215,7 @@ void swap(
 ### <a name="parameters"></a>Parameter
 
 *right*<br/>
- Das set-Argument, das die Elemente bereitstellt, die mit der Zielmenge getauscht werden sollen.
+Das set-Argument, das die Elemente bereitstellt, die mit der Zielmenge getauscht werden sollen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2284,7 +2284,7 @@ iterator upper_bound(const Key& key);
 ### <a name="parameters"></a>Parameter
 
 *key*<br/>
- Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der Menge verglichen wird, die durchsucht wird.
+Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der Menge verglichen wird, die durchsucht wird.
 
 ### <a name="return-value"></a>Rückgabewert
 

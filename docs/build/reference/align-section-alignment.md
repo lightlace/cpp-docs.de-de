@@ -1,5 +1,5 @@
 ---
-title: / ALIGN (Abschnittsausrichtung) | Microsoft Docs
+title: / ALIGN (Abschnittsausrichtung) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 543ea30b06f62939f378167d8598c73f66061f46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cb92d4b16be7903004831ffb25e2891f498a8989
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370305"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718249"
 ---
 # <a name="align-section-alignment"></a>/ALIGN (Abschnittsausrichtung)
 
@@ -36,16 +36,16 @@ ms.locfileid: "32370305"
 
 ### <a name="arguments"></a>Argumente
 
-*Anzahl*  
-Der Ausrichtungswert in Bytes.
+*Anzahl*<br/>
+Der Ausrichtungswert in Byte.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **/AUSRICHTEN** Option gibt die Ausrichtung eines Abschnitts innerhalb des linearen Adressraums des Programms an. Die *Anzahl* Argument in Bytes und muss eine Potenz von zwei sein. Der Standardwert ist 4 KB (4096). Der Linker gibt eine Warnung aus, wenn die Ausrichtung einer ungültigen Abbild erzeugt.
+Die **/ALIGN** Option gibt die Ausrichtung der einzelnen Abschnitten im linearen Adressbereich des Programms an. Die *Anzahl* Argument in Bytes und muss eine Potenz von zwei sein. Der Standardwert ist 4 KB (4096). Der Linker gibt eine Warnung aus, wenn die Ausrichtung auf ein ungültiges Bild erzeugt.
 
-Wenn Sie eine Anwendung z. B. ein Gerätetreiber schreiben, müssen Sie nicht die Ausrichtung zu ändern.
+Wenn Sie eine Anwendung z. B. einen Gerätetreiber schreiben, sollten Sie nicht die Ausrichtung ändern möchten.
 
-Es ist möglich, ändern Sie die Ausrichtung eines bestimmten Bereichs mit dem Ausrichtungsparameter, um die [/SECTION](../../build/reference/section-specify-section-attributes.md) Option.
+Es ist möglich, ändern Sie die Ausrichtung eines bestimmten Abschnitts mit dem Ausrichtungsparameter, um die [/SECTION](../../build/reference/section-specify-section-attributes.md) Option.
 
 Der Ausrichtungswert, die Sie angeben, darf nicht kleiner als die größte abschnittsausrichtung sein.
 
@@ -55,7 +55,7 @@ Der Ausrichtungswert, die Sie angeben, darf nicht kleiner als die größte absch
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **Befehlszeile** Eigenschaftenseite.
 
-1. Geben Sie die Option in der **Zusatzoptionen** Feld. Wählen Sie **OK** oder **übernehmen** um die Änderung zu übernehmen.
+1. Geben Sie die Option in der **zusätzliche Optionen** Feld. Wählen Sie **OK** oder **übernehmen** um die Änderung zu übernehmen.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
 
@@ -63,5 +63,5 @@ Der Ausrichtungswert, die Sie angeben, darf nicht kleiner als die größte absch
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)  
-[Linkeroptionen](../../build/reference/linker-options.md)  
+[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
+[Linkeroptionen](../../build/reference/linker-options.md)

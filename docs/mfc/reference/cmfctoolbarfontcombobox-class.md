@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12b6d0b0ccc21f4ab1f8b3d7116f098a532d0418
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b510b05c80ba7cdbea0bbf0ec580e88daa55fbed
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216260"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704365"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox-Klasse
 Eine Symbolleisten-Schaltfläche, die ein Kombinationsfeld-Steuerelement, die dem Benutzer ermöglicht enthält, wählen Sie eine Schriftart aus einer Liste von Systemschriftarten.  
@@ -110,14 +110,14 @@ CMFCToolBarFontComboBox();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiID*  
- Die Befehls-ID des Kombinationsfelds.  
+*uiID*<br/>
+[in] Die Befehls-ID des Kombinationsfelds.  
   
- [in] *iImage*  
- Der nullbasierte Index, der ein Symbolleistenbild werden soll. Das Image befindet sich in der [CMFCToolBarImages-Klasse](../../mfc/reference/cmfctoolbarimages-class.md) -Objekt, [CMFCToolBar-Klasse](../../mfc/reference/cmfctoolbar-class.md) -Klasse verwaltet.  
+*iImage*<br/>
+[in] Der nullbasierte Index, der ein Symbolleistenbild werden soll. Das Image befindet sich in der [CMFCToolBarImages-Klasse](../../mfc/reference/cmfctoolbarimages-class.md) -Objekt, [CMFCToolBar-Klasse](../../mfc/reference/cmfctoolbar-class.md) -Klasse verwaltet.  
   
- [in] *nFontType*  
- Die Typen der Schriftarten, die im Kombinationsfeld enthält. Dieser Parameter kann eine Kombination aus (boolesche OR) die folgenden Werte sein:  
+*nFontType*<br/>
+[in] Die Typen der Schriftarten, die im Kombinationsfeld enthält. Dieser Parameter kann eine Kombination aus (boolesche OR) die folgenden Werte sein:  
   
  DEVICE_FONTTYPE  
   
@@ -125,20 +125,20 @@ CMFCToolBarFontComboBox();
   
  TRUETYPE_FONTTYPE  
   
- [in] *nCharSet*  
- Wenn auf DEFAULT_CHARSET, das Kombinationsfeld festgelegt ist, alle eindeutig benannte Schriftarten in allen Zeichensätzen enthält. (Treten zwei Schriftarten mit dem gleichen Namen, enthält das Kombinationsfeld eine davon.) Wenn auf einen gültigen Zeichen festgelegten Wert, der im Kombinationsfeld nur die Schriftarten in den angegebenen Zeichensatz enthält. Finden Sie unter ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) für eine Liste der möglichen Zeichen festlegt.  
+*nCharSet*<br/>
+[in] Wenn auf DEFAULT_CHARSET, das Kombinationsfeld festgelegt ist, alle eindeutig benannte Schriftarten in allen Zeichensätzen enthält. (Treten zwei Schriftarten mit dem gleichen Namen, enthält das Kombinationsfeld eine davon.) Wenn auf einen gültigen Zeichen festgelegten Wert, der im Kombinationsfeld nur die Schriftarten in den angegebenen Zeichensatz enthält. Finden Sie unter ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) für eine Liste der möglichen Zeichen festlegt.  
   
- [in] *DwStyle*  
- Das Format des Kombinationsfelds. (finden Sie unter [Kombinationsfeldstile](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
+*dwStyle*<br/>
+[in] Das Format des Kombinationsfelds. (finden Sie unter [Kombinationsfeldstile](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
   
- [in] *iWidth*  
- Die Breite in Pixel des Edit-Steuerelements.  
+*iWidth*<br/>
+[in] Die Breite in Pixel des Edit-Steuerelements.  
   
- [in] *nPitchAndFamily*  
- Wenn auf DEFAULT_PITCH, das Kombinationsfeld festgelegt, Schriftarten, unabhängig von der Schriftbreite enthält. Wenn FIXED_PITCH oder VARIABLE_PITCH festgelegt, der im Kombinationsfeld nur Schriftarten mit diesem Typ Tonhöhe enthält. Filterung basierend auf Schriftfamilie wird derzeit nicht unterstützt.  
+*nPitchAndFamily*<br/>
+[in] Wenn auf DEFAULT_PITCH, das Kombinationsfeld festgelegt, Schriftarten, unabhängig von der Schriftbreite enthält. Wenn FIXED_PITCH oder VARIABLE_PITCH festgelegt, der im Kombinationsfeld nur Schriftarten mit diesem Typ Tonhöhe enthält. Filterung basierend auf Schriftfamilie wird derzeit nicht unterstützt.  
   
- [out] *pLstFontsExternal*  
- Zeiger auf eine [CObList-Klasse](../../mfc/reference/coblist-class.md) Objekt, das die verfügbaren Schriftarten speichert.  
+*pLstFontsExternal*<br/>
+[out] Zeiger auf eine [CObList-Klasse](../../mfc/reference/coblist-class.md) Objekt, das die verfügbaren Schriftarten speichert.  
   
 ### <a name="remarks"></a>Hinweise  
  In der Regel `CMFCToolBarFontComboBox` Objekte speichern die Liste der verfügbaren Schriftarten in einer einzelnen freigegebenen `CObList` Objekt. Wenn Sie die zweite Überladung des Konstruktors verwenden und einen gültigen Zeiger auf *pLstFontsExternal*, `CMFCToolBarFontComboBox` Objekt stattdessen füllt die `CObList` , *pLstFontsExternal* Zeigt auf, mit den verfügbaren Schriftarten.  
@@ -156,8 +156,8 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iIndex*  
- Gibt an, der nullbasierte Index des eine ComboBoxItem-Steuerelement.  
+*iIndex*<br/>
+[in] Gibt an, der nullbasierte Index des eine ComboBoxItem-Steuerelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf eine `CMFCFontInfo` Objekt. Wenn *iIndex* gibt keinen gültige Element-Index, der Rückgabewert ist NULL.  
@@ -183,14 +183,14 @@ BOOL SetFont(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Wert*  
- Gibt den Namen oder das Präfix.  
+*Wert*<br/>
+[in] Gibt den Namen oder das Präfix.  
   
- [in] *nCharSet*  
- Gibt den Zeichensatz an.  
+*nCharSet*<br/>
+[in] Gibt den Zeichensatz an.  
   
- [in] *bExact*  
- Gibt an, ob *Wert* enthält den Namen der Schriftart oder das Präfix für die Schriftart.  
+*bExact*<br/>
+[in] Gibt an, ob *Wert* enthält den Namen der Schriftart oder das Präfix für die Schriftart.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL ist, wenn die Schriftart erfolgreich ausgewählt wurde, andernfalls 0.  

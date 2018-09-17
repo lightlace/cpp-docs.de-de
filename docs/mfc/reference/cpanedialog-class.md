@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc74f89708132b0895c8980538b852c15087b5e6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4e987910cf27135858d4fe272bc02da7c90f622f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43682326"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710150"
 ---
 # <a name="cpanedialog-class"></a>CPaneDialog-Klasse
 Die `CPaneDialog` Klasse unterstützt ein nicht modales, andockbares Dialogfeld.  
@@ -122,32 +122,32 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszWindowName*  
- Der Name des im Dialogfeld andocken.  
+*lpszWindowName*<br/>
+[in] Der Name des im Dialogfeld andocken.  
   
- [in] *pParentWnd*  
- Verweist auf das übergeordnete Fenster.  
+*pParentWnd*<br/>
+[in] Verweist auf das übergeordnete Fenster.  
   
- [in] *bHasGripper*  
- "True", erstellen Sie im Dialogfeld Andocken mit Beschriftung (Ziehpunkt); andernfalls "false".  
+*bHasGripper*<br/>
+[in] "True", erstellen Sie im Dialogfeld Andocken mit Beschriftung (Ziehpunkt); andernfalls "false".  
   
- [in] *LpszTemplateName*  
- Der Name der Ressource Dialogfeldvorlage.  
+*lpszTemplateName*<br/>
+[in] Der Name der Ressource Dialogfeldvorlage.  
   
- [in] *nStyle*  
- Der Windows-Stil.  
+*nStyle*<br/>
+[in] Der Windows-Stil.  
   
- [in] *nID*  
- Die Steuerelement-ID.  
+*nID*<br/>
+[in] Die Steuerelement-ID.  
   
- [in] *nIDTemplate*  
- Die Ressourcen-ID der Dialogfeldvorlage.  
+*nIDTemplate*<br/>
+[in] Die Ressourcen-ID der Dialogfeldvorlage.  
   
- [in] *DwTabbedStyle*  
- Der Stil des Fensters im Registerkartenformat, die sich ergibt, wenn der Benutzer ein anderes Steuerelement im Bereich auf die Beschriftung des in diesem Bereich Steuerelement zieht. Der Standardwert ist AFX_CBRS_REGULAR_TABS. Weitere Informationen finden Sie im Abschnitt "Hinweise" der [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex) Methode.  
+*dwTabbedStyle*<br/>
+[in] Der Stil des Fensters im Registerkartenformat, die sich ergibt, wenn der Benutzer ein anderes Steuerelement im Bereich auf die Beschriftung des in diesem Bereich Steuerelement zieht. Der Standardwert ist AFX_CBRS_REGULAR_TABS. Weitere Informationen finden Sie im Abschnitt "Hinweise" der [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex) Methode.  
   
- [in] *DwControlBarStyle*  
- Zusätzliche Formatattribute. Der Standardwert ist AFX_DEFAULT_DOCKING_PANE_STYLE. Weitere Informationen finden Sie im Abschnitt "Hinweise" der [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex) Methode.  
+*dwControlBarStyle*<br/>
+[in] Zusätzliche Formatattribute. Der Standardwert ist AFX_DEFAULT_DOCKING_PANE_STYLE. Weitere Informationen finden Sie im Abschnitt "Hinweise" der [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex) Methode.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -170,11 +170,11 @@ afx_msg LRESULT HandleInitDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *wParam-Parameter*  
- Handle für das Steuerelement, das den Standard-Tastaturfokus erhalten.  
+*wParam-Parameter*<br/>
+[in] Handle für das Steuerelement, das den Standard-Tastaturfokus erhalten.  
   
- [in] *lParam*  
- Gibt zusätzliche Initialisierung der Daten.  
+*lParam*<br/>
+[in] Gibt zusätzliche Initialisierung der Daten.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false". "True" legt darüber hinaus den Tastaturfokus fest, auf das Steuerelement, das gemäß der *wParam* -Parameter ist. "False" wird verhindert, dass den Standard-Tastaturfokus festlegen.  
@@ -190,8 +190,8 @@ virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pOccDialogInfo*  
- Zeiger auf eine Dialogfeldvorlage, die verwendet wird, um den Dialog Box-Objekt zu erstellen. Der Wert dieses Parameters wird anschließend übergeben, in der [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) Methode.  
+*pOccDialogInfo*<br/>
+[in] Zeiger auf eine Dialogfeldvorlage, die verwendet wird, um den Dialog Box-Objekt zu erstellen. Der Wert dieses Parameters wird anschließend übergeben, in der [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) Methode.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Immer "true".  

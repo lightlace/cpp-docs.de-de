@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5817d44657fa429bdce19f8641255d7db630eac7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4aa0f8e94e0797badbae2a409ae1ce02caea6e81
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954863"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707529"
 ---
 # <a name="weakptr-class"></a>weak_ptr-Klasse
 
@@ -77,8 +77,8 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*  
- Der vom schwachen Zeiger gesteuerte Typ.
+*Ty*<br/>
+Der vom schwachen Zeiger gesteuerte Typ.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -290,14 +290,14 @@ weak_ptr& operator=(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parameter
 
-*Andere*  
- Der Typ, der vom Argument für den gemeinsamen/schwachen Zeiger gesteuert wird.
+*Andere*<br/>
+Der Typ, der vom Argument für den gemeinsamen/schwachen Zeiger gesteuert wird.
 
-*WP*  
- Der zu kopierende schwache Zeiger.
+*WP*<br/>
+Der zu kopierende schwache Zeiger.
 
-*SP*  
- Der zu kopierende gemeinsame Zeiger
+*SP*<br/>
+Der zu kopierende gemeinsame Zeiger
 
 ### <a name="remarks"></a>Hinweise
 
@@ -349,8 +349,8 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Parameter
 
-*ptr*  
- Ein `lvalue`-Verweis auf `shared_ptr` oder `weak_ptr`.
+*ptr*<br/>
+Ein `lvalue`-Verweis auf `shared_ptr` oder `weak_ptr`.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -409,8 +409,8 @@ void swap(weak_ptr& wp);
 
 ### <a name="parameters"></a>Parameter
 
-*WP*  
- Der schwache Zeiger, mit dem getauscht werden soll.
+*WP*<br/>
+Der schwache Zeiger, mit dem getauscht werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -529,14 +529,14 @@ weak_ptr(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parameter
 
-*Andere*  
- Der Typ, der vom Argument für den gemeinsamen/schwachen Zeiger gesteuert wird.
+*Andere*<br/>
+Der Typ, der vom Argument für den gemeinsamen/schwachen Zeiger gesteuert wird.
 
-*WP*  
- Der zu kopierende schwache Zeiger.
+*WP*<br/>
+Der zu kopierende schwache Zeiger.
 
-*SP*  
- Der zu kopierende gemeinsame Zeiger
+*SP*<br/>
+Der zu kopierende gemeinsame Zeiger
 
 ### <a name="remarks"></a>Hinweise
 

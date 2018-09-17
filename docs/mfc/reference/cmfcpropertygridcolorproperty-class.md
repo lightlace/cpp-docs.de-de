@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 164e54ccbd9365e7e4fb2c1989f84891e5813c2f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 7b1023ff59af0f64d5205447e6e7b17ead1f5186
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849164"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705834"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty-Klasse
 Die `CMFCPropertyGridColorProperty`-Klasse unterstützt ein Eigenschaftslisten-Steuerelement, über das ein Farbauswahl-Dialogfeld geöffnet werden kann.  
@@ -103,20 +103,20 @@ CMFCPropertyGridColorProperty(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *StrName*  
- Den Namen der Eigenschaft.  
+*strName*<br/>
+[in] Der Name der Eigenschaft.  
   
- [in] *Farbe*  
- Der Farbwert der Eigenschaft.  
+*Farbe*<br/>
+[in] Der Farbwert der Eigenschaft.  
   
- [in] *pPalette*  
- Zeiger auf eine Palette von Farben. Der Standardwert ist NULL.  
+*pPalette*<br/>
+[in] Zeiger auf eine Palette von Farben. Der Standardwert ist NULL.  
   
- [in] *LpszDescr*  
- Beschreibung der Eigenschaft. Der Standardwert ist NULL.  
+*lpszDescr*<br/>
+[in] Beschreibung der Eigenschaft. Der Standardwert ist NULL.  
   
- [in] *DwData*  
- Anwendungsspezifische Daten, z. B. eine ganze Zahl oder ein Zeiger auf andere Daten, die der Eigenschaft zugeordnet ist. Der Standardwert ist 0.  
+*dwData*<br/>
+[in] Anwendungsspezifische Daten, z. B. eine ganze Zahl oder ein Zeiger auf andere Daten, die der Eigenschaft zugeordnet ist. Der Standardwert ist 0.  
   
 ##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton  
  Ermöglicht die *automatische* Schaltfläche auf das Dialogfeld zur Farbauswahl. (Die standardmäßige automatische Schaltfläche ist mit der Bezeichnung **automatische**.)  
@@ -129,14 +129,14 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszLabel*  
- Der Bezeichnungstext, der die automatische Schaltfläche werden soll.  
+*lpszLabel*<br/>
+[in] Der Bezeichnungstext, der die automatische Schaltfläche werden soll.  
   
- [in] *ColorAutomatic*  
- Der RGB-Farbwert der Farbe automatisch (Standard).  
+*colorAutomatic*<br/>
+[in] Der RGB-Farbwert der Farbe automatisch (Standard).  
   
- [in] *bAktivieren*  
- True, um die automatische Schaltfläche zu aktivieren. andernfalls "false". Der Standardwert ist "true".  
+*bAktivieren*<br/>
+[in] True, um die automatische Schaltfläche zu aktivieren. andernfalls "false". Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -151,14 +151,14 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszLabel*  
- Der Bezeichnungstext der anderen Schaltfläche.  
+*lpszLabel*<br/>
+[in] Der Bezeichnungstext der anderen Schaltfläche.  
   
- [in] *bAltColorDlg*  
- "True" Anzeige der `CMFCColorDialog` Dialogfeld FALSE, um das Dialogfeld für die Auswahl des Standardfarbe anzuzeigen. Der Standardwert ist "true".  
+*bAltColorDlg*<br/>
+[in] "True" Anzeige der `CMFCColorDialog` Dialogfeld FALSE, um das Dialogfeld für die Auswahl des Standardfarbe anzuzeigen. Der Standardwert ist "true".  
   
- [in] *bAktivieren*  
- TRUE, wenn die anderen Schaltfläche angezeigt werden soll; andernfalls "false".  Der Standardwert ist "true".  
+*bAktivieren*<br/>
+[in] TRUE, wenn die anderen Schaltfläche angezeigt werden soll; andernfalls "false".  Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -182,8 +182,8 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Farbe*  
- Ein RGB-Farbwert.  
+*Farbe*<br/>
+[in] Ein RGB-Farbwert.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -195,8 +195,8 @@ void SetColumnsNumber(int nColumnsNumber);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nColumnsNumber*  
- Die bevorzugte Anzahl von Spalten in der Farbe des Eigenschaftenrasters.  
+*nColumnsNumber*<br/>
+[in] Die bevorzugte Anzahl von Spalten in der Farbe des Eigenschaftenrasters.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode legt den Wert fest. die `m_nColumnsNumber` Datenmember geschützt.  
@@ -209,8 +209,8 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *VarValue*  
- Ein Wert.  
+*varValue*<br/>
+[in] Ein-Wert.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden der [cmfcpropertygridproperty:: Resetoriginalvalue](../../mfc/reference/cmfcpropertygridproperty-class.md#resetoriginalvalue) Methode, um den ursprünglichen Wert einer bearbeiteten Eigenschaft zurückzusetzen.  

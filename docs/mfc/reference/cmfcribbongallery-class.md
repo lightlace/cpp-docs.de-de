@@ -88,12 +88,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ed6fde4ffb510c30189e49639112edfadfcfd14
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: de624d9775160d1cbe7f048baf2dd83a592cfbe3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538483"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724774"
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery-Klasse
 Implementiert Menübandkataloge im Stil von Office 2007.  
@@ -195,20 +195,20 @@ void AddGroup(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszGroupName*  
- Gibt den Namen der Gruppe an.  
+*lpszGroupName*<br/>
+[in] Gibt den Namen der Gruppe.  
   
- [in] *UiImagesPaletteResID*  
- Gibt an, die Ressourcen-ID der Liste der Bilder, die die Images für die Gruppe enthält.  
+*uiImagesPaletteResID*<br/>
+[in] Gibt an, die Ressourcen-ID der Liste der Bilder, die die Images für die Gruppe enthält.  
   
- [in] *CxPaletteImage*  
- Gibt die Breite in Pixel eines Bilds an.  
+*cxPaletteImage*<br/>
+[in] Gibt die Breite in Pixel eines Bilds an.  
   
- [in] *ImagesGroup*  
- Ein Verweis auf die Bildliste an, das Gruppieren von Images enthält.  
+*imagesGroup*<br/>
+[in] Ein Verweis auf die Bildliste an, das Gruppieren von Images enthält.  
   
- [in] *nIconsNum*  
- Gibt die Anzahl der Symbole in der Gruppe an. Dieser Parameter muss angegeben werden, nur für den benutzerdefinierten (Besitzer gezeichnet) Gruppen.  
+*nIconsNum*<br/>
+[in] Gibt die Anzahl der Symbole in der Gruppe an. Dieser Parameter muss angegeben werden, nur für den benutzerdefinierten (Besitzer gezeichnet) Gruppen.  
   
 ### <a name="remarks"></a>Hinweise  
  Sie können die Elemente in einem Menübandkatalog in mehrere Gruppen unterteilen, durch Aufrufen dieser Methode. Jede Gruppe kann es sich um eine Beschriftung aufweisen.  
@@ -224,14 +224,14 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pSubItem*  
- Ein Zeiger auf das Element, das Sie im Menü hinzugefügt.  
+*pSubItem*<br/>
+[in] Ein Zeiger auf das Element, das Sie im Menü hinzugefügt.  
   
- [in] *nIndex*  
- Gibt dem nullbasierten Index des von einem Speicherort, wo Sie das Element eingefügt werden soll.  
+*nIndex*<br/>
+[in] Gibt dem nullbasierten Index des von einem Speicherort, wo Sie das Element eingefügt werden soll.  
   
- [in] *bOnTop*  
- True, um anzugeben, dass das Element vor dem Menübandkatalog eingefügt werden sollen. andernfalls "false".  
+*bOnTop*<br/>
+[in] True, um anzugeben, dass das Element vor dem Menübandkatalog eingefügt werden sollen. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Popup-Galerien können durch Aufrufen dieser Methode mit Popupmenüelemente kombiniert werden. Menüelemente können vor oder nach dem Katalog platziert werden.  
@@ -325,11 +325,11 @@ void EnableMenuResize(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- Ändern der Größe "im Menüs", "true" aktiviert; andernfalls "false".  
+*bAktivieren*<br/>
+[in] Ändern der Größe "im Menüs", "true" aktiviert; andernfalls "false".  
   
- [in] *bVertcalOnly*  
- True, um anzugeben, dass der Katalog nur vertikal geändert werden kann. "False", um anzugeben, dass der Katalog vertikal und horizontal geändert werden kann.  
+*bVertcalOnly*<br/>
+[in] True, um anzugeben, dass der Katalog nur vertikal geändert werden kann. "False", um anzugeben, dass der Katalog vertikal und horizontal geändert werden kann.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode zum Aktivieren oder deaktivieren, Ändern der Größe von dem Menübandkatalog. Beim Ändern der Größe aktiviert ist, zeigt das Menüband ein ziehelements an, dem ein Benutzer verwenden können, zu ändern.  
@@ -342,8 +342,8 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- True, um anzugeben, dass der Seitenleiste aktiviert ist. andernfalls "false".  
+*bAktivieren*<br/>
+[in] True, um anzugeben, dass der Seitenleiste aktiviert ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode zum Aktivieren oder Deaktivieren der Seitenleiste von Office XP-Stil auf der linken Seite des Menüs.  
@@ -381,8 +381,8 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nGroupIndex*  
- Gibt den nullbasierten Index für die Gruppe, deren Name abgerufen werden soll.  
+*nGroupIndex*<br/>
+[in] Gibt den nullbasierten Index für die Gruppe, deren Name abgerufen werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Name der Gruppe am angegebenen Index. Übergeben einen ungültigen Index führt eine fehlgeschlagene Assertion.  
@@ -420,8 +420,8 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nItemIndex*  
- Gibt den nullbasierten Index des Elements, für das Abrufen den QuickInfo-Text an.  
+*nItemIndex*<br/>
+[in] Gibt den nullbasierten Index des Elements, für das Abrufen den QuickInfo-Text an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die QuickInfo-Zeichenfolge, die ein Element im Menübandkatalog zugewiesen. Es kann NULL sein, wenn dieses Element keine QuickInfo zugeordnet ist.  
@@ -436,8 +436,8 @@ static int GetLastSelectedItem(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmdID*  
- Gibt an, die Befehls-ID des Menüelements, das dem Menübandkatalog geöffnet.  
+*uiCmdID*<br/>
+[in] Gibt an, die Befehls-ID des Menüelements, das dem Menübandkatalog geöffnet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wenn der Benutzer ein Element im Menübandkatalog auswählt, sendet die Bibliothek die WM_COMMAND-Meldung zusammen mit der Befehls-ID neben der Menüschaltfläche, die dem Menübandkatalog geöffnet.  
@@ -576,20 +576,20 @@ virtual void OnDrawPaletteIcon(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger auf den Gerätekontext, der zum Zeichnen verwendet wird.  
+*pDC*<br/>
+[in] Ein Zeiger auf den Gerätekontext, der zum Zeichnen verwendet wird.  
   
- [in] *RectIcon*  
- Gibt das umschließende Rechteck des Symbols, das gezeichnet werden soll.  
+*rectIcon*<br/>
+[in] Gibt das umschließende Rechteck des Symbols, das gezeichnet werden soll.  
   
- [in] *nIconIndex*  
- Gibt den nullbasierten Index in der Bildliste der Katalog Symbole des Symbols, das gezeichnet werden soll.  
+*nIconIndex*<br/>
+[in] Gibt den nullbasierten Index in der Bildliste der Katalog Symbole des Symbols, das gezeichnet werden soll.  
   
- [in] *pIcon*  
- Ein Zeiger auf das Symbol, das gerade gezeichnet wird.  
+*pIcon*<br/>
+[in] Ein Zeiger auf das Symbol, das gerade gezeichnet wird.  
   
- [in] *ClrText*  
- Gibt die Farbe für den Text des Elements, das gezeichnet werden soll.  
+*clrText*<br/>
+[in] Gibt die Farbe für den Text des Elements, das gezeichnet werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
  Sie können diese Methode in einer abgeleiteten Klasse anpassen die Darstellung von einem Menübandkatalog überschreiben.  
@@ -659,11 +659,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pParent*  
- Das übergeordnete Fenster des Menübandkatalogfensters.  
+*pParent*<br/>
+[in] Das übergeordnete Fenster des menübandkatalogfensters.  
   
- [out] *Daten*  
- Ein `CAccessibilityData` -Objekt, das die Barrierefreiheitsdaten aus dem Menübandkatalog erhält.  
+*data*<br/>
+[out] Ein `CAccessibilityData` -Objekt, das die barrierefreiheitsdaten aus dem Menübandkatalog erhält.  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -678,8 +678,8 @@ void SetButtonMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bSet*  
- "True", um dem Menübandkatalog als eine Dropdown-Menü-Schaltfläche anzuzeigen; FALSE, wenn der Inhalt der Menüband direkt auf dem Menüband angezeigt.  
+*bSet*<br/>
+[in] "True", um dem Menübandkatalog als eine Dropdown-Menü-Schaltfläche anzuzeigen; FALSE, wenn der Inhalt der Menüband direkt auf dem Menüband angezeigt.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -693,11 +693,11 @@ void SetGroupName(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nGroupIndex*  
- Gibt den nullbasierten Index für die Gruppe, die für die der Name geändert wird.  
+*nGroupIndex*<br/>
+[in] Gibt den nullbasierten Index für die Gruppe, die für die der Name geändert wird.  
   
- [in] *LpszGroupName*  
- Gibt den neuen Namen für die Gruppe an.  
+*lpszGroupName*<br/>
+[in] Gibt den neuen Namen für die Gruppe an.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Gruppe, deren Name geändert wird, muss hinzugefügt worden sein mithilfe der [CMFCRibbonGallery::AddGroup](#addgroup) Methode.  
@@ -710,8 +710,8 @@ void SetIconsInRow(int nIconsInRow);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIconsInRow*  
- Gibt die Anzahl der Elemente in jeder Zeile des Katalogs angezeigt werden.  
+*nIconsInRow*<br/>
+[in] Gibt die Anzahl der Elemente in jeder Zeile des Katalogs angezeigt werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um die Breite des dem Menübandkatalog anzugeben.  
@@ -726,11 +726,11 @@ void SetItemToolTip(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nItemIndex*  
- Der nullbasierte Index des Elements Palette mit dem die QuickInfo zugeordnet werden soll.  
+*nItemIndex*<br/>
+[in] Der nullbasierte Index des Elements Palette mit dem die QuickInfo zugeordnet werden soll.  
   
- [in] *LpszToolTip*  
- Der Text der QuickInfo angezeigt werden.  
+*lpszToolTip*<br/>
+[in] Der Text der QuickInfo angezeigt werden.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -747,14 +747,14 @@ void SetPalette(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *ImagesPalette*  
- Gibt die Bildliste mit den Symbolen im Katalog angezeigt werden.  
+*imagesPalette*<br/>
+[in] Gibt die Bildliste mit den Symbolen im Katalog angezeigt werden.  
   
- [in] *UiImagesPaletteResID*  
- Gibt an, die Ressourcen-ID der Liste der Bilder, die enthält die Symbole im Katalog angezeigt werden.  
+*uiImagesPaletteResID*<br/>
+[in] Gibt an, die Ressourcen-ID der Liste der Bilder, die enthält die Symbole im Katalog angezeigt werden.  
   
- [in] *CxPaletteImage*  
- Gibt die Breite in Pixel eines Bilds in den Katalog an.  
+*cxPaletteImage*<br/>
+[in] Gibt die Breite in Pixel eines Bilds in den Katalog an.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -766,8 +766,8 @@ void SetPaletteID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- Gibt an, die Befehls-ID, die in die WM_COMMAND-Meldung gesendet wird, wenn ein Benutzer ein Galerieelement auswählt.  
+*nID*<br/>
+[in] Gibt an, die Befehls-ID, die in die WM_COMMAND-Meldung gesendet wird, wenn ein Benutzer ein Galerieelement auswählt.  
   
 ### <a name="remarks"></a>Hinweise  
  Um das spezifische Element zu bestimmen, die ein Benutzer aus dem Katalog ausgewählt haben, rufen Sie die [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) statische Methode.  

@@ -1,5 +1,5 @@
 ---
-title: Importieren von Funktionsaufrufen mithilfe von "__declspec(dllimport)" "| Microsoft Docs
+title: Importieren von Funktionsaufrufen mithilfe von __declspec(dllimport) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,66 +20,68 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1239ee3b33a9d6c8443161bacae6daea20260c1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3f7c1bf81b94eebbe32b40053fc5ce3aeaa0bd7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368534"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715792"
 ---
 # <a name="importing-function-calls-using-declspecdllimport"></a>Importieren von Funktionsaufrufen mithilfe von "__declspec(dllimport)"
-Im folgenden Codebeispiel wird veranschaulicht, wie **_declspec(dllimport)** Funktionsaufrufe aus einer DLL in eine Anwendung importieren. Angenommen, `func1` ist eine Funktion, die in eine DLL, die getrennt von der .exe-Datei befindet, die enthält die **main** Funktion.  
-  
- Ohne **von "__declspec(dllimport)" "**, erhält dieser Code:  
-  
-```  
-int main(void)   
-{  
-   func1();  
-}  
-```  
-  
- der Compiler generiert Code, der wie folgt aussieht:  
-  
-```  
-call func1  
-```  
-  
- und der Linker übersetzt den Aufruf in etwa so aussehen:  
-  
-```  
-call 0x4000000         ; The address of 'func1'.  
-```  
-  
- Wenn `func1` vorhanden ist in eine andere DLL der Linker kann nicht direkt diesem aufgelöst werden, da es keine Möglichkeit, zu wissen, welche die Adresse des wurde `func1` ist. In 16-Bit-Umgebungen fügt der Linker diese Codeadresse auf eine Liste in der .exe-Datei, die das Ladeprogramm zur Laufzeit mit der richtigen Adresse patch würde. In 32-Bit und 64-Bit-Umgebungen generiert der Linker einen Thunk, von dem sie die Adresse kennt. In einer 32-Bit-Umgebung wird der Thunk sieht:  
-  
-```  
-0x40000000:    jmp DWORD PTR __imp_func1  
-```  
-  
- Hier `imp_func1` ist die Adresse für die `func1` Slot in der Tabelle der .exe-Datei importieren. Alle Adressen werden daher an den Linker bezeichnet. Das Ladeprogramm muss nur beim Aktualisieren von Importadresstabelle .exe-Datei zur Ladezeit für alles ordnungsgemäß funktioniert.  
-  
- Verwenden Sie deshalb **von "__declspec(dllimport)" "** ist besser, da der Linker keinen Thunk generiert, wenn es nicht erforderlich ist. Thunks vergrößern Sie den Code (bei RISC-Systemen kann es mehrere Anweisungen sein) und kann die cacheleistung Ihres beeinträchtigen. Wenn Sie den Compiler, dass die Funktion in einer DLL ist aufzufordern, kann Sie einen indirekten Aufruf generieren.  
-  
- Damit dieser Code:  
-  
-```  
-__declspec(dllimport) void func1(void);  
-int main(void)   
-{  
-   func1();  
-}  
-```  
-  
- Diese Anweisung generiert:  
-  
-```  
-call DWORD PTR __imp_func1  
-```  
-  
- Es ist keine Thunk und keine `jmp` -Anweisung, damit der Code kleiner und weniger zeitaufwändig ist.  
-  
- Andererseits, für die Funktionsaufrufe innerhalb einer DLL möchten nicht Sie einen indirekten Aufruf verwenden müssen. Sie wissen bereits, die Adresse einer Funktion. Da Zeit und Speicherplatz zum Laden und speichern Sie die Adresse der Funktion vor einem indirekten Aufruf erforderlich sind, ist ein direkter Aufruf immer schneller und kleinere. Sie verwenden möchten **von "__declspec(dllimport)" "** beim Aufrufen von DLL-Funktionen außerhalb der DLL selbst. Verwenden Sie keine **von "__declspec(dllimport)" "** in Funktionen innerhalb einer DLL, die beim Erstellen dieser DLL.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Importieren in eine Anwendung](../build/importing-into-an-application.md)
+
+Im folgenden Codebeispiel wird veranschaulicht, wie Sie mit **_declspec(dllimport)** Funktionsaufrufe aus einer DLL in einer Anwendung zu importieren. Vorausgesetzt, dass `func1` ist eine Funktion, die in einer DLL, die getrennt von der .exe-Datei liegt, enthält die **main** Funktion.
+
+Ohne **von "__declspec(dllimport)" "**, erhält diesen Code:
+
+```
+int main(void)
+{
+   func1();
+}
+```
+
+der Compiler generiert Code, der folgendermaßen aussieht:
+
+```
+call func1
+```
+
+und der Linker übersetzt den Aufruf in etwa wie folgt:
+
+```
+call 0x4000000         ; The address of 'func1'.
+```
+
+Wenn `func1` vorhanden ist in einer anderen DLL der Linker kann nicht direkt diesem aufgelöst werden, da es keine Möglichkeit, zu wissen, welche die Adresse des hat `func1` ist. In 16-Bit-Umgebungen fügt der Linker diese Codeadresse zu einer Liste in die .exe-Datei, die das Ladeprogramm zur Laufzeit mit der richtigen Adresse patch würde. In 32-Bit- und 64-Bit-Umgebungen generiert der Linker einen Thunk, von dem sie die Adresse kennt. In einer 32-Bit-Umgebung wird der Thunk sieht:
+
+```
+0x40000000:    jmp DWORD PTR __imp_func1
+```
+
+Hier `imp_func1` ist die Adresse für den `func1` Slot in der Importadresstabelle der .exe-Datei. Folglich sind alle Adressen für den Linker bekannt. Das Ladeprogramm muss nur zum Aktualisieren der .exe-Datei der Importadresstabelle zur Ladezeit für alles ordnungsgemäß funktioniert.
+
+Daher wird die Verwendung **von "__declspec(dllimport)" "** ist besser, da der Linker einen Thunk nicht generiert, wenn es nicht erforderlich ist. Thunks, dass der Code mehr (auf RISC-Systemen kann es mehrere Anweisungen sein) und kann Ihre cacheleistung beeinträchtigen. Wenn Sie dem Compiler, dass die Funktion in einer DLL enthalten ist mitzuteilen, können sie einen indirekten Aufruf für Sie generieren.
+
+Jetzt diesen Code:
+
+```
+__declspec(dllimport) void func1(void);
+int main(void)
+{
+   func1();
+}
+```
+
+Diese Anweisung generiert:
+
+```
+call DWORD PTR __imp_func1
+```
+
+Es gibt keine Thunk und keine `jmp` -Anweisung, damit der Code kleiner und schneller ist.
+
+Auf der anderen Seite für Funktionsaufrufe innerhalb einer DLL möchten nicht Sie einen indirekten Aufruf verwenden. Sie wissen bereits, die Adresse einer Funktion. Da die Verarbeitungszeit und Speicherplatz zum Laden und speichern die Adresse der Funktion vor einem indirekten Aufruf erforderlich sind, ist ein direkter Aufruf immer schneller und kürzer. Sie verwenden möchten **von "__declspec(dllimport)" "** beim Aufrufen von DLL-Funktionen außerhalb der DLL selbst. Verwenden Sie keine **von "__declspec(dllimport)" "** für Funktionen innerhalb einer DLL, die beim Erstellen dieser DLL.
+
+## <a name="see-also"></a>Siehe auch
+
+[Importieren in eine Anwendung](../build/importing-into-an-application.md)

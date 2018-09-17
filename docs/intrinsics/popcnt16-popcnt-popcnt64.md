@@ -1,5 +1,5 @@
 ---
-title: __popcnt16, __popcnt, __popcnt64 | Microsoft Docs
+title: __popcnt16, __popcnt, __popcnt64 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a639091bd7c5c263a3f09067858cd0fe4ac631cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34063223addb433a94c877ad56cf410f189e6681
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329195"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724735"
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
+
 **Microsoft-spezifisch**  
   
- Zählt die Anzahl von einem Bits (Auffüllung Count) in eine 16-, 32- oder 64-Byte-Ganzzahl ohne Vorzeichen.  
+ Zählt die Anzahl von einem Bits (Population Count) in einen 16-, 32- oder 64-Byte-Ganzzahl ohne Vorzeichen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,11 +49,11 @@ unsigned __int64 __popcnt64(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `value`  
- Die 16, 32 oder 64-Bit-Ganzzahl ohne Vorzeichen für die Anzahl der Auffüllung werden soll.  
+*Wert*<br/>
+[in] Die 16, 32- oder 64-Bit-Ganzzahl ohne Vorzeichen für die die Anzahl der Auffüllen soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Die Anzahl von einem Bits in der `value` Parameter.  
+ Die Anzahl der Bits in der `value` Parameter.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -65,9 +66,9 @@ unsigned __int64 __popcnt64(
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Jede Diese systeminternen Funktionen generiert der `popcnt` Anweisung.  Die Größe des Werts, der `popcnt` Anweisung gibt die Größe des Arguments identisch ist.  In 32-Bit-Modus sind keine 64-Bit-Allzweckregistern, daher keine 64-Bit- `popcnt`.  
+ Jede von diesen systeminternen Funktionen generiert der `popcnt` Anweisung.  Die Größe des Werts, der die `popcnt` Anweisung zurückgibt, ist die Größe des Arguments identisch.  In 32-Bit-Modus sind keine 64-Bit-Allzweckregister, daher keine 64-Bit- `popcnt`.  
   
- Um zu bestimmen, Hardware-Unterstützung für die `popcnt` -Anweisung, rufen die `__cpuid` systeminternen Funktionen mit `InfoType=0x00000001` und überprüfen Sie Bit 23 von `CPUInfo[2] (ECX)`. Dieses Bit ist 1, wenn die Anweisung unterstützt wird und 0 andernfalls. Wenn Sie Code, verwendet dieser systeminternen Funktion auf Hardware ausgeführt, die nicht unterstützt wird die `popcnt` -Anweisung, die die Ergebnisse sind unvorhersehbar.  
+ Um zu bestimmen, Hardware-Unterstützung für die `popcnt` -Anweisung, rufen die `__cpuid` systeminternen Funktionen mit `InfoType=0x00000001` und überprüfen Sie wenig 23 `CPUInfo[2] (ECX)`. Dieses Bit ist 1, wenn die Anweisung unterstützt wird, und andernfalls 0. Wenn Sie Code, verwendet dieser systeminternen Funktion auf Hardware ausgeführt, die nicht unterstützt. die `popcnt` -Anweisung, die die Ergebnisse sind unvorhersehbar.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -107,7 +108,8 @@ __popcnt(0xffffffff) = 32
 ```  
   
 **Ende Microsoft-spezifisch**  
- Copyright 2007 erweiterte Micro-Geräte, Inc. Alle Rechte vorbehalten. Reproduziert mit Genehmigung Advanced Micro-Geräte, Inc.  
+
+Copyright 2007 erweiterten Micro-Geräte, Inc. Alle Rechte vorbehalten. Reproduziert werden, mit der Berechtigung, die von erweiterten Micro-Geräte, Inc.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

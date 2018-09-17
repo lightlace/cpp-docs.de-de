@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fda6ac3336b1f2a5e910355b5460633916b0803
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 378d8e6b43a391c6d94c55b278bc71789981d9e3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894654"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712373"
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl (PCH-Verweis für Debugbibliothek einfügen)
 
@@ -31,16 +31,16 @@ Die **/Yl** Option generiert ein eindeutige Symbol in einer vorkompilierten Head
 
 ## <a name="syntax"></a>Syntax
 
->**/ Yl**  
->**/ Yl**_Name_  
->**/Yl-**  
+>**/ Yl**
+> **/Yl**_Namen_
+> **/Yl-**
 
 ### <a name="arguments"></a>Argumente
 
-*name*  
+*name*<br/>
 Ein optionaler Name als Teil der das eindeutige Symbol verwendet wird.
 
-*\-*  
+*\-*<br/>
 Deaktiviert ein Bindestrich (-) explizit die **/Yl** -Compileroption.
 
 ## <a name="remarks"></a>Hinweise
@@ -75,5 +75,5 @@ Weitere Informationen zu vorkompilierten Headern finden Sie unter:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)  
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)  
+[Compileroptionen](../../build/reference/compiler-options.md)<br/>
+[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

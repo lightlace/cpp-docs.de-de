@@ -1,5 +1,5 @@
 ---
-title: 'Lokalisierte Ressourcen in MFC-Anwendungen: Satelliten-DLLs | Microsoft Docs'
+title: 'Lokalisierte Ressourcen in MFC-Anwendungen: Satelliten-DLLs | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,44 +22,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0740f567f17c8d44069211274ab1a4c66da311c1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 888d0ce0e53fef45df868e0980953ffb763d8771
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369116"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726285"
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Lokalisierte Ressourcen in MFC-Anwendungen: Satelliten-DLLs
-MFC-Version 7.0 und höher bietet erweiterte Unterstützung für Satelliten-DLLs, eine Funktion, die hilft beim Erstellen von Anwendungen, die für mehrere Sprachen lokalisiert. Eine Satelliten-DLL ist eine [reine Ressourcen-DLL](../build/creating-a-resource-only-dll.md) , enthält die Ressourcen einer Anwendung, die für eine bestimmte Sprache lokalisiert. Wenn die Anwendung mit der Ausführung beginnt, lädt MFC automatisch die lokalisierte Ressourcen für die Umgebung am besten geeignet. Sie konnten z. B. eine Anwendung mit der englischen Sprachressourcen mit zwei-Satelliten-DLLs, ein enthält eine französische Übersetzung der Ressourcen und die andere eine deutsche Übersetzung enthält haben. Wenn die Anwendung auf einem englischsprachigen System ausgeführt wird, wird die englischen Ressourcen verwendet. Wenn auf einem französischen System ausführen, verwendet es die französischen Ressourcen. Wenn auf einem deutschen System ausgeführt wird, wird die deutschen Ressourcen verwendet.  
-  
- In einer bestimmten Sprache lokalisiert, die Ressourcen enthalten, zur Unterstützung von lokalisierter Ressourcen in einer MFC-Anwendung MFC versucht, eine Satelliten-DLL zu laden. Satelliten-DLLs werden mit dem Namen *AnwendungsnameXXX*DLL-Datei, in denen *Parameter "ApplicationName"* ist der Name der .exe oder .dll verwenden von MFC, und *XXX* ist der drei Buchstaben bestehenden Code für die Sprache die Ressourcen (z. B. "ENU" oder "DEU").  
-  
- MFC versucht, laden die Ressourcen-DLL für jede der folgenden Sprachen in der Reihenfolge und hört auf, wenn ein solches gefunden:  
-  
-1. Standardmäßige Benutzeroberflächensprache des aktuellen Benutzers, von der Win32-API GetUserDefaultUILanguage() zurückgegeben.  
-  
-2.  Der aktuelle Benutzer standardmäßig Benutzeroberflächensprache ohne eine bestimmte Sprachvariante an (d. h. ENC [Kanadische Englisch] wird ENU [USA Englisch]).  
-  
-3.  Standardmäßige Benutzeroberflächensprache des Systems, wie die GetSystemDefaultUILanguage()-API zurückgegeben. Auf anderen Plattformen ist dies die Sprache des Betriebssystems selbst.  
-  
-4.  Das System standardmäßig Benutzeroberflächensprache, ohne eine bestimmte Sprachvariante an.  
-  
-5.  Eine gefälschte Sprache mit 3 Buchstaben bestehenden Code "loc" abgerufen  
-  
- Wenn MFC Satelliten-DLLs nicht findet, verwendet sie Ressourcen in der Anwendung selbst enthalten sind.  
-  
- Nehmen wir beispielsweise an, dass eine Anwendung LangExample.exe MFC verwendet und auf einem Benutzeroberflächen-System ausgeführt wird; die Benutzeroberflächensprache des Systems ist ENU [USA Englisch] und Benutzeroberflächensprache des aktuellen Benutzers auf FRC [Französisch (Kanada)] festgelegt ist. MFC sucht die folgenden DLLs in der folgenden Reihenfolge aus:  
-  
-1.  SprachenbeispielFRC.dll (Benutzeroberflächensprache des Benutzers).  
-  
-2.  LangExampleFRA.dll (Benutzeroberflächensprache des Benutzers ohne Sprachvariante, in diesem Beispiel wird Französisch (Frankreich).  
-  
-3.  SprachenbeispielENU.dll (Benutzeroberflächensprache des Systems).  
-  
-4.  LangExampleLOC.dll.  
-  
- Wenn keine dieser DLLs gefunden werden, verwendet MFC die Ressourcen in LangExample.exe an.  
-  
-## <a name="see-also"></a>Siehe auch  
- [DLLs in Visual C++](../build/dlls-in-visual-cpp.md)   
- [TN057: Lokalisierung von MFC-Komponenten](../mfc/tn057-localization-of-mfc-components.md)
+
+MFC-Version 7.0 und höher bietet erweiterte Unterstützung für Satelliten-DLLs, ein Feature, können beim Erstellen von Anwendungen, die für mehrere Sprachen lokalisiert. Eine Satelliten-DLL ist eine [reine Ressourcen-DLL](../build/creating-a-resource-only-dll.md) , enthält die Ressourcen einer Anwendung für eine bestimmte Sprache lokalisiert. Wenn die Anwendung die Ausführung beginnt, lädt MFC automatisch die lokalisierte Ressourcen für die Umgebung am besten geeignet. Beispielsweise könnten Sie eine Anwendung mit Sprachressourcen für Englisch und zwei Satelliten-DLL-Dateien, enthält eine französische Übersetzung Ihrer Ressourcen und der andere eine deutsche Übersetzung enthält haben. Wenn die Anwendung auf einem System für die englische Sprache ausgeführt wird, wird die englischen Ressourcen. Wenn auf einem französischen System ausgeführt wird, verwendet es die französischen Ressourcen. Wenn auf einem deutschen System ausgeführt wird, wird die Ressourcen für Deutsch.
+
+In einer bestimmten Sprache lokalisiert, die Ressourcen enthält, zur Unterstützung von lokalisierter Ressourcen in einer MFC-Anwendung MFC versucht, eine Satelliten-DLL zu laden. Satelliten-DLLs werden mit dem Namen *AnwendungsnameXXX*.dll, wobei *ApplicationName* ist der Name der .exe oder .dll, die unter Verwendung von MFC, und *XXX* ist der drei Buchstaben bestehenden Code für die Sprache der Ressourcen (z. B. "ENU" oder "DEU").
+
+MFC versucht, laden die Ressourcen-DLL für jede der folgenden Sprachen in der Reihenfolge und hört, sobald einer gefunden wird:
+
+1. Standardmäßige Benutzeroberflächensprache des aktuellen Benutzers, wie aus der GetUserDefaultUILanguage() Win32-API zurückgegeben.
+
+1. Des aktuellen Benutzers Standard-Benutzeroberflächensprache, ohne jede bestimmte untersprachen (d. h. ENC [Kanadische Englisch] wird [US-DEU Englisch]).
+
+1. Standardmäßige Benutzeroberflächensprache des Systems, wie die GetSystemDefaultUILanguage()-API zurückgegeben. Auf anderen Plattformen ist dies die Sprache des Betriebssystems selbst.
+
+1. Die Benutzeroberflächensprache des Systems standardmäßig, ohne alle spezifischen Sprachvariante an.
+
+1. Eine falsche Sprache mit 3 Buchstaben bestehende Code, loc abgerufen werden
+
+Wenn alle Satelliten-DLLs mit MFC nicht gefunden wird, wird alle Ressourcen in der Anwendung selbst enthalten sind.
+
+Ein Beispiel: Angenommen Sie, eine Anwendung LangExample.exe MFC verwendet, und klicken Sie auf einem Benutzeroberfläche-System ausgeführt wird; die Benutzeroberflächensprache des Systems ist [US-DEU Englisch] und die aktuelle Sprache der Benutzeroberfläche auf FRC [kanadisches Französisch] festgelegt ist. MFC ist die folgenden DLLs in der folgenden Reihenfolge gesucht:
+
+1. SprachenbeispielFRC.dll (Sprache der Benutzeroberfläche).
+
+1. LangExampleFRA.dll (Sprache der Benutzeroberfläche ohne Sprachvariante, in diesem Beispiel Französisch (Frankreich).
+
+1. SprachenbeispielENU.dll (Benutzeroberflächensprache des Systems).
+
+1. LangExampleLOC.dll.
+
+Wenn keine dieser DLLs gefunden werden, verwendet MFC die Ressourcen in LangExample.exe an.
+
+## <a name="see-also"></a>Siehe auch
+
+[DLLs in Visual C++](../build/dlls-in-visual-cpp.md)<br/>
+[TN057: Lokalisierung von MFC-Komponenten](../mfc/tn057-localization-of-mfc-components.md)

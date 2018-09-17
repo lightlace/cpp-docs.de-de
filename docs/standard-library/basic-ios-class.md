@@ -65,12 +65,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3abc3c08b46577f7d59b2831a68ded812a5da60a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 175d7895331ec960244354870c6bd6845baf37d1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110017"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725321"
 ---
 # <a name="basicios-class"></a>basic_ios-Klasse
 
@@ -230,9 +230,11 @@ void clear(io_state state);
 
 ### <a name="parameters"></a>Parameter
 
-*Status* (optional) die Flags, die Sie nach dem Löschen aller Flags festlegen möchten. Wird standardmäßig auf `goodbit` festgelegt.
+*state*<br/>
+(Optional) Die Flags, die Sie nach dem Löschen aller Flags festlegen möchten. Wird standardmäßig auf `goodbit` festgelegt.
 
-*reraise-* (optional) gibt an, ob die Ausnahme erneut ausgelöst werden soll. Standardmäßig **"false"** (wird nicht erneut auslösen die Ausnahme).
+*reraise-*<br/>
+(Optional) Gibt an, ob die Ausnahme erneut ausgelöst werden soll. Standardmäßig **"false"** (wird nicht erneut auslösen die Ausnahme).
 
 ### <a name="remarks"></a>Hinweise
 

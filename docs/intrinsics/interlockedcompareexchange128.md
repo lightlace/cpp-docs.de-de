@@ -18,17 +18,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e5433e2d1ddf94f23a3f483a8857e3032c27be3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7e7499bdb615edfb6c03c54ba7fe8272d0fa6b26
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538296"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721122"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
+
 **Microsoft-spezifisch**  
   
- Führt einen ineinandergreifenden Vergleich 128-Bit- und Exchange.  
+Führt einen ineinandergreifenden Vergleich 128-Bit- und Exchange.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,17 +43,17 @@ unsigned char _InterlockedCompareExchange128(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in, out] `Destination`  
- Zeiger auf das Ziel, das ein Array von zwei 64-Bit-Ganzzahlen ist, gelten als ein 128-Bit-Feld. Die Zieldaten muss 16-Byte-ausgerichtet werden, um eine allgemeine schutzverletzung zu vermeiden.  
+*Ziel*<br/>
+[in, out] Zeiger auf das Ziel, das ein Array von zwei 64-Bit-Ganzzahlen ist, gelten als ein 128-Bit-Feld. Die Zieldaten muss 16-Byte-ausgerichtet werden, um eine allgemeine schutzverletzung zu vermeiden.  
   
- [in] `ExchangeHigh`  
- Eine 64-Bit-Ganzzahl, die mit der obere Bereich des Ziels ausgetauscht werden kann.  
+*ExchangeHigh*<br/>
+[in] Eine 64-Bit-Ganzzahl, die mit der obere Bereich des Ziels ausgetauscht werden kann.  
   
- [in] `ExchangeLow`  
- Eine 64-Bit-Ganzzahl, die mit den unteren Teil des Ziels ausgetauscht werden kann.  
+*ExchangeLow*<br/>
+[in] Eine 64-Bit-Ganzzahl, die mit den unteren Teil des Ziels ausgetauscht werden kann.  
   
- [in, out] `ComparandResult`  
- Zeiger auf ein Array von zwei 64-Bit-Ganzzahlen (angesehen als 128-Bit-Feld), mit dem Ziel verglichen werden soll.  Bei der Ausgabe wird dies durch den ursprünglichen Wert des Ziels überschrieben.  
+*ComparandResult*<br/>
+[in, out] Zeiger auf ein Array von zwei 64-Bit-Ganzzahlen (angesehen als 128-Bit-Feld), mit dem Ziel verglichen werden soll.  Bei der Ausgabe wird dies durch den ursprünglichen Wert des Ziels überschrieben.  
   
 ## <a name="return-value"></a>Rückgabewert  
  1, wenn der 128-Bit-comparand-Parameter den ursprünglichen Wert des Ziels entspricht. `ExchangeHigh` und `ExchangeLow` 128-Bit-Ziel zu überschreiben.  
@@ -128,8 +129,9 @@ int main(void)
 BigInt.Int[1] = 34, BigInt.Int[0] = 12  
 ```  
   
-**Ende Microsoft-spezifisch**  
- Copyright 2007 erweiterten Micro-Geräte, Inc. Alle Rechte vorbehalten. Reproduziert werden, mit der Berechtigung, die von erweiterten Micro-Geräte, Inc.  
+**Ende Microsoft-spezifisch**
+
+Copyright 2007 erweiterten Micro-Geräte, Inc. Alle Rechte vorbehalten. Reproduziert werden, mit der Berechtigung, die von erweiterten Micro-Geräte, Inc.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: f0b995c4a966481e02ebd96748b247fd8844f19f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c9280de6a2fde3ce2758b5884437704a2cdd879f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966406"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712763"
 ---
 # <a name="lttuplegt-functions"></a>&lt;tuple&gt;-Funktionen
 
@@ -64,17 +64,17 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>Parameter
 
-*Index*  
- Der Index des abzurufenden Elements.
+*Index*<br/>
+Der Index des abzurufenden Elements.
 
-*Typen*  
- Die Sequenz der im Tupel deklarierten Typen in der Deklarationsreihenfolge.
+*Typen*<br/>
+Die Sequenz der im Tupel deklarierten Typen in der Deklarationsreihenfolge.
 
-*T*  
- Der Typ des abzurufenden Elements.
+*T*<br/>
+Der Typ des abzurufenden Elements.
 
-*Tuple*  
- std::tuple mit einer beliebigen Anzahl von Elementen.
+*Tuple*<br/>
+std::tuple mit einer beliebigen Anzahl von Elementen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -122,11 +122,11 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>Parameter
 
-*TN*  
- Der Typ des Parameters der Nth-Funktion.
+*TN*<br/>
+Der Typ des Parameters der Nth-Funktion.
 
-*TN*  
- Der Wert des Parameters der Nth-Funktion.
+*TN*<br/>
+Der Wert des Parameters der Nth-Funktion.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -180,8 +180,8 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>Parameter
 
-*TN*  
- Der Basistyp des N-ten Tupelelements.
+*TN*<br/>
+Der Basistyp des N-ten Tupelelements.
 
 ### <a name="remarks"></a>Hinweise
 

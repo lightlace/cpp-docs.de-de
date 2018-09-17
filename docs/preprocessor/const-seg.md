@@ -1,7 +1,7 @@
 ---
 title: Const_seg | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3081837cc4516750f8c2c0d75cfc37eef208f9d
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: db73d212a11fe096c07a7e14d033c21e6b61311c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42543147"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705210"
 ---
 # <a name="constseg"></a>const_seg
 Gibt das Segment, in denen [const](../cpp/const-cpp.md) Variablen werden in der OBJ-Datei gespeichert.  
@@ -34,33 +34,35 @@ Gibt das Segment, in denen [const](../cpp/const-cpp.md) Variablen werden in der 
 #pragma const_seg ( [ [ { push | pop}, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- 
+### <a name="parameters"></a>Parameter
+
+**push**<br/>
+(Optional) Legt einen Datensatz auf dem internen compilerstapel ab. Ein **Push** kann ein *Bezeichner* und *Segment-Name*.  
+  
+**pop**<br/>
+(Optional) Entfernt einen Datensatz von der obersten Position des internen Compilerstapels.  
+  
+*identifier*<br/>
+(Optional) Bei Verwendung mit **Push**, den Datensatz im internen compilerstapel ein Name zugewiesen. Bei Verwendung mit **pop**, Datensätze vom internen Stapel bis *Bezeichner* wird entfernt; Wenn *Bezeichner* wurde nicht gefunden im internen Stapel, nichts per pop ausgelesen wird.  
+  
+Mithilfe von *Bezeichner* ermöglicht, mehrere Datensätze mit einem einzelnen entfernen **pop** Befehl.  
+  
+"*Segment-Name*"<br/>  
+(Optional) Der Name eines Segments. Bei Verwendung mit **pop**, wird das Element im Stapel geholt und *Segment-Name* wird zum aktiven Segmentnamen.  
+  
+"*Segmentklasse*"<br/>
+(Optional) Für die Kompatibilität mit C++ vor Version 2.0 enthalten. Wird ignoriert.  
+  
+## <a name="remarks"></a>Hinweise
+
 Die Bedeutung der Begriffe *Segment* und *Abschnitt* sind austauschbar, in diesem Thema.  
   
 OBJ-Dateien können angezeigt werden, mit der [Dumpbin](../build/reference/dumpbin-command-line.md) Anwendung. Das Standardsegment in der OBJ-Datei für `const`-Variablen ist .rdata. Einige `const`-Variablen, z. B. Skalare, sind automatisch im Codestream enthalten. Inlinecode erscheint nicht in .rdata.  
   
 Das Definieren eines Objekts, das eine dynamische Initialisierung in einem `const_seg` benötigt, führt zu einem nicht definierten Verhalten.  
   
-`#pragma const_seg` ohne Parameter setzt das Segment auf .rdata zurück.  
-  
-*Push* (optional)  
-Legt einen Datensatz auf den internen Compilerstapel. Ein *Push* kann ein *Bezeichner* und *Segment-Name*.  
-  
-*POP* (optional)  
-Entfernt einen Datensatz von der obersten Position des internen Compilerstapels.  
-  
-*Bezeichner* (optional)  
-Bei Verwendung mit *Push*, den Datensatz im internen compilerstapel ein Name zugewiesen. Bei Verwendung mit *pop*, Datensätze vom internen Stapel bis *Bezeichner* wird entfernt; Wenn *Bezeichner* wurde nicht gefunden im internen Stapel, nichts per pop ausgelesen wird.  
-  
-Mithilfe von *Bezeichner* ermöglicht, mehrere Datensätze mit einem einzelnen entfernen *pop* Befehl.  
-  
-"*Segment-Name*" (optional)  
-Der Name eines Segments. Bei Verwendung mit *pop*, wird das Element im Stapel geholt und *Segment-Name* wird zum aktiven Segmentnamen.  
-  
-"*Segmentklasse*" (optional)  
-Zum Gewährleisten der Kompatibilität mit C++ vor Version 2.0 eingeführt. Wird ignoriert.  
-  
+`#pragma const_seg` ohne Parameter setzt das Segment auf .rdata zurück.
+
 ## <a name="example"></a>Beispiel  
   
 ```cpp  

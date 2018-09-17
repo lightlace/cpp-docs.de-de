@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b227f9d2fdd43b576f89b74f43e4cdce8476bf9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 23ca73629208e0ac80f7c516f8249e83ae0d41a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692382"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719237"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar-Klasse
 Eine Symbolleiste, die angezeigt wird, wenn der Benutzer eine Symbolleisten-Schaltfläche der obersten Ebene drückt und gedrückt hält.  
@@ -133,23 +133,23 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiResID*  
- Die Ressourcen-ID der Bitmap, die auf die aktiven Symbolleistenbilder verweist.  
+*uiResID*<br/>
+[in] Die Ressourcen-ID der Bitmap, die auf die aktiven Symbolleistenbilder verweist.  
   
- [in] *UiColdResID*  
- Die Ressourcen-ID der Bitmap, die auf die inaktiven Symbolleistenbilder verweist.  
+*uiColdResID*<br/>
+[in] Die Ressourcen-ID der Bitmap, die auf die inaktiven Symbolleistenbilder verweist.  
   
- [in] *UiMenuResID*  
- Die Ressourcen-ID der Bitmap, die auf die normalen Menübilder verweist.  
+*uiMenuResID*<br/>
+[in] Die Ressourcen-ID der Bitmap, die auf die normalen Menübilder verweist.  
   
- [in] *blockiert*  
- True, um die Symbolleiste zu sperren. andernfalls "false".  
+*Blockiert*<br/>
+[in] True, um die Symbolleiste zu sperren. andernfalls "false".  
   
- [in] *UiDisabledResID*  
- Die Ressourcen-ID der Bitmap, die auf die deaktivierten Symbolleistenbilder verweist.  
+*uiDisabledResID*<br/>
+[in] Die Ressourcen-ID der Bitmap, die auf die deaktivierten Symbolleistenbilder verweist.  
   
- [in] *UiMenuDisabledResID*  
- Die Ressourcen-ID der Bitmap, die auf die deaktivierten Menübilder verweist.  
+*uiMenuDisabledResID*<br/>
+[in] Die Ressourcen-ID der Bitmap, die auf die deaktivierten Menübilder verweist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Wert ungleich 0 (null), wenn die Methode erfolgreich ausgeführt wird, andernfalls 0 (null).  
@@ -174,12 +174,12 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiResID*  
- [in] *UiColdResID*  
- [in] *UiMenuResID*  
- [in] *"Bool"*  
- [in] *UiDisabledResID*  
- [in] *UiMenuDisabledResID*  
+*uiResID*<br/>
+[in] [in] *UiColdResID*  
+*uiMenuResID*<br/>
+[in] [in] *"Bool"*  
+*uiDisabledResID*<br/>
+[in] [in] *UiMenuDisabledResID*  
  [in] *UiHotResID*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -196,8 +196,8 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nFlags*  
- [in] *zeigen*  
+*nFlags*<br/>
+[in] [in] *zeigen*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -211,8 +211,8 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nFlags*  
- [in] *zeigen*  
+*nFlags*<br/>
+[in] [in] *zeigen*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -240,8 +240,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pTarget*  
- [in] *bDisableIfNoHndler*  
+*pTarget*<br/>
+[in] [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Hinweise  
   

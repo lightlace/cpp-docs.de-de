@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 600bdb29a06d9aef84f2f4d914a458f9a4090c4a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 99b4a84109db8a412f0a3d64967a522d18ada930
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849447"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713452"
 ---
 # <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame-Klasse
 Enthält die Dropdown-Rahmens Fensterfunktionalität, Dropdown-Symbolleisten und Dropdown-Symbolleisten-Schaltflächen.  
@@ -107,10 +107,10 @@ virtual BOOL Create(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *pWndParent*|Das übergeordnete Fenster des Dropdown-Rahmens.|  
-|[in] *x*|Die horizontale Bildschirmkoordinate für den Speicherort des Dropdown-Rahmens.|  
-|[in] *y*|Die vertikale Bildschirmkoordinate für den Speicherort des Dropdown-Rahmens.|  
-|[in] *pWndOriginToolbar*|Die Symbolleiste mit der Dropdown-Schaltflächen, die diese Methode verwendet, um das neue rahmenobjekt der Dropdown-aufzufüllen.|  
+|*pWndParent*|[in] Das übergeordnete Fenster des Dropdown-Rahmens.|  
+|*w*|[in] Die horizontale Bildschirmkoordinate für den Speicherort des Dropdown-Rahmens.|  
+|*y*|[in] Die vertikale Bildschirmkoordinate für den Speicherort des Dropdown-Rahmens.|  
+|*pWndOriginToolbar*|[in] Die Symbolleiste mit der Dropdown-Schaltflächen, die diese Methode verwendet, um das neue rahmenobjekt der Dropdown-aufzufüllen.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Dropdown-Rahmen erfolgreich erstellt wurde. andernfalls "false".  
@@ -158,7 +158,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *bNotify*|Nicht verwendet.|  
+|*bNotify*|[in] Nicht verwendet.|  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Methode auf, wenn der Dropdown-Rahmen erstellt wird oder das übergeordnete Fenster angepasst wird. Diese Methode berechnet die Position und Größe des Dropdown-Rahmens mit die Position und Größe des übergeordneten Fensters.  
@@ -171,8 +171,8 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAutoDestroy*  
- True, um das zugeordnete Dropdown-Symbolleisten-Fenster automatisch zu löschen. andernfalls "false".  
+*bAutoDestroy*<br/>
+[in] True, um das zugeordnete Dropdown-Symbolleisten-Fenster automatisch zu löschen. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn *bAutoDestroy* ist "true", und klicken Sie dann die `CMFCDropDownFrame` Destruktor zerstört den zugeordneten Dropdown-Symbolleisten-Fenster. Der Standardwert ist "true".  

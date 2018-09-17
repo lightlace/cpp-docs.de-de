@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fcf4f2cb2c619b2dfe3dae4b669f6139382b2b4
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 5a73d5bb3ef67469ad1cc12b2a2c2757cf1ce137
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42901010"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712832"
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane-Klasse
 
@@ -201,8 +201,8 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *bAktivieren*  
-True, um die automatische registerkartenfärbung zu aktivieren. andernfalls "false".
+*bAktivieren*<br/>
+[in] True, um die automatische registerkartenfärbung zu aktivieren. andernfalls "false".
 
 ### <a name="remarks"></a>Hinweise
 
@@ -224,10 +224,10 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *pBar*  
-[in] *nTabID*  
-[in] *DockMethod*  
-[in] *bHide*  
+*pBar*<br/>
+[in] [in] *nTabID*  
+*dockMethod*<br/>
+[in] [in] *bHide*  
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -245,11 +245,11 @@ virtual void GetTabArea(
 
 ### <a name="parameters"></a>Parameter
 
-[out] *RectTabAreaTop*  
-Enthält die Größe und Position in Bildschirmkoordinaten der oberen Registerkarte-Bereich.
+*rectTabAreaTop*<br/>
+[out] Enthält die Größe und Position in Bildschirmkoordinaten der oberen Registerkarte-Bereich.
 
-[out] *RectTabAreaBottom*  
-Enthält die Größe und Position des Registerkartenbereichs nach unten, in Bildschirmkoordinaten.
+*rectTabAreaBottom*<br/>
+[out] Enthält die Größe und Position des Registerkartenbereichs nach unten, in Bildschirmkoordinaten.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -340,8 +340,8 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *ArColors*  
-Enthält das Array von Farben zu legen.
+*arColors*<br/>
+[in] Enthält das Array von Farben zu legen.
 
 ### <a name="remarks"></a>Hinweise
 

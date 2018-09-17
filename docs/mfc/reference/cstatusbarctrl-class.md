@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a555cc26e8857899690852743fa177a706afa0f2
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 94d56a6defbc47a133e3f583daab188921622d84
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677744"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711796"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Statusleisten-Steuerelements bereit.  
@@ -261,7 +261,7 @@ HICON GetIcon(int iPart) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *iPart*|Der nullbasierte Index des Teils, der das Symbol abgerufen werden sollen. Wenn dieser Parameter-1 ist, wird angenommen, dass die Statusleiste einer einfachen Modus Statusleiste angezeigt werden.|  
+|*iPart*|[in] Der nullbasierte Index des Teils, der das Symbol abgerufen werden sollen. Wenn dieser Parameter-1 ist, wird angenommen, dass die Statusleiste einer einfachen Modus Statusleiste angezeigt werden.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Das Handle für das Symbol "Wenn die Methode erfolgreich ist; andernfalls NULL.  
@@ -521,8 +521,8 @@ BOOL SetSimple(BOOL bSimple = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bSimple*  
- Anzeigetyp Flag. Wenn dieser Parameter TRUE ist, zeigt das Steuerelement einfachen Text an. Wenn sie auf "FALSE" ist, wird mehrere Teile angezeigt.  
+*bSimple*<br/>
+[in] Anzeigetyp Flag. Wenn dieser Parameter TRUE ist, zeigt das Steuerelement einfachen Text an. Wenn sie auf "FALSE" ist, wird mehrere Teile angezeigt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt immer 0 zurück.  

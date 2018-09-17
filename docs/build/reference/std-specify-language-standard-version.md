@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b3254d61295e0cfe0fc398e4aa2a2f2a926dbb1
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 80c501c74d0e36d7a1c564e107101782468708c3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43130909"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709071"
 ---
 # <a name="std-specify-language-standard-version"></a>/ Std (Standardversion Sprache festlegen)
 
@@ -46,27 +46,27 @@ Der Standardwert **/Std: c ++ 14** Option aktiviert die C ++ 14-Funktionen von V
 - [U8-Zeichenliterale](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4267.html)
 
 Weitere Informationen auf die C ++ 14 und C ++ 17-Features aktiviert sind, wenn **/Std: c ++ 14** ist angegeben, siehe Hinweise im [Visual C++-Sprachkonformität](../../visual-cpp-language-conformance.md).
-  
-Die **/Std: c ++ 17** Option ermöglicht den vollständigen Satz von C ++ 17-Features von Visual C++-Compiler implementiert. Diese Option deaktiviert die Unterstützung von Compiler- und Standardbibliotheken für Features, die in Versionen des Arbeitsentwurfs und Fehlerbehebungsaktualisierungen des C++-Standards nach C++17 neu sind oder geändert wurden.  
-  
-Die **/Std: c ++ neueste** Option aktiviert die C++-Sprache und Bibliothek-Features mit Visual C++ zum Nachverfolgen der am häufigsten implementiert aktuelle C ++ 20 Arbeitsentwurfs und fehlerbehebungsaktualisierungen des C++-Standards enthaltene Updates nicht in C ++ 17. Verwenden Sie diese Option zum Abrufen der Post-von C ++ 17-Sprachfeatures, die durch den Compiler und die Standardbibliothek unterstützt. Eine Liste der unterstützten Sprachen und Features der Standardbibliothek, finden Sie unter [neuerungen bei Visual C++](../../what-s-new-for-visual-cpp-in-visual-studio.md). Die **/Std: c ++ neueste** Option keine Funktionen, die von überwachten aktiviert die **/ experimentelle** wechseln.  
-  
+
+Die **/Std: c ++ 17** Option ermöglicht den vollständigen Satz von C ++ 17-Features von Visual C++-Compiler implementiert. Diese Option deaktiviert die Unterstützung von Compiler- und Standardbibliotheken für Features, die in Versionen des Arbeitsentwurfs und Fehlerbehebungsaktualisierungen des C++-Standards nach C++17 neu sind oder geändert wurden.
+
+Die **/Std: c ++ neueste** Option aktiviert die C++-Sprache und Bibliothek-Features mit Visual C++ zum Nachverfolgen der am häufigsten implementiert aktuelle C ++ 20 Arbeitsentwurfs und fehlerbehebungsaktualisierungen des C++-Standards enthaltene Updates nicht in C ++ 17. Verwenden Sie diese Option zum Abrufen der Post-von C ++ 17-Sprachfeatures, die durch den Compiler und die Standardbibliothek unterstützt. Eine Liste der unterstützten Sprachen und Features der Standardbibliothek, finden Sie unter [neuerungen bei Visual C++](../../what-s-new-for-visual-cpp-in-visual-studio.md). Die **/Std: c ++ neueste** Option keine Funktionen, die von überwachten aktiviert die **/ experimentelle** wechseln.
+
 Die **/Std** faktisch während einer C++-Kompilierung die Option kann mithilfe der erkannt werden die [ \_MSVC\_LANG](../../preprocessor/predefined-macros.md) Präprozessor-Makro. Weitere Informationen finden Sie unter [Präprozessor Makros](../../preprocessor/predefined-macros.md).
 
 Die **/Std: c ++ 14** und **/Std: c ++ neueste** Optionen sind verfügbar ab der in Visual C++ 2015 Update 3. Die **/Std: c ++ 17** Option ist ab, die in Visual C++ 2017 Version 15.3 verfügbar. Wie bereits erwähnt, einige C ++ 17-standard wird Verhalten aktiviert, indem die **/Std: c ++ 14** Option, aber alle anderen C ++ 17-Features werden aktiviert, indem **/Std: c ++ 17**.
-  
+
 > [!NOTE]
-> Abhängig von der Visual C++-Compiler Version oder ein Update, bestimmte C ++ 14 und C ++ 17-Features möglicherweise nicht vollständig implementiert oder vollständig-konforme Funktion bei der Angabe der **/Std: c ++ 14** oder **/Std: c ++ 17** Optionen. Z. B. der Visual C++ 2017 RTM-Compiler unterstützt nicht vollständig C ++ 14-konformen `constexpr`, sfinae für Ausdrücke, oder 2-Phasen Namenssuche. Eine Übersicht über C++-sprachkonformität in Visual C++ von der endgültigen Produktversion, finden Sie unter [Visual C++-Sprachkonformität](../../visual-cpp-language-conformance.md). 
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
-  
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).  
-  
-2.  Wählen Sie **Konfigurationseigenschaften**, **C/C++-**, **Sprache**.  
-  
-3.  In **Standard der Sprache C++**, wählen Sie den Sprachstandard zu unterstützen, die aus der Dropdownliste aus, und wählen Sie dann **OK** oder **übernehmen** zum Speichern der Änderungen.  
-  
-## <a name="see-also"></a>Siehe auch  
-  
-[Compileroptionen](../../build/reference/compiler-options.md)   
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)   
+> Abhängig von der Visual C++-Compiler Version oder ein Update, bestimmte C ++ 14 und C ++ 17-Features möglicherweise nicht vollständig implementiert oder vollständig-konforme Funktion bei der Angabe der **/Std: c ++ 14** oder **/Std: c ++ 17** Optionen. Z. B. der Visual C++ 2017 RTM-Compiler unterstützt nicht vollständig C ++ 14-konformen `constexpr`, sfinae für Ausdrücke, oder 2-Phasen Namenssuche. Eine Übersicht über C++-sprachkonformität in Visual C++ von der endgültigen Produktversion, finden Sie unter [Visual C++-Sprachkonformität](../../visual-cpp-language-conformance.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
+
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+
+1. Wählen Sie **Konfigurationseigenschaften**, **C/C++-**, **Sprache**.
+
+1. In **Standard der Sprache C++**, wählen Sie den Sprachstandard zu unterstützen, die aus der Dropdownliste aus, und wählen Sie dann **OK** oder **übernehmen** zum Speichern der Änderungen.
+
+## <a name="see-also"></a>Siehe auch
+
+[Compileroptionen](../../build/reference/compiler-options.md)<br/>
+[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

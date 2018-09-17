@@ -98,12 +98,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8265b8c179f9e317fa3e2a66df4797660528f444
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 60c2b85c3a5c1ca5e2da9b0ef3b42148510b59e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107424"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711052"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Concurrency:: precise_math Namespace-Funktionen
 ||||
@@ -1564,8 +1564,8 @@ inline double modf(
 `_X`  
 Gleitkommawert
 
-`_Iptr` (Out-Parameter)  
-Der ganzzahlige Teil von `_X` als Gleitkommawert.
+`_Iptr`  
+[out] Der ganzzahlige Teil von `_X`, als Gleitkommawert.
 
 ### <a name="return-value"></a>Rückgabewert
 Der Bruchteil von `_X` mit Vorzeichen.
@@ -1891,8 +1891,8 @@ Das erste Gleitkommaargument.
 `_Y`  
 Das zweite Gleitkommaargument.
 
-`_Quo` (Out-Parameter)  
-Die Adresse einer ganzen Zahl, die verwendet wird, um den Quotient der Bruchbytes von `_X` zurückzugeben, dividiert durch die Bruchbytes von `_Y`.
+`_Quo`  
+[out] Die Adresse einer ganzen Zahl, die verwendet wird, um den Quotient der bruchbytes von zurückzugeben `_X` geteilt durch die bruchbytes von `_Y`.
 
 ### <a name="return-value"></a>Rückgabewert
 Gibt den Rest von `_X` dividiert durch `_Y` zurück.
@@ -1914,8 +1914,8 @@ Das erste Gleitkommaargument.
 `_Y`  
 Das zweite Gleitkommaargument.
 
-`_Quo` (Out-Parameter)  
-Die Adresse einer ganzen Zahl, die verwendet wird, um den Quotient der Bruchbytes von `_X` zurückzugeben, dividiert durch die Bruchbytes von `_Y`.
+`_Quo`  
+[out] Die Adresse einer ganzen Zahl, die verwendet wird, um den Quotient der bruchbytes von zurückzugeben `_X` geteilt durch die bruchbytes von `_Y`.
 
 ### <a name="return-value"></a>Rückgabewert
 Gibt den Rest von `_X` dividiert durch `_Y` zurück.

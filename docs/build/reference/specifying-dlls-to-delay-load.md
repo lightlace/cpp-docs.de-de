@@ -1,5 +1,5 @@
 ---
-title: Festlegen von DLLs, um das verzögerte Laden | Microsoft Docs
+title: Festlegen von DLLs, um das verzögerte Laden | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7756499ddf24055feb1c540df13fbe8249edf42
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e9becc0a686d3add5db140b239f1997f81a45be
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373721"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722578"
 ---
 # <a name="specifying-dlls-to-delay-load"></a>Festlegen von DLLs für verzögertes Laden
-Sie können angeben, welche die DLLs für verzögertes Laden, mit der [/DELAYLOAD](../../build/reference/delayload-delay-load-import.md):`dllname` (Linkeroption). Wenn Sie nicht beabsichtigen, Ihre eigene Version einer Hilfsfunktion zu verwenden, müssen Sie auch das Programm mit "delayimp.lib" (für Desktopanwendungen) oder "dloadhelper.lib" (für Store-Apps) verknüpfen.  
-  
- Im Folgenden finden Sie ein einfaches Beispiel für das verzögerte Laden einer DLL:  
-  
-```  
-// cl t.cpp user32.lib delayimp.lib  /link /DELAYLOAD:user32.dll  
-#include <windows.h>  
-// uncomment these lines to remove .libs from command line  
-// #pragma comment(lib, "delayimp")  
-// #pragma comment(lib, "user32")  
-  
-int main() {  
-   // user32.dll will load at this point  
-   MessageBox(NULL, "Hello", "Hello", MB_OK);  
-}  
-```  
-  
- Erstellen Sie die Debugversion des Projekts. Durchlaufen Sie den Code mithilfe des Debuggers schrittweise; Sie werden bemerken, dass "user32.dll" nur geladen wird, wenn Sie `MessageBox` aufrufen.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Linkerunterstützung für verzögertes Laden von DLLs](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+
+Sie können angeben, die DLLs für verzögertes Laden der [/DELAYLOAD](../../build/reference/delayload-delay-load-import.md):`dllname` -Linkeroption. Wenn Sie nicht beabsichtigen, Ihre eigene Version einer Hilfsfunktion zu verwenden, müssen Sie auch das Programm mit "delayimp.lib" (für Desktopanwendungen) oder "dloadhelper.lib" (für Store-Apps) verknüpfen.
+
+Im Folgenden finden Sie ein einfaches Beispiel für das verzögerte Laden einer DLL:
+
+```
+// cl t.cpp user32.lib delayimp.lib  /link /DELAYLOAD:user32.dll
+#include <windows.h>
+// uncomment these lines to remove .libs from command line
+// #pragma comment(lib, "delayimp")
+// #pragma comment(lib, "user32")
+
+int main() {
+   // user32.dll will load at this point
+   MessageBox(NULL, "Hello", "Hello", MB_OK);
+}
+```
+
+Erstellen Sie die Debugversion des Projekts. Durchlaufen Sie den Code mithilfe des Debuggers schrittweise; Sie werden bemerken, dass "user32.dll" nur geladen wird, wenn Sie `MessageBox` aufrufen.
+
+## <a name="see-also"></a>Siehe auch
+
+[Linkerunterstützung für verzögertes Laden von DLLs](../../build/reference/linker-support-for-delay-loaded-dlls.md)

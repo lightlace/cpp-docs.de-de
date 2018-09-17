@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e24a86ead18cde836fd52df4e0c279f69b4c67a1
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: e2fe0b0523fb411b8ef4700a7dea7832c1cdfc52
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "43687934"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726290"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>"LoadLibrary" und "AfxLoadLibrary"
 
@@ -39,7 +39,7 @@ Für MFC-Anwendungen, die MFC-Erweiterungs-DLLs laden, empfehlen wir die Verwend
 
 Wenn die DLL von Windows nicht geladen werden kann, versucht der Prozess, die Verarbeitung fortzusetzen. So könnte der Prozess z. B. dem Benutzer den Fehler melden und ihn veranlassen, einen anderen Pfad für die DLL anzugeben.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Stellen Sie sicher, dass alle DLLs, die den vollständigen Pfad angeben. Das aktuelle Verzeichnis wird zuerst durchsucht, wenn die Dateien geladen werden. Wenn Sie den Pfad für die Datei nicht qualifizieren, wird unter Umständen eine falsche Datei geladen. Eine weitere Möglichkeit, dies zu verhindern, ist die Verwendung der [/DEPENDENTLOADFLAG](../build/reference/dependentloadflag.md) -Linkeroption.
 
 ## <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?

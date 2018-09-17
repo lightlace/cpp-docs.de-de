@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35f186822e00f74552e3bf8d52950f3c4bbe5b45
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 48312e4840436b1e0cc7c3e176d86f1783ff1746
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207391"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714660"
 ---
 # <a name="cshellmanager-class"></a>CShellManager-Klasse
 Implementiert mehrere Möglichkeiten für die Verwendung von Zeigern auf Bezeichnerlisten (PIDLs).  
@@ -104,23 +104,23 @@ BOOL BrowseForFolder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *StrOutFolder*  
- Die Zeichenfolge, die von der Methode zum Speichern des Pfads des ausgewählten Ordners verwendet wird.  
+*strOutFolder*<br/>
+[out] Die Zeichenfolge, die von der Methode zum Speichern des Pfads des ausgewählten Ordners verwendet wird.  
   
- [in] *pWndParent*  
- Ein Zeiger auf das übergeordnete Fenster.  
+*pWndParent*<br/>
+[in] Ein Zeiger auf das übergeordnete Fenster.  
   
- [in] *LplszInitialFolder*  
- Eine Zeichenfolge mit dem Ordner, der standardmäßig ausgewählt ist, wenn das Dialogfeld angezeigt wird.  
+*lplszInitialFolder*<br/>
+[in] Eine Zeichenfolge mit dem Ordner, der standardmäßig ausgewählt ist, wenn das Dialogfeld angezeigt wird.  
   
- [in] *LpszTitle*  
- Der Titel für das Dialogfeld.  
+*lpszTitle*<br/>
+[in] Der Titel für das Dialogfeld.  
   
- [in] *UlFlags*  
- Flags, die Optionen für das Dialogfeld angeben. Finden Sie unter [BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa) für die ausführliche Beschreibung.  
+*ulFlags*<br/>
+[in] Flags, die Optionen für das Dialogfeld angeben. Finden Sie unter [BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa) für die ausführliche Beschreibung.  
   
- [out] *PiFolderImage*  
- Ein Zeiger auf den ganzzahligen Wert, der die Methode den Bildindex des ausgewählten Ordners schreibt.  
+*piFolderImage*<br/>
+[out] Ein Zeiger auf den ganzzahligen Wert, der die Methode den Bildindex des ausgewählten Ordners schreibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL ist, wenn der Benutzer einen Ordner aus dem Dialogfeld auswählt; andernfalls 0.  
@@ -143,11 +143,11 @@ LPITEMIDLIST ConcatenateItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pidl1*  
- Das erste Element.  
+*pidl1*<br/>
+[in] Das erste Element.  
   
- [in] *pidl2*  
- Das zweite Element.  
+*pidl2*<br/>
+[in] Das zweite Element.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die neue Elementliste aus, wenn die Funktion erfolgreich ist, andernfalls NULL.  
@@ -163,8 +163,8 @@ LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *PidlSource*  
- Der ursprünglichen Elementliste.  
+*pidlSource*<br/>
+[in] Der ursprünglichen Elementliste.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die neu erstellte Element-Liste, wenn erfolgreich; andernfalls NULL.  
@@ -180,8 +180,8 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *CbSize*  
- Die Größe der Elementliste.  
+*cbSize*<br/>
+[in] Die Größe der Elementliste.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf das erstellte Element-Liste, wenn erfolgreich; andernfalls NULL.  
@@ -204,8 +204,8 @@ void FreeItem(LPITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Pidl*  
- Eine Elementliste zu löschen.  
+*PIDL*<br/>
+[in] Eine Elementliste zu löschen.  
   
 ##  <a name="getitemcount"></a>  CShellManager::GetItemCount  
  Gibt die Anzahl der Elemente in der Liste ein Element zurück.  
@@ -215,8 +215,8 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Pidl*  
- Ein Zeiger auf eine Elementliste.  
+*PIDL*<br/>
+[in] Ein Zeiger auf eine Elementliste.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der Elemente in der Elementliste.  
@@ -229,8 +229,8 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Pidl*  
- Ein Zeiger auf eine Elementliste.  
+*PIDL*<br/>
+[in] Ein Zeiger auf eine Elementliste.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Größe der Elementliste.  
@@ -243,8 +243,8 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Pidl*  
- Die Liste der Elemente, die durchlaufen werden soll.  
+*PIDL*<br/>
+[in] Die Liste der Elemente, die durchlaufen werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf das nächste Element in der Liste.  
@@ -262,11 +262,11 @@ int GetParentItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Lpidl*  
- Eine PIDL, dessen übergeordnetes Element abgerufen werden.  
+*lpidl*<br/>
+[in] Eine PIDL, dessen übergeordnetes Element abgerufen werden.  
   
- [out] *LpidlParent*  
- Ein Verweis auf eine PIDL, in denen die Methode das Ergebnis gespeichert werden.  
+*lpidlParent*<br/>
+[out] Ein Verweis auf eine PIDL, in denen die Methode das Ergebnis gespeichert werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Ebene des übergeordneten Elements PIDL.  
@@ -284,11 +284,11 @@ HRESULT ItemFromPath(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszPath*  
- Eine Zeichenfolge, die den Pfad für das Element angibt.  
+*lpszPath*<br/>
+[in] Eine Zeichenfolge, die den Pfad für das Element angibt.  
   
- [out] *Pidl*  
- Ein Verweis auf eine PIDL. Die Methode verwendet diesen PIDL zum Speichern des Zeigers auf den Rückgabewert an.  
+*PIDL*<br/>
+[out] Ein Verweis auf eine PIDL. Die Methode verwendet diesen PIDL zum Speichern des Zeigers auf den Rückgabewert an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt "noError" ZURÜCKGEGEBEN, wenn erfolgreich; ein OLE definierter Fehlerwert.  

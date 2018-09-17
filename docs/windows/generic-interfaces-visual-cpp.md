@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d3e54f13f6b165288402bbb1d783a2f1979f4ac
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: abad906c7fcc5c86a6901757ddfbb5dfeff2ec29
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607698"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704899"
 ---
 # <a name="generic-interfaces-visual-c"></a>Generische Schnittstellen (Visual C++)
 
@@ -42,8 +42,8 @@ Weitere Informationen zu den Schnittstellen, finden Sie unter [Schnittstellenkla
 
 ## <a name="remarks"></a>Hinweise
 
-*Attribute* (optional)  
-Zusätzliche deklarative Informationen. Weitere Informationen zu Attributen und Attributklassen finden Sie unter **Attribute**.
+*Attribute*  
+(Optional) Zusätzliche deklarative Informationen. Weitere Informationen zu Attributen und Attributklassen finden Sie unter **Attribute**.
 
 *Klassenschlüssel*  
 **Klasse** oder **Typename**
@@ -54,20 +54,20 @@ Liste der durch Trennzeichen getrennte IDs.
 *Type-Parameter-Einschränkungen-Klauseln*  
 Nimmt die Form, die im angegebenen [Einschränkungen für generische Typparameter (C++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*Zugriffsmodifizierer* (optional)  
-Zugriffsmodifizierer (z. B. **öffentliche, private**).
+*Zugriffsmodifizierer*  
+(Optional) Zugriffsmodifizierer (z. B. **öffentliche, private**).
 
 *identifier*  
 Der Name der Schnittstelle.
 
-*Base-List* (optional)  
-Eine Liste, die eine oder mehrere explizite Basisschnittstelle durch Kommas getrennt enthält.
+*Base-list*  
+(Optional) Eine Liste, die eine oder mehrere explizite Basisschnittstelle durch Kommas getrennt enthält.
 
 *Interface-body*  
 Deklarationen der Schnittstellenmember.
 
-*Deklaratoren* (optional)  
-Deklarationen von Variablen, die auf diesem Typ basiert.
+*Deklaratoren*  
+(Optional) Deklarationen von Variablen, die auf diesem Typ basiert.
 
 ## <a name="example"></a>Beispiel
 

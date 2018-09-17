@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9de39d2054f3c75e00e8827ebb4aaefac9970d59
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 81e027108d0f7b62ba707718c5396432396bdc5e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538312"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711879"
 ---
 # <a name="ctooltipmanager-class"></a>CTooltipManager-Klasse
 Verwaltet Laufzeitinformationen über QuickInfos. Die `CTooltipManager` -Klasse wird einmal pro Anwendung instanziiert.  
@@ -76,14 +76,14 @@ static BOOL CreateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *pToolTip*  
- Ein Verweis auf ein QuickInfo-Zeiger. Es wird festgelegt, um auf die neu erstellte QuickInfo zu verweisen, bei Rückgabe der Funktion.  
+*pToolTip*<br/>
+[out] Ein Verweis auf ein QuickInfo-Zeiger. Es wird festgelegt, um auf die neu erstellte QuickInfo zu verweisen, bei Rückgabe der Funktion.  
   
- [in] *pWndParent*  
- Übergeordnete Element der QuickInfo.  
+*pWndParent*<br/>
+[in] Übergeordnete Element der QuickInfo.  
   
- [in] *nType*  
- Der Typ der QuickInfo.  
+*nType*<br/>
+[in] Der Typ der QuickInfo.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn eine QuickInfo wurde erfolgreich erstellt wurde.  
@@ -117,8 +117,8 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in, out] *pToolTip*  
- Ein Verweis auf einen Zeiger auf eine QuickInfo ein, die zerstört werden.  
+*pToolTip*<br/>
+[in, out] Ein Verweis auf einen Zeiger auf eine QuickInfo ein, die zerstört werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode für die einzelnen [CToolTipCtrl-Klasse](../../mfc/reference/ctooltipctrl-class.md) erstellte [CTooltipManager::CreateToolTip](#createtooltip). Das übergeordnete Steuerelement sollten diese Methode aus Aufrufen seiner `OnDestroy` Handler. Dies ist erforderlich, um die QuickInfo aus dem Framework ordnungsgemäß zu entfernen. Diese Methode legt *pToolTip* auf NULL, bevor sie zurückkehrt.  
@@ -134,14 +134,14 @@ void SetTooltipParams(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nTypes*  
- Gibt die Steuerelementtypen an.  
+*nTypes*<br/>
+[in] Gibt die Steuerelementtypen an.  
   
- [in] *pRTC*  
- Runtime-Klasse, der benutzerdefinierte QuickInfo angezeigt.  
+*pRTC*<br/>
+[in] Runtime-Klasse, der benutzerdefinierte QuickInfo angezeigt.  
   
- [in] *pParams*  
- QuickInfo-Parameter.  
+*pParams*<br/>
+[in] QuickInfo-Parameter.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode legt die Runtime-Klasse und die ursprünglichen Parameter, die die [CToolTipManager](../../mfc/reference/ctooltipmanager-class.md) verwendet beim Erstellen von QuickInfos. Wenn ein Steuerelement ruft [CTooltipManager::CreateToolTip](#createtooltip) und übergibt in einer QuickInfo-Typ, eine der folgenden Datentypen von *nTypes*, der QuickInfo-Manager erstellt ein QuickInfo-Steuerelement, das eine Instanz von der Runtime-Klasse, die anhand des *pRTC* und übergibt die vom angegebenen Parametern *pParams* auf die neue QuickInfo.  
@@ -168,20 +168,20 @@ static void SetTooltipText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pTI*  
- Ein Zeiger auf ein TOOLINFO-Objekt.  
+*PTI*<br/>
+[in] Ein Zeiger auf ein TOOLINFO-Objekt.  
   
- [in, out] *pToolTip*  
- Ein Zeiger auf das QuickInfo-Steuerelement für die Text und Beschreibung festgelegt.  
+*pToolTip*<br/>
+[in, out] Ein Zeiger auf das QuickInfo-Steuerelement für die Text und Beschreibung festgelegt.  
   
- [in] *nType*  
- Gibt den Typ des Steuerelements, das dieser QuickInfo zugeordnet ist.  
+*nType*<br/>
+[in] Gibt den Typ des Steuerelements, das dieser QuickInfo zugeordnet ist.  
   
- [in] *StrText*  
- Der Text als QuickInfo-Text festlegen.  
+*strText*<br/>
+[in] Der Text als QuickInfo-Text festlegen.  
   
- [in] *LpszDescr*  
- Ein Zeiger auf die QuickInfo-Beschreibung. NULL kann sein.  
+*lpszDescr*<br/>
+[in] Ein Zeiger auf die QuickInfo-Beschreibung. NULL kann sein.  
   
 ### <a name="remarks"></a>Hinweise  
  Der Wert des *nType* muss der gleiche Wert wie die *nType* Parameter [CTooltipManager::CreateToolTip](#createtooltip) beim Erstellen der QuickInfos.  

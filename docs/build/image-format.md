@@ -1,5 +1,5 @@
 ---
-title: Bildformat | Microsoft Docs
+title: Bildformat | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 356480333a62d998213726016f3940b318c218a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0e69d1a7c62d4e9c52cc628f30f94c346d83647f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367939"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715415"
 ---
 # <a name="image-format"></a>Bildformat
-Das ausführbare Image-Format ist PE32 +. Ausführbare Images (DLLs und EXEs) sind auf eine Maximalgröße von 2 GB beschränkt, die relativen Adressierung mit einer 32-Bit-Verschiebung verwendet werden kann um statische Image-Daten zu behandeln. Diese Daten enthalten den Import Local Address Table, Zeichenfolgenkonstanten, statischen globalen Daten und usw. an.  
-  
-## <a name="see-also"></a>Siehe auch  
- [x64-Softwarekonventionen](../build/x64-software-conventions.md)
+
+Das ausführbare Image Format typu PE32 +. Ausführbare Images (DLLs und EXEs) sind auf eine Maximalgröße von 2 GB beschränkt, sodass relative Adressierung mit einer 32-Bit-Verschiebung verwendet werden kann, statisches Bild Datenadresse. Diese Daten umfassen die Importadresstabelle, Zeichenfolgenkonstanten, statischen globalen Daten und So weiter.
+
+## <a name="see-also"></a>Siehe auch
+
+[x64-Softwarekonventionen](../build/x64-software-conventions.md)

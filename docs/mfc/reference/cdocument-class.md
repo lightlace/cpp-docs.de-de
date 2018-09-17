@@ -130,12 +130,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6822957abfa98dab737494bb2924c3ecf84090e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 16f812fc941284122ce2a869786ae73447bff83a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337501"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722630"
 ---
 # <a name="cdocument-class"></a>CDocument-Klasse
 Stellt die grundlegende Funktionalität für benutzerdefinierte Dokumentklassen bereit.  
@@ -659,8 +659,8 @@ virtual void OnDocumentEvent(DocumentEvent deEvent);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *deEvent*  
- Ein Aufzählungsdatentyp, der den Typ des Ereignisses beschreibt.  
+*deEvent*<br/>
+[in] Ein Aufzählungsdatentyp, der den Typ des Ereignisses beschreibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Dokumentereignisse können mehrere Klassen auswirken. Diese Methode ist verantwortlich für die Behandlung von Ereignissen, die Klassen außer Auswirkungen auf die [CDocument-Klasse](../../mfc/reference/cdocument-class.md). Derzeit die einzige Klasse, die auf Dokumentereignisse reagieren muss, ist die [CDataRecoveryHandler-Klasse](../../mfc/reference/cdatarecoveryhandler-class.md). Die `CDocument` -Klasse verfügt über andere überschreibbare Methoden, die verantwortlich für die Behandlung der Auswirkungen auf die `CDocument`.  

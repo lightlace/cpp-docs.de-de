@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a1d2d710631c01a39b910e7d9b15f14179b3125
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: dcda07b5d2ab499a769c389538e8f272fd8441a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965742"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713166"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -47,9 +47,10 @@ Ein Allocator ist eine Vorlagenklasse, die ein Objekt beschreibt, das Speicherbe
 
 Allocators sind alle Vorlagen folgenden Typs:
 
-`template<class` `Type` `>`
-
-`class allocator;`
+```cpp
+template<class Type>
+class allocator;
+```
 
 in denen das Vorlagenargument `Type` der von der Allocatorinstanz verwaltete Typ ist. Die C++-Standardbibliothek stellt einen Standardallocator, Vorlagenklasse [allocator](../standard-library/allocator-class.md), bereit, der in [\<memory>](../standard-library/memory.md) definiert ist. Der Header \<allocators> stellt folgende Allocators bereit:
 

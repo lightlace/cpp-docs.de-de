@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ea72c42f1c10e8d5cd27537db13c7b7baafef5d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e5eb06eb9b3a764589008949485aa8e62f15d3d6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538679"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710085"
 ---
 # <a name="cmfcdesktopalertdialog-class"></a>CMFCDesktopAlertDialog-Klasse
 Die `CMFCDesktopAlertDialog` -Klasse dient zusammen mit den [CMFCDesktopAlertWnd-Klasse](../../mfc/reference/cmfcdesktopalertwnd-class.md) um ein benutzerdefiniertes Dialogfeld in einem Popupfenster anzuzeigen.  
@@ -90,8 +90,8 @@ BOOL CreateFromParams(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Params*  
- [in] *pParent*  
+*params*<br/>
+[in] [in] *pParent*  
   
 ### <a name="return-value"></a>Rückgabewert  
   

@@ -1,5 +1,5 @@
 ---
-title: Besondere NMAKE-Makros | Microsoft Docs
+title: Besondere NMAKE-Makros | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eb74d09c1facf664c39781f8134d653f3105c9c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe854d4e3c625d23a5b83cee50ab468b76abcfff
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380013"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710202"
 ---
 # <a name="special-nmake-macros"></a>Besondere NMAKE-Makros
-NMAKE bietet mehrere besondere Makros, die verschiedene Dateinamen und Befehle darstellen. Eine Verwendung für einige dieser Makros ist in der vordefinierten Rückschlussregeln. Wie alle Makros sind die Makros, die von NMAKE bereitgestellten Groß-/Kleinschreibung beachtet.  
-  
--   [Dateinamenmakros](../build/filename-macros.md)  
-  
--   [Rekursionsmakros](../build/recursion-macros.md)  
-  
--   [Befehlsmakros und Optionsmakros](../build/command-macros-and-options-macros.md)  
-  
--   [Makros von Umgebungsvariablen](../build/environment-variable-macros.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Makros und NMAKE](../build/macros-and-nmake.md)
+
+NMAKE: bietet mehrere besondere Makros, die verschiedene Dateinamen und Befehle darstellen. Einige dieser Makros können in der vordefinierten Rückschlussregeln verwendet werden. Wie alle Makros sind die Makros, die von NMAKE bereitgestellten Groß-/Kleinschreibung beachtet.
+
+- [Dateinamenmakros](../build/filename-macros.md)
+
+- [Rekursionsmakros](../build/recursion-macros.md)
+
+- [Befehlsmakros und Optionsmakros](../build/command-macros-and-options-macros.md)
+
+- [Makros von Umgebungsvariablen](../build/environment-variable-macros.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Makros und NMAKE](../build/macros-and-nmake.md)

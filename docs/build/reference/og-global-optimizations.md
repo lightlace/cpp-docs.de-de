@@ -1,5 +1,5 @@
 ---
-title: -Og (globale Optimierungen) | Microsoft Docs
+title: -Og (globale Optimierungen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/22/2017
 ms.technology:
@@ -23,16 +23,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03ef87f31e478bfbc8691b7e678186dd1a0621e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8443ae8111476cdd3339982c8df0b4b7e3e9c475
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377156"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722526"
 ---
 # <a name="og-global-optimizations"></a>/Og (Globale Optimierungen)
 
-Veraltet. Enthält lokale und globale Optimierungen automatische Registrierung Zuordnung und Optimierung einer Schleife. Es wird empfohlen, entweder [/O1 (Größe minimieren)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) oder [/O2 (Geschwindigkeit maximieren)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) stattdessen.
+Veraltet. Enthält lokale und globale Optimierungen, automatische Registrierung Zuordnung und Optimierung einer Schleife. Es wird empfohlen, entweder [/O1 (Größe minimieren)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) oder ["/ O2" (Geschwindigkeit maximieren)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) stattdessen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,13 +40,13 @@ Veraltet. Enthält lokale und globale Optimierungen automatische Registrierung Z
 
 ## <a name="remarks"></a>Hinweise
 
-**/ Og** ist veraltet. Diese Optimierungen sind jetzt in der Regel standardmäßig aktiviert. Weitere Informationen zur Optimierung finden Sie unter [/O1, / O2 (Größe minimieren, Geschwindigkeit maximieren)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) oder [/Ox (ermöglichen die meisten Geschwindigkeit Optimierungen)](../../build/reference/ox-full-optimization.md).
+**"/ Og"** ist veraltet. Diese Optimierungen sind jetzt in der Regel standardmäßig aktiviert. Weitere Informationen zur Optimierung finden Sie unter [/O1, / O2 (Größe minimieren, Geschwindigkeit maximieren)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) oder [/Ox (ermöglichen die meisten Geschwindigkeitsoptimierungen)](../../build/reference/ox-full-optimization.md).
 
-Die folgenden Optimierungen sind verfügbar unter **/Og**:
+Die folgenden Optimierungen sind verfügbar unter **"/ Og"**:
 
 - Lokale und globale allgemeine teilausdruckbeseitigung
 
-     Diese Optimierung wird der Wert eines gemeinsamen Teilausdrucks einmal berechnet. Im folgenden Beispiel wenn die Werte der `b` und `c` nicht zwischen drei Ausdrücke ändern, der Compiler kann die Berechnung der zuweisen `b + c` in eine temporäre Variable, und Ersetzen Sie die Variable für `b + c`:
+   In dieser Optimierung wird der Wert eines gemeinsamen Teilausdrucks einmal berechnet. Im folgenden Beispiel wenn die Werte der `b` und `c` wirken sich nicht zwischen den drei Ausdrücken, die der Compiler kann zuweisen, der Berechnung der `b + c` in eine temporäre Variable, und Ersetzen Sie die Variable für `b + c`:
 
     ```C
     a = b + c;
@@ -54,15 +54,15 @@ Die folgenden Optimierungen sind verfügbar unter **/Og**:
     e = b + c;
     ```
 
-     Bei der Optimierung lokaler gemeinsamer Teilausdruck überprüft der Compiler kurze Abschnitte des Codes für gemeinsame Teilausdrücke. Für globale Optimierung gemeinsamer Teilausdruck sucht der Compiler die gesamte Funktionen für gemeinsame Teilausdrücke.
+   Bei der Optimierung lokalen gemeinsame Teilausdrücke überprüft der Compiler kurze Abschnitte des Codes für gemeinsamen Teilausdrücken. Für globale Optimierung für allgemeine Teilausdruck sucht der Compiler die gesamte Funktionen für die gemeinsame Teilausdrücke.
 
 - Automatische registerreservierung
 
-     Diese Optimierung ermöglicht es dem Compiler zu speichern, die häufig verwendete Variablen und Teilausdrücke in Registern; die `register` Schlüsselwort wird ignoriert.
+   Diese Optimierung ermöglicht dem Compiler, häufig verwendete Variablen und Teilausdrücke in Registern; die `register` Schlüsselwort wird ignoriert.
 
-- Loop-Optimierung
+- Optimierung der Schleife
 
-     Diese Optimierung entfernt der invariante Teilausdrücke aus dem Text einer Schleife. Eine optimale Schleife enthält nur Ausdrücke, deren Werte sich bei der Ausführung der Schleife zu ändern. Im folgenden Beispiel wird der Ausdruck `x + y` ändert sich nicht im Schleifenkörper:
+   Diese Optimierung entfernt invariante Teilausdrücke aus dem Text einer Schleife. Eine optimale Schleife enthält nur Ausdrücke, die sich bei der Ausführung der Schleife, deren Werte zu ändern. Im folgenden Beispiel ist der Ausdruck `x + y` ändert sich nicht in der Schleife:
 
     ```C
     i = -100;
@@ -71,7 +71,7 @@ Die folgenden Optimierungen sind verfügbar unter **/Og**:
     }
     ```
 
-     Nach der Optimierung `x + y` einmal anstatt jedes Mal die Schleife berechnet wird:
+   Nach der Optimierung `x + y` wird berechnet, einmal statt bei jeder Ausführung die Schleife ausgeführt wird:
 
     ```C
     i = -100;
@@ -81,22 +81,22 @@ Die folgenden Optimierungen sind verfügbar unter **/Og**:
     }
     ```
 
-     Schleife Optimierung ist viel effizienter, wenn der Compiler kein Aliasing davon, die Sie festlegen ausgehen kann, mit [__restrict](../../cpp/extension-restrict.md), [Noalias](../../cpp/noalias.md), oder [beschränken](../../cpp/restrict.md).
+   Optimierung der Schleife ist sehr viel effektiver, wenn der Compiler keine Verwendung von Aliasen, davon, die Sie festlegen ausgehen kann, mit ["__restrict"](../../cpp/extension-restrict.md), [Noalias](../../cpp/noalias.md), oder [einschränken](../../cpp/restrict.md).
 
-    > [!NOTE]
-    > Sie aktivieren oder deaktivieren Sie die globale Optimierung für einen Basis Funktion, indem Sie mithilfe der `optimize` Pragma zusammen mit den `g` Option.
+   > [!NOTE]
+   > Können Sie aktivieren oder deaktivieren Sie globale Optimierung für eine Funktion-von-Funktion mithilfe der `optimize` Pragma zusammen mit den `g` Option.
 
- Weitere Informationen finden Sie unter [/Oi (systeminterne Funktionen erstellen)](../../build/reference/oi-generate-intrinsic-functions.md) und [/Ox (ermöglichen die meisten Geschwindigkeit Optimierungen)](../../build/reference/ox-full-optimization.md).
+Weitere Informationen finden Sie unter [/Oi (systeminterne Funktionen erstellen)](../../build/reference/oi-generate-intrinsic-functions.md) und [/Ox (ermöglichen die meisten Geschwindigkeitsoptimierungen)](../../build/reference/ox-full-optimization.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 
 1. Klicken Sie auf die Eigenschaftenseite **Befehlszeile** .
 
-1. Geben Sie die Compileroption "in der **Zusatzoptionen** Feld.
+1. Geben Sie die Compileroption in der **zusätzliche Optionen** Feld.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
 

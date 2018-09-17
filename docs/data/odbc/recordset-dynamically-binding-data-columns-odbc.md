@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fe0be424b07fd9d13eec63c56172b2b0195b83d9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e64a8a795181115652ab25750c1bac8712fabbad
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338810"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703122"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Recordset: Dynamisches Binden von Datenspalten (ODBC)
 Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
@@ -91,19 +91,16 @@ Erstellen von Listen für dynamisch gebundene Spalten
      Ein Ansatz besteht darin, eine Schleife des main Recordsets hinzufügen `DoFieldExchange` -Funktion, die der Liste mit den neuen Spalten, die die entsprechende RFX-Funktionen aufrufen, für jede Spalte in der Liste durchläuft. Übergeben Sie bei jedem Aufruf RFX einen Spaltennamen aus der Liste der Spaltennamen und einen Speicherort in den entsprechenden Member der Liste der Ergebnis-Wert.  
   
 ###  <a name="_core_lists_of_columns"></a> Listen von Spalten  
- Die vier aufgelistet, denen Sie zusammenarbeiten möchten, werden in der folgenden Tabelle angezeigt.  
-  
- **Aktuelle-Tabellenspalten (Liste 1 in der Abbildung)** eine Liste der Spalten derzeit in der Tabelle in der Datenquelle. Diese Liste kann die Liste der Spalten, die derzeit im Recordset gebunden übereinstimmen.  
-  
- **Gebundene Recordsets Spalten (Liste 2 in der Abbildung)**  
- Eine Liste der Spalten, die in Recordsets gebunden werden. Diese Spalten verfügen bereits über RFX-Anweisungen in Ihre `DoFieldExchange` Funktion.  
-  
- **Spalten--dynamisch gebundene (Liste 3 in der Abbildung)**  
- Eine Liste der Spalten in der Tabelle, aber nicht im Recordset. Dies sind die Spalten, die Sie dynamisch binden möchten.  
-  
- **Dynamische Werte (Liste 4 in der Abbildung)**  
- Eine Liste mit Speicher für die Werte, die aus den Spalten, die Sie dynamisch binden abgerufen werden. Elemente der Liste entsprechen den in Spalten um-dynamisch, 1: 1.  
-  
+
+Die vier aufgelistet, denen Sie zusammenarbeiten möchten, werden in der folgenden Tabelle angezeigt.  
+
+|||
+|-|-|  
+**Aktuelle Tabellenspalten**| (Liste 1 in der Abbildung) Eine Liste der Spalten derzeit in der Tabelle in der Datenquelle. Diese Liste kann die Liste der Spalten, die derzeit im Recordset gebunden übereinstimmen.|
+|**Recordset-Spalten**| (Liste 2 in der Abbildung) Eine Liste der Spalten, die in Recordsets gebunden werden. Diese Spalten verfügen bereits über RFX-Anweisungen in Ihre `DoFieldExchange` Funktion.|
+|**Bind-dynamisch Spalten**| (Liste 3 in der Abbildung) Eine Liste der Spalten in der Tabelle, aber nicht im Recordset. Dies sind die Spalten, die Sie dynamisch binden möchten.|
+|**Dynamic-Spaltenwerte**| (Liste 4 in der Abbildung) Eine Liste mit Speicher für die Werte, die aus den Spalten, die Sie dynamisch binden abgerufen werden. Elemente der Liste entsprechen den in Spalten um-dynamisch, 1: 1.|
+
 ###  <a name="_core_building_your_lists"></a> Erstellen der Listen  
  Beachten Sie die allgemeine Strategie können Sie zu aktivieren. Die Verfahren in den weiteren Verlauf dieses Themas, in dem Sie zeigen, wie Sie die aufgeführten Listen erstellen [Spaltenlisten](#_core_lists_of_columns). Die Verfahren führen Sie durch:  
   

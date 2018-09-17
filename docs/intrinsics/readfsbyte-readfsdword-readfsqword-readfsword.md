@@ -1,5 +1,5 @@
 ---
-title: __readfsbyte __readfsdword, __readfsqword __readfsword | Microsoft Docs
+title: __readfsbyte, __readfsdword, __readfsqword, __readfsword | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2dc016dbd2b17552d50dfdedd1208dcd3e6af22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a1a60bde6b522cbd42ac458e79e153450e09030
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333195"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705686"
 ---
 # <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
 **Microsoft-spezifisch**  
   
- Lesen Sie Arbeitsspeicher von einem Ort, ein Offset relativ zum Anfang des Segments FS angegeben wird.  
+ Lesen Sie Arbeitsspeicher von einem Speicherort, ein Offset relativ zum Anfang des Segments FS angegeben wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,11 +56,11 @@ unsigned __int64 __readfsqword(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `Offset`  
- Der Offset vom Anfang des `FS` zum Auslesen.  
+*Offset*<br/>
+[in] Der Offset vom Anfang des `FS` zum Lesen aus.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Der Speicherinhalt des Byte, Wort, Doppelwort oder Vierfachwort (wie durch den Namen der aufgerufenen Funktion angegeben wird) an der Position `FS:[Offset]`.  
+ Der Speicherinhalt des Byte, Wort, zeigt Doppelwort oder Vierfachwort (wie durch den Namen der aufgerufenen Funktion angegeben wird) an der Position `FS:[Offset]`.  
   
 ## <a name="requirements"></a>Anforderungen  
   

@@ -1,5 +1,5 @@
 ---
-title: marshal_context::marshal_as | Microsoft Docs
+title: marshal_context::marshal_as | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 27f27b164d7a00e05e8d080a692f97b696776cbe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f88d086c76ea6b56f1bb049b886df70ceadbdbb9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33136206"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707901"
 ---
 # <a name="marshalcontextmarshalas"></a>marshal_context::marshal_as
-Führt das Marshalling für ein bestimmtes Datenobjekt zwischen einer verwalteten und systemeigenen Datentyp konvertieren.  
+Führt das Marshalling für ein bestimmtes Objekt zwischen einer verwalteten und nativer Datentyp konvertieren.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,21 +39,21 @@ To_Type marshal_as<To_Type>(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `input`  
- Der Wert, der zu einer `To_Type`-Variable gemarshallt werden soll.  
+*Eingabe*<br/>
+[in] Der Wert, der zum Marshallen soll eine `To_Type` Variable.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Eine Variable vom Typ `To_Type`, bei dem es sich um den konvertierten Wert von `input` handelt.  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Funktion führt das Marshalling für ein bestimmtes Datenobjekt. Verwenden Sie diese Funktion nur für die Konvertierungen, die von der Tabelle im angegebenen [Overview of Marshaling in C++](../dotnet/overview-of-marshaling-in-cpp.md).  
+ Diese Funktion führt das Marshalling für ein bestimmtes Objekt. Verwenden Sie diese Funktion nur für die Konvertierungen, die von der Tabelle im angegebenen [Overview of Marshaling in C++](../dotnet/overview-of-marshaling-in-cpp.md).  
   
- Wenn Sie versuchen, ein Paar von Datentypen zu marshallen, die nicht unterstützt werden, `marshal_as` generiert einen Fehler [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) zum Zeitpunkt der Kompilierung. Weitere Informationen zu dem Fehler finden Sie in der zugehörigen Meldung. Der Fehler `C4996` kann auch bei anderen Problemen als veralteten Funktionen generiert werden. Zwei Bedingungen, die diesen Fehler zu generieren, werden bei dem Versuch, ein Paar von Datentypen zu marshallen, die nicht unterstützt werden und verwenden möchten `marshal_as` für eine Konvertierung, die einen Kontext benötigt.  
+ Wenn Sie versuchen, ein Paar von Datentypen zu marshallen, die nicht unterstützt werden, `marshal_as` generiert einen Fehler [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) zum Zeitpunkt der Kompilierung. Weitere Informationen zu dem Fehler finden Sie in der zugehörigen Meldung. Der Fehler `C4996` kann auch bei anderen Problemen als veralteten Funktionen generiert werden. Zwei Bedingungen, die diesen Fehler zu generieren, werden versucht, ein Paar von Datentypen zu marshallen, die nicht unterstützt werden und verwenden möchten `marshal_as` für eine Konvertierung, die einen Kontext erfordert.  
   
- Die Marshallingbibliothek besteht aus mehreren Headerdateien. Für jede Konvertierung ist nur eine Datei erforderlich, Sie können bei Bedarf jedoch zusätzliche Dateien für andere Konvertierungen einbinden. Die Tabelle in `Marshaling Overview in C++` gibt an, welche Marshalling-Datei für jede Konvertierung einbezogen werden sollen.  
+ Die Marshallingbibliothek besteht aus mehreren Headerdateien. Für jede Konvertierung ist nur eine Datei erforderlich, Sie können bei Bedarf jedoch zusätzliche Dateien für andere Konvertierungen einbinden. Die Tabelle in `Marshaling Overview in C++` gibt an, welche Marshalling-Datei für jede Konvertierung enthalten sein sollten.  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel erstellt einen Kontext für das Marshalling von einem `System::String` zu einem `const char *` Variablentyp. Die konvertierten Daten werden nach der Zeile nicht gültig, mit dem den Kontext gelöscht.  
+ In diesem Beispiel erstellt einen Kontext für das Marshalling von einem `System::String` zu einem `const char *` Variablentyp. Die konvertierten Daten werden nicht gültig nach der Zeile sein, die den Kontext löscht.  
   
 ```  
 // marshal_context_test.cpp  
@@ -81,6 +81,6 @@ int main() {
  **Namespace:** msclr::interop  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über das Marshaling in C++](../dotnet/overview-of-marshaling-in-cpp.md)   
+ [Übersicht über das Marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md)   
  [marshal_as](../dotnet/marshal-as.md)   
  [marshal_context-Klasse](../dotnet/marshal-context-class.md)

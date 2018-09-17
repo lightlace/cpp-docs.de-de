@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b05c93bbdfd09bc28288b27a55520c5ac664b723
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0ca3af6aba4c208672038de2ca663efdb2cc9d9a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540457"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700933"
 ---
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager-Klasse
 Verwaltet abtrennbare Menüs. Ein abtrennbares Menü ist ein Menü in der Menüleiste. Der Benutzer kann ein solches Menü von der Menüleiste abtrennen, wodurch das Menü beliebig positionierbar wird.  
@@ -99,8 +99,8 @@ void Build(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiTearOffBarID*  
- [in] *StrText*  
+*uiTearOffBarID*<br/>
+[in] [in] *StrText*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -136,14 +136,14 @@ BOOL Initialize(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszRegEntry*  
- Eine Zeichenfolge, die den Pfad eines Registrierungseintrags enthält. Ihre Anwendungen speichert die Einstellungen für abtrennbare Balken in diesen Registrierungseintrag an.  
+*lpszRegEntry*<br/>
+[in] Eine Zeichenfolge, die den Pfad eines Registrierungseintrags enthält. Ihre Anwendungen speichert die Einstellungen für abtrennbare Balken in diesen Registrierungseintrag an.  
   
- [in] *UiTearOffMenuFirst*  
- Das erste Menü-ID für ein abtrennbares Menü.  
+*uiTearOffMenuFirst*<br/>
+[in] Das erste Menü-ID für ein abtrennbares Menü.  
   
- [in] *UiTearOffMenuLast*  
- Die letzte Menü-ID für ein abtrennbares Menü.  
+*uiTearOffMenuLast*<br/>
+[in] Die letzte Menü-ID für ein abtrennbares Menü.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -201,8 +201,8 @@ void SetInUse(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmdId*  
- [in] *bVerwenden*  
+*uiCmdId*<br/>
+[in] [in] *bVerwenden*  
   
 ### <a name="remarks"></a>Hinweise  
   

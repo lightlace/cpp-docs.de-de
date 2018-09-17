@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47acba5c5bb6164dc7a9ac73fa8f777c99226466
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 592deab171a8085e2260a27ae642b3cd5c4af810
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43681624"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722242"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Abkürzungstasten-Steuerelements bereit.  
@@ -176,11 +176,11 @@ void GetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *wVirtualKeyCode*  
- Virtuellem Tastencode der Tastenkombination. Eine Liste der standardmäßige virtuelle Tastencodes finden Sie unter "Winuser.h".  
+*wVirtualKeyCode*<br/>
+[out] Virtuellem Tastencode der Tastenkombination. Eine Liste der standardmäßige virtuelle Tastencodes finden Sie unter "Winuser.h".  
   
- [out] *wModifiers*  
- Eine bitweise Kombination (OR) von Flags, die die Zusatztasten in die Tastenkombination angeben.  
+*wModifiers*<br/>
+[out] Eine bitweise Kombination (OR) von Flags, die die Zusatztasten in die Tastenkombination angeben.  
   
  Die Modifiziererflags lauten wie folgt aus:  
   
@@ -245,11 +245,11 @@ void SetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *wVirtualKeyCode*  
- Virtuellem Tastencode der Tastenkombination. Eine Liste der standardmäßige virtuelle Tastencodes finden Sie unter "Winuser.h".  
+*wVirtualKeyCode*<br/>
+[in] Virtuellem Tastencode der Tastenkombination. Eine Liste der standardmäßige virtuelle Tastencodes finden Sie unter "Winuser.h".  
   
- [in] *wModifiers*  
- Eine bitweise Kombination (OR) von Flags, die die Zusatztasten in die Tastenkombination angeben.  
+*wModifiers*<br/>
+[in] Eine bitweise Kombination (OR) von Flags, die die Zusatztasten in die Tastenkombination angeben.  
   
  Die Modifiziererflags lauten wie folgt aus:  
   

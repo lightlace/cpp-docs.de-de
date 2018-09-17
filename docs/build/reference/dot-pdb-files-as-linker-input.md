@@ -1,5 +1,5 @@
 ---
-title: . PDB-Dateien als Linkereingabe | Microsoft Docs
+title: . PDB-Dateien als Linkereingabe | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6707be955b5c4a332d1162f53b1cb854391a2ce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6b728903d2a270efc6b3eb736e45540651dae8c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370175"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706185"
 ---
 # <a name="pdb-files-as-linker-input"></a>PDB-Dateien als Eingabe für den Linker
-Objektdateien Sie (.obj)-Dateien, die Kompilierung mit/ZI-Option den Namen des eine Programmdatenbank (PDB) enthalten. Sie nicht den Namen des Objekts PDB-Datei an den Linker angeben; LINK verwendet den eingebetteten Namen die PDB-Datei zu finden, wenn er benötigt wird. Dies gilt auch für Debugfähige Objekte in einer Bibliothek; die PDB-Datei für eine debugfähigen Bibliothek muss an den Linker zusammen mit der Bibliothek verfügbar sein.  
-  
- LINK verwendet auch eine PDB-Datei, um Debuginformationen für die .exe oder .dll-Datei zu speichern. Das Programm PDB ist eine Ausgabedatei und eine Eingabedatei, da LINK die PDB-Datei aktualisiert, wenn sie das Programm neu erstellt.  
-  
-## <a name="see-also"></a>Siehe auch  
- [LINK-Eingabedateien](../../build/reference/link-input-files.md)   
- [Linkeroptionen](../../build/reference/linker-options.md)
+
+Objektdateien Sie (obj)-Dateien kompiliert, mit der Option "/ Zi" den Namen einer Programmdatenbank (PDB) enthalten. Sie geben nicht den Namen des Objekts PDB-Datei an den Linker; LINK wird der eingebettete Name verwendet, die PDB-Datei gefunden wird, wenn sie benötigt wird. Dies gilt auch für Debugfähige Objekte in einer Bibliothek zu finden; die PDB-Datei für eine Debugfähige Bibliothek muss an den Linker zusammen mit der Bibliothek verfügbar sein.
+
+LINK verwendet auch eine PDB-Datei, um Debuginformationen für die .exe-Datei oder DLL-Datei zu speichern. Des Programms PDB ist sowohl eine Ausgabedatei eine Eingabedatei, da LINK die PDB-Datei aktualisiert, wenn sie das Programm neu erstellt.
+
+## <a name="see-also"></a>Siehe auch
+
+[LINK-Eingabedateien](../../build/reference/link-input-files.md)<br/>
+[Linkeroptionen](../../build/reference/linker-options.md)

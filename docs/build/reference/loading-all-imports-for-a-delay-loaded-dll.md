@@ -1,5 +1,5 @@
 ---
-title: Laden aller Importe für eine verzögert geladene DLL | Microsoft Docs
+title: Laden aller Importe für eine verzögert geladene DLL | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,30 +14,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f054479a6681ba6de57690295fe3ce9f6c83696
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29ef1c576af7930e157dafd0f57bf0b8dff49fa6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374371"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715584"
 ---
 # <a name="loading-all-imports-for-a-delay-loaded-dll"></a>Laden aller Importe für eine verzögert geladene DLL
-Die **__HrLoadAllImportsForDll** -Funktion, die in delayhlp.cpp definiert ist, weist den Linker an, alle Importe aus einer DLL zu laden, die mit angegeben wurde die [/DELAYLOAD](../../build/reference/delayload-delay-load-import.md) (Linkeroption).  
-  
- Laden aller Importe, können Sie Fehlerbehandlung, die an einer Stelle im Code und nicht den eigentlichen aufrufen, um die Importe Ausnahmebehandlung zu verwenden. Es verhindert auch eine Situation, in denen Ihre Anwendung teilweise durch einen Prozess aufgrund der Hilfscode nicht geladen werden einen Import fehlschlägt.  
-  
- Aufrufen von **__HrLoadAllImportsForDll** ändert sich nicht auf das Verhalten von Hooks und Fehler behandeln; finden Sie unter [Fehlerbehandlung und Benachrichtigung](../../build/reference/error-handling-and-notification.md) für Weitere Informationen.  
-  
- Das an den Namen der DLL **__HrLoadAllImportsForDll** im Vergleich zu den Namen in der DLL-Datei selbst gespeichert und Groß-/Kleinschreibung beachtet.  
-  
- Im folgende Beispiel wird gezeigt, wie Aufrufen **__HrLoadAllImportsForDll**:  
-  
-```  
-if (FAILED(__HrLoadAllImportsForDll("delay1.dll"))) {  
-   printf ( "failed on snap load, exiting\n" );  
-   exit(2);  
-}  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Linkerunterstützung für verzögertes Laden von DLLs](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+
+Die **__HrLoadAllImportsForDll** -Funktion, die im delayhlp.cpp definiert ist, weist den Linker an alle Importe aus einer DLL zu laden, die mit angegeben wurde der [/DELAYLOAD](../../build/reference/delayload-delay-load-import.md) -Linkeroption.
+
+Laden aller Importe, können Sie für die Fehlerbehandlung an einem Ort in Ihrem Code platzieren und nicht um die tatsächlichen Aufrufe der Importe für die Ausnahmebehandlung zu verwenden. ADSI vermeidet außerdem eine Situation, in dem Ihre Anwendung teilweise durch einen Prozess als Ergebnis des hilfscodes, der nicht geladen werden einen Import fehlschlägt.
+
+Aufrufen von **__HrLoadAllImportsForDll** ändert sich nicht auf das Verhalten von Hooks und Fehler behandeln, finden Sie unter [Fehlerbehandlung und Benachrichtigung](../../build/reference/error-handling-and-notification.md) für Weitere Informationen.
+
+Name der DLL übergeben **__HrLoadAllImportsForDll** im Vergleich zu den Namen in die DLL selbst gespeichert und Groß-/Kleinschreibung beachtet.
+
+Das folgende Beispiel zeigt das Aufrufen von **__HrLoadAllImportsForDll**:
+
+```
+if (FAILED(__HrLoadAllImportsForDll("delay1.dll"))) {
+   printf ( "failed on snap load, exiting\n" );
+   exit(2);
+}
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Linkerunterstützung für verzögertes Laden von DLLs](../../build/reference/linker-support-for-delay-loaded-dlls.md)

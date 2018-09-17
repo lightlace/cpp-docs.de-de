@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c940ec56b0f522e90410b786d595f4cbf929ed89
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1236cbdaca396aa6d52d4e30095d9a0df5379142
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688544"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712035"
 ---
 # <a name="cwinapp-class"></a>CWinApp-Klasse
 
@@ -437,8 +437,8 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *LpvParam*  
-Für zukünftige Verwendung reserviert.
+*lpvParam*<br/>
+[in] Für die zukünftige Verwendung reserviert.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1745,11 +1745,11 @@ virtual CDocument* OpenDocumentFile(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *LpszFileName*  
-Der Name der Datei, die geöffnet werden.
+*lpszFileName*<br/>
+[in] Der Name der Datei, die geöffnet werden.
 
-[in] *bAddToMRU*  
-TRUE gibt an, dass das Dokument eine von der zuletzt verwendeten Dateien ist; FALSE gibt an, dass das Dokument nicht die zuletzt verwendeten Dateien ist.
+*bAddToMRU*<br/>
+[in] TRUE gibt an, dass das Dokument eine von der zuletzt verwendeten Dateien ist; FALSE gibt an, dass das Dokument nicht die zuletzt verwendeten Dateien ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1936,8 +1936,8 @@ void RegisterShellFileTypes(BOOL bCompat = FALSE);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *bCompat*  
-"True" fügt die Registrierungseinträge für Shell-Befehle, die Druck- und drucken, sodass Benutzer Dateien direkt aus der Shell oder ziehen die Datei auf ein Druckerobjekt zu drucken. Es fügt auch ein DefaultIcon-Schlüssel hinzu. Dieser Parameter ist standardmäßig "false" für die Abwärtskompatibilität.
+*bCompat*<br/>
+[in] "True" fügt die Registrierungseinträge für Shell-Befehle, die Druck- und drucken, sodass Benutzer Dateien direkt aus der Shell oder ziehen die Datei auf ein Druckerobjekt zu drucken. Es fügt auch ein DefaultIcon-Schlüssel hinzu. Dieser Parameter ist standardmäßig "false" für die Abwärtskompatibilität.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1973,14 +1973,14 @@ virtual HRESULT RegisterWithRestartManager(
 |||
 |-|-|
 |Parameter|Beschreibung|
-|[in] *bRegisterRecoveryCallback*|TRUE gibt an, dass diese Instanz der Anwendung eine Rückruffunktion für die Wiederherstellung verwendet; FALSE gibt an, dass dies nicht der Fall. Das Framework Ruft die Rückruffunktion für die Wiederherstellung aus, wenn die Anwendung unerwartet beendet wird. Weitere Informationen finden Sie unter [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
-|[in] *StrRestartIdentifier*|Die eindeutige Zeichenfolge, die diese Instanz des Neustart-Managers identifiziert. Der Neustart-Manager-Bezeichner ist für jede Instanz einer Anwendung eindeutig.|
-|[in] *PwzCommandLineArgs*|Eine Zeichenfolge, die zusätzliche Argumente über die Befehlszeile enthält.|
-|[in] *DwRestartFlags*|Optionale Kennzeichen für den Neustart-Manager. Weitere Informationen finden Sie im Abschnitt "Hinweise".|
-|[in] *pRecoveryCallback*|Die Rückruffunktion für die Wiederherstellung. Diese Funktion muss einen LPVOID-Parameter als Eingabe annehmen, und geben Sie einen DWORD-Wert zurück. Ist die Standardrückruffunktion für die Wiederherstellung `CWinApp::ApplicationRecoveryCallback`.|
-|[in] *LpvParam*|Die Eingabeparameter für die Wiederherstellung Callback-Funktion. Weitere Informationen finden Sie unter [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
-|[in] *DwPingInterval*|Die Länge der Zeit, die der Neustart-Manager wartet, bis die Wiederherstellung Callback-Funktion zurückgegeben werden soll. Dieser Parameter ist in Millisekunden.|
-|[in] *DwCallbackFlags*|Flags, die an die Wiederherstellung Callback-Funktion übergeben werden. Für zukünftige Verwendung reserviert.|
+|*bRegisterRecoveryCallback*|[in] TRUE gibt an, dass diese Instanz der Anwendung eine Rückruffunktion für die Wiederherstellung verwendet; FALSE gibt an, dass dies nicht der Fall. Das Framework Ruft die Rückruffunktion für die Wiederherstellung aus, wenn die Anwendung unerwartet beendet wird. Weitere Informationen finden Sie unter [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
+|*strRestartIdentifier*|[in] Die eindeutige Zeichenfolge, die diese Instanz des Neustart-Managers identifiziert. Der Neustart-Manager-Bezeichner ist für jede Instanz einer Anwendung eindeutig.|
+|*pwzCommandLineArgs*|[in] Eine Zeichenfolge, die zusätzliche Argumente über die Befehlszeile enthält.|
+|*dwRestartFlags*|[in] Optionale Kennzeichen für den Neustart-Manager. Weitere Informationen finden Sie im Abschnitt "Hinweise".|
+|*pRecoveryCallback*|[in] Die Rückruffunktion für die Wiederherstellung. Diese Funktion muss einen LPVOID-Parameter als Eingabe annehmen, und geben Sie einen DWORD-Wert zurück. Ist die Standardrückruffunktion für die Wiederherstellung `CWinApp::ApplicationRecoveryCallback`.|
+|*lpvParam*|[in] Die Eingabeparameter für die Wiederherstellung Callback-Funktion. Weitere Informationen finden Sie unter [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
+|*dwPingInterval*|[in] Die Länge der Zeit, die der Neustart-Manager wartet, bis die Wiederherstellung Callback-Funktion zurückgegeben werden soll. Dieser Parameter ist in Millisekunden.|
+|*dwCallbackFlags*|[in] Flags, die an die Wiederherstellung Callback-Funktion übergeben werden. Für zukünftige Verwendung reserviert.|
 
 ### <a name="return-value"></a>Rückgabewert
 

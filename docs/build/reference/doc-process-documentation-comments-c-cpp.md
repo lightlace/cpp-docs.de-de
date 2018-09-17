@@ -21,14 +21,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee09b3fe61c86015d8dc7464ef9925419fc745d9
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 488ee353cf245303b5ea73be139a262aea5be49d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100326"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706575"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (Verarbeiten von Dokumentationskommentaren) (C/C++)
+
 Bewirkt, dass den Compiler Dokumentationskommentare in Quellcodedateien und eine XDC-Datei für jede Quellcodedatei zu erstellen, die Dokumentationskommentare enthält.
 
 ## <a name="syntax"></a>Syntax
@@ -50,7 +51,7 @@ Um die generierte XML-Datei mit IntelliSense zu verwenden, stellen Sie den Datei
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Ausgabedateien** Eigenschaftenseite.
 
@@ -62,5 +63,5 @@ Um die generierte XML-Datei mit IntelliSense zu verwenden, stellen Sie den Datei
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)   
+[Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

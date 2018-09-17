@@ -1,5 +1,5 @@
 ---
-title: Ausführen eines Programms im Präprozessorlauf | Microsoft Docs
+title: Ausführen eines Programms im Präprozessorlauf | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da87a87a2e97736d202b7ddb9be2dbec54fed44d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e2b0571e67e7c5d24cf31dce6fce548735cad966
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367198"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721460"
 ---
 # <a name="executing-a-program-in-preprocessing"></a>Ausführen eines Programms im Präprozessorlauf
-Geben Sie den Befehl mit den Argumenten in Klammern ([]), für die Verwendung der Exitcode des Befehls während der vorverarbeitung. Alle Makros werden erweitert, bevor der Befehl ausgeführt wird. NMAKE ersetzt die Spezifikation der Befehl mit dem Exitcode des Befehls, die in einem Ausdruck verwendet werden kann, um vorverarbeitung zu steuern.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Ausdrücke für die Vorverarbeitung eines Makefiles](../build/expressions-in-makefile-preprocessing.md)
+
+Geben Sie den Befehl aus, mit den Argumenten in Klammern ([]), für die Verwendung der Exitcode des Befehls während der vorverarbeitung. Alle Makros werden erweitert, bevor der Befehl ausgeführt wird. NMAKE: ersetzt die Spezifikation der Befehl mit Exitcode des Befehls, die in einem Ausdruck verwendet werden können, um vorverarbeitung zu steuern.
+
+## <a name="see-also"></a>Siehe auch
+
+[Ausdrücke für die Vorverarbeitung eines Makefiles](../build/expressions-in-makefile-preprocessing.md)

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e6a8364c6f0491344eef7faf381d701944f66d9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 84f94e4e7a3486f036af47f0444d85d0f2fe4446
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965668"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726699"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -54,11 +54,7 @@ Die Menge der komplexen Zahlen mit den Operationen für komplexe Addition und ko
 
 Durch die Darstellung einer komplexen Zahl *z* = (*eine*, *b*) in der Form *z* = *eine*  +  *Bi*, wobei *ich*<sup>2</sup> =-1, die Regeln für die Algebra der Menge der reellen Zahlen auf die Menge der komplexen Zahlen und deren Komponenten angewendet werden kann. Zum Beispiel:
 
-   (1 + 2*ich*) \* (2 + 3*ich*)  
-   = 1 \* (2 + 3*ich*) + 2*ich* \* (2 + 3*ich*)  
-   = (2 + 3*ich*) + (4*ich* + 6*ich*<sup>2</sup>)  
-   = (2 – 6) + (3 + 4)*ich*  
-   =-4 + 7*ich*
+   (1 + 2*ich*) \* (2 + 3*ich*) = 1 \* (2 + 3*ich*) + 2*ich* \* (2 + 3*i*) = (2 + 3*ich*) + (4*ich* + 6*ich*<sup>2</sup>) = (2 bis 6) + (3 + 4)*ich* -4 + 7 =*ich*
 
 Das System der komplexen Zahlen ist ein Körper, jedoch kein geordneter Körper. Es gibt keine Reihenfolge der komplexen Zahlen, wie es für das Feld der reellen Zahlen und deren Teilmengen gibt, daher ungleichheiten findet auf komplexe Zahlen angewendet werden können, wie sie in reelle Zahlen sind.
 

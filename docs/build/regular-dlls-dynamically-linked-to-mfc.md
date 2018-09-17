@@ -1,5 +1,5 @@
 ---
-title: Dynamisch mit MFC verknüpfte reguläre MFC-DLLs | Microsoft Docs
+title: Dynamisch mit MFC verknüpfte reguläre MFC-DLLs | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,91 +18,93 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e20a3937786d65945256eeadcf0bf08b0314470
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 24352e0b28e03cbbecd89b827b65c7f5cae61b7d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383727"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711372"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>Dynamisch mit MFC verknüpfte reguläre MFC-DLLs
-Eine reguläre MFC-DLL dynamisch mit MFC verknüpft wird, eine DLL, die MFC intern verwendet und von ausführbaren MFC oder MFC-Dateien können in der DLL exportierten Funktionen aufgerufen werden. Wie der Name beschrieben wird, wird diese Art von DLL über die Dynamic Link Library-Version von MFC (auch bekannt als die freigegebene Version von MFC) erstellt. Funktionen sind in der Regel über reguläre MFC-DLL über die standard-C-Schnittstelle exportiert.  
-  
- Sie müssen Hinzufügen der `AFX_MANAGE_STATE` Makro am Anfang der exportierten Funktionen in regulären MFC-DLLs, die dynamisch mit MFC für den aktuellen Zustand des Moduls festzulegen, für die DLL verknüpft sind. Dies erfolgt durch die folgende Codezeile am Anfang des aus der DLL exportierten Funktionen hinzufügen:  
-  
-```  
-AFX_MANAGE_STATE(AfxGetStaticModuleState( ))  
-```  
-  
- Dynamisch mit MFC verknüpfte reguläre MFC-DLL hat die folgenden Funktionen:  
-  
--   Dies ist eine neue Art von DLL, die von Visual C++ 4.0 eingeführt.  
-  
--   Die ausführbare Clientdatei kann in einer beliebigen Sprache geschrieben werden, die unterstützt die Verwendung von DLLs (C, C++, Pascal, Visual Basic, usw.); Es muss sich nicht in einer MFC-Anwendung sein.  
-  
--   Im Gegensatz zu der statisch verknüpften regulären MFC-DLL ist diese Art von DLL dynamisch mit MFC-DLL (auch bekannt als die gemeinsam genutzte MFC-DLL) verknüpft.  
-  
--   Die MFC-Importbibliothek verknüpft werden, um diese Art von DLL ist der gleiche für MFC-Erweiterungs-DLLs oder Anwendungen, die mit der MFC-DLL verwendet: lib MFCxx (D).  
-  
- Dynamisch mit MFC verknüpfte reguläre MFC-DLL hat die folgenden Anforderungen:  
-  
--   Diese DLLs mit kompiliert **_AFXDLL** definiert, wie eine ausführbare Datei, die dynamisch mit MFC-DLL verknüpft ist. Aber **_USRDLL** wird auch definiert, wie eine reguläre MFC-DLL, die statisch mit MFC verknüpft wird.  
-  
--   Diese Art von DLL muss Instanziieren einer `CWinApp`-Klasse abgeleitet.  
-  
--   Diese Art von DLL verwendet die `DllMain` von MFC bereitgestellt. Platzieren Sie alle DLL-spezifische Initialisierungscode in der `InitInstance` Elementcode-Funktion und Beendigung in `ExitInstance` wie bei einer normalen MFC-Anwendung.  
-  
- Da diese Art von DLL über die Dynamic Link Library-Version von MFC verwendet, müssen Sie explizit den aktuellen Zustand des Moduls mit der für die DLL festlegen. Verwenden Sie hierzu die [AFX_MANAGE_STATE](../mfc/reference/extension-dll-macros.md#afx_manage_state) Makro am Anfang jeder Funktion aus der DLL exportierten.  
-  
- Reguläre MFC-DLLs benötigen eine `CWinApp`-Klasse und ein einzelnes Objekt dieser Anwendungsklasse abgeleitet, wie eine MFC-Anwendung. Allerdings die `CWinApp` Objekt der DLL keine Haupt-Meldungsverteilschleife, wie die `CWinApp` Objekt einer Anwendung.  
-  
- Beachten Sie, dass die `CWinApp::Run` Mechanismus selbst gilt nicht für eine DLL, da die Anwendung die Haupt-Meldungsverteilschleife besitzt. Wenn die DLL nicht modale Dialogfelder öffnet oder ein Hauptrahmenfenster eigene, Haupt-Meldungsverteilschleife für Ihre Anwendung muss eine DLL exportiert Routine aufrufen, die Aufrufe `CWinApp::PreTranslateMessage`.  
-  
- Platzieren Sie alle DLL-spezifische Initialisierung in den `CWinApp::InitInstance` Memberfunktion wie bei einer normalen MFC-Anwendung. Die `CWinApp::ExitInstance` Memberfunktion von Ihrem `CWinApp` abgeleiteten Klasse aufgerufen wird, über die MFC-Bibliothek bereitgestellt `DllMain` Funktion, bevor die DLL entladen wird.  
-  
- Sie müssen die gemeinsam genutzten DLLs, nämlich MFCx0.dll und 0.dll (oder ähnliche Dateien) mit der Anwendung verteilen.  
-  
- Eine DLL, die dynamisch mit MFC verknüpft wird, kann nicht auch statisch mit MFC verknüpft. Anwendungen-Link, um reguläre MFC-DLLs verknüpften dynamisch mit MFC ihn genau wie jede andere DLL.  
-  
- Symbole werden in der Regel über reguläre MFC-DLL über die standard-C-Schnittstelle exportiert. Die Deklaration einer aus einer regulären MFC-DLL exportierten Funktion sieht etwa wie folgt:  
-  
-```  
-extern "C" __declspec(dllexport) MyExportedFunction( );  
-```  
-  
- Alle speicherbelegungen innerhalb einer regulären MFC DLL sollte innerhalb der DLL bleiben. die DLL sollten nicht an übergeben oder Empfangen von der aufrufenden ausführbaren Datei die folgenden:  
-  
--   Zeiger auf MFC-Objekte  
-  
--   Zeiger auf von MFC belegten Arbeitsspeicher  
-  
- Wenn Sie einen der oben genannten Schritte ausführen müssen oder MFC abgeleitete Objekte zwischen der aufrufenden ausführbaren Datei und DLL übergeben werden müssen, müssen Sie eine MFC-Erweiterungs-DLL erstellen.  
-  
- Sie können ruhig Zeiger in den Arbeitsspeicher, die zugewiesen wurden durch Übergeben der C-Laufzeitbibliotheken zwischen einer Anwendung und eine DLL-Datei nur dann, wenn eine Kopie der Daten erstellt. Sie müssen nicht löschen oder ändern diese Zeiger oder verwenden, ohne dass eine Kopie des Arbeitsspeichers.  
-  
- Beim Erstellen einer regulären MFC-DLL, die dynamisch mit MFC verknüpft ist, müssen Sie das Makro verwenden [AFX_MANAGE_STATE](../mfc/reference/extension-dll-macros.md#afx_manage_state) MFC-Modulstatus ordnungsgemäß zu wechseln. Dies erfolgt durch die folgende Codezeile am Anfang des aus der DLL exportierten Funktionen hinzufügen:  
-  
-```  
-AFX_MANAGE_STATE(AfxGetStaticModuleState( ))  
-```  
-  
- Die **AFX_MANAGE_STATE** Makro sollte nicht in regulären MFC-DLLs, die statisch mit MFC verknüpft oder in MFC-Erweiterungs-DLLs verwendet werden. Weitere Informationen finden Sie unter [Verwalten der Statusdaten von MFC-Modulen](../mfc/managing-the-state-data-of-mfc-modules.md).  
-  
- Ein Beispiel zu schreiben, erstellen und eine reguläre MFC-DLL verwenden, finden Sie im Beispiel [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap). Weitere Informationen zu regulären MFC-DLLs, die dynamisch mit MFC verknüpft sind, finden Sie unter im Abschnitt "Konvertieren DLLScreenCap auf dynamische Verknüpfung mit der MFC-DLL" in der Zusammenfassung für das Beispiel.  
-  
-## <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?  
-  
--   [Reguläre MFC-DLLs initialisieren](../build/run-time-library-behavior.md#initializing-regular-dlls)  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?  
-  
--   [Die Modulzustände einer regulären MFC-DLL verknüpften dynamisch mit MFC](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)  
-  
--   [Verwalten der Statusdaten von MFC-Modulen](../mfc/managing-the-state-data-of-mfc-modules.md)  
-  
--   [Using Database, OLE, and Sockets MFC extension DLLs in regular MFC DLLs (Verwenden von Datenbank-, OLE- und Sockets-MFC-Erweiterungs-DLLs in regulären MFC-DLLs)](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)  
-  
--   [Verwenden von MFC als Teil einer DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Arten von DLLs](../build/kinds-of-dlls.md)
+
+Eine, die MFC-DLL dynamisch mit MFC verknüpfte reguläre ist eine DLL, die MFC intern verwendet, und die exportierten Funktionen in der DLL können von entweder MFC oder MFC-fremde ausführbare Dateien aufgerufen werden. Wie der Name beschrieben wird, wird die mit der Dynamic Link Library-Version von MFC (auch bekannt als die freigegebene Version von MFC) diese Art von DLL erstellt werden. Funktionen werden in der Regel über reguläre MFC-DLL über die standard-C-Schnittstelle exportiert.
+
+Sie müssen hinzufügen, die `AFX_MANAGE_STATE` Makro am Anfang die exportierten Funktionen in regulären MFC-DLLs, die dynamisch mit MFC für den aktuellen Zustand festzulegen, für die DLL verknüpfen. Dies erfolgt durch die folgende Codezeile am Anfang des aus der DLL exportierten Funktionen hinzufügen:
+
+```
+AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
+```
+
+Eine reguläre MFC-DLL dynamisch mit MFC verknüpfte bietet die folgenden Features:
+
+- Dies ist eine neue Art von DLL, die von Visual C++ 4.0 eingeführt.
+
+- Die ausführbare Clientdatei kann in einer beliebigen Sprache geschrieben werden, die die Verwendung von DLLs (C, C++, Pascal, Visual Basic, usw.); unterstützt. Es ist keiner MFC-Anwendung sein.
+
+- Im Gegensatz zu der statisch verknüpften regulären MFC-DLL wird die DLL dynamisch mit der MFC-DLL (auch bekannt als die gemeinsam genutzten MFC-DLL) verknüpft.
+
+- Die MFC-Importbibliothek verknüpft werden, um die DLL ist der gleiche für MFC-Erweiterungs-DLLs oder Anwendungen, die mit der MFC-DLL: lib für MFCxx (D).
+
+Eine reguläre MFC-DLL dynamisch mit MFC verknüpfte gelten die folgenden Anforderungen:
+
+- Mit dieser DLL kompiliert **_AFXDLL** definiert, wie eine ausführbare Datei, die dynamisch mit MFC-DLL verknüpft ist. Aber **_USRDLL** wird auch definiert, wie eine reguläre MFC-DLL, die statisch mit MFC verknüpft wird.
+
+- Diese Art von DLL muss Instanziieren einer `CWinApp`-abgeleitete Klasse.
+
+- Diese Art von DLL verwendet die `DllMain` von MFC bereitgestellt. Platzieren Sie alle DLL-spezifische Initialisierungscode in der `InitInstance` Elementcode-Funktion und Beendigung in `ExitInstance` wie bei einer normalen MFC-Anwendung.
+
+Da diese Art von DLL über die Dynamic Link Library-Version von MFC verwendet, müssen Sie explizit den aktuellen Modulstatus, die für die DLL festlegen. Verwenden Sie hierzu die [AFX_MANAGE_STATE](../mfc/reference/extension-dll-macros.md#afx_manage_state) Makro am Anfang jeder Funktion, die aus der DLL exportiert.
+
+reguläre MFC-DLLs müssen eine `CWinApp`-Klasse und ein einzelnes Objekt der Anwendungsklasse abgeleitet, wie eine MFC-Anwendung. Allerdings die `CWinApp` Objekt der DLL keine Haupt-Meldungsverteilschleife, wie die `CWinApp` Objekt einer Anwendung.
+
+Beachten Sie, dass die `CWinApp::Run` Mechanismus selbst gilt nicht für eine DLL, da die Anwendung die Haupt-Meldungsverteilschleife besitzt. Wenn die DLL nicht modale Dialogfelder öffnet oder eine eigene Hauptrahmenfenster, Haupt-Meldungsverteilschleife Ihrer Anwendung muss eine DLL exportierte Routine aufrufen, die Aufrufe `CWinApp::PreTranslateMessage`.
+
+Platzieren Sie alle DLL-spezifische-Initialisierung in der `CWinApp::InitInstance` Memberfunktion in einer normalen MFC-Anwendung. Die `CWinApp::ExitInstance` Memberfunktion Ihre `CWinApp` abgeleiteten Klasse wird aufgerufen, durch die von MFC bereitgestellten `DllMain` -Funktion die DLL entladen wird.
+
+Sie müssen die freigegebene DLLs, nämlich MFCx0.dll und 0.dll (oder ähnliche Dateien) mit Ihrer Anwendung verteilen.
+
+Eine DLL, die dynamisch mit MFC verknüpft wird, kann nicht auch statisch mit MFC verknüpft. Anwendungen, die mit regulären MFC-DLLs verknüpfen verknüpften dynamisch mit MFC es genau wie jede andere DLL.
+
+Symbole werden in der Regel über reguläre MFC-DLL über die standard-C-Schnittstelle exportiert. Die Deklaration einer aus einer regulären MFC DLL exportierten Funktion sieht etwa folgendermaßen aus:
+
+```
+extern "C" __declspec(dllexport) MyExportedFunction( );
+```
+
+Alle speicherbelegungen innerhalb einer regulären MFC DLL sollten in der DLL bleiben; die DLL sollte nicht zu übergeben oder erhalten Sie eine der folgenden von der aufrufenden ausführbaren Datei:
+
+- Zeiger auf MFC-Objekte
+
+- Zeiger auf die speicherbelegung von MFC
+
+Wenn Sie einen der oben genannten Schritte müssen oder wenn Sie MFC abgeleitete Objekte zwischen der aufrufende ausführbare Datei und DLL übergeben müssen, müssen Sie eine MFC-Erweiterungs-DLL erstellen.
+
+Es ist sicher Zeiger auf den Speicher, die zugeordnet wurden durch Übergeben der C-Laufzeitbibliotheken zwischen einer Anwendung und eine DLL-Datei nur dann, wenn Sie eine Kopie der Daten erstellen. Sie müssen nicht löschen oder Ändern der Größe diese Zeiger oder diese verwenden, ohne dass eine Kopie des Speichers.
+
+Beim Erstellen einer regulären MFC-DLL, die dynamisch mit MFC verknüpft ist, müssen Sie das Makro verwenden [AFX_MANAGE_STATE](../mfc/reference/extension-dll-macros.md#afx_manage_state) MFC-Modulstatus ordnungsgemäß zu wechseln. Dies erfolgt durch die folgende Codezeile am Anfang des aus der DLL exportierten Funktionen hinzufügen:
+
+```
+AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
+```
+
+Die **AFX_MANAGE_STATE** Makro sollte nicht verwendet werden, in regulären MFC-DLLs, die statisch mit MFC verknüpft oder in MFC-Erweiterungs-DLLs. Weitere Informationen finden Sie unter [Verwalten der Statusdaten von MFC-Modulen](../mfc/managing-the-state-data-of-mfc-modules.md).
+
+Ein Beispiel zum Schreiben, erstellen und Verwenden einer regulären MFC DLL finden Sie im Beispiel [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap). Weitere Informationen zu regulären MFC-DLLs, die dynamisch mit MFC verknüpfen, finden Sie unter im Abschnitt "Konvertieren von DLLScreenCap auf dynamische Verknüpfung mit der MFC-DLL" in der Zusammenfassung für das Beispiel.
+
+## <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?
+
+- [Reguläre MFC-DLLs initialisieren](../build/run-time-library-behavior.md#initializing-regular-dlls)
+
+## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?
+
+- [Modulzustände einer regulären MFC DLL verknüpften dynamisch mit MFC](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
+
+- [Verwalten der Statusdaten von MFC-Modulen](../mfc/managing-the-state-data-of-mfc-modules.md)
+
+- [Using Database, OLE, and Sockets MFC extension DLLs in regular MFC DLLs (Verwenden von Datenbank-, OLE- und Sockets-MFC-Erweiterungs-DLLs in regulären MFC-DLLs)](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+
+- [Verwenden von MFC als Teil einer DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Arten von DLLs](../build/kinds-of-dlls.md)

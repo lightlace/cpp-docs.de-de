@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7079cf657d1be545f8ddb915815448a1d3b870f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1007a0bc5d63f5836aaf8925bced6b5ef84b020f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339331"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726205"
 ---
 # <a name="clist-class"></a>CList-Klasse
 Unterstützt sortierte Listen mit Objekten, die nicht eindeutig sein müssen, und auf die sequenziell oder über den Wert zugegriffen werden kann.  
@@ -115,7 +115,7 @@ class CList : public CObject
  *TYPE*  
  Typ des Objekts in der Liste gespeichert.  
   
- *ARG* *_* *TYP*  
+ *ARG_TYPE*  
  Der Typ, der in der Liste gespeicherten Objekte zu verweisen. Dies kann ein Verweis sein.  
   
 ## <a name="remarks"></a>Hinweise  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 878fa1f530a73a9d872a1b094d0ea0ee1b822971
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 81feb345c25ea1c1e9d15dba8dceebb7a2cdb418
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756362"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709799"
 ---
 # <a name="idispatchimpl-class"></a>IDispatchImpl-Klasse
 
@@ -52,23 +52,23 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 
 #### <a name="parameters"></a>Parameter
 
-[in] *T*  
-Eine duale Schnittstelle.
+*T*<br/>
+[in] Eine duale Schnittstelle.
 
-[in] *Piid*  
-Ein Zeiger auf die IID der *T*.
+*piid*<br/>
+[in] Ein Zeiger auf die IID der *T*.
 
-[in] *Plibid*  
-Ein Zeiger auf die LIBID der Typbibliothek, die Informationen über die Schnittstelle enthält. Standardmäßig wird die Bibliothek auf Serverebene übergeben.
+*plibid*<br/>
+[in] Ein Zeiger auf die LIBID der Typbibliothek, die Informationen über die Schnittstelle enthält. Standardmäßig wird die Bibliothek auf Serverebene übergeben.
 
-[in] *wMajor*  
-Die Hauptversion der Typbibliothek Standardmäßig ist der Wert 1.
+*wMajor*<br/>
+[in] Die Hauptversion der Typbibliothek. Standardmäßig ist der Wert 1.
 
-[in] *wMinor*  
-Die Nebenversion der Typbibliothek Standardmäßig ist der Wert 0.
+*wMinor*<br/>
+[in] Die Nebenversion der Typbibliothek. Standardmäßig ist der Wert 0.
 
-[in] *Tihclass*  
-Die Klasse, die zum Verwalten von Informationen für den *T*. In der Standardeinstellung ist der Wert `CComTypeInfoHolder`.
+*tihclass*<br/>
+[in] Die Klasse, die zum Verwalten von Informationen für den *T*. In der Standardeinstellung ist der Wert `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Member
 

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b143311f6326e938e9ac61175b02c82d3c8c2c
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 44ccd0c1625e971fd74e913b9618d7f3ae811be5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027179"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712490"
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox-Klasse
 Die `CMFCRibbonCheckBox`-Klasse implementiert ein Kontrollkästchen, das einem Menübandbereich, einer Symbolleiste für den Schnellzugriff oder einem Popupmenü hinzugefügt werden kann.  
@@ -103,11 +103,11 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- Gibt die Befehls-ID.  
+*nID*<br/>
+[in] Gibt die Befehls-ID.  
   
- [in] *LpszText*  
- Gibt die Bezeichnung.  
+*lpszText*<br/>
+[in] Gibt die Bezeichnung.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Erstellt ein Objekt der Menüband-Kontrollkästchen.  
@@ -125,8 +125,8 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Zeiger auf die mit dem Kontrollkästchen Verknüpfte CDC.  
+*pDC*<br/>
+[in] Zeiger auf die mit dem Kontrollkästchen Verknüpfte CDC.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt eine `CSize` Objekt, das die komprimierte Größe des Kontrollkästchens enthält.  
@@ -142,8 +142,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Zeiger auf den mit diesem Kontrollkästchen Verknüpfte CDC.  
+*pDC*<br/>
+[in] Zeiger auf den mit diesem Kontrollkästchen Verknüpfte CDC.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein `CSize` Objekt mit der intermediate Größe des Kontrollkästchens.  
@@ -159,8 +159,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Zeiger auf die CDC-Objekt, das mit diesem Kontrollkästchen verknüpft ist.  
+*pDC*<br/>
+[in] Zeiger auf die CDC-Objekt, das mit diesem Kontrollkästchen verknüpft ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt eine `CSize` Objekt, das die reguläre Größe des Kontrollkästchens enthält.  
@@ -188,8 +188,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Zeiger auf den CDC, in dem Sie das Kontrollkästchen gezeichnet werden soll.  
+*pDC*<br/>
+[in] Zeiger auf den CDC, in dem Sie das Kontrollkästchen gezeichnet werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -204,8 +204,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
  [in] *CDC**  
  Zeiger auf die mit dem Kontrollkästchen Verknüpfte CDC.  
   
- [in] *CRect*  
- Ein `CRect` Objekt, das das Rechteck in der zum Zeichnen des Bilds im Menü angibt.  
+*CRect*<br/>
+[in] Ein `CRect` Objekt, das das Rechteck in der zum Zeichnen des Bilds im Menü angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt true zurück, wenn das Bild gezeichnet wurde, bzw. FALSE, wenn nicht.  
@@ -227,23 +227,23 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Zeiger auf den Gerätekontext, in dem Sie das Kontrollkästchen gezeichnet werden soll.  
+*pDC*<br/>
+[in] Zeiger auf den Gerätekontext, in dem Sie das Kontrollkästchen gezeichnet werden soll.  
   
- [in] *StrText*  
- Der Anzeigetext.  
+*strText*<br/>
+[in] Der Anzeigetext.  
   
- [in] *nTextOffset*  
- Der Abstand in Pixel von der linken Seite des Listenfelds auf den anzuzeigenden Text.  
+*nTextOffset*<br/>
+[in] Der Abstand in Pixel von der linken Seite des Listenfelds auf den anzuzeigenden Text.  
   
- [in] *Rect*  
- Das Anzeigerechteck für das Kontrollkästchen.  
+*Rect*<br/>
+[in] Das Anzeigerechteck für das Kontrollkästchen.  
   
- [in] *bIsSelected*  
- True, wenn Sie das Kontrollkästchen ausgewählten bzw. FALSE, wenn nicht.  
+*bIsSelected*<br/>
+[in] True, wenn Sie das Kontrollkästchen ausgewählten bzw. FALSE, wenn nicht.  
   
- [in] *bHighlighted*  
- True, wenn Sie das Kontrollkästchen hervorgehobenen bzw. FALSE, wenn nicht.  
+*bHighlighted*<br/>
+[in] True, wenn Sie das Kontrollkästchen hervorgehobenen bzw. FALSE, wenn nicht.  
   
 ### <a name="remarks"></a>Hinweise  
   

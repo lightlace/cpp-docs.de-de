@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 240cd4588cb36125b571462b26fcee3853412218
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: c1ff172fde385b4e814508aaf2b567ac15874069
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538276"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720392"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Automatische Parallelisierung und automatische Vektorisierung
 Automatische Parallelisierung und automatische Vektorisierung sind so konzipiert, dass automatische Leistungszuwachs für Schleifen im Code bereitgestellt wird.  
@@ -75,8 +75,10 @@ Eine Kompilierung mit diesem Befehl:
   
  löst diese Ausgabe aus:  
   
-**---Funktion wird analysiert: "void" __cdecl test(void)**   
-**d:\myproject\mytest.cpp(4): Schleife parallelisiert**  
+```Output
+--- Analyzing function: void __cdecl test(void)
+d:\myproject\mytest.cpp(4) : loop parallelized
+```
   
 Eine Kompilierung mit diesem Befehl:  
   
@@ -84,9 +86,11 @@ Eine Kompilierung mit diesem Befehl:
   
 löst diese Ausgabe aus:  
   
-**---Funktion wird analysiert: "void" __cdecl test(void)**   
-**d:\myproject\mytest.cpp(4): Schleife parallelisiert**   
-**d:\myproject\mytest.cpp(4): Schleife nicht parallelisierte wegen der Ursache "1008"**  
+```Output
+--- Analyzing function: void __cdecl test(void)
+d:\myproject\mytest.cpp(4) : loop parallelized
+d:\myproject\mytest.cpp(4) : loop not parallelized due to reason '1008'
+```
   
 Beachten Sie den Unterschied in der Ausgabe zwischen den zwei verschiedenen [/qpar-Report (Auto-Parallelizer-Berichtsebene)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md) Optionen. `/Qpar-report:1` gibt Parallelisierungsmeldungen nur für Schleifen aus, die erfolgreich parallelisiert werden. `/Qpar-report:2` gibt Parallelisierungsmeldungen für die erfolgreiche und nicht ausgeführte Schleifenparallelisierungen aus.  
   

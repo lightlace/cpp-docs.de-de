@@ -1,5 +1,5 @@
 ---
-title: Extrahieren eines Bibliothekmembers | Microsoft Docs
+title: Extrahieren eines Bibliothekmembers | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,21 +21,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dc0dc67a6d9e4a3ff61aa3b82ac10b9eabcb94b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9207a77868b3257d09f0d9efe38e4765cb8f4906
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371241"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726517"
 ---
 # <a name="extracting-a-library-member"></a>Extrahieren eines Bibliothekmembers
-Sie können LIB verwenden, um eine Objektdatei (obj) zu erstellen, die eine Kopie des Mitglied einer vorhandenen Bibliotheksfreigabe enthält. Verwenden Sie die folgende Syntax, um eine Kopie eines Elements zu extrahieren:  
-  
-```  
-LIB library /EXTRACT:member /OUT:objectfile  
-```  
-  
- Dieser Befehl erstellt eine OBJ-Datei mit dem Namen *Objektdatei* , enthält eine Kopie einer `member` von einer *Bibliothek*. Die `member` Namen wird Groß-/Kleinschreibung beachtet. Sie können nur ein Element in einem einzigen Befehl extrahieren. Die Option/Out ist erforderlich. Es ist keine standardausgabename. Wenn eine Datei namens *Objektdatei* bereits im angegebenen Verzeichnis (das aktuelle Verzeichnis, wenn kein Verzeichnis angegeben wird oder *Objektdatei*), die extrahierte *Objektdatei*ersetzt die vorhandene Datei.  
-  
-## <a name="see-also"></a>Siehe auch  
- [LIB-Referenz](../../build/reference/lib-reference.md)
+
+Sie können LIB verwenden, um eine Objektdatei (obj) zu erstellen, die eine Kopie eines Elements aus einer bestehenden Bibliothek enthält. Um eine Kopie eines Elements zu extrahieren, verwenden Sie die folgende Syntax:
+
+```
+LIB library /EXTRACT:member /OUT:objectfile
+```
+
+Dieser Befehl erstellt eine OBJ-Datei mit dem Namen *Objektdatei* , enthält eine Kopie einer `member` von einer *Bibliothek*. Die `member` Namen wird Groß-/Kleinschreibung beachtet. Sie können nur ein Element in einem einzigen Befehl extrahieren. Die/Out-Option ist erforderlich; Es gibt keine standardausgabename. Wenn eine Datei namens *Objektdatei* bereits im angegebenen Verzeichnis (das aktuelle Verzeichnis, wenn kein Verzeichnis angegeben wird oder *Objektdatei*), die extrahierte *Objektdatei*ersetzt die vorhandene Datei.
+
+## <a name="see-also"></a>Siehe auch
+
+[LIB-Referenz](../../build/reference/lib-reference.md)

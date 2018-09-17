@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 356aa3448c3912c1842d5e04c697fc86fc9714c0
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c3e9c9e5122e4bef7007a767fb3225483984e11d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338398"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711684"
 ---
 # <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton-Klasse
 Die `CMFCCaptionButton` -Klasse implementiert eine Schaltfläche, die auf der Titelleiste für einen andockbaren Bereich oder ein Minirahmenfenster angezeigt wird. In der Regel erstellt das Framework Beschriftungsschaltflächen automatisch.  
@@ -106,11 +106,11 @@ CMFCCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nHit*  
- Der Befehl, der der Schaltfläche zugeordnet wird.  
+*nHit*<br/>
+[in] Der Befehl, der der Schaltfläche zugeordnet wird.  
   
- [in] *bLeftAlign*  
- Gibt an, ob die Schaltfläche mit der links ausgerichtet ist.  
+*bLeftAlign*<br/>
+[in] Gibt an, ob die Schaltfläche mit der links ausgerichtet ist.  
   
  Die folgende Tabelle enthält die möglichen Werte für die *nHit* Parameter.  
   
@@ -161,11 +161,11 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bHorz*  
- "True" für die linke bzw. rechte Pfeiltaste Image-IDs werden; "False" nach oben oder unten Pfeil Image-IDs.  
+*bHorz*<br/>
+[in] "True" für die linke bzw. rechte Pfeiltaste Image-IDs werden; "False" nach oben oder unten Pfeil Image-IDs.  
   
- [in] *bMaximized*  
- "True" für eine Image-ID maximieren; "False" für ein minimieren-Image-ID  
+*bMaximized*<br/>
+[in] "True" für eine Image-ID maximieren; "False" für ein minimieren-Image-ID  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Image-ID  
@@ -221,11 +221,11 @@ void Move(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *PtTo*  
- Der neue Speicherort.  
+*ptTo*<br/>
+[in] Die neue Position.  
   
- [in] *bHide*  
- Ob die Schaltfläche anzuzeigen.  
+*bHide*<br/>
+[in] Ob die Schaltfläche anzuzeigen.  
   
 ##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
  Zeichnet die Titelleisten-Schaltfläche.  
@@ -240,20 +240,20 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Zeiger auf einen Gerätekontext für die Schaltfläche.  
+*pDC*<br/>
+[in] Zeiger auf einen Gerätekontext für die Schaltfläche.  
   
- [in] *bActive*  
- Ob eine aktive Schaltflächenbild gezeichnet werden soll.  
+*bActive*<br/>
+[in] Ob eine aktive Schaltflächenbild gezeichnet werden soll.  
   
- [in] *bHorz*  
- Für die Verwendung in einer abgeleiteten Klasse reserviert.  
+*bHorz*<br/>
+[in] Für die Verwendung in einer abgeleiteten Klasse reserviert.  
   
- [in] *bMaximized*  
- Ob ein Schaltflächenbild maximierten gezeichnet werden soll.  
+*bMaximized*<br/>
+[in] Ob ein Schaltflächenbild maximierten gezeichnet werden soll.  
   
- [in] *bDeaktiviert*  
- Ob ein Schaltflächenbild für die aktivierte gezeichnet werden soll.  
+*bDeaktiviert*<br/>
+[in] Ob ein Schaltflächenbild für die aktivierte gezeichnet werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
  Die *bMaximized* Parameter wird verwendet, wenn die Schaltfläche ein Maximieren ist oder die Schaltfläche zum Minimieren.  
@@ -266,8 +266,8 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bSet*  
- "True" für die Höhe der Mini Titelleiste; Für die Höhe der Titelleiste standardmäßig "false" werden.  
+*bSet*<br/>
+[in] "True" für die Höhe der Mini Titelleiste; Für die Höhe der Titelleiste standardmäßig "false" werden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

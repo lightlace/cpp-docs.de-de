@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f36d6231cfce86314be082a77a39034b619741ad
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 5778b5be050fec50d30215a8b9cef2ca6e4b6dd4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336942"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709682"
 ---
 # <a name="cautohidedocksite-class"></a>CAutoHideDockSite-Klasse
 Die `CAutoHideDockSite` erweitert die [CDockSite-Klasse](../../mfc/reference/cdocksite-class.md) Implementierung automatisch ausblendbarer dockbereiche.  
@@ -115,7 +115,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *pBar*|Der Basis-Bereich, den das Framework testet.|  
+|*pBar*|[in] Der Basis-Bereich, den das Framework testet.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn *pBar* ergibt sich aus `CMFCAutoHideBar`; "False" andernfalls.  
@@ -138,9 +138,9 @@ virtual void DockPane(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *aufnehmen*|Der Bereich, der das Framework dockt an.|  
-|[in] *DockMethod*|Andocken von Optionen für den Bereich.|  
-|[in] *LpRect*|Ein Rechteck, das die Begrenzungen für den angedockten Bereich angibt.|  
+|*Aufnehmen*|[in] Der Bereich, der das Framework dockt an.|  
+|*dockMethod*|[in] Andocken von Optionen für den Bereich.|  
+|*lpRect*|[in] Ein Rechteck, das die Begrenzungen für den angedockten Bereich angibt.|  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardimplementierung verwendet nicht den Parameter *DockMethod*, die für die zukünftige Verwendung bereitgestellt wird.  
@@ -159,7 +159,7 @@ void GetAlignRect(CRect& rect) const;
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *Rect*|Ein Verweis auf ein Rechteck. Die Methode speichert die Größe der DockPosition in dieses Rechteck.|  
+|*Rect*|[in] Ein Verweis auf ein Rechteck. Die Methode speichert die Größe der DockPosition in dieses Rechteck.|  
   
 ### <a name="remarks"></a>Hinweise  
  Das Rechteck für den Versatz angepasst, sodass sie nicht eingeschlossen werden.  
@@ -182,8 +182,8 @@ void SetOffsetLeft(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nOffset*  
- Der neue Offset.  
+*nOffset*<br/>
+[in] Der neue Offset.  
   
 ### <a name="remarks"></a>Hinweise  
  [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) Objekte werden auf statisch positioniert die `CAutoHideDockSite` Objekt. Dies bedeutet, dass der Benutzer den Speicherort der nicht manuell ändern kann `CMFCAutoHideBar` Objekte. Die `SetOffsetLeft` Methode steuert den Abstand zwischen dem linken Rand der am weitesten links `CMFCAutoHideBar` und dem linken Rand der `CAutoHideDockSite`.  
@@ -196,8 +196,8 @@ void SetOffsetRight(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nOffset*  
- Der neue Offset.  
+*nOffset*<br/>
+[in] Der neue Offset.  
   
 ### <a name="remarks"></a>Hinweise  
  [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) Objekte werden auf statisch positioniert die `CAutoHideDockSite` Objekt. Dies bedeutet, dass der Benutzer den Speicherort der manuell ändern, kann die `CMFCAutoHideBar` Objekte. Die `SetOffsetRight` Methode steuert den Abstand zwischen dem rechten Rand die äußerste rechte `CMFCAutoHideBar` und dem rechten Rand der `CAutoHideDockSite`.  
@@ -214,7 +214,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *RectNewClientArea*|Ein reservierter Wert.|  
+|*rectNewClientArea*|[in] Ein reservierter Wert.|  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardimplementierung verwendet keine *RectNewClientArea*. Es zeichnet die Bereiche mit der globalen Symbolleiste Ränder und Abstand der Schaltfläche.  
@@ -231,7 +231,7 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *pAutoHideToolbar*|Ein Zeiger auf eine [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) Objektbereich befindet sich auf die `CAutoHideDockSite`.|  
+|*pAutoHideToolbar*|[in] Ein Zeiger auf eine [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) Objektbereich befindet sich auf die `CAutoHideDockSite`.|  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sucht die Zeile mit *pAutoHideToolbar*. Ruft `CMFCAutoHideBar.UnSetAutoHideMode` für alle der `CMFCAutoHideBar` Objekte in dieser Zeile. Wenn *pAutoHideToolbar* wurde nicht gefunden oder ist dieser Wert NULL, wird diese Methode ruft `CMFCAutoHideBar.UnSetAutoHideMode` für alle der `CMFCAutoHideBar` Objekte auf der `CAutoHideDockSite`.  

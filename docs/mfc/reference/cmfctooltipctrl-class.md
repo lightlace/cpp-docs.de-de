@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4d0f45498015006141591f7132ef38af52751f9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9f395ae726725507bf27f5033b20a4ece2a226a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539648"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715662"
 ---
 # <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl-Klasse
 Eine erweiterte QuickInfo-Implementierung auf Grundlage von [CToolTipCtrl Class](../../mfc/reference/ctooltipctrl-class.md). Eine QuickInfo auf Grundlage der `CMFCToolTipCtrl` -Klasse kann ein Symbol, eine Bezeichnung und eine Beschreibung anzeigen. Sie können das Aussehen anpassen, indem Sie einen Farbverlauf, einen benutzerdefinierter Text, Rahmenfarben, fetten Text, abgerundete Ecken oder ein Sprechblasenformat verwenden.  
@@ -204,14 +204,14 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Das umschließende Rechteck der QuickInfo.  
+*Rect*<br/>
+[in] Das umschließende Rechteck der QuickInfo.  
   
- [in] *ClrLine*  
- Farbe des Rahmens.  
+*clrLine*<br/>
+[in] Farbe des Rahmens.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse die Darstellung des QuickInfo-Rahmens anpassen.  
@@ -227,8 +227,8 @@ virtual CSize OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
+*pDC*<br/>
+[in] [in] *Rect*  
  [in] *bCalcOnly*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -245,11 +245,11 @@ virtual BOOL OnDrawIcon(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *RectImage*  
- Die Koordinaten des Symbols.  
+*rectImage*<br/>
+[in] Die Koordinaten des Symbols.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn das Symbol gezeichnet wurde. Andernfalls "false".  
@@ -268,14 +268,14 @@ virtual CSize OnDrawLabel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Umschließende Rechteck des Beschriftungsbereichs.  
+*Rect*<br/>
+[in] Umschließende Rechteck des Beschriftungsbereichs.  
   
- [in] *bCalcOnly*  
- Wenn TRUE, wird die Bezeichnung nicht gezeichnet.  
+*bCalcOnly*<br/>
+[in] Wenn TRUE, wird die Bezeichnung nicht gezeichnet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Größe der Beschriftung in Pixel.  
@@ -295,17 +295,17 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *X1*  
- Horizontale Koordinate der linken Ende des Trennzeichens.  
+*x1*<br/>
+[in] Horizontale Koordinate der linken Ende des Trennzeichens.  
   
- [in] *X2*  
- Horizontale Koordinate der rechten Ende des Trennzeichens.  
+*x2*<br/>
+[in] Horizontale Koordinate der rechten Ende des Trennzeichens.  
   
- [in] *Y*  
- Vertikale Koordinate des Trennzeichens.  
+*Y*<br/>
+[in] Vertikale Koordinate des Trennzeichens.  
   
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung zieht eine Linie an der Stelle (X1, y) auf den Zeitpunkt (X2, y).  
@@ -324,17 +324,17 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Gibt das umschließende Rechteck der den auszufüllenden Bereich an.  
+*Rect*<br/>
+[in] Gibt das umschließende Rechteck der den auszufüllenden Bereich an.  
   
- [in] *ClrText*  
- QuickInfo-Vordergrundfarbe.  
+*clrText*<br/>
+[in] QuickInfo-Vordergrundfarbe.  
   
- [in] *ClrLine*  
- Farbe des Rahmen und die Trennzeichen-Zeile wurde zwischen Label und Beschreibung.  
+*clrLine*<br/>
+[in] Farbe des Rahmen und die Trennzeichen-Zeile wurde zwischen Label und Beschreibung.  
   
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung füllt das Rechteck mit dem angegebenen *Rect* mit der Farbe oder der vom letzten Aufruf von angegebenen Muster [CMFCToolTipCtrl::SetParams](#setparams).  
@@ -349,8 +349,8 @@ virtual void SetDescription(const CString strDesrciption);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *StrDesrciption*  
- Beschreibungstext.  
+*strDesrciption*<br/>
+[in] Beschreibungstext.  
   
 ### <a name="remarks"></a>Hinweise  
  Der Beschreibungstext wird auf die QuickInfo unter der Trennzeichen angezeigt.  
@@ -365,8 +365,8 @@ void SetFixedWidth(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nWidthRegular*  
- [in] *nWidthLargeImage*  
+*nWidthRegular*<br/>
+[in] [in] *nWidthLargeImage*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -402,8 +402,8 @@ void SetParams(CMFCToolTipInfo* pParams);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pParams*  
- Zeiger auf eine [CMFCToolTipInfo-Klasse](../../mfc/reference/cmfctooltipinfo-class.md) Objekt, das die Parameter für die Anzeige enthält.  
+*pParams*<br/>
+[in] Zeiger auf eine [CMFCToolTipInfo-Klasse](../../mfc/reference/cmfctooltipinfo-class.md) Objekt, das die Parameter für die Anzeige enthält.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn die QuickInfo wird angezeigt, mit die Farben zeichnen und visuelle, die Stile *pParams* angibt. Der Wert des *pParams* befindet sich in den geschützten Member `m_Params`, zugegriffen werden kann, durch eine abgeleitete Klasse, die überschreibt [CMFCToolTipCtrl::OnDrawBorder](#ondrawborder), [CMFCToolTipCtrl: : OnDrawIcon](#ondrawicon), [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel), [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator), oder [CMFCToolTipCtrl::OnFillBackground](#onfillbackground)die angegebene Darstellung zu verwalten.  

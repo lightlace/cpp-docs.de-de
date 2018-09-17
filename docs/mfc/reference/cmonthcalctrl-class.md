@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14fbe2bf5f74a2d6d2f6ae3f394c2e6e74a4e76f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8405c41f5235ecba580bbf453a1129a38b4d8421
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206189"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719096"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl-Klasse
 Kapselt die Funktionalität eines Monatskalender-Steuerelements.  
@@ -297,7 +297,7 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] *PmcGridInfo*|Zeiger auf eine [MCGRIDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagmcgridinfo) -Struktur, die Informationen über die aktuellen Monatskalender-Steuerelement empfängt. Der Aufrufer ist verantwortlich für das zuordnen und diese Struktur zu initialisieren.|  
+|*pmcGridInfo*|[out] Zeiger auf eine [MCGRIDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagmcgridinfo) -Struktur, die Informationen über die aktuellen Monatskalender-Steuerelement empfängt. Der Aufrufer ist verantwortlich für das zuordnen und diese Struktur zu initialisieren.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -733,7 +733,7 @@ void SetCalendarBorder(int cxyBorder);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *CxyBorder*|Die Breite des Rahmens, in Pixel.|  
+|*cxyBorder*|[in] Die Breite des Rahmens, in Pixel.|  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn diese Methode erfolgreich ist, wird die Breite des Rahmens legen Sie auf die *CxyBorder* Parameter. Andernfalls wird die Breite des Rahmens auf den Standardwert, der vom aktuellen angegeben wird zurückgesetzt [Design](/windows/desktop/Controls/visual-styles-overview), oder NULL, wenn Designs nicht verwendet werden.  
@@ -773,7 +773,7 @@ BOOL SetCalID(CALID calid);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *Calid*|Eines der [Kalender-ID](/windows/desktop/Intl/calendar-identifiers) Konstanten.|  
+|*calid*|[in] Eines der [Kalender-ID](/windows/desktop/Intl/calendar-identifiers) Konstanten.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -851,7 +851,7 @@ BOOL SetCurrentView(DWORD dwNewView);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *DwNewView*|Einer der folgenden Werte, der angibt, ein monatlich, jährlich, zehn oder Jahrhundert anzeigen.<br /><br /> MCMV_MONTH: Monatsansicht der<br /><br /> MCMV_YEAR: Jährliche Ansicht<br /><br /> MCMV_DECADE: Jahrzehnt anzeigen<br /><br /> MCMV_CENTURY: Jahrhundert anzeigen|  
+|*dwNewView*|[in] Einer der folgenden Werte, der angibt, ein monatlich, jährlich, zehn oder Jahrhundert anzeigen.<br /><br /> MCMV_MONTH: Monatsansicht der<br /><br /> MCMV_YEAR: Jährliche Ansicht<br /><br /> MCMV_DECADE: Jahrzehnt anzeigen<br /><br /> MCMV_CENTURY: Jahrhundert anzeigen|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -1137,7 +1137,7 @@ LPRECT SizeRectToMin(LPRECT lpRect);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *LpRect*|Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die ein Rechteck definiert, die die gewünschte Anzahl von Kalendern enthält.|  
+|*lpRect*|[in] Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die ein Rechteck definiert, die die gewünschte Anzahl von Kalendern enthält.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die ein Rechteck definiert, deren Größe kleiner oder gleich dem Rechteck definiert, durch die *LpRect* Parameter.  

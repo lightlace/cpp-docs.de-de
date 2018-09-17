@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 946c82d4f558974d548a40af0b14e63f7ccebf4e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: afabb17847f1c94ce7fae1db05e589f03a79506a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680579"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721252"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox-Klasse
 Die `CVSListBox` Klasse unterstützt ein bearbeitbares Listensteuerelement.  
@@ -124,14 +124,14 @@ virtual int AddItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *StrIext*  
- Ein Verweis auf eine Zeichenfolge.  
+*strIext*<br/>
+[in] Ein Verweis auf eine Zeichenfolge.  
   
- [in] *DwData*  
- Eine anwendungsspezifische 32-Bit-Wert, der mit der Zeichenfolge zugeordnet ist. Der Standardwert ist 0.  
+*dwData*<br/>
+[in] Eine anwendungsspezifische 32-Bit-Wert, der mit der Zeichenfolge zugeordnet ist. Der Standardwert ist 0.  
   
- [in] *iIndex*  
- Der nullbasierte Index der Position, die die Zeichenfolge enthält. Wenn die *iIndex* -Parameter ist -1, wird die Zeichenfolge am Ende der Liste hinzugefügt. Der Standardwert ist -1.  
+*iIndex*<br/>
+[in] Der nullbasierte Index der Position, die die Zeichenfolge enthält. Wenn die *iIndex* -Parameter ist -1, wird die Zeichenfolge am Ende der Liste hinzugefügt. Der Standardwert ist -1.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index der Position der Zeichenfolge im Listensteuerelement.  
@@ -158,8 +158,8 @@ virtual BOOL EditItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iIndex*  
- Nullbasierte Index von einem Steuerelement ein Element.  
+*iIndex*<br/>
+[in] Nullbasierte Index von einem Steuerelement ein Element.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Bearbeitungsvorgang erfolgreich gestartet wurde. andernfalls "false".  
@@ -188,8 +188,8 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iIndex*  
- Der nullbasierte Index, der ein bearbeitbares Listenelement-Steuerelement.  
+*iIndex*<br/>
+[in] Der nullbasierte Index, der ein bearbeitbares Listenelement-Steuerelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der 32-Bit-Wert, der mit dem angegebenen Element zugeordnet ist.  
@@ -205,8 +205,8 @@ virtual CString GetItemText(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iIndex`  
- Der nullbasierte Index, der ein bearbeitbares Listenelement-Steuerelement.  
+*iIndex*<br/>
+[in] Der nullbasierte Index, der ein bearbeitbares Listenelement-Steuerelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Objekt, das den Text des angegebenen Elements enthält.  
@@ -246,8 +246,8 @@ virtual BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iIndex*  
- Der nullbasierte Index, der ein bearbeitbares Listenelement-Steuerelement.  
+*iIndex*<br/>
+[in] Der nullbasierte Index, der ein bearbeitbares Listenelement-Steuerelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das angegebene Element entfernt wird. andernfalls "false".  
@@ -262,8 +262,8 @@ virtual BOOL SelectItem(int iItem);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iItem*  
- Der nullbasierte Index, der ein bearbeitbares Listenelement-Steuerelement.  
+*iItem*<br/>
+[in] Der nullbasierte Index, der ein bearbeitbares Listenelement-Steuerelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -281,11 +281,11 @@ virtual void SetItemData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iIndex*  
- Der nullbasierte Index, der ein bearbeitbares Listenelement-Steuerelement.  
+*iIndex*<br/>
+[in] Der nullbasierte Index, der ein bearbeitbares Listenelement-Steuerelement.  
   
- [in] *DwData*  
- Ein 32-Bit-Wert. Dieser Wert kann es sich um eine anwendungsspezifische ganze Zahl oder ein Zeiger auf andere Daten sein.  
+*dwData*<br/>
+[in] Ein 32-Bit-Wert. Dieser Wert kann es sich um eine anwendungsspezifische ganze Zahl oder ein Zeiger auf andere Daten sein.  
   
 ### <a name="remarks"></a>Hinweise  
   

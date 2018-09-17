@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aa6788945a7f36a2b9b478b72e514552cf8d9603
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b83acbc8b4ca6beb3288ed9e02667410b239c6e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315807"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722045"
 ---
 # <a name="text-tool-font-dialog-box-c-image-editor-for-icons"></a>Text-Tool Schriftart (Dialogfeld) (C++) (Bildbearbeitung für Symbole)
 
@@ -34,20 +34,25 @@ Verwenden Sie dieses Dialogfeld für:
 
 Um dieses Dialogfeld zuzugreifen, klicken Sie auf die **Schriftart** Schaltfläche der **Texttool** Dialogfeld.
 
-**Schriftart**  
-Listet die verfügbaren Schriftarten an.
+- **Schriftart**
 
-**Schriftschnitt**  
-Listet die verfügbaren Formate für die angegebene Schriftart an.
+   Listet die verfügbaren Schriftarten an.
 
-**Size**  
-Listet die verfügbaren Punktgrößen für die angegebene Schriftart an.
+- **Schriftschnitt**
 
-**Beispiel**  
-Zeigt ein Beispiel, wie Text mit den Einstellungen für die angegebene Schriftart angezeigt wird.
+   Listet die verfügbaren Formate für die angegebene Schriftart an.
 
-**Skript**  
-Listet die verfügbaren Sprachskripts für die angegebene Schriftart. Wenn Sie ein Skript für die andere Sprache auswählen, wird der Zeichensatz für, dass die Sprache für die Erstellung von multilingual Dokumente verfügbar.
+- **Size**
+
+   Listet die verfügbaren Punktgrößen für die angegebene Schriftart an.
+
+- **Beispiel**
+
+   Zeigt ein Beispiel, wie Text mit den Einstellungen für die angegebene Schriftart angezeigt wird.
+
+- **Skript**
+
+   Listet die verfügbaren Sprachskripts für die angegebene Schriftart. Wenn Sie ein Skript für die andere Sprache auswählen, wird der Zeichensatz für, dass die Sprache für die Erstellung von multilingual Dokumente verfügbar.
 
 ## <a name="requirements"></a>Anforderungen
 

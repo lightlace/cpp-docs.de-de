@@ -1,5 +1,5 @@
 ---
-title: Inhalt eines Makefiles | Microsoft Docs
+title: Inhalt eines Makefiles | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,32 +15,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 192e64e1f40df7a4e871d6765f57f16132cc8b5f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 83b48855d990f0c6c3c0872e8c9b22441d04e76a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367068"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718275"
 ---
 # <a name="contents-of-a-makefile"></a>Inhalt eines Makefiles
-Ein Makefile enthält:  
-  
--   [Beschreibungsblöcke](../build/description-blocks.md)  
-  
--   [Befehle](../build/commands-in-a-makefile.md)  
-  
--   [Makros](../build/macros-and-nmake.md)  
-  
--   [Rückschlussregeln](../build/inference-rules.md)  
-  
--   [Punktdirektiven](../build/dot-directives.md)  
-  
--   [Präprozessordirektiven](../build/makefile-preprocessing.md)  
-  
-## <a name="remarks"></a>Hinweise  
- Andere Funktionen in einem Makefile können sind [Platzhalter](../build/wildcards-and-nmake.md), [lange Dateinamen](../build/long-filenames-in-a-makefile.md), [Kommentare](../build/comments-in-a-makefile.md), und [Sonderzeichen](../build/special-characters-in-a-makefile.md).  
-  
- Ein Beispiel finden Sie unter [Beispielmakefile](../build/sample-makefile.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [NMAKE-Referenz](../build/nmake-reference.md)
+
+Ein Makefile enthält:
+
+- [Beschreibungsblöcke](../build/description-blocks.md)
+
+- [Befehle](../build/commands-in-a-makefile.md)
+
+- [Makros](../build/macros-and-nmake.md)
+
+- [Rückschlussregeln](../build/inference-rules.md)
+
+- [Punktanweisungen](../build/dot-directives.md)
+
+- [Präprozessoranweisungen](../build/makefile-preprocessing.md)
+
+## <a name="remarks"></a>Hinweise
+
+Weitere Funktionen Sie in einem Makefile können [Platzhalter](../build/wildcards-and-nmake.md), [lange Dateinamen](../build/long-filenames-in-a-makefile.md), [Kommentare](../build/comments-in-a-makefile.md), und [Sonderzeichen](../build/special-characters-in-a-makefile.md).
+
+Ein Beispiel finden Sie unter [Beispielmakefile](../build/sample-makefile.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[NMAKE-Referenz](../build/nmake-reference.md)

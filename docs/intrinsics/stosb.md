@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61050f8fc1924f6d2a143893af5bd1918df94394
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: d6a685633b6e23a21d46ad3256188fea3ee16ccc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895187"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700778"
 ---
 # <a name="stosb"></a>__stosb
 
@@ -43,14 +43,14 @@ void __stosb(
 
 #### <a name="parameters"></a>Parameter
 
-[out] `Dest`  
-Das Ziel des Vorgangs.
+*dest*<br/>
+[out] Das Ziel des Vorgangs.
 
-[in] `Data`  
-Die zu speichernden Daten.
+*Data*<br/>
+[in] Die zu speichernden Daten.
 
-[in] `Count`  
-Die Länge des Blocks des zu schreibenden Bytes kennzeichnet.
+*Anzahl*<br/>
+[in] Die Länge des Blocks des zu schreibenden Bytes kennzeichnet.
 
 ## <a name="requirements"></a>Anforderungen
 

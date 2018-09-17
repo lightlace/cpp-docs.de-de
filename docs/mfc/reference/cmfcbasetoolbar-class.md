@@ -1,5 +1,5 @@
 ---
-title: CMFCBaseToolBar Klasse | Microsoft Docs
+title: CMFCBaseToolBar-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 597adf6d7a32b537f31f9a824049dc9ffedf899f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6cececaa0380f2e3806348e40debbf9b9ca2c351
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037843"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705236"
 ---
 # <a name="cmfcbasetoolbar-class"></a>CMFCBaseToolBar-Klasse
 Die Basisklasse für Symbolleisten.  
@@ -54,7 +54,7 @@ class CMFCBaseToolBar : public CPane
 |`CMFCBaseToolBar::CreateObject`|Wird vom Framework verwendet, um eine dynamische Instanz dieses Klassentyps zu erstellen.|  
 |[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Gibt den Andockmodus zurück. (Überschreibt [cbasepane:: Getdockingmode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|  
 |[CMFCBaseToolBar::GetMinSize](#getminsize)|Gibt die minimale Größe einer Symbolleiste zurück. (Überschreibt [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|  
-|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Nach dem Bereich übergeordneten Änderungen vom Framework aufgerufen. (Überschreibt [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|  
+|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Wird vom Framework aufgerufen, nach im Bereich der übergeordneten Änderungen. (Überschreibt [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -90,19 +90,19 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *Größe*  
- Die minimale Größe einer Symbolleiste.  
+*size*<br/>
+[out] Die minimale Größe einer Symbolleiste.  
   
 ##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent  
- Nach dem Bereich übergeordneten Änderungen vom Framework aufgerufen.  
+ Wird vom Framework aufgerufen, nach im Bereich der übergeordneten Änderungen.  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWndOldParent*  
- Ein Zeiger auf das vorherige übergeordnete Fenster.  
+*pWndOldParent*<br/>
+[in] Ein Zeiger auf das vorherige übergeordnete Fenster.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

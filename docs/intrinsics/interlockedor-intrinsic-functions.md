@@ -66,12 +66,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57f89b5f8488f3c89365e490f0bc81bac5816949
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 33ce6996d4435709edcc9d733b9500490dcfe34c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540219"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709877"
 ---
 # <a name="interlockedor-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedOr“
 **Microsoft-spezifisch**  
@@ -180,11 +180,11 @@ __int64 _InterlockedOr64_rel(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in, out] `Value`  
- Ein Zeiger auf den ersten Operanden, der durch das Ergebnis ersetzt wird.  
+*Wert*<br/>
+[in, out] Ein Zeiger auf den ersten Operanden, durch das Ergebnis ersetzt wird.  
   
- [in] `Mask`  
- Der zweite Operand.  
+*Maske*<br/>
+[in] Der zweite Operand.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Der ursprüngliche Wert, auf den der erste Parameter zeigt.  

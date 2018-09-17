@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 598b95df8fd2f4dd2826fcfa1f59a7e2daa8d523
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b559edf26c847404d718440e86037cab4026297b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540238"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704950"
 ---
 # <a name="writedr"></a>__writedr
 Schreibt den angegebenen Wert dem angegebenen Debug-Register.  
@@ -34,11 +34,11 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `DebugRegister`  
- Registrieren Sie eine Zahl von 0 bis 7, die das Debuggen identifiziert.  
+*DebugRegister*<br/>
+[in] Registrieren Sie eine Zahl von 0 bis 7, die das Debuggen identifiziert.  
   
- [in] `DebugValue`  
- Ein Wert zum Schreiben in das Debuggen registrieren.  
+*DebugValue*<br/>
+[in] Ein Wert zum Schreiben in das Debuggen registrieren.  
   
 ## <a name="remarks"></a>Hinweise  
  Diese systeminternen Funktionen sind nur im Kernelmodus verfügbar, und die Routinen sind nur als systeminterne Funktionen verfügbar.  

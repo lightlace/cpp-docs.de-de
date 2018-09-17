@@ -1,5 +1,5 @@
 ---
-title: ERRLOOK-Referenz | Microsoft Docs
+title: ERRLOOK-Referenz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,31 +15,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ab70e590c0dd4db67f97f170f4e6ead05318704
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e8646ad544b6c481ea394add9e6e8faa82919e15
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371355"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725035"
 ---
 # <a name="errlook-reference"></a>ERRLOOK-Referenz
-ERRLOOK-Dienstprogramm im Menü "Extras" als **Fehlersuche**, ruft eine System- oder Modulfehlermeldung auf des Werts eingegeben haben Grundlage. ERRLOOK Ruft den Fehlermeldungstext automatisch ab, wenn Sie Drag & einen hexadezimalen oder dezimalen Wert aus dem Visual Studio-Debugger in Drop der **Wert** edit-Steuerelement. Sie können auch einen Wert eingeben entweder durch Eingabe in die **Wert** edit-Steuerelement oder durch Einfügen aus der Zwischenablage und auf **Nachschlagen**.  
-  
- Die Zugriffstasten für kopieren (STRG + C), Ausschneiden (STRG + X) und einfügen (STRG + V) unterstützen sowohl die **Wert** und **Fehlermeldung** Steuerelemente bearbeiten, wenn Sie Text zuerst markiert.  
-  
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Edit-Steuerelement für Werte](../../build/reference/value-edit-control.md)  
- Beschreibt das in ERRLOOK enthaltene Bearbeitungssteuerelement für Werte.  
-  
- [Edit-Steuerelement für Fehlermeldungen](../../build/reference/error-message-edit-control.md)  
- Beschreibt das in ERRLOOK enthaltene Bearbeitungssteuerelement für Fehlermeldungen.  
-  
- [Schaltfläche „Module“](../../build/reference/modules-button.md)  
- Beschreibt die in ERRLOOK enthaltene Schaltfläche "Module".  
-  
- [Schaltfläche „Suchen“](../../build/reference/look-up-button.md)  
- Beschreibt die in ERRLOOK enthaltene Schaltfläche "Suchen".  
-  
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md)  
- Enthält Links zu Themen über die mit Visual C++ gelieferten C/C++-Buildtools.
+
+ERRLOOK-Hilfsprogramm, das aus dem Menü "Extras", als verfügbar ist **Fehlersuche**, ruft eine System- oder Modulfehlermeldung auf den eingegebenen Wert basierend. ERRLOOK Ruft den Fehlermeldungstext automatisch ab, wenn Drag & drop einen hexadezimalen oder dezimalen Wert aus dem Visual Studio-Debugger in den **Wert** edit-Steuerelement. Sie können auch einen Wert eingeben entweder durch Eingabe in die **Wert** Bearbeitungssteuerelement oder von aus der Zwischenablage einfügen und auf **suchen**.
+
+Die Zugriffstasten für kopieren (STRG + C), Ausschneiden (STRG + X) und einfügen (STRG + V) unterstützen beide das **Wert** und **Fehlermeldung** Steuerelemente bearbeiten, wenn Sie Text zuerst markiert.
+
+## <a name="in-this-section"></a>In diesem Abschnitt
+
+[Steuerelement bearbeiten Wert](../../build/reference/value-edit-control.md) beschreibt den Wert in ERRLOOK enthaltene Bearbeitungssteuerelement.
+
+[Steuerelement für Fehlermeldungen bearbeiten](../../build/reference/error-message-edit-control.md) das Bearbeitungssteuerelement für Fehlermeldungen in ERRLOOK enthaltene beschreibt.
+
+[Schaltfläche "Module"](../../build/reference/modules-button.md) wird beschrieben, die in ERRLOOK enthaltene Schaltfläche "Module".
+
+[Suchen (Schaltfläche)](../../build/reference/look-up-button.md) beschreibt die in ERRLOOK enthaltene Schaltfläche Suchen.
+
+## <a name="related-sections"></a>Verwandte Abschnitte
+
+[C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md) enthält Links zu Themen, in denen die C/C++-Buildtools in Visual C++ bereitgestellt.

@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 702cc504032f7c4702dcc1b317c517d53b9cccc9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0b88e53d7f5cfdd03728f8d1a474ee5171ca5daa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693879"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717586"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl-Klasse
 Kapselt die Funktionalität eines Grundleisten-Steuerelements. Dabei handelt es sich um einen Container für ein untergeordnetes Fenster.  
@@ -766,8 +766,8 @@ BOOL SetBandWidth(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *uBand*|Nullbasierte Index des ein Infoleistenband.|  
-|[in] *CxWidth*|Neue Breite des der Infoleistenband in Pixel.|  
+|*uBand*|[in] Nullbasierte Index des ein Infoleistenband.|  
+|*cxWidth*|[in] Neue Breite des der Infoleistenband in Pixel.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich ist. andernfalls "false".  
@@ -846,8 +846,8 @@ DWORD SetExtendedStyle(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *DwMask*|Eine bitweise Kombination (OR) von Flags, die angeben, welche Flags-Seite in der *DwStyleEx* Parameter angewendet. Verwenden Sie eine oder mehrere der folgenden Werte ein:<br /><br /> RBS_EX_SPLITTER: Standardmäßig an den Splitter im unteren Bereich im horizontalen Modus, und klicken Sie auf der rechten Seite im vertikalen-Modus.<br /><br /> RBS_EX_TRANSPARENT: Weiterleiten die [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) Nachricht für das übergeordnete Fenster.|  
-|[in] *DwStyleEx*|Eine bitweise Kombination (OR) von Flags, die angeben, die Stile angewendet werden. Um einen Stil zu festzulegen, geben Sie das gleiche Flag, das verwendet wird die *DwMask* Parameter. Geben Sie zum Zurücksetzen eines Stils binäre 0 (null).|  
+|*dwMask*|[in] Eine bitweise Kombination (OR) von Flags, die angeben, welche Flags-Seite in der *DwStyleEx* Parameter angewendet. Verwenden Sie eine oder mehrere der folgenden Werte ein:<br /><br /> RBS_EX_SPLITTER: Standardmäßig an den Splitter im unteren Bereich im horizontalen Modus, und klicken Sie auf der rechten Seite im vertikalen-Modus.<br /><br /> RBS_EX_TRANSPARENT: Weiterleiten die [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) Nachricht für das übergeordnete Fenster.|  
+|*dwStyleEx*|[in] Eine bitweise Kombination (OR) von Flags, die angeben, die Stile angewendet werden. Um einen Stil zu festzulegen, geben Sie das gleiche Flag, das verwendet wird die *DwMask* Parameter. Geben Sie zum Zurücksetzen eines Stils binäre 0 (null).|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die vorherige erweiterten Stil.  

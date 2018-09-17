@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 709992c42cf7fd489fbe8fe8d4ebf40bf92a989e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0ea0bf6ed8361419af3519a41edbe6bb3c4b4a77
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849964"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725659"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl-Klasse
 Die `CMFCColorPickerCtrl` -Klasse enthält Funktionen für ein Steuerelement, das verwendet wird, um Farben auszuwählen.  
@@ -158,11 +158,11 @@ virtual void DrawCursor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Gibt einen rechteckigen Rahmen um die ausgewählte Farbe an.  
+*Rect*<br/>
+[in] Gibt einen rechteckigen Rahmen um die ausgewählte Farbe an.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, wenn Sie die Form des Cursors zu ändern, die auf die ausgewählte Farbe verweist müssen.  
@@ -190,14 +190,14 @@ void GetHLS(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *Hue*  
- Zeiger auf eine Variable vom Typ double, das Hue-Informationen erhält.  
+*Hue*<br/>
+[out] Zeiger auf eine Variable vom Typ double, das Hue-Informationen erhält.  
   
- [out] *Leuchtdichte*  
- Zeiger auf eine Variable vom Typ double, der Leuchtdichte Informationen empfängt.  
+*Leuchtdichte*<br/>
+[out] Zeiger auf eine Variable vom Typ double, der Leuchtdichte Informationen empfängt.  
   
- [out] *Sättigung*  
- Zeiger auf eine Variable vom Typ double, der Sättigung Informationen empfängt.  
+*Sättigung*<br/>
+[out] Zeiger auf eine Variable vom Typ double, der Sättigung Informationen empfängt.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -253,20 +253,20 @@ BOOL SelectCellHexagon(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *R*  
- Die Farbe Rot-Komponente.  
+*R*<br/>
+[in] Die Farbe Rot-Komponente.  
   
- [in] *G*  
- Die Komponente grün.  
+*G*<br/>
+[in] Die Komponente grün.  
   
- [in] *B*  
- Die blaue Farbe-Komponente.  
+*B*<br/>
+[in] Die blaue Farbe-Komponente.  
   
- [in] *x*  
- Die X-Koordinate des Cursors, der auf eine Zelle Sechseck verweist.  
+*w*<br/>
+[in] Die X-Koordinate des Cursors, der auf eine Zelle Sechseck verweist.  
   
- [in] *y*  
- Die y-Koordinate des Cursors, der auf eine Zelle Sechseck verweist.  
+*y*<br/>
+[in] Die y-Koordinate des Cursors, der auf eine Zelle Sechseck verweist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die zweite Überladung dieser Methode gibt immer "false" zurück.  
@@ -284,8 +284,8 @@ void SetColor(COLORREF Color);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Farbe*  
- Ein RGB-Farbwert.  
+*Farbe*<br/>
+[in] Ein RGB-Farbwert.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -301,17 +301,17 @@ void SetHLS(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Hue*  
- Ein Hue-Wert.  
+*Hue*<br/>
+[in] Ein Hue-Wert.  
   
- [in] *Leuchtdichte*  
- Ein Luminanzwert.  
+*Leuchtdichte*<br/>
+[in] Ein Luminanzwert.  
   
- [in] *Sättigung*  
- Der Wert eine Überlastung des Netzwerks.  
+*Sättigung*<br/>
+[in] Der Wert eine Überlastung des Netzwerks.  
   
- [in] *bInvalidate*  
- True, um zu erzwingen, dass das Fenster, um die neue Farbe sofort zu aktualisieren. andernfalls "false". Der Standardwert ist "true".  
+*bInvalidate*<br/>
+[in] True, um zu erzwingen, dass das Fenster, um die neue Farbe sofort zu aktualisieren. andernfalls "false". Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -323,8 +323,8 @@ void SetHue(double Hue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Hue*  
- Ein Hue-Wert.  
+*Hue*<br/>
+[in] Ein Hue-Wert.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -336,8 +336,8 @@ void SetLuminance(double Luminance);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Leuchtdichte*  
- Ein Luminanzwert.  
+*Sättigung*<br/>
+[in] Ein Luminanzwert.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -349,8 +349,8 @@ void SetLuminanceBarWidth(int w);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *w*  
- Die Breite des Balkens Leuchtdichte gemessen in Pixel.  
+*W*<br/>
+[in] Die Breite des Balkens Leuchtdichte gemessen in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode zum Ändern der Größe der Leuchtdichte-Leiste, die auf die **benutzerdefinierte** auf der Registerkarte das Steuerelement für die Farbauswahl. Die *w* Parameter gibt an, die neue Breite des Balkens Leuchtdichte. Der Wert für die Breite wird ignoriert, wenn drei Viertel der Breite des Clientbereichs überschritten.  
@@ -363,8 +363,8 @@ void SetOriginalColor(COLORREF ref);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Ref*  
- Ein RGB-Farbwert.  
+*ref*<br/>
+[in] Ein RGB-Farbwert.  
   
 ### <a name="remarks"></a>Hinweise  
  Aufgerufen Sie diese Methode wird, wenn das Steuerelement für die Farbauswahl initialisiert wird.  
@@ -377,8 +377,8 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pPalette*  
- Zeiger auf eine Farbpalette.  
+*pPalette*<br/>
+[in] Zeiger auf eine Farbpalette.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Farbpalette definiert das Array der Farben, das angezeigt werden, in das Steuerelement für die Farbauswahl.  
@@ -391,8 +391,8 @@ void SetSaturation(double Saturation);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Sättigung*  
- Der Wert eine Überlastung des Netzwerks.  
+*Sättigung*<br/>
+[in] Der Wert eine Überlastung des Netzwerks.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -404,8 +404,8 @@ void SetType(COLORTYPE colorType);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *ColorType*  
- Eine Farbe Picker-Steuerelementtyp.  
+*colorType*<br/>
+[in] Eine Farbe Picker-Steuerelementtyp.  
   
  Die Typen definiert sind, durch die `CMFCColorPickerCtrl::COLORTYPE` Enumeration. Die möglichen Typen sind LEUCHTDICHTE "," Auswahl "," HEX "und" HEX_GREYSCALE. Der Standardtyp ist die Auswahl.  
   

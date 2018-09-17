@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d3c7f9e1d638c547b2b340a610a52af9318c714
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: e8442f771cda2b7130a60148582288a31977fa59
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535404"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726634"
 ---
 # <a name="cedit-class"></a>CEdit Class
 Stellt die Funktionalität eines Windows-Bearbeitungssteuerelements bereit.  
@@ -445,11 +445,11 @@ CString GetCueBanner() const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *LpszText*  
- Ein Zeiger auf eine Zeichenfolge, die den Hinweistext enthält.  
+*lpszText*<br/>
+[out] Ein Zeiger auf eine Zeichenfolge, die den Hinweistext enthält.  
   
- [in] *CchText*  
- Die Anzahl der Zeichen, die empfangen werden können. Diese Zahl beinhaltet das abschließende Nullzeichen.  
+*cchText*<br/>
+[in] Die Anzahl der Zeichen, die empfangen werden können. Diese Zahl beinhaltet das abschließende Nullzeichen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  "True" für die erste Überladung Wenn die Methode erfolgreich ist; andernfalls "false".  
@@ -513,8 +513,8 @@ BOOL GetHighlight(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] *PichStart*|Nullbasierte Index des ersten Zeichens im Bereich von Text, der hervorgehoben ist.|  
-|[out] *PichEnd*|Nullbasierte Index des letzten Zeichens in den Bereich des Texts, die hervorgehoben ist.|  
+|*pichStart*|[out] Nullbasierte Index des ersten Zeichens im Bereich von Text, der hervorgehoben ist.|  
+|*pichEnd*|[out] Nullbasierte Index des letzten Zeichens in den Bereich des Texts, die hervorgehoben ist.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -917,11 +917,11 @@ BOOL SetCueBanner(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszText*  
- Zeiger auf eine Zeichenfolge, die das Stichwort dafür enthält, in das Bearbeitungssteuerelement angezeigt.  
+*lpszText*<br/>
+[in] Zeiger auf eine Zeichenfolge, die das Stichwort dafür enthält, in das Bearbeitungssteuerelement angezeigt.  
   
- [in] *fDrawWhenFocused*  
- False gibt an, wird das hinweisbanner nicht gezeichnet, wenn der Benutzer in der Edit-Steuerelement klickt und dem Steuerelement den Fokus gibt.  
+*fDrawWhenFocused*<br/>
+[in] False gibt an, wird das hinweisbanner nicht gezeichnet, wenn der Benutzer in der Edit-Steuerelement klickt und dem Steuerelement den Fokus gibt.  
   
  Bei "true", wird das hinweisbanner gezeichnet, selbst wenn das Steuerelement den Fokus besitzt. Das hinweisbanner wird ausgeblendet, wenn der Benutzer beginnt, geben Sie in das Steuerelement.  
   
@@ -981,8 +981,8 @@ void SetHighlight(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *IchStart*|Nullbasierte Index des ersten Zeichens in den Textbereich hervorheben.|  
-|[in] *IchEnd*|Nullbasierte Index des letzten Zeichens in den Textbereich hervorheben.|  
+|*ichStart*|[in] Nullbasierte Index des ersten Zeichens in den Textbereich hervorheben.|  
+|*ichEnd*|[in] Nullbasierte Index des letzten Zeichens in den Textbereich hervorheben.|  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) -Nachricht, die im Windows SDK beschrieben wird.  Diese Methode sendet die [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) -Nachricht, die im Windows SDK beschrieben wird. Beide `SetHighlight` und `GetHighlight` für nur UNICODE-builds aktiviert sind. 
@@ -1245,10 +1245,10 @@ BOOL ShowBalloonTip(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *pEditBalloonTip*|Zeiger auf ein [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) -Struktur, der die SprechblasenInfo beschreibt.|  
-|[in] *LpszTitle*|Zeiger auf eine Unicodezeichenfolge, die den Titel der SprechblasenInfo enthält.|  
-|[in] *LpszText*|Zeiger auf eine Unicode-Zeichenfolge, die die Sprechblase QuickInfo-Text enthält.|  
-|[in] *TtiIcon*|Ein **INT** , die angibt, dass der Typ des Symbols, der die SprechblasenInfo zugeordnet werden soll. Der Standardwert ist TTI_NONE. Weitere Informationen finden Sie unter den `ttiIcon` Mitglied der [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) Struktur.|  
+|*pEditBalloonTip*|[in] Zeiger auf ein [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) -Struktur, der die SprechblasenInfo beschreibt.|  
+|*lpszTitle*|[in] Zeiger auf eine Unicodezeichenfolge, die den Titel der SprechblasenInfo enthält.|  
+|*lpszText*|[in] Zeiger auf eine Unicode-Zeichenfolge, die die Sprechblase QuickInfo-Text enthält.|  
+|*ttiIcon*|[in] Ein **INT** , die angibt, dass der Typ des Symbols, der die SprechblasenInfo zugeordnet werden soll. Der Standardwert ist TTI_NONE. Weitere Informationen finden Sie unter den `ttiIcon` Mitglied der [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) Struktur.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  

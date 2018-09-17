@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonQuickAccessToolBarDefaultState Klasse | Microsoft Docs
+title: CMFCRibbonQuickAccessToolBarDefaultState-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9fd8c983e0133644b6531e87f5fc1dec0fdc7b7
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0ee9ee6a600e4a552e90cd5901340c3759d52a59
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041804"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702779"
 ---
 # <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>CMFCRibbonQuickAccessToolBarDefaultState-Klasse
-Eine Hilfsklasse, die Standardstatus für die Symbolleiste für den Schnellzugriff verwaltet, die auf der menübandleiste befindet ( [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md)).  
+Eine Hilfsklasse, die standardmäßig für die Symbolleiste für den Schnellzugriff verwaltet, die in der menübandleiste befindet ( [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md)).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,18 +52,18 @@ class CMFCRibbonQuickAccessToolBarDefaultState
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand)|Fügt einen Befehl auf den Standardstatus für die Symbolleiste für den Schnellzugriff an. Dadurch wird die Symbolleiste selbst nicht geändert.|  
+|[CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand)|Fügt einen Befehl auf den Standardstatus für die Symbolleiste für den Schnellzugriff an. Dies ändert sich nicht auf die Symbolleiste selbst aus.|  
 |[CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom](#copyfrom)|Kopiert die Eigenschaften einer Symbolleiste für den Schnellzugriff.|  
-|[CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll](#removeall)|Entfernt alle Befehle aus der Symbolleiste für den Schnellzugriff an. Dadurch wird die Symbolleiste selbst nicht geändert.|  
+|[CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll](#removeall)|Entfernt alle Befehle aus der Symbolleiste für den Schnellzugriff an. Dies ändert sich nicht auf die Symbolleiste selbst aus.|  
   
 ## <a name="remarks"></a>Hinweise  
- Nachdem Sie die Symbolleiste für den Schnellzugriff in Ihrer Anwendung erstellen, sollten Sie durch Aufrufen von Standardzustand festlegen [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate). Dieser Standardstatus wird wiederhergestellt, wenn ein Benutzer klickt auf die **zurücksetzen** Schaltfläche auf der **anpassen** Seite Ihrer Anwendung **Optionen** (Dialogfeld).  
+ Nachdem Sie die Symbolleiste für den Schnellzugriff in Ihrer Anwendung erstellt, es wird empfohlen, Sie Standardzustand durch Aufrufen von [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate). Dieser Standardstatus wird wiederhergestellt, wenn ein Benutzer klickt der **zurücksetzen** Schaltfläche der **anpassen** auf der Seite Ihrer Anwendungsverzeichnis **Optionen** Dialogfeld.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CMFCRibbonQuickAccessToolBarDefaultState](../../mfc/reference/cmfcribbonquickaccesstoolbardefaultstate-class.md)  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht das Erstellen von ein Objekt von der `CMFCRibbonQuickAccessToolbarDefaultState` Klasse und wie Sie einen Befehl auf den Standardstatus für die Symbolleiste für den Schnellzugriff hinzufügen.  
+ Im folgende Beispiel wird veranschaulicht, wie zum Erstellen eines Objekts von der `CMFCRibbonQuickAccessToolbarDefaultState` -Klasse und das Hinzufügen ein Befehls auf den Standardstatus für die Symbolleiste für den Schnellzugriff.  
   
  [!code-cpp[NVC_MFC_RibbonApp#21](../../mfc/reference/codesnippet/cpp/cmfcribbonquickaccesstoolbardefaultstate-class_1.cpp)]  
   
@@ -87,7 +87,7 @@ void AddCommand(
  Legt die Sichtbarkeit des Befehls fest, wenn die Symbolleiste für den Schnellzugriff im Standardzustand befindet.  
   
 ### <a name="remarks"></a>Hinweise  
- Die CMFCRibbonQuickAccessToolBarDefaultState einen Befehl hinzufügen, führt drei Ergebnisse. Zunächst wird jede hinzugefügte Befehl in der Dropdownliste auf der rechten Seite der Symbolleiste für den Schnellzugriff aufgeführt. Ein Benutzer kann auf diese Weise hinzufügen und entfernen den Befehl aus der Symbolleiste für den Schnellzugriff. Zweitens die Symbolleiste für den Schnellzugriff wird zurückgesetzt und zeigt nur die Befehle, die aufgelistet werden als sichtbar im Standardzustand klickt der Benutzer die **zurücksetzen** Schaltfläche der **anpassen** (Dialogfeld). Dritte, wenn Sie nicht aufgerufen haben [CMFCRibbonBar::SetQuickAccessCommands](../../mfc/reference/cmfcribbonbar-class.md#setquickaccesscommands), der Symbolleiste für den Schnellzugriff verwendet die sichtbaren Befehlen aus dieser Liste als die standardmäßige sichtbaren Befehlen der ersten Ausführung ein Benutzer die Anwendung. Nachdem Sie alle Befehle, die Sie möchten hinzugefügt haben, rufen Sie [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate) dieser Instanz als der Standardstatus für die Symbolleiste für den Schnellzugriff von diesem Menübandleiste festgelegt.  
+ Hinzufügen eines Befehls zu den CMFCRibbonQuickAccessToolBarDefaultState erfüllt drei Ergebnisse. Zunächst wird jede hinzugefügte Befehl in der Dropdownliste auf der rechten Seite der Symbolleiste für den Schnellzugriff aufgeführt. Auf diese Weise kann Benutzer ganz einfach hinzufügen oder entfernen diesen Befehl aus der Symbolleiste für den Schnellzugriff. Zweitens: Symbolleiste für den Schnellzugriff ist zurücksetzen, um anzuzeigen nur für diejenigen Befehle, die aufgeführt sind als sichtbar im Standardzustand klickt der Benutzer die **zurücksetzen** Schaltfläche der **anpassen** Dialogfeld. Dritte, wenn Sie nicht aufgerufen haben [CMFCRibbonBar::SetQuickAccessCommands](../../mfc/reference/cmfcribbonbar-class.md#setquickaccesscommands), Symbolleiste für den Schnellzugriff verwendet die sichtbaren Befehlen aus dieser Liste als den standardmäßigen sichtbaren Befehlen beim ersten Ausführen die Anwendung durch den Benutzer. Nachdem Sie alle Befehle, die Sie möchten hinzugefügt haben, rufen [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate) dieser Instanz als die Standardwerte für die Symbolleiste für den Schnellzugriff der diesem Menüband festlegen.  
   
 ##  <a name="copyfrom"></a>  CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom  
  Kopiert die Eigenschaften einer Symbolleiste für den Schnellzugriff.  
@@ -97,21 +97,21 @@ void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Src*  
- Ein Verweis auf die Quelle `CMFCRibbonQuickAccessToolBarDefaultState` Objekt, das kopiert.  
+*src*<br/>
+[in] Ein Verweis auf die `CMFCRibbonQuickAccessToolBarDefaultState` Objekt, das kopiert.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode kopiert jeden Befehl aus der Quelldatenbank `CMFCRibbonQuickAccessToolBarDefaultState` Objekt, das dieses Objekt unter Verwendung der [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand) Methode.  
+ Diese Methode kopiert jeden Befehl aus der Quelle `CMFCRibbonQuickAccessToolBarDefaultState` Objekt, das dieses Objekt mit der [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand) Methode.  
   
 ##  <a name="cmfcribbonquickaccesstoolbardefaultstate"></a>  CMFCRibbonQuickAccessToolBarDefaultState::CMFCRibbonQuickAccessToolBarDefaultState  
- Erstellt die Symbolleiste für den Schnellzugriff Standard-Status-Objekt.  
+ Erstellt das Zustandsobjekt, das standardmäßig die Symbolleiste für Schnellzugriff an.  
   
 ```  
 CMFCRibbonQuickAccessToolBarDefaultState();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Wird standardmäßig die Liste der Befehle, die neue Instanz der [CMFRibbonQuickAccessToolBarDefaultState](../../mfc/reference/cmfcribbonquickaccesstoolbardefaultstate-class.md) enthält ist leer.  
+ Standardmäßig die Liste der Befehle, die neue Instanz der [CMFRibbonQuickAccessToolBarDefaultState](../../mfc/reference/cmfcribbonquickaccesstoolbardefaultstate-class.md) enthält ist leer.  
   
 ##  <a name="removeall"></a>  CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll  
  Löscht die Liste der Standardbefehle in der Symbolleiste für den Schnellzugriff an.  
@@ -121,7 +121,7 @@ void RemoveAll();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion entfernt aus dieser Instanz alle Befehle, die die vorherigen Aufrufe von [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand) hinzugefügt.  
+ Diese Funktion wird von dieser Instanz entfernt, alle Befehle, die den vorherigen Aufrufen zum [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand) hinzugefügt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

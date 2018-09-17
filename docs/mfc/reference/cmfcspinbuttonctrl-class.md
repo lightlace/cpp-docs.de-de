@@ -1,5 +1,5 @@
 ---
-title: CMFCSpinButtonCtrl Klasse | Microsoft Docs
+title: CMFCSpinButtonCtrl-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3531fd45bbccd351bd8f95ce0d4bb26de846b01
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 960a1a0338a3390fdc10cf03ddc235bcf4ecbae9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039465"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712750"
 ---
 # <a name="cmfcspinbuttonctrl-class"></a>CMFCSpinButtonCtrl-Klasse
-Die `CMFCSpinButtonCtrl` Klasse unterstützt einen visuellen Manager, der ein Drehfeldsteuerelement zeichnet.  
+Die `CMFCSpinButtonCtrl` -Klasse unterstützt einen visuellen Manager, der ein Drehfeldsteuerelement zeichnet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,13 +47,13 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCSpinButtonCtrl::OnDraw](#ondraw)|Aktualisiert die aktuellen Drehfeld-Steuerelement.|  
+|[CMFCSpinButtonCtrl::OnDraw](#ondraw)|Zeichnet die aktuelle Drehfeld-Steuerelement neu.|  
   
 ## <a name="remarks"></a>Hinweise  
- Um einen visuellen Manager verwenden, um ein Drehfeld-Steuerelement in der Anwendung zu zeichnen, ersetzen Sie alle Instanzen von der `CSpinButtonCtrl` -Klasse mit der `CMFCSpinButtonCtrl` Klasse.  
+ Um einen visuellen Manager verwenden, die um in der Anwendung ein Drehfeld-Steuerelement zu zeichnen, ersetzen Sie alle Instanzen von der `CSpinButtonCtrl` -Klasse mit der `CMFCSpinButtonCtrl` Klasse.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie ein Objekt von der `CMFCSpinButtonCtrl` Klasse erstellt und dessen `Create` Methode.  
+ Im folgende Beispiel wird veranschaulicht, wie zum Erstellen eines Objekts von der `CMFCSpinButtonCtrl` Klasse, und verwenden dessen `Create` Methode.  
   
  [!code-cpp[NVC_MFC_RibbonApp#25](../../mfc/reference/codesnippet/cpp/cmfcspinbuttonctrl-class_1.cpp)]  
   
@@ -72,18 +72,18 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
  **Header:** afxspinbuttonctrl.h  
   
 ##  <a name="ondraw"></a>  CMFCSpinButtonCtrl::OnDraw  
- Aktualisiert die aktuellen Drehfeld-Steuerelement.  
+ Zeichnet die aktuelle Drehfeld-Steuerelement neu.  
   
 ```  
 virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Framework Ruft die `CMFCSpinButtonCtrl::OnPaint` Methode zum Behandeln der [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) Nachricht, und dies wiederum Methode ruft `CMFCSpinButtonCtrl::OnDraw` Methode. Überschreiben Sie diese Methode, um die Darstellung anpassen, wie, die das Framework das Drehfeldsteuerelement zeichnet.  
+ Das Framework Ruft die `CMFCSpinButtonCtrl::OnPaint` Methode zum Behandeln der [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) Nachricht und dass die Methode ruft wiederum diese `CMFCSpinButtonCtrl::OnDraw` Methode. Überschreiben Sie diese Methode, um anzupassen, wie das Framework die Drehfeldsteuerelement zeichnet.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

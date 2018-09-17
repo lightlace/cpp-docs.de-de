@@ -12,18 +12,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 205241f2306885800813597568ed9ae8cf3858b3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2c2b1dc80cec8ba18522d8238752857105993074
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598232"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720728"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Konfigurieren von Programmen für Windows XP
 
 Da Visual Studio mehrere Plattformtoolsets unterstützt, können Sie abzielen, Betriebssysteme und Laufzeitbibliotheken, die die vom Standardtoolset nicht unterstützt werden. Beispielsweise durch den Wechsel des Plattformtoolsets, können Sie die C ++ 11, C ++ 14 und C ++ 17-spracherweiterungen von Visual C++-Compiler in Visual Studio unterstützt werden zum Erstellen von apps, die auf Windows XP und Windows Server 2003 ausgerichtet. Sie können auch ältere Plattformtoolsets verwenden, um binärkompatiblen Legacycode zu verwalten und dennoch von den neuesten Features von Visual Studio-IDE profitieren.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Installieren Sie das Windows XP-Plattformtoolset
+
 Führen Sie Visual Studio-Installer aus, um die Plattformtoolset und das Ziel Windows XP und Windows Server 2003-Komponenten in Visual Studio 2017 abzurufen. Wenn Sie Visual Studio zum ersten Mal installieren, oder bei der Auswahl **ändern** zum Ändern einer vorhandenen Installations sicher, dass die **Desktopentwicklung mit C++** Workload ausgewählt ist. Wählen Sie in der Liste der optionalen Komponenten für diese Workload **Windows XP-Unterstützung für C++**, und wählen Sie dann **installieren** oder **ändern**.
 
 ## <a name="windows-xp-targeting-experience"></a>Windows XP als Ziel
@@ -72,7 +73,7 @@ Aufgrund von Unterschieden bei Plattform-und bibliotheksunterstützung ist die E
 
 - **Debuggen von DirectX-Grafiken**
 
-     Da der Grafikdebugger die Direct3D 9-API nicht unterstützt, kann es zum Debuggen von apps, die Direct3D unter Windows XP oder Windows Server 2003 verwenden verwendet werden. Wenn die App jedoch einen alternative Renderer implementiert, der die Direct3D 10- oder Direct3D 11-API verwendet, kann der Grafikdebugger verwendet werden, um Probleme mit der Verwendung dieser APIs zu diagnostizieren.
+   Da der Grafikdebugger die Direct3D 9-API nicht unterstützt, kann es zum Debuggen von apps, die Direct3D unter Windows XP oder Windows Server 2003 verwenden verwendet werden. Wenn die App jedoch einen alternative Renderer implementiert, der die Direct3D 10- oder Direct3D 11-API verwendet, kann der Grafikdebugger verwendet werden, um Probleme mit der Verwendung dieser APIs zu diagnostizieren.
 
 - **Erstellen von HLSL**
 

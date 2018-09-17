@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b39a6889dfd8a28d65aebcab04881d4bc28ce1e
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: b86c2c4031e1257e2a8a8e0f7b504686ea1c4588
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403666"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701688"
 ---
 # <a name="inline-functions-c"></a>Inlinefunktionen [C++]
 Eine Funktion, die im Text einer Klassendeklaration definiert ist, ist eine Inlinefunktion.  
@@ -156,7 +156,8 @@ private:
   
  Rekursive Funktionen können Inline ersetzt, um eine gemäß Tiefe werden die [Inline_depth](../preprocessor/inline-depth.md) Pragma bis maximal 16 aufrufen. Nach dieser Tiefe werden rekursive Funktionsaufrufe als Aufrufe einer Instanz der Funktion behandelt.  Die Tiefe, bis zu der rekursive Funktionen durch die Inlineheuristik geprüft werden, kann 16 nicht überschreiten. Die [Inline_recursion](../preprocessor/inline-recursion.md) Pragma steuert die Inlineerweiterung einer Funktion derzeit unter der Erweiterung. Finden Sie unter den [Inlinefunktionserweiterung](../build/reference/ob-inline-function-expansion.md) (/ Ob)-Compileroption Weitere Informationen.  
   
-**Ende Microsoft-spezifisch**  
+**Ende Microsoft-spezifisch**
+
  Weitere Informationen zur Verwendung der **Inline** Spezifizierer, finden Sie unter:  
   
 -   [Inline-Klassenmemberfunktionen](../cpp/inline-functions-cpp.md)  

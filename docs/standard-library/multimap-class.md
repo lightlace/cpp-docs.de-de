@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de4fa70eb4be67eb9ec29fbd24b7b1476681f7bd
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3d69497092ba89b91a4dbfaf56ac842fa8e07236
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678563"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707453"
 ---
 # <a name="multimap-class"></a>multimap-Klasse
 
@@ -120,18 +120,18 @@ class multimap;
 ### <a name="parameters"></a>Parameter
 
 *Key*<br/>
- Der in der Mehrfachzuordnung zu speichernde Schlüsseldatentyp.
+Der in der Mehrfachzuordnung zu speichernde Schlüsseldatentyp.
 
 *Type*<br/>
- Der in der Mehrfachzuordnung zu speichernde Elementdatentyp.
+Der in der Mehrfachzuordnung zu speichernde Elementdatentyp.
 
 *Merkmale*<br/>
- Der Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der Mehrfachzuordnung zu bestimmen. Das binäre Prädikat `less<Key>` ist der Standardwert.
+Der Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der Mehrfachzuordnung zu bestimmen. Das binäre Prädikat `less<Key>` ist der Standardwert.
 
 In C ++ 14 können Sie heterogenes Nachschlagen durch Angabe des `std::less<>` oder `std::greater<>` Prädikats, das keine Typparameter aufweist, aktivieren. Weitere Informationen finden Sie unter [Heterogenes Nachschlagen in assoziativen Containern](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14)
 
 *Zuweisung*<br/>
- Der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers der Zuordnung kapselt. Dieses Argument ist optional, und der Standardwert ist `allocator<pair <const Key, Type> >`.
+Der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers der Zuordnung kapselt. Dieses Argument ist optional, und der Standardwert ist `allocator<pair <const Key, Type> >`.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -515,7 +515,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parameter
 
 *key*<br/>
- Der Schlüssel der Elemente, die aus der Mehrfachzuordnung abgeglichen werden.
+Der Schlüssel der Elemente, die aus der Mehrfachzuordnung abgeglichen werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -916,7 +916,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parameter
 
 *key*<br/>
- Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Mehrfachzuordnung verglichen werden soll.
+Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Mehrfachzuordnung verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1003,16 +1003,16 @@ size_type erase(
 ### <a name="parameters"></a>Parameter
 
 *Where*<br/>
- Die Position des zu entfernenden Elements.
+Die Position des zu entfernenden Elements.
 
 *Erste*<br/>
- Die Position des ersten zu entfernenden Elements.
+Die Position des ersten zu entfernenden Elements.
 
 *letzte*<br/>
- Die Position direkt hinter dem letzten zu entfernenden Element.
+Die Position direkt hinter dem letzten zu entfernenden Element.
 
 *Key*<br/>
- Der Schlüssel der zu entfernenden Elemente.
+Der Schlüssel der zu entfernenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1038,7 +1038,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parameter
 
 *key*<br/>
- Der Schlüsselwert, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Mehrfachzuordnung übereinstimmt.
+Der Schlüsselwert, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Mehrfachzuordnung übereinstimmt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1493,7 +1493,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>Parameter
 
 *key*<br/>
- Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Mehrfachzuordnung verglichen werden soll.
+Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Mehrfachzuordnung verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2189,7 +2189,7 @@ void swap(
 ### <a name="parameters"></a>Parameter
 
 *right*<br/>
- Die multimap-Klasse, in der die auszutauschenden Elemente bereitgestellt werden, oder die multimap-Klasse, deren Elemente mit denen des multimap-Objekts `left` ausgetauscht werden sollen.
+Die multimap-Klasse, in der die auszutauschenden Elemente bereitgestellt werden, oder die multimap-Klasse, deren Elemente mit denen des multimap-Objekts `left` ausgetauscht werden sollen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2259,7 +2259,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>Parameter
 
 *key*<br/>
- Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Mehrfachzuordnung verglichen werden soll.
+Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Mehrfachzuordnung verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 

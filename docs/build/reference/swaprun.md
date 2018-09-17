@@ -1,5 +1,5 @@
 ---
-title: -SWAPRUN | Microsoft Docs
+title: -SWAPRUN | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6e8af5b23d2e6cd0759f75c4054e0a811f687e1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a93b854dba2855fa68bb3be163cecdcd3570df0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375047"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723098"
 ---
 # <a name="swaprun"></a>/SWAPRUN
-```  
-/SWAPRUN:{[!]NET|[!]CD}  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Option wird das Abbild zum Teilen des Betriebssystems das Abbild in eine Auslagerungsdatei zu kopieren, und führen Sie ihn dort bearbeitet. Verwenden Sie diese Option für Bilder, die sich auf Netzwerke oder einem Wechselmedium befinden.  
-  
- Sie können hinzufügen oder entfernen die NET- oder CD-Qualifizierer:  
-  
--   NET weist darauf hin, dass das Bild in einem Netzwerk befindet.  
-  
--   CD weist darauf hin, dass das Bild auf einer CD-ROM- oder ähnliche Wechselmedium befindet.  
-  
--   Verwenden! NET und! CD aus, um die Auswirkungen der NET und CD umzukehren.  
-  
-## <a name="see-also"></a>Siehe auch  
- [EDITBIN-Optionen](../../build/reference/editbin-options.md)
+
+```
+/SWAPRUN:{[!]NET|[!]CD}
+```
+
+## <a name="remarks"></a>Hinweise
+
+Diese Option wird das Bild, um das Betriebssystem das Image in eine Auslagerungsdatei zu kopieren, und führen Sie es von dort aus Teilen bearbeitet. Verwenden Sie diese Option für Bilder, die sich auf Netzwerke oder einem Wechselmedium befinden.
+
+Sie können hinzufügen oder entfernen die NET- oder CD-Qualifizierer:
+
+- NET gibt an, dass das Abbild in einem Netzwerk befindet.
+
+- CD gibt an, dass das Abbild auf einer CD-ROM oder eine ähnliche Wechselmedium befindet.
+
+- Verwendung! NET und! CD, um die Auswirkungen von NET und CD umzukehren.
+
+## <a name="see-also"></a>Siehe auch
+
+[EDITBIN-Optionen](../../build/reference/editbin-options.md)

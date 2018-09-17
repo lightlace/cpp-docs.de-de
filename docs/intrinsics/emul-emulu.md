@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6e9e7ee594f2587334d93173daa147d81dcebb2
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8f3bf997006d98cfbd05a47140baf53ef7032876
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541028"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719419"
 ---
 # <a name="emul-emulu"></a>__emul, __emulu
 **Microsoft-spezifisch**  
@@ -46,11 +46,11 @@ unsigned __int64 __emulu(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `a`  
- Der erste Operand vom Typ ganze Zahl der Multiplikation.  
+*a*<br/>
+[in] Der erste Operand vom Typ ganze Zahl der Multiplikation.  
   
- [in] `b`  
- Der zweite Operand vom Typ ganze Zahl der Multiplikation.  
+*b*<br/>
+[in] Der zweite Operand vom Typ ganze Zahl der Multiplikation.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Das Ergebnis der Multiplikation.  

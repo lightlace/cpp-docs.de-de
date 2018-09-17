@@ -1,5 +1,5 @@
 ---
-title: Active Technology und DLLs | Microsoft Docs
+title: Active Technology und DLLs | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5e0296b994f7944d5b26e98ba1b0545a03ec55b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: efa9a5cf17a4578fc7be9cbadc51605ee32c1650
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360112"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706250"
 ---
 # <a name="active-technology-and-dlls"></a>Active Technology und DLLs
-Active Technology ermöglicht Objektserver vollständig innerhalb einer DLL implementiert werden. Diese Art des Servers ist einen in-Process-Server bezeichnet. MFC unterstützt vollständig in-Process-Server für alle Funktionen der visuellen Bearbeitung nicht hauptsächlich da Active-Technologie eine Möglichkeit für einen Server zu verbinden, in die Hauptnachrichtenschleife des Containers nicht bietet. MFC erfordert Zugriff auf die containeranwendung Nachrichtenschleife, Zugriffstasten und leerlaufzeitverarbeitung zu behandeln.  
-  
- Wenn Sie eines Automatisierungsservers schreiben, und der Server keine Benutzeroberfläche hat, können Sie Ihre Server in-Process-Server festlegen und speichern diese vollständig in eine DLL.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?  
-  
--   [Automatisierungsserver](../mfc/automation-servers.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [DLLs in Visual C++](../build/dlls-in-visual-cpp.md)
+
+Active Technology kann Objektserver vollständig innerhalb einer DLL implementiert werden. Dieser Typ des Servers wird in-Process-Server aufgerufen. MFC unterstützt vollständig in-Process-Server für alle Funktionen der visuellen Bearbeitung nicht hauptsächlich deshalb, weil Active-Technologie eine Möglichkeit, ein Server für Sie hook Hauptnachrichtenschleife des Containers nicht bereitstellt. MFC ist erforderlich, den Zugriff auf die Container-Anwendung-Nachrichtenschleife, Zugriffstasten und leerlaufzeitverarbeitung zu behandeln.
+
+Wenn Sie einen Automatisierungsserver schreiben und der Server keine Benutzeroberfläche hat, können Sie Ihren Server in-Process-Server und vollständig abgelegt, um eine DLL-Datei.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?
+
+- [Automatisierungsserver](../mfc/automation-servers.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[DLLs in Visual C++](../build/dlls-in-visual-cpp.md)

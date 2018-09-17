@@ -1,5 +1,5 @@
 ---
-title: Vorrang in Rückschlussregeln | Microsoft Docs
+title: Vorrang in Rückschlussregeln | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36d462d4222cbfc143dd7487d4cb6b1b8bb3ba3b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b4f2e7ff55e935b7e425b552ba85f47f134c6b80
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368485"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725230"
 ---
 # <a name="precedence-in-inference-rules"></a>Vorrang in Rückschlussregeln
-Wenn eine Rückschlussregel mehrfach definiert ist, wird NMAKE die Definition die höchsten Rangfolge verwendet. Die folgende Liste zeigt die Reihenfolge der Priorität von der höchsten zur niedrigsten:  
-  
-1.  Eine Rückschlussregel in einem Makefile definiert. höhere Definitionen haben Vorrang vor.  
-  
-2.  Eine Rückschlussregel in Tools.ini definiert. höhere Definitionen haben Vorrang vor.  
-  
-3.  Eine vordefinierte Rückschlussregel.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Rückschlussregeln](../build/inference-rules.md)
+
+Wenn eine Rückschlussregel mehrfach definiert ist, verwendet NMAKE die Definition die höchsten Rangfolge aus. Die folgende Liste zeigt die Reihenfolge der Rangfolge von oben nach unten:
+
+1. Eine Rückschlussregel in einem Makefile definiert. höhere Definitionen haben Vorrang vor.
+
+1. Eine Rückschlussregel in Tools.ini definiert. höhere Definitionen haben Vorrang vor.
+
+1. Eine vordefinierte Rückschlussregel.
+
+## <a name="see-also"></a>Siehe auch
+
+[Rückschlussregeln](../build/inference-rules.md)

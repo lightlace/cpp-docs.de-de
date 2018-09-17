@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06f0b78938534f685f14757ca16e5ad2574412f2
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4708f180a1a1f5e936a6b30650a6432d48878d53
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684806"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726751"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 Kapselt die Funktionalität eines ToolTip-Steuerelements. Dabei handelt es sich um ein kleines Popupfenster, das eine einzelne Textzeile anzeigt, die den Zweck eines Tools der Anwendung beschreibt.  
@@ -374,7 +374,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] *LpToolInfo*|Zeiger auf eine [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) -Struktur, die Informationen über das aktuelle QuickInfo-Fenster empfängt.|  
+|*lpToolInfo*|[out] Zeiger auf eine [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) -Struktur, die Informationen über das aktuelle QuickInfo-Fenster empfängt.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Informationen erfolgreich abgerufen wird. andernfalls "false".  
@@ -504,7 +504,7 @@ void GetTitle(PTTGETTITLE pttgt) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] *Pttgt*|Zeiger auf eine [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle) -Struktur, die Informationen über das QuickInfo-Steuerelement enthält. Bei der Rückgabe dieser Methode die *PszTitle* Mitglied der [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle) Struktur zeigt auf den Text des Titels.|  
+|*pttgt*|[out] Zeiger auf eine [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle) -Struktur, die Informationen über das QuickInfo-Steuerelement enthält. Bei der Rückgabe dieser Methode die *PszTitle* Mitglied der [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle) Struktur zeigt auf den Text des Titels.|  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [TTM_GETTITLE](/windows/desktop/Controls/ttm-gettitle) -Nachricht, die im Windows SDK beschrieben wird.  

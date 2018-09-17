@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94bca969b150718450da166501abaea9c89b75d7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 671cb2fa19d920b0e60acd8d34623a05fe4a048e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760382"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703794"
 ---
 # <a name="atl-property-page-wizard"></a>ATL-Eigenschaftenseiten-Assistent
 
@@ -56,17 +56,20 @@ Enthält Informationen für die C++-Klasse erstellt, um das Objekt implementiert
 
 Enthält Informationen über die COM-Funktionalität für das Objekt.
 
-**Co-Klasse**  
-Legt den Namen der Komponentenklasse, die eine Liste der Schnittstellen, die vom Objekt unterstützten enthält.
+- **Co-Klasse**
 
-> [!NOTE]
->  Wenn Sie das Projekt mithilfe von Attributen erstellen, oder auf dieser Seite des Assistenten angeben, dass auf der Seite der Attribute verwendet, können Sie diese Option nicht ändern, da ATL nicht enthalten ist das `coclass` Attribut.
+   Legt den Namen der Komponentenklasse, die eine Liste der Schnittstellen, die vom Objekt unterstützten enthält.
 
-**Type**  
-Legt die Beschreibung des Objekts, die in der Registrierung angezeigt wird
+   > [!NOTE]
+   > Wenn Sie das Projekt mithilfe von Attributen erstellen, oder auf dieser Seite des Assistenten angeben, dass auf der Seite der Attribute verwendet, können Sie diese Option nicht ändern, da ATL nicht enthalten ist das `coclass` Attribut.
 
-**ProgID**  
-Legt den Namen, den Container anstatt der CLSID des Objekts verwenden können.
+- **Type**
+
+   Legt die Beschreibung des Objekts, die in der Registrierung angezeigt wird
+
+- **ProgID**
+
+   Legt den Namen, den Container anstatt der CLSID des Objekts verwenden können.
 
 ## <a name="see-also"></a>Siehe auch
 

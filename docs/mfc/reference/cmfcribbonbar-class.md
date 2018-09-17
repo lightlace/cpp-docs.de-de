@@ -198,12 +198,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73f4f14f01cd9d881c0e9da0db8aa23d7946e719
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ce8706b36af848fadba041871233204e664cabf4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541453"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712438"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar-Klasse
 Die `CMFCRibbonBar`-Klasse implementiert eine Menübandleiste, die der in Office 2007 verwendeten ähnlich ist.  
@@ -353,8 +353,8 @@ BOOL ActivateContextCategory(UINT uiContextID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiContextID*  
- Die Kontext-Kategorie-ID  
+*uiContextID*<br/>
+[in] Die Kontext-Kategorie-ID  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn eine kontextkategorie mit *UiContextID* gefunden und aktiviert ist; andernfalls "false".  
@@ -376,26 +376,26 @@ CMFCRibbonCategory* AddCategory(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Wert*  
- Der Name der Menübandkategorie.  
+*Wert*<br/>
+[in] Der Name der Menübandkategorie.  
   
- [in] *UiSmallImagesResID*  
- Ressourcen-ID, der Liste der kleinen Bilder für die Menübandkategorie.  
+*uiSmallImagesResID*<br/>
+[in] Ressourcen-ID, der Liste der kleinen Bilder für die Menübandkategorie.  
   
- [in] *UiLargeImagesResID*  
- Ressourcen-ID, der Liste der großen Bilder für die Menübandkategorie.  
+*uiLargeImagesResID*<br/>
+[in] Ressourcen-ID, der Liste der großen Bilder für die Menübandkategorie.  
   
- [in] *SizeSmallImage*  
- Gibt die Größe der kleine Bilder für die Menübandkategorie an.  
+*sizeSmallImage*<br/>
+[in] Gibt die Größe der kleine Bilder für die Menübandkategorie an.  
   
- [in] *SizeLargeImage*  
- Gibt die Größe von Bildern für die Menübandkategorie.  
+*sizeLargeImage*<br/>
+[in] Gibt die Größe von Bildern für die Menübandkategorie.  
   
- [in] *nInsertAt*  
- Der nullbasierte Index des dem Kategorie-Speicherort.  
+*nInsertAt*<br/>
+[in] Der nullbasierte Index des dem Kategorie-Speicherort.  
   
- [in] *pRTI*  
- Zeiger auf eine [CMFCRibbonCategory-Klasse](../../mfc/reference/cmfcribboncategory-class.md) Runtime-Klasse, um eine Menübandkategorie dynamisch zur Laufzeit zu erstellen.  
+*pRTI*<br/>
+[in] Zeiger auf eine [CMFCRibbonCategory-Klasse](../../mfc/reference/cmfcribboncategory-class.md) Runtime-Klasse, um eine Menübandkategorie dynamisch zur Laufzeit zu erstellen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die neue Menübandkategorie, wenn die Methode erfolgreich war; andernfalls NULL.  
@@ -427,32 +427,32 @@ CMFCRibbonCategory* AddContextCategory(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Wert*  
- Der Name der Kategorie.  
+*Wert*<br/>
+[in] Der Name der Kategorie.  
   
- [in] *LpszContextName*  
- Die Namen der kontextkategoriebeschriftung.  
+*lpszContextName*<br/>
+[in] Die Namen der kontextkategoriebeschriftung.  
   
- [in] *UiContextID*  
- Kontext-ID  
+*uiContextID*<br/>
+[in] Kontext-ID  
   
- [in] *ClrContext*  
- Farbe des kontextkategoriebeschriftung.  
+*clrContext*<br/>
+[in] Farbe des kontextkategoriebeschriftung.  
   
- [in] *UiSmallImagesResID*  
- Ressourcen-ID, der das kleine Bild einer Kategorie Kontext.  
+*uiSmallImagesResID*<br/>
+[in] Ressourcen-ID, der das kleine Bild einer Kategorie Kontext.  
   
- [in] *UiLargeImagesResID*  
- Ressourcen-ID des großen Bilds einer Kategorie Kontext.  
+*uiLargeImagesResID*<br/>
+[in] Ressourcen-ID des großen Bilds einer Kategorie Kontext.  
   
- [in] *SizeSmallImage*  
- Größe des ein kleines Bild enthält.  
+*sizeSmallImage*<br/>
+[in] Größe des ein kleines Bild enthält.  
   
- [in] *SizeLargeImage*  
- Größe des ein großes Bild.  
+*sizeLargeImage*<br/>
+[in] Größe des ein großes Bild.  
   
- [in] *pRTI*  
- Zeiger auf eine Common Language Runtime-Klasse.  
+*pRTI*<br/>
+[in] Zeiger auf eine Common Language Runtime-Klasse.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die neu erstellte Kategorie aus, oder NULL, wenn die `CreateObject` -Methode der *pRTI* die angegebene Kategorie kann nicht erstellt werden.  
@@ -493,20 +493,20 @@ CMFCRibbonMainPanel* AddMainCategory(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Wert*  
- Der Name der wichtigsten Menübandkategorie.  
+*Wert*<br/>
+[in] Der Name der wichtigsten Menübandkategorie.  
   
- [in] *UiSmallImagesResID*  
- Ressourcen-ID der kleine Bilder.  
+*uiSmallImagesResID*<br/>
+[in] Ressourcen-ID der kleine Bilder.  
   
- [in] *UiLargeImagesResID*  
- Ressourcen-ID von Bildern.  
+*uiLargeImagesResID*<br/>
+[in] Ressourcen-ID von Bildern.  
   
- [in] *SizeSmallImage*  
- Die Größe der kleine Bilder.  
+*sizeSmallImage*<br/>
+[in] Die Größe der kleine Bilder.  
   
- [in] *SizeLargeImage*  
- Die Größe des großen Bildern.  
+*sizeLargeImage*<br/>
+[in] Die Größe des großen Bildern.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf die neue Multifunktionsleiste Kategorie aus, wenn die Methode erfolgreich war; andernfalls NULL.  
@@ -544,14 +544,14 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Wert*  
- Der Name der Kategorie.  
+*Wert*<br/>
+[in] Der Name der Kategorie.  
   
- [in] *UiSmallImagesResID*  
- Ressourcen-ID, der Liste der Bilder für die Kategorie.  
+*uiSmallImagesResID*<br/>
+[in] Ressourcen-ID, der Liste der Bilder für die Kategorie.  
   
- [in] *SizeSmallImage*  
- Die Größe von Bildern für die Menübandelemente in der Kategorie.  
+*sizeSmallImage*<br/>
+[in] Die Größe von Bildern für die Menübandelemente in der Kategorie.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die neue Kategorie, wenn die Methode erfolgreich war; andernfalls NULL.  
@@ -567,8 +567,8 @@ void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pElement*  
- Zeiger auf ein Menübandelement.  
+*pElement*<br/>
+[in] Zeiger auf ein Menübandelement.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Multifunktionsleisten-Element wird vor jeder Systemschaltflächen positioniert.  
@@ -581,8 +581,8 @@ CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bReplaceFrameCaption*  
- "True" für die menübandleiste die Beschriftung des Hauptrahmenfenster ersetzen; "False", suchen Sie im Menüband unter der Beschriftung des Hauptrahmenfenster.  
+*bReplaceFrameCaption*<br/>
+[in] "True" für die menübandleiste die Beschriftung des Hauptrahmenfenster ersetzen; "False", suchen Sie im Menüband unter der Beschriftung des Hauptrahmenfenster.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -597,14 +597,14 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pParentWnd*  
- Zeiger auf das übergeordnete Fenster für die menübandleiste.  
+*pParentWnd*<br/>
+[in] Zeiger auf das übergeordnete Fenster für die menübandleiste.  
   
- [in] *DwStyle*  
- Eine logische Kombination der Formate für das neue Fenster.  
+*dwStyle*<br/>
+[in] Eine logische Kombination der Formate für das neue Fenster.  
   
- [in] *nID*  
- Die ID des neuen Fensters.  
+*nID*<br/>
+[in] Die ID des neuen Fensters.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Fenster erstellt wurde. andernfalls "false".  
@@ -628,17 +628,17 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pParentWnd*  
- Zeiger auf das übergeordnete Fenster für die menübandleiste.  
+*pParentWnd*<br/>
+[in] Zeiger auf das übergeordnete Fenster für die menübandleiste.  
   
- [in] *DwCtrlStyle*  
- Dieser Parameter wird nicht verwendet.  
+*dwCtrlStyle*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
- [in] *DwStyle*  
- Eine logische Kombination der Formate für das neue Fenster.  
+*dwStyle*<br/>
+[in] Eine logische Kombination der Formate für das neue Fenster.  
   
- [in] *nID*  
- Die ID des neuen Fensters.  
+*nID*<br/>
+[in] Die ID des neuen Fensters.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Fenster erstellt wurde. andernfalls "false".  
@@ -653,8 +653,8 @@ void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bSetFocus*  
- TRUE, wenn der Fokus für das übergeordnete Fenster des Menübands festgelegt werden.  
+*bSetFocus*<br/>
+[in] TRUE, wenn der Fokus für das übergeordnete Fenster des Menübands festgelegt werden.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -669,14 +669,14 @@ BOOL DrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Zeiger auf einen Gerätekontext für die Menüschaltfläche.  
+*pDC*<br/>
+[in] Zeiger auf einen Gerätekontext für die Menüschaltfläche.  
   
- [in] *pMenuItem*  
- Zeiger auf eine Symbolleisten-Schaltfläche im Menü.  
+*pMenuItem*<br/>
+[in] Zeiger auf eine Symbolleisten-Schaltfläche im Menü.  
   
- [in] *RectImage*  
- Das Anzeigerechteck für eine Schaltfläche.  
+*rectImage*<br/>
+[in] Das Anzeigerechteck für eine Schaltfläche.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Bild gezeichnet wurde. andernfalls "false".  
@@ -700,8 +700,8 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- True, um das Keytips-Feature zu aktivieren. "False", um das Keytips-Feature deaktivieren.  
+*bAktivieren*<br/>
+[in] True, um das Keytips-Feature zu aktivieren. "False", um das Keytips-Feature deaktivieren.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie dieses Feature aktivieren, werden wichtige Tipps angezeigt, wenn der Benutzer die ALT-Taste oder F10-TASTE drückt. Wenn der Benutzer ALT-Taste drückt, werden wichtige Tipps, mit einer Verzögerung von 200 Millisekunden angezeigt. Diese Verzögerung können für Verknüpfungen ausgeführt werden, damit die ALT-Taste gedrückte nicht mit anderen Kombinationen beeinträchtigt, die die ALT-Taste enthalten.  
@@ -714,8 +714,8 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- "True" aktiviert die **Seitenansicht** Features. "False" zum Deaktivieren der **Seitenansicht** Feature.  
+*bAktivieren*<br/>
+[in] "True" aktiviert die **Seitenansicht** Features. "False" zum Deaktivieren der **Seitenansicht** Feature.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn *bAktivieren* "false" und eine Print Preview Kategorie vorhanden ist, wird Sie gelöscht.  
@@ -732,11 +732,11 @@ void EnableToolTips(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- True, um QuickInfos in der menübandleiste zu aktivieren. So deaktivieren Sie die QuickInfos im Menüband wird false ZURÜCKGEGEBEN.  
+*bAktivieren*<br/>
+[in] True, um QuickInfos in der menübandleiste zu aktivieren. So deaktivieren Sie die QuickInfos im Menüband wird false ZURÜCKGEGEBEN.  
   
- [in] *bEnableDescr*  
- True, um das QuickInfo-Beschreibungen für die QuickInfo zu aktivieren. So deaktivieren Sie die QuickInfo-Beschreibungen für die QuickInfo wird false ZURÜCKGEGEBEN.  
+*bEnableDescr*<br/>
+[in] True, um das QuickInfo-Beschreibungen für die QuickInfo zu aktivieren. So deaktivieren Sie die QuickInfo-Beschreibungen für die QuickInfo wird false ZURÜCKGEGEBEN.  
   
 ### <a name="remarks"></a>Hinweise  
  Die *bAktivieren* Parameter bestimmt, ob QuickInfos angezeigt werden, wenn der Mauszeiger über ein Menübandelement zeigt. Die *bEnableDescr* Parameter bestimmt, ob zusätzlicher beschreibender Text mit dem QuickInfo-Text angezeigt wird.  
@@ -751,11 +751,11 @@ CMFCRibbonBaseElement* FindByData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwData*  
- Die Daten, die ein Menübandelement zugeordnet wird.  
+*dwData*<br/>
+[in] Die Daten, die ein Menübandelement zugeordnet wird.  
   
- [in] *bVisibleOnly*  
- True, um nur sichtbare Menübandelemente zu suchen. "False", um alle Menübandelemente zu suchen.  
+*bVisibleOnly*<br/>
+[in] True, um nur sichtbare Menübandelemente zu suchen. "False", um alle Menübandelemente zu suchen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf ein Menübandelement, wenn sie die angegebenen Daten und Sichtbarkeit hat; andernfalls NULL.  
@@ -774,14 +774,14 @@ CMFCRibbonBaseElement* FindByID(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmdID*  
- Befehls-ID für ein Menübandelement.  
+*uiCmdID*<br/>
+[in] Befehls-ID für ein Menübandelement.  
   
- [in] *bVisibleOnly*  
- True, um nur sichtbare Menübandelemente zu suchen. "False", um alle Menübandelemente zu suchen.  
+*bVisibleOnly*<br/>
+[in] True, um nur sichtbare Menübandelemente zu suchen. "False", um alle Menübandelemente zu suchen.  
   
- [in] *bExcludeQAT*  
- True, um die Schnellzugriff-Symbolleistenelemente aus der Suche auszuschließen. andernfalls "false".  
+*bExcludeQAT*<br/>
+[in] True, um die Schnellzugriff-Symbolleistenelemente aus der Suche auszuschließen. andernfalls "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf ein Menübandelement, falls sie der angegebenen Befehls-ID, und suchen Sie Werte enthält; andernfalls NULL.  
@@ -799,8 +799,8 @@ int FindCategoryIndexByData(DWORD dwData) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwData*  
- Die Daten einer Menübandkategorie zugeordnet.  
+*dwData*<br/>
+[in] Die Daten einer Menübandkategorie zugeordnet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index einer Menübandkategorie, wenn die Methode erfolgreich war. andernfalls -1.  
@@ -859,8 +859,8 @@ CMFCRibbonCategory* GetCategory(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Der nullbasierte Index einer Menübandkategorie, die in der Liste der menübandkategorien, die in der menübandleiste befindet.  
+*nIndex*<br/>
+[in] Der nullbasierte Index einer Menübandkategorie, die in der Liste der menübandkategorien, die in der menübandleiste befindet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die Menübandkategorie am angegebenen Index; andernfalls, und NULL, wenn *nIndex* lag außerhalb des Bereichs.  
@@ -896,8 +896,8 @@ int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pCategory*  
- Zeiger auf eine Menübandkategorie.  
+*pCategory*<br/>
+[in] Zeiger auf eine Menübandkategorie.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index einer Menübandkategorie, die anhand des *pCategory*; oder -1, wenn die Menübandkategorie nicht gefunden wird.  
@@ -912,11 +912,11 @@ BOOL GetContextName(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiContextID*  
- Eine Menüband-Kategorie-Kontext-ID  
+*uiContextID*<br/>
+[in] Eine Menüband-Kategorie-Kontext-ID  
   
- [out] *StrName*  
- Der Name einer kontextkategoriebeschriftung.  
+*strName*<br/>
+[out] Der Name einer kontextkategoriebeschriftung.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich war. andernfalls "false" If *UiContextID* kontextkategoriebeschriftung wurde nicht gefunden oder wurde von 0 (null).  
@@ -943,11 +943,11 @@ void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmdID*  
- Befehls-ID von einem Menübandelement.  
+*uiCmdID*<br/>
+[in] Befehls-ID von einem Menübandelement.  
   
- [out] *ArButtons*  
- Ein Array von Zeigern auf Elemente des Menübands.  
+*arButtons*<br/>
+[out] Ein Array von Zeigern auf Elemente des Menübands.  
   
 ### <a name="remarks"></a>Hinweise  
  Mehrere Menübandelemente haben derselben Befehls-ID, da einige Menübandelemente in der schnellen zugriffssymbolleiste kopiert werden können.  
@@ -980,11 +980,11 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems,
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *mit*  
- Die Liste der Befehls-IDs für Menübandelemente, die in der menübandleiste enthalten sind.  
+*Mit*<br/>
+[out] Die Liste der Befehls-IDs für Menübandelemente, die in der menübandleiste enthalten sind.  
   
- [in] *bHiddenOnly*  
- TRUE, Menübandelemente ausschließen, die angezeigt werden soll. "False", um alle Menübandelemente in der menübandleiste einzuschließen.  
+*bHiddenOnly*<br/>
+[in] TRUE, Menübandelemente ausschließen, die angezeigt werden soll. "False", um alle Menübandelemente in der menübandleiste einzuschließen.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1081,8 +1081,8 @@ void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *LstCommands*  
- Die Liste der Befehls-IDs für die Menübandelemente auf der schnellen zugriffssymbolleiste.  
+*lstCommands*<br/>
+[out] Die Liste der Befehls-IDs für die Menübandelemente auf der schnellen zugriffssymbolleiste.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Liste enthält keine Menübandelemente, die Control-Trennzeichen.  
@@ -1183,14 +1183,14 @@ virtual CMFCRibbonBaseElement* HitTest(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Die Position des Punkts in der menübandleiste koordiniert.  
+*Zeigen Sie*<br/>
+[in] Die Position des Punkts in der menübandleiste koordiniert.  
   
- [in] *bCheckActiveCategory*  
- True, um die aktive-Kategorie zu suchen. "False" nicht der aktive-Kategorie zu suchen.  
+*bCheckActiveCategory*<br/>
+[in] True, um die aktive-Kategorie zu suchen. "False" nicht der aktive-Kategorie zu suchen.  
   
- [in] *bCheckPanelCaption*  
- True, um mit dem Punkt befindet sich die Beschriftung der Menübandbereich zu testen. "False" nicht mit dem Punkt befindet sich die Beschriftung der Menübandbereich zu testen. Weitere Informationen finden Sie im Abschnitt Hinweise.  
+*bCheckPanelCaption*<br/>
+[in] True, um mit dem Punkt befindet sich die Beschriftung der Menübandbereich zu testen. "False" nicht mit dem Punkt befindet sich die Beschriftung der Menübandbereich zu testen. Weitere Informationen finden Sie im Abschnitt Hinweise.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die Multifunktionsleisten-Element am angegebenen Punkt befindet; andernfalls NULL, wenn der Punkt nicht in einem Menübandelement befindet.  
@@ -1271,8 +1271,8 @@ virtual BOOL IsShowGroupBorder(CMFCRibbonButtonsGroup* pGroup) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pGroup*  
- Dieser Parameter wird nicht verwendet.  
+*pGroup*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt immer "false" zurück.  
@@ -1325,11 +1325,11 @@ virtual void OnClickButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pButton*  
- Zeiger auf die Schaltfläche, die auf die geklickt wurde.  
+*pButton*<br/>
+[in] Zeiger auf die Schaltfläche, die auf die geklickt wurde.  
   
- [in] *zeigen*  
- Dieser Parameter wird nicht verwendet.  
+*Zeigen Sie*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1343,8 +1343,8 @@ virtual void OnEditContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pEdit*  
- [in] *zeigen*  
+*pEdit*<br/>
+[in] [in] *zeigen*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1356,8 +1356,8 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bIsRTL*  
- True, wenn das Layout befindet sich rechts-nach-links. FALSE, wenn das Layout befindet sich links-nach-rechts.  
+*bIsRTL*<br/>
+[in] True, wenn das Layout befindet sich rechts-nach-links. FALSE, wenn das Layout befindet sich links-nach-rechts.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird das Layout aller Steuerelemente in der menübandleiste für die neue layoutrichtung angepasst.  
@@ -1390,10 +1390,10 @@ virtual BOOL OnShowRibbonContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- [in] *x*  
- [in] *y*  
- [in] *pHit*  
+*Aufnehmen*<br/>
+[in] [in] *x*  
+*y*<br/>
+[in] [in] *pHit*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -1411,10 +1411,10 @@ virtual BOOL OnShowRibbonQATMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- [in] *x*  
- [in] *y*  
- [in] *pHit*  
+*Aufnehmen*<br/>
+[in] [in] *x*  
+*y*<br/>
+[in] [in] *pHit*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -1431,14 +1431,14 @@ BOOL OnSysKeyDown(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pFrameWnd*  
- Zeiger auf das übergeordnete Hauptrahmenfenster der menübandleiste.  
+*pFrameWnd*<br/>
+[in] Zeiger auf das übergeordnete Hauptrahmenfenster der menübandleiste.  
   
- [in] *wParam-Parameter*  
- Virtuellem Tastencode der Taste gedrückt wird.  
+*wParam-Parameter*<br/>
+[in] Virtuellem Tastencode der Taste gedrückt wird.  
   
- [in] *lParam*  
- Tastaturstatus kennzeichnet, wenn die Taste gedrückt wurde.  
+*lParam*<br/>
+[in] Tastaturstatus kennzeichnet, wenn die Taste gedrückt wurde.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Ereignis Tastendruck verarbeitet wurde. andernfalls "false".  
@@ -1456,14 +1456,14 @@ BOOL OnSysKeyUp(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pFrameWnd*  
- Zeiger auf das übergeordnete Hauptrahmenfenster der menübandleiste.  
+*pFrameWnd*<br/>
+[in] Zeiger auf das übergeordnete Hauptrahmenfenster der menübandleiste.  
   
- [in] *wParam-Parameter*  
- Virtuellem Tastencode des freigegeben Schlüssels.  
+*wParam-Parameter*<br/>
+[in] Virtuellem Tastencode des freigegeben Schlüssels.  
   
- [in] *lParam*  
- Dieser Parameter wird nicht verwendet.  
+*lParam*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Ereignis Tastendruck verarbeitet wurde. andernfalls "false".  
@@ -1487,8 +1487,8 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pMsg*  
- Zeiger auf eine Nachricht.  
+*pMsg*<br/>
+[in] Zeiger auf eine Nachricht.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Nachricht von der menübandleiste verarbeitet wurde. andernfalls "false".  
@@ -1533,8 +1533,8 @@ BOOL RemoveCategory(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Der nullbasierte Index, der eine Kategorie in der Liste der menübandkategorien, die in der menübandleiste befindet.  
+*nIndex*<br/>
+[in] Der nullbasierte Index, der eine Kategorie in der Liste der menübandkategorien, die in der menübandleiste befindet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die angegebene Menübandkategorie gelöscht wurde. andernfalls "false".  
@@ -1552,11 +1552,11 @@ BOOL SetActiveCategory(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pCategory*  
- Eine Menübandkategorie, die in der menübandleiste befindet.  
+*pCategory*<br/>
+[in] Eine Menübandkategorie, die in der menübandleiste befindet.  
   
- [in] *bForceRestore*  
- True, um die menübandleiste zu maximieren, wenn es minimiert wird. FALSE, wenn der aktive-Kategorie in einem Popupfenster anzuzeigen, wenn das Menüband minimiert wird.  
+*bForceRestore*<br/>
+[in] True, um die menübandleiste zu maximieren, wenn es minimiert wird. FALSE, wenn der aktive-Kategorie in einem Popupfenster anzuzeigen, wenn das Menüband minimiert wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die angegebene Kategorie als der aktive-Kategorie festgelegt wurde. andernfalls "false".  
@@ -1574,8 +1574,8 @@ void SetActiveMDIChild(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Zeiger auf einen untergeordneten MDI-Fensters.  
+*Aufnehmen*<br/>
+[in] Zeiger auf einen untergeordneten MDI-Fensters.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1589,11 +1589,11 @@ void SetApplicationButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pButton*  
- Ein Zeiger auf die Anwendungsschaltfläche.  
+*pButton*<br/>
+[in] Ein Zeiger auf die Anwendungsschaltfläche.  
   
- [in] *SizeButton*  
- Die Größe der Anwendung Menüband-Schaltfläche.  
+*sizeButton*<br/>
+[in] Die Größe der Anwendung Menüband-Schaltfläche.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Anwendungsschaltfläche ist eine große abgerundeten Schaltfläche befindet sich in der oberen linken Ecke des Menüband-Steuerelements.  
@@ -1614,14 +1614,14 @@ BOOL SetElementKeys(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmdID*  
- Die Befehls-ID von einem Menübandelement.  
+*uiCmdID*<br/>
+[in] Die Befehls-ID von einem Menübandelement.  
   
- [in] *LpszKeys*  
- Des Keytip.  
+*lpszKeys*<br/>
+[in] Des Keytip.  
   
- [in] *LpszMenuKeys*  
- Der Menü-Keytip.  
+*lpszMenuKeys*<br/>
+[in] Der Menü-Keytip.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Keytips aus, der mindestens eine der Multifunktionsleisten-Element festgelegt werden. andernfalls "false".  
@@ -1639,11 +1639,11 @@ void SetKeyboardNavigationLevel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pLevel*  
- Zeiger auf das aktuelle Objekt der Tastatur-Navigation.  
+*pLevel*<br/>
+[in] Zeiger auf das aktuelle Objekt der Tastatur-Navigation.  
   
- [in] *bSetFocus*  
- TRUE, um Sie im Menüband den Tastaturfokus fest.  
+*bSetFocus*<br/>
+[in] TRUE, um Sie im Menüband den Tastaturfokus fest.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Navigation per Tastatur des Menübands wird gestartet, wenn der Benutzer die ALT-Taste oder F10-TASTE drückt. Der Benutzer wählt die nächste Navigationsebene durch Drücken von in der menübandleiste ein Keytip an. Der Benutzer kann die vorherige Stufe für die Navigation durch Drücken der ESC-Taste zurückgeben.  
@@ -1658,11 +1658,11 @@ void SetMaximizeMode(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bMax*  
- "True", das System für einen untergeordneten MDI-Fensters im Menüband angezeigt werden sollen; So entfernen Sie die Systemschaltflächen für einen untergeordneten MDI-Fensters von der menübandleiste wird false ZURÜCKGEGEBEN.  
+*bMax*<br/>
+[in] "True", das System für einen untergeordneten MDI-Fensters im Menüband angezeigt werden sollen; So entfernen Sie die Systemschaltflächen für einen untergeordneten MDI-Fensters von der menübandleiste wird false ZURÜCKGEGEBEN.  
   
- [in] *aufnehmen*  
- Zeiger auf das Hauptrahmenfenster für die menübandleiste.  
+*Aufnehmen*<br/>
+[in] Zeiger auf das Hauptrahmenfenster für die menübandleiste.  
   
 ### <a name="remarks"></a>Hinweise  
  Die menübandleiste zeigt Systemschaltflächen für einen untergeordneten MDI-Fensters in der Registerkarte "-Zeile, wenn eine untergeordnete MDI-Fenster maximiert ist.  
@@ -1677,11 +1677,11 @@ void SetQuickAccessCommands(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LstCommands*  
- Die Liste der Befehle auf der Symbolleiste für den Schnellzugriff platziert werden.  
+*lstCommands*<br/>
+[in] Die Liste der Befehle auf der Symbolleiste für den Schnellzugriff platziert werden.  
   
- [in] *bRecalcLayout*  
- TRUE, wenn im Menüband neu zu zeichnen, nachdem Sie der Multifunktionsleistenelemente hinzugefügt werden soll; "False" andernfalls.  
+*bRecalcLayout*<br/>
+[in] TRUE, wenn im Menüband neu zu zeichnen, nachdem Sie der Multifunktionsleistenelemente hinzugefügt werden soll; "False" andernfalls.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie die `SetQuickAccessCommands` -Methode in der die `CMFCRibbonBar` Klasse.  
@@ -1696,8 +1696,8 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Zustand*  
- Der Standardzustand für den Schnellzugriff-Symbolleiste.  
+*state*<br/>
+[in] Der Standardzustand für den Schnellzugriff-Symbolleiste.  
   
 ### <a name="remarks"></a>Hinweise  
  Der Zustand der Schnellzugriff-Symbolleiste enthält eine Liste von Befehlen und ihrer Sichtbarkeit.  
@@ -1715,8 +1715,8 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bOnTop*  
- "True" Position der Symbolleiste für Schnellzugriff oberhalb der menübandleiste "False", um die Schnellzugriff-Symbolleiste unterhalb der menübandleiste zu positionieren.  
+*bOnTop*<br/>
+[in] "True" Position der Symbolleiste für Schnellzugriff oberhalb der menübandleiste "False", um die Schnellzugriff-Symbolleiste unterhalb der menübandleiste zu positionieren.  
   
 ##  <a name="settooltipfixedwidth"></a>  CMFCRibbonBar::SetTooltipFixedWidth  
  Legt fest, die reguläre und großen Größen fester Breite für die menübandleiste QuickInfo.  
@@ -1728,11 +1728,11 @@ void SetTooltipFixedWidth(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nWidthRegular*  
- Die Breite in Pixel einer regulären fester Größe QuickInfo.  
+*nWidthRegular*<br/>
+[in] Die Breite in Pixel einer regulären fester Größe QuickInfo.  
   
- [in] *nWidthLargeImage*  
- Die Breite in Pixel, der eine große fester Größe QuickInfo.  
+*nWidthLargeImage*<br/>
+[in] Die Breite in Pixel, der eine große fester Größe QuickInfo.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn einen Parameter auf 0 bewirkt, dass die entsprechende Breite variieren.  
@@ -1747,11 +1747,11 @@ void ShowCategory(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Der Index der Menübandkategorie.  
+*nIndex*<br/>
+[in] Der Index der Menübandkategorie.  
   
- [in] *bShow*  
- Bei "true", zeigen Sie die Menübandkategorie; Blenden Sie andernfalls die Menübandkategorie ein.  
+*bShow*<br/>
+[in] Bei "true", zeigen Sie die Menübandkategorie; Blenden Sie andernfalls die Menübandkategorie ein.  
   
 ##  <a name="showcontextcategories"></a>  CMFCRibbonBar::ShowContextCategories  
  Blendet die Kontextkategorien mit der angegebenen ID ein oder aus.  
@@ -1763,11 +1763,11 @@ void ShowContextCategories(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiContextID*  
- Die Kontext-Kategorie-ID  
+*uiContextID*<br/>
+[in] Die Kontext-Kategorie-ID  
   
- [in] *bShow*  
- Bei "true", zeigen Sie die Kategorien, die die angegebene ID aufweisen; andernfalls Ausblenden der Kategorien, die die angegebene ID aufweisen.  
+*bShow*<br/>
+[in] Bei "true", zeigen Sie die Kategorien, die die angegebene ID aufweisen; andernfalls Ausblenden der Kategorien, die die angegebene ID aufweisen.  
   
 ##  <a name="showkeytips"></a>  CMFCRibbonBar::ShowKeyTips  
  Zeigt den Zugriffstasteninfos für jedes Multifunktionsleisten-Element in der menübandleiste.  
@@ -1798,8 +1798,8 @@ virtual BOOL TranslateChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nChar*  
- Ein Zeichencode der Tastatureingabe an.  
+*NChar*<br/>
+[in] Ein Zeichencode der Tastatureingabe an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn es sich bei der Zeichencode von der menübandleiste verarbeitet wurde. andernfalls "false".  

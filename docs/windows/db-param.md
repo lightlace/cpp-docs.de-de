@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3bfa286e253ef634a42fea5a5c926981174c400
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b599e5f25449dfef3b37d7811db572ee4299b241
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613000"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719100"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -47,8 +47,8 @@ Ordnet die angegebenen Member-Variable mit einem Eingabe- oder ausgabeadapter-Pa
 *Ordinal*  
 Die Nummer der Spalte (DBCOLUMNINFO-Ordnungszahl) für ein Feld in das Rowset, um Daten zu binden.
 
-*ParamType-Objekt* (optional)  
-Der Typ, für den Parameter festlegen. Anbieter unterstützen nur e/a-Parametertypen, die von der zugrunde liegenden Datenquelle unterstützt werden. Der Typ ist eine Kombination aus einem oder mehreren DBPARAMIOENUM-Werten:
+*ParamType-Objekt*  
+(Optional) Der Typ, für den Parameter festlegen. Anbieter unterstützen nur e/a-Parametertypen, die von der zugrunde liegenden Datenquelle unterstützt werden. Der Typ ist eine Kombination aus einem oder mehreren DBPARAMIOENUM-Werten:
 
 - DBPARAMIO_INPUT Eingabeparameter.
 
@@ -56,20 +56,20 @@ Der Typ, für den Parameter festlegen. Anbieter unterstützen nur e/a-Parametert
 
 - DBPARAMIO_NOTPARAM der Accessor hat keine Parameter. Festlegen von `eParamIO` auf diesen Wert in Zeile Accessoren daran erinnert werden dem Benutzer, dass Parameter ignoriert werden.
 
-*DbType* (optional)  
-OLE DB [Typindikator](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) für den Eintrag in der Spalte.
+*DbType*  
+(Optional) OLE DB [Typindikator](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) für den Eintrag in der Spalte.
 
-*Genauigkeit* (optional)  
-Die Genauigkeit für den Eintrag in der Spalte verwendet werden soll. Weitere Informationen finden Sie unter der Beschreibung der `bPrecision` Element der [DBBINDING-Struktur](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*precision*  
+(Optional) Die Genauigkeit für den Eintrag in der Spalte verwendet werden soll. Weitere Informationen finden Sie unter der Beschreibung der `bPrecision` Element der [DBBINDING-Struktur](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*Skalierung* (optional)  
-Die Dezimalstellen für den Eintrag in der Spalte verwendet werden soll. Weitere Informationen finden Sie unter der Beschreibung der `bScale` Element der [DBBINDING-Struktur](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*Skalieren*  
+(Optional) Die Dezimalstellen für den Eintrag in der Spalte verwendet werden soll. Weitere Informationen finden Sie unter der Beschreibung der `bScale` Element der [DBBINDING-Struktur](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*Status* (optional)  
-Eine Membervariable verwendet, um den Status dieser Spalte zu speichern. Der Status gibt an, ob der Wert der Spalte einen Datenwert oder einen anderen Wert, z. B. die NULL ist. Mögliche Werte finden Sie unter [Status](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.
+*status*  
+(Optional) Eine Membervariable verwendet, um den Status dieser Spalte zu speichern. Der Status gibt an, ob der Wert der Spalte einen Datenwert oder einen anderen Wert, z. B. die NULL ist. Mögliche Werte finden Sie unter [Status](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.
 
-*Länge* (optional)  
-Eine Membervariable verwendet, um die Größe der Spalte in Bytes zu speichern.
+*length*  
+(Optional) Eine Membervariable verwendet, um die Größe der Spalte in Bytes zu speichern.
 
 ## <a name="remarks"></a>Hinweise
 

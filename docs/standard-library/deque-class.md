@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c77b232fe87a722194a21d60457a01051827a7e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: afcf2528ba84edd90179ef6eb29d356466372633
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214165"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713305"
 ---
 # <a name="deque-class"></a>deque-Klasse
 
@@ -119,10 +119,10 @@ class deque
 ### <a name="parameters"></a>Parameter
 
 *Type*<br/>
- Der in der Doppelschlange zu speichernde Elementdatentyp.
+Der in der Doppelschlange zu speichernde Elementdatentyp.
 
 *Zuweisung*<br/>
- Der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers der Doppelschlange kapselt. Dieses Argument ist optional, und der Standardwert ist **Allocator\<Typ >**.
+Der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers der Doppelschlange kapselt. Dieses Argument ist optional, und der Standardwert ist **Allocator\<Typ >**.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -246,19 +246,19 @@ void assign(initializer_list<Type> IList);
 ### <a name="parameters"></a>Parameter
 
 *Erste*<br/>
- Die Position des ersten Elements in dem aus der Argumentdoppelschlange zu kopierenden Elementbereich.
+Die Position des ersten Elements in dem aus der Argumentdoppelschlange zu kopierenden Elementbereich.
 
 *letzte*<br/>
- Die Position des ersten Elements hinter dem aus der Argumentdoppelschlange zu kopierenden Elementbereich.
+Die Position des ersten Elements hinter dem aus der Argumentdoppelschlange zu kopierenden Elementbereich.
 
 *Anzahl*<br/>
- Die Anzahl von Kopien eines Elements, das in die Doppelschlange eingefügt wird.
+Die Anzahl von Kopien eines Elements, das in die Doppelschlange eingefügt wird.
 
 *val*<br/>
- Der Wert des Elements, das in die Doppelschlange eingefügt wird.
+Der Wert des Elements, das in die Doppelschlange eingefügt wird.
 
 *IList*<br/>
- Das initializer_list-Element, das in die Doppelschlange eingefügt wird.
+Das initializer_list-Element, das in die Doppelschlange eingefügt wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -333,7 +333,7 @@ const_reference at(size_type pos) const;
 ### <a name="parameters"></a>Parameter
 
 *POS*<br/>
- Der Feldindex (oder die Positionsnummer) des Elements, das auf die Doppelschlange verweisen soll.
+Der Feldindex (oder die Positionsnummer) des Elements, das auf die Doppelschlange verweisen soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1314,7 +1314,7 @@ int main( )
    cout << "The last integer of c1 is " << *c1_Iter << endl;
 
    c1_Iter--;
- *c1_Iter = 400;
+   *c1_Iter = 400;
    cout << "The new next-to-last integer of c1 is " << *c1_Iter << endl;
 
    // If a const iterator had been declared instead with the line:
@@ -1346,13 +1346,13 @@ iterator erase(iterator first, iterator last);
 ### <a name="parameters"></a>Parameter
 
 *_Where*<br/>
- Die Position des Elements, das in der Doppelschlange entfernt werden soll.
+Die Position des Elements, das in der Doppelschlange entfernt werden soll.
 
 *Erste*<br/>
- Die Position des ersten Elements, das in der Doppelschlange entfernt werden soll.
+Die Position des ersten Elements, das in der Doppelschlange entfernt werden soll.
 
 *last*<br/>
- Die Position direkt nach dem letzten in der Doppelschlange entfernten Element.
+Die Position direkt nach dem letzten in der Doppelschlange entfernten Element.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1603,7 +1603,7 @@ const_reference operator[](size_type pos) const;
 ### <a name="parameters"></a>Parameter
 
 *POS*<br/>
- Die Position des deque-Elements, auf das verwiesen werden soll.
+Die Position des deque-Elements, auf das verwiesen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1714,7 +1714,7 @@ int main( )
 
    cout << "     ";
    S<MyDeque&&>::show ( move< MyDeque& > (d1) );
- }
+}
 ```
 
 ## <a name="pointer"></a> deque::pointer
@@ -1951,7 +1951,7 @@ int main( )
    cout << endl;
 
    c1_rIter = c1.rbegin( );
- *c1_rIter = 40;  // This would have caused an error if a
+   *c1_rIter = 40;  // This would have caused an error if a
                     // const_reverse iterator had been declared as
                     // noted above
    cout << "Last element in deque is now " << *c1_rIter << "." << endl;
@@ -2069,7 +2069,7 @@ int main( )
    c1_rIter = c1.rend( );
    c1_rIter--; // Decrementing the reverse iterator moves it backward
                // in the reversed deque (to the last element here)
- *c1_rIter = 40; // This modification of the last element would
+   *c1_rIter = 40; // This modification of the last element would
                    // have caused an error if a const_reverse
                    // iterator had been declared (as noted above)
    cout << "The modified reversed deque is: ";
@@ -2099,10 +2099,10 @@ void resize(size_type _Newsize, Type val);
 ### <a name="parameters"></a>Parameter
 
 *_Newsize*<br/>
- Die neue Größe der Doppelschlange.
+Die neue Größe der Doppelschlange.
 
 *val*<br/>
- Der Wert der neuen Elemente, die zur Doppelschlange hinzugefügt werden sollen, wenn die neue Größe die ursprüngliche Größe überschreitet. Wenn der Wert ausgelassen wird, werden dem Standardwert die neuen Elemente für die Klasse zugewiesen.
+Der Wert der neuen Elemente, die zur Doppelschlange hinzugefügt werden sollen, wenn die neue Größe die ursprüngliche Größe überschreitet. Wenn der Wert ausgelassen wird, werden dem Standardwert die neuen Elemente für die Klasse zugewiesen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2278,10 +2278,10 @@ void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 ### <a name="parameters"></a>Parameter
 
 *right*<br/>
- Die Doppelschlange, in der die auszutauschenden Elemente bereitgestellt werden, oder die Doppelschlange, deren Elemente mit denen der Doppelschlange `left` ausgetauscht werden sollen.
+Die Doppelschlange, in der die auszutauschenden Elemente bereitgestellt werden, oder die Doppelschlange, deren Elemente mit denen der Doppelschlange `left` ausgetauscht werden sollen.
 
 *left*<br/>
- Eine doppelschlange, deren Elemente mit denen der doppelschlange ausgetauscht werden sollen *rechten*.
+Eine doppelschlange, deren Elemente mit denen der doppelschlange ausgetauscht werden sollen *rechten*.
 
 ### <a name="example"></a>Beispiel
 

@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 132498c5773e4cce1fd178573698b62e874dda48
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: d2349beadb5983c85059be83ee5a933689913886
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691613"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722721"
 ---
 # <a name="submatch-class"></a>sub_match-Klasse
 
@@ -51,8 +51,8 @@ class sub_match
 
 ## <a name="parameters"></a>Parameter
 
-*BidIt*  
- Der Itertatortyp für Teilübereinstimmungen.
+*BidIt*<br/>
+Der Itertatortyp für Teilübereinstimmungen.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -159,14 +159,14 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Die Teilübereinstimmung, mit der verglichen werden soll.
+*right*<br/>
+Die Teilübereinstimmung, mit der verglichen werden soll.
 
-*str*  
- Die Zeichenfolge, mit der verglichen wird.
+*str*<br/>
+Die Zeichenfolge, mit der verglichen wird.
 
-*ptr*  
- Die mit NULL endende Sequenz, mit der verglichen werden soll.
+*ptr*<br/>
+Die mit NULL endende Sequenz, mit der verglichen werden soll.
 
 ### <a name="remarks"></a>Hinweise
 

@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc7d2b959bd8ad3ed89ae270e1f7d93406526695
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2a0dd4f32f8c7b3a9e859e23fcc26e668fa87cdb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218385"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726361"
 ---
 # <a name="popen-wpopen"></a>_popen, _wpopen
 
@@ -61,12 +61,12 @@ Erstellt eine Pipe und führt einen Befehl aus.
 
 ```C
 FILE *_popen(
-const char *command,
-const char *mode
+    const char *command,
+    const char *mode
 );
 FILE *_wpopen(
-const wchar_t *command,
-const wchar_t *mode
+    const wchar_t *command,
+    const wchar_t *mode
 );
 ```
 
@@ -88,13 +88,12 @@ Weitere Informationen über diese und andere Fehlercodes finden Sie unter [_dose
 
 Die **_popen** Funktion erstellt eine Pipe und führt asynchron eine generierte Kopie des Befehlsprozessors mit der angegebenen Zeichenfolge *Befehl*. Die Zeichenfolge *mode* gibt den angeforderten Zugriffstyp wie folgt an.
 
-**"R"** der aufrufende Prozess kann die Standardausgabe von des erzeugten Befehls mit dem zurückgegebenen Stream lesen.
-
-**"w"** der aufrufende Prozess kann in Standardeingabe von des erzeugten Befehls mit dem zurückgegebenen Stream schreiben.
-
-**"b"** öffnen im binären Modus.
-
-**"t"** im Textmodus geöffnet.
+|Zugriffsmodus|Beschreibung|
+|-|-|
+|**"r"**|Der aufrufende Prozess kann die Standardausgabe des erzeugten Befehls mit dem zurückgegebenen Stream lesen.|
+|**"w"**|Der aufrufende Prozess kann die Standardeingabe des erzeugten Befehls mit dem zurückgegebenen Stream schreiben.|
+|**"b"**|Öffnen im binären Modus.|
+|**"t"**|Öffnen im Textmodus.|
 
 > [!NOTE]
 > Wenn in einem Windows-Programm verwendet die **_popen** Funktionsergebnis ist einen Ungültiger Dateizeiger, der bewirkt, die Anwendung dass reagiert auf unbestimmte Zeit. **_popen** in einer Konsolenanwendung ordnungsgemäß funktioniert. Zum Erstellen einer Windows-Anwendung, die Eingabe und Ausgabe umleitet, finden Sie unter [Erstellen eines untergeordneten Prozesses mit umgeleiteter Eingabe und Ausgabe](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output) im Windows SDK.

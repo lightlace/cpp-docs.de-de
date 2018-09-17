@@ -1,5 +1,5 @@
 ---
-title: '/ Zc: trigraphs (Trigraphen-Ersetzung) | Microsoft Docs'
+title: '/ Zc: trigraphs (Trigraphen-Ersetzung) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
@@ -19,36 +19,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e465b62944b360d6fdb09da1230f3353658437b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce8c9d13fa062ddac0f31eac0e20fba1266c7a8c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379870"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707732"
 ---
 # <a name="zctrigraphs-trigraphs-substitution"></a>/Zc:trigraphs (Trigraphen-Ersetzung)
 
-Wenn **/Zc: trigraphs** angegeben ist, wird der Compiler eine Folge von Zeichen Trigraph mit einem entsprechenden Interpunktionszeichen ersetzt.
+Wenn **/Zc: trigraphs** angegeben ist, wird der Compiler ersetzt eine Folge von Zeichen Trigraphen mit der ein entsprechendes Interpunktionszeichen.
 
 ## <a name="syntax"></a>Syntax
 
-> **/Zc:trigraphs**[**-**]  
+> **/Zc:trigraphs**[**-**]
 
 ## <a name="remarks"></a>Hinweise
 
-Ein *Trigraph* besteht aus zwei aufeinander folgenden Fragezeichen ("?") gefolgt von einem eindeutigen dritten Zeichen. Die standardmäßige C-Sprache unterstützt Trigraphen für Quelldateien, die einen Zeichensatz verwenden, der keine passenden grafische Darstellungen für einige Interpunktionszeichen enthalten. Z. B. wenn Trigraphen aktiviert sind, ersetzt der Compiler die "?? = "Trigraph mit dem Zeichen"#". Über C ++ 14 können werden Trigraphen in c unterstützt. Die C ++ 17-standard entfernt Trigraphen aus der Programmiersprache C++. In C++-Code der **/Zc: trigraphs** (Compileroption) ermöglicht die Ersetzung von trigraphsequenzen durch die entsprechenden Interpunktionszeichen. **/Zc:trigraphs-** Trigraphen-Ersetzung deaktiviert.
+Ein *Trigraphen* besteht aus zwei aufeinander folgenden Fragezeichen ("??") gefolgt von einem eindeutigen dritten Zeichen. Die C-Sprachstandard unterstützt Trigraphen für Quelldateien, die einen Zeichensatz zu verwenden, der keine passenden grafische Darstellungen für einige Interpunktionszeichen enthalten. Wenn Trigraphen aktiviert sind, der Compiler ersetzt z.B. den "?? = "Trigraphen mit den Zeichen '#'. C ++ 14 werden die Trigraphen wie in c unterstützt. Standard C ++ 17 entfernt Trigraphen aus der Programmiersprache C++. In C++-Code der **/Zc: trigraphs** Compiler-Option ermöglicht die Ersetzung von trigraphsequenzen durch entsprechendes Interpunktionszeichen. **/Zc:trigraphs-** trigraphenersetzung deaktiviert.
 
-Die **/Zc: trigraphs** Option ist standardmäßig deaktiviert, und die Option ist nicht betroffen, wenn die [/ liberalen-](permissive-standards-conformance.md) angegeben wird.
+Die **/Zc: trigraphs** Option ist standardmäßig deaktiviert, und die Option ist nicht betroffen, wenn die [/ PERMISSIVE--](permissive-standards-conformance.md) angegeben wird.
 
-Eine Liste der C/C++-Trigraphen, und ein Beispiel, das zeigt, wie Trigraphen verwendet, finden Sie unter [Trigraphen](../../c-language/trigraphs.md).
+Eine Liste der C/C++-Trigraphen und ein Beispiel für die Verwendung von Trigraphen zu verwenden, finden Sie unter [Trigraphen](../../c-language/trigraphs.md).
 
 ## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Befehlszeile** Eigenschaftenseite.
 
-1. Ändern der **Zusatzoptionen** Eigenschaft einschließen **/Zc: trigraphs** oder **/Zc:trigraphs-** und wählen Sie dann **OK**.
+1. Ändern der **zusätzliche Optionen** Eigenschaft sollen **/Zc: trigraphs** oder **/Zc:trigraphs-** und wählen Sie dann **OK**.
 
 ## <a name="see-also"></a>Siehe auch
 

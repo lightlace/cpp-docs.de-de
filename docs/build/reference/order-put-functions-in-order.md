@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87fafb0f6eba5130524a373a065fb86ea7eacfc9
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: d8ea4df02e87a64d70ce773ed35d1a3cb0509f8b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894511"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717780"
 ---
 # <a name="order-put-functions-in-order"></a>/ORDER (Reihenfolge von Funktionen festlegen)
 
@@ -39,7 +39,7 @@ Geben Sie die Verknüpfungsreihenfolge für separat Paketfunktionen (COMDAT).
 
 ### <a name="parameters"></a>Parameter
 
-*filename*  
+*filename*<br/>
 Eine Textdatei, die angibt, die Verknüpfungsreihenfolge für COMDAT-Funktionen.
 
 ## <a name="remarks"></a>Hinweise
@@ -83,5 +83,5 @@ Die **/ORDER** Option deaktiviert die inkrementelle Verknüpfung. Möglicherweis
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)  
+[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
 [Linkeroptionen](../../build/reference/linker-options.md)

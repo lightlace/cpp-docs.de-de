@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d78b37971cda2ca1bcf468a794abf69555efc3e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: eb4af8f218a6040080cdf429b061205269cbc4dc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462250"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703585"
 ---
 # <a name="smart-pointers-modern-c"></a>Intelligente Zeiger (Modern C++)
 Im modernen C++-Programmierung enthält die Standardbibliothek *intelligente Zeiger*, die verwendet werden, um sicherzustellen, dass Programme sind frei von Speicher- und Ressourcen von Speicherverlusten und sind.  
@@ -69,8 +69,9 @@ Im modernen C++-Programmierung enthält die Standardbibliothek *intelligente Zei
 ## <a name="kinds-of-smart-pointers"></a>Arten von intelligenten Zeigern  
  Im folgenden Abschnitt werden die in der Windows-Programmierumgebung verfügbaren verschiedenen Arten von intelligenten Zeigern aufgeführt, und es wird beschrieben, wann sie zu verwenden sind.  
   
- **Intelligente Zeiger der C++-Standard-Bibliothek**  
- Verwenden Sie vorrangig diese intelligenten Zeiger zum Kapseln von Zeigern auf einfache alte C++-Objekte (Plain Old CLR Objects, POCOs).  
+### <a name="c-standard-library-smart-pointers"></a>Intelligente Zeiger der C++-Standardbibliothek
+
+Verwenden Sie vorrangig diese intelligenten Zeiger zum Kapseln von Zeigern auf einfache alte C++-Objekte (Plain Old CLR Objects, POCOs).  
   
 -   `unique_ptr`   
      Ermöglicht genau einen Besitzer für den zugrunde liegenden Zeiger. Verwenden Sie diesen Zeiger als Standardwahl für POCOs, es sei denn, Sie sind sicher, dass Sie einen `shared_ptr` benötigen. Kann zu einem neuen Besitzer verschoben werden, kann aber nicht kopiert oder freigegeben werden. Ersetzt `auto_ptr`, der veraltet ist. Ist vergleichbar mit `boost::scoped_ptr`. `unique_ptr` ist klein und effizient. die Größe ist ein Zeiger, und Rvalue-Referenzen für schnelles Einfügen und Abrufen von C++-standardbibliotheksauflistungen unterstützt. Headerdatei: `<memory>`. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen und Verwenden von Unique_ptr-Instanzen](../cpp/how-to-create-and-use-unique-ptr-instances.md) und [Unique_ptr-Klasse](../standard-library/unique-ptr-class.md).  
@@ -81,8 +82,9 @@ Im modernen C++-Programmierung enthält die Standardbibliothek *intelligente Zei
 -   `weak_ptr`   
     Spezielle intelligente Zeiger in Verbindung mit `shared_ptr`. Ein `weak_ptr` ermöglicht den Zugriff auf ein Objekt, das einer oder mehreren `shared_ptr`-Instanzen gehört, ist aber nicht an der Referenzzählung beteiligt ist. Verwenden Sie diesen Zeiger, wenn Sie ein Objekt beobachten möchten, dieses aber nicht gültig bleiben muss. Ist in einigen Fällen erforderlich, um Zirkelverweise zwischen `shared_ptr`-Instanzen zu unterbrechen. Headerdatei: `<memory>`. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen und Verwenden von Weak_ptr-Instanzen](../cpp/how-to-create-and-use-weak-ptr-instances.md) und [Weak_ptr-Klasse](../standard-library/weak-ptr-class.md).  
   
- **Intelligente Zeiger für COM-Objekte (klassische Windows-Programmierung)**  
- Wenn Sie mit COM-Objekten arbeiten, sollten Sie Schnittstellenzeiger mit einem geeigneten Typ eines intelligenten Zeigers kapseln. Die ATL (Active Template Library) definiert mehrere intelligente Zeiger für verschiedene Zwecke. Sie können auch den Typ `_com_ptr_t` eines intelligenten Zeigers verwenden, den der Compiler einsetzt, wenn er Wrapperklassen von .tlb-Dateien erstellt. Er ist die beste Wahl, wenn Sie die ATL-Headerdateien nicht einschließen möchten.  
+### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>Intelligente Zeiger für COM-Objekte (klassische Windows-Programmierung)
+
+Wenn Sie mit COM-Objekten arbeiten, sollten Sie Schnittstellenzeiger mit einem geeigneten Typ eines intelligenten Zeigers kapseln. Die ATL (Active Template Library) definiert mehrere intelligente Zeiger für verschiedene Zwecke. Sie können auch den Typ `_com_ptr_t` eines intelligenten Zeigers verwenden, den der Compiler einsetzt, wenn er Wrapperklassen von .tlb-Dateien erstellt. Er ist die beste Wahl, wenn Sie die ATL-Headerdateien nicht einschließen möchten.  
   
  [CComPtr-Klasse](../atl/reference/ccomptr-class.md)  
  Verwenden Sie diesen, sofern Sie ATL nicht verwenden können. Führt Referenzzählung mithilfe der Methoden `AddRef` und `Release` aus. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen und Verwenden von CComPtr- und CComQIPtr-Instanzen](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
@@ -99,8 +101,9 @@ Im modernen C++-Programmierung enthält die Standardbibliothek *intelligente Zei
  [_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md)  
  Ähnelt `CComQIPtr` bezüglich der Funktionalität, ist jedoch nicht von ATL-Headern abhängig.  
   
- **Intelligente Zeiger der ATL für POCO-Objekte**  
- Zusätzlich zu den intelligenten Zeigern für COM-Objekte definiert ATL auch intelligente Zeiger sowie Auflistungen von intelligenten Zeigern für einfache alte C++-Objekte. In der klassischen Windows-Programmierung werden diese Typen nützliche Alternativen zu den C++-Standardbibliothek-Auflistungen, insbesondere wenn Codeportabilität nicht erforderlich ist, oder wenn Sie nicht, kombinieren Sie die Programmiermodelle von der C++-Standardbibliothek und ATL möchten  
+### <a name="atl-smart-pointers-for-poco-objects"></a>Intelligente Zeiger der ATL für POCO-Objekte
+
+Zusätzlich zu den intelligenten Zeigern für COM-Objekte definiert ATL auch intelligente Zeiger sowie Auflistungen von intelligenten Zeigern für einfache alte C++-Objekte. In der klassischen Windows-Programmierung werden diese Typen nützliche Alternativen zu den C++-Standardbibliothek-Auflistungen, insbesondere wenn Codeportabilität nicht erforderlich ist, oder wenn Sie nicht, kombinieren Sie die Programmiermodelle von der C++-Standardbibliothek und ATL möchten  
   
  [CAutoPtr-Klasse](../atl/reference/cautoptr-class.md)  
  Intelligenter Zeiger, der eindeutigen Besitz erzwingt, indem er den Besitz auf die Kopie überträgt. Vergleichbar mit der veralteten `std::auto_ptr`-Klasse.  

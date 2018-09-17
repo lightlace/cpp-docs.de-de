@@ -1,5 +1,5 @@
 ---
-title: Sonstige LIB-Ausgabe | Microsoft Docs
+title: Sonstige LIB-Ausgabe | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e793aaaa335bed430d8486b858d3413be7ba74dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6bd31c0534ae7ff2e7d840ad245be6f66983ea0a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371462"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704241"
 ---
 # <a name="other-lib-output"></a>Sonstige LIB-Ausgabe
-Im Standardmodus können Sie die Option/List zum Anzeigen von Informationen über die resultierende Bibliothek. Sie können diese Ausgabe in eine Datei umleiten.  
-  
- LIB zeigt eine Meldung Copyright- und und Befehlsdateien, es sei denn, die/nologo-Option verwendet wird.  
-  
- Bei der Eingabe `lib` keine anderen Eingabe LIB zeigt eine nutzungsanweisung an, die die Optionen zusammengefasst sind.  
-  
- Fehler- und warnungsmeldungen, die Nachrichten von LIB ausgestellt haben das Format LNK*Nnnn*. Der LINK, DUMPBIN und EDITBIN verwenden ebenfalls dieses Bereichs von Fehlern. Hilfe ist verfügbar, indem Sie den Fehler im Fenster "Ausgabe" auswählen und durch Drücken von F1.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über LIB](../../build/reference/overview-of-lib.md)
+
+Im Standardmodus können Sie die Option/List / Informationen über die erstellte Bibliothek angezeigt. Sie können diese Ausgabe in eine Datei umleiten.
+
+LIB zeigt eine Meldung Copyright- und Versionsinformationen und Befehlsdateien, es sei denn, die/nologo-Option verwendet wird.
+
+Bei der Eingabe `lib` ohne weitere Eingaben zeigt LIB eine nutzungsanweisung an, die die verfügbaren Optionen zusammengefasst sind.
+
+Fehler und Warnungen, die Nachrichten, die von LIB ausgestellt haben das Format LNK*Nnnn*. Die Verknüpfung, DUMPBIN und EDITBIN-Tools verwenden den Fehler. Hilfe ist verfügbar, wählen den Fehler im Ausgabefenster angezeigt, und drücken F1.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über LIB](../../build/reference/overview-of-lib.md)

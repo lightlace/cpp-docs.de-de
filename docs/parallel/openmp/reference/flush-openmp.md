@@ -1,5 +1,5 @@
 ---
-title: Flush (OpenMP) | Microsoft Docs
+title: Flush (OpenMP) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6933c5d74e1277b209d15aefb93a159d55f93dd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5ea89d4feb7a554c2495c11aa8acaeeaa8bc775f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696239"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722058"
 ---
 # <a name="flush-openmp"></a>flush (OpenMP)
-Gibt an, dass alle Threads mit derselben Ansicht des Arbeitsspeichers für alle freigegebenen Objekte haben.  
+Gibt an, dass alle Threads die gleiche Ansicht der Arbeitsspeicher für alle freigegebenen Objekte.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,14 +32,13 @@ Gibt an, dass alle Threads mit derselben Ansicht des Arbeitsspeichers für alle 
 #pragma omp flush [(var)]  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- wobei  
+## <a name="arguments"></a>Argumente
+
+*var*<br/>
+(Optional) Eine durch Trennzeichen getrennte Liste von Variablen, die Objekte darstellen, die Sie synchronisieren möchten. Wenn `var` nicht angegeben ist, alle Arbeitsspeicher wird geleert.  
   
- `var` (optional)  
- Eine durch Trennzeichen getrennte Liste von Variablen, die Objekte darstellen, die Sie synchronisieren möchten. Wenn `var` nicht angegeben ist, werden alle Arbeitsspeicher geleert wird.  
-  
 ## <a name="remarks"></a>Hinweise  
- Die **leeren** Richtlinie unterstützt kein OpenMP-Klauseln.  
+ Die **leeren** -Anweisung unterstützt keine OpenMP-Klauseln.  
   
  Weitere Informationen finden Sie unter [2.6.5 flush-Direktive](../../../parallel/openmp/2-6-5-flush-directive.md).  
   

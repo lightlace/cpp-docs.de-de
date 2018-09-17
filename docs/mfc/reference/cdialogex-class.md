@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d941b112047dc8f90a8cdc4686e422f028b6d7e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: a3fa9720e519336b39299e84e3061860f34cf24a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335957"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716300"
 ---
 # <a name="cdialogex-class"></a>CDialogEx-Klasse
 Die `CDialogEx`-Klasse gibt die Hintergrundfarbe und das Hintergrundbild eines Dialogfelds an.  
@@ -90,17 +90,17 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIDTemplate*  
- Die Ressourcen-ID, der eine Dialogfeldvorlage.  
+*nIDTemplate*<br/>
+[in] Die Ressourcen-ID, der eine Dialogfeldvorlage.  
   
- [in] *LpszTemplateName*  
- Der Ressourcenname, der eine Dialogfeldvorlage.  
+*lpszTemplateName*<br/>
+[in] Der Ressourcenname, der eine Dialogfeldvorlage.  
   
- [in] *pParent*  
- Ein Zeiger auf das übergeordnete Fenster. Der Standardwert ist NULL.  
+*pParent*<br/>
+[in] Ein Zeiger auf das übergeordnete Fenster. Der Standardwert ist NULL.  
   
- [in] *pParentWnd*  
- Ein Zeiger auf das übergeordnete Fenster. Der Standardwert ist NULL.  
+*pParentWnd*<br/>
+[in] Ein Zeiger auf das übergeordnete Fenster. Der Standardwert ist NULL.  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -116,11 +116,11 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Farbe*  
- Ein RGB-Farbwert.  
+*Farbe*<br/>
+[in] Ein RGB-Farbwert.  
   
- [in] *bRepaint*  
- "True", um den Bildschirm sofort zu aktualisieren; andernfalls "false". Der Standardwert ist "true".  
+*bRepaint*<br/>
+[in] "True", um den Bildschirm sofort zu aktualisieren; andernfalls "false". Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -142,20 +142,20 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *hBitmap*  
- Ein Handle für das Hintergrundbild.  
+*hBitmap*<br/>
+[in] Ein Handle für das Hintergrundbild.  
   
- [in] *UiBmpResId*  
- Die Ressourcen-ID des Hintergrundbilds.  
+*uiBmpResId*<br/>
+[in] Die Ressourcen-ID des Hintergrundbilds.  
   
- [in] *Speicherort*  
- Eines der `CDialogEx::BackgroundLocation` Werte, die den Speicherort des Bilds angeben. Gültige Werte sind BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT und BACKGR_BOTTOMRIGHT. Der Standardwert ist BACKGR_TILE.  
+*location*<br/>
+[in] Eines der `CDialogEx::BackgroundLocation` Werte, die den Speicherort des Bilds angeben. Gültige Werte sind BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT und BACKGR_BOTTOMRIGHT. Der Standardwert ist BACKGR_TILE.  
   
- [in] *bAutoDestroy*  
- True, um das Hintergrundbild automatisch zerstört. andernfalls "false".  
+*bAutoDestroy*<br/>
+[in] True, um das Hintergrundbild automatisch zerstört. andernfalls "false".  
   
- [in] *bRepaint*  
- TRUE, um das Dialogfeld sofort neu zu zeichnen, andernfalls "false".  
+*bRepaint*<br/>
+[in] TRUE, um das Dialogfeld sofort neu zu zeichnen, andernfalls "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Überladen Sie bei der zweiten Methode Syntax "true", wenn die Methode erfolgreich ist; andernfalls "false".  

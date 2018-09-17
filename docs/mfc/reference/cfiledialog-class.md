@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45b9b5bb5beae8599c360d35df878a38b591b1b4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: afd9c9e8069d6140b66a38f4686f562533dd5c21
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761016"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722708"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog-Klasse
 Kapselt das Standarddialogfeld für öffnen oder speichern Operations-Datei verwendet wird.  
@@ -522,29 +522,29 @@ explicit CFileDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bOpenFileDialog*  
- Der Parameter, der angibt, welche Art von Dialogfeld zu erstellen. Legen Sie sie auf "true", erstellen Sie eine **Datei öffnen** Dialogfeld. Legen Sie sie auf "false" zum Erstellen einer **Datei speichern als** Dialogfeld.  
+*bOpenFileDialog*<br/>
+[in] Der Parameter, der angibt, welche Art von Dialogfeld zu erstellen. Legen Sie sie auf "true", erstellen Sie eine **Datei öffnen** Dialogfeld. Legen Sie sie auf "false" zum Erstellen einer **Datei speichern als** Dialogfeld.  
   
- [in] *LpszDefExt*  
- Die Standarddateierweiterung. Wenn der Benutzer nicht (eine, die eine Zuordnung auf dem Computer des Benutzers) bekannte Erweiterung in das Feld Dateiname enthalten ist, die Erweiterung angegeben *LpszDefExt* wird automatisch an den Dateinamen angefügt. Wenn dieser Parameter NULL ist, wird keine Erweiterung angefügt.  
+*lpszDefExt*<br/>
+[in] Die Standard-Dateinamenerweiterung. Wenn der Benutzer nicht (eine, die eine Zuordnung auf dem Computer des Benutzers) bekannte Erweiterung in das Feld Dateiname enthalten ist, die Erweiterung angegeben *LpszDefExt* wird automatisch an den Dateinamen angefügt. Wenn dieser Parameter NULL ist, wird keine Erweiterung angefügt.  
   
- [in] *LpszFileName*  
- Der ursprüngliche Dateiname, der in das Feld Dateiname angezeigt wird. Wenn der Wert NULL ist, wird kein Name für die erste Datei angezeigt.  
+*lpszFileName*<br/>
+[in] Der ursprüngliche Dateiname, der in das Feld Dateiname angezeigt wird. Wenn der Wert NULL ist, wird kein Name für die erste Datei angezeigt.  
   
- [in] *DwFlags*  
- Eine Kombination von ein oder mehrere Flags, die Sie verwenden können, um das Dialogfeld anzupassen. Eine Beschreibung dieser Flags finden Sie in der [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) Struktur im Windows SDK. Wenn Sie ändern die `m_ofn.Flags` Member zu strukturieren, verwenden Sie einen bitweisen OR-Operator die Änderungen, um das Standardverhalten unverändert zu lassen.  
+*dwFlags*<br/>
+[in] Eine Kombination von ein oder mehrere Flags, die Sie verwenden können, um das Dialogfeld anzupassen. Eine Beschreibung dieser Flags finden Sie in der [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) Struktur im Windows SDK. Wenn Sie ändern die `m_ofn.Flags` Member zu strukturieren, verwenden Sie einen bitweisen OR-Operator die Änderungen, um das Standardverhalten unverändert zu lassen.  
   
- [in] *LpszFilter*  
- Eine Reihe von Zeichenfolgenpaare, die Filter angeben, können Sie auf die Datei anwenden. Wenn Sie Filter angeben, werden nur die Dateien, die Filterkriterien in der Liste der Dateien angezeigt. Finden Sie im Abschnitt "Hinweise" Weitere Informationen zum Arbeiten mit Filter.  
+*lpszFilter*<br/>
+[in] Eine Reihe von Zeichenfolgenpaare, die Filter angeben, können Sie auf die Datei anwenden. Wenn Sie Filter angeben, werden nur die Dateien, die Filterkriterien in der Liste der Dateien angezeigt. Finden Sie im Abschnitt "Hinweise" Weitere Informationen zum Arbeiten mit Filter.  
   
- [in] *pParentWnd*  
- Ein Zeiger auf das Fenster "übergeordneten" oder "Besitzer" im Dialogfeld "Datei".  
+*pParentWnd*<br/>
+[in] Ein Zeiger auf das Fenster "übergeordneten" oder "Besitzer" im Dialogfeld "Datei".  
   
- [in] *DwSize*  
- Die Größe der `OPENFILENAME` Struktur. Dieser Wert hängt von der Version des Betriebssystems ab. MFC verwendet diesen Parameter, um zu bestimmen, die geeignete Arten von Dialogfeld zum Erstellen. Die Standardgröße von 0 bedeutet, die die Größe des richtigen Dialogfeld mit der MFC-Code bestimmt basierend auf die Version des Betriebssystems, auf der das Programm ausgeführt wird.  
+*dwSize*<br/>
+[in] Die Größe der `OPENFILENAME` Struktur. Dieser Wert hängt von der Version des Betriebssystems ab. MFC verwendet diesen Parameter, um zu bestimmen, die geeignete Arten von Dialogfeld zum Erstellen. Die Standardgröße von 0 bedeutet, die die Größe des richtigen Dialogfeld mit der MFC-Code bestimmt basierend auf die Version des Betriebssystems, auf der das Programm ausgeführt wird.  
   
- [in] *bVistaStyle*  
- **Beachten Sie** dieser Parameter ist in Visual Studio 2008 und höher verfügbar und wird dazu führen, dass das Dialogfeld "neue Formatvorlage" verwendet werden, nur dann, wenn Sie in Windows Vista oder höher ausgeführt werden.  
+*bVistaStyle*<br/>
+[in] **Hinweis** dieser Parameter ist in Visual Studio 2008 und höher verfügbar und wird dazu führen, dass das Dialogfeld "neue Formatvorlage" verwendet werden, nur dann, wenn Sie in Windows Vista oder höher ausgeführt werden.  
   
  Der Parameter, der den Stil der mit dem Dialogfeld "Datei" angibt. Legen Sie sie auf "true" verwenden die neue Vista-Formatvorlage Dateidialogfelder. Andernfalls wird das alte Format von Dialogfeldern verwendet werden. Finden Sie im Abschnitt "Hinweise" Weitere Informationen zu unter Vista ausgeführt wird.  
   
@@ -1346,11 +1346,11 @@ void SetControlText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- Die ID des Steuerelements für die den Text festgelegt.  
+*nID*<br/>
+[in] Die ID des Steuerelements für die den Text festgelegt.  
   
- [in] *Lpsz*  
- Ein Zeiger auf die Zeichenfolge, die Text enthält, der für das Steuerelement festgelegt.  
+*lpsz*<br/>
+[in] Ein Zeiger auf die Zeichenfolge, die Text enthält, der für das Steuerelement festgelegt.  
   
 ### <a name="remarks"></a>Hinweise  
  Beide Versionen dieser Funktion gelten für Anwendungen, die Unicode verwenden. Es ist jedoch nur die Version mit dem Typ LPCSTR für Anwendungen, die ANSI gültig.  
@@ -1435,17 +1435,17 @@ void SetTemplate(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nWin3ID*  
- Enthält die ID der Dialogfeldvorlagen-Ressource für den Explorer `CFileDialog` Objekt. Mit dieser Vorlage wird nur verwendet, auf Windows NT 3.51 oder wenn der Stil OFN_EXPLORER nicht vorhanden ist.  
+*nWin3ID*<br/>
+[in] Enthält die ID der Dialogfeldvorlagen-Ressource für den Explorer `CFileDialog` Objekt. Mit dieser Vorlage wird nur verwendet, auf Windows NT 3.51 oder wenn der Stil OFN_EXPLORER nicht vorhanden ist.  
   
- [in] *nWin4ID*  
- Enthält die ID der Dialogfeldvorlagen-Ressource für den Explorer `CFileDialog` Objekt. Mit dieser Vorlage wird verwendet, nur auf Windows NT 4.0 und höher, Windows 95 und höher, oder wenn styl OFN_EXPLORER vorhanden ist.  
+*nWin4ID*<br/>
+[in] Enthält die ID der Dialogfeldvorlagen-Ressource für den Explorer `CFileDialog` Objekt. Mit dieser Vorlage wird verwendet, nur auf Windows NT 4.0 und höher, Windows 95 und höher, oder wenn styl OFN_EXPLORER vorhanden ist.  
   
- [in] *lpWin3ID*  
- Enthält den Namen der Dialogfeldvorlagen-Ressource für den Explorer `CFileDialog` Objekt. Mit dieser Vorlage wird nur verwendet, auf Windows NT 3.51 oder wenn der Stil OFN_EXPLORER nicht vorhanden ist.  
+*lpWin3ID*<br/>
+[in] Enthält den Namen der Dialogfeldvorlagen-Ressource für den Explorer `CFileDialog` Objekt. Mit dieser Vorlage wird nur verwendet, auf Windows NT 3.51 oder wenn der Stil OFN_EXPLORER nicht vorhanden ist.  
   
- [in] *lpWin4ID*  
- Enthält den Namen der Dialogfeldvorlagen-Ressource des Explorers `CFileDialog` Objekt. Mit dieser Vorlage wird verwendet, nur auf Windows NT 4.0 und höher, Windows 95 und höher, oder wenn styl OFN_EXPLORER vorhanden ist.  
+*lpWin4ID*<br/>
+[in] Enthält den Namen der Dialogfeldvorlagen-Ressource des Explorers `CFileDialog` Objekt. Mit dieser Vorlage wird verwendet, nur auf Windows NT 4.0 und höher, Windows 95 und höher, oder wenn styl OFN_EXPLORER vorhanden ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Vom System wird nur eine der angegebenen Vorlagen verwendet. Das System bestimmt die zu verwendende Vorlage basierend auf dem Vorhandensein der OFN_EXPLORER-Stil und das Betriebssystem, das die Anwendung ausgeführt wird. Durch Angabe einer nicht-Explorer und die Explorer-Formatvorlage, ist es einfach, Windows NT 3.51, Windows NT 4.0 und höher und Windows 95 und höher unterstützt.  

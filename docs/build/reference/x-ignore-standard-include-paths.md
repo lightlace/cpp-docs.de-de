@@ -1,5 +1,5 @@
 ---
-title: -X (ignorieren Includepfaden) | Microsoft Docs
+title: -X (Standardincludepfad Standardincludepfade) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,46 +23,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5d246c43a1f234426b33ac640b3e1bb706d2f72
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 994568d74c63e612b55d1101ce957e646c555e4a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376467"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707433"
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X (Standardincludepfade ignorieren)
-Verhindert, dass den Compiler nach Includedateien in in der PATH und INCLUDE-Umgebungsvariablen angegebenen Verzeichnisse durchsucht.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-/X  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Sie können diese Option mit der [/i (Zusätzliche Includeverzeichnisse)](../../build/reference/i-additional-include-directories.md) (**/i**`directory`) Option.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
-  
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
-  
-2.  Klicken Sie auf den Ordner **C/C++** .  
-  
-3.  Klicken Sie auf die **Präprozessor** Eigenschaftenseite.  
-  
-4.  Ändern der **Standardincludepfad ignorieren** Eigenschaft.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
-  
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.IgnoreStandardIncludePath%2A>.  
-  
-## <a name="example"></a>Beispiel  
- In den folgenden Befehl `/X` teilt dem Compiler, um die Umgebungsvariablen PATH und INCLUDE angegebenen Speicherorten zu ignorieren und `/I` gibt das Verzeichnis, in dem Suchen nach Includedateien:  
-  
-```  
-CL /X /I \ALT\INCLUDE MAIN.C  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Compileroptionen](../../build/reference/compiler-options.md)   
- [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+
+Verhindert, dass der Compiler in in der PATH und INCLUDE-Umgebungsvariablen angegebenen Verzeichnisse nach Includedateien gesucht werden.
+
+## <a name="syntax"></a>Syntax
+
+```
+/X
+```
+
+## <a name="remarks"></a>Hinweise
+
+Sie können diese Option mit der [/i (Zusätzliche Includeverzeichnisse)](../../build/reference/i-additional-include-directories.md) (**/i**`directory`) Option.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
+
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+
+1. Klicken Sie auf den Ordner **C/C++** .
+
+1. Klicken Sie auf die **Präprozessor** Eigenschaftenseite.
+
+1. Ändern der **Standardincludepfad ignorieren** Eigenschaft.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
+
+- Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.IgnoreStandardIncludePath%2A>.
+
+## <a name="example"></a>Beispiel
+
+In den folgenden Befehl `/X` weist den Compiler an, die durch die Umgebungsvariablen PATH und INCLUDE angegeben Speicherorte zu ignorieren und `/I` gibt an, das Verzeichnis, in dem gesucht werden soll, für die Includedateien:
+
+```
+CL /X /I \ALT\INCLUDE MAIN.C
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Compileroptionen](../../build/reference/compiler-options.md)<br/>
+[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

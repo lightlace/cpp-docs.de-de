@@ -1,5 +1,5 @@
 ---
-title: STUB | Microsoft Docs
+title: STUB | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 385e073f877a938a3b73fa79036d27cf50c1e4ec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 151d7b425a7f397a05e3a06e9d94489a0c76f899
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375200"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725113"
 ---
 # <a name="stub"></a>STUB
-Wenn eine Moduldefinitionsdatei verwendet, die einen virtuellen Gerätetreiber (VxD) erstellt, können Sie einen Dateinamen angeben, die eine Anweisung-Struktur (definiert in WINNT. H), in dem virtuelle Gerätetreiber (VxD), anstatt das Standardheader verwendet werden.  
-  
-```  
-STUB:filename  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Alternativ können Sie angeben *Filename* ist mit der [/STUB](../../build/reference/stub-ms-dos-stub-file-name.md) (Linkeroption).  
-  
- STUB ist in einer Moduldefinitionsdatei nur beim Erstellen eines VxD gültig.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Regeln für Moduldefinitionsanweisungen](../../build/reference/rules-for-module-definition-statements.md)
+
+Wenn eine Moduldefinitionsdatei verwendet, die einen virtuellen Gerätetreiber (VxD) erstellt, können Sie einen Dateinamen angeben, der eine Anweisung-Struktur (definiert in WINNT. enthält H), die im virtuellen Gerätetreiber (VxD), statt der Standardheader verwendet werden.
+
+```
+STUB:filename
+```
+
+## <a name="remarks"></a>Hinweise
+
+Eine entsprechende Möglichkeit zum angeben *Filename* ist mit der [/STUB](../../build/reference/stub-ms-dos-stub-file-name.md) -Linkeroption.
+
+STUB gilt in eine Moduldefinitionsdatei, nur, wenn Sie einen VxD zu erstellen.
+
+## <a name="see-also"></a>Siehe auch
+
+[Regeln für Moduldefinitionsanweisungen](../../build/reference/rules-for-module-definition-statements.md)

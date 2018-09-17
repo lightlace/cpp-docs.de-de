@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5782cf051fe680cb99dcd99c8e9c2d050c4184cc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7bfa501834102e37c14de11ee1af84a21e82c35f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758130"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703845"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr-Klasse
 
@@ -130,17 +130,17 @@ CComGITPtr(CComGITPtr&& rv);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *p*  
-Ein Schnittstellenzeiger in der globalen Schnittstellentabelle (GIT) gespeichert werden.
+*p*<br/>
+[in] Ein Schnittstellenzeiger in der globalen Schnittstellentabelle (GIT) gespeichert werden.
 
-[in] *Git*  
-Ein Verweis auf einen vorhandenen `CComGITPtr` Objekt.
+*Git*<br/>
+[in] Ein Verweis auf einen vorhandenen `CComGITPtr` Objekt.
 
-[in] *DwCookie*  
-Ein Cookie verwendet, um den Schnittstellenzeiger zu identifizieren.
+*dwCookie*<br/>
+[in] Ein Cookie verwendet, um den Schnittstellenzeiger zu identifizieren.
 
-[in] *rv*  
-Die Quelle `CComGITPtr` Objekt, das Verschieben von Daten aus.
+*Rv*<br/>
+[in] Die Quelle `CComGITPtr` Objekt, das Verschieben von Daten aus.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -238,17 +238,17 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *p*  
-Ein Zeiger auf eine Schnittstelle.
+*p*<br/>
+[in] Ein Zeiger auf eine Schnittstelle.
 
-[in] *Git*  
-Ein Verweis auf ein `CComGITPtr`-Objekt.
+*Git*<br/>
+[in] Ein Verweis auf eine `CComGITPtr` Objekt.
 
-[in] *DwCookie*  
-Ein Cookie verwendet, um den Schnittstellenzeiger zu identifizieren.
+*dwCookie*<br/>
+[in] Ein Cookie verwendet, um den Schnittstellenzeiger zu identifizieren.
 
-[in] *rv*  
-Die `CComGITPtr` zum Verschieben von Daten aus.
+*Rv*<br/>
+[in] Die `CComGITPtr` zum Verschieben von Daten aus.
 
 ### <a name="return-value"></a>Rückgabewert
 

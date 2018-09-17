@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27a96082f620a09687102dd3fd42e6253968f2f7
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8a0da6941a3076b23eb127cdcb87fee2953a80b9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693971"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707465"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl-Klasse
 Die `CMFCEditBrowseCtrl` Klasse unterstützt das Bearbeitungssteuerelement durchsuchen, als editierbares Textfeld, das optional eine Schaltfläche zum Durchsuchen enthält. Wenn der Benutzer auf die Schaltfläche zum Durchsuchen klicken, führt das Steuerelement eine benutzerdefinierte Aktion aus oder zeigt ein Standarddialogfeld an, das einen Dateibrowser oder einen Ordnerbrowser enthält.  
@@ -84,14 +84,17 @@ class CMFCEditBrowseCtrl : public CEdit
   
  Die `CMFCEditBrowseCtrl` Klasse unterstützt die folgenden Modi.  
   
- **Benutzerdefinierter Modus**  
- Eine benutzerdefinierte Aktion wird ausgeführt, wenn der Benutzer die Schaltfläche zum Durchsuchen klickt. Sie können z. B. eine anwendungsspezifische-Dialogfeld angezeigt.  
+- **Benutzerdefinierter Modus**
+
+   Eine benutzerdefinierte Aktion wird ausgeführt, wenn der Benutzer die Schaltfläche zum Durchsuchen klickt. Sie können z. B. eine anwendungsspezifische-Dialogfeld angezeigt.  
   
- **Datei-Modus**  
- Ein Dialogfeld zur standard-Datei wird angezeigt, wenn der Benutzer die Schaltfläche zum Durchsuchen klickt.  
+- **Datei-Modus**
+
+   Ein Dialogfeld zur standard-Datei wird angezeigt, wenn der Benutzer die Schaltfläche zum Durchsuchen klickt.  
   
- **Folder-Modus**  
- Klickt der Benutzer die Schaltfläche zum Durchsuchen, wird ein Dialogfeld zur Standardordner angezeigt.  
+- **Folder-Modus**
+
+   Klickt der Benutzer die Schaltfläche zum Durchsuchen, wird ein Dialogfeld zur Standardordner angezeigt.  
   
 ## <a name="how-to-specify-an-edit-browse-control"></a>Gewusst wie: Angeben eines durchsuchen-Bearbeitungssteuerelements  
  Führen Sie die folgenden Schritte aus, um ein Bearbeitungssteuerelement durchsuchen, in Ihrer Anwendung zu integrieren:  

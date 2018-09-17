@@ -1,5 +1,5 @@
 ---
-title: Bewährte Vorgehensweisen für die Optimierung | Microsoft Docs
+title: Bewährte Vorgehensweisen für die Optimierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63d3437a08e3c8b69b564176e0f377566ab491e6
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d224f2551de968cef5dea5698099ad564b7894fb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704239"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717443"
 ---
 # <a name="optimization-best-practices"></a>Bewährte Vorgehensweisen für die Optimierung
 
@@ -30,32 +30,32 @@ In diesem Dokument werden einige bewährte Methoden für die Optimierung in Visu
 
 ### <a name="profile-guided-optimization"></a>Profilgesteuerte Optimierung
 
-Visual C++ unterstützt *Profilgesteuerte Optimierung* (PGO). Diese Optimierung verwendet Profildaten aus dem Training Ausführungen einer instrumentierten Version einer Anwendung, um spätere Optimierung der Anwendung zu erzielen. Das Verwenden der profilgesteuerte Optimierung (PGO) kann zeitaufwendig sein, sodass sie möglicherweise nicht von allen Entwicklern genutzt wird. Wir empfehlen jedoch, die profilgesteuerte Optimierung (PGO) für das endgültige Releasebuild eines Projekts zu verwenden. Weitere Informationen finden Sie unter [Profilgesteuerte Optimierung](../../build/reference/profile-guided-optimizations.md).
+Visual C++ unterstützt *Profilgesteuerte Optimierung* (PGO). Diese Optimierung verwendet Profildaten aus Training Ausführungen einer instrumentierten Version einer Anwendung, um spätere Optimierung der Anwendung zu fördern. Das Verwenden der profilgesteuerte Optimierung (PGO) kann zeitaufwendig sein, sodass sie möglicherweise nicht von allen Entwicklern genutzt wird. Wir empfehlen jedoch, die profilgesteuerte Optimierung (PGO) für das endgültige Releasebuild eines Projekts zu verwenden. Weitere Informationen finden Sie unter [Profile-Guided Optimizations](../../build/reference/profile-guided-optimizations.md).
 
-Darüber hinaus *Optimierung des ganzen Programms* (auch bekannt als Link-Time Code Generation) und die **/O1** und **/O2** Optimierungen wurden verbessert. Allgemein gilt, daß eine Anwendung, die mit einer dieser Optionen kompiliert wurde, sich durch eine höhere Geschwindigkeit auszeichnet als dieselbe Anwendung, die mit einem früheren Compiler kompiliert wurde. 
+Darüber hinaus *Optimierung des ganzen Programms* (auch Link-Zeitcodegenerierung genannt) und die **"/ O1"** und **"/ O2"** Optimierungen wurden verbessert. Allgemein gilt, daß eine Anwendung, die mit einer dieser Optionen kompiliert wurde, sich durch eine höhere Geschwindigkeit auszeichnet als dieselbe Anwendung, die mit einem früheren Compiler kompiliert wurde.
 
-Weitere Informationen finden Sie unter [/GL (Optimierung des ganzen Programms)](../../build/reference/gl-whole-program-optimization.md) und [/O1, / O2 (Größe minimieren, Geschwindigkeit maximieren)](../../build/reference/o1-o2-minimize-size-maximize-speed.md).
+Weitere Informationen finden Sie unter [/GL (Whole Program Optimization)](../../build/reference/gl-whole-program-optimization.md) und [/O1, / O2 (Größe minimieren, Geschwindigkeit maximieren)](../../build/reference/o1-o2-minimize-size-maximize-speed.md).
 
-### <a name="which-level-of-optimization-to-use"></a>Die Optimierungsebene verwenden
+### <a name="which-level-of-optimization-to-use"></a>Welche Ebene der Optimierung verwenden
 
 Wenn es möglich ist, sollten endgültige Releasebuilds auf jeden Fall unter Verwendung der profilgesteuerten Optimierung (PGO) kompiliert werden. Falls eine profilgesteuerte Optimierung (PGO) nicht möglich sein sollte, weil z. B. die Infrastruktur zur Ausführung der instrumentierten Builds nicht ausreicht oder kein Zugang zu Szenarios besteht, wird das Ausführen des Buildvorgangs mit der Kompletten Programmoptimierung empfohlen.
 
-Die **/Gy** -Schalter ist auch sehr nützlich. Er generiert ein separates COMDAT für jede Funktion und verleiht dem Linker dadurch mehr Flexibilität beim Entfernen COMDATs, auf die nicht verwiesen wird, und bei der COMDAT-Faltung. Der einzige Nachteil von **/Gy** ist, dass dies zu Problemen beim Debuggen führen kann. Diese Option sollte also generell verwendet werden. Weitere Informationen finden Sie unter [/Gy (Funktionslevel-Linking aktivieren)](../../build/reference/gy-enable-function-level-linking.md).
+Die **/Gy** -Schalter ist auch sehr nützlich. Er generiert ein separates COMDAT für jede Funktion und verleiht dem Linker dadurch mehr Flexibilität beim Entfernen COMDATs, auf die nicht verwiesen wird, und bei der COMDAT-Faltung. Der einzige Nachteil von **/Gy** besteht darin, dass dies zu Problemen beim Debuggen führen kann. Diese Option sollte also generell verwendet werden. Weitere Informationen finden Sie unter [/Gy (Funktionslevel-Linking aktivieren)](../../build/reference/gy-enable-function-level-linking.md).
 
-Linken in 64-Bit-Umgebungen, ist es wird empfohlen, verwenden Sie die **/OPT: REF, ICF** (Linkeroption), und in 32-Bit-Umgebungen **/OPT: REF** wird empfohlen. Weitere Informationen finden Sie unter [/OPT (Optimierungen)](../../build/reference/opt-optimizations.md).
+Für die Verknüpfung in 64-Bit-Umgebungen, ist es wird empfohlen, verwenden Sie die **/OPT: REF "," Windows-Firewall** -Linkeroption, und in 32-Bit-Umgebungen **/OPT: REF** wird empfohlen. Weitere Informationen finden Sie unter [/OPT (Optimierungen)](../../build/reference/opt-optimizations.md).
 
 Es wird dringend empfohlen, Debugsymbole zu generieren. Dies gilt sogar für optimierte Releasebuilds. Die Symbole beeinflussen den generierten Code nicht, erleichtern jedoch das ggf. nötige Debuggen der Anwendung sehr.
 
 ### <a name="floating-point-switches"></a>Gleitkomma-switches
 
-Die **op** Compileroption wurde entfernt, und die folgenden vier Compileroptionen Umgang mit floating Point Optimierungen wurden hinzugefügt:
+Die **die/op** -Compileroption wurde entfernt, und die folgenden vier Compileroptionen Umgang mit floating Point Optimierungen wurden hinzugefügt:
 
 |||
 |-|-|
 |**/ fp: präzise**|Dies ist die als Standard empfohlene Option, die in den meisten Fällen verwendet werden sollte.|
-|**/ fp: fast**|Empfohlen für die Fälle, in denen die Leistung von höchster Wichtigkeit ist, z. B. bei Spielen. Dies führt zur schnellsten Programmausführung.|
+|**fast**|Empfohlen für die Fälle, in denen die Leistung von höchster Wichtigkeit ist, z. B. bei Spielen. Dies führt zur schnellsten Programmausführung.|
 |**/ fp: strict**|Empfohlen für die Fälle, in denen präzise Gleitkommaausnahmen und IEEE-Verhalten gewünscht werden. Dies führt zur langsamsten Programmausführung.|
-|**/ fp: except [-]**|Kann verwendet werden, zusammen mit **/fp: strict** oder **/fp: präzise**, aber nicht **/fp: fast**.|
+|**/ fp: except [-]**|Kann verwendet werden, zusammen mit **/fp: strict** oder **/fp: präzise**, aber nicht **fast**.|
 
 Weitere Informationen finden Sie unter [/fp (Festlegen des Gleitkommaverhaltens)](../../build/reference/fp-specify-floating-point-behavior.md).
 
@@ -71,7 +71,7 @@ Die `restrict`-declspec liefert dem Compiler weitere Informationen zur Durchfüh
 
 Es muss aber erwähnt werden, dass diese Informationen vom Compiler als Zusicherung behandelt werden, d. h., sie werden vom Compiler nicht überprüft. Wenn das Programm diese `restrict`-declspec unpassend verwendet, führt dies u. U. zu einem fehlerhaften Verhalten des Programms.
 
-Weitere Informationen finden Sie unter [beschränken](../../cpp/restrict.md).
+Weitere Informationen finden Sie unter [einschränken](../../cpp/restrict.md).
 
 Die `noalias`-declspec wird ebenfalls nur auf Funktionen angewendet, und sie gibt an, dass die Funktion eine halbreine Funktion ist. Eine halbreine Funktion ist eine Funktion, die nur lokale Variablen, Argumente und Dereferenzierungen der ersten Ebene von Argumenten ändert oder auf diese verweist. Diese declspec ist eine Zusicherung für den Compiler. Wenn die Funktion auf Globals oder auf Dereferenzierungen der zweiten Ebene von Zeigerargumenten verweist, generiert der Compiler u. U. Code, der zum Abbruch der Anwendung führt.
 
@@ -103,17 +103,17 @@ Außerdem steht mit `#pragma inline_depth` ein nützliches Pragma zur Beschränk
 
 ## <a name="restrict-and-assume"></a>__restrict und \__assume
 
-Es gibt eine Reihe von Schlüsselwörtern in Visual C++, die die Leistung verbessert werden kann: [__restrict](../../cpp/extension-restrict.md) und [__assume](../../intrinsics/assume.md).
+Es gibt eine Reihe von Schlüsselwörtern in Visual C++, die Leistung verbessert werden kann: ["__restrict"](../../cpp/extension-restrict.md) und [__assume](../../intrinsics/assume.md).
 
 Zuerst muss darauf hingewiesen werden, dass es sich bei `__restrict` und `__declspec(restrict)` um zwei verschiedene Elemente handelt. Obwohl sie gewisse Gemeinsamkeiten aufweisen, unterscheidet sich ihre Semantik. `__restrict` ist ein Typqualifizierer, wie `const` oder `volatile`, wird aber ausschließlich für Zeigertypen eingesetzt.
 
-Ein Zeiger, der mit verändert wird `__restrict` wird als bezeichnet eine *__restrict-Zeiger*. Ein __restrict-Zeiger ist ein Zeiger, der nur über zugegriffen werden kann die \__restrict Zeiger. In anderen Worten: kann nicht einem anderen Zeiger verwendet werden, Zugriff auf die Daten, die durch die \__restrict Zeiger.
+Ein Zeiger, der mit geändert wird `__restrict` wird als bezeichnet ein *__restrict-Zeiger*. Ein __restrict-Zeiger ist ein Zeiger, der nur über zugegriffen werden kann die \__restrict Zeiger. Anders gesagt kann nicht einem anderen Zeiger verwendet werden, Zugriff auf die Daten verweist die \__restrict Zeiger.
 
 `__restrict` kann sich als ein sehr leistungsstarkes Tool für den Visual C++-Optimierer erweisen, sollte jedoch mit großer Umsicht verwendet werden. Wenn Sie dieses Tool unangemessen verwenden, führt der Optimierer u. U. eine Optimierung durch, die zum Abbruch der Anwendung führt.
 
 Die `__restrict` -Schlüsselwort ersetzt die **/OA** -Option aus vorherigen Versionen.
 
-Mit `__assume`, ein Entwickler kann den Compiler anweisen, Annahmen über den Wert einer Variablen zu stellen.
+Mit `__assume`, Entwickler kann den Compiler anweisen, Annahmen über den Wert einer Variablen zu treffen.
 
 Beispielsweise teilt `__assume(a < 5);` dem Compiler mit, dass in dieser Zeile des Codes die Variable `a` kleiner als 5 ist. Auch dies ist eine Zusage für den Compiler. Wenn `a` an dieser Stelle im Programm 6 ist, entspricht das Verhalten des Programms nach der Optimierung des Compilers möglicherweise nicht Ihren Erwartungen. `__assume` ist vor Switch-Anweisungen und/oder bedingten Ausdrücken sehr nützlich.
 
@@ -121,7 +121,7 @@ Für `__assume` gelten einige Beschränkungen. Es handelt sich hierbei genau wie
 
 ## <a name="intrinsic-support"></a>Unterstützung für systeminterne Funktionen
 
-Systeminterne Funktionen werden bei Funktionsaufrufen verwendet, bei denen der Compiler auf ein systeminternes Wissen über den Aufruf zurückgreifen kann und keine Funktion in einer Bibliothek aufzurufen braucht. Stattdessen wird der Code für diese Funktion vom Compiler ausgegeben. Die Headerdatei \<intrin.h > enthält alle verfügbaren systeminternen Funktionen für jede der unterstützten Hardwareplattformen.
+Systeminterne Funktionen werden bei Funktionsaufrufen verwendet, bei denen der Compiler auf ein systeminternes Wissen über den Aufruf zurückgreifen kann und keine Funktion in einer Bibliothek aufzurufen braucht. Stattdessen wird der Code für diese Funktion vom Compiler ausgegeben. Die Headerdatei \<"INTRIN.h" > enthält alle verfügbaren systeminternen Funktionen für alle Plattformen unterstützte Hardware.
 
 Dank systeminterner Funktionen können Programmierer tief in den Code gehen, ohne Assemblys zu verwenden. Die Verwendung systeminterner Funktionen hat mehrere Vorteile:
 
@@ -131,7 +131,7 @@ Dank systeminterner Funktionen können Programmierer tief in den Code gehen, ohn
 
 - Die Vorteile von Compileroptimierungen können für den Code genutzt werden. Mit der zunehmenden Verbesserung des Compilers verbessert sich auch die Codegenerierung für die systeminternen Funktionen.
 
-Weitere Informationen finden Sie unter [Compilerfunktionen](../../intrinsics/compiler-intrinsics.md).
+Weitere Informationen finden Sie unter [intrinsische Compilerfunktionen](../../intrinsics/compiler-intrinsics.md).
 
 ## <a name="exceptions"></a>Ausnahmen
 

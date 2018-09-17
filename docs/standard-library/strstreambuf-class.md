@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7f52e0e62a831a77a7a00dc50aeecac45cd0fe9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2424ce23c0a376156bbb78869a2e33e501958e73
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960553"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719133"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf-Klasse
 
@@ -103,8 +103,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Parameter
 
-*_Freezeit*  
- Ein **"bool"** , der angibt, ob den Stream fixiert werden soll.
+*_Freezeit*<br/>
+Ein **"bool"** , der angibt, ob den Stream fixiert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -191,8 +191,8 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="parameters"></a>Parameter
 
-*_Meta*  
- Das Zeichen, das in den Puffer eingefügt werden soll, oder `EOF`.
+*_Meta*<br/>
+Das Zeichen, das in den Puffer eingefügt werden soll, oder `EOF`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -216,8 +216,8 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="parameters"></a>Parameter
 
-*_Meta*  
- Das Zeichen, das in den Puffer eingefügt werden soll, oder `EOF`.
+*_Meta*<br/>
+Das Zeichen, das in den Puffer eingefügt werden soll, oder `EOF`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -280,14 +280,14 @@ virtual streampos seekoff(streamoff _Off,
 
 ### <a name="parameters"></a>Parameter
 
-*_Off*  
- Die Position, die für die Suche, relativ zum *_Way*.
+*_Off*<br/>
+Die Position, die für die Suche, relativ zum *_Way*.
 
-*_Way*  
- Gibt den Startpunkt für Offsetvorgänge an. Mögliche Werte sind unter [seekdir](../standard-library/ios-base-class.md#seekdir) aufgeführt.
+*_Way*<br/>
+Gibt den Startpunkt für Offsetvorgänge an. Mögliche Werte sind unter [seekdir](../standard-library/ios-base-class.md#seekdir) aufgeführt.
 
-*_Which*  
- Gibt den Modus für die Zeigerposition an. Standardmäßig können Lese- und Schreibpositionen geändert werden.
+*_Which*<br/>
+Gibt den Modus für die Zeigerposition an. Standardmäßig können Lese- und Schreibpositionen geändert werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -319,11 +319,11 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="parameters"></a>Parameter
 
-*_Sp*  
- Die Position, nach der gesucht werden soll.
+*_Sp*<br/>
+Die Position, nach der gesucht werden soll.
 
-*_Which*  
- Gibt den Modus für die Zeigerposition an. Standardmäßig können Lese- und Schreibpositionen geändert werden.
+*_Which*<br/>
+Gibt den Modus für die Zeigerposition an. Standardmäßig können Lese- und Schreibpositionen geändert werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -389,20 +389,20 @@ strstreambuf(const unsigned char* _Getptr,
 
 ### <a name="parameters"></a>Parameter
 
-*_Allocfunc*  
- Funktion, mit der Speicher zugewiesen wird.
+*_Allocfunc*<br/>
+Funktion, mit der Speicher zugewiesen wird.
 
-*count*  
- Bestimmt die Länge des Puffers verweist *_Getptr*. Wenn *_Getptr* ist kein Argument (erste Konstruktor Form), eine empfohlene Zuweisungsgröße für Puffer.
+*count*<br/>
+Bestimmt die Länge des Puffers verweist *_Getptr*. Wenn *_Getptr* ist kein Argument (erste Konstruktor Form), eine empfohlene Zuweisungsgröße für Puffer.
 
-*_Freefunc*  
- Zum Freigeben von Pufferspeicher verwendete Funktion.
+*_Freefunc*<br/>
+Zum Freigeben von Pufferspeicher verwendete Funktion.
 
-*_Getptr*  
- Ein Puffer, der für die Eingabe verwendet wird.
+*_Getptr*<br/>
+Ein Puffer, der für die Eingabe verwendet wird.
 
-*_Putptr*  
- Ein Puffer, der für die Ausgabe verwendet wird.
+*_Putptr*<br/>
+Ein Puffer, der für die Ausgabe verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 

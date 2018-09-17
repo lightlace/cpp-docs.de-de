@@ -1,5 +1,5 @@
 ---
-title: Beheben von Problemen erstellen | Microsoft Docs
+title: Beheben von Problemen erstellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 708bb8f561d2611c2ee778aa4a0c6cbd1cc3dad2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9b304fa6bcc9b0b248719ea44b28e9dae5c76a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372151"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726530"
 ---
 # <a name="fixing-release-build-problems"></a>Beheben von Problemen mit dem Releasebuild
-Code Kompilierungsfehler generiert, wird nach dem Umschalten vom Debugbuilds zur Releasebuild stehen einige Bereiche geprüft werden sollten.  
-  
- Compilerwarnungen möglicherweise beim Erstellen einer optimierten (Version) angezeigt werden, die Sie bei einem Debugbuild nicht empfangen wurde.  
-  
--   [Überprüfen Sie die ASSERT-Anweisungen](../../build/reference/using-verify-instead-of-assert.md)  
-  
--   [Verwenden Sie die Debugbuilds zur Suche für Speicherüberschreibung](../../build/reference/using-the-debug-build-to-check-for-memory-overwrite.md)  
-  
--   [Aktivieren Sie die Generierung der Debuginformationen für das Releasebuild](../../build/reference/how-to-debug-a-release-build.md)  
-  
--   [Überprüfen Sie nach Speicherüberschreibungen](../../build/reference/checking-for-memory-overwrites.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Releasebuilds](../../build/reference/release-builds.md)   
- [Häufig auftretende Probleme beim Erstellen eines Releasebuilds](../../build/reference/common-problems-when-creating-a-release-build.md)   
- [Codeoptimierung](../../build/reference/optimizing-your-code.md)
+
+Wenn Ihr Code Compilerfehler nach dem Umschalten vom Debugbuilds zur Releasebuild generiert wird, sind einige Bereiche geprüft werden sollten.
+
+Sie erhalten Compiler-Warnungen während eines Buildvorgangs optimierte (Version), die Sie nicht bei einem Debugbuild erhalten haben.
+
+- [Überprüfen Sie die ASSERT-Anweisungen](../../build/reference/using-verify-instead-of-assert.md)
+
+- [Verwenden Sie die Debugbuilds zur Suche für Speicherüberschreibung](../../build/reference/using-the-debug-build-to-check-for-memory-overwrite.md)
+
+- [Aktivieren Sie auf die Generierung der Debuginformationen für die endgültige Produktversion](../../build/reference/how-to-debug-a-release-build.md)
+
+- [Überprüfen Sie nach Speicherüberschreibungen](../../build/reference/checking-for-memory-overwrites.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Releasebuilds](../../build/reference/release-builds.md)<br/>
+[Häufig auftretende Probleme beim Erstellen eines Releasebuilds](../../build/reference/common-problems-when-creating-a-release-build.md)<br/>
+[Codeoptimierung](../../build/reference/optimizing-your-code.md)

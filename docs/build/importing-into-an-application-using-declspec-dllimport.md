@@ -1,5 +1,5 @@
 ---
-title: Importieren in eine Anwendung mithilfe von "__declspec(dllimport)" "| Microsoft Docs
+title: Importieren in eine Anwendung mithilfe von __declspec(dllimport) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,49 +18,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82974ec688fbe688c98188c2e99a54462da81165
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 08a406c8884cdcb9d4b2ead2e61d416ac580fd73
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368833"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704081"
 ---
 # <a name="importing-into-an-application-using-declspecdllimport"></a>Importieren in eine Anwendung mithilfe von "__declspec(dllimport)"
-Wenn ein Programm öffentliche, durch eine DLL definierte Symbole verwendet, wird dieser Vorgang als Importieren bezeichnet. Beim Erstellen von Headerdateien für Anwendungen, die Erstellungsvorgang Ihre DLLs verwenden, verwenden **von "__declspec(dllimport)" "** für die Deklarationen der öffentlichen Symbole. Das Schlüsselwort **von "__declspec(dllimport)" "** funktioniert, ob Sie mit der DEF-Dateien oder Exportieren der **__declspec(dllexport)** Schlüsselwort.  
-  
- Um den Code verständlicher zu gestalten, definieren Sie ein Makro für **von "__declspec(dllimport)" "** und klicken Sie dann das Makro verwenden, um die Deklaration aller importierten Symbole:  
-  
-```  
-#define DllImport   __declspec( dllimport )  
-  
-DllImport int  j;  
-DllImport void func();  
-```  
-  
- Mit **von "__declspec(dllimport)" "** ist bei Funktionsdeklarationen optional, aber der Compiler effizienter Code erzeugt, wenn Sie dieses Schlüsselwort verwenden. Sie müssen allerdings verwenden **von "__declspec(dllimport)" "** für die importierende ausführbare Datei, auf die öffentlichen Datensymbole und Objekte des DLL zugreifen. Beachten Sie, dass die Benutzer Ihrer DLL noch eine Verknüpfung mit einer Importbibliothek herstellen müssen.  
-  
- Sie können dieselbe Headerdatei sowohl für die DLL als auch für die Clientanwendung nutzen. Verwenden Sie zu diesem Zweck ein spezielles Präprozessorsymbol, das angibt, ob die DLL oder die Clientanwendung erstellt wird. Zum Beispiel:  
-  
-```  
-#ifdef _EXPORTING  
-   #define CLASS_DECLSPEC    __declspec(dllexport)  
-#else  
-   #define CLASS_DECLSPEC    __declspec(dllimport)  
-#endif  
-  
-class CLASS_DECLSPEC CExampleA : public CObject  
-{ ... class definition ... };  
-```  
-  
-## <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?  
-  
--   [Initialisieren einer DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?  
-  
--   [Importieren und Exportieren von Inlinefunktionen](../build/importing-and-exporting-inline-functions.md)  
-  
--   [Gegenseitige Importe](../build/mutual-imports.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Importieren in eine Anwendung](../build/importing-into-an-application.md)
+
+Wenn ein Programm öffentliche, durch eine DLL definierte Symbole verwendet, wird dieser Vorgang als Importieren bezeichnet. Bei der Erstellung Headerdateien für Anwendungen, die Ihre DLLs verwenden, erstellen Sie mit dem Sie **von "__declspec(dllimport)" "** für die Deklarationen der öffentlichen Symbole. Das Schlüsselwort **von "__declspec(dllimport)" "** funktioniert, ob der export über DEF-Dateien oder mit der **__declspec(dllexport)** Schlüsselwort.
+
+Um den Code lesbarer gestalten, definieren Sie ein Makro für **von "__declspec(dllimport)" "** und klicken Sie dann das Makro verwenden, um die Deklaration aller importierten Symbole:
+
+```
+#define DllImport   __declspec( dllimport )
+
+DllImport int  j;
+DllImport void func();
+```
+
+Mithilfe von **von "__declspec(dllimport)" "** ist bei Funktionsdeklarationen optional, aber der Compiler effizienteren Code generiert, wenn Sie dieses Schlüsselwort verwenden. Sie müssen allerdings verwenden **von "__declspec(dllimport)" "** für die importierende ausführbare Datei, auf die öffentlichen Datensymbole und Objekte der DLLs zugreifen. Beachten Sie, dass die Benutzer Ihrer DLL noch eine Verknüpfung mit einer Importbibliothek herstellen müssen.
+
+Sie können dieselbe Headerdatei sowohl für die DLL als auch für die Clientanwendung nutzen. Verwenden Sie zu diesem Zweck ein spezielles Präprozessorsymbol, das angibt, ob die DLL oder die Clientanwendung erstellt wird. Zum Beispiel:
+
+```
+#ifdef _EXPORTING
+   #define CLASS_DECLSPEC    __declspec(dllexport)
+#else
+   #define CLASS_DECLSPEC    __declspec(dllimport)
+#endif
+
+class CLASS_DECLSPEC CExampleA : public CObject
+{ ... class definition ... };
+```
+
+## <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?
+
+- [Initialisieren einer DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+
+## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?
+
+- [Importieren und Exportieren von Inlinefunktionen](../build/importing-and-exporting-inline-functions.md)
+
+- [Gegenseitige Importe](../build/mutual-imports.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Importieren in eine Anwendung](../build/importing-into-an-application.md)

@@ -15,37 +15,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 971f1fae3fe2d6733b0819f3a6e88db07612bce7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 1fc7f2bc51c257690a300776120d093e746e3eb8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571576"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711894"
 ---
 # <a name="x64-software-conventions"></a>x64-Softwarekonventionen
-In diesem Abschnitt wird beschrieben, Visual C++-Komponente aufrufen Konvention Methodik für X64, 64-Bit-Erweiterung für die X86 Architektur.  
-  
--   [Übersicht über x64-Aufrufkonventionen](../build/overview-of-x64-calling-conventions.md)  
-  
--   [Typen und Speicher](../build/types-and-storage.md)  
-  
--   [Registerverwendung](../build/register-usage.md)  
-  
--   [Aufrufkonvention](../build/calling-convention.md)  
-  
--   [Verwendung von Stapeln](../build/stack-usage.md)  
-  
--   [Prolog und Epilog](../build/prolog-and-epilog.md)  
-  
--   [Ausnahmebehandlung](../cpp/exception-handling-in-visual-cpp.md)  
-  
--   [Systeminterne Funktionen und Inlineassemblys](../build/intrinsics-and-inline-assembly.md)  
-  
--   [Bildformat](../build/image-format.md)  
-  
- Die folgende Compileroption können Sie Ihre Anwendung für X64 zu optimieren:  
-  
--   [/favor (Für Architektureigenschaften optimieren)](../build/reference/favor-optimize-for-architecture-specifics.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Aufrufkonventionen](../cpp/calling-conventions.md)
+
+In diesem Abschnitt wird beschrieben, Visual C++-Komponente aufrufen Konvention Methodik für X64, 64-Bit-Erweiterung für die X86 Architektur.
+
+- [Übersicht über x64-Aufrufkonventionen](../build/overview-of-x64-calling-conventions.md)
+
+- [Typen und Speicher](../build/types-and-storage.md)
+
+- [Registerverwendung](../build/register-usage.md)
+
+- [Aufrufkonvention](../build/calling-convention.md)
+
+- [Verwendung von Stapeln](../build/stack-usage.md)
+
+- [Prolog und Epilog](../build/prolog-and-epilog.md)
+
+- [Ausnahmebehandlung](../cpp/exception-handling-in-visual-cpp.md)
+
+- [Systeminterne Funktionen und Inlineassemblys](../build/intrinsics-and-inline-assembly.md)
+
+- [Bildformat](../build/image-format.md)
+
+Die folgende Compileroption können Sie Ihre Anwendung für X64 zu optimieren:
+
+- [/favor (Für Architektureigenschaften optimieren)](../build/reference/favor-optimize-for-architecture-specifics.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Aufrufkonventionen](../cpp/calling-conventions.md)

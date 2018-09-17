@@ -54,12 +54,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 900200eb1894a4f7065a008aeada9b90e71c6fcd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 369d7c1c6c5bf2201c52bab67361f196b309c6f9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42575787"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702545"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedIncrement“
 **Microsoft-spezifisch**  
@@ -108,8 +108,8 @@ __int64 _InterlockedIncrement64_nf(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in, out] `lpAddend`  
- Zeiger auf die zu erhöhende Variable.  
+*lpAddend*<br/>
+[in, out] Zeiger auf die Variable inkrementiert werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Der Rückgabewert ist der resultierende erhöhte Wert.  

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a53dd239d2c6cdba77f977cc94642828c5e91b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 79facf2498769c0f4385f6dbc84133c3773fe0e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216473"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705690"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox-Klasse
 Implementiert ein Kombinationsfeld, das eine Liste von Schriftarten enthält. Das Kombinationsfeld kann in einem Menübandbereich platziert werden.  
@@ -106,14 +106,14 @@ void BuildFonts(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nFontType*  
- Gibt die Schriftart der Schriftarten hinzufügen.  
+*nFontType*<br/>
+[in] Gibt die Schriftart der Schriftarten hinzufügen.  
   
- [in] *nCharSet*  
- Gibt den Zeichensatz der Schriftarten hinzufügen.  
+*nCharSet*<br/>
+[in] Gibt den Zeichensatz der Schriftarten hinzufügen.  
   
- [in] *nPitchAndFamily*  
- Gibt die Schriftbreite und Schriftfamilie der Schriftarten hinzufügen.  
+*nPitchAndFamily*<br/>
+[in] Gibt die Schriftbreite und Schriftfamilie der Schriftarten hinzufügen.  
   
 ##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
  Erstellt und initialisiert ein [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md) Objekt.  
@@ -128,20 +128,20 @@ CMFCRibbonFontComboBox(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- Die Befehls-ID des Befehls, der ausgeführt wird, wenn der Benutzer ein Element aus dem Kombinationsfeld auswählt.  
+*nID*<br/>
+[in] Die Befehls-ID des Befehls, der ausgeführt wird, wenn der Benutzer ein Element aus dem Kombinationsfeld auswählt.  
   
- [in] *nFontType*  
- Gibt an, welche Schriftart zu Typen, für die im Kombinationsfeld angezeigt. Gültige Optionen sind DEVICE_FONTTYPE, RASTER_FONTTYPE, und TRUETYPE_FONTTYPE oder jede bitweise Kombination davon.  
+*nFontType*<br/>
+[in] Gibt an, welche Schriftart zu Typen, für die im Kombinationsfeld angezeigt. Gültige Optionen sind DEVICE_FONTTYPE, RASTER_FONTTYPE, und TRUETYPE_FONTTYPE oder jede bitweise Kombination davon.  
   
- [in] *nCharSet*  
- Filtert die Schriftarten in das Kombinationsfeld, mit denen, die den angegebenen Zeichensatz angehören...  
+*nCharSet*<br/>
+[in] Filtert die Schriftarten in das Kombinationsfeld, mit denen, die den angegebenen Zeichensatz angehören...  
   
- [in] *nPitchAndFamily*  
- Gibt die Schriftbreite und Schriftfamilie der Schriftarten, die im Kombinationsfeld angezeigt werden.  
+*nPitchAndFamily*<br/>
+[in] Gibt die Schriftbreite und Schriftfamilie der Schriftarten, die im Kombinationsfeld angezeigt werden.  
   
- [in] *nWidth*  
- Die Breite angibt in Pixel des Kombinationsfelds.  
+*nWidth*<br/>
+[in] Die Breite angibt in Pixel des Kombinationsfelds.  
   
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen zu möglichen *nFontType* Parameterwerten finden Sie unter [EnumFontFamProc](https://msdn.microsoft.com/library/windows/desktop/dd162621) in der Windows SDK-Dokumentation.  

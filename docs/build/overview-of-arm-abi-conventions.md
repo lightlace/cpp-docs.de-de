@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e5ee2ddc29c2a014aceb8ac6356cae9e42a916d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: def07f92cc05828c132ba7d34d3dcc06d4aecf50
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027322"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721447"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Übersicht über die ABI-Konventionen ARM32
 
@@ -64,16 +64,16 @@ Der Einsatz von IT-Instruktionen in Thumb-2-Code ist mit Ausnahme der folgenden 
 - Die Zielinstruktion muss eine der folgenden sein:
 
    |16-Bit-OpCodes|Klasse|Beschränkungen|
-    |---------------------|-----------|------------------|
-    |MOV, MVN|Verschieben|Rm != PC, Rd != PC|
-    |LDR, LDR[S]B, LDR[S]H|Aus Arbeitsspeicher laden|Jedoch keine LDR-Literalformen|
-    |STR, STRB, STRH|Im Arbeitsspeicher speichern||
-    |ADD, ADC, RSB, SBC, SUB|Addieren oder subtrahieren|Jedoch nicht ADD/SUB SP, SP, imm7-Formen<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
-    |CMP, CMN|Compare|Rm != PC, Rn != PC|
-    |MUL|Multiplizieren||
-    |ASR, LSL, LSR, ROR|Bit-Verschiebung||
-    |AND, BIC, EOR, ORR, TST|Bitweise arithmetisch||
-    |BX|Verzweigung zum Register|Rm != PC|
+   |---------------------|-----------|------------------|
+   |MOV, MVN|Verschieben|Rm != PC, Rd != PC|
+   |LDR, LDR[S]B, LDR[S]H|Aus Arbeitsspeicher laden|Jedoch keine LDR-Literalformen|
+   |STR, STRB, STRH|Im Arbeitsspeicher speichern||
+   |ADD, ADC, RSB, SBC, SUB|Addieren oder subtrahieren|Jedoch nicht ADD/SUB SP, SP, imm7-Formen<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
+   |CMP, CMN|Compare|Rm != PC, Rn != PC|
+   |MUL|Multiplizieren||
+   |ASR, LSL, LSR, ROR|Bit-Verschiebung||
+   |AND, BIC, EOR, ORR, TST|Bitweise arithmetisch||
+   |BX|Verzweigung zum Register|Rm != PC|
 
 Auch wenn aktuelle ARMv7-CPUs nicht den Einsatz von unzulässigen Instruktionsformen melden können, wird dies von zukünftigen Generationen erwartet. Wenn diese Formen erkannt werden, wird jedes Programm, das sie verwendet, unter Umständen mit einer nicht definierten Instruktionsausnahme beendet.
 
@@ -233,5 +233,5 @@ Der Counter ist ein wahrer Zyklus-Counter und keine Uhr, daher variiert die Zäh
 
 ## <a name="see-also"></a>Siehe auch
 
-[Häufig auftretende ARM-Migrationsprobleme bei Visual C++](../build/common-visual-cpp-arm-migration-issues.md)  
-[ARM-Ausnahmebehandlung](../build/arm-exception-handling.md)  
+[Häufig auftretende ARM-Migrationsprobleme bei Visual C++](../build/common-visual-cpp-arm-migration-issues.md)<br/>
+[ARM-Ausnahmebehandlung](../build/arm-exception-handling.md)

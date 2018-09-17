@@ -22,27 +22,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0c6a5af31eaba30af92201a2e2563b67aceed6e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 38b97354408d87d862955c0883c72d3e1459aa61
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104107"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719269"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs (Stapel-Überprüfungsaufrufe kontrollieren)
+
 Steuert Stapelüberprüfungen
 
 ## <a name="syntax"></a>Syntax
 
-```  
+```
 /Gs[size]
-```  
+```
 
 ## <a name="arguments"></a>Argumente
+
 *size*<br/>
 (Optional) Die Anzahl von Bytes, die von lokalen Variablen belegt werden können, bevor eine Stapelüberprüfung initiiert wird. Wenn die **/GS** Option wird angegeben, ohne eine `size` -Argument, es ist derselbe, als wenn **/Gs0**,
 
 ## <a name="remarks"></a>Hinweise
+
 Eine Stapelüberprüfung ist eine Codesequenz, die der Compiler in jeden Funktionsaufruf einfügt. Sobald die Stapelüberprüfung initiiert ist, belegt sie im Speicher so viel Platz, wie zum Speichern der lokalen Variablen der Funktion nötig ist.
 
 Wenn durch eine Funktion mehr als `size` Bytes an Stapelspeicher für lokale Variablen anfordert, wird für diese Funktion die Stapelüberprüfung initiiert. Standardmäßig generiert der Compiler Code, der eine Stapelüberprüfung initiiert, wenn für eine Funktion mehr als eine Seite Stapelspeicher erforderlich ist. Dies ist gleichbedeutend mit der Compileroption **/Gs4096** für X86 X64 und ARM-Plattformen. Mit diesem Wert sind eine Anwendung und der Speichermanager von Windows in der Lage, den für den Programmstapel reservierten Arbeitsspeicher zur Laufzeit dynamisch zu erhöhen.
@@ -58,18 +61,19 @@ Können Sie stapelüberprüfungen ein- oder ausschalten aktivieren, indem Sie mi
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
 
-2.  Wählen Sie die **C/C++-** Ordner.
+1. Wählen Sie die **C/C++-** Ordner.
 
-3.  Wählen Sie die **Befehlszeile** Eigenschaftenseite.
+1. Wählen Sie die **Befehlszeile** Eigenschaftenseite.
 
-4.  Geben Sie die Compileroption im Feld **Zusätzliche Optionen** ein.
+1. Geben Sie die Compileroption im Feld **Zusätzliche Optionen** ein.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
 
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Siehe auch
-[Compileroptionen](../../build/reference/compiler-options.md)   
+
+[Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

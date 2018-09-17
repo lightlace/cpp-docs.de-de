@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ddb7092b1a5556485848d122e21ac54b6efe182
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: de318ab79638f63fae98856987340ad62534f695
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606954"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721344"
 ---
 # <a name="safeintsafeint"></a>SafeInt::SafeInt
 
@@ -56,14 +56,14 @@ SafeInt (
 
 ### <a name="parameters"></a>Parameter
 
-[in] *ich*  
-Der Wert für die neue **SafeInt** Objekt. Dabei muss es sich um einen Parameter vom Typ T oder U, je nach den Konstruktor handeln.
+*i*<br/>
+[in] Der Wert für die neue **SafeInt** Objekt. Dabei muss es sich um einen Parameter vom Typ T oder U, je nach den Konstruktor handeln.
 
-[in] *b*  
-Der boolesche Wert für die neue **SafeInt** Objekt.
+*b*<br/>
+[in] Der boolesche Wert für die neue **SafeInt** Objekt.
 
-[in] *u*  
-Ein **SafeInt** u Die neue **SafeInt** Objekt hat den gleichen Wert wie *u*, aber vom Typ "t".
+*u*<br/>
+[in] Ein **SafeInt** u Die neue **SafeInt** Objekt hat den gleichen Wert wie *u*, aber vom Typ "t".
 
 U den Typ der Daten in die **SafeInt**. Dies kann entweder ein boolescher Wert, Zeichen oder ganze Zahl sein. Wenn sie ein ganzzahliger Typ ist, es kann sein mit oder ohne Vorzeichen und zwischen 8 und 64-Bit sein.
 

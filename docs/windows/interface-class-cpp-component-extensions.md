@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9b5bc8568c3655d8c038d70d78f3887b2c3becc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 775fbe39edc9478b1fce3afb39ee2bf1f6d5ed36
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607524"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714310"
 ---
 # <a name="interface-class--c-component-extensions"></a>interface class (Komponentenerweiterungen für C++)
 
@@ -50,8 +50,8 @@ Der Name der Schnittstelle.
 *inherit_access*  
 Der Zugriff auf *Base_interface*.  Die einzige Eingabehilfen für zulässig ist eine Basisschnittstelle **öffentliche** (Standard).
 
-*Base_interface* (optional)  
-Eine Basisschnittstelle für die Schnittstelle *Namen*.
+*base_interface*  
+(Optional) Eine Basisschnittstelle für die Schnittstelle *Namen*.
 
 ### <a name="remarks"></a>Hinweise
 

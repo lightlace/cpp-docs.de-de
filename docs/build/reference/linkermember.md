@@ -1,5 +1,5 @@
 ---
-title: -LINKERMEMBER | Microsoft Docs
+title: -LINKERMEMBER | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac961f985de65bb7eea9a4ad0f5d10b75fbe60d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0979009260381eb210e7992377bab8b5ae613338
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371498"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700608"
 ---
 # <a name="linkermember"></a>/LINKERMEMBER
-```  
-/LINKERMEMBER[:{1|2}]  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Option zeigt öffentliche in einer Bibliothek definierten Symbole. Geben Sie das Argument 1, um Symbole in Objektreihenfolge, zusammen mit ihren Offsets anzuzeigen. Geben Sie die 2-Argument, um Offsets und Indexnummern von Objekten anzuzeigen, und führen Sie dann die Symbole in alphabetischer Reihenfolge, zusammen mit dem Objektindex für die einzelnen. Um beide Ausgaben zu erhalten, geben Sie/LINKERMEMBER ohne Number-Arguments.  
-  
- Nur die [/Headers](../../build/reference/headers.md) DUMPBIN-Option ist verfügbar für die Verwendung in den Dateien erstellt wird, mit der [/GL](../../build/reference/gl-whole-program-optimization.md) -Compileroption.  
-  
-## <a name="see-also"></a>Siehe auch  
- [DUMPBIN-Optionen](../../build/reference/dumpbin-options.md)
+
+```
+/LINKERMEMBER[:{1|2}]
+```
+
+## <a name="remarks"></a>Hinweise
+
+Diese Option zeigt die öffentlichen Symbole, die in einer Bibliothek definierten. Geben Sie das Argument 1, um Symbole in Objektreihenfolge, zusammen mit ihren Offsets anzuzeigen. Geben Sie das Argument 2, um Offsets und Indexnummern von Objekten anzuzeigen, und führen Sie dann die Symbole in alphabetischer Reihenfolge, zusammen mit dem Objektindex für die einzelnen. Rufen Sie beide Ausgaben angegeben Sie/LINKERMEMBER ohne das Number-Argument werden.
+
+Nur die [/Headers](../../build/reference/headers.md) DUMPBIN-Option ist verfügbar für die Verwendung in Dateien mit der ["/ GL"](../../build/reference/gl-whole-program-optimization.md) -Compileroption.
+
+## <a name="see-also"></a>Siehe auch
+
+[DUMPBIN-Optionen](../../build/reference/dumpbin-options.md)

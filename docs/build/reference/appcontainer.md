@@ -18,24 +18,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea6f08a141d48183d96dba6cb02fcf31909af0ae
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3d8e19724183963329b959286a996b4f21d18b4c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686252"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709178"
 ---
 # <a name="appcontainer"></a>/APPCONTAINER
-Markiert eine ausführbare Datei, die in einem app-Container ausgeführt werden muss, z. B. ein Microsoft Store oder eine universelle Windows-app.  
-  
-```  
-  
-/APPCONTAINER[:NO]  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Eine ausführbare Datei, bei der die **/APPCONTAINER** -Option festgelegt wurde, kann nur in einem App-Container ausgeführt werden. Das ist die in Windows 8 eingeführte Prozessisolationsumgebung. Für Microsoft Store und universelle Windows-apps muss diese Option festgelegt werden.  
-  
-## <a name="see-also"></a>Siehe auch  
- [EDITBIN-Optionen](../../build/reference/editbin-options.md)   
- [Was ist eine universelle Windows-App?](/windows/uwp/get-started/universal-application-platform-guide)
+
+Markiert eine ausführbare Datei, die in einem app-Container ausgeführt werden muss, z. B. ein Microsoft Store oder eine universelle Windows-app.
+
+```
+
+/APPCONTAINER[:NO]
+```
+
+## <a name="remarks"></a>Hinweise
+
+Eine ausführbare Datei, bei der die **/APPCONTAINER** -Option festgelegt wurde, kann nur in einem App-Container ausgeführt werden. Das ist die in Windows 8 eingeführte Prozessisolationsumgebung. Für Microsoft Store und universelle Windows-apps muss diese Option festgelegt werden.
+
+## <a name="see-also"></a>Siehe auch
+
+[EDITBIN-Optionen](../../build/reference/editbin-options.md)<br/>
+[Was ist eine universelle Windows-App?](/windows/uwp/get-started/universal-application-platform-guide)

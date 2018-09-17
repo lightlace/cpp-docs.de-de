@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2744777a6f464181f5a9e8734af1d2bb023024dd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 381bb9505745331d2ef470c5fd4e8d55e5e742f8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767177"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705808"
 ---
 # <a name="atl-control-wizard"></a>ATL-Steuerelement-Assistent
 
@@ -52,49 +52,58 @@ Geben Sie die Namen für das Objekt, die Schnittstelle und die Klassen, die dem 
 
 Enthält Informationen für die C++-Klasse erstellt, um das Objekt implementiert.
 
-**Kurzname**  
-Legt den abgekürzten Namen für das Objekt fest. Der Name, den Sie angeben, bestimmt die Klasse und **Co-Klasse** -Namen ist, wird die Datei (. CPP und. H) Namen, den Schnittstellennamen und die **Typ** Namen, es sei denn, Sie diese Felder einzeln ändern.
+- **Kurzname**
 
-**Klasse**  
-Legt den Namen der Klasse, die das Objekt implementiert. Dieser Name basiert auf den Namen, den Sie in bereitstellen **Kurznamen**ist 'C', das typische Präfix für einen Klassennamen vorangestellt.
+   Legt den abgekürzten Namen für das Objekt fest. Der Name, den Sie angeben, bestimmt die Klasse und **Co-Klasse** -Namen ist, wird die Datei (. CPP und. H) Namen, den Schnittstellennamen und die **Typ** Namen, es sei denn, Sie diese Felder einzeln ändern.
 
-**H-Datei**  
-Legt den Namen der Headerdatei für die neue Klasse des Objekts fest. Standardmäßig basiert auf den Namen, den Sie, in bereitstellen diesen Namen **Kurznamen**. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um den Dateinamen am gewünschten Speicherort zu speichern oder um die Klassendeklaration an eine vorhandene Datei anzufügen. Wenn Sie eine vorhandene Datei auswählen, der Assistent wird speichern Sie es nicht in den ausgewählten Speicherort bis auf **Fertig stellen**.
+- **Klasse**
 
-Der Assistent überschreibt Dateien nicht. Wenn Sie den Namen einer vorhandenen Datei auswählen, fordert der Assistent Sie dazu auf, anzugeben, ob die Klassendeklaration an die Inhalte der Datei angefügt werden sollen, wenn Sie auf **Fertig stellen** klicken. Klicken Sie auf **Ja**, um die Datei anzufügen. Klicken Sie auf **Nein**, um zum Assistenten zurückzukehren und einen anderen Dateinamen anzugeben.
+   Legt den Namen der Klasse, die das Objekt implementiert. Dieser Name basiert auf den Namen, den Sie in bereitstellen **Kurznamen**ist 'C', das typische Präfix für einen Klassennamen vorangestellt.
 
-**CPP-Datei**  
-Legt den Namen der Implementierungsdatei für die neue Klasse des Objekts fest. Standardmäßig basiert auf den Namen, den Sie, in bereitstellen diesen Namen **Kurznamen**. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um den Dateinamen am gewünschten Speicherort zu speichern. Die Datei wird nicht am ausgewählten Speicherort gespeichert, bis Sie im Assistenten auf **Fertig stellen** klicken.
+- **H-Datei**
 
-Der Assistent überschreibt Dateien nicht. Wenn Sie den Namen einer vorhandenen Datei auswählen, fordert der Assistent Sie dazu auf, anzugeben, ob die Klassenimplementierung an die Inhalte der Datei angefügt werden sollen, wenn Sie auf **Fertig stellen** klicken. Klicken Sie auf **Ja**, um die Datei anzufügen. Klicken Sie auf **Nein**, um zum Assistenten zurückzukehren und einen anderen Dateinamen anzugeben.
+   Legt den Namen der Headerdatei für die neue Klasse des Objekts fest. Standardmäßig basiert auf den Namen, den Sie, in bereitstellen diesen Namen **Kurznamen**. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um den Dateinamen am gewünschten Speicherort zu speichern oder um die Klassendeklaration an eine vorhandene Datei anzufügen. Wenn Sie eine vorhandene Datei auswählen, der Assistent wird speichern Sie es nicht in den ausgewählten Speicherort bis auf **Fertig stellen**.
 
-**Zugeordnet sind**  
-Gibt an, ob das Objekt Attribute verwendet. Wenn Sie ein Objekt eine attributierten ATL-Projekt hinzufügen, ist diese Option ausgewählt und nicht verfügbar, um zu ändern. Also können Sie ein Projekt erstellt wurde, mit Attribut-Unterstützung nur attributierter Objekte hinzufügen.
+   Der Assistent überschreibt Dateien nicht. Wenn Sie den Namen einer vorhandenen Datei auswählen, fordert der Assistent Sie dazu auf, anzugeben, ob die Klassendeklaration an die Inhalte der Datei angefügt werden sollen, wenn Sie auf **Fertig stellen** klicken. Klicken Sie auf **Ja**, um die Datei anzufügen. Klicken Sie auf **Nein**, um zum Assistenten zurückzukehren und einen anderen Dateinamen anzugeben.
 
-Sie können ein attributiertes Objekt nur ein ATL-Projekt hinzufügen, die Attribute verwendet. Wenn Sie diese Option für ein ATL-Projekt, die nicht unterstützen Attribut verfügt auswählen, fordert der Assistent Sie angeben, ob die Attribut-Unterstützung zum Projekt hinzufügen möchten.
+- **CPP-Datei**
 
-Standardmäßig werden alle Objekte, die Sie hinzufügen, nachdem Sie diese Option festlegen als attributierten festgelegt (das Kontrollkästchen ist aktiviert). Sie können festlegen, löschen Sie dieses Kontrollkästchen, um ein Objekt hinzuzufügen, die keine Attribute verwendet.
+   Legt den Namen der Implementierungsdatei für die neue Klasse des Objekts fest. Standardmäßig basiert auf den Namen, den Sie, in bereitstellen diesen Namen **Kurznamen**. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um den Dateinamen am gewünschten Speicherort zu speichern. Die Datei wird nicht am ausgewählten Speicherort gespeichert, bis Sie im Assistenten auf **Fertig stellen** klicken.
 
-Finden Sie unter [Anwendungseinstellungen, ATL-Projektassistenten](../../atl/reference/application-settings-atl-project-wizard.md) und [grundlegende Funktionsweise von Attributen](../../windows/basic-mechanics-of-attributes.md) für Weitere Informationen.
+   Der Assistent überschreibt Dateien nicht. Wenn Sie den Namen einer vorhandenen Datei auswählen, fordert der Assistent Sie dazu auf, anzugeben, ob die Klassenimplementierung an die Inhalte der Datei angefügt werden sollen, wenn Sie auf **Fertig stellen** klicken. Klicken Sie auf **Ja**, um die Datei anzufügen. Klicken Sie auf **Nein**, um zum Assistenten zurückzukehren und einen anderen Dateinamen anzugeben.
+
+- **Zugeordnet sind**
+
+   Gibt an, ob das Objekt Attribute verwendet. Wenn Sie ein Objekt eine attributierten ATL-Projekt hinzufügen, ist diese Option ausgewählt und nicht verfügbar, um zu ändern. Also können Sie ein Projekt erstellt wurde, mit Attribut-Unterstützung nur attributierter Objekte hinzufügen.
+
+   Sie können ein attributiertes Objekt nur ein ATL-Projekt hinzufügen, die Attribute verwendet. Wenn Sie diese Option für ein ATL-Projekt, die nicht unterstützen Attribut verfügt auswählen, fordert der Assistent Sie angeben, ob die Attribut-Unterstützung zum Projekt hinzufügen möchten.
+
+   Standardmäßig werden alle Objekte, die Sie hinzufügen, nachdem Sie diese Option festlegen als attributierten festgelegt (das Kontrollkästchen ist aktiviert). Sie können festlegen, löschen Sie dieses Kontrollkästchen, um ein Objekt hinzuzufügen, die keine Attribute verwendet.
+
+   Finden Sie unter [Anwendungseinstellungen, ATL-Projektassistenten](../../atl/reference/application-settings-atl-project-wizard.md) und [grundlegende Funktionsweise von Attributen](../../windows/basic-mechanics-of-attributes.md) für Weitere Informationen.
 
 ### <a name="com"></a>COM
 
 Enthält Informationen über die COM-Funktionalität für das Objekt.
 
-**Co-Klasse**  
-Legt den Namen der Komponentenklasse, die eine Liste der Schnittstellen, die vom Objekt unterstützten enthält.
+- **Co-Klasse**
 
-> [!NOTE]
->  Wenn Sie das Projekt mithilfe von Attributen erstellen, oder auf dieser Seite des Assistenten angeben, dass das Steuerelement Attribute verwendet, können Sie diese Option nicht ändern, da ATL nicht enthalten ist das **Co-Klasse** Attribut.
+   Legt den Namen der Komponentenklasse, die eine Liste der Schnittstellen, die vom Objekt unterstützten enthält.
 
-**Interface**  
-Legt den Namen der Schnittstelle für das Objekt. Standardmäßig wird ein Interface-Name mit "I" vorangestellt.
+   > [!NOTE]
+   > Wenn Sie das Projekt mithilfe von Attributen erstellen, oder auf dieser Seite des Assistenten angeben, dass das Steuerelement Attribute verwendet, können Sie diese Option nicht ändern, da ATL nicht enthalten ist das **Co-Klasse** Attribut.
 
-**Type**  
-Legt die Beschreibung des Objekts, die in der Registrierung angezeigt wird
+- **Interface**
 
-**ProgID**  
-Legt den Namen, den Container anstatt der CLSID des Objekts verwenden können. Dieses Feld wird nicht automatisch aufgefüllt. Wenn Sie dieses Feld nicht manuell auffüllen, möglicherweise das Steuerelement nicht mit anderen Tools zur Verfügung. Z. B. ActiveX-Steuerelemente, die generiert werden, ohne eine `ProgID` sind nicht verfügbar, in der **ActiveX-Steuerelement einfügen** im Dialogfeld. Weitere Informationen zu diesem Dialogfeld finden Sie unter [ActiveX-Steuerelement-Dialogfeld einfügen](../../windows/insert-activex-control-dialog-box.md).
+   Legt den Namen der Schnittstelle für das Objekt. Standardmäßig wird ein Interface-Name mit "I" vorangestellt.
+
+- **Type**
+
+   Legt die Beschreibung des Objekts, die in der Registrierung angezeigt wird
+
+- **ProgID**
+
+   Legt den Namen, den Container anstatt der CLSID des Objekts verwenden können. Dieses Feld wird nicht automatisch aufgefüllt. Wenn Sie dieses Feld nicht manuell auffüllen, möglicherweise das Steuerelement nicht mit anderen Tools zur Verfügung. Z. B. ActiveX-Steuerelemente, die generiert werden, ohne eine `ProgID` sind nicht verfügbar, in der **ActiveX-Steuerelement einfügen** im Dialogfeld. Weitere Informationen zu diesem Dialogfeld finden Sie unter [Insert ActiveX Control Dialog Box („Dialogfeld ‚ActiveX-Steuerelement einfügen‘“)](../../windows/insert-activex-control-dialog-box.md).
 
 ## <a name="see-also"></a>Siehe auch
 

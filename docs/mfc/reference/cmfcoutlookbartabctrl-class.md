@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b0d2972c7d6b1f7211d5f43fa0248a8b2980f10
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a54f8e21c253c46c6a6a086fd10d193a18b7e59e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538468"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718262"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 Ein Registerkarten-Steuerelement mit dem Aussehen des **Navigationsbereichs** in Microsoft Outlook verfügt.  
@@ -148,20 +148,20 @@ void AddControl(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWndCtrl*  
- Ein Zeiger auf ein Steuerelement hinzufügen.  
+*pWndCtrl*<br/>
+[in] Ein Zeiger auf ein Steuerelement hinzufügen.  
   
- [in] *Wert*  
- Gibt den Namen der Registerkarte an.  
+*Wert*<br/>
+[in] Gibt den Namen der Registerkarte an.  
   
- [in] *bDetachable*  
- Wenn TRUE, wird die Seite als entfernbare erstellt werden.  
+*bDetachable*<br/>
+[in] Wenn TRUE, wird die Seite als entfernbare erstellt werden.  
   
- [in] *nImageID*  
- Der Bildindex in der internen Bildliste des Bildes, das in der neuen Registerkarte angezeigt werden.  
+*nImageID*<br/>
+[in] Der Bildindex in der internen Bildliste des Bildes, das in der neuen Registerkarte angezeigt werden.  
   
- [in] *DwControlBarStyle*  
- Gibt den Stil AFX_ CBRS_ * für umschlossene andockbare Bereiche.  
+*dwControlBarStyle*<br/>
+[in] Gibt den Stil AFX_ CBRS_ * für umschlossene andockbare Bereiche.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Funktion, um ein Steuerelement als eine neue Seite mit einer Outlook-Leiste hinzuzufügen.  
@@ -212,14 +212,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Rect*  
- Gibt an, die ursprüngliche Größe und Position, in Pixel.  
+*Rect*<br/>
+[in] Gibt an, die ursprüngliche Größe und Position, in Pixel.  
   
- [in] *pParentWnd*  
- Verweist auf das übergeordnete Fenster. Nicht darf NULL sein.  
+*pParentWnd*<br/>
+[in] Verweist auf das übergeordnete Fenster. Nicht darf NULL sein.  
   
- [in] *nID*  
- Die Steuerelement-ID.  
+*nID*<br/>
+[in] Die Steuerelement-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn das Steuerelement erfolgreich erstellt wurde; andernfalls 0.  
@@ -235,8 +235,8 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- Gibt an, ob die Animation aktiviert oder deaktiviert werden soll.  
+*bAktivieren*<br/>
+[in] Gibt an, ob die Animation aktiviert oder deaktiviert werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion zum Aktivieren und Deaktivieren von Animationen. Wenn der Benutzer eine Registerkarte geöffnet wird, wird Beschriftung mit der Seite nach oben oder unten aus, wenn die Animation aktiviert ist. Wenn die Animation deaktiviert ist, wird die Seite sofort aktiv.  
@@ -268,14 +268,14 @@ void EnableScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- Bestimmt, ob die Bildlauf-Schaltflächen angezeigt werden.  
+*bAktivieren*<br/>
+[in] Bestimmt, ob die Bildlauf-Schaltflächen angezeigt werden.  
   
- [in] *bIsUp*  
- Bestimmt, ob die obere Bildlaufleiste angezeigt wird.  
+*bIsUp*<br/>
+[in] Bestimmt, ob die obere Bildlaufleiste angezeigt wird.  
   
- [in] *bIsDown*  
- Bestimmt, ob die Bildlaufleiste unten angezeigt wird.  
+*bIsDown*<br/>
+[in] Bestimmt, ob die Bildlaufleiste unten angezeigt wird.  
   
 ### <a name="remarks"></a>Hinweise  
  Ermöglicht die Anzeige der scrollschaltflächen. Diese Methode wird vom Framework aufgerufen, wenn die aktive Registerkarte ändert die Bildlaufschaltflächen wiederherstellen.  
@@ -367,8 +367,8 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iTab*  
- Der nullbasierte Index einer Registerkarte geöffnet werden.  
+*iTab*<br/>
+[in] Der nullbasierte Index einer Registerkarte geöffnet werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL ist, wenn die angegebene Registerkarte erfolgreich geöffnet wurde; andernfalls 0.  
@@ -384,8 +384,8 @@ void SetBorderSize(int nBorderSize);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nBorderSize*  
- Gibt die neue Rahmengröße in Pixel an.  
+*nBorderSize*<br/>
+[in] Gibt die neue Rahmengröße in Pixel an.  
   
 ### <a name="remarks"></a>Hinweise  
  Legt die Rahmengröße der neuen fest, und berechnet das Layout der Outlook-Fenster.  
@@ -400,11 +400,11 @@ void SetPageButtonTextAlign(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiAlign*  
- Gibt die Ausrichtung des Texts an.  
+*uiAlign*<br/>
+[in] Gibt die Ausrichtung des Texts an.  
   
- [in] *bRedraw*  
- True gibt an, das Outlook-Fenster wird neu gezeichnet werden.  
+*bRedraw*<br/>
+[in] True gibt an, das Outlook-Fenster wird neu gezeichnet werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Funktion, um die Ausrichtung des Texts für Seitenschaltflächen zu ändern.  
@@ -430,14 +430,14 @@ BOOL SetToolbarImageList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiID*  
- Gibt die Ressourcen-ID beim Laden des Bilds an.  
+*uiID*<br/>
+[in] Gibt die Ressourcen-ID beim Laden des Bilds an.  
   
- [in] *Cx*  
- Gibt die Breite eines Bilds in der Bildliste in Pixel an.  
+*CX*<br/>
+[in] Gibt die Breite eines Bilds in der Bildliste in Pixel an.  
   
- [in] *ClrTransp*  
- Ein RGB-Wert, der die transparente Farbe angibt.  
+*clrTransp*<br/>
+[in] Ein RGB-Wert, der die transparente Farbe angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt true zurück, wenn erfolgreich; Andernfalls wird false ZURÜCKGEGEBEN.  

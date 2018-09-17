@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ec8840e4a379ce50b9474c114f0a2879d2e7bca
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e0294a16c13941d74ccd3955f78e22e33ef8fc7a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686156"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725173"
 ---
 # <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox-Klasse
 Die `CMFCFontComboBox` Klasse erstellt ein Kombinationsfeld-Steuerelement, das eine Liste von Schriftarten enthält.  
@@ -132,14 +132,14 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDesc*  
- Verweist auf ein Schriftartobjekt-Beschreibung.  
+*pDesc*<br/>
+[in] Verweist auf ein Schriftartobjekt-Beschreibung.  
   
- [in] *Wert*  
- Gibt den Namen einer Schriftart an.  
+*Wert*<br/>
+[in] Gibt den Namen einer Schriftart an.  
   
- [in] *nCharSet*  
- Gibt einen Zeichensatz. Der Standardwert ist DEFAULT_CHARSET. Weitere Informationen finden Sie unter den `lfCharSet` Mitglied der ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) Struktur.  
+*nCharSet*<br/>
+[in] Gibt einen Zeichensatz. Der Standardwert ist DEFAULT_CHARSET. Weitere Informationen finden Sie unter den `lfCharSet` Mitglied der ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn ein Element in der Schriftarten-Kombinationsfeld die angegebene Schriftart-Beschreibungsobjekt oder Schriftartname und Zeichensatz übereinstimmt. andernfalls "false".  
@@ -164,14 +164,14 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nFontType*  
- Gibt die Schriftart an. Der Standardwert ist die bitweise Kombination (OR) DEVICE_FONTTYPE, RASTER_FONTTYPE, und TRUETYPE_FONTTYPE.  
+*nFontType*<br/>
+[in] Gibt die Schriftart an. Der Standardwert ist die bitweise Kombination (OR) DEVICE_FONTTYPE, RASTER_FONTTYPE, und TRUETYPE_FONTTYPE.  
   
- [in] *nCharSet*  
- Gibt den Zeichensatz der Schriftart an. Der Standardwert ist DEFAULT_CHARSET.  
+*nCharSet*<br/>
+[in] Gibt den Zeichensatz der Schriftart an. Der Standardwert ist DEFAULT_CHARSET.  
   
- [in] *nPitchAndFamily*  
- Gibt die Schriftbreite der Schriftart und -Familie. Der Standardwert ist DEFAULT_PITCH.  
+*nPitchAndFamily*<br/>
+[in] Gibt die Schriftbreite der Schriftart und -Familie. Der Standardwert ist DEFAULT_PITCH.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Schriftarten-Kombinationsfeld erfolgreich initialisiert wurde. andernfalls "false".  

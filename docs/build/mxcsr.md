@@ -1,5 +1,5 @@
 ---
-title: MxCsr | Microsoft Docs
+title: MxCsr | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,34 +12,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9df2225526c20463bdbd618322d031c3245d9493
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d18a4247d36e6894230d74322d52cd5854e42fb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368625"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726504"
 ---
 # <a name="mxcsr"></a>MxCsr
-Dem registrierungszustand hinaus MxCsr. Die Aufrufkonvention unterteilt eine flüchtige Teil und einen nicht flüchtigen Teil dieses Register. Der flüchtige Teil besteht aus den 6 Statusflags MXCSR [0:5], während der Rest des Registers, MXCSR [6:15] flüchtig ist.  
-  
- Die flüchtige Teil wird zu Beginn der Ausführung des Programms auf die folgenden Standardwerte festgelegt:  
-  
-```  
-MXCSR[6]         : Denormals are zeros - 0  
-MXCSR[7:12]      : Exception masks all 1's (all exceptions masked)  
-MXCSR[13:14]   : Rounding  control - 0 (round to nearest)  
-MXCSR[15]      : Flush to zero for masked underflow - 0 (off)  
-```  
-  
- Eine aufgerufene Funktion, die die NVRAM Felder im MXCSR ändert, muss diese vor der Rückgabe an den Aufrufer wiederherstellen. Darüber hinaus muss ein Aufrufer, der keines dieser Felder geändert wurde wiederhergestellt haben sie auf ihre Standardwerte eine aufgerufene Funktion aufrufen, es sei denn, durch die Vereinbarung der aufgerufene die geänderten Werte erwartet.  
-  
- Es gibt zwei Ausnahmen von den Regeln bezüglich der nicht-Flüchtigkeit der Steuerelement-Flags:  
-  
--   In Funktionen, deren dokumentierte Zweck die angegebene Funktion nicht flüchtiger MxCsr-flags.  
-  
--   Wenn nachweislich richtig, ein Programm, die ein Programm, in dem diese Regeln nicht ist, z. B. durch Analyse des gesamten Programms verletzt werden, identisch verhält sich/bedeutet führt ein Verstoß gegen diese Regeln.  
-  
- Sofern nicht ausdrücklich in der Dokumentation der Funktion beschrieben, können keine Annahmen über den Zustand des flüchtigen Teils des MXCSR Apartmentgrenze eine Funktion vorgenommen werden.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Aufrufkonvention](../build/calling-convention.md)
+
+Der Registerstatus enthält auch MxCsr. Die Aufrufkonvention teilt dieses Register, in einen flüchtigen und einen nicht flüchtigen Teil. Der flüchtige Teil besteht aus den 6-Statusflags MXCSR [0:5], während die restlichen das Register, MXCSR [6:15] flüchtig ist.
+
+Der Teil wird zu Beginn der Ausführung des Programms auf die folgenden Standardwerte festgelegt:
+
+```
+MXCSR[6]         : Denormals are zeros - 0
+MXCSR[7:12]      : Exception masks all 1's (all exceptions masked)
+MXCSR[13:14]   : Rounding  control - 0 (round to nearest)
+MXCSR[15]      : Flush to zero for masked underflow - 0 (off)
+```
+
+Eine aufgerufene Funktion, die die nicht flüchtige Felder im MXCSR ändert, muss diese vor der Rückgabe an den Aufrufer wiederherstellen. Darüber hinaus muss ein Aufrufer, der keines dieser Felder geändert wurde wiederhergestellt werden ihren Standardwerten vor dem eine aufgerufene Funktion aufrufen, es sei denn, der Vereinbarung der aufgerufenen Funktion die geänderten Werte erwartet wird.
+
+Es gibt zwei Ausnahmen von den Regeln in Bezug auf die Flüchtigkeit der Steuerelement-Kennzeichen:
+
+- In Funktionen, in dem dokumentiert die angegebene Funktion dient, nicht flüchtiger MxCsr-flags.
+
+- Wenn Programmanalyse korrigieren Sie den Verstoß gegen diese Regeln ein Programm, das ein Programm, in denen diese Regeln nicht, z. B. durch Analyse des gesamten Programms verletzt werden, identisch verhält sich/bedeutet führt.
+
+Keine Annahmen können über den Status des flüchtigen Teils des MXCSR funktionsübergreifend, vorgenommen werden, es sei denn, insbesondere in der Dokumentation der Funktion beschrieben.
+
+## <a name="see-also"></a>Siehe auch
+
+[Aufrufkonvention](../build/calling-convention.md)

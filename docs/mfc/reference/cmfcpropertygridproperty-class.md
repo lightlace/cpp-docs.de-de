@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00d108bab368b7be57d336aae345df1e25723363
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bb60681f47a32e40bff744adaecfedfe4b247c64
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539650"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726244"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty-Klasse
 Ein `CMFCPropertyGridProperty` Objekt stellt ein Listenelement in einem Eigenschaftenlisten-Steuerelement dar.  
@@ -326,11 +326,11 @@ BOOL AddOption(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszOption*  
- Das Listenelement (Option) hinzufügen.  
+*lpszOption*<br/>
+[in] Das Listenelement (Option) hinzufügen.  
   
- [in] *bInsertUnique*  
- "True", die die Liste der hinzuzufügenden Element nur dann, wenn es nicht bereits vorhanden ist; andernfalls "false". Der Standardwert ist "true".  
+*bInsertUnique*<br/>
+[in] "True", die die Liste der hinzuzufügenden Element nur dann, wenn es nicht bereits vorhanden ist; andernfalls "false". Der Standardwert ist "true".  
   
 ### <a name="return-value"></a>Rückgabewert  
  "True", was bedeutet, dass das Listenelement hinzugefügt wird. Andernfalls "false", d. h., der das Element der Liste nicht hinzugefügt, da die *bInsertUnique* -Parameter ist "true" und vom Element angegebene Liste der *LpszOption* Parameter bereits vorhanden ist.  
@@ -345,8 +345,8 @@ BOOL AddSubItem(CMFCPropertyGridProperty* pProp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pProp*  
- Zeiger auf eine Eigenschaft hinzufügen.  
+*pProp*<br/>
+[in] Zeiger auf eine Eigenschaft hinzufügen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn die angegebene Eigenschaft als eine untergeordnete Eigenschaft erfolgreich hinzugefügt wurde. "False", wenn die Eigenschaft nicht hinzugefügt wird, da er bereits in die übergeordnete Eigenschaft auftritt.  
@@ -380,11 +380,11 @@ virtual void AdjustInPlaceEditRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *RectEdit*  
- Bei dieser Methode wird ein Rechteck, das die Begrenzungen des im Textfeld für den Wert der Eigenschaft angibt.  
+*rectEdit*<br/>
+[out] Bei dieser Methode wird ein Rechteck, das die Begrenzungen des im Textfeld für den Wert der Eigenschaft angibt.  
   
- [out] *RectSpin*  
- Wenn diese Methode, gibt ein Rechteck zurück, der die Grenzen des das Drehfeld-Steuerelement für den Eigenschaftswert angibt. Oder, wenn die Eigenschaft ein Drehfeld, ein leeres Rechteck nicht unterstützt.  
+*rectSpin*<br/>
+[out] Wenn diese Methode, gibt ein Rechteck zurück, der die Grenzen des das Drehfeld-Steuerelement für den Eigenschaftswert angibt. Oder, wenn die Eigenschaft ein Drehfeld, ein leeres Rechteck nicht unterstützt.  
   
 ### <a name="remarks"></a>Hinweise  
  Der Wertbereich, einer Eigenschaft besteht aus einem Textfeld und möglicherweise eine *Optionsfeld*, z. B. ein Drehfeld-Steuerelement. Diese Methode berechnet die Abmessungen des der Textschaltfläche Box und Option und dann diese Werte in der angegebenen Parameter zurückgegeben.  
@@ -397,8 +397,8 @@ void AllowEdit(BOOL bAllow=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bVererbbare*  
- True, um die Eigenschaft bearbeitbar zu machen. FALSE, wenn die Eigenschaft schreibgeschützt machen. Der Standardwert ist "true".  
+*bVererbbare*<br/>
+[in] True, um die Eigenschaft bearbeitbar zu machen. FALSE, wenn die Eigenschaft schreibgeschützt machen. Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -423,32 +423,32 @@ CMFCPropertyGridProperty(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *StrGroupName*  
- Der Gruppenname. Ein *Gruppe* ist eine Sammlung verwandter Eigenschaften in einem Eigenschaftenraster-Steuerelement. Wenn das Steuerelement hierarchisch angezeigt wird der *Gruppenname* als Kategorietitel in der Zeile über der Gruppe angezeigt wird.  
+*strGroupName*<br/>
+[in] Der Gruppenname. Ein *Gruppe* ist eine Sammlung verwandter Eigenschaften in einem Eigenschaftenraster-Steuerelement. Wenn das Steuerelement hierarchisch angezeigt wird der *Gruppenname* als Kategorietitel in der Zeile über der Gruppe angezeigt wird.  
   
- [in] *DwData*  
- Anwendungsspezifische Daten, z. B. eine ganze Zahl oder ein Zeiger auf andere Daten, die der Eigenschaft zugeordnet ist. Der Standardwert ist 0.  
+*dwData*<br/>
+[in] Anwendungsspezifische Daten, z. B. eine ganze Zahl oder ein Zeiger auf andere Daten, die der Eigenschaft zugeordnet ist. Der Standardwert ist 0.  
   
- [in] *StrName*  
- Den Namen der Eigenschaft.  
+*strName*<br/>
+[in] Der Name der Eigenschaft.  
   
- [in] *VarValue*  
- Der Eigenschaftswert.  
+*varValue*<br/>
+[in] Der Wert der Eigenschaft.  
   
- [in] *LpszDescr*  
- Beschreibung der Eigenschaft. Der Standardwert ist NULL.  
+*lpszDescr*<br/>
+[in] Beschreibung der Eigenschaft. Der Standardwert ist NULL.  
   
- [in] *LpszEditMask*  
- Die Maske bearbeiten, wenn die Eigenschaft, ein maskiertes Bearbeitungssteuerelement ist. Der Standardwert ist NULL.  
+*lpszEditMask*<br/>
+[in] Die Maske bearbeiten, wenn die Eigenschaft, ein maskiertes Bearbeitungssteuerelement ist. Der Standardwert ist NULL.  
   
- [in] *LpszEditTemplate*  
- Die Bearbeitungsvorlage, wenn die Eigenschaft, ein maskiertes Bearbeitungssteuerelement ist. Der Standardwert ist NULL.  
+*lpszEditTemplate*<br/>
+[in] Die Bearbeitungsvorlage, wenn die Eigenschaft, ein maskiertes Bearbeitungssteuerelement ist. Der Standardwert ist NULL.  
   
- [in] *LpszValidChars*  
- Eine Liste der gültigen Zeichen, wenn die Eigenschaft, ein maskiertes Bearbeitungssteuerelement ist. Der Standardwert ist NULL.  
+*lpszValidChars*<br/>
+[in] Eine Liste der gültigen Zeichen, wenn die Eigenschaft, ein maskiertes Bearbeitungssteuerelement ist. Der Standardwert ist NULL.  
   
- [in] *bIsValueList*  
- True, wenn die Eigenschaft eine Liste von Werten darstellt. "False", wenn die Eigenschaft auf einen einzelnen Wert darstellt. Der Standardwert ist "false".  
+*bIsValueList*<br/>
+[in] True, wenn die Eigenschaft eine Liste von Werten darstellt. "False", wenn die Eigenschaft auf einen einzelnen Wert darstellt. Der Standardwert ist "false".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -462,11 +462,11 @@ virtual CComboBox* CreateCombo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWndParent*  
- Zeiger auf das übergeordnete Fenster des Kombinationsfelds.  
+*pWndParent*<br/>
+[in] Zeiger auf das übergeordnete Fenster des Kombinationsfelds.  
   
- [in] *Rect*  
- Das umschließende Rechteck des Kombinationsfelds.  
+*Rect*<br/>
+[in] Das umschließende Rechteck des Kombinationsfelds.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf ein neues [CComboBox](../../mfc/reference/ccombobox-class.md) Objekt.  
@@ -483,11 +483,11 @@ virtual CWnd* CreateInPlaceEdit(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *RectEdit*  
- Das umschließende Rechteck des Steuerelements bearbeitet werden.  
+*rectEdit*<br/>
+[in] Das umschließende Rechteck des Steuerelements bearbeitet werden.  
   
- [in] *bDefaultFormat*  
- TRUE, um das Standardformat für die Eigenschaft verwenden, legen Sie den Text des Steuerelements bearbeitet werden; andernfalls "false".  
+*bDefaultFormat*<br/>
+[in] TRUE, um das Standardformat für die Eigenschaft verwenden, legen Sie den Text des Steuerelements bearbeitet werden; andernfalls "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die editierbaren Steuerelement, wenn diese Methode erfolgreich ist; andernfalls NULL.  
@@ -505,8 +505,8 @@ virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *RectSpin*  
- Ein Rechteck, das definiert, wo das bearbeitbare Drehfeld-Steuerelement erstellt wird.  
+*rectSpin*<br/>
+[in] Ein Rechteck, das definiert, wo das bearbeitbare Drehfeld-Steuerelement erstellt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf ein neues [CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md) -Objekt, das als Zeiger auf umgewandelt wird eine [CSpinButtonCtrl](../../mfc/reference/cspinbuttonctrl-class.md) Objekt.  
@@ -522,8 +522,8 @@ void Enable(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- True, zum Aktivieren der Eigenschaft. So deaktivieren Sie die Eigenschaft wird false ZURÜCKGEGEBEN. Deaktivierte Eigenschaften reagieren nicht auf die Maus- und Tastatureingaben. Der Standardwert ist "true".  
+*bAktivieren*<br/>
+[in] True, zum Aktivieren der Eigenschaft. So deaktivieren Sie die Eigenschaft wird false ZURÜCKGEGEBEN. Deaktivierte Eigenschaften reagieren nicht auf die Maus- und Tastatureingaben. Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -538,14 +538,14 @@ void EnableSpinControl(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- "True", um das Drehfeld-Steuerelement zu aktivieren; So deaktivieren Sie das Drehfeld-Steuerelement wird false ZURÜCKGEGEBEN. Der Standardwert ist "true".  
+*bAktivieren*<br/>
+[in] "True", um das Drehfeld-Steuerelement zu aktivieren; So deaktivieren Sie das Drehfeld-Steuerelement wird false ZURÜCKGEGEBEN. Der Standardwert ist "true".  
   
- [in] *nmin.*  
- Der minimale Wert, der das Drehfeld-Steuerelement. Der Standardwert ist 0.  
+*nmin.*<br/>
+[in] Der minimale Wert, der das Drehfeld-Steuerelement. Der Standardwert ist 0.  
   
- [in] *nmax.*  
- Der maximale Wert, der das Drehfeld-Steuerelement. Der Standardwert ist 0.  
+*nmax.*<br/>
+[in] Der maximale Wert, der das Drehfeld-Steuerelement. Der Standardwert ist 0.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework erstellt automatisch ein Drehfeld-Steuerelement, wenn eine Eigenschaft gerade bearbeitet werden.  
@@ -560,8 +560,8 @@ void Expand(BOOL bExpand=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bExpand*  
- True, um die Eigenschaft zu erweitern. "False", um die Eigenschaft zu reduzieren. Der Standardwert ist "true".  
+*bExpand*<br/>
+[in] True, um die Eigenschaft zu erweitern. "False", um die Eigenschaft zu reduzieren. Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -615,7 +615,7 @@ int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *bIncludeHidden*|True, um die ausgeblendeten untergeordneten Elemente in der Zählung enthalten. andernfalls "false". Der Standardwert ist "true".|  
+|*bIncludeHidden*|[in] True, um die ausgeblendeten untergeordneten Elemente in der Zählung enthalten. andernfalls "false". Der Standardwert ist "true".|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der erweiterten untergeordneten Elemente.  
@@ -734,8 +734,8 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Der nullbasierte Index der abzurufenden Eigenschaft. Dieser Parameter ist ungültig, wenn es kleiner als 0 (null) oder größer als oder gleich der Anzahl der untergeordneten Eigenschaften.  
+*nIndex*<br/>
+[in] Der nullbasierte Index der abzurufenden Eigenschaft. Dieser Parameter ist ungültig, wenn es kleiner als 0 (null) oder größer als oder gleich der Anzahl der untergeordneten Eigenschaften.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf ein Objekt, das ein untergeordnetes Element dieser Eigenschaft ist.  
@@ -810,17 +810,17 @@ CMFCPropertyGridProperty* HitTest(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Der Punkt zu testen, in Clientkoordinaten. Dieser Parameter ist in der Regel der aktuellen Position des Mauszeigers.  
+*Zeigen Sie*<br/>
+[in] Der Punkt zu testen, in Clientkoordinaten. Dieser Parameter ist in der Regel der aktuellen Position des Mauszeigers.  
   
- [in] *pt*  
- Der Punkt zu testen, in Clientkoordinaten.  
+*pt*<br/>
+[in] Der Punkt zu testen, in Clientkoordinaten.  
   
- [out] *PnArea*  
- Bei der Rückgabe dieser Methode gibt den Bereich, der den angegebenen Punkt enthält. Weitere Informationen finden Sie in den Hinweisen. Der Standardwert ist NULL.  
+*pnArea*<br/>
+[out] Bei der Rückgabe dieser Methode gibt den Bereich, der den angegebenen Punkt enthält. Weitere Informationen finden Sie in den Hinweisen. Der Standardwert ist NULL.  
   
- [in] *bPropsOnly*  
- True, um einen Bereich in das Eigenschaftensteuerelement zu testen. "False", um nur den Beschreibungsbereich zu testen. Der Standardwert ist "false".  
+*bPropsOnly*<br/>
+[in] True, um einen Bereich in das Eigenschaftensteuerelement zu testen. "False", um nur den Beschreibungsbereich zu testen. Der Standardwert ist "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf ein Eigenschaftenobjekt oder NULL.  
@@ -951,8 +951,8 @@ BOOL IsSubItem(CMFCPropertyGridProperty* pProp) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pProp*  
- Ein Zeiger auf eine Eigenschaft.  
+*pProp*<br/>
+[in] Ein Zeiger auf eine Eigenschaft.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die angegebene Eigenschaft eines untergeordneten Elements der aktuellen Eigenschaft. andernfalls "false".  
@@ -1025,8 +1025,8 @@ virtual void OnClickButton(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Ein Punkt in Clientkoordinaten.  
+*Zeigen Sie*<br/>
+[in] Ein Punkt in Clientkoordinaten.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig führt diese Methode keine Aktion.  
@@ -1042,7 +1042,7 @@ virtual void OnClickName(CPoint C);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *C*|Ein Punkt in Clientkoordinaten.|  
+|*C*|[in] Ein Punkt in Clientkoordinaten.|  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig führt diese Methode keine Aktion.  
@@ -1057,11 +1057,11 @@ virtual BOOL OnClickValue(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiMsg*  
- Eine mausmeldung.  
+*uiMsg*<br/>
+[in] Eine mausmeldung.  
   
- [in] *zeigen*  
- Ein Punkt in Clientkoordinaten.  
+*Zeigen Sie*<br/>
+[in] Ein Punkt in Clientkoordinaten.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die angegebene Maus-Nachricht, die von dieser Methode verarbeitet wird. andernfalls "false".  
@@ -1088,11 +1088,11 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Zeiger auf einen Gerätekontext.  
   
- [in] *nCtlColor*  
- (Dieser Parameter wird nicht verwendet.)  
+*nCtlColor*<br/>
+[in] (Dieser Parameter wird nicht verwendet.)  
   
 ### <a name="return-value"></a>Rückgabewert  
  Das Handle in einen Pinsel, wenn diese Methode erfolgreich ausgeführt wird. andernfalls NULL.  
@@ -1107,8 +1107,8 @@ virtual BOOL OnDblClk(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Ein Punkt in Clientkoordinaten.  
+*Zeigen Sie*<br/>
+[in] Ein Punkt in Clientkoordinaten.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -1135,11 +1135,11 @@ virtual void OnDrawButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *RectButton*  
- Ein umgebendes Rechteck, das angibt, wo Sie eine Schaltfläche zu zeichnen.  
+*rectButton*<br/>
+[in] Ein umgebendes Rechteck, das angibt, wo Sie eine Schaltfläche zu zeichnen.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1153,11 +1153,11 @@ virtual void OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein umgebendes Rechteck, das angibt, wo Sie die Beschreibung der Eigenschaft zu zeichnen.  
+*Rect*<br/>
+[in] Ein umgebendes Rechteck, das angibt, wo Sie die Beschreibung der Eigenschaft zu zeichnen.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig zeichnet diese Methode den Eigenschaftennamen und die Beschreibung in der Schriftart, die von der übergeordneten Eigenschaftenlisten-Steuerelement verwendet. Die Beschreibung der Eigenschaft im regulären Format gezeichnet wird und der Eigenschaftennamen in fettformatierung gezeichnet wird.  
@@ -1172,11 +1172,11 @@ virtual void OnDrawExpandBox(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *RectExpand*  
- Ein umgebendes Rechteck, das angibt, wo das Erweitern-Steuerelement zu zeichnen.  
+*rectExpand*<br/>
+[in] Ein umgebendes Rechteck, das angibt, wo das Erweitern-Steuerelement zu zeichnen.  
   
 ### <a name="remarks"></a>Hinweise  
  Klicken Sie auf das Steuerelement zum Erweitern oder reduzieren eine Liste der untergeordneten Eigenschaften erweitern. Erhalten Sie das Steuerelement erweitern, ein Quadrat, das enthält ein Pluszeichen (+) oder Minuszeichen (-). Ein Pluszeichen (+) gibt an, dass die Eigenschaft erweitert werden kann, um eine Liste der untergeordneten Eigenschaften anzuzeigen. Ein Minuszeichen (-) gibt an, dass die Liste reduziert werden kann, um nur die Eigenschaft anzuzeigen.  
@@ -1191,11 +1191,11 @@ virtual void OnDrawName(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein umgebendes Rechteck, das angibt, wo Sie den Namen der Eigenschaft zu zeichnen.  
+*Rect*<br/>
+[in] Ein umgebendes Rechteck, das angibt, wo Sie den Namen der Eigenschaft zu zeichnen.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1209,11 +1209,11 @@ virtual void OnDrawValue(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein umgebendes Rechteck, das angibt, wo Sie den Wert der Eigenschaft zu zeichnen.  
+*Rect*<br/>
+[in] Ein umgebendes Rechteck, das angibt, wo Sie den Wert der Eigenschaft zu zeichnen.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1225,8 +1225,8 @@ virtual BOOL OnEdit(LPPOINT lptClick);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LptClick*  
- (Dieser Parameter wird nicht verwendet.) Ein Zeiger auf einen Punkt, in Clientkoordinaten.  
+*lptClick*<br/>
+[in] (Dieser Parameter wird nicht verwendet.) Ein Zeiger auf einen Punkt, in Clientkoordinaten.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Bearbeitungsvorgang erfolgreich gestartet wurde. andernfalls "false".  
@@ -1258,7 +1258,7 @@ virtual BOOL OnKillFocus(CWnd*);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *CWnd*|(Nicht verwendet.) Zeiger auf ein Fenster.|  
+|*CWnd*|[in] (Nicht verwendet.) Zeiger auf ein Fenster.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt immer "true" zurück.  
@@ -1303,7 +1303,7 @@ virtual void OnRClickName(CPoint C);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *C*|Ein Punkt in Clientkoordinaten.|  
+|*C*|[in] Ein Punkt in Clientkoordinaten.|  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig führt diese Methode keine Aktion.  
@@ -1321,8 +1321,8 @@ virtual void OnRClickValue(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *C*|Ein Punkt in Clientkoordinaten.|  
-|[in] *B*|Ein boolescher Wert.|  
+|*C*|[in] Ein Punkt in Clientkoordinaten.|  
+|*B*|[in] Ein boolescher Wert.|  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig führt diese Methode keine Aktion und die *B* Parameter hat keine vordefinierten Zweck.  
@@ -1383,8 +1383,8 @@ virtual BOOL PushChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nChar*  
- Ein Zeichen.  
+*NChar*<br/>
+[in] Ein Zeichen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Bearbeitungsvorgang fortgesetzt wird. andernfalls "false".  
@@ -1421,11 +1421,11 @@ BOOL RemoveSubItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pProp*  
- Zeiger auf eine untergeordnete Eigenschaftenelement.  
+*pProp*<br/>
+[in] Zeiger auf eine untergeordnete Eigenschaftenelement.  
   
- [in] *bLöschen*  
- True löschen das Property-Objekt, das angegeben wird, um die *pProp* Parameter ist, andernfalls FALSE. Der Standardwert ist "true".  
+*bLöschen*<br/>
+[in] True löschen das Property-Objekt, das angegeben wird, um die *pProp* Parameter ist, andernfalls FALSE. Der Standardwert ist "true".  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -1449,8 +1449,8 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwData*  
- Ein anwendungsspezifische 32-Bit-Wert, z. B. eine ganze Zahl oder ein Zeiger auf andere Daten.  
+*dwData*<br/>
+[in] Ein anwendungsspezifische 32-Bit-Wert, z. B. eine ganze Zahl oder ein Zeiger auf andere Daten.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden der [CMFCPropertyGridProperty::GetData](#getdata) Methode, um den DWORD-Wert abzurufen. Verwenden der [CMFCPropertyGridCtrl::FindItemByData](../../mfc/reference/cmfcpropertygridctrl-class.md#finditembydata) Methode, um das Listenelement für die Eigenschaft zu suchen, die mit dem angegebenen DWORD-Wert zugeordnet ist.  
@@ -1463,8 +1463,8 @@ void SetDescription(const CString& strDescr);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *StrDescr*  
- Text, der die aktuelle Eigenschaft beschreibt.  
+*strDescr*<br/>
+[in] Text, der die aktuelle Eigenschaft beschreibt.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1478,11 +1478,11 @@ void SetName(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Wert*  
- Der Eigenschaftenname.  
+*Wert*<br/>
+[in] Der Eigenschaftenname.  
   
- [in] *bRedraw*  
- True, um die Eigenschaft sofort neu zu zeichnen. andernfalls "false". Der Standardwert ist "true".  
+*bRedraw*<br/>
+[in] True, um die Eigenschaft sofort neu zu zeichnen. andernfalls "false". Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1494,8 +1494,8 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *VarValue*  
- Ein Wert.  
+*varValue*<br/>
+[in] Ein-Wert.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden der [cmfcpropertygridproperty:: Resetoriginalvalue](#resetoriginalvalue) Methode, um den ursprünglichen Wert einer bearbeiteten Eigenschaft zurückzusetzen.  
@@ -1508,8 +1508,8 @@ virtual void SetValue(const _variant_t& varValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *VarValue*  
- Ein Verweis auf einen Wert.  
+*varValue*<br/>
+[in] Ein Verweis auf einen Wert.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1523,11 +1523,11 @@ void Show(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bShow*  
- True, um die current-Eigenschaft und die zugehörigen untergeordneten Elemente anzuzeigen. "False", um die current-Eigenschaft und die zugehörigen untergeordneten Elemente auszublenden. Der Standardwert ist "true".  
+*bShow*<br/>
+[in] True, um die current-Eigenschaft und die zugehörigen untergeordneten Elemente anzuzeigen. "False", um die current-Eigenschaft und die zugehörigen untergeordneten Elemente auszublenden. Der Standardwert ist "true".  
   
- [in] *bAdjustLayout*  
- True, um das Zeichnen der Bezeichnung und den Wert einer Eigenschaft und zeichnen Sie dann die Eigenschaft neu zu berechnen. "False", um die vorhandene Berechnungen verwenden, um die Eigenschaft zu zeichnen. Der Standardwert ist "true".  
+*bAdjustLayout*<br/>
+[in] True, um das Zeichnen der Bezeichnung und den Wert einer Eigenschaft und zeichnen Sie dann die Eigenschaft neu zu berechnen. "False", um die vorhandene Berechnungen verwenden, um die Eigenschaft zu zeichnen. Der Standardwert ist "true".  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ce0ef6ba923332d03972e2bd8b7ebb1f1cfb9e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2251aefebd6805cfd071d014ad6be30cbea065bb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205702"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711229"
 ---
 # <a name="arm-exception-handling"></a>ARM-Ausnahmebehandlung
 
@@ -175,26 +175,26 @@ Wenn das gepackte Entladeformat nicht zur Beschreibung der Entladung einer Funkt
 1. Ein 1- oder 2-Wort-Header, der die Gesamtgröße der .xdata-Struktur beschreibt und wichtige Funktionsdaten enthält. Das zweite Worte ist nur vorhanden, wenn die *Epiloganzahl* und *Code Wörter* Felder sind beide auf 0 festgelegt. Die Felder sind in dieser Tabelle aufgeteilt:
 
    |Word|Bits|Zweck|
-    |----------|----------|-------------|
-    |0|0-17|*Länge-Funktion* ist ein 18-Bit-Feld, der die Gesamtlänge der Funktion in Bytes geteilt durch 2 angibt. Wenn eine Funktion größer als 512 KB ist, dann müssen mehrere .pdata- und .xdata-Datensätze verwendet werden, um die Funktion zu beschreiben. Weitere Informationen finden Sie im Abschnitt "Große Funktionen" in diesem Dokument.|
-    |0|18-19|*Vers* ist ein 2-Bit-Feld, das die Version der verbleibenden Xdata beschreibt. Nur Version 0 ist derzeit definiert; die Werte 1-3 sind reserviert.|
-    |0|20|*X* ist ein 1-Bit-Feld, das Vorhandensein (1) oder fehlen (0) von Ausnahmedaten angibt.|
-    |0|21|*E* ist ein 1-Bit-Feld, der angibt, dass die Informationen, die ein einzelner Epilog in den Header (1) verpackt wird damit nicht muss der zusätzliche Bereich Wörter höher (0).|
-    |0|22|*F* ist ein 1-Bit-Feld, der angibt, dass dieser Datensatz ein funktionsfragment (1) oder eine vollständige Funktion (0) beschreibt. Ein Fragment impliziert, dass es keinen Prolog gibt und dass sämtliche Prologverarbeitung ignoriert werden soll.|
-    |0|23-27|*Epiloganzahl* ist ein 5-Bit-Feld mit zwei Bedeutungen, abhängig vom Zustand der *E* Bit:<br /><br /> -If *E* gleich 0 ist, ist dieses Feld die Anzahl der Gesamtzahl von ausnahmebereichen, die in Abschnitt 3 beschrieben. Wenn mehr als 31 Bereiche in der Funktion, und klicken Sie dann auf dieses Feld vorhanden sind und die *Code Wörter* Feld muss beide werden auf 0 festgelegt, um anzugeben, dass ein ausnahmewort erforderlich ist.<br />-If *E* 1, ist dieses Feld gibt den Index des ersten entladungscodes, die der nur den Epilog beschreibt.|
-    |0|28-31|*Code Wörter* ist ein 4-Bit-Feld, der angibt, die Anzahl der 32-Bit-Wörter benötigt, damit alle entladungscodes in Abschnitt 4 enthalten. Wenn mehr als 15 Worte für mehr als 63 entladungscodebytes, dieses Feld erforderlich sind und die *Epiloganzahl* Feld muss beide werden auf 0 festgelegt, um anzugeben, dass ein ausnahmewort erforderlich ist.|
-    |1|0-15|*Erweiterte Epiloganzahl* ist ein 16-Bit-Feld, das mehr Speicherplatz für das encoding bietet eine ungewöhnlich große Anzahl von epilogen. Das erweiterungswort, das enthält dieses Feld ist nur vorhanden, wenn die *Epiloganzahl* und *Code Wörter* Felder im ersten headerwort beide auf 0 festgelegt sind.|
-    |1|16-23|*Erweiterte Code Wörter* ist eine 8-Bit-Feld, das mehr Speicherplatz für das encoding bietet eine ungewöhnlich große Anzahl von entladungscodeworten. Das erweiterungswort, das enthält dieses Feld ist nur vorhanden, wenn die *Epiloganzahl* und *Code Wörter* Felder im ersten headerwort beide auf 0 festgelegt sind.|
-    |1|24-31|Reserviert|
+   |----------|----------|-------------|
+   |0|0-17|*Länge-Funktion* ist ein 18-Bit-Feld, der die Gesamtlänge der Funktion in Bytes geteilt durch 2 angibt. Wenn eine Funktion größer als 512 KB ist, dann müssen mehrere .pdata- und .xdata-Datensätze verwendet werden, um die Funktion zu beschreiben. Weitere Informationen finden Sie im Abschnitt "Große Funktionen" in diesem Dokument.|
+   |0|18-19|*Vers* ist ein 2-Bit-Feld, das die Version der verbleibenden Xdata beschreibt. Nur Version 0 ist derzeit definiert; die Werte 1-3 sind reserviert.|
+   |0|20|*X* ist ein 1-Bit-Feld, das Vorhandensein (1) oder fehlen (0) von Ausnahmedaten angibt.|
+   |0|21|*E* ist ein 1-Bit-Feld, der angibt, dass die Informationen, die ein einzelner Epilog in den Header (1) verpackt wird damit nicht muss der zusätzliche Bereich Wörter höher (0).|
+   |0|22|*F* ist ein 1-Bit-Feld, der angibt, dass dieser Datensatz ein funktionsfragment (1) oder eine vollständige Funktion (0) beschreibt. Ein Fragment impliziert, dass es keinen Prolog gibt und dass sämtliche Prologverarbeitung ignoriert werden soll.|
+   |0|23-27|*Epiloganzahl* ist ein 5-Bit-Feld mit zwei Bedeutungen, abhängig vom Zustand der *E* Bit:<br /><br /> -If *E* gleich 0 ist, ist dieses Feld die Anzahl der Gesamtzahl von ausnahmebereichen, die in Abschnitt 3 beschrieben. Wenn mehr als 31 Bereiche in der Funktion, und klicken Sie dann auf dieses Feld vorhanden sind und die *Code Wörter* Feld muss beide werden auf 0 festgelegt, um anzugeben, dass ein ausnahmewort erforderlich ist.<br />-If *E* 1, ist dieses Feld gibt den Index des ersten entladungscodes, die der nur den Epilog beschreibt.|
+   |0|28-31|*Code Wörter* ist ein 4-Bit-Feld, der angibt, die Anzahl der 32-Bit-Wörter benötigt, damit alle entladungscodes in Abschnitt 4 enthalten. Wenn mehr als 15 Worte für mehr als 63 entladungscodebytes, dieses Feld erforderlich sind und die *Epiloganzahl* Feld muss beide werden auf 0 festgelegt, um anzugeben, dass ein ausnahmewort erforderlich ist.|
+   |1|0-15|*Erweiterte Epiloganzahl* ist ein 16-Bit-Feld, das mehr Speicherplatz für das encoding bietet eine ungewöhnlich große Anzahl von epilogen. Das erweiterungswort, das enthält dieses Feld ist nur vorhanden, wenn die *Epiloganzahl* und *Code Wörter* Felder im ersten headerwort beide auf 0 festgelegt sind.|
+   |1|16-23|*Erweiterte Code Wörter* ist eine 8-Bit-Feld, das mehr Speicherplatz für das encoding bietet eine ungewöhnlich große Anzahl von entladungscodeworten. Das erweiterungswort, das enthält dieses Feld ist nur vorhanden, wenn die *Epiloganzahl* und *Code Wörter* Felder im ersten headerwort beide auf 0 festgelegt sind.|
+   |1|24-31|Reserviert|
 
 2. Nach den Ausnahmedaten (wenn die *E* -Bit im Header auf 0 festgelegt wurde) wird eine Liste mit Informationen über epilogbereiche, die auf ein Wort gepackt und in der Reihenfolge zunehmender startoffsets gespeichert werden. Jeder Bereich enthält folgende Felder:
 
    |Bits|Zweck|
-    |----------|-------------|
-    |0-17|*Epilog starten Offset* ist ein 18-Bit-Feld, das den Offset des Epilogs in Bytes geteilt durch 2, relativ zum Start der Funktion beschreibt.|
-    |18-19|*Res* ist ein 2-Bit-Feld, das für zukünftige Erweiterungen reserviert. Sein Wert muss 0 sein.|
-    |20-23|*Bedingung* ist ein 4-Bit-Feld, das die Bedingung liefert, unter denen der Epilog ausgeführt wird. Für bedingungslose Epiloge muss es auf 0xE festgelegt sein, was "immer" bedeutet. (Ein Epilog muss vollständig beginnt oder bedingungslos sein und im Thumb-2-Modus beginnt der Epilog mit der ersten Anweisung nach dem IT-Opcode.)|
-    |24-31|*StartIndex Epilog* ist eine 8-Bit-Feld, das den Byte-Index des ersten entladungscodes angibt, der diesen Epilog beschreibt.|
+   |----------|-------------|
+   |0-17|*Epilog starten Offset* ist ein 18-Bit-Feld, das den Offset des Epilogs in Bytes geteilt durch 2, relativ zum Start der Funktion beschreibt.|
+   |18-19|*Res* ist ein 2-Bit-Feld, das für zukünftige Erweiterungen reserviert. Sein Wert muss 0 sein.|
+   |20-23|*Bedingung* ist ein 4-Bit-Feld, das die Bedingung liefert, unter denen der Epilog ausgeführt wird. Für bedingungslose Epiloge muss es auf 0xE festgelegt sein, was "immer" bedeutet. (Ein Epilog muss vollständig beginnt oder bedingungslos sein und im Thumb-2-Modus beginnt der Epilog mit der ersten Anweisung nach dem IT-Opcode.)|
+   |24-31|*StartIndex Epilog* ist eine 8-Bit-Feld, das den Byte-Index des ersten entladungscodes angibt, der diesen Epilog beschreibt.|
 
 3. Nach der Liste von Epilogbereichen kommt ein Array von Bytes, das Entladungscodes enthält. Diese werden detailliert im Abschnitt Entladungscodes dieses Artikels beschrieben. Dieses Array ist am Ende aufgefüllt bis zur nächsten vollen Wortgrenze. Die Bytes werden in Little-Endian-Reihenfolge gespeichert, sodass sie im Little-Endian-Modus direkt abgerufen werden können.
 
@@ -358,16 +358,16 @@ Ist ein komplexerer Spezialfall von funktionsfragmenten *Shrink*, eine Technik f
 
 ```asm
 ShrinkWrappedFunction
-     push   {r4, lr}          ; A: save minimal non-volatiles
-     sub    sp, sp, #0x100    ; A: allocate all stack space up front
-     ...                     ; A:
-     add    r0, sp, #0xE4     ; A: prepare to do the inner save
-     stm    r0, {r5-r11}      ; A: save remaining non-volatiles
-     ...                     ; B:
-     add    r0, sp, #0xE4     ; B: prepare to do the inner restore
-     ldm    r0, {r5-r11}      ; B: restore remaining non-volatiles
-     ...                     ; C:
-     pop    {r4, pc}          ; C:
+    push   {r4, lr}          ; A: save minimal non-volatiles
+    sub    sp, sp, #0x100    ; A: allocate all stack space up front
+    ...                      ; A:
+    add    r0, sp, #0xE4     ; A: prepare to do the inner save
+    stm    r0, {r5-r11}      ; A: save remaining non-volatiles
+    ...                      ; B:
+    add    r0, sp, #0xE4     ; B: prepare to do the inner restore
+    ldm    r0, {r5-r11}      ; B: restore remaining non-volatiles
+    ...                      ; C:
+    pop    {r4, pc}          ; C:
 ```
 
 Bei Funktionen mit Shrink-Wrapping geht man typischerweise davon aus, dass der Platz für die zusätzlichen Registerspeicherungen im normalen Prolog im Voraus zugewiesen wird und die Registerspeicherungen dann mithilfe von `str` oder `stm` erfolgen statt mit `push`. Damit werden alle Aufruflistenzeigerbearbeitungen im ursprünglichen Prolog der Funktion gehalten.
@@ -386,14 +386,14 @@ Ein alternativer Ansatz kann ebenfalls funktionieren, wenn die Stapelbearbeitung
 
 ```asm
 ShrinkWrappedFunction
-     push   {r4, lr}          ; A: save minimal non-volatile registers
-     sub    sp, sp, #0xE0     ; A: allocate minimal stack space up front
-     ...                     ; A:
-     push   {r4-r9}           ; A: save remaining non-volatiles
-     ...                     ; B:
-     pop    {r4-r9}           ; B: restore remaining non-volatiles
-     ...                     ; C:
-     pop    {r4, pc}          ; C: restore non-volatile registers
+    push   {r4, lr}          ; A: save minimal non-volatile registers
+    sub    sp, sp, #0xE0     ; A: allocate minimal stack space up front
+    ...                      ; A:
+    push   {r4-r9}           ; A: save remaining non-volatiles
+    ...                      ; B:
+    pop    {r4-r9}           ; B: restore remaining non-volatiles
+    ...                      ; C:
+    pop    {r4, pc}          ; C: restore non-volatile registers
 ```
 
 Entscheidend ist hier, dass der Stapel bei jeder Anweisungsgrenze ganz mit den Entladungscodes für die Region übereinstimmt. Findet eine Entladung vor der inneren Pushübertagung in diesem Beispiel statt, wird sie als Teil von Region A betrachtet und nur der Region-A-Prolog wird entladen. Wenn die Entladung nach der inneren pushübertagung auftritt, wird davon ausgegangen, dass der Teil von Region B, die keinen Prolog, aber entladungscodes, die beschreiben, sowohl für die innere pushübertragung als auch für den ursprünglichen Prolog aus Region a ähnliche Logik ist für den inneren Pop enthält.
@@ -749,6 +749,5 @@ Function:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über ARM-ABI-Konventionen](../build/overview-of-arm-abi-conventions.md)  
-[Häufig auftretende ARM-Migrationsprobleme bei Visual C++](../build/common-visual-cpp-arm-migration-issues.md)  
-
+[Übersicht über ARM-ABI-Konventionen](../build/overview-of-arm-abi-conventions.md)<br/>
+[Häufig auftretende ARM-Migrationsprobleme bei Visual C++](../build/common-visual-cpp-arm-migration-issues.md)

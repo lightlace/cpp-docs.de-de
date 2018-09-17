@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af6e9ce4c252e2d798615292291dcd3e21cbd72a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 810a375fce13d8628db5ff00d89964d84c83b525
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853669"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704042"
 ---
 # <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog-Klasse
 Die `CMFCKeyMapDialog` Klasse unterstützt ein Steuerelement, das Befehlen Tastaturtasten zuordnet.  
@@ -110,11 +110,11 @@ CMFCKeyMapDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWndParentFrame*  
- Ein Zeiger auf das übergeordnete Fenster der `CMFCKeyMapDialog` Objekt.  
+*pWndParentFrame*<br/>
+[in] Ein Zeiger auf das übergeordnete Fenster der `CMFCKeyMapDialog` Objekt.  
   
- [in] *bEnablePrint*  
- True, wenn die Liste der Tastenkombinationen gedruckt werden kann. andernfalls "false". Der Standardwert ist "false".  
+*bEnablePrint*<br/>
+[in] True, wenn die Liste der Tastenkombinationen gedruckt werden kann. andernfalls "false". Der Standardwert ist "false".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -144,8 +144,8 @@ virtual CString FormatItem(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nItem*  
- Der nullbasierte Index eines Elements in der internen Liste der wichtigsten Zuordnungen.  
+*nItem*<br/>
+[in] Der nullbasierte Index eines Elements in der internen Liste der wichtigsten Zuordnungen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein `CString` Objekt, das den formatierten Text enthält.  
@@ -160,8 +160,8 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmdID*  
- Eine Befehls-ID.  
+*uiCmdID*<br/>
+[in] Eine Befehls-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Eine durch Semikolons getrennt (';') Liste mit Tastenkombinationen, die den angegebenen Befehl zugeordnet ist.  
@@ -178,11 +178,11 @@ virtual void OnInsertItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pButton*  
- Ein Zeiger auf eine Symbolleisten-Schaltfläche, die verwendet wird, um einen Befehlsnamen und eine Beschreibung eine Tastenkombination für den Schlüssel zuzuordnen. Das Key-Map-Element wird in einem Steuerelement für die interne Liste gespeichert.  
+*pButton*<br/>
+[in] Ein Zeiger auf eine Symbolleisten-Schaltfläche, die verwendet wird, um einen Befehlsnamen und eine Beschreibung eine Tastenkombination für den Schlüssel zuzuordnen. Das Key-Map-Element wird in einem Steuerelement für die interne Liste gespeichert.  
   
- [in] *nItem*  
- Ein nullbasierter Index, der angibt, wo der neue Schlüssel Map-Element im Listensteuerelement interne eingefügt.  
+*nItem*<br/>
+[in] Ein nullbasierter Index, der angibt, wo der neue Schlüssel Map-Element im Listensteuerelement interne eingefügt.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -197,14 +197,14 @@ virtual int OnPrintHeader(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *dc*  
- Der Gerätekontext für den Drucker.  
+*dc*<br/>
+[in] Der Gerätekontext für den Drucker.  
   
- [in] *. nSeite*  
- Die Seitenzahl der Seite gedruckt werden soll.  
+*. nSeite*<br/>
+[in] Die Seitenzahl der Seite gedruckt werden soll.  
   
- [in] *Cx*  
- Der horizontale Offset des Headers, in Pixel.  
+*CX*<br/>
+[in] Der horizontale Offset des Headers, in Pixel.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Bei erfolgreicher Ausführung die Höhe der gedruckten Text. Weitere Informationen finden Sie im Abschnitt Rückgabewert [CDC:: DrawText](../../mfc/reference/cdc-class.md#drawtext).  
@@ -225,20 +225,20 @@ virtual int OnPrintItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *dc*  
- Der Gerätekontext des Druckers.  
+*dc*<br/>
+[in] Der Gerätekontext des Druckers.  
   
- [in] *nItem*  
- Der nullbasierte Index des Elements, das gedruckt werden soll.  
+*nItem*<br/>
+[in] Der nullbasierte Index des Elements, das gedruckt werden soll.  
   
- [in] *y*  
- Der vertikale Offset zwischen dem oberen Rand der Seite und die Position des Elements.  
+*y*<br/>
+[in] Der vertikale Offset zwischen dem oberen Rand der Seite und die Position des Elements.  
   
- [in] *Cx*  
- Der horizontale Offset zwischen dem linken Rand der Seite und die Position des Elements.  
+*CX*<br/>
+[in] Der horizontale Offset zwischen dem linken Rand der Seite und die Position des Elements.  
   
- [in] *bCalcHeight*  
- True, um die optimale Höhe für das Drucken-Element zu berechnen. FALSE, wenn das Element Drucken abgeschnitten, damit er den Standardzwischenraum passt.  
+*bCalcHeight*<br/>
+[in] True, um die optimale Höhe für das Drucken-Element zu berechnen. FALSE, wenn das Element Drucken abgeschnitten, damit er den Standardzwischenraum passt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Höhe des Elements gedruckt.  

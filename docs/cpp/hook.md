@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd5ebd1b70476fd4248d3e309dec967ea471cf0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2f839b6c9b87bb37564951d1c15935ad573e1b46
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197396"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719289"
 ---
 # <a name="hook"></a>__hook
 
@@ -75,8 +75,8 @@ Ein Zeiger, der an die Ereignishandlermethode gebunden werden soll. Der Handler,
 
 - Verwaltete Ereignisse: *ReceiverClass* ist die Ereignisempfängerklasse und `HandlerMethod` ist der Handler.
 
-*Empfänger* (optional)<br/>
-Ein Zeiger auf eine Instanz der Ereignisempfängerklasse. Wenn Sie keinen Empfänger angeben, wird standardmäßig die Empfängerklasse oder Struktur, in der **__hook** aufgerufen wird.
+*Empfänger*<br/>
+(Optional) Ein Zeiger auf eine Instanz von der Ereignisempfängerklasse. Wenn Sie keinen Empfänger angeben, wird standardmäßig die Empfängerklasse oder Struktur, in der **__hook** aufgerufen wird.
 
 ## <a name="usage"></a>Verwendung
 

@@ -1,5 +1,5 @@
 ---
-title: -VERSION | Microsoft Docs
+title: -VERSION | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 854f0a4a5e24c10f7f9b6edf736f1c3349f72423
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 851a1f33dc5ed23b2c489650140768f26f009d9c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375242"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715546"
 ---
 # <a name="version"></a>/VERSION
-```  
-/VERSION:left[,right]  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Option wird eine Versionsnummer in den Header des Images an.  
-  
- Der Ganzzahlenbereich der Version Anzahl, der Teil der linken Seite des Dezimaltrennzeichens dargestellte `left`. Der Bruchteil der Version dargestellte Zahl ist, der Teil rechts neben dem Dezimalzeichen `right`.  
-  
-## <a name="see-also"></a>Siehe auch  
- [EDITBIN-Optionen](../../build/reference/editbin-options.md)
+
+```
+/VERSION:left[,right]
+```
+
+## <a name="remarks"></a>Hinweise
+
+Diese Option wird eine Versionsnummer im Header des Abbilds an.
+
+Der Ganzzahlenbereich der Version, Bereich links neben dem Dezimaltrennzeichen wird durch wiedergegeben `left`. Der Bruchteil von der Version, der Teil rechts neben dem Dezimaltrennzeichen an, wird durch wiedergegeben `right`.
+
+## <a name="see-also"></a>Siehe auch
+
+[EDITBIN-Optionen](../../build/reference/editbin-options.md)

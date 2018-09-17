@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08304a42b961f93b7d9e4e6e644e1514e34eb335
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 3c3a80e50bd0b012773a5e5a197674965f73b526
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539991"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711153"
 ---
 # <a name="bssseg"></a>bss_seg
 Gibt das Segment an, in dem nicht initialisierte Variablen in der OBJ-Datei gespeichert werden.  
@@ -35,27 +35,27 @@ Gibt das Segment an, in dem nicht initialisierte Variablen in der OBJ-Datei gesp
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- 
+
 OBJ-Dateien können angezeigt werden, mit der [Dumpbin](../build/reference/dumpbin-command-line.md) Anwendung. Das Standardsegment für nicht initialisierte Variablen in der OBJ-Datei ist ".bss". In einigen Fällen zu verwenden, der **Bss_seg** können Ladezeiten, indem nicht initialisierte Daten in einen Abschnitt gruppiert.  
   
 **Bss_seg** ohne Parameter setzt das Segment auf ".BSS".  
   
-*Push* (optional)  
-Legt einen Datensatz auf den internen Compilerstapel. Ein *Push* kann ein *Bezeichner* und *Segment-Name*.  
+**push**<br/>
+(Optional) Legt einen Datensatz auf dem internen compilerstapel ab. Ein *Pu*sh * kann ein *Bezeichner* und *Segment-Name*.  
   
-*POP* (optional)  
-Entfernt einen Datensatz von der obersten Position des internen Compilerstapels.  
+**pop**<br/>
+(Optional) Entfernt einen Datensatz von der obersten Position des internen Compilerstapels.  
   
-*Bezeichner* (optional)  
-Bei Verwendung mit *Push*, den Datensatz im internen compilerstapel ein Name zugewiesen. Bei Verwendung mit *pop*, Datensätze vom internen Stapel bis *Bezeichner* wird entfernt; Wenn *Bezeichner* wurde nicht gefunden im internen Stapel, nichts per pop ausgelesen wird.  
+*identifier*<br/>
+(Optional) Bei Verwendung mit **Push**, den Datensatz im internen compilerstapel ein Name zugewiesen. Bei Verwendung mit **pop**, Datensätze vom internen Stapel bis *Bezeichner* wird entfernt; Wenn *Bezeichner* wurde nicht gefunden im internen Stapel, nichts per pop ausgelesen wird.  
   
-*Bezeichner* ermöglicht, mehrere Datensätze mit einem einzelnen entfernen *pop* Befehl.  
+*Bezeichner* ermöglicht, mehrere Datensätze mit einem einzelnen entfernen **pop** Befehl.  
   
-*"Segment-Name"*(optional)  
-Der Name eines Segments. Bei Verwendung mit *pop*, wird das Element im Stapel geholt und *Segment-Name* wird zum aktiven Segmentnamen.  
+*"Segment-Name"*<br/>
+(Optional) Der Name eines Segments. Bei Verwendung mit **pop**, wird das Element im Stapel geholt und *Segment-Name* wird zum aktiven Segmentnamen.  
   
-*"Segment-Class"* (optional)  
-Zum Gewährleisten der Kompatibilität mit C++ vor Version 2.0 eingeführt. Wird ignoriert.  
+*"Segment-Class"*<br/>
+(Optional) Für die Kompatibilität mit C++ vor Version 2.0 enthalten. Wird ignoriert.  
   
 ## <a name="example"></a>Beispiel  
   

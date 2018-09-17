@@ -18,43 +18,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1054343d5e6afbc739fe302870b43eb9526f7d8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: fe77781970a0f5cba6334bd117e816b43413cb38
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196988"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724697"
 ---
 # <a name="configure-visual-c-for-64-bit-x64-targets"></a>Konfigurieren von Visual C++ für 64-Bit-X64 Ziele
 
-Dieser Abschnitt enthält Themen über die Zielgruppenadressierung von 64-Bit-X64 Hardware mit dem Visual C++-Buildtools.  
-  
-## <a name="in-this-section"></a>In diesem Abschnitt  
-  
--   [Vorgehensweise: Konfigurieren von Visual C++-Projekten für 64-Bit-x64-Zielplattformen](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)  
-  
--   [Vorgehensweise: Aktivieren eines 64-Bit-Visual C++-Toolsets auf der Befehlszeile](../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)  
-  
--   [Häufig auftretende 64-Bit-Migrationsprobleme bei Visual C++](../build/common-visual-cpp-64-bit-migration-issues.md)  
-  
--   [x64-Softwarekonventionen](../build/x64-software-conventions.md)  
-  
-## <a name="related-sections"></a>Verwandte Abschnitte  
+Dieser Abschnitt enthält Themen über die Zielgruppenadressierung von 64-Bit-X64 Hardware mit dem Visual C++-Buildtools.
 
-[.NET Framework-64-Bit-Anwendungen](/dotnet/framework/64-bit-apps)  
-  
-[align](../cpp/align-cpp.md)  
-  
-[/clr (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md)  
-  
-[/favor (Für Architektureigenschaften optimieren)](../build/reference/favor-optimize-for-architecture-specifics.md)  
-  
-[Programmierhandbuch für 64-Bit-Windows](/windows/desktop/WinProg64/programming-guide-for-64-bit-windows)  
-  
-[MASM für x64 (ml64.exe)](../assembler/masm/masm-for-x64-ml64-exe.md)  
-  
-[Liste der intrinsischen Funktionen für x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)  
-  
-## <a name="see-also"></a>Siehe auch  
+## <a name="in-this-section"></a>In diesem Abschnitt
+
+- [Vorgehensweise: Konfigurieren von Visual C++-Projekten für 64-Bit-x64-Zielplattformen](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
+
+- [Vorgehensweise: Aktivieren eines 64-Bit-Visual C++-Toolsets auf der Befehlszeile](../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
+
+- [Häufig auftretende 64-Bit-Migrationsprobleme bei Visual C++](../build/common-visual-cpp-64-bit-migration-issues.md)
+
+- [x64-Softwarekonventionen](../build/x64-software-conventions.md)
+
+## <a name="related-sections"></a>Verwandte Abschnitte
+
+[.NET Framework-64-Bit-Anwendungen](/dotnet/framework/64-bit-apps)
+
+[align](../cpp/align-cpp.md)
+
+[/clr (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md)
+
+[/favor (Für Architektureigenschaften optimieren)](../build/reference/favor-optimize-for-architecture-specifics.md)
+
+[Programmierhandbuch für 64-Bit-Windows](/windows/desktop/WinProg64/programming-guide-for-64-bit-windows)
+
+[MASM für x64 (ml64.exe)](../assembler/masm/masm-for-x64-ml64-exe.md)
+
+[Liste der intrinsischen Funktionen für x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)
+
+## <a name="see-also"></a>Siehe auch
 
 [Erstellen von C/C++-Programmen](building-c-cpp-programs.md)

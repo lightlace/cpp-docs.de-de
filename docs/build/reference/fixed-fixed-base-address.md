@@ -1,5 +1,5 @@
 ---
-title: -FIXED (Feste Basisadresse) | Microsoft Docs
+title: -FIXED (Feste Basisadresse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,41 +20,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08b1193b7cfe58aed45e4feec598a49227eafc87
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 697f6ccfd98059175311cd04e4e82038877b2110
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374160"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723397"
 ---
 # <a name="fixed-fixed-base-address"></a>/FIXED (Feste Basisadresse)
-```  
-/FIXED[:NO]  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Weist das Betriebssystem an, das Programm nur an seine bevorzugte Basisadresse zu laden. Wenn diese Basisadresse nicht zur Verfügung steht, lädt das Betriebssystem die Datei nicht. Weitere Informationen finden Sie unter [/BASE (Basisadresse)](../../build/reference/base-base-address.md).  
-  
- Für eine DLL ist "/FIXED:NO" die Standardeinstellung; bei anderen Projekttypen lautet die Standardeinstellung "/FIXED".  
-  
- Bei Angabe von "/FIXED" generiert LINK keinen Verschiebungsabschnitt im Programm. Wenn das Betriebssystem das Programm zur Laufzeit nicht an der angegebenen Adresse laden kann, wird eine Fehlermeldung ausgegeben, und der Ladevorgang wird nicht ausgeführt.  
-  
- Bei Angabe von "/FIXED:NO" wird ein Verschiebungsabschnitt im Programm generiert.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
-  
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
-  
-2.  Wählen Sie die **Linker** Ordner.  
-  
-3.  Wählen Sie die **Befehlszeile** Eigenschaftenseite.  
-  
-4.  Geben Sie den Optionsnamen und festlegen, der **Zusatzoptionen** Feld.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
-  
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
- [Linkeroptionen](../../build/reference/linker-options.md)
+
+```
+/FIXED[:NO]
+```
+
+## <a name="remarks"></a>Hinweise
+
+Weist das Betriebssystem an, das Programm nur an seine bevorzugte Basisadresse zu laden. Wenn diese Basisadresse nicht zur Verfügung steht, lädt das Betriebssystem die Datei nicht. Weitere Informationen finden Sie unter [/BASE (Basisadresse)](../../build/reference/base-base-address.md).
+
+Für eine DLL ist "/FIXED:NO" die Standardeinstellung; bei anderen Projekttypen lautet die Standardeinstellung "/FIXED".
+
+Bei Angabe von "/FIXED" generiert LINK keinen Verschiebungsabschnitt im Programm. Wenn das Betriebssystem das Programm zur Laufzeit nicht an der angegebenen Adresse laden kann, wird eine Fehlermeldung ausgegeben, und der Ladevorgang wird nicht ausgeführt.
+
+Bei Angabe von "/FIXED:NO" wird ein Verschiebungsabschnitt im Programm generiert.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
+
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+
+1. Wählen Sie die **Linker** Ordner.
+
+1. Wählen Sie die **Befehlszeile** Eigenschaftenseite.
+
+1. Geben Sie den Optionsnamen und Festlegen von in die **zusätzliche Optionen** Feld.
+
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
+
+- Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Siehe auch
+
+[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
+[Linkeroptionen](../../build/reference/linker-options.md)

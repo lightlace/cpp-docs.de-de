@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fe9fc90556c15cdab13f68647f07b877aa15abf
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ab174484cb305e26c23d1c1d6b5e573341c9035c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540035"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716963"
 ---
 # <a name="bitscanreverse-bitscanreverse64"></a>_BitScanReverse, _BitScanReverse64
 **Microsoft-spezifisch**  
@@ -47,11 +47,11 @@ unsigned char _BitScanReverse64(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [out] `Index`  
- Geladen mit der Bitposition des ersten festgelegten Bits (1), das ermittelt wurde.  
+*Index*<br/>
+[out] Geladen mit der Bitposition des ersten festgelegten Bits (1) wurde gefunden.  
   
- [in] `Mask`  
- Der zu suchende 32-Bit- oder 64-Bit-Wert.  
+*Maske*<br/>
+[in] Der 32-Bit oder 64-Bit-Wert zu suchen.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ungleich null, wenn `Index` festgelegt wurde, oder null (0), wenn keine festgelegten Bits gefunden wurden.  

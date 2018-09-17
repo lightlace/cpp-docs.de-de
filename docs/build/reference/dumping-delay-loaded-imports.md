@@ -1,5 +1,5 @@
 ---
-title: Sichern von verzögert geladenen Importen | Microsoft Docs
+title: Sichern von verzögert geladenen Importen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f832f0ea7aaf7b766141ce7df4f83f21e1cdca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29f2faecb29da93729b0be0f40c00c18b82f6344
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372866"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720875"
 ---
 # <a name="dumping-delay-loaded-imports"></a>Sichern von verzögert geladenen Importen
-Verzögert geladene Importe können mit gesicherte [Dumpbin/Imports](../../build/reference/imports-dumpbin.md) und als Standard importiert mit leicht unterschiedliche Informationen angezeigt. Sie werden in einem eigenen Bereich der-Sicherung getrennt und explizit als verzögert geladene Importe gekennzeichnet sind. Wenn Entladen von Informationen in das Bild vorhanden ist, wird dies vermerkt. Bindungsinformationen vorhanden ist, wird der Datums-/Zeitstempel der Ziel-DLL zusammen mit den gebundenen Adressen des Imports vermerkt.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Linkerunterstützung für verzögertes Laden von DLLs](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+
+Verzögert geladene Importe können ausgegeben werden, mithilfe von [Dumpbin/Imports](../../build/reference/imports-dumpbin.md) und als Standard importiert mit leicht unterschiedliche Informationen angezeigt. Sie werden in einem eigenen Abschnitt des-Sicherung und explizit als verzögert geladenen Importen gekennzeichnet sind. Entladen Sie die Informationen, die im Bild vorhanden ist, wird, vermerkt. Bindungsinformationen vorhanden ist, wird der Datums-/Zeitstempel der Ziel-DLL zusammen mit den gebundenen Adressen des Imports vermerkt.
+
+## <a name="see-also"></a>Siehe auch
+
+[Linkerunterstützung für verzögertes Laden von DLLs](../../build/reference/linker-support-for-delay-loaded-dlls.md)

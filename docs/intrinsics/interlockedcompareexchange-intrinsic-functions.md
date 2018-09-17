@@ -58,12 +58,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7eff5cab57c1288af1f6e1109fae458c35e0fa7b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b301483e2c2f76838054059af838b282aee2d523
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611382"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711255"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedCompareExchange“
 **Microsoft-spezifisch**  
@@ -186,14 +186,14 @@ __int64 _InterlockedCompareExchange64_rel(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in, out] `Destination`  
- Zeiger auf den Zielwert. Die Zeichen wird ignoriert.  
+*Ziel*<br/>
+[in, out] Zeiger auf den Zielwert. Die Zeichen wird ignoriert.  
   
- [in] `Exchange`  
- Austauschwert. Die Zeichen wird ignoriert.  
+*Exchange*<br/>
+[in] Exchange-Wert. Die Zeichen wird ignoriert.  
   
- [in] `Comparand`  
- Wert für den Vergleich mit dem Ziel. Die Zeichen wird ignoriert.  
+*Comparand-Parameter*<br/>
+[in] Wert, der Vergleich mit dem Ziel. Die Zeichen wird ignoriert.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Der Rückgabewert ist der Anfangswert des `Destination`-Zeigers.  

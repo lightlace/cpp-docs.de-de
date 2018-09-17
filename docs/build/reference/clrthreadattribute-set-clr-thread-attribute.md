@@ -1,5 +1,5 @@
 ---
-title: -CLRTHREADATTRIBUTE (Set CLR-Threadattributs) | Microsoft Docs
+title: -CLRTHREADATTRIBUTE (CLR-Threadattribut festlegen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,59 +17,63 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b83c3df380b07f125bad8426b9bf18b013b606c8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bea5b75c9f0691ef74c35ed405d64fc3389c4fcd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373422"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705795"
 ---
 # <a name="clrthreadattribute-set-clr-thread-attribute"></a>/CLRTHREADATTRIBUTE (Festlegen des CLR-Threadattributs)
-Geben Sie explizit das Threadingattribut für den Einstiegspunkt des CLR-Programms.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-/CLRTHREADATTRIBUTE:{STA|MTA|NONE}  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- MTA  
- Das MTAThreadAttribute-Attribut für den Einstiegspunkt des Programms angewendet.  
-  
- KEINE  
- Identisch mit/CLRTHREADATTRIBUTE nicht angeben.  Ermöglicht das Festlegen des standardmäßigen Threadingattribut Common Language Runtime (CLR).  
-  
- STA  
- Das STAThreadAttribute-Attribut für den Einstiegspunkt des Programms angewendet.  
-  
-## <a name="remarks"></a>Hinweise  
- Festlegen der Thread-Attribut gilt nur beim Erstellen einer .exe wie sie den Einstiegspunkt des Hauptthreads wirkt sich auf.  
-  
- Bei Verwendung der Standardeinstiegspunkt ("Main" oder "z. B." wmain "") Geben Sie dem Threadingmodell entweder mithilfe von/CLRTHREADATTRIBUTE oder durch Platzieren der threading Attribut (STAThreadAttribute oder MTAThreadAttribute) für die Standard-Eintrag-Funktion.  
-  
- Wenn Sie einen nicht standardmäßigen Einstiegspunkt verwenden, geben Sie das Threadingmodell entweder mithilfe von/CLRTHREADATTRIBUTE oder durch das Platzieren des für die Funktion nicht standardmäßiger Eintrag Attribut, und geben Sie den nicht standardmäßigen Einstiegspunkt mit [/Entry](../../build/reference/entry-entry-point-symbol.md) .  
-  
- Wenn im Quellcode angegebene Threadingmodell nicht mit/CLRTHREADATTRIBUTE angegebenen Threadingmodell übereinstimmt, wird der Linker/CLRTHREADATTRIBUTE ignorieren und Anwenden des Threadingmodells im Quellcode angegeben.  
-  
- Es wird mit Single-threading, z. B. erforderlich sein, wenn CLR-Programms ein COM-Objekt gehostet wird, einzelne threading genutzt.  Wenn die CLR verwendet Multithreading programmieren, kann nicht es ein COM-Objekts hosten, das einzelnen threading verwendet.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
-  
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
-  
-2.  Erweitern Sie die **Konfigurationseigenschaften** Knoten.  
-  
-3.  Erweitern Sie die **Linker** Knoten.  
-  
-4.  Wählen Sie die **erweitert** Eigenschaftenseite.  
-  
-5.  Ändern der **CLR-Thread-Attribut** Eigenschaft.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
-  
-1.  Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRThreadAttribute%2A>.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
- [Linkeroptionen](../../build/reference/linker-options.md)
+
+Geben Sie explizit das Threadingattribut für den Einstiegspunkt des CLR-Programms.
+
+## <a name="syntax"></a>Syntax
+
+```
+/CLRTHREADATTRIBUTE:{STA|MTA|NONE}
+```
+
+#### <a name="parameters"></a>Parameter
+
+**DER MTA**<br/>
+Wendet das MTAThreadAttribute-Attribut auf den Einstiegspunkt des Programms an.
+
+**KEINE**<br/>
+Identisch mit/CLRTHREADATTRIBUTE nicht angegeben.  Können die Common Language Runtime (CLR) die Standardeinstellung Threadingattribut festgelegt.
+
+**STA**<br/>
+Wendet das STAThreadAttribute-Attribut auf den Einstiegspunkt des Programms an.
+
+## <a name="remarks"></a>Hinweise
+
+Festlegen der Thread-Attribut ist nur gültig beim Erstellen einer .exe, wie sie den Einstiegspunkt des Hauptthreads wirkt sich auf.
+
+Wenn Sie der Standardeinstiegspunkt ("Main" oder "Wmain, z. B.") Geben Sie dem Threadingmodell entweder mithilfe von/CLRTHREADATTRIBUTE oder platziert das threading-Attribut ("STAThreadAttribute" oder "MTAThreadAttribute") für die Standard-Eintrag-Funktion.
+
+Wenn Sie einen nicht standardmäßigen Einstiegspunkt verwenden, geben Sie das Threadingmodell entweder mithilfe von/CLRTHREADATTRIBUTE oder durch Platzieren des-Attribut für die Funktion nicht dem Standard-Eintrag, und geben Sie den nicht standardmäßigen Einstiegspunkt mit [/Entry](../../build/reference/entry-entry-point-symbol.md) .
+
+Wenn Sie das Threadingmodell angegeben wird, im Quellcode nicht mit dem Threadingmodell mit/CLRTHREADATTRIBUTE angegebene übereinstimmt, der Linker/CLRTHREADATTRIBUTE ignoriert und wenden das Threadingmodell im Quellcode angegeben.
+
+Es wird für Sie mit Single-threading, z. B. erforderlich sein, wenn CLR-Programms über ein COM-Objekt hostet, die Single-threading verwendet.  Wenn das CLR-Programm, kann nicht es ein COM-Objekt hosten, die Single-threading verwendet.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
+
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+
+1. Erweitern Sie den Knoten **Konfigurationseigenschaften**.
+
+1. Erweitern Sie die **Linker** Knoten.
+
+1. Wählen Sie die **erweitert** Eigenschaftenseite.
+
+1. Ändern der **CLR-Threadattributs** Eigenschaft.
+
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
+
+1. Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRThreadAttribute%2A>.
+
+## <a name="see-also"></a>Siehe auch
+
+[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
+[Linkeroptionen](../../build/reference/linker-options.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a119ebcccea3881d7b595e0581e23f53c656b91c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ac443927c2dcbb00cc01dd3cd63a95441a4a1bf0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200217"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711801"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -52,8 +52,8 @@ Definiert den Bibliotheksblock in der IDL-Datei.
 
 ### <a name="parameters"></a>Parameter
 
-*Typ* (optional)  
-Einer der folgenden Werte ist möglich:
+*Typ*  
+(Optional) Dabei kann es sich um eine der folgenden sein:
 
 - `dll` Fügt Funktionen und Klassen, mit die die resultierende DLL als in-Process-com-Server verwendet werden können. Dies ist der Standardwert.
 
@@ -63,11 +63,11 @@ Einer der folgenden Werte ist möglich:
 
 - `unspecified` Deaktiviert die Einfügung von ATL-Code im Zusammenhang mit dem Modulattribut: Einfügung der ATL-Modulklasse, globalen Instanz _AtlModule und von Einstiegspunkt zeigen Funktionen. Einfügen von ATL-Code aufgrund von anderen Attributen im Projekt wird nicht deaktiviert.
 
-*name* (optional)  
-Der Name des Bibliotheksblocks.
+*name*  
+(Optional) Der Name des bibliotheksblocks.
 
-*Version* (optional)  
-Die Versionsnummer, die Sie dem Bibliotheksblock zuweisen möchten. Der Standardwert ist 1,0.
+*version*  
+(Optional) Die Versionsnummer, die Sie dem bibliotheksblock zuweisen möchten. Der Standardwert ist 1,0.
 
 *uuid*  
 Eindeutige ID für die Bibliothek. Wenn Sie diesen Parameter weglassen, wird automatisch eine ID für die Bibliothek generiert. Müssen Sie möglicherweise Abrufen der *Uuid* des Blocks Bibliothek, die Sie mithilfe des Bezeichners können **__uuidof (** *Libraryname* **)**.
@@ -75,32 +75,32 @@ Eindeutige ID für die Bibliothek. Wenn Sie diesen Parameter weglassen, wird aut
 *lcid*  
 Der Lokalisierungsparameter. Finden Sie unter [Lcid](/windows/desktop/Midl/lcid) für Weitere Informationen.
 
-*Steuerelement* (optional)  
-Gibt an, dass alle Co-Klassen in der Bibliothek Steuerelemente sind.
+*Steuerelement*  
+(Optional) Gibt an, dass alle Co-Klassen in der Bibliothek Steuerelemente sind.
 
 *helpstring*  
 Gibt die Typbibliothek an.
 
-*Helpstringdll* (optional)  
-Gibt den Namen der DLL-Datei zum Ausführen der Suche nach einem Dokument an. Finden Sie unter [Helpstringdll](/windows/desktop/Midl/helpstringdll) für Weitere Informationen.
+*helpstringdll*  
+(Optional) Legt den Namen der DLL-Datei zu verwenden, um eine Suche nach Dokument auszuführen. Finden Sie unter [Helpstringdll](/windows/desktop/Midl/helpstringdll) für Weitere Informationen.
 
-*HelpFile* (optional)  
-Der Name des der **Hilfe** -Datei für die Typbibliothek.
+*helpfile*  
+(Optional) Der Name des der **Hilfe** -Datei für die Typbibliothek.
 
-*HelpContext* (optional)  
-Die **Hilfe-ID** für diese Typbibliothek.
+*helpcontext*  
+(Optional) Die **Hilfe-ID** für diese Typbibliothek.
 
-*Helpstringcontext* (optional)  
-Weitere Informationen finden Sie unter [helpstringcontext](../windows/helpstringcontext.md) .
+*helpstringcontext*  
+(Optional) Finden Sie unter [Helpstringcontext](../windows/helpstringcontext.md) für Weitere Informationen.
 
-*Ausgeblendete* (optional)  
-Verhindert, dass die gesamte Bibliothek angezeigt wird. Dies ist für die Verwendung mit Steuerelementen vorgesehen. Hosts müssen eine neue Typbibliothek erstellen, die das Steuerelement mit erweiterten Eigenschaften umschließt. Finden Sie unter den [ausgeblendeten](/windows/desktop/Midl/hidden) MIDL-Attribut für Weitere Informationen.
+*hidden*  
+(Optional) Verhindert, dass die gesamte Bibliothek angezeigt wird. Dies ist für die Verwendung mit Steuerelementen vorgesehen. Hosts müssen eine neue Typbibliothek erstellen, die das Steuerelement mit erweiterten Eigenschaften umschließt. Finden Sie unter den [ausgeblendeten](/windows/desktop/Midl/hidden) MIDL-Attribut für Weitere Informationen.
 
-*Eingeschränkte* (optional)  
-Mitglieder der Bibliothek können nicht willkürlich aufgerufen werden. Finden Sie unter den [eingeschränkten](/windows/desktop/Midl/restricted) MIDL-Attribut für Weitere Informationen.
+*restricted*  
+(Optional) Mitglieder der Bibliothek können nicht beliebig aufgerufen werden. Finden Sie unter den [eingeschränkten](/windows/desktop/Midl/restricted) MIDL-Attribut für Weitere Informationen.
 
-*benutzerdefinierte* (optional)  
-Ein oder mehrere Attribute; dies ist vergleichbar mit dem [custom](../windows/custom-cpp.md) -Attribut. Der erste Parameter für *benutzerdefinierte* ist die GUID des Attributs. Zum Beispiel:
+*Benutzerdefinierte*  
+(Optional) Ein oder mehrere Attribute; Dies ist vergleichbar mit der [benutzerdefinierte](../windows/custom-cpp.md) Attribut. Der erste Parameter für *benutzerdefinierte* ist die GUID des Attributs. Zum Beispiel:
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]

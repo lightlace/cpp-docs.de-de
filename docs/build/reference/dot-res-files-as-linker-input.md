@@ -1,5 +1,5 @@
 ---
-title: . RES-Dateien als Linkereingabe | Microsoft Docs
+title: . RES-Dateien als Linkereingabe | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71344bb752ff7a328ddd5f718a5de1c1f42b65be
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5a6a572013a29420670a2aef8c91c9c4bc64e871
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370666"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706303"
 ---
 # <a name="res-files-as-linker-input"></a>.RES-Dateien als Linkereingabe
-Sie können eine RES-Datei angeben, wenn ein Programm verknüpfen. RES-Datei wird vom Ressourcencompiler (RC) erstellt. LINK konvertiert RES-Dateien automatisch in COFF-Format. Das CVTRES.exe-Tool muss im gleichen Verzeichnis wie LINK.exe oder in einem Verzeichnis, in der PATH-Umgebungsvariable angegeben werden.  
-  
-## <a name="see-also"></a>Siehe auch  
- [LINK-Eingabedateien](../../build/reference/link-input-files.md)   
- [Linkeroptionen](../../build/reference/linker-options.md)
+
+Sie können eine RES-Datei angeben, wenn Sie ein Programm verknüpfen. RES-Datei wird vom Ressourcencompiler (RC) erstellt. LINK konvertiert RES-Dateien automatisch in COFF-Format. Das Tool CVTRES.exe muss in demselben Verzeichnis wie LINK.exe oder in einem in der PATH-Umgebungsvariablen angegebenen Verzeichnis.
+
+## <a name="see-also"></a>Siehe auch
+
+[LINK-Eingabedateien](../../build/reference/link-input-files.md)<br/>
+[Linkeroptionen](../../build/reference/linker-options.md)

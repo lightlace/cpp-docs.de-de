@@ -144,12 +144,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f601d636ab280a5f7346447b907c3326a4fdecd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ddfbb4887a1b34770a1a350f4d2863635c837db0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965486"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725907"
 ---
 # <a name="unorderedmultiset-class"></a>unordered_multiset-Klasse
 
@@ -363,7 +363,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-KeyVal die zuzuordnende Schlüsselwert.
+*keyVal*<br/>
+Der zuzuordnende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -507,8 +508,8 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parameter
 
-*nbucket*  
- Die Bucketnummer.
+*nbucket*<br/>
+Die Bucketnummer.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -873,8 +874,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*keyVal*  
- Der zu suchende Schlüsselwert.
+*keyVal*<br/>
+Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1119,8 +1120,8 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parameter
 
-*nbucket*  
- Die Bucketnummer.
+*nbucket*<br/>
+Die Bucketnummer.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1187,8 +1188,8 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Parameter
 
-*keyVal*  
- Der zu suchende Schlüsselwert.
+*keyVal*<br/>
+Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1261,17 +1262,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Parameter
 
-*Where*  
- Die Position des zu entfernenden Elements.
+*Where*<br/>
+Die Position des zu entfernenden Elements.
 
-*Erste*  
- Die Position des ersten zu entfernenden Elements.
+*Erste*<br/>
+Die Position des ersten zu entfernenden Elements.
 
-*letzte*  
- Die Position direkt hinter dem letzten zu entfernenden Element.
+*letzte*<br/>
+Die Position direkt hinter dem letzten zu entfernenden Element.
 
-*Key*  
- Der Schlüsselwert der zu entfernenden Elemente.
+*Key*<br/>
+Der Schlüsselwert der zu entfernenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1293,8 +1294,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*keyVal*  
- Der zu suchende Schlüsselwert.
+*keyVal*<br/>
+Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1906,8 +1907,8 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parameter
 
-*factor*  
- Der neue maximale Lastfaktor.
+*factor*<br/>
+Der neue maximale Lastfaktor.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2188,8 +2189,8 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parameter
 
-*nbuckets*  
- Die angeforderte Anzahl von Buckets.
+*nbuckets*<br/>
+Die angeforderte Anzahl von Buckets.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2372,8 +2373,8 @@ void swap(unordered_multiset& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Der Container für den Tauschvorgang.
+*right*<br/>
+Der Container für den Tauschvorgang.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2505,7 +2506,7 @@ Der erste Konstruktor gibt eine Kopie der gesteuerte Sequenz durch *rechts*. Mit
 
 Alle Konstruktoren initialisieren auch einige gespeicherte Werte. Für den Kopierkonstruktor werden die Werte erhalten Sie vom *rechts*. Andernfalls gilt:
 
-die minimale Anzahl von Buckets ist das Argument *Bucket_count*, wenn vorhanden; andernfalls den Standardwert beschrieben wird hier als der implementierungsdefinierte Wert `N0`.
+Die minimale Anzahl von Buckets ist das Argument *Bucket_count*, wenn vorhanden; andernfalls den Standardwert beschrieben wird hier als der implementierungsdefinierte Wert `N0`.
 
 Das hashfunktionsobjekt ist das Argument *Hash*, wenn vorhanden; andernfalls es ist `Hash()`.
 

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97e0a81fc5e317f018924efd3d564d39618cb2b5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 36817eba04d630ea4e56140af582bf49fa6f54ce
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850081"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718119"
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
 Die `CMFCHeaderCtrl` Klasse unterstützt die Sortierung mehrere Spalten in einem Kopfzeilen-Steuerelement.  
@@ -137,8 +137,8 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- True, um mehrere Spalten sortieren-Modus zu aktivieren. "False", um mehrere Spalten sortieren-Modus deaktivieren und entfernen Sie alle Spalten aus der Liste der sortierten Spalten. Der Standardwert ist "true".  
+*bAktivieren*<br/>
+[in] True, um mehrere Spalten sortieren-Modus zu aktivieren. "False", um mehrere Spalten sortieren-Modus deaktivieren und entfernen Sie alle Spalten aus der Liste der sortierten Spalten. Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode zum Aktivieren oder Deaktivieren von mehreren Spalten sortieren-Modus. Zwei oder mehr Spalten können in einer Art teilnehmen, wenn es sich bei das Kopfzeilen-Steuerelement in mehreren Spalten sortieren-Modus befindet.  
@@ -151,8 +151,8 @@ int GetColumnState(int iColumn) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *der iColumn*  
- Der nullbasierte Index einer Spalte.  
+*der iColumn*<br/>
+[in] Der nullbasierte Index einer Spalte.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Wert, der den Status der Sortierung der angegebenen Spalte anzugeben. In der folgende Tabelle sind die möglichen Werte aufgeführt:  
@@ -227,20 +227,20 @@ virtual void OnDrawItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *iItem*  
- Der nullbasierte Index des Elements, das gezeichnet werden soll.  
+*iItem*<br/>
+[in] Der nullbasierte Index des Elements, das gezeichnet werden soll.  
   
- [in] *Rect*  
- Das umschließende Rechteck des Elements, das gezeichnet werden soll.  
+*Rect*<br/>
+[in] Das umschließende Rechteck des Elements, das gezeichnet werden soll.  
   
- [in] *bIsPressed*  
- TRUE zum Zeichnen des Elements im gedrückten Zustand andernfalls "false".  
+*bIsPressed*<br/>
+[in] TRUE zum Zeichnen des Elements im gedrückten Zustand andernfalls "false".  
   
- [in] *bIsHighlighted*  
- "True" zum Zeichnen des Elements in der markierten Status; andernfalls "false".  
+*bIsHighlighted*<br/>
+[in] "True" zum Zeichnen des Elements in der markierten Status; andernfalls "false".  
   
 ##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow  
  Wird aufgerufen, durch das Framework zum Zeichnen des Pfeils sortieren.  
@@ -252,11 +252,11 @@ virtual void OnDrawSortArrow(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *RectArrow*  
- Das umschließende Rechteck des Pfeils sortieren.  
+*rectArrow*<br/>
+[in] Das umschließende Rechteck des Pfeils sortieren.  
   
 ##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground  
  Wird aufgerufen, durch das Framework, um den Hintergrund des Steuerelements Headerspalte zu füllen.  
@@ -266,8 +266,8 @@ virtual void OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -279,8 +279,8 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *der iColumn*  
- Der nullbasierte Index des zu entfernenden Spalte.  
+*der iColumn*<br/>
+[in] Der nullbasierte Index des zu entfernenden Spalte.  
   
 ##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn  
  Legt die Sortierreihenfolge einer angegebenen Spalte in einem Kopfzeilen-Steuerelement fest.  
@@ -293,14 +293,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *der iColumn*  
- Der nullbasierte Index, der eine Header-Steuerelement-Spalte. Wenn dieser Parameter ist kleiner als 0 (null), entfernt diese Methode alle Spalten aus der Liste der Sortierspalten.  
+*der iColumn*<br/>
+[in] Der nullbasierte Index, der eine Header-Steuerelement-Spalte. Wenn dieser Parameter ist kleiner als 0 (null), entfernt diese Methode alle Spalten aus der Liste der Sortierspalten.  
   
- [in] *bAscending*  
- Gibt die Sortierreihenfolge der Spalte, die die *der iColumn* angegeben wird. "True" festlegen, aufsteigend; "False" festlegen, absteigend. Der Standardwert ist "true".  
+*bAscending*<br/>
+[in] Gibt die Sortierreihenfolge der Spalte, die die *der iColumn* angegeben wird. "True" festlegen, aufsteigend; "False" festlegen, absteigend. Der Standardwert ist "true".  
   
- [in] *hinzufügen*  
- True, wenn in der Sortierreihenfolge der Spalte festlegen, die *der iColumn* Parameter gibt an.  
+*Hinzufügen*<br/>
+[in] True, wenn in der Sortierreihenfolge der Spalte festlegen, die *der iColumn* Parameter gibt an.  
   
  Ist das aktuelle Kopfzeilen-Steuerelement in *Sortieren mehrerer Spalten* Modus, diese Methode fügt die angegebene Spalte zur Liste der Sortierspalten. Verwendung [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) mehreren Spalten sortieren-Modus festgelegt.  
   

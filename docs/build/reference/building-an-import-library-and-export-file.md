@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c832ee24d500eba28c14713d1c0a092baf90a440
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: c6a980a96198db80f0956895292d37f123d0351c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894615"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723306"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Erstellen einer Importbibliothek und einer Exportdatei
 
@@ -60,7 +60,7 @@ Dies sind die gleichen Methoden, die Sie zum Festlegen von Exporten, beim Verkn�
 
 Die folgenden Optionen gelten für das Erstellen einer Importbibliothek und -Datei exportieren:
 
-> **/ OUT:** *importieren*  
+> **/ OUT:** *importieren*
 
 Überschreibt den Standardnamen der Ausgabe für die *importieren* Bibliothek erstellt wird. Wenn/Out nicht angegeben ist, wird der Standardname ist der Basisname der ersten Objektdatei oder -Bibliothek in der LIB-Befehl und die Erweiterung. Lib. Die Exportdatei erhält den gleichen Basisnamen wie die Importbibliothek und die Erweiterung. "exp".
 

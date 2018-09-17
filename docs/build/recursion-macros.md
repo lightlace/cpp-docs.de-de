@@ -1,5 +1,5 @@
 ---
-title: Rekursionsmakros | Microsoft Docs
+title: Rekursionsmakros | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2759deaff6014cbba40c97f9d627baf6a800732f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f91a5f327686a522608b6eec9fd7106cbab00028
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368960"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702039"
 ---
 # <a name="recursion-macros"></a>Rekursionsmakros
-Verwenden Sie Rekursionsmakros NMAKE rekursiv aufgerufen. Rekursive Sitzungen erben Befehlszeilen- und Umgebungsvariablen Makros und Tools.ini Informationen. Sie erben nicht die Makefiles definierte Rückschlussregeln oder **. SUFFIXE** und **. WERTVOLLE** Spezifikationen. Um Makros einer rekursiven NMAKE-Sitzung zu übergeben, legen Sie eine Umgebungsvariable mit Satz vor dem rekursiven Aufruf, definieren Sie ein Makro im Befehl für den rekursiven Aufruf, oder definieren Sie ein Makro in Tools.ini.  
-  
-|Makro|Definition|  
-|-----------|----------------|  
-|**STELLEN SIE**|Befehl, der ursprünglich zum Aufrufen von NMAKE verwendet.<br /><br /> Das $(make)-makro gibt den vollständigen Pfad zu nmake.exe.|  
-|**MAKEDIR**|Aktuelle Verzeichnis Wenn NMAKE aufgerufen wurde.|  
-|**MAKEFLAGS**|Optionen momentan in Kraft. Verwenden Sie als `/$(MAKEFLAGS)`.  Beachten Sie, dass/f nicht enthalten ist.|  
-  
-## <a name="see-also"></a>Siehe auch  
- [Besondere NMAKE-Makros](../build/special-nmake-macros.md)
+
+Verwenden Sie Rekursionsmakros NMAKE rekursiv aufgerufen. Rekursive Sitzungen erben Befehlszeilen- und Umgebungsvariablen-Makros und Tools.ini Informationen. Sie erben nicht die Makefile-definierte Rückschlussregeln oder **. SUFFIXE** und **. WERTVOLLE** Spezifikationen. Um eine rekursive NMAKE-Sitzung Makros übergeben, legen Sie eine Umgebungsvariable mit vor dem rekursiven Aufruf, definieren Sie ein Makro im Befehl für den rekursiven Aufruf, oder definieren Sie ein Makro in Tools.ini.
+
+|Makro|Definition|
+|-----------|----------------|
+|**STELLEN**|Befehl, der ursprünglich zum Aufrufen von NMAKE verwendet.<br /><br /> Das $(make)-makro gibt den vollständigen Pfad zu nmake.exe.|
+|**MAKEDIR**|Aktuelle Verzeichnis beim Aufruf von NMAKE.|
+|**MAKEFLAGS**|Die Optionen momentan. Verwenden Sie als `/$(MAKEFLAGS)`.  Beachten Sie, dass/f nicht enthalten ist.|
+
+## <a name="see-also"></a>Siehe auch
+
+[Besondere NMAKE-Makros](../build/special-nmake-macros.md)

@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ebae1828d102881d866e05d41f1831e35e01a51
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e623c0990477c5ee24fb4dcc782a6f243dce3337
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679246"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712167"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 Stellt die Funktionalität des allgemeinen Windows-Strukturansicht-Steuerelements bereit.  
@@ -465,7 +465,7 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *fCancelWithoutSave*|TRUE, um Änderungen an dem Strukturansicht-Element zu verwerfen, bevor Sie mit dem Abschluss der Bearbeitung oder "false", um Änderungen an das Strukturansichtselement zu speichern, vor dem Abschluss des Vorgangs.|  
+|*fCancelWithoutSave*|[in] TRUE, um Änderungen an dem Strukturansicht-Element zu verwerfen, bevor Sie mit dem Abschluss der Bearbeitung oder "false", um Änderungen an das Strukturansichtselement zu speichern, vor dem Abschluss des Vorgangs.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -732,7 +732,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle zu einem Baumansicht-Steuerelement ein Element.|  
+|*hItem*|[in] Handle zu einem Baumansicht-Steuerelement ein Element.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Index des Bildes, das angezeigt wird, wenn das angegebene Element im erweiterten Zustand befindet.  
@@ -798,9 +798,9 @@ BOOL GetItemPartRect(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle zu einem Baumansicht-Steuerelement ein Element.|  
-|[in] *nPart*|Der Bezeichner für das Part. Muss auf TVGIPR_BUTTON festgelegt werden.|  
-|[out] *LpRect*|Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Wenn diese Methode erfolgreich ist, erhält die Struktur die Rechteckkoordinaten, der die Komponente, *hItem* und *nPart*.|  
+|*hItem*|[in] Handle zu einem Baumansicht-Steuerelement ein Element.|  
+|*nPart*|[in] Der Bezeichner für das Part. Muss auf TVGIPR_BUTTON festgelegt werden.|  
+|*lpRect*|[out] Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Wenn diese Methode erfolgreich ist, erhält die Struktur die Rechteckkoordinaten, der die Komponente, *hItem* und *nPart*.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -879,7 +879,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle zu einem Baumansicht-Steuerelement ein Element.|  
+|*hItem*|[in] Handle zu einem Baumansicht-Steuerelement ein Element.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die erweiterten Zustand des Elements. Weitere Informationen finden Sie unter den `uStateEx` Mitglied der [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) Struktur.  
@@ -1322,7 +1322,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *uAccId*|Ein Bezeichner der Barrierefreiheit für ein Element in der Strukturansicht-Element.|  
+|*uAccId*|[in] Ein Bezeichner der Barrierefreiheit für ein Element in der Strukturansicht-Element.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Das Handle für ein Strukturansichtselement ( `HTREEITEM`), entspricht die *uAccId* Parameter. Weitere Informationen finden Sie unter den *hItem* Mitglied der [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) Struktur.  
@@ -1353,7 +1353,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *hItem*|Ein Handle eines Baumansicht-Elements im Steuerelement. Weitere Informationen finden Sie unter den *hItem* Mitglied der [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) Struktur.|  
+|*hItem*|[in] Ein Handle eines Baumansicht-Elements im Steuerelement. Weitere Informationen finden Sie unter den *hItem* Mitglied der [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) Struktur.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Barrierefreiheit-Identifier, entspricht die *hItem* Parameter.  
@@ -1474,8 +1474,8 @@ BOOL SetAutoscrollInfo(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *uPixelsPerSec*|Die Anzahl der Pixel pro Sekunde, um einen Bildlauf durchführen.|  
-|[in] *uUpdateTime*|Das Zeitintervall zwischen den Updates des Steuerelements.|  
+|*uPixelsPerSec*|[in] Die Anzahl der Pixel pro Sekunde, um einen Bildlauf durchführen.|  
+|*uUpdateTime*|[in] Das Zeitintervall zwischen den Updates des Steuerelements.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt immer "true" zurück.  
@@ -1555,8 +1555,8 @@ DWORD SetExtendedStyle(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *DwExMask*|Eine Bitmaske, die angibt, welche Formate im aktuellen Strukturansicht Steuerelement von dieser Methode betroffen sind. Wenn dieser Parameter 0 (null) ist, wird er ignoriert und der Wert von der *DwExStyles* Parameter dem Strukturansicht-Steuerelement zugewiesen ist.<br /><br /> Geben Sie 0 (null) oder eine bitweise Kombination (OR) von Formatvorlagen, die in beschriebenen [Strukturansicht Steuerelement Erweiterte Stile](/windows/desktop/Controls/tree-view-control-window-extended-styles).|  
-|[in] *DwExStyles*|Eine Bitmaske, die angibt, welche Formate in der aktuellen Struktur-Ansicht zu setzen oder löschen zu steuern.<br /><br /> Geben Sie zum Festlegen einer Kombination von Stilen eine bitweise Kombination (OR) von Formatvorlagen, die in beschriebenen [Strukturansicht Steuerelement Erweiterte Stile](/windows/desktop/Controls/tree-view-control-window-extended-styles). Geben Sie 0 (null), um eine Reihe von Formatvorlagen zu löschen.|  
+|*dwExMask*|[in] Eine Bitmaske, die angibt, welche Formate im aktuellen Strukturansicht Steuerelement von dieser Methode betroffen sind. Wenn dieser Parameter 0 (null) ist, wird er ignoriert und der Wert von der *DwExStyles* Parameter dem Strukturansicht-Steuerelement zugewiesen ist.<br /><br /> Geben Sie 0 (null) oder eine bitweise Kombination (OR) von Formatvorlagen, die in beschriebenen [Strukturansicht Steuerelement Erweiterte Stile](/windows/desktop/Controls/tree-view-control-window-extended-styles).|  
+|*dwExStyles*|[in] Eine Bitmaske, die angibt, welche Formate in der aktuellen Struktur-Ansicht zu setzen oder löschen zu steuern.<br /><br /> Geben Sie zum Festlegen einer Kombination von Stilen eine bitweise Kombination (OR) von Formatvorlagen, die in beschriebenen [Strukturansicht Steuerelement Erweiterte Stile](/windows/desktop/Controls/tree-view-control-window-extended-styles). Geben Sie 0 (null), um eine Reihe von Formatvorlagen zu löschen.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Wert, der die vorherige enthält erweiterte Stile von Listensteuerelementen.  
@@ -1747,8 +1747,8 @@ BOOL SetItemExpandedImageIndex(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle zu einem Baumansicht-Steuerelement ein Element.|  
-|[in] *iExpandedImage*|Der Index des Bildes, das angezeigt wird, wenn das angegebene Element im erweiterten Zustand befindet.|  
+|*hItem*|[in] Handle zu einem Baumansicht-Steuerelement ein Element.|  
+|*iExpandedImage*|[in] Der Index des Bildes, das angezeigt wird, wenn das angegebene Element im erweiterten Zustand befindet.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -1858,8 +1858,8 @@ BOOL SetItemStateEx(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle zu einem Baumansicht-Steuerelement ein Element.|  
-|[in] *uStateEx*|Die erweiterten Zustand des Elements. Weitere Informationen finden Sie unter den `uStateEx` Mitglied der [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) Struktur.|  
+|*hItem*|[in] Handle zu einem Baumansicht-Steuerelement ein Element.|  
+|*uStateEx*|[in] Die erweiterten Zustand des Elements. Weitere Informationen finden Sie unter den `uStateEx` Mitglied der [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) Struktur.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -1984,7 +1984,7 @@ void ShowInfoTip(HTREEITEM hItem);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *hItem*|Ein Handle für ein Strukturansichtselement im Steuerelement. Weitere Informationen finden Sie unter den `hItem` Mitglied der [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) Struktur.|  
+|*hItem*|[in] Ein Handle für ein Strukturansichtselement im Steuerelement. Weitere Informationen finden Sie unter den `hItem` Mitglied der [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) Struktur.|  
   
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen zu den Unterschieden zwischen den QuickInfos und Infotipps suchen Sie nach dem Thema in der "QuickInfos und Infotipps" [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).  

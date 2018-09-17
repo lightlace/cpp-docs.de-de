@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebe4b604958220a846ee3a91b1a6251f6f461de9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 763849c2f13e88c11280ec7594385afd85552080
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758855"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712732"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Headersteuerelements bereit.  
@@ -490,8 +490,8 @@ BOOL GetItemDropDownRect(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *iItem*|Nullbasierte Index des ein Headerelement, dessen Stil HDF_SPLITBUTTON ist. Weitere Informationen finden Sie unter den `fmt` Mitglied der [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) Struktur.|  
-|[out] *LpRect*|Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die umgebenden Rechteck Informationen zu erhalten.|  
+|*iItem*|[in] Nullbasierte Index des ein Headerelement, dessen Stil HDF_SPLITBUTTON ist. Weitere Informationen finden Sie unter den `fmt` Mitglied der [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) Struktur.|  
+|*lpRect*|[out] Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die umgebenden Rechteck Informationen zu erhalten.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Funktion erfolgreich ausgeführt wird. andernfalls "false".  
@@ -567,7 +567,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] *LpRect*|Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die umschließende Rechteck Informationen empfängt.|  
+|*lpRect*|[out] Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die umschließende Rechteck Informationen empfängt.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Funktion erfolgreich ausgeführt wird. andernfalls "false".  
@@ -598,7 +598,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in, out] *Phdhti*|Zeiger auf eine [HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo) Struktur, die den zu überprüfenden Punkt gibt an, und erhält die Ergebnisse des Tests.|  
+|*phdhti*|[in, out] Zeiger auf eine [HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo) Struktur, die den zu überprüfenden Punkt gibt an, und erhält die Ergebnisse des Tests.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index des Headerelements, sofern vorhanden, an der angegebenen Position; andernfalls -1.  
@@ -726,7 +726,7 @@ BOOL SetFocusedItem(int iItem);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *iItem*|Nullbasierte Index des Headerelements.|  
+|*iItem*|[in] Nullbasierte Index des Headerelements.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  

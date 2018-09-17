@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3984ebc1568c831420e11bd7b3c9004dabcc316b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: eef400f13e36ac543fbcd73ccb7aedf4bc053037
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222093"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718093"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo-Klasse
 Die `CMFCFontInfo` Klasse beschreibt die Namen und andere Attribute einer Schriftart.  
@@ -94,23 +94,23 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Wert*  
- Der Name der Schriftart. Weitere Informationen finden Sie unter den `lfFaceName` Mitglied der ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) Struktur.  
+*Wert*<br/>
+[in] Der Name der Schriftart. Weitere Informationen finden Sie unter den `lfFaceName` Mitglied der ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) Struktur.  
   
- [in] *LpszScript*  
- Der Name des Skripts (Zeichensatz) der Schriftart.  
+*lpszScript*<br/>
+[in] Der Name des Skripts (Zeichensatz) der Schriftart.  
   
- [in] *nCharSet*  
- Ein Wert, der den Zeichensatz (Skript) der Schriftart angibt. Weitere Informationen finden Sie unter den `lfCharSet` Mitglied der ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) Struktur.  
+*nCharSet*<br/>
+[in] Ein Wert, der den Zeichensatz (Skript) der Schriftart angibt. Weitere Informationen finden Sie unter den `lfCharSet` Mitglied der ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) Struktur.  
   
- [in] *nPitchAndFamily*  
- Ein Wert, der die Schriftbreite und die Familie der Schriftart angibt. Weitere Informationen finden Sie unter den `lfPitchAndFamily` Mitglied der ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) Struktur.  
+*nPitchAndFamily*<br/>
+[in] Ein Wert, der die Schriftbreite und die Familie der Schriftart angibt. Weitere Informationen finden Sie unter den `lfPitchAndFamily` Mitglied der ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) Struktur.  
   
- [in] *nType*  
- Ein Wert, der die Schriftart angibt. Dieser Parameter kann eine bitweise Kombination (OR) von DEVICE_FONTTYPE, RASTER_FONTTYPE, und TRUETYPE_FONTTYPE sein.  
+*nType*<br/>
+[in] Ein Wert, der die Schriftart angibt. Dieser Parameter kann eine bitweise Kombination (OR) von DEVICE_FONTTYPE, RASTER_FONTTYPE, und TRUETYPE_FONTTYPE sein.  
   
- [in] *Src*  
- Eine vorhandene `CMFCFontInfo` , deren Mitglieder werden zum Erstellen dieses, Objekts `CMFCFontInfo` Objekt.  
+*src*<br/>
+[in] Eine vorhandene `CMFCFontInfo` , deren Mitglieder werden zum Erstellen dieses, Objekts `CMFCFontInfo` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
   

@@ -1,5 +1,5 @@
 ---
-title: Pseudoziele | Microsoft Docs
+title: Pseudoziele | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67dbc6ae3ad331ab3297b62d00044c3edf679994
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 56c0c0c93163759b604352a6e623f15726b8e7ec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368407"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715831"
 ---
 # <a name="pseudotargets"></a>Pseudoziele
-Ein Pseudoziel handelt es sich um eine Bezeichnung, die anstelle der Dateinamen in einer Abhängigkeitszeile verwendet. Es wird als eine Datei interpretiert, die nicht vorhanden, und daher ist veraltet. NMAKE wird davon ausgegangen, dass ein Pseudoziel Zeitstempel der letzten alle abhängigen Elemente ist. Wenn es keine abhängigen Elemente verfügt, wird davon ausgegangen, dass die aktuelle Uhrzeit. Wenn ein Pseudoziel als Ziel verwendet wird, werden die zugehörigen Befehle immer ausgeführt. Ein Pseudoziel als abhängige verwendet, muss auch als Ziel in einer anderen Abhängigkeit angezeigt werden. Allerdings muss diese Abhängigkeit kein Befehlsblock haben.  
-  
- Pseudoziel-Namen entsprechen die Filename-Syntaxregeln für Ziele. Jedoch, wenn der Name keine Erweiterung ist (d. h. nicht enthält einen Zeitraum), können die 8-Zeichen-Grenze für Dateinamen überschreiten, und es kann bis zu 256 Zeichen lang sein.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Ziele](../build/targets.md)
+
+Ein Pseudoziel handelt es sich um eine Bezeichnung, die anstelle eines Dateinamens in einer Abhängigkeitszeile verwendet. Sie wird als Datei interpretiert, die nicht vorhanden, und daher veraltet ist. NMAKE wird davon ausgegangen, dass ein Pseudoziel der Zeitstempel der letzten alle abhängigen Elemente ist. Wenn sie keine abhängigen Elemente verfügt, wird davon ausgegangen, dass die aktuelle Zeit. Wenn ein Pseudoziel als Ziel verwendet wird, werden die Befehle immer ausgeführt. Ein Pseudoziel als ein abhängiges Element verwendet, muss auch als Ziel in einer anderen Abhängigkeit angezeigt werden. Allerdings muss diese Abhängigkeit nicht um einen Befehlsblock zu erhalten.
+
+Pseudoziel Namen führen Sie die Filename-Syntaxregeln für Ziele. Aber wenn der Name nicht mit eine Erweiterung verfügt (d. h. keinen Punkt enthält), sie können die 8-Zeichen-Grenze für Dateinamen überschreiten und kann bis zu 256 Zeichen lang sein.
+
+## <a name="see-also"></a>Siehe auch
+
+[Ziele](../build/targets.md)
