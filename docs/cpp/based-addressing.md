@@ -16,19 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ad6f120c3b271cf5b12af06258f133cb0518d64
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: f62cdb4fa56d5c770891d359f430726df3423e9f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407792"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059926"
 ---
 # <a name="based-addressing"></a>Basierende Adressierung
-Dieser Abschnitt schließt folgende Themen ein:  
-  
--   [__based-Grammatik](../cpp/based-grammar.md)  
-  
--   [based-Zeiger](../cpp/based-pointers-cpp.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md)
+
+Dieser Abschnitt schließt folgende Themen ein:
+
+- [__based-Grammatik](../cpp/based-grammar.md)
+
+- [based-Zeiger](../cpp/based-pointers-cpp.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md)

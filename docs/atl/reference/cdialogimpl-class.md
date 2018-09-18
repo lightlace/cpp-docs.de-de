@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1780a4f77cce4812ebdb03ebc89936da0dc0d5d0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ba47b7f78e372f05a851d2180590bbc68a8c61ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767054"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068434"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl-Klasse
 
@@ -51,10 +51,10 @@ template <class T,
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Abgeleitet von die Klasse `CDialogImpl`.
 
-*TBase*  
+*TBase*<br/>
 Die Basisklasse der neuen Klasse. Die Standardbasisklasse ist [CWindow](../../atl/reference/cwindow-class.md).
 
 ## <a name="members"></a>Member
@@ -113,7 +113,7 @@ in denen `MyDlg` ist die **Kurznamen** in des Assistenten eingegebenen **Namen**
 
 Erstellt ein nicht modales Dialogfeld an.
 
-```  
+```
 HWND Create(
     HWND hWndParent,  
     LPARAM dwInitParam = NULL );  
@@ -121,18 +121,17 @@ HWND Create(
 HWND Create(
     HWND hWndParent,  
     RECT&, 
-    LPARAM dwInitParam = NULL); 
+    LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Das Handle für das besitzende Fenster.
 
-**RECT &** *Rect*  
-[in] Ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die Größe und Position des Dialogfelds angibt.
+**RECT &** *Rect* [in] ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die Größe und Position des Dialogfelds angibt.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Gibt den Wert zu übergeben, um das Dialogfeld in der *lParam* -Parameter der WM_INITDIALOG-Meldung.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -173,16 +172,16 @@ static LRESULT CALLBACK DialogProc(
 
 ### <a name="parameters"></a>Parameter
 
-*hWnd*  
+*hWnd*<br/>
 [in] Das Handle für das Dialogfeld.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Die Nachricht gesendet, um das Dialogfeld.
 
-*wParam-Parameter*  
+*wParam-Parameter*<br/>
 [in] Zusätzliche meldungsspezifische Informationen.
 
-*lParam*  
+*lParam*<br/>
 [in] Zusätzliche meldungsspezifische Informationen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -199,18 +198,18 @@ Sie können außer Kraft setzen `DialogProc` , geben Sie einen anderen Mechanism
 
 Erstellt ein modales Dialogfeld an.
 
-```   
+```
 INT_PTR DoModal(  
     HWND hWndParent = ::GetActiveWindow(),   
-    LPARAM dwInitParam = NULL); 
+    LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Das Handle für das besitzende Fenster. Der Standardwert ist der Rückgabewert von der [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) Win32-Funktion.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Gibt den Wert zu übergeben, um das Dialogfeld in der *lParam* -Parameter der WM_INITDIALOG-Meldung.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -227,13 +226,13 @@ Rufen Sie zum Erstellen eines nicht modalen Dialogfelds [erstellen](#create).
 
 Zerstört ein modales Dialogfeld an.
 
-```   
-BOOL EndDialog(int nRetCode); 
+```
+BOOL EndDialog(int nRetCode);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*nRetCode*  
+*nRetCode*<br/>
 [in] Der Wert, der von zurückgegeben werden [CDialogImpl::DoModal](#domodal).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -251,8 +250,8 @@ True, wenn das Dialogfeld zerstört wird. andernfalls "false".
 
 Gibt `DialogProc`, die aktuelle Dialogfeldprozedur.
 
-```   
-virtual WNDPROC GetDialogProc(); 
+```
+virtual WNDPROC GetDialogProc();
 ```
 
 ### <a name="return-value"></a>Rückgabewert
@@ -267,13 +266,13 @@ Die aktuelle Dialogfeldprozedur.
 
 Konvertiert (Maps) die Dialogfeld-Einheiten des angegebenen Rechtecks Bildschirm Einheiten (in Pixel).
 
-```   
-BOOL MapDialogRect(LPRECT lpRect); 
+```
+BOOL MapDialogRect(LPRECT lpRect);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*lpRect*  
+*lpRect*<br/>
 Verweist auf eine `CRect` Objekt oder [RECT](../../mfc/reference/rect-structure1.md) -Struktur, die die Clientkoordinaten des Updates zu erhalten, die dem Aktualisierungsbereich umschließt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -288,13 +287,13 @@ Die Funktion ersetzt die Koordinaten in der angegebenen `RECT` Struktur mit den 
 
 Wird aufgerufen, nachdem die letzte Meldung erhalten (in der Regel `WM_NCDESTROY`).
 
-```   
-virtual void OnFinalMessage(HWND hWnd); 
+```
+virtual void OnFinalMessage(HWND hWnd);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*hWnd*  
+*hWnd*<br/>
 [in] Ein Handle für das Fenster zerstört wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -305,26 +304,26 @@ Beachten Sie, wenn das Objekt bei der fensterzerstörung automatisch gelöscht w
 
 Wenn die erste Nachricht, zum Verarbeiten von Nachrichten gesendet, um das Dialogfeld empfangen wird, nur einmal aufgerufen.
 
-```   
+```
 static LRESULT CALLBACK StartDialogProc(
     HWND hWnd,  
     UINT uMsg,  
     WPARAM wParam,  
-    LPARAM lParam); 
+    LPARAM lParam);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*hWnd*  
+*hWnd*<br/>
 [in] Das Handle für das Dialogfeld.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Die Nachricht gesendet, um das Dialogfeld.
 
-*wParam-Parameter*  
+*wParam-Parameter*<br/>
 [in] Zusätzliche meldungsspezifische Informationen.
 
-*lParam*  
+*lParam*<br/>
 [in] Zusätzliche meldungsspezifische Informationen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -337,5 +336,5 @@ Nach dem ersten Aufruf von `StartDialogProc`, `DialogProc` festgelegt ist, wie e
 
 ## <a name="see-also"></a>Siehe auch
 
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

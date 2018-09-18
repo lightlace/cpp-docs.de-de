@@ -42,12 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81ace9c9fe5cf21d93f7e7dd4a8b5f2f2c5d726
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 73abd8ef0ca29ee9e7f2312cc44a8178fc464261
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451549"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064632"
 ---
 # <a name="chdir-wchdir"></a>_chdir, _wchdir
 
@@ -66,24 +66,24 @@ int _wchdir(
 
 ### <a name="parameters"></a>Parameter
 
-*Verwendung*<br/>
+*DirName*<br/>
 Pfad des neuen Arbeitsverzeichnisses.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Funktionen geben bei Erfolg den Wert 0 zurück. Ein Rückgabewert "-1" gibt einen Fehler. Wenn der angegebene Pfad nicht gefunden werden kann, **Errno** festgelegt ist, um **ENOENT**. Wenn *Dirname* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und die Funktion gibt-1 zurück.
+Diese Funktionen geben bei Erfolg den Wert 0 zurück. Ein Rückgabewert 1 gibt Fehler an. Wenn der angegebene Pfad nicht gefunden werden konnte, **Errno** nastaven NA hodnotu **ENOENT**. Wenn *Dirname* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und die Funktion gibt-1 zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_chdir** -Funktion ändert das aktuelle Arbeitsverzeichnis auf das Verzeichnis, das vom angegebenen *Dirname*. Die *Dirname* -Parameter muss auf ein vorhandenes Verzeichnis verweisen. Diese Funktion kann das aktuelle Arbeitsverzeichnis auf jedem beliebigen Laufwerk ändern. Wenn ein neuer Laufwerkbuchstabe in angegebenen *Dirname*, wird der Standardlaufwerkbuchstabe ebenfalls geändert. Wenn z. B. A der Standardlaufwerkbuchstabe und \BIN das aktuelle Arbeitsverzeichnis ist, ändert der folgende Aufruf das aktuelle Arbeitsverzeichnis in C und legt C als neues Standardlaufwerk fest:
+Die **_chdir** -Funktion ändert das aktuelle Arbeitsverzeichnis, das im angegebenen Verzeichnis *Dirname*. Die *Dirname* -Parameter muss auf ein vorhandenes Verzeichnis verweisen. Diese Funktion kann das aktuelle Arbeitsverzeichnis auf jedem beliebigen Laufwerk ändern. Wenn ein neuer Laufwerkbuchstabe in angegeben ist *Dirname*, der Standardlaufwerkbuchstabe ebenfalls geändert. Wenn z. B. A der Standardlaufwerkbuchstabe und \BIN das aktuelle Arbeitsverzeichnis ist, ändert der folgende Aufruf das aktuelle Arbeitsverzeichnis in C und legt C als neues Standardlaufwerk fest:
 
 ```C
 _chdir("c:\temp");
 ```
 
-Bei Verwendung von den optionalen umgekehrten Schrägstrich (**&#92;**) in Pfadangaben verwenden, müssen Sie zwei umgekehrte Schrägstriche platzieren (**&#92;&#92;**) in einem C-Zeichenfolgenliteral dargestellt einen einzelnen umgekehrten Schrägstrich ( **&#92;**).
+Wenn Sie den optionalen umgekehrten Schrägstrich verwenden (**&#92;**) in Pfadangaben verwenden, müssen Sie zwei umgekehrte Schrägstriche platzieren (**&#92;&#92;**) in einem C-Zeichenfolgenliteral dargestellt einen einzelnen umgekehrten Schrägstrich ( **&#92;**).
 
-**_wchdir** ist eine Breitzeichen-Version von **_chdir**; das *Dirname* Argument **_wchdir** ist eine Breitzeichen-Zeichenfolge. **_wchdir** und **_chdir** Verhalten sich andernfalls identisch.
+**_wchdir** ist eine Breitzeichen-Version von **_chdir**; die *Dirname* Argument **_wchdir** ist eine Breitzeichen-Zeichenfolge. **_wchdir** und **_chdir** Verhalten sich andernfalls identisch.
 
 ### <a name="generic-text-routine-mapping"></a>Zuordnung generischer Textroutinen:
 
@@ -93,7 +93,7 @@ Bei Verwendung von den optionalen umgekehrten Schrägstrich (**&#92;**) in Pfada
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionaler Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|
 |-------------|---------------------|---------------------|
 |**_chdir**|\<direct.h>|\<errno.h>|
 |**_wchdir**|\<direct.h> oder \<wchar.h>|\<errno.h>|
@@ -137,10 +137,10 @@ int main( int argc, char *argv[] )
 ```
 
 ```Output
- Volume in drive C has no label.
- Volume Serial Number is 2018-08A1
+Volume in drive C has no label.
+Volume Serial Number is 2018-08A1
 
- Directory of c:\windows
+Directory of c:\windows
 
 08/29/2002  04:00 AM         1,004,032 explorer.exe
 12/17/2002  04:43 PM            10,752 hh.exe

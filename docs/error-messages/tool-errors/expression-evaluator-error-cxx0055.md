@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0055 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0055 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dce01ecbc6913c844cadcf2d3f761cfe815f68a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ee5fc5467e656bd811c89f78ecf7d36f6df1b54
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301527"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066380"
 ---
 # <a name="expression-evaluator-error-cxx0055"></a>Ausdrucksauswertungsfehler CXX0055
-mehrdeutige Symbol im Kontextoperator  
-  
- Ein Symbol, das in den Kontextoperator (**{}**) mehr als ein Symbol in der Anwendung bezeichnet.  
-  
- Der Bereichsauflösungsoperator (`::`) kann in der Lage, die Mehrdeutigkeit aufzulösen.  
-  
- Dieser Fehler ist mit CAN0055 identisch.
+
+Mehrdeutiges Symbol im Kontextoperator
+
+Ein Symbol in den Kontext-Operator (**{}**) mehr als ein Symbol in der Anwendung bezeichnet.
+
+Der Bereichsauflösungsoperator (`::`) möglicherweise die Mehrdeutigkeit aufzulösen.
+
+Dieser Fehler ist mit CAN0055 identisch.

@@ -1,5 +1,5 @@
 ---
-title: double_3-Klasse | Microsoft Docs
+title: double_3-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b1372a273f0296b8dc309068c83ffe2607d038f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6ecc1939faab978c84f786d90c8693b036d2e938
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688673"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027751"
 ---
 # <a name="double3-class"></a>double_3-Klasse
 Stellt einen kurzen Vektor aus drei Doubles dar.  
@@ -267,20 +267,20 @@ explicit inline double_3(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_V0`  
- Der Wert 0-Element initialisiert werden.  
+*_V0*<br/>
+Der Wert, der 0-Element zu initialisieren.  
   
- `_V1`  
- Der Wert 1 Element initialisiert werden.  
+*_V1*<br/>
+Der Wert 1 Element initialisiert werden.  
   
- `_V2`  
- Der Wert 2-Element initialisiert werden.  
+*_V2*<br/>
+Der Wert 2-Element zu initialisieren.  
   
- `_V`  
- Der Wert für die Initialisierung.  
+*_V*<br/>
+Der Wert für die Initialisierung.  
   
- `_Other`  
- Das Objekt, das zum Initialisieren verwendet.  
+*_Sonstige*<br/>
+Das Objekt, das zum Initialisieren verwendet.  
   
 ##  <a name="double_3__size"></a> Größe 
 

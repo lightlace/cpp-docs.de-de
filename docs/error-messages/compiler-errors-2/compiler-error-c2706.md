@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2706 generiert | Microsoft Docs
+title: Compilerfehler C2706 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92f64ddab93fb6815e3ff7a98ac39a842042bfeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 560edb9953d4f7c751f4ab4102fd544fb09bb86d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232645"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066010"
 ---
-# <a name="compiler-error-c2706"></a>Compiler-Fehler C2706 generiert
-Ungültige __except ohne übereinstimmende \__finally (fehlende '}' in \__finally Block?)  
-  
- Der Compiler eine schließende geschweifte Klammer für keinen finden eine `__try` Block.  
-  
- Im folgende Beispiel wird C2706 generiert:  
-  
-```  
-// C2706.cpp  
-int main() {  
-   __try {  
-      void f();  
-   // C2706  } missing here  
-   __except(GetExceptionCode() == 0x0) {  
-   }  
-}  
+# <a name="compiler-error-c2706"></a>Compilerfehler C2706
+
+illegal __except ohne Übereinstimmung \__finally (fehlende '}' in \__finally Block?)
+
+Der Compiler wurde nicht gefunden für eine schließende geschweifte Klammer für eine `__try` Block.
+
+Im folgende Beispiel wird die C2706 generiert:
+
+```
+// C2706.cpp
+int main() {
+   __try {
+      void f();
+   // C2706  } missing here
+   __except(GetExceptionCode() == 0x0) {
+   }
+}
 ```

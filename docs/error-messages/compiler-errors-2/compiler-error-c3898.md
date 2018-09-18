@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3898 | Microsoft Docs
+title: Compilerfehler C3898 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: baeb6e97549bb55212d336e9f832152abaf7db68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 39fe816c2637df5e5a474718d70b404bbc0c2df6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270715"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030027"
 ---
 # <a name="compiler-error-c3898"></a>Compilerfehler C3898
-'Var': Typ-Datenmember können nur Mitglieder von verwalteten Typen sein  
-  
- Ein [Initonly](../../dotnet/initonly-cpp-cli.md) -Datenmember in eine systemeigene Klasse deklariert wurde.  Ein `initonly` -Datenmember kann nur in einer CLR-Klasse deklariert werden.  
-  
- Im folgende Beispiel wird C3898 generiert:  
-  
-```  
-// C3898.cpp  
-// compile with: /clr  
-struct Y1 {  
-   initonly  
-   static int data_var = 9;   // C3898  
-};  
-```  
-  
- Mögliche Lösung:  
-  
-```  
-// C3898b.cpp  
-// compile with: /clr /c  
-ref struct Y1 {  
-   initonly  
-   static int data_var = 9;  
-};  
+
+'Var': Typ-Datenmember können nur Member von verwalteten Typen sein
+
+Ein [Initonly](../../dotnet/initonly-cpp-cli.md) Datenmember in einer systemeigenen Klasse deklariert wurde.  Ein `initonly` -Datenmember kann nur in einer CLR-Klasse deklariert werden.
+
+Im folgende Beispiel wird die C3898 generiert:
+
+```
+// C3898.cpp
+// compile with: /clr
+struct Y1 {
+   initonly
+   static int data_var = 9;   // C3898
+};
+```
+
+Mögliche Lösung:
+
+```
+// C3898b.cpp
+// compile with: /clr /c
+ref struct Y1 {
+   initonly
+   static int data_var = 9;
+};
 ```

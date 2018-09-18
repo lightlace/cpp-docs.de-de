@@ -16,35 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b45db3a1226a9069c03ff928227a8719c83eb65
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 3cd5174ebacd04bd70fbcde29dcbdabb76911c75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406519"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031521"
 ---
 # <a name="false-c"></a>false (C++)
-Das Schlüsselwort ist eines der beiden Werte für eine Variable vom Typ ["bool"](../cpp/bool-cpp.md) oder ein bedingter Ausdruck (ein bedingter Ausdruck ist jetzt ein **"true"** booleschen Ausdruck). Z. B. wenn `i` ist eine Variable vom Typ **"bool"**, `i = false;` Anweisung weist **"false"** zu `i`.  
-  
-## <a name="example"></a>Beispiel  
-  
-```cpp 
-// bool_false.cpp  
-#include <stdio.h>  
-  
-int main()  
-{  
-    bool bb = true;  
-    printf_s("%d\n", bb);  
-    bb = false;  
-    printf_s("%d\n", bb);  
-}  
-```  
-  
-```Output  
-1  
-0  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Schlüsselwörter](../cpp/keywords-cpp.md)
+
+Das Schlüsselwort ist eines der beiden Werte für eine Variable vom Typ ["bool"](../cpp/bool-cpp.md) oder ein bedingter Ausdruck (ein bedingter Ausdruck ist jetzt ein **"true"** booleschen Ausdruck). Z. B. wenn `i` ist eine Variable vom Typ **"bool"**, `i = false;` Anweisung weist **"false"** zu `i`.
+
+## <a name="example"></a>Beispiel
+
+```cpp
+// bool_false.cpp
+#include <stdio.h>
+
+int main()
+{
+    bool bb = true;
+    printf_s("%d\n", bb);
+    bb = false;
+    printf_s("%d\n", bb);
+}
+```
+
+```Output
+1
+0
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Schlüsselwörter](../cpp/keywords-cpp.md)

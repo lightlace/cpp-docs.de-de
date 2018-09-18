@@ -38,14 +38,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2a8e4af6e85dbfa3b617471b592f806ae1ef5548
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 76eb58936082c7efde7e7bc87f17e7326ecc8920
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571966"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071548"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset-Klasse
+
 Verwendet eine `CCommand` oder `CTable` Deklaration.  
   
 ## <a name="syntax"></a>Syntax
@@ -56,11 +57,13 @@ class CStreamRowset
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *TAccessor*  
- Ein Accessor-Klasse.  
+
+*TAccessor*<br/>
+Ein Accessor-Klasse.  
 
 ## <a name="requirements"></a>Anforderungen  
- **Header:** atldbcli.h  
+
+**Header:** atldbcli.h  
   
 ## <a name="members"></a>Member  
   
@@ -72,24 +75,26 @@ class CStreamRowset
 |[Schließen](#close)|Versionen der [ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\)) Schnittstellenzeiger in der Klasse.|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwendung `CStreamRowset` in Ihre `CCommand` oder `CTable` Deklaration, z. B.:  
+
+Verwendung `CStreamRowset` in Ihre `CCommand` oder `CTable` Deklaration, z. B.:  
   
- [!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]  
+[!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]  
   
- oder  
+oder  
   
- [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]  
+[!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]  
   
- `ICommand::Execute` Gibt eine `ISequentialStream` -Zeiger ist, die in gespeichert ist `m_spStream`. Sie verwenden, klicken Sie dann die `Read` Methode zum Abrufen von Daten im XML-Format (Unicode-Zeichenfolge). Zum Beispiel:  
+`ICommand::Execute` Gibt eine `ISequentialStream` -Zeiger ist, die in gespeichert ist `m_spStream`. Sie verwenden, klicken Sie dann die `Read` Methode zum Abrufen von Daten im XML-Format (Unicode-Zeichenfolge). Zum Beispiel:  
   
- [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]  
+[!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]  
   
- SQL Server 2000 führt das XML-Formatierung und gibt alle Spalten und Zeilen des Rowsets als eine XML-Zeichenfolge zurück.  
+SQL Server 2000 führt das XML-Formatierung und gibt alle Spalten und Zeilen des Rowsets als eine XML-Zeichenfolge zurück.  
   
 > [!NOTE]
 >  Dieses Feature funktioniert nur mit SQL Server 2000.  
   
 ## <a name="cstreamrowset"></a> CStreamRowset:: CStreamRowset
+
 Instanziiert und initialisiert die `CStreamRowset` Objekt.  
   
 ### <a name="syntax"></a>Syntax  
@@ -99,6 +104,7 @@ CStreamRowset();
 ```  
 
 ## <a name="close"></a> CStreamRowset:: Close
+
 Versionen der [ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\)) Schnittstellenzeiger in der Klasse.  
   
 ### <a name="syntax"></a>Syntax  
@@ -108,5 +114,6 @@ void Close();
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

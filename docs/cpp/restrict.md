@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3eb361d0b92a3977547388ebfd612915431ec98
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 955c3574358d59d23b644a31e42ee91ce6ce76eb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463680"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068337"
 ---
 # <a name="restrict"></a>restrict
 
@@ -32,21 +32,21 @@ Bei Anwendung auf eine Deklaration oder Definition, die einen Zeigertyp zurückg
 
 ## <a name="syntax"></a>Syntax
 
-> **__declspec(restrict)** *Pointer_return_type* *Funktion*();  
-  
+> **__declspec(restrict)** *Pointer_return_type* *Funktion*();
+
 ## <a name="remarks"></a>Hinweise
 
 Der Compiler gibt **__declspec(restrict)**. Z. B. die CRT `malloc` Funktion verfügt über eine **__declspec(restrict)** Dekoration, und damit der Compiler geht davon aus, dass initialisierte Zeiger auf Speicheradressen von `malloc` sind ebenfalls nicht mit einem Alias versehen, indem zuvor vorhandenen Zeiger.
 
-Der Compiler überprüft nicht, dass der zurückgegebene Zeiger nicht tatsächlich mit einem Alias versehen ist. Es ist Aufgabe des Entwicklers, um sicherzustellen, dass das Programm ist, keinen alias einen Zeiger mit markiert die **einschränken __declspec** Modifizierer.  
-  
+Der Compiler überprüft nicht, dass der zurückgegebene Zeiger nicht tatsächlich mit einem Alias versehen ist. Es ist Aufgabe des Entwicklers, um sicherzustellen, dass das Programm ist, keinen alias einen Zeiger mit markiert die **einschränken __declspec** Modifizierer.
+
 Ähnliche Semantik für Variablen finden Sie unter ["__restrict"](../cpp/extension-restrict.md).
- 
+
 Eine andere Anmerkung, die für das Aliasing innerhalb einer Funktion angewendet wird, finden Sie unter [__declspec(noalias)](../cpp/noalias.md).
-  
-Informationen zu den **einschränken** Schlüsselwort, das Teil des C++ AMP ist, finden Sie unter [einschränken (C++-AMP)](../cpp/restrict-cpp-amp.md).  
- 
-## <a name="example"></a>Beispiel  
+
+Informationen zu den **einschränken** Schlüsselwort, das Teil des C++ AMP ist, finden Sie unter [einschränken (C++-AMP)](../cpp/restrict-cpp-amp.md).
+
+## <a name="example"></a>Beispiel
 
 Das folgende Beispiel veranschaulicht die Verwendung von **__declspec(restrict)**.
 
@@ -122,6 +122,7 @@ int main()
 **Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
- [Schlüsselwörter](../cpp/keywords-cpp.md)  
- [__declspec](../cpp/declspec.md)  
- [__declspec(noalias)](../cpp/noalias.md)  
+
+[Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
+[__declspec](../cpp/declspec.md)<br/>
+[__declspec(noalias)](../cpp/noalias.md)

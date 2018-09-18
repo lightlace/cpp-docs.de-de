@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 580fb4c96db70b612135ac48e30bd9c0d45c4d1c
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 1edd35ac9f32a28a19c4ea54b7e9fba2820d6095
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42573253"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031625"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>Kombination von C (strukturierte) und C++-Ausnahmen
 
@@ -47,10 +47,10 @@ Wenn Sie strukturierte kombinieren und C++-Ausnahmen, die dieser potenziellen Pr
 
   Finden Sie weitere Informationen zur Verwendung von `setjmp` und `longjmp` in C++-Programmen.
 
-- [Strukturierte Ausnahmebehandlung in C++](../cpp/exception-handling-differences.md)
+- [Behandeln strukturierter Ausnahmen in C++](../cpp/exception-handling-differences.md)
 
   Finden Sie Beispiele für die Möglichkeiten zum Ausnahmen behandeln, die strukturierte C++ verwendet werden können.
 
 ## <a name="see-also"></a>Siehe auch
 
-[C++-Ausnahmebehandlung](../cpp/cpp-exception-handling.md)  
+[C++-Ausnahmebehandlung](../cpp/cpp-exception-handling.md)

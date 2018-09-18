@@ -1,5 +1,5 @@
 ---
-title: Texture-Klasse | Microsoft Docs
+title: Texture-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,15 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b16e449f3def7b4b86932e9806fa78d422466978
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 369ca34eb75b33208365d34756312e23e85afd92
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692781"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029636"
 ---
 # <a name="texture-class"></a>texture-Klasse
-Eine Textur ist ein Datenaggregat in einem `accelerator_view`-Objekt in der extent-Domäne. Es ist eine Auflistung von Variablen, eine für jedes Element in einer extent-Domäne. Jede Variable enthält einen Wert entspricht dem C++ primitivem Typ ( `unsigned int`, `int`, `float`, `double`), ein skalarer Typ ( `norm`, oder `unorm`), oder einem kurzen vektortyp entspricht.  
+Eine Textur ist ein Datenaggregat in einem `accelerator_view`-Objekt in der extent-Domäne. Es ist eine Auflistung von Variablen, eine für jedes Element in einer extent-Domäne. Jede Variable enthält einen Wert mit dem C++ primitivem Typ entspricht ( `unsigned int`, `int`, `float`, `double`), ein skalarer Typ ( `norm`, oder `unorm`), oder einem kurzen vektortyp entspricht.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,11 +45,11 @@ class texture;
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `value_type`  
- Der Typ der Elemente in der Textur.  
+*value_type*<br/>
+Der Typ der Elemente in der Textur.  
   
- `_Rank`  
- Der Rang der Textur.  
+*_Rank*<br/>
+Der Rang der Textur.  
   
 ## <a name="members"></a>Member  
   
@@ -71,10 +71,10 @@ class texture;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[copy_to](#copy_to)|Kopiert die `texture` Objekt, das das Ziel, indem eine tiefe Kopie.|  
+|[copy_to](#copy_to)|Kopiert die `texture` Objekt, das das Ziel, indem Sie eine tiefe Kopie.|  
 |[data](#data)|Gibt einen CPU-Zeiger auf Rohdaten dieser Textur zurück.|  
 |[get](#get)|Gibt den Wert des Elements am angegebenen Index zurück.|  
-|[get_associated_accelerator_view](#get_associated_accelerator_view)|Gibt die ["accelerator_view"](accelerator-view-class.md) also das gewünschte Ziel zum Kopieren dieser Textur.|  
+|[get_associated_accelerator_view](#get_associated_accelerator_view)|Gibt die ["accelerator_view"](accelerator-view-class.md) , das gewünschte Ziel zum Kopieren dieser Textur.|  
 |[get_depth_pitch](#get_depth_pitch)|Gibt die Anzahl von Bytes zwischen jedem Tiefensegment in einer 3D-Stagingtextur auf der CPU zurück.|  
 |[get_row_pitch](#get_row_pitch)|Gibt die Anzahl von Bytes zwischen jeder Zeile in einer 2D- oder 3D-Stagingtextur auf der CPU zurück.|  
 |[set](#set)|Legt den Wert des Elements am angegebenen Index ab.|  
@@ -97,7 +97,7 @@ class texture;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[associated_accelerator_view](#associated_accelerator_view)|Ruft die ["accelerator_view"](accelerator-view-class.md) also das gewünschte Ziel zum Kopieren dieser Textur.|  
+|[associated_accelerator_view](#associated_accelerator_view)|Ruft die ["accelerator_view"](accelerator-view-class.md) , das gewünschte Ziel zum Kopieren dieser Textur.|  
 |[depth_pitch](#depth_pitch)|Ruft die Anzahl von Bytes zwischen jedem Tiefensegment in einer 3D-Stagingtextur auf der CPU ab.|  
 |[row_pitch](#row_pitch)|Ruft die Anzahl von Bytes zwischen jeder Zeile in einer 2D- oder 3D-Stagingtextur auf der CPU zurück.|  
   
@@ -121,7 +121,7 @@ class texture;
   
 ##  <a name="associated_accelerator_view"></a> associated_accelerator_view 
 
- Ruft die ["accelerator_view"](accelerator-view-class.md) also das gewünschte Ziel zum Kopieren dieser Textur.  
+ Ruft die ["accelerator_view"](accelerator-view-class.md) , das gewünschte Ziel zum Kopieren dieser Textur.  
   
 ```  
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;  
@@ -129,7 +129,7 @@ __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelera
   
 ##  <a name="copy_to"></a> copy_to 
 
- Kopiert die `texture` Objekt, das das Ziel, indem eine tiefe Kopie.  
+ Kopiert die `texture` Objekt, das das Ziel, indem Sie eine tiefe Kopie.  
   
 ```  
 void copy_to(texture& _Dest) const; 
@@ -137,14 +137,14 @@ void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Dest`  
- Das Objekt, in das kopiert werden soll.  
+*_Dest*<br/>
+Das Objekt, in das kopiert werden soll.  
   
- `_Rank`  
- Der Rang der Textur.  
+*_Rank*<br/>
+Der Rang der Textur.  
   
- `value_type`  
- Der Typ der Elemente in der Textur.  
+*value_type*<br/>
+Der Typ der Elemente in der Textur.  
   
 ##  <a name="data"></a> Daten 
 
@@ -177,8 +177,8 @@ const value_type get(const index<_Rank>& _Index) const restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Index`  
- Der Index des Elements.  
+*_Index*<br/>
+Der Index des Elements.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Wert des Elements am angegebenen Index.  
@@ -192,7 +192,7 @@ Concurrency::accelerator_view get_associated_accelerator_view() const restrict(c
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die ["accelerator_view"](accelerator-view-class.md) also das gewünschte Ziel zum Kopieren dieser Textur.  
+ Die ["accelerator_view"](accelerator-view-class.md) , das gewünschte Ziel zum Kopieren dieser Textur.  
   
 ##  <a name="get_depth_pitch"></a> get_depth_pitch 
 
@@ -241,20 +241,20 @@ const value_type operator() (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Index`  
- Der Index.  
+*_Index*<br/>
+Der Index.  
   
- `_I0`  
- Die wichtigste Komponente des Index.  
+*_I0*<br/>
+Die wichtigste Komponente des Index.  
   
- `_I1`  
- Die zweitwichtigste Komponente des Index.  
+*_I1*<br/>
+Die zweitwichtigste Komponente des Index.  
   
- `_I2`  
- Die unwichtigste Komponente des Index.  
+*_I2*<br/>
+Die unwichtigste Komponente des Index.  
   
- `_Rank`  
- Der Rang des Index.  
+*_Rank*<br/>
+Der Rang des Index.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Elementwert, der von den Parametern angegeben wird.  
@@ -271,11 +271,11 @@ const value_type operator[] (int _I0) const restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Index`  
- Der Index.  
+*_Index*<br/>
+Der Index.  
   
- `_I0`  
- Der Index.  
+*_I0*<br/>
+Der Index.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Das Element am angegebenen Index.  
@@ -294,8 +294,8 @@ texture& operator= (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Other`  
- Das `texture`-Objekt, aus dem kopiert werden soll.  
+*_Sonstige*<br/>
+Das `texture`-Objekt, aus dem kopiert werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf das `texture`-Objekt.  
@@ -316,7 +316,7 @@ static const int rank = _Rank;
 __declspec(property(get= get_row_pitch)) unsigned int row_pitch;  
 ```  
   
-##  <a name="set"></a> Festlegen 
+##  <a name="set"></a> Legen Sie 
 
  Legt den Wert des Elements am angegebenen Index ab.  
   
@@ -327,14 +327,14 @@ void set(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Index`  
- Der Index des Elements.  
+*_Index*<br/>
+Der Index des Elements.  
   
- `_Rank`  
- Der Rang des Index.  
+*_Rank*<br/>
+Der Rang des Index.  
   
- `value`  
- Der neue Wert des Elements.  
+*Wert*<br/>
+Der neue Wert des Elements.  
   
 ##  <a name="ctor"></a> Textur 
 
@@ -561,59 +561,59 @@ texture(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Acc_view`  
- Die ["accelerator_view"](accelerator-view-class.md) , der den Speicherort der Textur angibt.  
+*_Acc_view*<br/>
+Die ["accelerator_view"](accelerator-view-class.md) , der den Speicherort der Textur angibt.  
   
- `_Av`  
- Die ["accelerator_view"](accelerator-view-class.md) , der den Speicherort der Textur angibt.  
+*_Av*<br/>
+Die ["accelerator_view"](accelerator-view-class.md) , der den Speicherort der Textur angibt.  
   
- `_Associated_av`  
- Ein accelerator_view-Objekt, das das bevorzugte Ziel für Kopien in oder aus dieser Textur angibt.  
+*_Associated_av*<br/>
+Ein accelerator_view-Objekt, das das bevorzugte Ziel für Kopien in oder aus dieser Textur angibt.  
   
- `_Bits_per_scalar_element`  
- Die Anzahl von Bits für jedes skalare Element im zugrunde liegenden skalaren Typ der Textur. Im Allgemeinen werden die Werte 8, 16, 32 und 64 unterstützt. Wenn 0 festgelegt ist, ist die Anzahl von Bits mit der des zugrunde liegende scalar_type-Objekts identisch. 64 ist nur für doppeltbasierte Texturen gültig.  
+*_Bits_per_scalar_element*<br/>
+Die Anzahl von Bits für jedes skalare Element im zugrunde liegenden skalaren Typ der Textur. Im Allgemeinen werden die Werte 8, 16, 32 und 64 unterstützt. Wenn 0 festgelegt ist, ist die Anzahl von Bits mit der des zugrunde liegende scalar_type-Objekts identisch. 64 ist nur für doppeltbasierte Texturen gültig.  
   
- `_Ext`  
- Der Wertebereich in jeder Dimension der Textur.  
+*_Ext*<br/>
+Der Wertebereich in jeder Dimension der Textur.  
   
- `_E0`  
- Die wichtigste Komponente der Texture.  
+*_E0*<br/>
+Die wichtigste Komponente der Texture.  
   
- `_E1`  
- Die zweitwichtigste Komponente der Textur.  
+*_E1*<br/>
+Die zweitwichtigste Komponente der Textur.  
   
- `_E2`  
- Die unwichtigste Komponente des Wertebereichs der Textur.  
+*_E2*<br/>
+Die unwichtigste Komponente des Wertebereichs der Textur.  
   
- `_Input_iterator`  
- Der Typ des Eingabeiterators.  
+*_Input_iterator*<br/>
+Der Typ des Eingabeiterators.  
   
- `_Mipmap_levels`  
- Die Anzahl von MipMap-Ebenen in der zugrunde liegenden Textur. Wenn 0 angegeben ist, verfügt die Textur über den Bereich der MipMap-Ebenen bis hin zur kleinsten möglichen Größe für den angegebenen Wertebereich.  
+*_Mipmap_levels*<br/>
+Die Anzahl von MipMap-Ebenen in der zugrunde liegenden Textur. Wenn 0 angegeben ist, verfügt die Textur über den Bereich der MipMap-Ebenen bis hin zur kleinsten möglichen Größe für den angegebenen Wertebereich.  
   
- `_Rank`  
- Der Rang des Wertebereichs.  
+*_Rank*<br/>
+Der Rang des Wertebereichs.  
   
- `_Source`  
- Ein Zeiger auf einen Hostpuffer.  
+*_Quelle*<br/>
+Ein Zeiger auf einen Hostpuffer.  
   
- `_Src`  
- Die zu kopierende Textur.  
+*_Src*<br/>
+Die zu kopierende Textur.  
   
- `_Src_byte_size`  
- Die Anzahl von Bytes im Quellpuffer.  
+*_Src_byte_size*<br/>
+Die Anzahl von Bytes im Quellpuffer.  
   
- `_Src_first`  
- Ein Anfangsiterator in den Quellcontainer.  
+*_Src_first*<br/>
+Ein Anfangsiterator in den Quellcontainer.  
   
- `_Src_last`  
- Ein Endeiterator in den Quellcontainer.  
+*_Src_last*<br/>
+Ein Endeiterator in den Quellcontainer.  
   
- `_Other`  
- Andere Datenquelle.  
+*_Sonstige*<br/>
+Andere Datenquelle.  
   
- `_Rank`  
- Der Rang des Abschnitts.  
+*_Rank*<br/>
+Der Rang des Abschnitts.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

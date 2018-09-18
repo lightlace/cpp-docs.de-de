@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2074 | Microsoft Docs
+title: Compilerfehler Fehler C2074 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 278783563d883d150f61d4c1e54ffef8287e24b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f8beea0aa8ff319ab6bd5b33e8111a85e474549
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163434"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063956"
 ---
 # <a name="compiler-error-c2074"></a>Compilerfehler C2074
-'Bezeichner': 'Klassenschlüssel' - Geschweifte Klammern für Initialisierung erforderlich  
-  
- Der angegebene Klassen-, Struktur- oder Union-Initialisierer war nicht in geschweifte Klammern eingeschlossen.
+
+'Bezeichner': 'Klassenschlüssel' - Geschweifte Klammern für Initialisierung erforderlich
+
+Der angegebene Klassen-, Struktur- oder Union-Initialisierer war nicht in geschweifte Klammern eingeschlossen.

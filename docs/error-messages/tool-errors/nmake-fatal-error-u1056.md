@@ -1,5 +1,5 @@
 ---
-title: 'NMAKE: Schwerwiegender Fehler U1056 | Microsoft Docs'
+title: 'NMAKE: Schwerwiegender Fehler U1056 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19890e290c98fd9602d755ad35f9d47204bd6c24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e0a83c62bedf995708d5e99fee19f05696d05c2d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316555"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065691"
 ---
 # <a name="nmake-fatal-error-u1056"></a>NMAKE: Schwerwiegender Fehler U1056
-Befehlsprozessors wurde nicht gefunden.  
-  
- Befehlsprozessors wies nicht den im angegebenen Pfad die **COMSPEC** oder **Pfad** Umgebungsvariablen.  
-  
- NMAKE verwendet COMMAND.COM oder cmd ein. EXE-Datei als ein Befehlsprozessors, wenn Sie Befehle ausführen. Es sucht Befehlsprozessors zuerst in den Pfad festlegen, die **COMSPEC**. Wenn **COMSPEC** ist nicht vorhanden, NMAKE sucht die Verzeichnisse im angegebenen **Pfad**.
+
+Befehlsprozessor nicht gefunden werden.
+
+Der Befehlsprozessor wies nicht den im angegebenen Pfad die **COMSPEC** oder **Pfad** Umgebungsvariablen.
+
+NMAKE verwendet COMMAND.COM oder cmd ein. EXE-Datei als ein Befehlsprozessor, wenn Sie Befehle ausführen. Es sucht der Befehlsprozessor zuerst in den Pfad an, legen Sie in **COMSPEC**. Wenn **COMSPEC** ist nicht vorhanden, NMAKE-Suchvorgänge, die die Verzeichnisse im angegebenen **Pfad**.

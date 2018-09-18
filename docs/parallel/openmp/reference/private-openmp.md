@@ -1,5 +1,5 @@
 ---
-title: Private (OpenMP) | Microsoft Docs
+title: Private (OpenMP) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4af88f450ce6c77a6b0753917516719331199dfd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7bd5b85e563f8160dd4490b650caf4f146a09410
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692677"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071236"
 ---
 # <a name="private-openmp"></a>private (OpenMP)
 Gibt an, dass jeder Thread eine eigene Instanz einer Variablen zugewiesen werden soll.  
@@ -32,14 +32,13 @@ Gibt an, dass jeder Thread eine eigene Instanz einer Variablen zugewiesen werden
 private(var)  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- wobei  
+### <a name="parameters"></a>Parameter
   
- `var`  
- Die Variable, die Instanzen in jeder Thread verwenden.  
+*var*<br/>
+Die Variable, die Instanzen in jedem Thread verwenden.  
   
 ## <a name="remarks"></a>Hinweise  
- **private** gilt für die folgenden Direktiven:  
+ **private** gilt für die folgenden Anweisungen:  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
@@ -53,7 +52,7 @@ private(var)
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```C  
 // openmp_private.c  
 // compile with: /openmp  
 #include <windows.h>  

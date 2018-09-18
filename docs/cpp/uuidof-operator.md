@@ -18,71 +18,76 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 440d985a522edbb6e30136ec841f934584823204
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 84fd779d50fb481cffc97b61a65f255c6c8f52a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463053"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056733"
 ---
 # <a name="uuidof-operator"></a>__uuidof-Operator
-**Microsoft-spezifisch**  
-  
- Ruft die GUID ab, die dem Ausdruck angefügt ist.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-__uuidof (expression)  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Die *Ausdruck* kann ein Typname, Zeiger, Verweis oder Array dieses Typs aufweisen, eine Vorlage, die auf diese Typen oder eine Variable dieser Typen spezialisiert. Das Argument ist gültig, solange der Compiler es verwenden kann, um das angefügte GUID zu suchen.  
-  
- Ist ein Sonderfall dieser systeminternen Funktion, wenn entweder **0** oder NULL als Argument angegeben wird. In diesem Fall **__uuidof** gibt eine GUID, die Nullen besteht.  
-  
- Verwenden Sie dieses Schlüsselwort, um die an folgende Elemente angefügte GUID zu extrahieren:  
-  
--   Ein Objekt durch die [Uuid](../cpp/uuid-cpp.md) erweitertes Attribut.  
-  
--   Ein bibliotheksblock erstellt, mit der [Modul](../windows/module-cpp.md) Attribut.  
-  
+
+**Microsoft-spezifisch**
+
+Ruft die GUID ab, die dem Ausdruck angefügt ist.
+
+## <a name="syntax"></a>Syntax
+
+```
+__uuidof (expression)
+```
+
+## <a name="remarks"></a>Hinweise
+
+Die *Ausdruck* kann ein Typname, Zeiger, Verweis oder Array dieses Typs aufweisen, eine Vorlage, die auf diese Typen oder eine Variable dieser Typen spezialisiert. Das Argument ist gültig, solange der Compiler es verwenden kann, um das angefügte GUID zu suchen.
+
+Ist ein Sonderfall dieser systeminternen Funktion, wenn entweder **0** oder NULL als Argument angegeben wird. In diesem Fall **__uuidof** gibt eine GUID, die Nullen besteht.
+
+Verwenden Sie dieses Schlüsselwort, um die an folgende Elemente angefügte GUID zu extrahieren:
+
+- Ein Objekt durch die [Uuid](../cpp/uuid-cpp.md) erweitertes Attribut.
+
+- Ein bibliotheksblock erstellt, mit der [Modul](../windows/module-cpp.md) Attribut.
+
 > [!NOTE]
->  In einem Debugbuild **__uuidof** immer Initialisiert ein Objekt dynamisch (zur Laufzeit). In einem Releasebuild **__uuidof** können statisch (zur Kompilierzeit) initialisieren ein Objekts.  
-  
-## <a name="example"></a>Beispiel  
- Mit dem folgenden Code (kompiliert mit "ole32.lib") wird das "uuid" eines Bibliotheksblocks angezeigt, der mit dem Modulattribut erstellt wird:  
-  
-```cpp 
-// expre_uuidof.cpp  
-// compile with: ole32.lib  
-#include "stdio.h"  
-#include "windows.h"  
-  
-[emitidl];  
-[module(name="MyLib")];  
-[export]  
-struct stuff {  
-   int i;  
-};  
-  
-int main() {  
-   LPOLESTR lpolestr;  
-   StringFromCLSID(__uuidof(MyLib), &lpolestr);  
-   wprintf_s(L"%s", lpolestr);  
-   CoTaskMemFree(lpolestr);  
-}  
-```  
-  
-## <a name="comments"></a>Kommentare  
- In Fällen, die den Namen der Bibliothek nicht mehr in deren Bereich ist, können Sie `__LIBID_` anstelle von **__uuidof**. Zum Beispiel:  
-  
-```cpp 
-StringFromCLSID(__LIBID_, &lpolestr);  
-```  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Ausdrücke mit Unäroperatoren](../cpp/expressions-with-unary-operators.md)   
- [Schlüsselwörter](../cpp/keywords-cpp.md)
+>  In einem Debugbuild **__uuidof** immer Initialisiert ein Objekt dynamisch (zur Laufzeit). In einem Releasebuild **__uuidof** können statisch (zur Kompilierzeit) initialisieren ein Objekts.
+
+## <a name="example"></a>Beispiel
+
+Mit dem folgenden Code (kompiliert mit "ole32.lib") wird das "uuid" eines Bibliotheksblocks angezeigt, der mit dem Modulattribut erstellt wird:
+
+```cpp
+// expre_uuidof.cpp
+// compile with: ole32.lib
+#include "stdio.h"
+#include "windows.h"
+
+[emitidl];
+[module(name="MyLib")];
+[export]
+struct stuff {
+   int i;
+};
+
+int main() {
+   LPOLESTR lpolestr;
+   StringFromCLSID(__uuidof(MyLib), &lpolestr);
+   wprintf_s(L"%s", lpolestr);
+   CoTaskMemFree(lpolestr);
+}
+```
+
+## <a name="comments"></a>Kommentare
+
+In Fällen, die den Namen der Bibliothek nicht mehr in deren Bereich ist, können Sie `__LIBID_` anstelle von **__uuidof**. Zum Beispiel:
+
+```cpp
+StringFromCLSID(__LIBID_, &lpolestr);
+```
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Ausdrücke mit unären Operatoren](../cpp/expressions-with-unary-operators.md)<br/>
+[Schlüsselwörter](../cpp/keywords-cpp.md)

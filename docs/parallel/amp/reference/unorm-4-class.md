@@ -1,5 +1,5 @@
 ---
-title: unorm_4-Klasse | Microsoft Docs
+title: unorm_4-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,12 +278,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3186200fb01e13fcf3d79d162439a900abf6f4a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5c57bbb2e54eb86333ee7e80ad144a486c4c1fba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694614"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027660"
 ---
 # <a name="unorm4-class"></a>unorm_4-Klasse
 Stellt einen kurzen Vektor aus vier normalen Zahlen ohne Vorzeichen dar.  
@@ -454,7 +454,7 @@ class unorm_4;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |unorm_4::-||  
-|unorm_4::--||  
+|unorm_4:::||  
 |unorm_4:: * =||  
 |unorm_4::operator/=||  
 |unorm_4:: Operator++-||  
@@ -675,23 +675,23 @@ explicit inline unorm_4(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_V0`  
- Der Wert 0-Element initialisiert werden.  
+*_V0*<br/>
+Der Wert, der 0-Element zu initialisieren.  
   
- `_V1`  
- Der Wert 1 Element initialisiert werden.  
+*_V1*<br/>
+Der Wert 1 Element initialisiert werden.  
   
- `_V2`  
- Der Wert 2-Element initialisiert werden.  
+*_V2*<br/>
+Der Wert 2-Element zu initialisieren.  
   
- `_V3`  
- Der Wert 3-Element initialisiert werden.  
+*_V3*<br/>
+Der Wert 3-Element zu initialisieren.  
   
- `_V`  
- Der Wert für die Initialisierung.  
+*_V*<br/>
+Der Wert für die Initialisierung.  
   
- `_Other`  
- Das Objekt, das zum Initialisieren verwendet.  
+*_Sonstige*<br/>
+Das Objekt, das zum Initialisieren verwendet.  
   
 ##  <a name="unorm_4__size"></a> Größe 
 

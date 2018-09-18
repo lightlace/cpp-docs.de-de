@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2465 | Microsoft Docs
+title: Compilerfehler C2465 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5318fd04a79de7e49a3218dbbef6100c4fbe3dba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f27ea349e4955bc78b2115d3de4622a09290eb22
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240804"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060550"
 ---
 # <a name="compiler-error-c2465"></a>Compilerfehler C2465
-Definition anonymer Typen innerhalb von Klammern nicht möglich  
-  
- Eine anonyme Struktur, Union oder ein Aufzählungstyp ist innerhalb eines in Klammern stehenden Ausdrucks definiert. Dies ist in C++ ungültig, da die Definition im Funktionsbereich ohne Bedeutung ist.
+
+Definition anonymer Typen innerhalb von Klammern nicht möglich
+
+Eine anonyme Struktur, Union oder ein Aufzählungstyp ist innerhalb eines in Klammern stehenden Ausdrucks definiert. Dies ist in C++ ungültig, da die Definition im Funktionsbereich ohne Bedeutung ist.

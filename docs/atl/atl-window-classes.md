@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e67849da9eebf9f150c4363e05a6f3fdcb943c0d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a13ec85cc393b1d7bff39f26866e48525e46d336
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756388"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071028"
 ---
 # <a name="atl-window-classes"></a>ATL-Fensterklassen
 
@@ -35,29 +35,29 @@ In diesem Abschnitt wird beschrieben, die ATL-Fensterklassen und erläutert dere
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Einführung in ATL-Fensterklassen](../atl/introduction-to-atl-window-classes.md)  
+[Einführung in ATL-Fensterklassen](../atl/introduction-to-atl-window-classes.md)<br/>
 Kurzbeschreibung jeder ATL-Fensterklasse und enthält Links zu den im Referenzmaterial über diese.
 
-[Verwenden eines Fensters](../atl/using-a-window.md)  
+[Verwenden eines Fensters](../atl/using-a-window.md)<br/>
 Erläutert, wie `CWindow` zum Bearbeiten eines Fensters.
 
-[Implementieren eines Fensters](../atl/implementing-a-window.md)  
+[Implementieren eines Fensters](../atl/implementing-a-window.md)<br/>
 Beschreibt-Meldungshandler "," meldungszuordnungen "und" mit `CWindowImpl`. Enthält Informationen zu übergeordneten und untergeordneten Klassen.
 
-[Implementieren eines Dialogfelds](../atl/implementing-a-dialog-box.md)  
+[Implementieren eines Dialogfelds](../atl/implementing-a-dialog-box.md)<br/>
 Beschreibt die zwei Methoden zum Hinzufügen einer Dialogfeldklasse, und zeigt ein Beispiel.
 
-[Verwenden von enthaltenen Fenstern](../atl/using-contained-windows.md)  
+[Verwenden von enthaltenen Fenstern](../atl/using-contained-windows.md)<br/>
 Erläutert die enthaltene Fenstern in ATL, Windows, die die Nachrichten an ein Containerobjekt anstelle der Umgang damit in ihrer eigenen Klasse zu delegieren.
 
-[Einführung in Fenstermerkmale](../atl/understanding-window-traits.md)  
+[Einführung in Fenstermerkmale](../atl/understanding-window-traits.md)<br/>
 Erläutert, Fenster "traits"-Klassen in ATL Diese Klassen bieten eine einfache Methode für die Standardisierung der Stile, die für die Erstellung eines Window-Objekts verwendet.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Enthält Links zu konzeptionellen Themen über die Programmierung mit der Active Template Library.
 
-[Klassen für den Windows Support](../atl/windows-support-classes.md)  
+[Klassen für den Windows Support](../atl/windows-support-classes.md)<br/>
 Führt zusätzliche ATL-Klassen, die Unterstützung von Windows und meldungszuordnungen in ATL
 

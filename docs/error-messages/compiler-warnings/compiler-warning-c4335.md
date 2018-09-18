@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung C4335 | Microsoft Docs
+title: Compilerwarnung C4335 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adb8a7b484ce0946f385c3b2a8669ba1b5ccf0d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2b28909d0c4b663fffeacbec58ad694131bb008
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270508"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036578"
 ---
 # <a name="compiler-warning-c4335"></a>Compilerwarnung C4335
-Mac-Dateiformat erkannt: Konvertieren Sie die Quelldatei in DOS oder UNIX-Format  
-  
- Die Beendigung-Zeile-Zeichen von der ersten Zeile einer Quelldatei ist Macintosh-Systeme ("\r") im Gegensatz zu UNIX ("\n") oder DOS ("\r\n").  
-  
- Diese Warnung wird immer als Fehler ausgegeben.  Finden Sie unter [Warnung](../../preprocessor/warning.md) Pragma Informationen dazu, wie Sie diese Warnung zu deaktivieren.  Darüber hinaus wird diese Warnung nur einmal pro Kompiliereinheit ausgegeben. Aus diesem Grund treten mehrere `#include` Direktiven, die Dateien im Macintosh-Format angeben, wird C4335 wird nur einmal ausgegeben.  
-  
- Eine Möglichkeit zum Generieren von Dateien im Macintosh-Format ist mit der **Erweiterte Speicheroptionen** (auf der **Datei** Menü) in Visual Studio.  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C4335 generiert.  
-  
-```  
-// C4335 expected  
-#include "c4335.h"   // assume both include files are in Macintosh format  
-#include "c4335_2.h"  
+
+Mac-Dateiformat ermittelt: Konvertieren Sie die Quelldatei in DOS- oder UNIX-Format
+
+Das abschließende Zeichen der ersten Zeile einer Quelldatei ist Macintosh-Systeme ('\r') im Gegensatz zu UNIX ('\n') oder DOS ("\r\n").
+
+Diese Warnung wird immer als Fehler ausgegeben.  Finden Sie unter [Warnung](../../preprocessor/warning.md) Pragma Informationen dazu, wie Sie diese Warnung zu deaktivieren.  Darüber hinaus wird diese Warnung nur einmal pro Kompiliereinheit ausgegeben. Aus diesem Grund gibt es sind mehrere `#include` Anweisungen, die Dateien im Macintosh-Format angeben, C4335 wird nur einmal ausgegeben.
+
+Eine Möglichkeit zum Generieren von Dateien im Macintosh-Format ist die Verwendung der **Erweiterte Speicheroptionen** (auf der **Datei** Menü) in Visual Studio.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C4335 generiert.
+
+```
+// C4335 expected
+#include "c4335.h"   // assume both include files are in Macintosh format
+#include "c4335_2.h"
 ```

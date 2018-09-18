@@ -1,5 +1,5 @@
 ---
-title: Projektbuildfehler prj0044 | Microsoft Docs
+title: Projektbuildfehler prj0044 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7091025f49343ce0054d6033dc54a3397318b37a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ac5ac11ae8622e2f153effd2cfb5ab0055414331
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324537"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028489"
 ---
 # <a name="project-build-error-prj0044"></a>Projektbuildfehler PRJ0044
-Die 'Zusätzliche Abhängigkeiten'-Eigenschaft für benutzerdefinierte Buildregel 'Rule' Datei 'File' zugewiesen ist ungültig. Die Eigenschaft enthält „string“, die zu „value“ ausgewertet wird.  
-  
- Die **zusätzliche Abhängigkeiten** Eigenschaft ausgewertet wird, auf eine leere Zeichenfolge oder eine Zeichenfolge, die ungültige Zeichen (Zeichen, die nicht in einer Datei oder eines Verzeichnisses Namen werden konnte) enthalten. Benutzerdefinierte Buildregeln benötigen die Ausgabe des Buildvorgangs.  
-  
- Weitere Informationen finden Sie unter [angeben von benutzerdefinierten Buildtools](../../ide/specifying-custom-build-tools.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Projektbuildfehler und -warnungen (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)
+
+Die 'Additional Dependencies'-Eigenschaft für benutzerdefinierte Buildregel 'Rule' Datei 'File' zugewiesen ist ungültig. Die Eigenschaft enthält „string“, die zu „value“ ausgewertet wird.
+
+Die **zusätzliche Abhängigkeiten** Eigenschaft, die ausgewertet werden, auf eine leere Zeichenfolge oder eine Zeichenfolge, die enthielt ungültige Zeichen (Zeichen, die nicht in eine Datei oder Verzeichnis Namen werden konnte). Benutzerdefinierte Buildregeln benötigen die Ausgabe des Buildvorgangs.
+
+Weitere Informationen finden Sie unter [angeben von benutzerdefinierten Buildtools](../../ide/specifying-custom-build-tools.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Projektbuildfehler und -warnungen (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)

@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4794 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4794 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88ffa1200e7c760f028549335f0df5a9ea8ba3d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c6e6b8aedacc71291afc2a34a6a11d7b19a126b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284627"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027400"
 ---
 # <a name="compiler-warning-level-1-c4794"></a>Compilerwarnung (Stufe 1) C4794
-Segment der Variable 'Variable' im lokalen Thread-Speicher von 'Abschnittsname' nach '.tls$' verschoben  
-  
- Sie haben [#pragma data_seg](../../preprocessor/data-seg.md) verwendet, um eine tls-Variable in einem Abschnitt zu positionieren, der nicht mit „.tls$“ beginnt.  
-  
- Der Abschnitt „.tls$*x* “ befindet sich in der Objektdatei, wo die [__declspec(thread)](../../cpp/thread.md) -Variablen definiert werden. Durch diese Abschnitte ergibt sich ein „.tls“-Abschnitt in der EXE- oder DLL-Datei.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C4794 generiert.  
-  
-```  
-// C4794.cpp  
-// compile with: /W1 /c  
-#pragma data_seg(".someseg")  
-__declspec(thread) int i;   // C4794  
-  
-// OK  
-#pragma data_seg(".tls$9")  
-__declspec(thread) int j;  
+
+Segment der Variable 'Variable' im lokalen Thread-Speicher von 'Abschnittsname' nach '.tls$' verschoben
+
+Sie haben [#pragma data_seg](../../preprocessor/data-seg.md) verwendet, um eine tls-Variable in einem Abschnitt zu positionieren, der nicht mit „.tls$“ beginnt.
+
+Der Abschnitt „.tls$*x* “ befindet sich in der Objektdatei, wo die [__declspec(thread)](../../cpp/thread.md) -Variablen definiert werden. Durch diese Abschnitte ergibt sich ein „.tls“-Abschnitt in der EXE- oder DLL-Datei.
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C4794 generiert.
+
+```
+// C4794.cpp
+// compile with: /W1 /c
+#pragma data_seg(".someseg")
+__declspec(thread) int i;   // C4794
+
+// OK
+#pragma data_seg(".tls$9")
+__declspec(thread) int j;
 ```

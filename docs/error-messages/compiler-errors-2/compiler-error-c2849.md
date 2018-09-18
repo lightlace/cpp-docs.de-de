@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2849 | Microsoft Docs
+title: Compilerfehler C2849 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af882bdd40440cb03a42ae5a7683c02917da83e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b7e0adff8c2ff9d45dafad28f6d0a501ebe1197
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246058"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029146"
 ---
 # <a name="compiler-error-c2849"></a>Compilerfehler C2849
-'Destruktor': eine Schnittstelle kann keinen Destruktor besitzen  
-  
- Visual C++ [Schnittstelle](../../cpp/interface.md) kann keinen Destruktor besitzen.  
-  
- Im folgende Beispiel wird C2849 generiert:  
-  
-```  
-// C2849.cpp  
-// compile with: /c  
-__interface C {  
-   ~C();   // C2849 destructor not allowed in an interface  
-};  
+
+'Destruktor': eine Schnittstelle kann keinen Destruktor besitzen
+
+Eine Visual C++ [Schnittstelle](../../cpp/interface.md) kann keinen Destruktor besitzen.
+
+Im folgende Beispiel wird die C2849 generiert:
+
+```
+// C2849.cpp
+// compile with: /c
+__interface C {
+   ~C();   // C2849 destructor not allowed in an interface
+};
 ```

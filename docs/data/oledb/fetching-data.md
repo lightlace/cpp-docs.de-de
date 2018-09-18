@@ -18,21 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1dca3cc2d51f0e165e9b17d9fe630752a427590f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 05cfcb59100f1778b0266636fb3930fd9489e917
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339155"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067076"
 ---
 # <a name="fetching-data"></a>Abrufen von Daten
+
 Nachdem Sie die Datenquelle, Sitzung und Rowset-Objekte öffnen, können Sie Daten abrufen. Je nach Art des Accessors, die Sie verwenden, müssen Sie Spalten binden.  
   
 ### <a name="to-fetch-data"></a>Zum Abrufen von Daten  
   
-1.  Öffnen Sie das Rowset mit der entsprechenden **öffnen** Befehl.  
+1. Öffnen Sie das Rowset mit der entsprechenden **öffnen** Befehl.  
   
-2.  Bei Verwendung von `CManualAccessor`, binden Sie die Ausgabespalten aus, wenn Sie nicht bereits geschehen. Rufen Sie zum Binden der Spalten, `GetColumnInfo`, und erstellen Sie einen Accessor mit den Bindungen, wie im folgenden Beispiel gezeigt:  
+1. Bei Verwendung von `CManualAccessor`, binden Sie die Ausgabespalten aus, wenn Sie nicht bereits geschehen. Rufen Sie zum Binden der Spalten, `GetColumnInfo`, und erstellen Sie einen Accessor mit den Bindungen, wie im folgenden Beispiel gezeigt:  
   
     ```cpp  
     // From the DBViewer Sample CDBTreeView::OnQueryEdit  
@@ -49,7 +50,7 @@ Nachdem Sie die Datenquelle, Sitzung und Rowset-Objekte öffnen, können Sie Dat
     rs.Bind();  
     ```  
   
-3.  Schreiben einer `while` Schleife zum Abrufen der Daten. Rufen Sie in der Schleife `MoveNext` fahren fort, um den Cursor und den Rückgabewert mit S_OK, testen, wie im folgenden Beispiel gezeigt:  
+1. Schreiben einer `while` Schleife zum Abrufen der Daten. Rufen Sie in der Schleife `MoveNext` fahren fort, um den Cursor und den Rückgabewert mit S_OK, testen, wie im folgenden Beispiel gezeigt:  
   
     ```cpp  
     while (rs.MoveNext() == S_OK)  
@@ -59,7 +60,7 @@ Nachdem Sie die Datenquelle, Sitzung und Rowset-Objekte öffnen, können Sie Dat
     }  
     ```  
   
-4.  In der `while` Schleife können Sie die Daten gemäß Ihrer Accessortyp abrufen.  
+1. In der `while` Schleife können Sie die Daten gemäß Ihrer Accessortyp abrufen.  
   
     -   Bei Verwendung der [CAccessor](../../data/oledb/caccessor-class.md) -Klasse, müssen Sie einen Benutzerdatensatz, der Datenelemente enthält. Sie können Ihre Daten mit diesen Datenmember zugreifen, wie im folgenden Beispiel gezeigt:  
   
@@ -101,4 +102,5 @@ Nachdem Sie die Datenquelle, Sitzung und Rowset-Objekte öffnen, können Sie Dat
         ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit OLE DB-Consumervorlagen](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[Arbeiten mit OLE DB-Consumervorlagen](../../data/oledb/working-with-ole-db-consumer-templates.md)

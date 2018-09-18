@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5614006ed60d088a2749ab13417de23054e64ee
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bba9e3cce5424fdba86c05c0fd94cb3a0d08a5bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761396"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030923"
 ---
 # <a name="ccomptr-class"></a>CComPtr-Klasse
 
@@ -32,13 +32,13 @@ Eine intelligente Zeiger-Klasse für die Verwaltung von COM-Schnittstellenzeiger
 ## <a name="syntax"></a>Syntax
 
 ```
-template<class T>  
+template<class T>
 class CComPtr
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Eine COM-Schnittstelle, die den Typ des Zeigers gespeichert werden.
 
 ## <a name="members"></a>Member
@@ -89,10 +89,10 @@ CComPtr (const CComPtr<T>& lp) throw ();
 
 ### <a name="parameters"></a>Parameter
 
-*LP*  
+*LP*<br/>
 Wird verwendet, um den Schnittstellenzeiger zu initialisieren.
 
-*T*  
+*T*<br/>
 Eine COM-Schnittstelle.
 
 ##  <a name="operator_eq"></a>  CComPtr::operator =
@@ -114,6 +114,6 @@ Dieser Vorgang AddRefs das neue Objekt und Versionen, die im vorhandene Objekt, 
 
 ## <a name="see-also"></a>Siehe auch
 
-[CComPtr::CComPtr](#ccomptr)   
-[CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)   
+[CComPtr::CComPtr](#ccomptr)<br/>
+[CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

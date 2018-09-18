@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1202 | Microsoft Docs
+title: Schwerwiegender Fehler C1202 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,55 +16,58 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ced474c9d09a8d771a3de8f6ac9b00b383d6847
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9c262fce514a026810fc78c835dd13f986fcd44
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229267"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065687"
 ---
 # <a name="fatal-error-c1202"></a>Schwerwiegender Fehler C1202
-Der Kontext für einen rekursiven Typ oder eine Funktionsabhängigkeit ist zu komplex  
-  
- Eine Vorlagendefinition war rekursiv oder hat die zulässige Komplexität überschritten.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C1202 generiert.  
-  
-```  
-// C1202.cpp  
-// processor: x86 IPF  
-template<int n>   
-class Factorial : public Factorial<n-1>  {   // C1202  
-public:  
-   operator int () {   
-      return Factorial <n-1>::operator int () * n;   
-   }  
-};  
-Factorial<7> facSeven;  
-```  
-  
-## <a name="example"></a>Beispiel  
- Mögliche Lösung:  
-  
-```  
-// C1202b.cpp  
-// compile with: /c  
-template<int n>   
-class Factorial : public Factorial<n-1> {  
-public:  
-   operator int () {   
-      return Factorial <n-1>::operator int () * n;   
-   }  
-};  
-  
-template <>  
-class Factorial<0> {  
-public:  
-   operator int () {   
-      return 1;   
-   }  
-};  
-  
-Factorial<7> facSeven;  
+
+Der Kontext für einen rekursiven Typ oder eine Funktionsabhängigkeit ist zu komplex
+
+Eine Vorlagendefinition war rekursiv oder hat die zulässige Komplexität überschritten.
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C1202 generiert.
+
+```
+// C1202.cpp
+// processor: x86 IPF
+template<int n>
+class Factorial : public Factorial<n-1>  {   // C1202
+public:
+   operator int () {
+      return Factorial <n-1>::operator int () * n;
+   }
+};
+Factorial<7> facSeven;
+```
+
+## <a name="example"></a>Beispiel
+
+Mögliche Lösung:
+
+```
+// C1202b.cpp
+// compile with: /c
+template<int n>
+class Factorial : public Factorial<n-1> {
+public:
+   operator int () {
+      return Factorial <n-1>::operator int () * n;
+   }
+};
+
+template <>
+class Factorial<0> {
+public:
+   operator int () {
+      return 1;
+   }
+};
+
+Factorial<7> facSeven;
 ```

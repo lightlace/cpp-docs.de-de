@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2446 | Microsoft Docs
+title: Compilerfehler C2446 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0274aaf606d039cc4dcf4482f5d8ea1e3ef8e86d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7eeeab46bd7ed5be5b820d1740dd4ff8d377633a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196661"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062799"
 ---
 # <a name="compiler-error-c2446"></a>Compilerfehler C2446
-'Operator': keine Konvertierung von "Typ1" in "Typ2"  
-  
- Der Compiler kann nicht konvertiert `type1` auf `type2`. Die Konvertierung möglicherweise nicht sinnvoll, da er den C/C++-Semantik verletzt.
+
+'Operator': keine Konvertierung von 'type1' in 'Typ2'
+
+Der Compiler kann nicht konvertiert werden `type1` zu `type2`. Die Konvertierung kann nicht sinnvoll, da es sich um C/C++-Semantik verletzt.

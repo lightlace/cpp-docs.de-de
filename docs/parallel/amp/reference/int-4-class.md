@@ -1,5 +1,5 @@
 ---
-title: int_4-Klasse | Microsoft Docs
+title: int_4-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,12 +278,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9aca5b2b68daffac59ad77e5b2a4c4fb81e756a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a29ce2e9ec7b8401e2b9aaf499eabb5c0ceea2b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694484"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066179"
 ---
 # <a name="int4-class"></a>int_4-Klasse
 Stellt einen kurzen Vektor aus vier ganzen Zahlen dar.  
@@ -454,7 +454,7 @@ class int_4;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |int_4::-||  
-|int_4::--||  
+|int_4:::||  
 |int_4::operator%=||  
 |int_4:: & =||  
 |int_4::operator*=||  
@@ -669,23 +669,23 @@ explicit inline int_4(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_V0`  
- Der Wert 0-Element initialisiert werden.  
+*_V0*<br/>
+Der Wert, der 0-Element zu initialisieren.  
   
- `_V1`  
- Der Wert 1 Element initialisiert werden.  
+*_V1*<br/>
+Der Wert 1 Element initialisiert werden.  
   
- `_V2`  
- Der Wert 2-Element initialisiert werden.  
+*_V2*<br/>
+Der Wert 2-Element zu initialisieren.  
   
- `_V3`  
- Der Wert 3-Element initialisiert werden.  
+*_V3*<br/>
+Der Wert 3-Element zu initialisieren.  
   
- `_V`  
- Der Wert für die Initialisierung.  
+*_V*<br/>
+Der Wert für die Initialisierung.  
   
- `_Other`  
- Das Objekt, das zum Initialisieren verwendet.  
+*_Sonstige*<br/>
+Das Objekt, das zum Initialisieren verwendet.  
   
 ##  <a name="int_4__size"></a> Größe 
 

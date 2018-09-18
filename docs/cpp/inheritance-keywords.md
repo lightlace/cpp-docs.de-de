@@ -28,62 +28,64 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cadeefc9ec150aedcb99f1ed531a3478aecfce89
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1106ad878f4053cacae67d9d0e343e9469b1a1c1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408413"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061174"
 ---
 # <a name="inheritance-keywords"></a>Vererbungsschlüsselwörter
-**Microsoft-spezifisch**  
-  
-```  
+
+**Microsoft-spezifisch**
+
+```
 class [__single_inheritance] class-name;
 class [__multiple_inheritance] class-name;
-class [__virtual_inheritance] class-name;  
-```  
-  
- Dabei gilt:  
-  
- *Klassennamen*  
- Der Name der zu deklarierenden Klasse.  
-  
- C++ ermöglicht es Ihnen, vor der Definition der Klasse einen Zeiger auf einen Klassenmember zu deklarieren. Zum Beispiel:  
-  
-```cpp 
-class S;  
-int S::*p;  
-```  
-  
- Im obigen Code `p` wird als Zeiger auf den ganzzahligen Member der Klasse s deklariert Allerdings `class S` wurde noch nicht in diesem Code definiert wurde es nur deklariert wurde. Wenn der Compiler einen solchen Zeiger erkennt, muss er eine allgemeine Darstellung des Zeigers erzeugen. Die Größe der Darstellung ist vom angegebenen Vererbungsmodell abhängig. Es gibt vier Möglichkeiten, ein Vererbungsmodell für den Compiler anzugeben:  
-  
--   In der IDE unter **Pointer-to-Member-Darstellung**  
-  
--   In der Befehlszeile unter Verwendung der [/vmg](../build/reference/vmb-vmg-representation-method.md) wechseln  
-  
--   Mithilfe der [Pointers_to_members](../preprocessor/pointers-to-members.md) Pragma  
-  
--   Mithilfe der vererbungs-Schlüsselwörter **__single_inheritance**, **__multiple_inheritance**, und **__virtual_inheritance**. Dieses Verfahren steuert das Vererbungsmodell auf Basis einer einzelnen Klasse.  
-  
+class [__virtual_inheritance] class-name;
+```
+
+Dabei gilt:
+
+*Klassennamen*<br/>
+Der Name der zu deklarierenden Klasse.
+
+C++ ermöglicht es Ihnen, vor der Definition der Klasse einen Zeiger auf einen Klassenmember zu deklarieren. Zum Beispiel:
+
+```cpp
+class S;
+int S::*p;
+```
+
+Im obigen Code `p` wird als Zeiger auf den ganzzahligen Member der Klasse s deklariert Allerdings `class S` wurde noch nicht in diesem Code definiert wurde es nur deklariert wurde. Wenn der Compiler einen solchen Zeiger erkennt, muss er eine allgemeine Darstellung des Zeigers erzeugen. Die Größe der Darstellung ist vom angegebenen Vererbungsmodell abhängig. Es gibt vier Möglichkeiten, ein Vererbungsmodell für den Compiler anzugeben:
+
+- In der IDE unter **Pointer-to-Member-Darstellung**
+
+- In der Befehlszeile unter Verwendung der [/vmg](../build/reference/vmb-vmg-representation-method.md) wechseln
+
+- Mithilfe der [Pointers_to_members](../preprocessor/pointers-to-members.md) Pragma
+
+- Mithilfe der vererbungs-Schlüsselwörter **__single_inheritance**, **__multiple_inheritance**, und **__virtual_inheritance**. Dieses Verfahren steuert das Vererbungsmodell auf Basis einer einzelnen Klasse.
+
     > [!NOTE]
-    >  Wenn Sie stets einen Zeiger auf einen Member einer Klasse deklarieren, nachdem Sie die Klasse definiert haben, ist es nicht erforderlich, eine dieser Optionen zu verwenden.  
-  
- Das Deklarieren eines Zeigers auf einen Member einer Klasse vor der Klassendefinition wirkt sich auf die Größe und die Geschwindigkeit der erstellten ausführbaren Datei aus. Je komplexer die von einer Klasse genutzte Vererbung ist, desto größer sind die Byteanzahl, die für die Darstellung eines Zeigers auf einen Member der Klasse erforderlich ist, und der für die Interpretation des Zeigers erforderliche Code. Die einfache Vererbung ist am wenigsten komplex und die virtuelle Vererbung ist die komplexeste Vererbung.  
-  
- Wenn das obige Beispiel so geändert wird:  
-  
-```cpp 
-class __single_inheritance S;  
-int S::*p;  
-```  
-  
- Unabhängig von Befehlszeilenoptionen oder Pragmas verwenden Zeiger auf Member von `class S` die kleinstmögliche Darstellung.  
-  
+    >  Wenn Sie stets einen Zeiger auf einen Member einer Klasse deklarieren, nachdem Sie die Klasse definiert haben, ist es nicht erforderlich, eine dieser Optionen zu verwenden.
+
+Das Deklarieren eines Zeigers auf einen Member einer Klasse vor der Klassendefinition wirkt sich auf die Größe und die Geschwindigkeit der erstellten ausführbaren Datei aus. Je komplexer die von einer Klasse genutzte Vererbung ist, desto größer sind die Byteanzahl, die für die Darstellung eines Zeigers auf einen Member der Klasse erforderlich ist, und der für die Interpretation des Zeigers erforderliche Code. Die einfache Vererbung ist am wenigsten komplex und die virtuelle Vererbung ist die komplexeste Vererbung.
+
+Wenn das obige Beispiel so geändert wird:
+
+```cpp
+class __single_inheritance S;
+int S::*p;
+```
+
+Unabhängig von Befehlszeilenoptionen oder Pragmas verwenden Zeiger auf Member von `class S` die kleinstmögliche Darstellung.
+
 > [!NOTE]
->  Dieselbe Vorwärtsdeklaration einer pointer-to-member-Klassendarstellung sollte in jeder Übersetzungseinheit auftreten, die Zeiger auf Member dieser Klasse deklariert. Die Deklaration sollte vor der pointer-to-member-Deklaration erfolgen.  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Schlüsselwörter](../cpp/keywords-cpp.md)
+>  Dieselbe Vorwärtsdeklaration einer pointer-to-member-Klassendarstellung sollte in jeder Übersetzungseinheit auftreten, die Zeiger auf Member dieser Klasse deklariert. Die Deklaration sollte vor der pointer-to-member-Deklaration erfolgen.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Schlüsselwörter](../cpp/keywords-cpp.md)

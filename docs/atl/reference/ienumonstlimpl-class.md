@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f2e448d5fa73c64e9abb66ef70e513bc9fa0728
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 0abc7e3b87ef23e6350b54c3f64b50fbcfdd5b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759245"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031144"
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl-Klasse
 
@@ -40,25 +40,25 @@ Diese Klasse definiert eine Enumeratorschnittstelle, die auf Grundlage einer C++
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy, class CollType>  
+    const IID* piid, class T, class Copy, class CollType>
 class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*Basis*  
+*Basis*<br/>
 Ein COM-Enumerator. Finden Sie unter [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) verdeutlicht.
 
-*piid*  
+*piid*<br/>
 Ein Zeiger auf die Schnittstellen-ID der Enumeratorschnittstelle.
 
-*T*  
+*T*<br/>
 Der Typ des Elements, die von der Enumeratorschnittstelle verfügbar gemacht werden.
 
-*Kopieren*  
+*Kopieren*<br/>
 Ein [kopieren Richtlinienklasse](../../atl/atl-copy-policy-classes.md).
 
-*CollType*  
+*CollType*<br/>
 Eine C++-Standardbibliothek-Container-Klasse.
 
 ## <a name="members"></a>Member
@@ -114,10 +114,10 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Parameter
 
-*pUnkForRelease*  
+*pUnkForRelease*<br/>
 [in] Die `IUnknown` Zeiger, der ein Objekt, das während der Lebensdauer des Enumerators beibehalten werden muss. Übergeben Sie NULL, wenn kein entsprechendes Objekt vorhanden ist.
 
-*Auflistung*  
+*Auflistung*<br/>
 Ein Verweis auf den C++-Standardbibliothek-Container, der aufzulistenden Elemente enthält.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -140,7 +140,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 
 ### <a name="parameters"></a>Parameter
 
-*ppEnum*  
+*ppEnum*<br/>
 [out] Die Enumeratorschnittstelle für ein neu erstelltes Objekt, das von der aktuelle Enumerator geklont werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -192,13 +192,13 @@ STDMETHOD(Next)(
 
 ### <a name="parameters"></a>Parameter
 
-*"celt"*  
+*"celt"*<br/>
 [in] Die Anzahl der angeforderten Elemente.
 
-*rgelt*  
+*rgelt*<br/>
 [out] Das Array, das mit den Elementen gefüllt werden.
 
-*pceltFetched*  
+*pceltFetched*<br/>
 [out] Die Anzahl der Elemente im tatsächlich zurückgegebenen *Rgelt*. Dies liegt möglicherweise weniger als *"celt"* Wenn weniger als *"celt"* Elemente bleiben in der Liste.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -227,7 +227,7 @@ STDMETHOD(Skip)(ULONG celt);
 
 ### <a name="parameters"></a>Parameter
 
-*"celt"*  
+*"celt"*<br/>
 [in] Die Anzahl der zu überspringenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert

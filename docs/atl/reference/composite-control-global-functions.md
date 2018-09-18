@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91de6c09128acd3ef1a008437ae418b96b45ef66
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 54e4ab00a0d0df90601d06d9e2ffa100d82d4c03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762891"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037358"
 ---
 # <a name="composite-control-global-functions"></a>Globale Funktionen zusammengesetzter Steuerelemente
 
@@ -77,19 +77,19 @@ ATLAPI_(int) AtlAxDialogBox(
 
 ### <a name="parameters"></a>Parameter
 
-*hInstance*  
+*hInstance*<br/>
 [in] Identifiziert eine Instanz des Moduls, deren ausführbare Datei der Dialogfeldvorlage enthält.
 
-*lpTemplateName*  
+*lpTemplateName*<br/>
 [in] Identifiziert die Dialogfeldvorlage. Dieser Parameter ist entweder der Zeiger auf eine Null-terminierte Zeichenfolge, die gibt den Namen der Dialogfeldvorlage oder ein ganzzahliger Wert, der angibt, den Ressourcenbezeichner, der die Dialogfeldvorlage. Wenn der Parameter einen Ressourcenbezeichner angegeben ist, dessen höherwertiges Wort muss 0 (null) sein, und seine niederwertige Wort muss den Bezeichner enthalten. Sie können die [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) Makro zum Erstellen dieses Werts.
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Gibt das Fenster, das Dialogfeld besitzt.
 
-*lpDialogProc*  
+*lpDialogProc*<br/>
 [in] Verweist auf die Dialogfeldprozedur. Weitere Informationen über die Dialogfeldprozedur finden Sie unter [DialogProc-Funktion](https://msdn.microsoft.com/library/windows/desktop/ms645469).
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Gibt den Wert zu übergeben, um das Dialogfeld in der *lParam* -Parameter der WM_INITDIALOG-Meldung.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -100,9 +100,9 @@ Einer der standardmäßigen HRESULT-Werte.
 
 Mit `AtlAxDialogBox` mit einer Dialogfeldvorlage, der ein ActiveX-Steuerelement enthält, geben Sie eine gültige CLSID "," APPID "oder" URL-Zeichenfolge als die *Text* Feld der **Steuerelement** Abschnitt der Dialogfeldressource, zusammen mit " AtlAxWin80 "als die *Klassenname* Feld im gleichen Abschnitt. Im folgenden wird veranschaulicht, was eine gültige **Steuerelement** Abschnitt könnte folgendermaßen aussehen:
 
-```  
+```
 CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
-    "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
+    "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
 Weitere Informationen zum Bearbeiten des Ressourcenskripts finden Sie unter [Vorgehensweise: Öffnen einer Ressourcenskriptdatei im Textformat](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Weitere Informationen zu Ressourcendefinition Anweisungen, finden Sie unter [allgemeine Steuerelementparameter](/windows/desktop/menurc/common-control-parameters) unter Windows SDK *: SDK Tools*.
@@ -124,19 +124,19 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 
 ### <a name="parameters"></a>Parameter
 
-*hInstance*  
+*hInstance*<br/>
 [in] Identifiziert eine Instanz des Moduls, deren ausführbare Datei der Dialogfeldvorlage enthält.
 
-*lpTemplateName*  
+*lpTemplateName*<br/>
 [in] Identifiziert die Dialogfeldvorlage. Dieser Parameter ist entweder der Zeiger auf eine Null-terminierte Zeichenfolge, die gibt den Namen der Dialogfeldvorlage oder ein ganzzahliger Wert, der angibt, den Ressourcenbezeichner, der die Dialogfeldvorlage. Wenn der Parameter einen Ressourcenbezeichner angegeben ist, dessen höherwertiges Wort muss 0 (null) sein, und seine niederwertige Wort muss den Bezeichner enthalten. Sie können die [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) Makro zum Erstellen dieses Werts.
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Gibt das Fenster, das Dialogfeld besitzt.
 
-*lpDialogProc*  
+*lpDialogProc*<br/>
 [in] Verweist auf die Dialogfeldprozedur. Weitere Informationen über die Dialogfeldprozedur finden Sie unter [DialogProc-Funktion](https://msdn.microsoft.com/library/windows/desktop/ms645469).
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Gibt den Wert zu übergeben, um das Dialogfeld in der *lParam* -Parameter der WM_INITDIALOG-Meldung.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -163,7 +163,7 @@ ATLAPI AtlAxCreateControl(
 
 ### <a name="parameters"></a>Parameter
 
-*Wert*  
+*Wert*<br/>
 Ein Zeiger auf eine Zeichenfolge, die an das Steuerelement übergeben werden. Muss in einem der folgenden Arten formatiert werden:
 
 - Eine ProgID, z. B. "MSCAL. Calendar.7 "
@@ -179,13 +179,13 @@ Ein Zeiger auf eine Zeichenfolge, die an das Steuerelement übergeben werden. Mu
    > [!NOTE]
    > "MSHTML:" muss vor der HTML-Fragment stehen, damit es als einen MSHTML-Datenstrom festgelegt ist.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Handle für das Fenster, dem das Steuerelement zugeordnet wird.
 
-*pStream*  
+*pStream*<br/>
 [in] Ein Zeiger auf einen Stream, der zum Initialisieren der Eigenschaften des Steuerelements verwendet wird. NULL kann sein.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Die Adresse eines Zeigers, der erhält die `IUnknown` des Containers. NULL kann sein.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -215,7 +215,7 @@ ATLAPI AtlAxCreateControlEx(
 
 ### <a name="parameters"></a>Parameter
 
-*Wert*  
+*Wert*<br/>
 Ein Zeiger auf eine Zeichenfolge, die an das Steuerelement übergeben werden. Muss in einem der folgenden Arten formatiert werden:
 
 - Eine ProgID, z. B. "MSCAL. Calendar.7 "
@@ -231,22 +231,22 @@ Ein Zeiger auf eine Zeichenfolge, die an das Steuerelement übergeben werden. Mu
    > [!NOTE]
    > "MSHTML:" muss vor der HTML-Fragment stehen, damit es als einen MSHTML-Datenstrom festgelegt ist.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Handle für das Fenster, dem das Steuerelement zugeordnet wird.
 
-*pStream*  
+*pStream*<br/>
 [in] Ein Zeiger auf einen Stream, der zum Initialisieren der Eigenschaften des Steuerelements verwendet wird. NULL kann sein.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Die Adresse eines Zeigers, der erhält die `IUnknown` des Containers. NULL kann sein.
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out] Die Adresse eines Zeigers, der erhält die `IUnknown` des erstellten Steuerelements. NULL kann sein.
 
-*iidSink*  
+*iidSink*<br/>
 Der Schnittstellenbezeichner einer ausgehenden Schnittstelle für das enthaltene Objekt.
 
-*punkSink*  
+*punkSink*<br/>
 Ein Zeiger auf die `IUnknown` -Schnittstelle des Senkenobjekts an den Verbindungspunkt, der anhand des verbunden sein, *IidSink* auf das enthaltene Objekt, nachdem das enthaltene Objekt wurde erfolgreich erstellt wurde.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -274,7 +274,7 @@ ATLAPI AtlAxCreateControlLic(
 
 ### <a name="parameters"></a>Parameter
 
-*Wert*  
+*Wert*<br/>
 Ein Zeiger auf eine Zeichenfolge, die an das Steuerelement übergeben werden. Muss in einem der folgenden Arten formatiert werden:
 
 - Eine ProgID, z. B. "MSCAL. Calendar.7 "
@@ -290,16 +290,16 @@ Ein Zeiger auf eine Zeichenfolge, die an das Steuerelement übergeben werden. Mu
    > [!NOTE]
    > "MSHTML:" muss vor der HTML-Fragment stehen, damit es als einen MSHTML-Datenstrom festgelegt ist.
 
-*hWnd*  
+*hWnd*<br/>
 Handle für das Fenster, dem das Steuerelement zugeordnet wird.
 
-*pStream*  
+*pStream*<br/>
 Ein Zeiger auf einen Stream, der zum Initialisieren der Eigenschaften des Steuerelements verwendet wird. NULL kann sein.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 Die Adresse eines Zeigers, der erhält die `IUnknown` des Containers. NULL kann sein.
 
-*bstrLic*  
+*bstrLic*<br/>
 BSTR, das die Lizenz für das Steuerelement enthält.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -328,7 +328,7 @@ ATLAPI AtlAxCreateControlLicEx(
 
 ### <a name="parameters"></a>Parameter
 
-*Wert*  
+*Wert*<br/>
 Ein Zeiger auf eine Zeichenfolge, die an das Steuerelement übergeben werden. Muss in einem der folgenden Arten formatiert werden:
 
 - Eine ProgID, z. B. "MSCAL. Calendar.7 "
@@ -344,25 +344,25 @@ Ein Zeiger auf eine Zeichenfolge, die an das Steuerelement übergeben werden. Mu
    > [!NOTE]
    > "MSHTML:" muss vor der HTML-Fragment stehen, damit es als einen MSHTML-Datenstrom festgelegt ist.
 
-*hWnd*  
+*hWnd*<br/>
 Handle für das Fenster, dem das Steuerelement zugeordnet wird.
 
-*pStream*  
+*pStream*<br/>
 Ein Zeiger auf einen Stream, der zum Initialisieren der Eigenschaften des Steuerelements verwendet wird. NULL kann sein.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 Die Adresse eines Zeigers, der erhält die `IUnknown` des Containers. NULL kann sein.
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out] Die Adresse eines Zeigers, der erhält die `IUnknown` des erstellten Steuerelements. NULL kann sein.
 
-*iidSink*  
+*iidSink*<br/>
 Der Schnittstellenbezeichner einer ausgehenden Schnittstelle für das enthaltene Objekt.
 
-*punkSink*  
+*punkSink*<br/>
 Ein Zeiger auf die `IUnknown` -Schnittstelle des Senkenobjekts an den Verbindungspunkt, der anhand des verbunden sein, *IidSink* auf das enthaltene Objekt, nachdem das enthaltene Objekt wurde erfolgreich erstellt wurde.
 
-*bstrLic*  
+*bstrLic*<br/>
 BSTR, das die Lizenz für das Steuerelement enthält.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -390,13 +390,13 @@ ATLAPI AtlAxAttachControl(
 
 ### <a name="parameters"></a>Parameter
 
-*pControl*  
+*pControl*<br/>
 [in] Ein Zeiger auf die `IUnknown` des Steuerelements.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Handle für das Fenster, das das Steuerelement hostet.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Ein Zeiger auf einen Zeiger auf die `IUnknown` des Containerobjekts.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -420,10 +420,10 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 
 ### <a name="parameters"></a>Parameter
 
-*h*  
+*h*<br/>
 [in] Ein Handle für das Fenster, das das Steuerelement gehostet wird.
 
-*PP*  
+*PP*<br/>
 [out] Die `IUnknown` des Containers des Steuerelements.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -440,10 +440,10 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 
 ### <a name="parameters"></a>Parameter
 
-*h*  
+*h*<br/>
 [in] Ein Handle für das Fenster, das das Steuerelement gehostet wird.
 
-*PP*  
+*PP*<br/>
 [out] Die `IUnknown` des gehosteten Steuerelements.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -460,10 +460,10 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 
 ### <a name="parameters"></a>Parameter
 
-*punkChild*  
+*punkChild*<br/>
 [in] Ein Zeiger auf die `IUnknown` Schnittstelle des untergeordneten Elements.
 
-*punkParent*  
+*punkParent*<br/>
 [in] Ein Zeiger auf die `IUnknown` Schnittstelle des übergeordneten Elements.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -519,19 +519,19 @@ ATLAPI AtlGetObjectSourceInterface(
 
 ### <a name="parameters"></a>Parameter
 
-*punkObj*  
+*punkObj*<br/>
 [in] Ein Zeiger auf das Objekt für die Informationen zurückgegeben werden soll.
 
-*plibid*  
+*plibid*<br/>
 [out] Ein Zeiger auf die LIBID der Typbibliothek, die die Definition der Quellschnittstelle enthält.
 
-*piid*  
+*piid*<br/>
 [out] Ein Zeiger auf die Schnittstellen-ID des Objekts Standard-Quellschnittstelle.
 
-*pdwMajor*  
+*pdwMajor*<br/>
 [out] Ein Zeiger auf die Hauptversionsnummer der Typbibliothek, die die Definition der Quellschnittstelle enthält.
 
-*pdwMinor*  
+*pdwMinor*<br/>
 [out] Ein Zeiger auf die Nebenversionsnummer der Typbibliothek, die die Definition der Quellschnittstelle enthält.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -553,5 +553,5 @@ Das folgende Beispiel zeigt, wie Sie der Klasse eine Ereignissenke, definieren m
 
 ## <a name="see-also"></a>Siehe auch
 
-[Funktionen](../../atl/reference/atl-functions.md)   
+[Funktionen](../../atl/reference/atl-functions.md)<br/>
 [Makros zusammengesetzter Steuerelemente](../../atl/reference/composite-control-macros.md)

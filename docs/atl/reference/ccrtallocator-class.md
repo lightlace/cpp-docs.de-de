@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f89df62f35e37e1ab74fc177167cbd82f92f7d9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bfd7d5a040da4d27838e8045b6c4c64950e515dc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752884"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054843"
 ---
 # <a name="ccrtallocator-class"></a>CCRTAllocator-Klasse
 
@@ -65,7 +65,7 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*nBytes*  
+*nBytes*<br/>
 Die Anzahl der zu belegenden Bytes.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -86,7 +86,7 @@ static void Free(void* p) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*p*  
+*p*<br/>
 Zeiger auf zugewiesenen Speicher.
 
 ### <a name="remarks"></a>Hinweise
@@ -103,10 +103,10 @@ static __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*p*  
+*p*<br/>
 Zeiger auf zugewiesenen Speicher.
 
-*nBytes*  
+*nBytes*<br/>
 Die Anzahl der zuzuordnenden Bytes.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -119,6 +119,6 @@ Gibt einen void-Zeiger auf den zugeordneten Speicherplatz oder NULL zurück, wen
 
 ## <a name="see-also"></a>Siehe auch
 
-[CHeapPtr-Klasse](../../atl/reference/cheapptr-class.md)   
-[CComAllocator-Klasse](../../atl/reference/ccomallocator-class.md)   
+[CHeapPtr-Klasse](../../atl/reference/cheapptr-class.md)<br/>
+[CComAllocator-Klasse](../../atl/reference/ccomallocator-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

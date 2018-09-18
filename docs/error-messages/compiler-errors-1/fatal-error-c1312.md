@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1312 | Microsoft Docs
+title: Schwerwiegender Fehler C1312 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 867904067add0b18981b5b8c71d7c6d8db3434ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a392cbdbd601d2ea9ebc3d3ca9be37ed6029185
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198468"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028596"
 ---
 # <a name="fatal-error-c1312"></a>Schwerwiegender Fehler C1312
-Zu viele bedingte Verzweigungen in Funktion. Vereinfachen Sie den Quellcode, oder gestalten Sie ihn um.  
-  
- Der Code ist so komplex, dass der Compiler ihn nicht verarbeiten kann, ohne zu viel Stapelspeicher zu benötigen.  Vereinfachen Sie Ihren Code.
+
+Zu viele bedingte Verzweigungen in Funktion. Vereinfachen Sie den Quellcode, oder gestalten Sie ihn um.
+
+Der Code ist so komplex, dass der Compiler ihn nicht verarbeiten kann, ohne zu viel Stapelspeicher zu benötigen.  Vereinfachen Sie Ihren Code.

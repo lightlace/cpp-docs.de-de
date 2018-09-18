@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1051 | Microsoft Docs
+title: Schwerwiegender Fehler C1051 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d83d399d8ceba495856045f0502cc0f08c21eb7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2bbd385d685f671d171ee5aaa967e92acab7fb38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198247"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057937"
 ---
 # <a name="fatal-error-c1051"></a>Schwerwiegender Fehler C1051
-Programmdatenbankdatei "PDB-Datei" hat ein veraltetes Format.  
-  
- Der Compiler kann die Programmdatenbankdatei besitzt eine ältere Versionsnummer nicht aktualisieren. Löschen Sie die Datei, und kompilieren Sie das Programm mit **/Zi** oder **/Zi**. Weitere Informationen finden Sie unter ["/ Z7", / Zi, / Zi (Debuginformationsformat)](../../build/reference/z7-zi-zi-debug-information-format.md)
+
+Programmdatenbankdatei "PDB-Datei", hat ein veraltetes Format.
+
+Der Compiler kann nicht die Programmdatenbankdatei, aktualisiert die hat eine ältere Versionsnummer. Die Datei löschen und neu kompilieren des Programms mit **"/ Zi"** oder **"/ Zi"**. Weitere Informationen finden Sie unter  [ /Z7, / Zi, / Zi (Debuginformationsformat)](../../build/reference/z7-zi-zi-debug-information-format.md)

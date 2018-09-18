@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2315 | Microsoft Docs
+title: Compilerfehler C2315 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21c708e18be35634aa4470b9efe5b1279573ffbc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c042ca8994a013a209f2a99b11a26a11b026781a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167677"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062383"
 ---
 # <a name="compiler-error-c2315"></a>Compilerfehler C2315
-'type1': Verweis wurde durch 'type2' in Zeile aufgefangen  
-  
- Der Ausnahmetyp wird von einem vorherigen Handler behandelt. Der Verweis für den zweiten Catch weist den Typ des ersten auf.
+
+'type1': Verweis wurde durch 'type2' in Zeile aufgefangen
+
+Der Ausnahmetyp wird von einem vorherigen Handler behandelt. Der Verweis für den zweiten Catch weist den Typ des ersten auf.

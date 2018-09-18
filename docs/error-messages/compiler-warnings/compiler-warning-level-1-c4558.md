@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4558 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4558 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 852e3d3e8bb1c8186232cbed2636ac890b0cd057
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 404f4a343b35081a64267424c436063c085958e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282459"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056650"
 ---
 # <a name="compiler-warning-level-1-c4558"></a>Compilerwarnung (Stufe 1) C4558
-Wert des Operanden 'Value' ist außerhalb des gültigen Bereichs "Untergrenze - Obergrenze"  
-  
- Die an eine Anweisung Assemblysprache übergebene Wert ist außerhalb des Bereichs für den Parameter angegeben. Der Wert wird abgeschnitten.  
-  
- Im folgenden Beispiel wird C4558 generiert:  
-  
-```  
-// C4558.cpp  
-// compile with: /W1  
-// processor: x86  
-void asm_test() {  
-   __asm pinsrw   mm1, eax, 8;   // C4558  
-}  
-  
-int main() {  
-}  
+
+Wert des Operanden "Value" ist außerhalb des gültigen Bereichs 'Untergrenze - Obergrenze'
+
+Der Wert, der übergeben wird, um eine Assembly Language-Anweisung ist außerhalb des gültigen Bereichs für den Parameter angegeben. Der Wert wird abgeschnitten.
+
+Im folgende Beispiel wird die C4558 generiert:
+
+```
+// C4558.cpp
+// compile with: /W1
+// processor: x86
+void asm_test() {
+   __asm pinsrw   mm1, eax, 8;   // C4558
+}
+
+int main() {
+}
 ```

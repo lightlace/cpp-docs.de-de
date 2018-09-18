@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 815edfa733e828169404258694133ffa0031917a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c4eed55a90d05728c6625b49454ef4297b878975
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755575"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067908"
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>Implementieren von CComObject, CComAggObject und CComPolyObject
 
@@ -47,6 +47,6 @@ Der Vorteil der Verwendung `CComPolyObject` besteht darin, dass Sie vermeiden, d
 
 ## <a name="see-also"></a>Siehe auch
 
-[Grundlagen von ARL COM-Objekten](../atl/fundamentals-of-atl-com-objects.md)   
+[Grundlagen von ARL COM-Objekten](../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Aggregation und Klassenfactory-Makros](../atl/reference/aggregation-and-class-factory-macros.md)
 

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 223d781e879f2d1c3a35fce00e788a42247299eb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8369afbbf423f85df0e38f7f2979b3b7e48f8591
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760096"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067921"
 ---
 # <a name="cstringrefelementtraits-class"></a>CStringRefElementTraits-Klasse
 
@@ -34,13 +34,13 @@ Diese Klasse stellt statische Funktionen, die im Zusammenhang mit Zeichenfolgen,
 ## <a name="syntax"></a>Syntax
 
 ```
-template <typename T>  
+template <typename T>
 class CStringRefElementTraits : public CElementTraitsBase<T>
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Der Typ der Daten in der Auflistung gespeichert werden.
 
 ## <a name="members"></a>Member
@@ -79,10 +79,10 @@ static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Element1*  
+*Element1*<br/>
 Die erste Zeichenfolge Element.
 
-*Element2*  
+*Element2*<br/>
 Die zweite Zeichenfolge Element.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -99,10 +99,10 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*str1*  
+*str1*<br/>
 Die erste Zeichenfolge Element.
 
-*str2*  
+*str2*<br/>
 Die zweite Zeichenfolge Element.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -119,7 +119,7 @@ static ULONG Hash(INARGTYPE str) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*str*  
+*str*<br/>
 Das String-Element.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -128,5 +128,5 @@ Gibt einen Hashwert berechnet mithilfe des Inhalts der Zeichenfolge zurück.
 
 ## <a name="see-also"></a>Siehe auch
 
-[CElementTraitsBase-Klasse](../../atl/reference/celementtraitsbase-class.md)   
+[CElementTraitsBase-Klasse](../../atl/reference/celementtraitsbase-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

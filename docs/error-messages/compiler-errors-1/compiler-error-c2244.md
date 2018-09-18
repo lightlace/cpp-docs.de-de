@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2244 | Microsoft Docs
+title: Compilerfehler C2244 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,78 +16,79 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c5822a2e7fc2bc33f7c42f1ec2478899d69ca78
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b8c812b2443bdfada71dbb99dbceddb9074c02b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172013"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061551"
 ---
 # <a name="compiler-error-c2244"></a>Compilerfehler C2244
-'Bezeichner': kann nicht entsprechend der Definition der Funktion um eine bestehende Deklaration  
-  
- Eine ungewöhnliche Verwenden des unären Operators + wurde vor einem Funktionsaufruf verwendet, die kein Klammer vorhanden war.  
-  
- Dieser Fehler tritt nur in C++-Projekten.  
-  
- Im folgenden Beispiel wird C2244 generiert:  
-  
-```  
-// C2244.cpp  
-int func(char) {  
-   return 0;  
-}   
-  
-int func(int) {  
-   return 0;  
-}  
-  
-int main() {  
-   +func;   // C2244  
-}  
-```  
-  
- C2244 kann auch auftreten, wenn eine falsche Funktionssignatur für eine Memberfunktion einer Klassenvorlage verwendet wird.  
-  
-```  
-// C2244b.cpp  
-// compile with: /c  
-template<class T>   
-class XYZ {  
-   void func(T t);  
-};  
-  
-template<class T>  
-void XYZ<T>::func(int i) {}   // C2244 wrong function signature  
-// try the following line instead  
-// void XYZ<T>::func(T t) {}  
-```  
-  
- C2244 kann auch auftreten, wenn eine falsche Funktionssignatur für eine Memberfunktionsvorlage verwendet wird.  
-  
-```  
-// C2244c.cpp  
-// compile with: /c  
-class ABC {  
-   template<class T>   
-   void func(int i, T t);  
-};  
-  
-template<class T>  
-void ABC::func(int i) {}   // C2244 wrong signature  
-// try the following line instead  
-// void ABC::func(int i, T t) {}  
-```  
-  
- Eine Funktionsvorlage kann nicht teilweise spezialisiert werden.  
-  
-```  
-// C2244d.cpp  
-template<class T, class U>  
-class QRS {  
-   void func(T t, U u);  
-};  
-  
-template<class T>  
-void QRS<T,int>::func(T t, int u) {}   // C2244  
+
+'Bezeichner': keine Übereinstimmung für Funktionsdefinition mit vorhandener Deklaration gefunden
+
+Eine ungewöhnliche Verwendung des unären Operators + wurde vor einem Funktionsaufruf verwendet, die keine Klammern.
+
+Dieser Fehler tritt nur in C++-Projekten.
+
+Im folgende Beispiel wird die C2244 generiert:
+
+```
+// C2244.cpp
+int func(char) {
+   return 0;
+}
+
+int func(int) {
+   return 0;
+}
+
+int main() {
+   +func;   // C2244
+}
+```
+
+C2244 kann auch auftreten, wenn eine falsche Signatur für eine Memberfunktion einer Klassenvorlage verwendet wird.
+
+```
+// C2244b.cpp
+// compile with: /c
+template<class T>
+class XYZ {
+   void func(T t);
+};
+
+template<class T>
+void XYZ<T>::func(int i) {}   // C2244 wrong function signature
+// try the following line instead
+// void XYZ<T>::func(T t) {}
+```
+
+C2244 kann auch auftreten, wenn eine falsche Signatur für eine Memberfunktionsvorlage verwendet wird.
+
+```
+// C2244c.cpp
+// compile with: /c
+class ABC {
+   template<class T>
+   void func(int i, T t);
+};
+
+template<class T>
+void ABC::func(int i) {}   // C2244 wrong signature
+// try the following line instead
+// void ABC::func(int i, T t) {}
+```
+
+Eine Funktionsvorlage können nicht teilweise spezialisiert werden.
+
+```
+// C2244d.cpp
+template<class T, class U>
+class QRS {
+   void func(T t, U u);
+};
+
+template<class T>
+void QRS<T,int>::func(T t, int u) {}   // C2244
 ```

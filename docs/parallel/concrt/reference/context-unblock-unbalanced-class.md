@@ -1,5 +1,5 @@
 ---
-title: Context_unblock_unbalanced-Klasse | Microsoft Docs
+title: Context_unblock_unbalanced-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c964701f9a26c655bbb9529a112f036c7c9f0bf5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 54911e3e9c696cd2a390dc2f5b42e3917b08014f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685748"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037475"
 ---
 # <a name="contextunblockunbalanced-class"></a>context_unblock_unbalanced-Klasse
 Diese Klasse beschreibt eine Ausnahme, die ausgelöst wird, wenn Aufrufe der `Block`-Methode und der `Unblock`-Methode eines `Context`-Objekts nicht ordnungsgemäß zugeordnet werden.  
@@ -43,7 +43,7 @@ class context_unblock_unbalanced : public std::exception;
 |[context_unblock_unbalanced](#ctor)|Überladen. Erstellt ein `context_unblock_unbalanced`-Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Aufrufe von der `Block` und `Unblock` Methoden eine `Context` -Objekts muss immer ordnungsgemäß zugeordnet. Die Concurrency Runtime ermöglicht die Vorgänge in beliebiger Reihenfolge durchgeführt werden soll. Z. B. einen Aufruf von `Block` kann durch einen Aufruf von folgen `Unblock`, oder umgekehrt. Diese Ausnahme wird ausgelöst, wenn, z. B. zwei Aufrufe der `Unblock` Methode in einer Zeile vorgenommen wurden, auf ein `Context` Objekt, das nicht blockiert wurde.  
+ Aufrufe von der `Block` und `Unblock` Methoden eine `Context` Objekt muss immer ordnungsgemäß kombiniert werden. Die Concurrency Runtime ermöglicht, die Vorgänge in beliebiger Reihenfolge ausgeführt wird. Z. B. einen Aufruf von `Block` kann durch einen Aufruf folgen `Unblock`, oder umgekehrt. Diese Ausnahme wird ausgelöst, wenn, z. B. zwei Aufrufe der `Unblock` Methode in einer Zeile vorgenommen wurden, auf eine `Context` Objekt, das nicht gesperrt wurde.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `exception`  
@@ -67,8 +67,8 @@ context_unblock_unbalanced() throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Message`  
- Eine beschreibende Fehlermeldung.  
+*_Nachricht*<br/>
+Eine beschreibende Fehlermeldung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)

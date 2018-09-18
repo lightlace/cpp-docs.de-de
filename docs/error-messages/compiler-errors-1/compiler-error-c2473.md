@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2473 | Microsoft Docs
+title: Compilerfehler C2473 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af0342d3e8e6011e37b0588515299f2a0ab7b761
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0eeecedd3ad2cee551b6003912d9b7af32883588
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241019"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026074"
 ---
 # <a name="compiler-error-c2473"></a>Compilerfehler C2473
-"Bezeichner": Hat die Form einer Funktionsdefinition, aber es gibt keine Parameterliste.  
-  
- Der Compiler hat einen Codeabschnitt entdeckt, der wie eine Funktion aussieht, aber keine Parameterliste aufweist.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C2473 generiert.  
-  
-```  
-// C2473.cpp  
-// compile with: /clr /c  
-class A {  
-   int i {}   // C2473  
-};  
-  
-class B {  
-   int i() {}   // OK  
-};  
+
+"Bezeichner": Hat die Form einer Funktionsdefinition, aber es gibt keine Parameterliste.
+
+Der Compiler hat einen Codeabschnitt entdeckt, der wie eine Funktion aussieht, aber keine Parameterliste aufweist.
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C2473 generiert.
+
+```
+// C2473.cpp
+// compile with: /clr /c
+class A {
+   int i {}   // C2473
+};
+
+class B {
+   int i() {}   // OK
+};
 ```

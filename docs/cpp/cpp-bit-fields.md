@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc13eb70dd2efc479cef7185ee0cdfa147ec507
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 69411a727c3f590e9a45a46ecb4ea2eb0eab05c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408041"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029467"
 ---
 # <a name="c-bit-fields"></a>C++-Bitfelder
 
@@ -38,7 +38,7 @@ Der (optionale) *Deklarator* ist der Name, mit dem das Element in der Anwendung 
 > [!NOTE]
 > Ein unbenanntes Bitfeld der Breite 0 erzwingt die Ausrichtung des nächsten Bitfelds an den nächsten **Typ** Grenze, in denen **Typ** ist der Typ des Members.
 
- Das folgende Beispiel deklariert eine Struktur, die zwei Bitfelder enthält:
+Das folgende Beispiel deklariert eine Struktur, die zwei Bitfelder enthält:
 
 ```cpp
 // bit_fields1.cpp
@@ -94,4 +94,5 @@ Die folgende Liste zeigt Einzelheiten zu fehlerhaften Operationen in Bitfeldern:
 - Initialisieren von einer nicht -**const** Verweis mit einem Bitfeld.
 
 ## <a name="see-also"></a>Siehe auch
- [Klassen und Strukturen](../cpp/classes-and-structs-cpp.md)
+
+[Klassen und Strukturen](../cpp/classes-and-structs-cpp.md)

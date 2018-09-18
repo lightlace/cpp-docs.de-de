@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd39f56d69aef836714d70b50f6e2c882cad9448
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8308051d44b0daa0a4691ba825890970762dcc2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754825"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036903"
 ---
 # <a name="cautovectorptrelementtraits-class"></a>CAutoVectorPtrElementTraits-Klasse
 
@@ -36,14 +36,14 @@ Diese Klasse stellt die Methoden, statische Funktionen und Typdefinitionen hilfr
 ## <a name="syntax"></a>Syntax
 
 ```
-template <typename T>  
-class CAutoVectorPtrElementTraits : 
+template <typename T>
+class CAutoVectorPtrElementTraits :
    public CDefaultElementTraits<ATL::CAutoVectorPtr<T>>
 ```
 
 #### <a name="parameters"></a>Parameter
 
-`T`  
+*T*<br/>
 Der Zeigertyp.
 
 ## <a name="members"></a>Member
@@ -93,6 +93,6 @@ typedef T*& OUTARGTYPE;
 
 ## <a name="see-also"></a>Siehe auch
 
-[CDefaultElementTraits-Klasse](../../atl/reference/cdefaultelementtraits-class.md)   
-[CAutoVectorPtr-Klasse](../../atl/reference/cautovectorptr-class.md)   
+[CDefaultElementTraits-Klasse](../../atl/reference/cdefaultelementtraits-class.md)<br/>
+[CAutoVectorPtr-Klasse](../../atl/reference/cautovectorptr-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

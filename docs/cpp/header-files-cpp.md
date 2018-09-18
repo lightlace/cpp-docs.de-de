@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be194095b6461eaedd9e814c6130801b431fef5d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7d1e477b04421f7e8920bba47b2eba4e73df34cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602412"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028531"
 ---
 # <a name="header-files-c"></a>Headerdateien (C++)
 
-Die Namen der Programmelemente, z. B. Variablen, Funktionen, Klassen usw. müssen deklariert werden, bevor sie verwendet werden können. Angenommen, Sie können nicht schreiben `x = 42` ohne dass die Deklaration 'X'. 
+Die Namen der Programmelemente, z. B. Variablen, Funktionen, Klassen usw. müssen deklariert werden, bevor sie verwendet werden können. Angenommen, Sie können nicht schreiben `x = 42` ohne dass die Deklaration 'X'.
 
 ```cpp
 int x; // declaration
 x = 42; // use x
 ```
 
- Weist den Compiler an, ob die Deklaration ist eine **Int**, **doppelte**, **Funktion**, **Klasse** oder einige andere Sache.  Darüber hinaus muss jeder Name (direkt oder indirekt) in alle cpp-Datei deklariert werden in dem es verwendet wird. Wenn Sie ein Programm kompilieren, wird jede cpp-Datei unabhängig voneinander in einer Kompilierungseinheit kompiliert. Der Compiler hat keine Kenntnis welche Namen im anderen Kompilierungseinheiten deklariert werden. Das heißt, wenn Sie eine Klasse oder Funktion oder globale Variable definieren, müssen Sie eine Deklaration, dass wir diesen in jeder zusätzlichen cpp-Datei angeben, der verwendet wird. Jede Deklaration das erledigt ist, muss in allen Dateien genau identisch sein. Inkonsistenz bei eine kleine verursacht Fehler oder unerwartetem Verhalten, wenn der Linker versucht, alle Kompilierungseinheiten in einem einzelnen Programm zusammenzuführen.
+Weist den Compiler an, ob die Deklaration ist eine **Int**, **doppelte**, **Funktion**, **Klasse** oder einige andere Sache.  Darüber hinaus muss jeder Name (direkt oder indirekt) in alle cpp-Datei deklariert werden in dem es verwendet wird. Wenn Sie ein Programm kompilieren, wird jede cpp-Datei unabhängig voneinander in einer Kompilierungseinheit kompiliert. Der Compiler hat keine Kenntnis welche Namen im anderen Kompilierungseinheiten deklariert werden. Das heißt, wenn Sie eine Klasse oder Funktion oder globale Variable definieren, müssen Sie eine Deklaration, dass wir diesen in jeder zusätzlichen cpp-Datei angeben, der verwendet wird. Jede Deklaration das erledigt ist, muss in allen Dateien genau identisch sein. Inkonsistenz bei eine kleine verursacht Fehler oder unerwartetem Verhalten, wenn der Linker versucht, alle Kompilierungseinheiten in einem einzelnen Programm zusammenzuführen.
 
-Um potenzielle Fehler zu minimieren, hat sich C++ durchgesetzt, die Konvention für die Verwendung *Headerdateien* Deklarationen enthalten. Sie stellen die Deklarationen in einer Headerdatei verwenden und dann die #include-Direktive in alle cpp-Datei oder anderen Headerdatei erfordert diese Deklaration. Die #include-Anweisung fügt eine Kopie der Header-Datei direkt in der CPP-Datei vor der Kompilierung. 
+Um potenzielle Fehler zu minimieren, hat sich C++ durchgesetzt, die Konvention für die Verwendung *Headerdateien* Deklarationen enthalten. Sie stellen die Deklarationen in einer Headerdatei verwenden und dann die #include-Direktive in alle cpp-Datei oder anderen Headerdatei erfordert diese Deklaration. Die #include-Anweisung fügt eine Kopie der Header-Datei direkt in der CPP-Datei vor der Kompilierung.
 
 ## <a name="example"></a>Beispiel
 
@@ -91,7 +91,7 @@ Nach Abschluss der Compiler das Kompilieren von einzelnen cpp-Dateien in OBJ-Dat
 
 ## <a name="include-guards"></a>#Include-Schutz
 
-Header-Dateien in der Regel haben eine *#include-Schutz* oder `#pragma once` Richtlinie, um sicherzustellen, dass sie nicht mehrere Male in einer einzelnen cpp-Datei eingefügt werden. 
+Header-Dateien in der Regel haben eine *#include-Schutz* oder `#pragma once` Richtlinie, um sicherzustellen, dass sie nicht mehrere Male in einer einzelnen cpp-Datei eingefügt werden.
 
 ```cpp
 // my_class.h
@@ -115,20 +115,20 @@ namespace N
 Da eine Headerdatei potenziell von mehreren Dateien enthalten sein kann, kann nicht es Definitionen enthalten, die mehrere Definitionen mit dem gleichen Namen führen kann. Im folgenden sind nicht zulässig, oder werden als sehr ungültiges Verfahren angesehen:
 
 - Definitionen von integrierten Typen im Namespace oder im globalen Gültigkeitsbereich
-- nicht-Inline-Funktionsdefinitionen 
+- nicht-Inline-Funktionsdefinitionen
 - nicht-Const-Variablendefinitionen
 - Aggregate-Definitionen
 - Unbenannte Namespaces
 - using-Anweisungen
 
-Verwenden der **mit** Richtlinie verursacht einen Fehler nicht unbedingt, aber es kann möglicherweise ein Problem verursachen, da es sich bei daraufhin den Namespace in den Bereich in alle cpp-Datei, die direkt oder indirekt diesen Header enthält. 
+Verwenden der **mit** Richtlinie verursacht einen Fehler nicht unbedingt, aber es kann möglicherweise ein Problem verursachen, da es sich bei daraufhin den Namespace in den Bereich in alle cpp-Datei, die direkt oder indirekt diesen Header enthält.
 
 ## <a name="sample-header-file"></a>Beispiel-Headerdatei
 
 Das folgende Beispiel zeigt die verschiedenen Arten von Deklarationen und Definitionen, die in einer Headerdatei zulässig sind:
 
 ```cpp
-#pragma once 
+#pragma once
 #include <vector> // #include directive
 #include <string>
 
@@ -157,7 +157,7 @@ namespace N  // namespace declaration
     void print_to_log();
 #endif
 
-    class my_class   // regular class definition, 
+    class my_class   // regular class definition,
     {                // but no non-inline function definitions
 
         friend class other_class;

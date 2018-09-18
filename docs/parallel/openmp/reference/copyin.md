@@ -1,5 +1,5 @@
 ---
-title: Copyin | Microsoft Docs
+title: Copyin | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32137534a43eeb0b038eae547f9bc19283412159
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 27afaee16a87ddf428570f7854212eed34634d38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688244"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059328"
 ---
 # <a name="copyin"></a>copyin
-Können Threads für die master-Thread-Wert, den Zugriff auf eine [Threadprivate](../../../parallel/openmp/reference/threadprivate.md) Variable.  
+Ermöglicht die Threads der master-Thread-Wert, für den Zugriff auf eine [Threadprivate](../../../parallel/openmp/reference/threadprivate.md) Variable.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,14 +32,13 @@ Können Threads für die master-Thread-Wert, den Zugriff auf eine [Threadprivate
 copyin(var)  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- wobei  
+## <a name="parameters"></a>Parameter
   
- `var`  
- Die `threadprivate` Variable, die mit dem Wert der Variablen in der master-Thread initialisiert wird, wie sie bevor Sie das parallele Konstrukt vorhanden ist.  
+*var*<br/>
+Die `threadprivate` Variable, die mit dem Wert der Variablen in der master-Thread initialisiert wird, wie sie vor dem das parallele Konstrukt vorhanden ist.  
   
 ## <a name="remarks"></a>Hinweise  
- `copyin` gilt für die folgenden Direktiven:  
+ `copyin` gilt für die folgenden Anweisungen:  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   

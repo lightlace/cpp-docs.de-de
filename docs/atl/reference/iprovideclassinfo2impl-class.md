@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3e0ac7cf3a5448a2963aa92c2e275be796c895d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c977ecc1094af37c5e2c2e3ed8f27a6f2bdf1c93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758338"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033874"
 ---
 # <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl-Klasse
 
@@ -41,28 +41,28 @@ template <const CLSID* pcoclsid,
     const IID* psrcid,
     const GUID* plibid = &CAtlModule::m_libid,
     WORD wMajor = 1,
-    WORD wMinor = 0, class tihclass = CComTypeInfoHolder>  
+    WORD wMinor = 0, class tihclass = CComTypeInfoHolder>
 class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*pcoclsid*  
+*pcoclsid*<br/>
 Ein Zeiger auf den Bezeichner für die Co-Klasse.
 
-*psrcid*  
+*psrcid*<br/>
 Ein Zeiger auf den Bezeichner für die Co-Klasse standardmäßige ausgehende Disp-Schnittstelle.
 
-*plibid*  
+*plibid*<br/>
 Ein Zeiger auf die LIBID der Typbibliothek, die Informationen über die Schnittstelle enthält. Standardmäßig wird die Bibliothek auf Serverebene übergeben.
 
-*wMajor*  
+*wMajor*<br/>
 Die Hauptversion der Typbibliothek Der Standardwert ist 1.
 
-*wMinor*  
+*wMinor*<br/>
 Die Nebenversion der Typbibliothek Der Standardwert ist 0.
 
-*tihclass*  
+*tihclass*<br/>
 Die Klasse, die zum Verwalten von Typinformationen für die Co-Klasse verwendet wird. Der Standardwert ist `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Member

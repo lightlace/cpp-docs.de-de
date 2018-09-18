@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bc4004be27a057c96d9c10e7e7f261d8a5ddebe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bb2d345e0bb8be8f5150d48237df9845acf451dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761351"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036170"
 ---
 # <a name="ccomcontrol-class"></a>CComControl-Klasse
 
@@ -46,17 +46,17 @@ Diese Klasse stellt Methoden zum Erstellen und Verwalten von ATL-Steuerelementen
 ## <a name="syntax"></a>Syntax
 
 ```
-template <class T, class WinBase = CWindowImpl<T>>  
+template <class T, class WinBase = CWindowImpl<T>>
 class ATL_NO_VTABLE CComControl : public CComControlBase,
     public WinBase;
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Die Klasse, die Implementierung des Steuerelements.
 
-*WinBase*  
+*WinBase*<br/>
 Die Basisklasse, die Windowing-Funktionen implementiert. Standardmäßig [CWindowImpl](../../atl/reference/cwindowimpl-class.md).
 
 ## <a name="members"></a>Member
@@ -119,10 +119,10 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 
 ### <a name="parameters"></a>Parameter
 
-*IID*  
+*IID*<br/>
 [in] Die GUID der Schnittstelle angefordert wird.
 
-*ppv*  
+*ppv*<br/>
 [out] Ein Zeiger auf den Schnittstellenzeiger vom *Iid*, oder NULL, wenn die Schnittstelle nicht gefunden wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -143,10 +143,10 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 
 ### <a name="parameters"></a>Parameter
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Handle für das übergeordnete Element oder Besitzer-Fenster. Ein gültiges Fensterhandle muss angegeben werden. Das Fenster des Steuerelements ist auf den Bereich des übergeordneten Fensters beschränkt.
 
-*rcPos*  
+*rcPos*<br/>
 [in] Die anfängliche Größe und Position des Fensters erstellt werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -167,7 +167,7 @@ HRESULT FireOnChanged(DISPID dispID);
 
 ### <a name="parameters"></a>Parameter
 
-*dispID*  
+*dispID*<br/>
 [in] Der Bezeichner der Eigenschaft, die geändert wurde.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -194,7 +194,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 
 ### <a name="parameters"></a>Parameter
 
-*dispID*  
+*dispID*<br/>
 [in] Der Bezeichner der Eigenschaft zu ändern.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -203,7 +203,7 @@ Einer der standardmäßigen HRESULT-Werte.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn die Steuerelementklasse abgeleitet [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), ruft diese Methode [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) zu benachrichtigen, alle verbundenen `IPropertyNotifySink` Schnittstellen, der angegebenen Eigenschaft des Steuerelements wird geändert. Wenn eine Klasse nicht von abgeleitet ist `IPropertyNotifySink`, diese Methode gibt S_OK zurück.  
+Wenn die Steuerelementklasse abgeleitet [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), ruft diese Methode [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) zu benachrichtigen, alle verbundenen `IPropertyNotifySink` Schnittstellen, der angegebenen Eigenschaft des Steuerelements wird geändert. Wenn eine Klasse nicht von abgeleitet ist `IPropertyNotifySink`, diese Methode gibt S_OK zurück.
 
 Diese Methode ist sicher aufgerufen werden, auch wenn das Steuerelement Verbindungspunkte nicht unterstützt.
 
@@ -224,13 +224,13 @@ int MessageBox(
 
 ### <a name="parameters"></a>Parameter
 
-*lpszText*  
+*lpszText*<br/>
 Der Text im Meldungsfeld angezeigt werden.
 
-*lpszCaption*  
+*lpszCaption*<br/>
 Der Titel des Dateidialogfelds. Wenn NULL (Standard), den Titel "Error" wird verwendet.
 
-*nType*  
+*nType*<br/>
 Gibt den Inhalt und Verhalten des Dialogfelds. Finden Sie unter den [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) Eintrag in der Windows-SDK-Dokumentation finden Sie eine Liste von den verschiedenen Meldungsfeldern verfügbar. Standardmäßig bietet ein einfaches **OK** Schaltfläche.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -243,7 +243,7 @@ Gibt einen ganzzahligen Wert angeben, die Menüelement Werte aufgeführt [Messag
 
 ## <a name="see-also"></a>Siehe auch
 
-[CWindowImpl-Klasse](../../atl/reference/cwindowimpl-class.md)   
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)   
-[CComControlBase-Klasse](../../atl/reference/ccomcontrolbase-class.md)   
+[CWindowImpl-Klasse](../../atl/reference/cwindowimpl-class.md)<br/>
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
+[CComControlBase-Klasse](../../atl/reference/ccomcontrolbase-class.md)<br/>
 [CComCompositeControl-Klasse](../../atl/reference/ccomcompositecontrol-class.md)

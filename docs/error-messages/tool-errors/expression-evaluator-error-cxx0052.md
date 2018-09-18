@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0052 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0052 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9f4b6fb0db87a77f433775fedea9880f3f24bd9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ba8fb898930ef830857773a89cd80e4c43c59c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302320"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028154"
 ---
 # <a name="expression-evaluator-error-cxx0052"></a>Ausdrucksauswertungsfehler CXX0052
-die Memberfunktion ist nicht vorhanden  
-  
- Eine Memberfunktion wurde als einen Haltepunkt angegeben, aber nicht gefunden. Festlegen eines Haltepunkts an eine Funktion, die inline gesetzt wurde, kann dieser Fehler verursacht.  
-  
- Kompilieren Sie die Datei mit inlining erzwungen deaktiviert (/ Ob0) einen Haltepunkt in dieser Funktion festlegen.  
-  
- Ein Ausdruck, der eine Funktion, die nicht definiert wurde.  
-  
- Dieser Fehler ist mit CAN0052 identisch.
+
+die Memberfunktion ist nicht vorhanden
+
+Eine Member-Funktion wurde als Haltepunkt angegeben, aber es wurde nicht gefunden. Festlegen eines Haltepunkts an eine Funktion, die Inline ersetzt wurde, kann diesen Fehler verursachen.
+
+Kompilieren Sie die Datei mit inlining erzwungen wird, deaktiviert (/ Ob0) in dieser Funktion einen Haltepunkt festlegen.
+
+Ein Ausdruck, der eine Funktion, die nicht definiert war aufgerufen wird.
+
+Dieser Fehler ist mit CAN0052 identisch.

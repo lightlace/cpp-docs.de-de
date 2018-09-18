@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1941f08d13fb8aef9b5b281ce4b2bc1c61bf98fe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 70ba26e5893b21393a3466ae7cf1c6cea43b81ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766586"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070157"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase-Klasse
 
@@ -41,13 +41,13 @@ Diese Klasse bietet eine Grundlage für intelligente Zeiger-Klassen, die mit COM
 ## <a name="syntax"></a>Syntax
 
 ```
-template <class T>  
+template <class T>
 class CComPtrBase
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Der Objekttyp des intelligenten Zeigers verwiesen werden.
 
 ## <a name="members"></a>Member
@@ -111,13 +111,13 @@ HRESULT Advise(
 
 ### <a name="parameters"></a>Parameter
 
-*pUnk*  
+*pUnk*<br/>
 Ein Zeiger auf des Clients `IUnknown`.
 
-*IID*  
+*IID*<br/>
 Die GUID des Verbindungspunkts. Dies ist normalerweise identisch mit der von den Verbindungspunkt verwalteten Ausgangsschnittstelle.
 
-*PDW*  
+*PDW*<br/>
 Ein Zeiger auf das Cookie, das die Verbindung eindeutig identifiziert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -138,7 +138,7 @@ void Attach(T* p2) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*P2*  
+*P2*<br/>
 Die `CComPtrBase` Objekt übernimmt dann den Besitz des this-Zeigers.
 
 ### <a name="remarks"></a>Hinweise
@@ -175,16 +175,16 @@ HRESULT CoCreateInstance(
 
 ### <a name="parameters"></a>Parameter
 
-*szProgID*  
+*szProgID*<br/>
 Zeiger auf ein Programm-ID verwendet, um die CLSID wiederherzustellen.
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 Wenn der Wert NULL ist, gibt Sie an, dass das Objekt nicht als Teil eines Aggregats erstellt wird. Wenn nicht NULL ist, ist ein Zeiger auf des aggregatobjekts `IUnknown` Schnittstelle (das steuernde `IUnknown`).
 
-*dwClsContext*  
+*dwClsContext*<br/>
 Der Kontext, in dem der Code, der das neu erstellte Objekt verwaltet ausgeführt wird.
 
-*rclsid*  
+*rclsid*<br/>
 Die CLSID zugeordnet, die Daten und Code, der zum Erstellen des Objekts verwendet wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -207,7 +207,7 @@ HRESULT CopyTo(T** ppT) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*ppT*  
+*ppT*<br/>
 Adresse der Variablen der empfängt die `CComPtrBase` Zeiger.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -246,7 +246,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*pOther*  
+*pOther*<br/>
 Der zu vergleichende `IUnknown *`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -301,7 +301,7 @@ bool operator== (T* pT) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*pT*  
+*pT*<br/>
 Ein Zeiger auf ein Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -334,7 +334,7 @@ bool operator<(T* pT) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*pT*  
+*pT*<br/>
 Ein Zeiger auf ein Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -345,7 +345,7 @@ Gibt "true" zurück, wenn der Zeiger vom aktuellen Objekt verwaltet ist kleiner 
 
 Der Cast-Operator.
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -376,10 +376,10 @@ template <class Q> HRESULT QueryInterface(Q
 
 ### <a name="parameters"></a>Parameter
 
-*Q*  
+*Q*<br/>
 Der Objekttyp, dessen Schnittstellenzeiger erforderlich ist.
 
-*PP*  
+*PP*<br/>
 Adresse des Output-Variable, die den angeforderten Schnittstellenzeiger empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -414,7 +414,7 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*punkParent*  
+*punkParent*<br/>
 Ein Zeiger auf die `IUnknown` Schnittstelle des übergeordneten Elements.
 
 ### <a name="return-value"></a>Rückgabewert

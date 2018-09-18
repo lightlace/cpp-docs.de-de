@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 715fcc37c41251b0a42fd6508f8a358758105a1f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 47cd4cc765459acc6270c64b6cc37fe328f36757
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680194"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069416"
 ---
 # <a name="tiledindex-class"></a>tiled_index-Klasse
 Stellt einen Index in einer [Tiled_extent](tiled-extent-class.md) Objekt. Diese Klasse verfügt über Eigenschaften, über die auf Elemente relativ zum lokalen Kachelursprung und relativ zum globalen Ursprung zugegriffen werden kann. Weitere Informationen zu gekachelten Bereichen finden Sie unter [mithilfe von Kacheln](../../../parallel/amp/using-tiles.md).  
@@ -62,14 +62,14 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `_Dim0`  
- Die Länge der wichtigsten Dimension.  
+*_Dim0*<br/>
+Die Länge der wichtigsten Dimension.  
   
- `_Dim1`  
- Die Länge der zweitwichtigsten Dimension.  
+*_Dim1*<br/>
+Die Länge der zweitwichtigsten Dimension.  
   
- `_Dim2`  
- Die Länge der unwichtigsten Dimension.  
+*_Dim2*<br/>
+Die Länge der unwichtigsten Dimension.  
   
 ## <a name="members"></a>Member  
   
@@ -140,23 +140,23 @@ tiled_index(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `_Global`  
- Die globale [Index](index-class.md) des erstellten `tiled_index`.  
+*_Global*<br/>
+Die globale [Index](index-class.md) des erstellten `tiled_index`.  
   
- `_Local`  
- Die lokale [Index](index-class.md) des erstellten `tiled_index`  
+*_Lokale*<br/>
+Die lokale [Index](index-class.md) des erstellten `tiled_index`  
   
- `_Tile`  
- Die Kachel [Index](index-class.md) des erstellten `tiled_index`  
+*_Tile*<br/>
+Die Kachel [Index](index-class.md) des erstellten `tiled_index`  
   
- `_Tile_origin`  
- Der kachelursprungs [Index](index-class.md) des erstellten `tiled_index`  
+*_Tile_origin*<br/>
+Der kachelursprungs [Index](index-class.md) des erstellten `tiled_index`  
   
- `_Barrier`  
- Die [Tile_barrier](tile-barrier-class.md) Objekt des konstruierten `tiled_index`.  
+*_Barrier*<br/>
+Die [Tile_barrier](tile-barrier-class.md) Objekt des konstruierten `tiled_index`.  
   
- `_Other`  
- Das `tile_index`-Objekt, das in das erstellte `tiled_index`-Objekt kopiert werden soll.  
+*_Sonstige*<br/>
+Das `tile_index`-Objekt, das in das erstellte `tiled_index`-Objekt kopiert werden soll.  
   
 ## <a name="overloads"></a>Overloads  
   

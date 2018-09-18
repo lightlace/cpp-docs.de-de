@@ -1,7 +1,7 @@
 ---
 title: 'Exemplarische Vorgehensweise: Erstellen einer UWP-app mithilfe von WRL und Media Foundation | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2775e0348f6bfe1e7fe960a105ebf0c31fcaae96
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3eb82c5c86411af63ea79a4dbcf2e54d2d3ce5f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214830"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038307"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Exemplarische Vorgehensweise: Erstellen einer UWP-app mithilfe von WRL und Media Foundation
 
@@ -101,7 +101,7 @@ In den meisten Fällen können Sie mithilfe C++ / CX verwenden, um die Windows-R
 
    1. Klicken Sie unter **Eingabe**, für die **Moduldefinitionsdatei**, geben Sie `GrayScaleTransform.def`.
 
-   2. Außerdem **Eingabe**, hinzufügen `runtimeobject.lib`, `mfuuid.lib`, und `mfplatf.lib` auf die **zusätzliche Abhängigkeiten** Eigenschaft.
+   2. Außerdem **Eingabe**, hinzufügen `runtimeobject.lib`, `mfuuid.lib`, und `mfplat.lib` auf die **zusätzliche Abhängigkeiten** Eigenschaft.
 
    3. Klicken Sie unter **Windows-Metadaten**legen **Windows-Metadaten generieren** zu **Ja (/ WINMD)**.
 

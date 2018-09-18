@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30a0080dd576add0433421bb465d89b2967b9acd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c8d32094dd8ee55cdd76fc21f51a2f809b1b341d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753122"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034927"
 ---
 # <a name="catltemporaryfile-class"></a>CAtlTemporaryFile-Klasse
 
@@ -136,7 +136,7 @@ HRESULT Close(LPCTSTR szNewName = NULL) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*szNewName*  
+*szNewName*<br/>
 Der Name für die neue Datei auf den Inhalt in die temporäre Datei speichern. Wenn dieses Argument NULL ist, werden die Inhalte der temporären Datei gelöscht.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -157,10 +157,10 @@ HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) thr
 
 ### <a name="parameters"></a>Parameter
 
-*pszDir*  
+*pszDir*<br/>
 Der Pfad für die temporäre Datei. Wenn diese NULL ist [GetTempPath](/windows/desktop/api/fileapi/nf-fileapi-gettemppatha) wird aufgerufen, um dem angegebenen Pfad zuweisen.
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Der gewünschte Zugriff. Finden Sie unter *DwDesiredAccess* in [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) im Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -201,7 +201,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*nPos*  
+*nPos*<br/>
 Die Position in Bytes.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -222,7 +222,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*nLen*  
+*nLen*<br/>
 Die Anzahl der Bytes in der Datei.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -271,10 +271,10 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*nPos*  
+*nPos*<br/>
 Die Position in der Datei, in dem die Sperre begonnen werden soll.
 
-*nCount*  
+*nCount*<br/>
 Die Länge des Bytebereichs gesperrt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -289,7 +289,7 @@ Das Sperren von Bytes in einer Datei verhindert den Zugriff auf diese Bytes durc
 
 Gibt ein Handle für die temporäre Datei zurück.
 
-```  
+```
 operator HANDLE() throw();
 ```
 
@@ -306,13 +306,13 @@ HRESULT Read(
 
 ### <a name="parameters"></a>Parameter
 
-*pBuffer*  
+*pBuffer*<br/>
 Zeiger auf den Puffer, der die Daten erhält, die aus der Datei gelesen werden.
 
-*nBufSize*  
+*nBufSize*<br/>
 Die Puffergröße in Byte.
 
-*nBytesRead*  
+*nBytesRead*<br/>
 Die Anzahl von gelesenen Bytes.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -337,10 +337,10 @@ HRESULT Seek(LONGLONG nOffset, DWORD dwFrom = FILE_CURRENT) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*nOffset*  
+*nOffset*<br/>
 Der Offset in Bytes, aus der vom Ausgangspunkt *DwFrom.*
 
-*dwFrom*  
+*dwFrom*<br/>
 Der Anfangspunkt (FILE_BEGIN, FILE_CURRENT oder FILE_END).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -365,7 +365,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*nNewLen*  
+*nNewLen*<br/>
 Die neue Länge der Datei in Bytes.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -402,10 +402,10 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*nPos*  
+*nPos*<br/>
 Die Position in der Datei, in dem das Entsperren begonnen werden soll.
 
-*nCount*  
+*nCount*<br/>
 Die Länge des Bytebereichs entsperrt werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -421,7 +421,7 @@ Aufrufe [CAtlFile::UnlockRange](../../atl/reference/catlfile-class.md#unlockrang
 Rufen Sie diese Methode zum Schreiben von Daten in die temporäre Datei, die an der durch den Dateizeiger angegebenen Position ab.
 
 ```
-HRESULT Write(  
+HRESULT Write(
     LPCVOID pBuffer,
     DWORD nBufSize,
     DWORD* pnBytesWritten = NULL) throw();
@@ -429,13 +429,13 @@ HRESULT Write(
 
 ### <a name="parameters"></a>Parameter
 
-*pBuffer*  
+*pBuffer*<br/>
 Der Puffer mit Daten, die in die Datei geschrieben werden.
 
-*nBufSize*  
+*nBufSize*<br/>
 Die Anzahl der Bytes, aus dem Puffer übertragen werden sollen.
 
-*pnBytesWritten*  
+*pnBytesWritten*<br/>
 Die Anzahl der geschriebenen Bytes.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -452,5 +452,5 @@ Siehe das Beispiel für [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfil
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)   
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
 [CAtlFile-Klasse](../../atl/reference/catlfile-class.md)

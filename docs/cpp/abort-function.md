@@ -14,16 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e5679ce718c564ee40fb07b676756ef79344a99
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: d6e0b7dc49fbc53eb5e079657d98380d10bedf4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403621"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036487"
 ---
 # <a name="abort-function"></a>abort-Funktion
 
 Die **Abbrechen** -Funktion, auch in der standardincludedatei deklariert \<stdlib.h >, beendet ein C++-Programm. Der Unterschied zwischen `exit` und **Abbrechen** ist, die `exit` ermöglicht die Verarbeitung der C++-Laufzeit-Beendigung durchzuführen (globale Objekt Destruktoren aufgerufen werden), während **Abbrechen** das Programm beendet sofort. Weitere Informationen finden Sie unter [Abbrechen](../c-runtime-library/reference/abort.md) in die *Run-Time Library Reference*.
 
 ## <a name="see-also"></a>Siehe auch
+
 [Programmbeendigung](../cpp/program-termination.md)

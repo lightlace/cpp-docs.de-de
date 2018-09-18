@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220a02fca7a8de67d1f35743fa9f56e8499c88e0
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: d3be0a32de4e0e5b57471722ffa2cf8fcea5fd6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690045"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027855"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy-Struktur
 Eine Abstraktion für einen Thread der Ausführung. Abhängig von dem von Ihnen erstellten `SchedulerType`-Richtlinienschlüssel des Planers, gewährt der Ressourcen-Manager eine Threadproxy, der entweder von einem regulären Win32-Thread oder einem im Benutzermodus planbaren (UMS) Thread unterstützt wird. UMS-Threads werden auf 64-Bit-Betriebssystemen mit Version Windows 7 und höher unterstützt.  
@@ -77,8 +77,8 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `switchState`  
- Gibt den Zustand des Threadproxys an, der den Wechsel ausführt. Der Parameter ist vom Typ `SwitchingProxyState`.  
+*switchState*<br/>
+Gibt den Zustand des Threadproxys an, der den Wechsel ausführt. Der Parameter ist vom Typ `SwitchingProxyState`.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie `SwitchOut`, wenn Sie aus irgendeinem Grund die Zuordnung eines Kontexts zu einem virtuellen Prozessorstamm aufheben müssen, in dem dieser ausgeführt wird. Je nachdem, welchen Wert Sie an den `switchState`-Parameter übergeben, und abhängig von dessen Ausführung auf einem virtuellen Prozessorstamm, wird der Aufruf entweder sofort zurückgegeben oder der dem Kontext zugeordnete Threadproxy wird blockiert. Es ist nicht zulässig, `SwitchOut` aufzurufen, wenn der Parameter auf `Idle` festgelegt ist. Dies führt zu einer [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme.  
@@ -103,11 +103,11 @@ virtual void SwitchTo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pContext`  
- Der Ausführungskontext kooperativ gewechselt werden soll.  
+*"pContext"*<br/>
+Der Ausführungskontext kooperativ gewechselt werden soll.  
   
- `switchState`  
- Gibt den Zustand des Threadproxys an, der den Wechsel ausführt. Der Parameter ist vom Typ `SwitchingProxyState`.  
+*switchState*<br/>
+Gibt den Zustand des Threadproxys an, der den Wechsel ausführt. Der Parameter ist vom Typ `SwitchingProxyState`.  
   
 ### <a name="remarks"></a>Hinweise  
  Mit dieser Methode können Sie aus einem Ausführungskontext zur anderen wechseln, aus der [IExecutionContext:: Dispatch](iexecutioncontext-structure.md#dispatch) -Methode der ersten Ausführungskontext. Die Methode ordnet den Ausführungskontext `pContext` mit einem Threadproxy, wenn es nicht bereits einem zugeordnet ist. Der Besitz des aktuellen Threadproxys richtet sich nach den Wert, der Sie, für angeben die `switchState` Argument.  

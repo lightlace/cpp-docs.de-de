@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2770 generiert | Microsoft Docs
+title: Compilerfehler C2770 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c54ae3c559d0a523bc25831fa71e37531295489
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b206f7667855e61bfb3fe5e53cdd82444597162
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233579"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027010"
 ---
-# <a name="compiler-error-c2770"></a>Compiler-Fehler C2770 generiert
-Ungültige explizite Template_or_generic-Argumente für 'Vorlage'  
-  
- Funktionsvorlagen mit expliziten Vorlage oder die generische Argumente Verzeichnisdiensts unzulässige Funktionstypen.  
-  
- Im folgende Beispiel wird C2770 generiert:  
-  
-```  
-// C2770.cpp  
-#include <stdio.h>  
-template <class T>  
-int f(typename T::B*);   // expects type with member B  
-  
-struct Err {};  
-  
-int main() {  
-   f<int>(0);   // C2770 int has no B  
-   // try the following line instead  
-   f<OK>(0);  
-}  
+# <a name="compiler-error-c2770"></a>Compilerfehler C2770
+
+Ungültige explizite Template_or_generic-Argumente für "Template"
+
+Funktionsvorlagen mit expliziten oder generischen Argumente führte zu unzulässigen Funktionstypen.
+
+Im folgende Beispiel wird die C2770 generiert:
+
+```
+// C2770.cpp
+#include <stdio.h>
+template <class T>
+int f(typename T::B*);   // expects type with member B
+
+struct Err {};
+
+int main() {
+   f<int>(0);   // C2770 int has no B
+   // try the following line instead
+   f<OK>(0);
+}
 ```

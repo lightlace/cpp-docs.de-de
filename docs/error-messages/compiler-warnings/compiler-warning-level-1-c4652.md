@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4652 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4652 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a584e521e6fc1aeeaba94c5f74597d86bee16707
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09299c821410a476ccff7f788206af050e6a865a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285641"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026594"
 ---
 # <a name="compiler-warning-level-1-c4652"></a>Compilerwarnung (Stufe 1) C4652
-die Compileroption 'Option' inkonsistent mit der vorkompilierten Headerdatei; aktuelle Befehlszeilenoption überschreibt, die in der vorkompilierten Headerdatei definiert  
-  
- Die angegebene Befehlszeilenoption beinhalteten aus, die bei der Erstellung der vorkompilierten Headerdatei (.pch) zugewiesen. In der aktuellen Befehlszeile angegebene Option wurde verwendet.  
-  
- Diese Warnung kann vermieden werden, durch den vorkompilierten Header mit der angegebenen Befehlszeilenoption wird erneut generiert.
+
+die Compileroption "Option" inkonsistent mit der vorkompilierten Headerdatei; aktuelle Befehlszeilenoption überschreibt, die in der vorkompilierten Headerdatei definiert
+
+Die angegebene Befehlszeilenoption Compilerversionen aus, die ausgegeben, wenn der vorkompilierten Headerdatei (.pch) erstellt wurde. Die in der aktuellen Befehlszeile angegebene Option wurde verwendet.
+
+Diese Warnung kann vermieden werden, vom erneuten Generieren des vorkompilierten Headers mit der angegebenen Befehlszeilenoption.

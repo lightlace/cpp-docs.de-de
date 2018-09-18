@@ -1,5 +1,5 @@
 ---
-title: Projektbuildfehler prj0033 | Microsoft Docs
+title: Projektbuildfehler prj0033 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2722bc53fe267d3327f265578435cb672c58d3f4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c70bd942123c48866c3353443b478de4953668de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317059"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036071"
 ---
 # <a name="project-build-error-prj0033"></a>Projektbuildfehler PRJ0033
-Die 'Zusätzliche Abhängigkeiten'-Eigenschaft für den benutzerdefinierten Build Schritt "Macro_expansion" für die Datei "File" enthalten "Makro" das ausgewertet wird.  
-  
- Ein benutzerdefinierten Buildschritt für eine Datei enthielt einen Fehler in seiner zusätzlichen Abhängigkeit wahrscheinliche Ursache: ein Makro Auswertung Problem. Dieser Fehler kann auch dies bedeuten, dass der Pfad weist ein ungültiges Format ist, enthält Zeichen oder eine Kombination von Zeichen, die in einem Dateipfad unzulässig sind.  
-  
- Um diesen Fehler zu beheben, korrigieren Sie das Makro oder die Pfadangabe. Der ausgewertete Pfad ist ein absoluter Pfad vom Projektverzeichnis.
+
+Die 'Additional Dependencies'-Eigenschaft für den benutzerdefinierten Build Schritt für die Datei "Datei" enthalten "Makro" das ausgewertet wird zu "Macro_expansion".
+
+Ein benutzerdefinierten Buildschritt auf eine Datei enthielt einen Fehler in seiner zusätzliche Abhängigkeit wahrscheinlich aufgrund eines Problems der Makro-Evaluierung. Dass der Pfad enthält Zeichen oder eine Kombination von Zeichen, die in einem Dateipfad unzulässig sind falsch formatiert wurde, wird von dieser Fehler auch bedeuten.
+
+Um diesen Fehler zu beheben, korrigieren Sie das Makro oder die Pfadangabe. Der ausgewertete Pfad ist ein absoluter Pfad vom Projektverzeichnis.

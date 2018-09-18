@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2200 | Microsoft Docs
+title: Compilerfehler C2200 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82d9307efba9dcc6ebfef94b770a79b135515e12
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ecb7ac03ea6450b62d55bf2a6351eb994715e3c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165830"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029376"
 ---
 # <a name="compiler-error-c2200"></a>Compilerfehler C2200
-"function": Funktion wurde bereits definiert.  
-  
- Ein `alloc_text` -Pragma verwendet einen bereits definierten Funktionsnamen.
+
+"function": Funktion wurde bereits definiert.
+
+Ein `alloc_text` -Pragma verwendet einen bereits definierten Funktionsnamen.

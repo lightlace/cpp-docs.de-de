@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3914 | Microsoft Docs
+title: Compilerfehler C3914 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3818c54f3720bdff92280e04a4750ed1b4f238c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bb10652a6328bb8ddcc3a8e62755a960a7fc850
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270699"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029415"
 ---
 # <a name="compiler-error-c3914"></a>Compilerfehler C3914
-eine Standardeigenschaft kann nicht statisch sein.  
-  
-Eine Standardeigenschaft wurde falsch deklariert.  Weitere Informationen finden Sie unter [wie: Verwenden von Eigenschaften in C + c++ / CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).  
-  
-## <a name="example"></a>Beispiel  
-Im folgende Beispiel wird C3914 generiert und gezeigt, wie sie diesen Fehler beheben.  
-  
-```  
-// C3914.cpp  
-// compile with: /clr /c  
-ref struct X {  
-   static property int default[int] {   // C3914  
-   // try the following line instead  
-   // property int default[int] {  
-      int get(int) { return 0; }  
-      void set(int, int) {}  
-   }  
-};  
+
+eine Standardeigenschaft kann nicht statisch sein.
+
+Eine Default-Eigenschaft wurde falsch deklariert.  Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden von Eigenschaften in C++ / CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C3914 generiert und gezeigt, wie Sie diesen Fehler beheben.
+
+```
+// C3914.cpp
+// compile with: /clr /c
+ref struct X {
+   static property int default[int] {   // C3914
+   // try the following line instead
+   // property int default[int] {
+      int get(int) { return 0; }
+      void set(int, int) {}
+   }
+};
 ```

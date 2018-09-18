@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2379 | Microsoft Docs
+title: Compilerfehler C2379 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1016bedfa9df0e9dfacb56734ee60397108d046
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec340a5a48705eb91bf5bf72ec20ad382f4b262c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198075"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032444"
 ---
 # <a name="compiler-error-c2379"></a>Compilerfehler C2379
-Anzahl der formalen Parameter hat einen anderen Typ heraufgestuft  
-  
- Der Typ des angegebenen Parameters ist nicht kompatibel ist, über die Standard-Erweiterungen, mit dem Typ in einer früheren Deklaration. Dies ist ein Fehler in ANSI C (["/ Za"](../../build/reference/za-ze-disable-language-extensions.md)) und eine Warnung mit Microsoft-Erweiterungen (**"/ Ze"**).  
-  
- Im folgende Beispiel wird C2379 generiert:  
-  
-```  
-// C2379.c  
-// compile with: /Za  
-void func();  
-void func(char);   // C2379, char promotes to int  
+
+Anzahl der formalen Parameter hat einen anderen Typ, wenn heraufgestuft
+
+Der Typ des angegebenen Parameters ist nicht kompatibel ist, über Standard-Erweiterungen, mit dem Typ in einer früheren Deklaration. Dies ist ein Fehler in ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) und eine Warnung mit Microsoft-Erweiterungen (**/Ze**).
+
+Im folgende Beispiel wird die C2379 generiert:
+
+```
+// C2379.c
+// compile with: /Za
+void func();
+void func(char);   // C2379, char promotes to int
 ```

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2b90ef2eeca60a305cd8836e09dc81940392d2c
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e004c129fb5482ed1bb50d091c8e4e53becbf20b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539429"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059094"
 ---
 # <a name="reduction"></a>reduction
 Gibt an, dass eine oder mehrere Variablen, die für jeden Thread privat sind ein Reduzierungsvorgang am Ende des parallelen Bereichs werden.  
@@ -32,14 +32,13 @@ Gibt an, dass eine oder mehrere Variablen, die für jeden Thread privat sind ein
 reduction(operation:var)  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- wobei  
+### <a name="parameters"></a>Parameter
   
- `operation`  
- Der Operator für den Vorgang, mit der Variablen auszuführen (`var`) am Ende des parallelen Bereichs.  
+*Vorgang*<br/>
+Der Operator für den Vorgang, mit der Variablen auszuführen (`var`) am Ende des parallelen Bereichs.  
   
- `var`  
- Eine oder mehrere Variablen für den skalare Reduzierung ausgeführt. Wenn mehr als eine Variable angegeben ist, trennen Sie Namen durch ein Komma.  
+*var*<br/>
+Eine oder mehrere Variablen für den skalare Reduzierung ausgeführt. Wenn mehr als eine Variable angegeben ist, trennen Sie Namen durch ein Komma.  
   
 ## <a name="remarks"></a>Hinweise  
  `reduction` gilt für die folgenden Anweisungen:  

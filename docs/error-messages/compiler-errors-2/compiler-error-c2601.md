@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C2601 | Microsoft Docs
+title: Compilerfehler C2601 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49598223c3f68271065cc6212da19767020c51e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 522abe9c3cb4b9922a6b307055a3d85f40253793
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230824"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062955"
 ---
-# <a name="compiler-error-c2601"></a>Compilerfehler Fehler C2601
-"Function": Lokale Funktionsdefinitionen sind nicht zulässig  
-  
- Code versucht, eine Funktion innerhalb einer Funktion definieren.  
-  
- Oder es gibt möglicherweise eine zusätzliche geschweifte Klammer in Ihrem Quellcode vor dem Auftreten des Fehlers C2601.  
-  
- Im folgenden Beispiel wird C2601 generiert:  
-  
-```  
-// C2601.cpp  
-int main() {  
-   int i = 0;  
-  
-   void funcname(int j) {   // C2601  
-      j++;  
-   }  
-}  
+# <a name="compiler-error-c2601"></a>Compilerfehler C2601
+
+"Function": Lokale Funktionsdefinitionen sind unzulässig
+
+Code versucht, eine Funktion innerhalb einer Funktion zu definieren.
+
+Oder es gibt möglicherweise eine zusätzliche geschweifte Klammer in Ihrem Quellcode vor der Position des Fehlers C2601.
+
+Im folgende Beispiel wird die C2601 generiert:
+
+```
+// C2601.cpp
+int main() {
+   int i = 0;
+
+   void funcname(int j) {   // C2601
+      j++;
+   }
+}
 ```

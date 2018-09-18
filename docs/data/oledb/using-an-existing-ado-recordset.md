@@ -17,17 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: be948293947d4f007d151e4a89e0ff87fc897bbd
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d3a0b2d2da67e4db55dbf3a3f5b23c0c88797dd7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338937"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065340"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Verwenden eines vorhandenen ADO-Recordsets
+
 Verwenden Sie zum Kombinieren von OLE DB-Consumervorlagen und Active Data Objects (ADO), ADO, um einem Recordset (entsprechend in ein Rowset in den OLE DB-Consumervorlagen) zu öffnen. Wenn Sie ein Recordset haben, gehen Sie zur Verbindung mit einem OLE DB-Rowset:  
   
-1.  Rufen Sie `QueryInterface` für die `IRowset` und `IAccessor` Zeiger.  
+1. Rufen Sie `QueryInterface` für die `IRowset` und `IAccessor` Zeiger.  
   
     ```cpp  
     IRowset* lpRowset = NULL;  
@@ -39,7 +40,7 @@ Verwenden Sie zum Kombinieren von OLE DB-Consumervorlagen und Active Data Object
     > [!NOTE]
     >  *LpUnk* verweist auf die `IUnknown` Objekt von der ADO-Recordset.  
   
-2.  Fügen Sie den Accessor und das Rowset an ihre entsprechenden OLE DB-Consumer-Vorlagenklassen an.  
+1. Fügen Sie den Accessor und das Rowset an ihre entsprechenden OLE DB-Consumer-Vorlagenklassen an.  
   
     ```cpp  
     CRowset rs;  
@@ -51,4 +52,5 @@ Verwenden Sie zum Kombinieren von OLE DB-Consumervorlagen und Active Data Object
     ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden von Zugriffsmethoden](../../data/oledb/using-accessors.md)
+
+[Verwenden von Zugriffsmethoden](../../data/oledb/using-accessors.md)

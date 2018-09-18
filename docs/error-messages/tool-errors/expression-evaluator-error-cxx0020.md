@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0020 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0020 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d00bfda6aa058690aed1441f6eec84fe6552d76c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3846bb5fca3e3590069f6183dabdca7a7ca5453
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297679"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032459"
 ---
 # <a name="expression-evaluator-error-cxx0020"></a>Ausdrucksauswertungsfehler CXX0020
-Operandentypen, die für diesen Vorgang ungültigen  
-  
- Ein Operator wurde auf einen Ausdruck mit einem ungültigen Typ für diesen Operator angewendet.  
-  
- Beispielsweise ist es nicht zulässig, die Adresse der Registrierung oder der Index ein Array mit einem Gleitkomma-Ausdruck aufweisen.  
-  
- Dieser Fehler ist mit CAN0020 identisch.
+
+Operandentypen, die für diesen Vorgang ungültigen
+
+Ein Operator wurde auf einen Ausdruck mit einem ungültigen Typ für diesen Operator angewendet.
+
+Beispielsweise ist es nicht zulässig, die die Adresse eines Register oder den Index eines Arrays mit einem Gleitkomma-Ausdruck.
+
+Dieser Fehler ist mit CAN0020 identisch.

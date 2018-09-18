@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0048 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0048 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dca56b5114e8c0ec98d65e43edaca19a7e23663
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07877215a2b230a7ef2f75d83b71b7d03e4e7d34
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295947"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031850"
 ---
 # <a name="expression-evaluator-error-cxx0048"></a>Ausdrucksauswertungsfehler CXX0048
-Aufrufsequenz nicht unterstützt.  
-  
- Eine Funktion, die im Ausdruck angegeben, verwendet eine Aufrufsequenz, die von der C-ausdrucksauswertung nicht unterstützt. Diese Funktion kann nicht in einem Fenster Überwachungsausdruck aufgerufen werden.  
-  
- Dieser Fehler ist mit CAN0048 identisch.
+
+Aufrufsequenz, die nicht unterstützt
+
+Eine Funktion, die im Ausdruck angegeben, verwendet eine Aufrufsequenz, die von der C++-ausdrucksauswertung nicht unterstützt. Sie können nicht in eines überwachungsfensterausdrucks diese Funktion aufrufen.
+
+Dieser Fehler ist mit CAN0048 identisch.

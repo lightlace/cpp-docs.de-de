@@ -1,5 +1,5 @@
 ---
-title: uint_2-Klasse | Microsoft Docs
+title: uint_2-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03447d24f77b671b0a2cb171e84c266df1908fb3
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 375e9c8ce4c2060e41fbebc51f6512d293a15517
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686905"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059302"
 ---
 # <a name="uint2-class"></a>uint_2-Klasse
 Stellt einen kurzen Vektor von zwei ganze Zahlen ohne Vorzeichen dar.  
@@ -89,7 +89,7 @@ class uint_2;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|uint_2::--||  
+|uint_2:::||  
 |uint_2::operator%=||  
 |uint_2:: & =||  
 |uint_2::operator*=||  
@@ -182,17 +182,17 @@ explicit inline uint_2(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_V0`  
- Der Wert 0-Element initialisiert werden.  
+*_V0*<br/>
+Der Wert, der 0-Element zu initialisieren.  
   
- `_V1`  
- Der Wert 1 Element initialisiert werden.  
+*_V1*<br/>
+Der Wert 1 Element initialisiert werden.  
   
- `_V`  
- Der Wert für die Initialisierung.  
+*_V*<br/>
+Der Wert für die Initialisierung.  
   
- `_Other`  
- Das Objekt, das zum Initialisieren verwendet.  
+*_Sonstige*<br/>
+Das Objekt, das zum Initialisieren verwendet.  
   
 ##  <a name="uint_2__size"></a> Größe 
 

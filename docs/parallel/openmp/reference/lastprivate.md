@@ -1,5 +1,5 @@
 ---
-title: Lastprivate | Microsoft Docs
+title: Lastprivate | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aaf80e3061877c42154ab9ee5ccd30f47f17135
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c87dfc47f7f2554e75567a1de4ea9cb2e06eaa00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696226"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028193"
 ---
 # <a name="lastprivate"></a>lastprivate
-Gibt an, dass der umschließenden Kontext Version der Variablen festgelegt, wird die private Version der Thread ausgeführt, der letzten Iteration (for-Schleife-Konstrukt) oder der letzte Abschnitt (#pragma Abschnitte wird) gleich.  
+Gibt an, dass der umschließenden Kontext Version der Variablen ist gleich der privaten Version der Thread der letzten Iteration (for-Schleife-Konstrukt) oder der letzte Abschnitt (#pragma Abschnitte) ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,14 +32,13 @@ Gibt an, dass der umschließenden Kontext Version der Variablen festgelegt, wird
 lastprivate(var)  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- wobei  
+### <a name="parameters"></a>Parameter
   
- `var`  
- Die Variable, die die private Version der Thread ausgeführt, der letzten Iteration (for-Schleife-Konstrukt) oder der letzte Abschnitt (#pragma Abschnitte wird) gleich festgelegt ist.  
+*var*<br/>
+Die Variable, die gleich der privaten Version der Thread ausgeführt, der letzten Iteration (for-Schleife-Konstrukt) oder der letzte Abschnitt (#pragma Abschnitte wird) festgelegt ist.  
   
 ## <a name="remarks"></a>Hinweise  
- `lastprivate` gilt für die folgenden Direktiven:  
+ `lastprivate` gilt für die folgenden Anweisungen:  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   

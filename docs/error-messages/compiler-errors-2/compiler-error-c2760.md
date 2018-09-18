@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2760 generiert | Microsoft Docs
+title: Compilerfehler C2760 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beee34b7dfa31365e9bdf79c843cca501a930e02
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ae920b9bf0d6d8a743bd9defac883304e80c117
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229835"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026087"
 ---
-# <a name="compiler-error-c2760"></a>Compiler-Fehler C2760 generiert
-Syntaxfehler: erwartet "name1" nicht "name2"  
-  
- Ein Typumwandlungsoperator ist mit einem ungültigen Operator verwendet.  
-  
- Im folgende Beispiel wird C2760 generiert:  
-  
-```  
-// C2760.cpp  
-class B {};  
-class D : public B {};  
-  
-void f(B* pb) {  
-    D* pd1 = static_cast<D*>(pb);  
-    D* pd2 = static_cast<D*>=(pb);  // C2760  
-    D* pd3 = static_cast<D*=(pb);   // C2760  
-}  
+# <a name="compiler-error-c2760"></a>Compilerfehler C2760
+
+Syntaxfehler: erwartet 'name1' nicht 'name2'
+
+Ein Umwandlungsoperator wird mit einem ungültigen Operator verwendet.
+
+Im folgende Beispiel wird die C2760 generiert:
+
+```
+// C2760.cpp
+class B {};
+class D : public B {};
+
+void f(B* pb) {
+    D* pd1 = static_cast<D*>(pb);
+    D* pd2 = static_cast<D*>=(pb);  // C2760
+    D* pd3 = static_cast<D*=(pb);   // C2760
+}
 ```

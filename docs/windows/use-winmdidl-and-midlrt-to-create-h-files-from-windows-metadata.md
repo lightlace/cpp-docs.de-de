@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41859ae16ecd7f4c3261d644ce37d86fe416ec94
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dcc942bc69ebb37a7aba59e722b1a4cebbbab3ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589641"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071359"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Gewusst wie: Verwenden von winmdidl.exe und midlrt.exe zum Erstellen von .h-Dateien aus Windows-Metadaten
 
@@ -42,24 +42,25 @@ Standardmäßig in [Windows 8.1, winmdidl.exe und midlrt.exe befinden sich in C:
 Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:file] [/utf8] Winmdfile
 ```
 
-`/nologo`  
+**/nologo**<br/>
 Verhindert die Anzeige der winmdidl-Copyrightmeldung und -Versionsnummer auf der Konsole.
 
-`/supressversioncheck`  
+**/supressversioncheck**<br/>
 Nicht verwendet.
 
-`/time`  
+**/ Uhrzeit**<br/>
 Zeigt die gesamte Ausführungszeit in der Konsolenausgabe an.
 
-/ OutDir:\<Dir > Gibt ein Ausgabeverzeichnis an. Wenn der Pfad Leerzeichen enthält, verwenden Sie Anführungszeichen. Das standardausgabeverzeichnis ist  *\<Laufwerk >*: \Users\\*\<Benutzername >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12.0\\.
+**/ OutDir:**<em>Dir</em><br/>
+Gibt ein Ausgabeverzeichnis an. Wenn der Pfad Leerzeichen enthält, verwenden Sie Anführungszeichen. Das standardausgabeverzeichnis ist  *\<Laufwerk >*: \Users\\*\<Benutzername >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12.0\\.
 
-`/banner:<file>`  
+**/ banner:**<em>Datei</em><br/>
 Gibt eine Datei an, die benutzerdefinierten Text enthält, der am Anfang der generierten IDL-Datei der standardmäßigen Copyrightmeldung und winmdidl-Versionsnummer vorangestellt wird. Wenn der Pfad Leerzeichen enthält, verwenden Sie Anführungszeichen.
 
-`/utf8`  
+**/utf8**<br/>
 Bewirkt, dass die Datei als UTF-8 formatiert wird.
 
-`Winmdfile`  
+*Winmdfile*<br/>
 Der Dateiname der zu analysierenden WINMD-Datei. Wenn der Pfad Leerzeichen enthält, verwenden Sie Anführungszeichen.
 
 ## <a name="midlrt-command-line-arguments"></a>Midlrt-Befehlszeilenargumente

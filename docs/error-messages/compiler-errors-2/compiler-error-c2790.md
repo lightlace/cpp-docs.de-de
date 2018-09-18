@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2790 generiert | Microsoft Docs
+title: Compilerfehler C2790 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11f1c90fed93666fad7513e2b4186a5baa2aa406
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc2c6b238fab7e42c0754e613b62756a86a5bb31
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232816"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069572"
 ---
-# <a name="compiler-error-c2790"></a>Compiler-Fehler C2790 generiert
-"Superuser": Dieses Schlüsselwort kann nur innerhalb eines Texts der Klassenmemberfunktion verwendet werden  
-  
- Diese Fehlermeldung wird angezeigt, wenn der Benutzer versucht, verwendet das Schlüsselwort [super](../../cpp/super.md) außerhalb des Kontexts einer Memberfunktion.  
-  
- Im folgende Beispiel wird C2790 generiert:  
-  
-```  
-// C2790.cpp  
-void f() {  
-   __super::g();   // C2790  
-}  
+# <a name="compiler-error-c2790"></a>Compilerfehler C2790
+
+"super": Dieses Schlüsselwort kann nur innerhalb des Texts der Klassenmemberfunktion verwendet werden
+
+Diese Fehlermeldung wird angezeigt, wenn der Benutzer versucht, verwendet das Schlüsselwort [super](../../cpp/super.md) außerhalb des Kontexts einer Memberfunktion.
+
+Im folgende Beispiel wird die C2790 generiert:
+
+```
+// C2790.cpp
+void f() {
+   __super::g();   // C2790
+}
 ```

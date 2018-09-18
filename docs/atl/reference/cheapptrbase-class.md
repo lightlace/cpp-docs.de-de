@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 849e7ced8889cb46195946cca68243c37e1299a2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f2a6ab9e03a44f48acca9b949193ceec85eb3ef6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760122"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063111"
 ---
 # <a name="cheapptrbase-class"></a>CHeapPtrBase-Klasse
 
@@ -40,16 +40,16 @@ Diese Klasse bildet die Grundlage für mehrere Klassen von smart-Heap-Zeiger.
 ## <a name="syntax"></a>Syntax
 
 ```
-template <class T, class Allocator = CCRTAllocator>  
+template <class T, class Allocator = CCRTAllocator>
 class CHeapPtrBase
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Der Objekttyp, auf dem Heap gespeichert werden.
 
-*Zuweisung*  
+*Zuweisung*<br/>
 Die Speicher-Allocation-Klasse verwenden. Standardmäßig werden die CRT-Routinen zum Zuordnen und Freigeben von Arbeitsspeicher verwendet.
 
 ## <a name="members"></a>Member
@@ -102,7 +102,7 @@ bool AllocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*nBytes*  
+*nBytes*<br/>
 Die Anzahl der Bytes an Arbeitsspeicher zugewiesen werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -123,7 +123,7 @@ void Attach(T* pData) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*pData*  
+*pData*<br/>
 Die `CHeapPtrBase` Objekt übernimmt dann den Besitz des this-Zeigers.
 
 ### <a name="remarks"></a>Hinweise
@@ -216,7 +216,7 @@ Verwenden Sie diesen Operator zum Aufrufen einer Methode in einer Klasse verweis
 
 Der Cast-Operator.
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -234,7 +234,7 @@ bool ReallocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*nBytes*  
+*nBytes*<br/>
 Die neue Menge von Arbeitsspeicher zugeordnet werden soll, in Bytes.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -243,6 +243,6 @@ Gibt true zurück, wenn der Speicher erfolgreich belegt, "false" andernfalls.
 
 ## <a name="see-also"></a>Siehe auch
 
-[CHeapPtr-Klasse](../../atl/reference/cheapptr-class.md)   
-[CComHeapPtr-Klasse](../../atl/reference/ccomheapptr-class.md)   
+[CHeapPtr-Klasse](../../atl/reference/cheapptr-class.md)<br/>
+[CComHeapPtr-Klasse](../../atl/reference/ccomheapptr-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

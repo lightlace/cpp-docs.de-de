@@ -17,17 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e1d6d3277f27c20f7b1c002590fd26e1e2f08eb7
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 3602711a880bbfe97c2fe357982bb60a55299044
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340029"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035538"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Überschreiben einer dynamischen Zugriffsmethode
+
 Bei Verwendung eine dynamische Zugriffsmethode wie z. B. `CDynamicAccessor`, den Befehl `Open` Methode erstellt einen Accessor, automatisch, basierend auf die Spalteninformationen des geöffneten Rowsets. Sie können die dynamischen Zugriffsmethode aus, um zu steuern, wie genau die Spalten gebunden sind, überschreiben.  
   
- Um die dynamischen Zugriffsmethode überschreiben möchten, übergeben **"false"** als letzten Parameter für die `CCommand::Open` Methode. Dies verhindert, dass `Open` aus einen Accessor automatisch erstellt. Sie können dann aufrufen `GetColumnInfo` , und rufen Sie `AddBindEntry` für jede Spalte, die Sie binden möchten. Der folgende Code zeigt, wie es geht:  
+Um die dynamischen Zugriffsmethode überschreiben möchten, übergeben **"false"** als letzten Parameter für die `CCommand::Open` Methode. Dies verhindert, dass `Open` aus einen Accessor automatisch erstellt. Sie können dann aufrufen `GetColumnInfo` , und rufen Sie `AddBindEntry` für jede Spalte, die Sie binden möchten. Der folgende Code zeigt, wie es geht:  
   
 ```cpp  
 USES_CONVERSION;  
@@ -80,4 +81,5 @@ while (product.MoveNext() == S_OK)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden von Zugriffsmethoden](../../data/oledb/using-accessors.md)
+
+[Verwenden von Zugriffsmethoden](../../data/oledb/using-accessors.md)

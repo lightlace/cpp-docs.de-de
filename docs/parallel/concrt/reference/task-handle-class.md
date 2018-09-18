@@ -1,5 +1,5 @@
 ---
-title: Task_handle-Klasse | Microsoft Docs
+title: Task_handle-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fa72ed19a691015214fe263033e07f8d6a74c34
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f93bd91453b6edc27e9e68413e1944b258a91757
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688205"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059744"
 ---
 # <a name="taskhandle-class"></a>task_handle-Klasse
 Die `task_handle`-Klasse stellt eine einzelne parallele Arbeitsaufgabe dar. Sie kapselt die Anweisungen und die zum Ausführen eines Teils der Arbeit erforderlichen Daten.  
@@ -38,8 +38,8 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `_Function`  
- Der Typ des Funktionsobjekts ab, das aufgerufen wird, um die Arbeit, dargestellt durch Ausführen der `task_handle` Objekt.  
+*_Function*<br/>
+Der Typ des Funktionsobjekts, die aufgerufen werden, um die Arbeit, dargestellt durch Ausführen der `task_handle` Objekt.  
   
 ## <a name="members"></a>Member  
   
@@ -54,16 +54,16 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[operator()](#task_handle__operator_call)|Der Funktionsaufrufoperator, den von der Laufzeit, zum Ausführen der Aktionen des Task-Handle aufgerufen.|  
+|[operator()](#task_handle__operator_call)|Der Funktionsaufrufoperator, den von der Laufzeit aufgerufen, um die Arbeit des Aufgabenhandles auszuführen.|  
   
 ## <a name="remarks"></a>Hinweise  
- `task_handle` Objekte können verwendet werden, zusammen mit einem `structured_task_group` oder ein allgemeinerer `task_group` -Objekt, um die Arbeit in Parallele Aufgaben aufzuteilen. Weitere Informationen finden Sie unter [Aufgabenparallelität](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
+ `task_handle` Objekte können verwendet werden, in Verbindung mit einem `structured_task_group` oder eine allgemeinere `task_group` Objekt, das Arbeit in Parallele Aufgaben aufzuteilen. Weitere Informationen finden Sie unter [Aufgabenparallelität](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
- Beachten Sie, dass der Ersteller des eine `task_handle` -Objekt ist verantwortlich für das Verwalten der Lebensdauer des erstellten `task_handle` Objekt, bis er von der Concurrency Runtime nicht mehr erforderlich ist. In der Regel bedeutet dies, dass die `task_handle` Objekt nicht zerstört werden darf, bis entweder der `wait` oder `run_and_wait` Methode der `task_group` oder `structured_task_group` , die es in die Warteschlange eingereiht wird aufgerufen wurde.  
+ Beachten Sie, dass der Ersteller einer `task_handle` Objekt ist verantwortlich für die Verwaltung der Lebensdauer des erstellten `task_handle` Objekt, bis sie von der Concurrency Runtime nicht mehr benötigt wird. In der Regel bedeutet dies, dass die `task_handle` -Objekt nicht zerstört werden darf, bis entweder der `wait` oder `run_and_wait` Methode der `task_group` oder `structured_task_group` , die sie in der Warteschlange befindet aufgerufen wurde.  
   
- `task_handle` Objekte werden in der Regel in Verbindung mit C++-Lambda-Ausdrücke verwendet. Da Sie nicht, dass den tatsächliche Typ des Lambda-Ausdrucks wissen, der [Make_task](concurrency-namespace-functions.md#make_task) Funktion dient gewöhnlich zum Erstellen einer `task_handle` Objekt.  
+ `task_handle` Objekte werden in der Regel in Verbindung mit C++-Lambda-Ausdrücken verwendet. Da Sie nicht, dass den tatsächliche Typ des Lambda-Ausdrucks wissen, der [Make_task](concurrency-namespace-functions.md#make_task) Funktion wird in der Regel zum Erstellen einer `task_handle` Objekt.  
   
- Die Common Language Runtime erstellt eine Kopie der Arbeitsfunktion, die Sie zum Übergeben einer `task_handle` Objekt. Aus diesem Grund alle Zustandsänderungen, die in einer Funktion auftreten-Objekt, wenn Sie zum Übergeben einer `task_handle` Objekt wird nicht in Ihrer Kopie des Funktionsobjekts angezeigt.  
+ Die Common Language Runtime erstellt eine Kopie der Arbeitsfunktion, die Sie zum Übergeben einer `task_handle` Objekt. Aus diesem Grund Objekt von Zustandsänderungen, die in einer Funktion auftreten, dass Sie zum Übergeben einer `task_handle` Objekt wird nicht angezeigt, in der Kopie des Funktionsobjekts.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `task_handle`  
@@ -75,7 +75,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
 ##  <a name="task_handle__operator_call"></a> Operator() 
 
- Der Funktionsaufrufoperator, den von der Laufzeit, zum Ausführen der Aktionen des Task-Handle aufgerufen.  
+ Der Funktionsaufrufoperator, den von der Laufzeit aufgerufen, um die Arbeit des Aufgabenhandles auszuführen.  
   
 ```  
 void operator()() const;
@@ -92,11 +92,11 @@ task_handle(const _Function& _Func);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Func`  
- Die Funktion, die aufgerufen wird, um die Arbeit, dargestellt durch Ausführen der `task_handle` Objekt. Dies ist möglicherweise eine Lambda-Funktion, ein Zeiger auf eine Funktion oder ein anderes Objekt, das eine Version von den Funktionsaufrufoperator mit der Signatur unterstützt `void operator()()`.  
+*_Func*<br/>
+Die Funktion, die aufgerufen werden, um die Arbeit, dargestellt durch Ausführen der `task_handle` Objekt. Dies ist möglicherweise eine Lambda-Funktion, ein Zeiger auf eine Funktion oder ein anderes Objekt, das eine Version von den Funktionsaufrufoperator mit der Signatur unterstützt `void operator()()`.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Common Language Runtime erstellt eine Kopie der Arbeitsfunktion, die Sie an den Konstruktor übergeben. Aus diesem Grund alle Zustandsänderungen, die in einer Funktion auftreten-Objekt, wenn Sie zum Übergeben einer `task_handle` Objekt wird nicht in Ihrer Kopie des Funktionsobjekts angezeigt.  
+ Die Laufzeit erstellt eine Kopie der Arbeitsfunktion, die Sie an den Konstruktor übergeben. Aus diesem Grund Objekt von Zustandsänderungen, die in einer Funktion auftreten, dass Sie zum Übergeben einer `task_handle` Objekt wird nicht angezeigt, in der Kopie des Funktionsobjekts.  
   
 ##  <a name="dtor"></a> ~ Task_handle 
 

@@ -1083,21 +1083,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 25a68bb459122ea83d9be2491cb5fadaaf8a00c0
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 1496fa844106b78e2a5dc735fad0cc33923aea53
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571590"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035759"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Schemarowset-Klassen und Typedef-Klassen
+
 Ein Schema ist eine Auflistung von Datenbankobjekten, die Besitzer oder von einem bestimmten Benutzer erstellt wurden. Ein Katalog kann eine oder mehrere Schemas enthalten, aber es muss ein Schema namens INFORMATION_SCHEMA, die die Ansichten und Domänen des informationsschemas enthält immer enthalten. Informationen zum Datenbankschema in OLE DB mithilfe vordefinierter Schemarowsets abgerufen, und enthält Typen, Tabellen, Spalten, Indizes, Sichten, Assertionen und Einschränkungen, Statistiken, Zeichensätze, Sortierungen und Domänen.  
   
- Schemarowsets sind vordefinierte Rowsets, die Metadaten darstellen. Schemarowsets werden in der Regel in der dynamischen Programmierung verwendet, in denen die Struktur der Datenbank nicht zum Zeitpunkt der Kompilierung bekannt. Sie können diese Schemarowsets verwenden, zum Abrufen von Informationen zu einer Datenbank zur Laufzeit.  
+Schemarowsets sind vordefinierte Rowsets, die Metadaten darstellen. Schemarowsets werden in der Regel in der dynamischen Programmierung verwendet, in denen die Struktur der Datenbank nicht zum Zeitpunkt der Kompilierung bekannt. Sie können diese Schemarowsets verwenden, zum Abrufen von Informationen zu einer Datenbank zur Laufzeit.  
   
- Verwenden Sie die Typedef-Klassen, um die Schemarowsets zu instanziieren. Die entsprechenden Typedef und Schemarowset-Klassen sind unten aufgeführt. Rufen Sie [CRestrictions:: Open](../../data/oledb/crestrictions-open.md) nach der Erstellung einer Instanz des Schemarowsets. Diese Methode gibt ein Resultset basierend auf den Einschränkungen, die Sie angeben. Finden Sie unter [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) Informationen zur Einschränkungsspalten jedes Schemarowset zugeordnet.  
+Verwenden Sie die Typedef-Klassen, um die Schemarowsets zu instanziieren. Die entsprechenden Typedef und Schemarowset-Klassen sind unten aufgeführt. Rufen Sie [CRestrictions:: Open](../../data/oledb/crestrictions-open.md) nach der Erstellung einer Instanz des Schemarowsets. Diese Methode gibt ein Resultset basierend auf den Einschränkungen, die Sie angeben. Finden Sie unter [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) Informationen zur Einschränkungsspalten jedes Schemarowset zugeordnet.  
   
- Die folgende Tabelle zeigt die einzelnen OLE DB-Schemarowset und der entsprechenden OLE DB-Vorlagen-typedefklasse und Info-Klasse.  
+Die folgende Tabelle zeigt die einzelnen OLE DB-Schemarowset und der entsprechenden OLE DB-Vorlagen-typedefklasse und Info-Klasse.  
   
 |OLE DB-Schemarowset|-Typedefklasse|Info-Klasse|  
 |--------------------------|-------------------|----------------|  
@@ -1133,14 +1134,16 @@ Ein Schema ist eine Auflistung von Datenbankobjekten, die Besitzer oder von eine
 |[VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727\(v=vs.85\))|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|  
   
 ## <a name="assertion"></a> CAssertions, CAssertionInfo
+
 Die TypeDef-Klasse aufrufen `CAssertions` so implementieren Sie die Parameterklasse `CAssertionInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die im Katalog definierten Assertionen, die von einem bestimmten Benutzer gehören.  
+Diese Klasse gibt die im Katalog definierten Assertionen, die von einem bestimmten Benutzer gehören.  
   
- Die folgende Tabelle enthält die Klassendatenmember für `CAssertionInfo` und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [ASSERTIONS-Rowset](/previous-versions/windows/desktop/ms719776\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Klassendatenmember für `CAssertionInfo` und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [ASSERTIONS-Rowset](/previous-versions/windows/desktop/ms719776\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1152,14 +1155,16 @@ Die TypeDef-Klasse aufrufen `CAssertions` so implementieren Sie die Parameterkla
 |m_szDescription|DESCRIPTION|  
 
 ## <a name="catalog"></a> CCatalogs, CCatalogInfo
+
 Die TypeDef-Klasse aufrufen `CCatalogs` so implementieren Sie die Parameterklasse `CCatalogInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die physischen Attribute, die über das DBMS Katalogen zugeordnet sind.  
+Diese Klasse gibt die physischen Attribute, die über das DBMS Katalogen zugeordnet sind.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [Kataloge Rowset](/previous-versions/windows/desktop/ms721241\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [Kataloge Rowset](/previous-versions/windows/desktop/ms721241\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1167,14 +1172,16 @@ Die TypeDef-Klasse aufrufen `CCatalogs` so implementieren Sie die Parameterklass
 |m_szDescription|DESCRIPTION|  
 
 ## <a name="characterset"></a> CCharacterSets, CCharacterSetInfo
+
 Die TypeDef-Klasse aufrufen `CCharacterSets` so implementieren Sie die Parameterklasse `CCharacterSetInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die im Katalog definierten Zeichensätze, die für einen bestimmten Benutzer zugänglich sind.  
+Diese Klasse gibt die im Katalog definierten Zeichensätze, die für einen bestimmten Benutzer zugänglich sind.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [CHARACTER_SETS Rowset](/previous-versions/windows/desktop/ms722638\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [CHARACTER_SETS Rowset](/previous-versions/windows/desktop/ms722638\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1188,14 +1195,16 @@ Die TypeDef-Klasse aufrufen `CCharacterSets` so implementieren Sie die Parameter
 |m_szCollateName|DEFAULT_COLLATE_NAME|  
 
 ## <a name="checkconstraint"></a> CCheckConstraints, CCheckConstraintInfo
+
 Die TypeDef-Klasse aufrufen `CCheckConstraints` so implementieren Sie die Parameterklasse `CCheckConstraintInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die Check-Einschränkungen definiert, die im Katalog, die von einem bestimmten Benutzer gehören. Eine Check-Einschränkung gibt an, die Daten oder die Formate, die in einem oder mehreren Spalten in einer Tabelle zulässig sind.  
+Diese Klasse gibt die Check-Einschränkungen definiert, die im Katalog, die von einem bestimmten Benutzer gehören. Eine Check-Einschränkung gibt an, die Daten oder die Formate, die in einem oder mehreren Spalten in einer Tabelle zulässig sind.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [CHECK_CONSTRAINTS-Rowset](/previous-versions/windows/desktop/ms712845\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [CHECK_CONSTRAINTS-Rowset](/previous-versions/windows/desktop/ms712845\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1206,14 +1215,16 @@ Die TypeDef-Klasse aufrufen `CCheckConstraints` so implementieren Sie die Parame
 |m_szDescription|DESCRIPTION|  
 
 ## <a name="collation"></a> CCollations, CCollationInfo
+
 Die TypeDef-Klasse aufrufen `CCollations` so implementieren Sie die Parameterklasse `CCollationInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die, definierten Zeichensortierreihenfolgen im Katalog, die für einen bestimmten Benutzer zugänglich sind.  
+Diese Klasse gibt die, definierten Zeichensortierreihenfolgen im Katalog, die für einen bestimmten Benutzer zugänglich sind.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [SORTIERUNGEN Rowset](/previous-versions/windows/desktop/ms715783\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [SORTIERUNGEN Rowset](/previous-versions/windows/desktop/ms715783\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1226,14 +1237,16 @@ Die TypeDef-Klasse aufrufen `CCollations` so implementieren Sie die Parameterkla
 |m_szPadAttribute|PAD_ATTRIBUTE|  
 
 ## <a name="columndomainusage"></a> CColumnDomainUsage, CColumnDomainUsageInfo
+
 Die TypeDef-Klasse aufrufen `CColumnDomainUsage` so implementieren Sie die Parameterklasse `CColumnDomainUsageInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die Spalten, im Katalog definiert, die einer Domäne, die im Katalog definierten und Eigentümer ein angegebener Benutzer abhängig sind.  
+Diese Klasse gibt die Spalten, im Katalog definiert, die einer Domäne, die im Katalog definierten und Eigentümer ein angegebener Benutzer abhängig sind.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [COLUMN_DOMAIN_USAGE-Rowset](/previous-versions/windows/desktop/ms711240\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [COLUMN_DOMAIN_USAGE-Rowset](/previous-versions/windows/desktop/ms711240\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1248,14 +1261,16 @@ Die TypeDef-Klasse aufrufen `CColumnDomainUsage` so implementieren Sie die Param
 |m_nColumnPropID|COLUMN_PROPID|  
 
 ## <a name="columnprivilege"></a> CColumnPrivileges, CColumnPrivilegeInfo
+
 Die TypeDef-Klasse aufrufen `CColumnPrivileges` so implementieren Sie die Parameterklasse `CColumnPrivilegeInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt es sich um die Berechtigungen für Spalten von Tabellen, die im Katalog definiert, die verfügbar sind oder von einem bestimmten Benutzer gewährt werden.  
+Diese Klasse gibt es sich um die Berechtigungen für Spalten von Tabellen, die im Katalog definiert, die verfügbar sind oder von einem bestimmten Benutzer gewährt werden.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [COLUMN_PRIVILEGES-Rowset](/previous-versions/windows/desktop/ms715800\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [COLUMN_PRIVILEGES-Rowset](/previous-versions/windows/desktop/ms715800\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1271,14 +1286,16 @@ Die TypeDef-Klasse aufrufen `CColumnPrivileges` so implementieren Sie die Parame
 |m_bIsGrantable|IS_GRANTABLE|  
 
 ## <a name="columns"></a> CColumns, CColumnsInfo
+
 Die TypeDef-Klasse aufrufen `CColumns` so implementieren Sie die Parameterklasse `CColumnsInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die Spalten der Tabellen, die im Katalog definierten, die für einen bestimmten Benutzer zugänglich sind.  
+Diese Klasse gibt die Spalten der Tabellen, die im Katalog definierten, die für einen bestimmten Benutzer zugänglich sind.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [COLUMNS-Rowset](/previous-versions/windows/desktop/ms723052\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [COLUMNS-Rowset](/previous-versions/windows/desktop/ms723052\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1312,14 +1329,16 @@ Die TypeDef-Klasse aufrufen `CColumns` so implementieren Sie die Parameterklasse
 |m_szDescription|DESCRIPTION|  
   
 ## <a name="constraintcolumnusage"></a> CConstraintColumnUsage, CConstraintColumnUsageInfo
+
 Die TypeDef-Klasse aufrufen `CConstraintColumnUsage` so implementieren Sie die Parameterklasse `CConstraintColumnUsageInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die Spalten, die von referenziellen Einschränkungen, unique-Einschränkungen, Check-Einschränkungen und Assertionen verwendet, im Katalog definierten und Eigentümer ein angegebener Benutzer.  
+Diese Klasse gibt die Spalten, die von referenziellen Einschränkungen, unique-Einschränkungen, Check-Einschränkungen und Assertionen verwendet, im Katalog definierten und Eigentümer ein angegebener Benutzer.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [CONSTRAINT_COLUMN_USAGE-Rowset](/previous-versions/windows/desktop/ms724522\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [CONSTRAINT_COLUMN_USAGE-Rowset](/previous-versions/windows/desktop/ms724522\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1334,14 +1353,16 @@ Die TypeDef-Klasse aufrufen `CConstraintColumnUsage` so implementieren Sie die P
 |m_szConstraintName|CONSTRAINT_NAME|  
 
 ## <a name="constrainttableusage"></a> CConstraintTableUsage, CConstraintTableUsageInfo
+
 Die TypeDef-Klasse aufrufen `CConstraintTableUsage` so implementieren Sie die Parameterklasse `CConstraintTableUsageInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die Tabellen, die von referenziellen Einschränkungen, unique-Einschränkungen, Check-Einschränkungen und Assertionen verwendet, die im Katalog definierten und Eigentümer ein angegebener Benutzer.  
+Diese Klasse gibt die Tabellen, die von referenziellen Einschränkungen, unique-Einschränkungen, Check-Einschränkungen und Assertionen verwendet, die im Katalog definierten und Eigentümer ein angegebener Benutzer.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [CONSTRAINT_TABLE_USAGE-Rowset](/previous-versions/windows/desktop/ms724522\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [CONSTRAINT_TABLE_USAGE-Rowset](/previous-versions/windows/desktop/ms724522\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1353,14 +1374,16 @@ Die TypeDef-Klasse aufrufen `CConstraintTableUsage` so implementieren Sie die Pa
 |m_szConstraintName|CONSTRAINT_NAME|  
 
 ## <a name="foreignkeys"></a> CForeignKeys, CForeignKeysInfo
+
 Die TypeDef-Klasse aufrufen `CForeignKeys` so implementieren Sie die Parameterklasse `CForeignKeysInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die im Katalog von einem angegebenen Benutzer definierten Fremdschlüsselspalten an.  
+Diese Klasse gibt die im Katalog von einem angegebenen Benutzer definierten Fremdschlüsselspalten an.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [FOREIGN_KEYS-Rowsets](/previous-versions/windows/desktop/ms711276\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [FOREIGN_KEYS-Rowsets](/previous-versions/windows/desktop/ms711276\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1381,14 +1404,16 @@ Die TypeDef-Klasse aufrufen `CForeignKeys` so implementieren Sie die Parameterkl
 |m_szDeleteRule|DELETE_RULE|  
 
 ## <a name="index"></a> CIndexes, CIndexInfo
+
 Die TypeDef-Klasse aufrufen `CIndexes` so implementieren Sie die Parameterklasse `CIndexInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt, definierten Indizes im Katalog, die von einem bestimmten Benutzer gehören.  
+Diese Klasse gibt, definierten Indizes im Katalog, die von einem bestimmten Benutzer gehören.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [INDEXES-Rowset](/previous-versions/windows/desktop/ms709712\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [INDEXES-Rowset](/previous-versions/windows/desktop/ms709712\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1418,14 +1443,16 @@ Die TypeDef-Klasse aufrufen `CIndexes` so implementieren Sie die Parameterklasse
 |m_szFilterCondition|FILTER_CONDITION|  
   
 ## <a name="keycolumn"></a> KeyColumns, CKeyColumnInfo
+
 Die TypeDef-Klasse aufrufen `CKeyColumns` so implementieren Sie die Parameterklasse `CKeyColumnInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die Spalten, im Katalog definiert, die von einem bestimmten Benutzer als Schlüssel eingeschränkt werden.  
+Diese Klasse gibt die Spalten, im Katalog definiert, die von einem bestimmten Benutzer als Schlüssel eingeschränkt werden.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [KEY_COLUMN_USAGE-Rowset](/previous-versions/windows/desktop/ms712990\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [KEY_COLUMN_USAGE-Rowset](/previous-versions/windows/desktop/ms712990\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1441,14 +1468,16 @@ Die TypeDef-Klasse aufrufen `CKeyColumns` so implementieren Sie die Parameterkla
 |m_nOrdinalPosition|ORDINAL_POSITION|  
 
 ## <a name="primarykey"></a> CPrimaryKeys, CPrimaryKeyInfo
+
 Die TypeDef-Klasse aufrufen `CPrimaryKeys` so implementieren Sie die Parameterklasse `CPrimaryKeyInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die im Katalog von einem angegebenen Benutzer definierten Primärschlüsselspalten.  
+Diese Klasse gibt die im Katalog von einem angegebenen Benutzer definierten Primärschlüsselspalten.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [PRIMARY_KEYS-Rowset](/previous-versions/windows/desktop/ms714362\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [PRIMARY_KEYS-Rowset](/previous-versions/windows/desktop/ms714362\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1461,14 +1490,16 @@ Die TypeDef-Klasse aufrufen `CPrimaryKeys` so implementieren Sie die Parameterkl
 |m_nOrdinal|ORDINAL|  
 
 ## <a name="procedurecolumn"></a> CProcedureColumns, CProcedureColumnInfo
+
 Die TypeDef-Klasse aufrufen `CProcedureColumns` so implementieren Sie die Parameterklasse `CProcedureColumnInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt Informationen zu den Spalten von Rowsets, die von Prozeduren zurückgegeben.  
+Diese Klasse gibt Informationen zu den Spalten von Rowsets, die von Prozeduren zurückgegeben.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [PROCEDURE_COLUMNS-Rowset](/previous-versions/windows/desktop/ms723092\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [PROCEDURE_COLUMNS-Rowset](/previous-versions/windows/desktop/ms723092\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1490,14 +1521,16 @@ Die TypeDef-Klasse aufrufen `CProcedureColumns` so implementieren Sie die Parame
 |m_szDescription|DESCRIPTION|  
 
 ## <a name="procedureparam"></a> CProcedureParameters CProcedureParamInfo
+
 Die TypeDef-Klasse aufrufen `CProcedureParameters` so implementieren Sie die Parameterklasse `CProcedureParamInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt Informationen zu den Parametern und Rückgabecodes von Prozeduren zurück.  
+Diese Klasse gibt Informationen zu den Parametern und Rückgabecodes von Prozeduren zurück.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [PROCEDURE_PARAMETERS-Rowset](/previous-versions/windows/desktop/ms713623\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [PROCEDURE_PARAMETERS-Rowset](/previous-versions/windows/desktop/ms713623\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1518,14 +1551,16 @@ Die TypeDef-Klasse aufrufen `CProcedureParameters` so implementieren Sie die Par
 |m_szDescription|DESCRIPTION|  
 
 ## <a name="procedure"></a> CProcedures, CProcedureInfo
+
 Die TypeDef-Klasse aufrufen `CProcedures` so implementieren Sie die Parameterklasse `CProcedureInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die Prozeduren, im Katalog definiert, die von einem bestimmten Benutzer gehören.  
+Diese Klasse gibt die Prozeduren, im Katalog definiert, die von einem bestimmten Benutzer gehören.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [PROZEDUREN Rowset](/previous-versions/windows/desktop/ms724021\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [PROZEDUREN Rowset](/previous-versions/windows/desktop/ms724021\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1537,14 +1572,16 @@ Die TypeDef-Klasse aufrufen `CProcedures` so implementieren Sie die Parameterkla
 |m_szDescription|DESCRIPTION|  
 
 ## <a name="provider"></a> CProviderTypes, CProviderInfo
+
 Die TypeDef-Klasse aufrufen `CProviderTypes` so implementieren Sie die Parameterklasse `CProviderInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die vom Datenanbieter unterstützten (Basis-) Datentypen.  
+Diese Klasse gibt die vom Datenanbieter unterstützten (Basis-) Datentypen.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [PROVIDER_TYPES-Rowset](/previous-versions/windows/desktop/ms709785\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [PROVIDER_TYPES-Rowset](/previous-versions/windows/desktop/ms709785\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1570,14 +1607,16 @@ Die TypeDef-Klasse aufrufen `CProviderTypes` so implementieren Sie die Parameter
 |m_bBestMatch|BEST_MATCH|  
 
 ## <a name="referentialconstraint"></a> CReferentialConstraints, CReferentialConstraintInfo
+
 Die TypeDef-Klasse aufrufen `CReferentialConstraints` so implementieren Sie die Parameterklasse `CReferentialConstraintInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die referenziellen Einschränkungen, im Katalog definiert, die von einem bestimmten Benutzer gehören.  
+Diese Klasse gibt die referenziellen Einschränkungen, im Katalog definiert, die von einem bestimmten Benutzer gehören.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [REFERENTIAL_CONSTRAINTS-Rowset](/previous-versions/windows/desktop/ms719737\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [REFERENTIAL_CONSTRAINTS-Rowset](/previous-versions/windows/desktop/ms719737\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1593,14 +1632,16 @@ Die TypeDef-Klasse aufrufen `CReferentialConstraints` so implementieren Sie die 
 |m_szDescription|DESCRIPTION|  
 
 ## <a name="schemata"></a> CSchemata, CSchemataInfo
+
 Die TypeDef-Klasse aufrufen `CSchemata` so implementieren Sie die Parameterklasse `CSchemataInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die Schemas an, die von einem bestimmten Benutzer gehören.  
+Diese Klasse gibt die Schemas an, die von einem bestimmten Benutzer gehören.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [SCHEMAS Rowset](/previous-versions/windows/desktop/ms716887\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [SCHEMAS Rowset](/previous-versions/windows/desktop/ms716887\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1612,14 +1653,16 @@ Die TypeDef-Klasse aufrufen `CSchemata` so implementieren Sie die Parameterklass
 |m_szCharName|DEFAULT_CHARACTER_SET_NAME|  
 
 ## <a name="sqllanguage"></a> CSQLLanguages, CSQLLanguageInfo
+
 Die TypeDef-Klasse aufrufen `CSQLLanguages` so implementieren Sie die Parameterklasse `CSQLLanguageInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die Übereinstimmungsebenen, Optionen und Dialekte, die von der SQL-Implementierung Verarbeitung von Daten im Katalog definierten unterstützt werden.  
+Diese Klasse gibt die Übereinstimmungsebenen, Optionen und Dialekte, die von der SQL-Implementierung Verarbeitung von Daten im Katalog definierten unterstützt werden.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [SQL_LANGUAGES Rowset](/previous-versions/windows/desktop/ms714374\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [SQL_LANGUAGES Rowset](/previous-versions/windows/desktop/ms714374\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1632,14 +1675,16 @@ Die TypeDef-Klasse aufrufen `CSQLLanguages` so implementieren Sie die Parameterk
 |m_szProgrammingLanguage|SQL_LANGUAGE_PROGRAMMING_LANGUAGE|  
 
 ## <a name="statistic"></a> CStatistics, CStatisticInfo
+
 Die TypeDef-Klasse aufrufen `CStatistics` so implementieren Sie die Parameterklasse `CStatisticInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die Statistiken, im Katalog definiert, die von einem bestimmten Benutzer gehören.  
+Diese Klasse gibt die Statistiken, im Katalog definiert, die von einem bestimmten Benutzer gehören.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [Statistiken Rowset](/previous-versions/windows/desktop/ms715957\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [Statistiken Rowset](/previous-versions/windows/desktop/ms715957\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1649,14 +1694,16 @@ Die TypeDef-Klasse aufrufen `CStatistics` so implementieren Sie die Parameterkla
 |m_nCardinality|CARDINALITY|  
 
 ## <a name="tableconstraint"></a> CTableConstraints, CTableConstraintInfo
+
 Die TypeDef-Klasse aufrufen `CTableConstraints` so implementieren Sie die Parameterklasse `CTableConstraintInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die tabelleneinschränkungen definiert, die im Katalog, die von einem bestimmten Benutzer gehören.  
+Diese Klasse gibt die tabelleneinschränkungen definiert, die im Katalog, die von einem bestimmten Benutzer gehören.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [TABLE_CONSTRAINTS-Rowset](/previous-versions/windows/desktop/ms715921\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [TABLE_CONSTRAINTS-Rowset](/previous-versions/windows/desktop/ms715921\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1672,14 +1719,16 @@ Die TypeDef-Klasse aufrufen `CTableConstraints` so implementieren Sie die Parame
 |m_szDescription|DESCRIPTION|  
 
 ## <a name="tableprivilege"></a> CTablePrivileges, CTablePrivilegeInfo
+
 Die TypeDef-Klasse aufrufen `CTablePrivileges` so implementieren Sie die Parameterklasse `CTablePrivilegeInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die im Katalog definierten Tabellen, die für einen bestimmten Benutzer zugänglich sind.  
+Diese Klasse gibt die im Katalog definierten Tabellen, die für einen bestimmten Benutzer zugänglich sind.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [TABLE_PRIVILEGES-Rowset](/previous-versions/windows/desktop/ms725428\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [TABLE_PRIVILEGES-Rowset](/previous-versions/windows/desktop/ms725428\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1692,14 +1741,16 @@ Die TypeDef-Klasse aufrufen `CTablePrivileges` so implementieren Sie die Paramet
 |m_bIsGrantable|IS_GRANTABLE|  
 
 ## <a name="table"></a> CTables, CTableInfo
+
 Die TypeDef-Klasse aufrufen `CTables` so implementieren Sie die Parameterklasse `CTableInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt, die Berechtigungen für Tabellen, die im Katalog definiert, die für verfügbar sind oder von einem bestimmten Benutzer gewährt wird.  
+Diese Klasse gibt, die Berechtigungen für Tabellen, die im Katalog definiert, die für verfügbar sind oder von einem bestimmten Benutzer gewährt wird.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [TABLES-Rowset](/previous-versions/windows/desktop/ms716980\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [TABLES-Rowset](/previous-versions/windows/desktop/ms716980\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1711,14 +1762,16 @@ Die TypeDef-Klasse aufrufen `CTables` so implementieren Sie die Parameterklasse 
 |m_szDescription|DESCRIPTION|  
 
 ## <a name="translation"></a> CTranslations, CTranslationInfo
+
 Die TypeDef-Klasse aufrufen `CTranslations` so implementieren Sie die Parameterklasse `CTranslationInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die im Katalog definierten Zeichenübersetzungen, die für einen bestimmten Benutzer zugänglich sind.  
+Diese Klasse gibt die im Katalog definierten Zeichenübersetzungen, die für einen bestimmten Benutzer zugänglich sind.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [ÜBERSETZUNGEN Rowset](/previous-versions/windows/desktop/ms725365\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [ÜBERSETZUNGEN Rowset](/previous-versions/windows/desktop/ms725365\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1733,14 +1786,16 @@ Die TypeDef-Klasse aufrufen `CTranslations` so implementieren Sie die Parameterk
 |m_szTargetName|TARGET_CHARACTER_SET_NAME|  
 
 ## <a name="usageprivilege"></a> CUsagePrivileges, CUsagePrivilegeInfo
+
 Die TypeDef-Klasse aufrufen `CUsagePrivileges` so implementieren Sie die Parameterklasse `CUsagePrivilegeInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die USAGE-Berechtigungen für Objekte, die im Katalog definierten, die für verfügbar sind oder von einem bestimmten Benutzer gewährt.  
+Diese Klasse gibt die USAGE-Berechtigungen für Objekte, die im Katalog definierten, die für verfügbar sind oder von einem bestimmten Benutzer gewährt.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [USAGE_PRIVILEGES Rowset](/previous-versions/windows/desktop/ms722743\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [USAGE_PRIVILEGES Rowset](/previous-versions/windows/desktop/ms722743\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1754,14 +1809,16 @@ Die TypeDef-Klasse aufrufen `CUsagePrivileges` so implementieren Sie die Paramet
 |m_bIsGrantable|IS_GRANTABLE|  
 
 ## <a name="viewcolumn"></a> CViewColumnUsage, CViewColumnInfo
+
 Die TypeDef-Klasse aufrufen `CViewColumnUsage` so implementieren Sie die Parameterklasse `CViewColumnInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die Spalten auf, die im Katalog definierten Tabellen angezeigt, und einen bestimmten Benutzer gehören hängen.  
+Diese Klasse gibt die Spalten auf, die im Katalog definierten Tabellen angezeigt, und einen bestimmten Benutzer gehören hängen.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [VIEW_COLUMN_USAGE-Rowset](/previous-versions/windows/desktop/ms714896\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [VIEW_COLUMN_USAGE-Rowset](/previous-versions/windows/desktop/ms714896\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1776,14 +1833,16 @@ Die TypeDef-Klasse aufrufen `CViewColumnUsage` so implementieren Sie die Paramet
 |m_nColumnPropID|COLUMN_PROPID|  
 
 ## <a name="view"></a> CViews, CViewInfo
+
 Die TypeDef-Klasse aufrufen `CViews` so implementieren Sie die Parameterklasse `CViewInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die Tabellen auf, die im Katalog definierten Tabellen angezeigt, und einen bestimmten Benutzer gehören hängen.  
+Diese Klasse gibt die Tabellen auf, die im Katalog definierten Tabellen angezeigt, und einen bestimmten Benutzer gehören hängen.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [Ansichten Rowset](/previous-versions/windows/desktop/ms723122\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [Ansichten Rowset](/previous-versions/windows/desktop/ms723122\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1796,14 +1855,16 @@ Die TypeDef-Klasse aufrufen `CViews` so implementieren Sie die Parameterklasse `
 |m_szDescription|DESCRIPTION|  
 
 ## <a name="viewtable"></a> CViewTableUsage, CViewTableInfo
+
 Die TypeDef-Klasse aufrufen `CViewTableUsage` so implementieren Sie die Parameterklasse `CViewTableInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
+
+Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse gibt die angezeigten Tabellen, im Katalog definiert, die für einen bestimmten Benutzer zugänglich sind.  
+Diese Klasse gibt die angezeigten Tabellen, im Katalog definiert, die für einen bestimmten Benutzer zugänglich sind.  
   
- Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [VIEW_TABLE_USAGE-Rowset](/previous-versions/windows/desktop/ms719727\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [VIEW_TABLE_USAGE-Rowset](/previous-versions/windows/desktop/ms719727\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.  
   
 |Datenmember|OLE DB-Spalten|  
 |------------------|--------------------|  
@@ -1815,7 +1876,9 @@ Die TypeDef-Klasse aufrufen `CViewTableUsage` so implementieren Sie die Paramete
 |m_szTableName|TABLE_NAME|  
 
 ## <a name="requirements"></a>Anforderungen  
- **Header:** atldbsch.h  
+
+**Header:** atldbsch.h  
   
 ## <a name="see-also"></a>Siehe auch  
- [CRestrictions-Klasse](../../data/oledb/crestrictions-class.md)
+
+[CRestrictions-Klasse](../../data/oledb/crestrictions-class.md)

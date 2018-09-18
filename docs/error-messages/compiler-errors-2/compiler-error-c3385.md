@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3385 | Microsoft Docs
+title: Compilerfehler C3385 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1949e2836c6677f6aec2597743142b6f7e87cf5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ac6426e32d5cd9a11d80ddce2cf4203d6a1de0e1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248772"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038281"
 ---
 # <a name="compiler-error-c3385"></a>Compilerfehler C3385
-'Klasse::Funktion': Eine Funktion, die ein benutzerdefiniertes DllImport-Attribut hat, kann keine Instanz einer Klasse zurückgeben.  
-  
- Eine Funktion, die als Teil einer DLL-Datei definiert wird, die mit dem `DllImport` -Attribut angegeben wurde, kann keine Instanz einer Klasse zurückgeben.  
-  
- Im folgenden Beispiel wird C3385 generiert:  
-  
-```  
-// C3385.cpp  
-// compile with: /clr /c  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-  
-struct SomeStruct1 {};  
-  
-public ref struct Wrap {  
-   [ DllImport("somedll.dll", CharSet=CharSet::Unicode) ]  
-   static SomeStruct1 f1([In, Out] SomeStruct1 *pS);   // C3385  
-};  
-```  
+
+'Klasse::Funktion': Eine Funktion, die ein benutzerdefiniertes DllImport-Attribut hat, kann keine Instanz einer Klasse zurückgeben.
+
+Eine Funktion, die als Teil einer DLL-Datei definiert wird, die mit dem `DllImport` -Attribut angegeben wurde, kann keine Instanz einer Klasse zurückgeben.
+
+Im folgenden Beispiel wird C3385 generiert:
+
+```
+// C3385.cpp
+// compile with: /clr /c
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+struct SomeStruct1 {};
+
+public ref struct Wrap {
+   [ DllImport("somedll.dll", CharSet=CharSet::Unicode) ]
+   static SomeStruct1 f1([In, Out] SomeStruct1 *pS);   // C3385
+};
+```

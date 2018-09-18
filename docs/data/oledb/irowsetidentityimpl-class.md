@@ -25,14 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed8cc8fc2b61a3a85beb7297317c5b266557268c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 1431fb9b35ab83f6cb0fc167eff4ba4508f2e301
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573233"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036188"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl-Klasse
+
 Implementiert die OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913\(v=vs.85\)) -Schnittstelle, die Tests für die Zeilenidentität.  
   
 ## <a name="syntax"></a>Syntax
@@ -44,14 +45,16 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *T*  
- Eine abgeleitete Klasse `IRowsetIdentityImpl`.  
+
+*T*<br/>
+Eine abgeleitete Klasse `IRowsetIdentityImpl`.  
   
- *RowClass*  
- Die Storage-Einheit für die `HROW`.  
+*RowClass*<br/>
+Die Storage-Einheit für die `HROW`.  
 
 ## <a name="requirements"></a>Anforderungen  
- **Header:** „atldb.h“  
+
+**Header:** „atldb.h“  
   
 ## <a name="members"></a>Member  
   
@@ -62,6 +65,7 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 |[IsSameRow](#issamerow)|Vergleicht zwei Zeilenhandles, um festzustellen, ob sie sich auf derselben Zeile beziehen.|  
   
 ## <a name="issamerow"></a> Irowsetidentityimpl:: Issamerow
+
 Vergleicht zwei Zeilenhandles, um festzustellen, ob sie sich auf derselben Zeile beziehen.  
   
 ### <a name="syntax"></a>Syntax  
@@ -72,11 +76,14 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+
+Finden Sie unter [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
 ### <a name="remarks"></a>Hinweise  
- Um Zeilenhandles zu vergleichen, die diese Methode wandelt die `HROW` Fensterhandles zu `RowClass` Member und ruft `memcmp` für den Zeiger.  
+
+Um Zeilenhandles zu vergleichen, die diese Methode wandelt die `HROW` Fensterhandles zu `RowClass` Member und ruft `memcmp` für den Zeiger.  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

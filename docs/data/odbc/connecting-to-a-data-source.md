@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mit einer Datenquelle | Microsoft Docs
+title: Herstellen einer Verbindung mit einer Datenquelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,27 +21,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2b6a33f1e2421c56f89184d26185903b4ec7859e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4be8214ad036d67a02ce4b9c5935d3deb92252c1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088390"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061096"
 ---
 # <a name="connecting-to-a-data-source"></a>Aufbauen der Verbindung zu einer Datenquelle
-Eine ODBC-Datenquelle handelt es sich um einen bestimmten Satz von Daten, die erforderlichen Informationen zum Zugriff auf diese Daten und den Speicherort der Datenquelle, die mithilfe einer Datenquellennamens beschrieben werden kann. Aus Sicht des Programms enthält die Datenquelle die Daten, das DBMS die Netzwerk (sofern vorhanden) und ODBC.  
+
+Eine ODBC-Datenquelle handelt es sich um einen bestimmten Satz von Daten, die erforderlichen Informationen zum Zugriff auf die Daten und den Speicherort der Datenquelle, die Verwendung eines Namens für die Datenquelle beschrieben werden kann. Aus Sicht des Programms enthält die Datenquelle, die Daten, das DBMS, Netzwerk (sofern vorhanden) und ODBC.  
   
- Für den Zugriff auf Daten, die von einer Datenquelle bereitgestellt, muss das Programm zuerst eine Verbindung mit der Datenquelle herstellen. Alle der Datenzugriff wird über diese Verbindung verwaltet.  
+Das Programm muss zunächst eine Verbindung mit der Datenquelle herstellen, um Zugriff auf die Daten, die von einer Datenquelle bereitgestellt. Alle Datenzugriff wird über diese Verbindung verwaltet.  
   
- Datenquellen-Verbindungen sind von Klasse gekapselte [CDatabase](../../mfc/reference/cdatabase-class.md). Wenn ein `CDatabase` Objekt mit einer Datenquelle verbunden ist, können Sie:  
+Datenquellen-Verbindungen sind von Klasse gekapselte [CDatabase](../../mfc/reference/cdatabase-class.md). Wenn eine `CDatabase` Objekt mit einer Datenquelle verbunden ist, können Sie:  
   
--   Erstellen Sie [Recordsets](../../mfc/reference/crecordset-class.md), die Datensätze aus Tabellen oder Abfragen auswählen.  
+- Erstellen Sie [Recordsets](../../mfc/reference/crecordset-class.md), die Datensätze aus Tabellen oder Abfragen auswählen.  
   
--   Verwalten von [Transaktionen](../../data/odbc/transaction-odbc.md), Batchverarbeitung Updates, d. h. alle auf einmal an die Datenquelle übergeben werden (oder die gesamte Transaktion zurückgesetzt wird, zurück, damit die Datenquelle nicht geändert wurden) – Wenn die Datenquelle über das erforderliche Servicelevel Transaktionen unterstützt.  
+- Verwalten von [Transaktionen](../../data/odbc/transaction-odbc.md), Batchverarbeitung Updates, sodass alle auf einmal an die Datenquelle übergeben werden (oder die gesamte Transaktion zurückgesetzt wird, wieder, damit die Datenquelle nicht geändert wird) – Wenn die Datenquelle über das erforderliche Servicelevel Transaktionen unterstützt.  
   
--   Direktes Ausführen von [SQL](../../data/odbc/sql.md) Anweisungen.  
+- Direktes Ausführen von [SQL](../../data/odbc/sql.md) Anweisungen.  
   
- Wenn Sie die Arbeit mit einer Datenquelle Verbindung abgeschlossen haben, schließen Sie die `CDatabase` Objekt und zerstören, oder es für eine neue Verbindung wiederverwenden. Weitere Informationen zu den Datenquellen-Verbindungen finden Sie unter [Datenquelle (ODBC)](../../data/odbc/data-source-odbc.md).  
+Wenn Sie die Arbeit mit einer datenquellenverbindung abgeschlossen haben, schließen Sie die `CDatabase` -Objekt, und es zu zerstören oder für eine neue Verbindung wiederzuverwenden. Weitere Informationen zu Verbindungen mit Datenquellen, finden Sie unter [Datenquelle (ODBC)](../../data/odbc/data-source-odbc.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [ODBC und MFC](../../data/odbc/odbc-and-mfc.md)
+
+[ODBC und MFC](../../data/odbc/odbc-and-mfc.md)

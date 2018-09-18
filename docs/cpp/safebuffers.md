@@ -17,71 +17,76 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce106727fac6b3b9903a53fae64bee94441aa038
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: c6590a2f210156711066fac241170103cc5a8830
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685075"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034356"
 ---
 # <a name="safebuffers"></a>safebuffers
-**Microsoft-spezifisch**  
-  
- Weist den Compiler an, keine Pufferüberlauf-Sicherheitsüberprüfungen für eine Funktion einzufügen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-__declspec( safebuffers )  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Die **/GS** -Compileroption bewirkt, dass der Compiler Pufferüberläufe zu testen, indem sicherheitsüberprüfungen im Stapel eingefügt. Die Typen der Datenstrukturen, die für sicherheitsüberprüfungen freigegeben sind, werden in beschrieben [/GS (Puffer-Sicherheitsüberprüfung)](../build/reference/gs-buffer-security-check.md). Weitere Informationen zur pufferüberlauferkennung finden Sie unter [Sicherheitsfunktionen in MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/).  
-  
- Ein fachmännischer manueller Codereview oder eine externe Analyse kann bestimmen, dass eine Funktion vor einem Pufferüberlauf sicher ist. In diesem Fall können Sie sicherheitsüberprüfungen für eine Funktion unterdrücken, indem Sie die Anwendung die **__declspec(safebuffers)** Schlüsselwort, um die Funktionsdeklaration.  
-  
+
+**Microsoft-spezifisch**
+
+Weist den Compiler an, keine Pufferüberlauf-Sicherheitsüberprüfungen für eine Funktion einzufügen.
+
+## <a name="syntax"></a>Syntax
+
+```
+__declspec( safebuffers )
+```
+
+## <a name="remarks"></a>Hinweise
+
+Die **/GS** -Compileroption bewirkt, dass der Compiler Pufferüberläufe zu testen, indem sicherheitsüberprüfungen im Stapel eingefügt. Die Typen der Datenstrukturen, die für sicherheitsüberprüfungen freigegeben sind, werden in beschrieben [/GS (Puffer-Sicherheitsüberprüfung)](../build/reference/gs-buffer-security-check.md). Weitere Informationen zur pufferüberlauferkennung finden Sie unter [Sicherheitsfunktionen in MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/).
+
+Ein fachmännischer manueller Codereview oder eine externe Analyse kann bestimmen, dass eine Funktion vor einem Pufferüberlauf sicher ist. In diesem Fall können Sie sicherheitsüberprüfungen für eine Funktion unterdrücken, indem Sie die Anwendung die **__declspec(safebuffers)** Schlüsselwort, um die Funktionsdeklaration.
+
 > [!CAUTION]
->  Puffer-Sicherheitsüberprüfungen bieten wichtige Sicherheit und haben eine geringfügige Auswirkung auf die Leistung. Daher empfiehlt es sich, sie nicht zu unterdrücken, außer in dem seltenen Fall, in dem die Leistung einer Funktion ein wichtiger Aspekt ist und die Funktion bekanntermaßen sicher ist.  
-  
-## <a name="inline-functions"></a>Inlinefunktionen  
- Ein *Hauptfunktion* können eine [inlining](inline-functions-cpp.md) Schlüsselwort, um eine Kopie der Einfügen einer *sekundären Funktion*. Wenn die **__declspec(safebuffers)** -Schlüsselwort auf eine Funktion angewendet wird, wird die pufferüberlauferkennung für diese Funktion unterdrückt. Allerdings inlining wirkt sich auf die **__declspec(safebuffers)** Schlüsselwort folgt.  
-  
- Nehmen Sie an der **/GS** Compileroption ist für beide Funktionen angegeben, aber die primäre Funktion gibt die **__declspec(safebuffers)** Schlüsselwort. Die Datenstrukturen in der sekundären Funktion machen sie besonders geeignet für Sicherheitsüberprüfungen, und die Funktion unterdrückt diese Überprüfungen nicht. In diesem Fall gilt Folgendes:  
-  
--   Geben Sie die ["__forceinline"](inline-functions-cpp.md) -Schlüsselwort in der sekundären Funktion zu erzwingen, dass der Compiler Inline, die unabhängig von compileroptimierungen funktionieren.  
-  
--   Da die sekundäre Funktion für sicherheitsüberprüfungen freigegeben ist, sicherheitsüberprüfungen gelten auch für die primäre Funktion, obwohl er gibt an, die **__declspec(safebuffers)** Schlüsselwort.  
-  
-## <a name="example"></a>Beispiel  
- Der folgende Code zeigt, wie Sie mit der **__declspec(safebuffers)** Schlüsselwort.  
-  
-```cpp 
-// compile with: /c /GS  
-typedef struct {  
-    int x[20];  
-} BUFFER;  
-static int checkBuffers() {  
-    BUFFER cb;  
-    // Use the buffer...  
-    return 0;  
-};  
-static __declspec(safebuffers)   
-    int noCheckBuffers() {  
-    BUFFER ncb;  
-    // Use the buffer...  
-    return 0;  
-}  
-int wmain() {  
-    checkBuffers();  
-    noCheckBuffers();  
-    return 0;  
-}  
-```  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [__declspec](../cpp/declspec.md)   
- [Stichwörter](../cpp/keywords-cpp.md)   
- [Inline __inline, \__forceinline](inline-functions-cpp.md)   
- [strict_gs_check](../preprocessor/strict-gs-check.md)
+>  Puffer-Sicherheitsüberprüfungen bieten wichtige Sicherheit und haben eine geringfügige Auswirkung auf die Leistung. Daher empfiehlt es sich, sie nicht zu unterdrücken, außer in dem seltenen Fall, in dem die Leistung einer Funktion ein wichtiger Aspekt ist und die Funktion bekanntermaßen sicher ist.
+
+## <a name="inline-functions"></a>Inlinefunktionen
+
+Ein *Hauptfunktion* können eine [inlining](inline-functions-cpp.md) Schlüsselwort, um eine Kopie der Einfügen einer *sekundären Funktion*. Wenn die **__declspec(safebuffers)** -Schlüsselwort auf eine Funktion angewendet wird, wird die pufferüberlauferkennung für diese Funktion unterdrückt. Allerdings inlining wirkt sich auf die **__declspec(safebuffers)** Schlüsselwort folgt.
+
+Nehmen Sie an der **/GS** Compileroption ist für beide Funktionen angegeben, aber die primäre Funktion gibt die **__declspec(safebuffers)** Schlüsselwort. Die Datenstrukturen in der sekundären Funktion machen sie besonders geeignet für Sicherheitsüberprüfungen, und die Funktion unterdrückt diese Überprüfungen nicht. In diesem Fall gilt Folgendes:
+
+- Geben Sie die ["__forceinline"](inline-functions-cpp.md) -Schlüsselwort in der sekundären Funktion zu erzwingen, dass der Compiler Inline, die unabhängig von compileroptimierungen funktionieren.
+
+- Da die sekundäre Funktion für sicherheitsüberprüfungen freigegeben ist, sicherheitsüberprüfungen gelten auch für die primäre Funktion, obwohl er gibt an, die **__declspec(safebuffers)** Schlüsselwort.
+
+## <a name="example"></a>Beispiel
+
+Der folgende Code zeigt, wie Sie mit der **__declspec(safebuffers)** Schlüsselwort.
+
+```cpp
+// compile with: /c /GS
+typedef struct {
+    int x[20];
+} BUFFER;
+static int checkBuffers() {
+    BUFFER cb;
+    // Use the buffer...
+    return 0;
+};
+static __declspec(safebuffers)
+    int noCheckBuffers() {
+    BUFFER ncb;
+    // Use the buffer...
+    return 0;
+}
+int wmain() {
+    checkBuffers();
+    noCheckBuffers();
+    return 0;
+}
+```
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[__declspec](../cpp/declspec.md)<br/>
+[Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
+[inline, __inline, \__forceinline](inline-functions-cpp.md)<br/>
+[strict_gs_check](../preprocessor/strict-gs-check.md)

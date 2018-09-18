@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f68c22ff88ac92357dabfef8076c160271a76378
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 12976bcf796466f959807f7ac2fb52257889454b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756489"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025541"
 ---
 # <a name="connection-point-global-functions"></a>Verbindungspunkt für globale Funktionen
 
@@ -59,16 +59,16 @@ HRESULT    AtlAdvise(
 
 ### <a name="parameters"></a>Parameter
 
-*pUnkCP*  
+*pUnkCP*<br/>
 [in] Ein Zeiger auf die `IUnknown` des Objekts der Client eine Verbindung mit herstellen möchte.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Ein Zeiger auf des Clients `IUnknown`.
 
-*IID*  
+*IID*<br/>
 [in] Die GUID des Verbindungspunkts. Dies ist normalerweise identisch mit der von den Verbindungspunkt verwalteten Ausgangsschnittstelle.
 
-*PDW*  
+*PDW*<br/>
 [out] Ein Zeiger auf das Cookie, das die Verbindung eindeutig identifiziert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -99,13 +99,13 @@ HRESULT    AtlUnadvise(
 
 ### <a name="parameters"></a>Parameter
 
-*pUnkCP*  
+*pUnkCP*<br/>
 [in] Ein Zeiger auf die `IUnknown` des Objekts, das mit der Client verbunden ist.
 
-*IID*  
+*IID*<br/>
 [in] Die GUID des Verbindungspunkts. Dies ist normalerweise identisch mit der von den Verbindungspunkt verwalteten Ausgangsschnittstelle.
 
-*Data Warehouse*  
+*Data Warehouse*<br/>
 [in] Das Cookie, das die Verbindung eindeutig identifiziert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -129,10 +129,10 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 
 ### <a name="parameters"></a>Parameter
 
-*pT*  
+*pT*<br/>
 [in] Ein Zeiger auf das Objekt, das die Sink-Zuordnung enthält.
 
-*bAdvise*  
+*bAdvise*<br/>
 [in] True, wenn alle Senke Einträge sind, darüber informiert zu werden. "False", wenn alle Einträge der Senke abzumelden werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -145,5 +145,5 @@ Ein standard HRESULT-Wert.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Funktionen](../../atl/reference/atl-functions.md)   
+[Funktionen](../../atl/reference/atl-functions.md)<br/>
 [Verbindungspunkt-Makros](../../atl/reference/connection-point-macros.md)

@@ -1,5 +1,5 @@
 ---
-title: Copyprivate | Microsoft Docs
+title: Copyprivate | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96b1516970afb8729dc4e35c2226eb6ff00f5c2e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1f698114fc1f2285cdcdb91ec1e8317ad1585a6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692937"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071132"
 ---
 # <a name="copyprivate"></a>copyprivate
-Gibt an, dass eine oder mehrere Variablen auf allen Threads freigegeben werden soll.  
+Gibt an, dass eine oder mehrere Variablen, die auf allen Threads freigegeben werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,11 +32,10 @@ Gibt an, dass eine oder mehrere Variablen auf allen Threads freigegeben werden s
 copyprivate(var)  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- wobei  
+### <a name="parameters"></a>Parameter
   
- `var`  
- Eine oder mehrere Variablen freigeben. Wenn mehr als eine Variable angegeben wird, trennen Sie Namen durch ein Komma.  
+*var*<br/>
+Eine oder mehrere Variablen freigeben. Wenn mehr als eine Variable angegeben ist, trennen Sie Namen durch ein Komma.  
   
 ## <a name="remarks"></a>Hinweise  
  `copyprivate` gilt für die [einzelne](../../../parallel/openmp/reference/single.md) Richtlinie.  

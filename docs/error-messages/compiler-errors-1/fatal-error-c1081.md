@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1081 | Microsoft Docs
+title: Schwerwiegender Fehler C1081 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b5ea18ff3f2714d9621d4372cf541be2f9b225a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b34f2f19a0bb8770ea9292fef120c415c0fb255a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230521"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060528"
 ---
 # <a name="fatal-error-c1081"></a>Schwerwiegender Fehler C1081
-'Symbol': Dateiname zu lang  
-  
- Ein Pfadname länger `_MAX_PATH` (definiert durch STDLIB.h als 260 Zeichen enthalten). Kürzen Sie den Namen der Datei an.  
-  
- Beim Aufruf von CL.exe mit einem kurzen Dateinamen muss der Compiler u. u. einen vollständigen Pfadnamen zu generieren. Beispielsweise `cl -c myfile.cpp` kann dazu führen, dass den Compiler generiert:  
-  
-```  
-D:\<very-long-directory-path>\myfile.cpp  
+
+'Symbol': Dateiname zu lang
+
+Die Länge des ein Pfadname der Datei überschreitet `_MAX_PATH` (als 260 Zeichen STDLIB.h definiert). Kürzen Sie den Namen der Datei.
+
+Wenn Sie mit einem kurzen Dateinamen CL.exe aufrufen, muss der Compiler kann einen vollständigen Pfadnamen generieren. Z. B. `cl -c myfile.cpp` kann dazu führen, dass den Compiler generiert:
+
+```
+D:\<very-long-directory-path>\myfile.cpp
 ```

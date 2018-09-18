@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C2086 | Microsoft Docs
+title: Compilerfehler C2086 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f1a21c06adeeda5d9db428e984da51f06addb5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0e0d8b105d58b0585bc31b8d340d3d7ba5fb29e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170254"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029844"
 ---
-# <a name="compiler-error-c2086"></a>Compilerfehler Fehler C2086
-'Bezeichner': Neudefinition  
-  
- Der Bezeichner mehrfach definiert ist, oder eine nachfolgende Deklaration unterscheidet sich von einer vorherigen.  
-  
- C2086 kann auch das Ergebnis der inkrementellen Buildvorgangs für eine C#-Assembly sein. Erstellen Sie zum Beheben dieses Fehlers die C#-Assembly neu.  
-  
- Im folgenden Beispiel wird C2086 generiert:  
-  
-```  
-// C2086.cpp  
-main() {  
-  int a;  
-  int a;   // C2086 not an error in ANSI C  
-}  
+# <a name="compiler-error-c2086"></a>Compilerfehler C2086
+
+'Bezeichner': Neudefinition
+
+Der Bezeichner mehrfach definiert ist, oder eine nachfolgende Deklaration unterscheidet sich von einer vorherigen.
+
+C2086 können auch das Ergebnis der inkrementellen Erstellung einer referenzierten C#-Assembly sein. Erstellen Sie die C#-Assembly zum Beheben dieses Fehlers neu.
+
+Im folgende Beispiel wird die C2086 generiert:
+
+```
+// C2086.cpp
+main() {
+  int a;
+  int a;   // C2086 not an error in ANSI C
+}
 ```

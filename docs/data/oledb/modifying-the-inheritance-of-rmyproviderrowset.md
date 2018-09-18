@@ -16,17 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 407406683f03dbba2d582b1ae24d5cc3bb8680a5
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 77b26d1d0b67726e1ba2cd66d0e181bc04105a6a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336464"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028167"
 ---
 # <a name="modifying-the-inheritance-of-rmyproviderrowset"></a>Ändern der Vererbung von "RMyProviderRowset"
+
 Hinzufügen der `IRowsetLocate` im Beispiel des einfachen schreibgeschützten Anbieters Schnittstelle, ändern Sie die Vererbung von `RMyProviderRowset`. Zunächst `RMyProviderRowset` erbt `CRowsetImpl`. Sie ändern das erben müssen `CRowsetBaseImpl`.  
   
- Zu diesem Zweck erstellen Sie eine neue Klasse `CMyRowsetImpl`, in der Datei MyProviderRS.h:  
+Zu diesem Zweck erstellen Sie eine neue Klasse `CMyRowsetImpl`, in der Datei MyProviderRS.h:  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -40,7 +41,7 @@ class CMyRowsetImpl:
 };  
 ```  
   
- Bearbeiten Sie nun die COM-schnittstellenzuordnung in MyProviderRS.h wie folgt sein:  
+Bearbeiten Sie nun die COM-schnittstellenzuordnung in MyProviderRS.h wie folgt sein:  
   
 ```cpp  
 BEGIN_COM_MAP(CMyRowsetImpl)  
@@ -49,17 +50,18 @@ BEGIN_COM_MAP(CMyRowsetImpl)
 END_COM_MAP()  
 ```  
   
- Dies erstellt eine Zuordnung der COM-Schnittstelle, der angibt, `CMyRowsetImpl` aufzurufende `QueryInterface` für beide die `IRowset` und `IRowsetLocate` Schnittstellen. Zum Abrufen aller die Implementierung für das Rowset von anderen Klassen, die zuordnungslinks die `CMyRowsetImpl` Klasse zurück, an die `CRowsetBaseImpl` Klasse durch den OLE DB-Vorlagen definiert; die Karte verwendet-Makro ein, der darüber informiert werden, überprüfen die COM-Zuordnung im OLE DB-Vorlagen `CRowsetBaseImpl` als Reaktion auf eine `QueryInterface` aufrufen.  
+Dies erstellt eine Zuordnung der COM-Schnittstelle, der angibt, `CMyRowsetImpl` aufzurufende `QueryInterface` für beide die `IRowset` und `IRowsetLocate` Schnittstellen. Zum Abrufen aller die Implementierung für das Rowset von anderen Klassen, die zuordnungslinks die `CMyRowsetImpl` Klasse zurück, an die `CRowsetBaseImpl` Klasse durch den OLE DB-Vorlagen definiert; die Karte verwendet-Makro ein, der darüber informiert werden, überprüfen die COM-Zuordnung im OLE DB-Vorlagen `CRowsetBaseImpl` als Reaktion auf eine `QueryInterface` aufrufen.  
   
- Verknüpfen Sie abschließend `RAgentRowset` zu `CMyRowsetBaseImpl` szenariooptionen passen die `RAgentRowset` das erben `CMyRowsetImpl`wie folgt:  
+Verknüpfen Sie abschließend `RAgentRowset` zu `CMyRowsetBaseImpl` szenariooptionen passen die `RAgentRowset` das erben `CMyRowsetImpl`wie folgt:  
   
 ```cpp  
 class RAgentRowset : public CMyRowsetImpl<RAgentRowset, CAgentMan, CMyProviderCommand>  
 ```  
   
- `RAgentRowset` Nun können Sie die `IRowsetLocate` Schnittstelle profitieren Sie von den Rest der Implementierung für die Rowsetklasse.  
+`RAgentRowset` Nun können Sie die `IRowsetLocate` Schnittstelle profitieren Sie von den Rest der Implementierung für die Rowsetklasse.  
   
- Wenn dies geschehen ist, können Sie [an den Consumer zurückgegebene Spalten dynamisch bestimmen](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
+Wenn dies geschehen ist, können Sie [an den Consumer zurückgegebene Spalten dynamisch bestimmen](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erweitern des einfachen schreibgeschützten Anbieters](../../data/oledb/enhancing-the-simple-read-only-provider.md)
+
+[Erweitern des einfachen schreibgeschützten Anbieters](../../data/oledb/enhancing-the-simple-read-only-provider.md)

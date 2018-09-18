@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2439 | Microsoft Docs
+title: Compilerfehler C2439 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33bfe8ebf00850a54020b2a3f21159daf28b7224
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 419bf7be45a1383135d0231cd059837e1fe62729
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225688"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058411"
 ---
 # <a name="compiler-error-c2439"></a>Compilerfehler C2439
-'Bezeichner': Member konnte nicht initialisiert werden  
-  
- Eine Klasse, Struktur oder union-Member kann nicht initialisiert werden.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:  
-  
-1.  Versucht, eine indirekte Basisklasse der Klasse oder Struktur zu initialisieren.  
-  
-2.  Versucht, einen geerbten Member einer Klasse oder Struktur zu initialisieren. Ein geerbter Member muss vom Konstruktor der Klasse oder Struktur initialisiert werden.
+
+'Bezeichner': Member konnte nicht initialisiert werden
+
+Eine Klasse, Struktur oder union-Member kann nicht initialisiert werden.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:
+
+1. Versuch, eine indirekte Basisklasse der Klasse oder Struktur zu initialisieren.
+
+1. Versuch, einen geerbten Member einer Klasse oder Struktur zu initialisieren. Durch den Konstruktor der Klasse oder Struktur muss ein geerbter Member initialisiert werden.

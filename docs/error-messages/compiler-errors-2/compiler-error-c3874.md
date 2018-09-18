@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3874 | Microsoft Docs
+title: Compilerfehler C3874 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb1224b1e5b14c0f34e10b7eff972d4014cccdff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 70f6773e65c167b980a4fd9967b910a3f760d58f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268254"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059265"
 ---
 # <a name="compiler-error-c3874"></a>Compilerfehler C3874
-Rückgabetyp "Funktion" sollte "Int" anstelle von "Typ" sein.  
-  
- Eine Funktion besitzt nicht den Rückgabetyp, der vom Compiler erwartet wurde.  
-  
- Im folgende Beispiel wird C3874 generiert:  
-  
-```  
-// C3874b.cpp  
-double main()  
-{   // C3874  
-}  
+
+Rückgabetyp des 'Funktion' muss 'Int' statt 'Typ' sein.
+
+Eine Funktion muss nicht den Rückgabetyp, der vom Compiler erwartet wurde.
+
+Im folgende Beispiel wird die C3874 generiert:
+
+```
+// C3874b.cpp
+double main()
+{   // C3874
+}
 ```

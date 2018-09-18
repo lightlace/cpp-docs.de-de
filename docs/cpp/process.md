@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdad177231c02d2e6f6fad171ae1811ecb9ccc6c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 65ae8eef828a8abd4bf726c99850089c0f30b71b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407181"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032563"
 ---
 # <a name="process"></a>process
 
@@ -37,5 +37,6 @@ Wenn Sie jede Anwendungsdomäne eine eigene Kopie einer globalen Variablen haben
 Finden Sie unter [Anwendungsdomänen und Visual C++](../dotnet/application-domains-and-visual-cpp.md) für Weitere Informationen.
 
 ## <a name="see-also"></a>Siehe auch
- [__declspec](../cpp/declspec.md)  
- [Schlüsselwörter](../cpp/keywords-cpp.md)
+
+[__declspec](../cpp/declspec.md)<br/>
+[Schlüsselwörter](../cpp/keywords-cpp.md)

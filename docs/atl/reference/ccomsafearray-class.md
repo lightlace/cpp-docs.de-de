@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 920cfbde9229131c5148c359f6a82ce002d7fb3a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 411b8f58b38d2b35c1353d1ff446407026977d66
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758517"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030143"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray-Klasse
 
@@ -58,7 +58,7 @@ class CComSafeArray
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Der Typ der im Array gespeicherten Daten.
 
 ## <a name="members"></a>Member
@@ -158,19 +158,19 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*psaSrc*  
+*psaSrc*<br/>
 Ein Zeiger auf eine `SAFEARRAY` Objekt.
 
-*ulCount*  
+*ulCount*<br/>
 Die Anzahl von Objekten, in dem Array hinzugefügt werden soll.
 
-*pT*  
+*pT*<br/>
 Ein Zeiger auf eine oder mehrere Objekte, die das Array hinzugefügt werden.
 
-*t*  
+*t*<br/>
 Ein Verweis auf das Objekt, das dem Array hinzugefügt werden.
 
-*bCopy*  
+*bCopy*<br/>
 Gibt an, ob eine Kopie der Daten erstellt werden soll. Der Standardwert ist "true".
 
 ### <a name="return-value"></a>Rückgabewert
@@ -193,7 +193,7 @@ HRESULT Attach(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>Parameter
 
-*psaSrc*  
+*psaSrc*<br/>
 Ein Zeiger auf die `SAFEARRAY` Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -220,25 +220,25 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>Parameter
 
-*Gebunden*  
+*Gebunden*<br/>
 Eine `SAFEARRAYBOUND`-Struktur.
 
-*ulCount*  
+*ulCount*<br/>
 Die Anzahl der Elemente im Array.
 
-*lLBound*  
+*lLBound*<br/>
 Die unteren Grenzwert Das heißt, dass der Index des ersten Elements im Array.
 
-*pBound*  
+*pBound*<br/>
 Ein Zeiger auf eine `SAFEARRAYBOUND` Struktur.
 
-*uDims*  
+*uDims*<br/>
 Die Anzahl der Dimensionen im Array.
 
-*saSrc*  
+*saSrc*<br/>
 Ein Verweis auf eine `SAFEARRAY` Struktur oder `CComSafeArray` Objekt. In beiden Fällen wird mit dem Konstruktor dieser Verweis erstellen Sie eine Kopie des Arrays aus, damit das Array nach der Erstellung nicht verwiesen wird.
 
-*psaSrc*  
+*psaSrc*<br/>
 Ein Zeiger auf eine `SAFEARRAY` Struktur. Der Konstruktor verwendet diese Adresse, erstellen Sie eine Kopie des Arrays aus, damit das Array nach der Erstellung nicht verwiesen wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -267,7 +267,7 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
 
 ### <a name="parameters"></a>Parameter
 
-*ppArray*  
+*ppArray*<br/>
 Zeiger auf die `SAFEARRAY` kopieren.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -288,7 +288,7 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
 
 ### <a name="parameters"></a>Parameter
 
-*ppArray*  
+*ppArray*<br/>
 Ein Zeiger auf einen Speicherort zum Erstellen des neuen `SAFEARRAY`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -310,16 +310,16 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 
 ### <a name="parameters"></a>Parameter
 
-*pBound*  
+*pBound*<br/>
 Ein Zeiger auf eine `SAFEARRAYBOUND` Objekt.
 
-*uDims*  
+*uDims*<br/>
 Die Anzahl der Dimensionen im Array.
 
-*ulCount*  
+*ulCount*<br/>
 Die Anzahl der Elemente im Array.
 
-*lLBound*  
+*lLBound*<br/>
 Die unteren Grenzwert Das heißt, dass der Index des ersten Elements im Array.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -372,7 +372,7 @@ T& GetAt(LONG lIndex) const;
 
 ### <a name="parameters"></a>Parameter
 
-*lIndex*  
+*lIndex*<br/>
 Die Indexnummer des Werts im zurückzugebenden Arrays.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -389,7 +389,7 @@ ULONG GetCount(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>Parameter
 
-*uDim*  
+*uDim*<br/>
 Die Dimension des Arrays.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -422,7 +422,7 @@ LONG GetLowerBound(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>Parameter
 
-*uDim*  
+*uDim*<br/>
 Die Arraydimension, für das die untere Grenze abgerufen werden soll. Wenn nicht angegeben, lautet der Standardwert 0.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -485,7 +485,7 @@ LONG GetUpperBound(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>Parameter
 
-*uDim*  
+*uDim*<br/>
 Die Arraydimension, für die die obere Grenze abgerufen werden soll. Wenn nicht angegeben, lautet der Standardwert 0.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -526,10 +526,10 @@ HRESULT MultiDimGetAt(const LONG* alIndex, T& t);
 
 ### <a name="parameters"></a>Parameter
 
-*alIndex*  
+*alIndex*<br/>
 Zeiger auf einen Vektor von Indizes für jede Dimension im Array. Ist der am weitesten links stehende (wichtigste) Dimension `alIndex[0]`.
 
-*t*  
+*t*<br/>
 Ein Verweis auf die zurückgegebenen Daten.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -546,10 +546,10 @@ HRESULT MultiDimSetAt(const LONG* alIndex, const T& t);
 
 ### <a name="parameters"></a>Parameter
 
-*alIndex*  
+*alIndex*<br/>
 Zeiger auf einen Vektor von Indizes für jede Dimension im Array. Die Dimension des ganz rechts (am wenigsten signifikante) ist `alIndex`[0].
 
-*T*  
+*T*<br/>
 Gibt den Wert des neuen Elements.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -571,7 +571,7 @@ T& operator[]int nindex) const;
 
 ### <a name="parameters"></a>Parameter
 
-*lIndex, nIndex*  
+*lIndex, nIndex*<br/>
 Die Indexnummer des gewünschten Elements im Array.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -593,10 +593,10 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>Parameter
 
-*saSrc*  
+*saSrc*<br/>
 Ein Verweis auf ein `CComSafeArray`-Objekt.
 
-*psaSrc*  
+*psaSrc*<br/>
 Ein Zeiger auf eine `SAFEARRAY` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -626,13 +626,13 @@ HRESULT Resize(ULONG ulCount, LONG lLBound = 0);
 
 ### <a name="parameters"></a>Parameter
 
-*pBound*  
+*pBound*<br/>
 Ein Zeiger auf eine `SAFEARRAYBOUND` -Struktur, die Informationen auf der Anzahl von Elementen und die untere Grenze eines Arrays enthält.
 
-*ulCount*  
+*ulCount*<br/>
 Die angeforderte Anzahl der Objekte im Array dessen Größe geändert wurde.
 
-*lLBound*  
+*lLBound*<br/>
 Die untere Grenze.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -653,13 +653,13 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*lIndex*  
+*lIndex*<br/>
 Die Indexnummer des Array-Elements festgelegt werden soll.
 
-*t*  
+*t*<br/>
 Der neue Wert des angegebenen Elements.
 
-*bCopy*  
+*bCopy*<br/>
 Gibt an, ob eine Kopie der Daten erstellt werden soll. Der Standardwert ist "true".
 
 ### <a name="return-value"></a>Rückgabewert
@@ -672,7 +672,7 @@ Die *bCopy* Flag ist in Betracht gezogen, wenn Elemente des Typs BSTR oder Varia
 
 ## <a name="see-also"></a>Siehe auch
 
-[SAFEARRAY-Datentyp](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)   
-[CComSafeArray:: Create](#create)   
-[CComSafeArray:: Destroy](#destroy)   
+[SAFEARRAY-Datentyp](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)<br/>
+[CComSafeArray::Create](#create)<br/>
+[CComSafeArray::Destroy](#destroy)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

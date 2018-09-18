@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C3130 | Microsoft Docs
+title: Compilerfehler C3130 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9e338ff497ca0674b68ee25ba745d669a10468a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe26a86b85d6b38283a6ef21d081620237f8788a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248106"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030834"
 ---
-# <a name="compiler-error-c3130"></a>Compilerfehler Fehler C3130
-Interner Compilerfehler: Fehler bei eingefügten Codeblock in PDB-Datei schreiben  
-  
- Dieser Fehler tritt auf, wenn der Compiler einen eingefügten Codeblock in die PDB-Datei zu schreiben konnte. Die häufigste Ursache des Fehlers ist nicht genügend Festplattenspeicher verfügbar.
+# <a name="compiler-error-c3130"></a>Compilerfehler C3130
+
+Interner Compilerfehler: Fehler bei Eingefügter Codeblock in PDB geschrieben
+
+Dieser Fehler tritt auf, wenn der Compiler einen Eingefügter Codeblock in die PDB-Datei zu schreiben konnte. Die häufigste Ursache für diesen Fehler ist nicht genügend Festplattenspeicher verfügbar.

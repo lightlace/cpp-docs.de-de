@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4381 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4381 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5cb72c373b5c0808b4b1600871cd8148bcc9c9d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81c61dcbf49beeb41780cdaeff669cf21bfffee9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277991"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037826"
 ---
 # <a name="compiler-warning-level-1-c4381"></a>Compilerwarnung (Stufe 1) C4381
-"Funktion1": Schnittstellenmethode wird nicht von nicht öffentlichen Methode "Funktion2" implementiert  
-  
- Eine Klasse muss die all-Funktion in einer Schnittstelle implementieren. Eine Klasse kann diese Bedingung erfüllen, wenn eine der zugehörigen Basisklassen die Funktion implementiert. Allerdings muss die Funktion als öffentliche Funktion implementiert werden.
+
+"Funktion1": Schnittstellenmethode wird von nicht öffentlichen Methode "Funktion2" nicht implementiert
+
+Eine Klasse muss die all-Funktion in einer Schnittstelle implementieren. Eine Klasse kann diese Bedingung erfüllen, wenn eine der zugehörigen Basisklassen implementiert, dass die Funktion. Allerdings muss die Funktion als eine öffentliche Funktion implementiert werden.

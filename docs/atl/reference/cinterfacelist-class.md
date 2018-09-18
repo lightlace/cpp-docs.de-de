@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9b0eb225f9da88db356fc4f04d25d2219876604
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1ac378e0a923e2a906bf99995432bfc87e39b8d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752748"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032431"
 ---
 # <a name="cinterfacelist-class"></a>CInterfaceList-Klasse
 
@@ -32,7 +32,7 @@ Diese Klasse stellt nützliche Methoden aus, wenn Sie eine Liste der COM-Schnitt
 ## <a name="syntax"></a>Syntax
 
 ```
-template<class I, const IID* piid =& __uuidof(I)>  
+template<class I, const IID* piid =& __uuidof(I)>
 class CInterfaceList 
    : public CAtlList<ATL::CComQIPtr<I, piid>,
                      CComQIPtrElementTraits<I, piid>>
@@ -40,10 +40,10 @@ class CInterfaceList
 
 #### <a name="parameters"></a>Parameter
 
-*I*  
+*I*<br/>
 Eine COM-Schnittstelle, die den Typ des Zeigers gespeichert werden.
 
-*piid*  
+*piid*<br/>
 Ein Zeiger auf die IID der *ich*.
 
 ## <a name="members"></a>Member
@@ -80,7 +80,7 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*nBlockSize*  
+*nBlockSize*<br/>
 Die Blockgröße hat den Standardwert 10.
 
 ### <a name="remarks"></a>Hinweise
@@ -89,7 +89,7 @@ Die Blockgröße ist ein Maß für die Speichermenge belegt werden, wenn ein neu
 
 ## <a name="see-also"></a>Siehe auch
 
-[CAtlList-Klasse](../../atl/reference/catllist-class.md)   
-[CComQIPtr-Klasse](../../atl/reference/ccomqiptr-class.md)   
-[CComQIPtrElementTraits-Klasse](../../atl/reference/ccomqiptrelementtraits-class.md)   
+[CAtlList-Klasse](../../atl/reference/catllist-class.md)<br/>
+[CComQIPtr-Klasse](../../atl/reference/ccomqiptr-class.md)<br/>
+[CComQIPtrElementTraits-Klasse](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)
