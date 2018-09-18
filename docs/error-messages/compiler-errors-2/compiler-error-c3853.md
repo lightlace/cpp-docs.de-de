@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3853 | Microsoft Docs
+title: Compilerfehler C3853 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaaf3c791915db2b133e3f6d59b16db9144f1b81
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a347321b8c7884381fc57412d18422d7993d2f22
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270076"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021628"
 ---
 # <a name="compiler-error-c3853"></a>Compilerfehler C3853
-'=': Unzulässige wird erneut initialisiert werden, ein Verweis oder die Zuweisung über eine Reference-Funktion  
-  
- Um einen Verweis über eine Funktion kann nicht zugewiesen werden, da Funktionen nicht Lvalues sind.  
-  
- In den folgenden Beispielen wird C3853 generiert:  
-  
-```  
-// C3853.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-int afunc(int i)  
-{  
-   return i;  
-}  
-  
-typedef int (& rFunc_t)(int);  
-  
-int main()  
-{  
-   rFunc_t rf = afunc;   // OK binding a reference to function  
-   rf = afunc;   // C3853, can't reassign to a ref that's an lvalue  
-   int i = 99;  
-   int & ri = i;  
-   std::cout << i << std::endl;  
-   ri = 0;   // OK, i = 88;  
-   std::cout << i << std::endl;  
-}  
+
+"=": erneute Initialisieren, einen Verweis oder die Zuweisung über einen Verweis auf Funktion ist nicht zulässig
+
+Kann nicht auf einen Verweis über eine Funktion zuweisen, da Funktionen nicht Lvalues sind.
+
+In den folgenden Beispielen C3853 generiert:
+
+```
+// C3853.cpp
+// compile with: /EHsc
+#include <iostream>
+int afunc(int i)
+{
+   return i;
+}
+
+typedef int (& rFunc_t)(int);
+
+int main()
+{
+   rFunc_t rf = afunc;   // OK binding a reference to function
+   rf = afunc;   // C3853, can't reassign to a ref that's an lvalue
+   int i = 99;
+   int & ri = i;
+   std::cout << i << std::endl;
+   ri = 0;   // OK, i = 88;
+   std::cout << i << std::endl;
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3011 | Microsoft Docs
+title: Compilerfehler C3011 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb78e658c0f56798fa0c23201889809d6c68d184
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f25e3f9479b2555badbd079c3e2d939e91acbba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241911"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024410"
 ---
 # <a name="compiler-error-c3011"></a>Compilerfehler C3011
-Eine Inlineassembly direkt innerhalb eines parallelen Bereichs ist nicht zulässig.  
-  
- Ein paralleler `omp` -Bereich darf keine Inlineassemblyanweisungen enthalten.  
-  
- Im folgenden Beispiel wird C3011 generiert:  
-  
-```  
-// C3011.cpp  
-// compile with: /openmp  
-// processor: /x86  
-int main() {  
-   int   n = 0;  
-  
-   #pragma omp parallel  
-   {  
-      _asm mov eax, n   // Delete this line to resolve this error.  
-   }   // C3011  
-}  
+
+Eine Inlineassembly direkt innerhalb eines parallelen Bereichs ist nicht zulässig.
+
+Ein paralleler `omp` -Bereich darf keine Inlineassemblyanweisungen enthalten.
+
+Im folgenden Beispiel wird C3011 generiert:
+
+```
+// C3011.cpp
+// compile with: /openmp
+// processor: /x86
+int main() {
+   int   n = 0;
+
+   #pragma omp parallel
+   {
+      _asm mov eax, n   // Delete this line to resolve this error.
+   }   // C3011
+}
 ```

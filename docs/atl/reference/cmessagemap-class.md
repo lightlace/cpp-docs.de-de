@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be04510f7967b431b7e7c4a3b11aef6f51afe8d8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3f09347fdfaaf20e465e5be05ce446dfec449526
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763226"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024393"
 ---
 # <a name="cmessagemap-class"></a>CMessageMap-Klasse
 
@@ -80,22 +80,22 @@ virtual BOOL ProcessWindowMessage(
 
 ### <a name="parameters"></a>Parameter
 
-*hWnd*  
+*hWnd*<br/>
 [in] Das Handle für das Fenster mit dem Empfang der Nachricht.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Die Meldung, die an das Fenster gesendet wird.
 
-*wParam-Parameter*  
+*wParam-Parameter*<br/>
 [in] Zusätzliche meldungsspezifische Informationen.
 
-*lParam*  
+*lParam*<br/>
 [in] Zusätzliche meldungsspezifische Informationen.
 
-*lResult*  
+*lResult*<br/>
 [out] Das Ergebnis der Nachrichtenverarbeitung.
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Der Bezeichner der meldungszuordnung, die die Nachricht verarbeitet. Die Standard-meldungszuordnung, die mit deklariert [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), wird durch 0 identifiziert. Eine alternative meldungszuordnung, mit dem deklariert [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), wird durch identifiziert `msgMapID`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -108,7 +108,7 @@ Wird aufgerufen, durch die Fensterprozedur von einem [CContainedWindow](../../at
 
 ## <a name="see-also"></a>Siehe auch
 
-[CDynamicChain-Klasse](../../atl/reference/cdynamicchain-class.md)   
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
+[CDynamicChain-Klasse](../../atl/reference/cdynamicchain-class.md)<br/>
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

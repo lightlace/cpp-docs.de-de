@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e52f21eea272f34bdc6594dcdb8f57c8538ac50
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b516b3a2f1089408688a7db4d131b4569b733755
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761285"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017363"
 ---
 # <a name="catlwinmodule-class"></a>CAtlWinModule-Klasse
 
@@ -80,10 +80,10 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 
 ### <a name="parameters"></a>Parameter
 
-*pData*  
+*pData*<br/>
 Zeiger auf die `_AtlCreateWndData` Struktur initialisiert und auf das aktuelle Modul hinzugefügt werden.
 
-*pObject*  
+*pObject*<br/>
 Zeiger auf ein Objekt des **dies** Zeiger.
 
 ### <a name="remarks"></a>Hinweise
@@ -128,6 +128,6 @@ Gibt einen Zeiger auf die `_AtlCreateWndData` Struktur, die zuvor hinzugefügte 
 
 ## <a name="see-also"></a>Siehe auch
 
-[_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)   
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)   
+[_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)<br/>
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
 [Modulklassen](../../atl/atl-module-classes.md)

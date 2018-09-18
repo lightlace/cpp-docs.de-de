@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4183 generiert | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4183 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a271c12facaacdd07b4a664396c36c7301ac2f4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2753b8fc47de3363c38ed6ee4dedeaf8d085c485
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277471"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022435"
 ---
-# <a name="compiler-warning-level-1-c4183"></a>Compilerwarnung (Stufe 1) C4183 generiert
-'Bezeichner': Rückgabetyp fehlt; Angenommen, dass eine Memberfunktion, die Rückgabe von "Int" sein  
-  
- Die Inlinedefinition einer Memberfunktion in einer Klasse oder Struktur keinen Rückgabetyp. Diese Memberfunktion steht für ein Standardwert, der Rückgabetyp ist `int`.  
-  
- Im folgende Beispiel wird C4183 generiert:  
-  
-```  
-// C4183.cpp  
-// compile with: /W1 /c  
-#pragma warning(disable : 4430)  
-class MyClass1;  
-class MyClass2 {  
-   MyClass1() {};   // C4183  
-};  
+# <a name="compiler-warning-level-1-c4183"></a>Compilerwarnung (Stufe 1) C4183
+
+"Bezeichner": Rückgabetyp fehlt; davon ausgegangen, dass eine Memberfunktion, die "Int" zurückgibt
+
+Die Inlinedefinition einer Memberfunktion in einer Klasse oder Struktur muss einen Rückgabetyp nicht. Diese Memberfunktion wird als ein Standardwert, der Rückgabetyp ist `int`.
+
+Im folgende Beispiel wird die C4183 generiert:
+
+```
+// C4183.cpp
+// compile with: /W1 /c
+#pragma warning(disable : 4430)
+class MyClass1;
+class MyClass2 {
+   MyClass1() {};   // C4183
+};
 ```

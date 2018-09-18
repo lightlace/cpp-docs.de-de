@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C3446 | Microsoft Docs
+title: Compilerfehler C3446 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/21/2017
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a7715ebbc094c2c3c91aa3a0bb42f7df97bef08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a88bb77489d2596c271842e7becb0214d1af2821
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256999"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018862"
 ---
-# <a name="compiler-error-c3446"></a>Compilerfehler Fehler C3446  
-  
->"*Klasse*': eine Standard-Memberinitialisierer ist nicht zulässig, für einen Member einer Wertklasse  
-  
+# <a name="compiler-error-c3446"></a>Compilerfehler C3446
+
+>"*Klasse*": ein standardmemberinitialisierer ist für einen Member einer Wertklasse unzulässig
+
 In Visual Studio 2015 und früher, ließ der Compiler einen Standardmember-Initialisierer für einen Member einer Wertklasse zu, ignorierte diesen aber. Standardinitialisierung einer Wertklasse initialisiert die Elemente immer auf null; ein Standardkonstruktor ist nicht zulässig. In Visual Studio 2017 lösen Standardmember-Initialisierer einen Compilerfehler aus, wie im folgenden Beispiel gezeigt:
 
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C3446 in Visual Studio 2017 und höher:  
-  
-```cpp  
-// C3446.cpp  
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C3446 in Visual Studio 2017 und höher generiert:
+
+```cpp
+// C3446.cpp
 value struct V
 {
-       int i = 0; // error C3446: 'V::i': a default member initializer  
+       int i = 0; // error C3446: 'V::i': a default member initializer
                   // is not allowed for a member of a value class
-       int j {0}; // C3446           
+       int j {0}; // C3446
 };
-```  
-  
-Um den Fehler zu beheben, entfernen Sie den Initialisierer:  
-  
-```cpp  
-// C3446b.cpp  
+```
+
+Um den Fehler zu beheben, entfernen Sie den Initialisierer:
+
+```cpp
+// C3446b.cpp
 value struct V
 {
-       int i;  
+       int i;
        int j;
 };
-```  
-  
+```
+

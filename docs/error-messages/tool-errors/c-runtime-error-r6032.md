@@ -1,5 +1,5 @@
 ---
-title: C-Laufzeitfehler R6032 | Microsoft Docs
+title: C-Laufzeitfehler R6032 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f82690dd9b8f7c224db473b15627b632dcc96d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43155f24411fb5206a03d607f0551c2d34294aeb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297871"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024202"
 ---
 # <a name="c-runtime-error-r6032"></a>C-Laufzeitfehler R6032
-Nicht genügend Speicherplatz für Gebietsschemainformationen  
-  
+
+Nicht genügend Speicherplatz für Gebietsschema-Informationen
+
 > [!NOTE]
->  Wenn Sie diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app beendet, da es ein Problem des internen Speichers hat. Es gibt mehrere mögliche Ursachen für diesen Fehler, aber es ist häufig verursacht durch eine extrem wenig Arbeitsspeicher verfügbar oder durch einen Fehler im Programm.  
->   
->  Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:  
->   
->  -   Schließen Sie andere ausgeführte Programme, oder Neustart des Computers, um Arbeitsspeicher freizugeben.  
-> -   Verwenden der **Apps und Funktionen** oder **Programme und Funktionen** auf der Seite der **Systemsteuerung** reparieren oder neu installieren die Anwendung.  
-> -   Überprüfen Sie **Windows Update** in der **Systemsteuerung** für Softwareupdates.  
-> -   Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den Hersteller der app.  
-  
- **Informationen für Programmierer**  
-  
- Die Common Language Runtime verwaltet Informationen über das Gebietsschema in jedem Thread aus, sodass Aufrufe gebietsschemabezogene Funktionen verarbeitet werden können. Die Zuordnung des Arbeitsspeichers für diese Informationen fehlschlägt, ist der Laufzeit kann nicht fortgesetzt werden, da zu viele der grundlegenden Funktionen von ihm abhängig sind.
+>  Wenn diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app heruntergefahren, da sie ein Problem des internen Speicher verfügt. Es gibt mehrere mögliche Gründe für diesen Fehler, aber dies wird häufig verursacht durch eine extrem wenig Arbeitsspeicher verfügbar oder durch einen Fehler im Programm.
+>
+>  Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:
+>
+>  -   Anderen ausgeführten Anwendungen zu schließen, oder Neustart des Computers, um Arbeitsspeicher freizugeben.
+> -   Verwenden der **Apps und Features** oder **Programme und Funktionen** auf der Seite die **Systemsteuerung** zu reparieren oder installieren Sie das Programm neu.
+> -   Überprüfen Sie **Windows Update** in die **Systemsteuerung** für Softwareupdates.
+> -   Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den app-Anbieter.
+
+**Informationen für Programmierer**
+
+Die Common Language Runtime verwaltet Informationen über das Gebietsschema für jeden Thread, sodass sie Aufrufe von gebietsschemaabhängigen Funktionen verarbeiten kann. Wenn die Zuordnung des Arbeitsspeichers für diese Informationen fehlschlägt, ist die Runtime kann nicht fortgesetzt werden, weil zu viele der grundlegenden Funktionen, die davon abhängen.

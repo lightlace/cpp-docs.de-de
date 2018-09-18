@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4799d0b9c36ade8b1e203ca106605db75752b02f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f5a4d4c359fb4a90bfd25801f7c73f5bc4d7d501
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752814"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019470"
 ---
 # <a name="commandhandler"></a>CommandHandler
 
@@ -29,7 +29,7 @@ ms.locfileid: "43752814"
 
 ## <a name="syntax"></a>Syntax
 
-```  
+```cpp
 LRESULT CommandHandler(
     WORD wNotifyCode,  
     WORD wID,  
@@ -39,16 +39,16 @@ LRESULT CommandHandler(
 
 #### <a name="parameters"></a>Parameter
 
-*wNotifyCode schalten*  
+*wNotifyCode schalten*<br/>
 Der Benachrichtigungscode.
 
-*wID*  
+*wID*<br/>
 Der Bezeichner der dem Menüelement-Steuerelement oder Accelerator.
 
-*hWndCtl*  
+*hWndCtl*<br/>
 Ein Handle für ein Window-Steuerelement.
 
-*bHandled*  
+*bHandled*<br/>
 Die Zuordnung Nachrichtensätze *bHandled* auf "true", bevor Sie `CommandHandler` aufgerufen wird. Wenn `CommandHandler` ist nicht vollständig verarbeitet die Nachricht sollte *bHandled* auf "false", um anzugeben, die Nachricht noch weitere Verarbeitung erforderlich.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -61,7 +61,7 @@ Ein Beispiel für die Verwendung dieser Nachrichtenhandler in einer meldungszuor
 
 ## <a name="see-also"></a>Siehe auch
 
-[Implementieren eines Fensters](../atl/implementing-a-window.md)   
-[Meldungszuordnungen](../atl/message-maps-atl.md)   
+[Implementieren eines Fensters](../atl/implementing-a-window.md)<br/>
+[Meldungszuordnungen](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

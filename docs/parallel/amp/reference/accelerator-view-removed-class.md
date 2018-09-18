@@ -1,5 +1,5 @@
 ---
-title: Accelerator_view_removed-Klasse | Microsoft Docs
+title: Accelerator_view_removed-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0426dd44cfcb8f655f3981802dfe23adcd436a0d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f1c8963fee0fa7718c6ea8fe67904613b2dca8ad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688153"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020255"
 ---
 # <a name="acceleratorviewremoved-class"></a>accelerator_view_removed-Klasse
 Die Ausnahme, die ausgelöst wird, wenn ein zugrunde liegender DirectX-Aufruf aufgrund des Windows-TDR-Mechanismus (Timeout Detection and Recovery) fehlschlägt.  
@@ -77,11 +77,11 @@ explicit accelerator_view_removed(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Message`  
- Eine Beschreibung des Fehlers.  
+*_Nachricht*<br/>
+Eine Beschreibung des Fehlers.  
   
- `_View_removed_reason`  
- Ein HRESULT-Fehlercode, der angibt, der Ursache der Entfernung von der `accelerator_view` Objekt.  
+*_View_removed_reason*<br/>
+Ein HRESULT-Fehlercode, der angibt, der Ursache für das Entfernen der `accelerator_view` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Eine neue Instanz der Accelerator_view_removed-Klasse.  

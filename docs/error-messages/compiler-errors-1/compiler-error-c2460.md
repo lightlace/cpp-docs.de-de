@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2460 | Microsoft Docs
+title: Compilerfehler C2460 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4220be654f93ecd79d196efc14657ca7346411f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb2d85ffbc7aa799f0688fbb10021a04ef9455ad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197779"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022615"
 ---
 # <a name="compiler-error-c2460"></a>Compilerfehler C2460
-'Bezeichner1': verwendet "Bezeichner2", die definiert wird  
-  
- Eine Klasse oder Struktur (`identifier2`) wird als Mitglied von sich selbst deklariert (`identifier1`). Rekursive Definitionen von Klassen und Strukturen sind nicht zulässig.  
-  
- Im folgende Beispiel wird C2460 generiert:  
-  
-```  
-// C2460.cpp  
-class C {  
-   C aC;    // C2460  
-};  
-```  
-  
- Verwenden Sie stattdessen einen Zeigerverweis in der Klasse.  
-  
-```  
-// C2460.cpp  
-class C {  
-   C * aC;    // OK  
-};  
+
+'Bezeichner1': verwendet "Bezeichner2", die definiert wird
+
+Eine Klasse oder Struktur (`identifier2`) wird als Mitglied von sich selbst deklariert (`identifier1`). Rekursive Definitionen von Klassen und Strukturen sind nicht zulässig.
+
+Im folgende Beispiel wird die C2460 generiert:
+
+```
+// C2460.cpp
+class C {
+   C aC;    // C2460
+};
+```
+
+Verwenden Sie stattdessen einen Zeigerverweis in der Klasse.
+
+```
+// C2460.cpp
+class C {
+   C * aC;    // OK
+};
 ```

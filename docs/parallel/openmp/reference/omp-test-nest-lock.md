@@ -1,5 +1,5 @@
 ---
-title: Omp_test_nest_lock | Microsoft Docs
+title: Omp_test_nest_lock | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc1bc552de1ee781e4d1e87f4b1d0d49f080fdfa
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4fdc3f89f4f12873a10a1d66349c6ac9efd56f71
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691793"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017044"
 ---
 # <a name="omptestnestlock"></a>omp_test_nest_lock
-Versucht, eine Sperre omp_nest_lock_t festzulegen, jedoch nicht blockiert die Ausführung des Threads.  
+Versucht, eine omp_nest_lock_t-Sperre festzulegen, jedoch nicht die Ausführung des Threads blockiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,11 +34,10 @@ int omp_test_nest_lock(
 );  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- wobei  
+### <a name="parameters"></a>Parameter
   
- `lock`  
- Eine Variable vom Typ [aufgerufen](../../../parallel/openmp/reference/omp-nest-lock-t.md) , die mit initialisiert wurde [Omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md).  
+*lock*<br/>
+Eine Variable vom Typ [aufgerufen](../../../parallel/openmp/reference/omp-nest-lock-t.md) , die mit initialisiert wurde [Omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md).  
   
 ## <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [3.2.5 Omp_test_lock and Omp_test_nest_lock-Funktionen](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md).  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33b285cb55e04bcae2fd7f65ef5e94686e88e5e6
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: d7ee8fa674174d95c3e538889f6d5538be049b70
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208987"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020719"
 ---
 # <a name="taskgroup-class"></a>task_group-Klasse
 Die `task_group`-Klasse stellt eine Auflistung der parallelen Arbeit dar, auf die gewartet oder die abgebrochen werden kann.  
@@ -127,17 +127,17 @@ void run(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Function`  
- Der Typ des Funktionsobjekts, das aufgerufen wird, um den Text der Aufgabenhandle auszuführen.  
+*_Function*<br/>
+Der Typ des Funktionsobjekts, das aufgerufen wird, um den Text der Aufgabenhandle auszuführen.  
   
- `_Func`  
- Eine Funktion, die aufgerufen wird, um den Text der Aufgabe aufzurufen. Dies ist möglicherweise ein Lambda-Ausdruck oder ein anderes Objekt, das eine Version von den Funktionsaufrufoperator mit der Signatur unterstützt `void operator()()`.  
+*_Func*<br/>
+Eine Funktion, die aufgerufen wird, um den Text der Aufgabe aufzurufen. Dies ist möglicherweise ein Lambda-Ausdruck oder ein anderes Objekt, das eine Version von den Funktionsaufrufoperator mit der Signatur unterstützt `void operator()()`.  
   
- `_Placement`  
- Ein Verweis auf den Speicherort, in denen die Aufgabe, durch dargestellt, die `_Func` Parameter sollte ausgeführt werden.  
+*_Platzierung*<br/>
+Ein Verweis auf den Speicherort, in denen die Aufgabe, durch dargestellt, die `_Func` Parameter sollte ausgeführt werden.  
   
- `_Task_handle`  
- Ein Handle für die Arbeit geplant. Beachten Sie, dass der Aufrufer die Verantwortung für die Lebensdauer dieses Objekts verfügt. Die Laufzeit ist so lange Sie erwartet, bis entweder die Gültigkeitsdauer der `wait` oder `run_and_wait` für diese Methode aufgerufen wurde `task_group` Objekt.  
+*_Task_handle*<br/>
+Ein Handle für die Arbeit geplant. Beachten Sie, dass der Aufrufer die Verantwortung für die Lebensdauer dieses Objekts verfügt. Die Laufzeit ist so lange Sie erwartet, bis entweder die Gültigkeitsdauer der `wait` oder `run_and_wait` für diese Methode aufgerufen wurde `task_group` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Runtime plant, die bereitgestellte Arbeitsfunktion zu einem späteren Zeitpunkt ausgeführt werden kann, nachdem die aufrufende Funktion zurückgegeben wird. Diese Methode verwendet eine [Task_handle](task-handle-class.md) Objekt, das eine Kopie der bereitgestellte Arbeitsfunktion enthalten. Aus diesem Grund werden alle Zustandsänderungen, die in ein Funktionsobjekt auftreten, die Sie für diese Methode übergeben, in Ihrer Kopie des Funktionsobjekts nicht angezeigt. Darüber hinaus stellen Sie sicher, dass die Lebensdauer von Objekten, die Sie, Zeiger oder Verweis auf die Arbeitsfunktion übergeben gültig bleiben, bis die Arbeitsfunktion zurückgegeben.  
@@ -167,14 +167,14 @@ task_group_status run_and_wait(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Function`  
- Der Typ des Funktionsobjekts, das aufgerufen wird, um den Text der Aufgabe auszuführen.  
+*_Function*<br/>
+Der Typ des Funktionsobjekts, das aufgerufen wird, um den Text der Aufgabe auszuführen.  
   
- `_Task_handle`  
- Ein Handle für die Aufgabe, die Inline im aufrufenden Kontext ausgeführt wird. Beachten Sie, dass der Aufrufer die Verantwortung für die Lebensdauer dieses Objekts verfügt. Die Laufzeit ist so lange Sie erwartet, bis die Gültigkeitsdauer der `run_and_wait` -Methode die Ausführung beendet.  
+*_Task_handle*<br/>
+Ein Handle für die Aufgabe, die Inline im aufrufenden Kontext ausgeführt wird. Beachten Sie, dass der Aufrufer die Verantwortung für die Lebensdauer dieses Objekts verfügt. Die Laufzeit ist so lange Sie erwartet, bis die Gültigkeitsdauer der `run_and_wait` -Methode die Ausführung beendet.  
   
- `_Func`  
- Eine Funktion, die aufgerufen wird, um den Text der Arbeit aufzurufen. Dies ist möglicherweise ein Lambda-Ausdruck oder ein anderes Objekt, das eine Version von den Funktionsaufrufoperator mit der Signatur unterstützt `void operator()()`.  
+*_Func*<br/>
+Eine Funktion, die aufgerufen wird, um den Text der Arbeit aufzurufen. Dies ist möglicherweise ein Lambda-Ausdruck oder ein anderes Objekt, das eine Version von den Funktionsaufrufoperator mit der Signatur unterstützt `void operator()()`.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Anzeichen dafür, ob der Wartevorgang erfüllt wurde oder die Aufgabengruppe wurde, entweder eine explizite Abbruchvorgang oder eine Ausnahme ausgelöst wird, von einer der Tasks abgebrochen. Weitere Informationen finden Sie unter [Task_group_status](concurrency-namespace-enums.md#task_group_status).  
@@ -202,8 +202,8 @@ task_group(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_CancellationToken`  
- Ein Abbruchtoken, das diese Aufgabengruppe zugeordnet werden soll. Wenn das Token abgebrochen wird, wird die Aufgabengruppe abgebrochen werden.  
+*_CancellationToken*<br/>
+Ein Abbruchtoken, das diese Aufgabengruppe zugeordnet werden soll. Wenn das Token abgebrochen wird, wird die Aufgabengruppe abgebrochen werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Der Konstruktor, die ein Abbruchtoken akzeptiert erstellt eine `task_group` wird, die abgebrochen werden, wenn die Quelle mit dem Token verknüpften abgebrochen wird. Als explizites Abbruchtoken bereitstellen, werden auch diese Aufgabengruppe aus der Einbeziehung in einen impliziten Abbruch von einer übergeordneten Gruppe mit einem anderen Token "oder" kein Token isoliert.  

@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2192 | Microsoft Docs
+title: Compilerfehler C2192 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a97b0885dd626c992ab55703038838aa743e30d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d6cea2b4ce805c8f7d966ee9d2b3c27f8a901c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168697"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023513"
 ---
 # <a name="compiler-error-c2192"></a>Compilerfehler C2192
-Parameter 'Number'-Deklaration verschiedene  
-  
- Eine C-Funktion wurde ein zweites Mal mit einer anderen Parameterliste deklariert. C# unterstützt keine überladene Funktionen.  
-  
- Im folgende Beispiel wird C2192 generiert:  
-  
-```  
-// C2192.c  
-// compile with: /Za /c  
-void func( float, int );  
-void func( int, float );   // C2192, different parameter list  
-void func2( int, float );   // OK  
+
+verschiedene Parameter 'Number'-Deklaration
+
+Eine C-Funktion wurde ein zweites Mal mit einer anderen Parameterliste deklariert. C# unterstützt keine überladene Funktionen.
+
+Im folgende Beispiel wird die C2192 generiert:
+
+```
+// C2192.c
+// compile with: /Za /c
+void func( float, int );
+void func( int, float );   // C2192, different parameter list
+void func2( int, float );   // OK
 ```

@@ -25,14 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eca3e25e1476023ef4b7192efd2ffbd4170e88ca
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b90d89a5a9541f0c3c68efc8031e6cb1dd87ad84
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571390"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019028"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl-Klasse
+
 Stellt eine Implementierung der [ISessionProperties](/previous-versions/windows/desktop/ms713721\(v=vs.85\)) Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax
@@ -45,14 +46,16 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *T*  
- Abgeleitet von die Klasse `ISessionPropertiesImpl`.  
+
+*T*<br/>
+Abgeleitet von die Klasse `ISessionPropertiesImpl`.  
   
- *PropClass*  
- Eine mit benutzerdefinierbaren-Eigenschaftsklasse, die standardmäßig *T*.  
+*PropClass*<br/>
+Eine mit benutzerdefinierbaren-Eigenschaftsklasse, die standardmäßig *T*.  
 
 ## <a name="requirements"></a>Anforderungen  
- **Header:** „atldb.h“  
+
+**Header:** „atldb.h“  
   
 ## <a name="members"></a>Member  
   
@@ -64,9 +67,11 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 |[SetProperties](#setproperties)|Legt die Eigenschaften in der Eigenschaftengruppe Sitzung fest.|  
   
 ## <a name="remarks"></a>Hinweise  
- Eine erforderliche Schnittstelle für Sitzungen. Diese Klasse implementiert die Eigenschaften der leistungssitzung durch Aufrufen der statische Funktion definiert, die von der [Satz eigenschaftenzuordnung](../../data/oledb/begin-propset-map.md). Die Set-eigenschaftenzuordnung sollte in Ihrer Sitzungsklasse angegeben werden.  
+
+Eine erforderliche Schnittstelle für Sitzungen. Diese Klasse implementiert die Eigenschaften der leistungssitzung durch Aufrufen der statische Funktion definiert, die von der [Satz eigenschaftenzuordnung](../../data/oledb/begin-propset-map.md). Die Set-eigenschaftenzuordnung sollte in Ihrer Sitzungsklasse angegeben werden.  
   
 ## <a name="getproperties"></a> Isessionpropertiesimpl:: GetProperties
+
 Gibt die Liste der Eigenschaften in der `DBPROPSET_SESSION` Eigenschaftengruppe, die derzeit für die Sitzung festgelegt sind.  
   
 ### <a name="syntax"></a>Syntax  
@@ -79,9 +84,11 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. 
+
+Finden Sie unter [ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. 
 
 ## <a name="setproperties"></a> Isessionpropertiesimpl:: SetProperties
+
 Legt Eigenschaften fest, der `DBPROPSET_SESSION` Eigenschaftengruppe.  
   
 ### <a name="syntax"></a>Syntax  
@@ -92,8 +99,10 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+
+Finden Sie unter [ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

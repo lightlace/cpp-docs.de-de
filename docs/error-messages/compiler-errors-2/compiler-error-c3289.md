@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3289 | Microsoft Docs
+title: Compilerfehler C3289 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0564d3472c46e01bc9f45d2f5d85446db0bb2ff3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 185fc7d70a9510ce9caf252398b63dd3c59c1f7d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246593"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020211"
 ---
 # <a name="compiler-error-c3289"></a>Compilerfehler C3289
-"property": Eine trivial-Eigenschaft kann nicht indiziert werden  
-  
- Eine Eigenschaft wurde falsch deklariert. Für eine indizierte Eigenschaft müssen Accessoren definiert werden. Weitere Informationen finden Sie unter [property](../../windows/property-cpp-component-extensions.md) .  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C3289 generiert.  
-  
-```  
-// C3289.cpp  
-// compile with: /clr  
-public ref struct C {  
-   // user-defined simple indexer  
-   property int indexer1[int];   // C3289  
-  
-   // user-defined indexer  
-   property int indexer2[int] {  
-      int get(int i) { return 0; }  
-      void set(int i, int j) {}  
-   }  
-};  
-  
-int main() {  
-   C ^ MyC = gcnew C();  
-   MyC->indexer2[0] = 1;  
-}  
+
+"property": Eine trivial-Eigenschaft kann nicht indiziert werden
+
+Eine Eigenschaft wurde falsch deklariert. Für eine indizierte Eigenschaft müssen Accessoren definiert werden. Weitere Informationen finden Sie unter [property](../../windows/property-cpp-component-extensions.md) .
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C3289 generiert.
+
+```
+// C3289.cpp
+// compile with: /clr
+public ref struct C {
+   // user-defined simple indexer
+   property int indexer1[int];   // C3289
+
+   // user-defined indexer
+   property int indexer2[int] {
+      int get(int i) { return 0; }
+      void set(int i, int j) {}
+   }
+};
+
+int main() {
+   C ^ MyC = gcnew C();
+   MyC->indexer2[0] = 1;
+}
 ```

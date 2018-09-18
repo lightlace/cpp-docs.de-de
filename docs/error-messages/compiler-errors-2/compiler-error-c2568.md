@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2568 | Microsoft Docs
+title: Compilerfehler C2568 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 480d0ba97417476b192a962321ff4e9d0d18a617
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a9d03f0dd5a1d7029028b7e5f0d17a5e90e2891
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228733"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021656"
 ---
 # <a name="compiler-error-c2568"></a>Compilerfehler C2568
-'Bezeichner1': kann nicht funktionsüberladungen aufgelöst werden  
-  
- Der Compiler ermitteln nicht der aufzurufenden Funktion überladen. Die tatsächlichen, an die Funktion übergebene Parameter entsprechend der formalen Parameter für eine der überladenen Funktionen umgewandelt werden müssen, aber keine Übereinstimmung ist eindeutig besser als alle anderen.
+
+'Bezeichner1': kann nicht auf die Auflösung der funktionsüberladung
+
+Der Compiler ermitteln nicht, die überladene Funktion aufgerufen. Die tatsächlichen Parameter an die Funktion übergeben müssen entsprechend der formalen Parameter für eine der überladenen Funktionen umgewandelt werden, aber keine Übereinstimmung eindeutig besser als alle anderen ist.

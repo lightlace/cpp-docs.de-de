@@ -1,5 +1,5 @@
 ---
-title: 'NMAKE: Schwerwiegender Fehler U1035 | Microsoft Docs'
+title: 'NMAKE: Schwerwiegender Fehler U1035 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bb32f815345b933ad6a65a0c8c1ec8ad59cbe81
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0383bf4742d637d669070efa5370ebda0c7ab159
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322795"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019860"
 ---
 # <a name="nmake-fatal-error-u1035"></a>NMAKE: Schwerwiegender Fehler U1035
-Syntaxfehler: erwartet ':' oder '=' Trennzeichen  
-  
- Entweder einen Doppelpunkt (**:**) oder ein Gleichheitszeichen (**=**) wurde erwartet.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:  
-  
-1.  Ein Ziel folgte kein Doppelpunkt.  
-  
-2.  Einem Doppelpunkt und ohne Leerzeichen (z. B. a:) folgt ein Ziel mit einem Buchstaben. NMAKE, die sie als eine Laufwerksangabe interpretiert.  
-  
-3.  Eine Rückschlussregel folgte kein Doppelpunkt.  
-  
-4.  Eine Makrodefinition wurde nicht von einem Gleichheitszeichen gefolgt werden.  
-  
-5.  Ein Zeichen gefolgt von einem umgekehrten Schrägstrich (**\\**), um einen Befehl aus, um eine neue Zeile zu fortfahren verwendet wurde.  
-  
-6.  Eine Zeichenfolge angezeigt, die keine NMAKE Syntaxregel folgen.  
-  
-7.  Makefile wurde von einem Textverarbeitungsprogramm formatiert.
+
+Syntaxfehler: erwartet ':' oder '=' Trennzeichen
+
+Entweder ein Doppelpunkt (**:**) oder ein Gleichheitszeichen (**=**) wurde erwartet.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:
+
+1. Ein Doppelpunkt folgen kein Ziel.
+
+1. Folgen ein Ziel mit einem Buchstaben, einem Doppelpunkt und ohne Leerzeichen (z. B. a:). NMAKE, die sie als eine Laufwerkangabe interpretiert.
+
+1. Ein Doppelpunkt nicht auf eine Rückschlussregel folgen.
+
+1. Eine Makrodefinition wurde nicht durch ein Gleichheitszeichen gefolgt.
+
+1. Ein Zeichen gefolgt von einem umgekehrten Schrägstrich (**\\**), die zum Fortsetzen eines Befehls in eine neue Zeile verwendet wurde.
+
+1. Eine Zeichenfolge angezeigt, die keine NMAKE Syntaxregel folgen.
+
+1. Das Makefile wurde durch ein Textverarbeitungsprogramm formatiert.

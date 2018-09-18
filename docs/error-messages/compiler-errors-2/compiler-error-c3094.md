@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3094 | Microsoft Docs
+title: Compilerfehler C3094 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac2b5cfee828d05137c1ad9b8bc2756d3bf06512
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6c114a81904962a6986b33b3c634ed6611d79179
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249796"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016689"
 ---
 # <a name="compiler-error-c3094"></a>Compilerfehler C3094
-"Attribut": Eine anonyme Verwendung ist nicht zulässig.  
-  
- Ein Attribut wurde nicht ordnungsgemäß festgelegt.  Weitere Informationen finden Sie unter [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C3094 generiert.  
-  
-```  
-// C3094.cpp  
-// compile with: /clr /c  
-using namespace System;  
-[AttributeUsage(AttributeTargets::Class)]  
-public ref class AAttribute : Attribute {};  
-  
-[A];   // C3094  
-  
-// OK  
-[A]  
-ref class x{};  
+
+"Attribut": Eine anonyme Verwendung ist nicht zulässig.
+
+Ein Attribut wurde nicht ordnungsgemäß festgelegt.  Weitere Informationen finden Sie unter [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C3094 generiert.
+
+```
+// C3094.cpp
+// compile with: /clr /c
+using namespace System;
+[AttributeUsage(AttributeTargets::Class)]
+public ref class AAttribute : Attribute {};
+
+[A];   // C3094
+
+// OK
+[A]
+ref class x{};
 ```

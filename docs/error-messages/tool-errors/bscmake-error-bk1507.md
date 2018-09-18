@@ -1,5 +1,5 @@
 ---
-title: BSCMAKE-Fehler BK1507 | Microsoft Docs
+title: BSCMAKE-Fehler BK1507 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce8f7b931f81d53dd156f8442994229f20d4bc9d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34352b35c1938e2374666a00777d4a125982006f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294985"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024787"
 ---
 # <a name="bscmake-error-bk1507"></a>BSCMAKE-Fehler BK1507
-temporäre Datei "Dateiname" kann nicht geöffnet werden [: Grund]  
-  
- BSCMAKE kann eine temporäre Datei nicht öffnen.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:  
-  
-1.  Die **TMP** -Umgebungsvariable ist nicht auf ein gültiges Laufwerk und Verzeichnis festgelegt.  
-  
-2.  Ein voller Datenträger.
+
+temporäre Datei "Dateiname" kann nicht geöffnet werden. [: Grund]
+
+BSCMAKE kann eine temporäre Datei nicht öffnen.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:
+
+1. Die **TMP** Umgebungsvariable ist nicht auf ein gültiges Laufwerk und Verzeichnis festgelegt.
+
+1. Ein voller Datenträger.

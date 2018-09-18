@@ -1,5 +1,5 @@
 ---
-title: auto_handle::auto_handle | Microsoft Docs
+title: auto_handle::auto_handle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: af9ca3d472aa3c942b86d338a6b6f8f25a573ca8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67cc2393feff127e2b4278f5a5257ea2be102237
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104431"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018599"
 ---
 # <a name="autohandleautohandle"></a>auto_handle::auto_handle
 Die `auto_handle` Konstruktor.  
@@ -47,11 +47,11 @@ auto_handle(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `_ptr`  
- Das Objekt als Besitzer.  
+*_ptr*<br/>
+Das Objekt als Besitzer.  
   
- `_right`  
- Ein vorhandener `auto_handle`.  
+*_Right*<br/>
+Ein vorhandener `auto_handle`.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -124,6 +124,6 @@ done
  **Namespace** Msclr  
   
 ## <a name="see-also"></a>Siehe auch  
- [Auto_handle-Member](../dotnet/auto-handle-members.md)   
+ [Auto_handle-Members](../dotnet/auto-handle-members.md)   
  [auto_handle::Operator =](../dotnet/auto-handle-operator-assign.md)   
  [auto_handle::~auto_handle](../dotnet/auto-handle-tilde-auto-handle.md)

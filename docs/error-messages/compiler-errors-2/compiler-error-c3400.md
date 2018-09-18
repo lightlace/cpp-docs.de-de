@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3400 | Microsoft Docs
+title: Compilerfehler C3400 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 918b0e2198df68a6748166c13a492dadb45e2ede
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 35231ffda3a072b0720acc4c866dd2e3684c88fb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258344"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024553"
 ---
 # <a name="compiler-error-c3400"></a>Compilerfehler C3400
-Zirkuläre Einschränkungsabhängigkeit mit „constraint_1“ und „constraint_2“  
-  
- Der Compiler hat zirkuläre Einschränkungen erkannt.  
-  
- Weitere Informationen finden Sie unter [Einschränkungen für generische Typparameter (C + c++ / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C3400 generiert:  
-  
-```  
-// C3400.cpp  
-// compile with: /clr /c  
-generic<class T, class U>  
-where T : U  
-where U : T   // C3400  
-public ref struct R {};  
+
+Zirkuläre Einschränkungsabhängigkeit mit „constraint_1“ und „constraint_2“
+
+Der Compiler hat zirkuläre Einschränkungen erkannt.
+
+Weitere Informationen finden Sie unter [Einschränkungen für generische Typparameter (C++ / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C3400 generiert:
+
+```
+// C3400.cpp
+// compile with: /clr /c
+generic<class T, class U>
+where T : U
+where U : T   // C3400
+public ref struct R {};
 ```

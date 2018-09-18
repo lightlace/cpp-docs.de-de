@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d30778524f692e19ffad205dc693dd5afd294c25
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6fb3febbbaffc7c3a0de945fc9d30b544fd22188
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757987"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023305"
 ---
 # <a name="server-registration-global-functions"></a>Globale Funktionen für Server-Registrierung
 
@@ -57,13 +57,13 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
 
 ### <a name="parameters"></a>Parameter
 
-*pComModule*  
+*pComModule*<br/>
 Zeiger auf die COM-Modul.
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 True, wenn die Typbibliothek registriert werden.
 
-*pCLSID*  
+*pCLSID*<br/>
 Zeigt auf die CLSID des Objekts, das registriert werden. Wenn der Wert NULL ist, werden alle Objekte in der objektzuordnung registriert werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -89,13 +89,13 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
 
 ### <a name="parameters"></a>Parameter
 
-*pComModule*  
+*pComModule*<br/>
 Zeiger auf die COM-Modul.
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 True, wenn die Typbibliothek registriert werden.
 
-*pCLSID*  
+*pCLSID*<br/>
 Zeigt auf die CLSID des Objekts, das nicht aufgehoben werden. Wenn der Wert NULL werden alle Objekte in der objektzuordnung aufgehoben werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -121,13 +121,13 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 
 ### <a name="parameters"></a>Parameter
 
-*pComModule*  
+*pComModule*<br/>
 Zeiger auf die COM-Modul.
 
-*dwClsContext*  
+*dwClsContext*<br/>
 Gibt den Kontext, in dem das Klassenobjekt ist, ausgeführt werden. Mögliche Werte sind CLSCTX_INPROC_SERVER CLSCTX_INPROC_HANDLER oder CLSCTX_LOCAL_SERVER. Finden Sie unter [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) Weitere Details.
 
-*dwFlags*  
+*dwFlags*<br/>
 Bestimmt die Art der Verbindung mit dem Klassenobjekt. Mögliche Werte sind REGCLS_SINGLEUSE REGCLS_MULTIPLEUSE oder REGCLS_MULTI_SEPARATE. Finden Sie unter [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) Weitere Details.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -148,7 +148,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 
 ### <a name="parameters"></a>Parameter
 
-*pComModule*  
+*pComModule*<br/>
 Zeiger auf die COM-Modul.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -173,16 +173,16 @@ ATLINLINE ATLAPI AtlComModuleGetClassObject(
 
 ### <a name="parameters"></a>Parameter
 
-*pComModule*  
+*pComModule*<br/>
 Zeiger auf die COM-Modul.
 
-*rclsid*  
+*rclsid*<br/>
 Die CLSID des Objekts erstellt werden.
 
-*riid*  
+*riid*<br/>
 Die IID der angeforderten Schnittstelle.
 
-*ppv*  
+*ppv*<br/>
 Ein Zeiger auf den Schnittstellenzeiger vom *Riid*. Wenn das Objekt nicht über diese Schnittstelle unterstützt *Ppv* auf NULL festgelegt ist.
 
 ### <a name="return-value"></a>Rückgabewert

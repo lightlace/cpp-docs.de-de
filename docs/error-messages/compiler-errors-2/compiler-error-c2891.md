@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2891 | Microsoft Docs
+title: Compilerfehler C2891 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01741d1cc67f0045c46ab392212625b9e1a2d8ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86d81662cb02fa3c8f6af75009daf4dab9b70196
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246369"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016558"
 ---
 # <a name="compiler-error-c2891"></a>Compilerfehler C2891
-'Parameter': die Adresse eines Vorlagenparameters nicht übernehmen  
-  
- Die Adresse eines Vorlagenparameters nicht akzeptiert werden, es sei denn, es sich um ein Lvalue ist. Typparameter sind nicht Lvalues, da sie keine Adresse besitzen. Nichttyp-Werte in Vorlagenparameterlisten, die nicht Lvalues sind auch eine Adresse keine. Dies ist ein Beispiel für Code, der bewirkt, Compilerfehler C2891 dass, weil der Wert mit dem Vorlagenparameter übergeben eine vom Compiler generierte Kopie das Vorlagenargument.  
-  
-```  
-template <int i> int* f() { return &i; }  
-```  
-  
- Vorlagenparameter, die Lvalues, z. B. Verweistypen sind, kann ihre Adresse übernommen werden.  
-  
-```  
-template <int& r> int* f() { return &r; }  
-```  
-  
- Um diesen Fehler zu beheben, führen Sie nicht die Adresse eines Vorlagenparameters, wenn es sich um ein Lvalue ist.
+
+'Parameter': die Adresse eines Vorlagenparameters nicht übernehmen
+
+Sie können nicht die Adresse eines Vorlagenparameters übernehmen, wenn es sich um einen l-Wert ist. Typparameter sind nicht Lvalues, da sie keine Adresse aufweisen. Nichttyp-Werte in Vorlagenparameterlisten, die nicht Lvalues sind müssen sich auch nicht auf eine Adresse aus. Dies ist ein Beispiel für Code, der bewirkt, Compilerfehler C2891 dass, weil der Wert als den Vorlagenparameter übergeben eine vom Compiler generierte Kopie der Template-Argument.
+
+```
+template <int i> int* f() { return &i; }
+```
+
+Vorlagenparameter, die l-Werte, z. B. Verweistypen sind, kann ihre Adresse erstellt haben.
+
+```
+template <int& r> int* f() { return &r; }
+```
+
+Um diesen Fehler zu beheben, nehmen Sie nicht die Adresse eines Vorlagenparameters, wenn es sich um einen l-Wert ist.

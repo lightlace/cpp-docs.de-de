@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2886 | Microsoft Docs
+title: Compilerfehler C2886 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1472c475a89fc219f8fe94fdbc69ae7c8a176f24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 271ee8341cb5faa033d3fb5ec3238f36975c3531
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243462"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023578"
 ---
 # <a name="compiler-error-c2886"></a>Compilerfehler C2886
-'class:: Identifier': Symbol kann nicht in der using-Deklaration eines Elements verwendet werden  
-  
- Ein `using` Deklaration verwendet ein Symbol, z. B. einen Namespacenamen an. Ein `using` Deklaration für Member der Basisklasse deklariert ist.  
-  
- Im folgende Beispiel wird C2886 generiert:  
-  
-```  
-// C2886.cpp  
-// compile with: /c  
-namespace Z {  
-    int i;  
-}  
-  
-class B {  
-protected:  
-    int i;  
-};  
-  
-class D : public B {  
-    // Error: Z is a namespace  
-    using Z::i;   // C2886  
-  
-    // OK: B is a base class  
-    using B::i;  
-};  
+
+'class:: Identifier': Symbol kann nicht in eine Member-using-Deklaration verwendet werden
+
+Ein `using` Deklaration verwendet ein Symbol an, wie z. B. einen Namespacenamen an. Ein `using` Deklaration ist für das Deklarieren von Member der Basisklasse.
+
+Im folgende Beispiel wird die C2886 generiert:
+
+```
+// C2886.cpp
+// compile with: /c
+namespace Z {
+    int i;
+}
+
+class B {
+protected:
+    int i;
+};
+
+class D : public B {
+    // Error: Z is a namespace
+    using Z::i;   // C2886
+
+    // OK: B is a base class
+    using B::i;
+};
 ```

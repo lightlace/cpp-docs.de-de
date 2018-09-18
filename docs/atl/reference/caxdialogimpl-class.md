@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 965aa7256fadd00d2ef435b6df64467460322991
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a22b04bd0a362824e20621eaa7f66cafd0e55cf5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753057"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024501"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl-Klasse
 
@@ -44,16 +44,16 @@ Diese Klasse implementiert ein Dialogfeld (gebunden oder ungebunden), die Active
 ## <a name="syntax"></a>Syntax
 
 ```
-template <class T, class TBase = CWindow>  
+template <class T, class TBase = CWindow>
 class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Abgeleitet von die Klasse `CAxDialogImpl`.
 
-*TBase*  
+*TBase*<br/>
 Die Basis-Fensterklasse für `CDialogImplBaseT`.
 
 ## <a name="members"></a>Member
@@ -121,7 +121,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 
 ### <a name="parameters"></a>Parameter
 
-*bAdvise*  
+*bAdvise*<br/>
 Festgelegt auf "true", wenn alle Senke Einträge darüber informiert zu werden. False, wenn alle Senke-Einträge sind, sich abzumelden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -139,13 +139,13 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
 
 ### <a name="parameters"></a>Parameter
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Das Handle für das besitzende Fenster.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Gibt den Wert zu übergeben, um das Dialogfeld in der *lParam* -Parameter der WM_INITDIALOG-Meldung.
 
-*RECT &AMP;*  
+*RECT &AMP;*<br/>
 Dieser Parameter wird nicht verwendet. Dieser Parameter wird übergeben, indem `CComControl`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -180,16 +180,16 @@ Rufen Sie diese Methode, um ein modales Dialogfeld zu erstellen.
 
 ```
 INT_PTR DoModal(
-    HWND hWndParent = ::GetActiveWindow(), 
+    HWND hWndParent = ::GetActiveWindow(),
     LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Das Handle für das besitzende Fenster. Der Standardwert ist der Rückgabewert von der [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) Win32-Funktion.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Gibt den Wert zu übergeben, um das Dialogfeld in der *lParam* -Parameter der WM_INITDIALOG-Meldung.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -212,7 +212,7 @@ BOOL EndDialog(int nRetCode);
 
 ### <a name="parameters"></a>Parameter
 
-*nRetCode*  
+*nRetCode*<br/>
 [in] Der Wert, der von zurückgegeben werden [DoModal](#domodal).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -264,7 +264,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 
 ### <a name="parameters"></a>Parameter
 
-*pMsg*  
+*pMsg*<br/>
 Zeiger auf eine [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) -Struktur, die der Nachricht, die überprüft werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -285,5 +285,5 @@ bool m_bModal;
 
 ## <a name="see-also"></a>Siehe auch
 
-[CDialogImpl-Klasse](../../atl/reference/cdialogimpl-class.md)   
+[CDialogImpl-Klasse](../../atl/reference/cdialogimpl-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)
