@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 700c88fa71e82e35602efef768fc5753760a5e1a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bc930fdc142dc7b044b4dbd60cfd459b7ce52aea
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593479"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709142"
 ---
 # <a name="generic-functions-ccli"></a>Generische Funktionen (C++/CLI)
 
@@ -63,11 +63,11 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>Parameter
 
-*Attribute* (Optional)  
-Zusätzliche deklarative Informationen. Weitere Informationen zu Attributen und Attributklassen finden Sie unter "Attribute".
+*Attribute*  
+(Optional) Zusätzliche deklarative Informationen. Weitere Informationen zu Attributen und Attributklassen finden Sie unter "Attribute".
 
-*Modifizierer* (Optional)  
-Ein Modifizierer für die Funktion, wie z. B. statische.  **virtuelle** ist nicht zulässig, da virtuelle Methoden nicht generisch sein können.
+*Modifizierer*  
+(Optional) Ein Modifizierer für die Funktion, wie z. B. statische.  **virtuelle** ist nicht zulässig, da virtuelle Methoden nicht generisch sein können.
 
 *Rückgabetyp*  
 Der Typ, der von der Methode zurückgegeben wird. Wenn der Rückgabetyp "void" ist, muss keinen Wert zurückgibt.
@@ -78,8 +78,8 @@ Der Funktionsname.
 *Typparameter Bezeichner*  
 Liste der durch Trennzeichen getrennte IDs.
 
-*Formal-Parameters* (Optional)  
-Parameterliste.
+*Formal-parameters*  
+(Optional) Parameterliste.
 
 *Type-Parameter-Einschränkungen-Klauseln*  
 Dies gibt die Einschränkungen für die Typen, die als Typargumente verwendet werden können, und nimmt die Form, die im angegebenen [Einschränkungen für generische Typparameter (C++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f2bf81c2e69290feb9f9afd054286c10e42d0be
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c3a9088ced647dd0e6694181cd7ab7857047c720
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338752"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713279"
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager-Klasse
 Die `CContextMenuManager` Objekt verwaltet Kontextmenüs, die auch als Verknüpfungsmenüs bezeichnet.  
@@ -115,14 +115,14 @@ BOOL AddMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiMenuNameResId*  
- Ein Ressourcen-ID für eine Zeichenfolge, die den Namen für das neue Menü enthält.  
+*uiMenuNameResId*<br/>
+[in] Ein Ressourcen-ID für eine Zeichenfolge, die den Namen für das neue Menü enthält.  
   
- [in] *UiMenuResId*  
- Die Menü-Ressourcen-ID.  
+*uiMenuResId*<br/>
+[in] Die Menü-Ressourcen-ID.  
   
- [in] *Wert*  
- Eine Zeichenfolge, die den Namen für das neue Menü enthält.  
+*Wert*<br/>
+[in] Eine Zeichenfolge, die den Namen für das neue Menü enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn die Methode erfolgreich war; 0, wenn die Methode fehlschlägt.  
@@ -148,8 +148,8 @@ HMENU GetMenuById(UINT nMenuResId) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nMenuResId*  
- Die Ressourcen-ID für das Menü.  
+*nMenuResId*<br/>
+[in] Die Ressourcen-ID für das Menü.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Handle für das zugeordnete Menü oder `NULL` Wenn das Menü "nicht gefunden wird.  
@@ -164,11 +164,11 @@ HMENU GetMenuByName(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Wert*  
- Eine Zeichenfolge, die den Namen des abzurufenden Menüs enthält.  
+*Wert*<br/>
+[in] Eine Zeichenfolge, die den Namen des abzurufenden Menüs enthält.  
   
- [out] *PuiOrigResID*  
- Ein Zeiger auf eine "uint". Dieser Parameter enthält die Ressourcen-ID des angegebenen Menüs auf, wenn gefunden.  
+*puiOrigResID*<br/>
+[out] Ein Zeiger auf eine "uint". Dieser Parameter enthält die Ressourcen-ID des angegebenen Menüs auf, wenn gefunden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Handle für das Menü, das mit dem Namen übereinstimmt, die von angegeben wurde *Wert*. NULL, wenn es kein Menü ist *Wert*.  
@@ -184,8 +184,8 @@ void GetMenuNames(CStringList& listOfNames) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *ListOfNames*  
- Ein Verweis auf eine [CStringList](../../mfc/reference/cstringlist-class.md) Parameter. Diese Methode schreibt die Liste der Menünamen für diesen Parameter an.  
+*listOfNames*<br/>
+[out] Ein Verweis auf eine [CStringList](../../mfc/reference/cstringlist-class.md) Parameter. Diese Methode schreibt die Liste der Menünamen für diesen Parameter an.  
   
 ##  <a name="loadstate"></a>  CContextMenuManager::LoadState  
  Lädt die Informationen im Zusammenhang mit der [CContextMenuManager-Klasse](../../mfc/reference/ccontextmenumanager-class.md) aus der Windows-Registrierung.  
@@ -195,8 +195,8 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- Eine Zeichenfolge, die den relativen Pfad eines Registrierungsschlüssels enthält.  
+*lpszProfileName*<br/>
+[in] Eine Zeichenfolge, die den relativen Pfad eines Registrierungsschlüssels enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn die Methode erfolgreich ist; andernfalls 0.  
@@ -227,8 +227,8 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- Eine Zeichenfolge, die den relativen Pfad eines Registrierungsschlüssels enthält.  
+*lpszProfileName*<br/>
+[in] Eine Zeichenfolge, die den relativen Pfad eines Registrierungsschlüssels enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn die Methode erfolgreich ist; andernfalls 0.  
@@ -246,8 +246,8 @@ void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bSet*  
- Ein boolescher Parameter, der steuert, ob die aktive Popupmenü geschlossen. Der Wert "true" gibt an, dass die aktive Popupmenü nicht geschlossen ist. FALSE gibt an, dass die aktive Popupmenü geschlossen wird.  
+*bSet*<br/>
+[in] Ein boolescher Parameter, der steuert, ob die aktive Popupmenü geschlossen. Der Wert "true" gibt an, dass die aktive Popupmenü nicht geschlossen ist. FALSE gibt an, dass die aktive Popupmenü geschlossen wird.  
   
 ### <a name="remarks"></a>Hinweise  
  In der Standardeinstellung die `CContextMenuManager` schließt die aktive Popupmenü.  
@@ -276,29 +276,29 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiMenuResId*  
- Die Ressourcen-ID des Menüs, das diese Methode angezeigt wird.  
+*uiMenuResId*<br/>
+[in] Die Ressourcen-ID des Menüs, das diese Methode angezeigt wird.  
   
- [in] *x*  
- Der horizontale offset für das Kontextmenü in Clientkoordinaten.  
+*w*<br/>
+[in] Der horizontale offset für das Kontextmenü in Clientkoordinaten.  
   
- [in] *y*  
- Der vertikale Offset für das Kontextmenü in Clientkoordinaten  
+*y*<br/>
+[in] Der vertikale Offset für das Kontextmenü in Clientkoordinaten  
   
- [in] *pWndOwner*  
- Ein Zeiger auf das übergeordnete Fenster des Kontextmenüs.  
+*pWndOwner*<br/>
+[in] Ein Zeiger auf das übergeordnete Fenster des Kontextmenüs.  
   
- [in] *bOwnMessage*  
- Ein boolescher Parameter, der angibt, wie Nachrichten weitergeleitet werden. Wenn *bOwnMessage* ist "false" "," standard-MFC routing verwendet wird. Andernfalls *pWndOwner* empfängt die Nachrichten.  
+*bOwnMessage*<br/>
+[in] Ein boolescher Parameter, der angibt, wie Nachrichten weitergeleitet werden. Wenn *bOwnMessage* ist "false" "," standard-MFC routing verwendet wird. Andernfalls *pWndOwner* empfängt die Nachrichten.  
   
- [in] *HmenuPopup*  
- Das Handle des Menüs, das diese Methode angezeigt wird.  
+*hmenuPopup*<br/>
+[in] Das Handle des Menüs, das diese Methode angezeigt wird.  
   
- [in] *bAutoDestroy*  
- Ein boolescher Parameter, der angibt, ob das Menü automatisch zerstört wird.  
+*bAutoDestroy*<br/>
+[in] Ein boolescher Parameter, der angibt, ob das Menü automatisch zerstört wird.  
   
- [in] *bRightAlign*  
- Ein boolescher Parameter, der angibt, wie die Menüelemente ausgerichtet werden. Wenn *bRightAlign* ist "true", klicken Sie im Menü ist für rechts-nach-Links-Lesefolge rechtsbündig ausgerichtet.  
+*bRightAlign*<br/>
+[in] Ein boolescher Parameter, der angibt, wie die Menüelemente ausgerichtet werden. Wenn *bRightAlign* ist "true", klicken Sie im Menü ist für rechts-nach-Links-Lesefolge rechtsbündig ausgerichtet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn die Methode klicken Sie im Menü zeigt, die erfolgreich, gibt die erste methodenüberladung zurück. andernfalls 0. Die zweite methodenüberladung gibt einen Zeiger auf [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) , wenn die Verknüpfung wird ordnungsgemäß; andernfalls NULL.  
@@ -321,20 +321,20 @@ virtual UINT TrackPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *HmenuPopup*  
- Das Handle des Kontextmenüs, die diese Methode zeigt.  
+*hmenuPopup*<br/>
+[in] Das Handle des Kontextmenüs, die diese Methode zeigt.  
   
- [in] *x*  
- Der horizontale offset für das Kontextmenü in Clientkoordinaten.  
+*w*<br/>
+[in] Der horizontale offset für das Kontextmenü in Clientkoordinaten.  
   
- [in] *y*  
- Der vertikale offset für das Kontextmenü in Clientkoordinaten.  
+*y*<br/>
+[in] Der vertikale offset für das Kontextmenü in Clientkoordinaten.  
   
- [in] *pWndOwner*  
- Ein Zeiger auf das übergeordnete Fenster des Kontextmenüs.  
+*pWndOwner*<br/>
+[in] Ein Zeiger auf das übergeordnete Fenster des Kontextmenüs.  
   
- [in] *bRightAlign*  
- Ein boolescher Parameter, der angibt, wie Menüelemente ausgerichtet werden. Wenn *bRightAlign* ist "true", klicken Sie im Menü ist für rechts-nach-Links-Lesefolge rechtsbündig ausgerichtet. Wenn *bRightAlign* ist "false", klicken Sie im Menü wird für Links-nach-rechts-Lesefolge linksbündig ausgerichtet.  
+*bRightAlign*<br/>
+[in] Ein boolescher Parameter, der angibt, wie Menüelemente ausgerichtet werden. Wenn *bRightAlign* ist "true", klicken Sie im Menü ist für rechts-nach-Links-Lesefolge rechtsbündig ausgerichtet. Wenn *bRightAlign* ist "false", klicken Sie im Menü wird für Links-nach-rechts-Lesefolge linksbündig ausgerichtet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Menübefehl-ID des Befehls, der der Benutzer auswählt; 0, wenn der Benutzer im Kontextmenü den Befehl schließt, ohne einen Menübefehl auszuwählen.  

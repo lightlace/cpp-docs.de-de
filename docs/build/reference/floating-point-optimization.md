@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 082cd3a7721f1bc72899130159b724b292e5e217
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6208e425ce4a2e1b5738932b8acaf6b11b7db24b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595047"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706679"
 ---
 # <a name="microsoft-visual-c-floating-point-optimization"></a>Microsoft Visual C++-Gleitkomma-Optimierung
 
@@ -757,7 +757,6 @@ float sum = f1 + f2;
 Diese Art von zusätzlichen Rundung möglicherweise verwenden Sie eine niedrigere Genauigkeit Gleitkommaeinheit, z. B. SSE2, um einige der intermediate Berechnungen durchzuführen. Daher ist die Genauigkeit der Rundung der fp: fast Plattform abhängig; Code, der auch für einen Prozessor kompiliert, funktioniert möglicherweise nicht unbedingt gut für einen anderen Prozessor. Es wird dem Benutzer überlassen, um festzustellen, ob die Vorteile der Geschwindigkeit Genauigkeit Probleme überwiegen.
 
 Wenn fp: fast-Optimierung für eine bestimmte Funktion besonders problematisch ist, der Gleitkomma-Modus umgestellt werden kann lokal fp: präzise mithilfe der `float_control` Compiler-Pragma.
-
 
 ### <a name="algebraic-transformations-under-fpfast"></a>Algebraische Transformationen unter fp: fast
 

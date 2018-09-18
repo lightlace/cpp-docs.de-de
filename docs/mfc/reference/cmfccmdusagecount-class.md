@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44172ffdf7985b7ab304e232eb03b859313df6bc
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a1e28b9c28823e77244bc6e686db163e5110a8fa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853763"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719965"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount-Klasse
 Überwacht die Verwendungsanzahl der Windows-Meldungen, z. B. wenn der Benutzer ein Element in einem Menü auswählt.  
@@ -104,7 +104,7 @@ void AddCmd(UINT uiCmd);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *UiCmd*|Gibt an, der Befehl Zähler erhöht.|  
+|*uiCmd*|[in] Gibt an, der Befehl Zähler erhöht.|  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode fügt einen neuen Eintrag der Map-Struktur des Befehls Anzahl, `m_CmdUsage`, wenn der Eintrag nicht bereits vorhanden ist.  
@@ -129,7 +129,7 @@ UINT GetCount(UINT uiCmd) const;
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *UiCmd*|Die ID des Leistungsindikators "Befehl" abgerufen werden soll.|  
+|*uiCmd*|[in] Die ID des Leistungsindikators "Befehl" abgerufen werden soll.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Verwendungsanzahl der, die der angegebenen Befehls-ID zugeordnet ist.  
@@ -161,7 +161,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *UiCmd*|Gibt den Befehl aus, um zu überprüfen.|  
+|*uiCmd*|[in] Gibt den Befehl aus, um zu überprüfen.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn der Befehl häufig verwendet wird; andernfalls 0.  
@@ -193,7 +193,7 @@ virtual void Serialize(CArchive& ar);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *Ar*|Ein `CArchive` zu von oder zu serialisierende Objekt.|  
+|*ar*|[in] Ein `CArchive` zu von oder zu serialisierende Objekt.|  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode serialisiert die Map-Struktur, der Anzahl der Befehl, `m_CmdUsage`, und die Nutzung insgesamt Befehl `m_nTotalUsage`, Leistungsindikator aus oder in die angegebene Archivdatei.  
@@ -214,8 +214,8 @@ static BOOL __stdcall SetOptions(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *nStartCount*|Die neue anfängliche Anzahl von alle nachverfolgten Befehlen.|  
-|[in] *nMinUsagePercentage*|Der neue minimale Auslastung in Prozent.|  
+|*nStartCount*|[in] Die neue anfängliche Anzahl von alle nachverfolgten Befehlen.|  
+|*nMinUsagePercentage*|[in] Der neue minimale Auslastung in Prozent.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn die Methode erfolgreich ist, FALSE, wenn die *nMinUsagePercentage* -Parameter ist größer als oder gleich 100.  

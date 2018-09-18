@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5043b421d4ca63b22cde0f413e68b3a666a483b3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a5147b8079d694e59141c244a860f12c59f42f7b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757470"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706835"
 ---
 # <a name="atl-text-encoding-functions"></a>ATL-Textcodierung-Funktionen
 
@@ -368,7 +368,7 @@ Die Länge des konvertierten Zeichenfolge in Zeichen.
 
 Mögliche Konvertierungen, die von dieser Funktion werden in der Tabelle angezeigt:
 
-|Quelle|Ziel|
+|Source|Ziel|
 |------------|-----------------|
 |\<|&lt;|
 |>|&gt;|
@@ -494,20 +494,20 @@ inline BOOL QPDecode(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *PbSrcData*  
-Der Puffer mit den Daten, die decodiert werden.
+*pbSrcData*<br/>
+[in] Der Puffer mit den Daten, die decodiert werden.
 
-[in] *nSrcLen*  
-Die Länge in Bytes der *PbSrcData*.
+*nSrcLen*<br/>
+[in] Die Länge in Bytes der *PbSrcData*.
 
-[out] *SzDest*  
-Vom Aufrufer reservierte Puffer zum Empfangen von der decodierten Daten.
+*szDest*<br/>
+[out] Vom Aufrufer reservierte Puffer zum Empfangen von der decodierten Daten.
 
-[out] *PnDestLen*  
-Zeiger auf eine Variable, die die Länge in Bytes enthält *SzDest*. Wenn die Funktion erfolgreich ist, erhält die Variable die Anzahl der Bytes, die in den Puffer geschrieben. Wenn die Funktion fehlschlägt, erhält die Variable die erforderliche Länge des Puffers in Bytes an.
+*pnDestLen*<br/>
+[out] Zeiger auf eine Variable, die die Länge in Bytes enthält *SzDest*. Wenn die Funktion erfolgreich ist, erhält die Variable die Anzahl der Bytes, die in den Puffer geschrieben. Wenn die Funktion fehlschlägt, erhält die Variable die erforderliche Länge des Puffers in Bytes an.
 
-[in] *DwFlags*  
-ATLSMTP_QPENCODE-Flags, die beschreibt, wie die Konvertierung ist, ausgeführt werden.
+*dwFlags*<br/>
+[in] ATLSMTP_QPENCODE-Flags, die beschreibt, wie die Konvertierung ist, ausgeführt werden.
 
 ### <a name="return-value"></a>Rückgabewert
 

@@ -128,12 +128,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0e5fe8c9f9eb5f4d09bac28c4ffed3eda95454c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5528e8eb8c7eeb54e221ca6c6167246a6491d7b2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540233"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720069"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx-Klasse
 `CWinAppEx` Behandelt den Anwendungszustand, speichert den Zustand in der Registrierung, lädt den Zustand aus der Registrierung, initialisiert Anwendungsmanager und stellt Links zu diesen anwendungsmanagern bereit.  
@@ -254,8 +254,8 @@ virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszSectionName*  
- Eine Zeichenfolge, die einen Pfad eines Registrierungsschlüssels enthält.  
+*lpszSectionName*<br/>
+[in] Eine Zeichenfolge, die einen Pfad eines Registrierungsschlüssels enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn die Methode erfolgreich war; andernfalls 0.  
@@ -271,8 +271,8 @@ CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bResourceSmartUpdate*  
- Ein boolescher Parameter, der angibt, ob im Workspace-Objekt zu erkennen und Behandeln von ressourcenupdates soll.  
+*bResourceSmartUpdate*<br/>
+[in] Ein boolescher Parameter, der angibt, ob im Workspace-Objekt zu erkennen und Behandeln von ressourcenupdates soll.  
   
 ### <a name="remarks"></a>Hinweise  
  Die `CWinAppEx` Klasse verfügt über die Initialisierungsmethoden, stellt Funktionen zum Speichern und Laden von Informationen in die Registrierung der Anwendung bereit und globale Anwendungseinstellungen steuert. Sie können zudem von globalen-Managern wie z. B. die [CKeyboardManager-Klasse](../../mfc/reference/ckeyboardmanager-class.md) und [CUserToolsManager-Klasse](../../mfc/reference/cusertoolsmanager-class.md). Jede Anwendung kann nur eine Instanz des verfügen die `CWinAppEx` Klasse.  
@@ -285,8 +285,8 @@ void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- Gibt an, ob die Anwendung die anfängliche Größe und Position der Hauptrahmenfenster aus der Registrierung geladen wurde.  
+*bAktivieren*<br/>
+[in] Gibt an, ob die Anwendung die anfängliche Größe und Position der Hauptrahmenfenster aus der Registrierung geladen wurde.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig werden die Größe und Position der Hauptframe, aus der Registrierung zusammen mit anderen Anwendungseinstellungen geladen. Dies geschieht bei [CWinAppEx::LoadState](#loadstate). Wenn Sie nicht, laden Sie die anfängliche fensteranordnung aus der Registrierung möchten, beim Aufrufen dieser Methode *bAktivieren* auf "false" festgelegt.  
@@ -302,14 +302,14 @@ BOOL EnableTearOffMenus(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszRegEntry*  
- Eine Zeichenfolge, die den Pfad eines Registrierungsschlüssels enthält. Die Anwendung verwendet diesen Registrierungsschlüssel zum Speichern von Informationen für die abtrennbare Menüs.  
+*lpszRegEntry*<br/>
+[in] Eine Zeichenfolge, die den Pfad eines Registrierungsschlüssels enthält. Die Anwendung verwendet diesen Registrierungsschlüssel zum Speichern von Informationen für die abtrennbare Menüs.  
   
- [in] *UiCmdFirst*  
- Die erste Löschvorgang aus dem Menü-ID.  
+*uiCmdFirst*<br/>
+[in] Die erste Löschvorgang aus dem Menü-ID.  
   
- [in] *UiCmdLast*  
- Der letzten Löschvorgang aus dem Menü-ID.  
+*uiCmdLast*<br/>
+[in] Der letzten Löschvorgang aus dem Menü-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn die `CMenuTearOffManager` wird erstellt und erfolgreich initialisiert "False", wenn ein Fehler auftritt oder wenn die `CMenuTearOffManager` ist bereits vorhanden.  
@@ -331,23 +331,23 @@ BOOL EnableUserTools(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmdToolsDummy*  
- Eine ganze Zahl ohne Vorzeichen, die das Framework als Platzhalter für die Befehls-ID des Benutzers im Menü Extras verwendet.  
+*uiCmdToolsDummy*<br/>
+[in] Eine ganze Zahl ohne Vorzeichen, die das Framework als Platzhalter für die Befehls-ID des Benutzers im Menü Extras verwendet.  
   
- [in] *UiCmdFirst*  
- Die Befehls-ID für den ersten Befehl des User-Tool.  
+*uiCmdFirst*<br/>
+[in] Die Befehls-ID für den ersten Befehl des User-Tool.  
   
- [in] *UiCmdLast*  
- Die Befehls-ID für den letzten Benutzer Tool-Befehl.  
+*uiCmdLast*<br/>
+[in] Die Befehls-ID für den letzten Benutzer Tool-Befehl.  
   
- [in] *pToolRTC*  
- Eine Klasse, die die `CUserToolsManager` Objekt verwendet, um neue Benutzertools zu erstellen.  
+*pToolRTC*<br/>
+[in] Eine Klasse, die die `CUserToolsManager` Objekt verwendet, um neue Benutzertools zu erstellen.  
   
- [in] *uArgMenuID*  
- Die Argument-Menü-ID.  
+*uArgMenuID*<br/>
+[in] Die Argument-Menü-ID.  
   
- [in] *uInitDirMenuID*  
- Die Menü-ID für das erste Tool-Verzeichnis.  
+*uInitDirMenuID*<br/>
+[in] Die Menü-ID für das erste Tool-Verzeichnis.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn die Methode erstellt und initialisiert ein `CUserToolsManager` Objekt; "False", wenn die Methode fehlschlägt oder wenn eine `CUserToolsManager` Objekt bereits vorhanden ist.  
@@ -381,14 +381,14 @@ BOOL GetBinary(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszEntry*  
- Eine Zeichenfolge, die mit dem Namen eines Registrierungsschlüssels zurück.  
+*lpszEntry*<br/>
+[in] Eine Zeichenfolge, die mit dem Namen eines Registrierungsschlüssels zurück.  
   
- [out] *PpData*  
- Ein Zeiger auf den Puffer, den die Methode mit der binären Daten füllt.  
+*ppData*<br/>
+[out] Ein Zeiger auf den Puffer, den die Methode mit der binären Daten füllt.  
   
- [out] *pBytes*  
- Ein Zeiger auf eine Ganzzahl ohne Vorzeichen, die die Methode verwendet, um die Anzahl der gelesenen Bytes zu schreiben.  
+*pBytes*<br/>
+[out] Ein Zeiger auf eine Ganzzahl ohne Vorzeichen, die die Methode verwendet, um die Anzahl der gelesenen Bytes zu schreiben.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn erfolgreich; "False" andernfalls.  
@@ -452,11 +452,11 @@ int GetInt(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszEntry*  
- Eine Zeichenfolge, die den Namen eines Registrierungseintrags enthält.  
+*lpszEntry*<br/>
+[in] Eine Zeichenfolge, die den Namen eines Registrierungseintrags enthält.  
   
- [in] *nDefault*  
- Der Standardwert, der die Methode zurückgibt, wenn der angegebene Registrierungseintrag nicht vorhanden ist.  
+*nDefault*<br/>
+[in] Der Standardwert, der die Methode zurückgibt, wenn der angegebene Registrierungseintrag nicht vorhanden ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Registrierungsdaten, wenn die Methode erfolgreich war; andernfalls *nDefault*.  
@@ -502,11 +502,11 @@ BOOL GetObject(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszEntry*  
- Eine Zeichenfolge, die den relativen Pfad eines Registrierungseintrags enthält.  
+*lpszEntry*<br/>
+[in] Eine Zeichenfolge, die den relativen Pfad eines Registrierungseintrags enthält.  
   
- [out] *Obj*  
- Ein Verweis auf eine `CObject`. Die Methode verwendet diesen Verweis zum Speichern der Registrierungsdaten.  
+*obj*<br/>
+[out] Ein Verweis auf eine `CObject`. Die Methode verwendet diesen Verweis zum Speichern der Registrierungsdaten.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn die Methode erfolgreich war; andernfalls 0.  
@@ -537,8 +537,8 @@ CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *SzSectionAdd*  
- Eine Zeichenfolge, die den relativen Pfad eines Registrierungsschlüssels enthält.  
+*szSectionAdd*<br/>
+[in] Eine Zeichenfolge, die den relativen Pfad eines Registrierungsschlüssels enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein `CString` , das den absoluten Pfad eines Registrierungsschlüssels enthält.  
@@ -558,17 +558,17 @@ BOOL GetSectionBinary(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszSubSection*  
- Eine Zeichenfolge, die den relativen Pfad eines Registrierungsschlüssels enthält.  
+*lpszSubSection*<br/>
+[in] Eine Zeichenfolge, die den relativen Pfad eines Registrierungsschlüssels enthält.  
   
- [in] *LpszEntry*  
- Eine Zeichenfolge mit dem Wert gelesen wird.  
+*lpszEntry*<br/>
+[in] Eine Zeichenfolge mit dem Wert gelesen wird.  
   
- [out] *PpData*  
- Ein Zeiger auf den Puffer, in denen die Methode mit die Daten gespeichert, werden soll.  
+*ppData*<br/>
+[out] Ein Zeiger auf den Puffer, in denen die Methode mit die Daten gespeichert, werden soll.  
   
- [out] *pBytes*  
- Ein Zeiger auf eine Ganzzahl ohne Vorzeichen. Die Methode schreibt die Größe des *PpData* für diesen Parameter.  
+*pBytes*<br/>
+[out] Ein Zeiger auf eine Ganzzahl ohne Vorzeichen. Die Methode schreibt die Größe des *PpData* für diesen Parameter.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn erfolgreich, andernfalls FALSE.  
@@ -589,14 +589,14 @@ int GetSectionInt(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszSubSection*  
- Eine Zeichenfolge, die den relativen Pfad eines Registrierungsschlüssels enthält.  
+*lpszSubSection*<br/>
+[in] Eine Zeichenfolge, die den relativen Pfad eines Registrierungsschlüssels enthält.  
   
- [in] *LpszEntry*  
- Eine Zeichenfolge mit dem Wert gelesen wird.  
+*lpszEntry*<br/>
+[in] Eine Zeichenfolge mit dem Wert gelesen wird.  
   
- [in] *nDefault*  
- Der zurückzugebende Standardwert, wenn der angegebene Wert nicht vorhanden ist.  
+*nDefault*<br/>
+[in] Der zurückzugebende Standardwert, wenn der angegebene Wert nicht vorhanden ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die ganzzahligen Daten, die in den angegebenen Registrierungswert gespeichert ist *nDefault* , wenn die Daten nicht vorhanden ist.  
@@ -617,14 +617,14 @@ BOOL GetSectionObject(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszSubSection*  
- Eine Zeichenfolge, die den relativen Pfad eines Registrierungsschlüssels enthält.  
+*lpszSubSection*<br/>
+[in] Eine Zeichenfolge, die den relativen Pfad eines Registrierungsschlüssels enthält.  
   
- [in] *LpszEntry*  
- Eine Zeichenfolge mit dem Wert gelesen wird.  
+*lpszEntry*<br/>
+[in] Eine Zeichenfolge mit dem Wert gelesen wird.  
   
- [out] *Obj*  
- Ein Verweis auf eine `CObject`. Die Methode verwendet diesen `CObject` zum Speichern der Registrierungsdaten.  
+*obj*<br/>
+[out] Ein Verweis auf eine `CObject`. Die Methode verwendet diesen `CObject` zum Speichern der Registrierungsdaten.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -645,14 +645,14 @@ CString GetSectionString(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszSubSection*  
- Eine Zeichenfolge, die den relativen Pfad eines Registrierungsschlüssels enthält.  
+*lpszSubSection*<br/>
+[in] Eine Zeichenfolge, die den relativen Pfad eines Registrierungsschlüssels enthält.  
   
- [in] *LpszEntry*  
- Eine Zeichenfolge mit dem Wert gelesen wird.  
+*lpszEntry*<br/>
+[in] Eine Zeichenfolge mit dem Wert gelesen wird.  
   
- [in] *LpszDefault*  
- Der zurückzugebende Standardwert, wenn der angegebene Wert nicht vorhanden ist.  
+*lpszDefault*<br/>
+[in] Der zurückzugebende Standardwert, wenn der angegebene Wert nicht vorhanden ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Zeichenfolgendaten in den angegebenen Registrierungswert gespeichert werden, wenn die Daten vorhanden sind; andernfalls *LpszDefault*.  
@@ -685,11 +685,11 @@ CString GetString(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszEntry*  
- Eine Zeichenfolge mit dem Namen eines Registrierungsschlüssels  
+*lpszEntry*<br/>
+[in] Eine Zeichenfolge mit dem Namen eines Registrierungsschlüssels  
   
- [in] *LpzDefault*  
- Der Standardwert, der die Methode zurückgibt, wenn der angegebene Registrierungseintrag nicht vorhanden ist.  
+*lpzDefault*<br/>
+[in] Der Standardwert, der die Methode zurückgibt, wenn der angegebene Registrierungseintrag nicht vorhanden ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die "Zeichenfolgendaten" in der Registrierung bei erfolgreicher Ausführung; *LpszDefault* andernfalls.  
@@ -819,8 +819,8 @@ BOOL IsStateExists(LPCTSTR lpszSectionName);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszSectionName*  
- Eine Zeichenfolge, die einen Pfad eines Registrierungsschlüssels enthält.  
+*lpszSectionName*<br/>
+[in] Eine Zeichenfolge, die einen Pfad eines Registrierungsschlüssels enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL ist, wenn der Schlüssel in der Registrierung ist; andernfalls 0.  
@@ -862,14 +862,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pFrame*  
- Ein Zeiger auf ein Frame Window-Objekt. Die Methode gilt die Zustandsinformationen in der Registrierung für dieses Rahmenfenster.  
+*pFrame*<br/>
+[in] Ein Zeiger auf ein Frame Window-Objekt. Die Methode gilt die Zustandsinformationen in der Registrierung für dieses Rahmenfenster.  
   
- [in] *LpszSectionName*  
- Eine Zeichenfolge, die den relativen Pfad eines Registrierungsschlüssels enthält.  
+*lpszSectionName*<br/>
+[in] Eine Zeichenfolge, die den relativen Pfad eines Registrierungsschlüssels enthält.  
   
- [in] *pFrameImpl*  
- Ein Zeiger auf eine `CFrameImpl` Objekt. Die Methode gilt die Zustandsinformationen in der Registrierung für dieses Rahmenfenster.  
+*pFrameImpl*<br/>
+[in] Ein Zeiger auf eine `CFrameImpl` Objekt. Die Methode gilt die Zustandsinformationen in der Registrierung für dieses Rahmenfenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL Wenn erfolgreich; andernfalls 0.  
@@ -892,14 +892,14 @@ virtual BOOL LoadWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *RectNormalPosition*  
- Ein Rechteck, das die Koordinaten der Hauptrahmenfenster enthält, wenn es in der wiederhergestellten Position ist.  
+*rectNormalPosition*<br/>
+[out] Ein Rechteck, das die Koordinaten der Hauptrahmenfenster enthält, wenn es in der wiederhergestellten Position ist.  
   
- [out] *nFlags*  
- Flags, die die Position des das minimierte Fenster und das Betriebssystem wie zwischen einem minimierten Fenster und einem wiederhergestellten Fenster wechselt zu steuern.  
+*nFlags*<br/>
+[out] Flags, die die Position des das minimierte Fenster und das Betriebssystem wie zwischen einem minimierten Fenster und einem wiederhergestellten Fenster wechselt zu steuern.  
   
- [out] *nShowCmd*  
- Eine ganze Zahl, die den Anzeigestatus des Fensters angibt. Weitere Informationen zu den möglichen Werten finden Sie unter [ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
+*nShowCmd*<br/>
+[out] Eine ganze Zahl, die den Anzeigestatus des Fensters angibt. Weitere Informationen zu den möglichen Werten finden Sie unter [ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL Wenn erfolgreich; andernfalls 0.  
@@ -929,11 +929,11 @@ virtual void OnAppContextHelp(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWndControl*  
- Ein Zeiger auf ein Window-Objekt, das für das der Benutzer die Hilfe aufgerufen.  
+*pWndControl*<br/>
+[in] Ein Zeiger auf ein Window-Objekt, das für das der Benutzer die Hilfe aufgerufen.  
   
- [in] *DwHelpIDArray]*  
- Ein reservierter Wert.  
+*DwHelpIDArray]*<br/>
+[in] Ein reservierter Wert.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ist derzeit für die zukünftige Verwendung reserviert. Die Standardimplementierung führt keine Aktion aus, und sie wird derzeit nicht vom Framework aufgerufen.  
@@ -946,8 +946,8 @@ virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pFrameImpl*  
- Ein Zeiger auf eine `CFrameImpl` Objekt.  
+*pFrameImpl*<br/>
+[in] Ein Zeiger auf eine `CFrameImpl` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardimplementierung dieser Methode speichert den Zustand des *pFrameImpl*.  
@@ -962,11 +962,11 @@ virtual BOOL OnViewDoubleClick(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Ein Zeiger auf ein Objekt abgeleitet wird, aus der [CView-Klasse](../../mfc/reference/cview-class.md).  
+*Aufnehmen*<br/>
+[in] Ein Zeiger auf ein Objekt abgeleitet wird, aus der [CView-Klasse](../../mfc/reference/cview-class.md).  
   
- [in] *iViewId*  
- Die Sicht-ID.  
+*iViewId*<br/>
+[in] Die Sicht-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Framework einen Befehl sucht. andernfalls "false".  
@@ -1016,8 +1016,8 @@ virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pFrame*  
- Ein Zeiger auf ein Rahmenfenster.  
+*pFrame*<br/>
+[in] Ein Zeiger auf ein Rahmenfenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn die Methode erfolgreich war; 0, wenn die Last, die Fehler, oder es keine Daten geladen sind.  
@@ -1060,14 +1060,14 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszSectionName*  
- Eine Zeichenfolge, die den relativen Pfad eines Registrierungsschlüssels enthält.  
+*lpszSectionName*<br/>
+[in] Eine Zeichenfolge, die den relativen Pfad eines Registrierungsschlüssels enthält.  
   
- [in] *pFrameImpl*  
- Ein Zeiger auf eine `CFrameImpl` Objekt. Dieser Rahmen wird in der Windows-Registrierung gespeichert.  
+*pFrameImpl*<br/>
+[in] Ein Zeiger auf eine `CFrameImpl` Objekt. Dieser Rahmen wird in der Windows-Registrierung gespeichert.  
   
- [in] *pFrame*  
- Ein Zeiger auf ein Frame Window-Objekt. Dieser Rahmen wird in der Windows-Registrierung gespeichert.  
+*pFrame*<br/>
+[in] Ein Zeiger auf ein Frame Window-Objekt. Dieser Rahmen wird in der Windows-Registrierung gespeichert.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn erfolgreich; "False" andernfalls.  
@@ -1085,8 +1085,8 @@ LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszSectionName*  
- Eine Zeichenfolge, die den Pfad eines Registrierungsschlüssels enthält.  
+*lpszSectionName*<br/>
+[in] Eine Zeichenfolge, die den Pfad eines Registrierungsschlüssels enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Eine Zeichenfolge, die den Pfad der Standardspeicherort für die Registrierung enthält.  
@@ -1105,14 +1105,14 @@ virtual BOOL ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiMenuResId*  
- Eine Menü-Ressourcen-ID  
+*uiMenuResId*<br/>
+[in] Eine Menü-Ressourcen-ID  
   
- [in] *zeigen*  
- Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , der die Position des Menüs in Bildschirmkoordinaten angibt.  
+*Zeigen Sie*<br/>
+[in] Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , der die Position des Menüs in Bildschirmkoordinaten angibt.  
   
- [in] *aufnehmen*  
- Ein Zeiger auf das Fenster, das Popupmenü besitzt.  
+*Aufnehmen*<br/>
+[in] Ein Zeiger auf das Fenster, das Popupmenü besitzt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn das Popupmenü erfolgreich angezeigt wird; andernfalls 0.  
@@ -1133,14 +1133,14 @@ virtual BOOL StoreWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nFlags*  
- Flags, die die Position des das minimierte Fenster und das Betriebssystem wie zwischen einem minimierten Fenster und einem wiederhergestellten Fenster wechselt zu steuern.  
+*nFlags*<br/>
+[in] Flags, die die Position des das minimierte Fenster und das Betriebssystem wie zwischen einem minimierten Fenster und einem wiederhergestellten Fenster wechselt zu steuern.  
   
- [in] *nShowCmd*  
- Eine ganze Zahl, die den Anzeigestatus des Fensters angibt. Weitere Informationen zu den möglichen Werten finden Sie unter [ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
+*nShowCmd*<br/>
+[in] Eine ganze Zahl, die den Anzeigestatus des Fensters angibt. Weitere Informationen zu den möglichen Werten finden Sie unter [ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
   
- [in] *RectNormalPosition*  
- Ein Rechteck, das die Koordinaten der Hauptrahmenfenster enthält, wenn es im nicht wiederhergestellten Zustand ist.  
+*rectNormalPosition*<br/>
+[in] Ein Rechteck, das die Koordinaten der Hauptrahmenfenster enthält, wenn es im nicht wiederhergestellten Zustand ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL Wenn erfolgreich; andernfalls 0.  
@@ -1161,14 +1161,14 @@ BOOL WriteBinary(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszEntry*  
- Eine Zeichenfolge, die mit dem Namen eines Registrierungsschlüssels zurück.  
+*lpszEntry*<br/>
+[in] Eine Zeichenfolge, die mit dem Namen eines Registrierungsschlüssels zurück.  
   
- [in] *pData*  
- Die zu speichernden Daten.  
+*pData*<br/>
+[in] Die zu speichernden Daten.  
   
- [in] *nBytes*  
- Die Größe des *pData* in Byte.  
+*nBytes*<br/>
+[in] Die Größe des *pData* in Byte.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -1188,11 +1188,11 @@ BOOL WriteInt(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszEntry*  
- Eine Zeichenfolge, die mit dem Namen eines Registrierungsschlüssels zurück.  
+*lpszEntry*<br/>
+[in] Eine Zeichenfolge, die mit dem Namen eines Registrierungsschlüssels zurück.  
   
- [in] *nWert*  
- Die zu speichernden Daten.  
+*nWert*<br/>
+[in] Die zu speichernden Daten.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -1212,11 +1212,11 @@ BOOL WriteObject(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszEntry*  
- Eine Zeichenfolge, die den festzulegenden Wert enthält.  
+*lpszEntry*<br/>
+[in] Eine Zeichenfolge, die den festzulegenden Wert enthält.  
   
- [in] *Obj*  
- Ein Verweis auf `CObject` Daten, die die Methode gespeichert werden sollen.  
+*obj*<br/>
+[in] Ein Verweis auf `CObject` Daten, die die Methode gespeichert werden sollen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -1236,17 +1236,17 @@ BOOL WriteSectionBinary(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszSubSection*  
- Eine Zeichenfolge mit dem Namen eines Registrierungsschlüssels  
+*lpszSubSection*<br/>
+[in] Eine Zeichenfolge mit dem Namen eines Registrierungsschlüssels  
   
- [in] *LpszEntry*  
- Eine Zeichenfolge, die den festzulegenden Wert enthält.  
+*lpszEntry*<br/>
+[in] Eine Zeichenfolge, die den festzulegenden Wert enthält.  
   
- [in] *pData*  
- Die Daten, die in der Registrierung zu schreiben.  
+*pData*<br/>
+[in] Die Daten, die in der Registrierung zu schreiben.  
   
- [in] *nBytes*  
- Die Größe des *pData* in Byte.  
+*nBytes*<br/>
+[in] Die Größe des *pData* in Byte.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -1267,14 +1267,14 @@ BOOL WriteSectionInt(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszSubSection*  
- Eine Zeichenfolge, die den relativen Pfad eines Registrierungsschlüssels enthält.  
+*lpszSubSection*<br/>
+[in] Eine Zeichenfolge, die den relativen Pfad eines Registrierungsschlüssels enthält.  
   
- [in] *LpszEntry*  
- Eine Zeichenfolge, die den festzulegenden Wert enthält.  
+*lpszEntry*<br/>
+[in] Eine Zeichenfolge, die den festzulegenden Wert enthält.  
   
- [in] *nWert*  
- Die Daten, die in der Registrierung zu schreiben.  
+*nWert*<br/>
+[in] Die Daten, die in der Registrierung zu schreiben.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -1295,14 +1295,14 @@ BOOL WriteSectionObject(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszSubSection*  
- Eine Zeichenfolge, die mit dem Namen eines Registrierungsschlüssels zurück.  
+*lpszSubSection*<br/>
+[in] Eine Zeichenfolge, die mit dem Namen eines Registrierungsschlüssels zurück.  
   
- [in] *LpszEntry*  
- Eine Zeichenfolge, die den Namen der den festzulegenden Wert enthält.  
+*lpszEntry*<br/>
+[in] Eine Zeichenfolge, die den Namen der den festzulegenden Wert enthält.  
   
- [in] *Obj*  
- Die zu speichernden Daten.  
+*obj*<br/>
+[in] Die zu speichernden Daten.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -1323,14 +1323,14 @@ BOOL WriteSectionString(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszSubSection*  
- Eine Zeichenfolge, die mit dem Namen eines Registrierungsschlüssels zurück.  
+*lpszSubSection*<br/>
+[in] Eine Zeichenfolge, die mit dem Namen eines Registrierungsschlüssels zurück.  
   
- [in] *LpszEntry*  
- Eine Zeichenfolge, die den festzulegenden Wert enthält.  
+*lpszEntry*<br/>
+[in] Eine Zeichenfolge, die den festzulegenden Wert enthält.  
   
- [in] *LpszValue*  
- Die Zeichenfolgendaten in die Registrierung geschrieben werden soll.  
+*lpszValue*<br/>
+[in] Die Zeichenfolgendaten in die Registrierung geschrieben werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -1350,11 +1350,11 @@ BOOL WriteString(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszEntry*  
- Eine Zeichenfolge, die mit dem Namen eines Registrierungsschlüssels zurück.  
+*lpszEntry*<br/>
+[in] Eine Zeichenfolge, die mit dem Namen eines Registrierungsschlüssels zurück.  
   
- [in] *LpszValue*  
- Die zu speichernden Daten.  
+*lpszValue*<br/>
+[in] Die zu speichernden Daten.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
