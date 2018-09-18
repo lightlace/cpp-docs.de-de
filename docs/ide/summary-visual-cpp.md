@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47b7063dc9156e8feb41d447283ee457a13f1f4d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: dae0eef25b11d49e5f869d88862e602d862135c1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692301"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082247"
 ---
 # <a name="ltsummarygt-visual-c"></a>&lt;summary&gt; (Visual C++)
 Das \<summary>-Tag sollte verwendet werden, um einen Typ oder einen Typmember zu beschreiben. Verwenden Sie [\<remarks>](../ide/remarks-visual-cpp.md), um zusätzliche Informationen zu einer Typbeschreibung hinzuzufügen.  
@@ -35,8 +35,8 @@ Das \<summary>-Tag sollte verwendet werden, um einen Typ oder einen Typmember zu
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `description`  
- Eine Übersicht des Objekts.  
+*Beschreibung*<br/>
+Eine Übersicht des Objekts.  
   
 ## <a name="remarks"></a>Hinweise  
  Der Text für das \<summary>-Tag ist die einzige Informationsquelle über den Typ in IntelliSense und wird auch im [Objektkatalog](/visualstudio/ide/viewing-the-structure-of-code) und im Webbericht über Codekommentare angezeigt.  

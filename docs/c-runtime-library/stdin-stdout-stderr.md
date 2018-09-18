@@ -23,41 +23,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f6226a6e38326a39ce2921e2a0d6219d01f005b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a36d5fd60a19222e6f802e5a14037fb01ff865f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408860"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071977"
 ---
 # <a name="stdin-stdout-stderr"></a>stdin, stdout, stderr
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-      FILE *stdin;   
-FILE *stdout;   
-FILE *stderr;   
-#include <stdio.h>  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Hierbei handelt es sich um Standarddatenströme für Eingabe, Ausgabe und Fehlerausgabe.  
-  
- Standardmäßig erfolgt die Eingabe über die Tastatur, während die Standardausgabe und die Standardfehlerausgabe auf dem Bildschirm erfolgt.  
-  
- Die folgenden Datenstromzeiger sind für den Zugriff auf die Standarddatenströme verfügbar:  
-  
-|Zeiger|Stream|  
-|-------------|------------|  
-|`stdin`|Standardeingabe|  
-|**stdout**|Standardausgabe|  
-|`stderr`|Standardfehler|  
-  
- Diese Zeiger können als Argumente für Funktionen verwendet werden. Einige Funktionen wie **getchar** und `putchar` verwenden `stdin` und **stdout** automatisch.  
-  
- Diese Zeiger sind Konstanten, und es können ihnen keine neuen Werte zugewiesen werden. Die `freopen`-Funktion kann verwendet werden, um Datenströme auf Dateien auf Datenträgern oder andere Geräte umzuleiten. Das Betriebssystem ermöglicht Ihnen, die Standardein- und -ausgabe eines Programms auf Befehlsebene umzuleiten.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Stream-E/A](../c-runtime-library/stream-i-o.md)   
- [Globale Konstanten](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntax
+
+```
+
+      FILE *stdin; 
+FILE *stdout; 
+FILE *stderr; 
+#include <stdio.h>
+```
+
+## <a name="remarks"></a>Hinweise
+
+Hierbei handelt es sich um Standarddatenströme für Eingabe, Ausgabe und Fehlerausgabe.
+
+Standardmäßig erfolgt die Eingabe über die Tastatur, während die Standardausgabe und die Standardfehlerausgabe auf dem Bildschirm erfolgt.
+
+Die folgenden Datenstromzeiger sind für den Zugriff auf die Standarddatenströme verfügbar:
+
+|Zeiger|Stream|
+|-------------|------------|
+|`stdin`|Standardeingabe|
+|**stdout**|Standardausgabe|
+|`stderr`|Standardfehler|
+
+Diese Zeiger können als Argumente für Funktionen verwendet werden. Einige Funktionen wie **getchar** und `putchar` verwenden `stdin` und **stdout** automatisch.
+
+Diese Zeiger sind Konstanten, und es können ihnen keine neuen Werte zugewiesen werden. Die `freopen`-Funktion kann verwendet werden, um Datenströme auf Dateien auf Datenträgern oder andere Geräte umzuleiten. Das Betriebssystem ermöglicht Ihnen, die Standardein- und -ausgabe eines Programms auf Befehlsebene umzuleiten.
+
+## <a name="see-also"></a>Siehe auch
+
+[Stream-E/A](../c-runtime-library/stream-i-o.md)<br/>
+[Globale Konstanten](../c-runtime-library/global-constants.md)
