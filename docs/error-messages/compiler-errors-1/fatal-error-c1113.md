@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db188764694c0c0c0b7a85c3653564d563f9cbd2
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: efcf76c02eaeafb89c48b9dc82d9269377e520ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539819"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076319"
 ---
 # <a name="fatal-error-c1113"></a>Schwerwiegender Fehler C1113
-\#Fehler bei 'Datei'  
-  
- Nur eine Datei in die Microsoft Intermediate Language (MSIL)-Format übergeben werden kann, um eine [#using](../../preprocessor/hash-using-directive-cpp.md) Richtlinie. Die ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md) Compileroption können Sie eine MSIL-Ausgabedatei zu erstellen. Andere Visual Studio-Sprachen werden auch MSIL-Dateien generiert.
+
+\#Fehler bei 'Datei'
+
+Nur eine Datei in die Microsoft Intermediate Language (MSIL)-Format übergeben werden kann, um eine [#using](../../preprocessor/hash-using-directive-cpp.md) Richtlinie. Die ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md) Compileroption können Sie eine MSIL-Ausgabedatei zu erstellen. Andere Visual Studio-Sprachen werden auch MSIL-Dateien generiert.

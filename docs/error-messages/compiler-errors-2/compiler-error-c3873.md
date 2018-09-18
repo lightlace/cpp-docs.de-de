@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3873 | Microsoft Docs
+title: Compilerfehler C3873 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,26 +14,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bec37b8fb00aedd83d91f1d001d77c42679ec038
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83580d8202dada0b650b1703dcadf9b99e6771d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269434"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072809"
 ---
 # <a name="compiler-error-c3873"></a>Compilerfehler C3873
-„char“: Dieses Zeichen ist nicht als erstes Zeichen eines Bezeichners zulässig.  
-  
- Der C++-Compiler folgt hinsichtlich Zeichen, die in einem Bezeichner zulässig sind, dem C++11-Standard. Nur bestimmte Bereiche von Zeichen und universelle Zeichennamen sind in einem Bezeichner zulässig. Zusätzliche Einschränkungen gelten für das erste Zeichen eines Bezeichners. Weitere Informationen hierzu und eine Liste der zulässigen Zeichen sowie Bereiche universeller Zeichennamen finden Sie unter [Identifiers](../../cpp/identifiers-cpp.md).  
-  
- Der Bereich der in einem Bezeichner zulässigen Zeichen ist weniger restriktiv, wenn C++ /CLI-Code kompiliert wird. Bezeichner in Code, der mit „/clr“ kompiliert wurde, müssen dem folgenden Standard entsprechen:  [Standard ECMA-335: Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
-  
- Im folgenden Beispiel wird C3873 generiert:  
-  
-```  
-// C3873.cpp  
-int main() {  
-   int \u036F_abc;   // C3873, not in allowed range for initial character  
-   int abc_\u036F;   // OK, in allowed range for non-initial character  
-}  
+
+„char“: Dieses Zeichen ist nicht als erstes Zeichen eines Bezeichners zulässig.
+
+Der C++-Compiler folgt hinsichtlich Zeichen, die in einem Bezeichner zulässig sind, dem C++11-Standard. Nur bestimmte Bereiche von Zeichen und universelle Zeichennamen sind in einem Bezeichner zulässig. Zusätzliche Einschränkungen gelten für das erste Zeichen eines Bezeichners. Weitere Informationen hierzu und eine Liste der zulässigen Zeichen sowie Bereiche universeller Zeichennamen finden Sie unter [Identifiers](../../cpp/identifiers-cpp.md).
+
+Der Bereich der in einem Bezeichner zulässigen Zeichen ist weniger restriktiv, wenn C++ /CLI-Code kompiliert wird. Bezeichner in Code, der mit „/clr“ kompiliert wurde, müssen dem folgenden Standard entsprechen:  [Standard ECMA-335: Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
+
+Im folgenden Beispiel wird C3873 generiert:
+
+```
+// C3873.cpp
+int main() {
+   int \u036F_abc;   // C3873, not in allowed range for initial character
+   int abc_\u036F;   // OK, in allowed range for non-initial character
+}
 ```

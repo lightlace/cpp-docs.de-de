@@ -50,14 +50,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f59619db743d8f8d08b2a202e992cdfcd532e1e8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4f44d43d48f862ca2ca5465d5ea9ee44d0e9040e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572372"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072419"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl-Klasse
+
 Stellt eine Implementierung für die [IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\)) Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax
@@ -68,11 +69,13 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *T*  
- Abgeleitet von die Klasse `IDBInitializeImpl`.  
+
+*T*<br/>
+Abgeleitet von die Klasse `IDBInitializeImpl`.  
 
 ## <a name="requirements"></a>Anforderungen  
- **Header:** „atldb.h“  
+
+**Header:** „atldb.h“  
   
 ## <a name="members"></a>Member  
   
@@ -97,9 +100,11 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 |[m_pCUtlPropInfo](#pcutlpropinfo)|Ein Zeiger auf die Implementierung der DB-Eigenschaften-Informationen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Eine erforderliche Schnittstelle für Datenquellenobjekte und optionale Schnittstelle für Enumeratoren.  
+
+Eine erforderliche Schnittstelle für Datenquellenobjekte und optionale Schnittstelle für Enumeratoren.  
 
 ## <a name="idbinitializeimpl"></a> Idbinitializeimpl:: Idbinitializeimpl
+
 Der Konstruktor.  
   
 ### <a name="syntax"></a>Syntax  
@@ -109,9 +114,11 @@ IDBInitializeImpl();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Initialisiert alle Datenmember. 
+
+Initialisiert alle Datenmember. 
   
 ## <a name="initialize"></a> Idbinitializeimpl:: Initialize
+
 Initialisiert das Objekt durch die Unterstützung für die Eigenschaft wird vorbereitet.  
   
 ### <a name="syntax"></a>Syntax  
@@ -121,9 +128,11 @@ STDMETHOD(Initialize)(void);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. 
+
+Finden Sie unter [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. 
 
 ## <a name="uninitialize"></a> Idbinitializeimpl:: UnInitialize
+
 Stellen Sie die Daten Datenquellenobjekts im nicht initialisierten Zustand freigegeben werden und interne Ressourcen wie z. B. die Unterstützung für die Eigenschaft ein.  
   
 ### <a name="syntax"></a>Syntax  
@@ -133,9 +142,11 @@ STDMETHOD(Uninitialize)(void);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IDBInitialize:: UnInitialize](/previous-versions/windows/desktop/ms719648\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.
+
+Finden Sie unter [IDBInitialize:: UnInitialize](/previous-versions/windows/desktop/ms719648\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.
 
 ## <a name="dwstatus"></a> Idbinitializeimpl:: M_dwstatus
+
 Datenquellen-Flags.  
   
 ### <a name="syntax"></a>Syntax  
@@ -145,7 +156,8 @@ DWORD m_dwStatus;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Flags geben, oder geben Sie den Status der verschiedenen Attribute für das Datenquellenobjekt. Enthält eine oder mehrere der folgenden **Enum** Werte:  
+
+Diese Flags geben, oder geben Sie den Status der verschiedenen Attribute für das Datenquellenobjekt. Enthält eine oder mehrere der folgenden **Enum** Werte:  
   
 ```cpp  
 enum DATASOURCE_FLAGS {  
@@ -162,6 +174,7 @@ enum DATASOURCE_FLAGS {
 |`DSF_INITIALIZED`|Festlegen Sie, wenn die Datenquelle initialisiert wurde.|  
 
 ## <a name="pcutlpropinfo"></a> Idbinitializeimpl:: M_pcutlpropinfo
+
 Ein Zeiger auf Objekt implementace Datenbankeigenschaften Informationen.  
   
 ### <a name="syntax"></a>Syntax  
@@ -171,5 +184,6 @@ CUtlPropInfo< T >* m_pCUtlPropInfo;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

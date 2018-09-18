@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3417 | Microsoft Docs
+title: Compilerfehler C3417 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b83c3b6cf5697ca2e52f9f8ad6afdc2754edd4f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b21636c3500625f262355750d32aa0fa3faeb5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256417"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073849"
 ---
 # <a name="compiler-error-c3417"></a>Compilerfehler C3417
-'Member': Werttypen sind keine speziellen Memberfunktionen  
-  
- Werttypen können keine Funktionen, z. B. eine Instanz der Standardkonstruktor, Destruktor oder Kopierkonstruktor enthalten.  
-  
- Im folgende Beispiel wird C3517 generiert:  
-  
-```  
-// C3417.cpp  
-// compile with: /clr /c  
-value class VC {  
-   VC(){}   // C3417  
-  
-   // OK  
-   static VC(){}  
-   VC(int i){}  
-};  
+
+"Member": Werttypen können keine benutzerdefinierten speziellen Memberfunktionen enthalten
+
+Werttypen können keine Funktionen, z. B. eine Instanz der Standardkonstruktor, Destruktor oder Kopierkonstruktor nicht enthalten.
+
+Im folgende Beispiel wird die C3517 generiert:
+
+```
+// C3417.cpp
+// compile with: /clr /c
+value class VC {
+   VC(){}   // C3417
+
+   // OK
+   static VC(){}
+   VC(int i){}
+};
 ```

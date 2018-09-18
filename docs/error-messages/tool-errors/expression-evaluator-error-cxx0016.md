@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0016 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0016 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cace3caf930c2b51bb1306b02bb7126373ddfe74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e03b0567b77b1ef3f64e5cf98cbe11dab502e1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297488"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075416"
 ---
 # <a name="expression-evaluator-error-cxx0016"></a>Ausdrucksauswertungsfehler CXX0016
-Konstante zu groß  
-  
- Eine ganze Zahl ohne Vorzeichen-Konstante, die größer als 4.294.967.295 (0FFFFFFFF hexadezimal) oder eine Gleitkommakonstante, deren Größe größer als ca. 1.8E + 308 ist, kann nicht die C-ausdrucksauswertung akzeptieren.  
-  
- Dieser Fehler ist mit CAN0016 identisch.
+
+Konstante zu groß
+
+Eine ganze Zahl ohne Vorzeichen-Konstante, die größer als 4.294.967.295 (0FFFFFFFF hexadezimal) oder eine Gleitkommakonstante, deren Größe etwa 1.8E + 308 übersteigt, kann nicht die C++-ausdrucksauswertung akzeptieren.
+
+Dieser Fehler ist mit CAN0016 identisch.

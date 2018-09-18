@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67904ec0c16fb1eddcf182d34f10cb09219dfc6e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7f9dff61a62eec37a503b1c0018ead6dce33065a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767415"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077112"
 ---
 # <a name="ccomenum-class"></a>CComEnum-Klasse
 
@@ -32,7 +32,7 @@ Diese Klasse definiert ein COM-Enumerator-Objekt basierend auf einem Wertearray.
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy, class ThreadModel = CcomObjectThreadModel>  
+    const IID* piid, class T, class Copy, class ThreadModel = CcomObjectThreadModel>
 class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
 T,
     Copy>,
@@ -41,19 +41,19 @@ public CComObjectRootEx<ThreadModel>
 
 #### <a name="parameters"></a>Parameter
 
-*Basis*  
+*Basis*<br/>
 Eine COM-Enumerator-Schnittstelle. Finden Sie unter [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) verdeutlicht.
 
-*piid*  
+*piid*<br/>
 Ein Zeiger auf die Schnittstellen-ID der Enumeratorschnittstelle.
 
-*T*  
+*T*<br/>
 Der Typ des Elements, die von der Enumeratorschnittstelle verfügbar gemacht werden.
 
-*Kopieren*  
+*Kopieren*<br/>
 Eine homogene [kopieren Richtlinienklasse](../../atl/atl-copy-policy-classes.md).
 
-*ThreadModel*  
+*ThreadModel*<br/>
 Das Threadingmodell der-Klasse. Dieser Parameter ist standardmäßig auf das globale Objekt Thread-Modell in Ihrem Projekt verwendet.
 
 ## <a name="remarks"></a>Hinweise
@@ -102,7 +102,7 @@ Dieser Code erstellt eine **Typedef** für `CComEnum` , verfügbar macht, einen 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)   
-[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)   
-[CComEnumImpl-Klasse](../../atl/reference/ccomenumimpl-class.md)   
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
+[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>
+[CComEnumImpl-Klasse](../../atl/reference/ccomenumimpl-class.md)<br/>
 [CComObjectRootEx-Klasse](../../atl/reference/ccomobjectrootex-class.md)

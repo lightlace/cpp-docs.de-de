@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0054 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0054 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11f5306f7cd3385c9ca302cd186de5591b448ea6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7aaf1a55ffee1d06eb4807381ad2cf1315420dbd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294309"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074694"
 ---
 # <a name="expression-evaluator-error-cxx0054"></a>Ausdrucksauswertungsfehler CXX0054
-im Haltepunktausdruck unzulässige registrieren  
-  
- Ein Registers kann nicht in einem Haltepunktausdruck verwendet werden.  
-  
- Dieser Fehler ist mit CAN0054 identisch.
+
+Registrieren Sie im unzulässige Haltepunktausdruck
+
+Ein Register kann nicht in einem Haltepunktausdruck verwendet werden.
+
+Dieser Fehler ist mit CAN0054 identisch.

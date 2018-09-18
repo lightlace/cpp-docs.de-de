@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2122 | Microsoft Docs
+title: Compilerfehler C2122 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6651bda63ab011fd7ef50eb6f71c3df27bb95ccd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4eab9412be46949845e1ed16bb701ae8621fac42
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166178"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072239"
 ---
 # <a name="compiler-error-c2122"></a>Compilerfehler C2122
-'Bezeichner': Prototypparameter in der Liste ist ungültig  
-  
- Der Parameter ist keinem gültigen Typ. ANSI C unterstützt keine benutzerdefinierten Typen.
+
+"Bezeichner": Prototypparameter in der Namensliste ist unzulässig
+
+Der Parameter ist kein zulässigen Typ. ANSI C bietet keine Unterstützung für benutzerdefinierte Typen.

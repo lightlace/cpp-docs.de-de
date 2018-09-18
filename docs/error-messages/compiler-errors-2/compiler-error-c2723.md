@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2723 generiert | Microsoft Docs
+title: Compilerfehler C2723 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01476218683205d0fb06e81847cfe9727b733158
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b1be2d81ecec7eb96fd9c1cd7e9938ce509f71e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233783"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072016"
 ---
-# <a name="compiler-error-c2723"></a>Compiler-Fehler C2723 generiert
-„Funktion“: Spezifizierer „Spezifizierer“ ist in Funktionsdefinition unzulässig.  
-  
- Der Spezifizierer darf nicht mit einer Funktionsdefinition außerhalb einer Klassendeklaration vorkommen. Der `virtual`-Spezifizierer kann nur in einer Deklaration einer Memberfunktion innerhalb einer Klassendeklaration angegeben werden.  
-  
- Im folgenden Beispiel wird C2723 generiert und gezeigt, wie Sie diesen Fehler beheben:  
-  
-```  
-// C2723.cpp  
-struct X {  
-   virtual void f();  
-   virtual void g();  
-};  
-  
-virtual void X::f() {}   // C2723  
-  
-// try the following line instead  
-void X::g() {}  
+# <a name="compiler-error-c2723"></a>Compilerfehler C2723
+
+„Funktion“: Spezifizierer „Spezifizierer“ ist in Funktionsdefinition unzulässig.
+
+Der Spezifizierer darf nicht mit einer Funktionsdefinition außerhalb einer Klassendeklaration vorkommen. Der `virtual`-Spezifizierer kann nur in einer Deklaration einer Memberfunktion innerhalb einer Klassendeklaration angegeben werden.
+
+Im folgenden Beispiel wird C2723 generiert und gezeigt, wie Sie diesen Fehler beheben:
+
+```
+// C2723.cpp
+struct X {
+   virtual void f();
+   virtual void g();
+};
+
+virtual void X::f() {}   // C2723
+
+// try the following line instead
+void X::g() {}
 ```

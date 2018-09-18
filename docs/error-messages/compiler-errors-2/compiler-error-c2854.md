@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2854 generiert | Microsoft Docs
+title: Compilerfehler C2854 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1555d36a9371145af2685ecd6650d7fdecc69660
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bd49c9fbfa88667cdb2e8bd57466632c0a051e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243617"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074811"
 ---
 # <a name="compiler-error-c2854"></a>Compilerfehler C2850
-Syntaxfehler in #pragma hdrstop  
-  
- Die `#pragma hdrstop` wird ein ungültiger Dateiname. Das Pragma kann einen optionalen Dateinamen in Klammern und Anführungszeichen folgen:  
-  
- Im folgende Beispiel wird C2854 generiert:  
-  
-```  
-// C2854.cpp  
-// compile with: /c  
-#pragma hdrstop( "\\source\\pchfiles\\myheader.pch" ]   // C2854  
-// try the following line instead  
-// #pragma hdrstop( "\\source\\pchfiles\\myheader.pch" )  
+
+Syntaxfehler in #pragma hdrstop
+
+Die `#pragma hdrstop` wird ein ungültiger Dateiname. Das Pragma kann einen optionalen Dateinamen in Klammern und Anführungszeichen folgen:
+
+Im folgende Beispiel wird die C2854 generiert:
+
+```
+// C2854.cpp
+// compile with: /c
+#pragma hdrstop( "\\source\\pchfiles\\myheader.pch" ]   // C2854
+// try the following line instead
+// #pragma hdrstop( "\\source\\pchfiles\\myheader.pch" )
 ```

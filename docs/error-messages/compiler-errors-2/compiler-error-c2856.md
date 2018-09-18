@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2856 | Microsoft Docs
+title: Compilerfehler C2856 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac67538a10d39bc68059b0a7d1aaf73a381abb2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df6226bfd2fc11f05f894091f4ff02c145d09e11
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244132"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072711"
 ---
 # <a name="compiler-error-c2856"></a>Compilerfehler C2856
-\#Pragma-Hdrstop darf nicht innerhalb eines #if-Blocks sein.  
-  
- Die `hdrstop` Pragma kann nicht innerhalb des Hauptteils eines Blocks für die bedingte Kompilierung platziert werden.  
-  
- Verschieben der `#pragma hdrstop` Anweisung, um einen Bereich, der nicht in enthalten ist ein `#if/#endif` Block.
+
+\#Pragma-Hdrstop kann nicht innerhalb eines #if-Block befinden.
+
+Die `hdrstop` Pragma kann nicht innerhalb des Texts eines Blocks für die bedingte Kompilierung nicht platziert werden.
+
+Verschieben der `#pragma hdrstop` Anweisung, um einen Bereich, der nicht in enthalten ist ein `#if/#endif` Block.
