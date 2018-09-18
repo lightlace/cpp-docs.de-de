@@ -29,30 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33abe3dd332bdb55decde308d67d0e1af13e13f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dbeca42c9b00558823e36463eab39d5caabec632
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387144"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016395"
 ---
 # <a name="ciatan2"></a>_CIatan2
-Berechnet den Arkustangens von *x* / *y*, wobei *x* und *y* die obersten Werte des Stapels sind.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void __cdecl _CIatan2();  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Version der `atan2`-Funktion verfügt über eine spezielle Aufrufkonvention, die der Compiler versteht. Sie beschleunigt die Ausführung, da sie das Generieren von Kopien verhindert und bei der Registerzuweisung hilft.  
-  
- Der resultierende Wert wird oben auf dem Stapel abgelegt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Plattform:** x86  
-  
-## <a name="see-also"></a>Siehe auch  
- [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [atan, atanf, atanl, atan2, atan2f, atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)
+
+Berechnet den Arkustangens von *x* / *y*, wobei *x* und *y* die obersten Werte des Stapels sind.
+
+## <a name="syntax"></a>Syntax
+
+```
+void __cdecl _CIatan2();
+```
+
+## <a name="remarks"></a>Hinweise
+
+Diese Version der `atan2`-Funktion verfügt über eine spezielle Aufrufkonvention, die der Compiler versteht. Sie beschleunigt die Ausführung, da sie das Generieren von Kopien verhindert und bei der Registerzuweisung hilft.
+
+Der resultierende Wert wird oben auf dem Stapel abgelegt.
+
+## <a name="requirements"></a>Anforderungen
+ **Plattform:** x86
+
+## <a name="see-also"></a>Siehe auch
+
+[Alphabetische Funktionsreferenz](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[atan, atanf, atanl, atan2, atan2f, atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)

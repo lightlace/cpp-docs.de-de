@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a87a6518eec495961d1f8d40c625e589db01bd3b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70a31d32ce7bdf89cd0216926c6628b4fa7bdd27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382113"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027349"
 ---
 # <a name="c-pragmas"></a>C-Pragmas
 
@@ -37,8 +37,8 @@ Ein *Pragma* weist den Compiler an, eine bestimmte Aktion zur Kompilierzeit ausz
 
 Eine Beschreibung der Microsoft C-Compilerpragmas finden Sie unter [Pragma-Anweisungen und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
- **Ende Microsoft-spezifisch**
+**Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Quelldateien und Quellprogramme](../c-language/source-files-and-source-programs.md)  
+[Quelldateien und Quellprogramme](../c-language/source-files-and-source-programs.md)
