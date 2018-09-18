@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c4ea8cf95298918088f54c3099a8f41d9c16ca9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f20a5f2767da015bb92a8e64491c2e5226f58aa5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690151"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705912"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Statusanzeige-Steuerelements bereit.  
@@ -347,7 +347,7 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *ClrBar*|Ein [COLORREF](/windows/desktop/gdi/colorref) Wert, der die neue Farbe der Statusleiste Indikator angibt. Geben Sie CLR_DEFAULT um dazu führen, dass die Statusanzeige auf ihre Standardfarbe verwenden.|  
+|*clrBar*|[in] Ein [COLORREF](/windows/desktop/gdi/colorref) Wert, der die neue Farbe der Statusleiste Indikator angibt. Geben Sie CLR_DEFAULT um dazu führen, dass die Statusanzeige auf ihre Standardfarbe verwenden.|  
   
 ### <a name="return-value"></a>Rückgabewert  
 
@@ -399,8 +399,8 @@ BOOL SetMarquee(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *fMarqueeMode*|"True" Turn Marquee-Modus an, oder "false" zum Marquee-Modus zu deaktivieren.|  
-|[in] *Nintervall*|Zeit in Millisekunden zwischen den Updates der Marquee-Animation.|  
+|*fMarqueeMode*|[in] "True" Turn Marquee-Modus an, oder "false" zum Marquee-Modus zu deaktivieren.|  
+|*Nintervall*|[in] Zeit in Millisekunden zwischen den Updates der Marquee-Animation.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt immer "true" zurück.  
@@ -478,7 +478,7 @@ int SetState(int iState);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *iState*|Der Status zum Festlegen der Statusleiste. Verwenden Sie einen der folgenden Werte:<br /><br /> -PBST_NORMAL – In Bearbeitung<br />-PBST_ERROR - Fehler<br />-PBST_PAUSED - angehalten|  
+|*iState*|[in] Der Zustand die Statusanzeige festlegen. Verwenden Sie einen der folgenden Werte:<br /><br /> -PBST_NORMAL – In Bearbeitung<br />-PBST_ERROR - Fehler<br />-PBST_PAUSED - angehalten|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der vorherige Status des aktuellen Statusanzeige-Steuerelements.  

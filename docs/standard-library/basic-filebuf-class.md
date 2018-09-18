@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4594e24ddf88292d311679b64371ac981642bc5d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ee6c74693987c35f37caf210e604835061cbefd6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222720"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715337"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf-Klasse
 
@@ -71,10 +71,10 @@ class basic_filebuf : public basic_streambuf<Elem, Tr>
 ### <a name="parameters"></a>Parameter
 
 *Elem*<br/>
- Das grundlegende Element des Dateipuffers.
+Das grundlegende Element des Dateipuffers.
 
 *Tr*<br/>
- Die Merkmale des grundlegenden Elements des Dateipuffers (in der Regel `char_traits`< `Elem`>).
+Die Merkmale des grundlegenden Elements des Dateipuffers (in der Regel `char_traits`< `Elem`>).
 
 ## <a name="remarks"></a>Hinweise
 
@@ -413,13 +413,13 @@ basic_filebuf<Elem, Tr> *open(
 ### <a name="parameters"></a>Parameter
 
 *_Filename*<br/>
- Der Name der zu öffnenden Datei.
+Der Name der zu öffnenden Datei.
 
 *_Modus*<br/>
- Eine der Enumerationen in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+Eine der Enumerationen in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>
- Der Standardwert der dateiöffnung, entspricht die *Shflag* Parameter im [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+Der Standardwert der dateiöffnung, entspricht die *Shflag* Parameter im [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -462,7 +462,7 @@ basic_filebuf& operator=(basic_filebuf&& right);
 ### <a name="parameters"></a>Parameter
 
 *right*<br/>
- Ein rvalue-Verweis auf ein [basic_filebuf](../standard-library/basic-filebuf-class.md)-Objekt.
+Ein rvalue-Verweis auf ein [basic_filebuf](../standard-library/basic-filebuf-class.md)-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -483,7 +483,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 ### <a name="parameters"></a>Parameter
 
 *_Meta*<br/>
- Das Zeichen, das in den Puffer eingefügt oder `traits_type::eof`.
+Das Zeichen, das in den Puffer eingefügt oder `traits_type::eof`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -510,7 +510,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 ### <a name="parameters"></a>Parameter
 
 *_Meta*<br/>
- Das Zeichen, das in den Puffer eingefügt werden soll, oder `traits_type::eof`.
+Das Zeichen, das in den Puffer eingefügt werden soll, oder `traits_type::eof`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -547,13 +547,13 @@ virtual pos_type seekoff(off_type _Off,
 ### <a name="parameters"></a>Parameter
 
 *_Off*<br/>
- Die Position, die für die Suche, relativ zum *_Way*.
+Die Position, die für die Suche, relativ zum *_Way*.
 
 *_Way*<br/>
- Gibt den Startpunkt für Offsetvorgänge an. Mögliche Werte sind unter [seekdir](../standard-library/ios-base-class.md#seekdir) aufgeführt.
+Gibt den Startpunkt für Offsetvorgänge an. Mögliche Werte sind unter [seekdir](../standard-library/ios-base-class.md#seekdir) aufgeführt.
 
 *_Which*<br/>
- Gibt den Modus für die Zeigerposition an. Standardmäßig können Lese- und Schreibpositionen geändert werden.
+Gibt den Modus für die Zeigerposition an. Standardmäßig können Lese- und Schreibpositionen geändert werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -578,10 +578,10 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 ### <a name="parameters"></a>Parameter
 
 *_Sp*<br/>
- Die Position, nach der gesucht werden soll.
+Die Position, nach der gesucht werden soll.
 
 *_Which*<br/>
- Gibt den Modus für die Zeigerposition an. Standardmäßig können Lese- und Schreibpositionen geändert werden.
+Gibt den Modus für die Zeigerposition an. Standardmäßig können Lese- und Schreibpositionen geändert werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -608,10 +608,10 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 ### <a name="parameters"></a>Parameter
 
 *_Buffer*<br/>
- Ein Zeiger auf einen Puffer.
+Ein Zeiger auf einen Puffer.
 
 *count*<br/>
- Größe des Puffers.
+Größe des Puffers.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -632,7 +632,7 @@ void swap(basic_filebuf& right);
 ### <a name="parameters"></a>Parameter
 
 *right*<br/>
- Ein `lvalue`-Verweis auf ein anderes `basic_filebuf`-Objekt.
+Ein `lvalue`-Verweis auf ein anderes `basic_filebuf`-Objekt.
 
 ## <a name="sync"></a> basic_filebuf::sync
 

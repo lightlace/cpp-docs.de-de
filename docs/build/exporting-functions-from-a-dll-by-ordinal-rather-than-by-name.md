@@ -1,5 +1,5 @@
 ---
-title: Exportieren von Funktionen aus einer DLL über die Ordnungszahl statt über den Namen | Microsoft Docs
+title: Exportieren von Funktionen aus einer DLL über die Ordnungszahl statt nach Name | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,24 +19,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b05f3e429406b3c24c7a21ce9ee8e10fe19c14b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2d894df971dd0c50556a420eafa2909474ee6912
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367692"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714258"
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>Exportieren von Funktionen aus einer DLL über die Ordnungszahl statt über den Namen
-Die einfachste Möglichkeit zum Exportieren von Funktionen aus einer DLL wird anhand des Namens exportiert. Dies ist, was geschieht, wenn Sie **__declspec(dllexport)**, z. B. Aber Sie können stattdessen Funktionen anhand der Ordinalzahl exportieren. Mit dieser Methode müssen Sie verwenden eine DEF-Datei anstelle von **__declspec(dllexport)**. Um Ordinalwert einer Funktion anzugeben, fügen Sie seiner Ordnungszahl, an dem Funktionsnamen in der DEF-Datei. Informationen zum Angeben von Ordinalzahlen finden Sie unter [exportieren aus einer DLL mithilfe von DEF-Dateien](../build/exporting-from-a-dll-using-def-files.md).  
-  
+
+Die einfachste Möglichkeit zum Exportieren von Funktionen aus einer DLL ist nach dem Namen exportiert. Dies ist der Fall bei der Verwendung **__declspec(dllexport)**, z. B. Aber Sie können stattdessen Funktionen anhand der Ordinalzahl exportieren. Mit diesem Verfahren können Sie müssen eine DEF-Datei anstelle von verwenden **__declspec(dllexport)**. Fügen Sie zum Angeben einer Funktion Ordinalwert seiner Ordnungszahl, an dem Funktionsnamen in der DEF-Datei. Weitere Informationen zum Festlegen der Ordinalzahlen, finden Sie unter [aus einer DLL mithilfe von DEF-Dateien exportieren](../build/exporting-from-a-dll-using-def-files.md).
+
 > [!TIP]
->  Wenn Sie die Größe für die DLL-Datei zu optimieren möchten, verwenden Sie die **NONAME** Attribut für jede exportierte Funktion. Mit der **NONAME** -Attribut, die Ordnungszahlen werden gespeichert, die DLL zu exportieren, den Funktionsnamen, sondern die Tabelle. Dies kann platzsparend sein, wenn Sie viele Funktionen exportieren.  
-  
-## <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?  
-  
--   [Verwenden Sie eine DEF-Datei, daher können durch die Ordinalzahl exportieren](../build/exporting-from-a-dll-using-def-files.md)  
-  
--   [Mithilfe von __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Exportieren aus einer DLL](../build/exporting-from-a-dll.md)
+>  Wenn Sie die Größe von der DLL Datei optimieren möchten, verwenden Sie die **NONAME** Attribut für jede exportierte Funktion. Mit der **NONAME** -Attribut die Ordnungszahlen werden gespeichert, der DLLs zu exportieren, die Namen der Funktionen, sondern die Tabelle. Dies kann eine erheblichen einsparungen sein, wenn Sie viele Funktionen exportieren.
+
+## <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?
+
+- [Verwenden Sie eine DEF-Datei, sodass ich anhand der Ordinalzahl exportieren können](../build/exporting-from-a-dll-using-def-files.md)
+
+- [Verwenden von "__declspec(dllexport)" "](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Exportieren aus einer DLL](../build/exporting-from-a-dll.md)
