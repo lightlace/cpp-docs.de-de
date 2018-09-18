@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2468cd05efdf732fbf955b8532a61d24fa6c0ff4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eaa4972a12729a5697db3574fcf89b0fb2b252ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409123"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068454"
 ---
 # <a name="run-time-error-checking"></a>Laufzeitfehlerüberprüfung
 
 Die C-Laufzeitbibliothek enthält die Funktionen, die Laufzeitfehlerüberprüfungen (Run-Time Error Checks, RTC) unterstützen. Mit der Laufzeitfehlerüberprüfung können Sie Ihr Programm so erstellen, dass bestimmte Arten von Laufzeitfehlern gemeldet werden. Sie geben an, welche Arten von Fehlern gemeldet werden sollen und wie die Meldung erfolgen soll. Weitere Informationen finden Sie unter [Gewusst wie: Verwenden von systemeigenen Laufzeitprüfungen](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
- Verwenden Sie die folgenden Funktionen, um die Art und Weise anzupassen, in der Ihr Programm die Laufzeitfehlerüberprüfung ausführt.
+Verwenden Sie die folgenden Funktionen, um die Art und Weise anzupassen, in der Ihr Programm die Laufzeitfehlerüberprüfung ausführt.
 
 ## <a name="run-time-error-checking-functions"></a>Funktionen der Laufzeitfehlerüberprüfung
 
@@ -42,6 +42,6 @@ Die C-Laufzeitbibliothek enthält die Funktionen, die Laufzeitfehlerüberprüfun
 ## <a name="see-also"></a>Siehe auch
 
 [Universelle C-Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
- [/RTC (Laufzeitfehlerüberprüfungen)](../build/reference/rtc-run-time-error-checks.md)<br/>
- [runtime_checks](../preprocessor/runtime-checks.md)<br/>
- [Debugroutinen](../c-runtime-library/debug-routines.md)<br/>
+[/RTC (Laufzeitfehlerüberprüfungen)](../build/reference/rtc-run-time-error-checks.md)<br/>
+[runtime_checks](../preprocessor/runtime-checks.md)<br/>
+[Debugroutinen](../c-runtime-library/debug-routines.md)<br/>
