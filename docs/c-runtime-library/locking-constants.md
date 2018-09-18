@@ -29,42 +29,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 588c286cbad5e0097394a38eed34c09fc04af3ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: abf776ab72d692be6d573803353f35946df145ec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389968"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031930"
 ---
 # <a name="locking-constants"></a>_locking-Konstanten
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-#include <sys/locking.h>  
-  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Das *mode*-Argument im Aufruf der `_locking`-Funktion gibt die auszuführende Sperraktion an.  
-  
- Das *mode*-Argument muss eine der folgenden Manifestkonstanten sein.  
-  
- `_LK_LOCK`  
- Sperrt die angegebenen Bytes. Wenn die Bytes nicht gesperrt werden können, führt die Funktion nach 1 Sekunde einen neuen Versuch durch. Wenn nach 10 Versuchen die Bytes nicht gesperrt werden können, gibt die Funktion einen Fehler zurück.  
-  
- `_LK_RLCK`  
- Wie in `_LK_LOCK`.  
-  
- `_LK_NBLCK`  
- Sperrt die angegebenen Bytes. Wenn die Bytes nicht gesperrt werden können, gibt die Funktion einen Fehler zurück.  
-  
- `_LK_NBRLCK`  
- Wie in `_LK_NBLCK`.  
-  
- `_LK_UNLCK`  
- Entsperrt die angegebenen Bytes. (Die Bytes müssen zuvor gesperrt worden sein.)  
-  
-## <a name="see-also"></a>Siehe auch  
- [_locking](../c-runtime-library/reference/locking.md)   
- [Globale Konstanten](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntax
+
+```
+#include <sys/locking.h>
+```
+
+## <a name="remarks"></a>Hinweise
+
+Das *mode*-Argument im Aufruf der `_locking`-Funktion gibt die auszuführende Sperraktion an.
+
+Das *mode*-Argument muss eine der folgenden Manifestkonstanten sein.
+
+|||
+|-|-|
+| `_LK_LOCK`  | Sperrt die angegebenen Bytes. Wenn die Bytes nicht gesperrt werden können, führt die Funktion nach 1 Sekunde einen neuen Versuch durch. Wenn nach 10 Versuchen die Bytes nicht gesperrt werden können, gibt die Funktion einen Fehler zurück.  |
+| `_LK_RLCK`  | Wie in `_LK_LOCK`.  |
+|`_LK_NBLCK`  | Sperrt die angegebenen Bytes. Wenn die Bytes nicht gesperrt werden können, gibt die Funktion einen Fehler zurück.  |
+| `_LK_NBRLCK`  | Wie in `_LK_NBLCK`.  |
+| `_LK_UNLCK`  | Entsperrt die angegebenen Bytes. (Die Bytes müssen zuvor gesperrt worden sein.)  |
+
+## <a name="see-also"></a>Siehe auch
+
+[_locking](../c-runtime-library/reference/locking.md)<br/>
+[Globale Konstanten](../c-runtime-library/global-constants.md)
