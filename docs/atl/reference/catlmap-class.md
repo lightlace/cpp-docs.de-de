@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c1095df6caae94cac86e5e205507e0ed9eeb98e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 564ff010756a2afa9210fc71dd47fce2b72dcbca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755085"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075721"
 ---
 # <a name="catlmap-class"></a>CAtlMap-Klasse
 
@@ -70,15 +70,16 @@ class CAtlMap
 
 #### <a name="parameters"></a>Parameter
 
-*K*  
+*K*<br/>
 Der Typ des Key-Element.
 
-*V* der Element-Werttyp.
+*V*<br/>
+Der Werttyp-Element.
 
-*KTraits*  
+*KTraits*<br/>
 Der Code, der zum Kopieren oder Verschieben von Hauptelementen verwendet wird. Finden Sie unter [CElementTraits-Klasse](../../atl/reference/celementtraits-class.md) Weitere Details.
 
-*VTraits*  
+*VTraits*<br/>
 Der Code zum Kopieren oder verschieben Elemente mit dem Wert verwendet.
 
 ## <a name="members"></a>Member
@@ -195,19 +196,19 @@ CAtlMap(
 
 ### <a name="parameters"></a>Parameter
 
-*nBins*  
+*nBins*<br/>
 Die Anzahl der Klassen stellt Zeiger auf die gespeicherten Elemente. Finden Sie unter "Hinweise" weiter unten in diesem Thema finden Sie eine Erläuterung der Klassen ein.
 
-*fOptimalLoad*  
+*fOptimalLoad*<br/>
 Das optimale Auslastung-Verhältnis.
 
-*fLoThreshold*  
+*fLoThreshold*<br/>
 Der untere Schwellenwert für die Load-Verhältnis.
 
-*fHiThreshold*  
+*fHiThreshold*<br/>
 Der obere Schwellenwert für die Load-Verhältnis.
 
-*nBlockSize*  
+*nBlockSize*<br/>
 Die Blockgröße.
 
 ### <a name="remarks"></a>Hinweise
@@ -297,13 +298,13 @@ CPair* GetAt(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*POS*  
+*POS*<br/>
 Der Position Zähler, der von einem vorherigen Aufruf zurückgegebene [CAtlMap::GetNextAssoc](#getnextassoc) oder [CAtlMap::GetStartPosition](#getstartposition).
 
-*key*  
+*key*<br/>
 Der Vorlagenparameter, die den Typ des Schlüssels mit der Karte.
 
-*Wert*  
+*Wert*<br/>
 Der Vorlagenparameter, der den Typ des Werts von der Karte angibt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -352,7 +353,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*POS*  
+*POS*<br/>
 Der Position Zähler, der von einem vorherigen Aufruf zurückgegebene [CAtlMap::GetNextAssoc](#getnextassoc) oder [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -374,7 +375,7 @@ const CPair* GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*POS*  
+*POS*<br/>
 Der Position Zähler, der von einem vorherigen Aufruf zurückgegebene [CAtlMap::GetNextAssoc](#getnextassoc) oder [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -394,13 +395,13 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>Parameter
 
-*POS*  
+*POS*<br/>
 Der Position Zähler, der von einem vorherigen Aufruf zurückgegebene [CAtlMap::GetNextAssoc](#getnextassoc) oder [CAtlMap::GetStartPosition](#getstartposition).
 
-*key*  
+*key*<br/>
 Der Vorlagenparameter, die den Typ des Schlüssels mit der Karte.
 
-*Wert*  
+*Wert*<br/>
 Der Vorlagenparameter, der den Typ des Werts von der Karte angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -417,7 +418,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*POS*  
+*POS*<br/>
 Der Position Zähler, der von einem vorherigen Aufruf zurückgegebene [CAtlMap::GetNextAssoc](#getnextassoc) oder [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -439,7 +440,7 @@ const V& GetNextValue(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*POS*  
+*POS*<br/>
 Der Position Zähler, der von einem vorherigen Aufruf zurückgegebene [CAtlMap::GetNextAssoc](#getnextassoc) oder [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -488,7 +489,7 @@ const V& GetValueAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*POS*  
+*POS*<br/>
 Der Position Zähler, der von einem vorherigen Aufruf zurückgegebene [CAtlMap::GetNextAssoc](#getnextassoc) oder [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -507,10 +508,10 @@ bool InitHashTable(
 
 ### <a name="parameters"></a>Parameter
 
-*nBins*  
+*nBins*<br/>
 Die Anzahl der Klassen, die von der Hashtabelle verwendet werden soll. Finden Sie unter [CAtlMap::CAtlMap](#catlmap) erläutert.
 
-*bAllocNow*  
+*bAllocNow*<br/>
 Ein Flag Hinweis darauf, wenn der Speicher zugewiesen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -567,10 +568,10 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*key*  
+*key*<br/>
 Gibt den Schlüssel, der identifiziert das Element gesucht werden soll.
 
-*Wert*  
+*Wert*<br/>
 Variable, die den Wert der nachgeschlagenen empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -591,7 +592,7 @@ V& operator[](kinargtype key) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*key*  
+*key*<br/>
 Der Schlüssel des Elements, das Hinzufügen oder ersetzen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -612,7 +613,7 @@ void Rehash(UINT nBins = 0);
 
 ### <a name="parameters"></a>Parameter
 
-*nBins*  
+*nBins*<br/>
 Die neue Anzahl von Containern in der Hashtabelle verwendet werden soll. Finden Sie unter [CAtlMap::CAtlMap](#catlmap) erläutert.
 
 ### <a name="remarks"></a>Hinweise
@@ -641,7 +642,7 @@ void RemoveAtPos(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*POS*  
+*POS*<br/>
 Der Position Zähler, der von einem vorherigen Aufruf zurückgegebene [CAtlMap::GetNextAssoc](#getnextassoc) oder [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="remarks"></a>Hinweise
@@ -658,7 +659,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*key*  
+*key*<br/>
 Die entsprechenden auf das Element-Paar, die Sie entfernen möchten.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -681,10 +682,10 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>Parameter
 
-*key*  
+*key*<br/>
 Der Schlüsselwert, Hinzufügen der `CAtlMap` Objekt.
 
-*Wert*  
+*Wert*<br/>
 Der Wert, der zum Hinzufügen der `CAtlMap` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -709,16 +710,16 @@ void SetOptimalLoad(
 
 ### <a name="parameters"></a>Parameter
 
-*fOptimalLoad*  
+*fOptimalLoad*<br/>
 Das optimale Auslastung-Verhältnis.
 
-*fLoThreshold*  
+*fLoThreshold*<br/>
 Der untere Schwellenwert für die Load-Verhältnis.
 
-*fHiThreshold*  
+*fHiThreshold*<br/>
 Der obere Schwellenwert für die Load-Verhältnis.
 
-*bRehashNow*  
+*bRehashNow*<br/>
 Flag zum angeben, wenn die Hashtabelle neu berechnet werden sollen.
 
 ### <a name="remarks"></a>Hinweise
@@ -737,10 +738,10 @@ void SetValueAt(
 
 ### <a name="parameters"></a>Parameter
 
-*POS*  
+*POS*<br/>
 Der Position Zähler, der von einem vorherigen Aufruf zurückgegebene [CAtlMap::GetNextAssoc](#getnextassoc) oder [CAtlMap::GetStartPosition](#getstartposition).
 
-*Wert*  
+*Wert*<br/>
 Der Wert, der zum Hinzufügen der `CAtlMap` Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -773,7 +774,7 @@ const K m_key;
 
 ### <a name="parameters"></a>Parameter
 
-*K*  
+*K*<br/>
 Der Typ des Key-Element.
 
 ##  <a name="m_value"></a>  CAtlMap::CPair::m_value
@@ -786,11 +787,11 @@ V  m_value;
 
 ### <a name="parameters"></a>Parameter
 
-*V*  
+*V*<br/>
 Der Werttyp-Element.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Marquee-Beispiel](../../visual-cpp-samples.md)   
-[UpdatePV-Beispiel](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)   
+[Marquee-Beispiel](../../visual-cpp-samples.md)<br/>
+[UpdatePV-Beispiel](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a6835cb1f8fb6365149b91c30881b4966b4b644
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 40dddf2bb1619bd896ecf50008f80fca968ef8c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765657"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075708"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject-Klasse
 
@@ -49,7 +49,7 @@ public CComObjectRootEx<contained
 
 #### <a name="parameters"></a>Parameter
 
-`contained`  
+*enthalten sind*<br/>
 Abgeleitet von die Klasse abtrennbare `CComTearOffObjectBase` und die Schnittstellen Ihre abtrennbare-Objekt, das unterstützt werden sollen.
 
 ## <a name="members"></a>Member
@@ -121,7 +121,7 @@ CComCachedTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Parameter
 
-*PV*  
+*PV*<br/>
 [in] Zeiger auf die `IUnknown` von der `CComCachedTearOffObject`.
 
 ### <a name="remarks"></a>Hinweise
@@ -170,7 +170,7 @@ CcomContainedObject <contained> m_contained;
 
 ### <a name="parameters"></a>Parameter
 
-*enthalten sind*  
+*enthalten sind*<br/>
 [in] Abgeleitet von die Klasse abtrennbare `CComTearOffObjectBase` und die Schnittstellen Ihre abtrennbare-Objekt, das unterstützt werden sollen.
 
 ### <a name="remarks"></a>Hinweise
@@ -187,10 +187,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parameter
 
-*IID*  
+*IID*<br/>
 [in] Die GUID der Schnittstelle angefordert wird.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Ein Zeiger auf den Schnittstellenzeiger vom *Iid*, oder NULL, wenn die Schnittstelle nicht gefunden wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -215,6 +215,6 @@ In nicht-Debug-Builds gibt immer 0 zurück. In Debugbuilds müssen Sie einen Wer
 
 ## <a name="see-also"></a>Siehe auch
 
-[CComTearOffObject-Klasse](../../atl/reference/ccomtearoffobject-class.md)   
-[CComObjectRootEx-Klasse](../../atl/reference/ccomobjectrootex-class.md)   
+[CComTearOffObject-Klasse](../../atl/reference/ccomtearoffobject-class.md)<br/>
+[CComObjectRootEx-Klasse](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Linkertoolwarnung Lnk4039 | Microsoft Docs
+title: Linkertoolwarnung LNK4039 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7ea2f0ff7e6b76f08eee6fdcfa51b7aac3b5f54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a78b7e7e488f274069c89e117543e9093a3acae8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300318"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073238"
 ---
 # <a name="linker-tools-warning-lnk4039"></a>Linkertoolwarnung LNK4039
-im Abschnitt mit der Option/Section angegebene "Name" ist nicht vorhanden.  
-  
- [DUMPBIN](../../build/reference/dumpbin-reference.md) oder [EDITBIN](../../build/reference/editbin-reference.md) Abschnitt wurde nicht gefunden `name` in der Eingabedatei.  
-  
- Um in den Abschnitten in einer Datei anzuzeigen, führen Sie DUMPBIN mit der [/Headers](../../build/reference/headers.md) Option.
+
+im Abschnitt "Name" mit der Option/Section angegeben wird, ist nicht vorhanden.
+
+[DUMPBIN](../../build/reference/dumpbin-reference.md) oder [EDITBIN](../../build/reference/editbin-reference.md) nicht gefunden, einen Abschnitt namens `name` in der Eingabedatei.
+
+Führen Sie zum Anzeigen der Abschnitte in einer Datei DUMPBIN mit der [/Headers](../../build/reference/headers.md) Option.

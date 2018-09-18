@@ -1,5 +1,5 @@
 ---
-title: Projektbuildfehler prj0014 | Microsoft Docs
+title: Projektbuildfehler prj0014 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d088acfe817dc2980f593d3e013a021646586f8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dc13a7eb9a9b86ac57c66ff8c09c03ea9b3f3e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316156"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074731"
 ---
 # <a name="project-build-error-prj0014"></a>Projektbuildfehler PRJ0014
-Die Job-Objekt, das zum Steuern von gestarteten Prozessen ausgefallen ist.  Der Build nicht fortgesetzt werden.  
-  
- In der Entwicklungsumgebung ist ein Fehler aufgetreten.  
-  
- Um diesen Fehler zu beheben, schließen und das Projekt erneut laden. Bei Bedarf beenden und starten Sie Visual Studio neu.
+
+Fehler bei der Steuerung der gestarteten Prozesse verwendete Auftragsobjekt.  Der Buildvorgang kann nicht fortgesetzt werden.
+
+In der Entwicklungsumgebung ist ein Fehler aufgetreten.
+
+Schließen Sie und Laden Sie das Projekt, um diesen Fehler zu beheben. Bei Bedarf beenden und starten Sie Visual Studio neu.

@@ -24,14 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b9dc35df928d53d7d5ca5d833db8e87c96e1c7f4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c66200acab5fc1be509136fc45895fdf08e40fdb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571588"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072069"
 ---
 # <a name="crestrictions-class"></a>CRestrictions-Klasse
+
 Eine generische Klasse, die Sie Einschränkungen für Schemarowsets angeben kann.  
   
 ## <a name="syntax"></a>Syntax
@@ -43,17 +44,19 @@ class CRestrictions :
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *T*  
- Die Klasse, die für den Accessor verwendet wird.  
+
+*T*<br/>
+Die Klasse, die für den Accessor verwendet wird.  
   
- *nRestrictions*  
- Die Anzahl der Einschränkungsspalten für das Schemarowset.  
+*nRestrictions*<br/>
+Die Anzahl der Einschränkungsspalten für das Schemarowset.  
   
- *pguid*  
- Ein Zeiger auf die GUID für das Schema.  
+*pguid*<br/>
+Ein Zeiger auf die GUID für das Schema.  
 
 ## <a name="requirements"></a>Anforderungen  
- **Header:** atldbsch.h 
+
+**Header:** atldbsch.h 
   
 ## <a name="members"></a>Member  
   
@@ -64,6 +67,7 @@ class CRestrictions :
 |[Öffnen](#open)|Gibt ein Resultset, die gemäß den vom Benutzer anzugebende Einschränkungen zurück.|   
 
 ## <a name="open"></a> CRestrictions:: Open
+
 Gibt ein Resultset, die gemäß den vom Benutzer anzugebende Einschränkungen zurück.  
   
 ### <a name="syntax"></a>Syntax  
@@ -81,24 +85,28 @@ HRESULT Open(const CSession& session,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Sitzung*  
- [in] Gibt ein vorhandenes Session-Objekt, das für die Verbindung mit der Datenquelle verwendet.  
+
+*Sitzung*<br/>
+[in] Gibt ein vorhandenes Session-Objekt, das für die Verbindung mit der Datenquelle verwendet.  
   
- *lpszParam*  
- [in] Gibt die Einschränkungen für das Schemarowset.  
+*lpszParam*<br/>
+[in] Gibt die Einschränkungen für das Schemarowset.  
   
- *bBind*  
- [in] Gibt an, ob die spaltenzuordnung automatisch zu binden. Der Standardwert ist **"true"**, der bewirkt, dass der spaltenzuordnung automatisch gebunden werden soll. Festlegen von *bBind* zu **"false"** wird verhindert, dass die automatische Bindung der Spalte-Zuordnung aus, damit Sie manuell binden können. (Manuelle Bindung ist von besonderem Interesse für OLAP-Benutzer.)  
+*bBind*<br/>
+[in] Gibt an, ob die spaltenzuordnung automatisch zu binden. Der Standardwert ist **"true"**, der bewirkt, dass der spaltenzuordnung automatisch gebunden werden soll. Festlegen von *bBind* zu **"false"** wird verhindert, dass die automatische Bindung der Spalte-Zuordnung aus, damit Sie manuell binden können. (Manuelle Bindung ist von besonderem Interesse für OLAP-Benutzer.)  
   
 ### <a name="return-value"></a>Rückgabewert  
- Einer der standardmäßigen HRESULT-Werte.  
+
+Einer der standardmäßigen HRESULT-Werte.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie können maximal sieben Einschränkungen für ein Schemarowset angeben.  
+
+Sie können maximal sieben Einschränkungen für ein Schemarowset angeben.  
   
- Finden Sie unter [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) für Informationen zu den definierten Einschränkungen für jedes Schemarowset.  
+Finden Sie unter [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) für Informationen zu den definierten Einschränkungen für jedes Schemarowset.  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenz der OLE DB Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)    
- [Schemarowset-Klassen und Typedef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
+
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Schemarowset-Klassen und Typedef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

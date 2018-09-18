@@ -1,5 +1,5 @@
 ---
-title: PTR::Operator = | Microsoft Docs
+title: PTR::Operator = | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c4f9e54ce2bcd6ff402e6ad239b269a3e314286d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8a8b87afba71836876554e1abbe04014cb09772
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161030"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075077"
 ---
 # <a name="ptroperator"></a>ptr::operator=
-Fügt ein COM-Objekt an eine `com::ptr`.  
+Fügt einem COM-Objekt ein `com::ptr`.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,22 +39,22 @@ ptr<_interface_type> % operator=(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `_right`  
- Die COM-Schnittstellenzeiger, der angefügt werden soll.  
+*_Right*<br/>
+Die COM-Schnittstellenzeiger, der angefügt werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein Nachverfolgungsverweis auf die `com::ptr`.  
   
 ## <a name="exceptions"></a>Ausnahmen  
- Wenn die `com::ptr` besitzt bereits einen Verweis auf ein COM-Objekt `operator=` löst <xref:System.InvalidOperationException>.  
+ Wenn die `com::ptr` bereits einen Verweis auf ein COM-Objekt im Besitz `operator=` löst <xref:System.InvalidOperationException>.  
   
 ## <a name="remarks"></a>Hinweise  
- Zuweisen von einem COM-Objekt ein `com::ptr` verweist auf das COM-Objekt jedoch nicht den Aufrufer Verweis darauf freigibt.  
+ Zuweisen von einem COM-Objekt ein `com::ptr` verweist auf das COM-Objekt, jedoch nicht des Aufrufers Verweis freigibt.  
   
  Dieser Operator hat dieselbe Wirkung wie das `Attach`.  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel implementiert eine CLR-Klasse, verwendet eine `com::ptr` umschließen die privaten Member `IXMLDOMDocument` Objekt.  Die `ReplaceDocument` erste Memberfunktion ruft `Release` auf einem beliebigen zuvor Besitzer, Objekt zugewiesen und dann verwendet `operator=` ein neues Dokumentobjekt angefügt.  
+ In diesem Beispiel implementiert eine CLR-Klasse, verwendet eine `com::ptr` , umschließen die privaten Member `IXMLDOMDocument` Objekt.  Die `ReplaceDocument` erste Memberfunktion `Release` auf eine zuvor im Besitz-Objekt und dann verwendet, `operator=` , fügen Sie ein neues Dokumentobjekt.  
   
 ```  
 // comptr_op_assign.cpp  

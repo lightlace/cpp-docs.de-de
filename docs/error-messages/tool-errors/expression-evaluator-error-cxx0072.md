@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0072 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0072 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e28fe0f27834b1ec18236ab8734b24601baef72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ae9ef1017068fb2c515949110905a65e822d93a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295716"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074455"
 ---
 # <a name="expression-evaluator-error-cxx0072"></a>Ausdrucksauswertungsfehler CXX0072
-Fehler: Typ fehlen oder "Unbekannt"  
-  
- Die PCH-Datei nicht verknüpft, oder der Code enthält einen Verweis auf einen Typ, der in einem Modul nicht mit/ZI kompiliert wird.  
-  
- Dieser Fehler ist mit CAN0067 identisch.
+
+Fehler: Geben Sie Informationen zu fehlenden oder "Unbekannt"
+
+Die PCH-Datei nicht verknüpft oder der Code enthält einen Verweis auf einen Typ, der in einem Modul nicht mit "/ Zi" kompiliert wird.
+
+Dieser Fehler ist mit CAN0067 identisch.

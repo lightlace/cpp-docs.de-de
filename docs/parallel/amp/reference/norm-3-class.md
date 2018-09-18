@@ -1,5 +1,5 @@
 ---
-title: norm_3-Klasse | Microsoft Docs
+title: norm_3-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822ef062dbde18dcdb285d2358d10f4a6ae2b566
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fe4852313d6eb445b3ea242f13e5dc5f6e90def2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688660"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074382"
 ---
 # <a name="norm3-class"></a>norm_3-Klasse
 Stellt einen kurzen Vektor aus drei normalen Zahlen dar.  
@@ -158,7 +158,7 @@ class norm_3;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |norm_3::-||  
-|norm_3::--||  
+|norm_3:::||  
 |norm_3::operator*=||  
 |norm_3::operator/=||  
 |norm_3:: Operator++-||  
@@ -264,20 +264,20 @@ explicit inline norm_3(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `_V0`  
- Der Wert 0-Element initialisiert werden.  
+*_V0*<br/>
+Der Wert, der 0-Element zu initialisieren.  
   
- `_V1`  
- Der Wert 1 Element initialisiert werden.  
+*_V1*<br/>
+Der Wert 1 Element initialisiert werden.  
   
- `_V2`  
- Der Wert 2-Element initialisiert werden.  
+*_V2*<br/>
+Der Wert 2-Element zu initialisieren.  
   
- `_V`  
- Der Wert für die Initialisierung.  
+*_V*<br/>
+Der Wert für die Initialisierung.  
   
- `_Other`  
- Das Objekt, das zum Initialisieren verwendet.  
+*_Sonstige*<br/>
+Das Objekt, das zum Initialisieren verwendet.  
   
 ## <a name="a-namesize-size-constant"></a><a name="size"> Size-Konstante
 ### <a name="syntax"></a>Syntax  

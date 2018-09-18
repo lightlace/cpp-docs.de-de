@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufen 1 und 4) C4223 | Microsoft Docs
+title: Compilerwarnung (Ebenen 1 und 4) C4223 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3ac6890a5a51d7448c3317a8cf37f23791d27f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a04ccf80bac123a3d2c6f28a063c274fe40a7e58
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294894"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075435"
 ---
 # <a name="compiler-warning-levels-1-and-4-c4223"></a>Compilerwarnung (Stufen 1 und 4) C4223
-nicht dem Standard entsprechende Erweiterung: l-Array in Zeiger konvertiert.  
-  
- In standard-C kann kein l-Array in einen Zeiger konvertiert werden. Mit den Standard-Microsoft-Erweiterungen (["/ Ze"](../../build/reference/za-ze-disable-language-extensions.md)), können Sie.
+
+nicht dem Standard entsprechende Erweiterung: kein l-Wert-Array in Zeiger konvertiert.
+
+Sie können nicht in standard-C ein l-Array in einen Zeiger konvertieren. Mit den Standard-Microsoft-Erweiterungen ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)), können Sie.

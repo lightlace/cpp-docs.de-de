@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C2062 | Microsoft Docs
+title: Compilerfehler C2062 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d11151a8e842796e4a5a8d45956782421daa1c70
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bbda0894b25e09681207d6447bb40727d490fc02
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168658"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072243"
 ---
-# <a name="compiler-error-c2062"></a>Compilerfehler Fehler C2062
-Typ "Type" Unerwarteter  
-  
- Nicht erwartet der Compiler hat einen Typnamen.  
-  
- Im folgenden Beispiel wird C2062 generiert:  
-  
-```  
-// C2062.cpp  
-// compile with: /c  
-struct A {  : int l; };   // C2062  
-struct B { private: int l; };   // OK  
-```  
-  
- C2062 kann auch auftreten, wenn der Compiler nicht definierte Typen in einem Konstruktor Parameterliste findet. Wenn der Compiler einen undefinierten (falsch)? Typ erkennt, wird es der Konstruktor ist ein Ausdruck, und C2062. Verwenden Sie nur definierte Typen in einer Konstruktorparameterliste, um zu beheben.
+# <a name="compiler-error-c2062"></a>Compilerfehler C2062
+
+Typ 'Typ' unerwartete
+
+Der Compiler wurde einen Typnamen nicht erwartet werden.
+
+Im folgende Beispiel wird die C2062 generiert:
+
+```
+// C2062.cpp
+// compile with: /c
+struct A {  : int l; };   // C2062
+struct B { private: int l; };   // OK
+```
+
+C2062 kann auch auftreten, wenn der Compiler nicht definierte Typen in der Parameterliste des Konstruktors findet. Findet der Compiler einen undefinierten Typ für die (falsch geschrieben?), wird es an der Konstruktor ist ein Ausdruck, und C2062. Um zu beheben, müssen verwenden Sie definierte Typen nur in einer Parameterliste für Konstruktor.

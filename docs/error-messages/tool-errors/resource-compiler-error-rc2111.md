@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcencompiler: Fehler RC2111 | Microsoft Docs'
+title: 'Ressourcencompiler: Fehler RC2111 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5c47c83c75a9bdb62bf0cb6594399e5a551bb76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8e0e0f153b5eed21f906dd228072a4239dec63e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317128"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076449"
 ---
 # <a name="resource-compiler-error-rc2111"></a>Ressourcencompiler: Fehler RC2111
-Ungültige-Steuerelementtyp  
-  
- Jedes Steuerelement-Anweisung in einem **Dialogfeld** -Anweisung muss eine der folgenden sein: 3STATE, AUTO3, AUTOCHECK, AUTORADIO, E-Mail, das Kontrollkästchen, COMBOBOX, CONTROL, CTEXT, DEFPUSHBUTTON, EDITTEXT-, GROUPBOX, HEDIT, Symbol, IEDIT, LISTBOX, LTEXT, PUSHBOX, PUSHBUTTON, RADIOBUTTON, RTEXT, BILDLAUFLEISTE, USERBUTTON.  
-  
- Stellen Sie sicher, dass diese Steueranweisungen richtig geschrieben sind.
+
+Ungültiger-Steuerelementtyp
+
+Jede CONTROL-Anweisung in einem **Dialogfeld** -Anweisung muss eine der folgenden sein: 3STATE, AUTO3, AUTOCHECK, AUTORADIO, E-Mail, "CheckBox", "ComboBox", Steuerelement, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, HEDIT, Symbol, IEDIT, LISTBOX, LTEXT, PUSHBOX PUSHBUTTON, OPTIONSFELD, RTEXT, SCHIEBELEISTE, USERBUTTON.
+
+Stellen Sie sicher, dass diese Steueranweisungen richtig geschrieben sind.

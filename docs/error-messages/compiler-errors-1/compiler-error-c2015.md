@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C2015 | Microsoft Docs
+title: Compilerfehler C2015 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91c682aadeab5a572ec2bb5c2e649a1511af77ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5fb9c3ba86224906f749088b96e5daae364d99e2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165622"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076046"
 ---
-# <a name="compiler-error-c2015"></a>Compilerfehler Fehler C2015
-zu viele Zeichen in der Konstante  
-  
- Eine Zeichenkonstante enthält mehr als zwei Zeichen. Der Grenzwert ist ein Zeichen für standard Zeichenkonstanten und zwei Zeichen für lange Zeichenkonstanten.  
-  
- Eine Escapesequenz, z. B. \t, wird in ein einzelnes Zeichen konvertiert.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C2015 generiert:  
-  
-```  
-// C2015.cpp  
-// compile with: /c  
-  
-char test1 = 'error';   // C2015  
-char test2 = 'e';   // OK  
-```  
-  
-## <a name="example"></a>Beispiel  
- C2015 kann auch auftreten, wenn eine Microsoft-Erweiterung Zeichenkonstanten in ganze Zahlen konvertiert.  Im folgenden Beispiel wird C2015 generiert:  
-  
-```  
-// C2015b.cpp  
-#include <stdio.h>  
-  
-int main()   
-{  
-    int a = 'abcde';   // C2015  
-  
-    int b = 'a';   // 'a' = ascii 0x61  
-    printf_s("%x\n", b);  
-}  
+# <a name="compiler-error-c2015"></a>Compilerfehler C2015
+
+zu viele Zeichen in Konstante.
+
+Eine Zeichenkonstante enthält mehr als zwei Zeichen. Der Grenzwert ist ein Zeichen für standard-Zeichenkonstanten und zwei Zeichen lange Zeichenkonstanten.
+
+Eine Escapesequenz, z. B. \t, wird in ein einzelnes Zeichen konvertiert.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C2015 generiert:
+
+```
+// C2015.cpp
+// compile with: /c
+
+char test1 = 'error';   // C2015
+char test2 = 'e';   // OK
+```
+
+## <a name="example"></a>Beispiel
+
+C2015 kann auch auftreten, wenn eine Microsoft-Erweiterung, Zeichenkonstanten, die zu einer ganzen Zahl konvertiert.  Im folgende Beispiel wird die C2015 generiert:
+
+```
+// C2015b.cpp
+#include <stdio.h>
+
+int main()
+{
+    int a = 'abcde';   // C2015
+
+    int b = 'a';   // 'a' = ascii 0x61
+    printf_s("%x\n", b);
+}
 ```

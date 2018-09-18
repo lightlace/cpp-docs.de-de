@@ -14,37 +14,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 845ca21dc4de4263c9063712b372c70cfb022059
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6e80f49067d2482254803df563b56de1fc43b685
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685804"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076085"
 ---
 # <a name="statements-c"></a>Anweisungen (C++)
-C++-Anweisungen sind die Programmelemente, die steuern, wie und in welcher Reihenfolge Objekte bearbeitet werden. Dieser Abschnitt umfasst Folgendes:  
-  
--   [Übersicht](../cpp/overview-of-cpp-statements.md)  
-  
--   [Anweisungen mit Bezeichnung](../cpp/labeled-statements.md)  
-  
--   Kategorien von Anweisungen  
-  
-    -   [Ausdrucksanweisungen](../cpp/expression-statement.md). Diese Anweisungen werten einen Ausdruck im Hinblick auf seine Nebeneffekte oder auf seinen Rückgabewert aus.  
-  
-    -   [NULL-Anweisungen](../cpp/null-statement.md). Diese Anweisungen können bereitgestellt werden, wenn die C++-Syntax eine Anweisung erforderlich macht, aber keine Aktion ausgeführt werden soll.  
-  
-    -   [Verbundanweisungen](../cpp/compound-statements-blocks.md). Diese Anweisungen sind Gruppen von Anweisungen, die in geschweifte Klammern ({}) eingeschlossen sind. Sie können überall dort verwendet werden, wo eine einzige Anweisung verwendet werden kann.  
-  
-    -   [Auswahlanweisungen](../cpp/selection-statements-cpp.md). Diese Anweisungen führen einen Test durch. Anschließend führen sie einen Codeabschnitt aus, wenn der Test "true" (ungleich 0 (null)) ergibt. Sie können einen anderen Codeabschnitt ausführen, wenn der Test "false" ergibt.  
-  
-    -   [Iterationsanweisungen](../cpp/iteration-statements-cpp.md). Diese Anweisungen ermöglichen die wiederholte Ausführung eines Codeblocks, bis ein angegebenes Beendigungskriterium erfüllt ist.  
-  
-    -   [Sprunganweisungen](../cpp/jump-statements-cpp.md). Diese Anweisungen übertragen entweder das Steuerelement sofort an eine andere Position in der Funktion oder geben das Steuerelement aus der Funktion zurück.  
-  
-    -   [Deklarationsanweisungen](declarations-and-definitions-cpp.md). Deklarationen führen einen Namen in ein Programm ein.  
-  
- Informationen zu ausnahmebehandlungsanweisungen finden Sie unter [Exception Handling](../cpp/exception-handling-in-visual-cpp.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)
+
+C++-Anweisungen sind die Programmelemente, die steuern, wie und in welcher Reihenfolge Objekte bearbeitet werden. Dieser Abschnitt umfasst Folgendes:
+
+- [Übersicht](../cpp/overview-of-cpp-statements.md)
+
+- [Anweisungen mit Bezeichnung](../cpp/labeled-statements.md)
+
+- Kategorien von Anweisungen
+
+   - [Ausdrucksanweisungen](../cpp/expression-statement.md). Diese Anweisungen werten einen Ausdruck im Hinblick auf seine Nebeneffekte oder auf seinen Rückgabewert aus.
+
+   - [NULL-Anweisungen](../cpp/null-statement.md). Diese Anweisungen können bereitgestellt werden, wenn die C++-Syntax eine Anweisung erforderlich macht, aber keine Aktion ausgeführt werden soll.
+
+   - [Verbundanweisungen](../cpp/compound-statements-blocks.md). Diese Anweisungen sind Gruppen von Anweisungen, die in geschweifte Klammern ({}) eingeschlossen sind. Sie können überall dort verwendet werden, wo eine einzige Anweisung verwendet werden kann.
+
+   - [Auswahlanweisungen](../cpp/selection-statements-cpp.md). Diese Anweisungen führen einen Test durch. Anschließend führen sie einen Codeabschnitt aus, wenn der Test "true" (ungleich 0 (null)) ergibt. Sie können einen anderen Codeabschnitt ausführen, wenn der Test "false" ergibt.
+
+   - [Iterationsanweisungen](../cpp/iteration-statements-cpp.md). Diese Anweisungen ermöglichen die wiederholte Ausführung eines Codeblocks, bis ein angegebenes Beendigungskriterium erfüllt ist.
+
+   - [Sprunganweisungen](../cpp/jump-statements-cpp.md). Diese Anweisungen übertragen entweder das Steuerelement sofort an eine andere Position in der Funktion oder geben das Steuerelement aus der Funktion zurück.
+
+   - [Deklarationsanweisungen](declarations-and-definitions-cpp.md). Deklarationen führen einen Namen in ein Programm ein.
+
+Informationen zu ausnahmebehandlungsanweisungen finden Sie unter [Exception Handling](../cpp/exception-handling-in-visual-cpp.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)

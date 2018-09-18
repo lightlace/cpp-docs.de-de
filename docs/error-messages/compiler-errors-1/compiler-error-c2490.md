@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2490 | Microsoft Docs
+title: Compilerfehler C2490 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc366178c31f900b031aacca278e39cc0c2eb493
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36e4a44a6a2288ce712c77538edbd710f22f5315
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198702"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071797"
 ---
 # <a name="compiler-error-c2490"></a>Compilerfehler C2490
-'Schlüsselwort' in Funktion 'naked'-Attribut nicht zulässig  
-  
- Eine Funktion definiert, die als [naked](../../cpp/naked-cpp.md) können keine strukturierte Ausnahmebehandlung.  
-  
- Im folgende Beispiel wird C2490 generiert:  
-  
-```  
-// C2490.cpp  
-// processor: x86  
-__declspec( naked ) int func() {  
-   __try{}   // C2490, structured exception handling  
-}  
+
+'Schlüsselwort' in der Funktion mit dem "naked"-Attribut nicht zulässig.
+
+Eine Funktion definiert, die als [naked](../../cpp/naked-cpp.md) strukturierte Ausnahmebehandlung kann nicht verwendet werden.
+
+Im folgende Beispiel wird die C2490 generiert:
+
+```
+// C2490.cpp
+// processor: x86
+__declspec( naked ) int func() {
+   __try{}   // C2490, structured exception handling
+}
 ```

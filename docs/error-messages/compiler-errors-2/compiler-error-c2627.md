@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2627 generiert | Microsoft Docs
+title: Compilerfehler C2627 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67123349dd782beb9b547d3497d6c71d4390e434
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7548e2154144ca502ab581bf804018b80cc0d8d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231365"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072666"
 ---
-# <a name="compiler-error-c2627"></a>Compiler-Fehler C2627 generiert
-'Funktion': Memberfunktion in einer anonymen Union nicht zulässig.  
-  
- Ein [anonyme Union](../../cpp/unions.md#anonymous_unions) sind keine Memberfunktionen.  
-  
- Im folgende Beispiel wird C2627 generiert:  
-  
-```  
-// C2627.cpp  
-int main() {  
-   union { void f(){} };   // C2627  
-   union X { void f(){} };  
-}  
+# <a name="compiler-error-c2627"></a>Compilerfehler C2627
+
+'Funktion': Memberfunktion ist in einer anonymen Union nicht zulässig.
+
+Ein [anonyme Union](../../cpp/unions.md#anonymous_unions) sind keine Memberfunktionen.
+
+Im folgende Beispiel wird die C2627 generiert:
+
+```
+// C2627.cpp
+int main() {
+   union { void f(){} };   // C2627
+   union X { void f(){} };
+}
 ```

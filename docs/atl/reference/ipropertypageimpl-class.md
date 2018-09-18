@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28af5343f761f89678768133c9114e3cf23be8e5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2b07609b792b7080e2c4c432ed435381007ba286
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755985"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075227"
 ---
 # <a name="ipropertypageimpl-class"></a>IPropertyPageImpl-Klasse
 
@@ -58,13 +58,13 @@ Diese Klasse implementiert `IUnknown` und stellt eine Standardimplementierung vo
 ## <a name="syntax"></a>Syntax
 
 ```
-template<class T>  
+template<class T>
 class IPropertyPageImpl
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Abgeleitet von die Klasse `IPropertyPageImpl`.
 
 ## <a name="members"></a>Member
@@ -311,7 +311,7 @@ void SetDirty(BOOL bDirty);
 
 ### <a name="parameters"></a>Parameter
 
-*bDirty*  
+*bDirty*<br/>
 [in] Bei "true", wird die Eigenschaftenseite Status als geändert markiert. Anderenfalls ist es markiert als unverändert.
 
 ### <a name="remarks"></a>Hinweise
@@ -368,7 +368,7 @@ Finden Sie unter [IPropertyPage::TranslateAccelerator](/windows/desktop/api/ocid
 
 ## <a name="see-also"></a>Siehe auch
 
-[IPropertyPage2Impl-Klasse](../../atl/reference/ipropertypage2impl-class.md)   
-[IPerPropertyBrowsingImpl-Klasse](../../atl/reference/iperpropertybrowsingimpl-class.md)   
-[ISpecifyPropertyPagesImpl-Klasse](../../atl/reference/ispecifypropertypagesimpl-class.md)   
+[IPropertyPage2Impl-Klasse](../../atl/reference/ipropertypage2impl-class.md)<br/>
+[IPerPropertyBrowsingImpl-Klasse](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
+[ISpecifyPropertyPagesImpl-Klasse](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)
