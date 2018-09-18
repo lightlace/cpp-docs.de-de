@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4602 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4602 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2c25fd983f1ac7cebcc568a0b47c06c4d8e23a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cae5810f94ed9c3feb22de145c7e12e1a7d813b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279526"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033315"
 ---
 # <a name="compiler-warning-level-1-c4602"></a>Compilerwarnung (Stufe 1) C4602
-\#Pragma-Pop_macro: 'Makroname' kein vorherigen #pragma Push_macro für diesen Bezeichner  
-  
- Wenn Sie [pop_macro](../../preprocessor/pop-macro.md) für ein bestimmtes Makro verwenden, müssen Sie zunächst den entsprechenden Makronamen an [push_macro](../../preprocessor/push-macro.md)übergeben. Im folgenden Beispiel wird C4602 generiert:  
-  
-```  
-// C4602.cpp  
-// compile with: /W1  
-int main()  
-{  
-   #pragma pop_macro("x")   // C4602 x is not on the stack  
-}  
+
+\#Pragma-Pop_macro: 'Makroname' kein vorherigen #pragma Push_macro für diesen Bezeichner
+
+Wenn Sie [pop_macro](../../preprocessor/pop-macro.md) für ein bestimmtes Makro verwenden, müssen Sie zunächst den entsprechenden Makronamen an [push_macro](../../preprocessor/push-macro.md)übergeben. Im folgenden Beispiel wird C4602 generiert:
+
+```
+// C4602.cpp
+// compile with: /W1
+int main()
+{
+   #pragma pop_macro("x")   // C4602 x is not on the stack
+}
 ```

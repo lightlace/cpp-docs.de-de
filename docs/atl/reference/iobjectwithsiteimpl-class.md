@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1684c8fa380a7d17c802ad404c38c59f2257c979
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eea09c8490bd2b34cc4c5cd99946d0d9dca7a44c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752026"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068209"
 ---
 # <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl-Klasse
 
@@ -42,7 +42,7 @@ template <class T>
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Abgeleitet von die Klasse `IObjectWithSiteImpl`.
 
 ## <a name="members"></a>Member
@@ -117,7 +117,7 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 
 ### <a name="parameters"></a>Parameter
 
-*pUnkSite*  
+*pUnkSite*<br/>
 [in] Zeiger auf die `IUnknown` -Schnittstellenzeiger des Standorts, der dieses Objekt zu verwalten. Wenn der Wert NULL ist, sollte das Objekt aufrufen `IUnknown::Release` an einem vorhandenen Standort, die zu diesem Zeitpunkt das Objekt nicht mehr den Standort weiß.
 
 ### <a name="return-value"></a>Rückgabewert

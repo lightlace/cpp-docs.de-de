@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c3e29c3eed99c95ee92841413ceaca6e17e8565
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 277951a5425a75c9769c5a2c4104421303f677c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755061"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065336"
 ---
 # <a name="ccomobjectstack-class"></a>CComObjectStack-Klasse
 
@@ -36,13 +36,13 @@ Diese Klasse erstellt ein temporäre COM-Objekt, und bietet es eine skeletal-Imp
 ## <a name="syntax"></a>Syntax
 
 ```
-template <class  Base>  
+template <class  Base>
 class CComObjectStack : public Base
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*Basis*  
+*Basis*<br/>
 Abgeleitet von die Klasse [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oder [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), wie auch über eine beliebige andere Schnittstelle für das Objekt unterstützt werden sollen.
 
 ## <a name="members"></a>Member
@@ -170,7 +170,7 @@ Im Debugmodus befindet, ruft `_ASSERTE`.
 
 ## <a name="see-also"></a>Siehe auch
 
-[CComAggObject-Klasse](../../atl/reference/ccomaggobject-class.md)   
-[CComObject-Klasse](../../atl/reference/ccomobject-class.md)   
-[CComObjectGlobal-Klasse](../../atl/reference/ccomobjectglobal-class.md)   
+[CComAggObject-Klasse](../../atl/reference/ccomaggobject-class.md)<br/>
+[CComObject-Klasse](../../atl/reference/ccomobject-class.md)<br/>
+[CComObjectGlobal-Klasse](../../atl/reference/ccomobjectglobal-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

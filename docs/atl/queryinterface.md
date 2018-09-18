@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff08e5f527d9ef1be99b788ef05beb7ef58da53b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c361bc9510c610f2004af9f09c061d6f4b8b8cd2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752536"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057445"
 ---
 # <a name="queryinterface"></a>QueryInterface
 
@@ -35,6 +35,6 @@ Beachten Sie, die Sie bei der standardeinhaltung [Verweiszählung](../atl/refere
 
 ## <a name="see-also"></a>Siehe auch
 
-[Einführung in COM](../atl/introduction-to-com.md)   
+[Einführung in COM](../atl/introduction-to-com.md)<br/>
 [QueryInterface: Navigieren in einem Objekt](/windows/desktop/com/queryinterface--navigating-in-an-object)
 

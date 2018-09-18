@@ -33,14 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e190f81c0097e707830f7ac09c801929ea3e85e9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6283f29455cc3d835babdd83414e9dc98127eacd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42575488"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029727"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl-Klasse
+
 Stellt eine Implementierung für die [ICommandText](/previous-versions/windows/desktop/ms714914\(v=vs.85\)) Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax
@@ -52,11 +53,13 @@ class ATL_NO_VTABLE ICommandTextImpl
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *T*  
- Die Befehlsklasse abgeleitet `ICommandTextImpl`. 
+
+*T*<br/>
+Die Befehlsklasse abgeleitet `ICommandTextImpl`. 
 
 ## <a name="requirements"></a>Anforderungen  
- **Header:** altdb.h  
+
+**Header:** altdb.h  
   
 ## <a name="members"></a>Member  
   
@@ -74,9 +77,11 @@ class ATL_NO_VTABLE ICommandTextImpl
 |[m_strCommandText](#strcommandtext)|Speichert den Befehlstext an.|  
   
 ## <a name="remarks"></a>Hinweise  
- Eine erforderliche Schnittstelle für Befehle.  
+
+Eine erforderliche Schnittstelle für Befehle.  
  
 ## <a name="getcommandtext"></a> ICommandTextImpl:: Getcommandtext
+
 Gibt den Textbefehl festlegen, indem dem letzten Aufruf von [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).  
   
 ### <a name="syntax"></a>Syntax  
@@ -87,9 +92,11 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. Die *PguidDialect* Parameter standardmäßig ignoriert.  
+
+Finden Sie unter [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. Die *PguidDialect* Parameter standardmäßig ignoriert.  
 
 ## <a name="setcommandtext"></a> ICommandTextImpl:: SetCommandText
+
 Legt den Befehlstext, und Ersetzen Sie dabei die vorhandenen Befehlstext fest.  
   
 ### <a name="syntax"></a>Syntax  
@@ -100,9 +107,11 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. 
+
+Finden Sie unter [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. 
 
 ## <a name="strcommandtext"></a> ICommandTextImpl:: M_strcommandtext
+
 Speichert die Textzeichenfolge für den Befehl.  
   
 ### <a name="syntax"></a>Syntax  
@@ -112,5 +121,6 @@ CComBSTR m_strCommandText;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

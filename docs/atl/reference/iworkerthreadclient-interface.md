@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 545f38058871d81196150e127c1814b304b6ab56
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c0261964f2e9c33f8a594a83e1b19c1db7be614
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767854"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069234"
 ---
 # <a name="iworkerthreadclient-interface"></a>IWorkerThreadClient-Schnittstelle
 
@@ -66,7 +66,7 @@ HRESULT CloseHandle(HANDLE  hHandle);
 
 ### <a name="parameters"></a>Parameter
 
-*hHandle*  
+*hHandle*<br/>
 Das Handle geschlossen werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -93,10 +93,10 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 
 ### <a name="parameters"></a>Parameter
 
-*dwParam*  
+*dwParam*<br/>
 Der Benutzerparameter.
 
-*hObject*  
+*hObject*<br/>
 Das Handle, das signalisiert wurde.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -115,5 +115,5 @@ Der folgende Code zeigt eine einfache Implementierung der `IWorkerThreadClient::
 
 ## <a name="see-also"></a>Siehe auch
 
-[Klassen](../../atl/reference/atl-classes.md)   
+[Klassen](../../atl/reference/atl-classes.md)<br/>
 [CWorkerThread-Klasse](../../atl/reference/cworkerthread-class.md)

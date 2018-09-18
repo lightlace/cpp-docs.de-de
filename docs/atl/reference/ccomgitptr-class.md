@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bfa501834102e37c14de11ee1af84a21e82c35f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5707a7fd4ab83c8e3de3c4868ad41e3525621b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703845"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033952"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr-Klasse
 
@@ -38,13 +38,13 @@ Diese Klasse stellt Methoden für den Umgang mit Schnittstellenzeiger und der gl
 ## <a name="syntax"></a>Syntax
 
 ```
-template <class T>  
+template <class T>
 class CComGITPtr
 ```
 
 #### <a name="parameters"></a>Parameter
 
-`T`  
+*T*<br/>
 Der Typ des Schnittstellenzeigers in GIT gespeichert werden.
 
 ## <a name="members"></a>Member
@@ -102,10 +102,10 @@ HRESULT Attach(DWORD dwCookie) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*p*  
+*p*<br/>
 Der Schnittstellenzeiger GIT hinzugefügt werden.
 
-*dwCookie*  
+*dwCookie*<br/>
 Das Cookie verwendet, um den Schnittstellenzeiger zu identifizieren.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -170,7 +170,7 @@ HRESULT CopyTo(T** pp) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*PP*  
+*PP*<br/>
 Der Zeiger handelt es sich um die Schnittstelle zu erhalten.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -262,7 +262,7 @@ Weist einen neuen Wert ein `CComGITPtr` Objekt, das entweder von einem vorhanden
 
 Gibt das Cookie für die `CComGITPtr` Objekt.
 
-```  
+```
 operator DWORD() const;
 ```
 
@@ -288,7 +288,7 @@ Entfernt die Schnittstelle aus der GIT.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Freethreaded Marshaller](../../atl/atl-and-the-free-threaded-marshaler.md)   
-[Zugriff auf Schnittstellen über Apartments hinweg](/windows/desktop/com/accessing-interfaces-across-apartments)   
-[Verwenden Sie die globale Schnittstellentabelle](/windows/desktop/com/when-to-use-the-global-interface-table)   
+[Freethreaded Marshaller](../../atl/atl-and-the-free-threaded-marshaler.md)<br/>
+[Zugriff auf Schnittstellen über Apartments hinweg](/windows/desktop/com/accessing-interfaces-across-apartments)<br/>
+[Verwenden Sie die globale Schnittstellentabelle](/windows/desktop/com/when-to-use-the-global-interface-table)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

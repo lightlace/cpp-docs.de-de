@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3712 | Microsoft Docs
+title: Compilerfehler C3712 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df27d74f276f70cb93a7e862e452b3a6d0eb4e55
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa1790c2f5634f01d52e0eec65f5bfcf933ab058
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277162"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029922"
 ---
 # <a name="compiler-error-c3712"></a>Compilerfehler C3712
-'Methode': eine Ereignishandlermethode muss denselben Typ wie die Quelle 'Methode' zurückgeben  
-  
- Sie definiert eine Ereignishandlermethode, die nicht den gleichen Typ wie die Quelle Ereignis-Methode zurückgegeben wurde. Um diesen Fehler zu beheben, geben Sie der Ereignishandlermethode denselben Rückgabetyp als die Quelle Ereignis-Methode.  
-  
- Im folgende Beispiel wird C3712 generiert:  
-  
-```  
-// C3712.cpp  
-// compile with: /c  
-[event_source(native)]  
-class CEventSrc {  
-public:  
-   __event void event1();  
-};  
-  
-[event_receiver(native)]  
-class CEventRec {  
-public:  
-   int handler1() { return 0; }  
-   // try the following line instead  
-   // void handler1() {}  
-  
-   void HookEvents(CEventSrc* pSrc) {  
-      __hook(&CEventSrc::event1, pSrc, &CEventRec::handler1);   // C3712  
-   }  
-   void UnhookEvents(CEventSrc* pSrc) {  
-      __unhook(&CEventSrc::event1, pSrc, &CEventRec::handler1);   // C3712  
-   }  
-};  
+
+"Method": eine Ereignishandlermethode muss denselben Typ wie die Quelle "Methode" zurückgeben
+
+Sie definiert eine Ereignishandlermethode, die nicht den gleichen Typ wie die Quell-Methode zurückgegeben wurde. Um diesen Fehler zu beheben, geben Sie der Ereignishandlermethode denselben Rückgabetyp wie die Quell-Methode.
+
+Im folgende Beispiel wird die C3712 generiert:
+
+```
+// C3712.cpp
+// compile with: /c
+[event_source(native)]
+class CEventSrc {
+public:
+   __event void event1();
+};
+
+[event_receiver(native)]
+class CEventRec {
+public:
+   int handler1() { return 0; }
+   // try the following line instead
+   // void handler1() {}
+
+   void HookEvents(CEventSrc* pSrc) {
+      __hook(&CEventSrc::event1, pSrc, &CEventRec::handler1);   // C3712
+   }
+   void UnhookEvents(CEventSrc* pSrc) {
+      __unhook(&CEventSrc::event1, pSrc, &CEventRec::handler1);   // C3712
+   }
+};
 ```

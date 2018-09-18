@@ -1,5 +1,5 @@
 ---
-title: Projektbuildwarnung prj0041 | Microsoft Docs
+title: Projektbuildwarnung PRJ0041 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e845967b0a7116d6edade98b571de5bc1bcd9a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7677c5718783065f64e52f98f7ddbed76e905d2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318060"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038138"
 ---
 # <a name="project-build-warning-prj0041"></a>Projektbuildwarnung PRJ0041
-Kann nicht gefunden werden fehlende Abhängigkeit 'Abhängigkeit' für Datei "File". Das Projekt kann zwar erstellt, aber unter Umständen nicht mehr aktuell angezeigt werden, bis diese Datei gefunden wird.  
-  
- Eine Datei (Ressourcendatei oder.idl/.odl-Datei, z. B. enthalten eine Include-Anweisung, die das Projektsystem nicht aufgelöst werden konnte.  
-  
- Da das Projektsystem präprozessoranweisungen (z. B. #if) nicht verarbeitet werden, möglicherweise die problematische Anweisung nicht tatsächlich Teil des Builds.  
-  
- Um diese Warnung zu beheben, löschen Sie alle nicht benötigten Code in der RC-Dateien oder fügen Sie Platzhalterdateien mit dem entsprechenden Namen hinzu.
+
+Kann nicht gefunden werden fehlende Abhängigkeit 'Abhängigkeit' Datei 'File'. Das Projekt kann zwar erstellt, ist aber nicht mehr aktuell angezeigt werden, bis diese Datei gefunden wird.
+
+Eine Datei (Ressourcendatei oder.idl/.odl-Datei, z. B. enthalten eine Include-Anweisung, die das Projektsystem nicht aufgelöst werden kann konnte.
+
+Da das Projektsystem präprozessoranweisungen (z. B. "#if") nicht verarbeitet, kann die problematische Anweisung kein Teil des Builds sein.
+
+Um diese Warnung zu beheben, löschen Sie alle unnötigen Code in der RC-Dateien, oder fügen Sie die Platzhalterdateien mit dem entsprechenden Namen.

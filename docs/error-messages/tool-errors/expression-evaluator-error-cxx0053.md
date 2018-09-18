@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0053 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0053 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91e2668f950e6b2553113e74061994d1855ce7bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a3215c0e9dd7a76364c31a59f0f0d923092f686
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295547"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060732"
 ---
 # <a name="expression-evaluator-error-cxx0053"></a>Ausdrucksauswertungsfehler CXX0053
-Funktionssymbol beim Binden der Haltepunkte übereinstimmen  
-  
- Ein Symbol, das als ein Haltepunkt nicht um eine Funktion wurde verwendet. Dieser Fehler kann durch Angabe eines Datenmembers als Haltepunkt verursacht werden.  
-  
- Dieser Fehler ist mit CAN0053 identisch.
+
+Beim Binden von Haltepunkten mit Funktionssymbol übereinstimmen.
+
+Ein Symbol, das verwendet wird, wie Sie ein Haltepunkt nicht um eine Funktion war. Einen Datenmember als Haltepunkt angeben, wird dieser Fehler kann verursacht.
+
+Dieser Fehler ist mit CAN0053 identisch.

@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3333 | Microsoft Docs
+title: Compilerfehler C3333 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c54794f09ffea78c005163cb30ceb5fd3b77417a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1b0193020adb6d3ec82d444a51551da30285535b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251136"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068844"
 ---
 # <a name="compiler-error-c3333"></a>Compilerfehler C3333
-"Typbibliothek": Die beschädigte Typbibliothek konnte nicht #importiert werden  
-  
- Der Compiler kann die Typbibliothek nicht lesen, die in der `#import` -Anweisung angegeben ist. Sie sollten entweder die Typbibliothek, sofern möglich, neu generieren oder eine neue Typbibliothek bei Ihrem Lieferanten anfordern. Sie könnten den OLE-Viewer, der mit Visual C++ bereitgestellt wird, dazu verwenden, die Typbibliotheksdatei anzuzeigen, um zu sehen, welches Problem es mit ihr gibt.
+
+"Typbibliothek": Die beschädigte Typbibliothek konnte nicht #importiert werden
+
+Der Compiler kann die Typbibliothek nicht lesen, die in der `#import` -Anweisung angegeben ist. Sie sollten entweder die Typbibliothek, sofern möglich, neu generieren oder eine neue Typbibliothek bei Ihrem Lieferanten anfordern. Sie könnten den OLE-Viewer, der mit Visual C++ bereitgestellt wird, dazu verwenden, die Typbibliotheksdatei anzuzeigen, um zu sehen, welches Problem es mit ihr gibt.

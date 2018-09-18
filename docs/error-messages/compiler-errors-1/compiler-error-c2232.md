@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2232 | Microsoft Docs
+title: Compilerfehler C2232 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 504f92a72b500548c2231958afa98ccdc177e12d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0e7c20de3de097fc09b80459e96158282ef7bba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171310"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026048"
 ---
 # <a name="compiler-error-c2232"></a>Compilerfehler C2232
-"->": linke Operand ist "Klassenschlüssel" vom Typ, verwenden Sie"."  
-  
- Der Operand links vom `->` -Operator ist kein Zeiger. Verwenden Sie den Operator Punkt (.) für eine Klasse, Struktur oder Union.  
-  
- Das folgende Beispiel generiert C2232:  
-  
-```  
-// C2232.c  
-struct X {  
-    int member;  
-} x, *px;  
-int main() {  
-    x->member = 0;   // C2232, x is not a pointer  
-  
-    px->member = 0;  
-    x.member = 0;  
-}  
+
+"->": Linker Operand ist "Klassenschlüssel ' vom Typ, verwenden Sie"."
+
+Der Operand links vom `->` -Operator ist kein Zeiger. Verwenden Sie den Punktoperator (.) für eine Klasse, Struktur oder Union.
+
+Das folgende Beispiel generiert C2232:
+
+```
+// C2232.c
+struct X {
+    int member;
+} x, *px;
+int main() {
+    x->member = 0;   // C2232, x is not a pointer
+
+    px->member = 0;
+    x.member = 0;
+}
 ```

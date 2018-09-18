@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 3) C4522 | Microsoft Docs
+title: Compilerwarnung (Stufe 3) C4522 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e57f32c715b6e6f0846025d5010631c746589bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65662d3e62abbeb06127c7b5a49479a23fb20a7a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298934"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070937"
 ---
 # <a name="compiler-warning-level-3-c4522"></a>Compilerwarnung (Stufe 3) C4522
-'Klasse': Mehrere Zuweisungsoperatoren angegeben  
-  
- Die Klasse verfügt über mehrere Zuweisungsoperatoren eines einzelnen Typs. Diese Warnung dient nur zu Informationszwecken; die Konstruktoren sind im Programm aufgerufen werden kann.  
-  
- Verwenden der [Warnung](../../preprocessor/warning.md) Pragma verwenden, um diese Warnung zu unterdrücken.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C4522 generiert.  
-  
-```  
-// C4522.cpp  
-// compile with: /EHsc /W3  
-#include <iostream>  
-  
-using namespace std;  
-class A {  
-public:  
-   A& operator=( A & o ) { cout << "A&" << endl; return *this; }  
-   A& operator=( const A &co ) { cout << "const A&" << endl; return *this; }   // C4522  
-};  
-  
-int main() {  
-   A o1, o2;  
-   o2 = o1;  
-   const A o3;  
-   o1 = o3;  
-}  
+
+'Klasse': Mehrere Zuweisungsoperatoren angegeben
+
+Die Klasse verfügt über mehrere Zuweisungsoperatoren eines einzelnen Typs. Diese Warnung dient nur zu Informationszwecken; die Konstruktoren, die in Ihrem Programm können aufgerufen werden.
+
+Verwenden der [Warnung](../../preprocessor/warning.md) Pragma, um diese Warnung unterdrücken.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C4522 generiert.
+
+```
+// C4522.cpp
+// compile with: /EHsc /W3
+#include <iostream>
+
+using namespace std;
+class A {
+public:
+   A& operator=( A & o ) { cout << "A&" << endl; return *this; }
+   A& operator=( const A &co ) { cout << "const A&" << endl; return *this; }   // C4522
+};
+
+int main() {
+   A o1, o2;
+   o2 = o1;
+   const A o3;
+   o1 = o3;
+}
 ```

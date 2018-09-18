@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3309 | Microsoft Docs
+title: Compilerfehler C3309 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 390740c3a7083ede314f58a7bc68432c243583ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7d9d5f80d6c3a32f77637725e8ca53f1fdbfd51
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255955"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055480"
 ---
 # <a name="compiler-error-c3309"></a>Compilerfehler C3309
-"macro_name": Ein Modulname kann kein Makro oder Schlüsselwort sein  
-  
- Der Wert, den Sie an die name-Eigenschaft des Modulattributs übergeben, darf kein Symbol für den zu erweiternden Präprozessor sein; es muss ein Zeichenfolgenliteral sein.  
-  
- Im folgenden Beispiel wird C3309 generiert:  
-  
-```  
-// C3309.cpp  
-#define NAME MyModule  
-[module(name="NAME")];   // C3309  
-// Try the following line instead  
-// [module(name="MyModule")];  
-[coclass]  
-class MyClass {  
-public:  
-   void MyFunc();  
-};  
-  
-int main() {  
-}  
+
+"macro_name": Ein Modulname kann kein Makro oder Schlüsselwort sein
+
+Der Wert, den Sie an die name-Eigenschaft des Modulattributs übergeben, darf kein Symbol für den zu erweiternden Präprozessor sein; es muss ein Zeichenfolgenliteral sein.
+
+Im folgenden Beispiel wird C3309 generiert:
+
+```
+// C3309.cpp
+#define NAME MyModule
+[module(name="NAME")];   // C3309
+// Try the following line instead
+// [module(name="MyModule")];
+[coclass]
+class MyClass {
+public:
+   void MyFunc();
+};
+
+int main() {
+}
 ```

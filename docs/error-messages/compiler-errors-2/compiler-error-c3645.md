@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3645 | Microsoft Docs
+title: Compilerfehler C3645 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a711f37e3ab54de5e3cfad77b82fbd603edfaf6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d310ab3a9a4bd0b31b9e6295a93a571a54f585b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263826"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068909"
 ---
 # <a name="compiler-error-c3645"></a>Compilerfehler C3645
-'Funktion': __clrcall kann nicht auf Funktionen in nativen Code kompiliert verwendet werden  
-  
- Das Vorhandensein einiger Schlüsselwörter in einer Funktion führt dazu, dass die Funktion in systemeigenem Code kompiliert werden.  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C3645 generiert.  
-  
-```  
-// C3645.cpp  
-// compile with: /clr /c  
-#pragma unmanaged   
-int __clrcall dog() {}   // C3645  
+
+"Function": __clrcall kann nicht verwendet werden, auf die Funktionen, die in nativen Code kompiliert
+
+Das Vorhandensein von Schlüsselwörtern in einer Funktion bewirkt, dass die Funktion in systemeigenem Code kompiliert werden.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C3645 generiert.
+
+```
+// C3645.cpp
+// compile with: /clr /c
+#pragma unmanaged
+int __clrcall dog() {}   // C3645
 ```

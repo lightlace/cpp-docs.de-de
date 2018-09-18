@@ -1,5 +1,5 @@
 ---
-title: Event-Klasse | Microsoft Docs
+title: Event-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb02865b20d1603be38192e770eb26627e6900e7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7f4156720d7d02b0c96ab36101d88c941dbfbfdd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692866"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071528"
 ---
 # <a name="event-class"></a>event-Klasse
 Ein Ereignis für manuelles Zurücksetzen, das explizit die Concurrency Runtime beachtet.  
@@ -62,7 +62,7 @@ class event;
 |[timeout_infinite](#timeout_infinite)|Ein Wert, der angibt, dass ein Wartevorgang nie durch einen Timeout beendet werden sollte.|  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [Strukturen für Synchronisierungsdaten](../../../parallel/concrt/synchronization-data-structures.md).  
+ Weitere Informationen finden Sie unter [Synchronisierungsdatenstrukturen](../../../parallel/concrt/synchronization-data-structures.md).  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `event`  
@@ -82,7 +82,7 @@ _CRTIMP event();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="dtor"></a> ~ Ereignis 
+##  <a name="dtor"></a> ~ Event 
 
  Zerstört ein Ereignis.  
   
@@ -101,7 +101,7 @@ _CRTIMP event();
 void reset();
 ```  
   
-##  <a name="set"></a> Festlegen 
+##  <a name="set"></a> Legen Sie 
 
  Signalisiert das Ereignis.  
   
@@ -129,14 +129,14 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Timeout`  
- Gibt die Wartezeit in Millisekunden bis zum Timeout an. Der Wert `COOPERATIVE_TIMEOUT_INFINITE` gibt an, dass kein Timeout besteht.  
+*_Timeout*<br/>
+Gibt die Wartezeit in Millisekunden bis zum Timeout an. Der Wert `COOPERATIVE_TIMEOUT_INFINITE` gibt an, dass kein Timeout besteht.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wenn der Wartezustand erfüllt wurde, wird der Wert `0` zurückgegeben. Andernfalls gibt der Wert `COOPERATIVE_WAIT_TIMEOUT` an, dass der Wartezustand durch einen Timeout beendet wurde, ohne dass das Ereignis signalisiert wurde.  
   
 > [!IMPORTANT]
->  Rufen Sie in einer app (Universelle Windows Plattform) nicht `wait` da dieser Aufruf den aktuellen Thread blockieren kann und dazu führen, die Anwendung dass kann reagiert auf dem ASTA-thread.  
+>  Rufen Sie in einer app (Universelle Windows Plattform) nicht `wait` im asta thread auf, da dieser Aufruf den aktuellen Thread blockieren kann und dazu führen, die app dass kann reagiert.  
   
 ##  <a name="wait_for_multiple"></a> wait_for_multiple 
 
@@ -151,17 +151,17 @@ static size_t __cdecl wait_for_multiple(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_PPEvents`  
- Ein Array von Ereignissen, auf die gewartet werden soll. Die Anzahl der Ereignisse im Array wird durch den `count`-Parameter angegeben.  
+*_PPEvents*<br/>
+Ein Array von Ereignissen, auf die gewartet werden soll. Die Anzahl der Ereignisse im Array wird durch den `count`-Parameter angegeben.  
   
- `count`  
- Die Anzahl von Ereignissen innerhalb des im `_PPEvents`-Parameter angegebenen Arrays.  
+*count*<br/>
+Die Anzahl von Ereignissen innerhalb des im `_PPEvents`-Parameter angegebenen Arrays.  
   
- `_FWaitAll`  
- Wenn der Parameter auf den Wert `true` festgelegt wird, gibt dies an, dass innerhalb des Arrays, das im `_PPEvents`-Parameter angegeben wurde, alle Ereignisse ausgelöst werden müssen, um den Wartevorgang zu beenden. Eine Festlegung auf den Wert `false` gibt an, dass jedes ausgelöste Ereignis innerhalb des Arrays, das im `_PPEvents`-Parameter angegeben wurde, für den Wartevorgang ausreichend ist.  
+*_FWaitAll*<br/>
+Wenn der Parameter auf den Wert `true` festgelegt wird, gibt dies an, dass innerhalb des Arrays, das im `_PPEvents`-Parameter angegeben wurde, alle Ereignisse ausgelöst werden müssen, um den Wartevorgang zu beenden. Eine Festlegung auf den Wert `false` gibt an, dass jedes ausgelöste Ereignis innerhalb des Arrays, das im `_PPEvents`-Parameter angegeben wurde, für den Wartevorgang ausreichend ist.  
   
- `_Timeout`  
- Gibt die Wartezeit in Millisekunden bis zum Timeout an. Der Wert `COOPERATIVE_TIMEOUT_INFINITE` gibt an, dass kein Timeout besteht.  
+*_Timeout*<br/>
+Gibt die Wartezeit in Millisekunden bis zum Timeout an. Der Wert `COOPERATIVE_TIMEOUT_INFINITE` gibt an, dass kein Timeout besteht.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wenn die Anforderungen des Wartevorgangs erfüllt wurden, ist dies der Index innerhalb des Arrays, das im `_PPEvents`-Parameter angegeben wurde und die Wartebedingung erfüllt hat. Andernfalls gibt der Wert `COOPERATIVE_WAIT_TIMEOUT` an, dass das Timeout für den Wartevorgang abgelaufen ist, ohne dass die Bedingung erfüllt wurde.  
@@ -170,7 +170,7 @@ static size_t __cdecl wait_for_multiple(
  Wenn der Parameter `_FWaitAll` auf den Wert `true` festgelegt wurde, um anzugeben, dass alle Ereignisse signalisiert werden müssen, um den Wartevorgang zu beenden, hat der von der Funktion zurückgegebene Index keine andere besondere Bedeutung außer der Tatsache, dass er nicht den Wert `COOPERATIVE_WAIT_TIMEOUT` darstellt.  
   
 > [!IMPORTANT]
->  Rufen Sie in einer app (Universelle Windows Plattform) nicht `wait_for_multiple` da dieser Aufruf den aktuellen Thread blockieren kann und dazu führen, die Anwendung dass kann reagiert auf dem ASTA-thread.  
+>  Rufen Sie in einer app (Universelle Windows Plattform) nicht `wait_for_multiple` im asta thread auf, da dieser Aufruf den aktuellen Thread blockieren kann und dazu führen, die app dass kann reagiert.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2802 | Microsoft Docs
+title: Compilerfehler C2802 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe069b93c8dc6bb098927925e93f10cec2dbc4c3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95b4f64aad9cb14151ca6128bedebcd15ece17ed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236656"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061252"
 ---
 # <a name="compiler-error-c2802"></a>Compilerfehler C2802
-statische Member-'Operator Operator' hat keine formalen Parameter  
-  
- Ein Operator deklariert, indem eine `static` Memberfunktion muss mindestens einen Parameter verfügen.  
-  
- Im folgende Beispiel wird C2802 generiert:  
-  
-```  
-// C2802.cpp  
-// compile with: /clr /c  
-ref class A {  
-   static operator+ ();   // C2802  
-   static operator+ (A^, A^);   // OK  
-};  
+
+statische Member-'Operator Operator' hat keine formalen Parameter
+
+Ein Operator deklariert, indem eine `static` Member-Funktion muss mindestens einen Parameter haben.
+
+Im folgende Beispiel wird die C2802 generiert:
+
+```
+// C2802.cpp
+// compile with: /clr /c
+ref class A {
+   static operator+ ();   // C2802
+   static operator+ (A^, A^);   // OK
+};
 ```

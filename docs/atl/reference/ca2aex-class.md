@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b0b63f4054459b7d8b3c8aae45cf583f635cd95
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 49e364e2676242ad75f185792faa545bbb90ef1e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751892"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071210"
 ---
 # <a name="ca2aex-class"></a>CA2AEX-Klasse
 
@@ -43,7 +43,7 @@ class CA2AEX
 
 #### <a name="parameters"></a>Parameter
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 Die Größe des Puffers, die in der Übersetzungsprozess verwendet werden soll. Die Standardeinstellung ist 128 Bytes.
 
 ## <a name="members"></a>Member
@@ -109,10 +109,10 @@ CA2AEX(LPCSTR psz) throw(...);
 
 ### <a name="parameters"></a>Parameter
 
-*psz*  
+*psz*<br/>
 Die Textzeichenfolge, die konvertiert werden.
 
-*nCodePage*  
+*nCodePage*<br/>
 Wenn Sie nicht in dieser Klasse verwendet.
 
 ### <a name="remarks"></a>Hinweise
@@ -161,9 +161,9 @@ Gibt die Zeichenfolge zurück, LPSTR eingeben.
 
 ## <a name="see-also"></a>Siehe auch
 
-[CA2CAEX-Klasse](../../atl/reference/ca2caex-class.md)   
-[CA2WEX-Klasse](../../atl/reference/ca2wex-class.md)   
-[CW2AEX-Klasse](../../atl/reference/cw2aex-class.md)   
-[CW2CWEX-Klasse](../../atl/reference/cw2cwex-class.md)   
-[CW2WEX-Klasse](../../atl/reference/cw2wex-class.md)   
+[CA2CAEX-Klasse](../../atl/reference/ca2caex-class.md)<br/>
+[CA2WEX-Klasse](../../atl/reference/ca2wex-class.md)<br/>
+[CW2AEX-Klasse](../../atl/reference/cw2aex-class.md)<br/>
+[CW2CWEX-Klasse](../../atl/reference/cw2cwex-class.md)<br/>
+[CW2WEX-Klasse](../../atl/reference/cw2wex-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

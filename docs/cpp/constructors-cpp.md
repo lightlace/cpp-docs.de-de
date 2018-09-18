@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d90a3f4b2cbacb3071dcd552fd88f6cb11bb5d43
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 08200320e30816ac45e6c91a14dc41508430cfae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131841"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069117"
 ---
 # <a name="constructors-c"></a>Konstruktoren (C++)
 
@@ -88,7 +88,7 @@ Ein Member-Initialisiererliste ist die Verwendung bevorzugter Zuweisen von Werte
     {}
 ```
 
-Der Bezeichner muss auf einen Klassenmember beziehen. Es wird mit dem Wert des Arguments initialisiert. Das Argument kann eine der Parameter des Konstruktors, eines Funktionsaufrufs oder [Std:: initializer_list\<T >](../standard-library/initializer-list-class.md). 
+Der Bezeichner muss auf einen Klassenmember beziehen. Es wird mit dem Wert des Arguments initialisiert. Das Argument kann eine der Parameter des Konstruktors, eines Funktionsaufrufs oder [Std:: initializer_list\<T >](../standard-library/initializer-list-class.md).
 
 **const** Mitglieder sowie Mitglieder der Verweistyp müssen in der Member-Initialisiererliste initialisiert werden.
 
@@ -96,7 +96,7 @@ Parametrisierte Konstruktoren Aufrufe sollten in der Initialisiererliste vorgeno
 
 ## <a name="default_constructors"></a> Standardkonstruktoren
 
- *Standardkonstruktoren* in der Regel keine Parameter, aber sie können Parameter mit Standardwerten.
+*Standardkonstruktoren* in der Regel keine Parameter, aber sie können Parameter mit Standardwerten.
 
 ```cpp
 class Box {
@@ -216,6 +216,7 @@ Sie können verhindern, dass das Objekt kopiert wird, durch die Definition des K
 Versuch, das Objekt zu kopieren, wird Fehler *C2280: Es wird versucht, eine gelöschte Funktion zu verweisen*.
 
 ## <a name="move_constructors"></a> Move-Konstruktoren
+
 Ein *bewegungskonstruktor* ist eine spezielle Memberfunktion, die Besitz der Daten in einem vorhandenen Objekt einer neuen Variable verschiebt, ohne die ursprünglichen Daten kopiert. Es akzeptiert einen Rvalue-Verweis als ersten Parameter, und alle zusätzlichen Parameter müssen Standardwerte. Move-Konstruktoren können erheblich Ihres Programms Effizienz erhöhen, wenn große Objekte übergeben. Verschieben-Konstruktor akzeptiert einen Rvalue-Verweis als ersten Parameter. Alle anderen Parameter müssen Standardwerte besitzen.
 
 ```cpp

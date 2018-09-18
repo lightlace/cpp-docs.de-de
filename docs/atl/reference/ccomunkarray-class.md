@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b977875655182f1cbc822540cf021635f525f7e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7cab0ea4ecf4bfabede365b9e0fbc9d4a02e2515
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756417"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057449"
 ---
 # <a name="ccomunkarray-class"></a>CComUnkArray-Klasse
 
@@ -45,7 +45,7 @@ class CComUnkArray
 
 #### <a name="parameters"></a>Parameter
 
-*nMaxSize*  
+*nMaxSize*<br/>
 Die maximale Anzahl von `IUnknown` Zeigern, die im statischen Array gespeichert werden können.
 
 ## <a name="members"></a>Member
@@ -92,7 +92,7 @@ DWORD Add(IUnknown* pUnk);
 
 ### <a name="parameters"></a>Parameter
 
-*pUnk*  
+*pUnk*<br/>
 Rufen Sie diese Methode zum Hinzufügen einer `IUnknown` Zeiger auf das Array.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -159,7 +159,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 
 ### <a name="parameters"></a>Parameter
 
-*ppFind*  
+*ppFind*<br/>
 Die `IUnknown` Zeiger für das dem zugehörigen Cookies erforderlich ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -180,7 +180,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 
 ### <a name="parameters"></a>Parameter
 
-*dwCookie*  
+*dwCookie*<br/>
 Das Cookie für die zugeordneten `IUnknown` Zeiger ist erforderlich.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -197,7 +197,7 @@ BOOL Remove(DWORD dwCookie);
 
 ### <a name="parameters"></a>Parameter
 
-*dwCookie*  
+*dwCookie*<br/>
 Das Cookie verweisen auf die `IUnknown` Zeiger aus dem Array entfernt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -206,5 +206,5 @@ Gibt TRUE zurück, wenn der Zeiger entfernt, andernfalls FALSE ist.
 
 ## <a name="see-also"></a>Siehe auch
 
-[CComDynamicUnkArray-Klasse](../../atl/reference/ccomdynamicunkarray-class.md)   
+[CComDynamicUnkArray-Klasse](../../atl/reference/ccomdynamicunkarray-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af9749e2809678a7d7a8cc1e2bc6f4c2a40fbd6a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8e885ef1db8f282bbdca2e8c39c3d1221d791d1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753463"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067635"
 ---
 # <a name="atl-module-classes"></a>ATL-Modulklassen
 
@@ -67,6 +67,6 @@ Die Funktionalität von `CComModule` in mehrere neue Klassen verteilt wurde, den
 
 ## <a name="see-also"></a>Siehe auch
 
-[Konzepte](../atl/active-template-library-atl-concepts.md)   
+[Konzepte](../atl/active-template-library-atl-concepts.md)<br/>
 [Übersicht über die Klasse](../atl/atl-class-overview.md)
 

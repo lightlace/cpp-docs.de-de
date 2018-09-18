@@ -17,66 +17,70 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77748cd69a3424bb4b2e209a0a447d39eae25147
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: f2d35f8d5f263125cd6a5e0a5e34105c3424f87b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466903"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070280"
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
+
 In diesem Thema geht es um die Microsoft-spezifischen veraltet "declspec"-Deklaration. Informationen zu den C ++ 14 `[[deprecated]]` -Attribut und Anleitungen zur Verwendung dieses Attributs im Vergleich zu den Microsoft-spezifische "declspec" "oder" Pragma, finden Sie unter [Standard C++-Attribute](attributes.md).
 
-Mit den unten aufgeführten Ausnahmen die **veraltet** Deklaration bietet die gleiche Funktionalität wie die [veraltet](../preprocessor/deprecated-c-cpp.md) Pragma:  
-  
--   Die **veraltet** Deklaration können Sie bestimmte Arten von funktionsüberladungen als veraltet angeben, wohingegen das Pragma auf alle überladenen Arten eines Funktionsnamens angewendet wird.  
-  
--   Die **veraltet** Deklaration ermöglicht die Angabe eine Nachricht, die zum Zeitpunkt der Kompilierung angezeigt werden. Der Text der Meldung kann von einem Makro stammen.  
-  
--   Makros können nur markiert werden, als veraltet mit der **veraltet** Pragma.  
-  
- Findet der Compiler die Verwendung von einen veralteten Bezeichner oder Standard [ `[[deprecated]]` ](attributes.md) -Attribut, eine [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) Warnung wird ausgelöst.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie Funktionen als veraltet gekennzeichnet werden und wie eine Meldung angegeben wird, die bei Verwendung einer veralteten Funktion zur Kompilierzeit angezeigt wird.  
-  
-```cpp 
-// deprecated.cpp  
-// compile with: /W3  
-#define MY_TEXT "function is deprecated"  
-void func1(void) {}  
-__declspec(deprecated) void func1(int) {}  
-__declspec(deprecated("** this is a deprecated function **")) void func2(int) {}  
-__declspec(deprecated(MY_TEXT)) void func3(int) {}  
-  
-int main() {  
-   func1();  
-   func1(1);   // C4996  
-   func2(1);   // C4996  
-   func3(1);   // C4996  
-}  
-```  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie Klassen als veraltet gekennzeichnet werden und wie eine Meldung angegeben wird, die bei Verwendung einer veralteten Klasse zur Kompilierzeit angezeigt wird.  
-  
-```cpp 
-// deprecate_class.cpp  
-// compile with: /W3  
-struct __declspec(deprecated) X {  
-   void f(){}  
-};  
-  
-struct __declspec(deprecated("** X2 is deprecated **")) X2 {  
-   void f(){}  
-};  
-  
-int main() {  
-   X x;   // C4996  
-   X2 x2;   // C4996  
-}  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [__declspec](../cpp/declspec.md)   
- [Schlüsselwörter](../cpp/keywords-cpp.md)
+Mit den unten aufgeführten Ausnahmen die **veraltet** Deklaration bietet die gleiche Funktionalität wie die [veraltet](../preprocessor/deprecated-c-cpp.md) Pragma:
+
+- Die **veraltet** Deklaration können Sie bestimmte Arten von funktionsüberladungen als veraltet angeben, wohingegen das Pragma auf alle überladenen Arten eines Funktionsnamens angewendet wird.
+
+- Die **veraltet** Deklaration ermöglicht die Angabe eine Nachricht, die zum Zeitpunkt der Kompilierung angezeigt werden. Der Text der Meldung kann von einem Makro stammen.
+
+- Makros können nur markiert werden, als veraltet mit der **veraltet** Pragma.
+
+Findet der Compiler die Verwendung von einen veralteten Bezeichner oder Standard [ `[[deprecated]]` ](attributes.md) -Attribut, eine [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) Warnung wird ausgelöst.
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird gezeigt, wie Funktionen als veraltet gekennzeichnet werden und wie eine Meldung angegeben wird, die bei Verwendung einer veralteten Funktion zur Kompilierzeit angezeigt wird.
+
+```cpp
+// deprecated.cpp
+// compile with: /W3
+#define MY_TEXT "function is deprecated"
+void func1(void) {}
+__declspec(deprecated) void func1(int) {}
+__declspec(deprecated("** this is a deprecated function **")) void func2(int) {}
+__declspec(deprecated(MY_TEXT)) void func3(int) {}
+
+int main() {
+   func1();
+   func1(1);   // C4996
+   func2(1);   // C4996
+   func3(1);   // C4996
+}
+```
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird gezeigt, wie Klassen als veraltet gekennzeichnet werden und wie eine Meldung angegeben wird, die bei Verwendung einer veralteten Klasse zur Kompilierzeit angezeigt wird.
+
+```cpp
+// deprecate_class.cpp
+// compile with: /W3
+struct __declspec(deprecated) X {
+   void f(){}
+};
+
+struct __declspec(deprecated("** X2 is deprecated **")) X2 {
+   void f(){}
+};
+
+int main() {
+   X x;   // C4996
+   X2 x2;   // C4996
+}
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[__declspec](../cpp/declspec.md)<br/>
+[Schlüsselwörter](../cpp/keywords-cpp.md)

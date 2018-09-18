@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C3118 | Microsoft Docs
+title: Compilerfehler C3118 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ecc3dc79cd52631f3dba5c204cabc02e7932bc1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 320d92bd97e3b5f9bb696959ee25ca33cba3544a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244455"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063423"
 ---
-# <a name="compiler-error-c3118"></a>Compilerfehler Fehler C3118
-'Schnittstelle': Schnittstellen unterstützen keine virtuellen Vererbung  
-  
- Sie haben versucht, virtuell von einer Schnittstelle erben. Ein auf ein Objekt angewendeter  
-  
-```  
-// C3118.cpp  
-__interface I1 {  
-};  
-  
-__interface I2 : virtual I1 {   // C3118  
-};  
-```  
-  
- Dieser Fehler wird generiert.
+# <a name="compiler-error-c3118"></a>Compilerfehler C3118
+
+"Interface": Schnittstellen unterstützen keine virtuellen Vererbung
+
+Sie haben versucht, die praktisch von einer Schnittstelle erben. Ein auf ein Objekt angewendeter
+
+```
+// C3118.cpp
+__interface I1 {
+};
+
+__interface I2 : virtual I1 {   // C3118
+};
+```
+
+Dieser Fehler wird generiert.

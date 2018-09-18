@@ -1,5 +1,5 @@
 ---
-title: Linkertoolfehler Lnk1107 | Microsoft Docs
+title: Linkertoolfehler Lnk1107 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fee2105cb0c12287cd2b47636f0e47011854a608
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73a1643d10ea9adc6ac6979eb2de023593ba8d01
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298349"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060706"
 ---
 # <a name="linker-tools-error-lnk1107"></a>Linkertoolfehler LNK1107
-Ungültige oder beschädigte Datei: an Position kann nicht gelesen werden  
-  
- Das Tool konnte die Datei nicht gelesen werden. Erstellen Sie die Datei neu.  
-  
- LNK1107 kann auch auftreten, wenn Sie versuchen, ein Modul übergeben (erstellt mit ".dll" oder "netmodule-Erweiterung [/CLR: noAssembly](../../build/reference/clr-common-language-runtime-compilation.md) oder [/noAssembly](../../build/reference/noassembly-create-a-msil-module.md)) an den Linker; stattdessen die OBJ-Datei übergeben.  
-  
- Wenn Sie im folgende Beispiel kompilieren:  
-  
-```  
-// LNK1107.cpp  
-// compile with: /clr /LD  
-public ref class MyClass {  
-public:  
-   void Test(){}  
-};  
-```  
-  
- und geben Sie dann **verknüpfen LNK1107.dll** erhalten Sie in der Befehlszeile LNK1107.  Geben Sie zum Beheben des Fehlers **verknüpfen LNK1107.obj** stattdessen.
+
+Ungültige oder beschädigte Datei: kann nicht gelesen, am Speicherort
+
+Das Tool konnte die Datei nicht gelesen werden. Erstellen Sie die Datei neu.
+
+LNK1107 kann auch auftreten, wenn Sie versuchen, ein Modul übergeben (DLL- oder netmodule-Erweiterung, die mit erstellt [/CLR: noAssembly](../../build/reference/clr-common-language-runtime-compilation.md) oder [/noAssembly](../../build/reference/noassembly-create-a-msil-module.md)) an den Linker; die OBJ-Datei stattdessen übergeben werden.
+
+Wenn Sie im folgende Beispiel kompilieren:
+
+```
+// LNK1107.cpp
+// compile with: /clr /LD
+public ref class MyClass {
+public:
+   void Test(){}
+};
+```
+
+und geben Sie dann **verknüpfen LNK1107.dll** erhalten Sie in der Befehlszeile LNK1107.  Geben Sie den Fehler zu beheben, **verknüpfen LNK1107.obj** stattdessen.

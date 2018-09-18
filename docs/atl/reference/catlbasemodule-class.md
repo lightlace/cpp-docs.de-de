@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067edba7bc0a8819925af533dd48a34c6f6e4536
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c4b3c7d53e3500b5dd97fdbd49e4006916cd1a80
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767750"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055454"
 ---
 # <a name="catlbasemodule-class"></a>CAtlBaseModule-Klasse
 
@@ -93,7 +93,7 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*hInst*  
+*hInst*<br/>
 Die Ressourceninstanz, die hinzugefügt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -122,7 +122,7 @@ HINSTANCE GetHInstanceAt(int i) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*i*  
+*i*<br/>
 Die Anzahl der Ressourceninstanz.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -175,7 +175,7 @@ bool RemoveResourceInstance(HINSTANCE hInst) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*hInst*  
+*hInst*<br/>
 Die zu entfernende Ressourceninstanz.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -192,7 +192,7 @@ HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*hInst*  
+*hInst*<br/>
 Die neue Ressourceninstanz.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -201,5 +201,5 @@ Gibt die aktualisierte Ressource-Instanz zurück.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)   
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
 [Modulklassen](../../atl/atl-module-classes.md)

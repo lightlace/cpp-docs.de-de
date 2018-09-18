@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b534190a4e7243f5192e6d703b056d8bcb327ca
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 882a32b1a9f08f3fd07f1d53d508b101c5500f5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110642"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037059"
 ---
 # <a name="catlautothreadmodule-class"></a>CAtlAutoThreadModule-Klasse
 
@@ -62,7 +62,7 @@ Verwenden Sie die [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-facto
 
 ## <a name="see-also"></a>Siehe auch
 
-[CAtlAutoThreadModuleT-Klasse](../../atl/reference/catlautothreadmodulet-class.md)   
-[IAtlAutoThreadModule-Klasse](../../atl/reference/iatlautothreadmodule-class.md)   
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)   
+[CAtlAutoThreadModuleT-Klasse](../../atl/reference/catlautothreadmodulet-class.md)<br/>
+[IAtlAutoThreadModule-Klasse](../../atl/reference/iatlautothreadmodule-class.md)<br/>
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
 [Modulklassen](../../atl/atl-module-classes.md)

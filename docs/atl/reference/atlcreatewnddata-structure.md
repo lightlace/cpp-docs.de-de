@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5751fa3c5c8bc20f287ca3c48d885fc41c60ba0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 71c0fb14574aedb74d756e72a93cd0dc626ba086
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764328"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057378"
 ---
 # <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData-Struktur
 
@@ -42,13 +42,13 @@ Diese Struktur enthält die Daten von Klasseninstanzen Windowing-Code in ATL
 
 ## <a name="members"></a>Member
 
-`m_pThis`  
+`m_pThis`<br/>
 Die **dies** Zeiger verwendet, um den Zugriff auf die Instanz der Klasse in Fensterprozeduren abzurufen.
 
-`m_dwThreadID`  
+`m_dwThreadID`<br/>
 Die Thread-ID der aktuellen Klasseninstanz.
 
-`m_pNext`  
+`m_pNext`<br/>
 Zeiger auf die nächste `_AtlCreateWndData` Objekt.
 
 ## <a name="requirements"></a>Anforderungen

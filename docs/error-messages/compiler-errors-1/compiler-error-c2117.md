@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2117 | Microsoft Docs
+title: Compilerfehler C2117 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a51bebc1edf7398d91356adb16f35443820cef2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5579a6f05e1de768aebd2e68b64d0b861688607
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166873"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030983"
 ---
 # <a name="compiler-error-c2117"></a>Compilerfehler C2117
-"Bezeichner": Arraygrenze überschritten  
-  
- Ein Array hat zu viele Initialisierungen:  
-  
--   Arrayelemente und Initialisierungen stimmen in Größe und Anzahl nicht überein.  
-  
--   Kein Speicherplatz für das Nullabschlusszeichen in einer Zeichenfolge.  
-  
- Im folgende Beispiel wird C2117 generiert:  
-  
-```  
-// C2117.cpp  
-int main() {  
-   char abc[4] = "abcd";   // C2117  
-   char def[4] = "abd";   // OK  
-}  
+
+"Bezeichner": Arraygrenze überschritten
+
+Ein Array hat zu viele Initialisierungen:
+
+- Arrayelemente und Initialisierungen stimmen in Größe und Anzahl nicht überein.
+
+- Kein Speicherplatz für die null-Terminator in einer Zeichenfolge.
+
+Im folgende Beispiel wird die C2117 generiert:
+
+```
+// C2117.cpp
+int main() {
+   char abc[4] = "abcd";   // C2117
+   char def[4] = "abd";   // OK
+}
 ```

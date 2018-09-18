@@ -42,12 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 864bba5b88c7e52b55bd86a61edaaac2d22b0346
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cdd7b68ac9e3bf55f64b9a68f7b8075eab640faa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402308"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056819"
 ---
 # <a name="futime-futime32-futime64"></a>_futime, _futime32, _futime64
 
@@ -80,13 +80,13 @@ Zeiger auf die Struktur, die das neue Änderungsdatum enthält
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück. Wenn ein Fehler auftritt, wird der Handler für ungültige Parameter aufgerufen, so wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion-1 zurück und **Errno** festgelegt ist, um **EBADF**, der angibt, eines Ungültiger Dateideskriptor oder **EINVAL**, der angibt, ein ungültiges Parameter.
+Gibt bei Erfolg 0 zurück. Wenn ein Fehler auftritt, wird der Handler für ungültige Parameter aufgerufen, so wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, gibt die Funktion-1 zurück und **Errno** nastaven NA hodnotu **EBADF**, der angibt, eines Ungültiger Dateideskriptor, oder **EINVAL**, der angibt, ein ungültiges der Parameter.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_futime** Routine legt das Änderungsdatum und die Uhrzeit des Zugriffs auf die geöffnete Datei zugeordneten *fd*. **_futime** ist identisch mit [_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md), außer dass das Argument der Dateideskriptor einer geöffneten Datei, anstatt den Namen einer Datei oder ein Pfad zu einer Datei. Die **_utimbuf** -Struktur enthält Felder für die neue Änderungsdatum und den Zugriff auf. Beide Felder müssen gültige Werte enthalten. **_utimbuf32** und **_utimbuf64** sind identisch mit **_utimbuf** bzw. für die Verwendung der 32-Bit und 64-Bit-Typen, mit Ausnahme. **_futime** und **_utimbuf** verwenden eine 64-Bit-Uhrzeittyp und **_futime** ist identisch Verhalten **_futime64**. Wenn Sie das alte Verhalten zu erzwingen müssen, definieren Sie **_USE_32BIT_TIME_T**. Dies bewirkt, dass dadurch **_futime** identisch Verhalten **_futime32** und bewirkt, dass die **_utimbuf** Struktur den 32-Bit-Uhrzeittyp, somit entspricht verwendet **__utimbuf32**.
+Die **_futime** Routine legt das Änderungsdatum und den Zeitpunkt des Zugriffs auf die geöffnete Datei zugeordneten *fd*. **_futime** ist identisch mit [_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md), außer dass das Argument der Dateideskriptor einer geöffneten Datei und nicht den Namen einer Datei oder einen Pfad zu einer Datei. Die **_utimbuf** -Struktur enthält Felder für das neue Änderungsdatum und die Uhrzeit für den Zugriff. Beide Felder müssen gültige Werte enthalten. **_utimbuf32** und **_utimbuf64** sind identisch mit **_utimbuf** bzw. für die Verwendung der 32-Bit- und 64-Bit-Typen, mit Ausnahme. **_futime** und **_utimbuf** verwenden einen 64-Bit-Zeittyp und **_futime** ist, verhält sich genauso **_futime64**. Wenn Sie das alte Verhalten erzwingen möchten, definieren Sie **_USE_32BIT_TIME_T**. Dadurch wird **_futime** identisch Verhalten **_futime32** und bewirkt, dass die **_utimbuf** Struktur, die die 32-Bit-Zeittyp, somit entspricht verwendet **__utimbuf32**.
 
-**_futime64**, verwendet der **__utimbuf64** -Struktur, können gelesen und Datei Datumsangaben bis 23:59:59, 31. Dezember 3000, UTC; ändern, während ein Aufruf von **_futime32** schlägt fehl, wenn das Datum für die Datei ist später als 23:59:59 am 18. Januar 2038 UTC. Der 1. Januar 1970 (Mitternacht) ist der älteste mögliche Datumsbereich für diese Funktionen.
+**_futime64**, verwendet der **__utimbuf64** Struktur können gelesen und Datumsangaben bis 23:59:59, 31. Dezember 3000 UTC; ändern, während ein Aufruf von **_futime32** schlägt fehl, wenn das Datum für die Datei ist nach 23:59:59 am 18. Januar 2038, UTC. Der 1. Januar 1970 (Mitternacht) ist der älteste mögliche Datumsbereich für diese Funktionen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -143,20 +143,20 @@ Arbitrary file contents.
 ### <a name="sample-output"></a>Beispielausgabe
 
 ```Output
- Volume in drive Z has no label.
- Volume Serial Number is 5C68-57C1
+Volume in drive Z has no label.
+Volume Serial Number is 5C68-57C1
 
- Directory of Z:\crt
+Directory of Z:\crt
 
- 03/25/2004  10:40 AM                24 crt_futime.c_input
+03/25/2004  10:40 AM                24 crt_futime.c_input
                1 File(s)             24 bytes
                0 Dir(s)  24,268,476,416 bytes free
- Volume in drive Z has no label.
- Volume Serial Number is 5C68-57C1
+Volume in drive Z has no label.
+Volume Serial Number is 5C68-57C1
 
- Directory of Z:\crt
+Directory of Z:\crt
 
- 03/25/2004  10:41 AM                24 crt_futime.c_input
+03/25/2004  10:41 AM                24 crt_futime.c_input
                1 File(s)             24 bytes
                0 Dir(s)  24,268,476,416 bytes free
 File time modified

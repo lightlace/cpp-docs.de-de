@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2500 | Microsoft Docs
+title: Compilerfehler C2500 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c05ffd59e415375dd3c7f94ae9bc377c0fc2b9e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b7e24ca520796b63171fe63c2bf841fe8776845
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229221"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026672"
 ---
 # <a name="compiler-error-c2500"></a>Compilerfehler C2500
-"Bezeichner1": "Bezeichner2" ist bereits eine direkte Basisklasse  
-  
- Eine Klasse oder Struktur wird mehr als einmal in einer Liste von Basisklassen angezeigt.  
-  
- Eine direkte Basisklasse ist in der Basisliste aufgeführt sind. Eine indirekte Basisklasse ist eine Basisklasse für eine der Klassen in der Basisliste.  
-  
- Eine Klasse kann nicht als eine direkte Basisklasse mehr als einmal angegeben werden. Eine Klasse kann mehrmals als indirekte Basisklasse verwendet werden.  
-  
- Im folgenden Beispiel wird C2500 generiert:  
-  
-```  
-// C2500.cpp  
-// compile with: /c  
-class A {};  
-class B : public A, public A {};    // C2500  
-  
-// OK  
-class C : public A {};  
-class D : public A {};  
-class E : public C, public D {};  
+
+'Bezeichner1': 'Bezeichner2' ist bereits eine direkte Basisklasse
+
+Eine Klasse oder Struktur wird mehr als einmal in einer Liste der Basisklassen.
+
+Eine direkte Basisklasse ist in der Basisliste aufgeführt sind. Eine indirekte Basisklasse ist eine Basisklasse von einer der Klassen in der Basisliste.
+
+Eine Klasse kann nicht mehr als einmal als eine direkte Basisklasse angegeben werden. Eine Klasse kann mehrmals als indirekte Basisklasse verwendet werden.
+
+Im folgende Beispiel wird die C2500 generiert:
+
+```
+// C2500.cpp
+// compile with: /c
+class A {};
+class B : public A, public A {};    // C2500
+
+// OK
+class C : public A {};
+class D : public A {};
+class E : public C, public D {};
 ```

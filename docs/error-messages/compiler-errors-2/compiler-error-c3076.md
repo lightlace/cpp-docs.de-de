@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3076 | Microsoft Docs
+title: Compilerfehler C3076 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 465dd45c4ddfc41e3ba7a059619028711d6f73e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f2d507e13c6dde451e6693774f708333a9301f8b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247578"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064060"
 ---
 # <a name="compiler-error-c3076"></a>Compilerfehler C3076
-'Instanz': Sie können eine Instanz eines Verweistyps 'Typ' einbetten, in einen systemeigenen Typ  
-  
- Ein systemeigener Typ kann nicht auf eine Instanz eines CLR-Typs enthalten.  
-  
- Weitere Informationen finden Sie unter [C++-Stapelsemantik für Referenztypen](../../dotnet/cpp-stack-semantics-for-reference-types.md).  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C3076 generiert.  
-  
-```  
-// C3076.cpp  
-// compile with: /clr /c  
-ref struct U {};  
-  
-struct V {  
-   U y;   // C3076  
-};  
-  
-ref struct W {  
-   U y;   // OK  
-};  
+
+'Instance': Sie können keine Instanz eines Verweistyps, 'Typ' in einen systemeigenen Typ eingebettet
+
+Ein systemeigener Typ kann nicht auf eine Instanz von einem CLR-Typ enthalten.
+
+Weitere Informationen finden Sie unter [C++-Stapelsemantik für Referenztypen](../../dotnet/cpp-stack-semantics-for-reference-types.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C3076 generiert.
+
+```
+// C3076.cpp
+// compile with: /clr /c
+ref struct U {};
+
+struct V {
+   U y;   // C3076
+};
+
+ref struct W {
+   U y;   // OK
+};
 ```

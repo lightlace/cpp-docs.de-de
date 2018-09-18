@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 3) C4133 | Microsoft Docs
+title: Compilerwarnung (Stufe 3) C4133 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2f01a3a4b6ccf1750ec3cd0df643c02b7678bac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f22878ebb7caa5549779d4c53b1f6b7068dc480
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291036"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056832"
 ---
 # <a name="compiler-warning-level-3-c4133"></a>Compilerwarnung (Stufe 3) C4133
-'Typ': Inkompatible Typen - von "Typ1" in "Typ2"  
-  
- Diese Warnung kann verursacht werden, indem Sie versuchen, zwei Zeiger verschiedener Typen zu subtrahieren.  
-  
- Um diese Warnung zu vermeiden, geben Sie eine geeignete Typumwandlung.
+
+'Typ': Inkompatible Typen - von 'type1' in 'Typ2'
+
+Diese Warnung kann verursacht werden, indem Sie versuchen, zwei Zeiger verschiedener Typen zu subtrahieren.
+
+Um diese Warnung zu vermeiden, geben Sie eine geeignete Typumwandlung.

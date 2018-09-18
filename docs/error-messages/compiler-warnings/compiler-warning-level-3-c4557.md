@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 3) C4557 | Microsoft Docs
+title: Compilerwarnung (Stufe 3) C4557 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1065d412a2f977e1784ba739d1226d08e28bc8ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97423da084c005e427b21043e75ebe850623c63b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289957"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055302"
 ---
 # <a name="compiler-warning-level-3-c4557"></a>Compilerwarnung (Stufe 3) C4557
-'__assume' enthält den Effekt 'Effekt'  
-  
- Der an übergebene Wert ein [__assume](../../intrinsics/assume.md) statement2 geändert wurde.  
-  
- Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
-  
- Im folgenden Beispiel wird C4557 generiert:  
-  
-```  
-// C4557.cpp  
-// compile with: /W3  
-#pragma warning(default : 4557)  
-int main()  
-{  
-   int i;  
-   __assume(i++);   // C4557  
-}  
+
+'__assume' enthält den Effekt 'Effekt'
+
+Der an übergebene Wert eine [__assume](../../intrinsics/assume.md) Anweisung2 geändert wurde.
+
+Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
+
+Im folgende Beispiel wird die C4557 generiert:
+
+```
+// C4557.cpp
+// compile with: /W3
+#pragma warning(default : 4557)
+int main()
+{
+   int i;
+   __assume(i++);   // C4557
+}
 ```

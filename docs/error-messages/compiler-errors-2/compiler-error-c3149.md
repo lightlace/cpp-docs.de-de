@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3149 | Microsoft Docs
+title: Compilerfehler C3149 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c0441a7aebf86139aedbd5e45a7645db0a90b37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a522bfd3ba236661f206d8d4e4b550179c06b3f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248507"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033120"
 ---
 # <a name="compiler-error-c3149"></a>Compilerfehler C3149
-'Typ': Dieser Typ ohne einen auf oberster Ebene 'Char' kann nicht verwenden  
-  
- Eine Deklaration wurde nicht ordnungsgemäß angegeben.  
-  
- Angenommen, Sie möglicherweise einen CLR-Typ im globalen Gültigkeitsbereich definiert und versucht, eine Variable des Typs als Teil der Definition zu erstellen. Da globale Variablen von CLR-Typen nicht zulässig sind, generiert der Compiler C3149 generiert.  
-  
- Deklarieren Sie Variablen von CLR-Typen innerhalb einer Funktion oder eines Typs Funktionsdefinition, um diesen Fehler zu beheben.  
-  
- Im folgende Beispiel wird C3149 generiert:  
-  
-```  
-// C3149.cpp  
-// compile with: /clr  
-using namespace System;  
-int main() {  
-   // declare an array of value types   
-   array< Int32 ^> IntArray;   // C3149  
-   array< Int32>^ IntArray2;   // OK  
-}  
-```  
-  
- Im folgende Beispiel wird C3149 generiert:  
-  
-```  
-// C3149b.cpp  
-// compile with: /clr /c  
-delegate int MyDelegate(const int, int);  
-void Test1(MyDelegate m) {}   // C3149  
-void Test2(MyDelegate ^ m) {}   // OK  
-```  
+
+'Typ': Dieser Typ ohne eine der obersten Ebene 'Char' kann nicht verwendet
+
+Eine Deklaration wurde nicht ordnungsgemäß angegeben.
+
+Beispielsweise kann definiert einen CLR-Typ im globalen Gültigkeitsbereich und versucht, eine Variable des Typs als Teil der Definition zu erstellen. Da globale Variablen von CLR-Typen nicht zulässig sind, generiert der Compiler C3149 generiert.
+
+Deklarieren Sie Variablen, die von CLR-Typen in der Definition einer Funktion oder der Typ, um diesen Fehler zu beheben.
+
+Im folgende Beispiel wird die C3149 generiert:
+
+```
+// C3149.cpp
+// compile with: /clr
+using namespace System;
+int main() {
+   // declare an array of value types
+   array< Int32 ^> IntArray;   // C3149
+   array< Int32>^ IntArray2;   // OK
+}
+```
+
+Im folgende Beispiel wird die C3149 generiert:
+
+```
+// C3149b.cpp
+// compile with: /clr /c
+delegate int MyDelegate(const int, int);
+void Test1(MyDelegate m) {}   // C3149
+void Test2(MyDelegate ^ m) {}   // OK
+```

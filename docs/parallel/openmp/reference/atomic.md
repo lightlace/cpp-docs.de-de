@@ -1,5 +1,5 @@
 ---
-title: Atomic | Microsoft Docs
+title: Atomic | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf6287ff3c44d508a3e4293340e652edb201282f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e7e9e9ecad2f6ea53e2f922799340eee47dd4a7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694406"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037488"
 ---
 # <a name="atomic"></a>atomisch
 Gibt an, dass eine Speicheradresse, die automatisch aktualisiert werden.  
@@ -34,11 +34,11 @@ Gibt an, dass eine Speicheradresse, die automatisch aktualisiert werden.
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `expression`  
- Die Anweisung, die l-Wert, dessen Speicherort enthält mehrere Schreibvorgänge Schutz werden soll. Weitere Informationen zu gültiger Ausdruck Formen finden Sie unter der OpenMP-Spezifikation.  
+*Ausdruck*<br/>
+Die Anweisung, enthält die l-Wert, dessen Speicherort, die Sie für mehrere Schreibvorgänge schützen möchten. Weitere Informationen zu rechtlichen Ausdruck Formen finden Sie in der OpenMP-Spezifikation.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `atomic` Richtlinie unterstützt kein OpenMP-Klauseln.  
+ Die `atomic` -Anweisung unterstützt keine OpenMP-Klauseln.  
   
  Weitere Informationen finden Sie unter [2.6.4 atomic erstellen](../../../parallel/openmp/2-6-4-atomic-construct.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: IResourceManager-Struktur | Microsoft Docs
+title: IResourceManager-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afd87a71c8f5d41e38f6a1b18be96a7bab8f3bb8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4d1032b2db7d1552beb40eb724b9953142b9b2ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693496"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027413"
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager-Struktur
 Eine Schnittstelle zum Ressourcen-Manager der Concurrency Runtime. Dies ist die Schnittstelle, über die Planer mit dem Ressourcen-Manager kommunizieren.  
@@ -52,15 +52,15 @@ struct IResourceManager;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[IResourceManager::CreateNodeTopology](#createnodetopology)|Vorhanden, nur im Debugbuild der Laufzeit erstellt, diese Methode ist ein Test-Hook entwickelt, um das Testen des Ressourcen-Managers auf unterschiedliche Hardware Topologien, ohne tatsächliche Hardware entsprechen die Konfiguration zu vereinfachen. Mit der retailbuilds der Laufzeit gibt diese Methode zurück, ohne eine Aktion auszuführen.|  
-|[IResourceManager::GetAvailableNodeCount](#getavailablenodecount)|Gibt die Anzahl der verfügbaren Knoten zum Ressourcen-Manager zurück.|  
-|[IResourceManager::GetFirstNode](#getfirstnode)|Gibt den ersten Knoten in der Reihenfolge zurück, gemäß der Ressourcen-Manager.|  
-|[IResourceManager::Reference](#reference)|Inkrementiert den Verweiszähler für den Ressourcen-Manager-Instanz.|  
-|[IResourceManager::RegisterScheduler](#registerscheduler)|Registriert einen Planer mit dem Ressourcen-Manager. Sobald der Planer registriert wurde, sollte die Kommunikation mit dem Ressourcen-Manager mit Hilfe der `ISchedulerProxy` Schnittstelle, die zurückgegeben wird.|  
-|[IResourceManager::Release](#release)|Dekrementiert den Verweiszähler für den Ressourcen-Manager-Instanz. Der Ressourcen-Manager wird zerstört, wenn der Verweiszähler ist `0`.|  
+|[IResourceManager::CreateNodeTopology](#createnodetopology)|Derzeit nur im Debugbuild der Laufzeit erstellt, diese Methode ist ein Test-Hook, erleichtern des Ressourcen-Managers auf unterschiedlichen Hardware-Topologien, ohne tatsächliche Hardware, die übereinstimmende Konfiguration testen soll. Mit der Laufzeit Retail-Builds gibt diese Methode zurück, ohne dass eine Aktion ausgeführt.|  
+|[IResourceManager::GetAvailableNodeCount](#getavailablenodecount)|Gibt die Anzahl der verfügbaren Knoten, der Ressourcen-Manager zurück.|  
+|[IResourceManager::GetFirstNode](#getfirstnode)|Gibt den ersten Knoten in der Reihenfolge der Enumeration zurück, gemäß der Ressourcen-Manager.|  
+|[IResourceManager::Reference](#reference)|Inkrementiert den Verweiszähler für die Resource Manager-Instanz.|  
+|[IResourceManager::RegisterScheduler](#registerscheduler)|Registriert einen Planer mit dem Resource Manager. Sobald der Planer registriert wurde, sollte er mit dem Ressourcen-Manager mit kommunizieren die `ISchedulerProxy` -Schnittstelle, die zurückgegeben wird.|  
+|[IResourceManager::Release](#release)|Dekrementiert den Verweiszähler für die Resource Manager-Instanz. Der Ressourcen-Manager wird zerstört, wenn der Verweiszähler ist `0`.|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der [CreateResourceManager](concurrency-namespace-functions.md) Funktion, um eine Schnittstelle auf die Singletoninstanz des Ressourcen-Manager erhalten. Die Methode inkrementiert die Ressourcen-Manager ein, und rufen Sie die [IResourceManager:: Release](#release) Methode, um den Verweis freizugeben, wenn Sie mit dem Ressourcen-Manager sind. In der Regel wird jedes Zeitplanungsmodul, die Sie erstellen rufen Sie diese Methode während der Erstellung des, und lassen den Verweis auf die Ressourcen-Manager, nachdem es heruntergefahren.  
+ Verwenden der [CreateResourceManager](concurrency-namespace-functions.md) Funktion, die eine Schnittstelle für die Singletoninstanz des Ressourcen-Manager zu erhalten. Die Methode inkrementiert auf die Ressourcen-Manager einen, und Sie sollten aufrufen, die [IResourceManager:: Release](#release) Methode, um den Verweis freizugeben, wenn Sie mit dem Resource Manager haben. In der Regel wird jedes Zeitplanungsmodul, die Sie erstellen diese Methode aufgerufen wird, während der Erstellung, und den Verweis auf die Ressourcen-Manager frei, nachdem es heruntergefahren wurde.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `IResourceManager`  
@@ -71,7 +71,7 @@ struct IResourceManager;
  **Namespace:** Parallelität  
   
 ##  <a name="createnodetopology"></a>  IResourceManager:: CreateNodeTopology-Methode  
- Vorhanden, nur im Debugbuild der Laufzeit erstellt, diese Methode ist ein Test-Hook entwickelt, um das Testen des Ressourcen-Managers auf unterschiedliche Hardware Topologien, ohne tatsächliche Hardware entsprechen die Konfiguration zu vereinfachen. Mit der retailbuilds der Laufzeit gibt diese Methode zurück, ohne eine Aktion auszuführen.  
+ Derzeit nur im Debugbuild der Laufzeit erstellt, diese Methode ist ein Test-Hook, erleichtern des Ressourcen-Managers auf unterschiedlichen Hardware-Topologien, ohne tatsächliche Hardware, die übereinstimmende Konfiguration testen soll. Mit der Laufzeit Retail-Builds gibt diese Methode zurück, ohne dass eine Aktion ausgeführt.  
   
 ```
 virtual void CreateNodeTopology(
@@ -82,35 +82,35 @@ virtual void CreateNodeTopology(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nodeCount`  
- Die Anzahl der simulierten Prozessorpaketen.  
+*nodeCount*<br/>
+Die Anzahl der simulierten Prozessorpaketen.  
   
- `pCoreCount`  
- Ein Array, das die Anzahl der Kerne auf jedem Knoten angibt.  
+*pCoreCount*<br/>
+Ein Array, der angibt, die Anzahl der Kerne auf jedem Knoten.  
   
- `pNodeDistance`  
- Eine Matrix, die die Knoten-Abstand zwischen zwei beliebigen Knoten angeben. Dieser Parameter kann den Wert aufweisen `NULL`.  
+*pNodeDistance*<br/>
+Eine Matrix, die die Knoten-Abstand zwischen zwei beliebigen Knoten angeben. Dieser Parameter kann den Wert aufweisen `NULL`.  
   
- `pProcessorGroups`  
- Ein Array, der angibt, die Prozessorgruppen jeder Knoten gehört.  
+*pProcessorGroups*<br/>
+Ein Array, das der Gruppe "Prozessor" gibt an, zu jedem Knoten gehört.  
   
 ### <a name="remarks"></a>Hinweise  
  [Invalid_argument](../../../standard-library/invalid-argument-class.md) wird ausgelöst, wenn der Parameter `nodeCount` hat den Wert `0` übergeben wurde, oder wenn der Parameter `pCoreCount` hat den Wert `NULL`.  
   
- [Invalid_operation](invalid-operation-class.md) wird ausgelöst, wenn diese Methode aufgerufen wird, während andere Planer im Prozess vorhanden sind.  
+ [Invalid_operation](invalid-operation-class.md) wird ausgelöst, wenn diese Methode aufgerufen wird, während andere Planer des Prozesses vorhanden sind.  
   
 ##  <a name="getavailablenodecount"></a>  IResourceManager:: Getavailablenodecount-Methode  
- Gibt die Anzahl der verfügbaren Knoten zum Ressourcen-Manager zurück.  
+ Gibt die Anzahl der verfügbaren Knoten, der Ressourcen-Manager zurück.  
   
 ```
 virtual unsigned int GetAvailableNodeCount() const = 0;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Anzahl der Knoten, um die Ressourcen-Manager verfügbar sind.  
+ Die Anzahl der Knoten, der Ressourcen-Manager verfügbar sind.  
   
 ##  <a name="getfirstnode"></a>  IResourceManager:: Getfirstnode-Methode  
- Gibt den ersten Knoten in der Reihenfolge zurück, gemäß der Ressourcen-Manager.  
+ Gibt den ersten Knoten in der Reihenfolge der Enumeration zurück, gemäß der Ressourcen-Manager.  
   
 ```
 virtual ITopologyNode* GetFirstNode() const = 0;
@@ -127,7 +127,7 @@ enum OSVersion;
 ```  
   
 ##  <a name="reference"></a>  IResourceManager:: Reference-Methode  
- Inkrementiert den Verweiszähler für den Ressourcen-Manager-Instanz.  
+ Inkrementiert den Verweiszähler für die Resource Manager-Instanz.  
   
 ```
 virtual unsigned int Reference() = 0;
@@ -137,7 +137,7 @@ virtual unsigned int Reference() = 0;
  Der resultierende Verweiszähler.  
   
 ##  <a name="registerscheduler"></a>  IResourceManager:: RegisterScheduler-Methode  
- Registriert einen Planer mit dem Ressourcen-Manager. Sobald der Planer registriert wurde, sollte die Kommunikation mit dem Ressourcen-Manager mit Hilfe der `ISchedulerProxy` Schnittstelle, die zurückgegeben wird.  
+ Registriert einen Planer mit dem Resource Manager. Sobald der Planer registriert wurde, sollte er mit dem Ressourcen-Manager mit kommunizieren die `ISchedulerProxy` -Schnittstelle, die zurückgegeben wird.  
   
 ```
 virtual ISchedulerProxy *RegisterScheduler(
@@ -146,22 +146,22 @@ virtual ISchedulerProxy *RegisterScheduler(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pScheduler`  
- Ein `IScheduler` Schnittstelle zum Planer, der registriert werden.  
+*pScheduler*<br/>
+Ein `IScheduler` Schnittstelle, um den Scheduler so registriert werden.  
   
- `version`  
- Die Version der Kommunikationsschnittstelle ist das Zeitplanungsmodul verwenden, mit der Ressourcen-Manager kommunizieren. Verwenden Sie eine Version ermöglicht der Ressourcen-Manager die Kommunikationsschnittstelle weiterentwickelt wird, während gleichzeitig die Zeitplanungsmodule, um Zugriff auf ältere Funktionen zu erhalten. Planer, die Ressourcen-Manager-Funktionen in Visual Studio 2010 verwenden möchten, sollten die Version verwenden `CONCRT_RM_VERSION_1`.  
+*version*<br/>
+Die Version der Kommunikationsschnittstelle wird der Scheduler für die Kommunikation mit dem Resource Manager verwendet. Mit einer Version ermöglicht der Ressourcen-Manager die Kommunikationsschnittstelle entwickeln, während Zeitplanungsmodule, um Zugriff auf ältere Funktionen zu erhalten. Zeitplanungsmodule, die Ressourcen-Manager-Funktionen in Visual Studio 2010 verwenden möchten, sollten die Version verwenden `CONCRT_RM_VERSION_1`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die `ISchedulerProxy` Schnittstelle der Ressourcen-Manager hat den Planer zugeordnet. Der Planer sollten diese Schnittstelle verwenden, um mit dem Ressourcen-Manager an diesem Punkt auf kommunizieren zu können.  
+ Die `ISchedulerProxy` Schnittstelle, die den Ressourcen-Manager den Planer zugeordnet ist. Der Planer sollten diese Schnittstelle verwenden, mit dem Resource Manager an diesem Punkt kommunizieren.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Methode, um das Initiieren der Kommunikation mit dem Ressourcen-Manager. Ordnet die Methode die `IScheduler` Schnittstelle für den Planer mit einer `ISchedulerProxy` Schnittstelle und Hände gelangen sie zurück. Sie können die zurückgegebene Schnittstelle Ausführungsressourcen, die für die Verwendung durch den Planer anfordern oder Threads mit der Ressourcen-Manager zu abonnieren. Der Ressourcen-Manager verwendet Richtlinienelemente der Planerrichtlinie zurückgegebenes der [GetPolicy](ischeduler-structure.md#getpolicy) Methode, um zu bestimmen, welche Art von Threads im Zeitplanungsmodul auszuführende Arbeit benötigen. Wenn Ihre `SchedulerKind` Richtlinienschlüssel hat den Wert `UmsThreadDefault` und der Wert wird aus der Richtlinie als der Wert gelesen `UmsThreadDefault`, `IScheduler` Schnittstelle, die an die Methode übergeben werden muss eine `IUMSScheduler` Schnittstelle.  
+ Verwenden Sie diese Methode, um die Kommunikation mit dem Resource Manager initiieren. Die Methode ordnet die `IScheduler` Schnittstelle für den Planer mit einer `ISchedulerProxy` -Schnittstelle und gibt sie zurück, für Sie. Sie können die zurückgegebene Schnittstelle zum Anfordern von Ressourcen für die Verwendung durch den Planer zur Ausführung oder Abonnieren von Threads mit dem Resource Manager verwenden. Der Ressourcen-Manager verwendet die Richtlinienelemente, die von der vom Scheduler-Richtlinie die [GetPolicy](ischeduler-structure.md#getpolicy) Methode, um zu bestimmen, welche Art von Threads den Planer zum Arbeitsaufgaben ausführen müssen. Wenn Ihre `SchedulerKind` Richtlinienschlüssel hat den Wert `UmsThreadDefault` und der Wert wird aus der Richtlinie als der Wert gelesen `UmsThreadDefault`, `IScheduler` Schnittstelle, die an die Methode übergeben werden muss ein `IUMSScheduler` Schnittstelle.  
   
  Löst die Methode eine `invalid_argument` Ausnahme wenn der Parameter `pScheduler` hat den Wert `NULL` oder, wenn der Parameter `version` ist keine gültige Version für die Kommunikationsschnittstelle.  
   
 ##  <a name="release"></a>  IResourceManager:: Release-Methode  
- Dekrementiert den Verweiszähler für den Ressourcen-Manager-Instanz. Der Ressourcen-Manager wird zerstört, wenn der Verweiszähler ist `0`.  
+ Dekrementiert den Verweiszähler für die Resource Manager-Instanz. Der Ressourcen-Manager wird zerstört, wenn der Verweiszähler ist `0`.  
   
 ```
 virtual unsigned int Release() = 0;

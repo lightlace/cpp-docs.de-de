@@ -1,5 +1,5 @@
 ---
-title: 'NMAKE: Schwerwiegender Fehler U1001 | Microsoft Docs'
+title: 'NMAKE: Schwerwiegender Fehler U1001 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68699a235f461a0f5550802cc009d345ecdba7c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e4e465af5b4fa22c5f0ba5a9e01ebde0a7ee89e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316009"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068142"
 ---
 # <a name="nmake-fatal-error-u1001"></a>NMAKE: Schwerwiegender Fehler U1001
-Syntaxfehler: unzulässiges Zeichen "Character" in-Makro  
-  
- Das angegebene Zeichen in einem Makro wird angezeigt, aber nicht Buchstaben, Zahlen oder Unterstriche.  
-  
- Dieser Fehler kann durch einen fehlenden Doppelpunkt in eine makroerweiterung verursacht werden:  
-  
-```  
-syntax error : illegal character '=' in macro  
+
+Syntaxfehler: Ungültiges Zeichen 'Zeichen' in Makro
+
+Das angegebene Zeichen wird angezeigt, in einem Makro ist jedoch kein Buchstabe, eine Zahl oder ein Unterstrich.
+
+Dieser Fehler kann durch einen fehlenden Doppelpunkt in einer makroerweiterung verursacht werden:
+
+```
+syntax error : illegal character '=' in macro
 ```

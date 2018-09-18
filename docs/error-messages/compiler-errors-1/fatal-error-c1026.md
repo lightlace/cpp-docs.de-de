@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1026 | Microsoft Docs
+title: Schwerwiegender Fehler C1026 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c034d45b7f8b222471094f4580902ae1b8dc66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db9167383df48dad274ef8941defaa53f51d3bfa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198104"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068987"
 ---
 # <a name="fatal-error-c1026"></a>Schwerwiegender Fehler C1026
-Stapelüberlauf im Parser, Programm zu komplex  
-  
- Der Speicherplatz, der zum Analysieren der Anwendung benötigt verursacht einen Stapelüberlauf des Compilers.  
-  
- Verringern Sie die Komplexität der Ausdrücke, nach:  
-  
--   Verringern die Schachtelung im `for` und `switch` Anweisungen. Fügen Sie mehr tief geschachtelte Anweisungen in separate Funktionen.  
-  
--   Aufteilen von langen Ausdrücken, die durch Trennzeichen Operatoren oder Funktionsaufrufe einschließen.
+
+Stapelüberlauf im Parser, Programm zu komplex
+
+Der Speicherplatz erforderlich, um das Programm analysiert verursacht einen Stapelüberlauf des Compilers.
+
+Verringern Sie die Komplexität der Ausdrücke, nach:
+
+- Verringern die Schachtelung im `for` und `switch` Anweisungen. Fügen Sie weitere tief geschachtelte Anweisungen in separate Funktionen an.
+
+- Teilen Sie lange Ausdrücke, die durch Trennzeichen Operatoren oder Funktionsaufrufe einschließen.

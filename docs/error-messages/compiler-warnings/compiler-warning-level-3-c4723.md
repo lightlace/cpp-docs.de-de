@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 3) C4723 | Microsoft Docs
+title: Compilerwarnung (Stufe 3) C4723 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c5f91bbdc60ab1901c4afe4d5bea9f3258692ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ca6715e26705632dc3187cb6db7deed8636cd82
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296613"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033146"
 ---
 # <a name="compiler-warning-level-3-c4723"></a>Compilerwarnung (Stufe 3) C4723
-Mögliche Division durch 0  
-  
- Der zweite Operand in einem ausgewertet zur Kompilierungszeit NULL ergeben und undefinierte Ergebnisse Divide-Vorgang.  
-  
- Diese Warnung wird ausgegeben, nur bei Verwendung [/Og](../../build/reference/og-global-optimizations.md) oder einer Optimierungsoption, die/Og impliziert.  
-  
- Der Compiler möglicherweise der Operand 0 (null) generiert.
+
+Mögliche Division durch 0
+
+Der zweite Operand in einem ergab 0 (null), zum Zeitpunkt der Kompilierung und undefinierte Ergebnisse Divide-Vorgang.
+
+Diese Warnung wird ausgegeben, nur bei Verwendung von ["/ Og"](../../build/reference/og-global-optimizations.md) oder eine Optimierungsoption, die "/ Og" impliziert.
+
+Der Compiler möglicherweise der Operand NULL generiert.

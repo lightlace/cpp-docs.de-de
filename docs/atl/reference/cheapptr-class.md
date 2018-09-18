@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34a6b019c2e3f71b70253ad2c15bc4b2758eeae7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8ea4fd429395fc78f36d1f9b3244068c737be49a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762079"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033978"
 ---
 # <a name="cheapptr-class"></a>CHeapPtr-Klasse
 
@@ -37,16 +37,16 @@ Eine intelligente Zeiger-Klasse für die Verwaltung von Heap-Zeiger.
 ## <a name="syntax"></a>Syntax
 
 ```
-template<typename T, class Allocator=CCRTAllocator>  
+template<typename T, class Allocator=CCRTAllocator>
 class CHeapPtr : public CHeapPtrBase<T, Allocator>
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Der Objekttyp, auf dem Heap gespeichert werden.
 
-*Zuweisung*  
+*Zuweisung*<br/>
 Die Speicher-Allocation-Klasse verwenden.
 
 ## <a name="members"></a>Member
@@ -94,7 +94,7 @@ bool Allocate(size_t nElements = 1) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*nElements*  
+*nElements*<br/>
 Die Anzahl der Elemente, die zum Berechnen der Menge an Arbeitsspeicher zugeordnet werden soll. Der Standardwert ist 1.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -121,7 +121,7 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*p*  
+*p*<br/>
 Einem vorhandenen Heapzeiger oder `CHeapPtr`.
 
 ### <a name="remarks"></a>Hinweise
@@ -143,7 +143,7 @@ CHeapPtr<T, Allocator>& operator=(
 
 ### <a name="parameters"></a>Parameter
 
-*p*  
+*p*<br/>
 Ein vorhandenes `CHeapPtr`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -164,7 +164,7 @@ bool Reallocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*nElements*  
+*nElements*<br/>
 Die neue Anzahl von Elementen, die zum Berechnen der Menge an Arbeitsspeicher zugeordnet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -177,6 +177,6 @@ Gibt "true" zurück, wenn der Speicher wurde erfolgreich zugeordnet, "false" bei
 
 ## <a name="see-also"></a>Siehe auch
 
-[CHeapPtrBase-Klasse](../../atl/reference/cheapptrbase-class.md)   
-[CCRTAllocator-Klasse](../../atl/reference/ccrtallocator-class.md)   
+[CHeapPtrBase-Klasse](../../atl/reference/cheapptrbase-class.md)<br/>
+[CCRTAllocator-Klasse](../../atl/reference/ccrtallocator-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

@@ -35,29 +35,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2780697c1a50e15e170f2096a2841e2c50d844a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 107b759345e221ad8100f11d97b79c5bd9fd2b65
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724684"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031436"
 ---
 # <a name="try-except-statement"></a>try-except-Anweisung
 
 **Microsoft-spezifisch**
 
-Die **versuchen Sie es – mit Ausnahme von** -Anweisung ist eine Microsoft-Erweiterung für den C und C++-Sprachen, die unterstützt strukturierte Ausnahmebehandlung.  
+Die **versuchen Sie es – mit Ausnahme von** -Anweisung ist eine Microsoft-Erweiterung für den C und C++-Sprachen, die unterstützt strukturierte Ausnahmebehandlung.
 
-## <a name="syntax"></a>Syntax  
-  
-> **__try**   
-> {  
->    überwachten code  
-> }  
-> **__except** ( *Ausdruck* )  
-> {  
->    Code im Ausnahmehandler  
-> }  
+## <a name="syntax"></a>Syntax
+
+> **__try** {/ / überwachten Code} **__except** ( *Ausdruck* ) {/ / Code im Ausnahmehandler}
 
 ## <a name="remarks"></a>Hinweise
 
@@ -74,7 +67,7 @@ Die verbundanweisung nach der **__try** -Klausel ist der Text bzw. der geschütz
 
 1. Der geschützte Bereich wird ausgeführt.
 
-2. Wenn während der Ausführung des abgesicherten Abschnitts keine Ausnahme auftritt, die Ausführung wird fortgesetzt, bei der Anweisung nach der **__except** Klausel.  
+2. Wenn während der Ausführung des abgesicherten Abschnitts keine Ausnahme auftritt, die Ausführung wird fortgesetzt, bei der Anweisung nach der **__except** Klausel.
 
 3. Wenn eine Ausnahme tritt auf, während der Ausführung des abgesicherten Abschnitts oder in einer Routine der geschützte Abschnitt aufruft, die **__except** *Ausdruck* (bezeichnet das *Filter* Ausdruck) wird ausgewertet, und der Wert bestimmt, wie die Ausnahme behandelt wird. Es gibt drei Werte:
 
@@ -88,10 +81,10 @@ Da die **__except** -Ausdruck als C-Ausdruck ausgewertet wird, wird er auf einen
 
 Jede Anwendung kann einen eigenen Ausnahmehandler haben.
 
-Es ist nicht zulässig, springen Sie in einem **__try** -Anweisung, aber aus einer solchen gültig. Der Ausnahmehandler wird nicht aufgerufen, wenn ein Prozess, während der Ausführung beendet wird eine **Testen – mit Ausnahme von** Anweisung.  
-  
-Weitere Informationen finden Sie im Knowledge Base-Artikel Q315937: Gewusst wie: Blockierstapelüberlauf in einer Visual C++-Anwendung.  
-  
+Es ist nicht zulässig, springen Sie in einem **__try** -Anweisung, aber aus einer solchen gültig. Der Ausnahmehandler wird nicht aufgerufen, wenn ein Prozess, während der Ausführung beendet wird eine **Testen – mit Ausnahme von** Anweisung.
+
+Weitere Informationen finden Sie im Knowledge Base-Artikel Q315937: Gewusst wie: Blockierstapelüberlauf in einer Visual C++-Anwendung.
+
 ## <a name="the-leave-keyword"></a>Das __leave-Schlüsselwort
 
 Die **__leave-** Schlüsselwort ist nur innerhalb der geschützte Bereich der gültigen eine **versuchen-außer** -Anweisung und deren Auswirkung besteht darin, am Ende des abgesicherten Abschnitts wechseln. Die Ausführung wird mit der ersten Anweisung nach dem Ausnahmehandler fortgesetzt.
@@ -106,12 +99,12 @@ Strukturierte Ausnahmebehandlung bietet zwei intrinsische Funktionen, die zur Ve
 
 Die intrinsische Funktion `GetExceptionInformation` gibt einen Zeiger auf eine Struktur, die zusätzliche Informationen zur Ausnahme enthält. Mit diesem Zeiger können Sie auf den Computerzustand zugreifen, der zum Zeitpunkt einer Hardwareausnahme vorhanden war. Die Struktur lautet wie folgt:
 
-```cpp  
+```cpp
 typedef struct _EXCEPTION_POINTERS {
     PEXCEPTION_RECORD ExceptionRecord;
     PCONTEXT ContextRecord;
-} EXCEPTION_POINTERS, *PEXCEPTION_POINTERS; 
-```  
+} EXCEPTION_POINTERS, *PEXCEPTION_POINTERS;
+```
 
 Die Zeigertypen `PEXCEPTION_RECORD` und `PCONTEXT` werden in der Includedatei definiert \<"Winnt.h" >, und `_EXCEPTION_RECORD` und `_CONTEXT` werden in der Includedatei definiert \<excpt.h >
 
@@ -123,10 +116,10 @@ excpt.h definiert mehrere alternativen Namen für diese systeminternen Funktione
 
 `GetExceptionCode` ist gleich `_exception_code`
 
- `GetExceptionInformation` ist gleich `_exception_info`
+`GetExceptionInformation` ist gleich `_exception_info`
 
- `AbnormalTermination` ist gleich `_abnormal_termination`
-  
+`AbnormalTermination` ist gleich `_abnormal_termination`
+
 ## <a name="example"></a>Beispiel
 
 ```cpp
@@ -176,24 +169,25 @@ int main()
     puts("world");
 }
 ```
-  
-## <a name="output"></a>Ausgabe  
-  
-```Output 
-hello  
-in try  
-in try  
-in filter.  
-caught AV as expected.  
-in finally. termination:  
-        abnormal  
-in except  
-world  
-```  
 
-**Ende Microsoft-spezifisch**  
+## <a name="output"></a>Ausgabe
+
+```Output
+hello
+in try
+in try
+in filter.
+caught AV as expected.
+in finally. termination:
+        abnormal
+in except
+world
+```
+
+**Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
- [Schreiben eines Ausnahmehandlers](../cpp/writing-an-exception-handler.md)   
- [Strukturierte Ausnahmebehandlung (C/C++)](../cpp/structured-exception-handling-c-cpp.md)   
- [Schlüsselwörter](../cpp/keywords-cpp.md)
+
+[Schreiben eines Ausnahmehandlers](../cpp/writing-an-exception-handler.md)<br/>
+[Strukturierte Ausnahmebehandlung (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
+[Schlüsselwörter](../cpp/keywords-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2561 | Microsoft Docs
+title: Compilerfehler C2561 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f8ece9a3d9347a5179844cbfca3425870c25e2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8611af23ab884a853fc751ae82c636753993495b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230902"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070703"
 ---
 # <a name="compiler-error-c2561"></a>Compilerfehler C2561
-'Bezeichner': Funktion muss einen Wert zurückgeben  
-  
- Die Funktion wurde als Rückgabewert deklariert, aber der Definition der Funktion enthält keine `return` Anweisung.  
-  
- Dieser Fehler kann durch einen falschen Funktionsprototyp verursacht werden:  
-  
-1.  Wenn die Funktion keinen Wert zurückgibt, deklarieren Sie die Funktion mit Rückgabetyp ["void"](../../cpp/void-cpp.md).  
-  
-2.  Überprüfen Sie, dass alle möglichen Verzweigungen der Funktion einen Wert des Typs im Prototyp deklariert zurückgibt.  
-  
-3.  C++-Funktionen mit Inline-Assembly-Routinen, die den Rückgabewert in speichern die `AX` Register möglicherweise eine return-Anweisung. Kopieren Sie den Wert in `AX` in eine temporäre Variable und diese Variable aus der Funktion zurückzugeben.  
-  
- Im folgende Beispiel wird C2561 generiert:  
-  
-```  
-// C2561.cpp  
-int Test(int x) {  
-   if (x) {  
-      return;   // C2561  
-      // try the following line instead  
-      // return 1;  
-   }  
-   return 0;  
-}  
-  
-int main() {  
-   Test(1);  
-}  
+
+'Bezeichner': Funktion muss einen Wert zurückgeben
+
+Die Funktion wurde als Rückgabewert deklariert, aber enthält keine Definition der Funktion ein `return` Anweisung.
+
+Dieser Fehler kann durch einen falschen Funktionsprototyp verursacht werden:
+
+1. Wenn die Funktion keinen Wert zurückgibt, deklarieren Sie die Funktion mit Rückgabetyp ["void"](../../cpp/void-cpp.md).
+
+1. Überprüfen Sie, dass alle mögliche Verzweigungen der Funktion einen Wert des Typs im Prototyp deklariert zurückgibt.
+
+1. C++-Funktionen mit Inline-Assembly-Routinen, die den Rückgabewert in speichern die `AX` registrieren Sie sich möglicherweise eine return-Anweisung. Kopieren Sie den Wert in `AX` in eine temporäre Variable und die Variable aus der Funktion zurückgegeben.
+
+Im folgende Beispiel wird die C2561 generiert:
+
+```
+// C2561.cpp
+int Test(int x) {
+   if (x) {
+      return;   // C2561
+      // try the following line instead
+      // return 1;
+   }
+   return 0;
+}
+
+int main() {
+   Test(1);
+}
 ```

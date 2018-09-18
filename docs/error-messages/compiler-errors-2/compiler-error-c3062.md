@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3062 | Microsoft Docs
+title: Compilerfehler C3062 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da507511cb5f091d5d9432bbfeb36951e3f43c6f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95f2e58cada0b1b825fb0f065b461db6350de9fc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250565"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067167"
 ---
 # <a name="compiler-error-c3062"></a>Compilerfehler C3062
-"Enum": Enumerator ist ein Wert erforderlich, da der zugrunde liegende Typ 'Typ' ist  
-  
- Sie können einen zugrunde liegender Typ für eine Enumeration angeben. Einige Datentypen erfordern jedoch das Zuweisen von Werten für jeden Enumerator.  
-  
- Weitere Informationen über Enumerationen finden Sie unter [Enumerationsklasse](../../windows/enum-class-cpp-component-extensions.md).  
-  
- Im folgende Beispiel wird C3062 generiert:  
-  
-```  
-// C3062.cpp  
-// compile with: /clr  
-  
-enum class MyEnum : bool { a };   // C3062  
-enum class MyEnum2 : bool { a = true};   // OK  
+
+"Enum": Enumerator ist ein Wert erforderlich, da der zugrunde liegenden Typ 'Typ'
+
+Sie können einen zugrunde liegenden Typ für eine Enumeration angeben. Allerdings erfordern einige Typen Zuweisen von Werten für jeden Enumerator.
+
+Weitere Informationen über Enumerationen finden Sie unter [Enumerationsklasse](../../windows/enum-class-cpp-component-extensions.md).
+
+Im folgende Beispiel wird die C3062 generiert:
+
+```
+// C3062.cpp
+// compile with: /clr
+
+enum class MyEnum : bool { a };   // C3062
+enum class MyEnum2 : bool { a = true};   // OK
 ```

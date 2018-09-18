@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e837e15f934e53f7b1d06a94efb4a320f2e8407
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 48303c6115ac1d2314e3038556b8f98330a6182e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757893"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062669"
 ---
 # <a name="cwintraitsor-class"></a>CWinTraitsOR-Klasse
 
@@ -45,10 +45,10 @@ class CWinTraitsOR
 
 #### <a name="parameters"></a>Parameter
 
-*t_dwStyle*  
+*t_dwStyle*<br/>
 Standard-Window-Stile.
 
-*t_dwExStyle*  
+*t_dwExStyle*<br/>
 Erweiterte Fensterstile wird standardmäßig.
 
 ## <a name="members"></a>Member
@@ -82,7 +82,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>Parameter
 
-*dwStyle*  
+*dwStyle*<br/>
 Formatvorlagen, die für die Erstellung eines Fensters verwendet werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -99,7 +99,7 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ### <a name="parameters"></a>Parameter
 
-*dwExStyle*  
+*dwExStyle*<br/>
 Erweiterte Stile, die für die Erstellung eines Fensters verwendet werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -108,6 +108,6 @@ Eine Kombination von erweiterten Stile, die übergeben werden *DwExStyle* und st
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)   
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
 [Einführung in Fenstermerkmale](../../atl/understanding-window-traits.md)
 

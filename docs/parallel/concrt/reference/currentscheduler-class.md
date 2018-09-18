@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2893644dc4dbec2d1ebc25be42ba4b30fbd19cb1
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e96b9d70e48b63eafb8cb3c6f4938f962114fd39
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540438"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059484"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler-Klasse
 Stellt eine Abstraktion für den aktuellen Planer dar, der dem aufrufenden Kontext zugeordnet ist.  
@@ -80,8 +80,8 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Policy`  
- Die Scheduler-Richtlinie, die das Verhalten des neu erstellten Zeitplanungsmoduls beschrieben wird.  
+*_Policy*<br/>
+Die Scheduler-Richtlinie, die das Verhalten des neu erstellten Zeitplanungsmoduls beschrieben wird.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Anlage des Zeitplanungsmoduls an den aufrufenden Kontext platziert einen Verweiszähler implizit auf den Planer.  
@@ -103,8 +103,8 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Placement`  
- Ein Verweis auf einen Speicherort, in dem die Aufgaben innerhalb der Planungsgruppe für Blockcontainer werden werden auf ausführen.  
+*_Platzierung*<br/>
+Ein Verweis auf einen Speicherort, in dem die Aufgaben innerhalb der Planungsgruppe für Blockcontainer werden werden auf ausführen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die neu erstellte Planungsgruppe. Dies `ScheduleGroup` Objekt verfügt über eine Initiale Verweisanzahl platziert.  
@@ -198,8 +198,8 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Placement`  
- Ein Verweis auf die Position, an den aktuellen Planer zu Fragen.  
+*_Platzierung*<br/>
+Ein Verweis auf die Position, an den aktuellen Planer zu Fragen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Hinweis auf, und zwar unabhängig davon, ob der Speicherort von angegeben die `_Placement` Argument auf den aktuellen Scheduler verfügbar ist.  
@@ -218,8 +218,8 @@ static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_ShutdownEvent`  
- Ein Handle für ein Windows-Ereignis-Objekt, das von der Laufzeit signalisiert wird, wenn der Planer dem aktuellen Kontext zugeordnet heruntergefahren wird, und zerstört.  
+*_ShutdownEvent*<br/>
+Ein Handle für ein Windows-Ereignis-Objekt, das von der Laufzeit signalisiert wird, wenn der Planer dem aktuellen Kontext zugeordnet heruntergefahren wird, und zerstört.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn keine Planer an den aufrufenden Kontext angefügt ist, das Aufrufen dieser Methode führt zu einem [Scheduler_not_attached](scheduler-not-attached-class.md) ausgelöste Ausnahme.  
@@ -240,14 +240,14 @@ static void __cdecl ScheduleTask(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Proc`  
- Ein Zeiger auf die Funktion, die ausgeführt werden, um den Text der Aufgabe leicht durchführen.  
+*_Proc*<br/>
+Ein Zeiger auf die Funktion, die ausgeführt werden, um den Text der Aufgabe leicht durchführen.  
   
- `_Data`  
- Ein void-Zeiger auf die Daten, die in den Text der Aufgabe als Parameter übergeben werden.  
+*"_Data"*<br/>
+Ein void-Zeiger auf die Daten, die in den Text der Aufgabe als Parameter übergeben werden.  
   
- `_Placement`  
- Ein Verweis auf einen Speicherort, in denen die einfache Aufgabe für Blockcontainer werden werden auf ausführen.  
+*_Platzierung*<br/>
+Ein Verweis auf einen Speicherort, in denen die einfache Aufgabe für Blockcontainer werden werden auf ausführen.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode führt dazu, dass der Standardplaner des Prozesses erstellt und/oder an den aufrufenden Kontext angefügt wird, wenn derzeit dem aufrufenden Kontext kein Planer zugeordnet ist.  

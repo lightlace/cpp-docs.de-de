@@ -1,5 +1,5 @@
 ---
-title: Erstellen des Anbieters | Microsoft Docs
+title: Erstellen des Anbieters | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,33 +15,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b08d2a2f68d174ae7c92d1d6bc0fa2bbb764fdca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3149e59a239401c7c847da9371619821824a5d37
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097184"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032093"
 ---
 # <a name="creating-the-provider"></a>Erstellen des Anbieters
-#### <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>So erstellen Sie einen OLE DB-Anbieter mit der ATL-OLE DB-Anbieter-Assistenten  
+
+#### <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>OLE DB-Anbieter mit dem ATL-OLE DB-Anbieter-Assistenten erstellen  
   
-1.  Mit der rechten Maustaste in des Projekts.  
+1. Mit der rechten Maustaste in des Projekts.  
   
-2.  Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Klasse hinzufügen**.  
+1. Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Klasse hinzufügen**.  
   
-3.  In der **Klasse hinzufügen** wählen Sie im Dialogfeld die **ATL-OLE DB-Anbieter** Symbol, und klicken Sie dann auf **öffnen**.  
+1. In der **Klasse hinzufügen** wählen Sie im Dialogfeld die **ATL-OLE DB-Anbieter** Symbol, und klicken Sie dann auf **öffnen**.  
   
-4.  In der ATL-OLE DB-Anbieter-Assistenten geben Sie einen kurzen Namen für den Anbieter in der **Kurzname** Feld. In den folgenden Themen der kurzen Name "MyProvider", jedoch können Sie einen anderen Namen. Die anderen Namensfeldern entsprechend den Namen, den Sie eingeben.  
+1. Geben Sie in der ATL-OLE DB-Anbieter-Assistenten einen kurzen Namen für den Anbieter in der **Kurznamen** Feld. In den folgenden Themen verwenden Sie den kurzen Namen "Meinanbieter", aber Sie können einen anderen Namen verwenden. Füllen Sie die anderen Namensfelder gemäß den von Ihnen eingegebene Name.  
   
-5.  Bearbeiten Sie die anderen Namensfelder, bei Bedarf. Zusätzlich zu dem Objekt und die Dateinamen können Sie die folgenden bearbeiten:  
+1. Bearbeiten Sie die anderen Namensfelder, bei Bedarf. Zusätzlich zu den-Objekt und die Dateinamen können Sie die folgenden bearbeiten:  
   
-    -   **Co-Klasse**: der Name, die COM verwendet, um den Anbieter zu erstellen.  
+    -   **Co-Klasse**: der Name, der COM verwendet, um den Anbieter zu erstellen.  
   
-    -   **ProgID**: der programmgesteuerte Bezeichner, also eine Textzeichenfolge, die anstelle einer GUID verwendet werden kann.  
+    -   **ProgID**: der programmgesteuerte Bezeichner, die eine Textzeichenfolge handelt, die anstelle einer GUID verwendet werden kann.  
   
-    -   **Version**: mit ProgID "und" Co-Klasse verwendet, um eine programmgesteuerte versionsabhängige-ID zu generieren.  
+    -   **Version**: mit der Programm-ID und die Co-Klasse verwendet, um eine programmgesteuerte versionsabhängige-ID zu generieren  
   
-6.  Klicken Sie auf **Fertig stellen**.  
+1. Klicken Sie auf **Fertig stellen**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen eines OLE DB-Anbieters](../../data/oledb/creating-an-ole-db-provider.md)
+
+[Erstellen eines OLE DB-Anbieters](../../data/oledb/creating-an-ole-db-provider.md)

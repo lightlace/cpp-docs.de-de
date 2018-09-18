@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2731 generiert | Microsoft Docs
+title: Compilerfehler C2731 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f925a781501b2dfd3ed2297319d49cc27854a78a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 85062af79a7de750ca0e347da00f6209e8293074
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231900"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028765"
 ---
-# <a name="compiler-error-c2731"></a>Compiler-Fehler C2731 generiert
-'Bezeichner': Funktion kann nicht überladen werden  
-  
- Die Funktionen `main`, `WinMain`, `DllMain`, und `LibMain` kann nicht überladen werden.  
-  
- Im folgende Beispiel wird C2731 generiert:  
-  
-```  
-// C2731.cpp  
-extern "C" void WinMain(int, char *, char *);  
-void WinMain(int, short, char *, char*);   // C2731  
+# <a name="compiler-error-c2731"></a>Compilerfehler C2731
+
+'Bezeichner': Funktion kann nicht überladen werden
+
+Die Funktionen `main`, `WinMain`, `DllMain`, und `LibMain` kann nicht überladen werden.
+
+Im folgende Beispiel wird die C2731 generiert:
+
+```
+// C2731.cpp
+extern "C" void WinMain(int, char *, char *);
+void WinMain(int, short, char *, char*);   // C2731
 ```

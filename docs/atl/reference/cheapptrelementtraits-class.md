@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d28136c9fa131d525878fe0551f5ba2421576951
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b873a615e04bd92e08abb51a048f227f19fd9eec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760083"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057495"
 ---
 # <a name="cheapptrelementtraits-class"></a>CHeapPtrElementTraits-Klasse
 
@@ -36,17 +36,17 @@ Diese Klasse stellt die Methoden, statische Funktionen und Typdefinitionen hilfr
 ## <a name="syntax"></a>Syntax
 
 ```
-template<typename T, class Allocator = ATL::CCRTAllocator>  
+template<typename T, class Allocator = ATL::CCRTAllocator>
 class CHeapPtrElementTraits : 
    public CDefaultElementTraits<ATL::CHeapPtr<T, Allocator>>
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Der Objekttyp in der Auflistungsklasse gespeichert werden.
 
-*Zuweisung*  
+*Zuweisung*<br/>
 Die Speicher-Allocation-Klasse verwenden. Der Standardwert ist [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).
 
 ## <a name="members"></a>Member
@@ -98,6 +98,6 @@ typedef T *& OUTARGTYPE;
 
 ## <a name="see-also"></a>Siehe auch
 
-[CDefaultElementTraits-Klasse](../../atl/reference/cdefaultelementtraits-class.md)   
-[CComHeapPtr-Klasse](../../atl/reference/ccomheapptr-class.md)   
+[CDefaultElementTraits-Klasse](../../atl/reference/cdefaultelementtraits-class.md)<br/>
+[CComHeapPtr-Klasse](../../atl/reference/ccomheapptr-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

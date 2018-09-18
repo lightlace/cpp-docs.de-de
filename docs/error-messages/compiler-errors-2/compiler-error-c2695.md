@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2695 generiert | Microsoft Docs
+title: Compilerfehler C2695 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67dc97688dddde37323f25b96bd8bbc596660e2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a618c02fcf3a8927d8090b1ad51ed16d9ac28542
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231216"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056052"
 ---
-# <a name="compiler-error-c2695"></a>Compiler-Fehler C2695 generiert
-"Funktion1": Überschreiben der virtuellen Funktion unterscheidet sich von "Funktion2" nur durch die Aufrufkonvention  
-  
- Die Signatur einer Funktion in einer abgeleiteten Klasse kann keine Funktion in einer Basisklasse zu überschreiben und ändern die Aufrufkonvention.  
-  
- Im folgende Beispiel wird C2695 generiert:  
-  
-```  
-// C2695.cpp  
-class C {  
-   virtual void __fastcall func();  
-};  
-  
-class D : public C {  
-   virtual void __clrcall func();   // C2695  
-};  
+# <a name="compiler-error-c2695"></a>Compilerfehler C2695
+
+"Funktion1": Überschreiben der virtuellen Funktion unterscheidet sich von "Funktion2" nur durch die Aufrufkonvention
+
+Die Signatur einer Funktion in einer abgeleiteten Klasse kann nicht außer Kraft setzen eine Funktion in einer Basisklasse und ändern die Aufrufkonvention.
+
+Im folgende Beispiel wird die C2695 generiert:
+
+```
+// C2695.cpp
+class C {
+   virtual void __fastcall func();
+};
+
+class D : public C {
+   virtual void __clrcall func();   // C2695
+};
 ```

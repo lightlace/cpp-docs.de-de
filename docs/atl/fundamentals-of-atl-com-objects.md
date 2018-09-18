@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7873b7006962449a40a8e67d118b6699ac61f263
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b90d8901a60b5945b2b29db2c378a0cd29939f63
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762092"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059269"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Grundlagen von ARL COM-Objekten
 
@@ -57,30 +57,30 @@ Andere Aspekte des ATL-COM-Objekts werden von anderen Klassen verarbeitet:
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Implementieren von CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)  
+[Implementieren von CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)<br/>
 Beispiel zum Implementieren von COM-Zuordnungseinträgen anzeigen `CComObjectRootEx`.
 
-[Implementieren von CComObject, CComAggObject und CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)  
+[Implementieren von CComObject, CComAggObject und CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)<br/>
 Erläutert, wie die **DECLARE_\*_AGGREGATABLE** Makros wirken sich auf die der `CComObject`, `CComAggObject`, und `CComPolyObject`.
 
-[Unterstützen von IDispatch und IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)  
+[Unterstützen von IDispatch und IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)<br/>
 Listet die ATL-Implementierung-Klassen für die Verwendung für die Unterstützung der `IDispatch` und `IErrorInfo` Schnittstellen.
 
-[Unterstützen von IDispEventImpl](../atl/supporting-idispeventimpl.md)  
+[Unterstützen von IDispEventImpl](../atl/supporting-idispeventimpl.md)<br/>
 Erläutert die Schritte, um einen Verbindungspunkt für die Klasse zu implementieren.
 
-[Ändern der Standardklassenfactory und Aggregationmodell](../atl/changing-the-default-class-factory-and-aggregation-model.md)  
+[Ändern der Standardklassenfactory und Aggregationmodell](../atl/changing-the-default-class-factory-and-aggregation-model.md)<br/>
 Zeigen Sie an, welche Makros zu verwenden, um das standardmäßige Klasse-Factory und Aggregation-Modell zu ändern.
 
-[Erstellen eines aggregierten Objekts](../atl/creating-an-aggregated-object.md)  
+[Erstellen eines aggregierten Objekts](../atl/creating-an-aggregated-object.md)<br/>
 Listet die Schritte zum Erstellen eines aggregierten Objekts.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-[Erstellen eines ATL-Projekts](../atl/reference/creating-an-atl-project.md)  
+[Erstellen eines ATL-Projekts](../atl/reference/creating-an-atl-project.md)<br/>
 Enthält Informationen zum Erstellen eines ATL-COM-Objekts.
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Enthält Links zu konzeptionellen Themen über die Programmierung mit der Active Template Library.
 
 ## <a name="see-also"></a>Siehe auch

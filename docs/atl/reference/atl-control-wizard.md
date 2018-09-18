@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 381bb9505745331d2ef470c5fd4e8d55e5e742f8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dfadbfb887959aaad01c88cba7c3c04ef5f27873
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705808"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066129"
 ---
 # <a name="atl-control-wizard"></a>ATL-Steuerelement-Assistent
 
@@ -107,7 +107,7 @@ Enthält Informationen über die COM-Funktionalität für das Objekt.
 
 ## <a name="see-also"></a>Siehe auch
 
-[ATL-Steuerelement](../../atl/reference/adding-an-atl-control.md)   
-[Hinzufügen von Funktionen zum zusammengesetzten Steuerelement](../../atl/adding-functionality-to-the-composite-control.md)   
+[ATL-Steuerelement](../../atl/reference/adding-an-atl-control.md)<br/>
+[Hinzufügen von Funktionen zum zusammengesetzten Steuerelement](../../atl/adding-functionality-to-the-composite-control.md)<br/>
 [Grundlagen von ARL COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)
 

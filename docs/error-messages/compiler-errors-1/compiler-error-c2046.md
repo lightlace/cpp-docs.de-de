@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2046 | Microsoft Docs
+title: Compilerfehler C2046 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20b41b2317d98364122118f3d6c6e66a0a0d73b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ee043be0a5b7f259f51082c5d48d77b77f0a6db
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166448"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060069"
 ---
 # <a name="compiler-error-c2046"></a>Compilerfehler C2046
-Schlüsselwort "case" ungültig  
-  
- Das `case` -Schlüsselwort darf nur in einer `switch` -Anweisung enthalten sein.  
-  
- Im folgenden Beispiel wird C2046 generiert:  
-  
-```  
-// C2046.cpp  
-int main() {  
-   case 0:   // C2046  
-}  
-```  
-  
- Mögliche Lösung:  
-  
-```  
-// C2046b.cpp  
-int main() {  
-   int i = 0;  
-  
-   switch(i) {  
-      case 0:  
-      break;  
-  
-      default:  
-      break;  
-   }  
-}  
+
+Schlüsselwort "case" ungültig
+
+Das `case` -Schlüsselwort darf nur in einer `switch` -Anweisung enthalten sein.
+
+Im folgenden Beispiel wird C2046 generiert:
+
+```
+// C2046.cpp
+int main() {
+   case 0:   // C2046
+}
+```
+
+Mögliche Lösung:
+
+```
+// C2046b.cpp
+int main() {
+   int i = 0;
+
+   switch(i) {
+      case 0:
+      break;
+
+      default:
+      break;
+   }
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1382 | Microsoft Docs
+title: Schwerwiegender Fehler C1382 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07c6af1209faface96585224cbd08b4e35101478
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a5a6ce312c5ef886ef25e8de46e6d3376eded2e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229254"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030644"
 ---
 # <a name="fatal-error-c1382"></a>Schwerwiegender Fehler C1382
-die PCH-Datei 'File' wurde neu erstellt, da "Obj" generiert wurde. Erstellen Sie dieses Objekt neu.  
-  
- Bei Verwendung [/LTCG](../../build/reference/ltcg-link-time-code-generation.md), der Compiler hat eine PCH-Datei, die neuer als eine CIL OBJ-Datei ist, die auf diese Seite verweist. Die Informationen in der CIL-OBJ-Datei ist nicht aktuell. Erstellen Sie das Objekt neu.  
-  
- C1382 kann auch auftreten, wenn beim Kompilieren mit **"/ Yc"**, jedoch mehreren Quellcodedateien an den Compiler übergeben.  Verwenden Sie zum Beheben nicht **"/ Yc"** bei mehreren Quellcodedateien an den Compiler übergeben.  Weitere Informationen finden Sie unter [/Yc (Datei der vorkompilierten Header erstellen)](../../build/reference/yc-create-precompiled-header-file.md).
+
+die PCH-Datei 'Datei' wurde neu erstellt wurde, da "Obj" generiert wurde. Erstellen Sie dieses Objekt neu.
+
+Bei Verwendung ["/ LTCG"](../../build/reference/ltcg-link-time-code-generation.md), der Compiler hat eine PCH-Datei, die neuer als eine CIL-OBJ-Datei, die auf diese Seite verweist. Die Informationen in der CIL-OBJ-Datei ist nicht aktuell. Erstellen Sie das Objekt neu.
+
+C1382 kann auch auftreten, wenn Sie mit der Kompilierung **"/ Yc"**, aber auch mehrere Codedateien an den Compiler übergeben.  Um zu beheben, verwenden Sie keine **"/ Yc"** bei mehreren Quellcodedateien für den Compiler übergeben.  Weitere Informationen finden Sie unter ["/ Yc" (Erstellen vorkompilierter Headerdatei)](../../build/reference/yc-create-precompiled-header-file.md).

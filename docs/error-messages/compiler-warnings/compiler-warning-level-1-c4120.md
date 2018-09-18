@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4120 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4120 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bc584463a915f6c437b987f4fb38fba55017002
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6810528503772643138042ce742653643272731
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271713"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033367"
 ---
 # <a name="compiler-warning-level-1-c4120"></a>Compilerwarnung (Stufe 1) C4120
-Konflikt zwischen normalem und segmentbasiertem Zeiger  
-  
- Der Compiler kann nicht zwischen den beiden Zeigern konvertieren, da es sich um einen normalen und einen segmentbasierten Zeiger handelt.
+
+Konflikt zwischen normalem und segmentbasiertem Zeiger
+
+Der Compiler kann nicht zwischen den beiden Zeigern konvertieren, da es sich um einen normalen und einen segmentbasierten Zeiger handelt.

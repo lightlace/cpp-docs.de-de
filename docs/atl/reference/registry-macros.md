@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0cf941171ef992c677c619a1c6a45ab9868526a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 17040448771e4ca3c0f999e72a9c08f0e1fa28aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767955"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058496"
 ---
 # <a name="registry-macros"></a>Registrierungsmakros
 
@@ -71,7 +71,7 @@ DECLARE_LIBID( libid )
 
 ### <a name="parameters"></a>Parameter
 
-*LIBID*  
+*LIBID*<br/>
 Die GUID der Typbibliothek.
 
 ### <a name="remarks"></a>Hinweise
@@ -105,19 +105,19 @@ DECLARE_REGISTRY(
 
 ### <a name="parameters"></a>Parameter
 
-*class*  
+*class*<br/>
 [in] Aus Gründen der Abwärtskompatibilität enthalten.
 
-*pid*  
+*pid*<br/>
 [in] LPCTSTR, die eine versionsspezifische Programm-ID ist.
 
-*vpid*  
+*vpid*<br/>
 [in] LPCTSTR, die eine versionsunabhängige Programm-ID ist.
 
-*nID*  
+*nID*<br/>
 [in] UINT, die einen Index der Ressourcenzeichenfolge in der Registrierung, die als die Beschreibung des Programms verwendet wird.
 
-*flags*  
+*flags*<br/>
 [in] Ein DWORD, das mit des Programms-threading-Modell in der Registrierung. Muss einer der folgenden Werte sein: THREADFLAGS_APARTMENT THREADFLAGS_BOTH oder AUTPRXFLAG.
 
 ### <a name="remarks"></a>Hinweise
@@ -138,10 +138,10 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 
 ### <a name="parameters"></a>Parameter
 
-*"RESID"*  
+*"RESID"*<br/>
 Die Ressourcen-Id der RGS-Datei, die Informationen der *Appid*.
 
-*App-ID*  
+*App-ID*<br/>
 Ein GUID.
 
 ### <a name="remarks"></a>Hinweise
@@ -162,7 +162,7 @@ DECLARE_REGISTRY_RESOURCE( x )
 
 ### <a name="parameters"></a>Parameter
 
-*w*  
+*w*<br/>
 [in] Die Zeichenfolgen Sie-ID der Ressource.
 
 ### <a name="remarks"></a>Hinweise
@@ -187,7 +187,7 @@ DECLARE_REGISTRY_RESOURCEID( x )
 
 ### <a name="parameters"></a>Parameter
 
-*w*  
+*w*<br/>
 [in] Vom Assistenten generierter Bezeichner der Ressource.
 
 ### <a name="remarks"></a>Hinweise

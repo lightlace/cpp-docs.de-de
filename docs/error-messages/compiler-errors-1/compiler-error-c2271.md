@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2271 | Microsoft Docs
+title: Compilerfehler C2271 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62f2f108d9f2f3ec6a1ba9f20a2937dee53297a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b47619bfc42037703b908ff9cb551307063f2bfa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170215"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065464"
 ---
 # <a name="compiler-error-c2271"></a>Compilerfehler C2271
-'Operator': neu/löschen dürfen keine Modifizierer enthalten formaler Liste  
-  
- Der Operator (`new` oder `delete`) mit einem Speichermodell Spezifizierer deklariert ist.  
-  
- Im folgende Beispiel wird C2271 generiert:  
-  
-```  
-// C2271.cpp  
-// compile with: /c  
-void* operator new(size_t) const {   // C2271  
-// try the following line instead  
-// void* operator new(size_t) {  
-   return 0;  
-}  
-  
-struct X {  
-   static void* operator new(size_t) const;   // C2271  
-   // try the following line instead  
-   // void * X::operator new(size_t) const;   // static member operator new  
-};  
+
+'Operator': neue und löschen sind keine Formale Listenmodifizierer
+
+Der Operator (`new` oder `delete`) wird mit einem Speichermodell-Spezifizierer deklariert.
+
+Im folgende Beispiel wird die C2271 generiert:
+
+```
+// C2271.cpp
+// compile with: /c
+void* operator new(size_t) const {   // C2271
+// try the following line instead
+// void* operator new(size_t) {
+   return 0;
+}
+
+struct X {
+   static void* operator new(size_t) const;   // C2271
+   // try the following line instead
+   // void * X::operator new(size_t) const;   // static member operator new
+};
 ```

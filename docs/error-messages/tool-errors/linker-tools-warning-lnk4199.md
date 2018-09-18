@@ -1,5 +1,5 @@
 ---
-title: Linkertoolwarnung Lnk4199 | Microsoft Docs
+title: Linkertoolwarnung LNK4199 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 902a3dfac03766e55a94c0ce801cb99ff6223fed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4edd0ed57dc8a47069ccf7ecf001f58269de58de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298537"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033265"
 ---
 # <a name="linker-tools-warning-lnk4199"></a>Linkertoolwarnung LNK4199
-/DELAYLOAD:dllName ignoriert; keine Importe von DLL-Namen gefunden  
-  
- Der vom Linker ignoriert `dllname` , da keiner Funktionen benötigt wird, `dllname` exportiert.
+
+/DELAYLOAD:dllName ignoriert; keine Importe von DLL-Name gefunden
+
+Der vom Linker ignoriert `dllname` , da es nicht, dass jede der Funktionen notwendigerweise, die `dllname` exportiert.

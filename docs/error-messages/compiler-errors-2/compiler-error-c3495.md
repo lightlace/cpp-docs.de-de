@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3495 | Microsoft Docs
+title: Compilerfehler C3495 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7accbc422256abbd75d518acce72c522fbb67c14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dda1e2f2699969ad0bc446d9f79a0004e043998d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253661"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067388"
 ---
 # <a name="compiler-error-c3495"></a>Compilerfehler C3495
-'var': Eine Lambdaerfassung muss eine automatische Speicherdauer aufweisen.  
-  
- Variablen, die keine automatische Speicherdauer aufweisen, etwa eine als `static` oder `extern`markierte Variable, können nicht erfasst werden.  
-  
-### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
-  
--   Übergeben Sie keine `static` - oder `extern` -Variable an die Erfassungsliste des Lambdaausdrucks.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C3495 generiert, da die `static` -Variable `n` in der Erfassungsliste eines Lambda-Ausdrucks auftritt:  
-  
-```  
-// C3495.cpp  
-  
-int main()  
-{  
-   static int n = 66;  
-   [&n]() { return n; }(); // C3495  
-}  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Lambda-Ausdrücke](../../cpp/lambda-expressions-in-cpp.md)   
+
+'var': Eine Lambdaerfassung muss eine automatische Speicherdauer aufweisen.
+
+Variablen, die keine automatische Speicherdauer aufweisen, etwa eine als `static` oder `extern`markierte Variable, können nicht erfasst werden.
+
+### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
+
+- Übergeben Sie keine `static` - oder `extern` -Variable an die Erfassungsliste des Lambdaausdrucks.
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C3495 generiert, da die `static` -Variable `n` in der Erfassungsliste eines Lambda-Ausdrucks auftritt:
+
+```
+// C3495.cpp
+
+int main()
+{
+   static int n = 66;
+   [&n]() { return n; }(); // C3495
+}
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Lambda-Ausdrücke](../../cpp/lambda-expressions-in-cpp.md)
 
 

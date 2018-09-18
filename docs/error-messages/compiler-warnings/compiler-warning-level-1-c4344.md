@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4344 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4344 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a203288b5becde41704e0ab59dbb03e2bccef7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9505f7773a129430e5bdc7122e947c88fa57bb6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271369"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025609"
 ---
 # <a name="compiler-warning-level-1-c4344"></a>Compilerwarnung (Stufe 1) C4344
-Verändertes Programmverhalten: Verwenden der expliziten Vorlagenergebnisse, Argumente im Aufruf von 'Funktion'  
-  
- Ein Aufruf einer Funktion, die mit expliziten Vorlagenargumente aufruft eine andere Funktion, als dies der Fall wäre, wenn explizite Argumente nicht angegeben gewesen
+
+verhaltensänderung: Verwendung von expliziten Vorlagenargumenten löste im Aufruf von 'Funktion'
+
+Ein Aufruf einer Funktion verwenden expliziter Vorlagenargumente aufruft eine andere Funktion, als explizite Argumente nicht angegeben gewesen würde

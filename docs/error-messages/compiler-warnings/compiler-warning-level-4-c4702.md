@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4702 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4702 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,55 +16,58 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29c2d6b0328fd8dd4cd6f9a226253036b62d03ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1d15072099c6329eced8ab9dd9c78f8f48c31fe7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295755"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057132"
 ---
 # <a name="compiler-warning-level-4-c4702"></a>Compilerwarnung (Stufe 4) C4702
-unerreichbarer code  
-  
- Diese Warnung ist das Ergebnis des konformitätsverbesserung für Compiler, die für Visual Studio .NET 2003 durchgeführt wurde: unerreichbarer Code. Wenn der Compiler (Back-End) unerreichbarer Code erkennt, generiert er C4702, eine Warnung der Stufe 4.  
-  
- Entfernen Sie für Code, der in der Visual Studio .NET 2003 und die Visual Studio .NET Versionen von Visual C++ gültig ist den Code nicht erreichbaren oder nicht gewährleisten Sie, dass alle Quellcode durch einige Ausführungsablauf erreichbar ist.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C4702 generiert.  
-  
-```  
-// C4702.cpp  
-// compile with: /W4  
-#include <stdio.h>  
-  
-int main() {  
-   return 1;  
-   printf_s("I won't print.\n");   // C4702 unreachable  
-}  
-```  
-  
-## <a name="example"></a>Beispiel  
- Beim Kompilieren mit **/GX**, **/EHc**, **/EHsc /**, oder **EHac** und Verwenden von "extern" C-Funktionen, Code kann ggf. nicht mehr erreichbar da "extern" C Funktionen sind davon ausgegangen, dass nicht auslösen, der Catch-Block ist daher nicht erreichbar.  Wenn Sie glauben, dass diese Warnung ist ungültig, da eine Funktion Ausnahmen auslösen kann, kompilieren Sie mit **/EHa** oder **/EHs**, je nachdem, auf die Ausnahme ausgelöst wird.  
-  
- Weitere Informationen finden Sie unter [/EH (Ausnahmebehandlungsmodell)](../../build/reference/eh-exception-handling-model.md) für Weitere Informationen.  
-  
- Im folgenden Beispiel wird C4702 generiert.  
-  
-```  
-// C4702b.cpp  
-// compile with: /W4 /EHsc  
-#include <iostream>  
-  
-using namespace std;  
-extern "C" __declspec(dllexport) void Function2(){}  
-  
-int main() {  
-   try {  
-      Function2();  
-   }  
-   catch (...) {  
-      cout << "Exp: Function2!" << endl;   // C4702  
-   }  
-}  
+
+unerreichbarer code
+
+Diese Warnung ist das Ergebnis einer konformitätsverbesserung für Compiler, die für Visual Studio .NET 2003 durchgeführt wurde: unerreichbarer Code. Wenn der Compiler (Back-End) nicht erreichbaren Code erkennt, generiert er C4702, eine Warnung der Stufe 4.
+
+Entfernen Sie für Code, der in der Visual Studio .NET 2003 und die Visual Studio .NET der Versionen von Visual C++ gültig ist die nicht erreichbaren Code, oder sicherzustellen Sie, dass der gesamte Quellcode von Visual Studio erreicht werden kann.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C4702 generiert.
+
+```
+// C4702.cpp
+// compile with: /W4
+#include <stdio.h>
+
+int main() {
+   return 1;
+   printf_s("I won't print.\n");   // C4702 unreachable
+}
+```
+
+## <a name="example"></a>Beispiel
+
+Beim Kompilieren mit **/GX**, **/EHc**, **/EHsc**, oder **EHac** "extern" C-Funktionen verwenden, Code kann nicht erreicht werden kann, und da "extern" C Funktionen sind davon ausgegangen, dass nicht auslösen, der Catch-Block ist daher nicht erreichbar.  Wenn Sie glauben, dass diese Warnung ist ungültig, da eine Funktion auslösen kann, kompilieren Sie mit **/EHa** oder **/EHs**, je nachdem, auf die ausgelöste Ausnahme.
+
+Weitere Informationen finden Sie unter [/EH (Ausnahmebehandlungsmodell)](../../build/reference/eh-exception-handling-model.md) für Weitere Informationen.
+
+Im folgende Beispiel wird die C4702 generiert.
+
+```
+// C4702b.cpp
+// compile with: /W4 /EHsc
+#include <iostream>
+
+using namespace std;
+extern "C" __declspec(dllexport) void Function2(){}
+
+int main() {
+   try {
+      Function2();
+   }
+   catch (...) {
+      cout << "Exp: Function2!" << endl;   // C4702
+   }
+}
 ```

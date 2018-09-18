@@ -1,5 +1,5 @@
 ---
-title: C-Laufzeitfehler R6031 | Microsoft Docs
+title: C-Laufzeitfehler R6031 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66d75fb0095b1de0fe1572d8c946823a89791740
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83dbcdc433ea731e6ddf0765b4b3a55d5707f429
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33303945"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059497"
 ---
 # <a name="c-runtime-error-r6031"></a>C-Laufzeitfehler R6031
-Es wurde versucht mehr als einmal die CRT initialisiert werden. Hiermit wird einen Fehler in der Anwendung.  
-  
+
+Es wurde versucht die CRT mehr als einmal initialisiert werden. Dies gibt einen Fehler in Ihrer Anwendung an.
+
 > [!NOTE]
->  Wenn Sie diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app heruntergefahren, da es sich um ein internes Problem enthält. Dies kann verursacht werden Fehler in der app oder von einem Fehler in einem Add-on oder einer Erweiterung, die die app verwendet.  
->   
->  Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:  
->   
->  -   Verwenden der **Apps und Funktionen** oder **Programme und Funktionen** auf der Seite der **Systemsteuerung** reparieren oder neu installieren die Anwendung.  
-> -   Verwenden der **Apps und Funktionen** oder **Programme und Funktionen** auf der Seite der **Systemsteuerung** um entfernen, reparieren oder Add-Ons oder einer Erweiterung von der Anwendung verwendeten Programme neu installieren.  
-> -   Überprüfen Sie **Windows Update** in der **Systemsteuerung** für Softwareupdates.  
-> -   Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den Hersteller der app.  
-  
- **Informationen für Programmierer**  
-  
- Diese Diagnose gibt an, dass MSIL-Anweisungen während der Loadersperre ausgeführt wurden. Weitere Informationen finden Sie unter [Initialisierung gemischter Assemblys](../../dotnet/initialization-of-mixed-assemblies.md).
+>  Wenn Sie diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app beendet, da er ein internes Problem aufweist. Mögliche Ursachen sind Fehler in der app oder durch einen Fehler in einem Add-on oder die Erweiterung, die die app verwendet.
+>
+>  Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:
+>
+>  -   Verwenden der **Apps und Features** oder **Programme und Funktionen** auf der Seite die **Systemsteuerung** zu reparieren oder installieren Sie das Programm neu.
+> -   Verwenden der **Apps und Features** oder **Programme und Funktionen** auf der Seite die **Systemsteuerung** reparieren oder von der Anwendung verwendeten Programme Add-On- oder Erweiterung neu installieren, um zu entfernen.
+> -   Überprüfen Sie **Windows Update** in die **Systemsteuerung** für Softwareupdates.
+> -   Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den app-Anbieter.
+
+**Informationen für Programmierer**
+
+Diese Diagnose gibt an, dass die MSIL-Anweisungen ausgeführt wurden, während die Loadersperre aufgehoben. Weitere Informationen finden Sie unter [Initialization of Mixed Assemblies](../../dotnet/initialization-of-mixed-assemblies.md).

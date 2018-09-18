@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9998e7ad9605d6d2e32bcaff6204fb09dcbca2a5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 2ef0f08efbcdf09420d53710a3f16326381f13c3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405557"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056780"
 ---
 # <a name="program-and-linkage-c"></a>Programm und Verknüpfung (C++)
 
@@ -45,11 +45,11 @@ In einigen Fällen kann es jedoch erforderlich, deklarieren Sie eine globale Var
 
 ## <a name="linkage-vs-scope"></a>Die Verknüpfung im Vergleich mit Bereich
 
-Das Konzept der *Verknüpfung* bezieht sich auf die die Sichtbarkeit der globalen Symbole (z. B. Variablen, Typnamen und Funktionsnamen) innerhalb des Programms als Ganzes in Übersetzungseinheiten. Das Konzept der *Bereich* bezieht sich auf die Symbole, die innerhalb eines Blocks wie z. B. einen Namespace, Klasse oder Funktion deklariert werden. Diese Symbole sind sichtbar, nur innerhalb des Bereichs, in dem sie definiert sind; das Konzept der Bindung gilt nicht für sie. 
+Das Konzept der *Verknüpfung* bezieht sich auf die die Sichtbarkeit der globalen Symbole (z. B. Variablen, Typnamen und Funktionsnamen) innerhalb des Programms als Ganzes in Übersetzungseinheiten. Das Konzept der *Bereich* bezieht sich auf die Symbole, die innerhalb eines Blocks wie z. B. einen Namespace, Klasse oder Funktion deklariert werden. Diese Symbole sind sichtbar, nur innerhalb des Bereichs, in dem sie definiert sind; das Konzept der Bindung gilt nicht für sie.
 
 ## <a name="external-vs-internal-linkage"></a>Externe und interne Verknüpfung
 
-Ein *Funktion freigeben* ist eine Funktion, die im globalen definiert ist oder im Namespacebereich. Globale Non-Const-Variablen und freie Funktionen in der Standardeinstellung haben *externe Verknüpfung*; sind sie in jeder Übersetzungseinheit im Programm sichtbar. Aus diesem Grund kann keine anderen globales Objekt (Variable, Klassendefinition, usw.), Namen haben. Ein Symbol mit *interne Verknüpfung* oder *ohne Verknüpfung* ist nur innerhalb der Übersetzungseinheit, die in der sie deklariert ist sichtbar. Wenn Sie ein Namen intern verknüpft ist, kann der gleiche Namen in einer anderen Übersetzungseinheit vorhanden. Variablen, die mit Klassendefinitionen deklariert oder funktionsrümpfe haben keine Bindung. 
+Ein *Funktion freigeben* ist eine Funktion, die im globalen definiert ist oder im Namespacebereich. Globale Non-Const-Variablen und freie Funktionen in der Standardeinstellung haben *externe Verknüpfung*; sind sie in jeder Übersetzungseinheit im Programm sichtbar. Aus diesem Grund kann keine anderen globales Objekt (Variable, Klassendefinition, usw.), Namen haben. Ein Symbol mit *interne Verknüpfung* oder *ohne Verknüpfung* ist nur innerhalb der Übersetzungseinheit, die in der sie deklariert ist sichtbar. Wenn Sie ein Namen intern verknüpft ist, kann der gleiche Namen in einer anderen Übersetzungseinheit vorhanden. Variablen, die mit Klassendefinitionen deklariert oder funktionsrümpfe haben keine Bindung.
 
 Sie können erzwingen, einen globalen Namen internen Verknüpfung verfügen, indem Sie explizit Deklaration als **statische**. Dies schränkt die Sichtbarkeit auf derselben Übersetzungseinheit, die in der sie deklariert ist. Beachten Sie, dass in diesem Kontext **statische** bedeutet etwas unterscheiden, wenn auf lokale Variablen angewendet wird.
 
@@ -68,4 +68,5 @@ extern const int value = 42;
 Finden Sie unter ["extern"](extern-cpp.md) für Weitere Informationen.
 
 ## <a name="see-also"></a>Siehe auch
- [Grundlegende Konzepte](../cpp/basic-concepts-cpp.md)
+
+[Grundlegende Konzepte](../cpp/basic-concepts-cpp.md)

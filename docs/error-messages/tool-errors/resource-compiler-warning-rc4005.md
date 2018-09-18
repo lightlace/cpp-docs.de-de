@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcencompiler: Warnung RC4005 | Microsoft Docs'
+title: 'Ressourcencompiler: Warnung RC4005 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 724764e443d4ab999c1df1247e9f5572ebdb2078
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 589fd008b3927887a8144b2fc63d2cbbde2af913
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322483"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028518"
 ---
 # <a name="resource-compiler-warning-rc4005"></a>Ressourcencompiler: Warnung RC4005
-'Bezeichner': Neudefinition von Makros  
-  
- Der Bezeichner wird zweimal definiert. Der Compiler verwendet die zweite Makrodefinition.  
-  
- Diese Warnung kann verursacht werden, indem Sie ein Makro definieren, in der Befehlszeile und im Code mit einem `#define` Richtlinie. Er kann auch von Makros aus Includedateien importiert verursacht werden.  
-  
- Um die Warnung zu vermeiden, entfernen Sie eine der Definitionen oder verwenden eine `#undef` Richtlinie vor der zweiten Definition.
+
+'Bezeichner': Makro-Neudefinition
+
+Der Bezeichner wurde zweimal definiert. Der Compiler verwendet die zweite Makrodefinition.
+
+Diese Warnung kann verursacht werden, definieren Sie ein Makro aus, in der Befehlszeile und in den Code mit einem `#define` Richtlinie. Es kann auch von Makros, die aus der Include-Dateien importiert verursacht werden.
+
+Um die Warnung zu vermeiden, entfernen Sie eine der Definitionen oder verwenden eine `#undef` Direktive, bevor Sie die zweite Definition.

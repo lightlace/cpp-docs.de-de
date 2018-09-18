@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2865 | Microsoft Docs
+title: Compilerfehler C2865 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70b2c6c831fde18f9054e139a120d834a75b6950
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cc0a49f8e6ab42f7e607cd5f4f7cc91f6895abe0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246215"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035162"
 ---
 # <a name="compiler-error-c2865"></a>Compilerfehler C2865
-'Funktion': Unzulässiger Vergleich für Handle_or_pointer  
-  
- Sie können Verweise auf Vergleichen [Klassen und Strukturen](../../windows/classes-and-structs-cpp-component-extensions.md) oder verwaltete Verweistypen nur auf Gleichheit zu überprüfen, ob sie auf dasselbe Objekt (==) oder auf andere Objekte verweisen (! =).  
-  
- Sie können nicht verglichen werden zum Sortieren, da der .NET Common Language Runtime verwaltete Objekte zu einem beliebigen Zeitpunkt verschoben werden kann das Ergebnis des Tests ändern.
+
+'Funktion': Unzulässiger Vergleich für Handle_or_pointer
+
+Sie können Verweise auf Vergleichen [Klassen und Strukturen](../../windows/classes-and-structs-cpp-component-extensions.md) oder verwaltet von Verweistypen, die nur auf Gleichheit zu überprüfen, ob sie auf das gleiche Objekt (==) oder auf andere Objekte verweisen (! =).
+
+Sie können nicht verglichen werden für die Sortierung, da die .NET Runtime verwaltete Objekte zu jedem Zeitpunkt verschoben werden kann das Ergebnis des Tests ändern.

@@ -15,48 +15,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e773a0188eb3450ab1a13a24fc556fa8e8c4f874
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2bd8542bf13aa34efea3ffad2007b0f5eb672f79
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464268"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031417"
 ---
 # <a name="transfers-of-control"></a>Übertragung der Steuerung
-Können Sie die **Goto** Anweisung oder ein **Fall** -Bezeichnung in einer **wechseln** Anweisung, um ein Programm angeben, die hinter einem Initialisierer brancht. Solcher Code ist nicht zulässig, es sei denn, die Deklaration, die den Initialisierer enthält, befindet sich in einem Block, der von dem Block eingeschlossen wird, in dem die Sprunganweisung auftritt.  
-  
- Das folgende Beispiel zeigt eine Schleife, welche die Objekte `total`, `ch` und `i` deklariert und initialisiert. Es gibt auch eine fehlerhafte **Goto** Anweisung, die Steuerung jenseits eines Initialisierers überträgt.  
-  
-```cpp 
-// transfers_of_control.cpp  
-// compile with: /W1  
-// Read input until a nonnumeric character is entered.  
-int main()  
-{  
-   char MyArray[5] = {'2','2','a','c'};  
-   int i = 0;  
-   while( 1 )  
-   {  
-      int total = 0;  
-  
-      char ch = MyArray[i++];  
-  
-      if ( ch >= '0' && ch <= '9' )  
-      {  
-         goto Label1;  
-  
-         int i = ch - '0';  
-      Label1:  
-         total += i;   // C4700: transfers past initialization of i.  
-      } // i would be destroyed here if  goto error were not present  
-   else  
-      // Break statement transfers control out of loop,  
-      //  destroying total and ch.  
-      break;  
-   }  
-}  
-```  
-  
- Im vorherigen Beispiel das **Goto** -Anweisung versucht, die Kontrolle über die Initialisierung der zu übertragenden `i`. Wenn jedoch `i` zwar deklariert, aber nicht initialisiert ist, wäre die Übertragung gültig.  
-  
- Die Objekte `total` und `ch`, deklariert im-Block, der als dient der *Anweisung* von der **während** -Anweisung werden zerstört, wenn es sich bei diesen Block beendet wird, mit der  **Break** Anweisung.  
+
+Können Sie die **Goto** Anweisung oder ein **Fall** -Bezeichnung in einer **wechseln** Anweisung, um ein Programm angeben, die hinter einem Initialisierer brancht. Solcher Code ist nicht zulässig, es sei denn, die Deklaration, die den Initialisierer enthält, befindet sich in einem Block, der von dem Block eingeschlossen wird, in dem die Sprunganweisung auftritt.
+
+Das folgende Beispiel zeigt eine Schleife, welche die Objekte `total`, `ch` und `i` deklariert und initialisiert. Es gibt auch eine fehlerhafte **Goto** Anweisung, die Steuerung jenseits eines Initialisierers überträgt.
+
+```cpp
+// transfers_of_control.cpp
+// compile with: /W1
+// Read input until a nonnumeric character is entered.
+int main()
+{
+   char MyArray[5] = {'2','2','a','c'};
+   int i = 0;
+   while( 1 )
+   {
+      int total = 0;
+
+      char ch = MyArray[i++];
+
+      if ( ch >= '0' && ch <= '9' )
+      {
+         goto Label1;
+
+         int i = ch - '0';
+      Label1:
+         total += i;   // C4700: transfers past initialization of i.
+      } // i would be destroyed here if  goto error were not present
+   else
+      // Break statement transfers control out of loop,
+      //  destroying total and ch.
+      break;
+   }
+}
+```
+
+Im vorherigen Beispiel das **Goto** -Anweisung versucht, die Kontrolle über die Initialisierung der zu übertragenden `i`. Wenn jedoch `i` zwar deklariert, aber nicht initialisiert ist, wäre die Übertragung gültig.
+
+Die Objekte `total` und `ch`, deklariert im-Block, der als dient der *Anweisung* von der **während** -Anweisung werden zerstört, wenn es sich bei diesen Block beendet wird, mit der  **Break** Anweisung.

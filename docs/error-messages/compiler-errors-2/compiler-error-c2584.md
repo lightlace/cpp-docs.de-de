@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2584 | Microsoft Docs
+title: Compilerfehler C2584 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae9ea7a4b0ce44231925f4231c5876f352765ad6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0f8c523936473673f3af09400922e2594ed1891
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231072"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029428"
 ---
 # <a name="compiler-error-c2584"></a>Compilerfehler C2584
-'Klasse': direkte Basisklasse "Basis2" ist nicht zugegriffen werden kann; bereits eine Basis von "Basis1"  
-  
- `Class` bereits direkt abgeleitet `Base1`. `Base2` Außerdem leitet sich von `Base1`. `Class` kann nicht abgeleitet `Base2` da bedeuten würde (indirekt) erben von `Base1` erneut, das ist nicht zulässig, da `Base1` ist bereits eine direkte Basisklasse.  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C2584 generiert.  
-  
-```  
-// C2584.cpp  
-// compile with: /c  
-struct A1 {  
-   virtual int MyFunction();  
-};  
-  
-struct A2 {  
-    virtual int MyFunction();  
-};  
-  
-struct B1: public virtual A1, virtual A2 {  
-    virtual int MyFunction();  
-};  
-  
-struct B2: public virtual A2, virtual A1 {  
-    virtual int MyFunction();  
-};  
-  
-struct C: virtual B1, B2 {  
-    virtual int MyFunction();  
-};  
-  
-struct Z : virtual B2, virtual C {   // C2584  
-// try the following line insted  
-// struct Z : virtual C {  
-    virtual int MyFunction();  
-};  
+
+'Klasse': direkte Basisklasse "Basis2" kann nicht zugegriffen werden; bereits Basisklasse von "Basis1"
+
+`Class` bereits direkt abgeleitet `Base1`. `Base2` auch abgeleitet `Base1`. `Class` keine Ableitung vom `Base2` , da dieser Wert bedeuten würde (indirekt) erben `Base1` in diesem Fall ist das nicht zulässig, da `Base1` ist bereits eine direkte Basisklasse.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C2584 generiert.
+
+```
+// C2584.cpp
+// compile with: /c
+struct A1 {
+   virtual int MyFunction();
+};
+
+struct A2 {
+    virtual int MyFunction();
+};
+
+struct B1: public virtual A1, virtual A2 {
+    virtual int MyFunction();
+};
+
+struct B2: public virtual A2, virtual A1 {
+    virtual int MyFunction();
+};
+
+struct C: virtual B1, B2 {
+    virtual int MyFunction();
+};
+
+struct Z : virtual B2, virtual C {   // C2584
+// try the following line insted
+// struct Z : virtual C {
+    virtual int MyFunction();
+};
 ```

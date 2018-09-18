@@ -1,5 +1,5 @@
 ---
-title: Cancellation_token-Klasse | Microsoft Docs
+title: Cancellation_token-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d8741763295e96f3d0c221b687c8ef62fbfc55c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 125d08def4a1fb801cb1b6c911d8c8c9c154c296
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695940"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037964"
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token-Klasse
 Mit der `cancellation_token`-Klasse kann bestimmt werden, ob für einen Vorgang ein Abbruch angefordert wurde. Dem angegebenen Token kann `task_group`, `structured_task_group` oder `task` zugeordnet werden, um einen impliziten Abbruch bereitzustellen. Es kann auch zum Abbruch abgerufen oder für einen Rückruf registriert werden, wenn das zugeordnete `cancellation_token_source`-Element abgebrochen wird.  
@@ -80,7 +80,7 @@ class cancellation_token;
 ~cancellation_token();
 ```  
   
-##  <a name="ctor"></a> "cancellation_token" 
+##  <a name="ctor"></a> cancellation_token 
 
 ```
 cancellation_token(const cancellation_token& _Src);
@@ -89,7 +89,8 @@ cancellation_token(cancellation_token&& _Src);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Src`  
+*_Src*<br/>
+Die Cancellation_token kopiert oder verschoben werden.
   
 ##  <a name="deregister_callback"></a> deregister_callback 
 
@@ -100,8 +101,8 @@ void deregister_callback(const cancellation_token_registration& _Registration) c
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Registration`  
- Das `cancellation_token_registration`-Objekt für den Rückruf, dessen Registrierung aufgehoben werden soll. Dieses Token muss zuvor von einem Aufruf der `register`-Methode zurückgegeben worden sein.  
+*_Registration*<br/>
+Das `cancellation_token_registration`-Objekt für den Rückruf, dessen Registrierung aufgehoben werden soll. Dieses Token muss zuvor von einem Aufruf der `register`-Methode zurückgegeben worden sein.  
   
 ##  <a name="is_cancelable"></a> is_cancelable 
 
@@ -143,8 +144,9 @@ bool operator!= (const cancellation_token& _Src) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Src`  
-  
+*_Src*<br/>
+Der zu vergleichende `cancellation_token`.
+
 ### <a name="return-value"></a>Rückgabewert  
   
 ##  <a name="operator_eq"></a> Operator = 
@@ -156,7 +158,8 @@ cancellation_token& operator= (cancellation_token&& _Src);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Src`  
+*_Src*<br/>
+Die `cancellation_token` zuweisen.
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -167,7 +170,8 @@ bool operator== (const cancellation_token& _Src) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Src`  
+*_Src*<br/>
+Der zu vergleichende `cancellation_token`.
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -181,14 +185,14 @@ template<typename _Function>
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Function`  
- Der Typ des Funktionsobjekts, das zurückgerufen wird, wenn dieses `cancellation_token` abgebrochen wird.  
+*_Function*<br/>
+Der Typ des Funktionsobjekts, das zurückgerufen wird, wenn dieses `cancellation_token` abgebrochen wird.  
   
- `_Func`  
- Das Funktionsobjekt, das zurückgerufen wird, wenn dieses `cancellation_token` abgebrochen wird.  
+*_Func*<br/>
+Das Funktionsobjekt, das zurückgerufen wird, wenn dieses `cancellation_token` abgebrochen wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein `cancellation_token_registration`-Objekt, das in der `deregister`-Methode verwendet werden kann, um einen bereits registrierten Rückruf aufzuheben, damit er nicht ausgeführt wird. Die Methode löst eine [Invalid_operation](invalid-operation-class.md) -Ausnahme aus, wenn der Aufruf für eine `cancellation_token` -Objekt, das mit erstellt wurde die [cancellation_token:: None](#none) Methode.  
+ Ein `cancellation_token_registration`-Objekt, das in der `deregister`-Methode verwendet werden kann, um einen bereits registrierten Rückruf aufzuheben, damit er nicht ausgeführt wird. Löst die Methode eine [Invalid_operation](invalid-operation-class.md) -Ausnahme aus, wenn der Aufruf für eine `cancellation_token` -Objekt, das erstellt wurde, mithilfe der [cancellation_token:: None](#none) Methode.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)

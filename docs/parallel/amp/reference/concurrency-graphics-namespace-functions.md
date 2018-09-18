@@ -1,5 +1,5 @@
 ---
-title: 'Concurrency:: Graphics-Namespace Funktionen | Microsoft Docs'
+title: 'Concurrency:: Graphics Namespace-Funktionen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,14 +13,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fc00f1754358eca0d6e90d484153b79c0a67130
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6a31a205a90480ae91740ecaf859f411c331bd69
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687048"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037968"
 ---
-# <a name="concurrencygraphics-namespace-functions"></a>Concurrency:: Graphics-Namespace-Funktionen
+# <a name="concurrencygraphics-namespace-functions"></a>Concurrency:: Graphics Namespace-Funktionen
 |||  
 |-|-|  
 |[copy](#copy)|[copy_async](#copy_async)|  
@@ -132,44 +132,44 @@ void copy (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Copy_extent`  
- Der Umfang des zu kopierenden Texturabschnitts.  
+*_Copy_extent*<br/>
+Der Umfang des zu kopierenden Texturabschnitts.  
   
- `_Dst`  
- Das Objekt, in das kopiert werden soll.  
+*_Dst*<br/>
+Das Objekt, in das kopiert werden soll.  
   
- `_Dst_byte_size`  
- Die Anzahl von Bytes im Ziel.  
+*_Dst_byte_size*<br/>
+Die Anzahl von Bytes im Ziel.  
   
- `_Dst_type`  
- Der Typ des Zielobjekts.  
+*_Dst_type*<br/>
+Der Typ des Zielobjekts.  
   
- `_Dst_offset`  
- Der Offset in das Ziel, an dem der Kopiervorgang beginnen soll.  
+*_Dst_offset*<br/>
+Der Offset in das Ziel, an dem der Kopiervorgang beginnen soll.  
   
- `InputIterator`  
- Der Typ des Eingabeiterators.  
+*InputIterator*<br/>
+Der Typ des Eingabeiterators.  
   
- `OutputIterator`  
- Der Typ des Ausgabeiterators.  
+*OutputIterator*<br/>
+Der Typ des Ausgabeiterators.  
   
- `_Src`  
- Das zu kopierende Objekt.  
+*_Src*<br/>
+Das zu kopierende Objekt.  
   
- `_Src_byte_size`  
- Die Anzahl von Bytes in der Quelle.  
+*_Src_byte_size*<br/>
+Die Anzahl von Bytes in der Quelle.  
   
- `_Src_type`  
- Der Typ des Quellobjekts.  
+*_Src_type*<br/>
+Der Typ des Quellobjekts.  
   
- `_Src_offset`  
- Der Offset in der Quelle, an der der Kopiervorgang beginnen soll.  
+*_Src_offset*<br/>
+Der Offset in der Quelle, an der der Kopiervorgang beginnen soll.  
   
- `first`  
- Ein Anfangsiterator in den Quellcontainer.  
+*Erste*<br/>
+Ein Anfangsiterator in den Quellcontainer.  
   
- `last`  
- Ein Endeiterator in den Quellcontainer.  
+*last*<br/>
+Ein Endeiterator in den Quellcontainer.  
   
 ##  <a name="copy_async"></a>  Copy_async-Funktion (Concurrency:: Graphics-Namespace)  
  Kopiert asynchron eine Quelltextur in einen Zielpuffer oder kopiert einen Quellpuffer in einen Zielpuffer und gibt eine [Completion_future](completion-future-class.md) -Objekt, das auf das gewartet werden kann. Es können keine Daten kopiert werden, wenn auf einer Zugriffstaste Code ausgeführt wird. Das allgemeine Format dieser Funktion ist `copy(src, dest)`.  
@@ -274,44 +274,44 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Copy_extent`  
- Der Umfang des zu kopierenden Texturabschnitts.  
+*_Copy_extent*<br/>
+Der Umfang des zu kopierenden Texturabschnitts.  
   
- `_Dst`  
- Das Objekt, in das kopiert werden soll.  
+*_Dst*<br/>
+Das Objekt, in das kopiert werden soll.  
   
- `_Dst_byte_size`  
- Die Anzahl von Bytes im Ziel.  
+*_Dst_byte_size*<br/>
+Die Anzahl von Bytes im Ziel.  
   
- `_Dst_type`  
- Der Typ des Zielobjekts.  
+*_Dst_type*<br/>
+Der Typ des Zielobjekts.  
   
- `_Dst_offset`  
- Der Offset in das Ziel, an dem der Kopiervorgang beginnen soll.  
+*_Dst_offset*<br/>
+Der Offset in das Ziel, an dem der Kopiervorgang beginnen soll.  
   
- `InputIterator`  
- Der Typ des Eingabeiterators.  
+*InputIterator*<br/>
+Der Typ des Eingabeiterators.  
   
- `OutputIterator`  
- Der Typ des Ausgabeiterators.  
+*OutputIterator*<br/>
+Der Typ des Ausgabeiterators.  
   
- `_Src`  
- Das zu kopierende Objekt.  
+*_Src*<br/>
+Das zu kopierende Objekt.  
   
- `_Src_byte_size`  
- Die Anzahl von Bytes in der Quelle.  
+*_Src_byte_size*<br/>
+Die Anzahl von Bytes in der Quelle.  
   
- `_Src_type`  
- Der Typ des Quellobjekts.  
+*_Src_type*<br/>
+Der Typ des Quellobjekts.  
   
- `_Src_offset`  
- Der Offset in der Quelle, an der der Kopiervorgang beginnen soll.  
+*_Src_offset*<br/>
+Der Offset in der Quelle, an der der Kopiervorgang beginnen soll.  
   
- `first`  
- Ein Anfangsiterator in den Quellcontainer.  
+*Erste*<br/>
+Ein Anfangsiterator in den Quellcontainer.  
   
- `last`  
- Ein Endeiterator in den Quellcontainer.  
+*last*<br/>
+Ein Endeiterator in den Quellcontainer.  
 
 ## <a name="requirements"></a>Anforderungen  
  **Header:** amp_graphics.h  

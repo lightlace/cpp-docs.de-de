@@ -1,5 +1,5 @@
 ---
-title: Projektbuildfehler prj0027 | Microsoft Docs
+title: Projektbuildfehler prj0027 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a1c25f87913de312ca766b05edbac39f7191ff0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c642c678c7db29b9826449731f07ad90bc865294
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318986"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062058"
 ---
 # <a name="project-build-error-prj0027"></a>Projektbuildfehler PRJ0027
-Unicode-protokollmeldung "Inhalt" Inhalt enthält, die nicht in ANSI-Codepage des Benutzers übersetzt werden konnte.  
-  
- Sie sehen in der Regel nur diese Warnung in Verbindung mit Fehlern in Batch und/oder Antwortnachrichten-Dateien zu erstellen.  
-  
- Die Auflösung für diesen Fehler besteht darin, aktualisieren den Inhalt des Buildprotokolls unter Verwendung von ANSI oder die Codepage auf dem Computer installieren und als dem als Standard festgelegt.
+
+Unicode-protokollmeldung, dass "Contents" Inhalt enthält, die nicht in ANSI-Codepage des Benutzers übersetzt werden konnte.
+
+Diese Warnung in Verbindung mit Fehlern bei der Erstellung von Batch und/oder Antwortinformationen Dateien wird nur in der Regel angezeigt.
+
+Die Auflösung für diesen Fehler ist, aktualisieren Sie den Inhalt des Buildprotokolls mit ANSI oder zu installieren. die Codepage auf dem Computer als dem als Standard festgelegt.

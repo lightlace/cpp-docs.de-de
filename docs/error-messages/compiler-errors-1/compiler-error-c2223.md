@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2223 | Microsoft Docs
+title: Compilerfehler C2223 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 330786ca92becb5132194e5e25104bdaaa58c129
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0ca3cd091b349536046b0ead8e52805db3dff9b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168814"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067654"
 ---
 # <a name="compiler-error-c2223"></a>Compilerfehler C2223
-Links von "-> Bezeichner" muss auf Struktur/Union zeigen.  
-  
- Der Operand auf der linken Seite des `->` ist kein Zeiger auf eine Klasse, Struktur oder Union.  
-  
- Dieser Fehler kann verursacht werden, durch einen linken Operanden, der eine Variable nicht definiert ist (Geben Sie daher `int`).
+
+Links von "-ID >" muss auf eine Struktur/Union zeigen.
+
+Der Operand auf der linken Seite des `->` ist kein Zeiger auf eine Klasse, Struktur oder Union.
+
+Dieser Fehler kann verursacht werden, durch einen linken Operanden, die eine nicht definierte Variable (aus diesem Grund geben `int`).

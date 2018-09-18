@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4343 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4343 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 300bab652c88322ef7e3b28cbf2cafe304d361d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6bb524afda167333d4df97089402040496a7a944
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302333"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071054"
 ---
 # <a name="compiler-warning-level-4-c4343"></a>Compilerwarnung (Stufe 4) C4343
-\#Pragma-optimize("g",Off)"überschreibt Option/Og  
-  
- Diese Warnung, die nur im Compiler der Itanium-Prozessorfamilie (IPF) gültig ist, meldet, dass ein „pragma [optimize](../../preprocessor/optimize.md) “ eine [/Og](../../build/reference/og-global-optimizations.md) -Compileroption außer Kraft gesetzt hat.  
-  
- Im folgenden Beispiel wird C4343 generiert.  
-  
-```  
-// C4343.cpp  
-// compile with: /Og /W4 /LD  
-// processor: IPF  
-#pragma optimize ("g", off)   // C4343  
+
+\#Pragma-optimize("g",Off)"überschreibt Option für" / Og "
+
+Diese Warnung, die nur im Compiler der Itanium-Prozessorfamilie (IPF) gültig ist, meldet, dass ein „pragma [optimize](../../preprocessor/optimize.md) “ eine [/Og](../../build/reference/og-global-optimizations.md) -Compileroption außer Kraft gesetzt hat.
+
+Im folgenden Beispiel wird C4343 generiert.
+
+```
+// C4343.cpp
+// compile with: /Og /W4 /LD
+// processor: IPF
+#pragma optimize ("g", off)   // C4343
 ```

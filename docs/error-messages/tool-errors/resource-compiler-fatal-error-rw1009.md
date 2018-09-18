@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcencompiler: Schwerwiegender Fehler RW1009 | Microsoft Docs'
+title: 'Ressourcencompiler: Schwerwiegender Fehler RW1009 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 490f2865f8d3518facbaa86f4fa81932305e508d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 175b8fcbabbb0b16a69f20025e42939a38ef8bf0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319854"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056858"
 ---
 # <a name="resource-compiler-fatal-error-rw1009"></a>Ressourcencompiler: Schwerwiegender Fehler RW1009
-Fehler beim Erstellen der Ressourcenname  
-  
- Die angegebene RES-Datei konnte nicht erstellt werden. Stellen Sie sicher, dass er nicht auf einem schreibgeschützten Laufwerk erstellt wird. Verwenden Sie/v, um herauszufinden, ob die Datei erstellt wird.
+
+Fehler beim Erstellen der Resource-name
+
+Die angegebene RES-Datei konnte nicht erstellt werden. Stellen Sie sicher, dass es nicht auf einem nur-Lese Laufwerk erstellt wird. Verwenden Sie/v, um herauszufinden, ob die Datei erstellt wird.

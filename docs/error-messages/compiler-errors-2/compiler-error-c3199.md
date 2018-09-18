@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3199 generiert | Microsoft Docs
+title: Compilerfehler C3199 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cddad2218e81603f59cad51e3a684303e144171e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ed917b3711f7f757b0a4ad89f0e6594ea1642a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246570"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027274"
 ---
-# <a name="compiler-error-c3199"></a>Compiler-Fehler C3199 generiert
-Ungültige Verwendung eines Gleitkommapragmas: Ausnahmen werden in nicht-präzisen Modus nicht unterstützt.  
-  
- Die [Float_control](../../preprocessor/float-control.md) Pragma wurde zur Gleitkommaausnahme-Modell unter Angabe einer [/fp](../../build/reference/fp-specify-floating-point-behavior.md) andere Einstellung als **/fp: präzise**.  
-  
- Im folgende Beispiel wird C3199 generiert:  
-  
-```  
-// C3199.cpp  
-// compile with: /fp:fast  
-#pragma float_control(except, on)   // C3199  
+# <a name="compiler-error-c3199"></a>Compilerfehler C3199
+
+Ungültige Verwendung von Gleitkommapragmas: Ausnahmen werden in nicht dem precise-Modus nicht unterstützt
+
+Die [Float_control](../../preprocessor/float-control.md) Pragma wurde verwendet, um das Modell für Gleitkommaausnahmen unter Geben Sie eine [/fp](../../build/reference/fp-specify-floating-point-behavior.md) andere Einstellung als **/fp: präzise**.
+
+Im folgende Beispiel wird die C3199 generiert:
+
+```
+// C3199.cpp
+// compile with: /fp:fast
+#pragma float_control(except, on)   // C3199
 ```
