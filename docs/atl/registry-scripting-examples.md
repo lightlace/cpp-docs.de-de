@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dc28d8a0d5dc24d0f0c665e5a17fc38e0c9d08f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eabb923b165d407f77554d88d710cd7c67a14240
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753148"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022110"
 ---
 # <a name="registry-scripting-examples"></a>Beispiele für die Registrierungsskripterstellung
 
@@ -32,17 +32,17 @@ Skript in diesem Thema wird gezeigt, wie fügen Sie einen Schlüssel in die syst
 
 Die folgenden Analysestruktur veranschaulicht ein einfaches Skript, das einen einzelnen Schlüssel in die systemregistrierung hinzufügt. Insbesondere das Skript fügt den Schlüssel `MyVeryOwnKey`zu `HKEY_CURRENT_USER`. Außerdem weist den Standardwert des `HowGoesIt` auf den neuen Schlüssel:
 
-```  
-HKEY_CURRENT_USER  
+```
+HKEY_CURRENT_USER
 {  
-'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
 ```
 
 Dieses Skript kann problemlos erweitert werden, um mehrere Unterschlüssel wird wie folgt definieren:
 
-```  
-HKCU  
+```
+HKCU
 {  
     'MyVeryOwnKey' = s 'HowGoesIt'  
     {  
@@ -51,8 +51,8 @@ HKCU
             'PrettyCool' = d '55'  
             val 'ANameValue' = s 'WithANamedValue'  
         }  
-    }  
-}  
+    }
+}
 ```
 
 Nun, das Skript fügt einen Unterschlüssel, `HasASubkey`zu `MyVeryOwnKey`. Unterschlüssel, fügt es sowohl den `PrettyCool` Unterschlüssel (hat den Standardwert `DWORD` Wert von 55) und die `ANameValue` benannten Wert (mit einem Zeichenfolgenwert des `WithANamedValue`).
@@ -61,8 +61,8 @@ Nun, das Skript fügt einen Unterschlüssel, `HasASubkey`zu `MyVeryOwnKey`. Unte
 
 Das folgende Skript registriert den Registrierungsstelle COM-Server selbst.
 
-```  
-HKCR  
+```
+HKCR
 {  
     ATL.Registrar = s 'ATL Registrar Class'  
     {  
@@ -78,8 +78,8 @@ HKCR
                 val ThreadingModel = s 'Apartment'  
             }  
         }  
-    }  
-}  
+    }
+}
 ```
 
 Bei der Ausführung dieser Analysestruktur fügt die `ATL.Registrar` um `HKEY_CLASSES_ROOT`. In diesem neuen Schlüssel klicken Sie dann die It:
@@ -106,15 +106,15 @@ Die Analysestruktur bietet nun zwei neue Unterschlüssel `{44EC053A-400F-11D0-9D
 
 Um mehr als eine Analysestruktur in einem Skript anzugeben, fügen Sie eine Struktur einfach am Ende eines anderen. Das folgende Skript fügt beispielsweise den Schlüssel, `MyVeryOwnKey`, um die analysestrukturen für beide `HKEY_CLASSES_ROOT` und `HKEY_CURRENT_USER`:
 
-```  
-HKCR  
+```
+HKCR
 {  
-    'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
-HKEY_CURRENT_USER  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
+HKEY_CURRENT_USER
 {  
-    'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
 ```
 
 > [!NOTE]

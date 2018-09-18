@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d68180e2fc0c7c33e742f0ffdb3776baa50976f6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6106832ea82531a6f6915417ac56d53504db882e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209712"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022161"
 ---
 # <a name="compiler-error-c2778"></a>Compilerfehler C2778
-nicht ordnungsgemäß formatierte GUID in __declspec(UUID()) falsch formatiert  
-  
- Eine falsche GUID angegeben wird, um die [Uuid](../../cpp/uuid-cpp.md) erweitertes Attribut.  
-  
- Die GUID muss es sich um eine Zeichenfolge aus hexadezimalen Zahlen mit dem folgenden Format sein:  
-  
-```  
-// C2778a.cpp  
-// compile with: /c  
-struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};  
-struct __declspec(uuid("{00000000-0000-0000-0000-000000000000}")) B{};  
-```  
-  
- Die `uuid` erweitertes Attribut akzeptiert von [CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring)mit oder ohne Klammern eingeschlossen.  
-  
- Im folgende Beispiel wird die C2778 generiert:  
-  
-```  
-// C2778b.cpp  
-struct __declspec(uuid(" 00000000-0000-0000-0000-000000000000 ")) C { };   // C2778  
-struct __declspec(uuid("00000000000000000000000000000000")) D { };   // C2778  
+
+nicht ordnungsgemäß formatierte GUID in __declspec(UUID()) falsch formatiert
+
+Eine falsche GUID angegeben wird, um die [Uuid](../../cpp/uuid-cpp.md) erweitertes Attribut.
+
+Die GUID muss es sich um eine Zeichenfolge aus hexadezimalen Zahlen mit dem folgenden Format sein:
+
+```
+// C2778a.cpp
+// compile with: /c
+struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
+struct __declspec(uuid("{00000000-0000-0000-0000-000000000000}")) B{};
+```
+
+Die `uuid` erweitertes Attribut akzeptiert von [CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring)mit oder ohne Klammern eingeschlossen.
+
+Im folgende Beispiel wird die C2778 generiert:
+
+```
+// C2778b.cpp
+struct __declspec(uuid(" 00000000-0000-0000-0000-000000000000 ")) C { };   // C2778
+struct __declspec(uuid("00000000000000000000000000000000")) D { };   // C2778
 ```

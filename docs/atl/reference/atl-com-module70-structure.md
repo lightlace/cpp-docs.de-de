@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf975b0b434218d1917c2d630582e32cd287e298
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7cfa52749f6789ef8bfe65f9bdcdf5238923216f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755065"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019377"
 ---
 # <a name="atlcommodule70-structure"></a>_ATL_COM_MODULE70-Struktur
 
@@ -44,19 +44,19 @@ struct _ATL_COM_MODULE70 {
 
 ## <a name="members"></a>Member
 
-`cbSize`  
+`cbSize`<br/>
 Die Größe der Struktur, die für die versionsverwaltung verwendet werden soll.
 
-`m_hInstTypeLib`  
+`m_hInstTypeLib`<br/>
 Die Handle-Instanz, auf die Typbibliothek für dieses Modul.
 
-`m_ppAutoObjMapFirst`  
+`m_ppAutoObjMapFirst`<br/>
 Die Adresse des Arrayelements dar, der angibt, der des Anfang der Objekt-Zuordnungseinträge für dieses Modul.
 
-`m_ppAutoObjMapLast`  
+`m_ppAutoObjMapLast`<br/>
 Die Adresse des Arrayelements dar, der angibt, des Ende der Objekt-Zuordnungseinträge für dieses Modul.
 
-`m_csObjMap`  
+`m_csObjMap`<br/>
 Kritischen Abschnitt, um die Serialisierung des Zugriffs auf der Objekt-Zuordnungseinträge. Wird intern verwendet, von ATL
 
 ## <a name="remarks"></a>Hinweise

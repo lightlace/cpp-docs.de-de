@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0032 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0032 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd1df20ab022df9ce1321c2f6de77bf7591fec3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a320fb08eaf19b5ed53000ffecd17d747e7a3000
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33304725"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019704"
 ---
 # <a name="expression-evaluator-error-cxx0032"></a>Ausdrucksauswertungsfehler CXX0032
-aufgrund einer Division durch 0  
-  
- Der Ausdruck enthält eine Division durch 0 (null), die ungültig ist. Diese Divisor kann die Zahl 0 (null) sein, oder möglicherweise ein Ausdruck, der zu 0 (null) ausgewertet wird.  
-  
- Dieser Fehler ist mit CAN0032 identisch.
+
+Division durch 0
+
+Der Ausdruck enthält eine Division durch 0 (null), was nicht zulässig ist. Diese Divisor kann die Zahl 0 (null) sein, oder möglicherweise ein Ausdruck, der mit NULL ausgewertet wird.
+
+Dieser Fehler ist mit CAN0032 identisch.

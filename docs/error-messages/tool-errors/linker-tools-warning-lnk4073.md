@@ -1,5 +1,5 @@
 ---
-title: Linkertoolwarnung Lnk4073 | Microsoft Docs
+title: Linkertoolwarnung LNK4073 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4197d850dbc7a064ebc7c6e33183d83fb9916ebe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eab8643706b3c7468b589bd63c508ec0c2bf5306
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299200"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021908"
 ---
 # <a name="linker-tools-warning-lnk4073"></a>Linkertoolwarnung LNK4073
-Zuordnung für ILK-Datei kann nicht erstellt werden; ILK-Datei  
-  
- War nicht genügend Speicherplatz im gemeinsam genutzten Speicherbereich für den LINK, um die inkrementelle Statusdatei (ILK) zu erstellen. LINK ausgeführt, ein nicht inkrementelles erstellen.
+
+Zuordnung für ILK-Datei kann nicht erstellt werden; Link erfolgt nicht inkrementell
+
+War nicht genügend zusammenhängenden Speicherbereich im freigegebenen Speicher für LINK, um die inkrementelle Statusdatei (ILK) zu erstellen. LINK ausgeführt, ein nicht inkrementelles erstellen.

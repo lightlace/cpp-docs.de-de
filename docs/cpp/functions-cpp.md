@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0894ecf767d24f6e5ec5ea385b5aeca6daae41a8
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: aacbb7709daf6952f00276663e20131e967a554d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131752"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022356"
 ---
 # <a name="functions-c"></a>Funktionen (C++)
 
@@ -135,7 +135,7 @@ Optionale Bestandteile einer Funktionsdeklaration sind:
 
 Die folgende Abbildung zeigt die Teile einer Funktionsdefinition. Der schattierte Bereich ist der Funktionsrumpf.
 
- ![Teile einer Funktionsdefinition](../cpp/media/vc38ru1.gif "vc38RU1") Teile einer Funktionsdefinition
+![Teile einer Funktionsdefinition](../cpp/media/vc38ru1.gif "vc38RU1") Teile einer Funktionsdefinition
 
 ## <a name="function-definitions"></a>Funktionsdefinitionen
 
@@ -205,7 +205,7 @@ Wenn eine Funktion ein Argument ändert, das nach Verweis weitergegeben wird, ä
 void DoSomething(const std::string& input){...}
 ```
 
- **C++ 11:** verwenden, um Argumente explizit zu behandeln, das als Rvalue-Verweis oder Lvalue-Verweis übergeben werden, ein doppeltes kaufmännisches und-Zeichen für den Parameter um einen universellen Verweis anzugeben:
+**C++ 11:** verwenden, um Argumente explizit zu behandeln, das als Rvalue-Verweis oder Lvalue-Verweis übergeben werden, ein doppeltes kaufmännisches und-Zeichen für den Parameter um einen universellen Verweis anzugeben:
 
 ```cpp
 void DoSomething(const std::string&& input){...}
@@ -315,22 +315,22 @@ Es gibt verschiedene Möglichkeiten, mehr als einen Wert aus einer Funktion zur�
     ```cpp
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-    
+
     struct S
     {
         string name;
         int num;
     };
-    
+
     S g()
     {
         string t{ "hello" };
         int u{ 42 };
         return { t, u };
     }
-    
+
     int main()
     {
         S s = g();
@@ -338,16 +338,16 @@ Es gibt verschiedene Möglichkeiten, mehr als einen Wert aus einer Funktion zur�
         return 0;
     }
     ```
-    
+
 1. Geben Sie ein Tuple "oder" Std:: Pair-Objekt zurück:
 
     ```cpp
     #include <tuple>
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-        
+
     tuple<int, string, double> f()
     {
         int i{ 108 };
@@ -355,20 +355,20 @@ Es gibt verschiedene Möglichkeiten, mehr als einen Wert aus einer Funktion zur�
         double d{ .01 };
         return { i,s,d };
     }
-    
+
     int main()
     {
         auto t = f();
         cout << get<0>(t) << " " << get<1>(t) << " " << get<2>(t) << endl;
-     
+
         // --or--
-    
+
         int myval;
         string myname;
         double mydecimal;
         tie(myval, myname, mydecimal) = f();
         cout << myval << " " << myname << " " << mydecimal << endl;
-    
+
         return 0;
     }
     ```
@@ -379,9 +379,9 @@ Es gibt verschiedene Möglichkeiten, mehr als einen Wert aus einer Funktion zur�
     #include <tuple>
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-    
+
     tuple<int, string, double> f()
     {
         int i{ 108 };
@@ -394,25 +394,25 @@ Es gibt verschiedene Möglichkeiten, mehr als einen Wert aus einer Funktion zur�
         string name;
         int num;
     };
-    
+
     S g()
     {
         string t{ "hello" };
         int u{ 42 };
         return { t, u };
     }
-    
+
     int main()
     {
         auto[x, y, z] = f(); // init from tuple
         cout << x << " " << y << " " << z << endl;
-    
+
         auto[a, b] = g(); // init from POD struct
         cout << a << " " << b << endl;
         return 0;
     }
     ```
-    
+
 1. Zusätzlich zur Verwendung des Rückgabewert selbst, können Sie "return" Werte durch die Definition eine beliebige Anzahl von Parametern, übergeben als Verweis zu verwenden, sodass die Funktion können Sie ändern oder Initialisieren der Werte von Objekten, die der Aufrufer enthält. Weitere Informationen finden Sie unter [Verweistyp Funktionsargumente](reference-type-function-arguments.md).
 
 ## <a name="function-pointers"></a>Funktionszeiger
@@ -435,9 +435,10 @@ int (*myFunction(char* s))(int);
 Die vorhergehende Deklaration gleicht der Deklaration oben, die "typedef" verwendet.
 
 ## <a name="see-also"></a>Siehe auch
- [Funktionsüberladung](../cpp/function-overloading.md)  
- [Funktionen mit Variablenargumentlisten](../cpp/functions-with-variable-argument-lists-cpp.md)  
- [Explizit vorgegebene und gelöschte Funktionen](../cpp/explicitly-defaulted-and-deleted-functions.md)  
- [Argumentbezogene Namenssuche (Koenig) in Funktionen](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)  
- [Standardargumente](../cpp/default-arguments.md)  
- [Inlinefunktionen](../cpp/inline-functions-cpp.md)
+
+[Funktionsüberladung](../cpp/function-overloading.md)<br/>
+[Funktionen mit Variablenargumentlisten](../cpp/functions-with-variable-argument-lists-cpp.md)<br/>
+[Explizit vorgegebene und gelöschte Funktionen](../cpp/explicitly-defaulted-and-deleted-functions.md)<br/>
+[Argumentbezogene Namenssuche (Koenig) in Funktionen](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)<br/>
+[Standardargumente](../cpp/default-arguments.md)<br/>
+[Inlinefunktionen](../cpp/inline-functions-cpp.md)

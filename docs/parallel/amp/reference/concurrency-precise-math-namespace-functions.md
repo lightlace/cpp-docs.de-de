@@ -98,12 +98,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60c2b85c3a5c1ca5e2da9b0ef3b42148510b59e1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e5dc3be0a13d593b605f4953530bff0885a8f198
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711052"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018300"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Concurrency:: precise_math Namespace-Funktionen
 ||||
@@ -165,7 +165,7 @@ inline double acos(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -179,7 +179,7 @@ inline float acosf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -196,7 +196,7 @@ inline double acosh(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -210,7 +210,7 @@ inline float acoshf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -227,7 +227,7 @@ inline double asin(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -241,7 +241,7 @@ inline float asinf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -258,7 +258,7 @@ inline double asinh(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -272,7 +272,7 @@ inline float asinhf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -289,7 +289,7 @@ inline double atan(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -310,10 +310,10 @@ inline double atan2(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_Y`  
+*_Y*<br/>
 Gleitkommawert
 
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -329,10 +329,10 @@ inline float atan2f(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_Y`  
+*_Y*<br/>
 Gleitkommawert
 
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -346,7 +346,7 @@ inline float atanf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -363,7 +363,7 @@ inline double atanh(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -377,7 +377,7 @@ inline float atanhf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -394,7 +394,7 @@ inline double cbrt(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -408,7 +408,7 @@ inline float cbrtf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -425,7 +425,7 @@ inline double ceil(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -439,7 +439,7 @@ inline float ceilf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -460,10 +460,10 @@ inline double copysign(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_Y`  
+*_Y*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -479,10 +479,10 @@ inline float copysignf(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_Y`  
+*_Y*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -499,7 +499,7 @@ inline double cos(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -513,7 +513,7 @@ inline float cosf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -530,7 +530,7 @@ inline double cosh(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -544,7 +544,7 @@ inline float coshf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -561,7 +561,7 @@ inline double cospi(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -575,7 +575,7 @@ inline float cospif(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -592,7 +592,7 @@ inline double erf(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -609,7 +609,7 @@ inline double erfc(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -623,7 +623,7 @@ inline float erfcf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -640,7 +640,7 @@ inline double erfcinv(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -654,7 +654,7 @@ inline float erfcinvf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -668,7 +668,7 @@ inline float erff(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -685,7 +685,7 @@ inline double erfinv(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -699,7 +699,7 @@ inline float erfinvf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -716,7 +716,7 @@ inline double exp10(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -730,7 +730,7 @@ inline float exp10f(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -747,7 +747,7 @@ inline double expm1(double exponent) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`exponent`  
+*Exponent*<br/>
 Der Exponent *n* des mathematischen Ausdrucks `e` <sup>n</sup>, wobei `e` ist die Basis des natürlichen Logarithmus.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -761,7 +761,7 @@ inline float expm1f(float exponent) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`exponent`  
+*Exponent*<br/>
 Der Exponent *n* des mathematischen Ausdrucks `e` <sup>n</sup>, wobei `e` ist die Basis des natürlichen Logarithmus.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -778,7 +778,7 @@ inline double exp(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -792,7 +792,7 @@ inline float expf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -809,7 +809,7 @@ inline double exp2(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -823,7 +823,7 @@ inline float exp2f(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -840,7 +840,7 @@ inline double fabs(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -854,7 +854,7 @@ inline float fabsf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -908,7 +908,7 @@ inline double floor(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -922,7 +922,7 @@ inline float floorf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -989,10 +989,10 @@ inline double fmax(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_Y`  
+*_Y*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1008,10 +1008,10 @@ inline float fmaxf(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_Y`  
+*_Y*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1032,10 +1032,10 @@ inline double fmin(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_Y`  
+*_Y*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1051,10 +1051,10 @@ inline float fminf(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_Y`  
+*_Y*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1075,10 +1075,10 @@ inline double fmod(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Das erste Gleitkommaargument.
 
-`_Y`  
+*_Y*<br/>
 Das zweite Gleitkommaargument.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1094,10 +1094,10 @@ inline float fmodf(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Das erste Gleitkommaargument.
 
-`_Y`  
+*_Y*<br/>
 Das zweite Gleitkommaargument.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1114,7 +1114,7 @@ inline int fpclassify(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1135,10 +1135,10 @@ inline double frexp(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_Exp`  
+*_EXP zurück*<br/>
 Gibt den ganzzahligen Exponenten von _X in Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1154,10 +1154,10 @@ inline float frexpf(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_Exp`  
+*_EXP zurück*<br/>
 Gibt den ganzzahligen Exponenten von _X in Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1178,10 +1178,10 @@ inline double hypot(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_Y`  
+*_Y*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1197,10 +1197,10 @@ inline float hypotf(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_Y`  
+*_Y*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1217,7 +1217,7 @@ inline int ilogb(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1231,7 +1231,7 @@ inline int ilogbf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1248,7 +1248,7 @@ inline int isfinite(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1265,7 +1265,7 @@ inline int isinf(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1282,7 +1282,7 @@ inline int isnan(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1299,7 +1299,7 @@ inline int isnormal(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1320,10 +1320,10 @@ inline double ldexp(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert, Mantisse
 
-`_Exp`  
+*_EXP zurück*<br/>
 Ganze Zahl, Exponent
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1339,10 +1339,10 @@ inline float ldexpf(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert, Mantisse
 
-`_Exp`  
+*_EXP zurück*<br/>
 Ganze Zahl, Exponent
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1363,10 +1363,10 @@ inline double lgamma(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_Sign`  
+*_Signieren*<br/>
 Gibt das Vorzeichen
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1382,10 +1382,10 @@ inline float lgammaf(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_Sign`  
+*_Signieren*<br/>
 Gibt das Vorzeichen
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1402,7 +1402,7 @@ inline double log(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1419,7 +1419,7 @@ inline double log10(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1433,7 +1433,7 @@ inline float log10f(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1450,7 +1450,7 @@ inline double log1p(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1464,7 +1464,7 @@ inline float log1pf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1481,7 +1481,7 @@ inline double log2(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1495,7 +1495,7 @@ inline float log2f(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1512,7 +1512,7 @@ inline double logb(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1526,7 +1526,7 @@ inline float logbf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1540,7 +1540,7 @@ inline float logf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1561,10 +1561,10 @@ inline double modf(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_Iptr`  
+*_Iptr*<br/>
 [out] Der ganzzahlige Teil von `_X`, als Gleitkommawert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1580,10 +1580,10 @@ inline float modff(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_Iptr`  
+*_Iptr*<br/>
 Der ganzzahlige Teil von `_X` als Gleitkommawert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1597,7 +1597,7 @@ inline double nan(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Ganzzahliger Wert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1611,7 +1611,7 @@ inline float nanf(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Ganzzahliger Wert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1628,7 +1628,7 @@ inline double nearbyint(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1642,7 +1642,7 @@ inline float nearbyintf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1663,10 +1663,10 @@ inline double nextafter(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_Y`  
+*_Y*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1682,10 +1682,10 @@ inline float nextafterf(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_Y`  
+*_Y*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1702,7 +1702,7 @@ inline double phi(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1716,7 +1716,7 @@ inline float phif(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1737,10 +1737,10 @@ inline double pow(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert, Basis
 
-`_Y`  
+*_Y*<br/>
 Gleitkommawert, exponent
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1755,10 +1755,10 @@ inline float powf(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert, Basis
 
-`_Y`  
+*_Y*<br/>
 Gleitkommawert, exponent
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1774,7 +1774,7 @@ inline double probit(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1788,7 +1788,7 @@ inline float probitf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1805,7 +1805,7 @@ inline double rcbrt(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1819,7 +1819,7 @@ inline float rcbrtf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1840,10 +1840,10 @@ inline double remainder(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_Y`  
+*_Y*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1859,10 +1859,10 @@ inline float remainderf(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_Y`  
+*_Y*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1885,13 +1885,13 @@ inline double remquo(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Das erste Gleitkommaargument.
 
-`_Y`  
+*_Y*<br/>
 Das zweite Gleitkommaargument.
 
-`_Quo`  
+*_Quo*<br/>
 [out] Die Adresse einer ganzen Zahl, die verwendet wird, um den Quotient der bruchbytes von zurückzugeben `_X` geteilt durch die bruchbytes von `_Y`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1908,13 +1908,13 @@ inline float remquof(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Das erste Gleitkommaargument.
 
-`_Y`  
+*_Y*<br/>
 Das zweite Gleitkommaargument.
 
-`_Quo`  
+*_Quo*<br/>
 [out] Die Adresse einer ganzen Zahl, die verwendet wird, um den Quotient der bruchbytes von zurückzugeben `_X` geteilt durch die bruchbytes von `_Y`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1931,7 +1931,7 @@ inline double round(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1945,7 +1945,7 @@ inline float roundf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1962,7 +1962,7 @@ inline double rsqrt(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1976,7 +1976,7 @@ inline float rsqrtf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1997,10 +1997,10 @@ inline double scalb(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_Y`  
+*_Y*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2016,10 +2016,10 @@ inline float scalbf(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_Y`  
+*_Y*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2040,10 +2040,10 @@ inline double scalbn(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_Y`  
+*_Y*<br/>
 Ganzzahliger Wert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2059,10 +2059,10 @@ inline float scalbnf(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_Y`  
+*_Y*<br/>
 Ganzzahliger Wert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2079,7 +2079,7 @@ inline int signbit(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2093,7 +2093,7 @@ inline int signbitf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2110,7 +2110,7 @@ inline double sin(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2124,7 +2124,7 @@ inline float sinf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2147,13 +2147,13 @@ inline void sincos(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_S`  
+*_S*<br/>
 Gibt den Sinuswert von _X
 
-`_C`  
+*_C*<br/>
 Gibt den Kosinuswert von _X
 
 ##  <a name="sincosf"></a>  sincosf
@@ -2167,13 +2167,13 @@ inline void sincosf(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
-`_S`  
+*_S*<br/>
 Gibt den Sinuswert von _X
 
-`_C`  
+*_C*<br/>
 Gibt den Kosinuswert von _X
 
 ##  <a name="sinh"></a> sinh
@@ -2187,7 +2187,7 @@ inline double sinh(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2201,7 +2201,7 @@ inline float sinhf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2218,7 +2218,7 @@ inline double sinpi(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2232,7 +2232,7 @@ inline float sinpif(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2249,7 +2249,7 @@ inline double sqrt(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2263,7 +2263,7 @@ inline float sqrtf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2280,7 +2280,7 @@ inline double tan(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2294,7 +2294,7 @@ inline float tanf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2311,7 +2311,7 @@ inline double tanh(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2325,7 +2325,7 @@ inline float tanhf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2342,7 +2342,7 @@ inline double tanpi(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2356,7 +2356,7 @@ inline float tanpif(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2373,7 +2373,7 @@ inline double tgamma(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2387,7 +2387,7 @@ inline float tgammaf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2404,7 +2404,7 @@ inline double trunc(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2418,7 +2418,7 @@ inline float truncf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert

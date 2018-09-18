@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ff1a255933b79d39b6eedbb9362ff76a34e0f8a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8a57d93d8d2be84a470dd48d1ca6f9b04010182f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716988"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020978"
 ---
 # <a name="single"></a>Einfach
 Sie können angeben, dass ein Abschnitt des Codes in einem einzelnen Thread, der nicht unbedingt die master-Thread ausgeführt werden soll.  
@@ -37,7 +37,7 @@ Sie können angeben, dass ein Abschnitt des Codes in einem einzelnen Thread, der
   
 #### <a name="parameters"></a>Parameter  
 
-`clause`  
+*Klausel*<br/>
 (Optional) NULL oder mehr Klauseln. Finden Sie im Abschnitt "Hinweise" eine Liste von unterstützten Klauseln **einzelne**.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -51,13 +51,13 @@ Sie können angeben, dass ein Abschnitt des Codes in einem einzelnen Thread, der
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
- Die [master](../../../parallel/openmp/reference/master.md) -Direktive können Sie angeben, dass ein Abschnitt des Codes nur für die master-Thread ausgeführt werden sollen.  
+Die [master](../../../parallel/openmp/reference/master.md) -Direktive können Sie angeben, dass ein Abschnitt des Codes nur für die master-Thread ausgeführt werden sollen.  
   
  Weitere Informationen finden Sie unter [2.4.3 einzelne erstellen](../../../parallel/openmp/2-4-3-single-construct.md).  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // omp_single.cpp  
 // compile with: /openmp   
 #include <stdio.h>  

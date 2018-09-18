@@ -1,5 +1,5 @@
 ---
-title: Linkertoolwarnung Lnk4076 | Microsoft Docs
+title: Linkertoolwarnung LNK4076 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f0e9a85237a47515925a5867b0f26b7321e778c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de96bdbbc9752cd68ca78728395ad4bfdb4b01a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301930"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018527"
 ---
 # <a name="linker-tools-warning-lnk4076"></a>Linkertoolwarnung LNK4076
-Ungültige inkrementelle Statusdatei 'Dateiname'; ILK-Datei  
-  
- LINK kann nicht in die inkrementelle Statusdatei (ILK)-Datei geschrieben. Entweder `filename` ist beschädigt, oder es ist keine Datenbank, die inkrementell verknüpfen. Entfernen Sie die Datei, und verknüpfen.
+
+Ungültige inkrementelle Statusdatei 'Dateiname'; Link erfolgt nicht inkrementell
+
+LINK kann nicht in die inkrementelle Statusdatei (ILK) schreiben. Entweder `filename` ist beschädigt, oder es ist dabei nicht um eine Datenbank, die inkrementell verknüpfen. Entfernen Sie die Datei, und anschließend ein.

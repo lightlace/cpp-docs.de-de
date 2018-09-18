@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcencompiler: Fehler RW1004 through RW4004 | Microsoft Docs'
+title: 'Ressourcencompiler: Fehler RW1004 through RW4004 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,13 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a7ead1f1dbbf8c1129c81faa8caff31a2a104d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e1a17b4609d5cf456030818f3a2112eeb4c7881
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320104"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017833"
 ---
 # <a name="resource-compiler-errors-rw1004-through-rw4004"></a>Ressourcencompiler: Fehlers RW1004 through RW4004
-Dieser Abschnitt ist eine Referenz zu den von den Buildtools ausgegebenen Fehlermeldungen. Um Hilfe zu einer bestimmten Fehlermeldung zu erhalten, klicken Sie mit der Maus auf eine Fehlernummer im Ausgabefenster angezeigt, und drücken Sie F1, oder geben die Fehlernummer in der **gesucht** Feld im Index.
+
+Dieser Abschnitt ist eine Referenz zu den von den Buildtools ausgegebenen Fehlermeldungen. Um Hilfe zu einer bestimmten Fehlermeldung zu erhalten, klicken Sie auf der Maus auf eine Fehlernummer im Ausgabefenster angezeigt, und drücken Sie F1, oder geben die Fehlernummer in der **suchen Sie nach** Feld im Index.

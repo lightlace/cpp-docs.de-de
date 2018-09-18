@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C2026 | Microsoft Docs
+title: Compilerfehler C2026 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6b2952daa8cc7b3642cca5ba278990fde7d1ebe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 055ac47d036a1027817aa6b3433bfe0e2e88570e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167664"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019548"
 ---
-# <a name="compiler-error-c2026"></a>Compilerfehler Fehler C2026
-Zeichenfolge zu lang, nachfolgende Zeichen gekürzt  
-  
- Die Zeichenfolge wurde länger als das Limit von 16380 Einzelbyte-Zeichen.  
-  
- Vor der angrenzenden Zeichenfolgen verkettet werden darf keine Zeichenfolge länger als 16380 Einzelbyte-Zeichen sein.  
-  
- Eine Unicode-Zeichenfolge mit ungefähr die Hälfte dieser Länge würde auch dieser Fehler generiert.  
-  
- Wenn Sie eine Zeichenfolge, die wie folgt definiert haben, wird es C2026 generiert:  
-  
-```  
-char sz[] =  
-"\  
-imagine a really, really \  
-long string here\  
-";  
-```  
-  
- Sie können es wie folgt zusammensetzen:  
-  
-```  
-char sz[] =  
-"\  
-imagine a really, really "  
-"long string here\  
-";  
-```  
-  
- Sie wollen außergewöhnlich große Zeichenfolgenliterale (32 KB oder mehr) speichern in einer benutzerdefinierten Ressource oder eine externe Datei. Finden Sie unter [Erstellen einer neuen benutzerdefinierten Ressource oder Datenressource](../../windows/creating-a-new-custom-or-data-resource.md) für Weitere Informationen.
+# <a name="compiler-error-c2026"></a>Compilerfehler C2026
+
+die Zeichenfolge ist zu lang, Zeichen am Ende wurden
+
+Die Zeichenfolge war länger als das Limit von 16380 Einzelbyte-Zeichen.
+
+Vor der angrenzende Zeichenfolgen verkettet werden darf keine Zeichenfolge länger als 16380 Einzelbyte-Zeichen sein.
+
+Eine Unicode-Zeichenfolge von etwa halb so lang würde auch diesen Fehler generieren.
+
+Wenn Sie eine Zeichenfolge, die wie folgt definiert haben, werden C2026 generiert:
+
+```
+char sz[] =
+"\
+imagine a really, really \
+long string here\
+";
+```
+
+Sie können es wie folgt aufteilen:
+
+```
+char sz[] =
+"\
+imagine a really, really "
+"long string here\
+";
+```
+
+Möglicherweise möchten Sie zum Speichern von sehr umfangreiche Zeichenfolgenliterale (32 KB oder mehr) aus einer benutzerdefinierten Ressource oder eine externe Datei. Finden Sie unter [Erstellen einer neuen benutzerdefinierten Ressource oder Datenressource](../../windows/creating-a-new-custom-or-data-resource.md) für Weitere Informationen.

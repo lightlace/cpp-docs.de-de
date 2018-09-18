@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2948 | Microsoft Docs
+title: Compilerfehler C2948 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8ee324ebbdbc1d9dc19c6a1323f2f47c370f08b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 052bfdb49e965b0d42a8af2c7cf2e57ee1af6f6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243524"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020861"
 ---
 # <a name="compiler-error-c2948"></a>Compilerfehler C2948
-Explizite Instanziierung; Speicherklassenspezifizierer "Spezifizierer" auf die Spezialisierung nicht zulässig  
-  
- Sie können keine Speicherklassenspezifizierer (z. B. `extern`) in einer Spezialisierung einer Vorlagenklasse, die zuvor explizit instanziiert wurde.
+
+Explizite Instanziierung: Speicherklassenspezifizierer "Spezifizierer" für die Spezialisierung nicht zulässig
+
+Sie können keine Speicherklassenspezifizierer (z. B. `extern`) in einer Spezialisierung einer Vorlagenklasse, die bereits explizit instanziiert wurde.

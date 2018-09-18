@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efd214e4368e122a800e51e9bd90cb72a6a4616b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 653be2fb1847403436bccb86807da382ef09cc25
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725854"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018209"
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo-Klasse
 Definiert die Darstellung von intelligenten Andockmarkern.  
@@ -205,15 +205,13 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
 ### <a name="remarks"></a>Hinweise  
  Füllen Sie dieses Array ab, mit der Ressourcen-IDs der Bitmaps, die die intelligenten andockmarkern darstellt. AFX_SD_MARKERS_NUM ist derzeit 5 definiert. Sie füllen das Array wie folgt aus:  
   
- `params.m_uiMarkerBmpResID[0] = IDB_MARKER_LEFT;`  
-  
- `params.m_uiMarkerBmpResID[1] = IDB_MARKER_RIGHT;`  
-  
- `params.m_uiMarkerBmpResID[2] = IDB_MARKER_TOP;`  
-  
- `params.m_uiMarkerBmpResID[3] = IDB_MARKER_BOTTOM;`  
-  
- `params.m_uiMarkerBmpResID[4] = IDB_MARKER_CENTER;`  
+```cpp
+params.m_uiMarkerBmpResID[0] = IDB_MARKER_LEFT;
+params.m_uiMarkerBmpResID[1] = IDB_MARKER_RIGHT;
+params.m_uiMarkerBmpResID[2] = IDB_MARKER_TOP;
+params.m_uiMarkerBmpResID[3] = IDB_MARKER_BOTTOM;
+params.m_uiMarkerBmpResID[4] = IDB_MARKER_CENTER;
+```
   
 ##  <a name="m_uimarkerlightbmpresid"></a>  CSmartDockingInfo::m_uiMarkerLightBmpResID  
  Definiert die Ressourcen-IDs der Bitmaps, die für hervorgehobene benutzerdefinierte intelligente andockmarker verwendet werden.  
@@ -225,15 +223,13 @@ UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];
 ### <a name="remarks"></a>Hinweise  
  Füllen Sie dieses Array ab, mit der Ressourcen-IDs der Bitmaps, die das hervorgehobene intelligente andockmarker darstellt. AFX_SD_MARKERS_NUM ist derzeit 5 definiert. Sie füllen das Array wie folgt aus:  
   
- `params.m_uiMarkerLightBmpResID[0] = IDB_MARKER_LEFT_LIGHT;`  
-  
- `params.m_uiMarkerLightBmpResID[1] = IDB_MARKER_RIGHT_LIGHT;`  
-  
- `params.m_uiMarkerLightBmpResID[2] = IDB_MARKER_TOP_LIGHT;`  
-  
- `params.m_uiMarkerLightBmpResID[3] = IDB_MARKER_BOTTOM_LIGHT;`  
-  
- `params.m_uiMarkerLightBmpResID[4] = IDB_MARKER_CENTER_LIGHT;`  
+```cpp
+params.m_uiMarkerLightBmpResID[0] = IDB_MARKER_LEFT_LIGHT;
+params.m_uiMarkerLightBmpResID[1] = IDB_MARKER_RIGHT_LIGHT;
+params.m_uiMarkerLightBmpResID[2] = IDB_MARKER_TOP_LIGHT;
+params.m_uiMarkerLightBmpResID[3] = IDB_MARKER_BOTTOM_LIGHT;
+params.m_uiMarkerLightBmpResID[4] = IDB_MARKER_CENTER_LIGHT;
+```
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

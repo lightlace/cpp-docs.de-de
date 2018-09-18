@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0934a3c6690b75ffa2eca18f1fd38662bc2a9fd9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9e747386c37e760793ceaa0396f217304cbe621d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756989"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022681"
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule-Klasse
 
@@ -44,13 +44,13 @@ Zum Zeitpunkt der ATL 7.0 `CComAutoThreadModule` ist veraltet: finden Sie unter 
 ## <a name="syntax"></a>Syntax
 
 ```
-template <class ThreadAllocator = CComSimpleThreadAllocator>  
+template <class ThreadAllocator = CComSimpleThreadAllocator>
 class CComAutoThreadModule : public CComModule
 ```
 
 #### <a name="parameters"></a>Parameter
 
-`ThreadAllocator`  
+*ThreadAllocator*<br/>
 [in] Die Verwaltung von threadauswahl-Klasse. Der Standardwert ist [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).
 
 ## <a name="members"></a>Member
@@ -122,13 +122,13 @@ HRESULT CreateInstance(
 
 ### <a name="parameters"></a>Parameter
 
-*pfnCreateInstance*  
+*pfnCreateInstance*<br/>
 [in] Ein Zeiger auf eine Creator-Funktion.
 
-*riid*  
+*riid*<br/>
 [in] Die IID der angeforderten Schnittstelle.
 
-*ppvObj*  
+*ppvObj*<br/>
 [out] Ein Zeiger auf den Schnittstellenzeiger vom *Riid*. Wenn das Objekt nicht über diese Schnittstelle unterstützt *PpvObj* auf NULL festgelegt ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -181,16 +181,16 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Parameter
 
-*p*  
+*p*<br/>
 [in] Ein Zeiger auf ein Array von Objekt-Zuordnungseinträge.
 
-*h*  
+*h*<br/>
 [in] Das HINSTANCE, die an `DLLMain` oder `WinMain`.
 
-*plibid*  
+*plibid*<br/>
 [in] Ein Zeiger auf die LIBID der Typbibliothek, die dem Projekt zugeordnet.
 
-*nThreads*  
+*nThreads*<br/>
 [in] Die Anzahl der Threads erstellt werden. In der Standardeinstellung *nThreads* ist der Rückgabewert von [GetDefaultThreads](#getdefaultthreads).
 
 ### <a name="remarks"></a>Hinweise
@@ -269,5 +269,5 @@ Wenn die Sperrenanzahl des Moduls auf 0 (null) erreicht, kann das Modul entladen
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)   
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
 [Modulklassen](../../atl/atl-module-classes.md)

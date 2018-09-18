@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3075 | Microsoft Docs
+title: Compilerfehler C3075 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c582c9907987fe9f015f3e639e2f3f2e362e0c82
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb2cbcb8908803cef2347fe5eb60342647094f95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255548"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023331"
 ---
 # <a name="compiler-error-c3075"></a>Compilerfehler C3075
-'Instanz': Eine Instanz eines Verweistyps 'Typ' kann nicht in einen Werttyp eingebettet werden.  
-  
- Ein Werttyp kann keine Instanz eines Verweistyps enthalten.  
-  
- Weitere Informationen finden Sie unter [C++-Stapelsemantik für Referenztypen](../../dotnet/cpp-stack-semantics-for-reference-types.md).  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C3075 generiert:  
-  
-```  
-// C3075.cpp  
-// compile with: /clr /c  
-ref struct U {};  
-value struct X {  
-   U y;   // C3075  
-};  
-  
-ref struct Y {  
-   U y;   // OK  
-};  
+
+'Instanz': Eine Instanz eines Verweistyps 'Typ' kann nicht in einen Werttyp eingebettet werden.
+
+Ein Werttyp kann keine Instanz eines Verweistyps enthalten.
+
+Weitere Informationen finden Sie unter [C++-Stapelsemantik für Referenztypen](../../dotnet/cpp-stack-semantics-for-reference-types.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C3075 generiert:
+
+```
+// C3075.cpp
+// compile with: /clr /c
+ref struct U {};
+value struct X {
+   U y;   // C3075
+};
+
+ref struct Y {
+   U y;   // OK
+};
 ```

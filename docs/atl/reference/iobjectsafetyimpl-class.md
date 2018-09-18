@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae4aaffc76e12734038b0d325e7b540393c6cc6d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e760bab6fb3ad420fc6fe0f5c8a2ea6addc652ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754929"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019417"
 ---
 # <a name="iobjectsafetyimpl-class"></a>IObjectSafetyImpl-Klasse
 
@@ -40,16 +40,16 @@ Diese Klasse stellt eine Standardimplementierung von der `IObjectSafety` Schnitt
 ## <a name="syntax"></a>Syntax
 
 ```
-template <class T,DWORD dwSupportedSafety>  
+template <class T,DWORD dwSupportedSafety>
 class IObjectSafetyImpl
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Abgeleitet von die Klasse `IObjectSafetyImpl`.
 
-*dwSupportedSafety*  
+*dwSupportedSafety*<br/>
 Gibt die unterstützten Safety-Optionen für das Steuerelement. Kann einer der folgenden Werte sein:
 
 - INTERFACESAFE_FOR_UNTRUSTED_CALLER der Schnittstelle von identifiziert die [SetInterfaceSafetyOptions](#setinterfacesafetyoptions) Parameter `riid` sicher für Skripting gemacht werden sollen.
@@ -139,5 +139,5 @@ Finden Sie unter [IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microso
 
 ## <a name="see-also"></a>Siehe auch
 
-[IObjectSafety-Schnittstelle](https://msdn.microsoft.com/library/aa768224.aspx)   
+[IObjectSafety-Schnittstelle](https://msdn.microsoft.com/library/aa768224.aspx)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

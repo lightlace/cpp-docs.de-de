@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0622e939d1c0cb93579baeb5fa35e11be516e5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5940461a16dcb86fbb062937fe7330c1b6e04f75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756573"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021134"
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl-Klasse
 
@@ -43,13 +43,13 @@ Diese Klasse stellt die Methoden erforderlich, um ein zusammengesetztes Steuerel
 ## <a name="syntax"></a>Syntax
 
 ```
-template <class T>  
+template <class T>
 class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Abgeleitet von die Klasse [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oder [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), wie auch über andere Schnittstellen für das zusammengesetzte Steuerelement unterstützt werden soll.
 
 ## <a name="members"></a>Member
@@ -122,28 +122,19 @@ HRESULT AdviseSinkMap(bool bAdvise);
 
 ### <a name="parameters"></a>Parameter
 
-*bAdvise*  
+*bAdvise*<br/>
 True, wenn alle Steuerelemente sind, darüber informiert zu werden. andernfalls "false".
 
 ### <a name="return-value"></a>Rückgabewert
 
-S_OK  
-Alle Steuerelemente im Ereignisprotokoll Sink-Zuordnung verbunden oder getrennt von ihrer Ereignisquelle erfolgreich waren.
-
-E_FAIL  
-Nicht alle Steuerelemente im Ereignisprotokoll Sink-Zuordnung verbunden oder getrennt von ihrer Ereignisquelle wurde erfolgreich sein kann.
-
-E_POINTER  
-Dieser Fehler in der Regel gibt an, ein Problem mit einem Eintrag in die Senke-ereigniszuordnung des Steuerelements oder ein Problem mit einem Vorlagenargument verwendet eine `IDispEventImpl` oder `IDispEventSimpleImpl` Basisklasse.
-
-CONNECT_E_ADVISELIMIT  
-Der Verbindungspunkt hat bereits die maximale Anzahl von Verbindungen erreicht und kann nicht mehr annehmen.
-
-CONNECT_E_CANNOTCONNECT  
-Die Senke unterstützt nicht die von diesem Verbindungspunkt erforderliche Schnittstelle.
-
-CONNECT_E_NOCONNECTION  
-Der Cookiewert stellt keine gültige Verbindung dar. Dieser Fehler in der Regel gibt an, ein Problem mit einem Eintrag in die Senke-ereigniszuordnung des Steuerelements oder ein Problem mit einem Vorlagenargument verwendet eine `IDispEventImpl` oder `IDispEventSimpleImpl` Basisklasse.
+|||
+|-|-|
+|S_OK  |Alle Steuerelemente im Ereignisprotokoll Sink-Zuordnung verbunden oder getrennt von ihrer Ereignisquelle erfolgreich waren.|
+|E_FAIL  |Nicht alle Steuerelemente im Ereignisprotokoll Sink-Zuordnung verbunden oder getrennt von ihrer Ereignisquelle wurde erfolgreich sein kann.|
+|E_POINTER  |Dieser Fehler in der Regel gibt an, ein Problem mit einem Eintrag in die Senke-ereigniszuordnung des Steuerelements oder ein Problem mit einem Vorlagenargument verwendet eine `IDispEventImpl` oder `IDispEventSimpleImpl` Basisklasse.|
+|CONNECT_E_ADVISELIMIT  |Der Verbindungspunkt hat bereits die maximale Anzahl von Verbindungen erreicht und kann nicht mehr annehmen.|
+|CONNECT_E_CANNOTCONNECT  |Die Senke unterstützt nicht die von diesem Verbindungspunkt erforderliche Schnittstelle.|
+|CONNECT_E_NOCONNECTION  |Der Cookiewert stellt keine gültige Verbindung dar. Dieser Fehler in der Regel gibt an, ein Problem mit einem Eintrag in die Senke-ereigniszuordnung des Steuerelements oder ein Problem mit einem Vorlagenargument verwendet eine `IDispEventImpl` oder `IDispEventSimpleImpl` Basisklasse.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -159,7 +150,7 @@ BOOL CalcExtent(SIZE& size);
 
 ### <a name="parameters"></a>Parameter
 
-*size*  
+*size*<br/>
 Ein Verweis auf eine `SIZE` Struktur, die von dieser Methode gefüllt werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -183,13 +174,13 @@ HWND Create(
 
 ### <a name="parameters"></a>Parameter
 
-*hWndParent*  
+*hWndParent*<br/>
 Ein Handle für das übergeordnete Fenster des Steuerelements.
 
-*rcPos*  
+*rcPos*<br/>
 Reserviert.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 Die Daten während der steuerelementerstellung das Steuerelement übergeben werden soll. Die Daten zu übergeben, als *DwInitParam* als der LPARAM-Parameter, der angezeigt wird der [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog) -Nachricht, die an das zusammengesetzte Steuerelement gesendet wird, wenn sie erstellt wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -236,10 +227,10 @@ virtual HWND CreateControlWindow(
 
 ### <a name="parameters"></a>Parameter
 
-*hWndParent*  
+*hWndParent*<br/>
 Ein Handle für das übergeordnete Fenster des Steuerelements.
 
-*rcPos*  
+*rcPos*<br/>
 Das Positionsrechteck des zusammengesetzten Steuerelements in Client-Koordinaten relativ zum *hWndParent*.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -280,6 +271,6 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ## <a name="see-also"></a>Siehe auch
 
-[CComControl-Klasse](../../atl/reference/ccomcontrol-class.md)   
-[Grundlagen von zusammengesetzten Steuerelementen](../../atl/atl-composite-control-fundamentals.md)   
+[CComControl-Klasse](../../atl/reference/ccomcontrol-class.md)<br/>
+[Grundlagen von zusammengesetzten Steuerelementen](../../atl/atl-composite-control-fundamentals.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

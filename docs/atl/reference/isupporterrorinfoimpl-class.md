@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed0e105443231853442296748f0e505f3df51b48
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5a3f912f7ba3a5455f7583ba2a5036548ac65df2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753707"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022174"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl-Klasse
 
@@ -37,14 +37,14 @@ Diese Klasse stellt eine Standardimplementierung von der [ISupportErrorInfo Schn
 ## <a name="syntax"></a>Syntax
 
 ```
-template<const IID* piid>  
+template<const IID* piid>
 class ATL_NO_VTABLE ISupportErrorInfoImpl 
    : public ISupportErrorInfo
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*piid*  
+*piid*<br/>
 Ein Zeiger auf eine Schnittstelle, unterstützt die IID [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo).
 
 ## <a name="members"></a>Member
@@ -95,7 +95,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 
 ### <a name="parameters"></a>Parameter
 
-*pnNumThreads*  
+*pnNumThreads*<br/>
 [out] Die Adresse der Variablen, die bei Erfolg die Anzahl der Threads im Pool empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -116,7 +116,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 
 ### <a name="parameters"></a>Parameter
 
-*pdwMaxWait*  
+*pdwMaxWait*<br/>
 [out] Die Adresse der Variablen, die bei Erfolg die maximale Zeit in Millisekunden empfängt, die der Threadpool für einen Thread zum Herunterfahren gewartet wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -137,7 +137,7 @@ STDMETHOD(SetSize)int nNumThreads);
 
 ### <a name="parameters"></a>Parameter
 
-*nNumThreads*  
+*nNumThreads*<br/>
 Die angeforderte Anzahl von Threads im Pool.
 
 Wenn *nNumThreads* ist negativ, der Absolute Wert multipliziert die Anzahl der Prozessoren auf dem Computer, der die Gesamtzahl der Threads abzurufen.
@@ -162,7 +162,7 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 
 ### <a name="parameters"></a>Parameter
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 Die angeforderte maximale Zeit in Millisekunden, die der Threadpool für einen Thread zum Herunterfahren gewartet wird.
 
 ### <a name="return-value"></a>Rückgabewert

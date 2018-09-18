@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45139b16ebb923acd004d995cd9466ea9e39e163
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 61cbd301d01d62c0d24f232703b53cebf411a082
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765735"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021069"
 ---
 # <a name="celementtraits-class"></a>CElementTraits-Klasse
 
@@ -31,13 +31,13 @@ Diese Klasse wird von Auflistungsklassen verwendet, verschieben, kopieren, Vergl
 ## <a name="syntax"></a>Syntax
 
 ```
-template<typename T>  
+template<typename T>
 class CElementTraits : public CDefaultElementTraits<T>
 ```
 
 #### <a name="parameters"></a>Parameter
 
-`T`  
+*T*<br/>
 Der Typ der Daten in der Auflistung gespeichert werden.
 
 ## <a name="remarks"></a>Hinweise
@@ -54,5 +54,5 @@ Weitere Informationen finden Sie unter [ATL-Auflistungsklassen](../../atl/atl-co
 
 ## <a name="see-also"></a>Siehe auch
 
-[CDefaultElementTraits-Klasse](../../atl/reference/cdefaultelementtraits-class.md)   
+[CDefaultElementTraits-Klasse](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

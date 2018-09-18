@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3296 | Microsoft Docs
+title: Compilerfehler C3296 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85b4f80a9f257fa5e5d9ed8701a6ee7cfdf68cfd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 585d9eaaf37b913a0be339ccabd230aa79142526
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249966"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016584"
 ---
 # <a name="compiler-error-c3296"></a>Compilerfehler C3296
-'Eigenschaft': Es ist bereits eine Eigenschaft mit diesem Namen vorhanden.  
-  
- Der Compiler hat mehr als eine Eigenschaft mit demselben Namen gefunden. Jede Eigenschaft in einem Typ muss einen eindeutigen Namen aufweisen.  
-  
- Weitere Informationen finden Sie unter [property](../../windows/property-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C3296 generiert:  
-  
-```  
-// C3296.cpp  
-// compile with: /clr /c  
-using namespace System;  
-  
-ref class R {  
-public:  
-   property int MyProp[int] { int get(int); }  
-  
-   property String^ MyProp[int] { void set(int, String^); }   // C3296  
-};  
+
+'Eigenschaft': Es ist bereits eine Eigenschaft mit diesem Namen vorhanden.
+
+Der Compiler hat mehr als eine Eigenschaft mit demselben Namen gefunden. Jede Eigenschaft in einem Typ muss einen eindeutigen Namen aufweisen.
+
+Weitere Informationen finden Sie unter [property](../../windows/property-cpp-component-extensions.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C3296 generiert:
+
+```
+// C3296.cpp
+// compile with: /clr /c
+using namespace System;
+
+ref class R {
+public:
+   property int MyProp[int] { int get(int); }
+
+   property String^ MyProp[int] { void set(int, String^); }   // C3296
+};
 ```

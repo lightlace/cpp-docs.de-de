@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71dc40a7c2d4fe460f546dbfe4f55d00aff59667
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: aa5f96b8937168126509025735d20fab7b35c2b2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759508"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019198"
 ---
 # <a name="cprimitiveelementtraits-class"></a>CPrimitiveElementTraits-Klasse
 
@@ -33,13 +33,13 @@ Diese Klasse stellt die Standardmethoden und -Funktionen für eine Auflistungskl
 ## <a name="syntax"></a>Syntax
 
 ```
-template <typename T>  
+template <typename T>
 class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Der Typ der Daten in das Klassenobjekt Auflistung gespeichert werden.
 
 ## <a name="members"></a>Member
@@ -91,5 +91,5 @@ typedef T& OUTARGTYPE;
 
 ## <a name="see-also"></a>Siehe auch
 
-[CDefaultElementTraits-Klasse](../../atl/reference/cdefaultelementtraits-class.md)   
+[CDefaultElementTraits-Klasse](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

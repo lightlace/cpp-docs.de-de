@@ -1,5 +1,5 @@
 ---
-title: Linkertoolfehler Lnk1224 | Microsoft Docs
+title: Linkertoolfehler Lnk1224 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd2be38847d9804279758ce8e224c06d655dc382
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f7953e2e4df82bf271babaa385eabd93e98ae39e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302772"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022462"
 ---
 # <a name="linker-tools-error-lnk1224"></a>Linkertoolfehler LNK1224
-Ungültige Bilddatei Basisadresse  
-  
- Die Angabe einer ungültigen Basisadresse für das Bild. Basisadressen müssen 64KB ausgerichtet sein (die letzten vier hexadezimale Ziffern müssen null sein) und Anwendungsbasis muss in eine 32-Bit mit oder ohne Vorzeichen-Wert passen.
+
+Ungültiges Bild Basisadresse
+
+Sie haben eine ungültige Basisadresse für das Image angegeben. Basisadressen müssen 64KB ausgerichtet sein (die letzten vier hexadezimale Ziffern müssen null sein) und die Anwendungsbasis muss in einer 32-Bit mit oder ohne Vorzeichen-Wert passen.

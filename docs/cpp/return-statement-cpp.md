@@ -17,53 +17,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dda9406909f3508472c11524402c37baa17a76b0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 42248813cdc69a4db268d1e3a2ef447a483ebeb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465788"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017482"
 ---
 # <a name="return-statement-c"></a>return-Anweisung (C++)
-Beendet die Ausführung einer Funktion und gibt die Steuerung an die aufrufende Funktion zurück (oder an das Betriebssystem, wenn Sie die Steuerung von der `main`-Funktion übertragen). Die Ausführung wird in der aufrufenden Funktion an dem Punkt fortgesetzt, der dem Aufruf unmittelbar folgt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-return [expression];  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Die Klausel `expression` wird, sofern vorhanden, in den Typ konvertiert, der in der Funktionsdeklaration angegeben wird, als ob eine Initialisierung durchgeführt würde. Konvertierung vom Typ des Ausdrucks, der die **zurückgeben** Typ der Funktion kann temporäre Objekte erstellen. Weitere Informationen dazu, wie und wann temporäre Objekte erstellt werden, finden Sie unter [temporäre Objekte](../cpp/temporary-objects.md).  
-  
- Der Wert der `expression`-Klausel wird an die aufrufende Funktion zurückgegeben. Wenn der Ausdruck ausgelassen wird, wird der Rückgabewert der Funktion nicht definiert. Konstruktoren und Destruktoren sowie Funktionen des Typs **"void"**, keinen Ausdruck im Angeben der **zurückgeben** Anweisung. Funktionen aller anderen Typen müssen Geben Sie einen Ausdruck in der **zurückgeben** Anweisung.  
-  
- Wenn die ablaufsteuerung den Block mit der Definition der Funktion beendet wird, werden Sie das Ergebnis ist dasselbe wie wenn eine **zurückgeben** -Anweisung ohne einen Ausdruck musste ausgeführt wurde. Dies ist ungültig bei Funktionen, die mit Rückgabewert deklariert werden.  
-  
- Eine Funktion kann eine beliebige Anzahl von haben **zurückgeben** Anweisungen.  
-  
- Im folgenden Beispiel wird einen Ausdruck mit einem **zurückgeben** Anweisung, um die größte von zwei ganzen Zahlen zu erhalten.  
-  
-## <a name="example"></a>Beispiel  
-  
-```cpp 
-// return_statement2.cpp  
-#include <stdio.h>  
-  
-int max ( int a, int b )  
-{  
-   return ( a > b ? a : b );  
-}  
-  
-int main()  
-{  
-    int nOne = 5;  
-    int nTwo = 7;  
-  
-    printf_s("\n%d is bigger\n", max( nOne, nTwo ));  
-}  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Sprunganweisungen](../cpp/jump-statements-cpp.md)   
- [Schlüsselwörter](../cpp/keywords-cpp.md)
+
+Beendet die Ausführung einer Funktion und gibt die Steuerung an die aufrufende Funktion zurück (oder an das Betriebssystem, wenn Sie die Steuerung von der `main`-Funktion übertragen). Die Ausführung wird in der aufrufenden Funktion an dem Punkt fortgesetzt, der dem Aufruf unmittelbar folgt.
+
+## <a name="syntax"></a>Syntax
+
+```
+return [expression];
+```
+
+## <a name="remarks"></a>Hinweise
+
+Die Klausel `expression` wird, sofern vorhanden, in den Typ konvertiert, der in der Funktionsdeklaration angegeben wird, als ob eine Initialisierung durchgeführt würde. Konvertierung vom Typ des Ausdrucks, der die **zurückgeben** Typ der Funktion kann temporäre Objekte erstellen. Weitere Informationen dazu, wie und wann temporäre Objekte erstellt werden, finden Sie unter [temporäre Objekte](../cpp/temporary-objects.md).
+
+Der Wert der `expression`-Klausel wird an die aufrufende Funktion zurückgegeben. Wenn der Ausdruck ausgelassen wird, wird der Rückgabewert der Funktion nicht definiert. Konstruktoren und Destruktoren sowie Funktionen des Typs **"void"**, keinen Ausdruck im Angeben der **zurückgeben** Anweisung. Funktionen aller anderen Typen müssen Geben Sie einen Ausdruck in der **zurückgeben** Anweisung.
+
+Wenn die ablaufsteuerung den Block mit der Definition der Funktion beendet wird, werden Sie das Ergebnis ist dasselbe wie wenn eine **zurückgeben** -Anweisung ohne einen Ausdruck musste ausgeführt wurde. Dies ist ungültig bei Funktionen, die mit Rückgabewert deklariert werden.
+
+Eine Funktion kann eine beliebige Anzahl von haben **zurückgeben** Anweisungen.
+
+Im folgenden Beispiel wird einen Ausdruck mit einem **zurückgeben** Anweisung, um die größte von zwei ganzen Zahlen zu erhalten.
+
+## <a name="example"></a>Beispiel
+
+```cpp
+// return_statement2.cpp
+#include <stdio.h>
+
+int max ( int a, int b )
+{
+   return ( a > b ? a : b );
+}
+
+int main()
+{
+    int nOne = 5;
+    int nTwo = 7;
+
+    printf_s("\n%d is bigger\n", max( nOne, nTwo ));
+}
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Sprunganweisungen](../cpp/jump-statements-cpp.md)<br/>
+[Schlüsselwörter](../cpp/keywords-cpp.md)

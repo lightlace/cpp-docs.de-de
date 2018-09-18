@@ -1,5 +1,5 @@
 ---
-title: 'NMAKE: Schwerwiegender Fehler U1076 | Microsoft Docs'
+title: 'NMAKE: Schwerwiegender Fehler U1076 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7b63902bba469affa68104591d36296998e75e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ad5f9f884c4b98370b98c6f1f1c7e6c5a7c4359
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322301"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017221"
 ---
 # <a name="nmake-fatal-error-u1076"></a>NMAKE: Schwerwiegender Fehler U1076
-Der Name ist zu lang  
-  
- Eine Zeichenfolge überschritten keines der folgenden Beschränkungen:  
-  
--   1024 Zeichen für einen Makronamen.  
-  
--   256 Zeichen für einen Zielpfadnamen.  
-  
--   2048 Zeichen für einen Befehl.
+
+Name ist zu lang
+
+Eine Zeichenfolge überschritten der folgenden Grenzwerte:
+
+- 1024 Zeichen für einen Makronamen.
+
+- 256 Zeichen für einen Zielpfadnamen.
+
+- 2048 Zeichen für einen Befehl.

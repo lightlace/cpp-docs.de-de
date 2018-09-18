@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2449 | Microsoft Docs
+title: Compilerfehler C2449 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a2ea92f79125e4e3b96f35229a487a5ab787e1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3e92638eaca1fe951d6b67da7563930214198926
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224231"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018768"
 ---
 # <a name="compiler-error-c2449"></a>Compilerfehler C2449
-gefunden ' {' im Dateigültigkeitsbereich (fehlende Funktionsheader?)  
-  
- Eine öffnende geschweifte Klammer tritt im Dateigültigkeitsbereich.  
-  
- Dieser Fehler kann durch ein Semikolon zwischen einem Funktionsheader und die öffnende geschweifte Klammer der Funktionsdefinition verursacht werden.  
-  
- Im folgenden Beispiel wird C2499 generiert:  
-  
-```  
-// C2449.c  
-// compile with: /c  
-void __stdcall func(void) {}   // OK  
-void __stdcall func(void);  // extra semicolon on this line  
-{                         // C2449 detected here  
+
+gefunden. ' {' im Dateigültigkeitsbereich (fehlt der Funktionsheader?)
+
+Eine öffnende geschweifte Klammer tritt im Dateigültigkeitsbereich.
+
+Dieser Fehler kann durch ein Semikolon zwischen einem Funktionsheader und die öffnende geschweifte Klammer der Funktionsdefinition verursacht werden.
+
+Im folgende Beispiel wird die C2499 generiert:
+
+```
+// C2449.c
+// compile with: /c
+void __stdcall func(void) {}   // OK
+void __stdcall func(void);  // extra semicolon on this line
+{                         // C2449 detected here
 ```

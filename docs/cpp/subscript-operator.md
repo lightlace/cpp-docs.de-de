@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb54752efb23db7599538e6dc2b71ea3bf5eb3a3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cf12d517647e36c8a0d9428b818f3812bfea2e1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197334"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020614"
 ---
 # <a name="subscript-operator-"></a>Subscript-Operator]
 
@@ -64,7 +64,7 @@ Ein indexierte Ausdruck kann auch mehrere Indizes haben, wie folgt:
 
 *expression1* **[** *expression2* **] [** *expression3* **]** ...
 
-indexierte Ausdrücke sind von links nach rechts angeordnet. Die äußerste linke Indexierte Ausdruck *expression1* **[** *expression2* **]**, wird zuerst ausgewertet. Die Adresse, die sich aus dem Hinzufügen von *expression1* und *expression2* ergibt, bildet einen Zeigerausdruck. Dann wird *expression3* zu diesem Zeigerausdruck hinzugefügt, um einen neuen Zeigerausdruck zu bilden. Dies geht so lange weiter, bis der letzte Subscriptausdruck hinzugefügt wurde. Der Dereferenzierungsoperator (<strong>\*</strong>) wird angewendet, nachdem der letzte Indexierte Ausdruck ausgewertet wird, es sei denn, der letzte Zeigerwert einen Arraytyp spricht.
+indexierte Ausdrücke sind von links nach rechts angeordnet. Der äußerste linke indexierte Ausdruck *expression1* **[** *expression2* **]** wird zuerst ausgewertet. Die Adresse, die sich aus dem Hinzufügen von *expression1* und *expression2* ergibt, bildet einen Zeigerausdruck. Dann wird *expression3* zu diesem Zeigerausdruck hinzugefügt, um einen neuen Zeigerausdruck zu bilden. Dies geht so lange weiter, bis der letzte Subscriptausdruck hinzugefügt wurde. Der Dereferenzierungsoperator (<strong>\*</strong>) wird angewendet, nachdem der letzte Indexierte Ausdruck ausgewertet wird, es sei denn, der letzte Zeigerwert einen Arraytyp spricht.
 
 Ausdrücke mit mehreren Indizes verweisen auf Elemente aus mehrdimensionalen Arrays. Ein mehrdimensionales Array ist ein Array, dessen Elemente Arrays sind. Beispielsweise ist das erste Element eines dreidimensionalen Arrays ein Array mit zwei Dimensionen. Im folgenden Beispiel wird ein einfaches, zweidimensionales Array aus Zeichen deklariert und initialisiert:
 
@@ -120,6 +120,6 @@ Der Indexoperator ist kommutativ. Daher sind die Begriffe *Array*[*Index*] und *
 
 [Postfixausdrücke](../cpp/postfix-expressions.md)<br/>
 [C++-Built-in-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[Arrays](../cpp/arrays-cpp.md)
-[eindimensionale Arrays](../c-language/one-dimensional-arrays.md)<br/>
+[Arrays](../cpp/arrays-cpp.md)<br/>
+[Eindimensionale Arrays](../c-language/one-dimensional-arrays.md)<br/>
 [Mehrdimensionale Arrays](../c-language/multidimensional-arrays-c.md)<br/>

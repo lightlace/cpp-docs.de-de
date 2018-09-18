@@ -1941,12 +1941,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a504df1dfb2826b5056b5feb5b13ac3555515ae
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e0c2138de2becc7afa9d2392c2fa5240b584b6d3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712802"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018248"
 ---
 # <a name="arm-intrinsics"></a>Systeminterne ARM-Funktionen
 Der Visual C++-Compiler stellt die folgenden systeminternen Funktionen in der ARM-Architektur zur Verfügung. Weitere Informationen zu ARM finden Sie unter den [ARM-Architektur-Reference Manuals](http://go.microsoft.com/fwlink/p/?LinkId=522049) und [ARM Assembler Tools Guide](http://go.microsoft.com/fwlink/p/?LinkId=246102) auf der ARM-Infocenter-Website.  
@@ -2162,11 +2162,11 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
   
  **Parameter**  
   
- `Location`  
- Die Adresse eines Speicherbereichs für Lese- oder Schreibvorgänge.  
+*Position*<br/>
+Die Adresse eines Speicherbereichs für Lese- oder Schreibvorgänge.  
   
- `Value`  
- Der Wert, der in der angegebenen Speicheradresse (nur systeminterne Store Funktionen) zu schreiben.  
+*Wert*<br/>
+Der Wert, der in der angegebenen Speicheradresse (nur systeminterne Store Funktionen) zu schreiben.  
   
  **Der Rückgabewert (systeminterne Funktionen zum Laden nur)**  
   
@@ -2209,20 +2209,20 @@ int _MoveFromCoprocessor2(
   
  **Parameter**  
   
- `coproc`  
- Coprozessorzahl im Bereich 0 bis 15.  
+*coproc*<br/>
+Coprozessorzahl im Bereich 0 bis 15.  
   
- `opcode1`  
- Coprozessorspezifischer Opcode im Bereich von 0 bis 7.  
+*opcode1*<br/>
+Coprozessorspezifischer Opcode im Bereich von 0 bis 7.  
   
- `crn`  
- Coprozessorregisternummer im Bereich 0 bis 15, die den ersten Operanden für die Anweisung angibt.  
+*CRN*<br/>
+Coprozessorregisternummer im Bereich 0 bis 15, die den ersten Operanden für die Anweisung angibt.  
   
- `crm`  
- Coprozessorregisternummer im Bereich 0 bis 15, die einen zusätzlichen Quell- oder Zieloperanden angibt.  
+*CRM*<br/>
+Coprozessorregisternummer im Bereich 0 bis 15, die einen zusätzlichen Quell- oder Zieloperanden angibt.  
   
- `opcode2`  
- Zusätzlicher coprozessorspezifischer Opcode im Bereich von 0 bis 7.  
+*opcode2*<br/>
+Zusätzlicher coprozessorspezifischer Opcode im Bereich von 0 bis 7.  
   
  **Rückgabewert**  
   
@@ -2248,14 +2248,14 @@ unsigned __int64 _MoveFromCoprocessor64(
   
  **Parameter**  
   
- `coproc`  
- Coprozessorzahl im Bereich 0 bis 15.  
+*coproc*<br/>
+Coprozessorzahl im Bereich 0 bis 15.  
   
- `opcode1`  
- Coprozessorspezifischer Opcode im Bereich von 0 bis 15.  
+*opcode1*<br/>
+Coprozessorspezifischer Opcode im Bereich von 0 bis 15.  
   
- `crm`  
- Coprozessorregisternummer im Bereich 0 bis 15, die einen zusätzlichen Quell- oder Zieloperanden angibt.  
+*CRM*<br/>
+Coprozessorregisternummer im Bereich 0 bis 15, die einen zusätzlichen Quell- oder Zieloperanden angibt.  
   
  **Gibt den Wert**  
   
@@ -2293,23 +2293,23 @@ void _MoveToCoprocessor2(
   
  **Parameter**  
   
- `value`  
- Der Wert, der in den Coprozessor geschrieben werden soll.  
+*Wert*<br/>
+Der Wert, der in den Coprozessor geschrieben werden soll.  
   
- `coproc`  
- Coprozessorzahl im Bereich 0 bis 15.  
+*coproc*<br/>
+Coprozessorzahl im Bereich 0 bis 15.  
   
- `opcode1`  
- Coprozessorspezifischer Opcode im Bereich von 0 bis 7.  
+*opcode1*<br/>
+Coprozessorspezifischer Opcode im Bereich von 0 bis 7.  
   
- `crn`  
- Coprozessorregisternummer im Bereich 0 bis 15, die den ersten Operanden für die Anweisung angibt.  
+*CRN*<br/>
+Coprozessorregisternummer im Bereich 0 bis 15, die den ersten Operanden für die Anweisung angibt.  
   
- `crm`  
- Coprozessorregisternummer im Bereich 0 bis 15, die einen zusätzlichen Quell- oder Zieloperanden angibt.  
+*CRM*<br/>
+Coprozessorregisternummer im Bereich 0 bis 15, die einen zusätzlichen Quell- oder Zieloperanden angibt.  
   
- `opcode2`  
- Zusätzlicher coprozessorspezifischer Opcode im Bereich von 0 bis 7.  
+*opcode2*<br/>
+Zusätzlicher coprozessorspezifischer Opcode im Bereich von 0 bis 7.  
   
  **Rückgabewert**  
   
@@ -2336,14 +2336,14 @@ void _MoveFromCoprocessor64(
   
  **Parameter**  
   
- `coproc`  
- Coprozessorzahl im Bereich 0 bis 15.  
+*coproc*<br/>
+Coprozessorzahl im Bereich 0 bis 15.  
   
- `opcode1`  
- Coprozessorspezifischer Opcode im Bereich von 0 bis 15.  
+*opcode1*<br/>
+Coprozessorspezifischer Opcode im Bereich von 0 bis 15.  
   
- `crm`  
- Coprozessorregisternummer im Bereich 0 bis 15, die einen zusätzlichen Quell- oder Zieloperanden angibt.  
+*CRM*<br/>
+Coprozessorregisternummer im Bereich 0 bis 15, die einen zusätzlichen Quell- oder Zieloperanden angibt.  
   
  **Rückgabewert**  
   

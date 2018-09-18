@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2555 | Microsoft Docs
+title: Compilerfehler C2555 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d2d1a710177e2c8c72b0afeff662dddf1c22ef5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f91ec33db2d3a7b6772556233a3c99b501ede76
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230583"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017338"
 ---
 # <a name="compiler-error-c2555"></a>Compilerfehler C2555
-"Class1:: function1": Überschreiben der virtuellen Funktion-Rückgabetyp unterscheidet sich und ist nicht von "Class2:: function2" kovariant  
-  
- Eine virtuelle Funktion und die abgeleiteten überschreibenden Funktion haben identische Parameterlisten jedoch unterschiedliche Rückgabetypen. Eine überschreibende Funktion in einer abgeleiteten Klasse kann nicht von einer virtuellen Funktion in einer Basisklasse nur durch ihren Rückgabetyp unterscheiden.  
-  
- Zum Beheben dieses Fehlers umgewandelt zurückgegeben, nachdem die virtuelle Funktion aufgerufen wurde.  
-  
- Dieser Fehler kann auch angezeigt, wenn Sie mit "/ CLR" kompiliert.   Z. B. Visual C++, die folgende C#-Deklaration entspricht:  
-  
-```  
-Guid[] CheckSources(Guid sourceID, Guid[] carouselIDs);  
-```  
-  
- echt  
-  
-```  
-Guid CheckSources(Guid sourceID, Guid carouselIDs[]) [];  
-```  
-  
- Weitere Informationen zu C2555 finden Sie in der Knowledge Base-Artikel Q240862.  
-  
- Im folgenden Beispiel wird C2555 generiert:  
-  
-```  
-// C2555.cpp  
-// compile with: /c  
-struct X {  
-   virtual void func();  
-};  
-struct Y : X {  
-   char func();  // C2555  
-   void func2();   // OK  
-};  
+
+'Class1 ':: function1: überschreibende virtuelle Funktion unterscheidet sich und ist nicht von 'Class2 ':: function2 kovariant zurückgeben
+
+Haben eine virtuelle Funktion und die abgeleiteten überschreibenden Funktion Parameterlisten identisch, jedoch unterschiedliche Rückgabetypen. Eine überschreibende-Funktion in einer abgeleiteten Klasse kann nicht von einer virtuellen Funktion in einer Basisklasse nur durch ihren Rückgabetyp unterscheiden.
+
+Um diesen Fehler zu beheben, wandeln Sie den Rückgabewert, nachdem die virtuelle Funktion aufgerufen wurde.
+
+Dieser Fehler kann auch angezeigt, wenn Sie mit "/ CLR" kompilieren.   Z. B. Visual C++ entspricht der folgenden C#-Deklaration:
+
+```
+Guid[] CheckSources(Guid sourceID, Guid[] carouselIDs);
+```
+
+echt
+
+```
+Guid CheckSources(Guid sourceID, Guid carouselIDs[]) [];
+```
+
+Weitere Informationen zu C2555 finden Sie in der Knowledge Base-Artikel Q240862.
+
+Im folgende Beispiel wird die C2555 generiert:
+
+```
+// C2555.cpp
+// compile with: /c
+struct X {
+   virtual void func();
+};
+struct Y : X {
+   char func();  // C2555
+   void func2();   // OK
+};
 ```

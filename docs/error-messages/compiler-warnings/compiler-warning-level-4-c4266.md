@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4266 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4266 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,51 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecbf7326b79cd22cdff6c094d8dc0c7f9113deb6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 411654cd70d8dfb241e925112e42bbbcad355597
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294559"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023162"
 ---
 # <a name="compiler-warning-level-4-c4266"></a>Compilerwarnung (Stufe 4) C4266
-'Funktion': keine Überschreibung für virtuelle Memberfunktion der Basis 'Type'; die Funktion wird ausgeblendet  
-  
- Eine abgeleitete Klasse nicht alle Überladungen der eine virtuelle Funktion überschreiben.  
-  
- Diese Warnung ist standardmäßig deaktiviert.  Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
-  
- Im folgenden Beispiel wird C4266 generiert:  
-  
-```  
-// C4266.cpp  
-// compile with: /W4 /c  
-#pragma warning (default : 4266)  
-class Engine {  
-public:  
-   virtual void OnException(int&,int);  
-   virtual void OnException(int&,int&,int);  
-};  
-  
-class LocalBinding : private Engine {  
-   virtual void OnException(int&,int);  
-};   // C4266  
-```  
-  
- Mögliche Lösung:  
-  
-```  
-// C4266b.cpp  
-// compile with: /W4 /c  
-#pragma warning (default : 4266)  
-class Engine {  
-public:  
-   virtual void OnException(int&,int);  
-   virtual void OnException(int&,int&,int);  
-};  
-  
-class LocalBinding : private Engine {  
-   virtual void OnException(int&,int);  
-   virtual void OnException(int&, int&, int);  
-};  
+
+'Funktion': keine Überschreibung für virtuelle Memberfunktion der Basis 'Type'; Funktion wird ausgeblendet
+
+Alle Überladungen der eine virtuelle Funktion von eine abgeleitete Klasse nicht überschrieben.
+
+Diese Warnung ist standardmäßig deaktiviert.  Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
+
+Im folgende Beispiel wird die C4266 generiert:
+
+```
+// C4266.cpp
+// compile with: /W4 /c
+#pragma warning (default : 4266)
+class Engine {
+public:
+   virtual void OnException(int&,int);
+   virtual void OnException(int&,int&,int);
+};
+
+class LocalBinding : private Engine {
+   virtual void OnException(int&,int);
+};   // C4266
+```
+
+Mögliche Lösung:
+
+```
+// C4266b.cpp
+// compile with: /W4 /c
+#pragma warning (default : 4266)
+class Engine {
+public:
+   virtual void OnException(int&,int);
+   virtual void OnException(int&,int&,int);
+};
+
+class LocalBinding : private Engine {
+   virtual void OnException(int&,int);
+   virtual void OnException(int&, int&, int);
+};
 ```

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9acb054c7d991e2d9e98df3ce9bba8c7093f281a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e615068580bcc9078959cc6cdd7831d05b5a4acd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761481"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020874"
 ---
 # <a name="understanding-backus-nauer-form-bnf-syntax"></a>Grundlegendes zu Backus Nauer Form (BNF)-Syntax
 
@@ -54,56 +54,56 @@ Hier sind einige Beispiele für Abfragesyntax um besser zu verstehen, wie die Li
 
 ### <a name="syntax-example-1"></a>Attributsyntax-Beispiel 1
 
-```  
-<registry expression> ::= <Add Key>  
+```
+<registry expression> ::= <Add Key>
 ```
 
 Gibt an, dass `registry expression` entspricht `Add Key`.
 
 ### <a name="syntax-example-2"></a>Attributsyntax-Beispiel 2
 
-```  
-<registry expression> ::= <Add Key> | <Delete Key>  
+```
+<registry expression> ::= <Add Key> | <Delete Key>
 ```
 
 Gibt an, dass `registry expression` entspricht entweder `Add Key` oder `Delete Key`.
 
 ### <a name="syntax-example-3"></a>Syntaxbeispiel 3
 
-```  
-<Key Name> ::= '<AlphaNumeric>+'  
+```
+<Key Name> ::= '<AlphaNumeric>+'
 ```
 
 Gibt an, dass `Key Name` entspricht einer oder mehreren `AlphaNumerics`.
 
 ### <a name="syntax-example-4"></a>Syntaxbeispiel 4
 
-```  
-<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name>  
+```
+<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name>
 ```
 
 Gibt an, dass `Add Key` entspricht `Key Name`, und dass die Zeichenfolgenliterale `ForceRemove`, `NoRemove`, und `val`, sind optional.
 
 ### <a name="syntax-example-5"></a>Syntaxbeispiel 5
 
-```  
-<AlphaNumeric> ::= any character not NULL, that is, ASCII 0  
+```
+<AlphaNumeric> ::= any character not NULL, that is, ASCII 0
 ```
 
 Gibt an, dass `AlphaNumeric` entspricht, alle nicht-NULL-Zeichen.
 
 ### <a name="syntax-example-6"></a>Attributsyntax-Beispiel 6
 
-```  
-val 'testmulti' = m 'String 1\0String 2\0'  
+```
+val 'testmulti' = m 'String 1\0String 2\0'
 ```
 
 Gibt an, dass der Schlüsselname `testmulti` eine mehrteilige Zeichenfolge besteht aus `String 1` und `String 2`.
 
 ### <a name="syntax-example-7"></a>Syntaxbeispiel 7
 
-```  
-val 'testhex' = d '&H55'  
+```
+val 'testhex' = d '&H55'
 ```
 
 Gibt an, dass der Schlüsselname `testhex` ist ein DWORD-Wert, die auf hexadezimale 55 (decimal 85) festgelegt. Beachten Sie dieses Format entspricht dem **& H** Notation als finden Sie in der Visual Basic-Spezifikation.

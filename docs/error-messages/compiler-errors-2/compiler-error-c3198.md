@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3198 generiert | Microsoft Docs
+title: Compilerfehler C3198 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0516e7cae12e544195d157781e6ed86923470420
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bbb91d6f7b3ef6b8204a5f8bfb753db98ab6f93d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250904"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023383"
 ---
-# <a name="compiler-error-c3198"></a>Compiler-Fehler C3198 generiert
-Ungültige Verwendung eines Gleitkommapragmas: Fenv_access-Pragma unterstützt nur im präzise-Modus  
-  
- [Fenv_access](../../preprocessor/fenv-access.md) Pragma wurde verwendet, unter einer [/fp](../../build/reference/fp-specify-floating-point-behavior.md) andere Einstellung als **/fp: präzise**.  
-  
- Im folgende Beispiel wird C3198 generiert:  
-  
-```  
-// C3198.cpp  
-// compile with: /fp:fast  
-#pragma fenv_access(on)   // C3198  
+# <a name="compiler-error-c3198"></a>Compilerfehler C3198
+
+Ungültige Verwendung von Gleitkommapragmas: Fenv_access-Pragma wird nur im precise-Modus ausgeführt.
+
+[Fenv_access](../../preprocessor/fenv-access.md) Pragma wurde verwendet, unter einer [/fp](../../build/reference/fp-specify-floating-point-behavior.md) andere Einstellung als **/fp: präzise**.
+
+Im folgende Beispiel wird die C3198 generiert:
+
+```
+// C3198.cpp
+// compile with: /fp:fast
+#pragma fenv_access(on)   // C3198
 ```

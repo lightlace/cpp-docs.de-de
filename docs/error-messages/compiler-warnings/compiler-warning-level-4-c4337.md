@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4337 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4337 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,64 +16,65 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75e77187f871373957ab68108a7fa14c0751a92a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5b4e72f3dfda903a3d0f4563a730dc44411f79c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295154"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016454"
 ---
 # <a name="compiler-warning-level-4-c4337"></a>Compilerwarnung (Stufe 4) C4337
-übergreifenden Typbibliothek 'Typbibliothek1' in 'Typbibliothek2' wird automatisch importiert  
-  
- Auto_search-Attribut des [die #import-Direktive](../../preprocessor/hash-import-directive-cpp.md) verursacht eine Typbibliothek implizit importiert werden sollen.  
-  
- Zwei Typbibliotheken auf dem Datenträger erstellt aus den folgenden zwei Dateien (kompiliert mit midl.exe):  
-  
-```  
-// C4337a.idl  
-[  
-  uuid(F87070BA-C6D9-405C-A8E4-8CD9CA25C12B)  
-]  
-library C4337aLib  
-{  
-   [uuid(F87070BA-C6D9-405C-A8E4-8CD9CA25C12C)]  
-   enum E_C4337a  
-   {  
-      one = 0,  
-      two = 1,  
-      three = 2  
-    };  
-};  
-```  
-  
- und klicken Sie dann die zweite IDL-Datei,  
-  
-```  
-// C4337b.idl  
-[  
-   uuid(F87070BA-C6D9-405C-A8E4-8CD9CA25C12D)  
-]  
-  
-library C4337bLib  
-{  
-   importlib("c4337a.tlb");  
-  
-   [uuid(F87070BA-C6D9-405C-A8E4-8CD9CA25C12E)]  
-   struct S_C4337b  
-   {  
-      enum E_C4337a e;  
-   };  
-};  
-```  
-  
- Im folgenden Beispiel wird C4337 generiert:  
-  
-```  
-// C4337.cpp  
-// compile with: /W4 /LD  
-#import "c4337b.tlb" auto_search   // C4337  
-// explicitly #import all type libraries to resolve  
-// #import "C4337a.tlb"  
-// #import "C4337b.tlb"  
+
+die übergreifende Typbibliothek 'Typbibliothek1' in 'Typbibliothek2' wird automatisch importiert
+
+Das Auto_search-Attribut des [die #import-Direktive](../../preprocessor/hash-import-directive-cpp.md) wurde eine Typbibliothek implizit importiert werden.
+
+Zwei Typbibliotheken auf dem Datenträger, die von den folgenden zwei Dateien (kompiliert mit midl.exe) erstellt:
+
+```
+// C4337a.idl
+[
+  uuid(F87070BA-C6D9-405C-A8E4-8CD9CA25C12B)
+]
+library C4337aLib
+{
+   [uuid(F87070BA-C6D9-405C-A8E4-8CD9CA25C12C)]
+   enum E_C4337a
+   {
+      one = 0,
+      two = 1,
+      three = 2
+    };
+};
+```
+
+und klicken Sie dann die zweite IDL-Datei,
+
+```
+// C4337b.idl
+[
+   uuid(F87070BA-C6D9-405C-A8E4-8CD9CA25C12D)
+]
+
+library C4337bLib
+{
+   importlib("c4337a.tlb");
+
+   [uuid(F87070BA-C6D9-405C-A8E4-8CD9CA25C12E)]
+   struct S_C4337b
+   {
+      enum E_C4337a e;
+   };
+};
+```
+
+Im folgende Beispiel wird die C4337 generiert:
+
+```
+// C4337.cpp
+// compile with: /W4 /LD
+#import "c4337b.tlb" auto_search   // C4337
+// explicitly #import all type libraries to resolve
+// #import "C4337a.tlb"
+// #import "C4337b.tlb"
 ```

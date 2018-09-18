@@ -1,5 +1,5 @@
 ---
-title: 'NMAKE: Schwerwiegender Fehler U1071 | Microsoft Docs'
+title: 'NMAKE: Schwerwiegender Fehler U1071 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c63b354bfbdd3dbdfc7704effcbe6c0495cede27
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0bec5ed46b054002d1ae95e5e3f0b9b1c8ee4984
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323286"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016155"
 ---
 # <a name="nmake-fatal-error-u1071"></a>NMAKE: Schwerwiegender Fehler U1071
-Schleife in Abhängigkeitsstruktur für Ziel "Zielname"  
-  
- Eine zirkuläre Abhängigkeit vorhanden ist, in der Abhängigkeitsstruktur für das angegebene Ziel. Das angegebene Ziel ist eine abhängige Datei von einem der abhängigen Elemente des angegebenen Ziels. Ringabhängigkeiten sind ungültig.
+
+Schleife im Abhängigkeitsstruktur für Ziel "Zielname"
+
+Eine zirkuläre Abhängigkeit vorhanden ist, in der Abhängigkeitsstruktur für das angegebene Ziel. Das angegebene Ziel ist ein abhängiges Element eines die abhängigen Elemente des angegebenen Ziels. Ringabhängigkeiten sind ungültig.

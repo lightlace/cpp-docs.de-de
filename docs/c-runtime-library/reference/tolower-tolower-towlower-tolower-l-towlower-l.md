@@ -53,14 +53,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e399cb38fee83fee23f88732bb2186c4b501c152
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49b52bd65439165ef8dd83917a0d75926caba518
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412627"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023665"
 ---
 # <a name="tolower-tolower-towlower-tolowerl-towlowerl"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
+
 Konvertiert ein Zeichen in Kleinbuchstaben.
 
 ## <a name="syntax"></a>Syntax
@@ -95,13 +96,13 @@ Für die gebietsschemaspezifische Übersetzung zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Routinen konvertiert eine Kopie des *c* in Kleinbuchstaben umgewandelt, wenn die Konvertierung möglich ist, und gibt das Ergebnis zurück. Es ist kein Rückgabewert zur Fehleranzeige reserviert.
+Jede dieser Routinen konvertiert eine Kopie von *c* in Kleinbuchstaben, wenn die Konvertierung ist möglich, und gibt das Ergebnis zurück. Es ist kein Rückgabewert zur Fehleranzeige reserviert.
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Routinen konvertiert einen vorhandenen Großbuchstaben in einen Kleinbuchstaben, wenn dies möglich und relevant ist. Die Groß-/Kleinschreibung Konvertierung von **Towlower** ist gebietsschemaspezifisch. Es werden nur die für das aktuelle Gebietsschema relevanten Zeichen geändert. Die Funktionen ohne das **_l** -Suffix verwenden das aktuell festgelegte Gebietsschema. Die Versionen dieser Funktionen mit dem **_l** Suffix das Gebietsschema als Parameter übernehmen und verwenden, anstatt die aktuell festgelegten Gebietsschema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Jede dieser Routinen konvertiert einen vorhandenen Großbuchstaben in einen Kleinbuchstaben, wenn dies möglich und relevant ist. Die Konvertierung von **Towlower** ist gebietsschemaspezifisch. Es werden nur die für das aktuelle Gebietsschema relevanten Zeichen geändert. Die Funktionen ohne das **_l** Suffix verwenden das aktuelle Gebietsschema. Die Versionen dieser Funktionen, die **_l** Suffix übernehmen das Gebietsschema als Parameter und verwenden, anstatt des aktuellen Gebietsschemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-In der Reihenfolge für **_tolower** zu den erwarteten Ergebnissen [__isascii](isascii-isascii-iswascii.md) und [Isupper](isupper-isupper-l-iswupper-iswupper-l.md) müssen beide ungleich NULL zurückgeben.
+In der Reihenfolge für **_tolower** die erwarteten Ergebnisse, [__isascii](isascii-isascii-iswascii.md) und [Isupper](isupper-isupper-l-iswupper-iswupper-l.md) müssen beide ungleich NULL zurückgeben.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -111,11 +112,11 @@ In der Reihenfolge für **_tolower** zu den erwarteten Ergebnissen [__isascii](i
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
 
 > [!NOTE]
-> **_tolower_l** und **_towlower_l** haben keine gebietsschemaabhängigkeit und sollen nicht direkt aufgerufen werden. Sie dienen zur internen Verwendung durch **_totlower_l**.
+> **_tolower_l** und **_towlower_l** haben keine gebietsschemaabhängigkeit und sind nicht dafür vorgesehen, direkt aufgerufen werden. Sie dienen zur internen Verwendung durch **_totlower_l**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**tolower**|\<ctype.h>|
 |**_tolower**|\<ctype.h>|

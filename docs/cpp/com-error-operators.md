@@ -14,15 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2fa69345542c41caecc33f5daa2f05026758178
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: c03c7b5f6b04e7082a797a074b53c1d9ef77d0f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401794"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016663"
 ---
 # <a name="comerror-operators"></a>_com_error-Operatoren
-Informationen zu den **_com_error** Operatoren finden Sie unter [_com_error-Klasse](../cpp/com-error-class.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [_com_error-Klasse](../cpp/com-error-class.md)
+
+Informationen zu den **_com_error** Operatoren finden Sie unter [_com_error-Klasse](../cpp/com-error-class.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[_com_error-Klasse](../cpp/com-error-class.md)

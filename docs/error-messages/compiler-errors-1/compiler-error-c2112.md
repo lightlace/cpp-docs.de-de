@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2112 | Microsoft Docs
+title: Compilerfehler C2112 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f050a4b9e8b188c5c44534972e9c94d89020351
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9bbb2a2cc65ae5b9216344e5d2e1a6cc3e13b93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164644"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018552"
 ---
 # <a name="compiler-error-c2112"></a>Compilerfehler C2112
-'-': Zeiger-Subtraktion erfordert einen Ganzzahl- oder Zeigertyp Ganzzahloperanden  
-  
- Es wurde versucht, Zeiger subtrahiert werden soll, die auf anderen Typen verweisen.
+
+"-": Subtraktion von Zeigern erfordert Ganzzahl- oder Zeigeroperanden
+
+Es wurde versucht, Zeiger subtrahiert werden soll, die auf verschiedene Typen verweisen.

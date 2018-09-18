@@ -1,5 +1,5 @@
 ---
-title: 'NMAKE: Schwerwiegender Fehler U1055 | Microsoft Docs'
+title: 'NMAKE: Schwerwiegender Fehler U1055 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f99681ff7219c46820da4c909a6f4eddccdabf6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50103f7445096e553a510da6272dd4be1886b710
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320881"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017929"
 ---
 # <a name="nmake-fatal-error-u1055"></a>NMAKE: Schwerwiegender Fehler U1055
-Umgebung erschöpft  
-  
- Das Betriebssystem war nicht genügend Platz für Umgebungsvariablen.  
-  
- Erhöhen Sie die Umgebung Speicherplatz oder weniger Umgebungsvariablen festgelegt.
+
+genügend Umgebungsspeicher
+
+Das Betriebssystem war nicht genügend Platz für Umgebungsvariablen.
+
+Erhöhen Sie den Speicherplatz für die Umgebung oder festlegen Sie weniger Umgebungsvariablen.

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d86adf69aef269e1bde04c0962ca383754fe803e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: dfb5ec444be55d7b595660f7777ae54e19143fd4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764129"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021615"
 ---
 # <a name="adding-an-atl-property-page"></a>Hinzufügen einer ATL-Eigenschaftenseite
 
@@ -44,7 +44,7 @@ Wenn Sie eine Eigenschaftenseite für ein Steuerelement erstellen, müssen Sie a
 
 ## <a name="see-also"></a>Siehe auch
 
-[Eigenschaftenseiten](../../atl/atl-com-property-pages.md)   
-[Grundlagen von ARL COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)   
+[Eigenschaftenseiten](../../atl/atl-com-property-pages.md)<br/>
+[Grundlagen von ARL COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Beispiel: Implementieren einer Eigenschaftenseite](../../atl/example-implementing-a-property-page.md)
 
