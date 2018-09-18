@@ -14,15 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eb59f476ae96dadad27e6db8995e6c60cc2f794
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59f6198de9f68414f285f4e5d2234bee6c151d12
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382272"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031976"
 ---
 # <a name="constants-in-primary-expressions"></a>Konstanten in primären Ausdrücken
-Ein konstanter Operand besitzt den Wert und Typ des konstanten Werts, den er darstellt. Eine Zeichenkonstante enthält den `int`-Typ. Eine Ganzzahlkonstante hat einen `int`, **long**, `unsigned int` oder `unsigned long`-Typ, abhängig von der Größe der ganzen Zahl und von der Art, wie der Wert angegeben wird. Weitere Informationen finden Sie unter [Konstanten](../c-language/c-constants.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [C-Ausdrücke (primär)](../c-language/c-primary-expressions.md)
+
+Ein konstanter Operand besitzt den Wert und Typ des konstanten Werts, den er darstellt. Eine Zeichenkonstante enthält den `int`-Typ. Eine Ganzzahlkonstante hat einen `int`, **long**, `unsigned int` oder `unsigned long`-Typ, abhängig von der Größe der ganzen Zahl und von der Art, wie der Wert angegeben wird. Weitere Informationen finden Sie unter [Konstanten](../c-language/c-constants.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[C-Ausdrücke (primär)](../c-language/c-primary-expressions.md)
