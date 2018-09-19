@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a54e0ba354e76996d03503e116008aa200b0905b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a471d6743da0cf803de72a9f257dfa67bc0dcbd1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199356"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036357"
 ---
 # <a name="file-handling"></a>Dateibehandlung
 
@@ -86,7 +86,7 @@ Diese Routinen bieten eine Möglichkeit, die Darstellung der Datei zwischen eine
 |[_get_osfhandle](../c-runtime-library/reference/get-osfhandle.md)|Betriebssystem-Dateihandle zurückgeben, das vorhandenem C-Laufzeit-Dateideskriptor zugeordnet ist|
 |[_open_osfhandle](../c-runtime-library/reference/open-osfhandle.md)|Ordnet den C-Laufzeit-Dateideskriptor einem vorhandenen Betriebssystem-Dateihandle zu.|
 
- Mit den folgenden Win32-Funktionen werden auch Dateien und Pipes geöffnet:
+Mit den folgenden Win32-Funktionen werden auch Dateien und Pipes geöffnet:
 
 - [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea)
 

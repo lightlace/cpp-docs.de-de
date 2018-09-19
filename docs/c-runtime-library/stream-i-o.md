@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fba53f16fad9321701e641020ed01349b13a5c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ab13141c573ad302528a09b74cb3a5e2aaa0382
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418099"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035218"
 ---
 # <a name="stream-io"></a>Stream-E/A
 
@@ -89,23 +89,23 @@ Diese Funktionen verarbeiten die Daten in verschiedenen Größen und Formate, an
 |[_vsnprintf, _vsnwprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md), [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)|Formatierte Daten der angegebenen Länge in Puffer schreiben|
 |[vsprintf, vswprintf](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md), [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)|Formatierte Daten in Puffer schreiben|
 
- Wenn ein Programm mit der Ausführung beginnt, öffnet der Startcode automatisch mehrere Streams: Standardeingabe (auf die von **stdin** verwiesen wird), Standardausgabe (auf die von **stdout** verwiesen wird) und Standardfehler (auf den von **stderr** verwiesen wird). Diese Streams werden standardmäßig an die Konsole (Tastatur und Bildschirm) weitergeleitet. Verwenden Sie **freopen**, um **stdin**, **stdout** oder **stderr** an eine Datenträgerdatei oder ein Gerät umzuleiten.
+Wenn ein Programm mit der Ausführung beginnt, öffnet der Startcode automatisch mehrere Streams: Standardeingabe (auf die von **stdin** verwiesen wird), Standardausgabe (auf die von **stdout** verwiesen wird) und Standardfehler (auf den von **stderr** verwiesen wird). Diese Streams werden standardmäßig an die Konsole (Tastatur und Bildschirm) weitergeleitet. Verwenden Sie **freopen**, um **stdin**, **stdout** oder **stderr** an eine Datenträgerdatei oder ein Gerät umzuleiten.
 
- Dateien, die mit den Streamroutinen geöffnet werden, werden standardmäßig gepuffert. Die Funktionen **stdout** und **stderr** werden geleert, wenn sie voll sind, oder wenn Sie nach jedem Bibliotheksaufruf in ein Zeichengerät schreiben. Wenn ein Programm nicht normal beendet wird, werden Ausgabepuffer möglicherweise nicht geleert, sodass es zu einem Verlust von Daten kommt. Verwenden Sie **fflush** oder **_flushall**, um sicherzustellen, dass der mit einer angegebenen Datei verknüpfte Puffer oder alle geöffneten Puffer in das Betriebssystem geleert werden, das die Daten zwischenspeichern kann, bevor sie auf den Datenträger geschrieben werden. Durch das Commit an den Datenträger wird sichergestellt, dass der Inhalt des geleerten Puffers bei einem Systemfehler nicht verloren geht.
+Dateien, die mit den Streamroutinen geöffnet werden, werden standardmäßig gepuffert. Die Funktionen **stdout** und **stderr** werden geleert, wenn sie voll sind, oder wenn Sie nach jedem Bibliotheksaufruf in ein Zeichengerät schreiben. Wenn ein Programm nicht normal beendet wird, werden Ausgabepuffer möglicherweise nicht geleert, sodass es zu einem Verlust von Daten kommt. Verwenden Sie **fflush** oder **_flushall**, um sicherzustellen, dass der mit einer angegebenen Datei verknüpfte Puffer oder alle geöffneten Puffer in das Betriebssystem geleert werden, das die Daten zwischenspeichern kann, bevor sie auf den Datenträger geschrieben werden. Durch das Commit an den Datenträger wird sichergestellt, dass der Inhalt des geleerten Puffers bei einem Systemfehler nicht verloren geht.
 
- Es gibt zwei Möglichkeiten, ein Commit des Pufferinhalts auf den Datenträger durchführen:
+Es gibt zwei Möglichkeiten, ein Commit des Pufferinhalts auf den Datenträger durchführen:
 
--   Stellen Sie eine Verknüpfung mit der Datei „COMMODE.OBJ“ her, um eine globale Commitkennzeichnung festzulegen. Die Standardeinstellung des globalen Flags ist **n** (dies steht für „no-commit“).
+- Stellen Sie eine Verknüpfung mit der Datei „COMMODE.OBJ“ her, um eine globale Commitkennzeichnung festzulegen. Die Standardeinstellung des globalen Flags ist **n** (dies steht für „no-commit“).
 
--   Legen Sie das Modusflag mit **fopen** oder **_fdopen** auf **c** fest.
+- Legen Sie das Modusflag mit **fopen** oder **_fdopen** auf **c** fest.
 
- Jede Datei, die ausdrücklich entweder mit dem **c**- oder dem **n**-Flag geöffnet wird, weist unabhängig vom Zustand des globalen Flags für ein Commit/No-Commit das für das Flag spezifische Verhalten auf.
+Jede Datei, die ausdrücklich entweder mit dem **c**- oder dem **n**-Flag geöffnet wird, weist unabhängig vom Zustand des globalen Flags für ein Commit/No-Commit das für das Flag spezifische Verhalten auf.
 
- Wenn Ihre Anwendung einen Stream nicht explizit schließt, wird der Stream beim Beenden des Programms automatisch geschlossen. Sie solltne einen Stream nach dem Beenden des Programms jedoch schließen, da die Anzahl der Streams, die gleichzeitig geöffnet sein können, begrenzt ist. Weitere Informationen zu dieser Begrenzung finden Sie unter [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) .
+Wenn Ihre Anwendung einen Stream nicht explizit schließt, wird der Stream beim Beenden des Programms automatisch geschlossen. Sie solltne einen Stream nach dem Beenden des Programms jedoch schließen, da die Anzahl der Streams, die gleichzeitig geöffnet sein können, begrenzt ist. Weitere Informationen zu dieser Begrenzung finden Sie unter [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) .
 
- Die Eingabe kann nur dann direkt auf die Ausgabe folgen, wenn zwischenzeitlich ein Aufruf von **fflush** oder einer dateipositionierenden Funktion (**fseek**, **fsetpos** oder **rewind**) erfolgt. Die Ausgabe kann ohne einen zwischenzeitlichen Aufruf einer dateipositionierenden Funktion auf die Eingabe folgen, wenn der Eingabevorgang auf das Ende der Datei trifft.
+Die Eingabe kann nur dann direkt auf die Ausgabe folgen, wenn zwischenzeitlich ein Aufruf von **fflush** oder einer dateipositionierenden Funktion (**fseek**, **fsetpos** oder **rewind**) erfolgt. Die Ausgabe kann ohne einen zwischenzeitlichen Aufruf einer dateipositionierenden Funktion auf die Eingabe folgen, wenn der Eingabevorgang auf das Ende der Datei trifft.
 
 ## <a name="see-also"></a>Siehe auch
 
 [Eingabe und Ausgabe](../c-runtime-library/input-and-output.md)<br/>
- [Universelle C-Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Universelle C-Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

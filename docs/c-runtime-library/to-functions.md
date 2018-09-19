@@ -30,97 +30,100 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c852f65e603f11bfaf5812a9cb688dbf0eb36904
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8209e41e1b8a66e7f46c48a834df35fac2dcd491
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413205"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040152"
 ---
 # <a name="to-functions"></a>to-Funktionen
-Jede der **to**-Funktionen und ggf. das zugehörige Makro konvertiert ein einzelnes Zeichen in ein anderes Zeichen.  
-  
-|||  
-|-|-|  
-|[__toascii](../c-runtime-library/reference/toascii-toascii.md)|[toupper, _toupper, towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|  
-|[tolower, _tolower, towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)||  
-  
-## <a name="remarks"></a>Hinweise  
- Es gibt folgende **to**-Funktionen und Makrokonvertierungen:  
-  
-|-Routine zurückgegebener Wert|Makro|description|  
-|-------------|-----------|-----------------|  
-|`__toascii`|`__toascii`|Konvertiert `c` in ASCII-Zeichen|  
-|`tolower`|`tolower`|Konvertiert `c` gegebenenfalls in Kleinbuchstaben|  
-|`_tolower`|`_tolower`|Konvertiert `c` in Kleinbuchstaben|  
-|`towlower`|Keiner|Konvertiert `c` in entsprechende Breitzeichen-Kleinbuchstaben|  
-|`toupper`|`toupper`|Konvertiert `c` gegebenenfalls in Großbuchstaben|  
-|`_toupper`|`_toupper`|Konvertiert `c` in Großbuchstaben|  
-|`towupper`|Keiner|Konvertiert c in entsprechende Breitzeichen-Kleinbuchstaben|  
-  
- Um die Funktionsversionen der **to**-Routinen zu nutzen, die auch als Makros definiert sind, entfernen Sie entweder die Makrodefinitionen mit `#undef`-Direktiven, oder schließen Sie nicht CTYPE.H ein. Wenn Sie die Compileroption /Za wählen, verwendet der Compiler die Funktionsversion von `toupper` oder `tolower`. Deklarationen der Funktionen `toupper` und `tolower` sind in STDLIB.H enthalten.  
-  
- Die Routine `__toascii` setzt alle außer die unteren 7 Bits von `c` auf 0, damit der konvertierte Wert ein Zeichen im ASCII-Zeichensatz darstellt. Wenn `c` bereits ein ASCII-Zeichen darstellt, bleibt `c` unverändert.  
-  
- Die Routinen `tolower` und `toupper`:  
-  
--   Hängen von der Kategorie `LC_CTYPE` des aktuellen Gebietsschemas ab (`tolower` ruft `isupper` auf und `toupper` ruft `islower` auf).  
-  
--   Konvertieren `c`, wenn `c` einen konvertierbaren Buchstaben des entsprechenden Falls im aktuellen Gebietsschema darstellt und der entgegengesetzte Fall für dieses Gebietsschema vorhanden ist. Andernfalls bleibt `c` unverändert.  
-  
- Die Routinen `_tolower` und `_toupper`:  
-  
--   Sind vom Gebietsschema unabhängige, viel schnellere Versionen von `tolower` und **.**  
-  
--   Können nur verwendet werden, wenn **isascii(**`c`**)** und entweder **isupper(**`c`**)** oder **islower(**`c`**)** ungleich null sind.  
-  
--   Haben nicht definierte Ergebnisse, wenn `c` kein ASCII-Buchstabe des entsprechenden zu konvertierenden Falls ist.  
-  
- Die Funktionen `towlower` und `towupper` geben nur eine konvertierte Kopie von `c` zurück, wenn beide der folgenden Bedingungen ungleich null sind. Andernfalls bleibt `c` unverändert.  
-  
--   `c` ist ein Breitzeichen des entsprechenden Falls (d.h. für das `iswupper` oder **iswlower** ungleich null ist).  
-  
--   Es gibt ein entsprechendes Breitzeichen des Zielfalls (d.h. für das `iswlower` oder **iswupper** ungleich null ist).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// crt_toupper.c  
-/* This program uses toupper and tolower to  
- * analyze all characters between 0x0 and 0x7F. It also  
- * applies _toupper and _tolower to any code in this  
- * range for which these functions make sense.  
- */  
-  
-#include <ctype.h>  
-#include <string.h>  
-  
-char msg[] = "Some of THESE letters are Capitals.";  
-char *p;  
-  
-int main( void )  
-{  
-   printf( "%s\n", msg );  
-  
-   /* Reverse case of message. */  
-   for( p = msg; p < msg + strlen( msg ); p++ )  
-   {  
-      if( islower( *p ) )  
-         putchar( _toupper( *p ) );  
-      else if( isupper( *p ) )  
-         putchar( _tolower( *p ) );  
-      else  
-         putchar( *p );  
-   }  
-}  
-```  
-  
-```Output  
-Some of THESE letters are Capitals.  
-sOME OF these LETTERS ARE cAPITALS.  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Datenkonvertierung](../c-runtime-library/data-conversion.md)   
- [Gebietsschema](../c-runtime-library/locale.md)   
- [is, isw Routines (is- und isw-Routinen)](../c-runtime-library/is-isw-routines.md)
+
+Jede der **to**-Funktionen und ggf. das zugehörige Makro konvertiert ein einzelnes Zeichen in ein anderes Zeichen.
+
+|||
+|-|-|
+|[__toascii](../c-runtime-library/reference/toascii-toascii.md)|[toupper, _toupper, towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|
+|[tolower, _tolower, towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)||
+
+## <a name="remarks"></a>Hinweise
+
+Es gibt folgende **to**-Funktionen und Makrokonvertierungen:
+
+|-Routine zurückgegebener Wert|Makro|Beschreibung |
+|-------------|-----------|-----------------|
+|`__toascii`|`__toascii`|Konvertiert `c` in ASCII-Zeichen|
+|`tolower`|`tolower`|Konvertiert `c` gegebenenfalls in Kleinbuchstaben|
+|`_tolower`|`_tolower`|Konvertiert `c` in Kleinbuchstaben|
+|`towlower`|Keiner|Konvertiert `c` in entsprechende Breitzeichen-Kleinbuchstaben|
+|`toupper`|`toupper`|Konvertiert `c` gegebenenfalls in Großbuchstaben|
+|`_toupper`|`_toupper`|Konvertiert `c` in Großbuchstaben|
+|`towupper`|Keiner|Konvertiert c in entsprechende Breitzeichen-Kleinbuchstaben|
+
+Um die Funktionsversionen der **to**-Routinen zu nutzen, die auch als Makros definiert sind, entfernen Sie entweder die Makrodefinitionen mit `#undef`-Direktiven, oder schließen Sie nicht CTYPE.H ein. Wenn Sie die Compileroption /Za wählen, verwendet der Compiler die Funktionsversion von `toupper` oder `tolower`. Deklarationen der Funktionen `toupper` und `tolower` sind in STDLIB.H enthalten.
+
+Die Routine `__toascii` setzt alle außer die unteren 7 Bits von `c` auf 0, damit der konvertierte Wert ein Zeichen im ASCII-Zeichensatz darstellt. Wenn `c` bereits ein ASCII-Zeichen darstellt, bleibt `c` unverändert.
+
+Die Routinen `tolower` und `toupper`:
+
+- Hängen von der Kategorie `LC_CTYPE` des aktuellen Gebietsschemas ab (`tolower` ruft `isupper` auf und `toupper` ruft `islower` auf).
+
+- Konvertieren `c`, wenn `c` einen konvertierbaren Buchstaben des entsprechenden Falls im aktuellen Gebietsschema darstellt und der entgegengesetzte Fall für dieses Gebietsschema vorhanden ist. Andernfalls bleibt `c` unverändert.
+
+Die Routinen `_tolower` und `_toupper`:
+
+- Sind vom Gebietsschema unabhängige, viel schnellere Versionen von `tolower` und **.**
+
+- Können nur verwendet werden, wenn **isascii(**`c`**)** und entweder **isupper(**`c`**)** oder **islower(**`c`**)** ungleich null sind.
+
+- Haben nicht definierte Ergebnisse, wenn `c` kein ASCII-Buchstabe des entsprechenden zu konvertierenden Falls ist.
+
+Die Funktionen `towlower` und `towupper` geben nur eine konvertierte Kopie von `c` zurück, wenn beide der folgenden Bedingungen ungleich null sind. Andernfalls bleibt `c` unverändert.
+
+- `c` ist ein Breitzeichen des entsprechenden Falls (d.h. für das `iswupper` oder **iswlower** ungleich null ist).
+
+- Es gibt ein entsprechendes Breitzeichen des Zielfalls (d.h. für das `iswlower` oder **iswupper** ungleich null ist).
+
+## <a name="example"></a>Beispiel
+
+```
+// crt_toupper.c
+/* This program uses toupper and tolower to
+ * analyze all characters between 0x0 and 0x7F. It also
+ * applies _toupper and _tolower to any code in this
+ * range for which these functions make sense.
+ */
+
+#include <ctype.h>
+#include <string.h>
+
+char msg[] = "Some of THESE letters are Capitals.";
+char *p;
+
+int main( void )
+{
+   printf( "%s\n", msg );
+
+   /* Reverse case of message. */
+   for( p = msg; p < msg + strlen( msg ); p++ )
+   {
+      if( islower( *p ) )
+         putchar( _toupper( *p ) );
+      else if( isupper( *p ) )
+         putchar( _tolower( *p ) );
+      else
+         putchar( *p );
+   }
+}
+```
+
+```Output
+Some of THESE letters are Capitals.
+sOME OF these LETTERS ARE cAPITALS.
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Datenkonvertierung](../c-runtime-library/data-conversion.md)<br/>
+[Locale](../c-runtime-library/locale.md)<br/>
+[is, isw Routines (is- und isw-Routinen)](../c-runtime-library/is-isw-routines.md)

@@ -20,32 +20,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbcf0a1106610740a585b7e4f8b68e3fc9b6a8f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3d48ead4532638461962a3bf88d2321cee775ab3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388447"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087656"
 ---
 # <a name="fseek-lseek-constants"></a>fseek- und _lseek-Konstanten
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-#include <stdio.h>  
-  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Das *origin*-Argument gibt die Ausgangsposition an und kann eine der folgenden Manifestkonstanten sein:  
-  
-|Konstante|Bedeutung|  
-|--------------|-------------|  
-|`SEEK_END`|Ende der Datei|  
-|`SEEK_CUR`|Aktuelle Position des Dateizeigers|  
-|`SEEK_SET`|Anfang der Datei|  
-  
-## <a name="see-also"></a>Siehe auch  
- [fseek, _fseeki64](../c-runtime-library/reference/fseek-fseeki64.md)   
- [_lseek, _lseeki64](../c-runtime-library/reference/lseek-lseeki64.md)   
- [Globale Konstanten](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntax
+
+```
+
+#include <stdio.h>
+
+```
+
+## <a name="remarks"></a>Hinweise
+
+Das *origin*-Argument gibt die Ausgangsposition an und kann eine der folgenden Manifestkonstanten sein:
+
+|Konstante|Bedeutung|
+|--------------|-------------|
+|`SEEK_END`|Ende der Datei|
+|`SEEK_CUR`|Aktuelle Position des Dateizeigers|
+|`SEEK_SET`|Anfang der Datei|
+
+## <a name="see-also"></a>Siehe auch
+
+[fseek, _fseeki64](../c-runtime-library/reference/fseek-fseeki64.md)<br/>
+[_lseek, _lseeki64](../c-runtime-library/reference/lseek-lseeki64.md)<br/>
+[Globale Konstanten](../c-runtime-library/global-constants.md)

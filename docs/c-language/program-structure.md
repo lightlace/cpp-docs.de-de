@@ -16,27 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe41175895f99ff97c6e2171e2cdfc0cbcc82689
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5007deecce9adcaf03ab3d367539eac58c79498f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385955"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059695"
 ---
 # <a name="program-structure"></a>Programmstruktur
-Dieser Abschnitt enthält eine Übersicht über C-Programme und deren Ausführung. Begriffe und Funktionen, die zum Verständnis von C-Programmen und -Komponenten wichtig sind, werden ebenfalls eingeführt. Behandelte Themen:  
-  
--   [Quelldateien und Quellprogramme](../c-language/source-files-and-source-programs.md)  
-  
--   [Die Hauptfunktion und die Programmausführung](../c-language/main-function-and-program-execution.md)  
-  
--   [Analysieren von Befehlszeilenargumenten](../c-language/parsing-c-command-line-arguments.md)  
-  
--   [Lebensdauer, Bereich, Sichtbarkeit und Verknüpfung](../c-language/lifetime-scope-visibility-and-linkage.md)  
-  
--   [Namespaces](../c-language/name-spaces.md)  
-  
- Da dieser Abschnitt eine Übersicht ist, enthalten die erläuterten Themen nur einführendes Material. Ausführliche Erklärungen finden Sie über die Querverweise.  
-  
-## <a name="see-also"></a>Siehe auch  
- [C-Sprachreferenz](../c-language/c-language-reference.md)
+
+Dieser Abschnitt enthält eine Übersicht über C-Programme und deren Ausführung. Begriffe und Funktionen, die zum Verständnis von C-Programmen und -Komponenten wichtig sind, werden ebenfalls eingeführt. Behandelte Themen:
+
+- [Quelldateien und Quellprogramme](../c-language/source-files-and-source-programs.md)
+
+- [Die Hauptfunktion und die Programmausführung](../c-language/main-function-and-program-execution.md)
+
+- [Analysieren von Befehlszeilenargumenten](../c-language/parsing-c-command-line-arguments.md)
+
+- [Lebensdauer, Bereich, Sichtbarkeit und Verknüpfung](../c-language/lifetime-scope-visibility-and-linkage.md)
+
+- [Namespaces](../c-language/name-spaces.md)
+
+Da dieser Abschnitt eine Übersicht ist, enthalten die erläuterten Themen nur einführendes Material. Ausführliche Erklärungen finden Sie über die Querverweise.
+
+## <a name="see-also"></a>Siehe auch
+
+[C-Sprachreferenz](../c-language/c-language-reference.md)

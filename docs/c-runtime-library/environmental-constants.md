@@ -15,26 +15,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7a6189a114091046936ac088ab5b2d4e5b07208
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cb8f56aa6ea0a6847d7822e8a376d061b47e2328
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388509"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090027"
 ---
 # <a name="environmental-constants"></a>Umgebungskonstanten
-## <a name="syntax"></a>Syntax  
-  
-```  
-#include <stdlib.h>  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Konstante definiert die Umgebungslänge für Zeichenfolgen.  
-  
-|Konstante|Bedeutung|  
-|--------------|-------------|  
-|`_MAX_ENV`|Maximale Länge einer Umgebungszeichenfolge.|  
-  
-## <a name="see-also"></a>Siehe auch  
- [Globale Konstanten](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntax
+
+```
+#include <stdlib.h>
+```
+
+## <a name="remarks"></a>Hinweise
+
+Diese Konstante definiert die Umgebungslänge für Zeichenfolgen.
+
+|Konstante|Bedeutung|
+|--------------|-------------|
+|`_MAX_ENV`|Maximale Länge einer Umgebungszeichenfolge.|
+
+## <a name="see-also"></a>Siehe auch
+
+[Globale Konstanten](../c-runtime-library/global-constants.md)

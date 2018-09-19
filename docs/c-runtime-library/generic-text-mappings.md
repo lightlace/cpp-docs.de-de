@@ -17,24 +17,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f83a1e9b5581977b8f13076d76d077e146b74ff3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a33029e7c7a326efcc35166587ea0f94db3f074
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388574"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033848"
 ---
 # <a name="generic-text-mappings"></a>Zuordnungen für generischen Text
-Um das Schreiben von Codes für internationale Märkte zu vereinfachen, werden Zuordnungen für generischen Text in TCHAR.H für Folgendes definiert:  
-  
--   [Datentypen](../c-runtime-library/data-type-mappings.md)  
-  
--   [Konstante und globale Variablen](../c-runtime-library/constant-and-global-variable-mappings.md)  
-  
--   [Routine-Zuordnungen](../c-runtime-library/routine-mappings.md)  
-  
- Weitere Informationen finden Sie unter [Verwendung von generischen Textzuordnungen](../c-runtime-library/using-generic-text-mappings.md). Generische Textzuordnungen sind Microsoft-Erweiterungen, die nicht mit ANSI kompatibel sind.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Datentypzuordnungen](../c-runtime-library/data-type-mappings.md)   
- [Beispiel für ein Programm mit generischem Text](../c-runtime-library/a-sample-generic-text-program.md)
+
+Um das Schreiben von Codes für internationale Märkte zu vereinfachen, werden Zuordnungen für generischen Text in TCHAR.H für Folgendes definiert:
+
+- [Datentypen](../c-runtime-library/data-type-mappings.md)
+
+- [Konstante und globale Variablen](../c-runtime-library/constant-and-global-variable-mappings.md)
+
+- [Routine-Zuordnungen](../c-runtime-library/routine-mappings.md)
+
+Weitere Informationen finden Sie unter [Verwendung von generischen Textzuordnungen](../c-runtime-library/using-generic-text-mappings.md). Generische Textzuordnungen sind Microsoft-Erweiterungen, die nicht mit ANSI kompatibel sind.
+
+## <a name="see-also"></a>Siehe auch
+
+[Datentypzuordnungen](../c-runtime-library/data-type-mappings.md)<br/>
+[Beispiel für ein Programm mit generischem Text](../c-runtime-library/a-sample-generic-text-program.md)

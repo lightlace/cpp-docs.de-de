@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f09bafd0bbda8a64b7a60fe6cacf996106385787
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c08387d5c1a2a9b9b757bab7a8112783a3810065
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753011"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097795"
 ---
 # <a name="catlarray-class"></a>CAtlArray-Klasse
 
@@ -55,10 +55,10 @@ class CAtlArray
 
 #### <a name="parameters"></a>Parameter
 
-*E*  
+*E*<br/>
 Der Typ der im Array gespeicherten Daten.
 
-*ETraits*  
+*ETraits*<br/>
 Der Code verwendet, um die Elemente kopiert oder verschoben wird.
 
 ## <a name="members"></a>Member
@@ -124,7 +124,7 @@ size_t Add();
 
 ### <a name="parameters"></a>Parameter
 
-*Element*  
+*Element*<br/>
 Das Element, das dem Array hinzugefügt werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -149,7 +149,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 
 ### <a name="parameters"></a>Parameter
 
-*aSrc*  
+*aSrc*<br/>
 Das Array angefügt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -222,7 +222,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 
 ### <a name="parameters"></a>Parameter
 
-*aSrc*  
+*aSrc*<br/>
 Die Quelle der Elemente, die in einem Array zu kopieren.
 
 ### <a name="remarks"></a>Hinweise
@@ -265,7 +265,7 @@ E& GetAt(size_t iElement) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*"IElement"*  
+*"IElement"*<br/>
 Der Indexwert des Arrayelements zurückgegeben.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -335,10 +335,10 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 
 ### <a name="parameters"></a>Parameter
 
-*iStart*  
+*iStart*<br/>
 Der Index, an dem das Array ist, eingefügt werden soll.
 
-*paNew*  
+*paNew*<br/>
 Das Array eingefügt werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -364,13 +364,13 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 
 ### <a name="parameters"></a>Parameter
 
-*"IElement"*  
+*"IElement"*<br/>
 Der Index, in dem das Element oder Elemente sind, eingefügt werden soll.
 
-*Element*  
+*Element*<br/>
 Der Wert des Elements oder Elemente eingefügt werden soll.
 
-*nCount*  
+*nCount*<br/>
 Die Anzahl der hinzuzufügenden Elemente.
 
 ### <a name="remarks"></a>Hinweise
@@ -414,7 +414,7 @@ const E& operator[](size_t ielement) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*"IElement"*  
+*"IElement"*<br/>
 Der Indexwert des Arrayelements zurückgegeben.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -463,10 +463,10 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 
 ### <a name="parameters"></a>Parameter
 
-*"IElement"*  
+*"IElement"*<br/>
 Der Index des ersten Elements, das entfernt werden soll.
 
-*nCount*  
+*nCount*<br/>
 Die Anzahl der zu entfernenden Elemente.
 
 ### <a name="remarks"></a>Hinweise
@@ -489,10 +489,10 @@ void SetAt(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>Parameter
 
-*"IElement"*  
+*"IElement"*<br/>
 Der Index verweist auf das Arrayelement festgelegt.
 
-*Element*  
+*Element*<br/>
 Der neue Wert des angegebenen Elements.
 
 ### <a name="remarks"></a>Hinweise
@@ -513,10 +513,10 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 
 ### <a name="parameters"></a>Parameter
 
-*nNewSize*  
+*nNewSize*<br/>
 Die erforderliche Größe des Arrays.
 
-*nGrowBy*  
+*nGrowBy*<br/>
 Ein Wert, der verwendet wird, um zu bestimmen, wie groß ist, um den Puffer zu machen. Der Wert-1 wird einen intern berechneten Wert verwendet werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -543,10 +543,10 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>Parameter
 
-*"IElement"*  
+*"IElement"*<br/>
 Der Index verweist auf das Arrayelement festgelegt.
 
-*Element*  
+*Element*<br/>
 Der neue Wert des angegebenen Elements.
 
 ### <a name="remarks"></a>Hinweise
@@ -559,9 +559,9 @@ Ersetzt den Wert des Elements vom Index verweist. Wenn *"IElement"* ist größer
 
 ## <a name="see-also"></a>Siehe auch
 
-[MMXSwarm-Beispiel](../../visual-cpp-samples.md)   
-[-Beispiel-Beispiel](../../visual-cpp-samples.md)   
-[UpdatePV-Beispiel](../../visual-cpp-samples.md)   
-[Marquee-Beispiel](../../visual-cpp-samples.md)   
-[CArray-Klasse](../../mfc/reference/carray-class.md)   
+[MMXSwarm-Beispiel](../../visual-cpp-samples.md)<br/>
+[-Beispiel-Beispiel](../../visual-cpp-samples.md)<br/>
+[UpdatePV-Beispiel](../../visual-cpp-samples.md)<br/>
+[Marquee-Beispiel](../../visual-cpp-samples.md)<br/>
+[CArray-Klasse](../../mfc/reference/carray-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

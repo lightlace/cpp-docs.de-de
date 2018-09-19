@@ -23,15 +23,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47f23fd421d5108648d88c9eeda83c255f9861dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6cc17e429c0750b9f0cc8d9eb24bc94adf00484e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388226"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070599"
 ---
 # <a name="exception-handling-constants"></a>Ausnahmebehandlungskonstanten
-Die Konstante `EXCEPTION_CONTINUE_SEARCH`, `EXCEPTION_CONTINUE_EXECUTION` oder `EXCEPTION_EXECUTE_HANDLER` wird zurückgegeben, wenn während der Ausführung des abgesicherten Abschnitts einer **try-except**-Anweisung eine Ausnahme auftritt. Der Rückgabewert bestimmt, wie die Ausnahme behandelt wird. Weitere Informationen finden Sie unter [try-except Statement](../cpp/try-except-statement.md) (try-except-Anweisung) in der *C++-Sprachreferenz*.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Globale Konstanten](../c-runtime-library/global-constants.md)
+
+Die Konstante `EXCEPTION_CONTINUE_SEARCH`, `EXCEPTION_CONTINUE_EXECUTION` oder `EXCEPTION_EXECUTE_HANDLER` wird zurückgegeben, wenn während der Ausführung des abgesicherten Abschnitts einer **try-except**-Anweisung eine Ausnahme auftritt. Der Rückgabewert bestimmt, wie die Ausnahme behandelt wird. Weitere Informationen finden Sie unter [try-except Statement](../cpp/try-except-statement.md) (try-except-Anweisung) in der *C++-Sprachreferenz*.
+
+## <a name="see-also"></a>Siehe auch
+
+[Globale Konstanten](../c-runtime-library/global-constants.md)

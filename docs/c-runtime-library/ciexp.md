@@ -29,30 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88f74e34a75698f95906de23d7093f6680a0d127
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 227aca74ef64884c64ba83c9f36eb16417041fd4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386617"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081558"
 ---
 # <a name="ciexp"></a>_CIexp
-Berechnet den Exponentialwert des obersten Werts im Stapel.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void __cdecl _CIexp();  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Version der `exp`-Funktion verfügt über eine spezielle Aufrufkonvention, die der Compiler versteht. Sie beschleunigt die Ausführung, da sie das Generieren von Kopien verhindert und bei der Registerzuweisung hilft.  
-  
- Der resultierende Wert wird oben auf dem Stapel abgelegt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Plattform:** x86  
-  
-## <a name="see-also"></a>Siehe auch  
- [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [exp, expf, expl](../c-runtime-library/reference/exp-expf.md)
+
+Berechnet den Exponentialwert des obersten Werts im Stapel.
+
+## <a name="syntax"></a>Syntax
+
+```
+void __cdecl _CIexp();
+```
+
+## <a name="remarks"></a>Hinweise
+
+Diese Version der `exp`-Funktion verfügt über eine spezielle Aufrufkonvention, die der Compiler versteht. Sie beschleunigt die Ausführung, da sie das Generieren von Kopien verhindert und bei der Registerzuweisung hilft.
+
+Der resultierende Wert wird oben auf dem Stapel abgelegt.
+
+## <a name="requirements"></a>Anforderungen
+ **Plattform:** x86
+
+## <a name="see-also"></a>Siehe auch
+
+[Alphabetische Funktionsreferenz](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[exp, expf, expl](../c-runtime-library/reference/exp-expf.md)
