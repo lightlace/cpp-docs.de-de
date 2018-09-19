@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C3135 | Microsoft Docs
+title: Compilerfehler C3135 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 524435d95e085b0e5014eed21877b6d351e4ca75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a1158de2768cd5aea025627caf2fe40ef53e2ba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245734"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048460"
 ---
-# <a name="compiler-error-c3135"></a>Compilerfehler Fehler C3135
-"Property": eine Eigenschaft kann nicht "Const" aufweisen, oder geben Sie "volatile"  
-  
- Die [const](../../cpp/const-cpp.md) und [volatile](../../cpp/volatile-cpp.md) Schlüsselwörter sind nicht zulässig, auf Eigenschaften.
+# <a name="compiler-error-c3135"></a>Compilerfehler C3135
+
+'Eigenschaft': eine Eigenschaft darf keinen "Const" oder "volatile" Geben
+
+Die [const](../../cpp/const-cpp.md) und [flüchtige](../../cpp/volatile-cpp.md) Schlüsselwörter dürfen nicht auf Eigenschaften.

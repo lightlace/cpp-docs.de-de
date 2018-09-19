@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2444 | Microsoft Docs
+title: Compilerfehler C2444 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80af78ffbf0d51a9ae8e7f4090aa5c6aa0d9045f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 061abaef158e309246528374b375b20fa75978f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196531"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041105"
 ---
 # <a name="compiler-error-c2444"></a>Compilerfehler C2444
-'Bezeichner': Verwendet ANSI-Prototypen, 'Typ' wurde gefunden, '{' oder ';' erwartet.  
-  
- Dem Funktionsprototyp folgt ein Typ.  
-  
- Dieser Fehler kann durch ein fehlendes Semikolon oder eine fehlende geschweifte Klammer verursacht werden.
+
+'Bezeichner': Verwendet ANSI-Prototypen, 'Typ' wurde gefunden, '{' oder ';' erwartet.
+
+Dem Funktionsprototyp folgt ein Typ.
+
+Dieser Fehler kann durch ein fehlendes Semikolon oder eine fehlende geschweifte Klammer verursacht werden.

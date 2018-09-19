@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2199 | Microsoft Docs
+title: Compilerfehler C2199 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31164597c9427dc5e915f5a0315d8e2bb7825e8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 616b155ad0ca22c3eb45fd881a22ff36b5430f81
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169009"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083652"
 ---
 # <a name="compiler-error-c2199"></a>Compilerfehler C2199
-Syntaxfehler: gefunden ' Bezeichner ("im globalen Gültigkeitsbereich (war eine Deklaration beabsichtigt?)  
-  
- Der angegebene Kontext verursachte einen Syntaxfehler. Es gibt möglicherweise falsche-Deklarationssyntax.  
-  
- Im folgenden Beispiel wird C2199 generiert:  
-  
-```  
-// C2199.cpp  
-// compile with: /c  
-int j = int(1) int(1);   // C2199  
-int j = 1;   // OK  
+
+Syntaxfehler: gefunden ' Bezeichner ("im globalen Gültigkeitsbereich (war eine Deklaration beabsichtigt?)
+
+Der angegebene Kontext verursachte einen Syntaxfehler. Es gibt möglicherweise falsche-Deklarationssyntax.
+
+Im folgende Beispiel wird die C2199 generiert:
+
+```
+// C2199.cpp
+// compile with: /c
+int j = int(1) int(1);   // C2199
+int j = 1;   // OK
 ```

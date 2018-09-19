@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcencompiler: Fehler RC1000 through RC4413 | Microsoft Docs'
+title: 'Ressourcencompiler: Fehler RC1000 through RC4413 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,13 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31d40925f42f6082439bedadec8416f780e57016
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14264cfa506595ba8ecde1d5e7747cd43b6e6543
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339903"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045418"
 ---
 # <a name="resource-compiler-errors-rc1000-through-rc4413"></a>Ressourcencompiler: Fehlers RC1000 through RC4413
-Dieser Abschnitt ist eine Referenz zu den von den Buildtools ausgegebenen Fehlermeldungen. Um Hilfe zu einer bestimmten Fehlermeldung zu erhalten, klicken Sie mit der Maus auf eine Fehlernummer im Ausgabefenster angezeigt, und drücken Sie F1, oder geben die Fehlernummer in der **gesucht** Feld im Index.
+
+Dieser Abschnitt ist eine Referenz zu den von den Buildtools ausgegebenen Fehlermeldungen. Um Hilfe zu einer bestimmten Fehlermeldung zu erhalten, klicken Sie auf der Maus auf eine Fehlernummer im Ausgabefenster angezeigt, und drücken Sie F1, oder geben die Fehlernummer in der **suchen Sie nach** Feld im Index.
