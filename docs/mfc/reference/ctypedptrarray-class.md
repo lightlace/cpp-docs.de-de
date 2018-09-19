@@ -1,5 +1,5 @@
 ---
-title: CTypedPtrArray-Klasse | Microsoft Docs
+title: CTypedPtrArray-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,277 +32,314 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9082e28aad1edc584a1796d5bb5e97b5601753f
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: a83e425863afe4a8f355c4ce4543935c4e910216
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122914"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408010"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray-Klasse
-Stellt einen typsicheren Wrapper für Objekte der Klasse `CPtrArray` oder `CObArray`bereit.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-template<class BASE_CLASS, class TYPE>  
-class CTypedPtrArray : public BASE_CLASS  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *BASIS_KLASSE*  
- Die Basisklasse der typisierten Zeiger Array-Klasse; muss eine Array-Klasse ( `CObArray` oder `CPtrArray`).  
-  
- *TYPE*  
- Typ der Elemente in der Basisklasse Array gespeichert.  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CTypedPtrArray::Add](#add)|Fügt ein neues Element am Ende eines Arrays an. Vergrößert das Array bei Bedarf|  
-|[CTypedPtrArray::Append](#append)|Fügt den Inhalt eines Arrays an das Ende einer anderen. Vergrößert das Array bei Bedarf|  
-|[CTypedPtrArray::Copy](#copy)|Kopiert ein anderes Array in das Array; vergrößert das Array bei Bedarf.|  
-|[CTypedPtrArray::ElementAt](#elementat)|Gibt einen temporären Verweis auf den Elementzeiger innerhalb des Arrays zurück.|  
-|[CTypedPtrArray::GetAt](#getat)|Gibt den Wert an einem bestimmten Index zurück.|  
-|[CTypedPtrArray::InsertAt](#insertat)|Fügt ein Element (oder alle Elemente in einem anderen Array) am angegebenen Index ein.|  
-|[CTypedPtrArray::SetAt](#setat)|Legt den Wert für einen bestimmten Index fest; Array darf nicht vergrößert werden.|  
-|[CTypedPtrArray::SetAtGrow](#setatgrow)|Legt den Wert für einen bestimmten Index fest; vergrößert das Array bei Bedarf.|  
-  
-### <a name="public-operators"></a>Öffentliche Operatoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CTypedPtrArray::operator]](#operator_at)|Legt das Element am angegebenen Index fest oder ruft es ab.|  
-  
-## <a name="remarks"></a>Hinweise  
- Bei Verwendung von `CTypedPtrArray` statt `CPtrArray` oder `CObArray`, Typprüfung-Funktion für C++ hilft Fehler aufgrund nicht übereinstimmender Zeigertypen zu vermeiden.  
-  
- Darüber hinaus die `CTypedPtrArray` Wrapper führt ein Großteil der Umwandlung von Typen, die bei Verwendung erforderlich wäre `CObArray` oder `CPtrArray`.  
-  
- Da alle `CTypedPtrArray` Funktionen sind Inline, die Verwendung dieser Vorlage erheblich wirkt sich nicht die Größe oder Geschwindigkeit Ihres Codes.  
-  
- Weitere Informationen zur Verwendung von `CTypedPtrArray`, finden Sie in den Artikeln [Sammlungen](../../mfc/collections.md) und [Template-basierten Klassen](../../mfc/template-based-classes.md).  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `BASE_CLASS`  
-  
- `CTypedPtrArray`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** afxtempl.h  
-  
-##  <a name="add"></a>  CTypedPtrArray::Add  
- Diese Memberfunktion ruft `BASE_CLASS` **:: Add**.  
-  
-```  
+
+Stellt einen typsicheren Wrapper für Objekte der Klasse `CPtrArray` oder `CObArray`bereit.
+
+## <a name="syntax"></a>Syntax
+
+```
+template<class BASE_CLASS, class TYPE>
+class CTypedPtrArray : public BASE_CLASS
+```
+
+#### <a name="parameters"></a>Parameter
+
+*BASE_CLASS*<br/>
+Die Basisklasse der typisierter Zeiger Array-Klasse; muss eine Array-Klasse ( `CObArray` oder `CPtrArray`).
+
+*TYPE*<br/>
+Der Typ der Elemente in der Basisklasse-Array gespeichert.
+
+## <a name="members"></a>Member
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CTypedPtrArray::Add](#add)|Fügt ein neues Element am Ende eines Arrays an. Vergrößert das Array bei Bedarf|
+|[CTypedPtrArray::Append](#append)|Fügt den Inhalt eines Arrays am Ende eines anderen hinzu. Vergrößert das Array bei Bedarf|
+|[CTypedPtrArray::Copy](#copy)|Kopiert ein anderes Array in das Array; vergrößert das Array bei Bedarf.|
+|[CTypedPtrArray::ElementAt](#elementat)|Gibt einen temporären Verweis auf den Elementzeiger innerhalb des Arrays zurück.|
+|[CTypedPtrArray::GetAt](#getat)|Gibt den Wert an einem bestimmten Index zurück.|
+|[CTypedPtrArray::InsertAt](#insertat)|Fügt ein Element (oder alle Elemente in einem anderen Array) am angegebenen Index ein.|
+|[CTypedPtrArray::SetAt](#setat)|Legt den Wert für einen bestimmten Index fest; Array darf nicht vergrößert werden.|
+|[CTypedPtrArray::SetAtGrow](#setatgrow)|Legt den Wert für einen bestimmten Index fest; vergrößert das Array bei Bedarf.|
+
+### <a name="public-operators"></a>Öffentliche Operatoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CTypedPtrArray::operator]](#operator_at)|Legt das Element am angegebenen Index fest oder ruft es ab.|
+
+## <a name="remarks"></a>Hinweise
+
+Bei Verwendung von `CTypedPtrArray` statt `CPtrArray` oder `CObArray`, die Typprüfung C++-Funktion hilft, Fehler aufgrund nicht übereinstimmender Zeigertypen zu vermeiden.
+
+Darüber hinaus die `CTypedPtrArray` Wrapper Großteil der Umwandlung, die erforderlich sein würde, wenn Sie verwendet haben, führt `CObArray` oder `CPtrArray`.
+
+Da alle `CTypedPtrArray` Funktionen werden Inline, die Verwendung dieser Vorlage erheblich wirkt sich nicht die Größe oder Geschwindigkeit Ihres Codes.
+
+Weitere Informationen zur Verwendung von `CTypedPtrArray`, finden Sie in den Artikeln [Sammlungen](../../mfc/collections.md) und [vorlagenbasierte Klassen](../../mfc/template-based-classes.md).
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`BASE_CLASS`
+
+`CTypedPtrArray`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** afxtempl.h
+
+##  <a name="add"></a>  CTypedPtrArray::Add
+
+Diese Memberfunktion ruft `BASE_CLASS` **:: Add**.
+
+```
 INT_PTR Add(TYPE newElement);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *TYPE*  
- Der Vorlagenparameter Angabe des Typs des Elements des Arrays hinzugefügt werden.  
-  
- *newElement*  
- Das Element mit diesem Array hinzugefügt werden.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Der Index des hinzugefügten Elements.  
-  
-### <a name="remarks"></a>Hinweise  
- Ausführlichere Hinweise finden Sie unter [CObArray::Add](../../mfc/reference/cobarray-class.md#add).  
-  
-##  <a name="append"></a>  CTypedPtrArray::Append  
- Diese Memberfunktion ruft `BASE_CLASS`:: Append **.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+*TYPE*<br/>
+Der Vorlagenparameter, die den Typ des Elements, das dem Array hinzugefügt werden.
+
+*newElement*<br/>
+Das Element, das in diesem Array hinzugefügt werden.
+
+### <a name="return-value"></a>Rückgabewert
+
+Der Index des hinzugefügten Elements.
+
+### <a name="remarks"></a>Hinweise
+
+Weitere Hinweise finden Sie unter [CObArray::Add](../../mfc/reference/cobarray-class.md#add).
+
+##  <a name="append"></a>  CTypedPtrArray::Append
+
+Diese Memberfunktion ruft `BASE_CLASS`:: Append **.
+
+```
 INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *BASIS_KLASSE*  
- Die Basisklasse der typisierten Zeiger Array-Klasse; muss eine Array-Klasse ( [CObArray](../../mfc/reference/cobarray-class.md) oder [CPtrArray](../../mfc/reference/cptrarray-class.md)).  
-  
- *TYPE*  
- Typ der Elemente in der Basisklasse Array gespeichert.  
-  
- *src*  
- Die Quelle der Elemente, die ein Array angefügt werden soll.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Der Index des ersten Elements angefügt.  
-  
-### <a name="remarks"></a>Hinweise  
- Ausführlichere Hinweise finden Sie unter [CObArray::Append](../../mfc/reference/cobarray-class.md#append).  
-  
-##  <a name="copy"></a>  CTypedPtrArray::Copy  
- Diese Memberfunktion ruft `BASE_CLASS` **:: Copy**.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+*BASE_CLASS*<br/>
+Die Basisklasse der typisierter Zeiger Array-Klasse; muss eine Array-Klasse ( [CObArray](../../mfc/reference/cobarray-class.md) oder [CPtrArray](../../mfc/reference/cptrarray-class.md)).
+
+*TYPE*<br/>
+Der Typ der Elemente in der Basisklasse-Array gespeichert.
+
+*src*<br/>
+Die Quelle der Elemente, die ein Array angefügt werden soll.
+
+### <a name="return-value"></a>Rückgabewert
+
+Der Index des ersten Elements angefügt werden soll.
+
+### <a name="remarks"></a>Hinweise
+
+Weitere Hinweise finden Sie unter [CObArray::Append](../../mfc/reference/cobarray-class.md#append).
+
+##  <a name="copy"></a>  CTypedPtrArray::Copy
+
+Diese Memberfunktion ruft `BASE_CLASS` **:: Copy**.
+
+```
 void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *BASIS_KLASSE*  
- Die Basisklasse der typisierten Zeiger Array-Klasse; muss eine Array-Klasse ( [CObArray](../../mfc/reference/cobarray-class.md) oder [CPtrArray](../../mfc/reference/cptrarray-class.md)).  
-  
- *TYPE*  
- Typ der Elemente in der Basisklasse Array gespeichert.  
-  
- *src*  
- Die Quelle der Elemente in ein Array kopiert werden soll.  
-  
-### <a name="remarks"></a>Hinweise  
- Ausführlichere Hinweise finden Sie unter [CObArray::Copy](../../mfc/reference/cobarray-class.md#copy).  
-  
-##  <a name="elementat"></a>  CTypedPtrArray::ElementAt  
- Diese Inlinefunktion ruft `BASE_CLASS` **:: ElementAt**.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+*BASE_CLASS*<br/>
+Die Basisklasse der typisierter Zeiger Array-Klasse; muss eine Array-Klasse ( [CObArray](../../mfc/reference/cobarray-class.md) oder [CPtrArray](../../mfc/reference/cptrarray-class.md)).
+
+*TYPE*<br/>
+Der Typ der Elemente in der Basisklasse-Array gespeichert.
+
+*src*<br/>
+Die Quelle der Elemente in ein Array kopiert werden sollen.
+
+### <a name="remarks"></a>Hinweise
+
+Weitere Hinweise finden Sie unter [CObArray::Copy](../../mfc/reference/cobarray-class.md#copy).
+
+##  <a name="elementat"></a>  CTypedPtrArray::ElementAt
+
+Diese Inlinefunktion ruft `BASE_CLASS` **:: ElementAt**.
+
+```
 TYPE& ElementAt(INT_PTR nIndex);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *TYPE*  
- Der Vorlagenparameter Angabe des Typs der Elemente im Array gespeichert.  
-  
- *nIndex*  
- Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von `BASE_CLASS` **:: GetUpperBound**.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Einen temporären Verweis auf das Element an der vom angegebenen Position *nIndex*. Dieses Element ist vom Typ mit dem Vorlagenparameter angegebene *Typ*.  
-  
-### <a name="remarks"></a>Hinweise  
- Ausführlichere Hinweise finden Sie unter [CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat).  
-  
-##  <a name="getat"></a>  CTypedPtrArray::GetAt  
- Diese Inlinefunktion ruft `BASE_CLASS` **:: GetAt**.  
-  
-```  
-TYPE GetAt(INT_PTR nIndex) const;  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *TYPE*  
- Der Vorlagenparameter Angabe des Typs der Elemente im Array gespeichert.  
-  
- *nIndex*  
- Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von `BASE_CLASS` **:: GetUpperBound**.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Eine Kopie des Elements an der vom angegebenen Position *nIndex*. Dieses Element ist vom Typ mit dem Vorlagenparameter angegebene *Typ*.  
-  
-### <a name="remarks"></a>Hinweise  
- Ausführlichere Hinweise finden Sie unter [CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)  
-  
-##  <a name="insertat"></a>  CTypedPtrArray::InsertAt  
- Diese Memberfunktion ruft `BASE_CLASS` **:: InsertAt**.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+*TYPE*<br/>
+Der Vorlagenparameter, die den Typ der Elemente im Array gespeichert.
+
+*nIndex*<br/>
+Eine ganzzahlige Index, der größer als oder gleich 0 und kleiner als oder gleich den Rückgabewert von `BASE_CLASS` **:: GetUpperBound**.
+
+### <a name="return-value"></a>Rückgabewert
+
+Einen temporären Verweis auf das Element an der vom angegebenen Speicherort *nIndex*. Dieses Element hat den Typ mit dem Vorlagenparameter angegebene *Typ*.
+
+### <a name="remarks"></a>Hinweise
+
+Weitere Hinweise finden Sie unter [CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat).
+
+##  <a name="getat"></a>  CTypedPtrArray::GetAt
+
+Diese Inlinefunktion ruft `BASE_CLASS` **:: GetAt**.
+
+```
+TYPE GetAt(INT_PTR nIndex) const;
+```
+
+### <a name="parameters"></a>Parameter
+
+*TYPE*<br/>
+Der Vorlagenparameter, der den Typ der Elemente im Array gespeicherten angibt.
+
+*nIndex*<br/>
+Eine ganzzahlige Index, der größer als oder gleich 0 und kleiner als oder gleich den Rückgabewert von `BASE_CLASS` **:: GetUpperBound**.
+
+### <a name="return-value"></a>Rückgabewert
+
+Eine Kopie des Elements an der vom angegebenen Speicherort *nIndex*. Dieses Element hat den Typ mit dem Vorlagenparameter angegebene *Typ*.
+
+### <a name="remarks"></a>Hinweise
+
+Weitere Hinweise finden Sie unter [CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)
+
+##  <a name="insertat"></a>  CTypedPtrArray::InsertAt
+
+Diese Memberfunktion ruft `BASE_CLASS` **:: InsertAt**.
+
+```
 void InsertAt(
-    INT_PTR nIndex,  
-    TYPE newElement,  
+    INT_PTR nIndex,
+    TYPE newElement,
     INT_PTR nCount = 1);
 
- 
+
 void InsertAt(
-    INT_PTR nStartIndex,  
+    INT_PTR nStartIndex,
     CTypedPtrArray<BASE_CLASS, TYPE>* pNewArray);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *nIndex*  
- Eine ganzzahlige Index, die größer als der zurückgegebene Wert möglicherweise [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).  
-  
- *TYPE*  
- Typ der Elemente in der Basisklasse Array gespeichert.  
-  
- *newElement*  
- Der Zeiger in diesem Array platziert werden soll. Ein *NewElement* des Werts **NULL** ist zulässig.  
-  
- *nCount*  
- Die Anzahl der Häufigkeit, mit die dieses Element liegen eingefügt (Standardwert: 1).  
-  
- *nStartIndex*  
- Eine ganzzahlige Index, die größer als der zurückgegebene Wert möglicherweise `CObArray::GetUpperBound`.  
-  
- *BASIS_KLASSE*  
- Die Basisklasse der typisierten Zeiger Array-Klasse; muss eine Array-Klasse ( [CObArray](../../mfc/reference/cobarray-class.md) oder [CPtrArray](../../mfc/reference/cptrarray-class.md)).  
-  
- *pNewArray*  
- Ein anderes Array mit Elementen mit diesem Array hinzugefügt werden.  
-  
-### <a name="remarks"></a>Hinweise  
- Ausführlichere Hinweise finden Sie unter [CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat).  
-  
-##  <a name="operator_at"></a>  CTypedPtrArray::operator]  
- Diese Operatoren Inline Aufrufen `BASE_CLASS` **:: Operator []**.  
-  
-```  
-TYPE& operator[ ](int_ptr nindex);  
-TYPE operator[ ](int_ptr nindex) const;  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *TYPE*  
- Der Vorlagenparameter Angabe des Typs der Elemente im Array gespeichert.  
-  
- *nIndex*  
- Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von `BASE_CLASS` **:: GetUpperBound**.  
-  
-### <a name="remarks"></a>Hinweise  
- Der erste Operator aufgerufen für Arrays, die nicht **const**, auf der rechten Seite (r) oder linken (l-Wert) einer zuweisungsanweisung verwendet werden können. Die zweite für aufgerufene **const** Arrays können nur auf der rechten Seite verwendet werden.  
-  
- Die Debugversion der Bibliothek wird bestätigt, wenn der Index (entweder auf der linken oder rechten Seite einer zuweisungsanweisung) außerhalb des gültigen Bereichs ist.  
-  
-##  <a name="setat"></a>  CTypedPtrArray::SetAt  
- Diese Memberfunktion ruft `BASE_CLASS` **:: SetAt**.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+*nIndex*<br/>
+Eine ganzzahlige Index, die größer als der von zurückgegebene Wert möglicherweise [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).
+
+*TYPE*<br/>
+Der Typ der Elemente in der Basisklasse-Array gespeichert.
+
+*newElement*<br/>
+Der Objektzeiger in diesem Array platziert werden. Ein *NewElement* Werts **NULL** ist zulässig.
+
+*nCount*<br/>
+Die Anzahl der Male, die dieses Element eingefügt (Standardwert: 1).
+
+*nStartIndex*<br/>
+Eine ganzzahlige Index, die größer als der von zurückgegebene Wert möglicherweise `CObArray::GetUpperBound`.
+
+*BASE_CLASS*<br/>
+Die Basisklasse der typisierter Zeiger Array-Klasse; muss eine Array-Klasse ( [CObArray](../../mfc/reference/cobarray-class.md) oder [CPtrArray](../../mfc/reference/cptrarray-class.md)).
+
+*pNewArray*<br/>
+Ein anderes Array mit Elementen in diesem Array hinzugefügt werden sollen.
+
+### <a name="remarks"></a>Hinweise
+
+Weitere Hinweise finden Sie unter [CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat).
+
+##  <a name="operator_at"></a>  CTypedPtrArray::operator]
+
+Diese Operatoren Inline Aufrufen `BASE_CLASS` **:: Operator []**.
+
+```
+TYPE& operator[ ](int_ptr nindex);
+TYPE operator[ ](int_ptr nindex) const;
+```
+
+### <a name="parameters"></a>Parameter
+
+*TYPE*<br/>
+Der Vorlagenparameter, der den Typ der Elemente im Array gespeicherten angibt.
+
+*nIndex*<br/>
+Eine ganzzahlige Index, der größer als oder gleich 0 und kleiner als oder gleich den Rückgabewert von `BASE_CLASS` **:: GetUpperBound**.
+
+### <a name="remarks"></a>Hinweise
+
+Der erste Operator aufgerufen wird, für Arrays, die nicht **const**, kann entweder auf der rechten Seite (r) oder auf der linken Seite (l-Wert) einer zuweisungsanweisung verwendet werden. Das zweite für aufgerufen **const** Arrays kann nur auf der rechten Seite verwendet werden.
+
+Die Debugversion der Bibliothek wird bestätigt, den der Feldindex (entweder auf der linken oder rechten Seite einer zuweisungsanweisung) liegt außerhalb des gültigen Bereichs.
+
+##  <a name="setat"></a>  CTypedPtrArray::SetAt
+
+Diese Memberfunktion ruft `BASE_CLASS` **:: SetAt**.
+
+```
 void SetAt(
-    INT_PTR nIndex,  
+    INT_PTR nIndex,
     TYPE ptr);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *nIndex*  
- Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).  
-  
- *TYPE*  
- Typ der Elemente in der Basisklasse Array gespeichert.  
-  
- *ptr*  
- Ein Zeiger auf das Element im Array, ab der nIndex eingefügt werden. Es ist ein NULL-Wert zulässig.  
-  
-### <a name="remarks"></a>Hinweise  
- Ausführlichere Hinweise finden Sie unter [CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat).  
-  
-##  <a name="setatgrow"></a>  CTypedPtrArray::SetAtGrow  
- Diese Memberfunktion ruft `BASE_CLASS` **:: SetAtGrow**.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+*nIndex*<br/>
+Eine ganzzahlige Index, der größer als oder gleich 0 und kleiner als oder gleich den Rückgabewert von [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).
+
+*TYPE*<br/>
+Der Typ der Elemente in der Basisklasse-Array gespeichert.
+
+*ptr*<br/>
+Ein Zeiger auf das Element im Array, an die nIndex eingefügt werden. Es ist ein NULL-Wert zulässig.
+
+### <a name="remarks"></a>Hinweise
+
+Weitere Hinweise finden Sie unter [CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat).
+
+##  <a name="setatgrow"></a>  CTypedPtrArray::SetAtGrow
+
+Diese Memberfunktion ruft `BASE_CLASS` **:: SetAtGrow**.
+
+```
 void SetAtGrow(
-    INT_PTR nIndex,  
+    INT_PTR nIndex,
     TYPE newElement);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *nIndex*  
- Ein Integer-Index, der größer als oder gleich 0 ist.  
-  
- *TYPE*  
- Typ der Elemente in der Basisklasse Array gespeichert.  
-  
- *newElement*  
- Die Objektzeiger dieses Array hinzugefügt werden. Ein **NULL** Wert ist zulässig.  
-  
-### <a name="remarks"></a>Hinweise  
- Ausführlichere Hinweise finden Sie unter [CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow).  
-  
-## <a name="see-also"></a>Siehe auch  
- [MFC-Beispiel erfassen](../../visual-cpp-samples.md)   
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [CPtrArray-Klasse](../../mfc/reference/cptrarray-class.md)   
- [CObArray-Klasse](../../mfc/reference/cobarray-class.md)
+```
+
+### <a name="parameters"></a>Parameter
+
+*nIndex*<br/>
+Eine ganze Zahl-Index, der größer als oder gleich 0 ist.
+
+*TYPE*<br/>
+Der Typ der Elemente in der Basisklasse-Array gespeichert.
+
+*newElement*<br/>
+Der Objektzeiger, die diesem Array hinzugefügt werden. Ein **NULL** Wert ist zulässig.
+
+### <a name="remarks"></a>Hinweise
+
+Weitere Hinweise finden Sie unter [CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow).
+
+## <a name="see-also"></a>Siehe auch
+
+[MFC-Beispiel erfassen](../../visual-cpp-samples.md)<br/>
+[Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
+[CPtrArray-Klasse](../../mfc/reference/cptrarray-class.md)<br/>
+[CObArray-Klasse](../../mfc/reference/cobarray-class.md)

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c44028f834d2b3200b970fdc613d0bf4d4efd29
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7d9ab5157bb39b890c867c90e3b6a77cf189c9ef
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702857"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421270"
 ---
 # <a name="tlbout-name-tlb-file"></a>/TLBOUT (TLB-Datei benennen)
 
@@ -68,6 +68,6 @@ Wenn/TLBOUT nicht angegeben ist, erhalten die TLB-Datei den Namen [/IDLOUT](../.
 
 [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
 [Linkeroptionen](../../build/reference/linker-options.md)<br/>
-[/ IGNOREIDL (Attribute nicht in verarbeiten MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
-[/MIDL (MIDL-Befehlszeilenoptionen angeben)](../../build/reference/midl-specify-midl-command-line-options.md)
+[/IGNOREIDL (Attribute nicht in MIDL verarbeiten)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/MIDL (MIDL-Befehlszeilenoptionen angeben)](../../build/reference/midl-specify-midl-command-line-options.md)<br/>
 [Erstellen eines attributierten Programms](../../windows/building-an-attributed-program.md)

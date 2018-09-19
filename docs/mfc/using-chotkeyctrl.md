@@ -1,5 +1,5 @@
 ---
-title: Verwenden von CHotKeyCtrl | Microsoft Docs
+title: Verwenden von CHotKeyCtrl | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3678d95ff0748c1854e509d898dfa89778c9a5f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd966b74590d0e7641f2f789b5c45f901a3cf8c8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381802"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421504"
 ---
 # <a name="using-chotkeyctrl"></a>Verwenden von CHotKeyCtrl
-Eines Abkürzungstasten-Steuerelements, dargestellt durch die Klasse [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md), ist ein Fenster, in dem eine Textdarstellung der Tastenkombination angezeigt, der Benutzer, z. B. STRG + UMSCHALT + Q eingibt. Er verwaltet auch eine interne Darstellung dieses Schlüssels in Form von einem virtuellem Tastencode und eine Gruppe von Flags, die UMSCHALT-Status darstellen. Die Abkürzungstasten-Steuerelements wird nicht tatsächlich die Abkürzungstaste festgelegt – bis zu das Programm wird auf diese Weise. (Eine Liste der standardmäßigen virtuellen Tastencodes, finden Sie unter Winuser.h.)  
-  
- Verwenden eines Abkürzungstasten-Steuerelements zum Abrufen der Benutzereingabe für welche Abkürzungstaste ein Fenster oder ein Thread zugeordnet werden soll. Abkürzungstasten-Steuerelemente werden häufig in Dialogfeldern verwendet, z. B. möglicherweise angezeigt wird, wenn Sie gefragt werden, die Benutzer eine Abkürzungstaste zugewiesen. Es ist Aufgabe des Programms, zum Abrufen der Werte, die im laufenden Systembetrieb Schlüssel aus der Abkürzungstasten-Steuerelements beschreibt, und rufen Sie die entsprechenden Funktionen, um ein Fenster oder Thread der Abkürzungstaste zuzuordnen.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
-  
--   [Verwenden eines Abkürzungstasten-Steuerelements](../mfc/using-a-hot-key-control.md)  
-  
--   [Festlegen einer Abkürzungstaste](../mfc/setting-a-hot-key.md)  
-  
--   [Globale Abkürzungstasten](../mfc/global-hot-keys.md)  
-  
--   [Threadspezifische Abkürzungstasten](../mfc/thread-specific-hot-keys.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Steuerelemente](../mfc/controls-mfc.md)
+
+Eines Abkürzungstasten-Steuerelements, durch Klasse dargestellten [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md), ist ein Fenster, in dem eine Textdarstellung der Tastenkombination angezeigt, das der Benutzer, z. B. STRG + UMSCHALT + Q eingibt. Er verwaltet auch eine interne Darstellung des Schlüssels in Form von einem virtuellem Tastencode und einen Satz von Flags, die den UMSCHALT-Status darstellen. Die Abkürzungstasten-Steuerelements wird nicht tatsächlich die Abkürzungstaste festgelegt – ausführen, bis das Programm ist. (Eine Liste der standardmäßige virtuelle Tastencodes, finden Sie in der Winuser.h.)
+
+Verwenden eines Abkürzungstasten-Steuerelements zum Abrufen der Benutzereingabe für die Abkürzungstaste, einem Fenster oder Thread zugeordnet werden soll. Abkürzungstasten-Steuerelemente werden häufig in Dialogfeldern verwendet werden, wie z. B. möglicherweise angezeigt werden, wenn den Benutzer eine Abkürzungstaste zuweisen. Es ist Aufgabe des Programms, der Werte, die den aktiven Schlüssel aus der Abkürzungstasten-Steuerelements abgerufen und rufen Sie die entsprechenden Funktionen, um die Abkürzungstaste mit einem Fenster oder Thread zu verknüpfen.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+
+- [Verwenden eines Abkürzungstasten-Steuerelements](../mfc/using-a-hot-key-control.md)
+
+- [Festlegen einer Abkürzungstaste](../mfc/setting-a-hot-key.md)
+
+- [Globale Abkürzungstasten](../mfc/global-hot-keys.md)
+
+- [Threadspezifische Abkürzungstasten](../mfc/thread-specific-hot-keys.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Steuerelemente](../mfc/controls-mfc.md)
 

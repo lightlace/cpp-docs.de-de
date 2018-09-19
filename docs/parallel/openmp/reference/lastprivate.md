@@ -16,38 +16,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c87dfc47f7f2554e75567a1de4ea9cb2e06eaa00
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7124e51b604a55d049be13d3bbcccc4e5810ca67
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028193"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412833"
 ---
 # <a name="lastprivate"></a>lastprivate
-Gibt an, dass der umschließenden Kontext Version der Variablen ist gleich der privaten Version der Thread der letzten Iteration (for-Schleife-Konstrukt) oder der letzte Abschnitt (#pragma Abschnitte) ausgeführt wird.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-lastprivate(var)  
-```  
-  
+
+Gibt an, dass der umschließenden Kontext Version der Variablen ist gleich der privaten Version der Thread der letzten Iteration (for-Schleife-Konstrukt) oder der letzte Abschnitt (#pragma Abschnitte) ausgeführt wird.
+
+## <a name="syntax"></a>Syntax
+
+```
+lastprivate(var)
+```
+
 ### <a name="parameters"></a>Parameter
-  
+
 *var*<br/>
-Die Variable, die gleich der privaten Version der Thread ausgeführt, der letzten Iteration (for-Schleife-Konstrukt) oder der letzte Abschnitt (#pragma Abschnitte wird) festgelegt ist.  
-  
-## <a name="remarks"></a>Hinweise  
- `lastprivate` gilt für die folgenden Anweisungen:  
-  
--   [for](../../../parallel/openmp/reference/for-openmp.md)  
-  
--   [Abschnitte](../../../parallel/openmp/reference/sections-openmp.md)  
-  
- Weitere Informationen finden Sie unter [2.7.2.3 Lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md).  
-  
-## <a name="example"></a>Beispiel  
- Finden Sie unter [Zeitplan](../../../parallel/openmp/reference/schedule.md) ein Beispiel der Verwendung von `lastprivate` Klausel.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klauseln](../../../parallel/openmp/reference/openmp-clauses.md)
+Die Variable, die gleich der privaten Version der Thread ausgeführt, der letzten Iteration (for-Schleife-Konstrukt) oder der letzte Abschnitt (#pragma Abschnitte wird) festgelegt ist.
+
+## <a name="remarks"></a>Hinweise
+
+`lastprivate` gilt für die folgenden Anweisungen:
+
+- [for](../../../parallel/openmp/reference/for-openmp.md)
+
+- [Abschnitte](../../../parallel/openmp/reference/sections-openmp.md)
+
+Weitere Informationen finden Sie unter [2.7.2.3 Lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md).
+
+## <a name="example"></a>Beispiel
+
+Finden Sie unter [Zeitplan](../../../parallel/openmp/reference/schedule.md) ein Beispiel der Verwendung von `lastprivate` Klausel.
+
+## <a name="see-also"></a>Siehe auch
+
+[Klauseln](../../../parallel/openmp/reference/openmp-clauses.md)

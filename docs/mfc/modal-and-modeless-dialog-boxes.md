@@ -1,5 +1,5 @@
 ---
-title: Modale und nicht modale Dialogfelder | Microsoft Docs
+title: Modale und nicht modale Dialogfelder | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4f03d67e1eb9962f4303694db4850e800151404
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e355c3bcef9edb68e49903dafbf4719fe0aa925
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346560"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417526"
 ---
 # <a name="modal-and-modeless-dialog-boxes"></a>Modale und nicht modale Dialogfelder
-Sie können die Klasse [CDialog](../mfc/reference/cdialog-class.md) auf zwei Arten von Dialogfeldern zu verwalten:  
-  
--   *Modale Dialogfelder*, die erfordern, dass des Benutzers reagiert, bevor Sie fortfahren das Programm  
-  
--   *Nicht modale Dialogfelder*, die auf dem Bildschirm und sind für die Verwendung zu einem beliebigen Zeitpunkt verfügbar bleiben jedoch andere Aktivitäten des Benutzers zulassen  
-  
- Die Ressource zu bearbeiten und-Verfahren zum Erstellen einer Dialogfeldvorlage entsprechen für modale und nicht modale Dialogfelder.  
-  
- Erstellen ein Dialogfeld für das Programm erfordert die folgenden Schritte aus:  
-  
-1.  Verwenden der [Dialog-Editor](../windows/dialog-editor.md) Entwerfen des Dialogfelds "" und erstellen die Dialogfeldvorlagen-Ressource.  
-  
-2.  Erstellen einer Dialogfeldklasse.  
-  
-3.  Verbinden der [Dialog-Ressource Steuerelemente Meldungshandler](../windows/adding-event-handlers-for-dialog-box-controls.md) in Dialogklasse.  
-  
-4.  Hinzufügen von Datenelementen, die verknüpft sind, mit dem Dialogfeld-Steuerelemente sowie an [Dialogdatenaustausch](../mfc/dialog-data-exchange.md) und [Dialogfeld Daten Überprüfungen](../mfc/dialog-data-validation.md) für die Steuerelemente.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Dialogfelder](../mfc/dialog-boxes.md)   
- [Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)
+
+Sie können die Klasse [CDialog](../mfc/reference/cdialog-class.md) zum Verwalten von zwei Arten von Dialogfeldern:
+
+- *Modale Dialogfelder*, die erfordern, dass des Benutzers reagieren kann, bevor Sie fortfahren das Programm
+
+- *Nicht modale Dialogfelder*, die auf dem Bildschirm und sind für die Verwendung jederzeit verfügbar bleiben jedoch eine andere Aktivitäten des Benutzers zulassen
+
+Die Ressource bearbeiten und-Verfahren zum Erstellen einer Dialogfeldvorlage entsprechen für modale und nicht modale Dialogfelder.
+
+Erstellen eines Dialogfelds für das Programm erfordert die folgenden Schritte aus:
+
+1. Verwenden der [Dialog-Editor](../windows/dialog-editor.md) entwerfen das Dialogfeld, und der Dialogfeldvorlagen-Ressource zu erstellen.
+
+1. Erstellen einer Dialogfeldklasse.
+
+1. Verbinden der [Dialog-Ressource Steuerelemente Meldungshandler](../windows/adding-event-handlers-for-dialog-box-controls.md) in die Dialogfeldklasse.
+
+1. Hinzufügen von Datenelementen zugeordnet sind, an das Dialogfeld-Steuerelemente und [Dialogdatenaustausch](../mfc/dialog-data-exchange.md) und [Dialogfeld Daten Überprüfungen](../mfc/dialog-data-validation.md) für die Steuerelemente.
+
+## <a name="see-also"></a>Siehe auch
+
+[Dialogfelder](../mfc/dialog-boxes.md)<br/>
+[Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)
 

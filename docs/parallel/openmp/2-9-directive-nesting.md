@@ -1,5 +1,5 @@
 ---
-title: 2.9 Schachtelung von | Microsoft Docs
+title: 2.9 Schachtelung von | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,28 +12,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28e690ba531b4b37973bc2555d904317181ff918
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b9558180a2f063171be563219f89ec3858e37a5d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691338"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396986"
 ---
 # <a name="29-directive-nesting"></a>2.9 Schachtelung von Anweisungen
-Dynamische Schachtelung von Direktiven muss die folgenden Regeln einhalten:  
-  
--   Ein **parallele** Richtlinie dynamisch in einem anderen **parallele** logisch richtet ein neues Team, die nur den aktuellen Thread besteht, es sei denn, die Parallelität geschachtelt ist aktiviert.  
-  
--   **für**, **Abschnitte**, und **einzelne** Direktiven, die auf den gleichen binden **parallele** dürfen nicht ineinander geschachtelt werden.  
-  
--   **kritische** Direktiven mit demselben Namen dürfen nicht ineinander geschachtelt werden. Beachten Sie, dass diese Einschränkung ist nicht ausreichend, Deadlock zu verhindern.  
-  
--   **für**, **Abschnitte**, und **einzelne** Direktiven sind nicht zulässig, in dem dynamischen Wertebereich **kritische**, **sortiert**, und **master** Regionen aus, wenn die Anweisungen auf den gleichen binden **parallele** als Regionen.  
-  
--   **Barriere** Direktiven sind nicht zulässig, in dem dynamischen Wertebereich **für**, **sortiert**, **Abschnitte**, **einzelne**, **master**, und **kritische** Regionen aus, wenn die Anweisungen auf den gleichen binden **parallele** als Regionen.  
-  
--   **Master** Direktiven sind nicht zulässig, in dem dynamischen Wertebereich **für**, **Abschnitte**, und **einzelne** Direktiven Wenn die **Master** Direktiven binden, auf das gleiche **parallele** als die Arbeit sharing-Direktiven.  
-  
--   **sortiert** Direktiven sind nicht zulässig, in dem dynamischen Wertebereich **kritische** Regionen aus, wenn die Anweisungen auf den gleichen binden **parallele** als Regionen.  
-  
--   Jede Richtlinie, die berechtigt ist, wenn dynamisch innerhalb eines parallelen Bereichs ausgeführt ist auch zulässig, wenn außerhalb eines parallelen Bereichs ausgeführt. Wenn außerhalb eines parallelen Bereichs von benutzerdefinierten dynamisch ausgeführt wird, wird die Richtlinie von einem Team besteht nur die master-Thread ausgeführt.
+
+Dynamische Schachtelung von Anweisungen muss die folgenden Regeln beachtet werden:
+
+- Ein **parallele** dynamisch in einer anderen Richtlinie **parallele** logisch richtet ein neues Team, das nur den aktuellen Thread besteht, es sei denn, die Parallelität geschachtelt ist aktiviert.
+
+- **für**, **Abschnitte**, und **einzelne** Direktiven, die auf die gleiche Bindung **parallele** dürfen nicht ineinander geschachtelt werden.
+
+- **kritische** Anweisungen mit dem gleichen Namen dürfen nicht ineinander geschachtelt werden. Beachten Sie, dass diese Einschränkung ist nicht ausreichend, Deadlocks zu vermeiden.
+
+- **für**, **Abschnitte**, und **einzelne** Anweisungen sind nicht zulässig, in der dynamischen Wertebereich **kritische**, **sortiert**, und **master** Regionen aus, wenn die Anweisungen auf die gleiche Bindung **parallele** als Regionen.
+
+- **Barriere** Anweisungen sind nicht zulässig, in der dynamischen Wertebereich **für**, **sortiert**, **Abschnitte**, **einzelne**, **master**, und **kritische** Regionen aus, wenn die Anweisungen auf die gleiche Bindung **parallele** als Regionen.
+
+- **Master** Anweisungen sind nicht zulässig, in der dynamischen Wertebereich **für**, **Abschnitte**, und **einzelne** Direktiven Wenn die **Master** Anweisungen zu binden, auf die gleiche **parallele** als die gemeinsame Verwendung von Work-Anweisungen.
+
+- **sortiert** Anweisungen sind nicht zulässig, in der dynamischen Wertebereich **kritische** Regionen aus, wenn die Anweisungen auf die gleiche Bindung **parallele** als Regionen.
+
+- Jede Richtlinie, die zulässig ist, wenn dynamisch innerhalb eines parallelen Bereichs ausgeführt ist auch zulässig, wenn außerhalb eines parallelen Bereichs ausgeführt. Wenn außerhalb eines parallelen Bereichs von benutzerdefinierten dynamisch ausgeführt wird, wird die Richtlinie von einem Team besteht aus nur die master-Thread ausgeführt.

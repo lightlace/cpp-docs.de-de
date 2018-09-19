@@ -1,5 +1,5 @@
 ---
-title: 2.7.2.4 freigegebene | Microsoft Docs
+title: 2.7.2.4 freigegebene | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1de0e32e16d889acb8f1339d783bc194b3508dda
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9d1a545f1c505f9f578cad682399c8d69a882824
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695693"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400145"
 ---
 # <a name="2724-shared"></a>2.7.2.4 shared
-Diese Klausel teilt Variablen in der *Variablenliste* auf allen Threads in einem Team. Alle Threads in einem Team Zugriff auf denselben Speicherbereich für **freigegebenen** Variablen.  
-  
- Die Syntax der **freigegebenen** -Klausel ist wie folgt:  
-  
-```  
-shared(variable-list)  
+
+Diese Klausel teilt Variablen in der *Variablenliste* auf allen Threads in einem Team. Alle Threads in einem Team Zugriff auf denselben Speicherbereich für **freigegebenen** Variablen.
+
+Die Syntax der **freigegebenen** -Klausel ist wie folgt:
+
+```
+shared(variable-list)
 ```
