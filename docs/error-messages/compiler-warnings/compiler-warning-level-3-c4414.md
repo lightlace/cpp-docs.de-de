@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 3) C4414 | Microsoft Docs
+title: Compilerwarnung (Stufe 3) C4414 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1526b20732d7a1b08ec8d753cb64e33e42dd809
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd0868fea89cd868178956c0aba171ce6525bd75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289707"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043208"
 ---
 # <a name="compiler-warning-level-3-c4414"></a>Compilerwarnung (Stufe 3) C4414
-'Funktion': short-Sprung zur Funktion konvertiert in near  
-  
- Kurze Sprünge erzeugen compact Anweisung, welche in eine Adresse in einen begrenzten Bereich von der Anweisung Verzweigungen. Die Anweisung enthält einen kurze Offset, der den Abstand zwischen den Sprung und die Zieladresse der Definition der Funktion darstellt. Während der Verknüpfung möglicherweise eine Funktion verschoben werden oder Link-Time-Optimierungen, die dazu führen, dass die Funktion außerhalb des Bereichs erreichbar aus einem kurzen Offset verschoben werden. Der Compiler muss einen speziellen Datensatz für den Sprung generieren erfordert die Anweisung jmp NAHER oder ganz sein. Der Compiler versucht, die Konvertierung.  
-  
- Im folgende Code wird z. B. C4414 generiert:  
-  
-```  
-// C4414.cpp  
-// compile with: /W3 /c  
-// processor: x86  
-int DoParityEven();  
-int DoParityOdd();  
-unsigned char global;  
-int __declspec(naked) DoParityEither()  
-{  
-   __asm  
-   {  
-      test global,0  
-      jpe SHORT DoParityEven  // C4414  
-      jmp SHORT DoParityOdd   // C4414  
-   }  
-}  
+
+'Funktion': short-Sprung zur Funktion konvertiert in near
+
+Kurze Sprünge generieren kompakte Anweisung, die in eine Adresse in einem begrenzten Bereich von der Anweisung "branches". Die Anweisung enthält einen kurze Offset, der den Abstand zwischen dem Sprung und die Zieladresse, die Definition der Funktion darstellt. Während des Verknüpfens möglicherweise eine Funktion verschoben werden oder ein Link-Time-Optimierungen, die dazu führen, dass die Funktion, die außerhalb des gültigen Bereichs erreichbar, die von einem kurzen Offset verschoben werden. Der Compiler muss einen speziellen Datensatz für den Sprung generieren, müssen Sie die Anweisung "jmp" ganz oder nahe sein. Der Compiler versucht, die Konvertierung.
+
+Der folgende Code generiert beispielsweise C4414:
+
+```
+// C4414.cpp
+// compile with: /W3 /c
+// processor: x86
+int DoParityEven();
+int DoParityOdd();
+unsigned char global;
+int __declspec(naked) DoParityEither()
+{
+   __asm
+   {
+      test global,0
+      jpe SHORT DoParityEven  // C4414
+      jmp SHORT DoParityOdd   // C4414
+   }
+}
 ```

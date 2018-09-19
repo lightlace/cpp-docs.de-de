@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3136 generiert | Microsoft Docs
+title: Compilerfehler C3136 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f892c7f3d1ca7bf2aebf3ecfe7574182b544fd01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0439aa157a683065ccf7fff5b5f9d6d4d85e2f12
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248850"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054219"
 ---
-# <a name="compiler-error-c3136"></a>Compiler-Fehler C3136 generiert
-'Schnittstelle': eine COM-Schnittstelle kann nur von einem anderen COM-Schnittstelle erben, 'Schnittstelle' ist keine COM-Schnittstelle  
-  
- Eine Schnittstelle für die Sie gilt eine [Schnittstellenattribut](../../windows/interface-attributes.md) erbt von einer Schnittstelle, die keine COM-Schnittstelle ist. Eine COM-Schnittstelle erbt letztlich von `IUnknown`. Eine beliebige Schnittstelle vorangestellt Interface-Attribut ist eine COM-Schnittstelle.  
-  
- Im folgende Beispiel wird C3136 generiert:  
-  
-```  
-// C3136.cpp  
-#include "unknwn.h"  
-  
-__interface A   // C3136  
-// try the following line instead  
-// _interface A : IUnknown  
-{  
-   int a();  
-};  
-  
-[object]  
-__interface B : A  
-{  
-   int aa();  
-};  
+# <a name="compiler-error-c3136"></a>Compilerfehler C3136
+
+'Schnittstelle': eine COM-Schnittstelle kann nur von einem anderen COM-Schnittstelle erben, 'Schnittstelle' ist keine COM-Schnittstelle
+
+Eine Schnittstelle, die auf die Sie angewendet ein [Interface-Attribut](../../windows/interface-attributes.md) erbt von einer Schnittstelle, die nicht auf eine COM-Schnittstelle ist. Eine COM-Schnittstelle erbt letztlich von `IUnknown`. Eine Schnittstelle, die vor dem Interface-Attribut ist eine COM-Schnittstelle.
+
+Im folgende Beispiel wird die C3136 generiert:
+
+```
+// C3136.cpp
+#include "unknwn.h"
+
+__interface A   // C3136
+// try the following line instead
+// _interface A : IUnknown
+{
+   int a();
+};
+
+[object]
+__interface B : A
+{
+   int aa();
+};
 ```

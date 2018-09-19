@@ -1,5 +1,5 @@
 ---
-title: Projektbuildfehler prj0032 | Microsoft Docs
+title: Projektbuildfehler prj0032 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6be9a343ae9d9ce1e3d862cc0a397f1d61ccdea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 106b1c3f470bbdb134a5fd53ebaef65a4392fd4b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318662"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053571"
 ---
 # <a name="project-build-error-prj0032"></a>Projektbuildfehler PRJ0032
-Die Outputs-Eigenschaft für den benutzerdefinierten Buildschritt auf Projektebene enthaltenen "Makros", die als "Macro_expansion" ausgewertet wird.  
-  
- Ein benutzerdefinierten Buildschritt an einem Projekt musste fehlerhafte Ausgabe wahrscheinliche Ursache: ein Makro Auswertung Problem. Dieser Fehler kann auch dies bedeuten, dass der Pfad weist ein ungültiges Format ist, enthält Zeichen oder eine Kombination von Zeichen, die in einem Dateipfad unzulässig sind.  
-  
- Um diesen Fehler zu beheben, korrigieren Sie das Makro oder die Pfadangabe. Der ausgewertete Pfad ist ein absoluter Pfad vom Projektverzeichnis.
+
+Die 'Outputs'-Eigenschaft für den benutzerdefinierten Buildschritt auf Projektebene enthalten "Makros", die als "Macro_expansion" ausgewertet wird.
+
+Ein benutzerdefinierten Buildschritt an einem Projekt musste ungültige Ausgabe wahrscheinlich aufgrund eines Problems der Makro-Evaluierung. Dass der Pfad enthält Zeichen oder eine Kombination von Zeichen, die in einem Dateipfad unzulässig sind falsch formatiert wurde, wird von dieser Fehler auch bedeuten.
+
+Um diesen Fehler zu beheben, korrigieren Sie das Makro oder die Pfadangabe. Der ausgewertete Pfad ist ein absoluter Pfad vom Projektverzeichnis.

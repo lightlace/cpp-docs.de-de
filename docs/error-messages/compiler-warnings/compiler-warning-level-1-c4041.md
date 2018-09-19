@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4041 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4041 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfd8c933522e523329c41ebe666a5a7e3c198cb0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ff2c8066557e420ecd7de561d7731b7be733315
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286096"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085783"
 ---
 # <a name="compiler-warning-level-1-c4041"></a>Compilerwarnung (Stufe 1) C4041
-Compilerlimit : Browserausgabe wird abgebrochen  
-  
- Die Browserinformationen haben das Compilerlimit überschritten.  
-  
- Diese Warnung kann durch die Kompilierung mit [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) (Browserinformationen einschließlich lokaler Variablen) verursacht werden.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>So beheben Sie den Fehler (unterschiedliche Lösungsmöglichkeiten)  
-  
-1.  Kompilieren Sie mit /Fr (Browserinformationen ohne lokale Variablen).  
-  
-2.  Deaktivieren Sie die Browserausgabe (Kompilieren ohne/fr oder/FR).
+
+Compilerlimit : Browserausgabe wird abgebrochen
+
+Die Browserinformationen haben das Compilerlimit überschritten.
+
+Diese Warnung kann durch die Kompilierung mit [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) (Browserinformationen einschließlich lokaler Variablen) verursacht werden.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>So beheben Sie den Fehler (unterschiedliche Lösungsmöglichkeiten)
+
+1. Kompilieren Sie mit /Fr (Browserinformationen ohne lokale Variablen).
+
+1. Deaktivieren Sie die Browserausgabe (Kompilieren ohne/fr oder/FR).

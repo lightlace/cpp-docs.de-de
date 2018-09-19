@@ -1,5 +1,5 @@
 ---
-title: Installieren der Datenbankunterstützung (MFC-ATL) | Microsoft Docs
+title: Installieren der Datenbankunterstützung (MFC / ATL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 845b14d8f50831b8212819e1b2305b1a6841010b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81e03f515d01902ad4c6935b8b263e51823f62d8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092570"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080206"
 ---
 # <a name="installing-database-support-mfcatl"></a>Installieren der Datenbankunterstützung (MFC/ATL)
-Visual C++ umfasst keine Produkte. Beschreibung  
+
+Visual C++ umfasst keine Datenbankprodukte. Beschreibung  
   
  
 ## <a name="see-also"></a>Siehe auch  
- [Datenzugriff](data-access-in-cpp.md)
+
+[Datenzugriff](data-access-in-cpp.md)

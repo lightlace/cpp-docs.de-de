@@ -1,5 +1,5 @@
 ---
-title: Katalogsichten geben Informationen (MFC-Datenzugriff) | Microsoft Docs
+title: Kataloginformationen (MFC-Datenzugriff) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: af8fd53122dcad71fb5ff20298cbd35b4d8ba31c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eb66b1068e20f4bfc8936e592afbcb5183974a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090052"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110951"
 ---
 # <a name="catalog-information--mfc-data-access"></a>Kataloginformationen (MFC-Datenzugriff)
+
 Informationen zu den Tabellen in einer Datenquelle können die Namen der Tabellen und die darin enthaltenen Spalten, Tabellenberechtigungen, Namen von Primär- und Fremdschlüsseln, Informationen zu vordefinierten Abfragen oder gespeicherten Prozeduren, Informationen zu Indizes in Tabellen sowie statistische Angaben zu Tabellen umfassen.  
   
- Weitere Informationen finden Sie unter [Datenquelle: Bestimmen des Schemas der Datenquelle (ODBC)](../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md).  
+Weitere Informationen finden Sie unter [Datenquelle: Bestimmen des Schemas der Datenquelle (ODBC)](../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md).  
   
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenzugriffsprogrammierung (MFC/ATL)](../data/data-access-programming-mfc-atl.md)
+
+[Datenzugriffsprogrammierung (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

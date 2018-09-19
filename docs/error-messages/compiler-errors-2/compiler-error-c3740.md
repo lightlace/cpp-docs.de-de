@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3740 | Microsoft Docs
+title: Compilerfehler C3740 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53004e1a26fc0ead32680ac9b37b2e9aaa13087e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6bda1392ae4ebe95c6038b8dd0ec322b32ba4d8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33264089"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044196"
 ---
 # <a name="compiler-error-c3740"></a>Compilerfehler C3740
-Vorlagen können keine Datenquelle oder Ereignisse empfangen  
-  
- Eine aus einer Vorlage gebildete Klasse oder Struktur kann keine enthalten [Ereignisse](../../cpp/event-handling.md).  
-  
- Im folgende Beispiel wird C3740 generiert:  
-  
-```  
-// C3740.cpp  
-template <typename T>   // Delete the template specification  
-struct E {  
-   __event void f();   // C3740  
-};  
-  
-int main() {  
-}  
+
+Vorlagen können keine Datenquelle, oder Empfangen von Ereignissen
+
+Eine auf Vorlagen basierenden Klasse oder Struktur kann nicht enthalten [Ereignisse](../../cpp/event-handling.md).
+
+Im folgende Beispiel wird die C3740 generiert:
+
+```
+// C3740.cpp
+template <typename T>   // Delete the template specification
+struct E {
+   __event void f();   // C3740
+};
+
+int main() {
+}
 ```

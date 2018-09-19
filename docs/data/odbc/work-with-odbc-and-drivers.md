@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit ODBC und Treibern | Microsoft Docs
+title: Arbeiten mit ODBC und Treibern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,27 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7d49fa24c6cb27bc54e8cc3dc6bba674cb12ae57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 37888b735e76c42aaca20b3519efe381f3d7578c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33095114"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038788"
 ---
 # <a name="work-with-odbc-and-drivers"></a>Arbeiten mit ODBC und Treibern
-ODBC können Sie Anwendungen schreiben, die nicht nur eine Datenbank-Managementsystem (DBMS) abhängig sind. Sie können einer Anwendung, die ausgeführt werden, kann auf mehrere DBMS schreiben, für die Ihre Benutzer die richtigen DBMS-spezifische ODBC-Treiber besitzen.  
+
+ODBC können Sie Anwendungen schreiben, die nicht nur eine Datenbank-Managementsystem (DBMS) abhängig sind. Sie können eine Anwendung, die ausgeführt werden, kann mehrere eines DBMS schreiben, für die Ihre Benutzer den richtigen DBMS-spezifische ODBC-Treiber verfügen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Bestimmen des Schemas einer ODBC-Datenquelle zur Laufzeit](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)  
+- [Bestimmen Sie das Schema von einer ODBC-Datenquelle zur Laufzeit](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)  
   
--   [Erhalten Sie eine Beschreibung, die mit dem ODBC-Administrator](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
+- [Erhalten Sie eine treiberbeschreibung, die mit ODBC-Administrator](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
   
--   [Abrufen der Onlinehilfe des ODBC-Treibers](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
+- [Verwenden der Onlinehilfe des ODBC-Treibers](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
   
--   [Programmgesteuertes Erstellen einer Tabelle in einer ODBC-Datenquelle](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)  
+- [Programmgesteuertes Erstellen einer Tabelle in einer ODBC-Datenquelle](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)  
   
--   [Aufrufen von ODBC-API-Funktionen direkt in MFC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
+- [Aufrufen von ODBC API-Funktionen direkt in MFC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+
+[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

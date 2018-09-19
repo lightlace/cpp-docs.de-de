@@ -15,19 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10e1d9d6a86b4379575c100316ef8e9832bad6d8
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: c4241621383936c477514bb6881330c514548a81
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464427"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117700"
 ---
 # <a name="selection-statements-c"></a>Auswahlanweisungen (C++)
-Die C++-auswahlanweisungen [Wenn](../cpp/if-else-statement-cpp.md) und [wechseln](../cpp/switch-statement-cpp.md), bieten eine Möglichkeit, Codeabschnitte bedingt auszuführen.  
-  
- Die [__if_exists](../cpp/if-exists-statement.md) und [__if_not_exists](../cpp/if-not-exists-statement.md) -Anweisungen ermöglichen Ihnen, Code abhängig vom Vorhandensein eines Symbols bedingt einschließen möchten.  
-  
- Weitere Informationen über die Syntax für jede Anweisung erhalten Sie in den einzelnen Themen.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über C++-Anweisungen](../cpp/overview-of-cpp-statements.md)
+
+Die C++-auswahlanweisungen [Wenn](../cpp/if-else-statement-cpp.md) und [wechseln](../cpp/switch-statement-cpp.md), bieten eine Möglichkeit, Codeabschnitte bedingt auszuführen.
+
+Die [__if_exists](../cpp/if-exists-statement.md) und [__if_not_exists](../cpp/if-not-exists-statement.md) -Anweisungen ermöglichen Ihnen, Code abhängig vom Vorhandensein eines Symbols bedingt einschließen möchten.
+
+Weitere Informationen über die Syntax für jede Anweisung erhalten Sie in den einzelnen Themen.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über C++-Anweisungen](../cpp/overview-of-cpp-statements.md)

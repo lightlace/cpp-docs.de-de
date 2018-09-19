@@ -1,5 +1,5 @@
 ---
-title: "\"accelerator_view\"-Klasse | Microsoft Docs"
+title: Accelerator_view-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1aa0e365ac531a5e1bb7b87a38fc86fb20032d20
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 82ce81319212a833e66357cdf343489cb4108b67
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692716"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084717"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view-Klasse
 Stellt die Abstraktion eines virtuellen Geräts für einen datenparallelen C++ AMP-Beschleuniger dar.  
@@ -63,7 +63,7 @@ class accelerator_view;
 |[create_marker](#create_marker)|Gibt ein future-Objekt zurück, um den Abschluss aller Befehle nachzuverfolgen, die bis jetzt zu diesem `accelerator_view`-Objekt gesendet wurden.|  
 |[flush](#flush)|Sendet alle ausstehenden Befehle, die im `accelerator_view`-Objekt zur Ausführung der Zugriffstaste in die Warteschlange gestellt werden.|  
 |[get_accelerator](#get_accelerator)|Gibt das `accelerator`-Objekt für das `accelerator_view`-Objekt zurück.|  
-|[get_is_auto_selection](#get_is_auto_selection)|Gibt einen booleschen Wert, der angibt, ob die Laufzeit automatisch eine entsprechende Zugriffstaste auswählt, wenn die `accelerator_view` -Objekt übergeben wird eine [Parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|  
+|[get_is_auto_selection](#get_is_auto_selection)|Gibt einen booleschen Wert, der angibt, ob die Laufzeit automatisch eine entsprechende Zugriffstaste auswählt, wenn die `accelerator_view` Objekt wird zum Übergeben einer [Parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|  
 |[get_is_debug](#get_is_debug)|Gibt einen booleschen Wert zurück, der angibt, ob für das `accelerator_view`-Objekt die DEBUG-Ebene für eine umfangreiche Fehlerberichterstattung aktiviert ist.|  
 |[get_queuing_mode](#get_queuing_mode)|Gibt den Queuingmodus für das `accelerator_view`-Objekt zurück.|  
 |[get_version](#get_version)|Gibt die Version des `accelerator_view`-Objekts zurück.|  
@@ -82,7 +82,7 @@ class accelerator_view;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[accelerator](#accelerator)|Ruft das `accelerator`-Objekt für das `accelerator_view`-Objekt ab.|  
-|[is_auto_selection](#is_auto_selection)|Ruft einen booleschen Wert, der angibt, ob die Laufzeit automatisch eine entsprechende Zugriffstaste auswählt, wenn die `accelerator_view` -Objekt übergeben wird eine [Parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|  
+|[is_auto_selection](#is_auto_selection)|Ruft einen booleschen Wert, der angibt, ob die Laufzeit automatisch eine entsprechende Zugriffstaste auswählt, wenn die `accelerator_view` Objekt wird zum Übergeben einer [Parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|  
 |[is_debug](#is_debug)|Ruft einen booleschen Wert ab, der angibt, ob für das `accelerator_view`-Objekt die DEBUG-Ebene für eine umfangreiche Fehlerberichterstattung aktiviert ist.|  
 |[queuing_mode](#queuing_mode)|Ruft den Queuingmodus für das `accelerator_view`-Objekt ab.|  
 |[version](#version)|Ruft die Version der Zugriffstaste ab.|  
@@ -95,7 +95,7 @@ class accelerator_view;
   
  Physische Geräte können für viele Clientthreads freigegeben werden. Clientthreads können dasselbe `accelerator_view`-Objekt einer Zugriffstaste kooperativ verwenden oder jeder Client kann mit einem Berechnungsgerät über ein unabhängiges `accelerator_view`-Objekt zur Abgrenzung gegenüber anderen Clientthreads kommunizieren.  
   
- Ein `accelerator_view` Objekt kann eine von zwei haben [Queuing_mode-Enumeration](concurrency-namespace-enums-amp.md#queuing_mode) Status. Wenn der Queuingmodus `immediate` ist, werden Befehle wie `copy` und `parallel_for_each` an das entsprechende Zugriffstastengerät gesendet, sobald sie zum Aufrufer zurückkehren. Wenn der Queuingmodus `deferred` ist, werden solche Befehle in die Warteschlange einer Befehlswarteschlange gestellt, die dem `accelerator_view`-Objekt entspricht. Die Befehle werden erst an das Gerät gesendet, wenn `flush()` aufgerufen wird.  
+ Ein `accelerator_view` Objekt kann eine von zwei haben [Queuing_mode-Enumeration](concurrency-namespace-enums-amp.md#queuing_mode) Zustände. Wenn der Queuingmodus `immediate` ist, werden Befehle wie `copy` und `parallel_for_each` an das entsprechende Zugriffstastengerät gesendet, sobald sie zum Aufrufer zurückkehren. Wenn der Queuingmodus `deferred` ist, werden solche Befehle in die Warteschlange einer Befehlswarteschlange gestellt, die dem `accelerator_view`-Objekt entspricht. Die Befehle werden erst an das Gerät gesendet, wenn `flush()` aufgerufen wird.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** amprt.h  
@@ -104,7 +104,7 @@ class accelerator_view;
 
 ## <a name="accelerator"></a> Zugriffstaste 
 
-Ruft die Zugriffstaste-Objekt für das Objekt "accelerator_view" ab.  
+Ruft das Objekt für die Zugriffstaste für das Accelerator_view-Objekt ab.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -112,9 +112,9 @@ Ruft die Zugriffstaste-Objekt für das Objekt "accelerator_view" ab.
 __declspec(property(get= get_accelerator)) Concurrency::accelerator accelerator;  
 ```  
   
-## <a name="ctor"></a> "accelerator_view" 
+## <a name="ctor"></a> accelerator_view-Objekt 
 
-Initialisiert eine neue Instanz der Klasse "accelerator_view" durch Kopieren einer vorhandenen `accelerator_view` Objekt.  
+Initialisiert eine neue Instanz der "accelerator_view"-Klasse durch Kopieren einer vorhandenen `accelerator_view` Objekt.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -123,8 +123,8 @@ accelerator_view( const accelerator_view & _Other );
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Other`  
- Das zu kopierende `accelerator_view`-Objekt.  
+*_Sonstige*<br/>
+Das zu kopierende `accelerator_view`-Objekt.  
   
 ## <a name="accelerator_view__create_marker"></a> create_marker 
 
@@ -141,7 +141,7 @@ concurrency::completion_future create_marker();
   
 ## <a name="flush"></a> leeren 
 
-Sendet, dass alle ausstehenden Befehle für das Accelerator_view-Objekt, das die Zugriffstaste für die Ausführung in der Warteschlange an.  
+Sendet, dass alle ausstehenden Befehle auf das Accelerator_view-Objekt, mit dem Accelerator für die Ausführung in die Warteschlange eingereiht.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -160,11 +160,11 @@ Gibt das Zugriffstaste für das Accelerator_view-Objekt zurück.
 accelerator get_accelerator() const;
 ```
 ### <a name="return-value"></a>Rückgabewert
-Die Zugriffstaste-Objekt für das Accelerator_view-Objekt.
+Der Accelerator-Objekt, für das Accelerator_view-Objekt.
 
 ## <a name="accelerator_view__get_is_auto_selection"></a> get_is_auto_selection 
 
-Gibt einen booleschen Wert, der angibt, ob die Common Language Runtime automatisch eine entsprechende Zugriffstaste auswählt, wenn an die "accelerator_view" übergeben wird eine [Parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).  
+Gibt einen booleschen Wert, der angibt, ob die Laufzeit automatisch eine entsprechende Zugriffstaste auswählt, wenn die "accelerator_view", um übergeben wird eine [Parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -177,7 +177,7 @@ bool get_is_auto_selection() const;
   
 ## <a name="accelerator_view__get_is_debug"></a> get_is_debug 
 
-Gibt einen booleschen Wert, der angibt, ob das Objekt "accelerator_view" die DEBUG-Ebene für eine umfangreiche Fehlerberichterstattung aktiviert ist.  
+Gibt einen booleschen Wert, der angibt, ob das Accelerator_view-Objekt die DEBUG-Ebene, die für eine umfangreiche Fehlerberichterstattung aktiviert ist.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -186,7 +186,7 @@ bool get_is_debug() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein boolescher Wert, der angibt, ob die `accelerator_view` Objekt hat die DEBUG-Ebene für eine umfangreiche Fehlerberichterstattung aktiviert.  
+ Ein boolescher Wert, der angibt, ob die `accelerator_view` Objekt hat die DEBUG-Ebene, die für eine umfangreiche Fehlerberichterstattung aktiviert.  
 
 ## <a name="accelerator_view__get_queuing_mode"></a> get_queuing_mode 
 
@@ -203,7 +203,7 @@ queuing_mode get_queuing_mode() const;
   
 ## <a name="accelerator_view__get_version"></a> get_version 
 
-Gibt die Version der "accelerator_view" zurück.  
+Die Version, der die "accelerator_view" zurückgegeben.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -216,7 +216,7 @@ unsigned int get_version() const;
   
 ## <a name="accelerator_view__is_auto_selection"></a> is_auto_selection 
 
-Ruft einen booleschen Wert, der angibt, ob die Common Language Runtime automatisch eine entsprechende Zugriffstaste auswählt, wenn an die "accelerator_view" übergeben wird eine [Parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).  
+Ruft einen booleschen Wert, der angibt, ob die Laufzeit automatisch eine entsprechende Zugriffstaste auswählt, wenn die "accelerator_view", um übergeben wird eine [Parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -226,7 +226,7 @@ __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;
   
 ## <a name="accelerator_view__is_debug"></a> is_debug 
 
-Ruft einen booleschen Wert, der angibt, ob das Objekt "accelerator_view" die DEBUG-Ebene für eine umfangreiche Fehlerberichterstattung aktiviert ist.  
+Ruft einen booleschen Wert, der angibt, ob das Accelerator_view-Objekt die DEBUG-Ebene, die für eine umfangreiche Fehlerberichterstattung aktiviert ist.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -236,7 +236,7 @@ __declspec(property(get= get_is_debug)) bool is_debug;
   
 ## <a name="accelerator_view__operator_neq"></a> Operator! = 
 
-Vergleicht dieses "accelerator_view"-Objekt mit einem anderen und gibt `false` , wenn sie identisch sind; gibt andernfalls wird `true`.  
+Vergleicht dieses-Objekt accelerator_view-Objekt mit einem anderen und gibt `false` , wenn sie gleich sind, andernfalls `true`.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -245,8 +245,8 @@ bool operator!= (    const accelerator_view & _Other ) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Other`  
- Die `accelerator_view` mit dieses Objekt zu vergleichende Objekt.  
+*_Sonstige*<br/>
+Die `accelerator_view` Objekt, das mit dieser verglichen werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `false`, wenn die beiden Objekte identisch sind, andernfalls `true`.  
@@ -262,15 +262,15 @@ accelerator_view & operator= (    const accelerator_view & _Other );
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Other`  
- Das `accelerator_view`-Objekt, aus dem kopiert werden soll.  
+*_Sonstige*<br/>
+Das `accelerator_view`-Objekt, aus dem kopiert werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Verweis auf das geänderte `accelerator_view` Objekt.  
+ Ein Verweis auf die geänderte `accelerator_view` Objekt.  
   
 ## <a name="accelerator_view__operator_eq_eq"></a> Operator == 
 
-Vergleicht dieses "accelerator_view"-Objekt mit einem anderen und gibt `true` , wenn sie identisch sind; gibt andernfalls wird `false`.  
+Vergleicht dieses-Objekt accelerator_view-Objekt mit einem anderen und gibt `true` , wenn sie gleich sind, andernfalls `false`.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -279,15 +279,15 @@ bool operator= = (    const accelerator_view & _Other ) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Other`  
- Die `accelerator_view` mit dieses Objekt zu vergleichende Objekt.  
+*_Sonstige*<br/>
+Die `accelerator_view` Objekt, das mit dieser verglichen werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true`, wenn die beiden Objekte identisch sind, andernfalls `false`.  
   
 ## <a name="accelerator_view__queuing_mode"></a> queuing_mode 
 
-Ruft den queuingmodus für das Objekt "accelerator_view" ab.  
+Ruft den queuingmodus für das Accelerator_view-Objekt ab.  
   
 ### <a name="syntax"></a>Syntax  
   

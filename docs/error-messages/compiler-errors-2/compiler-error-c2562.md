@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2562 | Microsoft Docs
+title: Compilerfehler C2562 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab3fd1a5eae008785a688bcbade674425fc8b2ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69151b71de84c678c09ecafe099344a08d28a8a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231605"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114227"
 ---
 # <a name="compiler-error-c2562"></a>Compilerfehler C2562
-'Bezeichner': 'void'-Funktion einen Wert zurückgeben  
-  
- Die Funktion wird deklariert als `void` aber einen Wert zurückgibt.  
-  
- Dieser Fehler kann durch einen falschen Funktionsprototyp verursacht werden.  
-  
- Dieser Fehler möglicherweise behoben werden, wenn Sie den Rückgabetyp in der Funktionsdeklaration angeben.  
-  
- Im folgende Beispiel wird C2562 generiert:  
-  
-```  
-// C2562.cpp  
-// compile with: /c  
-void testfunc() {  
-   int i;  
-   return i;   // C2562 delete the return to resolve  
-}  
+
+'Bezeichner': "void"-Funktion einen Wert zurückgibt
+
+Die Funktion wird deklariert, als `void` , aber einen Wert zurückgibt.
+
+Dieser Fehler kann durch einen falschen Funktionsprototyp verursacht werden.
+
+Dieser Fehler möglicherweise behoben werden, wenn Sie den Rückgabetyp in der Funktionsdeklaration angeben.
+
+Im folgende Beispiel wird die C2562 generiert:
+
+```
+// C2562.cpp
+// compile with: /c
+void testfunc() {
+   int i;
+   return i;   // C2562 delete the return to resolve
+}
 ```

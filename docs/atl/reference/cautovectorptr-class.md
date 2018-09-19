@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daa4a34915547b726494ea9f461b7eba24c617dd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8d60a7f40fc90d5586d7a8a7d41cab81a4d97c85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755722"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054479"
 ---
 # <a name="cautovectorptr-class"></a>CAutoVectorPtr-Klasse
 
@@ -40,13 +40,13 @@ Diese Klasse stellt ein intelligenter Zeiger-Objekt, das mit der neuen Vektor da
 ## <a name="syntax"></a>Syntax
 
 ```
-template<typename T>  
+template<typename T>
 class CAutoVectorPtr
 ```
 
 #### <a name="parameters"></a>Parameter
 
-`T`  
+*T*<br/>
 Der Zeigertyp.
 
 ## <a name="members"></a>Member
@@ -82,7 +82,7 @@ Der Zeigertyp.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Klasse stellt Methoden zum Erstellen und verwalten einen intelligenten Zeiger, dadurch wird Schutz vor Speicherverluste durch Ressourcen automatisch freigegeben, wenn sie außerhalb des gültigen Bereichs liegt. `CAutoVectorPtr` ist vergleichbar mit `CAutoPtr`, der einzige Unterschied ist, dass `CAutoVectorPtr` verwendet [Vektor neue&#91; &#93; ](../../standard-library/new-operators.md#op_new_arr) und [Vektor löschen&#91; &#93; ](../../standard-library/new-operators.md#op_delete_arr) zum Zuordnen und Freigeben von Arbeitsspeicher anstelle der C++ **neue** und **löschen** Operatoren. Finden Sie unter [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) Wenn Auflistungsklassen von `CAutoVectorPtr` erforderlich sind.  
+Diese Klasse stellt Methoden zum Erstellen und verwalten einen intelligenten Zeiger, dadurch wird Schutz vor Speicherverluste durch Ressourcen automatisch freigegeben, wenn sie außerhalb des gültigen Bereichs liegt. `CAutoVectorPtr` ist vergleichbar mit `CAutoPtr`, der einzige Unterschied ist, dass `CAutoVectorPtr` verwendet [Vektor neue&#91; &#93; ](../../standard-library/new-operators.md#op_new_arr) und [Vektor löschen&#91; &#93; ](../../standard-library/new-operators.md#op_delete_arr) zum Zuordnen und Freigeben von Arbeitsspeicher anstelle der C++ **neue** und **löschen** Operatoren. Finden Sie unter [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) Wenn Auflistungsklassen von `CAutoVectorPtr` erforderlich sind.
 
 Finden Sie unter [CAutoPtr](../../atl/reference/cautoptr-class.md) ein Beispiel der Verwendung einer intelligenten Zeiger-Klasse.
 
@@ -100,7 +100,7 @@ bool Allocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*nElements*  
+*nElements*<br/>
 Die Anzahl der Elemente im Array.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -121,7 +121,7 @@ void Attach(T* p) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*p*  
+*p*<br/>
 Die `CAutoVectorPtr` Objekt übernimmt dann den Besitz des this-Zeigers.
 
 ### <a name="remarks"></a>Hinweise
@@ -142,7 +142,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*p*  
+*p*<br/>
 Einem vorhandenen Zeiger.
 
 ### <a name="remarks"></a>Hinweise
@@ -211,7 +211,7 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*p*  
+*p*<br/>
 Ein Zeiger.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -226,7 +226,7 @@ Der Zuweisungsoperator trennt die `CAutoVectorPtr` Objekt aus einem aktuellen Ze
 
 Der Cast-Operator.
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -236,5 +236,5 @@ Gibt einen Zeiger auf den Object-Datentyp in der Klassenvorlage definiert.
 
 ## <a name="see-also"></a>Siehe auch
 
-[CAutoPtr-Klasse](../../atl/reference/cautoptr-class.md)   
+[CAutoPtr-Klasse](../../atl/reference/cautoptr-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

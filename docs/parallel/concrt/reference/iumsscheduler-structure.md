@@ -1,5 +1,5 @@
 ---
-title: IUMSScheduler-Struktur | Microsoft Docs
+title: IUMSScheduler-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 489978a97d42439e5560a75e429c38be10c18c29
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 46ed7dac35dce4b5df51cd4c218a1a70a84d21df
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688530"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079062"
 ---
 # <a name="iumsscheduler-structure"></a>IUMSScheduler-Struktur
 Eine Schnittstelle zu der Abstraktion eines Arbeitsplaners, der planbare Threads vom Ressourcen-Manager der Concurrency Runtime im Benutzermodus erwartet. Der Ressourcen-Manager verwendet diese Schnittstelle für die Kommunikation mit UMS-Threadplanern. Die `IUMSScheduler`-Schnittstelle erbt von der `IScheduler`-Schnittstelle.  
@@ -40,14 +40,14 @@ struct IUMSScheduler : public IScheduler;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[IUMSScheduler::SetCompletionList](#setcompletionlist)|Weist ein `IUMSCompletionList` Schnittstelle, um ein UMS-Zeitplanungsmodul Thread.|  
+|[IUMSScheduler::SetCompletionList](#setcompletionlist)|Weist eine `IUMSCompletionList` Schnittstelle, um ein UMS-Thread-Planer.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Sie einen benutzerdefinierten Planer, der mit dem Ressourcen-Manager kommuniziert implementieren und UMS-Threads, die an dem Planer anstelle von gewöhnlichen Win32-Threads übergegeben werden sollen, sollten Sie eine Implementierung bereitstellen der `IUMSScheduler` Schnittstelle. Darüber hinaus sollten Sie festlegen, den Richtlinienwert für den Planerrichtlinienschlüssel `SchedulerKind` werden `UmsThreadDefault`. Wenn die Richtlinie gibt UMS-Threads an die `IScheduler` Schnittstelle, die als Parameter übergeben wird der [IResourceManager:: RegisterScheduler](iresourcemanager-structure.md#registerscheduler) Methode muss ein `IUMSScheduler` Schnittstelle.  
+ Wenn Sie einen benutzerdefinierten Planer, der mit dem Resource Manager kommuniziert implementieren und UMS-Threads, die an der Planer statt der gewöhnlichen Win32-Threads übergegeben werden sollen, sollten Sie eine Implementierung bereitstellen der `IUMSScheduler` Schnittstelle. Darüber hinaus sollten Sie festlegen, den Richtlinienwert für den Scheduler-Richtlinienschlüssel `SchedulerKind` sein `UmsThreadDefault`. Wenn die Richtlinie UMS-Thread, gibt die `IScheduler` -Schnittstelle, die als Parameter übergeben wird die [IResourceManager:: RegisterScheduler](iresourcemanager-structure.md#registerscheduler) Methode muss eine `IUMSScheduler` Schnittstelle.  
   
- Der Ressourcen-Manager kann Sie UMS-Threads nur unter Betriebssystemen, die über die UMS-Funktion übergeben. 64-Bit-Betriebssystemen mit Version Windows 7 und höher unterstützen UMS-Threads. Bei der Erstellung einer Planerrichtlinie mit der `SchedulerKind` Schlüssel festgelegt wird, auf den Wert `UmsThreadDefault` und die zugrunde liegende Plattform unterstützt keine UMS, den Wert des der `SchedulerKind` -Taste auf diese Richtlinie wird auf den Wert geändert werden `ThreadScheduler`. Sie sollten immer wieder der Richtlinienwert lesen, bevor erwartet, dass er UMS-Threads erhalten.  
+ Der Ressourcen-Manager kann Sie nur auf Betriebssystemen UMS-Threads, die die UMS-Funktion übergeben. 64-Bit-Betriebssystemen mit Version Windows 7 und höher unterstützen UMS-Threads. Bei der Erstellung einer Planerrichtlinie mit der `SchedulerKind` Schlüssel festgelegt wird, auf den Wert `UmsThreadDefault` und die zugrunde liegende Plattform unterstützt keine UMS, den Wert des der `SchedulerKind` -Taste auf die Richtlinie wird auf den Wert geändert `ThreadScheduler`. Sie sollten immer wieder der Richtlinienwert lesen, bevor UMS-Threads erhalten möchte.  
   
- Die `IUMSScheduler` Schnittstelle ist ein Ende eines Kanals bidirektionale Kommunikation zwischen einem Planer und den Ressourcen-Manager. Das andere Ende wird dargestellt, indem die `IResourceManager` und `ISchedulerProxy` Schnittstellen, die vom Ressourcen-Manager implementiert werden.  
+ Die `IUMSScheduler` Schnittstelle ist ein Ende der einen bidirektionalen Kanal für die Kommunikation zwischen einem Planer und der Ressourcen-Manager. Das andere Ende wird dargestellt, durch die `IResourceManager` und `ISchedulerProxy` Schnittstellen, die vom Ressourcen-Manager implementiert werden.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [IScheduler](ischeduler-structure.md)  
@@ -60,18 +60,18 @@ struct IUMSScheduler : public IScheduler;
  **Namespace:** Parallelität  
   
 ##  <a name="setcompletionlist"></a>  IUMSScheduler:: SetCompletionList-Methode  
- Weist ein `IUMSCompletionList` Schnittstelle, um ein UMS-Zeitplanungsmodul Thread.  
+ Weist eine `IUMSCompletionList` Schnittstelle, um ein UMS-Thread-Planer.  
   
 ```
 virtual void SetCompletionList(_Inout_ IUMSCompletionList* pCompletionList) = 0;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pCompletionList`  
- Die Liste Schnittstelle für den rückrufabschluss für den Planer. Es gibt eine einzelne Liste pro Zeitplanungsmodul.  
+*pCompletionList*<br/>
+Die Vervollständigung Liste-Schnittstelle für das Zeitplanungsmodul. Es gibt eine einzelne Liste pro Zeitplanungsmodul.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Ressourcen-Manager wird diese Methode in einem Zeitplanungsmodul aufgerufen, der angibt, dass er UMS-Threads benötigt, nachdem der Planer eine anfängliche Zuordnung von Ressourcen angefordert hat. Der Planer können die `IUMSCompletionList` Schnittstelle, um zu bestimmen, wann UMS-Threadproxys "Blockierung aufgehoben" haben. Es ist nur zulässig, ein Threadproxy, der auf einem virtuellen Prozessorstamm zugewiesene UMS-Zeitplanungsmodul ausgeführt wird diese Schnittstelle zuzugreifen.  
+ Der Ressourcen-Manager wird diese Methode für einen Planer aufgerufen, der angibt, dass es UMS-Threads benötigt wird, nachdem der Scheduler eine anfängliche Zuordnung von Ressourcen angefordert hat. Der Planer können die `IUMSCompletionList` Schnittstelle, um zu bestimmen, wann UMS-Threadproxys Blockierung aufgehoben wurde. Es ist nur gültig, auf diese Schnittstelle über ein Threadproxy, der auf einem virtuellen Prozessorstamm zugewiesen, der UMS-Zeitplanungsmodul ausgeführt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   

@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2162 | Microsoft Docs
+title: Compilerfehler C2162 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc7cfebd4563e4d41f6ca50e2cdec667e82fb5f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48d59ed5f0bf85befac0f8c462620a23faa08f98
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167969"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053998"
 ---
 # <a name="compiler-error-c2162"></a>Compilerfehler C2162
-formaler Makroparameter erwartet  
-  
- Das Token einen Zeichenfolgenoperator (#) folgenden ist kein Name formalen Parameter.  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C2162 generiert:  
-  
-```  
-// C2162.cpp  
-// compile with: /c  
-#include <stdio.h>  
-  
-#define print(a) printf_s(b)   // OK  
-#define print(a) printf_s(#b)    // C2162  
+
+formaler Makroparameter erwartet
+
+Das Token nach einer Zeichenfolgenoperator (#) ist kein Name formalen Parameter.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C2162 generiert:
+
+```
+// C2162.cpp
+// compile with: /c
+#include <stdio.h>
+
+#define print(a) printf_s(b)   // OK
+#define print(a) printf_s(#b)    // C2162
 ```

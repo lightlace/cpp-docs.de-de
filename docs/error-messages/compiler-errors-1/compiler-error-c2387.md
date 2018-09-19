@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2387 | Microsoft Docs
+title: Compilerfehler C2387 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e490e2c0016649054c557026a5fa691162c40c07
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a73f2964c7f87ba795ba680947664a0f37b9c303
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225596"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089618"
 ---
 # <a name="compiler-error-c2387"></a>Compilerfehler C2387
-'Typ': mehrdeutige Basisklasse  
-  
- Der Compiler konnte nicht eindeutig einen Funktionsaufruf auflösen, da die Funktion in mehr als einer Basisklasse vorhanden ist.  
-  
- Um diesen Fehler zu beheben, entfernen Sie eine der Basisklassen aus der Vererbung, oder qualifizieren Sie den Funktionsaufruf explizit zu.  
-  
- Im folgende Beispiel wird C2387 generiert:  
-  
-```  
-// C2387.cpp  
-namespace N1 {  
-   struct B {  
-      virtual void f() {  
-      }  
-   };  
-}  
-  
-namespace N2 {  
-   struct B {  
-      virtual void f() {  
-      }  
-   };  
-}  
-  
-struct D : N1::B, N2::B {  
-   virtual void f() {  
-      B::f();   // C2387  
-      // try the following line instead  
-      // N1::B::f();  
-   }  
-};  
-  
-int main() {  
-   D aD;  
-   aD.f();  
-}  
+
+'Typ': mehrdeutige Basisklasse
+
+Der Compiler konnte nicht eindeutig einen Funktionsaufruf auflösen, da die Funktion in mehr als einer Basisklasse vorhanden ist.
+
+Um diesen Fehler zu beheben, entfernen Sie eine der Basisklassen aus der Vererbung, oder qualifizieren Sie explizit den Funktionsaufruf.
+
+Im folgende Beispiel wird die C2387 generiert:
+
+```
+// C2387.cpp
+namespace N1 {
+   struct B {
+      virtual void f() {
+      }
+   };
+}
+
+namespace N2 {
+   struct B {
+      virtual void f() {
+      }
+   };
+}
+
+struct D : N1::B, N2::B {
+   virtual void f() {
+      B::f();   // C2387
+      // try the following line instead
+      // N1::B::f();
+   }
+};
+
+int main() {
+   D aD;
+   aD.f();
+}
 ```

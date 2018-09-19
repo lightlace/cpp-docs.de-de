@@ -1,5 +1,5 @@
 ---
-title: Concurrent_vector-Klasse | Microsoft Docs
+title: Concurrent_vector-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e120e072fb3f56788cbf39fbbc3887f5c816f4ef
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fe5ac6d819ed6f068095fe2abda5363686ed7dbd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695352"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117425"
 ---
 # <a name="concurrentvector-class"></a>concurrent_vector-Klasse
 Die `concurrent_vector`-Klasse ist eine Sequenzcontainerklasse, die zufälligen Zugriff auf jedes Element zulässt. Sie aktiviert parallelitätssichere Operationen für Anfügen, Elementzugriff, Iteratorzugriff und Iteratordurchlauf.  
@@ -63,11 +63,11 @@ class concurrent_vector: protected details::_Allocator_base<T,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
- Der Datentyp der Elemente im Vektor gespeichert werden.  
+*T*<br/>
+Der Datentyp der Elemente im Vektor gespeichert werden.  
   
- `_Ax`  
- Der Typ, der das gespeicherte Zuweisungsobjekt darstellt, das Details zur Speicherbelegung und Aufhebung der Speicherbelegung für den gleichzeitigen Vektor kapselt. Dieses Argument ist optional, und der Standardwert ist `allocator<T>`.  
+*_Ax*<br/>
+Der Typ, der das gespeicherte Zuweisungsobjekt darstellt, das Details zur Speicherbelegung und Aufhebung der Speicherbelegung für den gleichzeitigen Vektor kapselt. Dieses Argument ist optional, und der Standardwert ist `allocator<T>`.  
   
 ## <a name="members"></a>Member  
   
@@ -76,16 +76,16 @@ class concurrent_vector: protected details::_Allocator_base<T,
 |Name|Beschreibung|  
 |----------|-----------------|  
 |`allocator_type`|Ein Typ, der die zuweisungsklasse für den gleichzeitigen Vektor darstellt.|  
-|`const_iterator`|Ein Typ, der einem Iterator mit zufälligem Zugriff können bietet lesen eine `const` Element in einen gleichzeitigen Vektor.|  
-|`const_pointer`|Ein Typ, der ein Zeiger auf eine `const` Element in einen gleichzeitigen Vektor.|  
-|`const_reference`|Ein Typ, der einen Verweis auf eine `const` in einen gleichzeitigen Vektor zum Lesen und Ausführen gespeichertes Element `const` Vorgänge.|  
-|`const_reverse_iterator`|Ein Typ, der einem Iterator mit zufälligem Zugriff können bietet gelesen `const` Element in den gleichzeitigen Vektor.|  
-|`difference_type`|Ein Typ, der Abstands mit Vorzeichen zwischen zwei Elementen in einen gleichzeitigen Vektor bereitstellt.|  
-|`iterator`|Ein Typ, der einen Iterator mit zufälligem Zugriff bereitstellt, der ein Element in einen gleichzeitigen Vektor gelesen werden kann. Die Änderung eines Elements mit den Iterator ist nicht nebenläufigkeitssicher.|  
-|`pointer`|Ein Typ, der einen Zeiger auf ein Element in einen gleichzeitigen Vektor bereitstellt.|  
-|`reference`|Ein Typ, der einen Verweis auf ein in einen gleichzeitigen Vektor gespeichertes Element bereitstellt.|  
-|`reverse_iterator`|Ein Typ, der einen Iterator mit zufälligem Zugriff bereitstellt, der jedes Element in einem umgekehrten gleichzeitigen Vektor gelesen werden kann. Die Änderung eines Elements mit den Iterator ist nicht nebenläufigkeitssicher.|  
-|`size_type`|Ein Typ, der die Anzahl der Elemente in einen gleichzeitigen Vektor zählt.|  
+|`const_iterator`|Ein Typ, der einem Iterator mit zufälligem Zugriff können bietet lesen eine `const` Element in einem gleichzeitigen Vektor.|  
+|`const_pointer`|Ein Typ, einen Zeiger auf eine `const` Element in einem gleichzeitigen Vektor.|  
+|`const_reference`|Ein Typ, einen Verweis auf eine `const` gespeichertes Element einen gleichzeitigen Vektor zum Lesen und ausführen `const` Vorgänge.|  
+|`const_reverse_iterator`|Eine Typ, der einem Iterator mit zufälligem Zugriff können bietet Lesen alle `const` Element in der gleichzeitigen Vektor.|  
+|`difference_type`|Ein Typ, die mit Abstand zwischen zwei Elementen in einem gleichzeitigen Vektor bereitstellt.|  
+|`iterator`|Ein Typ, die einen Iterator mit zufälligem Zugriff bereitstellt, mit dem jedes Element in einen gleichzeitigen Vektor gelesen werden kann. Änderung eines Elements mithilfe des Iterators ist nicht nebenläufigkeitssicher.|  
+|`pointer`|Ein Typ, die einen Zeiger auf ein Element in einem gleichzeitigen Vektor bereitstellt.|  
+|`reference`|Ein Typ, die einen Verweis auf ein in einem gleichzeitigen Vektor gespeichertes Element bereitstellt.|  
+|`reverse_iterator`|Ein Typ, die einen Iterator mit zufälligem Zugriff bereitstellt, mit dem jedes Element in einem umgekehrten Vektor auf der gleichzeitigen lesen kann. Änderung eines Elements mithilfe des Iterators ist nicht nebenläufigkeitssicher.|  
+|`size_type`|Ein Typ, der die Anzahl der Elemente in einem gleichzeitigen Vektor zählt.|  
 |`value_type`|Ein Typ, der in einen gleichzeitigen Vektor gespeicherten Datentyp darstellt.|  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
@@ -99,29 +99,29 @@ class concurrent_vector: protected details::_Allocator_base<T,
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[assign](#assign)|Überladen. Löscht die Elemente von den gleichzeitigen Vektor und weist ihm entweder `_N` Kopien `_Item`, oder durch den Iteratorbereich angegebenen Werte [ `_Begin`, `_End`). Diese Methode ist nicht nebenläufigkeitssicher.|  
-|[at](#at)|Überladen. Bietet Zugriff auf das Element am angegebenen Index in den gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher für Lesevorgänge und auch beim wächst des Vektors, solange Sie, die den Wert sichergestellt haben `_Index` ist kleiner als die Größe von den gleichzeitigen Vektor.|  
-|[Rückseite](#back)|Überladen. Gibt einen Verweis oder einen `const` -Verweis auf das letzte Element in den gleichzeitigen Vektor. Wenn Sie der gleichzeitige Vektor leer ist, ist der Rückgabewert nicht definiert. Diese Methode ist nebenläufigkeitssicher.|  
-|[begin](#begin)|Überladen. Gibt einen Iterator vom Typ `iterator` oder `const_iterator` am Anfang der gleichzeitigen Vektors. Diese Methode ist nebenläufigkeitssicher.|  
-|[capacity](#capacity)|Gibt die maximale Größe, die auf die der gleichzeitige Vektor anwachsen kann, ohne zusätzlichen Speicher zu belegen. Diese Methode ist nebenläufigkeitssicher.|  
-|[cbegin](#cbegin)|Gibt einen Iterator vom Typ `const_iterator` am Anfang der gleichzeitigen Vektors. Diese Methode ist nebenläufigkeitssicher.|  
-|[cend](#cend)|Gibt einen Iterator vom Typ `const_iterator` bis zum Ende der gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher.|  
+|[assign](#assign)|Überladen. Löscht den gleichzeitigen Vektor Elemente und weist sie entweder `_N` Kopien `_Item`, oder Werte, angegeben durch den Iteratorbereich [ `_Begin`, `_End`). Diese Methode ist nicht nebenläufigkeitssicher.|  
+|[at](#at)|Überladen. Bietet Zugriff auf das Element am angegebenen Index in den gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher für Lesevorgänge und auch während der den Vektor, wächst, solange Sie, die den Wert sichergestellt haben `_Index` ist kleiner als die Anzahl der gleichzeitigen Vektor.|  
+|[Rückseite](#back)|Überladen. Gibt einen Verweis oder einen `const` -Verweis auf das letzte Element in der gleichzeitigen Vektor. Wenn die gleichzeitige Vektor leer ist, ist der Rückgabewert nicht definiert. Diese Methode ist nebenläufigkeitssicher.|  
+|[begin](#begin)|Überladen. Gibt einen Iterator des Typs `iterator` oder `const_iterator` an den Anfang der gleichzeitigen Vektors. Diese Methode ist nebenläufigkeitssicher.|  
+|[capacity](#capacity)|Gibt die maximale Größe, die auf die der gleichzeitige Vektor anwachsen kann, ohne mehr Arbeitsspeicher zu belegen. Diese Methode ist nebenläufigkeitssicher.|  
+|[cbegin](#cbegin)|Gibt einen Iterator des Typs `const_iterator` an den Anfang der gleichzeitigen Vektors. Diese Methode ist nebenläufigkeitssicher.|  
+|[cend](#cend)|Gibt einen Iterator des Typs `const_iterator` bis zum Ende der gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher.|  
 |[clear](#clear)|Löscht alle Elemente in den gleichzeitigen Vektor. Diese Methode ist nicht nebenläufigkeitssicher.|  
-|[crbegin](#crbegin)|Gibt einen Iterator vom Typ `const_reverse_iterator` am Anfang der gleichzeitigen Vektors. Diese Methode ist nebenläufigkeitssicher.|  
-|[crend](#crend)|Gibt einen Iterator vom Typ `const_reverse_iterator` bis zum Ende der gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher.|  
-|[empty](#empty)|Testet, ob zum Zeitpunkt der gleichzeitige Vektor leer ist, wird diese Methode aufgerufen. Diese Methode ist nebenläufigkeitssicher.|  
-|[end](#end)|Überladen. Gibt einen Iterator vom Typ `iterator` oder `const_iterator` bis zum Ende der gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher.|  
-|[Vorderseite](#front)|Überladen. Gibt einen Verweis oder einen `const` Verweis auf das erste Element in den gleichzeitigen Vektor. Wenn Sie der gleichzeitige Vektor leer ist, ist der Rückgabewert nicht definiert. Diese Methode ist nebenläufigkeitssicher.|  
+|[crbegin](#crbegin)|Gibt einen Iterator des Typs `const_reverse_iterator` an den Anfang der gleichzeitigen Vektors. Diese Methode ist nebenläufigkeitssicher.|  
+|[crend](#crend)|Gibt einen Iterator des Typs `const_reverse_iterator` bis zum Ende der gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher.|  
+|[empty](#empty)|Testet, ob es sich bei der gleichzeitige Vektor zu diesem Zeitpunkt leer ist, wird diese Methode aufgerufen. Diese Methode ist nebenläufigkeitssicher.|  
+|[end](#end)|Überladen. Gibt einen Iterator des Typs `iterator` oder `const_iterator` bis zum Ende der gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher.|  
+|[Vorderseite](#front)|Überladen. Gibt einen Verweis oder einen `const` Verweis auf das erste Element in den gleichzeitigen Vektor. Wenn die gleichzeitige Vektor leer ist, ist der Rückgabewert nicht definiert. Diese Methode ist nebenläufigkeitssicher.|  
 |[get_allocator](#get_allocator)|Gibt eine Kopie der Zuweisung verwendet, um den gleichzeitigen Vektor zu erstellen. Diese Methode ist nebenläufigkeitssicher.|  
-|[grow_by](#grow_by)|Überladen. Vergrößert dieses gleichzeitigen Vektor von `_Delta` Elemente. Diese Methode ist nebenläufigkeitssicher.|  
-|[grow_to_at_least](#grow_to_at_least)|Diese gleichzeitigen Vektor wächst, bis sie mindestens verfügt `_N` Elemente. Diese Methode ist nebenläufigkeitssicher.|  
-|[max_size](#max_size)|Gibt die maximale Anzahl von Elementen, die der gleichzeitige Vektor aufnehmen kann. Diese Methode ist nebenläufigkeitssicher.|  
+|[grow_by](#grow_by)|Überladen. Vergrößert diese gleichzeitigen Vektor von `_Delta` Elemente. Diese Methode ist nebenläufigkeitssicher.|  
+|[grow_to_at_least](#grow_to_at_least)|Diese gleichzeitigen Vektor lange zunehmen, bis mindestens `_N` Elemente. Diese Methode ist nebenläufigkeitssicher.|  
+|[max_size](#max_size)|Gibt die maximale Anzahl von Elementen, die der gleichzeitige Vektor enthalten kann. Diese Methode ist nebenläufigkeitssicher.|  
 |[push_back](#push_back)|Überladen. Fügt das angegebene Element am Ende den gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher.|  
-|[rbegin](#rbegin)|Überladen. Gibt einen Iterator vom Typ `reverse_iterator` oder `const_reverse_iterator` am Anfang der gleichzeitigen Vektors. Diese Methode ist nebenläufigkeitssicher.|  
-|[rend](#rend)|Überladen. Gibt einen Iterator vom Typ `reverse_iterator` oder `const_reverse_iterator` bis zum Ende der gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher.|  
-|[reserve](#reserve)|Reserviert ausreichend Speicherplatz, um den gleichzeitigen Vektor an Größe zunehmen darf `_N` ohne später mehr Speicher reservieren. Diese Methode ist nicht nebenläufigkeitssicher.|  
-|[resize](#resize)|Überladen. Ändert die Größe von den gleichzeitigen Vektor auf die angeforderte Größe, löschen oder Hinzufügen von Elementen nach Bedarf. Diese Methode ist nicht nebenläufigkeitssicher.|  
-|[shrink_to_fit](#shrink_to_fit)|Komprimiert die interne Darstellung des den gleichzeitigen Vektor Fragmentierung zu verringern und die Speicherverwendung zu optimieren. Diese Methode ist nicht nebenläufigkeitssicher.|  
+|[rbegin](#rbegin)|Überladen. Gibt einen Iterator des Typs `reverse_iterator` oder `const_reverse_iterator` an den Anfang der gleichzeitigen Vektors. Diese Methode ist nebenläufigkeitssicher.|  
+|[rend](#rend)|Überladen. Gibt einen Iterator des Typs `reverse_iterator` oder `const_reverse_iterator` bis zum Ende der gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher.|  
+|[reserve](#reserve)|Reserviert genügend Speicherplatz für den gleichzeitigen Vektor auf Größe anwachsen `_N` ohne später mehr Speicher reservieren. Diese Methode ist nicht nebenläufigkeitssicher.|  
+|[resize](#resize)|Überladen. Ändert die Größe der gleichzeitigen Vektor auf die angeforderte Größe, löschen oder Hinzufügen von Elementen nach Bedarf. Diese Methode ist nicht nebenläufigkeitssicher.|  
+|[shrink_to_fit](#shrink_to_fit)|Komprimiert die interne Darstellung des gleichzeitigen Vektor zum Reduzieren der Fragmentierung und speicherauslastung zu optimieren. Diese Methode ist nicht nebenläufigkeitssicher.|  
 |[size](#size)|Gibt die Anzahl der Elemente in den gleichzeitigen Vektor zurück. Diese Methode ist nebenläufigkeitssicher.|  
 |[swap](#swap)|Vertauscht den Inhalt von zwei gleichzeitige Vektoren. Diese Methode ist nicht nebenläufigkeitssicher.|  
   
@@ -129,7 +129,7 @@ class concurrent_vector: protected details::_Allocator_base<T,
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[operator[]](#operator_at)|Überladen. Bietet Zugriff auf das Element am angegebenen Index in den gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher für Lesevorgänge und auch beim Vergrößern des Vektors, solange Sie haben sichergestellt, dass, die den Wert `_Index` ist kleiner als die Größe von den gleichzeitigen Vektor.|  
+|[operator[]](#operator_at)|Überladen. Bietet Zugriff auf das Element am angegebenen Index in den gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher für Lesevorgänge und auch während der den Vektor, wächst, solange Sie haben sichergestellt, das den Wert `_Index` ist kleiner als die Anzahl der gleichzeitigen Vektor.|  
 |[operator=](#operator_eq)|Überladen. Weist den Inhalt eines anderen `concurrent_vector`-Objekts diesem Objekt zu. Diese Methode ist nicht nebenläufigkeitssicher.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -147,9 +147,9 @@ class concurrent_vector: protected details::_Allocator_base<T,
   
  **Namespace:** Parallelität  
   
-##  <a name="assign"></a> Zuweisen 
+##  <a name="assign"></a> Weisen Sie 
 
- Löscht die Elemente von den gleichzeitigen Vektor und weist ihm entweder `_N` Kopien `_Item`, oder durch den Iteratorbereich angegebenen Werte [ `_Begin`, `_End`). Diese Methode ist nicht nebenläufigkeitssicher.  
+ Löscht den gleichzeitigen Vektor Elemente und weist sie entweder `_N` Kopien `_Item`, oder Werte, angegeben durch den Iteratorbereich [ `_Begin`, `_End`). Diese Methode ist nicht nebenläufigkeitssicher.  
   
 ```
 void assign(
@@ -162,27 +162,27 @@ void assign(_InputIterator _Begin,
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_InputIterator`  
- Der Typ des angegebenen Iterators.  
+*_InputIterator*<br/>
+Der Typ des dem angegebenen Iterator.  
   
- `_N`  
- Die Anzahl der Elemente, die in den gleichzeitigen Vektor zu kopieren.  
+*_N*<br/>
+Die Anzahl der Elemente, die in den gleichzeitigen Vektor zu kopieren.  
   
- `_Item`  
- Verweis auf einen Wert verwendet, um den gleichzeitigen Vektor zu füllen.  
+*_Item*<br/>
+Verweis auf einen Wert verwendet, um den gleichzeitigen Vektor zu füllen.  
   
- `_Begin`  
- Ein Iterator zum ersten Element des Quellbereichs.  
+*_Begin*<br/>
+Ein Iterator für das erste Element des Quellbereichs.  
   
- `_End`  
- Ein Iterator um eine Position hinter dem letzten Element des Quellbereichs.  
+*_Beenden*<br/>
+Ein Iterator für die erste Position direkt hinter dem letzten Element des Quellbereichs.  
   
 ### <a name="remarks"></a>Hinweise  
  `assign` ist nicht nebenläufigkeitssicher. Sie müssen sicherstellen, dass keine anderen Threads Methoden für den gleichzeitigen Vektor aufrufen, wenn Sie diese Methode aufrufen.  
   
-##  <a name="at"></a> am 
+##  <a name="at"></a> an 
 
- Bietet Zugriff auf das Element am angegebenen Index in den gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher für Lesevorgänge und auch beim wächst des Vektors, solange Sie, die den Wert sichergestellt haben `_Index` ist kleiner als die Größe von den gleichzeitigen Vektor.  
+ Bietet Zugriff auf das Element am angegebenen Index in den gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher für Lesevorgänge und auch während der den Vektor, wächst, solange Sie, die den Wert sichergestellt haben `_Index` ist kleiner als die Anzahl der gleichzeitigen Vektor.  
   
 ```
 reference at(size_type _Index);
@@ -191,20 +191,20 @@ const_reference at(size_type _Index) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Index`  
- Der Index des Elements, das abgerufen werden.  
+*_Index*<br/>
+Der Index des Elements, das abgerufen werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf das Element am angegebenen Index.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Version der Funktion `at` zurückgibt nicht `const` Verweis kann nicht verwendet werden, um von anderen Threads gleichzeitig auf das Element schreiben. Ein anderes Synchronisierungsobjekt sollte zum Synchronisieren des gleichzeitigen Lese- und Schreibvorgänge mit der gleichen Data-Element verwendet werden.  
+ Die Version der Funktion `at` zurückgibt nicht `const` Verweis kann nicht verwendet werden, um von verschiedenen Threads gleichzeitig auf das Element schreiben. Ein anderes Synchronisierungsobjekt sollte zum Synchronisieren des gleichzeitigen Lese- und Schreibvorgänge mit dem gleichen Datenelement verwendet werden.  
   
- Löst die Methode `out_of_range` Wenn `_Index` ist größer als oder gleich der Größe von den gleichzeitigen Vektor und `range_error` , wenn der Index für eine fehlerhafte Teil der Vektor ist. Ausführliche Informationen dazu, wie ein Vektor beschädigt werden kann, finden Sie unter [parallele Container und Objekte](../../../parallel/concrt/parallel-containers-and-objects.md).  
+ Löst die Methode `out_of_range` Wenn `_Index` ist größer als oder gleich der Anzahl der gleichzeitigen Vektor und `range_error` Wenn der Index für einen fehlerhaften Teil der Vektor ist. Weitere Informationen darüber, wie die ein Vektors beschädigt werden kann, finden Sie unter [parallele Container und Objekte](../../../parallel/concrt/parallel-containers-and-objects.md).  
   
 ##  <a name="back"></a> Zurück 
 
- Gibt einen Verweis oder einen `const` -Verweis auf das letzte Element in den gleichzeitigen Vektor. Wenn Sie der gleichzeitige Vektor leer ist, ist der Rückgabewert nicht definiert. Diese Methode ist nebenläufigkeitssicher.  
+ Gibt einen Verweis oder einen `const` -Verweis auf das letzte Element in der gleichzeitigen Vektor. Wenn die gleichzeitige Vektor leer ist, ist der Rückgabewert nicht definiert. Diese Methode ist nebenläufigkeitssicher.  
   
 ```
 reference back();
@@ -213,11 +213,11 @@ const_reference back() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Verweis oder ein `const` -Verweis auf das letzte Element in den gleichzeitigen Vektor.  
+ Ein Verweis oder ein `const` -Verweis auf das letzte Element in der gleichzeitigen Vektor.  
   
-##  <a name="begin"></a> Beginnen 
+##  <a name="begin"></a> beginnen 
 
- Gibt einen Iterator vom Typ `iterator` oder `const_iterator` am Anfang der gleichzeitigen Vektors. Diese Methode ist nebenläufigkeitssicher.  
+ Gibt einen Iterator des Typs `iterator` oder `const_iterator` an den Anfang der gleichzeitigen Vektors. Diese Methode ist nebenläufigkeitssicher.  
   
 ```
 iterator begin();
@@ -226,36 +226,36 @@ const_iterator begin() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Iterator vom Typ `iterator` oder `const_iterator` am Anfang der gleichzeitigen Vektors.  
+ Ein Iterator vom Typ `iterator` oder `const_iterator` an den Anfang der gleichzeitigen Vektors.  
   
 ##  <a name="capacity"></a> Kapazität 
 
- Gibt die maximale Größe, die auf die der gleichzeitige Vektor anwachsen kann, ohne zusätzlichen Speicher zu belegen. Diese Methode ist nebenläufigkeitssicher.  
+ Gibt die maximale Größe, die auf die der gleichzeitige Vektor anwachsen kann, ohne mehr Arbeitsspeicher zu belegen. Diese Methode ist nebenläufigkeitssicher.  
   
 ```
 size_type capacity() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die maximale Größe, auf die der gleichzeitige Vektor anwachsen kann, ohne zusätzlichen Speicher zu belegen.  
+ Die maximale Größe, die auf die der gleichzeitige Vektor anwachsen kann, ohne mehr Arbeitsspeicher zu belegen.  
   
 ### <a name="remarks"></a>Hinweise  
- Im Gegensatz zu C++-Standardbibliothek `vector`ein `concurrent_vector` Objekt nicht vorhandene Elemente verschieben, wenn es mehr Arbeitsspeicher belegt.  
+ Im Gegensatz zu einer C++-Standardbibliothek `vector`, `concurrent_vector` Objekt werden die vorhandenen Elemente nicht verschoben, wenn es mehr Arbeitsspeicher belegt.  
   
 ##  <a name="cbegin"></a> cbegin 
 
- Gibt einen Iterator vom Typ `const_iterator` am Anfang der gleichzeitigen Vektors. Diese Methode ist nebenläufigkeitssicher.  
+ Gibt einen Iterator des Typs `const_iterator` an den Anfang der gleichzeitigen Vektors. Diese Methode ist nebenläufigkeitssicher.  
   
 ```
 const_iterator cbegin() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Iterator vom Typ `const_iterator` am Anfang der gleichzeitigen Vektors.  
+ Ein Iterator vom Typ `const_iterator` an den Anfang der gleichzeitigen Vektors.  
   
 ##  <a name="cend"></a> cend 
 
- Gibt einen Iterator vom Typ `const_iterator` bis zum Ende der gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher.  
+ Gibt einen Iterator des Typs `const_iterator` bis zum Ende der gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher.  
   
 ```
 const_iterator cend() const;
@@ -273,7 +273,7 @@ void clear();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `clear` ist nicht nebenläufigkeitssicher. Sie müssen sicherstellen, dass keine anderen Threads Methoden für den gleichzeitigen Vektor aufrufen, wenn Sie diese Methode aufrufen. `clear` keine frei internen Arrays. Um interne Arrays freizugeben, rufen Sie die Funktion `shrink_to_fit` nach `clear`.  
+ `clear` ist nicht nebenläufigkeitssicher. Sie müssen sicherstellen, dass keine anderen Threads Methoden für den gleichzeitigen Vektor aufrufen, wenn Sie diese Methode aufrufen. `clear` Gibt die internen Arrays nicht frei. Um die internen Arrays freizugeben, rufen Sie die Funktion `shrink_to_fit` nach `clear`.  
   
 ##  <a name="ctor"></a> concurrent_vector 
 
@@ -310,34 +310,34 @@ concurrent_vector(_InputIterator _Begin,
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `M`  
- Der allocator-Typ des Quellvektors.  
+*M*<br/>
+Der allocator-Typ des Quellvektors.  
   
- `_InputIterator`  
- Der Typ des Eingabeiterators.  
+*_InputIterator*<br/>
+Der Typ des Eingabeiterators.  
   
- `_Al`  
- Die mit diesem Objekt zu verwendende Zuweisungsklasse.  
+*_Al*<br/>
+Die mit diesem Objekt zu verwendende Zuweisungsklasse.  
   
- `_Vector`  
- Das `concurrent_vector`-Quellobjekt, aus dem Elemente kopiert oder verschoben werden sollen.  
+*_Vector*<br/>
+Das `concurrent_vector`-Quellobjekt, aus dem Elemente kopiert oder verschoben werden sollen.  
   
- `_N`  
- Die Anfangskapazität des `concurrent_vector`-Objekts.  
+*_N*<br/>
+Die Anfangskapazität des `concurrent_vector`-Objekts.  
   
- `_Item`  
- Der Wert der Elemente im erstellten Objekt.  
+*_Item*<br/>
+Der Wert der Elemente im erstellten Objekt.  
   
- `_Begin`  
- Die Position des ersten Elements in dem zu kopierenden Elementbereich.  
+*_Begin*<br/>
+Die Position des ersten Elements in dem zu kopierenden Elementbereich.  
   
- `_End`  
- Die Position des ersten Elements nach dem zu kopierenden Elementbereich.  
+*_Beenden*<br/>
+Die Position des ersten Elements nach dem zu kopierenden Elementbereich.  
   
 ### <a name="remarks"></a>Hinweise  
  Von allen Konstruktoren wird ein `_Al`-Zuweisungsobjekt gespeichert und der Vektor initialisiert.  
   
- Der erste Konstruktor Geben Sie einen leeren ursprünglichen Vektor und gibt explizit an die Allocator-Typ. verwendet werden.  
+ Der erste Konstruktor Geben Sie einen leeren ursprünglichen Vektor und gibt Sie den Zuweisungstyp explizit an. verwendet werden.  
   
  Die zweiten und dritten Konstruktoren geben eine Kopie des parallel ausgeführten `_Vector`-Vektors an.  
   
@@ -345,7 +345,7 @@ concurrent_vector(_InputIterator _Begin,
   
  Der fünfte Konstruktor gibt eine Wiederholung einer angegebenen Anzahl ( `_N`) von Elementen des Standardwerts für die Klasse `T`.  
   
- Der sechste Konstruktor gibt eine Wiederholung von ( `_N`) Elementen des Werts `_Item`.  
+ Der sechste Konstruktor gibt eine Wiederholung von ( `_N`)-Elementen des Werts `_Item`.  
   
  Der letzte Konstruktor gibt vom Iteratorbereich bereitgestellte Werte [ `_Begin`, `_End`).  
   
@@ -359,18 +359,18 @@ concurrent_vector(_InputIterator _Begin,
   
 ##  <a name="crbegin"></a> crbegin 
 
- Gibt einen Iterator vom Typ `const_reverse_iterator` am Anfang der gleichzeitigen Vektors. Diese Methode ist nebenläufigkeitssicher.  
+ Gibt einen Iterator des Typs `const_reverse_iterator` an den Anfang der gleichzeitigen Vektors. Diese Methode ist nebenläufigkeitssicher.  
   
 ```
 const_reverse_iterator crbegin() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Iterator vom Typ `const_reverse_iterator` am Anfang der gleichzeitigen Vektors.  
+ Ein Iterator vom Typ `const_reverse_iterator` an den Anfang der gleichzeitigen Vektors.  
   
 ##  <a name="crend"></a> crend 
 
- Gibt einen Iterator vom Typ `const_reverse_iterator` bis zum Ende der gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher.  
+ Gibt einen Iterator des Typs `const_reverse_iterator` bis zum Ende der gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher.  
   
 ```
 const_reverse_iterator crend() const;
@@ -381,18 +381,18 @@ const_reverse_iterator crend() const;
   
 ##  <a name="empty"></a> leere 
 
- Testet, ob zum Zeitpunkt der gleichzeitige Vektor leer ist, wird diese Methode aufgerufen. Diese Methode ist nebenläufigkeitssicher.  
+ Testet, ob es sich bei der gleichzeitige Vektor zu diesem Zeitpunkt leer ist, wird diese Methode aufgerufen. Diese Methode ist nebenläufigkeitssicher.  
   
 ```
 bool empty() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn zum Zeitpunkt der Vektor leer die Funktion aufgerufen wurde war, `false` andernfalls.  
+ `true` Wenn der Vektor leer war die Funktion wird aufgerufen wurde, im Moment `false` andernfalls.  
   
 ##  <a name="end"></a> Ende 
 
- Gibt einen Iterator vom Typ `iterator` oder `const_iterator` bis zum Ende der gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher.  
+ Gibt einen Iterator des Typs `iterator` oder `const_iterator` bis zum Ende der gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher.  
   
 ```
 iterator end();
@@ -405,7 +405,7 @@ const_iterator end() const;
   
 ##  <a name="front"></a> Vorderseite 
 
- Gibt einen Verweis oder einen `const` Verweis auf das erste Element in den gleichzeitigen Vektor. Wenn Sie der gleichzeitige Vektor leer ist, ist der Rückgabewert nicht definiert. Diese Methode ist nebenläufigkeitssicher.  
+ Gibt einen Verweis oder einen `const` Verweis auf das erste Element in den gleichzeitigen Vektor. Wenn die gleichzeitige Vektor leer ist, ist der Rückgabewert nicht definiert. Diese Methode ist nebenläufigkeitssicher.  
   
 ```
 reference front();
@@ -425,11 +425,11 @@ allocator_type get_allocator() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Eine Kopie der Zuweisung zum Erstellen der `concurrent_vector` Objekt.  
+ Eine Kopie der Zuweisung, die zum Erstellen der `concurrent_vector` Objekt.  
   
 ##  <a name="grow_by"></a> grow_by 
 
- Vergrößert dieses gleichzeitigen Vektor von `_Delta` Elemente. Diese Methode ist nebenläufigkeitssicher.  
+ Vergrößert diese gleichzeitigen Vektor von `_Delta` Elemente. Diese Methode ist nebenläufigkeitssicher.  
   
 ```
 iterator grow_by(
@@ -441,43 +441,43 @@ iterator grow_by(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Delta`  
- Die Anzahl von Elementen, auf das Objekt angefügt werden soll.  
+*_Delta*<br/>
+Die Anzahl von Elementen, die an das Objekt angefügt werden soll.  
   
- `_Item`  
- Der Wert, mit dem neue Elemente zu initialisieren.  
+*_Item*<br/>
+Der Wert, der die neuen Elemente mit initialisiert.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Iterator zum ersten Element angehängt.  
+ Ein Iterator zum ersten Element angefügt wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `_Item` nicht angegeben wird, werden die neuen Elemente werden standardmäßig erstelltes.  
+ Wenn `_Item` nicht angegeben ist, wird die neue Elemente sind die Standardeinstellungen erstellt.  
   
 ##  <a name="grow_to_at_least"></a> grow_to_at_least 
 
- Diese gleichzeitigen Vektor wächst, bis sie mindestens verfügt `_N` Elemente. Diese Methode ist nebenläufigkeitssicher.  
+ Diese gleichzeitigen Vektor lange zunehmen, bis mindestens `_N` Elemente. Diese Methode ist nebenläufigkeitssicher.  
   
 ```
 iterator grow_to_at_least(size_type _N);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_N`  
- Die neue Mindestgröße für die `concurrent_vector` Objekt.  
+*_N*<br/>
+Der neue minimale Größe für die `concurrent_vector` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Iterator, der zum Anfang der Sequenz angefügt oder auf das Element an Index verweist `_N` , wenn keine Elemente angefügt wurden.  
+ Ein Iterator, der an den Anfang der angefügten Sequenz oder das Element am Index verweist `_N` , wenn keine Elemente angefügt wurden.  
   
 ##  <a name="max_size"></a> max_size 
 
- Gibt die maximale Anzahl von Elementen, die der gleichzeitige Vektor aufnehmen kann. Diese Methode ist nebenläufigkeitssicher.  
+ Gibt die maximale Anzahl von Elementen, die der gleichzeitige Vektor enthalten kann. Diese Methode ist nebenläufigkeitssicher.  
   
 ```
 size_type max_size() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die maximale Anzahl von Elementen der `concurrent_vector` Objekt aufnehmen kann.  
+ Die maximale Anzahl von Elementen der `concurrent_vector` Objekt enthalten kann.  
   
 ##  <a name="operator_eq"></a> Operator = 
 
@@ -496,18 +496,18 @@ concurrent_vector& operator= (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `M`  
- Der allocator-Typ des Quellvektors.  
+*M*<br/>
+Der allocator-Typ des Quellvektors.  
   
- `_Vector`  
- Das `concurrent_vector`-Quellobjekt.  
+*_Vector*<br/>
+Das `concurrent_vector`-Quellobjekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf das `concurrent_vector`-Objekt.  
   
 ##  <a name="operator_at"></a> []-Operator 
 
- Bietet Zugriff auf das Element am angegebenen Index in den gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher für Lesevorgänge und auch beim Vergrößern des Vektors, solange Sie haben sichergestellt, dass, die den Wert `_Index` ist kleiner als die Größe von den gleichzeitigen Vektor.  
+ Bietet Zugriff auf das Element am angegebenen Index in den gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher für Lesevorgänge und auch während der den Vektor, wächst, solange Sie haben sichergestellt, das den Wert `_Index` ist kleiner als die Anzahl der gleichzeitigen Vektor.  
   
 ```
 reference operator[](size_type _index);
@@ -516,16 +516,16 @@ const_reference operator[](size_type _index) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Index`  
- Der Index des Elements, das abgerufen werden.  
+*_Index*<br/>
+Der Index des Elements, das abgerufen werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf das Element am angegebenen Index.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Version des `operator []` zurückgibt nicht `const` Verweis kann nicht verwendet werden, um von anderen Threads gleichzeitig auf das Element schreiben. Ein anderes Synchronisierungsobjekt sollte zum Synchronisieren des gleichzeitigen Lese- und Schreibvorgänge mit der gleichen Data-Element verwendet werden.  
+ Die Version des `operator []` zurückgibt nicht `const` Verweis kann nicht verwendet werden, um von verschiedenen Threads gleichzeitig auf das Element schreiben. Ein anderes Synchronisierungsobjekt sollte zum Synchronisieren des gleichzeitigen Lese- und Schreibvorgänge mit dem gleichen Datenelement verwendet werden.  
   
- Keine Überprüfung wird ausgeführt, um sicherzustellen, dass der Grenzen `_Index` ist ein gültiger Index in den gleichzeitigen Vektor.  
+ Keine Überprüfung wird durchgeführt, um sicherzustellen, dass der Begrenzungen `_Index` ist ein gültiger Index in den gleichzeitigen Vektor.  
   
 ##  <a name="push_back"></a> push_back 
 
@@ -538,15 +538,15 @@ iterator push_back(T&& _Item);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Item`  
- Der anzufügende Wert.  
+*_Item*<br/>
+Der Wert, der angefügt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Iterator zum Element angehängt.  
+ Ein Iterator für das Element angehängt.  
   
 ##  <a name="rbegin"></a> rbegin 
 
- Gibt einen Iterator vom Typ `reverse_iterator` oder `const_reverse_iterator` am Anfang der gleichzeitigen Vektors. Diese Methode ist nebenläufigkeitssicher.  
+ Gibt einen Iterator des Typs `reverse_iterator` oder `const_reverse_iterator` an den Anfang der gleichzeitigen Vektors. Diese Methode ist nebenläufigkeitssicher.  
   
 ```
 reverse_iterator rbegin();
@@ -555,11 +555,11 @@ const_reverse_iterator rbegin() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Iterator vom Typ `reverse_iterator` oder `const_reverse_iterator` am Anfang der gleichzeitigen Vektors.  
+ Ein Iterator vom Typ `reverse_iterator` oder `const_reverse_iterator` an den Anfang der gleichzeitigen Vektors.  
   
 ##  <a name="rend"></a> REND 
 
- Gibt einen Iterator vom Typ `reverse_iterator` oder `const_reverse_iterator` bis zum Ende der gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher.  
+ Gibt einen Iterator des Typs `reverse_iterator` oder `const_reverse_iterator` bis zum Ende der gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher.  
   
 ```
 reverse_iterator rend();
@@ -572,22 +572,22 @@ const_reverse_iterator rend() const;
   
 ##  <a name="reserve"></a> Hostreserven 
 
- Reserviert ausreichend Speicherplatz, um den gleichzeitigen Vektor an Größe zunehmen darf `_N` ohne später mehr Speicher reservieren. Diese Methode ist nicht nebenläufigkeitssicher.  
+ Reserviert genügend Speicherplatz für den gleichzeitigen Vektor auf Größe anwachsen `_N` ohne später mehr Speicher reservieren. Diese Methode ist nicht nebenläufigkeitssicher.  
   
 ```
 void reserve(size_type _N);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_N`  
- Die Anzahl von Elementen, Speicherplatz zu reservieren.  
+*_N*<br/>
+Die Anzahl von Elementen, die Speicherplatz für die zu reservieren.  
   
 ### <a name="remarks"></a>Hinweise  
- `reserve` ist nicht nebenläufigkeitssicher. Sie müssen sicherstellen, dass keine anderen Threads Methoden für den gleichzeitigen Vektor aufrufen, wenn Sie diese Methode aufrufen. Die Kapazität von den gleichzeitigen Vektor nach der Methodenrückgabe möglicherweise größer als der angeforderten Reservierung.  
+ `reserve` ist nicht nebenläufigkeitssicher. Sie müssen sicherstellen, dass keine anderen Threads Methoden für den gleichzeitigen Vektor aufrufen, wenn Sie diese Methode aufrufen. Die Kapazität der gleichzeitigen Vektor nach der Methodenrückgabe möglicherweise größer als der angeforderten Reservierung.  
   
-##  <a name="resize"></a> zum Ändern der Größe 
+##  <a name="resize"></a> Ändern der Größe 
 
- Ändert die Größe von den gleichzeitigen Vektor auf die angeforderte Größe, löschen oder Hinzufügen von Elementen nach Bedarf. Diese Methode ist nicht nebenläufigkeitssicher.  
+ Ändert die Größe der gleichzeitigen Vektor auf die angeforderte Größe, löschen oder Hinzufügen von Elementen nach Bedarf. Diese Methode ist nicht nebenläufigkeitssicher.  
   
 ```
 void resize(
@@ -599,27 +599,27 @@ void resize(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_N`  
- Die neue Größe für die Concurrent_vector.  
+*_N*<br/>
+Die neue Größe des der Concurrent_vector.  
   
- `val`  
- Der Wert der neuen Elemente, die in den Vektor hinzugefügt wird, wenn die neue Größe die Originalgröße übersteigt. Wenn der Wert ausgelassen wird, werden die neuen Objekte den Standardwert für ihren Typ zugewiesen.  
+*val*<br/>
+Der Wert der neuen Elemente, die dem Vektor hinzugefügt wird, wenn die neue Größe die Originalgröße übersteigt. Wenn der Wert ausgelassen wird, werden die neuen Objekte den Standardwert für ihren Typ zugewiesen.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die Größe des Containers kleiner als die angeforderte Größe ist, werden die Elemente in den Vektor hinzugefügt, bis die angeforderte Größe erreicht. Wenn die Größe des Containers die angeforderte Größe übersteigt, werden die Elemente am Ende des Containers gelöscht, bis der Container die Größe erreicht `_N`. Wenn die tatsächliche Größe des Containers der angeforderten Größe entspricht, wird keine Aktion durchgeführt.  
+ Wenn die Größe des Containers kleiner als die angeforderte Größe ist, werden dem Vektor Elemente hinzugefügt, bis die angeforderte Größe erreicht. Wenn die Größe des Containers die angeforderte Größe übersteigt, werden die Elemente am Ende des Containers gelöscht, bis der Container die Größe erreicht `_N`. Wenn die tatsächliche Größe des Containers der angeforderten Größe entspricht, wird keine Aktion durchgeführt.  
   
  `resize` ist nicht parallelitätssicher. Sie müssen sicherstellen, dass keine anderen Threads Methoden für den gleichzeitigen Vektor aufrufen, wenn Sie diese Methode aufrufen.  
   
 ##  <a name="shrink_to_fit"></a> shrink_to_fit 
 
- Komprimiert die interne Darstellung des den gleichzeitigen Vektor Fragmentierung zu verringern und die Speicherverwendung zu optimieren. Diese Methode ist nicht nebenläufigkeitssicher.  
+ Komprimiert die interne Darstellung des gleichzeitigen Vektor zum Reduzieren der Fragmentierung und speicherauslastung zu optimieren. Diese Methode ist nicht nebenläufigkeitssicher.  
   
 ```
 void shrink_to_fit();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode wird intern Arbeitsspeicher Verschiebt Elemente, neu zugewiesen werden alle Iteratoren ungültig. `shrink_to_fit` ist nicht nebenläufigkeitssicher. Sie müssen sicherstellen, dass keine anderen Threads Methoden für den gleichzeitigen Vektor aufrufen, wenn Sie diese Funktion aufrufen.  
+ Diese Methode belegt intern Arbeitsspeicher Verschiebt Elemente, erneut alle Iteratoren für ungültig zu erklären. `shrink_to_fit` ist nicht nebenläufigkeitssicher. Sie müssen sicherstellen, dass keine anderen Threads Methoden für den gleichzeitigen Vektor aufrufen, wenn Sie diese Funktion aufrufen.  
   
 ##  <a name="size"></a> Größe 
 
@@ -630,10 +630,10 @@ size_type size() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Anzahl der Elemente in diesem `concurrent_vector` Objekt.  
+ Die Anzahl der Elemente in dieser `concurrent_vector` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Wird sichergestellt, dass die zurückgegebene Größe enthalten alle Elemente, die durch Aufrufe der Funktion angefügt `push_back`, oder die Vergrößerung der Vorgänge, die vor dem Aufrufen dieser Methode abgeschlossen haben. Allerdings es auch Elemente enthalten, die zugewiesen werden, aber immer noch in Bearbeitung durch gleichzeitige Aufrufe von einer der Methoden Wachstum.  
+ Die zurückgegebene Größe ist garantiert, alle Elemente, die durch Aufrufe der Funktion angefügt eingeschlossen `push_back`, oder Erweiterungen, die vor dem Aufrufen dieser Methode abgeschlossen wurden. Aber es kann auch enthalten Elemente, die zugewiesen werden, aber immer noch in Bearbeitung von gleichzeitigen Aufrufen einer der Methoden Wachstum.  
   
 ##  <a name="swap"></a> Swap 
 
@@ -644,8 +644,8 @@ void swap(concurrent_vector& _Vector);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Vector`  
- Die `concurrent_vector` Objekt, das Inhalt mit austauschen.  
+*_Vector*<br/>
+Die `concurrent_vector` Objekt, das Inhalt getauscht.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   

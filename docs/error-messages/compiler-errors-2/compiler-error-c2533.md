@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2533 | Microsoft Docs
+title: Compilerfehler C2533 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06733dc8ee52462ab7fcac4255ee8fa697a9bac4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 528b78e71713725907a9f0e2bd06cec1a8c62e67
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229665"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045405"
 ---
 # <a name="compiler-error-c2533"></a>Compilerfehler C2533
-„Bezeichner“: Rückgabetyp für Konstruktoren nicht zulässig  
-  
- Ein Konstruktor kann keinen Rückgabetyp haben (auch keinen `void`-Rückgabetyp).  
-  
- Eine häufige Ursache für diesen Fehler ist ein fehlendes Semikolon zwischen dem Ende einer Klassendefinition und der ersten Konstruktorimplementierung. Der Compiler erkennt die Klasse als Definition des Rückgabetyps für die Konstruktorfunktion und generiert C2533.  
-  
- Im folgenden Beispiel wird C2533 generiert und gezeigt, wie Sie diesen Fehler beheben:  
-  
-```  
-// C2533.cpp  
-// compile with: /c  
-class X {  
-public:  
-   X();     
-};  
-  
-int X::X() {}   // C2533 - constructor return type not allowed  
-X::X() {}   // OK - fix by using no return type  
+
+„Bezeichner“: Rückgabetyp für Konstruktoren nicht zulässig
+
+Ein Konstruktor kann keinen Rückgabetyp haben (auch keinen `void`-Rückgabetyp).
+
+Eine häufige Ursache für diesen Fehler ist ein fehlendes Semikolon zwischen dem Ende einer Klassendefinition und der ersten Konstruktorimplementierung. Der Compiler erkennt die Klasse als Definition des Rückgabetyps für die Konstruktorfunktion und generiert C2533.
+
+Im folgenden Beispiel wird C2533 generiert und gezeigt, wie Sie diesen Fehler beheben:
+
+```
+// C2533.cpp
+// compile with: /c
+class X {
+public:
+   X();
+};
+
+int X::X() {}   // C2533 - constructor return type not allowed
+X::X() {}   // OK - fix by using no return type
 ```

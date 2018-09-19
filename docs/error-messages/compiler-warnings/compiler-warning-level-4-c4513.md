@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4513 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4513 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92c3e89204ec30f9c96a5ea03ede5093dd013d0c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75ae1c94d7a11fc9bb0049333c65a6677b04778a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292895"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087382"
 ---
 # <a name="compiler-warning-level-4-c4513"></a>Compilerwarnung (Stufe 4) C4513
-'Klasse': Destruktor konnte nicht generiert werden  
-  
- Der Compiler kann keinen Standarddestruktor für die angegebene Klasse generieren. Es wurde kein Destruktor erstellt. Der Destruktor wird in einer Basisklasse, die für die abgeleitete Klasse nicht zugänglich ist. Wenn die Basisklasse einen privaten Destruktor verfügt, stellen sie öffentliche oder geschützte.
+
+'Klasse': Destruktor konnte nicht generiert werden
+
+Der Compiler kann keinen Standarddestruktor für die angegebene Klasse generieren; Es wurde kein Destruktor erstellt. Der Destruktor ist in einer Basisklasse, die für die abgeleitete Klasse nicht zugänglich ist. Wenn die Basisklasse über einen privaten Destruktor verfügt, stellen sie öffentliche oder geschützte.

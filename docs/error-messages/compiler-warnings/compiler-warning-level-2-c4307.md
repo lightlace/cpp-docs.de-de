@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 2) C4307 | Microsoft Docs
+title: Compilerwarnung (Stufe 2) C4307 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52914fc5825bda5647308c006b853538f3d6225e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ed18c213b35e79aaae98efa5932ac404a8d84bff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292031"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079192"
 ---
 # <a name="compiler-warning-level-2-c4307"></a>Compilerwarnung (Stufe 2) C4307
-'Operator': Überlauf einer ganzzahligen Konstanten  
-  
- Der Operator wird in einem Ausdruck verwendet, der eine ganzzahlige Konstante, die für dieses Volume zugewiesene Speicherplatz Überlaufs ausgibt. Sie müssen möglicherweise einen größeren Typ für die Konstante verwenden. Ein **signiert Int** enthält einen kleineren Wert als ein `unsigned int` da die **signiert Int** verwendet ein Bit, die Vorzeichen darstellen.  
-  
- Im folgenden Beispiel wird C4307 generiert:  
-  
-```  
-// C4307.cpp  
-// compile with: /W2  
-int i = 2000000000 + 2000000000;   // C4307  
-int j = (unsigned)2000000000 + 2000000000;   // OK  
-  
-int main()  
-{  
-}  
+
+'Operator': Überlauf einer ganzzahligen Konstanten
+
+Der Operator wird in einem Ausdruck verwendet, die eine ganzzahlige Konstante Überlauf für diese zugeordneten Speicherplatzes ergeben. Sie müssen möglicherweise einen größeren Typ für die Konstante verwenden. Ein **signiert Int** enthält einen kleineren Wert als ein `unsigned int` da die **signiert Int** ein Bit verwendet, um das Zeichen darzustellen.
+
+Im folgende Beispiel wird die C4307 generiert:
+
+```
+// C4307.cpp
+// compile with: /W2
+int i = 2000000000 + 2000000000;   // C4307
+int j = (unsigned)2000000000 + 2000000000;   // OK
+
+int main()
+{
+}
 ```

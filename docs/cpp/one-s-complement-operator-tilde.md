@@ -20,48 +20,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79d34a4057ccbe5c10a6d22a14eed4317e62c464
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 42cfc8dd3f94b5b85616297908a73c9a791b730a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409155"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111445"
 ---
 # <a name="one39s-complement-operator-"></a>Eine&#39;s Komplementoperator: ~
-## <a name="syntax"></a>Syntax  
-  
-```  
-~ cast-expression  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Der Einerkomplementoperator (`~`), der manchmal als "bitweiser Komplementoperator" bezeichnet wird, ergibt eine bitweise Einerkomplement seines Operanden. Das bedeutet, dass jedes Bit, das 1 im Operanden ist, 0 im Ergebnis ist. Umgekehrt ist jedes Bit, das 0 im Operanden ist, im Ergebnis 1. Der Operand für den Einerkomplementoperator muss ein ganzzahliger Typ sein.  
-  
-## <a name="operator-keyword-for-"></a>Operator-Schlüsselwort für ~  
- Die **Compl** -Operator ist die ausgeschriebene Variante von `~`. Es gibt zwei Möglichkeiten, den Zugriff auf die **Compl** -Operator in Programmen: Fügen Sie die Headerdatei `iso646.h`, oder Kompilieren Sie mit [/Za](../build/reference/za-ze-disable-language-extensions.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```cpp 
-// expre_One_Complement_Operator.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-  
-using namespace std;  
-  
-int main () {  
-   unsigned short y = 0xFFFF;  
-   cout << hex << y << endl;  
-   y = ~y;   // Take one's complement  
-   cout << hex << y << endl;  
-}  
-```  
-  
- In diesem Beispiel ist der neue Wert, der `y` zugewiesen ist, das Einerkomplement des Werts ohne Vorzeichen 0xFFFF oder 0x0000.  
-  
- Ganzzahlige Erweiterung wird für ganzzahlige Operanden durchgeführt, und der resultierende Typ ist der Typ, auf den der Operand erweitert wird. Finden Sie unter [Standardkonvertierungen](standard-conversions.md) für Weitere Informationen über die Ausführung der heraufstufung.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Ausdrücke mit Unäroperatoren](../cpp/expressions-with-unary-operators.md)   
- [C++-Built-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Unäre arithmetische Operatoren](../c-language/unary-arithmetic-operators.md)
+
+## <a name="syntax"></a>Syntax
+
+```
+~ cast-expression
+```
+
+## <a name="remarks"></a>Hinweise
+
+Der Einerkomplementoperator (`~`), der manchmal als "bitweiser Komplementoperator" bezeichnet wird, ergibt eine bitweise Einerkomplement seines Operanden. Das bedeutet, dass jedes Bit, das 1 im Operanden ist, 0 im Ergebnis ist. Umgekehrt ist jedes Bit, das 0 im Operanden ist, im Ergebnis 1. Der Operand für den Einerkomplementoperator muss ein ganzzahliger Typ sein.
+
+## <a name="operator-keyword-for-"></a>Operator-Schlüsselwort für ~
+
+Die **Compl** -Operator ist die ausgeschriebene Variante von `~`. Es gibt zwei Möglichkeiten, den Zugriff auf die **Compl** -Operator in Programmen: Fügen Sie die Headerdatei `iso646.h`, oder Kompilieren Sie mit [/Za](../build/reference/za-ze-disable-language-extensions.md).
+
+## <a name="example"></a>Beispiel
+
+```cpp
+// expre_One_Complement_Operator.cpp
+// compile with: /EHsc
+#include <iostream>
+
+using namespace std;
+
+int main () {
+   unsigned short y = 0xFFFF;
+   cout << hex << y << endl;
+   y = ~y;   // Take one's complement
+   cout << hex << y << endl;
+}
+```
+
+In diesem Beispiel ist der neue Wert, der `y` zugewiesen ist, das Einerkomplement des Werts ohne Vorzeichen 0xFFFF oder 0x0000.
+
+Ganzzahlige Erweiterung wird für ganzzahlige Operanden durchgeführt, und der resultierende Typ ist der Typ, auf den der Operand erweitert wird. Finden Sie unter [Standardkonvertierungen](standard-conversions.md) für Weitere Informationen über die Ausführung der heraufstufung.
+
+## <a name="see-also"></a>Siehe auch
+
+[Ausdrücke mit unären Operatoren](../cpp/expressions-with-unary-operators.md)<br/>
+[C++-Built-in-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Unäre arithmetische Operatoren](../c-language/unary-arithmetic-operators.md)

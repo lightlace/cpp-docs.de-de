@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3117 generiert | Microsoft Docs
+title: Compilerfehler C3117 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82ea2d739936bf7b46c52d6875c64d04689f9cfe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fde62b5495afa4a8a0b76502cac78117fe0575fc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249084"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090411"
 ---
-# <a name="compiler-error-c3117"></a>Compiler-Fehler C3117 generiert
-"%$S": eine Schnittstelle kann nur eine Basisklasse haben  
-  
- Deklariert eine Schnittstelle, die von mehreren Basisklassen erben.  
-  
- Im folgende Beispiel wird C3117 generiert:  
-  
-```  
-// C3117.cpp  
-#include <windows.h>  
-  
-[ object, uuid("00000000-0000-0000-0000-000000000001") ]  
-__interface I1  
-{  
-};  
-  
-[ object, uuid("00000000-0000-0000-0000-000000000002") ]  
-__interface I2  
-{  
-};  
-  
-[ object, uuid("00000000-0000-0000-0000-000000000003") ]  
-__interface I3 : I1, I2  
-{   // C3117  
-};  
+# <a name="compiler-error-c3117"></a>Compilerfehler C3117
+
+"%$S": eine Schnittstelle kann nur eine Basisklasse besitzen
+
+Sie haben deklariert eine Schnittstelle, die von mehreren Basisklassen erben.
+
+Im folgende Beispiel wird die C3117 generiert:
+
+```
+// C3117.cpp
+#include <windows.h>
+
+[ object, uuid("00000000-0000-0000-0000-000000000001") ]
+__interface I1
+{
+};
+
+[ object, uuid("00000000-0000-0000-0000-000000000002") ]
+__interface I2
+{
+};
+
+[ object, uuid("00000000-0000-0000-0000-000000000003") ]
+__interface I3 : I1, I2
+{   // C3117
+};
 ```

@@ -20,22 +20,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 638d4fbe6fd4dfce1fb3eeb246ef85c5b60fada0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f3bf660b2e1c8301e9c6c8ba1bd1e11fa3956de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392509"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082221"
 ---
 # <a name="locale"></a>Gebietsschema
 
 Das *Gebietsschema* bezieht sich auf die Einstellungen für das Land bzw. die Region und die Sprache, mit denen Sie Ihr Programm anpassen können. Einige vom Gebietsschema abhängige Kategorien umfassen die Anzeigeformate für Datums- und Währungswerte. Weitere Informationen finden Sie unter [Gebietsschemakategorien](../c-runtime-library/locale-categories.md).
 
- Verwenden Sie die [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)-Funktion mit Funktionen ohne das **_l**-Suffix, um einige oder alle Gebietsschemainformationen des aktuellen Programms oder Threads zu ändern oder abzufragen. Die Funktionen mit dem **_l**-Suffix verwenden den Gebietsschemaparameter, der nur während der Ausführung dieser spezifischen Funktion für ihre Gebietsschemainformationen übergeben wird. Verwenden Sie [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) zum Erstellen eines Gebietsschemas, das mit einer Funktion mit einem **_l**-Suffix verwendet werden kann. Um dieses Gebietsschema freizugeben, verwenden Sie [_free_locale](../c-runtime-library/reference/free-locale.md). Rufen Sie das aktuelle Gebietsschema mithilfe von [_get_current_locale](../c-runtime-library/reference/get-current-locale.md) ab.
+Verwenden Sie die [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)-Funktion mit Funktionen ohne das **_l**-Suffix, um einige oder alle Gebietsschemainformationen des aktuellen Programms oder Threads zu ändern oder abzufragen. Die Funktionen mit dem **_l**-Suffix verwenden den Gebietsschemaparameter, der nur während der Ausführung dieser spezifischen Funktion für ihre Gebietsschemainformationen übergeben wird. Verwenden Sie [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) zum Erstellen eines Gebietsschemas, das mit einer Funktion mit einem **_l**-Suffix verwendet werden kann. Um dieses Gebietsschema freizugeben, verwenden Sie [_free_locale](../c-runtime-library/reference/free-locale.md). Rufen Sie das aktuelle Gebietsschema mithilfe von [_get_current_locale](../c-runtime-library/reference/get-current-locale.md) ab.
 
- Steuern Sie mithilfe von [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md), ob jeder Thread über sein eigenes Gebietsschema verfügt, oder ob alle Threads in einem Programm das gleiche Gebietsschema verwenden. Weitere Informationen finden Sie unter [Gebietsschemas und Codepages](../text/locales-and-code-pages.md).
+Steuern Sie mithilfe von [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md), ob jeder Thread über sein eigenes Gebietsschema verfügt, oder ob alle Threads in einem Programm das gleiche Gebietsschema verwenden. Weitere Informationen finden Sie unter [Gebietsschemas und Codepages](../text/locales-and-code-pages.md).
 
- Von den Funktionen in der folgenden Tabelle sind sicherere Versionen verfügbar, die durch das Suffix **_s** („sicher“) gekennzeichnet sind. Weitere Informationen finden Sie unter [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md).
+Von den Funktionen in der folgenden Tabelle sind sicherere Versionen verfügbar, die durch das Suffix **_s** („sicher“) gekennzeichnet sind. Weitere Informationen finden Sie unter [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="locale-dependent-routines"></a>Gebietsschemaabhängige Routinen
 
@@ -82,4 +82,4 @@ Das *Gebietsschema* bezieht sich auf die Einstellungen für das Land bzw. die Re
 ## <a name="see-also"></a>Siehe auch
 
 [Internationalisierung](../c-runtime-library/internationalization.md)<br/>
- [Universelle C-Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Universelle C-Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Invalid_compute_domain-Klasse | Microsoft Docs
+title: Invalid_compute_domain-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 588f12e04f3a2833da6d67c07ab41929d916a4b5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: def102ecb8063f82d90d41b2b678ff22638b1f8b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705210"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116008"
 ---
 # <a name="invalidcomputedomain-class"></a>invalid_compute_domain-Klasse
-Die Ausnahme, die ausgelöst wird, wenn die Laufzeit einen Kernel gestartet werden kann, mit der Compute-Domäne angegeben, an die [Parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) Aufrufsite.  
+Die Ausnahme, die ausgelöst wird, wenn Sie einen Kernel nicht mithilfe der Compute-Domäne angegeben, an die Laufzeit starten die [Parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) Aufrufsite.  
 
   
 ## <a name="syntax"></a>Syntax  
@@ -70,8 +70,8 @@ invalid_compute_domain() throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Message`  
- Eine Beschreibung des Fehlers.  
+*_Nachricht*<br/>
+Eine Beschreibung des Fehlers.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Eine Instanz der `invalid_compute_domain`-Klasse  

@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C2616 | Microsoft Docs
+title: Compilerfehler C2616 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ad7163522fb1155f540293622689fbc0388733f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a983f8cd1083fa05499c334ad776a220441db61a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233668"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047420"
 ---
-# <a name="compiler-error-c2616"></a>Compilerfehler Fehler C2616
-'Konvertierung': eine nicht-Lvalue "Typ1" in 'Typ2' kann nicht implizit konvertiert werden, die sich nicht const  
-  
- Ein Verweis kann nicht von einem l-nicht initialisiert werden.  
-  
- Dies ist ein Fehler ANSI-Kompatibilität (["/ Za"](../../build/reference/za-ze-disable-language-extensions.md)) und eine Warnung bei Verwendung der Microsoft-Erweiterungen (**"/ Ze"**).
+# <a name="compiler-error-c2616"></a>Compilerfehler C2616
+
+'Konvertierung': kein l-'Typ1' zu 'Typ2' nicht implizit konvertiert werden, die sich nicht const
+
+Ein Verweis kann nicht von einem l-initialisiert werden.
+
+Dies ist ein Fehler ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) und eine Warnung der Microsoft-Erweiterungen (**/Ze**).

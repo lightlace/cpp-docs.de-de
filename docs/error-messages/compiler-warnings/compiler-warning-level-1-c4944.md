@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4944 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4944 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57ddad7aa383cfd6f8716d6b12fa56627c1ee0e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bdf155ce5fb53bb4b1b5914d7738c8c12f458888
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290698"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105500"
 ---
 # <a name="compiler-warning-level-1-c4944"></a>Compilerwarnung (Stufe 1) C4944
-'symbol': Das Symbol kann nicht aus 'assembly1' importiert werden, da 'symbol' im aktuellen Gültigkeitsbereich bereits vorhanden ist  
-  
- Es wurde ein Symbol in einer Quellcodedatei definiert, und dann wurde in einer #using-Anweisung auf eine Assembly verwiesen, die das Symbol ebenfalls definiert. Das Symbol in der Assembly wird ignoriert.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird eine Komponente mit einem Typ namens 'ClassA' erstellt.  
-  
-```  
-// C4944.cs  
-// compile with: /target:library  
-// C# source code to create a dll  
-public class ClassA {  
-   public int i;  
-}  
-```  
-  
-## <a name="example"></a>Beispiel  
- In den folgenden Beispielen wird C4944 generiert:  
-  
-```  
-// C4944b.cpp  
-// compile with: /clr /W1  
-class ClassA {  
-public:  
-   int u;  
-};  
-  
-#using "C4944.dll"   // C4944 ClassA also defined C4944.dll  
-  
-int main() {  
-   ClassA * x = new ClassA();  
-   x->u = 9;  
-   System::Console::WriteLine(x->u);  
-}  
+
+'symbol': Das Symbol kann nicht aus 'assembly1' importiert werden, da 'symbol' im aktuellen Gültigkeitsbereich bereits vorhanden ist
+
+Es wurde ein Symbol in einer Quellcodedatei definiert, und dann wurde in einer #using-Anweisung auf eine Assembly verwiesen, die das Symbol ebenfalls definiert. Das Symbol in der Assembly wird ignoriert.
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird eine Komponente mit einem Typ namens 'ClassA' erstellt.
+
+```
+// C4944.cs
+// compile with: /target:library
+// C# source code to create a dll
+public class ClassA {
+   public int i;
+}
+```
+
+## <a name="example"></a>Beispiel
+
+In den folgenden Beispielen wird C4944 generiert:
+
+```
+// C4944b.cpp
+// compile with: /clr /W1
+class ClassA {
+public:
+   int u;
+};
+
+#using "C4944.dll"   // C4944 ClassA also defined C4944.dll
+
+int main() {
+   ClassA * x = new ClassA();
+   x->u = 9;
+   System::Console::WriteLine(x->u);
+}
 ```

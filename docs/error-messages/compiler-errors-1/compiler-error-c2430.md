@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2430 | Microsoft Docs
+title: Compilerfehler C2430 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56e1817cf9c5291114af0d94f92e01071d0f7190
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 102e7082a3fc1cfd96db5c38832e3ebb91ee742c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224575"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054453"
 ---
 # <a name="compiler-error-c2430"></a>Compilerfehler C2430
-mehr als ein Indexregister in 'Bezeichner'  
-  
- Mehr als ein Register skaliert wird. Der Compiler unterstützt skalierte indizieren, jedoch können Sie nur eine Registrierung skalieren.  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C2430 generiert.  
-  
-```  
-// C2430.cpp  
-// processor: x86  
-int main() {  
-   _asm mov eax, [ebx*2+ecx*4] // C2430  
-}  
+
+Mehrere Indexregister in "Bezeichner"
+
+Registrieren Sie sich mehr als eine skaliert wird. Der Compiler unterstützt die skalierte Indizierung, aber nur ein Register können zentral hochskalieren.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C2430 generiert.
+
+```
+// C2430.cpp
+// processor: x86
+int main() {
+   _asm mov eax, [ebx*2+ecx*4] // C2430
+}
 ```

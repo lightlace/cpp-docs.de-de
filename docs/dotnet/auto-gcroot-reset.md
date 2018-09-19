@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::Reset | Microsoft Docs
+title: auto_gcroot::Reset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d2ff59b6fc9c4f893f87fbb59b0531c5ba8917fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f461958a09212f5beb562b5b8e92fa6f39711ec5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106374"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082273"
 ---
 # <a name="autogcrootreset"></a>auto_gcroot::reset
-Die aktuelle im Besitz befindliches Objekt zu zerstören, und optional ein neues Objekt zurückzufordern.  
+Zerstören Sie das aktuelle Objekt für die im Besitz des Benutzers und optional ein neues Objekt besitzt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,8 +39,8 @@ void reset(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `_new_ptr`  
- (Optional) Das neue Objekt.  
+*_new_ptr*<br/>
+(Optional) Das neue Objekt.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -98,6 +98,6 @@ done
  **Namespace** Msclr  
   
 ## <a name="see-also"></a>Siehe auch  
- [Auto_gcroot-Elemente](../dotnet/auto-gcroot-members.md)   
+ [Auto_gcroot-Members](../dotnet/auto-gcroot-members.md)   
  [auto_gcroot::Release](../dotnet/auto-gcroot-release.md)   
  [auto_gcroot::attach](../dotnet/auto-gcroot-attach.md)

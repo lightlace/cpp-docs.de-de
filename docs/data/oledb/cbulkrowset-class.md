@@ -113,14 +113,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e741055950449ea07c719cf6cd4c33a34d6f43b3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3406614b99e2057c9469fe69d02a9fcbe4eae23b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571677"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116762"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset-Klasse
+
 Abruft und verändert die Zeilen, die auf Daten in einer Massenoperation zu arbeiten, indem mehrere Zeilenhandles mit einem einzigen Aufruf abgerufen.  
   
 ## <a name="syntax"></a>Syntax
@@ -131,11 +132,13 @@ class CBulkRowset : public CRowset<TAccessor>
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *TAccessor*  
- Ein Accessor-Klasse.  
+
+*TAccessor*<br/>
+Ein Accessor-Klasse.  
 
 ## <a name="requirements"></a>Anforderungen  
- **Header:** atldbcli.h  
+
+**Header:** atldbcli.h  
   
 ## <a name="members"></a>Member  
   
@@ -155,11 +158,13 @@ class CBulkRowset : public CRowset<TAccessor>
 |[SetRows](#setrows)|Legt die Anzahl von Zeilenhandles, die von einem Aufruf abgerufen werden sollen.|  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht die Verwendung der `CBulkRowset` Klasse.  
+
+Das folgende Beispiel veranschaulicht die Verwendung der `CBulkRowset` Klasse.  
   
- [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
+[!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
 
 ## <a name="addrefrows"></a> CBulkRowset:: Addrefrows
+
 Aufrufe [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) erhöht den Verweiszähler für alle Zeilen, die derzeit von der Bulk-Rowset abgerufen.  
   
 ### <a name="syntax"></a>Syntax  
@@ -169,9 +174,11 @@ HRESULT AddRefRows() throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein standard-HRESULT. 
+
+Ein standard-HRESULT. 
   
 ## <a name="cbulkrowset"></a> CBulkRowset:: CBulkRowset
+
 Erstellt ein neues `CBulkRowset` -Objekt und legt die Standardanzahl von Zeilen auf 10.  
   
 ### <a name="syntax"></a>Syntax  
@@ -181,6 +188,7 @@ CBulkRowset();
 ```  
 
 ## <a name="movefirst"></a> CBulkRowset:: MoveFirst
+
 Ruft die erste Zeile der Daten ab.  
   
 ### <a name="syntax"></a>Syntax  
@@ -190,9 +198,11 @@ HRESULT MoveFirst() throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein standard-HRESULT.
+
+Ein standard-HRESULT.
 
 ## <a name="movelast"></a> CBulkRowset:: MoveLast
+
 Wechselt zur letzten Zeile.  
   
 ### <a name="syntax"></a>Syntax  
@@ -202,9 +212,11 @@ HRESULT MoveLast() throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein standard-HRESULT.  
+
+Ein standard-HRESULT.  
 
 ## <a name="movenext"></a> CBulkRowset:: MoveNext
+
 Ruft die nächste Zeile der Daten ab.  
   
 ### <a name="syntax"></a>Syntax  
@@ -214,9 +226,11 @@ HRESULT MoveNext() throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein standard-HRESULT. Wenn das Ende des Rowsets erreicht wurde, gibt die DB_S_ENDOFROWSET zurück. 
+
+Ein standard-HRESULT. Wenn das Ende des Rowsets erreicht wurde, gibt die DB_S_ENDOFROWSET zurück. 
 
 ## <a name="moveprev"></a> CBulkRowset:: MovePrev
+
 Wechselt zur vorherigen Zeile.  
   
 ### <a name="syntax"></a>Syntax  
@@ -226,9 +240,11 @@ HRESULT MovePrev() throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein standard-HRESULT.  
+
+Ein standard-HRESULT.  
 
 ## <a name="movetobookmark"></a> CBulkRowset:: MoveToBookmark
+
 Dadurch wird die Zeile, die durch ein Lesezeichen oder auf die Zeile an einem angegebenen Offset gekennzeichnet (*lSkip*) von diesem Lesezeichen.  
   
 ### <a name="syntax"></a>Syntax  
@@ -239,16 +255,19 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Lesezeichen*  
- [in] Ein Lesezeichen, markieren den Speicherort, von dem Daten abgerufen werden sollen.  
+
+*Lesezeichen*<br/>
+[in] Ein Lesezeichen, markieren den Speicherort, von dem Daten abgerufen werden sollen.  
   
- *lSkip*  
- [in] Die Anzahl Anzahl von Zeilen aus das Lesezeichen die Zielzeile. Wenn *lSkip* 0 (null), wird die erste Zeile abgerufen wird, den mit Lesezeichen versehenen Zeile. Wenn *lSkip* 1 ist, die erste Zeile abgerufen wird die Zeile nach der Lesezeichen versehenen Zeile. Wenn *lSkip* ist-1. die erste Zeile abgerufen wird die Zeile vor den mit Lesezeichen versehenen Zeile.  
+*lSkip*<br/>
+[in] Die Anzahl Anzahl von Zeilen aus das Lesezeichen die Zielzeile. Wenn *lSkip* 0 (null), wird die erste Zeile abgerufen wird, den mit Lesezeichen versehenen Zeile. Wenn *lSkip* 1 ist, die erste Zeile abgerufen wird die Zeile nach der Lesezeichen versehenen Zeile. Wenn *lSkip* ist-1. die erste Zeile abgerufen wird die Zeile vor den mit Lesezeichen versehenen Zeile.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Finden Sie unter [IRowset:: GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. 
+
+Finden Sie unter [IRowset:: GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. 
 
 ## <a name="movetoratio"></a> CBulkRowset:: Movetoratio
+
 Ruft Zeilen ab der ein Bruchteil Ausgangsposition im Rowset ab.  
   
 ### <a name="syntax"></a>Syntax  
@@ -259,23 +278,27 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *nNumerator*  
- [in] Der Zähler verwendet, um die Sekundenbruchteile Position aus der zum Abrufen von Daten zu bestimmen.  
+
+*nNumerator*<br/>
+[in] Der Zähler verwendet, um die Sekundenbruchteile Position aus der zum Abrufen von Daten zu bestimmen.  
   
- *nDenominator*  
- [in] Der Nenner verwendet, um die Sekundenbruchteile Position aus der zum Abrufen von Daten zu bestimmen.  
+*nDenominator*<br/>
+[in] Der Nenner verwendet, um die Sekundenbruchteile Position aus der zum Abrufen von Daten zu bestimmen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein standard-HRESULT.  
+
+Ein standard-HRESULT.  
   
 ### <a name="remarks"></a>Hinweise  
- `MoveToRatio` Ruft die Zeilen ungefähr gemäß der folgenden Formel:  
+
+`MoveToRatio` Ruft die Zeilen ungefähr gemäß der folgenden Formel:  
   
- `(nNumerator *  RowsetSize ) / nDenominator`  
+`(nNumerator *  RowsetSize ) / nDenominator`  
   
- Wo `RowsetSize` ist die Größe des Rowsets, gemessen in Zeilen. Die Genauigkeit zu dieser Formel hängt von dem Anbieter ab. Weitere Informationen finden Sie unter [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.   
+Wo `RowsetSize` ist die Größe des Rowsets, gemessen in Zeilen. Die Genauigkeit zu dieser Formel hängt von dem Anbieter ab. Weitere Informationen finden Sie unter [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.   
 
 ## <a name="releaserows"></a> CBulkRowset:: ReleaseRows
+
 Aufrufe [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) dekrementiert den Verweiszähler für alle Zeilen, die derzeit von der Bulk-Rowset abgerufen.  
   
 ### <a name="syntax"></a>Syntax  
@@ -285,9 +308,11 @@ HRESULT ReleaseRows() throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein standard-HRESULT.  
+
+Ein standard-HRESULT.  
 
 ## <a name="setrows"></a> CBulkRowset:: setRows
+
 Legt die Anzahl von Zeilenhandles, die von jedem Aufruf abgerufen.  
   
 ### <a name="syntax"></a>Syntax  
@@ -297,12 +322,15 @@ void SetRows(DBROWCOUNT nRows) throw();
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *nRows*  
- [in] Die neue Größe des Rowsets (Anzahl der Zeilen).  
+
+*nRows*<br/>
+[in] Die neue Größe des Rowsets (Anzahl der Zeilen).  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie diese Funktion aufrufen, muss es sein, bevor das Rowset geöffnet wird.
+
+Wenn Sie diese Funktion aufrufen, muss es sein, bevor das Rowset geöffnet wird.
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

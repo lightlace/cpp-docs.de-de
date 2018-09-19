@@ -1,5 +1,5 @@
 ---
-title: Omp_set_nested | Microsoft Docs
+title: Omp_set_nested | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6539167b936efdc4c9f407cd951c9c582b0a138
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fc3506c35dca469febafe21509064abc1726d633
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692180"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116882"
 ---
 # <a name="ompsetnested"></a>omp_set_nested
-Ermöglicht das geschachtelte Parallelität.  
+Ermöglicht geschachtelte Parallelität.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,20 +34,19 @@ void omp_set_nested(
 );  
 ```  
   
+### <a name="parameters"></a>Parameter
+  
+*val*<br/>
+Wenn ungleich NULL ist, können geschachtelte Parallelität. Bei NULL wird die geschachtelte Parallelität deaktiviert.  
+  
 ## <a name="remarks"></a>Hinweise  
- wobei  
+ Geschachtelte OMP Parallelität kann mit aktiviert werden `omp_set_nested`, oder durch Festlegen der [OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md) -Umgebungsvariablen angegeben.  
   
- `val`  
- Wert ungleich NULL ist, können geschachtelte Parallelität. Wenn 0 (null), deaktiviert geschachtelte Parallelität.  
+ Die Einstellung für `omp_set_nested` überschreibt die Einstellung der `OMP_NESTED` -Umgebungsvariablen angegeben.  
   
-## <a name="remarks"></a>Hinweise  
- Geschachtelte OMP Parallelität mit aktiviert werden kann `omp_set_nested`, oder durch Festlegen der [OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md) -Umgebungsvariablen angegeben.  
+ Wenn aktiviert, kann die Umgebungsvariable ein andernfalls operational Programm unterbrechen, da die Anzahl der Threads beim Schachteln von paralleler Bereichen exponentiell.  Z. B. eine Funktion, die rekursiv 6-Mal klicken Sie mit der Anzahl der Threads OMP auf 4 erfordert 4.096 (4, um die Leistungsfähigkeit von 6) threads im Allgemeinen, die Anzahl der Threads übersteigt die Anzahl der Prozessoren, wird die Leistung Ihrer Anwendung beeinträchtigt. Eine Ausnahme wäre, dass die e/a Anwendungen gebunden.  
   
- Die Einstellung für `omp_set_nested` überschreibt die Einstellung von der `OMP_NESTED` -Umgebungsvariablen angegeben.  
-  
- Wenn aktiviert, kann die Umgebungsvariable ein andernfalls operational Programm unterbrechen, da die Anzahl der Threads sich exponentiell beim Schachteln von paralleler Regions erhöht.  Z. B. eine Funktion, dass rekursiv 6 Mal klicken Sie mit der Anzahl von OMP-Threads auf 4 festgelegt erfordert 4.096 (4, um die Leistungsfähigkeit von 6) im Allgemeinen threads, die Leistung Ihrer Anwendung beeinträchtigt wird, überschreitet die Anzahl der Threads die Anzahl der Prozessoren. Einzige Ausnahme hierbei wäre, dass e/a Anwendungen gebunden.  
-  
- Verwendung [Omp_get_nested](../../../parallel/openmp/reference/omp-get-nested.md) die aktuelle Einstellung der anzuzeigenden `omp_set_nested`.  
+ Verwendung [Omp_get_nested](../../../parallel/openmp/reference/omp-get-nested.md) zum Anzeigen der aktuellen Einstellung des `omp_set_nested`.  
   
  Weitere Informationen finden Sie unter [3.1.9 Omp_set_nested-Funktion](../../../parallel/openmp/3-1-9-omp-set-nested-function.md).  
   

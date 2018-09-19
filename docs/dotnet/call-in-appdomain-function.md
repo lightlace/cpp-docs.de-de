@@ -1,5 +1,5 @@
 ---
-title: Call_in_appdomain-Funktion | Microsoft Docs
+title: Call_in_appdomain-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a8689254120416e5b2bf5de617fc3f3ef466abb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 707ee9476ce26de9325337f6f2130e41d19faa3a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111285"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105244"
 ---
 # <a name="callinappdomain-function"></a>call_in_appdomain-Funktion
 Führt eine Funktion in einer angegebenen Anwendungsdomäne aus.  
@@ -49,23 +49,23 @@ RetType call_in_appdomain(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `appdomainId`  
- Die Anwendungsdomäne, in dem die Funktion aufgerufen werden soll.  
+*appdomainId*<br/>
+Die Anwendungsdomäne, in dem die Funktion aufgerufen werden soll.  
   
- `voidFunc`  
- Zeiger auf eine `void` Funktion, die N-Parameter akzeptiert (0 < = N < = 15).  
+*voidFunc*<br/>
+Zeiger auf eine `void` -Funktion, die N-Parameter akzeptiert (0 < = N < = 15).  
   
- `nonvoidFunc`  
- Zeiger auf einen nicht-`void` Funktion, die N-Parameter akzeptiert (0 < = N < = 15).  
+*nonvoidFunc*<br/>
+Zeiger auf einen nicht-`void` -Funktion, die N-Parameter akzeptiert (0 < = N < = 15).  
   
- `arg1...argN`  
- Null bis 15 Parameter zu übergebenden `voidFunc` oder `nonvoidFunc` in der anderen Anwendungsdomäne.  
+*arg1... ArgN*<br/>
+0 (null), um 15 Parameter übergeben werden soll `voidFunc` oder `nonvoidFunc` in der anderen Anwendungsdomäne.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Das Ergebnis der Ausführung `voidFunc` oder `nonvoidFunc` in die angegebene Anwendungsdomäne.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Argumente der Funktion zu übergeben, um `call_in_appdomain` CLR-Typen nicht sein.  
+ Die Argumente der Funktion übergeben wird, um `call_in_appdomain` muss sich nicht auf CLR-Typen.  
   
 ## <a name="example"></a>Beispiel  
   

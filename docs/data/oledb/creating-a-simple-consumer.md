@@ -15,51 +15,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e9f7c5a51765e2ce29df503aeefa9f850b71b1d4
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 091a529bdd8eb80158fc093fd450e496bc4f18c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339853"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052347"
 ---
 # <a name="creating-a-simple-consumer"></a>Erstellen eines einfachen Consumers
+
 Verwenden Sie die ATL-Projektassistenten und ATL-OLE DB-Consumer-Assistenten, um einen OLE DB-Vorlagen-Consumer zu generieren.  
   
 ### <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>Zum Erstellen einer Konsolenanwendung für einen OLE DB-consumer  
   
-1.  Klicken Sie im Menü **Datei** auf **Neu**und dann auf **Projekt**.  
+1. Klicken Sie im Menü **Datei** auf **Neu**und dann auf **Projekt**.  
   
      Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
-2.  Klicken Sie im Bereich Projekttypen auf der **Visual C++-Projekte** Ordner, und klicken Sie dann auf die **Win32-Projekt** Symbol im Bereich Vorlagen. In der **Namen** Geben Sie den Namen des Projekts, z. B. **MyCons**.  
+1. Klicken Sie im Bereich Projekttypen auf der **Visual C++-Projekte** Ordner, und klicken Sie dann auf die **Win32-Projekt** Symbol im Bereich Vorlagen. In der **Namen** Geben Sie den Namen des Projekts, z. B. **MyCons**.  
   
-3.  Klicken Sie auf **OK**.  
+1. Klicken Sie auf **OK**.  
   
      Die Win32-Projekt-Assistent wird angezeigt.  
   
-4.  Auf der **Anwendungseinstellungen** Seite **Konsolenanwendung**, und wählen Sie dann **ATL-Unterstützung hinzufügen**.  
+1. Auf der **Anwendungseinstellungen** Seite **Konsolenanwendung**, und wählen Sie dann **ATL-Unterstützung hinzufügen**.  
   
-5.  Klicken Sie auf **Fertig stellen** den Assistenten zu schließen und das Projekt zu erstellen.  
+1. Klicken Sie auf **Fertig stellen** den Assistenten zu schließen und das Projekt zu erstellen.  
   
- Verwenden Sie anschließend die ATL-OLE DB-Consumer-Assistenten zum Hinzufügen eines OLE DB-Consumer-Objekts.  
+Verwenden Sie anschließend die ATL-OLE DB-Consumer-Assistenten zum Hinzufügen eines OLE DB-Consumer-Objekts.  
   
 #### <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Um einen Consumer mit dem ATL-OLE DB-Consumer-Assistenten erstellen  
   
-1.  In der Klassenansicht, Maustaste den `MyCons` Projekt.  
+1. In der Klassenansicht, Maustaste den `MyCons` Projekt.  
   
-2.  Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Klasse hinzufügen**.  
+1. Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Klasse hinzufügen**.  
   
      Die **Klasse hinzufügen** Dialogfeld wird angezeigt.  
   
-3.  Klicken Sie in den Bereich "Kategorien" auf **Visual C++**, klicken Sie auf die **ATL-OLE DB-Consumer** in den Vorlagen (Bereich), und klicken Sie dann auf **öffnen**.  
+1. Klicken Sie in den Bereich "Kategorien" auf **Visual C++**, klicken Sie auf die **ATL-OLE DB-Consumer** in den Vorlagen (Bereich), und klicken Sie dann auf **öffnen**.  
   
      Der ATL-OLE DB-Consumer-Assistent wird angezeigt.  
   
-4.  Klicken Sie auf die **Datenquelle** Schaltfläche.  
+1. Klicken Sie auf die **Datenquelle** Schaltfläche.  
   
      Die **Datenlinkeigenschaften** Dialogfeld wird angezeigt.  
   
-5.  In der **Datenlinkeigenschaften** Dialogfeld Feld, gehen Sie folgendermaßen vor:  
+1. In der **Datenlinkeigenschaften** Dialogfeld Feld, gehen Sie folgendermaßen vor:  
   
     -   Auf der **Anbieter** Registerkarte, geben Sie einen OLE DB-Anbieter.  
   
@@ -78,11 +79,11 @@ Verwenden Sie die ATL-Projektassistenten und ATL-OLE DB-Consumer-Assistenten, um
   
      Die **Datenbankobjekt auswählen** Dialogfeld wird angezeigt.  
   
-6.  Verwenden Sie die Strukturansicht-Steuerelement, um eine Tabelle, Sicht oder gespeicherte Prozedur auszuwählen. Wählen Sie für diese Prozedur die Products-Tabelle aus der Northwind-Datenbank.  
+1. Verwenden Sie die Strukturansicht-Steuerelement, um eine Tabelle, Sicht oder gespeicherte Prozedur auszuwählen. Wählen Sie für diese Prozedur die Products-Tabelle aus der Northwind-Datenbank.  
   
-7.  Klicken Sie auf **OK**. Dies gibt Sie an der ATL-OLE DB-Consumer-Assistenten zurück.  
+1. Klicken Sie auf **OK**. Dies gibt Sie an der ATL-OLE DB-Consumer-Assistenten zurück.  
   
-8.  Der Assistent abgeschlossen ist, die Namen für `Class` und **.h-Datei** basierend auf den Namen der Tabelle, Sicht oder gespeicherte Prozedur, die Sie ausgewählt haben. Sie können diese Namen bearbeiten, wenn Sie möchten.  
+1. Der Assistent abgeschlossen ist, die Namen für `Class` und **.h-Datei** basierend auf den Namen der Tabelle, Sicht oder gespeicherte Prozedur, die Sie ausgewählt haben. Sie können diese Namen bearbeiten, wenn Sie möchten.  
   
 9. Deaktivieren der **attributiert** Kontrollkästchen, damit der Assistent erstellt der Consumer-Code mit [OLE DB-Vorlagenklassen](../../data/oledb/ole-db-consumer-templates-reference.md) anstelle des standardmäßigen [OLE DB-Consumerattribute](../../windows/ole-db-consumer-attributes.md).  
   
@@ -96,7 +97,7 @@ Verwenden Sie die ATL-Projektassistenten und ATL-OLE DB-Consumer-Assistenten, um
   
 12. Klicken Sie auf **Fertig stellen** an den Consumer zu erstellen.  
   
- Der Assistent generiert eine Befehlsklasse und eine Benutzerdatensatz-Klasse, siehe [vom Klassen](../../data/oledb/consumer-wizard-generated-classes.md). Die Befehlsklasse müssen den Namen, den Sie im eingegeben haben die `Class` Feld im Assistenten (in diesem Fall `CProducts`), und die Benutzerdatensatz-Klasse hat einen Namen im Format "*ClassName*Accessor" (in diesem Fall `CProductsAccessor`).  
+Der Assistent generiert eine Befehlsklasse und eine Benutzerdatensatz-Klasse, siehe [vom Klassen](../../data/oledb/consumer-wizard-generated-classes.md). Die Befehlsklasse müssen den Namen, den Sie im eingegeben haben die `Class` Feld im Assistenten (in diesem Fall `CProducts`), und die Benutzerdatensatz-Klasse hat einen Namen im Format "*ClassName*Accessor" (in diesem Fall `CProductsAccessor`).  
   
 > [!NOTE]
 >  Der Assistent setzt die folgende Zeile in Products.h:  
@@ -109,4 +110,5 @@ Verwenden Sie die ATL-Projektassistenten und ATL-OLE DB-Consumer-Assistenten, um
 >  Diese Zeile wird verhindert, dass die Consumer-Anwendung zu kompilieren und erinnert Sie daran, Ihre Verbindungszeichenfolge auf der fest programmierte Kennwörter zu überprüfen. Nach dem Überprüfen Ihre Verbindungszeichenfolge enthält, können Sie diese Codezeile entfernen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen eines OLE DB-Consumers mit einem Assistenten](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+
+[Erstellen eines OLE DB-Consumers mit einem Assistenten](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4027 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4027 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbad35c43f602dcaa83f550db887275db3e5213c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b919eeece5529d1914fadf5724088e3e64e73db9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272242"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089514"
 ---
 # <a name="compiler-warning-level-1-c4027"></a>Compilerwarnung (Stufe 1) C4027
-Funktion ohne Liste formaler Parameter deklariert  
-  
- Die Funktionsdeklaration weist keine formalen Parameter auf, aber es sind formale Parameter in der Funktionsdefinition bzw. übergebene Parameter in einem Aufruf verfügbar. Für nachfolgende Aufrufe dieser Funktion wird davon ausgegangen, dass die Funktion übergebene Parameter der Typen akzeptiert, die in der Funktionsdefinition oder dem Aufruf gefunden wurden.
+
+Funktion ohne Liste formaler Parameter deklariert
+
+Die Funktionsdeklaration weist keine formalen Parameter auf, aber es sind formale Parameter in der Funktionsdefinition bzw. übergebene Parameter in einem Aufruf verfügbar. Für nachfolgende Aufrufe dieser Funktion wird davon ausgegangen, dass die Funktion übergebene Parameter der Typen akzeptiert, die in der Funktionsdefinition oder dem Aufruf gefunden wurden.

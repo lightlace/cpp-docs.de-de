@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4116 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4116 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f17a61dd39c458091216bc2bde89c84ec2307956
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f91892bd28733761c187705b8f576007862027b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276204"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080700"
 ---
 # <a name="compiler-warning-level-1-c4116"></a>Compilerwarnung (Stufe 1) C4116
-Unbenannte Typdefinition in runden Klammern  
-  
- Eine Struktur, Union oder enumerierten Typ ohne Namen ist in einem Ausdruck in Klammern definiert. Die Typdefinition ist bedeutungslos.  
-  
- Bei einem C-Funktionsaufruf weist die Definition einen globalen Gültigkeitsbereich auf. In einem C++-Funktionsaufruf weist die Definition denselben Gültigkeitsbereich wie die aufgerufene Funktion.
+
+Unbenannte Typdefinition in runden Klammern
+
+Einen Struktur-, Union- oder Enumerationstyp ohne Namen ist in einem Ausdruck in Klammern definiert. Die Typdefinition ist ohne Bedeutung.
+
+Bei einem C-Funktionsaufruf weist die Definition einen globalen Gültigkeitsbereich auf. In einem C++-Funktionsaufruf weist die Definition denselben Gültigkeitsbereich wie die aufgerufene Funktion.

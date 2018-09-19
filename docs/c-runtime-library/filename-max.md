@@ -16,22 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70edb3e7d8cf774a052837e62bdfc92e9981ba63
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f725e0f121e628a1cb8d28ca425d17abccfb397d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387569"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038638"
 ---
 # <a name="filenamemax"></a>FILENAME_MAX
-Die maximal zulässige Länge für eine `filename`-Zeichenfolgenpuffergröße.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-#include <stdio.h>  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Begrenzungen für Pfadfelder](../c-runtime-library/path-field-limits.md)   
- [Globale Konstanten](../c-runtime-library/global-constants.md)
+
+Die maximal zulässige Länge für eine `filename`-Zeichenfolgenpuffergröße.
+
+## <a name="syntax"></a>Syntax
+
+```
+#include <stdio.h>
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Begrenzungen für Pfadfelder](../c-runtime-library/path-field-limits.md)<br/>
+[Globale Konstanten](../c-runtime-library/global-constants.md)

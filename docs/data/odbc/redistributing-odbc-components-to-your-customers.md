@@ -1,5 +1,5 @@
 ---
-title: Weitervertrieb von ODBC-Komponenten an Ihre Kunden | Microsoft Docs
+title: Weitervertrieb von ODBC-Komponenten für Ihre Kunden | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,28 +20,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e0427228b8fb3e852cf1d9ee66a10c9290b860b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 737343a57a852e8bd6a11116fa0d123502208b88
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090223"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079829"
 ---
 # <a name="redistributing-odbc-components-to-your-customers"></a>Weitervertrieb von ODBC-Komponenten an Kunden
-Wenn Sie die Funktionalität der ODBC-Administrator Programme in Ihre Anwendung integrieren, müssen Sie auch für Ihre Benutzer die Dateien verteilen, auf denen diese Programme ausgeführt. Diese ODBC-Dateien befinden sich im Verzeichnis \OS\System der Visual C++-CD. Die Datei Redistrb.wri und den Lizenzvertrag im selben Verzeichnis enthalten eine Liste der ODBC-Dateien, die Sie verteilen können.  
+
+Wenn Sie die Funktionen der ODBC-Administrator-Programme in Ihrer Anwendung zu integrieren, müssen Sie auch für Ihre Benutzer die Dateien verteilen, die diese Programme ausgeführt werden. Diese ODBC-Dateien befinden sich in das Verzeichnis \OS\System der Visual C++-CD. Die Datei Redistrb.wri und den Lizenzvertrag im gleichen Verzeichnis enthalten eine Liste der ODBC-Dateien, die Sie erneut verteilen können.  
   
- Die Dokumentation für ODBC-Treiber, die Sie versenden möchten. Sie müssen, um zu bestimmen, welche DLLs und andere Dateien senden. Lesen Sie auch [Weitervertrieb von ODBC-Komponenten an Ihre Kunden](../../data/odbc/redistributing-odbc-components-to-your-customers.md), die erklärt, wie ODBC-Komponenten neu zu verteilen.  
+Lesen Sie die Dokumentation für ODBC-Treiber, die Sie versenden möchten. Sie benötigen, um zu bestimmen, welche DLLs und andere Dateien senden. Lesen Sie auch [Weitervertrieb von ODBC-Komponenten für Ihre Kunden](../../data/odbc/redistributing-odbc-components-to-your-customers.md), die erklärt, wie ODBC-Komponenten neu zu verteilen.  
   
- Darüber hinaus müssen Sie eine andere Datei in den meisten Fällen enthalten. Die Datei Odbccr32.dll ist die ODBC-Cursorbibliothek. Diese Bibliothek kann Level 1-Treibern Dienstvorlagen Bildlauf vorwärts und rückwärts. Darüber hinaus bietet die Möglichkeit der Unterstützung von Momentaufnahmen. Weitere Informationen zu den ODBC-Cursorbibliothek, finden Sie unter [ODBC: die ODBC-Cursorbibliothek](../../data/odbc/odbc-the-odbc-cursor-library.md).  
+Darüber hinaus müssen Sie eine andere Datei in den meisten Fällen enthalten. Die Datei Odbccr32.dll ist die ODBC-Cursorbibliothek. Diese Bibliothek kann auf Ebene 1-Treiber den Bildlauf vorwärts und rückwärts. Darüber hinaus die Möglichkeit, Momentaufnahmen zu unterstützen. Weitere Informationen zu den ODBC-Cursorbibliothek, finden Sie unter [ODBC: die ODBC-Cursorbibliothek](../../data/odbc/odbc-the-odbc-cursor-library.md).  
   
- Die folgenden Themen enthalten weitere Informationen zur Verwendung von ODBC mit den Datenbankklassen:  
+Weitere Informationen zur Verwendung von ODBC mit den Datenbankklassen Sie in den folgenden Themen:  
   
--   [ODBC: Die ODBC-Cursorbibliothek](../../data/odbc/odbc-the-odbc-cursor-library.md)  
+- [ODBC: Die ODBC-Cursorbibliothek](../../data/odbc/odbc-the-odbc-cursor-library.md)  
   
--   [ODBC: Konfigurieren einer ODBC-Datenquelle](../../data/odbc/odbc-configuring-an-odbc-data-source.md)  
+- [ODBC: Konfigurieren einer ODBC-Datenquelle](../../data/odbc/odbc-configuring-an-odbc-data-source.md)  
   
--   [ODBC: Direktes Aufrufen von ODBC-API-Funktionen](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
+- [ODBC: Direktes Aufrufen von ODBC-API-Funktionen](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Grundlagen zu ODBC](../../data/odbc/odbc-basics.md)   
- [ODBC-Administrator](../../data/odbc/odbc-administrator.md)
+
+[Grundlagen zu ODBC](../../data/odbc/odbc-basics.md)<br/>
+[ODBC-Administrator](../../data/odbc/odbc-administrator.md)

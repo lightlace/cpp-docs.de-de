@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bebc10481c446edfa29d09663ac3139ecc5391b
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: dee005091c95bbac5fca64851f631b443bd33cca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42541599"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106767"
 ---
 # <a name="accelerator-class"></a>Zugriffstastenklasse
 Eine Zugriffstaste ist eine Hardwarefunktion, die für datenparallele Computervorgänge optimiert ist. Eine Zugriffstaste ist ein Gerät, das einem PCIe-Bus angefügt wird (wie einem GPU-Computer), oder es handelt sich um einen erweiterten Befehl, der auf der Haupt-CPU festgelegt ist.  
@@ -164,11 +164,11 @@ accelerator(const accelerator& _Other);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Device_path`  
- Der Pfad des physischen Geräts.  
+*_Device_path*<br/>
+Der Pfad des physischen Geräts.  
   
- `_Other`  
- Die zu kopierende Zugriffstaste.  
+*_Sonstige*<br/>
+Die zu kopierende Zugriffstaste.  
   
 ##  <a name="cpu_accelerator"></a> cpu_accelerator 
 
@@ -187,8 +187,8 @@ accelerator_view create_view(queuing_mode qmode = queuing_mode_automatic);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `qmode`  
- Der Warteschlangen-Modus.  
+*qmode*<br/>
+Der Warteschlangen-Modus.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein neues `accelerator_view` Objekt auf dieser Zugriffstaste, die unter Verwendung der angegebenen Warteschlange.  
@@ -470,8 +470,8 @@ bool operator!= (const accelerator& _Other) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Other`  
- Die `accelerator` Objekt, das mit dieser verglichen werden soll.  
+*_Sonstige*<br/>
+Die `accelerator` Objekt, das mit dieser verglichen werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `false` Wenn die beiden `accelerator` -Objekte gleich sind; andernfalls `true`.  
@@ -485,8 +485,8 @@ accelerator& operator= (const accelerator& _Other);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Other`  
- Das `accelerator`-Objekt, aus dem kopiert werden soll.  
+*_Sonstige*<br/>
+Das `accelerator`-Objekt, aus dem kopiert werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf das `accelerator`-Objekt.  
@@ -502,8 +502,8 @@ bool operator== (const accelerator& _Other) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Other`  
- Die `accelerator` Objekt, das mit dieser verglichen werden soll.  
+*_Sonstige*<br/>
+Die `accelerator` Objekt, das mit dieser verglichen werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn die andere `accelerator` Objekt entspricht dies `accelerator` Objekt; andernfalls `false`.  
@@ -517,8 +517,8 @@ static inline bool set_default(std::wstring _Path);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Path`  
- Der Pfad zur Zugriffstaste.  
+*_Path*<br/>
+Der Pfad zur Zugriffstaste.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true`, wenn der Aufruf die Einstellung der Standardzugriffstaste erfolgreich vornimmt. Andernfalls `false`.  
@@ -532,8 +532,8 @@ bool set_default_cpu_access_type(access_type _Default_cpu_access_type);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Default_cpu_access_type`  
- Das Standard-CPU-access_type-Objekt, das für array/array_view-Speicherbelegungen auf dieser Zugriffstaste verwendet wird.  
+*_Default_cpu_access_type*<br/>
+Das Standard-CPU-access_type-Objekt, das für array/array_view-Speicherbelegungen auf dieser Zugriffstaste verwendet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein boolescher Wert, der angibt, ob das Standard-CPU-access_type-Objekt für die Zugriffstaste erfolgreich festgelegt wurde.  
@@ -597,8 +597,8 @@ accelerator_view(const accelerator_view& _Other);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Other`  
- Das zu kopierende `accelerator_view`-Objekt.  
+*_Sonstige*<br/>
+Das zu kopierende `accelerator_view`-Objekt.  
   
 ##  <a name="create_marker"></a> create_marker 
 
@@ -714,8 +714,8 @@ bool operator!= (const accelerator_view& _Other) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Other`  
- Die `accelerator_view` Objekt, das mit dieser verglichen werden soll.  
+*_Sonstige*<br/>
+Die `accelerator_view` Objekt, das mit dieser verglichen werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `false`, wenn die beiden Objekte identisch sind, andernfalls `true`.  
@@ -729,8 +729,8 @@ accelerator_view& operator= (const accelerator_view& _Other);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Other`  
- Das `accelerator_view`-Objekt, aus dem kopiert werden soll.  
+*_Sonstige*<br/>
+Das `accelerator_view`-Objekt, aus dem kopiert werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf die geänderte `accelerator_view` Objekt.  
@@ -746,8 +746,8 @@ bool operator== (const accelerator_view& _Other) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Other`  
- Die `accelerator_view` Objekt, das mit dieser verglichen werden soll.  
+*_Sonstige*<br/>
+Die `accelerator_view` Objekt, das mit dieser verglichen werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true`, wenn die beiden Objekte identisch sind, andernfalls `false`.  

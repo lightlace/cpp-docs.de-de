@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3765 | Microsoft Docs
+title: Compilerfehler C3765 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb8370a5c9c25fee211636214a82f22c05ccb311
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cac3930e4f5ec42587a9f557adc7a82d750b3819
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274767"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042129"
 ---
 # <a name="compiler-error-c3765"></a>Compilerfehler C3765
-'Ereignis': Definieren Sie ein Ereignis kann nicht in einer Klasse/Struktur 'Typ' als ein Event_receiver gekennzeichnet  
-  
- Wenn eine Klasse mit gekennzeichnet ist die [Event_receiver](../../windows/event-receiver.md) -Attribut die Klasse kann nicht enthalten, eine [__event](../../cpp/event.md) Deklaration.  
-  
- Im folgende Beispiel wird C3765 generiert:  
-  
-```  
-// C3765.cpp  
-[event_receiver(native)]  
-struct ER2 {  
-   __event void f();   // C3765  
-   __event void b(int);   // C3765  
-};  
+
+'Ereignis': Definieren Sie ein Ereignis kann nicht in einer Klasse/Struktur "type" als ein Event_receiver gekennzeichnet
+
+Wenn eine Klasse mit markiert ist die [Event_receiver](../../windows/event-receiver.md) -Attribut die Klasse darf keine enthalten eine [__event](../../cpp/event.md) Deklaration.
+
+Im folgende Beispiel wird die C3765 generiert:
+
+```
+// C3765.cpp
+[event_receiver(native)]
+struct ER2 {
+   __event void f();   // C3765
+   __event void b(int);   // C3765
+};
 ```

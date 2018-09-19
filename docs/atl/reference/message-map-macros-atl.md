@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed6e32ec0e474f901818618af662a91e3e46efed
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3ce6099b904c088399dcb43635a1b254567e8320
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763697"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024910"
 ---
 # <a name="message-map-macros-atl"></a>Meldungszuordnungsmakros (ATL)
 
@@ -109,7 +109,7 @@ ALT_MSG_MAP(msgMapID)
 
 ### <a name="parameters"></a>Parameter
 
-*msgMapID*  
+*msgMapID*<br/>
 [in] Der Nachrichtenbezeichner zuordnen.
 
 ### <a name="remarks"></a>Hinweise
@@ -148,7 +148,7 @@ BEGIN_MSG_MAP(theClass)
 
 ### <a name="parameters"></a>Parameter
 
-*theClass*  
+*theClass*<br/>
 [in] Der Name der Klasse, die die meldungszuordnung enthält.
 
 ### <a name="remarks"></a>Hinweise
@@ -227,10 +227,10 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
 
 ### <a name="parameters"></a>Parameter
 
-*theChainClass*  
+*theChainClass*<br/>
 [in] Der Name der Basisklasse, die die meldungszuordnung enthält.
 
-*msgMapID*  
+*msgMapID*<br/>
 [in] Der Nachrichtenbezeichner zuordnen.
 
 ### <a name="remarks"></a>Hinweise
@@ -256,10 +256,10 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
 
 ### <a name="parameters"></a>Parameter
 
-*theChainMember*  
+*theChainMember*<br/>
 [in] Der Name des Datenmembers, enthält die meldungszuordnung.
 
-*msgMapID*  
+*msgMapID*<br/>
 [in] Der Nachrichtenbezeichner zuordnen.
 
 ### <a name="remarks"></a>Hinweise
@@ -285,7 +285,7 @@ CHAIN_MSG_MAP(theChainClass)
 
 ### <a name="parameters"></a>Parameter
 
-*theChainClass*  
+*theChainClass*<br/>
 [in] Der Name der Basisklasse, die die meldungszuordnung enthält.
 
 ### <a name="remarks"></a>Hinweise
@@ -323,7 +323,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 
 ### <a name="parameters"></a>Parameter
 
-*dynaChainID*  
+*dynaChainID*<br/>
 [in] Der eindeutige Bezeichner für ein Objekt in der meldungszuordnung.
 
 ### <a name="remarks"></a>Hinweise
@@ -349,7 +349,7 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
 
 ### <a name="parameters"></a>Parameter
 
-*theChainMember*  
+*theChainMember*<br/>
 [in] Der Name des Datenmembers, enthält die meldungszuordnung.
 
 ### <a name="remarks"></a>Hinweise
@@ -387,10 +387,10 @@ COMMAND_CODE_HANDLER(code, func)
 
 ### <a name="parameters"></a>Parameter
 
-*Code*  
+*Code*<br/>
 [in] Der Benachrichtigungscode.
 
-*func*  
+*func*<br/>
 [in] Der Name der Meldungshandler-Funktion.
 
 ### <a name="requirements"></a>Anforderungen
@@ -407,13 +407,13 @@ COMMAND_HANDLER(id, code, func)
 
 ### <a name="parameters"></a>Parameter
 
-*ID*  
+*ID*<br/>
 [in] Der Bezeichner der dem Menüelement-Steuerelement oder Accelerator.
 
-*Code*  
+*Code*<br/>
 [in] Der Benachrichtigungscode.
 
-*func*  
+*func*<br/>
 [in] Der Name der Meldungshandler-Funktion.
 
 ### <a name="remarks"></a>Hinweise
@@ -449,10 +449,10 @@ COMMAND_ID_HANDLER(id, func)
 
 ### <a name="parameters"></a>Parameter
 
-*ID*  
+*ID*<br/>
 [in] Der Bezeichner, der die Menüelement-Steuerelement oder Zugriffstaste, die die Nachricht gesendet werden soll.
 
-*func*  
+*func*<br/>
 [in] Der Name der Meldungshandler-Funktion.
 
 ### <a name="requirements"></a>Anforderungen
@@ -469,16 +469,16 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 
 ### <a name="parameters"></a>Parameter
 
-*idFirst*  
+*idFirst*<br/>
 [in] Markiert den Beginn des einen zusammenhängenden Bereich von Steuerelement-IDs.
 
-*idLast*  
+*idLast*<br/>
 [in] Markiert das Ende einer zusammenhängenden Bereich von Steuerelement-IDs.
 
-*Code*  
+*Code*<br/>
 [in] Der Benachrichtigungscode.
 
-*func*  
+*func*<br/>
 [in] Der Name der Meldungshandler-Funktion.
 
 ### <a name="remarks"></a>Hinweise
@@ -499,13 +499,13 @@ COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 
 ### <a name="parameters"></a>Parameter
 
-*idFirst*  
+*idFirst*<br/>
 [in] Markiert den Beginn des einen zusammenhängenden Bereich von Steuerelement-IDs.
 
-*idLast*  
+*idLast*<br/>
 [in] Markiert das Ende einer zusammenhängenden Bereich von Steuerelement-IDs.
 
-*func*  
+*func*<br/>
 [in] Der Name der Meldungshandler-Funktion.
 
 ### <a name="remarks"></a>Hinweise
@@ -598,10 +598,10 @@ MESSAGE_HANDLER( msg, func )
 
 ### <a name="parameters"></a>Parameter
 
-*Meldung*  
+*Meldung*<br/>
 [in] Die Windows-Meldung.
 
-*func*  
+*func*<br/>
 [in] Der Name der Meldungshandler-Funktion.
 
 ### <a name="remarks"></a>Hinweise
@@ -639,13 +639,13 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 
 ### <a name="parameters"></a>Parameter
 
-*msgFirst*  
+*msgFirst*<br/>
 [in] Markiert den Beginn des einen zusammenhängenden Bereich von Nachrichten.
 
-*msgLast*  
+*msgLast*<br/>
 [in] Markiert das Ende einer zusammenhängenden Bereich von Nachrichten.
 
-*func*  
+*func*<br/>
 [in] Der Name der Meldungshandler-Funktion.
 
 ### <a name="requirements"></a>Anforderungen
@@ -662,10 +662,10 @@ NOTIFY_CODE_HANDLER(cd, func)
 
 ### <a name="parameters"></a>Parameter
 
-*CD*  
+*CD*<br/>
 [in] Der Benachrichtigungscode.
 
-*func*  
+*func*<br/>
 [in] Der Name der Meldungshandler-Funktion.
 
 ### <a name="requirements"></a>Anforderungen
@@ -682,13 +682,13 @@ NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>Parameter
 
-*ID*  
+*ID*<br/>
 [in] Der Bezeichner des Steuerelements, das Sie die Nachricht gesendet.
 
-*CD*  
+*CD*<br/>
 [in] Der Benachrichtigungscode.
 
-*func*  
+*func*<br/>
 [in] Der Name der Meldungshandler-Funktion.
 
 ### <a name="remarks"></a>Hinweise
@@ -726,10 +726,10 @@ NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>Parameter
 
-*ID*  
+*ID*<br/>
 [in] Der Bezeichner des Steuerelements, das Sie die Nachricht gesendet.
 
-*func*  
+*func*<br/>
 [in] Der Name der Meldungshandler-Funktion.
 
 ### <a name="requirements"></a>Anforderungen
@@ -746,16 +746,16 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 
 ### <a name="parameters"></a>Parameter
 
-*idFirst*  
+*idFirst*<br/>
 [in] Markiert den Beginn des einen zusammenhängenden Bereich von Steuerelement-IDs.
 
-*idLast*  
+*idLast*<br/>
 [in] Markiert das Ende einer zusammenhängenden Bereich von Steuerelement-IDs.
 
-*CD*  
+*CD*<br/>
 [in] Der Benachrichtigungscode.
 
-*func*  
+*func*<br/>
 [in] Der Name der Meldungshandler-Funktion.
 
 ### <a name="remarks"></a>Hinweise
@@ -776,13 +776,13 @@ NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>Parameter
 
-*idFirst*  
+*idFirst*<br/>
 [in] Markiert den Beginn des einen zusammenhängenden Bereich von Steuerelement-IDs.
 
-*idLast*  
+*idLast*<br/>
 [in] Markiert das Ende einer zusammenhängenden Bereich von Steuerelement-IDs.
 
-*func*  
+*func*<br/>
 [in] Der Name der Meldungshandler-Funktion.
 
 ### <a name="remarks"></a>Hinweise
@@ -819,10 +819,10 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 
 ### <a name="parameters"></a>Parameter
 
-*Code*  
+*Code*<br/>
 [in] Der Benachrichtigungscode.
 
-*func*  
+*func*<br/>
 [in] Der Name der Meldungshandler-Funktion.  
 
 ### <a name="requirements"></a>Anforderungen
@@ -839,13 +839,13 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 
 ### <a name="parameters"></a>Parameter
 
-*ID*  
+*ID*<br/>
 [in] Der Bezeichner der dem Menüelement-Steuerelement oder Accelerator.
 
-*Code*  
+*Code*<br/>
 [in] Der Benachrichtigungscode.
 
-*func*  
+*func*<br/>
 [in] Der Name der Meldungshandler-Funktion.  
 
 ### <a name="requirements"></a>Anforderungen
@@ -862,10 +862,10 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>Parameter
 
-*ID*  
+*ID*<br/>
 [in] Der Bezeichner der dem Menüelement-Steuerelement oder Accelerator.
 
-*func*  
+*func*<br/>
 [in] Der Name der Meldungshandler-Funktion.  
 
 ### <a name="requirements"></a>Anforderungen
@@ -882,16 +882,16 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 
 ### <a name="parameters"></a>Parameter
 
-*idFirst*  
+*idFirst*<br/>
 [in] Markiert den Beginn des einen zusammenhängenden Bereich von Steuerelement-IDs.
 
-*idLast*  
+*idLast*<br/>
 [in] Markiert das Ende einer zusammenhängenden Bereich von Steuerelement-IDs.
 
-*Code*  
+*Code*<br/>
 [in] Der Benachrichtigungscode.
 
-*func*  
+*func*<br/>
 [in] Der Name der Meldungshandler-Funktion.  
 
 ### <a name="requirements"></a>Anforderungen
@@ -908,13 +908,13 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>Parameter
 
-*idFirst*  
+*idFirst*<br/>
 [in] Markiert den Beginn des einen zusammenhängenden Bereich von Steuerelement-IDs.
 
-*idLast*  
+*idLast*<br/>
 [in] Markiert das Ende einer zusammenhängenden Bereich von Steuerelement-IDs.
 
-*func*  
+*func*<br/>
 [in] Der Name der Meldungshandler-Funktion.  
 
 ### <a name="requirements"></a>Anforderungen
@@ -931,10 +931,10 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 
 ### <a name="parameters"></a>Parameter
 
-*CD*  
+*CD*<br/>
 [in] Der Benachrichtigungscode.
 
-*func*  
+*func*<br/>
 [in] Der Name der Meldungshandler-Funktion.  
 
 ### <a name="requirements"></a>Anforderungen
@@ -951,13 +951,13 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>Parameter
 
-*ID*  
+*ID*<br/>
 [in] Der Bezeichner der dem Menüelement-Steuerelement oder Accelerator.
 
-*CD*  
+*CD*<br/>
 [in] Der Benachrichtigungscode.
 
-*func*  
+*func*<br/>
 [in] Der Name der Meldungshandler-Funktion.  
 
 ### <a name="requirements"></a>Anforderungen
@@ -974,10 +974,10 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>Parameter
 
-*ID*  
+*ID*<br/>
 [in] Der Bezeichner der dem Menüelement-Steuerelement oder Accelerator.
 
-*func*  
+*func*<br/>
 [in] Der Name der Meldungshandler-Funktion.  
 
 ### <a name="requirements"></a>Anforderungen
@@ -994,16 +994,16 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 
 ### <a name="parameters"></a>Parameter
 
-*idFirst*  
+*idFirst*<br/>
 [in] Markiert den Beginn des einen zusammenhängenden Bereich von Steuerelement-IDs.
 
-*idLast*  
+*idLast*<br/>
 [in] Markiert das Ende einer zusammenhängenden Bereich von Steuerelement-IDs.
 
-*CD*  
+*CD*<br/>
 [in] Der Benachrichtigungscode.
 
-*func*  
+*func*<br/>
 [in] Der Name der Meldungshandler-Funktion.
 
 ### <a name="requirements"></a>Anforderungen
@@ -1020,13 +1020,13 @@ REFLECTED_NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>Parameter
 
-*idFirst*  
+*idFirst*<br/>
 [in] Markiert den Beginn des einen zusammenhängenden Bereich von Steuerelement-IDs.
 
-*idLast*  
+*idLast*<br/>
 [in] Markiert das Ende einer zusammenhängenden Bereich von Steuerelement-IDs.
 
-*func*  
+*func*<br/>
 [in] Der Name der Meldungshandler-Funktion.
 
 ## <a name="see-also"></a>Siehe auch

@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2513 | Microsoft Docs
+title: Compilerfehler C2513 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 704e5d71301886d46c8a2ce08d7ea34ef1f8275a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 82df537e49ca17140d70977486314f43a072022d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228257"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045431"
 ---
 # <a name="compiler-error-c2513"></a>Compilerfehler C2513
-'Typ': keine Variable vor '=' deklariert  
-  
- Der Typspezifizierer wird in der Deklaration mit keine Variablenbezeichner angezeigt.  
-  
- Im folgenden Beispiel wird C2513 generiert:  
-  
-```  
-// C2513.cpp  
-int main() {  
-   int = 9;   // C2513  
-   int i = 9;   // OK  
-}  
-```  
-  
- Dieser Fehler kann außerdem infolge einer konformitätsverbesserung für Compiler für Visual Studio .NET 2003 durchgeführt generiert werden: die Initialisierung einer typedef, die nicht mehr erlaubt. Die Initialisierung einer TypeDef ist gemäß dem Standard nicht zulässig und wird nun ein Compilerfehler generiert.  
-  
-```  
-// C2513b.cpp  
-// compile with: /c  
-typedef struct S {  
-   int m_i;  
-} S = { 1 };   // C2513  
-// try the following line instead  
-// } S;  
-```  
-  
- Eine Alternative wäre löschen `typedef` zum Definieren einer Variablen mit aggregierter Initialisiererliste angezeigt, aber dies werden nicht empfohlen, da erstellt es eine Variable mit dem gleichen Namen wie der Typ und den Typnamen ausblenden.
+
+'Typ': keine Variable vor "=" deklariert
+
+Der Typspezifizierer wird angezeigt, in der Deklaration keinen Variablenbezeichner.
+
+Im folgende Beispiel wird die C2513 generiert:
+
+```
+// C2513.cpp
+int main() {
+   int = 9;   // C2513
+   int i = 9;   // OK
+}
+```
+
+Dieser Fehler kann außerdem infolge einer konformitätsverbesserung für Compiler für Visual Studio .NET 2003 erledigt generiert werden: Initialisierung einer Typedef, die nicht mehr zulässig. Die Initialisierung einer TypeDef ist gemäß dem Standard nicht zulässig und wird nun ein Compilerfehler generiert.
+
+```
+// C2513b.cpp
+// compile with: /c
+typedef struct S {
+   int m_i;
+} S = { 1 };   // C2513
+// try the following line instead
+// } S;
+```
+
+Eine Alternative wäre löschen `typedef` zum Definieren einer Variablen mit aggregierten Initialisiererliste, aber dies werden nicht empfohlen, da wird und erstellen Sie eine Variable mit dem gleichen Namen wie der Typ der Typname ausblenden.

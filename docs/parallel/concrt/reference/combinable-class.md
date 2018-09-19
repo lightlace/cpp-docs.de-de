@@ -1,5 +1,5 @@
 ---
-title: combinable-Klasse | Microsoft Docs
+title: combinable-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 695081e6513965a89222d1108c632e2f22580184
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5e8864b5c10b87813d89c55de806ceed24998754
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689203"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044573"
 ---
 # <a name="combinable-class"></a>combinable-Klasse
 Das `combinable<T>`-Objekt ist dazu gedacht, threadprivate Kopien von Daten bereitzustellen, mit denen sperrenfreie, threadlokale Unterberechnungen in parallelen Algorithmen durchgeführt werden können. Am Ende des Parallelvorgangs können die threadprivaten Unterbrechungen in einem Endergebnis zusammengeführt werden. Diese Klasse kann anstelle einer freigegebenen Variable verwendet werden, und sie kann zu einer Leistungsverbesserung führen, wenn andernfalls Konflikte mit dieser freigegebenen Variable entstehen würden.  
@@ -40,8 +40,8 @@ class combinable;
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
- Der Datentyp für das zusammengeführte Endergebnis. Der Typ muss es sich um einen Kopierkonstruktor und einen Standardkonstruktor verfügen.  
+*T*<br/>
+Der Datentyp des Endergebnisses zusammengeführt werden soll. Der Typ muss es sich um einen Kopierkonstruktor und einen Standardkonstruktor verfügen.  
   
 ## <a name="members"></a>Member  
   
@@ -49,17 +49,17 @@ class combinable;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[combinable](#ctor)|Überladen. Erstellt ein neues `combinable`-Objekt.|  
+|[mit den flexibel kombinierbaren](#ctor)|Überladen. Erstellt ein neues `combinable`-Objekt.|  
 |[~ combinable-Destruktor](#dtor)|Zerstört ein `combinable`-Objekt.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[clear](#clear)|Löscht alle berechneten Zwischenergebnisse aus einer früheren Verwendung.|  
-|[combine](#combine)|Berechnet einen endgültigen Wert aus der Gruppe der threadlokale unterberechnungen durch Aufrufen der Funktionselement angegebenen kombinieren.|  
-|[combine_each](#combine_each)|Berechnet einen endgültigen Wert aus der Gruppe der threadlokale unterberechnungen durch Aufrufen der angegebenen kombinieren Funktionselement einmal pro Thread-lokalen untergeordnete Berechnung an. Das Endergebnis werden durch das Funktionsobjekt gesammelt.|  
-|[local](#local)|Überladen. Gibt einen Verweis auf die untergeordnete Threads privaten-Berechnung.|  
+|[clear](#clear)|Löscht alle Compute-Zwischenergebnisse aus einer früheren Verwendung.|  
+|[combine](#combine)|Berechnet einen endgültigen Wert aus der Gruppe der threadlokale unterberechnungen durch das angegebene kombinieren Funktionselement aufrufen.|  
+|[combine_each](#combine_each)|Berechnet einen endgültigen Wert aus der Gruppe der threadlokale unterberechnungen durch Aufrufen der angegebenen kombinieren Funktionselement einmal pro Thread-lokalen untergeordnete Berechnung. Das Endergebnis werden vom Funktionsobjekt gesammelt.|  
+|[local](#local)|Überladen. Gibt einen Verweis auf die privaten untergeordnete Berechnung.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
@@ -80,13 +80,13 @@ class combinable;
   
 ##  <a name="clear"></a> Deaktivieren 
 
- Löscht alle berechneten Zwischenergebnisse aus einer früheren Verwendung.  
+ Löscht alle Compute-Zwischenergebnisse aus einer früheren Verwendung.  
   
 ```
 void clear();
 ```  
   
-##  <a name="ctor"></a> combinable 
+##  <a name="ctor"></a> mit den flexibel kombinierbaren 
 
  Erstellt ein neues `combinable`-Objekt.  
   
@@ -100,19 +100,19 @@ combinable(const combinable& _Copy);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Function`  
- Der Typ des Objekts Funktionselement Initialisierung.  
+*_Function*<br/>
+Der Typ des Initialisierung Functor-Objekts.  
   
- `_FnInitialize`  
- Eine Funktion, die aufgerufen wird, um jeder neuen Threads privaten-Wert des Typs initialisieren `T`. Es muss einen Funktionsaufrufoperator mit der Signatur unterstützen `T ()`.  
+*_FnInitialize*<br/>
+Eine Funktion, die aufgerufen wird, initialisiert jeder neue Thread-Private-Wert des Typs `T`. Es muss einen Funktionsaufrufoperator mit der Signatur unterstützen `T ()`.  
   
- `_Copy`  
- Eine vorhandene `combinable` Objekt, das in dieses Objekt kopiert werden.  
+*"_Copy"*<br/>
+Eine vorhandene `combinable` Objekt, das in dieses Objekt kopiert werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Der erste Konstruktor initialisiert neue Elemente mit dem Standardkonstruktor für den Typ `T`.  
+ Der erste Konstruktor initialisiert die neue Elemente mit dem Standardkonstruktor für den Typ `T`.  
   
- Der zweite Konstruktor initialisiert die neue Elemente, die als angegebene Funktionselement für die Initialisierung mithilfe der `_FnInitialize` Parameter.  
+ Der zweite Konstruktor initialisiert die neue Elemente, die die Initialisierung Funktionselement wie angegeben mit der `_FnInitialize` Parameter.  
   
  Der dritte Konstruktor ist der Kopierkonstruktor.  
   
@@ -126,7 +126,7 @@ combinable(const combinable& _Copy);
   
 ##  <a name="combine"></a> Kombinieren 
 
- Berechnet einen endgültigen Wert aus der Gruppe der threadlokale unterberechnungen durch Aufrufen der Funktionselement angegebenen kombinieren.  
+ Berechnet einen endgültigen Wert aus der Gruppe der threadlokale unterberechnungen durch das angegebene kombinieren Funktionselement aufrufen.  
   
 ```
 template<typename _Function>
@@ -134,18 +134,18 @@ T combine(_Function _FnCombine) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Function`  
- Der Typ des Funktionsobjekts ab, das aufgerufen wird, um zwei threadlokale unterberechnungen kombinieren.  
+*_Function*<br/>
+Der Typ des Funktionsobjekts, das aufgerufen wird, um zwei threadlokale unterberechnungen kombinieren.  
   
- `_FnCombine`  
- Das Funktionselement ist, das verwendet wird, um die unterberechnungen kombinieren. Die Signatur lautet `T (T, T)` oder `T (const T&, const T&)`, und assoziativen und kommutativen sein muss.  
+*_FnCombine*<br/>
+Die Funktionselement ist, das verwendet wird, um die untergeordneten Berechnungen kombinieren. Ihre Signatur ist `T (T, T)` oder `T (const T&, const T&)`, und assoziativ und kommutativ sein.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das endgültige Ergebnis der Kombination von allen Threads privaten unterberechnungen.  
+ Das endgültige Ergebnis der Kombination aller privaten teilberechnungen.  
   
 ##  <a name="combine_each"></a> combine_each 
 
- Berechnet einen endgültigen Wert aus der Gruppe der threadlokale unterberechnungen durch Aufrufen der angegebenen kombinieren Funktionselement einmal pro Thread-lokalen untergeordnete Berechnung an. Das Endergebnis werden durch das Funktionsobjekt gesammelt.  
+ Berechnet einen endgültigen Wert aus der Gruppe der threadlokale unterberechnungen durch Aufrufen der angegebenen kombinieren Funktionselement einmal pro Thread-lokalen untergeordnete Berechnung. Das Endergebnis werden vom Funktionsobjekt gesammelt.  
   
 ```
 template<typename _Function>
@@ -153,15 +153,15 @@ void combine_each(_Function _FnCombine) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Function`  
- Der Typ des Funktionsobjekts ab, das aufgerufen wird, um einen einzelnen Thread-lokalen untergeordnete Berechnung zu kombinieren.  
+*_Function*<br/>
+Der Typ des Funktionsobjekts, das aufgerufen wird, um eine einzelne untergeordnete Thread-Local-Berechnung zu kombinieren.  
   
- `_FnCombine`  
- Das Funktionselement ist, das verwendet wird, um eine untergeordnete Berechnung zu kombinieren. Die Signatur lautet `void (T)` oder `void (const T&)`, assoziativen und kommutativen muss.  
+*_FnCombine*<br/>
+Die Funktionselement ist, das verwendet wird, um eine untergeordnete Berechnung zu kombinieren. Ihre Signatur ist `void (T)` oder `void (const T&)`, assoziativ und kommutativ sein muss.  
   
 ##  <a name="local"></a> lokale 
 
- Gibt einen Verweis auf die untergeordnete Threads privaten-Berechnung.  
+ Gibt einen Verweis auf die privaten untergeordnete Berechnung.  
   
 ```
 T& local();
@@ -170,11 +170,11 @@ T& local(bool& _Exists);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Exists`  
- Ein Verweis auf einen booleschen Wert. Der boolesche Wert, der durch dieses Argument verwiesen wird festgelegt werden `true` , wenn die untergeordnete Berechnung bereits vorhanden, in diesem Thread war, und legen Sie auf `false` war dies die erste untergeordnete Berechnung in diesem Thread.  
+*_Exists*<br/>
+Ein Verweis auf einen booleschen Wert. Der boolesche Wert, der auf die dieses Argument verweist auf festgelegt `true` , wenn die untergeordnete Berechnung bereits auf diesem Thread vorhanden war, und legen Sie auf `false` war dies die erste untergeordnete Berechnung für diesen Thread.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Verweis auf die untergeordnete Threads privaten-Berechnung.  
+ Ein Verweis auf die privaten untergeordnete Berechnung.  
   
 ##  <a name="operator_eq"></a> Operator = 
 
@@ -185,8 +185,8 @@ combinable& operator= (const combinable& _Copy);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Copy`  
- Eine vorhandene `combinable` Objekt, das in dieses Objekt kopiert werden.  
+*"_Copy"*<br/>
+Eine vorhandene `combinable` Objekt, das in dieses Objekt kopiert werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf das `combinable`-Objekt.  

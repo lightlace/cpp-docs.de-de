@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4684 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4684 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cba83467e4705323eaecd990a7c5c32777990ffb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c640239ef0436c6f76e8658fc4dc8a4403418de8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33280987"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087852"
 ---
 # <a name="compiler-warning-level-1-c4684"></a>Compilerwarnung (Stufe 1) C4684
-'Attribut': Warnung!! Attribut kann dazu führen, dass ungültige codegenerierung: mit Vorsicht verwenden  
-  
- Sie verwendet ein Attribut, das im Allgemeinen nicht verwendet werden soll.  
-  
- Im folgenden Beispiel wird C4684 generiert:  
-  
-```  
-// C4684.cpp  
-// compile with: /W1 /LD  
- [module(name="xx")]; // C4684 expected  
-[no_injected_text];  
+
+'Attribut': Warnung!! Attribut kann zu Ungültiger codegenerierung führen: Verwenden Sie mit Vorsicht
+
+Sie verwendet ein Attribut, das nicht häufig verwendet werden soll.
+
+Im folgende Beispiel wird die C4684 generiert:
+
+```
+// C4684.cpp
+// compile with: /W1 /LD
+[module(name="xx")]; // C4684 expected
+[no_injected_text];
 ```

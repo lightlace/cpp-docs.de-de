@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3396 | Microsoft Docs
+title: Compilerfehler C3396 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7bc75aec0cd4f92ebced316c76f95598802e4e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e96231cf72b144c58e925fb2f74a6be29e9030f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252126"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047446"
 ---
 # <a name="compiler-error-c3396"></a>Compilerfehler C3396
-'Attribut': Das benutzerdefinierte Attribut wurde nicht in 'Namespace' gefunden.  
-  
- C3396 gibt an, dass Sie keine aktuelle CLR verwenden.  Installieren Sie die Common Language Runtime (CLR) neu, um dieses Problem zu beheben.
+
+'Attribut': Das benutzerdefinierte Attribut wurde nicht in 'Namespace' gefunden.
+
+C3396 gibt an, dass Sie keine aktuelle CLR verwenden.  Installieren Sie die Common Language Runtime (CLR) neu, um dieses Problem zu beheben.

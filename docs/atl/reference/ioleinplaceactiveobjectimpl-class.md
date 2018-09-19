@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4935c4cb936b803170f0fc11db5adb3f477a05a0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8e74df913b22684a61ab4f45ade561e55db18544
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763814"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044508"
 ---
 # <a name="ioleinplaceactiveobjectimpl-class"></a>IOleInPlaceActiveObjectImpl-Klasse
 
@@ -49,7 +49,7 @@ class IOleInPlaceActiveObjectImpl
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Abgeleitet von die Klasse `IOleInPlaceActiveObjectImpl`.
 
 ## <a name="members"></a>Member
@@ -201,6 +201,6 @@ Finden Sie unter [IOleInPlaceActiveObject:: TranslateAccelerator](/windows/deskt
 
 ## <a name="see-also"></a>Siehe auch
 
-[CComControl-Klasse](../../atl/reference/ccomcontrol-class.md)  
-[ActiveX-Steuerelemente Schnittstellen](/windows/desktop/com/activex-controls-interfaces)  
+[CComControl-Klasse](../../atl/reference/ccomcontrol-class.md)<br/>
+[ActiveX-Steuerelemente Schnittstellen](/windows/desktop/com/activex-controls-interfaces)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

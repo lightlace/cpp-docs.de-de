@@ -1,5 +1,5 @@
 ---
-title: PTR::CreateInstance | Microsoft Docs
+title: PTR::CreateInstance | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dd4ba56b92150046b986f2b101f6a004c114bf28
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f03a4f0cfb2b231e9a453009155308f7bf407db
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161703"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112212"
 ---
 # <a name="ptrcreateinstance"></a>ptr::CreateInstance
-Erstellt eine Instanz des COM-Objekt innerhalb einer `com::ptr`.  
+Erstellt eine Instanz eines COM-Objekts innerhalb einer `com::ptr`.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -72,28 +72,28 @@ void CreateInstance(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `progid`  
- Eine `ProgID`-Zeichenfolge.  
+*progid*<br/>
+Eine `ProgID`-Zeichenfolge.  
   
- `pouter`  
- Ein Zeiger auf das Aggregatobjekt IUnknown-Schnittstelle (das "controlling IUnknown"). Wenn `pouter` nicht angegeben ist, `NULL` verwendet wird.  
+*pouter*<br/>
+Zeiger auf IUnknown-Schnittstelle des aggregierten Objekts (das "controlling IUnknown"). Wenn `pouter` nicht angegeben ist, `NULL` verwendet wird.  
   
- `cls_context`  
- Der Kontext, in dem der Code, der das neu erstellte Objekt verwaltet ausgeführt wird. Die Werte stammen aus den `CLSCTX` Enumeration. Wenn `cls_context` nicht angegeben ist, der Wert CLSCTX_ALL wird verwendet.  
+*cls_context*<br/>
+Der Kontext, in dem der Code, der das neu erstellte Objekt verwaltet ausgeführt wird. Die Werte stammen aus der `CLSCTX` Enumeration. Wenn `cls_context` nicht angegeben ist, den Wert CLSCTX_ALL verwendet wird.  
   
- `rclsid`  
- `CLSID` verknüpft sind mit den Daten und den Code, der zum Erstellen des Objekts verwendet wird.  
+*rclsid*<br/>
+`CLSID` zugeordnet mit den Daten und Code, der zum Erstellen des Objekts verwendet wird.  
   
 ## <a name="exceptions"></a>Ausnahmen  
- Wenn die `com::ptr` besitzt bereits einen Verweis auf ein COM-Objekt `CreateInstance` löst <xref:System.InvalidOperationException>.  
+ Wenn die `com::ptr` bereits einen Verweis auf ein COM-Objekt im Besitz `CreateInstance` löst <xref:System.InvalidOperationException>.  
   
- Diese Funktion ruft `CoCreateInstance` und verwendet <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> Fehler konvertieren `HRESULT` in eine entsprechende Ausnahme.  
+ Diese Funktion ruft `CoCreateInstance` und verwendet <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> Fehler konvertieren `HRESULT` auf eine entsprechende Ausnahme.  
   
 ## <a name="remarks"></a>Hinweise  
- `CreateInstance` verwendet `CoCreateInstance` zum Erstellen einer neuen Instanz des angegebenen Objekts, über den eine ProgID oder CLSID identifiziert. Die `com::ptr` verweist auf das neu erstellte Objekt und alle im Besitz befindlichen Verweise auf die Zerstörung automatisch freigibt.  
+ `CreateInstance` verwendet `CoCreateInstance` zum Erstellen einer neuen Instanz des angegebenen Objekts, identifiziert werden, entweder über eine ProgID oder CLSID. Die `com::ptr` verweist auf das neu erstellte Objekt und alle im Besitz des Benutzers Verweise nach der Destruktion automatisch freigibt.  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel implementiert eine CLR-Klasse, verwendet eine `com::ptr` umschließen die privaten Member `IXMLDOMDocument` Objekt. Die Klasse, Konstruktoren verwenden zwei verschiedene Arten von `CreateInstance` das Document-Objekt aus einem ProgID oder CLSID plus eine CLSCTX erstellen.  
+ In diesem Beispiel implementiert eine CLR-Klasse, verwendet eine `com::ptr` , umschließen die privaten Member `IXMLDOMDocument` Objekt. Die Klasse, Konstruktoren verwenden zwei verschiedene Arten von `CreateInstance` auf das Document-Objekt entweder aus eine ProgID oder CLSID plus eine CLSCTX erstellen.  
   
 ```  
 // comptr_createinstance.cpp  

@@ -1,5 +1,5 @@
 ---
-title: Linkertoolwarnung Lnk4022 | Microsoft Docs
+title: Linkertoolwarnung LNK4022 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cffb9c4c67bc3003b8dcdda0ad3a2e8d55abe932
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 644e7a9ba26dab15e2bfa2a269f62c04f0510180
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300370"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040998"
 ---
 # <a name="linker-tools-warning-lnk4022"></a>Linkertoolwarnung LNK4022
-eindeutige Übereinstimmung für das Symbol 'Symbol' wurde nicht gefunden.  
-  
- LINK oder LIB mehrere gefunden für das angegebene nicht ergänzten Symbol entspricht, und es konnte nicht die Mehrdeutigkeit aufzulösen. Es wird keine Ausgabedatei (.exe, .dll, .exp oder .lib) erstellt. Diese Warnung durch eine einzige Warnung folgt [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) für jedes Symbol doppelt vorhanden und wird schließlich gefolgt von Schwerwiegender Fehler [LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).  
-  
- Um diese Warnung zu vermeiden, geben Sie das Symbol in seiner ergänzten Form. Führen Sie [DUMPBIN](../../build/reference/dumpbin-options.md) für das Objekt anzeigen von ergänzten Namen.
+
+eindeutige Übereinstimmung für Symbol 'Symbol' wurde nicht gefunden.
+
+LINK oder LIB finden Sie mehrere übereinstimmt, für das angegebene Symbol für nicht ergänzte, und es konnte nicht die Mehrdeutigkeit aufzulösen. Keine Ausgabedatei (.exe, .dll, exp oder .lib) wird erstellt. Diese Warnung folgt eine Warnung [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) duplizieren Sie für jedes Symbol, und schließlich folgt Schwerwiegender Fehler [LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).
+
+Um diese Warnung zu vermeiden, geben Sie das Symbol in seiner ergänzten Form. Führen Sie [DUMPBIN](../../build/reference/dumpbin-options.md) für das Objekt anzeigen von ergänzten Namen.

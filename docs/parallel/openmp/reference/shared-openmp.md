@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2bc1a0bbf56623feccd4d3bd96f1e719e192d48
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 078d4b01d2c797fa11c3603c79a341f75e11f18c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42541787"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115475"
 ---
 # <a name="shared-openmp"></a>shared (OpenMP)
 Gibt an, dass eine oder mehrere Variablen, die auf allen Threads freigegeben werden soll.  
@@ -32,11 +32,10 @@ Gibt an, dass eine oder mehrere Variablen, die auf allen Threads freigegeben wer
 shared(var)  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- wobei  
+### <a name="parameters"></a>Parameter
   
- `var`  
- Eine oder mehrere Variablen freigeben. Wenn mehr als eine Variable angegeben ist, trennen Sie Namen durch ein Komma.  
+*var*<br/>
+Eine oder mehrere Variablen freigeben. Wenn mehr als eine Variable angegeben ist, trennen Sie Namen durch ein Komma.  
   
 ## <a name="remarks"></a>Hinweise  
  Eine weitere Möglichkeit zum Teilen von Variablen zwischen Threads ist mit der [Copyprivate](../../../parallel/openmp/reference/copyprivate.md) Klausel.  

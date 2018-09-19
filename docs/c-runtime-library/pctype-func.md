@@ -27,34 +27,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c414ddee654897c88438ec879f9b481073888f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 36c8dd0467dc50c9eba9db954f28711aa8525cd2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389293"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034276"
 ---
 # <a name="pctypefunc"></a>__pctype_func
-Ruft einen Zeiger auf ein Array an Zeichenklassifizierungsinformationen ab.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-const unsigned short *__pctype_func(  
-   )  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf ein Array an Zeichenklassifizierungsinformationen.  
-  
-## <a name="remarks"></a>Hinweise  
- Die Informationen in der Zeichenklassifizierungstabelle sind nur zur internen Verwendung geeignet und werden von verschiedenen Funktionen verwendet, die Zeichen vom Typ `char` klassifizieren. Weitere Informationen finden Sie im `Remarks`-Abschnitt von [_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md).  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|__pctype_func|ctype.h|  
-  
-## <a name="see-also"></a>Siehe auch  
- [_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md)
+
+Ruft einen Zeiger auf ein Array an Zeichenklassifizierungsinformationen ab.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+const unsigned short *__pctype_func(
+   )
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Ein Zeiger auf ein Array an Zeichenklassifizierungsinformationen.
+
+## <a name="remarks"></a>Hinweise
+
+Die Informationen in der Zeichenklassifizierungstabelle sind nur zur internen Verwendung geeignet und werden von verschiedenen Funktionen verwendet, die Zeichen vom Typ `char` klassifizieren. Weitere Informationen finden Sie im `Remarks`-Abschnitt von [_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md).
+
+## <a name="requirements"></a>Anforderungen
+
+|-Routine zurückgegebener Wert|Erforderlicher Header|
+|-------------|---------------------|
+|__pctype_func|ctype.h|
+
+## <a name="see-also"></a>Siehe auch
+
+[_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1821a4e04667fd1e05a9bbd4fdd81cb19e6eaca7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c4da0167ef3b39b006a2f067114cf518cc231a45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762524"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086446"
 ---
 # <a name="registry-support-classes"></a>Registrierungsunterstützungsklassen
 
@@ -37,6 +37,6 @@ Die folgende Klasse unterstützt Registrierung:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über die Klasse](../atl/atl-class-overview.md)   
+[Übersicht über die Klasse](../atl/atl-class-overview.md)<br/>
 [Registrierungsmakros](../atl/reference/registry-macros.md)
 

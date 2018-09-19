@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0015 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0015 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 945dbda4759fa2989acb0411d1a3216a5e9a036c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1aa37a2cc7208063ce4cfa786de196842ab42b45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297608"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050815"
 ---
 # <a name="expression-evaluator-error-cxx0015"></a>Ausdrucksauswertungsfehler CXX0015
-Ausdruck zu komplex (Stapelüberlauf)  
-  
- Der eingegebene Ausdruck war zu komplex oder geschachtelte zu tief für die Menge an Speicherplatz verfügbar, um die C#-ausdrucksauswertung.  
-  
- Überlauf tritt gewöhnlich aufgrund von zu viele ausstehende Berechnungen.  
-  
- Ordnen Sie den Ausdruck so, dass jede Komponente des Ausdrucks ausgewertet werden kann, wie sie entdeckt wird, anstatt zu warten, bis andere Teile des Ausdrucks berechnet werden soll.  
-  
- Teilen Sie den Ausdruck in mehrere Befehle.  
-  
- Dieser Fehler ist mit CAN0015 identisch.
+
+Ausdruck zu komplex (Stapelüberlauf)
+
+Der eingegebene Ausdruck war zu komplex oder geschachtelte zu tief für die Menge an Speicherplatz für die C++-ausdrucksauswertung.
+
+Überlauf tritt auf, in der Regel, da zu viele ausstehende Berechnungen.
+
+Ordnen Sie den Ausdruck so, dass jede Komponente des Ausdrucks ausgewertet werden kann, wenn es gefunden wird, anstatt zu warten, bis andere Teile des Ausdrucks berechnet werden soll.
+
+Unterbrechen Sie mehrere Befehle mit den Ausdruck.
+
+Dieser Fehler ist mit CAN0015 identisch.

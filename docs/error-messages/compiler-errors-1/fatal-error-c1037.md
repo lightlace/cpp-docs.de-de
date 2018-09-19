@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1037 | Microsoft Docs
+title: Schwerwiegender Fehler C1037 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12c6720219a638d15b1b7bf684531dfe4d752d49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8091eb7316531c6bdda9bf714ec7a195b5406182
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198091"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047680"
 ---
 # <a name="fatal-error-c1037"></a>Schwerwiegender Fehler C1037
-Objektdatei kann nicht geöffnet werden  
-  
- Die durch [/Fo](../../build/reference/fo-object-file-name.md) angegebene Objektdatei kann nicht geöffnet werden.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:  
-  
-1.  Ungültiger Dateiname.  
-  
-2.  Es ist nicht genügend Speicher verfügbar, um die Datei zu öffnen.  
-  
-3.  Die Datei wird von einem anderen Prozess verwendet.  
-  
-4.  Eine schreibgeschützte Datei hat den gleichen Namen.  
-  
+
+Objektdatei kann nicht geöffnet werden
+
+Die durch [/Fo](../../build/reference/fo-object-file-name.md) angegebene Objektdatei kann nicht geöffnet werden.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:
+
+1. Ungültiger Dateiname.
+
+1. Es ist nicht genügend Speicher verfügbar, um die Datei zu öffnen.
+
+1. Die Datei wird von einem anderen Prozess verwendet.
+
+1. Eine schreibgeschützte Datei hat den gleichen Namen.
+

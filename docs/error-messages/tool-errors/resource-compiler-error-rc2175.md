@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcencompiler: Fehler RC2175 | Microsoft Docs'
+title: 'Ressourcencompiler: Fehler RC2175 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac5abdfde314220e8478a524d5b0b2e9ea15dcf4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8aa622d1864a9f302c51fe90bd77f58c2829859b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327092"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084236"
 ---
 # <a name="resource-compiler-error-rc2175"></a>Ressourcencompiler: Fehler RC2175
-Ressourcen-Dateiname entspricht nicht 3.00-Format  
-  
- Die angegebene Ressource wird ein Format vor Version 3.00 verwendet. Die Ressourcendatei muss konvertiert werden oder neu erstellt, mit dem Format für Version 3.00 oder höher.
+
+Ressourcen-Dateiname entspricht nicht 3.00-Format
+
+Die angegebene Ressource verwendet ein Format vor der Version 3.00. Die Ressourcendatei konvertiert werden muss oder neu erstellt, mit dem Format für Version 3.00 oder höher.

@@ -1,5 +1,5 @@
 ---
-title: Befehlszeilenwarnung D9027 | Microsoft Docs
+title: Befehlszeilenwarnung D9027 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfe2493290c4e4cc5b744136b8e7036c6559220a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 105ebbf62027ac3d9377c513c4f7c59e261b983d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301449"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112524"
 ---
 # <a name="command-line-warning-d9027"></a>Befehlszeilenwarnung D9027
-Quelldatei "\<Dateiname >' ignoriert  
-  
- CL.exe ignoriert die Eingabequelle-Datei.  
-  
- Diese Warnung kann durch ein Leerzeichen zwischen der/Fo-Option und eine Ausgabedatei in einer Befehlszeile mit der Option/c verursacht werden. Zum Beispiel:  
-  
-```  
-cl /c /Fo output.obj input.c   
-```  
-  
- Da ein Leerzeichen zwischen/FO und `output.obj`, CL.exe akzeptiert `output.obj` als den Namen der Eingabedatei. Um das Problem zu beheben, entfernen Sie den Speicherplatz:  
-  
-```  
-cl /c /Fooutput.obj input.c   
+
+Quelldatei "\<Dateiname >" ignoriert
+
+CL.exe ignoriert die Eingabequelldatei.
+
+Diese Warnung kann durch ein Leerzeichen zwischen der/Fo-Option und der Name für die Ausgabedatei in einer Befehlszeile mit der Option/c verursacht werden. Zum Beispiel:
+
+```
+cl /c /Fo output.obj input.c
+```
+
+Da ein Leerzeichen zwischen/FO und `output.obj`, dauert der CL.exe `output.obj` als den Namen der Eingabedatei. Um das Problem zu beheben, entfernen Sie den Speicherplatz:
+
+```
+cl /c /Fooutput.obj input.c
 ```

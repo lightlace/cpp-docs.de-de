@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f97559dd962fefbb4e727c0e75d0102898c8f13
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 93752aa124bc144e42a337f757c9d9cdc9a226ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724073"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047927"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Symbolleisten-Steuerelements bereit.  
@@ -410,65 +410,66 @@ BOOL AddButtons(
 ### <a name="remarks"></a>Hinweise  
  Die *LpButtons* Zeiger verweist auf ein Array von `TBBUTTON` Strukturen. Jede `TBBUTTON` Struktur ordnet die Schaltfläche mit der Schaltfläche Style-Abbild und/oder die Zeichenfolge, die Befehls-ID, Status und benutzerdefinierte Daten hinzugefügt wird:  
   
- `typedef struct _TBBUTTON {`  
-  
- `int iBitmap;// zero-based index of button image`  
-  
- `int idCommand;  // command to be sent when button pressed`  
-  
- `BYTE fsState;   // button state--see below`  
-  
- `BYTE fsStyle;   // button style--see below`  
-  
- `DWORD dwData;   // application-defined value`  
-  
- `int iString;// zero-based index of button label string`  
-  
- `} TBBUTTON;`  
+```cpp
+typedef struct _TBBUTTON {
+    int iBitmap;    // zero-based index of button image
+    int idCommand;  // command to be sent when button pressed
+    BYTE fsState;   // button state--see below
+    BYTE fsStyle;   // button style--see below
+    DWORD dwData;   // application-defined value
+    int iString;    // zero-based index of button label string
+} TBBUTTON;
+```
   
  Die Elemente sind wie folgt aus:  
   
- `iBitmap`  
- Nullbasierte Index des Schaltflächensymbols an, 1, wenn kein Bild für diese Schaltfläche.  
+- `iBitmap`  
+
+   Nullbasierte Index des Schaltflächensymbols an, 1, wenn kein Bild für diese Schaltfläche.  
   
- `idCommand`  
- Befehls-ID der Schaltfläche zugeordnet. Dieser Bezeichner wird in einer WM_COMMAND-Meldung gesendet, wenn die Schaltfläche ausgewählt wird. Wenn die `fsStyle` Member der TBSTYLE_SEP-Wert enthält, ist dieser Member muss 0 (null) sein.  
+-  `idCommand`  
+
+   Befehls-ID der Schaltfläche zugeordnet. Dieser Bezeichner wird in einer WM_COMMAND-Meldung gesendet, wenn die Schaltfläche ausgewählt wird. Wenn die `fsStyle` Member der TBSTYLE_SEP-Wert enthält, ist dieser Member muss 0 (null) sein.  
   
- `fsState`  
- Zustandsflags für Schaltflächen. Sie können eine Kombination der unten aufgeführten Werte sein:  
+-  `fsState`  
+
+   Zustandsflags für Schaltflächen. Sie können eine Kombination der unten aufgeführten Werte sein:  
   
-- TBSTATE_CHECKED die Schaltfläche mit den hat des Format TBSTYLE_CHECKED und ist gedrückt wird.  
+   - TBSTATE_CHECKED die Schaltfläche mit den hat des Format TBSTYLE_CHECKED und ist gedrückt wird.  
   
-- TBSTATE_ENABLED die Schaltfläche mit den akzeptiert Benutzereingaben. Eine Schaltfläche, die keine von diesem Status akzeptiert keine Benutzereingaben und abgeblendet.  
+   - TBSTATE_ENABLED die Schaltfläche mit den akzeptiert Benutzereingaben. Eine Schaltfläche, die keine von diesem Status akzeptiert keine Benutzereingaben und abgeblendet.  
   
-- TBSTATE_HIDDEN die Schaltfläche nicht sichtbar ist, und es keine Benutzereingaben empfangen.  
+   - TBSTATE_HIDDEN die Schaltfläche nicht sichtbar ist, und es keine Benutzereingaben empfangen.  
   
-- TBSTATE_INDETERMINATE die Schaltfläche ist abgeblendet.  
+   - TBSTATE_INDETERMINATE die Schaltfläche ist abgeblendet.  
   
-- TBSTATE_PRESSED die Schaltfläche wird gedrückt wird.  
+   - TBSTATE_PRESSED die Schaltfläche wird gedrückt wird.  
   
-- TBSTATE_WRAP ein Zeilenumbruch folgt auf die Schaltfläche. Die Schaltfläche muss auch den TBSTATE_ENABLED Zustand verfügen.  
+   - TBSTATE_WRAP ein Zeilenumbruch folgt auf die Schaltfläche. Die Schaltfläche muss auch den TBSTATE_ENABLED Zustand verfügen.  
   
- `fsStyle`  
- Schaltflächen-Formatvorlage. Sie können eine Kombination der unten aufgeführten Werte sein:  
+- `fsStyle`  
+
+   Schaltflächen-Formatvorlage. Sie können eine Kombination der unten aufgeführten Werte sein:  
   
-- TBSTYLE_BUTTON erstellt eine Standardschaltflächen.  
+   - TBSTYLE_BUTTON erstellt eine Standardschaltflächen.  
   
-- TBSTYLE_CHECK erstellt eine Schaltfläche, die zwischen den gedrückt- oder nicht gedrückt-Zuständen jedes Mal den Benutzer schaltet darauf klickt. Die Schaltfläche "hat eine andere Hintergrundfarbe aus, wenn es im gedrückten Zustand ist.  
+   - TBSTYLE_CHECK erstellt eine Schaltfläche, die zwischen den gedrückt- oder nicht gedrückt-Zuständen jedes Mal den Benutzer schaltet darauf klickt. Die Schaltfläche "hat eine andere Hintergrundfarbe aus, wenn es im gedrückten Zustand ist.  
   
-- TBSTYLE_CHECKGROUP erstellt, für das eine Kontrollkästchen-Schaltfläche, die bleibt gedrückt, bis in der Gruppe eine andere Schaltfläche gedrückt wird.  
+   - TBSTYLE_CHECKGROUP erstellt, für das eine Kontrollkästchen-Schaltfläche, die bleibt gedrückt, bis in der Gruppe eine andere Schaltfläche gedrückt wird.  
   
-- TBSTYLE_GROUP erstellt, für das eine Schaltfläche, die bleibt gedrückt, bis in der Gruppe eine andere Schaltfläche gedrückt wird.  
+   - TBSTYLE_GROUP erstellt, für das eine Schaltfläche, die bleibt gedrückt, bis in der Gruppe eine andere Schaltfläche gedrückt wird.  
   
-- TBSTYLE_SEP erstellt ein Trennzeichen, die eine kleine zeitliche Lücke zwischen Schaltflächengruppen bereitstellen. Eine Schaltfläche mit diesem Format erhält keine Benutzereingaben.  
+   - TBSTYLE_SEP erstellt ein Trennzeichen, die eine kleine zeitliche Lücke zwischen Schaltflächengruppen bereitstellen. Eine Schaltfläche mit diesem Format erhält keine Benutzereingaben.  
   
- `dwData`  
- Mit benutzerdefinierten Daten.  
+- `dwData`  
+
+   Mit benutzerdefinierten Daten.  
   
- `iString`  
- Nullbasierte Index der Zeichenfolge, die als Schaltfläche verwendet der bezeichnen, 1, wenn es keine Zeichenfolge für diese Schaltfläche ist.  
+- `iString`  
+
+   Nullbasierte Index der Zeichenfolge, die als Schaltfläche verwendet der bezeichnen, 1, wenn es keine Zeichenfolge für diese Schaltfläche ist.  
   
- Das Image und/oder die Zeichenfolge, dessen Index Sie angeben, zuvor worden sein, die Symbolleisten-Steuerelement hinzugefügt muss, auflisten mithilfe der [AddBitmap](#addbitmap), [AddString](#addstring), und/oder [AddStrings](#addstrings).  
+Das Image und/oder die Zeichenfolge, dessen Index Sie angeben, zuvor worden sein, die Symbolleisten-Steuerelement hinzugefügt muss, auflisten mithilfe der [AddBitmap](#addbitmap), [AddString](#addstring), und/oder [AddStrings](#addstrings).  
   
 ##  <a name="addstring"></a>  CToolBarCtrl::AddString  
  Fügt eine neue Zeichenfolge, die als eine Ressourcen-ID der Symbolleiste auf die interne Liste mit Zeichenfolgen übergeben.  

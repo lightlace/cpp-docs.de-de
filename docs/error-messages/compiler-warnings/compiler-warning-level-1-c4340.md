@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4340 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4340 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16a2e33729f791deb4b5b5f1eec136f51a2dc82e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38e19b214dfd7199a1edde69c9fdb8d6bcaf1362
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273523"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085174"
 ---
 # <a name="compiler-warning-level-1-c4340"></a>Compilerwarnung (Stufe 1) C4340
-"Value": Wert umschlossen von positiv negativer Wert  
-  
- Die `enum` Wert ist größer als das größte `enum` positiver Wert einen negativen Wert umgibt.
+
+"Value": Umschließen von positivem in negativen Wert des Werts
+
+Die `enum` Wert ist größer als die größte `enum` positiver Wert, der auf einen negativen Wert umschließt.

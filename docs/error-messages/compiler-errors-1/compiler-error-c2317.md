@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2317 | Microsoft Docs
+title: Compilerfehler C2317 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82ff1155db69833cad45d9e5df4ccdf016e661e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adf536fa1fd8976e3e3251514b3b7486eb57456c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196139"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085367"
 ---
 # <a name="compiler-error-c2317"></a>Compilerfehler C2317
-Der try-Block ab Zeile 'Nummer' besitzt keine catch-Handler.  
-  
- Ein `try` -Block muss mindestens einen catch-Handler aufweisen.  
-  
- Im folgenden Beispiel wird C2317 generiert:  
-  
-```  
-// C2317.cpp  
-// compile with: /EHsc  
-#include <eh.h>  
-int main() {  
-   try {  
-      throw "throw an exception";  
-   }  
-   // C2317, no catch handler  
-}  
-```  
-  
- Mögliche Lösung:  
-  
-```  
-// C2317b.cpp  
-// compile with: /EHsc  
-#include <eh.h>  
-int main() {  
-   try {  
-      throw "throw an exception";  
-   }  
-   catch(char*) {}  
-}  
+
+Der try-Block ab Zeile 'Nummer' besitzt keine catch-Handler.
+
+Ein `try` -Block muss mindestens einen catch-Handler aufweisen.
+
+Im folgenden Beispiel wird C2317 generiert:
+
+```
+// C2317.cpp
+// compile with: /EHsc
+#include <eh.h>
+int main() {
+   try {
+      throw "throw an exception";
+   }
+   // C2317, no catch handler
+}
+```
+
+Mögliche Lösung:
+
+```
+// C2317b.cpp
+// compile with: /EHsc
+#include <eh.h>
+int main() {
+   try {
+      throw "throw an exception";
+   }
+   catch(char*) {}
+}
 ```

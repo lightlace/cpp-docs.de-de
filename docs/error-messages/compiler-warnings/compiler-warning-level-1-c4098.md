@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4098 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4098 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 889c9aa926a8400d977de00ef5c288316ae84782
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84b3cdcdbb487774a92361d3a003ba83895d475e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276385"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118309"
 ---
 # <a name="compiler-warning-level-1-c4098"></a>Compilerwarnung (Stufe 1) C4098
-"Function": "void" Zurückgeben eines Werts-Funktion  
-  
- Eine Funktion mit Rückgabetyp deklariert ["void"](../../cpp/void-cpp.md) verfügt über eine `return` -Anweisung, die einen Wert zurückgibt. Der Compiler geht davon aus, die Funktion gibt einen Wert vom Typ `int`.
+
+'Funktion': "void" Zurückgeben eines Werts-Funktion
+
+Eine Funktion mit Rückgabetyp deklariert ["void"](../../cpp/void-cpp.md) verfügt über eine `return` -Anweisung, die einen Wert zurückgibt. Der Compiler davon aus, die Funktion gibt einen Wert vom Typ `int`.

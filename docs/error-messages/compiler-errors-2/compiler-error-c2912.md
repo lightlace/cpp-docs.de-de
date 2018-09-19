@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2912 | Microsoft Docs
+title: Compilerfehler C2912 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b165e868f4a2055d692d768c7e5c0164dd34002
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1eb3a1aef43033c57f50cadda79bae3035aea978
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241222"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091912"
 ---
 # <a name="compiler-error-c2912"></a>Compilerfehler C2912
-Explizite Spezialisierung 'declaration' ist keine Spezialisierung einer Funktionsvorlage  
-  
- Nur Vorlagenfunktionen können spezialisiert werden.  
-  
- Im folgenden Beispiel wird C2912 generiert:  
-  
-```  
-// C2912.cpp  
-// compile with: /c  
-void f(char);  
-template<> void f(char);   // C2912  
-template<class T> void f(T);   // OK  
-```  
-  
- Dieser Fehler wird außerdem infolge einer Konformitätsverbesserung für Compiler generiert, die in Visual Studio .NET 2003 durchgeführt wurde: Für jede explizite Spezialisierung müssen Sie die Parameter der expliziten Spezialisierung so wählen, dass sie mit den Parametern der primären Vorlage übereinstimmen.  
-  
-```  
-// C2912b.cpp  
-class CF {  
-public:  
-   template <class A> CF(const A& a) {}   // primary template  
-  
-   // attempted explicit specialization  
-   template <> CF(const char* p) {}   // C2912  
-  
-   // try the following line instead  
-   // template <> CF(const char& p) {}  
-};  
+
+Explizite Spezialisierung 'declaration' ist keine Spezialisierung einer Funktionsvorlage
+
+Nur Vorlagenfunktionen können spezialisiert werden.
+
+Im folgenden Beispiel wird C2912 generiert:
+
+```
+// C2912.cpp
+// compile with: /c
+void f(char);
+template<> void f(char);   // C2912
+template<class T> void f(T);   // OK
+```
+
+Dieser Fehler wird außerdem infolge einer Konformitätsverbesserung für Compiler generiert, die in Visual Studio .NET 2003 durchgeführt wurde: Für jede explizite Spezialisierung müssen Sie die Parameter der expliziten Spezialisierung so wählen, dass sie mit den Parametern der primären Vorlage übereinstimmen.
+
+```
+// C2912b.cpp
+class CF {
+public:
+   template <class A> CF(const A& a) {}   // primary template
+
+   // attempted explicit specialization
+   template <> CF(const char* p) {}   // C2912
+
+   // try the following line instead
+   // template <> CF(const char& p) {}
+};
 ```

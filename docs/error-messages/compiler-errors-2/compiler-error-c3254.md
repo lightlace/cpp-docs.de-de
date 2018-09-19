@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3254 | Microsoft Docs
+title: Compilerfehler C3254 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e58976b1562e6cca9aa343401b5d2c3f856de1a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9e42071c55ef3c7a4fc950b1b25656cf68d4024
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255607"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081181"
 ---
 # <a name="compiler-error-c3254"></a>Compilerfehler C3254
-"explizite Override": Klasse enthält explizites Überschreiben "Override" jedoch nicht von einer Schnittstelle, die die Funktionsdeklaration enthält  
-  
- Wenn Sie [explizit überschreiben](../../cpp/explicit-overrides-cpp.md) eine Methode, Klasse, die die Außerkraftsetzung enthält leiten, direkt oder indirekt, überschreiben Sie aus dem Typ, der die Funktion enthält.  
-  
- Im folgende Beispiel wird C3254 generiert:  
-  
-```  
-// C3254.cpp  
-__interface I  
-{  
-   void f();  
-};  
-  
-__interface I1 : I  
-{  
-};  
-  
-struct A /* : I1 */  
-{  
-   void I1::f()  
-   {   // C3254, uncomment : I1 to resolve this C3254  
-   }  
-};  
-  
-int main()  
-{  
-}  
+
+"explizite Überschreibung": Klasse enthält die explizite Überschreibung "Override", jedoch nicht von abgeleitet ist, eine Schnittstelle, die die Funktionsdeklaration enthält
+
+Wenn Sie [explizit überschreiben](../../cpp/explicit-overrides-cpp.md) eine Methode, Klasse, die die Überschreibung enthält muss abgeleitet werden, direkt oder indirekt, überschreiben Sie aus der Typ, der die Funktion enthält.
+
+Im folgende Beispiel wird die C3254 generiert:
+
+```
+// C3254.cpp
+__interface I
+{
+   void f();
+};
+
+__interface I1 : I
+{
+};
+
+struct A /* : I1 */
+{
+   void I1::f()
+   {   // C3254, uncomment : I1 to resolve this C3254
+   }
+};
+
+int main()
+{
+}
 ```

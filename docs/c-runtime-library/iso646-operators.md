@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b94f95a824dfe2e2e0c3e5193ad125dfc9744af2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1105541fc0d048554cfe65408d1bb7451b59a381
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392431"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097717"
 ---
 # <a name="iso646-operators"></a>ISO646-Operatoren
 
@@ -42,4 +42,4 @@ Stellt lesbare Alternativen für bestimmte Operatoren oder Punktuatoren bereit. 
 ## <a name="see-also"></a>Siehe auch
 
 [Internationalisierung](../c-runtime-library/internationalization.md)<br/>
- [Universelle C-Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Universelle C-Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung C4355 | Microsoft Docs
+title: Compilerwarnung C4355 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,50 +16,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f57b8a7c279b820f4f9fc4a68715804a12e625
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 44833c8e640002f2f94d44938641fa3c1fa33db7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273805"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115306"
 ---
 # <a name="compiler-warning-c4355"></a>Compilerwarnung C4355
-"this": Wird in der Basisliste für den Memberinitialisierer verwendet  
-  
- Die **dies** -Zeiger ist nur in nicht statischen Memberfunktionen gültig. Es kann nicht in der Initialisiererliste für eine Basisklasse verwendet werden.  
-  
- Konstruktoren für Basisklassen und Member aufgerufen, bevor **dies** Konstruktor. Aktiviert ist, haben Sie einen Zeiger auf ein nicht konstruierter Objekt an einen anderen Konstruktor übergeben. Wenn die anderen Konstruktoren Zugriff auf alle Member oder Memberfunktionen für dieses aufrufen, wird das Ergebnis nicht definiert. Verwenden Sie nicht die **dies** Zeiger, bis die Erstellung abgeschlossen ist.  
-  
- Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
-  
- Im folgende Beispiel wird C4355 generiert:  
-  
-```  
-// C4355.cpp  
-// compile with: /w14355 /c  
-#include <tchar.h>  
-  
-class CDerived;  
-class CBase {  
-public:  
-   CBase(CDerived *derived): m_pDerived(derived) {};  
-   ~CBase();  
-   virtual void function() = 0;  
-  
-   CDerived * m_pDerived;  
-};  
-  
-class CDerived : public CBase {  
-public:  
-   CDerived() : CBase(this) {};   // C4355 "this" used in derived c'tor  
-   virtual void function() {};  
-};  
-  
-CBase::~CBase() {  
-   m_pDerived -> function();  
-}  
-  
-int main() {  
-   CDerived myDerived;  
-}  
+
+"this": Wird in der Basisliste für den Memberinitialisierer verwendet
+
+Die **dies** Zeiger nur innerhalb nicht statischer Memberfunktionen gültig ist. Es kann nicht in der Initialisierungsliste für Basisklasse verwendet werden.
+
+Die Basis-Klasse, Konstruktoren und Klassenmember werden aufgerufen, bevor **dies** Konstruktor. Aktiviert ist, haben Sie ein Zeiger auf ein nicht erstellten Objekt an einen anderen Konstruktor übergeben. Wenn die anderen Konstruktoren den Zugriff auf alle Member oder Memberfunktionen dazu aufrufen, wird das Ergebnis nicht definiert sein. Verwenden Sie nicht die **dies** Zeiger, bis die Erstellung abgeschlossen ist.
+
+Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
+
+Im folgende Beispiel wird die C4355 generiert:
+
+```
+// C4355.cpp
+// compile with: /w14355 /c
+#include <tchar.h>
+
+class CDerived;
+class CBase {
+public:
+   CBase(CDerived *derived): m_pDerived(derived) {};
+   ~CBase();
+   virtual void function() = 0;
+
+   CDerived * m_pDerived;
+};
+
+class CDerived : public CBase {
+public:
+   CDerived() : CBase(this) {};   // C4355 "this" used in derived c'tor
+   virtual void function() {};
+};
+
+CBase::~CBase() {
+   m_pDerived -> function();
+}
+
+int main() {
+   CDerived myDerived;
+}
 ```

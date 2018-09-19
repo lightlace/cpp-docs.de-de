@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4680 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4680 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64c43a1d099d47cbf9b3705bb57c783780aa00aa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06e4e9aa4c3c3cdef2c0d241a5636248290ac2e6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300133"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053790"
 ---
 # <a name="compiler-warning-level-4-c4680"></a>Compilerwarnung (Stufe 4) C4680
-'Klasse': Co-Klasse gibt keine Standardschnittstelle  
-  
- Ein [Standard](../../windows/default-cpp.md) Schnittstelle wurde nicht angegeben, für eine Klasse, die mit der [Co-Klasse](../../windows/coclass.md) Attribut. Damit für ein Objekt, das hilfreich sein können müssen sie eine Schnittstelle zu implementieren.  
-  
- Im folgenden Beispiel wird C4680 generiert:  
-  
-```  
-// C4680.cpp  
-// compile with: /W4  
-#include <windows.h>  
-[module(name="MyModule")];  
-  
-[ object, uuid(373a1a4c-469b-11d3-a6b0-00c04f79ae8f) ]  
-__interface IMyIface1  
-{  
-   HRESULT f1();  
-};  
-  
-[ object, uuid(37331a4c-469b-11d3-a6b0-00c04f79ae8f) ]  
-__interface IMyIface2  
-{  
-   HRESULT f1();  
-};  
-  
-// to resolve C4680, specify a source interface also  
-// for example, default(IMyIface1, IMyface2)  
-[ coclass, uuid(373a1a4d-469b-11d3-a6b0-00c04f79ae8f), default(IMyIface1), source(IMyIface1) ]  
-class CMyClass : public IMyIface1  
-{   // C4680  
-};  
-  
-int main()  
-{  
-}  
+
+'Klasse': Co-Klasse gibt eine Standardschnittstelle keine
+
+Ein [Standard](../../windows/default-cpp.md) Schnittstelle wurde nicht angegeben, für eine Klasse, die mit der [Co-Klasse](../../windows/coclass.md) Attribut. Damit für ein Objekt nützlich sein kann müssen sie eine Schnittstelle implementieren.
+
+Im folgende Beispiel wird die C4680 generiert:
+
+```
+// C4680.cpp
+// compile with: /W4
+#include <windows.h>
+[module(name="MyModule")];
+
+[ object, uuid(373a1a4c-469b-11d3-a6b0-00c04f79ae8f) ]
+__interface IMyIface1
+{
+   HRESULT f1();
+};
+
+[ object, uuid(37331a4c-469b-11d3-a6b0-00c04f79ae8f) ]
+__interface IMyIface2
+{
+   HRESULT f1();
+};
+
+// to resolve C4680, specify a source interface also
+// for example, default(IMyIface1, IMyface2)
+[ coclass, uuid(373a1a4d-469b-11d3-a6b0-00c04f79ae8f), default(IMyIface1), source(IMyIface1) ]
+class CMyClass : public IMyIface1
+{   // C4680
+};
+
+int main()
+{
+}
 ```

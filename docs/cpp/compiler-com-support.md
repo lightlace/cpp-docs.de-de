@@ -15,35 +15,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c2204e69ee6df64a08e3f5cf03191ad1e7e0535
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: faab8e0dafdf9121ab694c409500c08aabbb1bc8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402460"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079738"
 ---
 # <a name="compiler-com-support"></a>COM-Unterstützung des Compilers
-## <a name="microsoft-specific"></a>Microsoft-spezifisch  
- Der Visual C++-Compiler kann COM(Component Object Model)-Typbibliotheken direkt lesen und den Inhalt in C++-Quellcode übersetzen, der in die Kompilierung aufgenommen werden kann. Es sind Spracherweiterungen verfügbar, um die COM-Programmierung auf der Clientseite zu erleichtern.  
-  
- Mithilfe der [#import-präprozessoranweisung](../preprocessor/hash-import-directive-cpp.md), der Compiler kann eine Typbibliothek lesen und konvertiert ihn in eine C++-Headerdatei, die beschreibt, die COM-als Schnittstellen Klassen. Ein Satz von `#import`-Attributen ist für die Benutzersteuerung des Inhalts der resultierenden Typbibliothek-Headerdateien verfügbar.  
-  
- Sie können der [__declspec](../cpp/declspec.md) erweitertes Attribut [Uuid](../cpp/uuid-cpp.md) ein COM-Objekt einen global eindeutigen Bezeichner (GUID) zuweisen. Das Schlüsselwort [__uuidof](../cpp/uuidof-operator.md) können verwendet werden, um die COM-Objekt zugeordnete GUID zu extrahieren. Eine andere **__declspec** Attribut [Eigenschaft](../cpp/property-cpp.md), kann verwendet werden, um anzugeben der `get` und `set` Methoden für einen Datenmember eines COM-Objekts.  
-  
- Ein Satz von COM-Unterstützung globale Funktionen und Klassen dient zur Unterstützung der `VARIANT` und `BSTR` Typen, intelligente Zeiger zu implementieren und zu kapseln die Error-Objekt, das ausgelöst wird, indem `_com_raise_error`:  
-  
--   [Globale COM-Funktionen des Compilers](../cpp/compiler-com-global-functions.md)  
-  
--   [_bstr_t](../cpp/bstr-t-class.md)  
-  
--   [_com_error](../cpp/com-error-class.md)  
-  
--   [_com_ptr_t](../cpp/com-ptr-t-class.md)  
-  
--   [_variant_t](../cpp/variant-t-class.md)  
-  
-**Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Compilerklassen für COM-Unterstützung](../cpp/compiler-com-support-classes.md)   
- [Globale COM-Funktionen des Compilers](../cpp/compiler-com-global-functions.md)
+
+## <a name="microsoft-specific"></a>Microsoft-spezifisch
+
+Der Visual C++-Compiler kann COM(Component Object Model)-Typbibliotheken direkt lesen und den Inhalt in C++-Quellcode übersetzen, der in die Kompilierung aufgenommen werden kann. Es sind Spracherweiterungen verfügbar, um die COM-Programmierung auf der Clientseite zu erleichtern.
+
+Mithilfe der [#import-präprozessoranweisung](../preprocessor/hash-import-directive-cpp.md), der Compiler kann eine Typbibliothek lesen und konvertiert ihn in eine C++-Headerdatei, die beschreibt, die COM-als Schnittstellen Klassen. Ein Satz von `#import`-Attributen ist für die Benutzersteuerung des Inhalts der resultierenden Typbibliothek-Headerdateien verfügbar.
+
+Sie können der [__declspec](../cpp/declspec.md) erweitertes Attribut [Uuid](../cpp/uuid-cpp.md) ein COM-Objekt einen global eindeutigen Bezeichner (GUID) zuweisen. Das Schlüsselwort [__uuidof](../cpp/uuidof-operator.md) können verwendet werden, um die COM-Objekt zugeordnete GUID zu extrahieren. Eine andere **__declspec** Attribut [Eigenschaft](../cpp/property-cpp.md), kann verwendet werden, um anzugeben der `get` und `set` Methoden für einen Datenmember eines COM-Objekts.
+
+Ein Satz von COM-Unterstützung globale Funktionen und Klassen dient zur Unterstützung der `VARIANT` und `BSTR` Typen, intelligente Zeiger zu implementieren und zu kapseln die Error-Objekt, das ausgelöst wird, indem `_com_raise_error`:
+
+- [Globale COM-Funktionen des Compilers](../cpp/compiler-com-global-functions.md)
+
+- [_bstr_t](../cpp/bstr-t-class.md)
+
+- [_com_error](../cpp/com-error-class.md)
+
+- [_com_ptr_t](../cpp/com-ptr-t-class.md)
+
+- [_variant_t](../cpp/variant-t-class.md)
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Compilerklassen für COM-Unterstützung](../cpp/compiler-com-support-classes.md)<br/>
+[Globale COM-Funktionen des Compilers](../cpp/compiler-com-global-functions.md)

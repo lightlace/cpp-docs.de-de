@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3896 | Microsoft Docs
+title: Compilerfehler C3896 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcc60c09d6fd99e56f0261409099e56713604a76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6714d356fa2f09bdfce2750ff31432b5b4e14461
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269737"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109729"
 ---
 # <a name="compiler-error-c3896"></a>Compilerfehler C3896
-'Member': Fehlerhafte Initialisierung: diesem literal-Datenmember kann nur mit "Nullptr" initialisiert werden  
-  
- Ein [literal](../../windows/literal-cpp-component-extensions.md) Datenmember wurde nicht ordnungsgemäß initialisiert.  Finden Sie unter [Nullptr](../../windows/nullptr-cpp-component-extensions.md) für Weitere Informationen.  
-  
- Im folgende Beispiel wird C3896 generiert:  
-  
-```  
-// C3896.cpp  
-// compile with: /clr /c  
-ref class R{};  
-  
-value class V {  
-   literal R ^ r = "test";   // C3896  
-   literal R ^ r2 = nullptr;   // OK  
-};  
+
+'Member': Fehlerhafte Initialisierung: Dieser literal-Datenmember kann nur mit "Nullptr" initialisiert werden
+
+Ein [literal](../../windows/literal-cpp-component-extensions.md) Datenmember wurde nicht ordnungsgemäß initialisiert.  Finden Sie unter ["nullptr"](../../windows/nullptr-cpp-component-extensions.md) für Weitere Informationen.
+
+Im folgende Beispiel wird die C3896 generiert:
+
+```
+// C3896.cpp
+// compile with: /clr /c
+ref class R{};
+
+value class V {
+   literal R ^ r = "test";   // C3896
+   literal R ^ r2 = nullptr;   // OK
+};
 ```

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55844390b872cb0d94ff991ab79b8519388d009f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3f32ff38008e55e656bf8901541ffc5ec7246bed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762459"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085991"
 ---
 # <a name="atl-global-variables"></a>Globale ATL-Variablen
 
@@ -30,19 +30,20 @@ ms.locfileid: "43762459"
 
 Eine globale Variable, die einen Zeiger auf das aktuelle Modul speichern.  
 
-```cpp  
-__declspec(selectany) CAtlModule * _pAtlModule  
-```  
+```cpp
+__declspec(selectany) CAtlModule * _pAtlModule
+```
+
 ### <a name="remarks"></a>Hinweise
 
 Methoden für diese globale Variable können verwendet werden, um die Funktionalität bereitzustellen, die die (nun veraltete) CComModule-Klasse in Visual C++ 6.0 bereitgestellt.
 
 ### <a name="example"></a>Beispiel
 
-```cpp  
-LONG lLocks = _pAtlModule->GetLockCount();  
-```  
+```cpp
+LONG lLocks = _pAtlModule->GetLockCount();
+```
+
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** atlbase.h  
-
+**Header:** atlbase.h

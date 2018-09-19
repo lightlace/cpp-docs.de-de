@@ -1,5 +1,5 @@
 ---
-title: ODBC und die Datenbankklassen | Microsoft Docs
+title: ODBC und die Datenbankklassen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,20 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: abbb20b76f8e24a9b0f20961728dd8e428733654
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bce3140818b46bd6cbb255794a08e9b0fa92fbd4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088466"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114968"
 ---
 # <a name="odbc-and-the-database-classes"></a>ODBC und die Datenbankklassen
-Die MFC-ODBC-Datenbankklassen zu kapseln, die Sie normalerweise selbst im Member-Funktionen von machen würden ODBC-API-Funktionsaufrufe der [CDatabase](../../mfc/reference/cdatabase-class.md) und [CRecordset](../../mfc/reference/crecordset-class.md) Klassen. Beispielsweise sind die komplexen ODBC Call-Sequenzen, die Bindung der zurückgegebenen Datensätze auf Speicherorte, Behandeln von Fehlerzuständen und andere Vorgänge für Sie von den Datenbankklassen verwaltet. Daher verwenden Sie eine wesentlich einfachere Klassenschnittstelle zum Bearbeiten von Datensätzen über einem Recordset-Objekt.  
+
+Die MFC-ODBC-Datenbankklassen kapseln, die Sie normalerweise Sie selbst im Member-Funktionen des machen würden ODBC-API-Funktionsaufrufe der [CDatabase](../../mfc/reference/cdatabase-class.md) und [CRecordset](../../mfc/reference/crecordset-class.md) Klassen. Beispielsweise werden die komplexe Abfolgen von ODBC-Aufruf, der Bindung an zurückgegebenen Datensätzen Speicherorte, Behandeln von Fehlerzuständen und andere Vorgänge für Sie von den Datenbankklassen verwaltet. Daher verwenden Sie eine wesentlich einfachere Klassenschnittstelle, um Datensätze mit einem Recordset-Objekt zu ändern.  
   
 > [!NOTE]
 >  Auf ODBC-Datenquellen können Sie über die MFC-ODBC-Klassen zugreifen, wie in diesem Thema beschrieben, oder über die MFC-Datenzugriffsobjekt-Klassen (DAO-Klassen).  
   
- Obwohl die Datenbankklassen ODBC-Funktionalität kapseln, bieten keine 1: 1-Zuordnung von ODBC-API-Funktionen. Die Datenbankklassen bieten ein höheres Maß an Abstraktion, die modelliert werden, nachdem der Datenzugriffs-Objekte in Microsoft Access und Microsoft Visual Basic gefunden. Weitere Informationen finden Sie unter [ODBC und MFC](../../data/odbc/odbc-and-mfc.md).  
+Obwohl die Datenbankklassen ODBC-Funktionen kapseln, bieten sie eine einfache Zuordnung der ODBC-API-Funktionen nicht. Die Datenbankklassen bieten eine höhere Abstraktionsebene, die modelliert werden, nachdem Datenzugriffs-Objekten in Microsoft Access und Microsoft Visual Basic gefunden. Weitere Informationen finden Sie unter [ODBC und MFC](../../data/odbc/odbc-and-mfc.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Grundlagen zu ODBC](../../data/odbc/odbc-basics.md)
+
+[Grundlagen zu ODBC](../../data/odbc/odbc-basics.md)

@@ -23,14 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d934e9ae5494b934acb0779665ba4471dfc4c2b7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7f148176b8d5d0c85f3e899cfd117bbb381794b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571691"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047394"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl-Klasse
+
 Stellt eine Implementierung für die [IDBCreateSession](/previous-versions/windows/desktop/ms724076\(v=vs.85\)) Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax
@@ -42,14 +43,16 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *T*  
- DER KLASSE ABGELEITET  
+
+*T*<br/>
+DER KLASSE ABGELEITET  
   
- *SessionClass*  
- Der Session-Objekt.  
+*SessionClass*<br/>
+Der Session-Objekt.  
 
 ## <a name="requirements"></a>Anforderungen  
- **Header:** „atldb.h“ 
+
+**Header:** „atldb.h“ 
   
 ## <a name="members"></a>Member  
   
@@ -60,9 +63,11 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
 |[CreateSession](#createsession)|Erstellt eine neue Sitzung über das Datenquellenobjekt, und gibt die angeforderte Schnittstelle zurück, auf die neu erstellte Sitzung.|  
   
 ## <a name="remarks"></a>Hinweise  
- Eine erforderliche Schnittstelle für Datenquellenobjekte.  
+
+Eine erforderliche Schnittstelle für Datenquellenobjekte.  
 
 ## <a name="createsession"></a> Idbcreatesessionimpl:: CreateSession
+
 Erstellt eine neue Sitzung über das Datenquellenobjekt, und gibt die angeforderte Schnittstelle zurück, auf die neu erstellte Sitzung.  
   
 ### <a name="syntax"></a>Syntax  
@@ -74,8 +79,10 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [IDBCreateSession:: CreateSession](/previous-versions/windows/desktop/ms714942\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.   
+
+Finden Sie unter [IDBCreateSession:: CreateSession](/previous-versions/windows/desktop/ms714942\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.   
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

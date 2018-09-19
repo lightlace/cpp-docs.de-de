@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4020 generiert | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4020 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bb7926e22802178ff3cbcb710fbc9b74e7138f4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef0303c1a811304cd2edaa8622208dc4bada86ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274566"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046731"
 ---
-# <a name="compiler-warning-level-1-c4020"></a>Compilerwarnung (Stufe 1) C4020 generiert
-'Funktion': zu viele aktuelle Parameter  
-  
- Die Anzahl der tatsächlichen Parameter in einem Funktionsaufruf überschreitet die Anzahl der formalen Parameter im Funktionsprototyp oder Definition. Der Compiler übergibt die zusätzlichen Parameter entsprechend der Aufrufkonvention der Funktion.  
-  
- Im folgende Beispiel wird C4020 generiert:  
-  
-```  
-// C4020.c  
-// compile with: /W1 /c  
-void f(int);  
-int main() {  
-   f(1,2);   // C4020  
-}  
-```  
-  
- Mögliche Lösung:  
-  
-```  
-// C4020b.c  
-// compile with: /c  
-void f(int);  
-int main() {  
-   f(1);  
-}  
+# <a name="compiler-warning-level-1-c4020"></a>Compilerwarnung (Stufe 1) C4020
+
+'Funktion': zu viele übergebene Parameter
+
+Die Anzahl der tatsächlichen Parameter in einem Funktionsaufruf überschreitet die Anzahl der formalen Parameter in der Funktionsprototyp oder Definition vor. Der Compiler übergibt die zusätzlich übergebenen Parameter entsprechend der Aufrufkonvention der Funktion.
+
+Im folgende Beispiel wird die C4020 generiert:
+
+```
+// C4020.c
+// compile with: /W1 /c
+void f(int);
+int main() {
+   f(1,2);   // C4020
+}
+```
+
+Mögliche Lösung:
+
+```
+// C4020b.c
+// compile with: /c
+void f(int);
+int main() {
+   f(1);
+}
 ```

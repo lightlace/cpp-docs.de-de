@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c56f8fe711980e038281baca7618bff08f0d3d9b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 042fe1a446137546654c8f0cfd5ee9be8072dcee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764942"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091828"
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl-Klasse
 
@@ -54,16 +54,16 @@ Diese Klasse stellt Methoden zum Implementieren eines-Snap-in-Node-Objekts.
 ## <a name="syntax"></a>Syntax
 
 ```
-template <class T, BOOL bIsExtension = FALSE>  
+template <class T, BOOL bIsExtension = FALSE>
 class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Abgeleitet von die Klasse `CSnapInItemImpl`.
 
-*bIsExtension*  
+*bIsExtension*<br/>
 True, wenn das Objekt eine-Snap-in-Erweiterung. andernfalls "false".
 
 ## <a name="members"></a>Member
@@ -127,10 +127,10 @@ AddMenuItems(
 
 ### <a name="parameters"></a>Parameter
 
-*piCallback*  
+*piCallback*<br/>
 [in] Zeiger auf die `IContextMenuCallback` können, die im Kontextmenü Elemente hinzufügen.
 
-*pInsertionAllowed*  
+*pInsertionAllowed*<br/>
 [in, out] Bezeichnet die Microsoft Management Console MMC benutzerdefinierte Menüelemente Einfügemarken, die verwendet werden können. Dies kann eine Kombination der folgenden Flags sein:
 
 - CCM_INSERTIONALLOWED_TOP Elemente können am oberen Rand eines Kontextmenüs eingefügt werden.
@@ -141,7 +141,7 @@ AddMenuItems(
 
 - CCM_INSERTIONALLOWED_VIEW Elemente können im Menü Ansicht Symbolleiste oder im Untermenü anzeigen des Kontextmenüs Ergebnis Bereich eingefügt werden.
 
-*Typ*  
+*Typ*<br/>
 [in] Gibt den Typ des Objekts. Es kann einen der folgenden Werte aufweisen:
 
 - CCT_SCOPE Datenobjekt, das für den Bereich im Bereich-Kontext.
@@ -162,10 +162,10 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 
 ### <a name="parameters"></a>Parameter
 
-*lCommandID*  
+*lCommandID*<br/>
 [in] Gibt den Befehlsbezeichner des Menüelements.
 
-*Typ*  
+*Typ*<br/>
 [in] Gibt den Typ des Objekts. Es kann einen der folgenden Werte aufweisen:
 
 - CCT_SCOPE Datenobjekt, das für den Bereich im Bereich-Kontext.
@@ -190,16 +190,16 @@ CreatePropertyPages(
 
 ### <a name="parameters"></a>Parameter
 
-*lpProvider*  
+*lpProvider*<br/>
 [in] Zeiger auf die `IPropertySheetCallback` Schnittstelle.
 
-*Handle*  
+*Handle*<br/>
 [in] Gibt das Handle, das die benachrichtigungsmeldung MMCN_PROPERTY_CHANGE an die entsprechenden Datenklasse weitergeleitet.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Zeiger auf die `IExtendPropertySheet` Schnittstelle für das Objekt, das Kontextinformationen über den Knoten enthält.
 
-*Typ*  
+*Typ*<br/>
 [in] Gibt den Typ des Objekts. Es kann einen der folgenden Werte aufweisen:
 
 - CCT_SCOPE Datenobjekt, das für den Bereich im Bereich-Kontext.
@@ -228,10 +228,10 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 
 ### <a name="parameters"></a>Parameter
 
-*CF*  
+*CF*<br/>
 [in] Das Format (Text, rich-Text oder rich-Text mit OLE-Elemente) aus der Zwischenablage.
 
-*pStream*  
+*pStream*<br/>
 [in] Ein Zeiger auf den Stream, der die Daten des Objekts enthält.
 
 ### <a name="remarks"></a>Hinweise
@@ -250,10 +250,10 @@ GetResultViewType(
 
 ### <a name="parameters"></a>Parameter
 
-*ppViewType*  
+*ppViewType*<br/>
 [out] Zeiger auf die Adresse des sichttyps zurückgegeben.
 
-*pViewOptions*  
+*pViewOptions*<br/>
 [out] Zeiger auf die MMC_VIEW_OPTIONS-Enumeration, die Konsole mit den Optionen, die gemäß der besitzenden-Snap-in bietet. Dieser Wert kann eine der folgenden sein:
 
 - MMC_VIEW_OPTIONS_NOLISTVIEWS = 0 x 00000001 weisen Sie die Konsole, davon absehen, von der Vorlage der Standardliste Ansicht Auswahl in der **Ansicht** Menü. Das Snap-in zum Anzeigen von eigenen benutzerdefinierten Ansichten nur im Ergebnisbereich anzeigen können. Dies ist das einzige Optionsflag zu diesem Zeitpunkt definiert.
@@ -270,7 +270,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
 
 ### <a name="parameters"></a>Parameter
 
-*pScopeDataItem*  
+*pScopeDataItem*<br/>
 [out] Ein Zeiger auf die `SCOPEDATAITEM` Struktur der `CSnapInItemImpl` Objekt.
 
 ##  <a name="getresultpaneinfo"></a>  CSnapInItemImpl::GetResultPaneInfo
@@ -283,7 +283,7 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
 
 ### <a name="parameters"></a>Parameter
 
-*pResultDataItem*  
+*pResultDataItem*<br/>
 [out] Ein Zeiger auf die `RESULTDATAITEM` Struktur der `CSnapInItemImpl` Objekt.
 
 ##  <a name="m_bstrdisplayname"></a>  CSnapInItemImpl::m_bstrDisplayName
@@ -326,7 +326,7 @@ STDMETHOD(Notify)(
 
 ### <a name="parameters"></a>Parameter
 
-*event*  
+*event*<br/>
 [in] Gibt eine Aktion, die von einem Benutzer an. Die folgenden Benachrichtigungen sind möglich:
 
 - MMCN_ACTIVATE gesendet, wenn ein Fenster wird aktiviert und deaktiviert.
@@ -357,19 +357,19 @@ STDMETHOD(Notify)(
 
 - MMCN_VIEW_CHANGE wird gesendet, wenn das Snap-in allen Ansichten aktualisieren, wenn eine Änderung vorgenommen wird.
 
-*arg*  
+*arg*<br/>
 [in] Hängt von der Benachrichtigungstyp.
 
-*param*  
+*param*<br/>
 [in] Hängt von der Benachrichtigungstyp.
 
-*pComponentData*  
+*pComponentData*<br/>
 [out] Ein Zeiger auf die objektimplementierung `IComponentData`. Dieser Parameter ist NULL, wenn die Benachrichtigung nicht über weitergeleitet wird `IComponentData::Notify`.
 
-*pComponent*  
+*pComponent*<br/>
 [out] Ein Zeiger auf das Objekt, das implementiert `IComponent`. Dieser Parameter ist NULL, wenn die Benachrichtigung nicht über weitergeleitet wird `IComponent::Notify`.
 
-*Typ*  
+*Typ*<br/>
 [in] Gibt den Typ des Objekts. Es kann einen der folgenden Werte aufweisen:
 
 - CCT_SCOPE Datenobjekt, das für den Bereich im Bereich-Kontext.
@@ -400,10 +400,10 @@ void SetMenuInsertionFlags(
 
 ### <a name="parameters"></a>Parameter
 
-*bBeforeInsertion*  
+*bBeforeInsertion*<br/>
 [in] Ungleich NULL ist, wenn die Funktion aufgerufen werden soll, bevor Sie das Kontextmenü Elemente hinzugefügt werden; andernfalls 0.
 
-*pInsertionAllowed*  
+*pInsertionAllowed*<br/>
 [in, out] Bezeichnet die Microsoft Management Console MMC benutzerdefinierte Menüelemente Einfügemarken, die verwendet werden können. Dies kann eine Kombination der folgenden Flags sein:
 
 - CCM_INSERTIONALLOWED_TOP Elemente können am oberen Rand eines Kontextmenüs eingefügt werden.
@@ -433,10 +433,10 @@ void SetToolbarButtonInfo(
 
 ### <a name="parameters"></a>Parameter
 
-*ID*  
+*ID*<br/>
 [in] Die ID des der Symbolleisten-Schaltfläche festgelegt werden.
 
-*fsState*  
+*fsState*<br/>
 [in] Die Zustandsflags der Schaltfläche. Hierbei kann es sich um eine oder mehrere der folgenden sein:
 
 - TBSTATE_CHECKED die Schaltfläche mit den hat des Format TBSTYLE_CHECKED und ist gedrückt wird.
@@ -451,7 +451,7 @@ void SetToolbarButtonInfo(
 
 - TBSTATE_WRAP ein Zeilenumbruch folgt auf die Schaltfläche. Die Schaltfläche muss auch die TBSTATE_ENABLED verfügen.
 
-*fsType*  
+*fsType*<br/>
 [in] Die Zustandsflags der Schaltfläche. Hierbei kann es sich um eine oder mehrere der folgenden sein:
 
 - TBSTYLE_BUTTON erstellt eine Standardschaltflächen.
@@ -477,13 +477,13 @@ void UpdateMenuState(
 
 ### <a name="parameters"></a>Parameter
 
-*ID*  
+*ID*<br/>
 [in] Die ID des Menüelements festgelegt werden.
 
-*pBuf*  
+*pBuf*<br/>
 [in] Ein Zeiger auf die Zeichenfolge für das Menüelement aktualisiert werden.
 
-*flags*  
+*flags*<br/>
 [in] Gibt die neue Statusflags. Dies kann eine Kombination der folgenden Flags sein:
 
 - MF_POPUP gibt an, dass dies ein Untermenü innerhalb des Kontextmenüs. Menüelemente, Einfügemarken und weiteren Untermenüs können hinzugefügt werden diese Untermenü mithilfe der `lCommandID` als ihre `IInsertionPointID`.
@@ -524,10 +524,10 @@ BOOL UpdateToolbarButton(UINT id, BYTE fsState);
 
 ### <a name="parameters"></a>Parameter
 
-*ID*  
+*ID*<br/>
 Gibt an, der Schaltflächen-ID der Symbolleisten-Schaltfläche aktualisiert werden.
 
-*fsState*  
+*fsState*<br/>
 Gibt den Symbolleisten-Schaltfläche-Status an. Wenn dieser Status ist festgelegt werden, TRUE zurück. Dies kann eine Kombination der folgenden Flags sein:
 
 - AKTIVIERT die Schaltfläche mit der Benutzereingaben akzeptiert. Eine Schaltfläche, die keine von diesem Status akzeptiert keine Benutzereingaben und abgeblendet.

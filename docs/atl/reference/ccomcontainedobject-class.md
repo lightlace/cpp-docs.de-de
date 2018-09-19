@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42aea64c0a6881dcc3ca9a3465a436b33f19ad6d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8f38fc3499ecc5956369a78c37f94358a1006cc2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761619"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108689"
 ---
 # <a name="ccomcontainedobject-class"></a>CComContainedObject-Klasse
 
@@ -41,13 +41,13 @@ Diese Klasse implementiert [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunk
 ## <a name="syntax"></a>Syntax
 
 ```
-template<class Base>  
+template<class Base>
 class CComContainedObject : public Base
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*Basis*  
+*Basis*<br/>
 Abgeleitet von die Klasse [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oder [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md).
 
 ## <a name="members"></a>Member
@@ -104,7 +104,7 @@ CComContainedObject(void* pv);
 
 ### <a name="parameters"></a>Parameter
 
-*PV*  
+*PV*<br/>
 [in] Der des Besitzerobjekts `IUnknown`.
 
 ### <a name="remarks"></a>Hinweise
@@ -151,13 +151,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Parameter
 
-*IID*  
+*IID*<br/>
 [in] Der Bezeichner der angeforderten Schnittstelle.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Ein Zeiger auf den Schnittstellenzeiger vom *Iid*. Wenn das Objekt nicht über diese Schnittstelle unterstützt *PpvObject* auf NULL festgelegt ist.
 
-*PP*  
+*PP*<br/>
 [out] Ein Zeiger auf den Schnittstellenzeiger vom Typ `Q`. Wenn das Objekt nicht über diese Schnittstelle unterstützt *pp* auf NULL festgelegt ist.
 
 ### <a name="return-value"></a>Rückgabewert

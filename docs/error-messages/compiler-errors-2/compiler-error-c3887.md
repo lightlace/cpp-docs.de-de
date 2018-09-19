@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3887 | Microsoft Docs
+title: Compilerfehler C3887 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24e407f99da3a2e525eff96ba00137baa5ed5869
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1238f648c7e5481127562d34dde193a278c3cf0f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270148"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047628"
 ---
 # <a name="compiler-error-c3887"></a>Compilerfehler C3887
-"Var": Initialisierer für ein literal-Datenmember muss ein konstanter Ausdruck sein  
-  
- Ein [literal](../../windows/literal-cpp-component-extensions.md) -Datenmember kann nur mit einem konstanten Ausdruck initialisiert werden.  
-  
- Im folgende Beispiel wird C3887 generiert:  
-  
-```  
-// C3887.cpp  
-// compile with: /clr  
-ref struct Y1 {  
-   static int i = 9;  
-   literal  
-   int staticConst = i;   // C3887  
-};  
-```  
-  
- Mögliche Lösung:  
-  
-```  
-// C3887b.cpp  
-// compile with: /clr /c  
-ref struct Y1 {  
-   literal  
-   int staticConst = 9;  
-};  
+
+'Var': der Initialisierer für ein literal-Datenmembers muss ein konstanter Ausdruck sein
+
+Ein [literal](../../windows/literal-cpp-component-extensions.md) -Datenmember kann nur mit einem konstanten Ausdruck initialisiert werden.
+
+Im folgende Beispiel wird die C3887 generiert:
+
+```
+// C3887.cpp
+// compile with: /clr
+ref struct Y1 {
+   static int i = 9;
+   literal
+   int staticConst = i;   // C3887
+};
+```
+
+Mögliche Lösung:
+
+```
+// C3887b.cpp
+// compile with: /clr /c
+ref struct Y1 {
+   literal
+   int staticConst = 9;
+};
 ```

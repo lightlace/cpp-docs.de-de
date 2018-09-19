@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4799 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4799 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f888d6a941ad487ce122e46c43582e1c96525c70
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3d83917289e5ad76a874587894a66e163fed90a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282937"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088227"
 ---
-# <a name="compiler-warning-level-1-c4799"></a>Compilerwarnung (Stufe 1) C4799  
-  
-> Keine EMMS am Ende der Funktion "*Funktion*"  
-  
-Die Funktion hat mindestens eine MMX-Anweisung, aber verfügt nicht über eine `EMMS` Anweisung. Wenn eine multimedia-Anweisung verwendet wird, ein `EMMS` Anweisung oder `_mm_empty` systeminterne sollte auch zum Löschen des Worts multimedia-Tag, am Ende der MMX-Code verwendet werden.  
-  
-Führen Sie die EMMS-Anweisung vor der Rückgabe Verwendung von ivec.h, dass der Code nicht ordnungsgemäß verwendet wird, erhalten Sie möglicherweise C4799. Dies ist eine "false" Warnung für diese Header. Sie können Sie deaktivieren, indem Sie _SILENCE_IVEC_C4799 in ivec.h definieren. Denken Sie jedoch, dass dadurch auch den Compiler beibehalten werden sollen, über das Erteilen der richtigen Warnungen dieses Typs.  
-  
+# <a name="compiler-warning-level-1-c4799"></a>Compilerwarnung (Stufe 1) C4799
+
+> Keine EMMS-Funktion "*Funktion*"
+
+Die Funktion verfügt über mindestens eine MMX-Anweisung, aber verfügt nicht über eine `EMMS` Anweisung. Wenn eine multimedia-Anweisung verwendet wird, eine `EMMS` Anweisung oder `_mm_empty` systeminterne sollte auch zum Deaktivieren Sie des Worts multimedia-Tag, am Ende der MMX-Code verwendet werden.
+
+Sie erhalten möglicherweise C4799, bei der Verwendung von ivec.h, dass der Code nicht ordnungsgemäß verwendet wird, führen die EMMS-Anweisung vor der Rückgabe. Dies ist eine "false" Warnung für diese Header. Sie können Sie deaktivieren, indem _SILENCE_IVEC_C4799 in ivec.h definieren. Bedenken Sie jedoch, dass dies auch den Compiler aus, sodass richtige Warnungen dieses Typs beibehält.
+
 Weitere Informationen finden Sie unter [Intel MMX-Befehlssatz](../../assembler/inline/intel-s-mmx-instruction-set.md).

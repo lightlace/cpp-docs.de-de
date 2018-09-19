@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 099bd36908ef12d2cd4c6b4603dc047d7ed6e74f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: aefb11f8028aa2af9822bc6433e85d06d0609a9d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107602"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039165"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency:: Direct3D Namespace-Funktionen (AMP)
 ||||
@@ -60,7 +60,7 @@ inline int abs(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Ganzzahliger Wert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -83,13 +83,13 @@ inline int clamp(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Der zu bindende Wert
 
-`_Min`  
+*_Min*<br/>
 Die untere Grenze des gebundenen Bereichs.
 
-`_Max`  
+*_Max*<br/>
 Die obere Grenze des gebundenen Bereichs.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -103,7 +103,7 @@ inline unsigned int countbits(unsigned int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Ganzzahlwert ohne Vorzeichen
 
 ### <a name="return-value"></a>Rückgabewert
@@ -126,16 +126,16 @@ accelerator_view create_accelerator_view(
 ```  
 
 #### <a name="parameters"></a>Parameter
-`_Accelerator`  
+*_Accelerator*<br/>
 Die Zugriffstaste, auf der das neue accelerator_view-Objekt erstellt werden soll.
 
-`_D3D_device`  
+*_D3D_device*<br/>
 Der Zeiger auf die Schnittstelle eines Direct3D-Geräts.
 
-`_Disable_timeout`  
+*_Disable_timeout*<br/>
 Ein boolescher Parameter, der angibt, ob das Timeout für das neu erstellte accelerator_view-Objekt deaktiviert werden sollte. Dies entspricht dem D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT-Flag für die Erstellung von Direct3D-Geräten und wird verwendet, um anzugeben, ob das Betriebssystem Arbeitslasten zulässt, deren Ausführung mehr als 2 Sekunden dauert, ohne das Gerät über den Windows-TDR-Mechanismus (Timeout Detection and Recovery) zurückzusetzen. Die Verwendung dieses Flags wird empfohlen, wenn Sie zeitintensive Aufgaben im accelerator_view-Objekt ausführen müssen.
 
-`_Qmode`  
+*_Qmode*<br/>
 Die [Queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) für das neu erstellte accelerator_view-Objekt verwendet werden soll. Der Standardwert dieses Parameters ist `queuing_mode_automatic`.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -157,7 +157,7 @@ void __cdecl d3d_access_lock(accelerator_view& _Av);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_Av`  
+*_Av*<br/>
 Die zu sperrende "accelerator_view".
 
 ##  <a name="d3d_access_try_lock"></a>  d3d_access_try_lock
@@ -168,7 +168,7 @@ bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_Av`  
+*_Av*<br/>
 Die zu sperrende "accelerator_view".
 
 ### <a name="return-value"></a>Rückgabewert
@@ -182,7 +182,7 @@ void __cdecl d3d_access_unlock(accelerator_view& _Av);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_Av`  
+*_Av*<br/>
 Die „accelerator_view“, für die die Sperre aufgehoben werden soll.
 
 ##  <a name="firstbithigh"></a>  firstbithigh
@@ -193,7 +193,7 @@ inline int firstbithigh(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Ganzzahliger Wert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -207,7 +207,7 @@ inline int firstbitlow(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Ganzzahliger Wert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -226,13 +226,13 @@ IUnknown *get_buffer(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`value_type`  
+*value_type*<br/>
 Der Typ der Elemente im Array.
 
-`_Rank`  
+*_Rank*<br/>
 Der Rang des Arrays.
 
-`_Array`  
+*_Array*<br/>
 Ein Array auf einem Direct3D-accelerator_view_Objekt, für das die zugrunde liegende Direct3D-Pufferschnittstelle zurückgegeben wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -263,10 +263,10 @@ inline int imax(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Ganzzahliger Wert
 
-`_Y`  
+*_Y*<br/>
 Ganzzahliger Wert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -282,10 +282,10 @@ inline int imin(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Ganzzahliger Wert
 
-`_Y`  
+*_Y*<br/>
 Ganzzahliger Wert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -299,7 +299,7 @@ bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_Accelerator_view`  
+*_Accelerator_view*<br/>
 Die "accelerator_view", für die die deaktivierte Timeouteinstellung, abgefragt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -334,13 +334,13 @@ inline unsigned int mad(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Das erste angegebene Argument.
 
-`_Y`  
+*_Y*<br/>
 Das zweite angegebene Argument.
 
-`_Z`  
+*_Z*<br/>
 Das dritte angegebene Argument.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -361,19 +361,19 @@ array<value_type, _Rank> make_array(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`value_type`  
+*value_type*<br/>
 Der Elementtyp des zu erstellenden Arrays.
 
-`_Rank`  
+*_Rank*<br/>
 Der Rang des zu erstellenden Arrays.
 
-`_Extent`  
+*_Extent*<br/>
 Ein Wertebereich, der die Form des Arrayaggregats beschreibt.
 
-`_Rv`  
+*_Rv*<br/>
 Eine D3D-Zugriffstastenansicht, in der das Array erstellt werden soll.
 
-`_D3D_buffer`  
+*_D3D_buffer*<br/>
 IUnknown-Schnittstellenzeiger des D3D-Puffers zum Erstellen des Arrays.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -387,7 +387,7 @@ inline float noise(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert aus dem Perlin-Noise generiert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -401,7 +401,7 @@ inline float radians(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -418,7 +418,7 @@ inline double rcp(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Der Wert, für den der Kehrwert berechnet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -432,7 +432,7 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Ganzzahlwert ohne Vorzeichen
 
 ### <a name="return-value"></a>Rückgabewert
@@ -446,7 +446,7 @@ inline float saturate(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -460,7 +460,7 @@ inline int sign(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Ganzzahliger Wert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -477,13 +477,13 @@ inline float smoothstep(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_Min`  
+*_Min*<br/>
 Gleitkommawert
 
-`_Max`  
+*_Max*<br/>
 Gleitkommawert
 
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -499,10 +499,10 @@ inline float step(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_Y`  
+*_Y*<br/>
 Gleitkommawert
 
-`_X`  
+*_X*<br/>
 Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -518,10 +518,10 @@ inline unsigned int umax(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Ganzzahliger Wert
 
-`_Y`  
+*_Y*<br/>
 Ganzzahliger Wert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -537,10 +537,10 @@ inline unsigned int umin(
 ```  
 
 ### <a name="parameters"></a>Parameter
-`_X`  
+*_X*<br/>
 Ganzzahliger Wert
 
-`_Y`  
+*_Y*<br/>
 Ganzzahliger Wert
 
 ### <a name="return-value"></a>Rückgabewert

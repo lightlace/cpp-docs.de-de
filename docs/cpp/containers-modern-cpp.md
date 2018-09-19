@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d740bb36c1d574e474058c05d900d605c71e55f0
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1a05eada2b5828cfc654496355bddcabcafc8d60
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406333"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086147"
 ---
 # <a name="containers-modern-c"></a>Container (Modern C++)
 
@@ -48,6 +48,7 @@ Verwenden Sie keine Arrays im C-Stil. Für ältere APIs, die Zugriff auf die Dat
 Weitere Informationen zu Containern finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).
 
 ## <a name="see-also"></a>Siehe auch
- [Willkommen zurück bei C++](../cpp/welcome-back-to-cpp-modern-cpp.md)  
- [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)  
- [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)  
+
+[Willkommen zurück bei C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
+[C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)

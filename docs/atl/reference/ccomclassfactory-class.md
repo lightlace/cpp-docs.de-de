@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf6f830441482e17bd45c331f4281cb49312337
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ebf8112650cf1908225d0fc2c79d61d26dd606fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765098"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051008"
 ---
 # <a name="ccomclassfactory-class"></a>CComClassFactory-Klasse
 
@@ -79,13 +79,13 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 ### <a name="parameters"></a>Parameter
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in] Wenn das Objekt dann als Teil eines Aggregats erstellt wird *pUnkOuter* muss die äußere unbekannte sein. Andernfalls *pUnkOuter* muss NULL sein.
 
-*riid*  
+*riid*<br/>
 [in] Die IID der angeforderten Schnittstelle. Wenn *pUnkOuter* ungleich NULL, *Riid* muss `IID_IUnknown`.
 
-*ppvObj*  
+*ppvObj*<br/>
 [out] Ein Zeiger auf den Schnittstellenzeiger vom *Riid*. Wenn das Objekt nicht über diese Schnittstelle unterstützt *PpvObj* auf NULL festgelegt ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -102,7 +102,7 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="parameters"></a>Parameter
 
-*Bestand*  
+*Bestand*<br/>
 [in] True gibt an, die Anzahl der Sperren erhöht. Andernfalls ist die Anzahl der Sperren verringert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -117,6 +117,6 @@ Aufrufen von `LockServer` kann ein Client eine Klassenfactory enthalten, damit m
 
 ## <a name="see-also"></a>Siehe auch
 
-[CComObjectRootEx-Klasse](../../atl/reference/ccomobjectrootex-class.md)   
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+[CComObjectRootEx-Klasse](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

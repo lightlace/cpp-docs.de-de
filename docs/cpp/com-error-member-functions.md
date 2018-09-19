@@ -14,15 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dccbf5cb312dcbced034ad2987b7f9a620b8d161
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: dd8ec72b20911184271f2a927d81ae0c5a19e925
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404700"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053939"
 ---
 # <a name="comerror-member-functions"></a>_com_error-Memberfunktionen
-Informationen zu den **_com_error** Member-Funktionen, finden Sie unter [_com_error-Klasse](../cpp/com-error-class.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [_com_error-Klasse](../cpp/com-error-class.md)
+
+Informationen zu den **_com_error** Member-Funktionen, finden Sie unter [_com_error-Klasse](../cpp/com-error-class.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[_com_error-Klasse](../cpp/com-error-class.md)

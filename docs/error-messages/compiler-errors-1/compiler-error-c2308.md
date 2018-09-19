@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2308 | Microsoft Docs
+title: Compilerfehler C2308 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4523fd23f0900172e80cf71fd748a9f939deb044
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 24c01565f03bafa1b0bf1c20c4fb967cde3fc5b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169074"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091971"
 ---
 # <a name="compiler-error-c2308"></a>Compilerfehler C2308
-nicht übereinstimmende Zeichenfolgen verketten  
-  
- Beide Zeichenfolgen breit und nicht-Wide wurden für die Verkettung angegeben. Sie können keine Zeichenfolge mit Breitzeichen und nicht-Breitzeichen-Zeichenfolge verketten.
+
+nicht übereinstimmende Zeichenfolgen verketten
+
+Für die Verkettung wurden beide breit und nicht-Breitzeichen-Zeichenfolgen angegeben. Sie können keine Zeichenfolge mit Breitzeichen und der nicht-Breitzeichen-Zeichenfolge verketten.

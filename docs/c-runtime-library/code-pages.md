@@ -22,20 +22,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 203467eea055927ac7eb8d5ccf8a90242c62d33a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a81b358a89f3ed16747d27bc6401c01ad194680
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388616"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113720"
 ---
 # <a name="code-pages"></a>Codepages
 
 Eine *Codepage* ist ein Zeichensatz, der Zahlen, Interpunktionszeichen und andere Glyphen enthalten kann. Von unterschiedlichen Sprachen und Gebietsschemas werden möglicherweise unterschiedliche Codepages verwendet. Die ANSI-Codepage 1252 wird z.B. für Englisch und die meisten europäischen Sprachen verwendet, während die OEM-Codepage 932 für das japanische Kanji eingesetzt wird.
 
- Eine Codepage kann in einer Tabelle als Zuordnung von Zeichen zu Einzelbyte- oder Multibyte-Werten dargestellt werden. Viele Codepages verwenden den ASCII-Zeichensatz für Zeichen im Bereich von 0x00 bis 0x7F.
+Eine Codepage kann in einer Tabelle als Zuordnung von Zeichen zu Einzelbyte- oder Multibyte-Werten dargestellt werden. Viele Codepages verwenden den ASCII-Zeichensatz für Zeichen im Bereich von 0x00 bis 0x7F.
 
- Die Microsoft-Laufzeitbibliothek verwendet die folgenden Typen von Codepages:
+Die Microsoft-Laufzeitbibliothek verwendet die folgenden Typen von Codepages:
 
 - Standard-ANSI-Codepage des Systems. In der Standardeinstellung legt das Laufzeitsystem beim Start die Multibyte-Codepage automatisch auf die Standard-ANSI-Codepage des Systems fest, die aus dem Betriebssystem abgerufen wird. Der Aufruf
 
@@ -54,4 +54,4 @@ Eine *Codepage* ist ein Zeichensatz, der Zahlen, Interpunktionszeichen und ander
 ## <a name="see-also"></a>Siehe auch
 
 [Internationalisierung](../c-runtime-library/internationalization.md)<br/>
- [Universelle C-Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Universelle C-Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

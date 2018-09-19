@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2179 | Microsoft Docs
+title: Compilerfehler C2179 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c12d7235cc146f080d74ffb09361dd691f7e1ba9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1b56437dfe5b9be75ae93dea46890d408ea2dc66
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170332"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111629"
 ---
 # <a name="compiler-error-c2179"></a>Compilerfehler C2179
-'Typ': Ein Attributargument kann keine Typparameter verwenden  
-  
- Ein generischer Typparameter ist zur Laufzeit aufgelöst. Ein Attributparameter muss jedoch zum Zeitpunkt der Kompilierung aufgelöst werden. Deshalb ist es nicht möglich, einen generischen Typparameter als Argument für ein Attribut verwenden.  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C2179 generiert.  
-  
-```  
-// C2179.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-public ref struct Attr : Attribute {  
-   Attr(Type ^ a) {  
-      x = a;  
-   }  
-  
-   Type ^ x;  
-};  
-  
-ref struct G {};  
-  
-generic<typename T>   
-public ref class Z {   
-public:  
-   Type ^ d;  
-   [Attr(T::typeid)]   // C2179  
-   // try the following line instead  
-   // [Attr(G::typeid)]  
-   T t;  
-};  
+
+'Typ': Ein Attributargument kann keine Typparameter verwenden.
+
+Ein generischer Typparameter wird zur Laufzeit aufgelöst. Allerdings muss ein Attributparameter, zum Zeitpunkt der Kompilierung der aufgelöst werden. Sie können einen generischen Typparameter aus diesem Grund können nicht als Argument für ein Attribut verwenden.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C2179 generiert.
+
+```
+// C2179.cpp
+// compile with: /clr
+using namespace System;
+
+public ref struct Attr : Attribute {
+   Attr(Type ^ a) {
+      x = a;
+   }
+
+   Type ^ x;
+};
+
+ref struct G {};
+
+generic<typename T>
+public ref class Z {
+public:
+   Type ^ d;
+   [Attr(T::typeid)]   // C2179
+   // try the following line instead
+   // [Attr(G::typeid)]
+   T t;
+};
 ```

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cb05f61d3cd90177fe5e44ce432430ba8f74dd5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: af215609ac9579a357539a0d2d0a85c78f6dbc13
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754812"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017962"
 ---
 # <a name="cdynamicchain-class"></a>CDynamicChain-Klasse
 
@@ -104,22 +104,22 @@ BOOL CallChain(
 
 ### <a name="parameters"></a>Parameter
 
-*dwChainID*  
+*dwChainID*<br/>
 [in] Der eindeutige Bezeichner, der das verkettete Objekt und seine meldungszuordnung, zugeordnet ist.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Das Handle für das Fenster mit dem Empfang der Nachricht.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Die Meldung, die an das Fenster gesendet wird.
 
-*wParam-Parameter*  
+*wParam-Parameter*<br/>
 [in] Zusätzliche meldungsspezifische Informationen.
 
-*lParam*  
+*lParam*<br/>
 [in] Zusätzliche meldungsspezifische Informationen.
 
-*lResult*  
+*lResult*<br/>
 [out] Das Ergebnis der Nachrichtenverarbeitung.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -162,7 +162,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 
 ### <a name="parameters"></a>Parameter
 
-*dwChainID*  
+*dwChainID*<br/>
 [in] Der eindeutige Bezeichner, der das verkettete Objekt und seine meldungszuordnung, zugeordnet ist. Sie definieren ursprünglich diesen Wert durch einen Aufruf von [SetChainEntry](#setchainentry).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -182,13 +182,13 @@ BOOL SetChainEntry(
 
 ### <a name="parameters"></a>Parameter
 
-*dwChainID*  
+*dwChainID*<br/>
 [in] Der eindeutige Bezeichner, der das verkettete Objekt und seine meldungszuordnung, zugeordnet ist.
 
-*pObject*  
+*pObject*<br/>
 [in] Ein Zeiger auf das verkettete Objekt deklarieren die meldungszuordnung. Dieses Objekt muss abgeleitet [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Der Bezeichner der Nachricht Zuordnung in den verketteten-Objekt. Der Standardwert ist 0 (null) und die Standard-meldungszuordnung, die mit deklariert identifiziert [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). An einem alternativen meldungszuordnung, die mit deklariert [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), übergeben Sie `msgMapID`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -201,5 +201,5 @@ Wenn die *DwChainID* Wert in der Auflistung bereits vorhanden ist, durch die zug
 
 ## <a name="see-also"></a>Siehe auch
 
-[CWindowImpl-Klasse](../../atl/reference/cwindowimpl-class.md)   
+[CWindowImpl-Klasse](../../atl/reference/cwindowimpl-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

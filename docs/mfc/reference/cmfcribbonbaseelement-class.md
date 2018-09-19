@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db46ca389272674da215801c0da83f38e7a3ef2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a0200f15ab7a5c97699165a34d52ec6ce1f239e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703884"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136334"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement-Klasse
 Die `CMFCRibbonBaseElement` -Klasse ist die Basisklasse für alle Elemente, die Sie hinzufügen können eine [menübandleiste](../../mfc/reference/cmfcribbonbar-class.md). Beispiele für Menübandelemente sind Menübandschaltflächen, Menübandkontrollkästchen und Menübandkombinationsfelder.  
@@ -568,12 +568,11 @@ virtual void DrawImage(
  Standardmäßig führt diese Methode keine Aktion. Überschreiben Sie diese Methode in einer abgeleiteten Klasse zum Zeichnen des Bilds für das Menübandelement.  
   
  Die folgende Tabelle enthält die möglichen Werte für die *Typ* Parameter:  
-  
- `RibbonImageLarge`  
- 32 x 32 Pixel großes Bildgröße.  
-  
- `RibbonImageSmall`  
- Kleine 16 x 16-Pixel-Bildgröße.  
+
+|||
+|-|-|
+| `RibbonImageLarge`  | 32 x 32 Pixel großes Bildgröße.  |
+| `RibbonImageSmall`  | Kleine 16 x 16-Pixel-Bildgröße.  |
   
 ##  <a name="find"></a>  CMFCRibbonBaseElement::Find  
  Gibt den angegebenen Zeiger zurück, wenn es auf das aktuelle Objekt verweist.  

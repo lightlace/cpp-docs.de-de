@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3714 | Microsoft Docs
+title: Compilerfehler C3714 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0046463b7354d0b764e29701bddb117496858e14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7102378acc2fe12335f1f2b3579f93cf02161b16
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266398"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109651"
 ---
 # <a name="compiler-error-c3714"></a>Compilerfehler C3714
-'Methode': eine Ereignishandlermethode muss die gleiche Aufrufkonvention als Quelle für 'Methode' haben  
-  
- Sie definiert eine Ereignishandlermethode, die nicht die gleiche Aufrufkonvention als die Quellereignismethode verwendet haben. Um diesen Fehler zu beheben, geben Sie der Ereignishandlermethode die gleichen Aufrufkonventionen als die von der Quellereignismethode. Stellen Sie z. B. in den folgenden Code die Aufrufkonventionen von `handler1` und `event1` entsprechen ([__cdecl](../../cpp/cdecl.md) oder [__stdcall](../../cpp/stdcall.md) oder andere). Entfernen von Aufrufen von Konvention Schlüsselwörter aus beiden Deklarationen ebenfalls dieses Problem beheben, und dazu führen, dass `event1` und `handler1` standardmäßig ist die [Thiscall](../../cpp/thiscall.md) Aufrufkonvention. Finden Sie unter [Aufrufkonventionen](../../cpp/calling-conventions.md) für Weitere Informationen.  
-  
- Im folgende Beispiel wird C3714 generiert:  
-  
-```  
-// C3714.cpp  
-// compile with: /c  
-// processor: x86  
-[event_source(native)]  
-class CEventSrc {  
-public:  
-   __event void __cdecl event1();  
-   // try the following line instead  
-   // __event void __stdcall event1();  
-};  
-  
-[event_receiver(native)]  
-class CEventRec {  
-public:  
-   void __stdcall handler1() {}  
-  
-   void HookEvents(CEventSrc* pSrc) {  
-      __hook(&CEventSrc::event1, pSrc, &CEventRec::handler1);   // C3714  
-   }  
-  
-   void UnhookEvents(CEventSrc* pSrc) {  
-      __unhook(&CEventSrc::event1, pSrc, &CEventRec::handler1); // C3714  
-   }  
-};  
+
+"Method": eine Ereignishandlermethode muss dieselbe Aufrufkonvention wie die Quelle 'Methode' haben
+
+Sie definiert eine Ereignishandlermethode, die nicht dieselbe Aufrufkonvention wie die Quelle Ereignis-Methode verwendet haben. Um diesen Fehler zu beheben, geben Sie der Ereignishandlermethode die Konventionen für die gleichen aufrufen wie die Quell-Methode. Stellen Sie z. B. in den folgenden Code, die Aufrufkonventionen der `handler1` und `event1` entsprechen ([__cdecl](../../cpp/cdecl.md) oder [__stdcall](../../cpp/stdcall.md) oder andere). Entfernen von Aufrufen Konvention Schlüsselwörter aus beiden Deklarationen wird auch das Problem lösen, und dazu führen, dass `event1` und `handler1` standardmäßig ist die [Thiscall](../../cpp/thiscall.md) Aufrufkonvention. Finden Sie unter [Aufrufkonventionen](../../cpp/calling-conventions.md) für Weitere Informationen.
+
+Im folgende Beispiel wird die C3714 generiert:
+
+```
+// C3714.cpp
+// compile with: /c
+// processor: x86
+[event_source(native)]
+class CEventSrc {
+public:
+   __event void __cdecl event1();
+   // try the following line instead
+   // __event void __stdcall event1();
+};
+
+[event_receiver(native)]
+class CEventRec {
+public:
+   void __stdcall handler1() {}
+
+   void HookEvents(CEventSrc* pSrc) {
+      __hook(&CEventSrc::event1, pSrc, &CEventRec::handler1);   // C3714
+   }
+
+   void UnhookEvents(CEventSrc* pSrc) {
+      __unhook(&CEventSrc::event1, pSrc, &CEventRec::handler1); // C3714
+   }
+};
 ```

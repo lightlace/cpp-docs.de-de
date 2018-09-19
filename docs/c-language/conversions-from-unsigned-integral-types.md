@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a8a77e898feb6676487c557b8e96d54dc793ace
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 38ef2c16c92322ae54dcc6dd7d577268daf74831
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391521"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058275"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Konvertierungen von ganzzahligen Typen ohne Vorzeichen
 
@@ -82,4 +82,4 @@ Der **unsigned int**-Typ entspricht für den Microsoft C-Compiler dem **unsigned
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zuweisungskonvertierungen](../c-language/assignment-conversions.md)  
+[Zuweisungskonvertierungen](../c-language/assignment-conversions.md)

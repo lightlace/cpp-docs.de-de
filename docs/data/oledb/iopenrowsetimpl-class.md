@@ -25,14 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4de30a1abdf111f171ad49a028a25cc2683cbef4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 84050dcf4faed8bb99b871d3b797400c1ed5620e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573341"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086953"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl-Klasse
+
 Stellt die Implementierung für die `IOpenRowset` Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax
@@ -43,11 +44,13 @@ class IOpenRowsetImpl : public IOpenRowset
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *SessionClass*  
- Abgeleitet von die Klasse `IOpenRowsetImpl`.  
+
+*SessionClass*<br/>
+Abgeleitet von die Klasse `IOpenRowsetImpl`.  
 
 ## <a name="requirements"></a>Anforderungen  
- **Header:** „atldb.h“  
+
+**Header:** „atldb.h“  
   
 ## <a name="members"></a>Member  
   
@@ -59,9 +62,11 @@ class IOpenRowsetImpl : public IOpenRowset
 |[OpenRowset](#openrowset)|Öffnet und gibt ein Rowset, das alle Zeilen aus einer einzelnen Basistabelle oder einem Index enthält. (Nicht im ATLDB. H)|  
   
 ## <a name="remarks"></a>Hinweise  
- Die [IOpenRowset](/previous-versions/windows/desktop/ms716946\(v=vs.85\)) Schnittstelle ist erforderlich, damit ein Sitzungsobjekt. Es wird geöffnet und gibt ein Rowset, das alle Zeilen aus einer einzelnen Basistabelle oder einem Index enthält.  
+
+Die [IOpenRowset](/previous-versions/windows/desktop/ms716946\(v=vs.85\)) Schnittstelle ist erforderlich, damit ein Sitzungsobjekt. Es wird geöffnet und gibt ein Rowset, das alle Zeilen aus einer einzelnen Basistabelle oder einem Index enthält.  
   
 ## <a name="createrowset"></a> Iopenrowsetimpl:: CreateRowset
+
 Erstellt ein Rowsetobjekt. Nicht direkt vom Benutzer aufgerufen. Finden Sie unter [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) in die *OLE DB-Programmierreferenz.*  
   
 ### <a name="syntax"></a>Syntax  
@@ -79,15 +84,17 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *RowsetClass*  
- Ein Member von Vorlage-Klasse, die Rowset-Klasse für den Benutzer darstellt. In der Regel vom Assistenten generiert.  
+
+*RowsetClass*<br/>
+Ein Member von Vorlage-Klasse, die Rowset-Klasse für den Benutzer darstellt. In der Regel vom Assistenten generiert.  
   
- *pRowsetObj*  
- [out] Ein Zeiger auf eine Rowset-Objekt. Dieser Parameter wird in der Regel nicht verwendet, aber es kann verwendet werden, wenn Sie mehr Arbeit für das Rowset ausführen müssen, vor der Übergabe an ein COM-Objekt. Die Lebensdauer des *pRowsetObj* gebunden ist, indem *PpRowset*.  
+*pRowsetObj*<br/>
+[out] Ein Zeiger auf eine Rowset-Objekt. Dieser Parameter wird in der Regel nicht verwendet, aber es kann verwendet werden, wenn Sie mehr Arbeit für das Rowset ausführen müssen, vor der Übergabe an ein COM-Objekt. Die Lebensdauer des *pRowsetObj* gebunden ist, indem *PpRowset*.  
   
- Andere Parameter, finden Sie unter [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) in die *OLE DB-Programmiererreferenz.*  
+Andere Parameter, finden Sie unter [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) in die *OLE DB-Programmiererreferenz.*  
 
 ## <a name="openrowset"></a> Iopenrowsetimpl:: OPENROWSET
+
 Öffnet und gibt ein Rowset, das alle Zeilen aus einer einzelnen Basistabelle oder einem Index enthält.  
   
 ### <a name="syntax"></a>Syntax  
@@ -103,11 +110,14 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+
+Finden Sie unter [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode wird in ATLDB nicht gefunden. H. Sie wird von ATL-Objektassistenten erstellt, wenn Sie einen Anbieter erstellen.  
+
+Diese Methode wird in ATLDB nicht gefunden. H. Sie wird von ATL-Objektassistenten erstellt, wenn Sie einen Anbieter erstellen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

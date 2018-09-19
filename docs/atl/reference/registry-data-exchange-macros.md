@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1864fb953c53cba562856fed24a44b6157a03603
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a8a4ac19f9ead379b66d93a7be031bb53bc50fe5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764214"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109339"
 ---
 # <a name="registry-data-exchange-macros"></a>Registrierungsdatenaustausch-Makros
 
@@ -89,19 +89,19 @@ RDX_BINARY(
 
 ### <a name="parameters"></a>Parameter
 
-*RootKey*  
+*RootKey*<br/>
 Der Schlüssel Registrierungsstamm.
 
-*Unterschlüssel*  
+*Unterschlüssel*<br/>
 Der Registrierungsunterschlüssel.
 
-*Wertname*  
+*Wertname*<br/>
 Der Registrierungsschlüssel.
 
-*Member*  
+*Member*<br/>
 Die Membervariable des angegebenen Registrierungseintrags zugeordnet werden soll.
 
-*member_size*  
+*member_size*<br/>
 Die Größe in Bytes der Membervariable.
 
 ### <a name="remarks"></a>Hinweise
@@ -123,19 +123,19 @@ RDX_CSTRING_TEXT(
 
 ### <a name="parameters"></a>Parameter
 
-*RootKey*  
+*RootKey*<br/>
 Der Schlüssel Registrierungsstamm.
 
-*Unterschlüssel*  
+*Unterschlüssel*<br/>
 Der Registrierungsunterschlüssel.
 
-*Wertname*  
+*Wertname*<br/>
 Der Registrierungsschlüssel.
 
-*Member*  
+*Member*<br/>
 Die Membervariable des angegebenen Registrierungseintrags zugeordnet werden soll.
 
-*member_size*  
+*member_size*<br/>
 Die Größe in Bytes der Membervariable.
 
 ### <a name="remarks"></a>Hinweise
@@ -157,19 +157,19 @@ RDX_DWORD(
 
 ### <a name="parameters"></a>Parameter
 
-*RootKey*  
+*RootKey*<br/>
 Der Schlüssel Registrierungsstamm.
 
-*Unterschlüssel*  
+*Unterschlüssel*<br/>
 Der Registrierungsunterschlüssel.
 
-*Wertname*  
+*Wertname*<br/>
 Der Registrierungsschlüssel.
 
-*Member*  
+*Member*<br/>
 Die Membervariable des angegebenen Registrierungseintrags zugeordnet werden soll.
 
-*member_size*  
+*member_size*<br/>
 Die Größe in Bytes der Membervariable.
 
 ### <a name="remarks"></a>Hinweise
@@ -191,19 +191,19 @@ RDX_TEXT(
 
 ### <a name="parameters"></a>Parameter
 
-*RootKey*  
+*RootKey*<br/>
 Der Schlüssel Registrierungsstamm.
 
-*Unterschlüssel*  
+*Unterschlüssel*<br/>
 Der Registrierungsunterschlüssel.
 
-*Wertname*  
+*Wertname*<br/>
 Der Registrierungsschlüssel.
 
-*Member*  
+*Member*<br/>
 Die Membervariable des angegebenen Registrierungseintrags zugeordnet werden soll.
 
-*member_size*  
+*member_size*<br/>
 Die Größe in Bytes der Membervariable.
 
 ### <a name="remarks"></a>Hinweise
@@ -212,6 +212,6 @@ Dieses Makro wird in Verbindung mit den Makros BEGIN_RDX_MAP und END_RDX_MAP ver
 
 ## <a name="see-also"></a>Siehe auch
 
-[Makros](../../atl/reference/atl-macros.md)   
+[Makros](../../atl/reference/atl-macros.md)<br/>
 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)
 

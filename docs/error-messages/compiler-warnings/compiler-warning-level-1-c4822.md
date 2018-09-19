@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4822 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4822 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9491d522c65eba3599c3618d510c57b55682876
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33748a39eae4b6f2a84cadb818570f9a311b1fe1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283018"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078321"
 ---
 # <a name="compiler-warning-level-1-c4822"></a>Compilerwarnung (Stufe 1) C4822
-"Member": Lokale Klassenmemberfunktion enthält keinen Text.  
-  
- Eine lokale Klassenmemberfunktion wurde deklariert, aber nicht in der Klasse definiert. Um eine lokale Klassenmemberfunktion verwenden zu können, müssen Sie sie in der Klasse definieren. Sie können Sie nicht in der Klasse deklarieren und außerhalb der Klasse definieren.  
-  
- Jede Definition außerhalb der Klasse für eine lokale Klassenmemberfunktion erzeugt einen Fehler.  
-  
- Im folgenden Beispiel wird C4822 generiert.  
-  
-```  
-// C4822.cpp  
-// compile with: /W1  
-int main() {  
-   struct C {  
-      void func1(int);   // C4822  
-      // try the following line instead  
-      // void func1(int){}  
-  };  
-}  
+
+"Member": Lokale Klassenmemberfunktion enthält keinen Text.
+
+Eine lokale Klassenmemberfunktion wurde deklariert, aber nicht in der Klasse definiert. Um eine lokale Klassenmemberfunktion verwenden zu können, müssen Sie sie in der Klasse definieren. Sie können Sie nicht in der Klasse deklarieren und außerhalb der Klasse definieren.
+
+Jede Definition außerhalb der Klasse für eine lokale Klassenmemberfunktion erzeugt einen Fehler.
+
+Im folgenden Beispiel wird C4822 generiert.
+
+```
+// C4822.cpp
+// compile with: /W1
+int main() {
+   struct C {
+      void func1(int);   // C4822
+      // try the following line instead
+      // void func1(int){}
+  };
+}
 ```

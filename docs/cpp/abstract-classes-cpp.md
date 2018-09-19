@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 610e98e15e4e7bd20802d39a70354a20076ce1a5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 91ed7cb82bbf9036a32ee20ecf33a8138086a98c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407906"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103947"
 ---
 # <a name="abstract-classes-c"></a>Abstrakte Klassen (C++)
 
@@ -97,4 +97,5 @@ Wenn das Objekt, auf das `pDerived` zeigt, gelöscht wird, wird der Destruktor f
 > Im vorherigen Beispiel wird die rein virtuelle Funktion `base::~base` implizit von `derived::~derived` aufgerufen. Es ist auch möglich, rein virtuelle Funktionen explizit mithilfe eines vollqualifizierten Memberfunktionsnamens aufzurufen.
 
 ## <a name="see-also"></a>Siehe auch
-[Vererbung](../cpp/inheritance-cpp.md)  
+
+[Vererbung](../cpp/inheritance-cpp.md)

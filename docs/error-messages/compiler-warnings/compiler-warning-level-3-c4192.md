@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 3) C4192 | Microsoft Docs
+title: Compilerwarnung (Stufe 3) C4192 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bae9b7af95de94b8f667cb09710af21044f8b80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 671a8c83dcadcaa89372e53b6c3d677c5810b4a5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291413"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114409"
 ---
 # <a name="compiler-warning-level-3-c4192"></a>Compilerwarnung (Stufe 3) C4192
-automatisch beim Importieren einer Typbibliothek "Library" ausgeschlossen "Name"  
-  
- Ein `#import` Bibliothek enthält ein Element *Namen*, d. h. auch in den Headern der Win32-System definiert. Aufgrund der Einschränkungen von Typbibliotheken, z. B. Namen **IUnknown** oder GUID häufig definiert sind in einer Typbibliothek, die Definition der Systemheadern duplizieren. `#import` Diese Elemente erkennt, und lehnen sie in den Headerdateien TLH und TLI integrieren.  
-  
- Um dieses Verhalten zu überschreiben, verwenden `#import` Attribute [No_auto_exclude](../../preprocessor/no-auto-exclude.md) und [include()](../../preprocessor/include-parens.md).
+
+automatischer Ausschluss von 'Name' während des Importierens der Typbibliothek "Library"
+
+Ein `#import` -Bibliothek enthält ein Element *Namen*, d. h. auch in den Headern der Win32-System definiert. Aufgrund der Einschränkungen von Typbibliotheken, die Namen z. B. **IUnknown** oder GUID häufig definiert sind in einer Typbibliothek, duplizieren die Definition aus den Systemheadern. `#import` Diese Elemente erkennt und weigern, diese in die TLH und TLI-Header-Dateien zu integrieren.
+
+Um dieses Verhalten überschreiben, verwenden `#import` Attribute [No_auto_exclude](../../preprocessor/no-auto-exclude.md) und [include()](../../preprocessor/include-parens.md).

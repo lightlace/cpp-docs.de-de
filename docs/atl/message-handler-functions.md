@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7c1073d33004b726ddf273f89f98ac033faa483
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 93e3534f839417b6f601f4e8bc345342cc77ac1c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757350"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040965"
 ---
 # <a name="message-handler-functions"></a>Meldungshandlerfunktionen
 
@@ -42,7 +42,7 @@ ATL stellt drei Arten von Meldungshandlerfunktionen bereit:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Implementieren eines Fensters](../atl/implementing-a-window.md)   
-[Meldungszuordnungen](../atl/message-maps-atl.md)   
+[Implementieren eines Fensters](../atl/implementing-a-window.md)<br/>
+[Meldungszuordnungen](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

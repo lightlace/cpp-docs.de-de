@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcencompiler: Schwerwiegender Fehler RC1109 | Microsoft Docs'
+title: 'Ressourcencompiler: Schwerwiegender Fehler RC1109 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e71123230318d2da006be3c09fdb5855f713220f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61197a4322690646bf3f89d155fbb526b00ba0de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325889"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044807"
 ---
 # <a name="resource-compiler-fatal-error-rc1109"></a>Ressourcencompiler: Schwerwiegender Fehler RC1109
-Fehler beim Erstellen der Ressourcenname  
-  
- Die angegebene RES-Datei konnte nicht erstellt werden. Stellen Sie sicher, dass er nicht auf einem schreibgeschützten Laufwerk erstellt wird. Verwenden Sie die Option/v, um herauszufinden, ob die Datei erstellt wird.
+
+Fehler beim Erstellen der Resource-name
+
+Die angegebene RES-Datei konnte nicht erstellt werden. Stellen Sie sicher, dass es nicht auf einem nur-Lese Laufwerk erstellt wird. Verwenden Sie die Option/v, um herauszufinden, ob die Datei erstellt wird.

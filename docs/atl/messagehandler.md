@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37564920e2ffb4c2526631cd04864db1971a6f02
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4a2434257290c673ca4e18be2e5ec70877e72e67
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757210"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039087"
 ---
 # <a name="messagehandler"></a>Meldungshandler
 
@@ -39,16 +39,16 @@ LRESULT MessageHandler(
 
 ### <a name="parameters"></a>Parameter
 
-*uMsg*  
+*uMsg*<br/>
 Gibt die Meldung.
 
-*wParam-Parameter*  
+*wParam-Parameter*<br/>
 Zusätzliche meldungsspezifische Informationen.
 
-*lParam*  
+*lParam*<br/>
 Zusätzliche meldungsspezifische Informationen.
 
-*bHandled*  
+*bHandled*<br/>
 Die Zuordnung Nachrichtensätze *bHandled* auf "true", bevor Sie `MessageHandler` aufgerufen wird. Wenn `MessageHandler` ist nicht vollständig verarbeitet die Nachricht sollte *bHandled* auf "false", um anzugeben, die Nachricht noch weitere Verarbeitung erforderlich.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -61,6 +61,6 @@ Ein Beispiel für die Verwendung dieser Nachrichtenhandler in einer meldungszuor
 
 ## <a name="see-also"></a>Siehe auch
 
-[Implementieren eines Fensters](../atl/implementing-a-window.md)   
-[Meldungszuordnungen](../atl/message-maps-atl.md)   
+[Implementieren eines Fensters](../atl/implementing-a-window.md)<br/>
+[Meldungszuordnungen](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)

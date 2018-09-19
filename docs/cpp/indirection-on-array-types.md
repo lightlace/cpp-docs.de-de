@@ -15,16 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd8d4f02bd40764d2a6132333aecde6dd8cd6063
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 683cd7835e669ff71c8e4566e0600b1775e42c6d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208599"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086160"
 ---
 # <a name="indirection-on-array-types"></a>Dereferenzierung auf Arraytypen
 
-Verwenden des Dereferenzierungsoperators (<strong>\*</strong>) auf eine *n*--dimensionalem Arraytyp ergibt ein *n*-1-dimensionales Array. Wenn *n* 1 ist, ein Skalar (oder Arrayelement) zurückgegeben wird.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Arrays](../cpp/arrays-cpp.md)
+Verwenden des Dereferenzierungsoperators (<strong>\*</strong>) auf eine *n*--dimensionalem Arraytyp ergibt ein *n*-1-dimensionales Array. Wenn *n* 1 ist, ein Skalar (oder Arrayelement) zurückgegeben wird.
+
+## <a name="see-also"></a>Siehe auch
+
+[Arrays](../cpp/arrays-cpp.md)

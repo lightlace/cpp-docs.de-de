@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a476daeb680048c7bbb21565014487f6b937c78
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f58efa7b7ba5c0452f2418a2dbbc27c94eedaca6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754890"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087954"
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog-Klasse
 
@@ -35,7 +35,7 @@ Diese Klasse implementiert die grundlegende modales Dialogfeld.
 ## <a name="syntax"></a>Syntax
 
 ```
-template <WORD t_wDlgTemplateID, BOOL t_bCenter = TRUE>  
+template <WORD t_wDlgTemplateID, BOOL t_bCenter = TRUE>
 class CSimpleDialog : public CDialogImplBase
 ```
 
@@ -45,7 +45,7 @@ class CSimpleDialog : public CDialogImplBase
 
 Die Ressourcen-ID der Dialogfeldvorlagen-Ressource.
 
-*t_bCenter*  
+*t_bCenter*<br/>
 True, wenn das Dialogfeldobjekt im übergeordneten Fenster zentriert werden soll. andernfalls "false".
 
 ## <a name="members"></a>Member
@@ -84,7 +84,7 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
 
 ### <a name="parameters"></a>Parameter
 
-*hWndParent*  
+*hWndParent*<br/>
 Ein Handle für das übergeordnete Element des Dialogfelds. Wenn kein Wert angegeben wird, wird das übergeordnete Element, das momentan aktive Fenster festgelegt.
 
 ### <a name="return-value"></a>Rückgabewert

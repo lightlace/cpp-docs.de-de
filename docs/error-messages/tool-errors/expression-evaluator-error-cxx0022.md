@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0022 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0022 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822e07c9173d9010bb8ab63b6ca4837b9c52e066
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bf067a1024b8ac344c1490bc9ec25b0b7d57540
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297653"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082351"
 ---
 # <a name="expression-evaluator-error-cxx0022"></a>Ausdrucksauswertungsfehler CXX0022
-Funktionsaufruf vor dem _main  
-  
- Die ausdrucksauswertung C keine Funktion ausgewertet, bevor der Debugger die Funktion eingegeben hat **_main**. Das Programm ist nicht ordnungsgemäß initialisiert bis **_main** aufgerufen wurde.  
-  
- Dieser Fehler ist mit CAN0022 identisch.
+
+Funktionsaufruf vor dem _main
+
+Eine Funktion kann von die C++-ausdrucksauswertung kann nicht ausgewertet werden, bevor der Debugger die Funktion eingegeben hat **_main**. Die Anwendung ist nicht ordnungsgemäß initialisiert bis **_main** aufgerufen wurde.
+
+Dieser Fehler ist mit CAN0022 identisch.

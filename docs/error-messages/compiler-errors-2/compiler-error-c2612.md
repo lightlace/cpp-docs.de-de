@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2612 generiert | Microsoft Docs
+title: Compilerfehler C2612 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e88053cde81e7eea8bc9e9280cf235d5eccc6704
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2bdc91dd2b64c4fbd3a14670ba500ac970c9ad3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226947"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135788"
 ---
-# <a name="compiler-error-c2612"></a>Compiler-Fehler C2612 generiert
-nachfolgende 'Char' in der Initialisiererliste Base bzw. dieses Element nicht zulässig  
-  
- Ein Zeichen, die nach der letzten Basis oder ein Member in einer Initialisiererliste angezeigt werden.  
-  
- Im folgende Beispiel wird C2612 generiert:  
-  
-```  
-// C2612.cpp  
-class A {  
-public:  
-   int i;  
-   A( int ia ) : i( ia ) + {};   // C2612  
-};  
+# <a name="compiler-error-c2612"></a>Compilerfehler C2612
+
+nachfolgende 'Char' in der Initialisierungsliste für Basisklasse/Elemente unzulässig.
+
+Ein Zeichen, die nach der letzten Basis oder ein Member in einer Initialisiererliste angezeigt werden.
+
+Im folgende Beispiel wird die C2612 generiert:
+
+```
+// C2612.cpp
+class A {
+public:
+   int i;
+   A( int ia ) : i( ia ) + {};   // C2612
+};
 ```

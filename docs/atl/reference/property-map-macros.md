@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf82c48cb5b1f9bd93a9c30afe8c698699c8199b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 594b02d777d87decfc218064678dbecdf8ecf0c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758091"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106349"
 ---
 # <a name="property-map-macros"></a>Eigenschaftenzuordnungs-Makros
 
@@ -55,7 +55,7 @@ BEGIN_PROP_MAP(theClass)
 
 ### <a name="parameters"></a>Parameter
 
-*theClass*  
+*theClass*<br/>
 [in] Gibt die Klasse, die die eigenschaftenzuordnung enthält.
 
 ### <a name="remarks"></a>Hinweise
@@ -80,13 +80,13 @@ PROP_DATA_ENTRY( szDesc, member, vt)
 
 ### <a name="parameters"></a>Parameter
 
-*szDesc*  
+*szDesc*<br/>
 [in] Beschreibung der Eigenschaft.
 
-*Member*  
+*Member*<br/>
 [in] Der Datenmember, die das Ausmaß enthält; z. B. `m_sizeExtent`.
 
-*vt*  
+*vt*<br/>
 [in] Gibt den VARIANT-Datentyp der Eigenschaft an.
 
 ### <a name="remarks"></a>Hinweise
@@ -113,16 +113,16 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 
 ### <a name="parameters"></a>Parameter
 
-*szDesc*  
+*szDesc*<br/>
 [in] Beschreibung der Eigenschaft.
 
-*DISPID*  
+*DISPID*<br/>
 [in] Der Eigenschaftenwert DISPID.
 
-*clsid*  
+*clsid*<br/>
 [in] Die CLSID der zugeordneten Seite. Verwenden Sie den Sonderwert CLSID_NULL für eine Eigenschaft, die nicht über eine Eigenschaftenseite des zugehörigen verfügt.
 
-*vt*  
+*vt*<br/>
 [in] Der Typ der Eigenschaft.
 
 ### <a name="remarks"></a>Hinweise
@@ -145,19 +145,19 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
 
 ### <a name="parameters"></a>Parameter
 
-*szDesc*  
+*szDesc*<br/>
 [in] Beschreibung der Eigenschaft.
 
-*DISPID*  
+*DISPID*<br/>
 [in] Der Eigenschaftenwert DISPID.
 
-*clsid*  
+*clsid*<br/>
 [in] Die CLSID der zugeordneten Seite. Verwenden Sie den Sonderwert CLSID_NULL für eine Eigenschaft, die nicht über eine Eigenschaftenseite des zugehörigen verfügt.
 
-*iidDispatch*  
+*iidDispatch*<br/>
 [in] Die IID der dualen Schnittstelle definieren die Eigenschaft.
 
-*vt*  
+*vt*<br/>
 [in] Der Typ der Eigenschaft.
 
 ### <a name="remarks"></a>Hinweise
@@ -182,7 +182,7 @@ PROP_PAGE(clsid)
 
 ### <a name="parameters"></a>Parameter
 
-*clsid*  
+*clsid*<br/>
 [in] Die CLSID einer Eigenschaftenseite.
 
 ### <a name="remarks"></a>Hinweise

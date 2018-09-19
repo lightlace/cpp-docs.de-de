@@ -1,5 +1,5 @@
 ---
-title: Writeonly_texture_view-Klasse | Microsoft Docs
+title: Writeonly_texture_view-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6b1bc5c90fd837f56dbd98eddb37f624e78080b
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 65e4895af0903008e17b75a38981c169f07fc1c7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695404"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047751"
 ---
 # <a name="writeonlytextureview-class"></a>writeonly_texture_view-Klasse
 Bietet lesegeschützten Zugriff auf eine Textur.  
@@ -45,11 +45,11 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `value_type`  
- Der Typ der Elemente in der Textur.  
+*value_type*<br/>
+Der Typ der Elemente in der Textur.  
   
- `_Rank`  
- Der Rang der Textur.  
+*_Rank*<br/>
+Der Rang der Textur.  
   
 ## <a name="members"></a>Member  
   
@@ -113,8 +113,8 @@ writeonly_texture_view<value_type, _Rank>& operator= (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Other`  
- `writeonly_texture_view` Objekt, das kopiert werden soll.  
+*_Sonstige*<br/>
+`writeonly_texture_view` Objekt, das kopiert werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf das `writeonly_texture_view`-Objekt.  
@@ -127,7 +127,7 @@ writeonly_texture_view<value_type, _Rank>& operator= (
 static const int rank = _Rank;  
 ```  
   
-##  <a name="set"></a> Festlegen 
+##  <a name="set"></a> Legen Sie 
 
  Legt den Wert des Elements am angegebenen Index ab.  
   
@@ -138,11 +138,11 @@ void set(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Index`  
- Der Index des Elements.  
+*_Index*<br/>
+Der Index des Elements.  
   
- `value`  
- Der neue Wert des Elements.  
+*Wert*<br/>
+Der neue Wert des Elements.  
   
 ##  <a name="ctor"></a> writeonly_texture_view 
 
@@ -160,14 +160,14 @@ writeonly_texture_view(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Rank`  
- Der Rang der Textur.  
+*_Rank*<br/>
+Der Rang der Textur.  
   
- `value_type`  
- Der Typ der Elemente in der Textur.  
+*value_type*<br/>
+Der Typ der Elemente in der Textur.  
   
- `_Src`  
- Die Struktur, die zum Erstellen der `writeonly_texture_view`.  
+*_Src*<br/>
+Die Textur, die zum Erstellen der `writeonly_texture_view`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

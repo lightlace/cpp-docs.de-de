@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef417232d62c664b4943a2198ae351a5c443b089
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8fc187cea874d16522955dcd46c2ceac34d29098
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763746"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136158"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Debuggen und Fehlerberichterstattungs-Makros
 
@@ -97,7 +97,7 @@ ATLASSERT(booleanExpression);
 
 ### <a name="parameters"></a>Parameter
 
-*boolescher Ausdruck*  
+*boolescher Ausdruck*<br/>
 Ausdruck (einschließlich Zeiger), der ungleich NULL oder 0 ergibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -119,10 +119,10 @@ ATLENSURE_THROW(booleanExpression, hr);
 
 ### <a name="parameters"></a>Parameter
 
-*boolescher Ausdruck*  
+*boolescher Ausdruck*<br/>
 Gibt einen booleschen Ausdruck getestet werden.
 
-*HR*  
+*HR*<br/>
 Gibt den Fehlercode zurückgegeben.
 
 ### <a name="remarks"></a>Hinweise
@@ -155,7 +155,7 @@ ATLTRACENOTIMPL(funcname);
 
 ### <a name="parameters"></a>Parameter
 
-*Funktionsname*  
+*Funktionsname*<br/>
 [in] Eine Zeichenfolge, die mit dem Namen der Funktion, die nicht implementiert ist.
 
 ### <a name="remarks"></a>Hinweise
@@ -185,16 +185,16 @@ ATLTRACE(
 
 ### <a name="parameters"></a>Parameter
 
-*exp*  
+*exp*<br/>
 [in] Die Zeichenfolge und die Variablen, um das Senden an das Ausgabefenster von Visual C++ oder jede Anwendung, die diese Nachrichten erfasst.
 
-*category*  
+*category*<br/>
 [in] Der Typ eines Ereignisses oder einer Methode auf dem Bericht. Finden Sie unter den Hinweisen für eine Liste der Kategorien.
 
-*level*  
+*level*<br/>
 [in] Die Ebene der Ablaufverfolgung zu Bericht. Finden Sie unter den Hinweisen zu den Details.
 
-*lpszFormat*  
+*lpszFormat*<br/>
 [in] Die formatierte Zeichenfolge dem Sicherungsmedium an.
 
 ### <a name="remarks"></a>Hinweise
@@ -216,16 +216,16 @@ ATLTRACE2(
 
 ### <a name="parameters"></a>Parameter
 
-*exp*  
+*exp*<br/>
 [in] Die Zeichenfolge, die Senden an das Ausgabefenster von Visual C++ oder jede Anwendung, die diese Nachrichten erfasst.
 
-*category*  
+*category*<br/>
 [in] Der Typ eines Ereignisses oder einer Methode auf dem Bericht. Finden Sie unter den Hinweisen für eine Liste der Kategorien.
 
-*level*  
+*level*<br/>
 [in] Die Ebene der Ablaufverfolgung zu Bericht. Finden Sie unter den Hinweisen zu den Details.
 
-*lpszFormat*  
+*lpszFormat*<br/>
 [in] Die `printf`-style-Formatzeichenfolge verwenden, um eine Zeichenfolge, an dem Sicherungsmedium zu erstellen.
 
 ### <a name="remarks"></a>Hinweise
@@ -295,5 +295,5 @@ ATLTRACE und ATLTRACE2 weisen das gleiche Verhalten, ATLTRACE wird aus Gründen 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Makros](../../atl/reference/atl-macros.md)   
+[Makros](../../atl/reference/atl-macros.md)<br/>
 [Debuggen und globale Funktionen für die Fehlerberichterstattung](../../atl/reference/debugging-and-error-reporting-global-functions.md)

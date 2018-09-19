@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e9e12409320bd82e25f94c02cba83b946252fff
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d3c5f68d35c4cf77073de3f8d2e6090f62a6dae2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196438"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050098"
 ---
 # <a name="colecontrol-class"></a>COleControl-Klasse
 Eine leistungsstarke Basisklasse zum Entwickeln von OLE-Steuerelementen.
@@ -1692,17 +1692,14 @@ enum ControlFlags {
 
 In der Standardeinstellung `GetControlFlags` gibt `fastBeginPaint | clipPaintDC`.
 
-`fastBeginPaint` Wenn festgelegt, verwendet eine Begin-Paint-Funktion anstelle von OLE-Steuerelemente zugeschnitten sind die ["BeginPaint"](/windows/desktop/api/winuser/nf-winuser-beginpaint) API (standardmäßig festgelegt).
-
-`clipPaintDC` Wenn nicht festgelegt, deaktiviert den Aufruf von `IntersectClipRect` vom `COleControl` und einen geringen Leistungsvorteil erzielt. Wenn Sie fensterlosen Aktivierung verwenden, hat das Flag keine Auswirkungen.
-
-`pointerInactive` Wenn festgelegt ist, bietet Mausinteraktion, während das Steuerelement durch Aktivieren der inaktiv ist `COleControl`die Implementierung der `IPointerInactive` -Schnittstelle, die standardmäßig deaktiviert ist.
-
-`noFlickerActivate` Wenn festgelegt, entfallen zusätzliche Zeichenvorgänge und die damit verbundene Flimmern. Wird verwendet, wenn das Steuerelement selbst im inaktive und aktive Zustand identisch zeichnet. Wenn Sie fensterlosen Aktivierung verwenden, hat das Flag keine Auswirkungen.
-
-`windowlessActivate` Wenn festgelegt ist, gibt an, das Steuerelement verwendet fensterlosen Aktivierung.
-
-`canOptimizeDraw` Wenn festgelegt ist, gibt an, dass das Steuerelement optimiertes zeichnen, ausgeführt werden, wenn der Container unterstützt.
+|||
+|-|-|
+|`fastBeginPaint`|Wenn festgelegt, verwendet eine Begin-Paint-Funktion anstelle von OLE-Steuerelemente zugeschnitten sind die ["BeginPaint"](/windows/desktop/api/winuser/nf-winuser-beginpaint) API (standardmäßig festgelegt).|
+|`clipPaintDC`|Wenn nicht festgelegt, deaktiviert den Aufruf von `IntersectClipRect` vom `COleControl` und einen geringen Leistungsvorteil erzielt. Wenn Sie fensterlosen Aktivierung verwenden, hat das Flag keine Auswirkungen.|
+|`pointerInactive`|Wenn festgelegt ist, bietet Mausinteraktion, während das Steuerelement durch Aktivieren der inaktiv ist `COleControl`die Implementierung der `IPointerInactive` -Schnittstelle, die standardmäßig deaktiviert ist.|
+|`noFlickerActivate`|Wenn festgelegt, entfallen zusätzliche Zeichenvorgänge und die damit verbundene Flimmern. Wird verwendet, wenn das Steuerelement selbst im inaktive und aktive Zustand identisch zeichnet. Wenn Sie fensterlosen Aktivierung verwenden, hat das Flag keine Auswirkungen.|
+|`windowlessActivate`|Wenn festgelegt ist, gibt an, das Steuerelement verwendet fensterlosen Aktivierung.|
+|`canOptimizeDraw`|Wenn festgelegt ist, gibt an, dass das Steuerelement optimiertes zeichnen, ausgeführt werden, wenn der Container unterstützt.|
 
 Weitere Informationen zu `GetControlFlags` und andere Optimierungen der OLE-Steuerelemente finden Sie unter [ActiveX-Steuerelemente: Optimierung](../../mfc/mfc-activex-controls-optimization.md).
 

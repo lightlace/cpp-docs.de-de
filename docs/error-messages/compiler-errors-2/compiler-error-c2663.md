@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2663 generiert | Microsoft Docs
+title: Compilerfehler C2663 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f39f516b32aaf1159d47726d01623e253ee8b383
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fed35dcce056eb3d2a660c154e94b8058563dba7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235858"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083690"
 ---
-# <a name="compiler-error-c2663"></a>Compiler-Fehler C2663 generiert
-"Function": Anzahl Überladungen haben keine zulässige Konvertierung für den this-Zeiger  
-  
- Der Compiler konnte nicht konvertiert werden `this` auf eine der überladenen Versionen der Memberfunktion.  
-  
- Dieser Fehler kann verursacht werden, durch den Aufruf einer nicht -`const` Member-Funktion auf einem `const` Objekt.  Folgende Lösungen möglich:  
-  
-1.  Entfernen Sie die `const` aus der Deklaration des Objekts.  
-  
-2.  Hinzufügen `const` auf eine der Überladungen der Member-Funktion.  
-  
- Im folgende Beispiel wird C2663 generiert:  
-  
-```  
-// C2663.cpp  
-struct C {  
-   void f() volatile {}  
-   void f() {}  
-};  
-  
-struct D {  
-   void f() volatile;  
-   void f() const {}  
-};  
-  
-const C *pcc;  
-const D *pcd;  
-  
-int main() {  
-   pcc->f();    // C2663  
-   pcd->f();    // OK  
-}  
+# <a name="compiler-error-c2663"></a>Compilerfehler C2663
+
+'Funktion': Anzahl Überladung(en) gibt es keine zulässige Konvertierung für "this"-Zeiger
+
+Der Compiler konnte nicht konvertiert werden `this` auf eine der überladenen Versionen der Memberfunktion.
+
+Dieser Fehler kann verursacht werden, durch den Aufruf einer nicht -`const` Member-Funktion auf einem `const` Objekt.  Mögliche Lösungen:
+
+1. Entfernen Sie die `const` aus der Objektdeklaration.
+
+1. Hinzufügen `const` auf eine der Überladungen der Member-Funktion.
+
+Im folgende Beispiel wird die C2663 generiert:
+
+```
+// C2663.cpp
+struct C {
+   void f() volatile {}
+   void f() {}
+};
+
+struct D {
+   void f() volatile;
+   void f() const {}
+};
+
+const C *pcc;
+const D *pcd;
+
+int main() {
+   pcc->f();    // C2663
+   pcd->f();    // OK
+}
 ```

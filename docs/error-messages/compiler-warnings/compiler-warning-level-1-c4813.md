@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4813 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4813 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 310c4c3a0d4be35e45c9593dc4f3cc1de00077d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1bfdc3e7aa4a2f0cf32770c1511832900f2339b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283249"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050124"
 ---
 # <a name="compiler-warning-level-1-c4813"></a>Compilerwarnung (Stufe 1) C4813
-'Funktion': Eine Friend-Funktion einer lokalen Klasse muss bereits deklariert sein.  
-  
- Eine Friend-Funktion in einer inneren Klasse wurde in der äußeren Klasse nicht deklariert.  
-  
- Im folgenden Beispiel wird C4813 generiert:  
-  
-```  
-// C4813.cpp  
-// compile with: /W1 /LD  
-void MyClass()  
-{  
-   // void func();  
-   class InnerClass  
-   {  
-      friend void func();   // C4813 uncomment declaration above  
-   };  
-}  
+
+'Funktion': Eine Friend-Funktion einer lokalen Klasse muss bereits deklariert sein.
+
+Eine Friend-Funktion in einer inneren Klasse wurde in der äußeren Klasse nicht deklariert.
+
+Im folgenden Beispiel wird C4813 generiert:
+
+```
+// C4813.cpp
+// compile with: /W1 /LD
+void MyClass()
+{
+   // void func();
+   class InnerClass
+   {
+      friend void func();   // C4813 uncomment declaration above
+   };
+}
 ```

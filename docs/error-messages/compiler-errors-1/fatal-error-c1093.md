@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c736fbb5180edb26eda6a557a4e8e45a3ffc881
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9bc1e7e3d3996eedd0fe464832c1ee91986e302f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202025"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052659"
 ---
 # <a name="fatal-error-c1093"></a>Schwerwiegender Fehler C1093
 
-> API-Aufruf "*Funktionsnamen*"fehlgeschlagen"*Position des Aufrufs*': '*Text aus der Laufzeit*"  
-  
-Fehler beim Aufrufen einer Funktion von .NET. Die *Text aus der Laufzeit* Zeichenfolge bearbeitbar oder nicht von der COM-Laufzeit bereitgestellt werden kann.  
-  
+> API-Aufruf "*Funktionsnamen*"fehlgeschlagen"*Position des Aufrufs*': '*Text aus der Laufzeit*"
+
+Fehler beim Aufrufen einer Funktion von .NET. Die *Text aus der Laufzeit* Zeichenfolge bearbeitbar oder nicht von der COM-Laufzeit bereitgestellt werden kann.
+
 Weitere Informationen zu Fehlermeldungen, finden Sie unter der Datei "Winerror.h" System und [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage).

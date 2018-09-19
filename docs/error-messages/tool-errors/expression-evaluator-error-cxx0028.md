@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0028 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0028 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffb894a9960e74fe2b6c2569aab01b66a0de077e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 023c43f33491d17d4500b8d7e668ed9bce5013bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298836"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087432"
 ---
 # <a name="expression-evaluator-error-cxx0028"></a>Ausdrucksauswertungsfehler CXX0028
-nicht Struktur/Union-element  
-  
- Es wurde ein Ausdruck der Form "Struct.Member" oder "pStruct -> Member" angegeben, aber \<Member > ist kein Element der Struktur.  
-  
- Der Ausdruck kann in Klammern nicht korrekt sein.  
-  
- Dieser Fehler ist mit CAN0028 identisch.
+
+keine Struktur/Union-element
+
+Ein Ausdruck der Form "Struct.Member" oder 'pStruct-Member >' wurde angegeben, aber \<Member > ist kein Element der Struktur.
+
+Der Ausdruck kann nicht ordnungsgemäß in Klammern werden.
+
+Dieser Fehler ist mit CAN0028 identisch.

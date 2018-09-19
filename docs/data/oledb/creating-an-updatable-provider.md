@@ -17,35 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fffc1ceef1f67dadde61190ccb12ce1cd5b7ba9b
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: cbf1c696a66024ec1d3b3022b1e3a03445e9b6fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42572966"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043299"
 ---
 # <a name="creating-an-updatable-provider"></a>Erstellen eines aktualisierbaren Anbieters
 
 Visual C++ unterstützt aktualisierbare Anbieter oder Anbieter, die aktualisiert werden können (Schreiben) dem Datenspeicher. In diesem Thema wird erläutert, wie aktualisierbare Anbieter, die mithilfe von OLE DB-Vorlagen erstellt werden.  
   
- In diesem Thema wird davon ausgegangen, dass Sie mit einem praktikable Anbieter starten. Es gibt zwei Schritte zum Erstellen eines aktualisierbaren Anbieters. Zunächst müssen Sie entscheiden, wie der Anbieter Änderungen an den Datenspeicher vereinfachen; insbesondere gibt an, ob Änderungen werden sofort erfolgen oder verzögert, bis ein Updatebefehl ausgegeben wird. Im Abschnitt "[aktualisierbare Anbieter machen](#vchowmakingprovidersupdatable)" beschreibt die Änderungen und die Einstellungen, die Sie in den Anbietercode tun müssen.  
+In diesem Thema wird davon ausgegangen, dass Sie mit einem praktikable Anbieter starten. Es gibt zwei Schritte zum Erstellen eines aktualisierbaren Anbieters. Zunächst müssen Sie entscheiden, wie der Anbieter Änderungen an den Datenspeicher vereinfachen; insbesondere gibt an, ob Änderungen werden sofort erfolgen oder verzögert, bis ein Updatebefehl ausgegeben wird. Im Abschnitt "[aktualisierbare Anbieter machen](#vchowmakingprovidersupdatable)" beschreibt die Änderungen und die Einstellungen, die Sie in den Anbietercode tun müssen.  
   
- Als Nächstes müssen Sie sicherstellen, dass Ihr Anbieter enthält die gesamte Funktionalität zur Unterstützung der Consumer des anfordern kann. Wenn der Consumer den Datenspeicher zu aktualisieren möchte, muss der Anbieter Code enthalten, die Daten im Datenspeicher beibehalten. Beispielsweise können Sie der C-Laufzeitbibliothek oder die MFC-verwenden, um die Vorgänge an der Datenquelle auszuführen. Im Abschnitt "[Schreiben in die Datenquelle](#vchowwritingtothedatasource)" beschreibt, wie Sie mit der Datenquelle zu schreiben, befassen sich mit NULL-und Standardwerten und Spaltenflags festlegen.  
+Als Nächstes müssen Sie sicherstellen, dass Ihr Anbieter enthält die gesamte Funktionalität zur Unterstützung der Consumer des anfordern kann. Wenn der Consumer den Datenspeicher zu aktualisieren möchte, muss der Anbieter Code enthalten, die Daten im Datenspeicher beibehalten. Beispielsweise können Sie der C-Laufzeitbibliothek oder die MFC-verwenden, um die Vorgänge an der Datenquelle auszuführen. Im Abschnitt "[Schreiben in die Datenquelle](#vchowwritingtothedatasource)" beschreibt, wie Sie mit der Datenquelle zu schreiben, befassen sich mit NULL-und Standardwerten und Spaltenflags festlegen.  
   
 > [!NOTE]
 >  [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) ist ein Beispiel eines aktualisierbaren Anbieters. UpdatePV ist identisch, wie MyProv, jedoch mit aktualisierbaren Unterstützung.  
   
 ##  <a name="vchowmakingprovidersupdatable"></a> Machen Anbieter aktualisiert  
 
- Einen Anbieter aktualisierbare entscheidend besteht im ermitteln welche Vorgänge Sie möchten Ihren Anbieter, führen Sie auf den Datenspeicher und wie der Anbieter diese Vorgänge ausführen soll. Insbesondere das wesentliche Problem ist, ob Updates für den Datenspeicher sind sofort ausgeführt oder verzögert werden soll (Batchverarbeitung) bis ein Update-Befehl ausgegeben wird.  
+Einen Anbieter aktualisierbare entscheidend besteht im ermitteln welche Vorgänge Sie möchten Ihren Anbieter, führen Sie auf den Datenspeicher und wie der Anbieter diese Vorgänge ausführen soll. Insbesondere das wesentliche Problem ist, ob Updates für den Datenspeicher sind sofort ausgeführt oder verzögert werden soll (Batchverarbeitung) bis ein Update-Befehl ausgegeben wird.  
   
- Zunächst müssen Sie entscheiden, ob die von erben `IRowsetChangeImpl` oder `IRowsetUpdateImpl` in der Rowsetklasse. Je nachdem, welche dieser Sie implementieren, die Funktionalität von drei Methoden sind betroffen: `SetData`, `InsertRows`, und `DeleteRows`.  
+Zunächst müssen Sie entscheiden, ob die von erben `IRowsetChangeImpl` oder `IRowsetUpdateImpl` in der Rowsetklasse. Je nachdem, welche dieser Sie implementieren, die Funktionalität von drei Methoden sind betroffen: `SetData`, `InsertRows`, und `DeleteRows`.  
   
 - Wenn das erben [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md), ändert sich den Datenspeicher diese drei Methoden direkt aufzurufen.  
   
 - Wenn das erben [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md), die Methoden Änderungen an den Datenspeicher verzögern, bis zum Aufruf von `Update`, `GetOriginalData`, oder `Undo`. Wenn das Update mehrere Änderungen betrifft, werden sie ausgeführt, im Modus "Batch" (Beachten Sie, dass die Batchverarbeitung von Änderungen viel Speicher-Overhead hinzufügen kann).  
   
- Beachten Sie, dass `IRowsetUpdateImpl` leitet sich von `IRowsetChangeImpl`. Daher `IRowsetUpdateImpl` erhalten Sie die Funktion und der Batch-Funktion ändern.  
+Beachten Sie, dass `IRowsetUpdateImpl` leitet sich von `IRowsetChangeImpl`. Daher `IRowsetUpdateImpl` erhalten Sie die Funktion und der Batch-Funktion ändern.  
   
 #### <a name="to-support-updatability-in-your-provider"></a>Zur Unterstützung von aktualisierbarkeit im Anbieter  
   
@@ -72,21 +72,21 @@ Visual C++ unterstützt aktualisierbare Anbieter oder Anbieter, die aktualisiert
     > [!NOTE]
     >  Entfernen Sie die `IRowsetChangeImpl` Zeile aus der Vererbungskette. Diese Ausnahme von der zuvor erwähnten Direktive muss den Code für enthalten `IRowsetChangeImpl`.  
   
-2.  Fügen Sie Folgendes der COM-Zuordnung (`BEGIN_COM_MAP ... END_COM_MAP`):  
+1. Fügen Sie Folgendes der COM-Zuordnung (`BEGIN_COM_MAP ... END_COM_MAP`):  
   
     |Wenn Sie implementieren|COM-Zuordnung hinzufügen|  
     |----------------------|--------------------|  
     |`IRowsetChangeImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)`|  
     |`IRowsetUpdateImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)COM_INTERFACE_ENTRY(IRowsetUpdate)`|  
   
-3.  Fügen Sie in zunutze, Folgendes ein, um die Zuordnung des Set (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`):  
+1. Fügen Sie in zunutze, Folgendes ein, um die Zuordnung des Set (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`):  
   
     |Wenn Sie implementieren|Fügen Sie zum Festlegen der eigenschaftenzuordnung|  
     |----------------------|-----------------------------|  
     |`IRowsetChangeImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`|  
     |`IRowsetUpdateImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)`|  
   
-4.  In der Zuordnung des Eigenschaftensets sollten Sie auch alle der folgenden Einstellungen hinzufügen wie sie unten angezeigt werden:  
+1. In der Zuordnung des Eigenschaftensets sollten Sie auch alle der folgenden Einstellungen hinzufügen wie sie unten angezeigt werden:  
   
     ```cpp  
     PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |   
@@ -145,7 +145,8 @@ Visual C++ unterstützt aktualisierbare Anbieter oder Anbieter, die aktualisiert
         >  Wenn Sie Benachrichtigungen unterstützen, müssen Sie auch einige andere Eigenschaften sowie möglicherweise; finden Sie im Abschnitt `IRowsetNotifyCP` für diese Liste.  
   
 ##  <a name="vchowwritingtothedatasource"></a> Das Schreiben in die Datenquelle  
- Um Daten aus der Datenquelle zu lesen, rufen Sie die `Execute` Funktion. Rufen Sie zum Schreiben an die Datenquelle die `FlushData` Funktion. (In einem allgemeinen Sinn, leeren Sie die Möglichkeit, Änderungen zu speichern, die Sie an einer Tabelle oder eines Indexes auf dem Datenträger.)  
+
+Um Daten aus der Datenquelle zu lesen, rufen Sie die `Execute` Funktion. Rufen Sie zum Schreiben an die Datenquelle die `FlushData` Funktion. (In einem allgemeinen Sinn, leeren Sie die Möglichkeit, Änderungen zu speichern, die Sie an einer Tabelle oder eines Indexes auf dem Datenträger.)  
 
 ```cpp
 
@@ -158,6 +159,7 @@ Das Zeilenhandle (HROW) Argumente und das Accessorhandle (HACCESSOR) können Sie
 Die `FlushData` Methode schreibt Daten in das Format, in dem sie ursprünglich gespeichert. Wenn Sie diese Funktion nicht überschreiben, Ihrem Anbieter richtig funktioniert, aber Änderungen im Datenspeicher werden nicht geleert.
 
 ### <a name="when-to-flush"></a>Beim leeren
+
 Die Anbietervorlagen FlushData aufgerufen, wenn Daten an den Datenspeicher geschrieben werden müssen. Dies geschieht in der Regel (aber nicht immer) als Ergebnis der Aufrufe an die folgenden Funktionen:
 
 - `IRowsetChange::DeleteRows`
@@ -312,6 +314,7 @@ Als Entwickler des Anbieters müssen Sie berücksichtigen, wie Sie diese Daten g
 Sehen Sie sich den Code im Beispiel UpdatePV; Es wird veranschaulicht, wie NULL-Daten von ein Anbieter verarbeitet werden kann. In UpdatePV speichert der Anbieter durch Schreiben die Zeichenfolge "NULL" NULL-Daten im Datenspeicher an. Wenn sie NULL-Daten aus dem Datenspeicher liest, wird diese Zeichenfolge und anschließend leert den Puffer, erstellen Sie eine NULL-Zeichenfolge. Sie hat auch eine Überschreibung der `IRowsetImpl::GetDBStatus` in dem sie DBSTATUS_S_ISNULL zurückgegeben werden soll, wenn der Wert dieser Daten leer ist.
 
 ### <a name="marking-nullable-columns"></a>Auf NULL festlegbare Spalten markieren
+
 Wenn Sie die Schemarowsets auch implementieren (finden Sie unter `IDBSchemaRowsetImpl`), Ihre Implementierung sollten im DBSCHEMA_COLUMNS-Rowset (normalerweise in Ihrem Anbieter von CxxxSchemaColSchemaRowset gekennzeichnet) angeben, dass die Spalte NULL-Werte zulässt.
 
 Sie müssen auch angeben, dass alle auf NULL festlegbare Spalten, den DBCOLUMNFLAGS_ISNULLABLE-Wert in Ihrer Version von enthalten der `GetColumnInfo`.
@@ -441,4 +444,5 @@ m_rgRowData.Add(trData[0]);
 Dieser Code gibt an, unter anderem, dass die Spalte den Standardwert 0 (null) unterstützt, dass sie beschreibbar sein und alle Daten in der Spalte auf die gleiche Länge besitzen. Wenn Sie die Daten in eine Spalte Variablen Länge haben möchten, würden Sie dieses Flag nicht festgelegt.
 
 ## <a name="see-also"></a>Siehe auch
+
 [Erstellen eines OLE DB-Anbieters](creating-an-ole-db-provider.md)

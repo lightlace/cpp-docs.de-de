@@ -18,24 +18,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d4de09242f8758d8420bf100461dc88e4b51e50
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ff4b60a5c35b1448e1d27b51ba354f4a95658b46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389012"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034272"
 ---
 # <a name="maxenv"></a>_MAX_ENV
-Die maximale zulässige Zeichenfolgenlänge für eine Umgebungsvariable.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-#include <stdio.h>  
-  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Environmental Constants (Umgebungskonstanten)](../c-runtime-library/environmental-constants.md)   
- [Globale Konstanten](../c-runtime-library/global-constants.md)
+
+Die maximale zulässige Zeichenfolgenlänge für eine Umgebungsvariable.
+
+## <a name="syntax"></a>Syntax
+
+```
+
+#include <stdio.h>
+
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Umgebungskonstanten](../c-runtime-library/environmental-constants.md)<br/>
+[Globale Konstanten](../c-runtime-library/global-constants.md)

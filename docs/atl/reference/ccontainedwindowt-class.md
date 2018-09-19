@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc9ac9fc7e638655b7b6b812d347ac26b8cf6967
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c64db5a041845bbd068bab1a72ad461740170b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755800"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040478"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT-Klasse
 
@@ -49,16 +49,16 @@ Diese Klasse implementiert ein Fenster in einem anderen Objekt enthalten sind.
 ## <a name="syntax"></a>Syntax
 
 ```
-template <class TBase = CWindow, class TWinTraits = CControlWinTraits>  
+template <class TBase = CWindow, class TWinTraits = CControlWinTraits>
 class CContainedWindowT : public TBase
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*TBase*  
+*TBase*<br/>
 Die Basisklasse der neuen Klasse. Die Standardbasisklasse ist `CWindow`.
 
-*TWinTraits*  
+*TWinTraits*<br/>
 Eine "traits"-Klasse, die Formatvorlagen für das Fenster definiert. Die Standardeinstellung ist `CControlWinTraits`.
 
 > [!NOTE]
@@ -148,13 +148,13 @@ CContainedWindowT(
 
 ### <a name="parameters"></a>Parameter
 
-*"lpszclassname"*  
+*"lpszclassname"*<br/>
 [in] Der Name einer vorhandenen Fenster-Klasse, die der im Fenster basiert.
 
-*pObject*  
+*pObject*<br/>
 [in] Ein Zeiger auf das enthaltende Objekt, das die meldungszuordnung deklariert. Klasse des Objekts abgeleitet muss [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Identifiziert die meldungszuordnung, die den im Fenster Nachrichten verarbeitet werden. Der Standardwert 0 (null) gibt an, der Standard-meldungszuordnung, die mit deklariert [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Mit Verwendung einer alternativen meldungszuordnung deklariert [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), übergeben Sie `msgMapID`.
 
 ### <a name="remarks"></a>Hinweise
@@ -211,34 +211,34 @@ HWND Create(
 
 ### <a name="parameters"></a>Parameter
 
-*"lpszclassname"*  
+*"lpszclassname"*<br/>
 [in] Der Name einer vorhandenen Fenster-Klasse, die der im Fenster basiert.
 
-*pObject*  
+*pObject*<br/>
 [in] Ein Zeiger auf das enthaltende Objekt, das die meldungszuordnung deklariert. Klasse des Objekts abgeleitet muss [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Identifiziert die meldungszuordnung, die den im Fenster Nachrichten verarbeitet werden. Der Standardwert 0 (null) gibt an, der Standard-meldungszuordnung, die mit deklariert [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Mit Verwendung einer alternativen meldungszuordnung deklariert [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), übergeben Sie `msgMapID`.
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Das Handle für das übergeordnete Element oder Besitzer-Fenster.
 
-*Rect*  
+*Rect*<br/>
 [in] Ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Position des Fensters angeben. Die `RECT` Zeiger oder Verweis übergeben werden kann.
 
-*szWindowName*  
+*szWindowName*<br/>
 [in] Gibt den Namen des Fensters. Der Standardwert ist NULL.
 
-*dwStyle*  
+*dwStyle*<br/>
 [in] Der Stil des Fensters. Der Standardwert ist WS_CHILD &#124; WS_VISIBLE. Eine Liste der möglichen Werte, finden Sie unter [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) im Windows SDK.
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in] Der erweiterte Fensterstil. Der Standardwert ist 0, d. h. keine erweiterten Stil. Eine Liste der möglichen Werte, finden Sie unter [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) im Windows SDK.
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in] Für ein untergeordnetes Fenster den Fenster-Bezeichner. Für ein Fenster der obersten Ebene ein Menühandle für das Fenster. Der Standardwert ist **0 HE**.
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 [in] Ein Zeiger auf die fenstererstellung Daten. Eine vollständige Beschreibung finden Sie unter der Beschreibung für den letzten Parameter um [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -269,13 +269,13 @@ LRESULT DefWindowProc(
 
 ### <a name="parameters"></a>Parameter
 
-*uMsg*  
+*uMsg*<br/>
 [in] Die Meldung, die an das Fenster gesendet wird.
 
-*wParam-Parameter*  
+*wParam-Parameter*<br/>
 [in] Zusätzliche meldungsspezifische Informationen.
 
-*lParam*  
+*lParam*<br/>
 [in] Zusätzliche meldungsspezifische Informationen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -382,7 +382,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*hWnd*  
+*hWnd*<br/>
 [in] Das Handle des Fensters in Unterklassen unterteilt wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -406,7 +406,7 @@ void SwitchMessageMap(DWORD dwMsgMapID);
 
 ### <a name="parameters"></a>Parameter
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Der Nachrichtenbezeichner zuordnen. Verwenden Sie die Standard-meldungszuordnung, die mit deklariert [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), übergeben Sie 0 (null). Mit Verwendung einer alternativen meldungszuordnung deklariert [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), übergeben Sie `msgMapID`.
 
 ### <a name="remarks"></a>Hinweise
@@ -425,7 +425,7 @@ HWND UnsubclassWindow(BOOL bForce = FALSE);
 
 ### <a name="parameters"></a>Parameter
 
-*bForce*  
+*bForce*<br/>
 [in] Festlegen auf "true"-Force-die ursprüngliche Fensterprozedur wiederhergestellt werden, wenn die Fensterprozedur für diesen `CContainedWindowT` Objekt ist derzeit nicht aktiv. Wenn *bForce* die Fensterprozedur auf "false" festgelegt ist, die für diese `CContainedWindowT` Objekt ist derzeit nicht aktiv, wird die ursprüngliche Fensterprozedur nicht wiederhergestellt werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -450,16 +450,16 @@ static LRESULT CALLBACK WindowProc(
 
 ### <a name="parameters"></a>Parameter
 
-*hWnd*  
+*hWnd*<br/>
 [in] Das Handle des Fensters.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Die Meldung, die an das Fenster gesendet wird.
 
-*wParam-Parameter*  
+*wParam-Parameter*<br/>
 [in] Zusätzliche meldungsspezifische Informationen.
 
-*lParam*  
+*lParam*<br/>
 [in] Zusätzliche meldungsspezifische Informationen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -472,9 +472,9 @@ Das Ergebnis der Nachrichtenverarbeitung.
 
 ## <a name="see-also"></a>Siehe auch
 
-[CWindow-Klasse](../../atl/reference/cwindow-class.md)   
-[CWindowImpl-Klasse](../../atl/reference/cwindowimpl-class.md)   
-[CMessageMap-Klasse](../../atl/reference/cmessagemap-class.md)   
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
+[CWindow-Klasse](../../atl/reference/cwindow-class.md)<br/>
+[CWindowImpl-Klasse](../../atl/reference/cwindowimpl-class.md)<br/>
+[CMessageMap-Klasse](../../atl/reference/cmessagemap-class.md)<br/>
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

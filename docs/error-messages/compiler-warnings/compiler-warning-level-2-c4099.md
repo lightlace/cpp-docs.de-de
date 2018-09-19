@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 2) C4099 | Microsoft Docs
+title: Compilerwarnung (Stufe 2) C4099 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afecb3fb2420d27bedf16c81894f224a1119a67b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d7ffee02e8e5414a0e06cc4ba0da77a50c75f53
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33309467"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110171"
 ---
 # <a name="compiler-warning-level-2-c4099"></a>Compilerwarnung (Stufe 2) C4099
-'Bezeichner': Typnamen, die mit 'Objekttyp1 ' und jetzt mithilfe von "%objecttype2" für die erstmalige Sichtbarkeit  
-  
- Ein Objekt, das als Struktur deklariert wird als Klasse definiert, oder ein Objekt als eine Klasse deklariert wird als Struktur definiert. Der Compiler verwendet den Typ in der Definition.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C4099 generiert.  
-  
-```  
-// C4099.cpp  
-// compile with: /W2 /c  
-struct A;  
-class A {};   // C4099, use different identifer or use same object type  
+
+'Bezeichner': Typ den zuerst mithilfe von "Objekttyp1 ' und jetzt mit"%objecttype2"
+
+Ein Objekt, das als eine Struktur deklariert wird als eine Klasse definiert, oder ein Objekt, das als eine Klasse deklariert wird als Struktur definiert. Der Compiler verwendet den Typ in der Definition.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird C4099 generiert.
+
+```
+// C4099.cpp
+// compile with: /W2 /c
+struct A;
+class A {};   // C4099, use different identifer or use same object type
 ```

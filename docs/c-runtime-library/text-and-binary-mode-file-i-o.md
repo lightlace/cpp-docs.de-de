@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4be1a3619fcd441dbcca53b0a1c369e30f9fb678
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 133f62347998ad8238c3136c3de03b08ba41346d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411483"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116255"
 ---
 # <a name="text-and-binary-mode-file-io"></a>Text- und Binärmodusdatei-E/A
 
@@ -47,4 +47,4 @@ Wenn Sie eine „file-open“-Funktion (z.B. [_open](../c-runtime-library/refere
 ## <a name="see-also"></a>Siehe auch
 
 [Eingabe und Ausgabe](../c-runtime-library/input-and-output.md)<br/>
- [Universelle C-Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Universelle C-Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

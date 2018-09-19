@@ -1,5 +1,5 @@
 ---
-title: Linkertoolfehler Lnk1215 | Microsoft Docs
+title: Linkertoolfehler Lnk1215 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 031703687c5ba57e1daaa299e9a276a64e3055a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dab72efea41e775f3ba028b374312975daf48d6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300829"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044833"
 ---
 # <a name="linker-tools-error-lnk1215"></a>Linkertoolfehler LNK1215
-Metadatenvorgang ist fehlgeschlagen (HRESULT): Fehler  
-  
- Der Linker hat einen Fehler aus .NET Runtime empfangen, bei dem Versuch, ein Update der Paketmetadaten durch .NET Runtime führen.  
-  
- `HRESULT` ist das HRESULT von der .NET Common Language Runtime-Methode. `error` ist die. NET-bereitgestellten Text.  
-  
- Sie haben wahrscheinlich eine nicht übereinstimmende Linker und .NET Runtime; Installieren Sie Visual C++ neu.
+
+Fehler bei der Metadatenvorgang (HRESULT): Fehler
+
+Der Linker hat einen Fehler aus der .NET Runtime empfangen, bei dem Versuch, ein Update der Paketmetadaten über die .NET Runtime zu tun.
+
+`HRESULT` entspricht dem HRESULT von der .NET Common Language Runtime-Methode. `error` ist der. NET-bereitgestellten Text.
+
+Möglicherweise verfügen Sie über eine nicht übereinstimmende Linker und .NET Runtime, Installieren Sie Visual C++ neu.

@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72b27036ffe84ff915bfcda0205469ef79e00255
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 46e3926f31ec7d12da539d868cacb37e18134e96
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757087"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109685"
 ---
 # <a name="cwindow-class"></a>CWindow-Klasse
 
@@ -410,7 +410,7 @@ void Attach(HWND hWndNew) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*hWndNew*  
+*hWndNew*<br/>
 [in] Das Handle für ein Fenster.
 
 ### <a name="example"></a>Beispiel
@@ -459,7 +459,7 @@ BOOL CenterWindow(HWND hWndCenter = NULL) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*hWndCenter*  
+*hWndCenter*<br/>
 [in] Das Handle für das Fenster für die zentriert werden soll. Wenn dieser Parameter NULL (Standardwert) ist, wird die Methode festgelegt *hWndCenter* des Fensters übergeordnete Fenster, wenn es sich um ein untergeordnetes Fenster handelt. Andernfalls wird es festgelegt *hWndCenter* für das Besitzerfenster des Fensters.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -566,28 +566,28 @@ HWND Create(
 
 ### <a name="parameters"></a>Parameter
 
-*lpstrWndClass*  
+*lpstrWndClass*<br/>
 [in] Ein Zeiger auf das Fenster "-Klasse.
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Das Handle für das übergeordnete Element oder Besitzer-Fenster.
 
-*Rect*  
+*Rect*<br/>
 [in] Eine Variable vom Typ [_U_RECT](../../atl/reference/u-rect-class.md) die Position des Fensters angeben. Der Standardwert ist NULL. Wenn dieser Parameter gleich NULL ist, den Wert der `CWindow::rcDefault` verwendet wird.
 
-*szWindowName*  
+*szWindowName*<br/>
 [in] Gibt den Namen des Fensters. Der Standardwert ist NULL.
 
-*dwStyle*  
+*dwStyle*<br/>
 [in] Der Stil des Fensters. Der Standardwert 0 ist, ist d. h. kein Stil angegeben. Eine Liste der möglichen Werte, finden Sie unter [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) im Windows SDK.
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in] Der erweiterte Fensterstil. Der Standardwert 0 ist, ist d. h. keine erweiterten Stil angegeben. Eine Liste der möglichen Werte, finden Sie unter [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) im Windows SDK.
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in] Eine Variable vom Typ [_U_MENUorID](../../atl/reference/u-menuorid-class.md) ein Handle für ein Menü oder einen Fenster-Bezeichner angeben. Der Standardwert ist 0 HE.
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 Ein Zeiger auf die fenstererstellung Daten in einem [CREATESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632603) Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -652,7 +652,7 @@ CWindow(HWND hWnd = NULL) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*hWnd*  
+*hWnd*<br/>
 [in] Das Handle für ein Fenster.
 
 ### <a name="remarks"></a>Hinweise
@@ -911,7 +911,7 @@ HWND GetDescendantWindow(int nID) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*nID*  
+*nID*<br/>
 [in] Der Bezeichner des untergeordneten Fensters abgerufen werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -935,13 +935,13 @@ HRESULT GetDlgControl(
 
 ### <a name="parameters"></a>Parameter
 
-*nID*  
+*nID*<br/>
 [in] Die Ressourcen-ID des Steuerelements abgerufen wird.
 
-*IID*  
+*IID*<br/>
 [in] Die ID der Schnittstelle aus dem Steuerelement abgerufen werden sollen.
 
-*ppCtrl*  
+*ppCtrl*<br/>
 [out] Der Zeiger auf die Schnittstelle.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -977,13 +977,13 @@ HRESULT GetDlgHost(
 
 ### <a name="parameters"></a>Parameter
 
-*nID*  
+*nID*<br/>
 [in] Die Ressourcen-ID des Steuerelements abgerufen wird.
 
-*IID*  
+*IID*<br/>
 [in] Die ID der Schnittstelle aus dem Steuerelement abgerufen werden sollen.
 
-*ppHost*  
+*ppHost*<br/>
 [out] Der Zeiger auf die Schnittstelle.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1098,7 +1098,7 @@ HICON GetIcon(BOOL bBigIcon = TRUE) const;
 
 ### <a name="parameters"></a>Parameter
 
-*bBigIcon*  
+*bBigIcon*<br/>
 [in] Bei "true" (Standardwert) der Methode zurückgegeben große Symbol verwendet. Andernfalls wird das kleine Symbol zurückgegeben.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1448,16 +1448,16 @@ int GetWindowText(CSimpleString& strText) const;
 
 ### <a name="parameters"></a>Parameter
 
-*lpszStringBuf*  
+*lpszStringBuf*<br/>
 Ein Puffer, in den der Fenstertext geschrieben wird.
 
-*nMaxCount*  
+*nMaxCount*<br/>
 Die Größe des Puffers in Zeichen. Außerdem die maximale Anzahl der zu schreibenden Zeichen.
 
-*bstrText*  
+*bstrText*<br/>
 BSTR, des Fenstertexts.
 
-*strText*  
+*strText*<br/>
 Ein `CString`-Element zum Speichern des Fenstertexts.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1761,7 +1761,7 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*bLock*  
+*bLock*<br/>
 [in] Wenn "true" (Standardwert), wird das Fenster gesperrt werden. Andernfalls wird es entsperrt werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1833,13 +1833,13 @@ BOOL ModifyStyle(
 
 ### <a name="parameters"></a>Parameter
 
-*dwRemove*  
+*dwRemove*<br/>
 [in] Gibt das Window-Stile, während der Änderung der Stil entfernt werden soll.
 
-*dwAdd*  
+*dwAdd*<br/>
 [in] Gibt das Window-Stile, die während der Änderung der Stil hinzugefügt werden.
 
-*nFlags*  
+*nFlags*<br/>
 [in] Flags, Fenster-Positionierung. Eine Liste der möglichen Werte, finden Sie unter den [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) -Funktion in das Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1879,13 +1879,13 @@ BOOL ModifyStyleEx(
 
 ### <a name="parameters"></a>Parameter
 
-*dwRemove*  
+*dwRemove*<br/>
 [in] Gibt an, die erweiterten Stile, während der Änderung der Stil entfernt werden soll.
 
-*dwAdd*  
+*dwAdd*<br/>
 [in] Gibt an, die erweiterten Stile, die während der Änderung der Stil hinzugefügt werden.
 
-*nFlags*  
+*nFlags*<br/>
 [in] Flags, Fenster-Positionierung. Eine Liste der möglichen Werte, finden Sie unter den [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) -Funktion in das Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1963,7 +1963,7 @@ Finden Sie unter [OpenClipboard](/windows/desktop/api/winuser/nf-winuser-opencli
 
 Konvertiert eine `CWindow` Objekt in ein HWND.
 
-```  
+```
 operator HWND() const throw();
 ```
 
@@ -2018,10 +2018,10 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*hDC*  
+*hDC*<br/>
 [in] Das Handle für einen Gerätekontext.
 
-*dwFlags*  
+*dwFlags*<br/>
 [in] Gibt die Optionen zeichnen. Sie können eine oder mehrere der folgenden Flags kombinieren:
 
 - PRF_CHECKVISIBLE zeichnen Sie das Fenster nur, wenn es sichtbar ist.
@@ -2046,10 +2046,10 @@ void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*hDC*  
+*hDC*<br/>
 [in] Das Handle für einen Gerätekontext.
 
-*dwFlags*  
+*dwFlags*<br/>
 [in] Gibt Optionen zum Zeichnen. Sie können eine oder mehrere der folgenden Flags kombinieren:
 
 - PRF_CHECKVISIBLE zeichnen Sie das Fenster nur, wenn es sichtbar ist.
@@ -2122,13 +2122,13 @@ BOOL ResizeClient(
 
 ### <a name="parameters"></a>Parameter
 
-*nWidth*  
+*nWidth*<br/>
 Neue Breite des Fensters in Pixel.
 
-*nHeight*  
+*nHeight*<br/>
 Neue Höhe des Fensters in Pixel.
 
-*bRedraw*  
+*bRedraw*<br/>
 Ein Flag, der angibt, ob Änderungen neu gezeichnet werden. Standardwert ist "FALSE", der angibt, dass das Fenster nicht Änderungen neu zeichnen.
 
 ##  <a name="screentoclient"></a>  CWindow::ScreenToClient
@@ -2236,16 +2236,16 @@ void SendMessageToDescendants(
 
 ### <a name="parameters"></a>Parameter
 
-*message*  
+*message*<br/>
 [in] Die Nachricht gesendet werden.
 
-*wParam-Parameter*  
+*wParam-Parameter*<br/>
 [in] Zusätzliche meldungsspezifische Informationen.
 
-*lParam*  
+*lParam*<br/>
 [in] Zusätzliche meldungsspezifische Informationen.
 
-*bDeep*  
+*bDeep*<br/>
 [in] Bei "true" (der Standardwert), wird die Nachricht an alle nachfolgefenster; gesendet Andernfalls wird es nur für die unmittelbar untergeordneten Fenster gesendet.
 
 ### <a name="remarks"></a>Hinweise
@@ -2319,7 +2319,7 @@ int SetDlgCtrlID(int nID) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*nID*  
+*nID*<br/>
 [in] Der neue Wert für den Fenster-ID festlegen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2379,10 +2379,10 @@ void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*hFont*  
+*hFont*<br/>
 [in] Das Handle für die neue Schriftart.
 
-*bRedraw*  
+*bRedraw*<br/>
 [in] Wenn "true" (Standardwert), des Fensters neu gezeichnet wird. Andernfalls ist es nicht.
 
 ##  <a name="sethotkey"></a>  CWindow::SetHotKey
@@ -2395,10 +2395,10 @@ int SetHotKey(WORD wVirtualKeyCode, WORD wModifiers) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*wVirtualKeyCode*  
+*wVirtualKeyCode*<br/>
 [in] Den virtueller Tastencode der Taste. Eine Liste der standardmäßige virtuelle Tastencodes finden Sie unter "Winuser.h".
 
-*wModifiers*  
+*wModifiers*<br/>
 [in] Die Modifizierer für den aktiven Schlüssel. Eine Liste der möglichen Werte finden Sie unter WM_SETHOTKEY im Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2415,10 +2415,10 @@ HICON SetIcon(HICON hIcon, BOOL bBigIcon = TRUE) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*hIcon*  
+*hIcon*<br/>
 [in] Das Handle für ein Symbol "Neu".
 
-*bBigIcon*  
+*bBigIcon*<br/>
 [in] Wenn "true" (Standardwert), die Methode wird ein großes Symbol. Andernfalls wird ein kleines Symbol.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2467,7 +2467,7 @@ void SetRedraw(BOOL bRedraw = TRUE) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*bRedraw*  
+*bRedraw*<br/>
 [in] Gibt den Status des Neuzeichnen-Flags. Wenn "true" (Standardwert), das Neuzeichnen-Flag festgelegt ist; False gibt an, wird das Flag gelöscht.
 
 ### <a name="remarks"></a>Hinweise

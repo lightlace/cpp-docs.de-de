@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e272c9674270c1c600fee697dd77d050d6adb4e0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 79cace12447eccb9ac7dc560b6add45bd0dc81c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759827"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045080"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase-Klasse
 
@@ -89,13 +89,13 @@ Weitere Informationen finden Sie unter [Dateizuordnung](/windows/desktop/Memory/
 Der Konstruktor.
 
 ```
-CAtlFileMappingBase(CAtlFileMappingBase& orig);  
+CAtlFileMappingBase(CAtlFileMappingBase& orig);
 CAtlFileMappingBase() throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*orig*  
+*orig*<br/>
 Das ursprüngliche dateizuordnung Objekt zum Erstellen des neuen Objekts kopiert.
 
 ### <a name="remarks"></a>Hinweise
@@ -128,7 +128,7 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*orig*  
+*orig*<br/>
 Die ursprüngliche Dateizuordnungsobjekt zum Kopieren aus.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -190,19 +190,19 @@ HRESULT MapFile(
 
 ### <a name="parameters"></a>Parameter
 
-*hFile*  
+*hFile*<br/>
 Handle für die Datei aus dem ein Zuordnungsobjekt zu erstellen. *hFile* muss gültig sein und kann nicht festgelegt werden, um INVALID_HANDLE_VALUE.
 
-*nMappingSize*  
+*nMappingSize*<br/>
 Die Größe für Zuordnung. Wenn 0, ist die maximale Größe der dateizuordnung Objekts gleich der aktuellen Größe der Datei identifizierte *hFile.*
 
-*nOffset*  
+*nOffset*<br/>
 Die Dateioffset, in dem Zuordnung ist, um zu beginnen. Der Offset-Wert muss es sich um ein Vielfaches von Speicher-zuordnungsgranularität des Systems sein.
 
-*dwMappingProtection*  
+*dwMappingProtection*<br/>
 Der Schutz für die Dateiansicht gewünscht wird, wenn die Datei zugeordnet ist. Finden Sie unter *FlProtect* in [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) im Windows SDK.
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 Gibt den Typ des Zugriffs auf die Datei anzeigen und somit den Schutz von der Seiten, die von der Datei zugeordnet. Finden Sie unter *DwDesiredAccess* in [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) im Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -233,22 +233,22 @@ HRESULT MapSharedMem(
 
 ### <a name="parameters"></a>Parameter
 
-*nMappingSize*  
+*nMappingSize*<br/>
 Die Größe für Zuordnung. Bei 0 wird die maximale Größe der dateizuordnung Objekts gleich der aktuellen Größe des der identifizierte Dateizuordnungsobjekt *SzName*.
 
-*szName*  
+*szName*<br/>
 Der Name des Objekts Zuordnung.
 
-*pbAlreadyExisted*  
+*pbAlreadyExisted*<br/>
 Verweist auf ein BOOL-Wert, der auf "true" fest, wenn das Zuordnungsobjekt bereits festgelegt ist vorhanden.
 
-*lpsa*  
+*lpsa*<br/>
 Der Zeiger auf eine `SECURITY_ATTRIBUTES` -Struktur, die bestimmt, ob das zurückgegebene Handle von untergeordneten Prozessen geerbt werden kann. Finden Sie unter *LpAttributes* in [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) im Windows SDK.
 
-*dwMappingProtection*  
+*dwMappingProtection*<br/>
 Der Schutz für die Dateiansicht, gewünscht wird, wenn die Datei zugeordnet ist. Finden Sie unter *FlProtect* in `CreateFileMapping` im Windows SDK.
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 Gibt den Typ des Zugriffs auf die Datei anzeigen und somit den Schutz von der Seiten, die von der Datei zugeordnet. Finden Sie unter *DwDesiredAccess* in [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) im Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -273,16 +273,16 @@ HRESULT OpenMapping(
 
 ### <a name="parameters"></a>Parameter
 
-*szName*  
+*szName*<br/>
 Der Name des Objekts Zuordnung. Wenn ein offenes Handle zu einem Dateizuordnungsobjekt mit diesem Namen vorhanden ist und die Sicherheitsbeschreibung für das Zuordnungsobjekt nicht zu Konflikten mit der *DwViewDesiredAccess* Parameter, der geöffnete Vorgang erfolgreich ist.
 
-*nMappingSize*  
+*nMappingSize*<br/>
 Die Größe für Zuordnung. Bei 0 wird die maximale Größe der dateizuordnung Objekts gleich der aktuellen Größe des der identifizierte Dateizuordnungsobjekt *SzName*.
 
-*nOffset*  
+*nOffset*<br/>
 Die Dateioffset, in dem Zuordnung ist, um zu beginnen. Der Offset-Wert muss es sich um ein Vielfaches von Speicher-zuordnungsgranularität des Systems sein.
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 Gibt den Typ des Zugriffs auf die Datei anzeigen und somit den Schutz von der Seiten, die von der Datei zugeordnet. Finden Sie unter *DwDesiredAccess* in [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) im Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -303,7 +303,7 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 
 ### <a name="parameters"></a>Parameter
 
-*orig*  
+*orig*<br/>
 Das aktuelle dateizuordnung Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -328,5 +328,5 @@ Finden Sie unter [UnmapViewOfFile](https://msdn.microsoft.com/library/windows/de
 
 ## <a name="see-also"></a>Siehe auch
 
-[CAtlFileMapping-Klasse](../../atl/reference/catlfilemapping-class.md)   
+[CAtlFileMapping-Klasse](../../atl/reference/catlfilemapping-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

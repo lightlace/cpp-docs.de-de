@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89890fdaa5c2188aff279e22ff25dfa9868382c0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b5567f1aad0d74bd42059e3458f4655781f30d16
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220045"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054102"
 ---
 # <a name="fatal-error-c1100"></a>Schwerwiegender Fehler C1100
-OLE kann nicht initialisiert: System-Fehlermeldung  
-  
- Der Compiler kann nicht die Component Object Model (COM)-Bibliothek initialisiert werden. Finden Sie unter [CoInitialize](/windows/desktop/api/objbase/nf-objbase-coinitialize).
+
+OLE kann nicht initialisiert: System-Fehlermeldung
+
+Der Compiler kann nicht die Component Object Model (COM)-Bibliothek initialisiert werden. Finden Sie unter [CoInitialize](/windows/desktop/api/objbase/nf-objbase-coinitialize).

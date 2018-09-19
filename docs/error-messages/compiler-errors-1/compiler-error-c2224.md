@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2224 | Microsoft Docs
+title: Compilerfehler C2224 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0830018d514f5a58bdc1f2989ae0f3106483dcce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4420e0e2f89c50bbc7d0748779efcc0eccf117d1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169529"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098159"
 ---
 # <a name="compiler-error-c2224"></a>Compilerfehler C2224
-Links von 'Identifier' muss die Struktur/Union-Typ aufweisen.  
-  
- Der Operand links vom Punktoperator (.) ist eine Klasse, Struktur oder Union.  
-  
- Dieser Fehler kann verursacht werden, durch einen linken Operanden, der eine Variable nicht definiert ist (Geben Sie daher `int`).
+
+Links von 'Identifier' muss die Struktur/Union-Typ aufweisen.
+
+Der Operand links vom Punktoperator (.) ist nicht an eine Klasse, Struktur oder Union.
+
+Dieser Fehler kann verursacht werden, durch einen linken Operanden, die eine nicht definierte Variable (aus diesem Grund geben `int`).

@@ -36,14 +36,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18199a700cbc5065d987a57cc076a5d0cf670577
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 6de23571f30373e5ddd3940bcae4be9fa176539a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340663"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086836"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase-Klasse
+
 Alle Accessoren in OLE DB-Vorlagen, die von dieser Klasse abgeleitet werden. `CAccessorBase` können ein Rowset, um mehrere Accessoren zu verwalten. Darüber hinaus Bindung für Parameter und Ausgabespalten.  
   
 ## <a name="syntax"></a>Syntax
@@ -65,9 +66,11 @@ Alle Accessoren in OLE DB-Vorlagen, die von dieser Klasse abgeleitet werden. `CA
 |[ReleaseAccessors](#release)|Gibt die Accessoren frei.|  
 
 ## <a name="requirements"></a>Anforderungen  
- **Header:** atldbcli.h  
+
+**Header:** atldbcli.h  
 
 ## <a name="close"></a> CAccessorBase:: Close
+
 Schließt die Accessoren.  
   
 ### <a name="syntax"></a>Syntax  
@@ -77,9 +80,11 @@ void Close();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie [ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md) erste.  
+
+Rufen Sie [ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md) erste.  
 
 ## <a name="geth"></a> CAccessorBase:: Gethaccessor
+
 Ruft den Accessorhandle für einen angegebenen Accessor ab.  
   
 ### <a name="syntax"></a>Syntax  
@@ -89,13 +94,16 @@ HACCESSOR GetHAccessor(ULONG nAccessor) const;
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *nAccessor*  
- [in] Die Anzahl der NULL-Offset für die Zugriffsmethode.  
+
+*nAccessor*<br/>
+[in] Die Anzahl der NULL-Offset für die Zugriffsmethode.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das Accessorhandle.  
+
+Das Accessorhandle.  
 
 ## <a name="getnum"></a> CAccessorBase:: Getnumaccessors
+
 Ruft die Anzahl der Accessoren, die von der Klasse erstellt.  
   
 ### <a name="syntax"></a>Syntax  
@@ -105,9 +113,11 @@ ULONG GetNumAccessors() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Anzahl der Accessoren, die von der Klasse erstellt.  
+
+Die Anzahl der Accessoren, die von der Klasse erstellt.  
 
 ## <a name="isauto"></a> CAccessorBase:: Isautoaccessor
+
 Gibt "true" zurück, wenn die Daten automatisch für den Accessor während eines Verschiebevorgangs abgerufen werden.  
   
 ### <a name="syntax"></a>Syntax  
@@ -117,13 +127,16 @@ bool IsAutoAccessor(ULONG nAccessor) const;
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *nAccessor*  
- [in] Die Anzahl der NULL-Offset für die Zugriffsmethode.  
+
+*nAccessor*<br/>
+[in] Die Anzahl der NULL-Offset für die Zugriffsmethode.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt **"true"** Wenn der Accessor einen Autoaccessor ist. Andernfalls wird **false**zurückgegeben.  
+
+Gibt **"true"** Wenn der Accessor einen Autoaccessor ist. Andernfalls wird **false**zurückgegeben.  
 
 ## <a name="release"></a> CAccessorBase:: Releaseaccessors
+
 Gibt die Accessoren, die von der Klasse erstellt.  
   
 ### <a name="syntax"></a>Syntax  
@@ -133,16 +146,20 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *pUnk*  
- [in] Ein Zeiger auf ein `IUnknown` Schnittstelle für das COM-Objekt, das für die die Accessoren erstellt wurden.  
+
+*pUnk*<br/>
+[in] Ein Zeiger auf ein `IUnknown` Schnittstelle für das COM-Objekt, das für die die Accessoren erstellt wurden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein standard-HRESULT.  
+
+Ein standard-HRESULT.  
   
 ### <a name="remarks"></a>Hinweise  
- Aufgerufen von [CAccessorRowset:: Close](../../data/oledb/caccessorrowset-close.md). 
+
+Aufgerufen von [CAccessorRowset:: Close](../../data/oledb/caccessorrowset-close.md). 
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenz der OLE DB Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CAccessorBase-Klasse](../../data/oledb/caccessorbase-class.md)
+
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CAccessorBase-Klasse](../../data/oledb/caccessorbase-class.md)

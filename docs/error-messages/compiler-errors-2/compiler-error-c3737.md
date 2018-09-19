@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3737 | Microsoft Docs
+title: Compilerfehler C3737 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29d31597e9581d03f97c2b07856ce81c5de50bd3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99ab9394f2c475079ee226dd294cca346ec68e32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33264609"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039256"
 ---
 # <a name="compiler-error-c3737"></a>Compilerfehler C3737
-'Delegat': ein Delegat kann keine explizite Aufrufkonvention  
-  
- Sie können nicht angeben, die [Aufrufkonvention](../../cpp/calling-conventions.md) für eine `delegate`.  
-  
-## <a name="example"></a>Beispiel  
-Im folgende Beispiel wird C3737 generiert:  
-  
-```  
-// C3737a.cpp  
-// compile with: /clr  
-delegate void __stdcall MyFunc();   // C3737  
-// Try the following line instead.  
-// delegate void MyFunc();  
-  
-int main() {  
-}  
-```  
+
+'Delegat': ein Delegat kann keine explizite Aufrufkonvention
+
+Sie können nicht angeben, die [Aufrufkonvention](../../cpp/calling-conventions.md) für eine `delegate`.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C3737 generiert:
+
+```
+// C3737a.cpp
+// compile with: /clr
+delegate void __stdcall MyFunc();   // C3737
+// Try the following line instead.
+// delegate void MyFunc();
+
+int main() {
+}
+```

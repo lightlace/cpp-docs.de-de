@@ -1,5 +1,5 @@
 ---
-title: Befehlszeilenwarnung D9028 | Microsoft Docs
+title: Befehlszeilenwarnung D9028 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 244f3c4a5cf5b34e75ad9d94a167648abdba38a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef739da3bc106a654e11c4a13bae7be59d35fc90
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301540"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044131"
 ---
 # <a name="command-line-warning-d9028"></a>Befehlszeilenwarnung D9028
-Fehler beim minimalen Neukompilieren  
-  
- Die Projekt-IDB-Datei ist beschädigt. Die Datei löschen und neu erstellen.  
-  
- Weitere Informationen über minimale neu erstellt und der IDB-Datei finden Sie unter der [/GM (Compileroption)](../../build/reference/gm-enable-minimal-rebuild.md).
+
+Fehler beim minimalen Neukompilieren, normale Erstellung
+
+Die Projekt-IDB-Datei ist beschädigt. Die Datei löschen und neu zu erstellen.
+
+Weitere Informationen zu minimalen Neuerstellung und der IDB-Datei, finden Sie unter den [Compileroption/GM](../../build/reference/gm-enable-minimal-rebuild.md).

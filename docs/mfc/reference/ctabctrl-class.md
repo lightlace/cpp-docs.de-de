@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac6e8215cc46fd190703981869a065df8d46b18d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8ad44aaaf22adce58cfdf01d108f172dc7cdf372
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690470"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043936"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Registerkarten-Steuerelements bereit.  
@@ -391,30 +391,34 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
 ### <a name="remarks"></a>Hinweise  
  Wenn die Nachricht gesendet wird, die `mask` -Member gibt an, welche Attribute zurück. Wenn die `mask` -Member gibt an, den TCIF_TEXT-Wert, der `pszText` Member darf die Adresse des Puffers, der den Elementtext empfängt und die `cchTextMax` Member muss die Größe des Puffers angeben.  
   
- `mask`  
- Wert, der angibt, welche `TCITEM` Strukturmember abgerufen oder festgelegt. Dieser Member kann NULL oder eine Kombination der folgenden Werte sein:  
+- `mask`
+
+   Wert, der angibt, welche `TCITEM` Strukturmember abgerufen oder festgelegt. Dieser Member kann NULL oder eine Kombination der folgenden Werte sein:  
   
-- TCIF_TEXT der `pszText` Member ist gültig.  
+   - TCIF_TEXT der `pszText` Member ist gültig.  
   
-- TCIF_IMAGE der `iImage` Member ist gültig.  
+   - TCIF_IMAGE der `iImage` Member ist gültig.  
   
-- TCIF_PARAM der `lParam` Member ist gültig.  
+   - TCIF_PARAM der `lParam` Member ist gültig.  
   
-- TCIF_RTLREADING den Text der `pszText` mit rechts-nach-Links-Lesefolge auf Systemen mit Hebräisch oder Arabisch angezeigt wird.  
+   - TCIF_RTLREADING den Text der `pszText` mit rechts-nach-Links-Lesefolge auf Systemen mit Hebräisch oder Arabisch angezeigt wird.  
   
-- TCIF_STATE der `dwState` Member ist gültig.  
+   - TCIF_STATE der `dwState` Member ist gültig.  
   
- `pszText`  
- Zeiger auf eine Null-terminierte Zeichenfolge, die mit den Registerkartentext ein, wenn die Struktur Informationen über eine Registerkarte enthält. Wenn die Struktur Informationen empfängt, gibt dieses Element die Adresse des Puffers, der den Registerkartentext ein empfängt.  
+- `pszText`  
+
+   Zeiger auf eine Null-terminierte Zeichenfolge, die mit den Registerkartentext ein, wenn die Struktur Informationen über eine Registerkarte enthält. Wenn die Struktur Informationen empfängt, gibt dieses Element die Adresse des Puffers, der den Registerkartentext ein empfängt.  
   
- `cchTextMax`  
- Größe des Puffers verweist `pszText`. Dieses Element wird ignoriert, wenn die Struktur keine Informationen empfängt.  
+- `cchTextMax`  
+
+   Größe des Puffers verweist `pszText`. Dieses Element wird ignoriert, wenn die Struktur keine Informationen empfängt.  
   
- `iImage`  
+- `iImage`  
  Indizieren Sie in des Registerkarten-Steuerelements Bildliste oder -1, wenn kein Standardimage für die Registerkarte vorhanden ist.  
   
- lParam  
- Die Registerkarte zugeordnete anwendungsdefinierte Daten. Wenn mehr als vier Bytes der Anwendung definierte Daten pro Registerkarte, eine Anwendung muss eine Struktur definieren und Sie anstelle der `TCITEM` Struktur. Das erste Element der Anwendung definierte Struktur muss eine [TCITEMHEADER](/windows/desktop/api/commctrl/ns-commctrl-tagtcitemheadera)Struktur. Die `TCITEMHEADER` Struktur ist identisch mit der `TCITEM` Struktur, jedoch ohne die `lParam` Member. Der Unterschied zwischen der Größe Ihrer Struktur und die Größe der `TCITEMHEADER` Struktur sollte die Anzahl der zusätzlichen Bytes pro Tabstopp entsprechen.  
+- `lParam`  
+
+   Die Registerkarte zugeordnete anwendungsdefinierte Daten. Wenn mehr als vier Bytes der Anwendung definierte Daten pro Registerkarte, eine Anwendung muss eine Struktur definieren und Sie anstelle der `TCITEM` Struktur. Das erste Element der Anwendung definierte Struktur muss eine [TCITEMHEADER](/windows/desktop/api/commctrl/ns-commctrl-tagtcitemheadera)Struktur. Die `TCITEMHEADER` Struktur ist identisch mit der `TCITEM` Struktur, jedoch ohne die `lParam` Member. Der Unterschied zwischen der Größe Ihrer Struktur und die Größe der `TCITEMHEADER` Struktur sollte die Anzahl der zusätzlichen Bytes pro Tabstopp entsprechen.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTabCtrl#4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  

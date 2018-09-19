@@ -18,36 +18,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5687adfada8657ae26edd9001db8990ff08864e9
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: a8f09109aab5823f339de76a1337eea77a0794cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894694"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037748"
 ---
 # <a name="results-of-calling-example"></a>Ergebnisse des Aufrufbeispiels
 
 **Microsoft-spezifisch**
 
 ## <a name="cdecl"></a>__cdecl
+
 Der ergänzte C-Funktionsname ist `_MyFunc`.
 
-![CDECL-Aufrufkonvention](../cpp/media/vc37i01.gif "vc37I01")  
-Die **__cdecl** Aufrufkonvention
+![CDECL-Aufrufkonvention](../cpp/media/vc37i01.gif "vc37I01") der **__cdecl** Aufrufkonvention
 
 ## <a name="stdcall-and-thiscall"></a>thiscall und __stdcall
 
 Der ergänzte C-Name (**__stdcall**) ist `_MyFunc@20`. Der ergänzte C++-Name ist implementierungsspezifisch.
 
-![&#95;&#95;StdCall und Thiscall-Aufrufkonventionen](../cpp/media/vc37i02.gif "vc37I02")  
-__stdcall- und thiscall-Aufrufkonventionen
+![&#95;&#95;StdCall und Thiscall-Aufrufkonventionen](../cpp/media/vc37i02.gif "vc37I02") __stdcall- und Thiscall-Aufrufkonventionen
 
 ## <a name="fastcall"></a>__fastcall
 
 Der ergänzte C-Name (**__fastcall**) ist `@MyFunc@20`. Der ergänzte C++-Name ist implementierungsspezifisch.
 
-![Aufrufkonvention für &#95; &#95;Fastcall](../cpp/media/vc37i03.gif "vc37I03")  
-__fastcall-Aufrufkonvention
+![Aufrufkonvention für &#95; &#95;Fastcall](../cpp/media/vc37i03.gif "vc37I03") die "__fastcall"-Aufrufkonvention
 
 **Ende Microsoft-spezifisch**
 

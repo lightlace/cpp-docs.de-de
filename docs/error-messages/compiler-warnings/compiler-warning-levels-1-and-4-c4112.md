@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufen 1 und 4) C4112 | Microsoft Docs
+title: Compilerwarnung (Ebenen 1 und 4) C4112 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43718511af0d85f0c9026fe70b4749c4e3d4b1e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9015a7ee7a0b71d3c6aafd3e3b32d4ea1b07f108
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299278"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110548"
 ---
 # <a name="compiler-warning-levels-1-and-4-c4112"></a>Compilerwarnung (Stufen 1 und 4) C4112
-\#Zeile muss eine ganze Zahl zwischen 1 und Zahl  
-  
- Die [#line](../../preprocessor/hash-line-directive-c-cpp.md) -Direktive gibt einen ganzzahligen Parameter an, der außerhalb des zulässigen Bereichs liegt.  
-  
- Wenn der angegebene Parameter kleiner als 1 ist, wird der Zeilenzähler auf 1 zurückgesetzt. Wenn der angegebene Parameter größer als *Anzahl*ist, der vom Compiler definierte Grenzwert, bleibt der Zeilenzähler unverändert. Dies ist eine Warnung der Stufe 1 unter ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) und eine Warnung der Stufe 4 gemäß Microsoft-Extensions ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).  
-  
- Im folgenden Beispiel wird C4112 generiert:  
-  
-```  
-// C4112.cpp  
-// compile with: /W4  
-#line 0   // C4112, value must be between 1 and number  
-  
-int main() {  
-}  
+
+\#Zeile muss eine ganze Zahl zwischen 1 und Zahl
+
+Die [#line](../../preprocessor/hash-line-directive-c-cpp.md) -Direktive gibt einen ganzzahligen Parameter an, der außerhalb des zulässigen Bereichs liegt.
+
+Wenn der angegebene Parameter kleiner als 1 ist, wird der Zeilenzähler auf 1 zurückgesetzt. Wenn der angegebene Parameter größer als *Anzahl*ist, der vom Compiler definierte Grenzwert, bleibt der Zeilenzähler unverändert. Dies ist eine Warnung der Stufe 1 unter ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) und eine Warnung der Stufe 4 gemäß Microsoft-Extensions ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).
+
+Im folgenden Beispiel wird C4112 generiert:
+
+```
+// C4112.cpp
+// compile with: /W4
+#line 0   // C4112, value must be between 1 and number
+
+int main() {
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: 'NMAKE: Warnung U4011 | Microsoft Docs'
+title: 'NMAKE: Warnung U4011 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af9c0f90c507eebe212a9c3cbfb2f2d21cded43d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1038ee86f76789451565ab6799795c851c95a95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320794"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118335"
 ---
 # <a name="nmake-warning-u4011"></a>NMAKE: Warnung U4011
-'Target': nicht alle abhängigen Elemente verfügbar. Ziel nicht erstellt  
-  
- Ein Nachfolger des angegebenen Ziels ist nicht vorhanden oder wurde nicht aktualisiert, und ein Befehl zur Aktualisierung der abhängigen zurückgegeben einen Exitcode. Die Option/k mitgeteilt NMAKE nicht verbundene Teile des Builds Verarbeitung fortzusetzen, und stellen einen Exitcode 1 aus, wenn die NMAKE-Sitzung abgeschlossen ist.  
-  
- Diese Warnung wird für die Warnung vorangestellt [U4010](../../error-messages/tool-errors/nmake-warning-u4010.md) für jede abhängige Datei, die nicht erstellt oder aktualisiert werden konnten.
+
+'Target': nicht alle abhängigen Elemente verfügbar. Ziel nicht erstellt
+
+Das angegebene Ziel ein abhängiges Element ist nicht vorhanden oder war nicht mehr aktuell, und ein Befehl zum Aktualisieren des abhängigen zurückgegeben einen Exitcode ungleich NULL. Die Option/k mitgeteilt NMAKE und weiter verarbeitet, nicht zusammengehöriger Teile des Builds und einen Exitcode 1 auszugeben, die NMAKE-Sitzung abgeschlossen ist.
+
+Diese Warnung wird für die Warnung vorangestellt [U4010](../../error-messages/tool-errors/nmake-warning-u4010.md) für jedes abhängige, die nicht erstellt oder aktualisiert werden konnten.

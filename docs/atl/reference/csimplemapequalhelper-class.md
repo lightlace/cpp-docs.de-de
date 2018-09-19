@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1670ff7ed53d05b1dfc09e6953650892b0335f61
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 654b801c61d00f179d6d7ef88763b323d6503873
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761468"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050579"
 ---
 # <a name="csimplemapequalhelper-class"></a>CSimpleMapEqualHelper-Klasse
 
@@ -33,16 +33,16 @@ Diese Klasse ist eine Hilfsklasse für die [CSimpleMap](../../atl/reference/csim
 ## <a name="syntax"></a>Syntax
 
 ```
-template <class TKey, class TVal>  
+template <class TKey, class TVal>
 class CSimpleMapEqualHelper
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*TKey*  
+*TKey*<br/>
 Das wichtigste Element.
 
-*TVal*  
+*TVal*<br/>
 Das Value-Element.
 
 ## <a name="members"></a>Member
@@ -72,10 +72,10 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 
 ### <a name="parameters"></a>Parameter
 
-*k1*  
+*k1*<br/>
 Der erste Schlüssel.
 
-*k2*  
+*k2*<br/>
 Der zweite Schlüssel.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -92,10 +92,10 @@ static bool IsEqualValue(const TVal& v1, const TVal& v2);
 
 ### <a name="parameters"></a>Parameter
 
-*V1*  
+*V1*<br/>
 Der erste Wert.
 
-*v2*  
+*v2*<br/>
 Der zweite Wert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -104,5 +104,5 @@ Gibt "true" zurück, wenn die Werte gleich "false", andernfalls sind.
 
 ## <a name="see-also"></a>Siehe auch
 
-[CSimpleMapEqualHelperFalse-Klasse](../../atl/reference/csimplemapequalhelperfalse-class.md)   
+[CSimpleMapEqualHelperFalse-Klasse](../../atl/reference/csimplemapequalhelperfalse-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

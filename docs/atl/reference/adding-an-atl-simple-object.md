@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3746e911b4931759baef4d0f4e4f9de77ea834b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d1347fcebc6a3793cbe63ae356f7f9d2e03742cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765595"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109768"
 ---
 # <a name="adding-an-atl-simple-object"></a>Hinzufügen eines einfachen ATL-Objekts
 
@@ -45,10 +45,10 @@ Sie können COM-Schnittstellen für das neue ATL-Objekt definieren, wenn Sie ers
 
 ## <a name="see-also"></a>Siehe auch
 
-[Adding a Class (Hinzufügen einer Klasse)](../../ide/adding-a-class-visual-cpp.md)   
-[Hinzufügen einer neuen Schnittstelle in einem ATL-Projekt](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
-[Hinzufügen von Verbindungspunkten zu einem Objekt](../../atl/adding-connection-points-to-an-object.md)   
-[Adding a Method (Hinzufügen einer Methode)](../../ide/adding-a-method-visual-cpp.md)   
-[MFC Class (MFC-Klasse)](../../mfc/reference/adding-an-mfc-class.md)   
+[Hinzufügen einer Klasse](../../ide/adding-a-class-visual-cpp.md)<br/>
+[Hinzufügen einer neuen Schnittstelle in einem ATL-Projekt](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)<br/>
+[Hinzufügen von Verbindungspunkten zu einem Objekt](../../atl/adding-connection-points-to-an-object.md)<br/>
+[Hinzufügen einer Methode](../../ide/adding-a-method-visual-cpp.md)<br/>
+[MFC-Klasse](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Hinzufügen einer generischen C++-Klasse](../../ide/adding-a-generic-cpp-class.md)
 

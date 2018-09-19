@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1077 | Microsoft Docs
+title: Schwerwiegender Fehler C1077 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfc2881180fd2b3948c0e9ed7b3125dc03d0f093
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a16d27ab2e2c42ed2f58bbb416df067f01c7ec0d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226362"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081350"
 ---
 # <a name="fatal-error-c1077"></a>Schwerwiegender Fehler C1077
-Compilerlimit: Es können nicht mehr als Anzahl Befehlszeilenoptionen angegeben werden.  
-  
- Die Anzahl von Befehlszeilenoptionen überschreitet das interne Limit.  
-  
- Möglicherweise sind zu viele Symbole mit [/D](../../build/reference/d-preprocessor-definitions.md)definiert. (Platzieren Sie die Definitionen stattdessen in einer Headerdatei.)
+
+Compilerlimit: Es können nicht mehr als Anzahl Befehlszeilenoptionen angegeben werden.
+
+Die Anzahl von Befehlszeilenoptionen überschreitet das interne Limit.
+
+Möglicherweise sind zu viele Symbole mit [/D](../../build/reference/d-preprocessor-definitions.md)definiert. (Platzieren Sie die Definitionen stattdessen in einer Headerdatei.)

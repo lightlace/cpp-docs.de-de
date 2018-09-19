@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2807 | Microsoft Docs
+title: Compilerfehler C2807 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 538cdfe6ce8c199a213077e26c16fce65e55b9b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a0f1627e19ad3368ad99559b6b576d165347643
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237015"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110535"
 ---
 # <a name="compiler-error-c2807"></a>Compilerfehler C2807
-der zweite formale Parameter für die postfix-'Operator Operator' muss 'Int' sein.  
-  
- Der zweite Parameter für ein Postfix-Operator hat den falschen Typ.  
-  
- Im folgende Beispiel wird C2807 generiert:  
-  
-```  
-// C2807.cpp  
-// compile with: /c  
-class X {  
-public:  
-   X operator++ ( X );   // C2807 nonvoid parameter  
-   X operator++ ( int );   // OK, int parameter  
-};  
+
+der zweite formale Parameter auf den postfix-'Operator Operator' muss 'Int' sein.
+
+Der zweite Parameter für ein Postfix-Operator hat den falschen Typ.
+
+Im folgende Beispiel wird die C2807 generiert:
+
+```
+// C2807.cpp
+// compile with: /c
+class X {
+public:
+   X operator++ ( X );   // C2807 nonvoid parameter
+   X operator++ ( int );   // OK, int parameter
+};
 ```

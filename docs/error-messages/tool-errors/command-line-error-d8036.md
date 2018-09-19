@@ -1,5 +1,5 @@
 ---
-title: Befehlszeilenfehler D8036 | Microsoft Docs
+title: Befehlszeilenfehler D8036 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f121310318cbb91b1f983ec240b42d5d9ea34b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9c533ada388f876443021fbf159320f171a07a5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299961"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041843"
 ---
 # <a name="command-line-error-d8036"></a>Befehlszeilenfehler D8036
-"/ option" mit mehrere Quelldateien nicht zulässig  
-  
- Diese Compileroptionen können nicht mit mehreren Quelldateien verwendet werden:  
-  
--   Assembly-dateiauflistung Name (/ Fa)  
-  
--   Benennen Sie die Objektdatei (/ Fo)  
-  
--   Erstellen von Browserinformationen ohne lokale Variablen Quelle (/ Fr)  
-  
--   Browser-Datenquelleninformationen, die lokale Variablen enthält erstellen (/ FR)
+
+"/ option" mit mehreren Quelldateien nicht zulässig
+
+Diese Compileroptionen können nicht mit mehreren Quelldateien verwendet werden:
+
+- Auflisten von Namen Assembly-Dateien (/ Fa)
+
+- Benennen Sie die Objektdatei (/ Fo)
+
+- Erstellen Sie die Quellbrowserinformationen ohne lokale Variablen (/ Fr)
+
+- Browser-Datenquelleninformationen, die lokalen Variablen zu erstellen (/ FR)

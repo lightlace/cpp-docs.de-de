@@ -17,21 +17,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f3f447c2cc45e0ccc96a1480b9d521f1bde09c9e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 99d647e2e5a98c7e4c4433baaface66d1f987b32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677208"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073669"
 ---
 # <a name="ole-db-programming"></a>OLE DB-Programmierung
+
 Microsoft OLE DB ist eine veraltete Technologie. für neue Anwendungen ist es die erforderlichen Datenzugriffs-API für die verknüpfte SQL Server. Alle anderen neuen Anwendungen sollten ODBC verwenden. Der aktuelle OLE DB-Anbieter für SQL Server ist SQLNCLI11. DLL. Der Anbieter ist in SQL Server 2016 weiterhin versenden. Diese Dokumentation ist für Entwickler konzipiert, die vorhandene Anwendungen beibehalten, die bereits OLE DB verwenden.
   
- Die OLE DB-Vorlagen sind C++-Vorlagen, die die Arbeit mit der OLE DB-Hochleistungsdatenbanktechnologie vereinfachen, indem sie Klassen bereitstellen, die viele häufig verwendete OLE DB-Schnittstellen implementieren. Diese Vorlagenbibliothek ist in Verbraucher- und Anbietervorlagen unterteilt.  
+Die OLE DB-Vorlagen sind C++-Vorlagen, die die Arbeit mit der OLE DB-Hochleistungsdatenbanktechnologie vereinfachen, indem sie Klassen bereitstellen, die viele häufig verwendete OLE DB-Schnittstellen implementieren. Diese Vorlagenbibliothek ist in Verbraucher- und Anbietervorlagen unterteilt.  
   
- Visual C++ verfügt auch über Assistentenunterstützung zum Erstellen von OLE DB-Startanwendungen.  
+Visual C++ verfügt auch über Assistentenunterstützung zum Erstellen von OLE DB-Startanwendungen.  
   
- Darüber hinaus können Sie Attribute verwenden, um die OLE DB-Verbrauchervorlagen zu implementieren.  
+Darüber hinaus können Sie Attribute verwenden, um die OLE DB-Verbrauchervorlagen zu implementieren.  
   
 |Themenbereich|Siehe|  
 |-------------------------|---------|  
@@ -45,4 +46,5 @@ Microsoft OLE DB ist eine veraltete Technologie. für neue Anwendungen ist es di
 |Konzeptionelle ODBC-Themen|[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|  
 
 ## <a name="see-also"></a>Siehe auch  
- [Datenzugriff](../data-access-in-cpp.md)
+
+[Datenzugriff](../data-access-in-cpp.md)

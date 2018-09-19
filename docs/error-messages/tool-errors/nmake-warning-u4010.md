@@ -1,5 +1,5 @@
 ---
-title: 'NMAKE: Warnung U4010 | Microsoft Docs'
+title: 'NMAKE: Warnung U4010 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc8c99bb4a9b5daf7f630771d0f240479aaf5f3a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a640245db460f4cd8cd658c097955a69a59d1fb7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316542"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117492"
 ---
 # <a name="nmake-warning-u4010"></a>NMAKE: Warnung U4010
-'Target': beim Erstellen des Bibliothekkatalogs; / K angegeben, fortgesetzt wird...  
-  
- Ein Befehl in die Befehlsblock-für das angegebene Ziel zurückgegeben einen Exitcode. Die Option/k mitgeteilt NMAKE nicht verbundene Teile des Builds Verarbeitung fortzusetzen, und stellen einen Exitcode 1 aus, wenn die NMAKE-Sitzung abgeschlossen ist.  
-  
- Wenn das angegebene Ziel, selbst eine abhängige Datei für ein anderes Ziel ist NMAKE Warnung [U4011](../../error-messages/tool-errors/nmake-warning-u4011.md) nach dieser Warnung.
+
+'Target': Build fehlgeschlagen ist. / K angegeben wird, weiterhin wird...
+
+Einen Exitcode ungleich NULL zurückgegeben, ein Befehl in die Befehlsblock-für das angegebene Ziel. Die Option/k mitgeteilt NMAKE und weiter verarbeitet, nicht zusammengehöriger Teile des Builds und einen Exitcode 1 auszugeben, die NMAKE-Sitzung abgeschlossen ist.
+
+Wenn das angegebene Ziel, selbst eine abhängige Datei für ein anderes Ziel ist, gibt NMAKE: Warnung [U4011](../../error-messages/tool-errors/nmake-warning-u4011.md) nach dieser Warnung.

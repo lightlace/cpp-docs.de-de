@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3345 | Microsoft Docs
+title: Compilerfehler C3345 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,51 +16,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e6b3a021d9c747e4ec30278d8a22bde899cb39a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 191c2184d14f991ab62f439b492c7fd7f4a00be5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254234"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118946"
 ---
 # <a name="compiler-error-c3345"></a>Compilerfehler C3345
-'identifizierer': Unzulässiger Bezeichner für den Modulnamen  
-  
- Der *Bezeichner* für ein Modul enthält mindestens ein ungültiges Zeichen. Ein Bezeichner ist gültig, wenn das erste Zeichen ein Buchstabe, ein Unterstrich oder ein hohes ANSI-Zeichen (0x80-FF) und jedes nachfolgende Zeichen alphanumerisch, ein Unterstrich oder ein hohes ANSI-Zeichen ist.  
-  
-### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
-  
-1.  Stellen Sie sicher, dass der *Bezeichner* keine Leerzeichen oder sonstigen ungültigen Zeichen enthält.  
-  
-## <a name="example"></a>Beispiel  
- Das folgende Codebeispiel verursacht Fehlermeldung C3345, da der `name` -Parameter des `module` -Attributs ein Leerzeichen enthält.  
-  
-```  
-// cpp_attr_name_module.cpp  
-// compile with: /LD /link /OPT:NOREF  
-#include <atlbase.h>  
-#include <atlcom.h>  
-#include <atlwin.h>  
-#include <atltypes.h>  
-#include <atlctl.h>  
-#include <atlhost.h>  
-#include <atlplus.h>  
-  
-// C3345 expected  
-[module(dll, name="My Library", version="1.2", helpfile="MyHelpFile")]   
-// Try the following line instead  
-//[module(dll, name="MyLibrary", version="1.2", helpfile="MyHelpFile")]   
-// Module attribute now applies to this class  
-class CMyClass {  
-public:  
-BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {  
-   // add your own code here  
-   return __super::DllMain(dwReason, lpReserved);  
-   }  
-};  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [__iscsym](../../c-runtime-library/reference/iscsym-functions.md)   
- [Zeichenklassifizierung](../../c-runtime-library/character-classification.md)   
- [Modul](../../windows/module-cpp.md)
+
+'identifizierer': Unzulässiger Bezeichner für den Modulnamen
+
+Der *Bezeichner* für ein Modul enthält mindestens ein ungültiges Zeichen. Ein Bezeichner ist gültig, wenn das erste Zeichen ein Buchstabe, ein Unterstrich oder ein hohes ANSI-Zeichen (0x80-FF) und jedes nachfolgende Zeichen alphanumerisch, ein Unterstrich oder ein hohes ANSI-Zeichen ist.
+
+### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
+
+1. Stellen Sie sicher, dass der *Bezeichner* keine Leerzeichen oder sonstigen ungültigen Zeichen enthält.
+
+## <a name="example"></a>Beispiel
+
+Das folgende Codebeispiel verursacht Fehlermeldung C3345, da der `name` -Parameter des `module` -Attributs ein Leerzeichen enthält.
+
+```
+// cpp_attr_name_module.cpp
+// compile with: /LD /link /OPT:NOREF
+#include <atlbase.h>
+#include <atlcom.h>
+#include <atlwin.h>
+#include <atltypes.h>
+#include <atlctl.h>
+#include <atlhost.h>
+#include <atlplus.h>
+
+// C3345 expected
+[module(dll, name="My Library", version="1.2", helpfile="MyHelpFile")]
+// Try the following line instead
+//[module(dll, name="MyLibrary", version="1.2", helpfile="MyHelpFile")]
+// Module attribute now applies to this class
+class CMyClass {
+public:
+BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
+   // add your own code here
+   return __super::DllMain(dwReason, lpReserved);
+   }
+};
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[__iscsym](../../c-runtime-library/reference/iscsym-functions.md)<br/>
+[Zeichenklassifizierung](../../c-runtime-library/character-classification.md)<br/>
+[Modul](../../windows/module-cpp.md)

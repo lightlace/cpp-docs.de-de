@@ -1,5 +1,5 @@
 ---
-title: Short_vector-Struktur | Microsoft Docs
+title: Short_vector-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a79280196da13a73f8495ea79e8c9551763262be
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 651a0e17def0a171eb881ec852f56e1d4cbf2c3b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705288"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045366"
 ---
 # <a name="shortvector-structure"></a>short_vector-Struktur
-Short_vector bietet Metaprogrammierung Definitionen, die für die Programmierung von kurzvektoren generisch nützlich sind.  
+Short_vector bietet Metaprogrammierung Definitionen, die zum Programmieren von kurzvektoren generisch hilfreich sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -85,8 +85,10 @@ struct short_vector<double, 4>;
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `_Scalar_type`  
- `_Size`  
+
+*_Scalar_type*<br/>
+
+*_Größe*<br/>
   
 ## <a name="members"></a>Member  
   

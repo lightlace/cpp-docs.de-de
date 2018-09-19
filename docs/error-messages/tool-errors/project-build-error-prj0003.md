@@ -1,5 +1,5 @@
 ---
-title: Projektbuildfehler prj0003 | Microsoft Docs
+title: Projektbuildfehler prj0003 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a44f272569741b1897caed1d1d64832d8b113eae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3d1a23b8171c916b05df1d715f803893ab0720e6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316435"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053816"
 ---
-# <a name="project-build-error-prj0003"></a>Projektbuildfehler PRJ0003  
-  
-> Fehler beim Erstellen des "*Befehlszeile*".  
-  
-Die *Befehlszeile* Befehl formatiert wird, aus der Eingabe in die **Eigenschaftenseiten** (Dialogfeld), ein Fehlercode zurückgegeben, aber keine Informationen angezeigt, der **Ausgabe** Fenster.  
+# <a name="project-build-error-prj0003"></a>Projektbuildfehler PRJ0003
 
-Mögliche Ursachen für diesen Fehler  
-  
--   Das Projekt ist abhängig von ATL-Server. Ab Visual Studio 2008, ATL-Server ist nicht mehr Bestandteil von Visual Studio, aber als shared Source-Projekt auf CodePlex freigegeben wurde. Um die ATL-Server-Quellcode und Tools herunterzuladen, wechseln Sie zu [ATL-Serverbibliothek und Tools](http://go.microsoft.com/fwlink/p/?linkid=81979).  
-  
--   Geringe Systemressourcen. Schließen Sie einige Anwendungen, um dieses Problem zu beheben.  
-  
--   Unzureichende Sicherheitsberechtigungen. Stellen Sie sicher, dass Sie über ausreichende Sicherheitsberechtigungen verfügen.  
-  
--   Die ausführbare Datei im angegebenen Pfade **VC++-Verzeichnisse** enthalten nicht den Pfad für das Tool an, die Sie ausführen möchten. Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md)  
-  
--   Makefile-Projekte, werden Sie einen Befehl für die Ausführung fehlt **erstellen über die Befehlszeile** oder **neu erstellen über die Befehlszeile**.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Projektbuildfehler und -warnungen (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)
+> Fehler beim Erstellen des "*Befehlszeile*".
+
+Die *Befehlszeile* Befehl formatiert wird, mit der Eingabe in die **Eigenschaftenseiten** Dialogfeld hat einen Fehlercode zurückgegeben, aber keine Informationen angezeigt, der **Ausgabe** Fenster.
+
+Mögliche Ursachen für diesen Fehler sind:
+
+- Ihr Projekt hängt von ATL-Server ab. Ab Visual Studio 2008, ATL-Server ist nicht mehr als Teil von Visual Studio enthalten, jedoch wurde als shared-Source-Projekt auf CodePlex veröffentlicht. Um den Quellcode für die ATL-Server und die Tools herunterzuladen, wechseln Sie zu [ATL-Serverbibliothek und Tools](http://go.microsoft.com/fwlink/p/?linkid=81979).
+
+- Geringe Systemressourcen. Schließen Sie einige Anwendungen zur Lösung dieses Problems.
+
+- Unzureichender Sicherheitsberechtigungen. Stellen Sie sicher, dass Sie über die erforderlichen Sicherheitsrechte verfügen.
+
+- Die ausführbare Datei im angegebenen Pfade **VC++-Verzeichnisse** enthalten nicht den Pfad für das Tool, das Sie ausführen möchten. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md)
+
+- Für Makefile-Projekte, fehlt einen Befehl für die Ausführung **Buildbefehlszeile** oder **neu erstellte Befehlszeile**.
+
+## <a name="see-also"></a>Siehe auch
+
+[Projektbuildfehler und -warnungen (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)

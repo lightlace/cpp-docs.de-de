@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C2022 | Microsoft Docs
+title: Compilerfehler C2022 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47e13dddc1cba93afe8c51b2bca3efdd58e75f85
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc92e683c3def2378912db5011049924696b7f59
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165609"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089657"
 ---
-# <a name="compiler-error-c2022"></a>Compilerfehler Fehler C2022
-"Zahl": zu groß für ein Zeichen  
-  
- Die oktale Zahl hinter einem umgekehrten Schrägstrich (\\) in einem Zeichen oder Zeichenfolgenkonstante ist zu groß, um die Darstellung eines Zeichens.
+# <a name="compiler-error-c2022"></a>Compilerfehler C2022
+
+"Zahl": zu groß für ein Zeichen
+
+Die Oktalzahl, die hinter einem umgekehrten Schrägstrich (\\) in einer Zeichen- oder Zeichenfolgenkonstanten ist zu groß, um die Darstellung eines Zeichens.

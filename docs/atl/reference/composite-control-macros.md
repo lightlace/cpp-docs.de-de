@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656ede7c36fae4619cd356421a302b142a08ff19
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 352f3e5ebd9606cc355ea9af65739c3e17894298
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761887"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136295"
 ---
 # <a name="composite-control-macros"></a>Makros zusammengesetzter Steuerelemente
 
@@ -34,7 +34,7 @@ Diese Makros definieren ereignissenkenzuordnungen und Einträge.
 |[BEGIN_SINK_MAP](#begin_sink_map)|Markiert den Beginn der Ereignis-Senke Zuordnung für das zusammengesetzte Steuerelement.|
 |[END_SINK_MAP](#end_sink_map)|Markiert das Ende der Zuordnung Ereignissenke für das zusammengesetzte Steuerelement.|
 |[SINK_ENTRY](#sink_entry)|Der Eintrag in die Senke ereigniszuordnung.|
-|[SINK_ENTRY_EX](#sink_entry_ex)|Der Eintrag in der Ereignis-Sink-Zuordnung mit einem zusätzlichen Parameter.| 
+|[SINK_ENTRY_EX](#sink_entry_ex)|Der Eintrag in der Ereignis-Sink-Zuordnung mit einem zusätzlichen Parameter.|
 |[SINK_ENTRY_EX_P](#sink_entry_ex)| (Visual Studio 2017) Ähnlich wie SINK_ENTRY_EX außer dass es sich um einen Zeiger auf die Iid verwendet.|
 |[SINK_ENTRY_INFO](#sink_entry_info)|Einen Eintrag in die Senke ereigniszuordnung mit manuell angegebenen Typinformationen für die Verwendung mit [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md).|
 |[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017) Ähnlich wie SINK_ENTRY_INFO außer dass es sich um einen Zeiger auf die Iid verwendet.|
@@ -53,7 +53,7 @@ BEGIN_SINK_MAP(_class)
 
 ### <a name="parameters"></a>Parameter
 
-*_Klasse*  
+*_Klasse*<br/>
 [in] Gibt das Steuerelement.
 
 ### <a name="example"></a>Beispiel
@@ -90,13 +90,13 @@ SINK_ENTRY( id, dispid, fn )
 
 ### <a name="parameters"></a>Parameter
 
-*ID*  
+*ID*<br/>
 [in] Bezeichnet das Steuerelement.
 
-*DISPID*  
+*DISPID*<br/>
 [in] Bezeichnet das angegebene Ereignis.
 
-*fn*  
+*fn*<br/>
 [in] Name des Ereignishandlerfunktion. Diese Funktion verwenden, muss die `_stdcall` Aufrufkonvention und die Signatur entsprechenden Dispinterface-Format haben.
 
 ### <a name="example"></a>Beispiel
@@ -118,19 +118,19 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parameter
 
-*ID*  
+*ID*<br/>
 [in] Bezeichnet das Steuerelement.
 
-*IID*  
+*IID*<br/>
 [in] Identifiziert die Dispatchschnittstelle.  
 
-*piid*  
+*piid*<br/>
 [in] Zeiger auf die Dispatchschnittstelle.
 
-*DISPID*  
+*DISPID*<br/>
 [in] Bezeichnet das angegebene Ereignis.
 
-*fn*  
+*fn*<br/>
 [in] Name des Ereignishandlerfunktion. Diese Funktion verwenden, muss die `_stdcall` Aufrufkonvention und die Signatur entsprechenden Dispinterface-Format haben.
 
 ### <a name="example"></a>Beispiel
@@ -152,22 +152,22 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parameter
 
-*ID*  
+*ID*<br/>
 [in] Ganzzahl ohne Vorzeichen, die Ereignisquelle identifizieren. Dieser Wert muss übereinstimmen der *nID* Template-Parameter verwendet, die in den zugehörigen [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) Basisklasse.
 
-*IID*  
+*IID*<br/>
 [in] Die IID, die die Dispatchschnittstelle identifiziert.  
 
-*piid*  
+*piid*<br/>
 [in] Zeiger auf die IID, die die Dispatchschnittstelle identifiziert.
 
-*DISPID*  
+*DISPID*<br/>
 [in] DISPID, die das angegebene Ereignis zu identifizieren.
 
-*fn*  
+*fn*<br/>
 [in] Name des Ereignishandlerfunktion. Diese Funktion verwenden, muss die `_stdcall` Aufrufkonvention und die Signatur entsprechenden Dispinterface-Format haben.
 
-*Info*  
+*Info*<br/>
 [in] Typinformationen Sie für die Ereignishandlerfunktion. Diese Typinformationen erfolgt in Form eines Zeigers auf ein `_ATL_FUNC_INFO` Struktur. CC_CDECL ist die einzige Option, die in Windows CE unterstützt wird, für das Feld CALLCONV, der die `_ATL_FUNC_INFO` Struktur. Jeder andere Wert wird nicht unterstützt somit das Verhalten nicht definiert.
 
 ### <a name="remarks"></a>Hinweise
@@ -176,5 +176,5 @@ Die ersten vier Makroparameter sind identisch mit denen für die [SINK_ENTRY_EX]
 
 ## <a name="see-also"></a>Siehe auch
 
-[Makros](../../atl/reference/atl-macros.md)   
+[Makros](../../atl/reference/atl-macros.md)<br/>
 [Globale Funktionen zusammengesetzter Steuerelemente](../../atl/reference/composite-control-global-functions.md)

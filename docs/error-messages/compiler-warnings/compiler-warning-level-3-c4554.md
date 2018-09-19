@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 3) C4554 | Microsoft Docs
+title: Compilerwarnung (Stufe 3) C4554 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad427c9d8a9091a1eea37b10e1e49ed2d8613c18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6349cada597b2089f03169071345a68179b24e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294413"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114435"
 ---
 # <a name="compiler-warning-level-3-c4554"></a>Compilerwarnung (Stufe 3) C4554
-'Operator': Überprüfen Sie die Rangfolge von Operatoren auf mögliche Fehler; Verwenden Sie Klammern, um zu verdeutlichen, Vorrang vor  
-  
- Im folgenden Beispiel wird C4554 generiert:  
-  
-```  
-// C4554.cpp  
-// compile with: /W3 /WX  
-int main() {  
-   int a = 0, b = 0, c = 0;  
-   a = a << b + c;   // C4554  
-   // probably intended (a << b) + c,  
-   // but will get a << (b + c)  
-}  
+
+'Operator': Überprüfen Sie die Operatorrangfolge auf mögliche Fehler; Mithilfe von Klammern um die Rangfolge zu verdeutlichen.
+
+Im folgende Beispiel wird die C4554 generiert:
+
+```
+// C4554.cpp
+// compile with: /W3 /WX
+int main() {
+   int a = 0, b = 0, c = 0;
+   a = a << b + c;   // C4554
+   // probably intended (a << b) + c,
+   // but will get a << (b + c)
+}
 ```

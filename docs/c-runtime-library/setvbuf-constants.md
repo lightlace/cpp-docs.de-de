@@ -23,33 +23,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d4292ae29602b5890a167a3e2c29e460d65373f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a367522c2f22007abcf24cdf74ada467d94b104
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407963"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032821"
 ---
 # <a name="setvbuf-constants"></a>setvbuf-Konstanten
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-#include <stdio.h>  
-  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Konstanten stellen den Puffertyp für `setvbuf` dar.  
-  
- Die möglichen Werte werden mit den folgenden Manifestkonstanten angegeben:  
-  
-|Konstante|Bedeutung|  
-|--------------|-------------|  
-|`_IOFBF`|Vollständige Pufferung: Der im Aufruf von `setvbuf` angegebene Puffer wird verwendet, und seine Größe ist wie im `setvbuf`-Aufruf angegeben. Wenn der Zeiger auf den Puffer **NULL** ist, wird der automatisch zugeordnete Puffer mit der angegebenen Größe verwendet.|  
-|`_IOLBF`|Wie in `_IOFBF`.|  
-|`_IONBF`|Unabhängig von Argumenten im Aufruf von `setvbuf` wird kein Puffer verwendet.|  
-  
-## <a name="see-also"></a>Siehe auch  
- [setbuf](../c-runtime-library/reference/setbuf.md)   
- [Globale Konstanten](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntax
+
+```
+
+#include <stdio.h>
+
+```
+
+## <a name="remarks"></a>Hinweise
+
+Diese Konstanten stellen den Puffertyp für `setvbuf` dar.
+
+Die möglichen Werte werden mit den folgenden Manifestkonstanten angegeben:
+
+|Konstante|Bedeutung|
+|--------------|-------------|
+|`_IOFBF`|Vollständige Pufferung: Der im Aufruf von `setvbuf` angegebene Puffer wird verwendet, und seine Größe ist wie im `setvbuf`-Aufruf angegeben. Wenn der Zeiger auf den Puffer **NULL** ist, wird der automatisch zugeordnete Puffer mit der angegebenen Größe verwendet.|
+|`_IOLBF`|Wie in `_IOFBF`.|
+|`_IONBF`|Unabhängig von Argumenten im Aufruf von `setvbuf` wird kein Puffer verwendet.|
+
+## <a name="see-also"></a>Siehe auch
+
+[setbuf](../c-runtime-library/reference/setbuf.md)<br/>
+[Globale Konstanten](../c-runtime-library/global-constants.md)

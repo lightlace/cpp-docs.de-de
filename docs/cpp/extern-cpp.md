@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aaf699f2130c94729b8db9cc21dd17b9699d66c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7b090875b9656fec52e50cb68caf9c2c047d055b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606457"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114253"
 ---
 # <a name="extern-c"></a>Extern (C++)
 
@@ -88,9 +88,9 @@ extern constexpr __declspec(selectany) int x = 10;
 
 ## <a name="extern-c-and-extern-c-function-declarations"></a>Extern "C" und "extern", "C++" Funktionsdeklarationen
 
- In C++ wird bei der Verwendung mit einer Zeichenfolge **"extern"** gibt an, dass die Konventionen der Bindung einer anderen Sprache für die bindungskonventionen verwendet werden. Auf C-Funktionen und - Daten kann nur dann zugegriffen werden, wenn sie zuvor wie eine C-Bindung deklariert wurden. Allerdings müssen sie in einer separat kompilierten Übersetzungseinheit definiert sein.
+In C++ wird bei der Verwendung mit einer Zeichenfolge **"extern"** gibt an, dass die Konventionen der Bindung einer anderen Sprache für die bindungskonventionen verwendet werden. Auf C-Funktionen und - Daten kann nur dann zugegriffen werden, wenn sie zuvor wie eine C-Bindung deklariert wurden. Allerdings müssen sie in einer separat kompilierten Übersetzungseinheit definiert sein.
 
- Microsoft C++ unterstützt die Zeichenfolgen **"C"** und **"C++"** in die *Zeichenfolgenliteral* Feld. Alle Standardincludedateien verwenden enthalten die **"extern"** "C"-Syntax, um die Funktionen der Laufzeit-Bibliothek in C++-Programmen verwendet werden können.
+Microsoft C++ unterstützt die Zeichenfolgen **"C"** und **"C++"** in die *Zeichenfolgenliteral* Feld. Alle Standardincludedateien verwenden enthalten die **"extern"** "C"-Syntax, um die Funktionen der Laufzeit-Bibliothek in C++-Programmen verwendet werden können.
 
 ## <a name="example"></a>Beispiel
 
@@ -114,7 +114,7 @@ extern "C" {
     char GetChar(void);
 }
 
-//  Define the two functions 
+//  Define the two functions
 //  ShowChar and GetChar with C linkage.
 extern "C" char ShowChar(char ch) {
     putchar(ch);
@@ -131,7 +131,7 @@ extern "C" char GetChar(void) {
 extern "C" int errno;
 ```
 
- Wenn eine Funktion über mehr als eine Verknüpfungsspezifikation verfügt, müssen sie übereinstimmen. Es ist ein Fehler, Funktionen sowohl mit C- als auch mit C++-Bindung zu deklarieren. Wenn darüber hinaus zwei Deklarationen für eine Funktion in einem Programm auftreten – eine mit einer Verknüpfungsspezifikation und eine ohne – muss die Deklaration mit der Verknüpfungsspezifikation die erste sein. Alle redundanten Deklarationen von Funktionen, die bereits eine Verknüpfungsspezifikation haben, erhalten die in der ersten Deklaration angegebene Bindung. Zum Beispiel:
+Wenn eine Funktion über mehr als eine Verknüpfungsspezifikation verfügt, müssen sie übereinstimmen. Es ist ein Fehler, Funktionen sowohl mit C- als auch mit C++-Bindung zu deklarieren. Wenn darüber hinaus zwei Deklarationen für eine Funktion in einem Programm auftreten – eine mit einer Verknüpfungsspezifikation und eine ohne – muss die Deklaration mit der Verknüpfungsspezifikation die erste sein. Alle redundanten Deklarationen von Funktionen, die bereits eine Verknüpfungsspezifikation haben, erhalten die in der ersten Deklaration angegebene Bindung. Zum Beispiel:
 
 ```cpp
 extern "C" int CFunc1();
@@ -147,8 +147,9 @@ extern "C" int CFunc2(); // Error: not the first declaration of
 ```
 
 ## <a name="see-also"></a>Siehe auch
- [Schlüsselwörter](../cpp/keywords-cpp.md)  
- [Programm und Verknüpfung](program-and-linkage-cpp.md)  
- [Extern-Speicherklassenspezifizierer in C](../c-language/extern-storage-class-specifier.md)  
- [Verhalten von Bezeichnern in C](../c-language/behavior-of-identifiers.md)  
- [Verknüpfung in C](../c-language/linkage.md)
+
+[Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
+[Programm und Verknüpfung](program-and-linkage-cpp.md)<br/>
+[Extern-Speicherklassenspezifizierer in C](../c-language/extern-storage-class-specifier.md)<br/>
+[Verhalten von Bezeichnern in C](../c-language/behavior-of-identifiers.md)<br/>
+[Verknüpfung in C](../c-language/linkage.md)

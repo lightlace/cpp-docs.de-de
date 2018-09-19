@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3042 | Microsoft Docs
+title: Compilerfehler C3042 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32d2f88702bb3c1c2439dd2931ee269c9c1413ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36fde6251244582a0626c80aa673ed6dd0e559d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250204"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045220"
 ---
 # <a name="compiler-error-c3042"></a>Compilerfehler C3042
-copyprivate- und nowait-Klauseln dürfen nicht zusammen in der 'Direktive'-Direktive von OpenMP vorkommen.  
-  
- Die [copyprivate](../../parallel/openmp/reference/copyprivate.md) - und [nowait](../../parallel/openmp/reference/nowait.md) -Klauseln schließen sich in der angegebenen Richtung gegenseitig aus. Entfernen Sie eine oder beide der `copyprivate` - oder `nowait` -Klauseln.  
-  
- Im folgenden Beispiel wird C3042 generiert.  
-  
-```  
-// C3042.cpp  
-// compile with: /openmp /c  
-#include <stdio.h>  
-#include "omp.h"  
-  
-double d;  
-  
-int main() {  
-    #pragma omp parallel private(d)  
-   {  
-      #pragma omp single copyprivate(d) nowait   // C3042  
-      {  
-      }  
-   }  
-}  
+
+copyprivate- und nowait-Klauseln dürfen nicht zusammen in der 'Direktive'-Direktive von OpenMP vorkommen.
+
+Die [copyprivate](../../parallel/openmp/reference/copyprivate.md) - und [nowait](../../parallel/openmp/reference/nowait.md) -Klauseln schließen sich in der angegebenen Richtung gegenseitig aus. Entfernen Sie eine oder beide der `copyprivate` - oder `nowait` -Klauseln.
+
+Im folgenden Beispiel wird C3042 generiert.
+
+```
+// C3042.cpp
+// compile with: /openmp /c
+#include <stdio.h>
+#include "omp.h"
+
+double d;
+
+int main() {
+    #pragma omp parallel private(d)
+   {
+      #pragma omp single copyprivate(d) nowait   // C3042
+      {
+      }
+   }
+}
 ```

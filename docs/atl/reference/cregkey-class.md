@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75caf648b0c62827e9532fa3776def1a4e459a64
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4a502cbf61f3542c010a89b82131a95f94856cda
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764009"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042883"
 ---
 # <a name="cregkey-class"></a>CRegKey-Klasse
 
@@ -153,7 +153,7 @@ void Attach(HKEY hKey) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*hKey*  
+*hKey*<br/>
 Das Handle eines Registrierungsschlüssels.
 
 ### <a name="remarks"></a>Hinweise
@@ -189,25 +189,25 @@ LONG Create(
 
 ### <a name="parameters"></a>Parameter
 
-*hKeyParent*  
+*hKeyParent*<br/>
 Das Handle des ein geöffneter Schlüssel.
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Gibt den Namen eines Schlüssels erstellt oder geöffnet werden. Dieser Name muss ein Unterschlüssel des *hKeyParent*.
 
-*lpszClass*  
+*lpszClass*<br/>
 Gibt die Klasse des Schlüssels erstellt oder geöffnet werden. Der Standardwert ist REG_NONE.
 
-*dwOptions*  
+*dwOptions*<br/>
 Optionen für den Schlüssel. Der Standardwert ist REG_OPTION_NON_VOLATILE. Eine Liste der möglichen Werte und Beschreibungen, finden Sie unter ["RegCreateKeyEx" dienen](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) im Windows SDK.
 
-*samDesired*  
+*samDesired*<br/>
 Der Sicherheitszugriff für den Schlüssel. Der Standardwert ist KEY_READ &#124; KEY_WRITE. Eine Liste der möglichen Werte und Beschreibungen, finden Sie unter `RegCreateKeyEx`.
 
-*lpSecAttr*  
+*lpSecAttr*<br/>
 Ein Zeiger auf eine [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) -Struktur, die angibt, ob das Handle des Schlüssels von einem untergeordneten Prozess geerbt werden kann. Standardmäßig ist dieser Parameter NULL (d. h., die das Handle nicht geerbt werden kann).
 
-*lpdwDisposition*  
+*lpdwDisposition*<br/>
 [out] Wenn nicht NULL ist, ruft Sie ab entweder REG_CREATED_NEW_KEY (wenn der Schlüssel nicht vorhanden war und erstellt wurde) oder REG_OPENED_EXISTING_KEY, (wenn der Schlüssel vorhanden war, und es geöffnet wurde).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -231,13 +231,13 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*key*  
+*key*<br/>
 Ein Verweis auf ein `CRegKey`-Objekt.
 
-*hKey*  
+*hKey*<br/>
 Ein Handle für einen Registrierungsschlüssel.
 
-*pTM*  
+*pTM*<br/>
 Zeiger auf CAtlTransactionManager-Objekt
 
 ### <a name="remarks"></a>Hinweise
@@ -266,7 +266,7 @@ LONG DeleteSubKey(LPCTSTR lpszSubKey) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*lpszSubKey*  
+*lpszSubKey*<br/>
 Gibt den Namen des Schlüssels zu löschen. Dieser Name muss ein Unterschlüssel des [M_hKey](#m_hkey).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -287,7 +287,7 @@ LONG DeleteValue(LPCTSTR lpszValue) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*lpszValue*  
+*lpszValue*<br/>
 Gibt das Wertfeld "zu entfernen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -320,16 +320,16 @@ LONG EnumKey(
 
 ### <a name="parameters"></a>Parameter
 
-*iIndex*  
+*iIndex*<br/>
 Der Unterschlüssel Index. Dieser Parameter muss 0 (null), für den ersten Aufruf, und klicken Sie dann für nachfolgende Aufrufe erhöht.
 
-*pszName*  
+*pszName*<br/>
 Zeiger auf einen Puffer, der den Namen der Unterschlüssel, einschließlich des abschließenden Zeichens Null empfängt. Nur der Name des Unterschlüssels wird in den Puffer, die nicht die vollständige Hierarchie kopiert.
 
-*pnNameLength*  
+*pnNameLength*<br/>
 Zeiger auf eine Variable, die die Größe in TCHARs, der vom angegebenen Puffer gibt an, die *PszName* Parameter. Diese Größe sollte das abschließende Nullzeichen enthalten. Wenn die Methode zurückgegeben, die Variable verweist *PnNameLength* enthält die Anzahl der Zeichen im Puffer gespeichert. Die Anzahl die zurückgegebenen schließt nicht das abschließende Nullzeichen.
 
-*pftLastWriteTime*  
+*pftLastWriteTime*<br/>
 Zeiger auf eine Variable, die die Zeit empfängt der aufgelistete Unterschlüssel des letzten Schreibvorgangs in.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -369,13 +369,13 @@ LONG GetKeySecurity(
 
 ### <a name="parameters"></a>Parameter
 
-*SI*  
+*SI*<br/>
 Die [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) -Wert, der die angeforderten Informationen an.
 
-*PSD*  
+*PSD*<br/>
 Ein Zeiger auf einen Puffer, der eine Kopie der angeforderten Sicherheitsbeschreibung erhält.
 
-*pnBytes*  
+*pnBytes*<br/>
 Die Größe in Bytes, der die Puffer, der auf *Psd*.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -418,10 +418,10 @@ LONG NotifyChangeKeyValue(
 
 ### <a name="parameters"></a>Parameter
 
-*bWatchSubtree*  
+*bWatchSubtree*<br/>
 Gibt ein Flag, das angibt, ob Änderungen in den angegebenen Schlüssel und alle seine Unterschlüssel oder nur in den angegebenen Schlüssel zu melden. Wenn dieser Parameter TRUE ist, meldet die Methode Änderungen in den Schlüssel und dessen Unterschlüssel an. Wenn der Parameter auf "false" ist, meldet die Methode Änderungen ausschließlich in den Schlüssel an.
 
-*dwNotifyFilter*  
+*dwNotifyFilter*<br/>
 Gibt an, der ein Satz von Flags, die steuern, welche Änderungen gemeldet werden sollen. Dieser Parameter kann eine Kombination der folgenden Werte sein:
 
 |Wert|Bedeutung|
@@ -431,10 +431,10 @@ Gibt an, der ein Satz von Flags, die steuern, welche Änderungen gemeldet werden
 |REG_NOTIFY_CHANGE_LAST_SET|Benachrichtigt den Aufrufer der Änderungen auf einen Wert des Schlüssels an. Dies kann einschließen, hinzufügen oder Löschen einen Wert oder einen vorhandenen Wert ändern.|
 |REG_NOTIFY_CHANGE_SECURITY|Benachrichtigt den Aufrufer der Änderungen an die Sicherheitsbeschreibung für den Schlüssel an.|
 
-*hEvent*  
+*hEvent*<br/>
 Handle für ein Ereignis. Wenn die *bAsync* -Parameter ist "true", die Methode sofort zurückgegeben wird und Änderungen werden durch Signalisieren das Ereignis gemeldet. Wenn *bAsync* ist "false", *hEvent* wird ignoriert.
 
-*bAsync*  
+*bAsync*<br/>
 Gibt ein Flag, das angibt, wie die Methode Änderungen meldet. Wenn dieser Parameter TRUE ist, wird die Methode sofort zurückgegeben, und meldet Änderungen durch das angegebene Ereignis zu signalisieren. Wenn dieser Parameter auf false festgelegt ist, wird die Methode nicht beendet, bis eine Änderung vorgenommen wurde. Wenn *hEvent* gibt kein gültiges Ereignis, das *bAsync* Parameter darf nicht "true" sein.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -461,13 +461,13 @@ LONG Open(
 
 ### <a name="parameters"></a>Parameter
 
-*hKeyParent*  
+*hKeyParent*<br/>
 Das Handle des ein geöffneter Schlüssel.
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Gibt den Namen eines Schlüssels erstellt oder geöffnet werden. Dieser Name muss ein Unterschlüssel des *hKeyParent*.
 
-*samDesired*  
+*samDesired*<br/>
 Der Sicherheitszugriff für den Schlüssel. Der Standardwert ist KEY_ALL_ACCESS. Eine Liste der möglichen Werte und Beschreibungen, finden Sie unter ["RegCreateKeyEx" dienen](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) im Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -484,7 +484,7 @@ Im Gegensatz zu [CRegKey::Create](#create), `Open` wird nicht den angegebenen Sc
 
 Konvertiert eine `CRegKey` Objekt, das ein HKEY.
 
-```  
+```
 operator HKEY() const throw();
 ```
 
@@ -498,7 +498,7 @@ CRegKey& operator= (CRegKey& key) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*key*  
+*key*<br/>
 Der Schlüssel zu kopieren.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -522,13 +522,13 @@ LONG QueryBinaryValue(
 
 ### <a name="parameters"></a>Parameter
 
-*pszValueName*  
+*pszValueName*<br/>
 Zeiger auf einen Null-terminierte Zeichenfolge, die mit dem Namen des Werts, der Abfrage.
 
-*pValue*  
+*pValue*<br/>
 Zeiger auf einen Puffer, der den Wert der Daten empfängt.
 
-*pnBytes*  
+*pnBytes*<br/>
 Zeiger auf eine Variable, die die Größe des Puffers in Bytes angibt auf die von der *pValue* Parameter. Wenn die Methode zurückgibt, enthält diese Variable die Größe der Daten in den Puffer kopiert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -554,10 +554,10 @@ LONG QueryDWORDValue(
 
 ### <a name="parameters"></a>Parameter
 
-*pszValueName*  
+*pszValueName*<br/>
 Zeiger auf einen Null-terminierte Zeichenfolge, die mit dem Namen des Werts, der Abfrage.
 
-*dwValue*  
+*dwValue*<br/>
 Zeiger auf einen Puffer, der den DWORD-Wert empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -583,10 +583,10 @@ LONG QueryGUIDValue(
 
 ### <a name="parameters"></a>Parameter
 
-*pszValueName*  
+*pszValueName*<br/>
 Zeiger auf einen Null-terminierte Zeichenfolge, die mit dem Namen des Werts, der Abfrage.
 
-*guidValue*  
+*guidValue*<br/>
 Zeiger auf eine Variable, die GUID empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -613,13 +613,13 @@ LONG QueryMultiStringValue(
 
 ### <a name="parameters"></a>Parameter
 
-*pszValueName*  
+*pszValueName*<br/>
 Zeiger auf einen Null-terminierte Zeichenfolge, die mit dem Namen des Werts, der Abfrage.
 
-*pszValue*  
+*pszValue*<br/>
 Zeiger auf einen Puffer, der die mehrteilige Daten empfängt. Eine mehrteilige Zeichenfolge ist, ein Array mit Null endende Zeichenfolgen, durch zwei Null-Zeichen beendet wird.
 
-*pnChars*  
+*pnChars*<br/>
 Die Größe in TCHARs, der die Puffer, der auf *PszValue*. Wenn die Methode zurückgibt, *PnChars* enthält die Größe in TCHARs, der die mehrteilige Zeichenfolge abgerufen, darunter ein abschließendes Nullzeichen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -645,10 +645,10 @@ LONG QueryQWORDValue(
 
 ### <a name="parameters"></a>Parameter
 
-*pszValueName*  
+*pszValueName*<br/>
 Zeiger auf einen Null-terminierte Zeichenfolge, die mit dem Namen des Werts, der Abfrage.
 
-*qwValue*  
+*qwValue*<br/>
 Zeiger auf einen Puffer, der als QWORD empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -675,13 +675,13 @@ LONG QueryStringValue(
 
 ### <a name="parameters"></a>Parameter
 
-*pszValueName*  
+*pszValueName*<br/>
 Zeiger auf einen Null-terminierte Zeichenfolge, die mit dem Namen des Werts, der Abfrage.
 
-*pszValue*  
+*pszValue*<br/>
 Zeiger auf einen Puffer, der die Zeichenfolgendaten empfängt.
 
-*pnChars*  
+*pnChars*<br/>
 Die Größe in TCHARs, der die Puffer, der auf *PszValue*. Wenn die Methode zurückgibt, *PnChars* enthält die Größe in TCHARs, der die Zeichenfolge abgerufen, darunter ein abschließendes Nullzeichen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -718,28 +718,28 @@ ATL_DEPRECATED LONG QueryValue(
 
 ### <a name="parameters"></a>Parameter
 
-*pszValueName*  
+*pszValueName*<br/>
 Zeiger auf einen Null-terminierte Zeichenfolge, die mit dem Namen des Werts, der Abfrage. Wenn *PszValueName* ist NULL oder eine leere Zeichenfolge "", die Methode ruft den Typ ab und Daten für den Schlüssel des unbenannte oder default-Wert, sofern vorhanden.
 
-*pdwType*  
+*pdwType*<br/>
 Zeiger auf eine Variable, die einen Code, der angibt, der des Typs der in den angegebenen Wert gespeicherten Daten empfängt. Die *PdwType* Parameter kann NULL sein, wenn der Code nicht erforderlich ist.
 
-*pData*  
+*pData*<br/>
 Zeiger auf einen Puffer, der den Wert der Daten empfängt. Dieser Parameter kann NULL sein, wenn die Daten nicht erforderlich ist.
 
-*pnBytes*  
+*pnBytes*<br/>
 Zeiger auf eine Variable, die die Größe des Puffers in Bytes angibt auf die von der *pData* Parameter. Wenn die Methode zurückgibt, wird diese Variable enthält die Größe der Daten kopiert *pData.*
 
-*dwValue*  
+*dwValue*<br/>
 Der Wert des Felds numerische Daten.
 
-*lpszValueName*  
+*lpszValueName*<br/>
 Gibt das Wertfeld "abgefragt werden.
 
-*szValue einen*  
+*szValue einen*<br/>
 Zeichenfolgendaten mit dem Wert des Felds.
 
-*pdwCount*  
+*pdwCount*<br/>
 Die Größe der Daten der Zeichenfolge. Sein Wert auf die Größe des ursprünglich festgelegt wird die *szValue einen* Puffer.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -765,7 +765,7 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*lpszKey*  
+*lpszKey*<br/>
 Gibt den Namen des Schlüssels zu löschen. Dieser Name muss ein Unterschlüssel des [M_hKey](#m_hkey).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -789,13 +789,13 @@ LONG SetBinaryValue(
 
 ### <a name="parameters"></a>Parameter
 
-*pszValueName*  
+*pszValueName*<br/>
 Zeiger zu einer Zeichenfolge, die den Namen des festzulegenden Wert enthält. Wenn ein Wert mit diesem Namen nicht bereits vorhanden ist, fügt die Methode ihn dem Schlüssel hinzu.
 
-*pValue*  
+*pValue*<br/>
 Zeiger auf einen Puffer mit den Daten, die mit dem angegebenen Wertnamen gespeichert werden.
 
-*nBytes*  
+*nBytes*<br/>
 Gibt die Größe in Bytes, die Informationen auf die von der *pValue* Parameter.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -816,10 +816,10 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*pszValueName*  
+*pszValueName*<br/>
 Zeiger zu einer Zeichenfolge, die den Namen des festzulegenden Wert enthält. Wenn ein Wert mit diesem Namen nicht bereits vorhanden ist, fügt die Methode ihn dem Schlüssel hinzu.
 
-*dwValue*  
+*dwValue*<br/>
 Die DWORD-Daten mit dem angegebenen Wertnamen gespeichert werden muss.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -840,10 +840,10 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*pszValueName*  
+*pszValueName*<br/>
 Zeiger zu einer Zeichenfolge, die den Namen des festzulegenden Wert enthält. Wenn ein Wert mit diesem Namen nicht bereits vorhanden ist, fügt die Methode ihn dem Schlüssel hinzu.
 
-*guidValue*  
+*guidValue*<br/>
 Verweis auf die GUID, der mit dem angegebenen Wertnamen gespeichert werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -867,13 +867,13 @@ LONG SetKeyValue(
 
 ### <a name="parameters"></a>Parameter
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Gibt den Namen des Schlüssels erstellt oder geöffnet werden. Dieser Name muss ein Unterschlüssel des [M_hKey](#m_hkey).
 
-*lpszValue*  
+*lpszValue*<br/>
 Gibt an, die Daten gespeichert werden. Dieser Parameter muss ungleich NULL sein.
 
-*lpszValueName*  
+*lpszValueName*<br/>
 Gibt das Wertfeld "festgelegt werden. Wenn ein Wertfeld mit diesem Namen im Schlüssel nicht bereits vorhanden ist, wird sie hinzugefügt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -894,7 +894,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*SI*  
+*SI*<br/>
 Gibt die Komponenten der Sicherheitsbeschreibung fest. Der Wert eine Kombination der folgenden Werte sind möglich:
 
 |Wert|Bedeutung|
@@ -904,7 +904,7 @@ Gibt die Komponenten der Sicherheitsbeschreibung fest. Der Wert eine Kombination
 |OWNER_SECURITY_INFORMATION|Legt fest, Besitzer-SID des Schlüssels. Der Schlüssel muss WRITE_OWNER Zugriff, oder der aufrufende Prozess muss den Besitzer des Objekts oder die Berechtigung zum SE_TAKE_OWNERSHIP_NAME aktiviert.|
 |SACL_SECURITY_INFORMATION|Legt fest, der mit dem Schlüssel System Access Control List (SACL). Der Schlüssel muss es sich um ACCESS_SYSTEM_SECURITY Zugriff haben. Der richtige Weg, um diesen Zugriff zu erhalten ist zum Aktivieren der SE_SECURITY_NAME [Berechtigungen](https://msdn.microsoft.com/library/windows/desktop/aa379306) in der aktuellen Zugriffstoken des Aufrufers, öffnen Sie das Handle für den ACCESS_SYSTEM_SECURITY Zugriff, und deaktivieren Sie die Berechtigung.|
 
-*PSD*  
+*PSD*<br/>
 Zeiger auf eine [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) Struktur, die Attribute für die Sicherheit für den angegebenen Schlüssel festlegen angibt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -925,10 +925,10 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*pszValueName*  
+*pszValueName*<br/>
 Zeiger zu einer Zeichenfolge, die den Namen des festzulegenden Wert enthält. Wenn ein Wert mit diesem Namen nicht bereits vorhanden ist, fügt die Methode ihn dem Schlüssel hinzu.
 
-*pszValue*  
+*pszValue*<br/>
 Zeiger auf die mehrteilige Zeichenfolgen mit dem angegebenen Wertnamen zu speichernden Daten. Eine mehrteilige Zeichenfolge ist, ein Array mit Null endende Zeichenfolgen, durch zwei Null-Zeichen beendet wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -949,10 +949,10 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*pszValueName*  
+*pszValueName*<br/>
 Zeiger zu einer Zeichenfolge, die den Namen des festzulegenden Wert enthält. Wenn ein Wert mit diesem Namen nicht bereits vorhanden ist, fügt die Methode ihn dem Schlüssel hinzu.
 
-*qwValue*  
+*qwValue*<br/>
 Die QWORD-Daten mit dem angegebenen Wertnamen gespeichert werden muss.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -976,13 +976,13 @@ LONG SetStringValue(
 
 ### <a name="parameters"></a>Parameter
 
-*pszValueName*  
+*pszValueName*<br/>
 Zeiger zu einer Zeichenfolge, die den Namen des festzulegenden Wert enthält. Wenn ein Wert mit diesem Namen nicht bereits vorhanden ist, fügt die Methode ihn dem Schlüssel hinzu.
 
-*pszValue*  
+*pszValue*<br/>
 Zeiger zu den mit dem angegebenen Wertnamen zu speichernden Zeichenfolgendaten.
 
-*dwType*  
+*dwType*<br/>
 Der Typ der Zeichenfolge, die in die Registrierung geschrieben werden muss: entweder REG_SZ (Standard) oder REG_EXPAND_SZ (für mehrteiligen Zeichenfolgen).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1023,37 +1023,37 @@ ATL_DEPRECATED LONG SetValue(
 
 ### <a name="parameters"></a>Parameter
 
-*pszValueName*  
+*pszValueName*<br/>
 Zeiger zu einer Zeichenfolge, die den Namen des festzulegenden Wert enthält. Wenn Sie ein Wert mit diesem Namen nicht bereits im Schlüssel vorhanden ist, wird die Methode auf den Schlüssel. Wenn *PszValueName* ist NULL oder eine leere Zeichenfolge "", die-Methode legt den Typ und die Daten für den Schlüssel des unbenannten Werts oder Standardwerts.
 
-*dwType*  
+*dwType*<br/>
 Gibt einen Code, der angibt, der des Typs der Daten, verweist der *pValue* Parameter.
 
-*pValue*  
+*pValue*<br/>
 Zeiger auf einen Puffer mit den Daten, die mit dem angegebenen Wertnamen gespeichert werden.
 
-*nBytes*  
+*nBytes*<br/>
 Gibt die Größe in Bytes, die Informationen auf die von der *pValue* Parameter. Wenn die Daten des Typs REG_SZ, REG_EXPAND_SZ oder REG_MULTI_SZ, *nBytes* muss die Größe des beendenden Null-Zeichens enthalten.
 
-*hKeyParent*  
+*hKeyParent*<br/>
 Das Handle des ein geöffneter Schlüssel.
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Gibt den Namen eines Schlüssels erstellt oder geöffnet werden. Dieser Name muss ein Unterschlüssel des *hKeyParent*.
 
-*lpszValue*  
+*lpszValue*<br/>
 Gibt an, die Daten gespeichert werden. Dieser Parameter muss ungleich NULL sein.
 
-*lpszValueName*  
+*lpszValueName*<br/>
 Gibt das Wertfeld "festgelegt werden. Wenn ein Wertfeld mit diesem Namen im Schlüssel nicht bereits vorhanden ist, wird sie hinzugefügt.
 
-*dwValue*  
+*dwValue*<br/>
 Gibt an, die Daten gespeichert werden.
 
-*bMulti*  
+*bMulti*<br/>
 Wenn "false" gibt an, dass die Zeichenfolge des Typs REG_SZ. True gibt an, dass die Zeichenfolge eine mehrteilige Zeichenfolge vom Typ REG_MULTI_SZ ist.
 
-*nValueLen*  
+*nValueLen*<br/>
 Wenn *bMulti* ist "true" *nValueLen* die Länge der *LpszValue* Zeichenfolge in Zeichen. Wenn *bMulti* ist "false", der Wert-1 gibt an, dass die Methode die Länge automatisch berechnet wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1068,5 +1068,5 @@ Die dritte Methodenaufrufe [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg
 
 ## <a name="see-also"></a>Siehe auch
 
-[DCOM-Beispiel](../../visual-cpp-samples.md)   
+[DCOM-Beispiel](../../visual-cpp-samples.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

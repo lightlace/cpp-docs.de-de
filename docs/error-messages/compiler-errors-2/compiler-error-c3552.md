@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3552 | Microsoft Docs
+title: Compilerfehler C3552 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5f1453a6175019ad7c90471330d11c77da26134
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd9f7ae37500e115fa33fa61298cab800c88f9c7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252542"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081259"
 ---
 # <a name="compiler-error-c3552"></a>Compilerfehler C3552
-"Typname": Ein spät angegebener Rückgabetyp darf nicht "auto" enthalten.  
-  
- Wenn Sie das `auto` -Schlüsselwort als Platzhalter für den Rückgabetyp einer Funktion verwenden, müssen Sie einen spät angegebenen Rückgabetyp angeben. Allerdings können Sie kein weiteres `auto` -Schlüsselwort verwenden, um den spät angegebenen Rückgabetyp anzugeben. Im folgenden Codefragment wird beispielsweise der Fehler C3552 verursacht.  
-  
- `auto myFunction->auto; // C3552`
+
+"Typname": Ein spät angegebener Rückgabetyp darf nicht "auto" enthalten.
+
+Wenn Sie das `auto` -Schlüsselwort als Platzhalter für den Rückgabetyp einer Funktion verwenden, müssen Sie einen spät angegebenen Rückgabetyp angeben. Allerdings können Sie kein weiteres `auto` -Schlüsselwort verwenden, um den spät angegebenen Rückgabetyp anzugeben. Im folgenden Codefragment wird beispielsweise der Fehler C3552 verursacht.
+
+`auto myFunction->auto; // C3552`

@@ -1,5 +1,5 @@
 ---
-title: Cancellation_token_source-Klasse | Microsoft Docs
+title: Cancellation_token_source-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 122a60496a92b3844f4e439e40650c429035dc33
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d5bda0dd4b756ba9228fac8cc5b0de70b6d71f7a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689674"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053647"
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source-Klasse
 Mit der `cancellation_token_source` -Klasse kann ein abbrechbarer Vorgang abgebrochen werden.  
@@ -97,7 +97,8 @@ cancellation_token_source(cancellation_token_source&& _Src);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Src`  
+*_Src*<br/>
+Objekt, das Kopieren oder verschieben.  
   
 ##  <a name="create_linked_source"></a> create_linked_source 
 
@@ -112,15 +113,17 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Iter`  
- `_Src`  
- Ein Token, dessen Abbruch den Abbruch der zurückgegebenen Tokenquelle verursacht. Beachten Sie, dass die zurückgegebene Tokenquelle auch unabhängig von der Quelle in diesem Parameter abgebrochen werden kann.  
+*_Iter*<br/>
+Iteratortyp.
+
+*_Src*<br/>
+Ein Token, dessen Abbruch den Abbruch der zurückgegebenen Tokenquelle verursacht. Beachten Sie, dass die zurückgegebene Tokenquelle auch unabhängig von der Quelle in diesem Parameter abgebrochen werden kann.  
   
- `_Begin`  
- Die C++-Standardbibliothek Iterator auf den Anfang des tokenbereichs, der auf einen Abbruch überwacht.  
+*_Begin*<br/>
+Die C++-Standardbibliothek Iterator am Anfang des tokenbereichs, der auf einen Abbruch überwacht.  
   
- `_End`  
- Die C++-Standardbibliothek Iterator an das Ende des tokenbereichs, der auf einen Abbruch überwacht.  
+*_Beenden*<br/>
+Die C++-Standardbibliothek Iterator für das Ende des tokenbereichs, der auf einen Abbruch überwacht.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Eine `cancellation_token_source`, die abgebrochen wird, wenn das vom `_Src`-Parameter bereitgestellte Token abgebrochen wird.  
@@ -143,7 +146,8 @@ bool operator!= (const cancellation_token_source& _Src) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Src`  
+*_Src*<br/>
+Operand.
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -156,8 +160,9 @@ cancellation_token_source& operator= (cancellation_token_source&& _Src);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Src`  
-  
+*_Src*<br/>
+Operand.
+
 ### <a name="return-value"></a>Rückgabewert  
   
 ##  <a name="operator_eq_eq"></a> Operator == 
@@ -167,7 +172,8 @@ bool operator== (const cancellation_token_source& _Src) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Src`  
+*_Src*<br/>
+Operand.
   
 ### <a name="return-value"></a>Rückgabewert  
   

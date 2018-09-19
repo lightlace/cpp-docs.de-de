@@ -149,12 +149,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55690bc06ae838ad44e1d0d6f0527974b7859b94
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 0ef742989b4af7a3698f6047098110ee58e29bf4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952465"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035668"
 ---
 # <a name="data-type-constants"></a>Datentypkonstanten
 
@@ -171,7 +171,7 @@ Diese Konstanten geben den Bereich für die integralen Datentypen an. Um diese K
 > [!NOTE]
 > Die [/J](../build/reference/j-default-char-type-is-unsigned.md)-Compileroption ändert den Standard von **char** in **unsigned**.
 
-|Konstante|Wert|description|
+|Konstante|Wert|Beschreibung |
 |--------------|-----------|-------------|
 |**CHAR_BIT**|8|Die Anzahl der Bits in einem **char**|
 |**SCHAR_MIN**|(–128)|signed **char**-Mindestwert|
@@ -218,7 +218,7 @@ Folgende Konstanten geben den Bereich und andere Merkmale der Datentypen **long*
 #include <float.h>
 ```
 
-|Konstante|Wert|description|
+|Konstante|Wert|Beschreibung |
 |--------------|-----------|-----------------|
 |**DBL_DECIMAL_DIG**|17|Anzahl der Dezimalstellen der Rundungsgenauigkeit|
 |**DBL_DIG**|15|Anzahl der Dezimalstellen der Genauigkeit|
@@ -262,4 +262,4 @@ Folgende Konstanten geben den Bereich und andere Merkmale der Datentypen **long*
 
 ## <a name="see-also"></a>Siehe auch
 
-[Globale Konstanten](../c-runtime-library/global-constants.md)  
+[Globale Konstanten](../c-runtime-library/global-constants.md)

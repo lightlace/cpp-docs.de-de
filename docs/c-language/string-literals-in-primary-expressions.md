@@ -14,15 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5fd8c73bb9dac5a26c62b86bdc4038bd26a0829
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 818284a0eabce779d9f52e8fe7b3af4cc1d8df4b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384940"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095524"
 ---
 # <a name="string-literals-in-primary-expressions"></a>Zeichenfolgenliterale in primären Ausdrücken
-Ein "Zeichenfolgenliteral" ist ein Zeichen, ein Breitzeichen oder eine Sequenz von angrenzenden Zeichen, die in Anführungszeichen gesetzt werden. Da es keine Variablen sind, können weder Zeichenfolgenliterale noch deren Elemente als linksseitige Operanden in einer Zuweisungsoperation verwendet werden. Der Typ eines Zeichenfolgenliterals ist ein Array von `char` (oder ein Array von `wchar_t` für Breitzeichenliterale). Arrays in Ausdrücken werden in Zeiger konvertiert. Weitere Informationen zu Zeichenfolgen finden Sie unter [Zeichenfolgenliterale](../c-language/c-string-literals.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [C-Ausdrücke (primär)](../c-language/c-primary-expressions.md)
+
+Ein "Zeichenfolgenliteral" ist ein Zeichen, ein Breitzeichen oder eine Sequenz von angrenzenden Zeichen, die in Anführungszeichen gesetzt werden. Da es keine Variablen sind, können weder Zeichenfolgenliterale noch deren Elemente als linksseitige Operanden in einer Zuweisungsoperation verwendet werden. Der Typ eines Zeichenfolgenliterals ist ein Array von `char` (oder ein Array von `wchar_t` für Breitzeichenliterale). Arrays in Ausdrücken werden in Zeiger konvertiert. Weitere Informationen zu Zeichenfolgen finden Sie unter [Zeichenfolgenliterale](../c-language/c-string-literals.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[C-Ausdrücke (primär)](../c-language/c-primary-expressions.md)

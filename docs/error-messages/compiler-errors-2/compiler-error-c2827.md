@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2827 | Microsoft Docs
+title: Compilerfehler C2827 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c96f9c3d43a289deb73fdb4414c344b7748da97
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 139a012f9ed4dd3b6d81d92be3c441df4f899aac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238588"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052210"
 ---
 # <a name="compiler-error-c2827"></a>Compilerfehler C2827
-'Operator Operator' kann nicht global in unärem Format überschrieben werden  
-  
- Der Operator ein unärer Formular außerhalb eines Objekts nicht möglich.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>So beheben Sie den Fehler (unterschiedliche Lösungsmöglichkeiten)  
-  
-1.  Stellen Sie den überladenen Operator lokale, auf ein Objekt.  
-  
-2.  Wählen Sie einen entsprechende unäroperator überladen.
+
+"Operator-Operator" kann nicht in unärem Format global überschrieben werden
+
+Der Operator keine unärem Format außerhalb eines Objekts.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>So beheben Sie den Fehler (unterschiedliche Lösungsmöglichkeiten)
+
+1. Stellen Sie den überladenen Operator lokale, auf ein Objekt.
+
+1. Wählen Sie einen entsprechenden unäroperator überladen.

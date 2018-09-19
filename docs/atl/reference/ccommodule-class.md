@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb135fc68e11a5af86fdccde949b8e1761160625
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: faf3080c6363ef0227b71e550ff658b1790d37b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753278"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090697"
 ---
 # <a name="ccommodule-class"></a>CComModule-Klasse
 
@@ -144,13 +144,13 @@ HRESULT GetClassObject(
 
 ### <a name="parameters"></a>Parameter
 
-*rclsid*  
+*rclsid*<br/>
 [in] Die CLSID des Objekts erstellt werden.
 
-*riid*  
+*riid*<br/>
 [in] Die IID der angeforderten Schnittstelle.
 
-*ppv*  
+*ppv*<br/>
 [out] Ein Zeiger auf den Schnittstellenzeiger vom *Riid*. Wenn das Objekt nicht über diese Schnittstelle unterstützt *Ppv* auf NULL festgelegt ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -224,13 +224,13 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Parameter
 
-*p*  
+*p*<br/>
 [in] Ein Zeiger auf ein Array von Objekt-Zuordnungseinträge.
 
-*h*  
+*h*<br/>
 [in] Das HINSTANCE, die an `DLLMain` oder `WinMain`.
 
-*plibid*  
+*plibid*<br/>
 [in] Ein Zeiger auf die LIBID der Typbibliothek, die dem Projekt zugeordnet.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -350,19 +350,19 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
 
 ### <a name="parameters"></a>Parameter
 
-*clsid*  
+*clsid*<br/>
 [in] Die CLSID des Objekts, die registriert werden.
 
-*lpszProgID*  
+*lpszProgID*<br/>
 [in] Die ProgID, die dem Objekt zugeordnet wird.
 
-*lpszVerIndProgID*  
+*lpszVerIndProgID*<br/>
 [in] Die versionsunabhängigen-ProgID, die dem Objekt zugeordnet.
 
-*nDescID*  
+*nDescID*<br/>
 [in] Der Bezeichner des eine Zeichenfolgenressource für die Beschreibung des Objekts.
 
-*dwFlags*  
+*dwFlags*<br/>
 [in] Gibt das Threadingmodell an, in der Registrierung einzugeben. Mögliche Werte sind THREADFLAGS_APARTMENT THREADFLAGS_BOTH oder AUTPRXFLAG.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -385,10 +385,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*dwClsContext*  
+*dwClsContext*<br/>
 [in] Gibt den Kontext, in dem das Klassenobjekt ist, ausgeführt werden. Mögliche Werte sind CLSCTX_INPROC_SERVER CLSCTX_INPROC_HANDLER oder CLSCTX_LOCAL_SERVER. Eine Beschreibung dieser Werte finden Sie in [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) im Windows SDK.
 
-*dwFlags*  
+*dwFlags*<br/>
 [in] Bestimmt die Art der Verbindung mit dem Klassenobjekt. Mögliche Werte sind REGCLS_SINGLEUSE REGCLS_MULTIPLEUSE oder REGCLS_MULTI_SEPARATE. Eine Beschreibung dieser Werte finden Sie in [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) im Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -411,10 +411,10 @@ HRESULT RegisterServer(
 
 ### <a name="parameters"></a>Parameter
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 [in] Gibt an, ob die Typbibliothek registriert wird. Der Standardwert ist "false".
 
-*pCLSID*  
+*pCLSID*<br/>
 [in] Zeigt auf die CLSID des Objekts, das registriert werden. Wenn NULL (Standardwert), alle Objekte in der objektzuordnung registriert wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -442,7 +442,7 @@ HRESULT RegisterTypeLib(LPCTSTR lpszIndex) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*lpszIndex*  
+*lpszIndex*<br/>
 [in] Zeichenfolge im Format `"\\N"`, wobei `N` ist der ganzzahlige Index der TYPELIB-Ressourcen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -496,13 +496,13 @@ ATL_DEPRECATED HRESULT UnregisterClassHelper(
 
 ### <a name="parameters"></a>Parameter
 
-*clsid*  
+*clsid*<br/>
 [in] Die CLSID des Objekts, deren Registrierung aufgehoben werden.
 
-*lpszProgID*  
+*lpszProgID*<br/>
 [in] Die ProgID, die dem Objekt zugeordnet wird.
 
-*lpszVerIndProgID*  
+*lpszVerIndProgID*<br/>
 [in] Die versionsunabhängigen-ProgID, die dem Objekt zugeordnet.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -526,10 +526,10 @@ inline HRESULT UnregisterServer(BOOL bUnRegTypeLib, const CLSID* pCLSID = NULL) 
 
 ### <a name="parameters"></a>Parameter
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 Bei "true", wird die Bibliothek auch aufgehoben werden.
 
-*pCLSID*  
+*pCLSID*<br/>
 Zeigt auf die CLSID des Objekts, das nicht aufgehoben werden. Wenn NULL (Standardwert), alle Objekte in der objektzuordnung aufgehoben.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -568,25 +568,25 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
 
 ### <a name="parameters"></a>Parameter
 
-*clsid*  
+*clsid*<br/>
 Die CLSID des Objekts, registriert oder deren Registrierung aufgehoben werden soll.
 
-*lpszProgID*  
+*lpszProgID*<br/>
 Die ProgID, die dem Objekt zugeordnet wird.
 
-*lpszVerIndProgID*  
+*lpszVerIndProgID*<br/>
 Die versionsunabhängigen-ProgID, die dem Objekt zugeordnet.
 
-*nDescID*  
+*nDescID*<br/>
 Der Bezeichner der Zeichenfolgenressource für die Beschreibung des Objekts.
 
-*szDesc*  
+*szDesc*<br/>
 Eine Zeichenfolge, die die Beschreibung des Objekts enthält.
 
-*dwFlags*  
+*dwFlags*<br/>
 Gibt das Threadingmodell an, in der Registrierung einzugeben. Mögliche Werte sind THREADFLAGS_APARTMENT THREADFLAGS_BOTH oder AUTPRXFLAG.
 
-*bRegistrieren Sie sich*  
+*bRegistrieren Sie sich*<br/>
 Gibt an, ob das Objekt registriert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -621,16 +621,16 @@ virtual HRESULT UpdateRegistryFromResourceD(
 
 ### <a name="parameters"></a>Parameter
 
-*lpszRes*  
+*lpszRes*<br/>
 [in] Ein Ressourcenname.
 
-*nResID*  
+*nResID*<br/>
 [in] Eine Ressourcen-ID
 
-*bRegistrieren Sie sich*  
+*bRegistrieren Sie sich*<br/>
 [in] Gibt an, ob das Objekt registriert werden soll.
 
-*pMapEntries*  
+*pMapEntries*<br/>
 [in] Ein Zeiger auf die Ersatz-Zuordnung ersetzbare Parameter des Skripts zugeordneten Werte zu speichern. ATL verwendet, automatisch `%MODULE%`. Um zusätzliche ersetzbare Parameter verwenden zu können, finden Sie unter den Hinweisen zu den Details. Verwenden Sie andernfalls den Standardwert NULL.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -671,16 +671,16 @@ virtual HRESULT UpdateRegistryFromResourceS(
 
 ### <a name="parameters"></a>Parameter
 
-*lpszRes*  
+*lpszRes*<br/>
 [in] Ein Ressourcenname.
 
-*nResID*  
+*nResID*<br/>
 [in] Eine Ressourcen-ID
 
-*bRegistrieren Sie sich*  
+*bRegistrieren Sie sich*<br/>
 [in] Gibt an, ob das Ressourcenskript registriert werden soll.
 
-*pMapEntries*  
+*pMapEntries*<br/>
 [in] Ein Zeiger auf die Ersatz-Zuordnung ersetzbare Parameter des Skripts zugeordneten Werte zu speichern. ATL verwendet, automatisch `%MODULE%`. Um zusätzliche ersetzbare Parameter verwenden zu können, finden Sie unter den Hinweisen zu den Details. Verwenden Sie andernfalls den Standardwert NULL.
 
 ### <a name="return-value"></a>Rückgabewert

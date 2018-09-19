@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2448 | Microsoft Docs
+title: Compilerfehler C2448 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcc62d7aeba0a128c9b736586e6c1502227de717
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5d3de3b8d4d5d184bb33214679842c557aadf7d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226048"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135982"
 ---
 # <a name="compiler-error-c2448"></a>Compilerfehler C2448
-'Bezeichner': im Funktionsformat Initialisierer anscheinend einer Funktionsdefinition  
-  
- Definition der Funktion ist falsch.  
-  
- Dieser Fehler kann durch eine Programmiersprache C-Parameterliste im alten Stil verursacht werden.  
-  
- Im folgende Beispiel wird C2448 generiert:  
-  
-```  
-// C2448.cpp  
-void func(c)  
-   int c;  
-{}   // C2448  
+
+"Bezeichner": Funktionsstil-Initialisierung scheint eine Funktionsdefinition zu sein
+
+Definition der Funktion ist falsch.
+
+Dieser Fehler kann durch eine C-Sprachen Parameterliste im alten Stil verursacht werden.
+
+Im folgende Beispiel wird die C2448 generiert:
+
+```
+// C2448.cpp
+void func(c)
+   int c;
+{}   // C2448
 ```

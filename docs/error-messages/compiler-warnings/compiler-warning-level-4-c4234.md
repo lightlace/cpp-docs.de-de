@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4234 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4234 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8d5b7a2999b77c0b34ee925f5dd85a0a27c63f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6ce6ba622cb480096144706589a01dee7326f38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293516"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118231"
 ---
 # <a name="compiler-warning-level-4-c4234"></a>Compilerwarnung (Stufe 4) C4234
-nicht dem Standard entsprechende Erweiterung: ' Schlüsselwort ' für die zukünftige Verwendung reserviert  
-  
- Der Compiler implementiert nicht noch das Schlüsselwort, das Sie verwendet.  
-  
- Diese Warnung wird automatisch zu einem Fehler heraufgestuft. Wenn Sie dieses Verhalten ändern möchten, verwenden Sie [#pragma Warning](../../preprocessor/warning.md). Geben Sie beispielsweise Folgendes ein, um C4234 in eine Warnung der Stufe 4 Stellen,  
-  
-```  
-#pragma warning(2:4234)  
-```  
-  
- in der Quellcodedatei.
+
+nicht dem Standard entsprechende Erweiterung: ' Schlüsselwort ' für die zukünftige Verwendung reserviert
+
+Der Compiler implementiert nicht noch das Schlüsselwort, die, das Sie verwendet.
+
+Diese Warnung wird automatisch zu einem Fehler heraufgestuft. Wenn Sie dieses Verhalten ändern möchten, verwenden Sie [#pragma-Warnung](../../preprocessor/warning.md). Geben Sie beispielsweise Folgendes ein, um C4234 in eine Warnung der Stufe 4 zu machen,
+
+```
+#pragma warning(2:4234)
+```
+
+in der Quellcodedatei.

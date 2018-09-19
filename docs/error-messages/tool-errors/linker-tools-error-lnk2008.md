@@ -1,5 +1,5 @@
 ---
-title: Linkertoolfehler Lnk2008 | Microsoft Docs
+title: Linkertoolfehler Lnk2008 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4ee6a8a4c4cc6d33f47d5335daa9fccd4e5fd99
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18eda06e7f133ada4de1b7ec28ac21be205a71f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299564"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086810"
 ---
 # <a name="linker-tools-error-lnk2008"></a>Linkertoolfehler LNK2008
-Fixup-Ziel ist nicht als 'Symbolname' ausgerichtete  
-  
- SERVERDATENBANK gefunden Fixup-Ziel in der Objektdatei, die nicht ordnungsgemäß ausgerichtet.  
-  
- Dieser Fehler kann durch benutzerdefinierte Abschnitt Ausrichtung verursacht werden (z. B. #pragma [Pack](../../preprocessor/pack.md)), [ausrichten](../../cpp/align-cpp.md) Modifizierer oder mithilfe von Assemblysprache-Code, der die Ausrichtung der Abschnitt ändert.  
-  
- Wenn Code keine der oben genannten Kriterien verwenden, kann dies durch den Compiler verursacht werden.
+
+Das fixupziel ist nicht als 'Symbolname' ausgerichtete
+
+LINK hat ein Fixup-Ziel in der Objektdatei, die nicht ordnungsgemäß ausgerichtet wurde gefunden.
+
+Dieser Fehler kann verursacht werden, von der benutzerdefinierten Abschnitt Ausrichtung (z. B. #pragma [Pack](../../preprocessor/pack.md)), [ausrichten](../../cpp/align-cpp.md) Modifizierer oder mithilfe der Assemblysprache-Code, Abschnitt Ausrichtung ändert.
+
+Wenn Ihr Code keine der oben genannten verwendet, kann dies durch den Compiler verursacht werden.

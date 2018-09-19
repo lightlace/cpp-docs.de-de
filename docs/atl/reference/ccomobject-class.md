@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0600d675d37e2fed1d318645daaedcce5f80ed89
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e7a6f4f014d609e8b650951d459c23b07fd4a006
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752370"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085445"
 ---
 # <a name="ccomobject-class"></a>CComObject-Klasse
 
@@ -36,13 +36,13 @@ Diese Klasse implementiert `IUnknown` für einen zusammengesetzten Objekt.
 ## <a name="syntax"></a>Syntax
 
 ```
-template<class Base>  
+template<class Base>
 class CComObject : public Base
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*Basis*  
+*Basis*<br/>
 Abgeleitet von die Klasse [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oder [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), wie auch über andere Schnittstellen für das Objekt unterstützt werden sollen.
 
 ## <a name="members"></a>Member
@@ -101,7 +101,7 @@ CComObject(void* = NULL);
 
 ### <a name="parameters"></a>Parameter
 
-<em>void\*</em>  
+<em>void\*</em><br/>
 [in] Dieser unbenannte Parameter wird nicht verwendet. Sie vorhanden ist, für die Symmetrie mit anderen `CComXXXObjectXXX` Konstruktoren.
 
 ### <a name="remarks"></a>Hinweise
@@ -132,7 +132,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 
 ### <a name="parameters"></a>Parameter
 
-*PP*  
+*PP*<br/>
 [out] Ein Zeiger auf eine **CComObject <** `Base` **>** Zeiger. Wenn `CreateInstance` nicht erfolgreich ist, ist *pp* auf NULL festgelegt ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -157,19 +157,19 @@ Ruft einen Zeiger auf die angeforderte Schnittstelle ab.
 
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
-template <class Q>  
+template <class Q>
 HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*IID*  
+*IID*<br/>
 [in] Der Bezeichner der angeforderten Schnittstelle.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Ein Zeiger auf den Schnittstellenzeiger vom *Iid*. Wenn das Objekt nicht über diese Schnittstelle unterstützt *PpvObject* auf NULL festgelegt ist.
 
-*PP*  
+*PP*<br/>
 [out] Ein Zeiger auf den Schnittstellenzeiger vom Typ `Q`. Wenn das Objekt nicht über diese Schnittstelle unterstützt *pp* auf NULL festgelegt ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -190,8 +190,8 @@ Diese Funktion gibt den neuen dekrementiert Verweiszähler für das Objekt zurü
 
 ## <a name="see-also"></a>Siehe auch
 
-[CComAggObject-Klasse](../../atl/reference/ccomaggobject-class.md)   
-[CComPolyObject-Klasse](../../atl/reference/ccompolyobject-class.md)   
-[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
-[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
+[CComAggObject-Klasse](../../atl/reference/ccomaggobject-class.md)<br/>
+[CComPolyObject-Klasse](../../atl/reference/ccompolyobject-class.md)<br/>
+[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)<br/>
+[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

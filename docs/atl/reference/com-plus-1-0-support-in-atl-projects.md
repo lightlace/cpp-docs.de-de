@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06a9e6cd4a374f0941b360a3f8f24f61e4b46a6a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 64046eab403dca8da630c9c5324d320e0c79d4cc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763297"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054297"
 ---
 # <a name="com-10-support-in-atl-projects"></a>COM+ 1.0-Unterstützung in ATL-Projekte
 
@@ -39,7 +39,7 @@ Bei Auswahl der **COM+ 1.0-Unterstützung** , Sie können auch Kontrollkästchen
 
 ## <a name="see-also"></a>Siehe auch
 
-[Grundlagen von ARL COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)   
-[Programmieren mit ATL- und C-Laufzeitcode](../../atl/programming-with-atl-and-c-run-time-code.md)   
+[Grundlagen von ARL COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)<br/>
+[Programmieren mit ATL- und C-Laufzeitcode](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Standardmäßige ATL-Projektkonfigurationen](../../atl/reference/default-atl-project-configurations.md)
 

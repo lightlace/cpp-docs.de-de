@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1943895b8db663239ed1bfb27b8e97fc3c416e5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1173633cd720ed6ee0e4aacdf75a8b305fdbfe4d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767903"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043364"
 ---
 # <a name="celementtraitsbase-class"></a>CElementTraitsBase-Klasse
 
@@ -35,13 +35,13 @@ Diese Klasse bietet standardmäßige kopieren und verschieben die Methoden, dami
 ## <a name="syntax"></a>Syntax
 
 ```
-template<typename T>  
+template<typename T>
 class CElementTraitsBase
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Der Typ der Daten in der Auflistung gespeichert werden.
 
 ## <a name="members"></a>Member
@@ -83,13 +83,13 @@ static void CopyElements(
 
 ### <a name="parameters"></a>Parameter
 
-*pDest*  
+*pDest*<br/>
 Zeiger auf das erste Element, das die kopierten Daten erhält.
 
-*pSrc*  
+*pSrc*<br/>
 Zeiger auf das erste Element zu kopieren.
 
-*nElements*  
+*nElements*<br/>
 Die Anzahl der zu kopierenden Elemente.
 
 ### <a name="remarks"></a>Hinweise
@@ -125,13 +125,13 @@ static void RelocateElements(
 
 ### <a name="parameters"></a>Parameter
 
-*pDest*  
+*pDest*<br/>
 Zeiger auf das erste Element, das die verschobenen Daten erhält.
 
-*pSrc*  
+*pSrc*<br/>
 Zeiger auf das erste Element, zu verschieben.
 
-*nElements*  
+*nElements*<br/>
 Die Anzahl der Elemente zu verschieben.
 
 ### <a name="remarks"></a>Hinweise

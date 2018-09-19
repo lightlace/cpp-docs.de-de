@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C2708 | Microsoft Docs
+title: Compilerfehler C2708 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d30b2e5c1856a604ae314316cd71d6acc00a7c74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0accd68881cccad5e34530a6c157a4e8179b283
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234759"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111094"
 ---
-# <a name="compiler-error-c2708"></a>Compilerfehler Fehler C2708
-'Bezeichner': Parameterlänge in Bytes unterscheidet sich vom vorherigen Aufruf oder Verweis  
-  
- Ein [__stdcall](../../cpp/stdcall.md) Funktion muss einen Prototyp vorangestellt werden. Andernfalls, interpretiert der Compiler den ersten Aufruf der Funktion als Prototyp, und dieser Fehler tritt auf, wenn der Compiler einen Aufruf erkennt, der nicht übereinstimmen.  
-  
- Fügen zum Beheben dieses Fehlers einen Funktionsprototyp.
+# <a name="compiler-error-c2708"></a>Compilerfehler C2708
+
+'Bezeichner': aktuelle Parameterlänge in Bytes unterscheidet sich vom vorherigen Aufruf oder Verweis
+
+Ein [__stdcall](../../cpp/stdcall.md) Funktion muss einen Prototyp vorangestellt werden. Andernfalls interpretiert der Compiler den ersten Aufruf der Funktion als Prototyp, und dieser Fehler tritt auf, wenn der Compiler einen Aufruf findet, der nicht übereinstimmen.
+
+Klicken Sie zum Beheben dieses Fehlers einen Funktionsprototyp hinzufügen.

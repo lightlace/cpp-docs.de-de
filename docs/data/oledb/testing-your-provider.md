@@ -17,21 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7801d29371a2be069dcdf60807b0d8a99c99eedc
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: d175216fedb2e6a9139d970fc7696672576f7423
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689593"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042896"
 ---
 # <a name="testing-your-provider"></a>Testen des Anbieters
+
 Bevor Sie einen Anbieter freigeben, sollten Sie die folgenden Tests in der angegebenen Reihenfolge ausführen. Diese Tests sicher, dass die Anbieterfunktionen ordnungsgemäß für die meisten möglichen Benutzer.  
   
-1.  Testen Sie den Anbieter mit einem [Consumer](../../data/oledb/creating-an-ole-db-consumer.md) der OLE DB-Consumervorlagen geschriebene Anwendung. Der Testconsumer sollte alle Funktionsbereiche des Anbieters (Gesamter Code, die Sie hinzugefügt oder geändert) abdecken.  
+1. Testen Sie den Anbieter mit einem [Consumer](../../data/oledb/creating-an-ole-db-consumer.md) der OLE DB-Consumervorlagen geschriebene Anwendung. Der Testconsumer sollte alle Funktionsbereiche des Anbieters (Gesamter Code, die Sie hinzugefügt oder geändert) abdecken.  
   
-2.  Testen Sie den Anbieter, die mit einer Consumeranwendung, die mit ADO geschrieben wurden. Die meisten Entwickler (insbesondere Microsoft Visual Basic und Microsoft C#-Entwickler) verwenden ADO- oder ADO.NET-Objekt für Consumer-Anwendungen. Der Testconsumer sollte alle Funktionsbereiche des Anbieters behandelt. Ein Beispiel für eine ADO-Consumer-Anwendung, finden Sie unter [ADO-Codebeispiele in Microsoft Visual Basic](https://msdn.microsoft.com/library/ms807514.aspx).  
+1. Testen Sie den Anbieter, die mit einer Consumeranwendung, die mit ADO geschrieben wurden. Die meisten Entwickler (insbesondere Microsoft Visual Basic und Microsoft C#-Entwickler) verwenden ADO- oder ADO.NET-Objekt für Consumer-Anwendungen. Der Testconsumer sollte alle Funktionsbereiche des Anbieters behandelt. Ein Beispiel für eine ADO-Consumer-Anwendung, finden Sie unter [ADO-Codebeispiele in Microsoft Visual Basic](https://msdn.microsoft.com/library/ms807514.aspx).  
   
-3.  Führen Sie die OLE DB-Konformitätstests (einschließlich der ADO-Konformitätstests), um sicherzustellen, dass es sich bei Ihrem Anbieter die Ebene 0-standard für OLE DB-Anbieter erfüllt. (Eine Erläuterung der Ebene 0, suchen Sie nach "OLE DB-Ebene 0-Konformitätstests" am [OLE DB Programmer's Guide](/previous-versions/windows/desktop/ms713643\(v=vs.85\)). Diese Tests und die zugehörige Dokumentation sind in Visual C++ in das Data Access SDK enthalten. Diese Tests auch dabei helfen, um sicherzustellen, dass es sich bei Ihrem Anbieter ausgeführt wird, gut, wenn Sie von anderen aggregiert [-Dienstanbieter](../../data/oledb/ole-db-resource-pooling-and-services.md) und sind besonders nützlich, wenn Sie ändern oder Hinzufügen von Eigenschaften. Weitere Informationen zu den Konformitätstests finden Sie unter der Readme-Datei für das Data Access SDK, der auf einem der Visual Studio-CDs befindet.  
+1. Führen Sie die OLE DB-Konformitätstests (einschließlich der ADO-Konformitätstests), um sicherzustellen, dass es sich bei Ihrem Anbieter die Ebene 0-standard für OLE DB-Anbieter erfüllt. (Eine Erläuterung der Ebene 0, suchen Sie nach "OLE DB-Ebene 0-Konformitätstests" am [OLE DB Programmer's Guide](/previous-versions/windows/desktop/ms713643\(v=vs.85\)). Diese Tests und die zugehörige Dokumentation sind in Visual C++ in das Data Access SDK enthalten. Diese Tests auch dabei helfen, um sicherzustellen, dass es sich bei Ihrem Anbieter ausgeführt wird, gut, wenn Sie von anderen aggregiert [-Dienstanbieter](../../data/oledb/ole-db-resource-pooling-and-services.md) und sind besonders nützlich, wenn Sie ändern oder Hinzufügen von Eigenschaften. Weitere Informationen zu den Konformitätstests finden Sie unter der Readme-Datei für das Data Access SDK, der auf einem der Visual Studio-CDs befindet.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit OLE DB-Anbietervorlagen](../../data/oledb/working-with-ole-db-provider-templates.md)
+
+[Arbeiten mit OLE DB-Anbietervorlagen](../../data/oledb/working-with-ole-db-provider-templates.md)

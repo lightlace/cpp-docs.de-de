@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4276 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4276 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afedab27c2fb93075aa33053c12ec6973824f144
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 40a6c85b460e9718a8816598afb016e9c7a493b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277305"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116021"
 ---
 # <a name="compiler-warning-level-1-c4276"></a>Compilerwarnung (Stufe 1) C4276
-'Funktion': kein Prototyp bereitgestellt wird. davon ausgegangen, dass keine Parameter  
-  
- Wenn Sie die Adresse einer Funktion mit ergreifen der [__stdcall](../../cpp/stdcall.md) -Aufrufkonvention, geben Sie einen Prototyp, damit der Compiler den ergänzten Namen der Funktion erstellen kann. Da *Funktion* keinen Prototyp der Compiler für die Erstellung der ergänzte Name besitzt, die Funktion hat keine Parameter annimmt.
+
+'Funktion': kein Prototyp gegeben; davon ausgegangen, dass keine Parameter
+
+Wenn Sie die Adresse einer Funktion mit übernehmen die [__stdcall](../../cpp/stdcall.md) Aufrufkonvention, Sie müssen einen Prototyp, damit der Compiler die ergänzten Namen der Funktion erstellen kann. Da *Funktion* ohne Prototyp, den Compiler hat, wenn Sie den ergänzten Namen zu erstellen, wird davon ausgegangen, die Funktion hat keine Parameter.

@@ -1,5 +1,5 @@
 ---
-title: Datensatz (MFC-Datenzugriff) | Microsoft Docs
+title: Datensatz (MFC-Datenzugriff) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b03bfb65bd10787f41d30c63117fec54e8dc30ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe348043d991aa04652eae02ba0f2efa393bcf5f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103449"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098133"
 ---
 # <a name="record-mfc-data-access"></a>Datensatz (MFC-Datenzugriff)
-Ein Datensatz ist eine Sammlung von Daten über eine einzige Entität, z. B. ein Konto oder ein Kunde, die in einer Tabelle (in einer Zeile der Tabelle) gespeichert ist. Ein Datensatz besteht aus einer Gruppe angrenzender Spalten (auch als Felder bezeichnet), die verschiedene Datentypen enthalten. Eine Gruppe von Datensätzen, ausgewählt aus einer Datenquelle – in der Datenbankterminologie häufig als Resultset bezeichnet – wird in MFC als Recordset bezeichnet. Weitere Informationen finden Sie unter [Recordset (ODBC)](../data/odbc/recordset-odbc.md).  
+
+Ein Datensatz ist eine Sammlung von Daten über eine einzige Entität, z. B. ein Konto oder ein Kunde, die in einer Tabelle (in einer Zeile der Tabelle) gespeichert ist. Ein Datensatz besteht aus einer Gruppe angrenzender Spalten (auch als Felder bezeichnet), die verschiedene Datentypen enthalten. Eine Gruppe von Datensätzen, ausgewählt aus einer Datenquelle – in der Datenbankterminologie häufig als Resultset bezeichnet – wird in MFC als Recordset bezeichnet. Weitere Informationen finden Sie unter [Recordsets (ODBC)](../data/odbc/recordset-odbc.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenzugriffsprogrammierung (MFC/ATL)](../data/data-access-programming-mfc-atl.md)
+
+[Datenzugriffsprogrammierung (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

@@ -1,5 +1,5 @@
 ---
-title: Auto_gcroot-Klasse | Microsoft Docs
+title: Auto_gcroot-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b6afad3450aff2a9243b3e4a480a374fbcd14fc7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da63d58136d61bbea75daa90ac01cee5b44ac86d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103865"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039100"
 ---
 # <a name="autogcroot-class"></a>auto_gcroot-Klasse
 Automatische ressourcenverwaltung (z. B. [Auto_ptr-Klasse](../standard-library/auto-ptr-class.md)) die zum Einbetten von eines virtuellen Handles in einen systemeigenen Typ verwendet werden können.  
@@ -37,8 +37,8 @@ class auto_gcroot;
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `_element_type`  
- Der verwaltete Typ, eingebettet werden soll.  
+*_element_type*<br/>
+Der verwaltete Typ eingebettet werden.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Headerdatei** \<msclr\auto_gcroot.h >  
@@ -47,6 +47,6 @@ class auto_gcroot;
   
 ## <a name="see-also"></a>Siehe auch  
  [auto_gcroot](../dotnet/auto-gcroot.md)   
- [Auto_gcroot-Elemente](../dotnet/auto-gcroot-members.md)   
+ [Auto_gcroot-Members](../dotnet/auto-gcroot-members.md)   
  [Vorgehensweise: Deklarieren von Handles in systemeigenen Typen](../dotnet/how-to-declare-handles-in-native-types.md)   
  [auto_handle-Klasse](../dotnet/auto-handle-class.md)

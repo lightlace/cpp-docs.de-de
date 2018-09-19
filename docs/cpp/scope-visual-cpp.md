@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 733d090073fe2ed08a0499ea205c2377b4bdb289
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: eb9d21eee8e561e2caa8a7c4088774435d3ce273
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679696"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080440"
 ---
 # <a name="scope-c"></a>Gültigkeitsbereich (C++)
 
 Wenn Sie ein Programmelement, z. B. eine Klasse, Funktion oder Variable deklarieren, kann in bestimmten Teilen des Programms dessen Name nur "gesehen" und verwendet werden. Der Kontext, in dem ein Name sichtbar ist, heißt die *Bereich*. Wenn Sie eine Variable deklarieren z. B. `x` innerhalb einer Funktion `x` ist nur sichtbar innerhalb dieser Funktion. Sie verfügt über *lokalen Gültigkeitsbereich*. Sie weist möglicherweise andere Variablen mit dem gleichen Namen in Ihrem Programm auf; solange sie sich in unterschiedlichen Bereichen sind, werden sie nicht die One Definition Rule verletzt und kein Fehler ausgelöst.
 
-Für automatische nicht statische Variablen bestimmt Umfang auch wenn sie erstellt und im Arbeitsspeicher des Programms zerstört werden. 
+Für automatische nicht statische Variablen bestimmt Umfang auch wenn sie erstellt und im Arbeitsspeicher des Programms zerstört werden.
 
 Es gibt sechs Arten von Gültigkeitsbereichen:
 
@@ -51,9 +51,9 @@ Es gibt sechs Arten von Gültigkeitsbereichen:
 
 Sie können einen Namen verbergen, indem Sie ihn in einem eingeschlossenen Block deklarieren. In der folgenden Abbildung wird `i` innerhalb des inneren Blocks neu deklariert. Dadurch wird die Variable ausgeblendet, die `i` im äußeren Blockbereich zugeordnet ist.
 
- ![Block&#45;Bereich Ausblenden von Namen](../cpp/media/vc38sf1.png "vc38SF1") Blockbereich und Ausblenden von Namen
+![Block&#45;Bereich Ausblenden von Namen](../cpp/media/vc38sf1.png "vc38SF1") Blockbereich und Ausblenden von Namen
 
- Die in der Abbildung dargestellte Ausgabe des Programms lautet wie folgt:
+Die in der Abbildung dargestellte Ausgabe des Programms lautet wie folgt:
 
 ```cpp
 i = 0
@@ -67,7 +67,7 @@ i = 0
 
 ## <a name="hiding-class-names"></a>Ausblenden von Klassennamen
 
- Sie können Klassennamen ausblenden, indem Sie eine Funktion, ein Objekt, eine Variable oder einen Enumerator im gleichen Bereich deklarieren. Jedoch den Namen der Klasse kann weiterhin zugegriffen werden, wenn das Schlüsselwort vorangestellt **Klasse**.
+Sie können Klassennamen ausblenden, indem Sie eine Funktion, ein Objekt, eine Variable oder einen Enumerator im gleichen Bereich deklarieren. Jedoch den Namen der Klasse kann weiterhin zugegriffen werden, wenn das Schlüsselwort vorangestellt **Klasse**.
 
 ```cpp
 // hiding_class_names.cpp
@@ -91,7 +91,7 @@ double Account = 15.37;            // Hides class name Account
 
 int main()
 {
-    class Account Checking( Account ); // Qualifies Account as 
+    class Account Checking( Account ); // Qualifies Account as
                                        //  class name
 
     cout << "Opening account with balance of: "
@@ -103,13 +103,13 @@ int main()
 > [!NOTE]
 > Alle platzieren Sie den Namen der Klasse (`Account`) wird aufgerufen, für die Class-Schlüsselwort verwendet werden muss, um es aus dem globalen Bereich Variablen Konto zu unterscheiden. Diese Regel gilt nicht, wenn der Klassenname auf der linken Seite des Bereichsauflösungsoperators (::) auftritt. Namen auf der linken Seite des Bereichsauflösungsoperators gelten immer als Klassennamen.
 
- Im folgende Beispiel wird veranschaulicht, wie einen Zeiger auf ein Objekt des Typs deklarieren `Account` mithilfe der **Klasse** Schlüsselwort:
+Im folgende Beispiel wird veranschaulicht, wie einen Zeiger auf ein Objekt des Typs deklarieren `Account` mithilfe der **Klasse** Schlüsselwort:
 
 ```cpp
 class Account *Checking = new class Account( Account );
 ```
 
- Die `Account` im Initialisierer (in Klammern) in der vorherigen Anweisung hat einen globalen Gültigkeitsbereich, sondern vom Typ **doppelte**.
+Die `Account` im Initialisierer (in Klammern) in der vorherigen Anweisung hat einen globalen Gültigkeitsbereich, sondern vom Typ **doppelte**.
 
 > [!NOTE]
 > Die in diesem Beispiel dargestellte Wiederverwendung von Bezeichnernamen gilt als schlechter Programmierstil.
@@ -118,7 +118,7 @@ Weitere Informationen über die Deklaration und Initialisierung von Klassenobjek
 
 ## <a name="hiding-names-with-global-scope"></a>Ausblenden von Namen mit globalem Bereich
 
- Sie können Namen mit globalem Bereich ausblenden, indem Sie explizit den gleichen Namen im Blockbereich zu deklarieren. Jedoch globale-Bereichsnamen können zugegriffen werden, verwenden den Bereichsauflösungsoperator (`::`).
+Sie können Namen mit globalem Bereich ausblenden, indem Sie explizit den gleichen Namen im Blockbereich zu deklarieren. Jedoch globale-Bereichsnamen können zugegriffen werden, verwenden den Bereichsauflösungsoperator (`::`).
 
 ```cpp
 #include <iostream>
@@ -139,4 +139,5 @@ Global-scoped i has the value: 7
 ```
 
 ## <a name="see-also"></a>Siehe auch
- [Grundlegende Konzepte](../cpp/basic-concepts-cpp.md)
+
+[Grundlegende Konzepte](../cpp/basic-concepts-cpp.md)

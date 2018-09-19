@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0024 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0024 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50a07297ddabf269b003a1f14d967d1187fea96d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2816be7bb1d33757d9722d605d461ac6fb34fadd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302460"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118193"
 ---
 # <a name="expression-evaluator-error-cxx0024"></a>Ausdrucksauswertungsfehler CXX0024
-Vorgang benötigt l-Wert  
-  
- Ein Ausdruck, der nicht in einen l-Wert ausgewertet wird, wurde für einen Vorgang angegeben, der einen l-Wert erfordert.  
-  
- Ein l-Wert (so genannt, weil es auf der linken Seite einer zuweisungsanweisung angezeigt wird) ist ein Ausdruck, der auf einen Speicherbereich verweist.  
-  
- Beispielsweise `buffer[count]` gültiger l-Wert ist, da er auf einen bestimmten Speicherbereich verweist. Die logischen Vergleich `zed != 0` ist nicht gültiger l-Wert, da er auf "true" oder "false", nicht zu einer Speicheradresse ausgewertet wird.  
-  
- Dieser Fehler ist mit CAN0024 identisch.
+
+Vorgang benötigt l-Wert
+
+Ein Ausdruck, der nicht auf einen l-Wert ausgewertet wird, wurde für einen Vorgang angegeben, der einen l-Wert erfordert.
+
+Ein l-Wert (so genannt, weil er auf der linken Seite einer zuweisungsanweisung angezeigt wird) ist ein Ausdruck, der auf einen Speicherbereich verweist.
+
+Z. B. `buffer[count]` ist ein gültiger l-Wert, da er an einem bestimmten Speicherort zeigt. Der logische Vergleich `zed != 0` ist kein gültiger l-Wert, da er auf "true" oder "FALSE" ausgewertet, nicht auf eine Speicheradresse wird.
+
+Dieser Fehler ist mit CAN0024 identisch.

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fbbe1f7feca0b2c8d21bfaf5da3e758e2c6c0bb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0c314decf15886f8d99ed8be3b7bafe4fff3e36b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200962"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085757"
 ---
 # <a name="process-and-environment-control"></a>Prozess- und Umgebungssteuerung
 
@@ -77,11 +77,11 @@ Verwenden Sie die Prozesssteuerungsroutinen, um Prozesse aus einem Programm hera
 |[_spawnvpe, _wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|Erstellt einen neuen Prozess mithilfe der **PATH**-Variable, der angegebenen Umgebung und dem Argumentarray und führt ihn aus.|
 |[system, _wsystem](../c-runtime-library/reference/system-wsystem.md)|Führt einen Betriebssystembefehl aus.|
 
- Im Windows-Betriebssystem entspricht der erzeugte Prozess dem erzeugenden Prozess. Jeder Prozess kann **_cwait** verwenden, um auf einen Prozess zu warten, dessen Prozess-ID bekannt ist.
+Im Windows-Betriebssystem entspricht der erzeugte Prozess dem erzeugenden Prozess. Jeder Prozess kann **_cwait** verwenden, um auf einen Prozess zu warten, dessen Prozess-ID bekannt ist.
 
- Der Unterschied zwischen den Familien **_exec** und **_spawn** ist, dass eine **_spawn**-Funktion die Steuerung vom neuen Prozess an den aufrufenden Prozess zurückgeben kann. In einer **_spawn**-Funktion sind sowohl der aufrufende als auch der neue Prozess im Arbeitsspeicher vorhanden, außer wenn **_P_OVERLAY** angegeben ist. In einer **_exec**-Funktion überlagert der neue Prozess den aufrufenden Prozess, sodass die Steuerung nur dann an den aufrufenden Prozess zurückgegeben werden kann, wenn beim Versuch, die Ausführung des neuen Prozesses zu starten, ein Fehler auftritt.
+Der Unterschied zwischen den Familien **_exec** und **_spawn** ist, dass eine **_spawn**-Funktion die Steuerung vom neuen Prozess an den aufrufenden Prozess zurückgeben kann. In einer **_spawn**-Funktion sind sowohl der aufrufende als auch der neue Prozess im Arbeitsspeicher vorhanden, außer wenn **_P_OVERLAY** angegeben ist. In einer **_exec**-Funktion überlagert der neue Prozess den aufrufenden Prozess, sodass die Steuerung nur dann an den aufrufenden Prozess zurückgegeben werden kann, wenn beim Versuch, die Ausführung des neuen Prozesses zu starten, ein Fehler auftritt.
 
- Zu den Unterschieden zwischen den Funktionen in der **_exec**-Familie ebenso wie zwischen denen der **_spawn**-Familie gehören folgende: die Methode zum Suchen der Datei, die als neuer Prozess ausgeführt werden soll; die Form, in der Argumente an den neuen Prozess übergeben werden; die Methode zum Festlegen der Umgebung. Dies wird in der folgenden Tabelle erläutert. Verwenden Sie eine Funktion, die eine Argumentliste übergibt, wenn die Anzahl von Argumenten konstant oder zur Kompilierzeit bekannt ist. Verwenden Sie eine Funktion, die einen Zeiger auf ein Array mit den Argumenten übergibt, wenn die Anzahl von Argumenten zur Laufzeit ermittelt werden muss. Die Informationen in der folgenden Tabelle gelten auch für die jeweiligen Breitzeichengegenstücke der Funktionen **_spawn** und **_exec**.
+Zu den Unterschieden zwischen den Funktionen in der **_exec**-Familie ebenso wie zwischen denen der **_spawn**-Familie gehören folgende: die Methode zum Suchen der Datei, die als neuer Prozess ausgeführt werden soll; die Form, in der Argumente an den neuen Prozess übergeben werden; die Methode zum Festlegen der Umgebung. Dies wird in der folgenden Tabelle erläutert. Verwenden Sie eine Funktion, die eine Argumentliste übergibt, wenn die Anzahl von Argumenten konstant oder zur Kompilierzeit bekannt ist. Verwenden Sie eine Funktion, die einen Zeiger auf ein Array mit den Argumenten übergibt, wenn die Anzahl von Argumenten zur Laufzeit ermittelt werden muss. Die Informationen in der folgenden Tabelle gelten auch für die jeweiligen Breitzeichengegenstücke der Funktionen **_spawn** und **_exec**.
 
 ### <a name="spawn-and-exec-function-families"></a>Funktionsfamilien „_spawn“ und „_exec“
 

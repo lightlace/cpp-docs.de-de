@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2884 | Microsoft Docs
+title: Compilerfehler C2884 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41bacfc53f8b1f14a9b7409a43db39fd943739e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9d9266162d4608e39982cce1e94751e427bc5e47
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261467"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054713"
 ---
 # <a name="compiler-error-c2884"></a>Compilerfehler C2884
-"Name": von using-Deklaration steht in Konflikt mit lokalen Funktion 'Funktion' eingeführt  
-  
- Sie haben versucht, eine Funktion mehr als einmal zu definieren. Die erste Definition ist eine lokale Definition. Die zweite besteht aus einem Namespace mit einem `using` Deklaration.  
-  
- Im folgende Beispiel wird C2884 generiert:  
-  
-```  
-// C2884.cpp  
-namespace A {  
-   void z(int);  
-}  
-  
-void f() {  
-   void z(int);  
-   using A::z;   // C2884 z is already defined  
-}  
+
+'Name': von using-Deklaration steht in Konflikt mit lokaler Funktion "Function" eingeführt
+
+Sie haben versucht, eine Funktion mehr als einmal definiert. Die erste Definition befindet es sich um eine lokale Definition. Die zweite besteht aus einem Namespace mit einem `using` Deklaration.
+
+Im folgende Beispiel wird die C2884 generiert:
+
+```
+// C2884.cpp
+namespace A {
+   void z(int);
+}
+
+void f() {
+   void z(int);
+   using A::z;   // C2884 z is already defined
+}
 ```
