@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec4fa860387068dd345c19467583922ebaeb49ab
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ef1469c40de8aae06460f1874905c53e91a47ca1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763672"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079335"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>CAtlPreviewCtrlImpl-Klasse
 
@@ -144,10 +144,10 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
 
 ### <a name="parameters"></a>Parameter
 
-*hWndParent*  
+*hWndParent*<br/>
 Ein Handle für das Hostfenster, die von der Shell for Rich Preview bereitgestellt.
 
-*Volksrepublik China*  
+*Volksrepublik China*<br/>
 Gibt an, die ursprüngliche Größe und Position des Fensters.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -176,7 +176,7 @@ virtual void DoPaint(HDC hdc);
 
 ### <a name="parameters"></a>Parameter
 
-*hdc*  
+*hdc*<br/>
 Ein Handle für einen Gerätekontext zum Zeichnen.
 
 ### <a name="remarks"></a>Hinweise
@@ -235,16 +235,16 @@ LRESULT OnPaint(
 
 ### <a name="parameters"></a>Parameter
 
-*nMsg*  
+*nMsg*<br/>
 Legen Sie auf der WM_PAINT.
 
-*wParam-Parameter*  
+*wParam-Parameter*<br/>
 Dieser Parameter wird nicht verwendet.
 
-*lParam*  
+*lParam*<br/>
 Dieser Parameter wird nicht verwendet.
 
-*bHandled*  
+*bHandled*<br/>
 Wenn diese Funktion zurückkehrt, enthält es "true".
 
 ### <a name="return-value"></a>Rückgabewert
@@ -273,7 +273,7 @@ virtual void SetHost(HWND hWndParent);
 
 ### <a name="parameters"></a>Parameter
 
-*hWndParent*  
+*hWndParent*<br/>
 Ein Handle für das neue übergeordnete Fenster.
 
 ### <a name="remarks"></a>Hinweise
@@ -291,13 +291,13 @@ virtual void SetPreviewVisuals(
 
 ### <a name="parameters"></a>Parameter
 
-*clrBack*  
+*clrBack*<br/>
 Hintergrundfarbe des Vorschaufensters.
 
-*clrText*  
+*clrText*<br/>
 Die Textfarbe des Vorschaufensters.
 
-*PLF*  
+*PLF*<br/>
 Schriftart für Text in einem Vorschaufenster angezeigt.
 
 ### <a name="remarks"></a>Hinweise
@@ -312,10 +312,10 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
 
 ### <a name="parameters"></a>Parameter
 
-*Volksrepublik China*  
+*Volksrepublik China*<br/>
 Gibt an, die neue Größe und Position des Steuerelements (Vorschau).
 
-*bRedraw*  
+*bRedraw*<br/>
 Gibt an, ob das Steuerelement neu gezeichnet werden muss.
 
 ### <a name="remarks"></a>Hinweise

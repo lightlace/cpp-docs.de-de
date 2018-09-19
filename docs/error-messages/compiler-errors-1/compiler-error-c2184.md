@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2184 | Microsoft Docs
+title: Compilerfehler C2184 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 068850ea37811cc68c070a968cc2ddc5aa0ce8a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c901dbbe97c47afd8096c89f33db6e3e355cba4d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171753"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050488"
 ---
 # <a name="compiler-error-c2184"></a>Compilerfehler C2184
-"Typ": Ungültiger Typ für __except-Ausdruck, muss eine ganze Zahl sein.  
-  
- In einer [__except](../../c-language/try-except-statement-c.md) -Anweisung wurde ein Typ verwendet, der nicht zulässig ist.  
-  
- Im folgenden Beispiel wird C2184 generiert:  
-  
-```  
-// C2184.cpp  
-void f() {  
-   int * p;  
-   __try{}  
-   __except(p){};   // C2184  
-}  
-```  
-  
- Mögliche Lösung:  
-  
-```  
-// C2184b.cpp  
-// compile with: /c  
-void f() {  
-   int i = 0;  
-   __try{}  
-   __except(i){};  
-}  
+
+"Typ": Ungültiger Typ für __except-Ausdruck, muss eine ganze Zahl sein.
+
+In einer [__except](../../c-language/try-except-statement-c.md) -Anweisung wurde ein Typ verwendet, der nicht zulässig ist.
+
+Im folgenden Beispiel wird C2184 generiert:
+
+```
+// C2184.cpp
+void f() {
+   int * p;
+   __try{}
+   __except(p){};   // C2184
+}
+```
+
+Mögliche Lösung:
+
+```
+// C2184b.cpp
+// compile with: /c
+void f() {
+   int i = 0;
+   __try{}
+   __except(i){};
+}
 ```

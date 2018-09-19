@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4377 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4377 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef049f85cd17bfeaba243b84da9fca93ae4036b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 613ebe183b61c6b9894ed3b726f90061e2b24ef6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274780"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047173"
 ---
 # <a name="compiler-warning-level-1-c4377"></a>Compilerwarnung (Stufe 1) C4377
-systemeigene Typen sind standardmäßig privat. -d1PrivateNativeTypes ist veraltet.  
-  
- In früheren Versionen waren systemeigene Typen in Assemblys standardmäßig und einer internen, nicht dokumentierten Compileroption öffentliche (**/d1PrivateNativeTypes**) wurde verwendet, um sie als privat kennzeichnen.  
-  
- Alle Typen, systemeigen und CLR, sind nun in einer Assembly standardmäßig privat damit **/d1PrivateNativeTypes** wird nicht mehr benötigt.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C4377 generiert.  
-  
-```  
-// C4377.cpp  
-// compile with: /clr /d1PrivateNativeTypes /W1  
-// C4377 warning expected  
-int main() {}  
+
+systemeigene Typen sind standardmäßig privat. -d1PrivateNativeTypes ist veraltet.
+
+In früheren Versionen waren systemeigene Typen in Assemblys öffentliche standardmäßig und einer internen, nicht dokumentierten-Compileroption (**/d1PrivateNativeTypes**) wurde verwendet, um diese als privat kennzeichnen.
+
+Alle Typen, systemeigen und CLR sind jetzt standardmäßig in einer Assembly, private damit **/d1PrivateNativeTypes** wird nicht mehr benötigt.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C4377 generiert.
+
+```
+// C4377.cpp
+// compile with: /clr /d1PrivateNativeTypes /W1
+// C4377 warning expected
+int main() {}
 ```

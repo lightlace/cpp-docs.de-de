@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2452 | Microsoft Docs
+title: Compilerfehler C2452 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4d30de808600c34270c8576adb371497af169aa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c8785a8ce77849805d9620b412493accd8b8690
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197220"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087005"
 ---
 # <a name="compiler-error-c2452"></a>Compilerfehler C2452
-'Typ': Ungültige Quell-Typ für "safe_cast"  
-  
- Der Typ der Datenquelle für ["safe_cast"](../../windows/safe-cast-cpp-component-extensions.md) war ungültig.  Z. B. alle Typen in einem `safe_cast` Vorgang CLR-Typen sein.  
-  
- Im folgende Beispiel wird C2452 generiert:  
-  
-```  
-// C2452.cpp  
-// compile with: /clr  
-  
-struct A {};  
-struct B : public A {};  
-  
-ref struct C {};  
-ref struct D : public C{};  
-  
-int main() {  
-   A a;  
-   safe_cast<B*>(&a);   // C2452  
-  
-   // OK  
-   C ^ c = gcnew C;  
-   safe_cast<D^>(c);  
-}  
+
+'Typ': Ungültiger Quelltyp für Safe_cast
+
+Der Quelltyp für ["safe_cast"](../../windows/safe-cast-cpp-component-extensions.md) war ungültig.  Z. B. alle Typen in einem `safe_cast` Vorgang muss die CLR-Typen.
+
+Im folgende Beispiel wird die C2452 generiert:
+
+```
+// C2452.cpp
+// compile with: /clr
+
+struct A {};
+struct B : public A {};
+
+ref struct C {};
+ref struct D : public C{};
+
+int main() {
+   A a;
+   safe_cast<B*>(&a);   // C2452
+
+   // OK
+   C ^ c = gcnew C;
+   safe_cast<D^>(c);
+}
 ```

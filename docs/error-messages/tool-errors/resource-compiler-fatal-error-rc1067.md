@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcencompiler: Schwerwiegender Fehler RC1067 | Microsoft Docs'
+title: 'Ressourcencompiler: Schwerwiegender Fehler RC1067 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c570a5f1fbbb58fcbe43a0fdd34e577b1113cdae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b02bd2bf8605e5babb5bd7036b69f1d394b759d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317589"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076280"
 ---
 # <a name="resource-compiler-fatal-error-rc1067"></a>Ressourcencompiler: Schwerwiegender Fehler RC1067
-Compilerlimit: Überlauf des internen Puffers durch Bezeichner  
-  
- Ein interner Compilerfehler wurde überschritten.
+
+Compilerlimit: Überlauf des internen Puffers durch Bezeichner
+
+Ein interner Compilerfehler wurde überschritten.

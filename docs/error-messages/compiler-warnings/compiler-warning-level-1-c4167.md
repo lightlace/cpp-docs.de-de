@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4167 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4167 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c72d6fd88b8c4797b2e352d6d30dbf797a23a00d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c154a91c21bf0b35493bb8033e5453ef1c536267
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33280331"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082182"
 ---
 # <a name="compiler-warning-level-1-c4167"></a>Compilerwarnung (Stufe 1) C4167
-Funktion: Nur als systeminterne Funktion verfügbar  
-  
- Die **#pragma-Funktion** versucht zu erzwingen, dass der Compiler einen konventionellen Aufruf für eine Funktion verwendet, die in systeminterner Form verwendet werden muss. Das Pragma wird ignoriert.  
-  
- Um diese Warnung zu vermeiden, entfernen Sie die **#pragma-Funhtion**.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// C4167.cpp  
-// compile with: /W1  
-#include <malloc.h>  
-#pragma function(_alloca )   // C4167: _alloca() is intrinsic only  
-int main(){}  
+
+Funktion: Nur als systeminterne Funktion verfügbar
+
+Die **#pragma-Funktion** versucht zu erzwingen, dass der Compiler einen konventionellen Aufruf für eine Funktion verwendet, die in systeminterner Form verwendet werden muss. Das Pragma wird ignoriert.
+
+Um diese Warnung zu vermeiden, entfernen Sie die **#pragma-Funhtion**.
+
+## <a name="example"></a>Beispiel
+
+```
+// C4167.cpp
+// compile with: /W1
+#include <malloc.h>
+#pragma function(_alloca )   // C4167: _alloca() is intrinsic only
+int main(){}
 ```

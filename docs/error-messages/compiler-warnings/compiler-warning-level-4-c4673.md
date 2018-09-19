@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4673 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4673 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,51 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aecb4b3590a3cb1a1b055cd1e3377d00c5d0e5bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ab61a71a747b1fd917db579a57700107d12da87
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295924"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085815"
 ---
 # <a name="compiler-warning-level-4-c4673"></a>Compilerwarnung (Stufe 4) C4673
-Auslösen von 'Bezeichner' die folgenden Typen werden nicht am Standort Catch angesehen  
-  
- Throw-Objekt kann nicht verarbeitet werden, der **catch** Block. Jeder Typ, der nicht behandelt werden kann, wird in der Fehlerausgabe unmittelbar nach der Zeile, die mit dieser Warnung aufgeführt. Jede nicht behandelte Typ verfügt über einen eigenen Warnung. Lesen Sie die Warnung für den jeweiligen Informationen.  
-  
- Im folgenden Beispiel wird C4673 generiert:  
-  
-```  
-// C4673.cpp  
-// compile with: /EHsc /W4  
-class Base {  
-private:  
-   char * m_chr;  
-public:  
-   Base() {  
-      m_chr = 0;  
-   }  
-  
-   ~Base() {  
-      if(m_chr)  
-         delete m_chr;  
-   }  
-};  
-  
-class Derv : private Base {  
-public:  
-   Derv() {}  
-   ~Derv() {}  
-};  
-  
-int main() {  
-   try {  
-      Derv D1;  
-      // delete previous line, uncomment the next line to resolve  
-      // Base D1;  
-      throw D1;   // C4673  
-   }  
-  
-   catch(...) {}  
-}  
+
+Auslösen von "Bezeichner" die folgenden Typen werden nicht an die Catch-Standort betrachtet werden
+
+Ein Throw-Objekt kann nicht verarbeitet werden, der **catch** Block. Jeder Typ, der nicht behandelt werden kann, wird in der Fehlerausgabe, die unmittelbar nach der Zeile, die mit dieser Warnung aufgeführt. Jede nicht behandelte Typ verfügt über eine eigene Warnung. Lesen Sie die Warnung für den jeweiligen Informationen.
+
+Im folgende Beispiel wird die C4673 generiert:
+
+```
+// C4673.cpp
+// compile with: /EHsc /W4
+class Base {
+private:
+   char * m_chr;
+public:
+   Base() {
+      m_chr = 0;
+   }
+
+   ~Base() {
+      if(m_chr)
+         delete m_chr;
+   }
+};
+
+class Derv : private Base {
+public:
+   Derv() {}
+   ~Derv() {}
+};
+
+int main() {
+   try {
+      Derv D1;
+      // delete previous line, uncomment the next line to resolve
+      // Base D1;
+      throw D1;   // C4673
+   }
+
+   catch(...) {}
+}
 ```

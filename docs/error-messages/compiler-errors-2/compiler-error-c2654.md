@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C2654 | Microsoft Docs
+title: Compilerfehler C2654 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b28fb3de46d9071c9ee19711344c5b41e337934
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1181cbab40739617343f8d2a2e5e26540f01e82f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232879"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080843"
 ---
-# <a name="compiler-error-c2654"></a>Compilerfehler Fehler C2654
-'Bezeichner': Zugriff auf Element außerhalb einer Memberfunktion  
-  
- Ein Element wird in einer Deklaration zugegriffen. Memberdaten können nur in Memberfunktionen zugegriffen werden.  
-  
- Dieser Fehler kann verursacht werden, wenn Sie versuchen, die zum Initialisieren von Variablen in einer Deklaration. Verwenden Sie einen Konstruktor zu diesem Zweck.
+# <a name="compiler-error-c2654"></a>Compilerfehler C2654
+
+'Bezeichner': Zugriff auf Element außerhalb einer Methode
+
+Ein Member wird in einer Deklaration zugegriffen werden. Memberdaten können nur in Memberfunktionen zugegriffen werden.
+
+Dieser Fehler kann verursacht werden, beim Versuch, die Variablen in einer Deklaration initialisiert werden. Verwenden Sie einen Konstruktor für diesen Zweck.

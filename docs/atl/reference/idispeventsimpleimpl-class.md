@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68e6b4730be3679e4309a298d40657dcecde94b6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9eb111b3fa1376be8a43bfc9a04c7865164bff76
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755709"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084574"
 ---
 # <a name="idispeventsimpleimpl-class"></a>IDispEventSimpleImpl-Klasse
 
@@ -42,19 +42,19 @@ Diese Klasse stellt Implementierungen von der `IDispatch` Methoden ohne das Abru
 ## <a name="syntax"></a>Syntax
 
 ```
-template <UINT nID, class T, const IID* pdiid>  
+template <UINT nID, class T, const IID* pdiid>
 class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*nID*  
+*nID*<br/>
 Ein eindeutiger Bezeichner für das Quellobjekt. Wenn `IDispEventSimpleImpl` ist die Basisklasse für ein zusammengesetztes Steuerelement ist, verwenden Sie die Ressourcen-ID des gewünschten enthaltenen Steuerelements für diesen Parameter. Verwenden Sie in anderen Fällen eine beliebige positive ganze Zahl.
 
-*T*  
+*T*<br/>
 Der Benutzer-Klasse, die abgeleitet wird `IDispEventSimpleImpl`.
 
-*pdiid*  
+*pdiid*<br/>
 Der Zeiger auf die IID für die ereignisanzeigeschnittstelle, die von dieser Klasse implementiert.
 
 ## <a name="members"></a>Member
@@ -119,7 +119,7 @@ HRESULT Advise(IUnknown* pUnk);
 
 ### <a name="parameters"></a>Parameter
 
-*pUnk*  
+*pUnk*<br/>
 [in] Ein Zeiger auf die `IUnknown` Schnittstelle das Ereignisquellobjekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -145,10 +145,10 @@ HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
 
 ### <a name="parameters"></a>Parameter
 
-*pUnk*  
+*pUnk*<br/>
 [in] Ein Zeiger auf die `IUnknown` Schnittstelle das Ereignisquellobjekt.
 
-*piid*  
+*piid*<br/>
 Ein Zeiger auf die IID für das Ereignisquellobjekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -174,10 +174,10 @@ HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
 
 ### <a name="parameters"></a>Parameter
 
-*pUnk*  
+*pUnk*<br/>
 [in] Ein Zeiger auf die `IUnknown` Schnittstelle das Ereignisquellobjekt.
 
-*piid*  
+*piid*<br/>
 Ein Zeiger auf die IID für das Ereignisquellobjekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -267,7 +267,7 @@ HRESULT Unadvise(IUnknown* pUnk);
 
 ### <a name="parameters"></a>Parameter
 
-*pUnk*  
+*pUnk*<br/>
 [in] Ein Zeiger auf die `IUnknown` Schnittstelle das Ereignisquellobjekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -287,8 +287,8 @@ Nachdem die Verbindung unterbrochen wird, werden Ereignisse nicht mehr an Handle
 
 ## <a name="see-also"></a>Siehe auch
 
-[_ATL_FUNC_INFO-Struktur](../../atl/reference/atl-func-info-structure.md)   
-[IDispatchImpl-Klasse](../../atl/reference/idispatchimpl-class.md)   
-[IDispEventImpl-Klasse](../../atl/reference/idispeventimpl-class.md)   
-[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)   
+[_ATL_FUNC_INFO-Struktur](../../atl/reference/atl-func-info-structure.md)<br/>
+[IDispatchImpl-Klasse](../../atl/reference/idispatchimpl-class.md)<br/>
+[IDispEventImpl-Klasse](../../atl/reference/idispeventimpl-class.md)<br/>
+[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

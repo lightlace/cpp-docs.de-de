@@ -1,5 +1,5 @@
 ---
-title: Message-Klasse | Microsoft Docs
+title: Message-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14fe0fa284a56c45404d8b568acf3b0d360fa27a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b0828d1d8698cb696b257e6730e4aea3961dd159
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687942"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042220"
 ---
 # <a name="message-class"></a>message-Klasse
 Der grundlegende Nachrichtenumschlag, der die zwischen den Meldungsblöcken übergebene Datennutzlast enthält.  
@@ -40,8 +40,8 @@ class message : public ::Concurrency::details::_Runtime_object;
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
- Der Datentyp der Nutzlast innerhalb der Nachricht.  
+*T*<br/>
+Der Datentyp der Nutzlast innerhalb der Nachricht.  
   
 ## <a name="members"></a>Member  
   
@@ -62,9 +62,9 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[add_ref](#add_ref)|Fügt auf den Verweiszähler für den `message` Objekt. Verwendet für Meldungsblöcke, die verweiszählung, um die Lebensdauer der Nachricht zu ermitteln.|  
+|[add_ref](#add_ref)|Fügt hinzu, um den Verweiszähler für den `message` Objekt. Verwendet für Meldungsblöcke, die verweiszählung, um die Lebensdauer der Meldung zu bestimmen.|  
 |[msg_id](#msg_id)|Gibt die ID des dem `message` Objekt.|  
-|[remove_ref](#remove_ref)|Subtrahiert von den Verweiszähler für den `message` Objekt. Verwendet für Meldungsblöcke, die verweiszählung, um die Lebensdauer der Nachricht zu ermitteln.|  
+|[remove_ref](#remove_ref)|Subtrahiert von den Verweiszähler für den `message` Objekt. Verwendet für Meldungsblöcke, die verweiszählung, um die Lebensdauer der Meldung zu bestimmen.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
@@ -85,7 +85,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 ##  <a name="add_ref"></a> add_ref 
 
- Fügt auf den Verweiszähler für den `message` Objekt. Verwendet für Meldungsblöcke, die verweiszählung, um die Lebensdauer der Nachricht zu ermitteln.  
+ Fügt hinzu, um den Verweiszähler für den `message` Objekt. Verwendet für Meldungsblöcke, die verweiszählung, um die Lebensdauer der Meldung zu bestimmen.  
   
 ```
 long add_ref();
@@ -114,17 +114,17 @@ message(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_P`  
- Die Nutzlast dieser Nachricht.  
+*_P*<br/>
+Die Nutzlast dieser Nachricht.  
   
- `_Id`  
- Die eindeutige ID dieser Nachricht.  
+*_Id*<br/>
+Die eindeutige ID dieser Nachricht.  
   
- `_Msg`  
- Ein Verweis oder Zeiger auf ein `message` Objekt.  
+*_Msg*<br/>
+Ein Verweis oder Zeiger auf eine `message` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Des Konstruktors, der einen Zeiger auf eine `message` -Objekt als Argument löst ein [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme wenn der Parameter `_Msg` ist `NULL`.  
+ Der Konstruktor, einen Zeiger auf eine `message` Objekt wie ein Argument löst eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme wenn der Parameter `_Msg` ist `NULL`.  
   
 ##  <a name="dtor"></a> ~ Nachricht 
 
@@ -155,7 +155,7 @@ T const payload;
   
 ##  <a name="remove_ref"></a> remove_ref 
 
- Subtrahiert von den Verweiszähler für den `message` Objekt. Verwendet für Meldungsblöcke, die verweiszählung, um die Lebensdauer der Nachricht zu ermitteln.  
+ Subtrahiert von den Verweiszähler für den `message` Objekt. Verwendet für Meldungsblöcke, die verweiszählung, um die Lebensdauer der Meldung zu bestimmen.  
   
 ```
 long remove_ref();

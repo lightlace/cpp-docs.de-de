@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0010 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0010 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ed62ecba1d25882a95f6555c48d43b3ae405110
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2bcc7231f3dca4c46c2ace410b9444c472880ff7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298407"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086797"
 ---
 # <a name="expression-evaluator-error-cxx0010"></a>Ausdrucksauswertungsfehler CXX0010
-Fehlende öffnende spitze Klammer  
-  
- Der Ausdruck enthält unausgeglichene eckigen Klammern. Geben Sie den Ausdruck mit ausgeglichenen eckige Klammern ein.  
-  
- Dieser Fehler ist mit CAN0010 identisch.
+
+Fehlende öffnende Klammer
+
+Der Ausdruck enthält unausgeglichene eckigen Klammern. Geben Sie den Ausdruck mit ausgeglichene eckige Klammern ein.
+
+Dieser Fehler ist mit CAN0010 identisch.

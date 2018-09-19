@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3619 | Microsoft Docs
+title: Compilerfehler C3619 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a75fed82a989691bc63911b87b9264ed95512dce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ae68bd0fef3f43bfbc430ea2d41cead339424c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249560"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086709"
 ---
 # <a name="compiler-error-c3619"></a>Compilerfehler C3619
-Eine Vorlage kann nicht innerhalb eines verwalteten oder WinRT-Typs deklariert werden.  
-  
-Klassenvorlagen sind in einer verwalteten oder WinRT-Klasse oder -Schnittstelle nicht zulässig.  
-  
-C3619 ist nur über die veraltete Compileroption erreichbar **/CLR: oldSyntax**.  
+
+Eine Vorlage kann nicht innerhalb eines verwalteten oder WinRT-Typs deklariert werden.
+
+Klassenvorlagen sind in einer verwalteten oder WinRT-Klasse oder -Schnittstelle nicht zulässig.
+
+C3619 ist nur über die veraltete Compileroption erreichbar **oldSyntax**.

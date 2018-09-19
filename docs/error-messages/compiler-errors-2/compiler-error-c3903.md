@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3903 | Microsoft Docs
+title: Compilerfehler C3903 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65f58b402b303a15643c567be9a8a7695e802d96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dcdeb10df07abcab34afddc7b852f75a2180bf2e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271865"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086473"
 ---
 # <a name="compiler-error-c3903"></a>Compilerfehler C3903
-"Property": ist nicht festgelegt haben, oder get-Methode  
-  
- Eine Eigenschaft muss mindestens eine enthalten `get` oder eine `set` Methode. Weitere Informationen finden Sie unter [property](../../windows/property-cpp-component-extensions.md).  
-  
- Im folgende Beispiel wird C3903 generiert:  
-  
-```  
-// C3903.cpp  
-// compile with: /clr  
-ref class X {  
-   property int P {  
-      void f(int){}  
-      // Add one or both of the following lines.  
-      // void set(int){}  
-      // int get(){return 0;}  
-   };   // C3903  
-  
-   property double Q[,,,,] {  
-      void f(){}  
-      // Add one or both of the following lines.  
-      // void set(int, char, int, char, double, double){}  
-      // double get(int, char, int, char, double){return 1.1;}  
-   }   // C3903  
-};  
+
+"Property": ist nicht festgelegt haben, oder get-Methode
+
+Eine Eigenschaft benötigen mindestens einen `get` oder `set` Methode. Weitere Informationen finden Sie unter [property](../../windows/property-cpp-component-extensions.md).
+
+Im folgende Beispiel wird die C3903 generiert:
+
+```
+// C3903.cpp
+// compile with: /clr
+ref class X {
+   property int P {
+      void f(int){}
+      // Add one or both of the following lines.
+      // void set(int){}
+      // int get(){return 0;}
+   };   // C3903
+
+   property double Q[,,,,] {
+      void f(){}
+      // Add one or both of the following lines.
+      // void set(int, char, int, char, double, double){}
+      // double get(int, char, int, char, double){return 1.1;}
+   }   // C3903
+};
 ```

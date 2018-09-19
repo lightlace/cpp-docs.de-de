@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3185 generiert | Microsoft Docs
+title: Compilerfehler C3185 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce6eea7c9a40f9dd38bf6892995eaa52ac540de7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd7f94f86165fdfd25bb5a901cdb4349a0e48494
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256185"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044521"
 ---
-# <a name="compiler-error-c3185"></a>Compiler-Fehler C3185 generiert
-"TypeId" verwendet für verwalteten oder WinRT-Typ "Typ"; verwenden Sie stattdessen "Operator".  
-  
- Sie können nicht angewendet werden die [Typeid](../../cpp/typeid-operator.md) Operator, um ein verwaltetes oder WinRT-Typ; verwenden Sie [Typeid](../../windows/typeid-cpp-component-extensions.md) stattdessen.  
-  
- Im folgenden Beispiel wird C3185 generiert und gezeigt, wie Sie diesen Fehler beheben:  
-  
-```  
-// C3185a.cpp  
-// compile with: /clr  
-ref class Base {};  
-ref class Derived : public Base {};  
-  
-int main() {  
-   Derived ^ pd = gcnew Derived;  
-   Base ^pb = pd;  
-   const type_info & t1 = typeid(pb);   // C3185  
-   System::Type ^ MyType = Base::typeid;   // OK  
-};  
-```  
+# <a name="compiler-error-c3185"></a>Compilerfehler C3185
+
+"TypeId" verwendet für verwalteten oder WinRT-Typ "Typ"; verwenden Sie stattdessen "Operator".
+
+Sie können nicht angewendet werden die [Typeid](../../cpp/typeid-operator.md) Operator, um einen verwalteten oder WinRT-Typ; verwenden Sie [Typeid](../../windows/typeid-cpp-component-extensions.md) stattdessen.
+
+Im folgenden Beispiel wird C3185 generiert und gezeigt, wie Sie diesen Fehler beheben:
+
+```
+// C3185a.cpp
+// compile with: /clr
+ref class Base {};
+ref class Derived : public Base {};
+
+int main() {
+   Derived ^ pd = gcnew Derived;
+   Base ^pb = pd;
+   const type_info & t1 = typeid(pb);   // C3185
+   System::Type ^ MyType = Base::typeid;   // OK
+};
+```

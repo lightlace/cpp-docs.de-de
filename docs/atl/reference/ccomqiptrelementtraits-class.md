@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8af52c0e90f346e99564c839333f85ca396f9fd5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6dbc0e10f2747b9a9a2ad3ff345a580d4797ea72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763177"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079309"
 ---
 # <a name="ccomqiptrelementtraits-class"></a>CComQIPtrElementTraits-Klasse
 
@@ -32,17 +32,17 @@ Diese Klasse stellt die Methoden, statische Funktionen und Typdefinitionen hilfr
 ## <a name="syntax"></a>Syntax
 
 ```
-template<typename I, const IID* piid=& __uuidof(I)>  
+template<typename I, const IID* piid=& __uuidof(I)>
 class CComQIPtrElementTraits : 
    public CDefaultElementTraits<ATL::CComQIPtr<I, piid>>
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*I*  
+*I*<br/>
 Eine COM-Schnittstelle, die den Typ des Zeigers gespeichert werden.
 
-*piid*  
+*piid*<br/>
 Ein Zeiger auf die IID der *ich*.
 
 ## <a name="members"></a>Member
@@ -85,5 +85,5 @@ typedef I* INARGTYPE;
 
 ## <a name="see-also"></a>Siehe auch
 
-[CDefaultElementTraits-Klasse](../../atl/reference/cdefaultelementtraits-class.md)   
+[CDefaultElementTraits-Klasse](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

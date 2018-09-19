@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3733 | Microsoft Docs
+title: Compilerfehler C3733 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7d5531bf9eb7352f1866bc0800734a78261b585
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b8aa8d3d952f84b9fee0c00b5cfcb7c5e5c45d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266629"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051307"
 ---
 # <a name="compiler-error-c3733"></a>Compilerfehler C3733
-'Ereignis': Ungültige Syntax zum Angeben eines COM-Ereignisses. haben Sie '__interface' vergessen?  
-  
- Für ein COM-Ereignis wurde die falsche Syntax verwendet. Um diesen Fehler zu beheben, ändern Sie den Ereignistyp oder korrigieren Sie die Syntax zur Einhaltung der COM-Ereignisregeln.  
-  
- Im folgende Beispiel wird C3733 generiert:  
-  
-```  
-#define _ATL_ATTRIBUTES 1  
-#include "atlbase.h"  
-#include "atlcom.h"  
-  
-[coclass, event_source(com), // change 'com' to 'native' to resolve  
-uuid("00000000-0000-0000-0000-000000000001")]  
-class A  
-{  
-   __event void func();   // C3733  
-};  
-  
-int main()  
-{  
-}  
+
+'Ereignis': Ungültige Syntax zur Spezifizierung eines COM-Ereignisses. haben Sie "__interface" vergessen?
+
+Für ein COM-Ereignis wurde der falsche Syntax verwendet. Um diesen Fehler zu beheben, ändern Sie den Typ des Ereignisses, oder korrigieren Sie die Syntax, um die COM-Ereignisregeln zu erfüllen.
+
+Im folgende Beispiel wird die C3733 generiert:
+
+```
+#define _ATL_ATTRIBUTES 1
+#include "atlbase.h"
+#include "atlcom.h"
+
+[coclass, event_source(com), // change 'com' to 'native' to resolve
+uuid("00000000-0000-0000-0000-000000000001")]
+class A
+{
+   __event void func();   // C3733
+};
+
+int main()
+{
+}
 ```

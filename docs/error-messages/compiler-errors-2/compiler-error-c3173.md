@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C3173 | Microsoft Docs
+title: Compilerfehler C3173 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef35c534ac834779da15fce99e8c82b94bd445e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 21a02ae1fcf4aff9636445979a81ef0a02ab5cb1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248074"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053023"
 ---
-# <a name="compiler-error-c3173"></a>Compilerfehler Fehler C3173
-Versionskonflikt bei Merge von idl  
-  
- Dieser Fehler tritt auf, wenn eine Objektdatei eingebettetes Idl enthält, das mit einer früheren Version des Compilers generiert wurde. Der Compiler codiert eine Versionsnummer, um sicherzustellen, dass der Compiler verwendet, um den Inhalt der Idl zu generieren, der in der OBJ-Dateien eingebettet ist auch der Compiler zum Zusammenführen der eingebetteten IDL-Datei verwendet wird.  
-  
- Die Visual C++-Installation zu aktualisieren, sodass alle Tools über die letzte veröffentlichte Version sind.
+# <a name="compiler-error-c3173"></a>Compilerfehler C3173
+
+Versionskonflikt beim Zusammenführen von idl
+
+Dieser Fehler tritt auf, wenn eine Objektdatei eingebettetes Idl enthält, das mit einer früheren Version des Compilers generiert wurde. Der Compiler codiert eine Versionsnummer an, um sicherzustellen, dass der Compiler verwendet, um die Idl-Inhalt zu generieren, der in der OBJ-Dateien eingebettet ist auch der Compiler zum Zusammenführen der eingebetteten IDL-Datei verwendet wird.
+
+Die Visual C++-Installation zu aktualisieren, sodass alle Tools aus der aktuellen Version sind.

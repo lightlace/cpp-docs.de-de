@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4505 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4505 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4792be35ced122829410b284fb0ac15a5e15fa94
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6a89a6bd11b3d63f23f65ccc1bfbe16c49c13f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292200"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054778"
 ---
 # <a name="compiler-warning-level-4-c4505"></a>Compilerwarnung (Stufe 4) C4505
-'Funktion': nicht referenzierte lokaler Funktion wurde entfernt  
-  
- Die angegebene Funktion ist lokal und nicht im Text des Moduls verwiesen wird. aus diesem Grund ist die Funktion totem Code.  
-  
- Der Compiler Code für diese Funktion nicht generieren.
+
+"Function": Nichtreferenzierte lokaler Funktion wurde entfernt
+
+Die angegebene Funktion ist lokal und nicht im Text der das Modul verwiesen wird. aus diesem Grund ist die Funktion totem Code.
+
+Der Compiler Code für diese Funktion nicht generiert werden.

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c21ce766ed809a93ccf617ab1f76c438ac5be829
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a4a62f6e569e123b9612e922e2d7c70787371afc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545818"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136178"
 ---
 # <a name="context-class"></a>Context-Klasse
 Stellt eine Abstraktion für einen Ausführungskontext dar.  
@@ -210,8 +210,8 @@ void operator delete(void* _PObject);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_PObject`  
- Ein Zeiger auf das Objekt, das gelöscht werden.  
+*_PObject*<br/>
+Ein Zeiger auf das Objekt, das gelöscht werden.  
   
 ##  <a name="oversubscribe"></a> Überzeichnen 
 
@@ -222,8 +222,8 @@ static void __cdecl Oversubscribe(bool _BeginOversubscription);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_BeginOversubscription`  
- Wenn `true`, ein Hinweis, dass ein weiterer virtueller Prozessor für die Dauer der Überzeichnung hinzugefügt werden soll. Wenn `false`, ein Hinweis, dass die Überzeichnung beendet und der zuvor hinzugefügte virtuelle Prozessor entfernt werden soll.  
+*_BeginOversubscription*<br/>
+Wenn `true`, ein Hinweis, dass ein weiterer virtueller Prozessor für die Dauer der Überzeichnung hinzugefügt werden soll. Wenn `false`, ein Hinweis, dass die Überzeichnung beendet und der zuvor hinzugefügte virtuelle Prozessor entfernt werden soll.  
   
 ##  <a name="schedulegroupid"></a> ScheduleGroupId 
 

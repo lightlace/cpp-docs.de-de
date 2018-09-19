@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4295 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4295 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 1/09/2018
 ms.technology:
@@ -16,24 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 815a669bc359121b13b1d636009cad81dc332304
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36c6ac4d8c3e2899b744d1c456ae3079ec031698
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296301"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053575"
 ---
 # <a name="compiler-warning-level-4-c4295"></a>Compilerwarnung (Stufe 4) C4295
-  
-> "*Array*': Array ist zu klein, um ein abschließendes Nullzeichen enthalten.  
-  
-Ein Array wurde initialisiert, aber das letzte Zeichen im Array ist nicht Null; Zugreifen auf das Array als Zeichenfolge kann zu unerwarteten Ergebnissen führen.  
-  
-## <a name="example"></a>Beispiel  
-  
-Im folgenden Beispiel wird C4295 generiert. Um dieses Problem zu beheben, konnten Sie deklarieren die Arraygröße größer, zum Speichern ein abschließendes Nullzeichen aus der Zeichenfolge Initialisierer, oder Sie können eine Initialisiererliste Array verwenden, um die beabsichtigte löschen, die sich dies ein Array von `char`, keine Null-terminierte Zeichenfolge.  
-  
-```C  
+
+> "*Array*": Array ist zu klein, um ein abschließendes Nullzeichen einzuschließen
+
+Das letzte Zeichen im Array wird es sich nicht um ein NULL-Wert, sondern ein Array initialisiert wurde. Zugreifen auf das Array als eine Zeichenfolge kann zu unerwarteten Ergebnissen führen.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird C4295 generiert. Um dieses Problem zu beheben, Sie deklarieren die Array-Größe größer ist, zum Speichern ein abschließendes Nullzeichen aus der Initialisierer-Zeichenfolge, oder Sie können eine Initialisiererliste Array verwenden, um die beabsichtigte löschen, die sich dies ein Array von `char`, keine Null-terminierte Zeichenfolge.
+
+```C
 // C4295.c
 // compile with: /W4
 

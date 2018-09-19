@@ -1,5 +1,5 @@
 ---
-title: RECT-Structure1 | Microsoft Docs
+title: RECT-Struktur 1 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b61c794b8fa383eeea62459a5a83948ef2efe10
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e71459a1c22b9295c5c88ce29da9e494660fa26
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372592"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046302"
 ---
-# <a name="rect-structure1"></a>RECT-Structure1
+# <a name="rect-structure1"></a>RECT-Struktur 1
 Die `RECT`-Struktur definiert die Koordinaten der oberen linken und der unteren rechten Ecke eines Rechtecks.  
   
 ## <a name="syntax"></a>Syntax  
@@ -40,17 +40,17 @@ typedef struct tagRECT {
 ```  
   
 ## <a name="members"></a>Member  
- `left`  
- Gibt die X-Koordinate der oberen linken Ecke eines Rechtecks an.  
+`left`<br/>
+Gibt die X-Koordinate der oberen linken Ecke eines Rechtecks an.  
   
- `top`  
- Gibt die Y-Koordinate der oberen linken Ecke eines Rechtecks an.  
+`top`<br/>
+Gibt die Y-Koordinate der oberen linken Ecke eines Rechtecks an.  
   
- `right`  
- Gibt die X-Koordinate der unteren rechten Ecke eines Rechtecks an.  
+`right`<br/>
+Gibt die X-Koordinate der unteren rechten Ecke eines Rechtecks an.  
   
- `bottom`  
- Gibt die Y-Koordinate der unteren rechten Ecke eines Rechtecks an.  
+`bottom`<br/>
+Gibt die Y-Koordinate der unteren rechten Ecke eines Rechtecks an.  
   
 ## <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_Utilities#38](../../mfc/codesnippet/cpp/rect-structure1_1.cpp)]  

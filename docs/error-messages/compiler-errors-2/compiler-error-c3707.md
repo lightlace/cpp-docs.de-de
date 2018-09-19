@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3707 | Microsoft Docs
+title: Compilerfehler C3707 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7268f584d9f269b4f2f15b837379ec12ab0185d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d18d4a82d06018cdba6147ba6756b1718648847a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273724"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052782"
 ---
 # <a name="compiler-error-c3707"></a>Compilerfehler C3707
-'Funktion': Dispinterface-Methode muss eine Dispid haben  
-  
- Bei Verwendung einer `dispinterface` -Methode, müssen Sie sie Zuweisen einer `dispid`. Um diesen Fehler zu beheben, weisen eine `dispid` auf die `dispinterface` Methode, z. B. durch die auskommentierung der `id` Attribut in der Methode im folgenden Beispiel. Weitere Informationen finden Sie unter den Attributen [Dispinterface](../../windows/dispinterface.md) und [Id](../../windows/id.md).  
-  
- Im folgende Beispiel wird C3707 generiert:  
-  
-```  
-// C3707.cpp  
-#include <atlbase.h>  
-#include <atlcom.h>  
-#include <atlctl.h>  
-  
-[module(name="xx")];  
-[dispinterface]  
-__interface IEvents : IDispatch  
-{  
-   HRESULT event1([in] int i);   // C3707  
-   // try the following line instead  
-   // [id(1)] HRESULT event1([in] int i);  
-};  
-  
-int main() {  
-}  
+
+"Function": Dispinterface-Methode müssen eine Dispid
+
+Bei Verwendung einer `dispinterface` -Methode müssen Sie sie Zuweisen einer `dispid`. Um diesen Fehler zu beheben, weisen eine `dispid` auf die `dispinterface` Methode, z. B. indem Sie die Kommentierung der `id` Attribut in der Methode im folgenden Beispiel. Weitere Informationen finden Sie auf die Attribute [Dispinterface](../../windows/dispinterface.md) und [Id](../../windows/id.md).
+
+Im folgende Beispiel wird die C3707 generiert:
+
+```
+// C3707.cpp
+#include <atlbase.h>
+#include <atlcom.h>
+#include <atlctl.h>
+
+[module(name="xx")];
+[dispinterface]
+__interface IEvents : IDispatch
+{
+   HRESULT event1([in] int i);   // C3707
+   // try the following line instead
+   // [id(1)] HRESULT event1([in] int i);
+};
+
+int main() {
+}
 ```

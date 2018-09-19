@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e591ad979d6c995fd5559b22a826766b02d50dd
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 177fdb46971a0e932a41881cb9e6a08a800a60bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405869"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076293"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -34,7 +34,7 @@ Verwenden Sie `__declspec(align(#))`, um die Ausrichtung von benutzerdefinierten
 
 ## <a name="syntax"></a>Syntax
 
-> **__declspec (align (** *#* **))** *Deklarator*  
+> **__declspec (align (** *#* **))** *Deklarator*
 
 ## <a name="remarks"></a>Hinweise
 
@@ -251,6 +251,7 @@ Der Offset eines Objekts basiert auf dem Offset des vorherigen Objekts und der a
 **Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
-[__declspec](../cpp/declspec.md)  
-[Übersicht über ARM-ABI-Konventionen](../build/overview-of-arm-abi-conventions.md)  
-[Übersicht über x64-Aufrufkonventionen](../build/overview-of-x64-calling-conventions.md)  
+
+[__declspec](../cpp/declspec.md)<br/>
+[Übersicht über ARM-ABI-Konventionen](../build/overview-of-arm-abi-conventions.md)<br/>
+[Übersicht über x64-Aufrufkonventionen](../build/overview-of-x64-calling-conventions.md)

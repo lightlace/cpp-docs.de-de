@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b8b481c917292c672711c308ac39c052ed4ea1d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: baab04880c19cac1e0c291f2b4d8a274dea1c21b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752120"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044937"
 ---
 # <a name="win32threadtraits-class"></a>Win32ThreadTraits-Klasse
 
@@ -80,22 +80,22 @@ static HANDLE CreateThread(
 
 ### <a name="parameters"></a>Parameter
 
-*lpsa*  
+*lpsa*<br/>
 Die Sicherheitsattribute für den neuen Thread.
 
-*dwStackSize*  
+*dwStackSize*<br/>
 Die Stapelgröße für den neuen Thread.
 
-*pfnThreadProc*  
+*pfnThreadProc*<br/>
 Die Threadprozedur des neuen Threads.
 
-*pvParam*  
+*pvParam*<br/>
 Der Parameter an die Threadprozedur übergeben werden.
 
-*"dwCreationFlags"*  
+*"dwCreationFlags"*<br/>
 Die Erstellung flags ("0" oder "CREATE_SUSPENDED").
 
-*pdwThreadId*  
+*pdwThreadId*<br/>
 [out] Adresse der DWORD-Variable, die bei Erfolg die Thread-ID des neu erstellten Threads empfängt.
 
 ### <a name="return-value"></a>Rückgabewert

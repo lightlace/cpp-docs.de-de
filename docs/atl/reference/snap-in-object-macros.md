@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65995f24e58b0bdce4a15adc72de0b60ded644dd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d37c8c9d319495c3247bf98d9ed3c8f58063ae56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765540"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050553"
 ---
 # <a name="snap-in-object-macros"></a>Snap-in-Objektmakros
 
@@ -57,7 +57,7 @@ BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP(classname)
 
 ### <a name="parameters"></a>Parameter
 
-*classname*  
+*classname*<br/>
 [in] Der Name der Datenklasse-Snap-in-Erweiterung.
 
 ### <a name="remarks"></a>Hinweise
@@ -78,7 +78,7 @@ BEGIN_SNAPINTOOLBARID_MAP(_class)
 
 ### <a name="parameters"></a>Parameter
 
-*_Klasse*  
+*_Klasse*<br/>
 [in] Gibt die Objektklasse-Snap-In an.
 
 ### <a name="example"></a>Beispiel
@@ -111,7 +111,7 @@ END_SNAPINTOOLBARID_MAP( _class )
 
 ### <a name="parameters"></a>Parameter
 
-*_Klasse*  
+*_Klasse*<br/>
 [in] Gibt die Objektklasse-Snap-In an.
 
 ### <a name="example"></a>Beispiel
@@ -128,7 +128,7 @@ EXTENSION_SNAPIN_DATACLASS(dataClass )
 
 ### <a name="parameters"></a>Parameter
 
-*Datenklasse*  
+*Datenklasse*<br/>
 [in] Die Datenklasse der Snap-In-Erweiterung.
 
 ### <a name="remarks"></a>Hinweise
@@ -149,7 +149,7 @@ EXTENSION_SNAPIN_NODEINFO_ENTRY( dataClass )
 
 ### <a name="parameters"></a>Parameter
 
-*Datenklasse*  
+*Datenklasse*<br/>
 [in] Die Datenklasse der Snap-In-Erweiterung.
 
 ### <a name="remarks"></a>Hinweise
@@ -170,7 +170,7 @@ SNAPINMENUID( id )
 
 ### <a name="parameters"></a>Parameter
 
-*ID*  
+*ID*<br/>
 [in] Identifiziert das Kontextmenü des Snap-in-Objekts.
 
 ##  <a name="snapintoolbarid_entry"></a>  SNAPINTOOLBARID_ENTRY
@@ -183,7 +183,7 @@ SNAPINTOOLBARID_ENTRY( id )
 
 ### <a name="parameters"></a>Parameter
 
-*ID*  
+*ID*<br/>
 [in] Identifiziert das Symbolleisten-Steuerelement.
 
 ### <a name="remarks"></a>Hinweise

@@ -1,5 +1,5 @@
 ---
-title: Linkertoolfehler Lnk2033 | Microsoft Docs
+title: Linkertoolfehler Lnk2033 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d03e8d2e0502d6e3664bff05c75fffb4f4ebd5da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6c547b4d35e2e7fe057cdd67f0dad47f58d000c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301969"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039990"
 ---
 # <a name="linker-tools-error-lnk2033"></a>Linkertoolfehler LNK2033
-nicht aufgelöste Typeref-Token (Token) für "Type"  
-  
- Ein Typ aufweisen keine Definition in MSIL-Metadaten.  
-  
- LNK2033 kann auftreten, bei der Kompilierung mit **/CLR: safe** und bei denen es nur eine Vorwärtsdeklaration für einen Typ in einem MSIL-Modul, in dem der Typ wird im MSIL-Modul verwiesen wird.  
-  
- Der Typ muss definiert werden, unter **/CLR: safe**.  
-  
- Weitere Informationen finden Sie unter [/clr (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird LNK2033 generiert.  
-  
-```  
-// LNK2033.cpp  
-// compile with: /clr:safe  
-// LNK2033 expected  
-ref class A;  
-ref class B {};  
-  
-int main() {  
-   A ^ aa = nullptr;  
-   B ^ bb = nullptr;   // OK  
-};  
+
+nicht aufgelöstes Typeref-Token (Token) für 'Typ'
+
+Ein Typ keine Definition in den MSIL-Metadaten.
+
+LNK2033 kann auftreten, bei der Kompilierung mit **/CLR: safe** und es ist nur eine Vorwärtsdeklaration für einen Typ in einer MSIL-Modul, in denen der Typ in den MSIL-Modul verwiesen wird.
+
+Der Typ muss definiert werden, unter **/CLR: safe**.
+
+Weitere Informationen finden Sie unter [/clr (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die LNK2033 generiert.
+
+```
+// LNK2033.cpp
+// compile with: /clr:safe
+// LNK2033 expected
+ref class A;
+ref class B {};
+
+int main() {
+   A ^ aa = nullptr;
+   B ^ bb = nullptr;   // OK
+};
 ```

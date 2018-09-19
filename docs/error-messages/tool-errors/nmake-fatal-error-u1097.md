@@ -1,5 +1,5 @@
 ---
-title: 'NMAKE: Schwerwiegender Fehler U1097 | Microsoft Docs'
+title: 'NMAKE: Schwerwiegender Fehler U1097 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0abfecf605dfba95643e455d7f9523ca046b3002
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 352964f92c6475aa860dc8b0a73cd9e95a8b56ed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319233"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043832"
 ---
 # <a name="nmake-fatal-error-u1097"></a>NMAKE: Schwerwiegender Fehler U1097
-Die Syntax für Dateinamenteile erfordert abhängige  
-  
- Die aktuelle Abhängigkeit muss eine explizite abhängige oder eine implizite abhängige nicht. Die Syntax für Dateinamenteile, den Prozentsatz verwendet (`%`) Spezifizierer darstellt, der im aktuellen Ziel des ersten abhängigen Komponenten.
+
+Syntax für Dateinamenteile benötigt abhängiges Element
+
+Die aktuelle Abhängigkeit muss entweder eine explizite abhängige oder eine implizite abhängige nicht. Die Syntax für Dateinamenteile, den Prozentsatz verwendet (`%`) Spezifizierer repräsentiert die Komponenten des ersten abhängigen Elements des aktuellen Ziels.

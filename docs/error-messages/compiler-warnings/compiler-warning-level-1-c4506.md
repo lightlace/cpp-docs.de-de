@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4506 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4506 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12a8778d8c908e05d0679b0e6c7ecaa1ad830cf5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a454ba35b0ba551cb5eadcb5efe399210b343b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278697"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078828"
 ---
 # <a name="compiler-warning-level-1-c4506"></a>Compilerwarnung (Stufe 1) C4506
-keine Definition für 'Funktion' Inline-Funktion  
-  
- Die angegebene Funktion wurde deklariert und markiert für inlining jedoch nicht definiert wurde.  
-  
- Der Compiler hat nicht Inline die Funktion.  
-  
- Stellen Sie sicher, dass externe Funktionen inline deklariert werden, mit dem `extern` Schlüsselwort.
+
+keine Definition für Inlinefunktion 'Funktion'
+
+Die angegebene Funktion wurde deklariert und markiert, für das inlining aber nicht definiert.
+
+Der Compiler nahm nicht Inline-Funktion.
+
+Stellen Sie sicher, dass externe Funktionen zu setzende deklariert sind, mit der `extern` Schlüsselwort.

@@ -19,23 +19,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e540b68b820234ee6d30295b40c7e0f4cb7c806d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 21e6511a66129cb172ff10fedfa563bc4d663d19
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338589"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078516"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>Transaktion: Auswirkungen von Transaktionen auf Aktualisierungen (ODBC)
+
 Updates für die [Datenquelle](../../data/odbc/data-source-odbc.md) verwaltet werden, während der Transaktionen, durch die Verwendung von Bearbeitungspuffer (die gleiche Methode außerhalb von Transaktionen verwendet). Die Felddatenmembern eines Recordset-Objekts dienen zusammen als Bearbeitungspuffer mit den aktuellen Datensatz, der das Recordset vorübergehend während der Sicherung ein `AddNew` oder `Edit`. Während einer `Delete` Vorgang, den aktuellen Datensatz werden nicht innerhalb einer Transaktion gesichert. Weitere Informationen zu den bearbeiten und wie Updates für den aktuellen Datensatz speichern, finden Sie unter [Recordset: wie Recordsets Update Datensätzen (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
   
 > [!NOTE]
 >  Wenn Sie die massenzeilenabruf implementiert haben, Sie nicht aufrufen, `AddNew`, `Edit`, oder `Delete`. Sie müssen stattdessen eigene Funktionen zum Durchführen von Updates mit der Datenquelle schreiben. Weitere Informationen zu gesammelten Abrufens von Zeilen, finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Während einer Transaktion `AddNew`, `Edit`, und `Delete` Vorgänge ein Commit oder Rollback werden können. Die Auswirkungen der `CommitTrans` und `Rollback` kann dazu führen, dass den aktuellen Datensatz im Bearbeitungspuffer nicht wiederhergestellt werden. Um sicherzustellen, dass der aktuelle Datensatz ordnungsgemäß wiederhergestellt wird, ist es wichtig zu verstehen, wie die `CommitTrans` und `Rollback` Memberfunktionen der `CDatabase` arbeiten mit den Funktionen der Aktualisierung der `CRecordset`.  
+Während einer Transaktion `AddNew`, `Edit`, und `Delete` Vorgänge ein Commit oder Rollback werden können. Die Auswirkungen der `CommitTrans` und `Rollback` kann dazu führen, dass den aktuellen Datensatz im Bearbeitungspuffer nicht wiederhergestellt werden. Um sicherzustellen, dass der aktuelle Datensatz ordnungsgemäß wiederhergestellt wird, ist es wichtig zu verstehen, wie die `CommitTrans` und `Rollback` Memberfunktionen der `CDatabase` arbeiten mit den Funktionen der Aktualisierung der `CRecordset`.  
   
 ##  <a name="_core_how_committrans_affects_updates"></a> Wie wirkt sich auf CommitTrans Updates  
- Die folgende Tabelle erläutert die Auswirkungen der `CommitTrans` Transaktionen.  
+
+Die folgende Tabelle erläutert die Auswirkungen der `CommitTrans` Transaktionen.  
   
 ### <a name="how-committrans-affects-updates"></a>Wie wirkt sich auf CommitTrans Updates  
   
@@ -48,7 +50,8 @@ Updates für die [Datenquelle](../../data/odbc/data-source-odbc.md) verwaltet we
 |`Delete` Klicken Sie dann `CommitTrans`|Datensätze, die aus der Datenquelle gelöscht werden.|  
   
 ##  <a name="_core_how_rollback_affects_updates"></a> Auswirkungen von Transaktionen durch Rollback  
- Die folgende Tabelle erläutert die Auswirkungen der `Rollback` Transaktionen.  
+
+Die folgende Tabelle erläutert die Auswirkungen der `Rollback` Transaktionen.  
   
 ### <a name="how-rollback-affects-transactions"></a>Auswirkungen von Transaktionen durch Rollback  
   
@@ -61,8 +64,9 @@ Updates für die [Datenquelle](../../data/odbc/data-source-odbc.md) verwaltet we
 |`Delete` Klicken Sie dann `Rollback`|Der Inhalt des aktuellen Datensatzes wird gelöscht.|Rufen Sie `Requery` den Inhalt des aktuellen Datensatzes aus der Datenquelle wiederhergestellt.|Löschen von Daten aus der Datenquelle wird umgekehrt.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Transaktion (ODBC)](../../data/odbc/transaction-odbc.md)   
- [Transaktion (ODBC)](../../data/odbc/transaction-odbc.md)   
- [Transaktion: Ausführen einer Transaktion in einem Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)   
- [CDatabase-Klasse](../../mfc/reference/cdatabase-class.md)   
- [CRecordset-Klasse](../../mfc/reference/crecordset-class.md)
+
+[Transaktion (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
+[Transaktion (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
+[Transaktion: Ausführen einer Transaktion in einem Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)<br/>
+[CDatabase-Klasse](../../mfc/reference/cdatabase-class.md)<br/>
+[CRecordset-Klasse](../../mfc/reference/crecordset-class.md)

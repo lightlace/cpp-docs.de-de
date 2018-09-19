@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2630 generiert | Microsoft Docs
+title: Compilerfehler C2630 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a77a658f724f701e67968adb7a1310922b9476d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2bcde84e241590b67e3877e3ce415f4cc00e757a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228682"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085939"
 ---
-# <a name="compiler-error-c2630"></a>Compiler-Fehler C2630 generiert
-'Symbol' gefunden, was sollte eine durch Trennzeichen getrennte Liste sein.  
-  
- Das Symbol wird angezeigt, in einem Kontext, der ein Komma erforderlich sind.  
-  
- Im folgende Beispiel wird C2630 generiert:  
-  
-```  
-// C2630.cpp  
-// compile with: /c  
-struct D {  
-   D(int);  
-};  
-  
-struct E {  
-   E(int);  
-};  
-  
-class C : public D, public E {  
-   C();  
-};  
-  
-C::C() : D(0) ; E(0) { }   // C2630  
-C::C() : D(0), E(0) {}   // OK  
+# <a name="compiler-error-c2630"></a>Compilerfehler C2630
+
+'Symbol' finden Sie in Was sollte eine durch Trennzeichen getrennte Liste sein.
+
+Das Symbol wird angezeigt, in einem Kontext, der ein Komma ist erforderlich.
+
+Im folgende Beispiel wird die C2630 generiert:
+
+```
+// C2630.cpp
+// compile with: /c
+struct D {
+   D(int);
+};
+
+struct E {
+   E(int);
+};
+
+class C : public D, public E {
+   C();
+};
+
+C::C() : D(0) ; E(0) { }   // C2630
+C::C() : D(0), E(0) {}   // OK
 ```

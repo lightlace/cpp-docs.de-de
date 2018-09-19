@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2431 | Microsoft Docs
+title: Compilerfehler C2431 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a3f94163e02b953a4739b56a04f92f2499d27f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 944bead5439abf686fd18e436664e3c1cf7bccb5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197532"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049955"
 ---
 # <a name="compiler-error-c2431"></a>Compilerfehler C2431
-Ungültige Indexregister in 'Bezeichner'  
-  
- ESP-Register wird skaliert oder als Index und Basisregister verwendet. Die SIB Codierung für die X86, Prozessor entweder nicht zulässt.  
-  
- Im folgende Beispiel wird C2431 generiert:  
-  
-```  
-// C2431.cpp  
-// processor: x86  
-int main() {  
-   _asm mov ax, [ESI + 2*ESP]   // C2431  
-   _asm mov ax, [esp + esp]   // C2431  
-}  
+
+Unzulässiges Indexregister in "Bezeichner"
+
+ESP-Register wird skaliert oder als sowohl Index-als auch Basisregister verwendet. Die LEICHGEORDNETES Codierung für die X86, die Prozessor entweder nicht zulässig ist.
+
+Im folgende Beispiel wird die C2431 generiert:
+
+```
+// C2431.cpp
+// processor: x86
+int main() {
+   _asm mov ax, [ESI + 2*ESP]   // C2431
+   _asm mov ax, [esp + esp]   // C2431
+}
 ```

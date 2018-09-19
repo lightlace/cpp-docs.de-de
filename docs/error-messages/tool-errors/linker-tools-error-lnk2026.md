@@ -1,5 +1,5 @@
 ---
-title: Linkertoolfehler Lnk2026 | Microsoft Docs
+title: Linkertoolfehler Lnk2026 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8b4a296379ab6e4ac8ad3b70668508303e2779d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b76c5533e79c75d06594d42464ca32104eb065ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299577"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046224"
 ---
 # <a name="linker-tools-error-lnk2026"></a>Linkertoolfehler LNK2026
-Unsicheres Modul für SAFESEH-Bild  
-  
- [/ SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md) angegeben wurde, aber ein Modul wurde nicht mit der sicheren Ausnahmebehandlung kompatibel. Wenn Sie dieses Modul mit verwenden möchten **/SAFESEH**, müssen Sie das Modul neu kompilieren.
+
+Unsicheres Modul für SAFESEH-image
+
+[/ SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md) angegeben wurde, ein Modul war jedoch nicht mit dem Feature für sichere Ausnahmebehandlung kompatibel. Wenn Sie dieses Modul mit verwenden möchten **/SAFESEH**, müssen Sie das Modul neu kompilieren.

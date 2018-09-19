@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aab6e168970ff740f68d1338a05d51c691fd116d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2cf80d51cdf45b6298255a252124ace9568953b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759986"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082517"
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl-Klasse
 
@@ -43,22 +43,22 @@ Diese Klasse stellt die Implementierung für eine COM-Enumerator-Schnittstelle, 
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy>  
+    const IID* piid, class T, class Copy>
 class ATL_NO_VTABLE CComEnumImpl : public Base
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*Basis*  
+*Basis*<br/>
 Eine COM-Enumerator-Schnittstelle. Finden Sie unter [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) verdeutlicht.
 
-*piid*  
+*piid*<br/>
 Ein Zeiger auf die Schnittstellen-ID der Enumeratorschnittstelle.
 
-*T*  
+*T*<br/>
 Der Typ des Elements, die von der Enumeratorschnittstelle verfügbar gemacht werden.
 
-*Kopieren*  
+*Kopieren*<br/>
 Eine homogene [kopieren Richtlinienklasse](../../atl/atl-copy-policy-classes.md).
 
 ## <a name="members"></a>Member
@@ -143,16 +143,16 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Parameter
 
-*begin*  
+*begin*<br/>
 Ein Zeiger auf das erste Element des Arrays mit den Elementen aufgelistet werden sollen.
 
-*end*  
+*end*<br/>
 Ein Zeiger auf die Position direkt hinter dem letzten Element des Arrays mit den Elementen aufgelistet werden sollen.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Die `IUnknown` Zeiger, der ein Objekt, das während der Lebensdauer des Enumerators beibehalten werden muss. Übergeben Sie NULL, wenn kein entsprechendes Objekt vorhanden ist.
 
-*flags*  
+*flags*<br/>
 Flags, die unabhängig davon, ob der Enumerator des Besitzes des Arrays übernehmen sollte, oder erstellen Sie eine Kopie des Zertifikats angeben. Mögliche Werte werden nachfolgend beschrieben.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -167,13 +167,13 @@ Wenn Sie Verweise auf Elemente in einem Array in ein anderes Objekt gespeicherte
 
 Die *Flags* Parameter können Sie angeben, wie der Enumerator für Elemente des Arrays, die an sie übergebenen behandeln soll. *Flags* kann einen der Werte aus annehmen der `CComEnumFlags` Enumeration, die unten gezeigten:
 
-```  
-enum CComEnumFlags  
-   {  
-   AtlFlagNoCopy = 0,  
-   AtlFlagTakeOwnership = 2, // BitOwn  
-   AtlFlagCopy = 3           // BitOwn | BitCopy  
-   };  
+```
+enum CComEnumFlags
+   {
+   AtlFlagNoCopy = 0,
+   AtlFlagTakeOwnership = 2, // BitOwn
+   AtlFlagCopy = 3           // BitOwn | BitCopy
+   };
 ```
 
 `AtlFlagNoCopy` bedeutet, dass die Lebensdauer des Arrays nicht vom Enumerator gesteuert wird. In diesem Fall entweder das Array werden statische oder das Objekt, das identifizierte *pUnk* ist zuständig für das Array freigeben, wenn es nicht mehr benötigt wird.
@@ -195,7 +195,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 
 ### <a name="parameters"></a>Parameter
 
-*ppEnum*  
+*ppEnum*<br/>
 [out] Die Enumeratorschnittstelle für ein neu erstelltes Objekt, das von der aktuelle Enumerator geklont werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -256,13 +256,13 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 
 ### <a name="parameters"></a>Parameter
 
-*"celt"*  
+*"celt"*<br/>
 [in] Die Anzahl der angeforderten Elemente.
 
-*rgelt*  
+*rgelt*<br/>
 [out] Das Array mit Elementen gefüllt werden soll.
 
-*pceltFetched*  
+*pceltFetched*<br/>
 [out] Die Anzahl der Elemente im tatsächlich zurückgegebenen *Rgelt*. Dies liegt möglicherweise weniger als *"celt"* Wenn weniger als *"celt"* Elemente bleibt in der Liste.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -291,7 +291,7 @@ STDMETHOD(Skip)(ULONG celt);
 
 ### <a name="parameters"></a>Parameter
 
-*"celt"*  
+*"celt"*<br/>
 [in] Die Anzahl der zu überspringenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -304,6 +304,6 @@ Gibt E_INVALIDARG zurück, wenn *"celt"* 0 (null) ist, gibt S_FALSE zurück, wen
 
 ## <a name="see-also"></a>Siehe auch
 
-[IEnumOnSTLImpl-Klasse](../../atl/reference/ienumonstlimpl-class.md)   
-[CComEnum-Klasse](../../atl/reference/ccomenum-class.md)   
+[IEnumOnSTLImpl-Klasse](../../atl/reference/ienumonstlimpl-class.md)<br/>
+[CComEnum-Klasse](../../atl/reference/ccomenum-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

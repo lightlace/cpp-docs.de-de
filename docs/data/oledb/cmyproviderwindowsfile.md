@@ -18,14 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0f18f5a524cbfbfa7f17dfd3964c68329bc8a042
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 6f3badc08da7bd11e65c244c42c91ad37a584ca5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338505"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087265"
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
+
 Der Assistent erstellt eine Klasse, um eine Zeile mit Daten enthalten. In diesem Fall heißt es `CMyProviderWindowsFile`. Der folgende code für `CMyProviderWindowsFile` Assistenten generiert wird, und listet alle Dateien in einem Verzeichnis mit dem `WIN32_FIND_DATA` Struktur. `CMyProviderWindowsFile` erbt von der `WIN32_FIND_DATA` Struktur:  
   
 ```cpp
@@ -46,9 +47,9 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- `CMyProviderWindowsFile` wird aufgerufen, die [Benutzerdatensatz-Klasse](../../data/oledb/user-record.md) , da es enthält auch eine Zuordnung, die Beschreibung der Spalten im Rowset des Anbieters. Die Anbieter-Spalte-Zuordnung enthält einen Eintrag für jedes Feld in das Rowset mit die-Makros. Die Makros Geben Sie Spaltennamen, ordinal, und auf einen Struktureintrag der Offset. Die Einträge für den Anbieter im obigen Code enthalten, die Offsets in die `WIN32_FIND_DATA` Struktur. Wenn der Consumer ruft `IRowset::GetData`, Daten in einem zusammenhängenden Puffer übertragen werden. Anstatt zu sorgen, dass Sie die Zeigerarithmetik auszuführen, können mit die Zuordnung geben Sie einen Datenmember.  
+`CMyProviderWindowsFile` wird aufgerufen, die [Benutzerdatensatz-Klasse](../../data/oledb/user-record.md) , da es enthält auch eine Zuordnung, die Beschreibung der Spalten im Rowset des Anbieters. Die Anbieter-Spalte-Zuordnung enthält einen Eintrag für jedes Feld in das Rowset mit die-Makros. Die Makros Geben Sie Spaltennamen, ordinal, und auf einen Struktureintrag der Offset. Die Einträge für den Anbieter im obigen Code enthalten, die Offsets in die `WIN32_FIND_DATA` Struktur. Wenn der Consumer ruft `IRowset::GetData`, Daten in einem zusammenhängenden Puffer übertragen werden. Anstatt zu sorgen, dass Sie die Zeigerarithmetik auszuführen, können mit die Zuordnung geben Sie einen Datenmember.  
   
- Die `CMyProviderRowset` Klasse enthält auch die `Execute` Methode. `Execute` ist tatsächlich, durch die Daten aus der systemeigenen Quelle eingelesen. Der folgende Code zeigt die vom Assistenten generierte `Execute` Methode. Die Funktion verwendet die Win32 `FindFirstFile` und `FindNextFile` APIs zum Abrufen von Informationen zu den Dateien im Verzeichnis, und fügen Sie sie in Instanzen von der `CMyProviderWindowsFile` Klasse.  
+Die `CMyProviderRowset` Klasse enthält auch die `Execute` Methode. `Execute` ist tatsächlich, durch die Daten aus der systemeigenen Quelle eingelesen. Der folgende Code zeigt die vom Assistenten generierte `Execute` Methode. Die Funktion verwendet die Win32 `FindFirstFile` und `FindNextFile` APIs zum Abrufen von Informationen zu den Dateien im Verzeichnis, und fügen Sie sie in Instanzen von der `CMyProviderWindowsFile` Klasse.  
   
 ```cpp
 /////////////////////////////////////////////////////////////////////  
@@ -81,9 +82,10 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
 }  
 ```  
   
- Das zu durchsuchende Verzeichnis wird durch dargestellt `m_strCommandText`; enthält den Text, der durch dargestellt die `ICommandText` -Schnittstelle in das Command-Objekt. Wenn kein Verzeichnis angegeben ist, wird das aktuelle Verzeichnis verwendet.  
+Das zu durchsuchende Verzeichnis wird durch dargestellt `m_strCommandText`; enthält den Text, der durch dargestellt die `ICommandText` -Schnittstelle in das Command-Objekt. Wenn kein Verzeichnis angegeben ist, wird das aktuelle Verzeichnis verwendet.  
   
- Die Methode erstellt einen Eintrag für jede Datei (entspricht einer Zeile) und platziert es in der `m_rgRowData` -Datenmember. Die `CRowsetImpl` -Klasse definiert die `m_rgRowData` -Datenmember. Die Daten in diesem Array stellt die gesamte Tabelle dar und werden in den Vorlagen verwendet.  
+Die Methode erstellt einen Eintrag für jede Datei (entspricht einer Zeile) und platziert es in der `m_rgRowData` -Datenmember. Die `CRowsetImpl` -Klasse definiert die `m_rgRowData` -Datenmember. Die Daten in diesem Array stellt die gesamte Tabelle dar und werden in den Vorlagen verwendet.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Vom Anbieter-Assistenten generierte Dateien](../../data/oledb/provider-wizard-generated-files.md)
+
+[Vom Anbieter-Assistenten generierte Dateien](../../data/oledb/provider-wizard-generated-files.md)

@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1013 | Microsoft Docs
+title: Schwerwiegender Fehler C1013 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00b5dae643ec20e9d7d8a8dcdf41d9debe7e6b7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33c10062cac83984fb1c68835780497b89c4cbc1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198637"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050510"
 ---
 # <a name="fatal-error-c1013"></a>Schwerwiegender Fehler C1013
-Compilerlimit : Zu viele geöffnete Klammern  
-  
- Ein Ausdruck enthält zu viele Ebenen von Klammern in einem einzelnen Ausdruck. Vereinfachen Sie den Ausdruck, oder unterteilen Sie ihn in mehrere Anweisungen.  
-  
- Vor Visual C++ 6.0 Service Pack 3 war die maximale Anzahl von geschachtelten Klammern in einem einzelnen Ausdruck gleich 59. Derzeit ist die maximale Anzahl von geschachtelten Klammern gleich 256.
+
+Compilerlimit : Zu viele geöffnete Klammern
+
+Ein Ausdruck enthält zu viele Ebenen von Klammern in einem einzelnen Ausdruck. Vereinfachen Sie den Ausdruck, oder unterteilen Sie ihn in mehrere Anweisungen.
+
+Vor Visual C++ 6.0 Service Pack 3 war die maximale Anzahl von geschachtelten Klammern in einem einzelnen Ausdruck gleich 59. Derzeit ist die maximale Anzahl von geschachtelten Klammern gleich 256.

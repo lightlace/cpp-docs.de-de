@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2147 | Microsoft Docs
+title: Compilerfehler C2147 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60047795428aad2da94b117882f351375fed4545
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 786d47e23986962575567b8afdc2eefd5aac5be6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167982"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082429"
 ---
 # <a name="compiler-error-c2147"></a>Compilerfehler C2147
-Syntaxfehler: 'Bezeichner' ist ein neues Schlüsselwort  
-  
- Ein Bezeichner wurde verwendet, die nun ein reserviertes Schlüsselwort in der Sprache.  
-  
- Im folgende Beispiel wird C2147 generiert:  
-  
-```  
-// C2147.cpp  
-// compile with: /clr  
-int main() {  
-   int gcnew = 0;   // C2147  
-   int i = 0;   // OK  
-}  
+
+Syntaxfehler: 'Bezeichner' ist ein neues Schlüsselwort
+
+Ein Bezeichner wurde verwendet, die nun ein reserviertes Schlüsselwort in der Sprache ist.
+
+Im folgende Beispiel wird die C2147 generiert:
+
+```
+// C2147.cpp
+// compile with: /clr
+int main() {
+   int gcnew = 0;   // C2147
+   int i = 0;   // OK
+}
 ```

@@ -24,14 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 34eb8cb8a6b839f8a4dcd8d699c7fcb4851d57f6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c94152a9322b64acafe91e1fb0eb34ab82aa2902
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572278"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081298"
 ---
 # <a name="ctable-class"></a>CTable-Klasse
+
 Bietet eine Möglichkeit, direkt auf ein einfaches Rowset (ohne Parameter) zuzugreifen.  
   
 ## <a name="syntax"></a>Syntax
@@ -44,14 +45,16 @@ class CTable :
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *TAccessor*  
- Ein Accessor-Klasse.  
+
+*TAccessor*<br/>
+Ein Accessor-Klasse.  
   
- *TRowset*  
- Eine Rowset-Klasse.  
+*TRowset*<br/>
+Eine Rowset-Klasse.  
 
 ## <a name="requirements"></a>Anforderungen  
- **Header:** atldbcli.h  
+
+**Header:** atldbcli.h  
   
 ## <a name="members"></a>Member  
   
@@ -62,9 +65,11 @@ class CTable :
 |[Öffnen](#open)|Öffnet die Tabelle.|  
   
 ## <a name="remarks"></a>Hinweise  
- Finden Sie unter [CCommand](../../data/oledb/ccommand-class.md) Informationen zum Ausführen eines Befehls in ein Rowset zugreifen.  
+
+Finden Sie unter [CCommand](../../data/oledb/ccommand-class.md) Informationen zum Ausführen eines Befehls in ein Rowset zugreifen.  
 
 ## <a name="open"></a> CTable:: Open
+
 Öffnet die Tabelle.  
   
 ### <a name="syntax"></a>Syntax  
@@ -87,30 +92,34 @@ HRESULT Open(const CSession& session,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Sitzung*  
- [in] Die Sitzung, für die in der Tabelle geöffnet wird.  
+
+*Sitzung*<br/>
+[in] Die Sitzung, für die in der Tabelle geöffnet wird.  
   
- *wszTableName*  
- [in] Der Name der Tabelle zu öffnen, werden als Unicode-Zeichenfolge übergeben.  
+*wszTableName*<br/>
+[in] Der Name der Tabelle zu öffnen, werden als Unicode-Zeichenfolge übergeben.  
   
- *szTableName*  
- [in] Der Name der Tabelle zu öffnen, werden als eine ANSI-Zeichenfolge übergeben.  
+*szTableName*<br/>
+[in] Der Name der Tabelle zu öffnen, werden als eine ANSI-Zeichenfolge übergeben.  
   
- *dbid*  
- [in] Die `DBID` der Tabelle zu öffnen.  
+*dbid*<br/>
+[in] Die `DBID` der Tabelle zu öffnen.  
   
- *pPropSet*  
- [in] Ein Zeiger auf ein Array von [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) Strukturen, die Eigenschaften und Werte festgelegt werden. Finden Sie unter [Eigenschaftensätze und Eigenschaftengruppen](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) in die *OLE DB-Programmierreferenz* in das Windows SDK. Der Standardwert NULL gibt an, keine Eigenschaften.  
+*pPropSet*<br/>
+[in] Ein Zeiger auf ein Array von [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) Strukturen, die Eigenschaften und Werte festgelegt werden. Finden Sie unter [Eigenschaftensätze und Eigenschaftengruppen](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) in die *OLE DB-Programmierreferenz* in das Windows SDK. Der Standardwert NULL gibt an, keine Eigenschaften.  
   
- *ulPropSets*  
- [in] Die Anzahl der [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) Strukturen zu übergeben, der *DBPROPSET* Argument.  
+*ulPropSets*<br/>
+[in] Die Anzahl der [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) Strukturen zu übergeben, der *DBPROPSET* Argument.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein standard-HRESULT.  
+
+Ein standard-HRESULT.  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+
+Weitere Informationen finden Sie unter [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)   
+
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)   

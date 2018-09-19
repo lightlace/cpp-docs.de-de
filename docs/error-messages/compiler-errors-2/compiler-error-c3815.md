@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3815 | Microsoft Docs
+title: Compilerfehler C3815 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2706a44b911587e61e996ee3f2456aad93925d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae6d1244374ce7f83a5c309dac99f4eb36906caf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268330"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086940"
 ---
 # <a name="compiler-error-c3815"></a>Compilerfehler C3815
-Rückgabetyp der Methode 'Get_accessor' auf Typ des letzten Parameters des Setter übereinstimmen  
-  
- Beim Deklarieren von Eigenschaften, die den Rückgabewert der `get_accessor` Methode muss den letzten Parameter in der Deklaration der Set-Accessor-Methode entsprechen.  
-  
- C3815 ist nur über die veraltete Compileroption erreichbar **/CLR: oldSyntax**.  
+
+Rückgabetyp der Methode 'Get_accessor' muss Typ des letzten Parameters des Setter übereinstimmen.
+
+Beim Deklarieren von Eigenschaften, die den Rückgabewert der `get_accessor` Methode muss den letzten Parameter in der Deklaration der Set-Accessor-Methode entsprechen.
+
+C3815 ist nur über die veraltete Compileroption erreichbar **oldSyntax**.

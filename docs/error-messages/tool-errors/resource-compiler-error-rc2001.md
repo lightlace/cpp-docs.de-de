@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcencompiler: Fehler RC2001 | Microsoft Docs'
+title: 'Ressourcencompiler: Fehler RC2001 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ef1fd5d29fc5784ee418a8456cacec37e943b73
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d75d0f906ba0d7be75ca5177bc1f58bccd226251
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322418"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039971"
 ---
 # <a name="resource-compiler-error-rc2001"></a>Ressourcencompiler: Fehler RC2001
-Zeilenvorschub in Konstante.  
-  
- Eine Zeichenfolgenkonstante wurde in einer zweiten Zeile ohne einen umgekehrten Schrägstrich fortgesetzt (**\\**) oder geschlossen, und öffnen doppelte Anführungszeichen (**"**).  
-  
- Führen Sie eine der folgenden Schritte aus, um eine Zeichenfolgenkonstante zu unterbrechen, die in zwei Zeilen in der Quelldatei ist:  
-  
--   Beenden Sie die erste Zeile mit dem Zeilenfortsetzungszeichen ein umgekehrter Schrägstrich.  
-  
--   Schließen Sie die Zeichenfolge in der ersten Zeile mit einem doppelten Anführungszeichen, und öffnen Sie die Zeichenfolge in der nächsten Zeile ein weiteres Anführungszeichen voranstellen.  
-  
- Es ist nicht ausreichend, um die erste Zeile mit \n die Escapesequenz für das Einbetten von ein neue Zeilenumbruchzeichen in eine Zeichenfolgenkonstante zu beenden.
+
+Zeilenvorschub in Konstante.
+
+Eine Zeichenfolgenkonstante wurde in einer zweiten Zeile ohne einen umgekehrten Schrägstrich fortgesetzt (**\\**) oder geschlossen, und öffnen die doppelten Anführungszeichen (**"**).
+
+Führen Sie eine der folgenden Schritte aus, um eine Zeichenfolgenkonstante, die in zwei Zeilen in der Quelldatei zu unterbrechen:
+
+- Das Ende der ersten Zeile mit dem Zeilenfortsetzungszeichen, einen umgekehrten Schrägstrich.
+
+- Schließen Sie die Zeichenfolge in der ersten Zeile mit einem doppelten Anführungszeichen, und öffnen Sie ein weiteres Anführungszeichen der Zeichenfolge in der nächsten Zeile.
+
+Es ist nicht ausreichend, um die erste Zeile \n, die-Escapesequenz für das Einbetten von einem Newline-Zeichen in eine Zeichenfolgenkonstante enden.

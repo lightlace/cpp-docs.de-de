@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2292 | Microsoft Docs
+title: Compilerfehler C2292 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be3d00af54709d697461a8424041769aed9956e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a075b198f615e9b7d98577910f0866b9096fed79
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171355"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041245"
 ---
 # <a name="compiler-error-c2292"></a>Compilerfehler C2292
-'Bezeichner': am besten case-Vererbung: 'Darstellung1' deklariert, aber 'Darstellung2' erforderlich  
-  
- Kompilieren des folgenden Codes mit [/vmb](../../build/reference/vmb-vmg-representation-method.md) ("günstigsten immer" Darstellung) bewirkt, dass Fehler C2292 verursacht.  
-  
-```  
-// C2292.cpp  
-// compile with: /vmb  
-class __single_inheritance X;  
-  
-struct A { };  
-struct B { };  
-struct X : A, B { };  // C2292, X uses multiple inheritance  
+
+'Bezeichner': best case-Vererbung: 'Darstellung1' deklariert, aber 'Darstellung2' erforderlich
+
+Der folgende Code mit [/vmb](../../build/reference/vmb-vmg-representation-method.md) ("Best-Case immer" Darstellung) bewirkt, dass Fehler C2292 verursacht.
+
+```
+// C2292.cpp
+// compile with: /vmb
+class __single_inheritance X;
+
+struct A { };
+struct B { };
+struct X : A, B { };  // C2292, X uses multiple inheritance
 ```

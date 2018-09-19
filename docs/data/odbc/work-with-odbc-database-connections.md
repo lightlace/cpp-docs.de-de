@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit ODBC-Datenbankverbindungen | Microsoft Docs
+title: Arbeiten mit ODBC-Datenbankverbindungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,21 +20,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 02c77f028cdd3e792aa03967f6716b3ce7ce27b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5ad69bda1a49d6ebf2878d8b6a7b5d50840e9d8d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33094142"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084821"
 ---
 # <a name="work-with-odbc-database-connections"></a>Arbeiten mit ODBC-Datenbankverbindungen
+
 In den folgenden Themen wird erläutert, wie ODBC-Datenquellen herstellen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Verwalten von ODBC-Datenbankverbindungen](../../data/odbc/data-source-managing-connections-odbc.md)  
+- [Verwalten von ODBC-Datenbankverbindungen](../../data/odbc/data-source-managing-connections-odbc.md)  
   
--   [Programmgesteuertes Konfigurieren einer ODBC-Datenquelle](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
+- [Programmgesteuertes Konfigurieren einer ODBC-Datenquelle](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+
+[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

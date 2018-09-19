@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2371 | Microsoft Docs
+title: Compilerfehler C2371 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a3b26ca1ea591a740481ff1fb7d0936ff315790
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e16cf4869b8f94408c09cc2f58e50d380c247091
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195502"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041297"
 ---
 # <a name="compiler-error-c2371"></a>Compilerfehler C2371
-„identifier“: Neudefinition; unterschiedliche Basistypen  
-  
- Der Bezeichner wurde bereits deklariert.  
-  
- Im folgenden Beispiel wird C2371 generiert:  
-  
-```  
-// C2371.cpp  
-int main() {  
-   int i;  
-   float i;   // C2371, redefinition  
-   float f;   // OK  
-}  
+
+„identifier“: Neudefinition; unterschiedliche Basistypen
+
+Der Bezeichner wurde bereits deklariert.
+
+Im folgenden Beispiel wird C2371 generiert:
+
+```
+// C2371.cpp
+int main() {
+   int i;
+   float i;   // C2371, redefinition
+   float f;   // OK
+}
 ```

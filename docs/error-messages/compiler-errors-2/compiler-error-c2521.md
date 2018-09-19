@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2521 | Microsoft Docs
+title: Compilerfehler C2521 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59f0f93876076fcdf0dfb1ded58dcbfc750858ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 24df0b75d45f9447b26cd8942ff6ca3e751c6a5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227750"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047342"
 ---
 # <a name="compiler-error-c2521"></a>Compilerfehler C2521
-Funktion akzeptiert keine Argumente  
-  
- Es wurde versucht, Argumente mit einem Destruktor oder Finalizer zu verwenden.  
-  
- Weitere Informationen finden Sie unter [Destruktoren und Finalizer](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C2521 generiert.  
-  
-```  
-// C2521.cpp  
-// compile with: /clr  
-ref class R {  
-protected:  
-   !R() {}  
-  
-public:  
-   void CleanUp() {  
-      this->!R(4);   // C2521  
-      this->!R();   // OK  
-   }  
-};  
-  
-int main() {  
-   R^ r = gcnew R();  
-   r->CleanUp();  
-}  
+
+Funktion akzeptiert keine Argumente
+
+Es wurde versucht, Argumente mit einem Destruktor oder Finalizer zu verwenden.
+
+Weitere Informationen finden Sie unter [Destruktoren und Finalizer](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C2521 generiert.
+
+```
+// C2521.cpp
+// compile with: /clr
+ref class R {
+protected:
+   !R() {}
+
+public:
+   void CleanUp() {
+      this->!R(4);   // C2521
+      this->!R();   // OK
+   }
+};
+
+int main() {
+   R^ r = gcnew R();
+   r->CleanUp();
+}
 ```

@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fad0d6f5823a205490038755f9de4eef10eae8
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 8327442588a5ae5fa15ba37cc53b4f748fa0837d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208509"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136308"
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Concurrency:: fast_math Namespace-Funktionen
 ||||  
@@ -95,8 +95,8 @@ inline float acos(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den arkuskosinuswert des Arguments zurück  
@@ -109,8 +109,8 @@ inline float acosf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den arkuskosinuswert des Arguments zurück  
@@ -123,8 +123,8 @@ inline float asin(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den arkussinuswert des Arguments zurück  
@@ -137,8 +137,8 @@ inline float asinf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den arkussinuswert des Arguments zurück  
@@ -151,8 +151,8 @@ inline float atan(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Arkustangens-Wert des Arguments zurück  
@@ -167,11 +167,11 @@ inline float atan2(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Y`  
- Gleitkommawert  
+*_Y*<br/>
+Gleitkommawert  
   
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Arkustangens-Wert von _Y/_X  
@@ -186,11 +186,11 @@ inline float atan2f(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Y`  
- Gleitkommawert  
+*_Y*<br/>
+Gleitkommawert  
   
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Arkustangens-Wert von _Y/_X  
@@ -203,8 +203,8 @@ inline float atanf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Arkustangens-Wert des Arguments zurück  
@@ -217,8 +217,8 @@ inline float ceil(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Höchstwert des Arguments  
@@ -231,8 +231,8 @@ inline float ceilf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Höchstwert des Arguments  
@@ -245,8 +245,8 @@ inline float cosf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Kosinuswert des Arguments zurück  
@@ -259,8 +259,8 @@ inline float coshf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den hyperbolischen Kosinus-Wert des Arguments zurück  
@@ -273,8 +273,8 @@ inline float cos(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Kosinuswert des Arguments zurück  
@@ -287,8 +287,8 @@ inline float cosh(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den hyperbolischen Kosinus-Wert des Arguments zurück  
@@ -301,8 +301,8 @@ inline float exp(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Basis-e-vom Argument exponential ist  
@@ -315,8 +315,8 @@ inline float exp2(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Basis-2-vom Argument exponential ist  
@@ -329,8 +329,8 @@ inline float exp2f(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Basis-2-vom Argument exponential ist  
@@ -343,8 +343,8 @@ inline float expf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Basis-e-vom Argument exponential ist  
@@ -357,8 +357,8 @@ inline float fabs(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Ganzzahliger Wert  
+*_X*<br/>
+Ganzzahliger Wert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den absoluten Wert des Arguments zurück.  
@@ -371,8 +371,8 @@ inline float fabsf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den absoluten Wert des Arguments zurück.  
@@ -385,8 +385,8 @@ inline float floor(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Tiefstwert des Arguments  
@@ -399,8 +399,8 @@ inline float floorf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Tiefstwert des Arguments  
@@ -415,11 +415,11 @@ inline float max(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Ganzzahliger Wert  
+*_X*<br/>
+Ganzzahliger Wert  
   
- `_Y`  
- Ganzzahliger Wert  
+*_Y*<br/>
+Ganzzahliger Wert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Rückgabe des höchsten numerischen Werts der Argumente  
@@ -434,11 +434,11 @@ inline float fmaxf(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
- `_Y`  
- Gleitkommawert  
+*_Y*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Rückgabe des höchsten numerischen Werts der Argumente  
@@ -453,11 +453,11 @@ inline float min(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Ganzzahliger Wert  
+*_X*<br/>
+Ganzzahliger Wert  
   
- `_Y`  
- Ganzzahliger Wert  
+*_Y*<br/>
+Ganzzahliger Wert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Rückgabe des niedrigsten numerischen Werts der Argumente  
@@ -472,11 +472,11 @@ inline float fminf(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
- `_Y`  
- Gleitkommawert  
+*_Y*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Rückgabe des niedrigsten numerischen Werts der Argumente  
@@ -491,11 +491,11 @@ inline float fmod(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
- `_Y`  
- Gleitkommawert  
+*_Y*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Gleitkommarest von _X/_Y  
@@ -510,11 +510,11 @@ inline float fmodf(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
- `_Y`  
- Gleitkommawert  
+*_Y*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Gleitkommarest von _X/_Y  
@@ -529,11 +529,11 @@ inline float frexp(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
- `_Exp`  
- Gibt den ganzzahligen Exponenten von _X in Gleitkommawert  
+*_EXP zurück*<br/>
+Gibt den ganzzahligen Exponenten von _X in Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Mantisse _X  
@@ -548,11 +548,11 @@ inline float frexpf(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
- `_Exp`  
- Gibt den ganzzahligen Exponenten von _X in Gleitkommawert  
+*_EXP zurück*<br/>
+Gibt den ganzzahligen Exponenten von _X in Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Mantisse _X  
@@ -565,8 +565,8 @@ inline int isfinite(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Wert ungleich NULL zurück, wenn das Argument einen über begrenzten Wert verfügt  
@@ -579,8 +579,8 @@ inline int isinf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Wert ungleich NULL zurück, wenn und nur wenn das Argument einen unendlichen Wert verfügt.  
@@ -593,8 +593,8 @@ inline int isnan(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Wert ungleich NULL zurück, wenn und nur wenn das Argument einen NaN-Wert verfügt.  
@@ -609,11 +609,11 @@ inline float ldexp(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert, mentissa  
+*_X*<br/>
+Gleitkommawert, mentissa  
   
- `_Exp`  
- Integer-Exponenten  
+*_EXP zurück*<br/>
+Integer-Exponenten  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt _X \* 2 ^ _EXP zurück  
@@ -628,11 +628,11 @@ inline float ldexpf(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert, mentissa  
+*_X*<br/>
+Gleitkommawert, mentissa  
   
- `_Exp`  
- Integer-Exponenten  
+*_EXP zurück*<br/>
+Integer-Exponenten  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt _X \* 2 ^ _EXP zurück  
@@ -645,8 +645,8 @@ inline float log(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Basis-e-Logarithmus des Arguments  
@@ -659,8 +659,8 @@ inline float log10(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Base-10-Logarithmus des Arguments  
@@ -673,8 +673,8 @@ inline float log10f(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Base-10-Logarithmus des Arguments  
@@ -687,8 +687,8 @@ inline float log2(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Logarithmus Basis 2 des Arguments zurück  
@@ -701,8 +701,8 @@ inline float log2f(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Base-10-Logarithmus des Arguments  
@@ -715,8 +715,8 @@ inline float logf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Basis-e-Logarithmus des Arguments  
@@ -731,10 +731,11 @@ inline float modf(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
- `_Ip`  
+*_Ip*<br/>
+Empfängt der ganzzahlige Teil des Werts  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt zurück, den signierten Bruchteil von _X  
@@ -749,10 +750,11 @@ inline float modff(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
- `_Ip`  
+*_Ip*<br/>
+Empfängt der ganzzahlige Teil des Werts  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt zurück, den signierten Bruchteil von _X  
@@ -767,11 +769,11 @@ inline float pow(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert, Basis  
+*_X*<br/>
+Gleitkommawert, Basis  
   
- `_Y`  
- Gleitkommawert, exponent  
+*_Y*<br/>
+Gleitkommawert, exponent  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Wert von _X potenziert mit _y zurück  
@@ -786,11 +788,11 @@ inline float powf(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert, Basis  
+*_X*<br/>
+Gleitkommawert, Basis  
   
- `_Y`  
- Gleitkommawert, exponent  
+*_Y*<br/>
+Gleitkommawert, exponent  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -802,8 +804,8 @@ inline float round(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die nächste ganze Zahl von _X  
@@ -816,8 +818,8 @@ inline float roundf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die nächste ganze Zahl von _X  
@@ -830,8 +832,8 @@ inline float rsqrt(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Kehrwert der Quadratwurzel des Arguments zurück  
@@ -844,8 +846,8 @@ inline float rsqrtf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Kehrwert der Quadratwurzel des Arguments zurück  
@@ -858,8 +860,8 @@ inline int signbit(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Wert ungleich NULL zurück, wenn die Vorzeichen von _X negativ ist.  
@@ -872,8 +874,8 @@ inline int signbitf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Wert ungleich NULL zurück, wenn die Vorzeichen von _X negativ ist.  
@@ -886,8 +888,8 @@ inline float sin(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Sinuswert des Arguments  
@@ -900,8 +902,8 @@ inline float sinf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Sinuswert des Arguments  
@@ -917,14 +919,14 @@ inline void sincos(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
- `_S`  
- Gibt den Sinuswert von _X  
+*_S*<br/>
+Gibt den Sinuswert von _X  
   
- `_C`  
- Gibt den Kosinuswert von _X  
+*_C*<br/>
+Gibt den Kosinuswert von _X  
   
 ##  <a name="sincosf"></a>  sincosf  
  Berechnet Sinus- und Kosinuswert von _X  
@@ -937,14 +939,14 @@ inline void sincosf(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
- `_S`  
- Gibt den Sinuswert von _X  
+*_S*<br/>
+Gibt den Sinuswert von _X  
   
- `_C`  
- Gibt den Kosinuswert von _X  
+*_C*<br/>
+Gibt den Kosinuswert von _X  
   
 ##  <a name="sinh"></a> sinh  
  Berechnet den Hyperbelsinuswert des Arguments  
@@ -954,8 +956,8 @@ inline float sinh(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den hyperbolischen Sinus-Wert des Arguments zurück  
@@ -968,8 +970,8 @@ inline float sinhf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den hyperbolischen Sinus-Wert des Arguments zurück  
@@ -982,8 +984,8 @@ inline float sqrt(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Stamm Squre des Arguments zurück  
@@ -996,8 +998,8 @@ inline float sqrtf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Stamm Squre des Arguments zurück  
@@ -1010,8 +1012,8 @@ inline float tan(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Tangenswert des Arguments  
@@ -1024,8 +1026,8 @@ inline float tanf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Tangenswert des Arguments  
@@ -1038,8 +1040,8 @@ inline float tanh(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den hyperbeltangenswert des Arguments  
@@ -1052,8 +1054,8 @@ inline float tanhf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den hyperbeltangenswert des Arguments  
@@ -1066,8 +1068,8 @@ inline float trunc(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die ganzzahlige Komponente des Arguments zurück  
@@ -1080,8 +1082,8 @@ inline float truncf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_X`  
- Gleitkommawert  
+*_X*<br/>
+Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die ganzzahlige Komponente des Arguments zurück  

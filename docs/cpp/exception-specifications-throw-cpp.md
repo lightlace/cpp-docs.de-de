@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dfc9c50503fcd277f34e8f5dfc4a630d888eebf
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4cc44672fe30af8b6521b617228fb70b88e61f83
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318270"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040938"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Ausnahmespezifikationen (Throw, "noexcept") (C++)
 
-Ausnahmespezifikationen sind eine Sprachfunktion in C++, die angeben, der Programmierer zu den Ausnahmetypen, die von einer Funktion weitergegeben werden können. Sie können angeben, dass eine Funktion kann oder nicht durch eine Ausnahme, mithilfe beenden kann einer *Ausnahmespezifikation*. Der Compiler kann diese Informationen verwenden, um Aufrufe an die Funktion zu optimieren, und schützt die Funktion zum Beenden des Programms, wenn eine unerwartete Ausnahme. 
+Ausnahmespezifikationen sind eine Sprachfunktion in C++, die angeben, der Programmierer zu den Ausnahmetypen, die von einer Funktion weitergegeben werden können. Sie können angeben, dass eine Funktion kann oder nicht durch eine Ausnahme, mithilfe beenden kann einer *Ausnahmespezifikation*. Der Compiler kann diese Informationen verwenden, um Aufrufe an die Funktion zu optimieren, und schützt die Funktion zum Beenden des Programms, wenn eine unerwartete Ausnahme.
 
 Vor C ++ 17 gab es zwei Arten von Ausnahmespezifikation. Die *"noexcept" Spezifikation* ist neu in C ++ 11. Es gibt an, ob der Satz von möglichen Ausnahmen, die die Funktion mit Escapezeichen versehen können leer ist. Die *dynamischen Ausnahmespezifikation*, oder `throw(optional_type_list)` -Spezifikation wurde in C ++ 11 als veraltet markiert und in C ++ 17 entfernt werden, mit Ausnahme von `throw()`, d.h. ein Alias für `noexcept(true)`. Diese Ausnahmespezifikation wurde entworfen, um zusammenfassende Informationen dazu, welche Ausnahmen können, aus einer Funktion ausgelöst werden bereitzustellen, aber in der Praxis gefunden wurde problematisch sind. Die einen dynamischen Ausnahmespezifikation, die sich als nützlich erwies, wurde die unbedingte `throw()` Spezifikation. Um beispielsweise die Funktionsdeklaration:
 
@@ -138,5 +138,6 @@ in handler
 ```
 
 ## <a name="see-also"></a>Siehe auch
- [try-, throw- und catch-Anweisungen (C++)](../cpp/try-throw-and-catch-statements-cpp.md)  
- [C++-Ausnahmebehandlung](../cpp/cpp-exception-handling.md)
+
+[try-, throw- und catch-Anweisungen (C++)](../cpp/try-throw-and-catch-statements-cpp.md)<br/>
+[C++-Ausnahmebehandlung](../cpp/cpp-exception-handling.md)

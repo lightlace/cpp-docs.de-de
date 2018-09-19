@@ -1,5 +1,5 @@
 ---
-title: Lock::acquire | Microsoft Docs
+title: Lock::acquire | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 54b74721e39489ce8fab5eb93f626f78493479b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c0b89b635ec0f0487027d5a90e43c57c39cde34
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33138968"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042012"
 ---
 # <a name="lockacquire"></a>lock::acquire
-Richtet eine Sperre für ein Objekt, das optional darauf warten, die Sperre für eine bestimmte Zeitspanne oder überhaupt nicht immer erhalten.  
+Richtet eine Sperre für ein Objekt, das optional wartet unbegrenzt, Abrufen von der Sperre für eine bestimmte Zeit oder überhaupt nicht.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,19 +44,19 @@ void acquire(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `_timeout`  
- Timeoutwert in Millisekunden oder als eine <xref:System.TimeSpan>.  
+*_Timeout*<br/>
+Timeoutwert in Millisekunden oder als eine <xref:System.TimeSpan>.  
   
 ## <a name="exceptions"></a>Ausnahmen  
- Löst <xref:System.ApplicationException> Wenn Sperre nicht vor dem Timeout auftritt.  
+ Löst <xref:System.ApplicationException> Wenn Sperrenübernahme nicht vor dem Timeout auftritt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn ein Timeout-Wert nicht angegeben ist, wird der Standardtimeout beträgt <xref:System.Threading.Timeout.Infinite>.  
+ Wenn ein Timeout-Wert nicht angegeben ist, wird das standardmäßige Timeout <xref:System.Threading.Timeout.Infinite>.  
   
- Wenn bereits eine Sperre eingerichtet wurde, wird diese Funktion keine Aktion ausgeführt.  
+ Wenn eine Sperre bereits abgerufen wurde, hat diese Funktion mit "nothing".  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet eine einzelne Instanz einer Klasse über mehrere Threads hinweg.  Die Klasse verwendet eine Sperre auf sich selbst, um sicherzustellen, dass der Zugriff auf die internen Daten für jeden Thread konsistent sind.  Thread der hauptanwendung verwendet eine Sperre für dieselbe Instanz der Klasse in regelmäßigen Abständen überprüfen, um festzustellen, ob alle Arbeitsthreads noch vorhanden sind, und wartet, bis alle Arbeitsthreads aktiviert beenden ihre Aufgaben abgeschlossen haben.  
+ Dieses Beispiel verwendet eine einzelne Instanz einer Klasse auf mehrere Threads.  Die Klasse verwendet eine Sperre auf sich selbst, um sicherzustellen, dass der Zugriff auf seine internen Daten für jeden Thread konsistent sind.  Thread der hauptanwendung verwendet eine Sperre für dieselbe Instanz der Klasse verwendet, um in regelmäßigen Abständen überprüfen, um festzustellen, ob alle Worker-Threads noch vorhanden sind, und wartet, bis alle Worker-Threads zu beenden, ihre Aufgaben abgeschlossen haben.  
   
 ```  
 // msl_lock_acquire.cpp  
@@ -150,5 +150,5 @@ All threads completed.
  **Namespace** Msclr  
   
 ## <a name="see-also"></a>Siehe auch  
- [Lock-Member](../dotnet/lock-members.md)   
+ [Lock-Members](../dotnet/lock-members.md)   
  [lock::try_acquire](../dotnet/lock-try-acquire.md)

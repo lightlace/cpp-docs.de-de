@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4714 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4714 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,55 +16,56 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0f327e7ffc5d2fe00abe3c0845af10a846243bf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ecb9ecb1c73373ae96c92c911988a512e2173cec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295417"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136100"
 ---
 # <a name="compiler-warning-level-4-c4714"></a>Compilerwarnung (Stufe 4) C4714
-'Funktion' als __forceinline markiert nicht inline  
-  
- Die angegebene Funktion für die Inlineerweiterung ausgewählt wurde, aber der Compiler hat nicht ausgeführt, das inlining.  
-  
- Obwohl `__forceinline` stärker an den Compiler als `__inline`, inlining erfolgt immer noch nach Ermessen des Compilers, jedoch keine Heuristik werden verwendet, um zu bestimmen, die Vorteile von inlining dieser Funktion.  
-  
- In einigen Fällen der Compiler wird nicht Inline eine bestimmte Funktion mechanische Gründen. Beispielsweise wird der Compiler nicht Inline:  
-  
--   Eine Funktion, wenn sie zu mischen von SEH und C++ EH führen würde.  
-  
--   Einige Funktionen für die Kopie erstellt Objekte, die als Wert übergeben wird, wenn - GX/EHs/EHa aktiviert ist.  
-  
--   Funktionen, die ein entladbarer Objekt nach Wert zurückgeben, wenn - GX/EHs/EHa aktiviert ist.  
-  
--   Funktionen mit der Inlineassembly beim Kompilieren ohne - Benutzeranmeldung/Ox/O1/O2.  
-  
--   Funktionen mit einer Liste variabler Argumente.  
-  
--   Eine Funktion mit einem **versuchen** -Anweisung (C++-Ausnahmebehandlung).  
-  
- Im folgenden Beispiel wird C4714 generiert:  
-  
-```  
-// C4714.cpp  
-// compile with: /Ob1 /GX /W4  
-__forceinline void func1()  
-{  
-   try  
-   {  
-   }  
-   catch (...)  
-   {  
-   }  
-}  
-  
-void func2()  
-{  
-   func1();   // C4714  
-}  
-  
-int main()  
-{  
-}  
+
+'Funktion' als __forceinline markierte nicht inline
+
+Die angegebene Funktion für die Inlineerweiterung ausgewählt wurde, aber der Compiler hat nicht ausgeführt, das inlining.
+
+Obwohl `__forceinline` stärker an den Compiler als `__inline`, inlining erfolgt immer noch nach Ermessen des Compilers, jedoch keine Heuristik werden verwendet, um zu bestimmen, die Vorteile von inlining dieser Funktion.
+
+In einigen Fällen der Compiler werden nicht Inline eine bestimmte Funktion technischen Gründen. Beispielsweise führt der Compiler nicht Inline Folgendes aus:
+
+- Eine Funktion, wenn es in das Kombinieren von sowohl SEH und C++-EH führen würde.
+
+- Einige Funktionen für die Kopie erstellt Objekte, die als Wert übergeben wird, wenn - GX/EHs/EHa aktiviert ist.
+
+- Funktionen, die ein entladbarer Objekt nach Wert zurückgeben, wenn - GX/EHs/EHa aktiviert ist.
+
+- Funktioniert mit Inlineassembly beim Kompilieren ohne - Og/Ox/O1/O2.
+
+- Funktioniert mit der eine Variable Argumentliste.
+
+- Eine Funktion mit einem **versuchen** -Anweisung (C++-Ausnahmebehandlung).
+
+Im folgende Beispiel wird die C4714 generiert:
+
+```
+// C4714.cpp
+// compile with: /Ob1 /GX /W4
+__forceinline void func1()
+{
+   try
+   {
+   }
+   catch (...)
+   {
+   }
+}
+
+void func2()
+{
+   func1();   // C4714
+}
+
+int main()
+{
+}
 ```

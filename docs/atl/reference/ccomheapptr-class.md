@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a5b30ca507387b1529c9e9726e48735c844fac
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3455e88c5a9852c902702544a0f915e8d20dc64e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764828"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043234"
 ---
 # <a name="ccomheapptr-class"></a>CComHeapPtr-Klasse
 
@@ -32,13 +32,13 @@ Eine intelligente Zeiger-Klasse für die Verwaltung von Heap-Zeiger.
 ## <a name="syntax"></a>Syntax
 
 ```
-template<typename T>  
+template<typename T>
 class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Der Objekttyp, auf dem Heap gespeichert werden.
 
 ## <a name="members"></a>Member
@@ -76,7 +76,7 @@ explicit CComHeapPtr(T* pData) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*pData*  
+*pData*<br/>
 Ein vorhandenes `CComHeapPtr`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -85,7 +85,7 @@ Der Heapzeiger kann optional erstellt werden unter Verwendung einer vorhandenen 
 
 ## <a name="see-also"></a>Siehe auch
 
-[CHeapPtr-Klasse](../../atl/reference/cheapptr-class.md)   
-[CHeapPtrBase-Klasse](../../atl/reference/cheapptrbase-class.md)   
-[CComAllocator-Klasse](../../atl/reference/ccomallocator-class.md)   
+[CHeapPtr-Klasse](../../atl/reference/cheapptr-class.md)<br/>
+[CHeapPtrBase-Klasse](../../atl/reference/cheapptrbase-class.md)<br/>
+[CComAllocator-Klasse](../../atl/reference/ccomallocator-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

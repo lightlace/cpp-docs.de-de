@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1061b105b7fd1e344223da3850275910c164774b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3b85d157cd6124bb0ef6e6167a415c018e14b046
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761851"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040439"
 ---
 # <a name="object-map-macros"></a>Objektzuordnungs-Makros
 
@@ -47,7 +47,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
 
 ### <a name="parameters"></a>Parameter
 
-*w*  
+*w*<br/>
 [in] Die Klasse die Beschreibung des Objekts.
 
 ### <a name="remarks"></a>Hinweise
@@ -74,10 +74,10 @@ OBJECT_ENTRY_AUTO( clsid, class )
 
 ### <a name="parameters"></a>Parameter
 
-*clsid*  
+*clsid*<br/>
 [in] Die CLSID des eine COM-Klasse, die von der C++-Klasse, die mit dem Namen implementierten *Klasse*.
 
-*class*  
+*class*<br/>
 [in] Der Name der C++-Klasse dargestellte, die von COM-Klasse implementieren *Clsid*.
 
 ### <a name="remarks"></a>Hinweise
@@ -106,10 +106,10 @@ OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO( clsid, class )
 
 ### <a name="parameters"></a>Parameter
 
-*clsid*  
+*clsid*<br/>
 [in] Die CLSID des eine COM-Klasse, die von der C++-Klasse, die mit dem Namen implementierten *Klasse*.
 
-*class*  
+*class*<br/>
 [in] Der Name der C++-Klasse dargestellte, die von COM-Klasse implementieren *Clsid*.
 
 ### <a name="remarks"></a>Hinweise

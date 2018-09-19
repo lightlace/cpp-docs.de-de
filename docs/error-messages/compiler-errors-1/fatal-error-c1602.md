@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1602 | Microsoft Docs
+title: Schwerwiegender Fehler C1602 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e108fee9b73e1fa66b8ca9a45e67eeb0ea93d290
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c26e5199c3839069a938d34daf13408ce76e99b5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198325"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042844"
 ---
 # <a name="fatal-error-c1602"></a>Schwerwiegender Fehler C1602
-nicht unterstützt (systemintern)  
-  
- Dieser Fehler zeigt an, ein Versionskonflikt bei Ihrem Compiler .exe-Dateien, die möglicherweise aufgrund einer unvollständigen Installation aufgetreten sind. Angenommen, können Sie ein Servicepack, aber kein Processor Pack installiert haben. Installieren Sie alle erforderlichen Produkte.
+
+nicht unterstützt (systemintern)
+
+Dieser Fehler zeigt an, einen Konflikt in Ihre Compiler .exe-Dateien, die möglicherweise aufgrund einer unvollständigen Installation aufgetreten sind. Angenommen, können Sie ein Servicepack, aber nicht die Prozessor-Pack installiert haben. Installieren Sie alle erforderlichen Produkte.

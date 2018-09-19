@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2877 | Microsoft Docs
+title: Compilerfehler C2877 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96ab91d64806e7d4ca28bf43e812640790b78e87
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e2f293cefdc37c4adb2882f52d6676dcd912cfef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245011"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047537"
 ---
 # <a name="compiler-error-c2877"></a>Compilerfehler C2877
-'Symbol' ist nicht erreichbar "Klasse"  
-  
- Alle Elemente, die von einer Basisklasse abgeleitet muss in der abgeleiteten Klasse zugegriffen werden kann.  
-  
- Im folgende Beispiel wird C2877 generiert:  
-  
-```  
-// C2877.cpp  
-// compile with: /c  
-class A {  
-private:  
-   int a;  
-};  
-  
-class B : public A {  
-   using A::a;   // C2877  
-};  
+
+'Symbol' kann nicht zugegriffen werden, von "Klasse"
+
+Alle Elemente, die von einer Basisklasse abgeleitet, muss in der abgeleiteten Klasse zugegriffen werden kann.
+
+Im folgende Beispiel wird die C2877 generiert:
+
+```
+// C2877.cpp
+// compile with: /c
+class A {
+private:
+   int a;
+};
+
+class B : public A {
+   using A::a;   // C2877
+};
 ```

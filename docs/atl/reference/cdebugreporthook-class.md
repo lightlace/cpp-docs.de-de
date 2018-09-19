@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00a7bfd149bb83dc31327e3ea235479532213e03
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fb0bf24657a47cbe1cf1129f0202d120fb1d017e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760831"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039061"
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook-Klasse
 
@@ -84,13 +84,13 @@ CDebugReportHook(
 
 ### <a name="parameters"></a>Parameter
 
-*szMachineName*  
+*szMachineName*<br/>
 Der Name des Computers, der die Debugausgabe gesendet werden soll. Der Standardwert ist auf dem lokalen Computer.
 
-*szPipeName*  
+*szPipeName*<br/>
 Der Name der named Pipe an die die Debugausgabe gesendet werden soll.
 
-*dwTimeout*  
+*dwTimeout*<br/>
 Die Zeit in Millisekunden an, dass diese Klasse wartet, für die benannte Pipe verfügbar sind.
 
 ##  <a name="dtor"></a>  CDebugReportHook:: ~ CDebugReportHook
@@ -114,13 +114,13 @@ static int __cdecl CDebugReportHookProc(
 
 ### <a name="parameters"></a>Parameter
 
-*reportType*  
+*reportType*<br/>
 Der Typ des Berichts (_CRT_WARN, _CRT_ERROR oder _CRT_ASSERT).
 
-*message*  
+*message*<br/>
 Die Meldungszeichenfolge.
 
-*returnValue*  
+*returnValue*<br/>
 Der Wert, der von zurückgegeben werden sollen [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -169,10 +169,10 @@ BOOL SetPipeName(
 
 ### <a name="parameters"></a>Parameter
 
-*szMachineName*  
+*szMachineName*<br/>
 Der Name des Computers, der die Debugausgabe gesendet werden soll.
 
-*szPipeName*  
+*szPipeName*<br/>
 Der Name der named Pipe an die die Debugausgabe gesendet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -189,7 +189,7 @@ void SetTimeout(DWORD dwTimeout);
 
 ### <a name="parameters"></a>Parameter
 
-*dwTimeout*  
+*dwTimeout*<br/>
 Die Zeit in Millisekunden an, dass diese Klasse wartet, für die benannte Pipe verfügbar sind.
 
 ## <a name="see-also"></a>Siehe auch

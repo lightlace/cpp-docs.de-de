@@ -1,5 +1,5 @@
 ---
-title: C-Laufzeitfehler R6024 | Microsoft Docs
+title: C-Laufzeitfehler R6024 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcdfee9da378415afe0b88fe6eed18ec8f570d4a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 10b258b12bb1ad7e47a7b126b8fd503814186645
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302710"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041596"
 ---
 # <a name="c-runtime-error-r6024"></a>C-Laufzeitfehler R6024
-nicht genügend Speicherplatz für _onexit/Atexit-Tabelle  
-  
+
+nicht genügend Speicherplatz für die Tabelle der _onexit/von "atexit"
+
 > [!NOTE]
->  Wenn Sie diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app beendet, da es ein Problem des internen Speichers hat. Dieser Fehler wird normalerweise verursacht werden, durch eine extrem wenig Arbeitsspeicher verfügbar, oder in seltenen Fällen einen Fehler im Programm oder eine Beschädigung der Visual C++-Bibliotheken, die verwendet werden.  
->   
->  Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:  
->   
->  -   Schließen Sie andere ausgeführte Programme, oder Neustart des Computers, um Arbeitsspeicher freizugeben.  
-> -   Verwenden der **Apps und Funktionen** oder **Programme und Funktionen** auf der Seite der **Systemsteuerung** reparieren oder neu installieren die Anwendung.  
-> -   Verwenden der **Apps und Funktionen** oder **Programme und Funktionen** auf der Seite der **Systemsteuerung** reparieren oder neu installieren alle Kopien des verteilbaren Microsoft Visual C++.  
-> -   Überprüfen Sie **Windows Update** in der **Systemsteuerung** für Softwareupdates.  
-> -   Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den Hersteller der app.  
-  
- **Informationen für Programmierer**  
-  
- Dieser Fehler tritt auf, da es gab es keine "Erinnerung" für die `_onexit` oder `atexit` Funktion. Dieser Fehler wird durch eine Bedingung unzureichenden Arbeitsspeicher verursacht. Sie sollten vorab poolreservierung Puffer beim Starten der app, die beim Speichern von Benutzerdaten und eine fehlerfreie app ausführen unterstützen in Arbeitsspeichermangel zu beenden.
+>  Wenn diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app heruntergefahren, da sie ein Problem des internen Speicher verfügt. Dieser Fehler wird normalerweise verursacht, durch eine Bedingung für extrem wenig Arbeitsspeicher oder nur selten, durch einen Fehler im Programm oder eine Beschädigung der Visual C++-Bibliotheken, die verwendet werden.
+>
+>  Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:
+>
+>  -   Anderen ausgeführten Anwendungen zu schließen, oder Neustart des Computers, um Arbeitsspeicher freizugeben.
+> -   Verwenden der **Apps und Features** oder **Programme und Funktionen** auf der Seite die **Systemsteuerung** zu reparieren oder installieren Sie das Programm neu.
+> -   Verwenden der **Apps und Features** oder **Programme und Funktionen** auf der Seite die **Systemsteuerung** zu reparieren oder alle Kopien von Microsoft Visual C++ Redistributable zu installieren.
+> -   Überprüfen Sie **Windows Update** in die **Systemsteuerung** für Softwareupdates.
+> -   Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den app-Anbieter.
+
+**Informationen für Programmierer**
+
+Dieser Fehler tritt auf, da nicht genügend Arbeitsspeicher verfügbar für war die `_onexit` oder `atexit` Funktion. Dieser Fehler wird durch einen Arbeitsspeichermangel verursacht. Sie können erwägen, vorab zuweisen von Puffern, die beim Starten der app, speichert Benutzerdaten und Durchführen einer sauberen app erleichtern in Speichermangel beendet.

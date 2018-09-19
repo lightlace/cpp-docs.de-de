@@ -19,42 +19,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6ef9a28af02cbb22eb4e3d2ceaad206a94d6309
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 829afe53d5fde976b7877475cf577b6204be8aed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199391"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051086"
 ---
 # <a name="overview-of-file-translation"></a>Übersicht über die Dateiübersetzung
-C++-Programme wie C-Programme bestehen aus mindestens einer Datei. Jede dieser Dateien wird in der folgenden konzeptionellen Reihenfolge übersetzt (die tatsächliche Reihenfolge folgt der "als ob"-Regel: Übersetzung muss so erfolgen, als wären diese Schritte befolgt worden):  
-  
-1. Lexikalische Tokenisierung. Zeichenzuordnung und Trigraphverarbeitung, Splicing von Zeilen und Tokenisierung werden in dieser Übersetzungsphase ausgeführt.  
-  
-2. Vorverarbeitung. Diese übersetzungsphase werden zusätzliche Quelldateien verweist `#include` Direktiven, kümmert sich um "Zeichenfolgen" und "eingebracht"-Direktiven und führt token eingefügt und Makros erweitert (finden Sie unter [Präprozessoranweisungen](../preprocessor/preprocessor-directives.md) in der *Präprozessorreferenz* Informationen). Das Ergebnis der Vorverarbeitungsphase ist eine Sequenz von Token, die zusammen eine "Übersetzungseinheit" definieren.  
-  
-     Präprozessoranweisungen beginnen immer mit dem Nummernzeichen (**#**) Zeichen (d. h. das erste Zeichen für Zeichen in der Zeile muss ein Nummernzeichen sein). In einer angegebenen Zeile kann nur eine Präprozessoranweisung stehen. Zum Beispiel:  
-  
-    ```cpp 
-    #include <iostream>  // Include text of iostream in   
-                         //  translation unit.  
-    #define NDEBUG       // Define NDEBUG (NDEBUG contains empty   
-                         //  text string).  
-    ```  
-  
-3. Codegenerierung. Diese Übersetzungsphase verwendet die Token, die in der Vorverarbeitungsphase zum Generieren von Objektcode generiert wurden.  
-  
-     Während dieser Phase wird die syntaktische und semantische Prüfung des Quellcodes ausgeführt.  
-  
- Finden Sie unter [Phasen der Übersetzung](../preprocessor/phases-of-translation.md) in die *Präprozessorreferenz* für Weitere Informationen.  
-  
- Der C++-Präprozessor ist eine strikte Obermenge des ANSI C-Präprozessors, aber der C++-Präprozessor unterscheidet sich in mehreren Instanzen. Die folgende Liste beschreibt mehrere Unterschiede zwischen den ANSI C- und den C++-Präprozessoren:  
-  
-- Einzeilige Kommentare werden unterstützt. Finden Sie unter [Kommentare](../cpp/comments-cpp.md) für Weitere Informationen.  
-  
-- Ein vordefiniertes Makro, `__cplusplus`, nur für C++ definiert ist. Finden Sie unter [Predefined Macros](../preprocessor/predefined-macros.md) in die *Präprozessorreferenz* für Weitere Informationen.  
-  
-- Der C-Präprozessor erkennt die C++-Operatoren nicht: **.** <strong>\*</strong>, **->** <strong>\*</strong>, und **::**. Finden Sie unter [Operatoren](../cpp/cpp-built-in-operators-precedence-and-associativity.md) und [Ausdrücke](../cpp/expressions-cpp.md), Weitere Informationen zu Operatoren.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Lexikalische Konventionen](../cpp/lexical-conventions.md)
+
+C++-Programme wie C-Programme bestehen aus mindestens einer Datei. Jede dieser Dateien wird in der folgenden konzeptionellen Reihenfolge übersetzt (die tatsächliche Reihenfolge folgt der "als ob"-Regel: Übersetzung muss so erfolgen, als wären diese Schritte befolgt worden):
+
+1. Lexikalische Tokenisierung. Zeichenzuordnung und Trigraphverarbeitung, Splicing von Zeilen und Tokenisierung werden in dieser Übersetzungsphase ausgeführt.
+
+2. Vorverarbeitung. Diese übersetzungsphase werden zusätzliche Quelldateien verweist `#include` Direktiven, kümmert sich um "Zeichenfolgen" und "eingebracht"-Direktiven und führt token eingefügt und Makros erweitert (finden Sie unter [Präprozessoranweisungen](../preprocessor/preprocessor-directives.md) in der *Präprozessorreferenz* Informationen). Das Ergebnis der Vorverarbeitungsphase ist eine Sequenz von Token, die zusammen eine "Übersetzungseinheit" definieren.
+
+     Präprozessoranweisungen beginnen immer mit dem Nummernzeichen (**#**) Zeichen (d. h. das erste Zeichen für Zeichen in der Zeile muss ein Nummernzeichen sein). In einer angegebenen Zeile kann nur eine Präprozessoranweisung stehen. Zum Beispiel:
+
+    ```cpp
+    #include <iostream>  // Include text of iostream in
+                         //  translation unit.
+    #define NDEBUG       // Define NDEBUG (NDEBUG contains empty
+                         //  text string).
+    ```
+
+3. Codegenerierung. Diese Übersetzungsphase verwendet die Token, die in der Vorverarbeitungsphase zum Generieren von Objektcode generiert wurden.
+
+     Während dieser Phase wird die syntaktische und semantische Prüfung des Quellcodes ausgeführt.
+
+Finden Sie unter [Phasen der Übersetzung](../preprocessor/phases-of-translation.md) in die *Präprozessorreferenz* für Weitere Informationen.
+
+Der C++-Präprozessor ist eine strikte Obermenge des ANSI C-Präprozessors, aber der C++-Präprozessor unterscheidet sich in mehreren Instanzen. Die folgende Liste beschreibt mehrere Unterschiede zwischen den ANSI C- und den C++-Präprozessoren:
+
+- Einzeilige Kommentare werden unterstützt. Finden Sie unter [Kommentare](../cpp/comments-cpp.md) für Weitere Informationen.
+
+- Ein vordefiniertes Makro, `__cplusplus`, nur für C++ definiert ist. Finden Sie unter [Predefined Macros](../preprocessor/predefined-macros.md) in die *Präprozessorreferenz* für Weitere Informationen.
+
+- Der C-Präprozessor erkennt die C++-Operatoren nicht: **.** <strong>\*</strong>, **->** <strong>\*</strong>, und **::**. Finden Sie unter [Operatoren](../cpp/cpp-built-in-operators-precedence-and-associativity.md) und [Ausdrücke](../cpp/expressions-cpp.md), Weitere Informationen zu Operatoren.
+
+## <a name="see-also"></a>Siehe auch
+
+[Lexikalische Konventionen](../cpp/lexical-conventions.md)

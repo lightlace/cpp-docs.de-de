@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34009ac94d35a377e1080ea674f58715e7a42aa2
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: aae9adaf1037297dfae9ba78f6f872544a5555ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101053"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081675"
 ---
 # <a name="alignedfreedbg"></a>_aligned_free_dbg
 
@@ -53,7 +53,7 @@ void _aligned_free_dbg(
 
 ### <a name="parameters"></a>Parameter
 
-*memblock*  
+*memblock*<br/>
 Ein Zeiger auf den Speicherblock, die zurückgegeben wurde, die [_aligned_malloc](aligned-malloc.md) oder [_aligned_offset_malloc](aligned-offset-malloc.md) Funktion.
 
 ## <a name="remarks"></a>Hinweise
@@ -76,4 +76,4 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 
 ## <a name="see-also"></a>Siehe auch
 
-[Debugroutinen](../../c-runtime-library/debug-routines.md)  
+[Debugroutinen](../../c-runtime-library/debug-routines.md)

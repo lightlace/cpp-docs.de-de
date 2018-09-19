@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2552 | Microsoft Docs
+title: Compilerfehler C2552 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,96 +16,97 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d13872af9ec5104b5c4327f39ec04c5642a5a5f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f54d9bf40c2dda7de0d7f518813e661b0476caa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231733"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044300"
 ---
 # <a name="compiler-error-c2552"></a>Compilerfehler C2552
-"Bezeichner": Initialisierung nicht zusammengesetzter Typen mit Initialisierungsliste ist nicht möglich  
-  
- Der Aggregatbezeichner wurde falsch initialisiert.  
-  
- [Aggregate](../../c-language/initializing-aggregate-types.md) werden wie folgt definiert:  
-  
--   Arrays  
-  
--   Klassen, Strukturen und Unions, die nicht über folgende Elemente verfügen:  
-  
-    -   Konstruktoren  
-  
-    -   Private-Member oder Protected-Member  
-  
-    -   Basisklassen  
-  
-    -   Virtuelle Funktionen  
-  
- Außerdem sind in Visual C++ Datentypen in Aggregaten, die Konstruktoren enthalten, nicht zulässig.  
-  
- Beim Versuch, für einen Typ eine Aggregatinitialisierung durchzuführen, kann aus den folgenden Gründen C2552 ausgelöst werden:  
-  
--   Der Typ verfügt über einen oder mehrere benutzerdefinierte Konstruktoren.  
-  
--   Der Typ verfügt über einen oder mehrere nicht statische private Datenmember.  
-  
--   Der Typ verfügt über eine oder mehrere virtuelle Funktionen.  
-  
--   Der Typ verfügt über eine Basisklasse.  
-  
--   Ein Typ ist eine Verweisklasse oder eine CLR-Schnittstelle.  
-  
--   Der Typ verfügt über ein Array ohne festgelegte Größe (Array der Größe 0), dessen Elemente Destruktoren haben.  
-  
- Im folgenden Beispiel wird C2552 generiert:  
-  
-```  
-// C2552.cpp  
-// compile with: /clr  
-#include <string>  
-using namespace std;  
-  
-struct Pair_Incorrect {  
-private:  
-   string m_name;  
-   double m_val;  
-};  
-  
-struct Pair_Correct1 {  
-public:  
-   Pair_Correct1(string name, double val)  
-      : m_name(name), m_val(val) {}  
-  
-private:  
-   string m_name;  
-   double m_val;  
-};  
-  
-struct Pair_Correct2 {  
-public:  
-   string m_name;  
-   double m_val;  
-};  
-  
-int main() {  
-   // To fix, add a constructor to this class and use it for   
-   // initializing the data members, see Pair_Correct1 (below)  
-   // or  
-   // Do not have any private or protected non-static data members,   
-   // see Pair_Correct2 (below).  Pair_Correct2 is not recommended in   
-   // case your object model requires some non-static data members to   
-   // be private or protected  
-  
-   string name("John");  
-   Pair_Incorrect pair1 = { name, 0.0 };   // C2552  
-  
-   // initialize a CLR immutable value type that has a constructor  
-   System::DateTime dt = {2001, 4, 12, 22, 16, 49, 844};   // C2552   
-  
-   Pair_Correct1 pair2( name, 0.0 );  
-   Pair_Correct1 pair3 = Pair_Correct1( name, 0.0 );  
-   Pair_Correct2 pair4 = { name, 0.0 };  
-   System::DateTime dt2(2001, 4, 12, 22, 16, 49, 844);  
-}  
+
+"Bezeichner": Initialisierung nicht zusammengesetzter Typen mit Initialisierungsliste ist nicht möglich
+
+Der Aggregatbezeichner wurde falsch initialisiert.
+
+[Aggregate](../../c-language/initializing-aggregate-types.md) als definiert sind:
+
+- Arrays
+
+- Klassen, Strukturen und Unions, die nicht über folgende Elemente verfügen:
+
+   - Konstruktoren
+
+   - Private-Member oder Protected-Member
+
+   - Basisklassen
+
+   - Virtuelle Funktionen
+
+Außerdem sind in Visual C++ Datentypen in Aggregaten, die Konstruktoren enthalten, nicht zulässig.
+
+Beim Versuch, für einen Typ eine Aggregatinitialisierung durchzuführen, kann aus den folgenden Gründen C2552 ausgelöst werden:
+
+- Der Typ verfügt über einen oder mehrere benutzerdefinierte Konstruktoren.
+
+- Der Typ verfügt über einen oder mehrere nicht statische private Datenmember.
+
+- Der Typ verfügt über eine oder mehrere virtuelle Funktionen.
+
+- Der Typ verfügt über eine Basisklasse.
+
+- Ein Typ ist eine Verweisklasse oder eine CLR-Schnittstelle.
+
+- Der Typ verfügt über ein Array ohne festgelegte Größe (Array der Größe 0), dessen Elemente Destruktoren haben.
+
+Im folgenden Beispiel wird C2552 generiert:
+
+```
+// C2552.cpp
+// compile with: /clr
+#include <string>
+using namespace std;
+
+struct Pair_Incorrect {
+private:
+   string m_name;
+   double m_val;
+};
+
+struct Pair_Correct1 {
+public:
+   Pair_Correct1(string name, double val)
+      : m_name(name), m_val(val) {}
+
+private:
+   string m_name;
+   double m_val;
+};
+
+struct Pair_Correct2 {
+public:
+   string m_name;
+   double m_val;
+};
+
+int main() {
+   // To fix, add a constructor to this class and use it for
+   // initializing the data members, see Pair_Correct1 (below)
+   // or
+   // Do not have any private or protected non-static data members,
+   // see Pair_Correct2 (below).  Pair_Correct2 is not recommended in
+   // case your object model requires some non-static data members to
+   // be private or protected
+
+   string name("John");
+   Pair_Incorrect pair1 = { name, 0.0 };   // C2552
+
+   // initialize a CLR immutable value type that has a constructor
+   System::DateTime dt = {2001, 4, 12, 22, 16, 49, 844};   // C2552
+
+   Pair_Correct1 pair2( name, 0.0 );
+   Pair_Correct1 pair3 = Pair_Correct1( name, 0.0 );
+   Pair_Correct2 pair4 = { name, 0.0 };
+   System::DateTime dt2(2001, 4, 12, 22, 16, 49, 844);
+}
 ```

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba2c1b96a1ce4db7c16695c51d946ecb98827271
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9a9cc4a142a0aefc4937df493fa87552464b4294
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752787"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043416"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Aggregation und Klassenfactory-Makros
 
@@ -67,7 +67,7 @@ DECLARE_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parameter
 
-*w*  
+*w*<br/>
 [in] Der Name der Klasse, die Sie als aggregierbar definieren.
 
 ### <a name="remarks"></a>Hinweise
@@ -131,7 +131,7 @@ DECLARE_CLASSFACTORY_EX( cf )
 
 ### <a name="parameters"></a>Parameter
 
-*CF*  
+*CF*<br/>
 [in] Der Name der Klasse, die Ihre Klasse-Factoryobjekt implementiert.
 
 ### <a name="remarks"></a>Hinweise
@@ -154,7 +154,7 @@ DECLARE_CLASSFACTORY2( lic )
 
 ### <a name="parameters"></a>Parameter
 
-*LIC*  
+*LIC*<br/>
 [in] Eine Klasse, die implementiert `VerifyLicenseKey`, `GetLicenseKey`, und `IsLicenseValid`.
 
 ### <a name="remarks"></a>Hinweise
@@ -178,7 +178,7 @@ class  CComClassFactory2 : public IClassFactory2,
 
 ### <a name="parameters"></a>Parameter
 
-*Lizenz*  
+*Lizenz*<br/>
 Eine Klasse, die folgenden statischen Funktionen implementiert:
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -249,7 +249,7 @@ DECLARE_CLASSFACTORY_SINGLETON( obj )
 
 ### <a name="parameters"></a>Parameter
 
-*obj*  
+*obj*<br/>
 [in] Der Name des Klassenobjekts.
 
 ### <a name="remarks"></a>Hinweise
@@ -274,7 +274,7 @@ class CComClassFactorySingleton : public CComClassFactory
 
 ### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Die Klasse.
 
 `CComClassFactorySingleton` leitet sich von [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) und verwendet [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) um ein einzelnes Objekt zu erstellen. Jeder Aufruf der `CreateInstance` -Methode fragt einfach dieses Objekt für einen Schnittstellenzeiger auf.
@@ -307,7 +307,7 @@ DECLARE_NOT_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parameter
 
-*w*  
+*w*<br/>
 [in] Der Name des Klassenobjekts, die Sie als nicht aggregierbar definieren.
 
 ### <a name="remarks"></a>Hinweise
@@ -330,7 +330,7 @@ DECLARE_ONLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parameter
 
-*w*  
+*w*<br/>
 [in] Der Name des Klassenobjekts, die Sie als nur aggregierbar definieren.
 
 ### <a name="remarks"></a>Hinweise
@@ -353,7 +353,7 @@ DECLARE_POLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parameter
 
-*w*  
+*w*<br/>
 [in] Der Name des Klassenobjekts, die Sie als aggregiert oder als nicht aggregierbar definieren.
 
 ### <a name="remarks"></a>Hinweise
@@ -382,7 +382,7 @@ DECLARE_VIEW_STATUS( statusFlags )
 
 ### <a name="parameters"></a>Parameter
 
-*statusFlags*  
+*statusFlags*<br/>
 [in] Die VIEWSTATUS-Flags. Finden Sie unter [VIEWSTATUS](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) für eine Liste von Flags.
 
 ### <a name="example"></a>Beispiel

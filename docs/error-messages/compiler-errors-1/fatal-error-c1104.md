@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1104 | Microsoft Docs
+title: Schwerwiegender Fehler C1104 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a1df9fc846a2534004bb956b02edbfb9865985d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e624238a1b7616ab84a655839a05cfd6899d38ea
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199743"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048109"
 ---
 # <a name="fatal-error-c1104"></a>Schwerwiegender Fehler C1104
-Schwerwiegender Fehler beim Importieren der LibID: "Meldung"  
-  
- Der Compiler hat beim Importieren einer Typbibliothek ein Problem erkannt.  Sie können beispielsweise keine Typbibliothek mit LibID und gleichzeitig `no_registry`angeben.  
-  
- Weitere Informationen finden Sie unter [#import-Direktive](../../preprocessor/hash-import-directive-cpp.md).  
-  
- Im folgenden Beispiel wird C1104 generiert.  
-  
-```  
-// C1104.cpp  
-#import "libid:11111111.1111.1111.1111.111111111111" version("4.0") lcid("9") no_registry auto_search   // C1104  
+
+Schwerwiegender Fehler beim Importieren der LibID: "Meldung"
+
+Der Compiler hat beim Importieren einer Typbibliothek ein Problem erkannt.  Sie können beispielsweise keine Typbibliothek mit LibID und gleichzeitig `no_registry`angeben.
+
+Weitere Informationen finden Sie unter [#import-Anweisung](../../preprocessor/hash-import-directive-cpp.md).
+
+Im folgenden Beispiel wird C1104 generiert.
+
+```
+// C1104.cpp
+#import "libid:11111111.1111.1111.1111.111111111111" version("4.0") lcid("9") no_registry auto_search   // C1104
 ```

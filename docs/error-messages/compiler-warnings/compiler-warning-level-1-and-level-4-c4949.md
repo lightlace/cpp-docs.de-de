@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1 und Stufe 4) C4949 | Microsoft Docs
+title: Compilerwarnung (Stufe 1 und Stufe 4) C4949 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dbf80f85db7334d4bcb46402851cac601d258f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f806912188ada3a4f97f0b1500e811d1271f40fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279645"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077307"
 ---
 # <a name="compiler-warning-level-1-and-level-4-c4949"></a>Compilerwarnung (Stufe 1 und Stufe 4) C4949
-Pragmas "managed" und "nicht verwaltet" sind sinnvoll, nur beim Kompilieren mit "/ Clr [: Option]"  
-  
- Der Compiler ignoriert die [verwaltet](../../preprocessor/managed-unmanaged.md) als auch nicht verwaltete Pragmas, wenn der Quellcode nicht kompiliert wird, mit ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md). Diese Warnung dient nur zu Informationszwecken.  
-  
- Im folgenden Beispiel wird C4949 generiert:  
-  
-```  
-// C4949.cpp  
-// compile with: /LD /W1  
-#pragma managed   // C4949  
-```  
-  
- Wenn **nicht verwaltete #pragma** wird verwendet, ohne **"/ CLR"**, C4949 wird eine Warnung der Stufe 4.  
-  
- Im folgenden Beispiel wird C4949 generiert:  
-  
-```  
-// C4949b.cpp  
-// compile with: /LD /W4  
-#pragma unmanaged   // C4949  
+
+Pragmas "managed" und "unmanaged" sind sinnvoll, nur bei der Kompilierung mit "/ Clr [: Option]"
+
+Der Compiler ignoriert die [verwaltet](../../preprocessor/managed-unmanaged.md) und nicht verwaltete Pragmas, wenn der Quellcode nicht kompiliert wird, mit ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md). Diese Warnung dient nur zu Informationszwecken.
+
+Im folgende Beispiel wird die C4949 generiert:
+
+```
+// C4949.cpp
+// compile with: /LD /W1
+#pragma managed   // C4949
+```
+
+Wenn **#pragma unmanaged** wird verwendet, ohne **"/ CLR"**, C4949 wird eine Warnung der Stufe 4.
+
+Im folgende Beispiel wird die C4949 generiert:
+
+```
+// C4949b.cpp
+// compile with: /LD /W4
+#pragma unmanaged   // C4949
 ```

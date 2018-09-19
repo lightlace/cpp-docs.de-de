@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4272 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4272 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6de736c3226a9d3377769b65604a458c08e25df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00e30646c9fe56132da9cf87ba71cb54ae6a3e8f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277198"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052958"
 ---
 # <a name="compiler-warning-level-1-c4272"></a>Compilerwarnung (Stufe 1) C4272
-'Funktion': RuntimeCompatibility von "__declspec(dllimport)" "; systemeigene Aufrufkonvention muss angegeben werden, beim Importieren einer Funktion.  
-  
- Es ist ein Fehler so exportieren Sie eine Funktion mit der [__clrcall](../../cpp/clrcall.md) Aufrufkonvention und der Compiler gibt diese Warnung aus, wenn Sie versuchen, eine Funktion importieren `__clrcall`.  
-  
- Im folgenden Beispiel wird C4272 generiert:  
-  
-```  
-// C4272.cpp  
-// compile with: /c /W1 /clr  
-__declspec(dllimport) void __clrcall Test();   // C4272  
-__declspec(dllimport) void Test2();   // OK  
+
+'Funktion': ist als __declspec(dllimport) markiert. systemeigene Aufrufkonvention muss angegeben werden, beim Importieren einer Funktion.
+
+Es ist ein Fehler so exportieren Sie eine Funktion mit dem [__clrcall](../../cpp/clrcall.md) Aufrufkonvention und der Compiler gibt diese Warnung, wenn Sie versuchen, eine Funktion importieren `__clrcall`.
+
+Im folgende Beispiel wird die C4272 generiert:
+
+```
+// C4272.cpp
+// compile with: /c /W1 /clr
+__declspec(dllimport) void __clrcall Test();   // C4272
+__declspec(dllimport) void Test2();   // OK
 ```

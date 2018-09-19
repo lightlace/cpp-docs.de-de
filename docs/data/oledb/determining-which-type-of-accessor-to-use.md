@@ -16,21 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e8dbfecf52e974330360714763da3bd4c81117ad
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 720a72406bec5672757c1b2c5713586b7fc7f1ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679723"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086966"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Bestimmen des geeigneten Zugriffsmethodentyps
+
 Sie können die Datentypen für ein Rowset zum Zeitpunkt der Kompilierung oder zur Laufzeit bestimmen.  
   
- Wenn Sie Datentypen zum Zeitpunkt der Kompilierung ermitteln müssen, verwenden Sie einen statischen Accessor (z. B. `CAccessor`). Sie können die Datentypen manuell oder mithilfe der ATL-OLE DB-Consumer-Assistent bestimmen.  
+Wenn Sie Datentypen zum Zeitpunkt der Kompilierung ermitteln müssen, verwenden Sie einen statischen Accessor (z. B. `CAccessor`). Sie können die Datentypen manuell oder mithilfe der ATL-OLE DB-Consumer-Assistent bestimmen.  
   
- Wenn Sie die Datentypen zur Laufzeit bestimmen müssen, verwenden Sie eine dynamische (`CDynamicAccessor` oder seine untergeordneten Elemente) oder einen manuellen Accessor (`CManualAccessor`). Sie können in diesen Fällen Aufrufen `GetColumnInfo` für das Rowset die Spalteninformationen für die Bindung, zurückgeben, von dem Sie können Typen bestimmen.  
+Wenn Sie die Datentypen zur Laufzeit bestimmen müssen, verwenden Sie eine dynamische (`CDynamicAccessor` oder seine untergeordneten Elemente) oder einen manuellen Accessor (`CManualAccessor`). Sie können in diesen Fällen Aufrufen `GetColumnInfo` für das Rowset die Spalteninformationen für die Bindung, zurückgeben, von dem Sie können Typen bestimmen.  
   
- Die folgende Tabelle enthält die Typen der Accessoren in die Consumervorlagen bereitgestellt. Jeder Accessor hat vor- und Nachteile. Je nach Situation sollte eine Accessortyp Ihre Bedürfnisse erfüllen.  
+Die folgende Tabelle enthält die Typen der Accessoren in die Consumervorlagen bereitgestellt. Jeder Accessor hat vor- und Nachteile. Je nach Situation sollte eine Accessortyp Ihre Bedürfnisse erfüllen.  
   
 |Accessor-Klasse|Bindung|Parameter|Kommentar|  
 |--------------------|-------------|---------------|-------------|  
@@ -42,4 +43,5 @@ Sie können die Datentypen für ein Rowset zum Zeitpunkt der Kompilierung oder z
 |`CXMLAccessor`|Automatisch.|Nein.|Ruft Daten aus dem Datenspeicher als Zeichenfolgedaten zugegriffen, und formatiert die Ausgabe als XML-Tags Daten.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden von Zugriffsmethoden](../../data/oledb/using-accessors.md)
+
+[Verwenden von Zugriffsmethoden](../../data/oledb/using-accessors.md)

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f87f5b9f8295b49b9c1c4bec45cad96e3dec0872
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f4c035fad1fd675fd36fef73d405c63aab3be739
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760057"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040803"
 ---
 # <a name="catlcommodule-class"></a>CAtlComModule-Klasse
 
@@ -107,10 +107,10 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 
 ### <a name="parameters"></a>Parameter
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 True, wenn die Typbibliothek registriert werden. Der Standardwert ist "false".
 
-*pCLSID*  
+*pCLSID*<br/>
 Zeigt auf die CLSID des Objekts, das registriert werden. Wenn NULL (Standardwert), alle Objekte in der objektzuordnung registriert wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -132,7 +132,7 @@ HRESULT RegisterTypeLib();
 
 ### <a name="parameters"></a>Parameter
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Zeichenfolge im Format "\\\N", wobei N der ganzzahlige Index der TYPELIB-Ressourcen ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -155,10 +155,10 @@ HRESULT UnregisterServer(
 
 ### <a name="parameters"></a>Parameter
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 "True", wenn die Typbibliothek nicht registriert werden soll. Der Standardwert ist "false".
 
-*pCLSID*  
+*pCLSID*<br/>
 Zeigt auf die CLSID des Objekts, das nicht aufgehoben werden. Wenn NULL (Standardwert), alle Objekte in der objektzuordnung aufgehoben.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -180,7 +180,7 @@ HRESULT UnRegisterTypeLib();
 
 ### <a name="parameters"></a>Parameter
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Zeichenfolge im Format "\\\N", wobei N der ganzzahlige Index der TYPELIB-Ressourcen ist.
 
 ### <a name="remarks"></a>Hinweise
@@ -193,5 +193,5 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ## <a name="see-also"></a>Siehe auch
 
-[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)   
+[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 503ce18d5ffa966f6c216468b487851207313937
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9292c354b630ca5aea8bda7c88f5beab6691ba08
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105353"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052841"
 ---
 # <a name="cadapt-class"></a>CAdapt-Klasse
 
@@ -36,13 +36,13 @@ Diese Vorlage dient dazu, Klassen zu umschließen, die den Adressoperator so umd
 ## <a name="syntax"></a>Syntax
 
 ```
-template <class T>  
+template <class T>
 class CAdapt
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Der angepasste Typ.
 
 ## <a name="members"></a>Member
@@ -97,10 +97,10 @@ CAdapt(CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parameter
 
-*rSrc*  
+*rSrc*<br/>
 Eine Variable des Typs angepasst werden, um in die neu erstellte Hostnetzwerkadapter-Objekt kopiert werden.
 
-*rSrCA*  
+*rSrCA*<br/>
 Ein Adapterobjekt, dessen enthaltenen Daten kopiert (in der neu erstellte Hostnetzwerkadapter-Objekt oder verschoben werden sollte).
 
 ##  <a name="m_t"></a>  CAdapt::m_T
@@ -119,7 +119,7 @@ Dies **öffentliche** Datenmember möglich direkt oder indirekt mit [Operator co
 
 Gibt eine **const** Verweis auf die [M_T](#m_t) Member, und mit dem Adapterobjekt behandelt werden soll, als handele es sich um ein Objekt des Typs *T*.
 
-```  
+```
 operator const T&() const;
 ```
 
@@ -131,7 +131,7 @@ Ein **const** Verweis auf `m_T`.
 
 Gibt einen Verweis auf die [M_T](#m_t) Member, und mit dem Adapterobjekt behandelt werden soll, als handele es sich um ein Objekt des Typs *T*.
 
-```  
+```
 operator T&();
 ```
 
@@ -149,7 +149,7 @@ bool operator<(const T& rSrc) const;
 
 ### <a name="parameters"></a>Parameter
 
-*rSrc*  
+*rSrc*<br/>
 Ein Verweis auf das Objekt, das verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -168,10 +168,10 @@ CAdapt& operator= (CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parameter
 
-*rSrc*  
+*rSrc*<br/>
 Ein Verweis auf ein Objekt des angepassten Typs kopiert werden soll.
 
-*rSrCA*  
+*rSrCA*<br/>
 Ein Verweis auf ein Objekt, das verschoben werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -188,7 +188,7 @@ bool operator== (const T& rSrc) const;
 
 ### <a name="parameters"></a>Parameter
 
-*rSrc*  
+*rSrc*<br/>
 Ein Verweis auf das Objekt, das verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert

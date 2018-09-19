@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4198e08a4c126a180006a088d4fc1509643824f6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 141940ef5d5c7d23ea3cf049e64e9f4c6974fce0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764929"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076657"
 ---
 # <a name="ccomobjectglobal-class"></a>CComObjectGlobal-Klasse
 
@@ -42,7 +42,7 @@ class CComObjectGlobal : public Base
 
 #### <a name="parameters"></a>Parameter
 
-*Basis*  
+*Basis*<br/>
 Abgeleitet von die Klasse [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oder [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), wie auch über eine beliebige andere Schnittstelle für das Objekt unterstützt werden sollen.
 
 ## <a name="members"></a>Member
@@ -142,10 +142,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parameter
 
-*IID*  
+*IID*<br/>
 [in] Die GUID der Schnittstelle angefordert wird.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Ein Zeiger auf den Schnittstellenzeiger auf identifizierte Iid, oder NULL, wenn die Schnittstelle nicht gefunden wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -174,7 +174,7 @@ In der Standardeinstellung `Release` Aufrufe `_Module::Unlock`, wobei `_Module` 
 
 ## <a name="see-also"></a>Siehe auch
 
-[CComObjectStack-Klasse](../../atl/reference/ccomobjectstack-class.md)   
-[CComAggObject-Klasse](../../atl/reference/ccomaggobject-class.md)   
-[CComObject-Klasse](../../atl/reference/ccomobject-class.md)   
+[CComObjectStack-Klasse](../../atl/reference/ccomobjectstack-class.md)<br/>
+[CComAggObject-Klasse](../../atl/reference/ccomaggobject-class.md)<br/>
+[CComObject-Klasse](../../atl/reference/ccomobject-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

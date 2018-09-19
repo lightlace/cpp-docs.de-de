@@ -1,5 +1,5 @@
 ---
-title: für jedes in | Microsoft Docs
+title: für jedes im | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6ab5f7309da1a037f7066d44815cafc934b162cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a55425c891999142fe32ae08125cce22728daffa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111942"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040692"
 ---
 # <a name="for-each-in"></a>for each, in
-Durchläuft ein Array oder eine Auflistung. Dieses nicht standardmäßige Schlüsselwort ist sowohl in C++/CLI und nativen C++-Projekten verfügbar. Seine Verwendung wird jedoch nicht empfohlen. Betrachten Sie mithilfe eines Standarddialogfelds [bereichsbasiert für Anweisung (C++)](../cpp/range-based-for-statement-cpp.md) stattdessen.  
+Durchläuft ein Array oder eine Auflistung. Dieses nicht standardmäßige Schlüsselwort ist sowohl in C++/CLI und nativen C++-Projekten verfügbar. Seine Verwendung wird jedoch nicht empfohlen. Beachten Sie, mithilfe eines Standarddialogfelds [bereichsbasiert für Anweisung (C++)](../cpp/range-based-for-statement-cpp.md) stattdessen.  
   
 ## <a name="all-runtimes"></a>Alle Laufzeiten  
  **Syntax**  
@@ -43,25 +43,25 @@ Durchläuft ein Array oder eine Auflistung. Dieses nicht standardmäßige Schlü
   
  **Parameter**  
   
- `type`  
- Der `identifier`-Typ.  
+*Typ*<br/>
+Der `identifier`-Typ.  
   
- `identifier`  
- Die Iterationsvariable, die das Auflistungselement darstellt.  Wenn `identifier` ist ein [Verweisoperator nachverfolgen](../windows/tracking-reference-operator-cpp-component-extensions.md), können Sie das Element ändern.  
+*identifier*<br/>
+Die Iterationsvariable, die das Auflistungselement darstellt.  Wenn `identifier` ist eine [Verweisoperator nachverfolgung](../windows/tracking-reference-operator-cpp-component-extensions.md), können Sie das Element ändern.  
   
- `expression`  
- Ein Arrayausdruck oder eine Auflistung. Das Auflistungselement muss zulassen, dass der Compiler es in den Typ `identifier` konvertieren kann.  
+*Ausdruck*<br/>
+Ein Arrayausdruck oder eine Auflistung. Das Auflistungselement muss zulassen, dass der Compiler es in den Typ `identifier` konvertieren kann.  
   
- `statements`  
- Eine oder mehrere auszuführende Anweisungen.  
+*Anweisungen*<br/>
+Eine oder mehrere auszuführende Anweisungen.  
   
  **Hinweise**  
   
  Die `for each`-Anweisung wird zum Durchlaufen einer Auflistung verwendet. Sie können Elemente in einer Auflistung ändern, aber keine Elemente hinzufügen oder löschen.  
   
- Die *Anweisungen* für jedes Element in den Arrays oder einer Auflistung ausgeführt werden. Nachdem die Iteration alle Elemente in der Auflistung durchlaufen hat, wird die Steuerung an die nächste Anweisung, die auf den `for each`-Block folgt, übergeben.  
+ Die *Anweisungen* für jedes Element in das Array oder einer Auflistung ausgeführt werden. Nachdem die Iteration alle Elemente in der Auflistung durchlaufen hat, wird die Steuerung an die nächste Anweisung, die auf den `for each`-Block folgt, übergeben.  
   
- `for each` und `in` sind [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ `for each` und `in` sind [kontextbezogenen Schlüsselwörtern](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
  Weitere Informationen finden Sie unter:   
   
@@ -118,12 +118,12 @@ Testing
 ## <a name="common-language-runtime"></a>Common Language Runtime 
  **Hinweise**  
   
- Die CLR-Syntax ist identisch mit der **alle Laufzeiten** Syntax, außer wie folgt.  
+ Die CLR-Syntax ist identisch mit der **alle Laufzeiten** Syntax, mit Ausnahme der wie folgt.  
   
  *Ausdruck*  
- Ein verwalteter Arrayausdruck oder eine Auflistung. Das Auflistungselement muss zulassen, sodass der Compiler ihn von konvertieren kann <xref:System.Object> auf die *Bezeichner* Typ.  
+ Ein verwalteter Arrayausdruck oder eine Auflistung. Das Auflistungselement muss zulassen, so, dass der Compiler von konvertieren kann <xref:System.Object> auf die *Bezeichner* Typ.  
   
- *Ausdruck* ergibt ein Typ, der implementiert <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, oder ein Typ, definiert einen `GetEnumerator` Methode, die entweder einen Typ zurückgibt, implementiert <xref:System.Collections.IEnumerator> oder deklariert alle Methoden, die in definiertsind`IEnumerator`.  
+ *Ausdruck* ergibt ein Typ, der implementiert <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, oder ein Typ, definiert ein `GetEnumerator` Methode, die entweder einen Typ zurückgibt, implementiert <xref:System.Collections.IEnumerator> oder alle Methoden, die in definiertendeklariert`IEnumerator`.  
   
 ### <a name="requirements"></a>Anforderungen  
  Compileroption: **/clr**  

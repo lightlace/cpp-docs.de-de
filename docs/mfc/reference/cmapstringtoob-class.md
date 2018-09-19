@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6eea9b6005498c6c42017731db7ea706af96726
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a0d233bd9ad35eabe5782e58e186f0033b8cf816
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216989"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085770"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb Class
 Eine Wörterbuchauflistungsklasse, die eindeutige `CString` -Objekte und `CObject` -Zeiger einander zuordnet.  
@@ -241,13 +241,12 @@ void GetNextAssoc(
   
  Die Ergebnisse dieses Programms sind wie folgt aus:  
   
- `Lisa : a CAge at $4724 11`  
-  
- `Marge : a CAge at $47A8 35`  
-  
- `Homer : a CAge at $4766 36`  
-  
- `Bart : a CAge at $45D4 13`  
+```Output
+Lisa : a CAge at $4724 11
+Marge : a CAge at $47A8 35
+Homer : a CAge at $4766 36
+Bart : a CAge at $45D4 13
+```
   
 ##  <a name="getsize"></a>  CMapStringToOb::GetSize  
  Gibt die Anzahl der Elemente zurück.  
@@ -484,11 +483,11 @@ CObject*& operator[ ](lpctstr key);
   
  Die Ergebnisse dieses Programms sind wie folgt aus:  
   
- `Operator [] example: A CMapStringToOb with 2 elements`  
-  
- `[Lisa] = a CAge at $4A02 11`  
-  
- `[Bart] = a CAge at $497E 13`  
+```Output
+Operator [] example: A CMapStringToOb with 2 elements
+[Lisa] = a CAge at $4A02 11
+[Bart] = a CAge at $497E 13
+```
   
 ##  <a name="removeall"></a>  CMapStringToOb::RemoveAll  
  Entfernt alle Elemente aus dieser Zuordnung und zerstört das `CString` key-Objekte.  
@@ -553,13 +552,12 @@ BOOL RemoveKey(LPCTSTR key);
   
  Die Ergebnisse dieses Programms sind wie folgt aus:  
   
- `RemoveKey example: A CMapStringToOb with 3 elements`  
-  
- `[Marge] = a CAge at $49A0 35`  
-  
- `[Homer] = a CAge at $495E 36`  
-  
- `[Bart] = a CAge at $4634 13`  
+```Output
+RemoveKey example: A CMapStringToOb with 3 elements
+[Marge] = a CAge at $49A0 35
+[Homer] = a CAge at $495E 36
+[Bart] = a CAge at $4634 13
+```
   
 ##  <a name="setat"></a>  CMapStringToOb::SetAt  
  Hauptsächlich als Mittel zum Einfügen eines Elements in einer Zuordnung.  
@@ -598,17 +596,14 @@ void SetAt(
   
  Die Ergebnisse dieses Programms sind wie folgt aus:  
   
- `before Lisa's birthday: A CMapStringToOb with 2 elements`  
-  
- `[Lisa] = a CAge at $493C 11`  
-  
- `[Bart] = a CAge at $4654 13`  
-  
- `after Lisa's birthday: A CMapStringToOb with 2 elements`  
-  
- `[Lisa] = a CAge at $49C0 12`  
-  
- `[Bart] = a CAge at $4654 13`  
+```Output
+before Lisa's birthday: A CMapStringToOb with 2 elements
+[Lisa] = a CAge at $493C 11
+[Bart] = a CAge at $4654 13
+after Lisa's birthday: A CMapStringToOb with 2 elements
+[Lisa] = a CAge at $49C0 12
+[Bart] = a CAge at $4654 13
+```
   
 ## <a name="see-also"></a>Siehe auch  
  [CObject-Klasse](../../mfc/reference/cobject-class.md)   

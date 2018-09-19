@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0502528a2db47b8db41437fd7017aece1dc67cde
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9454b33348fa4e4bc2efaa609001201ea215a8c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217744"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081987"
 ---
 # <a name="threadprivate"></a>threadprivate
 Gibt an, dass eine Variable einem Thread zugehörig ist.  
@@ -32,11 +32,10 @@ Gibt an, dass eine Variable einem Thread zugehörig ist.
 #pragma omp threadprivate(var)  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- wobei  
+### <a name="parameters"></a>Parameter
   
- `var`  
- Eine durch Trennzeichen getrennte Liste von Variablen, die Sie an einen Thread als privat kennzeichnen möchten. `var` Hierbei muss es sich um eine globale oder Namespace-bezogenen Variable oder eine statische lokale Variable sein.  
+*var*<br/>
+Eine durch Trennzeichen getrennte Liste von Variablen, die Sie an einen Thread als privat kennzeichnen möchten. `var` Hierbei muss es sich um eine globale oder Namespace-bezogenen Variable oder eine statische lokale Variable sein.  
   
 ## <a name="remarks"></a>Hinweise  
  Die `threadprivate` -Anweisung unterstützt keine OpenMP-Klauseln.  

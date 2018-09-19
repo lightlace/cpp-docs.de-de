@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd3e6809a8204b9a2380e896e4e458512e79fa2b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5603327e7bdc32d9b760fc25160543c682e6f4f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766661"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054505"
 ---
 # <a name="csimplearray-class"></a>CSimpleArray-Klasse
 
@@ -40,16 +40,16 @@ Diese Klasse stellt Methoden zum Verwalten von einem einfachen Array an.
 ## <a name="syntax"></a>Syntax
 
 ```
-template <class T, class TEqual = CSimpleArrayEqualHelper<T>>  
+template <class T, class TEqual = CSimpleArrayEqualHelper<T>>
 class CSimpleArray
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Der Typ der Daten, die im Array gespeichert.
 
-*TEqual*  
+*TEqual*<br/>
 Ein Merkmal-Objekt, und definieren den Gleichheitstest auf für Elemente des Typs *T*.
 
 ## <a name="members"></a>Member
@@ -107,7 +107,7 @@ BOOL Add(const T& t);
 
 ### <a name="parameters"></a>Parameter
 
-*t*  
+*t*<br/>
 Das Element, das dem Array hinzugefügt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -123,13 +123,13 @@ Gibt TRUE zurück, wenn das Element erfolgreich andernfalls in das Array, "false
 Der Konstruktor für das Array-Objekt.
 
 ```
-CSimpleArray(const CSimpleArray<T, TEqual>& src);  
+CSimpleArray(const CSimpleArray<T, TEqual>& src);
 CSimpleArray();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*src*  
+*src*<br/>
 Ein vorhandenes `CSimpleArray`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -158,7 +158,7 @@ int Find(const T& t) const;
 
 ### <a name="parameters"></a>Parameter
 
-*t*  
+*t*<br/>
 Das Element nach dem gesucht werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -203,7 +203,7 @@ T& operator[](int nindex);
 
 ### <a name="parameters"></a>Parameter
 
-*nIndex*  
+*nIndex*<br/>
 Der Elementindex.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -226,7 +226,7 @@ CSimpleArray<T, TEqual>
 
 ### <a name="parameters"></a>Parameter
 
-*src*  
+*src*<br/>
 Das Array kopiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -251,7 +251,7 @@ BOOL Remove(const T& t);
 
 ### <a name="parameters"></a>Parameter
 
-*t*  
+*t*<br/>
 Das Element, aus dem Array entfernt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -284,7 +284,7 @@ BOOL RemoveAtint nIndex);
 
 ### <a name="parameters"></a>Parameter
 
-*nIndex*  
+*nIndex*<br/>
 Indizieren Sie die zu entfernenden Elements auf.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -307,10 +307,10 @@ BOOL SetAtIndex(
 
 ### <a name="parameters"></a>Parameter
 
-*nIndex*  
+*nIndex*<br/>
 Der Index des Elements zu ändern.
 
-*t*  
+*t*<br/>
 Der dem angegebenen Element zuzuweisende Wert.
 
 ### <a name="return-value"></a>Rückgabewert

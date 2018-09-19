@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5bf01db5baff0bda6cda1d47ffb6f64e7d9bac1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7d3f8f52e237fe364f73057c81eb17c8fd3def18
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759430"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041037"
 ---
 # <a name="atl-registry-component-registrar"></a>ATL-Registrierungskomponente (Registrar)
 
@@ -36,14 +36,14 @@ Der ATL-Registrierung bietet optimierten Zugriff auf die Registrierung des Syste
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Erstellen von Registrierungsskripts](../atl/creating-registrar-scripts.md)  
+[Erstellen von Registrierungsskripts](../atl/creating-registrar-scripts.md)<br/>
 Eine Anleitung zum Erstellen von Skripts für die Registrierung. Enthält Themen, in der BNF-Syntax in analysestrukturen, Registrierung-Skriptbeispielen, mithilfe von ersetzbaren Parametern und das Aufrufen von Skripts.
 
-[Das Einrichten eines statischen Links zum Registrierungscode (nur C++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  
+[Das Einrichten eines statischen Links zum Registrierungscode (nur C++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)<br/>
 Listet die Schritte zum Einrichten der statischen Verknüpfung mit der Registrierungsstelle.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Enthält Links zu konzeptionellen Themen über die Programmierung mit der Active Template Library.
 

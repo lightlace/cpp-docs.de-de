@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3767 | Microsoft Docs
+title: Compilerfehler C3767 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,72 +16,73 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e7e5e422206f3ee58b95024a3b96244d848e1b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e4e5f73016060ccc17dfe0218d8b518b2f5dbdbd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273604"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081441"
 ---
 # <a name="compiler-error-c3767"></a>Compilerfehler C3767
-'Funktion': Auf mögliche Funktion(en) kann nicht zugegriffen werden  
-  
- Bei einer in einer Klasse definierten Friend-Funktion wird nicht davon ausgegangen, dass sie so behandelt wird, als wäre sie im globalen Gültigkeitsbereich des Namespaces definiert und deklariert worden. Sie kann jedoch mittels einer argumentbezogenen Suche gefunden werden.  
-  
- C3767 kann auch von einer wichtigen Änderung verursacht worden sein: systemeigene Typen sind nun standardmäßig im privaten eine **"/ CLR"** -Kompilierung finden Sie unter [geben Sichtbarkeit](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) für Weitere Informationen.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C3767 generiert:  
-  
-```  
-// C3767a.cpp  
-// compile with: /clr  
-using namespace System;  
-public delegate void TestDel();  
-  
-public ref class MyClass {  
-public:  
-   static event TestDel^ MyClass_Event;  
-};  
-  
-public ref class MyClass2 : public MyClass {  
-public:  
-   void Test() {  
-      MyClass^ patient = gcnew MyClass;  
-      patient->MyClass_Event();  
-    }  
-};  
-  
-int main() {  
-   MyClass^ x = gcnew MyClass;  
-   x->MyClass_Event();   // C3767  
-  
-   // OK  
-   MyClass2^ y = gcnew MyClass2();  
-   y->Test();  
-};  
-```  
-  
- Im folgenden Beispiel wird C3767 generiert:  
-  
-```  
-// C3767c.cpp  
-// compile with: /clr /c  
-  
-ref class Base  {  
-protected:  
-   void Method() {  
-      System::Console::WriteLine("protected");  
-   }  
-};  
-  
-ref class Der : public Base {  
-   void Method() {  
-      ((Base^)this)->Method();   // C3767  
-      // try the following line instead  
-      // Base::Method();  
-   }  
-};  
-```  
-  
- 
+
+'Funktion': Auf mögliche Funktion(en) kann nicht zugegriffen werden
+
+Bei einer in einer Klasse definierten Friend-Funktion wird nicht davon ausgegangen, dass sie so behandelt wird, als wäre sie im globalen Gültigkeitsbereich des Namespaces definiert und deklariert worden. Sie kann jedoch mittels einer argumentbezogenen Suche gefunden werden.
+
+C3767 kann auch von einer wichtigen Änderung verursacht werden: systemeigene Typen sind nun standardmäßig im privaten eine **"/ CLR"** Kompilierung; Siehe [Geben Sie die Sichtbarkeit](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) für Weitere Informationen.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C3767 generiert:
+
+```
+// C3767a.cpp
+// compile with: /clr
+using namespace System;
+public delegate void TestDel();
+
+public ref class MyClass {
+public:
+   static event TestDel^ MyClass_Event;
+};
+
+public ref class MyClass2 : public MyClass {
+public:
+   void Test() {
+      MyClass^ patient = gcnew MyClass;
+      patient->MyClass_Event();
+    }
+};
+
+int main() {
+   MyClass^ x = gcnew MyClass;
+   x->MyClass_Event();   // C3767
+
+   // OK
+   MyClass2^ y = gcnew MyClass2();
+   y->Test();
+};
+```
+
+Im folgende Beispiel wird die C3767 generiert:
+
+```
+// C3767c.cpp
+// compile with: /clr /c
+
+ref class Base  {
+protected:
+   void Method() {
+      System::Console::WriteLine("protected");
+   }
+};
+
+ref class Der : public Base {
+   void Method() {
+      ((Base^)this)->Method();   // C3767
+      // try the following line instead
+      // Base::Method();
+   }
+};
+```
+

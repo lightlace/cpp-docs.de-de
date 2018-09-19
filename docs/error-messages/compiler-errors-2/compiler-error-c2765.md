@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2765 generiert | Microsoft Docs
+title: Compilerfehler C2765 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 926cc1657db67530f866a2b2e00e4b23f4ccd0bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 708a4c326e87cf580208e26ef5ffe540afd52f95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234582"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085133"
 ---
-# <a name="compiler-error-c2765"></a>Compiler-Fehler C2765 generiert
-'Funktion': eine explizite Spezialisierung einer Funktionsvorlage darf Standardargumente haben  
-  
- Standardargumente sind für eine explizite Spezialisierung einer Funktionsvorlage nicht zulässig. Weitere Informationen finden Sie unter [explizite Spezialisierung von Funktionsvorlagen](../../cpp/explicit-specialization-of-function-templates.md).  
-  
- Im folgende Beispiel wird C2765 generiert:  
-  
-```  
-// C2765.cpp  
-template<class T> void f(T t) {};  
-  
-template<> void f<char>(char c = 'a') {}   // C2765  
-// try the following line instead  
-// template<> void f<char>(char c) {}  
+# <a name="compiler-error-c2765"></a>Compilerfehler C2765
+
+'Funktion': eine explizite Spezialisierung einer Funktionsvorlage darf Standardargumente haben
+
+Standardargumente sind in einer expliziten Spezialisierung einer Funktionsvorlage nicht zulässig. Weitere Informationen finden Sie unter [explizite Spezialisierung von Funktionsvorlagen](../../cpp/explicit-specialization-of-function-templates.md).
+
+Im folgende Beispiel wird die C2765 generiert:
+
+```
+// C2765.cpp
+template<class T> void f(T t) {};
+
+template<> void f<char>(char c = 'a') {}   // C2765
+// try the following line instead
+// template<> void f<char>(char c) {}
 ```

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 914619c2790a904530f6efe2324549402d9b6785
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fa3f3356cf3fdddeeb4245986549fa1bd2e12ae7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758156"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085224"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY-Makros  
 
@@ -72,7 +72,8 @@ COM_INTERFACE_ENTRY( x )
 ```
 ### <a name="parameters"></a>Parameter
 
-X [in] der Name einer Schnittstelle leitet das Klassenobjekt direkt aus.
+*w*<br/>
+[in] Der Name einer Schnittstelle, die das Klassenobjekt direkt von abgeleitet ist.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -101,10 +102,10 @@ COM_INTERFACE_ENTRY2(x, x2)
 
 ### <a name="parameters"></a>Parameter
 
-*w*  
+*w*<br/>
 [in] Der Name einer Schnittstelle, die Sie von Ihrem Objekt verfügbar machen möchten.
 
-*x2*  
+*x2*<br/>
 [in] Der Name des branchs Vererbung aus dem *x* verfügbar gemacht wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -125,10 +126,10 @@ COM_INTERFACE_ENTRY_IID(iid, x)
 
 ### <a name="parameters"></a>Parameter
 
-*IID*  
+*IID*<br/>
 [in] Die GUID der Schnittstelle verfügbar gemacht werden.
 
-*w*  
+*w*<br/>
 [in] Der Name der Klasse, deren Vtable verfügbar werden, wie die Schnittstelle identifizierte gemacht wird *Iid*.
 
 ### <a name="example"></a>Beispiel
@@ -145,13 +146,13 @@ COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 
 ### <a name="parameters"></a>Parameter
 
-*IID*  
+*IID*<br/>
 [in] Die GUID, die Sie für die Schnittstelle angegeben werden.
 
-*w*  
+*w*<br/>
 [in] Der Name einer Schnittstelle, die das Klassenobjekt direkt von abgeleitet ist.
 
-*x2*  
+*x2*<br/>
 [in] Der Name des eine zweite Schnittstelle, der das Klassenobjekt direkt von abgeleitet ist.
 
 ##  <a name="com_interface_entry_aggregate"></a>  COM_INTERFACE_ENTRY_AGGREGATE
@@ -164,10 +165,10 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 
 ### <a name="parameters"></a>Parameter
 
-*IID*  
+*IID*<br/>
 [in] Die GUID der Schnittstelle abgefragt.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Der Name des ein `IUnknown` Zeiger.
 
 ### <a name="remarks"></a>Hinweise
@@ -188,7 +189,7 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
 
 ### <a name="parameters"></a>Parameter
 
-*pUnk*  
+*pUnk*<br/>
 [in] Der Name des ein `IUnknown` Zeiger.
 
 ### <a name="remarks"></a>Hinweise
@@ -209,13 +210,13 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 
 ### <a name="parameters"></a>Parameter
 
-*IID*  
+*IID*<br/>
 [in] Die GUID der Schnittstelle abgefragt.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Der Name des ein `IUnknown` Zeiger. Sie muss ein Member der Klasse, die die COM-Zuordnung enthält.
 
-*clsid*  
+*clsid*<br/>
 [in] Der Bezeichner des Aggregats, das Wenn erstellt *Punk* ist NULL.
 
 ### <a name="remarks"></a>Hinweise
@@ -234,10 +235,10 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 
 ### <a name="parameters"></a>Parameter
 
-*pUnk*  
+*pUnk*<br/>
 [in] Der Name des ein `IUnknown` Zeiger. Sie muss ein Member der Klasse, die die COM-Zuordnung enthält.
 
-*clsid*  
+*clsid*<br/>
 [in] Der Bezeichner des Aggregats, das Wenn erstellt *Punk* ist NULL.
 
 ### <a name="remarks"></a>Hinweise
@@ -258,7 +259,7 @@ COM_INTERFACE_ENTRY_BREAK(x)
 
 ### <a name="parameters"></a>Parameter
 
-*w*  
+*w*<br/>
 [in] Text verwendet, um den Schnittstellenbezeichner zu erstellen.
 
 ### <a name="remarks"></a>Hinweise
@@ -275,13 +276,13 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 
 ### <a name="parameters"></a>Parameter
 
-*IID*  
+*IID*<br/>
 [in] Die GUID der Schnittstelle abtrennbare.
 
-*w*  
+*w*<br/>
 [in] Der Name der Klasse, die die Schnittstelle implementiert.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Der Name des ein `IUnknown` Zeiger. Sie muss ein Member der Klasse, die die COM-Zuordnung enthält. Sollte auf NULL im Konstruktor der Klasse des Objekts initialisiert werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -302,10 +303,10 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 
 ### <a name="parameters"></a>Parameter
 
-*IID*  
+*IID*<br/>
 [in] Die GUID der Schnittstelle abtrennbare.
 
-*w*  
+*w*<br/>
 [in] Der Name der Klasse, die die Schnittstelle implementiert.
 
 ### <a name="remarks"></a>Hinweise
@@ -326,7 +327,7 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
 
 ### <a name="parameters"></a>Parameter
 
-*classname*  
+*classname*<br/>
 [in] Eine Basisklasse des aktuellen Objekts.
 
 ### <a name="remarks"></a>Hinweise
@@ -349,13 +350,13 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 
 ### <a name="parameters"></a>Parameter
 
-*IID*  
+*IID*<br/>
 [in] Die GUID der Schnittstelle verfügbar gemacht werden.
 
-*Data Warehouse*  
+*Data Warehouse*<br/>
 [in] Ein Parameter übergeben die *Func*.
 
-*func*  
+*func*<br/>
 [in] Der Funktionszeiger, der zurückgegeben wird *Iid*.
 
 ### <a name="remarks"></a>Hinweise
@@ -376,10 +377,10 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 
 ### <a name="parameters"></a>Parameter
 
-*Data Warehouse*  
+*Data Warehouse*<br/>
 [in] Ein Parameter übergeben die *Func*.
 
-*func*  
+*func*<br/>
 [in] Die Funktion, die aufgerufen wird, wenn dieser Eintrag in der COM-Zuordnung verarbeitet wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -396,7 +397,7 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 
 ### <a name="parameters"></a>Parameter
 
-*w*  
+*w*<br/>
 [in] Text verwendet, um den Schnittstellenbezeichner zu erstellen.
 
 ### <a name="remarks"></a>Hinweise

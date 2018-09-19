@@ -16,14 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36cb39b467cb413cdf74bef52430cf8caf746199
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a5db612c836e4b902e7cad83017661246f4b649e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340689"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079387"
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>Aktivieren und Deaktivieren von Diensten für einen Anbieter
+
 Einzelne OLE DB-Dienste können aktiviert oder deaktiviert wird, wird standardmäßig für alle Anwendungen, die auf einen einzigen Anbieter zugreifen. Dies erfolgt durch hinzufügen einen OLEDB_SERVICES-Registrierungseintrag unter der CLSID des Anbieters, mit einem `DWORD` -Wert, der Dienste zum Aktivieren oder Deaktivieren der angibt, wie in der folgenden Tabelle gezeigt.  
   
 |Standarddienste, die aktiviert|Schlüsselwortwert|  
@@ -36,4 +37,5 @@ Einzelne OLE DB-Dienste können aktiviert oder deaktiviert wird, wird standardm�
 |Keine Aggregation, alle Dienste deaktiviert|\<Fehlender Schlüssel >|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Aktivieren und Deaktivieren von OLE DB-Diensten](../../data/oledb/enabling-and-disabling-ole-db-services.md)
+
+[Aktivieren und Deaktivieren von OLE DB-Diensten](../../data/oledb/enabling-and-disabling-ole-db-services.md)

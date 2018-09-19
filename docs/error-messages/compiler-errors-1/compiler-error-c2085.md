@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C2085 | Microsoft Docs
+title: Compilerfehler C2085 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0fe489dbdd0934926a056bbc7e5539f40ca1ba8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d88968e49e38a13782dde2d905a614ad4d177e81
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169841"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082377"
 ---
-# <a name="compiler-error-c2085"></a>Compilerfehler Fehler C2085
-'Bezeichner': nicht in der Liste formaler Parameter  
-  
- Der Bezeichner wurde in einer Funktionsdefinition, aber nicht in der Liste formaler Parameter deklariert. (Nur ANSI-C)  
-  
- Im folgende Beispiel wird C2085 generiert:  
-  
-```  
-// C2085.c  
-void func1( void )  
-int main( void ) {}   // C2085  
-```  
-  
- Mögliche Lösung:  
-  
-```  
-// C2085b.c  
-void func1( void );  
-int main( void ) {}  
-```  
-  
- Das Semikolon fehlt, `func1()` einer Funktionsdefinition, nicht um einen Prototyp, deshalb sieht `main` ist definiert in `func1()`, generieren Fehler C2085 für Bezeichner `main`.
+# <a name="compiler-error-c2085"></a>Compilerfehler C2085
+
+'Bezeichner': nicht in der Liste formaler Parameter
+
+Der Bezeichner wurde in einer Funktionsdefinition, aber nicht in der Liste formaler Parameter deklariert. (Nur ANSI-C)
+
+Im folgende Beispiel wird die C2085 generiert:
+
+```
+// C2085.c
+void func1( void )
+int main( void ) {}   // C2085
+```
+
+Mögliche Lösung:
+
+```
+// C2085b.c
+void func1( void );
+int main( void ) {}
+```
+
+Das Semikolon fehlt, `func1()` ähnelt einer Funktionsdefinition, nicht um einen Prototyp, also `main` definiert ist `func1()`, generieren Fehler C2085 für Bezeichner `main`.

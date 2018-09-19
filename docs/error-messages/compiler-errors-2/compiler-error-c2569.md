@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2569 | Microsoft Docs
+title: Compilerfehler C2569 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4869f13d972cea80bd590633b3aae2ea0c96f392
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9309576439a772427c6adcb6f94826a8f9230058
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230341"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078854"
 ---
 # <a name="compiler-error-c2569"></a>Compilerfehler C2569
-'EnumOderUnion': Enumeration/Union kann nicht als Basisklasse verwendet werden  
-  
- Wenn Sie einen Typ aus der angegebenen Union oder Enumeration abgeleitet werden müssen, ändern Sie die Union oder Enumeration zu einer Klasse oder Struktur an.  
-  
- Im folgende Beispiel wird C2569 generiert:  
-  
-```  
-// C2569.cpp  
-// compile with: /c  
-union ubase {};  
-class cHasPubUBase : public ubase {};   // C2569  
-// OK  
-struct sbase {};  
-class cHasPubUBase : public sbase {};  
+
+'EnumOderUnion': Enumeration/Union kann nicht als Basisklasse verwendet werden
+
+Wenn Sie einen Typ aus der angegebenen Union oder Enumeration abgeleitet werden müssen, ändern Sie die Union oder Enumeration in einer Klasse oder Struktur an.
+
+Im folgende Beispiel wird die C2569 generiert:
+
+```
+// C2569.cpp
+// compile with: /c
+union ubase {};
+class cHasPubUBase : public ubase {};   // C2569
+// OK
+struct sbase {};
+class cHasPubUBase : public sbase {};
 ```

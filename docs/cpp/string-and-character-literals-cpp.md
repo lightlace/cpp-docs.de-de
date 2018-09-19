@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de3dffbbacd69d19b2a3fc5ba1fac360712db19e
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: f34bd3f1594a49737f4298316b5eb3fe08b866a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895252"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038554"
 ---
 # <a name="string-and-character-literals--c"></a>Zeichenfolgen- und Zeichenliterale (C++)
 
@@ -41,8 +41,8 @@ C++ unterstützt verschiedene Zeichenfolgen- und Zeichentypen und bietet Möglic
 #include <string>
 using namespace std::string_literals; // enables s-suffix for std::string literals
 
-int main()  
-{  
+int main()
+{
     // Character literals
     auto c0 =   'A'; // char
     auto c1 = u8'A'; // char
@@ -51,16 +51,16 @@ int main()
     auto c4 =  U'A'; // char32_t
 
     // String literals
-    auto s0 =   "hello"; // const char*  
+    auto s0 =   "hello"; // const char*
     auto s1 = u8"hello"; // const char*, encoded as UTF-8
-    auto s2 =  L"hello"; // const wchar_t*  
+    auto s2 =  L"hello"; // const wchar_t*
     auto s3 =  u"hello"; // const char16_t*, encoded as UTF-16
     auto s4 =  U"hello"; // const char32_t*, encoded as UTF-32
 
     // Raw string literals containing unescaped \ and "
-    auto R0 =   R"("Hello \ world")"; // const char*  
+    auto R0 =   R"("Hello \ world")"; // const char*
     auto R1 = u8R"("Hello \ world")"; // const char*, encoded as UTF-8
-    auto R2 =  LR"("Hello \ world")"; // const wchar_t*  
+    auto R2 =  LR"("Hello \ world")"; // const wchar_t*
     auto R3 =  uR"("Hello \ world")"; // const char16_t*, encoded as UTF-16
     auto R4 =  UR"("Hello \ world")"; // const char32_t*, encoded as UTF-32
 
@@ -72,13 +72,13 @@ int main()
     auto S4 =  U"hello"s; // std::u32string
 
     // Combining raw string literals with standard s-suffix
-    auto S5 =   R"("Hello \ world")"s; // std::string from a raw const char*  
+    auto S5 =   R"("Hello \ world")"s; // std::string from a raw const char*
     auto S6 = u8R"("Hello \ world")"s; // std::string from a raw const char*, encoded as UTF-8
-    auto S7 =  LR"("Hello \ world")"s; // std::wstring from a raw const wchar_t*  
+    auto S7 =  LR"("Hello \ world")"s; // std::wstring from a raw const wchar_t*
     auto S8 =  uR"("Hello \ world")"s; // std::u16string from a raw const char16_t*, encoded as UTF-16
     auto S9 =  UR"("Hello \ world")"s; // std::u32string from a raw const char32_t*, encoded as UTF-32
-}  
-```  
+}
+```
 
 Ein Zeichenfolgenliteral kann kein Präfix, auch kein `u8`-, `L`-, `u`- und  `U` -Präfix haben, um Codierung für schmale Zeichen (Einzelbyte oder Multibyte), UTF-8, breite Zeichen (UCS-2- oder UTF-16), UTF-16 bzw. UTF-32 zu kennzeichnen. Ein unformatiertes Zeichenfolgenliteral kann ein `R`-, `u8R`-, `LR`, `uR` - oder `UR` -Präfix für die jeweils in unformatierter Version vorliegende Entsprechung dieser Codierungen haben.  Um temporäre oder statische std::string-Werte zu erstellen, können Sie Zeichenfolgenliterale oder unformatierte Zeichenfolgenliterale mit einem `s` -Suffix verwenden. Weitere Informationen finden Sie im Abschnitt „Zeichenfolgenliterale“ weiter unten. Weitere Informationen zu den grundlegenden quellzeichensätzen, zu universellen Zeichennamen sowie mithilfe von Zeichen aus erweiterten Codepages in Ihrem Quellcode finden Sie [Zeichensätze](../cpp/character-sets.md).
 
@@ -86,15 +86,15 @@ Ein Zeichenfolgenliteral kann kein Präfix, auch kein `u8`-, `L`-, `u`- und  `U`
 
 Ein *Zeichenfolgenliteral* besteht aus einem konstanten Zeichen. Es wird durch das Zeichen dargestellt, das von einfachen Anführungszeichen eingeschlossen ist. Es gibt fünf Arten von Zeichenliteralen:
 
--   Normale Zeichenliterale vom Typ **Char**, z. B. `'a'`  
+- Normale Zeichenliterale vom Typ **Char**, z. B. `'a'`
 
--   UTF-8-Zeichenliterale vom Typ **Char**, z. B. `u8'a'`  
+- UTF-8-Zeichenliterale vom Typ **Char**, z. B. `u8'a'`
 
--   Breite Zeichenliterale vom Typ `wchar_t`, beispielsweise `L'a'`  
+- Breite Zeichenliterale vom Typ `wchar_t`, beispielsweise `L'a'`
 
--   UTF-16-Zeichenliterale vom Typ `char16_t`, z. B. `u'a'`  
+- UTF-16-Zeichenliterale vom Typ `char16_t`, z. B. `u'a'`
 
--   UTF-32-Zeichenliterale vom Typ `char32_t`, z. B. `U'a'`  
+- UTF-32-Zeichenliterale vom Typ `char32_t`, z. B. `U'a'`
 
 Das Zeichen für ein Zeichenliteral verwendet möglicherweise eine beliebige Zeichen mit Ausnahme der reservierten Zeichen umgekehrter Schrägstrich ("\\"), einfaches Anführungszeichen (') oder neue Zeile. Reservierte Zeichen können mit einer Escapesequenz angegeben werden. Zeichen können mit universellen Zeichennamen angegeben werden, solange der Typ groß genug ist, das Zeichen zu enthalten.
 
@@ -132,7 +132,7 @@ Der folgende Code zeigt einige Beispiele für Escapezeichen von Literalen für n
 #include <iostream>
 using namespace std;
 
-int main() {  
+int main() {
     char newline = '\n';
     char tab = '\t';
     char backspace = '\b';
@@ -145,24 +145,24 @@ int main() {
     cout << "Backspace character: " << backspace << "ending" << endl; // Backspace character : ending
     cout << "Backslash character: " << backslash << "ending" << endl; // Backslash character : \ending
     cout << "Null character: " << nullChar << "ending" << endl; //Null character:  ending
-}  
-```  
+}
+```
 
-**Microsoft-spezifisch**  
+**Microsoft-spezifisch**
 
 Um einen Wert in ein normales Zeichen literal (die ohne Präfix) zu erstellen, konvertiert der Compiler das Zeichen oder die Zeichenfolge zwischen einfachen Anführungszeichen in 8-Bit-Werte in eine 32-Bit-Ganzzahl. Mehrere Zeichen im Literal belegen entsprechende Bytes nach Bedarf vom höherwertigen zum niederwertigen Byte. Zum Erstellen einer **Char** Wert ist, nimmt der Compiler das niederwertige Byte. Zum Erstellen einer **"wchar_t"** oder `char16_t` Wert ist, nimmt der Compiler das niederwertige Wort. Der Compiler warnt, dass das Ergebnis abgeschnitten wird, wenn irgendwelche Bits über dem zugewiesenen Byte oder Word Bits festgelegt sind.
 
 ```cpp
 char c0    = 'abcd';    // C4305, C4309, truncates to 'd'
 wchar_t w0 = 'abcd';    // C4305, C4309, truncates to '\x6364'
-```  
+```
 
 Eine oktale Escapesequenz ist ein umgekehrter Schrägstrich gefolgt von einer Sequenz von bis 3 Oktalziffern. Eine oktale Escapesequenz, die scheinbar mehr als drei Ziffern enthält, wird als eine 3-ziffrige oktale Sequenz gefolgt von den weiteren Ziffern als Zeichen behandelt. Dies kann zu überraschenden Ergebnissen führen. Zum Beispiel:
 
 ```cpp
 char c1 = '\100';   // '@'
 char c2 = '\1000';  // C4305, C4309, truncates to '0'
-```  
+```
 
 Eine Escapesequenzen, die scheinbar nicht oktale Zeichen enthält, wird als eine oktale Sequenz bis zu dem letzten oktalen Zeichen gefolgt von den verbleibenden Zeichen ausgewertet. Zum Beispiel:
 
@@ -170,14 +170,14 @@ Eine Escapesequenzen, die scheinbar nicht oktale Zeichen enthält, wird als eine
 char c3 = '\009';   // '9'
 char c4 = '\089';   // C4305, C4309, truncates to '9'
 char c5 = '\qrs';   // C4129, C4305, C4309, truncates to 's'
-```  
+```
 
 Eine hexadezimale Escapesequenz ist ein umgekehrter Schrägstrich, gefolgt von dem Zeichen `x`, gefolgt von einer Sequenz von hexadezimalen Zeichen. Eine Escapesequenz, die keine Hexadezimalziffern enthält, verursacht den Compilerfehler C2153 "Hexadezimale Literale müssen mindestens eine hexadezimale Ziffer enthalten". Führende Nullen werden ignoriert. Eine Escapesequenz, die anscheinend hexadezimale und nicht hexadezimale Zeichen beinhaltet, wird als eine hexadezimale Escapesequenz bis zum letzten hexadezimalen Zeichen gefolgt von den nicht hexadezimalen Zeichen ausgewertet.   In einem normalen oder mit dem Präfix u8 ist der höchste Hexadezimalwert 0xFF. In einem Breitzeichenliteral mit dem Präfix L oder u ist 0xFFFF der höchste Hexadezimalwert. In einem Breitzeichenliteral mit dem Präfix U ist 0xFFFFFFFF der höchste Hexadezimalwert.
 
 ```cpp
 char c6 = '\x0050'; // 'P'
 char c7 = '\x0pqr'; // C4305, C4309, truncates to 'r'
-```  
+```
 
 Enthält ein Breitzeichenliteral mit dem Präfix `L` mehr als ein Zeichen, wird der Wert des ersten Zeichens übernommen. Nachfolgende Zeichen werden ignoriert, im Gegensatz zu das Verhalten von das entsprechende gewöhnliche Zeichenliteral.
 
@@ -189,9 +189,9 @@ wchar_t w4 = L'\089';   // C4066 L'\0', 89 ignored
 wchar_t w5 = L'\qrs';   // C4129, C4066 L'q' escape, rs ignored
 wchar_t w6 = L'\x0050'; // L'P'
 wchar_t w7 = L'\x0pqr'; // C4066 L'\0', pqr ignored
-```  
+```
 
-**Ende Microsoft-spezifisch**  
+**Ende Microsoft-spezifisch**
 
 Der umgekehrte Schrägstrich (\\) ist ein Zeilenfortsetzungszeichen, wenn sie am Ende einer Zeile platziert wird. Wenn ein umgekehrter Schrägstrich als Zeichenliteral angezeigt werden soll, müssen Sie zwei umgekehrte Schrägstriche in einer Zeile (`\\`) eingeben. Weitere Informationen zum Zeilenfortsetzungszeichen finden Sie unter [Phases of Translation](../preprocessor/phases-of-translation.md).
 
@@ -205,7 +205,7 @@ char u2 = '\101';       // octal, 'A'
 char u3 = '\x41';       // hexadecimal, 'A'
 char u4 = '\u0041';     // \u UCN 'A'
 char u5 = '\U00000041'; // \U UCN 'A'
-```  
+```
 
 #### <a name="surrogate-pairs"></a>Ersatzzeichenpaare
 
@@ -226,7 +226,7 @@ const char *narrow = "abcd";
 
 // represents the string: yes\no
 const char *escaped = "yes\\no";
-```  
+```
 
 #### <a name="utf-8-encoded-strings"></a>UTF-8 codierte Zeichenfolgen
 
@@ -235,7 +235,7 @@ Eine UTF-8 codierte Zeichenfolge ist ein mit dem Präfix U8 versehenes, durch do
 ```cpp
 const char* str1 = u8"Hello World";
 const char* str2 = u8"\U0001F607 is O:-)";
-```  
+```
 
 ### <a name="wide-string-literals"></a>Breite Zeichenfolgenliterale
 
@@ -244,16 +244,16 @@ Ein breites Zeichenfolgenliteral ist ein Null-terminierte Array eines Konstanten
 ```cpp
 const wchar_t* wide = L"zyxw";
 const wchar_t* newline = L"hello\ngoodbye";
-```  
+```
 
-#### <a name="char16t-and-char32t-c11"></a>char16_t und char32_t (C ++ 11)  
+#### <a name="char16t-and-char32t-c11"></a>char16_t und char32_t (C ++ 11)
 
 C ++ 11 stellt die portablen `char16_t` (16-Bit-Unicode) und `char32_t` (32-Bit-Unicode)-Zeichentypen vor:
 
 ```cpp
-auto s3 = u"hello"; // const char16_t*  
-auto s4 = U"hello"; // const char32_t*  
-```  
+auto s3 = u"hello"; // const char16_t*
+auto s4 = U"hello"; // const char32_t*
+```
 
 ### <a name="raw-string-literals-c11"></a>Unformatierte Zeichenfolgenliterale (C++11)
 
@@ -273,13 +273,13 @@ Ein Trennzeichen ist eine benutzerdefinierte Sequenz von bis zu 16 Zeichen, die 
 ```cpp
 // meant to represent the string: )"
 const char* bad_parens = R"()")";  // error C2059
-```  
+```
 
 Durch ein Trennzeichen wird er jedoch behoben:
 
 ```cpp
 const char* good_parens = R"xyz()")xyz";
-```  
+```
 
 Sie können ein unformatiertes Zeichenfolgenliteral konstruieren, in dessen Quelle ein Zeilenumbruch (nicht das Escapezeichen) enthalten ist:
 
@@ -288,7 +288,7 @@ Sie können ein unformatiertes Zeichenfolgenliteral konstruieren, in dessen Quel
 //goodbye
 const wchar_t* newline = LR"(hello
 goodbye)";
-```  
+```
 
 ### <a name="stdstring-literals-c14"></a>std:: Zeichenfolgenliterale (C++14)
 
@@ -302,13 +302,13 @@ string str2{ u8"Hello World" };
 wstring str3{ L"hello"s };
 u16string str4{ u"hello"s };
 u32string str5{ U"hello"s };
-```  
+```
 
 Das S-Suffix kann auch auf unformatierten Zeichenfolgenliteralen verwendet werden:
 
 ```cpp
 u32string str6{ UR"(She said "hello.")"s };
-```  
+```
 
 Std:: Zeichenfolgenliterale sind im Namespace definierten `std::literals::string_literals` in die \<Zeichenfolge >-Headerdatei. Da `std::literals::string_literals`und `std::literals` beide als [inlinenamespaces](../cpp/namespaces-cpp.md)deklariert werden, wird `std::literals::string_literals` automatisch so behandelt, als ob sie direkt zum Namespace `std`gehören.
 
@@ -319,7 +319,7 @@ Für ANSI Char\* Zeichenfolgen und andere Einzelbyte-Codierungen (nicht UTF-8), 
 ```cpp
 const wchar_t* str = L"Hello!";
 const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
-```  
+```
 
 Beachten Sie, dass `strlen()` und `wcslen()` enthalten nicht die Größe des beendenden Null-Zeichens, dessen Größe gleich der Elementgröße vom Zeichenfolgentyp ist: ein Byte für eine Char\* "string", "zwei Bytes für Wchar_t\* oder char16_t\*Zeichenfolgen und vier Bytes auf char32_t\* Zeichenfolgen.
 
@@ -336,14 +336,14 @@ In Visual C++ können Sie ein Zeichenfolgenliteral verwenden, um einen Zeiger au
 ```cpp
 wchar_t* str = L"hello";
 str[2] = L'a'; // run-time error: access violation
-```  
+```
 
 Sie können dazu führen, dass den Compiler einen Fehler auszugegeben, wenn ein Zeichenfolgenliteral in einen Non_const-Zeichenzeiger, beim Festlegen konvertiert wird der [/Zc: strictstrings (Zeichenfolgenliteral-typkonvertierung deaktivieren)](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) -Compileroption. Dies empfiehlt sich für mit den Standards kompatiblen portablen Code. Es ist auch empfiehlt sich, verwenden Sie die **automatisch** Schlüsselwort String Literals initialisiert Zeiger deklariert werden, da es in den richtigen (const) Typ auflöst. In diesem Codebeispiel wird ein Versuch abgefangen, zur Kompilierungszeit in ein Zeichenfolgenliteral zu schreiben:
 
 ```cpp
 auto str = L"hello";
 str[2] = L'a'; // C3892: you cannot assign to a variable that is const.
-```  
+```
 
 In einigen Fällen können identische Zeichenfolgenliterale "zusammengelegt" werden, um Speicherplatz in der ausführbaren Datei zu sparen. Im Zeichenfolgenliteral-Pooling bewirkt der Compiler, dass alle Verweise auf ein bestimmtes Zeichenfolgenliteral auf die gleiche Position im Arbeitsspeicher zeigen, anstatt dass alle Verweise auf eine separate Instanz des Zeichenfolgenliterals zeigen. Verwenden Sie die [/GF](../build/reference/gf-eliminate-duplicate-strings.md) -Compileroption, um Stringpooling zu aktivieren.
 
@@ -355,33 +355,33 @@ Benachbarte breite oder schmale Zeichenfolgenliterale werden verkettet. Diese De
 
 ```cpp
 char str[] = "12" "34";
-```  
+```
 
 mit dieser Deklaration identisch:
 
 ```cpp
 char atr[] = "1234";
-```  
+```
 
 und mit dieser Deklaration identisch:
 
 ```cpp
 char atr[] =  "12\
 34";
-```  
+```
 
 Durch die Verwendung eingebetteter hexadezimaler Escapesequenzen für die Angabe von Zeichenfolgenliterale können unerwartete Ergebnisse verursacht werden. Im folgenden Beispiel soll ein Zeichenfolgenliteral erstellt werden, das ASCII 5-Zeichen enthält, gefolgt von den Zeichen f, i, v und e:
 
 ```cpp
 "\x05five"
-```  
+```
 
 Das eigentliche Ergebnis ist ein hexadezimales 5F, also der ASCII-Code für einen Unterstrich, gefolgt von den Zeichen i, v und e. Sie können eines der folgenden Elemente verwenden, um das richtige Ergebnis zu erhalten:
 
 ```cpp
 "\005five"     // Use octal literal.
 "\x05" "five"  // Use string splicing.
-```  
+```
 
 std::string-Literale können mit dem +-Operator, der für die definierten [Basic_string](../standard-library/basic-string-class.md) Typen definiert ist, verkettet werden, da sie std::String-Datentypen sind. Sie können auch auf die gleiche Weise wie benachbarte Zeichenfolgenliterale verkettet werden. In beiden Fällen müssen die Zeichenfolgencodierung und das Suffix übereinstimmen:
 
@@ -390,7 +390,7 @@ auto x1 = "hello" " " " world"; // OK
 auto x2 = U"hello" " " L"world"; // C2308: disagree on prefix
 auto x3 = u8"hello" " "s u8"world"s; // OK, agree on prefixes and suffixes
 auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
-```  
+```
 
 ### <a name="string-literals-with-universal-character-names"></a>Zeichenfolgenliterale mit universellen Zeichennamen
 
@@ -400,21 +400,21 @@ In systemeigenen (nicht unformatierten) Zeichenfolgenliteralen können universel
 // ASCII smiling face
 const char*     s1 = ":-)";
 
-// UTF-16 (on Windows) encoded WINKING FACE (U+1F609)  
+// UTF-16 (on Windows) encoded WINKING FACE (U+1F609)
 const wchar_t*  s2 = L"😉 = \U0001F609 is ;-)";
 
-// UTF-8  encoded SMILING FACE WITH HALO (U+1F607)  
+// UTF-8  encoded SMILING FACE WITH HALO (U+1F607)
 const char*     s3 = u8"😇 = \U0001F607 is O:-)";
 
-// UTF-16 encoded SMILING FACE WITH OPEN MOUTH (U+1F603)  
+// UTF-16 encoded SMILING FACE WITH OPEN MOUTH (U+1F603)
 const char16_t* s4 = u"😃 = \U0001F603 is :-D";
 
-// UTF-32 encoded SMILING FACE WITH SUNGLASSES (U+1F60E)  
+// UTF-32 encoded SMILING FACE WITH SUNGLASSES (U+1F60E)
 const char32_t* s5 = U"😎 = \U0001F60E is B-)";
-```  
+```
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zeichensätze](../cpp/character-sets.md)   
-[Numerisch, Boolean und Zeigerliterale](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
+[Zeichensätze](../cpp/character-sets.md)<br/>
+[Numerische, boolesche und Zeigerliterale](../cpp/numeric-boolean-and-pointer-literals-cpp.md)<br/>
 [Benutzerdefinierte Literale](../cpp/user-defined-literals-cpp.md)

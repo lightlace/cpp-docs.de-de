@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1902 | Microsoft Docs
+title: Schwerwiegender Fehler C1902 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b23507b6531f9ee4e5ce5efd5b60a1977206635c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5a443b5f80eabe9691cf8ff5220bb9b66da51e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228198"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052561"
 ---
 # <a name="fatal-error-c1902"></a>Schwerwiegender Fehler C1902
-Fehlende Übereinstimmung Programm Datenbank-Manager; Bitte überprüfen Sie die installation  
-  
-Erstellt eine Programmdatenbankdatei (.pdb) wurde mit einer neueren Version von Mspdb*XXX*DLL demjenigen, der Compiler auf Ihrem System gefunden. Dieser Fehler gibt normalerweise an, dass mspdbsrv.exe oder mspdbcore.dll fehlen oder andere Versionen als Mspdb*XXX*DLL. (Die *XXX* Platzhalter in der Mspdb*XXX*.dll-Datei ändert sich mit jeder Produktversion. Beispielsweise wird in Visual Studio 2015 ist der Dateiname mspdb140.dll.)  
-  
-Stellen Sie sicher übereinstimmende Versionen von mspdbsrv.exe, mspdbcore.dll und Mspdb*XXX*DLL-Datei auf Ihrem System installiert sind. Stellen Sie sicher, dass nicht übereinstimmende Versionen nicht in das Verzeichnis kopiert wurden, die der Compiler und Link-Tools für die Zielplattform enthält. Angenommen, Sie können kopiert haben die Dateien, damit der Compiler oder Link-Tool über die Eingabeaufforderung festlegen, ohne aufgerufen werden konnte die **Pfad** Umgebungsvariable entsprechend.
+
+Programm Datenbank-Manager-Konflikt; Überprüfen Sie die installation
+
+Erstellt eine Programmdatenbankdatei (.pdb) wurde mit einer neueren Version von Mspdb*XXX*DLL-Datei als die der Compiler auf Ihrem System gefunden. Dieser Fehler in der Regel gibt an, dass mspdbsrv.exe mspdbcore.dll fehlen oder weisen verschiedene Versionen als Mspdb*XXX*DLL-Datei. (Die *XXX* Platzhalter in der Mspdb*XXX*DLL-Datei ändert sich mit jeder Produktversion. Beispielsweise wird in Visual Studio 2015 ist der Dateiname mspdb140.dll.)
+
+Stellen Sie sicher übereinstimmende Versionen von mspdbsrv.exe, mspdbcore.dll und Mspdb*XXX*DLL-Datei auf Ihrem System installiert sind. Stellen Sie sicher, dass nicht übereinstimmende Versionen nicht in das Verzeichnis kopiert wurden, die der Compiler und Link-Tools für Ihre Zielplattform enthält. Z. B. Sie möglicherweise haben die Dateien kopiert, damit Sie das Tool Compiler oder einem Link, über die Eingabeaufforderung festlegen, ohne aufgerufen werden konnte die **Pfad** Umgebungsvariable entsprechend.

@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8f07a559c6353bb66a210bf450c15376720cdac
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cc13285549543eeab07bed6372f8f7d529f90a32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753034"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078698"
 ---
 # <a name="category-macros"></a>Kategorie-Makros
 
@@ -67,7 +67,7 @@ BEGIN_CATEGORY_MAP(theClass)
 
 ### <a name="parameters"></a>Parameter
 
-*theClass*  
+*theClass*<br/>
 [in] Der Name der Klasse, die die Kategorie-Zuordnung enthält.
 
 ### <a name="remarks"></a>Hinweise
@@ -109,7 +109,7 @@ IMPLEMENTED_CATEGORY(catID)
 
 ### <a name="parameters"></a>Parameter
 
-*catID*  
+*catID*<br/>
 [in] Eine CATID-Konstante oder die Variable, die globally unique Identifier (GUID) für die Kategorie "implementiert" enthält. Die Adresse des *CatID* ausgeführt werden und zur Karte hinzugefügt. Siehe Tabelle unten für eine Reihe von vordefinierten Kategorien.
 
 ### <a name="remarks"></a>Hinweise
@@ -146,7 +146,7 @@ REQUIRED_CATEGORY( catID )
 
 ### <a name="parameters"></a>Parameter
 
-*catID*  
+*catID*<br/>
 [in] Eine CATID-Konstante oder die Variable, die globally unique Identifier (GUID) für die erforderliche Kategorie enthält. Die Adresse des *CatID* ausgeführt werden und zur Karte hinzugefügt. Siehe Tabelle unten für eine Reihe von vordefinierten Kategorien.
 
 ### <a name="remarks"></a>Hinweise

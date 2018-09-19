@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e70e744ca4eb9cfa4b84ac0cca58be2452a8e25
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4da59a76ccc4d51e82fd43805daa73d513fcde17
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756950"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044274"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL-Auflistungen und -Enumerationen
 
@@ -36,21 +36,21 @@ Erfahren Sie mehr über Enumeratorschnittstellen lesen referenzinhalt wie z. B. 
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[ATL-Auflistungen und -Enumeratorklassen](../atl/atl-collection-and-enumerator-classes.md)  
+[ATL-Auflistungen und -Enumeratorklassen](../atl/atl-collection-and-enumerator-classes.md)<br/>
 Beschreibt kurz, und bietet Links zu den ATL-Klassen, mit denen Sie Sammlungen und Enumeratoren implementiert.
 
-[Designrichtlinien für Auflistungs- und Enumeratorschnittstellen](../atl/design-principles-for-collection-and-enumerator-interfaces.md)  
+[Designrichtlinien für Auflistungs- und Enumeratorschnittstellen](../atl/design-principles-for-collection-and-enumerator-interfaces.md)<br/>
 Erläutert, die verschiedene Entwurfsprinzipien für jede Art von Schnittstelle.
 
-[Implementieren einer auf der C++-Standardbibliothek basierten Auflistung](../atl/implementing-an-stl-based-collection.md)  
+[Implementieren einer auf der C++-Standardbibliothek basierten Auflistung](../atl/implementing-an-stl-based-collection.md)<br/>
 Ein erweitertes Beispiel, das Sie durch die Implementierung einer C++-Standardbibliothek basierten Auflistung führt.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Enthält Links zu konzeptionellen Themen über die Programmierung mit der Active Template Library.
 
-[-Beispiel](../visual-cpp-samples.md)  
+[-Beispiel](../visual-cpp-samples.md)<br/>
 Ein Beispiel, das die Verwendung von veranschaulicht `ICollectionOnSTLImpl` und `CComEnumOnSTL`, und die Implementierung von benutzerdefinierten Kopierrichtlinienklassen.
 
 ## <a name="see-also"></a>Siehe auch

@@ -1,5 +1,5 @@
 ---
-title: 'Profilgesteuerte Optimierung Fehler: PG0165 | Microsoft Docs'
+title: 'Fehler in Optimierung: PG0165 mit profilgesteuerter | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acad97411480112d06dadd454d1368dcfdf2c87f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 332751a123bf7d6414c40b79870b5edf27a3d8a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318414"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084210"
 ---
 # <a name="profile-guided-optimization-error-pg0165"></a>Fehler in profilgesteuerter Optimierung: PG0165
-Lesen 'Dateiname.PGD': ' PGD-Version wird nicht unterstützt (Versionskonflikt) ".  
-  
- PGD-Dateien sind spezifisch für ein bestimmtes Compilertoolset. Dieser Fehler wird generiert, wenn Sie einen anderen Compiler als die zum Verwenden *Filename*PGD. Dieser Fehler weist darauf hin, dass diese Compilertoolset nicht verwenden kann, die Daten aus *Filename*PGD zum Optimieren des aktuellen Programms.  
-  
- Um dieses Problem zu beheben, Regenerieren *Filename*PGD mithilfe der aktuellen Compilertoolset.
+
+Lesen 'Dateiname.PGD': ' PGD-Version wird nicht unterstützt werden (Versionskonflikt) ".
+
+PGD-Dateien sind spezifisch für ein bestimmtes Compilertoolset. Dieser Fehler wird generiert, wenn Sie einen anderen Compiler als die zum Verwenden *Filename*PGD. Dieser Fehler weist darauf hin, dass Compilertoolset nicht verwenden kann, die Daten aus *Filename*PGD, um die aktuelle Anwendung zu optimieren.
+
+Um dieses Problem zu beheben, neu generieren *Filename*PGD mit dem aktuellen Compilertoolset.

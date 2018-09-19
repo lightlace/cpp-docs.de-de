@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0025 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0025 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 843de39120cee18b01d17d88fb2759bebb9d2dc9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd89faa4de7b296d6a6771f857f3d16dbe2f94f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302840"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043702"
 ---
 # <a name="expression-evaluator-error-cxx0025"></a>Ausdrucksauswertungsfehler CXX0025
-Operator benötigt Struktur/union  
-  
- Ein Operator, der einen Ausdruck vom `struct` oder **Union** Typ in einen Ausdruck, der nicht angewendet wurde eine `struct` oder **Union**.  
-  
- Komponenten der Klasse, Struktur oder union Variablen müssen einen vollqualifizierten Namen haben. Komponenten können nicht ohne vollständige Spezifikation eingegeben werden.  
-  
- Dieser Fehler ist mit CAN0025 identisch.
+
+Operators bedürfen Struktur/union
+
+Ein Operator, einen Ausdruck vom unterstützt `struct` oder **Union** Typ in einen Ausdruck, der nicht angewendet wurde eine `struct` oder **Union**.
+
+Komponenten der Klasse, Struktur oder union-Variablen müssen einen vollqualifizierten Namen. Komponenten können nicht ohne vollständige Spezifikation eingegeben werden.
+
+Dieser Fehler ist mit CAN0025 identisch.

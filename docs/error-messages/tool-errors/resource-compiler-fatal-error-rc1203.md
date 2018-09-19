@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcencompiler: Schwerwiegender Fehler RC1203 | Microsoft Docs'
+title: 'Ressourcencompiler: Schwerwiegender Fehler RC1203 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5267011eea32929b85e6ca60fb26ea34b2c371
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 638af9b85aecdd4eaba712cee68bf4ec96f3ab56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321505"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081454"
 ---
 # <a name="resource-compiler-fatal-error-rc1203"></a>Ressourcencompiler: Schwerwiegender Fehler RC1203
-Ungültige Standardeinstellung für hexadezimale Sprach-ID angegeben.  
-  
- Angabe der Standardsprache (/ l) folgte Option eine ungültige hexadezimale Sprach-ID. Finden Sie unter [Sprach- und Länder-/Regionszeichenfolgen](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) in der *Run-Time Library Reference* eine Liste der gültigen Sprach-IDs.
+
+Ungültige hexadezimale Standardsprach-ID angegeben.
+
+Angabe der Standardsprache (/ l) Option folgte eine ungültige hexadezimale Sprach-ID Finden Sie unter [Sprach- und Länder-/Regionszeichenfolgen](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) in die *Run-Time Library Reference* eine Liste der gültigen Sprach-IDs.

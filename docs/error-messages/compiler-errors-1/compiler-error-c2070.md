@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C2070 | Microsoft Docs
+title: Compilerfehler C2070 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8eaf9ee345543fe838358c345e68874eecadd72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b23daf8a8c25e132aa0717715a742352537010c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165177"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044079"
 ---
-# <a name="compiler-error-c2070"></a>Compilerfehler Fehler C2070
-'Typ': Unzulässiger "sizeof" Operand  
-  
- Die ["sizeof"](../../cpp/sizeof-operator.md) Operator erfordert einen Ausdruck oder einen Typnamen.  
-  
- Im folgende Beispiel wird C2070 generiert:  
-  
-```  
-// C2070.cpp  
-void func() {}  
-int main() {  
-   int a;  
-   a = sizeof(func);   // C2070  
-}  
-```  
-  
- Mögliche Lösung:  
-  
-```  
-// C2070b.cpp  
-void func() {}  
-int main() {  
-   int a;  
-   a = sizeof(a);  
-}  
+# <a name="compiler-error-c2070"></a>Compilerfehler C2070
+
+'Typ': Ungültiger Sizeof-Operand
+
+Die ["sizeof"](../../cpp/sizeof-operator.md) Operator muss ein Ausdruck oder einen Typ an.
+
+Im folgende Beispiel wird die C2070 generiert:
+
+```
+// C2070.cpp
+void func() {}
+int main() {
+   int a;
+   a = sizeof(func);   // C2070
+}
+```
+
+Mögliche Lösung:
+
+```
+// C2070b.cpp
+void func() {}
+int main() {
+   int a;
+   a = sizeof(a);
+}
 ```

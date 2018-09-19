@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 537755ff7162c30c586eb813fecf643de816a351
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 099844710080d2c500996d5918a32c6eb4426541
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751458"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078139"
 ---
 # <a name="adding-an-atl-com-10-component"></a>Hinzufügen einer ATL COM+ 1.0-Komponente
 
@@ -38,6 +38,6 @@ Dieser Assistent fügt ein Objekt hinzu, die COM+ 1.0-Dienste, einschließlich T
 
 ## <a name="see-also"></a>Siehe auch
 
-[Adding a Class (Hinzufügen einer Klasse)](../../ide/adding-a-class-visual-cpp.md)   
+[Hinzufügen einer Klasse](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Hinzufügen einer Methode](../../ide/adding-a-method-visual-cpp.md)
 

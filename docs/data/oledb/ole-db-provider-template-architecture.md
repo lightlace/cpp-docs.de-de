@@ -17,37 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ebebb7f69239b62cf276e955fd6e54ef0cf37ea4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 71e693c09d59643a272a0b2736a5a229ef444aa9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684289"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078893"
 ---
 # <a name="ole-db-provider-template-architecture"></a>Architektur von OLE DB-Anbietervorlagen
+
 ## <a name="data-sources-and-sessions"></a>Datenquellen und Sitzungen  
- Die OLE DB-Anbieterarchitektur enthält ein Datenquellenobjekt und eine oder mehrere Sitzungen. Das Objekt ist das erste Objekt, das jeder Anbieter instanziieren muss. Wenn eine Consumer-Anwendung Daten benötigt, wird gleichzeitig das Datenquellenobjekt, um den Anbieter zu starten. Das Datenquellenobjekt erstellt ein Sitzungsobjekt (mithilfe der `IDBCreateSession` Schnittstelle) über die der Consumer auf das Datenquellenobjekt stellt eine Verbindung her. ODBC-Programmierer können sich das Objekt als äquivalent zu vorstellen der `HENV` und das Sitzungsobjekt als Entsprechung zu den `HDBC`.  
+
+Die OLE DB-Anbieterarchitektur enthält ein Datenquellenobjekt und eine oder mehrere Sitzungen. Das Objekt ist das erste Objekt, das jeder Anbieter instanziieren muss. Wenn eine Consumer-Anwendung Daten benötigt, wird gleichzeitig das Datenquellenobjekt, um den Anbieter zu starten. Das Datenquellenobjekt erstellt ein Sitzungsobjekt (mithilfe der `IDBCreateSession` Schnittstelle) über die der Consumer auf das Datenquellenobjekt stellt eine Verbindung her. ODBC-Programmierer können sich das Objekt als äquivalent zu vorstellen der `HENV` und das Sitzungsobjekt als Entsprechung zu den `HDBC`.  
   
- ![Anbieterarchitektur](../../data/oledb/media/vc4twb1.gif "vc4twb1")  
+![Anbieterarchitektur](../../data/oledb/media/vc4twb1.gif "vc4twb1")  
   
- Zusammen mit den Quelldateien, die vom OLE DB-Anbieter-Assistenten erstellt wird implementiert der OLE DB-Vorlagen ein Datenquellenobjekt. Eine Sitzung ist ein Objekt, der OLE DB entspricht `TSession`.  
+Zusammen mit den Quelldateien, die vom OLE DB-Anbieter-Assistenten erstellt wird implementiert der OLE DB-Vorlagen ein Datenquellenobjekt. Eine Sitzung ist ein Objekt, der OLE DB entspricht `TSession`.  
   
 ## <a name="mandatory-and-optional-interfaces"></a>Erforderliche und optionale Schnittstellen  
- Der OLE DB-Anbietervorlagen bieten vorgefertigte Implementierungen für alle erforderlichen Schnittstellen. Erforderliche und optionale Schnittstellen werden von OLE DB für verschiedene Typen von Objekten definiert:  
+
+Der OLE DB-Anbietervorlagen bieten vorgefertigte Implementierungen für alle erforderlichen Schnittstellen. Erforderliche und optionale Schnittstellen werden von OLE DB für verschiedene Typen von Objekten definiert:  
   
--   [Datenquelle](../../data/oledb/data-source-object-interfaces.md)  
+- [Datenquelle](../../data/oledb/data-source-object-interfaces.md)  
   
--   [Sitzung](../../data/oledb/session-object-interfaces.md)  
+- [Sitzung](../../data/oledb/session-object-interfaces.md)  
   
--   [Rowset](../../data/oledb/rowset-object-interfaces.md)  
+- [Rowset](../../data/oledb/rowset-object-interfaces.md)  
   
--   [Befehl](../../data/oledb/command-object-interfaces.md)  
+- [Befehl](../../data/oledb/command-object-interfaces.md)  
   
--   [Transaktion](../../data/oledb/transaction-object-interfaces.md)  
+- [Transaktion](../../data/oledb/transaction-object-interfaces.md)  
   
- Beachten Sie, dass der OLE DB-Anbietervorlagen nicht die Zeile und den Speicher implementiert werden.  
+Beachten Sie, dass der OLE DB-Anbietervorlagen nicht die Zeile und den Speicher implementiert werden.  
   
- Die folgende Tabelle enthält die erforderliche und optionale Schnittstellen für die oben aufgeführten Objekte gemäß den [OLE DB 2.6 SDK-Dokumentation](/previous-versions/windows/desktop/ms722784\(v=vs.85\)).  
+Die folgende Tabelle enthält die erforderliche und optionale Schnittstellen für die oben aufgeführten Objekte gemäß den [OLE DB 2.6 SDK-Dokumentation](/previous-versions/windows/desktop/ms722784\(v=vs.85\)).  
   
 |Komponente|Interface|Kommentar|  
 |---------------|---------------|-------------|  
@@ -57,12 +60,13 @@ ms.locfileid: "43684289"
 |[Befehl](../../data/oledb/command-object-interfaces.md) ([CCommand](ccommand-class.md))|[erforderlich] `IAccessor`<br /><br /> [erforderlich] `IColumnsInfo`<br /><br /> [erforderlich] `ICommand`<br /><br /> [erforderlich] `ICommandProperties`<br /><br /> [erforderlich] `ICommandText`<br /><br /> [erforderlich] `IConvertType`<br /><br /> [optional] `IColumnsRowset`<br /><br /> [optional] `ICommandPersist`<br /><br /> [optional] `ICommandPrepare`<br /><br /> [optional] `ICommandWithParameters`<br /><br /> [optional] `ISupportErrorInfo`<br /><br /> [optional] `ICommandStream`|Das Command-Objekt verarbeitet die Vorgänge für Daten, z. B. Abfragen. Sie können die parametrisierte oder nicht parametrisierte Anweisungen behandeln.<br /><br /> Das Command-Objekt ist auch zuständig für die Behandlung von Bindungen für Parameter und Ausgabespalten. Eine Bindung ist eine Struktur, die enthält Informationen, wie eine Spalte, in einem Rowset abgerufen werden soll. Es enthält Informationen wie z. B. die Ordnungszahl, Datentyp, Länge und Status.|  
 |[Transaktion](../../data/oledb/transaction-object-interfaces.md) (optional)|[erforderlich] `IConnectionPointContainer`<br /><br /> [erforderlich] `ITransaction`<br /><br /> [optional] `ISupportErrorInfo`|Das Transaktionsobjekt, das eine unteilbare Arbeitseinheit in einer Datenquelle definiert, und bestimmt, wie diese Arbeitseinheiten miteinander in Beziehung stehen. Dieses Objekt wird nicht direkt von der OLE DB-Anbietervorlagen unterstützt (d. h., Sie erstellen ein eigenes Objekt).|  
   
- Weitere Informationen finden Sie unter den folgenden Themen:  
+Weitere Informationen finden Sie unter den folgenden Themen:  
   
--   [Eigenschaftenzuordnungen](../../data/oledb/property-maps.md)  
+- [Eigenschaftenzuordnungen](../../data/oledb/property-maps.md)  
   
--   [Benutzerdatensatz](../../data/oledb/user-record.md)  
+- [Benutzerdatensatz](../../data/oledb/user-record.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB-Schnittstellen](/previous-versions/windows/desktop/ms709709\(v=vs.85\))
+
+[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB-Schnittstellen](/previous-versions/windows/desktop/ms709709\(v=vs.85\))

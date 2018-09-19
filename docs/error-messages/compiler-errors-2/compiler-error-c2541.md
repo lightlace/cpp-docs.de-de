@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2541 | Microsoft Docs
+title: Compilerfehler C2541 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a44d03ad19746719360f0528dceae8d88be6be8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 492f6f938af5e09221bff3c1c848c9688b28931d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229065"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049149"
 ---
 # <a name="compiler-error-c2541"></a>Compilerfehler C2541
-'delete': löschen: Objekte, die keine Zeiger kann nicht gelöscht werden.  
-  
- Die [löschen](../../cpp/delete-operator-cpp.md) -Operator auf ein Objekt, das kein Zeiger ist verwendet wurde.  
-  
- Im folgende Beispiel wird C2541 generiert:  
-  
-```  
-// C2541.cpp  
-int main() {  
-   int i;  
-   delete i;   // C2541 i not a pointer  
-  
-   // OK  
-   int *ip = new int;  
-   delete ip;  
-}  
+
+'delete': zu löschen: Objekte, die keine Zeiger sind kann nicht gelöscht werden.
+
+Die [löschen](../../cpp/delete-operator-cpp.md) -Operator auf ein Objekt, das kein Zeiger ist verwendet wurde.
+
+Im folgende Beispiel wird die C2541 generiert:
+
+```
+// C2541.cpp
+int main() {
+   int i;
+   delete i;   // C2541 i not a pointer
+
+   // OK
+   int *ip = new int;
+   delete ip;
+}
 ```

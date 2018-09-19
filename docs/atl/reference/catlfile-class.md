@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3d6ff72f9f5011d7c4e0f0b65cca9a82227b70d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4ec124d1010a5870d47b9f1504655a7822505fe6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753252"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040491"
 ---
 # <a name="catlfile-class"></a>CAtlFile-Klasse
 
@@ -107,13 +107,13 @@ explicit CAtlFile(HANDLE hFile) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*datei*  
+*datei*<br/>
 Das Objekt "Datei".
 
-*hFile*  
+*hFile*<br/>
 Das Dateihandle.
 
-*pTM*  
+*pTM*<br/>
 Zeiger auf CAtlTransactionManager-Objekt
 
 ### <a name="remarks"></a>Hinweise
@@ -137,25 +137,25 @@ HRESULT Create(
 
 ### <a name="parameters"></a>Parameter
 
-*szFilename*  
+*szFilename*<br/>
 Der Dateiname.
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Der gewünschte Zugriff. Finden Sie unter *DwDesiredAccess* in [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) im Windows SDK.
 
-*dwShareMode*  
+*dwShareMode*<br/>
 Der Freigabemodus. Finden Sie unter *DwShareMode* in `CreateFile`.
 
-*dwCreationDisposition*  
+*dwCreationDisposition*<br/>
 Die Erstellungsdisposition. Finden Sie unter *DwCreationDisposition* in `CreateFile`.
 
-*dwFlagsAndAttributes*  
+*dwFlagsAndAttributes*<br/>
 Die Flags und Attribute. Finden Sie unter *DwFlagsAndAttributes* in `CreateFile`.
 
-*lpsa*  
+*lpsa*<br/>
 Die Attribute für die Sicherheit. Finden Sie unter *LpSecurityAttributes* in `CreateFile`.
 
-*hTemplateFile*  
+*hTemplateFile*<br/>
 Die Vorlagendatei. Finden Sie unter *hTemplateFile* in `CreateFile`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -195,13 +195,13 @@ HRESULT GetOverlappedResult(
 
 ### <a name="parameters"></a>Parameter
 
-*"pOverlapped"*  
+*"pOverlapped"*<br/>
 Die überlappende Struktur. Finden Sie unter *LpOverlapped* in [GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) im Windows SDK.
 
-*dwBytesTransferred*  
+*dwBytesTransferred*<br/>
 Die Bytes übertragen. Finden Sie unter *LpNumberOfBytesTransferred* in `GetOverlappedResult`.
 
-*bWait*  
+*bWait*<br/>
 Die Option "Abfragewartezeit". Finden Sie unter *bWait* in `GetOverlappedResult`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -222,7 +222,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*nPos*  
+*nPos*<br/>
 Die Position in Bytes.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -243,7 +243,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*nLen*  
+*nLen*<br/>
 Die Anzahl der Bytes in der Datei.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -264,10 +264,10 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*nPos*  
+*nPos*<br/>
 Die Position in der Datei, in dem die Sperre begonnen werden soll.
 
-*nCount*  
+*nCount*<br/>
 Die Länge des Bytebereichs gesperrt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -316,19 +316,19 @@ HRESULT Read(
 
 ### <a name="parameters"></a>Parameter
 
-*pBuffer*  
+*pBuffer*<br/>
 Zeiger auf den Puffer, der die Daten erhält, die aus der Datei gelesen werden.
 
-*nBufSize*  
+*nBufSize*<br/>
 Die Puffergröße in Byte.
 
-*nBytesRead*  
+*nBytesRead*<br/>
 Die Anzahl von gelesenen Bytes.
 
-*"pOverlapped"*  
+*"pOverlapped"*<br/>
 Die überlappende Struktur. Finden Sie unter *LpOverlapped* in [ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile) im Windows SDK.
 
-*pfnCompletionRoutine*  
+*pfnCompletionRoutine*<br/>
 Der Abschlussroutine. Finden Sie unter *LpCompletionRoutine* in [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) im Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -351,10 +351,10 @@ HRESULT Seek(
 
 ### <a name="parameters"></a>Parameter
 
-*nOffset*  
+*nOffset*<br/>
 Der Offset vom vom Ausgangspunkt *DwFrom*.
 
-*dwFrom*  
+*dwFrom*<br/>
 Der Anfangspunkt (FILE_BEGIN, FILE_CURRENT oder FILE_END).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -375,7 +375,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*nNewLen*  
+*nNewLen*<br/>
 Die neue Länge der Datei in Bytes.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -396,10 +396,10 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*nPos*  
+*nPos*<br/>
 Die Position in der Datei, in dem das Entsperren begonnen werden soll.
 
-*nCount*  
+*nCount*<br/>
 Die Länge des Bytebereichs entsperrt werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -434,19 +434,19 @@ HRESULT Write(
 
 ### <a name="parameters"></a>Parameter
 
-*pBuffer*  
+*pBuffer*<br/>
 Der Puffer mit Daten, die in die Datei geschrieben werden.
 
-*nBufSize*  
+*nBufSize*<br/>
 Die Anzahl der Bytes, aus dem Puffer übertragen werden sollen.
 
-*"pOverlapped"*  
+*"pOverlapped"*<br/>
 Die überlappende Struktur. Finden Sie unter *LpOverlapped* in [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) im Windows SDK.
 
-*pfnCompletionRoutine*  
+*pfnCompletionRoutine*<br/>
 Der Abschlussroutine. Finden Sie unter *LpCompletionRoutine* in [WriteFileEx](/windows/desktop/api/fileapi/nf-fileapi-writefileex) im Windows SDK.
 
-*pnBytesWritten*  
+*pnBytesWritten*<br/>
 Die Bytes geschrieben.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -459,6 +459,6 @@ Rufen Sie die ersten drei Formulare [WriteFile](/windows/desktop/api/fileapi/nf-
 
 ## <a name="see-also"></a>Siehe auch
 
-[Marquee-Beispiel](../../visual-cpp-samples.md)   
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)   
+[Marquee-Beispiel](../../visual-cpp-samples.md)<br/>
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
 [CHandle-Klasse](../../atl/reference/chandle-class.md)

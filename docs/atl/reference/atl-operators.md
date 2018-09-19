@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5027fa4b84d84bf07766c7ac4e75f140706f0c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0741cd65924a2c968153333aa1a557c31f429d45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103702"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039776"
 ---
 # <a name="atl-operators"></a>ATL-Operatoren
 
@@ -42,16 +42,16 @@ Dieser Abschnitt enthält die Referenzthemen für die globalen ATL-Operatoren.
 
 Vergleicht `CSid` Objekte oder `SID` -Strukturen auf Gleichheit (Sicherheits-ID).
 
-```   
+```
 bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*LHS*  
+*LHS*<br/>
 Die erste `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
-*RS*  
+*RS*<br/>
 Die zweite `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -62,16 +62,16 @@ Gibt TRUE zurück, wenn die Objekte gleich sind, FALSE, wenn sie nicht gleich si
 
 Vergleicht `CSid` Objekte oder `SID` (Sicherheits-ID) der Strukturen auf Ungleichheit.
 
-```   
+```
 bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*LHS*  
+*LHS*<br/>
 Die erste `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
-*RS*  
+*RS*<br/>
 Die zweite `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -82,16 +82,16 @@ Gibt TRUE zurück, wenn die Objekte nicht gleich "false", wenn sie gleich sind.
 
 Testet, ob die `CSid` Objekt oder `SID` Struktur auf der linken Seite des Operators ist kleiner als der `CSid` Objekt oder `SID` Struktur auf der rechten Seite (für C++-Standardbibliothek-Kompatibilität).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*LHS*  
+*LHS*<br/>
 Die erste `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
-*RS*  
+*RS*<br/>
 Die zweite `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -106,16 +106,16 @@ Dieser Operator bezieht sich auf die Adresse der `CSid` Objekt oder `SID` -Struk
 
 Testet, ob die `CSid` Objekt oder `SID` Struktur auf der linken Seite des Operators ist größer als die `CSid` Objekt oder `SID` Struktur auf der rechten Seite (für C++-Standardbibliothek-Kompatibilität).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*LHS*  
+*LHS*<br/>
 Die erste `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
-*RS*  
+*RS*<br/>
 Die zweite `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -130,16 +130,16 @@ Dieser Operator bezieht sich auf die Adresse der `CSid` Objekt oder `SID` -Struk
 
 Testet, ob die `CSid` Objekt oder `SID` Struktur auf der linken Seite des Operators ist kleiner als oder gleich der `CSid` Objekt oder `SID` Struktur auf der rechten Seite (für C++-Standardbibliothek-Kompatibilität).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*LHS*  
+*LHS*<br/>
 Die erste `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
-*RS*  
+*RS*<br/>
 Die zweite `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -154,16 +154,16 @@ Dieser Operator bezieht sich auf die Adresse der `CSid` Objekt oder `SID` -Struk
 
 Testet, ob die `CSid` Objekt oder `SID` Struktur auf der linken Seite des Operators ist größer als oder gleich der `CSid` Objekt oder `SID` Struktur auf der rechten Seite (für C++-Standardbibliothek-Kompatibilität).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*LHS*  
+*LHS*<br/>
 Die erste `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
-*RS*  
+*RS*<br/>
 Die zweite `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
 ### <a name="return-value"></a>Rückgabewert

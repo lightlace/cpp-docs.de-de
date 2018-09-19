@@ -1,5 +1,5 @@
 ---
-title: 'NMAKE: Schwerwiegender Fehler U1051 | Microsoft Docs'
+title: 'NMAKE: Schwerwiegender Fehler U1051 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 570c7e5d8e6e8250a67e4f032ac26b04388cfd00
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d3d3a14b75a30aa22bcc9faafb97a218051bb080
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317413"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045015"
 ---
 # <a name="nmake-fatal-error-u1051"></a>NMAKE: Schwerwiegender Fehler U1051
-Nicht genügend Arbeitsspeicher  
-  
- NMAKE war nicht genügend Arbeitsspeicher, einschließlich des virtuellen Speichers, da das Makefile zu groß oder komplex war.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>So beheben Sie den Fehler (unterschiedliche Lösungsmöglichkeiten)  
-  
-1.  Geben Sie Speicherplatz auf dem Datenträger frei.  
-  
-2.  Erhöhen Sie die Größe der Auslagerungsdatei des Windows NT oder Windows-Auslagerungsdatei.  
-  
-3.  Wenn nur ein Teil des Makefiles verwendet wird, teilen Sie dieses in separate Dateien auf, oder verwenden Sie **! IF** Präprozessordirektiven zur Begrenzung des Umfangs, der NMAKE verarbeiten muss. Die **! IF** Includedirektiven **! IF**, `!IFDEF`, **! IFNDEF**, **! ElseIf**, **! ELSE** `IFDEF`, und **! ELSE** `IFNDEF`.
+
+Nicht genügend Arbeitsspeicher
+
+NMAKE: nicht genügend Arbeitsspeicher, einschließlich des virtuellen Speichers, da das Makefile zu groß oder komplex war.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>So beheben Sie den Fehler (unterschiedliche Lösungsmöglichkeiten)
+
+1. Geben Sie auf dem Datenträger frei.
+
+1. Erhöhen Sie die Größe der Auslagerungsdatei von Windows NT oder die Windows-Auslagerungsdatei.
+
+1. Wenn nur ein Teil des Makefiles verwendet wird, teilen Sie dieses in separate Dateien auf, oder verwenden Sie **! IF** präprozessoranweisungen, um die Menge zu begrenzen, die NMAKE verarbeiten muss. Die **! IF** Includeanweisungen **! IF**, `!IFDEF`, **! IFNDEF**, **! ElseIf**, **! ANDERE** `IFDEF`, und **! ANDERE** `IFNDEF`.

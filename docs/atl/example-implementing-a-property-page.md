@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bddb536fe50c9f9f7d1eb76d3dfa90c1c3488b8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 36d3289767d8c8e2eaa2f25889aaff073cf73fce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759329"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046250"
 ---
 # <a name="example-implementing-a-property-page"></a>Beispiel: Das Implementieren einer Eigenschaftenseite
 
@@ -153,25 +153,25 @@ Implementieren Sie die Methode an, wie unten dargestellt:
 Nachdem Sie das Projekt erstellt haben, können Sie testen die Eigenschaftenseite, und das Hilfsobjekt, der mithilfe eines einfachen Makros, das Sie erstellen und in der Visual Studio-Entwicklungsumgebung ausführen können. Erstellen Sie dieses Makro wird eine Hilfsprogramm Objekt aus, und rufen Sie dann die `ShowPage` Methode mit die ProgID des der **DocProperties** auf der Seite und die `IUnknown` Zeiger des Dokuments in Visual Studio-Editor gerade aktiv. Der Code, die, den Sie für dieses Makro benötigen, wird unten gezeigt:
 
 ```vb
-Imports EnvDTE  
-Imports System.Diagnostics  
+Imports EnvDTE
+Imports System.Diagnostics
 
-Public Module AtlPages  
+Public Module AtlPages
 
-Public Sub Test()  
-    Dim Helper  
-    Helper = CreateObject("ATLPages7.Helper.1")  
+Public Sub Test()
+    Dim Helper
+    Helper = CreateObject("ATLPages7.Helper.1")
 
-    On Error Resume Next  
-    Helper.ShowPage( ActiveDocument.Name, "ATLPages7Lib.DocumentProperties.1", DTE.ActiveDocument )  
+    On Error Resume Next
+    Helper.ShowPage( ActiveDocument.Name, "ATLPages7Lib.DocumentProperties.1", DTE.ActiveDocument )
 End Sub
 
-End Module  
+End Module
 ```
 
 Wenn Sie dieses Makro ausführen, wird die Eigenschaftenseite mit den Dateinamen und den schreibgeschützten Status des Dokuments derzeit aktiven Text angezeigt werden. Der schreibgeschützte Zustand des Dokuments reflektieren lediglich die Möglichkeit zum Schreiben in das Dokument in der Entwicklungsumgebung; Das Attribut "schreibgeschützt" der Datei auf dem Datenträger betroffen nicht.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Eigenschaftenseiten](../atl/atl-com-property-pages.md)   
+[Eigenschaftenseiten](../atl/atl-com-property-pages.md)<br/>
 [ATLPages-Beispiel](../visual-cpp-samples.md)

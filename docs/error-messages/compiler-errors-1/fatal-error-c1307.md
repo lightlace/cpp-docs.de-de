@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1307 | Microsoft Docs
+title: Schwerwiegender Fehler C1307 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d06ce51ada7cd9159b8e02ff627bf12ebb7293d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65f398dd9885c571ea0d66171889f20d3321a3b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227134"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085861"
 ---
 # <a name="fatal-error-c1307"></a>Schwerwiegender Fehler C1307
-Das Programm wurde seit dem Erfassen der Profildaten bearbeitet.  
-  
- Bei Verwendung [/LTCG: PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md), der Linker ein Eingabemodul, die nach/LTCG: PGINSTRUMENT neu kompiliert wurde erkannt und, dass das Modul bis zu dem Zeitpunkt geändert wurde, in denen nicht mehr vorhandenen Profildaten relevant sind. Beispielsweise, wenn in der neu kompilierten Modul Aufrufdiagramms geändert haben, generiert der Compiler C1307.  
-  
- Zum Beheben dieses Fehlers führen Sie/LTCG: PGINSTRUMENT aus, wiederholen Sie alle Testläufe und führen Sie die/LTCG: PGOPTIMIZE. Wenn Sie nicht ausgeführt werden können, und wiederholen alle Testläufe/LTCG: PGINSTRUMENT ausgeführt wird, verwenden Sie/LTCG: PGUPDATE anstelle von/LTCG: PGOPTIMIZE, um das optimierte Image zu erstellen.
+
+Das Programm wurde seit dem Erfassen der Profildaten bearbeitet.
+
+Bei Verwendung [/LTCG: PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md)der Linker ein Eingabemodul, die nach dem/LTCG: PGINSTRUMENT neu kompiliert wurde und, dass das Modul zum Zeitpunkt geändert wurde, in dem nicht mehr vorhandenen Profildaten relevant sind. Z. B. wenn das Aufrufdiagramm in der neu kompilierten Modul geändert wird, generiert der Compiler C1307.
+
+Um diesen Fehler zu beheben, führen Sie/LTCG: PGINSTRUMENT, wiederholen Sie alle Testläufe und führen Sie/LTCG: PGOPTIMIZE. Wenn Sie nicht ausführen können/LTCG: PGINSTRUMENT und Wiederholung alle ausgeführt wird, verwenden Sie/LTCG: PGUPDATE anstelle von/LTCG: PGOPTIMIZE, um das optimierte Image zu erstellen.

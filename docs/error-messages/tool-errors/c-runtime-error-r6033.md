@@ -1,5 +1,5 @@
 ---
-title: C-Laufzeitfehler R6033 | Microsoft Docs
+title: C-Laufzeitfehler R6033 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed66dec4f4eb17378c9901439be2ad1449597a93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb107dcd2bd044ad6fb933869319bb7afd5aab72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299993"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049799"
 ---
 # <a name="c-runtime-error-r6033"></a>C-Laufzeitfehler R6033
-Versucht, MSIL-Code aus dieser Assembly während der Initialisierung von systemeigenem Code zu verwenden. Hiermit wird einen Fehler in der Anwendung. Es ist sehr wahrscheinlich das Ergebnis des Aufrufs einer MSIL-kompilierten (/ Clr)-Funktion aus einem systemeigenen Konstruktor oder aus DllMain.  
-  
+
+Versucht, MSIL-Code aus dieser Assembly während der Initialisierung von nativem Code zu verwenden. Dies gibt einen Fehler in Ihrer Anwendung an. Es ist wahrscheinlich das Ergebnis des Aufrufs einer MSIL-kompiliert (/ Clr)-Funktion von einem einheitlichen Konstruktor oder aus DllMain.
+
 > [!NOTE]
->  Wenn Sie diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app heruntergefahren, da es sich um ein internes Problem enthält. Dieser Fehler kann verursacht werden, von einem Fehler in der app oder durch einen Bug in einer Add-in oder eine Erweiterung, die verwendet werden.  
->   
->  Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:  
->   
->  -   Verwenden der **Apps und Funktionen** oder **Programme und Funktionen** auf der Seite der **Systemsteuerung** reparieren oder neu installieren die Anwendung.  
-> -   Verwenden der **Apps und Funktionen** oder **Programme und Funktionen** auf der Seite der **Systemsteuerung** entfernen, reparieren oder neu installieren, alle Erweiterungen oder -add-ins.  
-> -   Überprüfen Sie **Windows Update** in der **Systemsteuerung** für Softwareupdates.  
-> -   Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den Hersteller der app.  
-  
- **Informationen für Programmierer**  
-  
- Diese Diagnose gibt an, dass MSIL-Anweisungen während der Loadersperre ausgeführt wurden. Dies kann auftreten, wenn Sie systemeigener C++-Code mithilfe des Flags "/ CLR" kompiliert haben. Verwenden Sie nur das Flag "/ CLR" auf Module mit verwaltetem Code an. Weitere Informationen finden Sie unter [Initialisierung gemischter Assemblys](../../dotnet/initialization-of-mixed-assemblies.md).
+>  Wenn Sie diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app beendet, da er ein internes Problem aufweist. Dieser Fehler kann verursacht werden, indem Sie einen Fehler in der app oder eines Fehlers in einer Add-in oder die Erweiterung, die verwendet.
+>
+>  Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:
+>
+>  -   Verwenden der **Apps und Features** oder **Programme und Funktionen** auf der Seite die **Systemsteuerung** zu reparieren oder installieren Sie das Programm neu.
+> -   Verwenden der **Apps und Features** oder **Programme und Funktionen** auf der Seite die **Systemsteuerung** entfernen, reparieren oder installieren Sie alle Erweiterungen oder -add-ins.
+> -   Überprüfen Sie **Windows Update** in die **Systemsteuerung** für Softwareupdates.
+> -   Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den app-Anbieter.
+
+**Informationen für Programmierer**
+
+Diese Diagnose gibt an, dass die MSIL-Anweisungen ausgeführt wurden, während die Loadersperre aufgehoben. Dies kann auftreten, wenn Sie systemeigenes C++ mit dem Flag "/ CLR" kompiliert haben. Verwenden Sie nur das Flag "/ CLR", auf die Module, die verwalteten Code enthalten. Weitere Informationen finden Sie unter [Initialization of Mixed Assemblies](../../dotnet/initialization-of-mixed-assemblies.md).
