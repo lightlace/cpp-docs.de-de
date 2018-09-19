@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 609216b38ab67076b454ac5adad3f331b235b580
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8de0378e34212649f7e1149bd038587f547e4eb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706029"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032028"
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl-Klasse
 
@@ -95,7 +95,7 @@ template <class T, class InterfaceName,
     const IID* piid = &_ATL_IIDOF(InterfaceName),
     const GUID* plibid = &CComModule::m_libid,
     WORD wMajor = 1,
-    WORD wMinor = 0, class tihclass = CcomTypeInfoHolder>  
+    WORD wMinor = 0, class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE CStockPropImpl : public IDispatchImpl<InterfaceName, piid,
 plibid,
     wMajor,
@@ -105,25 +105,25 @@ wMinor,
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Die Klasse, die das Steuerelement zu implementieren und Ableiten von `CStockPropImpl`.
 
-*Schnittstellenname*  
+*Schnittstellenname*<br/>
 Eine duale Schnittstelle, die die vordefinierten Eigenschaften verfügbar zu machen.
 
-*piid*  
+*piid*<br/>
 Ein Zeiger auf die IID der `InterfaceName`.
 
-*plibid*  
+*plibid*<br/>
 Ein Zeiger auf die LIBID der Typbibliothek mit der Definition der `InterfaceName`.
 
-*wMajor*  
+*wMajor*<br/>
 Die Hauptversion der Typbibliothek Der Standardwert ist 1.
 
-*wMinor*  
+*wMinor*<br/>
 Die Nebenversion der Typbibliothek Der Standardwert ist 0.
 
-*tihclass*  
+*tihclass*<br/>
 Die Klasse, die zum Verwalten von Informationen für den *T*. Der Standardwert ist `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Member
@@ -228,7 +228,7 @@ HRESULT STDMETHODCALLTYPE get_Appearance(SHORT pnAppearance);
 
 ### <a name="parameters"></a>Parameter
 
-*pnAppearance*  
+*pnAppearance*<br/>
 Eine Variable, die Paint-Format des Steuerelements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -245,7 +245,7 @@ HRESULT STDMETHODCALLTYPE get_Autosize(VARIANT_BOOL* pbAutoSize);
 
 ### <a name="parameters"></a>Parameter
 
-*pbAutoSize*  
+*pbAutoSize*<br/>
 Variablen, die den Kennzeichnungsstatus empfängt. TRUE gibt an, dass das Steuerelement eine beliebige andere Größe sein kann.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -262,7 +262,7 @@ HRESULT STDMETHODCALLTYPE get_BackColor(OLE_COLOR* pclrBackColor);
 
 ### <a name="parameters"></a>Parameter
 
-*pclrBackColor*  
+*pclrBackColor*<br/>
 Variablen, die Hintergrundfarbe des Steuerelements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -279,7 +279,7 @@ HRESULT STDMETHODCALLTYPE get_BackStyle(LONG* pnBackStyle);
 
 ### <a name="parameters"></a>Parameter
 
-*pnBackStyle*  
+*pnBackStyle*<br/>
 Eine Variable, die Hintergrund-Format des Steuerelements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -296,7 +296,7 @@ HRESULT STDMETHODCALLTYPE get_BorderColor(OLE_COLOR* pclrBorderColor);
 
 ### <a name="parameters"></a>Parameter
 
-*pclrBorderColor*  
+*pclrBorderColor*<br/>
 Eine Variable, die Farbe des Rahmens des Steuerelements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -313,7 +313,7 @@ HRESULT STDMETHODCALLTYPE get_BorderStyle(LONG* pnBorderStyle);
 
 ### <a name="parameters"></a>Parameter
 
-*pnBorderStyle*  
+*pnBorderStyle*<br/>
 Eine Variable, die Rahmenart des Steuerelements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -330,7 +330,7 @@ HRESULT STDMETHODCALLTYPE get_BorderVisible(VARIANT_BOOL* pbBorderVisible);
 
 ### <a name="parameters"></a>Parameter
 
-*pbBorderVisible*  
+*pbBorderVisible*<br/>
 Variablen, die den Kennzeichnungsstatus empfängt. TRUE gibt an, dass der Rahmen des Steuerelements sichtbar ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -347,7 +347,7 @@ HRESULT STDMETHODCALLTYPE get_BorderWidth(LONG* pnBorderWidth);
 
 ### <a name="parameters"></a>Parameter
 
-*pnBorderWidth*  
+*pnBorderWidth*<br/>
 Eine Variable, die Breite des Rahmens des Steuerelements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -364,7 +364,7 @@ HRESULT STDMETHODCALLTYPE get_Caption(BSTR* pbstrCaption);
 
 ### <a name="parameters"></a>Parameter
 
-*pbstrCaption*  
+*pbstrCaption*<br/>
 Der Text, mit dem Steuerelement angezeigt werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -381,7 +381,7 @@ HRESULT STDMETHODCALLTYPE get_DrawMode(LONG* pnDrawMode);
 
 ### <a name="parameters"></a>Parameter
 
-*pnDrawMode*  
+*pnDrawMode*<br/>
 Eine Variable, die Zeichnungsmodus des Steuerelements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -398,7 +398,7 @@ HRESULT STDMETHODCALLTYPE get_DrawStyle(LONG* pnDrawStyle);
 
 ### <a name="parameters"></a>Parameter
 
-*pnDrawStyle*  
+*pnDrawStyle*<br/>
 Eine Variable, die Zeichnungsart des Steuerelements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -415,7 +415,7 @@ HRESULT STDMETHODCALLTYPE get_DrawWidth(LONG* pnDrawWidth);
 
 ### <a name="parameters"></a>Parameter
 
-*pnDrawWidth*  
+*pnDrawWidth*<br/>
 Variablen, empfängt den Wert des Steuerelements Breite, in Pixel.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -432,7 +432,7 @@ HRESULT STDMETHODCALLTYPE get_Enabled(VARIANT_BOOL* pbEnabled);
 
 ### <a name="parameters"></a>Parameter
 
-*pbEnabled*  
+*pbEnabled*<br/>
 Variablen, die den Kennzeichnungsstatus empfängt. TRUE gibt an, dass das Steuerelement aktiviert ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -449,7 +449,7 @@ HRESULT STDMETHODCALLTYPE get_FillColor(OLE_COLOR* pclrFillColor);
 
 ### <a name="parameters"></a>Parameter
 
-*pclrFillColor*  
+*pclrFillColor*<br/>
 Eine Variable, die Füllfarbe des Steuerelements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -466,7 +466,7 @@ HRESULT STDMETHODCALLTYPE get_FillStyle(LONG* pnFillStyle);
 
 ### <a name="parameters"></a>Parameter
 
-*pnFillStyle*  
+*pnFillStyle*<br/>
 Variablen, die Füllformat des Steuerelements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -483,7 +483,7 @@ HRESULT STDMETHODCALLTYPE get_Font(IFontDisp** ppFont);
 
 ### <a name="parameters"></a>Parameter
 
-*ppFont*  
+*ppFont*<br/>
 Variable, die einen Zeiger auf die Schriftarteigenschaften des Steuerelements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -500,7 +500,7 @@ HRESULT STDMETHODCALLTYPE get_ForeColor(OLE_COLOR* pclrForeColor);
 
 ### <a name="parameters"></a>Parameter
 
-*pclrForeColor*  
+*pclrForeColor*<br/>
 Eine Variable, die die Vordergrundfarbe der Steuerelemente empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -517,7 +517,7 @@ HRESULT STDMETHODCALLTYPE get_HWND(LONG_PTR* phWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*phWnd*  
+*phWnd*<br/>
 Das Fensterhandle, das dem Steuerelement zugeordnet.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -534,7 +534,7 @@ HRESULT STDMETHODCALLTYPE get_MouseIcon(IPictureDisp** ppPicture);
 
 ### <a name="parameters"></a>Parameter
 
-*ppPicture*  
+*ppPicture*<br/>
 Variable, die einen Zeiger auf die Bildeigenschaften der Grafik empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -551,7 +551,7 @@ HRESULT STDMETHODCALLTYPE get_MousePointer(LONG* pnMousePointer);
 
 ### <a name="parameters"></a>Parameter
 
-*pnMousePointer*  
+*pnMousePointer*<br/>
 Eine Variable, die den Typ des Mauszeigers empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -568,7 +568,7 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
 
 ### <a name="parameters"></a>Parameter
 
-*ppPicture*  
+*ppPicture*<br/>
 Variable, die einen Zeiger auf das Bild in den Eigenschaften empfängt. Finden Sie unter [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) Weitere Details.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -585,7 +585,7 @@ HRESULT STDMETHODCALLTYPE get_ReadyState(LONG* pnReadyState);
 
 ### <a name="parameters"></a>Parameter
 
-*pnReadyState*  
+*pnReadyState*<br/>
 Eine Variable, die Status "bereit" des Steuerelements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -602,7 +602,7 @@ HRESULT STDMETHODCALLTYPE get_TabStop(VARIANT_BOOL* pbTabStop);
 
 ### <a name="parameters"></a>Parameter
 
-*pbTabStop*  
+*pbTabStop*<br/>
 Variablen, die den Kennzeichnungsstatus empfängt. TRUE gibt an, dass das Steuerelement einen Tabstopp.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -619,7 +619,7 @@ HRESULT STDMETHODCALLTYPE get_Text(BSTR* pbstrText);
 
 ### <a name="parameters"></a>Parameter
 
-*pbstrText*  
+*pbstrText*<br/>
 Der Text, der mit dem Steuerelement angezeigt wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -636,7 +636,7 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL* pbValid);
 
 ### <a name="parameters"></a>Parameter
 
-*pbValid*  
+*pbValid*<br/>
 Variablen, die den Kennzeichnungsstatus empfängt. TRUE gibt an, dass das Steuerelement gültig ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -653,7 +653,7 @@ HRESULT STDMETHODCALLTYPE get_Window(LONG_PTR* phWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*phWnd*  
+*phWnd*<br/>
 Das Fensterhandle, das dem Steuerelement zugeordnet.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -670,7 +670,7 @@ HRESULT STDMETHODCALLTYPE put_Appearance(SHORT nAppearance);
 
 ### <a name="parameters"></a>Parameter
 
-*nAppearance*  
+*nAppearance*<br/>
 Der neue Paint-Stil, der vom Steuerelement verwendet werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -687,7 +687,7 @@ HRESULT STDMETHODCALLTYPE put_AutoSize(VARIANT_BOOL bAutoSize,);
 
 ### <a name="parameters"></a>Parameter
 
-*bAutoSize*  
+*bAutoSize*<br/>
 TRUE, wenn das Steuerelement eine beliebige andere Größe darf nicht sein.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -704,7 +704,7 @@ HRESULT STDMETHODCALLTYPE put_BackColor(OLE_COLOR clrBackColor);
 
 ### <a name="parameters"></a>Parameter
 
-*clrBackColor*  
+*clrBackColor*<br/>
 Die neue Hintergrundfarbe Steuerelement.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -721,7 +721,7 @@ HRESULT STDMETHODCALLTYPE put_BackStyle(LONG nBackStyle);
 
 ### <a name="parameters"></a>Parameter
 
-*nBackStyle*  
+*nBackStyle*<br/>
 Das neue Steuerelement Hintergrundformat.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -738,7 +738,7 @@ HRESULT STDMETHODCALLTYPE put_BorderColor(OLE_COLOR clrBorderColor);
 
 ### <a name="parameters"></a>Parameter
 
-*clrBorderColor*  
+*clrBorderColor*<br/>
 Farbe des neuen Rahmens. Der Datentyp OLE_COLOR wird intern als eine 32-Bit-Ganzzahl dargestellt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -755,7 +755,7 @@ HRESULT STDMETHODCALLTYPE put_BorderStyle(LONG nBorderStyle);
 
 ### <a name="parameters"></a>Parameter
 
-*nBorderStyle*  
+*nBorderStyle*<br/>
 Die neue Rahmenart.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -772,7 +772,7 @@ HRESULT STDMETHODCALLTYPE put_BorderVisible(VARIANT_BOOL bBorderVisible);
 
 ### <a name="parameters"></a>Parameter
 
-*bBorderVisible*  
+*bBorderVisible*<br/>
 TRUE, wenn der Rahmen sichtbar ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -789,7 +789,7 @@ HRESULT STDMETHODCALLTYPE put_BorderWidth(LONG nBorderWidth);
 
 ### <a name="parameters"></a>Parameter
 
-*nBorderWidth*  
+*nBorderWidth*<br/>
 Die neue Breite des Rahmens des Steuerelements.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -806,7 +806,7 @@ HRESULT STDMETHODCALLTYPE put_Caption(BSTR bstrCaption);
 
 ### <a name="parameters"></a>Parameter
 
-*bstrCaption*  
+*bstrCaption*<br/>
 Der Text, mit dem Steuerelement angezeigt werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -823,7 +823,7 @@ HRESULT STDMETHODCALLTYPE put_DrawMode(LONG nDrawMode);
 
 ### <a name="parameters"></a>Parameter
 
-*nDrawMode*  
+*nDrawMode*<br/>
 Die neue Zeichnungsmodus für das Steuerelement.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -840,7 +840,7 @@ HRESULT STDMETHODCALLTYPE put_DrawStyle(LONG pnDrawStyle);
 
 ### <a name="parameters"></a>Parameter
 
-*nDrawStyle*  
+*nDrawStyle*<br/>
 Die neue Zeichnungsart für das Steuerelement.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -857,7 +857,7 @@ HRESULT STDMETHODCALLTYPE put_DrawWidth(LONG nDrawWidth);
 
 ### <a name="parameters"></a>Parameter
 
-*nDrawWidth*  
+*nDrawWidth*<br/>
 Die neue Breite auf, die vom Steuerelement verwendet werden, die Methoden zeichnen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -874,7 +874,7 @@ HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktiviert*  
+*bAktiviert*<br/>
 TRUE, wenn das Steuerelement aktiviert ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -891,7 +891,7 @@ HRESULT STDMETHODCALLTYPE put_FillColor(OLE_COLOR clrFillColor);
 
 ### <a name="parameters"></a>Parameter
 
-*clrFillColor*  
+*clrFillColor*<br/>
 Die neue Füllfarbe für das Steuerelement.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -908,7 +908,7 @@ HRESULT STDMETHODCALLTYPE put_FillStyle(LONG nFillStyle);
 
 ### <a name="parameters"></a>Parameter
 
-*nFillStyle*  
+*nFillStyle*<br/>
 Die neue Füllformat für das Steuerelement.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -925,7 +925,7 @@ HRESULT STDMETHODCALLTYPE put_Font(IFontDisp* pFont);
 
 ### <a name="parameters"></a>Parameter
 
-*pFont*  
+*pFont*<br/>
 Ein Zeiger auf die Schriftarteigenschaften des Steuerelements.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -942,7 +942,7 @@ HRESULT STDMETHODCALLTYPE put_ForeColor(OLE_COLOR clrForeColor);
 
 ### <a name="parameters"></a>Parameter
 
-*clrForeColor*  
+*clrForeColor*<br/>
 Die neue Vordergrundfarbe des Steuerelements.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -959,7 +959,7 @@ HRESULT STDMETHODCALLTYPE put_HWND(LONG_PTR /* hWnd */);
 
 ### <a name="parameters"></a>Parameter
 
-*/&ast; hWnd &ast;/*  
+*/&ast; hWnd &ast;/*<br/>
 Reserviert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -980,7 +980,7 @@ HRESULT STDMETHODCALLTYPE put_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parameter
 
-*pPicture*  
+*pPicture*<br/>
 Ein Zeiger auf die Bildeigenschaften der Grafik.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -997,7 +997,7 @@ HRESULT STDMETHODCALLTYPE put_MousePointer(LONG nMousePointer);
 
 ### <a name="parameters"></a>Parameter
 
-*nMousePointer*  
+*nMousePointer*<br/>
 Der Typ des Mauszeigers.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1014,7 +1014,7 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parameter
 
-*pPicture*  
+*pPicture*<br/>
 Ein Zeiger auf das Bild der Eigenschaften. Finden Sie unter [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) Weitere Details.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1031,7 +1031,7 @@ HRESULT STDMETHODCALLTYPE put_ReadyState(LONG nReadyState);
 
 ### <a name="parameters"></a>Parameter
 
-*nReadyState*  
+*nReadyState*<br/>
 Der Zustand des Steuerelements bereit.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1048,7 +1048,7 @@ HRESULT STDMETHODCALLTYPE put_TabStop(VARIANT_BOOL bTabStop);
 
 ### <a name="parameters"></a>Parameter
 
-*bTabStop*  
+*bTabStop*<br/>
 TRUE, wenn das Steuerelement einen Tabstopp darstellt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1065,7 +1065,7 @@ HRESULT STDMETHODCALLTYPE put_Text(BSTR bstrText);
 
 ### <a name="parameters"></a>Parameter
 
-*bstrText*  
+*bstrText*<br/>
 Der Text, der mit dem Steuerelement angezeigt wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1082,7 +1082,7 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL bValid);
 
 ### <a name="parameters"></a>Parameter
 
-*bValid*  
+*bValid*<br/>
 TRUE, wenn das Steuerelement gültig ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1099,7 +1099,7 @@ HRESULT STDMETHODCALLTYPE put_Window(LONG_PTR hWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*hWnd*  
+*hWnd*<br/>
 Das Fensterhandle.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1120,7 +1120,7 @@ HRESULT STDMETHODCALLTYPE putref_Font(IFontDisp* pFont);
 
 ### <a name="parameters"></a>Parameter
 
-*pFont*  
+*pFont*<br/>
 Ein Zeiger auf die Schriftarteigenschaften des Steuerelements.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1141,7 +1141,7 @@ HRESULT STDMETHODCALLTYPE putref_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parameter
 
-*pPicture*  
+*pPicture*<br/>
 Ein Zeiger auf die Bildeigenschaften der Grafik.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1162,7 +1162,7 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parameter
 
-*pPicture*  
+*pPicture*<br/>
 Ein Zeiger auf das Bild der Eigenschaften. Finden Sie unter [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) Weitere Details.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1175,5 +1175,5 @@ Identisch mit [CStockPropImpl::put_Picture](#put_picture), jedoch mit einer Verw
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)   
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
 [IDispatchImpl-Klasse](../../atl/reference/idispatchimpl-class.md)

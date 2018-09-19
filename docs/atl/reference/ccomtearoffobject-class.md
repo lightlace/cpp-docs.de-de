@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3814dacff2861bf78800adb8a019b696ce2756b7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ecbf2b415b93526fe856e21411431eb1f20b4c42
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752761"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089579"
 ---
 # <a name="ccomtearoffobject-class"></a>CComTearOffObject-Klasse
 
@@ -45,7 +45,7 @@ class CComTearOffObject : public Base
 
 #### <a name="parameters"></a>Parameter
 
-*Basis*  
+*Basis*<br/>
 Abgeleitet von die Klasse abtrennbare `CComTearOffObjectBase` und die Schnittstellen Ihre abtrennbare-Objekt, das unterstützt werden sollen.
 
 ATL implementiert die abtrennbare Schnittstellen in zwei Phasen – die `CComTearOffObjectBase` Methoden verarbeiten die verweiszählung und `QueryInterface`, während `CComTearOffObject` implementiert [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown).
@@ -123,7 +123,7 @@ CComTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Parameter
 
-*PV*  
+*PV*<br/>
 [in] Zeiger, der auf einen Zeiger auf konvertiert werden, wird eine `CComObject<Owner>` Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -164,7 +164,7 @@ CComObject<Owner>* m_pOwner;
 
 ### <a name="parameters"></a>Parameter
 
-*Besitzer*  
+*Besitzer*<br/>
 [in] Die Klasse, die für die ein abtrennbare implementiert wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -181,10 +181,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parameter
 
-*IID*  
+*IID*<br/>
 [in] Die IID der Schnittstelle angefordert wird.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Ein Zeiger auf den Schnittstellenzeiger vom *Iid*, oder NULL, wenn die Schnittstelle nicht gefunden wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -209,5 +209,5 @@ In nicht-Debug-Builds gibt immer 0 (null) zurück. In Debugbuilds müssen Sie ei
 
 ## <a name="see-also"></a>Siehe auch
 
-[CComCachedTearOffObject-Klasse](../../atl/reference/ccomcachedtearoffobject-class.md)   
+[CComCachedTearOffObject-Klasse](../../atl/reference/ccomcachedtearoffobject-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)
