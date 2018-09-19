@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7afe6867f359b334654f58aad39ad7f143dd428
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f84b90613bcf542a9ace44505565951819fcaa91
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764890"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108442"
 ---
 # <a name="atlmodule70-structure"></a>_ATL_MODULE70-Struktur
 
@@ -43,16 +43,16 @@ struct _ATL_MODULE70 {
 
 ## <a name="members"></a>Member
 
-`cbSize`  
+`cbSize`<br/>
 Die Größe der Struktur, die für die versionsverwaltung verwendet werden soll.
 
-`m_nLockCnt`  
+`m_nLockCnt`<br/>
 Um zu bestimmen, wie lange das Modul aktiv bleiben soll, Verweiszähler dieser Planergruppe.
 
-`m_pTermFuncs`  
+`m_pTermFuncs`<br/>
 Verfolgt-Funktionen, die aufgerufen werden, wenn Sie ATL fährt registriert wurden.
 
-`m_csStaticDataInitAndTypeInfo`  
+`m_csStaticDataInitAndTypeInfo`<br/>
 Verwendet, um den Zugriff auf interne Daten in mehreren Threads Situationen zu koordinieren.
 
 ## <a name="remarks"></a>Hinweise

@@ -1,5 +1,5 @@
 ---
-title: Linkertoolwarnung Lnk4002 | Microsoft Docs
+title: Linkertoolwarnung LNK4002 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78bf20b152f70350b88d7cae5db71ce6df855f5b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3774dd53ba9d6dde24909df1ade33bfb7e13b840
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300071"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107631"
 ---
 # <a name="linker-tools-warning-lnk4002"></a>Linkertoolwarnung LNK4002
-im Objekt definiertes Symbol  
-  
- Das Symbol, angezeigt in seiner ergänzten Form, wurde angegeben, in seiner nicht ergänzten Form im `object`, jedoch eine eindeutige Übereinstimmung mit einem ergänzten Symbol konnte nicht gefunden werden. Diese Warnung wird immer vorangestellt Warnung [LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) und schwerwiegende Fehler [LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).
+
+Symbol in Objekt definiert
+
+Das Symbol, angezeigt in seiner ergänzten Form, wurde angegeben, in seiner nicht ergänzten Form im `object`, aber eine eindeutige Übereinstimmung mit einem ergänzten Symbol konnte nicht gefunden werden. Diese Warnung wird immer vorangestellt Warnung [LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) und schwerwiegende Fehler [LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).

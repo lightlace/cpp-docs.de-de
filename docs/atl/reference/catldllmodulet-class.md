@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec36cddae835d46c5db6245f85e4294aa52225e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 170f46424e8eb4db4c38c91f01a89b53d5cbce0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766573"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107826"
 ---
 # <a name="catldllmodulet-class"></a>CAtlDllModuleT-Klasse
 
@@ -38,13 +38,13 @@ Diese Klasse stellt das Modul für eine DLL.
 ## <a name="syntax"></a>Syntax
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Die Klasse abgeleitet `CAtlDllModuleT`.
 
 ## <a name="members"></a>Member
@@ -128,13 +128,13 @@ HRESULT DllGetClassObject(
 
 ### <a name="parameters"></a>Parameter
 
-*rclsid*  
+*rclsid*<br/>
 Die CLSID des Objekts erstellt werden.
 
-*riid*  
+*riid*<br/>
 Die IID der angeforderten Schnittstelle.
 
-*ppv*  
+*ppv*<br/>
 Ein Zeiger auf den Schnittstellenzeiger vom *Riid*. Wenn das Objekt nicht über diese Schnittstelle unterstützt *Ppv* auf NULL festgelegt ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -151,10 +151,10 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*dwReason*  
+*dwReason*<br/>
 Wenn auf DLL_PROCESS_ATTACH, DLL_THREAD_ATTACH und DLL_THREAD_DETACH Benachrichtigungsaufrufe deaktiviert sind.
 
-*lpReserved*  
+*lpReserved*<br/>
 Reserviert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -175,7 +175,7 @@ HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 True, wenn die Typbibliothek registriert werden. Der Standardwert ist "true".
 
 ### <a name="return-value"></a>Rückgabewert
@@ -192,7 +192,7 @@ HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 True, wenn die Typbibliothek aus der Registrierung entfernt werden soll. Der Standardwert ist "true".
 
 ### <a name="return-value"></a>Rückgabewert
@@ -212,13 +212,13 @@ HRESULT GetClassObject(
 
 ### <a name="parameters"></a>Parameter
 
-*rclsid*  
+*rclsid*<br/>
 Die CLSID des Objekts erstellt werden.
 
-*riid*  
+*riid*<br/>
 Die IID der angeforderten Schnittstelle.
 
-*ppv*  
+*ppv*<br/>
 Ein Zeiger auf den Schnittstellenzeiger vom *Riid*. Wenn das Objekt nicht über diese Schnittstelle unterstützt *Ppv* auf NULL festgelegt ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -231,7 +231,7 @@ Diese Methode wird aufgerufen, indem [CAtlDllModuleT::DllGetClassObject](#dllget
 
 ## <a name="see-also"></a>Siehe auch
 
-[CAtlModuleT-Klasse](../../atl/reference/catlmodulet-class.md)   
-[CAtlExeModuleT-Klasse](../../atl/reference/catlexemodulet-class.md)   
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)   
+[CAtlModuleT-Klasse](../../atl/reference/catlmodulet-class.md)<br/>
+[CAtlExeModuleT-Klasse](../../atl/reference/catlexemodulet-class.md)<br/>
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
 [Modulklassen](../../atl/atl-module-classes.md)

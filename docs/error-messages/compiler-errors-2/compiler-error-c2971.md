@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2971 | Microsoft Docs
+title: Compilerfehler C2971 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd46be67a2ce8e7f3a8ab1319c7a16a465797474
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a311e6cd25ab275b7aa38325e45d26fd733d8b68
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241548"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107534"
 ---
 # <a name="compiler-error-c2971"></a>Compilerfehler C2971
-'Klasse': Template-Parameter 'Param': 'Arg': eine lokale Variable kann nicht als Nichttyp-Argument verwendet werden  
-  
- Sie können nicht den Namen oder die Adresse einer lokalen Variablen als Vorlagenargument verwenden.  
-  
- Im folgende Beispiel wird C2971 generiert:  
-  
-```  
-// C2971.cpp  
-template <int *pi>   
-class Y {};  
-  
-int global_var = 0;  
-  
-int main() {  
-   int local_var = 0;  
-   Y<&local_var> aY;   // C2971  
-   // try the following line instead  
-   // Y<&global_var> aY;  
-}  
+
+'Klasse': Vorlagenparameter 'Param': 'Arg': eine lokale Variable kann nicht als Nichttyp Argument verwendet werden
+
+Sie können nicht den Namen oder die Adresse einer lokalen Variablen als Vorlagenargument verwenden.
+
+Im folgende Beispiel wird die C2971 generiert:
+
+```
+// C2971.cpp
+template <int *pi>
+class Y {};
+
+int global_var = 0;
+
+int main() {
+   int local_var = 0;
+   Y<&local_var> aY;   // C2971
+   // try the following line instead
+   // Y<&global_var> aY;
+}
 ```

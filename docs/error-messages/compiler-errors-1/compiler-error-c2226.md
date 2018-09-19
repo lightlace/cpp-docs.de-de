@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2226 | Microsoft Docs
+title: Compilerfehler C2226 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfbb5cd21ac8fddcbd972cf64b641526c1cd9d62
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7392fa407cb7dbe528f173422d20cbc7e32d8709
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165973"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107730"
 ---
 # <a name="compiler-error-c2226"></a>Compilerfehler C2226
-Syntaxfehler: Typ 'Typ' nicht erwartet  
-  
- Ein Syntaxfehler tritt vor dem oder im Typspezifizierer auf.
+
+Syntaxfehler: Typ 'Typ' nicht erwartet
+
+Ein Syntaxfehler tritt vor dem oder im Typspezifizierer auf.

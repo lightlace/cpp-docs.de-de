@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2256 | Microsoft Docs
+title: Compilerfehler C2256 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b2571d13d08d368bf974b0c283c7d676eab6b56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d4b32021b5c0688cfe51601722006e9741bfa4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169126"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108331"
 ---
 # <a name="compiler-error-c2256"></a>Compilerfehler C2256
-Unzulässige Verwendung der Friend-Spezifizierer für "Funktion"  
-  
- Ein Destruktor oder Konstruktor kann nicht als angegeben werden eine ["Friend"](../../cpp/friend-cpp.md).  
-  
- Im folgende Beispiel wird C2256 generiert:  
-  
-```  
-// C2256.cpp  
-// compile with: /c  
-class C {  
-public:  
-   friend ~C();   // C2256  
-   ~C();   // OK  
-};  
+
+Unzulässige Verwendung von Friend-Spezifizierer für 'Funktion'
+
+Ein Destruktor oder Konstruktor nicht als angegeben werden eine [Friend](../../cpp/friend-cpp.md).
+
+Im folgende Beispiel wird die C2256 generiert:
+
+```
+// C2256.cpp
+// compile with: /c
+class C {
+public:
+   friend ~C();   // C2256
+   ~C();   // OK
+};
 ```

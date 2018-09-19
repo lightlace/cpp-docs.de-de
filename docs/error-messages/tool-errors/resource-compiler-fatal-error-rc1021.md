@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcencompiler: Schwerwiegender Fehler RC1021 | Microsoft Docs'
+title: 'Ressourcencompiler: Schwerwiegender Fehler RC1021 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27cc4096f84abc47c53b5c08eeacf5ebc92186da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d67b52282483e0767331b198fdf990660c64e85a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320156"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108510"
 ---
 # <a name="resource-compiler-fatal-error-rc1021"></a>Ressourcencompiler: Schwerwiegender Fehler RC1021
-Ungültiger Präprozessorbefehl 'string'  
-  
- Die Zeichen nach dem Nummernzeichen (**#**) nicht zu eine gültige Präprozessordirektive bilden.  
-  
- Die Nummernzeichen können nicht als erstes Zeichen in einem Bezeichner verwendet werden.
+
+Ungültiger Präprozessorbefehl 'string'
+
+Die Zeichen nach dem Nummernzeichen (**#**) nicht zu eine gültige Präprozessordirektive bilden.
+
+Die Nummernzeichen können nicht als erstes Zeichen in einem Bezeichner verwendet werden.
