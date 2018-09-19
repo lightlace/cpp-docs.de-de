@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2344 | Microsoft Docs
+title: Compilerfehler C2344 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdbe2ac9c1533a22e5e77f1d3f2db5c73ef93a3e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c560d1fcd250a83501579ec80768b4ba2de57f0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222162"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110215"
 ---
 # <a name="compiler-error-c2344"></a>Compilerfehler C2344
-align(#): Die Ausrichtung muss eine Potenz von 2 sein.  
-  
- Bei Verwendung des [align](../../cpp/align-cpp.md) -Schlüsselworts muss der übergebene Wert eine Potenz von zwei sein.  
-  
- Im folgenden Code wird beispielsweise C2344 erzeugt, weil 3 keine Potenz von 2 ist:  
-  
-```  
-// C2344.cpp  
-// compile with: /c  
-__declspec(align(3)) int a;   // C2344  
-__declspec(align(4)) int b;   // OK  
+
+align(#): Die Ausrichtung muss eine Potenz von 2 sein.
+
+Bei Verwendung des [align](../../cpp/align-cpp.md) -Schlüsselworts muss der übergebene Wert eine Potenz von zwei sein.
+
+Im folgenden Code wird beispielsweise C2344 erzeugt, weil 3 keine Potenz von 2 ist:
+
+```
+// C2344.cpp
+// compile with: /c
+__declspec(align(3)) int a;   // C2344
+__declspec(align(4)) int b;   // OK
 ```

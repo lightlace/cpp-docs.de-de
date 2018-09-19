@@ -1,5 +1,5 @@
 ---
-title: Task_completion_event-Klasse | Microsoft Docs
+title: Task_completion_event-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b22b77affd41aa60769543ae2bea2ed495084ae
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 71dd2ba071f345622d4058b9fb687dcdeaa50a62
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687880"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088994"
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event-Klasse
 Mit der `task_completion_event`-Klasse können Sie die Ausführung einer Aufgabe verzögern, bis eine Bedingung erfüllt ist, oder eine Aufgabe als Reaktion auf ein externes Ereignis starten.  
@@ -41,10 +41,9 @@ class task_completion_event<void>;
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `_ResultType`  
- Der Ergebnistyp dieser `task_completion_event`-Klasse.  
-  
- `T`  
+*_ResultType*<br/>
+Der Ergebnistyp dieser `task_completion_event`-Klasse.  
+
   
 ## <a name="members"></a>Mitglieder  
   
@@ -76,7 +75,7 @@ class task_completion_event<void>;
   
  **Namespace:** Parallelität  
   
-##  <a name="set"></a> Festlegen 
+##  <a name="set"></a> Legen Sie 
 
  Legt das Aufgabenabschlussereignis fest.  
   
@@ -87,14 +86,14 @@ bool set() const ;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Result`  
- Das Ergebnis, das für dieses Ereignis festgelegt werden soll.  
+*_Result*<br/>
+Das Ergebnis, das für dieses Ereignis festgelegt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Methode gibt `true` zurück, wenn die Festlegung des Ereignisses erfolgreich war. Sie gibt `false` zurück, wenn das Ereignis bereits festgelegt ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Bei mehrfachen oder gleichzeitigen Aufrufen von `set` ist nur der erste Aufruf erfolgreich, und sein Ergebnis (falls vorhanden) wird im Aufgabenabschlussereignis gespeichert. Die verbleibenden Sätze werden ignoriert, und die Methode gibt "false" zurück. Wenn Sie ein Aufgabenabschlussereignis festlegen, werden alle Aufgaben, die aus diesem Ereignis erstellt wurden, abgeschlossen, und ihre Fortsetzungen, falls vorhanden, werden geplant. Aufgabenabschlussobjekte, die über eine `_ResultType` außer `void` übergeben den Wert an ihre Fortsetzungen.  
+ Bei mehrfachen oder gleichzeitigen Aufrufen von `set` ist nur der erste Aufruf erfolgreich, und sein Ergebnis (falls vorhanden) wird im Aufgabenabschlussereignis gespeichert. Die verbleibenden Sätze werden ignoriert, und die Methode gibt "false" zurück. Wenn Sie ein Aufgabenabschlussereignis festlegen, werden alle Aufgaben, die aus diesem Ereignis erstellt wurden, abgeschlossen, und ihre Fortsetzungen, falls vorhanden, werden geplant. Aufgabenabschlussobjekte, die eine `_ResultType` außer `void` übergeben den Wert an ihre Fortsetzungen.  
   
 ##  <a name="set_exception"></a> set_exception 
 
@@ -108,9 +107,14 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_E`  
- `_Except`  
- `_ExceptionPtr`  
+*_E*<br/>
+Der Ausnahmetyp.
+
+*_Except*<br/>
+Die Ausnahme fest.
+
+*_ExceptionPtr*<br/>
+Der Ausnahmezeiger festgelegt.
   
 ### <a name="return-value"></a>Rückgabewert  
   

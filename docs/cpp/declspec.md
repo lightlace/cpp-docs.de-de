@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b434ca991ef05bb90c3cbdc659cf8adc3381aa0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b159bcdae6e7f576ed92275ec5f79d25132b53e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752907"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111316"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -34,7 +34,7 @@ Die erweiterte Attributsyntax für die Angabe von Storage speicherklasseninforma
 &nbsp;&nbsp;&nbsp;&nbsp;**__declspec (***extended-Decl-Modifier-Seq***)** 
 
 *extended-decl-modifier-seq*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Extended-Decl-Modifier*<sub>deaktivieren</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Extended-Decl-Modifier* *extended-Decl-Modifier-Seq*
 
 *extended-decl-modifier*:<br/>
@@ -43,7 +43,7 @@ Die erweiterte Attributsyntax für die Angabe von Storage speicherklasseninforma
 &nbsp;&nbsp;&nbsp;&nbsp;**appdomain**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Code_seg ("** *Segname* **")**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Als veraltet markiert**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**DllImport**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**jitintrinsic**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
@@ -58,7 +58,7 @@ Die erweiterte Attributsyntax für die Angabe von Storage speicherklasseninforma
 &nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**selectany**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**spectre(nomitigation)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Thread**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**UUID ("** *ComObjectGUID* **")**
 
 Die Deklarationsmodifizierersequenz ist durch Leerzeichen getrennt. Beispiele finden Sie in späteren Abschnitten.
@@ -105,5 +105,6 @@ __declspec( thread ) int tls_i = 1;
 **Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
- [Schlüsselwörter](../cpp/keywords-cpp.md)  
- [C-Speicherklassenattribute (erweitert)](../c-language/c-extended-storage-class-attributes.md)  
+
+[Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
+[C-Speicherklassenattribute (erweitert)](../c-language/c-extended-storage-class-attributes.md)

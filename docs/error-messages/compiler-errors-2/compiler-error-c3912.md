@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3912 | Microsoft Docs
+title: Compilerfehler C3912 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9a5f392500b47771c6f19cc38d2fa2b5e679935
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26ffa49a6b54769db5b24d91ffcaf72579a6e458
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272694"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115254"
 ---
 # <a name="compiler-error-c3912"></a>Compilerfehler C3912
-'Ereignis': Typ des Ereignisses muss ein Delegattyp sein  
-  
- Ein Ereignis wurde deklariert, aber es war nicht mit dem richtigen Typ.  
-  
- Weitere Informationen finden Sie unter [Ereignis](../../windows/event-cpp-component-extensions.md).  
-  
- Im folgende Beispiel wird C3912 generiert:  
-  
-```  
-// C3912.cpp  
-// compile with: /clr  
-delegate void H();  
-ref class X {  
-   event int Ev;   // C3912  
-   event H^ Ev2;   // OK  
-};  
+
+'Ereignis': Typ des Ereignisses muss ein Delegattyp sein
+
+Ein Ereignis wurde deklariert, aber es hatte nicht den richtigen Typ.
+
+Weitere Informationen finden Sie unter [Ereignis](../../windows/event-cpp-component-extensions.md).
+
+Im folgende Beispiel wird die C3912 generiert:
+
+```
+// C3912.cpp
+// compile with: /clr
+delegate void H();
+ref class X {
+   event int Ev;   // C3912
+   event H^ Ev2;   // OK
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2212 | Microsoft Docs
+title: Compilerfehler C2212 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 152b38be30b50684684bb0c2c39a035b748915b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 773dff4c731830d300c97f1960b24923d2b7d67f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168736"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089878"
 ---
 # <a name="compiler-error-c2212"></a>Compilerfehler C2212
-'Bezeichner': __based ist nicht verfügbar für Zeiger auf Funktionen  
-  
- Zeiger auf Funktionen können nicht deklariert werden `__based`. Wenn Sie Code basierende Daten benötigen, verwenden Sie die `__declspec` Schlüsselwort oder der `data_seg` Pragma.
+
+"Bezeichner": __based ist nicht verfügbar für Zeiger auf Funktionen
+
+Zeiger auf Funktionen können nicht deklariert werden `__based`. Wenn Sie Code basierende Daten benötigen, verwenden Sie die `__declspec` Schlüsselwort oder `data_seg` Pragma.

@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3460 | Microsoft Docs
+title: Compilerfehler C3460 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8922d49280059af1359ec2eb597bec63970b463
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 64854420acf0b95cbb7ced8e4d4260735b07037e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254081"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109989"
 ---
 # <a name="compiler-error-c3460"></a>Compilerfehler C3460
-'type': Nur ein benutzerdefinierter Typ kann weitergeleitet werden.  
-  
- Weitere Informationen finden Sie unter [Typweiterleitung (C + c++ / CLI)](../../windows/type-forwarding-cpp-cli.md).  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird eine Komponente erstellt:  
-  
-```  
-// C3460.cpp  
-// compile with: /LD /clr  
-public ref class R {};  
-```  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C3460 generiert:  
-  
-```  
-// C3460_b.cpp  
-// compile with: /clr /c  
-#using "C3460.dll"  
-[assembly:TypeForwardedTo(int::typeid)];   // C3460  
-[assembly:TypeForwardedTo(R::typeid)];  
+
+'type': Nur ein benutzerdefinierter Typ kann weitergeleitet werden.
+
+Weitere Informationen finden Sie unter [Typweiterleitung (C++ / CLI)](../../windows/type-forwarding-cpp-cli.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird eine Komponente erstellt:
+
+```
+// C3460.cpp
+// compile with: /LD /clr
+public ref class R {};
+```
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C3460 generiert:
+
+```
+// C3460_b.cpp
+// compile with: /clr /c
+#using "C3460.dll"
+[assembly:TypeForwardedTo(int::typeid)];   // C3460
+[assembly:TypeForwardedTo(R::typeid)];
 ```

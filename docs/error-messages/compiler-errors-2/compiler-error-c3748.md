@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3748 | Microsoft Docs
+title: Compilerfehler C3748 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de3d943db70b0e13b727f9c3e680f6cccc7f446e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31b2d0434ec48f0c1d7ecf767ce2746e2c603401
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274052"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116846"
 ---
 # <a name="compiler-error-c3748"></a>Compilerfehler C3748
-'Schnittstelle': verwaltete Schnittstellen können keine Ereignisse auslösen  
-  
- Die [__event](../../cpp/event.md) Schlüsselwort kann nicht innerhalb einer Schnittstelle verwendet werden.  
-  
- Im folgende Beispiel wird C3748 generiert:  
-  
-```  
-// C3748.cpp  
-__interface I {  
-// try the following line instead  
-// struct I {  
-   __event void f();   // C3748  
-};  
-  
-int main() {  
-}  
+
+'Schnittstelle': verwaltete Schnittstellen lösen möglicherweise keine Ereignisse
+
+Die [__event](../../cpp/event.md) Schlüsselwort kann nicht innerhalb einer Schnittstelle verwendet werden.
+
+Im folgende Beispiel wird die C3748 generiert:
+
+```
+// C3748.cpp
+__interface I {
+// try the following line instead
+// struct I {
+   __event void f();   // C3748
+};
+
+int main() {
+}
 ```

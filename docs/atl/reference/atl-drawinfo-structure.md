@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11a2d96f2602c596e6470b310ef274f8c23290d8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 87ae430dabf3a4aac54b77afb0b2ed5c143a8875
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754916"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116034"
 ---
 # <a name="atldrawinfo-structure"></a>ATL_DRAWINFO-Struktur
 
@@ -51,43 +51,43 @@ struct ATL_DRAWINFO {
 
 ## <a name="members"></a>Member
 
-`cbSize`  
+`cbSize`<br/>
 Die Größe der Struktur, in Bytes.
 
-`dwDrawAspect`  
+`dwDrawAspect`<br/>
 Gibt an, wie das Ziel dargestellt werden soll. Darstellungen können es sich um Inhalte, ein Symbol, eine Miniaturansicht oder einem gedruckten Dokument enthalten. Eine Liste der möglichen Werte, finden Sie unter [DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect) und [DVASPECT2](/windows/desktop/api/ocidl/ne-ocidl-tagdvaspect2).
 
-`lindex`  
+`lindex`<br/>
 Der Teil des Ziels, das für den Ziehvorgang relevant ist. Die Interpretation hängt von den Wert in der `dwDrawAspect` Member.
 
-`ptd`  
+`ptd`<br/>
 Zeiger auf eine [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) -Struktur, die Zeichnen-Optimierungen, abhängig vom angegebenen Aspekt ermöglicht. Beachten Sie, dass neueren Objekten und Containern, die optimierte zeichnen Schnittstellen unterstützen auch dieser Member unterstützt. Geben Sie NULL für diesen Member, älteren Objekten und Containern, die nicht optimierte zeichnen Schnittstellen immer unterstützt werden.
 
-`hicTargetDev`  
+`hicTargetDev`<br/>
 Informationen über den Kontext für das Zielgerät verweist `ptd` aus dem das Objekt Gerätemetrik abrufen und Funktionen des Geräts prüfen kann. Wenn `ptd` NULL ist, das Objekt den Wert in ignorieren soll die `hicTargetDev` Member.
 
-`hdcDraw`  
+`hdcDraw`<br/>
 Der Gerätekontext, in dem gezeichnet werden soll. Für ein fensterloses Objekt das `hdcDraw` ist Mitglied der `MM_TEXT` Zuordnungsmodus mit der logischen Koordinaten Abgleich der Clientkoordinaten des übergeordneten Fensters. Darüber hinaus der Gerätekontext muss den gleichen Zustand wie der in der Regel durch Übergeben einer `WM_PAINT` Nachricht.
 
-`prcBounds`  
+`prcBounds`<br/>
 Zeiger auf eine [RECTL](https://msdn.microsoft.com/library/windows/desktop/dd162907) -Struktur gibt das Rechteck auf `hdcDraw` und in dem das Objekt gezeichnet werden soll. Dieses Element steuert die Positionierung und Strecken des Objekts. Dieser Member sollte NULL, um ein fensterloses für ein direktes aktives Objekt gezeichnet werden soll. In jedem anderen Fall NULL ist kein gültiger Wert und sollten dazu führen, eine `E_INVALIDARG` Fehlercode. Wenn der Container einen Wert ungleich NULL für fensterloses Objekt übergibt, sollte das Objekt den angeforderten Aspekt in den angegebenen Gerätekontext und das Rechteck gerendert. Ein Container kann dies von fensterloses Objekt zum Rendern einer zweiten, nicht aktive Ansicht des Objekts oder zum Drucken des Objekts anfordern.
 
-`prcWBounds`  
+`prcWBounds`<br/>
 Wenn `hdcDraw` ist eine Metadatei-Gerätekontexts (finden Sie unter [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) im Windows SDK), dies ist ein Zeiger auf eine `RECTL` Struktur, die das umschließende Rechteck in der zugrunde liegenden Metadatei angibt. Die Rectangle-Struktur enthält, die Fenster Umfang und die Fensterursprung. Diese Werte sind hilfreich für das Zeichnen von Metadateien. Das Rechteck erkennbar `prcBounds` darin geschachtelt ist dies `prcWBounds` Rechteck; sie befinden sich in den gleichen koordinierten Bereich.
 
-`bOptimize`  
+`bOptimize`<br/>
 Ungleich NULL ist das Zeichnen des Steuerelements zum werden optimiert, andernfalls 0. Wenn das Zeichnen optimiert ist, wird der Status des Gerätekontexts automatisch wiederhergestellt, sobald Sie fertig sind rendern.
 
-`bZoomed`  
+`bZoomed`<br/>
 Ungleich NULL, wenn das Ziel einen Zoomfaktor, andernfalls 0 hat. Der Zoomfaktor befindet sich in `ZoomNum`.
 
-`bRectInHimetric`  
+`bRectInHimetric`<br/>
 Einen Wert ungleich NULL die Abmessungen des `prcBounds` befinden sich im HIMETRIC, andernfalls 0.
 
-`ZoomNum`  
+`ZoomNum`<br/>
 Die Breite und Höhe des Rechtecks in dem das Objekt gerendert wird. Der Zoomfaktor entlang der x-Achse (den Anteil der Größe des Objekts in der aktuellen Umfang) des Ziels ist der Wert des `ZoomNum.cx` geteilt durch den Wert der `ZoomDen.cx`. Der Zoomfaktor entlang der y-Achse wird auf ähnliche Weise erreicht.
 
-`ZoomDen`  
+`ZoomDen`<br/>
 Die tatsächliche Breite und Höhe des Ziels.
 
 ## <a name="remarks"></a>Hinweise
@@ -102,6 +102,6 @@ Diese Struktur speichert, relevante Informationen, mit denen die Darstellung ein
 
 ## <a name="see-also"></a>Siehe auch
 
-[Klassen und Strukturen](../../atl/reference/atl-classes.md)  
-[IViewObject::Draw](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-draw)  
+[Klassen und Strukturen](../../atl/reference/atl-classes.md)<br/>
+[IViewObject::Draw](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-draw)<br/>
 [CComControlBase::OnDrawAdvanced](../../atl/reference/ccomcontrolbase-class.md#ondrawadvanced)

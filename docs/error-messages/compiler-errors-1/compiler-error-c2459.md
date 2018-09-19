@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2459 | Microsoft Docs
+title: Compilerfehler C2459 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6013720b55892ffd34e1faf132a69842e4bceb50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b67c5ba4c714b096da58b1e4d837840dc6b5fd2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198507"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113213"
 ---
 # <a name="compiler-error-c2459"></a>Compilerfehler C2459
-'Bezeichner': definiert wird; als anonyme Mitglied kann nicht hinzugefügt werden.  
-  
- Eine Klasse, Struktur oder Union wird in einen eigenen Bereich von einem Mitglied einer anonymen Union neu definiert.  
-  
- Im folgende Beispiel wird C2459 generiert:  
-  
-```  
-// C2459.cpp  
-// compile with: /c  
-class C {  
-   union { int C; };   // C2459  
-   union { int D; };  
-};  
+
+'Bezeichner': definiert wird; als zusätzliches anonymes Element kann nicht hinzugefügt werden.
+
+Eine Klasse, Struktur oder Union wird in einen eigenen Bereich von einem Mitglied einer anonymen Union neu definiert.
+
+Im folgende Beispiel wird die C2459 generiert:
+
+```
+// C2459.cpp
+// compile with: /c
+class C {
+   union { int C; };   // C2459
+   union { int D; };
+};
 ```

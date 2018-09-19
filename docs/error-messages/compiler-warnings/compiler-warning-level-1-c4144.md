@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4144 generiert | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4144 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b84e8a062871bfaa1d83da50175e3485f2d8bd2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba9c1210247ad537f8fa1224c30b1c88d9c6b721
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281338"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109664"
 ---
-# <a name="compiler-warning-level-1-c4144"></a>Compilerwarnung (Stufe 1) C4144 generiert
-'Ausdruck': Relationaler Ausdruck als Schalterausdruck  
-  
- Der angegebene relationale Ausdruck wurde als steuernder Ausdruck verwendet eine [wechseln](../../cpp/switch-statement-cpp.md) Anweisung. Die zugehörigen Case-Anweisungen werden boolesche Werte angeboten. Im folgende Beispiel wird C4144 generiert:  
-  
-```  
-// C4144.cpp  
-// compile with: /W1  
-int main()  
-{  
-   int i = 0;  
-   switch(!i) {   // C4144, remove the ! to resolve  
-      case 1:  
-         break;  
-      default:  
-         break;  
-   }  
-}  
+# <a name="compiler-warning-level-1-c4144"></a>Compilerwarnung (Stufe 1) C4144
+
+"Ausdruck": Relationaler Ausdruck als Schalterausdruck
+
+Die angegebenen relationalen Ausdrucks wurde als steuernder Ausdruck verwendet eine [wechseln](../../cpp/switch-statement-cpp.md) Anweisung. Die zugeordnete Case-Anweisungen werden boolesche Werte angeboten. Im folgende Beispiel wird die C4144 generiert:
+
+```
+// C4144.cpp
+// compile with: /W1
+int main()
+{
+   int i = 0;
+   switch(!i) {   // C4144, remove the ! to resolve
+      case 1:
+         break;
+      default:
+         break;
+   }
+}
 ```

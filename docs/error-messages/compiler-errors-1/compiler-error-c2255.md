@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2255 | Microsoft Docs
+title: Compilerfehler C2255 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 314d53017cf809e0ca38838cdfb3b3bb4b22437c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba6a5a2d2237373fb1321dc6d3059f20a9ddb159
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169604"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112251"
 ---
 # <a name="compiler-error-c2255"></a>Compilerfehler C2255
-"Element": außerhalb einer Klassendefinition nicht zulässig.  
-  
- Beispielsweise wird eine Funktion, die keine Memberfunktion ist, als `friend`deklariert.  
-  
- Im folgenden Beispiel wird C2255 generiert:  
-  
-```  
-// C2255.cpp  
-// compile with: /c  
-class A {  
-private:  
-   void func1();  
-   friend void func2();  
-};  
-  
-friend void func1() {}   // C2255  
-void func2(){}  
+
+"Element": außerhalb einer Klassendefinition nicht zulässig.
+
+Beispielsweise wird eine Funktion, die keine Memberfunktion ist, als `friend`deklariert.
+
+Im folgenden Beispiel wird C2255 generiert:
+
+```
+// C2255.cpp
+// compile with: /c
+class A {
+private:
+   void func1();
+   friend void func2();
+};
+
+friend void func1() {}   // C2255
+void func2(){}
 ```

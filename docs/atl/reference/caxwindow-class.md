@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eda5fc385f094bd7a18bff521250453ebb66c84
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 39b376d6e65a5002487cbf51186fdab9ccb3fc46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757935"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110145"
 ---
 # <a name="caxwindow-class"></a>CAxWindow-Klasse
 
@@ -94,10 +94,10 @@ HRESULT AttachControl(
 
 ### <a name="parameters"></a>Parameter
 
-*pControl*  
+*pControl*<br/>
 [in] Ein Zeiger auf die `IUnknown` des Steuerelements.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Ein Zeiger auf die `IUnknown` des Hosts (die `AxWin` Objekt).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -118,7 +118,7 @@ CAxWindow(HWND hWnd = NULL);
 
 ### <a name="parameters"></a>Parameter
 
-*hWnd*  
+*hWnd*<br/>
 Ein Handle für ein vorhandenes Fensterobjekt.
 
 ##  <a name="createcontrol"></a>  CAxWindow::CreateControl
@@ -139,7 +139,7 @@ HRESULT CreateControl(
 
 ### <a name="parameters"></a>Parameter
 
-*Wert*  
+*Wert*<br/>
 Ein Zeiger auf eine Zeichenfolge, die das Steuerelement zu erstellen. Muss in einem der folgenden Arten formatiert werden:
 
 - Eine ProgID, z. B. "MSCAL. Calendar.7 "
@@ -155,13 +155,13 @@ Ein Zeiger auf eine Zeichenfolge, die das Steuerelement zu erstellen. Muss in ei
    > [!NOTE]
    > "MSHTML:" muss vor der HTML-Fragment stehen, damit es als einen MSHTML-Datenstrom festgelegt ist. Nur die ProgID und CLSID werden in Windows Mobile-Plattformen unterstützt. Embedded Windows CE-Plattformen, außer Windows Mobile mit Unterstützung für CE-IE-Unterstützung aller Typen, die ProgID einschließlich, CLSID, URL, verweisen auf das aktive Dokument und der HTML-Fragment.
 
-*pStream*  
+*pStream*<br/>
 [in] Ein Zeiger auf einen Stream, der zum Initialisieren der Eigenschaften des Steuerelements verwendet wird. NULL kann sein.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Die Adresse eines Zeigers, der erhält die `IUnknown` des Containers. NULL kann sein.
 
-*dwResID*  
+*dwResID*<br/>
 Die Ressourcen-ID, der eine HTML-Ressource. Das WebBrowser-Steuerelement wird erstellt und mit der angegebenen Ressource geladen werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -206,7 +206,7 @@ HRESULT CreateControlEx(
 
 ### <a name="parameters"></a>Parameter
 
-*Wert*  
+*Wert*<br/>
 Ein Zeiger auf eine Zeichenfolge, die das Steuerelement zu erstellen. Muss in einem der folgenden Arten formatiert werden:
 
 - Eine ProgID, z. B. "MSCAL. Calendar.7 "
@@ -222,22 +222,22 @@ Ein Zeiger auf eine Zeichenfolge, die das Steuerelement zu erstellen. Muss in ei
    > [!NOTE]
    > "MSHTML:" muss vor der HTML-Fragment stehen, damit es als einen MSHTML-Datenstrom festgelegt ist. Nur die ProgID und CLSID werden in Windows Mobile-Plattformen unterstützt. Embedded Windows CE-Plattformen, außer Windows Mobile mit Unterstützung für CE-IE-Unterstützung aller Typen, die ProgID einschließlich, CLSID, URL, verweisen auf das aktive Dokument und der HTML-Fragment.
 
-*pStream*  
+*pStream*<br/>
 [in] Ein Zeiger auf einen Stream, der zum Initialisieren der Eigenschaften des Steuerelements verwendet wird. NULL kann sein.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Die Adresse eines Zeigers, der erhält die `IUnknown` des Containers. NULL kann sein.
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out] Die Adresse eines Zeigers, der erhält die `IUnknown` des Steuerelements. NULL kann sein.
 
-*iidSink*  
+*iidSink*<br/>
 [in] Der Schnittstellenbezeichner einer ausgehenden Schnittstelle für das enthaltene Objekt. IID_NULL kann sein.
 
-*punkSink*  
+*punkSink*<br/>
 [in] Ein Zeiger auf die `IUnknown` -Schnittstelle des Senkenobjekts mit dem Verbindungspunkt am anhand des enthaltenen Objekts verbunden sein, *IidSink*.
 
-*dwResID*  
+*dwResID*<br/>
 [in] Die Ressourcen-ID, der eine HTML-Ressource. Das WebBrowser-Steuerelement wird erstellt und mit der angegebenen Ressource geladen werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -276,7 +276,7 @@ CAxWindow<TBase>& operator=(HWND hWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*hWnd*  
+*hWnd*<br/>
 Ein Handle für ein vorhandenes Fenster.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -295,13 +295,13 @@ HRESULT QueryControl(Q** ppUnk);
 
 ### <a name="parameters"></a>Parameter
 
-*IID*  
+*IID*<br/>
 [in] Gibt die IID der Schnittstelle des Steuerelements an.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] Ein Zeiger auf die Schnittstelle des Steuerelements. In der Vorlagenversion dieser Methode besteht keine Notwendigkeit für eine Verweis-ID, solange eine typisierte Schnittstelle mit einer zugewiesenen UUID übergeben wird.
 
-*Q*  
+*Q*<br/>
 [in] Die Schnittstelle, die abgefragt wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -320,13 +320,13 @@ HRESULT QueryHost(Q** ppUnk);
 
 ### <a name="parameters"></a>Parameter
 
-*IID*  
+*IID*<br/>
 [in] Gibt die IID der Schnittstelle des Steuerelements an.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] Ein Zeiger auf die Schnittstelle auf dem Host. In der Vorlagenversion dieser Methode besteht keine Notwendigkeit für eine Verweis-ID, solange eine typisierte Schnittstelle mit einer zugewiesenen UUID übergeben wird.
 
-*Q*  
+*Q*<br/>
 [in] Die Schnittstelle, die abgefragt wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -347,7 +347,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 
 ### <a name="parameters"></a>Parameter
 
-*pDisp*  
+*pDisp*<br/>
 [in] Ein Zeiger auf ein `IDispatch` Schnittstelle.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -364,7 +364,7 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 
 ### <a name="parameters"></a>Parameter
 
-*pUIHandler*  
+*pUIHandler*<br/>
 [in] Ein Zeiger auf ein `IDocHostUIHandlerDispatch` Schnittstelle.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -377,9 +377,9 @@ Die externe `IDocHostUIHandlerDispatch` Schnittstelle wird von Steuerelementen, 
 
 ## <a name="see-also"></a>Siehe auch
 
-[ATLCON-Beispiel](../../visual-cpp-samples.md)   
-[CWindow-Klasse](../../atl/reference/cwindow-class.md)   
-[Grundlagen von zusammengesetzten Steuerelementen](../../atl/atl-composite-control-fundamentals.md)   
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)   
+[ATLCON-Beispiel](../../visual-cpp-samples.md)<br/>
+[CWindow-Klasse](../../atl/reference/cwindow-class.md)<br/>
+[Grundlagen von zusammengesetzten Steuerelementen](../../atl/atl-composite-control-fundamentals.md)<br/>
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
 [Steuerelementkapselung – häufig gestellte Fragen](../../atl/atl-control-containment-faq.md)
 

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75689c07718bf066105920b566087c08a220a7de
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e5b550cd0b76aa0a2e061536ae6bb0ea61063909
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408805"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087746"
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>Partielle Reihenfolge von Funktionsvorlagen (C++)
 
@@ -82,15 +82,16 @@ int main() {
    f(cpi); // Calls even more specialized function.
    // Without partial ordering, these calls would be ambiguous.
 }
-```  
-  
-### <a name="output"></a>Ausgabe  
-  
-```Output  
-Less specialized function called  
-More specialized function called  
-Even more specialized function for const T*  
-```  
-  
+```
+
+### <a name="output"></a>Ausgabe
+
+```Output
+Less specialized function called
+More specialized function called
+Even more specialized function for const T*
+```
+
 ## <a name="see-also"></a>Siehe auch
- [Funktionsvorlagen](../cpp/function-templates.md)
+
+[Funktionsvorlagen](../cpp/function-templates.md)

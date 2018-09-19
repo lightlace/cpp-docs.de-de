@@ -54,14 +54,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b7975c91631df24ab12858677a770c38dc0f6411
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e13f262b90ff46955d6ba63fb83a941d712b017a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338911"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087876"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset-Klasse
+
 Greift auf die Elemente eines Rowsets mit Arraysyntax.  
   
 ## <a name="syntax"></a>Syntax
@@ -74,11 +75,13 @@ class CArrayRowset :
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *TAccessor*  
- Der Typ der Accessor-Klasse, die Sie auf das Rowset verwenden möchten.  
+
+*TAccessor*<br/>
+Der Typ der Accessor-Klasse, die Sie auf das Rowset verwenden möchten.  
 
 ## <a name="requirements"></a>Anforderungen  
- **Header:** atldbcli.h  
+
+**Header:** atldbcli.h  
   
 ## <a name="members"></a>Member  
   
@@ -102,6 +105,7 @@ class CArrayRowset :
 |[CArrayRowset::m_nRowsRead](#nrowsread)|Die Anzahl der Zeilen, die bereits gelesen.|  
   
 ## <a name="carrayrowset"></a> CArrayRowset:: CArrayRowset
+
 Erstellt ein neues `CArrayRowset`-Objekt.  
   
 ### <a name="syntax"></a>Syntax  
@@ -111,10 +115,12 @@ CArrayRowset(int nMax = 100000);
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *nmax.*  
- [in] Maximale Anzahl von Zeilen im Rowset. 
+
+*nmax.*<br/>
+[in] Maximale Anzahl von Zeilen im Rowset. 
 
 ## <a name="snapshot"></a> CArrayRowset:: Snapshot
+
 Liest das gesamte Rowset in den Speicher, erstellen ein Bild oder eine Momentaufnahme davon.  
   
 ### <a name="syntax"></a>Syntax  
@@ -124,6 +130,7 @@ HRESULT Snapshot() throw();
 ```  
 
 ## <a name="operator"></a> CArrayRowset:: Operator
+
 Stellt arrayähnlichen Syntax für den Zugriff auf eine Zeile im Rowset bereit.  
   
 ### <a name="syntax"></a>Syntax  
@@ -133,19 +140,23 @@ TAccessor & operator[](int nrow);
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *TAccessor*  
- Auf Vorlagen basierenden Parameter, der den Typ des Accessors gespeichert, in dem Rowset angibt.  
+
+*TAccessor*<br/>
+Auf Vorlagen basierenden Parameter, der den Typ des Accessors gespeichert, in dem Rowset angibt.  
   
- *Funktionen "nrow"*  
- [in] Anzahl von der Zeile (Arrayelement), die Sie zugreifen möchten.  
+*Funktionen "nrow"*<br/>
+[in] Anzahl von der Zeile (Arrayelement), die Sie zugreifen möchten.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Inhalt der die angeforderte Zeile.  
+
+Der Inhalt der die angeforderte Zeile.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn *Funktionen "nrow"* überschreitet die Anzahl der Zeilen im Rowset, wird eine Ausnahme ausgelöst.  
+
+Wenn *Funktionen "nrow"* überschreitet die Anzahl der Zeilen im Rowset, wird eine Ausnahme ausgelöst.  
 
 ## <a name="nrowsread"></a> CArrayRowset:: M_nrowsread
+
 Enthält die Anzahl der Zeilen im Rowset, die bereits gelesen wurden.  
   
 ### <a name="syntax"></a>Syntax  
@@ -155,6 +166,7 @@ ULONG m_nRowsRead;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenz der OLE DB Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CRowset-Klasse](../../data/oledb/crowset-class.md)
+
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CRowset-Klasse](../../data/oledb/crowset-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C3172 | Microsoft Docs
+title: Compilerfehler C3172 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3feadd9c8fc39edb707e8dbd3a80ed90d078d72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 25c3b1fd9132c6b170fdf74b1619a35d83959f90
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254375"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117635"
 ---
-# <a name="compiler-error-c3172"></a>Compilerfehler Fehler C3172
-"Modulname": Geben Sie unterschiedliche Idl_module-Attribute können nicht in einem Projekt  
-  
- [Idl_module](../../windows/idl-module.md) Attribute mit demselben Namen, aber unterschiedliche `dllname` oder `version` Parameter in zwei Dateien in einer Kompilierung gefunden wurden. Nur eine eindeutige `idl_module` Attribut pro Kompilierung angegeben werden kann.  
-  
- Identische `idl_module` Attribute können in mehr als eine Quellcodedatei angegeben werden.  
-  
- Beispielsweise, wenn die folgenden `idl_module` Attribute gefunden wurden:  
-  
-```  
-// C3172.cpp  
-[module(name="MyMod")];  
-[ idl_module(name="x", dllname="file.dll", version="1.1") ];  
-int main() {}  
-```  
-  
- und anschließend  
-  
-```  
-// C3172b.cpp  
-// compile with: C3172.cpp  
-// C3172 expected  
-[ idl_module(name="x", dllname="file.dll", version="1.0") ];  
-```  
-  
- der Compiler den Fehler C3172 (Beachten Sie die Werte der anderen Version).
+# <a name="compiler-error-c3172"></a>Compilerfehler C3172
+
+"Modulname": Geben Sie unterschiedliche Idl_module-Attribute können nicht in einem Projekt
+
+[Idl_module](../../windows/idl-module.md) Attribute mit demselben Namen, aber unterschiedliche `dllname` oder `version` Parameter wurden in zwei Dateien in einer Kompilierung gefunden. Nur ein eindeutiges `idl_module` Attribut pro Kompilierung angegeben werden kann.
+
+Identische `idl_module` Attribute können in mehr als eine Quellcodedatei angegeben werden.
+
+Z. B. wenn die folgenden `idl_module` Attribute gefunden wurden:
+
+```
+// C3172.cpp
+[module(name="MyMod")];
+[ idl_module(name="x", dllname="file.dll", version="1.1") ];
+int main() {}
+```
+
+und anschließend
+
+```
+// C3172b.cpp
+// compile with: C3172.cpp
+// C3172 expected
+[ idl_module(name="x", dllname="file.dll", version="1.0") ];
+```
+
+der Compiler den Fehler C3172 (Beachten Sie die Werte für die andere Version).

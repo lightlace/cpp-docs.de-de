@@ -1,5 +1,5 @@
 ---
-title: PTR::QueryInterface | Microsoft Docs
+title: PTR::QueryInterface | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dd25661fc14cb9539d4b8e68f42c29895ce0d70e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a3416f057d32a003eba1b9776456a60d915de95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33160965"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090138"
 ---
 # <a name="ptrqueryinterface"></a>ptr::QueryInterface
-Fragt das im Besitz befindlichen COM-Objekt für eine Schnittstelle und fügt das Ergebnis in einen anderen `com::ptr`.  
+Fragt das im Besitz des Benutzers COM-Objekt für eine Schnittstelle ab und fügt das Ergebnis in eine andere `com::ptr`.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,17 +40,17 @@ void QueryInterface(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `other`  
- Die `com::ptr` erhalten, dass die Schnittstelle.  
+*other*<br/>
+Die `com::ptr` erhalten, die die Schnittstelle.  
   
 ## <a name="exceptions"></a>Ausnahmen  
- Intern `QueryInterface` aufgerufen wird, auf das im Besitz befindlichen COM-Objekt und alle Fehler `HRESULT` wird konvertiert, um eine Ausnahme von <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
+ Intern `QueryInterface` aufgerufen wird, auf das im Besitz des Benutzers COM-Objekt und alle Fehler `HRESULT` konvertiert wird, um eine Ausnahme von <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Methode, um ein COM-Wrapper für eine andere Schnittstelle des COM-Objekts, das im Besitz von der aktuellen Wrapper erstellen. Diese Methode ruft `QueryInterface` über das im Besitz befindlichen COM-Objekt zum Anfordern der eines Zeigers auf eine bestimmte Schnittstelle die COM-Objekt, und fügt den zurückgegebenen Schnittstellenzeiger in den übergebenen `com::ptr`.  
+ Verwenden Sie diese Methode, um ein COM-Wrapper für eine andere Schnittstelle des COM-Objekts, das im Besitz von aktuellen Wrapper erstellen. Diese Methode ruft `QueryInterface` über das im Besitz des Benutzers COM-Objekt zum Anfordern der eines Zeigers auf eine bestimmte Schnittstelle die COM-Objekt, und fügt den zurückgegebenen Schnittstellenzeiger in den übergebenen `com::ptr`.  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel implementiert eine CLR-Klasse, verwendet eine `com::ptr` umschließen die privaten Member `IXMLDOMDocument` Objekt. Die `WriteTopLevelNode` Memberfunktion verwendet `QueryInterface` zum Auffüllen einer lokales `com::ptr` mit einem `IXMLDOMNode` und übergibt dann die `com::ptr` (durch Nachverfolgungsverweis) auf eine Private Memberfunktion, die der Knoten Eigenschaften für Name und Text in die Konsole schreibt.  
+ In diesem Beispiel implementiert eine CLR-Klasse, verwendet eine `com::ptr` , umschließen die privaten Member `IXMLDOMDocument` Objekt. Die `WriteTopLevelNode` Memberfunktion verwendet `QueryInterface` , geben Sie eine lokale `com::ptr` mit einer `IXMLDOMNode` und übergibt dann die `com::ptr` (durch ein Nachverfolgungsverweis) auf einen privaten Member-Funktion, die den Namen und Text-Eigenschaften des Knotens in die Konsole schreibt.  
   
 ```  
 // comptr_queryinterface.cpp  

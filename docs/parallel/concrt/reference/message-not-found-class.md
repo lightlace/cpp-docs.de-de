@@ -1,5 +1,5 @@
 ---
-title: Message_not_found-Klasse | Microsoft Docs
+title: Message_not_found-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7973da83716e4dc99dc98b199421ab9d840a8380
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f28096fccae4f24b236631b3c27178bda7e22771
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705184"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103983"
 ---
 # <a name="messagenotfound-class"></a>message_not_found-Klasse
 Diese Klasse beschreibt eine Ausnahme, die ausgelöst wird, wenn ein Meldungsblock keine angeforderte Meldung finden kann.  
@@ -63,8 +63,8 @@ message_not_found() throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Message`  
- Eine beschreibende Fehlermeldung.  
+*_Nachricht*<br/>
+Eine beschreibende Fehlermeldung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   

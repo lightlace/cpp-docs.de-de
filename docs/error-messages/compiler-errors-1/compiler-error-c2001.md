@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C2001 | Microsoft Docs
+title: Compilerfehler C2001 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,66 +16,69 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f56eabbcb5ca322d7549c21a56893a8e13d9261
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71048a706678e4d9e6906972ebf148748927e829
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164829"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088241"
 ---
-# <a name="compiler-error-c2001"></a>Compilerfehler Fehler C2001
-Zeilenvorschub in Konstante.  
-  
- Eine Zeichenfolgenkonstante kann nicht auf eine zweite Zeile fortgesetzt werden, es sei denn, Sie die folgenden Schritte aus:  
-  
--   Beenden Sie die erste Zeile mit einem umgekehrten Schrägstrich.  
-  
--   Schließen Sie die Zeichenfolge in der ersten Zeile mit einem doppelten Anführungszeichen, und öffnen Sie die Zeichenfolge in der nächsten Zeile in einer anderen doppeltes Anführungszeichen.  
-  
- Beenden die erste Zeile mit \n ist nicht ausreichend.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C2001 generiert:  
-  
-```  
-// C2001.cpp  
-// C2001 expected  
-#include <stdio.h>  
-  
-int main()  
-{  
-    printf_s("Hello,  
-             world");  
-    printf_s("Hello,\n  
-             world");  
-}  
-```  
-  
-## <a name="example"></a>Beispiel  
- Leerzeichen am Anfang der nächsten Zeile nach einem Zeilenfortsetzungszeichen sind in die Zeichenfolgenkonstante enthalten. Keiner der oben genannten Beispiele sollten ein neue Zeilenumbruchzeichen in die Zeichenfolgenkonstante einbetten. Sie können ein Zeilenumbruchzeichen einbetten, wie hier gezeigt:  
-  
-```  
-// C2001b.cpp  
-#include <stdio.h>  
-  
-int main()  
-{  
-    printf_s("Hello,\n\  
-             world");  
-  
-    printf_s("Hello,\  
-             \nworld");  
-  
-    printf_s("Hello,\n"  
-             "world");  
-  
-    printf_s("Hello,"  
-             "\nworld");  
-  
-    printf_s("Hello,"  
-             " world");  
-  
-    printf_s("Hello,\  
-             world");  
-}  
+# <a name="compiler-error-c2001"></a>Compilerfehler C2001
+
+Zeilenvorschub in Konstante.
+
+Eine Zeichenfolgenkonstante kann nicht in einer zweiten Zeile fortgesetzt werden, es sei denn, Sie folgendermaßen vor:
+
+- Das Ende der ersten Zeile mit einem umgekehrten Schrägstrich.
+
+- Schließen Sie die Zeichenfolge in der ersten Zeile mit einem doppelten Anführungszeichen, und öffnen Sie ein weiteres doppeltes Anführungszeichen der Zeichenfolge in der nächsten Zeile.
+
+Beenden die erste Zeile \n ist nicht ausreichend.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C2001 generiert:
+
+```
+// C2001.cpp
+// C2001 expected
+#include <stdio.h>
+
+int main()
+{
+    printf_s("Hello,
+             world");
+    printf_s("Hello,\n
+             world");
+}
+```
+
+## <a name="example"></a>Beispiel
+
+Leerzeichen am Anfang der nächsten Zeile nach der ein Zeilenfortsetzungszeichen sind in Zeichenfolgenkonstanten enthalten. Keine der oben aufgeführten Beispiele betten Sie ein neue Zeilenumbruchzeichen in die Zeichenfolgenkonstante. Sie können ein Zeilenumbruchzeichen einbetten, wie hier gezeigt:
+
+```
+// C2001b.cpp
+#include <stdio.h>
+
+int main()
+{
+    printf_s("Hello,\n\
+             world");
+
+    printf_s("Hello,\
+             \nworld");
+
+    printf_s("Hello,\n"
+             "world");
+
+    printf_s("Hello,"
+             "\nworld");
+
+    printf_s("Hello,"
+             " world");
+
+    printf_s("Hello,\
+             world");
+}
 ```

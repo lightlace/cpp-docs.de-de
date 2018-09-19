@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C2002 | Microsoft Docs
+title: Compilerfehler C2002 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01124fc839d6e788ff2dccae325f01f7d4337f5d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b87a7fe1513c695344676624ae1968060097c885
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164865"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116918"
 ---
-# <a name="compiler-error-c2002"></a>Compilerfehler Fehler C2002
-Ungültige Breitzeichen-Konstante  
-  
- Die Mehrbyte-Konstante ist ungültig.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:  
-  
-1.  Die Breitzeichenkonstante enthält mehr Bytes als erwartet.  
-  
-2.  Der Standardheader STDDEF.h ist nicht enthalten.  
-  
-3.  Breitzeichen können nicht mit gewöhnlichen Zeichenfolgenliteralen verkettet werden.  
-  
-4.  Eine Breitzeichenkonstante muss das Zeichen "L" vorangestellt werden:  
-  
-    ```  
-    L'mbconst'  
-    ```  
-  
-5.  Für Microsoft C++ müssen die Argumente einer Präprozessordirektive ASCII sein. Z. B. die Richtlinie `#pragma message(L"string")`, ist ungültig.
+# <a name="compiler-error-c2002"></a>Compilerfehler C2002
+
+Ungültige Breitzeichen-Konstante
+
+Die Multibyte-Zeichenfolgen-Konstante ist ungültig.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:
+
+1. Der Breitzeichenkonstante enthält mehr Bytes als erwartet.
+
+1. Der Standardheader STDDEF.h ist nicht enthalten.
+
+1. Breitzeichen können nicht mit normalen Zeichenfolgenliteralen verkettet werden.
+
+1. Das Zeichen "L" muss eine Breitzeichen-Konstante vorangestellt werden:
+
+    ```
+    L'mbconst'
+    ```
+
+1. Für Microsoft C++ müssen die Textargumente einer Präprozessordirektive ASCII sein. Z. B. die Direktive `#pragma message(L"string")`, ist ungültig.

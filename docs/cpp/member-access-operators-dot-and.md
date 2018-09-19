@@ -24,67 +24,71 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4af9fa780aca1bc1c1304b45d226984fbb5eb7e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c02183b3dc03c785ef5a6a08da80dd8435288b0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201444"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112771"
 ---
 # <a name="member-access-operators--and--gt"></a>Operatoren für den Memberzugriff:. "und" -&gt;
-## <a name="syntax"></a>Syntax  
-  
-```  
-postfix-expression . name  
-postfix-expression -> name  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Die Operatoren für den Memberzugriff **.** und **->** werden verwendet, um auf Member von Strukturen, Unions und Klassen verweisen. Memberzugriffsausdrücke haben den Wert und Typ des ausgewählten Members.  
-  
- Es gibt zwei Arten von Memberzugriffsausdrücken:  
-  
-1.  In der ersten Form stellt *Postfix-Expression* stellt einen Wert aus der Struktur, Klasse oder union-Typs und *Namen* Namen eines Members der angegebenen Struktur, Union oder Klasse. Der Wert des Vorgangs ist der *Namen* und ist ein l-Wert, wenn *Postfix-Expression* ist ein l-Wert.  
-  
-2.  In der zweiten Form stellt *Postfix-Expression* stellt einen Zeiger auf eine Struktur, Union oder Klasse und *Namen* Namen eines Members der angegebenen Struktur, Union oder Klasse. Der Wert ist der *Namen* und ist ein l-Wert. Die **->** Operator dereferenziert den Zeiger. Daher sind die Begriffe `e->member` und `(*e).member` (, in denen *e* stellt einen Zeiger) ergeben identische Ergebnisse (Ausnahme: Wenn die Operatoren **->** oder <strong>\*</strong> sind überladen).  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel werden beide Formen des Memberzugriffsoperators dargestellt.  
-  
-```cpp 
-// expre_Selection_Operator.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-using namespace std;  
-  
-struct Date {  
-   Date(int i, int j, int k) : day(i), month(j), year(k){}  
-   int month;  
-   int day;  
-   int year;  
-};  
-  
-int main() {  
-   Date mydate(1,1,1900);  
-   mydate.month = 2;     
-   cout  << mydate.month << "/" << mydate.day  
-         << "/" << mydate.year << endl;  
-  
-   Date *mydate2 = new Date(1,1,2000);  
-   mydate2->month = 2;  
-   cout  << mydate2->month << "/" << mydate2->day  
-         << "/" << mydate2->year << endl;  
-   delete mydate2;  
-}  
-```  
-  
-```Output  
-2/1/1900  
-2/1/2000  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Postfixausdrücke](../cpp/postfix-expressions.md)   
- [C++-Built-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Klassen und Strukturen](../cpp/classes-and-structs-cpp.md)   
- [Struktur- und Unionmember](../c-language/structure-and-union-members.md)
+
+## <a name="syntax"></a>Syntax
+
+```
+postfix-expression . name
+postfix-expression -> name
+```
+
+## <a name="remarks"></a>Hinweise
+
+Die Operatoren für den Memberzugriff **.** und **->** werden verwendet, um auf Member von Strukturen, Unions und Klassen verweisen. Memberzugriffsausdrücke haben den Wert und Typ des ausgewählten Members.
+
+Es gibt zwei Arten von Memberzugriffsausdrücken:
+
+1. In der ersten Form stellt *Postfix-Expression* stellt einen Wert aus der Struktur, Klasse oder union-Typs und *Namen* Namen eines Members der angegebenen Struktur, Union oder Klasse. Der Wert des Vorgangs ist der *Namen* und ist ein l-Wert, wenn *Postfix-Expression* ist ein l-Wert.
+
+1. In der zweiten Form stellt *Postfix-Expression* stellt einen Zeiger auf eine Struktur, Union oder Klasse und *Namen* Namen eines Members der angegebenen Struktur, Union oder Klasse. Der Wert ist der *Namen* und ist ein l-Wert. Die **->** Operator dereferenziert den Zeiger. Daher sind die Begriffe `e->member` und `(*e).member` (, in denen *e* stellt einen Zeiger) ergeben identische Ergebnisse (Ausnahme: Wenn die Operatoren **->** oder <strong>\*</strong> sind überladen).
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel werden beide Formen des Memberzugriffsoperators dargestellt.
+
+```cpp
+// expre_Selection_Operator.cpp
+// compile with: /EHsc
+#include <iostream>
+using namespace std;
+
+struct Date {
+   Date(int i, int j, int k) : day(i), month(j), year(k){}
+   int month;
+   int day;
+   int year;
+};
+
+int main() {
+   Date mydate(1,1,1900);
+   mydate.month = 2;
+   cout  << mydate.month << "/" << mydate.day
+         << "/" << mydate.year << endl;
+
+   Date *mydate2 = new Date(1,1,2000);
+   mydate2->month = 2;
+   cout  << mydate2->month << "/" << mydate2->day
+         << "/" << mydate2->year << endl;
+   delete mydate2;
+}
+```
+
+```Output
+2/1/1900
+2/1/2000
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Postfixausdrücke](../cpp/postfix-expressions.md)<br/>
+[C++-Built-in-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Klassen und Strukturen](../cpp/classes-and-structs-cpp.md)<br/>
+[Struktur- und Unionmember](../c-language/structure-and-union-members.md)

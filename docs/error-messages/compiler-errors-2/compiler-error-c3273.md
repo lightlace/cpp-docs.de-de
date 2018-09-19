@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3273 | Microsoft Docs
+title: Compilerfehler C3273 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81f238c905b5a3257ef15da311c95efdfcac5c9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a23e9643dd302836b00c18c0c44c87ee1cfd2cfe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244705"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118400"
 ---
 # <a name="compiler-error-c3273"></a>Compilerfehler C3273
-'__finally' kann nicht für einen Ausnahmeblock in nicht verwaltetem Code verwendet werden.  
-  
- Im folgenden Beispiel wird C3273 generiert:  
-  
-```  
-// C3273.cpp  
-// compile with: /GX  
-int main()  
-{     
-   try  
-   {  
-   }  
-   catch (int)  
-   {  
-   }  
-   __finally   // C3273, remove __finally clause  
-   {  
-   }  
-}  
+
+'__finally' kann nicht für einen Ausnahmeblock in nicht verwaltetem Code verwendet werden.
+
+Im folgenden Beispiel wird C3273 generiert:
+
+```
+// C3273.cpp
+// compile with: /GX
+int main()
+{
+   try
+   {
+   }
+   catch (int)
+   {
+   }
+   __finally   // C3273, remove __finally clause
+   {
+   }
+}
 ```

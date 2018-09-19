@@ -1,5 +1,5 @@
 ---
-title: Tiled_extent-Klasse | Microsoft Docs
+title: Tiled_extent-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59ac4e878ee67e03498d4d29efe7c91d34c1b4c7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3d0a0606e531b4343bf8b5569daa5034c827dcb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688582"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114552"
 ---
 # <a name="tiledextent-class"></a>tiled_extent-Klasse
 Ein `tiled_extent`-Objekt ist ein `extent`-Objekt einer bis drei Dimensionen, das den "extent"-Bereich in ein-, zwei- oder dreidimensionale Kacheln unterteilt.  
@@ -56,14 +56,14 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Dim0`  
- Die Länge der wichtigsten Dimension.  
+*_Dim0*<br/>
+Die Länge der wichtigsten Dimension.  
   
- `_Dim1`  
- Die Länge der zweitwichtigsten Dimension.  
+*_Dim1*<br/>
+Die Länge der zweitwichtigsten Dimension.  
   
- `_Dim2`  
- Die Länge der unwichtigsten Dimension.  
+*_Dim2*<br/>
+Die Länge der unwichtigsten Dimension.  
   
 ## <a name="members"></a>Member  
   
@@ -130,8 +130,8 @@ tiled_extent(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Other`  
- Das `extent`- oder `tiled_extent`-Objekt, in das kopiert werden soll.  
+*_Sonstige*<br/>
+Das `extent`- oder `tiled_extent`-Objekt, in das kopiert werden soll.  
   
 
   
@@ -149,7 +149,7 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
  Ein `extent`-Objekt, das die Dimensionen dieser `tiled_extent`-Instanz erfasst.  
   
 
-## <a name="pad"> </a>  mit Leerstellen auffüllen   
+## <a name="pad"> </a>  Auffüllzeichen   
 Gibt ein neues `tiled_extent`-Objekt mit den Wertebereichen zurück, die aufgerundet werden, um durch die Kacheldimensionen teilbar zu sein.  
   
 ### <a name="syntax"></a>Syntax  
@@ -183,8 +183,8 @@ tiled_extent&  operator= (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Other`  
- Das `tiled_index`-Objekt, aus dem kopiert werden soll.  
+*_Sonstige*<br/>
+Das `tiled_index`-Objekt, aus dem kopiert werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf diese `tiled_index`-Instanz.  

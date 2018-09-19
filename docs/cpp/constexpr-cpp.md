@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe13dbe61b0a50226f82ae8fb09ab46c922309d1
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1b9479957fdfb4d6b92ec531941808940765a9e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406935"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116723"
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
@@ -40,16 +40,16 @@ constexpr ctor (params);
 
 ## <a name="parameters"></a>Parameter
 
- *params*  
+*params*<br/>
 Mindestens ein Parameter müssen ein literal-Typ sein und müssen selbst sein ein konstanter Ausdruck.
 
 ## <a name="return-value"></a>Rückgabewert
 
- Eine Constexpr-Variable oder Funktion muss Zurückgeben einer [Literaltyp](trivial-standard-layout-and-pod-types.md#literal_types).
+Eine Constexpr-Variable oder Funktion muss Zurückgeben einer [Literaltyp](trivial-standard-layout-and-pod-types.md#literal_types).
 
 ## <a name="constexpr-variables"></a>constexpr-Variablen
 
- Der Hauptunterschied zwischen const- und constexpr-Variablen besteht darin, dass die Initialisierung einer const-Variablen bis zur Laufzeit verzögert werden kann, während eine constexpr-Variable zum Zeitpunkt der Kompilierung initialisiert werden muss.  Alle constexpr-Variablen sind auch const.
+Der Hauptunterschied zwischen const- und constexpr-Variablen besteht darin, dass die Initialisierung einer const-Variablen bis zur Laufzeit verzögert werden kann, während eine constexpr-Variable zum Zeitpunkt der Kompilierung initialisiert werden muss.  Alle constexpr-Variablen sind auch const.
 
 - Eine Variable kann mit deklariert werden **"constexpr"**, wenn sie über einen Literaltyp verfügt und initialisiert wird. Wenn die Initialisierung von einem Konstruktor ausgeführt wird, muss der Konstruktor deklariert werden, als **"constexpr"**.
 
@@ -91,7 +91,7 @@ Die folgenden Regeln gelten für Constexpr-Funktionen:
 Die folgenden Regeln gelten für **"constexpr"** Funktionen in Visual Studio 2017 und höher:
 
 - Sie enthält eventuell **Wenn** und **wechseln** Anweisungen und alle schleifenanweisungen einschließlich **für**, bereichsbasierte for, **während**, und **sind – während**.
- 
+
 - Es kann Deklarationen von lokale Variable enthalten, aber die Variable muss initialisiert werden, muss ein literal-Typ sein und darf nicht statisch oder Thread-lokalen. Lokal deklarierte Variablen muss nicht "const" sein, und verändern kann.
 
 - Eine nicht statische Member-Funktion "constexpr" ist nicht erforderlich, um implizit const ist.
@@ -115,7 +115,7 @@ Die [/Zc: externconstexpr](../build/reference/zc-externconstexpr.md) Compileropt
 
 ## <a name="example"></a>Beispiel
 
- Das folgende Beispiel zeigt **"constexpr"** Variablen, Funktionen und einen benutzerdefinierten Typ. Beachten Sie, dass in der letzten Anweisung in main() die **"constexpr"** Memberfunktion GetValue()"einen Aufruf zur Laufzeit ist, da der Wert nicht erforderlich ist, zum Zeitpunkt der Kompilierung bekannt sein.
+Das folgende Beispiel zeigt **"constexpr"** Variablen, Funktionen und einen benutzerdefinierten Typ. Beachten Sie, dass in der letzten Anweisung in main() die **"constexpr"** Memberfunktion GetValue()"einen Aufruf zur Laufzeit ist, da der Wert nicht erforderlich ist, zum Zeitpunkt der Kompilierung bekannt sein.
 
 ```cpp
 #include <iostream>
@@ -189,5 +189,6 @@ int main()
 Visual Studio 2015
 
 ## <a name="see-also"></a>Siehe auch
- [Deklarationen und Definitionen](../cpp/declarations-and-definitions-cpp.md)  
- [const](../cpp/const-cpp.md)
+
+[Deklarationen und Definitionen](../cpp/declarations-and-definitions-cpp.md)<br/>
+[const](../cpp/const-cpp.md)

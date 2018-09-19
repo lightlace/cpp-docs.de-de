@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3ef47e3aeb8cfb18dd1eb6497c593d8cec26081b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 002093a6a9044c65e5780035ad6c19db35d6b648
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678449"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116746"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Aufrufen systemeigener Funktionen aus verwaltetem Code
 Die Common Language Runtime stellt Platform Invocation Services, oder PInvoke, zur Verfügung, wodurch verwalteter Code Funktionen in C-Format in systemeigenen DLLs (Dynamic Link Libraries) aufrufen kann. Hierbei wird das gleiche Datenmarshalling verwendet wie für die COM-Interoperabilität mit der Laufzeit und für den IJW („It Just Works“)-Mechanismus.  
@@ -105,7 +105,7 @@ int main() {
   
  In diesem Beispiel arbeitet ein Visual C++-Programm mit der MessageBox-Funktion zusammen, die Teil der Win32-API ist.  
   
-```  
+```cpp  
 // platform_invocation_services_4.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -132,16 +132,17 @@ int main() {
   
  Zur Verwendung von PInvoke in einer Visual C++-Anwendung würde der Code in etwa folgendermaßen aussehen:  
   
- `[DllImport("mylib")]`  
-  
- `extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);`  
+```cpp
+[DllImport("mylib")]
+extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);
+```
   
  Die Schwierigkeit dabei ist, dass wir den Speicher für die nicht verwaltete Zeichenfolge, die von MakeSpecial zurückgegeben wird, nicht löschen können. Andere über PInvoke aufgerufene Funktionen geben einen Zeiger auf einen internen Puffer zurück, der nicht durch den Benutzer freigegeben werden muss. In diesem Fall ist es naheliegend, das IJW-Feature zu verwenden.  
   
 ## <a name="limitations-of-pinvoke"></a>Beschränkungen von PInvoke  
  Sie dürfen nicht den gleichen exakten Zeiger von einer systemeigenen Funktion zurückgeben lassen, den Sie als Parameter verwendet haben. Gibt eine systemeigene Funktion den Zeiger zurück, der mit PInvoke für sie gemarshallt wurde, kann dies Speicherschäden und Ausnahmen zur Folge haben.  
   
-```  
+```cpp  
 __declspec(dllexport)  
 char* fstringA(char* param) {  
    return param;  

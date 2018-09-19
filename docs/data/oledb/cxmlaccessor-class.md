@@ -31,14 +31,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 16ced0ce1d6c5531b7210231315f001cda4c0bc4
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 58e9d70079dce96153076b03acc1aeca87c50433
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337212"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136197"
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor-Klasse
+
 Ermöglicht Ihnen Zugriff auf Datenquellen wie Zeichenfolgendaten, wenn Sie keine Kenntnis von den Data Store Schema (zugrunde liegende Struktur) verfügen.  
   
 ## <a name="syntax"></a>Syntax
@@ -48,7 +49,8 @@ class CXMLAccessor : public CDynamicStringAccessorW
 ```  
 
 ## <a name="requirements"></a>Anforderungen  
- **Header**: atldbcli.h  
+
+**Header**: atldbcli.h  
   
 ## <a name="members"></a>Member  
   
@@ -60,16 +62,19 @@ class CXMLAccessor : public CDynamicStringAccessorW
 |[GetXMLRowData](#getxmlrowdata)|Ruft den gesamten Inhalt einer Tabelle von Zeilen ab.|  
   
 ## <a name="remarks"></a>Hinweise  
- Allerdings `CXMLAccessor` unterscheidet sich von `CDynamicStringAccessorW` , sie alle Daten, die aus dem Datenspeicher als XML-Format (tagged) Daten zugegriffen konvertiert. Dies ist besonders nützlich für die Ausgabe auf XML-fähige Webseiten. Die XML-Tag-Namen des Datenspeichers Spaltennamen ist so weit wie möglich entspricht.  
+
+Allerdings `CXMLAccessor` unterscheidet sich von `CDynamicStringAccessorW` , sie alle Daten, die aus dem Datenspeicher als XML-Format (tagged) Daten zugegriffen konvertiert. Dies ist besonders nützlich für die Ausgabe auf XML-fähige Webseiten. Die XML-Tag-Namen des Datenspeichers Spaltennamen ist so weit wie möglich entspricht.  
   
- Verwendung `CDynamicAccessor` Methoden zum Abrufen der Spalteninformationen. Sie können diese Spalteninformationen verwenden, um einen Accessor dynamisch zur Laufzeit zu erstellen.  
+Verwendung `CDynamicAccessor` Methoden zum Abrufen der Spalteninformationen. Sie können diese Spalteninformationen verwenden, um einen Accessor dynamisch zur Laufzeit zu erstellen.  
   
- Die Spalteninformationen befindet sich in einem Puffer, die von dieser Klasse erstellt und verwaltet. Erhalten Sie die Spalte mit [GetXMLColumnData](#getxmlcolumndata) oder Zeilen mit Daten der Spalte erzielen [GetXMLRowData](#getxmlrowdata).  
+Die Spalteninformationen befindet sich in einem Puffer, die von dieser Klasse erstellt und verwaltet. Erhalten Sie die Spalte mit [GetXMLColumnData](#getxmlcolumndata) oder Zeilen mit Daten der Spalte erzielen [GetXMLRowData](#getxmlrowdata).  
   
 ## <a name="example"></a>Beispiel  
- [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]  
+
+[!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]  
 
 ## <a name="getxmlcolumndata"></a> CXMLAccessor:: GetXMLColumnData
+
 Ruft die Typinformationen Spalte einer Tabelle als XML-formatierte Zeichenfolge mit Daten von der Spalte ab.  
   
 ### <a name="syntax"></a>Syntax  
@@ -79,22 +84,26 @@ HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *strOutput*  
- [out] Ein Verweis auf einen Zeichenfolgenpuffer, enthält die Typ-Spalteninformationen abgerufen werden sollen. Mit XML-Tag-Namen, die mit dem Datenspeicher Spaltennamen übereinstimmen, wird die Zeichenfolge formatiert.  
+
+*strOutput*<br/>
+[out] Ein Verweis auf einen Zeichenfolgenpuffer, enthält die Typ-Spalteninformationen abgerufen werden sollen. Mit XML-Tag-Namen, die mit dem Datenspeicher Spaltennamen übereinstimmen, wird die Zeichenfolge formatiert.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Einer der standardmäßigen HRESULT-Werte.  
+
+Einer der standardmäßigen HRESULT-Werte.  
   
 ### <a name="remarks"></a>Hinweise  
- Das folgende Beispiel zeigt, wie die Spalteninformationen für den Typ in XML formatiert ist. `type` Gibt den Datentyp der Spalte Daten an. Beachten Sie, dass die Datentypen in OLE DB-Datentypen, die nicht auf die von der Datenbank, die auf die zugegriffen wird basieren.  
+
+Das folgende Beispiel zeigt, wie die Spalteninformationen für den Typ in XML formatiert ist. `type` Gibt den Datentyp der Spalte Daten an. Beachten Sie, dass die Datentypen in OLE DB-Datentypen, die nicht auf die von der Datenbank, die auf die zugegriffen wird basieren.  
   
- `<columninfo>`  
+`<columninfo>`  
   
- `<column type = I2/> ColumnName`  
+`<column type = I2/> ColumnName`  
   
- `</columninfo>` 
+`</columninfo>` 
 
 ## <a name="getxmlrowdata"></a> CXMLAccessor:: GetXMLRowData
+
 Ruft den gesamten Inhalt einer Tabelle als XML-formatierte Zeichenfolge mit Daten von Zeile ab.  
   
 ### <a name="syntax"></a>Syntax  
@@ -105,31 +114,35 @@ HRESULT GetXMLRowData(CSimpleStringW& strOutput,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *strOutput*  
- [out] Ein Verweis auf einen Puffer, enthält die Tabellendaten abgerufen werden sollen. Die Daten werden als Zeichenfolgendaten mit XML-Tagnamen formatiert, die mit dem Datenspeicher Spaltennamen übereinstimmen.  
+
+*strOutput*<br/>
+[out] Ein Verweis auf einen Puffer, enthält die Tabellendaten abgerufen werden sollen. Die Daten werden als Zeichenfolgendaten mit XML-Tagnamen formatiert, die mit dem Datenspeicher Spaltennamen übereinstimmen.  
   
- *bAppend*  
- [in] Ein boolescher Wert, der angibt, ob eine Zeichenfolge an das Ende der Ausgabe von Daten angefügt werden soll.  
+*bAppend*<br/>
+[in] Ein boolescher Wert, der angibt, ob eine Zeichenfolge an das Ende der Ausgabe von Daten angefügt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Einer der standardmäßigen HRESULT-Werte.  
+
+Einer der standardmäßigen HRESULT-Werte.  
   
 ### <a name="remarks"></a>Hinweise  
- Das folgende Beispiel zeigt, wie Daten aus der Zeile in XML formatiert ist. `DATA` unten stellt Sie Daten aus der Zeile dar. Verwenden Sie move, Methoden, in der gewünschten Zeile zu verschieben.  
+
+Das folgende Beispiel zeigt, wie Daten aus der Zeile in XML formatiert ist. `DATA` unten stellt Sie Daten aus der Zeile dar. Verwenden Sie move, Methoden, in der gewünschten Zeile zu verschieben.  
   
- `<row>`  
+`<row>`  
   
- `<column name>DATA</column name>`  
+`<column name>DATA</column name>`  
   
- `</row>`   
+`</row>`   
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenz der OLE DB Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CAccessor-Klasse](../../data/oledb/caccessor-class.md)   
- [CDynamicAccessor-Klasse](../../data/oledb/cdynamicaccessor-class.md)   
- [CDynamicParameterAccessor-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)   
- [CDynamicStringAccessor-Klasse](../../data/oledb/cdynamicstringaccessor-class.md)   
- [CDynamicStringAccessorA-Klasse](../../data/oledb/cdynamicstringaccessora-class.md)   
- [CDynamicStringAccessorW-Klasse](../../data/oledb/cdynamicstringaccessorw-class.md)   
- [CManualAccessor-Klasse](../../data/oledb/cmanualaccessor-class.md)
+
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CAccessor-Klasse](../../data/oledb/caccessor-class.md)<br/>
+[CDynamicAccessor-Klasse](../../data/oledb/cdynamicaccessor-class.md)<br/>
+[CDynamicParameterAccessor-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[CDynamicStringAccessor-Klasse](../../data/oledb/cdynamicstringaccessor-class.md)<br/>
+[CDynamicStringAccessorA-Klasse](../../data/oledb/cdynamicstringaccessora-class.md)<br/>
+[CDynamicStringAccessorW-Klasse](../../data/oledb/cdynamicstringaccessorw-class.md)<br/>
+[CManualAccessor-Klasse](../../data/oledb/cmanualaccessor-class.md)

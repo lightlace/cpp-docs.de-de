@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4488 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4488 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a3c5fc64637d989066acfa90715c50504664231
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d2cccedada47519ada55353cb44faab0e34cf03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281521"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118270"
 ---
 # <a name="compiler-warning-level-1-c4488"></a>Compilerwarnung (Stufe 1) C4488
-'Funktion': ' Schlüsselwort ' implementiert die Schnittstellenmethode 'Schnittstellenmethode' erfordert  
-  
- Eine Klasse muss alle Member einer Schnittstelle implementieren, von dem er direkt erbt. Ein implementierter Member muss öffentliche zugriffsmöglichkeiten aufweisen und virtuellen markiert werden muss.  
-  
-## <a name="example"></a>Beispiel  
- C4488 kann auftreten, wenn ein implementierter Member nicht öffentlich ist. Im folgenden Beispiel wird C4488 generiert.  
-  
-```  
-// C4488.cpp  
-// compile with: /clr /c /W1 /WX  
-interface struct MyI {  
-   void f1();  
-};  
-  
-// implemented member not public  
-ref class B : MyI { virtual void f1() {} };  // C4488  
-  
-// OK  
-ref class C : MyI {  
-public:  
-   virtual void f1() {}  
-};  
-```  
-  
-## <a name="example"></a>Beispiel  
- C4488 kann auftreten, wenn ein implementierter Member nicht virtuelle gekennzeichnet ist. Im folgenden Beispiel wird C4488 generiert.  
-  
-```  
-// C4488_b.cpp  
-// compile with: /clr /c /W1 /WX  
-interface struct MyI {  
-   void f1();  
-};  
-  
-ref struct B : MyI { void f1() {} };   // C4488  
-ref struct C : MyI { virtual void f1() {} };   // OK  
+
+'Funktion': 'Schlüsselwort' Schlüsselwort muss die Schnittstelle '-Schnittstellenmethode ' implementieren
+
+Eine Klasse muss alle Member einer Schnittstelle implementieren, von dem sie direkt erbt. Ein implementierter Member muss öffentliche zugriffsmöglichkeiten aufweisen, und Sie müssen als virtuell markiert werden.
+
+## <a name="example"></a>Beispiel
+
+C4488 kann auftreten, wenn auf ein implementierter Member nicht öffentlich ist. Im folgende Beispiel wird die C4488 generiert.
+
+```
+// C4488.cpp
+// compile with: /clr /c /W1 /WX
+interface struct MyI {
+   void f1();
+};
+
+// implemented member not public
+ref class B : MyI { virtual void f1() {} };  // C4488
+
+// OK
+ref class C : MyI {
+public:
+   virtual void f1() {}
+};
+```
+
+## <a name="example"></a>Beispiel
+
+C4488 kann auftreten, wenn ein implementierter Member nicht als virtuell gekennzeichnet ist. Im folgende Beispiel wird die C4488 generiert.
+
+```
+// C4488_b.cpp
+// compile with: /clr /c /W1 /WX
+interface struct MyI {
+   void f1();
+};
+
+ref struct B : MyI { void f1() {} };   // C4488
+ref struct C : MyI { virtual void f1() {} };   // OK
 ```

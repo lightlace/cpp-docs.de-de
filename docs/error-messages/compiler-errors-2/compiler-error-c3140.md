@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C3140 | Microsoft Docs
+title: Compilerfehler C3140 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2c8c9e47020fe53e87b985b5db6192cd26098fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a40cec364af10f4b61c19b9a28646279a8efca43
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246903"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111737"
 ---
-# <a name="compiler-error-c3140"></a>Compilerfehler Fehler C3140
-mehrere "Module"-Attribute können nicht in der gleichen Kompilierungseinheit verwenden werden.  
-  
- Die [Modul](../../windows/module-cpp.md) Attribut kann nur einmal pro Projekt definiert werden.  
-  
- Im folgenden Beispiel wird C3140 generiert:  
-  
-```  
-// C3140.cpp  
-// compile with: /c  
-[emitidl];  
-[module(name = "MyLibrary")];  
-[module(name = "MyLibrary2")];   // C3140  
+# <a name="compiler-error-c3140"></a>Compilerfehler C3140
+
+mehrere "Module"-Attribute können nicht in der gleichen Kompilationseinheit verwenden werden.
+
+Die [Modul](../../windows/module-cpp.md) Attribut kann nur einmal pro Projekt definiert werden.
+
+Im folgende Beispiel wird die C3140 generiert:
+
+```
+// C3140.cpp
+// compile with: /c
+[emitidl];
+[module(name = "MyLibrary")];
+[module(name = "MyLibrary2")];   // C3140
 ```

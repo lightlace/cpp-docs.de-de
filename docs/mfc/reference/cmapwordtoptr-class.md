@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08ea48b13b92959652f67c39c05a6ced30e77b2c
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7dd5a76e08d85e75f7e48e63927ef7b07e85fb40
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337992"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089254"
 ---
 # <a name="cmapwordtoptr-class"></a>CMapWordToPtr-Klasse
 Unterstützt Zuordnungen von void-Zeigern mit 16-Bit-Wörtern als Schlüssel.  
@@ -63,9 +63,7 @@ class CMapWordToPtr : public CObject
 ## <a name="members"></a>Member  
  Die Memberfunktionen der `CMapWordToPtr` ähneln den Memberfunktionen der Klasse [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Aufgrund dieser Ähnlichkeit können Sie die `CMapStringToOb`-Referenzdokumentation für Memberfunktionsbesonderheiten verwenden. Immer dort, wo ein `CObject` Zeiger als Funktionsparameter oder Rückgabewert, ersetzen Sie durch einen Zeiger auf **"void"**. Immer dort, wo ein `CString` oder **const** Zeiger auf **Char** als Funktionsparameter oder Rückgabewert, ersetzen Sie WORD.  
   
- `BOOL CMapStringToOb::Lookup( const char* <key>,`  
-  
- `CObject*& <rValue> ) const;`  
+ `BOOL CMapStringToOb::Lookup( const char* <key>, CObject*& <rValue> ) const;`  
   
  Beispielsweise übersetzt zu  
   

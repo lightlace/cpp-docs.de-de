@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3816 | Microsoft Docs
+title: Compilerfehler C3816 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be09db4d91b511583b3119f03df8abc61a0153e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bfc0cf864caeefd5b19e3d40383724909575d4df
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269092"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115891"
 ---
 # <a name="compiler-error-c3816"></a>Compilerfehler C3816
-'Declaration' wurde zuvor deklarierten oder einem anderen verwalteten oder WinRTmodifier definiert.  
-  
- Für eine Vorwärts- und eine tatsächliche Deklaration ist es erforderlich, dass in der Deklaration der Attribute keine Konflikte oder Inkonsistenzen vorliegen.  
-  
- Im folgenden Beispiel wird C3816 generiert und gezeigt, wie Sie diesen Fehler beheben:  
-  
-```  
-// C3816a.cpp  
-// compile with: /clr /c  
-class C1;  
-// try the following line instead  
-// ref class C1;  
-  
-ref class C1{  // C3816, forward declaration does not use ref  
-};  
+
+'Declaration' wurde bereits deklariert oder definiert, die mit einem anderen verwalteten oder WinRTmodifier
+
+Für eine Vorwärts- und eine tatsächliche Deklaration ist es erforderlich, dass in der Deklaration der Attribute keine Konflikte oder Inkonsistenzen vorliegen.
+
+Im folgenden Beispiel wird C3816 generiert und gezeigt, wie Sie diesen Fehler beheben:
+
+```
+// C3816a.cpp
+// compile with: /clr /c
+class C1;
+// try the following line instead
+// ref class C1;
+
+ref class C1{  // C3816, forward declaration does not use ref
+};
 ```

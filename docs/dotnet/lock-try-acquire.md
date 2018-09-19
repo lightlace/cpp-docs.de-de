@@ -1,5 +1,5 @@
 ---
-title: Lock::try_acquire | Microsoft Docs
+title: Lock::try_acquire | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 25b5ec1ab7bb5c429538f312ee3b598d3d1d83ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce9e13e56728216c4a4b16246d4e99117199878c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33137509"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115956"
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
-Aktiviert eine Sperre für ein Objekt, das Warten auf eines angegebenen Zeitraum und Zurückgeben einer `bool` um den Erfolg des Abrufs statt einer Ausnahme zu melden.  
+Ruft eine Sperre für ein Objekt, das Warten auf eines angegebenen Zeitraum und die Rückgabe einer `bool` um den Erfolg des Abrufs statt einer Ausnahme zu melden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,17 +43,17 @@ bool try_acquire(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `_timeout`  
- Timeoutwert in Millisekunden oder als eine <xref:System.TimeSpan>.  
+*_Timeout*<br/>
+Timeoutwert in Millisekunden oder als eine <xref:System.TimeSpan>.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true` Wenn die Sperre eingerichtet wurde, `false` andernfalls.  
+ `true` Wenn die Sperre abgerufen wurde, `false` andernfalls.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn bereits eine Sperre eingerichtet wurde, wird diese Funktion keine Aktion ausgeführt.  
+ Wenn eine Sperre bereits abgerufen wurde, hat diese Funktion mit "nothing".  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet eine einzelne Instanz einer Klasse über mehrere Threads hinweg.  Die Klasse verwendet eine Sperre auf sich selbst, um sicherzustellen, dass der Zugriff auf die internen Daten für jeden Thread konsistent sind.  Thread der hauptanwendung verwendet eine Sperre für dieselbe Instanz der Klasse in regelmäßigen Abständen überprüfen, um festzustellen, ob alle Arbeitsthreads noch vorhanden sind, und wartet, bis alle Arbeitsthreads aktiviert beenden ihre Aufgaben abgeschlossen haben.  
+ Dieses Beispiel verwendet eine einzelne Instanz einer Klasse auf mehrere Threads.  Die Klasse verwendet eine Sperre auf sich selbst, um sicherzustellen, dass der Zugriff auf seine internen Daten für jeden Thread konsistent sind.  Thread der hauptanwendung verwendet eine Sperre für dieselbe Instanz der Klasse verwendet, um in regelmäßigen Abständen überprüfen, um festzustellen, ob alle Worker-Threads noch vorhanden sind, und wartet, bis alle Worker-Threads zu beenden, ihre Aufgaben abgeschlossen haben.  
   
 ```  
 // msl_lock_try_acquire.cpp  
@@ -147,5 +147,5 @@ All threads completed.
  **Namespace** Msclr  
   
 ## <a name="see-also"></a>Siehe auch  
- [Lock-Member](../dotnet/lock-members.md)   
+ [Lock-Members](../dotnet/lock-members.md)   
  [lock::acquire](../dotnet/lock-acquire.md)

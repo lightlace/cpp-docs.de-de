@@ -1,5 +1,5 @@
 ---
-title: Linkertoolfehler Lnk2038 | Microsoft Docs
+title: Linkertoolfehler Lnk2038 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/15/2017
 ms.technology:
@@ -15,18 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f97f65bbe31e51e5083b34949b47a6963696ee37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 009644f18068454b0c765118b29c009cd33241a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301667"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118114"
 ---
 # <a name="linker-tools-error-lnk2038"></a>Linkertoolfehler LNK2038
 
-> Konflikt erkannt, für die "*Namen*": Wert "*value_1*'Wert nicht übereinstimmen'*value_2*" in *filename.obj*
+> Konflikt erkannt, für die '*Namen*': Wert "*value_1*'Wert nicht übereinstimmen'*value_2*" in *filename.obj*
 
-Ein Symbolkonflikt wurde vom Linker erkannt. Dieser Fehler zeigt an, dass unterschiedliche Teile einer app, einschließlich Bibliotheken oder ein anderes Objekt code verfügen, der die app-Links zu verwenden, in Konflikt stehende Definitionen des Symbols. Die [Konflikt erkennen](../../preprocessor/detect-mismatch.md) Pragma wird verwendet, um diese Symbole zu definieren und ihre in Konflikt stehenden Werte zu erkennen.
+Ein Symbolkonflikt wurde vom Linker erkannt. Dieser Fehler zeigt an, die verschiedene Teile einer app für Bibliotheken oder ein anderes Objekt, dass die app-Links, verwenden Sie in Konflikt stehende Definitionen des Symbols codieren. Die [Ermitteln von Konflikten](../../preprocessor/detect-mismatch.md) Pragma wird verwendet, um diese Symbole zu definieren und ihre in Konflikt stehende Werte zu erkennen.
 
 ## <a name="possible-causes-and-solutions"></a>Mögliche Ursachen und Lösungen
 
@@ -34,25 +34,21 @@ Dieser Fehler kann auftreten, wenn eine Objektdatei im Projekt veraltet ist. Bev
 
 Visual Studio definiert die folgenden Symbole, um das Verknüpfen von nicht kompatiblem Code zu verhindern, der Laufzeitfehler oder anderes unerwartetes Verhalten verursachen kann.
 
-- `_MSC_VER`  
-   Gibt die Haupt- und Nebenversionsnummern des Visual C++-Compilers an, der verwendet wird, um eine App oder eine Bibliothek zu erstellen. Code, der mit einer Version des Visual C++-Compilers kompiliert wird, ist nicht mit Code kompatibel, der mit einer Version kompiliert wird, die andere Haupt- und Nebenversionsnummern hat. Weitere Informationen finden Sie unter `_MSC_VER` in [vordefinierte Makros](../../preprocessor/predefined-macros.md).
+- `_MSC_VER` Gibt an, die Versionsnummern der Haupt- und Nebenversionsnummern des Visual C++-Compilers, die zum Erstellen einer app oder Bibliothek verwendet wird. Code, der mit einer Version des Visual C++-Compilers kompiliert wird, ist nicht mit Code kompatibel, der mit einer Version kompiliert wird, die andere Haupt- und Nebenversionsnummern hat. Weitere Informationen finden Sie unter `_MSC_VER` in [Predefined Macros](../../preprocessor/predefined-macros.md).
 
    Wenn Sie in einer Bibliothek, die nicht mit der Version des Visual C++-Compilers kompatibel, die Sie verwenden verknüpfen, und Sie nicht erworben oder eine kompatible Version der Bibliothek zu erstellen, können Sie eine frühere Version des Compilers verwenden, zum Erstellen des Projekts: Ändern der **Plattformtoolset** Eigenschaft des Projekts, um die früheren Toolset. Weitere Informationen finden Sie unter [Vorgehensweise: Ändern des Zielframeworks und Plattformtoolset](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
-- `_ITERATOR_DEBUG_LEVEL`  
-   Gibt die Ebene der Sicherheits- und Debugfunktionen an, die in der C++-Standardbibliothek aktiviert werden. Diese Funktionen können die Darstellung bestimmter C++-Standardbibliotheksobjekte ändern. Dadurch werden diese möglicherweise mit solchen Objekten inkompatibel, die andere Sicherheits- und Debugfunktionen verwenden. Weitere Informationen finden Sie unter [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md).
+- `_ITERATOR_DEBUG_LEVEL` Gibt die Ebene der Sicherheits- und Debugfunktionen, die in der C++-Standardbibliothek aktiviert werden. Diese Funktionen können die Darstellung bestimmter C++-Standardbibliotheksobjekte ändern. Dadurch werden diese möglicherweise mit solchen Objekten inkompatibel, die andere Sicherheits- und Debugfunktionen verwenden. Weitere Informationen finden Sie unter [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md).
 
-- `RuntimeLibrary`  
-   Gibt die Version der C++-Standardbibliothek und der C-Laufzeit an, die von einer App oder einer Bibliothek verwendet wird. Code, der eine Version der C++-Standardbibliothek oder C-Laufzeit verwendet, ist nicht mit Code kompatibel, der eine andere Version verwendet. Weitere Informationen finden Sie unter [/MD, /MT, /LD (Laufzeitbibliothek verwenden)](../../build/reference/md-mt-ld-use-run-time-library.md).
+- `RuntimeLibrary` Gibt die Version der C++-Standardbibliothek und die C-Laufzeit, die von einer app oder Bibliothek verwendet wird. Code, der eine Version der C++-Standardbibliothek oder C-Laufzeit verwendet, ist nicht mit Code kompatibel, der eine andere Version verwendet. Weitere Informationen finden Sie unter [/MD, /MT, /LD (Laufzeitbibliothek verwenden)](../../build/reference/md-mt-ld-use-run-time-library.md).
 
-- `_PPLTASKS_WITH_WINRT`  
-   Gibt an, Code, der verwendet die [Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) mit Objekten, die mit einer anderen Einstellung für kompiliert verlinkt wird die [/Zw](../../build/reference/zw-windows-runtime-compilation.md) -Compileroption. (**/Zw** unterstützt C + c++ / CX.) Code, der verwendet wird oder hängt von der PPL muss kompiliert werden, mithilfe der gleichen **/Zw** Einstellung, die in den Rest der app verwendet wird.
+- `_PPLTASKS_WITH_WINRT` Gibt an, Code, verwendet der [Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) verknüpft ist, um Objekte, die mit einer anderen Einstellung für die [/Zw](../../build/reference/zw-windows-runtime-compilation.md) -Compileroption. (**/Zw** unterstützt C++ / CX.) Code, der verwendet wird oder hängt von der PPL muss kompiliert werden, mit der gleichen **/Zw** Einstellung, die in der Rest der app verwendet wird.
 
 Stellen Sie sicher, dass die Werte dieser Symbole für alle Projekte in der Visual Studio-Projektmappe konsistent sind, ebenso wie mit Code und Bibliotheken, mit denen die App verknüpft ist.
 
-## <a name="third-party-library-issues-and-vcpkg"></a>Drittanbieter-Bibliothek Probleme und Vcpkg
+## <a name="third-party-library-issues-and-vcpkg"></a>Bibliotheken von Drittanbietern Probleme und Vcpkg
 
-Wenn dieser Fehler angezeigt, wenn Sie eine Bibliothek eines Drittanbieters als Teil Ihres Builds konfigurieren möchten, erwägen Sie [Vcpkg](../../vcpkg.md), die Visual C++ Paket-Manager, zum Installieren und die Bibliothek erstellen. Vcpkg unterstützt eine große und wachsende [Liste der Bibliotheken von Drittanbietern](https://github.com/Microsoft/vcpkg/tree/master/ports), und legt alle Konfigurationseigenschaften und Abhängigkeiten für erfolgreiche Builds, die als Teil Ihres Projekts erforderlich sind. Weitere Informationen finden Sie unter den zugehörigen [Visual C++-Blog](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/) bereitstellen.
+Wenn dieser Fehler angezeigt wird, wenn Sie eine Drittanbieter-Bibliothek als Teil Ihres Builds konfigurieren möchten, sollten Sie [Vcpkg](../../vcpkg.md), im Visual C++ Paket-Manager zum Installieren und erstellen Sie die Bibliothek. Vcpkg unterstützt eine große und wachsende [Liste der Drittanbieter-Bibliotheken](https://github.com/Microsoft/vcpkg/tree/master/ports), und legt alle Eigenschaften und Abhängigkeiten, die als Teil des Projekts für erfolgreiche Builds erforderlich sind. Weitere Informationen finden Sie im zugehörigen [Visual C++-Blog](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/) Posten.
 
 ## <a name="see-also"></a>Siehe auch
 

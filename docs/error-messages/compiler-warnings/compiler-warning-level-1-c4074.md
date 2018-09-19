@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4074 generiert | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4074 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9072728660ca78097a1e36e492670a614bb2b2f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb2fc41820165cee2b76a15abc97ab1e0cb79b81
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274702"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116644"
 ---
-# <a name="compiler-warning-level-1-c4074"></a>Compilerwarnung (Stufe 1) C4074 generiert
-Initialisierer gelagerte Compiler reserviert Initialisierungsbereich  
-  
- Der Compiler Initialisierungsbereich, der durch angegeben ist [#pragma Init_seg](../../preprocessor/init-seg.md), ist durch Microsoft reserviert. Vor der Initialisierung der C-Laufzeitbibliothek in diesem Bereich kann auch ausgeführt werden.  
-  
- Im folgende Beispiel wird C4074 generiert:  
-  
-```  
-// C4074.cpp  
-// compile with: /W1  
-#pragma init_seg( compiler )   // C4074  
-  
-// try this line to resolve the warning  
-// #pragma init_seg(user)  
-  
-int main() {  
-}  
+# <a name="compiler-warning-level-1-c4074"></a>Compilerwarnung (Stufe 1) C4074
+
+Fügen Sie in den Compiler reservierten Initialisierungsbereich Initialisierer
+
+Die Compiler-Initialisierungsbereich, die von angegeben wird [#pragma Init_seg](../../preprocessor/init-seg.md), ist durch Microsoft reserviert. Code in diesem Bereich möglicherweise vor der Initialisierung der C-Laufzeitbibliothek ausgeführt werden.
+
+Im folgende Beispiel wird die C4074 generiert:
+
+```
+// C4074.cpp
+// compile with: /W1
+#pragma init_seg( compiler )   // C4074
+
+// try this line to resolve the warning
+// #pragma init_seg(user)
+
+int main() {
+}
 ```

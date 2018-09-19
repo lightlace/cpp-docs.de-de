@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2421 | Microsoft Docs
+title: Compilerfehler C2421 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f52545e38207eda1ea941e100a23876e326c2a6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d35b3249be3805d2f4898c4a8007aaa5f849ca4f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195174"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135944"
 ---
 # <a name="compiler-error-c2421"></a>Compilerfehler C2421
-Operator PTR in 'Kontext' mit Register verwendet  
-  
- Die `PTR` Operator kann nicht verwendet werden, mit einem `register` Operanden.
+
+Mit dem Operator PTR in "Kontext" mit Register verwendet
+
+Die `PTR` Operator kann nicht verwendet werden, mit einem `register` Operanden.

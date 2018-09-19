@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9437b88b67254a63babf5b72379a760d1ab86062
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0a80aa365edf3e39c41ed73d815cc82de6ce9a52
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540625"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118166"
 ---
 # <a name="linker-tools-error-lnk1168"></a>Linkertoolfehler LNK1168
-'Dateiname' kann nicht zum Schreiben geöffnet werden  
-  
- Der Linker kann nicht in die Datei `filename` schreiben. Die Datei wird möglicherwiese verwendet und ihr Handle wird von einem anderen Prozess gesperrt oder Sie haben keine Schreibberechtigung für die Datei bzw. für das Verzeichnis oder die Netzwerkfreigabe, in der sich die Datei befindet. Dieser Fehler wird häufig durch eine vorübergehende Bedingung verursacht, z. B. eine Sperre durch ein Antivirenprogramm, eine Datei suchen, der Vorgang der Volltextindizierung oder eine Verzögerung bei der Freigabe einer Sperre frei, die das Buildsystem von Visual Studio.  
-  
- Vergewissern Sie sich zur Behebung dieses Problems, dass das Handle für die Datei `filename` nicht gesperrt ist, und dass Sie über Schreibberechtigungen für die Datei verfügen. Wenn es sich um eine ausführbare Datei handelt, überprüfen Sie, ob diese nicht bereits ausgeführt wird.  
-  
- Sie können die Windows SysInternals-Dienstprogramme verwenden [behandeln](http://technet.microsoft.com/sysinternals/bb896655.aspx) oder [Process Explorer](http://technet.microsoft.com/sysinternals/bb896653) um zu bestimmen, welcher Prozess eine Datei, die Sperre zu verarbeiten hat `filename`. Sie können den Prozess-Explorer auch verwenden, um Sperren auf Handles von offenen Dateien aufzuheben. Weitere Informationen über die Verwendung der Hilfsprogramme finden Sie in den entsprechenden Hilfedateien zu den Programmen.  
-  
- Wenn die Datei von einem Antivirenprogramm gesperrt wird, können Sie dieses Problem beheben, indem Sie die Buildausgabeverzeichnisse vom automatischen Scannen durch das Antivirenprogramm ausschließen. Virenscanner werden häufig bei der Erstellung neuer Dateien im Dateisystem ausgelöst und sperren die entsprechenden Dateien während des Scanprozesses. Informationen dazu, wie Sie bestimmte Verzeichnisse vom Scannen ausschließen können, finden Sie in der Dokumentation zum Antivirenprogramm.  
-  
- Wenn die Datei durch einen Indexdienst für Suchvorgänge gesperrt wird, können Sie dieses Problem beheben, indem Sie die Buildausgabeverzeichnisse von der automatischen Indizierung ausschließen. Weitere Informationen zum Indexdienst finden Sie in der Dokumentation. Verwenden Sie zum Ändern der Windows-Suche Indexdienst **Indizierungsoptionen** in der Windows **Systemsteuerung**. Weitere Informationen finden Sie unter [Windows verbessern Suchvorgängen mithilfe des Index: häufig gestellte Fragen](http://windows.microsoft.com/en-us/windows/improve-windows-searches-using-index-faq#1TC=windows-7).  
-  
- Wenn die ausführbare Datei nicht vom Buildprozess überschrieben werden kann, wird sie möglicherweise durch den Datei-Explorer gesperrt. Wenn die **Anwendungskomfort** Dienst wurde deaktiviert, Datei-Explorer kann an eine Sperre der ausführbaren Datei-Handle für einen längeren Zeitraum fest. Um dieses Problem zu beheben, führen Sie **"Services.msc"** und öffnen Sie dann die **Eigenschaften** im Dialogfeld für die **Anwendungskomfort** Service. Ändern der **Starttyp** aus **deaktiviert** zu **manuelle**.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Sie können ein "Fehler PRJ0008" oder "Schwerwiegender Fehler LNK1168"-Fehlermeldung erhalten, wenn Sie versuchen, eine Projektmappe oder ein ActiveX-Projekt in Visual C++ erstellen](http://support.microsoft.com/kb/308358)
+
+'Dateiname' kann nicht zum Schreiben geöffnet werden
+
+Der Linker kann nicht in die Datei `filename` schreiben. Die Datei wird möglicherwiese verwendet und ihr Handle wird von einem anderen Prozess gesperrt oder Sie haben keine Schreibberechtigung für die Datei bzw. für das Verzeichnis oder die Netzwerkfreigabe, in der sich die Datei befindet. Dieser Fehler wird häufig durch eine vorübergehende Bedingung verursacht, z. B. eine Sperre durch ein Antivirenprogramm, eine Datei suchen, der Vorgang der Volltextindizierung oder eine Verzögerung bei der Freigabe einer Sperre frei, die das Buildsystem von Visual Studio.
+
+Vergewissern Sie sich zur Behebung dieses Problems, dass das Handle für die Datei `filename` nicht gesperrt ist, und dass Sie über Schreibberechtigungen für die Datei verfügen. Wenn es sich um eine ausführbare Datei handelt, überprüfen Sie, ob diese nicht bereits ausgeführt wird.
+
+Sie können die Windows SysInternals-Dienstprogramme verwenden [behandeln](http://technet.microsoft.com/sysinternals/bb896655.aspx) oder [Process Explorer](http://technet.microsoft.com/sysinternals/bb896653) um zu bestimmen, welcher Prozess eine Datei, die Sperre zu verarbeiten hat `filename`. Sie können den Prozess-Explorer auch verwenden, um Sperren auf Handles von offenen Dateien aufzuheben. Weitere Informationen über die Verwendung der Hilfsprogramme finden Sie in den entsprechenden Hilfedateien zu den Programmen.
+
+Wenn die Datei von einem Antivirenprogramm gesperrt wird, können Sie dieses Problem beheben, indem Sie die Buildausgabeverzeichnisse vom automatischen Scannen durch das Antivirenprogramm ausschließen. Virenscanner werden häufig bei der Erstellung neuer Dateien im Dateisystem ausgelöst und sperren die entsprechenden Dateien während des Scanprozesses. Informationen dazu, wie Sie bestimmte Verzeichnisse vom Scannen ausschließen können, finden Sie in der Dokumentation zum Antivirenprogramm.
+
+Wenn die Datei durch einen Indexdienst für Suchvorgänge gesperrt wird, können Sie dieses Problem beheben, indem Sie die Buildausgabeverzeichnisse von der automatischen Indizierung ausschließen. Weitere Informationen zum Indexdienst finden Sie in der Dokumentation. Verwenden Sie zum Ändern der Windows-Suche Indexdienst **Indizierungsoptionen** in der Windows **Systemsteuerung**. Weitere Informationen finden Sie unter [Windows verbessern Suchvorgängen mithilfe des Index: häufig gestellte Fragen](http://windows.microsoft.com/en-us/windows/improve-windows-searches-using-index-faq#1TC=windows-7).
+
+Wenn die ausführbare Datei nicht vom Buildprozess überschrieben werden kann, wird sie möglicherweise durch den Datei-Explorer gesperrt. Wenn die **Anwendungskomfort** Dienst wurde deaktiviert, Datei-Explorer kann an eine Sperre der ausführbaren Datei-Handle für einen längeren Zeitraum fest. Um dieses Problem zu beheben, führen Sie **"Services.msc"** und öffnen Sie dann die **Eigenschaften** im Dialogfeld für die **Anwendungskomfort** Service. Ändern der **Starttyp** aus **deaktiviert** zu **manuelle**.
+
+## <a name="see-also"></a>Siehe auch
+
+[Sie können ein "Fehler PRJ0008" oder "Schwerwiegender Fehler LNK1168"-Fehlermeldung erhalten, wenn Sie versuchen, eine Projektmappe oder ein ActiveX-Projekt in Visual C++ erstellen](http://support.microsoft.com/kb/308358)

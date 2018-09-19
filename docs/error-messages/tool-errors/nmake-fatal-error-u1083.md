@@ -1,5 +1,5 @@
 ---
-title: 'NMAKE: Schwerwiegender Fehler U1083 | Microsoft Docs'
+title: 'NMAKE: Schwerwiegender Fehler U1083 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd7ba60c712181abf0c519fdd072de566157a186
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e2d162551f0f1eea68fb008ba8b7d1c6d304b6a4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321560"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116643"
 ---
 # <a name="nmake-fatal-error-u1083"></a>NMAKE: Schwerwiegender Fehler U1083
-Zielmakro 'Target' wird auf ' Nothing '  
-  
- Das angegebene Ziel handelt es sich um einen Aufruf eines Makros, die noch einen null-Wert wurde nicht definiert. NMAKE ein null-Ziel nicht verarbeitet werden.
+
+Zielmakro "Target" Erweitert zu nichts
+
+Das angegebene Ziel handelt es sich um einen Aufruf eines Makros, die nicht definiert wurde oder einen null-Wert. NMAKE: ein null-Ziel kann nicht verarbeitet werden.

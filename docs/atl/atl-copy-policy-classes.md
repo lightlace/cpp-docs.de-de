@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aac3952ff05e7b147418d4282b31e8a35572c9b0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3ee73a91c14d567754f336b1d71ad4d157781140
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756532"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114058"
 ---
 # <a name="atl-copy-policy-classes"></a>ATL-Kopierrichtlinienklasse
 
@@ -90,6 +90,6 @@ VCUE_Copy.h enthält auch die folgenden spezialisierungen dieser Klasse: `Generi
 
 ## <a name="see-also"></a>Siehe auch
 
-[Implementieren einer C++-Standard Standardbibliothek basierten Auflistung](../atl/implementing-an-stl-based-collection.md)   
+[Implementieren einer auf der C++-Standardbibliothek basierten Auflistung](../atl/implementing-an-stl-based-collection.md)<br/>
 [-Beispiel](../visual-cpp-samples.md)
 

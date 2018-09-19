@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3670 | Microsoft Docs
+title: Compilerfehler C3670 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed70f364ad72160ddc3b9e875d8b1f3b6ee67e3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1129a25e628710121d667a44022eec5a0450b092
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266236"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115332"
 ---
 # <a name="compiler-error-c3670"></a>Compilerfehler C3670
-"override": kann nicht Basisklasse kann nicht zugegriffen werden, Methode "-Schnittstellenmethode überschreiben  
-  
- Eine Außerkraftsetzung kann nur auf eine Funktion stattfinden, deren Zugriffsebene in einem abgeleiteten Typ verfügbar macht. Weitere Informationen finden Sie unter [explizite Überschreibungen](../../windows/explicit-overrides-cpp-component-extensions.md).  
-  
- Im folgende Beispiel wird C3670 generiert:  
-  
-```  
-// C3670.cpp  
-// compile with: /clr /c  
-public ref class C {  
-// Uncomment the following line to resolve.  
-// public:  
-   virtual void g() { }  
-};  
-  
-public ref class D : public C {  
-public:  
-   virtual void f() new sealed = C::g {};   // C3670  
-};  
+
+"override": kann nicht zugegriffen werden Basisklassenmethode 'Methode' kann nicht überschrieben werden
+
+Eine Außerkraftsetzung kann nur auf eine Funktion stattfinden, deren Zugriffsebene, die es in einem abgeleiteten Typ zur Verfügung stellt. Weitere Informationen finden Sie unter [explizite Überschreibungen](../../windows/explicit-overrides-cpp-component-extensions.md).
+
+Im folgende Beispiel wird die C3670 generiert:
+
+```
+// C3670.cpp
+// compile with: /clr /c
+public ref class C {
+// Uncomment the following line to resolve.
+// public:
+   virtual void g() { }
+};
+
+public ref class D : public C {
+public:
+   virtual void f() new sealed = C::g {};   // C3670
+};
 ```

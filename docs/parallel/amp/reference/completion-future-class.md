@@ -1,5 +1,5 @@
 ---
-title: Completion_future-Klasse | Microsoft Docs
+title: Completion_future-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b6aa7e9c160a7bedc6eed58a63c07ae7bb65913
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 835c3a0473ffc68a2b1e32780fc2eb376f0ceee6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689037"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118137"
 ---
 # <a name="completionfuture-class"></a>completion_future-Klasse
 Stellt ein "future"-Objekt dar, das einer asynchronen C++ AMP-Operation entspricht.  
@@ -93,8 +93,8 @@ completion_future(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Other`  
- Die `completion_future` Objekt kopiert oder verschoben werden.  
+*_Sonstige*<br/>
+Die `completion_future` Objekt kopieren oder verschieben.  
   
 ### <a name="overloads-list"></a>Überladungsliste  
   
@@ -102,11 +102,11 @@ completion_future(
 |----------|-----------------|  
 |`completion_future();`|Initialisiert eine neue Instanz der dem `completion_future` Klasse|  
 |`completion_future(const completion_future& _Other);`|Initialisiert eine neue Instanz der dem `completion_future` -Klasse durch Kopieren eines Konstruktors.|  
-|`completion_future(completion_future&& _Other);`|Initialisiert eine neue Instanz der dem `completion_future` Klasse durch einen Konstruktor zu verschieben.|  
+|`completion_future(completion_future&& _Other);`|Initialisiert eine neue Instanz der dem `completion_future` Klasse, indem Sie einen Konstruktor verschieben.|  
   
 ## <a name="get"></a> Erhalten 
 
-Wartet, bis der zugeordnete asynchrone Vorgang beendet ist. Die gespeicherte Ausnahme auslöst, wenn es sich bei einer während des asynchronen Vorgangs aufgetreten ist.  
+Wartet, bis der zugeordnete asynchrone Vorgang beendet ist. Löst das gespeicherte Ausnahme aus, wenn eine während des asynchronen Vorgangs aufgetreten ist.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -139,8 +139,8 @@ completion_future&  operator= (completion_future&& _Other );
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Other`  
- Das Objekt, aus dem kopiert werden soll.  
+*_Sonstige*<br/>
+Das Objekt, das kopiert werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf das `completion_future`-Objekt.  
@@ -164,11 +164,11 @@ void then(const _Functor & _Func ) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Functor`  
- Das Rückruf-Funktionselement.  
+*_Functor*<br/>
+Das Funktionselement Rückruf.  
   
- `_Func`  
- Das Rückrufobjekt-Funktion.  
+*_Func*<br/>
+Das Rückrufobjekt-Funktion.  
   
 ## <a name="to_task"></a> to_task 
 
@@ -181,9 +181,9 @@ concurrency::task<void> to_task() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein `task` -Objekt, das dem zugeordneten asynchronen Vorgang entspricht.  
+ Ein `task` Objekt entsprechend des zugeordneten asynchronen Vorgangs.  
   
-## <a name="valid"></a> Gültige 
+## <a name="valid"></a> gültige 
 
 Ruft einen booleschen Wert, der angibt, ob das Objekt mit einem asynchronen Vorgang zugeordnet ist.  
   
@@ -194,7 +194,7 @@ bool valid() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn das Objekt einen asynchronen Vorgang zugeordnet ist. andernfalls `false`.  
+ `true` Wenn das Objekt einem asynchronen Vorgang zugeordnet ist. andernfalls `false`.  
   
 ## <a name="wait"></a> Warte 
 
@@ -222,14 +222,14 @@ std::future_status::future_status wait_for(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Rep`  
- Ein arithmetischer Typ, der die Anzahl von Zeiteinheiten darstellt.  
+*_Rep*<br/>
+Ein arithmetischer Typ, der die Anzahl von Zeiteinheiten darstellt.  
   
- `_Period`  
- Ein std::ratio, das die Anzahl von Sekunden darstellt, die pro Zeiteinheit verstreichen.  
+*_Period*<br/>
+Ein std::ratio, das die Anzahl von Sekunden darstellt, die pro Zeiteinheit verstreichen.  
   
- `_Rel_time`  
- Die maximale Zeitspanne, die auf den Abschluss der Operation gewartet wird.  
+*_Rel_time*<br/>
+Die maximale Zeitspanne, die auf den Abschluss der Operation gewartet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Rückgabe:  
@@ -256,14 +256,14 @@ std::future_status::future_status wait_until(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Clock`  
- Die Uhr, auf der der Zeitpunkt gemessen wird.  
+*_Clock*<br/>
+Die Uhr, auf der der Zeitpunkt gemessen wird.  
   
- `_Duration`  
- Das Zeitintervall seit dem Beginn der Epoche von `_Clock`, nach der die Funktion durch einen Timeout beendet wird.  
+*_Duration*<br/>
+Das Zeitintervall seit dem Beginn der Epoche von `_Clock`, nach der die Funktion durch einen Timeout beendet wird.  
   
- `_Abs_time`  
- Der Zeitpunkt, nach dem die Funktion durch einen Timeout beendet wird.  
+*_Abs_time*<br/>
+Der Zeitpunkt, nach dem die Funktion durch einen Timeout beendet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Rückgabe:  

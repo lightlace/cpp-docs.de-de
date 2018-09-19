@@ -1,5 +1,5 @@
 ---
-title: 'NMAKE: Schwerwiegender Fehler U1007 | Microsoft Docs'
+title: 'NMAKE: Schwerwiegender Fehler U1007 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 988438b952aa1a06be3ec0da1d7337793c704133
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a1c74cdfe4113cf1fafd242993df27081eb1d28
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322379"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112303"
 ---
 # <a name="nmake-fatal-error-u1007"></a>NMAKE: Schwerwiegender Fehler U1007
-Doppeltes Anführungszeichen, die nicht im Namen zulässig.  
-  
- Das angegebene Ziel oder einen Dateinamen enthalten ein doppeltes Anführungszeichen (**"**).  
-  
- Doppelte Anführungszeichen können einen Dateinamen, umschließen, aber nicht darin enthalten sein.
+
+Doppeltes Anführungszeichen im Namen nicht zulässig
+
+Die angegebenen Zielnamen oder Dateiname enthalten ein doppeltes Anführungszeichen (**"**).
+
+Doppelte Anführungszeichen können einen Dateinamen umgeben, jedoch nicht darin enthalten sein.

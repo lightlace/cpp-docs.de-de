@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3805 | Microsoft Docs
+title: Compilerfehler C3805 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa7a2d388e950b7825c8dba78df565bc4a798a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b83f75cca9b292c454fc40ad5487cf80ee9ceaef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265051"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106336"
 ---
 # <a name="compiler-error-c3805"></a>Compilerfehler C3805
-"token": Unerwartetes Token erwartet entweder '}' oder einen Bezeichner  
-  
- Wenn Sie eine Eigenschaft zu definieren, wurde ein ungültiges Token gefunden. Entfernen Sie das ungültige Token.
+
+'token': Unerwartetes Token erwartet entweder '}' oder ID
+
+Wenn Sie eine Eigenschaft zu definieren, wurde ein ungültiges Token gefunden. Entfernen Sie das Token ungültige.

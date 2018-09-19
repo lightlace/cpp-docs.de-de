@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4747 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4747 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 203943f3741d07e278652a7032a6dcdcb305a384
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d3eb5b83fedc7455cbf1b97119296a6eb6a1ab1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285823"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118478"
 ---
 # <a name="compiler-warning-level-1-c4747"></a>Compilerwarnung (Stufe 1) C4747
-Aufrufen von verwalteten 'Einstiegspunkt': verwalteter Code kann nicht ausgeführt werden, unter der Loadersperre, einschließlich des DLL-Einstiegspunkts und aufrufen, die aus der DLL-Einstiegspunkt wurde erreicht  
-  
- Der Compiler hat einen (wahrscheinlichen) in MSIL kompilierte DLL-Einstiegspunkt gefunden.  Aufgrund potenzieller Probleme beim Laden einer DLL, deren Einstiegspunkt in MSIL kompiliert wurde, können Sie eine DLL-Einstiegspunktfunktion in MSIL kompiliert dringend abgeraten.  
-  
- Weitere Informationen finden Sie unter [Initialisierung gemischter Assemblys](../../dotnet/initialization-of-mixed-assemblies.md) und [Linkertoolfehler LNK1306](../../error-messages/tool-errors/linker-tools-error-lnk1306.md).  
-  
-### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
-  
-1.  Kompilieren Sie das Modul mit nicht **"/ CLR"**.  
-  
-2.  Markieren Sie die Einstiegspunktfunktion mit `#pragma unmanaged`.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C4747 generiert.  
-  
-```  
-// C4747.cpp  
-// compile with: /clr /c /W1  
-// C4747 expected  
-#include <windows.h>  
-  
-// Uncomment the following line to resolve.  
-// #pragma unmanaged  
-  
-BOOL WINAPI DllMain(HANDLE hInstance, ULONG Command, LPVOID Reserved) {  
-   return TRUE;  
-};  
+
+Aufrufen von verwalteten "Entrypoint": verwalteter Code kann nicht ausgeführt werden, unter der Loadersperre, einschließlich des DLL-Einstiegspunkts und Aufrufen von DLL-Einstiegspunkt eingehen
+
+Der Compiler hat einen (wahrscheinlichen) in MSIL kompilierte DLL-Einstiegspunkt gefunden.  Aufgrund der Probleme mit dem Laden einer DLL, deren Einstiegspunkt in MSIL kompiliert wurde, sind Sie dringend davon abgeraten, eine DLL-Einstiegspunktfunktion in MSIL kompiliert.
+
+Weitere Informationen finden Sie unter [Initialization of Mixed Assemblies](../../dotnet/initialization-of-mixed-assemblies.md) und [Linkertoolfehler LNK1306](../../error-messages/tool-errors/linker-tools-error-lnk1306.md).
+
+### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
+
+1. Kompilieren Sie das Modul mit nicht **"/ CLR"**.
+
+1. Markieren Sie die Einstiegspunktfunktion mit `#pragma unmanaged`.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C4747 generiert.
+
+```
+// C4747.cpp
+// compile with: /clr /c /W1
+// C4747 expected
+#include <windows.h>
+
+// Uncomment the following line to resolve.
+// #pragma unmanaged
+
+BOOL WINAPI DllMain(HANDLE hInstance, ULONG Command, LPVOID Reserved) {
+   return TRUE;
+};
 ```

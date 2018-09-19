@@ -48,14 +48,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 73e0b7646da57af679e7b3cbec3b0bb72d4ea8b8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0fd40d4cac87302a6a636693e0da4480720a2cf3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571793"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098120"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl-Klasse
+
 Stellt eine Implementierung der [IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\)) Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax
@@ -68,17 +69,19 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *T*  
- Ihre Rowset oder Object-Klasse.  
+
+*T*<br/>
+Ihre Rowset oder Object-Klasse.  
   
- *BindType*  
- Storage-Einheit für die Bindungsinformationen. Der Standardwert ist die `ATLBINDINGS` Struktur (finden Sie unter "atldb.h").  
+*BindType*<br/>
+Storage-Einheit für die Bindungsinformationen. Der Standardwert ist die `ATLBINDINGS` Struktur (finden Sie unter "atldb.h").  
   
- *BindingVector*  
- Storage-Einheit für die Spalteninformationen. Der Standardwert ist [CAtlMap](../../atl/reference/catlmap-class.md) , in denen das Schlüsselelement ist ein HACCESSOR-Wert und die Value-Element ist ein Zeiger auf eine `BindType` Struktur.  
+*BindingVector*<br/>
+Storage-Einheit für die Spalteninformationen. Der Standardwert ist [CAtlMap](../../atl/reference/catlmap-class.md) , in denen das Schlüsselelement ist ein HACCESSOR-Wert und die Value-Element ist ein Zeiger auf eine `BindType` Struktur.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** „atldb.h“  
+
+**Header:** „atldb.h“  
 
 ## <a name="members"></a>Member  
   
@@ -98,9 +101,11 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 |[ReleaseAccessor](#releaseaccessor)|Gibt einen Accessor frei.|  
   
 ## <a name="remarks"></a>Hinweise  
- Dies ist erforderlich für Rowsets und Befehle. OLE DB verlangt von Anbietern zum Implementieren einer HACCESSOR, dies ist ein Tag auf ein Array von [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) Strukturen. Von bereitgestellten HACCESSORs `IAccessorImpl` Adressen sind die `BindType` Strukturen. In der Standardeinstellung `BindType` ist definiert als eine `ATLBINDINGS` in `IAccessorImpl`der Vorlagendefinition. `BindType` Stellt einen Mechanismus, der von verwendeten `IAccessorImpl` zum Nachverfolgen der Anzahl der Elemente in der `DBBINDING` array sowie einen Verweis Count "und"-Accessor-Flags.  
+
+Dies ist erforderlich für Rowsets und Befehle. OLE DB verlangt von Anbietern zum Implementieren einer HACCESSOR, dies ist ein Tag auf ein Array von [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) Strukturen. Von bereitgestellten HACCESSORs `IAccessorImpl` Adressen sind die `BindType` Strukturen. In der Standardeinstellung `BindType` ist definiert als eine `ATLBINDINGS` in `IAccessorImpl`der Vorlagendefinition. `BindType` Stellt einen Mechanismus, der von verwendeten `IAccessorImpl` zum Nachverfolgen der Anzahl der Elemente in der `DBBINDING` array sowie einen Verweis Count "und"-Accessor-Flags.  
 
 ## <a name="iaccessorimpl"></a> IAccessorImpl:: IAccessorImpl
+
 Der Konstruktor.  
   
 ### <a name="syntax"></a>Syntax  
@@ -110,6 +115,7 @@ IAccessorImpl();
 ```  
 
 ## <a name="addrefaccessor"></a> IAccessorImpl:: Addrefaccessor
+
 Fügt einem vorhandenen Accessor einen Verweiszähler hinzu.  
   
 ### <a name="syntax"></a>Syntax  
@@ -120,9 +126,11 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.
+
+Finden Sie unter [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.
 
 ## <a name="createaccessor"></a> IAccessorImpl:: CreateAccessor
+
 Erstellt einen Accessor aus einem Satz von Bindungen.  
   
 ### <a name="syntax"></a>Syntax  
@@ -137,9 +145,11 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [IAccessor:: CreateAccessor](/previous-versions/windows/desktop/ms720969\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+
+Finden Sie unter [IAccessor:: CreateAccessor](/previous-versions/windows/desktop/ms720969\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
 
 ## <a name="getbindings"></a> IAccessorImpl:: Getbindings
+
 Gibt die grundlegenden Spalten Bindungen aus der Consumer in einem Accessor zurück.  
   
 ### <a name="syntax"></a>Syntax  
@@ -152,9 +162,11 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. 
+
+Finden Sie unter [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. 
 
 ## <a name="releaseaccessor"></a> IAccessorImpl:: ReleaseAccessor
+
 Gibt einen Accessor frei.  
   
 ### <a name="syntax"></a>Syntax  
@@ -165,8 +177,10 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [ReleaseAccessor](/previous-versions/windows/desktop/ms719717\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.
+
+Finden Sie unter [ReleaseAccessor](/previous-versions/windows/desktop/ms719717\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

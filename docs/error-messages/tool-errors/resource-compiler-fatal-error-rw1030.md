@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcencompiler: Schwerwiegender Fehler RW1030 | Microsoft Docs'
+title: 'Ressourcencompiler: Schwerwiegender Fehler RW1030 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eded212dc2a3c397ab0d917e860daf29ce6b9c8a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3df9761f999eaf3623811874ec6bee0bfb4f9cae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319113"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112602"
 ---
 # <a name="resource-compiler-fatal-error-rw1030"></a>Ressourcencompiler: Schwerwiegender Fehler RW1030
-Ausgabefehler  
-  
- Dieser Fehler kann verursacht werden, wenn der Ressourcencompiler nicht zum Erstellen der Zieldatei konnte. Stellen Sie sicher, dass genügend Speicherplatz vorhanden ist und Sie über Schreibberechtigungen auf dem Volume verfügen.
+
+Ausgabefehler
+
+Dieser Fehler kann verursacht werden, wenn der Ressourcencompiler nicht zum Erstellen der Zieldatei konnte. Stellen Sie sicher, dass genügend Speicherplatz vorhanden ist, dass Sie Schreibberechtigungen auf dem Volume verfügen.

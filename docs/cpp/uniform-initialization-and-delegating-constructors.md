@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f985d206a342611dfccb4f05347b0ecc9e9521b0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 80beb5e840e182396f519b6b827dd8d727252d61
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314654"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116242"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Einheitliche Initialisierung und Delegierung von Konstruktoren
+
 In modernem C++ können Sie *geschweifter Klammern Initialisierung* für den beliebigen Typs, ohne das Gleichheitszeichen. Außerdem können Sie delegierende Konstruktoren verwenden, um den Code zu vereinfachen, wenn mehrere Konstruktoren ähnliche Aufgaben ausführen.
 
 ## <a name="brace-initialization"></a>Initialisierung mit geschweiften Klammern
+
 Sie können die Initialisierung mit geschweiften Klammern für jede Klasse, Struktur oder Union verwenden. Wenn ein Typ einen Standardkonstruktor hat, der entweder implizit oder explizit deklariert wurde, können Sie die Standardinitialisierung mit geschweiften klammern verwenden (mit leeren Klammern). Beispielsweise kann die folgende Klasse durch Verwenden der standardmäßigen und nicht standardmäßigen Initialisierung mit geschweiften Klammern initialisiert werden:
 
 ```cpp
@@ -99,6 +101,7 @@ return { 4.5 };
 ```
 
 ## <a name="initializerlist-constructors"></a>initializer_list-Konstruktoren
+
 Die [Initializer_list-Klasse](../standard-library/initializer-list-class.md) stellt eine Liste von Objekten eines angegebenen Typs, die in einem Konstruktor und in anderen Kontexten verwendet werden können. Sie können ein initializer_list-Objekt durch Verwenden der Initialisierung mit geschweiften Klammern erstellen:
 
 ```cpp
@@ -127,6 +130,7 @@ regex rgx{'x', 'y', 'z'};
 ```
 
 ## <a name="delegating-constructors"></a>Delegierende Konstruktoren
+
 Viele Klassen verfügen über mehrere Konstruktoren, die ähnliche Aufgaben ausführen, beispielsweise Parameter überprüfen:
 
 ```cpp

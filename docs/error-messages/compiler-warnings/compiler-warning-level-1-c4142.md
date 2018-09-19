@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4142 generiert | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4142 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c87b7689cf11ab28c1a6377ff85e1594fd1b5fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 011f71c1d57f03c2be9bac3df67cd0ed90aa8017
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284432"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117386"
 ---
-# <a name="compiler-warning-level-1-c4142"></a>Compilerwarnung (Stufe 1) C4142 generiert
-keine Auswirkungen Neudefinition des Typs  
-  
- Ein Typ ist neu in einer Weise definiert, die hat keine Auswirkung auf den generierten Code.  
-  
- Dieser Fehler kann eine der folgenden Ursachen haben:  
-  
--   Eine Memberfunktion einer abgeleiteten Klasse verfügt über einen anderen Rückgabetyp als die entsprechenden Member-Funktion der Basisklasse.  
-  
--   Ein Typ definiert, mit der `typedef` Befehl erneut mit einer anderen Syntax definiert.  
-  
- Im folgende Beispiel wird C4142 generiert:  
-  
-```  
-// C4142.c  
-// compile with: /W1  
-float X2;  
-X2 = 2.0 + 1.0;   // C4142  
-  
-int main() {  
-   float X2;  
-   X2 = 2.0 + 1.0;   // OK  
-}  
+# <a name="compiler-warning-level-1-c4142"></a>Compilerwarnung (Stufe 1) C4142
+
+unbedenklich Neudefinition eines Typs
+
+Ein Typ ist in einer Weise neu definiert, die keine Auswirkungen auf den generierten Code hat.
+
+Dieser Fehler kann eine der folgenden Ursachen haben:
+
+- Eine Memberfunktion einer abgeleiteten Klasse verfügt über einen anderen Rückgabetyp aus der entsprechenden Memberfunktion der Basisklasse.
+
+- Ein Typ, der definiert, mit der `typedef` Befehl mit einer anderen Syntax Neudefinition.
+
+Im folgende Beispiel wird die C4142 generiert:
+
+```
+// C4142.c
+// compile with: /W1
+float X2;
+X2 = 2.0 + 1.0;   // C4142
+
+int main() {
+   float X2;
+   X2 = 2.0 + 1.0;   // OK
+}
 ```

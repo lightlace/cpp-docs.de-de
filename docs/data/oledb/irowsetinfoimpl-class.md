@@ -37,14 +37,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d07c0e64e969e599393a657d4c41a8dd544901c9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 542c97c1e13d5979290772668b6dccebe1ece9f9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571688"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113161"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl-Klasse
+
 Stellt eine Implementierung für die [IRowsetInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\)) Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax
@@ -57,14 +58,16 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *T*  
- Abgeleitet von die Klasse `IRowsetInfoImpl`.  
+
+*T*<br/>
+Abgeleitet von die Klasse `IRowsetInfoImpl`.  
   
- *PropClass*  
- Eine mit benutzerdefinierbaren-Eigenschaftsklasse, die standardmäßig *T*. 
+*PropClass*<br/>
+Eine mit benutzerdefinierbaren-Eigenschaftsklasse, die standardmäßig *T*. 
 
 ## <a name="requirements"></a>Anforderungen  
- **Header:** altdb.h   
+
+**Header:** altdb.h   
   
 ## <a name="members"></a>Member  
   
@@ -77,9 +80,11 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 |[GetSpecification](#getspecification)|Gibt einen Schnittstellenzeiger zurück, für das Objekt (Befehl oder Sitzung), die dieses Rowset erstellt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Eine erforderliche Schnittstelle für Rowsets. Diese Klasse implementiert die Rowseteigenschaften mit dem [Satz eigenschaftenzuordnung](../../data/oledb/begin-propset-map.md) in Ihrer Klasse des Befehls definiert. Obwohl die Rowset-Klasse angezeigt wird, auf die Verwendung der Command-Klasse-Eigenschaft festlegt, wird das Rowset mit ihrer eigenen Kopie der Laufzeit-Eigenschaften, bereitgestellt, bei der Erstellung von einem Befehl oder Sitzung-Objekt.  
+
+Eine erforderliche Schnittstelle für Rowsets. Diese Klasse implementiert die Rowseteigenschaften mit dem [Satz eigenschaftenzuordnung](../../data/oledb/begin-propset-map.md) in Ihrer Klasse des Befehls definiert. Obwohl die Rowset-Klasse angezeigt wird, auf die Verwendung der Command-Klasse-Eigenschaft festlegt, wird das Rowset mit ihrer eigenen Kopie der Laufzeit-Eigenschaften, bereitgestellt, bei der Erstellung von einem Befehl oder Sitzung-Objekt.  
   
 ## <a name="getproperties"></a> Irowsetinfoimpl:: GetProperties
+
 Gibt die aktuellen Einstellungen für Eigenschaften in der `DBPROPSET_ROWSET` Gruppe.  
   
 ### <a name="syntax"></a>Syntax  
@@ -92,9 +97,11 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [IRowsetInfo:: GetProperties](/previous-versions/windows/desktop/ms719611\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. 
+
+Finden Sie unter [IRowsetInfo:: GetProperties](/previous-versions/windows/desktop/ms719611\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. 
 
 ## <a name="getreferencedrowset"></a> Irowsetinfoimpl:: Getreferencedrowset
+
 Gibt einen Schnittstellenzeiger auf das Rowset, für das ein Lesezeichen gilt, zurück.  
   
 ### <a name="syntax"></a>Syntax  
@@ -106,9 +113,11 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. Die *iOrdinal* -Parameter muss eine Lesezeichenspalte sein. 
+
+Finden Sie unter [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. Die *iOrdinal* -Parameter muss eine Lesezeichenspalte sein. 
 
 ## <a name="getspecification"></a> Irowsetinfoimpl:: Getspecification
+
 Gibt einen Schnittstellenzeiger zurück, für das Objekt (Befehl oder Sitzung), die dieses Rowset erstellt.  
   
 ### <a name="syntax"></a>Syntax  
@@ -119,11 +128,14 @@ STDMETHOD (GetSpecification )(REFIID riid,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+
+Finden Sie unter [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Methode mit [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) zum Abrufen von Eigenschaften aus dem Daten-Quellobjekt.  
+
+Verwenden Sie diese Methode mit [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) zum Abrufen von Eigenschaften aus dem Daten-Quellobjekt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

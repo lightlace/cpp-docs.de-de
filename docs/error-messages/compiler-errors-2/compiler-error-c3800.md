@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3800 | Microsoft Docs
+title: Compilerfehler C3800 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d90b35cddda138144c231080e3430a454748f6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b4b8a86199057f7e4b936200a82615db899a8d1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266935"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113304"
 ---
 # <a name="compiler-error-c3800"></a>Compilerfehler C3800
-'Declaration': kann nicht mischen, Eigenschaften und Ereignisse  
-  
- Sie können ein Konstrukt ist eine Eigenschaft und ein Ereignis nicht deklarieren.  
-  
- C3800 ist nur über die veraltete Compileroption erreichbar **/CLR: oldSyntax**.  
+
+'Declaration': nicht gemischt werden, Eigenschaften und Ereignisse
+
+Sie können ein Konstrukt einer Eigenschaft und ein Ereignis nicht deklarieren.
+
+C3800 ist nur über die veraltete Compileroption erreichbar **oldSyntax**.

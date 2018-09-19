@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f34f7ceca5cf958e981f8390044863a07b4317
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 80bd9984afa3ce1fc6cda4e0b48cfa59e7e84b56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767164"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118452"
 ---
 # <a name="worker-archetype"></a>Worker-Archetype
 
@@ -68,7 +68,7 @@ Diese Vorlagenparameter erwarten, dass die Klasse, um dieser Archetyp entspreche
 
 Wird aufgerufen, um eine Arbeitsaufgabe zu verarbeiten.
 
-```  
+```
 void Execute(
     RequestType request,  
     void* pvWorkerParam,  
@@ -77,25 +77,25 @@ void Execute(
 
 #### <a name="parameters"></a>Parameter
 
-*Anforderung*  
+*Anforderung*<br/>
 Die Arbeitsaufgabe verarbeitet werden. Das Arbeitselement ist vom gleichen Typ wie `RequestType`.
 
-*pvWorkerParam*  
+*pvWorkerParam*<br/>
 Einen benutzerdefinierten Parameter, der verstanden werden, durch die Workerklasse. Auch an übergeben `WorkerArchetype::Initialize` und `Terminate`.
 
-*"pOverlapped"*  
+*"pOverlapped"*<br/>
 Ein Zeiger auf die [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) Struktur verwendet, um die Warteschlange zu erstellen, auf welche Elemente wurden in die Warteschlange eingereiht.
 
 ## <a name="initialize"></a> WorkerArchetype::Initialize
 
-Wird aufgerufen, um die Worker-Objekt zu initialisieren, bevor Anforderungen an übergeben werden `WorkerArchetype::Execute`.  
+Wird aufgerufen, um die Worker-Objekt zu initialisieren, bevor Anforderungen an übergeben werden `WorkerArchetype::Execute`.
 ```
 BOOL Initialize(void* pvParam) throw();
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*pvParam*  
+*pvParam*<br/>
 Einen benutzerdefinierten Parameter, der verstanden werden, durch die Workerklasse. Auch an übergeben `WorkerArchetype::Terminate` und `WorkerArchetype::Execute`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -106,8 +106,8 @@ Gibt TRUE zurück, bei Erfolg bei "false".
 
 Eine Typedef für den Typ der Arbeitsaufgabe, die von der Klasse der workerrolle verarbeitet werden kann.
 
-```  
-typedef MyRequestType RequestType;    
+```
+typedef MyRequestType RequestType;
 ```
 
 ### <a name="remarks"></a>Hinweise
@@ -118,17 +118,17 @@ Dieser Typ muss verwendet werden, als der erste Parameter der `WorkerArchetype::
 
 Wird aufgerufen, um die Worker-Objekt Initialisierung aufheben, nachdem auf alle Anforderungen übergeben wurden `WorkerArchetype::Execute`).
 
-``` 
+```
 void Terminate(void* pvParam) throw();
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*pvParam*  
+*pvParam*<br/>
 Einen benutzerdefinierten Parameter, der verstanden werden, durch die Workerklasse. Auch an übergeben `WorkerArchetype::Initialize` und `WorkerArchetype::Execute`.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Konzepte](../../atl/active-template-library-atl-concepts.md)   
+[Konzepte](../../atl/active-template-library-atl-concepts.md)<br/>
 [ATL-COM-Desktop-Komponenten](../../atl/atl-com-desktop-components.md)
 

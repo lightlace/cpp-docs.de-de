@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2996 | Microsoft Docs
+title: Compilerfehler C2996 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b70665a767a9ab428336fbfd0cd03bc3da1ff7ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c76c72a3bb9694536a9c5ae60f60a87ba9b455c1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243930"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108668"
 ---
 # <a name="compiler-error-c2996"></a>Compilerfehler C2996
-'Funktion': Rekursive Definition der Vorlagenfunktion.  
-  
- Eine Funktionsdefinition versucht, die aus einer Vorlage gebildete Stammklasse zu instanziieren. Rekursive Vorlageninstanziierungen sind nicht zulässig.
+
+'Funktion': Rekursive Definition der Vorlagenfunktion.
+
+Eine Funktionsdefinition versucht, die aus einer Vorlage gebildete Stammklasse zu instanziieren. Rekursive Vorlageninstanziierungen sind nicht zulässig.

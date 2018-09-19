@@ -1,5 +1,5 @@
 ---
-title: Swap-Funktion (Auto_handle) | Microsoft Docs
+title: Swap-Funktion (Auto_handle) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c616a391db07a9c6116c96c1b0242714a0ad958b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 66416bf19a154a5ea1f4a52728f97bbfbd3477f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163958"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103231"
 ---
 # <a name="swap-function-autohandle"></a>swap-Funktion (auto_handle)
-Tauscht Objekte zwischen einer `auto_handle` und eine andere.  
+Tauscht Objekte zwischen einem `auto_handle` und eine andere.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,11 +39,11 @@ void swap(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `_left`  
- Eine `auto_handle`.  
+*_left*<br/>
+Eine `auto_handle`.  
   
- `_right`  
- Eine andere `auto_handle`.  
+*_Right*<br/>
+Eine andere `auto_handle`.  
   
 ## <a name="example"></a>Beispiel  
   

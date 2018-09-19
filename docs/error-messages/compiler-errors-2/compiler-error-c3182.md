@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C3182 | Microsoft Docs
+title: Compilerfehler C3182 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 503ad6d17b197392967681bfdf4e921aa21dc3e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 722f95b41f9f5ec467af25ccf927631590f90e45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254621"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110216"
 ---
-# <a name="compiler-error-c3182"></a>Compilerfehler Fehler C3182
-'Klasse': eine using-Deklaration oder Zugriffsdeklaration für Member ist innerhalb eines verwalteten oder WinRTtype nicht zulässig  
-  
- Ein [mit](../../cpp/using-declaration.md) -Deklaration ist in sämtlichen verwalteten Klassen unzulässig.  
-  
- Im folgenden Beispiel wird C3182 generiert und gezeigt, wie Sie diesen Fehler beheben:  
-  
-```  
-// C3182a.cpp  
-// compile with: /clr /c  
-ref struct B {  
-   void mf(int) {  
-   }  
-};  
-  
-ref struct D : B {  
-   using B::mf;   // C3182, delete to resolve  
-   void mf(char) {  
-   }  
-};  
-```  
+# <a name="compiler-error-c3182"></a>Compilerfehler C3182
+
+'Klasse': eine using- oder Zugriffsdeklaration für Member ist innerhalb eines verwalteten oder WinRTtype nicht zulässig
+
+Ein [mit](../../cpp/using-declaration.md) Deklaration ist in sämtlichen verwalteten Klassen unzulässig.
+
+Im folgenden Beispiel wird C3182 generiert und gezeigt, wie Sie diesen Fehler beheben:
+
+```
+// C3182a.cpp
+// compile with: /clr /c
+ref struct B {
+   void mf(int) {
+   }
+};
+
+ref struct D : B {
+   using B::mf;   // C3182, delete to resolve
+   void mf(char) {
+   }
+};
+```

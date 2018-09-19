@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3553 | Microsoft Docs
+title: Compilerfehler C3553 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a4ed8c2776015f9d9c6aedbe7a9da93f404f680
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c91697b8fa4f04c040d92f8af3aa004bbde7a773
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255997"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118621"
 ---
 # <a name="compiler-error-c3553"></a>Compilerfehler C3553
-"decltype" erwartet einen Ausdruck und keinen Typ.  
-  
- Das `decltype()` -Schlüsselwort benötigt einen Ausdruck als Argument, nicht den Namen eines Typs. Im folgenden Codefragment wird beispielsweise durch die letzte Anweisung der Fehler C3553 verursacht.  
-  
- `int x = 0;`  
-  
- `decltype(x+1);`  
-  
- `decltype(int); // C3553`
+
+> "decltype" erwartet einen Ausdruck und keinen Typ.
+
+Das `decltype()` -Schlüsselwort benötigt einen Ausdruck als Argument, nicht den Namen eines Typs. Im folgenden Codefragment wird beispielsweise durch die letzte Anweisung der Fehler C3553 verursacht.
+
+```cpp
+int x = 0;
+decltype(x+1);
+decltype(int); // C3553
+```

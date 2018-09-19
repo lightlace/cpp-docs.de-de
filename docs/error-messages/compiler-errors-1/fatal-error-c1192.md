@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1192 | Microsoft Docs
+title: Schwerwiegender Fehler C1192 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45880594a3a9aa64fd62099b5b1eea342107e3dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31e372db05d39bb7559fc3ee4390b8886e070b46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227420"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091932"
 ---
 # <a name="fatal-error-c1192"></a>Schwerwiegender Fehler C1192
-\#Fehler bei "File"  
-  
- Nur eine Datei in der Microsoft Intermediate Language (MSIL)-Format übergeben werden kann, um eine [#using](../../preprocessor/hash-using-directive-cpp.md) Richtlinie. Die ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md) -Compileroption können Sie eine MSIL-Ausgabedatei zu erstellen. MSIL-Dateien werden auch in anderen Visual Studio-Sprachen generiert.
+
+\#Fehler bei 'Datei'
+
+Nur eine Datei in die Microsoft Intermediate Language (MSIL)-Format übergeben werden kann, um eine [#using](../../preprocessor/hash-using-directive-cpp.md) Richtlinie. Die ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md) Compileroption können Sie eine MSIL-Ausgabedatei zu erstellen. Andere Visual Studio-Sprachen werden auch MSIL-Dateien generiert.
