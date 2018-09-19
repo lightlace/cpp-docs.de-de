@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4457 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4457 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80eac0ade54df1626e993bfed12468b2aa34402f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62232a814bed47f8b6a5041d20e6f37776abffe8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300975"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093531"
 ---
 # <a name="compiler-warning-level-4-c4457"></a>Compilerwarnung (Stufe 4) C4457
-  
-> Deklaration von "*Bezeichner*" Blendet Parameter-Funktion
-  
-Die Deklaration von *Bezeichner* im lokalen Gültigkeitsbereich Blendet Sie aus der Deklaration des Parameters der Funktion mit identischem Namen. Diese Warnung teilt Ihnen, die Verweise auf *Bezeichner* im lokalen Gültigkeitsbereich auf die lokal deklarierte Version, die nicht den Parameter, der nicht unbedingt Ihre Absicht zu beheben. Um dieses Problem zu beheben, wird empfohlen, dass Sie lokale Variablennamen, die keinen Konflikt mit dem Parameternamen erteilen.  
-    
+
+> Deklaration von "*Bezeichner*" Blendet Funktionsparameter aus
+
+Die Deklaration von *Bezeichner* im lokalen Gültigkeitsbereich Blendet die Deklaration des Parameters der Funktion mit identischem Namen. Diese Warnung teilt Ihnen mitteilen, dass Verweise auf *Bezeichner* im lokalen Gültigkeitsbereich auf die lokal deklarierten Version nicht den Parameter, der nicht unbedingt Ihre Absicht zu beheben. Um dieses Problem zu beheben, empfehlen wir, dass Sie die lokalen Variablennamen, die nicht in Konflikt stehen mit Namen geben.
+
 ## <a name="example"></a>Beispiel
-  
-Im folgende Beispiel wird C4457 generiert, da der Parameter `x` und die lokale Variable `x` in `member_fn` denselben Namen haben. Um dieses Problem zu beheben, verwenden Sie unterschiedliche Namen für die Parameter und lokaler Variablen.  
-  
-```cpp  
+
+Im folgende Beispiel wird C4457 generiert, da der Parameter `x` und die lokale Variable `x` in `member_fn` haben die gleichen Namen. Um dieses Problem zu beheben, verwenden Sie unterschiedliche Namen für die Parameter und lokalen Variablen.
+
+```cpp
 // C4457_hide.cpp
 // compile with: cl /W4 /c C4457_hide.cpp
 
@@ -42,8 +42,8 @@ struct S {
         double a = 0;
         for (int x = 0; x < 10; ++x) {  // C4457
             a += x; // uses local x
-        } 
+        }
         a += x; // uses parameter x
     }
 } s;
-```  
+```

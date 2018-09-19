@@ -12,19 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 445e2061f9bca938d515dcb8e9be637700493bc4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29492ee8584093b336ba10f4e35fdd153c48819b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382356"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034459"
 ---
 # <a name="floating-point-math"></a>Gleitkommaoperationen
--   [Werte](../c-language/values.md)  
-  
--   [Umwandlung ganzer Zahlen in Gleitkommazahlen-Punktwerte](../c-language/casting-integers-to-floating-point-values.md)  
-  
--   [Abschneiden von Gleitkommawerten](../c-language/truncation-of-floating-point-values.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Implementation-Defined Behavior (Durch die Implementierung definiertes Verhalten)](../c-language/implementation-defined-behavior.md)
+
+- [Werte](../c-language/values.md)
+
+- [Umwandlung ganzer Zahlen in Gleitkommazahlen-Punktwerte](../c-language/casting-integers-to-floating-point-values.md)
+
+- [Abschneiden von Gleitkommawerten](../c-language/truncation-of-floating-point-values.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Implementation-Defined Behavior (Durch die Implementierung definiertes Verhalten)](../c-language/implementation-defined-behavior.md)

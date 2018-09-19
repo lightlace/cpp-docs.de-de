@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e52284db986ec642724f97aae75a9af004339b40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0c314decf15886f8d99ed8be3b7bafe4fff3e36b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392470"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085757"
 ---
 # <a name="process-and-environment-control"></a>Prozess- und Umgebungssteuerung
 
@@ -56,7 +56,7 @@ Verwenden Sie die Prozesssteuerungsroutinen, um Prozesse aus einem Programm hera
 |[exit](../c-runtime-library/reference/exit-exit-exit.md)|Ruft von **atexit** und **_onexit** registrierte Funktionen auf, leert alle Puffer, schließt alle offenen Dateien und beendet den Prozess.|
 |[_exit](../c-runtime-library/reference/exit-exit-exit.md)|Beendet den Prozess sofort, ohne **atexit** oder **_onexit** aufzurufen oder Puffer zu leeren.|
 |[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md), [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|Ruft den Wert der Umgebungsvariablen ab.|
-|[_getpid](../c-runtime-library/reference/getpid.md)|Ruft die Prozess-ID-Nummer ab.|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.id.aspx)|
+|[_getpid](../c-runtime-library/reference/getpid.md)|Ruft die Prozess-ID-Nummer ab.|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/library/system.diagnostics.process.id.aspx)|
 |[longjmp](../c-runtime-library/reference/longjmp.md)|Stellt die gespeicherte Stapelumgebung wieder her. Wird zur Ausführung eines nicht lokalen **goto**-Befehls verwendet.|
 |[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|Plant Routinen für die Ausführung bei Beendigung des Programms, wird zur Kompatibilität mit Microsoft C/C++ Version 7.0 und früher verwendet.|
 |[_pclose](../c-runtime-library/reference/pclose.md)|Wartet auf einen neuen Befehlsprozessor und schließt den Stream auf der zugeordneten Pipe.|
@@ -77,11 +77,11 @@ Verwenden Sie die Prozesssteuerungsroutinen, um Prozesse aus einem Programm hera
 |[_spawnvpe, _wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|Erstellt einen neuen Prozess mithilfe der **PATH**-Variable, der angegebenen Umgebung und dem Argumentarray und führt ihn aus.|
 |[system, _wsystem](../c-runtime-library/reference/system-wsystem.md)|Führt einen Betriebssystembefehl aus.|
 
- Im Windows-Betriebssystem entspricht der erzeugte Prozess dem erzeugenden Prozess. Jeder Prozess kann **_cwait** verwenden, um auf einen Prozess zu warten, dessen Prozess-ID bekannt ist.
+Im Windows-Betriebssystem entspricht der erzeugte Prozess dem erzeugenden Prozess. Jeder Prozess kann **_cwait** verwenden, um auf einen Prozess zu warten, dessen Prozess-ID bekannt ist.
 
- Der Unterschied zwischen den Familien **_exec** und **_spawn** ist, dass eine **_spawn**-Funktion die Steuerung vom neuen Prozess an den aufrufenden Prozess zurückgeben kann. In einer **_spawn**-Funktion sind sowohl der aufrufende als auch der neue Prozess im Arbeitsspeicher vorhanden, außer wenn **_P_OVERLAY** angegeben ist. In einer **_exec**-Funktion überlagert der neue Prozess den aufrufenden Prozess, sodass die Steuerung nur dann an den aufrufenden Prozess zurückgegeben werden kann, wenn beim Versuch, die Ausführung des neuen Prozesses zu starten, ein Fehler auftritt.
+Der Unterschied zwischen den Familien **_exec** und **_spawn** ist, dass eine **_spawn**-Funktion die Steuerung vom neuen Prozess an den aufrufenden Prozess zurückgeben kann. In einer **_spawn**-Funktion sind sowohl der aufrufende als auch der neue Prozess im Arbeitsspeicher vorhanden, außer wenn **_P_OVERLAY** angegeben ist. In einer **_exec**-Funktion überlagert der neue Prozess den aufrufenden Prozess, sodass die Steuerung nur dann an den aufrufenden Prozess zurückgegeben werden kann, wenn beim Versuch, die Ausführung des neuen Prozesses zu starten, ein Fehler auftritt.
 
- Zu den Unterschieden zwischen den Funktionen in der **_exec**-Familie ebenso wie zwischen denen der **_spawn**-Familie gehören folgende: die Methode zum Suchen der Datei, die als neuer Prozess ausgeführt werden soll; die Form, in der Argumente an den neuen Prozess übergeben werden; die Methode zum Festlegen der Umgebung. Dies wird in der folgenden Tabelle erläutert. Verwenden Sie eine Funktion, die eine Argumentliste übergibt, wenn die Anzahl von Argumenten konstant oder zur Kompilierzeit bekannt ist. Verwenden Sie eine Funktion, die einen Zeiger auf ein Array mit den Argumenten übergibt, wenn die Anzahl von Argumenten zur Laufzeit ermittelt werden muss. Die Informationen in der folgenden Tabelle gelten auch für die jeweiligen Breitzeichengegenstücke der Funktionen **_spawn** und **_exec**.
+Zu den Unterschieden zwischen den Funktionen in der **_exec**-Familie ebenso wie zwischen denen der **_spawn**-Familie gehören folgende: die Methode zum Suchen der Datei, die als neuer Prozess ausgeführt werden soll; die Form, in der Argumente an den neuen Prozess übergeben werden; die Methode zum Festlegen der Umgebung. Dies wird in der folgenden Tabelle erläutert. Verwenden Sie eine Funktion, die eine Argumentliste übergibt, wenn die Anzahl von Argumenten konstant oder zur Kompilierzeit bekannt ist. Verwenden Sie eine Funktion, die einen Zeiger auf ein Array mit den Argumenten übergibt, wenn die Anzahl von Argumenten zur Laufzeit ermittelt werden muss. Die Informationen in der folgenden Tabelle gelten auch für die jeweiligen Breitzeichengegenstücke der Funktionen **_spawn** und **_exec**.
 
 ### <a name="spawn-and-exec-function-families"></a>Funktionsfamilien „_spawn“ und „_exec“
 

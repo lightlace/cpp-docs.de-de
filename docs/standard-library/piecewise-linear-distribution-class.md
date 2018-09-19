@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b475f497509249a29eb466c1a353111661b744e6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5efee5c6c867cf7b9b58e94f7475f365dee580ae
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959471"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102589"
 ---
 # <a name="piecewiselineardistribution-class"></a>piecewise_linear_distribution-Klasse
 
@@ -90,7 +90,8 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*RealType* der gleitkommaergebnistyp, der Standardwert ist **doppelte**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType*<br/>
+Der gleitkommaergebnistyp, der Standardwert ist **doppelte**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
@@ -258,23 +259,32 @@ explicit piecewise_linear_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*FirstI* einen eingabeiterator des ersten Elements im Verteilungsbereich.
+*firstI*<br/>
+Ein Eingabeiterator für das erste Element im Verteilungsbereich.
 
-*LastI* ein eingabeiterator für das letzte Element im Verteilungsbereich.
+*lastI*<br/>
+Ein Eingabeiterator für das letzte Element im Verteilungsbereich.
 
-*FirstW* ein eingabeiterator für das erste Element im gewichtsbereich.
+*firstW*<br/>
+Ein Eingabeiterator für das erste Element im Gewichtsbereich.
 
-*Intervalle* ein [initializer_list-Element](../cpp/initializers.md) mit den Intervallen der Verteilung.
+*Zeitintervalle*<br/>
+Ein [initializer_list](../cpp/initializers.md) mit den Verteilungsintervallen.
 
-*Anzahl* die Anzahl von Elementen im Verteilungsbereich.
+*count*<br/>
+Die Anzahl von Elementen im Verteilungsbereich.
 
-*"xmin"* den niedrigsten Wert im Verteilungsbereich.
+*xmin*<br/>
+Der niedrigste Wert im Verteilungsbereich.
 
-*"xmax"* der höchste Wert im Verteilungsbereich. Muss größer als *xmin* sein.
+*xmax*<br/>
+Der höchste Wert im Verteilungsbereich. Muss größer als *xmin* sein.
 
-*Weightfunc* das Objekt, das die Wahrscheinlichkeitsfunktion für die Verteilung darstellt. Die Parameter und der Rückgabewert müssen konvertierbar sein **doppelte**.
+*weightfunc*<br/>
+Das Objekt, das die Wahrscheinlichkeitsfunktion für die Verteilung darstellt. Die Parameter und der Rückgabewert müssen konvertierbar sein **doppelte**.
 
-*Parm* die Parameterstruktur verwendet, um die Verteilung erstellen.
+*parm*<br/>
+Die für die Erstellung der Verteilung verwendete Parameterstruktur.
 
 ### <a name="remarks"></a>Hinweise
 

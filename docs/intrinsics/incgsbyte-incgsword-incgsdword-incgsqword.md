@@ -1,5 +1,5 @@
 ---
-title: __incgsbyte __incgsword, __incgsdword __incgsqword | Microsoft Docs
+title: __incgsbyte, __incgsword, __incgsdword, __incgsqword | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19b2598b5a9eb999571c6f3b5809049f1c935a0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 611786246df9da54d94e673da1a5e48940ca7241
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329461"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711125"
 ---
 # <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
 **Microsoft-spezifisch**  
   
- Fügen Sie einen auf den Wert an einer Speicheradresse, angegeben durch ein Offset relativ zum Anfang der `GS` Segment.  
+ Fügen Sie eine auf den Wert an einer Speicheradresse, die durch ein Offset relativ zum Anfang des angegebenen die `GS` Segment.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,17 +56,17 @@ void __incgsqword(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `Offset`  
- Der Offset vom Anfang des `GS`.  
+*Offset*<br/>
+[in] Der Offset vom Anfang des `GS`.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__incgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__incgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__incgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__incgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__incgsbyte`|x64|  
+|`__incgsword`|x64|  
+|`__incgsdword`|x64|  
+|`__incgsqword`|x64|  
   
 ## <a name="remarks"></a>Hinweise  
  Diese systeminternen Funktionen sind nur im Kernelmodus verfügbar, und die Routinen sind nur als systeminterne Funktionen verfügbar.  

@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Get_id-Methode | Microsoft Docs'
+title: 'Asyncbase:: Get_id-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6720348692e92e05922bde1100e42c24a866933
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 32d2d3cd633204b44e266bddea5d16361b5e9d19
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859799"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604449"
 ---
 # <a name="asyncbasegetid-method"></a>AsyncBase::get_Id-Methode
-Ruft das Handle des asynchronen Vorgangs ab.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-STDMETHOD(  
-   get_Id  
-)(unsigned int *id) override;  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `id`  
- Der Speicherort, an dem das Handle gespeichert werden.  
-  
-## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn erfolgreich; andernfalls E_ILLEGAL_METHOD_CALL.  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Methode implementiert IAsyncInfo::get_Id.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** async.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [AsyncBase-Klasse](../windows/asyncbase-class.md)
+
+Ruft das Handle des asynchronen Vorgangs ab.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+STDMETHOD(
+   get_Id
+)(unsigned int *id) override;
+```
+
+### <a name="parameters"></a>Parameter
+
+*ID*  
+Der Speicherort, an dem das Handle gespeichert werden.
+
+## <a name="return-value"></a>Rückgabewert
+
+S_OK, wenn erfolgreich; andernfalls E_ILLEGAL_METHOD_CALL.
+
+## <a name="remarks"></a>Hinweise
+
+Diese Methode implementiert `IAsyncInfo::get_Id`.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** async.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[AsyncBase-Klasse](../windows/asyncbase-class.md)

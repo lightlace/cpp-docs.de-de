@@ -17,40 +17,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e982ebd9a09d4dfcb5e4b5e150b42a1e8d5c75
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f2fbedb2bbfba16abf1196d1dba377f7589c916b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943792"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099615"
 ---
 # <a name="comptrtattach"></a>_com_ptr_t::Attach
-**Microsoft-spezifisch**  
-  
- Kapselt einen unformatierten Schnittstellenzeiger vom Typ dieses intelligenten Zeigers.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-void Attach( Interface* pInterface ) throw( );  
-void Attach( Interface* pInterface, bool fAddRef ) throw( );  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *pInterface*  
- Ein unformatierter Schnittstellenzeiger.  
-  
- *fAddRef*  
- Wenn "true", dann ist `AddRef` aufgerufen wird. Wenn es auf "FALSE" ist die `_com_ptr_t` Objekt übernimmt den Besitz des unformatierten Schnittstellenzeigers, ohne `AddRef`.  
-  
-## <a name="remarks"></a>Hinweise  
-  
--   **Anfügen (***pInterface***)** `AddRef` wird nicht aufgerufen.     Der Besitz der Schnittstelle wird an dieses `_com_ptr_t`-Objekt übergeben. `Release` wird aufgerufen, um den Verweiszähler für den zuvor gekapselten Zeiger zu verringern.  
-  
--   **Anfügen (***pInterface* **,***fAddRef***)** Wenn *fAddRef* ist "true", `AddRef`aufgerufen, um den Verweiszähler für den gekapselten Schnittstellenzeiger zu inkrementieren.       Wenn *fAddRef* ist "false", dies `_com_ptr_t` Objekt übernimmt den Besitz des unformatierten Schnittstellenzeigers, ohne `AddRef`. `Release` wird aufgerufen, um den Verweiszähler für den zuvor gekapselten Zeiger zu verringern.  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md)
+
+**Microsoft-spezifisch**
+
+Kapselt einen unformatierten Schnittstellenzeiger vom Typ dieses intelligenten Zeigers.
+
+## <a name="syntax"></a>Syntax
+
+```
+void Attach( Interface* pInterface ) throw( );
+void Attach( Interface* pInterface, bool fAddRef ) throw( );
+```
+
+#### <a name="parameters"></a>Parameter
+
+*pInterface*<br/>
+Ein unformatierter Schnittstellenzeiger.
+
+*fAddRef*<br/>
+Wenn "true", dann ist `AddRef` aufgerufen wird. Wenn es auf "FALSE" ist die `_com_ptr_t` Objekt übernimmt den Besitz des unformatierten Schnittstellenzeigers, ohne `AddRef`.
+
+## <a name="remarks"></a>Hinweise
+
+- **Anfügen (***pInterface***)** `AddRef` wird nicht aufgerufen. Der Besitz der Schnittstelle wird an dieses `_com_ptr_t`-Objekt übergeben. `Release` wird aufgerufen, um den Verweiszähler für den zuvor gekapselten Zeiger zu verringern.
+
+- **Anfügen (***pInterface* **,***fAddRef***)** Wenn *fAddRef* ist "true", `AddRef`aufgerufen, um den Verweiszähler für den gekapselten Schnittstellenzeiger zu inkrementieren. Wenn *fAddRef* ist "false", dies `_com_ptr_t` Objekt übernimmt den Besitz des unformatierten Schnittstellenzeigers, ohne `AddRef`. `Release` wird aufgerufen, um den Verweiszähler für den zuvor gekapselten Zeiger zu verringern.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md)

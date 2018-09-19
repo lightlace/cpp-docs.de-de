@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4efef4c7dfb907120778390874a5e56222889350
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 46018d2ec8747b1fac459e1ac1d28b59eea2385b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392301"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203471"
 ---
 # <a name="debug-routines"></a>Debugroutinen
 
@@ -73,7 +73,7 @@ Um diese Routinen zu verwenden, muss das [_DEBUG](../c-runtime-library/debug.md)
 |[_calloc_dbg](../c-runtime-library/reference/calloc-dbg.md)|Ordnet eine bestimmte Anzahl von Speicherblöcken auf dem Heap mit zusätzlichem Speicher für einen Debugheader und Überschreibungspuffer zu.|
 |[_expand_dbg](../c-runtime-library/reference/expand-dbg.md)|Ändert die Größe eines angegebenen Speicherblocks auf dem Heap, indem der Block erweitert oder verkleinert wird.|
 |[_free_dbg](../c-runtime-library/reference/free-dbg.md)|Gibt einen Speicherblock auf dem Heap frei.|
-|[_fullpath_dbg, _wfullpath_dbg](../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md)|Erstellt mithilfe von [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) einen absoluten oder vollständigen Pfadnamen für den angegebenen relativen Pfadnamen, um Speicher zu belegen.|[System::IO::File::Create](https://msdn.microsoft.com/en-us/library/system.io.file.create.aspx)|
+|[_fullpath_dbg, _wfullpath_dbg](../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md)|Erstellt mithilfe von [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) einen absoluten oder vollständigen Pfadnamen für den angegebenen relativen Pfadnamen, um Speicher zu belegen.|[System::IO::File::Create](https://msdn.microsoft.com/library/system.io.file.create.aspx)|
 |[_getcwd_dbg, _wgetcwd_dbg](../c-runtime-library/reference/getcwd-dbg-wgetcwd-dbg.md)|Ruft das aktuelle Arbeitsverzeichnis mithilfe von [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) ab, um Speicher zu belegen.|
 |[_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md)|Ordnet einen Speicherblock auf dem Heap mit zusätzlichem Speicher für einen Debugheader und Überschreibungspuffer zu.|
 |[_msize_dbg](../c-runtime-library/reference/msize-dbg.md)|Berechnet die Größe eines Speicherblocks auf dem Heap.|

@@ -1,5 +1,5 @@
 ---
-title: eindeutige (C++) | Microsoft Docs
+title: eindeutige (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,44 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebb492d576e82c276aeb1cb464a39b558040fdc5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 868dd67a6f1e3e9e2e7f12e32fd7b2d8f5cff419
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890135"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195278"
 ---
 # <a name="unique-c"></a>unique (C++)
-Gibt einen eindeutigen Zeiger.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-[unique]  
-  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Die **eindeutige** C++-Attribut hat die gleiche Funktionalität wie die [eindeutige](http://msdn.microsoft.com/library/windows/desktop/aa367294) MIDL-Attribut.  
-  
-## <a name="example"></a>Beispiel  
- Finden Sie unter der [Ref](../windows/ref-cpp.md) Beispiel für ein Beispiel für die Verwendung von **eindeutige**.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-### <a name="attribute-context"></a>Attributkontext  
-  
-|||  
-|-|-|  
-|**Betrifft**|`typedef`, `struct`, **Union**, Parameter interface, Schnittstelle Methode|  
-|**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Keiner|  
-|**Ungültige Attribute**|Keiner|  
-  
- Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [IDL-Attribute](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union- und Struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameterattribute](../windows/parameter-attributes.md)   
+
+Gibt einen eindeutigen Zeiger.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+[unique]
+```
+
+## <a name="remarks"></a>Hinweise
+
+Die **eindeutige** C++-Attribut hat die gleiche Funktionalität wie die [eindeutige](/windows/desktop/Midl/unique) MIDL-Attribut.
+
+## <a name="example"></a>Beispiel
+
+Finden Sie unter den [Ref](../windows/ref-cpp.md) Beispiel für ein Beispiel für die Verwendung von **eindeutige**.
+
+## <a name="requirements"></a>Anforderungen
+
+### <a name="attribute-context"></a>Attributkontext
+
+|||
+|-|-|
+|**Betrifft**|**TypeDef**, **Struktur**, **Union**, Schnittstellenparameter,-Schnittstellenmethode|
+|**Wiederholbar**|Nein|
+|**Erforderliche Attribute**|Keiner|
+|**Ungültige Attribute**|Keiner|
+
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[IDL-Attribute](../windows/idl-attributes.md)  
+[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Parameterattribute](../windows/parameter-attributes.md)  

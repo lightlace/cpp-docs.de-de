@@ -1,5 +1,5 @@
 ---
-title: 'TN062: Message Reflektion für Windows-Steuerelemente | Microsoft Docs'
+title: 'TN062: Meldung Reflektion für Windows-Steuerelemente | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -37,102 +37,102 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0bcfdefa0ba15bb374c61e6a6eb61b13c6a784e
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: ce5d24321f007139401c46e07d19e006d4e1dcd3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122084"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215452"
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>TN062: Meldungsreflektion für Windows-Steuerelemente
 
 > [!NOTE]
 > Der folgende technische Hinweis wurde seit dem ersten Erscheinen in der Onlinedokumentation nicht aktualisiert. Daher können einige Verfahren und Themen veraltet oder falsch sein. Um aktuelle Informationen zu erhalten, wird empfohlen, das gewünschte Thema im Index der Onlinedokumentation zu suchen.
 
-In diesem technischen Hinweis beschreibt Meldungsreflektion, ein neues Feature in MFC 4.0. Außerdem enthält es Anleitungen zum Erstellen eines einfachen wiederverwendbaren-Steuerelements, das Meldungsreflektion verwendet.
+Diese technische Hinweis beschreibt Meldungsreflektion, ein neues Feature in MFC 4.0. Sie enthält auch Anweisungen zum Erstellen eines einfachen wiederverwendbaren Steuerelements, das Nachricht Reflektionen verwendet.
 
-In diesem technischen Hinweis umfasst keine Meldungsreflektion für ActiveX-Steuerelemente (früher OLE-Steuerelemente bezeichnet) anwenden. Finden Sie im Artikel [ActiveX-Steuerelemente: einer Fenstersteuerelement](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+Diese technische Hinweis umfasst keine Meldungsreflektion, angewendet auf ActiveX-Steuerelementen (früher OLE-Steuerelemente). Finden Sie im Artikel [ActiveX-Steuerelemente: Erstellen von Unterklassen für ein Windows-Steuerelement](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
 
 **Was ist Meldungsreflektion**
 
-Windows-Steuerelemente senden häufig benachrichtigungsmeldungen an übergeordneten Fenster. Z. B. senden viele Steuerelemente, die eine Farbe Benachrichtigung Steuerungsnachricht (WM_CTLCOLOR oder einer dessen Varianten) an das übergeordnete Objekt das übergeordnete Element ein Pinsels zum Zeichnen der Hintergrund des Steuerelements angeben können.
+Windows-Steuerelemente werden häufig benachrichtigungsmeldungen an übergeordneten Fenster senden. Z. B. viele Steuerelemente eine Steuerelement Farbe Benachrichtigung gesendet wird (WM_CTLCOLOR oder eine ihrer Varianten) auf das übergeordnete Objekt das übergeordnete Element, geben Sie einen Pinsel zum Zeichnen des Hintergrunds des Steuerelements zu ermöglichen.
 
-In Windows und MFC vor Version 4.0 ist das übergeordnete Fenster, häufig ein Dialogfeld für die Behandlung dieser Nachrichten verantwortlich. Dies bedeutet, dass der Code zum Verarbeiten der Nachricht in das übergeordnete Fenster Klasse sein muss und ob er hat in jeder Klasse dupliziert werden, die diese Nachricht verarbeiten muss. Im obigen Fall müsste jede (Dialogfeld), die Steuerelemente mit benutzerdefinierten Hintergrund verwenden wollten die Farbe Control-Nachricht zu verarbeiten. Es wäre es viel einfacher, Code wiederzuverwenden, wenn eine Steuerelement-Klasse, die eine eigenen Hintergrundfarbe behandelt würden geschrieben werden konnte.
+In Windows und in MFC vor Version 4.0 ist das übergeordnete Fenster, häufig ein Dialogfeld für die Verarbeitung dieser Nachrichten verantwortlich. Dies bedeutet, dass der Code zum Verarbeiten der Nachricht in des übergeordneten Fensters Klasse sein muss und dass in jeder Klasse dupliziert werden, die die Nachricht zu bewältigen ist. Im obigen Fall müssten jedem Dialogfeld an, die Steuerelemente mit benutzerdefinierten Hintergrund verwenden wollten, behandeln die Benachrichtigung des Steuerelement-Farbe. Es wäre wesentlich einfacher, Code wiederzuverwenden, wenn eine Steuerelement-Klasse, dass, die ihre eigene Hintergrundfarbe hashbasiertes geschrieben werden kann.
 
-In MFC 4.0 der alte Mechanismus funktioniert – übergeordnete Fenster benachrichtigungsmeldungen behandeln können. Darüber hinaus jedoch MFC 4.0 erleichtert die Wiederverwendung durch eine Funktion namens "message Reflektion" bereitstellen, mit dessen Hilfe diese benachrichtigungsmeldungen an das Fenster des untergeordneten Steuerelements oder das übergeordnete Fenster, oder in beiden behandelt werden. Im Beispiel Farbe Control Hintergrund können Sie jetzt eine Steuerelementklasse, die eine eigenen Hintergrundfarbe legt fest, indem das Behandeln von reflektierten WM_CTLCOLOR-Meldung schreiben – alles ohne Rückgriff auf das übergeordnete Element. (Beachten Sie, dass da Meldungsreflektion von MFC implementiert wird, nicht von Windows, die übergeordnete Fenster-Klasse abgeleitet werden muss `CWnd` für Meldungsreflektion funktioniert.)
+In MFC 4.0, funktioniert der alte Mechanismus weiterhin – übergeordnete Fenster können Nachrichten verarbeiten. Darüber hinaus jedoch MFC 4.0 ermöglicht die Wiederverwendung durch die Bereitstellung eines Features namens "Reflection message", mit der diese Benachrichtigungen in das Fenster des untergeordneten Steuerelements oder das übergeordnete Fenster oder in beiden behandelt werden können. Im Steuerelement Hintergrund Farbe Beispiel können Sie jetzt eine Steuerelement-Klasse, die ihre eigene Hintergrundfarbe festlegt, durch das Behandeln von reflektierten WM_CTLCOLOR-Meldung schreiben – alles ohne sich an das übergeordnete Element. (Beachten Sie, dass da Meldungsreflektion von MFC implementiert wird, nicht von Windows, die übergeordnete Fenster-Klasse abgeleitet werden muss `CWnd` für Meldungsreflektion funktioniert.)
 
-Ältere Versionen von MFC hat etwa Meldungsreflektion durch die Bereitstellung von virtueller Funktionen für einige Nachrichten, z. B. Nachrichten für die Ownerdrawn-Listenfelder (WM_DRAWITEM usw.). Die neue Nachricht Reflektion Mechanismus ist generalisierte und konsistent.
+Ältere Versionen von MFC hat etwa Meldungsreflektion durch die Bereitstellung von virtueller Funktionen für einige Meldungen, z. B. Nachrichten für die Ownerdrawn-Listenfelder (WM_DRAWITEM und So weiter). Der neue Nachricht Reflektion Mechanismus ist generalisierten und konsistent.
 
-Meldungsreflexion ist abwärtskompatibel mit für MFC-Versionen vor 4.0 geschriebenen Codes.
+Meldungsreflektion ist abwärtskompatibel mit dem Code für MFC-Versionen vor 4.0.
 
-Wenn Sie einen Handler für eine bestimmte Nachricht angegeben haben, oder für einen Bereich von Nachrichten in das übergeordnete Fenster-Klasse wird überschrieben widergespiegelt Meldungshandler für dieselbe Nachricht bereitgestellten in einen eigenen Handler keine Handler-Funktion der Basisklasse aufgerufen werden. Wenn Sie Ihre Dialogfeldklasse WM_CTLCOLOR verarbeiten, werden Ihre Behandlung z. B. alle reflektierte fenstermeldungs-Handler überschrieben.
+Sie haben einen Handler für eine bestimmte Nachricht angegeben neu, für einen Bereich von Nachrichten, die in Ihrer übergeordneten Fensters Klasse überschreibt es Message-Handler für die gleiche Nachricht, sofern Sie nicht die Funktion der Basisklasse-Handler in Ihren eigenen Handler aufrufen. Wenn Sie Ihre Dialogfeldklasse WM_CTLCOLOR behandeln, werden Ihre Behandlung z. B. reflektierte Meldungshandler überschrieben.
 
-Wenn in Ihrer übergeordneten Fenster-Klasse, einen Handler für eine bestimmte WM_NOTIFY-Meldung oder einen Bereich von WM_NOTIFY-Meldungen angeben, wird der Handler aufgerufen, nur, wenn das untergeordnete Steuerelement senden dieser Nachrichten keinen reflektierte Meldungshandler über `ON_NOTIFY_REFLECT()`. Bei Verwendung von `ON_NOTIFY_REFLECT_EX()` in Ihrer Zuordnung Nachricht Message-Handler kann oder der das übergeordnete Fenster für die Meldungsbehandlung möglicherweise nicht zugelassen. Wenn der Handler gibt **"false"**, die Nachricht wird durch das übergeordnete als auch behandelt werden, während ein Aufruf, der zurückgibt **"true"** lässt sich nicht auf das übergeordnete Element, um ihn zu beheben. Beachten Sie, dass die reflektierte Meldung vor der benachrichtigungsmeldung verarbeitet wird.
+Wenn in Ihrer übergeordneten Fenster-Klasse, Sie einen Handler für eine bestimmte WM_NOTIFY-Meldung oder einen Bereich der WM_NOTIFY-Meldungen angeben, wird der Handler nur, wenn das untergeordnete Steuerelement senden dieser Nachrichten keinen reflektierte Meldungshandler über aufgerufen werden `ON_NOTIFY_REFLECT()`. Bei Verwendung von `ON_NOTIFY_REFLECT_EX()` in Ihre meldungszuordnung, Ihr Nachrichtenhandler kann, oder können sich nicht auf das übergeordnete Fenster, die Meldung zu behandeln. Wenn der Handler zurückgibt **"false"**, die Nachricht wird vom übergeordneten Element ebenfalls verarbeitet werden, während ein Aufruf, der zurückgegeben **"true"** lässt sich nicht auf das übergeordnete Element, um es zu verarbeiten. Beachten Sie, dass die reflektierte Meldung vor der benachrichtigungsmeldung verarbeitet wird.
 
-Wenn eine WM_NOTIFY-Meldung gesendet wird, wird das Steuerelement zuerst die Möglichkeit für seine Handhabung angeboten. Wenn eine andere reflektierte Meldung gesendet wird, wird das übergeordnete Fenster hat die erste Möglichkeit für seine Handhabung und das Steuerelement wird die reflektierte Meldung. Zu diesem Zweck benötigen sie eine Handlerfunktion und ein entsprechender Eintrag in der meldungszuordnung für das Steuerelement-Klasse.
+Wenn eine WM_NOTIFY-Meldung gesendet wird, wird das Steuerelement zuerst die Möglichkeit für seine Handhabung angeboten. Wenn alle anderen reflektierte Meldung gesendet wird, das übergeordnete Fenster hat der ersten Gelegenheit verlassen, sie zu behandeln, und das Steuerelement wird die reflektierte Meldung. Zu diesem Zweck benötigen sie eine Handlerfunktion und einen entsprechenden Eintrag in der meldungszuordnung für des Steuerelements-Klasse.
 
-Das meldungszuordnung Makro für reflektierte Meldungen ist etwas anders als reguläre Benachrichtigungen: Es wurde *_REFLECT* an den üblichen Namen angefügt. Um WM_NOTIFY-Meldung in das übergeordnete Element zu behandeln, verwenden Sie z. B. das Makro ON_NOTIFY meldungszuordnung des übergeordneten Elements. Um die reflektierte Meldung in das untergeordnete Steuerelement zu behandeln, verwenden Sie das ON_NOTIFY_REFLECT-Makro in das untergeordnete Steuerelement meldungszuordnung. In einigen Fällen unterscheiden sich die Parameter, ebenfalls. Beachten Sie, dass ClassWizard kann in der Regel fügen Sie der Meldungszuordnungseinträge für Sie und Implementierungen von Skeleton-Funktion mit den richtigen Parametern bereitstellen.
+Das Makro meldungszuordnung für reflektierter Meldungen ist etwas anders als für reguläre Benachrichtigungen: Es hat *_REFLECT* an den üblichen Namen angefügt. Um eine WM_NOTIFY-Meldung in das übergeordnete Element zu behandeln, verwenden Sie z. B. das ON_NOTIFY-Makro in die nachrichtenzuordnung des übergeordneten Elements. Um die reflektierte Meldung im untergeordneten Steuerelement zu behandeln, verwenden Sie das ON_NOTIFY_REFLECT-Makro in die nachrichtenzuordnung des untergeordneten Steuerelements. In einigen Fällen sind die Parameter auch unterschiedlich. Beachten Sie, dass Klassen-Assistent kann in der Regel fügen die Meldungszuordnungseinträge für Sie und Implementierungen der Skeleton-Funktion mit den richtigen Parametern stellen.
 
-Finden Sie unter [TN061: ON_NOTIFY- und WM_NOTIFY-Meldungen](../mfc/tn061-on-notify-and-wm-notify-messages.md) Informationen zu den neuen WM_NOTIFY-Meldung.
+Finden Sie unter [TN061: ON_NOTIFY- und WM_NOTIFY-Meldungen](../mfc/tn061-on-notify-and-wm-notify-messages.md) Informationen für die neue WM_NOTIFY-Nachricht.
 
 **Meldungszuordnungseinträge und Handler Funktionsprototypen für reflektierte Meldungen**
 
-Behandeln Sie eine reflektierte Benachrichtigung Steuerungsnachricht verwenden Sie Meldungszuordnungsmakros und in der folgenden Tabelle aufgeführten Funktionsprototypen.
+Um eine reflektierte Steuerelement Meldung zu behandeln, verwenden Sie Meldungszuordnungsmakros und Funktionsprototypen, die in der folgenden Tabelle aufgeführt.
 
-Klassen-Assistent kann in der Regel fügen diese Meldungszuordnungseinträge für Sie und Skeleton-funktionsimplementierungen bereitstellen. Finden Sie unter [Definieren eines Meldungshandlers für eine Nachricht reflektiert](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md) Informationen dazu, wie Handler für reflektierte Meldungen definiert.
+Klassen-Assistent kann in der Regel fügen diese Meldungszuordnungseinträge für Sie und Skeleton-Funktion-Implementierungen bereitstellen. Finden Sie unter [Definieren eines Meldungshandlers für eine Nachricht wiedergegeben](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md) für Informationen zur Verwendung von Ereignishandlern für reflektierter Meldungen zu definieren.
 
-Zum Konvertieren aus der Nachrichtenname, den reflektierten Makronamen voranstellen *ON_* und Anfügen *_REFLECT*. So wird z. B. WM_CTLCOLOR ON_WM_CTLCOLOR_REFLECT. (Um anzuzeigen, welche Nachrichten berücksichtigt werden können, müssen Sie die umgekehrte Konvertierung auf die Makroeinträge in der folgenden Tabelle).
+Stellen Sie zum Konvertieren von Namen der in der reflektierten Makroname *ON_* , und fügen Sie *_REFLECT*. So wird z. B. WM_CTLCOLOR ON_WM_CTLCOLOR_REFLECT. (Um anzuzeigen, welche Nachrichten berücksichtigt werden können, werden Sie die umgekehrte Konvertierung für die Makroeinträge in der Tabelle unten).
 
-Die drei Ausnahmen von der Regel, die oben genannten lauten folgendermaßen:
+Die drei Ausnahmen von der oben genannten Regel lauten folgendermaßen:
 
-- Das Makro für WM_COMMAND Benachrichtigungen ist ON_CONTROL_REFLECT.
+- Das Makro für WM_COMMAND-Benachrichtigungen ist ON_CONTROL_REFLECT.
 
-- Das Makro für WM_NOTIFY Reflektionen ist ON_NOTIFY_REFLECT.
+- Das Makro für WM_NOTIFY Reflexionen ist ON_NOTIFY_REFLECT.
 
-- Das Makro für ON_UPDATE_COMMAND_UI Reflektionen ist ON_UPDATE_COMMAND_UI_REFLECT.
+- Das Makro für ON_UPDATE_COMMAND_UI Reflexionen ist ON_UPDATE_COMMAND_UI_REFLECT.
 
-In jeder der oben genannten Sonderfälle müssen Sie den Namen der Memberfunktion Handler angeben. In anderen Fällen müssen Sie den Standardnamen für die Handlerfunktion verwenden.
+In den einzelnen oben aufgeführten Sonderfälle müssen Sie den Namen der Memberfunktion Handler angeben. In anderen Fällen müssen Sie den Standardnamen für die Handlerfunktion verwenden.
 
-Die Bedeutung der Parameter und Rückgabewerte von Funktionen werden unter den Namen der Funktion oder den Funktionsnamen mit dokumentiert *auf* vorangestellt wird. Z. B. `CtlColor` finden Sie im `OnCtlColor`. Mehrere reflektierte fenstermeldungs-Handler benötigen weniger Parameter als ähnliche Handler in ein übergeordnetes Fenster. Nur mit der passenden Namen in der folgenden Tabelle mit den Namen der formalen Parameter in der Dokumentation.
+Die Bedeutung der Parameter und Rückgabewerte von Funktionen sind unter den Namen der Funktion oder den Funktionsnamen mit dokumentiert *auf* vorangestellt. Z. B. `CtlColor` finden Sie unter `OnCtlColor`. Mehrere reflektierte Meldungshandler benötigen weniger Parameter als die ähnliche Handler in ein übergeordnetes Fenster. Die Namen in der folgenden Tabelle mit den Namen der formalen Parameter in der Dokumentation übereinstimmt.
 
-|Eintrag für die Zuordnung|Funktionsprototyp|
+|Zuordnungseintrag|Funktionsprototyp|
 |---------------|------------------------|
-|**ON_CONTROL_REFLECT (** `wNotifyCode` **,** `memberFxn` **)**|**Afx_msg "void"** `memberFxn` **();**|
-|**ON_NOTIFY_REFLECT (** `wNotifyCode` **,** `memberFxn` **)**|**Afx_msg "void"** `memberFxn` **(NMHDR \***  `pNotifyStruct` **, LRESULT\***  *Ergebnis* **);**|
-|**ON_UPDATE_COMMAND_UI_REFLECT (** `memberFxn` **)**|**Afx_msg "void"** `memberFxn` **(CCmdUI\***  `pCmdUI` **);**|
-|**ON_WM_CTLCOLOR_REFLECT)**|**Afx_msg HBRUSH CtlColor vor (CDC\***  `pDC` **, "uint"** `nCtlColor` **);**|
+|**ON_CONTROL_REFLECT (** `wNotifyCode` **,** `memberFxn` **)**|**die "void" Afx_msg** `memberFxn` **();**|
+|**ON_NOTIFY_REFLECT (** `wNotifyCode` **,** `memberFxn` **)**|**die "void" Afx_msg** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT** <strong>\*</strong> *Ergebnis* **);**|
+|**ON_UPDATE_COMMAND_UI_REFLECT (** `memberFxn` **)**|**die "void" Afx_msg** `memberFxn` **(CCmdUI** <strong>\*</strong> `pCmdUI` **);**|
+|**ON_WM_CTLCOLOR_REFLECT)**|**Afx_msg HBRUSH CtlColor vor (CDC** <strong>\*</strong> `pDC` **, "uint"** `nCtlColor` **);**|
 |**ON_WM_DRAWITEM_REFLECT)**|**Afx_msg "void" DrawItem (LPDRAWITEMSTRUCT** `lpDrawItemStruct` **);**|
 |**ON_WM_MEASUREITEM_REFLECT)**|**Afx_msg "void" MeasureItem (LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **);**|
 |**ON_WM_DELETEITEM_REFLECT)**|**Afx_msg "void" DeleteItem (LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **);**|
-|**ON_WM_COMPAREITEM_REFLECT)**|**Afx_msg Int CompareItem (LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **);**|
-|**ON_WM_CHARTOITEM_REFLECT)**|**Afx_msg Int CharToItem ("uint"** `nKey` **, "uint"** `nIndex` **);**|
-|**ON_WM_VKEYTOITEM_REFLECT)**|**Afx_msg Int VKeyToItem ("uint"** `nKey` **, "uint"** `nIndex` **);**|
-|**ON_WM_HSCROLL_REFLECT)**|**Afx_msg "void" HScroll ("uint"** `nSBCode` **, "uint"** `nPos` **);**|
-|**ON_WM_VSCROLL_REFLECT)**|**Afx_msg "void" VScroll ("uint"** `nSBCode` **, "uint"** `nPos` **);**|
-|**ON_WM_PARENTNOTIFY_REFLECT)**|**Afx_msg "void" ParentNotify ("uint"** `message` **, LPARAM** `lParam` **);**|
+|**("ON_WM_COMPAREITEM_REFLECT)**|**Afx_msg Int CompareItem (LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **);**|
+|**ON_WM_CHARTOITEM_REFLECT)**|**Afx_msg Int CharToItem (UINT** `nKey` **, "uint"** `nIndex` **);**|
+|**ON_WM_VKEYTOITEM_REFLECT)**|**Afx_msg Int VKeyToItem (UINT** `nKey` **, "uint"** `nIndex` **);**|
+|**ON_WM_HSCROLL_REFLECT)**|**Afx_msg "void" HScroll (UINT** `nSBCode` **, "uint"** `nPos` **);**|
+|**ON_WM_VSCROLL_REFLECT)**|**Afx_msg "void" VScroll (UINT** `nSBCode` **, "uint"** `nPos` **);**|
+|**ON_WM_PARENTNOTIFY_REFLECT)**|**Afx_msg "void" ParentNotify (UINT** `message` **, LPARAM** `lParam` **);**|
 
-Die Makros ON_NOTIFY_REFLECT und ON_CONTROL_REFLECT haben Variationen, die mehr als ein Objekt (z. B. das Steuerelement und seinem übergeordneten Element) auf eine bestimmte Nachricht verarbeiten können.
+Die Makros ON_NOTIFY_REFLECT und ON_CONTROL_REFLECT haben Varianten, die mehr als ein Objekt (z. B. das Steuerelement und seinem übergeordneten Element) zu ermöglichen, um eine bestimmte Nachricht zu verarbeiten.
 
-|Eintrag für die Zuordnung|Funktionsprototyp|
+|Zuordnungseintrag|Funktionsprototyp|
 |---------------|------------------------|
-|**ON_NOTIFY_REFLECT_EX (** `wNotifyCode` **,** `memberFxn` **)**|**Afx_msg BOOL** `memberFxn` **(NMHDR \***  `pNotifyStruct` **, LRESULT\***  *Ergebnis* **);**|
-|**ON_CONTROL_REFLECT_EX (** `wNotifyCode` **,** `memberFxn` **)**|**Afx_msg BOOL** `memberFxn` **();**|
+|**ON_NOTIFY_REFLECT_EX (** `wNotifyCode` **,** `memberFxn` **)**|**Afx_msg "bool"** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT** <strong>\*</strong> *Ergebnis* **);**|
+|**ON_CONTROL_REFLECT_EX (** `wNotifyCode` **,** `memberFxn` **)**|**Afx_msg "bool"** `memberFxn` **();**|
 
-## <a name="handling-reflected-messages-an-example-of-a-reusable-control"></a>Behandeln von reflektiert Nachrichten: Ein Beispiel eines wieder verwendbaren-Steuerelements
+## <a name="handling-reflected-messages-an-example-of-a-reusable-control"></a>Umgang mit Nachrichten reflektiert: Ein Beispiel für ein Wiederverwendbares Steuerelement
 
-Dieses einfache Beispiel erstellt ein wiederverwendbares Steuerelement namens `CYellowEdit`. Das Steuerelement funktioniert genauso wie eine reguläre Edit-Steuerelement, mit dem Unterschied, dass er auf einen gelben Hintergrund werden als schwarzer Text angezeigt. Es kann leicht fehlschlagen, Memberfunktionen hinzu, die die Möglichkeit bietet, die `CYellowEdit` Steuerelement unterschiedliche Farben angezeigt.
+In diesem einfache Beispiel erstellt ein wiederverwendbares Steuerelement namens `CYellowEdit`. Das Steuerelement funktioniert identisch mit einem regulären Edit-Steuerelement, mit dem Unterschied, dass schwarzen Text auf einen gelben Hintergrund angezeigt. Es wäre einfach, Member-Funktionen hinzuzufügen, die ermöglichen die `CYellowEdit` -Steuerelement zum Anzeigen von verschiedenen Farben.
 
 ### <a name="to-try-the-example-that-creates-a-reusable-control"></a>Zum Testen dieses Beispiels erstellt, die ein wiederverwendbares Steuerelement
 
-1. Erstellen eines neuen Dialogfelds in einer vorhandenen Anwendung an. Weitere Informationen finden Sie unter der [Dialog-Editor](../windows/dialog-editor.md) Thema.
+1. Erstellen Sie ein neues Dialogfeld, in einer vorhandenen Anwendung. Weitere Informationen finden Sie unter den [Dialog-Editor](../windows/dialog-editor.md) Thema.
 
-     Benötigen Sie eine Anwendung, in der zum Entwickeln von wiederverwendbaren Steuerelements ein. Wenn Sie eine vorhandene Anwendung verwendet haben, erstellen Sie eine Dialogfeldern basierende Anwendung, die mithilfe von AppWizard.
+     Sie benötigen eine Anwendung, in dem das wiederverwendbare Steuerelement zu entwickeln. Wenn Sie eine vorhandene Anwendung verwendet haben, erstellen Sie eine Dialogfeldern basierende Anwendung mithilfe von AppWizard.
 
-2. Während das Projekt in Visual C++ geladen wird, verwenden Sie ClassWizard So erstellen eine neue Klasse namens `CYellowEdit` basierend auf `CEdit`.
+2. Verwenden Sie die Klassen-Assistent mit Ihrem Projekt in Visual C++ geladen wird, erstellen Sie eine neue Klasse namens `CYellowEdit` basierend auf `CEdit`.
 
-3. Hinzufügen von drei Membervariablen zur Ihrer `CYellowEdit` Klasse. Die ersten beiden werden *COLORREF* Variablen, um die Textfarbe und Hintergrundfarbe aufzunehmen. Das dritte werden ein `CBrush` -Objekt, das den Pinsel für den Hintergrund gezeichnet aufnimmt. Die `CBrush` Objekts können Sie den Pinsel, lediglich verwiesen wird, die nach der Erstellung und den Pinsel, der automatisch beim Zerstören der `CYellowEdit` Steuerelement zerstört wird.
+3. Fügen Sie drei Membervariablen auf Ihre `CYellowEdit` Klasse. Die ersten beiden werden *COLORREF* Variablen, um die Textfarbe und die Farbe des Hintergrunds aufzunehmen. Die dritte werden eine `CBrush` -Objekt, das den Pinsel für das Zeichnen des Hintergrunds enthalten soll. Die `CBrush` Objekt können Sie die Erstellung den Pinsel, lediglich auf Sie verwiesen wird, und den Pinsel automatisch beim Zerstören der `CYellowEdit` Steuerelement zerstört wird.
 
-4. Initialisieren Sie die Membervariablen, indem Sie den Konstruktor wie folgt schreiben:
+4. Initialisieren Sie die Membervariablen, durch den Konstruktor wie folgt schreiben:
 
     ```cpp
     CYellowEdit::CYellowEdit()
@@ -143,9 +143,9 @@ Dieses einfache Beispiel erstellt ein wiederverwendbares Steuerelement namens `C
     }
     ```
 
-5. Mithilfe der Klassen-Assistent, fügen Sie einen Handler für die reflektierte WM_CTLCOLOR-Meldung, die `CYellowEdit` Klasse. Beachten Sie, dass das Gleichheitszeichen vor der Nachrichtenname, in der Liste der Nachrichten, die Sie behandeln können, gibt an, dass die Meldung reflektiert wird. Hierzu finden Sie [Definieren eines Meldungshandlers für eine Nachricht reflektiert](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
+5. Mithilfe der Klassen-Assistent, Hinzufügen eines ereignishandlers für die reflektierte WM_CTLCOLOR-Meldung zu Ihrer `CYellowEdit` Klasse. Beachten Sie, dass das Gleichheitszeichen vor der Nachrichtenname, in der Liste der Nachrichten, die Sie behandeln können, gibt an, dass die Meldung reflektiert wird. Finden Sie im [Definieren eines Meldungshandlers für eine Nachricht wiedergegeben](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
 
-     Klassen-Assistent fügt die folgende meldungszuordnung Makro angehalten und eine Skeleton-Funktion für Sie hinzu:
+     Klassen-Assistent fügt die folgende meldungszuordnung Makro und Skeleton-Funktion für Sie hinzu:
 
     ```cpp
     ON_WM_CTLCOLOR_REFLECT()
@@ -160,7 +160,7 @@ Dieses einfache Beispiel erstellt ein wiederverwendbares Steuerelement namens `C
     }
     ```
 
-6. Ersetzen Sie den Text der Funktion durch den folgenden Code ein. Dieser Code legt die Textfarbe, die Hintergrundfarbe von Text und die Hintergrundfarbe für den Rest des Steuerelements.
+6. Ersetzen Sie den Text der Funktion, mit dem folgenden Code. Dieser Code legt die Textfarbe, die Farbe des Texthintergrunds und die Hintergrundfarbe für den Rest des Steuerelements.
 
     ```cpp
     pDC->SetTextColor(m_clrText);   // text
@@ -168,9 +168,9 @@ Dieses einfache Beispiel erstellt ein wiederverwendbares Steuerelement namens `C
     return m_brBkgnd;               // ctl bkgnd
     ```
 
-7. Erstellen Sie ein Bearbeitungssteuerelement in einem Dialogfeld, und fügen Sie es mit einer Membervariablen durch Doppelklicken auf das Bearbeitungssteuerelement bei gedrückter STRG-Taste. Klicken Sie im Dialogfeld Hinzufügen von Membervariablen Fertig stellen Sie den Variablennamen ein, und wählen Sie "Control" für die Kategorie, klicken Sie dann "CYellowEdit" für den Variablentyp. Vergessen Sie nicht die Reihenfolge der Registerkarten im Dialogfeld festlegen. Darüber hinaus werden Sie sicherstellen, dass die Headerdatei für die `CYellowEdit` -Steuerelement in der Headerdatei des Dialogfelds.
+7. Erstellen Sie ein Edit-Steuerelement in einem Dialogfeld aus, und fügen Sie es mit einer Membervariablen durch Doppelklicken auf das Steuerelement zum Bearbeiten bei gedrückter STRG-Taste. Klicken Sie im Dialogfeld Hinzufügen von Membervariablen beenden Sie den Namen den Variablen, und wählen Sie "Control" für die Kategorie, klicken Sie dann "CYellowEdit" für den Variablentyp. Vergessen Sie nicht die Aktivierreihenfolge im Dialogfeld festlegen. Darüber hinaus werden Sie sicher, dass die Headerdatei für die `CYellowEdit` -Steuerelement in einem Dialogfeld-Headerdatei.
 
-8. Erstellen Sie Ihre Anwendung, und führen Sie sie aus. Das Bearbeitungssteuerelement müssen einen gelben Hintergrund.
+8. Erstellen Sie Ihre Anwendung, und führen Sie sie aus. Das Steuerelement zum Bearbeiten haben einen gelben Hintergrund.
 
 ## <a name="see-also"></a>Siehe auch
 

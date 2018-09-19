@@ -1,5 +1,5 @@
 ---
-title: Ausdrücke in Präprozessorlauf eines Makefiles | Microsoft Docs
+title: Ausdrücke im Präprozessorlauf eines Makefiles | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04a53e5e6fe45c2c846cae3fb9e973fe1c712107
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1070eb01802bd4b39f62ae24519ad6dabca7eb90
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367267"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719004"
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>Ausdrücke für den Präprozessorlauf eines Makefiles
-Die **! IF** oder **! ElseIf** `constantexpression` Ganzzahlkonstanten (in Dezimal oder C-Schreibweise), Zeichenfolgenkonstanten oder Befehle besteht. Verwenden Sie Klammern, um Ausdrücke zu. Ausdrücke verwenden C-Stil Ganzzahlen mit Vorzeichen arithmetische; Zahlen werden in 32-Bit zweierkomplementdarstellung im Bereich von – 2147483648 bis 2147483647.  
-  
- Ausdrücke können Operatoren, die fungieren auf Konstante Werte, Exitcodes von Befehlen, Zeichenfolgen, Makros und Dateisystempfade zu können.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?  
- [Makefile-vorverarbeitungsoperatoren](../build/makefile-preprocessing-operators.md)  
-  
- [Ausführen eines Programms im Präprozessorlauf](../build/executing-a-program-in-preprocessing.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Vorverarbeitung eines Makefiles](../build/makefile-preprocessing.md)
+
+Die **! IF** oder **! ELSE IF** `constantexpression` ganzzahlige Konstanten (in Dezimal oder C-Schreibweise), Zeichenfolgenkonstanten oder Befehle umfasst. Verwenden Sie Klammern, um Ausdrücke zu gruppieren. Ausdrücke verwenden von C-Stil-Ganzzahlen mit Vorzeichen arithmetische; Zahlen sind in 32-Bit-zweier-Komplement Form im Bereich von – 2147483648 bis 2147483647.
+
+Ausdrücke können Operatoren verwenden, die auf Konstante Werte, Exitcodes von Befehlen, Zeichenfolgen, Makros und Dateisystempfade.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?
+
+[Operatoren für die vorverarbeitung eines Makefiles](../build/makefile-preprocessing-operators.md)
+
+[Ausführen eines Programms in vorverarbeitung](../build/executing-a-program-in-preprocessing.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Vorverarbeitung eines Makefiles](../build/makefile-preprocessing.md)

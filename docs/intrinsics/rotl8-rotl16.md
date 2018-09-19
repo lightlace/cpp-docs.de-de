@@ -1,5 +1,5 @@
 ---
-title: _rotl8 _rotl16 | Microsoft Docs
+title: _rotl8, _rotl16 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48a3cfe51f79f0d6068509a5e42693417524417d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ec83d862c119645582a552b7685e5ca364be6f9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328811"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709138"
 ---
 # <a name="rotl8-rotl16"></a>_rotl8, _rotl16
 **Microsoft-spezifisch**  
@@ -44,11 +44,11 @@ unsigned short _rotl16(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `value`  
- Der zu drehende Wert.  
+*Wert*<br/>
+[in] Der zu drehende Wert.  
   
- [in] `shift`  
- Die Anzahl der Bits für die Drehung.  
+*shift*<br/>
+[in] Die Anzahl der Bits für die Drehung.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Der gedrehte Wert.  
@@ -57,8 +57,8 @@ unsigned short _rotl16(
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`_rotl8`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_rotl16`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_rotl8`|X86, ARM, x64|  
+|`_rotl16`|X86, ARM, x64|  
   
  **Headerdatei** \<intrin.h >  
   
@@ -107,5 +107,5 @@ Rotating unsigned short 0x12 left by 10 bits gives 0x4800
 **Ende Microsoft-spezifisch**  
   
 ## <a name="see-also"></a>Siehe auch  
- [_rotr8 _rotr16](../intrinsics/rotr8-rotr16.md)   
+ [_rotr8, _rotr16](../intrinsics/rotr8-rotr16.md)   
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

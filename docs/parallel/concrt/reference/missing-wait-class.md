@@ -1,5 +1,5 @@
 ---
-title: Missing_wait-Klasse | Microsoft Docs
+title: Missing_wait-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5ebd607dc207975e7d38e3217c275d3d5d18bb8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a2a44cbdb5abeed7d5dbd7be7dfaba37ba1d0145
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686346"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024948"
 ---
 # <a name="missingwait-class"></a>missing_wait-Klasse
 Diese Klasse beschreibt eine Ausnahme, die ausgelöst wird, wenn es Aufgaben gibt, die noch für ein `task_group`-Objekt oder `structured_task_group`-Objekt geplant sind, während der Destruktor des Objekts ausgeführt wird. Diese Ausnahme wird nie ausgelöst, wenn der Destruktor aufgrund einer Stapelentladung als Ergebnis einer Ausnahme erreicht wird.  
@@ -43,7 +43,7 @@ class missing_wait : public std::exception;
 |[missing_wait](#ctor)|Überladen. Erstellt ein `missing_wait`-Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Fehlender ausnahmeverlaufs, Sie sind verantwortlich für das Aufrufen von entweder der `wait` oder `run_and_wait` Methode eine `task_group` oder `structured_task_group` Objekt vor dem und mit diesem Objekt zerstört. Löst die Runtime diese Ausnahme als eine Angabe über das Sie haben vergessen, rufen Sie die `wait` oder `run_and_wait` Methode.  
+ Fehlende ausnahmeverlaufs, Sie sind verantwortlich für das Aufrufen von entweder die `wait` oder `run_and_wait` Methode eine `task_group` oder `structured_task_group` Objekt vor, dass dieses Objekt zerstört. Löst die Runtime diese Ausnahme als Hinweis auf, die Sie vergessen haben, rufen Sie die `wait` oder `run_and_wait` Methode.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `exception`  
@@ -66,8 +66,8 @@ missing_wait() throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Message`  
- Eine beschreibende Fehlermeldung.  
+*_Nachricht*<br/>
+Eine beschreibende Fehlermeldung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   

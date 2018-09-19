@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e43f6704476879e1848ce82b3327b23efe2192a8
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 68534770419bd8d688c282b6d837c55983e33c27
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026305"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712074"
 ---
 # <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter-Klasse
 Bietet Andockunterstützung für von `CWnd`abgeleitete Bereiche.  
@@ -47,8 +47,8 @@ class CDockablePaneAdapter : public CDockablePane
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|Gibt das umschlossene Fenster zurück.|  
-|[CDockablePaneAdapter::LoadState](#loadstate)|(Überschreibt [CDockablePane:: LoadState](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917).)|  
-|[CDockablePaneAdapter::SaveState](#savestate)|(Überschreibt [CDockablePane:: SaveState](http://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
+|[CDockablePaneAdapter::LoadState](#loadstate)|(Überschreibt [CDockablePane:: LoadState](cdockablepane-class.md#loadstate).)|  
+|[CDockablePaneAdapter::SaveState](#savestate)|(Überschreibt [CDockablePane:: SaveState](cdockablepane-class.md).)|  
 |[CDockablePaneAdapter::SetWrappedWnd](#setwrappedwnd)||  
   
 ## <a name="remarks"></a>Hinweise  
@@ -90,14 +90,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- Der Profilname.  
+*lpszProfileName*<br/>
+[in] Der Profilname.  
   
- [in] *nIndex*  
- Der Index des Profils.  
+*nIndex*<br/>
+[in] Der Index des Profils.  
   
- [in] *UiID*  
- Der Bereich-ID  
+*uiID*<br/>
+[in] Der Bereich-ID  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -114,14 +114,14 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- Der Profilname.  
+*lpszProfileName*<br/>
+[in] Der Profilname.  
   
- [in] *nIndex*  
- Der Profil-Index (standardmäßig die Steuerelement-ID des Fensters).  
+*nIndex*<br/>
+[in] Der Profil-Index (standardmäßig die Steuerelement-ID des Fensters).  
   
- [in] *UiID*  
- Der Bereich-ID  
+*uiID*<br/>
+[in] Der Bereich-ID  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -135,8 +135,8 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Ein Zeiger auf das Fenster für den Bereich-Adapter zum umschließen.  
+*Aufnehmen*<br/>
+[in] Ein Zeiger auf das Fenster für den Bereich-Adapter zum umschließen.  
   
 ### <a name="return-value"></a>Rückgabewert  
   

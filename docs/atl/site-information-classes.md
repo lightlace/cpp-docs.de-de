@@ -16,20 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68a8c96983443f39f05004493d0393f51f7ee19e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4ac1821f34269a54fc0fb10a3ae797a815d5acd9
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959955"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758322"
 ---
 # <a name="site-information-classes"></a>Seiteninformationsklassen
-Die folgenden Klassen ermöglichen es sich um ein Objekt mit dem Standort kommunizieren:  
-  
--   [IObjectWithSiteImpl](../atl/reference/iobjectwithsiteimpl-class.md) abruft und setzt einen Zeiger auf ein Objekt des Standorts. Verwendet für Objekte, die keine Steuerelemente sind.  
-  
--   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) abruft und setzt einen Zeiger auf ein Objekt des Standorts. Wird für Steuerelemente verwendet.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../atl/atl-class-overview.md)
+
+Die folgenden Klassen ermöglichen es sich um ein Objekt mit dem Standort kommunizieren:
+
+- [IObjectWithSiteImpl](../atl/reference/iobjectwithsiteimpl-class.md) abruft und setzt einen Zeiger auf ein Objekt des Standorts. Verwendet für Objekte, die keine Steuerelemente sind.
+
+- [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) abruft und setzt einen Zeiger auf ein Objekt des Standorts. Wird für Steuerelemente verwendet.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../atl/atl-class-overview.md)
 

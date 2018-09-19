@@ -1,5 +1,5 @@
 ---
-title: Critical_section-Klasse | Microsoft Docs
+title: Critical_section-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0287c74155e7b4fe827bb015b43cfca3384f3b1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cbffd14bdde45c3d6124eb5f982b90c92f64f47c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693561"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136217"
 ---
 # <a name="criticalsection-class"></a>critical_section-Klasse
 Ein nicht wieder eintretender Mutex, der explizit die Concurrency Runtime beachtet.  
@@ -52,27 +52,27 @@ class critical_section;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[critical_section:: scoped_lock-Klasse](#critical_section__scoped_lock_class)|Eine Ausnahme sichere RAII-Wrapper für ein `critical_section` Objekt.|  
+|[critical_section:: scoped_lock-Klasse](#critical_section__scoped_lock_class)|Ein sicher RAII-Wrapper für eine `critical_section` Objekt.|  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[critical_section](#ctor)|Erstellt einen neuen kritischen Abschnitt.|  
-|[~ Critical_section-Destruktor](#dtor)|Zerstört ein kritischen Abschnitts.|  
+|[~ Critical_section-Destruktor](#dtor)|Löscht einen kritischen Abschnitt.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[lock](#lock)|Ruft dieser kritischen Abschnitt ab.|  
-|[native_handle](#native_handle)|Sofern vorhanden, wird ein bestimmte systemeigene Plattform-Handle zurück.|  
+|[native_handle](#native_handle)|Plattform bestimmte native gibt ein Handle zurück, falls vorhanden.|  
 |[try_lock](#try_lock)|Versucht, die Sperre abzurufen, ohne zu blockieren.|  
-|[try_lock_for](#try_lock_for)|Versucht, die Sperre abzurufen, ohne Blockierung für eine bestimmte Anzahl von Millisekunden.|  
+|[try_lock_for](#try_lock_for)|Versucht, die Sperre zu übernehmen, ohne Blockierung für eine bestimmte Anzahl von Millisekunden.|  
 |[unlock](#unlock)|Entsperrt den kritischen Abschnitt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [Strukturen für Synchronisierungsdaten](../../../parallel/concrt/synchronization-data-structures.md).  
+ Weitere Informationen finden Sie unter [Synchronisierungsdatenstrukturen](../../../parallel/concrt/synchronization-data-structures.md).  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `critical_section`  
@@ -92,14 +92,14 @@ critical_section();
   
 ##  <a name="dtor"></a> ~critical_section 
 
- Zerstört ein kritischen Abschnitts.  
+ Löscht einen kritischen Abschnitt.  
   
 ```
 ~critical_section();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Es wird erwartet, dass die Sperre nicht mehr verwendet wird, wenn der Destruktor ausgeführt wird. Der kritische Abschnitt, mit der Sperre zerstört aufrechterhalten noch Ergebnisse in einem nicht definierten Verhalten.  
+ Es wird erwartet, dass die Sperre nicht mehr verwendet wird, wenn der Destruktor ausgeführt wird. Der kritische Abschnitt, mit dem Sperrtoken zerstört gespeichert wird, wird damit weiterhin Ergebnisse nicht definiertem Verhalten.  
   
 ##  <a name="lock"></a> Sperre 
 
@@ -110,13 +110,13 @@ void lock();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Häufig ist es sicherer, nutzen die [Scoped_lock](#critical_section__scoped_lock_class) -Konstrukts Semantiken abrufen und Freigeben einer `critical_section` Objekt in eine Ausnahme sichere Möglichkeit.  
+ Häufig ist es sicherer, zu verwenden die [Scoped_lock](#critical_section__scoped_lock_class) -Konstrukt zum Abrufen und Freigeben einer `critical_section` Objekt zu einer Ausnahme sichere Weise.  
   
- Wenn die Sperre bereits vom aufrufenden Kontext aufrechterhalten wird ein [Improper_lock](improper-lock-class.md) Ausnahme wird ausgelöst.  
+ Wenn die Sperre bereits durch den aufrufenden Kontext, in Kraft ist ein [Improper_lock](improper-lock-class.md) Ausnahme ausgelöst.  
   
 ##  <a name="native_handle"></a> native_handle 
 
- Sofern vorhanden, wird ein bestimmte systemeigene Plattform-Handle zurück.  
+ Plattform bestimmte native gibt ein Handle zurück, falls vorhanden.  
   
 ```
 native_handle_type native_handle();
@@ -126,10 +126,10 @@ native_handle_type native_handle();
  Ein Verweis auf den kritischen Abschnitt.  
   
 ### <a name="remarks"></a>Hinweise  
- Ein `critical_section` Objekt ist nicht Plattform systemeigene Handle für das Windows-Betriebssystem zugeordnet. Die Methode gibt einfach einen Verweis auf das Objekt selbst.  
+ Ein `critical_section` Objekt ist kein bestimmtes Plattform-native-Handle für das Windows-Betriebssystem zugeordnet. Die Methode gibt einfach einen Verweis auf das Objekt selbst.  
   
 ##  <a name="critical_section__scoped_lock_class"></a>  critical_section:: scoped_lock-Klasse  
- Eine Ausnahme sichere RAII-Wrapper für ein `critical_section` Objekt.  
+ Ein sicher RAII-Wrapper für eine `critical_section` Objekt.  
   
 ```
 class scoped_lock;
@@ -137,19 +137,19 @@ class scoped_lock;
   
 ##  <a name="critical_section__scoped_lock_ctor"></a> scoped_lock::scoped_lock 
 
- Erstellt eine `scoped_lock` Objekt, und ruft die `critical_section` Objekt übergeben, der `_Critical_section` Parameter. Wenn der kritische Abschnitt von einem anderen Thread gehalten wird, wird dieser Aufruf blockiert.  
+ Erstellt eine `scoped_lock` Objekt, und ruft die `critical_section` Objekt übergeben, der `_Critical_section` Parameter. Wenn von einem anderen Thread der kritische Abschnitt gehalten wird, wird dieser Aufruf blockiert.  
   
 ```
 explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Critical_section`  
- Der kritische Abschnitt sperren.  
+*_Critical_section*<br/>
+Den kritischen Abschnitt, zu sperren.  
   
 ##  <a name="critical_section__scoped_lock_dtor"></a> Scoped_lock:: ~ Scoped_lock 
 
- Zerstört ein `scoped_lock` -Objekt und gibt den im Konstruktor bereitgestellten kritischen Abschnitt frei.  
+ Zerstört eine `scoped_lock` Objekt und gibt die im Konstruktor bereitgestellte kritischen Abschnitt frei.  
   
 ```
 ~scoped_lock();
@@ -164,22 +164,22 @@ bool try_lock();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn die Sperre eingerichtet wurde, den Wert `true`ist, andernfalls der Wert `false`.  
+ Wenn die Sperre abgerufen wurde, den Wert `true`ist, andernfalls der Wert `false`.  
   
 ##  <a name="try_lock_for"></a> try_lock_for 
 
- Versucht, die Sperre abzurufen, ohne Blockierung für eine bestimmte Anzahl von Millisekunden.  
+ Versucht, die Sperre zu übernehmen, ohne Blockierung für eine bestimmte Anzahl von Millisekunden.  
   
 ```
 bool try_lock_for(unsigned int _Timeout);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Timeout`  
- Die Anzahl der Millisekunden wartet, bevor ein Timeout auftritt.  
+*_Timeout*<br/>
+Die Anzahl der Millisekunden, bevor ein Timeout gewartet werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn die Sperre eingerichtet wurde, den Wert `true`ist, andernfalls der Wert `false`.  
+ Wenn die Sperre abgerufen wurde, den Wert `true`ist, andernfalls der Wert `false`.  
   
 ##  <a name="unlock"></a> Entsperren 
 

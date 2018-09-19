@@ -1,7 +1,7 @@
 ---
-title: Aufrufen von C-Funktionen in der Inlineassembly | Microsoft Docs
+title: Aufrufen von C-Funktionen in der Inlineassembly | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -19,54 +19,57 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3f6d03ba77c7a4cdb3478a1bfe8729019dea002
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a080c05aee58a2e6ffae17d14e99c66922aa1f17
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049517"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686686"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>Aufrufen von C-Funktionen in der Inlineassembly
-## <a name="microsoft-specific"></a>Microsoft-spezifisch  
- Ein `__asm` Block C-Funktionen, einschließlich der C-Bibliotheksroutinen aufrufen kann. Im folgenden Beispiel wird die `printf` Bibliotheksroutine:  
-  
-```  
-// InlineAssembler_Calling_C_Functions_in_Inline_Assembly.cpp  
-// processor: x86  
-#include <stdio.h>  
-  
-char format[] = "%s %s\n";  
-char hello[] = "Hello";  
-char world[] = "world";  
-int main( void )  
-{  
-   __asm  
-   {  
-      mov  eax, offset world  
-      push eax  
-      mov  eax, offset hello  
-      push eax  
-      mov  eax, offset format  
-      push eax  
-      call printf  
-      //clean up the stack so that main can exit cleanly  
-      //use the unused register ebx to do the cleanup  
-      pop  ebx  
-      pop  ebx  
-      pop  ebx  
-   }  
-}  
-```  
-  
- Da Funktionsargumente auf dem Stapel übergeben sind, drücken Sie einfach die erforderlichen Argumente – Zeigern, die im vorherigen Beispiel Zeichenfolge: vor dem Aufrufen der Funktion. Die Argumente werden in umgekehrter Reihenfolge abgelegt, damit sie vom Stapel in der gewünschten Reihenfolge eintreffen. Zum Emulieren der C-Anweisung  
-  
-```  
-printf( format, hello, world );  
-```  
-  
- Im Beispiel wird der Zeiger auf `world`, `hello`, und `format`in dieser Reihenfolge und Aufrufe `printf`.  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Inlineassembler](../../assembler/inline/inline-assembler.md)
+
+**Microsoft-spezifisch**
+
+Ein `__asm` Block kann die C-Funktionen, einschließlich der C-Bibliotheksroutinen aufrufen. Im folgenden Beispiel wird die `printf` Bibliotheksroutine:
+
+```cpp
+// InlineAssembler_Calling_C_Functions_in_Inline_Assembly.cpp
+// processor: x86
+#include <stdio.h>
+
+char format[] = "%s %s\n";
+char hello[] = "Hello";
+char world[] = "world";
+int main( void )
+{
+   __asm
+   {
+      mov  eax, offset world
+      push eax
+      mov  eax, offset hello
+      push eax
+      mov  eax, offset format
+      push eax
+      call printf
+      //clean up the stack so that main can exit cleanly
+      //use the unused register ebx to do the cleanup
+      pop  ebx
+      pop  ebx
+      pop  ebx
+   }
+}
+```
+
+Da die Funktionsargumente auf dem Stapel übergeben werden, Sie einfach die erforderlichen Argumente übertragen – Zeigern, die im vorherigen Beispiel eine Zeichenfolge: vor dem Aufrufen der Funktion. Die Argumente werden in umgekehrter Reihenfolge abgelegt werden, damit sie vom Stapel in der gewünschten Reihenfolge eintreffen. Zum Emulieren der C-Anweisung
+
+```cpp
+printf( format, hello, world );
+```
+
+Im Beispiel legt den Zeiger auf `world`, `hello`, und `format`in dieser Reihenfolge und ruft dann `printf`.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Inlineassembler](../../assembler/inline/inline-assembler.md)<br/>

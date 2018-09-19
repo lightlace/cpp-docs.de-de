@@ -1,5 +1,5 @@
 ---
-title: Aktivieren und Deaktivieren von Diensten für einen Anbieter | Microsoft Docs
+title: Aktivieren und Deaktivieren von Diensten für einen Anbieter | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ef36e35234aa4878e30e70748a5b2ba2975c38dc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a5db612c836e4b902e7cad83017661246f4b649e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33099731"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079387"
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>Aktivieren und Deaktivieren von Diensten für einen Anbieter
-Einzelne OLE DB-Dienste können aktiviert oder deaktiviert wird, wird standardmäßig für alle Anwendungen, die einen einzelnen Anbieter zugreifen. Dies erfolgt durch Hinzufügen von einer **OLEDB_SERVICES** Registrierungseintrag unter der Anbieter die CLSID, mit einer `DWORD` Wert, der die Dienste zum Aktivieren oder deaktivieren, angibt, wie in der folgenden Tabelle gezeigt.  
+
+Einzelne OLE DB-Dienste können aktiviert oder deaktiviert wird, wird standardmäßig für alle Anwendungen, die auf einen einzigen Anbieter zugreifen. Dies erfolgt durch hinzufügen einen OLEDB_SERVICES-Registrierungseintrag unter der CLSID des Anbieters, mit einem `DWORD` -Wert, der Dienste zum Aktivieren oder Deaktivieren der angibt, wie in der folgenden Tabelle gezeigt.  
   
-|Standarddienste aktiviert|Schlüsselwortwert|  
+|Standarddienste, die aktiviert|Schlüsselwortwert|  
 |------------------------------|-------------------|  
 |Alle Dienste (Standard)|0xFFFFFFFF|  
 |Alle außer Pooling und AutoEnlistment|0xFFFFFFFE|  
 |Alle außer den Clientcursor|0xfffffffb|  
-|Alle Dienste außer Pooling, AutoEnlistment und Clientcursor|0xfffffff0|  
+|Alle außer Pooling AutoEnlistment und Clientcursor|0xfffffff0|  
 |Keine Dienste|0x00000000|  
-|Keine Aggregation alle Dienste deaktiviert|\<Fehlender Schlüssel >|  
+|Keine Aggregation, alle Dienste deaktiviert|\<Fehlender Schlüssel >|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Aktivieren und Deaktivieren von OLE DB-Diensten](../../data/oledb/enabling-and-disabling-ole-db-services.md)
+
+[Aktivieren und Deaktivieren von OLE DB-Diensten](../../data/oledb/enabling-and-disabling-ole-db-services.md)

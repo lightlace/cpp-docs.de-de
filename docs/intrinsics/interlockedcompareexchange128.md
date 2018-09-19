@@ -1,5 +1,5 @@
 ---
-title: _InterlockedCompareExchange128 | Microsoft Docs
+title: _InterlockedCompareExchange128 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f491f59289a2e3b951e1bad60f260a801ea68bea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e7499bdb615edfb6c03c54ba7fe8272d0fa6b26
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337934"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721122"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
+
 **Microsoft-spezifisch**  
   
- Führt einen ineinandergreifenden Vergleich 128-Bit- und Exchange.  
+Führt einen ineinandergreifenden Vergleich 128-Bit- und Exchange.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,45 +43,45 @@ unsigned char _InterlockedCompareExchange128(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in, out] `Destination`  
- Zeiger auf das Ziel, das ein Array von zwei 64-Bit-Ganzzahlen ist gewissermaßen mit einem 128-Bit-Feld. Die Zieldaten muss 16-Byte-ausgerichtet werden, um eine allgemeine schutzverletzung zu vermeiden.  
+*Ziel*<br/>
+[in, out] Zeiger auf das Ziel, das ein Array von zwei 64-Bit-Ganzzahlen ist, gelten als ein 128-Bit-Feld. Die Zieldaten muss 16-Byte-ausgerichtet werden, um eine allgemeine schutzverletzung zu vermeiden.  
   
- [in] `ExchangeHigh`  
- Eine 64-Bit-Ganzzahl, die mit den oberen Teil des Ziels ausgetauscht werden kann.  
+*ExchangeHigh*<br/>
+[in] Eine 64-Bit-Ganzzahl, die mit der obere Bereich des Ziels ausgetauscht werden kann.  
   
- [in] `ExchangeLow`  
- Eine 64-Bit-Ganzzahl, die mit des unteren Teils des Zieles ausgetauscht werden kann.  
+*ExchangeLow*<br/>
+[in] Eine 64-Bit-Ganzzahl, die mit den unteren Teil des Ziels ausgetauscht werden kann.  
   
- [in, out] `ComparandResult`  
- Zeiger auf ein Array von zwei 64-Bit-Ganzzahlen (gewissermaßen mit einem 128-Bit-Feld), mit dem Ziel verglichen werden soll.  Bei der Ausgabe ist dieser Wert mit dem ursprünglichen Wert des Ziels überschrieben.  
+*ComparandResult*<br/>
+[in, out] Zeiger auf ein Array von zwei 64-Bit-Ganzzahlen (angesehen als 128-Bit-Feld), mit dem Ziel verglichen werden soll.  Bei der Ausgabe wird dies durch den ursprünglichen Wert des Ziels überschrieben.  
   
 ## <a name="return-value"></a>Rückgabewert  
- 1, wenn die 128-Bit-comparand-Parameter den ursprünglichen Wert des Ziels entspricht. `ExchangeHigh` und `ExchangeLow` die 128-Bit-Ziel zu überschreiben.  
+ 1, wenn der 128-Bit-comparand-Parameter den ursprünglichen Wert des Ziels entspricht. `ExchangeHigh` und `ExchangeLow` 128-Bit-Ziel zu überschreiben.  
   
- 0, wenn das zu vergleichende Objekt nicht den ursprünglichen Wert des Ziels übereinstimmt. Der Wert des Ziels ist unverändert, und der Wert der comparand-Parameter wird überschrieben, mit dem Wert des Ziels.  
+ 0, wenn das zu vergleichende Objekt nicht den ursprünglichen Wert des Ziels entspricht. Der Wert des Ziels unverändert, und der Wert der comparand-Parameter wird mit dem Wert, der das Ziel überschrieben.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`_InterlockedCompareExchange128`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_InterlockedCompareExchange128`|x64|  
   
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Diese systeminterne Funktion generiert die `cmpxchg16b` Anweisung (mit der `lock` Präfix) um eine 128-Bit-gesperrten compare_exchange -Operation auszuführen. Diese Anweisung unterstützt frühe Versionen von AMD 64-Bit-Hardware nicht. Prüfen der Hardware-Unterstützung für die `cmpxchg16b` -Anweisung, rufen die `__cpuid` systeminternen Funktionen mit `InfoType=0x00000001 (standard function 1)`. Bit 13 des `CPUInfo[2]` (ECX) ist 1, wenn die Anweisung unterstützt wird.  
+ Dieser systeminternen Funktion generiert die `cmpxchg16b` Anweisung (mit der `lock` Präfix) eine 128-Bit-gesperrten-Vergleichs- und Austauschvorgang ausführen. Frühe Versionen von AMD 64-Bit-Hardware unterstützen diese Anweisung nicht. Zum Prüfen der Hardware-Unterstützung für die `cmpxchg16b` -Anweisung, rufen die `__cpuid` systeminternen Funktionen mit `InfoType=0x00000001 (standard function 1)`. Teil 13 `CPUInfo[2]` ("ECX") ist 1, wenn die Anweisung unterstützt wird.  
   
 > [!NOTE]
->  Der Wert des `ComparandResult` wird immer überschrieben. Nach der `lock` -Anweisung dieser systeminternen Funktion sofort kopiert den anfänglichen Wert des `Destination` auf `ComparandResult`. Aus diesem Grund `ComparandResult` und `Destination` sollte zeigen Sie auf unterschiedliche Speicherorte, unerwartetes Verhalten zu vermeiden.  
+>  Der Wert des `ComparandResult` wird immer überschrieben. Nach der `lock` dieser systeminternen Funktion-Anweisung kopiert sofort den Anfangswert des `Destination` zu `ComparandResult`. Aus diesem Grund `ComparandResult` und `Destination` sollte auf unterschiedliche Speicherorte zum Vermeiden von unerwartetem Verhalten verweisen.  
   
- Sie können zwar `_InterlockedCompareExchange128` für die Low-Level-Threadsynchronisierung, Sie müssen nicht mehr als 128 Bits zu synchronisieren, wenn Sie kleinere Synchronisierungsfunktionen verwenden können (z. B. anderen `_InterlockedCompareExchange` systeminternen Funktionen) stattdessen. Verwendung `_InterlockedCompareExchange128` gegebenenfalls atomaren Zugriff auf einen 128-Bit-Wert im Arbeitsspeicher.  
+ Sie können zwar `_InterlockedCompareExchange128` für die Low-Level-Threadsynchronisierung, Sie müssen nicht mehr als 128 Bit zu synchronisieren, wenn Sie kleinere Synchronisierungsfunktionen verwenden können (z. B. die andere `_InterlockedCompareExchange` systeminterne Funktionen) stattdessen. Verwendung `_InterlockedCompareExchange128` Wunsch atomischen Zugriff auf einen 128-Bit-Wert im Arbeitsspeicher.  
   
- Wenn Sie Code, verwendet dieser systeminternen Funktion auf Hardware ausgeführt, die nicht unterstützt wird die `cmpxchg16b` -Anweisung, die die Ergebnisse sind unvorhersehbar.  
+ Wenn Sie Code, verwendet dieser systeminternen Funktion auf Hardware ausgeführt, die nicht unterstützt. die `cmpxchg16b` -Anweisung, die die Ergebnisse sind unvorhersehbar.  
   
  Diese Routine ist nur als systeminterne Funktion verfügbar.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet `_InterlockedCompareExchange128` hohe Word eines Arrays von zwei 64-Bit-Ganzzahlen mit der Summe der hohen und niedrigen Wörter ersetzen und das niedrige Word zu erhöhen. Der Zugriff auf das Array BigInt.Int ist atomarisch, aber in diesem Beispiel verwendet einen einzelnen Thread und ignoriert das Sperren aus Gründen der Einfachheit.  
+ Dieses Beispiel verwendet `_InterlockedCompareExchange128` das hohe Word der ein Array von zwei 64-Bit-Ganzzahlen durch die Summe der hohen und niedrigen Wörter zu ersetzen und das niedrige Word erhöht. Der Zugriff auf das Array BigInt.Int ist atomar, aber in diesem Beispiel verwendet einen einzelnen Thread und ignoriert das Sperren aus Gründen der Einfachheit.  
   
 ```  
 // cmpxchg16b.c  
@@ -128,10 +129,11 @@ int main(void)
 BigInt.Int[1] = 34, BigInt.Int[0] = 12  
 ```  
   
-**Ende Microsoft-spezifisch**  
- Copyright 2007 erweiterte Micro-Geräte, Inc. Alle Rechte vorbehalten. Reproduziert mit Genehmigung Advanced Micro-Geräte, Inc.  
+**Ende Microsoft-spezifisch**
+
+Copyright 2007 erweiterten Micro-Geräte, Inc. Alle Rechte vorbehalten. Reproduziert werden, mit der Berechtigung, die von erweiterten Micro-Geräte, Inc.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)   
- [Systeminterne Funktionen "_InterlockedCompareExchange"](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)   
+ [Funktionen "_InterlockedCompareExchange"](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)   
  [Konflikt mit dem x86-Compiler](../build/conflicts-with-the-x86-compiler.md)

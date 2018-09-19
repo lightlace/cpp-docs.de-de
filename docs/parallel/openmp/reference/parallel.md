@@ -1,5 +1,5 @@
 ---
-title: Parallele | Microsoft Docs
+title: Parallele | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0436dbbc75690d38b5930a491b7058ee095341
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1c8b1466eae343b6c644b6ecfbd919c3241259bf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692284"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705964"
 ---
 # <a name="parallel"></a>parallel
-Definiert einen parallelen Bereich, also Code, die durch mehrere Threads parallel ausgeführt wird.  
+Definiert einen parallelen Bereich, also Code, die von mehreren Threads gleichzeitig ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,14 +35,13 @@ Definiert einen parallelen Bereich, also Code, die durch mehrere Threads paralle
 }  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- wobei  
+## <a name="arguments"></a>Argumente
+
+*Klausel*<br/>
+(Optional) NULL oder mehr Klauseln.  Finden Sie im Abschnitt "Hinweise" eine Liste von unterstützten Klauseln **parallele**.  
   
- `clause` (optional)  
- NULL oder mehr Klauseln.  Finden Sie im Abschnitt "Hinweise" eine Liste von unterstützten Klauseln **parallele**.  
-  
 ## <a name="remarks"></a>Hinweise  
- Die **parallele** Richtlinie unterstützt die folgenden OpenMP-Klauseln:  
+ Die **parallele** -Anweisung unterstützt die folgenden OpenMP-Klauseln:  
   
 -   [copyin](../../../parallel/openmp/reference/copyin.md)  
   
@@ -60,12 +59,12 @@ Definiert einen parallelen Bereich, also Code, die durch mehrere Threads paralle
   
 -   [Freigegebene](../../../parallel/openmp/reference/shared-openmp.md)  
   
- **Parallele** kann auch verwendet werden, mit der [Abschnitte](../../../parallel/openmp/reference/sections-openmp.md) und [für](../../../parallel/openmp/reference/for-openmp.md) Direktiven.  
+ **Parallele** kann auch verwendet werden, mit der [Abschnitte](../../../parallel/openmp/reference/sections-openmp.md) und [für](../../../parallel/openmp/reference/for-openmp.md) Anweisungen.  
   
  Weitere Informationen finden Sie unter [2.3 parallel-Konstrukt](../../../parallel/openmp/2-3-parallel-construct.md).  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie die Anzahl von Threads und Definieren eines parallelen Bereichs. Standardmäßig ist die Anzahl der Threads gleich der Anzahl der logischen Prozessoren auf dem Computer. Z. B. Wenn Sie einen Computer mit einem physischen Prozessor, die Hyperthreading aktiviert wurde verfügen, wird er zwei logischen Prozessoren und somit zwei Threads haben.  
+ Im folgende Beispiel veranschaulicht die legen Sie die Anzahl von Threads und ein paralleles Bereichs zu definieren. Standardmäßig entspricht die Anzahl der Threads auf die Anzahl der logischen Prozessoren auf dem Computer. Z. B. Wenn Sie einen Computer mit einem physischen Prozessor, die Hyperthreading aktiviert wurde verfügen, wird es zwei logischen Prozessoren und damit zwei Threads haben.  
   
 ```  
 // omp_parallel.cpp  

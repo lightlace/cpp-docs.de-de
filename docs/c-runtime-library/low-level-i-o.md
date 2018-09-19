@@ -20,18 +20,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ce75fa9670f28079774f4ba564657d0b4614ac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d263d1d61a6dcc6921d6918db2b89386e918551
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391281"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018313"
 ---
 # <a name="low-level-io"></a>E/A auf niedriger Ebene
 
 Diese Funktionen rufen direkt das Betriebssystem für einen Vorgang auf, der sich auf einer niedrigeren Ebene befindet als der durch Stream-E/A bereitgestellte Vorgang. Eingabe- und Ausgabeaufrufe auf niedriger Ebene puffern oder formatieren keine Daten.
 
- Routinen auf niedriger Ebene können mit den folgenden vordefinierten Dateideskriptoren auf Standardstreams zugreifen, die beim Programmstart geöffnet werden.
+Routinen auf niedriger Ebene können mit den folgenden vordefinierten Dateideskriptoren auf Standardstreams zugreifen, die beim Programmstart geöffnet werden.
 
 |Stream|Dateideskriptor|
 |------------|---------------------|
@@ -39,7 +39,7 @@ Diese Funktionen rufen direkt das Betriebssystem für einen Vorgang auf, der sic
 |**stdout**|1|
 |**stderr**|2|
 
- E/A-Routinen auf niedriger Ebene legen die globale Variable [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) fest, wenn ein Fehler auftritt. Sie müssen nur dann STDIO.H bei der Verwendung von Funktionen auf niedriger Ebene einschließen, wenn das Programm eine in STDIO.H definierte Konstante erfordert, z.B. den Indikator für das Dateiende (**EOF**).
+E/A-Routinen auf niedriger Ebene legen die globale Variable [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) fest, wenn ein Fehler auftritt. Sie müssen nur dann STDIO.H bei der Verwendung von Funktionen auf niedriger Ebene einschließen, wenn das Programm eine in STDIO.H definierte Konstante erfordert, z.B. den Indikator für das Dateiende (**EOF**).
 
 ## <a name="low-level-io-functions"></a>E/A-Funktionen auf niedriger Ebene
 
@@ -64,5 +64,5 @@ Diese Funktionen rufen direkt das Betriebssystem für einen Vorgang auf, der sic
 ## <a name="see-also"></a>Siehe auch
 
 [Eingabe und Ausgabe](../c-runtime-library/input-and-output.md)<br/>
- [Universelle C-Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
- [Systemaufrufe](../c-runtime-library/system-calls.md)<br/>
+[Universelle C-Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Systemaufrufe](../c-runtime-library/system-calls.md)<br/>

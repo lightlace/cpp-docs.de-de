@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c79c2260b03d0530595100ba8f4c42a392900aa7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 18a260e0ea0283489d074e937011722cec2d570b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851378"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702571"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton-Klasse
 Stellt Schaltflächenfunktionalität auf Symbolleisten bereit.  
@@ -230,19 +230,19 @@ class CMFCToolBarButton : public CObject
 |[CMFCToolBarButton::IsOwnerOf](#isownerof)|Bestimmt, ob die Schaltfläche mit den Besitzer des das bereitgestellte Fensterhandle ist.|  
 |[CMFCToolBarButton::IsVisible](#isvisible)|Bestimmt, ob die Symbolleisten-Schaltfläche sichtbar ist.|  
 |[CMFCToolBarButton::IsWindowVisible](#iswindowvisible)|Bestimmt, ob das zugrunde liegende Fensterhandle der Schaltfläche angezeigt wird.|  
-|[CMFCToolBarButton::NotifyCommand](#notifycommand)|Gibt an, ob die Schaltfläche mit der verarbeitet die [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachricht.|  
+|[CMFCToolBarButton::NotifyCommand](#notifycommand)|Gibt an, ob die Schaltfläche mit der verarbeitet die [WM_COMMAND](/windows/desktop/menurc/wm-command) Nachricht.|  
 |[CMFCToolBarButton::OnAddToCustomizePage](#onaddtocustomizepage)|Vom Framework aufgerufen, wenn die Schaltfläche hinzugefügt wird eine **anpassen** Dialogfeld.|  
 |[CMFCToolBarButton::OnBeforeDrag](#onbeforedrag)|Gibt an, ob die Schaltfläche gezogen werden kann.|  
 |[CMFCToolBarButton::OnBeforeDrop](#onbeforedrop)|Gibt an, ob ein Benutzer die Schaltfläche auf der Symbolleiste des Ziels gelöscht werden kann.|  
 |[CMFCToolBarButton::OnCalculateSize](#oncalculatesize)|Wird aufgerufen, durch das Framework die Größe der Schaltfläche für den angegebenen Gerätekontext und Andockstatus berechnet.|  
-|[CMFCToolBarButton::OnCancelMode](#oncancelmode)|Wird aufgerufen, durch das Framework, behandeln die [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) Nachricht.|  
+|[CMFCToolBarButton::OnCancelMode](#oncancelmode)|Wird aufgerufen, durch das Framework, behandeln die [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) Nachricht.|  
 |[CMFCToolBarButton::OnChangeParentWnd](#onchangeparentwnd)|Vom Framework aufgerufen, wenn die Schaltfläche mit der in eine neue Symbolleiste eingefügt wird.|  
 |[CMFCToolBarButton::OnClick](#onclick)|Vom Framework aufgerufen, wenn der Benutzer die Maustaste klickt.|  
 |[CMFCToolBarButton::OnClickUp](#onclickup)|Vom Framework aufgerufen, wenn der Benutzer die Maustaste loslässt.|  
 |[CMFCToolBarButton::OnContextHelp](#oncontexthelp)|Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste eine WM_HELPHITTEST-Meldung verarbeitet.|  
 |[CMFCToolBarButton::OnCtlColor](#onctlcolor)|Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste WM_CTLCOLOR-Meldung verarbeitet.|  
 |[CMFCToolBarButton::OnCustomizeMenu](#oncustomizemenu)|Können die Schaltfläche, um das angegebene Menü geändert werden, wenn die Anwendung auf der Symbolleiste des übergeordneten wird ein Kontextmenü angezeigt.|  
-|[CMFCToolBarButton::OnDblClk](#ondblclk)|Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste verarbeitet eine [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) Nachricht.|  
+|[CMFCToolBarButton::OnDblClk](#ondblclk)|Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste verarbeitet eine [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) Nachricht.|  
 |[CMFCToolBarButton::OnDraw](#ondraw)|Wird aufgerufen, durch das Framework zum Zeichnen der Schaltfläche mit der angegebenen Formate und -Optionen.|  
 |[CMFCToolBarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Wird aufgerufen, durch das Framework zum Zeichnen der Schaltfläche der **Befehle** im Bereich der **anpassen** im Dialogfeld.|  
 |[CMFCToolBarButton::OnGetCustomToolTipText](#ongetcustomtooltiptext)|Wird aufgerufen, durch das Framework zum Abrufen des benutzerdefinierten QuickInfo-Texts für die Schaltfläche.|  
@@ -315,8 +315,8 @@ virtual BOOL CanBeDropped(CMFCToolBar* pToolbar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pToolbar*  
- Nicht verwendet.  
+*pToolbar*<br/>
+[in] Nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt "true" zurück.  
@@ -371,20 +371,20 @@ CMFCToolBarButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiID*  
- Die Befehls-ID der Schaltfläche.  
+*uiID*<br/>
+[in] Die Befehls-ID der Schaltfläche.  
   
- [in] *iImage*  
- Der Bildindex der Schaltfläche in der Sammlung von Images.  
+*iImage*<br/>
+[in] Der Bildindex der Schaltfläche in der Sammlung von Images.  
   
- [in] *LpszText*  
- Die Beschriftung der Schaltfläche. NULL kann sein.  
+*lpszText*<br/>
+[in] Die Beschriftung der Schaltfläche. NULL kann sein.  
   
- [in] *bUserButton*  
- Ein boolescher Wert, der bestimmt, ob die Schaltfläche mit der benutzerdefinierten ist. Wenn dieser Parameter TRUE ist, ist die Schaltfläche mit dem benutzerdefinierten. Andernfalls ist das Schaltflächenbild aus einer Ressource geladen werden.  
+*bUserButton*<br/>
+[in] Ein boolescher Wert, der bestimmt, ob die Schaltfläche mit der benutzerdefinierten ist. Wenn dieser Parameter TRUE ist, ist die Schaltfläche mit dem benutzerdefinierten. Andernfalls ist das Schaltflächenbild aus einer Ressource geladen werden.  
   
- [in] *blockiert*  
- Ein boolescher Wert, der bestimmt, ob die Schaltfläche mit der angepasst werden kann. Wenn dieser Parameter TRUE ist, kann die Schaltfläche mit der angepasst werden. Andernfalls kann die Schaltfläche mit der angepasst werden.  
+*Blockiert*<br/>
+[in] Ein boolescher Wert, der bestimmt, ob die Schaltfläche mit der angepasst werden kann. Wenn dieser Parameter TRUE ist, kann die Schaltfläche mit der angepasst werden. Andernfalls kann die Schaltfläche mit der angepasst werden.  
   
 ##  <a name="comparewith"></a>  CMFCToolBarButton::CompareWith  
  Vergleicht diese Instanz mit dem angegebenen `CMFCToolBarButton` Objekt.  
@@ -394,8 +394,8 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *andere*  
- Verweis auf das Objekt, das mit dieser Instanz verglichen werden soll.  
+*other*<br/>
+[in] Verweis auf das Objekt, das mit dieser Instanz verglichen werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn das angegebene Objekt gleich dem Wert dieser Instanz ist; andernfalls 0.  
@@ -411,8 +411,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Src*  
- Ein Verweis auf die Schaltfläche "Quelle", aus dem kopiert werden sollen.  
+*src*<br/>
+[in] Ein Verweis auf die Schaltfläche "Quelle", aus dem kopiert werden sollen.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode zum Kopieren von einer anderen Symbolleistenschaltfläche diese Symbolleisten-Schaltfläche auf.  
@@ -425,8 +425,8 @@ static CMFCToolBarButton* __stdcall CreateFromOleData(COleDataObject* pDataObjec
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDataObject*  
- Die Quelle OLE-Datenobjekt.  
+*pDataObject*<br/>
+[in] Die Quelle OLE-Datenobjekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Das erstellte `CMFCToolBarButton`-Objekt.  
@@ -442,11 +442,11 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- Legen Sie diesen Parameter auf "true" Enable-Eingabe, oder auf "false", um Eingaben zu deaktivieren.  
+*bAktivieren*<br/>
+[in] Legen Sie diesen Parameter auf "true" Enable-Eingabe, oder auf "false", um Eingaben zu deaktivieren.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode ruft die `EnableWindow` Funktion aktivieren oder deaktivieren die Eingabe. Weitere Informationen finden Sie unter [EnableWindow](http://msdn.microsoft.com/library/windows/desktop/ms646291) im Windows SDK.  
+ Diese Methode ruft die `EnableWindow` Funktion aktivieren oder deaktivieren die Eingabe. Weitere Informationen finden Sie unter [EnableWindow](https://msdn.microsoft.com/library/windows/desktop/ms646291) im Windows SDK.  
   
 ##  <a name="exporttomenubutton"></a>  CMFCToolBarButton::ExportToMenuButton  
  Kopiert den Text aus der Symbolleisten-Schaltfläche zu einem Menü.  
@@ -456,8 +456,8 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *MenuButton*  
- Ein Verweis auf die Menüschaltfläche Ziel.  
+*MenuButton*<br/>
+[in] Ein Verweis auf die Menüschaltfläche Ziel.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt "true" zurück.  
@@ -742,8 +742,8 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Hwnd*  
- Ein Fensterhandle.  
+*HWND*<br/>
+[in] Ein Fensterhandle.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL ist, wenn die Schaltfläche mit den Besitzer das angegebene Fensterhandle ist; andernfalls 0.  
@@ -884,21 +884,21 @@ CString m_strText;
  Dieses Datenelement enthält die Beschriftung der Schaltfläche. Die textbezeichnung kann leer sein.  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarButton::NotifyCommand  
- Gibt an, ob die Schaltfläche mit der verarbeitet die [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachricht.  
+ Gibt an, ob die Schaltfläche mit der verarbeitet die [WM_COMMAND](/windows/desktop/menurc/wm-command) Nachricht.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iNotifyCode*  
- Die Benachrichtigung, die mit dem Befehl zugeordnet ist.  
+*iNotifyCode*<br/>
+[in] Die Benachrichtigung, die mit dem Befehl zugeordnet ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt FALSE zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Framework ruft diese Methode aus, wenn es zu senden ist ein [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachricht für das übergeordnete Fenster.  
+ Das Framework ruft diese Methode aus, wenn es zu senden ist ein [WM_COMMAND](/windows/desktop/menurc/wm-command) Nachricht für das übergeordnete Fenster.  
   
  Standardmäßig gibt diese Methode FALSE zurück. Überschreiben Sie diese Methode, um TRUE zurückgeben, wenn zu verarbeitende die WM_COMMAND-Meldung oder "false", um anzugeben, dass die Nachricht von die übergeordneten Symbolleiste verarbeitet werden soll.  
   
@@ -935,8 +935,8 @@ virtual BOOL OnBeforeDrop(CMFCToolBar* pTarget);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pTarget*  
- Das Ziel des Drag & Drop-Vorgangs.  
+*pTarget*<br/>
+[in] Das Ziel des Drag & Drop-Vorgangs.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Schaltfläche auf der Symbolleiste des bereitgestellten Ziel gelöscht werden kann. andernfalls "false".  
@@ -957,14 +957,14 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Der Gerätekontext, in dem die Schaltfläche angezeigt.  
+*pDC*<br/>
+[in] Der Gerätekontext, in dem die Schaltfläche angezeigt.  
   
- [in] *SizeDefault*  
- Die Standardgröße der Schaltfläche.  
+*sizeDefault*<br/>
+[in] Die Standardgröße der Schaltfläche.  
   
- [in] *bHorz*  
- Der Status der Andocken der übergeordneten Symbolleiste. Dieser Parameter ist "true", wenn die Symbolleiste horizontal angedockt oder unverankert ist, oder "false", wenn die Symbolleiste vertikal angedockt ist.  
+*bHorz*<br/>
+[in] Der Status der Andocken der übergeordneten Symbolleiste. Dieser Parameter ist "true", wenn die Symbolleiste horizontal angedockt oder unverankert ist, oder "false", wenn die Symbolleiste vertikal angedockt ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein `SIZE` Struktur, die die Abmessungen der Schaltfläche in Pixel enthält.  
@@ -977,14 +977,14 @@ virtual SIZE OnCalculateSize(
  Überschreiben Sie diese Methode, wenn Sie die Größe einer nicht standardmäßigen Schaltfläche (z. B. eine Schaltfläche "Bearbeiten im Feld") bereitstellen möchten.  
   
 ##  <a name="oncancelmode"></a>  CMFCToolBarButton::OnCancelMode  
- Wird aufgerufen, durch das Framework, behandeln die [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) Nachricht.  
+ Wird aufgerufen, durch das Framework, behandeln die [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) Nachricht.  
   
 ```  
 virtual void OnCancelMode();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Standardimplementierung dieser Methode führt keine Aktion. Diese Methode überschreiben, wenn Sie behandeln möchten die [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) Nachricht.  
+ Die Standardimplementierung dieser Methode führt keine Aktion. Diese Methode überschreiben, wenn Sie behandeln möchten die [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) Nachricht.  
   
 ##  <a name="onchangeparentwnd"></a>  CMFCToolBarButton::OnChangeParentWnd  
  Vom Framework aufgerufen, wenn die Schaltfläche mit der in eine neue Symbolleiste eingefügt wird.  
@@ -994,8 +994,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWndParent*  
- Das neue übergeordnete Fenster.  
+*pWndParent*<br/>
+[in] Das neue übergeordnete Fenster.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Schaltfläche wird z. B. in eine Symbolleiste, eingefügt, wenn der Benutzer es über eine Symbolleiste an eine andere Symbolleiste zieht.  
@@ -1012,11 +1012,11 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Das übergeordnete Fenster der Symbolleisten-Schaltfläche.  
+*Aufnehmen*<br/>
+[in] Das übergeordnete Fenster der Symbolleisten-Schaltfläche.  
   
- [in] *bDelay*  
- TRUE, wenn die Nachricht mit einer Verzögerung behandelt werden soll.  
+*bDelay*<br/>
+[in] TRUE, wenn die Nachricht mit einer Verzögerung behandelt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt FALSE zurück.  
@@ -1049,8 +1049,8 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Das übergeordnete Fenster der Symbolleisten-Schaltfläche.  
+*Aufnehmen*<br/>
+[in] Das übergeordnete Fenster der Symbolleisten-Schaltfläche.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt FALSE zurück.  
@@ -1070,11 +1070,11 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Der Gerätekontext, in dem die Schaltfläche angezeigt.  
+*pDC*<br/>
+[in] Der Gerätekontext, in dem die Schaltfläche angezeigt.  
   
- [in] *nCtlColor*  
- Die bestimmte Farbe-Benachrichtigung.  
+*nCtlColor*<br/>
+[in] Die bestimmte Farbe-Benachrichtigung.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Handle für das Brush-Objekt, das Framework verwendet, um den Hintergrund der Schaltfläche zu zeichnen.  
@@ -1094,8 +1094,8 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pMenu*  
- Klicken Sie im Menü anpassen.  
+*pMenu*<br/>
+[in] Klicken Sie im Menü anpassen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt FALSE zurück.  
@@ -1104,18 +1104,18 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
  Die Standardimplementierung führt keine Aktion aus und gibt FALSE zurück. Diese Methode überschreiben, und geben Sie einen Wert ungleich NULL zurück, wenn Sie den Inhalt des angegebenen Menüs ändern möchten.  
   
 ##  <a name="ondblclk"></a>  CMFCToolBarButton::OnDblClk  
- Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste verarbeitet eine [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) Nachricht.  
+ Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste verarbeitet eine [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) Nachricht.  
   
 ```  
 virtual void OnDblClk(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- -   Das übergeordnete Fenster der Schaltfläche.  
+*Aufnehmen*<br/>
+[in] - das übergeordnete Fenster der Schaltfläche.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode wird aufgerufen, indem die `CMFCToolBar::OnLButtonDblClk` Methode, wenn die übergeordneten Symbolleiste verarbeitet eine [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) Nachricht.  
+ Diese Methode wird aufgerufen, indem die `CMFCToolBar::OnLButtonDblClk` Methode, wenn die übergeordneten Symbolleiste verarbeitet eine [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) Nachricht.  
   
  Die Standardimplementierung dieser Methode führt keine Aktion.  
   
@@ -1135,29 +1135,29 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Der Gerätekontext, in dem die Schaltfläche angezeigt.  
+*pDC*<br/>
+[in] Der Gerätekontext, in dem die Schaltfläche angezeigt.  
   
- [in] *Rect*  
- Das umschließende Rechteck der Schaltfläche.  
+*Rect*<br/>
+[in] Das umschließende Rechteck der Schaltfläche.  
   
- [in] *pImages*  
- Die Auflistung der Symbolleistenbilder, die mit der Schaltfläche zugeordnet ist.  
+*pImages*<br/>
+[in] Die Auflistung der Symbolleistenbilder, die mit der Schaltfläche zugeordnet ist.  
   
- [in] *bHorz*  
- Der Status der Andocken der übergeordneten Symbolleiste. Dieser Parameter ist "true", wenn die Schaltfläche horizontal und "false" angedockt ist, wenn die Schaltfläche vertikal angedockt ist.  
+*bHorz*<br/>
+[in] Der Status der Andocken der übergeordneten Symbolleiste. Dieser Parameter ist "true", wenn die Schaltfläche horizontal und "false" angedockt ist, wenn die Schaltfläche vertikal angedockt ist.  
   
- [in] *bCustomizeMode*  
- Gibt an, ob die Symbolleiste im Anpassungsmodus befindet. Dieser Parameter ist "true", wenn die Symbolleiste im Anpassungsmodus und "false" ist, wenn die Symbolleiste nicht im Anpassungsmodus wird.  
+*bCustomizeMode*<br/>
+[in] Gibt an, ob die Symbolleiste im Anpassungsmodus befindet. Dieser Parameter ist "true", wenn die Symbolleiste im Anpassungsmodus und "false" ist, wenn die Symbolleiste nicht im Anpassungsmodus wird.  
   
- [in] *bHighlight*  
- Gibt an, ob die Schaltfläche markiert wird. Dieser Parameter ist, wenn die Schaltfläche markiert wird "Wahr" und "false", wenn die Schaltfläche nicht hervorgehoben ist.  
+*bHighlight*<br/>
+[in] Gibt an, ob die Schaltfläche markiert wird. Dieser Parameter ist, wenn die Schaltfläche markiert wird "Wahr" und "false", wenn die Schaltfläche nicht hervorgehoben ist.  
   
- [in] *bDrawBorder*  
- Gibt an, ob den Rahmen der Schaltfläche angezeigt werden soll. Dieser Parameter ist "true", wenn die Schaltfläche anzeigen soll, dessen Rahmen und "false", wenn die Schaltfläche "den Rahmen nicht angezeigt werden soll.  
+*bDrawBorder*<br/>
+[in] Gibt an, ob den Rahmen der Schaltfläche angezeigt werden soll. Dieser Parameter ist "true", wenn die Schaltfläche anzeigen soll, dessen Rahmen und "false", wenn die Schaltfläche "den Rahmen nicht angezeigt werden soll.  
   
- [in] *bGrayDisabledButtons*  
- Gibt an, ob deaktivierte Schaltflächen schattieren oder die Auflistung der deaktivierten Bilder. Dieser Parameter ist "true", wenn deaktivierte Schaltflächen schattierten und "false" werden soll, wenn diese Methode die Auflistung der deaktivierten Bilder verwenden sollten.  
+*bGrayDisabledButtons*<br/>
+[in] Gibt an, ob deaktivierte Schaltflächen schattieren oder die Auflistung der deaktivierten Bilder. Dieser Parameter ist "true", wenn deaktivierte Schaltflächen schattierten und "false" werden soll, wenn diese Methode die Auflistung der deaktivierten Bilder verwenden sollten.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode zum Anpassen von Symbolleisten-Schaltfläche zeichnen.  
@@ -1173,14 +1173,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Der Gerätekontext, in dem die Schaltfläche angezeigt.  
+*pDC*<br/>
+[in] Der Gerätekontext, in dem die Schaltfläche angezeigt.  
   
- [in] *Rect*  
- Das umschließende Rechteck der Schaltfläche.  
+*Rect*<br/>
+[in] Das umschließende Rechteck der Schaltfläche.  
   
- [in] *bSelected*  
- Gibt an, ob die Schaltfläche ausgewählt wird. Wenn dieser Parameter TRUE ist, wird die Schaltfläche ausgewählt. Wenn dieser Parameter auf "false" ist, wird die Schaltfläche nicht ausgewählt.  
+*bSelected*<br/>
+[in] Gibt an, ob die Schaltfläche ausgewählt wird. Wenn dieser Parameter TRUE ist, wird die Schaltfläche ausgewählt. Wenn dieser Parameter auf "false" ist, wird die Schaltfläche nicht ausgewählt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Breite in Pixel der Schaltfläche auf den angegebenen Gerätekontext.  
@@ -1200,8 +1200,8 @@ virtual BOOL OnGetCustomToolTipText(CString& strToolTip);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *StrToolTip*  
- Ein `CString` Objekt, das den benutzerdefinierten QuickInfo-Text empfängt.  
+*strToolTip*<br/>
+[out] Ein `CString` Objekt, das den benutzerdefinierten QuickInfo-Text empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt FALSE zurück.  
@@ -1239,8 +1239,8 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bShow*  
- Gibt an, ob die Schaltfläche sichtbar ist. Wenn dieser Parameter TRUE ist, ist die Schaltfläche sichtbar. Andernfalls ist die Schaltfläche nicht sichtbar.  
+*bShow*<br/>
+[in] Gibt an, ob die Schaltfläche sichtbar ist. Wenn dieser Parameter TRUE ist, ist die Schaltfläche sichtbar. Andernfalls ist die Schaltfläche nicht sichtbar.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardimplementierung dieser Methode führt keine Aktion. Überschreiben Sie diese Methode, um die Sichtbarkeit der Schaltfläche zu aktualisieren.  
@@ -1253,8 +1253,8 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iSize*  
- Die neue Breite der Schaltfläche.  
+*iSize*<br/>
+[in] Die neue Breite der Schaltfläche.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardimplementierung dieser Methode führt keine Aktion. Überschreiben Sie diese Methode, um die Schaltfläche mit den angepasst wird, wenn die Größe oder Position der übergeordneten Symbolleiste ändert.  
@@ -1269,11 +1269,11 @@ virtual BOOL OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Das übergeordnete Fenster der Schaltfläche. NULL kann sein.  
+*Aufnehmen*<br/>
+[in] Das übergeordnete Fenster der Schaltfläche. NULL kann sein.  
   
- [in] *pTI*  
- Ein `TOOLINFO` -Struktur, die Informationen über ein Tool in ein QuickInfo-Steuerelement enthält.  
+*PTI*<br/>
+[in] Ein `TOOLINFO` -Struktur, die Informationen über ein Tool in ein QuickInfo-Steuerelement enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Das Ergebnis des `OnMenuButtonToolHitTest` , wenn die Schaltfläche einen Zeiger auf das übergeordnete Fenster Frames abrufen kann andernfalls "false".  
@@ -1299,17 +1299,17 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWndParent*  
- Das übergeordnete Fenster.  
+*pWndParent*<br/>
+[in] Das übergeordnete Fenster.  
   
- [in] *iButtonIndex*  
- Der nullbasierte Index der Schaltfläche in der Auflistung der Schaltflächen übergeordnete Element.  
+*iButtonIndex*<br/>
+[in] Der nullbasierte Index der Schaltfläche in der Auflistung der Schaltflächen übergeordnete Element.  
   
- [in] *WndToolTip*  
- Das Steuerelement, das den QuickInfo-Text anzeigt.  
+*wndToolTip*<br/>
+[in] Das Steuerelement, das den QuickInfo-Text anzeigt.  
   
- [out] *str*  
- Ein `CString` Objekt, das den aktualisierten QuickInfo-Text empfängt.  
+*str*<br/>
+[out] Ein `CString` Objekt, das den aktualisierten QuickInfo-Text empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt FALSE zurück.  
@@ -1325,8 +1325,8 @@ virtual BOOL PrepareDrag(COleDataSource& srcItem);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *SrcItem*  
- Ein `COleDataSource` -Objekt, das Statusinformationen über den Drag & Drop-Vorgang gespeichert.  
+*srcItem*<br/>
+[in] Ein `COleDataSource` -Objekt, das Statusinformationen über den Drag & Drop-Vorgang gespeichert.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Vorgang erfolgreich ist. andernfalls "false".  
@@ -1380,8 +1380,8 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Ar*  
- Die `CArchive` Objekt aus dem oder zum Serialisieren.  
+*ar*<br/>
+[in] Die `CArchive` Objekt aus dem oder zum Serialisieren.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode unterstützt die datenübertragungsprozesse beispielsweise bei Zwischenablage- oder Drag & Drop-Vorgänge. Es liest oder schreibt Sie Eigenschaften der Schaltfläche wie z. B. die ID-Bezeichnung und Image-ID, aus oder in der bereitgestellten `CArchive` Objekt.  
@@ -1398,11 +1398,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pParent*  
- Das übergeordnete Fenster der Symbolleisten-Schaltfläche.  
+*pParent*<br/>
+[in] Das übergeordnete Fenster der Symbolleisten-Schaltfläche.  
   
- [in] *Daten*  
- Ein `CAccessibilityData` Objekt, das mit den barrierefreiheitsdaten der Symbolleisten-Schaltfläche enthält.  
+*data*<br/>
+[in] Ein `CAccessibilityData` Objekt, das mit den barrierefreiheitsdaten der Symbolleisten-Schaltfläche enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt "true" zurück.  
@@ -1418,8 +1418,8 @@ static void __stdcall SetClipboardFormatName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Wert*  
- Der neue Name des globalen Zwischenablageformats. Darf nicht NULL sein.  
+*Wert*<br/>
+[in] Der neue Name des globalen Zwischenablageformats. Darf nicht NULL sein.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ermöglicht es Drag & Drop-Vorgänge für mehrere Anwendungen auftreten. Jede Anwendung muss auf den gleichen Namen des Zwischenablage-Format angeben.  
@@ -1434,8 +1434,8 @@ virtual void SetImage(int iImage);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iImage*  
- Der Index des Bilds in der Auflistung von symbolleistenbildern.  
+*iImage*<br/>
+[in] Der Index des Bilds in der Auflistung von symbolleistenbildern.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn die Symbolleisten-Schaltfläche, Trennzeichen ist *iImage* bezieht sich auf die neue Breite der Trennzeichenschaltfläche.  
@@ -1450,8 +1450,8 @@ static void SetProtectedCommands(const CList<UINT,UINT>& lstCmds);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LstCmds*  
- Die Liste der geschützten Befehle.  
+*lstCmds*<br/>
+[in] Die Liste der geschützten Befehle.  
   
 ### <a name="remarks"></a>Hinweise  
  In den Anpassungsmodus aktiviert deaktiviert das Framework Symbolleiste von schaltflächenbefehle, die geschützt werden. Der Benutzer kann nicht ausführen von Drag & Drop und Bearbeitungsvorgänge für deaktivierte Symbolleisten-Schaltflächen.  
@@ -1476,8 +1476,8 @@ void SetRect(const CRect rect);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Rect*  
- Das neue umschließende Rechteck der Schaltfläche.  
+*Rect*<br/>
+[in] Das neue umschließende Rechteck der Schaltfläche.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ruft die [CMFCToolBarButton::OnMove](#onmove) -Methode auf, nachdem das neue umschließende Rechteck festgelegt.  
@@ -1490,8 +1490,8 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nStyle*  
- Der neue Stil der Schaltfläche.  
+*nStyle*<br/>
+[in] Der neue Stil der Schaltfläche.  
   
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung legt den [CMFCToolBarButton::m_nStyle](#m_nstyle) Datenmember, *nStyle*. Überschreiben Sie diese Methode, wenn Sie die Durchführung weiterer Bearbeitungsvorgänge, um die Änderung im Format verarbeiten möchten. Finden Sie unter [ToolBar-Steuerelement-Stile](toolbar-control-styles.md) für eine Liste der gültigen Stil-Flags.  
@@ -1504,8 +1504,8 @@ void SetVisible(BOOL bShow=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bShow*  
- Ein boolescher Wert, der angibt, ob auf Sie ein- oder Ausblenden der Schaltfläche. Wenn dieser Parameter TRUE ist, wird die Schaltfläche angezeigt. Wenn der Parameter auf "false" ist, wird die Schaltfläche ausgeblendet.  
+*bShow*<br/>
+[in] Ein boolescher Wert, der angibt, ob auf Sie ein- oder Ausblenden der Schaltfläche. Wenn dieser Parameter TRUE ist, wird die Schaltfläche angezeigt. Wenn der Parameter auf "false" ist, wird die Schaltfläche ausgeblendet.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Funktion, um das aus- oder Einblenden von einer bestimmten Symbolleisten-Schaltfläche. Rufen Sie die [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate) -Methode auf, nachdem Sie diese Methode aufrufen.  
@@ -1518,8 +1518,8 @@ void Show(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bShow*  
- Ein boolescher Wert, der angibt, ob auf Sie ein- oder Ausblenden der Schaltfläche. Wenn dieser Parameter TRUE ist, wird die Schaltfläche angezeigt. Wenn der Parameter auf "false" ist, wird die Schaltfläche ausgeblendet.  
+*bShow*<br/>
+[in] Ein boolescher Wert, der angibt, ob auf Sie ein- oder Ausblenden der Schaltfläche. Wenn dieser Parameter TRUE ist, wird die Schaltfläche angezeigt. Wenn der Parameter auf "false" ist, wird die Schaltfläche ausgeblendet.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Methode, um die Sichtbarkeit von Symbolleisten-Schaltflächen zu aktualisieren, wenn die Größe ihrer übergeordneten Symbolleiste geändert wird. Das Framework ruft diese Methode mit *bShow* auf "false" festgelegt wird, wenn die Schaltfläche mit der innerhalb der Grenzen der Symbolleiste nicht mehr geeignet ist. Das Framework ruft diese Methode mit *bShow* wird, wenn "true" festgelegt wird, nach dem Ändern der Größe der Schaltfläche wird erneut, die innerhalb der Grenzen der Symbolleiste geeignet ist.  

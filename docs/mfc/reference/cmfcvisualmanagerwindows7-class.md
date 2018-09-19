@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17ec3560e7faf8c49f410437c79609bfb871a9c9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: c17a9b6970f612c31ba9491ca2e3483b4a3fa37b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849948"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720550"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7-Klasse
-Die `CMFCVisualManagerWindows7` ermöglicht es einer Anwendung die Darstellung einer [!INCLUDE[win7](../../build/includes/win7_md.md)] Anwendung.  
+Die `CMFCVisualManagerWindows7` ermöglicht es einer Anwendung die Darstellung einer Windows 7-Anwendung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -103,7 +103,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::SetStyle`|Legt das Farbschema der `CMFCVisualManagerWindows7` GUI.|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der `CMFCVisualManagerWindows7` Klasse, um das Erscheinungsbild Ihrer Anwendung auf den Standardwert zu imitieren [!INCLUDE[win7](../../build/includes/win7_md.md)] Anwendung. Diese Klasse ist möglicherweise nicht gültig, wenn Ihre Anwendung, auf eine Version von Windows ausgeführt wird vor [!INCLUDE[win7](../../build/includes/win7_md.md)]. In diesem Szenario verwendet die Anwendung den standardmäßigen visuellen Manager in definierten [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
+ Verwenden der `CMFCVisualManagerWindows7` Klasse, um das Erscheinungsbild Ihrer Anwendung um eine Windows 7-standardanwendung zu imitieren. Diese Klasse möglicherweise nicht gültig, wenn Ihre Anwendung unter einer Version von Windows vor Windows 7 ausgeführt wird. In diesem Szenario verwendet die Anwendung den standardmäßigen visuellen Manager in definierten [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
   
  Die CMFCVisualManagerWindows7 erbt mehrere Methoden, von der [CMFCVisualManagerWindows-Klasse](../../mfc/reference/cmfcvisualmanagerwindows-class.md) und `CMFCVisualManager` Klasse. Im vorherigen Abschnitt aufgeführten Methoden sind Methoden, die noch nicht mit der `CMFCVisualManagerWindows7` Klasse.  
   
@@ -149,17 +149,17 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pEdit*  
- Ein Zeiger auf das Steuerelement zum Bearbeiten. Dieser Wert darf nicht NULL sein.  
+*pEdit*<br/>
+[in] Ein Zeiger auf das Steuerelement zum Bearbeiten. Dieser Wert darf nicht NULL sein.  
   
- [out] *bIsHighlighted*  
- Gibt zurück, ob das Menübandfeld hervorgehoben ist.  
+*bIsHighlighted*<br/>
+[out] Gibt zurück, ob das Menübandfeld hervorgehoben ist.  
   
- [out] *bIsPaneHighlighted*  
- Gibt true zurück, wenn das Menüband, die im Bereich enthält *pEdit* wird hervorgehoben.  
+*bIsPaneHighlighted*<br/>
+[out] Gibt true zurück, wenn das Menüband, die im Bereich enthält *pEdit* wird hervorgehoben.  
   
- [out] *bIsDisabled*  
- Gibt zurück, ob *pEdit* ist deaktiviert.  
+*bIsDisabled*<br/>
+[out] Gibt zurück, ob *pEdit* ist deaktiviert.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Hintergrundfarbe des Bearbeitungsfelds *pEdit*.  
@@ -178,17 +178,17 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger auf den Gerätekontext einer Menüschaltfläche.  
+*pDC*<br/>
+[in] Ein Zeiger auf den Gerätekontext einer Menüschaltfläche.  
   
- [in] *pButton*  
- Ein Zeiger auf eine `CMFCToolBarButton`. Das Framework füllt den Hintergrund für diese Schaltfläche.  
+*pButton*<br/>
+[in] Ein Zeiger auf eine `CMFCToolBarButton`. Das Framework füllt den Hintergrund für diese Schaltfläche.  
   
- [in] *Rect*  
- Ein Rechteck, das die Begrenzungen des Image im Menübereich-Schaltfläche angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Begrenzungen des Image im Menübereich-Schaltfläche angibt.  
   
- [in] *Zustand*  
- Den Zustand der Schaltfläche.  
+*state*<br/>
+[in] Den Zustand der Schaltfläche.  
   
 ### <a name="remarks"></a>Hinweise  
   

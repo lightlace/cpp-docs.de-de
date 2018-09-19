@@ -1,7 +1,7 @@
 ---
-title: Optionen des Linkers | Microsoft Docs
+title: Optionen des Linkers | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/20/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a7fe51c6f49af4fdd232b860b1f9243c1ea462
-ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
+ms.openlocfilehash: e5a091a4301a107fb820f63c357c4e7f43c35948
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753629"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721291"
 ---
 # <a name="linker-options"></a>Linkeroptionen
 
@@ -40,7 +40,7 @@ In der folgenden Tabelle sind die Optionen für "LINK.exe" aufgelistet. Weitere 
 
 - [Reservierte Wörter](../../build/reference/reserved-words.md)
 
-In der Befehlszeile werden Linkeroptionen nicht Groß-/Kleinschreibung beachtet; z. B./base und/Base dieselbe Bedeutung. Anweisungen zum Angeben der einzelnen Optionen in der Befehlszeile oder in Visual Studio finden Sie in der Dokumentation zur entsprechenden Option.
+In der Befehlszeile beachtet Optionen des Linkers nicht; z. B./base und/Base dieselbe Bedeutung. Anweisungen zum Angeben der einzelnen Optionen in der Befehlszeile oder in Visual Studio finden Sie in der Dokumentation zur entsprechenden Option.
 
 Einige Linkeroptionen können Sie auch mit dem [comment](../../preprocessor/comment-c-cpp.md) -Pragma festlegen.
 
@@ -97,7 +97,7 @@ Einige Linkeroptionen können Sie auch mit dem [comment](../../preprocessor/comm
 |[/LTCG](../../build/reference/ltcg-link-time-code-generation.md)|Gibt Link-Zeitcodegenerierung an.|
 |[/MACHINE](../../build/reference/machine-specify-target-platform.md)|Legt die Zielplattform fest.|
 |[/MANIFEST](../../build/reference/manifest-create-side-by-side-assembly-manifest.md)|Erstellt eine parallele Manifestdatei und bettet sie optional in der Binärdatei ein.|
-|[/MANIFESTDEPENDENCY](../../build/reference/manifestdependency-specify-manifest-dependencies.md)|Gibt eine \<DependentAssembly > Abschnitt in der Manifestdatei.|
+|[/MANIFESTDEPENDENCY](../../build/reference/manifestdependency-specify-manifest-dependencies.md)|Gibt an, eine \<DependentAssembly > Abschnitt in der Manifestdatei.|
 |[/MANIFESTFILE](../../build/reference/manifestfile-name-manifest-file.md)|Ändert den Standardnamen der Manifestdatei.|
 |[/MANIFESTINPUT](../../build/reference/manifestinput-specify-manifest-input.md)|Gibt eine Manifesteingabedatei an, die der Linker verarbeitet und in der Binärdatei einbettet. Sie können diese Option mehrmals verwenden, um mehr als eine Manifesteingabedatei anzugeben.|
 |[/MANIFESTUAC](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md)|Gibt an, ob Informationen zur Benutzerkontensteuerung (UAC) in das Programmmanifest eingebettet werden.|
@@ -118,11 +118,12 @@ Einige Linkeroptionen können Sie auch mit dem [comment](../../preprocessor/comm
 |[/PDBALTPATH](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)|Verwendet einen alternativen Speicherort zum Speichern einer PDB-Datei.|
 |[/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)|Erstellt eine Programmdatenbankdatei (PDB-Datei) ohne eigene Symbole.|
 |[/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)|Gibt die PGD-Datei für profilgesteuerte Optimierungen an.|
-|[/POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**Veraltete** erstellt einen Thread-sichere instrumentiert PGO-Build.|
+|[/POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**Veraltete** erstellt einen threadsicheren instrumentiert PGO-Build.|
 |[/PROFILE](../../build/reference/profile-performance-tools-profiler.md)|Erstellt eine Ausgabedatei, die mit dem Leistungstoolprofiler verwendet werden kann.|
 |[/RELEASE](../../build/reference/release-set-the-checksum.md)|Legt die Prüfsumme im Header der EXE-Datei fest.|
 |[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)|Legt fest, dass das Image eine Tabelle mit sicheren Ausnahmehandlern enthält.|
 |[/SECTION](../../build/reference/section-specify-section-attributes.md)|Überschreibt die Attribute eines Abschnitts.|
+|[/ SOURCELINK](../../build/reference/sourcelink.md)|Gibt eine SourceLink-Datei, die PDB-Datei hinzu.|
 |[/STACK](../../build/reference/stack-stack-allocations.md)|Legt die Stapelgröße in Bytes fest.|
 |[/STUB](../../build/reference/stub-ms-dos-stub-file-name.md)|Fügt ein MS-DOS-Stubprogramm an ein Win32-Programm an.|
 |[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)|Teilt dem Betriebssystem mit, wie die EXE-Datei auszuführen ist.|
@@ -130,10 +131,10 @@ Einige Linkeroptionen können Sie auch mit dem [comment](../../preprocessor/comm
 |[/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)|Gibt Ressourcen-ID der vom Linker generierten Typbibliothek an.|
 |[/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)|Legt den Namen der TLB-Datei und anderer MIDL-Ausgabedateien fest.|
 |[/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md)|Erstellt eine Anwendung, die auf dem Terminalserver ausgeführt werden soll.|
-|[/USEPROFILE](../../build/reference/useprofile.md)|Verwendet, die profilgesteuerte Optimierung Trainingsdaten, um ein optimiertes Image zu erstellen.|
+|[/USEPROFILE](../../build/reference/useprofile.md)|Verwendet, die profilgesteuerte Optimierung Trainingsdaten zum Erstellen eines optimierten Images.|
 |[/VERBOSE](../../build/reference/verbose-print-progress-messages.md)|Druckt Linkerstatusmeldungen aus.|
 |[/VERSION](../../build/reference/version-version-information.md)|Weist eine Versionsnummer zu.|
-|[/ WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|Schließt alle Objektdatei aus der angegebenen statischen Bibliotheken.|
+|[/ WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|Enthält alle Objektdatei aus der angegebenen statischen Bibliotheken.|
 |[/WINMD](../../build/reference/winmd-generate-windows-metadata.md)|Aktiviert die Generierung einer Windows-Runtime-Metadatendatei.|
 |[/WINMDFILE](../../build/reference/winmdfile-specify-winmd-file.md)|Gibt den Dateinamen für die Ausgabedatei der Windows-Runtime-Metadaten (winmd) an, die von der [/WINMD](../../build/reference/winmd-generate-windows-metadata.md) - Linkeroption generiert wird.|
 |[/WINMDKEYFILE](../../build/reference/winmdkeyfile-specify-winmd-key-file.md)|Gibt einen Schlüssel oder ein Schlüsselpaar an, um eine Windows-Runtime-Metadatendatei zu signieren.|
@@ -145,5 +146,5 @@ Weitere Informationen finden Sie unter [Compiler-Controlled LINK Options](../../
 
 ## <a name="see-also"></a>Siehe auch
 
-[Referenz zur C/C++-Erstellung](../../build/reference/c-cpp-building-reference.md)  
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)  
+[Referenz zur C/C++-Erstellung](../../build/reference/c-cpp-building-reference.md)<br/>
+[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)

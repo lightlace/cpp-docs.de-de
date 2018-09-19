@@ -17,39 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db5bc6b2547fb77dd887f96b6c33dee536e43f77
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d79707eaa3e5e93ab5c05e120d1556ee86168af2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025902"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607297"
 ---
 # <a name="comptrasiid-method"></a>ComPtr::AsIID-Methode
-Gibt ein ComPtr-Objekt zurück, das die Schnittstelle darstellt, die durch die angegebene Schnittstellen-ID gekennzeichnet ist.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-WRL_NOTHROW HRESULT AsIID(  
-   REFIID riid,  
-   _Out_ ComPtr<IUnknown>* p  
-) const;  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `riid`  
- Eine Schnittstellen-ID.  
-  
- `p`  
- Wenn das Objekt eine Schnittstelle verfügt, deren ID gleich `riid`, ein doppelt indirekter Zeiger auf die angegebene Schnittstelle die `riid` Parameter ist, andernfalls ein Zeiger auf IUnknown.  
-  
-## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [ComPtr-Klasse](../windows/comptr-class.md)
+
+Gibt eine **ComPtr** Objekt, das die Schnittstelle, die die angegebene Schnittstellen-ID identifizierte darstellt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+WRL_NOTHROW HRESULT AsIID(
+   REFIID riid,
+   _Out_ ComPtr<IUnknown>* p
+) const;
+```
+
+### <a name="parameters"></a>Parameter
+
+*riid*  
+Eine Schnittstellen-ID.
+
+*p*  
+Wenn das Objekt eine Schnittstelle verfügt, deren ID gleich *Riid*, ein doppelt indirekter Zeiger auf die angegebene Schnittstelle die *Riid* Parameter ist, andernfalls ein Zeiger auf `IUnknown`.
+
+## <a name="return-value"></a>Rückgabewert
+
+S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[ComPtr-Klasse](../windows/comptr-class.md)

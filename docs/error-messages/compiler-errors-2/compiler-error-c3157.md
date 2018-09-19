@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C3157 | Microsoft Docs
+title: Compilerfehler Fehler C3157 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21f6141bd921ce82feb9218baede59edfc58243f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b72f3364ee4a79fc00868b25a4c5a0b3f63501c1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244305"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063306"
 ---
 # <a name="compiler-error-c3157"></a>Compilerfehler Fehler C3157
-ParamArray-Attribut kann nur auf den letzten Parameter angewendet werden  
-  
- Die [ParamArray](https://msdn.microsoft.com/en-us/library/system.paramarrayattribute.aspx) -Attribut auf den falschen Parameter angewendet wurde.
+
+ParamArray-Attribut kann nur auf den letzten Parameter angewendet werden
+
+Die [ParamArray](https://msdn.microsoft.com/library/system.paramarrayattribute.aspx) -Attribut wurde auf den falschen Parameter angewendet.

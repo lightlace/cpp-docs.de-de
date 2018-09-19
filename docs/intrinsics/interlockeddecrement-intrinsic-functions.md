@@ -1,5 +1,5 @@
 ---
-title: Systeminterne Funktionen "_InterlockedDecrement" | Microsoft Docs
+title: Funktionen "_InterlockedDecrement" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -54,17 +54,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eacca8241bc32965d3f22fcb3e4d5ed8b72a1651
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2bf3f35b4de412125fcaf1c801a044c1b72e3233
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338987"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716260"
 ---
 # <a name="interlockeddecrement-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedDecrement“
 **Microsoft-spezifisch**  
   
- Stellt systeminterne Compiler-Unterstützung für die Win32- [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] [InterlockedDecrement](http://msdn.microsoft.com/library/ms683580.aspx) Funktion.  
+Bietet systeminterne compilerunterstützung für die Win32-Windows-SDK [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement) Funktion.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -108,8 +108,8 @@ __int64 _InterlockedDecrement64_nf(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in, out] `lpAddend`  
- Zeiger auf die zu verringernde Variable.  
+*lpAddend*<br/>
+[in, out] Zeiger auf die zu verringernde Variable.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Der Rückgabewert ist der resultierende verringerte Wert.  
@@ -118,7 +118,7 @@ __int64 _InterlockedDecrement64_nf(
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|X86, ARM, x64|  
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|  
   
  **Headerdatei** \<intrin.h >  

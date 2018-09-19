@@ -1,5 +1,5 @@
 ---
-title: Vergleichen von der Concurrency Runtime zu anderen Parallelitätsmodellen | Microsoft Docs
+title: Vergleich der Concurrency Runtime zu anderen Parallelitätsmodellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3fa78ac5dbb5d3872c27db3c4ab3e8778fe1668
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fb4a588f1b9c7f5bc1d9d4f82ca9f7de767ba7e3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694068"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207210"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Concurrency Runtime im Vergleich zu anderen Parallelitätsmodellen
 Dieses Dokument beschreibt die Unterschiede zwischen den Funktionen und Programmiermodellen der Concurrency Runtime und anderen Technologien. Wenn Sie verstehen, welche Vorteile die Concurrency Runtime gegenüber anderen Programmiermodellen hat, können Sie die Technologie auswählen, die die Anforderungen der jeweiligen Anwendung am besten erfüllt.  
@@ -64,7 +64,7 @@ Dieses Dokument beschreibt die Unterschiede zwischen den Funktionen und Programm
  Die Windows-API verwendet die Programmiersprache C, um das Programmiermodell verfügbar machen. Die Concurrency Runtime stellt eine C++-Programmierschnittstelle bereit, die die neuesten Funktionen der Programmiersprache C++ nutzt. Lambda-Funktionen bieten beispielsweise einen knappen, typsicheren Mechanismus zum Definieren von parallelen Arbeitsfunktionen. Weitere Informationen zu den neuesten C++-Funktionen, die von der Concurrency Runtime verwendet werden, finden Sie unter [Übersicht](../../parallel/concrt/asynchronous-message-blocks.md).  
   
 ### <a name="threads-and-thread-pools"></a>Threads und Threadpools  
- Der zentrale Parallelitätsmechanismus in der Windows-API ist der Thread. In der Regel verwenden Sie die [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) -Funktion zum Erstellen von Threads. Obwohl Threads relativ einfach zu erstellen sind, weist das Betriebssystem viel Zeit und Ressourcen für deren Verwaltung zu. Obwohl jeder Thread garantiert die gleiche Ausführungszeit wie alle anderen Threads auf gleicher Prioritätsebene erhält, erfordert der zugeordnete Mehraufwand, dass Sie ausreichend große Aufgaben erstellen. Für kleinere oder differenziertere Aufgaben kann der Aufwand, der mit der Parallelität verbunden ist, den Vorteil, dass die Aufgaben parallel ausgeführt werden zunichte machen.  
+ Der zentrale Parallelitätsmechanismus in der Windows-API ist der Thread. In der Regel verwenden Sie die [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) -Funktion zum Erstellen von Threads. Obwohl Threads relativ einfach zu erstellen sind, weist das Betriebssystem viel Zeit und Ressourcen für deren Verwaltung zu. Obwohl jeder Thread garantiert die gleiche Ausführungszeit wie alle anderen Threads auf gleicher Prioritätsebene erhält, erfordert der zugeordnete Mehraufwand, dass Sie ausreichend große Aufgaben erstellen. Für kleinere oder differenziertere Aufgaben kann der Aufwand, der mit der Parallelität verbunden ist, den Vorteil, dass die Aufgaben parallel ausgeführt werden zunichte machen.  
   
  Threadpools sind eine Möglichkeit, die Kosten der Threadverwaltung zu reduzieren. Benutzerdefinierte Threadpools und die Threadpoolimplementierung, die von der Windows-API bereitgestellt wird, ermöglichen kleine Arbeitsaufgaben effizient parallel auszuführen. Der Windows-Threadpool verwaltet die Arbeitsaufgaben in einer First in, First Out (FIFO)-Warteschlange. Jede Arbeitsaufgabe wird in der Reihenfolge gestartet, in der sie dem Pool hinzugefügt wurde.  
   
@@ -77,7 +77,7 @@ Dieses Dokument beschreibt die Unterschiede zwischen den Funktionen und Programm
   
  Unter Windows 7 und Windows Server 2008 R2 unterstützt das Betriebssystem Parallelität und Skalierbarkeit. Diese Betriebssysteme unterstützen beispielsweise Computer, die mehr als 64 Hardwarethreads aufweisen. Eine vorhandene Anwendung, die die Windows-API verwendet, muss geändert werden, um diese neuen Funktionen nutzen zu können. Allerdings wird eine Anwendung, die Concurrency Runtime verwendet, automatisch diese Funktionen verwenden und keine Änderungen erfordern.  
   
- [base.user-mode_scheduling](http://msdn.microsoft.com/library/windows/desktop/dd627187)  
+ [base.user-mode_scheduling](https://msdn.microsoft.com/library/windows/desktop/dd627187)  
   
  [[Nach oben](#top)]  
   

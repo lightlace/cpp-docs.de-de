@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 972d8e3f1798a7498173c3d8b0677bb57231b990
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: f10422d8efcebec62e77a495a6fb04c980da6060
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451538"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215160"
 ---
 # <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
 
@@ -73,17 +73,17 @@ Ein Breitzeichen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn **Wctomb** konvertiert das Breitzeichen in ein Multibytezeichen gibt es die Anzahl der Bytes (also nie größer als **MB_CUR_MAX**) in der Breitzeichen. Wenn *Wchar* ist das Nullzeichen Breitzeichen (L '\0'), **Wctomb** gibt 1 zurück. Wenn die Zielzeiger *Mbchar* ist **NULL**, **Wctomb** gibt 0 zurück. Wenn die Konvertierung nicht möglich, im aktuellen Gebietsschema ist **Wctomb** gibt-1 zurück und **Errno** festgelegt ist, um **EILSEQ**.
+Wenn **Wctomb** konvertiert das Breitzeichen in ein Multibytezeichen, gibt die Anzahl der Bytes (, und ist nie größer als **MB_CUR_MAX**) im Breitzeichen. Wenn *Wchar* ist das Breitzeichen-Zeichen Null (L '\0'), **Wctomb** gibt 1 zurück. Wenn der Zielzeiger *Mbchar* ist **NULL**, **Wctomb** gibt 0 zurück. Wenn die Konvertierung nicht möglich, im aktuellen Gebietsschema ist **Wctomb** gibt-1 zurück und **Errno** nastaven NA hodnotu **EILSEQ**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Wctomb** -Funktion konvertiert die *Wchar* Argument an das entsprechende Multibytezeichen und speichert das Ergebnis an *Mbchar*. Sie können die Funktion von einem beliebigen Punkt in einem beliebigen Programm aufrufen. **Wctomb** verwendet das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten; **_wctomb_l** ist identisch mit **Wctomb** identisch, jedoch das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die **Wctomb** -Funktion konvertiert die *Wchar* Argument für das entsprechende Multibytezeichen und speichert das Ergebnis in *Mbchar*. Sie können die Funktion von einem beliebigen Punkt in einem beliebigen Programm aufrufen. **Wctomb** verwendet das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten; **_wctomb_l** ist identisch mit **Wctomb** mit dem Unterschied, dass sie das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-**Wctomb** überprüft die eigenen Parameter. Wenn *Mbchar* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und die Funktion gibt-1 zurück.
+**Wctomb** überprüft die eigenen Parameter. Wenn *Mbchar* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und die Funktion gibt-1 zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**wctomb**|\<stdlib.h>|
 
@@ -127,4 +127,4 @@ Convert a wide character:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

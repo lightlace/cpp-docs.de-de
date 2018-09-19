@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d570204a997def3b295e7ba0fb3b08b9a15677b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 38267ed5755b99bd97e4c923611d297673fcc41e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853727"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215582"
 ---
 # <a name="csharedfile-class"></a>CSharedFile-Klasse
 Die [CMemFile](../../mfc/reference/cmemfile-class.md)-abgeleiteten Klasse, die unterstützt die freigegebene arbeitsspeicherdateien.  
@@ -56,7 +56,7 @@ class CSharedFile : public CMemFile
 ## <a name="remarks"></a>Hinweise  
  Speicherdateien Verhalten sich wie Dateien auf Datenträgern, mit dem Unterschied, dass die Datei im Arbeitsspeicher und nicht auf dem Datenträger gespeichert wird. Eine Arbeitsspeicherdatei eignet sich zur schnellen temporären Speicherung oder für die Übertragung von unformatierten Bytes oder von serialisierten Objekten zwischen voneinander unabhängige Prozesse.  
   
- Freigegebene arbeitsspeicherdateien unterscheiden sich von anderen arbeitsspeicherdateien Arbeitsspeicher dafür zugeordnet wird, die [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows-Funktion. Die `CSharedFile` Klasse speichert Daten in einer global belegten Speicherblocks (erstellt mit `GlobalAlloc`), und diesem Speicherblock freigegeben werden kann mit DDE, die Zwischenablage oder andere OLE/COM uniform Data Transfer Vorgänge, z. B. mit `IDataObject`.  
+ Freigegebene arbeitsspeicherdateien unterscheiden sich von anderen arbeitsspeicherdateien Arbeitsspeicher dafür zugeordnet wird, die [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) Windows-Funktion. Die `CSharedFile` Klasse speichert Daten in einer global belegten Speicherblocks (erstellt mit `GlobalAlloc`), und diesem Speicherblock freigegeben werden kann mit DDE, die Zwischenablage oder andere OLE/COM uniform Data Transfer Vorgänge, z. B. mit `IDataObject`.  
   
  `GlobalAlloc` Gibt HGLOBAL verarbeiten, anstatt ein Zeiger auf Speicher, z. B. der zurückgegebene Zeiger [Malloc](../../c-runtime-library/reference/malloc.md). Das Handle HGLOBAL ist in bestimmten Anwendungen erforderlich. Beispielsweise benötigen Sie zum Einfügen von Daten in die Zwischenablage ein HGLOBAL-Handle.  
   
@@ -89,7 +89,7 @@ CSharedFile(
   
 ### <a name="parameters"></a>Parameter  
  *nAllocFlags*  
- Flags, der angibt, wie Speicher zugeordnet werden. Finden Sie unter [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) eine Liste der gültigen Flagwerte.  
+ Flags, der angibt, wie Speicher zugeordnet werden. Finden Sie unter [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) eine Liste der gültigen Flagwerte.  
   
  *nGrowBytes*  
  Das Inkrement, Memory Allocation in Byte.  

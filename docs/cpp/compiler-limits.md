@@ -14,33 +14,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecf3351180fbff4d6872c7027eee90b92e560059
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 76b08ab88ce5487485c8b8872488c0cf784ad2c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37938898"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093544"
 ---
 # <a name="compiler-limits"></a>Compiler-Grenzen
-Der C++-Standard empfiehlt Grenzen für verschiedene Sprachkonstrukte. Es folgt eine Liste von Fällen, bei denen der Visual C++-Compiler keine empfohlenen Limits implementiert. Die erste Nummer ist das im ISO C++ 11-Standard (INCITS/ISO/IEC 14882-2011[2012], Anhang B) definierte Limit, und die zweite Nummer ist das von Visual C++ implementierte Limit:  
-  
--   Schachtelungsebenen von verbundanweisungen, iterationssteuerungsstrukturen und Auswahl Steuerungsstrukturen - C++-standard: 256, Visual C++-Compiler: abhängig von der Kombination von geschachtelten Anweisungen, typischerweise jedoch zwischen 100 und 110 ist.  
-  
--   Parameter in einer Makrodefinition - C++-standard: 256, Visual C++-Compiler: 127.  
-  
--   Argumente in einem Makroaufruf - C++-standard: 256, Visual C++-Compiler 127.  
-  
--   Zeichen in einem Zeichen string-literal oder breiten Zeichenfolgenliteral (nach Verkettung) - C++-Standard: 65536, Visual C++-Compiler: 65535 Einzelbytezeichen, einschließlich des NULL-Abschlusszeichens, und 32767 Doppelbytezeichen, einschließlich des NULL-Terminators.  
-  
--   Ebenen der geschachtelten Klasse, Struktur oder union-Definitionen in einer einzelnen `struct-declaration-list` -C++-Standard: 256, Visual C++-Compiler: 16.  
-  
--   Memberinitialisierer in einer Konstruktordefinition – C++-standard: 6144, Visual C++-Compiler: mindestens 6144.  
-  
--   Bereichsqualifikationen eines einzigen Bezeichners - C++-standard: 256, Visual C++-Compiler: 127.  
-  
--   Geschachtelte **"extern"** Spezifikationen - C++-standard: 1024, Visual C++-Compiler: 9 (ohne Berücksichtigung der impliziten **"extern"** Spezifikation im globalen Gültigkeitsbereich oder 10, wenn Sie den impliziten zählen **"extern"**  -Spezifikation im globalen Bereich...  
-  
--   Vorlagenargumente in einer Vorlagendeklaration - C++-standard: 1024, Visual C++-Compiler: 2046.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Nicht dem Standard entsprechendes Verhalten](../cpp/nonstandard-behavior.md)
+
+Der C++-Standard empfiehlt Grenzen für verschiedene Sprachkonstrukte. Es folgt eine Liste von Fällen, bei denen der Visual C++-Compiler keine empfohlenen Limits implementiert. Die erste Nummer ist das im ISO C++ 11-Standard (INCITS/ISO/IEC 14882-2011[2012], Anhang B) definierte Limit, und die zweite Nummer ist das von Visual C++ implementierte Limit:
+
+- Schachtelungsebenen von verbundanweisungen, iterationssteuerungsstrukturen und Auswahl Steuerungsstrukturen - C++-standard: 256, Visual C++-Compiler: abhängig von der Kombination von geschachtelten Anweisungen, typischerweise jedoch zwischen 100 und 110 ist.
+
+- Parameter in einer Makrodefinition - C++-standard: 256, Visual C++-Compiler: 127.
+
+- Argumente in einem Makroaufruf - C++-standard: 256, Visual C++-Compiler 127.
+
+- Zeichen in einem Zeichen string-literal oder breiten Zeichenfolgenliteral (nach Verkettung) - C++-Standard: 65536, Visual C++-Compiler: 65535 Einzelbytezeichen, einschließlich des NULL-Abschlusszeichens, und 32767 Doppelbytezeichen, einschließlich des NULL-Terminators.
+
+- Ebenen der geschachtelten Klasse, Struktur oder union-Definitionen in einer einzelnen `struct-declaration-list` -C++-Standard: 256, Visual C++-Compiler: 16.
+
+- Memberinitialisierer in einer Konstruktordefinition – C++-standard: 6144, Visual C++-Compiler: mindestens 6144.
+
+- Bereichsqualifikationen eines einzigen Bezeichners - C++-standard: 256, Visual C++-Compiler: 127.
+
+- Geschachtelte **"extern"** Spezifikationen - C++-standard: 1024, Visual C++-Compiler: 9 (ohne Berücksichtigung der impliziten **"extern"** Spezifikation im globalen Gültigkeitsbereich oder 10, wenn Sie den impliziten zählen **"extern"**  -Spezifikation im globalen Bereich...
+
+- Vorlagenargumente in einer Vorlagendeklaration - C++-standard: 1024, Visual C++-Compiler: 2046.
+
+## <a name="see-also"></a>Siehe auch
+
+[Nicht dem Standard entsprechendes Verhalten](../cpp/nonstandard-behavior.md)

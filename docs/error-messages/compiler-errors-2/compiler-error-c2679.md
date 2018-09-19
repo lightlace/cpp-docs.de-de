@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2679 generiert | Microsoft Docs
+title: Compilerfehler C2679 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24a304d88ccc6044c5358759efffa2a38dfeaf67
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a01a79dfdff06c50b65bde33de62676e6df64a82
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231812"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069494"
 ---
-# <a name="compiler-error-c2679"></a>Compiler-Fehler C2679 generiert
-Binärer 'Operator': Es konnte kein Operator gefunden werden, der einen rechten Operanden vom Typ "Type" akzeptiert (oder keine geeignete Konvertierung)  
-  
- Um den Operator zu verwenden, müssen Sie ihn für den angegebenen Typ überladen oder eine Konvertierung in einen Typ definieren, für den der Operator definiert ist.  
-  
- Im folgende Beispiel wird C2679 generiert:  
-  
-```  
-// C2679.cpp  
-class C {  
-public:  
-   C();   // no constructor with an int argument  
-} c;  
-  
-class D {  
-public:  
-   D(int) {}  
-   D(){}  
-} d;  
-  
-int main() {  
-   c = 10;   // C2679  
-   d = 10;   // OK  
-}  
+# <a name="compiler-error-c2679"></a>Compilerfehler C2679
+
+Binärer 'Operator': Es konnte kein Operator gefunden werden, der einen rechtsseitigen Operanden vom Typ "Type" akzeptiert (oder es ist keine zulässige Konvertierung)
+
+Um den Operator zu verwenden, müssen Sie ihn für den angegebenen Typ überladen oder eine Konvertierung in einen Typ definieren, für den der Operator definiert ist.
+
+Im folgende Beispiel wird die C2679 generiert:
+
+```
+// C2679.cpp
+class C {
+public:
+   C();   // no constructor with an int argument
+} c;
+
+class D {
+public:
+   D(int) {}
+   D(){}
+} d;
+
+int main() {
+   c = 10;   // C2679
+   d = 10;   // OK
+}
 ```

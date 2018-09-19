@@ -1,5 +1,5 @@
 ---
-title: Module::ReleaseNotifier::ReleaseNotifier Konstruktor | Microsoft Docs
+title: Module::ReleaseNotifier::ReleaseNotifier-Konstruktor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bbf21e1abc88c0fac0b9d20653fdb45c3706466d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4ab2d5d03516147acda38ea2133d7445695de80
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882468"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598787"
 ---
 # <a name="modulereleasenotifierreleasenotifier-constructor"></a>Module::ReleaseNotifier::ReleaseNotifier-Konstruktor
-Initialisiert eine neue Instanz der releasenotifier-Klasse.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-ReleaseNotifier(bool release) throw();  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `release`  
- `true` Diese Instanz gelöscht, wenn die Release-Methode aufgerufen wird; `false` diese Instanz nicht gelöscht.  
-  
-## <a name="exceptions"></a>Ausnahmen  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [Module::ReleaseNotifier-Klasse](../windows/module-releasenotifier-class.md)
+
+Initialisiert eine neue Instanz der dem **releasenotifier** Klasse.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+ReleaseNotifier(bool release) throw();
+```
+
+### <a name="parameters"></a>Parameter
+
+*release*  
+**"true"** So löschen Sie diese Instanz bei der `Release` Methode wird aufgerufen. **"false"** diese Instanz nicht gelöscht.
+
+## <a name="exceptions"></a>Ausnahmen
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[Module::ReleaseNotifier-Klasse](../windows/module-releasenotifier-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2383 | Microsoft Docs
+title: Compilerfehler C2383 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81624ccd7f4857cb2f7d8474d393a9743ab1a2b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c529c22636f112291fa53b852899cad78dac589
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196492"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113226"
 ---
 # <a name="compiler-error-c2383"></a>Compilerfehler C2383
-"*Symbol*": Standard-Argumente dürfen nicht auf dieses Symbol  
-  
- Der C++-Compiler lässt keine Standardargumente für Zeiger auf Funktionen.  
-  
- Dieser Code wurde vom Visual C++-Compiler in Versionen vor Visual Studio 2005 akzeptiert, aber jetzt einen Fehler generiert. Weisen Sie für Code, der in allen Versionen von Visual C++ funktioniert einen Standardwert nicht an einen Zeiger auf Funktion-Argument.  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C2383 generiert und gezeigt, eine mögliche Lösung:  
-  
-```cpp  
-// C2383.cpp  
-// compile with: /c   
-void (*pf)(int = 0);   // C2383  
-void (*pf)(int);   // OK  
+
+"*Symbol*': Standardargumente dürfen nicht auf dieses Symbol
+
+Der C++-Compiler lässt die Standardargumente für Zeiger auf Funktionen nicht.
+
+Dieser Code wurde vom Visual C++-Compiler in Versionen vor Visual Studio 2005 akzeptiert, jetzt jedoch einen Fehler. Weisen Sie für Code, der in allen Versionen von Visual C++ funktioniert einen Standardwert nicht auf ein Zeiger auf Funktion-Argument.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird C2383 generiert und gezeigt, eine mögliche Lösung:
+
+```cpp
+// C2383.cpp
+// compile with: /c
+void (*pf)(int = 0);   // C2383
+void (*pf)(int);   // OK
 ```

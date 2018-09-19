@@ -1,5 +1,5 @@
 ---
-title: Systeminterne Funktionen "_InterlockedIncrement" | Microsoft Docs
+title: Funktionen "_InterlockedIncrement" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -54,17 +54,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 598365e4a5439bc17baaed5e603f30c10c49bc1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 369d7c1c6c5bf2201c52bab67361f196b309c6f9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337979"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702545"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedIncrement“
 **Microsoft-spezifisch**  
   
- Geben Sie die systeminterne Compiler-Unterstützung für die Win32- [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [InterlockedIncrement](http://msdn.microsoft.com/library/ms683614.aspx) Funktion.  
+ Geben Sie die systeminterne Compiler-Unterstützung für das Win32-Windows-SDK [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement) Funktion.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -108,8 +108,8 @@ __int64 _InterlockedIncrement64_nf(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in, out] `lpAddend`  
- Zeiger auf die zu erhöhende Variable.  
+*lpAddend*<br/>
+[in, out] Zeiger auf die Variable inkrementiert werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Der Rückgabewert ist der resultierende erhöhte Wert.  
@@ -118,7 +118,7 @@ __int64 _InterlockedIncrement64_nf(
   
 |Systemintern|Architektur|Header|  
 |---------------|------------------|------------|  
-|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|X86, ARM, x64|\<intrin.h>|  
 |`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h>|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -135,7 +135,7 @@ __int64 _InterlockedIncrement64_nf(
  Diese Routinen sind nur als systeminterne Funktionen verfügbar.  
   
 ## <a name="example"></a>Beispiel  
- Ein Beispiel zum Verwenden von `_InterlockedIncrement`, finden Sie unter [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
+ Ein Beispiel zur Verwendung `_InterlockedIncrement`, finden Sie unter [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
   
 **Ende Microsoft-spezifisch**  
   

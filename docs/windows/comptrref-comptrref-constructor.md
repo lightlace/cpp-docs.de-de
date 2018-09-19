@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: Comptrref-Konstruktor | Microsoft Docs'
+title: 'Comptrref:: Comptrref-Konstruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d738d6d00a3ca4c344bcea37b09db7e9c494b50b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 606f9560f6d490e1d50d94dd12103713781c4f1b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870658"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603759"
 ---
 # <a name="comptrrefcomptrref-constructor"></a>ComPtrRef::ComPtrRef-Konstruktor
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-ComPtrRef(  
-   _In_opt_ T* ptr  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `ptr`  
- Der zugrunde liegenden Wert eines anderen ComPtrRef-Objekts.  
-  
-## <a name="remarks"></a>Hinweise  
- Initialisiert eine neue Instanz der ComPtrRef-Klasse aus dem angegebenen Zeiger auf ein anderes ComPtrRef-Objekt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** client.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [ComPtrRef-Klasse](../windows/comptrref-class.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+ComPtrRef(
+   _In_opt_ T* ptr
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*ptr*  
+Der zugrunde liegenden Wert eines anderen **ComPtrRef** Objekt.
+
+## <a name="remarks"></a>Hinweise
+
+Initialisiert eine neue Instanz der dem **ComPtrRef** Klasse aus dem angegebenen Zeiger auf einen anderen **ComPtrRef** Objekt.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** client.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[ComPtrRef-Klasse](../windows/comptrref-class.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: Auto_rename | Microsoft Docs
+title: Auto_rename | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7561e9d9b49f9af885299a6b94d3edbcf8f2a74
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70049daf514659a9ae525e1fca40152df4ab382a
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912809"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541223"
 ---
 # <a name="autorename"></a>auto_rename
 **C++-spezifisch**  
   
- Benennt für C++ reservierte Wörter um, indem dem Variablennamen zwei Unterstriche (__) angefügt werden, um potenzielle Namenskonflikte zu vermeiden.  
+Benennt für C++ reservierte Wörter um, indem dem Variablennamen zwei Unterstriche (__) angefügt werden, um potenzielle Namenskonflikte zu vermeiden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,11 +34,13 @@ ms.locfileid: "33912809"
 auto_rename  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Dieses Attribut wird verwendet, wenn Sie eine Typbibliothek importierten, die eine oder mehrere für C++ reservierte Wörter (Schlüsselwörter oder Makros) als Variablennamen verwendet.  
+## <a name="remarks"></a>Hinweise 
+
+Dieses Attribut wird verwendet, wenn Sie eine Typbibliothek importierten, die eine oder mehrere für C++ reservierte Wörter (Schlüsselwörter oder Makros) als Variablennamen verwendet.  
   
  **Ende C++-spezifisch**  
   
-## <a name="see-also"></a>Siehe auch  
- [#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)   
- [#import-Direktive](../preprocessor/hash-import-directive-cpp.md)
+## <a name="see-also"></a>Siehe auch 
+
+[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)   
+[#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)

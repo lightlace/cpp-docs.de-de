@@ -1,5 +1,5 @@
 ---
-title: InterfaceList-Struktur | Microsoft Docs
+title: InterfaceList-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,52 +17,58 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52acf2f0b9936903b4359e21e23ae50c95d2f31a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 61a8e7b36448a485705b914fbb37892271d7d9fc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876734"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597165"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList-Struktur
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-template <  
-   typename T,  
-   typename U  
->  
-struct InterfaceList;  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `T`  
- Einen Schnittstellennamen; die erste Schnittstelle in der Liste rekursiv.  
-  
- `U`  
- Einen Schnittstellennamen; die verbleibenden Schnittstellen in der Liste rekursiv.  
-  
-## <a name="remarks"></a>Hinweise  
- So erstellen eine rekursive Liste von Schnittstellen verwendet.  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-typedefs"></a>Öffentliche Typedefs  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|`FirstT`|Synonym für den Vorlagenparameter `T`.|  
-|`RestT`|Synonym für den Vorlagenparameter `U`.|  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `InterfaceList`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+template <
+   typename T,
+   typename U
+>
+struct InterfaceList;
+```
+
+### <a name="parameters"></a>Parameter
+
+*T*  
+Der Schnittstellenname einer; die erste Schnittstelle in der Liste rekursiv.
+
+*U*  
+Der Schnittstellenname einer; die verbleibenden Schnittstellen in der Liste rekursiv.
+
+## <a name="remarks"></a>Hinweise
+
+Verwendet, um eine rekursive Liste von Schnittstellen erstellen.
+
+## <a name="members"></a>Member
+
+### <a name="public-typedefs"></a>Öffentliche Typedefs
+
+|Name|Beschreibung|
+|----------|-----------------|
+|`FirstT`|Synonym für den Vorlagenparameter *T*.|
+|`RestT`|Synonym für den Vorlagenparameter *U*.|
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`InterfaceList`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

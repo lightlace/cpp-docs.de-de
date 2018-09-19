@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ea43fefabe43bec8a5bf9b00404491a405e5416
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 33c719ffcba207beb4a5f867192af2b98aef2797
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852980"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719939"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty-Klasse
 Die `CMFCPropertyGridFileProperty` Klasse unterstützt, einem Eigenschaftenlisten-Steuerelement ein Element, das ein Dialogfeld zur Schriftartauswahl öffnet.  
@@ -83,23 +83,23 @@ CMFCPropertyGridFontProperty(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *StrName*  
- Den Namen der Eigenschaft.  
+*strName*<br/>
+[in] Der Name der Eigenschaft.  
   
- [in] *lf*  
- Eine logische Schriftart-Struktur, die die Attribute der Schriftart angibt.  
+*LF*<br/>
+[in] Eine logische Schriftart-Struktur, die die Attribute der Schriftart angibt.  
   
- [in] *DwFontDialogFlags*  
- Formatvorlagen, die auf das Dialogfeld Schriftart angewendet werden, die angezeigt wird, wenn Sie die Eigenschaft Wert Dropdown-Schaltfläche klicken. Der Standardwert ist die bitweise Kombination (OR) von CF_EFFECTS und CF_SCREENFONTS. Weitere Informationen finden Sie unter den *Flags* Parameter, der die [CHOOSEFONT Struktur](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
+*dwFontDialogFlags*<br/>
+[in] Formatvorlagen, die auf das Dialogfeld Schriftart angewendet werden, die angezeigt wird, wenn Sie die Eigenschaft Wert Dropdown-Schaltfläche klicken. Der Standardwert ist die bitweise Kombination (OR) von CF_EFFECTS und CF_SCREENFONTS. Weitere Informationen finden Sie unter den *Flags* Parameter, der die [CHOOSEFONT Struktur](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).  
   
- [in] *LpszDescr*  
- Beschreibung der Font-Eigenschaft. Der Standardwert ist NULL.  
+*lpszDescr*<br/>
+[in] Beschreibung der Font-Eigenschaft. Der Standardwert ist NULL.  
   
- [in] *DwData*  
- Anwendungsspezifische Daten, z. B. eine ganze Zahl oder ein Zeiger auf andere Daten, die der Eigenschaft zugeordnet ist. Der Standardwert ist 0.  
+*dwData*<br/>
+[in] Anwendungsspezifische Daten, z. B. eine ganze Zahl oder ein Zeiger auf andere Daten, die der Eigenschaft zugeordnet ist. Der Standardwert ist 0.  
   
- [in] *Farbe*  
- Die Farbe der Schriftart. Der Standardwert ist die Standardfarbe.  
+*Farbe*<br/>
+[in] Die Farbe der Schriftart. Der Standardwert ist die Standardfarbe.  
   
 ### <a name="remarks"></a>Hinweise  
  Ein `CMFCPropertyGridFontProperty` -Objekt stellt eine Font-Eigenschaft im Eigenschaftenraster-Steuerelement eine Schriftart dar.  
@@ -129,7 +129,7 @@ LPLOGFONT GetLogFont();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine ["LogFont"](http://msdn.microsoft.com/library/windows/desktop/dd145037) Struktur, die die ausgewählte Schriftart beschreibt.  
+ Ein Zeiger auf eine ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) Struktur, die die ausgewählte Schriftart beschreibt.  
   
 ### <a name="remarks"></a>Hinweise  
   

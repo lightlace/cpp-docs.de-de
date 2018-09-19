@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0b4221e32b6e85df0b559b1d6d4ecda381d8e3d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fb91bc7ec37d4738aaf9f1c7ac6532079a0b71d0
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959637"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313719"
 ---
 # <a name="iteratortraits-struct"></a>iterator_traits-Struktur
 
@@ -57,7 +57,7 @@ Die Vorlagenstruktur definiert die Membertypen.
 
 - `reference`: ein Synonym für `Iterator::reference`.
 
-Die Teilspezialisierungen bestimmen die kritischen Typen mit einem Zeiger vom Typ **Type \*** oder const **Type \***.
+Die teilspezialisierungen bestimmen die kritischen Typen mit einem Zeiger vom Typ **Typ** <strong>\*</strong> oder **const-Typ**  <strong>\*</strong>.
 
 In dieser Implementierung können Sie auch mehrere Vorlagenfunktionen verwenden, die keine Teilspezialisierung benutzen:
 
@@ -118,12 +118,12 @@ int main( )
    function( vc.begin( ), vc.end( ) );
    function( li.begin( ), li.end( ) );
 }
-\* Output:
+/* Output:
 struct std::random_access_iterator_tag
 a a a a a a a a a a
 struct std::bidirectional_iterator_tag
 0 0 0 0 0 0 0 0 0 0
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Anforderungen

@@ -1,5 +1,5 @@
 ---
-title: _umul128 | Microsoft Docs
+title: _umul128 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6998b51be8fd11092c4266fa7eee7434be8e5b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6884face758cd7f7b9b507405f41f4fcbac8f188
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331531"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721304"
 ---
 # <a name="umul128"></a>_umul128
 **Microsoft-spezifisch**  
@@ -39,14 +39,14 @@ unsigned __int64 _umul128(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `Multiplier`  
- Die erste zu multiplizierende 64-Bit-Ganzzahl.  
+*Multiplikator*<br/>
+[in] Die erste zu multiplizierende 64-Bit-Ganzzahl.  
   
- [in] `Multiplicand`  
- Die zweite zu multiplizierende 64-Bit-Ganzzahl.  
+*Multiplikand*<br/>
+[in] Die zweite zu multiplizierende 64-Bit-Ganzzahl.  
   
- [out] `HighProduct`  
- Die oberen 64 Bits des Produkts.  
+*HighProduct*<br/>
+[out] Die oberen 64 Bits des Produkts.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Die unteren 64 Bits des Produkts.  
@@ -55,7 +55,7 @@ unsigned __int64 _umul128(
   
 |Systemintern|Architektur|Header|  
 |---------------|------------------|------------|  
-|`_umul128`|ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_umul128`|ARM, x64|\<intrin.h>|  
   
 ## <a name="example"></a>Beispiel  
   

@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4650 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4650 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cb1c9979141e7958b6c2802aaf321efe41e9570
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d49b21452465f26d6e696f928c04c20dc0e33307
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283084"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052886"
 ---
 # <a name="compiler-warning-level-1-c4650"></a>Compilerwarnung (Stufe 1) C4650
-die Debuginformationen nicht in der vorkompilierten Headerdatei; nur globale Symbole aus dem Header werden verfügbar sein.  
-  
- Die vorkompilierte Headerdatei wurde nicht mit Microsoft symbolischen Debuginformationen kompiliert.  
-  
- Wenn verknüpft ist, sind die resultierende ausführbare Datei oder eine Dynamic Link Library-Datei Debuginformationen für lokale Symbole, die in der vorkompilierte Header enthalten.  
-  
- Diese Warnung kann vermieden werden, durch das erneute Kompilieren der vorkompilierten Headerdatei mit dem [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) Befehlszeilenoption.
+
+die Debuginformationen nicht in vorkompilierter Headerdatei vorhanden; nur globale Symbole aus dieser Datei werden verfügbar sein.
+
+Die vorkompilierte Headerdatei wurde nicht mit Microsoft symbolische Debuginformationen kompiliert.
+
+Wenn verknüpft, berücksichtigt die resultierende ausführbare Datei oder eine Dynamic Link Library-Datei keine Debuginformationen für das lokale Symbole in der vorkompilierten Headerdatei.
+
+Diese Warnung kann vermieden werden, durch das erneute Kompilieren der vorkompilierten Headerdatei mit dem ["/ Zi"](../../build/reference/z7-zi-zi-debug-information-format.md) Befehlszeilenoption.

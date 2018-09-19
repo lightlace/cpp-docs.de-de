@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11c83332c12daa6753add0618367b90f8c759532
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a13c7971e65a926799cc0134c811845c292161d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848767"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709182"
 ---
 # <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton-Klasse
 Die `CMFCRibbonUndoButton` -Klasse implementiert eine Dropdown-Listenfeld-Schaltfläche, die neuesten Benutzerbefehle enthält. Benutzer können eine oder mehrere der neuesten Befehle auswählen, aus der Dropdown-Liste entweder wiederholen oder rückgängig machen.  
@@ -89,8 +89,8 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszLabel*  
- Die aktionsbezeichnung, die in der Dropdown-Liste angezeigt werden.  
+*lpszLabel*<br/>
+[in] Die aktionsbezeichnung, die in der Dropdown-Liste angezeigt werden.  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
  Löscht die Aktionsliste, die die Dropdown-Liste ist.  
@@ -117,20 +117,20 @@ CMFCRibbonUndoButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- Gibt die Befehls-ID an.  
+*nID*<br/>
+[in] Gibt die Befehls-ID an.  
   
- [in] *LpszText*  
- Gibt die Beschriftung der Schaltfläche an.  
+*lpszText*<br/>
+[in] Gibt die Beschriftung der Schaltfläche an.  
   
- [in] *nSmallImageIndex*  
- Nullbasierte Index in der Bildliste an, der das übergeordnete Objekt für kleines Bild der Schaltfläche.  
+*nSmallImageIndex*<br/>
+[in] Nullbasierte Index in der Bildliste an, der das übergeordnete Objekt für kleines Bild der Schaltfläche.  
   
- [in] *nLargeImageIndex*  
- Nullbasierte Index in der Bildliste an, der das übergeordnete Objekt für die von der Schaltfläche großes Bild.  
+*nLargeImageIndex*<br/>
+[in] Nullbasierte Index in der Bildliste an, der das übergeordnete Objekt für die von der Schaltfläche großes Bild.  
   
- [in] *hIcon*  
- Ein Handle für ein Symbol, das Sie als Image mit einer Schaltfläche verwenden können.  
+*hIcon*<br/>
+[in] Ein Handle für ein Symbol, das Sie als Image mit einer Schaltfläche verwenden können.  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
  Bestimmt die Anzahl von Elementen, die ein Benutzer aus der Dropdownliste ausgewählt.  

@@ -1,5 +1,5 @@
 ---
-title: __shiftright128 | Microsoft Docs
+title: __shiftright128 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 393138916bf29fd9adb5dceb0b8612b576b84e76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 15c166f51e8d512dd0c5ef8d98bf1e6cf991664f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339721"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714206"
 ---
 # <a name="shiftright128"></a>__shiftright128
 **Microsoft-spezifisch**  
@@ -39,14 +39,14 @@ unsigned __int64 __shiftright128(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `LowPart`  
- Die unteren 64 Bits der zu verschiebenden 128-Bit-Menge.  
+*LowPart*<br/>
+[in] Die unteren 64 Bits der zu verschiebenden 128-Bit-Menge.  
   
- [in] `HighPart`  
- Die oberen 64 Bits der zu verschiebenden 128-Bit-Menge.  
+*HighPart*<br/>
+[in] Die oberen 64 Bits der zu verschiebenden 128-Bit-Menge.  
   
- [in] `Shift`  
- Die Anzahl der zu verschiebenden Bits.  
+*UMSCHALTTASTE*<br/>
+[in] Die Anzahl der zu verschiebenden Bits.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Die unteren 64 Bits des Ergebnisses.  
@@ -55,7 +55,7 @@ unsigned __int64 __shiftright128(
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__shiftright128`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__shiftright128`|x64|  
   
  **Headerdatei** \<intrin.h >  
   

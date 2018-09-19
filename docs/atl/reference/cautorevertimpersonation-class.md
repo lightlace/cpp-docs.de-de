@@ -21,114 +21,132 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af604ac6afce91dc865cfbb465e8c27acea8f775
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 45a14f8c742393c60a026f7c58217407715ef282
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885320"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052738"
 ---
 # <a name="cautorevertimpersonation-class"></a>CAutoRevertImpersonation-Klasse
-Diese Klasse setzt [CAccessToken](../../atl/reference/caccesstoken-class.md) Objekte in einem nonimpersonating Zustand, wenn sie den Gültigkeitsbereich verlässt.  
-  
-## <a name="syntax"></a>Syntax  
-  
+
+Diese Klasse setzt [CAccessToken](../../atl/reference/caccesstoken-class.md) Objekte in einem nonimpersonating Zustand, wenn sie den Gültigkeitsbereich verlässt.
+
+## <a name="syntax"></a>Syntax
+
 ```
 class CAutoRevertImpersonation
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CAutoRevertImpersonation::CAutoRevertImpersonation](#cautorevertimpersonation)|Erstellt eine `CAutoRevertImpersonation` Objekt|  
-|[CAutoRevertImpersonation:: ~ CAutoRevertImpersonation](#dtor)|Zerstört das Objekt, und setzt die Access-token-Identitätswechsel.|  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CAutoRevertImpersonation::Attach](#attach)|Automatisiert die Zurücksetzung Identitätswechsel eines Zugriffstokens.|  
-|[CAutoRevertImpersonation::Detach](#detach)|Bricht den automatischen Identitätswechsel eine neue Version zuweisen.|  
-|[CAutoRevertImpersonation::GetAccessToken](#getaccesstoken)|Ruft die diesem Objekt zugeordneten aktuellen Access token ab.|  
-  
-## <a name="remarks"></a>Hinweise  
- Ein [Zugriffstoken](http://msdn.microsoft.com/library/windows/desktop/aa374909) ist ein Objekt, das beschreibt den Sicherheitskontext eines Prozesses oder Threads. zudem ist jeder Benutzer, die ein Windows NT oder Windows 2000-System angemeldet zugeordnet ist. Diese Zugriffstoken dargestellt werden können, mit der `CAccessToken` Klasse.  
-  
- Manchmal ist es erforderlich, für den Identitätswechsel des Zugangs-Token. Diese Klasse wird zur Vereinfachung bereitgestellt, aber den Identitätswechsel des Zugangs-Token wird nicht ausgeführt; Sie führt nur die automatische Zurücksetzung zu einem nonimpersonated Zustand. Dies ist da tokenzugriff Identitätswechsel für verschiedene Arten ausgeführt werden kann.  
-  
- Eine Einführung in das Zugriffssteuerungsmodell in Windows, finden Sie unter [Zugriffssteuerung](http://msdn.microsoft.com/library/windows/desktop/aa374860) im Windows SDK.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** atlsecurity.h  
-  
-##  <a name="attach"></a>  CAutoRevertImpersonation::Attach  
- Automatisiert die Zurücksetzung Identitätswechsel eines Zugriffstokens.  
-  
+```
+
+## <a name="members"></a>Member
+
+### <a name="public-constructors"></a>Öffentliche Konstruktoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CAutoRevertImpersonation::CAutoRevertImpersonation](#cautorevertimpersonation)|Erstellt eine `CAutoRevertImpersonation` Objekt|
+|[CAutoRevertImpersonation:: ~ CAutoRevertImpersonation](#dtor)|Zerstört das Objekt, und setzt die Access-token-Identitätswechsel.|
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CAutoRevertImpersonation::Attach](#attach)|Automatisiert die Zurücksetzung Identitätswechsel eines Zugriffstokens.|
+|[CAutoRevertImpersonation::Detach](#detach)|Bricht den automatischen Identitätswechsel eine neue Version zuweisen.|
+|[CAutoRevertImpersonation::GetAccessToken](#getaccesstoken)|Ruft die diesem Objekt zugeordneten aktuellen Access token ab.|
+
+## <a name="remarks"></a>Hinweise
+
+Ein [Zugriffstoken](/windows/desktop/SecAuthZ/access-tokens) ist ein Objekt, das beschreibt den Sicherheitskontext eines Prozesses oder Threads. zudem ist jeder Benutzer, die ein Windows NT oder Windows 2000-System angemeldet zugeordnet ist. Diese Zugriffstoken dargestellt werden können, mit der `CAccessToken` Klasse.
+
+Manchmal ist es erforderlich, für den Identitätswechsel des Zugangs-Token. Diese Klasse wird zur Vereinfachung bereitgestellt, aber den Identitätswechsel des Zugangs-Token wird nicht ausgeführt; Sie führt nur die automatische Zurücksetzung zu einem nonimpersonated Zustand. Dies ist da tokenzugriff Identitätswechsel für verschiedene Arten ausgeführt werden kann.
+
+Eine Einführung in das Zugriffssteuerungsmodell in Windows, finden Sie unter [Zugriffssteuerung](/windows/desktop/SecAuthZ/access-control) im Windows SDK.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** atlsecurity.h
+
+##  <a name="attach"></a>  CAutoRevertImpersonation::Attach
+
+Automatisiert die Zurücksetzung Identitätswechsel eines Zugriffstokens.
+
 ```
 void Attach(const CAccessToken* pAT) throw();
-```  
-  
-### <a name="parameters"></a>Parameter  
- *PAT*  
- Die Adresse der [CAccessToken](../../atl/reference/caccesstoken-class.md) Objekt, das automatisch rückgängig gemacht werden  
-  
-### <a name="remarks"></a>Hinweise  
- Diese Methode sollte nur verwendet werden, wenn die [CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) Objekt wurde erstellt, mit einer NULL- `CAccessToken` -Zeiger ist, oder wenn [trennen](#detach) wurde zuvor aufgerufen. In einfachen Fällen ist es nicht erforderlich, diese Methode verwenden.  
-  
-##  <a name="cautorevertimpersonation"></a>  CAutoRevertImpersonation::CAutoRevertImpersonation  
- Erstellt ein `CAutoRevertImpersonation`-Objekt.  
-  
+```
+
+### <a name="parameters"></a>Parameter
+
+*PAT*<br/>
+Die Adresse der [CAccessToken](../../atl/reference/caccesstoken-class.md) Objekt, das automatisch rückgängig gemacht werden
+
+### <a name="remarks"></a>Hinweise
+
+Diese Methode sollte nur verwendet werden, wenn die [CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) Objekt wurde erstellt, mit einer NULL- `CAccessToken` -Zeiger ist, oder wenn [trennen](#detach) wurde zuvor aufgerufen. In einfachen Fällen ist es nicht erforderlich, diese Methode verwenden.
+
+##  <a name="cautorevertimpersonation"></a>  CAutoRevertImpersonation::CAutoRevertImpersonation
+
+Erstellt ein `CAutoRevertImpersonation`-Objekt.
+
 ```
 CAutoRevertImpersonation(const CAccessToken* pAT) throw();
-```  
-  
-### <a name="parameters"></a>Parameter  
- *PAT*  
- Die Adresse der [CAccessToken](../../atl/reference/caccesstoken-class.md) Objekt, das automatisch rückgängig gemacht werden.  
-  
-### <a name="remarks"></a>Hinweise  
- Der tatsächliche Identitätswechsel des Zugriffstokens separat aus, vorzugsweise vor dem Erstellen des ausgeführt werden soll eine `CAutoRevertImpersonation` Objekt. Dieser Identitätswechsel wird zurückgesetzt werden automatisch bei der `CAutoRevertImpersonation` Objekt den Gültigkeitsbereich verlässt.  
-  
-##  <a name="dtor"></a>  CAutoRevertImpersonation:: ~ CAutoRevertImpersonation  
- Zerstört das Objekt, und setzt die Access-token-Identitätswechsel.  
-  
+```
+
+### <a name="parameters"></a>Parameter
+
+*PAT*<br/>
+Die Adresse der [CAccessToken](../../atl/reference/caccesstoken-class.md) Objekt, das automatisch rückgängig gemacht werden.
+
+### <a name="remarks"></a>Hinweise
+
+Der tatsächliche Identitätswechsel des Zugriffstokens separat aus, vorzugsweise vor dem Erstellen des ausgeführt werden soll eine `CAutoRevertImpersonation` Objekt. Dieser Identitätswechsel wird zurückgesetzt werden automatisch bei der `CAutoRevertImpersonation` Objekt den Gültigkeitsbereich verlässt.
+
+##  <a name="dtor"></a>  CAutoRevertImpersonation:: ~ CAutoRevertImpersonation
+
+Zerstört das Objekt, und setzt die Access-token-Identitätswechsel.
+
 ```
 ~CAutoRevertImpersonation() throw();
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Setzt alle Identitätswechsel derzeit für die [CAccessToken](../../atl/reference/caccesstoken-class.md) Objekt bereitgestellt werden, entweder bei der Erstellung oder über die [Anfügen](#attach) Methode. Wenn kein `CAccessToken` wird zugeordnet, der Destruktor hat keine Auswirkungen.  
-  
-##  <a name="detach"></a>  CAutoRevertImpersonation::Detach  
- Bricht den automatischen Identitätswechsel eine neue Version zuweisen.  
-  
+```
+
+### <a name="remarks"></a>Hinweise
+
+Setzt alle Identitätswechsel derzeit für die [CAccessToken](../../atl/reference/caccesstoken-class.md) Objekt bereitgestellt werden, entweder bei der Erstellung oder über die [Anfügen](#attach) Methode. Wenn kein `CAccessToken` wird zugeordnet, der Destruktor hat keine Auswirkungen.
+
+##  <a name="detach"></a>  CAutoRevertImpersonation::Detach
+
+Bricht den automatischen Identitätswechsel eine neue Version zuweisen.
+
 ```
 const CAccessToken* Detach() throw();
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Die Adresse des zuvor zugeordneten [CAccessToken](../../atl/reference/caccesstoken-class.md), oder NULL, wenn keine Zuordnung vorhanden waren.  
-  
-### <a name="remarks"></a>Hinweise  
- Aufrufen **trennen** wird verhindert, dass die `CAutoRevertImpersonation` Objekt aus der Wiederherstellung jeder Identitätswechsel, der derzeit für die [CAccessToken](../../atl/reference/caccesstoken-class.md) Objekt mit diesem Objekt verknüpft ist. `CAutoRevertImpersonation` hat keine Auswirkungen zerstört oder auf demselben oder einem anderen neu zugeordnet werden können `CAccessToken` -Objekt unter Verwendung der [Anfügen](#attach).  
-  
-##  <a name="getaccesstoken"></a>  CAutoRevertImpersonation::GetAccessToken  
- Ruft die diesem Objekt zugeordneten aktuellen Access token ab.  
-  
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Die Adresse des zuvor zugeordneten [CAccessToken](../../atl/reference/caccesstoken-class.md), oder NULL, wenn keine Zuordnung vorhanden waren.
+
+### <a name="remarks"></a>Hinweise
+
+Aufrufen **trennen** wird verhindert, dass die `CAutoRevertImpersonation` Objekt aus der Wiederherstellung jeder Identitätswechsel, der derzeit für die [CAccessToken](../../atl/reference/caccesstoken-class.md) Objekt mit diesem Objekt verknüpft ist. `CAutoRevertImpersonation` hat keine Auswirkungen zerstört oder auf demselben oder einem anderen neu zugeordnet werden können `CAccessToken` -Objekt unter Verwendung der [Anfügen](#attach).
+
+##  <a name="getaccesstoken"></a>  CAutoRevertImpersonation::GetAccessToken
+
+Ruft die diesem Objekt zugeordneten aktuellen Access token ab.
+
 ```
 const CAccessToken* GetAccessToken() throw();
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Die Adresse des zuvor zugeordneten [CAccessToken](../../atl/reference/caccesstoken-class.md), oder NULL, wenn keine Zuordnung vorhanden waren.  
-  
-### <a name="remarks"></a>Hinweise  
- Wenn diese Methode für die Zwecke aufgerufen wird, die die Zurücksetzung eines Identitätswechsels des enthalten die `CAccessToken` -Objekt, das [trennen](#detach) Methode sollte stattdessen verwendet werden.  
-  
-## <a name="see-also"></a>Siehe auch  
- [ATLSecurity-Beispiel](../../visual-cpp-samples.md)   
- [Zugriffstoken](http://msdn.microsoft.com/library/windows/desktop/aa374909)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Die Adresse des zuvor zugeordneten [CAccessToken](../../atl/reference/caccesstoken-class.md), oder NULL, wenn keine Zuordnung vorhanden waren.
+
+### <a name="remarks"></a>Hinweise
+
+Wenn diese Methode für die Zwecke aufgerufen wird, die die Zurücksetzung eines Identitätswechsels des enthalten die `CAccessToken` -Objekt, das [trennen](#detach) Methode sollte stattdessen verwendet werden.
+
+## <a name="see-also"></a>Siehe auch
+
+[ATLSecurity-Beispiel](../../visual-cpp-samples.md)<br/>
+[Zugriffstoken](/windows/desktop/SecAuthZ/access-tokens)<br/>
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)

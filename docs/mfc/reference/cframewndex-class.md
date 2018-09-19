@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97548fca6b47e8d765eb7744a86ab0d4cfa27b17
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: db4e6a01fbf7384cfbc2e1ef2b3c5ed48991998d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337480"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095434"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx-Klasse
 Implementiert die Funktionalität eines Windows-SDI-Rahmenfensters (Single Document Interface), wobei es sich um ein überlappendes oder ein Popupfenster handeln kann. Ebenfalls bereitgestellt werden Member zum Verwalten des Fensters. Es erweitert die [CFrameWnd](../../mfc/reference/cframewnd-class.md) Klasse.  
@@ -250,7 +250,7 @@ class CFrameWndEx : public CFrameWnd
 |[CFrameWndEx::OnCreate](#oncreate)|Vom Framework aufgerufen, nachdem der Frame erstellt wurde.|  
 |[CFrameWndEx::OnDestroy](#ondestroy)|Vom Framework aufgerufen, wenn der Frame zerstört wird.|  
 |[CFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Wird vom Framework aufgerufen, wenn die Anwendung, das ein Menüelement zugeordnete Bild zeichnet.|  
-|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Vom Framework aufgerufen, wenn eine `CMFCPopupMenu` Objekt Prozesse eine [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) Nachricht.|  
+|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Vom Framework aufgerufen, wenn eine `CMFCPopupMenu` Objekt Prozesse eine [WM_PAINT](/windows/desktop/gdi/wm-paint) Nachricht.|  
 |[CFrameWndEx::OnDWMCompositionChanged](#ondwmcompositionchanged)|Vom Framework aufgerufen, wenn die Komposition für Desktop Window Manager (DWM) aktiviert oder deaktiviert wurde.|  
 |[CFrameWndEx::OnExitSizeMove](#onexitsizemove)|Vom Framework aufgerufen, wenn der Frame beendet wird, verschieben oder dessen Größe ändern.|  
 |[CFrameWndEx::OnGetMinMaxInfo](#ongetminmaxinfo)|Vom Framework aufgerufen, wenn der Frame zum Festlegen der Grenzwerte für Fenster-Dimension geändert wird.|  
@@ -337,11 +337,11 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pControlBar*  
- Eine Steuerelement-Leistenbereich registrieren.  
+*pControlBar*<br/>
+[in] Eine Steuerelement-Leistenbereich registrieren.  
   
- [in] *bTail*  
- True, wenn Sie am Ende der Liste der Steuerelement-Leistenbereich hinzufügen möchten. "False" andernfalls.  
+*bTail*<br/>
+[in] True, wenn Sie am Ende der Liste der Steuerelement-Leistenbereich hinzufügen möchten. "False" andernfalls.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Steuerleiste erfolgreich registriert wurde. "False" andernfalls.  
@@ -358,7 +358,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
  Ein Handle für eine Struktur, die Positionen der mehrere Fenster enthält. sein.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Struktur Hdwp wird initialisiert, indem die [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) Methode.  
+ Die Struktur Hdwp wird initialisiert, indem die [BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672) Methode.  
   
 ##  <a name="delayupdateframemenu"></a>  CFrameWndEx::DelayUpdateFrameMenu  
  Legt das Menü "Frame", und wird dann aktualisiert, wenn befehlsverarbeitung im Leerlauf befindet.  
@@ -368,8 +368,8 @@ virtual void DelayUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *hMenuAlt*  
- Handle für ein alternatives-Menü.  
+*hMenuAlt*<br/>
+[in] Handle für ein alternatives-Menü.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -384,14 +384,14 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- Ein Zeiger auf der Steuerleiste angedockt werden.  
+*pBar*<br/>
+[in] Ein Zeiger auf der Steuerleiste angedockt werden.  
   
- [in] *nDockBarID*  
- Die ID der Seite des Rahmenfensters angedockt werden soll.  
+*nDockBarID*<br/>
+[in] Die ID der Seite des Rahmenfensters angedockt werden soll.  
   
- [in] *LpRect*  
- Ein Zeiger auf eine Konstante Rect-Struktur, die Bildschirmposition und Größe des Fensters angibt.  
+*lpRect*<br/>
+[in] Ein Zeiger auf eine Konstante Rect-Struktur, die Bildschirmposition und Größe des Fensters angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Die *nDockBarID* Parameter kann einen der folgenden Werte aufweisen:  
@@ -414,11 +414,11 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- Ein Zeiger auf das Objekt im Bereich angedockt werden.  
+*pBar*<br/>
+[in] Ein Zeiger auf das Objekt im Bereich angedockt werden.  
   
- [in] *pLeftOf*  
- Ein Zeiger auf den Bereich links neben dem Bereich gemäß Andocken *pBar*.  
+*pLeftOf*<br/>
+[in] Ein Zeiger auf den Bereich links neben dem Bereich gemäß Andocken *pBar*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn *pBar* erfolgreich angedockt ist. "False" andernfalls.  
@@ -434,8 +434,8 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwDockStyle*  
- Gibt die Seite das Hauptrahmenfenster, um den Bereich anzudocken.  
+*dwDockStyle*<br/>
+[in] Gibt die Seite das Hauptrahmenfenster, um den Bereich anzudocken.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn eine Leiste Bereich angedockt ist erfolgreich der Frame-Fensters-Seite, die angegebenen *DwDockStyle*"false" andernfalls.  
@@ -459,8 +459,8 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwDockStyle*  
- Gibt die Seite, in dem die Bereich Leiste Dockt, Hauptrahmenfenster.  
+*dwDockStyle*<br/>
+[in] Gibt die Seite, in dem die Bereich Leiste Dockt, Hauptrahmenfenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn eine Leiste Bereich wurde erfolgreich an der angegebenen Seite angedockt werden kann. "False" andernfalls.  
@@ -484,8 +484,8 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bEnableMenu*  
- "True" Show im Hauptmenü in eine vollständige Seite-Modus "false" andernfalls.  
+*bEnableMenu*<br/>
+[in] "True" Show im Hauptmenü in eine vollständige Seite-Modus "false" andernfalls.  
   
 ##  <a name="enablefullscreenmode"></a>  CFrameWndEx::EnableFullScreenMode  
  Können den Vollbildmodus für das Rahmenfenster.  
@@ -495,8 +495,8 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiFullScreenCmd*  
- Die ID eines Befehls, die aktiviert und deaktiviert den Vollbildmodus.  
+*uiFullScreenCmd*<br/>
+[in] Die ID eines Befehls, die aktiviert und deaktiviert den Vollbildmodus.  
   
 ### <a name="remarks"></a>Hinweise  
  Klicken Sie in den Vollbildmodus alle andockbaren Steuerleisten, Symbolleisten und im Menü ausgeblendet sind, und die aktive Ansicht wird angepasst, um den Vollbildmodus zu belegen.  
@@ -513,8 +513,8 @@ void EnableLoadDockState(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- TRUE, um das Laden von den andockzustand, "false" zu aktivieren, um das Laden der Andockstatus zu deaktivieren.  
+*bAktivieren*<br/>
+[in] TRUE, um das Laden von den andockzustand, "false" zu aktivieren, um das Laden der Andockstatus zu deaktivieren.  
   
 ##  <a name="enablepanemenu"></a>  CFrameWndEx::EnablePaneMenu  
  Aktiviert oder deaktiviert die automatische Behandlung von der im Menü.  
@@ -530,23 +530,23 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- True, um die automatische Behandlung von der Steuerleiste Popupmenüs zu aktivieren. So deaktivieren Sie die automatische Behandlung von der Steuerleiste Popupmenüs wird false ZURÜCKGEGEBEN.  
+*bAktivieren*<br/>
+[in] True, um die automatische Behandlung von der Steuerleiste Popupmenüs zu aktivieren. So deaktivieren Sie die automatische Behandlung von der Steuerleiste Popupmenüs wird false ZURÜCKGEGEBEN.  
   
- [in] *UiCustomizeCmd*  
- Die Befehls-ID, der die **anpassen** Menüelement.  
+*uiCustomizeCmd*<br/>
+[in] Die Befehls-ID, der die **anpassen** Menüelement.  
   
- [in] *StrCustomizeLabel*  
- Die Bezeichnung für angezeigt werden soll die **anpassen** Menüelement  
+*strCustomizeLabel*<br/>
+[in] Die Bezeichnung für angezeigt werden soll die **anpassen** Menüelement  
   
- [in] *UiViewToolbarsMenuEntryID*  
- Die ID des eine Symbolleisten-Menüelement, das dem Popup-Menü in der Steuerleiste geöffnet wird.  
+*uiViewToolbarsMenuEntryID*<br/>
+[in] Die ID des eine Symbolleisten-Menüelement, das dem Popup-Menü in der Steuerleiste geöffnet wird.  
   
- [in] *bContextMenuShowsToolbarsOnly*  
- Bei "true", zeigt das Kontextmenü des Steuerelement-Leiste die Liste der Symbolleisten nur an. False gibt an, zeigt das Menü die Liste der Symbolleisten und die andockbaren Balken an.  
+*bContextMenuShowsToolbarsOnly*<br/>
+[in] Bei "true", zeigt das Kontextmenü des Steuerelement-Leiste die Liste der Symbolleisten nur an. False gibt an, zeigt das Menü die Liste der Symbolleisten und die andockbaren Balken an.  
   
- [in] *bViewMenuShowsToolbarsOnly*  
- Bei "true", zeigt das Systemmenü für die Leiste die Liste der Symbolleisten nur an. False gibt an, zeigt das Menü die Liste der Symbolleisten und die andockbaren Balken an.  
+*bViewMenuShowsToolbarsOnly*<br/>
+[in] Bei "true", zeigt das Systemmenü für die Leiste die Liste der Symbolleisten nur an. False gibt an, zeigt das Menü die Liste der Symbolleisten und die andockbaren Balken an.  
   
 ##  <a name="getactivepopup"></a>  CFrameWndEx::GetActivePopup  
  Gibt einen Zeiger auf das aktuell angezeigte Popupmenü zurück.  
@@ -599,8 +599,8 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- Die Steuerelement-ID.  
+*nID*<br/>
+[in] Die Steuerelement-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf den Bereich, der die angegebene ID verfügt. NULL, wenn keine solche Bereich vorhanden ist.  
@@ -637,11 +637,11 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pButton*  
- Ein Zeiger auf eine Symbolleisten-Schaltfläche.  
+*pButton*<br/>
+[in] Ein Zeiger auf eine Symbolleisten-Schaltfläche.  
   
- [in] *StrTTText*  
- Der QuickInfo-Text, der für die Schaltfläche angezeigt werden soll.  
+*strTTText*<br/>
+[in] Der QuickInfo-Text, der für die Schaltfläche angezeigt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn die QuickInfo angezeigt wurde. "False" andernfalls.  
@@ -709,14 +709,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Die Position des Punkts.  
+*Zeigen Sie*<br/>
+[in] Die Position des Punkts.  
   
- [out] *DwBarAlignment*  
- In dem der Punkt ausgerichtet ist. Finden Sie in der Tabelle im Abschnitt "Hinweise", um mögliche Werte.  
+*dwBarAlignment*<br/>
+[out] In dem der Punkt ausgerichtet ist. Finden Sie in der Tabelle im Abschnitt "Hinweise", um mögliche Werte.  
   
- [out] *bOuterEdge*  
- True, wenn der Punkt in der Nähe der Framerahmen befindet. FALSE, wenn der Punkt in einer Clientbereich befindet.  
+*bOuterEdge*<br/>
+[out] True, wenn der Punkt in der Nähe der Framerahmen befindet. FALSE, wenn der Punkt in einer Clientbereich befindet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Punkt in einer Zone Ausrichtung befindet. andernfalls "false".  
@@ -760,17 +760,17 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIDResource*  
- Die Ressourcen-ID, die zum Laden alle Rahmen Ressourcen verwendet wird.  
+*nIDResource*<br/>
+[in] Die Ressourcen-ID, die zum Laden alle Rahmen Ressourcen verwendet wird.  
   
- [in] *DwDefaultStyle*  
- Der Standard-Frame-Fensterstil.  
+*dwDefaultStyle*<br/>
+[in] Der Standard-Frame-Fensterstil.  
   
- [in] *pParentWnd*  
- Zeiger auf das übergeordnete Fenster des Frames.  
+*pParentWnd*<br/>
+[in] Zeiger auf das übergeordnete Fenster des Frames.  
   
- [in] *"pContext"*  
- Zeiger auf eine [CCreateContext-Struktur](../../mfc/reference/ccreatecontext-structure.md) -Klasse, die vom Framework während der Erstellung der Anwendung verwendet wird.  
+*"pContext"*<br/>
+[in] Zeiger auf eine [CCreateContext-Struktur](../../mfc/reference/ccreatecontext-structure.md) -Klasse, die vom Framework während der Erstellung der Anwendung verwendet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich war. andernfalls "false".  
@@ -787,11 +787,11 @@ virtual BOOL NegotiateBorderSpace(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nBorderCmd*  
- Der Border-Aushandlung-Befehl. Finden Sie im Abschnitt "Hinweise" Mögliche Werte.  
+*nBorderCmd*<br/>
+[in] Der Border-Aushandlung-Befehl. Finden Sie im Abschnitt "Hinweise" Mögliche Werte.  
   
- [in, out] *LpRectBorder*  
- Die Abmessungen des Rahmens.  
+*lpRectBorder*<br/>
+[in, out] Die Abmessungen des Rahmens.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Layout neu berechnet werden muss. andernfalls "false".  
@@ -819,14 +819,14 @@ afx_msg void OnActivate(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nState*  
- Gibt an, ob der Frame aktiv oder inaktiv ist. Finden Sie in der Tabelle im Abschnitt "Hinweise", um mögliche Werte.  
+*nState*<br/>
+[in] Gibt an, ob der Frame aktiv oder inaktiv ist. Finden Sie in der Tabelle im Abschnitt "Hinweise", um mögliche Werte.  
   
- [in] *pWndOther*  
- Zeiger auf ein anderes Fenster, das Benutzereingaben mit der aktuellen Instanz gewechselt wird.  
+*pWndOther*<br/>
+[in] Zeiger auf ein anderes Fenster, das Benutzereingaben mit der aktuellen Instanz gewechselt wird.  
   
- [in] *bMinimized*  
- Der minimierten Zustand des Frames. True, wenn der Frame minimiert wird. andernfalls "false".  
+*bMinimized*<br/>
+[in] Der minimierten Zustand des Frames. True, wenn der Frame minimiert wird. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Die folgende Tabelle enthält die möglichen Werte für die *nState* Parameter.  
@@ -850,11 +850,11 @@ afx_msg void OnActivateApp(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bActive*  
- True, wenn die Anwendung ausgewählt ist. "False", wenn die Anwendung nicht ausgewählt ist.  
+*bActive*<br/>
+[in] True, wenn die Anwendung ausgewählt ist. "False", wenn die Anwendung nicht ausgewählt ist.  
   
- [in] *DwThreadID*  
- Dieser Parameter wird nicht verwendet.  
+*dwThreadID*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -868,11 +868,11 @@ afx_msg LRESULT OnChangeVisualManager(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *wParam-Parameter*  
- Dieser Parameter wird nicht verwendet.  
+*wParam-Parameter*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
- [in] *lParam*  
- Dieser Parameter wird nicht verwendet.  
+*lParam*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt immer 0 zurück.  
@@ -941,17 +941,17 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- Die Befehls-ID.  
+*nID*<br/>
+[in] Die Befehls-ID.  
   
- [in] *nCode*  
- Kategorie der Befehl-Meldung.  
+*nCode*<br/>
+[in] Kategorie der Befehl-Meldung.  
   
- [in, out] *pExtra*  
- Zeiger auf ein Command-Objekt.  
+*pExtra*<br/>
+[in, out] Zeiger auf ein Command-Objekt.  
   
- [in, out] *pHandlerInfo*  
- Zeiger auf eine Befehlsstruktur-Handler.  
+*pHandlerInfo*<br/>
+[in, out] Zeiger auf eine Befehlsstruktur-Handler.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Nachricht verarbeitet wurde. andernfalls "false".  
@@ -975,8 +975,8 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpCreateStruct*  
- Ein Zeiger auf die [CREATESTRUCT-Struktur](../../mfc/reference/createstruct-structure.md) für den neuen Rahmen.  
+*lpCreateStruct*<br/>
+[in] Ein Zeiger auf die [CREATESTRUCT-Struktur](../../mfc/reference/createstruct-structure.md) für den neuen Rahmen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  0 zum Fortsetzen der Frame-Erstellung -1, um den Frame zu zerstören.  
@@ -1004,14 +1004,14 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pMenuButton*  
- Ein Zeiger auf eine Menüschaltfläche, dessen Bild gerendert wird.  
+*pMenuButton*<br/>
+[in] Ein Zeiger auf eine Menüschaltfläche, dessen Bild gerendert wird.  
   
- [in] *RectImage*  
- Ein Zeiger auf eine `Rect` -Struktur, die Bildschirmposition und Größe des Bilds angibt.  
+*rectImage*<br/>
+[in] Ein Zeiger auf eine `Rect` -Struktur, die Bildschirmposition und Größe des Bilds angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Framework erfolgreich auf das Bild rendert. "False" andernfalls.  
@@ -1030,14 +1030,14 @@ virtual void OnDrawMenuLogo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pMenu*  
- Ein Zeiger auf das Menüelement.  
+*pMenu*<br/>
+[in] Ein Zeiger auf das Menüelement.  
   
- [in] *RectLogo*  
- Ein Verweis auf eine Konstante `CRect` -Struktur, die Bildschirmposition und Größe des Logos Menü angibt.  
+*rectLogo*<br/>
+[in] Ein Verweis auf eine Konstante `CRect` -Struktur, die Bildschirmposition und Größe des Logos Menü angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, wenn Sie ein Logo im Popupmenü anzeigen, die auf der Menüleiste, die im Besitz von gehört möchten die `CFrameWndEx` abgeleitetes Objekt.  
@@ -1052,11 +1052,11 @@ afx_msg LRESULT OnDWMCompositionChanged(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *wp*  
- Dieser Parameter wird nicht verwendet.  
+*WP*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
- [in] *Lp*  
- Dieser Parameter wird nicht verwendet.  
+*LP*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt immer 0 zurück.  
@@ -1073,11 +1073,11 @@ LRESULT OnExitSizeMove(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *wp*  
- Dieser Parameter wird nicht verwendet.  
+*WP*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
- [in] *Lp*  
- Dieser Parameter wird nicht verwendet.  
+*LP*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt immer 0 zurück.  
@@ -1092,8 +1092,8 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpMMI*  
- Zeiger auf eine [MINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632605) Struktur.  
+*lpMMI*<br/>
+[in] Zeiger auf eine [MINMAXINFO](https://msdn.microsoft.com/library/windows/desktop/ms632605) Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1107,11 +1107,11 @@ afx_msg LRESULT OnIdleUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *wParam-Parameter*  
- Dieser Parameter wird nicht verwendet.  
+*wParam-Parameter*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
- [in] *lParam*  
- Dieser Parameter wird nicht verwendet.  
+*lParam*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt immer 0 zurück.  
@@ -1128,11 +1128,11 @@ afx_msg void OnLButtonDown(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nFlags*  
- Gibt an, ob der Benutzer der Modifizierertasten gedrückt. Mögliche Werte finden Sie in den Parameter *wParam* in [WM_LBUTTONDOWN Benachrichtigung](http://msdn.microsoft.com/library/windows/desktop/ms645607).  
+*nFlags*<br/>
+[in] Gibt an, ob der Benutzer der Modifizierertasten gedrückt. Mögliche Werte finden Sie in den Parameter *wParam* in [WM_LBUTTONDOWN Benachrichtigung](/windows/desktop/inputdev/wm-lbuttondown).  
   
- [in] *zeigen*  
- Gibt an, die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.  
+*Zeigen Sie*<br/>
+[in] Gibt an, die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1146,11 +1146,11 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nFlags*  
- Gibt an, ob der Benutzer der Modifizierertasten gedrückt. Mögliche Werte finden Sie in den Parameter *wParam* in [WM_LBUTTONUP Benachrichtigung](http://msdn.microsoft.com/library/windows/desktop/ms645608).  
+*nFlags*<br/>
+[in] Gibt an, ob der Benutzer der Modifizierertasten gedrückt. Mögliche Werte finden Sie in den Parameter *wParam* in [WM_LBUTTONUP Benachrichtigung](/windows/desktop/inputdev/wm-lbuttonup).  
   
- [in] *zeigen*  
- Gibt an, die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.  
+*Zeigen Sie*<br/>
+[in] Gibt an, die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1164,11 +1164,11 @@ virtual BOOL OnMenuButtonToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pButton*  
- Ein Zeiger auf die Symbolleisten-Schaltfläche.  
+*pButton*<br/>
+[in] Ein Zeiger auf die Symbolleisten-Schaltfläche.  
   
- [out] *pTI*  
- Ein Zeiger auf eine Struktur für Tool.  
+*PTI*<br/>
+[out] Ein Zeiger auf eine Struktur für Tool.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn die Anwendung füllt die *pTI* Parameter. "False" andernfalls.  
@@ -1187,28 +1187,23 @@ afx_msg LRESULT OnMenuChar(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nChar*  
- Zeichencode der gedrückten Taste.  
+*NChar*<br/>
+[in] Zeichencode der gedrückten Taste.  
   
- [in] *nFlags*  
- Enthält die MF_POPUP-Flag an, wenn Sie im angezeigten Menü ein Untermenü handelt; enthält die MF_SYSMENU-Flag an, wenn Sie im angezeigten Menü ein Systemmenü ist.  
+*nFlags*<br/>
+[in] Enthält die MF_POPUP-Flag an, wenn Sie im angezeigten Menü ein Untermenü handelt; enthält die MF_SYSMENU-Flag an, wenn Sie im angezeigten Menü ein Systemmenü ist.  
   
- [in] *pMenu*  
- Zeiger auf ein Menü.  
+*pMenu*<br/>
+[in] Zeiger auf ein Menü.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Das höherwertige Wort muss es sich um einen der folgenden Werte sein.  
-  
- `0`  
- Das Framework sollte die Tastatureingabe ignoriert werden.  
-  
- `1`  
- Das Framework sollte das Menü schließen.  
-  
- `2`  
- Das Framework sollten eines der Elemente angezeigt wird, klicken Sie im Menü auswählen. Das niederwertige Wort enthält die ID des Befehls auswählen.  
-  
-### <a name="remarks"></a>Hinweise  
+
+|||
+|-|-|
+ `0` | Das Framework sollte die Tastatureingabe ignoriert werden.  
+ `1`  | Das Framework sollte das Menü schließen.  
+ `2`  | Das Framework sollten eines der Elemente angezeigt wird, klicken Sie im Menü auswählen. Das niederwertige Wort enthält die ID des Befehls auswählen.  
   
 ##  <a name="onmousemove"></a>  CFrameWndEx::OnMouseMove  
  Das Framework ruft diese Methode auf, wenn der Mauszeiger bewegt wird.  
@@ -1220,11 +1215,11 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nFlags*  
- Gibt an, ob ein Benutzer der Modifizierertasten gedrückt. Mögliche Werte finden Sie in den Parameter *wParam* in [WM_MOUSEMOVE-Benachrichtigung](http://msdn.microsoft.com/library/windows/desktop/ms645616).  
+*nFlags*<br/>
+[in] Gibt an, ob ein Benutzer der Modifizierertasten gedrückt. Mögliche Werte finden Sie in den Parameter *wParam* in [WM_MOUSEMOVE-Benachrichtigung](/windows/desktop/inputdev/wm-mousemove).  
   
- [in] *zeigen*  
- Gibt an, die x- und y die Koordinaten des Mauszeigers relativ zu der oberen linken Ecke des Fensters.  
+*Zeigen Sie*<br/>
+[in] Gibt an, die x- und y die Koordinaten des Mauszeigers relativ zu der oberen linken Ecke des Fensters.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1236,8 +1231,8 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pFrame*  
- Zeiger auf die [CPaneFrameWnd-Klasse](../../mfc/reference/cpaneframewnd-class.md) Bereichsfenster.  
+*pFrame*<br/>
+[in] Zeiger auf die [CPaneFrameWnd-Klasse](../../mfc/reference/cpaneframewnd-class.md) Bereichsfenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Fenster nicht angedockt wurde. FALSE, wenn das Fenster angedockt ist.  
@@ -1252,8 +1247,8 @@ afx_msg BOOL OnNcActivate(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bActive*  
- "True" Zeichnen-Befehl den aktiven Frame; FALSE, wenn den inaktiver Rahmen gezeichnet werden soll.  
+*bActive*<br/>
+[in] "True" Zeichnen-Befehl den aktiven Frame; FALSE, wenn den inaktiver Rahmen gezeichnet werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null zum Fortsetzen der standardverarbeitung; 0, um zu verhindern, dass der nicht-Clientbereich deaktiviert.  
@@ -1270,11 +1265,11 @@ afx_msg void OnNcCalcSize(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bCalcValidRects*  
- True, wenn Sie einen gültige Client-Bereich von der Anwendung angegeben werden muss; andernfalls "false".  
+*bCalcValidRects*<br/>
+[in] True, wenn Sie einen gültige Client-Bereich von der Anwendung angegeben werden muss; andernfalls "false".  
   
- [in] *Lpncsp*  
- Zeiger auf eine `NCCALCSIZE_PARAMS` -Struktur, die Änderungen der Frame-Dimension enthält.  
+*lpncsp*<br/>
+[in] Zeiger auf eine `NCCALCSIZE_PARAMS` -Struktur, die Änderungen der Frame-Dimension enthält.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1286,11 +1281,11 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Die Position des Mauszeigers in Bildschirmkoordinaten.  
+*Zeigen Sie*<br/>
+[in] Die Position des Mauszeigers in Bildschirmkoordinaten.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger erreicht Enumerationswert. Eine Liste der möglichen Werte finden Sie unter [eine WM_NCHITTEST-Benachrichtigung](http://msdn.microsoft.com/library/windows/desktop/ms645618).  
+ Ein Zeiger erreicht Enumerationswert. Eine Liste der möglichen Werte finden Sie unter [eine WM_NCHITTEST-Benachrichtigung](/windows/desktop/inputdev/wm-nchittest).  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1304,11 +1299,11 @@ afx_msg void OnNcMouseMove(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nHitTest*  
- Ein Zeiger erreicht Enumerationswert. Eine Liste der möglichen Werte finden Sie unter [eine WM_NCHITTEST-Benachrichtigung](http://msdn.microsoft.com/library/windows/desktop/ms645618).  
+*nHitTest*<br/>
+[in] Ein Zeiger erreicht Enumerationswert. Eine Liste der möglichen Werte finden Sie unter [eine WM_NCHITTEST-Benachrichtigung](/windows/desktop/inputdev/wm-nchittest).  
   
- [in] *zeigen*  
- Die Position des Mauszeigers in Bildschirmkoordinaten.  
+*Zeigen Sie*<br/>
+[in] Die Position des Mauszeigers in Bildschirmkoordinaten.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1329,8 +1324,8 @@ afx_msg BOOL OnPaneCheck(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- Steuerelement-ID eines Bereichs.  
+*nID*<br/>
+[in] Steuerelement-ID eines Bereichs.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Befehl behandelt wurde. Zum Fortsetzen der befehlsverarbeitung wird false ZURÜCKGEGEBEN.  
@@ -1347,11 +1342,11 @@ afx_msg LRESULT OnPostPreviewFrame(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *wParam-Parameter*  
- Dieser Parameter wird nicht verwendet.  
+*wParam-Parameter*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
- [in] *lParam*  
- True, wenn der Frame im Seitenansichtsmodus ist; "False", wenn der Seitenansichtmodus deaktiviert ist.  
+*lParam*<br/>
+[in] True, wenn der Frame im Seitenansichtsmodus ist; "False", wenn der Seitenansichtmodus deaktiviert ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt immer 0 zurück.  
@@ -1368,11 +1363,11 @@ afx_msg LRESULT OnPowerBroadcast(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *wp*  
- Das Power Management-Ereignis. Eine Liste der möglichen Werte finden Sie unter [WM_POWERBROADCAST-Meldung](http://msdn.microsoft.com/library/windows/desktop/aa373247).  
+*WP*<br/>
+[in] Das Power Management-Ereignis. Eine Liste der möglichen Werte finden Sie unter [WM_POWERBROADCAST-Meldung](/windows/desktop/Power/wm-powerbroadcast).  
   
- [in] *Lp*  
- Dieser Parameter wird nicht verwendet.  
+*LP*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Führen Sie die standardmäßige Fensterprozedur aufzurufen.  
@@ -1391,14 +1386,14 @@ BOOL OnSetMenu(HMENU hmenu);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *wp*  
- Handle für das neue Menü der Frame-Fensters.  
+*WP*<br/>
+[in] Handle für das neue Menü der Frame-Fensters.  
   
- [in] *Lp*  
- Handle für das neue Fenstermenü.  
+*LP*<br/>
+[in] Handle für das neue Fenstermenü.  
   
- [in] *Hmenu*  
- Handle für das neue Menü der Frame-Fensters.  
+*HMENU*<br/>
+[in] Handle für das neue Menü der Frame-Fensters.  
   
 ### <a name="return-value"></a>Rückgabewert  
  LRESULT wird das Ergebnis des Aufrufs der Standardfensterprozedur.  
@@ -1417,11 +1412,11 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bPreview*  
- True, um die Seitenansicht zu aktivieren. So deaktivieren Sie die Seitenansicht wird false ZURÜCKGEGEBEN.  
+*bPreview*<br/>
+[in] True, um die Seitenansicht zu aktivieren. So deaktivieren Sie die Seitenansicht wird false ZURÜCKGEGEBEN.  
   
- [in] *pState*  
- Zeiger auf eine `CPrintPreviewState` frame Statusstruktur.  
+*pState*<br/>
+[in] Zeiger auf eine `CPrintPreviewState` frame Statusstruktur.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1435,14 +1430,14 @@ afx_msg LRESULT OnSetText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *wParam-Parameter*  
- Dieser Parameter wird nicht verwendet.  
+*wParam-Parameter*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
- [in] *lParam*  
- Zeiger auf den Text für das Fenster.  
+*lParam*<br/>
+[in] Zeiger auf den Text für das Fenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Rückgabewert von einem Aufruf von [DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572).  
+ Rückgabewert von einem Aufruf von [DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca).  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1456,11 +1451,11 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pMenuPane*  
- Ein Zeiger auf die schnelle anpassen, Bereich.  
+*pMenuPane*<br/>
+[in] Ein Zeiger auf die schnelle anpassen, Bereich.  
   
- [in] *UiToolbarID*  
- Die Steuerelement-ID der Symbolleiste anpassen.  
+*uiToolbarID*<br/>
+[in] Die Steuerelement-ID der Symbolleiste anpassen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Diese Methode, immer "true" zurück.  
@@ -1476,8 +1471,8 @@ virtual BOOL OnShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bShow*  
- True, wenn die Anwendung den Bereichen angezeigt. "False" andernfalls.  
+*bShow*<br/>
+[in] True, wenn die Anwendung den Bereichen angezeigt. "False" andernfalls.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Diese Methode, immer "false" zurück.  
@@ -1497,8 +1492,8 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pMenu*  
- Ein Zeiger auf ein Popup-Menü.  
+*pMenu*<br/>
+[in] Ein Zeiger auf ein Popup-Menü.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Popup-Menü angezeigt wird. andernfalls "false".  
@@ -1517,14 +1512,14 @@ afx_msg void OnSize(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nType*  
- Der Typ des Ändern der Größe. Mögliche Werte finden Sie in den Parameter *wParam* in [WM_SIZE-Benachrichtigung](http://msdn.microsoft.com/library/windows/desktop/ms632646).  
+*nType*<br/>
+[in] Der Typ des Ändern der Größe. Mögliche Werte finden Sie in den Parameter *wParam* in [WM_SIZE-Benachrichtigung](/windows/desktop/winmsg/wm-size).  
   
- [in] *Cx*  
- Neue Breite des Rahmens in Pixel.  
+*CX*<br/>
+[in] Neue Breite des Rahmens in Pixel.  
   
- [in] *cy*  
- Die neue Höhe des Rahmens in Pixel.  
+*CY*<br/>
+[in] Die neue Höhe des Rahmens in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1538,11 +1533,11 @@ afx_msg void OnSizing(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *FwSide*  
- Der Rand des Frames, die verschoben werden. Der Parameter *wParam* in [WM_SIZING Benachrichtigung](http://msdn.microsoft.com/library/windows/desktop/ms632647).  
+*fwSide*<br/>
+[in] Der Rand des Frames, die verschoben werden. Der Parameter *wParam* in [WM_SIZING Benachrichtigung](/windows/desktop/winmsg/wm-sizing).  
   
- [in, out] *pRect*  
- Zeiger auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) oder [RECT](../../mfc/reference/rect-structure1.md) Struktur, des Frames Koordinaten enthält.  
+*pRect*<br/>
+[in, out] Zeiger auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) oder [RECT](../../mfc/reference/rect-structure1.md) Struktur, des Frames Koordinaten enthält.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1565,11 +1560,11 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pMenuPopup*  
- Ein Zeiger auf ein Popup-Menü.  
+*pMenuPopup*<br/>
+[in] Ein Zeiger auf ein Popup-Menü.  
   
- [in] *pBar*  
- Ein Zeiger auf eine abtrennbarer Leiste.  
+*pBar*<br/>
+[in] Ein Zeiger auf eine abtrennbarer Leiste.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Popup-Menü mit den abtrennbarer Leiste aktiviert ist. andernfalls "false".  
@@ -1589,11 +1584,11 @@ afx_msg LRESULT OnToolbarContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *wp*  
- Dieser Parameter wird nicht verwendet.  
+*WP*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
- [in] *Lp*  
- Dieser Parameter wird nicht verwendet.  
+*LP*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt immer 1 zurück.  
@@ -1610,11 +1605,11 @@ afx_msg LRESULT OnToolbarCreateNew(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *wp*  
- Dieser Parameter wird nicht verwendet.  
+*WP*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
- [in] *Lp*  
- Zeiger auf den Text für die Titelleiste der Symbolleiste.  
+*LP*<br/>
+[in] Zeiger auf den Text für die Titelleiste der Symbolleiste.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf die neue Symbolleiste; oder NULL, wenn eine Symbolleiste nicht erstellt wurde.  
@@ -1626,16 +1621,17 @@ afx_msg LRESULT OnToolbarCreateNew(
   
 ```  
 afx_msg LRESULT OnToolbarDelete(
-    WPARAM, 
+    WPARAM /* unused */, 
     LPARAM lp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in]  
- Dieser Parameter wird nicht verwendet.  
+
+*nicht verwendete*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
- [in] *Lp*  
- Zeiger auf eine Symbolleiste.  
+*LP*<br/>
+[in] Zeiger auf eine Symbolleiste.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Symbolleiste gelöscht wurde. andernfalls "false".  
@@ -1650,8 +1646,8 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *hMenuAlt*  
- Handle für das Menü "andere".  
+*hMenuAlt*<br/>
+[in] Handle für das Menü "andere".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1663,8 +1659,8 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAddToTitle*  
- True, um den Titel des aktiven Dokuments in die Titelleiste der Frame-Fensters hinzufügen. andernfalls "false".  
+*bAddToTitle*<br/>
+[in] True, um den Titel des aktiven Dokuments in die Titelleiste der Frame-Fensters hinzufügen. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1676,8 +1672,8 @@ afx_msg void OnUpdatePaneMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nämlich pCmdUI*  
- Zeiger auf das Bereich User Interface-Objekt.  
+*nämlich pCmdUI*<br/>
+[in] Zeiger auf das Bereich User Interface-Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1689,8 +1685,8 @@ afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Lpwndpos*  
- Zeiger auf eine [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) -Struktur, die neue Größe und Position enthält.  
+*lpwndpos*<br/>
+[in] Zeiger auf eine [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) -Struktur, die neue Größe und Position enthält.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1712,20 +1708,20 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Die Bildschirmkoordinaten des Punkts um zu überprüfen.  
+*Zeigen Sie*<br/>
+[in] Die Bildschirmkoordinaten des Punkts um zu überprüfen.  
   
- [in] *nSensitivity*  
- Erweitern Sie das umschließende Rechteck des jede Steuerleiste um diesen Betrag an, bei der Suche nach Punkt.  
+*nSensitivity*<br/>
+[in] Erweitern Sie das umschließende Rechteck des jede Steuerleiste um diesen Betrag an, bei der Suche nach Punkt.  
   
- [in] *bExactBar*  
- "True", ignoriert der *nSensitivity* Parameter ist, andernfalls FALSE.  
+*bExactBar*<br/>
+[in] "True", ignoriert der *nSensitivity* Parameter ist, andernfalls FALSE.  
   
- [in] *pRTCBarType*  
- Wenn nicht NULL ist, sucht die Methode nur die Steuerleisten des angegebenen Typs.  
+*pRTCBarType*<br/>
+[in] Wenn nicht NULL ist, sucht die Methode nur die Steuerleisten des angegebenen Typs.  
   
- [out] *DwAlignment*  
- Wenn erfolgreich, enthält dieser Parameter der Seite der Steuerleiste, die dem angegebenen Punkt am nächsten ist. Andernfalls ist dieser Parameter nicht initialisiert werden.  
+*dwAlignment*<br/>
+[out] Wenn erfolgreich, enthält dieser Parameter der Seite der Steuerleiste, die dem angegebenen Punkt am nächsten ist. Andernfalls ist dieser Parameter nicht initialisiert werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf eine Steuerleiste, die enthält die *zeigen*; NULL, wenn kein Steuerelement gefunden wird.  
@@ -1743,8 +1739,8 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pMsg*  
- Ein Zeiger auf eine [MSG](../../mfc/reference/msg-structure1.md) -Struktur, die zu verarbeitende Meldung enthält.  
+*pMsg*<br/>
+[in] Ein Zeiger auf eine [MSG](../../mfc/reference/msg-structure1.md) -Struktur, die zu verarbeitende Meldung enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn die Meldung behandelt wurde und nicht weitergeleitet werden soll; 0, wenn die Nachricht nicht verarbeitet wurde und weitergeleitet werden soll.  
@@ -1759,8 +1755,8 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bNotify*  
- Gibt an, ob der OLE-Clientelement über die layoutänderung benachrichtigen.  
+*bNotify*<br/>
+[in] Gibt an, ob der OLE-Clientelement über die layoutänderung benachrichtigen.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird aufgerufen, wenn die Größe des Rahmenfensters geändert hat oder Wenn Steuerleisten angezeigt oder ausgeblendet werden.  
@@ -1778,20 +1774,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pControlBar*  
- Ein Zeiger auf die Steuerelement-Leistenbereich entfernen.  
+*pControlBar*<br/>
+[in] Ein Zeiger auf die Steuerelement-Leistenbereich entfernen.  
   
- [in] *bDestroy*  
- True, um die Steuerleiste zerstört wird, nach dem Entfernen. "False" andernfalls.  
+*bDestroy*<br/>
+[in] True, um die Steuerleiste zerstört wird, nach dem Entfernen. "False" andernfalls.  
   
- [in] *bAdjustLayout*  
- True, um das Layout des Docks anpassen. "False" andernfalls.  
+*bAdjustLayout*<br/>
+[in] True, um das Layout des Docks anpassen. "False" andernfalls.  
   
- [in] *bAutoHide*  
- True, wenn die Steuerleiste im Modus "automatisch ausblenden". "False" andernfalls.  
+*bAutoHide*<br/>
+[in] True, wenn die Steuerleiste im Modus "automatisch ausblenden". "False" andernfalls.  
   
- [in] *pBarReplacement*  
- Ein Zeiger auf einen Bereich, der Bereich entfernten ersetzt.  
+*pBarReplacement*<br/>
+[in] Ein Zeiger auf einen Bereich, der Bereich entfernten ersetzt.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um eine Steuerleiste vom Layout Docks des Rahmenfensters zu entfernen.  
@@ -1817,8 +1813,8 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Zeiger auf ein Rahmenfenster für die Seitenansicht.  
+*Aufnehmen*<br/>
+[in] Zeiger auf ein Rahmenfenster für die Seitenansicht.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1833,14 +1829,14 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Menü*  
- Ein `CMenu` Objekt geändert werden.  
+*Menü "*<br/>
+[in] Ein `CMenu` Objekt geändert werden.  
   
- [in] *UiViewUserToolbarCmdFirst*  
- Der erste benutzerdefinierte-Befehl.  
+*uiViewUserToolbarCmdFirst*<br/>
+[in] Der erste benutzerdefinierte-Befehl.  
   
- [in] *UiViewUserToolbarCmdLast*  
- Der letzte benutzerdefinierte-Befehl.  
+*uiViewUserToolbarCmdLast*<br/>
+[in] Der letzte benutzerdefinierte-Befehl.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework speichert die benutzerdefinierte Befehle in einer Liste. Verwendung *UiViewUserToolbarCmdFirst* und *UiViewUserToolbarCmdList* an die Indizes der Befehle zum Einfügen.  
@@ -1864,17 +1860,17 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- Ein Zeiger auf der Steuerleiste angezeigt oder ausgeblendet werden soll.  
+*pBar*<br/>
+[in] Ein Zeiger auf der Steuerleiste angezeigt oder ausgeblendet werden soll.  
   
- [in] *bShow*  
- Bei "true", zeigt die Anwendung die Steuerleiste. Andernfalls wird die Anwendung die Steuerleiste ausgeblendet.  
+*bShow*<br/>
+[in] Bei "true", zeigt die Anwendung die Steuerleiste. Andernfalls wird die Anwendung die Steuerleiste ausgeblendet.  
   
- [in] *bDelay*  
- True gibt an, die Anpassung von Layout des Docks verzögern, bis das Framework ruft [CFrameWndEx::AdjustDockingLayout](#adjustdockinglayout). Neuberechnen von Layout des Docks hingegen sofort.  
+*bDelay*<br/>
+[in] True gibt an, die Anpassung von Layout des Docks verzögern, bis das Framework ruft [CFrameWndEx::AdjustDockingLayout](#adjustdockinglayout). Neuberechnen von Layout des Docks hingegen sofort.  
   
- [in] *bActivate*  
- True gibt an, Aktivieren der Steuerleiste. Andernfalls werden die Steuerleiste in einen inaktiven Status angezeigt.  
+*bActivate*<br/>
+[in] True gibt an, Aktivieren der Steuerleiste. Andernfalls werden die Steuerleiste in einen inaktiven Status angezeigt.  
   
 ##  <a name="updatecaption"></a>  CFrameWndEx::UpdateCaption  
  Wird aufgerufen, durch das Framework die framebeschriftung Fenster zu aktualisieren.  
@@ -1896,10 +1892,10 @@ virtual void WinHelp(
   
 ### <a name="parameters"></a>Parameter  
  *dwData*  
- Daten, die hängt die *nCmd* Parameter. Eine Liste der möglichen Werte finden Sie unter [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
+ Daten, die hängt die *nCmd* Parameter. Eine Liste der möglichen Werte finden Sie unter [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa).  
   
  *nCmd*  
- Der Help-Befehl. Eine Liste der möglichen Werte finden Sie unter [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
+ Der Help-Befehl. Eine Liste der möglichen Werte finden Sie unter [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa).  
   
 ### <a name="remarks"></a>Hinweise  
   

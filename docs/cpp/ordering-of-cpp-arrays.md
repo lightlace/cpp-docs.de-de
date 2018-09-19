@@ -1,5 +1,5 @@
 ---
-title: Reihenfolge von C++-Arrays | Microsoft Docs
+title: Reihenfolge von C++-Arrays | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cba08aeee123c8b4ed237f2ad5a8397e0f354d10
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b4b285d77596362e2056ebc48d5a25878060ef1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419965"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031794"
 ---
 # <a name="ordering-of-c-arrays"></a>Reihenfolge von C++-Arrays
-C++-Arrays werden in zeilengerichteter Reihenfolge gespeichert. Zeilengerichtete Reihenfolge bedeutet, dass sich der letzte Feldindex am schnellsten unterscheidet.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Arrays](../cpp/arrays-cpp.md)
+
+C++-Arrays werden in zeilengerichteter Reihenfolge gespeichert. Zeilengerichtete Reihenfolge bedeutet, dass sich der letzte Feldindex am schnellsten unterscheidet.
+
+## <a name="see-also"></a>Siehe auch
+
+[Arrays](../cpp/arrays-cpp.md)

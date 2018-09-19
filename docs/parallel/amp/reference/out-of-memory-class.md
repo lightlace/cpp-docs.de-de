@@ -1,5 +1,5 @@
 ---
-title: Out_of_memory-Klasse | Microsoft Docs
+title: Out_of_memory-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ab3285e0b37b8af93803a1a2752e25b6d91ab2f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b57e27647f61b551f8ea5c2770290e1ae9627014
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695294"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070917"
 ---
 # <a name="outofmemory-class"></a>out_of_memory-Klasse
 Die Ausnahme, die ausgelöst wird, wenn eine Methode aufgrund unzureichenden System- oder Gerätearbeitsspeichers fehlschlägt.  
@@ -67,8 +67,8 @@ out_of_memory () throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Message`  
- Eine Beschreibung des Fehlers.  
+*_Nachricht*<br/>
+Eine Beschreibung des Fehlers.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Eine neue Instanz der `out_of_memory`-Klasse.  

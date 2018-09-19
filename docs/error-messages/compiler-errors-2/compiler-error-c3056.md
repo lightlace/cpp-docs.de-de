@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3056 | Microsoft Docs
+title: Compilerfehler C3056 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52ec97865a1aa9c8b6da9b109bf100eb62824a9d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0495bc9c31df3aa3ff47ef860e8e47ea6f7c2248
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249166"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063579"
 ---
 # <a name="compiler-error-c3056"></a>Compilerfehler C3056
-'symbol': Das Symbol befindet sich nicht im gleichen Bereich wie die 'threadprivate'-Direktive.  
-  
- Ein in einer [threadprivate](../../parallel/openmp/reference/threadprivate.md) -Klausel verwendetes Symbol muss sich im gleichen Bereich wie die `threadprivate` -Klausel befinden.  
-  
- Im folgenden Beispiel wird C3056 generiert:  
-  
-```  
-// C3056.cpp  
-// compile with: /openmp  
-int x, y;  
-void test() {  
-   #pragma omp threadprivate(x, y)   // C3056  
-   #pragma omp parallel copyin(x, y)  
-   {  
-      x = y;  
-   }  
-}  
-```  
-  
- Mögliche Lösung:  
-  
-```  
-// C3056b.cpp  
-// compile with: /openmp /LD  
-int x, y;  
-#pragma omp threadprivate(x, y)  
-void test() {  
-   #pragma omp parallel copyin(x, y)  
-   {  
-      x = y;  
-   }  
-}  
+
+'symbol': Das Symbol befindet sich nicht im gleichen Bereich wie die 'threadprivate'-Direktive.
+
+Ein in einer [threadprivate](../../parallel/openmp/reference/threadprivate.md) -Klausel verwendetes Symbol muss sich im gleichen Bereich wie die `threadprivate` -Klausel befinden.
+
+Im folgenden Beispiel wird C3056 generiert:
+
+```
+// C3056.cpp
+// compile with: /openmp
+int x, y;
+void test() {
+   #pragma omp threadprivate(x, y)   // C3056
+   #pragma omp parallel copyin(x, y)
+   {
+      x = y;
+   }
+}
+```
+
+Mögliche Lösung:
+
+```
+// C3056b.cpp
+// compile with: /openmp /LD
+int x, y;
+#pragma omp threadprivate(x, y)
+void test() {
+   #pragma omp parallel copyin(x, y)
+   {
+      x = y;
+   }
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 3) C4641 | Microsoft Docs
+title: Compilerwarnung (Stufe 3) C4641 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea8413971353e7ffbe6579412d0eed9c735b91b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f44e94868f6a7b379fb1a2f75bbd28ce011b54c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291436"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112108"
 ---
 # <a name="compiler-warning-level-3-c4641"></a>Compilerwarnung (Stufe 3) C4641
-XML-Dokument-Kommentar enthält einen mehrdeutigen Querverweis  
-  
- Der Compiler konnte einen Verweis eindeutig zu beheben. Um diese Warnung zu beheben, geben Sie die Parameterinformationen erforderlich, um den Verweis eindeutig zu machen.  
-  
- Weitere Informationen finden Sie unter [XML Documentation](../../ide/xml-documentation-visual-cpp.md).  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C4641 generiert.  
-  
-```  
-// C4641.cpp  
-// compile with: /W3 /doc /clr /c  
-  
-/// <see cref="f" />   // C4641  
-// try the following line instead  
-// /// <see cref="f(int)" />  
-public ref class GR {  
-public:  
-   void f( int ) {}  
-   void f( char ) {}  
-};  
+
+XML-Dokumentkommentar enthält einen mehrdeutigen Querverweis
+
+Der Compiler konnte einen Verweis eindeutig zu beheben. Um diese Warnung zu beheben, geben Sie die erforderlichen Parameterinformationen für den Verweis eindeutig zu machen.
+
+Weitere Informationen finden Sie unter [XML Documentation](../../ide/xml-documentation-visual-cpp.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C4641 generiert.
+
+```
+// C4641.cpp
+// compile with: /W3 /doc /clr /c
+
+/// <see cref="f" />   // C4641
+// try the following line instead
+// /// <see cref="f(int)" />
+public ref class GR {
+public:
+   void f( int ) {}
+   void f( char ) {}
+};
 ```

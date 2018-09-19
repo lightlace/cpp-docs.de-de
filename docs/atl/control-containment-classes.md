@@ -16,27 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a54da05cb71114f455b24d18004049b2fa91b2a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6c2fb505fd48aac41e49fcbe459fa0bc9c9a579f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959338"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756907"
 ---
 # <a name="control-containment-classes"></a>Steuerelementkapselung-Klassen
-Die folgenden Klassen bieten Containment-Unterstützung für das Hosten von Steuerelementen:  
-  
--   [CAxWindow](../atl/reference/caxwindow-class.md) bietet Methoden zum Bearbeiten eines Fensters, der ein ActiveX-Steuerelement hostet.  
-  
--   [CAxWindow2T](../atl/reference/caxwindow2t-class.md) bietet Methoden zum Bearbeiten von ein Fenster, ein ActiveX-Steuerelement hostet, und bietet auch Unterstützung für die lizenzierten ActiveX-Steuerelemente hosten.  
-  
--   [IAxWinAmbientDispatch](../atl/reference/iaxwinambientdispatch-interface.md) rufen Sie die Methoden für diese Schnittstelle für ein gehostetes Steuerelement verfügbaren Umgebungseigenschaften festzulegen.  
-  
--   [IAxWinHostWindow](../atl/reference/iaxwinhostwindow-interface.md) rufen Sie die Methoden für diese Schnittstelle zum Erstellen und/oder fügen Sie ein Steuerelement an ein Objekt oder eine Schnittstelle aus einem gehosteten Steuerelement abzurufen.  
-  
-## <a name="related-articles"></a>Verwandte Artikel  
- [Fragen und Antworten zur ATL-Steuerelementkapselung](../atl/atl-control-containment-faq.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../atl/atl-class-overview.md)
+
+Die folgenden Klassen bieten Containment-Unterstützung für das Hosten von Steuerelementen:
+
+- [CAxWindow](../atl/reference/caxwindow-class.md) bietet Methoden zum Bearbeiten eines Fensters, der ein ActiveX-Steuerelement hostet.
+
+- [CAxWindow2T](../atl/reference/caxwindow2t-class.md) bietet Methoden zum Bearbeiten von ein Fenster, ein ActiveX-Steuerelement hostet, und bietet auch Unterstützung für die lizenzierten ActiveX-Steuerelemente hosten.
+
+- [IAxWinAmbientDispatch](../atl/reference/iaxwinambientdispatch-interface.md) rufen Sie die Methoden für diese Schnittstelle für ein gehostetes Steuerelement verfügbaren Umgebungseigenschaften festzulegen.
+
+- [IAxWinHostWindow](../atl/reference/iaxwinhostwindow-interface.md) rufen Sie die Methoden für diese Schnittstelle zum Erstellen und/oder fügen Sie ein Steuerelement an ein Objekt oder eine Schnittstelle aus einem gehosteten Steuerelement abzurufen.
+
+## <a name="related-articles"></a>Verwandte Artikel
+
+[Fragen und Antworten zur ATL-Steuerelementkapselung](../atl/atl-control-containment-faq.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../atl/atl-class-overview.md)
 

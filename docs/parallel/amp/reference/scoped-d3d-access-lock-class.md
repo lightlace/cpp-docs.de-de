@@ -1,5 +1,5 @@
 ---
-title: scoped_d3d_access_lock-Klasse | Microsoft Docs
+title: scoped_d3d_access_lock-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0053fa89139ac806a3d8ae0572cd053dd6bec72c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cbddd9181f48477de285e65b966aea354a55fa74
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688140"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059593"
 ---
 # <a name="scopedd3daccesslock-class"></a>scoped_d3d_access_lock-Klasse
 RAII-Wrapper für eine D3D-Zugriffssperre auf einem accelerator_view-Objekt.  
@@ -74,14 +74,14 @@ scoped_d3d_access_lock(// [3] move constructor
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Av`  
- Das `accelerator_view`-Objekt, für das die Sperre übernommen wird.  
+*_Av*<br/>
+Das `accelerator_view`-Objekt, für das die Sperre übernommen wird.  
   
- `_T`  
- Das `adopt_d3d_access_lock_t`-Objekt.  
+*_T*<br/>
+Das `adopt_d3d_access_lock_t`-Objekt.  
   
- `_Other`  
- Das `scoped_d3d_access_lock`-Objekt, dessen vorhandene Sperre aufgehoben werden soll.  
+*_Sonstige*<br/>
+Das `scoped_d3d_access_lock`-Objekt, dessen vorhandene Sperre aufgehoben werden soll.  
   
 ## <a name="construction"></a>Konstruktion  
  [1]-Konstruktor  
@@ -110,8 +110,8 @@ scoped_d3d_access_lock& operator= (scoped_d3d_access_lock&& _Other);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Other`  
- Das accelerator_view-Objekt, von dem die D3D-Zugriffssperre verschoben werden soll.  
+*_Sonstige*<br/>
+Das accelerator_view-Objekt, von dem die D3D-Zugriffssperre verschoben werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf dieses `scoped_accelerator_view_lock`-Objekt.  

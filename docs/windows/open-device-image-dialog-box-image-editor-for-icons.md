@@ -1,5 +1,5 @@
 ---
-title: Open &lt;Gerät&gt; Bildeigenschaften (Dialogfeld) (Bildbearbeitung für Symbole) | Microsoft Docs
+title: Open &lt;Gerät&gt; Bildeigenschaften (Dialogfeld) (C++) (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,30 +10,33 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Open <Device> Image dialog box
+- Open <Device> Image dialog box [C++]
 ms.assetid: 27cb60ec-8704-4e58-ab1c-8cc3b34e66be
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6fdb7fb2baf2b12105475679a237fef6b69f5728
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 476df4fa9d2e31b25eb8791e521081eedd2642c6
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881704"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318576"
 ---
-# <a name="open-ltdevicegt-image-dialog-box-image-editor-for-icons"></a>Open &lt;Gerät&gt; Bildeigenschaften (Dialogfeld) (Bildbearbeitung für Symbole)
-Verwenden Sie dieses Dialogfeld, um Gerätebildern zu öffnen. Vorhandene Gerätebildern in die aktuelle Ressource (Bilder, die die aktuelle Ressource gehören) aufgeführt.  
-  
- **Aktuelle Bilder**  
- Listet die bildkomprimierung in der Ressource an. Wählen Sie den "Image", die, den Sie öffnen möchten.  
-  
-## <a name="requirements"></a>Anforderungen  
- Keiner  
-  
-## <a name="see-also"></a>Siehe auch  
- [Menü "Bild"](../windows/image-menu-image-editor-for-icons.md)   
- [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)
+# <a name="open-ltdevicegt-image-dialog-box-c-image-editor-for-icons"></a>Open &lt;Gerät&gt; Bildeigenschaften (Dialogfeld) (C++) (Bildbearbeitung für Symbole)
 
+Verwenden Sie das Dialogfeld zu öffnen, um Gerätebildern in C++-Projekten zu öffnen. Vorhandene Images mit der Geräte in der aktuellen Ressourcendatei (Bilder, die Teil der aktuellen Ressource) aufgeführt.
+
+### <a name="current-images"></a>Aktuellen Images
+
+Listet die Images, die in der Ressource enthalten. Wählen Sie den Image-Typ, die, den Sie öffnen möchten.
+
+## <a name="requirements"></a>Anforderungen
+
+Keiner
+
+## <a name="see-also"></a>Siehe auch
+
+[Menü "Bild"](../windows/image-menu-image-editor-for-icons.md)  
+[Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)

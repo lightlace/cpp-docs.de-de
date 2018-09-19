@@ -1,5 +1,5 @@
 ---
-title: Dereferenzierung auf Arraytypen | Microsoft Docs
+title: Dereferenzierung auf Arraytypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ae5f97d0136ecf86506d03a63b9bb92aa28daa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 683cd7835e669ff71c8e4566e0600b1775e42c6d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418838"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086160"
 ---
 # <a name="indirection-on-array-types"></a>Dereferenzierung auf Arraytypen
-Verwendung des Dereferenzierungsoperators (**\***) auf eine *n*--dimensionalem Arraytyp ergibt ein *n*-1-dimensionales Array. Wenn *n* 1 ist, ein Skalar (oder Arrayelement) zurückgegeben wird.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Arrays](../cpp/arrays-cpp.md)
+
+Verwenden des Dereferenzierungsoperators (<strong>\*</strong>) auf eine *n*--dimensionalem Arraytyp ergibt ein *n*-1-dimensionales Array. Wenn *n* 1 ist, ein Skalar (oder Arrayelement) zurückgegeben wird.
+
+## <a name="see-also"></a>Siehe auch
+
+[Arrays](../cpp/arrays-cpp.md)

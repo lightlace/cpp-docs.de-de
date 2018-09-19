@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04eccb2d1472afb1c04daac8ab23c2ce6fe97c58
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9e1339c1696483a3150337a9d2670763e075f7ce
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851443"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702676"
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl-Klasse
 Die `CMFCListCtrl` Klasse erweitert die Funktionalität von [CListCtrl-Klasse](../../mfc/reference/clistctrl-class.md) -Klasse durch die Unterstützung der Funktionalität des erweiterten Headersteuerelements von der [CMFCHeaderCtrl-Klasse](../../mfc/reference/cmfcheaderctrl-class.md).  
@@ -105,11 +105,11 @@ void EnableMarkSortedColumn(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bMark*  
- Ein boolescher Parameter, der bestimmt, ob eine andere Hintergrundfarbe zu aktivieren.  
+*bMark*<br/>
+[in] Ein boolescher Parameter, der bestimmt, ob eine andere Hintergrundfarbe zu aktivieren.  
   
- [in] *bRedraw*  
- Ein boolescher Parameter, der bestimmt, ob das Steuerelement sofort neu zu zeichnen.  
+*bRedraw*<br/>
+[in] Ein boolescher Parameter, der bestimmt, ob das Steuerelement sofort neu zu zeichnen.  
   
 ### <a name="remarks"></a>Hinweise  
  `EnableMarkSortedColumn` verwendet die Methode `CDrawingManager::PixelAlpha` berechnen, welche Farbe für die Verwendung sortierte Spalten. Die Farbe ausgewählt basiert auf die normale Hintergrundfarbe.  
@@ -122,8 +122,8 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- Ein boolescher Wert, der angibt, ob mehrere Spalten sortieren-Modus aktiviert.  
+*bAktivieren*<br/>
+[in] Ein boolescher Wert, der angibt, ob mehrere Spalten sortieren-Modus aktiviert.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie die Sortierung basierend auf mehrere Spalten aktivieren, müssen die Spalten eine Hierarchie. Zunächst werden die Datenzeilen durch die primäre Spalte sortiert. Alle entsprechenden Werte werden dann nach jeder nachfolgenden Spalte basierend auf Priorität sortiert.  
@@ -165,14 +165,14 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *lParam1*  
- Das erste zu vergleichende Element.  
+*lParam1*<br/>
+[in] Die erste zu vergleichende Element.  
   
- [in] *lParam2*  
- Das zweite zu vergleichende Element.  
+*lParam2*<br/>
+[in] Die zweite zu vergleichende Element.  
   
- [in] *der iColumn*  
- Der Index der Spalte, die diese Methode sortiert wird.  
+*der iColumn*<br/>
+[in] Der Index der Spalte, die diese Methode sortiert wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Eine ganze Zahl, die die relative Position der beiden Elemente angibt. Ein negativer Wert gibt an, dass das erste Element sollte die zweite vorangehen, positiver Wert gibt an, dass das erste Element sollte die zweite folgen, und 0 (null) bedeutet, dass die beiden Elemente äquivalent sind.  
@@ -190,11 +190,11 @@ virtual COLORREF OnGetCellBkColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Funktionen "nrow"*  
- Die Zeile der fragliche Zelle.  
+*Funktionen "nrow"*<br/>
+[in] Die Zeile der fragliche Zelle.  
   
- [in] *nColumn*  
- Die Spalte die betreffende Zelle.  
+*nColumn*<br/>
+[in] Die Spalte die betreffende Zelle.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein COLOREF-Wert, der die Hintergrundfarbe der Zelle angibt.  
@@ -213,14 +213,14 @@ virtual HFONT OnGetCellFont(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Funktionen "nrow"*  
- Die Zeile der fragliche Zelle.  
+*Funktionen "nrow"*<br/>
+[in] Die Zeile der fragliche Zelle.  
   
- [in] *nColumn*  
- Die Spalte die betreffende Zelle.  
+*nColumn*<br/>
+[in] Die Spalte die betreffende Zelle.  
   
- [in] *DwData*  
- Mit benutzerdefinierten Daten. Die Standardimplementierung wird dieser Parameter nicht verwendet werden.  
+*dwData*<br/>
+[in] Mit benutzerdefinierten Daten. Die Standardimplementierung wird dieser Parameter nicht verwendet werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Handle für die Schriftart, die für die aktuelle Zelle verwendet wird.  
@@ -238,11 +238,11 @@ virtual COLORREF OnGetCellTextColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Funktionen "nrow"*  
- Die Zeile der fragliche Zelle.  
+*Funktionen "nrow"*<br/>
+[in] Die Zeile der fragliche Zelle.  
   
- [in] *nColumn*  
- Die Spalte die betreffende Zelle.  
+*nColumn*<br/>
+[in] Die Spalte die betreffende Zelle.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein COLOREF-Wert, der die Textfarbe der Zelle angibt.  
@@ -258,8 +258,8 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *der iColumn*  
- Der zu entfernenden Spalte.  
+*der iColumn*<br/>
+[in] Der zu entfernenden Spalte.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode entfernt eine Sortierspalte aus dem Kopfzeilen-Steuerelement. Ruft [CMFCHeaderCtrl::RemoveSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#removesortcolumn).  
@@ -275,14 +275,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *der iColumn*  
- Die zu sortierende Spalte.  
+*der iColumn*<br/>
+[in] Die zu sortierende Spalte.  
   
- [in] *bAscending*  
- Ein boolescher Wert, der die Sortierreihenfolge angibt.  
+*bAscending*<br/>
+[in] Ein boolescher Wert, der die Sortierreihenfolge angibt.  
   
- [in] *hinzufügen*  
- Ein boolescher Wert, der angibt, ob die Methode durch angegebene Spalte hinzufügt *der iColumn* zur Liste der Sortierspalten.  
+*Hinzufügen*<br/>
+[in] Ein boolescher Wert, der angibt, ob die Methode durch angegebene Spalte hinzufügt *der iColumn* zur Liste der Sortierspalten.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode übergibt die Eingabeparameter an das Kopfzeilen-Steuerelement, mit der Methode [CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn).  
@@ -298,14 +298,14 @@ virtual void Sort(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *der iColumn*  
- Die zu sortierende Spalte.  
+*der iColumn*<br/>
+[in] Die zu sortierende Spalte.  
   
- [in] *bAscending*  
- Ein boolescher Wert, der die Sortierreihenfolge angibt.  
+*bAscending*<br/>
+[in] Ein boolescher Wert, der die Sortierreihenfolge angibt.  
   
- [in] *hinzufügen*  
- Ein boolescher Wert, der angibt, ob diese Methode fügt hinzu, die durch angegebene Spalte *der iColumn* zur Liste der Sortierspalten.  
+*Hinzufügen*<br/>
+[in] Ein boolescher Wert, der angibt, ob diese Methode fügt hinzu, die durch angegebene Spalte *der iColumn* zur Liste der Sortierspalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

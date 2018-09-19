@@ -1,5 +1,5 @@
 ---
-title: Roinitializewrapper::HRESULT()-Operator | Microsoft Docs
+title: Roinitializewrapper::HRESULT()-Operator | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,26 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2cb15f4011b202a00d691d48fffa487f2bf30e61
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b518fc059e77420788be941ccc98035fb68aa0db
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891934"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592753"
 ---
 # <a name="roinitializewrapperhresult-operator"></a>RoInitializeWrapper::HRESULT()-Operator
-Ruft den HRESULT-Wert ab, der vom letzten RoInitializeWrapper-Konstruktor erzeugt wird.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
+
+Ruft der HRESULT-Wert, der von der letzten erzeugten **RoInitializeWrapper** Konstruktor.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
 operator HRESULT()  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Siehe auch  
- [HandleT-Klasse](../windows/handlet-class.md)
+```
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+
+[HandleT-Klasse](../windows/handlet-class.md)

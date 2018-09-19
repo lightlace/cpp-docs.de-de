@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9880bdbc608933a1b6cfffe3473a9b07f0252ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f75aa6a32277fda0796fe2433062f5062fdd47eb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405359"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196078"
 ---
 # <a name="memcpy-wmemcpy"></a>memcpy, wmemcpy
 
@@ -72,21 +72,21 @@ Anzahl der zu kopierenden Zeichen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Wert der *Dest*.
+Der Wert des *Dest*.
 
 ## <a name="remarks"></a>Hinweise
 
-**Memcpy** Kopien *Anzahl* Bytes vom *Src* auf *Dest*; **Wmemcpy** Kopien *Anzahl* Breitzeichen (zwei Bytes). Wenn die Quelle und Ziel überlappen, ist das Verhalten des **Memcpy** ist nicht definiert. Verwendung **Memmove** um überlappende Bereiche zu behandeln.
+**Memcpy** Kopien *Anzahl* Bytes vom *Src* zu *Dest*; **Wmemcpy** Kopien *Anzahl* Breitzeichen (zwei Bytes). Wenn sich Quelle und Ziel überlappen, ist das Verhalten der **Memcpy** ist nicht definiert. Verwendung **Memmove** um überlappende Bereiche zu behandeln.
 
 > [!IMPORTANT]
-> Stellen Sie sicher, dass der Zielpuffer dieselbe Größe wie der Quellpuffer aufweist bzw. größer ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Stellen Sie sicher, dass der Zielpuffer dieselbe Größe wie der Quellpuffer aufweist bzw. größer ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 > [!IMPORTANT]
-> Da so viele Pufferüberläufe, und daher potenzielle Sicherheitslücken, auf eine falsche Verwendung von verfolgt haben **Memcpy**, diese Funktion wird unter "gesperrten" Funktionen von Security Development Lifecycle (SDL) aufgeführt.  Möglicherweise bemerken Sie, dass einige VC++-Bibliotheksklassen weiterhin verwenden **Memcpy**.  Darüber hinaus möglicherweise beobachten Sie, dass der VC++-compileroptimierer manchmal Aufrufe ausgibt **Memcpy**.  Das Visual C++-Produkt wird gemäß des SDL-Prozesses entwickelt; die Verwendung dieser gesperrten Funktion wurde daher sorgfältig geprüft.  Bei Verwendung in der Bibliothek wurden die Aufrufe sorgfältig geprüft, um sicherzustellen, dass Pufferüberläufe über diese Aufrufe nicht zulässig sind.  Im Falle des Compilers manchmal bestimmte Codemuster werden erkannt als identisch mit dem Muster von **Memcpy**, und daher mit einem Aufruf der Funktion ersetzt.  In solchen Fällen wird die Verwendung von **Memcpy** nicht unsicherer als die ursprünglichen Anweisungen; sie sind einfach zu einem Aufruf der leistungsoptimierten optimiert **Memcpy** Funktion.  Genau wie die Verwendung „sicherer“ CRT-Funktionen keine Sicherheit garantiert, bedeutet die Verwendung von „gesperrten“ Funktionen keine unmittelbare Gefahr (diese müssen nur sorgfältig überprüft werden, damit die Sicherheit gewährleistet ist).
+> Da so viele Pufferüberläufe, und daher potenzielle Sicherheitslücken, auf eine falsche Verwendung von zurückzuführen sind **Memcpy**, diese Funktion wird zwischen den "gesperrten" Funktionen von Security Development Lifecycle (SDL) aufgeführt.  Werden Sie feststellen, dass einige VC++-Bibliotheksklassen weiterhin **Memcpy**.  Darüber hinaus werden Sie feststellen, dass der VC++-compileroptimierer manchmal Aufrufe gibt **Memcpy**.  Das Visual C++-Produkt wird gemäß des SDL-Prozesses entwickelt; die Verwendung dieser gesperrten Funktion wurde daher sorgfältig geprüft.  Bei Verwendung in der Bibliothek wurden die Aufrufe sorgfältig geprüft, um sicherzustellen, dass Pufferüberläufe über diese Aufrufe nicht zulässig sind.  Im Falle des Compilers, manchmal bestimmte Codemuster werden erkannt, als identisch mit dem Muster der **Memcpy**, und werden daher mit einem Aufruf der Funktion ersetzt.  In solchen Fällen die Verwendung von **Memcpy** nicht unsicherer als die ursprünglichen Anweisungen; sie einfach wurden optimiert, die einen Aufruf der leistungsoptimierten **Memcpy** Funktion.  Genau wie die Verwendung „sicherer“ CRT-Funktionen keine Sicherheit garantiert, bedeutet die Verwendung von „gesperrten“ Funktionen keine unmittelbare Gefahr (diese müssen nur sorgfältig überprüft werden, damit die Sicherheit gewährleistet ist).
 >
-> Da **Memcpy** Auslastung durch den VC++-Compiler und Bibliotheken so sorgfältig geprüft wurde, sind diese Aufrufe innerhalb des Codes, der ansonsten SDL kompatibel ist zulässig.  **Memcpy** Aufrufe in den Anwendungsquellcode eingeführt sind nur kompatibel mit SDL, wenn diese Verwendung von Sicherheitsfachleuten überprüft wurde.
+> Da **Memcpy** -Nutzung durch die VC++-Compiler und Bibliotheken so sorgfältig geprüft wurde, sind diese Aufrufe im Code, der ansonsten SDL kompatibel zulässig.  **Memcpy** Aufrufe, die in den Anwendungsquellcode eingeführt sind nur kompatibel mit SDL, beim Verwenden von Sicherheitsfachleuten überprüft wurde.
 
-Die **Memcpy** und **Wmemcpy** Funktionen sind nur veraltet, wenn die Konstante **_CRT_SECURE_DEPRECATE_MEMORY** vor der einschlussanweisung namensweiterleitung definiert ist die Funktionen werden als veraltet markierte, z. B. wie im folgenden Beispiel:
+Die **Memcpy** und **Wmemcpy** Funktionen sind nur veraltet, wenn die Konstante **_CRT_SECURE_DEPRECATE_MEMORY** vor der inklusionsanweisung für nacheinander definiert ist die Funktionen werden als veraltet markierte, z. B. wie im folgenden Beispiel:
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY
@@ -102,7 +102,7 @@ oder
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**memcpy**|\<memory.h> oder \<string.h>|
 |**wmemcpy**|\<wchar.h>|
@@ -111,7 +111,7 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 
 ## <a name="example"></a>Beispiel
 
-Finden Sie unter [Memmove](memmove-wmemmove.md) ein Beispiel zum Verwenden von **Memcpy**.
+Finden Sie unter [Memmove](memmove-wmemmove.md) ein Beispiel zur Verwendung **Memcpy**.
 
 ## <a name="see-also"></a>Siehe auch
 

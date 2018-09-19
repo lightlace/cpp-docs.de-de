@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 3) C4538 | Microsoft Docs
+title: Compilerwarnung (Stufe 3) C4538 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d793da98b2ca4d9d86227177d3782908ef536b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5c4d9095eef3e37aaa487ebec9ae271bcd48c74f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289762"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075526"
 ---
 # <a name="compiler-warning-level-3-c4538"></a>Compilerwarnung (Stufe 3) C4538
-'Typ': Const/Volatile-Qualifizierer für diesen Typ werden nicht unterstützt.  
-  
- Ein Qualifiziererschlüsselwort wurde falsch in ein Array angewendet. Weitere Informationen finden Sie unter [Array](../../windows/arrays-cpp-component-extensions.md).  
-  
- Im folgenden Beispiel wird C4538 generiert:  
-  
-```  
-// C4538.cpp  
-// compile with: /clr /W3 /LD  
-const array<int> ^f1();   // C4538  
-array<const int> ^f2();   // OK  
+
+'Typ': Const/Volatile-Qualifizierer für diesen Typ werden nicht unterstützt.
+
+Ein Qualifiziererschlüsselwort wurde in ein Array falsch angewendet. Weitere Informationen finden Sie unter [Array](../../windows/arrays-cpp-component-extensions.md).
+
+Im folgende Beispiel wird die C4538 generiert:
+
+```
+// C4538.cpp
+// compile with: /clr /W3 /LD
+const array<int> ^f1();   // C4538
+array<const int> ^f2();   // OK
 ```

@@ -1,7 +1,7 @@
 ---
 title: Upgrading eines vorhandenen ActiveX-Steuerelements | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -22,15 +22,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 175b64b40ab2fd242e3e430cf99d761f577835cb
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 0bca0cca66f7f8b9c59dcea4911550abfc2024c8
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026419"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535268"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Upgrading eines vorhandenen ActiveX-Steuerelements
-Vorhandene ActiveX-Steuerelemente (früher OLE-Steuerelemente) kann über das Internet ohne Änderung verwendet werden. Allerdings sollten Sie so ändern Sie die Steuerelemente, um die Leistung zu verbessern. Wenn Sie das Steuerelement auf einer Webseite verwenden, gibt es weitere Überlegungen. Die OCX-Datei und alle zugehörigen Dateien müssen auf dem Zielcomputer oder über das Internet heruntergeladen werden. Dadurch wird die Codegröße als auch herunterladen, die Zeit eines wichtigen Aspekt. Downloads können in einer signierten CAB-Datei verpackt werden. Sie können das Steuerelement als sicher für Skripting und als sicher für die Initialisierung kennzeichnen.  
+Vorhandene ActiveX-Steuerelemente (früher OLE-Steuerelemente) kann über das Internet ohne Änderung verwendet werden. Allerdings sollten Sie so ändern Sie die Steuerelemente, um die Leistung zu verbessern. 
+
+>[!IMPORTANT]
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
+
+Wenn Sie das Steuerelement auf einer Webseite verwenden, gibt es weitere Überlegungen. Die OCX-Datei und alle zugehörigen Dateien müssen auf dem Zielcomputer oder über das Internet heruntergeladen werden. Dadurch wird die Codegröße als auch herunterladen, die Zeit eines wichtigen Aspekt. Downloads können in einer signierten CAB-Datei verpackt werden. Sie können das Steuerelement als sicher für Skripting und als sicher für die Initialisierung kennzeichnen.  
   
  In diesem Artikel werden die folgenden Themen behandelt:  
   
@@ -89,7 +94,7 @@ CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
   
  Die CAB-Datei verweist `CODEBASE` OCX-Datei für das ActiveX-Steuerelement und eine INF-Datei zur Steuerung der Installation enthalten. Erstellen Sie die CAB-Datei den Namen der Steuerelementdatei angeben und eine INF-Datei. Fügen Sie keine abhängigen DLLs, die möglicherweise bereits auf dem System in der CAB-Datei vorhanden sind. MFC-DLLs sind z. B. in einer separaten CAB-Datei verpackt und auf die steuernde INF-Datei verweist.  
   
- Weitere Informationen darüber, wie Sie eine CAB-Datei zu erstellen, finden Sie unter [erstellen eine CAB-Datei](http://msdn.microsoft.com/cc52fd09-bdf6-4410-a693-149a308f36a3).  
+ Weitere Informationen darüber, wie Sie eine CAB-Datei zu erstellen, finden Sie unter [erstellen eine CAB-Datei](/windows/desktop/devnotes/cabinet-api-functions).  
   
 ### <a name="the-inf-file"></a>Die INF-Datei  
  Das folgende Beispiel, spindial.inf, Listen benötigt die unterstützenden Dateien und die Versionsinformationen für die MFC-Spindial steuern. Beachten Sie, dass der Speicherort für die MFC-DLLs ist eine Microsoft-Website. Die mfc42.cab ist bereitgestellt und von Microsoft signiert.  
@@ -221,7 +226,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 ##  <a name="_core_signing_code"></a> Signieren von Code  
  Signieren von Code dient zum Identifizieren des Quell-Code, und um sicherzustellen, dass der Code nicht, seit es geändert hat signiert wurde. Abhängig von den Browsereinstellungen für Sicherheit können Benutzer gewarnt, bevor der Code heruntergeladen wird. Benutzer die Möglichkeit, vertrauen bestimmte Inhabern oder Unternehmen, in denen Fall eine Codesignatur von den vertrauenswürdigen ohne Warnung heruntergeladen werden. Code wird digital signiert, um Manipulationen zu vermeiden.  
   
- Stellen Sie sicher, dass der resultierende Code signiert ist, damit das Steuerelement automatisch heruntergeladen werden kann, ohne Vertrauensstellung Warnmeldungen an. Weitere Informationen zum Signieren von Code finden Sie in der Dokumentation auf das Authenticode im ActiveX-SDK, und finden Sie unter [eine CAB-Datei signieren](http://msdn.microsoft.com/04d8b47a-8f1c-4b54-ab90-730fcdc03747).  
+ Stellen Sie sicher, dass der resultierende Code signiert ist, damit das Steuerelement automatisch heruntergeladen werden kann, ohne Vertrauensstellung Warnmeldungen an. Weitere Informationen zum Signieren von Code finden Sie in der Dokumentation auf das Authenticode im ActiveX-SDK, und finden Sie unter [eine CAB-Datei signieren](/windows/desktop/devnotes/cabinet-api-functions).  
   
  Abhängig von der Vertrauensstellung und Browser auf die Sicherheitseinstellungen kann ein Zertifikat angezeigt werden, um die signierende Person oder Firma zu identifizieren. Wenn die Sicherheitsstufe auf None festgelegt ist oder das Vorzeichen des Steuerelements Zertifikatsbesitzers als vertrauenswürdig eingestuft wird, wird ein Zertifikat nicht angezeigt werden. Finden Sie unter [Sicherheitsstufen für Internet Explorer-Browser und Verhalten des Steuerelements](#_core_internet_explorer_browser_safety_levels_and_control_behavior) Einzelheiten, wie der Browser-sicherheitseinstellung bestimmt, ob das Steuerelement heruntergeladen wird und ein Zertifikat angezeigt.  
   

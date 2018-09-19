@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4255 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4255 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff68feb5f926a3c2cf8bbb85acfa18e8e1ecfa29
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 72e07cc1077993e1bb22c5d8af4ce4445d38321b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296782"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032379"
 ---
 # <a name="compiler-warning-level-4-c4255"></a>Compilerwarnung (Stufe 4) C4255
-'Funktion': Kein Funktionsprototyp angegeben: '()', '(void)' konvertieren  
-  
- Der Compiler hat eine explizite Liste von Argumenten an eine Funktion nicht gefunden. Diese Warnung ist für die C-Compiler.  
-  
- Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
-  
- Im folgenden Beispiel wird C4255 generiert:  
-  
-```  
-// C4255.c  
-// compile with: /W4 /WX  
-#pragma warning (default : 4255)  
-  
-void f()  { // C4255  
-// try the following line instead  
-//void f(void) {  
-}  
-  
-int main(int argc, char *argv[]) {  
-   f();  
-}  
+
+'Funktion': Kein Funktionsprototyp angegeben: '()"zu"(void)"konvertiert
+
+Der Compiler wurde eine explizite Liste von Argumenten an eine Funktion nicht gefunden werden. Diese Warnung ist für die C-Compiler.
+
+Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
+
+Im folgende Beispiel wird die C4255 generiert:
+
+```
+// C4255.c
+// compile with: /W4 /WX
+#pragma warning (default : 4255)
+
+void f()  { // C4255
+// try the following line instead
+//void f(void) {
+}
+
+int main(int argc, char *argv[]) {
+   f();
+}
 ```

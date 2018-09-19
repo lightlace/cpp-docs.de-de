@@ -1,7 +1,7 @@
 ---
 title: file_status-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::file_status::permissions
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be8f85041099d76a4bbb492aa55c5fb73d870589
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cc45e785b6a3aeefd9e2cf5d0539b5d387af7143
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842533"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691665"
 ---
 # <a name="filestatus-class"></a>file_status-Klasse
 
@@ -39,7 +39,34 @@ Umschließt [file_type](../standard-library/filesystem-enumerations.md#file_type
 class file_status;
 ```
 
-## <a name="filestatusfilestatus"></a>file_status::file_status
+### <a name="constructors"></a>Konstruktoren
+
+|Konstruktor|Beschreibung|
+|-|-|
+|[file_status](#file_status)|Konstruiert einen Wrapper für [File_type](../standard-library/filesystem-enumerations.md#file_type) und [Perms](../standard-library/filesystem-enumerations.md#perms).|
+
+### <a name="member-functions"></a>Memberfunktionen
+
+|Member-Funktion|Beschreibung|
+|-|-|
+|[Typ](#type)|Ruft den `file_type` ab oder legt diesen fest.|
+|[permissions](#permissions)|Ruft die Dateiberechtigungen ab oder legt sie fest.|
+
+### <a name="operators"></a>Operatoren
+
+|Operator|Beschreibung|
+|-|-|
+|[operator=](#op_as)|Die als Standard festgelegten Memberzuweisungsoperatoren verhalten sich wie erwartet.|
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** \<Filesystem >
+
+**Namespace:** Std::experimental::filesystem, Std::experimental::filesystem
+
+## <a name="file_status"></a> file_status:: file_status
+
+Konstruiert einen Wrapper für [File_type](../standard-library/filesystem-enumerations.md#file_type) und [Perms](../standard-library/filesystem-enumerations.md#perms).
 
 ```cpp
 explicit file_status(
@@ -53,40 +80,60 @@ file_status(file_status&&) noexcept = default;
 ~file_status() noexcept = default;
 ```
 
-## <a name="filestatusoperator"></a>file_status::operator=
+### <a name="parameters"></a>Parameter
+
+*ftype*<br/>
+Angegebene `file_type`, standardmäßig `file_type::none`.
+
+*Maske*<br/>
+Angegebene Datei `perms`, standardmäßig `perms::unknown`.
+
+*file_status*<br/>
+Das gespeicherte Objekt.
+
+## <a name="op_as"></a> file_status::Operator =
+
+Die als Standard festgelegten Memberzuweisungsoperatoren verhalten sich wie erwartet.
 
 ```cpp
 file_status& operator=(const file_status&) noexcept = default;
 file_status& operator=(file_status&&) nexcept = default;
 ```
 
-Die als Standard festgelegten Memberzuweisungsoperatoren verhalten sich wie erwartet.
+### <a name="parameters"></a>Parameter
 
-## <a name="type"></a>Typ
+*file_status*<br/>
+Die [File_status](../standard-library/file-status-class.md) kopiert wird, in der `file_status`.
+
+## <a name="type"></a> Typ
+
+Ruft den `file_type` ab oder legt diesen fest.
 
 ```cpp
 file_type type() const noexcept
 void type(file_type ftype) noexcept
 ```
 
-Ruft file_type ab oder legt ihn fest.
+### <a name="parameters"></a>Parameter
 
-## <a name="permissions"></a>Berechtigungen
+*ftype*<br/>
+Angabe `file_type`.
+
+## <a name="permissions"></a> Berechtigungen
+
+Ruft die Dateiberechtigungen ab oder legt sie fest.
+
+Verwenden Sie den Setter, stellen eine Datei `readonly` oder entfernen Sie die `readonly` Attribut.
 
 ```cpp
 perms permissions() const noexcept
 void permissions(perms mask) noexcept
 ```
 
-Ruft die Dateiberechtigungen ab oder legt sie fest.
+### <a name="parameters"></a>Parameter
 
-Verwenden Sie den Setter, um Datei mit einem Schreibschutz zu versehen oder entfernen Sie das readonly-Attribut.
-
-## <a name="requirements"></a>Anforderungen
-
-**Header:** \<Filesystem >
-
-**Namespace:** Std::experimental::filesystem, Std::experimental::filesystem
+*Maske*<br/>
+Angabe `perms`.
 
 ## <a name="see-also"></a>Siehe auch
 

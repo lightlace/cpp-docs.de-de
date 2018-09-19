@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b79700277486c43035bd7d448fc942f785f4cc8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ab1d229f2c1933025993aa1bc3a3a8b91b41a2cc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959932"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195814"
 ---
 # <a name="output-file-stream-member-functions"></a>Ausgabedateistream-Memberfunktionen
 
@@ -96,7 +96,7 @@ int main( )
 }
 ```
 
-Die `write` -Funktion wird nicht beendet, wenn ein Null-Zeichen erreicht wird, damit die vollständige Klassenstruktur geschrieben wird. Die Funktion akzeptiert zwei Argumente: ein **Char** Zeiger und die Anzahl der zu schreibenden Zeichen. Beachten Sie die erforderliche Umwandlung in **char\*** vor der Adressierung des Strukturobjekts.
+Die `write` -Funktion wird nicht beendet, wenn ein Null-Zeichen erreicht wird, damit die vollständige Klassenstruktur geschrieben wird. Die Funktion akzeptiert zwei Argumente: ein **Char** Zeiger und die Anzahl der zu schreibenden Zeichen. Beachten Sie die erforderliche Umwandlung in **Char** <strong>\*</strong> vor der Adressierung des Strukturobjekts.
 
 ## <a name="the-seekp-and-tellp-functions"></a>Die Funktionen seekp und tellp
 
@@ -114,12 +114,12 @@ Verwenden Sie diese Memberfunktionen, um beim Schreiben in einen Stream auf Fehl
 
 |Funktion|Rückgabewert|
 |--------------|------------------|
-|[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|Gibt **TRUE** zurück, wenn ein nicht behebbarer Fehler vorhanden ist.|
-|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|Gibt **TRUE** zurück, wenn ein nicht behebbarer Fehler oder eine „erwartete“ Bedingung, wie z.B. ein Konvertierungsfehler vorhanden ist oder wenn die Datei nicht gefunden wird. Verarbeitung kann oft nach einem Aufruf von fortgesetzt `clear` mit einem NULL-Argument.|
-|[good](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|Gibt **TRUE** zurück, wenn kein Fehler (nicht behebbar oder anderweitig) vorhanden und das End-of-File-Flag nicht festgelegt ist.|
-|[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|Gibt **TRUE** auf das End-of-File-Bedingung zurück.|
-|[clear](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|Legt den internen Fehlerzustand fest. Wenn mit den Standardargumenten aufgerufen, löscht er alle Fehlerbits.|
-|[rdstate](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|Gibt den aktuellen Fehlerstatus zurück.|
+|[bad](basic-ios-class.md#bad)|Gibt **TRUE** zurück, wenn ein nicht behebbarer Fehler vorhanden ist.|
+|[fail](basic-ios-class.md#fail)|Gibt **TRUE** zurück, wenn ein nicht behebbarer Fehler oder eine „erwartete“ Bedingung, wie z.B. ein Konvertierungsfehler vorhanden ist oder wenn die Datei nicht gefunden wird. Verarbeitung kann oft nach einem Aufruf von fortgesetzt `clear` mit einem NULL-Argument.|
+|[good](basic-ios-class.md#good)|Gibt **TRUE** zurück, wenn kein Fehler (nicht behebbar oder anderweitig) vorhanden und das End-of-File-Flag nicht festgelegt ist.|
+|[eof](basic-ios-class.md#eof)|Gibt **TRUE** auf das End-of-File-Bedingung zurück.|
+|[clear](basic-ios-class.md#clear)|Legt den internen Fehlerzustand fest. Wenn mit den Standardargumenten aufgerufen, löscht er alle Fehlerbits.|
+|[Rdstate] (Basic-Ios-class.md #rdstate|Gibt den aktuellen Fehlerstatus zurück.|
 
 Der **!** Operator wird überladen, um die gleiche Funktion wie führen Sie die `fail` Funktion. Daher ist der Ausdruck:
 

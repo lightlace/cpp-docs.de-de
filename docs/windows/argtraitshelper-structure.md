@@ -1,5 +1,5 @@
 ---
-title: ArgTraitsHelper-Struktur | Microsoft Docs
+title: ArgTraitsHelper-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,52 +17,58 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6205d69962d70d9da76c932fdd8b3f66f491ebc9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb0377de88ef5e782e0e11bc563409b7094eecf5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857700"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598683"
 ---
 # <a name="argtraitshelper-structure"></a>ArgTraitsHelper-Struktur
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-template<typename TDelegateInterface>  
-struct ArgTraitsHelper;  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `TDelegateInterface`  
- Ein Delegat-Schnittstelle.  
-  
-## <a name="remarks"></a>Hinweise  
- Unterstützt definiert allgemeine Merkmale Delegatargumente.  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-typedefs"></a>Öffentliche Typedefs  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|`methodType`|Ein Synonym für `decltype(&TDelegateInterface::Invoke)`.|  
-|`Traits`|Ein Synonym für `ArgTraits<methodType>`.|  
-  
-### <a name="public-constants"></a>Öffentliche Konstanten  
-  
-|name|Beschreibung|  
-|----------|-----------------|  
-|[ArgTraitsHelper::args-Konstante](../windows/argtraitshelper-args-constant.md)|Hilft [argtraits:: args](../windows/argtraits-args-constant.md) die Anzahl von Parametern für die Invoke-Methode einer Schnittstelle Delegaten beibehalten.|  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `ArgTraitsHelper`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** event.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+template<typename TDelegateInterface>
+struct ArgTraitsHelper;
+```
+
+### <a name="parameters"></a>Parameter
+
+*TDelegateInterface*  
+Ein Delegat-Schnittstelle.
+
+## <a name="remarks"></a>Hinweise
+
+Hilft, die gemeinsamen Merkmale der Argumente des Delegaten definieren.
+
+## <a name="members"></a>Member
+
+### <a name="public-typedefs"></a>Öffentliche Typedefs
+
+|Name|Beschreibung|
+|----------|-----------------|
+|`methodType`|Ein Synonym für `decltype(&TDelegateInterface::Invoke)`.|
+|`Traits`|Ein Synonym für `ArgTraits<methodType>`.|
+
+### <a name="public-constants"></a>Öffentliche Konstanten
+
+|name|Beschreibung|
+|----------|-----------------|
+|[ArgTraitsHelper::args-Konstante](../windows/argtraitshelper-args-constant.md)|Hilft [argtraits:: args](../windows/argtraits-args-constant.md) behalten Sie die Anzahl der Parameter der `Invoke` Methode einer Schnittstelle des Delegaten.|
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`ArgTraitsHelper`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** event.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2658 generiert | Microsoft Docs
+title: Compilerfehler C2658 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e071e070b259dee7293d607d292a51ee608b71c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adbaa5c538bf5e85f30064d698d7755851c9549b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234736"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096196"
 ---
-# <a name="compiler-error-c2658"></a>Compiler-Fehler C2658 generiert
-'Member': Neudefinition in einer anonymen Struktur/Union  
-  
- Zwei anonyme Strukturen oder Unions enthalten Memberdeklarationen mit dem gleichen Bezeichner jedoch mit unterschiedlichen Typen auf. Klicken Sie unter ["/ Za"](../../build/reference/za-ze-disable-language-extensions.md), Sie erhalten diesen Fehler auch für Member mit dem gleichen Bezeichner und Typ.  
-  
- Im folgende Beispiel wird C2658 generiert:  
-  
-```  
-// C2658.cpp  
-// compile with: /c  
-struct X {  
-   union { // can be struct too  
-      int i;  
-   };  
-   union {  
-      int i;   // Under /Za, C2658  
-      // int i not needed here because it is defined in the first union  
-   };  
-};  
-  
-struct Z {  
-   union {  
-      char *i;  
-   };  
-  
-   union {  
-      void *i;   // C2658 redefinition of 'i'  
-      // try the following line instead  
-      // void *ii;  
-   };  
-};  
+# <a name="compiler-error-c2658"></a>Compilerfehler C2658
+
+'Member': Neudefinition in anonymes Struct/Union
+
+Zwei anonyme Strukturen oder Unions enthalten Memberdeklarationen mit dem gleichen Bezeichner jedoch mit unterschiedlichen Typen auf. Klicken Sie unter [/Za](../../build/reference/za-ze-disable-language-extensions.md), erhalten Sie auch diese Fehlermeldung für Elemente mit dem gleichen Bezeichner und dem angegebenen Typ.
+
+Im folgende Beispiel wird die C2658 generiert:
+
+```
+// C2658.cpp
+// compile with: /c
+struct X {
+   union { // can be struct too
+      int i;
+   };
+   union {
+      int i;   // Under /Za, C2658
+      // int i not needed here because it is defined in the first union
+   };
+};
+
+struct Z {
+   union {
+      char *i;
+   };
+
+   union {
+      void *i;   // C2658 redefinition of 'i'
+      // try the following line instead
+      // void *ii;
+   };
+};
 ```

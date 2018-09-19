@@ -1,5 +1,5 @@
 ---
-title: Befehlszeilenwarnung D9040 | Microsoft Docs
+title: Befehlszeilenwarnung D9040 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc360d0bc3c1266dc6de2b8ff2a33e1e60944989
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5eae8b471a631ed6191b9d93e72b8e5f5c240e2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299925"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040842"
 ---
 # <a name="command-line-warning-d9040"></a>Befehlszeilenwarnung D9040
-/analyze-Option wird ignoriert; Codeanalysewarnungen sind in dieser Version des Compilers nicht verfügbar.  
-  
- Die **/ analyze** Befehlszeilenoption ist nicht verfügbar in allen Editionen von Visual Studio. Um diese Warnung zu vermeiden, müssen Sie entweder eine unterstützte Version von Visual Studio verwenden oder die Befehlszeilenoption entfernen.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Befehlszeilenfehler D8000 bis D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)   
- [Compileroptionen](../../build/reference/compiler-options.md)
+
+/analyze-Option wird ignoriert; Codeanalysewarnungen sind in dieser Version des Compilers nicht verfügbar.
+
+Die **/ analyze** Befehlszeilenoption ist nicht verfügbar in allen Editionen von Visual Studio. Um diese Warnung zu vermeiden, müssen Sie entweder eine unterstützte Version von Visual Studio verwenden oder die Befehlszeilenoption entfernen.
+
+## <a name="see-also"></a>Siehe auch
+
+[Befehlszeilenfehler D8000 bis D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)<br/>
+[Compileroptionen](../../build/reference/compiler-options.md)

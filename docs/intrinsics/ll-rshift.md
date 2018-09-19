@@ -1,5 +1,5 @@
 ---
-title: __ll_rshift | Microsoft Docs
+title: __ll_rshift | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e086339c41f789323cb4aab386a96dae27a0eeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8df70d0ba5c0f957620ee204256b6c92ce4c01f1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324927"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722071"
 ---
 # <a name="llrshift"></a>__ll_rshift
 **Microsoft-spezifisch**  
   
- Verschiebt einen 64-Bit-Wert, der durch den ersten Parameter auf der rechten Seite angegeben eine Anzahl von Bits, die durch den zweiten Parameter angegeben.  
+ Verschiebt einen 64-Bit-Wert angegeben, nach dem ersten Parameter nach rechts um eine Anzahl von Bits, die durch den zweiten Parameter angegeben.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,11 +40,11 @@ __int64 __ll_rshift(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `Mask`  
- Der 64-Bit-Ganzzahl-Wert nach rechts verschoben werden soll.  
+*Maske*<br/>
+[in] Der 64-Bit-Ganzzahl-Wert, um nach rechts verschoben werden soll.  
   
- [in] `nBit`  
- Die Anzahl der zu verschiebenden modulo 64 auf X64 und modulo auf X86 32 Bits.  
+*nBit*<br/>
+[in] Die Anzahl der zu verschiebenden, modulo 64 auf X64 und modulo 32 auf X86 Bits.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Die Maske verschoben werden, indem `nBit` Bits.  
@@ -53,12 +53,12 @@ __int64 __ll_rshift(
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__ll_rshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ll_rshift`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der zweite Parameter größer als 64 auf X64 (32 auf X86),, die Anzahl modulo 64 (32 auf X86) ausgeführt wird ist, um zu bestimmen, die Anzahl der zu verschiebenden Bits. Die `ll` Präfix gibt an, dass dies eine Operation auf `long long`, einen anderen Namen für `__int64`, signierten ganzzahligen 64-Bit-Typs.  
+ Wenn der zweite Parameter größer als 64 auf X64 (32 auf X86),, die Anzahl modulo-64 (32 auf X86) ausgeführt wird ist, um zu bestimmen, die Anzahl der zu verschiebenden Bits. Die `ll` Präfix gibt an, dass dieser eine Operation auf `long long`, ein anderes für `__int64`, signierten ganzzahligen 64-Bit-Typs.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -93,7 +93,7 @@ fffffffffffffff0
  - 10  
 ```  
   
- **Hinweis** Wenn `_ull_rshift` wurde verwendet, die MSB des Werts nach rechts verschobene hätte 0 (null), damit das gewünschte Ergebnis nicht bei einem negativen Wert erzielt worden wäre.  
+ **Beachten Sie** Wenn `_ull_rshift` wurde verwendet, das MSB des Werts nach rechts verschobene hätte 0 (null), damit das gewünschte Ergebnis nicht bei einem negativen Wert abgerufen werden würde.  
   
 **Ende Microsoft-spezifisch**  
   

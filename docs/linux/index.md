@@ -1,20 +1,22 @@
 ---
 layout: LandingPage
-author: jasongroce
-ms.author: apexprodleads
-ms.topic: landing-page
+ms.topic: conceptual
 title: Linux-Entwicklung mit der C++-Dokumentation
 description: Erstellen und Debuggen Sie Anwendungen die unter Linux ausgeführt werden.
-ms.openlocfilehash: c4794dbeb7e5a1d356e251686653c6c0aa0a023a
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+author: mikeblome
+ms.author: mblome
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c17106038bc79742351efef07a5900a4709c9569
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "29794179"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213912"
 ---
 # <a name="linux-development-with-c-documentation"></a>Linux-Entwicklung mit der C++-Dokumentation
 
-Erstellen und Debuggen Sie Anwendungen die unter Linux ausgeführt werden.
+Verwenden Sie Visual Studio 2017 zum Erstellen und Debuggen von Anwendungen, die unter Linux ausgeführt werden.
 
 <ul class="panelContent cardsF">
     <li>
@@ -29,7 +31,7 @@ Erstellen und Debuggen Sie Anwendungen die unter Linux ausgeführt werden.
                     </div>
                     <div class="cardText">
                         <h3>Installation und Konfiguration der Linux-Arbeitsauslastung</h3>
-                        <p>Erfahren Sie mehr über das Setup von Visual Studio zum Erstellen von Linux-Anwendungen in C++.</p>
+                        <p>Erfahren Sie mehr über das Konfigurieren von Visual Studio 2017 und höher zum Erstellen von Linux-Anwendungen in C++.</p>
                     </div>
                 </div>
             </div>

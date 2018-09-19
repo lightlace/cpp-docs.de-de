@@ -16,60 +16,66 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1cef503bf9862f1259e25aff76a013d60776077
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d337d31150b6da1a1556589d63fd60d63842efce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883725"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098783"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Optionen, ATL-Assistent für einfache Objekte
-Verwenden Sie auf dieser Seite des der ATL-Assistent für einfache Objekte, um Effizienz und Fehler-Unterstützung für das Objekt zu entwerfen.  
-  
- Weitere Informationen zu ATL-Projekte und ATL-COM-Klassen finden Sie unter [ATL COM Desktop Components](../../atl/atl-com-desktop-components.md).  
-  
- **Threading-Modell**  
- Gibt die Methode für die Verwaltung von Threads. Standardmäßig verwendet das Projekt **Apartment** threading.  
-  
- Finden Sie unter [angeben des Projekts. Threading-Modell](../../atl/specifying-the-threading-model-for-a-project-atl.md) für Weitere Informationen.  
-  
-|Option|Beschreibung|  
-|------------|-----------------|  
-|**Single**|Gibt an, dass das Objekt immer im primären COM-Thread ausgeführt wird. Finden Sie unter [Single-Threaded-Apartments](http://msdn.microsoft.com/library/windows/desktop/ms680112) und [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) für Weitere Informationen.|  
-|**Apartment**|Gibt an, dass das Objekt Apartmentthreading für Anwendungen verwendet. Äquivalent zu einzelnen Threadapartment. Jedes Objekt einer Apartmentthread-Komponente wird ein Apartment für den Thread, für die Lebensdauer des Objekts zugewiesen. mehrere Threads können jedoch für mehrere Objekte verwendet werden. Jedes Apartment an einem bestimmten Thread gebunden ist und verfügt über ein Windows-Nachrichtensystem (Standard).<br /><br /> Finden Sie unter [Single-Threaded-Apartments](http://msdn.microsoft.com/library/windows/desktop/ms680112) für Weitere Informationen.|  
-|**Beide**|Gibt an, dass das Objekt aus, welche Art von einem Thread Erstellung je Apartment oder freies threading, verwenden kann.|  
-|**kostenlos**|Gibt an, dass das Objekt freies threading verwendet. Freies threading ist gleichbedeutend mit einem multithread Apartmentmodell. Finden Sie unter [Multithread-Apartments](http://msdn.microsoft.com/library/windows/desktop/ms693421) für Weitere Informationen.|  
-|**Neutral**|Gibt an, dass das Objekt den Richtlinien für Multithread-Apartments folgt, jedoch können für jede Art von Thread durchgeführt.|  
-  
- **Aggregation**  
- Gibt an, ob das Objekt verwendet [Aggregation](http://msdn.microsoft.com/library/windows/desktop/ms686558). Das Aggregatobjekt wählt die Schnittstellen verwenden, um für Clients verfügbar zu machen, und die Schnittstellen werden verfügbar gemacht, als sei das Aggregatobjekt diese implementiert. Clients des aggregierten Objekts kommunizieren nur mit aggregierten Objekts.  
-  
-|Option|Beschreibung|  
-|------------|-----------------|  
-|Ja|Gibt an, dass das Objekt aggregiert werden kann. Der Standardwert.|  
-|Nein|Gibt an, dass das Objekt nicht aggregiert werden.|  
-|Nur|Gibt an, dass das Objekt aggregiert werden muss.|  
-  
- **Interface**  
- Gibt den Typ der Schnittstelle, die das Objekt unterstützt. Das Objekt unterstützt standardmäßig eine duale Schnittstelle.  
-  
-|Option|Beschreibung|  
-|------------|-----------------|  
-|**Dual**|Gibt an, dass das Objekt eine duale Schnittstelle unterstützt (die Vtable besitzt, benutzerdefinierte Funktionen sowie die späte Bindung `IDispatch` Methoden). Ermöglicht es COM-Clients und [Automatisierungscontroller](../../mfc/automation-clients.md) auf das Objekt zuzugreifen. Der Standardwert.|  
-|**Benutzerdefiniert**|Gibt an, dass das Objekt eine benutzerdefinierte Schnittstelle unterstützt (die Vtable hat benutzerdefinierte Funktionen). Eine benutzerdefinierte Schnittstelle kann vor allem über Prozessgrenzen hinweg schneller als das duale Schnittstelle sein.<br /><br /> -   **Automatisierungskompatibel** Automatisierungscontroller ermöglicht Zugriff auf ein Objekt, das die benutzerdefinierte Schnittstelle unterstützt.|  
-  
- **Unterstützung**  
- Gibt zusätzliche Unterstützung für das Objekt an.  
-  
-|Option|Beschreibung|  
-|------------|-----------------|  
-|`ISupportErrorInfo`|Stellt die Unterstützung der [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) Schnittstelle, damit das Objekt Fehlerinformationen an den Client zurückgeben kann.|  
-|**Verbindungspunkte**|Ermöglicht der Verbindungspunkte für das Objekt, indem Sie machen die Klasse des Objekts abgeleitet [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md).|  
-|**Freethread-Marshaller**|Erstellt ein Freethread-Marshaller-Objekt zum Marshallen der Schnittstellenzeiger effizient zwischen Threads im selben Prozess. Zur Angabe der Objekt **sowohl** als Threadingmodell.|  
-|`IObjectWithSite` **(Unterstützung für Internet Explorer-Objekt)**|Implementiert [IObjectWithSiteImpl](../../atl/reference/iobjectwithsiteimpl-class.md), dem bietet es sich um eine einfache Möglichkeit, um die Kommunikation zwischen einem Objekt und seinem Standort in einem Container zu unterstützen.|  
-  
-## <a name="see-also"></a>Siehe auch  
- [ATL-Assistent für einfache Objekte](../../atl/reference/atl-simple-object-wizard.md)   
- [Einfaches ATL-Objekt](../../atl/reference/adding-an-atl-simple-object.md)   
- [In-Process-Server, Threadingprobleme](http://msdn.microsoft.com/library/windows/desktop/ms687205)
+
+Verwenden Sie auf dieser Seite des der ATL-Assistent für einfache Objekte, um Effizienz und Fehler-Unterstützung für das Objekt zu entwerfen.
+
+Weitere Informationen zu ATL-Projekte und ATL-COM-Klassen finden Sie unter [ATL COM Desktop Components](../../atl/atl-com-desktop-components.md).
+
+- **Threading-Modell**
+
+   Gibt die Methode für die Verwaltung von Threads. Standardmäßig verwendet das Projekt **Apartment** threading.
+
+   Finden Sie unter [angeben des Projekts. Threading-Modell](../../atl/specifying-the-threading-model-for-a-project-atl.md) für Weitere Informationen.
+
+   |Option|Beschreibung|
+   |------------|-----------------|
+   |**Single**|Gibt an, dass das Objekt immer im primären COM-Thread ausgeführt wird. Finden Sie unter [Single-Threaded-Apartments](/windows/desktop/com/single-threaded-apartments) und [InprocServer32](/windows/desktop/com/inprocserver32) für Weitere Informationen.|
+   |**Apartment**|Gibt an, dass das Objekt Apartmentthreading für Anwendungen verwendet. Äquivalent zu einzelnen Threadapartment. Jedes Objekt einer Apartmentthread-Komponente wird ein Apartment für den Thread, für die Lebensdauer des Objekts zugewiesen. mehrere Threads können jedoch für mehrere Objekte verwendet werden. Jedes Apartment an einem bestimmten Thread gebunden ist und verfügt über ein Windows-Nachrichtensystem (Standard).<br /><br /> Finden Sie unter [Single-Threaded-Apartments](/windows/desktop/com/single-threaded-apartments) für Weitere Informationen.|
+   |**Beide**|Gibt an, dass das Objekt aus, welche Art von einem Thread Erstellung je Apartment oder freies threading, verwenden kann.|
+   |**kostenlos**|Gibt an, dass das Objekt freies threading verwendet. Freies threading ist gleichbedeutend mit einem multithread Apartmentmodell. Finden Sie unter [Multithread-Apartments](/windows/desktop/com/multithreaded-apartments) für Weitere Informationen.|
+   |**Neutral**|Gibt an, dass das Objekt den Richtlinien für Multithread-Apartments folgt, jedoch können für jede Art von Thread durchgeführt.|
+
+- **Aggregation**
+
+   Gibt an, ob das Objekt verwendet [Aggregation](/windows/desktop/com/aggregation). Das Aggregatobjekt wählt die Schnittstellen verwenden, um für Clients verfügbar zu machen, und die Schnittstellen werden verfügbar gemacht, als sei das Aggregatobjekt diese implementiert. Clients des aggregierten Objekts kommunizieren nur mit aggregierten Objekts.
+
+   |Option|Beschreibung|
+   |------------|-----------------|
+   |**Ja**|Gibt an, dass das Objekt aggregiert werden kann. Der Standardwert.|
+   |**No**|Gibt an, dass das Objekt nicht aggregiert werden.|
+   |**Nur**|Gibt an, dass das Objekt aggregiert werden muss.|
+
+- **Interface**
+
+   Gibt den Typ der Schnittstelle, die das Objekt unterstützt. Das Objekt unterstützt standardmäßig eine duale Schnittstelle.
+
+   |Option|Beschreibung|
+   |------------|-----------------|
+   |**Dual**|Gibt an, dass das Objekt eine duale Schnittstelle unterstützt (die Vtable besitzt, benutzerdefinierte Funktionen sowie die späte Bindung `IDispatch` Methoden). Ermöglicht es COM-Clients und [Automatisierungscontroller](../../mfc/automation-clients.md) auf das Objekt zuzugreifen. Der Standardwert.|
+   |**Benutzerdefiniert**|Gibt an, dass das Objekt eine benutzerdefinierte Schnittstelle unterstützt (die Vtable hat benutzerdefinierte Funktionen). Eine benutzerdefinierte Schnittstelle kann vor allem über Prozessgrenzen hinweg schneller als das duale Schnittstelle sein.<br /><br /> -   **Automatisierungskompatibel** Automatisierungscontroller ermöglicht Zugriff auf ein Objekt, das die benutzerdefinierte Schnittstelle unterstützt.|
+
+- **Unterstützung**
+
+   Gibt zusätzliche Unterstützung für das Objekt an.
+
+   |Option|Beschreibung|
+   |------------|-----------------|
+   |**ISupportErrorInfo**|Stellt die Unterstützung der [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) Schnittstelle, damit das Objekt Fehlerinformationen an den Client zurückgeben kann.|
+   |**Verbindungspunkte**|Ermöglicht der Verbindungspunkte für das Objekt, indem Sie machen die Klasse des Objekts abgeleitet [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md).|
+   |**Freethread-Marshaller**|Erstellt ein Freethread-Marshaller-Objekt zum Marshallen der Schnittstellenzeiger effizient zwischen Threads im selben Prozess. Zur Angabe der Objekt **sowohl** als Threadingmodell.|
+   |**IObjectWithSite** (Unterstützung für Internet Explorer-Objekt)|Implementiert [IObjectWithSiteImpl](../../atl/reference/iobjectwithsiteimpl-class.md), dem bietet es sich um eine einfache Möglichkeit, um die Kommunikation zwischen einem Objekt und seinem Standort in einem Container zu unterstützen.|
+
+## <a name="see-also"></a>Siehe auch
+
+[ATL-Assistent für einfache Objekte](../../atl/reference/atl-simple-object-wizard.md)<br/>
+[ATL Simple Object (Einfaches ATL-Objekt)](../../atl/reference/adding-an-atl-simple-object.md)<br/>
+[In-Process-Server, Threadingprobleme](/windows/desktop/com/in-process-server-threading-issues)
 

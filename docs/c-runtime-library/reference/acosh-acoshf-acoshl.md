@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc5ec18eec5be6ee0cc696768be65cd62b74bdc7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 368f32de049aa7bed83a9bb80e650ef212d07778
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392782"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052165"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -71,9 +71,9 @@ Gleitkommawert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Acosh** Funktionen geben den umgekehrten hyperbolischen Cosinus (hyperbolischen arcuscosinus) von *x*. Diese Funktionen sind in der Domäne gültig *x* ≥ 1. Wenn *x* ist kleiner als 1, **Errno** festgelegt ist, um **EDOM** und das Ergebnis ist ein stilles NaN. Wenn *x* ist ein stilles NaN, undefiniert oder unendlich ist, wird der gleiche Wert zurückgegeben.
+Die **Acosh** Funktionen geben den umgekehrten hyperbolischen Cosinus (hyperbolischen arcuscosinus) von *x*. Diese Funktionen sind in der Domäne gültig *x* ≥ 1. Wenn *x* ist kleiner als 1, `errno` nastaven NA hodnotu `EDOM` und das Ergebnis ist ein stilles NaN. Wenn *x* wird eine stille NaN, undefiniert oder unendlich ist, wird der gleiche Wert zurückgegeben.
 
-|Eingabe|SEH-Ausnahme|**_matherr** Ausnahme|
+|Eingabe|SEH-Ausnahme|`_matherr` -Ausnahme|
 |-----------|-------------------|--------------------------|
 |± QNAN, IND, INF|Keine|Keine|
 |*X* < 1|Keine|Keine|
@@ -125,4 +125,4 @@ acosh( 1.324609 ) = 0.785398
 [atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
 [cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>
 [sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)<br/>
-[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)<br/>
+[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)

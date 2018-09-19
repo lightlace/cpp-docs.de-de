@@ -16,25 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a741444aa9b0e9af1e1eb344a8ac7029127af3f9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 516de9411a91f4bb8dd5f8775544ef32e7863bb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386562"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038268"
 ---
 # <a name="storage-of-unions"></a>Speicherung von Unions
-Der Speicher, der einer Union-Variable zugeordnet wird, ist der Speicher, der für den größten Member der Union erforderlich ist. Wenn ein kleinerer Member gespeichert wird, kann die Union-Variable nicht verwendeten Speicherbereich enthalten. Alle Member werden im gleichen Speicherbereich gespeichert und beginnen an derselben Adresse. Der gespeicherte Wert wird jedes Mal überschrieben, wenn einem anderen Member ein Wert zugewiesen wird. Zum Beispiel:  
-  
-```  
-union         /* Defines a union named x */  
-{  
-    char *a, b;  
-    float f[20];  
-} x;  
-```  
-  
- Die Elemente der `x`-Union fungieren in der Reihenfolge ihrer Deklaration als Zeiger auf einen `char`-Wert, einen `char`-Wert und ein Array von **float**-Werten. Der `x` zugeordnete Speicher ist der Speicher, der für das `f`-Array mit 20 Elementen erforderlich ist, da `f` der längste Union-Member ist. Da kein Tag der Union zugeordnet ist, ist ihr Typ unbenannt oder „anonym“.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Union-Deklarationen](../c-language/union-declarations.md)
+
+Der Speicher, der einer Union-Variable zugeordnet wird, ist der Speicher, der für den größten Member der Union erforderlich ist. Wenn ein kleinerer Member gespeichert wird, kann die Union-Variable nicht verwendeten Speicherbereich enthalten. Alle Member werden im gleichen Speicherbereich gespeichert und beginnen an derselben Adresse. Der gespeicherte Wert wird jedes Mal überschrieben, wenn einem anderen Member ein Wert zugewiesen wird. Zum Beispiel:
+
+```
+union         /* Defines a union named x */
+{
+    char *a, b;
+    float f[20];
+} x;
+```
+
+Die Elemente der `x`-Union fungieren in der Reihenfolge ihrer Deklaration als Zeiger auf einen `char`-Wert, einen `char`-Wert und ein Array von **float**-Werten. Der `x` zugeordnete Speicher ist der Speicher, der für das `f`-Array mit 20 Elementen erforderlich ist, da `f` der längste Union-Member ist. Da kein Tag der Union zugeordnet ist, ist ihr Typ unbenannt oder „anonym“.
+
+## <a name="see-also"></a>Siehe auch
+
+[Union-Deklarationen](../c-language/union-declarations.md)

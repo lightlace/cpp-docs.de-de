@@ -1,5 +1,5 @@
 ---
-title: -V (Versionsnummer) | Microsoft Docs
+title: -V (Versionsnummer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,47 +20,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3daf62c818b454a5477de04a27c4b4f308c271d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4ad42a72a874537a6307cfc547852f812f4aaaa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377231"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707966"
 ---
 # <a name="v-version-number"></a>/V (Versionsnummer)
-Veraltet. Eine Textzeichenfolge in der OBJ-Datei eingebettet.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-/Vstring  
-```  
-  
-## <a name="arguments"></a>Argumente  
- `string`  
- Eine Zeichenfolge, die Angabe der Versionsnummer oder den Urheberrechtshinweis, in einer OBJ-Datei eingebettet werden soll.  
-  
-## <a name="remarks"></a>Hinweise  
- Die Bezeichnung der Stringcan einer OBJ-Datei mit einer Versionsnummer oder copyright-Hinweis. Wenn sie einen Teil der Zeichenfolge sind, müssen alle Leerzeichen oder Tabulatorzeichen in doppelte Anführungszeichen (") eingeschlossen werden. Ein umgekehrter Schrägstrich (\\) müssen vor alle doppelten Anführungszeichen stehen, wenn sie einen Teil der Zeichenfolge sind. Ein Leerzeichen zwischen **/v** und `string` ist optional.  
-  
- Sie können auch [Kommentar (C/C++)](../../preprocessor/comment-c-cpp.md) mit dem Compiler Comment-Type-Argument, um die Anzahl der Name und Version des Compilers in der OBJ-Datei zu platzieren.  
-  
- Die **/v** Option ist in Visual Studio 2005; ab veraltet. **/V** wurde in erster Linie verwendet, um das Erstellen von virtuellen Gerätetreibern (VxDs) zu unterstützen, und Visual C++-Toolsets VxDs erstellen nicht mehr unterstützt wird. Eine Liste der veralteten Compileroptionen, finden Sie unter **veraltete und entfernte Compileroptionen** in [Compileroptionen nach Kategorien sortiert](../../build/reference/compiler-options-listed-by-category.md).  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
-  
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
-  
-2.  Klicken Sie auf den Ordner **C/C++** .  
-  
-3.  Klicken Sie auf die Eigenschaftenseite **Befehlszeile** .  
-  
-4.  Geben Sie die Compileroption im Feld **Zusätzliche Optionen** ein.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
-  
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Compileroptionen](../../build/reference/compiler-options.md)   
- [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+
+Veraltet. Eine Zeichenfolge in der OBJ-Datei eingebettet.
+
+## <a name="syntax"></a>Syntax
+
+```
+/Vstring
+```
+
+## <a name="arguments"></a>Argumente
+
+*string*<br/>
+Eine Zeichenfolge, die Angabe der Versionsnummer oder den Urheberrechtshinweis in einer OBJ-Datei eingebettet werden.
+
+## <a name="remarks"></a>Hinweise
+
+Die Bezeichnung der Stringcan eine .obj-Datei mit einer Versionsnummer oder Copyrightinformationen. Leerzeichen oder Tabulatorzeichen müssen in doppelte Anführungszeichen (") eingeschlossen werden, wenn sie einen Teil der Zeichenfolge sind. Ein umgekehrter Schrägstrich (\\) müssen vor keine doppelten Anführungszeichen stehen, wenn sie einen Teil der Zeichenfolge sind. Ein Leerzeichen zwischen **/v** und `string` ist optional.
+
+Sie können auch [Kommentar (C/C++)](../../preprocessor/comment-c-cpp.md) mit dem Compiler Comment-Type-Argument, um den Namen und die Version des Compilers in der OBJ-Datei abzulegen.
+
+Die **/v** Option ist ab Visual Studio 2005; veraltet. **/V** wurde in erster Linie verwendet, um das Erstellen von virtuellen Gerätetreibern (VxDs) zu unterstützen, und Erstellen von VxDs wird vom Visual C++-Toolset nicht mehr unterstützt. Eine Liste der Ersetzte Compileroptionen, finden Sie unter **veraltete und entfernte Compileroptionen** in [Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
+
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+
+1. Klicken Sie auf den Ordner **C/C++** .
+
+1. Klicken Sie auf die Eigenschaftenseite **Befehlszeile** .
+
+1. Geben Sie die Compileroption im Feld **Zusätzliche Optionen** ein.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
+
+- Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Siehe auch
+
+[Compileroptionen](../../build/reference/compiler-options.md)<br/>
+[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

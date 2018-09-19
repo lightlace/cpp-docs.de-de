@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2242 | Microsoft Docs
+title: Compilerfehler C2242 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1826350d7a765f97e92decd691e7f957c453c15a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e902c63f333559c4fd122389c171ac325522dd1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166113"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046341"
 ---
 # <a name="compiler-error-c2242"></a>Compilerfehler C2242
-typedef-Name kann nicht auf Klasse/Struktur/Union folgen  
-  
- Ein `typedef` -Name tritt am Ende eines qualifizierten Namens auf.
+
+typedef-Name kann nicht auf Klasse/Struktur/Union folgen
+
+Ein `typedef` -Name tritt am Ende eines qualifizierten Namens auf.

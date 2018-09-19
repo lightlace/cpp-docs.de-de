@@ -1,5 +1,5 @@
 ---
-title: Steuerelementtypen für die Struktur | Microsoft Docs
+title: Struktur der Stile von Listensteuerelementen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,25 +29,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f44f0de4527d6d9f14a06795a297617f46c0010a
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: b6f3f28bbc2a69a5ad5c4fe9910d8312b236c34f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953144"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686497"
 ---
 # <a name="tree-control-styles"></a>Struktursteuerelementstile
-Strukturansicht ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) Stile steuern Aspekte der Darstellung eine Struktur des Steuerelements. Bei der Erstellung des Strukturansicht-Steuerelements, legen Sie die anfänglichen Formate. Abrufen und ändern Sie die Stile nach dem Erstellen des Strukturansicht-Steuerelements mithilfe der [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) und [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) Windows-Funktionen, die Angabe **GWL_STYLE** für die *nIndex* Parameter. Eine vollständige Liste der Formate finden Sie unter [Ansicht Fenster Struktursteuerelementstile](http://msdn.microsoft.com/library/windows/desktop/bb760013) im Windows SDK.  
+Strukturansicht-Steuerelementen ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) Stile bestimmen Aspekte der Darstellung einer Struktur des Steuerelements. Die anfänglichen Formate wird festgelegt, wenn Sie die Strukturansicht-Steuerelement erstellen. Können Sie abrufen und ändern Sie die Stile, nach dem Erstellen der Strukturansicht mit der [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) und [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows-Funktionen, die Angabe **GWL_STYLE** für die *nIndex* Parameter. Eine vollständige Liste der Formate, finden Sie unter [Ansicht Fenster Struktursteuerelementstile](/windows/desktop/Controls/tree-view-control-window-styles) im Windows SDK.  
   
- Die **Formate TVS_HASLINES** Stil verbessert die grafische Darstellung der Hierarchie eine Strukturansicht-Steuerelements durch Zeichnen von Linien, die untergeordnete Elemente mit ihren entsprechenden übergeordneten Element verknüpft. Dieses Format jedoch nicht Elemente auf der Stammebene der Hierarchie verknüpft. Zu diesem Zweck müssen Sie zum Kombinieren der **Formate TVS_HASLINES** und **TVS_LINESATROOT** Stile.  
+ Die **Formate TVS_HASLINES** Stil verbessert die grafische Darstellung der Hierarchie für ein Strukturansicht-Steuerelement durch Zeichnen von Linien, die untergeordneten Elemente mit ihren entsprechenden übergeordneten Element verknüpft. Dieses Format wird nicht auf Elemente am Stamm der Hierarchie verknüpft. Zu diesem Zweck müssen Sie zum Kombinieren der **Formate TVS_HASLINES** und **TVS_LINESATROOT** Stile.  
   
- Der Benutzer kann erweitern oder Reduzieren von einem übergeordneten Element der Liste der untergeordneten Elemente durch Doppelklicken auf das übergeordnete Element. Eine Strukturansicht-Steuerelement mit dem **TVS_SINGLEEXPAND** Format bewirkt, dass die zum Erweitern ausgewählt wird und das Element wird deaktiviert, um zu reduzieren. Wenn die Maus verwendet wird, um das ausgewählte Element per Einzelklick und dieses Element wird geschlossen, wird er erweitert werden. Wenn das ausgewählte Element Single-geklickt wird, wenn er geöffnet ist, wird er reduziert werden.  
+ Der Benutzer kann erweitert oder durch Doppelklicken auf das übergeordnete Element eines übergeordneten Elements der Liste der untergeordneten Elemente zu reduzieren. Ein Strukturansicht-Steuerelement, die die **TVS_SINGLEEXPAND** Format bewirkt, dass die zum Erweitern ausgewählt wird und das Element wird deaktiviert, um Sie zu reduzieren. Wenn der Mauszeiger verwendet wird, um das ausgewählte Element Klick, und dieses Element wird geschlossen, wird dieses erweitert. Wenn das ausgewählte Element Single-geklickt wird, wenn er geöffnet ist, wird er reduziert werden.  
   
- Eine Strukturansicht-Steuerelement mit dem **TVS_HASBUTTONS** Stil Fügt eine Schaltfläche auf der linken Seite des jedem übergeordneten Element. Der Benutzer kann die Schaltfläche zum Erweitern oder reduzieren die untergeordneten Elemente als Alternative zum Doppelklicken Sie auf dem übergeordneten Element klicken. **TVS_HASBUTTONS** Elemente auf der Stammebene der Hierarchie nicht Schaltflächen hinzu. Zu diesem Zweck müssen Sie kombinieren **Formate TVS_HASLINES**, **TVS_LINESATROOT**, und **TVS_HASBUTTONS**.  
+ Ein Strukturansicht-Steuerelement, die die **TVS_HASBUTTONS** Stil wird eine Schaltfläche auf der linken Seite jedes übergeordneten Elements hinzugefügt. Der Benutzer kann die Schaltfläche zum Erweitern oder reduzieren die untergeordneten Elemente als Alternative zur durch Doppelklicken auf das übergeordnete Element klicken. **TVS_HASBUTTONS** Elemente am Stamm der Hierarchie nicht Schaltflächen hinzu. Zu diesem Zweck müssen Sie kombinieren **Formate TVS_HASLINES**, **TVS_LINESATROOT**, und **TVS_HASBUTTONS**.  
   
- Die **TVS_EDITLABELS** Stil ermöglicht es dem Benutzer, die Bezeichnungen des Strukturansicht-Steuerelements zu bearbeiten. Weitere Informationen zum Bearbeiten von Bezeichnungen finden Sie unter [Struktur Bearbeitungssteuerelement Bezeichnung](../mfc/tree-control-label-editing.md) weiter unten in diesem Thema.  
+ Die **TVS_EDITLABELS** Stil ermöglicht es dem Benutzer, die Bezeichnungen von Elementen der Strukturansicht-Steuerelement zu bearbeiten. Weitere Informationen zum Bearbeiten von Bezeichnungen finden Sie unter [Strukturansicht-Steuerelement Bezeichnungsbearbeitung](../mfc/tree-control-label-editing.md) weiter unten in diesem Thema.  
   
- Die **TVS_NOTOOLTIPS** Stil deaktiviert die automatische QuickInfo-Funktion des Strukturansicht-Steuerelemente. Diese Funktion zeigt automatisch eine QuickInfo, die den Titel des Elements unter dem Cursor enthält, wenn der gesamte Titel zurzeit nicht sichtbar ist.  
+ Die **TVS_NOTOOLTIPS** -Stil deaktiviert die automatische QuickInfo-Funktion des Strukturansicht-Steuerelemente. Diese Funktion zeigt automatisch eine QuickInfo, die mit den Titel des Elements unter dem Cursor, wenn es sich bei der gesamte Titel derzeit nicht angezeigt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CTreeCtrl](../mfc/using-ctreectrl.md)   

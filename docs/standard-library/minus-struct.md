@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fdbcc396b77c6e0eb13262b80ca30df704f0c62
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3f377d2005625237113ebe881081f1eaf41d2b74
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959104"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318602"
 ---
 # <a name="minus-struct"></a>minus-Struktur
 
@@ -44,16 +44,18 @@ struct minus<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const`
     -> decltype(std::forward<T>(Left) - std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *Typ*, *T*, *U* ein Typ, eine Binärdatei unterstützt `operator-` , das Operanden angegebener oder abgeleiteter Typen akzeptiert.
 
-*Links* der linke Operand des Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
+*Links*<br/>
+Der linke Operand des Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
 
-*Rechts* der Rechte Operand des Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
+*Rechts*<br/>
+Der rechte Operand des Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -107,11 +109,11 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-\* Output:
+/* Output:
 The vector v1 = ( 1 5 9 13 17 21 )
 The vector v2 = ( -1 2 5 8 11 14 )
 The element-wise differences between v1 and v2 are: ( 2 3 4 5 6 7 )
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Anforderungen

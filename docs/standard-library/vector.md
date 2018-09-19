@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e49fcc87c4c074494164a085e01581077bbfe118
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3c4ec16ba621ee268be65bfee11798fb4b358673
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953861"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720290"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -83,17 +83,17 @@ void swap (
 
 ### <a name="parameters"></a>Parameter
 
-*Type*  
- Der Vorlagenparameter für den Typ der Daten, die im Vektor gespeichert sind.
+*Type*<br/>
+Der Vorlagenparameter für den Typ der Daten, die im Vektor gespeichert sind.
 
-*Zuweisung*  
- Der Vorlagenparameter für das gespeicherte Zuweisungsobjekt, das für die Speicherbelegung und -freigabe verantwortlich ist.
+*Zuweisung*<br/>
+Der Vorlagenparameter für das gespeicherte Zuweisungsobjekt, das für die Speicherbelegung und -freigabe verantwortlich ist.
 
-*left*  
- Der erste (linke) Vektor in einem Vergleichsvorgang.
+*left*<br/>
+Der erste (linke) Vektor in einem Vergleichsvorgang.
 
-*right*  
- Der zweite (rechte) Vektor in einem Vergleichsvorgang.
+*right*<br/>
+Der zweite (rechte) Vektor in einem Vergleichsvorgang.
 
 ### <a name="operators"></a>Operatoren
 

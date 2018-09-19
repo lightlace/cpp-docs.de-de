@@ -1,5 +1,5 @@
 ---
-title: 'Semaphore:: Operator = | Microsoft Docs'
+title: 'Semaphore:: Operator = | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25287e642bd368470b207ed237f44ca70773064e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fbce88be7f7b83c22964438bc4ea7a783754fb63
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892526"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609007"
 ---
 # <a name="semaphoreoperator-operator"></a>Semaphore::operator=-Operator
-Verschiebt das angegebene Handle aus einem Semaphorobjekt mit dem aktuellen Semaphore-Objekt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-Semaphore& operator=(  
-   _Inout_ Semaphore&& h  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `h`  
- Rvalue-Verweis auf eine Semaphorobjekt.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Ein Verweis auf das aktuelle Semaphore-Objekt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers
- 
- ## <a name="see-also"></a>Siehe auch
- [Semaphore-Klasse](../windows/semaphore-class.md)
+
+Verschiebt das angegebene Handle von einem **Semaphor** -Objekt mit dem aktuellen **Semaphor** Objekt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+Semaphore& operator=(
+   _Inout_ Semaphore&& h
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*h*  
+Rvalue-Verweis auf eine **Semaphor** Objekt.
+
+## <a name="return-value"></a>Rückgabewert
+
+Ein Verweis auf das aktuelle **Semaphor** Objekt.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+[Semaphore-Klasse](../windows/semaphore-class.md)

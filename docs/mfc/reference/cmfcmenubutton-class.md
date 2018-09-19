@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77762fe12ed74f11f0b7e633f2a0c77523a7efaa
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: aae4caaa73970818a4c3deee9a82b94260629e17
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849788"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700908"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton-Klasse
 Eine Schaltfläche, die ein Popupmenü anzeigt und die vom Benutzer gewählte Menüoption meldet.  
@@ -167,8 +167,8 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pMsg*  
- Verweist auf eine [MSG](../../mfc/reference/msg-structure1.md) -Struktur, die zu verarbeitende Meldung enthält.  
+*pMsg*<br/>
+[in] Verweist auf eine [MSG](../../mfc/reference/msg-structure1.md) -Struktur, die zu verarbeitende Meldung enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL ist, wenn die Meldung übersetzt wurde, und nicht weitergeleitet werden soll; 0, wenn die Nachricht nicht übersetzt wurde und weitergeleitet werden soll.  
@@ -183,8 +183,8 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bCalcOnly*  
- Ein boolescher Parameter, der angibt, ob diese Methode ändert die Größe der Schaltfläche.  
+*bCalcOnly*<br/>
+[in] Ein boolescher Parameter, der angibt, ob diese Methode ändert die Größe der Schaltfläche.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt, das die neue Größe für die Schaltfläche angibt.  

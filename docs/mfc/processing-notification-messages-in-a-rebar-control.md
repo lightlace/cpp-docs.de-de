@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten von Benachrichtigungsmeldungen in einem Grundleisten-Steuerelement | Microsoft Docs
+title: Verarbeiten von Benachrichtigungsmeldungen in einem Grundleisten-Steuerelement | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a1d42d129ab7b7d2e98ae1126b8f32f68b1f356
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: dce09e84e9a2b5262d05847746f819a122ec36c5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931826"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208974"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Verarbeiten von Benachrichtigungsmeldungen in einem Grundleisten-Steuerelement
-Erstellen Sie in der übergeordneten Klasse Grundleisten-Steuerelement, ein `OnChildNotify` Handlerfunktion mit einer Switch-Anweisung für jedes Grundleisten-Steuerelement (`CReBarCtrl`) benachrichtigungsmeldungen, die Sie behandeln möchten. Benachrichtigungen werden an das übergeordnete Fenster gesendet, wenn der Benutzer Objekte über die Grundleisten-Steuerelement Änderungen das Layout der rebarbereichen, löscht Lieblingsbands zieht, aus dem Grundleistensteuerelement, und so weiter.  
+Erstellen Sie in der übergeordneten Klasse des Infoleisten-Steuerelements, einer `OnChildNotify` Handlerfunktion mit einer Switch-Anweisung für ein beliebiges Grundleisten-Steuerelement (`CReBarCtrl`) benachrichtigungsmeldungen, die Sie behandeln möchten. Benachrichtigungen werden an das übergeordnete Fenster gesendet, wenn der Benutzer Objekte über das Grundleistensteuerelement, Änderungen das Layout der rebarbereichen löscht bands zieht-Infoleisten-Steuerelements, und so weiter.  
   
- Die folgenden benachrichtigungsmeldungen können durch das Grundleisten-Steuerelementobjekt gesendet werden:  
+ Die folgenden benachrichtigungsmeldungen können vom Objekt Infoleisten-Steuerelement gesendet werden:  
   
--   RBN_AUTOSIZE gesendet, von einem Grundleistensteuerelement (erstellt mit dem Format RBS_AUTOSIZE) Wenn die Infoleiste automatisch angepasst.  
+-   RBN_AUTOSIZE gesendet von einem Infoleisten-Steuerelement (erstellt mit dem Stil RBS_AUTOSIZE) Wenn die Infoleiste automatisch seine Größe selbst ändert.  
   
--   RBN_BEGINDRAG, die von einem Grundleisten-Steuerelement, wenn der Benutzer beginnt, ziehen ein Band gesendet werden.  
+-   RBN_BEGINDRAG gesendet von einem Infoleisten-Steuerelement, wenn der Benutzer beginnt, ziehen ein Band.  
   
--   RBN_CHILDSIZE, die von einem Grundleisten-Steuerelement beim Ändern der Größe des Bands untergeordnetes Fenster gesendet werden.  
+-   RBN_CHILDSIZE gesendet von einem Infoleisten-Steuerelement beim Ändern der Größe eines untergeordneten Fensters des Bands.  
   
--   RBN_DELETEDBAND wird gesendet, von einem Grundleistensteuerelement, nachdem ein Band gelöscht wurde.  
+-   RBN_DELETEDBAND wird gesendet, von einem Infoleisten-Steuerelement, nachdem ein Band gelöscht wurde.  
   
--   RBN_DELETINGBAND wird gesendet, von einem Grundleisten-Steuerelement, wenn ein Band gelöscht werden sollen.  
+-   RBN_DELETINGBAND wird gesendet, von einem Infoleisten-Steuerelement, wenn ein Band gelöscht werden soll.  
   
--   RBN_ENDDRAG, die von einem Grundleisten-Steuerelement, wenn der Benutzer den Ziehvorgang für ein Band gesendet werden.  
+-   RBN_ENDDRAG gesendet von einem Infoleisten-Steuerelement, wenn der Benutzer den Ziehvorgang für ein Band.  
   
--   RBN_GETOBJECT wird gesendet, von einem Grundleistensteuerelement (erstellt mit dem Format RBS_REGISTERDROP) Wenn ein Objekt über ein Band in das Steuerelement gezogen wird.  
+-   RBN_GETOBJECT wird gesendet, von einem Infoleisten-Steuerelement (erstellt mit dem Stil RBS_REGISTERDROP) Wenn ein Objekt über ein Band in das Steuerelement gezogen wird.  
   
 -   RBN_HEIGHTCHANGE wird gesendet, von einem Grundleisten-Steuerelement, wenn seine Höhe geändert wurde.  
   
 -   RBN_LAYOUTCHANGED wird gesendet, von einem Grundleisten-Steuerelement, wenn der Benutzer das Layout der Bänder des Steuerelements ändert.  
   
- Weitere Informationen zu dieser Benachrichtigungen, finden Sie unter [Grundleisten-Steuerelementverweis](http://msdn.microsoft.com/library/windows/desktop/bb774375) im Windows SDK.  
+ Weitere Informationen zu dieser Benachrichtigungen, finden Sie unter [Grundleisten-Steuerelementverweis](https://msdn.microsoft.com/library/windows/desktop/bb774375) im Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CReBarCtrl](../mfc/using-crebarctrl.md)   

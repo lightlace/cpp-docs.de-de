@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00c23cf21b8d9c5c46976f522f837dddb941f24f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 97ac9d7e8e00e5f81d974aa84befaad99881391d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964209"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108758"
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution-Klasse
 
@@ -82,7 +82,8 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*IntType* standardmäßig der ganzzahligen Ergebnistyp **Int**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*IntType*<br/>
+Der Ergebnistyp für ganze Zahl, Standardwert **Int**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
@@ -209,21 +210,29 @@ explicit discrete_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*FirstW* der erste Iterator in der Liste, um die Verteilung zu erstellen.
+*firstW*<br/>
+Der erste Iterator in der Liste, aus der die Verteilung konstruiert werden soll.
 
-*LastW* der letzte Iterator in der Liste, um die Verteilung (nicht inklusiv, da Iteratoren verwenden Sie ein leeres Element für das Ende) zu erstellen.
+*lastW*<br/>
+Der letzte Iterator in der Liste, aus der die Verteilung konstruiert werden soll (nicht inklusiv, da Iteratoren für das Ende ein leeres Element verwenden).
 
-*Weightlist* der [initializer_list-Element](../cpp/initializers.md) aus der die Verteilung konstruiert.
+*weightlist*<br/>
+Die [initializer_list](../cpp/initializers.md), aus der die Verteilung erstellt werden soll.
 
-*Anzahl* die Anzahl von Elementen im Verteilungsbereich. Wenn `count==0` ist, äquivalent zum Standardkonstruktor (generiert immer Null).
+*count*<br/>
+Die Anzahl von Elementen im Verteilungsbereich. Wenn `count==0` ist, äquivalent zum Standardkonstruktor (generiert immer Null).
 
-*niedrige* den niedrigsten Wert im Verteilungsbereich.
+*low*<br/>
+Der niedrigste Wert im Verteilungsbereich.
 
-*hohe* der höchste Wert im Verteilungsbereich.
+*high*<br/>
+Der höchste Wert im Verteilungsbereich.
 
-*Weightfunc* das Objekt, das die Wahrscheinlichkeitsfunktion für die Verteilung darstellt. Die Parameter und der Rückgabewert müssen konvertierbar sein **doppelte**.
+*weightfunc*<br/>
+Das Objekt, das die Wahrscheinlichkeitsfunktion für die Verteilung darstellt. Die Parameter und der Rückgabewert müssen konvertierbar sein **doppelte**.
 
-*Parm* der `param_type` Struktur verwendet, um die Verteilung erstellen.
+*parm*<br/>
+Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -269,21 +278,29 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*FirstW* der erste Iterator in der Liste, um die Verteilung zu erstellen.
+*firstW*<br/>
+Der erste Iterator in der Liste, aus der die Verteilung konstruiert werden soll.
 
-*LastW* der letzte Iterator in der Liste, um die Verteilung (nicht inklusiv, da Iteratoren verwenden Sie ein leeres Element für das Ende) zu erstellen.
+*lastW*<br/>
+Der letzte Iterator in der Liste, aus der die Verteilung konstruiert werden soll (nicht inklusiv, da Iteratoren für das Ende ein leeres Element verwenden).
 
-*Weightlist* der [initializer_list-Element](../cpp/initializers.md) aus der die Verteilung konstruiert.
+*weightlist*<br/>
+Die [initializer_list](../cpp/initializers.md), aus der die Verteilung erstellt werden soll.
 
-*Anzahl* die Anzahl von Elementen im Verteilungsbereich. Wenn *count* 0 ist, entspricht dies dem Standardkonstruktor (generiert immer Null).
+*count*<br/>
+Die Anzahl von Elementen im Verteilungsbereich. Wenn *count* 0 ist, entspricht dies dem Standardkonstruktor (generiert immer Null).
 
-*niedrige* den niedrigsten Wert im Verteilungsbereich.
+*low*<br/>
+Der niedrigste Wert im Verteilungsbereich.
 
-*hohe* der höchste Wert im Verteilungsbereich.
+*high*<br/>
+Der höchste Wert im Verteilungsbereich.
 
-*Weightfunc* das Objekt, das die Wahrscheinlichkeitsfunktion für die Verteilung darstellt. Die Parameter und der Rückgabewert müssen konvertierbar sein **doppelte**.
+*weightfunc*<br/>
+Das Objekt, das die Wahrscheinlichkeitsfunktion für die Verteilung darstellt. Die Parameter und der Rückgabewert müssen konvertierbar sein **doppelte**.
 
-*richtige* der `param_type` zu zu vergleichende Objekt.
+*right*<br/>
+Das mit diesem `param_type`-Objekt zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
 

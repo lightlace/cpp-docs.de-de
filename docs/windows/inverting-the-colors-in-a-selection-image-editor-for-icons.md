@@ -1,5 +1,5 @@
 ---
-title: Invertieren der Farben in einer Markierung (Bildbearbeitung für Symbole) | Microsoft Docs
+title: Invertieren der Farben in einer Markierung (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,26 +20,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f29c9698a14d5cd8773d12a1719614e19ca67c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b6630ce3f2bc9fc10e1a7e6cdf037369c60adb2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874079"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601077"
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>Invertieren der Farben in einer Markierung (Bildbearbeitung für Symbole)
-Der Grafik-Editor bietet eine bequeme Möglichkeit zum Invertieren von Farben im ausgewählten Teil des Bilds, damit Sie feststellen können, wie ein Bild mit invertierten Farben aussieht.  
-  
-### <a name="to-invert-colors-in-the-current-selection"></a>So kehren Sie Farben in der aktuellen Auswahl um  
-  
-1.  Auf der **Image** Menü klicken Sie auf **Farben umkehren**.  
-  
 
-  
- Anforderungen  
-  
- Keiner  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Arbeiten mit Farben](../windows/working-with-color-image-editor-for-icons.md)
+Die **Image** Editor bietet eine bequeme Möglichkeit zum Invertieren von Farben im ausgewählten Teil des Bilds, sodass Sie erkennen können, wie ein Bild mit invertierten Farben aussieht.
+
+### <a name="to-invert-colors-in-the-current-selection"></a>So kehren Sie Farben in der aktuellen Auswahl um
+
+1. Auf der **Image** Menü klicken Sie auf **Farben umkehren**.
+
+## <a name="requirements"></a>Anforderungen
+
+Keiner
+
+## <a name="see-also"></a>Siehe auch
+
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Arbeiten mit Farben](../windows/working-with-color-image-editor-for-icons.md)

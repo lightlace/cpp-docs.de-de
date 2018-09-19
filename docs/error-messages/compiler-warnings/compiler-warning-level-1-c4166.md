@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4166 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4166 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61bc7ab78fc0fc2816f42db4b6e162838ad74f6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c6112c684dc4896393b35309a0a3af7eedd455d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276616"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051996"
 ---
 # <a name="compiler-warning-level-1-c4166"></a>Compilerwarnung (Stufe 1) C4166
-**Unzulässige Aufrufkonvention für Konstruktor/Destruktor**  
-  
- Konstruktoren und Destruktoren können keine anderen Aufrufkonventionen als den Standardwert für die Plattform besitzen (außer wenn Sie explizit **__clrcall**angeben).
+
+**Unzulässige Aufrufkonvention für Konstruktor/Destruktor**
+
+Konstruktoren und Destruktoren können keine anderen Aufrufkonventionen als den Standardwert für die Plattform besitzen (außer wenn Sie explizit **__clrcall**angeben).

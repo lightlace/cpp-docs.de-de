@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: * Operator | Microsoft Docs'
+title: 'Comptrref:: * Operator | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03de935ab9195cddf3ea9936b694b55ba2cec34c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5bb6bc06f65f53f919197b5350db8aacc268013f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883471"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602958"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator*-Operator
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-InterfaceType* operator *();  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Zeiger auf die Schnittstelle, die vom aktuellen ComPtrRef-Objekt dargestellt wird.  
-  
-## <a name="remarks"></a>Hinweise  
- Ruft ab, die Zeiger auf die Schnittstelle, die vom aktuellen ComPtrRef-Objekt dargestellt wird.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** client.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [ComPtrRef-Klasse](../windows/comptrref-class.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+InterfaceType* operator *();
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Zeiger auf die Schnittstelle, die vom aktuellen **ComPtrRef** Objekt.
+
+## <a name="remarks"></a>Hinweise
+
+Ruft ab, der Zeiger auf die Schnittstelle, die vom aktuellen **ComPtrRef** Objekt.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** client.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[ComPtrRef-Klasse](../windows/comptrref-class.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

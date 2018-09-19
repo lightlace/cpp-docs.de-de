@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2693 generiert | Microsoft Docs
+title: Compilerfehler C2693 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bed9c0dcad60febf343357ee3e0762ab3d93ef6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ecf51f5fdbe7d1c6b5d5070e048c69bfc840460
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232773"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051255"
 ---
-# <a name="compiler-error-c2693"></a>Compiler-Fehler C2693 generiert
-'operator' : unzulässiger Vergleich für Verweise auf ein verwaltetes oder WinRT-Array  
-  
- Sie können ein verwaltetes oder WinRT-Array nicht für jede Art von Ungleichheit testen. Sie können beispielsweise testen, um festzustellen, ob verwaltete Arrays gleich sind, aber Sie können nicht testen, um festzustellen, ob ein Array größer oder kleiner als ein anderes Array ist.  
+# <a name="compiler-error-c2693"></a>Compilerfehler C2693
+
+'operator' : unzulässiger Vergleich für Verweise auf ein verwaltetes oder WinRT-Array
+
+Sie können ein verwaltetes oder WinRT-Array nicht für jede Art von Ungleichheit testen. Sie können beispielsweise testen, um festzustellen, ob verwaltete Arrays gleich sind, aber Sie können nicht testen, um festzustellen, ob ein Array größer oder kleiner als ein anderes Array ist.

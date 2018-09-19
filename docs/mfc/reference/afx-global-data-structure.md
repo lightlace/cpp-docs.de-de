@@ -7,6 +7,54 @@ ms.technology:
 ms.topic: reference
 f1_keywords:
 - AFX_GLOBAL_DATA
+- AFXGLOBALS/AFX_GLOBAL_DATA::AFX_GLOBAL_DATA
+- AFXGLOBALS/AFX_GLOBAL_DATA::~AFX_GLOBAL_DATA
+- AFXGLOBALS/AFX_GLOBAL_DATA::CleanUp
+- AFXGLOBALS/AFX_GLOBAL_DATA::D2D1MakeRotateMatrix
+- AFXGLOBALS/AFX_GLOBAL_DATA::DrawParentBackground
+- AFXGLOBALS/AFX_GLOBAL_DATA::DrawTextOnGlass
+- AFXGLOBALS/AFX_GLOBAL_DATA::ExcludeTag
+- AFXGLOBALS/AFX_GLOBAL_DATA::GetColor
+- AFXGLOBALS/AFX_GLOBAL_DATA::GetDirect2dFactory
+- AFXGLOBALS/AFX_GLOBAL_DATA::GetHandCursor
+- AFXGLOBALS/AFX_GLOBAL_DATA::GetITaskbarList
+- AFXGLOBALS/AFX_GLOBAL_DATA::GetITaskbarList3
+- AFXGLOBALS/AFX_GLOBAL_DATA::GetNonClientMetrics
+- AFXGLOBALS/AFX_GLOBAL_DATA::GetShellAutohideBars
+- AFXGLOBALS/AFX_GLOBAL_DATA::GetTextHeight
+- AFXGLOBALS/AFX_GLOBAL_DATA::GetWICFactory
+- AFXGLOBALS/AFX_GLOBAL_DATA::GetWriteFactory
+- AFXGLOBALS/AFX_GLOBAL_DATA::IsD2DInitialized
+- AFXGLOBALS/AFX_GLOBAL_DATA::Is32BitIcons
+- AFXGLOBALS/AFX_GLOBAL_DATA::IsD2DInitialized
+- AFXGLOBALS/AFX_GLOBAL_DATA::IsDwmCompositionEnabled
+- AFXGLOBALS/AFX_GLOBAL_DATA::IsHighContrastMode
+- AFXGLOBALS/AFX_GLOBAL_DATA::OnSettingChange
+- AFXGLOBALS/AFX_GLOBAL_DATA::RegisterWindowClass
+- AFXGLOBALS/AFX_GLOBAL_DATA::ReleaseTaskBarRefs
+- AFXGLOBALS/AFX_GLOBAL_DATA::Resume
+- AFXGLOBALS/AFX_GLOBAL_DATA::SetLayeredAttrib
+- AFXGLOBALS/AFX_GLOBAL_DATA::SetMenuFont
+- AFXGLOBALS/AFX_GLOBAL_DATA::ShellCreateItemFromParsingName
+- AFXGLOBALS/AFX_GLOBAL_DATA::UpdateFonts
+- AFXGLOBALS/AFX_GLOBAL_DATA::UpdateSysColors
+- AFXGLOBALS/AFX_GLOBAL_DATA::EnableAccessibilitySupport
+- AFXGLOBALS/AFX_GLOBAL_DATA::IsAccessibilitySupport
+- AFXGLOBALS/AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable
+- AFXGLOBALS/AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport
+- AFXGLOBALS/AFX_GLOBAL_DATA::bIsWindows7
+- AFXGLOBALS/AFX_GLOBAL_DATA::clrActiveCaptionGradient
+- AFXGLOBALS/AFX_GLOBAL_DATA::clrInactiveCaptionGradient
+- AFXGLOBALS/AFX_GLOBAL_DATA::m_bUseBuiltIn32BitIcons
+- AFXGLOBALS/AFX_GLOBAL_DATA::m_bUseSystemFont
+- AFXGLOBALS/AFX_GLOBAL_DATA::m_hcurHand
+- AFXGLOBALS/AFX_GLOBAL_DATA::m_hcurStretch
+- AFXGLOBALS/AFX_GLOBAL_DATA::m_hcurStretchVert
+- AFXGLOBALS/AFX_GLOBAL_DATA::m_hiconTool
+- AFXGLOBALS/AFX_GLOBAL_DATA::m_nAutoHideToolBarMargin
+- AFXGLOBALS/AFX_GLOBAL_DATA::m_nAutoHideToolBarSpacing
+- AFXGLOBALS/AFX_GLOBAL_DATA::m_nDragFrameThicknessDock
+- AFXGLOBALS/AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,12 +65,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4885cf6e5ddbff939e3f8e6401bd23661f13e275
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 0f5297b6764ba29805b842329403557ad2aa4c3b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337407"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701921"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA-Struktur
 Die `AFX_GLOBAL_DATA` -Struktur enthält Felder und Methoden, mit denen das Framework verwaltet oder die Darstellung und das Verhalten der Anwendung angepasst werden können.  
@@ -32,7 +80,7 @@ Die `AFX_GLOBAL_DATA` -Struktur enthält Felder und Methoden, mit denen das Fram
 ```  
 struct AFX_GLOBAL_DATA  
 ```  
-  
+
 ## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
@@ -64,13 +112,13 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|Initialisiert die Factorys `D2D`, `DirectWrite`und `WIC` . Rufen Sie diese Methode vor der Initialisierung des Hauptfensters auf.|  
 |[AFX_GLOBAL_DATA::Is32BitIcons](#is32biticons)|Gibt an, ob vordefinierte 32-Bit-Symbole unterstützt werden.|  
 |[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|Bestimmt, ob `D2D` initialisiert wurde.|  
-|[AFX_GLOBAL_DATA::IsDwmCompositionEnabled](#isdwmcompositionenabled)|Stellt eine einfache Möglichkeit zum Aufrufen der [DwmIsCompositionEnabled](http://msdn.microsoft.com/library/windows/desktop/aa969518) -Methode von Windows bereit.|  
+|[AFX_GLOBAL_DATA::IsDwmCompositionEnabled](#isdwmcompositionenabled)|Bietet eine einfache Möglichkeit zum Aufrufen der Windows [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) Methode.|  
 |[AFX_GLOBAL_DATA::IsHighContrastMode](#ishighcontrastmode)|Gibt an, ob Bilder nur mit hohem Kontrast angezeigt werden.|  
 |[AFX_GLOBAL_DATA::OnSettingChange](#onsettingchange)|Erkennt den aktuellen Zustand der Funktionen zum automatischen Ausblenden der Menüanimation und Taskleisten auf dem Desktop.|  
 |[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|Registriert die angegebene MFC-Fensterklasse.|  
 |[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|Gibt Schnittstellen frei, die durch die Methoden GetITaskbarList und GetITaskbarList3 ermittelt wurden.|  
-|[AFX_GLOBAL_DATA::Resume](#resume)|Initialisiert die internen Funktionszeiger für den Zugriff auf Methoden, die [Designs und visuelle Stile](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx)in Windows unterstützen.|  
-|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Stellt eine einfache Möglichkeit zum Aufrufen der [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540) -Methode von Windows bereit.|  
+|[AFX_GLOBAL_DATA::Resume](#resume)|Initialisiert die internen Funktionszeiger für den Zugriff auf Methoden, die Windows unterstützen [Designs und visuelle Stile](/windows/desktop/Controls/visual-styles-overview).|  
+|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Bietet eine einfache Möglichkeit zum Aufrufen der Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) Methode.|  
 |[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|Erstellt die angegebene logische Schriftart.|  
 |[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|Erstellt und initialisiert ein Shellelementobjekt aus einem Analysenamen.|  
 |[AFX_GLOBAL_DATA::UpdateFonts](#updatefonts)|Initialisiert die logischen Schriftarten erneut, die vom Framework verwendet werden.|  
@@ -172,14 +220,14 @@ BOOL DrawParentBackground(
 ```  
   
 ### <a name="parameters"></a>Parameter   
- [in] *aufnehmen*  
- Zeiger auf Fenster eines Steuerelements.  
+*Aufnehmen*<br/>
+[in] Zeiger auf Fenster eines Steuerelements.  
   
- [in] *pDC*  
- Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Zeiger auf einen Gerätekontext.  
   
- [in] *LpRect*  
- Zeiger auf ein Rechteck, das den Bereich zum Zeichnen umschließt. Der Standardwert ist NULL.  
+*lpRect*<br/>
+[in] Zeiger auf ein Rechteck, das den Bereich zum Zeichnen umschließt. Der Standardwert ist NULL.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -202,51 +250,51 @@ BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>Parameter   
- [in] *hTheme*  
- Handle für den Designdaten eines Fensters, oder NULL. Das Framework verwendet das angegebene Design zum Zeichnen des Texts, wenn dieser Parameter nicht NULL ist und Designs unterstützt werden. Andernfalls verwendet das Framework kein Design zum Zeichnen des Texts.  
+*hTheme*<br/>
+[in] Handle für den Designdaten eines Fensters, oder NULL. Das Framework verwendet das angegebene Design zum Zeichnen des Texts, wenn dieser Parameter nicht NULL ist und Designs unterstützt werden. Andernfalls verwendet das Framework kein Design zum Zeichnen des Texts.  
   
- Verwenden der [OpenThemeData](http://msdn.microsoft.com/library/windows/desktop/bb759821) Methode, um eine HTHEME zu erstellen.  
+ Verwenden der [OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata) Methode, um eine HTHEME zu erstellen.  
   
- [in] *pDC*  
- Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Zeiger auf einen Gerätekontext.  
   
- [in] *iPartId*  
- Das Steuerelementteil, in dem das gewünschte Erscheinungsbild für den Text gespeichert ist. Weitere Informationen finden Sie im Artikel [Parts and States](http://msdn.microsoft.com/library/windows/desktop/bb773210)(Teile und Zustände) in der Tabellenspalte „Part“ (Teil). Wenn der Wert 0 lautet, wird der Text in der Standardschriftart oder in einer im Gerätekontext ausgewählten Schriftart gezeichnet.  
+*iPartId*<br/>
+[in] Der Teil des Steuerelements mit dem gewünschten Text aussehen. Weitere Informationen finden Sie im Artikel "Teile" der Tabelle in [Teile und Zustände](https://msdn.microsoft.com/library/windows/desktop/bb773210). Wenn der Wert 0 lautet, wird der Text in der Standardschriftart oder in einer im Gerätekontext ausgewählten Schriftart gezeichnet.  
   
- [in] *iStateId*  
- Der Steuerelementzustand, in dem das gewünschte Erscheinungsbild für den Text gespeichert ist. Weitere Informationen finden Sie im Artikel [Parts and States](http://msdn.microsoft.com/library/windows/desktop/bb773210)(Teile und Zustände) in der Tabellenspalte „States“ (Zustände).  
+*iStateId*<br/>
+[in] Der Steuerelementzustand, der dem gewünschten Text aussehen. Weitere Informationen finden Sie unter der Spalte "Status" der Tabelle in [Teile und Zustände](https://msdn.microsoft.com/library/windows/desktop/bb773210).  
   
- [in] *StrText*  
- Der zu zeichnende Text.  
+*strText*<br/>
+[in] Der zu zeichnende Text.  
   
- [in] *Rect*  
- Die Grenze des Bereichs, in dem der angegebene Text gezeichnet wird.  
+*Rect*<br/>
+[in] Die Begrenzung des Bereichs, in dem der angegebene Text gezeichnet wird.  
   
- [in] *DwFlags*  
- Eine bitweise Kombination (OR) von Flags, die angibt, wie der angegebene Text gezeichnet wird.  
+*dwFlags*<br/>
+[in] Eine bitweise Kombination (OR) von Flags, die angeben, wie der angegebene Text gezeichnet wird.  
   
- Wenn die *hTheme* -Parameter ist `NULL` oder Designs werden nicht unterstützt und aktiviert, die *nFormat* Parameter, der die [CDC:: DrawText](../../mfc/reference/cdc-class.md#drawtext) Methode beschreibt die gültigen Flags. Wenn Themen unterstützt werden, die *DwFlags* Parameter, der die [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) Methode beschreibt die gültigen Flags.  
+ Wenn die *hTheme* -Parameter ist `NULL` oder Designs werden nicht unterstützt und aktiviert, die *nFormat* Parameter, der die [CDC:: DrawText](../../mfc/reference/cdc-class.md#drawtext) Methode beschreibt die gültigen Flags. Wenn Themen unterstützt werden, die *DwFlags* Parameter, der die [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex) Methode beschreibt die gültigen Flags.  
   
- [in] *nGlowSize*  
- Die Größe eines Leuchteffekts, der auf dem Hintergrund gezeichnet wird, bevor der angegebene Text gezeichnet wird. Der Standardwert ist 0.  
+*nGlowSize*<br/>
+[in] Die Größe eines Leuchteffekts, der im Hintergrund gezeichnet wird, bevor der angegebene Text gezeichnet werden soll. Der Standardwert ist 0.  
   
- [in] *ClrText*  
- Die Farbe, in der der angegebene Text gezeichnet wird. Der Standardwert ist die Standardfarbe.  
+*clrText*<br/>
+[in] Die Farbe, in der der angegebene Text gezeichnet wird. Der Standardwert ist die Standardfarbe.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn ein Design wird zum Zeichnen des angegebenen Texts verwendet. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Ein Design definiert den visuellen Stil einer Anwendung. Ein Design wird nicht zum Zeichnen des Textes der *hTheme* Parameter NULL ist, oder, wenn die [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) Methode wird nicht unterstützt, oder wenn [Desktopfenster-Manager](http://msdn.microsoft.com/library/windows/desktop/aa969540) (DWM) Komposition ist deaktiviert.  
+ Ein Design definiert den visuellen Stil einer Anwendung. Ein Design wird nicht zum Zeichnen des Textes der *hTheme* Parameter NULL ist, oder, wenn die [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex) Methode wird nicht unterstützt, oder wenn [Desktopfenster-Manager](/windows/desktop/dwm/dwm-overview) (DWM) Komposition ist deaktiviert.  
   
 ### <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
- [Teile und Zustände](http://msdn.microsoft.com/library/windows/desktop/bb773210)   
+ [COLORREF](/windows/desktop/gdi/colorref)   
+ [Teile und Zustände](https://msdn.microsoft.com/library/windows/desktop/bb773210)   
  [CDC:: DrawText](../../mfc/reference/cdc-class.md#drawtext)   
- [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)   
- [Desktopfenster-Manager](http://msdn.microsoft.com/library/windows/desktop/aa969540)   
- [Aktivieren und Steuern der DWM-Komposition](http://msdn.microsoft.com/library/windows/desktop/aa969538)
+ [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)   
+ [Desktopfenster-Manager](/windows/desktop/dwm/dwm-overview)   
+ [Aktivieren und Steuern der DWM-Komposition](/windows/desktop/dwm/composition-ovw)
 
 ## <a name="enableaccessibilitysupport"></a> AFX_GLOBAL_DATA::EnableAccessibilitySupport
 Aktiviert oder deaktiviert Microsoft Active Accessibility-Unterstützung.  
@@ -257,8 +305,8 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter   
- [in] *bAktivieren*  
- True, um Unterstützung für Barrierefreiheit aktivieren. "False", um Unterstützung für Barrierefreiheit zu deaktivieren. Der Standardwert ist "true".  
+*bAktivieren*<br/>
+[in] True, um Unterstützung für Barrierefreiheit aktivieren. "False", um Unterstützung für Barrierefreiheit zu deaktivieren. Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
  Active Accessibility ist eine COM-basierte Technologie, die die Weise, wie Programme und gemeinsam mit der Windows-Betriebssystem hilfstechnologie-Produkte verbessert. Es stellt zum Anzeigen von Informationen über Benutzeroberflächenelemente auf zuverlässige Weise bereit. Allerdings ist ein neueres Barrierefreiheitsmodell namens Microsoft-Benutzeroberflächenautomatisierung jetzt verfügbar. Einen Vergleich der beiden Technologien finden Sie unter [Benutzeroberflächenautomatisierung und Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility).  
@@ -283,17 +331,17 @@ BOOL ExcludeTag(
 ```  
   
 ### <a name="parameters"></a>Parameter   
- [in] *StrBuffer*  
- Ein Puffer von Text.  
+*strBuffer*<br/>
+[in] Ein Puffer von Text.  
   
- [in] *LpszTag*  
- Der Name eines Paars von öffnenden und schließenden XML-Tags.  
+*lpszTag*<br/>
+[in] Der Name eines Paars von öffnenden und schließenden XML-Tags.  
   
- [out] *StrTag*  
- Bei der Rückgabe dieser Methode die *StrTag* -Parameter enthält den Text, der zwischen den öffnenden und schließenden XML Tags, die von benannt sind die *LpszTag* Parameter. Führende oder nachfolgende Leerzeichen werden aus dem Ergebnis gekürzt.  
+*strTag*<br/>
+[out] Bei der Rückgabe dieser Methode die *StrTag* -Parameter enthält den Text, der zwischen den öffnenden und schließenden XML Tags, die von benannt sind die *LpszTag* Parameter. Führende oder nachfolgende Leerzeichen werden aus dem Ergebnis gekürzt.  
   
- [in] *bIsCharsList*  
- "True" Convert-Symbole für Escapezeichen in der *StrTag* Parameter in die eigentliche Escapezeichen; "False" nicht zum Durchführen der Konvertierung. Der Standardwert ist "false". Weitere Informationen finden Sie in den Hinweisen.  
+*bIsCharsList*<br/>
+[in] "True" Convert-Symbole für Escapezeichen in der *StrTag* Parameter in die eigentliche Escapezeichen; "False" nicht zum Durchführen der Konvertierung. Der Standardwert ist "false". Weitere Informationen finden Sie in den Hinweisen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -322,20 +370,20 @@ COLORREF GetColor(int nColor);
 ```  
   
 ### <a name="parameters"></a>Parameter   
- [in] *nColor*  
- Ein Wert, der ein Benutzeroberflächenelement angibt, dessen Farbe abgerufen wird. Eine Liste der gültigen Werte finden Sie unter den *nIndex* Parameter, der die [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) Methode.  
+*nColor*<br/>
+[in] Ein Wert, der ein Benutzeroberflächenelement angibt, dessen Farbe abgerufen wird. Eine Liste der gültigen Werte finden Sie unter den *nIndex* Parameter, der die [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) Methode.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die RGB-Farbwert, der das angegebene Benutzeroberflächenelement. Weitere Informationen finden Sie in den Hinweisen.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die *nColor* Parameter liegt außerhalb des Bereichs, der Rückgabewert ist 0 (null). Da 0 (null), die auch einen gültigen RGB-Wert ist, können nicht Sie diese Methode verwenden, um zu bestimmen, ob eine Systemfarbe vom aktuellen Betriebssystem unterstützt wird. Verwenden Sie stattdessen die [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927) -Methode, die NULL zurückgibt, wenn die Farbe nicht unterstützt wird.  
+ Wenn die *nColor* Parameter liegt außerhalb des Bereichs, der Rückgabewert ist 0 (null). Da 0 (null), die auch einen gültigen RGB-Wert ist, können nicht Sie diese Methode verwenden, um zu bestimmen, ob eine Systemfarbe vom aktuellen Betriebssystem unterstützt wird. Verwenden Sie stattdessen die [GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) -Methode, die NULL zurückgibt, wenn die Farbe nicht unterstützt wird.  
   
 ### <a name="see-also"></a>Siehe auch  
 
- [GetSysColor-Funktion](http://msdn.microsoft.com/library/windows/desktop/ms724371)   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
- [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927)
+ [GetSysColor-Funktion](/windows/desktop/api/winuser/nf-winuser-getsyscolor)   
+ [COLORREF](/windows/desktop/gdi/colorref)   
+ [GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)
 
 ## <a name="getdirect2dfactory"></a> AFX_GLOBAL_DATA::GetDirect2dFactory
  Gibt einen Zeiger auf die ID2D1Factory-Schnittstelle, die in den globalen Daten gespeichert sind. Wenn die Schnittstelle nicht initialisiert wurde, wird sie mit den Standardparametern erstellt.  
@@ -368,15 +416,15 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ```  
   
 ### <a name="parameters"></a>Parameter   
- [in, out] *Informationen*  
- Ein [NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175) -Struktur, die skalierbare Metriken zugeordneten nicht-Clientbereichs eines nicht minimierten Fensters enthält.  
+*Info*<br/>
+[in, out] Ein [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175) -Struktur, die skalierbare Metriken zugeordneten nicht-Clientbereichs eines nicht minimierten Fensters enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn diese Methode erfolgreich ist. andernfalls "false".  
  
   
 ### <a name="see-also"></a>Siehe auch   
- [NONCLIENTMETRICS-Struktur](http://msdn.microsoft.com/library/windows/desktop/ff729175)
+ [NONCLIENTMETRICS-Struktur](https://msdn.microsoft.com/library/windows/desktop/ff729175)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
  Ruft die Höhe von Textzeichen in der aktuellen Schriftart ab.  
@@ -387,8 +435,8 @@ int GetTextHeight(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter   
- [in] *bHorz*  
- TRUE, die Höhe der Zeichen abgerufen, wenn Text horizontal ausgeführt wird. "False", um die Höhe der Zeichen abzurufen, wenn der Text vertikal verläuft. Der Standardwert ist "true".  
+*bHorz*<br/>
+[in] TRUE, die Höhe der Zeichen abgerufen, wenn Text horizontal ausgeführt wird. "False", um die Höhe der Zeichen abzurufen, wenn der Text vertikal verläuft. Der Standardwert ist "true".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Höhe der aktuellen Schriftart an, die auf die Unterlänge der Ascender gemessen wird.  
@@ -483,7 +531,7 @@ BOOL IsD2DInitialized() const;
  True, wenn D2D initialisiert wurde. andernfalls "false".  
   
 ## <a name="isdwmcompositionenabled"></a> AFX_GLOBAL_DATA::IsDwmCompositionEnabled
-Stellt eine einfache Möglichkeit zum Aufrufen der [DwmIsCompositionEnabled](http://msdn.microsoft.com/library/windows/desktop/aa969518) -Methode von Windows bereit.  
+Bietet eine einfache Möglichkeit zum Aufrufen der Windows [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) Methode.  
   
   
 ```  
@@ -491,11 +539,11 @@ BOOL IsDwmCompositionEnabled();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- TRUE, wenn [Desktopfenster-Manager](http://msdn.microsoft.com/library/windows/desktop/aa969540) (DWM) Komposition ist aktiviert; andernfalls "false".  
+ TRUE, wenn [Desktopfenster-Manager](/windows/desktop/dwm/dwm-overview) (DWM) Komposition ist aktiviert; andernfalls "false".  
   
 ### <a name="see-also"></a>Siehe auch    
- [Desktopfenster-Manager](http://msdn.microsoft.com/library/windows/desktop/aa969540)   
- [Aktivieren und Steuern der DWM-Komposition](http://msdn.microsoft.com/library/windows/desktop/aa969538)
+ [Desktopfenster-Manager](/windows/desktop/dwm/dwm-overview)   
+ [Aktivieren und Steuern der DWM-Komposition](/windows/desktop/dwm/composition-ovw)
 
 ## <a name="ishighcontrastmode"></a> AFX_GLOBAL_DATA::IsHighContrastMode
  Gibt an, ob Bilder nur mit hohem Kontrast angezeigt werden.    
@@ -645,11 +693,11 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ```  
   
 ### <a name="parameters"></a>Parameter   
- [in] *LpszClassNamePrefix*  
- Der Name der Fensterklasse registrieren.  
+*lpszClassNamePrefix*<br/>
+[in] Der Name der Fensterklasse registrieren.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der qualifizierte Name der registrierten Klasse, wenn diese Methode erfolgreich ist; andernfalls ein [Ressourcenausnahme](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d).  
+ Der qualifizierte Name der registrierten Klasse, wenn diese Methode erfolgreich ist; andernfalls ein [Ressourcenausnahme](exception-processing.md#afxthrowresourceexception).  
   
 ### <a name="remarks"></a>Hinweise  
  Der Rückgabewert ist ein Doppelpunkt getrennte Liste von der *LpszClassNamePrefix* Parameterzeichenfolge und die hexadezimale Textdarstellungen der Handles von der aktuellen Anwendungsinstanz ist die Anwendung-Cursor, der es der Pfeil ist Cursor, dessen Bezeichner IDC_ARROW ist; und der Hintergrundpinsel. Weitere Informationen zum Registrieren von MFC-Klassen finden Sie unter [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass).  
@@ -670,10 +718,10 @@ BOOL Resume();
  TRUE, wenn diese Methode erfolgreich ist. andernfalls "false". Im Debugmodus befindet bestätigt diese Methode auf, wenn diese Methode nicht erfolgreich ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode wird aufgerufen, wenn das Framework erhält die [WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247) Nachricht.  
+ Diese Methode wird aufgerufen, wenn das Framework erhält die [WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast) Nachricht.  
   
 ## <a name="setlayeredattrib"></a> AFX_GLOBAL_DATA::SetLayeredAttrib
-Stellt eine einfache Möglichkeit zum Aufrufen der [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540) -Methode von Windows bereit.  
+Bietet eine einfache Möglichkeit zum Aufrufen der Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) Methode.  
   
   
 ```  
@@ -685,24 +733,24 @@ BOOL SetLayeredAttrib(
 ```  
   
 ### <a name="parameters"></a>Parameter   
- [in] *Hwnd*  
- Handle für das überlappende Fenster.  
+*HWND*<br/>
+[in] Handle für das überlappende Fenster.  
   
- [in] *CrKey*  
- Die der Transparenzfarbe zu finden, die die [Desktopfenster-Manager](http://msdn.microsoft.com/library/windows/desktop/aa969540) verwendet, um das überlappende Fenster zu erstellen.  
+*crKey*<br/>
+[in] Die der Transparenzfarbe zu finden, die die [Desktopfenster-Manager](/windows/desktop/dwm/dwm-overview) verwendet, um das überlappende Fenster zu erstellen.  
   
- [in] *bAlpha*  
- Der alpha-Wert, der verwendet wird, um die Deckkraft des überlappenden Fensters zu beschreiben.  
+*bAlpha*<br/>
+[in] Der alpha-Wert, der verwendet wird, um die Deckkraft des überlappenden Fensters zu beschreiben.  
   
- [in] *DwFlags*  
- Eine bitweise Kombination (OR) von Flags, die angeben, welche Parameter der Methode verwenden. Geben Sie LWA_COLORKEY verwenden die *CrKey* Parameter als die der Transparenzfarbe. Geben Sie LWA_ALPHA verwenden die *bAlpha* Parameter, um die Durchlässigkeit des überlappenden Fensters bestimmt.  
+*dwFlags*<br/>
+[in] Eine bitweise Kombination (OR) von Flags, die angeben, welche Parameter der Methode verwenden. Geben Sie LWA_COLORKEY verwenden die *CrKey* Parameter als die der Transparenzfarbe. Geben Sie LWA_ALPHA verwenden die *bAlpha* Parameter, um die Durchlässigkeit des überlappenden Fensters bestimmt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn diese Methode erfolgreich ist. andernfalls "false".   
  
 ### <a name="see-also"></a>Siehe auch   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
- [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540)
+ [COLORREF](/windows/desktop/gdi/colorref)   
+ [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)
 
 ## <a name="setmenufont"></a> AFX_GLOBAL_DATA::SetMenuFont
 Erstellt die angegebene logische Schriftart.  
@@ -715,11 +763,11 @@ BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>Parameter   
- [in] *LpLogFont*  
- Zeiger auf eine Struktur, die Attribute einer Schriftart enthält.  
+*lpLogFont*<br/>
+[in] Zeiger auf eine Struktur, die Attribute einer Schriftart enthält.  
   
- [in] *bHorz*  
- True, um anzugeben, dass der Text horizontal ausgeführt wird. "False", um anzugeben, dass der Text vertikal verläuft.  
+*bHorz*<br/>
+[in] True, um anzugeben, dass der Text horizontal ausgeführt wird. "False", um anzugeben, dass der Text vertikal verläuft.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn diese Methode erfolgreich ist. andernfalls "false". Im Debugmodus befindet bestätigt diese Methode auf, wenn diese Methode nicht erfolgreich ist.  

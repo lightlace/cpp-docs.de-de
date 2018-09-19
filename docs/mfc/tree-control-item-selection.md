@@ -1,5 +1,5 @@
 ---
-title: Struktur der Auswahl in einem | Microsoft Docs
+title: Struktur der Auswahl in einem | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc533046695db409067ff603e30cedbe11ad5ca4
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: fd6632a44dd4806b8f13683b50cad76b5eebe27a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953556"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212580"
 ---
 # <a name="tree-control-item-selection"></a>Wechseln der Auswahl in einem Struktursteuerelement
-Wenn die Auswahl Änderungen von einem Element für ein anderes, ein Strukturansicht-Steuerelement ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) sendet [TVN_SELCHANGING](http://msdn.microsoft.com/library/windows/desktop/bb773547) und [eine TVN_SELCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb773544) benachrichtigungsmeldungen. Beide Benachrichtigungen enthalten einen Wert, der angibt, ob die Änderung das Ergebnis ein Mausklick oder eine Tastenkombination ist. Die Benachrichtigungen umfassen auch Informationen über das Element, das Zustand wechselt die Auswahl und das Element, das die Auswahl entfernt wird. Diese Informationen können Sie Attribute festgelegt, die von den Auswahlzustand des Elements abhängen. Zurückgeben von **"true"** als Antwort auf `TVN_SELCHANGING` wird verhindert, dass die Auswahl nicht ändern; zurückgeben **"false"** ermöglicht die Änderung.  
+Wenn die Auswahl ändert sich von einem Element zu einem anderen ein Strukturansicht-Steuerelement ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) sendet [TVN_SELCHANGING](/windows/desktop/Controls/tvn-selchanging) und [eine TVN_SELCHANGED](/windows/desktop/Controls/tvn-selchanged) benachrichtigungsmeldungen. Beide Benachrichtigungen enthalten einen Wert, der angibt, ob die Änderung das Ergebnis klicken mit der Maus oder Drücken einer Taste ist. Die Benachrichtigungen umfassen auch Informationen über das Element, das die Auswahl Zustand wechselt und das Element, das die Auswahl entfernt wird. Sie können diese Informationen verwenden, Elementattribute festlegen, die abhängig von den Auswahlzustand des Elements. Zurückgeben von **"true"** als Reaktion auf `TVN_SELCHANGING` wird verhindert, dass die Auswahl ändern; zurückgeben **"false"** ermöglicht die Änderung.  
   
- Eine Anwendung kann die Auswahl ändern, durch Aufrufen der [SelectItem](../mfc/reference/ctreectrl-class.md#selectitem) Memberfunktion.  
+ Eine Anwendung kann die Auswahl ändern, durch den Aufruf der [SelectItem](../mfc/reference/ctreectrl-class.md#selectitem) Member-Funktion.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CTreeCtrl](../mfc/using-ctreectrl.md)   

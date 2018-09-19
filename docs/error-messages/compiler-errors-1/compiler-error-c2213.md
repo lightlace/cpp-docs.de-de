@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2213 | Microsoft Docs
+title: Compilerfehler C2213 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f51f734c8d795729b035d3b550e3cfdceea902a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55bf3cb315ff2b65f4c65ff1091cd530cd810fd7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33173723"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096059"
 ---
 # <a name="compiler-error-c2213"></a>Compilerfehler C2213
-"Modifizierer": Ungültiges Argument auf __based  
-  
- Das Argument ändern `__based` ist ungültig.  
-  
- Im folgenden Beispiel wird C2213 generiert:  
-  
-```  
-// C2213.cpp  
-// compile with: /c  
-int i;  
-int *j;  
-char __based(i) *p;   // C2213  
-char __based(j) *p2;   // OK  
+
+"Modifizierer": Ungültiges Argument auf __based
+
+Das Argument ändern `__based` ist ungültig.
+
+Im folgende Beispiel wird die C2213 generiert:
+
+```
+// C2213.cpp
+// compile with: /c
+int i;
+int *j;
+char __based(i) *p;   // C2213
+char __based(j) *p2;   // OK
 ```

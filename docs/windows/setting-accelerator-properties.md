@@ -1,5 +1,5 @@
 ---
-title: Festlegen von Zugriffstasteneigenschaften | Microsoft Docs
+title: Festlegen von Eigenschaften für Zugriffstasten (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,33 +19,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5198fc1958863d3b5ad560ffeb8c5576506e9e46
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eb08a9dce4c90c9efddd10683bc4b7c2ac0b08b9
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888844"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314416"
 ---
 # <a name="setting-accelerator-properties"></a>Festlegen von Eigenschaften für Zugriffstasten
-Festlegen von Zugriffstasteneigenschaften der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window) zu einem beliebigen Zeitpunkt. Sie können zudem den Tastenkombinations-Editor verwenden, um die Tastenkombinationseigenschaften in der Tastenkombinationstabelle zu ändern. Mithilfe des Fensters „Eigenschaften“ oder des Tastenkombinations-Editors vorgenommene Änderungen führen zum gleichen Ergebnis: Die Bearbeitungen werden sofort in der Tastenkombinationstabelle berücksichtigt.  
-  
- Es gibt drei Eigenschaften für jede Zugriffstaste [ID](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/3487f185-de96-4b1d-87db-034a52223160/locales/en-US):  
-  
--   Die [Eigenschaft "Modifizierer"](../windows/accelerator-modifier-property.md) legt Steuerelement Tastenkombinationen für die Zugriffstaste.  
-  
-    > [!NOTE]
-    >  Im Fenster „Eigenschaften“ wird diese Eigenschaft in Form von drei getrennten booleschen Werten angezeigt, wobei alle davon unabhängig gesteuert werden können: ALT, STRG und die UMSCHALTTASTE.  
-  
--   Die [Schlüsseleigenschaft](../windows/accelerator-key-property.md) legt den tatsächlichen Schlüssel als Zugriffstaste verwendet.  
-  
--   Die [Objekttypeigenschaft](../windows/accelerator-type-property.md) bestimmt, ob die Taste als virtuell (VIRTKEY) oder als ASCII/ANSI interpretiert wird.  
-  
 
-  
-## <a name="requirements"></a>Anforderungen  
- Win32  
-  
-## <a name="see-also"></a>Siehe auch  
- [Vordefinierte Zugriffstasten](../windows/predefined-accelerator-keys.md)   
- [Ressourcen-Editoren](../windows/resource-editors.md)   
- [Zugriffstasten-Editor](../windows/accelerator-editor.md)
+Sie können die Eigenschaften für Zugriffstasten festlegen, der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window) zu einem beliebigen Zeitpunkt. Sie können auch die **Accelerator** -Editor, um die tastenkombinationseigenschaften in der tastenkombinationstabelle zu ändern. Änderungen, die mit der **Eigenschaften** Fenster oder der **Accelerator** Editor aufweisen, das gleiche Ergebnis: Änderungen werden sofort in der tastenkombinationstabelle dargestellt.
+
+Es gibt drei Eigenschaften für jede ID der Zugriffstaste:
+
+- Die [Eigenschaft "Modifizierer"](../windows/accelerator-modifier-property.md) legt die Steuerelement-Tastenkombinationen für die Zugriffstaste fest.
+
+   > [!NOTE]
+   > In der **Eigenschaften** Fenster, diese Eigenschaft wird als drei separate boolesche Eigenschaften, alle davon unabhängig gesteuert werden können: **Alt**, **STRG**, und **UMSCHALT**.
+
+- Die [Schlüsseleigenschaft](../windows/accelerator-key-property.md) wird die eigentliche Taste als Zugriffstaste verwenden.
+
+- Die [Type-Eigenschaft](../windows/accelerator-type-property.md) bestimmt, ob die Taste als virtuell (VIRTKEY) oder als ASCII/ANSI interpretiert wird.
+
+## <a name="requirements"></a>Anforderungen
+
+Win32
+
+## <a name="see-also"></a>Siehe auch
+
+[Vordefinierte Zugriffstasten](../windows/predefined-accelerator-keys.md)  
+[Ressourcen-Editor](../windows/resource-editors.md)  
+[Zugriffstasten-Editor](../windows/accelerator-editor.md)

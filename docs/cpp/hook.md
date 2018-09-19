@@ -17,96 +17,101 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7721e617541b962994b115344f33e1ec59e4acaf
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 2f839b6c9b87bb37564951d1c15935ad573e1b46
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943952"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719289"
 ---
 # <a name="hook"></a>__hook
-Ordnet eine Handlermethode einem Ereignis zu.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-long __hook(  
-   &SourceClass::EventMethod,  
-   source,  
-   &ReceiverClass::HandlerMethod  
-   [, receiver = this]  
-);  
-long __hook(  
-   interface,  
-   source  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- **&** *SourceClass* `::` *EventMethod*  
- Ein Zeiger auf die Ereignismethode, an die Sie die Ereignishandlermethode binden:  
-  
--   Systemeigene C++-Ereignisse: *SourceClass* ist die Ereignisquellenklasse, und *EventMethod* ist das Ereignis.  
-  
--   COM-Ereignisse: *SourceClass* ist die Quellschnittstelle des Ereignisses und *EventMethod* ist einer der Methoden.  
-  
--   Verwaltete Ereignisse: *SourceClass* ist die Ereignisquellenklasse, und *EventMethod* ist das Ereignis.  
-  
- *interface*  
- Der Name der Schnittstelle verknüpft wird, um *Empfänger*, nur für COM-Ereignisempfängern, bei denen die *Layout_dependent* Parameter der [Event_receiver](../windows/event-receiver.md) -Attribut ist **"true"**.  
-  
- *source*  
- Ein Zeiger auf eine Instanz der Ereignisquelle. Je nach Code `type` im angegebenen `event_receiver`, *Quelle* kann einen der folgenden sein:  
-  
--   Ein systemeigener Ereignisquellen-Objektzeiger.  
-  
--   Ein `IUnknown`-basierte Zeiger (COM-Quelle).  
-  
--   Ein Zeiger des verwalteten Objekts (für verwaltete Ereignisse).  
-  
- **&** *ReceiverClass* `::` `HandlerMethod`  
- Ein Zeiger, der an die Ereignishandlermethode gebunden werden soll. Der Handler, die als eine Methode einer Klasse oder einen Verweis auf die gleiche angegeben ist. Wenn Sie nicht den Klassennamen angeben **__hook** geht davon aus der Klasse, in dem sie aufgerufen wird.  
-  
--   Systemeigene C++-Ereignisse: *ReceiverClass* ist die Ereignisempfängerklasse und `HandlerMethod` ist der Handler.  
-  
--   COM-Ereignisse: *ReceiverClass* ist die ereignisempfängerschnittstelle und `HandlerMethod` ist einer der Handler.  
-  
--   Verwaltete Ereignisse: *ReceiverClass* ist die Ereignisempfängerklasse und `HandlerMethod` ist der Handler.  
-  
- *Empfänger*(optional)  
- Ein Zeiger auf eine Instanz der Ereignisempfängerklasse. Wenn Sie keinen Empfänger angeben, wird standardmäßig die Empfängerklasse oder Struktur, in der **__hook** aufgerufen wird.  
-  
-## <a name="usage"></a>Verwendung  
- Kann in jedem Gültigkeitsbereich der Funktion verwendet werden, einschließlich Main, außerhalb der Ereignisempfängerklasse.  
-  
-## <a name="remarks"></a>Hinweise  
- Die intrinsische Funktion **__hook** in einem Ereignisempfänger zuweisen oder eine Handlermethode einer Ereignismethode zu verknüpfen. Der angegebene Handler wird aufgerufen, wenn die Quelle das angegebene Ereignis auslöst. Sie können mehrere Handler an ein einzelnes Ereignis binden oder mehrere Ereignisse an einen einzigen Handler.  
-  
- Es gibt zwei Arten von **__hook**. Können Sie die erste Form (vier Argumente) in den meisten Fällen, insbesondere für COM-Ereignisempfängern, bei denen die *Layout_dependent* Parameter, der die [Event_receiver](../windows/event-receiver.md) -Attribut ist **"false"** .  
-  
- In diesen Fällen müssen Sie nicht alle Methoden an eine Schnittstelle binden, bevor nicht bei einer der Methoden ein Ereignis ausgelöst wird; nur die Methode für die Ereignisbehandlung muss eingebunden werden. Sie können das zweite (Two-Argument) Formular von **__hook** nur für einen COM-Ereignisempfänger, in der * Layout_dependent ***= True**.  
-  
- **__hook** gibt einen long-Wert. Ein Wert ungleich null gibt an, dass ein Fehler aufgetreten ist (verwaltete Ereignisse lösen eine Ausnahme aus).  
-  
- Der Compiler überprüft, ob ein Ereignis vorhanden ist und ob die Ereignissignatur der Delegatsignatur entspricht.  
-  
- Mit Ausnahme von COM-Ereignisse **__hook** und **__unhook** außerhalb des Ereignisempfängers aufgerufen werden kann.  
-  
- Eine Alternative zur Verwendung **__hook** ist die Verwendung des Operators +=.  
-  
- Weitere Informationen über die Codierung von verwalteter Ereignissen in der neuen Syntax finden Sie unter [Ereignis](../windows/event-cpp-component-extensions.md).  
-  
+
+Ordnet eine Handlermethode einem Ereignis zu.
+
+## <a name="syntax"></a>Syntax
+
+```
+long __hook(
+    &SourceClass::EventMethod,
+    source,
+    &ReceiverClass::HandlerMethod
+    [, receiver = this]
+);
+long __hook(
+    interface,
+    source
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*& SourceClass::EventMethod*<br/>
+Ein Zeiger auf die Ereignismethode, an die Sie die Ereignishandlermethode binden:
+
+- Systemeigene C++-Ereignisse: *SourceClass* ist die Ereignisquellenklasse, und *EventMethod* ist das Ereignis.
+
+- COM-Ereignisse: *SourceClass* ist die Quellschnittstelle des Ereignisses und *EventMethod* ist einer der Methoden.
+
+- Verwaltete Ereignisse: *SourceClass* ist die Ereignisquellenklasse, und *EventMethod* ist das Ereignis.
+
+*interface*<br/>
+Der Name der Schnittstelle verknüpft wird, um *Empfänger*, nur für COM-Ereignisempfängern, bei denen die *Layout_dependent* Parameter der [Event_receiver](../windows/event-receiver.md) -Attribut ist **"true"**.
+
+*source*<br/>
+Ein Zeiger auf eine Instanz der Ereignisquelle. Je nach Code `type` im angegebenen `event_receiver`, *Quelle* kann einen der folgenden sein:
+
+- Ein systemeigener Ereignisquellen-Objektzeiger.
+
+- Ein `IUnknown`-basierte Zeiger (COM-Quelle).
+
+- Ein Zeiger des verwalteten Objekts (für verwaltete Ereignisse).
+
+*& ReceiverClass::HandlerMethod*<br/>
+Ein Zeiger, der an die Ereignishandlermethode gebunden werden soll. Der Handler, die als eine Methode einer Klasse oder einen Verweis auf die gleiche angegeben ist. Wenn Sie nicht den Klassennamen angeben **__hook** geht davon aus der Klasse, in dem sie aufgerufen wird.
+
+- Systemeigene C++-Ereignisse: *ReceiverClass* ist die Ereignisempfängerklasse und `HandlerMethod` ist der Handler.
+
+- COM-Ereignisse: *ReceiverClass* ist die ereignisempfängerschnittstelle und `HandlerMethod` ist einer der Handler.
+
+- Verwaltete Ereignisse: *ReceiverClass* ist die Ereignisempfängerklasse und `HandlerMethod` ist der Handler.
+
+*Empfänger*<br/>
+(Optional) Ein Zeiger auf eine Instanz von der Ereignisempfängerklasse. Wenn Sie keinen Empfänger angeben, wird standardmäßig die Empfängerklasse oder Struktur, in der **__hook** aufgerufen wird.
+
+## <a name="usage"></a>Verwendung
+
+Kann in jedem Gültigkeitsbereich der Funktion verwendet werden, einschließlich Main, außerhalb der Ereignisempfängerklasse.
+
+## <a name="remarks"></a>Hinweise
+
+Die intrinsische Funktion **__hook** in einem Ereignisempfänger zuweisen oder eine Handlermethode einer Ereignismethode zu verknüpfen. Der angegebene Handler wird aufgerufen, wenn die Quelle das angegebene Ereignis auslöst. Sie können mehrere Handler an ein einzelnes Ereignis binden oder mehrere Ereignisse an einen einzigen Handler.
+
+Es gibt zwei Arten von **__hook**. Können Sie die erste Form (vier Argumente) in den meisten Fällen, insbesondere für COM-Ereignisempfängern, bei denen die *Layout_dependent* Parameter, der die [Event_receiver](../windows/event-receiver.md) -Attribut ist **"false"** .
+
+In diesen Fällen müssen Sie nicht alle Methoden an eine Schnittstelle binden, bevor nicht bei einer der Methoden ein Ereignis ausgelöst wird; nur die Methode für die Ereignisbehandlung muss eingebunden werden. Sie können das zweite (Two-Argument) Formular von **__hook** nur für einen COM-Ereignisempfänger, in dem *Layout_dependent* **= True**.
+
+**__hook** gibt einen long-Wert. Ein Wert ungleich null gibt an, dass ein Fehler aufgetreten ist (verwaltete Ereignisse lösen eine Ausnahme aus).
+
+Der Compiler überprüft, ob ein Ereignis vorhanden ist und ob die Ereignissignatur der Delegatsignatur entspricht.
+
+Mit Ausnahme von COM-Ereignisse **__hook** und **__unhook** außerhalb des Ereignisempfängers aufgerufen werden kann.
+
+Eine Alternative zur Verwendung **__hook** ist die Verwendung des Operators +=.
+
+Weitere Informationen über die Codierung von verwalteter Ereignissen in der neuen Syntax finden Sie unter [Ereignis](../windows/event-cpp-component-extensions.md).
+
 > [!NOTE]
->  Eine von einer Vorlage gebildete Klasse oder Struktur kann keine Ereignisse enthalten.  
-  
-## <a name="example"></a>Beispiel  
- Finden Sie unter [Ereignisbehandlung in systemeigenem C++](../cpp/event-handling-in-native-cpp.md) und [Ereignisbehandlung in COM](../cpp/event-handling-in-com.md) für Beispiele.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Stichwörter](../cpp/keywords-cpp.md)   
- [Behandlung von Ereignissen](../cpp/event-handling.md)   
- [event_source](../windows/event-source.md)   
- [event_receiver](../windows/event-receiver.md)   
- [__unhook](../cpp/unhook.md)   
- [__raise](../cpp/raise.md)
+> Eine von einer Vorlage gebildete Klasse oder Struktur kann keine Ereignisse enthalten.
+
+## <a name="example"></a>Beispiel
+
+Finden Sie unter [Ereignisbehandlung in systemeigenem C++](../cpp/event-handling-in-native-cpp.md) und [Ereignisbehandlung in COM](../cpp/event-handling-in-com.md) für Beispiele.
+
+## <a name="see-also"></a>Siehe auch
+
+[Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
+[Ereignisbehandlung](../cpp/event-handling.md)<br/>
+[event_source](../windows/event-source.md)<br/>
+[event_receiver](../windows/event-receiver.md)<br/>
+[__unhook](../cpp/unhook.md)<br/>
+[__raise](../cpp/raise.md)<br/>

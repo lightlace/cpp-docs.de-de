@@ -1,5 +1,5 @@
 ---
-title: Bad_typeid-Ausnahme | Microsoft Docs
+title: Bad_typeid-Ausnahme | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,70 +18,73 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0771f5e93ba473c9ae1101996e8276bec4cd432a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9cc93ab5a0f2d7fce12e926d571881ccb9c070fd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092205"
 ---
 # <a name="badtypeid-exception"></a>bad_typeid-Ausnahme
-Die `bad_typeid` -Ausnahme wird ausgelöst durch den [Typeid-Operator](../cpp/typeid-operator.md) Wenn der Operand für `typeid` ist ein Nullzeiger.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-      catch (bad_typeid)  
-   statement  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Die Schnittstelle für `bad_typeid` ist:  
-  
-```  
-class bad_typeid : public exception  
-{  
-public:  
-   bad_typeid(const char * _Message = "bad typeid");  
-   bad_typeid(const bad_typeid &);  
-   virtual ~bad_typeid();  
-};  
-```  
-  
- Im folgenden Beispiel wird der `typeid`-Operators gezeigt, der eine `bad_typeid`-Ausnahme auslöst.  
-  
-```  
-// expre_bad_typeid.cpp  
-// compile with: /EHsc /GR  
-#include <typeinfo.h>  
-#include <iostream>  
-  
-class A{  
-public:  
-   // object for class needs vtable  
-   // for RTTI  
-   virtual ~A();  
-};  
-  
-using namespace std;  
-int main() {  
-A* a = NULL;  
-  
-try {  
-   cout << typeid(*a).name() << endl;  // Error condition  
-   }  
-catch (bad_typeid){  
-   cout << "Object is NULL" << endl;  
-   }  
-}  
-```  
-  
-## <a name="output"></a>Ausgabe  
-  
-```  
-Object is NULL  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Laufzeit-Typinformationen](../cpp/run-time-type-information.md)   
- [Schlüsselwörter](../cpp/keywords-cpp.md)
+
+Die **Bad_typeid** Ausnahme wird von der [Typeid-Operator](../cpp/typeid-operator.md) bei der der Operand für **Typeid** ist ein Nullzeiger.
+
+## <a name="syntax"></a>Syntax
+
+```
+catch (bad_typeid)
+   statement
+```
+
+## <a name="remarks"></a>Hinweise
+
+Die Schnittstelle für **Bad_typeid** ist:
+
+```cpp
+class bad_typeid : public exception
+{
+public:
+   bad_typeid(const char * _Message = "bad typeid");
+   bad_typeid(const bad_typeid &);
+   virtual ~bad_typeid();
+};
+```
+
+Das folgende Beispiel zeigt die **Typeid** Operator Auslösen einer **Bad_typeid** Ausnahme.
+
+```cpp
+// expre_bad_typeid.cpp
+// compile with: /EHsc /GR
+#include <typeinfo.h>
+#include <iostream>
+
+class A{
+public:
+   // object for class needs vtable
+   // for RTTI
+   virtual ~A();
+};
+
+using namespace std;
+int main() {
+A* a = NULL;
+
+try {
+   cout << typeid(*a).name() << endl;  // Error condition
+   }
+catch (bad_typeid){
+   cout << "Object is NULL" << endl;
+   }
+}
+```
+
+## <a name="output"></a>Ausgabe
+
+```Output
+Object is NULL
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Laufzeit-Typinformationen](../cpp/run-time-type-information.md)<br/>
+[Schlüsselwörter](../cpp/keywords-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: -MANIFESTINPUT (angeben Manifesteingabedatei) | Microsoft Docs
+title: -MANIFESTINPUT (Manifesteingabe angeben) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,31 +12,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eecf1740855c2feef0d7cac4bbcc85ad95eade6f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5259df2216a8c844123c308ece7ac6b0b650ab39
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372850"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705152"
 ---
 # <a name="manifestinput-specify-manifest-input"></a>/MANIFESTINPUT (Angeben einer Manifesteingabedatei)
-Gibt eine Manifesteingabedatei an, die dem Manifest hinzugefügt wird, das im Image eingebettet ist.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-/MANIFESTINPUT:filename  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `filename`  
- Die Manifestdatei, die dem eingebetteten Manifest hinzuzufügen ist.  
-  
-## <a name="remarks"></a>Hinweise  
- Die **/MANIFESTINPUT** -Option gibt den Pfad einer Eingabedatei zum Erstellen des eingebetteten Manifests in einem ausführbaren Image verwendet. Wenn Sie mehrere Manifesteingabedateien haben, verwenden Sie den Schalter mehrfach, einmal für jede Eingabedatei. Die Manifesteingabedateien werden zusammengeführt, um das eingebettete Manifest zu erstellen. Diese Option erfordert das **/MANIFEST: EMBED** Option.  
-  
- Die Option kann nicht direkt in [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] festgelegt werden. Verwenden Sie stattdessen die **zusätzliche Manifestdateien** -Eigenschaft des Projekts an zusätzliche Manifestdateien enthalten. Weitere Informationen finden Sie unter [Eingabe und Ausgabe, Manifesttool, Konfigurationseigenschaften, \<Projectname > Property Pages Dialog Box](../../ide/input-and-output-manifest-tool.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
- [Linkeroptionen](../../build/reference/linker-options.md)
+
+Gibt eine Manifesteingabedatei an, die dem Manifest hinzugefügt wird, das im Image eingebettet ist.
+
+## <a name="syntax"></a>Syntax
+
+```
+/MANIFESTINPUT:filename
+```
+
+### <a name="parameters"></a>Parameter
+
+*filename*<br/>
+Die Manifestdatei, die dem eingebetteten Manifest hinzuzufügen ist.
+
+## <a name="remarks"></a>Hinweise
+
+Die **/MANIFESTINPUT** Option gibt den Pfad der Eingabedatei für das eingebettete Manifest in ein ausführbares Image zu erstellen. Wenn Sie mehrere Manifesteingabedateien haben, verwenden Sie den Schalter mehrfach, einmal für jede Eingabedatei. Die Manifesteingabedateien werden zusammengeführt, um das eingebettete Manifest zu erstellen. Diese Option erfordert die **/MANIFEST: EINBETTEN von** Option.
+
+Diese Option kann nicht direkt in Visual Studio festgelegt werden. Verwenden Sie stattdessen die **zusätzliche Manifestdateien** -Eigenschaft des Projekts an zusätzliche Manifestdateien einschließen. Weitere Informationen finden Sie unter [Eingabe und Ausgabe, Manifesttool, Konfigurationseigenschaften, \<Projectname > Property Pages Dialog Box](../../ide/input-and-output-manifest-tool.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
+[Linkeroptionen](../../build/reference/linker-options.md)

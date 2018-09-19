@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656785fab5e5ffc8a6fa13711d2964f43cdc7d87
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b500471a3580af9045f1c42707a543669da48c7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393146"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063176"
 ---
 # <a name="alignedmalloc"></a>_aligned_malloc
 
@@ -63,19 +63,19 @@ Der Ausrichtungswert, der eine ganzzahlige Potenz von 2 sein muss.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf den Speicherblock, der belegt wurde oder **NULL** bei fehlgeschlagenem Vorgang. Der Zeiger ist ein Vielfaches von *Ausrichtung*.
+Ein Zeiger auf den Speicherblock, der zugewiesen wurde oder NULL, wenn der Vorgang fehlgeschlagen ist. Der Zeiger ist ein Vielfaches von *Ausrichtung*.
 
 ## <a name="remarks"></a>Hinweise
 
-**_aligned_malloc** basiert auf ["malloc"](malloc.md).
+**_aligned_malloc** basiert auf [Malloc](malloc.md).
 
 **_aligned_malloc** RuntimeCompatibility `__declspec(noalias)` und `__declspec(restrict)`, was bedeutet, dass die Funktion garantiert nicht, so ändern Sie globale Variablen und der zurückgegebene Zeiger keinen Alias. Weitere Informationen finden Sie unter [noalias](../../cpp/noalias.md) und [restrict](../../cpp/restrict.md).
 
-Diese Funktion legt **Errno** auf **ENOMEM** , wenn die speicherbelegung fehlgeschlagen ist oder wenn die angeforderte Größe größer war **_HEAP_MAXREQ**. Weitere Informationen zu **Errno**, finden Sie unter [Errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Darüber hinaus **_aligned_malloc** überprüft die eigenen Parameter. Wenn *Ausrichtung* ist keine Potenz von 2 oder *Größe* NULL ist, ruft diese Funktion den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Diese Funktion gibt zurück, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **NULL** und legt **Errno** auf **EINVAL**.
+Diese Funktion legt `errno` auf `ENOMEM` fest, wenn die Speicherbelegung fehlgeschlagen ist oder die angeforderte Größe größer als `_HEAP_MAXREQ` war. Weitere Informationen zu `errno` finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Darüber hinaus **_aligned_malloc** überprüft die eigenen Parameter. Wenn *Ausrichtung* ist keine Potenz von 2 oder *Größe* NULL ist, ruft diese Funktion den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, diese Funktion gibt NULL zurück und legt `errno` zu `EINVAL`.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_aligned_malloc**|\<malloc.h>|
 
@@ -163,4 +163,4 @@ This pointer, 3280891, is offset by 5 on alignment of 16
 
 ## <a name="see-also"></a>Siehe auch
 
-[Datenausrichtung](../../c-runtime-library/data-alignment.md)<br/>
+[Datenausrichtung](../../c-runtime-library/data-alignment.md)

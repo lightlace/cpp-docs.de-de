@@ -1,5 +1,5 @@
 ---
-title: 'WeakReference:: ~ WeakReference-Destruktor | Microsoft Docs'
+title: 'WeakReference:: ~ WeakReference-Destruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c29316305983ac09714292bce20e992970cca4f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b26d58f13e819ce4bb605beba9beecbbc1fa94a6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890732"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596306"
 ---
 # <a name="weakreferenceweakreference-destructor"></a>WeakReference::~WeakReference-Destruktor
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-virtual ~WeakReference();  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
-  
-## <a name="remarks"></a>Hinweise  
- Hebt die Initialisierung der aktuellen Instanz der WeakReference-Klasse.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [Microsoft::wrl::Details Namespace](../windows/microsoft-wrl-details-namespace.md) [WeakReference-Klasse](../windows/weakreference-class1.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+virtual ~WeakReference();
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+## <a name="remarks"></a>Hinweise
+
+Hebt die Initialisierung der aktuellen Instanz von der **WeakReference** Klasse.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[Microsoft::wrl::Details Namespace](../windows/microsoft-wrl-details-namespace.md)
+[WeakReference-Klasse](../windows/weakreference-class1.md)

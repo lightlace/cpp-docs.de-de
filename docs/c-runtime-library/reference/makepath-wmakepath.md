@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c339ce6ad67186dc7a4f43d7006c5beb047c8f90
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 21cfcfb8a1c82fb351b85b0fb169a94dd3c2c5d4
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404951"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105093"
 ---
 # <a name="makepath-wmakepath"></a>_makepath, _wmakepath
 
@@ -75,21 +75,26 @@ void _wmakepath(
 
 ### <a name="parameters"></a>Parameter
 
-*Pfad* vollständiger Pfad Puffer.
+*path*<br/>
+Vollständiger Pfadpuffer
 
-*Laufwerk* enthält einen Buchstaben (A, B usw.), das gewünschte Laufwerk und einen optionalen nachgestellten Doppelpunkt entspricht. **_makepath** fügt den Doppelpunkt im zusammengesetzten Pfad, wenn er nicht vorhanden ist. Wenn *Laufwerk* ist **NULL** oder zeigt auf eine leere Zeichenfolge, ohne Laufwerkbuchstabe angezeigt, in der kombinierten *Pfad* Zeichenfolge.
+*Laufwerk*<br/>
+Enthält einen Buchstaben (A, B usw.) für das gewünschte Laufwerk und einen optionalen nachgestellten Doppelpunkt. **_makepath** fügt den Doppelpunkt automatisch in den zusammengesetzten Pfad, wenn sie nicht vorhanden ist. Wenn *Laufwerk* ist **NULL** oder auf eine leere Zeichenfolge verweist, erscheint kein Laufwerksbuchstabe in die zusammengesetzte *Pfad* Zeichenfolge.
 
-*Dir* enthält den Pfad von Verzeichnissen, nicht einschließlich der Laufwerkkennzeichner oder den tatsächlichen Dateinamen. Der nachstehende Schrägstrich ist optional, und entweder einem Schrägstrich (/) oder einen umgekehrten Schrägstrich (\\) oder beide können verwendet werden, in einer einzelnen *Dir* Argument. Wenn kein nachstehender Schrägstrich (/ oder \\) angegeben ist, wird er automatisch eingefügt. Wenn *Dir* ist **NULL** oder verweist auf eine leere Zeichenfolge, die keine Verzeichnispfad wird an die kombinierten eingefügt *Pfad* Zeichenfolge.
+*dir*<br/>
+Enthält den Pfad der Verzeichnisse, ausgenommen die Laufwerkkennzeichner oder den tatsächlichen Dateinamen. Der nachstehende Schrägstrich ist optional, und einem Schrägstrich (/) oder einen umgekehrten Schrägstrich (\\) oder beide können verwendet werden, in einem einzelnen *Dir* Argument. Wenn kein nachstehender Schrägstrich (/ oder \\) angegeben ist, wird er automatisch eingefügt. Wenn *Dir* ist **NULL** oder verweist auf eine leere Zeichenfolge und kein Verzeichnispfad in die zusammengesetzte eingefügt wird *Pfad* Zeichenfolge.
 
-*Fname* enthält den Basisdateinamen ohne Dateinamenerweiterungen. Wenn *Fname* ist **NULL** oder verweist auf eine leere Zeichenfolge ist, kein Dateiname eingefügt wird, in die kombinierten *Pfad* Zeichenfolge.
+*fname*<br/>
+Enthält den Basisdateinamen ohne Dateinamenerweiterungen. Wenn *Fname* ist **NULL** oder verweist auf eine leere Zeichenfolge und kein Dateiname wird eingefügt, in die zusammengesetzte *Pfad* Zeichenfolge.
 
-*Ext* enthält die tatsächlichen Dateinamenerweiterung mit oder ohne führenden Punkt (.). **_makepath** fügt automatisch den Zeitraum ein, wenn er nicht in erscheint *Ext*. Wenn *Ext* ist **NULL** oder verweist auf eine leere Zeichenfolge, die keine Erweiterung eingefügt wird, in die kombinierten *Pfad* Zeichenfolge.
+*ext*<br/>
+Enthält die eigentliche Dateinamenerweiterung mit oder ohne führenden Punkt (.). **_makepath** fügt automatisch den Punkt, wenn es nicht, in angezeigt wird *Ext*. Wenn *Ext* ist **NULL** oder verweist auf eine leere Zeichenfolge, die keine Erweiterung eingefügt wird, in die zusammengesetzte *Pfad* Zeichenfolge.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_makepath** Funktion erstellt eine zusammengesetzten Pfadzeichenfolge aus Einzelkomponenten Speichern des Ergebnisses in *Pfad*. Die *Pfad* kann ein Laufwerkbuchstabe, Verzeichnispfad, Dateiname und Erweiterung enthalten. **_wmakepath** ist eine Breitzeichen-Version von **_makepath**; die Argumente für **_wmakepath** sind Zeichenfolgen mit Breitzeichen. **_wmakepath** und **_makepath** Verhalten sich andernfalls identisch.
+Die **_makepath** Funktion erstellt eine zusammengesetzte Pfadzeichenfolge aus einzelnen Komponenten, die das Ergebnis in speichert *Pfad*. Die *Pfad* sind zum Beispiel einen Laufwerkbuchstaben, Pfad, Dateiname und Dateierweiterung. **_wmakepath** ist eine Breitzeichen-Version von **_makepath**; die Argumente für **_wmakepath** sind Breitzeichen Zeichenfolgen. **_wmakepath** und **_makepath** Verhalten sich andernfalls identisch.
 
-**Sicherheitshinweis** Verwenden Sie eine mit NULL endende Zeichenfolge. Um Sicherheitsangriffen durch Pufferüberläufe zu vermeiden, die Null-terminierte Zeichenfolge darf maximal die Größe der *Pfad* Puffer. **_makepath** wird nicht sichergestellt, dass die Länge der Zeichenfolge für den zusammengesetzten Pfad nicht überschritten wird **_MAX_PATH**. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Sicherheitshinweis** Verwenden Sie eine mit NULL endende Zeichenfolge. Um Pufferüberläufe zu vermeiden, die Null-terminierte Zeichenfolge darf nicht übersteigen die Größe der *Pfad* Puffer. **_makepath** gewährleistet nicht, dass die Länge der Zeichenfolge für den zusammengesetzten Pfad nicht überschreitet **_MAX_PATH**. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -97,13 +102,13 @@ Die **_makepath** Funktion erstellt eine zusammengesetzten Pfadzeichenfolge aus 
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmakepath**|**_makepath**|**_makepath**|**_wmakepath**|
 
-Die *Pfad* -Argument muss zu einem leeren Puffer groß genug für den vollständigen Pfad verweisen. Die kombinierten *Pfad* muss nicht größer als die **_MAX_PATH** Konstante in Stdlib.h definiert.
+Die *Pfad* Argument muss auf einen leeren Puffer groß genug für den vollständigen Pfad verweisen. Die kombinierte *Pfad* darf nicht größer als sein die **_MAX_PATH** Konstante, die in Stdlib.h.
 
-Wenn der Pfad ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Darüber hinaus **Errno** festgelegt ist, um **EINVAL**. **NULL** Werte für alle anderen Parameter zulässig sind.
+Wenn der Pfad ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Darüber hinaus **Errno** nastaven NA hodnotu **EINVAL**. **NULL** Werte für alle anderen Parameter zulässig sind.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_makepath**|\<stdlib.h>|
 |**_wmakepath**|\<stdlib.h> oder \<wchar.h>|

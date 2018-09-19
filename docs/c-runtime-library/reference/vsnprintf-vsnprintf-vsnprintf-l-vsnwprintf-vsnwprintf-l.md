@@ -62,12 +62,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 738a69ad0acd1af3b400b56f0f759414b9e28578
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: e5166ef52f88e714d1168fe25a1ec29dd5360205
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451601"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210504"
 ---
 # <a name="vsnprintf-vsnprintf-vsnprintfl-vsnwprintf-vsnwprintfl"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -168,29 +168,29 @@ Weitere Informationen finden Sie unter [Formatangaben](../../c-runtime-library/f
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Vsnprintf** Funktion gibt die Anzahl der geschriebenen Zeichen das abschließende Null-Zeichen wird dabei nicht mitgezählt. Wenn die Größe des Puffers durch angegeben *Anzahl* ist nicht ausreichend groß, um die Ausgabe von angegebenen *Format* und *Argptr*, der Rückgabewert der  **Vsnprintf** ist die Anzahl der Zeichen, die geschrieben werden würde, wird dabei nicht mitgezählt Null-Zeichen, wenn *Anzahl* groß genug wäre. Wenn der Rückgabewert größer als *Anzahl* - 1, die Ausgabe wurde abgeschnitten. Der Rückgabewert „-1“ gibt an, dass ein Codierungsfehler aufgetreten ist.
+Die **Vsnprintf** Funktion gibt die Anzahl der geschriebenen Zeichen des abschließenden Zeichens Null wird dabei nicht mitgezählt. Wenn die Größe des Puffers angegeben *Anzahl* ist nicht ausreichend groß ist, um die Ausgabe gemäß *Format* und *Argptr*, der Rückgabewert von  **Vsnprintf** ist die Anzahl der Zeichen, die keine Null-Zeichen gezählt, wenn geschrieben werden sollen, *Anzahl* groß genug wäre. Wenn der Rückgabewert größer als *Anzahl* - 1, die Ausgabe wurde abgeschnitten. Der Rückgabewert „-1“ gibt an, dass ein Codierungsfehler aufgetreten ist.
 
-Beide **_vsnprintf** und **_vsnwprintf** Funktionen zurück, die Anzahl von Zeichen geschrieben, sofern die Anzahl der zu schreibenden Zeichen kleiner als oder gleich *Anzahl*; Wenn die Zahl ist größer als der zu schreibenden Zeichen *Anzahl*, diese Funktionen geben-1 zurück, der angibt, dass die Ausgabe abgeschnitten wurde.
+Beide **_vsnprintf** und **_vsnwprintf** Funktionen zurück, die Anzahl von Zeichen geschrieben, wenn die Anzahl der zu schreibenden Zeichen kleiner als oder gleich ist *Anzahl*; Wenn die Zahl der zu schreibenden Zeichen ist größer als *Anzahl*, geben diese Funktionen-1 zurück, der angibt, dass die Ausgabe wurde abgeschnitten.
 
-Der von allen diesen Funktionen zurückgegebene Wert enthält nicht das abschließende Zeichen NULL, unabhängig davon, ob es geschrieben wurde oder nicht. Wenn *Anzahl* ist 0 (null), der zurückgegebene Wert ist die Anzahl der Zeichen, die die Funktionen, nicht schreiben würden einschließlich eine abschließende Null. Sie können dieses Ergebnis dazu verwenden, ausreichend Pufferspeicher für die Zeichenfolge und dessen abschließendes NULL-Zeichen zuzuordnen, und die Funktion dann erneut aufrufen, um den Puffer zu füllen.
+Der von allen diesen Funktionen zurückgegebene Wert enthält nicht das abschließende Zeichen NULL, unabhängig davon, ob es geschrieben wurde oder nicht. Wenn *Anzahl* 0 (null), ist der zurückgegebene Wert ist die Anzahl der Zeichen, die die Funktionen, nicht schreiben würden einschließlich abschließende Null. Sie können dieses Ergebnis dazu verwenden, ausreichend Pufferspeicher für die Zeichenfolge und dessen abschließendes NULL-Zeichen zuzuordnen, und die Funktion dann erneut aufrufen, um den Puffer zu füllen.
 
-Wenn *Format* ist **NULL**, oder wenn *Puffer* ist **NULL** und *Anzahl* ist nicht gleich NULL ist, diese Funktionen den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen – 1 zurück und legen Sie **Errno** auf **EINVAL**.
+Wenn *Format* ist **NULL**, oder wenn *Puffer* ist **NULL** und *Anzahl* ist nicht gleich NULL, diese Funktionen der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen verwendet einen Zeiger auf eine Argumentliste und formatiert die Daten und schreibt bis zu *Anzahl* Zeichen in den Speicher verweist *Puffer*. Die **Vsnprintf** -Funktion schreibt immer einen null-Terminator, selbst wenn die Ausgabe abgeschnitten. Bei Verwendung **_vsnprintf** und **_vsnwprintf**, der Puffer Null endet dann nur, wenn am Ende Platz verfügbar ist (d. h., wenn die Anzahl der zu schreibenden Zeichen kleiner als *Anzahl*).
+Jede dieser Funktionen verwendet einen Zeiger auf eine Argumentliste und formatiert die Daten und schreibt bis zu *Anzahl* Zeichen in den Speicher verweist *Puffer*. Die **Vsnprintf** -Funktion schreibt immer einen null-Terminator, selbst wenn die Ausgabe abgeschnitten. Bei Verwendung **_vsnprintf** und **_vsnwprintf**, der Puffer wird werden Null-terminierte nur dann, wenn am Ende Platz verfügbar ist (d. h., wenn die Anzahl der zu schreibenden Zeichen kleiner als *Anzahl*).
 
 > [!IMPORTANT]
-> Um bestimmte Arten von Sicherheitsrisiken zu verhindern, sicher, dass *Format* ist keine benutzerdefinierte Zeichenfolge. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Um bestimmte Arten von Sicherheitsrisiken zu verhindern, stellen sicher, dass *Format* ist keine benutzerdefinierte Zeichenfolge. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 > [!NOTE]
-> Um sicherzustellen, dass Speicherplatz für das abschließende Nullzeichen vorhanden, beim Aufrufen von ist **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** und **_vsnwprintf_l**, achten Sie darauf, *Anzahl* ist kleiner als die Länge des Puffers, und initialisieren Sie den Puffer mit null vor dem Aufrufen der Funktion.
+> Um sicherzustellen, dass genügend Platz vorhanden für das abschließende Nullzeichen beim Aufrufen von ist **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** und **_vsnwprintf_l**, stellen sicher, dass *Anzahl* strikt kleiner als die Pufferlänge ist, und initialisieren Sie den Puffer vor dem Aufrufen der Funktion NULL.
 >
 > Da **Vsnprintf** immer schreibt das abschließende Null-Zeichen, die *Anzahl* Parameter kann gleich der Größe des Puffers sein.
 
-Beginnend mit der UCRT in Visual Studio 2015 und Windows 10, **Vsnprintf** ist nicht mehr identisch mit **_vsnprintf**. Die **Vsnprintf** Funktion entspricht dem Standard C99; **_vnsprintf** wird aus Gründen der Abwärtskompatibilität mit älterem Code von Visual Studio beibehalten.
+Beginnend mit der UCRT in Visual Studio 2015 und Windows 10, **Vsnprintf** ist nicht mehr identisch mit **_vsnprintf**. Die **Vsnprintf** Funktion entspricht dem Standard C99 konform; **_vnsprintf** Gründen der Abwärtskompatibilität mit älterem Visual Studio-Code beibehalten wird.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter, der übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas.
+Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
 
 In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -203,7 +203,7 @@ In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sich
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header (C)|Erforderlicher Header (C++)|
+|-Routine zurückgegebener Wert|Erforderlicher Header (C)|Erforderlicher Header (C++)|
 |-------------|---------------------------|-------------------------------|
 |**Vsnprintf**, **_vsnprintf**, **_vsnprintf_l**|\<stdio.h>|\<stdio.h> oder \<cstdio>|
 |**_vsnwprintf**, **_vsnwprintf_l**|\<stdio.h> oder \<wchar.h>|\<stdio.h>, \<wchar.h>, \<cstdio> oder \<cwchar>|

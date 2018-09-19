@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9292e4d5ff9bf0f6f829c14dd0ee11e77a641d2d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: bb4d7a06d728bddfd4ba1ee355cb4d1e0b5b9fd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027653"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221709"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget-Klasse
 Die Basisklasse für die meldungszuordnungsarchitektur der Microsoft Foundation Class-Bibliothek.  
@@ -163,19 +163,19 @@ BOOL DoOleVerb(
  Numerischer Bezeichner des Verbs.  
   
  *lpMsg*  
- Zeiger auf die [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) Struktur, die Beschreibung des Ereignisses (z. B. einem Doppelklick), die das Verb aufgerufen hat.  
+ Zeiger auf die [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) Struktur, die Beschreibung des Ereignisses (z. B. einem Doppelklick), die das Verb aufgerufen hat.  
   
  *hWndParent*  
  Das Handle des Dokumentfensters, das das Objekt enthält.  
   
  *lpRect*  
- Zeiger auf die [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur mit den Koordinaten, in Pixel, die ein Objekt definieren, die das Begrenzungsrechteck in *HwndParent*.  
+ Zeiger auf die [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur mit den Koordinaten, in Pixel, die ein Objekt definieren, die das Begrenzungsrechteck in *HwndParent*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn erfolgreich, andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion ist im Grunde eine Implementierung von [IOleObject](http://msdn.microsoft.com/library/windows/desktop/ms694508). Die möglichen Aktionen werden durch den aufgezählt [CCmdTarget::EnumOleVerbs](#enumoleverbs).  
+ Diese Memberfunktion ist im Grunde eine Implementierung von [IOleObject](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb). Die möglichen Aktionen werden durch den aufgezählt [CCmdTarget::EnumOleVerbs](#enumoleverbs).  
   
 ##  <a name="enableautomation"></a>  CCmdTarget::EnableAutomation  
  Rufen Sie diese Funktion zum Aktivieren der OLE-Automatisierung für ein Objekt.  
@@ -229,13 +229,13 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
   
 ### <a name="parameters"></a>Parameter  
  *ppenumOleVerb*  
- Ein Zeiger auf einen Zeiger auf ein [IEnumOLEVERB](http://msdn.microsoft.com/library/windows/desktop/ms695084) Schnittstelle.  
+ Ein Zeiger auf einen Zeiger auf ein [IEnumOLEVERB](/windows/desktop/api/oleidl/nn-oleidl-ienumoleverb) Schnittstelle.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Objekt mindestens ein OLE-Verb unterstützt (in diesem Fall \* *PpenumOleVerb* verweist auf eine `IEnumOLEVERB` Enumerator-Schnittstelle), andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion ist im Grunde eine Implementierung von [IOleObject:: EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781).  
+ Diese Memberfunktion ist im Grunde eine Implementierung von [IOleObject:: EnumVerbs](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumverbs).  
   
 ##  <a name="fromidispatch"></a>  CCmdTarget::FromIDispatch  
  Mit dieser Funktion wird zum Zuordnen einer `IDispatch` -Zeiger ist, Empfangen von Automation-Memberfunktionen einer Klasse, in der `CCmdTarget` Objekt, das die Schnittstellen implementiert die `IDispatch` Objekt.  
@@ -263,7 +263,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
   
 ### <a name="parameters"></a>Parameter  
  *pIID*  
- Ein Zeiger auf eine Schnittstellen-ID (eine [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931)).  
+ Ein Zeiger auf eine Schnittstellen-ID (eine [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931)).  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn erfolgreich, andernfalls "false". Im Erfolgsfall \* *pIID* festgelegt ist, um die primäre Dispatch-Schnittstellen-ID.  
@@ -288,7 +288,7 @@ LPDISPATCH GetIDispatch(BOOL bAddRef);
  Die `IDispatch` Zeiger, die dem Objekt zugeordnet.  
   
 ### <a name="remarks"></a>Hinweise  
- Um Objekte für diesen Aufruf `EnableAutomation` in ihren Konstruktoren, stellt sie Automation aktiviert ist, gibt diese Funktion einen Zeiger der Foundation Class-Implementierung von `IDispatch` , wird von Clients verwendet, die für die Kommunikation über die `IDispatch` Schnittstelle. Ein Verweis auf den Zeiger, durch das Aufrufen dieser Funktion wird automatisch hinzugefügt werden, daher es nicht notwendig ist, einen Aufruf an [IUnknown:: AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379).  
+ Um Objekte für diesen Aufruf `EnableAutomation` in ihren Konstruktoren, stellt sie Automation aktiviert ist, gibt diese Funktion einen Zeiger der Foundation Class-Implementierung von `IDispatch` , wird von Clients verwendet, die für die Kommunikation über die `IDispatch` Schnittstelle. Ein Verweis auf den Zeiger, durch das Aufrufen dieser Funktion wird automatisch hinzugefügt werden, daher es nicht notwendig ist, einen Aufruf an [IUnknown:: AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref).  
   
 ##  <a name="gettypeinfocount"></a>  CCmdTarget::GetTypeInfoCount  
  Ruft die Anzahl der Schnittstellen mit Typinformationen, die ein Objekt bereitstellt.  
@@ -301,7 +301,7 @@ virtual UINT GetTypeInfoCount();
  Die Anzahl der Schnittstellen mit Typinformationen.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion im Grunde implementiert [IDispatch:: GetTypeInfoCount](http://msdn.microsoft.com/da876d53-cb8a-465c-a43e-c0eb272e2a12).  
+ Diese Memberfunktion im Grunde implementiert [IDispatch:: GetTypeInfoCount](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount).  
   
  Abgeleitete Klassen überschreiben, sollte dieser Funktion können Sie die Anzahl von Schnittstellen mit Typinformationen bereitgestellt (0 oder 1) zurückgegeben. Wenn Sie nicht überschrieben, `GetTypeInfoCount` gibt 0 zurück. Um zu überschreiben, verwenden die [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) Makro, das implementiert auch `GetTypeLib` und `GetTypeLibCache`.  
   
@@ -320,13 +320,13 @@ HRESULT GetTypeInfoOfGuid(
  Ein Gebietsschemabezeichner ( `LCID`).  
   
  *GUID*  
- Die [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931) der typenbeschreibung.  
+ Die [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) der typenbeschreibung.  
   
  *ppTypeInfo*  
  Zeiger auf einen Zeiger auf die `ITypeInfo` Schnittstelle.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein HRESULT, der angibt, den Erfolg oder Fehler des Aufrufs. Im Erfolgsfall * *PpTypeInfo* verweist auf die Schnittstelle des Typs Informationen.  
+ Ein HRESULT, der angibt, den Erfolg oder Fehler des Aufrufs. Im Erfolgsfall \* *PpTypeInfo* verweist auf die Schnittstelle des Typs Informationen.  
   
 ##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib  
  Ruft einen Zeiger auf eine Typbibliothek.  
@@ -345,7 +345,7 @@ virtual HRESULT GetTypeLib(
  Ein Zeiger auf einen Zeiger auf die `ITypeLib` Schnittstelle.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein HRESULT, der angibt, den Erfolg oder Fehler des Aufrufs. Im Erfolgsfall * *PpTypeLib* verweist auf die Typ-Library-Schnittstelle.  
+ Ein HRESULT, der angibt, den Erfolg oder Fehler des Aufrufs. Im Erfolgsfall \* *PpTypeLib* verweist auf die Typ-Library-Schnittstelle.  
   
 ### <a name="remarks"></a>Hinweise  
  Abgeleitete Klassen müssen diese Memberfunktion überschreiben (wenn nicht überschrieben, `GetTypeLib` TYPE_E_CANTLOADLIBRARY zurückgibt). Verwenden der [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) Makro, das implementiert auch `GetTypeInfoCount` und `GetTypeLibCache`.  
@@ -437,10 +437,10 @@ virtual BOOL OnCmdMsg(
   
 |*nCode* Wert|*pExtra* Wert|  
 |-------------------|--------------------|  
-|CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)*|  
-|CN_EVENT|AFX_EVENT *|  
-|AUFGERUFEN|CCmdUI *|  
-|CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)*|  
+|CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)\*|  
+|CN_EVENT|AFX_EVENT\*|  
+|AUFGERUFEN|CCmdUI\*|  
+|CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)\*|  
 |CN_OLE_UNREGISTER|NULL|  
   
 ### <a name="example"></a>Beispiel  

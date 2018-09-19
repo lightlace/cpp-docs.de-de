@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: Internalclose-Methode | Microsoft Docs'
+title: 'Handlet:: Internalclose-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b0aef97645d515a03dcf2cab90eedc06f07971c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc3f01227cb37285f11ef8256d0b101f156871b5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874144"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605515"
 ---
 # <a name="handletinternalclose-method"></a>HandleT::InternalClose-Methode
-Schließt das aktuelle HandleT-Objekt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-virtual bool InternalClose();  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- `true` Wenn die aktuelle HandleT erfolgreich geschlossen. andernfalls `false`.  
-  
-## <a name="remarks"></a>Hinweise  
- InternalClose() ist geschützt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Siehe auch  
- [HandleT-Klasse](../windows/handlet-class.md)
+
+Schließt das aktuelle **HandleT** Objekt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+virtual bool InternalClose();
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+**"true"** Wenn die aktuelle **HandleT** geschlossen wird, erfolgreich ist; andernfalls **"false"**.
+
+## <a name="remarks"></a>Hinweise
+
+**InternalClose()** ist **geschützt**.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+
+[HandleT-Klasse](../windows/handlet-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Anzeigen oder Ausblenden der Symbolleiste (Bildbearbeitung für Symbole) | Microsoft Docs
+title: Ein- oder Ausblenden der Symbolleiste (Bildbearbeitung für Symbole C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d00610d4366f76e07b6f62b5a65416bf37182e2a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 360884c27e834f31badce0b02119203ee7877e4e
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872987"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318927"
 ---
-# <a name="displaying-or-hiding-the-toolbar-image-editor-for-icons"></a>Ein- oder Ausblenden der Symbolleiste (Bildbearbeitung für Symbole)
-Da viele der Zeichenwerkzeuge verfügbar sind, die die [Tastatur](../windows/accelerator-keys-image-editor-for-icons.md), es ist manchmal hilfreich, die Grafik-Editor-Symbolleiste ausblenden.  
-  
-### <a name="to-display-or-hide-the-image-editor-toolbar"></a>Zum Anzeigen oder Ausblenden der Symbolleiste des Grafik-Editor  
-  
-1.  Auf der **Ansicht** klicken Sie im Menü **Symbolleisten** wählen Sie dann **Bildbearbeitung**.  
-  
-    > [!NOTE]
-    >  Über diese Symbolleiste Elemente aus dem aktuellen Projekt nicht verfügbar, wenn eine Bilddatei angezeigt werden, oder Lösung ist nicht in der Grafik-Editor geöffnet. Finden Sie unter [Erstellen eines Symbols oder anderen Bilds](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), Informationen zum Hinzufügen von Bilddateien in Ihren Projekten.  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
-  
- Anforderungen  
-  
- Keiner  
-  
-## <a name="see-also"></a>Siehe auch  
- [Fenster "Farben"](../windows/colors-window-image-editor-for-icons.md)   
- [Symbolleiste](../windows/toolbar-image-editor-for-icons.md)   
- [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)
+# <a name="displaying-or-hiding-the-toolbar-c-image-editor-for-icons"></a>Ein- oder Ausblenden der Symbolleiste (Bildbearbeitung für Symbole C++)
 
+Da viele der Zeichenwerkzeuge aus verfügbar sind die [Tastatur](../windows/accelerator-keys-image-editor-for-icons.md), manchmal ist es sinnvoll, zum Ausblenden der **Bildbearbeitung** Symbolleiste.
+
+### <a name="to-display-or-hide-the-image-editor-toolbar"></a>Zum Anzeigen oder Ausblenden der Symbolleiste der Bildbearbeitung
+
+1. Auf der **Ansicht** klicken Sie im Menü **Symbolleisten** wählen Sie dann **Bildbearbeitung**.
+
+   > [!NOTE]
+   > Diese Symbolleiste Elemente aus dem aktuellen Projekt nicht verfügbar, wenn eine Image-Datei angezeigt werden, oder Lösung ist nicht geöffnet, in der **Bildbearbeitung**. Finden Sie unter [erstellen ein Symbol oder andere Bild](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), Weitere Informationen zum Hinzufügen von Bilddateien zu Ihren Projekten.
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Anforderungen
+
+Keiner
+
+## <a name="see-also"></a>Siehe auch
+
+[Fenster "Farben"](../windows/colors-window-image-editor-for-icons.md)  
+[Symbolleiste](../windows/toolbar-image-editor-for-icons.md)  
+[Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)

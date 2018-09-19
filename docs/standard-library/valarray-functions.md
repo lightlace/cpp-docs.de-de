@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: 855b58c9a970b569da533d84ffb21728bdf90157
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a770e240f28dbd8e904a288beb10a9a6abe7431c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962470"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715675"
 ---
 # <a name="ltvalarraygt-functions"></a>&lt;valarray&gt;-Funktionen
 
@@ -69,8 +69,8 @@ valarray<Type> abs(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
+*left*<br/>
+Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -124,8 +124,8 @@ valarray<Type> acos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
+*left*<br/>
+Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -197,8 +197,8 @@ valarray<Type> asin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
+*left*<br/>
+Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -270,8 +270,8 @@ valarray<Type> atan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
+*left*<br/>
+Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -352,11 +352,11 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Der konstante numerische Datentyp oder das valarray-Eingabeobjekt, dessen Elemente die Werte für die y-Koordinate des Arkustangensarguments bereitstellen.
+*left*<br/>
+Der konstante numerische Datentyp oder das valarray-Eingabeobjekt, dessen Elemente die Werte für die y-Koordinate des Arkustangensarguments bereitstellen.
 
-*right*  
- Der konstante numerische Datentyp oder das valarray-Eingabeobjekt, dessen Elemente die Werte für die x-Koordinate des Arkustangensarguments bereitstellen.
+*right*<br/>
+Der konstante numerische Datentyp oder das valarray-Eingabeobjekt, dessen Elemente die Werte für die x-Koordinate des Arkustangensarguments bereitstellen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -440,8 +440,8 @@ valarray<Type> cos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
+*left*<br/>
+Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -517,8 +517,8 @@ valarray<Type> cosh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
+*left*<br/>
+Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -600,8 +600,8 @@ valarray<Type> exp(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
+*left*<br/>
+Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -663,8 +663,8 @@ valarray<Type> log(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
+*left*<br/>
+Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -726,8 +726,8 @@ valarray<Type> log10(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
+*left*<br/>
+Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -806,11 +806,11 @@ pow(
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das valarray-Eingabeobjekt, dessen Elemente die Basis für alle Elemente bereitstellt, die potenziert werden sollen.
+*left*<br/>
+Das valarray-Eingabeobjekt, dessen Elemente die Basis für alle Elemente bereitstellt, die potenziert werden sollen.
 
-*right*  
- Das valarray-Eingabeobjekt, dessen Elemente die Potenz für alle Elemente bereitstellt, die potenziert werden sollen.
+*right*<br/>
+Das valarray-Eingabeobjekt, dessen Elemente die Potenz für alle Elemente bereitstellt, die potenziert werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -888,8 +888,8 @@ valarray<Type> sin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
+*left*<br/>
+Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -965,8 +965,8 @@ valarray<Type> sinh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
+*left*<br/>
+Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1048,8 +1048,8 @@ valarray<Type> sqrt(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
+*left*<br/>
+Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1124,8 +1124,8 @@ valarray<Type> tan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
+*left*<br/>
+Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1201,8 +1201,8 @@ valarray<Type> tanh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
+*left*<br/>
+Das valarray-Eingabeobjekt, für dessen Elemente die Memberfunktion Operationen durchführt.
 
 ### <a name="return-value"></a>Rückgabewert
 

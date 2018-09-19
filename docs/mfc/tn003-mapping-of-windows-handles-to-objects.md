@@ -1,5 +1,5 @@
 ---
-title: 'TN003: Zuordnen von Fensterhandles zu Objekten | Microsoft Docs'
+title: 'TN003: Zuordnen von Windows-Fensterhandles zu Objekten | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,24 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2be47da802fd1168ec7b43c2f7701351b3c88d8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: b022c4c42a7373f9bfc23c1fff5be2c1317709de
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951507"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692447"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: Zuordnen von Fensterhandles zu Objekten
-In diesem Hinweis werden die MFC-Bibliothek Routinen, die Unterstützung für die Zuordnung von Windows-Objekt-Handles zu C++-Objekte.  
+In diesem Hinweis wird beschrieben, die MFC-Bibliothek Objekt Routinen, die Unterstützung für die Zuordnung von Windows-Handles für C++-Objekte.  
   
 ## <a name="the-problem"></a>Das Problem  
- Windows-Objekte werden in der Regel von verschiedenen dargestellt [BEHANDELN](http://msdn.microsoft.com/library/windows/desktop/aa383751) Windows Objekthandles mit C++-Objekte zum Umschließen von Objekten der MFC-Klassen. Das Handle wrapping Funktionen der MFC-Klassenbibliothek können Sie das C++-Objekt zu suchen, das das Windows-Objekt umschließt, das ein bestimmtes Handle verfügt. Allerdings manchmal ein Objekt kein C++-Wrapperobjekt und zu diesen Zeitpunkten erstellt das System ein temporäres Objekt, das als C++-Wrapper fungiert.  
+ Windows-Objekte werden in der Regel von verschiedenen dargestellt [BEHANDELN](/windows/desktop/WinProg/windows-data-types) Objekthandles für Windows mit C++-Objekte zum Umschließen von Objekten der MFC-Klassen. Das Handle Wrapperfunktionen der MFC-Klassenbibliothek können Sie das C++-Objekt zu suchen, das das Windows-Objekt umschlossen wird, das ein bestimmtes Handle ist. Allerdings manchmal ein Objekt kein C++-Wrapper-Objekt, und zu diesen Zeitpunkten erstellt das System ein temporäres Objekt, das als C++-Wrapper fungiert.  
   
- Die Windows-Objekte, die Handlezuordnungen verwenden, sind wie folgt:  
+ Die Windows-Objekte, die Handle-Karten zu verwenden sind wie folgt:  
   
--   HWND ([CWnd](../mfc/reference/cwnd-class.md) und `CWnd`-abgeleitete Klassen)  
+-   HWND ([CWnd](../mfc/reference/cwnd-class.md) und `CWnd`-abgeleiteten Klassen)  
   
--   HDC ([CDC](../mfc/reference/cdc-class.md) und `CDC`-abgeleitete Klassen)  
+-   HDC ([CDC](../mfc/reference/cdc-class.md) und `CDC`-abgeleiteten Klassen)  
   
 -   HMENU ([CMenu](../mfc/reference/cmenu-class.md))  
   
@@ -56,37 +56,37 @@ In diesem Hinweis werden die MFC-Bibliothek Routinen, die Unterstützung für di
   
 -   SOCKET ([CSocket](../mfc/reference/csocket-class.md))  
   
- Wenn ein Handle für jede dieser Objekte, finden Sie die MFC-Objekt, das das Handle durch Aufrufen der statischen Methode umschließt `FromHandle`. Angenommen, einen HWND bezeichnet *hWnd*, die folgende Zeile zurück, einen Zeiger auf die `CWnd` , umschließt *hWnd*:  
+ Ein Handle an eine der folgenden Objekte übergeben, finden Sie die MFC-Objekt, das das Handle durch Aufrufen der statischen Methode umschließt `FromHandle`. Angenommen, ein HWND namens *hWnd*, die folgende Zeile gibt einen Zeiger auf die `CWnd` , umschließt *hWnd*:  
   
 ```  
 CWnd::FromHandle(hWnd)  
 ```  
   
- Wenn *hWnd* verfügt nicht über einen bestimmten Wrapperobjekt, ein temporäres `CWnd` erstellt, um umschließen *hWnd*. Dadurch möglich, ein gültiges C++-Objekt aus beliebiges Handle zu erhalten.  
+ Wenn *hWnd* verfügt nicht über einen bestimmten Wrapperobjekt, ein temporäres `CWnd` wird erstellt, um umschließen *hWnd*. Dadurch wird es möglich, ein gültiges C++-Objekt aus beliebiges Handle zu erhalten.  
   
- Nachdem Sie ein Wrapperobjekt haben, können Sie dessen Handle aus einer Variablen öffentlichen Member von der Wrapperklasse abrufen. Im Fall von einem `CWnd`, *M_hWnd* HWND für dieses Objekt enthält.  
+ Nachdem Sie ein Wrapperobjekt haben, können Sie das Handle von einer öffentlichen Membervariablen der Wrapperklasse abrufen. Im Fall von einem `CWnd`, *M_hWnd* das HWND für dieses Objekt enthält.  
   
-## <a name="attaching-handles-to-mfc-objects"></a>Anfügen von Handles zu MFC-Objekten  
- Eine neu erstellte Handle-Wrapperobjekt und ein Handle, ein Windows-Objekt zugewiesen, können Sie die beiden durch Aufrufen von Zuordnen der `Attach` wie in diesem Beispiel funktionieren:  
+## <a name="attaching-handles-to-mfc-objects"></a>Anfügen von Handles an MFC-Objekte  
+ Wenn eine neu erstellte Handle-Wrapper-Objekt und einem Handle auf ein Windows-Objekt, können Sie die beiden durch Aufrufen von Zuordnen der `Attach` funktionieren, wie im folgenden Beispiel:  
   
 ```  
 CWnd myWnd;  
 myWnd.Attach(hWnd);
 ```  
   
- Dadurch wird einen Eintrag in der permanenten Zuordnung zuordnen *MyWnd* und *hWnd*. Aufrufen von `CWnd::FromHandle(hWnd)` wird nun einen Zeiger auf zurückgeben *MyWnd*. Wenn *MyWnd* wird gelöscht, der Destruktor automatisch zerstört *hWnd* durch Aufruf der Windows [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682) Funktion. Wenn dies nicht erwünscht ist, *hWnd* muss getrennt von *MyWnd* vor *MyWnd* zerstört wird (normalerweise beim Verlassen des Bereichs an dem *MyWnd*definiert wurde). Die `Detach` Methode geschieht.  
+ Dadurch wird einen Eintrag in das Zuordnen der permanenten Zuordnung *MyWnd* und *hWnd*. Aufrufen von `CWnd::FromHandle(hWnd)` gibt nun einen Zeiger auf *MyWnd*. Wenn *MyWnd* wird gelöscht, werden automatisch der Destruktor zerstört *hWnd* durch Aufrufen der Windows [DestroyWindow](/windows/desktop/api/winuser/nf-winuser-destroywindow) Funktion. Wenn dies nicht erwünscht ist, *hWnd* muss getrennt von *MyWnd* vor *MyWnd* zerstört wird (normalerweise beim Verlassen des Bereichs mit der *MyWnd*definiert wurde). Die `Detach` Methode hierfür.  
   
 ```  
 myWnd.Detach();
 ```  
   
 ## <a name="more-about-temporary-objects"></a>Weitere Informationen zu temporären Objekte  
- Temporäre Objekte werden erstellt, wenn `FromHandle` erhält ein Handle, das nicht bereits ein Wrapperobjekt verfügt. Diese temporären Objekte aus ihren Handle getrennt oder gelöscht, indem die `DeleteTempMap` Funktionen. Standardmäßig [CWinThread::OnIdle](../mfc/reference/cwinthread-class.md#onidle) ruft automatisch `DeleteTempMap` für jede Klasse, die temporäre Handlezuordnungen unterstützt. Dies bedeutet, dass Sie nicht davon ausgehen können, dass ein Zeiger auf ein temporäres Objekt ist am Punkt des Beenden von der Funktion gültig, in dem der Zeiger abgerufen wurde.  
+ Temporäre Objekte werden erstellt, wenn `FromHandle` erhält ein Handle, das nicht bereits über ein Wrapperobjekt verfügt. Diese temporären Objekte aus ihren Handle getrennt oder gelöscht, indem die `DeleteTempMap` Funktionen. Standardmäßig [CWinThread::OnIdle](../mfc/reference/cwinthread-class.md#onidle) ruft automatisch `DeleteTempMap` für jede Klasse, die temporäre Handlezuordnungen unterstützt. Dies bedeutet, dass Sie können nicht davon ausgehen, dass ein Zeiger auf ein temporäres Objekt ist am Punkt der Beendigung der Funktion gültig, in dem der Zeiger abgerufen wurde.  
   
-## <a name="wrapper-objects-and-multiple-threads"></a>Wrapper-Objekte und mehrere Threads  
- Temporäre und permanente Objekte werden in Abständen threadspezifisches beibehalten. Ein Thread kann nicht, also ein anderer Thread C++ Wrapper-Objekte, unabhängig davon, ob es temporär oder dauerhaft zugreifen.  
+## <a name="wrapper-objects-and-multiple-threads"></a>Wrapper-Objekte und mehreren Threads  
+ Temporäre und permanente Objekte auf einer pro-Thread-Basis verwaltet werden. Ein Thread kann nicht, also einem anderen Thread C++-Wrapper-Objekte, unabhängig davon, ob es sich um temporär oder permanent ist zugreifen.  
   
- Um diese Objekte von einem Thread zu einem anderen zu übergeben, immer senden als ihre systemeigenen `HANDLE` Typ. Übergeben ein C++-Wrapper-Objekt von einem Thread zu einem anderen wird häufig zu unerwarteten Ergebnissen führen.  
+ Um diese Objekte von einem Thread in einen anderen übergeben möchten, immer senden diese als ihre Native `HANDLE` Typ. Übergeben ein C++-Wrapper-Objekt von einem Thread in einen anderen wird oftmals zu unerwarteten Ergebnissen führen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Technische Hinweise – nach Anzahl](../mfc/technical-notes-by-number.md)   

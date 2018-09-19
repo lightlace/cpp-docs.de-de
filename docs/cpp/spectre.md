@@ -1,5 +1,5 @@
 ---
-title: Absorptionsspektrum | Microsoft Docs
+title: Spectre | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 1/23/2018
 ms.technology:
@@ -18,31 +18,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 153ff690b975ecb442c260fcebce73acd32d03fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3d919a810ed93e40218476369ef9981da59b89bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422409"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114617"
 ---
-# <a name="spectre"></a>Absorptionsspektrum
+# <a name="spectre"></a>spectre
 
 **Microsoft-spezifisch**
 
-Weist den Compiler nicht, um Absorptionsspektrum Variant 1 spekulative Barriere Anweisungen zur Ausführung für eine Funktion einzufügen.
+Weist den Compiler nicht auf die Spectre-Variante 1 spekulative Ausführung Barrier-Anweisungen für eine Funktion einzufügen.
 
 ## <a name="syntax"></a>Syntax
 
-> **__declspec( spectre(nomitigation) )**  
+> **__declspec( spectre(nomitigation) )**
 
 ## <a name="remarks"></a>Hinweise
 
-Die [/Qspectre](../build/reference/qspectre.md) (Compileroption) veranlasst den Compiler, spekulative Ausführung Barriere Anweisungen einzufügen, wo Analysis zeigt an, dass ein Sicherheitsrisiko für Absorptionsspektrum Variante 1. Die spezifischen Anweisungen ausgegeben, richten sich nach den Prozessor. Während dieser Anweisungen eine minimale Auswirkung auf die Codegröße oder die Leistung haben, es gibt möglicherweise Fälle, in dem Code wird nicht durch die Sicherheitslücke beeinflusst und maximale Leistung erfordert, vor.
+Die ["/ qspectre"](../build/reference/qspectre.md) Compileroption veranlasst den Compiler, spekulative Ausführung Barriere Anweisungen einfügen, wo Analysis gibt an, ein Sicherheitsrisiko für Spectre-Variante 1 vorhanden ist. Folgen Sie den Anweisungen ausgegeben, richten sich nach den Prozessor. Diese Anweisungen einen minimalen Auswirkung auf die Codegröße oder die Leistung haben soll, auch gibt es Fälle, in denen Ihr Code wird durch die Sicherheitslücke nicht beeinflusst, und ist die maximale Leistung erforderlich.
 
-Experten-Analyse kann bestimmen, dass eine Funktion einen Absorptionsspektrum Variant 1 Grenzen Überprüfung umgehen defekt ist. In diesem Fall können Sie das Minderung codegenerierung innerhalb einer Funktion unterdrücken, indem anwenden `__declspec(spectre(nomitigation))` für die Funktionsdeklaration.
+Expertenanalyse möglicherweise bestimmen Sie, dass eine Funktion einen Fehler in Spectre Variant 1 Grenzen Check Bypass vor. In diesem Fall können Sie die Generierung von Code der Lösung innerhalb einer Funktion unterdrücken, indem Sie anwenden `__declspec(spectre(nomitigation))` auf die Funktionsdeklaration.
 
 > [!CAUTION]
-> Die **/Qspectre** spekulative Ausführung Barriere Anweisungen bieten wichtige Sicherheit und haben eine geringfügige Auswirkung auf die Leistung. Daher empfiehlt es sich, sie nicht zu unterdrücken, außer in dem seltenen Fall, in dem die Leistung einer Funktion ein wichtiger Aspekt ist und die Funktion bekanntermaßen sicher ist.
+> Die **"/ qspectre"** spekulative Ausführung Barriere Anweisungen bieten wichtige Sicherheit und haben eine geringfügige Auswirkung auf die Leistung. Daher empfiehlt es sich, sie nicht zu unterdrücken, außer in dem seltenen Fall, in dem die Leistung einer Funktion ein wichtiger Aspekt ist und die Funktion bekanntermaßen sicher ist.
 
 ## <a name="example"></a>Beispiel
 
@@ -67,6 +67,6 @@ int main() {
 
 ## <a name="see-also"></a>Siehe auch
 
-[__declspec](../cpp/declspec.md)  
-[Schlüsselwörter](../cpp/keywords-cpp.md)  
-[/Qspectre](../build/reference/qspectre.md)  
+[__declspec](../cpp/declspec.md)<br/>
+[Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
+[/Qspectre](../build/reference/qspectre.md)

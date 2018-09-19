@@ -1,5 +1,5 @@
 ---
-title: Zuweisung Zeichen | Microsoft Docs
+title: Zuweisung Zeichen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - characters [C++], assignments
 - MBCS [C++], character assignments
 ms.assetid: dcc329cd-92df-4e20-817d-364be62ff28f
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e403a619fc4c900aca51503862ff8f9dc315c2a3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c5efdaefdfd961a10d40c00855261eb547164f95
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856696"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591400"
 ---
 # <a name="character-assignment"></a>Zeichenzuweisungen
-Betrachten Sie das folgende Beispiel, in dem die `while` Schleife durchsucht eine Zeichenfolge, die alle Zeichen mit Ausnahme von "X" in eine andere Zeichenfolge kopiert:  
+Das folgende Beispiel, in dem die **während** Schleife durchsucht eine Zeichenfolge, die alle Zeichen mit Ausnahme von "X" in einer anderen Zeichenfolge kopiert:  
   
 ```  
 while( *sz2 )  
@@ -35,7 +35,7 @@ while( *sz2 )
 }  
 ```  
   
- Kopiert das Byte, ab `sz2` an der Speicherstelle `sz1`, inkrementiert dann `sz1` das nächste Byte empfangen. Jedoch, wenn das nächste Zeichen in `sz2` ist ein Doppelbyte-Zeichen, die Zuweisung zu `sz1` nur das erste Byte kopiert. Der folgende Code verwendet eine portable Funktion, um die Zeichen sicher zu kopieren und inkrementieren `sz1` und `sz2` ordnungsgemäß:  
+ Der Code kopiert das Byte am `sz2` auf den Speicherort verweist `sz1`, inkrementiert dann `sz1` das nächste Byte empfangen. Aber wenn das nächste Zeichen im `sz2` ist ein Doppelbyte-Zeichen, die Zuweisung zu `sz1` nur das erste Byte kopiert. Der folgende Code verwendet wird, eine portable Funktion, die die Zeichen sicher zu kopieren und inkrementieren `sz1` und `sz2` richtig:  
   
 ```  
 while( *sz2 )  

@@ -18,22 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7acfbfc29be7a2f6a091291e05fa55b49a5e112c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c4da0167ef3b39b006a2f067114cf518cc231a45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960403"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086446"
 ---
 # <a name="registry-support-classes"></a>Registrierungsunterstützungsklassen
-Die folgende Klasse unterstützt Registrierung:  
-  
--   [CRegKey](../atl/reference/cregkey-class.md) enthält Methoden zur Bearbeitung von Werten in der systemregistrierung.  
-  
-## <a name="related-articles"></a>Verwandte Artikel  
- [Der ATL-Registrierungskomponente (Registrar)](../atl/atl-registry-component-registrar.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../atl/atl-class-overview.md)   
- [Registrierungsmakros](../atl/reference/registry-macros.md)
+
+Die folgende Klasse unterstützt Registrierung:
+
+- [CRegKey](../atl/reference/cregkey-class.md) enthält Methoden zur Bearbeitung von Werten in der systemregistrierung.
+
+## <a name="related-articles"></a>Verwandte Artikel
+
+[Der ATL-Registrierungskomponente (Registrar)](../atl/atl-registry-component-registrar.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../atl/atl-class-overview.md)<br/>
+[Registrierungsmakros](../atl/reference/registry-macros.md)
 

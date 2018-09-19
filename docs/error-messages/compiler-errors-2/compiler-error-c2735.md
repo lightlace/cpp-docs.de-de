@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2735 generiert | Microsoft Docs
+title: Compilerfehler C2735 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ab970aa4e46ed0206f311e100f7ee777907aff8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 732b75c8988f879af230e0513a751b8cd9c4ae67
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232668"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093120"
 ---
-# <a name="compiler-error-c2735"></a>Compiler-Fehler C2735 generiert
-' Schlüsselwort ' ist in der formalen Parameter Typspezifizierer nicht zulässig.  
-  
- Das Schlüsselwort ist in diesem Kontext ungültig.  
-  
- Im folgende Beispiel wird C2735 generiert:  
-  
-```  
-// C2735.cpp  
-void f(inline int){}   // C2735  
+# <a name="compiler-error-c2735"></a>Compilerfehler C2735
+
+' Schlüsselwort ' ist in Typangabe eines formalen Parameters nicht zulässig.
+
+Das Schlüsselwort ist in diesem Kontext ungültig.
+
+Im folgende Beispiel wird die C2735 generiert:
+
+```
+// C2735.cpp
+void f(inline int){}   // C2735
 ```

@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: ivaluetype-Schnittstelle | Microsoft Docs'
+title: 'Platform:: ivaluetype-Schnittstelle | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -9,25 +9,27 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 8b89b21e-0d7b-4cc2-baa3-93b17c82945c
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67d5a9df66678e7c5c40d1570fa6149ba3f28ff8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcf251a67e787f9cf935c9482d444031db96b879
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089258"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104211"
 ---
 # <a name="platformivaluetype-interface"></a>Platform::IValueType-Schnittstelle
-`Platform::IValueType` ist eine Infrastrukturschnittstelle, die von Wertklassen und Wertstrukturen implementiert wird. Nicht für die explizite Verwendung in Ihrem Code gedacht.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-interface class IValueType  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Plattformnamespace](../cppcx/platform-namespace-c-cx.md)
+
+`Platform::IValueType` ist eine Infrastrukturschnittstelle, die von Wertklassen und Wertstrukturen implementiert wird. Nicht für die explizite Verwendung in Ihrem Code gedacht.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+interface class IValueType
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Platform-namespace](../cppcx/platform-namespace-c-cx.md)

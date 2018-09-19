@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05d7897bf7b18d804d787f865b80b615b7564919
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 1435d5fc286349efb2d44eeba65c3ee2231d111f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028290"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703897"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 Implementiert einen Bereich, der entweder in eine Docksite angedockt oder in einer Seite im Registerformat enthalten sein kann.  
@@ -213,7 +213,7 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|Gibt an, ob die Registerkarten oben oder unteren Rand des Bereichs befinden.|  
 |[CDockablePane::IsTracked](#istracked)|Gibt an, ob ein Bereich vom Benutzer gezogen wird.|  
 |[CDockablePane::IsVisible](#isvisible)|Bestimmt, ob der aktuelle Bereich angezeigt wird.|  
-|[CDockablePane:: LoadState](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|Wird intern verwendet.|  
+|[CDockablePane:: LoadState](#loadstate)|Wird intern verwendet.|  
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|Wird vom Framework aufgerufen, wenn das übergeordnete Element eines Bereichs geändert wurde. (Überschreibt [CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent).)|  
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|Vom Framework aufgerufen, wenn eine unverankerte andockleiste an ein Framefenster angedockt.|  
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|Vom Framework aufgerufen, wenn das übergeordnete Element des Bereichs geändert wird. (Überschreibt [CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent).)|  
@@ -332,14 +332,14 @@ virtual CDockablePane* AttachToTabWnd(
  [in] [out] *pTabControlBarAttachTo*  
  Gibt den Bereich "Ziel", dem im aktuelle Bereich an anfügt. Der Bereich "Ziel" muss es sich um einen andockbaren Bereich sein.  
   
- [in] *DockMethod*  
- Gibt die docking-Methode.  
+*dockMethod*<br/>
+[in] Gibt die docking-Methode.  
   
- [in] *bSetActive*  
- True, um den Bereich im Registerkartenformat zu aktivieren, nachdem der Anfügevorgang. andernfalls "false".  
+*bSetActive*<br/>
+[in] True, um den Bereich im Registerkartenformat zu aktivieren, nachdem der Anfügevorgang. andernfalls "false".  
   
- [out] *PpTabbedControlBar*  
- Enthält der Bereich im Registerkartenformat, die durch den Anfügevorgang entsteht.  
+*ppTabbedControlBar*<br/>
+[out] Enthält der Bereich im Registerkartenformat, die durch den Anfügevorgang entsteht.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf den aktuellen Bereich, wenn es sich nicht um einen Bereich im Registerkartenformat ist; andernfalls ein Zeiger auf den Bereich im Registerkartenformat, die durch den Anfügevorgang entsteht. Der Rückgabewert ist NULL, wenn im aktuelle Bereich kann nicht angefügt werden, oder wenn ein Fehler auftritt.  
@@ -375,11 +375,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bStretch*  
- Nicht verwendet.  
+*bStretch*<br/>
+[in] Nicht verwendet.  
   
- [in] *bHorz*  
- Nicht verwendet.  
+*bHorz*<br/>
+[in] Nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein `CSize` Objekt, das die Größe des Rechtecks im Bereich enthält.  
@@ -392,8 +392,8 @@ virtual BOOL CanAcceptMiniFrame(CPaneFrameWnd* pMiniFrame) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pMiniFrame*  
- Zeiger auf eine `CPaneFrameWnd` Objekt.  
+*pMiniFrame*<br/>
+[in] Zeiger auf eine `CPaneFrameWnd` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn *pMiniFrame* möglich in den Bereich angedockt ist, andernfalls "false".  
@@ -406,8 +406,8 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- Gibt den Bereich, um den aktuellen Bereich angedockt.  
+*pBar*<br/>
+[in] Gibt den Bereich, um den aktuellen Bereich angedockt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der angegebene Bereich in diesen Bereich angedockt werden kann. andernfalls "false".  
@@ -469,8 +469,8 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bActiveTabOnly*  
- Bei der Konvertierung einer `CTabbedPane`, geben Sie "true", um nur die aktive Registerkarte zu konvertieren. Geben Sie "false", um alle Registerkarten in den Bereich zu konvertieren.  
+*bActiveTabOnly*<br/>
+[in] Bei der Konvertierung einer `CTabbedPane`, geben Sie "true", um nur die aktive Registerkarte zu konvertieren. Geben Sie "false", um alle Registerkarten in den Bereich zu konvertieren.  
   
 ##  <a name="checkautohidecondition"></a>  CDockablePane::CheckAutoHideCondition  
  Bestimmt, ob die andockbare Bereich ausgeblendet ist (auch als in den Hintergrundmodus bezeichnet).  
@@ -495,8 +495,8 @@ virtual BOOL CheckStopSlideCondition(BOOL bDirection);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bDirection*  
- True, wenn der Bereich angezeigt wird. "False", wenn der Bereich ausgeblendet ist.  
+*bDirection*<br/>
+[in] True, wenn der Bereich angezeigt wird. "False", wenn der Bereich ausgeblendet ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die beenden-Bedingung erfüllt ist. andernfalls "false".  
@@ -514,8 +514,8 @@ virtual void CopyState(CDockablePane* pOrgBar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pOrgBar*  
- Ein Zeiger auf einen andockbaren Bereich.  
+*pOrgBar*<br/>
+[in] Ein Zeiger auf einen andockbaren Bereich.  
   
 ### <a name="remarks"></a>Hinweise  
  `CDockablePane::CopyState` kopiert den Status der *pOrgBar* in den aktuellen Bereich durch Aufrufen der folgenden Methoden:  
@@ -558,38 +558,38 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszCaption*  
- Gibt den Fensternamen.  
+*lpszCaption*<br/>
+[in] Gibt den Fensternamen.  
   
  [in] [out] *pParentWnd*  
  Gibt das übergeordnete Fenster an.  
   
- [in] *Rect*  
- Gibt die Größe und Position des Fensters, in Clientkoordinaten des *pParentWnd*.  
+*Rect*<br/>
+[in] Gibt die Größe und Position des Fensters, in Clientkoordinaten des *pParentWnd*.  
   
- [in] *bHasGripper*  
- "True", um den Bereich mit einer Beschriftung zu erstellen; andernfalls "false".  
+*bHasGripper*<br/>
+[in] "True", um den Bereich mit einer Beschriftung zu erstellen; andernfalls "false".  
   
- [in] *nID*  
- Gibt die ID des untergeordneten Fensters. Dieser Wert muss eindeutig sein, wenn für diesen andockbaren Bereich Andockstatus gespeichert werden soll.  
+*nID*<br/>
+[in] Gibt die ID des untergeordneten Fensters. Dieser Wert muss eindeutig sein, wenn für diesen andockbaren Bereich Andockstatus gespeichert werden soll.  
   
- [in] *DwStyle*  
- Gibt an, der die Stilattribute für Fenster.  
+*dwStyle*<br/>
+[in] Gibt an, der die Stilattribute für Fenster.  
   
- [in] *DwTabbedStyle*  
- Gibt das Format im Registerkartenformat, der ein Fenster im Registerkartenformat, die erstellt wird, wenn der Benutzer einen Bereich in der Titelleiste dieses Bereichs zieht.  
+*dwTabbedStyle*<br/>
+[in] Gibt das Format im Registerkartenformat, der ein Fenster im Registerkartenformat, die erstellt wird, wenn der Benutzer einen Bereich in der Titelleiste dieses Bereichs zieht.  
   
- [in] *DwControlBarStyle*  
- Gibt zusätzliche Stilattribute.  
+*dwControlBarStyle*<br/>
+[in] Gibt zusätzliche Stilattribute.  
   
  [in] [out] *"pContext"*  
  Gibt den Kontext Erstellen des Fensters.  
   
- [in] *LpszWindowName*  
- Gibt den Fensternamen.  
+*lpszWindowName*<br/>
+[in] Gibt den Fensternamen.  
   
- [in] *SizeDefault*  
- Gibt die Größe des Fensters.  
+*sizeDefault*<br/>
+[in] Gibt die Größe des Fensters.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der andockbare Bereich wurde erfolgreich erstellt wird. andernfalls "false".  
@@ -612,14 +612,14 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwAlignment*  
- Gibt die Seite den Hauptframe, zu dem der Bereich angedockt wird. Wenn *DwAlignment* enthält das Flag CBRS_ALIGN_LEFT oder CBRS_ALIGN_RIGHT diese Methode erstellt eine vertikale (`CPaneDivider::SS_VERT`) Unterteiler; andernfalls wird diese Methode erstellt eine horizontale (`CPaneDivider::SS_HORZ`) Unterteiler.  
+*dwAlignment*<br/>
+[in] Gibt die Seite den Hauptframe, zu dem der Bereich angedockt wird. Wenn *DwAlignment* enthält das Flag CBRS_ALIGN_LEFT oder CBRS_ALIGN_RIGHT diese Methode erstellt eine vertikale (`CPaneDivider::SS_VERT`) Unterteiler; andernfalls wird diese Methode erstellt eine horizontale (`CPaneDivider::SS_HORZ`) Unterteiler.  
   
- [in] *pParent*  
- Zeiger auf den übergeordneten Frame.  
+*pParent*<br/>
+[in] Zeiger auf den übergeordneten Frame.  
   
- [in] *pSliderRTC*  
- Nicht verwendet.  
+*pSliderRTC*<br/>
+[in] Nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt einen Zeiger auf den neu erstellten Unterteiler, oder NULL, wenn Unterteiler Datenbankerstellung fehlgeschlagen ist.  
@@ -652,32 +652,32 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwStyleEx*  
- Gibt die erweiterten Stilattribute für das neue Fenster.  
+*dwStyleEx*<br/>
+[in] Gibt die erweiterten Stilattribute für das neue Fenster.  
   
- [in] *LpszCaption*  
- Gibt den Fensternamen.  
+*lpszCaption*<br/>
+[in] Gibt den Fensternamen.  
   
  [in] [out] *pParentWnd*  
  Gibt das übergeordnete Fenster an.  
   
- [in] *Rect*  
- Gibt die Größe und Position des Fensters, in Clientkoordinaten des *pParentWnd*.  
+*Rect*<br/>
+[in] Gibt die Größe und Position des Fensters, in Clientkoordinaten des *pParentWnd*.  
   
- [in] *bHasGripper*  
- "True", um den Bereich mit einer Beschriftung zu erstellen; andernfalls "false".  
+*bHasGripper*<br/>
+[in] "True", um den Bereich mit einer Beschriftung zu erstellen; andernfalls "false".  
   
- [in] *nID*  
- Gibt die ID des untergeordneten Fensters. Dieser Wert muss eindeutig sein, wenn Sie den andockzustand für diesen andockbaren Bereich speichern möchten.  
+*nID*<br/>
+[in] Gibt die ID des untergeordneten Fensters. Dieser Wert muss eindeutig sein, wenn Sie den andockzustand für diesen andockbaren Bereich speichern möchten.  
   
- [in] *DwStyle*  
- Gibt an, der die Stilattribute für Fenster.  
+*dwStyle*<br/>
+[in] Gibt an, der die Stilattribute für Fenster.  
   
- [in] *DwTabbedStyle*  
- Gibt das Format im Registerkartenformat, der ein Fenster im Registerkartenformat, die erstellt wird, wenn der Benutzer einen Bereich in der Titelleiste dieses Bereichs zieht.  
+*dwTabbedStyle*<br/>
+[in] Gibt das Format im Registerkartenformat, der ein Fenster im Registerkartenformat, die erstellt wird, wenn der Benutzer einen Bereich in der Titelleiste dieses Bereichs zieht.  
   
- [in] *DwControlBarStyle*  
- Gibt an, die zusätzliche Stilattribute.  
+*dwControlBarStyle*<br/>
+[in] Gibt an, die zusätzliche Stilattribute.  
   
  [in] [out] *"pContext"*  
  Gibt den Kontext Erstellen des Fensters.  
@@ -720,14 +720,14 @@ virtual BOOL DockPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *BarContainerManager*  
- Ein Verweis auf den Manager des Containers, der angedockt wird.  
+*barContainerManager*<br/>
+[in] Ein Verweis auf den Manager des Containers, der angedockt wird.  
   
- [in] *DwAlignment*  
- DWORD, das den Rand des Bereichs angibt, der der Container angedockt wird.  
+*dwAlignment*<br/>
+[in] DWORD, das den Rand des Bereichs angibt, der der Container angedockt wird.  
   
- [in] *DockMethod*  
- Nicht verwendet.  
+*dockMethod*<br/>
+[in] Nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Container wurde erfolgreich in den Bereich angedockt ist. andernfalls "false".  
@@ -750,8 +750,8 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bWasDocked*  
- Bei der Rückgabe der Methode enthält dieser Wert "true" auf, wenn der Bereich erfolgreich angedockt wurde; Andernfalls enthält er "false".  
+*bWasDocked*<br/>
+[in] Bei der Rückgabe der Methode enthält dieser Wert "true" auf, wenn der Bereich erfolgreich angedockt wurde; Andernfalls enthält er "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wenn der Bereich einem Fenster im Registerkartenformat angedockt wurde oder wenn ein Fenster im Registerkartenformat aufgrund der Dockingstation erstellt wurde, gibt diese Methode einen Zeiger auf Fenster im Registerkartenformat. Wenn der Bereich, andernfalls erfolgreich angedockt wurde, gibt diese Methode die **dies** Zeiger. Wenn Andocken fehlgeschlagen ist, gibt diese Methode NULL zurück.  
@@ -783,11 +783,11 @@ virtual BOOL DockToWindow(
  [in] [out] *pTargetWindow*  
  Gibt an, andockbaren Bereich um diesem Bereich anzudocken.  
   
- [in] *DwAlignment*  
- Gibt die Ausrichtung des andockbaren Bereich an. Dabei kann es sich um CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM oder CBRS_ALIGN_ANY sein. (Die in afxres.h definiert.)  
+*dwAlignment*<br/>
+[in] Gibt die Ausrichtung des andockbaren Bereich an. Dabei kann es sich um CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM oder CBRS_ALIGN_ANY sein. (Die in afxres.h definiert.)  
   
- [in] *LpRect*  
- Gibt das Andocken Rechteck für den Bereich.  
+*lpRect*<br/>
+[in] Gibt das Andocken Rechteck für den Bereich.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Bereich erfolgreich angedockt wurde. andernfalls "false".  
@@ -805,11 +805,11 @@ virtual void DrawCaption(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Stellt den Gerätekontext zum Zeichnen verwendet.  
+*pDC*<br/>
+[in] Stellt den Gerätekontext zum Zeichnen verwendet.  
   
- [in] *RectCaption*  
- Gibt das umschließende Rechteck der Beschriftung für den Bereich an.  
+*rectCaption*<br/>
+[in] Gibt das umschließende Rechteck der Beschriftung für den Bereich an.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Methode, um die Beschriftung des einen andockbaren Bereich gezeichnet werden soll.  
@@ -824,8 +824,8 @@ void EnableAutohideAll(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- "True", die automatisch im Hintergrund alle Feature für den andockbaren Bereich zu aktivieren; andernfalls "false".  
+*bAktivieren*<br/>
+[in] "True", die automatisch im Hintergrund alle Feature für den andockbaren Bereich zu aktivieren; andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn ein Benutzer hält die **STRG** Schlüssel und klickt auf die Schaltfläche "anheften", um einen Bereich in den Hintergrundmodus, alle anderen Bereiche im selben Container zu wechseln, werden auch in den Hintergrundmodus gewechselt.  
@@ -840,8 +840,8 @@ virtual void EnableGripper(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- True, um die Beschriftung zu aktivieren. andernfalls "false".  
+*bAktivieren*<br/>
+[in] True, um die Beschriftung zu aktivieren. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn das Framework andockbare Bereiche erstellt wird, verfügen sie nicht den Fensterstil WS_STYLE, über selbst wenn angegeben. Dies bedeutet, dass im Bereich der Beschriftung einer nicht-Clientbereich, die vom Framework gesteuert wird, aber in diesem Bereich unterscheidet sich die standardmäßige fensterbeschriftung.  
@@ -908,11 +908,11 @@ virtual AFX_CS_STATUS GetDockingStatus(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pt*  
- Die Position des Mauszeigers in Bildschirmkoordinaten.  
+*pt*<br/>
+[in] Die Position des Mauszeigers in Bildschirmkoordinaten.  
   
- [in] *nSensitivity*  
- Die Entfernung in Pixel von der Kante eines Rechtecks muss der Zeiger so aktivieren Sie das Andocken.  
+*nSensitivity*<br/>
+[in] Die Entfernung in Pixel von der Kante eines Rechtecks muss der Zeiger so aktivieren Sie das Andocken.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Eine der folgenden Statuswerte:  
@@ -927,7 +927,7 @@ virtual AFX_CS_STATUS GetDockingStatus(
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Methode zum Behandeln von Andocken eines unverankerten Bereichs.  
   
- Für unverankerte Symbolleisten sowie andockbare Bereiche, die den Andockmodus DT_IMMEDIATE verwenden verzögert das Framework die Dock-Befehl aus, um dem Benutzer ermöglichen, bevor Andocken auftritt, verschieben Sie das Fenster aus den Clientbereich des übergeordneten Rahmens. Die Länge der Verzögerung in Millisekunden gemessen wird und wird gesteuert, indem die [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) Datenmember... Der Standardwert von [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) ist 200. Dieses Verhalten emuliert das Andockverhalten des [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)] 2007.  
+ Für unverankerte Symbolleisten sowie andockbare Bereiche, die den Andockmodus DT_IMMEDIATE verwenden verzögert das Framework die Dock-Befehl aus, um dem Benutzer ermöglichen, bevor Andocken auftritt, verschieben Sie das Fenster aus den Clientbereich des übergeordneten Rahmens. Die Länge der Verzögerung in Millisekunden gemessen wird und wird gesteuert, indem die [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) Datenmember... Der Standardwert von [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) ist 200. Dieses Verhalten emuliert das Andockverhalten des Microsoft Word 2007.  
   
  Für verzögerte Andocken Staaten (CS_DELAY_DOCK und CS_DELAY_DOCK_TO_TAB) führt das Framework keine andocken, bis der Benutzer die Maustaste loslässt. Wenn ein Bereich den Andockmodus DT_STANDARD verwendet wird, zeigt das Framework ein Rechteck auf die voraussichtliche Andockposition aus. Wenn ein Bereich den Andockmodus DT_SMART verwendet wird, zeigt das Framework intelligente andockmarker und halb transparent Rechtecke an die voraussichtliche Andockposition an. Rufen Sie zum Angeben des Andockmodus für die im Eigenschaftenbereich die [CBasePane::SetDockingMode](../../mfc/reference/cbasepane-class.md#setdockingmode) Methode. Weitere Informationen zu intelligentes Andocken, finden Sie unter [CDockingManager::GetSmartDockingParams](../../mfc/reference/cdockingmanager-class.md#getsmartdockingparams).  
   
@@ -964,11 +964,11 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *RectTabAreaTop*  
- `GetTabArea` füllt diese Variable mit der Registerkartenbereich an, wenn Registerkarten am oberen Rand des Bereichs befinden. Wenn die Registerkarten am unteren Rand des Bereichs befinden, wird diese Variable mit einem leeren Rechteck gefüllt.  
+*rectTabAreaTop*<br/>
+[in] `GetTabArea` füllt Sie diese Variable mit der Registerkartenbereich, wenn die Registerkarten am oberen Rand des Bereichs befinden. Wenn die Registerkarten am unteren Rand des Bereichs befinden, wird diese Variable mit einem leeren Rechteck gefüllt.  
   
- [in] *RectTabAreaBottom*  
- `GetTabArea` füllt diese Variable mit der Registerkartenbereich an, wenn Registerkarten am unteren Rand des Bereichs befinden. Wenn die Registerkarten am oberen Rand des Bereichs befinden, wird diese Variable mit einem leeren Rechteck gefüllt.  
+*rectTabAreaBottom*<br/>
+[in] `GetTabArea` füllt Sie diese Variable mit der Registerkartenbereich, wenn die Registerkarten am unteren Rand des Bereichs befinden. Wenn die Registerkarten am oberen Rand des Bereichs befinden, wird diese Variable mit einem leeren Rechteck gefüllt.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird nur in von abgeleiteten Klassen verwendet `CDockablePane` und Registerkarten angezeigt. Weitere Informationen finden Sie unter [CTabbedPane::GetTabArea](../../mfc/reference/ctabbedpane-class.md#gettabarea) und [CMFCOutlookBar::GetTabArea](../../mfc/reference/cmfcoutlookbar-class.md#gettabarea).  
@@ -1011,11 +1011,11 @@ virtual int HitTest(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Legt den Punkt zu testen.  
+*Zeigen Sie*<br/>
+[in] Legt den Punkt zu testen.  
   
- [in] *bDetectCaption*  
- True, wenn der HTCAPTION zurückgegeben werden soll, wenn der Punkt, auf den Bereich der Beschriftung ist. andernfalls "false".  
+*bDetectCaption*<br/>
+[in] True, wenn der HTCAPTION zurückgegeben werden soll, wenn der Punkt, auf den Bereich der Beschriftung ist. andernfalls "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Einer der folgenden Werte:  
@@ -1153,7 +1153,18 @@ virtual BOOL IsVisible() const;
  Wenn der andockbare Bereich in den Hintergrundmodus ist und `IsHideInAutoHideMode` gibt TRUE zurück, der Sichtbarkeitszustand hängt von den Sichtbarkeitsstatus der zugehörigen automatisch im Hintergrund-Symbolleiste.  
   
  Ist der andockbare Bereich nicht in den Hintergrundmodus, wird durch der Sichtbarkeitszustand bestimmt die [CBasePane::IsVisible](../../mfc/reference/cbasepane-class.md#isvisible) Methode.  
-  
+
+## ##  <a name="loadstate"></a>  CDockablePane:: LoadState  
+Nur für interne Verwendung. Ausführliche Informationen finden Sie im Quellcode des Ordners VC\atlmfc\src\mfc der Visual Studio-Installation.
+
+```
+virtual BOOL LoadState(
+   LPCTSTR lpszProfileName = NULL,
+   int nIndex = -1,
+   UINT uiID = (UINT) -1
+);  
+```
+
 ##  <a name="m_bdisableanimation"></a>  CDockablePane::m_bDisableAnimation  
  Gibt an, ob die Animation andockbaren Bereich automatisch im Hintergrund deaktiviert ist.  
   
@@ -1186,7 +1197,7 @@ AFX_IMPORT_DATA static int m_nSlideSteps;
  Reduzieren Sie für eine schnellere Animationseffekt diesen Wert. Erhöhen Sie für den Animationseffekt langsamer diesen Wert.  
   
 ##  <a name="onafterchangeparent"></a>  CDockablePane::OnAfterChangeParent  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
@@ -1217,11 +1228,11 @@ virtual void OnBeforeChangeParent(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWndNewParent*  
- Ein Zeiger auf das neue übergeordnete Fenster.  
+*pWndNewParent*<br/>
+[in] Ein Zeiger auf das neue übergeordnete Fenster.  
   
- [in] *bDelay*  
- Boolescher Wert, der angibt, ob eine neuberechnung der Layout des Docks zu verzögern, wenn der Bereich nicht in der Dockingstation ist. Weitere Informationen finden Sie unter [CDockablePane::UndockPane](#undockpane).  
+*bDelay*<br/>
+[in] Boolescher Wert, der angibt, ob eine neuberechnung der Layout des Docks zu verzögern, wenn der Bereich nicht in der Dockingstation ist. Weitere Informationen finden Sie unter [CDockablePane::UndockPane](#undockpane).  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn der Bereich angedockt ist, und das neue übergeordnete Element lässt nicht zu andocken, wird diese Methode im Bereich abgedockt.  
@@ -1238,11 +1249,11 @@ virtual BOOL OnBeforeFloat(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *RectFloat*  
- Gibt die Position und Größe des Bereichs an, wenn es in einen unverankerten Zustand befindet.  
+*rectFloat*<br/>
+[in] Gibt die Position und Größe des Bereichs an, wenn es in einen unverankerten Zustand befindet.  
   
- [in] *DockMethod*  
- Gibt die docking-Methode. Finden Sie unter [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) eine Liste von möglichen Werten.  
+*dockMethod*<br/>
+[in] Gibt die docking-Methode. Finden Sie unter [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) eine Liste von möglichen Werten.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Bereich abgedockt werden kann. andernfalls "false".  
@@ -1258,8 +1269,8 @@ virtual void OnPressButtons(UINT nHit);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nHit*  
- Dieser Parameter wird nicht verwendet.  
+*nHit*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie eine benutzerdefinierte Schaltfläche auf die Beschriftung des einen andockbaren Bereich hinzufügen, überschreiben Sie diese Methode, um Benachrichtigungen zu erhalten, wenn ein Benutzer die Schaltfläche klickt.  
@@ -1272,8 +1283,8 @@ virtual void OnSlide(BOOL bSlideOut);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bSlideOut*  
- True, um im Bereich angezeigt. "False" zum Ausblenden des Fensters.  
+*bSlideOut*<br/>
+[in] True, um im Bereich angezeigt. "False" zum Ausblenden des Fensters.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse zum Implementieren von benutzerdefinierten automatisch im Hintergrund Auswirkungen.  
@@ -1299,14 +1310,14 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBarToReplaceWith*  
- Ein Zeiger auf einen andockbaren Bereich.  
+*pBarToReplaceWith*<br/>
+[in] Ein Zeiger auf einen andockbaren Bereich.  
   
- [in] *DockMethod*  
- Nicht verwendet.  
+*dockMethod*<br/>
+[in] Nicht verwendet.  
   
- [in] *bRegisterWithFrame*  
- Wenn "true" ist im neuen beim Dock-Manager des übergeordneten Elements des alten Bereichs registriert. Der neue Bereich wird am Index aus der alten Bereich in der Liste der Bereiche eingefügt, die von Dock-Manager verwaltet wird.  
+*bRegisterWithFrame*<br/>
+[in] Wenn "true" ist im neuen beim Dock-Manager des übergeordneten Elements des alten Bereichs registriert. Der neue Bereich wird am Index aus der alten Bereich in der Liste der Bereiche eingefügt, die von Dock-Manager verwaltet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Ersetzung erfolgreich ist. andernfalls "false".  
@@ -1333,17 +1344,17 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bMode*  
- True, um den Hintergrundmodus zu aktivieren. "False", um reguläre Andockmodus zu aktivieren.  
+*bMode*<br/>
+[in] True, um den Hintergrundmodus zu aktivieren. "False", um reguläre Andockmodus zu aktivieren.  
   
- [in] *DwAlignment*  
- Gibt die Ausrichtung des Bereichs automatisch im Hintergrund zu erstellen.  
+*dwAlignment*<br/>
+[in] Gibt die Ausrichtung des Bereichs automatisch im Hintergrund zu erstellen.  
   
  [in] [out] *pCurrAutoHideBar*  
  Ein Zeiger auf der Symbolleiste des aktuellen automatisch im Hintergrund. NULL kann sein.  
   
- [in] *bUseTimer*  
- Gibt an, ob Sie den Effekt automatisch im Hintergrund verwenden, wenn der Benutzer den Bereich in den Hintergrundmodus wechselt oder Sie den Bereich unmittelbar ausblenden.  
+*bUseTimer*<br/>
+[in] Gibt an, ob Sie den Effekt automatisch im Hintergrund verwenden, wenn der Benutzer den Bereich in den Hintergrundmodus wechselt oder Sie den Bereich unmittelbar ausblenden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die automatisch im Hintergrund-Symbolleiste, die als Ergebnis der Wechsel zu den Hintergrundmodus oder NULL erstellt wurde.  
@@ -1363,11 +1374,11 @@ void SetAutoHideParents(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pToolBar*  
- Zeiger auf ein solches.  
+*pToolBar*<br/>
+[in] Zeiger auf ein solches.  
   
- [in] *pBtn*  
- Zeiger auf eine Schaltfläche zum automatischen ausblenden.  
+*pBtn*<br/>
+[in] Zeiger auf eine Schaltfläche zum automatischen ausblenden.  
   
 ##  <a name="setlastpercentinpanecontainer"></a>  CDockablePane::SetLastPercentInPaneContainer  
  Bestimmt den Prozentsatz des Speicherplatzes, der ein Bereich in einem Container einnimmt.  
@@ -1377,8 +1388,8 @@ void SetLastPercentInPaneContainer(int n);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *n*  
- Ein **Int** , der den Prozentsatz des Speicherplatzes, der der Bereich in einem Container belegt angibt.  
+*n*<br/>
+[in] Ein **Int** , der den Prozentsatz des Speicherplatzes, der der Bereich in einem Container belegt angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework passt den Bereich, um den neuen Wert zu verwenden, wenn das Layout neu berechnet wird.  
@@ -1391,8 +1402,8 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *hRestoredSlider*  
- Ein Handle für einen bereichsteiler (Schieberegler).  
+*hRestoredSlider*<br/>
+[in] Ein Handle für einen bereichsteiler (Schieberegler).  
   
 ### <a name="remarks"></a>Hinweise  
  Ein bereichsteiler wiederhergestellten Standard wird abgerufen, wenn ein Bereich deserialisiert wird. Weitere Informationen finden Sie unter [CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider).  
@@ -1405,8 +1416,8 @@ void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pRTC*  
- Die Laufzeit-Klasseninformationen für die Seite im Registerformat.  
+*pRTC*<br/>
+[in] Die Laufzeit-Klasseninformationen für die Seite im Registerformat.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um die laufzeitklasseninformationen für Bereiche im Registerkartenformat festlegen, die dynamisch erstellt werden. Dies kann auftreten, wenn ein Benutzer einen Bereich auf die Beschriftung des anderen Bereichs zieht, oder rufen Sie die [CDockablePane:: Attachtotabwnd](#attachtotabwnd) Methode, um einen Bereich im Registerkartenformat aus zwei andockbare Bereiche programmgesteuert zu erstellen.  
@@ -1432,14 +1443,14 @@ virtual void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bShow*  
- True, um im Bereich angezeigt. "False" zum Ausblenden des Fensters.  
+*bShow*<br/>
+[in] True, um im Bereich angezeigt. "False" zum Ausblenden des Fensters.  
   
- [in] *bDelay*  
- Anpassen von "true" Verzögerung Layout des Docks; FALSE, um das Layout des Docks sofort anpassen.  
+*bDelay*<br/>
+[in] Anpassen von "true" Verzögerung Layout des Docks; FALSE, um das Layout des Docks sofort anpassen.  
   
- [in] *bActivate*  
- TRUE, aktivieren Sie im Bereich, wenn Sie angezeigt werden soll andernfalls "false".  
+*bActivate*<br/>
+[in] TRUE, aktivieren Sie im Bereich, wenn Sie angezeigt werden soll andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode statt der [ShowWindow](../../mfc/reference/cwnd-class.md#showwindow) beim ein- bzw. ausblenden andockbare Bereiche.  
@@ -1454,11 +1465,11 @@ virtual void Slide(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bSlideOut*  
- True, um im Bereich angezeigt. "False" zum Ausblenden des Fensters.  
+*bSlideOut*<br/>
+[in] True, um im Bereich angezeigt. "False" zum Ausblenden des Fensters.  
   
- [in] *bUseTimer*  
- True, um ein- oder Ausblenden des Bereichs mit dem Effekt automatisch im Hintergrund. "False" zum Anzeigen oder Ausblenden des Bereichs sofort.  
+*bUseTimer*<br/>
+[in] True, um ein- oder Ausblenden des Bereichs mit dem Effekt automatisch im Hintergrund. "False" zum Anzeigen oder Ausblenden des Bereichs sofort.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Methode, um einen Bereich zu animieren, der in den Hintergrundmodus ist.  
@@ -1483,8 +1494,8 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bDelay*  
- Berechnen von "true" Verzögerung Layout des Docks; "False", um das Layout des Docks neuberechnung sofort auszuführen.  
+*bDelay*<br/>
+[in] Berechnen von "true" Verzögerung Layout des Docks; "False", um das Layout des Docks neuberechnung sofort auszuführen.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um einen Bereich von Hauptrahmenfenster oder aus einem Container für Multi-Benutzer-Fenster (ein Bereich, der in einem einzelnen Benutzer-Fenster mit anderen Bereichen unverankert ist) zu lösen.  

@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-conio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - getwche
@@ -38,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3afca6d897f1cc8b1cd724b03ca57e3096829b9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8bfd791eb0ac022cfd13de74ca902ef45565ac16
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400719"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42573043"
 ---
 # <a name="getche-getwche"></a>_getche, _getwche
 
@@ -65,7 +66,7 @@ Gibt das gelesene Zeichen zurück. Es gibt keine Fehlerrückgabe.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_getche** und **_getwche** Funktionen lesen ein einzelnes Zeichen aus der Konsole mit Echo, was bedeutet, dass das Zeichen an der Konsole angezeigt wird. Mit keiner dieser Funktionen kann STRG+C gelesen werden. Beim Lesen einer Steuertaste oder einer Pfeiltaste muss jede Funktion zweimal aufgerufen werden. Der erste Aufruf gibt 0 oder 0xE0 und der zweite Aufruf den tatsächlichen Tastencode zurück.
+Die **_getche** und **_getwche** Funktionen lesen ein einzelnes Zeichen aus der Konsole mit Wiederholung ab, dies bedeutet, dass das Zeichen an der Konsole angezeigt wird. Mit keiner dieser Funktionen kann STRG+C gelesen werden. Beim Lesen einer Steuertaste oder einer Pfeiltaste muss jede Funktion zweimal aufgerufen werden. Der erste Aufruf gibt 0 oder 0xE0 und der zweite Aufruf den tatsächlichen Tastencode zurück.
 
 Diese Funktionen sperren den aufrufenden Thread und sind daher threadsicher. Nicht sperrende Versionen finden Sie unter [_getche_nolock _getwche_nolock](getche-nolock-getwche-nolock.md).
 
@@ -77,7 +78,7 @@ Diese Funktionen sperren den aufrufenden Thread und sind daher threadsicher. Nic
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_getche**|\<conio.h>|
 |**_getwche**|\<conio.h> oder \<wchar.h>|

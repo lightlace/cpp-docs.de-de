@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 3) C4159 | Microsoft Docs
+title: Compilerwarnung (Stufe 3) C4159 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 139a21f5fbb7ce279d96f9df8be6008c2f092287
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43e3d63ad1d482222c4ffa7aa7435d0e660f3985
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291670"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223317"
 ---
 # <a name="compiler-warning-level-3-c4159"></a>Compilerwarnung (Stufe 3) C4159
-\#Pragma-pragma(pop,...): wurde per pop ausgelesen zuvor per push abgelegten Bezeichner "Identifier"  
-  
- Enthält der Quellcode einem **Push** -Anweisung mit einem Bezeichner für ein Pragma, gefolgt von einer **pop** -Anweisung ohne Bezeichner. Folglich ***Bezeichner*** wird per pop ausgelesen, und nachfolgende Verwendungen von ***Bezeichner*** führen möglicherweise zu unerwartetem Verhalten.  
-  
- Um diese Warnung zu vermeiden, geben Sie einen Bezeichner der **pop** Anweisung. Zum Beispiel:  
-  
-```  
-// C4159.cpp  
-// compile with: /W3  
-#pragma pack(push, f)  
-#pragma pack(pop)   // C4159  
-  
-// using the identifier resolves the warning  
-// #pragma pack(pop, f)  
-  
-int main()  
-{  
-}  
+
+> #<a name="pragma-pragmapop--has-popped-previously-pushed-identifier-identifier"></a>Pragma-pragma(pop,...): wurde per pop ausgelesen zuvor per push abgelegten Bezeichner "*Bezeichner*"
+
+## <a name="remarks"></a>Hinweise
+
+Enthält den Quellcode einer **Push** -Anweisung mit einem Bezeichner für ein Pragma, gefolgt von einem **pop** -Anweisung ohne Bezeichner. Daher *Bezeichner* wird per pop ausgelesen, und nachfolgende Verwendungen von *Bezeichner* kann unerwartetes Verhalten verursachen.
+
+## <a name="example"></a>Beispiel
+
+Um diese Warnung zu vermeiden, geben Sie einen Bezeichner der **pop** Anweisung. Zum Beispiel:
+
+```cpp
+// C4159.cpp
+// compile with: /W3
+#pragma pack(push, f)
+#pragma pack(pop)   // C4159
+
+// using the identifier resolves the warning
+// #pragma pack(pop, f)
+
+int main()
+{
+}
 ```

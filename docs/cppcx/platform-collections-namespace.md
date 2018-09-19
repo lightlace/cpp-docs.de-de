@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: Collections-Namespace | Microsoft Docs'
+title: 'Platform:: Collections-Namespace | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
@@ -11,26 +11,26 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Collections Namespace
 ms.assetid: b5042864-5f22-40b7-b7a5-c0691f65cc47
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b4e38d6a051481b2b5f642c6b4de3c837f8fbfd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a8c6191f8cbcf79973a5af55d222dd6f17fc47e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088036"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106069"
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections-Namespace
 
-Platform:: Collections-Namespace enthält die `Map`, `MapView`, `Vector`, und `VectorView` Klassen. Diese Klassen sind konkrete Implementierungen der entsprechenden Schnittstellen, die im Namespace [Windows::Foundation::Collections](http://go.microsoft.com/fwlink/p/?LinkId=262645) definiert sind. Die konkreten Auflistungstypen können nicht über die ABI hinweg portiert werden (z. B. beim Aufruf eines Javascript- oder C#-Programms in eine C++-Komponente). Sie sind allerdings implizit in ihre entsprechenden Schnittstellentypen konvertierbar. Wenn Sie z. B. eine öffentliche Methode implementieren, die eine Auflistung füllt und zurückgibt, verwenden Sie [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) , um die Auflistung intern zu implementieren. Verwenden Sie [Windows::Foundation::Collections::IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410) als Rückgabetyp. Weitere Informationen finden Sie unter [Sammlungen](../cppcx/collections-c-cx.md) und [Erstellen von Windows-Runtime-Komponenten in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+Platform:: Collections-Namespace enthält die `Map`, `MapView`, `Vector`, und `VectorView` Klassen. Diese Klassen sind konkrete Implementierungen der entsprechenden Schnittstellen, die definiert sind die [Collections](/uwp/api/Windows.Foundation.Collections) Namespace. Die konkreten Auflistungstypen können nicht über die ABI hinweg portiert werden (z. B. beim Aufruf eines Javascript- oder C#-Programms in eine C++-Komponente). Sie sind allerdings implizit in ihre entsprechenden Schnittstellentypen konvertierbar. Z. B. Wenn Sie eine öffentliche Methode, die eine Auflistung füllt und zurückgibt implementieren, verwenden Sie dann [Vector](../cppcx/platform-collections-vector-class.md) die Auflistung intern zu implementieren und verwenden [Collections: : IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) als Rückgabetyp. Weitere Informationen finden Sie unter [Sammlungen](../cppcx/collections-c-cx.md) und [Erstellen von Windows-Runtime-Komponenten in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 Sie können Platform::Collections::Vector aus [std::vector](../standard-library/vector-class.md) und [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) aus [std::map](../standard-library/map-class.md)erstellen.
 
-Darüber hinaus bietet der Namespace Platform:: Collections Unterstützung für und eingabeiteratoren, und `Vector` und `VectorView` Iteratoren.
+Darüber hinaus bietet der Platform:: Collections-Namespace Unterstützung für Back INSERT- und Eingabe-Iteratoren und `Vector` und `VectorView` Iteratoren.
 
-Sie müssen einschließen (`#include`) den Header "Collection.h", um die Typen im Namespace Platform:: Collections zu verwenden.
+Sie müssen einschließen (`#include`) den Header "Collection.h" bereit, die Typen in der Platform:: Collections-Namespace verwenden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,7 +56,7 @@ Dieser Namespace enthält die folgenden Member.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
-[Plattformnamespace](../cppcx/platform-namespace-c-cx.md)
+[Platform-namespace](../cppcx/platform-namespace-c-cx.md)
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -68,4 +68,4 @@ Dieser Namespace enthält die folgenden Member.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Platform-Namespace](../cppcx/platform-namespace-c-cx.md)  
+[Plattform-Namespace](../cppcx/platform-namespace-c-cx.md)

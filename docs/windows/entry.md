@@ -1,5 +1,5 @@
 ---
-title: Eintrag | Microsoft Docs
+title: Eintrag | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,47 +17,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db90390be5313ddbea1103105f47b55fe9e23d62
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 95875eaea7206cbfb4ded271e329f10d7aee13fe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872314"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221890"
 ---
 # <a name="entry"></a>entry
-Gibt eine exportierte Funktion oder Konstante in einem Modul durch identifizieren den Einstiegspunkt in der DLL an.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-      [ entry(  
-   id  
-) ]  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `id`  
- Die ID des Einstiegspunkts.  
-  
-## <a name="remarks"></a>Hinweise  
- Die **Eintrag** C++-Attribut hat die gleiche Funktionalität wie die [Eintrag](http://msdn.microsoft.com/library/windows/desktop/aa366815) MIDL-Attribut.  
-  
-## <a name="example"></a>Beispiel  
- Siehe das Beispiel für [Idl_module](../windows/idl-module.md) für ein Beispiel für die Verwendung von **Eintrag**.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-### <a name="attribute-context"></a>Attributkontext  
-  
-|||  
-|-|-|  
-|**Betrifft**|`idl_module`-Attribut|  
-|**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Keiner|  
-|**Ungültige Attribute**|Keiner|  
-  
- Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [IDL-Attribute](../windows/idl-attributes.md)   
+
+Gibt eine exportierte Funktion oder Konstante in einem Modul durch identifizieren den Einstiegspunkt in der DLL an.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+[ entry(
+   id
+) ]
+```
+
+### <a name="parameters"></a>Parameter
+
+*ID*  
+Die ID des Einstiegspunkts.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Eintrag** C++-Attribut hat die gleiche Funktionalität wie die [Eintrag](/windows/desktop/Midl/entry) MIDL-Attribut.
+
+## <a name="example"></a>Beispiel
+
+Siehe das Beispiel für [Idl_module](../windows/idl-module.md) für ein Beispiel für die Verwendung von **Eintrag**.
+
+## <a name="requirements"></a>Anforderungen
+
+### <a name="attribute-context"></a>Attributkontext
+
+|||
+|-|-|
+|**Betrifft**|`idl_module`-Attribut|
+|**Wiederholbar**|Nein|
+|**Erforderliche Attribute**|Keiner|
+|**Ungültige Attribute**|Keiner|
+
+Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[IDL-Attribute](../windows/idl-attributes.md)  

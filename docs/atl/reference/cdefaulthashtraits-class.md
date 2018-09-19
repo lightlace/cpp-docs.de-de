@@ -18,59 +18,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a87ecddfff7cb3096ae30d9da5d9e5b6913adcbd
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 34aa546561e13c2728c633db3f96861a1d3ec987
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886244"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075682"
 ---
 # <a name="cdefaulthashtraits-class"></a>CDefaultHashTraits-Klasse
-Diese Klasse stellt eine statische Funktion zum Berechnen der Hashwerte.  
-  
-## <a name="syntax"></a>Syntax  
-  
+
+Diese Klasse stellt eine statische Funktion zum Berechnen der Hashwerte.
+
+## <a name="syntax"></a>Syntax
+
 ```
-template<typename T>  
+template<typename T>
 class CDefaultHashTraits
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *T*  
- Der Typ der Daten in der Auflistung gespeichert werden.  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CDefaultHashTraits::Hash](#hash)|(Statisch) Rufen Sie diese Funktion zum Berechnen der eines Hashwert für ein angegebenes Element ein.|  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Klasse enthält eine einzelne statische Funktion, die einen Hashwert für ein angegebenes Element zurückgibt. Diese Klasse wird verwendet, durch die [CDefaultElementTraits-Klasse](../../atl/reference/cdefaultelementtraits-class.md).  
-  
- Weitere Informationen finden Sie unter [ATL-Auflistungsklassen](../../atl/atl-collection-classes.md).  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** atlcoll.h  
-  
-##  <a name="hash"></a>  CDefaultHashTraits::Hash  
- Rufen Sie diese Funktion zum Berechnen der eines Hashwert für ein angegebenes Element ein.  
-  
+```
+
+#### <a name="parameters"></a>Parameter
+
+*T*<br/>
+Der Typ der Daten in der Auflistung gespeichert werden.
+
+## <a name="members"></a>Member
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CDefaultHashTraits::Hash](#hash)|(Statisch) Rufen Sie diese Funktion zum Berechnen der eines Hashwert für ein angegebenes Element ein.|
+
+## <a name="remarks"></a>Hinweise
+
+Diese Klasse enthält eine einzelne statische Funktion, die einen Hashwert für ein angegebenes Element zurückgibt. Diese Klasse wird verwendet, durch die [CDefaultElementTraits-Klasse](../../atl/reference/cdefaultelementtraits-class.md).
+
+Weitere Informationen finden Sie unter [ATL-Auflistungsklassen](../../atl/atl-collection-classes.md).
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** atlcoll.h
+
+##  <a name="hash"></a>  CDefaultHashTraits::Hash
+
+Rufen Sie diese Funktion zum Berechnen der eines Hashwert für ein angegebenes Element ein.
+
 ```
 static ULONG Hash(const T& element) throw();
-```  
-  
-### <a name="parameters"></a>Parameter  
- *Element*  
- Das Element.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Gibt den Hashwert zurück.  
-  
-### <a name="remarks"></a>Hinweise  
- Die Standardhashalgorithmus ist sehr einfach: der zurückgegebene Wert ist die Element-Anzahl. Überschreiben Sie diese Funktion, wenn ein etwas komplizierter Algorithmus erforderlich ist.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Parameter
+
+*Element*<br/>
+Das Element.
+
+### <a name="return-value"></a>Rückgabewert
+
+Gibt den Hashwert zurück.
+
+### <a name="remarks"></a>Hinweise
+
+Die Standardhashalgorithmus ist sehr einfach: der zurückgegebene Wert ist die Element-Anzahl. Überschreiben Sie diese Funktion, wenn ein etwas komplizierter Algorithmus erforderlich ist.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)

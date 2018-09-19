@@ -1,5 +1,5 @@
 ---
-title: BSCMAKE-Fehler BK1516 | Microsoft Docs
+title: BSCMAKE-Fehler BK1516 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95b76d41719da17e6e69d88d17a45269fff75cac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9be9eeb1043c28806d28cf216bc87931015695d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294546"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030013"
 ---
 # <a name="bscmake-error-bk1516"></a>BSCMAKE-Fehler BK1516
-BSC-Datei beschädigt; kann nicht inkrementell aktualisiert werden.  
-  
- BSC-Datei wurde möglicherweise aufgrund eines Systemfehlers während des Erstellungsvorgangs beschädigt. BSC-Datei löschen, erstellen Sie alle SBR-Dateien neu, und die BSC-Datei neu erstellen.
+
+BSC-Datei ist beschädigt; kann nicht inkrementell aktualisiert werden.
+
+Die BSC-Datei wurde möglicherweise aufgrund eines Systemfehlers während des Buildvorgangs beschädigt. BSC-Datei löschen, erstellen Sie alle .sbr-Dateien neu, und die BSC-Datei neu zu erstellen.

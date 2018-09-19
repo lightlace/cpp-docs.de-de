@@ -1,5 +1,5 @@
 ---
-title: aggregierbar | Microsoft Docs
+title: aggregierbaren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,81 +17,84 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d80b2fb707145f698e8d9bb883059478c3da10b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3670924bace1d76f02da816dc061616a4c39e199
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863825"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719211"
 ---
 # <a name="aggregatable"></a>aggregatable
-Gibt an, dass die Klasse Aggregation unterstützt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-      [ aggregatable(   
-   value  
-) ]  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *Wert* (optional)  
- Ein Parameter, um anzugeben, wann das COM-Objekt aggregiert werden können:  
-  
--   **nie** das COM-Objekt kann nicht aggregiert werden.  
-  
--   **zulässige** das COM-Objekt direkt erstellt werden kann oder aggregiert werden können. Dies ist die Standardeinstellung.  
-  
--   **immer** das COM-Objekt kann nicht direkt erstellt werden und nur aggregiert werden können. Beim Aufruf `CoCreateInstance` für dieses Objekt müssen Sie angeben, des aggregieren Objekts **IUnknown** Schnittstelle (steuernde **IUnknown**).  
-  
-## <a name="remarks"></a>Hinweise  
- Die **aggregierbar** C++-Attribut hat die gleiche Funktionalität wie die [aggregierbar](http://msdn.microsoft.com/library/windows/desktop/aa366721) MIDL-Attribut. Dies bedeutet, dass der Compiler übergibt die **aggregierbar** -Attribut über der generierten IDL-Datei.  
-  
- Dieses Attribut erfordert, dass die Attribute [coclass](../windows/coclass.md), [progid](../windows/progid.md), oder [vi_progid](../windows/vi-progid.md) (oder ein anderes Attribut, das eines der genannten impliziert) auch auf demselben Element angewendet werden. Wenn ein einzelnes Attribut verwendet wird, werden die anderen beiden automatisch angewendet. Wenn z.B. **progid** angewendet wird, werden **vi_progid** und **coclass** ebenso angewendet.  
-  
- **ATL-Projekte**  
-  
- Wenn dieses Attribut in einem Projekt verwendet wird, das ATL verwendet, ändert sich das Verhalten des Attributs. Zusätzlich zu den zuvor beschriebenen Verhalten fügt das Attribut auch einen der folgenden Makros hinzu Zielklasse:  
-  
-|Parameterwert|Eingefügte-Makro|  
-|---------------------|--------------------|  
-|**Nie**|[DECLARE_NOT_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|  
-|**Zulässig**|[DECLARE_POLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|  
-|**Immer**|[DECLARE_ONLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_only_aggregatable)|  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// cpp_attr_ref_aggregatable.cpp  
-// compile with: /LD  
-#define _ATL_ATTRIBUTES  
-#include "atlbase.h"  
-#include "atlcom.h"  
-  
-[module(name="MyModule")];  
-  
-[ coclass, aggregatable(allowed),  
-  uuid("1a8369cc-1c91-42c4-befa-5a5d8c9d2529")]  
-class CMyClass {};  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-### <a name="attribute-context"></a>Attributkontext  
-  
-|||  
-|-|-|  
-|**Betrifft**|**Klasse**, `struct`|  
-|**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Ein Attribut oder mehrere Attribute der folgenden: **coclass**, **progid**, oder **vi_progid**.|  
-|**Ungültige Attribute**|Keiner|  
-  
- Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [IDL-Attribute](../windows/idl-attributes.md)   
- [Klassenattribute](../windows/class-attributes.md)   
- [TypeDef, Enum, Union- und Struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Aggregation](http://msdn.microsoft.com/library/windows/desktop/ms686558)   
+
+Gibt an, dass die Klasse Aggregation unterstützt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+[ aggregatable(
+   value
+) ]
+```
+
+### <a name="parameters"></a>Parameter
+
+*Wert*  
+(Optional) Ein Parameter, um anzugeben, wenn das COM-Objekt aggregiert werden können:
+
+- `never` Das COM-Objekt kann nicht aggregiert werden.
+
+- `allowed` Das COM-Objekt kann direkt erstellt werden, oder es aggregiert werden kann. Dies ist die Standardeinstellung.
+
+- `always` Das COM-Objekt kann nicht direkt erstellt werden und nur aggregiert werden kann. Beim Aufruf `CoCreateInstance` für dieses Objekt müssen Sie angeben, des aggregieren Objekts `IUnknown` Schnittstelle (das steuernde `IUnknown`).
+
+## <a name="remarks"></a>Hinweise
+
+Die **aggregierbaren** C++-Attribut hat die gleiche Funktionalität wie die [aggregierbaren](/windows/desktop/Midl/aggregatable) MIDL-Attribut. Dies bedeutet, dass der Compiler übergibt die **aggregierbaren** Attribut mithilfe der generierten IDL-Datei.
+
+Dieses Attribut erfordert, dass die Attribute [coclass](../windows/coclass.md), [progid](../windows/progid.md), oder [vi_progid](../windows/vi-progid.md) (oder ein anderes Attribut, das eines der genannten impliziert) auch auf demselben Element angewendet werden. Wenn ein einzelnes Attribut verwendet wird, werden die anderen beiden automatisch angewendet. Z. B. wenn `progid` angewendet wird, `vi_progid` und `coclass` werden ebenfalls angewendet.
+
+### <a name="atl-projects"></a>ATL-Projekte
+
+Wenn dieses Attribut in einem Projekt verwendet wird, das ATL verwendet, ändert sich das Verhalten des Attributs. Zusätzlich zu den oben beschriebenen Verhalten fügt das Attribut auch eine der folgenden Makros hinzu Zielklasse:
+
+|Parameterwert|Eingefügte-Makro|
+|---------------------|--------------------|
+|`Never`|[DECLARE_NOT_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|
+|`Allowed`|[DECLARE_POLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|
+|`Always`|[DECLARE_ONLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_only_aggregatable)|
+
+## <a name="example"></a>Beispiel
+
+```cpp
+// cpp_attr_ref_aggregatable.cpp
+// compile with: /LD
+#define _ATL_ATTRIBUTES
+#include "atlbase.h"
+#include "atlcom.h"
+
+[module(name="MyModule")];
+
+[ coclass, aggregatable(allowed),
+  uuid("1a8369cc-1c91-42c4-befa-5a5d8c9d2529")]
+class CMyClass {};
+```
+
+## <a name="requirements"></a>Anforderungen
+
+### <a name="attribute-context"></a>Attributkontext
+
+|||
+|-|-|
+|**Betrifft**|**Klasse**, **Struktur**|
+|**Wiederholbar**|Nein|
+|**Erforderliche Attribute**|Eine oder mehrere der folgenden: `coclass`, `progid`, oder `vi_progid`.|
+|**Ungültige Attribute**|Keiner|
+
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[IDL-Attribute](../windows/idl-attributes.md)  
+[Klassenattribute](../windows/class-attributes.md)  
+[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Aggregation](/windows/desktop/com/aggregation)  

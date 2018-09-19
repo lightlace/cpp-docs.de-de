@@ -1,5 +1,5 @@
 ---
-title: Abrufen von Daten | Microsoft Docs
+title: Abrufen von Daten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,23 +18,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ab03da7c303552a715c6766af7829e74025866ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 05cfcb59100f1778b0266636fb3930fd9489e917
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33101200"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067076"
 ---
 # <a name="fetching-data"></a>Abrufen von Daten
-Nachdem Sie die Datenquelle, die Sitzung und die Rowset-Objekte geöffnet haben, können Sie Daten abrufen. Je nach Art der Zugriffsmethode, die Sie verwenden, müssen Sie die Spalten zu binden.  
+
+Nachdem Sie die Datenquelle, Sitzung und Rowset-Objekte öffnen, können Sie Daten abrufen. Je nach Art des Accessors, die Sie verwenden, müssen Sie Spalten binden.  
   
 ### <a name="to-fetch-data"></a>Zum Abrufen von Daten  
   
-1.  Öffnen Sie das Rowset mit dem entsprechenden **öffnen** Befehl.  
+1. Öffnen Sie das Rowset mit der entsprechenden **öffnen** Befehl.  
   
-2.  Bei Verwendung von `CManualAccessor`, binden Sie die Ausgabespalten aus, wenn Sie nicht bereits geschehen. Rufen Sie zum Binden der Spalten `GetColumnInfo`, und erstellen Sie einen Accessor mit den Bindungen, wie im folgenden Beispiel gezeigt:  
+1. Bei Verwendung von `CManualAccessor`, binden Sie die Ausgabespalten aus, wenn Sie nicht bereits geschehen. Rufen Sie zum Binden der Spalten, `GetColumnInfo`, und erstellen Sie einen Accessor mit den Bindungen, wie im folgenden Beispiel gezeigt:  
   
-    ```  
+    ```cpp  
     // From the DBViewer Sample CDBTreeView::OnQueryEdit  
     // Get the column information  
     ULONG ulColumns       = 0;  
@@ -49,9 +50,9 @@ Nachdem Sie die Datenquelle, die Sitzung und die Rowset-Objekte geöffnet haben,
     rs.Bind();  
     ```  
   
-3.  Schreiben einer `while` Schleife zum Abrufen der Daten. Rufen Sie in der Schleife `MoveNext` , setzen den Cursor und den Rückgabewert mit S_OK, testen, wie im folgenden Beispiel gezeigt:  
+1. Schreiben einer `while` Schleife zum Abrufen der Daten. Rufen Sie in der Schleife `MoveNext` fahren fort, um den Cursor und den Rückgabewert mit S_OK, testen, wie im folgenden Beispiel gezeigt:  
   
-    ```  
+    ```cpp  
     while (rs.MoveNext() == S_OK)  
     {  
         // Add code to fetch data here  
@@ -59,11 +60,11 @@ Nachdem Sie die Datenquelle, die Sitzung und die Rowset-Objekte geöffnet haben,
     }  
     ```  
   
-4.  Innerhalb der `while` Schleife, können Sie die Daten gemäß Ihrer Accessortyp abzurufen.  
+1. In der `while` Schleife können Sie die Daten gemäß Ihrer Accessortyp abrufen.  
   
-    -   Bei Verwendung der [CAccessor](../../data/oledb/caccessor-class.md) -Klasse, Sie müssen einen Benutzerdatensatz, der Datenmember enthält. Sie können Ihre Daten mit diesen Datenmember zugreifen, wie im folgenden Beispiel gezeigt:  
+    -   Bei Verwendung der [CAccessor](../../data/oledb/caccessor-class.md) -Klasse, müssen Sie einen Benutzerdatensatz, der Datenelemente enthält. Sie können Ihre Daten mit diesen Datenmember zugreifen, wie im folgenden Beispiel gezeigt:  
   
-        ```  
+        ```cpp  
         while (rs.MoveNext() == S_OK)  
         {  
             // Use the data members directly. In this case, m_nFooID  
@@ -73,9 +74,9 @@ Nachdem Sie die Datenquelle, die Sitzung und die Rowset-Objekte geöffnet haben,
         }  
         ```  
   
-    -   Bei Verwendung der `CDynamicAccessor` oder `CDynamicParameterAccessor` -Klasse, können Sie die Daten abzurufen, mit den Zugriff auf Funktionen `GetValue` und `GetColumn`, wie im folgenden Beispiel gezeigt. Wenn Sie den Typ der Daten bestimmen möchten, verwenden, verwenden Sie `GetType`.  
+    -   Bei Verwendung der `CDynamicAccessor` oder `CDynamicParameterAccessor` -Klasse, können Sie Daten abrufen, die Zugriff auf Funktionen mit `GetValue` und `GetColumn`, wie im folgenden Beispiel gezeigt. Wenn Sie den Typ der Daten ermitteln möchten, Sie verwenden, verwenden Sie `GetType`.  
   
-        ```  
+        ```cpp  
         while (rs.MoveNext() == S_OK)  
         {  
             // Use the dynamic accessor functions to retrieve your data.  
@@ -88,9 +89,9 @@ Nachdem Sie die Datenquelle, die Sitzung und die Rowset-Objekte geöffnet haben,
         }  
         ```  
   
-    -   Bei Verwendung von `CManualAccessor`, müssen Sie eigene Datenmember angeben, sie selbst binden und sie greifen direkt auf, wie im folgenden Beispiel gezeigt:  
+    -   Bei Verwendung von `CManualAccessor`, müssen Sie Ihre eigenen Datenmember angeben, sie selbst binden und direkt auf diese zugegriffen, wie im folgenden Beispiel gezeigt:  
   
-        ```  
+        ```cpp  
         while (rs.MoveNext() == S_OK)  
         {  
             // Use the data members you specified in the calls to  
@@ -101,4 +102,5 @@ Nachdem Sie die Datenquelle, die Sitzung und die Rowset-Objekte geöffnet haben,
         ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit OLE DB-Consumervorlagen](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[Arbeiten mit OLE DB-Consumervorlagen](../../data/oledb/working-with-ole-db-consumer-templates.md)

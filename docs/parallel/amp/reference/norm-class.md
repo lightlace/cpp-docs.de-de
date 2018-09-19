@@ -1,5 +1,5 @@
 ---
-title: Norm-Klasse | Microsoft Docs
+title: Norm-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f23ea5d40ecca7ee47d7eae659bfd3da286d8831
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 71e9baa101eb87ac10171722fa76fc462a154ad2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705392"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087478"
 ---
 # <a name="norm-class"></a>norm-Klasse
-Darstellen Sie eine Zahl Norm. Jedes Element ist ein Gleitkommatyp Gleitkommazahl im Bereich [-1. 0f, 1. 0f].  
+Darstellen Sie eine Zahl für die Norm. Jedes Element ist ein Gleitkommatyp zeigen Sie die Zahl im Bereich [-1. 0f, 1. 0f].  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,8 +45,8 @@ class norm;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |Norm::Operator-||  
-|Norm::Operator--||  
-|Norm::Operator "float"|Konvertierungsoperator. Konvertieren von der Norm Zahl in eine Gleitkommazahl Datenpunktwert.|  
+|Norm::Operator:||  
+|Norm::Operator "float"|Konvertierungsoperator. Die Anzahl der Norm auf einen Gleitkommatyp konvertieren Wert.|  
 |Norm::Operator * =||  
 |Norm::Operator Operator / =||  
 |Norm::Operator ++||  
@@ -103,11 +103,11 @@ norm(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_V`  
- Der Wert, der zum Initialisieren verwendet wird.  
+*_V*<br/>
+Der Wert, der zum Initialisieren verwendet wird.  
   
- `_Other`  
- Das Objekt, das zum Initialisieren verwendet.  
+*_Sonstige*<br/>
+Das Objekt, das zum Initialisieren verwendet.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

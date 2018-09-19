@@ -1,5 +1,5 @@
 ---
-title: "\"unorm\"-Klasse | Microsoft Docs"
+title: Unorm-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e235930b73c4e9c2bc110d142ad734669f9c6ccc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1d0769697dfbb0c43be9fb7326a5ad4361a2aecd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695680"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071223"
 ---
 # <a name="unorm-class"></a>unorm-Klasse
-Eine Zahl "unorm" darstellen. Jedes Element ist ein Gleitkommatyp Gleitkommazahl im Bereich [0, 0F, 1. 0f].  
+Darstellen Sie eine Zahl Unorm. Jedes Element ist ein Gleitkommatyp Zahl im Bereich [0, 0F, 1. 0f] zeigen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,8 +44,8 @@ class unorm;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|unorm::Operator--||  
-|unorm::Operator "float"|Konvertierungsoperator. Konvertieren Sie die Anzahl der "unorm" in eine Gleitkommazahl Datenpunktwert.|  
+|unorm::Operator:||  
+|unorm::Operator "float"|Konvertierungsoperator. Konvertieren Sie die Unorm-Zahl in eine Gleitkommazahl Wert.|  
 |unorm::Operator * =||  
 |unorm::Operator Operator / =||  
 |unorm::Operator ++||  
@@ -61,7 +61,7 @@ class unorm;
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="ctor"></a> "unorm" 
+##  <a name="ctor"></a> unorm 
 
  Standardkonstruktor Mit 0, 0F initialisiert werden.  
   
@@ -102,11 +102,11 @@ inline explicit unorm(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_V`  
- Der Wert, der zum Initialisieren verwendet wird.  
+*_V*<br/>
+Der Wert, der zum Initialisieren verwendet wird.  
   
- `_Other`  
- Der Norm-Objekt, das zum Initialisieren verwendet.  
+*_Sonstige*<br/>
+Die Norm-Objekt, das zum Initialisieren verwendet.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

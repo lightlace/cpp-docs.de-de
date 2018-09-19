@@ -1,5 +1,5 @@
 ---
-title: __readmsr | Microsoft Docs
+title: __readmsr | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e8196b25b1507c92542faa6dd8ca59b4632d8f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26fb2637c5a92a430d72e496cabeb8f5749ccaa1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335912"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711792"
 ---
 # <a name="readmsr"></a>__readmsr
 **Microsoft-spezifisch**  
   
- Generiert die `rdmsr` -Anweisung, die das modellspezifischen Register gemäß liest `register` und den Wert zurückgibt.  
+ Generiert die `rdmsr` -Anweisung, die das modellspezifische Register gemäß liest `register` und den Wert zurückgibt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,17 +39,17 @@ __int64 __readmsr(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `register`  
- Das Modell bestimmte Register zu lesen.  
+*register*<br/>
+[in] Das Modell bestimmte Register lesen.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Der Wert im angegebenen registrieren.  
+ Der Wert im angegebenen Register.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__readmsr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readmsr`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

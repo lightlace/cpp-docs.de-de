@@ -30,45 +30,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0bfe0cdb5ea9dd524f2e81fcb2719bf40001758
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3465b75d39d62c2118c53533f46627a68a1f286d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943639"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101669"
 ---
 # <a name="comptrt-extractors"></a>_com_ptr_t-Extraktoren
-**Microsoft-spezifisch**  
-  
- Extrahieren Sie den gekapselten COM-Schnittstellenzeiger.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-operator Interface*( ) const throw( );   
-operator Interface&( ) const;   
-Interface& operator*( ) const;   
-Interface* operator->( ) const;   
-Interface** operator&( ) throw( );   
-operator bool( ) const throw( );  
-```  
-  
-## <a name="remarks"></a>Hinweise  
-  
--   **Operator Interface\***  gibt den gekapselten Schnittstellenzeiger, der NULL sein kann.  
-  
--   **Operator Interface &** gibt einen Verweis auf den gekapselten Schnittstellenzeiger und gibt einen Fehler aus, wenn der Zeiger NULL ist.  
-  
--   **Operator\***  ermöglicht es einem intelligenten Zeigerobjekt, fungiert, als wäre es die tatsächliche gekapselte Schnittstelle beim Dereferenzieren.  
-  
--   **Operator ->** ermöglicht es einem intelligenten Zeigerobjekt, fungiert, als wäre es die tatsächliche gekapselte Schnittstelle beim Dereferenzieren.  
-  
--   **Operator &** gibt jeden gekapselten Schnittstellenzeiger, der sie durch NULL ersetzen und gibt die Adresse des gekapselten Zeigers zurück. Dadurch wird den intelligenten Zeiger als Adresse an eine Funktion übergeben wird, die eine *out* Parameter, die durch die es gibt einen Schnittstellenzeiger zurück.  
-  
--   **Operator Bool** ermöglicht es einem intelligenten Zeigerobjekt, die in einem bedingten Ausdruck verwendet werden. Dieser Operator gibt TRUE zurück, wenn der Zeiger nicht NULL ist.  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md)
+
+**Microsoft-spezifisch**
+
+Extrahieren Sie den gekapselten COM-Schnittstellenzeiger.
+
+## <a name="syntax"></a>Syntax
+
+```
+operator Interface*( ) const throw( ); 
+operator Interface&( ) const; 
+Interface& operator*( ) const; 
+Interface* operator->( ) const; 
+Interface** operator&( ) throw( ); 
+operator bool( ) const throw( );
+```
+
+## <a name="remarks"></a>Hinweise
+
+- **Operator Interface** <strong>\*</strong> gibt den gekapselten Schnittstellenzeiger, der NULL sein kann.
+
+- **Operator Interface &** gibt einen Verweis auf den gekapselten Schnittstellenzeiger und gibt einen Fehler aus, wenn der Zeiger NULL ist.
+
+- **Operator** <strong>\*</strong> ermöglicht es einem intelligenten Zeigerobjekt, fungiert, als wäre es die tatsächliche gekapselte Schnittstelle beim Dereferenzieren.
+
+- **Operator ->** ermöglicht es einem intelligenten Zeigerobjekt, fungiert, als wäre es die tatsächliche gekapselte Schnittstelle beim Dereferenzieren.
+
+- **Operator &** gibt jeden gekapselten Schnittstellenzeiger, der sie durch NULL ersetzen und gibt die Adresse des gekapselten Zeigers zurück. Dadurch wird den intelligenten Zeiger als Adresse an eine Funktion übergeben wird, die eine *out* Parameter, die durch die es gibt einen Schnittstellenzeiger zurück.
+
+- **Operator Bool** ermöglicht es einem intelligenten Zeigerobjekt, die in einem bedingten Ausdruck verwendet werden. Dieser Operator gibt TRUE zurück, wenn der Zeiger nicht NULL ist.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md)

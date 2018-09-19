@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f82245e8e2fa338ed4abca0b97c53d653427cce
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e6b8922ea176619764308122867c4d2ebfcfe449
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027871"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676808"
 ---
 # <a name="editing-a-message-handler"></a>Bearbeiten eines Meldungshandlers
 Nachdem Sie einen Nachrichtenhandler definiert haben, gelangen Sie zur Definition die Member-Funktion zum Hinzufügen oder Ändern von Code.  
   
  Springen zu einer Memberfunktionsdefinition aus der [Dialog-Editor](../../windows/dialog-editor.md), doppelklicken Sie auf ein Steuerelement für die ein Handler ist bereits definiert. Dadurch gelangen Sie zu der Datei, die in der Message-Handler für das ausgewählte Steuerelement definiert ist.  
   
- Springen zu einer Memberfunktionsdefinition aus [Klassenansicht](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), doppelklicken Sie auf den Funktionsnamen in der Klassenansicht.  
+ Springen zu einer Memberfunktionsdefinition aus [Klassenansicht](/visualstudio/ide/viewing-the-structure-of-code), doppelklicken Sie auf den Funktionsnamen in der Klassenansicht.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zuordnen von Meldungen zu Funktionen](../../mfc/reference/mapping-messages-to-functions.md)   

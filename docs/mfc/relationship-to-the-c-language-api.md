@@ -1,5 +1,5 @@
 ---
-title: Beziehung zu der Programmiersprache C-API | Microsoft Docs
+title: Beziehung zu der Programmiersprache C-API | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,20 +20,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d06c4adfa5493929a24c233fa923451c7bf0f95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f291a05b1347254989e4876af66c5d8137864020
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379228"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684160"
 ---
 # <a name="relationship-to-the-c-language-api"></a>Beziehung zum C-Sprachen-API
-Die einzigen Merkmals, durch die die Microsoft Foundation Class (MFC)-Bibliothek abgesehen von anderen Klassenbibliotheken für Windows festgelegt ist die Zuordnung sehr nahe an die Windows-API, die in der Programmiersprache C geschrieben. Darüber hinaus können Sie in der Regel Aufrufe an die Klassenbibliothek frei mit direkten Aufrufen der Windows-API kombinieren. Ein direkter Zugriff gewährt impliziert, allerdings, dass der Klassen vollständiger Ersatz für diese API sind. Entwickler müssen immer noch gelegentlich, direkte Aufrufe an einige Windows-Funktionen, wie z. B. [SetCursor](http://msdn.microsoft.com/library/windows/desktop/ms648393) und [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385), z. B. Eine Windows-Funktion wird durch eine Klassenmemberfunktion umschlossen, nur, wenn ein auf diese Weise löschen Vorteil.  
+Die einzigen Merkmals, die die Microsoft Foundation Class (MFC)-Bibliothek neben anderen Klassenbibliotheken für Windows zu festlegt ist, die sehr nahe Zuordnung für die Windows-API, die in der Programmiersprache C geschrieben wird. Darüber hinaus können Sie in der Regel Aufrufe auf die Klassenbibliothek frei mit direkten Aufrufen an die Windows-API kombinieren. Diesen direkte Zugriff bedeutet nicht, jedoch sind die Klassen kein vollständiger Ersatz für diese API. Entwickler müssen immer noch gelegentlich, direkte Aufrufe einiger Windows-Funktionen, z. B. [SetCursor](/windows/desktop/api/winuser/nf-winuser-setcursor) und [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics), z. B. Eine Windows-Funktion wird durch eine Klassenmemberfunktion eingeschlossen, nur, wenn ein eindeutiger Vorteil zu tun.  
   
- Da Sie gelegentlich systemeigene Windows-Funktionsaufrufe vornehmen müssen, sollten Sie in der Programmiersprache C-Windows-API-Dokumentation zugreifen. Diese Dokumentation ist im Lieferumfang von Microsoft Visual C++.  
+ Da in einigen Fällen Sie systemeigene Windows-Funktionsaufrufen müssen, sollten Sie in der Programmiersprache C Windows API-Dokumentation zugreifen. Diese Dokumentation ist im Lieferumfang von Microsoft Visual C++.  
   
 > [!NOTE]
->  Einen Überblick darüber, wie das MFC-Bibliothek-Framework ausgeführt wird, finden Sie unter [mithilfe der Klassen zum Schreiben von Anwendungen für Windows](../mfc/using-the-classes-to-write-applications-for-windows.md).  
+>  Einen Überblick darüber, wie das Framework für die MFC-Bibliothek arbeitet, finden Sie unter [verwenden der Klassen zum Schreiben von Anwendungen für Windows](../mfc/using-the-classes-to-write-applications-for-windows.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Allgemeine Prinzipien für den Klassenentwurf](../mfc/general-class-design-philosophy.md)

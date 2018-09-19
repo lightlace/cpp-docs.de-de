@@ -1,7 +1,7 @@
 ---
 title: 'MFC-ActiveX-Steuerelemente: Optimierung | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -24,15 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4459865bc2ba374048622167fadb7bcf8fb97c99
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 09d441a44660310a13be264b24286ad2f0ccc6cd
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028173"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535183"
 ---
 # <a name="mfc-activex-controls-optimization"></a>MFC-ActiveX-Steuerelemente: Optimierung
 Dieser Artikel beschreibt die Techniken, die Sie verwenden können, um der ActiveX-Steuerelemente für eine bessere Leistung zu optimieren.  
+
+>[!IMPORTANT]
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
   
  Die Themen [Aktivieren Deaktivieren der Option "aktiviert wenn sichtbar"](../mfc/turning-off-the-activate-when-visible-option.md) und [Bereitstellen der Interaktion während der Inaktivität](../mfc/providing-mouse-interaction-while-inactive.md) besprechen Sie Steuerelemente, die ein Fenster, bis Sie es aktivieren nicht erstellen. Das Thema [bereitstellen Fensterloser Aktivierung](../mfc/providing-windowless-activation.md) wird erläutert, Steuerelemente, die nie ein Fenster erstellen, selbst wenn sie aktiviert werden.  
   
@@ -53,7 +56,7 @@ Dieser Artikel beschreibt die Techniken, die Sie verwenden können, um der Activ
 |**Mit der Maus Benachrichtigungen, wenn inaktiv** Kontrollkästchen|Auswählen|[Bereitstellen von Mausinteraktionen in inaktiven Steuerelementen](../mfc/providing-mouse-interaction-while-inactive.md)|  
 |**Optimierter Zeichencode** Kontrollkästchen|Auswählen|[Optimieren der Steuerelementdarstellung](../mfc/optimizing-control-drawing.md)|  
   
- Ausführliche Informationen über die Memberfunktionen, die diese Optimierungen zu implementieren, finden Sie unter [COleControl](../mfc/reference/colecontrol-class.md). Die Member-Funktionen werden durch die Verwendung aufgeführt, wie z. B. [Fensterlose Vorgänge](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) und [Behandlungsfunktionen für inaktive Zeiger](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df).  
+ Ausführliche Informationen über die Memberfunktionen, die diese Optimierungen zu implementieren, finden Sie unter [COleControl](../mfc/reference/colecontrol-class.md).  
   
  Weitere Informationen finden Sie unter:  
   

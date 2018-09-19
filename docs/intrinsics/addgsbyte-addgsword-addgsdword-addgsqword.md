@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 271f5bf7140dff437b6ef0935f8a4c90daabccd4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd5341dc4d47740410df01feadbd9e6aa3926a23
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329474"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721384"
 ---
 # <a name="addgsbyte-addgsword-addgsdword-addgsqword"></a>__addgsbyte, __addgsword, __addgsdword, __addgsqword
 **Microsoft-spezifisch**  
   
- Fügen Sie einen Wert an einem Speicherort angegeben, indem ein Offset relativ zum Anfang der `GS` Segment.  
+ Fügen Sie einen Wert an einem Speicherort, der als Offset relativ zum Beginn der `GS` Segment.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,20 +60,20 @@ void __addgsqword(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `Offset`  
- Der Offset vom Anfang des `GS`.  
+*Offset*<br/>
+[in] Der Offset vom Anfang des `GS`.  
   
- [in] `Data`  
- Der Wert, auf die Speicheradresse hinzufügen.  
+*Data*<br/>
+[in] Der Wert der Speicheradresse hinzu.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__addgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__addgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__addgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__addgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__addgsbyte`|x64|  
+|`__addgsword`|x64|  
+|`__addgsdword`|x64|  
+|`__addgsqword`|x64|  
   
 ## <a name="remarks"></a>Hinweise  
  Diese systeminternen Funktionen sind im Kernel-Modus ist nur verfügbar, und diese Routinen sind nur als systeminterne Funktionen verfügbar.  

@@ -1,5 +1,5 @@
 ---
-title: 'standardmäßige:: (Type_name):: GetHashCode-Methode | Microsoft Docs'
+title: 'Standardwert: (Type_name):: GetHashCode-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -9,37 +9,41 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 58ea60f8-f820-4103-9b9b-b6635ada3fa5
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93e48e515ef1bd5461e91b0cf7ea29ff4ec4728c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: edcb67686db871e4ebddb961ed254d260b630139
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086407"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107146"
 ---
 # <a name="defaulttypenamegethashcode-method"></a>default::(type_name)::GetHashCode-Methode
-Gibt den Hashcode für diese Instanz zurück.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-public:int GetHashCode()  
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Der Hashcode für diese Instanz.  
-  
-### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client:** Windows 8  
-  
- **Unterstützter Server:** Windows Server 2012  
-  
- **Namespace:** Standard  
-  
- **Header:** vccorlib.h  
-  
-## <a name="see-also"></a>Siehe auch  
- [Standardnamespace](../cppcx/default-namespace.md)
+
+Gibt den Hashcode für diese Instanz zurück.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+public:int GetHashCode();
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Der Hashcode für diese Instanz.
+
+### <a name="requirements"></a>Anforderungen
+
+**Unterstützter Client (Min.):** Windows 8
+
+**Unterstützter Server (Min.):** Windows Server 2012
+
+**Namespace:** Standard
+
+**Header:** vccorlib.h
+
+## <a name="see-also"></a>Siehe auch
+
+[Standardnamespace](../cppcx/default-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: Projektbuildfehler prj0028 | Microsoft Docs
+title: Projektbuildfehler prj0028 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42c6e55cdce7294d7d2bc2e2a5634f362a539363
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f90e7f6629ae50f734ac127d05c6c70d002133a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317725"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062617"
 ---
 # <a name="project-build-error-prj0028"></a>Projektbuildfehler PRJ0028
-Temporäre Datei "File" enthält die Unicode-Inhalte, die nicht in ANSI-Codepage des Benutzers übersetzt werden konnte.  
-  
- Ein Wert angegeben wurde, mit der [/MIDL (Optionen für MIDL-Befehlszeile festlegen)](../../build/reference/midl-specify-midl-command-line-options.md) Linkeroption, die von der Codepage des Systems nicht aufgelöst werden konnte.  
-  
- Die Codepage verwendet, wenn Sie den Befehl "MIDL" (der Eingabe Codepage) angeben, muss identisch mit der Codepage des Systems sein.
+
+Temporäre Datei "Datei" enthält Unicodeinhalt, die nicht in ANSI-Codepage des Benutzers übersetzt werden konnte.
+
+Ein Wert angegeben wurde, mit der [/MIDL (Optionen für MIDL-Befehlszeile festlegen)](../../build/reference/midl-specify-midl-command-line-options.md) -Linkeroption, die durch die Codepage des Systems nicht aufgelöst werden konnte.
+
+Die Codepage verwendet, bei der Angabe des MIDL-Befehls (die Eingabe Codepage) muss identisch mit der Codepage des Systems sein.

@@ -1,5 +1,5 @@
 ---
-title: Basierende Adressierung | Microsoft Docs
+title: Basierende Adressierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b0fecf99e62932ca363dffc23ac594c37916f84
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f62cdb4fa56d5c770891d359f430726df3423e9f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408005"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059926"
 ---
 # <a name="based-addressing"></a>Basierende Adressierung
-Dieser Abschnitt schließt folgende Themen ein:  
-  
--   [__based-Grammatik](../cpp/based-grammar.md)  
-  
--   [based-Zeiger](../cpp/based-pointers-cpp.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md)
+
+Dieser Abschnitt schließt folgende Themen ein:
+
+- [__based-Grammatik](../cpp/based-grammar.md)
+
+- [based-Zeiger](../cpp/based-pointers-cpp.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md)

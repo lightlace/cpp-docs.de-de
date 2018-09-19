@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen einer ATL-Meldungshandlers | Microsoft Docs
+title: Hinzufügen eines ATL-Meldungshandlers | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,24 +18,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e79598b79ccbad13ad98c7fc1284808fe1b05cfc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 712f1b725afd52057deca8f05047c91bfc4affce
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354155"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753409"
 ---
-# <a name="adding-an-atl-message-handler"></a>Hinzufügen einer ATL-Meldungshandlers
-Um ein Steuerelement einen Meldungshandler (eine Memberfunktion, die Windows-Meldungen behandelt) hinzuzufügen, müssen Sie zuerst wählen Sie das Steuerelement in der Klassenansicht aus. Öffnen Sie dann die **Eigenschaften** wählen die **Nachrichten** Symbol, und klicken Sie auf die Dropdownliste zu steuern, in das Feld gegenüber der Nachricht erforderlich. Dadurch wird eine Deklaration für die Message-Handler in der Headerdatei des Steuerelements und eine Skeleton-Implementierung des Handlers in cpp-Datei für das Steuerelement hinzugefügt. Außerdem werden die meldungszuordnung hinzufügen und fügen Sie einen Eintrag für den Handler.  
-  
- Hinzufügen eines meldungshandlers in ATL ist vergleichbar mit dem Hinzufügen eines meldungshandlers eine MFC-Klasse. Finden Sie unter [Hinzufügen einer MFC-Meldungshandlers](../mfc/reference/adding-an-mfc-message-handler.md) für Weitere Informationen.  
-  
- Die folgenden Bedingungen gelten nur für eine ATL-Meldungshandler hinzufügen:  
-  
--   Die Message-Handler führen Sie dieselbe Namenskonvention wie MFC.  
-  
--   Die neue Nachricht Zuordnungseinträge werden in die Hauptnachricht Zuordnung hinzugefügt. Der Assistent erkennt keine alternative nachrichtenzuordnungen und verketten.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Implementieren eines Fensters](../atl/implementing-a-window.md)
+# <a name="adding-an-atl-message-handler"></a>Hinzufügen eines ATL-Meldungshandlers
+
+Um einen Meldungshandler (eine Memberfunktion, die Windows-Meldungen behandelt) ein Steuerelement hinzuzufügen, müssen Sie zuerst wählen Sie das Steuerelement in der Klassenansicht aus. Öffnen Sie dann die **Eigenschaften** wählen Sie im Fenster der **Nachrichten** Symbol, und klicken Sie auf die Dropdownliste zu steuern, in das Feld Gegenstück der Nachricht erforderlich sind. Dadurch wird eine Deklaration für die Message-Handler in der Headerdatei des Steuerelements und eine Skelett-Implementierung des Handlers in cpp-Datei des Steuerelements hinzugefügt. Außerdem wird die nachrichtenzuordnung hinzufügen und fügen Sie einen Eintrag für den Handler.
+
+Hinzufügen eines meldungshandlers in ATL ist vergleichbar mit dem Hinzufügen eines meldungshandlers für eine MFC-Klasse. Finden Sie unter [Hinzufügen eines MFC-Meldungshandlers](../mfc/reference/adding-an-mfc-message-handler.md) für Weitere Informationen.
+
+Die folgenden Bedingungen gelten nur für das Hinzufügen eines ATL-meldungshandlers:
+
+- Der Meldungshandler führen Sie dieselben Namenskonventionen gelten wie MFC.
+
+- Die neue Meldungszuordnungseinträge werden in der main-meldungszuordnung hinzugefügt. Der Assistent erkennt keine alternativen nachrichtenzuordnungen und verketten.
+
+## <a name="see-also"></a>Siehe auch
+
+[Implementieren eines Fensters](../atl/implementing-a-window.md)
 

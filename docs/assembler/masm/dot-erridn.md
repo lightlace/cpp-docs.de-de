@@ -1,7 +1,7 @@
 ---
-title: . ERRIDN] | Microsoft Docs
+title: . ERRIDN] | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6948baa498cccb9f89eb030978b18363cfdddd6
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 74145f45a171ab1aee10bb773fb03970842cc339
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050853"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318875"
 ---
 # <a name="erridn"></a>.ERRIDN]
-Generiert einen Fehler aus, wenn die Textelemente identisch sind.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-.ERRIDN[[I]] <textitem1>, <textitem2> [[, message]]  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Wenn **ich** wird angegeben, beim Vergleich wird die Groß-/Kleinschreibung beachtet.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+
+Generiert einen Fehler aus, wenn die Textelemente identisch sind.
+
+## <a name="syntax"></a>Syntax
+
+> . ERRIDN [[I]] *textitem1*, *textitem2* [[, *Nachricht*]]
+
+## <a name="remarks"></a>Hinweise
+
+Wenn **ich** wird angegeben, beim Vergleich wird die Groß-/Kleinschreibung.
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

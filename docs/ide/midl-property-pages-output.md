@@ -22,29 +22,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ff30460ad68e6efb1abc3d84925b362cf03f551
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 927ab1004336787131c8f92c247512d1c66caf69
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325772"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212755"
 ---
 # <a name="midl-property-pages-output"></a>Eigenschaftenseiten "MIDL": "Ausgabe"
 Die Eigenschaftenseite **Ausgabe** im Ordner **MIDL** gibt die folgenden MIDL-Compileroptionen an:  
   
--   Ausgabeverzeichnis ([/out](http://msdn.microsoft.com/library/windows/desktop/aa367358))  
+-   Ausgabeverzeichnis ([/out](https://msdn.microsoft.com/library/windows/desktop/aa367358))  
   
--   Headerdatei ([/h](http://msdn.microsoft.com/library/windows/desktop/aa367325))  
+-   Headerdatei ([/h](https://msdn.microsoft.com/library/windows/desktop/aa367325))  
   
--   DLL-Datendatei ([/dlldata](http://msdn.microsoft.com/library/windows/desktop/aa367322))  
+-   DLL-Datendatei ([/dlldata](https://msdn.microsoft.com/library/windows/desktop/aa367322))  
   
--   IID-Datei ([/iid](http://msdn.microsoft.com/library/windows/desktop/aa367329))  
+-   IID-Datei ([/iid](https://msdn.microsoft.com/library/windows/desktop/aa367329))  
   
--   Proxydatei ([/proxy](http://msdn.microsoft.com/library/windows/desktop/aa367362))  
+-   Proxydatei ([/proxy](https://msdn.microsoft.com/library/windows/desktop/aa367362))  
   
--   Typbibliothek generieren ([/notlb](http://msdn.microsoft.com/library/windows/desktop/aa367343))  
+-   Typbibliothek generieren ([/notlb](https://msdn.microsoft.com/library/windows/desktop/aa367343))  
   
--   Typbibliothek ([/tlb](http://msdn.microsoft.com/library/windows/desktop/aa367372))  
+-   Typbibliothek ([/tlb](https://msdn.microsoft.com/library/windows/desktop/aa367372))  
   
  Informationen über das Zugreifen auf die Eigenschaftenseite **Ausgabe** im Ordner **MIDL** finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md).  
   

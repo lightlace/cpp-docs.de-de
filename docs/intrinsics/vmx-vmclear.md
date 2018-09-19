@@ -1,5 +1,5 @@
 ---
-title: __vmx_vmclear | Microsoft Docs
+title: __vmx_vmclear | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8da1e3d2c5b1a2018df0e46f085fede9b923fff8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd5661a2b6aa257c91babcc3d17b1babb0b4d2c2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332409"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707160"
 ---
 # <a name="vmxvmclear"></a>__vmx_vmclear
 **Microsoft-spezifisch**  
   
- Initialisiert den angegebenen virtuellen Computer Kontrollstruktur (VMCS) und legt seine Startstatus auf `Clear`.  
+ Initialisiert die Steuerelement-Struktur des angegebenen virtuellen Computer (VMCS) und legt seinen Start-Zustand auf `Clear`.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,7 +41,7 @@ unsigned char __vmx_vmclear(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `VmcsPhysicalAddress`|Ein Zeiger auf einen 64-Bit-Speicherbereich, der die physische Adresse eines der VMCS löschen enthält.|  
+|*VmcsPhysicalAddress*|[in] Ein Zeiger auf einen 64-Bit-Speicherbereich, der die physische Adresse der VMCS löschen enthält.|  
   
 ## <a name="return-value"></a>Rückgabewert  
   
@@ -52,15 +52,15 @@ unsigned char __vmx_vmclear(
 |2|Bei dem Vorgang ist ein Fehler ohne verfügbaren Status aufgetreten.|  
   
 ## <a name="remarks"></a>Hinweise  
- Eine Anwendung kann einen VM-enter-Vorgang ausführen, indem Sie entweder die [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) oder [__vmx_vmresume](../intrinsics/vmx-vmresume.md) Funktion. Die [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) Funktion kann verwendet werden, nur mit einer VMCS, deren Startstatus `Clear`, und die [__vmx_vmresume](../intrinsics/vmx-vmresume.md) Funktion kann verwendet werden, nur mit einer VMCS, deren Startstatus `Launched`. Verwenden Sie daher die [__vmx_vmclear](../intrinsics/vmx-vmclear.md) -Funktion zum Festlegen des Startstatus des einer VMCS auf `Clear`. Verwenden der [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) -Funktion für die erste VM-enter-Vorgang und der [__vmx_vmresume](../intrinsics/vmx-vmresume.md) Funktion für alle nachfolgenden VM-enter-Operationen.  
+ Eine Anwendung kann einen VM-enter-Vorgang ausführen, indem Sie entweder die [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) oder [__vmx_vmresume](../intrinsics/vmx-vmresume.md) Funktion. Die [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) Funktion kann verwendet werden, nur mit einer VMCS, deren Startstatus `Clear`, und die [__vmx_vmresume](../intrinsics/vmx-vmresume.md) Funktion kann verwendet werden, nur mit einer VMCS, deren Startstatus `Launched`. Verwenden Sie daher die [__vmx_vmclear](../intrinsics/vmx-vmclear.md) -Funktion zum Festlegen des einer VMCS auf Startstatus `Clear`. Verwenden der [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) -Funktion für den ersten VM-enter-Vorgang und die [__vmx_vmresume](../intrinsics/vmx-vmresume.md) -Funktion für nachfolgende Vorgänge auf VM-enter.  
   
- Die `__vmx_vmclear` -Funktion ist gleichbedeutend mit der `VMCLEAR` computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Dokumentieren Sie für Weitere Informationen suchen, für das Dokument "Intel Virtualization technische Spezifikation für der IA-32 Intel Architecture" Dokumentnummer C97063-002 auf der [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) Standort.  
+ Die `__vmx_vmclear` -Funktion ist gleichbedeutend mit der `VMCLEAR` computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Dokumentieren Sie weitere Informationen suchen Sie nach dem Dokument "Intel Virtualization Technical Specification for the IA-32 Intel Architecture," Dokumentnummer C97063-002 auf der [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) Standort.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__vmx_vmclear`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmclear`|x64|  
   
  **Headerdatei** \<intrin.h >  
   

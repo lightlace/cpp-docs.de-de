@@ -1,5 +1,5 @@
 ---
-title: 'Erstellung von Browserinformationsdateien: Übersicht über die | Microsoft Docs'
+title: 'Erstellung von Browserinformationsdateien: Übersicht über die | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,41 +17,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 463bf72c07c775ef0d4965a2023e5699cf7ec715
-ms.sourcegitcommit: b04de4e90def1d0f4aa265e96d6b73779d010e1f
+ms.openlocfilehash: 493f25ba6839058a9ff749cb0dbb3853b1b16494
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34843074"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712295"
 ---
 # <a name="building-browse-information-files-overview"></a>Erstellen von Browseinformationsdateien: Übersicht
-Um Browserinformationen für die Symbolsuche zu erstellen, erstellt der Compiler eine SBR-Datei für jede Quelldatei in Ihrem Projekt, klicken Sie dann BSCMAKE an. EXE-Datei wird die SBR-Dateien in einer BSC-Datei.  
-  
- Generieren von SBR- und BSC-Dateien dauert einige Zeit, damit Visual C++ diese Funktionen standardmäßig deaktiviert. Wenn Sie aktuelle Informationen durchsuchen möchten, müssen Sie die Optionen zum Durchsuchen aktivieren und erstellen Sie das Projekt erneut.  
-  
- Verwendung [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) oder [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) an den Compiler aufzufordern, SBR-Dateien zu erstellen. Um BSC-Dateien zu erstellen, rufen Sie [BSCMAKE](../../build/reference/bscmake-command-line.md) über die Befehlszeile. Mithilfe von BSCMAKE über die Befehlszeile bietet Ihnen eine genauere Kontrolle über die Manipulation von Browserinformationsdateien. Finden Sie unter [BSCMAKE-Referenz](../../build/reference/bscmake-reference.md) für Weitere Informationen.  
-  
+
+Zum Durchsuchen von Informationen für die Symbolsuche zu erstellen, erstellt der Compiler eine SBR-Datei für jede Quelldatei im Projekt, klicken Sie dann BSCMAKE an. EXE-Datei wird die SBR-Dateien in einer BSC-Datei.
+
+SBR- und BSC-Dateien generieren nimmt Zeit in Anspruch, damit Visual C++ diese Funktionen standardmäßig deaktiviert. Wenn Sie aktuelle Informationen durchsuchen möchten, müssen Sie die Durchsuchen-Optionen aktivieren und das Projekt erneut erstellen.
+
+Verwendung [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) oder [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) um den Compiler SBR-Dateien zu erstellen. Sie können zum Erstellen von BSC-Dateien aufrufen [BSCMAKE](../../build/reference/bscmake-command-line.md) über die Befehlszeile. Mithilfe von BSCMAKE über die Befehlszeile, bietet Ihnen eine präzisere Kontrolle über die Bearbeitung von Browserinformationsdateien. Finden Sie unter [BSCMAKE-Referenz](../../build/reference/bscmake-reference.md) für Weitere Informationen.
+
 > [!TIP]
->  Sie können einschalten SBR-Datei generieren jedoch BSC-Datei Generation deaktiviert lassen. Dies bietet schnelle erstellt, aber auch ermöglicht es Ihnen, eine neue .bsc-Datei erstellen Sie schnell durch Aktivieren der Generierung von BSC-Dateien und beim Erstellen des Projekts.  
-  
- Sie können die Zeit, Speicher und Speicherplatz erforderlich, um eine BSC-Datei zu erstellen, durch das Reduzieren der Größe der BSC-Datei reduzieren.  
-  
- Finden Sie unter [Eigenschaftenseite "Allgemein" (Projekt)](../../ide/general-property-page-project.md) Informationen zum Erstellen einer Browserdatei in der Entwicklungsumgebung.  
-  
-### <a name="to-create-a-smaller-bsc-file"></a>So erstellen eine kleinere BSC-Datei  
-  
-1.  Verwendung [BSCMAKE-Befehlszeilenoptionen](../../build/reference/bscmake-options.md) Ausschließen von Informationen aus der Browserinformationsdatei aus.  
-  
-2.  Lassen Sie lokale Symbole in eine oder mehrere .sbr-Dateien beim Kompilieren oder assemblieren.  
-  
-3.  Wenn eine Objektdatei keine für die aktuelle Phase des Debuggens erforderlichen Informationen enthält, geben Sie die SBR-Datei von BSCMAKE-Befehl, beim Neuerstellen der Browserinformationsdatei.  
-  
-### <a name="to-combine-the-browse-information-from-several-projects-into-one-browser-file-bsc"></a>Kombinieren von Suchinformationen aus mehreren Projekten in einem Browsedatei (.bsc)  
-  
-1.  Entweder nicht erstellen Sie die BSC-Datei auf Projektebene oder verwenden Sie den Schalter/n, um zu verhindern, dass die SBR-Dateien abgeschnitten wird.  
-  
-2.  Nachdem alle Projekte erstellt werden, führen Sie BSCMAKE mit allen SBR-Dateien als Eingabe. Platzhalter sind zulässig. Für die Instanz, wenn Sie Projektverzeichnisse C:\X C:\Y und C:\Z SBR-Dateien, und wollten sie alle in einer BSC-Datei kombinieren Sie hatten, verwenden Sie BSCMAKE C:\X\\\*SBR C:\Y\\\*SBR C:\Z\\ \*SBR/o c:\whatever_directory\combined.bsc zum Erstellen der kombinierten BSC-Datei.  
-  
-## <a name="see-also"></a>Siehe auch  
- [C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md)   
- [BSCMAKE-Referenz](../../build/reference/bscmake-reference.md)
+>  Sie können einschalten SBR-Datei generieren jedoch BSC-Datei generieren, die deaktiviert. Dadurch schnell erstellt, aber auch können Sie schnell eine neue .bsc-Datei erstellen, durch das Aktivieren der Generierung von BSC-Dateien und beim Erstellen des Projekts.
+
+Sie können die Zeit, Arbeitsspeicher und Speicherplatz erforderlich, um eine BSC-Datei zu erstellen, durch die Reduzierung der BSC-Datei reduzieren.
+
+Finden Sie unter [Eigenschaftenseite "Allgemein" (Projekt)](../../ide/general-property-page-project.md) für Informationen über das eine Browserdatei in der Entwicklungsumgebung zu erstellen.
+
+### <a name="to-create-a-smaller-bsc-file"></a>Um eine kleinere BSC-Datei zu erstellen.
+
+1. Verwendung [BSCMAKE-Befehlszeilenoptionen](../../build/reference/bscmake-options.md) Ausschließen von Informationen aus der Browserinformationsdatei aus.
+
+1. Lassen Sie die lokalen Symbole in eine oder mehrere .sbr-Dateien beim Kompilieren oder assemblieren.
+
+1. Wenn eine Objektdatei nicht für die aktuelle Schritt des Debugvorgangs erforderlichen Informationen enthält, lassen Sie beim Neuerstellen der Browserinformationsdatei die SBR-Datei aus dem BSCMAKE-Befehl.
+
+### <a name="to-combine-the-browse-information-from-several-projects-into-one-browser-file-bsc"></a>Kombinieren Sie die Durchsuchen-Informationen aus mehreren Projekten in einer Datei (.bsc)
+
+1. Entweder nicht erstellen Sie die BSC-Datei auf Projektebene zu oder verwenden Sie den/n-Schalter, um zu verhindern, dass die SBR-Dateien abgeschnitten wird.
+
+1. Nachdem alle Projekte erstellt werden, führen Sie BSCMAKE mit allen die SBR-Dateien als Eingabe. Platzhalter sind zulässig. Wenn Sie Projektverzeichnissen C:\X C:\Y und C:\Z SBR-Dateien in und diese in einer BSC-Datei kombinieren möchten mussten, klicken Sie dann verwenden Sie z. B. BSCMAKE C:\X\\\*SBR C:\Y\\\*SBR C:\Z\\ \*SBR/o c:\whatever_directory\combined.bsc zum Erstellen der kombinierten BSC-Datei.
+
+## <a name="see-also"></a>Siehe auch
+
+[C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md)<br/>
+[BSCMAKE-Referenz](../../build/reference/bscmake-reference.md)

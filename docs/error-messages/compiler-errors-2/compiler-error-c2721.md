@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C2721 | Microsoft Docs
+title: Compilerfehler C2721 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f71e3cae8aa0ad505adb84c330f33751379aa3e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0fcded3d2a2a0bdd2eb2e7b9965abea0e09b35b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231923"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054546"
 ---
-# <a name="compiler-error-c2721"></a>Compilerfehler Fehler C2721
-"Spezifizierer": Speicherklassenspezifizierer zwischen Operator-Schlüsselwort und der Typ nicht zulässig.  
-  
- Benutzerdefinierte Konvertierungen gelten für alle Speicherklassen, sodass eine Speicherklasse in eine Konvertierung vom Typ angegeben werden kann.
+# <a name="compiler-error-c2721"></a>Compilerfehler C2721
+
+"Spezifizierer": Speicherklassenspezifizierer zwischen Operator-Schlüsselwort und dem Typ unzulässig
+
+Benutzerdefinierte Konvertierungen gelten für alle Storage-Klassen, sodass in eine typkonvertierung eine Speicherklasse angegeben werden kann.

@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcencompiler: Schwerwiegender Fehler RC1019 | Microsoft Docs'
+title: 'Ressourcencompiler: Schwerwiegender Fehler RC1019 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cd9658a97f1f62a2a5a262e7262127744dd144a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a455daffba3957b9a4628ecab9e604994e4a4ce2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319734"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027088"
 ---
 # <a name="resource-compiler-fatal-error-rc1019"></a>Ressourcencompiler: Schwerwiegender Fehler RC1019
-Unerwarteter ' #else '  
-  
- Die `#else` Richtlinie ist nicht vorhanden, innerhalb einer `#if`, **#ifdef**, oder **#ifndef** erstellen.  
-  
- Stellen Sie sicher, dass es ist ein `#if`, **#ifdef**, oder **#ifndef** Anweisung ausführt, bevor diese Anweisung wirksam.
+
+Unerwarteter ' #else '
+
+Die `#else` Richtlinie nicht angezeigt, in eine `#if`, **#ifdef**, oder **#ifndef** zu erstellen.
+
+Stellen Sie sicher, dass ein `#if`, **#ifdef**, oder **#ifndef** -Anweisung vor dieser Anweisung in Kraft.

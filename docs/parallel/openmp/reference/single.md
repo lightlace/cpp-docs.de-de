@@ -1,5 +1,5 @@
 ---
-title: einzelne | Microsoft Docs
+title: einzelne | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dd5349331ac23998511a8f1b838d2cd13b01998
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 8a57d93d8d2be84a470dd48d1ca6f9b04010182f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691858"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020978"
 ---
 # <a name="single"></a>Einfach
-Sie können angeben, dass ein Abschnitt des Codes in einem einzelnen Thread, der nicht unbedingt der master-Thread ausgeführt werden soll.  
+Sie können angeben, dass ein Abschnitt des Codes in einem einzelnen Thread, der nicht unbedingt die master-Thread ausgeführt werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,11 +36,12 @@ Sie können angeben, dass ein Abschnitt des Codes in einem einzelnen Thread, der
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `clause` (optional)  
- NULL oder mehr Klauseln. Finden Sie im Abschnitt "Hinweise" eine Liste von unterstützten Klauseln **einzelne**.  
+
+*Klausel*<br/>
+(Optional) NULL oder mehr Klauseln. Finden Sie im Abschnitt "Hinweise" eine Liste von unterstützten Klauseln **einzelne**.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **einzelne** Richtlinie unterstützt die folgenden OpenMP-Klauseln:  
+ Die **einzelne** -Anweisung unterstützt die folgenden OpenMP-Klauseln:  
   
 -   [copyprivate](../../../parallel/openmp/reference/copyprivate.md)  
   
@@ -50,13 +51,13 @@ Sie können angeben, dass ein Abschnitt des Codes in einem einzelnen Thread, der
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
- Die [master](../../../parallel/openmp/reference/master.md) Richtlinie können Sie angeben, dass ein Abschnitt des Codes nur für die master-Thread ausgeführt werden sollen.  
+Die [master](../../../parallel/openmp/reference/master.md) -Direktive können Sie angeben, dass ein Abschnitt des Codes nur für die master-Thread ausgeführt werden sollen.  
   
  Weitere Informationen finden Sie unter [2.4.3 einzelne erstellen](../../../parallel/openmp/2-4-3-single-construct.md).  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // omp_single.cpp  
 // compile with: /openmp   
 #include <stdio.h>  

@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3698 | Microsoft Docs
+title: Compilerfehler C3698 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b41b0f7360d49891e330277114324aa099900682
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9ca53e5b614b5e1d85832a7ad437a39ac1c5d87
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263972"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107898"
 ---
 # <a name="compiler-error-c3698"></a>Compilerfehler C3698
-'Typ': Verwenden Sie diesen Typ kann nicht als Argument von 'Operator'  
-  
- Ein verwaltetes Objekt wurde falsch deklariert.  
-  
- Im folgende Beispiel wird C3698 generiert:  
-  
-```  
-// C3698.cpp  
-// compile with: /clr  
-  
-int main() {  
-   array<int>^a = new array<int>^(20);   // C3698  
-   array<int>^a2 = gcnew array<int>(20);   // OK  
-}  
+
+'Typ': Verwenden Sie diesen Typ kann nicht als Argument von 'Operator'
+
+Ein verwaltetes Objekt wurde falsch deklariert.
+
+Im folgende Beispiel wird die C3698 generiert:
+
+```
+// C3698.cpp
+// compile with: /clr
+
+int main() {
+   array<int>^a = new array<int>^(20);   // C3698
+   array<int>^a2 = gcnew array<int>(20);   // OK
+}
 ```

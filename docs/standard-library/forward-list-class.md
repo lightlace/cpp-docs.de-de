@@ -90,12 +90,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c85e1637691d602c63208cd180071c0f388c5893
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 017d5d5c2934fa687f91898b896a0ad6f1dcab6f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954954"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102576"
 ---
 # <a name="forwardlist-class"></a>forward_list-Klasse
 
@@ -881,15 +881,20 @@ void splice_after(
 
 ### <a name="parameters"></a>Parameter
 
-*Wo* die Position in die Ziel-Forward_list, nach dem eingefügt werden soll.
+*Where*<br/>
+Die Position in der Ziel-forward_list, hinter der die Elemente eingefügt werden sollen.
 
-*Quelle* der Quell-Forward_list, die in der Ziel-Forward_list eingefügt werden soll.
+*Source*<br/>
+Die Quell-forward_list, die in die Ziel-forward_list eingefügt werden soll.
 
-*Iter* das Element, aus der Quell-Forward_list eingefügt werden soll.
+*Iter*<br/>
+Das Element, das aus der Quell-forward_list eingefügt werden soll.
 
-*Erste* das erste Element im Bereich, aus der Quell-Forward_list eingefügt werden soll.
+*Erste*<br/>
+Das erste Element im Bereich, das aus der Quell-forward_list eingefügt werden soll.
 
-*Letzte* die erste Position hinter dem Bereich, aus der Quell-Forward_list eingefügt werden soll.
+*letzte*<br/>
+Die erste Position hinter dem Bereich, der aus der Quell-forward_list eingefügt werden soll.
 
 ### <a name="remarks"></a>Hinweise
 

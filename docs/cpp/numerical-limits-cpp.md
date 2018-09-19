@@ -1,5 +1,5 @@
 ---
-title: Numerische Grenzen (C++) | Microsoft Docs
+title: Numerische Grenzen (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e7a5c61e0eda0269e42d69d25b64b7c12bab0c9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a1d7fe5ac7e00e4ffc767fd25d00cdd07eb63734
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419664"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064541"
 ---
 # <a name="numerical-limits-c"></a>Numerische Grenzen (C++)
-Die zwei Standard-Includedateien \<limits.h > und \<float.h >, definieren die numerischen Grenzwerte oder die minimale und maximale Werte, die eine Variable eines bestimmten Typs aufnehmen kann. Diese Mindest- und Höchstwerte sind garantiert auf jeden C++-Compiler übertragbar, die die dieselbe datendarstellung wie ANSI c verwendet Die \<limits.h > umfassen-Datei definiert die [numerische Grenzwerte für ganzzahlige Typen](../cpp/integer-limits.md), und \<float.h > definiert den [numerische Grenzwerte für Gleitkommatypen](../cpp/floating-limits.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Grundlegende Konzepte](../cpp/basic-concepts-cpp.md)
+
+Die zwei Standard-Includedateien \<limits.h > und \<float.h >, definieren die numerischen Grenzwerte oder minimalen und maximalen Werte, die eine Variable eines bestimmten Typs aufnehmen kann. Diese Mindest- und Höchstwerte sind garantiert auf jeden C++-Compiler portiert werden, die die dieselbe datendarstellung wie ANSI c verwendet. Die \<limits.h > enthalten-Datei definiert die [numerische Grenzwerte für ganzzahlige Typen](../cpp/integer-limits.md), und \<float.h > definiert die [numerische Grenzwerte für Gleitkommatypen](../cpp/floating-limits.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Grundlegende Konzepte](../cpp/basic-concepts-cpp.md)

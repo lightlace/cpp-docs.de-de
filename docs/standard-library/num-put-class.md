@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81bdbd07e06ef2ec24a5f220fcd11a228b783888
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 19e08d1544a23ad1272bde5066a63f37b1e511fd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965989"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100923"
 ---
 # <a name="numput-class"></a>num_put-Klasse
 
@@ -45,9 +45,11 @@ class num_put : public locale::facet;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType* den Typ innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet.
+*CharType*<br/>
+Der Typ, der innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet wird.
 
-*OutputIterator* der Typ des Iterators, der der numerischen-Funktionen PUT, ihre Ausgabe schreiben.
+*OutputIterator*<br/>
+Der Typ des Iterators, in den die numerischen Put-Funktionen ihre Ausgabe schreiben.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -153,13 +155,17 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parameter
 
-*nächste* ein Iterator, der das erste Element des eingefügten Zeichenfolge adressiert.
+*next*<br/>
+Ein Iterator, der das erste Element in der eingefügten Zeichenfolge adressiert.
 
-*"_Iosbase"* gibt den Datenstrom an die Gebietsschema mit Numpunct-Facets verwendet, um die Ausgabe und die Flags für das Formatieren der Ausgabe Satzzeichen enthält.
+*"_Iosbase"*<br/>
+Gibt den Datenstrom an, der ein Gebietsschema mit numpunct-Facets enthält, die die Satzzeichen für die Ausgabe und die Flags für das Formatieren der Ausgabe erstellen.
 
-*_Fill* ein Zeichen, das für Abstand verwendet wird.
+*_Fill*<br/>
+Ein Zeichen, das Leerzeichen einfügt.
 
-*Val* die Anzahl oder den booleschen Typ, der ausgegeben werden sollen.
+*val*<br/>
+Die Nummer oder der boolesche Typ, der ausgegeben werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -318,7 +324,8 @@ explicit num_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parameter
 
-*_Refs* Ganzzahlwert verwendet, um den Typ für die Speicherverwaltung für das Objekt anzugeben.
+*_Refs*<br/>
+Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -397,13 +404,17 @@ iter_type put(
 
 ### <a name="parameters"></a>Parameter
 
-*Dest* ein Iterator, der das erste Element des eingefügten Zeichenfolge adressiert.
+*dest*<br/>
+Ein Iterator, der das erste Element in der eingefügten Zeichenfolge adressiert.
 
-*"_Iosbase"* gibt den Datenstrom an, das Gebietsschema mit Numpunct-Facets verwendet, um die Ausgabe und die Flags für das Formatieren der Ausgabe Satzzeichen enthält.
+*"_Iosbase"*<br/>
+Gibt den Datenstrom an, der ein Gebietsschema mit numpunct-Facets enthält, die die Satzzeichen für die Ausgabe und die Flags für das Formatieren der Ausgabe erstellen.
 
-*_Fill* ein Zeichen, das für Abstand verwendet wird.
+*_Fill*<br/>
+Ein Zeichen, das Leerzeichen einfügt.
 
-*Val* die Anzahl oder den booleschen Typ, der ausgegeben werden sollen.
+*val*<br/>
+Die Nummer oder der boolesche Typ, der ausgegeben werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 

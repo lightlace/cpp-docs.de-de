@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cfc0b62fd3008ae18ae82703bfb896d56dba1de
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: a3aee777cf7d003beb2d1f76d57bf029d358aba6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337368"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726790"
 ---
 # <a name="application-information-and-management"></a>Anwendungsinformationen und Anwendungsverwaltung
 Wenn Sie eine Anwendung schreiben, erstellen Sie eine einzelne [CWinApp](../../mfc/reference/cwinapp-class.md)-abgeleitetes Objekt. In einigen Fällen sollten Sie zum Abrufen von Informationen über dieses Objekt außerhalb der `CWinApp`-abgeleitetes Objekt. Oder benötigen Sie möglicherweise Zugriff auf andere globale "Manager"-Objekte.
@@ -96,7 +96,7 @@ CWinThread* AfxBeginThread(
  Parameter, der an die Steuerungsfunktion übergeben werden, wie in den Parameter, um die Funktionsdeklaration in *PfnThreadProc*.  
   
  *nPriority*  
- Die gewünschte Priorität des Threads. Eine vollständige Liste und Beschreibung der verfügbaren Prioritäten, finden Sie unter [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) im Windows SDK.  
+ Die gewünschte Priorität des Threads. Eine vollständige Liste und Beschreibung der verfügbaren Prioritäten, finden Sie unter [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) im Windows SDK.  
   
  *nStackSize*  
  Gibt die Stapelgröße für den neuen Thread in Bytes an. Mit dem Wert 0 wird die Stapelgröße standardmäßig so groß wie die des erstellenden Threads.  
@@ -109,7 +109,7 @@ CWinThread* AfxBeginThread(
 - **0** der Thread wird unmittelbar nach der Erstellung gestartet.  
   
  *lpSecurityAttrs*  
- Verweist auf eine [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) Struktur, die Attribute für die Sicherheit für den Thread angibt. Wenn der Wert NULL ist, werden die gleichen Sicherheitsattribute als der erstellende Thread verwendet werden. Weitere Informationen zu dieser Struktur finden Sie im Windows-SDK.  
+ Verweist auf eine [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Struktur, die Attribute für die Sicherheit für den Thread angibt. Wenn der Wert NULL ist, werden die gleichen Sicherheitsattribute als der erstellende Thread verwendet werden. Weitere Informationen zu dieser Struktur finden Sie im Windows-SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf die neu erstellte Threadobjekt oder NULL, wenn ein Fehler auftritt.  
@@ -178,7 +178,7 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
  *Wert*  
  Ein Zeiger auf eine Zeichenfolge, enthält die Ressourcen-ID.    
  *lpszType*  
- Ein Zeiger auf den Typ der Ressource. Eine Liste der Ressourcentypen, finden Sie unter [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) im Windows SDK.  
+ Ein Zeiger auf den Typ der Ressource. Eine Liste der Ressourcentypen, finden Sie unter [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea) im Windows SDK.  
    
 ### <a name="return-value"></a>Rückgabewert  
  Ein Handle für das Modul, das die Ressource enthält.  
@@ -406,8 +406,8 @@ Bestimmt, ob das jeweilige Fenster ein erweitertes Rahmenobjekt ist.
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );  
 ```
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Ein Zeiger auf ein Objekt, das von `CWnd`abgeleitet ist.  
+*Aufnehmen*<br/>
+[in] Ein Zeiger auf ein Objekt, das von abgeleitet ist `CWnd`.  
    
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das angegebene Fenster ein erweitertes rahmenobjekt ist; andernfalls "false".  
@@ -442,8 +442,8 @@ Bestimmt, ob das angegebene Fenster ein Symbolleistenobjekt.
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);  
 ```
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Ein Zeiger auf ein Objekt, das von `CWnd`abgeleitet ist.  
+*Aufnehmen*<br/>
+[in] Ein Zeiger auf ein Objekt, das von abgeleitet ist `CWnd`.  
    
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das angegebene Fenster ein Symbolleistenobjekt. andernfalls "false".  
@@ -506,7 +506,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
  Wenn die Funktion erfolgreich ist, ist der Rückgabewert ein Handle für das Modul an. Wenn die Funktion fehlschlägt, ist der Rückgabewert NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Gibt ein Handle, das verwendet werden kann [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) um die Adresse einer DLL-Funktion abzurufen. `AfxLoadLibrary` kann auch verwendet werden, um andere ausführbare Module zuzuordnen.  
+ Gibt ein Handle, das verwendet werden kann [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) um die Adresse einer DLL-Funktion abzurufen. `AfxLoadLibrary` kann auch verwendet werden, um andere ausführbare Module zuzuordnen.  
   
  Jeder Prozess verwaltet einen Verweiszähler für jedes Modul geladenen Bibliothek. Diese Verweiszähler erhöht sich beim `AfxLoadLibrary` aufgerufen wird, und erniedrigt wird jedes Mal `AfxFreeLibrary` aufgerufen wird. Wenn der Verweiszähler null erreicht, wird das Modul nicht aus dem Adressraum des aufrufenden Prozesses zugeordnet ist, und das Handle ist nicht mehr gültig.  
   
@@ -559,7 +559,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
   
 ### <a name="parameters"></a>Parameter  
  *lpWndClass*  
- Zeiger auf eine [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) Struktur mit Informationen über die Fensterklasse registriert werden. Weitere Informationen zu dieser Struktur finden Sie im Windows-SDK.  
+ Zeiger auf eine [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) Struktur mit Informationen über die Fensterklasse registriert werden. Weitere Informationen zu dieser Struktur finden Sie im Windows-SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Klasse erfolgreich registriert wurde. andernfalls "false".  
@@ -588,7 +588,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
   
 ### <a name="parameters"></a>Parameter  
  *nClassStyle*  
- Gibt den Stil für Windows-Klasse oder eine Kombination von Stilen, die das bitweise OR mit erstellt ( **&#124;**) Operator, für die Fensterklasse. Eine Liste der Klassenstile, finden Sie unter den [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) Struktur im Windows SDK. Wenn der Wert NULL ist, werden die Standardwerte wie folgt festgelegt werden:  
+ Gibt den Stil für Windows-Klasse oder eine Kombination von Stilen, die das bitweise OR mit erstellt ( **&#124;**) Operator, für die Fensterklasse. Eine Liste der Klassenstile, finden Sie unter den [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) Struktur im Windows SDK. Wenn der Wert NULL ist, werden die Standardwerte wie folgt festgelegt werden:  
   
 -   Legt den Stil der Maus auf CS_DBLCLKS, sendet Nachrichten an die Fensterprozedur doppelklicken, wenn der Benutzer die Maustaste doppelklickt fest.  
   
@@ -602,7 +602,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
  Gibt ein Handle auf die Cursorressource in jedem Fenster aus der Fensterklasse erstellt installiert werden. Wenn Sie die Standardeinstellung verwenden **0**, erhalten Sie den standardmäßigen IDC_ARROW-Cursor.  
   
  *hbrBackground*  
- Gibt ein Handle für die Pinselressource in jedem Fenster aus der Fensterklasse erstellt installiert werden. Wenn Sie die Standardeinstellung verwenden **0**, Sie haben ein Hintergrundpinsel für die NULL und das Fenster wird standardmäßig nicht löschen, des Hintergrunds, während der Verarbeitung [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055).  
+ Gibt ein Handle für die Pinselressource in jedem Fenster aus der Fensterklasse erstellt installiert werden. Wenn Sie die Standardeinstellung verwenden **0**, Sie haben ein Hintergrundpinsel für die NULL und das Fenster wird standardmäßig nicht löschen, des Hintergrunds, während der Verarbeitung [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd).  
   
  *hIcon*  
  Gibt ein Handle für die Symbolressource in jedem Fenster aus der Fensterklasse erstellt installiert werden. Wenn Sie die Standardeinstellung verwenden **0**, erhalten Sie die standardmäßige ","-Flags winken Windows Logo-Symbol.  
@@ -636,8 +636,8 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- TRUE gibt an, dass die Informationen in der Registrierung auf den HKCU-Knoten geleitet wird; FALSE gibt an, dass die Anwendung Informationen in der Registrierung auf den Standardknoten schreibt. Der Standardknoten ist **HKEY_CLASSES_ROOT** ( **HKCR**).  
+*bAktivieren*<br/>
+[in] TRUE gibt an, dass die Informationen in der Registrierung auf den HKCU-Knoten geleitet wird; FALSE gibt an, dass die Anwendung Informationen in der Registrierung auf den Standardknoten schreibt. Der Standardknoten ist **HKEY_CLASSES_ROOT** ( **HKCR**).  
   
 ### <a name="remarks"></a>Hinweise  
 

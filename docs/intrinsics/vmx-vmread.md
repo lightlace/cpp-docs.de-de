@@ -1,5 +1,5 @@
 ---
-title: __vmx_vmread | Microsoft Docs
+title: __vmx_vmread | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81feddd403c96d0b3f9402aaa744d0c79dbec21e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0c8b5a22cfef8ebde74fbe6d1f6920a969e7bc6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340670"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706380"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 **Microsoft-spezifisch**  
   
- Liest ein bestimmtes Feld aus der aktuellen virtuellen Maschine Kontrollstruktur (VMCS), und platziert sie in der angegebenen Position.  
+ Liest ein bestimmtes Feld aus der aktuellen VM-Steuerelement-Struktur (VMCS), und platziert sie in der angegebenen Position.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,8 +42,8 @@ unsigned char __vmx_vmread(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `Field`|Das zu lesende VMCS-Feld.|  
-|[in] `FieldValue`|Ein Zeiger auf den Speicherort zum Speichern des Werts zu lesen, aus dem VMCS Feld gemäß den `Field` Parameter.|  
+|*Feld*|[in] Das zu lesende VMCS-Feld.|  
+|*FieldValue*|[in] Ein Zeiger auf den Speicherort zum Speichern des Werts zu lesen, aus dem vom angegebenen VMCS-Feld der `Field` Parameter.|  
   
 ## <a name="return-value"></a>Rückgabewert  
   
@@ -54,13 +54,13 @@ unsigned char __vmx_vmread(
 |2|Bei dem Vorgang ist ein Fehler ohne verfügbaren Status aufgetreten.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `__vmx_vmread` -Funktion ist gleichbedeutend mit der `VMREAD` computeranweisung. Der Wert, der die `Field` Parameter ist eine codierte Feldindex, die in der Intel-Dokumentation beschrieben wird. Dokumentieren Sie für Weitere Informationen suchen, für das Dokument "Intel Virtualization technische Spezifikation für der IA-32 Intel Architecture" Dokumentnummer C97063-002 auf der [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site, und klicken Sie dann finden Sie in Anhang C dieses Dokuments .  
+ Die `__vmx_vmread` -Funktion ist gleichbedeutend mit der `VMREAD` computeranweisung. Der Wert des der `Field` -Parameter ist eine codierte Feldindex, die in der Intel-Dokumentation beschrieben ist. Dokumentieren Sie weitere Informationen suchen Sie nach dem Dokument "Intel Virtualization Technical Specification for the IA-32 Intel Architecture," Dokumentnummer C97063-002 auf der [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) Standort aus, und klicken Sie dann finden Sie in Anhang C des Dokuments .  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__vmx_vmread`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmread`|x64|  
   
  **Headerdatei** \<intrin.h >  
   

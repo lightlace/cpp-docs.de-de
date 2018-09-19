@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManagerWindows Klasse | Microsoft Docs
+title: CMFCVisualManagerWindows-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -150,17 +150,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5582c634428290086393791ae23d551726bff7ab
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 411d787f4ab021abc46bd0b02c5f7b476c0e9c21
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040661"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710826"
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>CMFCVisualManagerWindows-Klasse
-`CMFCVisualManagerWindows` Wendet die Darstellung von Microsoft Windows XP oder Microsoft Vista an, wenn der Benutzer ein Windows XP oder Vista-Design auswählt.  
+`CMFCVisualManagerWindows` Die Darstellung des Microsoft Windows XP oder Microsoft Vista imitiert, wenn der Benutzer ein Windows XP oder Vista-Design auswählt.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -180,7 +180,7 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCVisualManagerWindows::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|Das Framework ruft diese Methode, um zu bestimmen, ob 3D Registerkarten in der Anwendung immer hervorgehoben werden sollen. (Überschreibt [CMFCVisualManager::AlwaysHighlight3DTabs](../../mfc/reference/cmfcvisualmanager-class.md#alwayshighlight3dtabs).)|  
+|[CMFCVisualManagerWindows::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|Das Framework ruft diese Methode, um zu bestimmen, ob 3D Registerkarten in der Anwendung immer markiert werden sollte. (Überschreibt [CMFCVisualManager::AlwaysHighlight3DTabs](../../mfc/reference/cmfcvisualmanager-class.md#alwayshighlight3dtabs).)|  
 |[CMFCVisualManagerWindows::DrawComboBorderWinXP](#drawcomboborderwinxp)|(Überschreibt `CMFCVisualManager::DrawComboBorderWinXP`.)|  
 |[CMFCVisualManagerWindows::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)|(Überschreibt [CMFCVisualManager::DrawComboDropButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcombodropbuttonwinxp).)|  
 |[CMFCVisualManagerWindows::DrawPushButtonWinXP](#drawpushbuttonwinxp)|(Überschreibt [CMFCVisualManager::DrawPushButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawpushbuttonwinxp).)|  
@@ -193,7 +193,7 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::IsDefaultWinXPPopupButton](#isdefaultwinxppopupbutton)|(Überschreibt [CMFCVisualManager::IsDefaultWinXPPopupButton](../../mfc/reference/cmfcvisualmanager-class.md#isdefaultwinxppopupbutton).)|  
 |[CMFCVisualManagerWindows::IsHighlightWholeMenuItem](#ishighlightwholemenuitem)|(Überschreibt `CMFCVisualManagerOfficeXP::IsHighlightWholeMenuItem`.)|  
 |[CMFCVisualManagerWindows::IsOfficeStyleMenus](#isofficestylemenus)||  
-|[CMFCVisualManagerWindows::IsOfficeXPStyleMenus](#isofficexpstylemenus)|Gibt an, ob die visuelle Manager Stil von Office XP-Menüs implementiert. (Überschreibt [CMFCVisualManager::IsOfficeXPStyleMenus](../../mfc/reference/cmfcvisualmanager-class.md#isofficexpstylemenus).)|  
+|[CMFCVisualManagerWindows::IsOfficeXPStyleMenus](#isofficexpstylemenus)|Gibt an, ob die visuelle Manager XP-Stil von Office-Menüs implementiert. (Überschreibt [CMFCVisualManager::IsOfficeXPStyleMenus](../../mfc/reference/cmfcvisualmanager-class.md#isofficexpstylemenus).)|  
 |[CMFCVisualManagerWindows::IsWindowsThemingSupported](#iswindowsthemingsupported)|(Überschreibt `CMFCVisualManager::IsWindowsThemingSupported`.)|  
 |[CMFCVisualManagerWindows::IsWinXPThemeAvailable](#iswinxpthemeavailable)|Gibt an, ob ein Windows-Design verfügbar ist.|  
 |[CMFCVisualManagerWindows::OnDrawBarGripper](#ondrawbargripper)|(Überschreibt `CMFCVisualManagerOfficeXP::OnDrawBarGripper`.)|  
@@ -209,12 +209,12 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::OnDrawEditBorder](#ondraweditborder)|(Überschreibt `CMFCVisualManagerOfficeXP::OnDrawEditBorder`.)|  
 |[CMFCVisualManagerWindows::OnDrawExpandingBox](#ondrawexpandingbox)|(Überschreibt [CMFCVisualManager::OnDrawExpandingBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawexpandingbox).)|  
 |[CMFCVisualManagerWindows::OnDrawFloatingToolbarBorder](#ondrawfloatingtoolbarborder)|(Überschreibt `CMFCVisualManagerOfficeXP::OnDrawFloatingToolbarBorder`.)|  
-|[CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Das Framework ruft diese Methode auf, wenn es sich um den Rahmen um eine Instanz von zeichnet die [CMFCHeaderCtrl-Klasse](../../mfc/reference/cmfcheaderctrl-class.md). (Überschreibt [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|  
-|[CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|Das Framework ruft diese Funktion auf, wenn es sich um den Pfeil Sortierreihenfolge von einem Headersteuerelement zeichnet. (Überschreibt [CMFCVisualManager::OnDrawHeaderCtrlSortArrow](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlsortarrow).)|  
+|[CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Das Framework ruft diese Methode auf, wenn es sich um eine Instanz des Rahmens zeichnet die [CMFCHeaderCtrl-Klasse](../../mfc/reference/cmfcheaderctrl-class.md). (Überschreibt [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|  
+|[CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|Das Framework ruft diese Funktion auf, wenn es sich um den Sortierpfeil einem Kopfzeilen-Steuerelement zeichnet. (Überschreibt [CMFCVisualManager::OnDrawHeaderCtrlSortArrow](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlsortarrow).)|  
 |[CMFCVisualManagerWindows::OnDrawMenuBorder](#ondrawmenuborder)|(Überschreibt `CMFCVisualManagerOfficeXP::OnDrawMenuBorder`.)|  
 |[CMFCVisualManagerWindows::OnDrawMenuSystemButton](#ondrawmenusystembutton)|(Überschreibt `CMFCVisualManagerOfficeXP::OnDrawMenuSystemButton`.)|  
 |[CMFCVisualManagerWindows::OnDrawMiniFrameBorder](#ondrawminiframeborder)|(Überschreibt `CMFCVisualManagerOfficeXP::OnDrawMiniFrameBorder`.)|  
-|[CMFCVisualManagerWindows::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Vom Framework aufgerufen, wenn es sich um den Rahmen einer Schaltfläche "Outlook" "zeichnet. (Überschreibt [CMFCVisualManager::OnDrawOutlookPageButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookpagebuttonborder).)|  
+|[CMFCVisualManagerWindows::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Wird vom Framework aufgerufen, wenn es sich um den Rahmen einer Outlook-Seite-Schaltfläche zeichnet. (Überschreibt [CMFCVisualManager::OnDrawOutlookPageButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookpagebuttonborder).)|  
 |[CMFCVisualManagerWindows::OnDrawPaneBorder](#ondrawpaneborder)|(Überschreibt `CMFCVisualManagerOfficeXP::OnDrawPaneBorder`.)|  
 |[CMFCVisualManagerWindows::OnDrawPaneCaption](#ondrawpanecaption)|(Überschreibt `CMFCVisualManagerOfficeXP::OnDrawPaneCaption`.)|  
 |[CMFCVisualManagerWindows::OnDrawPopupWindowButtonBorder](#ondrawpopupwindowbuttonborder)|(Überschreibt `CMFCVisualManagerOfficeXP::OnDrawPopupWindowButtonBorder`.)|  
@@ -223,7 +223,7 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::OnDrawSpinButtons](#ondrawspinbuttons)|(Überschreibt `CMFCVisualManagerOfficeXP::OnDrawSpinButtons`.)|  
 |[CMFCVisualManagerWindows::OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)|(Überschreibt `CMFCVisualManagerOfficeXP::OnDrawStatusBarPaneBorder`.)|  
 |[CMFCVisualManagerWindows::OnDrawStatusBarProgress](#ondrawstatusbarprogress)|Das Framework ruft diese Methode auf, wenn es sich um die Statusanzeige zeichnet, auf die [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) Objekt. (Überschreibt [CMFCVisualManager::OnDrawStatusBarProgress](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarprogress).)|  
-|[CMFCVisualManagerWindows::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|Das Framework ruft diese Methode auf, wenn es sich um das Größeneinstellungsfeld für zeichnet einen [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md). (Überschreibt [CMFCVisualManager::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarsizebox).)|  
+|[CMFCVisualManagerWindows::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|Das Framework ruft diese Methode auf, wenn es sich um das Größeneinstellungsfeld "für zeichnet eine [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md). (Überschreibt [CMFCVisualManager::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarsizebox).)|  
 |[CMFCVisualManagerWindows::OnDrawTab](#ondrawtab)|(Überschreibt `CMFCVisualManagerOfficeXP::OnDrawTab`.)|  
 |[CMFCVisualManagerWindows::OnDrawTabCloseButton](#ondrawtabclosebutton)|(Überschreibt `CMFCVisualManagerOfficeXP::OnDrawTabCloseButton`.)|  
 |[CMFCVisualManagerWindows::OnDrawTabsButtonBorder](#ondrawtabsbuttonborder)|(Überschreibt `CMFCVisualManagerOfficeXP::OnDrawTabsButtonBorder`.)|  
@@ -234,14 +234,14 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::OnErasePopupWindowButton](#onerasepopupwindowbutton)|(Überschreibt `CMFCVisualManagerOfficeXP::OnErasePopupWindowButton`.)|  
 |[CMFCVisualManagerWindows::OnEraseTabsArea](#onerasetabsarea)|(Überschreibt `CMFCVisualManagerOfficeXP::OnEraseTabsArea`.)|  
 |[CMFCVisualManagerWindows::OnEraseTabsButton](#onerasetabsbutton)|(Überschreibt `CMFCVisualManagerOfficeXP::OnEraseTabsButton`.)|  
-|[CMFCVisualManagerWindows::OnEraseTabsFrame](#onerasetabsframe)|Das Framework ruft diese Methode aus, wenn sie einen Frame auf Löscht eine [CMFCBaseTabCtrl-Klasse](../../mfc/reference/cmfcbasetabctrl-class.md). (Überschreibt [CMFCVisualManager::OnEraseTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#onerasetabsframe).)|  
+|[CMFCVisualManagerWindows::OnEraseTabsFrame](#onerasetabsframe)|Das Framework ruft diese Methode auf, wenn sie einen Frame auf Löscht eine [CMFCBaseTabCtrl-Klasse](../../mfc/reference/cmfcbasetabctrl-class.md). (Überschreibt [CMFCVisualManager::OnEraseTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#onerasetabsframe).)|  
 |[CMFCVisualManagerWindows::OnFillBarBackground](#onfillbarbackground)|(Überschreibt `CMFCVisualManagerOfficeXP::OnFillBarBackground`.)|  
 |[CMFCVisualManagerWindows::OnFillButtonInterior](#onfillbuttoninterior)|(Überschreibt `CMFCVisualManagerOfficeXP::OnFillButtonInterior`.)|  
 |[CMFCVisualManagerWindows::OnFillCommandsListBackground](#onfillcommandslistbackground)|(Überschreibt `CMFCVisualManagerOfficeXP::OnFillCommandsListBackground`.)|  
 |[CMFCVisualManagerWindows::OnFillMiniFrameCaption](#onfillminiframecaption)|(Überschreibt `CMFCVisualManagerOfficeXP::OnFillMiniFrameCaption`.)|  
-|[CMFCVisualManagerWindows::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Das Framework ruft diese Methode auf, wenn sie das Innere einer Outlook-Schaltfläche Seite voll ist. (Überschreibt [CMFCVisualManager::OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton).)|  
+|[CMFCVisualManagerWindows::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Das Framework ruft diese Methode auf, wenn es sich um das Innere einer Outlook-Seite-Schaltfläche ausfüllt. (Überschreibt [CMFCVisualManager::OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton).)|  
 |[CMFCVisualManagerWindows::OnFillTasksGroupInterior](#onfilltasksgroupinterior)|(Überschreibt `CMFCVisualManagerOfficeXP::OnFillTasksGroupInterior`.)|  
-|[CMFCVisualManagerWindows::OnFillTasksPaneBackground](#onfilltaskspanebackground)|Das Framework ruft diese Methode aus, wenn sie den Hintergrund des voll ist ein [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) Steuerelement. (Überschreibt [CMFCVisualManager::OnFillTasksPaneBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfilltaskspanebackground).)|  
+|[CMFCVisualManagerWindows::OnFillTasksPaneBackground](#onfilltaskspanebackground)|Das Framework ruft diese Methode aus, wenn es sich um den Hintergrund des ausfüllt eine [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) Steuerelement. (Überschreibt [CMFCVisualManager::OnFillTasksPaneBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfilltaskspanebackground).)|  
 |[CMFCVisualManagerWindows::OnHighlightMenuItem](#onhighlightmenuitem)|(Überschreibt `CMFCVisualManagerOfficeXP::OnHighlightMenuItem`.)|  
 |[CMFCVisualManagerWindows::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|(Überschreibt `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`.)|  
 |[CMFCVisualManagerWindows::OnUpdateSystemColors](#onupdatesystemcolors)|(Überschreibt `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`.)|  
@@ -251,12 +251,12 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCVisualManagerWindows::m_b3DTabsXPTheme](#m_b3dtabsxptheme)|Gibt an, ob die Windows XP-Design 3D Registerkarten angezeigt.|  
+|[CMFCVisualManagerWindows::m_b3DTabsXPTheme](#m_b3dtabsxptheme)|Gibt an, ob das Windows XP-Design 3D Registerkarten angezeigt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der `CMFCVisualManagerWindows` -Klasse zum Ändern der Darstellung der Anwendung zu imitieren, die das aktuelle Design auf dem Computer, auf dem die Anwendung ausgeführt wird.  
+ Verwenden der `CMFCVisualManagerWindows` Klasse, um das Erscheinungsbild Ihrer Anwendung auf das aktuelle Design auf dem Computer zu imitieren, in dem die Anwendung ausgeführt wird.  
   
- Allerdings ein Windows-Design möglicherweise nicht verfügbar, wenn Ihre Anwendung auf einer Windows-Version vor Windows XP ausgeführt wird oder wenn Designs deaktiviert werden, da der Benutzer verwendet die **klassischen** anzeigen. Wenn kein Design verfügbar ist, wird die Anwendung verwendet den standardmäßigen visuellen Manager im definierten [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
+ Ein Windows-Design möglicherweise jedoch nicht verfügbar, wenn Ihre Anwendung unter einer Version von Windows vor Windows XP ausgeführt wird oder Designs deaktiviert werden, da der Benutzer verwendet die **klassischen** anzeigen. Wenn kein Thema verfügbar ist, wird die Anwendung verwendet den standardmäßigen visuellen Manager in definierten [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie `CMFCVisualManagerWindows`. Dieser Codeausschnitt ist Teil der [Desktop Warnung Demobeispiel](../../visual-cpp-samples.md).  
@@ -313,10 +313,10 @@ virtual BOOL DrawComboBorderWinXP(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
- [in] *bDeaktiviert*  
- [in] *bIsDropped*  
+*pDC*<br/>
+[in] [in] *Rect*  
+*bDeaktiviert*<br/>
+[in] [in] *bIsDropped*  
  [in] *bIsHighlighted*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -336,10 +336,10 @@ virtual BOOL DrawComboDropButtonWinXP(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
- [in] *bDeaktiviert*  
- [in] *bIsDropped*  
+*pDC*<br/>
+[in] [in] *Rect*  
+*bDeaktiviert*<br/>
+[in] [in] *bIsDropped*  
  [in] *bIsHighlighted*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -358,10 +358,10 @@ virtual BOOL DrawPushButtonWinXP(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
- [in] *pButton*  
- [in] *UiState*  
+*pDC*<br/>
+[in] [in] *Rect*  
+*pButton*<br/>
+[in] [in] *UiState*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -435,8 +435,8 @@ virtual COLORREF GetToolbarButtonTextColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pButton*  
- [in] *Zustand*  
+*pButton*<br/>
+[in] [in] *Zustand*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -508,17 +508,17 @@ static BOOL IsWinXPThemeAvailible();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn ein Design verfügbar ist; andernfalls 0.  
+ Ungleich NULL ist ein Design zur Verfügung; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode gilt für alle Windows XP und höher Designs.  
   
  `IsWinXPThemeAvailable` ist identisch mit `CMFCVisualManagerWindows::IsWindowsThemingAvailable` mit dem Unterschied, dass `IsWinXPThemeAvailable` ist eine statische Methode. Aus diesem Grund erstellt er einen temporären visuellen Manager, wenn noch keine vorhanden ist.  
   
- `IsWinXPThemeAvailable` Gibt immer 0 für Windows-Versionen vor Windows XP zurück.  
+ `IsWinXPThemeAvailable` Gibt immer 0, s für die Windows-Versionen als Windows XP zurück.  
   
 ##  <a name="m_b3dtabsxptheme"></a>  CMFCVisualManagerWindows::m_b3DTabsXPTheme  
- Ein boolescher Parameter, der bestimmt, ob die visuelle Manager 3D Registerkarten angezeigt.  
+ Ein boolescher Parameter, der bestimmt, ob die visuelle Manager 3D Registerkarten anzeigt.  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_b3DTabsXPTheme;  
@@ -536,10 +536,10 @@ virtual void OnDrawBarGripper(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *RectGripper*  
- [in] *bHorz*  
- [in] *pBar*  
+*pDC*<br/>
+[in] [in] *RectGripper*  
+*bHorz*<br/>
+[in] [in] *pBar*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -556,10 +556,10 @@ virtual BOOL OnDrawBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
- [in] *pEdit*  
- [in] *Zustand*  
+*pDC*<br/>
+[in] [in] *Rect*  
+*pEdit*<br/>
+[in] [in] *Zustand*  
  [in] *ClrText*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -578,10 +578,10 @@ virtual void OnDrawButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pButton*  
- [in] *Rect*  
- [in] *Zustand*  
+*pDC*<br/>
+[in] [in] *pButton*  
+*Rect*<br/>
+[in] [in] *Zustand*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -598,10 +598,10 @@ virtual void OnDrawButtonSeparator(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pButton*  
- [in] *Rect*  
- [in] *Zustand*  
+*pDC*<br/>
+[in] [in] *pButton*  
+*Rect*<br/>
+[in] [in] *Zustand*  
  [in] *bHorz*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -621,12 +621,12 @@ virtual void OnDrawCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pButton*  
- [in] *bActive*  
- [in] *bHorz*  
- [in] *bMaximized*  
- [in] *bDeaktiviert*  
+*pDC*<br/>
+[in] [in] *pButton*  
+*bActive*<br/>
+[in] [in] *bHorz*  
+*bMaximized*<br/>
+[in] [in] *bDeaktiviert*  
  [in] *nImageID*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -645,12 +645,12 @@ virtual void OnDrawCaptionButtonIcon(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pButton*  
- [in] *Id*  
- [in] *bActive*  
- [in] *bDeaktiviert*  
- [in] *PtImage*  
+*pDC*<br/>
+[in] [in] *pButton*  
+*ID*<br/>
+[in] [in] *bActive*  
+*bDeaktiviert*<br/>
+[in] [in] *PtImage*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -668,12 +668,12 @@ virtual void OnDrawCheckBoxEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
- [in] *nState*  
- [in] *bHighlighted*  
- [in] *bPressed*  
- [in] *bAktiviert*  
+*pDC*<br/>
+[in] [in] *Rect*  
+*nState*<br/>
+[in] [in] *bHighlighted*  
+*bPressed*<br/>
+[in] [in] *bAktiviert*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -691,12 +691,12 @@ virtual void OnDrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
- [in] *bDeaktiviert*  
- [in] *bIsDropped*  
- [in] *bIsHighlighted*  
- [in] *pButton*  
+*pDC*<br/>
+[in] [in] *Rect*  
+*bDeaktiviert*<br/>
+[in] [in] *bIsDropped*  
+*bIsHighlighted*<br/>
+[in] [in] *pButton*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -714,12 +714,12 @@ virtual void OnDrawComboDropButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
- [in] *bDeaktiviert*  
- [in] *bIsDropped*  
- [in] *bIsHighlighted*  
- [in] *pButton*  
+*pDC*<br/>
+[in] [in] *Rect*  
+*bDeaktiviert*<br/>
+[in] [in] *bIsDropped*  
+*bIsHighlighted*<br/>
+[in] [in] *pButton*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -748,10 +748,10 @@ virtual void OnDrawEditBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
- [in] *bDeaktiviert*  
- [in] *bIsHighlighted*  
+*pDC*<br/>
+[in] [in] *Rect*  
+*bDeaktiviert*<br/>
+[in] [in] *bIsHighlighted*  
  [in] *pButton*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -768,10 +768,10 @@ virtual void OnDrawExpandingBox(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
- [in] *bIsOpened*  
- [in] *ColorBox*  
+*pDC*<br/>
+[in] [in] *Rect*  
+*bIsOpened*<br/>
+[in] [in] *ColorBox*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -787,10 +787,10 @@ virtual void OnDrawFloatingToolbarBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pToolBar*  
- [in] *RectBorder*  
- [in] *RectBorderSize*  
+*pDC*<br/>
+[in] [in] *pToolBar*  
+*rectBorder*<br/>
+[in] [in] *RectBorderSize*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -807,10 +807,10 @@ virtual void OnDrawHeaderCtrlBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pCtrl*  
- [in] *pDC*  
- [in] *Rect*  
- [in] *bIsPressed*  
+*pCtrl*<br/>
+[in] [in] *pDC*  
+*Rect*<br/>
+[in] [in] *bIsPressed*  
  [in] *bIsHighlighted*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -827,10 +827,10 @@ virtual void OnDrawHeaderCtrlSortArrow(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pCtrl*  
- [in] *pDC*  
- [in] *Rect*  
- [in] *bIsUp*  
+*pCtrl*<br/>
+[in] [in] *pDC*  
+*Rect*<br/>
+[in] [in] *bIsUp*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -845,8 +845,8 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pMenu*  
+*pDC*<br/>
+[in] [in] *pMenu*  
  [in] *Rect*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -864,10 +864,10 @@ virtual void OnDrawMenuSystemButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
- [in] *UiSystemCommand*  
- [in] *nStyle*  
+*pDC*<br/>
+[in] [in] *Rect*  
+*uiSystemCommand*<br/>
+[in] [in] *nStyle*  
  [in] *bHighlight*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -884,10 +884,10 @@ virtual void OnDrawMiniFrameBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pFrameWnd*  
- [in] *RectBorder*  
- [in] *RectBorderSize*  
+*pDC*<br/>
+[in] [in] *pFrameWnd*  
+*rectBorder*<br/>
+[in] [in] *RectBorderSize*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -903,10 +903,10 @@ virtual void OnDrawOutlookPageButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *RectBtn*  
- [in] *bIsHighlighted*  
- [in] *bIsPressed*  
+*pDC*<br/>
+[in] [in] *RectBtn*  
+*bIsHighlighted*<br/>
+[in] [in] *bIsPressed*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -921,8 +921,8 @@ virtual void OnDrawPaneBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pBar*  
+*pDC*<br/>
+[in] [in] *pBar*  
  [in] *Rect*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -940,10 +940,10 @@ virtual COLORREF OnDrawPaneCaption(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pBar*  
- [in] *bActive*  
- [in] *RectCaption*  
+*pDC*<br/>
+[in] [in] *pBar*  
+*bActive*<br/>
+[in] [in] *RectCaption*  
  [in] *RectButtons*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -961,8 +961,8 @@ virtual void OnDrawPopupWindowButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *RectClient*  
+*pDC*<br/>
+[in] [in] *RectClient*  
  [in] *pButton*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -980,10 +980,10 @@ virtual void OnDrawScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
- [in] *nBorderSize*  
- [in] *iImage*  
+*pDC*<br/>
+[in] [in] *Rect*  
+*nBorderSize*<br/>
+[in] [in] *iImage*  
  [in] *bHilited*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1000,10 +1000,10 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pBar*  
- [in] *Rect*  
- [in] *bIsHoriz*  
+*pDC*<br/>
+[in] [in] *pBar*  
+*Rect*<br/>
+[in] [in] *bIsHoriz*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1020,10 +1020,10 @@ virtual void OnDrawSpinButtons(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *RectSpin*  
- [in] *nState*  
- [in] *bOrientation*  
+*pDC*<br/>
+[in] [in] *RectSpin*  
+*nState*<br/>
+[in] [in] *bOrientation*  
  [in] *pSpinCtrl*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1041,10 +1041,10 @@ virtual void OnDrawStatusBarPaneBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pBar*  
- [in] *RectPane*  
- [in] *UiID*  
+*pDC*<br/>
+[in] [in] *pBar*  
+*rectPane*<br/>
+[in] [in] *UiID*  
  [in] *nStyle*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1066,14 +1066,14 @@ virtual void OnDrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pStatusBar*  
- [in] *RectProgress*  
- [in] *nProgressTotal*  
- [in] *nProgressCurr*  
- [in] *ClrBar*  
- [in] *ClrProgressBarDest*  
- [in] *ClrProgressText*  
+*pDC*<br/>
+[in] [in] *pStatusBar*  
+*rectProgress*<br/>
+[in] [in] *nProgressTotal*  
+*nProgressCurr*<br/>
+[in] [in] *ClrBar*  
+*clrProgressBarDest*<br/>
+[in] [in] *ClrProgressText*  
  [in] *bProgressText*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1089,8 +1089,8 @@ virtual void OnDrawStatusBarSizeBox(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pStatBar*  
+*pDC*<br/>
+[in] [in] *pStatBar*  
  [in] *RectSizeBox*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1108,10 +1108,10 @@ virtual void OnDrawTab(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *RectTab*  
- [in] *iTab*  
- [in] *bIsActive*  
+*pDC*<br/>
+[in] [in] *RectTab*  
+*iTab*<br/>
+[in] [in] *bIsActive*  
  [in] *pTabWnd*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1130,12 +1130,12 @@ virtual void OnDrawTabCloseButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
- [in] *pTabWnd*  
- [in] *bIsHighlighted*  
- [in] *bIsPressed*  
- [in] *bIsDisabled*  
+*pDC*<br/>
+[in] [in] *Rect*  
+*pTabWnd*<br/>
+[in] [in] *bIsHighlighted*  
+*bIsPressed*<br/>
+[in] [in] *bIsDisabled*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1152,10 +1152,10 @@ virtual void OnDrawTabsButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
- [in] *pButton*  
- [in] *UiState*  
+*pDC*<br/>
+[in] [in] *Rect*  
+*pButton*<br/>
+[in] [in] *UiState*  
  [in] *pWndTab*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1173,10 +1173,10 @@ virtual void OnDrawTask(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pTask*  
- [in] *pIcons*  
- [in] *bIsHighlighted*  
+*pDC*<br/>
+[in] [in] *pTask*  
+*pIcons*<br/>
+[in] [in] *bIsHighlighted*  
  [in] *bIsSelected*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1193,10 +1193,10 @@ virtual void OnDrawTasksGroupAreaBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
- [in] *bBesondere*  
- [in] *bNoTitle*  
+*pDC*<br/>
+[in] [in] *Rect*  
+*bBesondere*<br/>
+[in] [in] *bNoTitle*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1213,10 +1213,10 @@ virtual void OnDrawTasksGroupCaption(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pGroup*  
- [in] *bIsHighlighted*  
- [in] *bIsSelected*  
+*pDC*<br/>
+[in] [in] *pGroup*  
+*bIsHighlighted*<br/>
+[in] [in] *bIsSelected*  
  [in] *bCanCollapse*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1232,8 +1232,8 @@ virtual void OnDrawTearOffCaption(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
+*pDC*<br/>
+[in] [in] *Rect*  
  [in] *bIsActive*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1249,8 +1249,8 @@ virtual void OnErasePopupWindowButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *RectClient*  
+*pDC*<br/>
+[in] [in] *RectClient*  
  [in] *pButton*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1266,8 +1266,8 @@ virtual void OnEraseTabsArea(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
+*pDC*<br/>
+[in] [in] *Rect*  
  [in] *pTabWnd*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1284,10 +1284,10 @@ virtual void OnEraseTabsButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
- [in] *pButton*  
- [in] *pWndTab*  
+*pDC*<br/>
+[in] [in] *Rect*  
+*pButton*<br/>
+[in] [in] *pWndTab*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1302,8 +1302,8 @@ virtual BOOL OnEraseTabsFrame(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
+*pDC*<br/>
+[in] [in] *Rect*  
  [in] *pTabWnd*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1323,10 +1323,10 @@ virtual void OnFillBarBackground(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pBar*  
- [in] *RectClient*  
- [in] *RectClip*  
+*pDC*<br/>
+[in] [in] *pBar*  
+*rectClient*<br/>
+[in] [in] *RectClip*  
  [in] *bNCArea*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1343,10 +1343,10 @@ virtual void OnFillButtonInterior(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pButton*  
- [in] *Rect*  
- [in] *Zustand*  
+*pDC*<br/>
+[in] [in] *pButton*  
+*Rect*<br/>
+[in] [in] *Zustand*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1361,8 +1361,8 @@ virtual COLORREF OnFillCommandsListBackground(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
+*pDC*<br/>
+[in] [in] *Rect*  
  [in] *bIsSelected*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1381,10 +1381,10 @@ virtual COLORREF OnFillMiniFrameCaption(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *RectCaption*  
- [in] *pFrameWnd*  
- [in] *bActive*  
+*pDC*<br/>
+[in] [in] *RectCaption*  
+*pFrameWnd*<br/>
+[in] [in] *bActive*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -1403,10 +1403,10 @@ virtual void OnFillOutlookPageButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
- [in] *bIsHighlighted*  
- [in] *bIsPressed*  
+*pDC*<br/>
+[in] [in] *Rect*  
+*bIsHighlighted*<br/>
+[in] [in] *bIsPressed*  
  [in] *ClrText*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1422,8 +1422,8 @@ virtual void OnFillTasksGroupInterior(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
+*pDC*<br/>
+[in] [in] *Rect*  
  [in] *bBesondere*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1438,8 +1438,8 @@ virtual void OnFillTasksPaneBackground(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *RectWorkArea*  
+*pDC*<br/>
+[in] [in] *RectWorkArea*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1455,10 +1455,10 @@ virtual void OnHighlightMenuItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pButton*  
- [in] *Rect*  
- [in] *ClrText*  
+*pDC*<br/>
+[in] [in] *pButton*  
+*Rect*<br/>
+[in] [in] *ClrText*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1472,8 +1472,8 @@ virtual void OnHighlightRarelyUsedMenuItems(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *RectRarelyUsed*  
+*pDC*<br/>
+[in] [in] *RectRarelyUsed*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1494,7 +1494,7 @@ void SetOfficeStyleMenus(BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *BAM*  
+ [in] *bOn*  
   
 ### <a name="remarks"></a>Hinweise  
   

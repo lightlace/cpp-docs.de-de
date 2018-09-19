@@ -1,5 +1,5 @@
 ---
-title: Datenzugriff in Visual C++ | Microsoft Docs
+title: Datenzugriff in Visual C++ | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/28/2017
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bb74d27af485f765e1330bc83ab196e1d9ba6b5c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8e2fc86d15472bd4ab63e472df99bb69393b386
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090651"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060303"
 ---
 # <a name="data-access-in-visual-c"></a>Datenzugriff in Visual C++
 
@@ -33,27 +33,39 @@ Praktisch alle Datenbankprodukte, SQL und NoSQL, bieten eine Schnittstelle für 
 Seit 2011 hat Microsoft ODBC als Standard für native Anwendungen zur Verbindung mit Microsoft SQL Server-Datenbanken sowohl lokal als auch in der Cloud ausgerichtet. Weitere Informationen finden Sie unter [Datenzugriffsprogrammierung \(MFC-ATL\)](data-access-programming-mfc-atl.md). Bei C++/CLI-Bibliotheken können die nativen ODBC-Treiber oder ADO.NET verwendet werden. Weitere Informationen finden Sie unter [Datenzugriff mit ADO.NET (C++-CLI)](/dotnet/data-access-using-adonet-cpp-cli.md) und [Zugreifen auf Daten in Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio).
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
-[Zugriff Datenprogrammierung (MFC/ATL)](data-access-programming-mfc-atl.md) beschreibt legacy datenzugriffsprogrammierung mit Visual C++, wobei die bevorzugte Methode ist die Verwendung einer der Klassenbibliotheken, z. B. die (ATL = Active Template Class Library) oder die Microsoft Foundation Class (MFC)-Bibliothek, die Arbeit mit Datenbank-APIs vereinfachen.
 
-[Öffnen Sie die Database Connectivity (ODBC)](odbc/open-database-connectivity-odbc.md) der Microsoft Foundation Classes (MFC)-Bibliothek stellt Klassen für die Programmierung mit Open Database Connectivity (ODBC).
+[Datenzugriffsprogrammierung (MFC/ATL)](data-access-programming-mfc-atl.md)<br/>
+Beschreibt die Legacy-Datenzugriffsprogrammierung mit Visual C++, wobei die bevorzugte Zugriffsart in der Verwendung einer der Klassenbibliotheken, z. B. ATL (Active Template Class Library) oder MFC (Microsoft Foundation Class), besteht, die die Arbeit mit den Datenbank-APIs vereinfachen.
 
-[OLE DB-Programmierung](oledb/ole-db-programming.md) eine größtenteils legacy-Schnittstelle weiterhin in einigen Szenarien erforderlich ist, insbesondere bei der Programmierung für Verbindungsserver.
+[Open Database Connectivity (ODBC)](odbc/open-database-connectivity-odbc.md)<br/>
+Die MFC-Bibliothek (Microsoft Foundation Classes) stellt Klassen für die Programmierung mit ODBC (Open Database Connectivity) zur Verfügung.
+
+[OLE DB-Programmierung](oledb/ole-db-programming.md)<br/>
+Eine größtenteils legacy-Schnittstelle die immer noch in einigen Szenarien erforderlich ist, insbesondere bei der Programmierung für Verbindungsserver.
 
 ## <a name="related-topics"></a>Verwandte Themen
-[Herstellen einer Verbindung mit SQL-Datenbank, die mit C und C++](/azure/sql-database/sql-database-develop-cplusplus-simple) Verbinden mit Azure SQL-Datenbank von C- oder C++-Anwendungen.
 
-[Microsoft Azure-Speicherclientbibliothek für C++](https://github.com/Azure/azure-storage-cpp)
-[Azure-Speicher](/azure/storage/storage-introduction) ist eine Cloud-speicherlösung für moderne Anwendungen, Dauerhaftigkeit, Verfügbarkeit und Skalierbarkeit, um den Bedürfnissen ihrer Kunden. Stellen Sie eine Verbindung zu Azure Storage von C++ mithilfe der Azure Storage-Clientbibliothek für C++ her.
+[Verbinden Sie mit SQL-Datenbank mit C und C++](/azure/sql-database/sql-database-develop-cplusplus-simple)<br/>
+Verbinden Sie Azure SQL-Datenbank von C- oder C++-Anwendungen.
 
-[ODBC Driver 13.1 for SQL Server - Windows freigegeben](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server) der aktuelle ODBC-Treiber stellt zuverlässigen Datenzugriff auf Microsoft SQL Server 2016 Microsoft Azure SQL-Datenbank für C/C++-Anwendungen basierte. Bietet Unterstützung für einschließlich grundsätzlichen, Azure Active Directory und AlwaysOn-Verfügbarkeitsgruppen. Auch für MacOS und Linux verfügbar.     
+[Microsoft Azure Storage-Clientbibliothek für C++](https://github.com/Azure/azure-storage-cpp)<br/>
+[Azure Storage](/azure/storage/storage-introduction) ist eine Cloudspeicherlösung für moderne Anwendungen, die auf Stabilität, Verfügbarkeit und Skalierbarkeit für die Bedürfnisse ihrer Kunden beruhen. Stellen Sie eine Verbindung zu Azure Storage von C++ mithilfe der Azure Storage-Clientbibliothek für C++ her.
+
+[ODBC-Treiber 13.1 für SQLServer – Windows freigegeben](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server)<br/>
+Der aktuelle ODBC-Treiber bietet zuverlässigen Datenzugriff auf die Microsoft SQL Server 2016 Microsoft Azure SQL-Datenbank für Anwendungen auf C/C++-Basis. Bietet Unterstützung für einschließlich immer verschlüsselt, Azure Active Directory und Always On-Verfügbarkeitsgruppen. Auch für MacOS und Linux verfügbar.     
  
-[SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client-programming) SQL Server Native Client ist eine eigenständige Data Access Anwendungsprogrammierschnittstelle (API), verwendet für OLE DB und ODBC, die SQL Server 2005 über SQL Server 2014 unterstützt. Neue Anwendungen sollten den ODBC-Treiber 13.1 für SQL Server verwenden.
+[SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client-programming)<br/>
+SQL Server Native Client ist eine eigenständige Data Access Application-Programmierschnittstelle (API), die für OLE DB und ODBC verwendet wird, die SQL Server 2005 über SQL Server 2014 unterstützt. Neue Anwendungen sollten den ODBC-Treiber 13.1 für SQL Server verwenden.
 
-[Microsoft Azure C- und C++ Developer Center](https://azure.microsoft.com/develop/cpp/) Azure erleichtert das Erstellen von C++-Anwendungen mit mehr Flexibilität, Skalierbarkeit und Zuverlässigkeit mithilfe von Tools, die Ihnen gefallen.    
+[Microsoft Azure C und C++ Developer Center](https://azure.microsoft.com/develop/cpp/)<br/>
+Azure vereinfacht die C++-Anwendungsentwicklung mit mehr Flexibilität, Skalierbarkeit und Zuverlässigkeit mithilfe von Tools, die Sie lieben werden.    
 
-[Gewusst wie: Verwenden von Blob-Speicher von C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs) Azure Blob-Speicher ist ein Dienst, der unstrukturierte Daten in der Cloud als Objekte-Blobs gespeichert. Blob Storage kann beliebige Typen von Text oder Binärdaten speichern, z.B. Dokumente, Mediendateien oder Installationsprogramme für Anwendungen. Blob Storage wird auch als Objektspeicher bezeichnet.
+[Gewusst wie: Verwenden von Blob-Speichers mit C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
+Azure Blob Storage ist ein Dienst, der unstrukturierte Daten in der Cloud als Objekte/Blobs speichert. Blob Storage kann beliebige Typen von Text oder Binärdaten speichern, z.B. Dokumente, Mediendateien oder Installationsprogramme für Anwendungen. Blob Storage wird auch als Objektspeicher bezeichnet.
 
-[ ODBC Programmer's Reference](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference) dient der ODBC-Schnittstelle für die Verwendung mit der Programmiersprache C. Die Verwendung der ODBC-Schnittstelle umfasst drei Bereiche: SQL-Anweisungen, ODBC-Funktionsaufrufe und C-Programmierung.
+[ ODBC-Programmierreferenz](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
+Die ODBC-Schnittstelle dient zur Verwendung mit der Programmiersprache C. Die Verwendung der ODBC-Schnittstelle umfasst drei Bereiche: SQL-Anweisungen, ODBC-Funktionsaufrufe und C-Programmierung.
 
 ## <a name="see-also"></a>Siehe auch
+
 [Visual C++](../visual-cpp-in-visual-studio.md)

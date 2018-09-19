@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: Operator T * | Microsoft Docs'
+title: 'Comptrref:: Operator T * | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25569c1c8f9e5ab733c50c7be0768f64ec51f8b1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 54c370029b4e6fc90d1f210164de7d7ecb22f3a5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881922"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595418"
 ---
 # <a name="comptrrefoperator-t-operator"></a>ComPtrRef::operator T*-Operator
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-operator T*();  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Gibt den Wert der [Ptr_](../windows/comptrrefbase-ptr-data-member.md) -Datenmember des aktuellen ComPtrRef-Objekts.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** client.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [ComPtrRef-Klasse](../windows/comptrref-class.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+operator T*();
+```
+
+## <a name="remarks"></a>Hinweise
+
+Gibt den Wert des der [Ptr_](../windows/comptrrefbase-ptr-data-member.md) -Datenmember des aktuellen **ComPtrRef** Objekt.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** client.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[ComPtrRef-Klasse](../windows/comptrref-class.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

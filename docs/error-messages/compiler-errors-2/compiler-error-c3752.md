@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3752 | Microsoft Docs
+title: Compilerfehler C3752 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fcc71d7e7418571b606be96e571c2b855f8497f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d12ae854e54080fe0b80c3e4ffd2d4b3f514651f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265284"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041726"
 ---
 # <a name="compiler-error-c3752"></a>Compilerfehler C3752
-"Attributklasse":-Attribut kann nicht klassifiziert werden. 'Schlüsselwort' sollte in diesem Kontext nicht verwendet werden  
-  
- Ein benutzerdefiniertes Attribut wurde falsch angewendet.
+
+"Attributklasse": Attribut kann nicht klassifiziert werden. 'Schlüsselwort' sollte nicht in diesem Kontext verwendet werden
+
+Ein benutzerdefiniertes Attribut wurde falsch angewendet.

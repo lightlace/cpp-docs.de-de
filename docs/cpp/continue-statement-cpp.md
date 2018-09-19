@@ -16,58 +16,61 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97422a09f890686c4d414eea13da7db891494cc4
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 88281d90ce15ced12079b3c66a74bb2f23c11034
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943864"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099705"
 ---
 # <a name="continue-statement-c"></a>continue-Anweisung (C++)
-Erzwingt die Übertragung der Steuerung an den steuernden Ausdruck der kleinsten einschließenden [führen](../cpp/do-while-statement-cpp.md), [für](../cpp/for-statement-cpp.md), oder [während](../cpp/while-statement-cpp.md) Schleife.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-continue;  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Alle verbleibenden Anweisungen in der aktuellen Iteration werden nicht ausgeführt. Die nächste Iteration der Schleife wird wie folgt bestimmt:  
-  
--   In einer **führen** oder **während** Schleife, die nächste Iteration beginnt mit einer erneuten Auswertung des steuernden Ausdrucks die **führen** oder **während** Anweisung.  
-  
--   In einem **für** Schleife (mit der Syntax `for`(`init-expr`; `cond-expr`; `loop-expr`)), wird die `loop-expr` -Klausel ausgeführt wird. Anschließend wird die `cond-expr`-Klausel neu ausgewertet und, je nach Ergebnis, wird die Schleife entweder beendet oder es tritt eine andere Iteration auf.  
-  
- Das folgende Beispiel zeigt die **weiterhin** Anweisung kann verwendet werden, um Abschnitte des Codes zu umgehen und die nächste Iteration einer Schleife zu beginnen.  
-  
-## <a name="example"></a>Beispiel  
-  
-```cpp 
-// continue_statement.cpp  
-#include <stdio.h>  
-int main()  
-{  
-    int i = 0;  
-    do  
-    {  
-        i++;  
-        printf_s("before the continue\n");  
-        continue;  
-        printf("after the continue, should never print\n");  
-     } while (i < 3);  
-  
-     printf_s("after the do loop\n");  
-}  
-```  
-  
-```Output  
-before the continue  
-before the continue  
-before the continue  
-after the do loop  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Sprunganweisungen](../cpp/jump-statements-cpp.md)   
- [Schlüsselwörter](../cpp/keywords-cpp.md)
+
+Erzwingt die Übertragung der Steuerung an den steuernden Ausdruck der kleinsten einschließenden [führen](../cpp/do-while-statement-cpp.md), [für](../cpp/for-statement-cpp.md), oder [während](../cpp/while-statement-cpp.md) Schleife.
+
+## <a name="syntax"></a>Syntax
+
+```
+continue;
+```
+
+## <a name="remarks"></a>Hinweise
+
+Alle verbleibenden Anweisungen in der aktuellen Iteration werden nicht ausgeführt. Die nächste Iteration der Schleife wird wie folgt bestimmt:
+
+- In einer **führen** oder **während** Schleife, die nächste Iteration beginnt mit einer erneuten Auswertung des steuernden Ausdrucks die **führen** oder **während** Anweisung.
+
+- In einem **für** Schleife (mit der Syntax `for`(`init-expr`; `cond-expr`; `loop-expr`)), wird die `loop-expr` -Klausel ausgeführt wird. Anschließend wird die `cond-expr`-Klausel neu ausgewertet und, je nach Ergebnis, wird die Schleife entweder beendet oder es tritt eine andere Iteration auf.
+
+Das folgende Beispiel zeigt die **weiterhin** Anweisung kann verwendet werden, um Abschnitte des Codes zu umgehen und die nächste Iteration einer Schleife zu beginnen.
+
+## <a name="example"></a>Beispiel
+
+```cpp
+// continue_statement.cpp
+#include <stdio.h>
+int main()
+{
+    int i = 0;
+    do
+    {
+        i++;
+        printf_s("before the continue\n");
+        continue;
+        printf("after the continue, should never print\n");
+     } while (i < 3);
+
+     printf_s("after the do loop\n");
+}
+```
+
+```Output
+before the continue
+before the continue
+before the continue
+after the do loop
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Sprunganweisungen](../cpp/jump-statements-cpp.md)<br/>
+[Schlüsselwörter](../cpp/keywords-cpp.md)

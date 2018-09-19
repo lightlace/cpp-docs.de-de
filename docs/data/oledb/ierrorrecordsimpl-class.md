@@ -1,5 +1,5 @@
 ---
-title: IErrorRecordsImpl-Klasse | Microsoft Docs
+title: IErrorRecordsImpl-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,25 +9,83 @@ f1_keywords:
 - ATL::IErrorRecordsImpl
 - ATL.IErrorRecordsImpl
 - IErrorRecordsImpl
+- GetErrorDescriptionString
+- IErrorRecordsImpl.GetErrorDescriptionString
+- IErrorRecordsImpl::GetErrorDescriptionString
+- GetErrorGUID
+- IErrorRecordsImpl.GetErrorGUID
+- IErrorRecordsImpl::GetErrorGUID
+- GetErrorHelpContext
+- IErrorRecordsImpl::GetErrorHelpContext
+- IErrorRecordsImpl.GetErrorHelpContext
+- IErrorRecordsImpl::GetErrorHelpFile
+- GetErrorHelpFile
+- IErrorRecordsImpl.GetErrorHelpFile
+- IErrorRecordsImpl.GetErrorSource
+- GetErrorSource
+- IErrorRecordsImpl::GetErrorSource
+- IErrorRecordsImpl.AddErrorRecord
+- AddErrorRecord
+- IErrorRecordsImpl::AddErrorRecord
+- ATL::IErrorRecordsImpl::GetBasicErrorInfo
+- IErrorRecordsImpl::GetBasicErrorInfo
+- GetBasicErrorInfo
+- ATL.IErrorRecordsImpl.GetBasicErrorInfo
+- IErrorRecordsImpl.GetBasicErrorInfo
+- ATL::IErrorRecordsImpl::GetCustomErrorObject
+- IErrorRecordsImpl::GetCustomErrorObject
+- ATL.IErrorRecordsImpl.GetCustomErrorObject
+- IErrorRecordsImpl.GetCustomErrorObject
+- GetCustomErrorObject
+- GetErrorInfo
+- IErrorRecordsImpl.GetErrorInfo
+- IErrorRecordsImpl::GetErrorInfo
+- IErrorRecordsImpl::GetErrorParameters
+- ATL.IErrorRecordsImpl.GetErrorParameters
+- IErrorRecordsImpl.GetErrorParameters
+- GetErrorParameters
+- ATL::IErrorRecordsImpl::GetErrorParameters
+- IErrorRecordsImpl::GetRecordCount
+- ATL::IErrorRecordsImpl::GetRecordCount
+- IErrorRecordsImpl.GetRecordCount
+- ATL.IErrorRecordsImpl.GetRecordCount
+- IErrorRecordsImpl::m_rgErrors
+- IErrorRecordsImpl.m_rgErrors
+- ATL.IErrorRecordsImpl.m_rgErrors
+- m_rgErrors
+- ATL::IErrorRecordsImpl::m_rgErrors
 dev_langs:
 - C++
 helpviewer_keywords:
 - IErrorRecordsImpl class
+- GetErrorDescriptionString method
+- GetErrorGUID method
+- GetErrorHelpContext method
+- GetErrorHelpFile method
+- GetErrorSource method
+- AddErrorRecord method
+- GetBasicErrorInfo method
+- GetCustomErrorObject method
+- GetErrorInfo method
+- GetErrorParameters method
+- GetRecordCount method
+- m_rgErrors
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0d0425e7765cf09abb870cb39720cf43c8c74174
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 13e00d3d5ac7cb6cf6e4078ee24a7c3b02a2778e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105464"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043390"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl-Klasse
-Implementiert die OLE DB- [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx) -Schnittstelle, Hinzufügen von Datensätzen an und Abrufen von Datensätzen aus einem Datenmember ([M_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) vom Typ **CAtlArray <** `RecordClass`**>**.  
+
+Implementiert die OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) Schnittstelle, Hinzufügen von Einträgen zu und Abrufen von Datensätzen aus einem Datenmember ([M_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) vom Typ **CAtlArray <** `RecordClass`**>**.  
   
 ## <a name="syntax"></a>Syntax
 
@@ -36,12 +94,17 @@ template <class T, class RecordClass = ATLERRORINFO>
 class IErrorRecordsImpl : public IErrorRecords  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `T`  
- Eine abgeleitete Klasse `IErrorRecordsImpl`.  
+### <a name="parameters"></a>Parameter  
+
+*T*<br/>
+Eine abgeleitete Klasse `IErrorRecordsImpl`.  
   
- `RecordClass`  
- Eine Klasse, die ein OLE DB-Fehler-Objekt darstellt.  
+*RecordClass*<br/>
+Eine Klasse, die ein OLE DB-Error-Objekt darstellt.  
+
+## <a name="requirements"></a>Anforderungen  
+
+**Header:** „atldb.h“  
   
 ## <a name="members"></a>Member  
   
@@ -49,32 +112,229 @@ class IErrorRecordsImpl : public IErrorRecords
   
 |||  
 |-|-|  
-|[GetErrorDescriptionString](../../data/oledb/ierrorrecordsimpl-geterrordescriptionstring.md)|Ruft die Zeichenfolge zur fehlerbeschreibung aus Error-Datensatzes ab.|  
-|[GetErrorGUID](../../data/oledb/ierrorrecordsimpl-geterrorguid.md)|Ruft den Fehler GUID aus einer Error-Datensatzes ab.|  
-|[GetErrorHelpContext](../../data/oledb/ierrorrecordsimpl-geterrorhelpcontext.md)|Ruft die Hilfekontext-ID aus einer Error-Datensatzes ab.|  
-|[GetErrorHelpFile](../../data/oledb/ierrorrecordsimpl-geterrorhelpfile.md)|Ruft den vollständigen Pfadnamen der Hilfedatei von Error-Datensatzes ab.|  
-|[GetErrorSource](../../data/oledb/ierrorrecordsimpl-geterrorsource.md)|Ruft den Fehlercode für die Datenquelle aus einer Error-Datensatzes ab.|  
+|[GetErrorDescriptionString](#geterrordescriptionstring)|Ruft die Zeichenfolge zur fehlerbeschreibung aus einen Fehlerdatensatz ab.|  
+|[GetErrorGUID](#geterrorguid)|Ruft den GUID-Fehler aus einen Fehlerdatensatz ab.|  
+|[GetErrorHelpContext](#geterrorhelpcontext)|Ruft die Hilfekontext-ID aus einen Fehlerdatensatz ab.|  
+|[GetErrorHelpFile](#geterrorhelpfile)|Ruft den vollständigen Pfadnamen der Hilfedatei aus einen Fehlerdatensatz ab.|  
+|[GetErrorSource](#geterrorsource)|Ruft den Fehlercode für die Quelle über einen Fehlerdatensatz ab.|  
   
 ### <a name="interface-methods"></a>Schnittstellenmethoden  
   
 |||  
 |-|-|  
-|[AddErrorRecord](../../data/oledb/ierrorrecordsimpl-adderrorrecord.md)|Fügt einen Datensatz mit dem OLE DB-Fehler-Objekt.|  
-|[GetBasicErrorInfo](../../data/oledb/cdberrorinfo-getbasicerrorinfo.md)|Gibt grundlegende Informationen über den Fehler, z. B. den Rückgabecode und die anbieterspezifische Fehlernummer zurück.|  
-|[GetCustomErrorObject](../../data/oledb/cdberrorinfo-getcustomerrorobject.md)|Gibt einen Zeiger auf eine Schnittstelle für eine benutzerdefinierte Fehlerobjekt.|  
-|[GetErrorInfo](../../data/oledb/cdberrorinfo-geterrorinfo.md)|Gibt eine [IErrorInfo](https://msdn.microsoft.com/en-us/library/ms718112.aspx) Schnittstellenzeiger auf den angegebenen Datensatz.|  
-|[GetErrorParameters](../../data/oledb/cdberrorinfo-geterrorparameters.md)|Der Fehlerparameter zurückgegeben.|  
-|[GetRecordCount](../../mfc/reference/cdaorecordset-class.md#getrecordcount)|Gibt die Anzahl der Datensätze in der OLE DB-Datensatz-Objekt zurück.|  
+|[AddErrorRecord](#adderrorrecord)|Fügt einen Datensatz auf den OLE DB-Error-Objekt.|  
+|[GetBasicErrorInfo](#getbasicerrorinfo)|Gibt grundlegende Informationen über den Fehler, z. B. den Rückgabecode und die Anzahl der Anbieter-spezifischer Fehler zurück.|  
+|[GetCustomErrorObject](#getcustomerrorobject)|Gibt einen Zeiger auf eine Schnittstelle für einen benutzerdefinierten Fehler-Objekt zurück.|  
+|[GetErrorInfo](#geterrorinfo)|Gibt eine [IErrorInfo](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) Schnittstellenzeiger auf den angegebenen Datensatz.|  
+|[GetErrorParameters](#geterrorparameters)|Gibt die Fehlerparameter zurück.|  
+|[GetRecordCount](#getrecordcount)|Gibt die Anzahl der Datensätze in der OLE DB-Datensatz-Objekt zurück.|  
   
 ### <a name="data-members"></a>Datenmember  
   
 |||  
 |-|-|  
-|[m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)|Ein Array von fehlerdatensätzen.|  
+|[m_rgErrors](#rgerrors)|Ein Array von fehlerdatensätzen.|  
+
+## <a name="geterrordescriptionstring"></a> IErrorRecordsImpl:: Geterrordescriptionstring
+
+Ruft die Zeichenfolge zur fehlerbeschreibung aus einen Fehlerdatensatz ab.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** „atldb.h“  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);  
+```  
+  
+#### <a name="parameters"></a>Parameter  
+
+*rCurError*<br/>
+Ein `ERRORINFO` Datensatz in einer `IErrorInfo` Schnittstelle.  
+  
+### <a name="return-value"></a>Rückgabewert  
+
+Ein Zeiger auf eine Zeichenfolge, die den Fehler beschreibt.  
+  
+## <a name="geterrorguid"></a> IErrorRecordsImpl:: Geterrorguid
+
+Ruft den GUID-Fehler aus einen Fehlerdatensatz ab.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+REFGUID GetErrorGUID(ERRORINFO& rCurError);  
+```  
+  
+#### <a name="parameters"></a>Parameter  
+
+*rCurError*<br/>
+Ein `ERRORINFO` Datensatz in einer `IErrorInfo` Schnittstelle.  
+  
+### <a name="return-value"></a>Rückgabewert  
+
+Ein Verweis auf eine GUID für den Fehler.  
+
+## <a name="geterrorhelpcontext"></a> IErrorRecordsImpl:: Geterrorhelpcontext
+
+Ruft die Hilfekontext-ID aus einen Fehlerdatensatz ab.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+DWORD GetErrorHelpContext(ERRORINFO& rCurError);  
+```  
+  
+#### <a name="parameters"></a>Parameter  
+
+*rCurError*<br/>
+Ein `ERRORINFO` Datensatz in einer `IErrorInfo` Schnittstelle.  
+  
+### <a name="return-value"></a>Rückgabewert  
+
+Die Hilfekontext-ID für den Fehler.  
+
+## <a name="geterrorhelpfile"></a> IErrorRecordsImpl:: Geterrorhelpfile
+
+Ruft den Pfadnamen der Hilfedatei aus einen Fehlerdatensatz ab.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);  
+```  
+  
+#### <a name="parameters"></a>Parameter  
+
+*rCurError*<br/>
+Ein `ERRORINFO` Datensatz in einer `IErrorInfo` Schnittstelle.  
+  
+### <a name="return-value"></a>Rückgabewert  
+
+Zeiger auf eine Zeichenfolge, die den Pfadnamen der Hilfedatei für den Fehler enthält.
+
+## <a name="geterrorsource"></a> IErrorRecordsImpl:: Geterrorsource
+
+Ruft den Quellcode, der den Fehler verursacht, über einen Fehlerdatensatz hat ab.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+LPOLESTR GetErrorSource(ERRORINFO& rCurError);  
+```  
+  
+#### <a name="parameters"></a>Parameter  
+
+*rCurError*<br/>
+Ein `ERRORINFO` Datensatz in einer `IErrorInfo` Schnittstelle.  
+  
+### <a name="return-value"></a>Rückgabewert  
+
+Zeiger auf eine Zeichenfolge, die den Quellcode für den Fehler enthält. 
+
+## <a name="adderrorrecord"></a> IErrorRecordsImpl:: Adderrorrecord
+
+Fügt einen Datensatz auf den OLE DB-Error-Objekt.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,  
+   DWORD dwLookupID,  
+   DISPPARAMS *pdispparams,  
+   IUnknown *punkCustomError,  
+   DWORD dwDynamicErrorID);  
+```  
+  
+#### <a name="parameters"></a>Parameter  
+
+Finden Sie unter [IErrorRecords::AddErrorRecord](/previous-versions/windows/desktop/ms725362\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+
+## <a name="getbasicerrorinfo"></a> IErrorRecordsImpl:: Getbasicerrorinfo
+
+Gibt grundlegende Informationen über den Fehler, z. B. den Rückgabecode und die Anzahl der Anbieter-spezifischer Fehler zurück.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,  
+   ERRORINFO *pErrorInfo);  
+```  
+  
+#### <a name="parameters"></a>Parameter  
+
+Finden Sie unter [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. 
+
+## <a name="getcustomerrorobject"></a> IErrorRecordsImpl:: Getcustomerrorobject
+
+Gibt einen Zeiger auf eine Schnittstelle für einen benutzerdefinierten Fehler-Objekt zurück.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,  
+   REFIID riid,  
+   IUnknown **ppObject);  
+```  
+  
+#### <a name="parameters"></a>Parameter  
+
+Finden Sie unter [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+
+## <a name="geterrorinfo"></a> IErrorRecordsImpl:: GetErrorInfo
+
+Gibt eine [IErrorInfo](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) Schnittstellenzeiger auf den angegebenen Datensatz.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,  
+   LCID lcid,  
+   IErrorInfo **ppErrorInfo);  
+```  
+  
+#### <a name="parameters"></a>Parameter  
+
+Finden Sie unter [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.
+
+## <a name="geterrorparameters"></a> IErrorRecordsImpl:: Geterrorparameters
+
+Gibt die Fehlerparameter zurück.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,  
+   DISPPARAMS *pdispparams);  
+```  
+  
+#### <a name="parameters"></a>Parameter  
+
+Finden Sie unter [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+
+## <a name="getrecordcount"></a> IErrorRecordsImpl:: GetRecordCount
+
+Gibt die Anzahl der Datensätze in der OLE DB-Datensatz-Objekt zurück.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+STDMETHOD(GetRecordCount )(ULONG *pcRecords);  
+```  
+  
+#### <a name="parameters"></a>Parameter  
+
+Finden Sie unter [IErrorRecords::GetRecordCount](/previous-versions/windows/desktop/ms722724\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+
+## <a name="rgerrors"></a> IErrorRecordsImpl:: M_rgerrors
+
+Ein Array von fehlerdatensätzen.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+CAtlArray< RecordClass > m_rgErrors;  
+```  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

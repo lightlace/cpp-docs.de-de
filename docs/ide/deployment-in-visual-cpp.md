@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b9dfdcdce618df3f2bfec64892f62aec20b6db9
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 468ce7d65e31a70192e1a48bf21126dd96a1936e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34256095"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678911"
 ---
 # <a name="deployment-in-visual-c"></a>Bereitstellung in Visual C++
 
@@ -48,7 +48,7 @@ Da Windows Update bei der zentralen Bereitstellung mithilfe von verteilbaren Pak
 
 Bei der lokalen Bereitstellung werden Bibliotheksdateien im Anwendungsordner zusammen mit der ausführbaren Datei installiert. Verschiedene Versionen von verteilbaren Visual C++-Bibliotheken können im selben Ordner installiert werden, da der Dateiname jeder Version die Versionsnummer enthält. Version 12 der C++-Laufzeitbibliothek ist beispielsweise „msvcp120.dll“. Version 14 ist „msvcp140.dll“.
 
-Eine Bibliothek kann über mehrere zusätzliche DLLs (sogenannte *dot-Bibliotheken*) verteilt werden. Einige Funktionen der Standardbibliothek, die in Visual Studio 2017 Version 15.6 veröffentlicht wurde, wurden beispielsweise zu „msvcp140_1.dll“ hinzugefügt, um die ABI-Kompatibilität von „msvcp140.dll“ beizubehalten. Wenn Sie Visual Studio 2017 Version 15.6 (Toolset 14.13) oder ein höheres Toolset von Visual Studio 2017 verwenden, müssen Sie diese dot-Bibliotheken und die Hauptbibliothek lokal bereitstellen. Die einzelnen dot-Bibliotheken werden dann in die nächste Hauptversion der Basisbibliothek eingefügt, wenn die ABI sich ändert.
+Eine Bibliothek kann über mehrere zusätzliche DLLs (sogenannte *dot-Bibliotheken*) verteilt werden. Beispielsweise wurden einige Funktionen der in Visual Studio 2017, Version 15.6 veröffentlichten Standardbibliothek zu „msvcp140_1.dll“ hinzugefügt, um die ABI-Kompatibilität von „msvcp140.dll“ beizubehalten. Wenn Sie Visual Studio 2017 Version 15.6 (Toolset 14.13) oder ein höheres Toolset von Visual Studio 2017 verwenden, müssen Sie diese dot-Bibliotheken und die Hauptbibliothek lokal bereitstellen. Die einzelnen dot-Bibliotheken werden dann in die nächste Hauptversion der Basisbibliothek eingefügt, wenn die ABI sich ändert.
 
 Da Microsoft lokal bereitgestellte Visual C++-Bibliotheken nicht automatisch aktualisieren kann, wird die lokale Bereitstellung dieser Bibliotheken nicht empfohlen. Wenn Sie sich für die lokale Bereitstellung von weiter verteilbaren Bibliotheken entscheiden, wird empfohlen, dass Sie eine eigene Methode zur automatischen Aktualisierung von lokal bereitgestellten Bibliotheken implementieren.
 
@@ -58,7 +58,7 @@ Zusätzlich zu den dynamisch verknüpften Bibliotheken stellt Visual Studio die 
 
 ## <a name="troubleshooting-deployment-issues"></a>Beheben von Problemen bei der Bereitstellung
 
-Die Ladereihenfolge von Visual C++-Bibliotheken hängt vom System ab. Verwenden Sie "depends.exe" oder "where.exe", um Ladeprogrammprobleme zu diagnostizieren. Weitere Informationen finden Sie unter [Dynamic-Link Library Search Order (Windows) (Dynamic Link Library-Suchreihenfolge (Windows))](http://msdn.microsoft.com/library/windows/desktop/ms682586.aspx).
+Die Ladereihenfolge von Visual C++-Bibliotheken hängt vom System ab. Verwenden Sie "depends.exe" oder "where.exe", um Ladeprogrammprobleme zu diagnostizieren. Weitere Informationen finden Sie unter [Dynamic-Link Library Search Order (Windows) (Dynamic Link Library-Suchreihenfolge (Windows))](/windows/desktop/Dlls/dynamic-link-library-search-order).
 
 ## <a name="see-also"></a>Siehe auch
 

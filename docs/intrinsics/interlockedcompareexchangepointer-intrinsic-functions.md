@@ -1,5 +1,5 @@
 ---
-title: Systeminterne Funktionen "_InterlockedCompareExchangePointer" | Microsoft Docs
+title: Funktionen "_InterlockedCompareExchangePointer" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c8e7a31c5377d71eaad96fddc7d93215ed3abb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8ea3976a510817e183271921c6730692e5b0b3c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340384"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711059"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedCompareExchangePointer“
 **Microsoft-spezifisch**  
@@ -87,14 +87,14 @@ long _InterlockedCompareExchangePointer_rel (
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in, out] `Destination`  
- Zeiger auf einen Zeiger auf den Zielwert. Das Zeichen wird ignoriert.  
+*Ziel*<br/>
+[in, out] Zeiger auf einen Zeiger auf den Zielwert. Die Zeichen wird ignoriert.  
   
- [in] `Exchange`  
- Exchange-Zeiger. Das Zeichen wird ignoriert.  
+*Exchange*<br/>
+[in] Exchange-Zeiger. Die Zeichen wird ignoriert.  
   
- [in] `Comparand`  
- Zeiger zum Vergleich mit dem Ziel. Die Zeichen wird ignoriert.  
+*Comparand-Parameter*<br/>
+[in] Zeiger auf den Vergleich mit dem Ziel. Die Zeichen wird ignoriert.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Der Rückgabewert ist der Anfangswert des Ziels.  
@@ -103,16 +103,16 @@ long _InterlockedCompareExchangePointer_rel (
   
 |Systemintern|Architektur|Header|  
 |---------------|------------------|------------|  
-|`_InterlockedCompareExchangePointer`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedCompareExchangePointer`|X86, ARM, x64|\<intrin.h>|  
 |`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|  
-|`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86, x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>Hinweise  
  `_InterlockedCompareExchangePointer` führt einen atomarischen Vergleich der `Destination`-Adresse mit der `Comparand`-Adresse durch. Wenn die `Destination`-Adresse der `Comparand`-Adresse entspricht, wird die `Exchange`-Adresse an der durch `Destination` definierten Adresse gespeichert. Andernfalls wird kein Vorgang ausgeführt.  
   
- `_InterlockedCompareExchangePointer` Stellt systeminterne Compiler-Unterstützung für die Win32- [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [_InterlockedCompareExchangePointer](http://msdn.microsoft.com/library/ff547863.aspx) Funktion.  
+ `_InterlockedCompareExchangePointer` bietet systeminterne compilerunterstützung für die Win32-Windows-SDK [_InterlockedCompareExchangePointer](https://msdn.microsoft.com/library/ff547863.aspx) Funktion.  
   
- Ein Beispiel zum Verwenden von `_InterlockedCompareExchangePointer`, finden Sie unter [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
+ Ein Beispiel zur Verwendung `_InterlockedCompareExchangePointer`, finden Sie unter [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
   
  Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel`, wenn Sie Semantiken zum Abrufen bzw. Freigeben benötigen, wie am Anfang und Ende eines kritischen Abschnitts. Die systeminternen ARM-Funktionen mit dem Suffix `_nf` („keine Umgrenzung“) fungieren nicht als Arbeitsspeicherbarriere.  
   

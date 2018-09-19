@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17da583b770fcab1d682868c38c04e0aa97155dd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 55ebdfacdee7f7b8db1b2d361034a92ab7f798b2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026432"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678352"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState-Struktur
 Bietet eine bequeme Möglichkeit zum Erkennen von Speicherverlusten in Ihrem Programm an.  
@@ -172,7 +172,7 @@ void DumpStatistics() const;
   
 -   Gesamtarbeitsspeicher, der derzeit von der Anwendung (in Byte) verwendet.  
   
- Bei freien Blöcken handelt, die Anzahl der Blöcke, deren Freigabe verzögert wurde, wenn `afxMemDF` wurde `delayFreeMemDF`. Weitere Informationen finden Sie unter [AfxMemDF](diagnostic-services.md#afxmemdf), im Abschnitt "MFC-Makros und Globals". Finden Sie unter [Blocktypen auf dem Debugheap](http://msdn.microsoft.com/db2e7f62-0679-4b39-a23f-26f2c2f407c5) für Weitere Informationen zu diesen Typen zu blockieren.  
+ Bei freien Blöcken handelt, die Anzahl der Blöcke, deren Freigabe verzögert wurde, wenn `afxMemDF` wurde `delayFreeMemDF`. Weitere Informationen finden Sie unter [AfxMemDF](diagnostic-services.md#afxmemdf), im Abschnitt "MFC-Makros und Globals".  
   
 ### <a name="example"></a>Beispiel  
   Der folgende Code platziert werden soll, *Projname*App.cpp. Definieren Sie die folgenden globalen Variablen:  

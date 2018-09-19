@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4221 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4221 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e602eb662533207a1f2957d3b11a0823e4b83af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18b0804c8b7cb2d059e45fa504334687a796fbe1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293194"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056416"
 ---
 # <a name="compiler-warning-level-4-c4221"></a>Compilerwarnung (Stufe 4) C4221
-nicht dem Standard entsprechende Erweiterung: 'Bezeichner': kann nicht initialisiert werden, mit der Adresse der automatischen Variablen  
-  
- Initialisieren Sie mit der Standard-Microsoft-Erweiterungen (/ Ze) ist einen aggregierten Typ (**Array**, `struct`, oder **Union**) mit der Adresse einer Variablen (automatisch).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// C4221.c  
-// compile with: /W4  
-struct S  
-{  
-   int *i;  
-};  
-  
-void func()  
-{  
-   int j;  
-   struct S s1 = { &j };   // C4221  
-}  
-  
-int main()  
-{  
-}  
-```  
-  
- Solche Initialisierungen sind ungültig, ANSI-Kompatibilität (["/ Za"](../../build/reference/za-ze-disable-language-extensions.md)).
+
+nicht dem Standard entsprechende Erweiterung: "Bezeichner": kann nicht mit der Adresse der automatischen Variablen initialisiert werden
+
+Sie können mit den Standard-Microsoft-Erweiterungen (/ Ze), einen aggregierten Typ initialisieren (**Array**, `struct`, oder **Union**) mit der Adresse einer Variablen (automatisch).
+
+## <a name="example"></a>Beispiel
+
+```
+// C4221.c
+// compile with: /W4
+struct S
+{
+   int *i;
+};
+
+void func()
+{
+   int j;
+   struct S s1 = { &j };   // C4221
+}
+
+int main()
+{
+}
+```
+
+Diese Initialisierungen sind ungültig, ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

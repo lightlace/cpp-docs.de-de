@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Accessoren | Microsoft Docs
+title: Verwenden von Zugriffsmethoden | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 066e963cfe551173088f6d78efaf2057f29d05fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 30ebb0e28bd25cf92a2d1c918d3cc5bc921df9f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104996"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099752"
 ---
 # <a name="using-accessors"></a>Verwenden von Zugriffsmethoden
-In den folgenden Themen wird erläutert, wie zu bestimmen, welche Art von Accessor für Ihre Daten am besten geeignet ist Anwendung und dann mit den verschiedenen Typen von Accessoren verfügbar:  
+
+In den folgenden Themen wird erläutert, wie ein, um zu bestimmen, welche Art von Accessor für Ihre Daten am besten geeignet ist Anwendung, und klicken Sie dann so verwenden Sie die verschiedenen Typen von Accessoren verfügbar:  
   
--   [Bestimmen die Accessortyps](../../data/oledb/determining-which-type-of-accessor-to-use.md)  
+- [Bestimmen der Zugriffsmethodentyps](../../data/oledb/determining-which-type-of-accessor-to-use.md)  
   
--   [Verwenden mehrerer Zugriffsmethoden für ein Rowset](../../data/oledb/using-multiple-accessors-on-a-rowset.md)  
+- [Verwenden mehrerer Zugriffsmethoden für ein Rowset](../../data/oledb/using-multiple-accessors-on-a-rowset.md)  
   
--   [Verwenden von dynamischen Zugriffsmethoden](../../data/oledb/using-dynamic-accessors.md)  
+- [Verwenden von dynamischen Zugriffsmethoden](../../data/oledb/using-dynamic-accessors.md)  
   
--   [Verwenden von manuellen Zugriffsmethoden](../../data/oledb/using-manual-accessors.md)  
+- [Verwenden von manuellen Zugriffsmethoden](../../data/oledb/using-manual-accessors.md)  
   
--   [Zugreifen auf XML-Daten](../../data/oledb/accessing-xml-data.md)  
+- [Zugreifen auf XML-Daten](../../data/oledb/accessing-xml-data.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit OLE DB-Consumervorlagen](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[Arbeiten mit OLE DB-Consumervorlagen](../../data/oledb/working-with-ole-db-consumer-templates.md)

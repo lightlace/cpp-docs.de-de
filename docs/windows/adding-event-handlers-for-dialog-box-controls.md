@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente | Microsoft Docs
+title: Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -8,9 +8,9 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- Dialog editor, adding event handlers to controls
+- Dialog Editor [C++], adding event handlers to controls
 - controls [C++], event handlers
-- dialog box controls, events
+- dialog box controls [C++], events
 - event handlers, for dialog box controls
 ms.assetid: f9c70f24-ea6f-44df-82eb-78a2deaee769
 author: mikeblome
@@ -18,46 +18,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb39e502ccc40531e72f761a414e4088de8b147d
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 5caec6d9d77d743fa1a8455819b813364bde27d0
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121121"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317055"
 ---
-# <a name="adding-event-handlers-for-dialog-box-controls"></a>Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente
+# <a name="adding-event-handlers-for-dialog-box-controls-c"></a>Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente (C++)
 
-Für Project-Dialogfelder, die bereits einer Klasse zugeordnet sind, können Sie nutzen einige Tastenkombinationen bei der Erstellung von Ereignishandlern. Sie können schnell einen Handler für das Standardereignis des Steuerelements Benachrichtigung oder für eine relevante Windows-Meldung erstellen.
+Für Project-Dialogfelder, die bereits von einer Klasse zugeordnet sind, können Sie nutzen einige Verknüpfungen bei der Erstellung von Ereignishandlern. Sie können schnell einen Handler für das Standardereignis des Steuerelements Benachrichtigung oder für eine relevante Windows-Meldung erstellen.
 
-## <a name="to-create-a-handler-for-the-default-control-notification-event"></a>So erstellen einen Handler für das Standardereignis des Steuerelements Benachrichtigung
+### <a name="to-create-a-handler-for-the-default-control-notification-event"></a>Um einen Handler für das Standardereignis des Steuerelements Benachrichtigung zu erstellen.
 
-1. Doppelklicken Sie auf das Steuerelement. Der Text-Editor wird geöffnet.
+1. Doppelklicken Sie auf das Steuerelement. Die **Text** -Editor wird geöffnet.
 
-2. Fügen Sie im Texteditor Steuerungscode Benachrichtigung-Handler hinzu.
+2. Hinzufügen des Steuerelements Handlercode für Benachrichtigungen in der **Text** Editor.
 
-## <a name="to-create-a-handler-for-any-applicable-windows-message"></a>So erstellen einen Handler für eine relevante Windows-Meldung
+### <a name="to-create-a-handler-for-any-applicable-windows-message"></a>So erstellen Sie einen Ereignishandler für eine relevante Windows-Meldung
 
-1. Klicken Sie auf das Steuerelement das Benachrichtigungsereignis behandelt werden soll.
+1. Klicken Sie auf das Steuerelement für das Benachrichtigungsereignis verarbeitet werden sollen.
 
-2. In der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window), klicken Sie auf die **Steuerelementereignisse** Schaltfläche, um die Liste der allgemeinen Windows-Ereignisse, die mit dem Steuerelement verknüpfte anzuzeigen. Z. B. der Standard **OK** Schaltfläche auf der **zu** im Dialogfeld die folgenden Benachrichtigungsereignisse aufgelistet:
+2. In der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window), klicken Sie auf die **Steuerelementereignisse** Schaltfläche, um die Liste der allgemeinen Windows-Ereignisse, die dem Steuerelement zugeordnete anzuzeigen. Z. B. der Standard **OK** Schaltfläche der **zu** Dialogfeld werden die folgenden Benachrichtigungsereignisse aufgelistet:
 
-   - **BN_CLICKED**
+   - BN_CLICKED
 
-   - **BN_DOUBLECLICKED**
+   - BN_DOUBLECLICKED
 
-   - **BN_KILLFOCUS**
+   - BN_KILLFOCUS
 
-   - **BN_SETFOCUS**
+   - BN_SETFOCUS
 
-    > [!NOTE]
-    > Klicken Sie Alternativ wählen Sie im Dialogfeld, und klicken Sie auf die **Steuerelementereignisse** Schaltfläche, um die Liste der allgemeinen Windows-Ereignisse für alle Steuerelemente im Dialogfeld anzuzeigen.
+   > [!NOTE]
+   > Alternativ können Sie das Dialogfeld "auswählen", und klicken Sie auf die **Steuerelementereignisse** Schaltfläche, um die Liste der allgemeinen Windows-Ereignisse für alle Steuerelemente im Dialogfeld anzuzeigen.
 
-3. In der **Eigenschaften** Fenster, klicken Sie auf der rechten Spalte neben dem Ereignis zu behandeln, und wählen Sie dann den vorgeschlagenen Namen Benachrichtigungsereignis (z. B. **OnBnClickedOK** Handles **BN_CLICKED** ).
+3. In der **Eigenschaften** , klicken Sie auf der rechten Spalte neben der zu behandelnden Ereignisses, und wählen Sie dann den vorgeschlagenen Namen Benachrichtigungsereignis (z. B. `OnBnClickedOK` BN_CLICKED behandelt).
 
-    > [!NOTE]
-    > Alternativ können Sie einen Ereignishandlernamen Ihrer Wahl, anstatt die Auswahl des Standard-Ereignishandlernamens bereitstellen.
+   > [!NOTE]
+   > Alternativ können Sie einen Ereignishandlernamen Ihrer Wahl, statt die Auswahl der standardmäßigen Ereignishandlernamen bereitstellen.
 
-   Nachdem Sie das Ereignis ausgewählt haben, wird von Visual Studio wird der Text-Editor geöffnet und zeigt den Ereignishandler Code. Im folgende Code wird z. B. für den standardmäßigen hinzugefügt **OnBnClickedOK**:
+   Nachdem Sie das Ereignis ausgewählt haben, öffnet Visual Studio die **Text-Editor** und den Ereignishandler Code angezeigt. Beispielsweise wird der folgende Code hinzugefügt, für den standardmäßigen `OnBnClickedOK`:
 
     ```cpp
     void CAboutDlg::OnBnClickedOk(void)
@@ -66,11 +66,11 @@ Für Project-Dialogfelder, die bereits einer Klasse zugeordnet sind, können Sie
     }
     ```
 
-Gegebenenfalls Hinzufügen des ereignishandlers auf eine Klasse als eine Implementierung des Dialogfelds "", verwenden die [Ereignishandler-Assistent](../ide/event-handler-wizard.md). Weitere Informationen finden Sie unter [Hinzufügen eines Ereignishandlers](../ide/adding-an-event-handler-visual-cpp.md).
+Wenn Sie verwenden möchten, fügen den Ereignishandler auf eine Klasse als diejenige implementieren Sie das Dialogfeld, verwenden Sie die [Ereignishandler-Assistent](../ide/event-handler-wizard.md). Weitere Informationen finden Sie unter [Hinzufügen eines Ereignishandlers](../ide/adding-an-event-handler-visual-cpp.md).
 
-Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
 
-### <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Anforderungen
 
 Win32
 

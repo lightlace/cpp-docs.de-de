@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3554 | Microsoft Docs
+title: Compilerfehler C3554 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fb374e028097157ae72b621593a899af9fe2f91
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b1760607a335d4dd56ec711eef76f5a68550d64
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255452"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089501"
 ---
 # <a name="compiler-error-c3554"></a>Compilerfehler C3554
-"decltype" kann nicht mit einem anderen Typspezifizierer kombiniert werden.  
-  
- Sie können das `decltype()` -Schlüsselwort nicht mit einem Typspezifizierer qualifizieren. Das folgende Codefragment verursacht beispielsweise den Fehler C3554 .  
-  
-```  
-int x;  
-unsigned decltype(x); // C3554  
+
+"decltype" kann nicht mit einem anderen Typspezifizierer kombiniert werden.
+
+Sie können das `decltype()` -Schlüsselwort nicht mit einem Typspezifizierer qualifizieren. Das folgende Codefragment verursacht beispielsweise den Fehler C3554 .
+
+```
+int x;
+unsigned decltype(x); // C3554
 ```

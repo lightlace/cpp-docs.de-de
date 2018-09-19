@@ -21,129 +21,150 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0489d46ada0e68456f6ae16e7cd702c892a7b9
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c28a979c96a7523d2fb282a05eb2816f149b4fe2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880114"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087538"
 ---
 # <a name="clocalheap-class"></a>CLocalHeap-Klasse
-Diese Klasse implementiert [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mithilfe der Win32-Funktionen lokalen Heap befindet.  
-  
+
+Diese Klasse implementiert [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mithilfe der Win32-Funktionen lokalen Heap befindet.
+
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
-  
-## <a name="syntax"></a>Syntax  
-  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
+
+## <a name="syntax"></a>Syntax
+
 ```
 class CLocalHeap : public IAtlMemMgr
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[Clocalheap:: Allocate](#allocate)|Rufen Sie diese Methode auf, um einen Speicherblock zu belegen.|  
-|[Clocalheap:: Free](#free)|Rufen Sie diese Methode, um einen Block von diesem Speicher-Manager zugeordneten Arbeitsspeicher freizugeben.|  
-|[CLocalHeap::GetSize](#getsize)|Rufen Sie diese Methode zum Abrufen der zugeordneten Größe eines Speicherblocks, der von diesem Speicher-Manager zugeordnet.|  
-|[Clocalheap:: ReAllocate](#reallocate)|Rufen Sie diese Methode auf, um den von diesem Speicher-Manager zugeordneten Arbeitsspeicher neu zuzuordnen.|  
-  
-## <a name="remarks"></a>Hinweise  
- `CLocalHeap` implementiert die genutzten speicherzuweisungsfunktionen mithilfe der Win32-Funktionen lokalen Heap befindet.  
-  
+```
+
+## <a name="members"></a>Member
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[Clocalheap:: Allocate](#allocate)|Rufen Sie diese Methode auf, um einen Speicherblock zu belegen.|
+|[Clocalheap:: Free](#free)|Rufen Sie diese Methode, um einen Block von diesem Speicher-Manager zugeordneten Arbeitsspeicher freizugeben.|
+|[CLocalHeap::GetSize](#getsize)|Rufen Sie diese Methode zum Abrufen der zugeordneten Größe eines Speicherblocks, der von diesem Speicher-Manager zugeordnet.|
+|[Clocalheap:: ReAllocate](#reallocate)|Rufen Sie diese Methode auf, um den von diesem Speicher-Manager zugeordneten Arbeitsspeicher neu zuzuordnen.|
+
+## <a name="remarks"></a>Hinweise
+
+`CLocalHeap` implementiert die genutzten speicherzuweisungsfunktionen mithilfe der Win32-Funktionen lokalen Heap befindet.
+
 > [!NOTE]
->  Der lokale Heapfunktionen sind langsamer als die anderen Speicherverwaltungsfunktionen und bieten keine so viele Features. Neue Anwendungen sollten daher verwenden die [Heapfunktionen](http://msdn.microsoft.com/library/windows/desktop/aa366711). Diese stehen in der [CWin32Heap](../../atl/reference/cwin32heap-class.md) Klasse.  
-  
-## <a name="example"></a>Beispiel  
- Siehe das Beispiel für [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `IAtlMemMgr`  
-  
- `CLocalHeap`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** atlmem.h  
-  
-##  <a name="allocate"></a>  Clocalheap:: Allocate  
- Rufen Sie diese Methode auf, um einen Speicherblock zu belegen.  
-  
+>  Der lokale Heapfunktionen sind langsamer als die anderen Speicherverwaltungsfunktionen und bieten keine so viele Features. Neue Anwendungen sollten daher verwenden die [Heapfunktionen](/windows/desktop/Memory/heap-functions). Diese stehen in der [CWin32Heap](../../atl/reference/cwin32heap-class.md) Klasse.
+
+## <a name="example"></a>Beispiel
+
+Siehe das Beispiel für [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`IAtlMemMgr`
+
+`CLocalHeap`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** atlmem.h
+
+##  <a name="allocate"></a>  Clocalheap:: Allocate
+
+Rufen Sie diese Methode auf, um einen Speicherblock zu belegen.
+
 ```
 virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
-```  
-  
-### <a name="parameters"></a>Parameter  
- *nBytes*  
- Die angeforderte Anzahl von Bytes im neuen Speicherblock.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Gibt einen Zeiger auf den Anfang des neu belegten Speicherblocks zurück.  
-  
-### <a name="remarks"></a>Hinweise  
- Rufen Sie [clocalheap:: Free](#free) oder [clocalheap:: ReAllocate](#reallocate) um den von dieser Methode belegten Arbeitsspeicher freizugeben.  
-  
- Mithilfe von implementiert [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723) mit einem Flag-Parameter von LMEM_FIXED.  
-  
-##  <a name="free"></a>  Clocalheap:: Free  
- Rufen Sie diese Methode, um einen Block von diesem Speicher-Manager zugeordneten Arbeitsspeicher freizugeben.  
-  
+```
+
+### <a name="parameters"></a>Parameter
+
+*nBytes*<br/>
+Die angeforderte Anzahl von Bytes im neuen Speicherblock.
+
+### <a name="return-value"></a>Rückgabewert
+
+Gibt einen Zeiger auf den Anfang des neu belegten Speicherblocks zurück.
+
+### <a name="remarks"></a>Hinweise
+
+Rufen Sie [clocalheap:: Free](#free) oder [clocalheap:: ReAllocate](#reallocate) um den von dieser Methode belegten Arbeitsspeicher freizugeben.
+
+Mithilfe von implementiert [LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc) mit einem Flag-Parameter von LMEM_FIXED.
+
+##  <a name="free"></a>  Clocalheap:: Free
+
+Rufen Sie diese Methode, um einen Block von diesem Speicher-Manager zugeordneten Arbeitsspeicher freizugeben.
+
 ```
 virtual void Free(void* p) throw();
-```  
-  
-### <a name="parameters"></a>Parameter  
- *p*  
- Ein Zeiger auf den Arbeitsspeicher, der zuvor von diesem Speicher-Manager zugeordnet wurde. NULL ist ein gültiger Wert und hat keine Auswirkungen.  
-  
-### <a name="remarks"></a>Hinweise  
- Mithilfe von implementiert [LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730).  
-  
-##  <a name="getsize"></a>  CLocalHeap::GetSize  
- Rufen Sie diese Methode zum Abrufen der zugeordneten Größe eines Speicherblocks, der von diesem Speicher-Manager zugeordnet.  
-  
+```
+
+### <a name="parameters"></a>Parameter
+
+*p*<br/>
+Ein Zeiger auf den Arbeitsspeicher, der zuvor von diesem Speicher-Manager zugeordnet wurde. NULL ist ein gültiger Wert und hat keine Auswirkungen.
+
+### <a name="remarks"></a>Hinweise
+
+Mithilfe von implementiert [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree).
+
+##  <a name="getsize"></a>  CLocalHeap::GetSize
+
+Rufen Sie diese Methode zum Abrufen der zugeordneten Größe eines Speicherblocks, der von diesem Speicher-Manager zugeordnet.
+
 ```
 virtual size_t GetSize(void* p) throw();
-```  
-  
-### <a name="parameters"></a>Parameter  
- *p*  
- Ein Zeiger auf den Arbeitsspeicher, der zuvor von diesem Speicher-Manager zugeordnet wurde.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Gibt die Größe des belegten Speicherblocks in Bytes zurück.  
-  
-### <a name="remarks"></a>Hinweise  
- Mithilfe von implementiert [LocalSize](http://msdn.microsoft.com/library/windows/desktop/aa366745).  
-  
-##  <a name="reallocate"></a>  Clocalheap:: ReAllocate  
- Rufen Sie diese Methode auf, um den von diesem Speicher-Manager zugeordneten Arbeitsspeicher neu zuzuordnen.  
-  
+```
+
+### <a name="parameters"></a>Parameter
+
+*p*<br/>
+Ein Zeiger auf den Arbeitsspeicher, der zuvor von diesem Speicher-Manager zugeordnet wurde.
+
+### <a name="return-value"></a>Rückgabewert
+
+Gibt die Größe des belegten Speicherblocks in Bytes zurück.
+
+### <a name="remarks"></a>Hinweise
+
+Mithilfe von implementiert [LocalSize](/windows/desktop/api/winbase/nf-winbase-localsize).
+
+##  <a name="reallocate"></a>  Clocalheap:: ReAllocate
+
+Rufen Sie diese Methode auf, um den von diesem Speicher-Manager zugeordneten Arbeitsspeicher neu zuzuordnen.
+
 ```
 virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
-```  
-  
-### <a name="parameters"></a>Parameter  
- *p*  
- Ein Zeiger auf den Arbeitsspeicher, der zuvor von diesem Speicher-Manager zugeordnet wurde.  
-  
- *nBytes*  
- Die angeforderte Anzahl von Bytes im neuen Speicherblock.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Gibt einen Zeiger auf den Anfang des neu belegten Speicherblocks zurück.  
-  
-### <a name="remarks"></a>Hinweise  
- Rufen Sie [clocalheap:: Free](#free) um den von dieser Methode belegten Arbeitsspeicher freizugeben.  
-  
- Mithilfe von implementiert [LocalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366742).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)   
- [CComHeap-Klasse](../../atl/reference/ccomheap-class.md)   
- [CWin32Heap-Klasse](../../atl/reference/cwin32heap-class.md)   
- [CGlobalHeap-Klasse](../../atl/reference/cglobalheap-class.md)   
- [Ccomheap-Klasse](../../atl/reference/ccrtheap-class.md)   
- [IAtlMemMgr-Klasse](../../atl/reference/iatlmemmgr-class.md)
+```
+
+### <a name="parameters"></a>Parameter
+
+*p*<br/>
+Ein Zeiger auf den Arbeitsspeicher, der zuvor von diesem Speicher-Manager zugeordnet wurde.
+
+*nBytes*<br/>
+Die angeforderte Anzahl von Bytes im neuen Speicherblock.
+
+### <a name="return-value"></a>Rückgabewert
+
+Gibt einen Zeiger auf den Anfang des neu belegten Speicherblocks zurück.
+
+### <a name="remarks"></a>Hinweise
+
+Rufen Sie [clocalheap:: Free](#free) um den von dieser Methode belegten Arbeitsspeicher freizugeben.
+
+Mithilfe von implementiert [LocalReAlloc](/windows/desktop/api/winbase/nf-winbase-localrealloc).
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
+[CComHeap-Klasse](../../atl/reference/ccomheap-class.md)<br/>
+[CWin32Heap-Klasse](../../atl/reference/cwin32heap-class.md)<br/>
+[CGlobalHeap-Klasse](../../atl/reference/cglobalheap-class.md)<br/>
+[CComHeap-Klasse](../../atl/reference/ccrtheap-class.md)<br/>
+[IAtlMemMgr-Klasse](../../atl/reference/iatlmemmgr-class.md)

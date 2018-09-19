@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcencompiler: Schwerwiegender Fehler RC1004 | Microsoft Docs'
+title: 'Ressourcencompiler: Schwerwiegender Fehler RC1004 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaa3846d0cf65b3dbca31e04999b955b1d58a4b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c86822ea9dcdbb16c437e10cf81bc1c8107da0b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327537"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113590"
 ---
 # <a name="resource-compiler-fatal-error-rc1004"></a>Ressourcencompiler: Schwerwiegender Fehler RC1004
-Unerwartetes Dateiende gefunden  
-  
- Dieser Fehler kann verursacht werden, durch fehlende Zeilenvorschub- und Wagenrücklauf Zeichen in der letzten Zeile einer Textdatei.
+
+Unerwartetes Dateiende gefunden.
+
+Dieser Fehler kann durch fehlende Zeilenvorschub verursacht werden, und Wagenrücklauf Zeichen in der letzten Zeile in einer Textdatei.

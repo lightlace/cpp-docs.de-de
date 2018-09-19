@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0008 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0008 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17c7136d98d9d0502b2118b8e093b10bd8e82b88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7491e6bd60b98fbed82cace18f98e8483a221b14
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315567"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050605"
 ---
 # <a name="expression-evaluator-error-cxx0008"></a>Ausdrucksauswertungsfehler CXX0008
-**"am Ende der Zeichenfolge fehlt**  
-  
- Das Anführungszeichen am Ende der Zeichenfolge Zeichenfolgenliteral erwartet fehlte. Geben Sie den Ausdruck, der das Zeichenfolgenliteral in Anführungszeichen einschließen.  
-  
- Dieser Fehler ist mit CAN0008 identisch.
+
+**"am Ende der Zeichenfolge fehlt**
+
+Die doppelte Anführungszeichen an das Ende der Zeichenfolge literal erwartet war nicht vorhanden. Geben Sie den Ausdruck, der das Zeichenfolgenliteral in Anführungszeichen einschließen.
+
+Dieser Fehler ist mit CAN0008 identisch.

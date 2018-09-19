@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdd8dd32b0f805e55e17d12428c045d64820196d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ff3a68e585cecb8affb0a5f4ffb7ff81929c955a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849404"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201102"
 ---
 # <a name="cpalette-class"></a>CPalette-Klasse
 Kapselt eine Windows-Farbpalette.  
@@ -115,12 +115,12 @@ void AnimatePalette(
  Gibt die Anzahl der Einträge in der Palette animiert werden soll.  
   
  *lpPaletteColors*  
- Verweist auf das erste Element eines Arrays von [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) Strukturen, ersetzen Sie die Paletteneinträge identifizierte *nStartIndex* und *nNumEntries*.  
+ Verweist auf das erste Element eines Arrays von [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) Strukturen, ersetzen Sie die Paletteneinträge identifizierte *nStartIndex* und *nNumEntries*.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn eine Anwendung ruft `AnimatePalette`, es muss keine aktualisieren seines Clientbereichs, da Windows die neuen Einträge in der Systempalette direkt zugeordnet.  
   
- Die `AnimatePalette` Funktion ändert nur Einträge mit dem PC_RESERVED-Flag festlegen, in der entsprechenden `palPaletteEntry` Mitglied der [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) -Struktur, die angefügt ist die `CPalette` Objekt. Finden Sie unter LOGPALETTE im Windows SDK für Weitere Informationen zu dieser Struktur.  
+ Die `AnimatePalette` Funktion ändert nur Einträge mit dem PC_RESERVED-Flag festlegen, in der entsprechenden `palPaletteEntry` Mitglied der [LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette) -Struktur, die angefügt ist die `CPalette` Objekt. Finden Sie unter LOGPALETTE im Windows SDK für Weitere Informationen zu dieser Struktur.  
   
 ##  <a name="cpalette"></a>  CPalette::CPalette  
  Erstellt ein `CPalette`-Objekt.  
@@ -147,7 +147,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
  Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfalls null (0).  
   
 ### <a name="remarks"></a>Hinweise  
- Eine Anwendung sollte eine Halbtonpalette erstellen, wenn der streckmodus eines Gerätekontexts auf HALBTON festgelegt ist. Die logische Halbtonpalette zurückgegebenes der [CreateHalftonePalette](http://msdn.microsoft.com/library/windows/desktop/dd183503) Member-Funktion muss dann ausgewählt und in den Gerätekontext, bevor Sie erkannte die [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) oder [ StretchDIBits](http://msdn.microsoft.com/library/windows/desktop/dd145121) -Funktion aufgerufen wird.  
+ Eine Anwendung sollte eine Halbtonpalette erstellen, wenn der streckmodus eines Gerätekontexts auf HALBTON festgelegt ist. Die logische Halbtonpalette zurückgegebenes der [CreateHalftonePalette](/windows/desktop/api/wingdi/nf-wingdi-createhalftonepalette) Member-Funktion muss dann ausgewählt und in den Gerätekontext, bevor Sie erkannte die [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) oder [ StretchDIBits](/windows/desktop/api/wingdi/nf-wingdi-stretchdibits) -Funktion aufgerufen wird.  
   
  Finden Sie im Windows-SDK Weitere Informationen zu `CreateHalftonePalette` und `StretchDIBits`.  
   
@@ -160,7 +160,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
   
 ### <a name="parameters"></a>Parameter  
  *lpLogPalette*  
- Verweist auf eine [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) Struktur, die Informationen über die Farben in der logischen Palette enthält.  
+ Verweist auf eine [LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette) Struktur, die Informationen über die Farben in der logischen Palette enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -227,7 +227,7 @@ UINT GetPaletteEntries(
  Gibt die Anzahl der Einträge in der logischen Palette abgerufen werden sollen.  
   
  *lpPaletteColors*  
- Verweist auf ein Array von [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) Datenstrukturen für die Paletteneinträge zu erhalten. Das Array muss mindestens so viele Datenstrukturen laut enthalten *nNumEntries*.  
+ Verweist auf ein Array von [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) Datenstrukturen für die Paletteneinträge zu erhalten. Das Array muss mindestens so viele Datenstrukturen laut enthalten *nNumEntries*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl von Einträgen, die von der logischen Palette abgerufen werden soll; 0, wenn die Funktion fehlgeschlagen ist.  
@@ -245,7 +245,7 @@ operator HPALETTE() const;
 ### <a name="remarks"></a>Hinweise  
  Dieser Operator ist ein Umwandlungsoperator, die direkte Verwendung eines Objekts HPALETTE unterstützt.  
   
- Weitere Informationen zur Verwendung von Grafikobjekten finden Sie im Artikel [Grafik Objekte](http://msdn.microsoft.com/library/windows/desktop/dd144962) im Windows SDK.  
+ Weitere Informationen zur Verwendung von Grafikobjekten finden Sie im Artikel [Grafik Objekte](/windows/desktop/gdi/graphic-objects) im Windows SDK.  
   
 ##  <a name="resizepalette"></a>  CPalette::ResizePalette  
  Ändert die Größe der logischen Palette angefügt, um die `CPalette` Objekt, das die Anzahl von Einträgen, die anhand des *nNumEntries*.  
@@ -264,7 +264,7 @@ BOOL ResizePalette(UINT nNumEntries);
 ### <a name="remarks"></a>Hinweise  
  Wenn eine Anwendung ruft `ResizePalette` um die Größe der Palette zu reduzieren, werden die Einträge in der Größe Palette verbleibende unverändert. Wenn die Anwendung ruft `ResizePalette` um der Palette zu vergrößern, werden die Einträge für die zusätzliche Palette auf Schwarz festgelegt (die Rot-, Grün- und Blau-Werte sind alle 0) festgelegt, und die Flags für alle weiteren Einträge werden auf 0 festgelegt.  
   
- Weitere Informationen zur Windows-API `ResizePalette`, finden Sie unter [ResizePalette](http://msdn.microsoft.com/library/windows/desktop/dd162928) im Windows SDK.  
+ Weitere Informationen zur Windows-API `ResizePalette`, finden Sie unter [ResizePalette](/windows/desktop/api/wingdi/nf-wingdi-resizepalette) im Windows SDK.  
   
 ##  <a name="setpaletteentries"></a>  CPalette::SetPaletteEntries  
  Legt RGB-Werte und die Flags in einem Bereich von Einträgen in einer logischen Palette fest.  
@@ -284,7 +284,7 @@ UINT SetPaletteEntries(
  Gibt die Anzahl der Einträge in der logischen Palette festgelegt werden.  
   
  *lpPaletteColors*  
- Verweist auf ein Array von [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) Datenstrukturen für die Paletteneinträge zu erhalten. Das Array muss mindestens so viele Datenstrukturen laut enthalten *nNumEntries*.  
+ Verweist auf ein Array von [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) Datenstrukturen für die Paletteneinträge zu erhalten. Das Array muss mindestens so viele Datenstrukturen laut enthalten *nNumEntries*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Legen Sie die Anzahl der Einträge in der logischen Palette; 0, wenn die Funktion fehlgeschlagen ist.  
@@ -292,7 +292,7 @@ UINT SetPaletteEntries(
 ### <a name="remarks"></a>Hinweise  
  Wenn die logische Palette für einen Gerätekontext ausgewählt wird, wenn die Anwendung aufruft `SetPaletteEntries`, werden die Änderungen nicht wirksam bis die Anwendung ruft [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette).  
   
- Weitere Informationen zu den Windows-Struktur `PALETTEENTRY`, finden Sie unter [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) im Windows SDK.  
+ Weitere Informationen zu den Windows-Struktur `PALETTEENTRY`, finden Sie unter [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) im Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [MFC-Beispiel DIBLOOK](../../visual-cpp-samples.md)   

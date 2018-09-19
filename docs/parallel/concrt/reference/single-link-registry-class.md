@@ -1,5 +1,5 @@
 ---
-title: Single_link_registry-Klasse | Microsoft Docs
+title: Single_link_registry-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3220156d201a4dcb7edb6281298d3f248f38fc83
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 60820d2dc6b4fe0ab5c27ad746ee3f922fc39780
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690025"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045782"
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry-Klasse
 Das `single_link_registry`-Objekt ist eine `network_link_registry`, die nur eine einzige Quelle oder einen einzigen Zielblock verwaltet.  
@@ -41,8 +41,8 @@ class single_link_registry : public network_link_registry<_Block>;
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `_Block`  
- Geben Sie die Blockdaten gespeichert werden, der `single_link_registry` Objekt.  
+*_Block*<br/>
+Geben Sie die Blockdaten gespeichert werden, der `single_link_registry` Objekt.  
   
 ## <a name="members"></a>Member  
   
@@ -59,9 +59,9 @@ class single_link_registry : public network_link_registry<_Block>;
 |----------|-----------------|  
 |[add](#add)|Fügt einen Link zu der `single_link_registry` Objekt. (Überschreibt [network_link_registry:: Add](network-link-registry-class.md#add).)|  
 |[begin](#begin)|Gibt einen Iterator zurück, auf das erste Element in der `single_link_registry` Objekt. (Überschreibt [network_link_registry:: Begin](network-link-registry-class.md#begin).)|  
-|[Enthält](#contains)|Sucht die `single_link_registry` Objekt für einen angegebenen Block. (Überschreibt [network_link_registry:: Contains](network-link-registry-class.md#contains).)|  
+|[Enthält](#contains)|Sucht die `single_link_registry` -Objekt für einen angegebenen Block. (Überschreibt [network_link_registry:: Contains](network-link-registry-class.md#contains).)|  
 |[count](#count)|Zählt die Anzahl der Elemente in der `single_link_registry` Objekt. (Überschreibt [network_link_registry:: Count](network-link-registry-class.md#count).)|  
-|[remove](#remove)|Entfernt eine Verknüpfung aus dem `single_link_registry` Objekt. (Überschreibt [network_link_registry:: Remove](network-link-registry-class.md#remove).)|  
+|[remove](#remove)|Entfernt einen Link von der `single_link_registry` Objekt. (Überschreibt [network_link_registry:: Remove](network-link-registry-class.md#remove).)|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [network_link_registry](network-link-registry-class.md)  
@@ -82,13 +82,13 @@ virtual void add(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Link`  
- Ein Zeiger auf einen Block hinzugefügt werden.  
+*_Mit verknüpfen*<br/>
+Ein Zeiger auf einen Block hinzugefügt werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Methode löst eine [Invalid_link_target](invalid-link-target-class.md) -Ausnahme aus, wenn bereits eine Verknüpfung in der Registrierung vorhanden ist.  
+ Löst die Methode eine [Invalid_link_target](invalid-link-target-class.md) -Ausnahme aus, wenn es ein Link bereits in dieser Registrierung ist.  
   
-##  <a name="begin"></a> Beginnen 
+##  <a name="begin"></a> beginnen 
 
  Gibt einen Iterator zurück, auf das erste Element in der `single_link_registry` Objekt.  
   
@@ -100,19 +100,19 @@ virtual iterator begin();
  Ein Iterator, der das erste Element in der `single_link_registry` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Endzustand erkennbar ist eine `NULL` Link.  
+ Der Endzustand angegeben wird, durch eine `NULL` Link.  
   
 ##  <a name="contains"></a> Enthält 
 
- Sucht die `single_link_registry` Objekt für einen angegebenen Block.  
+ Sucht die `single_link_registry` -Objekt für einen angegebenen Block.  
   
 ```
 virtual bool contains(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Link`  
- Ein Zeiger auf ein Block, der für gesucht werden soll, in der `single_link_registry` Objekt.  
+*_Mit verknüpfen*<br/>
+Ein Zeiger auf einen Block, der für die gesucht werden soll, in der `single_link_registry` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn der Link gefunden wurde, `false` andernfalls.  
@@ -130,15 +130,15 @@ virtual size_t count();
   
 ##  <a name="remove"></a> Entfernen 
 
- Entfernt eine Verknüpfung aus dem `single_link_registry` Objekt.  
+ Entfernt einen Link von der `single_link_registry` Objekt.  
   
 ```
 virtual bool remove(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Link`  
- Ein Zeiger auf einen Block, wenn entfernt gefunden.  
+*_Mit verknüpfen*<br/>
+Ein Zeiger auf einen Block, wenn entfernt wurde gefunden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn der Link wurde gefunden und entfernt, `false` andernfalls.  
@@ -160,7 +160,7 @@ virtual ~single_link_registry();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Methode löst eine [Invalid_operation](invalid-operation-class.md) -Ausnahme aus, wenn sie aufgerufen wird, bevor der Link entfernt wird.  
+ Löst die Methode eine [Invalid_operation](invalid-operation-class.md) -Ausnahme aus, wenn sie aufgerufen wird, bevor der Link entfernt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   

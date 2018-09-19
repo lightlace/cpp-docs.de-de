@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3838 | Microsoft Docs
+title: Compilerfehler C3838 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dea27fde00773ccdaf7acb2dff135cd3cf894da4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dcf01ba87dc2e179e055417b6e2b78a90fd67cf5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267325"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064190"
 ---
 # <a name="compiler-error-c3838"></a>Compilerfehler C3838
-kann nicht explizit von 'Typ' erben.  
-  
- Das angegebene `type` kann nicht als Basisklasse in einer Klasse dienen.  
-  
+
+von 'Type' kann nicht explizit geerbt werden.
+
+Das angegebene `type` kann nicht in einer Klasse als Basisklasse dienen.
+
 ## <a name="example"></a>Beispiel
- Im folgende Beispiel wird C3838 generiert:  
-  
-```  
-// C3838a.cpp  
-// compile with: /clr /c  
-public ref class B : public System::Enum {};   // C3838  
-```  
+
+Im folgende Beispiel wird die C3838 generiert:
+
+```
+// C3838a.cpp
+// compile with: /clr /c
+public ref class B : public System::Enum {};   // C3838
+```

@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4130 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4130 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 226b715689e506cb34ea6e7684f9ddcf041e638b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 21d73595e41c4c83eda61fa749c9f2dc72bb14bc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292174"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038099"
 ---
 # <a name="compiler-warning-level-4-c4130"></a>Compilerwarnung (Stufe 4) C4130
-"Operator": Logische Operation mit Adresse einer Zeichenfolgenkonstanten  
-  
- Das Verwenden des Operators mit der Adresse eines Zeichenfolgenliterals erzeugt unerwarteten Code.  
-  
- Im folgenden Beispiel wird C4130 generiert.  
-  
-```  
-// C4130.cpp  
-// compile with: /W4  
-int main()  
-{  
-   char *pc;  
-   pc = "Hello";  
-   if (pc == "Hello") // C4130  
-   {  
-   }  
-}  
-```  
-  
- Die **if** -Anweisung vergleicht den im Zeiger `pc` gespeicherten Wert mit der Adresse der Zeichenfolge "Hello", die bei jedem Vorkommen der Zeichenfolge im Code separat zugewiesen wird. Die **if** Anweisung vergleicht nicht die Zeichenfolge, auf die von `pc` gezeigt wird, mit der Zeichenfolge "Hello".  
-  
- Verwenden Sie zum Vergleichen von Zeichenfolgen die `strcmp` -Funktion.
+
+"Operator": Logische Operation mit Adresse einer Zeichenfolgenkonstanten
+
+Das Verwenden des Operators mit der Adresse eines Zeichenfolgenliterals erzeugt unerwarteten Code.
+
+Im folgenden Beispiel wird C4130 generiert.
+
+```
+// C4130.cpp
+// compile with: /W4
+int main()
+{
+   char *pc;
+   pc = "Hello";
+   if (pc == "Hello") // C4130
+   {
+   }
+}
+```
+
+Die **if** -Anweisung vergleicht den im Zeiger `pc` gespeicherten Wert mit der Adresse der Zeichenfolge "Hello", die bei jedem Vorkommen der Zeichenfolge im Code separat zugewiesen wird. Die **if** Anweisung vergleicht nicht die Zeichenfolge, auf die von `pc` gezeigt wird, mit der Zeichenfolge "Hello".
+
+Verwenden Sie zum Vergleichen von Zeichenfolgen die `strcmp` -Funktion.

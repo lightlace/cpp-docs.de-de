@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4214 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4214 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0efe0666ded5428dcc40a1900f263cfc522a1502
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 879c959bfe851b56dbc60b4eeb714db8d7f9dfaf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292921"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027426"
 ---
 # <a name="compiler-warning-level-4-c4214"></a>Compilerwarnung (Stufe 4) C4214
-nicht dem Standard entsprechende Erweiterung: Bitfeld Int  
-  
- Mit den Standard-Microsoft-Erweiterungen (/ Ze) können Strukturmember Bitfeld eines beliebigen Typs Ganzzahl sein.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// C4214.c  
-// compile with: /W4  
-struct bitfields  
-{  
-   unsigned short j:4;  // C4214  
-};  
-  
-int main()  
-{  
-}  
-```  
-  
- Solche Bitfelder sind ungültig, ANSI-Kompatibilität (["/ Za"](../../build/reference/za-ze-disable-language-extensions.md)).
+
+nicht dem Standard entsprechende Erweiterung: Bitfeld Int
+
+Mit den Standard-Microsoft-Erweiterungen (/ Ze) können die Strukturmember Bitfeld der ein beliebiger ganzzahliger Typ sein.
+
+## <a name="example"></a>Beispiel
+
+```
+// C4214.c
+// compile with: /W4
+struct bitfields
+{
+   unsigned short j:4;  // C4214
+};
+
+int main()
+{
+}
+```
+
+Solche Bitfelder sind ungültig, ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

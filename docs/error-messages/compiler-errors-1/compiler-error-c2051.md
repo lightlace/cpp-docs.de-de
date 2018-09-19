@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C2051 | Microsoft Docs
+title: Compilerfehler C2051 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,52 +16,53 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49817ff2ad99a2cd3f23d1d0cda1456dc2c30b9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 034c4953669b2d1a196649cc7b8886a9629d9ca4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165086"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030987"
 ---
-# <a name="compiler-error-c2051"></a>Compilerfehler Fehler C2051
-Case-Ausdruck keine Konstante.  
-  
- CASE-Ausdrücke müssen ganzzahlige Konstanten sein.  
-  
- Im folgende Beispiel wird C2051 generiert:  
-  
-```  
-// C2051.cpp  
-class X {};  
-  
-int main() {  
-   static X x;  
-   int i = 0;  
-  
-   switch (i) {  
-      case x:   // C2051 use constant expression to resolve error  
-         break;  
-      default:  
-         break;  
-   }  
-}  
-```  
-  
- Mögliche Lösung:  
-  
-```  
-// C2051b.cpp  
-class X {};  
-  
-int main() {  
-   static X x;  
-   int i = 0;  
-  
-   switch (i) {  
-      case 1:  
-         break;  
-      default:  
-         break;  
-   }  
-}  
+# <a name="compiler-error-c2051"></a>Compilerfehler C2051
+
+Case-Ausdruck keine Konstante.
+
+CASE-Ausdrücke müssen ganzzahlige Konstanten sein.
+
+Im folgende Beispiel wird die C2051 generiert:
+
+```
+// C2051.cpp
+class X {};
+
+int main() {
+   static X x;
+   int i = 0;
+
+   switch (i) {
+      case x:   // C2051 use constant expression to resolve error
+         break;
+      default:
+         break;
+   }
+}
+```
+
+Mögliche Lösung:
+
+```
+// C2051b.cpp
+class X {};
+
+int main() {
+   static X x;
+   int i = 0;
+
+   switch (i) {
+      case 1:
+         break;
+      default:
+         break;
+   }
+}
 ```

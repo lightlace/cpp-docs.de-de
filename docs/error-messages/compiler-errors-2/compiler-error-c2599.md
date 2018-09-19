@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2599 | Microsoft Docs
+title: Compilerfehler C2599 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce7741e878b8743346bf9a088d973d65c4d7c290
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 515e380ea87b8ea648a00644ce8bca6428903f18
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232938"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044482"
 ---
 # <a name="compiler-error-c2599"></a>Compilerfehler C2599
-"Enum": Die Vorwärtsdeklaration Enum-Typs ist nicht zulässig.  
-  
- Der Compiler unterstützt nicht mehr Vorwärtsdeklaration einer verwalteten Enumeration.  
-  
- Vorwärtsdeklaration einer Enum-Typs darf nicht unter ["/ Za"](../../build/reference/za-ze-disable-language-extensions.md).  
-  
- Im folgende Beispiel wird C2599 generiert:  
-  
-```  
-// C2599.cpp  
-// compile with: /clr /c  
-enum class Status;   // C2599  
-  
-enum class Status2 { stop2, hold2, go2};   
-  
-ref struct MyStruct {  
-   // Delete the following line to resolve.  
-   Status m_status;  
-  
-   Status2 m_status2;   // OK  
-};  
-  
-enum class Status { stop, hold, go };  
+
+"Enum": Die Vorwärtsdeklaration Enum-Typs ist nicht zulässig.
+
+Der Compiler unterstützt nicht mehr die Vorwärtsdeklaration einer verwalteten Enumeration.
+
+Vorwärtsdeklaration einer Enum-Typs ist nicht zulässig, unter [/Za](../../build/reference/za-ze-disable-language-extensions.md).
+
+Im folgende Beispiel wird der Fehler C2599 generiert:
+
+```
+// C2599.cpp
+// compile with: /clr /c
+enum class Status;   // C2599
+
+enum class Status2 { stop2, hold2, go2};
+
+ref struct MyStruct {
+   // Delete the following line to resolve.
+   Status m_status;
+
+   Status2 m_status2;   // OK
+};
+
+enum class Status { stop, hold, go };
 ```

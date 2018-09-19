@@ -1,5 +1,5 @@
 ---
-title: 'Bitweiser exklusiver OR -Operator: ^ | Microsoft Docs'
+title: 'Bitweiser exklusiver OR -Operator: ^ | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,45 +20,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d080fa28e8f70cb6a4086709c4a5fc6215c4519
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 76c1863b9e27c1ec28206a5734f7301f077df678
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409851"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064817"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>Bitweiser exklusiver OR-Operator: ^
-## <a name="syntax"></a>Syntax  
-  
-```  
-expression ^ expression  
-```  
-  
-## <a name="remarks"></a>Hinweise  
-Der bitweise exklusive OR-Operator (**^**) vergleicht jedes Bit seines ersten Operanden mit dem entsprechenden Bit seines zweiten Operanden. Wenn ein Bit 0 (null) und das andere Bit 1 ist, wird das entsprechende Ergebnisbit auf 1 festgelegt. Andernfalls wird das entsprechende Ergebnisbit auf 0 (null) festgelegt.  
-  
-Beide Operanden im bitweisen exklusiven OR-Operator müssen vom Ganzzahltyp sein. Die üblichen arithmetischen Konvertierungen finden Sie im [Standardkonvertierungen](standard-conversions.md) auf die Operanden angewendet werden.  
-  
-## <a name="operator-keyword-for-"></a>Operator-Schlüsselwort für "^"  
-Die **Xor** Operator ist die textentsprechung von **^**. Es gibt zwei Möglichkeiten, den Zugriff auf die **Xor** -Operator in Programmen: Fügen Sie die Headerdatei `iso646.h`, oder Kompilieren Sie mit der ["/ Za"](../build/reference/za-ze-disable-language-extensions.md) -Compileroption (spracherweiterungen deaktivieren).  
-  
-## <a name="example"></a>Beispiel  
-  
-```cpp  
-// expre_Bitwise_Exclusive_OR_Operator.cpp  
-// compile with: /EHsc  
-// Demonstrate bitwise exclusive OR  
-#include <iostream>  
-using namespace std;  
-int main() {  
-   unsigned short a = 0x5555;      // pattern 0101 ...  
-   unsigned short b = 0xFFFF;      // pattern 1111 ...  
-  
-   cout  << hex << ( a ^ b ) << endl;   // prints "aaaa" pattern 1010 ...  
-}  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [C++-Built-in-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
 
+## <a name="syntax"></a>Syntax
 
+```
+expression ^ expression
+```
+
+## <a name="remarks"></a>Hinweise
+
+Der bitweise exklusive OR-Operator (**^**) vergleicht jedes Bit seines ersten Operanden mit dem entsprechenden Bit seines zweiten Operanden. Wenn ein Bit 0 (null) und das andere Bit 1 ist, wird das entsprechende Ergebnisbit auf 1 festgelegt. Andernfalls wird das entsprechende Ergebnisbit auf 0 (null) festgelegt.
+
+Beide Operanden im bitweisen exklusiven OR-Operator müssen vom Ganzzahltyp sein. Die üblichen arithmetischen Konvertierungen finden Sie im [Standardkonvertierungen](standard-conversions.md) auf die Operanden angewendet werden.
+
+## <a name="operator-keyword-for-"></a>Operator-Schlüsselwort für "^"
+
+Die **Xor** -Operator ist die ausgeschriebene Variante von **^**. Es gibt zwei Möglichkeiten, den Zugriff auf die **Xor** -Operator in Programmen: Fügen Sie die Headerdatei `iso646.h`, oder Kompilieren Sie mit der [/Za](../build/reference/za-ze-disable-language-extensions.md) -Compileroption (spracherweiterungen deaktivieren).
+
+## <a name="example"></a>Beispiel
+
+```cpp
+// expre_Bitwise_Exclusive_OR_Operator.cpp
+// compile with: /EHsc
+// Demonstrate bitwise exclusive OR
+#include <iostream>
+using namespace std;
+int main() {
+   unsigned short a = 0x5555;      // pattern 0101 ...
+   unsigned short b = 0xFFFF;      // pattern 1111 ...
+
+   cout  << hex << ( a ^ b ) << endl;   // prints "aaaa" pattern 1010 ...
+}
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[C++-Built-in-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

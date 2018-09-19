@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3bd43c9ceb4f0a0f73b86e3a4ecf4d851d504b3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: ce07cfce4b7361486489c2f00c3e4b395c71e200
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939311"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058509"
 ---
 # <a name="bool-c"></a>bool (C++)
 
-Dieses Schlüsselwort ist ein integrierter Typ. Eine Variable dieses Typs kann Werte haben ["true"](../cpp/true-cpp.md) und ["false"](../cpp/false-cpp.md). Bedingte Ausdrücke weisen den Typ **"bool"** und haben daher Werte vom Typ **"bool"**. Z. B. `i!=0` hat jetzt abhängig vom Wert "true" oder "false" `i`.  
+Dieses Schlüsselwort ist ein integrierter Typ. Eine Variable dieses Typs kann Werte haben ["true"](../cpp/true-cpp.md) und ["false"](../cpp/false-cpp.md). Bedingte Ausdrücke weisen den Typ **"bool"** und haben daher Werte vom Typ **"bool"**. Z. B. `i!=0` hat jetzt abhängig vom Wert "true" oder "false" `i`.
 
 **Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): der Operand eines Präfix oder Postfix-Inkrement oder Dekrement Operator möglicherweise nicht vom Typ **"bool"**. Angenommen, das heißt, eine Variable `b` des Typs **"bool"**, diese Ausdrücke sind nicht mehr erlaubt:
 
@@ -37,30 +37,30 @@ Dieses Schlüsselwort ist ein integrierter Typ. Eine Variable dieses Typs kann W
     b--;
     --b;
 ```
-  
-Die Werte "true" und "false" haben folgende Beziehung:  
-  
-```cpp  
-!false == true  
-!true == false  
-```  
-  
-Betrachten Sie folgende Anweisung:  
-  
-```cpp  
-if (condexpr1) statement1;   
-```  
-  
-Wenn `condexpr1` ist "true", `statement1` wird immer ausgeführt; Wenn `condexpr1` ist "false", `statement1` niemals ausgeführt.  
-  
-Wenn Sie einen Postfix- oder Präfix **++** Operator angewendet wird, um eine Variable vom Typ **"bool"**, die Variable auf "true" festgelegt ist. 
+
+Die Werte "true" und "false" haben folgende Beziehung:
+
+```cpp
+!false == true
+!true == false
+```
+
+Betrachten Sie folgende Anweisung:
+
+```cpp
+if (condexpr1) statement1;
+```
+
+Wenn `condexpr1` ist "true", `statement1` wird immer ausgeführt; Wenn `condexpr1` ist "false", `statement1` niemals ausgeführt.
+
+Wenn Sie einen Postfix- oder Präfix **++** Operator angewendet wird, um eine Variable vom Typ **"bool"**, die Variable auf "true" festgelegt ist.
 **Visual Studio 2017 Version 15.3 und höher**: "Operator++" für **"bool"** wurde von der Sprache entfernt und wird nicht mehr unterstützt.
 
-Der Postfix- oder Präfix **--** Operator kann nicht auf eine Variable dieses Typs angewendet werden.  
-  
- Die **"bool"** Typ ganzzahligen Erweiterungen beteiligt. Ein rvalue vom Typ **"bool"** konvertiert werden kann, um einen Rvalue vom Typ **Int**, mit "false" immer 0 (null) und "true" 1. Als gesonderter Typ ist **"bool"** an der überladungsauflösung beteiligt ist.  
-  
+Der Postfix- oder Präfix **--** Operator kann nicht auf eine Variable dieses Typs angewendet werden.
+
+Die **"bool"** Typ ganzzahligen Erweiterungen beteiligt. Ein rvalue vom Typ **"bool"** konvertiert werden kann, um einen Rvalue vom Typ **Int**, mit "false" immer 0 (null) und "true" 1. Als gesonderter Typ ist **"bool"** an der überladungsauflösung beteiligt ist.
+
 ## <a name="see-also"></a>Siehe auch
 
 [Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
-[Grundlegende Typen](../cpp/fundamental-types-cpp.md)<br/>
+[Grundlegende Typen](../cpp/fundamental-types-cpp.md)

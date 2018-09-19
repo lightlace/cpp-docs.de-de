@@ -1,5 +1,5 @@
 ---
-title: 'Mutex:: Mutex-Konstruktor | Microsoft Docs'
+title: 'Mutex:: Mutex-Konstruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb7782e44fc8598ca3b806ef922f8d0840765e28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 62a1fc796188c38dfbd3aff004eba15b7e30ea89
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876455"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600504"
 ---
 # <a name="mutexmutex-constructor"></a>Mutex::Mutex-Konstruktor
-Initialisiert eine neue Instanz der Mutex-Klasse.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-explicit Mutex(  
-   HANDLE h  
-);  
-  
-Mutex(  
-   _Inout_ Mutex&& h  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `h`  
- Ein Handle oder ein Rvalue-Verweis auf ein Handle, um ein Mutex-Objekt.  
-  
-## <a name="remarks"></a>Hinweise  
- Der erste Konstruktor initialisiert ein Mutex-Objekt aus dem angegebenen Handle. Der zweite Konstruktor initialisiert ein Mutex-Objekt aus dem angegebenen Handle und klicken Sie dann den Besitz des Mutex mit dem aktuellen Mutex-Objekt verschiebt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers
- 
- ## <a name="see-also"></a>Siehe auch
- [Mutex-Klasse](../windows/mutex-class1.md)
+
+Initialisiert eine neue Instanz der dem **Mutex** Klasse.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+explicit Mutex(
+   HANDLE h
+);
+
+Mutex(
+   _Inout_ Mutex&& h
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*h*  
+Ein Handle oder einen Rvalue-Verweis auf ein Handle, um eine **Mutex** Objekt.
+
+## <a name="remarks"></a>Hinweise
+
+Der erste Konstruktor initialisiert ein **Mutex** Objekt aus dem angegebenen Handle. Der zweite Konstruktor initialisiert ein **Mutex** -Objekt aus dem angegebenen Handle, und klicken Sie dann wechselt der Besitz des Mutex, mit dem aktuellen **Mutex** Objekt.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+[Mutex-Klasse](../windows/mutex-class1.md)

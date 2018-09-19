@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2013 | Microsoft Docs
+title: Compilerfehler C2013 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53265c27bbac02ddbccb3b2a89b77a515e752f73
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a849900f3d981de74702d972ad9f45b7f31e5619
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163750"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113356"
 ---
 # <a name="compiler-error-c2013"></a>Compilerfehler C2013
-">" fehlt  
-  
- In einer `#include` -Direktive fehlt eine schließende spitze Klammer. Fügen Sie die schließende Klammer hinzu, um den Fehler zu beheben.  
-  
- Im folgenden Beispiel wird C2013 generiert:  
-  
-```  
-// C2013.cpp  
-#include <stdio.h    // C2013  
-```  
-  
- Mögliche Lösung:  
-  
-```  
-// C2013b.cpp  
-// compile with: /c  
-#include <stdio.h>  
+
+">" fehlt
+
+In einer `#include` -Direktive fehlt eine schließende spitze Klammer. Fügen Sie die schließende Klammer hinzu, um den Fehler zu beheben.
+
+Im folgenden Beispiel wird C2013 generiert:
+
+```
+// C2013.cpp
+#include <stdio.h    // C2013
+```
+
+Mögliche Lösung:
+
+```
+// C2013b.cpp
+// compile with: /c
+#include <stdio.h>
 ```

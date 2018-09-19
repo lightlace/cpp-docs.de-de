@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1509 | Microsoft Docs
+title: Schwerwiegender Fehler C1509 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fec83f6b6138eacc613e560b9da4557079d6677d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 837ab5b7cf76b724726c6c52fbfe974d4da6ca85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198793"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033133"
 ---
 # <a name="fatal-error-c1509"></a>Schwerwiegender Fehler C1509
-Compilerlimit: zu viele Handler für Ausnahmezustände in Funktion 'Funktion'. Vereinfachen Sie die Funktion  
-  
- Der Code überschreitet ein internes Limit auf Handler für Ausnahmezustände (32.768 Staaten).  
-  
- Die häufigste Ursache ist, dass die Funktion einen komplexen Ausdruck der benutzerdefinierten Klassenvariablen und arithmetische Operatoren enthält.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>So beheben Sie den Fehler (unterschiedliche Lösungsmöglichkeiten)  
-  
-1.  Gemeinsame Teilausdrücke temporären Variablen zuweisen, um Ausdrücke zu vereinfachen.  
-  
-2.  Teilen Sie die Funktion in kleinere Funktionen.
+
+Compilerlimit: zu viele Handler für Ausnahmezustände in der Funktion 'Funktion'. Vereinfachen Sie die Funktion
+
+Der Code überschreitet ein internes Limit für den Handler für Ausnahmezustände (32.768 Staaten).
+
+Die häufigste Ursache ist, dass die Funktion der benutzerdefinierten Klassenvariablen und arithmetische Operatoren einen komplexen Ausdruck enthält.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>So beheben Sie den Fehler (unterschiedliche Lösungsmöglichkeiten)
+
+1. Vereinfachen Sie Ausdrücken, indem temporäre Variablen allgemeine Unterausdrücke zuordnen.
+
+1. Teilen Sie die Funktion in kleinere Funktionen.

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Überladen von Funktionen mit inneren und systemeigenen Zeigern (C + c++ / CLI) | Microsoft Docs'
+title: 'Vorgehensweise: Überladen von Funktionen mit inneren und nativen Zeigern (C++ / CLI) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,64 +15,64 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e3bc7e5fca6a34f9847c913e92e523b2898068f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c019114726f696461de58d2dc4110a3150318c8f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874862"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598000"
 ---
 # <a name="how-to-overload-functions-with-interior-pointers-and-native-pointers-ccli"></a>Gewusst wie: Überladen von Funktionen mit inneren und systemeigenen Zeigern (C++/CLI)
-Funktionen können überladen werden, je nachdem, ob der Parametertyp ein innerer Zeiger oder einen systemeigenen Zeiger.  
-  
+
+Funktionen können überladen werden, je nachdem, ob der Parametertyp ein innerer Zeiger oder einen systemeigenen Zeiger.
+
 > [!IMPORTANT]
->  Diese Sprachfunktion wird unterstützt, indem Sie die **"/ CLR"** (Compileroption), jedoch nicht von der **/Zw** -Compileroption.  
-  
-## <a name="example"></a>Beispiel  
-  
-### <a name="code"></a>Code  
-  
-```  
-// interior_ptr_overload.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-// C++ class  
-struct S {  
-   int i;  
-};  
-  
-// managed class  
-ref struct G {  
-   int i;  
-};  
-  
-// can update unmanaged storage  
-void f( int* pi ) {  
-   *pi = 10;  
-   Console::WriteLine("in f( int* pi )");  
-}  
-  
-// can update managed storage  
-void f( interior_ptr<int> pi ) {  
-   *pi = 10;   
-   Console::WriteLine("in f( interior_ptr<int> pi )");  
-}  
-  
-int main() {  
-   S *pS = new S;   // C++ heap  
-   G ^pG = gcnew G;   // common language runtime heap  
-   f( &pS->i );  
-   f( &pG->i );  
-};  
-```  
-  
-### <a name="output"></a>Ausgabe  
-  
-```  
+> Diese Sprachfunktion wird unterstützt, indem die `/clr` -Compileroption verwenden, aber nicht von der `/ZW` -Compileroption.
+
+## <a name="example"></a>Beispiel
+
+### <a name="code"></a>Code
+
+```cpp
+// interior_ptr_overload.cpp
+// compile with: /clr
+using namespace System;
+
+// C++ class
+struct S {
+   int i;
+};
+
+// managed class
+ref struct G {
+   int i;
+};
+
+// can update unmanaged storage
+void f( int* pi ) {
+   *pi = 10;
+   Console::WriteLine("in f( int* pi )");
+}
+
+// can update managed storage
+void f( interior_ptr<int> pi ) {
+   *pi = 10;
+   Console::WriteLine("in f( interior_ptr<int> pi )");
+}
+
+int main() {
+   S *pS = new S;   // C++ heap
+   G ^pG = gcnew G;   // common language runtime heap
+   f( &pS->i );
+   f( &pG->i );
+};
+```
+
+```Output 
 in f( int* pi )  
 in f( interior_ptr<int> pi )  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

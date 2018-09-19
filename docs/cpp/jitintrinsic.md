@@ -18,27 +18,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8b1c932f53651b8ad116139724348714b183506
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 888ec19eaedf881fed97a14a7f3f8b5ee673ce7a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939389"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056286"
 ---
 # <a name="jitintrinsic"></a>jitintrinsic
-Markiert die Funktion als signifikant bei der 64-Bit-Common Language Runtime. Dies wird in bestimmten Funktionen in von Microsoft bereitgestellten Bibliotheken verwendet.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-__declspec(jitintrinsic)  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- `jitintrinsic` fügt ein MODOPT (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) zu einer Funktionssignatur hinzu.  
-  
- Benutzer sind nicht empfehlenswert, von der Verwendung dieses **__declspec** Modifizierer verwenden, da unerwartete Ergebnisse möglich.  
-  
-## <a name="see-also"></a>Siehe auch  
- [__declspec](../cpp/declspec.md)   
- [Schlüsselwörter](../cpp/keywords-cpp.md)
+
+Markiert die Funktion als signifikant bei der 64-Bit-Common Language Runtime. Dies wird in bestimmten Funktionen in von Microsoft bereitgestellten Bibliotheken verwendet.
+
+## <a name="syntax"></a>Syntax
+
+```
+__declspec(jitintrinsic)
+```
+
+## <a name="remarks"></a>Hinweise
+
+**Jitintrinsic** Fügt ein MODOPT (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) zu einer Funktionssignatur.
+
+Benutzer sind nicht empfehlenswert, von der Verwendung dieses **__declspec** Modifizierer verwenden, da unerwartete Ergebnisse möglich.
+
+## <a name="see-also"></a>Siehe auch
+
+[__declspec](../cpp/declspec.md)<br/>
+[Schlüsselwörter](../cpp/keywords-cpp.md)

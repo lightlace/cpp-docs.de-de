@@ -1,5 +1,5 @@
 ---
-title: 'NMAKE: Schwerwiegender Fehler U1078 | Microsoft Docs'
+title: 'NMAKE: Schwerwiegender Fehler U1078 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1a977a2e8f3b9f36832b5f96c6c911966cac7d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b894579c56368e953c1d60aa5d2940d8c9c79f65
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316646"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019367"
 ---
 # <a name="nmake-fatal-error-u1078"></a>NMAKE: Schwerwiegender Fehler U1078
-Konstante Überlauf zur 'Ausdruck'  
-  
- Der angegebene Ausdruck enthielt eine Konstante, die den Bereich von-2.147.483.648 bis 2.147.483.647 überschritten haben. Die Konstante wurde in den folgenden Situationen angezeigt:  
-  
--   Ein Ausdruck, der mit einer Präprozessordirektive angegeben  
-  
--   Eine Fehlerstufe erreicht, die mit Beginn der Strichelung angegeben (**-**) Befehlsmodifizierer
+
+Konstantenüberlauf bei 'Ausdruck'
+
+Der angegebene Ausdruck enthielt eine Konstante, die den Bereich von-2.147.483.648 bis 2.147.483.647 überschritten. Die Konstante wurde in einem der folgenden Situationen angezeigt:
+
+- Ein Ausdruck, der mit einer Präprozessordirektive angegeben
+
+- Eine Fehlerstufe erreicht, die mit den Bindestrich angegeben (**-**) Befehlsmodifizierer

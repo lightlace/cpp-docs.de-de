@@ -1,5 +1,5 @@
 ---
-title: __svm_vmsave | Microsoft Docs
+title: __svm_vmsave | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36b1a76d4dca7a7177a44c56fc7c25832ace89c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc66784a9f5b6c953516bb30271c973779340e09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329664"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722851"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 **Microsoft-spezifisch**  
   
- Eine Teilmenge der Prozessor Zustand in den angegebenen virtuellen Computer-Kontrollblock (VMCB) gespeichert.  
+ Eine Teilmenge der Prozessorzustand wird in der angegebenen virtuellen Computer-Kontrollblock (VMCB) gespeichert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,16 +41,16 @@ void __svm_vmsave(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `VmcbPhysicalAddress`|Die physische Adresse von der VMCB.|  
+|*VmcbPhysicalAddress*|[in] Die physische Adresse der VMCB.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `__svm_vmsave` -Funktion ist gleichbedeutend mit der `VMSAVE` computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen zu suchen, für das Dokument "AMD64 Architecture Programmers manuelle Volume 2: System-Programmierung" Dokumentnummer 24593, Revision 3.11 oder höher, auf die [AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) Standort.  
+ Die `__svm_vmsave` -Funktion ist gleichbedeutend mit der `VMSAVE` computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen zu suchen, für das Dokument, "AMD64 Architecture Programmers manuelle Volume 2: System-Programmierung" Dokumentnummer 24593, Version 3.11 oder höher, auf die [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) Standort.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__svm_vmsave`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_vmsave`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

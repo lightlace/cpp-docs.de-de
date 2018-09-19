@@ -1,5 +1,5 @@
 ---
-title: Hstringreference::&lt; Operator | Microsoft Docs
+title: Hstringreference::&lt; Operator | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,38 +15,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b486157fb42883af724f2356e7f85701e405035
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ee7edbee285df6da752e875ac4d86a74e8f7893d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877292"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594140"
 ---
 # <a name="hstringreferenceoperatorlt-operator"></a>Hstringreference::&lt; Operator
-Gibt an, ob der erste Parameter ist kleiner als der zweite Parameter.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-inline bool operator<(  
-    const HStringReference& lhs,   
+
+Gibt an, ob der erste Parameter kleiner als der zweite Parameter.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+inline bool operator<(
+    const HStringReference& lhs,
     const HStringReference& rhs) throw()  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `lhs`  
- Der erste Parameter, verglichen werden soll. `lhs` Ein Verweis auf ein HStringReference kann sein.  
-  
- `rhs`  
- Der zweite Parameter, verglichen werden soll.  `rhs` Ein Verweis auf ein HStringReference kann sein.  
-  
-## <a name="return-value"></a>Rückgabewert  
- `true` Wenn die `lhs` Parameter ist kleiner als das `rhs` Parameter ist, andernfalls `false`.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Siehe auch  
- [HStringReference-Klasse](../windows/hstringreference-class.md)
+```
+
+### <a name="parameters"></a>Parameter
+
+*LHS*  
+Der erste Parameter, verglichen werden soll. *LHS* möglich ein Verweis auf ein **HStringReference**.
+
+*RS*  
+Der zweite Parameter, verglichen werden soll.  *RS* möglich ein Verweis auf ein **HStringReference**.
+
+## <a name="return-value"></a>Rückgabewert
+
+**"true"** Wenn die *Lhs* -Parameter ist kleiner als der *RS* Parameter ist, andernfalls **"false"**.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+
+[HStringReference-Klasse](../windows/hstringreference-class.md)

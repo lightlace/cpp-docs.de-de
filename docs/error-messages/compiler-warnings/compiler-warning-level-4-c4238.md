@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4238 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4238 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06dbec01da8d1b47cb7b93c90a22ae5266e9b4c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f4d5f358d08f81e6b8097140ad47d54f4b3b3fed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292437"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057027"
 ---
 # <a name="compiler-warning-level-4-c4238"></a>Compilerwarnung (Stufe 4) C4238
-nicht dem Standard entsprechende Erweiterung: Klasse Rvalue als Lvalue verwendet  
-  
- Um die Kompatibilität mit früheren Versionen von Visual C++, Microsoft-Erweiterungen (**"/ Ze"**) ermöglichen es Ihnen, einen Klassentyp zu verwenden, wie ein Rvalue-Wert in einem Kontext, implizit oder explizit auf die Adresse akzeptiert. Dies kann in einigen Fällen, wie im folgenden Beispiel gefährlich sein.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// C4238.cpp  
-// compile with: /W4 /c  
-struct C {  
-   C() {}  
-};  
-  
-C * pC = &C();   // C4238  
-```  
-  
- Diese Art der Verwendung verursacht einen Fehler unter ANSI-Kompatibilität (["/ Za"](../../build/reference/za-ze-disable-language-extensions.md)).
+
+nicht dem Standard entsprechende Erweiterung: Klasse Rvalue verwendet als l-Wert
+
+Für die Kompatibilität mit früheren Versionen von Visual C++, Microsoft-Erweiterungen (**/Ze**) ermöglichen es Ihnen, einen Klassentyp zu verwenden, wie ein Rvalue-Wert in einem Kontext, der implizit oder explizit auf die Adresse akzeptiert. In einigen Fällen, wie im folgenden Beispiel kann dies gefährlich sein.
+
+## <a name="example"></a>Beispiel
+
+```
+// C4238.cpp
+// compile with: /W4 /c
+struct C {
+   C() {}
+};
+
+C * pC = &C();   // C4238
+```
+
+Diese Verwendung verursacht einen Fehler ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

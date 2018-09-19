@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 713bf95a53a22b098803d08b4a2a4fd9c8a6cf2d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 809391ea93c3baacd510df7d81f2000e1d6309b7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954930"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702026"
 ---
 # <a name="hashmap-class"></a>hash_map-Klasse
 
@@ -124,13 +124,17 @@ class hash_map
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* Geben Sie die wichtigen Daten in das hash_map-Element gespeichert werden.
+*Key*<br/>
+Der im hash_map-Element zu speichernde Schlüsseldatentyp.
 
-*Typ* die Datentyp der Elemente im hash_map-Element gespeichert werden.
+*Type*<br/>
+Der im hash_map-Element zu speichernde Elementdatentyp.
 
-*"Traits"* Typs der zwei Funktionsobjekte, eines der Klasse vergleichen kann, vergleichen zwei Elementwerte als Sortierschlüssel, um zu ermitteln, deren relative Reihenfolge und eine Hashfunktion, die ein unäres Prädikat Schlüsselwerte der Elemente zu ohne Vorzeichen enthält ganzen Zahlen vom Typ `size_t`. Dieses Argument ist optional, und der Standardwert ist hash_compare<`Key`, less<`Key`> >.
+*Merkmale*<br/>
+Der Typ, der zwei Funktionsobjekte enthält. Eins der Klasse "compare", der zwei Elementwerte als Sortierschlüssel vergleichen kann, um ihre relative Position zu bestimmen, und eine Hashfunktion, die ein Zuordnungsschlüssel mit unärem Prädikat der Elemente für ganzen Zahlen ohne Vorzeichen vom Typ `size_t` ist. Dieses Argument ist optional, und der Standardwert ist hash_compare<`Key`, less<`Key`> >.
 
-*Allocator* der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers des hash_map Elements kapselt. Dieses Argument ist optional, und der Standardwert ist allocator<pair <const `Key`, `Type`>>.
+*Zuweisung*<br/>
+Der Typ, mit dem das gespeicherte Zuordnungsobjekt darstellt wird, mit dem Details zum Belegen und Freigeben des Arbeitsspeichers des hash_map-Elements gekapselt werden. Dieses Argument ist optional, und der Standardwert ist allocator<pair <const `Key`, `Type`>>.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -523,11 +527,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 Ein `const_iterator`-Typ kann nicht zum Ändern des Werts eines Elements verwendet werden.
 
-Die `const_iterator` durch hash_map-Element verweist auf Elemente, Objekte des definierten [Value_type](#value_type), d. h. vom Typ `pair` *\< ***const Key, Type*** >*, dessen erster Member ist der Schlüssel zum Element und dessen zweiter Member ist das zugeordnete Datum, das vom Element gehalten.
+Die `const_iterator` durch hash_map-Element verweist auf Elemente, Objekte des definierten [Value_type](#value_type), d. h. vom Typ `pair< const Key, Type >`, dessen erster Member ist der Schlüssel zum Element und dessen zweiter Member ist das zugeordnete Datum, das vom Element gehalten.
 
 Dereferenziert eine `const_iterator` `cIter` auf ein Element in einer Hash_map zeigt, verwenden Sie die `->` Operator.
 
-Um auf den Wert des Schlüssels für das Element zuzugreifen, verwenden Sie `cIter` **-> first**, das (\* `cIter`) **.first** entspricht. Um auf den Wert des zugeordneten Datums für das Element zuzugreifen, verwenden Sie `cIter` **-> second**, das (\* `cIter`) **.second** entspricht.
+Um den Wert des Schlüssels für das Element zuzugreifen, verwenden `cIter->first`, dies entspricht dem `(*cIter).first`. Um den Wert des zugeordneten Datums für das Element zuzugreifen, verwenden `cIter->second`, dies entspricht dem `(*cIter).second`.
 
 ### <a name="example"></a>Beispiel
 
@@ -644,7 +648,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* den Schlüsselwert der aus der Hash_map zu entfernenden Elemente.
+*key*<br/>
+Der Schlüsselwert der aus der hash_map-Klasse zu entfernenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -935,7 +940,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="emplace_hint"></a> hash_map::emplace_hint
@@ -995,7 +1000,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="empty"></a> hash_map::empty
@@ -1135,7 +1140,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* der argumentschlüsselwert, mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Hash_map verglichen werden soll.
+*key*<br/>
+Der Argumentschlüsselwert, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden hash_map verglichen wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1182,7 +1188,7 @@ int main( )
 
    cout << "A direct call of upper_bound( 2 ) gives "
         << hm1_RcIter -> second << "," << endl
-        << " matching the 2nd element of the pair"
+        << "matching the 2nd element of the pair"
         << " returned by equal_range( 2 )." << endl;
 
    p2 = hm1.equal_range( 4 );
@@ -1202,7 +1208,7 @@ int main( )
 The lower bound of the element with a key of 2 in the hash_map hm1 is: 20.
 The upper bound of the element with a key of 2 in the hash_map hm1 is: 30.
 A direct call of upper_bound( 2 ) gives 30,
- matching the 2nd element of the pair returned by equal_range( 2 ).
+matching the 2nd element of the pair returned by equal_range( 2 ).
 The hash_map hm1 doesn't have an element with a key less than 40.
 ```
 
@@ -1223,13 +1229,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parameter
 
-*_Where* Position des Elements aus der Hash_map entfernt werden soll.
+*_Where*<br/>
+Die Position des aus der hash_map zu entfernenden Elements.
 
-*erste* Position des ersten Elements aus der Hash_map entfernt werden.
+*Erste*<br/>
+Die Position des ersten Elements, das aus der hash_map entfernt werden soll.
 
-*letzte* die Position direkt hinter dem letzten Element aus der Hash_map entfernt.
+*last*<br/>
+Die Position direkt hinter dem letzten aus der hash_map entfernten Element.
 
-*Schlüssel* den Schlüsselwert der aus der Hash_map zu entfernenden Elemente.
+*key*<br/>
+Der Schlüsselwert der aus der hash_map zu entfernenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1341,7 +1351,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* den Schlüsselwert, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Hash_map übereinstimmt.
+*key*<br/>
+Der Schlüsselwert, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden hash_map übereinstimmt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1514,18 +1525,18 @@ hash_map(
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last);
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp);
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp,
     const Allocator& Al
@@ -1881,7 +1892,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* der argumentschlüsselwert, mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Hash_map verglichen werden soll.
+*key*<br/>
+Der Argumentschlüsselwert, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden hash_map verglichen wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2519,7 +2531,8 @@ void swap(hash_map& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* das Hash_map-Argument, in dem Elemente mit der Ziel-Hash_map getauscht werden soll.
+*right*<br/>
+Das hash_map-Argument, das die Elemente bereitstellt, mit der die Ziel-hash_map getauscht werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2594,7 +2607,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* der argumentschlüsselwert, mit dem Sortierschlüsselwert eines Elements aus der zu durchsuchenden Hash_map verglichen werden soll.
+*key*<br/>
+Der Argumentschlüsselwert, der mit dem Sortierschlüsselwert eines Elements aus der zu durchsuchenden hash_map verglichen wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2737,7 +2751,7 @@ typedef pair<const Key, Type> value_type;
 
 ### <a name="remarks"></a>Hinweise
 
-`value_type` deklariert `pair`  *\< * **const**[Key_type](#key_type), [Mapped_type](#mapped_type)*> * und nicht `pair`  **\<Key_type, Mapped_type >** , da die Schlüssel eines assoziativen Containers nicht mit einem nonconstant-Iterators oder der Verweis geändert werden können.
+`value_type` deklariert `pair<const key_type, mapped_type>` und nicht `pair<key_type, mapped_type>` , da die Schlüssel eines assoziativen Containers nicht mit einem nonconstant-Iterators oder der Verweis geändert werden können.
 
 ### <a name="example"></a>Beispiel
 

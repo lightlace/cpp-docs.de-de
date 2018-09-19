@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2084 generiert | Microsoft Docs
+title: Compilerfehler C2084 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce1510dd6e78b8774d3cc433f583c16cdbb8d06
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09ce703b6908257e37c2b7ff1b2714f1426f941f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33173876"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052106"
 ---
-# <a name="compiler-error-c2084"></a>Compiler-Fehler C2084 generiert
-Funktion "*Funktion*' weist bereits einen Text  
-  
- Die Funktion wurde bereits definiert.  
-  
- In Versionen von Visual C++ vor Visual Studio 2002  
-  
--   Obwohl zusätzlichen Definitionen nie verfügbar wäre, würde der Compiler mehrere vorlagenspezialisierungen, der in der gleichen tatsächlichen Typ aufgelöst akzeptieren. Der Compiler erkennt jetzt diese mehrere Definitionen.  
-  
--   `__int32` und `int` wurden als separate Typen behandelt. Der Compiler jetzt behandelt `__int32` als Synonym für `int`. Dies bedeutet, dass der Compiler mehrere Definitionen erkennt, wenn eine Funktion, auf beiden überladen ist `__int32` und `int` eine Fehlermeldung ausgegeben.  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C2084 generiert:  
-  
-```cpp  
-// C2084.cpp  
-void Func(int);  
-void Func(int) {}   // define function  
-void Func(int) {}   // C2084 second definition  
-```  
-  
-Um diesen Fehler zu beheben, entfernen Sie das doppelte Definition:  
-  
-```  
-// C2084b.cpp  
-// compile with: /c  
-void Func(int);  
-void Func(int) {}  
+# <a name="compiler-error-c2084"></a>Compilerfehler C2084
+
+Funktion "*Funktion*" hat bereits einen Funktionsrumpf
+
+Die Funktion wurde bereits definiert.
+
+In Versionen von Visual C++ vor Visual Studio 2002
+
+- Der Compiler akzeptiert mehrere vorlagenspezialisierungen, die in den gleichen tatsächlichen Typ aufgelöst, obwohl die zusätzlichen Definitionen nicht zur Verfügung stehen würden. Der Compiler erkennt jetzt diese Definitionen.
+
+- `__int32` und `int` als separate Typen behandelt wurden. Der Compiler jetzt behandelt `__int32` als Synonym für `int`. Dies bedeutet, dass der Compiler mehrere Definitionen erkennt, wenn eine Funktion, auf beiden überladen ist `__int32` und `int` und gibt einen Fehler aus.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C2084 generiert:
+
+```cpp
+// C2084.cpp
+void Func(int);
+void Func(int) {}   // define function
+void Func(int) {}   // C2084 second definition
+```
+
+Um diesen Fehler zu beheben, entfernen Sie die doppelte Definition:
+
+```
+// C2084b.cpp
+// compile with: /c
+void Func(int);
+void Func(int) {}
 ```

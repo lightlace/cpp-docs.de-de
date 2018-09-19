@@ -42,16 +42,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 316580b0c5f1f46ffa9f4a49ef759b347032fc09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 17cbcb0313ac0a3e14b45d851ee6f4e98d5ec993
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404648"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206409"
 ---
 # <a name="mbsnbset-mbsnbsetl"></a>_mbsnbset, _mbsnbset_l
 
-Legt das erste **n** Bytes einer Multibyte Zeichenfolge auf ein bestimmtes Zeichen. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_mbsnbcpy_s, _mbsnbcpy_s_l](mbsnbset-s-mbsnbset-s-l.md).
+Legt die ersten **n** Bytes einer Multibyte-Zeichenfolge auf ein angegebenes Zeichen. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_mbsnbcpy_s, _mbsnbcpy_s_l](mbsnbset-s-mbsnbset-s-l.md).
 
 > [!IMPORTANT]
 > Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -92,15 +92,15 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbsnbset** und **_mbsnbset_l** Funktionen legen höchstens die ersten *Anzahl* Bytes *str* auf *c*. Wenn *Anzahl* ist größer als die Länge des *str*, die Länge des *str* anstelle von *Anzahl*. Wenn *c* ein Multibytezeichen und kann nicht festgelegt werden, vollständig auf das letzte Byte gemäß *Anzahl*, wird das letzte Byte mit einem Leerzeichen aufgefüllt. **_mbsnbset** und **_mbsnbset_l** eine terminierende ist nicht platziert werden, null am Ende der *str*.
+Die **_mbsnbset** und **_mbsnbset_l** Funktionen legen höchstens die ersten *Anzahl* Bytes *str* zu *c*. Wenn *Anzahl* ist größer als die Länge des *str*, die Länge des *str* anstelle *Anzahl*. Wenn *c* ein Multibytezeichen und kann nicht festgelegt werden, vollständig auf das letzte Byte gemäß *Anzahl*, das letzte Byte mit einem Leerzeichen aufgefüllt ist. **_mbsnbset** und **_mbsnbset_l** setzen ist kein abschließendes null am Ende der *str*.
 
-**_mbsnbset** und **_mbsnbset_l** ähnelt **_mbsnset**, Ausnahme, dass *Anzahl* Bytes anstatt *Anzahl* Zeichen des *c*.
+**_mbsnbset** und **_mbsnbset_l** ähnelt **_mbsnset**, außer dass sie *Anzahl* Bytes statt *Anzahl* Zeichen des *c*.
 
-Wenn *str* ist **NULL** oder *Anzahl* NULL ist, generiert diese Funktion eine Ausnahme für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und die Funktion gibt **NULL**. Auch wenn *c* ist kein gültiges Multibytezeichen **Errno** festgelegt ist, um **EINVAL** und ein Leerzeichen wird stattdessen verwendet.
+Wenn *str* ist **NULL** oder *Anzahl* NULL ist, diese Funktion generiert eine Ausnahme für ungültige Parameter auf, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und die Funktion gibt **NULL**. Auch wenn *c* ist kein gültiges Multibytezeichen, **Errno** nastaven NA hodnotu **EINVAL** und ein Leerzeichen wird stattdessen verwendet.
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die **_mbsnbset** Version dieser Funktion verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die **_mbsnbset_l** -Version ist beinahe identisch, verwendet jedoch den Gebietsschemaparameter übergebene. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die **_mbsnbset** Version dieser Funktion verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die **_mbsnbset_l** -Version ist beinahe identisch, außer dass sie verwenden den stattdessen den übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-**Sicherheitshinweis** Diese API stellt eine mögliche Bedrohung aufgrund eines Pufferüberlaufproblems dar. Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Sicherheitshinweis** Diese API stellt eine mögliche Bedrohung aufgrund eines Pufferüberlaufproblems dar. Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -111,7 +111,7 @@ Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kateg
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_mbsnbset**|\<mbstring.h>|
 |**_mbsnbset_l**|\<mbstring.h>|

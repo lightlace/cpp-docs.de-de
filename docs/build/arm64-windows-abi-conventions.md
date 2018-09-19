@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49d67f9a2e91e3a2e0a2731e61fc0e1c2ec55679
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: cc115fbc77ac68c774b85bb86fd0cf9eac1fa51b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028540"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716637"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Übersicht über die ARM64-ABI-Konventionen
 
@@ -173,7 +173,7 @@ Für jedes Argument in der Liste werden wiederum die folgenden Regeln angewendet
 
 11. Die NGRN ist auf 8 festgelegt.
 
-12. Die NSAA wird aufgerundet auf die größere von 8 oder die natürliche Ausrichtung, der den Typ des Arguments... 
+12. Die NSAA wird aufgerundet auf die größere von 8 oder die natürliche Ausrichtung, der den Typ des Arguments...
 
 13. Wenn das Argument ein zusammengesetzter Typ ist, wird das Argument in den Speicher an der angepassten NSAA kopiert. Die NSAA wird um die Größe des Arguments inkrementiert. Das Argument wurde nun zugeordnet.
 
@@ -189,7 +189,7 @@ Funktionen, die eine Variable Anzahl von Argumenten akzeptieren werden anders al
 
 2. SIMD "und" Floating-Point registriert werden nicht verwendet.
 
-Effektiv entspricht dies folgende Regeln C.12–C.15 zuweisen Argumente in einer imaginären Stack, in denen die ersten 64 Bytes des Stapels werden in den X0-X7 geladen, und alle übrigen Argumente für den Stapel normalerweise platziert werden. 
+Effektiv entspricht dies folgende Regeln C.12–C.15 zuweisen Argumente in einer imaginären Stack, in denen die ersten 64 Bytes des Stapels werden in den X0-X7 geladen, und alle übrigen Argumente für den Stapel normalerweise platziert werden.
 
 ## <a name="return-values"></a>Rückgabewert
 
@@ -231,5 +231,5 @@ Beachten Sie, dass der Zyklus-Counter hier ein wahrer Zyklus-Counter, keine Wall
 
 ## <a name="see-also"></a>Siehe auch
 
-[Häufig auftretende ARM-Migrationsprobleme bei Visual C++](../build/common-visual-cpp-arm-migration-issues.md)  
-[ARM64-Ausnahmebehandlung](../build/arm64-exception-handling.md)  
+[Häufig auftretende ARM-Migrationsprobleme bei Visual C++](../build/common-visual-cpp-arm-migration-issues.md)<br/>
+[ARM64-Ausnahmebehandlung](../build/arm64-exception-handling.md)

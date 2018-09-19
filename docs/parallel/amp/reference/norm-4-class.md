@@ -1,5 +1,5 @@
 ---
-title: norm_4-Klasse | Microsoft Docs
+title: norm_4-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,12 +278,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3df6a0cb46985b90b6b8098d7355c33439143949
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4a2b5c47f6283f4a4b9fefb5683c8e7be0c4bdb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694042"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058093"
 ---
 # <a name="norm4-class"></a>norm_4-Klasse
 Stellt einen kurzen Vektor aus vier normalen Zahlen dar.  
@@ -454,7 +454,7 @@ class norm_4;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |norm_4::-||  
-|norm_4::--||  
+|norm_4:::||  
 |norm_4::operator*=||  
 |norm_4::operator/=||  
 |norm_4:: Operator++-||  
@@ -683,23 +683,23 @@ explicit inline norm_4(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_V0`  
- Der Wert 0-Element initialisiert werden.  
+*_V0*<br/>
+Der Wert, der 0-Element zu initialisieren.  
   
- `_V1`  
- Der Wert 1 Element initialisiert werden.  
+*_V1*<br/>
+Der Wert 1 Element initialisiert werden.  
   
- `_V2`  
- Der Wert 2-Element initialisiert werden.  
+*_V2*<br/>
+Der Wert 2-Element zu initialisieren.  
   
- `_V3`  
- Der Wert 3-Element initialisiert werden.  
+*_V3*<br/>
+Der Wert 3-Element zu initialisieren.  
   
- `_V`  
- Der Wert für die Initialisierung.  
+*_V*<br/>
+Der Wert für die Initialisierung.  
   
- `_Other`  
- Das Objekt, das zum Initialisieren verwendet.  
+*_Sonstige*<br/>
+Das Objekt, das zum Initialisieren verwendet.  
   
 ##  <a name="norm_4__size"></a> Größe 
 

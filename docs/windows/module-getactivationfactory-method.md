@@ -1,5 +1,5 @@
 ---
-title: 'Module:: getactivationfactory-Methode | Microsoft Docs'
+title: 'Module:: getactivationfactory-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,43 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 837cb68173ca1994de6bc560882d617bb3aa03e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0e87ea3b0e44732d4271385073c48fd92e1aa114
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887012"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608926"
 ---
 # <a name="modulegetactivationfactory-method"></a>Module::GetActivationFactory-Methode
-Ruft eine aktivierungsfactory für das Modul an.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-WRL_NOTHROW HRESULT GetActivationFactory(  
-   _In_ HSTRING pActivatibleClassId,  
-   _Deref_out_ IActivationFactory **ppIFactory,  
-   wchar_t* serverName = nullptr  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `pActivatibleClassId`  
- Die IID der Common Language Runtime-Klasse.  
-  
- `ppIFactory`  
- Die IActivationFactory für die angegebene Runtime-Klasse.  
-  
- `serverName`  
- Der Name einer Teilmenge von Klassenfactorys im aktuellen Modul. Geben Sie den Servernamen in verwendet die [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) -Makro, oder geben Sie `nullptr` der Standardservername abgerufen.  
-  
-## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn erfolgreich; Das HRESULT, andernfalls zurückgegebenes GetActivationFactory.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
-[Module-Klasse](../windows/module-class.md) [ActivatableClass-Makros](../windows/activatableclass-macros.md)
+
+Ruft eine aktivierungsfactory für das Modul ab.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+WRL_NOTHROW HRESULT GetActivationFactory(
+   _In_ HSTRING pActivatibleClassId,
+   _Deref_out_ IActivationFactory **ppIFactory,
+   wchar_t* serverName = nullptr
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*pActivatibleClassId*  
+Die IID der von einer Runtime-Klasse.
+
+*ppIFactory*  
+Die "iactivationfactory" für die angegebene Runtime-Klasse.
+
+*ServerName*  
+Der Name einer Teilmenge von Klassenfactorys im aktuellen Modul. Geben Sie den Servernamen in verwendet die [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) -Makro, oder geben Sie **"nullptr"** um den Standardnamen für den Server zu erhalten.
+
+## <a name="return-value"></a>Rückgabewert
+
+S_OK, wenn erfolgreich; andernfalls der HRESULT-Wert zurückgegeben, indem GetActivationFactory.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[Module-Klasse](../windows/module-class.md)  
+[ActivatableClass-Makros](../windows/activatableclass-macros.md)

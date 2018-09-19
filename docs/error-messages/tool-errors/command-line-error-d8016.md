@@ -1,5 +1,5 @@
 ---
-title: Befehlszeilenfehler D8016 | Microsoft Docs
+title: Befehlszeilenfehler D8016 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f9709da189403f2594d76751430d30554bffe5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ee16542b2f0cf9842e351813ed2e0b0d22cccaa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300617"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056988"
 ---
 # <a name="command-line-error-d8016"></a>Befehlszeilenfehler D8016
-'Option 1' und 'option2' Befehlszeilenoptionen sind nicht kompatibel  
-  
- Die Befehlszeilenoptionen können nicht zusammen angegeben werden.  
-  
- Überprüfen Sie die Umgebungsvariablen wie z. B. CL, Optionsangaben.  
-  
- **"/ CLR"** impliziert **/EHa**, und Sie können angeben, alle anderen **/EH** Compileroption mit **"/ CLR"**. Weitere Informationen finden Sie unter [/clr (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
- Möglicherweise wird bei der Aktualisierung die Meldung D8016 eine [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 6.0-Projekt: des Projekt-Assistent Updatevorgangs möglicherweise ermöglichen **/RTC** für jede Quelle-Codedatei im Projekt, überschreibt die der **/RTC** Einstellung für die Projekt.  Ändern Sie zur Behebung der **/RTC** für jede Quelle-Codedatei im Projekt auf die Standardeinstellung festlegen, d. h. die projekteinstellung für **/RTC** wird für jede Datei wirksam werden.  
-  
- Finden Sie unter [/RTC (Run-Time Checks Fehler)](../../build/reference/rtc-run-time-error-checks.md) Informationen zum Ändern der **/RTC** Einstellung der Eigenschaft.
+
+Option "1" und "option2"-Befehlszeilenoptionen sind nicht kompatibel
+
+Die Optionen der Befehlszeilen können nicht zusammen angegeben werden.
+
+Überprüfen Sie die Umgebungsvariablen wie CL, Optionsangaben.
+
+**"/ CLR"** impliziert **/EHa**, und Sie können angeben, alle anderen **/EH** Compileroption mit **"/ CLR"**. Weitere Informationen finden Sie unter [/clr (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md).
+
+Sie möglicherweise D8016 ein Visual C++ 6.0-Projekt wird aktualisiert: der Assistent zur Aktualisierung des Projekts aktivieren kann **/RTC** -Außerkraftsetzungen für jede Quellcodedatei in das Projekt, das die **/RTC** für das Projekt festlegen.  Ändern Sie zum Beheben der **/RTC** für jede Quellcodedatei in das Projekt festlegen, um die Standardeinstellung, was bedeutet die projekteinstellung für **/RTC** wird für jede Datei wirksam werden.
+
+Finden Sie unter [/RTC (Run-Time Error Checks)](../../build/reference/rtc-run-time-error-checks.md) Informationen zum Ändern der **/RTC** Einstellung der Eigenschaft.

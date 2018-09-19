@@ -1,5 +1,5 @@
 ---
-title: Markierungszeichen (C++) | Microsoft Docs
+title: Punktuatoren (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,24 +14,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecaa90598ce07cd0db52b7a4c30cfacc12566aba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 438b3f0469d1e8426b1e0ec2a19a63d1ae63c041
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420085"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039269"
 ---
-# <a name="punctuators-c"></a>Markierungszeichen (C++)
-Markierungszeichen in C++ haben eine syntaktische und semantische Bedeutung für den Compiler, geben aber nicht von selbst einen Vorgang an, der einen Wert ergibt. Einige Markierungszeichen, entweder alleine oder in Kombination, können auch C++-Operatoren oder wichtig für den Präprozessor sein.  
+# <a name="punctuators-c"></a>Punktuatoren (C++)
 
- Jedes der folgenden Zeichen gilt als Markierungszeichen:  
+Markierungszeichen in C++ haben eine syntaktische und semantische Bedeutung für den Compiler, geben aber nicht von selbst einen Vorgang an, der einen Wert ergibt. Einige Markierungszeichen, entweder alleine oder in Kombination, können auch C++-Operatoren oder wichtig für den Präprozessor sein.
 
-```  
-! % ^ & * ( ) - + = { } | ~  
-[ ] \ ; ' : " < > ? , . / #  
-```  
+Jedes der folgenden Zeichen gilt als Markierungszeichen:
 
- Die Markierungszeichen **[]**, **()**, und **{}** müssen paarweise nach [übersetzungsphase](../preprocessor/phases-of-translation.md) 4.  
+```
+! % ^ & * ( ) - + = { } | ~
+[ ] \ ; ' : " < > ? , . / #
+```
 
-## <a name="see-also"></a>Siehe auch  
- [Lexikalische Konventionen](../cpp/lexical-conventions.md)
+Die Markierungszeichen **[]**, **()**, und **{}** müssen paarweise nach [übersetzungsphase](../preprocessor/phases-of-translation.md) 4.
+
+## <a name="see-also"></a>Siehe auch
+
+[Lexikalische Konventionen](../cpp/lexical-conventions.md)

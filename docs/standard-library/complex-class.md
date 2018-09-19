@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7e43d5f528e85ea3233b9ea4a68e83ee0cfb7f3
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: af4f0307823011e4c32ae6b08e18b4cef86e05db
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026406"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103244"
 ---
 # <a name="complex-class"></a>complex-Klasse
 
@@ -89,7 +89,7 @@ Für die drei Gleitkommatypen sind explizite Spezialisierungen der Vorlagenklass
 
 **Namespace:** std
 
-## <a name="complex">complex::complex</a>
+## <a name="complex"></a>  complex::complex
 
 Erstellt eine komplexe Zahl aus den angegebenen reellen und imaginären Teilen oder eine Kopie einer anderen komplexen Zahl.
 
@@ -108,11 +108,14 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parameter
 
-*_RealVal* den Wert des reellen Teils, der zum Initialisieren der komplexen Zahl, die erstellt wird.
+*_RealVal*<br/>
+Der Wert des reellen Teils, der zum Initialisieren der zu erstellenden komplexen Zahl verwendet wird.
 
-*_ImagVal* den Wert des imaginären Teils, der zum Initialisieren der komplexen Zahl, die erstellt wird.
+*_ImagVal*<br/>
+Der Wert des imaginären Teils, der zum Initialisieren der zu erstellenden komplexen Zahl verwendet wird.
 
-*ComplexNum* die komplexe Zahl, deren tatsächliche und imaginäre Teile werden verwendet, um das Initialisieren der komplexen Zahl, die erstellt wird.
+*complexNum*<br/>
+Die komplexe Zahl, deren reelle und imaginäre Teile zum Initialisieren der zu erstellenden komplexen Zahl verwendet werden.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -174,7 +177,7 @@ int main( )
 }
 ```
 
-## <a name="imag">complex::imag</a>
+## <a name="imag"></a>  complex::imag
 
 Extrahiert die imaginäre Komponente einer komplexen Zahl.
 
@@ -187,7 +190,8 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* eine komplexe Zahl, deren imaginärer Wert extrahiert werden soll.
+*right*<br/>
+Eine komplexe Zahl, deren imaginärer Wert extrahiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -243,7 +247,8 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* eine komplexe Zahl oder eine Zahl, die den gleichen Typ wie der Parameter von der komplexen zielzahl ist.
+*right*<br/>
+Eine komplexe Zahl oder eine Zahl vom gleichen Typ wie der Parameter der komplexen Zielzahl
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -311,7 +316,7 @@ int main() {
 }
 ```
 
-## <a name="op_add_eq">complex::operator+=</a>
+## <a name="op_add_eq"></a>  complex::operator+=
 
 Fügt der komplexen Zielzahl eine Zahl hinzu, die komplex ist oder vom gleichen Typ wie die Real- und Imaginärteile der komplexen Zahl, der sie hinzugefügt wird
 
@@ -326,7 +331,8 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* eine komplexe Zahl oder eine Zahl, die den gleichen Typ wie der Parameter von der komplexen zielzahl ist.
+*right*<br/>
+Eine komplexe Zahl oder eine Zahl vom gleichen Typ wie der Parameter der komplexen Zielzahl
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -400,7 +406,7 @@ The left-side complex number is cl1 = (3,4)
 The right-side complex number is cr1 = (2,-1)
 The sum of the two complex numbers is: cs1 = cl1 + cr1 = (5,3)
 The complex number cr1 added to the complex number cl1 is:
- cl1 += cr1 = (5,3)
+cl1 += cr1 = (5,3)
 The modulus of cl1 is: 5.83095
 The argument of cl1 is: 0.54042 radians, which is 30.9638 degrees.
 
@@ -408,12 +414,12 @@ The left-side complex number is cl2 = (-2,4)
 The right-side complex number is cr2 = 5
 The sum of the two complex numbers is: cs2 = cl2 + cr2 = (3,4)
 The complex number cr2 added to the complex number cl2 is:
- cl2 += cr2 = (3,4)
+cl2 += cr2 = (3,4)
 The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="complex__operator-_eq">complex::operator-=</a>
+## <a name="complex__operator-_eq"></a>  complex::operator-=
 
 Subtrahiert eine Zahl von der komplexen Zielzahl, wobei die subtrahiert Zahl komplex ist oder vom gleichen Typ wie die Real- und Imaginärteile der komplexen Zahl, von der sie subtrahiert wurde
 
@@ -428,9 +434,11 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parameter
 
-*ComplexNum* eine komplexe Zahl, die von der komplexen zielzahl subtrahiert werden soll.
+*complexNum*<br/>
+Eine komplexe Zahl, die von der komplexen Zielzahl subtrahiert werden soll
 
-*_RealPart* eine reelle Zahl, die von der komplexen zielzahl subtrahiert werden soll.
+*_RealPart*<br/>
+Eine reelle Zahl, die von der komplexen Zielzahl subtrahiert werden soll
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -503,23 +511,23 @@ int main( )
 The left-side complex number is cl1 = (3,4)
 The right-side complex number is cr1 = (2,-1)
 The difference between the two complex numbers is:
- cs1 = cl1 - cr1 = (1,5)
+cs1 = cl1 - cr1 = (1,5)
 Complex number cr1 subtracted from complex number cl1 is:
- cl1 -= cr1 = (1,5)
+cl1 -= cr1 = (1,5)
 The modulus of cl1 is: 5.09902
 The argument of cl1 is: 1.3734 radians, which is 78.6901 degrees.
 
 The left-side complex number is cl2 = (2,4)
 The right-side complex number is cr2 = 5
 The difference between the two complex numbers is:
- cs2 = cl2 - cr2 = (-3,4)
+cs2 = cl2 - cr2 = (-3,4)
 Complex number cr2 subtracted from complex number cl2 is:
- cl2 -= cr2 = (-3,4)
+cl2 -= cr2 = (-3,4)
 The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
 
-## <a name="op_div_eq">complex::operator/=</a>
+## <a name="op_div_eq"></a>  complex::operator/=
 
 Dividiert eine komplexe Zielzahl durch einen komplexen Faktor oder einen Faktor vom gleichen Typ wie die Real- und Imaginärteile der komplexen Zahl
 
@@ -534,9 +542,11 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parameter
 
-*ComplexNum* eine komplexe Zahl, die von der komplexen zielzahl subtrahiert werden soll.
+*complexNum*<br/>
+Eine komplexe Zahl, die von der komplexen Zielzahl subtrahiert werden soll
 
-*_RealPart* eine reelle Zahl, die von der komplexen zielzahl subtrahiert werden soll.
+*_RealPart*<br/>
+Eine reelle Zahl, die von der komplexen Zielzahl subtrahiert werden soll
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -634,7 +644,8 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* eine komplexe Zahl oder eine Zahl, die den gleichen Typ wie der Parameter von der komplexen zielzahl ist.
+*right*<br/>
+Eine komplexe Zahl oder eine Zahl vom gleichen Typ wie der Parameter der komplexen Zielzahl
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -666,7 +677,7 @@ int main( )
 
    cl1  = cr1;
    cout << "The complex number cr1 assigned to the complex number cl1 is:"
-        << "\n cl1 = cr1 = " << cl1 << endl;
+        << "\ncl1 = cr1 = " << cl1 << endl;
 
    // Example of the second member function
    // type double assigned to type complex<double>
@@ -677,11 +688,11 @@ int main( )
 
    cl2 = cr2;
    cout << "The complex number cr2 assigned to the complex number cl2 is:"
-        << "\n cl2 = cr2 = " << cl2 << endl;
+        << "\ncl2 = cr2 = " << cl2 << endl;
 
    cl2 = complex<double>(3.0, 4.0);
    cout << "The complex number (3, 4) assigned to the complex number cl2 is:"
-        << "\n cl2 = " << cl2 << endl;
+        << "\ncl2 = " << cl2 << endl;
 }
 ```
 
@@ -689,13 +700,13 @@ int main( )
 The left-side complex number is cl1 = (3,4)
 The right-side complex number is cr1 = (2,-1)
 The complex number cr1 assigned to the complex number cl1 is:
- cl1 = cr1 = (2,-1)
+cl1 = cr1 = (2,-1)
 The left-side complex number is cl2 = (-2,4)
 The right-side complex number is cr2 = 5
 The complex number cr2 assigned to the complex number cl2 is:
- cl2 = cr2 = (5,0)
+cl2 = cr2 = (5,0)
 The complex number (3, 4) assigned to the complex number cl2 is:
- cl2 = (3,4)
+cl2 = (3,4)
 ```
 
 ## <a name="real"></a> complex::real
@@ -711,7 +722,8 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* eine komplexe Zahl, deren Reeller Wert extrahiert werden soll.
+*right*<br/>
+Eine komplexe Zahl, deren reeller Wert extrahiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -792,5 +804,4 @@ of type value_type: c1 = (3,4).
 
 ## <a name="see-also"></a>Siehe auch
 
-[komplexe Member](http://msdn.microsoft.com/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
 [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

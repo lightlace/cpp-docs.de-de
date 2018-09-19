@@ -1,5 +1,5 @@
 ---
-title: Hstring::&lt; Operator | Microsoft Docs
+title: Hstring::&lt; Operator | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,39 +15,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fae7195f048cd680be513bd54b635e2e1e9bbf7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0a89054dd7ce105f059083f3bd5ebb8db685396f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875109"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591941"
 ---
 # <a name="hstringoperatorlt-operator"></a>Hstring::&lt; Operator
-Gibt an, ob der erste Parameter ist kleiner als der zweite Parameter.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-inline bool operator<(  
-    const HString& lhs,   
+
+Gibt an, ob der erste Parameter kleiner als der zweite Parameter.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+inline bool operator<(
+    const HString& lhs,
     const HString& rhs) throw()  
-  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `lhs`  
- Der erste Parameter, verglichen werden soll. `lhs` Ein Verweis auf ein HString kann sein.  
-  
- `rhs`  
- Der zweite Parameter, verglichen werden soll. `rhs` Ein Verweis auf ein HString kann sein.  
-  
-## <a name="return-value"></a>Rückgabewert  
- `true` Wenn die `lhs` Parameter ist kleiner als das `rhs` Parameter ist, andernfalls `false`.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Siehe auch  
- [HString-Klasse](../windows/hstring-class.md)
+```
+
+### <a name="parameters"></a>Parameter
+
+*LHS*  
+Der erste Parameter, verglichen werden soll. *LHS* möglich ein Verweis auf ein **HString**.
+
+*RS*  
+Der zweite Parameter, verglichen werden soll. *RS* möglich ein Verweis auf ein **HString**.
+
+## <a name="return-value"></a>Rückgabewert
+
+**"true"** Wenn die *Lhs* -Parameter ist kleiner als der *RS* Parameter ist, andernfalls **"false"**.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+
+[HString-Klasse](../windows/hstring-class.md)

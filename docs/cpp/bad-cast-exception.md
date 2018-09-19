@@ -18,80 +18,83 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b50995ff1d5eb730bf6593679194d32d5300b9d7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3bd5bb63e075303856d444cb08c2c1f3abe990b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943136"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083937"
 ---
 # <a name="badcast-exception"></a>bad_cast-Ausnahme
-Die `bad_cast`-Ausnahme wird vom `dynamic_cast`-Operator als Folge eines Fehlers bei der Umwandlung in einen Verweistyp ausgelöst.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-catch (bad_cast)  
-   statement  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Die Schnittstelle für `bad_cast` ist:  
-  
-```cpp 
-class bad_cast : public exception {  
-public:  
-   bad_cast(const char * _Message = "bad cast");  
-   bad_cast(const bad_cast &);  
-   virtual ~bad_cast();  
-};  
-```  
-  
- Der folgende Code enthält ein Beispiel eines Fehlers bei `dynamic_cast`, der die Ausnahme `bad_cast` auslöst.  
-  
-```cpp 
-// expre_bad_cast_Exception.cpp  
-// compile with: /EHsc /GR  
-#include <typeinfo.h>  
-#include <iostream>  
-  
-class Shape {  
-public:  
-   virtual void virtualfunc() const {}  
-};  
-  
-class Circle: public Shape {  
-public:  
-   virtual void virtualfunc() const {}  
-};  
-  
-using namespace std;  
-int main() {  
-   Shape shape_instance;  
-   Shape& ref_shape = shape_instance;  
-   try {  
-      Circle& ref_circle = dynamic_cast<Circle&>(ref_shape);   
-   }  
-   catch (bad_cast b) {  
-      cout << "Caught: " << b.what();  
-   }  
-}  
-```  
-  
- Die Ausnahme wird ausgelöst, weil das umgewandelte Objekt (eine Form) nicht vom angegebenen Umwandlungstyp (Kreis) abgeleitet wird. Um die Ausnahme zu vermeiden, fügen Sie diese Deklarationen **main**:  
-  
-```cpp 
-Circle circle_instance;  
-Circle& ref_circle = circle_instance;  
-```  
-  
- Kehren Sie dann den Sinn der Umwandlung in den **versuchen** -Block wie folgt:  
-  
-```cpp 
-Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Dynamic_cast-Operator](../cpp/dynamic-cast-operator.md)   
- [Stichwörter](../cpp/keywords-cpp.md)   
- [C++-Ausnahmebehandlung](../cpp/cpp-exception-handling.md)
+
+Die **Bad_cast** Ausnahme wird von der **Dynamic_cast** -Operator als Folge eines fehlerhaften Umwandlung in einen Verweistyp handelt.
+
+## <a name="syntax"></a>Syntax
+
+```
+catch (bad_cast)
+   statement
+```
+
+## <a name="remarks"></a>Hinweise
+
+Die Schnittstelle für **Bad_cast** ist:
+
+```cpp
+class bad_cast : public exception {
+public:
+   bad_cast(const char * _Message = "bad cast");
+   bad_cast(const bad_cast &);
+   virtual ~bad_cast();
+};
+```
+
+Der folgende Code enthält ein Beispiel für eine fehlerhafte **Dynamic_cast** auslöst, die die **Bad_cast** Ausnahme.
+
+```cpp
+// expre_bad_cast_Exception.cpp
+// compile with: /EHsc /GR
+#include <typeinfo.h>
+#include <iostream>
+
+class Shape {
+public:
+   virtual void virtualfunc() const {}
+};
+
+class Circle: public Shape {
+public:
+   virtual void virtualfunc() const {}
+};
+
+using namespace std;
+int main() {
+   Shape shape_instance;
+   Shape& ref_shape = shape_instance;
+   try {
+      Circle& ref_circle = dynamic_cast<Circle&>(ref_shape);
+   }
+   catch (bad_cast b) {
+      cout << "Caught: " << b.what();
+   }
+}
+```
+
+Die Ausnahme wird ausgelöst, weil das umgewandelte Objekt (eine Form) nicht vom angegebenen Umwandlungstyp (Kreis) abgeleitet wird. Um die Ausnahme zu vermeiden, fügen Sie `main` diese Deklarationen hinzu:
+
+```cpp
+Circle circle_instance;
+Circle& ref_circle = circle_instance;
+```
+
+Kehren Sie dann den Sinn der Umwandlung in den **versuchen** -Block wie folgt:
+
+```cpp
+Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[dynamic_cast-Operator](../cpp/dynamic-cast-operator.md)<br/>
+[Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
+[C++-Ausnahmebehandlung](../cpp/cpp-exception-handling.md)

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 132936805d948257f8d6579f0f840aaf2fd15a0d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 60fb1c219068cc0c59f908688ea5c471946458ad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849655"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204140"
 ---
 # <a name="cpen-class"></a>CPen-Klasse
 Kapselt einen Stift der Windows GDI (Graphics Device Interface).  
@@ -57,10 +57,10 @@ class CPen : public CGdiObject
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CPen::CreatePen](#createpen)|Erstellt einen logischen kosmetischer Natur oder geometrischen Stift mit dem angegebenen Stil, Breite und Pinsel Attribute und fügt es der `CPen` Objekt.|  
-|[CPen::CreatePenIndirect](#createpenindirect)|Erstellt einen Stift mit Stil, Breite und Farbe, die im angegebenen ein [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) Struktur, und fügt es der `CPen` Objekt.|  
+|[CPen::CreatePenIndirect](#createpenindirect)|Erstellt einen Stift mit Stil, Breite und Farbe, die im angegebenen ein [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) Struktur, und fügt es der `CPen` Objekt.|  
 |[CPen::FromHandle](#fromhandle)|Gibt einen Zeiger auf eine `CPen` Objekt, wenn ein Windows-HPEN angegeben.|  
-|[CPen::GetExtLogPen](#getextlogpen)|Ruft eine [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) zugrunde liegende Struktur.|  
-|[CPen::GetLogPen](#getlogpen)|Ruft eine [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) zugrunde liegende Struktur.|  
+|[CPen::GetExtLogPen](#getextlogpen)|Ruft eine [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen) zugrunde liegende Struktur.|  
+|[CPen::GetLogPen](#getlogpen)|Ruft eine [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) zugrunde liegende Struktur.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
@@ -144,7 +144,7 @@ CPen(
   
 - PS_JOIN_BEVEL verknüpft abgeschrägt werden kann.  
   
-- PS_JOIN_MITER verknüpft Gehrung werden, wenn sie in das aktuelle Limit festgelegt sind das [SetMiterLimit](http://msdn.microsoft.com/library/windows/desktop/dd145076) Funktion. Wenn der Join über diesen Grenzwert überschreitet, wird es abgeschrägt.  
+- PS_JOIN_MITER verknüpft Gehrung werden, wenn sie in das aktuelle Limit festgelegt sind das [SetMiterLimit](/windows/desktop/api/wingdi/nf-wingdi-setmiterlimit) Funktion. Wenn der Join über diesen Grenzwert überschreitet, wird es abgeschrägt.  
   
 - PS_JOIN_ROUND verknüpft sind, runden.  
   
@@ -208,7 +208,7 @@ BOOL CreatePen(
  Enthält eine RGB-Farbe für den Stift.  
   
  *pLogBrush*  
- Verweist auf eine [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) Struktur. Wenn *nPenStyle* PS_COSMETIC, ist die `lbColor` Mitglied der `LOGBRUSH` Struktur gibt die Farbe des Stifts und der *LbStyle* Mitglied der `LOGBRUSH` Struktur muss auf BS_ festgelegt werden SOLID. Wenn nPenStyle PS_GEOMETRIC ist, müssen alle Member zum Festlegen von Attributen des Stifts Pinsel verwendet werden.  
+ Verweist auf eine [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) Struktur. Wenn *nPenStyle* PS_COSMETIC, ist die `lbColor` Mitglied der `LOGBRUSH` Struktur gibt die Farbe des Stifts und der *LbStyle* Mitglied der `LOGBRUSH` Struktur muss auf BS_ festgelegt werden SOLID. Wenn nPenStyle PS_GEOMETRIC ist, müssen alle Member zum Festlegen von Attributen des Stifts Pinsel verwendet werden.  
   
  *nStyleCount*  
  Gibt die Länge in Einheiten von zeigt Doppelwort, das *LpStyle* Array. Dieser Wert muss NULL, wenn sein *nPenStyle* ist kein PS_USERSTYLE.  
@@ -290,7 +290,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
 ### <a name="parameters"></a>Parameter  
  *pLogPen*  
- Verweist auf eine [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) -Struktur, die Informationen über das Stifteingabe enthält.  
+ Verweist auf eine [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen) -Struktur, die Informationen über das Stifteingabe enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -300,13 +300,13 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
  Finden Sie unter den folgenden Themen im Windows SDK Weitere Informationen zu Stift-Attributen:  
   
-- [GetObject](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
+- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)  
   
-- [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711)  
+- [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen)  
   
-- [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)  
+- [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)  
   
-- [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705)  
+- [ExtCreatePen](/windows/desktop/api/wingdi/nf-wingdi-extcreatepen)  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel veranschaulicht den Aufruf `GetExtLogPen` dieses Stifts Attribute abrufen und erstellen Sie dann mit der gleichen Farbe eines Stifts neuen, kosmetischer Natur.  
@@ -322,7 +322,7 @@ int GetLogPen(LOGPEN* pLogPen);
   
 ### <a name="parameters"></a>Parameter  
  *pLogPen*  
- Verweist auf eine [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) Struktur, um Informationen über das Stifteingabe enthalten.  
+ Verweist auf eine [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) Struktur, um Informationen über das Stifteingabe enthalten.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -334,9 +334,9 @@ int GetLogPen(LOGPEN* pLogPen);
   
  Finden Sie unter den folgenden Themen im Windows SDK Weitere Informationen zu Stift-Attributen:  
   
-- [GetObject](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
+- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)  
   
-- [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)  
+- [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel veranschaulicht den Aufruf `GetLogPen` ein Stift Zeichen abrufen und erstellen Sie dann einen neuen, soliden Stift, mit der gleichen Farbe.  
@@ -356,7 +356,7 @@ operator HPEN() const;
 ### <a name="remarks"></a>Hinweise  
  Dieser Operator ist ein Umwandlungsoperator, die direkte Verwendung eines HPEN-Objekts unterstützt.  
   
- Weitere Informationen zur Verwendung von Grafikobjekten finden Sie im Artikel [Grafik Objekte](http://msdn.microsoft.com/library/windows/desktop/dd144962) im Windows SDK.  
+ Weitere Informationen zur Verwendung von Grafikobjekten finden Sie im Artikel [Grafik Objekte](/windows/desktop/gdi/graphic-objects) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#104](../../mfc/codesnippet/cpp/cpen-class_7.cpp)]  

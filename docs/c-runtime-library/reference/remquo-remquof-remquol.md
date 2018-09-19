@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d2bcb774d7ebe7e71c3877af326177bbf8d7160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 480bf65d61581866fe447c9563a267d08d17c838
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407001"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207652"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
@@ -74,13 +74,13 @@ Ein Zeiger auf eine ganze Zahl zum Speichern eines Werts, der das Zeichen und di
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Remquo** gibt den Gleitkommarest von *x* / *y*. Wenn der Wert der *y* ist "0,0", " **Remquo** gibt ein stilles NaN zurück. Informationen zu der Darstellung des ein stilles NaN, durch die **Printf** Familie finden Sie unter [Printf, _printf_l, Wprintf _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+**Remquo** gibt den Gleitkommarest von *x* / *y*. Wenn der Wert des *y* ist 0,0, **Remquo** ein stilles NaN zurückgegeben. Informationen über die Darstellung eines stillen NaN durch die **Printf** -Familie finden Sie unter [Printf, _printf_l, Wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Remquo** -Funktion berechnet den Gleitkommarest *f* von *x* / *y* so, dass *x*   =  *ich* * *y* + *f*, wobei *ich* ist eine ganze Zahl , *f* hat die gleichen Vorzeichen wie *x*, und den absoluten Wert des *f* ist kleiner als der Absolute Wert des *y*.
+Die **Remquo** -Funktion berechnet den Gleitkommarest *f* von *x* / *y* so, dass *x*   =  *ich* \* *y* + *f*, wobei *ich* ist eine ganze Zahl , *f* hat die gleichen Vorzeichen wie *x*, und der Absolute Wert des *f* ist kleiner als der Absolute Wert des *y*.
 
-C++ das Überladen zulässt, sodass Sie Überladungen von aufrufen können **Remquo** verwenden und zurückgeben **"float"** oder **lange** **doppelte** Werte. In einem C-Programm **Remquo** immer zwei **doppelte** Argumente und gibt eine **doppelte**.
+Da C++ das Überladen zulässt, können Sie Überladungen von aufrufen können **Remquo** verwenden und zurückgeben **"float"** oder **lange** **doppelte** Werte. In einem C-Programm **Remquo** nimmt immer zwei **doppelte** Argumente und gibt eine **doppelte**.
 
 ## <a name="requirements"></a>Anforderungen
 

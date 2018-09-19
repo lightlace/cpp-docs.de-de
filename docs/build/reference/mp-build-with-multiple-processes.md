@@ -1,5 +1,5 @@
 ---
-title: / MP (erstellen mit mehreren Prozessen) | Microsoft Docs
+title: / MP (erstellen mit mehreren Prozessen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29f7fd00a9d24b1941830690633befc75c39eb32
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb24ed970d3b02835d5545cb0eaf1d9fd8e81c7e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379119"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713426"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (Erstellen mit mehreren Prozessen)
 
@@ -38,19 +38,19 @@ Die Option **/MP** kann die Gesamtzeit für die Kompilierung der Quelldateien in
 *processMax*<br/>
 (Optional) Die maximale Anzahl von Prozessen, die der Compiler erstellen kann.
 
-Die *ProcessMax* Argument muss zwischen 1 und 65536 liegen. Andernfalls gibt der Compiler Warnmeldung **D9014**, ignoriert der *ProcessMax* Argument, und setzt voraus, die maximale Anzahl von Prozessen ist 1.
+Die *ProcessMax* Argument muss zwischen 1 und 65536 liegen. Andernfalls gibt der Compiler die Warnmeldung **D9014**, ignoriert der *ProcessMax* -Argument, und nimmt an, dass die maximale Anzahl von Prozessen 1.
 
-Wenn Sie weglassen der *ProcessMax* Argument, das der Compiler übernimmt die Anzahl der [effektive Prozessoren](#effective_processors) auf Ihrem Computer aus dem Betriebssystem und erstellt einen Prozess für jeden Prozessor.
+Wenn Sie weglassen der *ProcessMax* -Argument, das der Compiler Ruft die Anzahl der [effektiven Prozessoren](#effective_processors) aus dem Betriebssystem auf Ihrem Computer und erstellt einen Prozess für jeden Prozessor.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Compileroption **/MP** kann beim Kompilieren vieler Dateien die Buildzeit beträchtlich reduzieren. Zur Erhöhung der Buildzeit erstellt der Compiler bis zu *ProcessMax* von sich selbst kopiert und verwendet dann diese Kopien, um Ihre Quelldateien zur gleichen Zeit zu kompilieren. Die Option **/MP** gilt für Kompilierungen, jedoch nicht für das Linken oder die Link-Zeitcodegenerierung. Standardmäßig ist die Option **/MP** Option deaktiviert.
+Die Compileroption **/MP** kann beim Kompilieren vieler Dateien die Buildzeit beträchtlich reduzieren. Zur Verbesserung der Buildzeit erstellt der Compiler bis zu *ProcessMax* Kopien von sich selbst und verwendet dann diese Kopien, um Ihre Quelldateien zur gleichen Zeit zu kompilieren. Die Option **/MP** gilt für Kompilierungen, jedoch nicht für das Linken oder die Link-Zeitcodegenerierung. Standardmäßig ist die Option **/MP** Option deaktiviert.
 
 Die Verbesserung der Buildzeit hängt von der Anzahl der Prozessoren auf einem Computer ab, der Anzahl der zu kompilierenden Dateien und der Verfügbarkeit von Systemressourcen, z.B. der E/A-Kapazität. Experimentieren Sie mit der Option **/MP** , um die beste Einstellung zum Erstellen eines bestimmten Projekts zu bestimmen. Ratschläge, die Sie bei dieser Entscheidung unterstützen, finden Sie unter [Richtlinien](#guidelines).
 
 ## <a name="incompatible-options-and-language-features"></a>Inkompatible Optionen und Sprachfunktionen
 
-Die Option **/MP** ist mit einigen Compileroptionen und Sprachfunktionen nicht kompatibel. Wenn Sie eine nicht kompatible Compileroption mit verwenden die **/MP** -Option der Compiler gibt eine Warnung **D9030** und ignoriert die **/MP** Option. Wenn Sie eine nicht kompatible Sprachfunktion verwenden, gibt der Compiler Fehler [C2813](../../error-messages/compiler-errors-2/compiler-error-c2813.md) anschließend beendet oder fortgesetzt wird, abhängig von der aktuellen Compiler aus.
+Die Option **/MP** ist mit einigen Compileroptionen und Sprachfunktionen nicht kompatibel. Wenn Sie eine nicht kompatible Compileroption mit verwenden die **/MP** auswählen, gibt der Compiler die Warnung **D9030** und ignoriert die **/MP** Option. Wenn Sie eine nicht kompatible Sprachfunktion verwenden, gibt der Compiler Fehler [C2813](../../error-messages/compiler-errors-2/compiler-error-c2813.md) und beendet oder fortgesetzt werden, abhängig von der aktuellen compilerwarnstufe.
 
 > [!NOTE]
 > Die meisten Optionen sind nicht kompatibel, denn wenn sie zulässig wären, würden die gleichzeitig ausgeführten Compiler ihre Ausgabe zur gleichen Zeit auf die Konsole oder in eine bestimmte Datei schreiben. Daher wäre die Ausgabe vermischt und verstümmelt. In einigen Fällen würde die Kombination von Optionen die Leistung verschlechtern.
@@ -72,7 +72,7 @@ Wenn Sie eine Option oder Sprachfunktion angeben, die nicht mit der Option **/MP
 |Diagnosemeldung|Beschreibung|Compilerverhalten|
 |------------------------|-----------------|-----------------------|
 |**C2813**|Die **#import** Direktive ist nicht kompatibel mit der Option **/MP** Option.|Die Kompilierung endet, sofern keine Option für [Compilerwarnstufen](../../build/reference/compiler-option-warning-level.md) etwas anderes angibt.|
-|**D9014**|Ein ungültiger Wert angegeben wird, für die *ProcessMax* Argument.|Der Compiler ignoriert den ungültigen Wert und nimmt den Wert 1 an.|
+|**D9014**|Ein ungültiger Wert angegeben ist, für die *ProcessMax* Argument.|Der Compiler ignoriert den ungültigen Wert und nimmt den Wert 1 an.|
 |**D9030**|Die angegebene Option ist nicht kompatibel mit **/MP**.|Der Compiler ignoriert die Option **/MP** .|
 
 ## <a name="guidelines"></a> Richtlinien
@@ -83,11 +83,11 @@ Verwenden Sie die gesamte Buildzeit zum Messen der Leistung. Sie können die Bui
 
 ### <a name="effective_processors"></a> Effective Processors
 
-Ein Computer kann eine oder mehrere virtuelle Prozessoren, die auch bezeichnet als werden haben *effektive Prozessoren*, aller seiner physischen Prozessoren. Jeder physischer Prozessor kann einen oder mehrere Kerne haben, und wenn das Betriebssystem für einen Kern Hyperthreading ermöglicht, erscheint jeder Kern als zwei virtuelle Prozessoren.
+Ein Computer kann eine oder mehrere virtuelle Prozessoren, die auch als bekannt sind haben *effektiven Prozessoren*, für jeden seiner physischen Prozessoren. Jeder physischer Prozessor kann einen oder mehrere Kerne haben, und wenn das Betriebssystem für einen Kern Hyperthreading ermöglicht, erscheint jeder Kern als zwei virtuelle Prozessoren.
 
 Beispiel: Ein Computer verfügt über einen effektiven Prozessor, wenn er einen physischen Prozessor mit einem Kern besitzt und Hyperthreading deaktiviert ist. Im Gegensatz dazu besitzt ein Computer acht effektive Prozessoren, wenn er zwei physische Prozessoren mit jeweils zwei Kernen hat und alle Kerne Hyperthreading aktiviert haben. D. h. (8 effektive Prozessoren) = (2 physische Prozessoren) x (2 Kerne pro physischem Prozessor) x (2 effektive Prozessoren pro Kern wegen Hyperthreading).
 
-Wenn Sie weglassen der *ProcessMax* Argument in der **/MP** -Option der Compiler Ruft die Anzahl der effektiven Prozessoren vom Betriebssystem ab und erstellt dann einen Prozess pro effektiven Prozessor. Jedoch kann der Compiler nicht garantieren, welcher Prozess auf einem bestimmten Prozessor ausgeführt wird; das Betriebssystem trifft diese Entscheidung.
+Wenn Sie weglassen der *ProcessMax* -Argument in der **/MP** -Option der Compiler Ruft die Anzahl der effektiven Prozessoren vom Betriebssystem ab und erstellt dann einen Prozess pro effektivem Prozessor. Jedoch kann der Compiler nicht garantieren, welcher Prozess auf einem bestimmten Prozessor ausgeführt wird; das Betriebssystem trifft diese Entscheidung.
 
 ### <a name="number-of-processes"></a>Anzahl der Prozesse
 
@@ -123,17 +123,17 @@ Der Compiler unterstützt nicht die Verwendung der [#import](../../preprocessor/
 
 #### <a name="the-msbuildexe-tool"></a>Das Tool „MSBUILD.exe“
 
-[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] verwendet das [MSBuild.exe](/visualstudio/msbuild/msbuild-reference) Tool, um Projektmappen und Projekte zu erstellen. Die **maxcpucount:**_Anzahl_ (oder **/m:**_Anzahl_) Befehlszeilenoption für das Tool "MSBuild.exe" kann mehrere Projekte zur Erstellen der gleichzeitig. Die Compileroption **/MP** kann mehrere Kompilierungseinheiten gleichzeitig erstellen. Wenn es für die Anwendung geeignet ist, verbessern Sie die Buildzeit Ihrer Projektmappe, indem Sie **/MP** oder/und **/maxcpucount**verwenden.
+Visual Studio verwendet die [MSBuild.exe](/visualstudio/msbuild/msbuild-reference) Tool, um Projektmappen und Projekte zu erstellen. Die **maxcpucount:**_Anzahl_ (oder **/m:**_Anzahl_) Befehlszeilenoption des MSBuild.exe-Tools kann mehrere Projekte erstellen, die gleichzeitig. Die Compileroption **/MP** kann mehrere Kompilierungseinheiten gleichzeitig erstellen. Wenn es für die Anwendung geeignet ist, verbessern Sie die Buildzeit Ihrer Projektmappe, indem Sie **/MP** oder/und **/maxcpucount**verwenden.
 
-Die Buildzeit der Projektmappe hängt teilweise von der Anzahl der Prozesse ab, die den Build ausführen. Die *Anzahl* Argument der [maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) MSBuild-Option gibt die maximale Anzahl von Projekten zur gleichen Zeit zu erstellen. Auf ähnliche Weise die *ProcessMax* Argument der **/MP** (Compileroption) gibt die maximale Anzahl der Kompilierungseinheiten gleichzeitig zu erstellen. Wenn die **maxcpucount** Option gibt an, *P* Projekte und die **/MP** Option gibt an, *C* verarbeitet wird, maximal *P*  x *C* Prozesse zur gleichen Zeit ausführen.
+Die Buildzeit der Projektmappe hängt teilweise von der Anzahl der Prozesse ab, die den Build ausführen. Die *Anzahl* Argument der [maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) MSBuild-Option gibt die maximale Anzahl der Projekte gleichzeitig erstellen. Auf ähnliche Weise die *ProcessMax* Argument der **/MP** Compiler-Option gibt die maximale Anzahl von Kompilierungseinheiten gleichzeitig erstellen. Wenn die **maxcpucount** Option gibt an, *P* Projekte und die **/MP** Option gibt an, *C* verarbeitet wird, maximal *P*  x *C* Prozesse zur gleichen Zeit ausführen.
 
- Die Richtlinie bei der Entscheidung, ob verwendet MSBuild oder **/MP** Technologie lautet wie folgt:
+Die Richtlinie für die Entscheidung, ob zum Verwenden von MSBuild oder **/MP** Technologie lautet wie folgt:
 
-- Wenn Sie viele Projekte mit wenigen Dateien in jedem Projekt vorhanden sind, verwenden Sie die MSBuild-Tool.
+- Wenn viele Projekte mit wenigen Dateien in jedem Projekt vorhanden sind, verwenden Sie das MSBuild-Tool.
 
 - Wenn wenige Projekte mit vielen Dateien in jedem Projekt vorhanden sind, verwenden Sie die Option **/MP** .
 
-- Wenn die Anzahl von Projekten und Dateien pro Projekt ausgeglichen ist, verwenden beide MSBuild und **/MP**. Legen Sie anfangs die Option **/maxcpucount** auf die Anzahl der zu erstellenden Projekte und die Option **/MP** auf die Anzahl der Prozessoren im Computer fest. Messen Sie die Leistung und passen Sie dann die Einstellungen so an, dass sie zu optimalen Ergebnissen führen. Wiederholen Sie diesen Zyklus, bis Sie mit der Gesamt-Buildzeit zufrieden sind.
+- Wenn die Anzahl von Projekten und Dateien pro Projekt ausgeglichen ist, verwenden Sie beide MSBuild und **/MP**. Legen Sie anfangs die Option **/maxcpucount** auf die Anzahl der zu erstellenden Projekte und die Option **/MP** auf die Anzahl der Prozessoren im Computer fest. Messen Sie die Leistung und passen Sie dann die Einstellungen so an, dass sie zu optimalen Ergebnissen führen. Wiederholen Sie diesen Zyklus, bis Sie mit der Gesamt-Buildzeit zufrieden sind.
 
 #### <a name="the-gm-compiler-option"></a>Die Compileroption /Gm
 
@@ -141,6 +141,6 @@ Standardmäßig aktiviert ein Projektbuild die Compileroption **/Gm** (inkrement
 
 ## <a name="see-also"></a>Siehe auch
 
-[#import-Direktive](../../preprocessor/hash-import-directive-cpp.md)<br/>
+[#import-Anweisung](../../preprocessor/hash-import-directive-cpp.md)<br/>
 [MSBuild-Befehlszeilenreferenz](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
 [/Zf (Schnellere PDB-Generierung)](zf.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: 'Chaininterfaces:: Iidcount-Konstante | Microsoft Docs'
+title: 'Chaininterfaces:: Iidcount-Konstante | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5327b706fb6b461d7bbe449df5482c8f0c485ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a97ea483bddb0ed6b2fadce1f9daa50eab82591a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860001"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596904"
 ---
 # <a name="chaininterfacesiidcount-constant"></a>ChainInterfaces::IidCount-Konstante
-Die Gesamtanzahl der Schnittstellen-IDs enthalten, die in den Schnittstellen, die vom Vorlagenparameter angegeben `I0` über `I9`.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + Details::InterfaceTraits<I1>::IidCount + Details::InterfaceTraits<I2>::IidCount + Details::InterfaceTraits<I3>::IidCount + Details::InterfaceTraits<I4>::IidCount + Details::InterfaceTraits<I5>::IidCount + Details::InterfaceTraits<I6>::IidCount + Details::InterfaceTraits<I7>::IidCount + Details::InterfaceTraits<I8>::IidCount + Details::InterfaceTraits<I9>::IidCount;  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Die Gesamtanzahl der Schnittstellen-IDs.  
-  
-## <a name="remarks"></a>Hinweise  
- Vorlagenparameter `I0` und `I1` sind erforderlich, und die Parameter `I2` über `I9` sind optional. Die Anzahl von IID für jede Schnittstelle ist in der Regel 1.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** implements.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [ChainInterfaces-Struktur](../windows/chaininterfaces-structure.md)
+
+Die Gesamtanzahl der Schnittstellen-IDs enthalten, die in den Schnittstellen, die vom Vorlagenparameter angegeben *I0* über *I9*.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + Details::InterfaceTraits<I1>::IidCount + Details::InterfaceTraits<I2>::IidCount + Details::InterfaceTraits<I3>::IidCount + Details::InterfaceTraits<I4>::IidCount + Details::InterfaceTraits<I5>::IidCount + Details::InterfaceTraits<I6>::IidCount + Details::InterfaceTraits<I7>::IidCount + Details::InterfaceTraits<I8>::IidCount + Details::InterfaceTraits<I9>::IidCount;
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Die Gesamtanzahl der Schnittstellen-IDs.
+
+## <a name="remarks"></a>Hinweise
+
+Vorlagenparameter *I0* und *I1* sind erforderlich, und die Parameter *I2* über *I9* sind optional. Die Anzahl der IID jeder Schnittstelle ist in der Regel 1.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** implements.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[ChainInterfaces-Struktur](../windows/chaininterfaces-structure.md)

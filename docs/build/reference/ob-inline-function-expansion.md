@@ -1,5 +1,5 @@
 ---
-title: -Ob (Inlinefunktionserweiterung) | Microsoft Docs
+title: -Ob (Inlinefunktionserweiterung) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/25/2017
 ms.technology:
@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb7c31dca2d95232850140576be3ddc0ac695cac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6755025ff07d79b7e6086fc8c8a59a3bdebdb777
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377831"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725256"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (Inlinefunktionserweiterung)
 
@@ -51,31 +51,31 @@ Steuert die Inlineerweiterung von Funktionen.
 
 ## <a name="arguments"></a>Argumente
 
-**0**  
-Deaktiviert Inline-Erweiterungen. Standardmäßig Erweiterung erfolgt nach Ermessen des Compilers auf alle Funktionen, so genannte *Automatisches inlining*.
+**0**<br/>
+Deaktiviert Inline-Erweiterungen. In der Standardeinstellung Erweiterung erfolgt nach Ermessen des Compilers bei allen Funktionen, bezeichnet als *Automatisches inlining*.
 
-**1**  
-Ermöglicht die Erweiterung nur von Funktionen, die als [Inline](../../cpp/inline-functions-cpp.md), `__inline`, oder `__forceinline`, oder in einer C++-Memberfunktion, die in einer Klassendeklaration definiert.
+**1**<br/>
+Ermöglicht die Erweiterung wird nur für Funktionen mit dem [Inline](../../cpp/inline-functions-cpp.md), `__inline`, oder `__forceinline`, oder in einer C++-Memberfunktion, die in einer Klassendeklaration definiert.
 
-**2**  
+**2**<br/>
 Der Standardwert. Ermöglicht die Erweiterung von Funktionen, die als `inline`, `__inline` oder `__forceinline` gekennzeichnet sind, sowie aller anderen Funktionen, für die sich der Compiler entscheidet.
 
-**/ Ob2** ist wirksam, wenn [/O1, / O2 (Größe minimieren, Geschwindigkeit maximieren)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) oder [/Ox (ermöglichen die meisten Geschwindigkeit Optimierungen)](../../build/reference/ox-full-optimization.md) verwendet wird.
+**/ Ob2** ist gültig, wenn [/O1, / O2 (Größe minimieren, Geschwindigkeit maximieren)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) oder [/Ox (ermöglichen die meisten Geschwindigkeitsoptimierungen)](../../build/reference/ox-full-optimization.md) verwendet wird.
 
-Diese Option erfordert, dass Sie Optimierungen mithilfe aktivieren **/O1**, **/O2**, **/Ox**, oder **/Og**.  
+Diese Option erfordert, dass Sie Optimierungen mithilfe aktivieren **"/ O1"**, **"/ O2"**, **/Ox**, oder **"/ Og"**.
 
 ## <a name="remarks"></a>Hinweise
 
 Der Compiler behandelt die Inlineerweiterungsoptionen und -Schlüsselwörter als Vorschläge. Es gibt keine Garantie dafür, dass eine bestimmte Funktion inline erweitert wird. Sie können die Inlineerweiterung deaktivieren, Sie können den Compiler aber nicht dazu zwingen, für eine bestimmte Funktion Inlining auszuführen, auch nicht mithilfe des Schlüsselworts `__forceinline`.
 
-Sie können die `#pragma` [Auto_inline](../../preprocessor/auto-inline.md) Richtlinie Funktionen als Kandidaten für die Inlineerweiterung Zielmodell. Siehe auch die `#pragma` [systeminterne](../../preprocessor/intrinsic.md) Richtlinie.
+Sie können die `#pragma` [Auto_inline](../../preprocessor/auto-inline.md) Direktive, um die Funktionen von der Berücksichtigung als Kandidaten für die Inlineerweiterung auszuschließen. Siehe auch die `#pragma` [systeminterne](../../preprocessor/intrinsic.md) Richtlinie.
 
 > [!NOTE]
-> Informationen, die vom Test profilerstellungsausführungen gesammelt werden, überschreiben Optimierungen, die andernfalls geltende wäre, wenn Sie angeben, **tatsächlich**, **/OS**, oder **/Ot**. Weitere Informationen finden Sie unter [Profilgesteuerte Optimierung](../../build/reference/profile-guided-optimizations.md).
+> Informationen, die profilerstellung gesammelt werden, überschreiben Optimierungen, die andernfalls gültig wäre, wenn Sie angeben, **tatsächlich**, **/OS**, oder **/Ot**. Weitere Informationen finden Sie unter [Profile-Guided Optimizations](../../build/reference/profile-guided-optimizations.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
 
 1. Erweitern Sie **Konfigurationseigenschaften**, **C/C++-**, und wählen Sie **Optimierung**.
 
@@ -87,6 +87,6 @@ Sie können die `#pragma` [Auto_inline](../../preprocessor/auto-inline.md) Richt
 
 ## <a name="see-also"></a>Siehe auch
 
-[/O-Optionen (Code optimieren)](../../build/reference/o-options-optimize-code.md)  
-[Compileroptionen](../../build/reference/compiler-options.md)  
+[/ O-Optionen (Code optimieren)](../../build/reference/o-options-optimize-code.md)
+[Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

@@ -1,5 +1,5 @@
 ---
-title: Retval | Microsoft Docs
+title: Retval | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,46 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c0bf7ecd989b51a17c853c6d2986db204c3ce34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ff83b156054774a06a371e7832dc73dc95a579c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888720"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221257"
 ---
 # <a name="retval"></a>retval
-Kennzeichnet den Parameter, der den Rückgabewert des Members empfängt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-[retval]  
-  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Die **Retval** C++-Attribut hat die gleiche Funktionalität wie die [Retval](http://msdn.microsoft.com/library/windows/desktop/aa367158) MIDL-Attribut.  
-  
- **Retval** muss für das letzte Argument in der Deklaration einer Funktion angezeigt werden.  
-  
-## <a name="example"></a>Beispiel  
- Siehe das Beispiel für [bindbare](../windows/bindable.md) für ein Beispiel für die Verwendung von **Retval**.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-### <a name="attribute-context"></a>Attributkontext  
-  
-|||  
-|-|-|  
-|**Betrifft**|Parameter, für die Schnittstellen-Methode|  
-|**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|**out**|  
-|**Ungültige Attribute**|**in**|  
-  
- Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [IDL-Attribute](../windows/idl-attributes.md)   
- [Parameterattribute](../windows/parameter-attributes.md)   
- [Methodenattribut](../windows/method-attributes.md)   
+
+Legt fest, den Parameter, der den Rückgabewert des Members empfängt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+[retval]
+```
+
+## <a name="remarks"></a>Hinweise
+
+Die **Retval** C++-Attribut hat die gleiche Funktionalität wie die [Retval](/windows/desktop/Midl/retval) MIDL-Attribut.
+
+**Retval** muss für das letzte Argument in einer Funktion Deklaration angezeigt werden.
+
+## <a name="example"></a>Beispiel
+
+Siehe das Beispiel für [bindbare](../windows/bindable.md) für ein Beispiel für die Verwendung von **Retval**.
+
+## <a name="requirements"></a>Anforderungen
+
+### <a name="attribute-context"></a>Attributkontext
+
+|||
+|-|-|
+|**Betrifft**|Parameter, für die Schnittstellenmethode|
+|**Wiederholbar**|Nein|
+|**Erforderliche Attribute**|**out**|
+|**Ungültige Attribute**|**in**|
+
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[IDL-Attribute](../windows/idl-attributes.md)  
+[Parameterattribute](../windows/parameter-attributes.md)  
+[Methodenattribut](../windows/method-attributes.md)  

@@ -1,7 +1,7 @@
 ---
-title: Projektbuildfehler prj0022 | Microsoft Docs
+title: Projektbuildfehler prj0022 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bcd5064fd28900076d98a72890316627268fb22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0af331149c28a3ede9436ee7b5dc7ddb39952ed4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317868"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211978"
 ---
 # <a name="project-build-error-prj0022"></a>Projektbuildfehler PRJ0022
-Tool unbekannt, Eigenschaft "Property" enthält ungültige Dateiname "Datei".  
-  
- Der Name der Datei ***Datei***, in der Eigenschaft angegeben ***Eigenschaft***, war ungültig.  
-  
- Möglicherweise haben Sie ein Makro unbekannt oder ungültig verwendet.  
-  
- Finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md) Informationen zum Zugreifen auf Eigenschaften des Projekts.
+
+> Tool unbekannt, Eigenschaft "*Eigenschaft*"enthält ungültigen Dateinamen"*Datei*".
+
+Der Dateiname *Datei* in der Eigenschaft angegebene *Eigenschaft* war ungültig.
+
+Möglicherweise haben Sie einen unbekannten oder ungültigen-Makro verwendet.
+
+Finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md) Informationen zu den Eigenschaften Ihres Projekts zuzugreifen.

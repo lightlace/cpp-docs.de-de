@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Konvertieren zwischen verschiedenen Zeichenfolgentypen | Microsoft Docs'
+title: 'Vorgehensweise: Konvertieren zwischen verschiedenen Zeichenfolgentypen | Microsoft-Dokumentation'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44b80fcafa15a472f4bfc68dd74ff0acc40bb2ad
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e21473c887c6f51406eb72d3cbb03a08df9e01f6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861226"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608944"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Gewusst wie: Konvertieren zwischen verschiedenen Zeichenfolgentypen
-Dieses Thema veranschaulicht, wie verschiedene Visual C++-Zeichenfolgentypen in andere Zeichenfolgen konvertiert werden. Zeichenfolgen, die behandelt werden die folgenden Anweisungstypen `char *`, `wchar_t*`, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [Basic_string](../standard-library/basic-string-class.md), und <xref:System.String?displayProperty=fullName>. In allen Fällen wird beim Konvertieren in den neuen Typ eine Kopie der Zeichenfolge erstellt. Alle Änderungen, die an der neuen Zeichenfolge vorgenommen werden, wirken sich nicht auf die Originalzeichenfolge aus und umgekehrt.  
+Dieses Thema veranschaulicht, wie verschiedene Visual C++-Zeichenfolgentypen in andere Zeichenfolgen konvertiert werden. Die Zeichenfolgentypen, die behandelt werden: `char *`, `wchar_t*`, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), ["basic_string"](../standard-library/basic-string-class.md), und <xref:System.String?displayProperty=fullName>. In allen Fällen wird beim Konvertieren in den neuen Typ eine Kopie der Zeichenfolge erstellt. Alle Änderungen, die an der neuen Zeichenfolge vorgenommen werden, wirken sich nicht auf die Originalzeichenfolge aus und umgekehrt.  
   
-## <a name="converting-from-char-"></a>Konvertieren aus char *  
+## <a name="converting-from-char-"></a>Konvertieren aus char \*  
   
 ## <a name="example"></a>Beispiel  
   
@@ -35,7 +35,7 @@ Dieses Thema veranschaulicht, wie verschiedene Visual C++-Zeichenfolgentypen in
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // convert_from_char.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -115,9 +115,7 @@ int main()
 }  
 ```  
   
-### <a name="output"></a>Ausgabe  
-  
-```  
+```Output  
 Hello, World! (char *)  
 Hello, World! (wchar_t *)  
 Hello, World! (_bstr_t)  
@@ -128,7 +126,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)  
 ```  
   
-## <a name="converting-from-wchart-"></a>Konvertieren aus wchar_t *  
+## <a name="converting-from-wchart-"></a>Konvertieren aus wchar_t \*  
   
 ## <a name="example"></a>Beispiel  
   
@@ -137,7 +135,7 @@ Hello, World! (System::String)
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // convert_from_wchar_t.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -238,11 +236,9 @@ int main()
     Console::WriteLine("{0}", systemstring);  
     delete systemstring;  
 }  
-```  
+```   
   
-### <a name="output"></a>Ausgabe  
-  
-```  
+```Output  
 Hello, World! (wchar_t *)  
 Hello, World! (char *)  
 Hello, World! (_bstr_t)  
@@ -262,7 +258,7 @@ Hello, World! (System::String)
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // convert_from_bstr_t.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -339,11 +335,9 @@ int main()
     Console::WriteLine("{0}", systemstring);  
     delete systemstring;  
 }  
-```  
+```   
   
-### <a name="output"></a>Ausgabe  
-  
-```  
+```Output  
 Hello, World! (_bstr_t)  
 Hello, World! (char *)  
 Hello, World! (wchar_t *)  
@@ -363,7 +357,7 @@ Hello, World! (System::String)
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // convert_from_ccombstr.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -452,9 +446,7 @@ int main()
 }  
 ```  
   
-### <a name="output"></a>Ausgabe  
-  
-```  
+```Output  
 Hello, World! (CComBSTR)  
 Hello, World! (char *)  
 Hello, World! (wchar_t *)  
@@ -476,7 +468,7 @@ Hello, World! (System::String)
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // convert_from_cstring.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -498,7 +490,7 @@ int main()
     cout << origa << " (CStringA)" << endl;  
 ```  
   
-```  
+```cpp  
 // Set up a wide character CStringW string.  
 CStringW origw("Hello, World!");  
 wcout << (LPCTSTR)origw << _T(" (CStringW)") << endl;  
@@ -587,7 +579,7 @@ Console::WriteLine("{0}", systemstring);
 delete systemstring;  
 ```  
   
-```  
+```cpp  
     // Convert a wide character CStringW to a   
     // System::String.  
     String ^systemstringw = gcnew String(origw);  
@@ -595,11 +587,9 @@ delete systemstring;
     Console::WriteLine("{0}", systemstringw);  
     delete systemstringw;  
 }  
-```  
+```   
   
-### <a name="output"></a>Ausgabe  
-  
-```  
+```Output  
 Hello, World! (CStringA)  
 Hello, World! (CStringW)  
 Hello, World! (char *)  
@@ -623,7 +613,7 @@ Hello, World! (System::String)
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // convert_from_basic_string.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -698,9 +688,7 @@ int main()
 }  
 ```  
   
-### <a name="output"></a>Ausgabe  
-  
-```  
+```Output  
 Hello, World! (basic_string)  
 Hello, World! (char *)  
 Hello, World! (wchar_t *)  
@@ -716,11 +704,11 @@ Hello, World! (System::String)
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Beschreibung  
- In diesem Beispiel wird veranschaulicht, wie von einem Breitzeichen (Unicode) konvertiert [System:: String](assetId:///System::String?qualifyHint=True&autoUpgrade=True) in die anderen oben aufgeführten Zeichenfolgentypen.  
+ In diesem Beispiel wird veranschaulicht, wie von einem Breitzeichen (Unicode) konvertieren [System:: String](assetId:///System::String?qualifyHint=True&autoUpgrade=True) in die anderen oben aufgeführten Zeichenfolgentypen.  
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // convert_from_system_string.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -806,9 +794,7 @@ int main()
 }  
 ```  
   
-### <a name="output"></a>Ausgabe  
-  
-```  
+```Output  
 Hello, World! (System::String)  
 Hello, World! (char *)  
 Hello, World! (wchar_t *)  
@@ -820,14 +806,14 @@ Hello, World! (basic_string)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [ATL und MFC-Makros zur Zeichenfolgenkonvertierung](../atl/reference/string-conversion-macros.md)   
+ [ATL und MFC-Zeichenfolgen-Konvertierungsmakros](../atl/reference/string-conversion-macros.md)   
  [CString-Vorgänge im Zusammenhang mit Zeichenfolgen im C-Stil](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)   
  [Vorgehensweise: Konvertieren einer Standardzeichenfolge nach System:: String](../dotnet/how-to-convert-standard-string-to-system-string.md)   
- [Vorgehensweise: Konvertieren von System:: String in Standardzeichenfolge](../dotnet/how-to-convert-system-string-to-standard-string.md)   
- [Vorgehensweise: Konvertieren von System:: String nach Wchar_t * oder Char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)   
+ [Vorgehensweise: Konvertieren von System:: String zu Standardzeichenfolge](../dotnet/how-to-convert-system-string-to-standard-string.md)   
+ [Gewusst wie: Konvertieren von System:: String in Wchar_t * oder Char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)   
  [Programmieren mit CComBSTR](../atl/programming-with-ccombstr-atl.md)   
  [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)   
- [Wcstombs_s _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)   
+ [Wcstombs_s, _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)   
  [strcpy_s, wcscpy_s, _mbscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)   
  [strcat_s, wcscat_s, _mbscat_s](../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md)   
  [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)

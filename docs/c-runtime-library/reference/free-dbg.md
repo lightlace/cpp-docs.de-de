@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa485eea6f0ffda05b0ef33a808d5ec837255514
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b68404df0f56a4a75c89b5f3a44ff8c853c5cef4
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400043"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103904"
 ---
 # <a name="freedbg"></a>_free_dbg
 
@@ -56,23 +56,25 @@ void _free_dbg(
 
 ### <a name="parameters"></a>Parameter
 
-*UserData* Zeiger auf den belegten Speicherblock freigegeben wird.
+*userData*<br/>
+Zeiger zum belegten Speicherblock, der freigegeben werden soll.
 
-*BlockType* Typ des belegten Speicherblocks freigegeben werden: **_CLIENT_BLOCK**, **_NORMAL_BLOCK**, oder **_IGNORE_BLOCK**.
+*blockType*<br/>
+Typ des belegten Speicherblock freigegeben werden: **_CLIENT_BLOCK**, **_NORMAL_BLOCK**, oder **_IGNORE_BLOCK**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_free_dbg** Funktion ist eine Debugversion der [freier](free.md) Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, bei jedem Aufruf **_free_dbg** wird zu einem Aufruf von reduziert **freien**. Beide **freien** und **_free_dbg** frei einen Speicherblock im Basisheap, jedoch **_free_dbg** hat zwei Debugfunktionen: die Möglichkeit, freigegebene Blöcke beizubehalten in des Heaps verknüpfte Liste, um Speichermangel und einen blocktypparameter zum Freigeben bestimmter belegungstypen zu simulieren.
+Die **_free_dbg** -Funktion ist eine Debugversion der der [kostenlose](free.md) Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, jeden Aufruf von **_free_dbg** wird nach einer Verkleinerung auf einen Aufruf von **kostenlose**. Beide **kostenlose** und **_free_dbg** geben einen Speicherblock im Basisheap, jedoch **_free_dbg** unterstützt zwei Debugfunktionen: die Möglichkeit, um Speichermangel zu halten, freigegebene Blöcke in des Heaps verknüpfte Liste, um Bedingungen mit unzureichendem Arbeitsspeicher und einen blocktypparameter zum Freigeben bestimmter belegungstypen zu simulieren.
 
-**_free_dbg** führt eine gültigkeitsüberprüfung für alle angegebenen Dateien und blockspeicherorte vor dem Ausführen des Vorgangs frei. Die Anwendung stellt diese Informationen wahrscheinlich nicht bereit. Wenn ein Speicherblock freigegeben wird, überprüft der Debugheapmanager automatisch die Pufferintegrität auf beiden Seiten des Benutzerteils und erstellt einen Fehlerbericht, falls über den Puffer hinaus geschrieben wurde. Wenn die **_CRTDBG_DELAY_FREE_MEM_DF** -Bitfeld des der [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) Flags festgelegt ist, wird der freigegebene Block mit den zugewiesenen Wert 0xDD, gefüllt der **_FREE_BLOCK** Blocktyp, und in der verknüpften Heapliste von Speicherblöcken aufbewahrt wird.
+**_free_dbg** führt eine gültigkeitsüberprüfung für alle angegebenen Dateien und blockspeicherorte, bevor Sie eine Freigabe erfolgt. Die Anwendung stellt diese Informationen wahrscheinlich nicht bereit. Wenn ein Speicherblock freigegeben wird, überprüft der Debugheapmanager automatisch die Pufferintegrität auf beiden Seiten des Benutzerteils und erstellt einen Fehlerbericht, falls über den Puffer hinaus geschrieben wurde. Wenn die **_CRTDBG_DELAY_FREE_MEM_DF** -Bitfeld des der [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) -Flag festgelegt ist, wird der freigegebene Block mit den zugewiesenen Wert "0xDD", gefüllt der **_FREE_BLOCK** Blocktyp, und in der verknüpften Liste von Speicherblöcken aufbewahrt wird.
 
-Wenn ein Fehler auftritt, bei der Freigabe des Arbeitsspeichers und **Errno** mit Informationen des Betriebssystems über die Art des Fehlers festgelegt ist. Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Wenn ein Fehler auftritt, bei der Freigabe von Speicher **Errno** mit Informationen aus dem Betriebssystem von der Art des Fehlers festgelegt ist. Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap-Details](/visualstudio/debugger/crt-debug-heap-details). Informationen zu den Belegungsblocktypen und ihrer Verwendung finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details). Weitere Informationen zu den Unterschieden zwischen dem Aufruf einer Standardheapfunktion und ihrer Debugversion in einem Debugbuild einer Anwendung finden Sie unter [Debugversionen von Heapbelegungsfunktionen](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_free_dbg**|\<crtdbg.h>|
 
@@ -80,7 +82,7 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 
 ## <a name="example"></a>Beispiel
 
-Ein Beispiel zum Verwenden von **_free_dbg**, finden Sie unter [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2).
+Ein Beispiel zur Verwendung **_free_dbg**, finden Sie unter [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2).
 
 ## <a name="see-also"></a>Siehe auch
 

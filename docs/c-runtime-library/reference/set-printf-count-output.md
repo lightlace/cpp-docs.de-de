@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96256f71a94f20f126f02b04511c57c831ad2a00
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 783225412b01430d1043dafd4761cb7432eaa1d7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406640"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108318"
 ---
 # <a name="setprintfcountoutput"></a>_set_printf_count_output
 
-Aktivieren oder Deaktivieren der Unterstützung für die **%n** in formatieren [Printf, _printf_l, Wprintf _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-Familie Funktionen.
+Aktivieren oder Deaktivieren der Unterstützung für die **%n** -Formats in [Printf, _printf_l, Wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-Familie der Funktionen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,19 +55,20 @@ int _set_printf_count_output(
 
 ### <a name="parameters"></a>Parameter
 
-*Aktivieren Sie* einen Wert ungleich 0 (null), aktivieren Sie **%n** zu unterstützen, 0 zum Deaktivieren der **%n** unterstützen.
+*Aktivieren*<br/>
+Ein Wert ungleich NULL aktivieren **%n** zu unterstützen, 0 zum Deaktivieren der **%n** unterstützen.
 
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert
 
-Der Status der **%n** vor dem Aufrufen dieser Funktion zu unterstützen: If ungleich NULL **%n** Unterstützung wurde aktiviert, 0, wenn er deaktiviert wurde.
+Der Status der **%n** -Unterstützung vor dem Aufrufen dieser Funktion: ungleich NULL, wenn **%n** -Unterstützung aktiviert wurde, 0, wenn sie deaktiviert wurde.
 
 ## <a name="remarks"></a>Hinweise
 
-Aus Gründen der Sicherheit unterstützt, für die **%n** Formatbezeichner ist standardmäßig deaktiviert, in **Printf** und alle seine Varianten. Wenn **%n** festgestellt wird, einem **Printf** Formatangabe ist das Standardverhalten wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Aufrufen von **_set_printf_count_output** mit einem Argument ungleich 0 führt dazu, dass **Printf**-Produktfamilie Funktionen interpretieren **%n** wie beschrieben in [Format Syntax der Formatangabe: printf- und Wprintf-Funktionen](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Aus Sicherheitsgründen, Unterstützung für die **%n** Formatbezeichner ist standardmäßig deaktiviert, in **Printf** und alle seine Varianten. Wenn **%n** gefunden wird in einem **Printf** Formatspezifikation, das Standardverhalten ist, um Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Aufrufen von **_set_printf_count_output** mit einem Argument ungleich 0 führt dazu, dass **Printf**-Familie, interpretieren die Funktionen **%n** Siehe [Format Syntax der Formatangabe: printf- und Wprintf-Funktionen](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_set_printf_count_output**|\<stdio.h>|
 

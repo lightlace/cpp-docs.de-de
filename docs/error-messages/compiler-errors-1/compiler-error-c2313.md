@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2313 | Microsoft Docs
+title: Compilerfehler C2313 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 984e9e5e9163137537c9da2cd8c14bd1271ebeb0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 57e291788f261f0e62bd476b3027dfa809594ce3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169971"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024933"
 ---
 # <a name="compiler-error-c2313"></a>Compilerfehler C2313
-'Typ1': wurde aufgefangen durch Verweis ('Typ2') in Zeile  
-  
- Der Ausnahmetyp verfügt über zwei Handler. Der Verweis für den zweiten Catch ist ein Verweis auf den Typ des ersten Catch.  
-  
- Im folgenden Beispiel wird C2313 generiert:  
-  
-```  
-// C2313.cpp  
-// compile with: /EHsc  
-#include <eh.h>  
-class C {};  
-int main() {  
-    try {  
-        throw "ooops!";  
-    }  
-    catch( C& ) {}  
-    catch( C ) {}   // C2313  
-}  
+
+'Typ1': wurde aufgefangen durch Verweis ('Typ2') in Zeile
+
+Der Ausnahmetyp verfügt über zwei Handler. Der Verweis für den zweiten Catch ist ein Verweis auf den Typ des ersten Catch.
+
+Im folgenden Beispiel wird C2313 generiert:
+
+```
+// C2313.cpp
+// compile with: /EHsc
+#include <eh.h>
+class C {};
+int main() {
+    try {
+        throw "ooops!";
+    }
+    catch( C& ) {}
+    catch( C ) {}   // C2313
+}
 ```

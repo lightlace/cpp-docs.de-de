@@ -1,5 +1,5 @@
 ---
-title: __outword | Microsoft Docs
+title: __outword | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f0e827b16b9743cb6bc7fe6906b4c74c3006864
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd5abaccb4adc9e642458669535cff369d963cfd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331135"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712576"
 ---
 # <a name="outword"></a>__outword
 **Microsoft-spezifisch**  
   
- Generiert die `out` -Anweisung, die das Wort sendet `Data` Ausgang von angegebenen e/a- `Port`.  
+ Generiert die `out` -Anweisung, die das Wort sendet `Data` der e/a-Port anhand des `Port`.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,17 +39,17 @@ void __outword(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `Port`  
- Der Port, an die die Daten gesendet werden soll.  
+*Port*<br/>
+[in] Der Port, der die Daten zu senden.  
   
- [in] `Data`  
- Die Daten gesendet werden.  
+*Data*<br/>
+[in] Die Daten gesendet werden.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__outword`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outword`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

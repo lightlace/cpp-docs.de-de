@@ -54,19 +54,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f759ce9a4617ab0ca8e97ef308508d836b53b742
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4ede89a5290bca14c39aa16c68071edefd0ebd08
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414245"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222428"
 ---
 # <a name="strnextc-wcsnextc-mbsnextc-mbsnextcl"></a>_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
 
 Sucht das nächste Zeichen in einer Zeichenfolge.
 
 > [!IMPORTANT]
-> **_mbsnextc** und **_mbsnextc_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnextc** und **_mbsnextc_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -101,11 +101,11 @@ Jede dieser Funktionen gibt den ganzzahligen Wert des nächsten Zeichens im *str
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbsnextc** Funktion gibt den ganzzahligen Wert des nächsten multibytezeichens in *str*, ohne den Zeichenfolgenzeiger weiterzusetzen. **_mbsnextc** erkennt Multibyte-Zeichenfolgen gemäß der [multibyte-Codepage](../../c-runtime-library/code-pages.md) aktuell in Verwendung.
+Die **_mbsnextc** Funktion gibt den ganzzahligen Wert des nächsten multibytezeichens in *str*, ohne den Zeichenfolgenzeiger weiterzusetzen. **_mbsnextc** erkennt multibytezeichensequenzen gemäß der [multibyte-Codepage](../../c-runtime-library/code-pages.md) aktuell.
 
-Wenn *str* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und die Funktion gibt 0 zurück.
+Wenn *str* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und die Funktion gibt 0 zurück.
 
-**Sicherheitshinweis**: Diese API stellt eine mögliche Bedrohung aufgrund eines Pufferüberlaufproblems dar. Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Sicherheitshinweis**: Diese API stellt eine mögliche Bedrohung aufgrund eines Pufferüberlaufproblems dar. Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -113,13 +113,13 @@ Wenn *str* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie i
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnextc**|**_strnextc**|**_mbsnextc**|**_wcsnextc**|
 
-**_strnextc** und **_wcsnextc** sind Single-Byte-Zeichenfolge und Breitzeichen-Zeichenfolge-Versionen **_mbsnextc**. **_wcsnextc** gibt den ganzzahligen Wert des folgenden Breitzeichens in *str*; **_strnextc** gibt den ganzzahligen Wert, der das nächste Einzelbyte-Zeichen in *str*. **_strnextc** und **_wcsnextc** werden nur für diese Zuordnung bereitgestellt und sollten nicht Zwecke verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Zuordnungen für generischen Text](../../c-runtime-library/using-generic-text-mappings.md) und [Textzuordnungen für generischen Text](../../c-runtime-library/generic-text-mappings.md).
+**_strnextc** und **_wcsnextc** sind Single-Byte-Zeichenfolge und die Zeichenfolge mit Breitzeichen-Versionen von **_mbsnextc**. **_wcsnextc** gibt den ganzzahligen Wert des folgenden Breitzeichens in *str*; **_strnextc** gibt den ganzzahligen Wert, der das nächste Einzelbyte-Zeichen im *str*. **_strnextc** und **_wcsnextc** werden nur für diese Zuordnung bereitgestellt und sollte nicht anderweitig verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Zuordnungen für generischen Text](../../c-runtime-library/using-generic-text-mappings.md) und [Textzuordnungen für generischen Text](../../c-runtime-library/generic-text-mappings.md).
 
-**_mbsnextc_l** ist nahezu identisch, die stattdessen übergebenen Gebietsschemaparameter verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+**_mbsnextc_l** ist identisch, außer dass er den stattdessen den übergebenen Gebietsschemaparameter verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_mbsnextc**|\<mbstring.h>|
 |**_mbsnextc_l**|\<mbstring.h>|

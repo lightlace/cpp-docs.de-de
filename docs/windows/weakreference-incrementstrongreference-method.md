@@ -1,5 +1,5 @@
 ---
-title: 'WeakReference:: Incrementstrongreference-Methode | Microsoft Docs'
+title: 'WeakReference:: Incrementstrongreference-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee53e068c13f52c01e997680b57915051a8efad8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a0c8e9ba093c6be4b1e0d5747c16a8dc8887cd2c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890621"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591087"
 ---
 # <a name="weakreferenceincrementstrongreference-method"></a>WeakReference::IncrementStrongReference-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-ULONG IncrementStrongReference();  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Die Anzahl inkrementiert starken Verweis.  
-  
-## <a name="remarks"></a>Hinweise  
- Inkrementiert den Verweiszähler starken Verweis von der aktuellen WeakReference-Objekt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+ULONG IncrementStrongReference();
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Die Anzahl inkrementiert starken Verweis.
+
+## <a name="remarks"></a>Hinweise
+
+Inkrementiert die Anzahl der starken Verweis des aktuellen **WeakReference** Objekt.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
 [WeakReference-Klasse](../windows/weakreference-class1.md)  
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

@@ -17,26 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85c085e6e5a8f0bbddba5be2905b437425d9a5c3
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 46a42c92115ee60a0387e58b2acd5ce640e60eae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963653"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46015636"
 ---
 # <a name="persistence-classes"></a>Dauerhaftigkeitsklassen
-Die folgenden Klassen implementieren Objektpersistenz:  
-  
--   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) ermöglicht es einem Client zum Laden und speichern die Eigenschaften eines Objekts auf eine Eigenschaftensammlung.  
-  
--   [IPersistStreamInitImpl](../atl/reference/ipersiststreaminitimpl-class.md) ermöglicht einem Client zu laden und Speichern von persistenten Daten eines Objekts in einen Stream.  
-  
--   [IPersistStorageImpl](../atl/reference/ipersiststorageimpl-class.md) ermöglicht einem Client zu laden und Speichern von persistenten Daten eines Objekts in einem Speicher.  
-  
-## <a name="related-articles"></a>Verwandte Artikel  
- [ATL-Lernprogramm](../atl/active-template-library-atl-tutorial.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../atl/atl-class-overview.md)   
- [Eigenschaftenzuordnungs-Makros](../atl/reference/property-map-macros.md)
+
+Die folgenden Klassen implementieren Objektpersistenz:
+
+- [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) ermöglicht es einem Client zum Laden und speichern die Eigenschaften eines Objekts auf eine Eigenschaftensammlung.
+
+- [IPersistStreamInitImpl](../atl/reference/ipersiststreaminitimpl-class.md) ermöglicht einem Client zu laden und Speichern von persistenten Daten eines Objekts in einen Stream.
+
+- [IPersistStorageImpl](../atl/reference/ipersiststorageimpl-class.md) ermöglicht einem Client zu laden und Speichern von persistenten Daten eines Objekts in einem Speicher.
+
+## <a name="related-articles"></a>Verwandte Artikel
+
+[ATL-Lernprogramm](../atl/active-template-library-atl-tutorial.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../atl/atl-class-overview.md)<br/>
+[Eigenschaftenzuordnungs-Makros](../atl/reference/property-map-macros.md)
 

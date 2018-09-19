@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38bcd102e94ac98aba56a4eb98b69df6d3f16111
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: b0e7852ad3fbd88b815aea8266bafc2879494d8a
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238564"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900666"
 ---
 # <a name="cmake-projects-in-visual-c"></a>CMake-Projekte in Visual C++
 
@@ -221,6 +221,8 @@ Da Ninja für schnelle Buildgeschwindigkeiten statt für Flexibilität und Funkt
 1. **variables:** enthält ein Name/Wert-Paar von CMake-Variablen, die als **-D**_Name_**=**_Wert_ an CMake übergeben werden Wenn die Buildanweisungen Ihres CMake-Projekts das direkte Hinzufügen aller Variablen zur CMake-Cachedatei festlegen, wird empfohlen, diese stattdessen hier hinzuzufügen.
 1. **cmakeCommandArgs:** gibt alle zusätzlichen Optionen an, die an „CMake.exe“ übergeben werden sollen
 1. **configurationType:** definiert den Typ der Buildkonfiguration für den ausgewählten Generator Derzeit werden die Werte "Debug", "MinSizeRel", "Release" und "RelWithDebInfo" unterstützt.
+1. **ctestCommandArgs:** gibt zusätzliche Optionen an, die beim Ausführen von Tests an CTest übergeben werden sollen.
+1. **ctestCommandArgs:** gibt zusätzliche Optionen an, die an das zugrunde liegende Buildsystem übergeben werden sollen. Beispielsweise wird beim Übergeben von „-v“ mithilfe des Ninja-Generators erzwungen, dass Ninja Befehlszeilen ausgibt.
 
 ### <a name="environment-variables"></a>Umgebungsvariablen
 
@@ -245,7 +247,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|Option|description|
+|Option|Beschreibung |
 |--------------|------------|
 | --version  | Ausgabe der Ninja-Version ("1.7.1")|
 |   -C DIR   | Änderung in DIR, bevor andere Aktionen ausgeführt werden|
@@ -270,7 +272,7 @@ Das obige Beispiel entspricht der Ausführung der **Developer-Eingabeaufforderun
 
 Folgende Tabelle führt die Standardwerte und die zugehörigen Befehlszeilen auf:
 
-|Kontextname|description|
+|Kontextname|Beschreibung |
 |-----------|-----------------|
 |vsdev|Die Standardumgebung von Visual Studio|
 |msvc_x86|Kompiliert mithilfe von x86-Tools für x86|

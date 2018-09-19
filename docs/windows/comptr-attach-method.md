@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Attach-Methode | Microsoft Docs'
+title: 'Comptr:: Attach-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 590a50fbaca22b088af39f31e2e6349a3ebc18dd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f02d8585778dcb10013a5673c7443b0355535555
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870102"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600195"
 ---
 # <a name="comptrattach-method"></a>ComPtr::Attach-Methode
-Verknüpft dieses ComPtr-Objekt mit dem Schnittstellentyp, der durch den Typparameter der aktuellen Vorlage angegeben ist.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void Attach(  
-   _In_opt_ InterfaceType* other  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `other`  
- Ein Schnittstellentyp.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [ComPtr-Klasse](../windows/comptr-class.md)
+
+Dies ordnet **ComPtr** mit dem Schnittstellentyp, der von der aktuellen Vorlagentyp-Parameter angegeben.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+void Attach(
+   _In_opt_ InterfaceType* other
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*other*  
+Ein Schnittstellentyp ist.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[ComPtr-Klasse](../windows/comptr-class.md)

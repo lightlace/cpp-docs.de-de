@@ -10,12 +10,12 @@ dev_langs:
 ms.assetid: 50569c5d-0219-4966-9bcf-a8689074ad1d
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: ef23b1a12305be9ecf181beb085bb686e81b083b
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b694ba9324d82eaf0c14912f49f9962062702335
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939753"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103207"
 ---
 # <a name="source-code-organization-c-templates"></a>Quellcodeorganisation (C++-Vorlagen)
 
@@ -52,7 +52,7 @@ public:
     T& operator[](int i)
    {
        return arr[i];
-   } 
+   }
 };
 #endif
 ```

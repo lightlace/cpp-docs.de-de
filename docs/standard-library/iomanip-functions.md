@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 34089ec501934f5d6aa8408acded821a67f67502
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 673289f5ac8b739dfe7c1a4de446a37d85763452
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958477"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108407"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt;-Funktionen
 
@@ -55,9 +55,11 @@ T7 get_money(Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>Parameter
 
-*_Amount* der extrahierte Währungswert.
+*_Amount*<br/>
+Der extrahierte Währungswert.
 
-*_Intl* Wenn **"true"**, verwenden Sie die internationales Format. Der Standardwert ist **FALSE**.
+*_Intl*<br/>
+Wenn **"true"**, verwenden Sie die internationales Format. Der Standardwert ist **FALSE**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -76,9 +78,11 @@ T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
 
 ### <a name="parameters"></a>Parameter
 
-*_Tptr* die Zeit in Form einer Zeitstruktur.
+*_Tptr*<br/>
+Die Zeit in Form einer Zeitstruktur.
 
-*_Fmt* das gewünschte Format zu verwenden, um den Zeitwert zu erhalten.
+*_Fmt*<br/>
+Das gewünschte Format, das Sie verwenden, um den Zeitwert zu erhalten.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -95,9 +99,11 @@ T8 put_money(const Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>Parameter
 
-*_Amount* der Währungswert, der in den Stream einfügen.
+*_Amount*<br/>
+Der Währungswert, der in den Stream eingefügt werden soll.
 
-*_Intl* festgelegt **"true"** Wenn Manipulator internationale Format benutzen soll **"false"** Falls nicht.
+*_Intl*<br/>
+Legen Sie auf **"true"** Wenn Manipulator internationale Format benutzen soll **"false"** Falls nicht.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -120,9 +126,11 @@ T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
 
 ### <a name="parameters"></a>Parameter
 
-*_Tptr* den Zeitwert, der in den Stream, bereitgestellt in einer Zeitstruktur geschrieben.
+*_Tptr*<br/>
+Der Zeitwert aus einer Zeitstruktur, der in den Stream geschrieben werden soll.
 
-*_Fmt* das gewünschte Format, das Time-Werten zu schreiben.
+*_Fmt*<br/>
+Das gewünschte Format, das Sie verwenden, um den Zeitwert zu schreiben.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -141,11 +149,14 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>Parameter
 
-*Str* ein Std:: String, Char *, Zeichenfolge Zeichenfolgenliteral oder unformatiertes Zeichenfolgenliteral oder eine Breite Version von diesen (z.B. Std:: wstring, Wchar_t\*).
+*str*<br/>
+Ein Std:: String, Char\*, string, Zeichenfolgenliteral oder unformatiertes Zeichenfolgenliteral oder eine Breite Version von diesen (z.B. Std:: wstring, Wchar_t\*).
 
-*Trennzeichen* ein benutzerdefiniertes Zeichen oder Breitzeichen, das als Trennzeichen für den Beginn und Ende der Zeichenfolge verwendet.
+*Trennzeichen*<br/>
+Ein benutzerdefiniertes Zeichen oder Breitzeichen, das als Trennzeichen für den Anfang und das Ende der Zeichenfolge verwendet wird.
 
-*Escapezeichen* ein benutzerdefiniertes Zeichen oder Breitzeichen, das als Escapezeichen für Escapesequenzen in der Zeichenfolge verwenden.
+*Escapezeichen*<br/>
+Ein benutzerdefiniertes Zeichen oder Breitzeichen, das als Escapezeichen für Escapesequenzen in der Zeichenfolge verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -303,7 +314,8 @@ T1 resetiosflags(ios_base::fmtflags Mask);
 
 ### <a name="parameters"></a>Parameter
 
-*Maske* die zu löschenden Flags.
+*Maske*<br/>
+Die zu löschenden Flags.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -323,7 +335,8 @@ T3 setbase(int _Base);
 
 ### <a name="parameters"></a>Parameter
 
-*_Base* die Zahlenbasis.
+*_Base*<br/>
+Die Zahlenbasis.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -352,7 +365,8 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>Parameter
 
-*CH* das Zeichen, das zum Auffüllen in einer rechts ausgerichteten Anzeige verwendet wird.
+*CH*<br/>
+Das zum Auffüllen in einer rechts ausgerichteten Anzeige verwendete Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -372,7 +386,8 @@ T2 setiosflags(ios_base::fmtflags Mask);
 
 ### <a name="parameters"></a>Parameter
 
-*Maske* die festzulegenden Flags.
+*Maske*<br/>
+Die festzulegenden Flags.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -392,7 +407,8 @@ T5 setprecision(streamsize Prec);
 
 ### <a name="parameters"></a>Parameter
 
-*Prec* die Genauigkeit für Gleitkommawerte.
+*prec*<br/>
+Die Genauigkeit für Gleitkommawerte.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -412,7 +428,8 @@ T6 setw(streamsize Wide);
 
 ### <a name="parameters"></a>Parameter
 
-*Große* die Breite des Anzeigefelds.
+*Breite*<br/>
+Die Breite des Anzeigefelds.
 
 ### <a name="return-value"></a>Rückgabewert
 

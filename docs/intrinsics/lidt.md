@@ -1,5 +1,5 @@
 ---
-title: __lidt | Microsoft Docs
+title: __lidt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dd972d2a7e8d75f7149b2dc2766ffca86b0b2e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5184d925e5d6712dd547e34341d84919c50e0a43
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326510"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724710"
 ---
 # <a name="lidt"></a>__lidt
 **Microsoft-spezifisch**  
   
- Lädt das Interrupt Deskriptor Tabelle Register (IDTR) mit dem Wert in der angegebenen Speicheradresse.  
+ Lädt das Interrupt-Deskriptor Tabelle Register (IDTR) mit dem Wert in der angegebenen Speicheradresse.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,18 +41,18 @@ void __lidt(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `Source`|Zeiger auf den Wert in der IDTR kopiert werden sollen.|  
+|*Source*|[in] Zeiger auf den Wert in der IDTR kopiert werden sollen.|  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__lidt`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__lidt`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Die `__lidt` -Funktion ist gleichbedeutend mit dem `LIDT` computeranweisung und ist nur im Kernelmodus verfügbar. Weitere Informationen zu suchen, für das Dokument "Intel Architecture-Softwareentwickler manuell, Volume 2: Instruction Set-Reference" auf der [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) Standort.  
+ Die `__lidt` -Funktion ist gleichbedeutend mit der `LIDT` computeranweisung und steht nur im Kernelmodus ausgeführt. Weitere Informationen zu suchen, nach dem Dokument "Intel Architecture-Softwareentwickler manuell, Volume 2: Instruction Set Reference," auf die [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) Standort.  
   
 **Ende Microsoft-spezifisch**  
   

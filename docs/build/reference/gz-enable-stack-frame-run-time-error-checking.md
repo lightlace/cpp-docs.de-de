@@ -1,5 +1,5 @@
 ---
-title: -GZ (Aktivieren der Stapel Frame-Fehlerprüfungen zur Laufzeit überprüft) | Microsoft Docs
+title: -GZ (aktivieren Laufzeit-Fehlerüberprüfung für Stapelrahmen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,41 +20,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31224fa3b2809cbc7b7f29868ad4c3e6a89954e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8f13824064b7c7dcdb75524a22b14a4d90942918
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373552"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707218"
 ---
 # <a name="gz-enable-stack-frame-run-time-error-checking"></a>/GZ (Laufzeitfehlerüberprüfung für Stapelrahmen aktivieren)
-Führt die gleichen Vorgänge wie die [/RTC (Run-Time Checks Fehler)](../../build/reference/rtc-run-time-error-checks.md) Option. Veraltet.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-/GZ  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- **/ GZ** ist nur für die Verwendung in einer nicht optimierten ([/Od (deaktivieren (Debuggen))](../../build/reference/od-disable-debug.md)) erstellen.  
-  
- **/ GZ** ist veraltet, da Visual Studio 2005; verwenden Sie [/RTC (Run-Time Checks Fehler)](../../build/reference/rtc-run-time-error-checks.md) stattdessen. Eine Liste der veralteten Compileroptionen, finden Sie unter **veraltete und entfernte Compileroptionen** in [Compileroptionen nach Kategorien sortiert](../../build/reference/compiler-options-listed-by-category.md).  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
-  
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
-  
-2.  Klicken Sie auf den Ordner **C/C++** .  
-  
-3.  Klicken Sie auf die Eigenschaftenseite **Befehlszeile** .  
-  
-4.  Geben Sie die Compileroption im Feld **Zusätzliche Optionen** ein.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
-  
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Compileroptionen](../../build/reference/compiler-options.md)   
- [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+
+Führt die gleichen Vorgänge wie das [/RTC (Run-Time Error Checks)](../../build/reference/rtc-run-time-error-checks.md) Option. Veraltet.
+
+## <a name="syntax"></a>Syntax
+
+```
+/GZ
+```
+
+## <a name="remarks"></a>Hinweise
+
+**/ GZ** ist nur für die Verwendung in einem optimierten ([/Od (deaktivieren (Debuggen))](../../build/reference/od-disable-debug.md)) erstellen.
+
+**/ GZ** ist veraltet, da Visual Studio 2005; verwenden Sie [/RTC (Run-Time Error Checks)](../../build/reference/rtc-run-time-error-checks.md) stattdessen. Eine Liste der Ersetzte Compileroptionen, finden Sie unter **veraltete und entfernte Compileroptionen** in [Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
+
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+
+1. Klicken Sie auf den Ordner **C/C++** .
+
+1. Klicken Sie auf die Eigenschaftenseite **Befehlszeile** .
+
+1. Geben Sie die Compileroption im Feld **Zusätzliche Optionen** ein.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
+
+- Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Siehe auch
+
+[Compileroptionen](../../build/reference/compiler-options.md)<br/>
+[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

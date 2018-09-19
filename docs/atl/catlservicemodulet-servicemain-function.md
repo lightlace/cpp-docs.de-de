@@ -18,25 +18,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dff3fa3f3ed20406955570f2ad72531f4e44f11
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ae357caad88e128fe9f3742887781d0096efe2c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848120"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058587"
 ---
 # <a name="catlservicemoduletservicemain-function"></a>CAtlServiceModuleT:: ServiceMain-Funktion
-Der dienststeuerungs-Manager (SCM) Ruft `ServiceMain` Wenn Sie die Systemsteuerung für die Dienste-Anwendung öffnen, wählen Sie den Dienst, und klicken Sie auf **starten**.  
-  
- Nach dem dienststeuerungs-Manager ruft `ServiceMain`, ein Dienst muss dienststeuerungs-Manager eine Handlerfunktion erteilen. Mithilfe dieser Funktion können den SCM-Status des Diensts zu erhalten und übergeben Sie spezifische Anweisungen (z. B. durch das Anhalten oder Beenden). Dienststeuerungs-Manager ruft diese Funktion ab, wenn der Dienst übergibt `_Handler` an die Win32-API-Funktion, [' RegisterServiceCtrlHandler '](http://msdn.microsoft.com/library/windows/desktop/ms685054). (`_Handler` ist eine statische Memberfunktion, die die nicht statische Memberfunktion ruft [Handler](../atl/reference/catlservicemodulet-class.md#handler).)  
-  
- Beim Start sollte ein Dienst dienststeuerungs-Manager von den aktuellen Status auch darüber informieren. Dies geschieht durch die Übergabe von SERVICE_START_PENDING an die Win32-API-Funktion, [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241).  
-  
- `ServiceMain` Ruft dann `CAtlExeModuleT::InitializeCom`, die Win32-API-Funktion aufruft [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279). In der Standardeinstellung `InitializeCom` übergibt das Flag COINIT_MULTITHREADED an die Funktion. Dieses Flag gibt an, dass das Programm ein Freethread-Server sein.  
-  
- Jetzt `CAtlServiceModuleT::Run` wird aufgerufen, um die eigentliche Arbeit des Diensts führen. `Run` wird weiterhin ausgeführt, bis der Dienst beendet wird.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Dienste](../atl/atl-services.md)   
- [CAtlServiceModuleT:: ServiceMain](../atl/reference/catlservicemodulet-class.md#servicemain)
+
+Der dienststeuerungs-Manager (SCM) Ruft `ServiceMain` Wenn Sie die Systemsteuerung für die Dienste-Anwendung öffnen, wählen Sie den Dienst, und klicken Sie auf **starten**.
+
+Nach dem dienststeuerungs-Manager ruft `ServiceMain`, ein Dienst muss dienststeuerungs-Manager eine Handlerfunktion erteilen. Mithilfe dieser Funktion können den SCM-Status des Diensts zu erhalten und übergeben Sie spezifische Anweisungen (z. B. durch das Anhalten oder Beenden). Dienststeuerungs-Manager ruft diese Funktion ab, wenn der Dienst übergibt `_Handler` an die Win32-API-Funktion, [' RegisterServiceCtrlHandler '](/windows/desktop/api/winsvc/nf-winsvc-registerservicectrlhandlera). (`_Handler` ist eine statische Memberfunktion, die die nicht statische Memberfunktion ruft [Handler](../atl/reference/catlservicemodulet-class.md#handler).)
+
+Beim Start sollte ein Dienst dienststeuerungs-Manager von den aktuellen Status auch darüber informieren. Dies geschieht durch die Übergabe von SERVICE_START_PENDING an die Win32-API-Funktion, [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus).
+
+`ServiceMain` Ruft dann `CAtlExeModuleT::InitializeCom`, die Win32-API-Funktion aufruft [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex). In der Standardeinstellung `InitializeCom` übergibt das Flag COINIT_MULTITHREADED an die Funktion. Dieses Flag gibt an, dass das Programm ein Freethread-Server sein.
+
+Jetzt `CAtlServiceModuleT::Run` wird aufgerufen, um die eigentliche Arbeit des Diensts führen. `Run` wird weiterhin ausgeführt, bis der Dienst beendet wird.
+
+## <a name="see-also"></a>Siehe auch
+
+[Dienste](../atl/atl-services.md)<br/>
+[CAtlServiceModuleT:: ServiceMain](../atl/reference/catlservicemodulet-class.md#servicemain)
 

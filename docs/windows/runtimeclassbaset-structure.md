@@ -1,5 +1,5 @@
 ---
-title: RuntimeClassBaseT-Struktur | Microsoft Docs
+title: RuntimeClassBaseT-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,42 +15,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ea147ebddff03401f6151bcdc44d96efb233f90
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6ff7af5ceac971bc230addf81dbd7131a455ada1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888986"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687862"
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT-Struktur
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-template <  
-   unsigned int RuntimeClassTypeT  
->  
-friend struct Details::RuntimeClassBaseT;  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `RuntimeClassTypeT`  
- Ein Feld von Flags, die angibt, eine oder mehrere [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) Enumeratoren.  
-  
-## <a name="remarks"></a>Hinweise  
- Stellt Hilfsmethoden für `QueryInterface` Vorgänge und die erste Schnittstellen-IDs.  
-  
-## <a name="members"></a>Member  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `RuntimeClassBaseT`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [Referenz (Windows-Runtime-Bibliothek)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+template <
+   unsigned int RuntimeClassTypeT
+>
+friend struct Details::RuntimeClassBaseT;
+```
+
+### <a name="parameters"></a>Parameter
+
+*RuntimeClassTypeT*  
+Ein Feld von Flags, der angibt, eine oder mehrere [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) Enumeratoren.
+
+## <a name="remarks"></a>Hinweise
+
+Stellt Hilfsmethoden für `QueryInterface` Vorgänge und die erste Schnittstellen-IDs.
+
+## <a name="members"></a>Member
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`RuntimeClassBaseT`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

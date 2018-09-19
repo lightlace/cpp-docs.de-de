@@ -1,5 +1,5 @@
 ---
-title: Virtual-Spezifizierer | Microsoft Docs
+title: Virtual-Spezifizierer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,13 +15,13 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 200fdb93e7baf8ff229b0445b7ad7a8ceab90d19
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 580952727023593da23fd2740da4be23406724b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421259"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053504"
 ---
 # <a name="virtual-specifier"></a>virtual-Spezifizierer
-Die [virtuellen](../cpp/virtual-cpp.md) Schlüsselwort kann nur auf nicht statische Memberfunktionen angewendet werden. Es gibt an, dass die Bindung von Aufrufen der Funktion bis zur Laufzeit verzögert wird. Weitere Informationen finden Sie unter [virtuelle Funktionen](../cpp/virtual-functions.md).  
-  
+
+Die [virtuellen](../cpp/virtual-cpp.md) -Schlüsselwort kann nur auf nicht statische Klassenmemberfunktion angewendet werden. Es gibt an, dass die Bindung von Aufrufen der Funktion bis zur Laufzeit verzögert wird. Weitere Informationen finden Sie unter [virtuelle Funktionen](../cpp/virtual-functions.md).

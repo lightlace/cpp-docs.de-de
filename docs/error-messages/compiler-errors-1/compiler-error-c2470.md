@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2470 | Microsoft Docs
+title: Compilerfehler C2470 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcd0a8d0d860bb4c3514d31099626cc578339149
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f494f550393bf1fb1a1a17b522b73945a7581e6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196713"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089150"
 ---
 # <a name="compiler-error-c2470"></a>Compilerfehler C2470
-'Funktion': sieht wie eine Funktionsdefinition, aber es gibt keine Parameterliste; Überspringen offensichtliche Text  
-  
- Eine Funktionsdefinition fehlt die Argumentliste.  
-  
- Im folgende Beispiel wird C2470 generiert:  
-  
-```  
-// C2470.cpp  
-int MyFunc {};  // C2470  
-void MyFunc2() {};  //OK  
-  
-int main(){  
-   MyFunc();  
-   MyFunc2();  
-}  
+
+"Function": sieht wie eine Funktionsdefinition aus, aber es gibt keine Parameterliste; sichtbarer Funktionstext wird übersprungen
+
+Eine Funktionsdefinition fehlt die Argumentliste.
+
+Im folgende Beispiel wird die C2470 generiert:
+
+```
+// C2470.cpp
+int MyFunc {};  // C2470
+void MyFunc2() {};  //OK
+
+int main(){
+   MyFunc();
+   MyFunc2();
+}
 ```

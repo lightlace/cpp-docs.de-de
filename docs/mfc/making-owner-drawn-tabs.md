@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Ownerdrawn-Registerkarten | Microsoft Docs
+title: Erstellen von Ownerdrawn-Registerkarten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72192bdfb47fecb1588c3a36e402795468d527be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb8e7566c16abdd4540426d0c56e24c648fd0bcd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346502"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208692"
 ---
 # <a name="making-owner-drawn-tabs"></a>Erstellen von Ownerdrawn-Registerkarten
-Sie können einzelne Elemente des Registerkarten-Steuerelements definieren ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) ownerdrawn-Elemente sein. Weitere Informationen finden Sie unter [Drawn Registerkarten](http://msdn.microsoft.com/library/windows/desktop/bb760550) im Windows SDK.  
+Sie können einzelne Elemente eines Registersteuerelements definieren ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) ownerdrawn-Elemente sein. Weitere Informationen finden Sie unter [Drawn Registerkarten](/windows/desktop/Controls/tab-controls) im Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CTabCtrl](../mfc/using-ctabctrl.md)   

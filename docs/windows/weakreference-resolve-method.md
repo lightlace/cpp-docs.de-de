@@ -1,5 +1,5 @@
 ---
-title: 'WeakReference:: Resolve-Methode | Microsoft Docs'
+title: 'WeakReference:: Resolve-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,49 +17,53 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dccdf7554f8d102230bedc18231feb74625d621b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 59e748ef68d78f9cb77eb335f5c5cd44e058f0d4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890472"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601155"
 ---
 # <a name="weakreferenceresolve-method"></a>WeakReference::Resolve-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
 STDMETHOD(Resolve)  
-   (REFIID riid,   
-   _Deref_out_opt_ IInspectable **ppvObject  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `riid`  
- Eine Schnittstellen-ID.  
-  
- `ppvObject`  
- Wenn dieser Vorgang abgeschlossen wird, eine Kopie der aktuellen starke Verweis, wenn die Anzahl der starken Verweis ungleich NULL ist.  
-  
-## <a name="return-value"></a>Rückgabewert  
-  
--   S_OK, wenn dieser Vorgang erfolgreich ist und die Anzahl der starken Verweis ist NULL. Der `ppvObject`-Parameter ist auf `nullptr` festgelegt.  
-  
--   S_OK, wenn dieser Vorgang erfolgreich ist und die Anzahl der starken Verweis ist ungleich NULL. Die `ppvObject` Parameter auf der starke Verweis festgelegt ist.  
-  
--   Andernfalls failed ein HRESULT, das den Grund angibt, diesen Vorgang.  
-  
-## <a name="remarks"></a>Hinweise  
- Legt des angegebenen Zeigers auf den aktuellen Wert der starken Verweis, wenn die Anzahl der starken Verweis ungleich NULL ist.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [WeakReference Class1](../windows/weakreference-class1.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+   (REFIID riid,
+   _Deref_out_opt_ IInspectable **ppvObject
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*riid*  
+Eine Schnittstellen-ID.
+
+*ppvObject*  
+Wenn dieser Vorgang abgeschlossen ist, eine Kopie der aktuellen starken Verweis, wenn die Anzahl der starken Verweis ungleich NULL ist.
+
+## <a name="return-value"></a>Rückgabewert
+
+- S_OK, wenn dieser Vorgang erfolgreich ist und die Anzahl der starken Verweis ist 0 (null). Die *PpvObject* Parametersatz zu **"nullptr"**.
+
+- S_OK, wenn dieser Vorgang erfolgreich ist und die Anzahl der starken Verweis ist ungleich NULL. Die *PpvObject* Parameter auf der starke Verweis festgelegt ist.
+
+- Andernfalls Fehler ein HRESULT, das den Grund angibt, diesen Vorgang.
+
+## <a name="remarks"></a>Hinweise
+
+Legt den angegebenen Zeiger auf den aktuellen Wert der starken Verweis fest, wenn die Anzahl der starken Verweis ungleich NULL ist.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[WeakReference-Klasse](../windows/weakreference-class1.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

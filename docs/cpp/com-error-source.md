@@ -16,33 +16,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f904fa11195c27f8e08856ef391d0ba8adbedece
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 69baf10012a461d60c6e7ae2d95a523ec725c255
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939675"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116541"
 ---
 # <a name="comerrorsource"></a>_com_error::Source
-**Microsoft-spezifisch**  
-  
- Ruft die `IErrorInfo::GetSource`-Funktion auf.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-_bstr_t Source() const;  
-  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Gibt das Ergebnis des `IErrorInfo::GetSource` für die `IErrorInfo` -Objekt erfasst wird, innerhalb der `_com_error` Objekt. Das resultierende BSTR wird in einem `_bstr_t`-Objekt gekapselt. Wenn kein `IErrorInfo` wird aufgezeichnet, es gibt eine leere `_bstr_t`.  
-  
-## <a name="remarks"></a>Hinweise  
- Jeder Fehler beim Aufrufen der `IErrorInfo::GetSource` -Methode wird ignoriert.  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [_com_error-Klasse](../cpp/com-error-class.md)
+
+**Microsoft-spezifisch**
+
+Ruft die `IErrorInfo::GetSource`-Funktion auf.
+
+## <a name="syntax"></a>Syntax
+
+```
+_bstr_t Source() const;
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Gibt das Ergebnis des `IErrorInfo::GetSource` für die `IErrorInfo` -Objekt erfasst wird, innerhalb der `_com_error` Objekt. Das resultierende `BSTR` wird in einem `_bstr_t`-Objekt gekapselt. Wenn kein `IErrorInfo` wird aufgezeichnet, es gibt eine leere `_bstr_t`.
+
+## <a name="remarks"></a>Hinweise
+
+Jeder Fehler beim Aufrufen der `IErrorInfo::GetSource` -Methode wird ignoriert.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[_com_error-Klasse](../cpp/com-error-class.md)

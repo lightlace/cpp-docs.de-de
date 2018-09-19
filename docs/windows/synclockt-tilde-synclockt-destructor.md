@@ -1,5 +1,5 @@
 ---
-title: 'SyncLockT:: ~ SyncLockT-Destruktor | Microsoft Docs'
+title: 'SyncLockT:: ~ SyncLockT-Destruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c91c677a18c66c875107f48c2e04ba45be88fb48
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d75e3e0592d21672397e8d54c565734d53e72614
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892734"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599779"
 ---
 # <a name="synclocktsynclockt-destructor"></a>SyncLockT::~SyncLockT-Destruktor
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-~SyncLockT();  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Hebt die Initialisierung einer Instanz der SyncLockT-Klasse.  
-  
- Dieser Destruktor entsperrt auch die aktuellen SyncLockT-Instanz.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [SyncLockT-Klasse](../windows/synclockt-class.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+~SyncLockT();
+```
+
+## <a name="remarks"></a>Hinweise
+
+Hebt die Initialisierung einer Instanz von der **SyncLockT** Klasse.
+
+Dieser Destruktor entsperrt auch die aktuelle **SyncLockT** Instanz.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[SyncLockT-Klasse](../windows/synclockt-class.md)

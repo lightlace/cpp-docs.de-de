@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 759ffd42b7de4d7f1922a95876a05ce4d3002dab
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 48c73e220c3e80abf0535e414572427f75b04511
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337537"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718210"
 ---
 # <a name="cbasepane-class"></a>CBasePane-Klasse
 Basisklasse für alle Bereiche in MFC.  
@@ -291,7 +291,7 @@ class CBasePane : public CWnd
 |[Cbasepane:: Onsetaccdata](#onsetaccdata)|`CBasePane` Diese Methode wird nicht verwendet werden.|  
 |`CBasePane::OnUpdateCmdUI`|Wird intern verwendet.|  
 |[CBasePane::PaneFromPoint](#panefrompoint)|Gibt den Bereich, der den angegebenen Punkt enthält.|  
-|`CBasePane::PreTranslateMessage`|Wird von der [CWinApp](../../mfc/reference/cwinapp-class.md) -Klasse verwendet, um Fenstermeldungen zu übersetzen, bevor diese an die Windows-Funktionen [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) gesendet werden. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CBasePane::PreTranslateMessage`|Von Klasse verwendeten [CWinApp](../../mfc/reference/cwinapp-class.md) um fenstermeldungen zu übersetzen, bevor sie um weitergeleitet werden die [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows-Funktionen. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` Diese Methode wird nicht verwendet werden.|  
 |[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|Hebt die Registrierung für eines Bereichs, und entfernt sie aus der Liste im Dock-Manager.|  
 |[CBasePane::SaveState](#savestate)|Speichert den Zustand des Bereichs in der Registrierung.|  
@@ -372,8 +372,8 @@ virtual void AccNotifyObjectFocusEvent(int);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Int*  
- Nicht verwendet.  
+*int*<br/>
+[in] Nicht verwendet.  
   
 ##  <a name="addpane"></a>  CBasePane::AddPane  
  Dock-Manager wird einen Bereich hinzugefügt.  
@@ -383,8 +383,8 @@ void AddPane(CBasePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- Ein Zeiger auf einen Bereich hinzufügen.  
+*pBar*<br/>
+[in] Ein Zeiger auf einen Bereich hinzufügen.  
   
 ### <a name="remarks"></a>Hinweise  
  Dies ist eine Hilfsmethode, die einen Bereich zu einem Dock-Manager hinzufügt. Mithilfe dieser Methode müssen Sie keinen Code schreiben, der den Typ des übergeordneten Rahmens analysiert.  
@@ -399,8 +399,8 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *Hdwp*  
- Ein Handle für eine Struktur mit mehreren Fensterpositionen.  
+*hdwp*<br/>
+[out] Ein Handle für eine Struktur mit mehreren Fensterpositionen.  
   
 ### <a name="remarks"></a>Hinweise  
  Dies ist eine bequeme Methode, die das docking-Layout angepasst wird. Mithilfe dieser Methode müssen Sie keinen Code schreiben, der den Typ des übergeordneten Rahmens analysiert.  
@@ -427,11 +427,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bStretch*  
- Gibt an, ob die Leiste, auf die Größe des Rahmens gestreckt wird. Die *bStretch* Parameter ungleich NULL ist, wenn die Leiste keine andockleiste (nicht verfügbar für Andocken) und 0, ist wenn es angedockt oder unverankert ist (zum Andocken verfügbar).  
+*bStretch*<br/>
+[in] Gibt an, ob die Leiste, auf die Größe des Rahmens gestreckt wird. Die *bStretch* Parameter ungleich NULL ist, wenn die Leiste keine andockleiste (nicht verfügbar für Andocken) und 0, ist wenn es angedockt oder unverankert ist (zum Andocken verfügbar).  
   
- [in] *bHorz*  
- Gibt an, dass die Leiste horizontal oder vertikal ausgerichtet ist. Die *bHorz* Parameter ungleich NULL ist, wenn die Leiste horizontal ausgerichtet und 0, ist wenn es vertikal ausgerichtet ist.  
+*bHorz*<br/>
+[in] Gibt an, dass die Leiste horizontal oder vertikal ausgerichtet ist. Die *bHorz* Parameter ungleich NULL ist, wenn die Leiste horizontal ausgerichtet und 0, ist wenn es vertikal ausgerichtet ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Steuerleiste Größe, in Pixel, der eine `CSize` Objekt.  
@@ -447,8 +447,8 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- Ein Zeiger auf den Bereich anzudocken.  
+*pBar*<br/>
+[in] Ein Zeiger auf den Bereich anzudocken.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn ein weiterer Bereich akzeptiert werden kann. andernfalls "false".  
@@ -515,8 +515,8 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDockBar*  
- Ein Zeiger auf einen anderen Bereich.  
+*pDockBar*<br/>
+[in] Ein Zeiger auf einen anderen Bereich.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn in diesem Bereich in einen anderen Bereich angedockt werden kann. andernfalls "false".  
@@ -597,8 +597,8 @@ virtual void CopyState(CBasePane* pOrgBar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pOrgBar*  
- Ein Zeiger auf einen anderen Bereich.  
+*pOrgBar*<br/>
+[in] Ein Zeiger auf einen anderen Bereich.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode kopiert den Zustand von *pOrgBar* in diesen Bereich.  
@@ -611,8 +611,8 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *RectInitial*  
- Gibt die Anfangskoordinaten des das Minirahmenfenster an.  
+*rectInitial*<br/>
+[in] Gibt die Anfangskoordinaten des das Minirahmenfenster an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die neue Minirahmenfenster oder NULL, wenn Fehler beim Erstellen.  
@@ -639,32 +639,32 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwStyleEx*  
- Die erweiterten Stile (finden Sie unter [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) Informationen).  
+*dwStyleEx*<br/>
+[in] Die erweiterten Stile (finden Sie unter [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) Informationen).  
   
- [in] *"lpszclassname"*  
- Der Klassenname des Fensters.  
+*"lpszclassname"*<br/>
+[in] Der Klassenname des Fensters.  
   
- [in] *LpszWindowName*  
- Der Fenstername.  
+*lpszWindowName*<br/>
+[in] Der Fenstername.  
   
- [in] *DwStyle*  
- Der Fensterstil (finden Sie unter [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)).  
+*dwStyle*<br/>
+[in] Der Fensterstil (finden Sie unter [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)).  
   
- [in] *Rect*  
- Das ursprüngliche Rechteck.  
+*Rect*<br/>
+[in] Das ursprüngliche Rechteck.  
   
- [in] *pParentWnd*  
- Ein Zeiger auf das übergeordnete Fenster.  
+*pParentWnd*<br/>
+[in] Ein Zeiger auf das übergeordnete Fenster.  
   
- [in] *nID*  
- Gibt den Bereich-ID an. Muss eindeutig sein.  
+*nID*<br/>
+[in] Gibt den Bereich-ID an. Muss eindeutig sein.  
   
- [in] *DwControlBarStyle*  
- Formatflags für Bereiche.  
+*dwControlBarStyle*<br/>
+[in] Formatflags für Bereiche.  
   
- [in] *"pContext"*  
- Ein Zeiger auf `CcreateContext`  
+*"pContext"*<br/>
+[in] Ein Zeiger auf `CcreateContext`  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Bereich wurde erfolgreich erstellt wird. andernfalls "false".  
@@ -699,14 +699,14 @@ virtual BOOL DockPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDockBar*  
- Ein Zeiger auf einen anderen Bereich.  
+*pDockBar*<br/>
+[in] Ein Zeiger auf einen anderen Bereich.  
   
- [in] *LpRect*  
- Gibt an, das Zielrechteck.  
+*lpRect*<br/>
+[in] Gibt an, das Zielrechteck.  
   
- [in] *DockMethod*  
- Gibt die docking-Methode.  
+*dockMethod*<br/>
+[in] Gibt die docking-Methode.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Steuerleiste erfolgreich angedockt ist. andernfalls "false".  
@@ -724,8 +724,8 @@ void DockPaneUsingRTTI(BOOL bUseDockSite);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bUseDockSite*  
- True gibt an, docken Sie an den Standort andocken. False gibt an, docken Sie an den übergeordneten Rahmen.  
+*bUseDockSite*<br/>
+[in] True gibt an, docken Sie an den Standort andocken. False gibt an, docken Sie an den übergeordneten Rahmen.  
   
 ##  <a name="docktoframewindow"></a>  CBasePane::DockToFrameWindow  
  Dockt einen andockbaren Bereich in einen Datenrahmen an.  
@@ -741,23 +741,23 @@ virtual BOOL DockToFrameWindow(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwAlignment*  
- Die Seite des übergeordneten Rahmens, die Sie im Bereich, um andocken möchten.  
+*dwAlignment*<br/>
+[in] Die Seite des übergeordneten Rahmens, die Sie im Bereich, um andocken möchten.  
   
- [in] *LpRect*  
- Die gewünschte Größe.  
+*lpRect*<br/>
+[in] Die gewünschte Größe.  
   
- [in] *DwDockFlags*  
- Ignoriert.  
+*dwDockFlags*<br/>
+[in] Ignoriert.  
   
- [in] *pRelativeBar*  
- Ignoriert.  
+*pRelativeBar*<br/>
+[in] Ignoriert.  
   
- [in] *nRelativeIndex*  
- Ignoriert.  
+*nRelativeIndex*<br/>
+[in] Ignoriert.  
   
- [in] *bOuterEdge*  
- Wenn "true", und es andere andockbare Bereiche auf der Seite, die anhand des sind *DwAlignment*, der Bereich angedockt ist, außerhalb von den anderen Bereichen, näher an den Rand des übergeordneten Rahmens. Wenn "FALSE" ist der Bereich in der Mitte des Clientbereichs näher angedockt.  
+*bOuterEdge*<br/>
+[in] Wenn "true", und es andere andockbare Bereiche auf der Seite, die anhand des sind *DwAlignment*, der Bereich angedockt ist, außerhalb von den anderen Bereichen, näher an den Rand des übergeordneten Rahmens. Wenn "FALSE" ist der Bereich in der Mitte des Clientbereichs näher angedockt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich war. andernfalls "false".  
@@ -792,8 +792,8 @@ virtual void DoPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardimplementierung Ruft den aktuellen visual-Manager, um den Hintergrund aufzufüllen ( [CMFCVisualManager::OnFillBarBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillbarbackground)).  
@@ -806,8 +806,8 @@ virtual void EnableDocking(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwAlignment*  
- Gibt die andockbare Ausrichtung zu aktivieren.  
+*dwAlignment*<br/>
+[in] Gibt die andockbare Ausrichtung zu aktivieren.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode zum Andocken Ausrichtung zum Hauptframe zu ermöglichen. Sie können eine Kombination von Flags für CBRS_ALIGN_ übergeben (Weitere Informationen finden Sie unter [CControlBar:: EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).  
@@ -824,8 +824,8 @@ virtual void EnableGripper(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- TRUE ziehelements aktiviert. "False", um ihn zu deaktivieren.  
+*bAktivieren*<br/>
+[in] TRUE ziehelements aktiviert. "False", um ihn zu deaktivieren.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework verwendet diese Methode zum Aktivieren eines ziehelements statt mit dem WS_CAPTION-Stil.  
@@ -841,14 +841,14 @@ virtual BOOL FloatPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *RectFloat*  
- Gibt die Bildschirmkoordinaten der unverankerten Bereichs klicken, wobei angezeigt wird.  
+*rectFloat*<br/>
+[in] Gibt die Bildschirmkoordinaten der unverankerten Bereichs klicken, wobei angezeigt wird.  
   
- [in] *DockMethod*  
- Gibt die Dock-Methode zu verwenden, um den Bereich "float".  
+*dockMethod*<br/>
+[in] Gibt die Dock-Methode zu verwenden, um den Bereich "float".  
   
- [in] *bShow*  
- Gibt an, ob der unverankerten Bereichs klicken sichtbar (TRUE) oder ausgeblendet (FALSE).  
+*bShow*<br/>
+[in] Gibt an, ob der unverankerten Bereichs klicken sichtbar (TRUE) oder ausgeblendet (FALSE).  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Bereich erfolgreich abgedockt wurde. andernfalls "false".  
@@ -867,14 +867,14 @@ virtual HRESULT get_accHelpTopic(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *PszHelpFile*  
- Adresse des BSTR, das den vollständigen Pfad der empfängt die **WinHelp** -Datei, die das angegebene Objekt zugeordnet ist, sofern vorhanden.  
+*pszHelpFile*<br/>
+[in] Adresse des BSTR, das den vollständigen Pfad der empfängt die **WinHelp** -Datei, die das angegebene Objekt zugeordnet ist, sofern vorhanden.  
   
- [in] *VarChild*  
- Gibt an, ob das Hilfethema abgerufen werden sollen, die das Objekt oder eine der untergeordneten Elemente des Objekts ist. Dieser Parameter kann entweder CHILDID_SELF (um ein Hilfethema für das Objekt zu erhalten) oder eine ID des untergeordneten Elements (um ein Hilfethema für eines der untergeordneten Elemente des Objekts zu erhalten) sein.  
+*varChild*<br/>
+[in] Gibt an, ob das Hilfethema abgerufen werden sollen, die das Objekt oder eine der untergeordneten Elemente des Objekts ist. Dieser Parameter kann entweder CHILDID_SELF (um ein Hilfethema für das Objekt zu erhalten) oder eine ID des untergeordneten Elements (um ein Hilfethema für eines der untergeordneten Elemente des Objekts zu erhalten) sein.  
   
- [in] *PidTopic*  
- Identifiziert die **Hilfe** Thema, das mit dem angegebenen Objekt verknüpft ist.  
+*pidTopic*<br/>
+[in] Identifiziert die **Hilfe** Thema, das mit dem angegebenen Objekt verknüpft ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `CBasePane` Diese Methode implementiert nicht. Aus diesem Grund `CBasePane::get_accHelpTopic` immer gibt S_FALSE zurück.  
@@ -890,8 +890,8 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *PvarChildren*  
- Empfängt, die den ausgewählten, untergeordneten Elemente identifiziert.  
+*pvarChildren*<br/>
+[in] Empfängt, die den ausgewählten, untergeordneten Elemente identifiziert.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `CBasePane` Diese Methode implementiert nicht. Wenn *PvarChildren* NULL ist, diese Methode wird E_INVALIDARG zurückgegeben. Andernfalls gibt diese Methode DISP_E_MEMBERNOTFOUND zurück.  
@@ -1017,8 +1017,8 @@ virtual HICON GetPaneIcon(BOOL bBigIcon);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bBigIcon*  
- Gibt ein 32 Pixel von Symbol "32 Pixel" bei "true" an. Gibt eine 16-Pixel 16 Pixel großes Symbol, wenn "false".  
+*bBigIcon*<br/>
+[in] Gibt ein 32 Pixel von Symbol "32 Pixel" bei "true" an. Gibt eine 16-Pixel 16 Pixel großes Symbol, wenn "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Handle für das Symbol "Bereich". Wenn Fehler auftreten, gibt NULL zurück.  
@@ -1067,8 +1067,8 @@ virtual CPaneFrameWnd* GetParentMiniFrame(BOOL bNoAssert=FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bNoAssert*  
- Bei "true", überprüft diese Methode nicht für ungültigen Zeiger. Wenn Sie diese Methode aufrufen, wenn die Anwendung beendet wird, legen Sie diesen Parameter auf "true" fest.  
+*bNoAssert*<br/>
+[in] Bei "true", überprüft diese Methode nicht für ungültigen Zeiger. Wenn Sie diese Methode aufrufen, wenn die Anwendung beendet wird, legen Sie diesen Parameter auf "true" fest.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein gültiger Zeiger auf das übergeordnete Minirahmenfenster, wenn der Bereich unverankert ist; andernfalls NULL.  
@@ -1096,8 +1096,8 @@ CMFCBaseTabCtrl* GetParentTabWnd(HWND& hWndTab) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *hWndTab*  
- Wenn der zurückgegebene Wert nicht NULL ist, enthält dieser Parameter das Handle für das übergeordnete Fenster im Registerkartenformat.  
+*hWndTab*<br/>
+[out] Wenn der zurückgegebene Wert nicht NULL ist, enthält dieser Parameter das Handle für das übergeordnete Fenster im Registerkartenformat.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein gültiger Zeiger auf den übergeordneten-Fenster im Registerkartenformat oder NULL.  
@@ -1139,14 +1139,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pControlBar*  
- Ein Zeiger auf den Bereich eingefügt.  
+*pControlBar*<br/>
+[in] Ein Zeiger auf den Bereich eingefügt.  
   
- [in] *pTarget*  
- Ein Zeiger auf angrenzenden Bereich.  
+*pTarget*<br/>
+[in] Ein Zeiger auf angrenzenden Bereich.  
   
- [in] *bNach*  
- True gibt an, *pControlBar* eingefügt wird, nach dem *pTarget*. False gibt an, *pControlBar* eingefügt wird, bevor Sie *pTarget*.  
+*bNach*<br/>
+[in] True gibt an, *pControlBar* eingefügt wird, nach dem *pTarget*. False gibt an, *pControlBar* eingefügt wird, bevor Sie *pTarget*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn die Methode erfolgreich ist; FALSE andernfalls.  
@@ -1270,14 +1270,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Der angegebene Punkt.  
+*Zeigen Sie*<br/>
+[in] Der angegebene Punkt.  
   
- [out] *DwBarAlignment*  
- Gibt an, welchen Rand, in der Nähe der Punkt ist. Mögliche Werte sind CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP und CBRS_ALIGN_BOTTOM  
+*dwBarAlignment*<br/>
+[out] Gibt an, welchen Rand, in der Nähe der Punkt ist. Mögliche Werte sind CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP und CBRS_ALIGN_BOTTOM  
   
- [out] *bOuterEdge*  
- True, wenn der Punkt in der Nähe von der äußere Rahmen der DockPosition ist. "False" andernfalls.  
+*bOuterEdge*<br/>
+[out] True, wenn der Punkt in der Nähe von der äußere Rahmen der DockPosition ist. "False" andernfalls.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Punkt in der Nähe der DockPosition ist. andernfalls "false".  
@@ -1349,14 +1349,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- Profilname.  
+*lpszProfileName*<br/>
+[in] Profilname.  
   
- [in] *nIndex*  
- Profil-Index.  
+*nIndex*<br/>
+[in] Profil-Index.  
   
- [in] *UiID*  
- Im Bereich-ID an.  
+*uiID*<br/>
+[in] Im Bereich-ID an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Zustand des Bereichs erfolgreich geladen wurde. andernfalls "false".  
@@ -1375,20 +1375,20 @@ virtual HDWP MoveWindow(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Rect*  
- Ein Rechteck, das Festlegen der neuen Position und die Größe des Bereichs.  
+*Rect*<br/>
+[in] Ein Rechteck, das Festlegen der neuen Position und die Größe des Bereichs.  
   
- [in] *bRepaint*  
- Bei "true", wird der Bereich neu gezeichnet werden. Wenn "FALSE" ist der Bereich nicht neu gezeichnet.  
+*bRepaint*<br/>
+[in] Bei "true", wird der Bereich neu gezeichnet werden. Wenn "FALSE" ist der Bereich nicht neu gezeichnet.  
   
- [in] *Hdwp*  
- Handle für eine verzögerte Fenster Position-Struktur.  
+*hdwp*<br/>
+[in] Handle für eine verzögerte Fenster Position-Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Handle für eine verzögerte Fenster Position-Struktur, oder NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie NULL als übergeben die *Hdwp* Parameter, die diese Methode verschiebt das Fenster Normal. Wenn Sie ein Handle übergeben, führt diese Methode eine verzögerte Fenster verschieben. Sie erhalten ein Handle durch Aufrufen von [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) oder durch Speichern den Rückgabewert von einem vorherigen Aufruf dieser Methode.  
+ Wenn Sie NULL als übergeben die *Hdwp* Parameter, die diese Methode verschiebt das Fenster Normal. Wenn Sie ein Handle übergeben, führt diese Methode eine verzögerte Fenster verschieben. Sie erhalten ein Handle durch Aufrufen von [BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672) oder durch Speichern den Rückgabewert von einem vorherigen Aufruf dieser Methode.  
   
 ##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent  
  Wird vom Framework aufgerufen, nach im Bereich der übergeordneten Änderungen.  
@@ -1398,8 +1398,8 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWndOldParent*  
- Ein Zeiger auf das vorherige übergeordnete Element.  
+*pWndOldParent*<br/>
+[in] Ein Zeiger auf das vorherige übergeordnete Element.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Methode nach im Bereich der übergeordneten, in der Regel aufgrund eines andockbaren "oder" Gleitkomma-Vorgangs ändert.  
@@ -1416,11 +1416,11 @@ virtual void OnBeforeChangeParent(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWndNewParent*  
- Ein Zeiger auf eine neue übergeordnete Fenster.  
+*pWndNewParent*<br/>
+[in] Ein Zeiger auf eine neue übergeordnete Fenster.  
   
- [in] *bDelay*  
- Gibt an, ob es sich bei Layout-Anpassungen, die verzögert werden müssen.  
+*bDelay*<br/>
+[in] Gibt an, ob es sich bei Layout-Anpassungen, die verzögert werden müssen.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Methode direkt vor den Bereich der übergeordneten Änderungen in der Regel aufgrund einer andocken, Gleitkomma- oder automatisch im Hintergrund-Vorgang.  
@@ -1458,11 +1458,11 @@ virtual void OnPaneContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pParentFrame*  
- Ein Zeiger auf den übergeordneten Rahmen.  
+*pParentFrame*<br/>
+[in] Ein Zeiger auf den übergeordneten Rahmen.  
   
- [in] *zeigen*  
- Gibt den Speicherort des Kontextmenüs.  
+*Zeigen Sie*<br/>
+[in] Gibt den Speicherort des Kontextmenüs.  
   
 ### <a name="remarks"></a>Hinweise  
  `OnPaneContextMenu` Ruft die Dock-Manager, der die Liste der Bereiche verwaltet werden, die an das aktuelle Rahmenfenster gehören. Diese Methode fügt die Namen der Bereiche in einem Kontextmenü Menüelemente hinzu, und es wird angezeigt. Die Befehle im Menü anzeigen oder Ausblenden von einzelnen Bereiche.  
@@ -1477,8 +1477,8 @@ virtual void OnRemoveFromMiniFrame(CPaneFrameWnd* pMiniFrame);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pMiniFrame*  
- Ein Zeiger auf ein Minirahmenfenster, das aus dem Bereich entfernt wird.  
+*pMiniFrame*<br/>
+[in] Ein Zeiger auf ein Minirahmenfenster, das aus dem Bereich entfernt wird.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Methode auf, wenn ein Bereich aus der übergeordneten Minirahmenfenster (aufgrund der Dockingstation, z. B.) entfernt wird.  
@@ -1493,8 +1493,8 @@ virtual BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *lVal*  
- Nicht verwendet.  
+*lVal*<br/>
+[in] Nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt immer "true" zurück.  
@@ -1513,17 +1513,17 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Gibt den Punkt in Bildschirmkoordinaten, um zu überprüfen.  
+*Zeigen Sie*<br/>
+[in] Gibt den Punkt in Bildschirmkoordinaten, um zu überprüfen.  
   
- [in] *nSensitivity*  
- Erhöhen Sie den Suchbereich, um diesen Betrag. Ein Bereich ist die Suchkriterien erfüllt, fällt die der angegebene Punkt in der höheren Bereich.  
+*nSensitivity*<br/>
+[in] Erhöhen Sie den Suchbereich, um diesen Betrag. Ein Bereich ist die Suchkriterien erfüllt, fällt die der angegebene Punkt in der höheren Bereich.  
   
- [in] *bExactBar*  
- "True", ignoriert der *nSensitivity* Parameter ist, andernfalls FALSE.  
+*bExactBar*<br/>
+[in] "True", ignoriert der *nSensitivity* Parameter ist, andernfalls FALSE.  
   
- [in] *pRTCBarType*  
- Wenn nicht NULL ist, sucht die Methode nur Bereiche des angegebenen Typs.  
+*pRTCBarType*<br/>
+[in] Wenn nicht NULL ist, sucht die Methode nur Bereiche des angegebenen Typs.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die `CBasePane`-abgeleitete Objekt, das die angegebenen Punkt enthält, oder NULL, wenn kein Bereich gefunden wurde.  
@@ -1548,20 +1548,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- Ein Zeiger auf einen Bereich entfernt werden soll.  
+*pBar*<br/>
+[in] Ein Zeiger auf einen Bereich entfernt werden soll.  
   
- [in] *bDestroy*  
- Wenn "true", Bereich entfernte zerstört wird.  
+*bDestroy*<br/>
+[in] Wenn "true", Bereich entfernte zerstört wird.  
   
- [in] *bAdjustLayout*  
- True gibt an, passen Sie sofort das docking-Layout.  
+*bAdjustLayout*<br/>
+[in] True gibt an, passen Sie sofort das docking-Layout.  
   
- [in] *bAutoHide*  
- Bei "true", bezieht sich das docking-Layout der Liste der automatisch im Hintergrund Balken. False gibt an, bezieht sich das docking-Layout auf die Liste der regulären Bereiche.  
+*bAutoHide*<br/>
+[in] Bei "true", bezieht sich das docking-Layout der Liste der automatisch im Hintergrund Balken. False gibt an, bezieht sich das docking-Layout auf die Liste der regulären Bereiche.  
   
- [in] *pBarReplacement*  
- Ein Zeiger auf einen Bereich, der Bereich entfernten ersetzt.  
+*pBarReplacement*<br/>
+[in] Ein Zeiger auf einen Bereich, der Bereich entfernten ersetzt.  
   
 ##  <a name="savestate"></a>  CBasePane::SaveState  
  Speichert den Zustand des Bereichs in der Registrierung.  
@@ -1574,14 +1574,14 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- Profilname.  
+*lpszProfileName*<br/>
+[in] Profilname.  
   
- [in] *nIndex*  
- Profil-Index.  
+*nIndex*<br/>
+[in] Profil-Index.  
   
- [in] *UiID*  
- Im Bereich-ID an.  
+*uiID*<br/>
+[in] Im Bereich-ID an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Zustand erfolgreich gespeichert wurde. andernfalls "false".  
@@ -1597,8 +1597,8 @@ CFont* SelectDefaultFont(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Einen Gerätekontext.  
+*pDC*<br/>
+[in] Einen Gerätekontext.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf den Standardwert [CFont-Klasse](../../mfc/reference/cfont-class.md) Objekt.  
@@ -1611,8 +1611,8 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwNewStyle*  
- Eine bitweise OR-Kombination folgende Werte möglich.  
+*dwNewStyle*<br/>
+[in] Eine bitweise OR-Kombination folgende Werte möglich.  
   
 |Stil|Beschreibung|  
 |-----------|-----------------|  
@@ -1629,8 +1629,8 @@ void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DockModeNew*  
- Gibt den neuen Andockmodus für den Bereich an.  
+*dockModeNew*<br/>
+[in] Gibt den neuen Andockmodus für den Bereich an.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework unterstützt zwei andockbare Modi: standard und sofort.  
@@ -1647,8 +1647,8 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwAlignment*  
- Gibt die neue Ausrichtung.  
+*dwAlignment*<br/>
+[in] Gibt die neue Ausrichtung.  
   
 ### <a name="remarks"></a>Hinweise  
  In der Regel ruft das Framework diese Methode, wenn ein Bereich von einer Seite des Hauptframe auf einen anderen angedockt ist.  
@@ -1670,8 +1670,8 @@ virtual void SetPaneStyle(DWORD dwNewStyle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwNewStyle*  
- Gibt das neue Format festgelegt.  
+*dwNewStyle*<br/>
+[in] Gibt das neue Format festgelegt.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode kann verwendet werden, die CBRS_-Formatvorlagen festlegen, die in afxres.h definiert sind. Da der Stil und der Bereich Ausrichtung zusammen gespeichert werden, legen Sie die neue Formatvorlage durch die Kombination mit der aktuellen Ausrichtung wie folgt.  
@@ -1693,26 +1693,26 @@ virtual HDWP SetWindowPos(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWndInsertAfter*  
- Identifiziert die `CWnd` -Objekt, das vor dieser `CWnd` Objekt in der Z-Reihenfolge. Weitere Informationen finden Sie unter [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
+*pWndInsertAfter*<br/>
+[in] Identifiziert die `CWnd` -Objekt, das vor dieser `CWnd` Objekt in der Z-Reihenfolge. Weitere Informationen finden Sie unter [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
   
- [in] *x*  
- Gibt die Position der linken Seite des Fensters.  
+*w*<br/>
+[in] Gibt die Position der linken Seite des Fensters.  
   
- [in] *y*  
- Gibt die Position des oberen Rand des Fensters.  
+*y*<br/>
+[in] Gibt die Position des oberen Rand des Fensters.  
   
- [in] *Cx*  
- Gibt die Breite des Fensters.  
+*CX*<br/>
+[in] Gibt die Breite des Fensters.  
   
- [in] *cy*  
- Gibt die Höhe des Fensters.  
+*CY*<br/>
+[in] Gibt die Höhe des Fensters.  
   
- [in] *nFlags*  
- Gibt Optionen für Größe und Position. Weitere Informationen finden Sie unter [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
+*nFlags*<br/>
+[in] Gibt Optionen für Größe und Position. Weitere Informationen finden Sie unter [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
   
- [in] *Hdwp*  
- Handle für eine Struktur, die Größe und Position für ein oder mehrere Fenster enthält.  
+*hdwp*<br/>
+[in] Handle für eine Struktur, die Größe und Position für ein oder mehrere Fenster enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Handle für eine aktualisierte verzögerte Fenster Position-Struktur, oder NULL.  
@@ -1731,14 +1731,14 @@ virtual void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bShow*  
- Gibt an, ob anzeigen (TRUE) oder ausblenden (FALSE), einen Bereich.  
+*bShow*<br/>
+[in] Gibt an, ob anzeigen (TRUE) oder ausblenden (FALSE), einen Bereich.  
   
- [in] *bDelay*  
- Bei "true", wird das Layout des Docks Neuberechnen verzögert.  
+*bDelay*<br/>
+[in] Bei "true", wird das Layout des Docks Neuberechnen verzögert.  
   
- [in] *bActivate*  
- Bei "true", ist der Bereich aktiv, wenn Sie angezeigt.  
+*bActivate*<br/>
+[in] Bei "true", ist der Bereich aktiv, wenn Sie angezeigt.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode blendet oder aus einem Bereich. Verwenden Sie diese Methode anstelle von `ShowWindow` , da diese Methode die relevanten docking-Manager zu Änderungen in den Bereich, Sichtbarkeit benachrichtigt.  
@@ -1755,11 +1755,11 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nLength*  
- Die Länge, um stretch-Bereich.  
+*nLength*<br/>
+[in] Die Länge, um stretch-Bereich.  
   
- [in] *bHoriz*  
- True gibt an, der den Bereich vertikal gestreckt. False gibt an, stretch-Bereich horizontal.  
+*bHoriz*<br/>
+[in] True gibt an, der den Bereich vertikal gestreckt. False gibt an, stretch-Bereich horizontal.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Größe des Bereichs gestreckt werden soll.  

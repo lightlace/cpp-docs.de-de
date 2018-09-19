@@ -1,5 +1,5 @@
 ---
-title: Wie Standarddrucks | Microsoft Docs
+title: Wie Standarddrucks | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2cf5b4a9bda3506a9558d5b723020dfe6d43396
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90f6559459bed9376dba8b7d9059761e9ace5ac8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358914"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202829"
 ---
 # <a name="how-default-printing-is-done"></a>Funktionsweise des Standarddrucks
-Dieser Artikel beschreibt die Standard-Druckvorgang in Windows in Bezug auf die MFC-Framework.  
+Dieser Artikel beschreibt die Standard-Druckvorgang in Windows in Bezug auf das MFC-Framework.  
   
- In MFC-Anwendungen, die View-Klasse verfügt über eine Memberfunktion mit dem Namen `OnDraw` , der den Zeichencode enthält. `OnDraw` verwendet einen Zeiger auf eine [CDC](../mfc/reference/cdc-class.md) -Objekt als Parameter. Dass `CDC` Objekt repräsentiert den Gerätekontext, erhalten Sie das Image von erzeugten `OnDraw`. Wenn das Fenster, das Dokument anzeigen empfängt eine [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) Nachricht, der das Framework ruft `OnDraw` und übergibt sie zu einen Gerätekontext für den Bildschirm (eine [CPaintDC](../mfc/reference/cpaintdc-class.md) Objekt, das spezifisch sein). Dementsprechend `OnDraw`geht die Ausgabe auf dem Bildschirm.  
+ In MFC-Anwendungen, die View-Klasse verfügt über eine Memberfunktion mit dem Namen `OnDraw` , der den Zeichencode enthält. `OnDraw` verwendet einen Zeiger auf eine [CDC](../mfc/reference/cdc-class.md) -Objekt als Parameter. Dass `CDC` Objekt darstellt, den Gerätekontext aus, um das Bild erzeugten empfangen `OnDraw`. Wenn das Fenster des Dokuments empfängt eine [WM_PAINT](/windows/desktop/gdi/wm-paint) Nachricht, das Framework ruft `OnDraw` und übergibt einen Gerätekontext für den Bildschirm (eine [CPaintDC](../mfc/reference/cpaintdc-class.md) Objekt, das genau zu sein). Dementsprechend `OnDraw`durchläuft Sie die Ausgabe auf dem Bildschirm.  
   
- Bei der Programmierung für Windows ist sendenden Ausgabe an den Drucker senden der Ausgabe auf dem Bildschirm sehr ähnlich. Dies ist, da die Windows Graphics Device Interface (GDI) hardwareunabhängiger ist. Sie können dieselben GDI-Funktionen für die Bildschirmanzeige oder für den Druck einfach mithilfe der entsprechenden Gerätekontext verwenden. Wenn die `CDC` Objekt, mit `OnDraw` empfängt stellt den Drucker `OnDraw`geht die Ausgabe an den Drucker.  
+ Bei der Programmierung für Windows ist die Ausgabe auf den Drucker sehr ähnlich ist, zum Senden der Ausgabe auf dem Bildschirm. Dies ist, da die Windows Graphics Device Interface (GDI) unabhängig von der Hardware ist. Sie können die gleichen GDI-Funktionen für die Bildschirmanzeige oder für das Drucken, indem Sie einfach mit den entsprechenden Gerätekontext verwenden. Wenn die `CDC` -Objekt, `OnDraw` empfängt stellt den Drucker, `OnDraw`durchläuft Sie die Ausgabe an den Drucker.  
   
- Hier wird erläutert, wie MFC-Anwendungen einfacher drucken ausführen können, ohne dass zusätzlichen Aufwand ihrerseits. Das Framework übernimmt Anzeigen des Dialogfelds drucken, und erstellen einen Gerätekontext für den Drucker. Wenn der Benutzer des Befehls Drucken über das Menü Datei auswählt, übergibt die Ansicht dieser Gerätekontext, `OnDraw`, die das Dokument auf den Drucker gezeichnet.  
+ Hier wird erläutert, wie die MFC-Anwendungen einfach Drucken ohne zusätzlichen Aufwand ihrerseits ausführen können. Das Framework übernimmt das Dialogfeld Drucken anzeigen und erstellen einen Gerätekontext für den Drucker. Wenn der Benutzer den Befehl Drucken über das Menü Datei auswählt, wird der Ansicht übergeben dieser Gerätekontext zu `OnDraw`, die das Dokument auf dem Drucker zeichnet.  
   
- Es gibt jedoch einige wichtige Unterschiede zwischen Bildschirm- und drucken. Beim Drucken, müssen Sie das Dokument in unterschiedliche Seiten und anzeigen, die sie einzeln nacheinander, anstelle der Anzeige von beliebigen Teil ist sichtbar in einem Fenster zu unterteilen. Daneben haben Sie Bedenken Sie das Papierformat (ob es Letter-Format, rechtliche Größen- oder einen Umschlag handelt). Möglicherweise möchten die verschiedenen Ausrichtungen, wie Quer- oder Hochformat gedruckt. Die Microsoft Foundation Class-Bibliothek kann nicht vorhersagen, wie Ihre Anwendung diese Probleme verarbeiten soll, damit es ein Protokoll zum Hinzufügen von Funktionen bietet.  
+ Es gibt jedoch einige wichtige Unterschiede zwischen Bildschirm- und drucken. Wenn Sie drucken möchten, müssen Sie das Dokument in unterschiedliche Seiten und die Anzeige, die sie einzeln nacheinander, anstelle der Anzeige unabhängig Bereich sichtbar ist in einem Fenster teilen. Daneben müssen Sie beachten Sie die Größe des Papiers (gibt an, ob es briefgröße liegt, legal-Format, oder einen Umschlag ist). Sie sollten sich in verschiedenen Ausrichtungen, wie Quer- oder Hochformat gedruckt. Die Microsoft Foundation Class-Bibliothek kann nicht vorhersagen, wie dieser Probleme in Ihrer Anwendung behandelt werden, damit es sich um ein Protokoll für die Sie zum Hinzufügen dieser Funktionen bietet.  
   
  Dass das Protokoll in diesem Artikel beschriebene [mehrseitige Dokumente](../mfc/multipage-documents.md).  
   

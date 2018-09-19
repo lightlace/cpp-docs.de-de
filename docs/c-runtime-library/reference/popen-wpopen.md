@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a7764e15b18249a9ee3ddd452ae792c8ad172f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a48e4112dc513923b3a933457a874409121fb1e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404479"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087706"
 ---
 # <a name="popen-wpopen"></a>_popen, _wpopen
 
@@ -61,12 +61,12 @@ Erstellt eine Pipe und führt einen Befehl aus.
 
 ```C
 FILE *_popen(
-const char *command,
-const char *mode
+    const char *command,
+    const char *mode
 );
 FILE *_wpopen(
-const wchar_t *command,
-const wchar_t *mode
+    const wchar_t *command,
+    const wchar_t *mode
 );
 ```
 
@@ -80,7 +80,7 @@ Modus des zurückgegebenen Streams.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Stream zurück, der einem Ende der erstellten Pipe zugeordnet ist. Das andere Ende der Pipe ist der Standardeingabe oder Standardausgabe des erzeugten Befehls zugeordnet. Die Funktionen geben bei einem Fehler **NULL** zurück. Wenn der Fehler ein ungültiger Parameter, z. B. wenn *Befehl* oder *Modus* ist ein null-Zeiger oder *Modus* ist kein gültiger Modus, **Errno** auf festgelegt ist **EINVAL**. Gültige Modi können Sie dem Abschnitt mit den Hinweisen entnehmen.
+Gibt einen Stream zurück, der einem Ende der erstellten Pipe zugeordnet ist. Das andere Ende der Pipe ist der Standardeingabe oder Standardausgabe des erzeugten Befehls zugeordnet. Die Funktionen geben bei einem Fehler **NULL** zurück. Wenn der Fehler ein ungültiger Parameter, z. B. wenn *Befehl* oder *Modus* ist ein null-Zeiger oder *Modus* ist kein gültiger Modus ist, **Errno** auf festgelegt ist **EINVAL**. Gültige Modi können Sie dem Abschnitt mit den Hinweisen entnehmen.
 
 Weitere Informationen über diese und andere Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -88,18 +88,17 @@ Weitere Informationen über diese und andere Fehlercodes finden Sie unter [_dose
 
 Die **_popen** Funktion erstellt eine Pipe und führt asynchron eine generierte Kopie des Befehlsprozessors mit der angegebenen Zeichenfolge *Befehl*. Die Zeichenfolge *mode* gibt den angeforderten Zugriffstyp wie folgt an.
 
-**"R"** der aufrufende Prozess kann die Standardausgabe von des erzeugten Befehls mit dem zurückgegebenen Stream lesen.
-
-**"w"** der aufrufende Prozess des erzeugten Befehls Standardeingabe mit dem zurückgegebenen Stream schreiben kann.
-
-**"b"** öffnen im binären Modus.
-
-**"t"** im Textmodus geöffnet.
+|Zugriffsmodus|Beschreibung|
+|-|-|
+|**"r"**|Der aufrufende Prozess kann die Standardausgabe des erzeugten Befehls mit dem zurückgegebenen Stream lesen.|
+|**"w"**|Der aufrufende Prozess kann die Standardeingabe des erzeugten Befehls mit dem zurückgegebenen Stream schreiben.|
+|**"b"**|Öffnen im binären Modus.|
+|**"t"**|Öffnen im Textmodus.|
 
 > [!NOTE]
-> Wenn in einem Windows-Programm verwendet die **_popen** Funktion gibt einen ungültigen Dateizeiger, der bewirkt, dass das Programm nicht mehr reagiert auf unbestimmte Zeit zurück. **_popen** in einer Konsolenanwendung ordnungsgemäß funktioniert. Um eine Windows-Anwendung erstellen, die Eingabe und Ausgabe umleitet, finden Sie unter [Erstellen eines untergeordneten Prozesses mit umgeleiteter Eingabe und Ausgabe](http://msdn.microsoft.com/library/windows/desktop/ms682499) im Windows SDK.
+> Wenn in einem Windows-Programm verwendet die **_popen** Funktionsergebnis ist einen Ungültiger Dateizeiger, der bewirkt, die Anwendung dass reagiert auf unbestimmte Zeit. **_popen** in einer Konsolenanwendung ordnungsgemäß funktioniert. Zum Erstellen einer Windows-Anwendung, die Eingabe und Ausgabe umleitet, finden Sie unter [Erstellen eines untergeordneten Prozesses mit umgeleiteter Eingabe und Ausgabe](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output) im Windows SDK.
 
-**_wpopen** ist eine Breitzeichen-Version von **_popen**; das *Pfad* Argument **_wpopen** ist eine Breitzeichen-Zeichenfolge. **_wpopen** und **_popen** Verhalten sich andernfalls identisch.
+**_wpopen** ist eine Breitzeichen-Version von **_popen**; die *Pfad* Argument **_wpopen** ist eine Breitzeichen-Zeichenfolge. **_wpopen** und **_popen** Verhalten sich andernfalls identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -109,7 +108,7 @@ Die **_popen** Funktion erstellt eine Pipe und führt asynchron eine generierte 
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_popen**|\<stdio.h>|
 |**_wpopen**|\<stdio.h> oder \<wchar.h>|
@@ -169,12 +168,12 @@ int main( void )
 Bei dieser Ausgabe wird davon ausgegangen, dass das aktuelle Verzeichnis nur eine Datei mit der Dateierweiterung .c enthält.
 
 ```Output
- Volume in drive C is CDRIVE
- Volume Serial Number is 0E17-1702
+Volume in drive C is CDRIVE
+Volume Serial Number is 0E17-1702
 
 Directory of D:\proj\console\test1
 
- 07/17/98  07:26p                   780 popen.c
+07/17/98  07:26p                   780 popen.c
                1 File(s)            780 bytes
                              86,597,632 bytes free
 

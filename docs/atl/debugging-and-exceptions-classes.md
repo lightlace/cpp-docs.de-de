@@ -14,22 +14,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 407e1654aed66c60f8672d2d06ce1e80c405cac5
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3750b26643bc2ceb33e49723d1586ba5350fe4db
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961355"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055207"
 ---
 # <a name="debugging-and-exceptions-classes"></a>Ausnahmeklassen für Debugging und
-Diese Klassen bieten Unterstützung für Ausnahmebehandlung und Debuggen.  
-  
--   [CAtlDebugInterfacesModule](../atl/reference/catldebuginterfacesmodule-class.md) diese Klasse bietet Unterstützung für das Debuggen von Schnittstellen.  
-  
--   [CAtlException](../atl/reference/catlexception-class.md) diese Klasse definiert eine ATL-Ausnahme.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../atl/atl-class-overview.md)   
- [Debuggen und globale Funktionen für die Fehlerberichterstattung](../atl/reference/debugging-and-error-reporting-global-functions.md)   
- [Debuggen und Fehlerberichterstattungs-Makros](../atl/reference/debugging-and-error-reporting-macros.md)
+
+Diese Klassen bieten Unterstützung für Ausnahmebehandlung und Debuggen.
+
+- [CAtlDebugInterfacesModule](../atl/reference/catldebuginterfacesmodule-class.md) diese Klasse bietet Unterstützung für das Debuggen von Schnittstellen.
+
+- [CAtlException](../atl/reference/catlexception-class.md) diese Klasse definiert eine ATL-Ausnahme.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../atl/atl-class-overview.md)<br/>
+[Debuggen und globale Funktionen für die Fehlerberichterstattung](../atl/reference/debugging-and-error-reporting-global-functions.md)<br/>
+[Debuggen und Fehlerberichterstattungs-Makros](../atl/reference/debugging-and-error-reporting-macros.md)
 

@@ -1,5 +1,5 @@
 ---
-title: __svm_clgi | Microsoft Docs
+title: __svm_clgi | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 679c2b4d7abb792dfe6baa5ad5e18752fb7ca8bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e2b430c0ac4a07ec9bc0a9315fb1ad8ca6563ee9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332545"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693771"
 ---
 # <a name="svmclgi"></a>__svm_clgi
 **Microsoft-spezifisch**  
   
- Löscht das globale Interrupt-Flag.  
+ Löscht das globale Interrupt-Flag an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,15 +36,15 @@ void __svm_clgi( void );
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die `__svm_clgi` -Funktion ist gleichbedeutend mit der `CLGI` computeranweisung. Das globale Interrupt-Flag bestimmt, ob Mikroprozessors ignoriert, verschiebt oder Interrupts aufgrund von Ereignissen, z. B. eine e/a-Abschluss, eine hardwarewarnung für die Temperatur oder eine Debug-Ausnahme behandelt.  
+ Die `__svm_clgi` -Funktion ist gleichbedeutend mit der `CLGI` computeranweisung. Das globale Interrupt-Flag bestimmt, ob der Mikroprozessor ignoriert, verschiebt oder Unterbrechungen, z. B. durch einen e/a-Abschluss, eine temperaturwarnung Hardware oder eine debugausnahme behandelt.  
   
- Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen zu suchen, für das Dokument "AMD64 Architecture Programmers manuelle Volume 2: System-Programmierung" Dokumentnummer 24593 Revision 3.11, an die [AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) Standort.  
+ Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen zu suchen, für das Dokument, "AMD64 Architecture Programmers manuelle Volume 2: System-Programmierung" Dokumentnummer 24593, Version 3.11, auf die [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) Standort.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__svm_clgi`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_clgi`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

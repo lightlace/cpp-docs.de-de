@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3611 | Microsoft Docs
+title: Compilerfehler C3611 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdd09d86eac5e6182adb9f012c0e450b92d410b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6bc7f1f96e774c7b0dd9df2f760d9c45a522de1c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252011"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039646"
 ---
 # <a name="compiler-error-c3611"></a>Compilerfehler C3611
-'Funktion': eine versiegelte Funktion sind keine pure-Specifier  
-  
- Eine versiegelte Funktion wurde falsch deklariert.  Weitere Informationen finden Sie unter [versiegelten](../../windows/sealed-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C3611 generiert.  
-  
-```  
-// C3611.cpp  
-// compile with: /clr /c  
-  
-ref struct V {  
-   virtual void Test() sealed = 0;   // C3611  
-   virtual void Test2() sealed;   // OK  
-   virtual void Test3() = 0;   // OK  
-};  
+
+'Funktion': eine versiegelte Funktion sind keine keinen pure-Spezifizierer
+
+Eine versiegelte Funktion wurde falsch deklariert.  Weitere Informationen finden Sie unter [versiegelten](../../windows/sealed-cpp-component-extensions.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C3611 generiert.
+
+```
+// C3611.cpp
+// compile with: /clr /c
+
+ref struct V {
+   virtual void Test() sealed = 0;   // C3611
+   virtual void Test2() sealed;   // OK
+   virtual void Test3() = 0;   // OK
+};
 ```

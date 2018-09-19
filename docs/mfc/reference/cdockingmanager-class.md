@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87fcaf93823e504f3631d50de4f981ae30e882e9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2ddfeb41f9036e783fbf2b303a796fddf48405c9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027825"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701791"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager-Klasse
 Implementiert die Kernfunktionen, die das Andocklayout in einem Hauptrahmenfenster steuern.  
@@ -320,11 +320,11 @@ BOOL AddDockSite(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Informationen*  
- Ein Verweis auf ein Informationsstruktur, die enthält Andocken Bereich Ausrichtung.  
+*Info*<br/>
+[in] Ein Verweis auf ein Informationsstruktur, die enthält Andocken Bereich Ausrichtung.  
   
- [out] *PpDockBar*  
- Ein Zeiger auf einen Zeiger auf die neue Dockbereich.  
+*ppDockBar*<br/>
+[out] Ein Zeiger auf einen Zeiger auf die neue Dockbereich.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Dockbereich erfolgreich erstellt wurde. "False" andernfalls.  
@@ -337,8 +337,8 @@ void AddHiddenMDITabbedBar(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- Ein Zeiger auf einen Balken im Bereich  
+*pBar*<br/>
+[in] Ein Zeiger auf einen Balken im Bereich  
   
 ##  <a name="addpane"></a>  CDockingManager::AddPane  
  Registriert einen Bereich beim Dock-Manager.  
@@ -352,17 +352,17 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in, out] *aufnehmen*  
- Gibt den Bereich, um die Dock-Manager hinzufügen.  
+*Aufnehmen*<br/>
+[in, out] Gibt den Bereich, um die Dock-Manager hinzufügen.  
   
- [in] *bTail*  
- True, um den Bereich am Ende der Liste der Bereiche für Dock-Manager hinzufügen. andernfalls "false".  
+*bTail*<br/>
+[in] True, um den Bereich am Ende der Liste der Bereiche für Dock-Manager hinzufügen. andernfalls "false".  
   
- [in] *bAutoHide*  
- Nur für interne Verwendung. Verwenden Sie immer den Standardwert "false".  
+*bAutoHide*<br/>
+[in] Nur zur internen Verwendung. Verwenden Sie immer den Standardwert "false".  
   
- [in] *bInsertForOuterEdge*  
- Nur für interne Verwendung. Verwenden Sie immer den Standardwert "false".  
+*bInsertForOuterEdge*<br/>
+[in] Nur zur internen Verwendung. Verwenden Sie immer den Standardwert "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Bereich beim Dock-Manager erfolgreich registriert wurde. andernfalls "false".  
@@ -378,8 +378,8 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Hdwp*  
- Gibt die verzögerte Fenster Position-Struktur. Weitere Informationen finden Sie unter [Windows-Datentypen](http://msdn.microsoft.com/library/windows/desktop/aa383751).  
+*hdwp*<br/>
+[in] Gibt die verzögerte Fenster Position-Struktur. Weitere Informationen finden Sie unter [Windows-Datentypen](/windows/desktop/WinProg/windows-data-types).  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -391,8 +391,8 @@ virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Ein Zeiger auf einen Frame.  
+*Aufnehmen*<br/>
+[in] Ein Zeiger auf einen Frame.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Frame nicht in der Liste der Mini-Frames ist und wurde erfolgreich hinzugefügt. "False" andernfalls.  
@@ -416,11 +416,11 @@ virtual BOOL AdjustRectToClientArea(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *RectResult*  
- Ein Verweis auf eine `CRect` Objekt  
+*rectResult*<br/>
+[in] Ein Verweis auf eine `CRect` Objekt  
   
- [in] *DwAlignment*  
- Die Ausrichtung der `CRect` Objekt  
+*dwAlignment*<br/>
+[in] Die Ausrichtung der `CRect` Objekt  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn die Ausrichtung der `CRect` Objekt wurde korrigiert; "False" andernfalls.  
@@ -446,11 +446,11 @@ void AlignAutoHidePane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDefaultSlider*  
- Der Schieberegler Andockbereich.  
+*pDefaultSlider*<br/>
+[in] Der Schieberegler Andockbereich.  
   
- [in] *bIsVisible*  
- True, wenn der andockbare Bereich angezeigt wird. "False" andernfalls.  
+*bIsVisible*<br/>
+[in] True, wenn der andockbare Bereich angezeigt wird. "False" andernfalls.  
   
 ##  <a name="autohidepane"></a>  CDockingManager::AutoHidePane  
  Erstellt eine Symbolleiste zum automatischen ausblenden.  
@@ -462,11 +462,11 @@ CMFCAutoHideToolBar* AutoHidePane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- Ein Zeiger auf die Leiste Bereich.  
+*pBar*<br/>
+[in] Ein Zeiger auf die Leiste Bereich.  
   
- [in] *pCurrAutoHideToolBar*  
- Ein Zeiger auf eine Auto-Symbolleiste ausblenden.  
+*pCurrAutoHideToolBar*<br/>
+[in] Ein Zeiger auf eine Auto-Symbolleiste ausblenden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  NULL, wenn die automatisch im Hintergrund Symbolleiste wurde nicht erstellt wurde. andernfalls ein Zeiger auf die neue Symbolleiste.  
@@ -481,11 +481,11 @@ void BringBarsToTop(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwAlignment*  
- Die Ausrichtung der Balken Dock, die am Anfang der anderen Fenster aktualisiert werden.  
+*dwAlignment*<br/>
+[in] Die Ausrichtung der Balken Dock, die am Anfang der anderen Fenster aktualisiert werden.  
   
- [in] *bExcludeDockedBars*  
- True, um die Balken angedockten auszuschließen im Vordergrund. andernfalls "false".  
+*bExcludeDockedBars*<br/>
+[in] True, um die Balken angedockten auszuschließen im Vordergrund. andernfalls "false".  
   
 ##  <a name="buildpanesmenu"></a>  CDockingManager::BuildPanesMenu  
  Namen von andockbaren Bereiche und Symbolleisten wird zu einem Menü hinzugefügt.  
@@ -497,11 +497,11 @@ void BuildPanesMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Menü*  
- Ein Menü mit die Namen der andockbare Bereiche und Symbolleisten hinzufügen.  
+*Menü "*<br/>
+[in] Ein Menü mit die Namen der andockbare Bereiche und Symbolleisten hinzufügen.  
   
- [in] *bToolbarsOnly*  
- "True" nur-Symbolleiste auf das Menü hinzufügen; "False" andernfalls.  
+*bToolbarsOnly*<br/>
+[in] "True" nur-Symbolleiste auf das Menü hinzufügen; "False" andernfalls.  
   
 ##  <a name="calcexpecteddockedrect"></a>  CDockingManager::CalcExpectedDockedRect  
  Berechnet das erwartete Rechteck eines angedockten Fensters.  
@@ -516,20 +516,20 @@ void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Ein Zeiger auf das Fenster angedockt werden soll.  
+*Aufnehmen*<br/>
+[in] Ein Zeiger auf das Fenster angedockt werden soll.  
   
- [in] *PtMouse*  
- Die Position des Mauszeigers.  
+*ptMouse*<br/>
+[in] Die Position des Mauszeigers.  
   
- [out] *RectResult*  
- Das berechnete Rechteck.  
+*rectResult*<br/>
+[out] Das berechnete Rechteck.  
   
- [in] *bDrawTab*  
- "True" Zeichnen-Befehl eine Registerkarte; andernfalls "false".  
+*bDrawTab*<br/>
+[in] "True" Zeichnen-Befehl eine Registerkarte; andernfalls "false".  
   
- [out] *PpTargetBar*  
- Ein Zeiger auf einen Zeiger auf den Bereich "Ziel".  
+*ppTargetBar*<br/>
+[out] Ein Zeiger auf einen Zeiger auf den Bereich "Ziel".  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode berechnet das Rechteck, das ein Fenster einnehmen würde, wenn ein Benutzer im Fenster auf den vom angegebenen Punkt gezogen *PtMouse* und es gibt es angedockt.  
@@ -542,8 +542,8 @@ BOOL Create(CFrameWnd* pParentWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pParentWnd*  
- Ein Zeiger auf den übergeordneten Frame des Dock-Manager. Dieser Wert darf nicht NULL sein.  
+*pParentWnd*<br/>
+[in] Ein Zeiger auf den übergeordneten Frame des Dock-Manager. Dieser Wert darf nicht NULL sein.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Immer TRUE.  
@@ -562,23 +562,23 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pt*  
- Die Position des Bereichs, um zu überprüfen.  
+*pt*<br/>
+[in] Die Position des Bereichs, um zu überprüfen.  
   
- [in] *nSensitivity*  
- Der Wert, um das fensterrechtecke jedes aktivierte Bereichs zu erhöhen. Ein Bereich erfüllt die Suchkriterien, ist der angegebene Punkt in dieser Region erhöhte.  
+*nSensitivity*<br/>
+[in] Der Wert, um das fensterrechtecke jedes aktivierte Bereichs zu erhöhen. Ein Bereich erfüllt die Suchkriterien, ist der angegebene Punkt in dieser Region erhöhte.  
   
- [in] *DwEnabledAlignment*  
- Die Ausrichtung des andockbaren Bereich.  
+*dwEnabledAlignment*<br/>
+[in] Die Ausrichtung des andockbaren Bereich.  
   
- [out] *PpTargetBar*  
- Ein Zeiger auf einen Zeiger auf den Bereich "Ziel".  
+*ppTargetBar*<br/>
+[out] Ein Zeiger auf einen Zeiger auf den Bereich "Ziel".  
   
- [in] *pBarToIgnore*  
- Der Bereich, den die Methode ignoriert.  
+*pBarToIgnore*<br/>
+[in] Der Bereich, den die Methode ignoriert.  
   
- [in] *pBarToDock*  
- Der Bereich, der in der Dockingstation ist.  
+*pBarToDock*<br/>
+[in] Der Bereich, der in der Dockingstation ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Andockstatus.  
@@ -601,8 +601,8 @@ void DisableRestoreDockState(BOOL bDisable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bDeaktivieren*  
- "True" Laden von docking-Layout aus der Registrierung deaktivieren andernfalls "false".  
+*bDeaktivieren*<br/>
+[in] "True" Laden von docking-Layout aus der Registrierung deaktivieren andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Aufgerufen Sie diese Methode wird, wenn Sie das aktuelle Layout des andockbaren Bereiche und Symbolleisten beibehalten müssen, wenn der Zustand der Anwendung geladen wird.  
@@ -618,14 +618,14 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- Ein Zeiger auf einen Balken Bereich angedockt.  
+*pBar*<br/>
+[in] Ein Zeiger auf einen Balken Bereich angedockt.  
   
- [in] *nDockBarID*  
- Die Id des Balkens angedockt werden soll.  
+*nDockBarID*<br/>
+[in] Die Id des Balkens angedockt werden soll.  
   
- [in] *LpRect*  
- Das Zielrechteck.  
+*lpRect*<br/>
+[in] Das Zielrechteck.  
   
 ##  <a name="dockpaneleftof"></a>  CDockingManager::DockPaneLeftOf  
  Dockt einen Bereich auf der linken Seite eines anderen Bereichs an.  
@@ -637,11 +637,11 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBarToDock*  
- Ein Zeiger auf den Bereich, um an der linken Seite des angedockt werden *pTargetBar*.  
+*pBarToDock*<br/>
+[in] Ein Zeiger auf den Bereich, um an der linken Seite des angedockt werden *pTargetBar*.  
   
- [in] *pTargetBar*  
- Ein Zeiger auf den Bereich "Ziel".  
+*pTargetBar*<br/>
+[in] Ein Zeiger auf den Bereich "Ziel".  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Bereich erfolgreich angedockt wurde. andernfalls "false".  
@@ -654,8 +654,8 @@ BOOL EnableAutoHidePanes(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwStyle*  
- Die Ausrichtung des andocken.  
+*dwStyle*<br/>
+[in] Die Ausrichtung des andocken.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Dockbereich erfolgreich erstellt wurde. "False" andernfalls.  
@@ -668,8 +668,8 @@ BOOL EnableDocking(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwStyle*  
- Die Ausrichtung des andocken.  
+*dwStyle*<br/>
+[in] Die Ausrichtung des andocken.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Dockbereich erfolgreich erstellt wurde. "False" andernfalls.  
@@ -682,8 +682,8 @@ static void EnableDockSiteMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- True, um die Dock-Menü "Vorschauwebsite" zu aktivieren. andernfalls "false".  
+*bAktivieren*<br/>
+[in] True, um die Dock-Menü "Vorschauwebsite" zu aktivieren. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Das Menü "Vorschauwebsite andocken" zeigt die folgenden Optionen zum Ändern der Andockstatus des Bereichs an:  
@@ -710,17 +710,17 @@ void EnablePaneContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- True gibt an, aktiviert die Unterstützung für die automatische Kontextmenü die Bibliothek; bei FALSE wird die Unterstützung für die automatische Kontextmenü die Bibliothek deaktiviert.  
+*bAktivieren*<br/>
+[in] True gibt an, aktiviert die Unterstützung für die automatische Kontextmenü die Bibliothek; bei FALSE wird die Unterstützung für die automatische Kontextmenü die Bibliothek deaktiviert.  
   
- [in] *UiCustomizeCmd*  
- Eine Befehls-Id für die **anpassen** Element im Menü.  
+*uiCustomizeCmd*<br/>
+[in] Eine Befehls-Id für die **anpassen** Element im Menü.  
   
- [in] *StrCustomizeText*  
- Der Text, der die **anpassen** Element.  
+*strCustomizeText*<br/>
+[in] Der Text, der die **anpassen** Element.  
   
- [in] *bToolbarsOnly*  
- Bei "true", zeigt das Menü nur eine Liste der Anwendungssymbolleisten an; False gibt an, fügt die Bibliothek andockbare Bereiche der Anwendung zu dieser Liste.  
+*bToolbarsOnly*<br/>
+[in] Bei "true", zeigt das Menü nur eine Liste der Anwendungssymbolleisten an; False gibt an, fügt die Bibliothek andockbare Bereiche der Anwendung zu dieser Liste.  
   
 ##  <a name="finddocksite"></a>  CDockingManager::FindDockSite  
  Ruft ab, der Leiste Bereich, der sich auf der angegebenen Position und die angegebene Ausrichtung aufweist.  
@@ -732,11 +732,11 @@ virtual CDockSite* FindDockSite(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwAlignment*  
- Die Ausrichtung des Balkens Bereich.  
+*dwAlignment*<br/>
+[in] Die Ausrichtung des Balkens Bereich.  
   
- [in] *bOuter*  
- True gibt an, rufen Sie die Leiste in der Head Position in der Liste von Steuerleisten ein. Rufen Sie andernfalls die Leiste in der die Endposition in der Liste von Steuerleisten.  
+*bOuter*<br/>
+[in] True gibt an, rufen Sie die Leiste in der Head Position in der Liste von Steuerleisten ein. Rufen Sie andernfalls die Leiste in der die Endposition in der Liste von Steuerleisten.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die andockbaren Bereich, der die angegebene Ausrichtung verfügt; Andernfalls NULL.  
@@ -751,11 +751,11 @@ virtual CBasePane* FindPaneByID(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *uBarID*  
- Gibt an, die Steuerelement-ID des Bereichs zu suchen.  
+*uBarID*<br/>
+[in] Gibt an, die Steuerelement-ID des Bereichs zu suchen.  
   
- [in] *bSearchMiniFrames*  
- TRUE, um alle unverankerter Bereiche in die Suche einbeziehen. "False", um nur die angedockte Bereiche einzuschließen.  
+*bSearchMiniFrames*<br/>
+[in] TRUE, um alle unverankerter Bereiche in die Suche einbeziehen. "False", um nur die angedockte Bereiche einzuschließen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die [CBasePane](../../mfc/reference/cbasepane-class.md) -Objekt, das das angegebene Steuerelement-ID, oder NULL hat, wenn der angegebene Bereich nicht gefunden werden kann.  
@@ -770,8 +770,8 @@ virtual CDockSite* FindDockSiteByPane(CPane* pTargetBar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pTargetBar*  
- Ein Zeiger auf den Bereich "Ziel-Leiste".  
+*pTargetBar*<br/>
+[in] Ein Zeiger auf den Bereich "Ziel-Leiste".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Leiste Bereich, der die ID des Ziel-Leistenbereich; NULL, wenn keine ist z. B. bar Bereich vorhanden.  
@@ -797,14 +797,14 @@ virtual CPaneFrameWnd* FrameFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pt*  
- Gibt den Punkt in Bildschirmkoordinaten, um zu überprüfen.  
+*pt*<br/>
+[in] Gibt den Punkt in Bildschirmkoordinaten, um zu überprüfen.  
   
- [in] *pFrameToExclude*  
- Ein Zeiger auf einen Rahmen um auszuschließen.  
+*pFrameToExclude*<br/>
+[in] Ein Zeiger auf einen Rahmen um auszuschließen.  
   
- [in] *bFloatMultiOnly*  
- "True" Exclude-Frames, die keine Instanzen von sind `CMultiPaneFrameWnd`; "False" andernfalls.  
+*bFloatMultiOnly*<br/>
+[in] "True" Exclude-Frames, die keine Instanzen von sind `CMultiPaneFrameWnd`; "False" andernfalls.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Frame, der den angegebenen Punkt enthält; Andernfalls NULL.  
@@ -819,8 +819,8 @@ void GetClientAreaBounds(CRect& rcClient);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *RcClient*  
- Ein Verweis auf das Rechteck, das die Grenzen des Clientbereichs enthält.  
+*rcClient*<br/>
+[out] Ein Verweis auf das Rechteck, das die Grenzen des Clientbereichs enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Das Rechteck, das die Grenzen des Clientbereichs enthält.  
@@ -899,17 +899,17 @@ void GetPaneList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in, out] *LstBars*  
- Enthält alle Bereiche der aktuellen Dock-Manager.  
+*lstBars*<br/>
+[in, out] Enthält alle Bereiche der aktuellen Dock-Manager.  
   
- [in] *bIncludeAutohide*  
- TRUE, um Bereiche einzuschließen, die in den Hintergrundmodus sind; andernfalls "false".  
+*bIncludeAutohide*<br/>
+[in] TRUE, um Bereiche einzuschließen, die in den Hintergrundmodus sind; andernfalls "false".  
   
- [in] *pRTCFilter*  
- Wenn nicht NULL ist, enthält die zurückgegebene Liste Bereiche nur der angegebene Runtime-Klasse.  
+*pRTCFilter*<br/>
+[in] Wenn nicht NULL ist, enthält die zurückgegebene Liste Bereiche nur der angegebene Runtime-Klasse.  
   
- [in] *bIncludeTabs*  
- True, um die Registerkarten enthalten. andernfalls "false".  
+*bIncludeTabs*<br/>
+[in] True, um die Registerkarten enthalten. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn alle Bereiche im Registerkartenformat im Dock-Manager vorhanden sind, gibt die Methode Zeigern auf [CBaseTabbedPane-Klasse](../../mfc/reference/cbasetabbedpane-class.md) Objekte, und Sie müssen die Registerkarten explizit auflisten.  
@@ -924,7 +924,7 @@ CSmartDockingManager* GetSmartDockingManager();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die [intelligente Dock-Manager](http://msdn.microsoft.com/f537a1a6-fb9e-41d7-952f-0f25d5ee7534).  
+ Ein Zeiger auf den intelligenten Dock-Manager.  
   
 ##  <a name="getsmartdockingmanagerpermanent"></a>  CDockingManager::GetSmartDockingManagerPermanent  
  Ruft einen Zeiger auf den intelligenten Dock-Manager ab.  
@@ -958,11 +958,11 @@ void HideAutoHidePanes(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBarToExclude*  
- Ein Zeiger auf einen Balken, Verbergen ausgeschlossen werden sollen.  
+*pBarToExclude*<br/>
+[in] Ein Zeiger auf einen Balken, Verbergen ausgeschlossen werden sollen.  
   
- [in] *bImmediately*  
- True, um den Ausschnitt sofort auszublenden. "False" zum Ausblenden des Fensters mit dem Effekt automatisch im Hintergrund.  
+*bImmediately*<br/>
+[in] True, um den Ausschnitt sofort auszublenden. "False" zum Ausblenden des Fensters mit dem Effekt automatisch im Hintergrund.  
   
 ##  <a name="insertdocksite"></a>  CDockingManager::InsertDockSite  
  Erstellt einen Dockbereich und fügt sie in der Liste von Steuerleisten ein.  
@@ -975,14 +975,14 @@ BOOL InsertDockSite(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Informationen*  
- Eine Struktur, die die Ausrichtungsinformationen über die Dockbereich enthält.  
+*Info*<br/>
+[in] Eine Struktur, die die Ausrichtungsinformationen über die Dockbereich enthält.  
   
- [in] *DwAlignToInsertAfter*  
- Die Ausrichtung des Bereichs andocken.  
+*dwAlignToInsertAfter*<br/>
+[in] Die Ausrichtung des Bereichs andocken.  
   
- [out] *PpDockBar*  
- Ein Zeiger auf einen Zeiger auf einen Dockbereich.  
+*ppDockBar*<br/>
+[out] Ein Zeiger auf einen Zeiger auf einen Dockbereich.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Dockbereich erfolgreich erstellt wurde. "False" andernfalls.  
@@ -998,14 +998,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pControlBar*  
- Ein Zeiger auf einen Bereich des Steuerelements.  
+*pControlBar*<br/>
+[in] Ein Zeiger auf einen Bereich des Steuerelements.  
   
- [in] *pTarget*  
- Ein Zeiger auf einen Bereich "Ziel".  
+*pTarget*<br/>
+[in] Ein Zeiger auf einen Bereich "Ziel".  
   
- [in] *bNach*  
- True, um den Bereich nach der Position des Bereichs Ziel eingefügt werden soll. "False" andernfalls.  
+*bNach*<br/>
+[in] True, um den Bereich nach der Position des Bereichs Ziel eingefügt werden soll. "False" andernfalls.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Steuerelement im Bereich der Liste der Steuerleisten erfolgreich hinzugefügt wurde. "False" andernfalls.  
@@ -1060,14 +1060,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Der angegebene Punkt.  
+*Zeigen Sie*<br/>
+[in] Der angegebene Punkt.  
   
- [out] *DwBarAlignment*  
- Gibt an, welchen Rand, in der Nähe der Punkt ist. Mögliche Werte sind CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP und CBRS_ALIGN_BOTTOM.  
+*dwBarAlignment*<br/>
+[out] Gibt an, welchen Rand, in der Nähe der Punkt ist. Mögliche Werte sind CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP und CBRS_ALIGN_BOTTOM.  
   
- [out] *bOuterEdge*  
- True, wenn der Punkt in der Nähe von der äußere Rahmen der DockPosition ist. "False" andernfalls.  
+*bOuterEdge*<br/>
+[out] True, wenn der Punkt in der Nähe von der äußere Rahmen der DockPosition ist. "False" andernfalls.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Punkt in der Nähe der DockPosition ist. andernfalls "false".  
@@ -1092,11 +1092,11 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- Profilname.  
+*lpszProfileName*<br/>
+[in] Profilname.  
   
- [in] *UiID*  
- Die Id des Dock-Manager.  
+*uiID*<br/>
+[in] Die Id des Dock-Manager.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Manager Andockstatus erfolgreich geladen wurde. andernfalls "false".  
@@ -1109,8 +1109,8 @@ void LockUpdate(BOOL bLock);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *blockieren*  
- True, wenn das Fenster gesperrt ist. "False" andernfalls.  
+*bLock*<br/>
+[in] True, wenn das Fenster gesperrt ist. "False" andernfalls.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn ein Fenster gesperrt ist, kann nicht verschoben werden, und kann nicht neu gezeichnet werden.  
@@ -1173,8 +1173,8 @@ virtual void OnActivateFrame(BOOL bActivate);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bActivate*  
- Bei "true", wird das Rahmenfenster aktiv wird. Wenn "FALSE" ist das Rahmenfenster deaktiviert.  
+*bActivate*<br/>
+[in] Bei "true", wird das Rahmenfenster aktiv wird. Wenn "FALSE" ist das Rahmenfenster deaktiviert.  
   
 ##  <a name="onclosepopupmenu"></a>  CDockingManager::OnClosePopupMenu  
  Wird vom Framework aufgerufen, wenn ein aktives Popupmenü eine WM_DESTROY-Meldung verarbeitet.  
@@ -1194,8 +1194,8 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pFrame*  
- Ein Zeiger auf ein Minirahmenfenster.  
+*pFrame*<br/>
+[in] Ein Zeiger auf ein Minirahmenfenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich ist. andernfalls "false".  
@@ -1208,8 +1208,8 @@ void OnPaneContextMenu(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Gibt den Speicherort des Menüs.  
+*Zeigen Sie*<br/>
+[in] Gibt den Speicherort des Menüs.  
   
 ##  <a name="panefrompoint"></a>  CDockingManager::PaneFromPoint  
  Gibt den Bereich, der den angegebenen Punkt enthält.  
@@ -1232,26 +1232,26 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Gibt den Punkt in Bildschirmkoordinaten, um zu überprüfen.  
+*Zeigen Sie*<br/>
+[in] Gibt den Punkt in Bildschirmkoordinaten, um zu überprüfen.  
   
- [in] *nSensitivity*  
- Der Wert, um das fensterrechtecke jedes aktivierte Bereichs vergrößert werden soll. Ein Bereich erfüllt die Suchkriterien, ist der angegebene Punkt in dieser Region zunehmen.  
+*nSensitivity*<br/>
+[in] Der Wert, um das fensterrechtecke jedes aktivierte Bereichs vergrößert werden soll. Ein Bereich erfüllt die Suchkriterien, ist der angegebene Punkt in dieser Region zunehmen.  
   
- [in] *bExactBar*  
- "True", ignoriert der *nSensitivity* Parameter ist, andernfalls FALSE.  
+*bExactBar*<br/>
+[in] "True", ignoriert der *nSensitivity* Parameter ist, andernfalls FALSE.  
   
- [in] *pRTCBarType*  
- Wenn nicht NULL ist, sucht die Methode nur die Bereiche des angegebenen Typs.  
+*pRTCBarType*<br/>
+[in] Wenn nicht NULL ist, sucht die Methode nur die Bereiche des angegebenen Typs.  
   
- [in] *bCheckVisibility*  
- "True", um nur sichtbaren Bereiche zu überprüfen; andernfalls "false".  
+*bCheckVisibility*<br/>
+[in] "True", um nur sichtbaren Bereiche zu überprüfen; andernfalls "false".  
   
- [out] *DwAlignment*  
- Wenn Sie ein Bereich am angegebenen Punkt gefunden wird, enthält dieser Parameter den Rand des Bereichs, der dem angegebenen Punkt am nächsten war. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
+*dwAlignment*<br/>
+[out] Wenn Sie ein Bereich am angegebenen Punkt gefunden wird, enthält dieser Parameter den Rand des Bereichs, der dem angegebenen Punkt am nächsten war. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
   
- [in] *pBarToIgnore*  
- Wenn nicht NULL ist, ignoriert die Methode, Bereiche, die durch diesen Parameter angegeben.  
+*pBarToIgnore*<br/>
+[in] Wenn nicht NULL ist, ignoriert die Methode, Bereiche, die durch diesen Parameter angegeben.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die [CBasePane](../../mfc/reference/cbasepane-class.md)-abgeleitete Objekt, das die angegebenen Punkt enthält, oder NULL, wenn kein Bereich gefunden wurde.  
@@ -1271,17 +1271,17 @@ BOOL ProcessPaneContextMenuCommand(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- Die Id einer Steuerleiste im Menü.  
+*nID*<br/>
+[in] Die Id einer Steuerleiste im Menü.  
   
- [in] *nCode*  
- Der Befehl Benachrichtigungscode.  
+*nCode*<br/>
+[in] Der Befehl Benachrichtigungscode.  
   
- [in] *pExtra*  
- Ein Zeiger auf, die "void" ist auf einen Zeiger auf die Typumwandlung `CCmdUI` Wenn *nCode* aufgerufen wird.  
+*pExtra*<br/>
+[in] Ein Zeiger auf, die "void" ist auf einen Zeiger auf die Typumwandlung `CCmdUI` Wenn *nCode* aufgerufen wird.  
   
- [in] *pHandlerInfo*  
- Ein Zeiger auf eine Informationsstruktur. Dieser Parameter wird nicht verwendet.  
+*pHandlerInfo*<br/>
+[in] Ein Zeiger auf eine Informationsstruktur. Dieser Parameter wird nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn *pEXtra* ist nicht NULL und *nCode* gleich aufgerufen, oder es ist eine Steuerleiste, mit dem angegebenen *nID*.  
@@ -1294,8 +1294,8 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bNotify*  
- Dieser Parameter wird nicht verwendet.  
+*bNotify*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
 ##  <a name="releaseemptypanecontainers"></a>  CDockingManager::ReleaseEmptyPaneContainers  
  Gibt den leeren Bereich Container frei.  
@@ -1312,8 +1312,8 @@ void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- Ein Zeiger auf einen Balken im Bereich zu entfernen.  
+*pBar*<br/>
+[in] Ein Zeiger auf einen Balken im Bereich zu entfernen.  
   
 ##  <a name="removeminiframe"></a>  CDockingManager::RemoveMiniFrame  
  Entfernt einen angegebenen Rahmen aus der Liste der Mini-Frames.  
@@ -1323,8 +1323,8 @@ virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Ein Zeiger auf einen Rahmen zu entfernen.  
+*Aufnehmen*<br/>
+[in] Ein Zeiger auf einen Rahmen zu entfernen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der angegebene Frame entfernt wird. "False" andernfalls.  
@@ -1342,20 +1342,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Ein Zeiger auf einen Bereich entfernt werden soll.  
+*Aufnehmen*<br/>
+[in] Ein Zeiger auf einen Bereich entfernt werden soll.  
   
- [in] *bDestroy*  
- Wenn "true", Bereich entfernte zerstört wird.  
+*bDestroy*<br/>
+[in] Wenn "true", Bereich entfernte zerstört wird.  
   
- [in] *bAdjustLayout*  
- True gibt an, passen Sie sofort das docking-Layout.  
+*bAdjustLayout*<br/>
+[in] True gibt an, passen Sie sofort das docking-Layout.  
   
- [in] *bAutoHide*  
- Wenn "true", wird im Bereich aus der Liste der automatisch im Hintergrund Balken entfernt. Wenn "FALSE" wird im Bereich aus der Liste der regulären Bereiche entfernt.  
+*bAutoHide*<br/>
+[in] Wenn "true", wird im Bereich aus der Liste der automatisch im Hintergrund Balken entfernt. Wenn "FALSE" wird im Bereich aus der Liste der regulären Bereiche entfernt.  
   
- [in] *pBarReplacement*  
- Ein Zeiger auf einen Bereich, der Bereich entfernten ersetzt.  
+*pBarReplacement*<br/>
+[in] Ein Zeiger auf einen Bereich, der Bereich entfernten ersetzt.  
   
 ##  <a name="replacepane"></a>  CDockingManager::ReplacePane  
  Ersetzt einen Bereich durch einen anderen.  
@@ -1367,11 +1367,11 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pOriginalBar*  
- Ein Zeiger auf den ursprünglichen Bereich.  
+*pOriginalBar*<br/>
+[in] Ein Zeiger auf den ursprünglichen Bereich.  
   
- [in] *pNewBar*  
- Ein Zeiger auf den Bereich, der den ursprünglichen Bereich ersetzt.  
+*pNewBar*<br/>
+[in] Ein Zeiger auf den Bereich, der den ursprünglichen Bereich ersetzt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Bereich wurde erfolgreich ersetzt wird. "False" andernfalls.  
@@ -1393,11 +1393,11 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- Ein Pfad zu einem Registrierungsschlüssel.  
+*lpszProfileName*<br/>
+[in] Ein Pfad zu einem Registrierungsschlüssel.  
   
- [in] *UiID*  
- Das docking-Manager-ID.  
+*uiID*<br/>
+[in] Das docking-Manager-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Zustand erfolgreich gespeichert wurde. andernfalls "false".  
@@ -1416,14 +1416,14 @@ BOOL SendMessageToMiniFrames(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *uMessage*  
- Die Nachricht gesendet werden.  
+*uMessage*<br/>
+[in] Die Nachricht gesendet werden.  
   
- [in] *wParam-Parameter*  
- Zusätzliche abhängige Nachrichteninformationen.  
+*wParam-Parameter*<br/>
+[in] Zusätzliche abhängige Nachrichteninformationen.  
   
- [in] *lParam*  
- Zusätzliche abhängige Nachrichteninformationen.  
+*lParam*<br/>
+[in] Zusätzliche abhängige Nachrichteninformationen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Immer TRUE.  
@@ -1436,8 +1436,8 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Ar*  
- Ein Verweis auf ein Archivobjekt.  
+*ar*<br/>
+[in] Ein Verweis auf ein Archivobjekt.  
   
 ### <a name="remarks"></a>Hinweise  
  Schreiben die Dock-Manager in ein Archiv umfasst das Bestimmen der Anzahl der Andocken Schiebeleisten-Steuerelemente und Schieberegler, und schreiben die Steuerleisten, die Mini-Frames, die automatisch im Hintergrund Balken und Balken MDI-Registerkarten in das Archiv.  
@@ -1450,8 +1450,8 @@ void SetAutohideZOrder(CDockablePane* pAHDockingBar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pAHDockingBar*  
- Ein Zeiger auf einen andockbaren Bereich.  
+*pAHDockingBar*<br/>
+[in] Ein Zeiger auf einen andockbaren Bereich.  
   
 ##  <a name="setdockingmode"></a>  CDockingManager::SetDockingMode  
  Legt den Andockmodus fest.  
@@ -1497,11 +1497,11 @@ void SetPrintPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bPreview*  
- True, wenn die Seitenansicht-Modus festgelegt ist. "False" andernfalls.  
+*bPreview*<br/>
+[in] True, wenn die Seitenansicht-Modus festgelegt ist. "False" andernfalls.  
   
- [in] *pState*  
- Ein Zeiger auf einen vorschauzustand. Dieser Parameter wird nicht verwendet.  
+*pState*<br/>
+[in] Ein Zeiger auf einen vorschauzustand. Dieser Parameter wird nicht verwendet.  
   
 ##  <a name="setsmartdockingparams"></a>  CDockingManager::SetSmartDockingParams  
  Legt fest, die Parameter, die das Verhalten des intelligentes Andocken definieren.  
@@ -1511,8 +1511,8 @@ static void SetSmartDockingParams(CSmartDockingInfo& params);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in, out] *Params*  
- Definiert die Parameter für intelligentes Andocken.  
+*params*<br/>
+[in, out] Definiert die Parameter für intelligentes Andocken.  
   
 ### <a name="remarks"></a>Hinweise  
  Aufgerufen Sie diese Methode wird, wenn Sie die Darstellung, die Farbe oder die Form, von dem intelligenten andockmarkern anpassen möchten.  
@@ -1527,8 +1527,8 @@ void ShowDelayShowMiniFrames(BOOL bshow);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bShow*  
- True, um das Fenster des angezeigten Frames zu aktivieren. "False", um das Fenster des Frames auszublenden.  
+*bShow*<br/>
+[in] True, um das Fenster des angezeigten Frames zu aktivieren. "False", um das Fenster des Frames auszublenden.  
   
 ##  <a name="showpanes"></a>  CDockingManager::ShowPanes  
  Zeigt an, oder blendet Sie aus den Bereichen der Balken für die Steuerung und zum automatischen ausblenden.  
@@ -1538,8 +1538,8 @@ virtual BOOL ShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bShow*  
- True, um die Bereiche anzuzeigen. "False", um Bereiche auszublenden.  
+*bShow*<br/>
+[in] True, um die Bereiche anzuzeigen. "False", um Bereiche auszublenden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Immer "false".  
@@ -1552,8 +1552,8 @@ void StartSDocking(CWnd* pDockingWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDockingWnd*  
- Ein Zeiger auf ein Fenster anzudocken.  
+*pDockingWnd*<br/>
+[in] Ein Zeiger auf ein Fenster anzudocken.  
   
 ##  <a name="stopsdocking"></a>  CDockingManager::StopSDocking  
  Beendet smart andocken.  

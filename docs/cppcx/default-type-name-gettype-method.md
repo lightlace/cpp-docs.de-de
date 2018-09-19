@@ -1,5 +1,5 @@
 ---
-title: 'standardmäßige:: (Type_name):: GetType-Methode | Microsoft Docs'
+title: 'Standardwert: (Type_name):: GetType-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -9,38 +9,41 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 21d0bf92-fac4-48cd-9108-c6f57ba1196a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66006281bfc4a29bd1acc2bc360b6f3c08f5ac8b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f849b18e761fed4daf2c4a336a984242008bfd7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087147"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105184"
 ---
 # <a name="defaulttypenamegettype-method"></a>default::(type_name)::GetType-Methode
-Gibt einen Platform::Type^ zurück, der den aktuellen Typ darstellt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-  
-Platform::Type^ GetType()  
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein [Platform::Type](../cppcx/platform-type-class.md)^-Objekt, das das aktuelle Objekt darstellt.  
-  
-### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client:** Windows 8  
-  
- **Unterstützter Server:** Windows Server 2012  
-  
- **Namespace:** Standard  
-  
- **Header:** vccorlib.h  
-  
-## <a name="see-also"></a>Siehe auch  
- [Standardnamespace](../cppcx/default-namespace.md)
+
+Gibt einen Platform::Type^ zurück, der den aktuellen Typ darstellt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+Platform::Type^ GetType();
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein [Platform::Type](../cppcx/platform-type-class.md)^-Objekt, das das aktuelle Objekt darstellt.
+
+### <a name="requirements"></a>Anforderungen
+
+**Unterstützter Client (Min.):** Windows 8
+
+**Unterstützter Server (Min.):** Windows Server 2012
+
+**Namespace:** Standard
+
+**Header:** vccorlib.h
+
+## <a name="see-also"></a>Siehe auch
+
+[Standardnamespace](../cppcx/default-namespace.md)

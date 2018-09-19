@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2777 generiert | Microsoft Docs
+title: Compilerfehler C2777 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc3eebe5d3fe12bf102adff0cc77b6647fcf2059
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 57dc92e267004cbb41fa9a6153ddc09f9aeb6fc5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234106"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077437"
 ---
-# <a name="compiler-error-c2777"></a>Compiler-Fehler C2777 generiert
-nur eine "put"-Methode kann pro Eigenschaft angegeben werden  
-  
- Ein [Eigenschaft](../../cpp/property-cpp.md) Declspec-Modifizierer verfügte über mehr als eine `put` Eigenschaft.  
-  
- Im folgende Beispiel wird C2777 generiert:  
-  
-```  
-// C2777.cpp  
-struct A {  
-   __declspec(property(put=PutProp,put=PutPropToo))   // C2777  
-   // try the following line instead  
-   // __declspec(property(put=PutProp))  
-      int prop;  
-   int PutProp(void);  
-   int PutPropToo(void);  
-};  
+# <a name="compiler-error-c2777"></a>Compilerfehler C2777
+
+nur eine "put"-Methode kann pro Eigenschaft angegeben werden
+
+Ein [Eigenschaft](../../cpp/property-cpp.md) Declspec-Modifizierer haben mehr als eine `put` Eigenschaft.
+
+Im folgende Beispiel wird die C2777 generiert:
+
+```
+// C2777.cpp
+struct A {
+   __declspec(property(put=PutProp,put=PutPropToo))   // C2777
+   // try the following line instead
+   // __declspec(property(put=PutProp))
+      int prop;
+   int PutProp(void);
+   int PutPropToo(void);
+};
 ```

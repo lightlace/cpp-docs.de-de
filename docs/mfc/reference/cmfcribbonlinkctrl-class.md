@@ -42,16 +42,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26837b4eda881bdf83e2f34f0c81a1b0e7034ffe
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: c326a13e55ed14f93b35ed486f7ee4596c643758
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851495"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712516"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl-Klasse
 Implementiert einen Hyperlink, der auf einem Menüband positioniert wird. Wenn Sie den Hyperlink anklicken, wird eine Webseite geöffnet.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -106,14 +106,14 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- Gibt an, die Befehls-ID des Befehls, der ausgeführt wird, wenn die Linksteuerelement geklickt wird.  
+*nID*<br/>
+[in] Gibt an, die Befehls-ID des Befehls, der ausgeführt wird, wenn die Linksteuerelement geklickt wird.  
   
- [in] *LpszText*  
- Gibt die Bezeichnung, die auf den Link-Steuerelement angezeigt.  
+*lpszText*<br/>
+[in] Gibt die Bezeichnung, die auf den Link-Steuerelement angezeigt.  
   
- [in] *LpszLink*  
- Gibt an, den Link, der die Linksteuerelement zugeordnet.  
+*lpszLink*<br/>
+[in] Gibt an, den Link, der die Linksteuerelement zugeordnet.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie den Konstruktor, der die `CMFCRibbonLinkCtrl` Klasse. Dieser Codeausschnitt ist Teil der [Menüband Gadgets Beispiel](../../visual-cpp-samples.md).  
@@ -263,8 +263,8 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszLink*  
- Gibt den Hyperlinktext.  
+*lpszLink*<br/>
+[in] Gibt den Hyperlinktext.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

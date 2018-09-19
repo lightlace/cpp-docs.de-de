@@ -1,5 +1,5 @@
 ---
-title: Linkertoolfehler Lnk1223 | Microsoft Docs
+title: Linkertoolfehler Lnk1223 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e50d29af6ac563fadd3a52e5b1d3d15201289083
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8639919c74559829367108b36d62594e2a83a91a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298651"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067980"
 ---
 # <a name="linker-tools-error-lnk1223"></a>Linkertoolfehler LNK1223
-Ungültige oder beschädigte Datei: Datei enthält unzulässige .pdata-Beiträge  
-  
- Bei RISC-Plattformen, die Pdata verwenden, wird dieser Fehler auftreten, wenn der Compiler einen .pdata-Abschnitt mit unsortierten Einträgen ausgegeben hat.  
-  
- Um dieses Problem zu beheben, kompilieren Sie ohne [/GL (Optimierung des ganzen Programms)](../../error-messages/tool-errors/linker-tools-error-lnk1223.md) aktiviert. Leere Funktionsbodys können in einigen Fällen diesen Fehler auch verursacht.
+
+Ungültige oder beschädigte Datei: Datei enthält unzulässige .pdata-Beiträge
+
+Bei RISC-Plattformen, die Pdata verwenden, wird dieser Fehler auftreten, wenn der Compiler einen .pdata-Abschnitt mit unsortierten Einträgen ausgegeben hat.
+
+Um dieses Problem zu beheben, versuchen Sie es ohne Kompilieren [/GL (Whole Program Optimization)](../../error-messages/tool-errors/linker-tools-error-lnk1223.md) aktiviert. Leere Funktionsbodys können in einigen Fällen diesen Fehler auch verursacht.

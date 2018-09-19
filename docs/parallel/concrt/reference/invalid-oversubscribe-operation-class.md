@@ -1,5 +1,5 @@
 ---
-title: Invalid_oversubscribe_operation-Klasse | Microsoft Docs
+title: Invalid_oversubscribe_operation-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 612a5658e0ef678253ec493f23b71cc564288904
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1b4e1eaf4bfca27ef22af103a5696ca2a34265d6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689515"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069183"
 ---
 # <a name="invalidoversubscribeoperation-class"></a>invalid_oversubscribe_operation-Klasse
 Diese Klasse beschreibt eine Ausnahme, die ausgelöst wird, wenn die `Context::Oversubscribe`-Methode mit dem auf `_BeginOversubscription` festgelegten `false`-Parameter ohne einen vorherigen Aufruf der `Context::Oversubscribe`-Methode mit dem auf `_BeginOversubscription` festgelegten `true`-Parameter aufgerufen wird.  
@@ -64,8 +64,8 @@ invalid_oversubscribe_operation() throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Message`  
- Eine beschreibende Fehlermeldung.  
+*_Nachricht*<br/>
+Eine beschreibende Fehlermeldung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)

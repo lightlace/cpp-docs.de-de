@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2798 generiert | Microsoft Docs
+title: Compilerfehler C2798 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de30a19a2a27cde991cfce0ca061ce6f5447f033
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 88241989d54e1a068b226b59091a381f531dee9e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236906"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028856"
 ---
-# <a name="compiler-error-c2798"></a>Compiler-Fehler C2798 generiert
-'Super:: Member' ist mehrdeutig  
-  
- Mehrere geerbte Strukturen enthalten, das Element, das Sie auf die verwiesen wird mit [super](../../cpp/super.md). Sie können entweder durch den Fehler beheben:  
-  
--   Entfernen von B1 oder B2 aus der Vererbungsliste von D.  
-  
--   Ändern des Namens des Datenmembers in B1 oder B2.  
-  
- Im folgende Beispiel wird C2798 generiert:  
-  
-```  
-// C2798.cpp  
-struct B1 {  
-   int i;  
-};  
-  
-struct B2 {  
-   int i;  
-};  
-  
-struct D : B1, B2 {  
-   void g() {  
-      __super::i = 4; // C2798  
-   }  
-};  
+# <a name="compiler-error-c2798"></a>Compilerfehler C2798
+
+'super:: Member' ist mehrdeutig
+
+Mehrere geerbte Strukturen enthalten den Member, die Sie verweist auf [super](../../cpp/super.md). Sie können den Fehler beheben, indem Sie entweder:
+
+- Entfernen aus der Vererbungsliste von D. B1 oder B2
+
+- Ändern den Namen des Datenelements in B1 oder B2.
+
+Im folgende Beispiel wird die C2798 generiert:
+
+```
+// C2798.cpp
+struct B1 {
+   int i;
+};
+
+struct B2 {
+   int i;
+};
+
+struct D : B1, B2 {
+   void g() {
+      __super::i = 4; // C2798
+   }
+};
 ```

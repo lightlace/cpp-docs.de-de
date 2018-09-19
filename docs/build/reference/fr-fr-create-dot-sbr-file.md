@@ -1,5 +1,5 @@
 ---
-title: -Fr -FR, (erstellen. SBR-Datei) | Microsoft Docs
+title: -FR,-FR (erstellen. SBR-Datei) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,51 +23,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6f61a3360c820a2d47d54f7c174af484079d154
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a5691a87f7350c7816e8ddb58d5591e16cc18189
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374764"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709599"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR, /Fr (SBR-Datei erstellen)
-Erstellt SBR-Dateien.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-/FR[pathname[\filename]]  
-/Fr[pathname[\filename]]  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Beim Erstellungsvorgang erstellt das Microsoft Browse Information Maintenance-Hilfsprogramm (BSCMAKE) anhand dieser Dateien eine BSC-Datei, die zur Darstellung von Browseinformationen verwendet wird.  
-  
- Mit **/FR** wird eine SBR-Datei mit vollständigen symbolischen Informationen erstellt.  
-  
- Mit **/Fr** wird eine SBR-Datei ohne Informationen über lokale Variablen erstellt.  
-  
- Wenn Sie keinen Wert für `filename`angeben, erhält die SBR-Datei denselben Basisnamen wie die Quelldatei.  
-  
- **/Fr** ist veraltet. Verwenden Sie stattdessen **/FR** . Weitere Informationen hierzu finden Sie unter „Veraltete und entfernte Compileroptionen“ in [Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md).  
-  
+
+Erstellt SBR-Dateien.
+
+## <a name="syntax"></a>Syntax
+
+```
+/FR[pathname[\filename]]
+/Fr[pathname[\filename]]
+```
+
+## <a name="remarks"></a>Hinweise
+
+Beim Erstellungsvorgang erstellt das Microsoft Browse Information Maintenance-Hilfsprogramm (BSCMAKE) anhand dieser Dateien eine BSC-Datei, die zur Darstellung von Browseinformationen verwendet wird.
+
+Mit **/FR** wird eine SBR-Datei mit vollständigen symbolischen Informationen erstellt.
+
+Mit **/Fr** wird eine SBR-Datei ohne Informationen über lokale Variablen erstellt.
+
+Wenn Sie keinen Wert für `filename`angeben, erhält die SBR-Datei denselben Basisnamen wie die Quelldatei.
+
+**/Fr** ist veraltet. Verwenden Sie stattdessen **/FR** . Weitere Informationen hierzu finden Sie unter „Veraltete und entfernte Compileroptionen“ in [Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md).
+
 > [!NOTE]
->  Ändern Sie nicht die Erweiterung SBR. BSCMAKE erfordert, dass die Zwischendateien diese Erweiterung haben.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
-  
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
-  
-2.  Wählen Sie im Navigationsbereich die Eigenschaftenseite **C/C++**, **Browseinformationsdatei** aus.  
-  
-3.  Ändern Sie die Eigenschaft **Browseinformationsdatei** oder **Durchsuchen der Informationen aktivieren** .  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
-  
--   Weitere Informationen finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformation%2A> und <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformationFile%2A>.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Ausgabedatei (/ F) Optionen](../../build/reference/output-file-f-options.md)   
- [Compileroptionen](../../build/reference/compiler-options.md)   
- [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)   
- [Festlegen des Pfadnamens](../../build/reference/specifying-the-pathname.md)
+>  Ändern Sie nicht die Erweiterung SBR. BSCMAKE erfordert, dass die Zwischendateien diese Erweiterung haben.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
+
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+
+1. Wählen Sie im Navigationsbereich die Eigenschaftenseite **C/C++**, **Browseinformationsdatei** aus.
+
+1. Ändern Sie die Eigenschaft **Browseinformationsdatei** oder **Durchsuchen der Informationen aktivieren** .
+
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
+
+- Weitere Informationen finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformation%2A> und <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformationFile%2A>.
+
+## <a name="see-also"></a>Siehe auch
+
+[Ausgabedatei (/ F) Optionen](../../build/reference/output-file-f-options.md)
+[Compileroptionen](../../build/reference/compiler-options.md)<br/>
+[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
+[Festlegen des Pfadnamens](../../build/reference/specifying-the-pathname.md)

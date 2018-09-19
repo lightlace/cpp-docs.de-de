@@ -1,5 +1,5 @@
 ---
-title: Switch_is | Microsoft Docs
+title: Switch_is | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,44 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05805bff0044838aaea2af2013fa951c5d3be9a1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2aaf38745c02c5975eb2a46f135c51b6d7247610
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892792"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213755"
 ---
 # <a name="switchis"></a>switch_is
-Gibt den Ausdruck oder einen Bezeichner fungiert als die union kombiniert werden sollen, die den union-Member auswählt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-[switch_is]  
-  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Die **Switch_is** C++-Attribut hat die gleiche Funktionalität wie die [Switch_is](http://msdn.microsoft.com/library/windows/desktop/aa367275) MIDL-Attribut.  
-  
-## <a name="example"></a>Beispiel  
- Finden Sie unter der [Fall](../windows/case-cpp.md) Beispiel für ein Beispiel für die Verwendung von **Switch_is**.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-### <a name="attribute-context"></a>Attributkontext  
-  
-|||  
-|-|-|  
-|**Betrifft**|`typedef`|  
-|**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Keiner|  
-|**Ungültige Attribute**|Keiner|  
-  
- Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [IDL-Attribute](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union- und Struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   
- [switch_type](../windows/switch-type.md)   
+
+Gibt den Ausdruck oder einen Bezeichner fungiert als die union kombiniert werden sollen, die die union-Member auswählt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+[switch_is]
+```
+
+## <a name="remarks"></a>Hinweise
+
+Die **Switch_is** C++-Attribut hat die gleiche Funktionalität wie die [Switch_is](/windows/desktop/Midl/switch-is) MIDL-Attribut.
+
+## <a name="example"></a>Beispiel
+
+Finden Sie unter den [Fall](../windows/case-cpp.md) Beispiel für ein Beispiel für die Verwendung von **Switch_is**.
+
+## <a name="requirements"></a>Anforderungen
+
+### <a name="attribute-context"></a>Attributkontext
+
+|||
+|-|-|
+|**Betrifft**|**typedef**|
+|**Wiederholbar**|Nein|
+|**Erforderliche Attribute**|Keiner|
+|**Ungültige Attribute**|Keiner|
+
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[IDL-Attribute](../windows/idl-attributes.md)  
+[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  
+[switch_type](../windows/switch-type.md)  

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7323dfa06e73342e956a9aacb1ad925b6fb022f2
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bcc4af6f4aeb6c7a0df005d164729cf87065f613
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338493"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220829"
 ---
 # <a name="ceditview-class"></a>CEditView-Klasse
 Ein Ansichtsklassentyp, die die Funktionalität eines Windows-Bearbeitungssteuerelements bereitstellt und verwendet werden kann, um einfache Textbearbeitungsfunktionalität zu implementieren.  
@@ -120,7 +120,7 @@ class CEditView : public CCtrlView
   
  Die Standardimplementierung der Klasse `CEditView` behandelt die folgenden Befehle: ID_EDIT_SELECT_ALL, ID_EDIT_FIND, ID_EDIT_REPLACE, ID_EDIT_REPEAT und ID_FILE_PRINT.  
   
- Das Standardlimit für die Zeichen für `CEditView` ist (1024 \* 1024-1 = 1048575). Dies kann durch Aufrufen der Funktion EM_LIMITTEXT des zugrunde liegenden Edit-Steuerelements geändert werden. Allerdings die Grenzwerte unterscheiden sich je nach Betriebssystem und der Typ des Bearbeitungssteuerelements (einzelne oder mehrzeiligen). Weitere Informationen zu diesen Einschränkungen finden Sie unter [EM_LIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761607).  
+ Das Standardlimit für die Zeichen für `CEditView` ist (1024 \* 1024-1 = 1048575). Dies kann durch Aufrufen der Funktion EM_LIMITTEXT des zugrunde liegenden Edit-Steuerelements geändert werden. Allerdings die Grenzwerte unterscheiden sich je nach Betriebssystem und der Typ des Bearbeitungssteuerelements (einzelne oder mehrzeiligen). Weitere Informationen zu diesen Einschränkungen finden Sie unter [EM_LIMITTEXT](/windows/desktop/Controls/em-limittext).  
   
  Zum Ändern dieses Limits in Ihrem Steuerelement außer Kraft setzen der `OnCreate()` für funktionsfähig sein, Ihre `CEditView` Klasse und fügen Sie die folgende Codezeile:  
   

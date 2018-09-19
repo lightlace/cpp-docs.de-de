@@ -1,5 +1,5 @@
 ---
-title: Entladen einer verzögert geladenen DLL | Microsoft Docs
+title: Entladen einer verzögert geladenen DLL | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,58 +15,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 724ee2ac3987c855f5e2102dee35d12785726641
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fa7b9652c37b6c4e841a798dae3cfeb69779b5ff
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375213"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719926"
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>Entladen einer verzögert geladenen DLL
-Das Hilfsobjekt standardmäßig bereitgestellten verzögerte Laden überprüft, ob die Deskriptoren für verzögertes Laden ein Zeiger und eine Kopie der ursprünglichen Importadresstabelle (IAT) im Feld "Name" aufweisen. Wenn dies der Fall ist, speichert es einen Zeiger in einer Liste auf den Import Verzögerungsdeskriptor. Dadurch wird die Hilfsfunktion, die anhand des Namens zur Unterstützung dieser DLL explizit Entladen der DLL zu suchen.  
-  
- Hier werden die zugehörigen Strukturen und Funktionen für Explizites Entladen einer verzögert geladenen DLL:  
-  
-```  
-//  
-// Unload support from delayimp.h  
-//  
-  
-// routine definition; takes a pointer to a name to unload  
-  
-ExternC  
-BOOL WINAPI  
-__FUnloadDelayLoadedDLL2(LPCSTR szDll);  
-  
-// structure definitions for the list of unload records  
-typedef struct UnloadInfo * PUnloadInfo;  
-typedef struct UnloadInfo {  
-    PUnloadInfo     puiNext;  
-    PCImgDelayDescr pidd;  
-    } UnloadInfo;  
-  
-// from delayhlp.cpp  
-// the default delay load helper places the unloadinfo records in the   
-// list headed by the following pointer.  
-ExternC  
-PUnloadInfo __puiHead;  
-```  
-  
- Die-Implementierung-Struktur wird mithilfe von einem C++-Klasse, die verwendet implementiert **LocalAlloc** und **LocalAlloc** Implementierungen als seinen Operator **neue** and -Operator  **Löschen Sie** bzw. Diese Optionen werden in einer standardmäßigen verknüpfte Liste, die mithilfe von __puiHead als den Anfang der Liste beibehalten.  
-  
- Aufrufen von __FUnloadDelayLoadedDLL versucht, den Namen zu finden Sie in der Liste der geladenen DLLs (eine genaue Übereinstimmung erforderlich ist) bereitstellen. Wenn gefunden, die Kopie der IAT in Name kopiert wird über den oberen Rand ausgeführten IAT Thunk Zeiger wiederhergestellt werden soll, wird die Bibliothek mit freigegeben **FreeLibrary**, den entsprechenden **-Implementierung** Datensatz aus aufgehoben wird die Liste gelöscht und "true" zurückgegeben.  
-  
- Das Argument von __FUnloadDelayLoadedDLL2 wird Groß-/Kleinschreibung beachtet. Beispielsweise würden Sie Folgendes angeben:  
-  
-```  
-__FUnloadDelayLoadedDLL2("user32.DLL");  
-```  
-  
- und nicht:  
-  
-```  
-__FUnloadDelayLoadedDLL2("User32.DLL");.  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Die Hilfsfunktion](understanding-the-helper-function.md)
+
+Die Hilfsfunktion für standardmäßig bereitgestellten verzögertes Laden überprüft, um festzustellen, ob die Deskriptoren für verzögertes Laden in das Feld Name einen Zeiger und eine Kopie der ursprünglichen Importadresstabelle (IAT) zu erhalten. Wenn dies der Fall ist, speichert es einen Zeiger in einer Liste auf den Import verzögert-Deskriptor. Dadurch wird die Hilfsfunktion zum Suchen von der DLL nach Namen an die DLL explizit entladen zu unterstützen.
+
+Hier sind die zugehörigen Strukturen und Funktionen für Explizites Entladen einer verzögert geladenen DLL:
+
+```cpp
+//
+// Unload support from delayimp.h
+//
+
+// routine definition; takes a pointer to a name to unload
+
+ExternC
+BOOL WINAPI
+__FUnloadDelayLoadedDLL2(LPCSTR szDll);
+
+// structure definitions for the list of unload records
+typedef struct UnloadInfo * PUnloadInfo;
+typedef struct UnloadInfo {
+    PUnloadInfo     puiNext;
+    PCImgDelayDescr pidd;
+    } UnloadInfo;
+
+// from delayhlp.cpp
+// the default delay load helper places the unloadinfo records in the
+// list headed by the following pointer.
+ExternC
+PUnloadInfo __puiHead;
+```
+
+Die-Implementierung für-Struktur wird implementiert, die Verwendung einer C++-Klasse, die verwendet **LocalAlloc** und **LocalFree** Implementierungen wie der Operator **neue** and -Operator  **Löschen Sie** bzw. Diese Optionen werden in einer standardmäßigen verknüpfte Liste, die mithilfe von __puiHead als der Anfang der Liste beibehalten.
+
+Aufruf __FUnloadDelayLoadedDLL versucht, den Namen finden Sie in der Liste der geladenen DLLs (eine genaue Übereinstimmung erforderlich ist) bereitstellen. Wenn gefunden, die Kopie der IAT im Name kopiert wird oberhalb der ausgeführten IAT Thunk Zeiger wiederherstellen, wird die Bibliothek mit freigegeben **FreeLibrary**, den entsprechenden **-Implementierung für** Datensatz aus aufgehoben wird die Liste und gelöscht, und "true" zurückgegeben.
+
+Das Argument von __FUnloadDelayLoadedDLL2 ist Groß-/Kleinschreibung beachtet. Beispielsweise würden Sie Folgendes angeben:
+
+```cpp
+__FUnloadDelayLoadedDLL2("user32.DLL");
+```
+
+und nicht:
+
+```cpp
+__FUnloadDelayLoadedDLL2("User32.DLL");.
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Die Hilfsfunktion](understanding-the-helper-function.md)

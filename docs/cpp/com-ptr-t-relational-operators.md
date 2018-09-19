@@ -38,94 +38,96 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 411e1649b8d9a7f072af48103ff17af92e1a7deb
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 6c338009b7dcd8f3810d48e17a4af470bee0837e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943872"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109313"
 ---
 # <a name="comptrt-relational-operators"></a>_com_ptr_t-Operatoren (relational)
-**Microsoft-spezifisch**  
-  
- Vergleichen Sie das intelligente Zeigerobjekt mit einem anderen intelligenten Zeiger, unformatierten Schnittstellenzeiger oder NULL.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-template<typename _OtherIID>   
-bool operator==( const _com_ptr_t<_OtherIID>& p );  
-  
-template<typename _OtherIID>    
-bool operator==( _com_ptr_t<_OtherIID>& p );  
-  
-template<typename _InterfaceType>   
-bool operator==( _InterfaceType* p );  
-  
-template<>   
-bool operator==( Interface* p );  
-  
-template<>   
-bool operator==( const _com_ptr_t& p ) throw();  
-  
-template<>   
-bool operator==( _com_ptr_t& p ) throw();  
-  
-bool operator==( Int null );  
-  
-template<typename _OtherIID>   
-bool operator!=( const _com_ptr_t<_OtherIID>& p );  
-  
-template<typename _OtherIID>   
-bool operator!=( _com_ptr_t<_OtherIID>& p );  
-  
-template<typename _InterfaceType>   
-bool operator!=( _InterfaceType* p );  
-  
-bool operator!=( Int null );  
 
-template<typename _OtherIID>   
-bool operator<( const _com_ptr_t<_OtherIID>& p );  
-  
-template<typename _OtherIID>   
-bool operator<( _com_ptr_t<_OtherIID>& p );  
-  
-template<typename _InterfaceType>   
-bool operator<( _InterfaceType* p );  
+**Microsoft-spezifisch**
 
-template<typename _OtherIID>   
-bool operator>( const _com_ptr_t<_OtherIID>& p );  
-  
-template<typename _OtherIID>   
-bool operator>(_com_ptr_t< _OtherIID>& p );  
-  
-template<typename _InterfaceType>   
-bool operator>( _InterfaceType* p );  
-  
-template<typename _OtherIID>   
-bool operator<=( const _com_ptr_t<_OtherIID>& p );  
-  
-template<typename _OtherIID>   
-bool operator<=( _com_ptr_t<_OtherIID>& p );  
-  
-template<typename _InterfaceType>   
-bool operator<=( _InterfaceType* p );  
-  
+Vergleichen Sie das intelligente Zeigerobjekt mit einem anderen intelligenten Zeiger, unformatierten Schnittstellenzeiger oder NULL.
+
+## <a name="syntax"></a>Syntax
+
+```
+template<typename _OtherIID> 
+bool operator==( const _com_ptr_t<_OtherIID>& p );
+
 template<typename _OtherIID>  
-bool operator>=( const _com_ptr_t<_OtherIID>& p );  
-  
-template<typename _OtherIID>   
-bool operator>=( _com_ptr_t<_OtherIID>& p );  
-  
-template<typename _InterfaceType>   
-bool operator>=( _InterfaceType* p );  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Vergleicht ein intelligenter Zeiger zu einem anderen Objekt intelligente Zeiger, unformatierten Schnittstellenzeiger oder NULL. Mit Ausnahme der Tests für den NULL-Zeiger, Fragen diese Operatoren zuerst beide Zeiger für `IUnknown`, und die Ergebnisse vergleichen.  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md)
+bool operator==( _com_ptr_t<_OtherIID>& p );
+
+template<typename _InterfaceType> 
+bool operator==( _InterfaceType* p );
+
+template<> 
+bool operator==( Interface* p );
+
+template<> 
+bool operator==( const _com_ptr_t& p ) throw();
+
+template<> 
+bool operator==( _com_ptr_t& p ) throw();
+
+bool operator==( Int null );
+
+template<typename _OtherIID> 
+bool operator!=( const _com_ptr_t<_OtherIID>& p );
+
+template<typename _OtherIID> 
+bool operator!=( _com_ptr_t<_OtherIID>& p );
+
+template<typename _InterfaceType> 
+bool operator!=( _InterfaceType* p );
+
+bool operator!=( Int null );
+
+template<typename _OtherIID> 
+bool operator<( const _com_ptr_t<_OtherIID>& p );
+
+template<typename _OtherIID> 
+bool operator<( _com_ptr_t<_OtherIID>& p );
+
+template<typename _InterfaceType> 
+bool operator<( _InterfaceType* p );
+
+template<typename _OtherIID> 
+bool operator>( const _com_ptr_t<_OtherIID>& p );
+
+template<typename _OtherIID> 
+bool operator>(_com_ptr_t< _OtherIID>& p );
+
+template<typename _InterfaceType> 
+bool operator>( _InterfaceType* p );
+
+template<typename _OtherIID> 
+bool operator<=( const _com_ptr_t<_OtherIID>& p );
+
+template<typename _OtherIID> 
+bool operator<=( _com_ptr_t<_OtherIID>& p );
+
+template<typename _InterfaceType> 
+bool operator<=( _InterfaceType* p );
+
+template<typename _OtherIID>
+bool operator>=( const _com_ptr_t<_OtherIID>& p );
+
+template<typename _OtherIID> 
+bool operator>=( _com_ptr_t<_OtherIID>& p );
+
+template<typename _InterfaceType> 
+bool operator>=( _InterfaceType* p );
+```
+
+## <a name="remarks"></a>Hinweise
+
+Vergleicht ein intelligenter Zeiger zu einem anderen Objekt intelligente Zeiger, unformatierten Schnittstellenzeiger oder NULL. Mit Ausnahme der Tests für den NULL-Zeiger, Fragen diese Operatoren zuerst beide Zeiger für `IUnknown`, und die Ergebnisse vergleichen.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md)

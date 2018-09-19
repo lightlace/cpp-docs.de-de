@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d259040ec5f4d7f1148b9a782479b6db8617602
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 848612f59c2d5cc24289b6d8c56b0c9eeaebc961
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954629"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712789"
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator-Klasse
 
@@ -40,9 +40,11 @@ class raw_storage_iterator
 
 ### <a name="parameters"></a>Parameter
 
-*OutputIterator* gibt den Ausgabeiterator für das Objekt gespeichert wird.
+*OutputIterator*<br/>
+Gibt den Ausgabeiterator für das Objekt an, das gespeichert wird.
 
-*Typ* den Typ des Objekts, die für den Speicher belegt wird.
+*Type*<br/>
+Der Typ des Objekts, dem Speicher zugeordnet wird.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -69,8 +71,8 @@ Diese Adapterklasse wird verwendet, wenn es erforderlich ist, Speicherbelegung u
 
 |Operator|Beschreibung|
 |-|-|
-|[operator*](#op_star)|Ein Dereferenzierungsoperator, der zum Implementieren des Ausgabeiteratorausdrucks *`ii` = `x` verwendet wird.|
-|[operator=](#op_eq)|Ein Zuweisungsoperator, der dazu verwendet wird, den für einen unformatierten Speicheriterator verwendeten Ausdruck *`i` = `x` zu implementieren, damit er im Arbeitsspeicher gespeichert werden kann.|
+|[operator*](#op_star)|Ein Dereferenzierungsoperator, der zum Implementieren des ausgabeiteratorausdrucks \* `ii`  =  `x`.|
+|[operator=](#op_eq)|Ein Zuweisungsoperator, der zum Implementieren der unformatierten speicheriteratorausdrucks \* `i`  =  `x` für das im Speicher gespeichert.|
 |[operator++](#op_add_add)|Inkrementoperatoren in Präfix- und Postfix-Notation für unformatierte Speicheriteratoren.|
 
 ## <a name="requirements"></a>Anforderungen
@@ -103,7 +105,7 @@ typedef ForwardIterator iter_type;
 
 Der Type stellt ein Synonym für den Vorlagenparameter `ForwardIterator` dar.
 
-## <a name="op_star"></a> raw_storage_iterator::operator*
+## <a name="op_star"></a>  raw_storage_iterator:: Operator\*
 
 Der Dereferenzierungsoperator, der zum Implementieren des unformatierten Speicheriteratorausdrucks \* *ii* = *x* verwendet wird.
 
@@ -159,15 +161,15 @@ int main( void)
 {
    Int *pInt = ( Int* ) malloc( sizeof( Int ) );
    memset( pInt, 0, sizeof( Int ) ); // Set bIsConstructed to false;
- *pInt = 5;
+*pInt = 5;
    raw_storage_iterator< Int*, Int > it( pInt );
- *it = 5;
+*it = 5;
 }
-\* Output:
+/* Output:
 Not constructed.
 Copying 5
 Constructing 5
-*\
+*/
 ```
 
 ## <a name="op_eq"></a> raw_storage_iterator::operator=
@@ -181,7 +183,8 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
 
 ### <a name="parameters"></a>Parameter
 
-`val` Der Wert des Objekts vom Typ `Type` in den Speicher eingefügt werden soll.
+*val*<br/>
+Der Wert des Objekts vom Typ `Type` in den Speicher eingefügt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -233,13 +236,13 @@ int main( void )
 *pInt = 5;
 
    raw_storage_iterator<Int*, Int> it( pInt );
- *it = 5;
+*it = 5;
 }
-\* Output:
+/* Output:
 Not constructed.
 Copying 5
 Constructing 5
-*\
+*/
 ```
 
 ## <a name="op_add_add"></a> raw_storage_iterator::operator++
@@ -282,20 +285,20 @@ int main( void )
    int *pInt = new int[5];
    std::raw_storage_iterator<int*,int> it( pInt );
    for ( int i = 0; i < 5; i++, it++ ) {
- *it = 2 * i;
-};
+      *it = 2 * i;
+   };
 
    for ( int i = 0; i < 5; i++ ) cout << "array " << i << " = " << pInt[i] << endl;;
 
    delete[] pInt;
 }
-\* Output:
+/* Output:
 array 0 = 0
 array 1 = 2
 array 2 = 4
 array 3 = 6
 array 4 = 8
-*\
+*/
 ```
 
 ## <a name="raw_storage_iterator"></a> raw_storage_iterator::raw_storage_iterator
@@ -308,7 +311,8 @@ explicit raw_storage_iterator(ForwardIterator first);
 
 ### <a name="parameters"></a>Parameter
 
-*erste* der forward-Iterator, der mit der `raw_storage_iterator` -Objekt erstellt wird.
+*Erste*<br/>
+Der Forward-Iterator, mit dem das `raw_storage_iterator`-Objekt erstellt wird.
 
 ### <a name="example"></a>Beispiel
 
@@ -366,7 +370,7 @@ int main( void )
 
    free(pInt);
 }
-\* Output:
+/* Output:
 Error! I'm not constructed!
 Copying 1
 Error! I'm not constructed!
@@ -387,7 +391,7 @@ array 0 = 1
 array 1 = 2
 array 2 = 3
 array 3 = 4
-*\
+*/
 ```
 
 ## <a name="see-also"></a>Siehe auch

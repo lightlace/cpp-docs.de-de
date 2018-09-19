@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e94b9f748924c9711c814f0f823467b313affcd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fcd8d623b4ce16f7f7af671d06dae568ec2a53d1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964384"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318199"
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator-Klasse
 
@@ -40,7 +40,8 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>Parameter
 
-*Container* der Typ des Containers, an dessen Anfang der Elemente, die zum Einfügen, sind ein `front_insert_iterator`.
+*Container*<br/>
+Der Typ des Containers, an dessen Anfang Elemente von einem `front_insert_iterator` eingefügt werden sollen.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -63,9 +64,9 @@ Der Container muss den Anforderungen einer Sequenz zum Einfügen am Anfang entsp
 
 |Operator|Beschreibung|
 |-|-|
-|[operator*](#op_star)|Der Dereferenzierungsoperator, der verwendet wird, um den Ausgabeiteratorausdruck * `i` = `x` für eine Einfügung am Anfang zu implementieren|
+|[operator*](#op_star)|Der Dereferenzierungsoperator, der zum Implementieren des ausgabeiteratorausdrucks \* `i`  =  `x` für eine Einfügung am Anfang.|
 |[operator++](#op_add_add)|Inkrementiert `front_insert_iterator` zum folgenden Speicherort, an dem ein Wert gespeichert werden kann.|
-|[operator=](#op_eq)|Der Zuweisungsoperator, der verwendet wird, um den Ausgabeiteratorausdruck * `i` = `x` für eine Einfügung am Anfang zu implementieren|
+|[operator=](#op_eq)|Zuweisungsoperator, der zum Implementieren des ausgabeiteratorausdrucks \* `i`  =  `x` für eine Einfügung am Anfang.|
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -110,9 +111,9 @@ int main( )
       cout << *vIter << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The list L2 is: ( 40 10 20 ).
-*\
+*/
 ```
 
 ## <a name="front_insert_iterator"></a> front_insert_iterator::front_insert_iterator
@@ -125,7 +126,8 @@ explicit front_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Parameter
 
-*_Cont* das Container-Objekt, in dem die `front_insert_iterator` Elemente einfügen soll.
+*_Cont*<br/>
+Das Containerobjekt, in das `front_insert_iterator` Elemente einfügen soll
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -162,22 +164,22 @@ int main( )
 
    // Alternatively, one may use the template function
    front_insert_iterator< list < int> > Iter(L);
- *Iter = 30;
+*Iter = 30;
 
    cout << "After the front insertions, the list L is:\n ( ";
    for ( L_Iter = L.begin( ) ; L_Iter != L.end( ); L_Iter++)
       cout << *L_Iter << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The list L is:
- ( -2 0 2 4 6 8 10 12 14 16 ).
+( -2 0 2 4 6 8 10 12 14 16 ).
 After the front insertions, the list L is:
- ( 30 20 -2 0 2 4 6 8 10 12 14 16 ).
-*\
+( 30 20 -2 0 2 4 6 8 10 12 14 16 ).
+*/
 ```
 
-## <a name="op_star"></a> front_insert_iterator::operator*
+## <a name="op_star"></a>  front_insert_iterator:: Operator\*
 
 Dereferenziert den Iterator zum Einfügen und gibt das Element zurück, das es adressiert
 
@@ -220,7 +222,7 @@ int main( )
    cout << ")." << endl;
 
    front_insert_iterator< list < int> > Iter(L);
- *Iter = 20;
+*Iter = 20;
 
    // Alternatively, you may use
    front_inserter ( L ) = 30;
@@ -230,12 +232,12 @@ int main( )
       cout << *L_Iter << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The list L is:
- ( -2 0 2 4 6 8 10 12 14 16 ).
+( -2 0 2 4 6 8 10 12 14 16 ).
 After the front insertions, the list L is:
- ( 30 20 -2 0 2 4 6 8 10 12 14 16 ).
-*\
+( 30 20 -2 0 2 4 6 8 10 12 14 16 ).
+*/
 ```
 
 ## <a name="op_add_add"></a> front_insert_iterator::operator++
@@ -271,11 +273,11 @@ int main( )
 
    list<int> L1;
    front_insert_iterator<list<int> > iter ( L1 );
- *iter = 10;
+*iter = 10;
    iter++;
- *iter = 20;
+*iter = 20;
    iter++;
- *iter = 30;
+*iter = 30;
    iter++;
 
    list <int>::iterator vIter;
@@ -284,9 +286,9 @@ int main( )
       cout << *vIter << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The list L1 is: ( 30 20 10 ).
-*\
+*/
 ```
 
 ## <a name="op_eq"></a> front_insert_iterator::operator=
@@ -301,7 +303,8 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>Parameter
 
-*Val* den Wert in den Container zugewiesen werden soll.
+*val*<br/>
+Der Wert, der dem Container zugewiesen werden soll
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -332,11 +335,11 @@ int main( )
 
    list<int> L1;
    front_insert_iterator<list<int> > iter ( L1 );
- *iter = 10;
+*iter = 10;
    iter++;
- *iter = 20;
+*iter = 20;
    iter++;
- *iter = 30;
+*iter = 30;
    iter++;
 
    list <int>::iterator vIter;
@@ -345,9 +348,9 @@ int main( )
       cout << *vIter << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The list L1 is: ( 30 20 10 ).
-*\
+*/
 ```
 
 ## <a name="reference"></a> front_insert_iterator::reference
@@ -373,9 +376,9 @@ int main( )
 
    list<int> L;
    front_insert_iterator<list<int> > fiivIter( L );
- *fiivIter = 10;
- *fiivIter = 20;
- *fiivIter = 30;
+*fiivIter = 10;
+*fiivIter = 20;
+*fiivIter = 30;
 
    list<int>::iterator LIter;
    cout << "The list L is: ( ";
@@ -388,10 +391,10 @@ int main( )
    cout << "The first element in the list L is: "
         << RefFirst << "." << endl;
 }
-\* Output:
+/* Output:
 The list L is: ( 30 20 10 ).
 The first element in the list L is: 30.
-*\
+*/
 ```
 
 ## <a name="see-also"></a>Siehe auch

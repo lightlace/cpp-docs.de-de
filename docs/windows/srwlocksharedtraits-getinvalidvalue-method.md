@@ -1,5 +1,5 @@
 ---
-title: 'Srwlocksharedtraits:: Getinvalidvalue-Methode | Microsoft Docs'
+title: 'Srwlocksharedtraits:: Getinvalidvalue-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8738d537aaa7cf4c257b95d1093e28441e828c9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a8721bd4754ff64fb6e7068da25775e165cae066
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890775"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584195"
 ---
 # <a name="srwlocksharedtraitsgetinvalidvalue-method"></a>SRWLockSharedTraits::GetInvalidValue-Methode
-Ruft ein SRWLockSharedTraits-Objekt, das immer ungültig ist.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-inline static Type GetInvalidValue();  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Ein Handle für ein SRWLockSharedTraits-Objekt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>Siehe auch  
- [SRWLockSharedTraits-Struktur](../windows/srwlocksharedtraits-structure.md)
+
+Ruft eine **SRWLockSharedTraits** -Objekt, das immer ungültig ist.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+inline static Type GetInvalidValue();
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Ein Handle für ein **SRWLockSharedTraits** Objekt.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>Siehe auch
+
+[SRWLockSharedTraits-Struktur](../windows/srwlocksharedtraits-structure.md)

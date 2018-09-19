@@ -1,5 +1,5 @@
 ---
-title: Linkertoolwarnung Lnk4070 | Microsoft Docs
+title: Linkertoolwarnung LNK4070 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e4599e96552f1b98ef0b1af8d38995ebbe5a83e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9cfb4ae1c5440742c491d9615a2b4929a9b04f66
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302502"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106945"
 ---
 # <a name="linker-tools-warning-lnk4070"></a>Linkertoolwarnung LNK4070
-In/out: Dateiname-Direktive. EXP unterscheidet sich von Ausgabedateiname 'Dateiname'; Direktive wird ignoriert  
-  
- Die `filename` angegebenen, in der [Namen](../../build/reference/name-c-cpp.md) oder [Bibliothek](../../build/reference/library.md) -Anweisung, wenn die .exp-Datei erstellt wurde, unterscheidet sich von der Ausgabe `filename` , entweder standardmäßig angenommen oder mit der angegebenwurde[/OUT](../../build/reference/out-output-file-name.md) Option.  
-  
- Diese Warnung wird angezeigt werden, wenn Sie ändern Sie den Namen der Ausgabedatei in der Entwicklungsumgebung und, in dem das Projekt DEF-Datei wurde nicht aktualisiert. Aktualisieren Sie manuell der DEF-Datei, um diese Warnung zu beheben.  
-  
- Ein Clientprogramm, das die resultierende DLL verwendet, kann Probleme auftreten.
+
+-Direktive in/out: Dateiname. EXP weicht vom Ausgabedateinamen 'Dateiname'; Direktive wird ignoriert
+
+Die `filename` Angabe in der [Namen](../../build/reference/name-c-cpp.md) oder [Bibliothek](../../build/reference/library.md) -Anweisung, wenn die EXP-Datei erstellt wurde, unterscheidet sich von der Ausgabe `filename` , entweder standardmäßig oder mit der angegebenwurde[/OUT](../../build/reference/out-output-file-name.md) Option.
+
+Sie sehen diese Warnung, wenn Sie ändern den Namen der Ausgabedatei in der Entwicklungsumgebung und, in der DEF-Datei des Projekts nicht aktualisiert wurde. Manuell aktualisieren Sie, die DEF-Datei, um diese Warnung zu beheben.
+
+Ein Clientprogramm, das die resultierende DLL verwendet, kann Probleme auftreten.

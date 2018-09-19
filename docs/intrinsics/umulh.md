@@ -1,5 +1,5 @@
 ---
-title: __umulh | Microsoft Docs
+title: __umulh | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 820f18e0f7db1b70982558c75f879902dca14d2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07d1bf4dcf942fe358b0367f02ed0486ee10bd39
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327254"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706913"
 ---
 # <a name="umulh"></a>__umulh
 **Microsoft-spezifisch**  
@@ -38,11 +38,11 @@ unsigned __int64 __umulh(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `a`  
- Die erste zu multiplizierende Zahl.  
+*a*<br/>
+[in] Die erste zu multiplizierende Zahl.  
   
- [in] `b`  
- Die zweite zu multiplizierende Zahl.  
+*b*<br/>
+[in] Die zweite zu multiplizierende Zahl.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Die oberen 64 Bits de 128-Bit-Ergebnisses der Multiplikation.  
@@ -51,7 +51,7 @@ unsigned __int64 __umulh(
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__umulh`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__umulh`|x64|  
   
  **Headerdatei** \<intrin.h >  
   

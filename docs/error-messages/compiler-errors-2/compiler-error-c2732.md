@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2732 generiert | Microsoft Docs
+title: Compilerfehler C2732 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef2faf21eb6f0c73d02ea32c7d4ed53f86eec3de
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 040fd73bcb69ef032d5c6150bb157337f34a2088
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233031"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079660"
 ---
-# <a name="compiler-error-c2732"></a>Compiler-Fehler C2732 generiert
-Bindungsangaben widersprechen vorheriger Angabe für 'function'  
-  
- Die Funktion wurde bereits mit einem anderen Bindungsspezifizierer deklariert.  
-  
- Dieser Fehler kann durch das Einbeziehen von Dateien mit unterschiedlichen Bindungsspezifizierern verursacht werden.  
-  
- Um diesen Fehler zu beheben, ändern Sie die `extern`-Anweisungen, sodass die Bindungen übereinstimmen. Brechen Sie im Besonderen `#include`-Direktive nicht in `extern "C"`-Blöcke um.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C2732 generiert:  
-  
-```  
-// C2732.cpp  
-extern void func( void );   // implicit C++ linkage  
-extern "C" void func( void );   // C2732  
+# <a name="compiler-error-c2732"></a>Compilerfehler C2732
+
+Bindungsangaben widersprechen vorheriger Angabe für 'function'
+
+Die Funktion wurde bereits mit einem anderen Bindungsspezifizierer deklariert.
+
+Dieser Fehler kann durch das Einbeziehen von Dateien mit unterschiedlichen Bindungsspezifizierern verursacht werden.
+
+Um diesen Fehler zu beheben, ändern Sie die `extern`-Anweisungen, sodass die Bindungen übereinstimmen. Brechen Sie im Besonderen `#include`-Direktive nicht in `extern "C"`-Blöcke um.
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C2732 generiert:
+
+```
+// C2732.cpp
+extern void func( void );   // implicit C++ linkage
+extern "C" void func( void );   // C2732
 ```

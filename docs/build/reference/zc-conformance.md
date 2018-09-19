@@ -1,5 +1,5 @@
 ---
-title: / Zc (Übereinstimmung) | Microsoft Docs
+title: / Zc (Übereinstimmung) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
@@ -19,16 +19,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b89744235a5a2302a6550b2ffa7100511ad2e59c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 3fd2ec208e872e05f8329bf5e077a74403d0c612
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704840"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716052"
 ---
 # <a name="zc-conformance"></a>/Zc (Übereinstimmung)
 
-Sie können die **/Zc** Compileroptionen in standard oder Microsoft-spezifisches Compilerverhalten anzugeben.
+Sie können die **/Zc** Compileroptionen, standard oder Microsoft-spezifisches Compilerverhalten anzugeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,34 +36,34 @@ Sie können die **/Zc** Compileroptionen in standard oder Microsoft-spezifisches
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn Visual Studio eine Erweiterung für C- oder C++, die nicht mit dem Standard kompatibel ist implementiert, können Sie eine `/Zc` Konformität-Option, um Standard-konformen oder Microsoft-spezifische Verhalten anzugeben. Für einige Optionen ist die Microsoft-spezifische Verhalten Standard, um umfangreiche Änderungen am vorhandenen Code zu verhindern. In anderen Fällen ist die Standardeinstellung das Standardverhalten, wo Verbesserungen bei der Sicherheit, Leistung und Kompatibilität Kosten, die sich aktuelle Änderungen überwiegen. Die Standardeinstellung der einzelnen Optionen für die Übereinstimmung kann in neueren Versionen von Visual Studio ändern. Weitere Informationen zu den einzelnen Optionen für die Übereinstimmung finden Sie unter dem Thema nach der entsprechenden Option. Die [/ liberalen-](permissive-standards-conformance.md) Compileroption legt implizit die Konformität-Optionen, die auf ihre Einstellung konforme standardmäßig nicht festgelegt werden.
+Wenn Visual Studio, eine Erweiterung von C- oder C++, die nicht mit dem Standard kompatibel ist implementiert hat, können Sie mithilfe einer `/Zc` Konformität-Option, um Standard-konformen oder Microsoft-spezifische Verhalten anzugeben. Für einige Optionen die Microsoft-spezifische Verhalten die Standardeinstellung ist, um umfangreiche Änderungen am vorhandenen Code zu verhindern. In anderen Fällen ist der Standardwert dem Standardverhalten von zunichte machen, in denen die Kosten für wichtige Änderungen Verbesserungen bei der Sicherheit, Kompatibilität oder Leistung. Die Standardeinstellung der einzelnen Optionen für die Übereinstimmung mit Standards möglicherweise in neueren Versionen von Visual Studio ändern. Weitere Informationen zu den einzelnen Optionen für die Übereinstimmung mit Standards finden Sie im Thema nach der entsprechenden Option. Die [/ PERMISSIVE--](permissive-standards-conformance.md) -Compileroption legt implizit die Konformität-Optionen, die nicht standardmäßig auf ihre konforme-Einstellung festgelegt werden.
 
 Dies sind die `/Zc` Compileroptionen:
 
 |Option|Verhalten|
 |---|---|
-|[alignedNew\[-\]](zc-alignednew.md)|C ++ 17 ausgerichtetes dynamische Zuordnung aktivieren (standardmäßig in C ++ 17).|
-|[auto\[-\]](zc-auto-deduce-variable-type.md)|Erzwingen Sie die neue C++-Standardbibliothek Bedeutung für `auto` (in der Standardeinstellung).|
-|[__cplusplus\[-\]](zc-cplusplus.md)|Aktivieren der **__cplusplus** Makro melden den unterstützten Standard (standardmäßig deaktiviert).|
+|[alignedNew\[-\]](zc-alignednew.md)|C ++ 17 ausgerichtete dynamische speicherbelegung aktivieren (standardmäßig in C ++ 17).|
+|[auto\[-\]](zc-auto-deduce-variable-type.md)|Erzwingen Sie die neue C++-standardbedeutung für `auto` (in der Standardeinstellung).|
+|[__cplusplus\[-\]](zc-cplusplus.md)|Aktivieren der **__cplusplus** Makro zum Melden des unterstützten Standards (standardmäßig deaktiviert).|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|Aktivieren Sie die externen Verknüpfung für `constexpr` Variablen (standardmäßig deaktiviert).|
-|[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Erzwingen der C++-Standardbibliothek `for` Bereichsregeln (auf der Standardeinstellung).|
-|[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|Aktivieren der implizite `noexcept` auf erforderliche Funktionen (auf standardmäßig).|
-|[inline\[-\]](zc-inline-remove-unreferenced-comdat.md)|Entfernt Unreferenzierte Funktionen oder bei COMDAT ist oder nur eine internen Bindung (standardmäßig deaktiviert).|
-|[noexceptTypes\[-\]](zc-noexcepttypes.md)|C ++ 17-Noexcept-Regeln erzwingen (in der Standardeinstellung in C ++ 17 oder höher).|
-|[referenceBinding\[-\]](zc-referencebinding-enforce-reference-binding-rules.md)|Eine temporäre UDT nicht eine Bindung an ein nicht konstantes Lvalue-Verweis (standardmäßig deaktiviert).|
-|[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|C++-Standardbibliothek explizite typkonvertierungsregeln erzwingen (standardmäßig deaktiviert).|
-|[sizedDealloc\[-\]](zc-sizeddealloc-enable-global-sized-dealloc-functions.md)|C ++ 14-Größeninformationen globale-Funktionen zu aktivieren (in der Standardeinstellung).|
-|[strictStrings\[-\]](zc-strictstrings-disable-string-literal-type-conversion.md)|Disable Zeichenfolgenliteral zu `char*` oder `wchar_t*` Konvertierung (standardmäßig deaktiviert).|
+|[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Erzwingen von Standard-c++ `for` Bereichsregeln (in der Standardeinstellung).|
+|[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|Aktivieren der impliziten `noexcept` für erforderliche Funktionen (für in der Standardeinstellung).|
+|[inline\[-\]](zc-inline-remove-unreferenced-comdat.md)|Nicht referenzierte Funktion oder des entfernen, wenn er COMDAT oder verfügt über nur eine interne Verknüpfung (standardmäßig deaktiviert).|
+|[noexceptTypes\[-\]](zc-noexcepttypes.md)|Erzwingen von C ++ 17-Noexcept-Regeln (für standardmäßig in C ++ 17 oder höher).|
+|[referenceBinding\[-\]](zc-referencebinding-enforce-reference-binding-rules.md)|Eine temporäre UDT wird nicht an einen nicht Konstanten Lvalue-Verweis gebunden (standardmäßig deaktiviert).|
+|[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|C++-Standardbibliothek explizite typenkonvertierungsregeln erzwingen (standardmäßig deaktiviert).|
+|[sizedDealloc\[-\]](zc-sizeddealloc-enable-global-sized-dealloc-functions.md)|C ++ 14-Größeninformationen für globale-Funktionen zu aktivieren (in der Standardeinstellung).|
+|[strictStrings\[-\]](zc-strictstrings-disable-string-literal-type-conversion.md)|Deaktivieren von Zeichenfolgenliteral zu `char*` oder `wchar_t*` Konvertierung (standardmäßig deaktiviert).|
 |[ternäre\[-\]](zc-ternary.md)|Bedingter Operator Regeln auf Operandentypen erzwingen (standardmäßig deaktiviert).|
-|[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|Aktivieren von lokalen statischen Initialisierung threadsichere (auf der Standardeinstellung).|
+|[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|Thread-sichere lokale statische Initialisierung aktivieren (in der Standardeinstellung).|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|Angenommen `operator new` löst bei einem Fehler (standardmäßig deaktiviert).|
-|[trigraphs\[-\]](zc-trigraphs-trigraphs-substitution.md)|Trigraphen (veraltet, deaktiviert standardmäßig) zu aktivieren.|
-|[twoPhase-](zc-twophase.md)|Verwenden Sie nicht konforme Vorlage Analyse Verhalten (in der Standardeinstellung entsprechen).|
-|[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t` ein systemeigener Typ., nicht auf eine Typdefinition (auf der Standardeinstellung).|
+|[trigraphs\[-\]](zc-trigraphs-trigraphs-substitution.md)|Trigraphen (veraltet, aus der Standardeinstellung) zu aktivieren.|
+|[twoPhase-](zc-twophase.md)|Verwenden Sie nicht konforme Vorlage Analyseverhalten (in der Standardeinstellung entsprechen).|
+|["wchar_t"\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t` ein systemeigener Typ., nicht Typedef (in der Standardeinstellung).|
 
 Weitere Informationen über Konformitätsprobleme in Visual C++ finden Sie unter [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](compiler-options.md)  
+[Compileroptionen](compiler-options.md)<br/>
 [Festlegen von Compileroptionen](setting-compiler-options.md)

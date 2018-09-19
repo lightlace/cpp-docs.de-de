@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4437 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4437 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,80 +12,83 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 748ba39d9c22a4071307b8df075eab233f3cfbb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 11d234f7f264f051042ae99900875b8e570fa66a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298326"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118640"
 ---
 # <a name="compiler-warning-level-4-c4437"></a>Compilerwarnung (Stufe 4) C4437
-Dynamic_cast von virtueller Basis 'class1' zu 'class2' konnte in bestimmten Kontexten Kompilieren mit/vd2 fehl oder definieren wirksam "Klasse2" mit der #pragma-vtordisp(2)  
-  
- Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
-  
- Der Compiler hat eine `dynamic_cast` Operation mit den folgenden Merkmalen.  
-  
--   Die Umwandlung ist von einem Zeiger Basisklasse in einer abgeleiteten Klasse Zeiger.  
-  
--   Die abgeleitete Klasse erbt praktisch die Basisklasse.  
-  
--   Die abgeleitete Klasse verfügt nicht über eine `vtordisp` Feld für die virtuelle Basisklasse.  
-  
--   Die Umwandlung in einen Konstruktor oder Destruktor der abgeleiteten Klasse nicht gefunden wird, oder einige Klasse was erbt von der abgeleiteten Klasse (hingegen compilerwarnung, die C4436 ausgegeben werden).  
-  
- Die Warnung gibt an, dass die `dynamic_cast` möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn sie für eine teilweise konstruiert Objekt ausgeführt wird.  Diese Situation tritt auf, wenn die einschließende Funktion aufgerufen wird, von einem Konstruktor oder Destruktor einer Klasse, die die abgeleitete Klasse erbt, mit dem Namen in der Warnung.  Wenn die abgeleitete Klasse mit dem Namen in der Warnung nie weiteren wird abgeleitet werden, oder die einschließende Funktion wird nicht bei der objekterstellung oder Zerstörung aufgerufen, die Warnung kann ignoriert werden.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C4437 generiert und veranschaulicht, das Code-Generation-Problem, das aus den fehlenden `vtordisp` Feld.  
-  
-```cpp  
-// C4437.cpp  
-// To see the warning and runtime assert, compile with: /W4  
-// To eliminate the warning and assert, compile with: /W4 /vd2  
-//       or compile with: /W4 /DFIX  
-#pragma warning(default : 4437)  
-#include <cassert>  
-  
-struct A  
-{  
-public:  
-    virtual ~A() {}  
-};  
-  
-#if defined(FIX)  
-#pragma vtordisp(push, 2)  
-#endif  
-struct B : virtual A  
-{  
-    B()  
-    {  
-        func();  
-    }  
-  
-    void func()  
-    {  
-        A* a = static_cast<A*>(this);  
-        B* b = dynamic_cast<B*>(a);     // C4437  
-        assert(this == b);              // assert unless compiled with /vd2  
-    }  
-};  
-#if defined(FIX)  
-#pragma vtordisp(pop)  
-#endif  
-  
-struct C : B  
-{  
-    int i;  
-};  
-  
-int main()  
-{  
-    C c;  
-}  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Dynamic_cast-Operator](../../cpp/dynamic-cast-operator.md)   
- [vtordisp](../../preprocessor/vtordisp.md)   
- [Compilerwarnung (Ebene 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)
+
+Dynamic_cast von virtueller Basis 'class1' zu 'Klasse2' konnte in bestimmten Kontexten Kompilieren mit "/ vd2" fehlschlagen oder 'Klasse2' mit #pragma vtordisp(2) wirksam zu definieren.
+
+Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
+
+Der Compiler hat eine `dynamic_cast` Vorgang mit den folgenden Eigenschaften.
+
+- Die Umwandlung ist von einem Zeiger Basisklasse in einer abgeleiteten Klasse Zeiger.
+
+- Die abgeleitete Klasse erbt praktisch die Basisklasse.
+
+- Die abgeleitete Klasse verfügt nicht über eine `vtordisp` Feld für die virtuelle Basisklasse.
+
+- Die Umwandlung in einem Konstruktor oder Destruktor der abgeleiteten Klasse nicht gefunden wird, oder einige Klasse was erbt von der abgeleiteten Klasse (andernfalls compilerwarnung, die C4436 ausgegeben werden sollen).
+
+Diese Warnung gibt an, die die `dynamic_cast` möglicherweise nicht richtig ausgeführt werden, wenn sie auf einem teilweise konstruierten Objekt ausgeführt wird.  Diese Situation tritt auf, wenn die einschließende Funktion in einem Konstruktor oder Destruktor einer Klasse, die die abgeleitete Klasse erbt, mit dem Namen in der Warnung aufgerufen wird.  Wenn die abgeleitete Klasse mit dem Namen in der Warnung nie Weitere wird abgeleitet werden soll, oder bei der objekterstellung oder Zerstörung der einschließende Funktion nicht aufgerufen wird, die Warnung kann ignoriert werden.
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel C4437 generiert und zeigt Code Generation entsteht das Problem, über die fehlende `vtordisp` Feld.
+
+```cpp
+// C4437.cpp
+// To see the warning and runtime assert, compile with: /W4
+// To eliminate the warning and assert, compile with: /W4 /vd2
+//       or compile with: /W4 /DFIX
+#pragma warning(default : 4437)
+#include <cassert>
+
+struct A
+{
+public:
+    virtual ~A() {}
+};
+
+#if defined(FIX)
+#pragma vtordisp(push, 2)
+#endif
+struct B : virtual A
+{
+    B()
+    {
+        func();
+    }
+
+    void func()
+    {
+        A* a = static_cast<A*>(this);
+        B* b = dynamic_cast<B*>(a);     // C4437
+        assert(this == b);              // assert unless compiled with /vd2
+    }
+};
+#if defined(FIX)
+#pragma vtordisp(pop)
+#endif
+
+struct C : B
+{
+    int i;
+};
+
+int main()
+{
+    C c;
+}
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[dynamic_cast-Operator](../../cpp/dynamic-cast-operator.md)<br/>
+[vtordisp](../../preprocessor/vtordisp.md)<br/>
+[Compilerwarnung (Ebene 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)

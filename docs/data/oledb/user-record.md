@@ -1,5 +1,5 @@
 ---
-title: Benutzerdatensatz | Microsoft Docs
+title: Benutzerdatensatz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5c58807dac8ae320ee69c8e1a372fff5b9d3db02
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f8175694b10cc0c3c717a4fc5b5e02edca84ae60
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111054"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075075"
 ---
 # <a name="user-record"></a>Benutzerdatensatz
-Benutzerdatensatz enthält den Code und die Struktur, die die Spaltendaten für ein Rowset darstellt. Ein Benutzerdatensatz kann zur Kompilierzeit oder zur Laufzeit erstellt werden. Wenn Sie einen Anbieter mithilfe der ATL-OLE DB-Anbieter-Assistenten erstellen, erstellt der Assistent einen Standard-Benutzerdatensatz, der wie folgt aussieht (vorausgesetzt, dass Sie einen Anbieternamen [kurzer Name] "MyProvider" angegeben):  
+
+Der Benutzerdatensatz enthält den Code und Daten-Struktur, die die Spaltendaten für ein Rowset darstellt. Ein Benutzerdatensatz kann zum Zeitpunkt der Kompilierung oder zur Laufzeit erstellt werden. Wenn Sie einen Anbieter mithilfe der ATL-OLE DB-Anbieter-Assistenten erstellen, erstellt der Assistent ein Standard-Benutzer-Eintrag, der folgendermaßen aussieht (vorausgesetzt, dass Sie einen Anbieternamen [kurzer Name] des "Meinanbieter" angegeben):  
   
-```  
+```cpp  
 class CWindowsFile:  
    public WIN32_FIND_DATA  
 {  
@@ -46,35 +47,36 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- Der OLE DB-Anbietervorlagen werden alle OLE DB-spezifischen Aspekte in Bezug auf die Clientinteraktionen abgedeckt. Zum Abrufen der Spaltendaten benötigt, die auf eine Antwort der Anbieter Ruft die `GetColumnInfo` -Funktion, die Sie im Benutzerdatensatz platzieren müssen. Sie können explizit überschreiben `GetColumnInfo` im Benutzerdatensatz, z. B. durch Deklarieren sie in der .h-Datei wie hier gezeigt:  
+Der OLE DB-Anbietervorlagen behandeln alle OLE DB-Besonderheiten in Bezug auf die Interaktionen mit dem Client. Um der Spaltendaten benötigt wird, auf eine Antwort zu erhalten, der Anbieter Ruft die `GetColumnInfo` -Funktion, die Sie in der Benutzerdatensatz einfügen müssen. Sie können explizit überschreiben `GetColumnInfo` im Benutzerdatensatz, z. B. durch Deklarieren sie in der h-Datei wie hier gezeigt:  
   
-```  
+```cpp  
 template <class T>  
 static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols)   
 ```  
   
- Das entspricht:  
+Das entspricht:  
   
-```  
+```cpp  
 static ATLCOLUMNINFO* GetColumnInfo(CommandClass* pThis, ULONG* pcCols)  
 static ATLCOLUMNINFO* GetColumnInfo(RowsetClass* pThis, ULONG* pcCols)  
 ```  
   
- Sie müssen auch implementieren `GetColumnInfo` in der Benutzerdatensatz cpp-Datei.  
+Sie müssen auch implementieren `GetColumnInfo` in der Benutzerdatensatz cpp-Datei.  
   
- Die Makro-Makros zu unterstützen, bei der Erstellung einer `GetColumnInfo` Funktion:  
+Die Makro-Makros, bei der Erstellung einer `GetColumnInfo` Funktion:  
   
--   BEGIN_PROVIDER_COLUMN_MAP definiert, der Funktionsprototyp und einen statischen Array von **ATLCOLUMNINFO-Struktur** Strukturen.  
+- BEGIN_PROVIDER_COLUMN_MAP definiert, der Funktionsprototyp und einen statischen Array von `ATLCOLUMNINFO` Strukturen.  
   
--   PROVIDER_COLUMN_ENTRY definiert und initialisiert ein einzelnes **ATLCOLUMNINFO-Struktur**.  
+- Durch definiert und initialisiert ein einzelnes `ATLCOLUMNINFO`.  
   
--   END_PROVIDER_COLUMN_MAP schließt das Array und die Funktion. Es wird auch die Anzahl der Arrayelemente in das `pcCols` Parameter.  
+- END_PROVIDER_COLUMN_MAP schließt das Array und die Funktion. Es wird auch die Anzahl der Arrayelemente in das *PcCols* Parameter.  
   
- Wenn ein Benutzerdatensatz zur Laufzeit erstellt wird **GetColumnInfo** verwendet die `pThis` Parameter um einen Zeiger auf eine Instanz von Rowset- oder zu empfangen. Befehle und Rowsets unterstützen, müssen die `IColumnsInfo` Schnittstelle, damit Informationen in der Spalte, die aus dieser Zeiger abgerufen werden kann.  
+Wenn ein Benutzerdatensatz, zur Laufzeit erstellt wird `GetColumnInfo` verwendet die *pThis* Parameter, um einen Zeiger auf eine Instanz von Rowset- oder erhalten. Befehle und Rowsets unterstützen, muss die `IColumnsInfo` Schnittstelle, damit die Spalteninformationen aus diesem Zeiger abgerufen werden kann.  
   
- **CommandClass** und **RowsetClass** sind die Befehls- und Rowsetobjekte, die den Benutzerdatensatz zu verwenden.  
+`CommandClass` und `RowsetClass` entsprechen dem Befehl und das Rowset, das den Benutzerdatensatz zu verwenden.  
   
- Ein ausführlicheres Beispiel zum Überschreiben von `GetColumnInfo` in einem Benutzerdatensatz finden Sie unter [Dynamisches Festlegen der an den Consumer zurückgegebenen Spalten](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
+Ein ausführlicheres Beispiel zum Überschreiben `GetColumnInfo` in einem Benutzerdatensatz finden Sie unter [Dynamisches Festlegen der an den Consumer zurückgegebenen Spalten](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -1,5 +1,5 @@
 ---
-title: -LARGEADDRESSAWARE | Microsoft Docs
+title: -LARGEADDRESSAWARE | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,20 +18,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fbb71d57142f571e521419654ffb2b9803ce7ed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 174fa82b504d469da637724e91e9a2d6e8d1a424
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372554"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714427"
 ---
 # <a name="largeaddressaware"></a>/LARGEADDRESSAWARE
-```  
-/LARGEADDRESSAWARE  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Option bearbeitet das Bild, um anzugeben, dass die Anwendung Adressen größer als 2 GB verarbeiten kann.  
-  
-## <a name="see-also"></a>Siehe auch  
- [EDITBIN-Optionen](../../build/reference/editbin-options.md)
+
+```
+/LARGEADDRESSAWARE
+```
+
+## <a name="remarks"></a>Hinweise
+
+Diese Option wird das Bild, um anzugeben, dass die Anwendung Adressen, die größer als 2 Gigabyte verarbeiten kann bearbeitet.
+
+## <a name="see-also"></a>Siehe auch
+
+[EDITBIN-Optionen](../../build/reference/editbin-options.md)

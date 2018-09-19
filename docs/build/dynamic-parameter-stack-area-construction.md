@@ -1,5 +1,5 @@
 ---
-title: Dynamische Parameterstapelbereichskonstruktion | Microsoft Docs
+title: Dynamische Parameterstapelbereichskonstruktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 161c98ad3d47c6f988efb60ba2aae9f0e025967e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9c121a2e15f7020db141dc64e9a3dc9735149c65
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367471"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704963"
 ---
 # <a name="dynamic-parameter-stack-area-construction"></a>Dynamische Parameterstapelbereichskonstruktion
-Wenn Frame-Pointer verwendet wird, ist die Option zum dynamischen Erstellen von Parameterbereich Stapel vorhanden. Dies wird zurzeit nicht durchgeführt die [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] Compiler.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwendung von Stapeln](../build/stack-usage.md)
+
+Wenn der Frame-Pointer verwendet wird, ist die Option zum dynamischen Erstellen von den Eingabeaufforderungsbereich für Parameter Stapel vorhanden. Dies derzeit erfolgt nicht in der X64 Compiler.
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwendung von Stapeln](../build/stack-usage.md)

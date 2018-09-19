@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Lambdas, Funktionsobjekte und eingeschränkte Funktionen | Microsoft Docs
+title: Verwenden von Lambdas, Funktionsobjekten und eingeschränkten Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e3e5ab742335cfd6bb47a5105995d7339c7c36a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 99c228d018402d44186efdda264d1eec83b0332f
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687451"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42539609"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>Verwenden von Lambdas, Function-Objekten und eingeschränkten Funktionen
-Der C++ AMP-Code, den Sie im Beschleuniger ausführen möchten wurde, als Argument in einem Aufruf der [Parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) Methode. Als Argument können Sie einen Lambda-Ausdruck oder ein Funktionsobjekt (Funktionselement) verwenden. Zudem kann mit dem Lambdaausdruck oder dem Funktionsobjekt eine eingeschränkte C++ AMP-Funktion aufgerufen werden. In diesem Thema werden Lambdas, Funktionsobjekte und eingeschränkte Funktionen anhand eines Algorithmus zum Hinzufügen von Arrays veranschaulicht. Im folgenden Beispiel ist der Algorithmus ohne C++ AMP-Code dargestellt. Es werden zwei eindimensionale Arrays derselben Länge erstellt. Die entsprechenden ganzzahligen Elemente werden hinzugefügt und in einem dritten eindimensionalen Array gespeichert. C++ AMP wird nicht verwendet.  
+Der C++ AMP-Code, den Sie im Beschleuniger ausführen möchten angegeben ist, als Argument in einem Aufruf der [Parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) Methode. Als Argument können Sie einen Lambda-Ausdruck oder ein Funktionsobjekt (Funktionselement) verwenden. Zudem kann mit dem Lambdaausdruck oder dem Funktionsobjekt eine eingeschränkte C++ AMP-Funktion aufgerufen werden. In diesem Thema werden Lambdas, Funktionsobjekte und eingeschränkte Funktionen anhand eines Algorithmus zum Hinzufügen von Arrays veranschaulicht. Im folgenden Beispiel ist der Algorithmus ohne C++ AMP-Code dargestellt. Es werden zwei eindimensionale Arrays derselben Länge erstellt. Die entsprechenden ganzzahligen Elemente werden hinzugefügt und in einem dritten eindimensionalen Array gespeichert. C++ AMP wird nicht verwendet.  
   
 ```cpp  
 void CpuMethod() {  
@@ -39,11 +39,11 @@ void CpuMethod() {
     std::cout <<sumCPP[idx] <<"\n";  
  }  
 }  
- 
 ```  
   
 ## <a name="lambda-expression"></a>Lambda-Ausdruck  
- Das Verwenden eines Lambda-Ausdrucks ist die einfachste Möglichkeit, den Code mit C++ AMP umzuschreiben.  
+ 
+Das Verwenden eines Lambda-Ausdrucks ist die einfachste Möglichkeit, den Code mit C++ AMP umzuschreiben.  
   
 ```cpp  
 void AddArraysWithLambda() {  
@@ -59,7 +59,6 @@ void AddArraysWithLambda() {
 
     sum.discard_data();
 
- 
     parallel_for_each(
  sum.extent, 
  [=](index<1> idx) restrict(amp)  
@@ -67,18 +66,17 @@ void AddArraysWithLambda() {
     sum[idx] = a[idx] + b[idx];  
  });
 
- 
     for (int i = 0; i <5; i++) {  
     std::cout <<sum[i] <<"\n";  
  }  
 }  
- 
 ```  
   
- Der Lambda-Ausdruck muss einen Indizierungsparameter und `restrict(amp)` enthalten. Im Beispiel die [Array_view](../../parallel/amp/reference/array-view-class.md) `sum` Objekt hat den Rang 1. Aus diesem Grund der Parameter der Lambda-Anweisung ist ein [Index](../../parallel/amp/reference/index-class.md) Objekt mit dem Rang 1. Zur Laufzeit wird der Lambda-Ausdruck einmal ausgeführt, für jedes Element in der [Array_view](../../parallel/amp/reference/array-view-class.md) Objekt. Weitere Informationen finden Sie unter [Lambda-Ausdruckssyntax](../../cpp/lambda-expression-syntax.md).  
+Der Lambda-Ausdruck muss einen Indizierungsparameter und `restrict(amp)` enthalten. Im Beispiel die [Array_view](../../parallel/amp/reference/array-view-class.md) `sum` Objekt hat den Rang 1. Der Parameter der Lambda-Anweisung aus diesem Grund ist eine [Index](../../parallel/amp/reference/index-class.md) Objekt mit dem Rang 1. Zur Laufzeit wird der Lambda-Ausdruck für jedes Element im einmal ausgeführt der [Array_view](../../parallel/amp/reference/array-view-class.md) Objekt. Weitere Informationen finden Sie unter [Lambda-Ausdruckssyntax](../../cpp/lambda-expression-syntax.md).  
   
 ## <a name="function-object"></a>Function-Objekt  
- Sie können den Code des Beschleunigers in ein Funktionsobjekt zerlegen.  
+ 
+Sie können den Code des Beschleunigers in ein Funktionsobjekt zerlegen.  
   
 ```cpp  
 class AdditionFunctionObject  
@@ -103,7 +101,6 @@ private:
 };  
  
 void AddArraysWithFunctionObject() {  
- 
     int aCPP[] = {1, 2, 3, 4, 5};  
     int bCPP[] = {6, 7, 8, 9, 10};  
     int sumCPP[5];  
@@ -116,23 +113,21 @@ void AddArraysWithFunctionObject() {
 
     sum.discard_data();
 
- 
     parallel_for_each(
  sum.extent, 
     AdditionFunctionObject(a, b, sum));
 
- 
     for (int i = 0; i <5; i++) {  
     std::cout <<sum[i] <<"\n";  
  }  
 }  
- 
 ```  
 
- Das Funktionsobjekt muss einen Konstruktor und eine Überladung des Funktionsaufrufoperators enthalten. Im Funktionsaufrufoperator muss ein Indizierungsparameter enthalten sein. Eine Instanz des Funktionsobjekts wird als zweites Argument zum Übergeben der [Parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) Methode. In diesem Beispiel drei [Array_view](../../parallel/amp/reference/array-view-class.md) Objekte an den Konstruktor des Funktionsobjekts übergeben werden. Die [Array_view](../../parallel/amp/reference/array-view-class.md) Objekt `sum` hat den Rang 1. Der Parameter des Funktionsaufrufoperators aus diesem Grund ist eine [Index](../../parallel/amp/reference/index-class.md) Objekt mit dem Rang 1. Zur Laufzeit wird die Funktion ausgeführt wird einmal für jedes Element in der [Array_view](../../parallel/amp/reference/array-view-class.md) Objekt. Weitere Informationen finden Sie unter [Funktionsaufruf](../../cpp/function-call-cpp.md) und [Funktionsobjekte in der C++-Standardbibliothek](../../standard-library/function-objects-in-the-stl.md).  
+Das Funktionsobjekt muss einen Konstruktor und eine Überladung des Funktionsaufrufoperators enthalten. Im Funktionsaufrufoperator muss ein Indizierungsparameter enthalten sein. Eine Instanz des Funktionsobjekts übergeben wird, als das zweite Argument für die [Parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) Methode. In diesem Beispiel drei [Array_view](../../parallel/amp/reference/array-view-class.md) Objekte an den Konstruktor des Funktionsobjekts übergeben werden. Die [Array_view](../../parallel/amp/reference/array-view-class.md) Objekt `sum` hat den Rang 1. Der Parameter des Funktionsaufrufoperators aus diesem Grund ist eine [Index](../../parallel/amp/reference/index-class.md) Objekt mit dem Rang 1. Zur Laufzeit die Funktion einmal ausgeführt für jedes Element in der [Array_view](../../parallel/amp/reference/array-view-class.md) Objekt. Weitere Informationen finden Sie unter [Funktionsaufruf](../../cpp/function-call-cpp.md) und [Funktionsobjekte in der C++-Standardbibliothek](../../standard-library/function-objects-in-the-stl.md).  
   
 ## <a name="c-amp-restricted-function"></a>Eingeschränkte C++ AMP-Funktion  
- Sie können den Code des Beschleunigers weiter zerlegen, indem Sie eine eingeschränkte Funktion erstellen und diese mit einem Lambdaausdruck oder einem Funktionsobjekt aufrufen. Im folgenden Codebeispiel wird veranschaulicht, wie eine eingeschränkte Funktion mit einem Lambdaausdruck aufgerufen wird.  
+ 
+Sie können den Code des Beschleunigers weiter zerlegen, indem Sie eine eingeschränkte Funktion erstellen und diese mit einem Lambdaausdruck oder einem Funktionsobjekt aufrufen. Im folgenden Codebeispiel wird veranschaulicht, wie eine eingeschränkte Funktion mit einem Lambdaausdruck aufgerufen wird.  
   
 ```cpp  
 void AddElementsWithRestrictedFunction(index<1> idx, array_view<int, 1> sum, array_view<int, 1> a, array_view<int, 1> b) restrict(amp)  
@@ -154,29 +149,25 @@ void AddArraysWithFunction() {
 
     sum.discard_data();
 
- 
     parallel_for_each(
  sum.extent, 
  [=](index<1> idx) restrict(amp)  
  {  
     AddElementsWithRestrictedFunction(idx, sum, a, b);
-
  });
 
- 
     for (int i = 0; i <5; i++) {  
     std::cout <<sum[i] <<"\n";  
  }  
 }  
- 
 ```  
   
- Die eingeschränkte Funktion umfasst `restrict(amp)` und die Einschränkungen, die in beschriebenen entsprechen [einschränken (C++-AMP)](../../cpp/restrict-cpp-amp.md).  
+Die eingeschränkte Funktion muss enthalten `restrict(amp)` und die in beschriebenen Einschränkungen entsprechen [einschränken (C++-AMP)](../../cpp/restrict-cpp-amp.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
- [Lambda-Ausdruckssyntax](../../cpp/lambda-expression-syntax.md)   
- [Funktionsaufruf](../../cpp/function-call-cpp.md)   
- [Function-Objekte in der C++-Standardbibliothek](../../standard-library/function-objects-in-the-stl.md)   
- [restrict (C++ AMP)](../../cpp/restrict-cpp-amp.md)
-
+ 
+[C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
+[Lambdaausdruckssyntax](../../cpp/lambda-expression-syntax.md)   
+[Funktionsaufruf](../../cpp/function-call-cpp.md)   
+[Funktionsobjekte in der C++-Standardbibliothek](../../standard-library/function-objects-in-the-stl.md)   
+[restrict (C++ AMP)](../../cpp/restrict-cpp-amp.md)

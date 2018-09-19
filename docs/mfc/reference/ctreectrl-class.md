@@ -1,5 +1,5 @@
 ---
-title: CTreeCtrl-Klasse | Microsoft Docs
+title: CTreeCtrl-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16eaca3857687e7039391cf15472a5a68b25a5c6
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: e623c0990477c5ee24fb4dcc782a6f243dce3337
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37123161"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712167"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 Stellt die Funktionalität des allgemeinen Windows-Strukturansicht-Steuerelements bereit.  
@@ -200,88 +200,88 @@ class CTreeCtrl : public CWnd
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CTreeCtrl::Create](#create)|Erstellt ein Strukturansicht-Steuerelement, und fügt es einer `CTreeCtrl` Objekt.|  
-|[CTreeCtrl::CreateDragImage](#createdragimage)|Erstellt eine ziehen Bitmap für das Element der angegebenen Struktur anzeigen.|  
-|[CTreeCtrl::CreateEx](#createex)|Erstellt ein Strukturansicht-Steuerelement mit der angegebenen erweiterten Fensterstile und fügt es einer `CTreeCtrl` Objekt.|  
+|[CTreeCtrl::Create](#create)|Erstellt ein Strukturansicht-Steuerelement, und fügt sie an einer `CTreeCtrl` Objekt.|  
+|[CTreeCtrl::CreateDragImage](#createdragimage)|Erstellt eine Bitmap ziehen, für das angegebene Strukturansichtselement.|  
+|[CTreeCtrl::CreateEx](#createex)|Erstellt ein Strukturansicht-Steuerelement mit dem angegebenen erweiterten Stile für Windows und fügt sie an einer `CTreeCtrl` Objekt.|  
 |[CTreeCtrl::DeleteAllItems](#deleteallitems)|Löscht alle Elemente in einem Strukturansicht-Steuerelement.|  
 |[CTreeCtrl::DeleteItem](#deleteitem)|Löscht ein neues Element in einem Strukturansicht-Steuerelement.|  
-|[CTreeCtrl::EditLabel](#editlabel)|Bearbeitet eine angegebene Struktur Ansicht Element direkt an.|  
-|[CTreeCtrl::EndEditLabelNow](#endeditlabelnow)|Bricht den Bearbeitungsvorgang an die Bezeichnung eines Elements Strukturansicht in die aktuelle Strukturansicht Steuerelement ab.|  
-|[CTreeCtrl::EnsureVisible](#ensurevisible)|Wird sichergestellt, dass ein Element der Struktur anzeigen in der Strukturansicht-Steuerelement angezeigt wird.|  
-|[CTreeCtrl::Expand](#expand)|Erweitert oder reduziert, die untergeordneten Elemente des Elements angegebene Struktur anzeigen.|  
+|[CTreeCtrl::EditLabel](#editlabel)|Eine angegebene Struktur Ansicht Element direkt bearbeitet wird.|  
+|[CTreeCtrl::EndEditLabelNow](#endeditlabelnow)|Bricht den Bearbeitungsvorgang für die Bezeichnung eines Baumansicht-Elements im aktuellen Strukturansicht Steuerelement ab.|  
+|[CTreeCtrl::EnsureVisible](#ensurevisible)|Stellt sicher, dass ein Strukturansichtselement in der Strukturansicht-Steuerelement angezeigt wird.|  
+|[CTreeCtrl::Expand](#expand)|Erweitert oder reduziert, die untergeordneten Elemente der angegebenen Strukturansichtselements.|  
 |[CTreeCtrl::GetBkColor](#getbkcolor)|Ruft die aktuelle Hintergrundfarbe des Steuerelements ab.|  
 |[CTreeCtrl::GetCheck](#getcheck)|Ruft den Aktivierungszustand des ein Strukturelement-Steuerelement ab.|  
-|[CTreeCtrl::GetChildItem](#getchilditem)|Ruft das untergeordnete Element eines Elements der angegebenen Struktur Ansicht ab.|  
+|[CTreeCtrl::GetChildItem](#getchilditem)|Ruft das untergeordnete Element eines angegebenen Strukturansichtselements ab.|  
 |[CTreeCtrl::GetCount](#getcount)|Ruft die Anzahl der Strukturelemente, die einem Strukturansicht-Steuerelement zugeordnet.|  
-|[CTreeCtrl::GetDropHilightItem](#getdrophilightitem)|Ruft das Ziel eines Drag-and-Drop-Vorgangs ab.|  
-|[CTreeCtrl::GetEditControl](#geteditcontrol)|Ruft das Handle des Bearbeitungssteuerelements verwendet, um die angegebene Ansicht Strukturelement bearbeiten ab.|  
-|[CTreeCtrl::GetExtendedStyle](#getextendedstyle)|Ruft die erweiterten Stile, die das aktuelle Strukturansicht Steuerelement verwendet wird.|  
-|[CTreeCtrl::GetFirstVisibleItem](#getfirstvisibleitem)|Ruft das erste sichtbare Element des angegebenen Strukturelements Ansicht ab.|  
-|[CTreeCtrl::GetImageList](#getimagelist)|Ruft das Handle für die einem Strukturansicht-Steuerelement zugeordnete Bildliste ab.|  
-|[CTreeCtrl::GetIndent](#getindent)|Ruft den Offset (in Pixel) der Struktur Ansichtselemente aus seinem übergeordneten Element ab.|  
-|[CTreeCtrl::GetInsertMarkColor](#getinsertmarkcolor)|Ruft die Farbe verwendet, um die Einfügemarke für die Strukturansicht gezeichnet werden soll.|  
-|[CTreeCtrl::GetItem](#getitem)|Ruft die Attribute eines Elements der angegebenen Struktur Ansicht ab.|  
-|[CTreeCtrl::GetItemData](#getitemdata)|Gibt den 32-Bit-anwendungsspezifische Wert eines Elements zugeordnet.|  
-|[CTreeCtrl::GetItemExpandedImageIndex](#getitemexpandedimageindex)|Ruft den Index des Bilds angezeigt, wenn das angegebene Element des aktuellen Strukturansicht Steuerelements im erweiterten Zustand befindet.|  
-|[CTreeCtrl::GetItemHeight](#getitemheight)|Ruft die aktuelle Höhe der Struktur Ansichtselemente ab.|  
-|[CTreeCtrl::GetItemImage](#getitemimage)|Ruft die Bilder, die einem Element zugeordneten ab.|  
-|[CTreeCtrl::GetItemPartRect](#getitempartrect)|Ruft das umschließende Rechteck für ein bestimmtes Teil eines bestimmten Elements in der aktuellen Strukturansicht Steuerelement ab.|  
-|[CTreeCtrl::GetItemRect](#getitemrect)|Ruft das umschließende Rechteck einer Strukturansichtselement ab.|  
+|[CTreeCtrl::GetDropHilightItem](#getdrophilightitem)|Ruft das Ziel eines Drag & Drop-Vorgangs ab.|  
+|[CTreeCtrl::GetEditControl](#geteditcontrol)|Ruft das Handle des Bearbeitungssteuerelements verwendet, um das angegebene Strukturansichtselement zu bearbeiten.|  
+|[CTreeCtrl::GetExtendedStyle](#getextendedstyle)|Ruft die erweiterten Stile, die das aktuelle Strukturansicht-Steuerelement verwendet wird.|  
+|[CTreeCtrl::GetFirstVisibleItem](#getfirstvisibleitem)|Ruft das erste sichtbare Element der angegebenen Strukturansichtselements ab.|  
+|[CTreeCtrl::GetImageList](#getimagelist)|Ruft das Handle der Bildliste zugeordneten einem Strukturansicht-Steuerelement ab.|  
+|[CTreeCtrl::GetIndent](#getindent)|Ruft den Offset (in Pixel) des ein Strukturansichtselement aus seinem übergeordneten Element ab.|  
+|[CTreeCtrl::GetInsertMarkColor](#getinsertmarkcolor)|Ruft die Farbe für die Einfügemarke für die Strukturansicht gezeichnet werden soll.|  
+|[CTreeCtrl::GetItem](#getitem)|Ruft die Attribute eines angegebenen Strukturansichtselements ab.|  
+|[CTreeCtrl::GetItemData](#getitemdata)|Gibt den 32-Bit-anwendungsspezifische Wert einem Element zugeordnet.|  
+|[CTreeCtrl::GetItemExpandedImageIndex](#getitemexpandedimageindex)|Ruft den Index des Bildes, das angezeigt wird, wenn das angegebene Element des aktuellen Baumansicht-Steuerelements im erweiterten Zustand befindet.|  
+|[CTreeCtrl::GetItemHeight](#getitemheight)|Ruft die aktuelle Höhe der Liste die Struktur ab.|  
+|[CTreeCtrl::GetItemImage](#getitemimage)|Ruft ab, die einem Element zugeordneten Bilder.|  
+|[CTreeCtrl::GetItemPartRect](#getitempartrect)|Ruft das umschließende Rechteck für einen bestimmten Abschnitt eines angegebenen Elements in das aktuelle Strukturansicht-Steuerelement ab.|  
+|[CTreeCtrl::GetItemRect](#getitemrect)|Ruft das umschließende Rechteck des ein Strukturansichtselement ab.|  
 |[CTreeCtrl::GetItemState](#getitemstate)|Gibt den Status eines Elements zurück.|  
-|[CTreeCtrl::GetItemStateEx](#getitemstateex)|Ruft die erweiterten Zustand des angegebenen Elements im aktuellen Strukturansicht Steuerelement ab.|  
+|[CTreeCtrl::GetItemStateEx](#getitemstateex)|Ruft den erweiterten Status des angegebenen Elements in das aktuelle Strukturansicht-Steuerelement ab.|  
 |[CTreeCtrl::GetItemText](#getitemtext)|Gibt den Text eines Elements zurück.|  
 |[CTreeCtrl::GetLastVisibleItem](#getlastvisibleitem)|Ruft die erweiterten letzten Element im aktuellen Strukturansicht Steuerelement ab.|  
-|[CTreeCtrl::GetLineColor](#getlinecolor)|Ruft die aktuelle Linienfarbe für das Strukturansicht-Steuerelement ab.|  
-|[CTreeCtrl::GetNextItem](#getnextitem)|Ruft das nächste Element des Typs Struktur anzeigen, das eine bestimmte Beziehung entspricht.|  
-|[CTreeCtrl::GetNextSiblingItem](#getnextsiblingitem)|Ruft das nächste gleichgeordnete Element des angegebenen Strukturelements Ansicht ab.|  
-|[CTreeCtrl::GetNextVisibleItem](#getnextvisibleitem)|Ruft den nächsten sichtbaren Elements von der angegebenen Ansicht Strukturelement ab.|  
-|[CTreeCtrl::GetParentItem](#getparentitem)|Ruft das übergeordnete Element der angegebenen Struktur-Ansicht ab.|  
-|[CTreeCtrl::GetPrevSiblingItem](#getprevsiblingitem)|Ruft das vorherige gleichgeordnete Element des angegebenen Strukturelements Ansicht ab.|  
-|[CTreeCtrl::GetPrevVisibleItem](#getprevvisibleitem)|Ruft den vorherigen sichtbaren Elements von der angegebenen Ansicht Strukturelement ab.|  
-|[CTreeCtrl::GetRootItem](#getrootitem)|Ruft den Stamm der Struktur der angegebenen Ansichtselement ab.|  
-|[CTreeCtrl::GetScrollTime](#getscrolltime)|Ruft den maximalen Bildlauf Zeit für das Strukturansicht-Steuerelement ab.|  
-|[CTreeCtrl::GetSelectedCount](#getselectedcount)|Ruft die Anzahl der ausgewählten Elemente im aktuellen Strukturansicht Steuerelement ab.|  
-|[CTreeCtrl::GetSelectedItem](#getselecteditem)|Ruft die Strukturansicht derzeit ausgewählten Elements ab.|  
+|[CTreeCtrl::GetLineColor](#getlinecolor)|Ruft die aktuelle Zeile Farbe für das Strukturansicht-Steuerelement ab.|  
+|[CTreeCtrl::GetNextItem](#getnextitem)|Ruft das nächste Strukturansichtselement, das eine bestimmte Beziehung entspricht.|  
+|[CTreeCtrl::GetNextSiblingItem](#getnextsiblingitem)|Ruft das nächste gleichgeordnete der angegebenen Strukturansichtselements ab.|  
+|[CTreeCtrl::GetNextVisibleItem](#getnextvisibleitem)|Ruft das nächste sichtbare Element der angegebenen Strukturansichtselements ab.|  
+|[CTreeCtrl::GetParentItem](#getparentitem)|Ruft das übergeordnete Element der angegebenen Strukturansichtselements ab.|  
+|[CTreeCtrl::GetPrevSiblingItem](#getprevsiblingitem)|Ruft das vorhergehende nebengeordnete Element der angegebenen Strukturansichtselements ab.|  
+|[CTreeCtrl::GetPrevVisibleItem](#getprevvisibleitem)|Ruft das vorherige sichtbare Element der angegebenen Strukturansichtselements ab.|  
+|[CTreeCtrl::GetRootItem](#getrootitem)|Ruft den Stamm der angegebenen Strukturansichtselements ab.|  
+|[CTreeCtrl::GetScrollTime](#getscrolltime)|Ruft den maximalen Bildlauf Uhrzeit für das Strukturansicht-Steuerelement ab.|  
+|[CTreeCtrl::GetSelectedCount](#getselectedcount)|Ruft die Anzahl der ausgewählten Elemente in das aktuelle Strukturansicht-Steuerelement.|  
+|[CTreeCtrl::GetSelectedItem](#getselecteditem)|Ruft das aktuell ausgewählte Strukturansichtselement ab.|  
 |[CTreeCtrl::GetTextColor](#gettextcolor)|Ruft die aktuelle Textfarbe des Steuerelements ab.|  
-|[CTreeCtrl::GetToolTips](#gettooltips)|Ruft das Handle für das untergeordnete Element von einem Strukturansicht-Steuerelement verwendeten QuickInfo-Steuerelements ab.|  
+|[CTreeCtrl::GetToolTips](#gettooltips)|Ruft das Handle für das untergeordnete Element von einem Strukturansicht-Steuerelement verwendete QuickInfo-Steuerelement ab.|  
 |[CTreeCtrl::GetVisibleCount](#getvisiblecount)|Ruft die Anzahl der sichtbaren Strukturelemente, die einem Strukturansicht-Steuerelement zugeordnet.|  
 |[CTreeCtrl::HitTest](#hittest)|Gibt die aktuelle Position des Cursors im Zusammenhang mit der `CTreeCtrl` Objekt.|  
 |[CTreeCtrl::InsertItem](#insertitem)|Fügt ein neues Element in einem Strukturansicht-Steuerelement.|  
-|[CTreeCtrl::ItemHasChildren](#itemhaschildren)|Gibt einen Wert ungleich NULL, wenn das angegebene Element untergeordnete Elemente verfügt.|  
-|[CTreeCtrl::MapAccIdToItem](#mapaccidtoitem)|Ordnet den Bezeichner angegebene Zugriff auf das Handle für ein Strukturansicht Element im aktuellen Strukturansicht Steuerelement.|  
-|[CTreeCtrl::MapItemToAccID](#mapitemtoaccid)|Ordnet das angegebene Handle zu einem Strukturansicht Element im aktuellen Strukturansicht Steuerelement in einen Bezeichner für die Barrierefreiheit.|  
-|[CTreeCtrl::Select](#select)|Wählt, Bildlauf sichtbar oder einer angegebenen Ansicht Strukturelement zeichnet.|  
-|[CTreeCtrl::SelectDropTarget](#selectdroptarget)|Zeichnet das Strukturelement als Ziel eines Drag-and-Drop-Vorgangs an.|  
-|[CTreeCtrl::SelectItem](#selectitem)|Wählt eine angegebene Strukturansichtselement.|  
-|[CTreeCtrl::SelectSetFirstVisible](#selectsetfirstvisible)|Wählt eine angegebene Ansicht Strukturelement als ersten sichtbaren Elements.|  
-|[CTreeCtrl::SetAutoscrollInfo](#setautoscrollinfo)|Legt die Rate der automatischen Bildlauf des aktuellen Strukturansicht Steuerelements fest.|  
+|[CTreeCtrl::ItemHasChildren](#itemhaschildren)|Gibt, die ungleich NULL, wenn das angegebene Element über untergeordnete Elemente verfügt.|  
+|[CTreeCtrl::MapAccIdToItem](#mapaccidtoitem)|Ordnet den Bezeichner angegebene Zugriff auf das Handle für ein Strukturansichtselement im aktuellen Strukturansicht Steuerelement.|  
+|[CTreeCtrl::MapItemToAccID](#mapitemtoaccid)|Ordnet das angegebene Handle ein Strukturansichtselement im aktuellen Strukturansicht Steuerelement auf einen Bezeichner für die Barrierefreiheit.|  
+|[CTreeCtrl::Select](#select)|Auswählt, führt einen Bildlauf in der Ansicht oder ein angegebenen Strukturansichtselements zeichnet.|  
+|[CTreeCtrl::SelectDropTarget](#selectdroptarget)|Zeichnet das Strukturelement als Ziel eines Drag & Drop-Vorgangs an.|  
+|[CTreeCtrl::SelectItem](#selectitem)|Wählt aus einer angegebenen Strukturansichtselement.|  
+|[CTreeCtrl::SelectSetFirstVisible](#selectsetfirstvisible)|Wählt aus einer angegebenen Strukturansichtselement als das erste sichtbare Element.|  
+|[CTreeCtrl::SetAutoscrollInfo](#setautoscrollinfo)|Legt die Rate der automatischen Bildlauf des aktuellen Baumansicht-Steuerelements fest.|  
 |[CTreeCtrl::SetBkColor](#setbkcolor)|Legt die Hintergrundfarbe des Steuerelements fest.|  
 |[CTreeCtrl::SetCheck](#setcheck)|Legt den Aktivierungszustand des ein Strukturelement-Steuerelement fest.|  
-|[CTreeCtrl::SetExtendedStyle](#setextendedstyle)|Legt die erweiterten Stile für das aktuelle Strukturansicht Steuerelement fest.|  
-|[CTreeCtrl::SetImageList](#setimagelist)|Legt das Handle für die Bildliste einem Strukturansicht-Steuerelement zugeordnet.|  
+|[CTreeCtrl::SetExtendedStyle](#setextendedstyle)|Legt fest, die erweiterten Stile für das aktuelle Strukturansicht-Steuerelement.|  
+|[CTreeCtrl::SetImageList](#setimagelist)|Legt das Handle der Bildliste mit einem Strukturansicht-Steuerelement verknüpft ist.|  
 |[CTreeCtrl::SetIndent](#setindent)|Legt den Offset (in Pixel) ein Strukturansichtselement von seinem übergeordneten Element fest.|  
 |[CTreeCtrl::SetInsertMark](#setinsertmark)|Legt die Einfügemarke in einem Strukturansicht-Steuerelement fest.|  
-|[CTreeCtrl::SetInsertMarkColor](#setinsertmarkcolor)|Legt die Farbe verwendet, um die Einfügemarke für die Strukturansicht gezeichnet werden soll.|  
-|[CTreeCtrl::SetItem](#setitem)|Legt die Attribute eines Elements der angegebenen Struktur anzeigen.|  
-|[CTreeCtrl::SetItemData](#setitemdata)|Legt den 32-Bit-anwendungsspezifische Wert eines Elements zugeordnet.|  
-|[CTreeCtrl::SetItemExpandedImageIndex](#setitemexpandedimageindex)|Legt den Index des Bilds angezeigt, wenn das angegebene Element des aktuellen Strukturansicht Steuerelements im erweiterten Zustand befindet.|  
+|[CTreeCtrl::SetInsertMarkColor](#setinsertmarkcolor)|Legt die Farbe für die Einfügemarke für die Strukturansicht gezeichnet werden soll.|  
+|[CTreeCtrl::SetItem](#setitem)|Legt die Attribute eines angegebenen Strukturansichtselements fest.|  
+|[CTreeCtrl::SetItemData](#setitemdata)|Legt den 32-Bit-anwendungsspezifische Wert einem Element zugeordnet.|  
+|[CTreeCtrl::SetItemExpandedImageIndex](#setitemexpandedimageindex)|Legt fest, den Index des Bildes, das angezeigt wird, wenn das angegebene Element des aktuellen Baumansicht-Steuerelements im erweiterten Zustand befindet.|  
 |[CTreeCtrl::SetItemHeight](#setitemheight)|Legt die Höhe der Struktur Elemente anzeigen.|  
-|[CTreeCtrl::SetItemImage](#setitemimage)|Ordnet ein Element Images zu.|  
+|[CTreeCtrl::SetItemImage](#setitemimage)|Ordnet die Bilder zu einem Element.|  
 |[CTreeCtrl::SetItemState](#setitemstate)|Legt den Zustand eines Elements.|  
-|[CTreeCtrl::SetItemStateEx](#setitemstateex)|Legt die erweiterten Zustand des angegebenen Elements im aktuellen Strukturansicht Steuerelement fest.|  
+|[CTreeCtrl::SetItemStateEx](#setitemstateex)|Legt den erweiterten Zustand des angegebenen Elements in das aktuelle Strukturansicht-Steuerelement fest.|  
 |[CTreeCtrl::SetItemText](#setitemtext)|Legt den Text eines Elements fest.|  
-|[CTreeCtrl::SetLineColor](#setlinecolor)|Legt die aktuelle Linienfarbe für das Strukturansicht-Steuerelement fest.|  
+|[CTreeCtrl::SetLineColor](#setlinecolor)|Legt die aktuelle Zeile Farbe für das Strukturansicht-Steuerelement fest.|  
 |[CTreeCtrl::SetScrollTime](#setscrolltime)|Legt den maximalen Bildlauf Zeit für das Strukturansicht-Steuerelement fest.|  
 |[CTreeCtrl::SetTextColor](#settextcolor)|Legt die Textfarbe des Steuerelements fest.|  
-|[CTreeCtrl::SetToolTips](#settooltips)|Legt eine Strukturansicht-Steuerelement des untergeordneten QuickInfo-Steuerelement fest.|  
+|[CTreeCtrl::SetToolTips](#settooltips)|Legt ein Strukturansicht-Steuerelement die untergeordneten QuickInfo-Steuerelement fest.|  
 |[CTreeCtrl::ShowInfoTip](#showinfotip)|Zeigt den Infotipp für das angegebene Element im aktuellen Strukturansicht Steuerelement.|  
 |[CTreeCtrl::SortChildren](#sortchildren)|Sortiert die untergeordneten Elemente eines angegebenen übergeordneten Elements.|  
-|[CTreeCtrl::SortChildrenCB](#sortchildrencb)|Sortiert die untergeordneten Elemente eines angegebenen übergeordneten Elements eine anwendungsdefinierte Sortierfunktion verwenden.|  
+|[CTreeCtrl::SortChildrenCB](#sortchildrencb)|Sortiert die untergeordneten Elemente eines angegebenen übergeordneten Elements mithilfe einer Funktion der Anwendung definierte Sortierung an.|  
   
 ## <a name="remarks"></a>Hinweise  
- Eine "Strukturansicht-Steuerelement" ist ein Fenster, in dem eine hierarchische Liste von Elementen, z. B. die Überschriften in einem Dokument die Einträge in einem Index oder die Dateien und Verzeichnisse auf einem Datenträger angezeigt. Jedes Element besteht aus einer Bezeichnung und einem optionalen als Bitmap verfügbares Bild, und jedes Element kann eine Liste von Unterelementen zugeordnet haben. Der Benutzer kann durch Klicken auf ein Element aus, erweitern und Reduzieren der zugehörigen Unterelemente.  
+ Ein "Strukturansicht-Steuerelement" ist ein Fenster, in dem eine hierarchische Liste der Elemente, z. B. die Spaltenüberschriften in einem Dokument, die Einträge in einem Index oder die Dateien und Verzeichnisse auf einem Datenträger angezeigt. Jedes Element besteht aus einer Bezeichnung und einem optionalen als Bitmap verfügbares Bild aus kann, und jedes Element eine Liste von Unterelementen zugeordnet. Durch Klicken auf ein Element aus, kann der Benutzer erweitern und Reduzieren der zugehörigen Unterelemente.  
   
- Dieses Steuerelement (und somit die `CTreeCtrl` Klasse) und höher verfügbar nur für Programme, die unter Windows 98 und Windows NT, Version 4 ausgeführt wird.  
+ Dieses Steuerelement (und somit die `CTreeCtrl` Klasse) ist nur für Programme, die unter Windows 98 und Windows NT, Version 4 und höher.  
   
  Weitere Informationen zur Verwendung von `CTreeCtrl`, finden Sie unter:  
   
@@ -289,9 +289,9 @@ class CTreeCtrl : public CWnd
   
 - [Verwenden von CTreeCtrl](../../mfc/using-ctreectrl.md)  
   
-- [Struktur anzeigen Kontrollverweis](http://msdn.microsoft.com/library/windows/desktop/bb759988) im Windows SDK.  
+- [Struktur anzeigen Steuerelementverweis](/windows/desktop/Controls/tree-view-control-reference) in das Windows SDK.  
   
--   Knowledge Base-Artikel Q222905: So wird's gemacht: Anzeigen eines Kontextmenüs für CTreeCtrl  
+-   Knowledge Base-Artikel Q222905: So wird's gemacht: ein Kontextmenü angezeigt, für die CTreeCtrl  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -306,7 +306,7 @@ class CTreeCtrl : public CWnd
  **Header:** afxcmn.h  
   
 ##  <a name="create"></a>  CTreeCtrl::Create  
- Bei Angabe des Strukturansicht-Steuerelements in einer Dialogfeldvorlage oder bei Verwendung von [CTreeView](../../mfc/reference/ctreeview-class.md), Strukturansicht-Steuerelement wird automatisch erstellt, wenn das Dialogfeld oder eine Sicht erstellt wird.  
+ Wenn Sie die Strukturansicht-Steuerelement in einer Dialogfeldvorlage angeben oder bei Verwendung von [CTreeView](../../mfc/reference/ctreeview-class.md), Ihre Strukturansicht-Steuerelement wird automatisch erstellt, wenn das Dialogfeld oder eine Sicht erstellt wird.  
   
 ```  
 virtual BOOL Create(
@@ -318,26 +318,26 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parameter  
  *dwStyle*  
- Gibt das Strukturansicht-Steuerelement Stil. Fensterstile, in der beschriebenen übernehmen [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679), und eine beliebige Kombination von [Struktur Steuerelementtypen für die Sicht](http://msdn.microsoft.com/library/windows/desktop/bb760013) wie beschrieben im Windows SDK.  
+ Gibt den Strukturansicht-Steuerelement Stil. Anwenden von Window-Stile, die in beschriebenen [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa), und eine beliebige Kombination von [Struktur Ansicht der Stile von Listensteuerelementen](/windows/desktop/Controls/tree-view-control-window-styles) wie beschrieben in das Windows SDK.  
   
  *Rect*  
- Gibt an, Größe und Position der Strukturansicht. Es kann es sich um eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.  
+ Gibt an, des Strukturansicht-Steuerelements die Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.  
   
  *pParentWnd*  
  Gibt an, dem Strukturansicht-Steuerelement des übergeordneten Fensters, in der Regel eine `CDialog`. Es darf nicht NULL sein.  
   
  *nID*  
- Gibt das Strukturansicht-Steuerelement ID an.  
+ Gibt den Strukturansicht-Steuerelement ID an.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die Initialisierung erfolgreich war; andernfalls 0.  
+ Ungleich NULL, wenn die Initialisierung erfolgreich war; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie das Strukturansicht-Steuerelement als untergeordnetes Fenster eines anderen Fensters erstellen möchten, verwenden Sie die `Create` Memberfunktion. Wenn Sie das Strukturansicht-Steuerelement mithilfe erstellen `Create`, müssen Sie übergeben diese WS_VISIBLE, zusätzlich zu anderen Formate der Struktur anzeigen.  
+ Wenn Sie die Strukturansicht-Steuerelement als untergeordnetes Fenster eines anderen Fensters erstellen möchten, verwenden Sie die `Create` Member-Funktion. Bei der Erstellung dem Strukturansicht-Steuerelement mit `Create`, müssen Sie übergeben sie WS_VISIBLE, zusätzlich zu anderen Formate der Struktur anzeigen.  
   
- Sie erstellen eine `CTreeCtrl` in zwei Schritten. Beim ersten Aufruf des Konstruktors und rufen dann `Create`, die das Strukturansicht-Steuerelement erstellt, und fügt es der `CTreeCtrl` Objekt.  
+ Sie erstellen eine `CTreeCtrl` in zwei Schritten. Beim ersten Aufruf der Konstruktor, rufen Sie anschließend `Create`, die das Strukturansicht-Steuerelement erstellt, und fügt es der `CTreeCtrl` Objekt.  
   
- Rufen Sie zum Erstellen einer Strukturansicht-Steuerelements mit erweiterten Fensterstile [CreateEx](#createex) anstelle von `Create`.  
+ Rufen Sie zum Erstellen ein Strukturansicht-Steuerelement mit erweiterten Fensterstile [CreateEx](#createex) anstelle von `Create`.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTreeCtrl#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_1.cpp)]  
@@ -356,28 +356,28 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parameter  
  *dwExStyle*  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Fensterstile, finden Sie unter der *DwExStyle* -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) im Windows SDK.  
   
  *dwStyle*  
- Gibt das Strukturansicht-Steuerelement Stil. Fensterstile, in der beschriebenen übernehmen [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679), und eine beliebige Kombination von [Struktur Steuerelementtypen für die Sicht](http://msdn.microsoft.com/library/windows/desktop/bb760013) wie beschrieben im Windows SDK.  
+ Gibt den Strukturansicht-Steuerelement Stil. Anwenden von Window-Stile, die in beschriebenen [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa), und eine beliebige Kombination von [Struktur Ansicht der Stile von Listensteuerelementen](/windows/desktop/Controls/tree-view-control-window-styles) wie beschrieben in das Windows SDK.  
   
  *Rect*  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die beschreibt, die Größe und Position des Fensters erstellt werden, in Clientkoordinaten der *pParentWnd*.  
+ Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.  
   
  *pParentWnd*  
- Ein Zeiger auf das Fenster, das das Steuerelement übergeordnet ist.  
+ Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.  
   
  *nID*  
- Das Steuerelement untergeordnete Fenster-ID.  
+ Der ID des Steuerelements untergeordneten Fensters mit.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich NULL bei Erfolg, andernfalls 0.  
+ Ungleich NULL, wenn erfolgreich, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwendung `CreateEx` anstelle von [erstellen](#create) anzuwendende erweiterten Fensterstile, angegeben durch die Windows-erweiterten Stil ihm etwas voranzustellen **WS_EX_**.  
+ Verwendung `CreateEx` anstelle von [erstellen](#create) anzuwendende Erweiterte Windows-Stile, angegeben durch den Wert der Windows-erweiterten Stil **WS_EX_**.  
   
 ##  <a name="createdragimage"></a>  CTreeCtrl::CreateDragImage  
- Mit dieser Funktion können ziehen Bitmap für das angegebene Element in einem Strukturansicht-Steuerelement erstellen, erstellen eine Bildliste für die Bitmap und der Bitmap auf die Bildliste hinzufügen.  
+ Mit dieser Funktion können eine ziehen Bitmap für das angegebene Element in einem Strukturansicht-Steuerelement erstellen, erstellen eine Bildliste für die Bitmap und fügen die Bitmap der Bildliste.  
   
 ```  
 CImageList* CreateDragImage(HTREEITEM hItem);
@@ -385,15 +385,15 @@ CImageList* CreateDragImage(HTREEITEM hItem);
   
 ### <a name="parameters"></a>Parameter  
  *hItem*  
- Das Handle des dem Strukturelement gezogen wird.  
+ Handle des Strukturelements gezogen werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Zeiger auf die Bildliste, die die ziehen Bitmap hinzugefügt wurde, wenn erfolgreich; andernfalls NULL.  
+ Zeiger auf die Liste der Bilder, die die Bitmap ziehen hinzugefügt wurde, wenn erfolgreich; andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
  Eine Anwendung verwendet die Bildliste Funktionen zur Anzeige des Bilds, wenn das Element gezogen wird.  
   
- Die `CImageList` Objekt kann nicht rückgängig gemacht, und müssen Sie ihn nach Abschluss löschen. Zum Beispiel:  
+ Die `CImageList` Objekt wird dauerhaft ausgeführt, und Sie müssen es löschen, Abschluss. Zum Beispiel:  
   
  [!code-cpp[NVC_MFC_CTreeCtrl#2](../../mfc/reference/codesnippet/cpp/ctreectrl-class_2.cpp)]  
   
@@ -405,7 +405,7 @@ CTreeCtrl();
 ```  
   
 ##  <a name="deleteallitems"></a>  CTreeCtrl::DeleteAllItems  
- Rufen Sie diese Funktion, um alle Elemente aus dem Strukturansicht-Steuerelement zu löschen.  
+ Rufen Sie diese Funktion, um alle Elemente aus dem Strukturansicht-Steuerelement löschen.  
   
 ```  
 BOOL DeleteAllItems();
@@ -418,7 +418,7 @@ BOOL DeleteAllItems();
  [!code-cpp[NVC_MFC_CTreeCtrl#3](../../mfc/reference/codesnippet/cpp/ctreectrl-class_3.cpp)]  
   
 ##  <a name="deleteitem"></a>  CTreeCtrl::DeleteItem  
- Mit dieser Funktion wird zum Löschen eines Elements aus dem Strukturansicht-Steuerelement.  
+ Rufen Sie diese Funktion, um ein Element aus dem Strukturansicht-Steuerelement löschen.  
   
 ```  
 BOOL DeleteItem(HTREEITEM hItem);
@@ -426,7 +426,7 @@ BOOL DeleteItem(HTREEITEM hItem);
   
 ### <a name="parameters"></a>Parameter  
  *hItem*  
- Das Handle des dem Strukturelement gelöscht werden soll. Wenn *Hitem* hat den Wert TVI_ROOT alle Elemente aus dem Strukturansicht-Steuerelement gelöscht werden.  
+ Handle des Strukturelements gelöscht werden soll. Wenn *Hitem* hat den Wert TVI_ROOT alle Elemente aus dem Strukturansicht-Steuerelement gelöscht werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -435,7 +435,7 @@ BOOL DeleteItem(HTREEITEM hItem);
  [!code-cpp[NVC_MFC_CTreeCtrl#4](../../mfc/reference/codesnippet/cpp/ctreectrl-class_4.cpp)]  
   
 ##  <a name="editlabel"></a>  CTreeCtrl::EditLabel  
- Mit dieser Funktion können Sie direkte Bearbeitung von Text für das angegebene Element begonnen werden soll.  
+ Mit dieser Funktion können Sie beginnen, ein direktes Bearbeiten von Text für das angegebene Element.  
   
 ```  
 CEdit* EditLabel(HTREEITEM hItem);
@@ -443,19 +443,19 @@ CEdit* EditLabel(HTREEITEM hItem);
   
 ### <a name="parameters"></a>Parameter  
  *hItem*  
- Das Handle des dem Strukturelement bearbeitet werden.  
+ Handle des Strukturelements bearbeitet werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Bei Erfolg, ein Zeiger auf die `CEdit` -Objekt, das so bearbeiten Sie den Elementtext verwendet wird; andernfalls NULL.  
+ Bei Erfolg einen Zeiger auf die `CEdit` -Objekt, das zum Bearbeiten von Text des Elements verwendet wird, andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Bearbeitung erfolgt durch den Text des Elements mit einem einzeiligen Edit-Steuerelement, das mit dem Text ersetzen.  
+ Die Bearbeitung erfolgt durch den Text des Elements mit einem einzeiligen Bearbeitungssteuerelement, das mit dem Text ersetzen.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTreeCtrl#5](../../mfc/reference/codesnippet/cpp/ctreectrl-class_5.cpp)]  
   
 ##  <a name="endeditlabelnow"></a>  CTreeCtrl::EndEditLabelNow  
- Schließt den Bearbeitungsvorgang an die Bezeichnung eines Elements Strukturansicht in die aktuelle Strukturansicht Steuerelement.  
+ Schließt den Bearbeitungsvorgang für die Bezeichnung eines Baumansicht-Elements im aktuellen Strukturansicht Steuerelement.  
   
 ```  
 BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
@@ -465,16 +465,16 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *fCancelWithoutSave*|"True", um Änderungen an dem Strukturansicht Element zu verwerfen, vor dem Abschluss der Bearbeitung oder "false", um Änderungen an das Strukturansicht Element zu speichern, bevor Sie den Vorgang abzuschließen.|  
+|*fCancelWithoutSave*|[in] TRUE, um Änderungen an dem Strukturansicht-Element zu verwerfen, bevor Sie mit dem Abschluss der Bearbeitung oder "false", um Änderungen an das Strukturansichtselement zu speichern, vor dem Abschluss des Vorgangs.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- "True", wenn diese Methode erfolgreich ist; andernfalls "false".  
+ True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [TVM_ENDEDITLABELNOW](http://msdn.microsoft.com/library/windows/desktop/bb773564) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [TVM_ENDEDITLABELNOW](/windows/desktop/Controls/tvm-endeditlabelnow) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="ensurevisible"></a>  CTreeCtrl::EnsureVisible  
- Rufen Sie diese Funktion, um sicherzustellen, dass ein Element der Struktur anzeigen angezeigt wird.  
+ Rufen Sie diese Funktion, um sicherzustellen, dass ein Strukturansichtselement angezeigt wird.  
   
 ```  
 BOOL EnsureVisible(HTREEITEM hItem);
@@ -482,10 +482,10 @@ BOOL EnsureVisible(HTREEITEM hItem);
   
 ### <a name="parameters"></a>Parameter  
  *hItem*  
- Das Handle des dem Strukturelement sichtbar gemacht wird.  
+ Handle für das Konsolenstrukturelement, der sichtbar gemacht wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt "true" zurück, wenn das System durch einen der Elemente im Strukturansicht-Steuerelement Bildlauf, um sicherzustellen, dass das angegebene Element sichtbar ist. Der Rückgabewert ist, andernfalls "false".  
+ Gibt TRUE zurück, wenn das System ein Bildlauf, die Elemente in der Strukturansicht-Steuerelement durchgeführt, um sicherzustellen, dass das angegebene Element sichtbar ist. Der zurückgegebene Wert ist, andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Falls erforderlich, wird die Funktion erweitert das übergeordnete Element oder führt einen Bildlauf im Strukturansicht-Steuerelement, sodass das Element sichtbar ist.  
@@ -494,7 +494,7 @@ BOOL EnsureVisible(HTREEITEM hItem);
  [!code-cpp[NVC_MFC_CTreeCtrl#6](../../mfc/reference/codesnippet/cpp/ctreectrl-class_6.cpp)]  
   
 ##  <a name="expand"></a>  CTreeCtrl::Expand  
- Mit dieser Funktion wird zum Erweitern oder reduzieren Sie die Liste der untergeordneten Elemente an, wenn vorhanden, die mit dem angegebenen übergeordneten Element verknüpft sind.  
+ Rufen Sie diese Funktion zum Erweitern oder reduzieren die Liste der untergeordneten Elemente aus, wenn vorhanden, mit dem angegebenen übergeordneten Element verknüpft ist.  
   
 ```  
 BOOL Expand(
@@ -504,18 +504,18 @@ BOOL Expand(
   
 ### <a name="parameters"></a>Parameter  
  *hItem*  
- Das Handle des dem Strukturelement erweitert wird.  
+ Handle des Strukturelements, die erweitert wird.  
   
  *nCode*  
- Ein Flag, das den Typ der auszuführende Aktion angibt. Dieses Flag kann einen der folgenden Werte aufweisen:  
+ Ein Flag, der angibt, der des Typs der Aktion an, die ausgeführt werden. Dieses Flag kann es sich um einen der folgenden Werte aufweisen:  
   
 - TVE_COLLAPSE reduziert die Liste.  
   
-- TVE_COLLAPSERESET die Liste reduziert und die untergeordneten Elemente entfernt. Das Statusflag TVIS_EXPANDEDONCE wird zurückgesetzt. Dieses Kennzeichen müssen mit dem Flag "TVE_COLLAPSE" verwendet werden.  
+- TVE_COLLAPSERESET reduziert die Liste und entfernt die untergeordneten Elemente. Das Statusflag TVIS_EXPANDEDONCE wird zurückgesetzt. Dieses Flag muss mit dem Flag TVE_COLLAPSE verwendet werden.  
   
 - TVE_EXPAND wird die Liste erweitert.  
   
-- TVE_TOGGLE reduziert die Liste aus, wenn er aktuell erweitert wird, oder ihn zu erweitern, wenn sie derzeit reduziert ist.  
+- TVE_TOGGLE reduziert die Liste aus, wenn es gerade erweitert wird, oder wird diese erweitert, wenn es derzeit reduziert ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -524,14 +524,14 @@ BOOL Expand(
   Siehe das Beispiel für [CTreeCtrl::EnsureVisible](#ensurevisible).  
   
 ##  <a name="getbkcolor"></a>  CTreeCtrl::GetBkColor  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773570)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_GETBKCOLOR](/windows/desktop/Controls/tvm-getbkcolor), wie im Windows SDK beschrieben.  
   
 ```  
 COLORREF GetBkColor() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein COLORREF-Wert, der das aktuelle Fenster Hintergrundfarbe für das Steuerelement darstellt. Wenn dieser Wert-1 ist, wird das Steuerelement die Systemfarbe für Fenster verwendet. In diesem Fall können Sie `::GetSysColor(COLOR_WINDOW)` um die aktuelle Systemfarbe abzurufen, die das Steuerelement verwendet wird.  
+ Eine COLORREF-Wert, der die aktuelle Fenster Hintergrundfarbe für das Steuerelement darstellt. Wenn dieser Wert-1 ist, wird das Steuerelement die Systemfarbe für Fenster verwendet. In diesem Fall können Sie `::GetSysColor(COLOR_WINDOW)` um die aktuelle Systemfarbe abzurufen, die das Steuerelement verwendet.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CTreeCtrl::SetTextColor](#settextcolor).  
@@ -545,16 +545,16 @@ BOOL GetCheck(HTREEITEM hItem) const;
   
 ### <a name="parameters"></a>Parameter  
  *hItem*  
- Das HTREEITEM darüber, welche die Statusinformationen zu erhalten.  
+ Die HTREEITEM zu dem die Statusinformationen zu erhalten.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Wert ist ungleich NULL, wenn das Strukturelement-Steuerelement aktiviert ist; andernfalls 0.  
+ Ungleich NULL ist, wenn das Strukturelement-Steuerelement aktiviert ist; andernfalls 0.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CTreeCtrl::SetCheck](#setcheck).  
   
 ##  <a name="getchilditem"></a>  CTreeCtrl::GetChildItem  
- Aufruf dieser Funktion zum Abrufen der Struktur anzeigen, die wird das untergeordnete Element des angegebenen Elements vom *hItem*.  
+ Aufruf dieser Funktion zum Abrufen der Struktur anzeigen Element, wird das untergeordnete Element des angegebenen Elements vom *hItem*.  
   
 ```  
 HTREEITEM GetChildItem(HTREEITEM hItem) const;  
@@ -565,78 +565,78 @@ HTREEITEM GetChildItem(HTREEITEM hItem) const;
  Handle für ein Strukturelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das Handle für das untergeordnete Element, wenn erfolgreich; andernfalls NULL.  
+ Das Handle des untergeordneten Elements bei erfolgreicher Ausführung; andernfalls NULL.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTreeCtrl#7](../../mfc/reference/codesnippet/cpp/ctreectrl-class_7.cpp)]  
   
 ##  <a name="getcount"></a>  CTreeCtrl::GetCount  
- Mit dieser Funktion wird zum Abrufen der Anzahl der Elemente in einem Strukturansicht-Steuerelement.  
+ Rufen Sie diese Funktion zum Abrufen der Anzahl der Elemente in einem Strukturansicht-Steuerelement.  
   
 ```  
 UINT GetCount() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Anzahl der Elemente in der Strukturansicht-Steuerelement.  
+ Die Anzahl der Elemente im Strukturansicht-Steuerelement.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTreeCtrl#8](../../mfc/reference/codesnippet/cpp/ctreectrl-class_8.cpp)]  
   
 ##  <a name="getdrophilightitem"></a>  CTreeCtrl::GetDropHilightItem  
- Mit dieser Funktion wird zum Abrufen des Elements, das Ziel eines Drag-and-Drop-Vorgangs ist.  
+ Rufen Sie diese Funktion zum Abrufen des Elements, das Ziel eines Drag & Drop-Vorgangs ist.  
   
 ```  
 HTREEITEM GetDropHilightItem() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das Handle des Elements gelöscht werden, wenn erfolgreich; andernfalls NULL.  
+ Das Handle des Elements gelöscht, wenn erfolgreich; andernfalls NULL.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTreeCtrl#9](../../mfc/reference/codesnippet/cpp/ctreectrl-class_9.cpp)]  
   
 ##  <a name="geteditcontrol"></a>  CTreeCtrl::GetEditControl  
- Mit dieser Funktion wird zum Abrufen des Handles des Bearbeitungssteuerelements verwendet wird, um eine Strukturansichtselement Text zu bearbeiten.  
+ Rufen Sie diese Funktion zum Abrufen der Handles des Bearbeitungssteuerelements zum Bearbeiten von Text für ein Strukturansichtselement verwendet wird.  
   
 ```  
 CEdit* GetEditControl() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf das Bearbeitungssteuerelement verwendet, um den Elementtext im Erfolgsfall bearbeiten; andernfalls NULL.  
+ Ein Zeiger auf das Steuerelement zum Bearbeiten verwendet, um den Elementtext im Erfolgsfall bearbeiten; andernfalls NULL.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTreeCtrl#10](../../mfc/reference/codesnippet/cpp/ctreectrl-class_10.cpp)]  
   
 ##  <a name="getextendedstyle"></a>  CTreeCtrl::GetExtendedStyle  
- Ruft die erweiterten Stile, die das aktuelle Strukturansicht Steuerelement verwendet wird.  
+ Ruft die erweiterten Stile, die das aktuelle Strukturansicht-Steuerelement verwendet wird.  
   
 ```  
 DWORD GetExtendedStyle() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Wert, der eine bitweise Kombination (OR) des aktuellen Strukturansicht Steuerelements enthält die Stile erweitert. Weitere Informationen finden Sie unter [Strukturansicht Steuerelement erweitert Stile](http://msdn.microsoft.com/library/windows/desktop/bb759981).  
+ Ein Wert, der eine bitweise Kombination (OR) von der aktuellen Strukturansicht-Steuerelement enthält die Stile erweitert. Weitere Informationen finden Sie unter [Strukturansicht Steuerelement Erweiterte Stile](/windows/desktop/Controls/tree-view-control-window-extended-styles).  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [TVM_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb773580) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [TVM_GETEXTENDEDSTYLE](/windows/desktop/Controls/tvm-getextendedstyle) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="getfirstvisibleitem"></a>  CTreeCtrl::GetFirstVisibleItem  
- Mit dieser Funktion wird zum Abrufen der ersten sichtbaren Elements des Strukturansicht-Steuerelement.  
+ Rufen Sie diese Funktion zum Abrufen der ersten sichtbaren Elements des Strukturansicht-Steuerelement.  
   
 ```  
 HTREEITEM GetFirstVisibleItem() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das Handle der ersten sichtbaren Elements andernfalls NULL.  
+ Das Handle des ersten sichtbaren Elements andernfalls NULL.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CTreeCtrl::SetCheck](#setcheck).  
   
 ##  <a name="getimagelist"></a>  CTreeCtrl::GetImageList  
- Mit dieser Funktion wird zum Abrufen der Handle der normalen oder Status Bildliste, die dem Strukturansicht-Steuerelement zugeordnet.  
+ Rufen Sie diese Funktion, um das Handle der normalen oder Status Bildliste, die dem Strukturansicht-Steuerelement zugeordnete abzurufen.  
   
 ```  
 CImageList* GetImageList(UINT nImageList) const;  
@@ -644,51 +644,51 @@ CImageList* GetImageList(UINT nImageList) const;
   
 ### <a name="parameters"></a>Parameter  
  *nImageList*  
- Der Typ des abzurufenden Bildliste. Die Bildliste kann einer der folgenden Werte sein:  
+ Typ der Bildliste abgerufen. Liste der Bilder ist einer der folgenden Werte möglich:  
   
-- TVSIL_NORMAL Ruft die normale Bildliste, die die ausgewählten und nicht ausgewählten Images für das Strukturelement-Ansicht enthält.  
+- TVSIL_NORMAL Ruft die Liste der normalen Bilder, die die ausgewählte und nicht ausgewählten Images für das Strukturansichtselement enthält.  
   
-- TVSIL_STATE Ruft die Bildliste Zustand, die die Images für die Sicht Strukturelemente enthält, die in einem benutzerdefinierten Zustand befinden.  
+- TVSIL_STATE Ruft die Bildliste Status, die die Images für Strukturelemente für die Sicht enthält, die in einem benutzerdefinierten Zustand befinden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf die Bildliste des Steuerelements, wenn erfolgreich; andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Jedes Element in einem Strukturansicht-Steuerelement kann ein Paar von Bitmapbildern zugeordnet haben. Ein Bild wird angezeigt, wenn das Element ausgewählt ist, und der andere wird angezeigt, wenn das Element nicht ausgewählt ist. Beispielsweise kann ein Element angezeigt einen Ordner öffnen, wenn diese Option ausgewählt ist und einen geschlossenen Ordner, wenn es nicht aktiviert ist.  
+ Jedes Element in einem Strukturansicht-Steuerelement kann ein Paar von Bitmapbildern zugeordnet haben. Ein Bild wird angezeigt, wenn das Element ist ausgewählt, und der andere wird angezeigt, wenn das Element nicht ausgewählt ist. Beispielsweise kann ein Element anzuzeigen einen geöffneten Ordner, wenn diese Option ausgewählt ist und einen geschlossenen Ordner, wenn es nicht aktiviert ist.  
   
- Weitere Informationen zu Bildlisten, finden Sie unter der [CImageList](../../mfc/reference/cimagelist-class.md) Klasse.  
+ Weitere Informationen zu Bildlisten, finden Sie unter den [CImageList](../../mfc/reference/cimagelist-class.md) Klasse.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTreeCtrl#11](../../mfc/reference/codesnippet/cpp/ctreectrl-class_11.cpp)]  
   
 ##  <a name="getindent"></a>  CTreeCtrl::GetIndent  
- Mit dieser Funktion wird um die Menge, in Pixel, dass untergeordnete Elemente relativ zum ihre übergeordneten Elemente eingezogen werden abzurufen.  
+ Rufen Sie diese Funktion, um den Umfang, in Pixel, dieses untergeordnete Element abzurufen, die Elemente relativ zu ihrer übergeordneten Elemente eingerückt werden.  
   
 ```  
 UINT GetIndent() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Größe des Einzugs in Pixel gemessen.  
+ Die Größe des Einzugs in Pixel gemessen wird.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTreeCtrl#12](../../mfc/reference/codesnippet/cpp/ctreectrl-class_12.cpp)]  
   
 ##  <a name="getinsertmarkcolor"></a>  CTreeCtrl::GetInsertMarkColor  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_GETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773590)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_GETINSERTMARKCOLOR](/windows/desktop/Controls/tvm-getinsertmarkcolor), wie im Windows SDK beschrieben.  
   
 ```  
 COLORREF GetInsertMarkColor() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein COLORREF-Wert, der die Farbe der aktuellen Einfügemarke enthält.  
+ Eine COLORREF-Wert, der die Farbe der aktuellen Einfügemarke enthält.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTreeCtrl#13](../../mfc/reference/codesnippet/cpp/ctreectrl-class_13.cpp)]  
   
 ##  <a name="getitem"></a>  CTreeCtrl::GetItem  
- Mit dieser Funktion wird zum Abrufen der Attribute des Elements angegebene Struktur anzeigen.  
+ Rufen Sie diese Funktion, um die Attribute der angegebenen Strukturansichtselements abzurufen.  
   
 ```  
 BOOL GetItem(TVITEM* pItem) const;  
@@ -696,7 +696,7 @@ BOOL GetItem(TVITEM* pItem) const;
   
 ### <a name="parameters"></a>Parameter  
  *pItem*  
- Ein Zeiger auf eine [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) strukturieren, wie im Windows SDK beschrieben.  
+ Ein Zeiger auf eine [TVITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtvitema) Struktur, wie im Windows SDK beschrieben.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -705,7 +705,7 @@ BOOL GetItem(TVITEM* pItem) const;
   Siehe das Beispiel für [CTreeCtrl::DeleteItem](#deleteitem).  
   
 ##  <a name="getitemdata"></a>  CTreeCtrl::GetItemData  
- Mit dieser Funktion wird zum Abrufen des 32-Bit-anwendungsspezifische-Wertes, die mit dem angegebenen Element zugeordnet ist.  
+ Rufen Sie diese Funktion zum Abrufen des 32-Bit-anwendungsspezifische-Werts, die dem angegebenen Element zugeordnet.  
   
 ```  
 DWORD_PTR GetItemData(HTREEITEM hItem) const;  
@@ -713,16 +713,16 @@ DWORD_PTR GetItemData(HTREEITEM hItem) const;
   
 ### <a name="parameters"></a>Parameter  
  *hItem*  
- Das Handle des Elements, dessen Daten abgerufen werden.  
+ Handle des Elements, dessen Daten abgerufen werden sollen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Den Wert einer 32-Bit-anwendungsspezifische Verbindung mit den Elementen gemäß *hItem*.  
+ Eine 32-Bit-anwendungsspezifische-Wert dem Element anhand des zugeordneten *hItem*.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTreeCtrl#14](../../mfc/reference/codesnippet/cpp/ctreectrl-class_14.cpp)]  
   
 ##  <a name="getitemexpandedimageindex"></a>  CTreeCtrl::GetItemExpandedImageIndex  
- Ruft den Index des Bilds angezeigt, wenn das angegebene Element des aktuellen Strukturansicht Steuerelements im erweiterten Zustand befindet.  
+ Ruft den Index des Bildes, das angezeigt wird, wenn das angegebene Element des aktuellen Baumansicht-Steuerelements im erweiterten Zustand befindet.  
   
 ```  
 int GetItemExpandedImageIndex(HTREEITEM hItem)const;  
@@ -732,16 +732,16 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle für ein Strukturansicht Steuerelement ein Element.|  
+|*hItem*|[in] Handle zu einem Baumansicht-Steuerelement ein Element.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Index des Bilds angezeigt, wenn das angegebene Element im erweiterten Zustand befindet.  
+ Der Index des Bildes, das angezeigt wird, wenn das angegebene Element im erweiterten Zustand befindet.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [TVM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb773596) Nachricht, die im Windows SDK beschrieben wird. Fehlermeldung gibt die [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) -Struktur, die beschreibt, die Strukturansicht Steuerelement ein Element, und klicken Sie dann auf diese Methode ruft die `iExpandedImage` Element aus dieser Struktur.  
+ Diese Methode sendet die [TVM_GETITEM](/windows/desktop/Controls/tvm-getitem) -Nachricht, die im Windows SDK beschrieben wird. Fehlermeldung gibt die [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) Struktur, die dem Strukturansicht-Steuerelement ein Element, und klicken Sie dann auf diese Methode ruft die `iExpandedImage` Member aus dieser Struktur.  
   
 ##  <a name="getitemheight"></a>  CTreeCtrl::GetItemHeight  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_GETITEMHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb773599)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_GETITEMHEIGHT](/windows/desktop/Controls/tvm-getitemheight), wie im Windows SDK beschrieben.  
   
 ```  
 SHORT GetItemHeight() const;  
@@ -765,27 +765,27 @@ BOOL GetItemImage(
   
 ### <a name="parameters"></a>Parameter  
  *hItem*  
- Das Handle des Elements, dessen Image ist abgerufen werden sollen.  
+ Das Handle des Elements, dessen Bild abgerufen werden sollen.  
   
- *nImage*  
- Eine ganze Zahl, die den Index, der das Bild des Elements in der Strukturansicht Bildliste empfängt.  
+ *Nbild*  
+ Eine ganze Zahl, die den Index des Elements Bildes in der Strukturansicht-Steuerelement die Bildliste empfängt.  
   
  *nSelectedImage*  
- Eine ganze Zahl, die den Index des ausgewählten Elementbild in der Strukturansicht Bildliste empfängt.  
+ Eine ganze Zahl, die den Index des Elements ausgewählten Bildes in der Strukturansicht-Steuerelement die Bildliste empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Die Bilder werden auf der linken Seite der Bezeichnung eines Elements angezeigt. Ein Bild wird angezeigt, wenn das Element ausgewählt ist, und der andere wird angezeigt, wenn das Element nicht ausgewählt ist. Beispielsweise kann ein Element angezeigt einen Ordner öffnen, wenn diese Option ausgewählt ist und einen geschlossenen Ordner, wenn es nicht aktiviert ist.  
+ Die Bilder werden auf der linken Seite der die Bezeichnung eines Elements angezeigt. Ein Bild wird angezeigt, wenn das Element ist ausgewählt, und der andere wird angezeigt, wenn das Element nicht ausgewählt ist. Beispielsweise kann ein Element anzuzeigen einen geöffneten Ordner, wenn diese Option ausgewählt ist und einen geschlossenen Ordner, wenn es nicht aktiviert ist.  
   
- Rufen Sie diese Funktion, um den Index des Elements und ausgewählte Bild in der Strukturansicht Bildliste abzurufen.  
+ Rufen Sie diese Funktion zum Abrufen des Index, der das Bild des Elements und dem ausgewählten Bild im Strukturansicht-Steuerelement der Bildliste.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTreeCtrl#16](../../mfc/reference/codesnippet/cpp/ctreectrl-class_16.cpp)]  
   
 ##  <a name="getitempartrect"></a>  CTreeCtrl::GetItemPartRect  
- Ruft das umschließende Rechteck für ein bestimmtes Teil eines bestimmten Elements in der aktuellen Strukturansicht Steuerelement ab.  
+ Ruft das umschließende Rechteck für einen bestimmten Abschnitt eines angegebenen Elements in das aktuelle Strukturansicht-Steuerelement ab.  
   
 ```  
 BOOL GetItemPartRect(
@@ -798,25 +798,25 @@ BOOL GetItemPartRect(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle für ein Strukturansicht Steuerelement ein Element.|  
-|[in] *nPart*|Der Bezeichner für das Teil. Muss auf TVGIPR_BUTTON festgelegt werden.|  
-|[out] *LpRect*|Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Wenn diese Methode erfolgreich ist, erhält die Struktur der Koordinaten für das Rechteck des Teils gemäß *hItem* und *nPart*.|  
+|*hItem*|[in] Handle zu einem Baumansicht-Steuerelement ein Element.|  
+|*nPart*|[in] Der Bezeichner für das Part. Muss auf TVGIPR_BUTTON festgelegt werden.|  
+|*lpRect*|[out] Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Wenn diese Methode erfolgreich ist, erhält die Struktur die Rechteckkoordinaten, der die Komponente, *hItem* und *nPart*.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- "True", wenn diese Methode erfolgreich ist; andernfalls "false".  
+ True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Jedes Strukturelement-Steuerelement wird durch ein Rechteck Grafiken begrenzt. Immer ein Punkt in dieses Rechteck geklickt wird, das Element wird als *erreicht*. Diese Methode gibt das größte Rechteck, wenn ein Punkts in das Rechteck geklickt wird, wird das Element identifiziert wird, indem Sie die *hItem* Parameter erreicht wird.  
+ Jedes Strukturelement-Steuerelement wird durch ein Rechteck Grafiken begrenzt. Wann immer ein Punkt in diesem Rechteck geklickt wird, das Element wird als *erreicht*. Diese Methode gibt das größte Rechteck zurück, wenn ein Punkts in das Rechteck geklickt wird, das durch bezeichnete Element, das *hItem* Parameter erreicht wird.  
   
- Diese Methode sendet die Nachricht TVM_GETITEMPARTRECT, die im Windows SDK beschrieben wird. Weitere Informationen finden Sie unter der [TreeView_GetItemPartRect](http://msdn.microsoft.com/library/windows/desktop/bb773847) Makro.  
+ Diese Methode sendet die TVM_GETITEMPARTRECT-Nachricht, die im Windows SDK beschrieben wird. Weitere Informationen finden Sie unter den [TreeView_GetItemPartRect](/windows/desktop/api/commctrl/nf-commctrl-treeview_getitempartrect) Makro.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert eine Variable `m_treeCtrl`, d. h. auf das aktuelle Strukturansicht Steuerelement verwendet. Das Codebeispiel definiert auch eine Ganzzahl ohne Vorzeichen und mehreren HTREEITEM-Variablen. Diese Variablen werden im nächsten Beispiel verwendet.  
+ Das folgende Codebeispiel definiert eine Variable, `m_treeCtrl`, d. h. für den Zugriff auf das aktuelle Strukturansicht-Steuerelement. Im Codebeispiel wird definiert auch eine Ganzzahl ohne Vorzeichen und mehreren HTREEITEM-Variablen. Diese Variablen werden im nächsten Beispiel verwendet.  
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel verwendet einen Eingabehilfen-Bezeichner und die [CTreeCtrl::MapAccIdToItem](#mapaccidtoitem) Methode, um ein Handle für das Stammelement der Strukturansicht abzurufen. Das Handle wird verwendet, und die [CTreeCtrl::GetItemPartRect](#getitempartrect) Methode, um ein 3D Rechteck aus, um das Element zu zeichnen. In einem früheren Abschnitt des Codebeispiels, die nicht angezeigt wird, erstellt es eine Strukturansicht, die einen Stammknoten für Land/Region für den Vereinigten Staaten, untergeordnete Knoten für den Status der Pennsylvania und Washington und Strukturelemente für Städte in diesen Zuständen besteht. Es verwendet die [CTreeCtrl::MapItemToAccID](#mapitemtoaccid) Methode, um das Stammelement der Strukturansicht mit einer ID, Eingabehilfen zuzuordnen.  
+ Das folgende Codebeispiel verwendet einen Bezeichner für die Barrierefreiheit und [CTreeCtrl::MapAccIdToItem](#mapaccidtoitem) Methode, um ein Handle für das Stammelement der Strukturansicht abzurufen. Das Handle wird verwendet, und die [CTreeCtrl::GetItemPartRect](#getitempartrect) Methode, um ein 3D-Objekt Rechteck aus, um das Element gezeichnet werden soll. In einem vorherigen Abschnitt des Codebeispiels, der nicht angezeigt wird, haben wir eine Strukturansicht, die besteht aus einem Land/Region-Stammknoten für den Vereinigten Staaten, untergeordnete Knoten für die Bundesstaaten Pennsylvania und Washington und Strukturelemente für Städte in diesen Staaten dargestellt. Verwendet die [CTreeCtrl::MapItemToAccID](#mapitemtoaccid) Methode, einen Bezeichner für die Barrierefreiheit des Strukturansicht-Stammelements zugeordnet werden soll.  
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#5](../../mfc/reference/codesnippet/cpp/ctreectrl-class_18.cpp)]  
   
@@ -832,16 +832,16 @@ BOOL GetItemRect(
   
 ### <a name="parameters"></a>Parameter  
  *hItem*  
- Das Handle des Steuerelements ein Strukturelement-Ansicht.  
+ Der Handle für ein Strukturansichtselement-Steuerelement.  
   
  *lpRect*  
- Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die das umschließende Rechteck empfängt. Die Koordinaten sind relativ zur linken oberen Ecke des Strukturansicht-Steuerelement.  
+ Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die das umschließende Rechteck empfängt. Die Koordinaten sind relativ zur oberen linken Ecke des Strukturansicht-Steuerelement.  
   
  *bTextOnly*  
- Wenn dieser Parameter ungleich NULL ist, enthält das umschließende Rechteck nur den Text des Elements an. Andernfalls enthält es die gesamte Zeile, der das Element in der Strukturansicht-Steuerelement.  
+ Wenn dieser Parameter ungleich NULL ist, enthält das umschließende Rechteck nur den Text des Elements an. Andernfalls enthält es die gesamte Zeile, die belegt, das Element in der Strukturansicht-Steuerelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich NULL, wenn das Element sichtbar ist, mit das umschließende Rechteck in enthaltenen *LpRect*. Andernfalls 0 mit *LpRect* nicht initialisiert.  
+ Ungleich NULL, wenn das Element sichtbar, mit dem umschließenden Rechteck ist in enthaltenen *LpRect*. Andernfalls 0 mit *LpRect* nicht initialisiert.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTreeCtrl#17](../../mfc/reference/codesnippet/cpp/ctreectrl-class_19.cpp)]  
@@ -857,19 +857,19 @@ UINT GetItemState(
   
 ### <a name="parameters"></a>Parameter  
  *hItem*  
- Handle für das Element, dessen Status abgerufen werden sollen.  
+ Handle des Elements, dessen Status abgerufen werden sollen.  
   
  *nStateMask*  
- Eine Bitmaske zurück, die eine oder mehrere Status abgerufen werden sollen. Weitere Informationen zu den möglichen Werten für *nStateMask*, finden Sie in den Ausführungen der `state` und `stateMask` Mitglied der [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) Struktur im Windows SDK.  
+ Eine Bitmaske zurück, die eine oder mehrere Zustände abgerufen werden sollen. Weitere Informationen zu den möglichen Werten für *nStateMask*, finden Sie unter der Erläuterung der `state` und `stateMask` Mitglied der [TVITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtvitema) Struktur im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Eine "uint", das die bitweise OR-Operator des nStateMask angegebenen Werte enthält. Informationen zu den möglichen Werten finden Sie unter [CTreeCtrl::GetItem](#getitem). Führen Sie eine bitweise AND-Operation mit den Statuswert und der Rückgabewert, um den Wert für einen bestimmten Status zu ermitteln, wie im folgenden Beispiel gezeigt.  
+ UINT, die das bitweise OR der die angegebenen Werte von nStateMask enthält. Weitere Informationen zu den möglichen Werten finden Sie unter [CTreeCtrl::GetItem](#getitem). Führen Sie eine bitweise AND-Operation der Status und der Rückgabewert, um den Wert für einen bestimmten Status zu ermitteln, wie im folgenden Beispiel gezeigt.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTreeCtrl#18](../../mfc/reference/codesnippet/cpp/ctreectrl-class_20.cpp)]  
   
 ##  <a name="getitemstateex"></a>  CTreeCtrl::GetItemStateEx  
- Ruft die erweiterten Zustand des angegebenen Elements im aktuellen Strukturansicht Steuerelement ab.  
+ Ruft den erweiterten Status des angegebenen Elements in das aktuelle Strukturansicht-Steuerelement ab.  
   
 ```  
 UINT GetItemStateEx(HTREEITEM hItem) const;  
@@ -879,13 +879,13 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle für ein Strukturansicht Steuerelement ein Element.|  
+|*hItem*|[in] Handle zu einem Baumansicht-Steuerelement ein Element.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die erweiterten Zustand des Elements. Weitere Informationen finden Sie unter der `uStateEx` Mitglied der [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) Struktur.  
+ Die erweiterten Zustand des Elements. Weitere Informationen finden Sie unter den `uStateEx` Mitglied der [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [TVM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb773596) Nachricht, die im Windows SDK beschrieben wird. Fehlermeldung gibt die [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) -Struktur, die beschreibt, die Strukturansicht Steuerelement ein Element, und diese Methode ruft die `uStateEx` Element aus dieser Struktur.  
+ Diese Methode sendet die [TVM_GETITEM](/windows/desktop/Controls/tvm-getitem) -Nachricht, die im Windows SDK beschrieben wird. Fehlermeldung gibt die [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) Struktur, die dem Strukturansicht-Steuerelement ein Element, und diese Methode ruft die `uStateEx` Member aus dieser Struktur.  
   
 ##  <a name="getitemtext"></a>  CTreeCtrl::GetItemText  
  Gibt den Text des Elements gemäß *hItem*.  
@@ -896,39 +896,39 @@ CString GetItemText(HTREEITEM hItem) const;
   
 ### <a name="parameters"></a>Parameter  
  *hItem*  
- Handle für das Element, dessen Text abgerufen werden sollen.  
+ Handle des Elements, dessen Text abgerufen werden sollen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein `CString` Objekt, das den Text des Elements enthält.  
+ Ein `CString` -Objekt, das den Text des Elements enthält.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CTreeCtrl::GetNextItem](#getnextitem).  
   
 ##  <a name="getlastvisibleitem"></a>  CTreeCtrl::GetLastVisibleItem  
- Ruft das letzte Knotenelement der nicht erweiterten in der aktuellen Strukturansicht Steuerelement ab.  
+ Ruft das letzte Knotenelement der nicht aufgeklappter des aktuellen Baumansicht-Steuerelements ab.  
   
 ```  
 HTREEITEM GetLastVisibleItem() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das Handle auf das letzte Knotenelement der nicht erweiterte, wenn die Methode erfolgreich ist; Andernfalls wird NULL verwendet.  
+ Das Handle, das letzte nicht aufgeklappter Knotenelement aus, wenn die Methode erfolgreich ist; andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [TVM_GETNEXTITEM](http://msdn.microsoft.com/library/windows/desktop/bb773622) Nachricht, die im Windows SDK beschrieben wird. Weitere Informationen finden Sie unter dem TVGN_LASTVISIBLE-Flag in der *Flag* Parameter dieser Nachricht.  
+ Diese Methode sendet die [TVM_GETNEXTITEM](/windows/desktop/Controls/tvm-getnextitem) -Nachricht, die im Windows SDK beschrieben wird. Weitere Informationen finden Sie in das TVGN_LASTVISIBLE-Kennzeichen in der *Flag* Parameter der Nachricht.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert eine Variable `m_treeCtrl`, d. h. auf das aktuelle Strukturansicht Steuerelement verwendet. Das Codebeispiel definiert auch eine Ganzzahl ohne Vorzeichen und mehreren HTREEITEM-Variablen. Im folgenden Beispiel werden eine oder mehrere dieser Variablen verwendet.  
+ Das folgende Codebeispiel definiert eine Variable, `m_treeCtrl`, d. h. für den Zugriff auf das aktuelle Strukturansicht-Steuerelement. Im Codebeispiel wird definiert auch eine Ganzzahl ohne Vorzeichen und mehreren HTREEITEM-Variablen. Im folgenden Beispiel werden eine oder mehrere dieser Variablen verwendet.  
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel ruft ein Handle für das letzte Element des nicht erweiterten Strukturansicht-Knoten und anschließend zeichnet ein Rechteck 3D, um dieses Element. In einem früheren Abschnitt des Codebeispiels, die nicht angezeigt wird, erstellt es eine Strukturansicht, die einen Stammknoten für Land/Region für den Vereinigten Staaten, untergeordnete Knoten für den Status der Pennsylvania und Washington und Strukturelemente für Städte in diesen Zuständen besteht.  
+ Im folgenden Codebeispiel wird ein Handle für das letzte Element der Strukturansicht nicht aufgeklappter Knoten abgerufen, und klicken Sie dann zeichnet ein 3D-Rechteck, um das Element. In einem vorherigen Abschnitt des Codebeispiels, der nicht angezeigt wird, haben wir eine Strukturansicht, die besteht aus einem Land/Region-Stammknoten für den Vereinigten Staaten, untergeordnete Knoten für die Bundesstaaten Pennsylvania und Washington und Strukturelemente für Städte in diesen Staaten dargestellt.  
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#6](../../mfc/reference/codesnippet/cpp/ctreectrl-class_21.cpp)]  
   
 ##  <a name="getlinecolor"></a>  CTreeCtrl::GetLineColor  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_GETLINECOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773619)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_GETLINECOLOR](/windows/desktop/Controls/tvm-getlinecolor), wie im Windows SDK beschrieben.  
   
 ```  
 COLORREF GetLineColor() const;  
@@ -941,7 +941,7 @@ COLORREF GetLineColor() const;
  [!code-cpp[NVC_MFC_CTreeCtrl#19](../../mfc/reference/codesnippet/cpp/ctreectrl-class_22.cpp)]  
   
 ##  <a name="getnextitem"></a>  CTreeCtrl::GetNextItem  
- Aufruf dieser Funktion zum Abrufen der Struktur anzeigen, die weist der angegebenen Beziehung, angegeben durch die *nCode* Parameter in *hItem*.  
+ Aufruf dieser Funktion zum Abrufen der Struktur Element anzeigen, die verfügt über die angegebene Beziehung, angegeben durch die *nCode* Parameter zu *hItem*.  
   
 ```  
 HTREEITEM GetNextItem(
@@ -954,17 +954,17 @@ HTREEITEM GetNextItem(
  Handle für ein Strukturelement.  
   
  *nCode*  
- Ein Flag, der angibt, des Typs der Beziehung um *hItem*. Dieses Flag kann einer der folgenden Werte sein:  
+ Ein Flag, der angibt, des Typs der Beziehung um *hItem*. Dieses Flag ist einer der folgenden Werte möglich:  
   
 - TVGN_CARET Ruft das aktuell ausgewählte Element ab.  
   
 - TVGN_CHILD Ruft das erste untergeordnete Element des angegebenen Elements durch den *hItem* Parameter.  
   
-- TVGN_DROPHILITE Ruft das Element, das das Ziel eines Drag-and-Drop-Vorgangs ab.  
+- TVGN_DROPHILITE Ruft das Element, das das Ziel eines Drag & Drop-Vorgangs ab.  
   
 - TVGN_FIRSTVISIBLE Ruft das erste sichtbare Element ab.  
   
-- TVGN_LASTVISIBLE Ruft das letzte Element in der Struktur erweitert. Dies ist das letzte Element in der Strukturansicht im Fenster sichtbar nicht abgerufen werden.  
+- TVGN_LASTVISIBLE Ruft ab, mit der letzten Element in der Struktur erweitert. Dies ist das letzte Element in der Strukturansicht im Fenster sichtbar nicht abgerufen werden.  
   
 - TVGN_NEXT Ruft das nächste nebengeordnete Element ab.  
   
@@ -974,15 +974,15 @@ HTREEITEM GetNextItem(
   
 - TVGN_PREVIOUS Ruft das vorherige gleichgeordnete Element ab.  
   
-- TVGN_PREVIOUSVISIBLE Ruft das erste sichtbare Element, das das angegebene Element vorausgeht.  
+- TVGN_PREVIOUSVISIBLE Ruft das erste sichtbare Element, das das angegebene Element vorangestellt ist.  
   
-- TVGN_ROOT Ruft das erste untergeordnete Element des Stammelements, von dem das angegebene Element gehört.  
+- TVGN_ROOT Ruft das erste untergeordnete Element des Stammelements, der das angegebene Element gehört.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Das Handle des nächsten Elements, wenn erfolgreich; andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion gibt NULL zurück, wenn das Element abgerufen wird der Stammknoten der Struktur. Wenn Sie diese Nachricht mit dem Flag TVGN_PARENT auf oberster Ebene untergeordnetes Element der Stammknoten der Strukturansicht verwenden, wird die Nachricht z. B. NULL zurückgeben.  
+ Diese Funktion gibt NULL zurück, wenn das Element abgerufen wird der Stammknoten der Struktur. Wenn Sie diese Meldung mit dem Flag TVGN_PARENT auf untergeordnetes Element auf oberster Ebene der Stammknoten der Strukturansicht verwenden, wird die Nachricht z. B. NULL zurück.  
   
 ### <a name="example"></a>Beispiel  
  Ein Beispiel der Verwendung von `GetNextItem` in einer Schleife finden Sie unter [CTreeCtrl::DeleteItem](#deleteitem).  
@@ -990,7 +990,7 @@ HTREEITEM GetNextItem(
  [!code-cpp[NVC_MFC_CTreeCtrl#20](../../mfc/reference/codesnippet/cpp/ctreectrl-class_23.cpp)]  
   
 ##  <a name="getnextsiblingitem"></a>  CTreeCtrl::GetNextSiblingItem  
- Mit dieser Funktion wird zum Abrufen des nächsten nebengeordneten Elements *hItem*.  
+ Mit dieser Funktion können Sie das nächste gleichgeordnete abrufen *hItem*.  
   
 ```  
 HTREEITEM GetNextSiblingItem(HTREEITEM hItem) const;  
@@ -1007,7 +1007,7 @@ HTREEITEM GetNextSiblingItem(HTREEITEM hItem) const;
  [!code-cpp[NVC_MFC_CTreeCtrl#21](../../mfc/reference/codesnippet/cpp/ctreectrl-class_24.cpp)]  
   
 ##  <a name="getnextvisibleitem"></a>  CTreeCtrl::GetNextVisibleItem  
- Mit dieser Funktion wird zum Abrufen der nächsten sichtbaren Elements des *hItem*.  
+ Mit dieser Funktion wird zum Abrufen der nächsten sichtbaren Elements der *hItem*.  
   
 ```  
 HTREEITEM GetNextVisibleItem(HTREEITEM hItem) const;  
@@ -1018,7 +1018,7 @@ HTREEITEM GetNextVisibleItem(HTREEITEM hItem) const;
  Handle für ein Strukturelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das Handle des nächsten Elements sichtbar; andernfalls NULL.  
+ Das Handle des nächsten sichtbaren Elements andernfalls NULL.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CTreeCtrl::SetCheck](#setcheck).  
@@ -1038,13 +1038,13 @@ HTREEITEM GetParentItem(HTREEITEM hItem) const;
  Das Handle des übergeordneten Elements andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion gibt NULL zurück, wenn das übergeordnete Element des angegebenen Elements der Stammknoten der Struktur entspricht.  
+ Diese Funktion gibt NULL zurück, wenn das übergeordnete Element des angegebenen Elements auf den Stammknoten der Struktur ist.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CTreeCtrl::EnsureVisible](#ensurevisible).  
   
 ##  <a name="getprevsiblingitem"></a>  CTreeCtrl::GetPrevSiblingItem  
- Mit dieser Funktion wird zum Abrufen des vorhergehenden gleichgeordneten *hItem*.  
+ Mit dieser Funktion können Sie das vorherige gleichgeordnete abrufen *hItem*.  
   
 ```  
 HTREEITEM GetPrevSiblingItem(HTREEITEM hItem) const;  
@@ -1055,13 +1055,13 @@ HTREEITEM GetPrevSiblingItem(HTREEITEM hItem) const;
  Handle für ein Strukturelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das Handle des vorhergehenden gleichgeordneten; andernfalls NULL.  
+ Das Handle des vorhergehenden gleichgeordneten Objekts andernfalls NULL.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTreeCtrl#22](../../mfc/reference/codesnippet/cpp/ctreectrl-class_25.cpp)]  
   
 ##  <a name="getprevvisibleitem"></a>  CTreeCtrl::GetPrevVisibleItem  
- Mit dieser Funktion wird zum Abrufen der vorherigen sichtbaren Elements des *hItem*.  
+ Mit dieser Funktion können Sie das vorherige sichtbare Element der abrufen *hItem*.  
   
 ```  
 HTREEITEM GetPrevVisibleItem(HTREEITEM hItem) const;  
@@ -1078,14 +1078,14 @@ HTREEITEM GetPrevVisibleItem(HTREEITEM hItem) const;
  [!code-cpp[NVC_MFC_CTreeCtrl#23](../../mfc/reference/codesnippet/cpp/ctreectrl-class_26.cpp)]  
   
 ##  <a name="getrootitem"></a>  CTreeCtrl::GetRootItem  
- Mit dieser Funktion wird zum Abrufen des Stammelements der Strukturansicht-Steuerelement.  
+ Rufen Sie diese Funktion zum Abrufen des Stammelements der Strukturansicht-Steuerelement.  
   
 ```  
 HTREEITEM GetRootItem() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das Handle für das Root-Element andernfalls NULL.  
+ Das Handle des dem Stammelement andernfalls NULL.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CTreeCtrl::EditLabel](#editlabel).  
@@ -1101,10 +1101,10 @@ UINT GetScrollTime() const;
  Die maximale Bildlauf Zeit in Millisekunden.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_GETSCROLLTIME](http://msdn.microsoft.com/library/windows/desktop/bb773625)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_GETSCROLLTIME](/windows/desktop/Controls/tvm-getscrolltime), wie im Windows SDK beschrieben.  
   
 ##  <a name="getselectedcount"></a>  CTreeCtrl::GetSelectedCount  
- Ruft die Anzahl der ausgewählten Elemente im aktuellen Strukturansicht Steuerelement ab.  
+ Ruft die Anzahl der ausgewählten Elemente in das aktuelle Strukturansicht-Steuerelement.  
   
 ```  
 UINT GetSelectedCount();
@@ -1114,10 +1114,10 @@ UINT GetSelectedCount();
  Die Anzahl der ausgewählten Elemente.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [TVM_GETSELECTEDCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb773629) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [TVM_GETSELECTEDCOUNT](/windows/desktop/Controls/tvm-getselectedcount) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="getselecteditem"></a>  CTreeCtrl::GetSelectedItem  
- Mit dieser Funktion wird zum Abrufen des derzeit ausgewählten Elements des Strukturansicht-Steuerelement.  
+ Rufen Sie diese Funktion zum Abrufen des Strukturansicht-Steuerelement des aktuell ausgewählten Elements.  
   
 ```  
 HTREEITEM GetSelectedItem() const;  
@@ -1130,36 +1130,36 @@ HTREEITEM GetSelectedItem() const;
  [!code-cpp[NVC_MFC_CTreeCtrl#24](../../mfc/reference/codesnippet/cpp/ctreectrl-class_27.cpp)]  
   
 ##  <a name="gettextcolor"></a>  CTreeCtrl::GetTextColor  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_GETTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773633)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_GETTEXTCOLOR](/windows/desktop/Controls/tvm-gettextcolor), wie im Windows SDK beschrieben.  
   
 ```  
 COLORREF GetTextColor() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein COLORREF-Wert, der die aktuelle Textfarbe darstellt. Wenn dieser Wert-1 ist, wird das Steuerelement die Systemfarbe für die Farbe des Textes verwendet.  
+ Eine COLORREF-Wert, der die aktuelle Farbe des Texts darstellt. Wenn dieser Wert-1 ist, wird das Steuerelement die Systemfarbe für die Farbe des Textes verwendet.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CTreeCtrl::SetTextColor](#settextcolor).  
   
 ##  <a name="gettooltips"></a>  CTreeCtrl::GetToolTips  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb773729)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_GETTOOLTIPS](/windows/desktop/Controls/tvm-gettooltips), wie im Windows SDK beschrieben.  
   
 ```  
 CToolTipCtrl* GetToolTips() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) Objekt durch die Strukturansicht-Steuerelements verwendet werden soll. Wenn die [erstellen](#create) Memberfunktion verwendet die Formatvorlage TVS_NOTOOLTIPS und keine QuickInfos werden verwendet, wird NULL zurückgegeben.  
+ Ein Zeiger auf eine [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) Objekt, das von der Strukturansicht-Steuerelement verwendet werden. Wenn die [erstellen](#create) Memberfunktion verwendet das Format TVS_NOTOOLTIPS und keine QuickInfos werden verwendet, wird NULL zurückgegeben.  
   
 ### <a name="remarks"></a>Hinweise  
- Die MFC-Implementierung von `GetToolTips` gibt eine `CToolTipCtrl` -Objekt, das durch die Strukturansicht-Steuerelement, statt ein Handle für ein QuickInfo-Steuerelement verwendet wird.  
+ Die MFC-Implementierung von `GetToolTips` gibt eine `CToolTipCtrl` -Objekt, das von der Strukturansicht, anstatt ein Handle für ein QuickInfo-Steuerelement verwendet wird.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTreeCtrl#25](../../mfc/reference/codesnippet/cpp/ctreectrl-class_28.cpp)]  
   
 ##  <a name="getvisiblecount"></a>  CTreeCtrl::GetVisibleCount  
- Mit dieser Funktion wird zum Abrufen der Anzahl der sichtbaren Elemente in einem Strukturansicht-Steuerelement.  
+ Rufen Sie diese Funktion, um die Anzahl der sichtbaren Elemente in einem Strukturansicht-Steuerelement abzurufen.  
   
 ```  
 UINT GetVisibleCount() const;  
@@ -1172,7 +1172,7 @@ UINT GetVisibleCount() const;
   Siehe das Beispiel für [CTreeCtrl::SetCheck](#setcheck).  
   
 ##  <a name="hittest"></a>  CTreeCtrl::HitTest  
- Rufen Sie diese Funktion, um die Position des angegebenen Punkt relativ zum Clientbereich des einem Strukturansicht-Steuerelement zu bestimmen.  
+ Mit dieser Funktion können Sie die Bestimmung des Speicherorts für den angegebenen Punkt relativ zum Clientbereich von einem Strukturansicht-Steuerelement.  
   
 ```  
 HTREEITEM HitTest(
@@ -1184,42 +1184,42 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
   
 ### <a name="parameters"></a>Parameter  
  *pt*  
- Clientkoordinaten des Punkts zu testen.  
+ Clientkoordinaten des Punkts um zu testen.  
   
  *pFlags*  
- Ein Zeiger auf eine ganze Zahl, die Informationen zu den Ergebnissen des Treffertests empfängt. Kann es sich um eine oder mehrere der Werte aufgeführt, unter der `flags` Element im Abschnitt "Hinweise".  
+ Zeiger auf eine ganze Zahl, die Informationen zu den Ergebnissen des Treffertests empfängt. Es kann eine oder mehrere der Werte aufgeführt, unter der `flags` Element im Abschnitt "Hinweise".  
   
  *pHitTestInfo*  
- Adresse der einen [TVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb773448) Struktur, die die Position zum Testen und die Treffer enthält Informationen zu den Ergebnissen des Treffertests empfängt.  
+ Adresse von einem [TVHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtvhittestinfo) Struktur, die die Position zum Testen und die Treffer enthält Informationen über die Ergebnisse des Treffertests empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das Handle des Elements Ansicht Struktur, die den angegebenen Punkt oder NULL belegt werden, wenn kein Element mit den Punkt belegt.  
+ Das Handle des Strukturansichtselements an, die der angegebene Punkt oder NULL, belegt, wenn kein Element mit den Zeitpunkt belegt.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn diese Funktion aufgerufen wird, die *pt* Parameter gibt an, die Koordinaten des Punkts zu testen. Die Funktion gibt das Handle für das Element am angegebenen Punkt oder NULL, wenn kein Element mit den Punkt belegt. Darüber hinaus die *pFlags* Parameter enthält einen Wert, der den Speicherort des angegebenen Punkt angibt. Dabei sind folgende Werte möglich:  
+ Wenn diese Funktion aufgerufen wird, die *pt* Parameter gibt an, die Koordinaten des Punkts, um zu testen. Die Funktion gibt das Handle für das Element am angegebenen Punkt oder NULL, wenn kein Element mit den Zeitpunkt belegt. Darüber hinaus die *pFlags* -Parameter enthält einen Wert, der den Speicherort des angegebenen Punkts angibt. Dabei sind folgende Werte möglich:  
   
 |||  
 |-|-|  
 |Wert|Bedeutung|  
-|TVHT_ABOVE|Über den Clientbereich.|  
+|TVHT_ABOVE|Oberhalb des Clientbereichs.|  
 |TVHT_BELOW|Unterhalb des Clientbereichs.|  
 |TVHT_NOWHERE|In den Clientbereich, jedoch unterhalb des letzten Elements.|  
-|TVHT_ONITEM|Auf die Bitmap oder die Bezeichnung, die einem Element zugeordnet.|  
+|TVHT_ONITEM|Auf dem Bitmap oder ein Element zugeordnete Bezeichnung.|  
 |TVHT_ONITEMBUTTON|Klicken Sie auf die Schaltfläche, die einem Element zugeordnet wird.|  
 |TVHT_ONITEMICON|Klicken Sie auf die Bitmap, die einem Element zugeordnet wird.|  
 |TVHT_ONITEMINDENT|In den Einzug, der einem Element zugeordnet wird.|  
-|TVHT_ONITEMLABEL|Klicken Sie auf die Bezeichnung (String), dem ein Element zugeordnet sind.|  
+|TVHT_ONITEMLABEL|Klicken Sie auf die Bezeichnung (Zeichenfolge), einem Element zugeordnet.|  
 |TVHT_ONITEMRIGHT|Im Bereich rechts neben einem Element.|  
 |TVHT_ONITEMSTATEICON|Klicken Sie auf das Symbol für den Status für ein Strukturansicht-Element, das in einem benutzerdefinierten Zustand befindet.|  
 |TVHT_TOLEFT|Auf der linken Seite des Clientbereichs.|  
-|TVHT_TORIGHT|Auf der rechten Seite des Clientbereichs.|  
+|TVHT_TORIGHT|Klicken Sie auf der rechten Seite des Clientbereichs.|  
 |||  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTreeCtrl#26](../../mfc/reference/codesnippet/cpp/ctreectrl-class_29.cpp)]  
   
 ##  <a name="insertitem"></a>  CTreeCtrl::InsertItem  
- Mit dieser Funktion wird zum Einfügen eines neuen Elements in einem Strukturansicht-Steuerelement.  
+ Rufen Sie diese Funktion zum Einfügen eines neuen Elements in einem Strukturansicht-Steuerelement.  
   
 ```  
 HTREEITEM InsertItem(LPTVINSERTSTRUCT lpInsertStruct);
@@ -1253,37 +1253,37 @@ HTREEITEM InsertItem(
   
 ### <a name="parameters"></a>Parameter  
  *lpInsertStruct*  
- Ein Zeiger auf eine `TVINSERTSTRUCT` , die die Attribute der Struktur Ansicht einzufügenden Elements angibt.  
+ Ein Zeiger auf eine `TVINSERTSTRUCT` , angibt, dass die Attribute des das Strukturansichtselement eingefügt werden soll.  
   
  *nMask*  
- Ganze Zahl, welche Attribute festgelegt. Finden Sie unter der `TVITEM` Struktur im Windows SDK.  
+ Ganze Zahl, welche Attribute festlegen. Finden Sie unter den `TVITEM` Struktur im Windows SDK.  
   
  *lpszItem*  
  Die Adresse einer Zeichenfolge, die den Text des Elements enthält.  
   
- *nImage*  
- Index, der das Bild des Elements in der Strukturansicht Bildliste.  
+ *Nbild*  
+ Index des Elements Bildes in der Strukturansicht-Steuerelement die Bildliste.  
   
  *nSelectedImage*  
- Der Index des ausgewählten Elementbild in der Strukturansicht Bildliste.  
+ Der Index des ausgewählten Images von des Elements in der Strukturansicht-Steuerelement die Bildliste.  
   
  *nState*  
- Gibt Werte für die Element-Zustände. Weitere Informationen finden Sie Ansicht Steuerelement Elementzustände des Struktursteuerung in das Windows SDK für eine Liste der entsprechenden Status.  
+ Gibt Werte für das Element-Zustände. Finden Sie unter Ansicht Steuerelement Elementzustände des Struktursteuerung im Windows SDK für eine Liste der entsprechenden Status.  
   
  *nStateMask*  
- Gibt an, welche Zustände festgelegt werden. Finden Sie unter der `TVITEM` Struktur im Windows SDK.  
+ Gibt an, welche Zustände festgelegt werden. Finden Sie unter den `TVITEM` Struktur im Windows SDK.  
   
  *lParam*  
- Ein 32-Bit-anwendungsspezifische Wert dem Element zugeordnet.  
+ 32-Bit-anwendungsspezifische-Wert, das dem Element zugeordnet ist.  
   
  *hParent*  
- Handle, das eingefügte Element übergeordneten Elements.  
+ Handle das eingefügte Element übergeordneten Elements.  
   
  *hInsertAfter*  
- Handle des Elements, nach dem das neue Element eingefügt werden soll.  
+ Handle des Elements nach dem das neue Element eingefügt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Handle für das neue Element, wenn erfolgreich; andernfalls NULL.  
+ Handle des neuen Elements, wenn erfolgreich; andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Beispiel zeigt die Situationen, in denen Sie jede Version der Funktion zu verwenden, wenn Sie ein Strukturelement-Steuerelement einfügen möchten.  
@@ -1292,7 +1292,7 @@ HTREEITEM InsertItem(
  [!code-cpp[NVC_MFC_CTreeCtrl#27](../../mfc/reference/codesnippet/cpp/ctreectrl-class_30.cpp)]  
   
 ##  <a name="itemhaschildren"></a>  CTreeCtrl::ItemHasChildren  
- Mit dieser Funktion können Sie bestimmen, ob das Strukturelement vom angegeben *hItem* über untergeordnete Elemente verfügt.  
+ Diese Funktion verwenden, um zu bestimmen, ob das Strukturelement vom angegeben *hItem* über untergeordnete Elemente verfügt.  
   
 ```  
 BOOL ItemHasChildren(HTREEITEM hItem) const;  
@@ -1303,16 +1303,16 @@ BOOL ItemHasChildren(HTREEITEM hItem) const;
  Handle für ein Strukturelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich NULL, wenn das Strukturelement durch angegeben *hItem* verfügt über untergeordnete Elemente; 0, wenn dies nicht der Fall.  
+ Ungleich NULL, wenn das Strukturelement vom angegebenen *hItem* enthält untergeordnete Elemente; 0, wenn dies nicht der Fall.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn also, Sie verwenden können [CTreeCtrl::GetChildItem](#getchilditem) diese untergeordneten Elemente abgerufen werden sollen.  
+ Wenn also, dann können Sie [CTreeCtrl::GetChildItem](#getchilditem) diese untergeordneten Elemente abgerufen werden sollen.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CTreeCtrl::GetSelectedItem](#getselecteditem).  
   
 ##  <a name="mapaccidtoitem"></a>  CTreeCtrl::MapAccIdToItem  
- Ordnet den angegebenen Eingabehilfen-Bezeichner an das Handle eines Strukturansicht Elements in der aktuellen Strukturansicht Steuerelement.  
+ Ordnet den Bezeichner angegebene Zugriff auf das Handle für ein Strukturansichtselement im aktuellen Strukturansicht Steuerelement.  
   
 ```  
 HTREEITEM MapAccIdToItem(UINT uAccId) const;  
@@ -1322,28 +1322,28 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *uAccId*|Ein Eingabehilfen-Bezeichner für ein Element in der Strukturansicht Element.|  
+|*uAccId*|[in] Ein Bezeichner der Barrierefreiheit für ein Element in der Strukturansicht-Element.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das Handle für ein Strukturansicht Element ( `HTREEITEM`), entspricht die *uAccId* Parameter. Weitere Informationen finden Sie unter der *hItem* Mitglied der [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) Struktur.  
+ Das Handle für ein Strukturansichtselement ( `HTREEITEM`), entspricht die *uAccId* Parameter. Weitere Informationen finden Sie unter den *hItem* Mitglied der [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
- Eingabehilfen sind, dass Anwendungen, mit deren Hilfe Personen mit behinderungen Computern verwenden. Ein Eingabehilfen-Bezeichner wird verwendet, durch die `IAccessible` Schnittstelle, um ein Element in einem Fenster eindeutig anzugeben. Weitere Informationen zu Eingabehilfen-IDs zu suchen, für das Thema "Zu Active Accessibility-Unterstützung" auf [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).  
+ Eingabehilfen sind, dass Anwendungen, die Personen mit behinderungen ermöglichen Computern verwenden. Ein Bezeichner für die Barrierefreiheit wird verwendet, durch die `IAccessible` Schnittstelle eindeutig an ein Element in einem Fenster. Weitere Informationen zu Eingabehilfen-IDs, suchen Sie nach dem Thema "Informationen zu Active Accessibility-Unterstützung" unter [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).  
   
- Diese Methode sendet die [TVM_MAPACCIDTOHTREEITEM](http://msdn.microsoft.com/library/windows/desktop/bb773734) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [TVM_MAPACCIDTOHTREEITEM](/windows/desktop/Controls/tvm-mapaccidtohtreeitem) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert eine Variable `m_treeCtrl`, d. h. auf das aktuelle Strukturansicht Steuerelement verwendet. Das Codebeispiel definiert auch eine Ganzzahl ohne Vorzeichen und mehreren HTREEITEM-Variablen. Diese Variablen werden im nächsten Beispiel verwendet.  
+ Das folgende Codebeispiel definiert eine Variable, `m_treeCtrl`, d. h. für den Zugriff auf das aktuelle Strukturansicht-Steuerelement. Im Codebeispiel wird definiert auch eine Ganzzahl ohne Vorzeichen und mehreren HTREEITEM-Variablen. Diese Variablen werden im nächsten Beispiel verwendet.  
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel verwendet einen Eingabehilfen-Bezeichner und die [CTreeCtrl::MapAccIdToItem](#mapaccidtoitem) Methode, um ein Handle für das Stammelement der Strukturansicht abzurufen. Im Beispiel wird das Handle und die [CTreeCtrl::GetItemPartRect](#getitempartrect) Methode, um ein 3D Rechteck aus, um das Element zu zeichnen. In einem früheren Abschnitt des Codebeispiels, die nicht angezeigt wird, erstellt es eine Strukturansicht, die einen Stammknoten für Land/Region für den Vereinigten Staaten, untergeordnete Knoten für den Status der Pennsylvania und Washington und Strukturelemente für Städte in diesen Zuständen besteht. Es verwendet die [CTreeCtrl::MapItemToAccID](#mapitemtoaccid) Methode, um das Stammelement der Strukturansicht mit einer ID, Eingabehilfen zuzuordnen.  
+ Das folgende Codebeispiel verwendet einen Bezeichner für die Barrierefreiheit und [CTreeCtrl::MapAccIdToItem](#mapaccidtoitem) Methode, um ein Handle für das Stammelement der Strukturansicht abzurufen. Im Beispiel wird das Handle und die [CTreeCtrl::GetItemPartRect](#getitempartrect) Methode, um ein 3D-Objekt Rechteck aus, um das Element gezeichnet werden soll. In einem vorherigen Abschnitt des Codebeispiels, der nicht angezeigt wird, haben wir eine Strukturansicht, die besteht aus einem Land/Region-Stammknoten für den Vereinigten Staaten, untergeordnete Knoten für die Bundesstaaten Pennsylvania und Washington und Strukturelemente für Städte in diesen Staaten dargestellt. Verwendet die [CTreeCtrl::MapItemToAccID](#mapitemtoaccid) Methode, einen Bezeichner für die Barrierefreiheit des Strukturansicht-Stammelements zugeordnet werden soll.  
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#5](../../mfc/reference/codesnippet/cpp/ctreectrl-class_18.cpp)]  
   
 ##  <a name="mapitemtoaccid"></a>  CTreeCtrl::MapItemToAccID  
- Ordnet das angegebene Handle eines Strukturansicht Elements in der aktuellen Strukturansicht Steuerelement in einen Bezeichner für die Barrierefreiheit.  
+ Ordnet das angegebene Handle ein Strukturansichtselement im aktuellen Strukturansicht Steuerelement auf einen Bezeichner für die Barrierefreiheit.  
   
 ```  
 UINT MapItemToAccID(HTREEITEM hItem) const;  
@@ -1353,28 +1353,28 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *hItem*|Ein Handle eines Strukturansicht Elements im Steuerelement. Weitere Informationen finden Sie unter der *hItem* Mitglied der [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) Struktur.|  
+|*hItem*|[in] Ein Handle eines Baumansicht-Elements im Steuerelement. Weitere Informationen finden Sie unter den *hItem* Mitglied der [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) Struktur.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Eingabehilfen-Identifier, entspricht die *hItem* Parameter.  
+ Die Barrierefreiheit-Identifier, entspricht die *hItem* Parameter.  
   
 ### <a name="remarks"></a>Hinweise  
- Eingabehilfen sind, dass Anwendungen, mit deren Hilfe Personen mit behinderungen Computern verwenden. Ein Eingabehilfen-Bezeichner wird verwendet, durch die `IAccessible` Schnittstelle, um ein Element in einem Fenster eindeutig anzugeben. Weitere Informationen zu Eingabehilfen-IDs zu suchen, für das Thema "Zu Active Accessibility-Unterstützung" auf [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).  
+ Eingabehilfen sind, dass Anwendungen, die Personen mit behinderungen ermöglichen Computern verwenden. Ein Bezeichner für die Barrierefreiheit wird verwendet, durch die `IAccessible` Schnittstelle eindeutig an ein Element in einem Fenster. Weitere Informationen zu Eingabehilfen-IDs, suchen Sie nach dem Thema "Informationen zu Active Accessibility-Unterstützung" unter [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).  
   
- Diese Methode sendet die [TVM_MAPHTREEITEMTOACCID](http://msdn.microsoft.com/library/windows/desktop/bb773735) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [TVM_MAPHTREEITEMTOACCID](/windows/desktop/Controls/tvm-maphtreeitemtoaccid) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert eine Variable `m_treeCtrl`, d. h. auf das aktuelle Strukturansicht Steuerelement verwendet. Das Codebeispiel definiert auch eine Ganzzahl ohne Vorzeichen und mehreren HTREEITEM-Variablen. Diese Variablen werden im nächsten Beispiel verwendet.  
+ Das folgende Codebeispiel definiert eine Variable, `m_treeCtrl`, d. h. für den Zugriff auf das aktuelle Strukturansicht-Steuerelement. Im Codebeispiel wird definiert auch eine Ganzzahl ohne Vorzeichen und mehreren HTREEITEM-Variablen. Diese Variablen werden im nächsten Beispiel verwendet.  
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel ruft eine ID für ein Element des Strukturansicht Steuerelement ab. In einem früheren Abschnitt des Codebeispiels, die nicht angezeigt wird, erstellt es eine Strukturansicht, die einen Stammknoten für Land/Region für den Vereinigten Staaten, untergeordnete Knoten für den Status der Pennsylvania und Washington und Strukturelemente für Städte in diesen Zuständen besteht. Dieses Codebeispiel ruft eine eindeutige Identifikationsnummer für den Stammknoten für das Land/Region ab.  
+ Im folgenden Codebeispiel ruft eine ID für ein Element des Strukturansicht Steuerelement ab. In einem vorherigen Abschnitt des Codebeispiels, der nicht angezeigt wird, haben wir eine Strukturansicht, die besteht aus einem Land/Region-Stammknoten für den Vereinigten Staaten, untergeordnete Knoten für die Bundesstaaten Pennsylvania und Washington und Strukturelemente für Städte in diesen Staaten dargestellt. Dieses Codebeispiel ruft eine eindeutige Identifikationsnummer für den Stammknoten für das Land/Region ab.  
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#2](../../mfc/reference/codesnippet/cpp/ctreectrl-class_31.cpp)]  
   
 ##  <a name="select"></a>  CTreeCtrl::Select  
- Mit dieser Funktion können Sie wählen Sie das Element der angegebenen Struktur anzeigen, das Element per Bildlauf anzeigen oder das Element neu gezeichnet werden im entsprechenden Stil verwendet, um das Ziel eines Drag-and-Drop-Vorgangs anzugeben.  
+ Rufen Sie diese Funktion, um das angegebene Strukturansichtselement auswählen, führen Sie das Element in der Ansicht einen Bildlauf oder das Element neu zeichnen, im Format verwendet, um das Ziel eines Drag & Drop-Vorgangs anzugeben.  
   
 ```  
 BOOL Select(
@@ -1391,21 +1391,21 @@ BOOL Select(
   
 - TVGN_CARET legt die Auswahl auf das angegebene Element fest.  
   
-- Zeichnet TVGN_DROPHILITE verwendet das angegebene Element im entsprechenden Stil an, dass das Ziel eines Drag-and-Drop-Vorgangs.  
+- TVGN_DROPHILITE zeichnet verwendet das angegebene Element im Format, um das Ziel eines Drag & Drop-Vorgangs anzugeben.  
   
-- TVGN_FIRSTVISIBLE verschiebt die Struktur anzeigen vertikal, sodass das angegebene Element der ersten sichtbaren Elements ist.  
+- TVGN_FIRSTVISIBLE führt einen Bildlauf im Strukturansicht-vertikal, damit das angegebene Element das erste sichtbare Element ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn *nCode* enthält den Wert TVGN_CARET, das übergeordnete Fenster empfängt die benachrichtigungsmeldungen TVN_SELCHANGING und eine TVN_SELCHANGED. Wenn das angegebene Element das untergeordnete Element eines reduzierten übergeordneten Elements ist, wird außerdem der übergeordneten Liste der untergeordneten Elemente erweitert, um das angegebene Element anzuzeigen. In diesem Fall erhält das übergeordnete Fenster die benachrichtigungsmeldungen TVN_ITEMEXPANDING und TVN_ITEMEXPANDED.  
+ Wenn *nCode* enthält den Wert TVGN_CARET, das übergeordnete Fenster empfängt die TVN_SELCHANGING und eine TVN_SELCHANGED Benachrichtigungsnachrichten erstellt werden. Wenn das angegebene Element das untergeordnete Element eines reduzierten übergeordneten Elements ist, wird darüber hinaus das übergeordnete Element der Liste der untergeordneten Elemente erweitert, um das angegebene Element anzuzeigen. In diesem Fall empfängt das übergeordnete Fenster die TVN_ITEMEXPANDING und TVN_ITEMEXPANDED Benachrichtigungsnachrichten erstellt werden.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CTreeCtrl::HitTest](#hittest).  
   
 ##  <a name="selectdroptarget"></a>  CTreeCtrl::SelectDropTarget  
- Rufen Sie diese Funktion, um das Element neu gezeichnet werden im entsprechenden Stil verwendet, um das Ziel eines Drag-and-Drop-Vorgangs anzugeben.  
+ Rufen Sie diese Funktion, um das Element neu gezeichnet werden im entsprechenden Stil verwendet, um das Ziel eines Drag & Drop-Vorgangs anzugeben.  
   
 ```  
 BOOL SelectDropTarget(HTREEITEM hItem);
@@ -1422,7 +1422,7 @@ BOOL SelectDropTarget(HTREEITEM hItem);
  [!code-cpp[NVC_MFC_CTreeCtrl#9](../../mfc/reference/codesnippet/cpp/ctreectrl-class_9.cpp)]  
   
 ##  <a name="selectitem"></a>  CTreeCtrl::SelectItem  
- Rufen Sie diese Funktion, um die angegebene Ansicht Strukturelement auszuwählen.  
+ Rufen Sie diese Funktion, um das angegebene Strukturansichtselement auswählen.  
   
 ```  
 BOOL SelectItem(HTREEITEM hItem);
@@ -1436,13 +1436,13 @@ BOOL SelectItem(HTREEITEM hItem);
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn *hItem* NULL ist, und klicken Sie dann diese Funktion wird kein Element ausgewählt.  
+ Wenn *hItem* NULL ist, und klicken Sie dann diese Funktion kein Element ausgewählt.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTreeCtrl#26](../../mfc/reference/codesnippet/cpp/ctreectrl-class_29.cpp)]  
   
 ##  <a name="selectsetfirstvisible"></a>  CTreeCtrl::SelectSetFirstVisible  
- Mit dieser Funktion können Sie die Strukturansicht vertikaler Bildlauf durchgeführt wird, damit das angegebene Element der ersten sichtbaren Elements ist.  
+ Mit dieser Funktion können Sie die Strukturansicht einen vertikalen Bildlauf durchführen, damit das angegebene Element das erste sichtbare Element ist.  
   
 ```  
 BOOL SelectSetFirstVisible(HTREEITEM hItem);
@@ -1450,7 +1450,7 @@ BOOL SelectSetFirstVisible(HTREEITEM hItem);
   
 ### <a name="parameters"></a>Parameter  
  *hItem*  
- Das Handle des dem Strukturelement als ersten sichtbaren Elements festgelegt werden.  
+ Handle des Strukturelements, als das erste sichtbare Element festgelegt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -1462,7 +1462,7 @@ BOOL SelectSetFirstVisible(HTREEITEM hItem);
  [!code-cpp[NVC_MFC_CTreeCtrl#28](../../mfc/reference/codesnippet/cpp/ctreectrl-class_32.cpp)]  
   
 ##  <a name="setautoscrollinfo"></a>  CTreeCtrl::SetAutoscrollInfo  
- Legt die Rate der automatischen Bildlauf des aktuellen Strukturansicht Steuerelements fest.  
+ Legt die Rate der automatischen Bildlauf des aktuellen Baumansicht-Steuerelements fest.  
   
 ```  
 BOOL SetAutoscrollInfo(
@@ -1474,29 +1474,29 @@ BOOL SetAutoscrollInfo(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *uPixelsPerSec*|Die Anzahl der Pixel pro Sekunde, um einen Bildlauf durchzuführen.|  
-|[in] *uUpdateTime*|Das Zeitintervall zwischen den Updates des Steuerelements.|  
+|*uPixelsPerSec*|[in] Die Anzahl der Pixel pro Sekunde, um einen Bildlauf durchführen.|  
+|*uUpdateTime*|[in] Das Zeitintervall zwischen den Updates des Steuerelements.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt immer "true" zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Die automatischen Bildlauf-Parameter werden verwendet, ein Element Bildlauf anzuzeigende, die derzeit nicht angezeigt wird. Das Strukturansicht Steuerelement benötigen den erweiterten Stil, dies wird im beschrieben TVS_EX_AUTOHSCROLL [Strukturansicht Steuerelement erweiterten Stile](http://msdn.microsoft.com/library/windows/desktop/bb759981).  
+ Die automatischen Bildlauf-Parameter werden verwendet, um ein Element in der Ansicht zu scrollen, die derzeit nicht sichtbar ist. Das Strukturansicht-Steuerelement benötigen den erweiterten Stil, dies wird im beschrieben TVS_EX_AUTOHSCROLL [Strukturansicht Steuerelement Erweiterte Stile](/windows/desktop/Controls/tree-view-control-window-extended-styles).  
   
- Diese Methode sendet die [TVM_SETAUTOSCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb773738) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [TVM_SETAUTOSCROLLINFO](/windows/desktop/Controls/tvm-setautoscrollinfo) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert eine Variable `m_treeCtrl`, d. h. auf das aktuelle Strukturansicht Steuerelement verwendet. Das Codebeispiel definiert auch eine Ganzzahl ohne Vorzeichen und mehreren HTREEITEM-Variablen. Diese Variablen werden im nächsten Beispiel verwendet.  
+ Das folgende Codebeispiel definiert eine Variable, `m_treeCtrl`, d. h. für den Zugriff auf das aktuelle Strukturansicht-Steuerelement. Im Codebeispiel wird definiert auch eine Ganzzahl ohne Vorzeichen und mehreren HTREEITEM-Variablen. Diese Variablen werden im nächsten Beispiel verwendet.  
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel legt den automatischen Bildlauf-Verhalten des aktuellen Strukturansicht Steuerelements fest. In einem früheren Abschnitt des Codebeispiels, die nicht angezeigt wird, erstellt es eine Strukturansicht, die einen Stammknoten für Land/Region für den Vereinigten Staaten, untergeordnete Knoten für den Status der Pennsylvania und Washington und Strukturelemente für Städte in diesen Zuständen besteht. Wir haben vorgenommen absichtlich das Strukturansicht Steuerelement schmale, damit er automatisch einen Bildlauf durchführen muss zum Anzeigen des Strukturelements, das Fokus besitzt. Im Codebeispiel wird das Strukturansicht-Steuerelement, um den automatischen Bildlauf 30 Pixel pro Sekunde alle 5 Sekunden, bis das Strukturelement in der Sicht ist.  
+ Das folgende Codebeispiel legt den automatischen Bildlauf-Verhalten des aktuellen Baumansicht-Steuerelements fest. In einem vorherigen Abschnitt des Codebeispiels, der nicht angezeigt wird, haben wir eine Strukturansicht, die besteht aus einem Land/Region-Stammknoten für den Vereinigten Staaten, untergeordnete Knoten für die Bundesstaaten Pennsylvania und Washington und Strukturelemente für Städte in diesen Staaten dargestellt. Wir vorgenommen absichtlich das Strukturansicht-Steuerelement eng, damit es automatisch Scrollen muss, um das Strukturelement anzuzeigen, das den Fokus besitzt. Im Codebeispiel wird das Strukturansicht-Steuerelement, um den automatischen Bildlauf 30 Pixel pro Sekunde alle 5 Sekunden, bis das Strukturelement angezeigt wird.  
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#4](../../mfc/reference/codesnippet/cpp/ctreectrl-class_33.cpp)]  
   
 ##  <a name="setbkcolor"></a>  CTreeCtrl::SetBkColor  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773741)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_SETBKCOLOR](/windows/desktop/Controls/tvm-setbkcolor), wie im Windows SDK beschrieben.  
   
 ```  
 COLORREF SetBkColor(COLORREF clr);
@@ -1504,16 +1504,16 @@ COLORREF SetBkColor(COLORREF clr);
   
 ### <a name="parameters"></a>Parameter  
  *CLR*  
- Ein COLORREF-Wert, der die neue Hintergrundfarbe enthält. Wenn dieser Wert-1 ist, wird das Steuerelement auf die Systemfarbe für die Farbe des Hintergrunds mit zurückgesetzt.  
+ Eine COLORREF-Wert, der die neue Hintergrundfarbe enthält. Wenn dieser Wert-1 ist, wird das Steuerelement wiederhergestellt, auf die Systemfarbe für die Farbe des Hintergrunds.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein COLORREF-Wert, der die aktuelle Textfarbe darstellt. Wenn dieser Wert-1 ist, wird das Steuerelement die Systemfarbe für die Farbe des Textes verwendet.  
+ Eine COLORREF-Wert, der die aktuelle Farbe des Texts darstellt. Wenn dieser Wert-1 ist, wird das Steuerelement die Systemfarbe für die Farbe des Textes verwendet.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CTreeCtrl::SetTextColor](#settextcolor).  
   
 ##  <a name="setcheck"></a>  CTreeCtrl::SetCheck  
- Rufen Sie diese Memberfunktion um den Aktivierungszustand für ein Strukturelement-Steuerelement festzulegen.  
+ Rufen Sie diese Memberfunktion zum Festlegen des Kontrollkästchen-Status für ein Strukturelement-Steuerelement.  
   
 ```  
 BOOL SetCheck(
@@ -1523,27 +1523,27 @@ BOOL SetCheck(
   
 ### <a name="parameters"></a>Parameter  
  *hItem*  
- Das HTREEITEM Kontrollkästchen statusänderung zu empfangen.  
+ Die HTREEITEM, um die Überprüfung der statusänderung zu erhalten.  
   
- *Weitere Informationen finden Sie*  
- Gibt an, ob das Strukturelement-Steuerelement aktiviert oder deaktiviert werden soll. Standardmäßig `SetCheck` legt das Element, das überprüft werden soll.  
+ *Weitere Informationen finden*  
+ Gibt an, ob das Strukturelement-Steuerelement aktiviert oder deaktiviert werden. In der Standardeinstellung `SetCheck` legt das Element, das überprüft werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn das Strukturelement-Steuerelement aktiviert ist ( *Weitere Informationen finden Sie* auf "true" festgelegt), das Element mit einem benachbarten Häkchen angezeigt wird.  
+ Wenn das Strukturelement-Steuerelement aktiviert ist ( *besuchen* auf "true" festgelegt), das Element mit einem Häkchen neben angezeigt wird.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTreeCtrl#29](../../mfc/reference/codesnippet/cpp/ctreectrl-class_34.cpp)]  
   
 ### <a name="example"></a>Beispiel  
- Um Kontrollkästchen verwenden zu können, legen Sie TVS_CHECKBOXES vor dem Auffüllen des Strukturansicht-Steuerelements.  
+ Um Kontrollkästchen zu verwenden, legen Sie TVS_CHECKBOXES vor dem Auffüllen der Strukturansicht aus.  
   
  [!code-cpp[NVC_MFC_CTreeCtrl#30](../../mfc/reference/codesnippet/cpp/ctreectrl-class_35.cpp)]  
   
 ##  <a name="setextendedstyle"></a>  CTreeCtrl::SetExtendedStyle  
- Legt die erweiterten Stile für das aktuelle Strukturansicht Steuerelement fest.  
+ Legt fest, die erweiterten Stile für das aktuelle Strukturansicht-Steuerelement.  
   
 ```  
 DWORD SetExtendedStyle(
@@ -1555,29 +1555,29 @@ DWORD SetExtendedStyle(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *DwExMask*|Eine Bitmaske, die angibt, welche Formate in der aktuellen Strukturansicht Steuerelement von dieser Methode betroffen sind. Wenn dieser Parameter auf 0 (null) ist, wird es ignoriert und der Wert der *DwExStyles* Parameter das Strukturansicht-Steuerelement zugewiesen ist.<br /><br /> Geben Sie 0 (null) oder eine bitweise Kombination (OR) von Formaten, die in beschriebenen [Strukturansicht Steuerelement erweitert Stile](http://msdn.microsoft.com/library/windows/desktop/bb759981).|  
-|[in] *DwExStyles*|Eine Bitmaske, die angibt, welche Formate in der aktuellen Strukturansicht auf setzen oder löschen zu steuern.<br /><br /> Eine Kombination der Formate festlegen möchten, geben eine bitweise Kombination (OR) von Formaten, die in beschriebenen [Strukturansicht Steuerelement erweitert Stile](http://msdn.microsoft.com/library/windows/desktop/bb759981). Um einen Satz von Formatvorlagen zu löschen, geben Sie 0 (null).|  
+|*dwExMask*|[in] Eine Bitmaske, die angibt, welche Formate im aktuellen Strukturansicht Steuerelement von dieser Methode betroffen sind. Wenn dieser Parameter 0 (null) ist, wird er ignoriert und der Wert von der *DwExStyles* Parameter dem Strukturansicht-Steuerelement zugewiesen ist.<br /><br /> Geben Sie 0 (null) oder eine bitweise Kombination (OR) von Formatvorlagen, die in beschriebenen [Strukturansicht Steuerelement Erweiterte Stile](/windows/desktop/Controls/tree-view-control-window-extended-styles).|  
+|*dwExStyles*|[in] Eine Bitmaske, die angibt, welche Formate in der aktuellen Struktur-Ansicht zu setzen oder löschen zu steuern.<br /><br /> Geben Sie zum Festlegen einer Kombination von Stilen eine bitweise Kombination (OR) von Formatvorlagen, die in beschriebenen [Strukturansicht Steuerelement Erweiterte Stile](/windows/desktop/Controls/tree-view-control-window-extended-styles). Geben Sie 0 (null), um eine Reihe von Formatvorlagen zu löschen.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Wert, der vorherige enthält, erweiterte Steuerelementtypen.  
+ Ein Wert, der die vorherige enthält erweiterte Stile von Listensteuerelementen.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode löscht die Stile, die der *DwExMask* Parameter, dann wird die Stile, die der *DwExStyles* Parameter. Nur die erweiterten Stile, die die Bits im entsprechen *DwExMask* ändern.  
+ Diese Methode löscht die Stile die *DwExMask* Parameter legt dann die Stile die *DwExStyles* Parameter. Nur die erweiterten Stile, die die Bits im entsprechen *DwExMask* ändern.  
   
- Diese Methode sendet die [TVM_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb773744) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [TVM_SETEXTENDEDSTYLE](/windows/desktop/Controls/tvm-setextendedstyle) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert eine Variable `m_treeCtrl`, d. h. auf das aktuelle Strukturansicht Steuerelement verwendet. Das Codebeispiel definiert auch eine Ganzzahl ohne Vorzeichen und mehreren HTREEITEM-Variablen. Diese Variablen werden im nächsten Beispiel verwendet.  
+ Das folgende Codebeispiel definiert eine Variable, `m_treeCtrl`, d. h. für den Zugriff auf das aktuelle Strukturansicht-Steuerelement. Im Codebeispiel wird definiert auch eine Ganzzahl ohne Vorzeichen und mehreren HTREEITEM-Variablen. Diese Variablen werden im nächsten Beispiel verwendet.  
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird das aktuelle Steuerelement der Strukturansicht den erweiterten Stil TVS_EX_AUTOHSCROLL hinzugefügt. In einem früheren Abschnitt des Codebeispiels, die nicht angezeigt wird, erstellt es eine Strukturansicht, die einen Stammknoten für Land/Region für den Vereinigten Staaten, untergeordnete Knoten für den Status der Pennsylvania und Washington und Strukturelemente für Städte in diesen Zuständen besteht. Wir haben vorgenommen absichtlich das Strukturansicht Steuerelement schmale, damit er automatisch einen Bildlauf durchführen muss zum Anzeigen des Strukturelements, das Fokus besitzt.  
+ Im folgenden Codebeispiel wird das aktuelle Steuerelement der Strukturansicht den erweiterten Stil TVS_EX_AUTOHSCROLL hinzugefügt. In einem vorherigen Abschnitt des Codebeispiels, der nicht angezeigt wird, haben wir eine Strukturansicht, die besteht aus einem Land/Region-Stammknoten für den Vereinigten Staaten, untergeordnete Knoten für die Bundesstaaten Pennsylvania und Washington und Strukturelemente für Städte in diesen Staaten dargestellt. Wir vorgenommen absichtlich das Strukturansicht-Steuerelement eng, damit es automatisch Scrollen muss, um das Strukturelement anzuzeigen, das den Fokus besitzt.  
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#3](../../mfc/reference/codesnippet/cpp/ctreectrl-class_36.cpp)]  
   
 ##  <a name="setimagelist"></a>  CTreeCtrl::SetImageList  
- Mit dieser Funktion wird zum Festlegen der normalen oder Zustand Bildliste für eine Struktur Steuerelement anzeigen und das Steuerelement mit neuen Images neu gezeichnet werden.  
+ Mit dieser Funktion können Sie die normale festgelegt oder Status Bildliste für eine Struktur Steuerelements und das Steuerelement mit der neuen Images neu gezeichnet werden.  
   
 ```  
 CImageList* SetImageList(
@@ -1587,23 +1587,23 @@ CImageList* SetImageList(
   
 ### <a name="parameters"></a>Parameter  
  *pImageList*  
- Zeiger auf die Bildliste zuweisen. Wenn *pImageList* NULL ist, werden alle Abbilder aus dem Strukturansicht-Steuerelement entfernt.  
+ Zeiger auf die Liste der Bilder zuweisen. Wenn *pImageList* NULL ist, alle Bilder aus dem Strukturansicht-Steuerelement entfernt werden.  
   
  *nImageListType*  
- Typ der Bildliste festgelegt. Die Bildliste kann einer der folgenden Werte sein:  
+ Der Typ der Liste der Bilder festlegen. Liste der Bilder ist einer der folgenden Werte möglich:  
   
-- TVSIL_NORMAL legt die normalen Bildliste, die die ausgewählten und nicht ausgewählten Images für das Strukturelement-Ansicht enthält. Sie müssen diesen Status für Overlay-Images verwenden.  
+- TVSIL_NORMAL legt fest, die normale Bildliste an, die die ausgewählte und nicht ausgewählten Images für das Strukturansichtselement enthält. Sie müssen diesen Zustand für Overlay-Images verwenden.  
   
-- TVSIL_STATE legt die Bildliste Zustand, die die Images für die Sicht Strukturelemente enthält, die in einem benutzerdefinierten Zustand befinden.  
+- TVSIL_STATE legt fest, die Bildliste Status, die die Images für Strukturelemente für die Sicht enthält, die in einem benutzerdefinierten Zustand befinden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Zeiger auf die vorherige Bildliste, falls vorhanden; andernfalls NULL.  
+ Zeiger auf die vorherige Bildliste, sofern vorhanden; andernfalls NULL.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CTreeCtrl::GetImageList](#getimagelist).  
   
 ##  <a name="setindent"></a>  CTreeCtrl::SetIndent  
- Mit dieser Funktion wird zum Festlegen der Breite des Einzugs für ein Strukturansicht-Steuerelement und neu gezeichnet werden das Steuerelement entsprechend die neue Breite auf.  
+ Rufen Sie diese Funktion zum Festlegen der Breite des Einzugs für ein Strukturansicht-Steuerelement und das Steuerelement die neue Breite entsprechend neu gezeichnet werden.  
   
 ```  
 void SetIndent(UINT nIndent);
@@ -1611,13 +1611,13 @@ void SetIndent(UINT nIndent);
   
 ### <a name="parameters"></a>Parameter  
  *nIndent*  
- Breite in Pixel, der den Einzug. Wenn *nIndent* ist kleiner als die Mindestbreite systemdefinierte, die neue Breite auf ein Minimum systemdefinierte festgelegt ist.  
+ Breite des Einzugs in Pixel. Wenn *nIndent* ist kleiner als die Mindestbreite systemdefinierte, die neue Breite auf den vom System definierten Minimalwert festgelegt ist.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CTreeCtrl::GetIndent](#getindent).  
   
 ##  <a name="setinsertmark"></a>  CTreeCtrl::SetInsertMark  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_SETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb773753)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_SETINSERTMARK](/windows/desktop/Controls/tvm-setinsertmark), wie im Windows SDK beschrieben.  
   
 ```  
 BOOL SetInsertMark(
@@ -1639,7 +1639,7 @@ BOOL SetInsertMark(
  [!code-cpp[NVC_MFC_CTreeCtrl#31](../../mfc/reference/codesnippet/cpp/ctreectrl-class_37.cpp)]  
   
 ##  <a name="setinsertmarkcolor"></a>  CTreeCtrl::SetInsertMarkColor  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_SETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773755)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_SETINSERTMARKCOLOR](/windows/desktop/Controls/tvm-setinsertmarkcolor), wie im Windows SDK beschrieben.  
   
 ```  
 COLORREF SetInsertMarkColor(COLORREF clrNew);
@@ -1647,16 +1647,16 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
   
 ### <a name="parameters"></a>Parameter  
  *clrNew*  
- Ein COLORREF-Wert, der die Farbe der neuen Einfügemarke enthält.  
+ Eine COLORREF-Wert, der die Farbe der neue Einfügemarke enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein COLORREF-Wert, der die Farbe der vorherigen Einfügemarke enthält.  
+ Eine COLORREF-Wert, der die Farbe der vorherigen Einfügemarke enthält.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CTreeCtrl::GetInsertMarkColor](#getinsertmarkcolor).  
   
 ##  <a name="setitem"></a>  CTreeCtrl::SetItem  
- Mit dieser Funktion wird zum Festlegen der Attribute des Elements angegebene Struktur anzeigen.  
+ Rufen Sie diese Funktion, um die Attribute der angegebenen Strukturansichtselements festzulegen.  
   
 ```  
 BOOL SetItem(TVITEM* pItem);
@@ -1675,45 +1675,45 @@ BOOL SetItem(
   
 ### <a name="parameters"></a>Parameter  
  *pItem*  
- Ein Zeiger auf eine [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) Struktur, die das neue Element enthält Attribute, wie im Windows SDK beschrieben.  
+ Ein Zeiger auf eine [TVITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtvitema) Struktur, die das neue Element enthält Attribute, wie im Windows SDK beschrieben.  
   
  *hItem*  
- Das Handle des Artikels, dessen Attribute festgelegt werden. Finden Sie unter der `hItem` Mitglied der `TVITEM` Struktur im Windows SDK.  
+ Handle des Elements, dessen Attribute werden festgelegt werden. Finden Sie unter den `hItem` Mitglied der `TVITEM` Struktur im Windows SDK.  
   
  *nMask*  
- Ganze Zahl, welche Attribute festgelegt. Finden Sie unter der `mask` Mitglied der `TVITEM` Struktur.  
+ Ganze Zahl, welche Attribute festlegen. Finden Sie unter den `mask` Mitglied der `TVITEM` Struktur.  
   
  *lpszItem*  
  Die Adresse einer Zeichenfolge, die den Text des Elements enthält.  
   
- *nImage*  
- Index, der das Bild des Elements in der Strukturansicht Bildliste. Finden Sie unter der `iImage` Mitglied der `TVITEM` Struktur.  
+ *Nbild*  
+ Index des Elements Bildes in der Strukturansicht-Steuerelement die Bildliste. Finden Sie unter den `iImage` Mitglied der `TVITEM` Struktur.  
   
  *nSelectedImage*  
- Der Index des ausgewählten Elementbild in der Strukturansicht Bildliste. Finden Sie unter der `iSelectedImage` Mitglied der `TVITEM` Struktur.  
+ Der Index des ausgewählten Images von des Elements in der Strukturansicht-Steuerelement die Bildliste. Finden Sie unter den `iSelectedImage` Mitglied der `TVITEM` Struktur.  
   
  *nState*  
- Gibt Werte für die Element-Zustände. Finden Sie unter der `State` Mitglied der `TVITEM` Struktur.  
+ Gibt Werte für das Element-Zustände. Finden Sie unter den `State` Mitglied der `TVITEM` Struktur.  
   
  *nStateMask*  
- Gibt an, welche Zustände festgelegt werden. Finden Sie unter der `stateMask` Mitglied der `TVITEM` Struktur.  
+ Gibt an, welche Zustände festgelegt werden. Finden Sie unter den `stateMask` Mitglied der `TVITEM` Struktur.  
   
  *lParam*  
- Ein 32-Bit-anwendungsspezifische Wert dem Element zugeordnet.  
+ 32-Bit-anwendungsspezifische-Wert, das dem Element zugeordnet ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- In der `TVITEM` -Struktur, die `hItem` Member identifiziert das Element, und die `mask` Element gibt an, welche Attribute festgelegt.  
+ In der `TVITEM` Struktur, die `hItem` identifiziert das Element, und die `mask` -Member gibt an, welche Attribute festlegen.  
   
- Wenn die `mask` Member oder die *nMask* Parameter gibt den Wert der TVIF_TEXT der `pszText` Member oder die *LpszItem* ist die Adresse einer Null-terminierte Zeichenfolge und der `cchTextMax` Element wird ignoriert. Wenn `mask` (oder *nMask*) gibt den Wert der TVIF_STATE der `stateMask` Member oder die *nStateMask* Parameter gibt an, welches Element angegeben wird, ändern und die `state` Member oder *nState* Parameter die Werte für die Länder enthält.  
+ Wenn die `mask` Member oder die *nMask* Parameter gibt den TVIF_TEXT-Wert, der `pszText` Member oder die *LpszItem* ist die Adresse einer Null-terminierte Zeichenfolge und die `cchTextMax` Mitglied wird ignoriert. Wenn `mask` (oder *nMask*) gibt an, den TVIF_STATE-Wert, der `stateMask` Member oder die *nStateMask* Parameter gibt an, welches Element angegeben wird, ändern und die `state` Member oder *nState* Parameter enthält die Werte für diese Zustände.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTreeCtrl#32](../../mfc/reference/codesnippet/cpp/ctreectrl-class_38.cpp)]  
   
 ##  <a name="setitemdata"></a>  CTreeCtrl::SetItemData  
- Mit dieser Funktion wird die 32-Bit-anwendungsspezifische verknüpft sind, durch ein angegebenes Element fest.  
+ Rufen Sie diese Funktion zum Festlegen des 32-Bit-anwendungsspezifische-Wert dem angegebenen Element zugeordnet.  
   
 ```  
 BOOL SetItemData(
@@ -1723,10 +1723,10 @@ BOOL SetItemData(
   
 ### <a name="parameters"></a>Parameter  
  *hItem*  
- Das Handle des Elements, dessen Daten abgerufen werden.  
+ Handle des Elements, dessen Daten abgerufen werden sollen.  
   
  *dwData*  
- Den Wert einer 32-Bit-anwendungsspezifische Verbindung mit den Elementen gemäß *hItem*.  
+ Eine 32-Bit-anwendungsspezifische-Wert dem Element anhand des zugeordneten *hItem*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -1735,7 +1735,7 @@ BOOL SetItemData(
  [!code-cpp[NVC_MFC_CTreeCtrl#33](../../mfc/reference/codesnippet/cpp/ctreectrl-class_39.cpp)]  
   
 ##  <a name="setitemexpandedimageindex"></a>  CTreeCtrl::SetItemExpandedImageIndex  
- Legt den Index des Bilds angezeigt, wenn das angegebene Element des aktuellen Strukturansicht Steuerelements im erweiterten Zustand befindet.  
+ Legt fest, den Index des Bildes, das angezeigt wird, wenn das angegebene Element des aktuellen Baumansicht-Steuerelements im erweiterten Zustand befindet.  
   
 ```  
 BOOL SetItemExpandedImageIndex(
@@ -1747,27 +1747,27 @@ BOOL SetItemExpandedImageIndex(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle für ein Strukturansicht Steuerelement ein Element.|  
-|[in] *iExpandedImage*|Der Index des Bilds angezeigt, wenn das angegebene Element im erweiterten Zustand befindet.|  
+|*hItem*|[in] Handle zu einem Baumansicht-Steuerelement ein Element.|  
+|*iExpandedImage*|[in] Der Index des Bildes, das angezeigt wird, wenn das angegebene Element im erweiterten Zustand befindet.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- "True", wenn diese Methode erfolgreich ist; andernfalls "false".  
+ True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [TVM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb773758) Nachricht, die im Windows SDK beschrieben wird. Weist diese Methode die *iExpandedImage* Parameter an die `iExpandedImage` Mitglied einer [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) Struktur zugewiesen und dann verwendet, die Struktur in der Nachricht.  
+ Diese Methode sendet die [TVM_SETITEM](/windows/desktop/Controls/tvm-setitem) -Nachricht, die im Windows SDK beschrieben wird. Weist diese Methode die *iExpandedImage* Parameter, um die `iExpandedImage` Mitglied einer [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) Struktur, und klicken Sie dann verwendet, die in der Nachricht zu strukturieren.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert eine Variable `m_treeCtrl`, d. h. auf das aktuelle Strukturansicht Steuerelement verwendet. Das Codebeispiel definiert auch eine Ganzzahl ohne Vorzeichen und mehreren HTREEITEM-Variablen. Diese Variablen werden im nächsten Beispiel verwendet.  
+ Das folgende Codebeispiel definiert eine Variable, `m_treeCtrl`, d. h. für den Zugriff auf das aktuelle Strukturansicht-Steuerelement. Im Codebeispiel wird definiert auch eine Ganzzahl ohne Vorzeichen und mehreren HTREEITEM-Variablen. Diese Variablen werden im nächsten Beispiel verwendet.  
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel ist ein triviale Test um zu bestimmen, ob die [CTreeCtrl::GetItemExpandedImageIndex](#getitemexpandedimageindex) -Methode gibt den Wert festlegen, indem die [CTreeCtrl::SetItemExpandedImageIndex](#setitemexpandedimageindex) Methode. In einem früheren Abschnitt des Codebeispiels, die nicht angezeigt wird, erstellt es eine Strukturansicht, die einen Stammknoten für Land/Region für den Vereinigten Staaten, untergeordnete Knoten für den Status der Pennsylvania und Washington und Strukturelemente für Städte in diesen Zuständen besteht.  
+ Das folgende Codebeispiel ist ein trivial Test um zu bestimmen, ob die [CTreeCtrl::GetItemExpandedImageIndex](#getitemexpandedimageindex) -Methode gibt den Wert festlegen, indem die [CTreeCtrl::SetItemExpandedImageIndex](#setitemexpandedimageindex) Methode. In einem vorherigen Abschnitt des Codebeispiels, der nicht angezeigt wird, haben wir eine Strukturansicht, die besteht aus einem Land/Region-Stammknoten für den Vereinigten Staaten, untergeordnete Knoten für die Bundesstaaten Pennsylvania und Washington und Strukturelemente für Städte in diesen Staaten dargestellt.  
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#8](../../mfc/reference/codesnippet/cpp/ctreectrl-class_40.cpp)]  
   
 ##  <a name="setitemheight"></a>  CTreeCtrl::SetItemHeight  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_SETITEMHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb773761)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_SETITEMHEIGHT](/windows/desktop/Controls/tvm-setitemheight), wie im Windows SDK beschrieben.  
   
 ```  
 SHORT SetItemHeight(SHORT cyHeight);
@@ -1775,16 +1775,16 @@ SHORT SetItemHeight(SHORT cyHeight);
   
 ### <a name="parameters"></a>Parameter  
  *cyHeight*  
- Gibt die neue Höhe auf jedes Element in der Strukturansicht in Pixel an. Wenn dieses Argument kleiner als die Höhe der Bilder ist, wird er auf die Höhe der Bilder festgelegt werden. Wenn dieses Argument nicht selbst ist, wird sie nach unten bis zum gerundet werden die nächste Wert selbst. Wenn dieses Argument-1 ist, wird das Steuerelement auf seine Höhe des Standard-Elements mit zurückgesetzt.  
+ Gibt die neue Höhe jedes Elements in der Strukturansicht in Pixel an. Wenn dieses Argument kleiner als die Höhe des Images ist, wird es auf die Höhe der Images festgelegt werden. Wenn dieses Argument nicht gleichmäßig verteilt ist, wird sie nach unten zum gerundet werden die nächsten Wert selbst. Wenn dieses Argument-1 ist, werden das Steuerelement zur Verwendung der Standardelementhöhe zurückgesetzt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die vorherige Höhe der Elemente in Pixel.  
+ Die vorherige Höhe der Elemente, in Pixel.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CTreeCtrl::GetItemHeight](#getitemheight).  
   
 ##  <a name="setitemimage"></a>  CTreeCtrl::SetItemImage  
- Ordnet ein Element Images zu.  
+ Ordnet die Bilder zu einem Element.  
   
 ```  
 BOOL SetItemImage(
@@ -1795,29 +1795,29 @@ BOOL SetItemImage(
   
 ### <a name="parameters"></a>Parameter  
  *hItem*  
- Das Handle des Elements, dessen Image festgelegt werden.  
+ Handle des Elements, dessen Bild festgelegt werden.  
   
- *nImage*  
- Index, der das Bild des Elements in der Strukturansicht Bildliste.  
+ *Nbild*  
+ Index des Elements Bildes in der Strukturansicht-Steuerelement die Bildliste.  
   
  *nSelectedImage*  
- Der Index des ausgewählten Elementbild in der Strukturansicht Bildliste.  
+ Der Index des ausgewählten Images von des Elements in der Strukturansicht-Steuerelement die Bildliste.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Jedes Element in einem Strukturansicht-Steuerelement kann ein Paar von Bitmapbildern zugeordnet haben. Die Bilder werden auf der linken Seite der Bezeichnung eines Elements angezeigt. Ein Bild wird angezeigt, wenn das Element ausgewählt ist, und der andere wird angezeigt, wenn das Element nicht ausgewählt ist. Beispielsweise kann ein Element angezeigt einen Ordner öffnen, wenn diese Option ausgewählt ist und einen geschlossenen Ordner, wenn es nicht aktiviert ist.  
+ Jedes Element in einem Strukturansicht-Steuerelement kann ein Paar von Bitmapbildern zugeordnet haben. Die Bilder werden auf der linken Seite der die Bezeichnung eines Elements angezeigt. Ein Bild wird angezeigt, wenn das Element ist ausgewählt, und der andere wird angezeigt, wenn das Element nicht ausgewählt ist. Beispielsweise kann ein Element anzuzeigen einen geöffneten Ordner, wenn diese Option ausgewählt ist und einen geschlossenen Ordner, wenn es nicht aktiviert ist.  
   
- Rufen Sie diese Funktion, um den Index des Elements und ausgewählte Bild in der Strukturansicht Bildliste festgelegt.  
+ Rufen Sie diese Funktion, um der Index, der das Bild des Elements und dem ausgewählten Bild im Strukturansicht-Steuerelement der Bildliste.  
   
- Weitere Informationen zu Images finden Sie unter [CImageList](../../mfc/reference/cimagelist-class.md).  
+ Weitere Informationen zu Bildern, finden Sie unter [CImageList](../../mfc/reference/cimagelist-class.md).  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CTreeCtrl::GetItemImage](#getitemimage).  
   
 ##  <a name="setitemstate"></a>  CTreeCtrl::SetItemState  
- Legt den Zustand des Elements gemäß *hItem*.  
+ Legt den Zustand des angegebenen Elements vom *hItem*.  
   
 ```  
 BOOL SetItemState(
@@ -1828,10 +1828,10 @@ BOOL SetItemState(
   
 ### <a name="parameters"></a>Parameter  
  *hItem*  
- Das Handle des Elements, dessen Status festgelegt werden.  
+ Handle des Elements, dessen Zustand festgelegt werden.  
   
  *nState*  
- Gibt die neue Zustände für das Element an.  
+ Gibt neue Status für das Element an.  
   
  *nStateMask*  
  Gibt an, welche Zustände geändert werden.  
@@ -1840,13 +1840,13 @@ BOOL SetItemState(
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Informationen zum Status, finden Sie unter [CTreeCtrl::GetItem](#getitem).  
+ Informationen zum Status finden Sie unter [CTreeCtrl::GetItem](#getitem).  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CTreeCtrl::GetItemState](#getitemstate).  
   
 ##  <a name="setitemstateex"></a>  CTreeCtrl::SetItemStateEx  
- Legt die erweiterten Zustand des angegebenen Elements im aktuellen Strukturansicht Steuerelement fest.  
+ Legt den erweiterten Zustand des angegebenen Elements in das aktuelle Strukturansicht-Steuerelement fest.  
   
 ```  
 BOOL SetItemStateEx(
@@ -1858,22 +1858,22 @@ BOOL SetItemStateEx(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle für ein Strukturansicht Steuerelement ein Element.|  
-|[in] *uStateEx*|Die erweiterten Zustand des Elements. Weitere Informationen finden Sie unter der `uStateEx` Mitglied der [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) Struktur.|  
+|*hItem*|[in] Handle zu einem Baumansicht-Steuerelement ein Element.|  
+|*uStateEx*|[in] Die erweiterten Zustand des Elements. Weitere Informationen finden Sie unter den `uStateEx` Mitglied der [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) Struktur.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- "True", wenn diese Methode erfolgreich ist; andernfalls "false".  
+ True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [TVM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb773758) Nachricht, die im Windows SDK beschrieben wird. Weist diese Methode die *uStateEx* Parameter an die `uStateEx` Mitglied einer [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) Struktur zugewiesen und dann verwendet, die Struktur in der Nachricht.  
+ Diese Methode sendet die [TVM_SETITEM](/windows/desktop/Controls/tvm-setitem) -Nachricht, die im Windows SDK beschrieben wird. Weist diese Methode die *uStateEx* Parameter, um die `uStateEx` Mitglied einer [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) Struktur, und klicken Sie dann verwendet, die in der Nachricht zu strukturieren.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert eine Variable `m_treeCtrl`, d. h. auf das aktuelle Strukturansicht Steuerelement verwendet. Das Codebeispiel definiert auch eine Ganzzahl ohne Vorzeichen und mehreren HTREEITEM-Variablen. Diese Variablen werden im nächsten Beispiel verwendet.  
+ Das folgende Codebeispiel definiert eine Variable, `m_treeCtrl`, d. h. für den Zugriff auf das aktuelle Strukturansicht-Steuerelement. Im Codebeispiel wird definiert auch eine Ganzzahl ohne Vorzeichen und mehreren HTREEITEM-Variablen. Diese Variablen werden im nächsten Beispiel verwendet.  
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel legt ein Strukturansicht Element zu Status "deaktiviert" fest. In einem früheren Abschnitt des Codebeispiels, die nicht angezeigt wird, erstellt es eine Strukturansicht, die einen Stammknoten für Land/Region für den Vereinigten Staaten, untergeordnete Knoten für den Status der Pennsylvania und Washington und Strukturelemente für Städte in diesen Zuständen besteht. Dieses Codebeispiel legt den Pennsylvania-Knoten zu Status "deaktiviert" fest.  
+ Das folgende Codebeispiel legt ein Strukturansichtselement auf deaktiviert fest. In einem vorherigen Abschnitt des Codebeispiels, der nicht angezeigt wird, haben wir eine Strukturansicht, die besteht aus einem Land/Region-Stammknoten für den Vereinigten Staaten, untergeordnete Knoten für die Bundesstaaten Pennsylvania und Washington und Strukturelemente für Städte in diesen Staaten dargestellt. Dieses Codebeispiel wird den Knoten Pennsylvania auf deaktiviert.  
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#7](../../mfc/reference/codesnippet/cpp/ctreectrl-class_41.cpp)]  
   
@@ -1888,7 +1888,7 @@ BOOL SetItemText(
   
 ### <a name="parameters"></a>Parameter  
  *hItem*  
- Das Handle des Elements, dessen Text festgelegt werden.  
+ Handle des Elements, dessen Text festgelegt werden.  
   
  *lpszItem*  
  Adresse einer Zeichenfolge, die den neuen Text für das Element enthält.  
@@ -1914,7 +1914,7 @@ COLORREF SetLineColor(COLORREF clrNew = CLR_DEFAULT);
  Die vorherigen Linienfarbe.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_SETLINECOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773764)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_SETLINECOLOR](/windows/desktop/Controls/tvm-setlinecolor), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTreeCtrl#35](../../mfc/reference/codesnippet/cpp/ctreectrl-class_43.cpp)]  
@@ -1934,10 +1934,10 @@ UINT SetScrollTime(UINT uScrollTime);
  Die vorherigen maximalen Bildlauf Zeit in Millisekunden.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_SETSCROLLTIME](http://msdn.microsoft.com/library/windows/desktop/bb773767)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_SETSCROLLTIME](/windows/desktop/Controls/tvm-setscrolltime), wie im Windows SDK beschrieben.  
   
 ##  <a name="settextcolor"></a>  CTreeCtrl::SetTextColor  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_SETTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773769)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_SETTEXTCOLOR](/windows/desktop/Controls/tvm-settextcolor), wie im Windows SDK beschrieben.  
   
 ```  
 COLORREF SetTextColor(COLORREF clr);
@@ -1945,16 +1945,16 @@ COLORREF SetTextColor(COLORREF clr);
   
 ### <a name="parameters"></a>Parameter  
  *CLR*  
- Ein COLORREF-Wert, der die neue Textfarbe enthält. Wenn dieses Argument-1 ist, wird das Steuerelement auf die Systemfarbe für die Farbe des Textes mit zurückgesetzt.  
+ Eine COLORREF-Wert, der die neue Textfarbe enthält. Wenn dieses Argument-1 ist, wird das Steuerelement auf die Systemfarbe für die die Textfarbe wiederhergestellt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein COLORREF-Wert, der die vorherige Textfarbe darstellt. Wenn dieser Wert-1 ist, wurde das Steuerelement die Systemfarbe für die Textfarbe verwenden.  
+ Eine COLORREF-Wert, der die Farbe des vorherigen darstellt. Wenn dieser Wert-1 ist, wurde das Steuerelement die Systemfarbe für die Farbe des Textes verwendet.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTreeCtrl#36](../../mfc/reference/codesnippet/cpp/ctreectrl-class_44.cpp)]  
   
 ##  <a name="settooltips"></a>  CTreeCtrl::SetToolTips  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb773772)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TVM_SETTOOLTIPS](/windows/desktop/Controls/tvm-settooltips), wie im Windows SDK beschrieben.  
   
 ```  
 CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
@@ -1965,10 +1965,10 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
  Ein Zeiger auf eine [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) -Objekt, das das Strukturansicht-Steuerelement verwendet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) Objekt, das die QuickInfo, die zuvor von der Steuerelement- oder NULL verwendet, wenn keine QuickInfos zuvor verwendet wurden enthält.  
+ Ein Zeiger auf eine [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) -Objekt, enthält die QuickInfo, die zuvor vom Steuerelement oder NULL verwendet werden, wenn keine QuickInfos zuvor verwendet wurden.  
   
 ### <a name="remarks"></a>Hinweise  
- Zum Verwenden von QuickInfos angeben den Stil TVS_NOTOOLTIPS bei der Erstellung der `CTreeCtrl` Objekt.  
+ Um QuickInfos zu verwenden, geben Sie den TVS_NOTOOLTIPS-Stil bei der Erstellung der `CTreeCtrl` Objekt.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CTreeCtrl::GetToolTips](#gettooltips).  
@@ -1984,15 +1984,15 @@ void ShowInfoTip(HTREEITEM hItem);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *hItem*|Ein Handle für ein Strukturansicht Element im Steuerelement. Weitere Informationen finden Sie unter der `hItem` Mitglied der [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) Struktur.|  
+|*hItem*|[in] Ein Handle für ein Strukturansichtselement im Steuerelement. Weitere Informationen finden Sie unter den `hItem` Mitglied der [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) Struktur.|  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen zu den Unterschieden zwischen QuickInfos und Infotipps zu suchen, für das Thema "QuickInfos und Infotipps" am [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).  
+ Weitere Informationen zu den Unterschieden zwischen den QuickInfos und Infotipps suchen Sie nach dem Thema in der "QuickInfos und Infotipps" [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).  
   
- Diese Methode sendet die [TVM_SHOWINFOTIP](http://msdn.microsoft.com/library/windows/desktop/bb773779) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [TVM_SHOWINFOTIP](/windows/desktop/Controls/tvm-showinfotip) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="sortchildren"></a>  CTreeCtrl::SortChildren  
- Rufen Sie diese Funktion, um die untergeordneten Elemente des angegebenen übergeordneten Elements in einem Strukturansicht-Steuerelement alphabetisch zu sortieren.  
+ Rufen Sie diese Funktion aus, um die untergeordneten Elemente des angegebenen übergeordneten Elements in einem Strukturansicht-Steuerelement alphabetisch zu sortieren.  
   
 ```  
 BOOL SortChildren(HTREEITEM hItem);
@@ -2000,19 +2000,19 @@ BOOL SortChildren(HTREEITEM hItem);
   
 ### <a name="parameters"></a>Parameter  
  *hItem*  
- Handle des übergeordneten Elements, dessen untergeordnete Elemente sind und sortiert werden. Wenn *hItem* NULL ist, vom Stamm der Struktur schreitet sortieren.  
+ Handle des übergeordneten Elements, dessen untergeordneten Elemente sind sortiert werden soll. Wenn *hItem* NULL ist, wird die Sortierung vom Stamm der Struktur fortgesetzt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- `SortChildren` die Struktur wird nicht durchsucht werden; nur die unmittelbar untergeordneten Elemente des *hItem* sortiert werden.  
+ `SortChildren` wird nicht durch die Struktur rekursiv; nur die unmittelbar untergeordneten Elemente des *hItem* sortiert werden.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTreeCtrl#37](../../mfc/reference/codesnippet/cpp/ctreectrl-class_45.cpp)]  
   
 ##  <a name="sortchildrencb"></a>  CTreeCtrl::SortChildrenCB  
- Mit dieser Funktion wird zum Sortieren der Ansicht Strukturelemente, die mithilfe einer anwendungsdefinierten Rückruffunktion, die die Elemente vergleicht.  
+ Rufen Sie diese Funktion zum Sortieren der Elemente in Struktur anzeigen, die mit einer anwendungsdefinierten Rückruffunktion, die Elemente vergleicht.  
   
 ```  
 BOOL SortChildrenCB(LPTVSORTCB pSort);
@@ -2020,15 +2020,15 @@ BOOL SortChildrenCB(LPTVSORTCB pSort);
   
 ### <a name="parameters"></a>Parameter  
  *pSort*  
- Zeiger auf eine [TVSORTCB](http://msdn.microsoft.com/library/windows/desktop/bb773462) Struktur.  
+ Zeiger auf eine [TVSORTCB](/windows/desktop/api/commctrl/ns-commctrl-tagtvsortcb) Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Die Struktur der Vergleichsfunktion, `lpfnCompare`, muss einen negativen Wert zurückgeben, wenn das erste Element der zweiten vorausgehen sollen, wird ein positiver Wert, wenn das erste Element sollte die zweite folgen, oder NULL, wenn die beiden Elemente äquivalent sind.  
+ Die Struktur der Vergleichsfunktion `lpfnCompare`, muss einen negativen Wert zurück, wenn das erste Element die zweite vorangehen soll, wird ein positiver Wert, wenn das erste Element sollte die zweite folgen, oder NULL, wenn die beiden Elemente sind äquivalent.  
   
- Die *lParam1* und *lParam2* Parameter entsprechen den der `lParam` Mitglied der [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) Struktur für die beiden verglichenen Elemente. Die *lParamSort* Parameter entspricht der `lParam` Mitglied der `TV_SORTCB` Struktur.  
+ Die *lParam1* und *lParam2* Parameter entsprechen der `lParam` Mitglied der [TVITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtvitema) -Struktur für die zwei Elemente mit dem verglichen wird. Die *lParamSort* Parameter entspricht der `lParam` Mitglied der `TV_SORTCB` Struktur.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CTreeCtrl#38](../../mfc/reference/codesnippet/cpp/ctreectrl-class_46.cpp)]  

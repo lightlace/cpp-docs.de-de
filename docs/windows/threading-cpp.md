@@ -1,5 +1,5 @@
 ---
-title: Threading (C++) | Microsoft Docs
+title: Threading (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,67 +17,71 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f21ea8c16b4e09a5ad1845a10797be00f91b0d8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 899c41a65a651f7464b11639d2106b3eaa51e21b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891323"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708655"
 ---
 # <a name="threading-c"></a>threading (C++)
-Gibt das Threadingmodell für ein COM-Objekt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-      [ threading(  
-   model=enumeration  
-) ]  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- ***Modell*** (optional)  
- Einer der folgenden Threadingmodelle:  
-  
--   **Apartment** (Apartmentthreading für Anwendungen)  
-  
--   **neutrale** (.NET Framework-Komponenten ohne Benutzeroberfläche)  
-  
--   **einzelne** (einfache threading)  
-  
--   **Kostenlose** (threading freizugeben)  
-  
--   **beide** (Apartment und Freethreadings)  
-  
- Der Standardwert ist **Apartment**.  
-  
-## <a name="remarks"></a>Hinweise  
- Die **threading** C++-Attribut nicht in der generierten IDL-Datei angezeigt, aber in der Implementierung des COM-Objekts verwendet werden.  
-  
- Im ATL-Projekte Wenn die [Co-Klasse](../windows/coclass.md) Attribut vorhanden ist, wird das Threadingmodell gemäß *Modell* wird als der Vorlagenparameter übergeben der [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) Klasse , eingefügt, indem die **Coclass** Attribut.  
-  
- Die **threading** Attribut schützt auch Zugriff auf eine [Event_source](../windows/event-source.md).  
-  
-## <a name="example"></a>Beispiel  
- Finden Sie unter der [lizenziert](../windows/licensed.md) Beispiel für ein Beispiel für die Verwendung von **threading**.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-### <a name="attribute-context"></a>Attributkontext  
-  
-|||  
-|-|-|  
-|**Betrifft**|**Klasse**, `struct`|  
-|**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|**coclass**|  
-|**Ungültige Attribute**|Keiner|  
-  
- Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [COM-Attribute](../windows/com-attributes.md)   
- [TypeDef, Enum, Union- und Struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Klassenattribute](../windows/class-attributes.md)   
- [Multithreadingunterstützung für älteren Code (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
- [Neutrale Apartments](http://msdn.microsoft.com/library/windows/desktop/ms681813)   
+
+Gibt das Threadingmodell für eine COM-Objekt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+[ threading(
+   model=enumeration
+) ]
+```
+
+### <a name="parameters"></a>Parameter
+
+*model*<br/>
+(Optional) Eine der folgenden threading Modelle:
+
+- `apartment` (Apartmentthreading für Anwendungen)
+
+- `neutral` (.NET Framework-Komponenten ohne Benutzeroberfläche)
+
+- `single` (einfaches threading)
+
+- `free` (freies threading)
+
+- `both` ("Apartment" und "Freies threading")
+
+Der Standardwert ist `apartment`.
+
+## <a name="remarks"></a>Hinweise
+
+Die **threading** C++-Attribut nicht in der generierten IDL-Datei angezeigt, aber in der Implementierung des COM-Objekts verwendet werden.
+
+In ATL-Projekte Wenn die [Co-Klasse](../windows/coclass.md) Attribut vorhanden ist, wird das Threadingmodell gemäß *Modell* wird als der Vorlagenparameter übergeben, die [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) Klasse , eingefügt, indem die `coclass` Attribut.
+
+Die **threading** Attribut schützt auch den Zugriff auf eine [Event_source](../windows/event-source.md).
+
+## <a name="example"></a>Beispiel
+
+Finden Sie unter den [lizenziert](../windows/licensed.md) Beispiel für ein Beispiel für die Verwendung von **threading**.
+
+## <a name="requirements"></a>Anforderungen
+
+### <a name="attribute-context"></a>Attributkontext
+
+|||
+|-|-|
+|**Betrifft**|**Klasse**, **Struktur**|
+|**Wiederholbar**|Nein|
+|**Erforderliche Attribute**|**coclass**|
+|**Ungültige Attribute**|Keiner|
+
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[COM-Attribute](../windows/com-attributes.md)  
+[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Klassenattribute](../windows/class-attributes.md)  
+[Multithreadingunterstützung für älteren Code (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)  
+[Neutrale-Apartments](/windows/desktop/cossdk/neutral-apartments)  

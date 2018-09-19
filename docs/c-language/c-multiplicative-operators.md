@@ -21,47 +21,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1810cc9dd7a991e302e0e9e2db69f65aebebc613
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0be97e271ce8b500274d0e2ab1f271183ef7c238
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387790"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199993"
 ---
 # <a name="c-multiplicative-operators"></a>C-Multiplikationsoperatoren
-Die Multiplikationsoperatoren führen Multiplikations(**\***)-, Divisions(**/**)- und Restoperationen (`%`) aus.  
+Die Multiplikationsoperatoren führen Multiplikations- (<strong>\*</strong>), Divisions- (**/**) und Restoperationen (**%**) aus.  
   
- **Syntax**  
+## <a name="syntax"></a>Syntax
+
+*multiplicative-expression*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*cast-expression*  
+&nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* <strong>\*</strong> *cast-expression*  
+&nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* **/** *cast-expression*  
+&nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* **%** *cast-expression*
+
+Die Operanden des Restoperators (**%**) müssen ganzzahlig sein. Die Operatoren der Multiplikation (<strong>\*</strong>) und der Division (**/**) können Operanden vom Typ Ganzzahl, Gleitkomma oder Zeiger akzeptieren. Dabei können sich die Operandentypen unterscheiden.  
   
- *multiplicative-expression*:  
- *cast-expression*  
-  
- *multiplicative-expression*  **\***  *cast-expression*  
-  
- *multiplicative-expression*  **/**  *cast-expression*  
-  
- *multiplicative-expression*  **%**  *cast-expression*  
-  
- Die Operanden des Restoperators (`%`) müssen ganzzahlig sein. Die Operatoren der Multiplikation (**\***) und der Division (**/**) können Operanden vom Typ Ganzzahl, Gleitkomma oder Zeiger akzeptieren. Dabei können sich die Operandentypen unterscheiden.  
-  
- Die multiplikativen Operatoren führen die üblichen arithmetischen Konvertierungen für die Operanden aus. Der Ergebnistyp ist der Typ der Operanden nach der Konvertierung.  
+Die multiplikativen Operatoren führen die üblichen arithmetischen Konvertierungen für die Operanden aus. Der Ergebnistyp ist der Typ der Operanden nach der Konvertierung.  
   
 > [!NOTE]
 >  Da Konvertierungen, die von den Multiplikationsoperatoren ausgeführt werden, keine Überlauf- oder Unterlaufbedingungen vorsehen, gehen Informationen möglicherweise verloren, wenn das Ergebnis eines Multiplikationsvorgangs nach der Konvertierung nicht im Typ der Operanden dargestellt werden kann.  
   
  Die multiplikativen C-Operatoren sind im Folgenden beschrieben:  
   
-|Operator|description|  
+|Operator|Beschreibung |  
 |--------------|-----------------|  
-|**\***|Der multiplikative C-Operator bewirkt die Multiplizierung seiner beiden Operanden.|  
-|**/**|Der Divisionsoperator bewirkt, dass der erste Operanden durch den zweiten geteilt wird. Wenn zwei ganzzahlige Operanden dividiert werden und das Ergebnis keine ganze Zahl ist, wird sie gemäß den folgenden Regeln gekürzt:|  
-||–   Das Ergebnis der Division durch 0 ist entsprechend dem ANSI C-Standard nicht definiert. Der Microsoft C-Compiler generiert einen Fehler zur Kompilierzeit oder Laufzeit.|  
-||–   Wenn beide Operanden positiv oder ohne Vorzeichen sind, wird das Ergebnis in Richtung 0 abgeschnitten.|  
-||–   Wenn einer der beiden Operanden negativ ist, ist es von der Implementierung abhängig, ob das Ergebnis der Operation die größte ganze Zahl kleiner oder gleich dem algebraischen Quotienten oder die kleinste ganze Zahl größer oder gleich dem algebraischen Quotienten ist. (Weitere Informationen finden Sie im Microsoft-spezifischen Abschnitt weiter unten.)|  
-|`%`|Das Ergebnis des Restoperators ist das Restergebnis, nachdem der erste Operand durch den zweiten Operanden geteilt wurde. Wenn die Division ungenau ist, wird das Ergebnis durch die folgenden Regeln bestimmt:|  
-||–   Wenn der rechte Operand null ist, ist das Ergebnis nicht definiert.|  
-||–   Wenn beide Operanden positiv oder ohne Vorzeichen sind, ist das Ergebnis positiv.|  
-||–   Wenn einer der beiden Operanden negativ und das Ergebnis ungenau ist, ist das Ergebnis von der Implementierung abhängig. (Weitere Informationen finden Sie im Microsoft-spezifischen Abschnitt weiter unten.)|  
+|<strong>\*</strong>|Der multiplikative C-Operator bewirkt die Multiplizierung seiner beiden Operanden.|  
+|**/**|Der Divisionsoperator bewirkt, dass der erste Operanden durch den zweiten geteilt wird. Wenn zwei ganzzahlige Operanden dividiert werden und das Ergebnis keine ganze Zahl ist, wird sie gemäß den folgenden Regeln gekürzt:<br/><br/>– Das Ergebnis der Division durch 0 (null) ist entsprechend dem ANSI C-Standard nicht definiert. Der Microsoft C-Compiler generiert einen Fehler zur Kompilierzeit oder Laufzeit.<br/><br/>– Wenn beide Operanden positiv oder ohne Vorzeichen sind, wird das Ergebnis in Richtung 0 (null) abgeschnitten.<br/><br/>– Wenn einer der beiden Operanden negativ ist, ist es von der Implementierung abhängig, ob das Ergebnis der Operation die größte ganze Zahl kleiner oder gleich dem algebraischen Quotienten oder die kleinste ganze Zahl größer oder gleich dem algebraischen Quotienten ist. (Weitere Informationen finden Sie im Microsoft-spezifischen Abschnitt weiter unten.)|  
+|**%**|Das Ergebnis des Restoperators ist das Restergebnis, nachdem der erste Operand durch den zweiten Operanden geteilt wurde. Wenn die Division ungenau ist, wird das Ergebnis durch die folgenden Regeln bestimmt:<br/><br/>– Wenn der rechte Operand 0 (null) ist, ist das Ergebnis nicht definiert.<br/><br/>– Wenn beide Operanden positiv oder ohne Vorzeichen sind, ist das Ergebnis positiv.<br/><br/>– Wenn einer der beiden Operanden negativ und das Ergebnis ungenau ist, ist das Ergebnis von der Implementierung abhängig. (Weitere Informationen finden Sie im Microsoft-spezifischen Abschnitt weiter unten.)|  
   
  **Microsoft-spezifisch**  
   

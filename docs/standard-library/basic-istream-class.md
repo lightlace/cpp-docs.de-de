@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca0b25f5df6d4efb70e27fea6ef2323568134b2e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 51dc841efa3e9f64a106002945c07ce10bcf7565
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964462"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102615"
 ---
 # <a name="basicistream-class"></a>basic_istream-Klasse
 
@@ -193,11 +193,14 @@ basic_istream(basic_istream&& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Strbuf* ein Objekt des Typs ["basic_streambuf"](../standard-library/basic-streambuf-class.md).
+*strbuf*<br/>
+Ein Objekt vom Typ [basic_streambuf](../standard-library/basic-streambuf-class.md).
 
-*_Isstd* **"true"** Wenn dies einen Standardstream handelt; andernfalls **"false"**.
+*_Isstd*<br/>
+**"true"** Wenn dies einen Standardstream handelt; andernfalls **"false"**.
 
-*richtige* ein `basic_istream` zu kopierende Objekt.
+*right*<br/>
+Ein zu kopierendes `basic_istream`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -277,15 +280,20 @@ basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf, Elem Delim);
 
 ### <a name="parameters"></a>Parameter
 
-*Anzahl* die Anzahl der zu lesenden Zeichen aus `strbuf`.
+*count*<br/>
+Die Anzahl der zu lesenden Zeichen aus `strbuf`.
 
-*Delim* das Zeichen, das den Lesevorgang beenden soll, wenn es vor erreicht wird *Anzahl*.
+*Delim*<br/>
+Das Zeichen, das den Lesevorgang beenden soll, wenn es vor erreicht wird *Anzahl*.
 
-*Str* eine Zeichenfolge in die geschrieben.
+*str*<br/>
+Eine Zeichenfolge, in die geschrieben werden soll.
 
-*CH* ein Zeichen, das abgerufen.
+*CH*<br/>
+Ein Zeichen, das abgerufen werden soll.
 
-*Strbuf* einen Puffer, in die geschrieben.
+*strbuf*<br/>
+Ein Puffer, in den geschrieben werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -356,11 +364,14 @@ basic_istream<Elem, Tr>& getline(
 
 ### <a name="parameters"></a>Parameter
 
-*Anzahl* die Anzahl der zu lesenden Zeichen aus `strbuf`.
+*count*<br/>
+Die Anzahl der zu lesenden Zeichen aus `strbuf`.
 
-*Delim* das Zeichen, das den Lesevorgang beenden soll, wenn es vor erreicht wird *Anzahl*.
+*Delim*<br/>
+Das Zeichen, das den Lesevorgang beenden soll, wenn es vor erreicht wird *Anzahl*.
 
-*Str* eine Zeichenfolge in die geschrieben.
+*str*<br/>
+Eine Zeichenfolge, in die geschrieben werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -414,9 +425,11 @@ basic_istream<Elem, Tr>& ignore(
 
 ### <a name="parameters"></a>Parameter
 
-*Anzahl* die Anzahl von Elementen, überspringen Sie aus der aktuellen Leseposition.
+*count*<br/>
+Die Anzahl von Elementen, die ab der aktuellen Leseposition übersprungen werden sollen.
 
-*Delim* das Element, das bewirkt, wenn vor dem Zieleintrag, aufgetreten dass `ignore` zurückgegeben und zulassen, dass alle Elemente nach *Delim* gelesen werden.
+*Delim*<br/>
+Das Element, das bewirkt, wenn vor dem Zieleintrag, aufgetreten dass `ignore` zurückgegeben und zulassen, dass alle Elemente nach *Delim* gelesen werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -474,11 +487,14 @@ basic_istream& operator>>(long double& val);
 
 ### <a name="parameters"></a>Parameter
 
-*Pfn* einen Funktionszeiger.
+*pfn*<br/>
+Ein Funktionszeiger.
 
-*Strbuf* ein Objekt des Typs `stream_buf`.
+*strbuf*<br/>
+Ein Objekt vom Typ `stream_buf`.
 
-*Val* der Wert, der aus dem Stream gelesen.
+*val*<br/>
+Der Wert, der aus dem Stream gelesen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -521,7 +537,7 @@ basic_istream& operator>>(unsigned long long& val);
 basic_istream& operator>>(void *& val);
 ```
 
-extrahieren alle ein Feld, und konvertieren es durch Aufrufen von `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`) in einen numerischen Wert. [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). Hier **InIt** ist definiert als `istreambuf_iterator` \< **Elem**, **Tr**>, und `val` weist den Typ **lange**,**unsigned long**, oder **"void" \***  je nach Bedarf.
+extrahieren alle ein Feld, und konvertieren es durch Aufrufen von `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`) in einen numerischen Wert. [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). Hier **InIt** ist definiert als `istreambuf_iterator` \< **Elem**, **Tr**>, und `val` weist den Typ **lange**, **unsigned long**, oder **"void"** <strong>\*</strong> je nach Bedarf.
 
 Wenn der konvertierte Wert kann, mit dem Typ der dargestellt werden `val`, ruft die Funktion [Setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`). In jedem Fall gibt die Funktion **\*this** zurück.
 
@@ -584,7 +600,8 @@ basic_istream& operator=(basic_istream&& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* ein `rvalue` Verweis auf eine `basic_ifstream` Objekt.
+*right*<br/>
+Ein `rvalue`-Verweis auf ein `basic_ifstream`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -653,7 +670,8 @@ basic_istream<Elem, Tr>& putback(
 
 ### <a name="parameters"></a>Parameter
 
-*CH* ein Zeichen zurück in den Stream zu versetzen.
+*CH*<br/>
+Ein Zeichen, das im Stream wiederhergestellt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -702,9 +720,11 @@ basic_istream<Elem, Tr>& read(
 
 ### <a name="parameters"></a>Parameter
 
-*Str* Arrays, in dem die Zeichen gelesen.
+*str*<br/>
+Das Array, in dem die Zeichen gelesen werden sollen.
 
-*Anzahl* die Anzahl der zu lesenden Zeichen.
+*count*<br/>
+Die Anzahl der zu lesenden Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -764,9 +784,11 @@ streamsize readsome(
 
 ### <a name="parameters"></a>Parameter
 
-*Str* Arrays, in dem `readsome` die gelesenen Zeichen speichert.
+*str*<br/>
+Das Array, in dem `readsome` die gelesenen Zeichen speichert.
 
-*Anzahl* die Anzahl der zu lesenden Zeichen.
+*count*<br/>
+Die Anzahl der zu lesenden Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -819,11 +841,14 @@ basic_istream<Elem, Tr>& seekg(off_type off, ios_base::seekdir way);
 
 ### <a name="parameters"></a>Parameter
 
-*POS* die absolute Position in die der Lesezeiger verschoben.
+*POS*<br/>
+Die absolute Position, an die der Lesezeiger verschoben werden soll.
 
-*Off* einen Offset zum Verschieben des lesezeigers relativ zum *Weise*.
+*Ausschalten*<br/>
+Ein Offset zum Verschieben des lesezeigers relativ zum *Weise*.
 
-*Möglichkeit* eines der [ios_base:: seekdir](../standard-library/ios-base-class.md#seekdir) Enumerationen.
+*Weise*<br/>
+Eine der [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir)-Enumerationen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -887,7 +912,8 @@ void swap(basic_istream& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* ein Lvalue-Verweis auf eine `basic_istream` Objekt.
+*right*<br/>
+Ein lvalue-Verweis auf ein `basic_istream`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 

@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1113 | Microsoft Docs
+title: Schwerwiegender Fehler C1113 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 343dbc41743c825b7fb3624019817ec7c5f163fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efcf76c02eaeafb89c48b9dc82d9269377e520ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199053"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076319"
 ---
 # <a name="fatal-error-c1113"></a>Schwerwiegender Fehler C1113
-\#Fehler bei "File"  
-  
- Nur eine Datei in der Microsoft Intermediate Language (MSIL)-Format übergeben werden kann, um eine [#using](../../preprocessor/hash-using-directive-cpp.md) Richtlinie. Die ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md) -Compileroption können Sie eine MSIL-Ausgabedatei zu erstellen. Andere [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] Sprachen auch MSIL-Dateien generiert.
+
+\#Fehler bei 'Datei'
+
+Nur eine Datei in die Microsoft Intermediate Language (MSIL)-Format übergeben werden kann, um eine [#using](../../preprocessor/hash-using-directive-cpp.md) Richtlinie. Die ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md) Compileroption können Sie eine MSIL-Ausgabedatei zu erstellen. Andere Visual Studio-Sprachen werden auch MSIL-Dateien generiert.

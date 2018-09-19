@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::inner_product [C++]
 - std::iota [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: 47ac885152b0fdfbb9ce1ab77f6597db00c5bc07
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ae1c3e043d35ba91813fb5288e100610986dbd76
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960251"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100182"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt;-Funktionen
 
@@ -48,13 +48,17 @@ Type accumulate(
 
 ### <a name="parameters"></a>Parameter
 
-*erste* ein eingabeiterator, der das erste Element im Bereich von summiert oder gemäß eines angegebenen binären Vorgangs kombiniert werden.
+*Erste*<br/>
+Ein Eingabeiterator, der das erste Element in dem Bereich adressiert, der entsprechend eines angegebenen binären Vorgangs summiert oder kombiniert werden soll.
 
-*letzte* ein eingabeiterator, der das letzte Element im Bereich von summiert oder kombiniert entsprechend eines angegebenen binären Vorgangs, der eine Position hinter dem letzten Element, das tatsächlich im iterierten Sammelbereich enthalten ist.
+*last*<br/>
+Ein Eingabeiterator, der das letzte Element im Bereich adressiert, der entsprechend eines angegebenen binären Vorgangs summiert oder kombiniert werden soll. Dieser Vorgang befindet sich eine Position nach dem letzten Element, das tatsächlich im iterierten Sammelbereich enthalten ist.
 
-*Val* einen Anfangswert, der jedes Element ist wiederum hinzugefügt oder kombiniert mit entsprechend eines angegebenen binären Vorgangs.
+*val*<br/>
+Ein anfänglicher Wert, zu oder mit dem jedes Element hinzugefügt oder kombiniert wird, entsprechend eines angegebenen binären Vorgangs.
 
-*Binary_op* der binären Operation, die auf die jedes Element im angegebenen Bereich und das Ergebnis der vorherigen Anwendung angewendet werden soll.
+*binary_op*<br/>
+Der binäre Vorgang, der auf jedes Element im angegebenen Bereich angewendet wird und das Ergebnis der vorherigen Anwendung.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -62,7 +66,7 @@ Die Summe der *Val* und alle Elemente im angegebenen Bereich für die erste Vorl
 
 ### <a name="remarks"></a>Hinweise
 
-Der Anfangswert stellt sicher, dass es ein klar definiertes Ergebnis sein wird, wenn der Bereich leer ist, in diesem Fall wird *Val* zurückgegeben wird. Der binäre Vorgang muss nicht assoziativ oder kommutativ sein. Das Ergebnis wird auf den ursprünglichen Wert initialisiert *Val* und dann *Ergebnis*  =  `binary_op` ( *Ergebnis*, **\*** `Iter`) iterativ über den Bereich berechnet wird, in denen `Iter` ist ein Iterator, der auf nachfolgende Element im Bereich zeigt. Der Bereich muss gültig sein und die Komplexität ist linear mit der Größe des Bereichs. Der Rückgabetyp des binären Operators muss in **Typ** konvertierbar sein, um Closure während der Iteration sicherzustellen.
+Der Anfangswert stellt sicher, dass es ein klar definiertes Ergebnis sein wird, wenn der Bereich leer ist, in diesem Fall wird *Val* zurückgegeben wird. Der binäre Vorgang muss nicht assoziativ oder kommutativ sein. Das Ergebnis wird auf den ursprünglichen Wert initialisiert *Val* und dann *Ergebnis*  =  `binary_op` ( *Ergebnis*, <strong>\*</strong> `Iter`) iterativ über den Bereich berechnet wird, in denen `Iter` ist ein Iterator, der auf nachfolgende Element im Bereich zeigt. Der Bereich muss gültig sein und die Komplexität ist linear mit der Größe des Bereichs. Der Rückgabetyp des binären Operators muss in **Typ** konvertierbar sein, um Closure während der Iteration sicherzustellen.
 
 ### <a name="example"></a>Beispiel
 
@@ -151,16 +155,16 @@ int main( )
 
 ```Output
 The original vector v1 is:
- ( 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ).
+( 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ).
 The sum of the integers from 1 to 20 is: 210.
 The vector of partial sums is:
- ( 1 3 6 10 15 21 28 36 45 55 66 78 91 105 120 136 153 171 190 210 ).
+( 1 3 6 10 15 21 28 36 45 55 66 78 91 105 120 136 153 171 190 210 ).
 
 The original vector v3 is:
- ( 1 2 3 4 5 6 7 8 9 10 ).
+( 1 2 3 4 5 6 7 8 9 10 ).
 The product of the integers from 1 to 10 is: 3628800.
 The vector of partial products is:
- ( 1 2 6 24 120 720 5040 40320 362880 3628800 ).
+( 1 2 6 24 120 720 5040 40320 362880 3628800 ).
 ```
 
 ## <a name="adjacent_difference"></a> adjacent_difference
@@ -184,13 +188,17 @@ OutputIterator adjacent_difference(
 
 ### <a name="parameters"></a>Parameter
 
-*erste* ein eingabeiterator, der das erste Element im Eingabebereich, dessen Elemente mit ihren jeweiligen Vorgängern differenziert werden sollen oder in dem das Paar von Werten zu verarbeitenden durch einen anderen, angegebenen binären Vorgang.
+*Erste*<br/>
+Ein Eingabeiterator, der das erste Element im Eingabebereich adressiert, dessen Elemente mit ihren jeweiligen Vorgängern differenziert werden sollen oder in dem die Wertpaare durch einen anderen angegebenen binären Vorgang verarbeitet werden sollen.
 
-*letzte* ein eingabeiterator, der das letzte Element im Eingabebereich, dessen Elemente mit ihren jeweiligen Vorgängern differenziert werden sollen oder in dem das Paar von Werten zu verarbeitenden durch einen anderen, angegebenen binären Vorgang.
+*last*<br/>
+Ein Eingabeiterator, der das letzte Element im Eingabebereich adressiert, dessen Elemente mit ihren jeweiligen Vorgängern differenziert werden sollen oder in dem die Wertpaare durch einen anderen angegebenen binären Vorgang verarbeitet werden sollen.
 
-*Ergebnis* ein Ausgabeiterator, der das erste Element eines Zielbereichs, in dem die Reihe von Differenzen oder die Ergebnisse des angegebenen Vorgangs gespeichert werden.
+*Ergebnis*<br/>
+Ein Ausgabeiterator, der das erste Element eines Zielbereichs adressiert, in dem die Reihe von Differenzen oder die Ergebnisse des angegebenen Vorgangs gespeichert werden sollen.
 
-*Binary_op* der binären Operation, die in den Vorgang der Subtraktion im differenzierungsverfahren ersetzt allgemeinen Vorgang angewendet werden soll.
+*binary_op*<br/>
+Der binäre Vorgang, der im allgemeinen Vorgang angewendet werden soll, der den Vorgang der Subtraktion im Differenzierungsverfahren ersetzt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -291,17 +299,23 @@ Type inner_product(
 
 ### <a name="parameters"></a>Parameter
 
-*first1* ein eingabeiterator, der das erste Element im ersten Bereich, dessen inneres oder generalisiertes inneres Produkt mit dem zweiten Bereich berechnet werden soll.
+*first1*<br/>
+Ein Eingabeiterator, der das erste Element im ersten Bereich adressiert, dessen inneres oder generalisiertes inneres Produkt mit dem zweiten Bereich neu zu berechnen ist.
 
-*Last1* ein eingabeiterator, der das letzte Element im ersten Bereich, dessen inneres oder generalisiertes inneres Produkt mit dem zweiten Bereich berechnet werden soll.
+*Last1*<br/>
+Ein Eingabeiterator, der das letzte Element im ersten Bereich adressiert, dessen inneres oder generalisiertes inneres Produkt mit dem zweiten Bereich neu zu berechnen ist.
 
-*first2* ein eingabeiterator, der das erste Element im zweiten Bereich, dessen inneres oder generalisiertes inneres Produkt mit der erste Bereich ist, berechnet werden soll.
+*first2*<br/>
+Ein Eingabeiterator, der das erste Element im zweiten Bereich adressiert, dessen inneres oder generalisiertes inneres Produkt mit dem ersten Bereich neu zu berechnen ist.
 
-*Val* einen Anfangswert, der das innere oder generalisierte innere Produkt zwischen den Bereichen ist hinzugefügt werden.
+*val*<br/>
+Einen Anfangswert für den das innere oder generalisierte innere Produkt zwischen den Bereichen hinzugefügt wird.
 
-*binary_op1* der binäre Vorgang, der innere Produkt Summe angewendet wird, auf die elementweisen Produkte in der Generalisierung des inneren Produkts ersetzt.
+*binary_op1*<br/>
+Der binäre Vorgang, der das innere Produkt des Summenvorgangs ersetzt, wird auf die elementweisen Produkte in der Generalisierung des inneren Produkts angewendet.
 
-*binary_op2* der binäre Vorgang, der den elementweisen Vorgang innere Produkt der Multiplikation in der Generalisierung des inneren Produkts ersetzt.
+*binary_op2*<br/>
+Der binäre Vorgang, der das innere Produkt des elementweisen Produkt des Multiplizierungsvorgangs in der Generalisierung des inneren Produkts ersetzt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -422,11 +436,14 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 
 ### <a name="parameters"></a>Parameter
 
-*erste* ein Eingabe-Iterator, der das erste Element im aufzufüllenden Bereich adressiert.
+*Erste*<br/>
+Ein Eingabeiterator, der das erste Element im aufzufüllenden Bereich adressiert.
 
-*letzte* ein Eingabe-Iterator, der das letzte Element im aufzufüllenden Bereich adressiert.
+*last*<br/>
+Ein Eingabeiterator, der das letzte Element im aufzufüllenden Bereich adressiert.
 
-*Wert* der Anfangswert, der im ersten Element und nacheinander Inkrement für die nachfolgenden Elemente zu speichern.
+*Wert*<br/>
+Der Anfangswert, der im ersten Element gespeichert und schrittweise für nachfolgende Elemente erhöht werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -493,13 +510,17 @@ OutputIterator partial_sum(
 
 ### <a name="parameters"></a>Parameter
 
-*erste* ein eingabeiterator, der das erste Element im Bereich von teilweise summiert oder gemäß eines angegebenen binären Vorgangs kombiniert werden.
+*Erste*<br/>
+Ein Eingabeiterator, der das erste Element in dem Bereich adressiert, der entsprechend eines angegebenen binären Vorgangs teilweise summiert oder kombiniert werden soll.
 
-*letzte* ein eingabeiterator, der das letzte Element im Bereich von teilweise summiert oder kombiniert entsprechend eines angegebenen binären Vorgangs, der eine Position hinter dem letzten Element, das tatsächlich im iterierten Sammelbereich enthalten ist.
+*last*<br/>
+Ein Eingabeiterator, der das letzte Element in dem Bereich adressiert, der entsprechend eines angegebenen binären Vorgangs teilweise summiert oder kombiniert werden soll und eine Position nach dem letzten Element folgt, das tatsächlich im iterierten Sammelbereich enthalten ist.
 
-*Ergebnis* ein Ausgabeiterator, der das erste Element eines Zielbereichs, in dem die Reihe von Teilsummen oder die Ergebnisse des angegebenen Vorgangs gespeichert werden.
+*Ergebnis*<br/>
+Ein Ausgabeiterator, der das erste Element eines Zielbereichs adressiert, in dem die Reihe von Teilsummen oder die Ergebnisse des angegebenen Vorgangs gespeichert werden sollen.
 
-*Binary_op* der binären Operation, die im allgemeinen Vorgang der Vorgang der Summierung im teilsummenverfahren ersetzt angewendet werden soll.
+*binary_op*<br/>
+Der binäre Vorgang, der im allgemeinen Vorgang angewendet werden soll, der den Vorgang der Summierung im Teilsummenverfahren ersetzt.
 
 ### <a name="return-value"></a>Rückgabewert
 

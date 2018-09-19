@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2499 | Microsoft Docs
+title: Compilerfehler C2499 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6933d27a1f396dc08275c3f5149212be7abeaaf1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27f10cc2f48a72222a6e9a2a7187ba9a1f6fb450
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225724"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043949"
 ---
 # <a name="compiler-error-c2499"></a>Compilerfehler C2499
-'Klasse': eine Klasse kann nicht ihre eigene Basisklasse  
-  
- Sie haben versucht, die Klasse anzugeben, die Sie als Basisklasse definieren.  
-  
- Im folgenden Beispiel wird C2499 generiert:  
-  
-```  
-// C2499.cpp  
-// compile with: /c  
-class CMyClass : public CMyClass {};   // C2499  
-class CMyClass{};   // OK  
+
+'Klasse': eine Klasse kann nicht ihre eigene Basisklasse
+
+Sie haben versucht, die die Klasse anzugeben, die Sie als Basisklasse definieren.
+
+Im folgende Beispiel wird die C2499 generiert:
+
+```
+// C2499.cpp
+// compile with: /c
+class CMyClass : public CMyClass {};   // C2499
+class CMyClass{};   // OK
 ```

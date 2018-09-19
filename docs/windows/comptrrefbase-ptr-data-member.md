@@ -1,5 +1,5 @@
 ---
-title: 'Comptrrefbase:: Ptr_-Datenmember | Microsoft Docs'
+title: 'Comptrrefbase:: Ptr_-Datenmember | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d45181e5db5fe16b6eada23ba8d6c72193fe3ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c80372070589e1a5c57d2ea08f80fea0467b5dc7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883566"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596718"
 ---
 # <a name="comptrrefbaseptr-data-member"></a>ComPtrRefBase::ptr_-Datenmember
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-T* ptr_;  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Zeiger auf den Typ, der durch den aktuellen Vorlagenparameter angegeben.  
-  
-## <a name="remarks"></a>Hinweise  
- `ptr_` die geschützten Daten gehört.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** client.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [ComPtrRefBase-Klasse](../windows/comptrrefbase-class.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+T* ptr_;
+```
+
+## <a name="remarks"></a>Hinweise
+
+Zeiger auf den Typ, durch den aktuellen Vorlagenparameter angegeben.
+
+## <a name="remarks"></a>Hinweise
+
+**Ptr_** ist das Element für die geschützten Daten.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** client.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[ComPtrRefBase-Klasse](../windows/comptrrefbase-class.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

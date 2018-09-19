@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (list)
 - std::operator&lt;= (list)
 - std::operator== (list)
-ms.openlocfilehash: ba77722abb28f246d305b44fb78379b2297ccc14
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e61fe4895026881d4d4db63b9617018fbe12d889
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965716"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317211"
 ---
 # <a name="ltlistgt-operators"></a>&lt;list&gt;-Operatoren
 
@@ -46,9 +46,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* ein Objekt des Typs `list`.
+*left*<br/>
+Ein Objekt vom Typ `list`.
 
-*richtige* ein Objekt des Typs `list`.
+*right*<br/>
+Ein Objekt vom Typ `list`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -78,9 +80,9 @@ cout << "Lists not equal." << endl;
 else
 cout << "Lists equal." << endl;
 }
-\* Output:
+/* Output:
 Lists not equal.
-*\
+*/
 ```
 
 ## <a name="op_lt"></a> operator&lt;
@@ -95,9 +97,11 @@ bool operator<(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* ein Objekt des Typs `list`.
+*left*<br/>
+Ein Objekt vom Typ `list`.
 
-*richtige* ein Objekt des Typs `list`.
+*right*<br/>
+Ein Objekt vom Typ `list`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -131,9 +135,9 @@ int main( )
    else
       cout << "List c1 is not less than list c2." << endl;
 }
-\* Output:
+/* Output:
 List c1 is less than list c2.
-*\
+*/
 ```
 
 ## <a name="op_lt_eq"></a> operator&lt;=
@@ -148,9 +152,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* ein Objekt des Typs `list`.
+*left*<br/>
+Ein Objekt vom Typ `list`.
 
-*richtige* ein Objekt des Typs `list`.
+*right*<br/>
+Ein Objekt vom Typ `list`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -184,9 +190,9 @@ int main( )
    else
       cout << "List c1 is greater than list c2." << endl;
 }
-\* Output:
+/* Output:
 List c1 is less than or equal to list c2.
-*\
+*/
 ```
 
 ## <a name="op_eq_eq"></a> operator==
@@ -201,9 +207,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* ein Objekt des Typs `list`.
+*left*<br/>
+Ein Objekt vom Typ `list`.
 
-*richtige* ein Objekt des Typs `list`.
+*right*<br/>
+Ein Objekt vom Typ `list`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -233,9 +241,9 @@ int main( )
    else
       cout << "The lists are not equal." << endl;
 }
-\* Output:
+/* Output:
 The lists are equal.
-*\
+*/
 ```
 
 ## <a name="op_gt"></a> operator&gt;
@@ -250,9 +258,11 @@ bool operator>(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* ein Objekt des Typs `list`.
+*left*<br/>
+Ein Objekt vom Typ `list`.
 
-*richtige* ein Objekt des Typs `list`.
+*right*<br/>
+Ein Objekt vom Typ `list`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -286,9 +296,9 @@ int main( )
    else
       cout << "List c1 is not greater than list c2." << endl;
 }
-\* Output:
+/* Output:
 List c1 is greater than list c2.
-*\
+*/
 ```
 
 ## <a name="op_gt_eq"></a> operator&gt;=
@@ -303,9 +313,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* ein Objekt des Typs `list`.
+*left*<br/>
+Ein Objekt vom Typ `list`.
 
-*richtige* ein Objekt des Typs `list`.
+*right*<br/>
+Ein Objekt vom Typ `list`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -340,9 +352,9 @@ int main( )
    else
       cout << "List c1 is less than list c2." << endl;
 }
-\* Output:
+/* Output:
 List c1 is greater than or equal to list c2.
-*\
+*/
 ```
 
 ## <a name="see-also"></a>Siehe auch

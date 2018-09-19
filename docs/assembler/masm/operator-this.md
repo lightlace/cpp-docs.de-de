@@ -1,7 +1,7 @@
 ---
-title: Operator THIS | Microsoft Docs
+title: Operator THIS | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37304563b1a986b81eec05778c420a002e75fa9f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: ae20d8f2abc7740d1716155f626c6a69316ca3fd
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057122"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692572"
 ---
 # <a name="operator-this"></a>Operator THIS
-Gibt ein Operanden des angegebenen `type` , deren Werte für Offset und das Segment mit dem aktuellen Speicherort Counter-Wert gleich sind.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-THIS type  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Operatoren – Referenz](../../assembler/masm/operators-reference.md)
+
+Gibt ein Operanden des angegebenen `type` , deren Werte für Offset und das Segment der aktuelle Speicherort Zählerwert entsprechen.
+
+## <a name="syntax"></a>Syntax
+
+> Dieser Typ
+
+## <a name="see-also"></a>Siehe auch
+
+[Operatoren – Referenz](../../assembler/masm/operators-reference.md)<br/>

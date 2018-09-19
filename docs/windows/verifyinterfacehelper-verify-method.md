@@ -1,5 +1,5 @@
 ---
-title: 'Verifyinterfacehelper:: Verify-Methode | Microsoft Docs'
+title: 'Verifyinterfacehelper:: Verify-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f33935bcb042a961494f7da6d34a07b0aeda9af
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: be23f0f053c6f78225a323abf4c52f15d2ebbe21
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888982"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42580937"
 ---
 # <a name="verifyinterfacehelperverify-method"></a>VerifyInterfaceHelper::Verify-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-static void Verify();  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Überprüft, ob die Schnittstelle, die durch den aktuellen Vorlagenparameter angegeben bestimmte Anforderungen erfüllt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [VerifyInterfaceHelper-Struktur](../windows/verifyinterfacehelper-structure.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+static void Verify();
+```
+
+## <a name="remarks"></a>Hinweise
+
+Überprüft, ob die Schnittstelle, die durch den aktuellen Vorlagenparameter angegeben bestimmte Anforderungen erfüllt.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[VerifyInterfaceHelper-Struktur](../windows/verifyinterfacehelper-structure.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

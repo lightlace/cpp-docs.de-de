@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2698 generiert | Microsoft Docs
+title: Compilerfehler C2698 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c466e39702f1e408ad96d79c16c4a5953fa373f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7ca3e7568640aabd2b7960d97ea94a11a1d5d59
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233816"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118920"
 ---
-# <a name="compiler-error-c2698"></a>Compiler-Fehler C2698 generiert
-Die using-Deklaration für "Deklaration 1" kann nicht gleichzeitig mit den vorhandenen using-Deklaration für "Deklaration 2"  
-  
- Nachdem Sie haben eine [using-Deklaration](../../cpp/using-declaration.md) für einen Datenmember, die jede Deklaration im gleichen Bereich, der den Namen verwendet, ist nicht zulässig, da nur Funktionen überladen werden können.  
-  
- Im folgende Beispiel wird C2698 generiert:  
-  
-```  
-// C2698.cpp  
-struct A {  
-   int x;  
-};  
-  
-struct B {  
-   int x;  
-};  
-  
-struct C : A, B {  
-   using A::x;  
-   using B::x;   // C2698  
-}  
+# <a name="compiler-error-c2698"></a>Compilerfehler C2698
+
+Die using-Deklaration für "Deklaration 1" kann nicht gleichzeitig vorhanden sein, mit der vorhandenen using-Deklaration für "Deklaration 2"
+
+Nachdem Sie haben eine [using-Deklaration](../../cpp/using-declaration.md) für einen Datenmember, die jede Deklaration im gleichen Bereich mit dem gleichen Namen ist nicht zulässig, da nur Funktionen, die überladen werden können.
+
+Im folgende Beispiel wird die C2698 generiert:
+
+```
+// C2698.cpp
+struct A {
+   int x;
+};
+
+struct B {
+   int x;
+};
+
+struct C : A, B {
+   using A::x;
+   using B::x;   // C2698
+}
 ```

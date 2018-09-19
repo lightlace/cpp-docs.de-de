@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3299 | Microsoft Docs
+title: Compilerfehler C3299 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecaa0b8d3ee1a3d33a5d750cc559da63e036ff16
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ca5a57ca1cdfe442386872d738a01cf4235685c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249900"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117828"
 ---
 # <a name="compiler-error-c3299"></a>Compilerfehler C3299
-"Member_Funktion": Einschränkungen können nicht angegeben werden, sie werden von der Basismethode geerbt.  
-  
- Wenn Sie eine generische Memberfunktion überschreiben, können Sie keine Einschränkungsklauseln angeben (das Wiederholen von Einschränkungen impliziert, dass die Einschränkungen nicht geerbt werden).  
-  
- Die Einschränkungsklauseln für die generische Funktion, die Sie überschreiben, werden geerbt.  
-  
- Weitere Informationen finden Sie unter [Einschränkungen für generische Typparameter (C + c++ / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C3299 generiert:  
-  
-```  
-// C3299.cpp  
-// compile with: /clr /c  
-public ref struct R {  
-   generic<class T>   
-   where T : R  
-   virtual void f();  
-};  
-  
-public ref struct S : R {  
-   generic<class T>   
-   where T : R   // C3299  
-   virtual void f() override;  
-};  
+
+"Member_Funktion": Einschränkungen können nicht angegeben werden, sie werden von der Basismethode geerbt.
+
+Wenn Sie eine generische Memberfunktion überschreiben, können Sie keine Einschränkungsklauseln angeben (das Wiederholen von Einschränkungen impliziert, dass die Einschränkungen nicht geerbt werden).
+
+Die Einschränkungsklauseln für die generische Funktion, die Sie überschreiben, werden geerbt.
+
+Weitere Informationen finden Sie unter [Einschränkungen für generische Typparameter (C++ / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C3299 generiert:
+
+```
+// C3299.cpp
+// compile with: /clr /c
+public ref struct R {
+   generic<class T>
+   where T : R
+   virtual void f();
+};
+
+public ref struct S : R {
+   generic<class T>
+   where T : R   // C3299
+   virtual void f() override;
+};
 ```

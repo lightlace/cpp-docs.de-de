@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::to_wstring [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6534d93b4f04826188fa13c942efd080e152aebe
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a80749e6eaffe02d748167f462580782a2755f89
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954902"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106742"
 ---
 # <a name="ltstringgt-functions"></a>&lt;string&gt;-Funktionen
 
@@ -85,11 +85,14 @@ basic_istream<Allocator, Traits>& getline(
 
 ### <a name="parameters"></a>Parameter
 
-*ist* der Eingabestream, aus der eine Zeichenfolge, die zu extrahierenden ist.
+*is*<br/>
+Der Eingabestream, aus dem eine Zeichenfolge extrahiert werden soll.
 
-*Str* die Zeichenfolge, die in das sind die Zeichen aus dem Eingabestream gelesen.
+*str*<br/>
+Die Zeichenfolge, in die die Zeichen aus dem Eingabestream gelesen werden.
 
-*Delim* das Zeilentrennzeichen.
+*Delim*<br/>
+Das Zeilentrennzeichen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -426,9 +429,11 @@ void swap(basic_string<CharType, Traits, Allocator>& left, basic_string<CharType
 
 ### <a name="parameters"></a>Parameter
 
-*linken* eine Zeichenfolge, deren Elemente mit denen einer anderen Zeichenfolge ausgetauscht werden sollen.
+*left*<br/>
+Eine Zeichenfolge, deren Elemente mit denen einer anderen Zeichenfolge ausgetauscht werden sollen.
 
-*richtige* die andere Zeichenfolge, deren Elemente mit der ersten Zeichenfolge ausgetauscht werden sollen.
+*right*<br/>
+Die andere Zeichenfolge, deren Elemente mit der ersten Zeichenfolge ausgetauscht werden sollen.
 
 ### <a name="remarks"></a>Hinweise
 

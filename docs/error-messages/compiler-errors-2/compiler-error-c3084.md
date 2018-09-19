@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3084 | Microsoft Docs
+title: Compilerfehler C3084 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 959d2eb46d7a2c85cc25adf681c760fa1f8dc4fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 44bab3f43efa186c83134a6b40e7cb3fcbcbd51d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246424"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027231"
 ---
 # <a name="compiler-error-c3084"></a>Compilerfehler C3084
-"Funktion": ein Finalizer/Destruktor kann nicht "Schlüsselwort" sein.  
-  
- Ein Finalizer oder Destruktor wurde falsch deklariert.  
-  
- Beispielsweise sollte ein Destruktor nicht als versiegelt gekennzeichnet werden.  Abgeleitete Typen können nicht auf den Destruktor zugreifen.  Weitere Informationen finden Sie unter [explizite Überschreibungen](../../windows/explicit-overrides-cpp-component-extensions.md) und [Destruktoren und Finalizer wie: definieren und Verarbeiten von Klassen und Strukturen (C + c++ / CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C3084 generiert.  
-  
-```  
-// C3084.cpp  
-// compile with: /clr /c  
-ref struct R {  
-protected:  
-   !R() sealed;   // C3084  
-   !R() abstract;   // C3084  
-   !R();  
-};  
+
+"Funktion": ein Finalizer/Destruktor kann nicht "Schlüsselwort" sein.
+
+Ein Finalizer oder Destruktor wurde falsch deklariert.
+
+Beispielsweise sollte ein Destruktor nicht als versiegelt gekennzeichnet werden.  Abgeleitete Typen können nicht auf den Destruktor zugreifen.  Weitere Informationen finden Sie unter [explizite Überschreibungen](../../windows/explicit-overrides-cpp-component-extensions.md) und [Destruktoren und Finalizer in der Vorgehensweise: definieren und Verarbeiten von Klassen und Strukturen (C++ / CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C3084 generiert.
+
+```
+// C3084.cpp
+// compile with: /clr /c
+ref struct R {
+protected:
+   !R() sealed;   // C3084
+   !R() abstract;   // C3084
+   !R();
+};
 ```

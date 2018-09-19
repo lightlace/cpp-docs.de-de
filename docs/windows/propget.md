@@ -1,5 +1,5 @@
 ---
-title: Propget | Microsoft Docs
+title: Propget | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,45 +17,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 339cb03b645e3aff0a6bb806e431c7be274340d8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e3461f622e5146a9173e0a011fbec60a9674c545
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881858"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223340"
 ---
 # <a name="propget"></a>propget
-Gibt eine Eigenschaft Accessor-Funktion.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-[propget]  
-  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Die **Propget** C++-Attribut hat die gleiche Funktionalität wie die [Propget](http://msdn.microsoft.com/library/windows/desktop/aa367145) MIDL-Attribut.  
-  
-## <a name="example"></a>Beispiel  
- Siehe das Beispiel für [bindbare](../windows/bindable.md) für ein Beispiel für die Verwendung von **Propget**.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-### <a name="attribute-context"></a>Attributkontext  
-  
-|||  
-|-|-|  
-|**Betrifft**|Methode|  
-|**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Keiner|  
-|**Ungültige Attribute**|**Propput**, **Propputref**|  
-  
- Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [IDL-Attribute](../windows/idl-attributes.md)   
- [Methodenattribut](../windows/method-attributes.md)   
- [propput](../windows/propput.md)   
- [propputref](../windows/propputref.md)   
+
+Gibt eine Eigenschaft Accessor-Funktion.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+[propget]
+```
+
+## <a name="remarks"></a>Hinweise
+
+Die **Propget** C++-Attribut hat die gleiche Funktionalität wie die [Propget](/windows/desktop/Midl/propget) MIDL-Attribut.
+
+## <a name="example"></a>Beispiel
+
+Siehe das Beispiel für [bindbare](../windows/bindable.md) für ein Beispiel für die Verwendung von **Propget**.
+
+## <a name="requirements"></a>Anforderungen
+
+### <a name="attribute-context"></a>Attributkontext
+
+|||
+|-|-|
+|**Betrifft**|Methode|
+|**Wiederholbar**|Nein|
+|**Erforderliche Attribute**|Keiner|
+|**Ungültige Attribute**|`propput`, `propputref`|
+
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[IDL-Attribute](../windows/idl-attributes.md)  
+[Methodenattribut](../windows/method-attributes.md)  
+[propput](../windows/propput.md)  
+[propputref](../windows/propputref.md)  

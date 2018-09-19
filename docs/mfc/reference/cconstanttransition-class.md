@@ -1,5 +1,5 @@
 ---
-title: CConstantTransition-Klasse | Microsoft Docs
+title: CConstantTransition-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48a8ccb49001b93ded52edc732fc59222775e6f8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: dc7e4104e6555ada88483336917708db943be2a0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954026"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210578"
 ---
 # <a name="cconstanttransition-class"></a>CConstantTransition-Klasse
 Kapselt einen konstanten Übergang.  
@@ -50,7 +50,7 @@ class CConstantTransition : public CBaseTransition;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CConstantTransition::Create](#create)|Ruft den Übergangsbibliothek, um die gekapselte COM-Übergangsobjekt zu erstellen. (Überschreibt [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CConstantTransition::Create](#create)|Ruft den Übergangsbibliothek, um gekapselte COM-Übergangsobjekt zu erstellen. (Überschreibt [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
@@ -59,7 +59,7 @@ class CConstantTransition : public CBaseTransition;
 |[CConstantTransition::m_duration](#m_duration)|Die Dauer des Übergangs.|  
   
 ## <a name="remarks"></a>Hinweise  
- Während der einen Konstanten Übergang bleibt der Wert einer Animationsvariablen den Anfangswert für die Dauer des Übergangs. Da alle Übergänge automatisch gelöscht werden, es wird empfohlen, belegt sie mit dem Operator new. Das gekapselte IUIAnimationTransition-COM-Objekt wird von CAnimationController:: erst erstellt, ist es auf NULL. Ändern Membervariablen, nach der Erstellung dieses COM-Objekt hat keine Auswirkung.  
+ Bei der einen Konstanten Übergang bleibt der Wert einer Animationsvariablen an den ursprünglichen Wert über die Dauer des Übergangs. Da alle Übergänge automatisch gelöscht werden, es wird empfohlen, sie mit dem Operator new. Das gekapselte IUIAnimationTransition COM-Objekt wird von CAnimationController:: erst erstellt, ist es auf NULL. Ändern Membervariablen des Typs an, nach der Erstellung dieses COM-Objekt hat keine Auswirkungen.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -83,7 +83,7 @@ CConstantTransition (UI_ANIMATION_SECONDS duration);
  Die Dauer des Übergangs.  
   
 ##  <a name="create"></a>  CConstantTransition::Create  
- Ruft den Übergangsbibliothek, um die gekapselte COM-Übergangsobjekt zu erstellen.  
+ Ruft den Übergangsbibliothek, um gekapselte COM-Übergangsobjekt zu erstellen.  
   
 ```  
 virtual BOOL Create(
@@ -93,7 +93,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parameter  
  *pLibrary*  
- Ein Zeiger auf ein [IUIAnimationTransitionLibrary-Schnittstelle](https://msdn.microsoft.com/library/windows/desktop/dd371897), die eine Bibliothek mit standard-Übergänge definiert.  
+ Ein Zeiger auf ein [IUIAnimationTransitionLibrary Schnittstelle](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), das eine Bibliothek mit standard-Übergänge definiert.  
 
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Übergang erfolgreich erstellt wurde. andernfalls "false".  

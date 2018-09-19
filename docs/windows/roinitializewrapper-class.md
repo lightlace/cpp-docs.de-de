@@ -1,5 +1,5 @@
 ---
-title: RoInitializeWrapper-Klasse | Microsoft Docs
+title: RoInitializeWrapper-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/20/2018
 ms.technology:
@@ -15,47 +15,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cac71857e6b472f11d1c9eaba48d181ea78fb456
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 6f5c47ac34d8b159e75acf672ba57ca8c1ebac1e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705591"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592828"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper-Klasse
-Initialisiert die Windows-Runtime.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-class RoInitializeWrapper  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- RoInitializeWrapper ist eine benutzerfreundliche, die Windows-Runtime initialisiert und gibt ein HRESULT zurück, der angibt, ob der Vorgang erfolgreich war. Da der Destruktor der Klasse aufruft `::Windows::Foundation::Uninitialize`, Instanzen von `RoInitializeWrapper` müssen global oder auf der obersten Ebene Gültigkeitsbereich deklariert werden.  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[RoInitializeWrapper::RoInitializeWrapper-Konstruktor](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|Initialisiert eine neue Instanz der RoInitializeWrapper-Klasse.|  
-|[RoInitializeWrapper::~RoInitializeWrapper-Destruktor](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|Zerstört die aktuelle Instanz der RoInitializeWrapper-Klasse.|  
-  
-### <a name="public-operators"></a>Öffentliche Operatoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[RoInitializeWrapper::HRESULT()-Operator](../windows/roinitializewrapper-hresult-parens-operator.md)|Ruft das HRESULT, das vom RoInitializeWrapper-Konstruktor erzeugt wird.|  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `RoInitializeWrapper`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Siehe auch  
- [Microsoft::WRL::Wrappers-Namespace](../windows/microsoft-wrl-wrappers-namespace.md)
+
+Initialisiert die Windows-Runtime.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+class RoInitializeWrapper
+```
+
+## <a name="remarks"></a>Hinweise
+
+**RoInitializeWrapper** ist eine Annehmlichkeit, die die Windows-Runtime initialisiert und gibt ein HRESULT zurück, der angibt, ob der Vorgang erfolgreich war. Da der Destruktor einer Klasse aufruft `::Windows::Foundation::Uninitialize`, Instanzen von **RoInitializeWrapper** müssen im globalen oder der obersten Ebene Gültigkeitsbereich deklariert werden.
+
+## <a name="members"></a>Member
+
+### <a name="public-constructors"></a>Öffentliche Konstruktoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[RoInitializeWrapper::RoInitializeWrapper-Konstruktor](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|Initialisiert eine neue Instanz der dem **RoInitializeWrapper** Klasse.|
+|[RoInitializeWrapper::~RoInitializeWrapper-Destruktor](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|Zerstört die aktuelle Instanz von der **RoInitializeWrapper** Klasse.|
+
+### <a name="public-operators"></a>Öffentliche Operatoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[RoInitializeWrapper::HRESULT()-Operator](../windows/roinitializewrapper-hresult-parens-operator.md)|Ruft den HRESULT-Wert, erzeugt die **RoInitializeWrapper** Konstruktor.|
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`RoInitializeWrapper`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+
+[Microsoft::WRL::Wrappers-Namespace](../windows/microsoft-wrl-wrappers-namespace.md)

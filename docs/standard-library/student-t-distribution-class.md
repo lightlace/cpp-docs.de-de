@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 309b01fac7e6461a48992ee1c2c091439353aee7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6ce2c5e134b93c1cefd64b7a33935d42c6bba5cb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961011"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723982"
 ---
 # <a name="studenttdistribution-class"></a>student_t_distribution-Klasse
 
@@ -74,7 +74,8 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*RealType* der gleitkommaergebnistyp standardmäßig **doppelte**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType*<br/>
+Der gleitkommaergebnistyp standardmäßig **doppelte**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
@@ -89,7 +90,7 @@ Die Eigenschaftsfunktion `n()` gibt den Wert für den gespeicherten Verteilungsp
 
 Weitere Informationen zu Verteilungsklassen und ihren Membern finden Sie unter [\<random>](../standard-library/random.md).
 
-Ausführliche Informationen über die Student-*t*-Verteilung finden Sie im Wolfram MathWorld-Artikel [Students t-Distribution](http://go.microsoft.com/fwlink/p/?linkid=401094).
+Ausführliche Informationen über die Student-*t*-Verteilung finden Sie im Wolfram MathWorld-Artikel [Students t-Distribution](http://mathworld.wolfram.com/Studentst-Distribution.html).
 
 ## <a name="example"></a>Beispiel
 
@@ -183,10 +184,11 @@ explicit student_t_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*n*  
- Der `n`-Verteilungsparameter.
+*n*<br/>
+Der `n`-Verteilungsparameter.
 
-*Parm* das parameterpaket verwendet, um die Verteilung erstellen.
+*parm*<br/>
+Das für die Erstellung der Verteilung verwendete Parameterpaket.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -213,10 +215,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*n*  
+*n*<br/>
 Der `n`-Verteilungsparameter.
 
-*right*  
+*right*<br/>
 Das mit diesem `param_type`-Objekt zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise

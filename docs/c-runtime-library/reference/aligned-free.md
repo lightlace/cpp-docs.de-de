@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd89d0c8657df4bec2da5bf021c8964ad418cd9b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 54700ad2a1eed391647a66a4c54a726b75e812f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393367"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069715"
 ---
 # <a name="alignedfree"></a>_aligned_free
 
@@ -54,17 +54,18 @@ void _aligned_free (
 
 ### <a name="parameters"></a>Parameter
 
-*Memblock* einen Zeiger zum Speicherblock, der an zurückgegeben wurde die **_aligned_malloc** oder **_aligned_offset_malloc** Funktion.
+*memblock*<br/>
+Ein Zeiger auf den Speicherblock, der an die Funktion `_aligned_malloc` oder `_aligned_offset_malloc` zurückgegeben wurde.
 
 ## <a name="remarks"></a>Hinweise
 
-**_aligned_free** RuntimeCompatibility `__declspec(noalias)`, was bedeutet, dass die Funktion gewährleistet ist, nicht um die globalen Variablen zu ändern. Weitere Informationen finden Sie unter [noalias](../../cpp/noalias.md).
+**_aligned_free** RuntimeCompatibility `__declspec(noalias)`, was bedeutet, dass die Funktion garantiert nicht, um globale Variablen zu ändern. Weitere Informationen finden Sie unter [noalias](../../cpp/noalias.md).
 
-Diese Funktion überprüft im Gegensatz zu den anderen _aligned-CRT-Funktionen den Parameter nicht. Wenn *Memblock* ist ein **NULL** -Zeiger ist, diese Funktion lediglich keine Aktionen ausführt. Ändert sich nicht **Errno** und es ist kein Handler für ungültige Parameter aufgerufen. Wenn in der Funktion ein Fehler auftritt, weil Sie vorher keine _aligned-Funktion benutzt haben, um den Speicherblock zuzuordnen, oder wenn eine falsche Speicherausrichtung aufgrund eines unvorhergesehenen Problems auftritt, generiert die Funktion einen Debugbericht aus den [_RPT, _RPTF, _RPTW und _RPTFW-Makros](rpt-rptf-rptw-rptfw-macros.md).
+Diese Funktion überprüft im Gegensatz zu den anderen _aligned-CRT-Funktionen den Parameter nicht. Wenn *Memblock* ist ein Nullzeiger, diese Funktion einfach führt keine Aktionen. Es verändert `errno` nicht und ruft auch keine ungültigen Parametertyphandler auf. Wenn in der Funktion ein Fehler auftritt, weil Sie vorher keine _aligned-Funktion benutzt haben, um den Speicherblock zuzuordnen, oder wenn eine falsche Speicherausrichtung aufgrund eines unvorhergesehenen Problems auftritt, generiert die Funktion einen Debugbericht aus den [_RPT, _RPTF, _RPTW und _RPTFW-Makros](rpt-rptf-rptw-rptfw-macros.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_aligned_free**|\<malloc.h>|
 
@@ -74,4 +75,4 @@ Weitere Informationen finden Sie unter [_aligned_malloc](aligned-malloc.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Datenausrichtung](../../c-runtime-library/data-alignment.md)<br/>
+[Datenausrichtung](../../c-runtime-library/data-alignment.md)

@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2624 generiert | Microsoft Docs
+title: Compilerfehler C2624 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9edeb5bdef57663d29bb4cfe5427e5bc3f43b7d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4db17508d9335439e861cf5489bddfab366dec1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230663"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109118"
 ---
-# <a name="compiler-error-c2624"></a>Compiler-Fehler C2624 generiert
-lokale Klassen können nicht verwendet werden, um "Extern" Variablen zu deklarieren  
-  
- Eine lokale Klasse oder Struktur nicht zur deklarieren `extern` Variablen.  
-  
- Im folgende Beispiel wird C2624 generiert:  
-  
-```  
-// C2624.cpp  
-int main() {  
-   struct C {};  
-   extern C ac;   // C2624  
-}  
+# <a name="compiler-error-c2624"></a>Compilerfehler C2624
+
+lokale Klassen können nicht zum Deklarieren von Variablen in "Extern" verwendet werden
+
+Eine lokale Klasse oder Struktur kann nicht zum Deklarieren verwendet werden `extern` Variablen.
+
+Im folgende Beispiel wird die C2624 generiert:
+
+```
+// C2624.cpp
+int main() {
+   struct C {};
+   extern C ac;   // C2624
+}
 ```

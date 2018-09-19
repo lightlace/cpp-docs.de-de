@@ -1,5 +1,5 @@
 ---
-title: NULL und Undefinierte Makros | Microsoft Docs
+title: NULL und Undefinierte Makros | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 494a084ee5ba1da29c132aa632b647b37f305855
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eee6e713715e4709af990878224261a41f5470e3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368469"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702636"
 ---
 # <a name="null-and-undefined-macros"></a>NULL-Makros und undefinierte Makros
-Null und nicht definiert-Makros erweitert, um null-Zeichenfolgen, jedoch ein Makro definiert als eine null-Zeichenfolge in vorverarbeitungsausdrücke definierten berücksichtigt. Um ein Makro als null-Zeichenfolge zu definieren, geben Sie keine Zeichen außer Leerzeichen oder Tabstopps hinter dem Gleichheitszeichen (=) in einer Befehlszeile oder Befehlsdatei, und schließen Sie die null-Zeichenfolge oder der Definition in doppelte Anführungszeichen (""). Um ein Makro aufzuheben, verwenden Sie **! UNDEF.** Weitere Informationen finden Sie unter [Makefile-Vorverarbeitung Direktiven](../build/makefile-preprocessing-directives.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Definieren eines NMAKE-Makros](../build/defining-an-nmake-macro.md)
+
+Null und Undefinierte Makros erweitern, um null-Zeichenfolgen, aber ein Makro definiert als null-Zeichenfolge gelten als definiert, in der Vorabverarbeitung von Ausdrücken. Geben Sie zum Definieren eines Makros als null-Zeichenfolge keine Zeichen außer Leerzeichen oder Tabstopps hinter dem Gleichheitszeichen (=) in einer Befehlszeile oder Befehlsdatei, und schließen Sie die null-Zeichenfolge oder der Definition in doppelte Anführungszeichen (""). Um ein Makro aufzuheben, verwenden Sie **! UNDEF.** Weitere Informationen finden Sie unter [Direktiven für die Makefile-Vorverarbeitung](../build/makefile-preprocessing-directives.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Definieren eines NMAKE-Makros](../build/defining-an-nmake-macro.md)

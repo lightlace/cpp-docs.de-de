@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1205 | Microsoft Docs
+title: Schwerwiegender Fehler C1205 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcb1e32843c7c8c47589d4b75fd2613a1d73f135
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e70be77c224b8c1c6039a908d38e8e482ab36259
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230082"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035564"
 ---
 # <a name="fatal-error-c1205"></a>Schwerwiegender Fehler C1205
-Generika werden von der installierten Laufzeitversion nicht unterstützt.  
-  
- Die vom Compiler verwendete Version der Common Language Runtime ist keine Version der Laufzeit, die vom aktuellen Compiler unterstützt wird.  Beispielsweise erfordert die Generika-Funktion eine Laufzeit, die auf den Compiler zugeschnitten ist.  
-  
- Die Pfadangabe muss möglicherweise geändert werden.
+
+Generika werden von der installierten Laufzeitversion nicht unterstützt.
+
+Die vom Compiler verwendete Version der Common Language Runtime ist keine Version der Laufzeit, die vom aktuellen Compiler unterstützt wird.  Beispielsweise erfordert die Generika-Funktion eine Laufzeit, die auf den Compiler zugeschnitten ist.
+
+Die Pfadangabe muss möglicherweise geändert werden.

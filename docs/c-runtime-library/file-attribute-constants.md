@@ -35,46 +35,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 178082356eb08130879cd3b4f2118cbf75e451ce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 42745d25c0f743fa1a11226d5cfe433327c8ff2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390265"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077047"
 ---
 # <a name="file-attribute-constants"></a>Dateiattributskonstanten
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-#include <io.h>  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Konstanten geben die aktuellen Attribute der Datei oder des Verzeichnisses an, die/das von der Funktion angegeben wird.  
-  
- Die Attribute werden durch die folgenden Manifestkonstanten dargestellt:  
-  
- `_A_ARCH`  
- Archiv. Wird bei jeder Änderung der Datei festgelegt und durch den BACKUP-Befehl gelöscht. Wert: 0x20  
-  
- `_A_HIDDEN`  
- Versteckte Datei. Normalerweise mithilfe des DIR-Befehls nicht angezeigt, sofern nicht die Option „/AH“ verwendet wird. Gibt Informationen über normale Dateien zurück und über Dateien, die dieses Attribut aufweisen. Wert: 0x02  
-  
- `_A_NORMAL`  
- Normal. Datei kann ohne Einschränkung gelesen oder geschrieben werden. Wert: 0x00  
-  
- `_A_RDONLY`  
- Schreibgeschützt. Die Datei kann nicht zum Schreiben geöffnet werden, und eine Datei mit gleichem Namen kann nicht erstellt werden. Wert: 0x01  
-  
- `_A_SUBDIR`  
- Unterverzeichnis. Wert: 0x10  
-  
- `_A_SYSTEM`  
- Systemdatei. Normalerweise mithilfe des DIR-Befehls nicht angezeigt, sofern nicht die Option „/AS“ verwendet wird. Wert: 0x04  
-  
- Mit dem OR-Operator (& #124;) können mehrere Konstanten kombiniert werden.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Dateinamen-Suchfunktionen](../c-runtime-library/filename-search-functions.md)   
- [Globale Konstanten](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntax
+
+```
+
+#include <io.h>
+```
+
+## <a name="remarks"></a>Hinweise
+
+Diese Konstanten geben die aktuellen Attribute der Datei oder des Verzeichnisses an, die/das von der Funktion angegeben wird.
+
+Die Attribute werden durch die folgenden Manifestkonstanten dargestellt:
+
+|Konstante|Beschreibung |
+|-|-|
+|`_A_ARCH`| Archiv. Wird bei jeder Änderung der Datei festgelegt und durch den BACKUP-Befehl gelöscht. Wert: 0x20|
+|`_A_HIDDEN`| Versteckte Datei. Normalerweise mithilfe des DIR-Befehls nicht angezeigt, sofern nicht die Option „/AH“ verwendet wird. Gibt Informationen über normale Dateien zurück und über Dateien, die dieses Attribut aufweisen. Wert: 0x02|
+|`_A_NORMAL`| Normal. Datei kann ohne Einschränkung gelesen oder geschrieben werden. Wert: 0x00|
+|`_A_RDONLY`| Schreibgeschützt. Die Datei kann nicht zum Schreiben geöffnet werden, und eine Datei mit gleichem Namen kann nicht erstellt werden. Wert: 0x01|
+|`_A_SUBDIR`| Unterverzeichnis. Wert: 0x10|
+|`_A_SYSTEM`| Systemdatei. Normalerweise mithilfe des DIR-Befehls nicht angezeigt, sofern nicht die Option „/AS“ verwendet wird. Wert: 0x04|
+
+Mit dem OR-Operator (& #124;) können mehrere Konstanten kombiniert werden.
+
+## <a name="see-also"></a>Siehe auch
+
+[Dateinamen-Suchfunktionen](../c-runtime-library/filename-search-functions.md)<br/>
+[Globale Konstanten](../c-runtime-library/global-constants.md)

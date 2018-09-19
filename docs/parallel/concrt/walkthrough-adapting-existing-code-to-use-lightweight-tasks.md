@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Anpassen von vorhandenem Code Verwendung einfache Aufgaben | Microsoft Docs'
+title: 'Exemplarische Vorgehensweise: Anpassen von vorhandenem Code Verwendung einfache Aufgaben | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fe3bb4b576bd1f9160b4a3cdc3142be5cdff05
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b4a48720a55487531e7dcfc2c38c9a0bf54c88a8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688543"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214330"
 ---
 # <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>Exemplarische Vorgehensweise: Anpassen von vorhandenem Code für die Verwendung einfacher Aufgaben
 In diesem Thema wird erläutert, wie vorhandener Code, der die Windows-API verwendet, zum Erstellen und Ausführen eines Threads für die Ausführung einer einfachen Aufgabe angepasst wird.  
@@ -33,7 +33,7 @@ In diesem Thema wird erläutert, wie vorhandener Code, der die Windows-API verwe
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Beschreibung  
- Das folgende Beispiel veranschaulicht die typische Verwendung der Windows-API zum Erstellen und Ausführen eines Threads. Dieses Beispiel verwendet die [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) aufzurufenden Funktion der `MyThreadFunction` in einem separaten Thread.  
+ Das folgende Beispiel veranschaulicht die typische Verwendung der Windows-API zum Erstellen und Ausführen eines Threads. Dieses Beispiel verwendet die [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) aufzurufenden Funktion der `MyThreadFunction` in einem separaten Thread.  
   
 ### <a name="code"></a>Code  
  [!code-cpp[concrt-windows-threads#1](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_1.cpp)]  
@@ -61,7 +61,7 @@ Parameters = 50, 100
   
  [!code-cpp[concrt-migration-lwt#4](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_4.cpp)]  
   
-4.  Ändern der `MyData` -Struktur so, dass eine [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) -Objekt, das der hauptanwendung signalisiert, dass die Aufgabe abgeschlossen wurde.  
+4.  Ändern der `MyData` -Struktur so, dass eine [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) -Objekt, für die hauptanwendung signalisiert, dass der Vorgang abgeschlossen ist.  
   
  [!code-cpp[concrt-migration-lwt#5](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_5.cpp)]  
   
@@ -71,7 +71,7 @@ Parameters = 50, 100
  [!code-cpp[concrt-migration-lwt#6](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_6.cpp)]  
   
 
-6.  Ersetzen Sie den Aufruf von `WaitForSingleObject` durch einen Aufruf der [Concurrency](reference/event-class.md#wait) Methode für den Abschluss der Aufgabe zu warten.  
+6.  Ersetzen Sie den Aufruf von `WaitForSingleObject` durch einen Aufruf der [Concurrency](reference/event-class.md#wait) Methode, um auf den Abschluss der Aufgabe warten.  
 
  [!code-cpp[concrt-migration-lwt#7](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_7.cpp)]  
   
@@ -81,7 +81,7 @@ Parameters = 50, 100
   
  [!code-cpp[concrt-migration-lwt#8](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_8.cpp)]  
   
-9. Am Ende der `MyThreadFunction` funktionieren, rufen Sie die [Concurrency::event::set](reference/event-class.md#set) Methode, um die Hauptassembly der Anwendung zu signalisieren, dass der Vorgang abgeschlossen ist.  
+9. Am Ende der `MyThreadFunction` funktioniert, rufen Sie die [Concurrency::event::set](reference/event-class.md#set) Methode, um der hauptanwendung signalisiert, dass der Vorgang abgeschlossen ist.  
   
  [!code-cpp[concrt-migration-lwt#9](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_9.cpp)]  
   
@@ -98,5 +98,5 @@ Parameters = 50, 100
 ### <a name="comments"></a>Kommentare  
   
 ## <a name="see-also"></a>Siehe auch  
- [Taskplaner](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
+ [Aufgabenplanung](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
  [Scheduler-Klasse](../../parallel/concrt/reference/scheduler-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1038 | Microsoft Docs
+title: Schwerwiegender Fehler C1038 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3592d583ff136a9b45486f3626d23dc4f0821259
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc8d80ff392a9e0d649a4d0fc2cac9f07207d79b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196687"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060577"
 ---
 # <a name="fatal-error-c1038"></a>Schwerwiegender Fehler C1038
-Compilerlimit: "Funktion": Ablaufsteuerung zu komplex, vereinfachen Sie die Funktion.  
-  
- Die Funktion hat mehr Ablaufsteuerungsstatus, als der Compiler verarbeiten kann. Vereinfachen Sie die Ablaufsteuerung, oder teilen Sie die Funktion in kleinere Funktionen auf.
+
+Compilerlimit: "Funktion": Ablaufsteuerung zu komplex, vereinfachen Sie die Funktion.
+
+Die Funktion hat mehr Ablaufsteuerungsstatus, als der Compiler verarbeiten kann. Vereinfachen Sie die Ablaufsteuerung, oder teilen Sie die Funktion in kleinere Funktionen auf.

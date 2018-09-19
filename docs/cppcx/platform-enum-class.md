@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: enum-Klasse | Microsoft Docs'
+title: 'Platform:: enum-Klasse | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,40 +11,45 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Enum Struct
 ms.assetid: cf82f0eb-7a37-4e4e-bbe7-e4aebbc9ec0a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcb6dddb02f13a2138689672535f01c935383740
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0568fba448d6f6976df466c46569e5059fb11ddf
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088289"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105224"
 ---
 # <a name="platformenum-class"></a>Platform::Enum-Klasse
-Eine Wertklasse, die einen Satz benannter Konstanten darstellt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-public class Enum  
-```  
-  
-### <a name="members"></a>Member  
- Die Enumerationsklasse erbt die Methoden Equals(), GetHashCode() und ToString() von [Platform::Object Class](../cppcx/platform-object-class.md).  
-  
-### <a name="remarks"></a>Hinweise  
- Verwenden Sie das Schlüsselwort [public enum class](../windows/enum-class-cpp-component-extensions.md) zum Erstellen von Enumerationen. Verwenden Sie den Platform::Enum-Typ nicht explizit. Weitere Informationen finden Sie unter [Enumerationen](../cppcx/enums-c-cx.md)definiert sind.  
-  
-### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client:** Windows 8  
-  
- **Unterstützter Server:** Windows Server 2012  
-  
- **Namespace:** Platform  
-  
- **Metadaten:** platform.winmd  
-  
-## <a name="see-also"></a>Siehe auch  
- [Plattformnamespace](../cppcx/platform-namespace-c-cx.md)
+
+Eine Wertklasse, die einen Satz benannter Konstanten darstellt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+public class Enum
+```
+
+### <a name="members"></a>Member
+
+Die Enumerationsklasse erbt die Methoden Equals(), GetHashCode() und ToString() von [Platform::Object Class](../cppcx/platform-object-class.md).
+
+### <a name="remarks"></a>Hinweise
+
+Verwenden Sie das Schlüsselwort [public enum class](../windows/enum-class-cpp-component-extensions.md) zum Erstellen von Enumerationen. Verwenden Sie den Platform::Enum-Typ nicht explizit. Weitere Informationen finden Sie unter [Enumerationen](../cppcx/enums-c-cx.md)definiert sind.
+
+### <a name="requirements"></a>Anforderungen
+
+**Unterstützter Client (Min.):** Windows 8
+
+**Unterstützter Server (Min.):** Windows Server 2012
+
+**Namespace:** Platform
+
+**Metadaten:** platform.winmd
+
+## <a name="see-also"></a>Siehe auch
+
+[Platform-namespace](../cppcx/platform-namespace-c-cx.md)

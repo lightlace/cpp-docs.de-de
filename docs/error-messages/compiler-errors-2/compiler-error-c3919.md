@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3919 | Microsoft Docs
+title: Compilerfehler C3919 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c210e85d9f53ae037852e880e12f3015c925642e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 565146e714e0aa9a3598e4fe5fdeea361454ec78
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270989"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136113"
 ---
 # <a name="compiler-error-c3919"></a>Compilerfehler C3919
-'Event_method': Funktion muss den Typ 'Typ' aufweisen  
-  
- Eine Ereignisaccessormethode wurde nicht ordnungsgemäß deklariert.  
-  
- Weitere Informationen zu Ereignissen finden Sie unter [Ereignis](../../windows/event-cpp-component-extensions.md).  
-  
- Im folgende Beispiel wird C3919 generiert:  
-  
-```  
-// C3919.cpp  
-// compile with: /clr /c  
-using namespace System;  
-delegate void D(String^);  
-ref class R {  
-   event D^ e {  
-      int add(int);   // C3919  
-      int remove(int);   // C3919  
-  
-      void add(D^);   // OK  
-      void remove(D^);   // OK  
-   }  
-};  
+
+'Event_method': Funktion muss den Typ 'Typ' aufweisen
+
+Eine Ereignis-Accessormethode wurde nicht ordnungsgemäß deklariert.
+
+Weitere Informationen zu Ereignissen finden Sie unter [Ereignis](../../windows/event-cpp-component-extensions.md).
+
+Im folgende Beispiel wird die C3919 generiert:
+
+```
+// C3919.cpp
+// compile with: /clr /c
+using namespace System;
+delegate void D(String^);
+ref class R {
+   event D^ e {
+      int add(int);   // C3919
+      int remove(int);   // C3919
+
+      void add(D^);   // OK
+      void remove(D^);   // OK
+   }
+};
 ```

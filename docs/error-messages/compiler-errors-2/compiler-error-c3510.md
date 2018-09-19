@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3510 | Microsoft Docs
+title: Compilerfehler C3510 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,59 +16,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abb58d8d4fb9008b07579ef7fbc0066d00bcea57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5cc134823abf2657426b0c1be9cfbe6d92a74035
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257793"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111325"
 ---
 # <a name="compiler-error-c3510"></a>Compilerfehler C3510
-abhängigen Typ 'Typbib Bibliothek 'wurde' wurde nicht gefunden.  
-  
- [No_registry](../../preprocessor/no-registry.md) und [Auto_search](../../preprocessor/auto-search.md) übergeben wurden, um `#import` , aber der Compiler konnte sich nicht um einen Verweistyp-Bibliothek zu finden.  
-  
- Um diesen Fehler zu beheben, stellen Sie sicher, dass alle Typbibliotheken und referenzierten Typbibliotheken für den Compiler verfügbar sind.  
-  
- Im folgende Beispiel wird C3510 generiert:  
-  
- Angenommen, die folgenden zwei Typbibliotheken erstellt wurden, und C3510a.tlb wurde gelöscht oder nicht auf den Pfad.  
-  
-```  
-// C3510a.idl  
-[uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12b")]  
-library C3510aLib  
-{  
-   [uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12c")]  
-   enum E_C3510  
-   {  
-      one, two, three  
-   };  
-};  
-```  
-  
- Und klicken Sie dann den Quellcode für die zweite Typbibliothek:  
-  
-```  
-// C3510b.idl  
-// post-build command: del /f C3510a.tlb  
-[uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12e")]  
-library C3510bLib  
-{  
-   importlib ("C3510a.tlb");  
-   [uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12d")]  
-   struct S_C3510 {  
-      enum E_C3510 e;  
-   };  
-};  
-```  
-  
- Und klicken Sie dann den Clientcode:  
-  
-```  
-// C3510.cpp  
-#import "c3510b.tlb" no_registry auto_search   // C3510  
-int main() {  
-   C3510aLib::S_C4336 ccc;  
-}  
+
+abhängiger Typ 'Typbib Bibliothek 'wurde' wurde nicht gefunden.
+
+[No_registry](../../preprocessor/no-registry.md) und [Auto_search](../../preprocessor/auto-search.md) übergeben wurden `#import` , aber der Compiler konnte nicht keine referenzierte Typbibliothek gefunden.
+
+Um diesen Fehler zu beheben, stellen Sie sicher, dass alle Bibliotheken und Typbibliotheken für den Compiler verfügbar sind.
+
+Im folgende Beispiel wird die C3510 generiert:
+
+Wird davon ausgegangen, dass die folgenden zwei Typbibliotheken erstellt wurden, und C3510a.tlb wurde gelöscht oder nicht auf den Pfad.
+
+```
+// C3510a.idl
+[uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12b")]
+library C3510aLib
+{
+   [uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12c")]
+   enum E_C3510
+   {
+      one, two, three
+   };
+};
+```
+
+Und klicken Sie dann auf den Quellcode für die zweite Typbibliothek:
+
+```
+// C3510b.idl
+// post-build command: del /f C3510a.tlb
+[uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12e")]
+library C3510bLib
+{
+   importlib ("C3510a.tlb");
+   [uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12d")]
+   struct S_C3510 {
+      enum E_C3510 e;
+   };
+};
+```
+
+Und klicken Sie dann die Client-Code:
+
+```
+// C3510.cpp
+#import "c3510b.tlb" no_registry auto_search   // C3510
+int main() {
+   C3510aLib::S_C4336 ccc;
+}
 ```

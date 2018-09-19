@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 119a4e1b39d86ef2d12565fd593ce2124cef5bd5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 49681f240d6cee257e48c2cf1c5d2479b3678135
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848914"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208369"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC-Klasse
 Eine Gerätekontext abgeleitete Klasse [CDC](../../mfc/reference/cdc-class.md).  
@@ -61,7 +61,7 @@ class CPaintDC : public CDC
 ## <a name="remarks"></a>Hinweise  
  Er führt eine [CWnd:: BeginPaint](../../mfc/reference/cwnd-class.md#beginpaint) zur Erstellungszeit und [CWnd::EndPaint](../../mfc/reference/cwnd-class.md#endpaint) zur zerstörungszeit.  
   
- Ein `CPaintDC` Objekt kann nur verwendet werden, für die Reaktion auf eine [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) Nachricht werden in der Regel Ihre `OnPaint` -Nachrichtenhandler-Memberfunktion.  
+ Ein `CPaintDC` Objekt kann nur verwendet werden, für die Reaktion auf eine [WM_PAINT](/windows/desktop/gdi/wm-paint) Nachricht werden in der Regel Ihre `OnPaint` -Nachrichtenhandler-Memberfunktion.  
   
  Weitere Informationen zur Verwendung von `CPaintDC`, finden Sie unter [Gerätekontexte](../../mfc/device-contexts.md).  
   
@@ -87,7 +87,7 @@ explicit CPaintDC(CWnd* pWnd);
  Verweist auf die `CWnd` -Objekt, dem die `CPaintDC` Objekt gehört.  
   
 ### <a name="remarks"></a>Hinweise  
- Eine Ausnahme (vom Typ `CResourceException`) wird ausgelöst, wenn die Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) -Aufruf fehl. Ein Gerätekontext möglicherweise nicht verfügbar, wenn es sich bei allen Kontexten verfügbare Gerät Windows bereits zugewiesen wurde. Ihre Anwendung Computerressourcen für die fünf allgemeinen Anzeige Kontexte zu jedem Zeitpunkt unter Windows verfügbar.  
+ Eine Ausnahme (vom Typ `CResourceException`) wird ausgelöst, wenn die Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) -Aufruf fehl. Ein Gerätekontext möglicherweise nicht verfügbar, wenn es sich bei allen Kontexten verfügbare Gerät Windows bereits zugewiesen wurde. Ihre Anwendung Computerressourcen für die fünf allgemeinen Anzeige Kontexte zu jedem Zeitpunkt unter Windows verfügbar.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#97](../../mfc/codesnippet/cpp/cpaintdc-class_1.cpp)]  

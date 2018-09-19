@@ -1,7 +1,7 @@
 ---
-title: Programmierungshandbücher | Microsoft Docs
+title: Programmierungshandbücher von Prozessorherstellern | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/01/2018
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -12,28 +12,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55d712af448b4e18d853ced3d387918561d235b0
-ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
+ms.openlocfilehash: 56e653f1870d3139031a79180cc3a02c33b162f5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753600"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676257"
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>Programmierungshandbücher von Prozessorherstellern
 
-Dieser Artikel enthält Links zu Websites, die Informationen zur Programmierung zu Prozessoren, die nicht hergestellt enthalten können, verkauft wurde, oder von Microsoft unterstützt. Microsoft besitzen oder steuern, die Websites oder den Inhalt auf diesen nicht.
+Dieser Artikel enthält Links zu Websites, die Informationen zur Programmierung zu Prozessoren, die nicht hergestellt enthalten können, verkauft, oder von Microsoft unterstützt wird. Microsoft besitzen oder steuern, die Websites oder den Inhalt auf diesen nicht.
 
-## <a name="processor-manufacturer-websites"></a>Prozessor-Hersteller-Websites
+## <a name="processor-manufacturer-websites"></a>Processor Manufacturer Websites
 
-- [AMD-Entwicklerhandbüchern "," Handbücher "und" ISA-Dokumente](https://go.microsoft.com/fwlink/p/?linkid=874958)
+- [AMD Developer Guides, Handbücher und ISA-Dokumente](https://developer.amd.com/resources/developer-guides-manuals/)
 
-- [Intel 64 und IA-32-Architekturen Software Developer Handbücher](https://go.microsoft.com/fwlink/p/?LinkID=510021)
+- [Intel 64 und IA-32-Architekturen Software-Entwickler-Handbücher](https://software.intel.com/articles/intel-sdm)
 
-- [Einführung in die Intel Advanced Vector Extensions](https://go.microsoft.com/fwlink/p/?linkid=874961)
+- [Einführung in die Intel Advanced Vector Extensions](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
 ## <a name="remarks"></a>Hinweise
 
-Weder Visual Studio als auch die Microsoft-Makroassembler unterstützen alle Prozessoren.
+Weder Visual Studio als auch den Microsoft Macro Assembler unterstützen alle Prozessoren.
 
 ## <a name="see-also"></a>Siehe auch
 

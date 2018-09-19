@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2572 | Microsoft Docs
+title: Compilerfehler C2572 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f2211137361d9de86397c333e51abf0a903ff67
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56d49fe95dca7861b18d417dcd6049a12776e8d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227433"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057834"
 ---
 # <a name="compiler-error-c2572"></a>Compilerfehler C2572
-'class:: Member': Neudefinition des Standardparameters: Parameter Param  
-  
- Standardparameter können nicht neu definiert werden. Wenn Sie einen anderen Wert für den Parameter, die Standardparameter undefiniert bleiben soll benötigen.  
-  
- Im folgende Beispiel wird C2572 generiert:  
-  
-```  
-// C2572.cpp  
-// compile with: /c  
-void f(int i = 1);   // function declaration  
-  
-// function definition  
-void f(int i = 1) {}   // C2572  
-  
-// try the following line instead  
-// void f(int i) {}  
+
+'class:: Member': Neudefinition des Standardparameters: Parameter Param
+
+Standardparameter können nicht neu definiert werden. Wenn Sie einen anderen Wert für den Parameter, der Standardparameter nicht definiert werden soll benötigen.
+
+Im folgende Beispiel wird die C2572 generiert:
+
+```
+// C2572.cpp
+// compile with: /c
+void f(int i = 1);   // function declaration
+
+// function definition
+void f(int i = 1) {}   // C2572
+
+// try the following line instead
+// void f(int i) {}
 ```

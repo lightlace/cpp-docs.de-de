@@ -124,17 +124,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1da517ef952dd3fcdb0772feedb8e576be9502b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 2649e7e4cbaa1ba7fe6f2fcc18a5c5e933fc1032
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850019"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712953"
 ---
 # <a name="cmfcribbonbutton-class"></a>CMFCRibbonButton-Klasse
 Die `CMFCRibbonButton`-Klasse implementiert Schaltflächen, die auf Menübandleisten-Elementen wie Bereichen, Symbolleisten für den Schnellzugriff und Popupmenüs positioniert werde können.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -261,11 +261,11 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pSubItem*  
- Gibt einen Zeiger auf das neue Element hinzufügen.  
+*pSubItem*<br/>
+[in] Gibt einen Zeiger auf das neue Element hinzufügen.  
   
- [in] *nIndex*  
- Gibt den Index, an dem das Element dem Array mit Menüelementen der Schaltfläche hinzufügen. 1, um das Element am Ende des Arrays der Menüelemente hinzufügen.  
+*nIndex*<br/>
+[in] Gibt den Index, an dem das Element dem Array mit Menüelementen der Schaltfläche hinzufügen. 1, um das Element am Ende des Arrays der Menüelemente hinzufügen.  
   
 ##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched  
 
@@ -318,20 +318,20 @@ CMFCRibbonButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- Gibt die Befehls-ID der Schaltfläche an.  
+*nID*<br/>
+[in] Gibt die Befehls-ID der Schaltfläche an.  
   
- [in] *LpszText*  
- Gibt die Beschriftung der Schaltfläche an.  
+*lpszText*<br/>
+[in] Gibt die Beschriftung der Schaltfläche an.  
   
- [in] *nSmallImageIndex*  
- Gibt einen nullbasierten Index des kleines Bild der Schaltfläche in der Bildliste der übergeordneten Kategorie an.  
+*nSmallImageIndex*<br/>
+[in] Gibt einen nullbasierten Index des kleines Bild der Schaltfläche in der Bildliste der übergeordneten Kategorie an.  
   
- [in] *nLargeImageIndex*  
- Gibt einen nullbasierten Index des großes Bild der Schaltfläche in der Bildliste der übergeordneten Kategorie an.  
+*nLargeImageIndex*<br/>
+[in] Gibt einen nullbasierten Index des großes Bild der Schaltfläche in der Bildliste der übergeordneten Kategorie an.  
   
- [in] *hIcon*  
- Gibt ein Handle auf das Symbol, das die Anwendung als das Bild der Schaltfläche verwendet.  
+*hIcon*<br/>
+[in] Gibt ein Handle auf das Symbol, das die Anwendung als das Bild der Schaltfläche verwendet.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht das Erstellen einer `CMFCRibbonButton` Objekt.  
@@ -348,8 +348,8 @@ CSize DrawBottomText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *bCalcOnly*  
+*pDC*<br/>
+[in] [in] *bCalcOnly*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -366,8 +366,8 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Typ*  
+*pDC*<br/>
+[in] [in] *Typ*  
  [in] *RectImage*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -385,10 +385,10 @@ virtual int DrawRibbonText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *StrText*  
- [in] *RectText*  
- [in] *UiDTFlags*  
+*pDC*<br/>
+[in] [in] *StrText*  
+*rectText*<br/>
+[in] [in] *UiDTFlags*  
  [in] *ClrText*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -403,8 +403,8 @@ int FindSubItemIndexByID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiID*  
- Gibt die Befehls-ID des Elements im Popupmenü an.  
+*uiID*<br/>
+[in] Gibt die Befehls-ID des Elements im Popupmenü an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index des untergeordneten Elements, das zugeordnet ist die *UiID*. 1, wenn kein solcher untergeordnete Element vorhanden ist.  
@@ -456,8 +456,8 @@ int GetImageIndex(BOOL bLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bLargeImage*  
- Wenn "true" gibt den Index des Bildes in der Bildliste an, die die große Bilder enthält zurück. andernfalls gibt Sie den Index des Bildes zurück, in der Bildliste an, die die kleine Bilder enthält.  
+*bLargeImage*<br/>
+[in] Wenn "true" gibt den Index des Bildes in der Bildliste an, die die große Bilder enthält zurück. andernfalls gibt Sie den Index des Bildes zurück, in der Bildliste an, die die kleine Bilder enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Index, der das Bild der Schaltfläche in der Liste zugeordnete Bild.  
@@ -763,8 +763,8 @@ virtual void OnClick(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Gibt die Position des Mausklicks.  
+*Zeigen Sie*<br/>
+[in] Gibt die Position des Mausklicks.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse, wenn Sie dieses Ereignis behandeln möchten.  
@@ -822,8 +822,8 @@ BOOL RemoveSubItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Gibt den nullbasierten Index des Menüelements, das Sie entfernen möchten.  
+*nIndex*<br/>
+[in] Gibt den nullbasierten Index des Menüelements, das Sie entfernen möchten.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das angegebene Element erfolgreich entfernt wurde. andernfalls FALSE zurück, wenn *nIndex* ist negativ oder überschreitet die Anzahl der Elemente im Popup-Menü.  
@@ -857,8 +857,8 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bSet*  
- Bei "true", zeigt die Schaltfläche ein großes Bild. Andernfalls zeigt die Schaltfläche ein kleines Bild enthält.  
+*bSet*<br/>
+[in] Bei "true", zeigt die Schaltfläche ein großes Bild. Andernfalls zeigt die Schaltfläche ein kleines Bild enthält.  
   
 ##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand  
  Aktiviert den Standardbefehl für die Menübandschaltfläche.  
@@ -868,8 +868,8 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bSet*  
- Bei "true", kann die Schaltfläche "die Standardbefehl ausführen. Wenn "FALSE" kann nicht die Schaltfläche der Standardbefehl ausgeführt.  
+*bSet*<br/>
+[in] Bei "true", kann die Schaltfläche "die Standardbefehl ausführen. Wenn "FALSE" kann nicht die Schaltfläche der Standardbefehl ausgeführt.  
   
 ### <a name="remarks"></a>Hinweise  
  *bSet* gilt nur, wenn die Schaltfläche ein Menü aufweist. Wenn *bSet* ist "true", die Schaltfläche mit der kann die Standardbefehl ausführen, und das zugewiesenen Popup-Menü angezeigt wird, nur, wenn ein Benutzer den Pfeil am rechten Rand der Schaltfläche klickt. Andernfalls die Schaltfläche "die Standardbefehl kann nicht ausgeführt werden, und im Popupmenü angezeigt wird, unabhängig davon, welchem Bereich die Schaltfläche geklickt.  
@@ -896,11 +896,11 @@ void SetImageIndex(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Gibt den Index des Bildes an.  
+*nIndex*<br/>
+[in] Gibt den Index des Bildes an.  
   
- [in] *bLargeImage*  
- Bei "true", bezieht sich der angegebene Index in die Liste der großen Bildern. Andernfalls verweist der Index der Liste der kleinen Bilder.  
+*bLargeImage*<br/>
+[in] Bei "true", bezieht sich der angegebene Index in die Liste der großen Bildern. Andernfalls verweist der Index der Liste der kleinen Bilder.  
   
 ##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu  
  Weist der Menüband-Schaltfläche ein Popupmenü zu.  
@@ -953,8 +953,8 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bSet*  
- Bei "true", ist das Menü rechts ausgerichtet. Andernfalls ist Klicken Sie im Menü linksbündig ausgerichtet  
+*bSet*<br/>
+[in] Bei "true", ist das Menü rechts ausgerichtet. Andernfalls ist Klicken Sie im Menü linksbündig ausgerichtet  
   
 ##  <a name="settext"></a>  CMFCRibbonButton::SetText  
 

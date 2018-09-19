@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb9a1f13fcb387aeddf18cc0f734101463bd3eb
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c5bdc05f903c1313d4844be8d5fc4fa619505670
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450907"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195118"
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
 
@@ -94,22 +94,22 @@ Fehlerbedingungen
 |*mbchar*|*sizeInBytes*|Rückgabewert|*pRetValue*|
 |--------------|-------------------|------------------|-----------------|
 |**NULL**|>0|**EINVAL**|nicht geändert|
-|alle|>**INT_MAX**|**EINVAL**|nicht geändert|
-|alle|zu klein|**EINVAL**|nicht geändert|
+|any|>**INT_MAX**|**EINVAL**|nicht geändert|
+|any|zu klein|**EINVAL**|nicht geändert|
 
-Wenn eine der oben genannten Fehlerbedingungen auftritt, wird ein Handler für ungültige Parameter aufgerufen (siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md)). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Wctomb** gibt **EINVAL** und legt **Errno** auf **EINVAL**.
+Wenn eine der oben genannten Fehlerbedingungen auftritt, wird ein Handler für ungültige Parameter aufgerufen (siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md)). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Wctomb** gibt **EINVAL** und **Errno** zu **EINVAL**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Wctomb_s** -Funktion konvertiert die *Wchar* Argument an das entsprechende Multibytezeichen und speichert das Ergebnis an *Mbchar*. Sie können die Funktion von einem beliebigen Punkt in einem beliebigen Programm aufrufen.
+Die **Wctomb_s** -Funktion konvertiert die *Wchar* Argument für das entsprechende Multibytezeichen und speichert das Ergebnis in *Mbchar*. Sie können die Funktion von einem beliebigen Punkt in einem beliebigen Programm aufrufen.
 
-Wenn **Wctomb_s** konvertiert das Breitzeichen in ein Multibytezeichen, legt er die Anzahl der Bytes (also nie größer als **MB_CUR_MAX**) in der Breitzeichen in die Ganzzahl verweist *pRetValue*. Wenn *Wchar* ist das Nullzeichen Breitzeichen (L '\0'), **Wctomb_s** füllt *pRetValue* mit 1. Wenn die Zielzeiger *Mbchar* ist **NULL**, **Wctomb_s** setzt 0 in *pRetValue*. Wenn die Konvertierung nicht möglich, im aktuellen Gebietsschema ist **Wctomb_s** setzt-1 in *pRetValue*.
+Wenn **Wctomb_s** konvertiert das Breitzeichen in ein Multibytezeichen ist, wird die Anzahl von Bytes (, und ist nie größer als **MB_CUR_MAX**) im Breitzeichen in die ganze Zahl, die verweist *pRetValue*. Wenn *Wchar* ist das Breitzeichen-Zeichen Null (L '\0'), **Wctomb_s** füllt *pRetValue* mit 1. Wenn der Zielzeiger *Mbchar* ist **NULL**, **Wctomb_s** setzt 0 in *pRetValue*. Wenn die Konvertierung nicht möglich, im aktuellen Gebietsschema ist **Wctomb_s** setzt-1 in *pRetValue*.
 
-**Wctomb_s** verwendet das aktuelle Gebietsschema für gebietsschemaabhängige zu **_wctomb_s_l** ist nahezu identisch, das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+**Wctomb_s** verwendet das aktuelle Gebietsschema für gebietsschemaabhängige Informationen **_wctomb_s_l** ist identisch, außer dass sie das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**wctomb_s**|\<stdlib.h>|
 |**_wctomb_s_l**|\<stdlib.h>|
@@ -118,7 +118,7 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 
 ## <a name="example"></a>Beispiel
 
-Dieses Programm veranschaulicht das Verhalten von der **Wctomb** Funktion.
+Dieses Programm stellt das Verhalten der **Wctomb** Funktion.
 
 ```cpp
 // crt_wctomb_s.cpp
@@ -152,4 +152,4 @@ Convert a wide character:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

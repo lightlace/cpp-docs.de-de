@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31d16279b4de6c0cca0d37161a37ce5e39b85b7b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b0e961ecf45458dc039b932bdcc96c3bcc6f7521
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339357"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196331"
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile-Klasse
 Stellt Funktionalität für die Verwendung von asynchronen Monikern in ActiveX-Steuerelementen (früher OLE-Steuerelemente) bereit.  
@@ -89,7 +89,7 @@ class CAsyncMonikerFile : public CMonikerFile
 |[CAsyncMonikerFile::OnStopBinding](#onstopbinding)|Wird aufgerufen, wenn asynchrone Übertragung angehalten wird.|  
   
 ## <a name="remarks"></a>Hinweise  
- Von abgeleiteten [CMonikerFile](../../mfc/reference/cmonikerfile-class.md), die wiederum von abgeleitet ist [COleStreamFile](../../mfc/reference/colestreamfile-class.md), `CAsyncMonikerFile` verwendet die [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705) Schnittstelle für alle Datenstrom zuzugreifen asynchron, einschließlich asynchron laden von Dateien aus einer URL. Die Dateien können Datenpfad-Eigenschaften des ActiveX-Steuerelemente werden.  
+ Von abgeleiteten [CMonikerFile](../../mfc/reference/cmonikerfile-class.md), die wiederum von abgeleitet ist [COleStreamFile](../../mfc/reference/colestreamfile-class.md), `CAsyncMonikerFile` verwendet die [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker) Schnittstelle für alle Datenstrom zuzugreifen asynchron, einschließlich asynchron laden von Dateien aus einer URL. Die Dateien können Datenpfad-Eigenschaften des ActiveX-Steuerelemente werden.  
   
  Asynchrone Moniker werden in erster Linie in internetfähige Anwendungen und ActiveX-Steuerelemente verwendet, um eine reaktionsfähige Benutzeroberfläche während der Übertragung von Dateien bereitzustellen. Ein gutes Beispiel hierfür ist die Verwendung von [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md) zum Bereitstellen von asynchroner Eigenschaften für ActiveX-Steuerelemente. Die `CDataPathProperty` Objekt wiederholt einen Rückruf an, dass die Verfügbarkeit neuer Daten während einer langwierigen Eigenschaft Exchange erhalten.  
   
@@ -156,7 +156,7 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
   
  [CAsyncMonikerFile::Open](#open) Aufrufe `CreateBindStatusCallback`.  
   
- Weitere Informationen zu asynchronen Monikern und asynchrone Datenbindung, finden Sie unter den [IBindStatusCallback](http://msdn.microsoft.com/library/ie/ms775060) Schnittstelle und [wie asynchrone Bindung "und" Speicher Arbeit](http://msdn.microsoft.com/library/windows/desktop/aa379152). Eine Erläuterung der Aggregation, finden Sie unter [Aggregation](http://msdn.microsoft.com/library/windows/desktop/ms686558). Alle drei Themen sind im Windows SDK.  
+ Weitere Informationen zu asynchronen Monikern und asynchrone Datenbindung, finden Sie unter den [IBindStatusCallback](https://msdn.microsoft.com/library/ie/ms775060) Schnittstelle und [wie asynchrone Bindung "und" Speicher Arbeit](/windows/desktop/Stg/how-asynchronous-binding-and-storage-work). Eine Erläuterung der Aggregation, finden Sie unter [Aggregation](/windows/desktop/com/aggregation). Alle drei Themen sind im Windows SDK.  
   
 ##  <a name="getbindinfo"></a>  CAsyncMonikerFile::GetBindInfo  
  Wird aufgerufen, von der Client eines asynchronen Monikers dem asynchronen Moniker mitteilen, wie sie binden möchte.  
@@ -196,7 +196,7 @@ FORMATETC* GetFormatEtc() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die Windows-Struktur [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) für den aktuell geöffneten Stream. Gibt NULL zurück, wenn der Moniker nicht gebunden wurde, wenn es nicht asynchron ist, oder wenn der asynchrone Vorgang noch nicht begonnen hat.  
+ Ein Zeiger auf die Windows-Struktur [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) für den aktuell geöffneten Stream. Gibt NULL zurück, wenn der Moniker nicht gebunden wurde, wenn es nicht asynchron ist, oder wenn der asynchrone Vorgang noch nicht begonnen hat.  
   
 ##  <a name="getpriority"></a>  CAsyncMonikerFile::GetPriority  
  Vom Client der eines asynchronen Monikers aufgerufen, während des Bindungsvorgangs gestartet wird, erhalten Sie die Priorität an den Thread für die Durchführung des Bindungsvorgangs.  
@@ -206,7 +206,7 @@ virtual LONG GetPriority() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Priorität, an der die asynchrone Übertragung stattfinden soll. Zu den Flags der standard-Thread-Priorität: THREAD_PRIORITY_ABOVE_NORMAL, THREAD_PRIORITY_BELOW_NORMAL, THREAD_PRIORITY_HIGHEST, THREAD_PRIORITY_IDLE, THREAD_PRIORITY_LOWEST fest, THREAD_PRIORITY_NORMAL und THREAD_PRIORITY_TIME_CRITICAL. Finden Sie im Windows-Funktion [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) eine Beschreibung dieser Werte.  
+ Die Priorität, an der die asynchrone Übertragung stattfinden soll. Zu den Flags der standard-Thread-Priorität: THREAD_PRIORITY_ABOVE_NORMAL, THREAD_PRIORITY_BELOW_NORMAL, THREAD_PRIORITY_HIGHEST, THREAD_PRIORITY_IDLE, THREAD_PRIORITY_LOWEST fest, THREAD_PRIORITY_NORMAL und THREAD_PRIORITY_TIME_CRITICAL. Finden Sie im Windows-Funktion [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) eine Beschreibung dieser Werte.  
   
 ### <a name="remarks"></a>Hinweise  
  `GetPriority` sollte nicht direkt aufgerufen werden. THREAD_PRIORITY_NORMAL wird von der Standardimplementierung zurückgegeben.  

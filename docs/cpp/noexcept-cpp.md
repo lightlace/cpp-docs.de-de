@@ -14,43 +14,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8eb8e6900dc12e4f176daf63bb711198f5e41429
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 100be1808a9a45079dba1b6cee805b3f3e6dc534
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939288"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079536"
 ---
 # <a name="noexcept-c"></a>noexcept (C++)
-**C ++ 11:** gibt an, ob eine Funktion Ausnahmen auslösen kann.  
-  
-## <a name="syntax"></a>Syntax  
-  
-> *noexcept-expression*:  
-> &nbsp;&nbsp;&nbsp;&nbsp;**noexcept**  
-> &nbsp;&nbsp;&nbsp;&nbsp;**"noexcept" (** *Konstantenausdruck* **)**  
-  
-### <a name="parameters"></a>Parameter  
- *constant-expression*  
- Ein konstanter Ausdruck des Typs **"bool"** , das darstellt, ob der Satz von möglichen Ausnahmetypen leer ist. Die Version ohne entspricht `noexcept(true)`.  
-  
-## <a name="remarks"></a>Hinweise  
- Ein *"noexcept" Ausdruck* ist eine Art von *Ausnahmespezifikation*, ein Suffix an, die Deklaration einer Funktion, die einen Satz von Typen darstellt, die von einem Ausnahmehandler für jede Ausnahme abgeglichen werden kann, die beendet eine -Funktion. Unäre Bedingungsoperator `noexcept(` *Constant_expression* `)` , in denen *Constant_expression* Yeilds **"true"**, und das Synonym `noexcept`, anzugeben, dass die Gruppe der potenziellen Ausnahmetypen, die eine Funktion zu beenden, können leer ist. Also die Funktion löst nie eine Ausnahme aus und ermöglicht nie eine Ausnahme von außerhalb ihres Bereichs weitergegeben werden. Der Operator `noexcept(` *Constant_expression* `)` , in denen *Constant_expression* Yeilds **"false"**, oder das Fehlen von eine Ausnahmespezifikation (außer bei einer Funktion Destruktor oder Aufhebung der Zuordnung), gibt an, dass der Satz von möglichen Ausnahmen, die die Funktion beendet, können den Satz aller Typen.  
- 
- Markieren Sie eine Funktion als `noexcept` nur dann, wenn alle Funktionen, die, entweder direkt oder indirekt aufgerufen, auch werden `noexcept` oder **const**. Der Compiler überprüft nicht unbedingt jeden Codepfad auf Ausnahmen, die bis zu auswirken können eine `noexcept` Funktion. Wenn eine Ausnahme, den äußeren Bereich einer Funktion, die markiert beendet wird `noexcept`, [Std:: Terminate](../standard-library/exception-functions.md#terminate) wird sofort aufgerufen, und es gibt keine Garantie, dass alle Objekte im Gültigkeitsbereich befindlichen Destruktoren aufgerufen werden. Verwendung `noexcept` anstelle der dynamischen ausnahmebezeichner `throw()`, im Standard mittlerweile veraltet. Sollten Sie anwenden `noexcept` für alle Funktionen, die nie eine Ausnahme der Aufrufliste nach oben weitergegeben werden kann. Wenn eine Funktion deklariert wird `noexcept`, es kann der Compiler effizienteren Code in verschiedenen anderen Kontexten generieren. Weitere Informationen finden Sie unter [Ausnahmespezifikationen](exception-specifications-throw-cpp.md).   
-  
-## <a name="example"></a>Beispiel  
-Eine Vorlagenfunktion, die ihre Argumente kopiert deklariert werden möglicherweise `noexcept` auf der Bedingung, dass das kopierte Objekt ein plain old Datentyp (POD) ist. Eine solche Funktion kann wie folgt deklariert werden:  
-  
-```cpp  
-#include <type_traits>  
-  
-template <typename T>  
-T copy_object(const T& obj) noexcept(std::is_pod<T>)  
-{  
-   // ...   
-}  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [C++-Ausnahmebehandlung](cpp-exception-handling.md) [Ausnahmespezifikationen (Throw, "noexcept")](exception-specifications-throw-cpp.md)
+
+**C ++ 11:** gibt an, ob eine Funktion Ausnahmen auslösen kann.
+
+## <a name="syntax"></a>Syntax
+
+> *"noexcept"-Ausdruck*: &nbsp; &nbsp; &nbsp; &nbsp; **"noexcept"** &nbsp; &nbsp; &nbsp; &nbsp; **"noexcept" (** *Konstantenausdruck* **)**
+
+### <a name="parameters"></a>Parameter
+
+*constant-expression*<br/>
+Ein konstanter Ausdruck des Typs **"bool"** , das darstellt, ob der Satz von möglichen Ausnahmetypen leer ist. Die Version ohne entspricht `noexcept(true)`.
+
+## <a name="remarks"></a>Hinweise
+
+Ein *"noexcept" Ausdruck* ist eine Art von *Ausnahmespezifikation*, ein Suffix an, die Deklaration einer Funktion, die einen Satz von Typen darstellt, die von einem Ausnahmehandler für jede Ausnahme abgeglichen werden kann, die beendet eine -Funktion. Unäre Bedingungsoperator `noexcept(` *Constant_expression* `)` , in denen *Constant_expression* Yeilds **"true"**, und das Synonym **"noexcept"**, anzugeben, dass die Gruppe der potenziellen Ausnahmetypen, die eine Funktion zu beenden, können leer ist. Also die Funktion löst nie eine Ausnahme aus und ermöglicht nie eine Ausnahme von außerhalb ihres Bereichs weitergegeben werden. Der Operator `noexcept(` *Constant_expression* `)` , in denen *Constant_expression* Yeilds **"false"**, oder das Fehlen von eine Ausnahmespezifikation (außer bei einer Funktion Destruktor oder Aufhebung der Zuordnung), gibt an, dass der Satz von möglichen Ausnahmen, die die Funktion beendet, können den Satz aller Typen.
+
+Markieren Sie eine Funktion als **"noexcept"** nur dann, wenn alle Funktionen, die, entweder direkt oder indirekt aufgerufen, auch werden **"noexcept"** oder **const**. Der Compiler überprüft nicht unbedingt jeden Codepfad auf Ausnahmen, die bis zu auswirken können eine **"noexcept"** Funktion. Wenn eine Ausnahme, den äußeren Bereich einer Funktion, die markiert beendet wird `noexcept`, [Std:: Terminate](../standard-library/exception-functions.md#terminate) wird sofort aufgerufen, und es gibt keine Garantie, dass alle Objekte im Gültigkeitsbereich befindlichen Destruktoren aufgerufen werden. Verwendung **"noexcept"** anstelle der dynamischen ausnahmebezeichner `throw()`, im Standard mittlerweile veraltet. Sollten Sie anwenden `noexcept` für alle Funktionen, die nie eine Ausnahme der Aufrufliste nach oben weitergegeben werden kann. Wenn eine Funktion deklariert wird **"noexcept"**, es kann der Compiler effizienteren Code in verschiedenen anderen Kontexten generieren. Weitere Informationen finden Sie unter [Ausnahmespezifikationen](exception-specifications-throw-cpp.md).
+
+## <a name="example"></a>Beispiel
+
+Eine Vorlagenfunktion, die ihre Argumente kopiert deklariert werden möglicherweise **"noexcept"** auf der Bedingung, dass das kopierte Objekt ein plain old Datentyp (POD) ist. Eine solche Funktion kann wie folgt deklariert werden:
+
+```cpp
+#include <type_traits>
+
+template <typename T>
+T copy_object(const T& obj) noexcept(std::is_pod<T>)
+{
+   // ...
+}
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[C++-Ausnahmebehandlung](cpp-exception-handling.md)<br/>
+[Ausnahmespezifikationen (Throw, "noexcept")](exception-specifications-throw-cpp.md)

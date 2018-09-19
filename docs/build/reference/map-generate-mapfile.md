@@ -1,5 +1,5 @@
 ---
-title: -MAP (Zuordnungsdatei generieren) | Microsoft Docs
+title: -MAP (Zuordnungsdatei generieren) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,57 +25,59 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f4b23cf8f1c05fb8bd196dc9a6cd54971b1572
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c39134f45b1a044a76139d33aa9e761a0f14c8c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374670"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725581"
 ---
 # <a name="map-generate-mapfile"></a>/MAP (Zuordnungsdatei generieren)
-```  
-/MAP[:filename]  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Dabei gilt:  
-  
- *filename*  
- Ein vom Benutzer angegebener Name für die Zuordnungsdatei ein. Er ersetzt den Standardnamen.  
-  
-## <a name="remarks"></a>Hinweise  
- Die Map-Option weist den Linker erstellen eine Zuordnungsdatei.  
-  
- Standardmäßig den Namen des Linkers die Zuordnungsdatei mit den Namen des Programms und die Erweiterung .map. Das optionale *Filename* können Sie den Standardnamen für eine Zuordnungsdatei zu überschreiben.  
-  
- Eine Zuordnungsdatei ist eine Textdatei, die die folgende Informationen zu der zu verknüpfende Programm enthält:  
-  
--   Der Modulname, also der Basisname der Datei  
-  
--   Der Zeitstempel aus dem Dateiheader Programm (nicht aus dem Dateisystem)  
-  
--   Eine Liste der Gruppen in der Anwendung mit jeder Gruppe Startadresse (als *Abschnitt*:*Offset*), Länge, Gruppenname und -Klasse  
-  
--   Eine Liste der öffentlichen Symbole, die mit jeder Adresse (als *Abschnitt*:*Offset*), Symbolnamen, Flatfile-Adresse und der OBJ-Datei, in dem das Symbol definiert ist,  
-  
--   Der Einstiegspunkt (als *Abschnitt*:*Offset*)  
-  
- Die [/MapInfo](../../build/reference/mapinfo-include-information-in-mapfile.md) Option gibt zusätzliche Informationen, die in der Map-Datei eingeschlossen werden.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
-  
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).  
-  
-2.  Klicken Sie auf die **Linker** Ordner.  
-  
-3.  Klicken Sie auf die **Debuggen** Eigenschaftenseite.  
-  
-4.  Ändern der **Zuordnungsdatei generieren** Eigenschaft.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
-  
-1.  Weitere Informationen finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateMapFile%2A> und <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapFileName%2A>.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
- [Linkeroptionen](../../build/reference/linker-options.md)
+
+```
+/MAP[:filename]
+```
+
+## <a name="arguments"></a>Argumente
+
+*filename*<br/>
+Ein vom Benutzer angegebener Name für die Zuordnungsdatei. Sie können den Standardnamen ersetzt.
+
+## <a name="remarks"></a>Hinweise
+
+Die Option/Map weist den Linker an, eine Zuordnungsdatei erstellen.
+
+In der Standardeinstellung benennt der Linker die Map-Datei durch den Basisnamen des Programms und der Erweiterung .map. Der optionale *Filename* können Sie den Standardnamen für eine MAP-Datei zu überschreiben.
+
+Eine MAP-Datei ist eine Textdatei, die die folgende Informationen zu der zu verknüpfende Programm enthält:
+
+- Den Namen des Moduls, der der Basisname der Datei ist
+
+- Der Zeitstempel aus dem Programm-Dateiheader (nicht aus dem Dateisystem)
+
+- Eine Liste der Gruppen im Programm, mit der Startadresse für eine Gruppe (als *Abschnitt*:*Offset*), Länge, Gruppenname und -Klasse
+
+- Eine Liste der öffentlichen Symbole, die mit jeder Adresse (als *Abschnitt*:*Offset*), Symbolnamen, Flatfile-Adresse und der OBJ-Datei, in dem das Symbol definiert ist,
+
+- Der Einstiegspunkt (als *Abschnitt*:*Offset*)
+
+Die [/MapInfo](../../build/reference/mapinfo-include-information-in-mapfile.md) Option gibt an, zusätzliche Informationen, die in die Zuordnungsdatei eingeschlossen werden.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
+
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+
+1. Klicken Sie auf die **Linker** Ordner.
+
+1. Klicken Sie auf die **Debuggen** Eigenschaftenseite.
+
+1. Ändern der **Zuordnungsdatei generieren** Eigenschaft.
+
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
+
+1. Weitere Informationen finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateMapFile%2A> und <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapFileName%2A>.
+
+## <a name="see-also"></a>Siehe auch
+
+[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
+[Linkeroptionen](../../build/reference/linker-options.md)

@@ -1,5 +1,5 @@
 ---
-title: Verwenden von manuellen Accessoren | Microsoft Docs
+title: Verwenden von manuellen Zugriffsmethoden | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,43 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ee82a780690c6d5eba7b30debdc592a26ef2cbcc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5aa7f72cc76f80e2304faf93ca0c6198c505e88a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105903"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101641"
 ---
 # <a name="using-manual-accessors"></a>Verwenden von manuellen Zugriffsmethoden
-Es gibt vier Dinge bei der Behandlung eines unbekannten Befehls aus:  
+
+Es gibt vier Schritte erforderlich, bei der Verarbeitung eines unbekannten Befehls:  
   
--   Bestimmen Sie die Parameter  
+- Ermitteln der Parameter  
   
--   Führen Sie den Befehl  
+- Führen Sie den Befehl  
   
--   Bestimmen der Ausgabespalten  
+- Bestimmen Sie die Ausgabespalten  
   
--   Feststellen Sie, ob mehrere Rowsets zurückgegeben werden  
+- Überprüfen Sie, ob mehrere Rowsets zurückgegeben werden  
   
- Verwenden Sie hierzu mit der OLE DB-Consumervorlagen der `CManualAccessor` Klasse, und gehen Sie folgendermaßen vor:  
+Verwenden Sie dazu mit der OLE DB-Consumervorlagen der `CManualAccessor` Klasse, und gehen Sie folgendermaßen vor:  
   
-1.  Öffnen einer `CCommand` -Objekt mit `CManualAccessor` als Vorlagenparameter.  
+1. Öffnen einer `CCommand` Objekt mit `CManualAccessor` als Vorlagenparameter.  
   
-    ```  
+    ```cpp  
     CCommand<CManualAccessor, CRowset, CMultipleResults> rs;  
     ```  
   
-2.  Fragen Sie die Sitzung für die **IDBSchemaRowset** Schnittstelle, und verwenden Sie das Verfahren Parameter-Rowset. Wenn die **IDBSchemaRowset** Schnittstelle ist nicht verfügbar ist, Abfragen für die `ICommandWithParameters` Schnittstelle. Rufen Sie `GetParameterInfo` Informationen. Wenn keine der Schnittstellen verfügbar ist, können Sie davon ausgehen, dass keine Parameter vorhanden sind.  
+1. Fragen Sie die Sitzung für die `IDBSchemaRowset` -Schnittstelle und verwenden Sie die Prozedur Parameter-Rowset. Wenn die `IDBSchemaRowset` Schnittstelle ist nicht verfügbar ist, Abfragen für die `ICommandWithParameters` Schnittstelle. Rufen Sie `GetParameterInfo` Informationen. Wenn keine der Schnittstellen verfügbar ist, können Sie davon ausgehen, dass keine Parameter vorhanden sind.  
   
-3.  Rufen Sie für jeden Parameter `AddParameterEntry` fügen Sie die Parameter und setzen Sie sie.  
+1. Rufen Sie für jeden Parameter `AddParameterEntry` , fügen Sie die Parameter, und legen Sie sie.  
   
-4.  Öffnen Sie das Rowset, aber so festgelegt, den Bind-Parameter **"false"**.  
+1. Öffnen Sie das Rowset, aber legen den Bindungsparameter auf **"false"**.  
   
-5.  Rufen Sie `GetColumnInfo` Ausgabespalten abgerufen. Verwendung `AddBindEntry` so die Bindung die Ausgabespalte hinzu.  
+1. Rufen Sie `GetColumnInfo` Ausgabespalten abrufen. Verwendung `AddBindEntry` so die Bindung der Ausgabespalte hinzu.  
   
-6.  Rufen Sie `GetNextResult` zu bestimmen, ob weitere Rowsets verfügbar sind. Wiederholen Sie die Schritte 2 bis 5.  
+1. Rufen Sie `GetNextResult` zu bestimmen, ob weitere Rowsets verfügbar sind. Wiederholen Sie Schritte 2 bis 5.  
   
- Ein Beispiel für einen manuellen Accessor finden Sie unter **CDBListView:: CallProcedure** in der [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) Beispiel.  
+Ein Beispiel für einen manuellen Accessor finden Sie unter `CDBListView::CallProcedure` in die [DBVIEWER](https://github.com/Microsoft/VCSamples) Beispiel.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden von Zugriffsmethoden](../../data/oledb/using-accessors.md)
+
+[Verwenden von Zugriffsmethoden](../../data/oledb/using-accessors.md)

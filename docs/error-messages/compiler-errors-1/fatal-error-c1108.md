@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1108 | Microsoft Docs
+title: Schwerwiegender Fehler C1108 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de8b00f61a70e7c40f442173acace2e9f186d1d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84f301669e1aeead5a8c92f59fbaaaf87167fef4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225172"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203923"
 ---
 # <a name="fatal-error-c1108"></a>Schwerwiegender Fehler C1108
-DLL konnte nicht gefunden werden: "dll"  
-  
- Die angegebene DLL (***dll***) wurde nicht im Pfad gefunden.  
-  
- Um diesen Fehler zu beheben, installieren Sie Visual C++ neu, oder kopieren Sie die entsprechende DLL-Datei von der Installations-CD auf Ihren Computer.
+
+> DLL konnte nicht gefunden: '*Dll-Namen*"
+
+Die angegebene DLL (*Dll-Namen*) wurde im Pfad nicht gefunden.
+
+Um diesen Fehler zu beheben, installieren Sie Visual C++ neu, oder kopieren Sie die entsprechende DLL-Datei von der Installation auf Ihrem Computer.

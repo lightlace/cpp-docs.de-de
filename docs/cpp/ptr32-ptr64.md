@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39078cfef6b327aee60d98fce6cccc0b69c5953b
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 573af4088e288403edaa8e5c34fb84817442c8f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941703"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115995"
 ---
 # <a name="ptr32-ptr64"></a>__ptr32, __ptr64
 
@@ -42,7 +42,7 @@ int * __ptr32 p32;
 int * __ptr64 p64;
 ```
 
- Auf einem 32-Bit-System, ein Zeiger deklariert, mit **__ptr64** ist auf einen 32-Bit-Zeiger gekürzt. Auf einem 64-Bit-System, ein Zeiger deklariert, mit **__ptr32** in einen 64-Bit-Zeiger umgewandelt wird.
+Auf einem 32-Bit-System, ein Zeiger deklariert, mit **__ptr64** ist auf einen 32-Bit-Zeiger gekürzt. Auf einem 64-Bit-System, ein Zeiger deklariert, mit **__ptr32** in einen 64-Bit-Zeiger umgewandelt wird.
 
 > [!NOTE]
 > Sie können keine **__ptr32** oder **__ptr64** beim Kompilieren mit **/CLR: pure**. Andernfalls werden Compilerfehler C2472 generiert. Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt werden.
@@ -81,4 +81,4 @@ int main()
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Grundlegende Typen](../cpp/fundamental-types-cpp.md)
+[Grundlegende Typen](../cpp/fundamental-types-cpp.md)

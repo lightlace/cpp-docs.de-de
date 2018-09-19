@@ -1,5 +1,5 @@
 ---
-title: CancelTransitionPolicy-Enumeration | Microsoft Docs
+title: CancelTransitionPolicy-Enumeration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,35 +19,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64f588e67066fed690271aa7d78fcbe726c67177
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: abc49a62e1cc9fb4abdc56b329b8fa057edebde7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860345"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583516"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy-Enumeration
-Gibt an, wie ein asynchroner Vorgang, den Übergang zu einem abgeschlossenen Zustand des Versuchs abgeschlossen oder Verhalten sich Fehler in Bezug auf eine Clientanforderung Zustand "abgebrochen".  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-enum CancelTransitionPolicy;  
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="values"></a>Werte  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|`RemainCanceled`|Wenn der asynchrone Vorgang derzeit in einer Clientanforderung Zustand "abgebrochen" ist, bedeutet dies, dass es sich im Zustand "abgebrochen" im Gegensatz zu den Übergang zu einer Terminal abgeschlossen oder den Status "Fehler" verbleibt.|  
-|`TransitionFromCanceled`|Wenn der asynchrone Vorgang derzeit in einer Clientanforderung Zustand "abgebrochen" ist, gibt dies an, dass Zustand übergehen sollten von dem Zustand, den abschließenden Zustand "abgebrochen" abgeschlossen oder Fehler, wie durch den Aufruf bestimmt, die dieses Flag nutzt.|  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** async.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)
+
+Gibt an, wie ein asynchroner Vorgang, den Übergang zu einem abschließenden Zustand Versuchs abgeschlossen ist oder Fehler in Bezug auf eine Clientanforderung Zustand "abgebrochen" Verhalten.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+enum CancelTransitionPolicy;
+```
+
+## <a name="members"></a>Member
+
+### <a name="values"></a>Werte
+
+|Name|Beschreibung|
+|----------|-----------------|
+|`RemainCanceled`|Wenn der asynchrone Vorgang derzeit ein vom Client angefordertes Zustand "abgebrochen" ist, bedeutet dies, dass es sich bei es verbleibt im Zustand "abgebrochen" im Gegensatz zu den Übergang zu einer Terminal abgeschlossen oder der Status "Fehler".|
+|`TransitionFromCanceled`|Wenn der asynchrone Vorgang derzeit ein vom Client angefordertes Zustand "abgebrochen" ist, gibt dies an, dass Zustand wechseln sollte von dem Zustand "abgebrochen", den abschließenden Zustand abgeschlossen oder einen Fehler, die durch den Aufruf festgelegt, der dieses Flag verwendet.|
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** async.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)

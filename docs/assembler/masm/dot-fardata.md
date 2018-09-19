@@ -1,7 +1,7 @@
 ---
-title: . FARDATA | Microsoft Docs
+title: . FARDATA | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6418c122f23b24cde76f3c31a3b0ff3b5c72723
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 941fbd86ec977f2f6fbe5a3af26b79ad8771e037
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054945"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693322"
 ---
 # <a name="fardata"></a>.FARDATA
-Bei Verwendung mit [. Modell](../../assembler/masm/dot-model.md), startet ein weit Datensegment für initialisierte Daten (Segmentnamen FAR_DATA oder *Namen*).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-.FARDATA [[name]]  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+
+Bei Verwendung mit [. Modell](../../assembler/masm/dot-model.md), startet ein Datensegment ganz für initialisierte Daten (Segmentnamen FAR_DATA oder *Namen*).
+
+## <a name="syntax"></a>Syntax
+
+> . FARDATA [[Name]]
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

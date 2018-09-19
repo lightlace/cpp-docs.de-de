@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ae46a78484a2ee2737f3d949e525ce89d8401cd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4fb89f479320287ff238517cc649f199e0081ffa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959068"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716188"
 ---
 # <a name="tupleelement-class"></a>tuple_element-Klasse
 
@@ -66,22 +66,22 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>Parameter
 
-*Index*  
+*Index*<br/>
 Der Index des angegebenen Elements.
 
-*Tuple*  
+*Tuple*<br/>
 Der Typ des Tupels.
 
-*Elem*  
+*Elem*<br/>
 Der Typ eines Arrayelements.
 
-*Size*  
+*Size*<br/>
 Die Größe des Arrays.
 
-*T1*  
+*T1*<br/>
 Der Typ des ersten Elements in einem Paar.
 
-*T2*  
+*T2*<br/>
 Der Typ des zweiten Elements in einem Paar.
 
 ## <a name="remarks"></a>Hinweise
@@ -184,7 +184,13 @@ int main() {
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<Tupel > **Header:** \<Array > (für arrayspezialisierung) **Header:** \<Utility > (für paarspezialisierungen)  **Namespace:** std
+**Header:** \<tuple>
+
+**Header:** \<array> (für Arrayspezialisierung)
+
+**Header:** \<Utility > (für paarspezialisierungen)
+
+**Namespace:** std
 
 ## <a name="see-also"></a>Siehe auch
 

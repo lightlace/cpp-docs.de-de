@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a1d2d710631c01a39b910e7d9b15f14179b3125
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f860d90905c244327787182c40505207c4745201
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965742"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069169"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -47,9 +47,10 @@ Ein Allocator ist eine Vorlagenklasse, die ein Objekt beschreibt, das Speicherbe
 
 Allocators sind alle Vorlagen folgenden Typs:
 
-`template<class` `Type` `>`
-
-`class allocator;`
+```cpp
+template<class Type>
+class allocator;
+```
 
 in denen das Vorlagenargument `Type` der von der Allocatorinstanz verwaltete Typ ist. Die C++-Standardbibliothek stellt einen Standardallocator, Vorlagenklasse [allocator](../standard-library/allocator-class.md), bereit, der in [\<memory>](../standard-library/memory.md) definiert ist. Der Header \<allocators> stellt folgende Allocators bereit:
 
@@ -67,23 +68,22 @@ in denen das Vorlagenargument `Type` der von der Allocatorinstanz verwaltete Typ
 
 Verwenden Sie eine passende Istanziierung eines Allocators als zweiten Typargument, während Sie einen Container erstellen, wie z.B. in folgendem Beispiel.
 
-`#include <list>`
-
-`#include <allocators>`
-
-`std::list<int, stdext::allocators::allocator_chunklist<int> > _List0;`
+```cpp
+#include <list>
+#include <allocators>
+std::list<int, stdext::allocators::allocator_chunklist<int> > _List0;
+```
 
 „_List0“ weist Knoten mit `allocator_chunklist` und dem standardmäßigen Synchronisierungsfilter zu.
 
 Verwenden Sie das Makro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl), wenn Sie Allocatorvorlagen mit anderen als den standardmäßigen Synchronisierungsfiltern erstellen wollen:
 
-`#include <list>`
-
-`#include <allocators>`
-
-`ALLOCATOR_DECL(CACHE_CHUNKLIST, stdext::allocators::sync_per_thread, Alloc);`
-
-`std::list<int, alloc<int> > _List1;`
+```cpp
+#include <list>
+#include <allocators>
+ALLOCATOR_DECL(CACHE_CHUNKLIST, stdext::allocators::sync_per_thread, Alloc);
+std::list<int, alloc<int> > _List1;
+```
 
 „_Lst1“ weist Knoten mit `allocator_chunklist` und dem Synchronisierungsfilter [sync_per_thread](../standard-library/sync-per-thread-class.md) zu.
 

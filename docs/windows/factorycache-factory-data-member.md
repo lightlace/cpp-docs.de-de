@@ -1,5 +1,5 @@
 ---
-title: 'Factorycache:: Factory-Datenmember | Microsoft Docs'
+title: 'Factorycache:: Factory-Datenmember | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a85fed4ff169c43762f82dd0524cc88a6e24370e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 634e3ca3ac410680b75c7b682bcef94401ace09e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881438"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594984"
 ---
 # <a name="factorycachefactory-data-member"></a>FactoryCache::factory-Datenmember
-Unterstützt die Windows Runtime C++ Template Library-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-IUnknown* factory;  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Verweist auf ein Windows-Runtime oder COM-Klassenfactory.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [FactoryCache-Struktur](../windows/factorycache-structure.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Windows Runtime C++ Template Library-Infrastruktur, und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+IUnknown* factory;
+```
+
+## <a name="remarks"></a>Hinweise
+
+Verweist auf eine Windows-Runtime oder COM-Klassenfactory.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[FactoryCache-Struktur](../windows/factorycache-structure.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

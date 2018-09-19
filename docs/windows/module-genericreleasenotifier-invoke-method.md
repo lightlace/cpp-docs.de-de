@@ -1,5 +1,5 @@
 ---
-title: 'Module:: genericreleasenotifier:: Invoke-Methode | Microsoft Docs'
+title: 'Module:: genericreleasenotifier:: Invoke-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1cb6ce12105d9e752a85b1252739ef37b5664780
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 116b313a0055bcdca9841e740f1720d18fb6c7f1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875330"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600666"
 ---
 # <a name="modulegenericreleasenotifierinvoke-method"></a>Module::GenericReleaseNotifier::Invoke-Methode
-Ruft den Ereignishandler, die dem aktuellen genericreleasenotifier-Objekt zugeordnet.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void Invoke();  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [Module::GenericReleaseNotifier-Klasse](../windows/module-genericreleasenotifier-class.md)
+
+Ruft den Ereignishandler verknüpft ist, mit dem aktuellen **genericreleasenotifier** Objekt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+void Invoke();
+```
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[Module::GenericReleaseNotifier-Klasse](../windows/module-genericreleasenotifier-class.md)

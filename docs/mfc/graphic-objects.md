@@ -1,5 +1,5 @@
 ---
-title: Grafikobjekte | Microsoft Docs
+title: Grafikobjekte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -51,18 +51,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cf7e2c56094727c6956d0e2e21708dd81be4f10
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: dd8fc67f7cdc11328c4da9643f57b65a1cc6bfd0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930845"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197184"
 ---
 # <a name="graphic-objects"></a>Grafikobjekte
 Windows bietet eine Reihe von Zeichentools an, die in Gerätekontexten verwendet werden können. Es bietet Stifte zum Zeichnen von Linien, Pinsel zum Auffüllen von Innenbereichen und Schriftarten zum Zeichnen von Text. MFC stellt Grafikobjektklassen bereit, die den Zeichentools in Windows ähneln. In der folgenden Tabelle werden die verfügbaren Klassen und die entsprechenden Windows-GDI-Handletypen (Graphics Device Interface) gezeigt.  
   
 > [!NOTE]
->  Weitere Informationen finden Sie unter den GDI + SDK-Dokumentation unter: [ http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).  
+>  Weitere Informationen finden Sie unter der GDI +-SDK-Dokumentation unter: [ https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).  
   
  Dieser Artikel beschreibt die Verwendung von diesen Grafikobjektklassen:  
   
@@ -78,11 +78,11 @@ Windows bietet eine Reihe von Zeichentools an, die in Gerätekontexten verwendet
 |[CRgn](../mfc/reference/crgn-class.md)|**HRGN**|  
   
 > [!NOTE]
->  Die Klasse [CImage](../atl-mfc-shared/reference/cimage-class.md) bietet eine erweiterte Bitmapunterstützung.  
+>  Die Klasse [CImage](../atl-mfc-shared/reference/cimage-class.md) bietet erweiterte Bitmapunterstützung.  
   
  Jede Grafikobjektklasse in der Klassenbibliothek verfügt über einen Konstruktor, mit dem Sie grafische Objekte dieser Klasse erstellen können. Diese müssen Sie anschließend mit der entsprechenden „create“-Funktion wie `CreatePen` initialisieren.  
   
- Jede Grafikobjektklasse in der Klassenbibliothek verfügt über einen „cast“-Operator, der ein MFC-Objekt zum zugehörigen Windows-Handle umwandelt. Das resultierende Handle ist gültig, bis das zugeordnete Objekt es trennt. Verwenden Sie das Objekt `Detach` Memberfunktion versucht, das Handle zu trennen.  
+ Jede Grafikobjektklasse in der Klassenbibliothek verfügt über einen „cast“-Operator, der ein MFC-Objekt zum zugehörigen Windows-Handle umwandelt. Das resultierende Handle ist gültig, bis das zugeordnete Objekt es trennt. Verwenden des Objekts `Detach` Memberfunktion versucht, die das Handle zu trennen.  
   
  Im folgenden Code wird ein `CPen`-Objekt zu einem Windows-Handle umgewandelt:  
   
@@ -90,9 +90,9 @@ Windows bietet eine Reihe von Zeichentools an, die in Gerätekontexten verwendet
   
 #### <a name="to-create-a-graphic-object-in-a-device-context"></a>So erstellen Sie ein Grafikobjekt in einem Gerätekontext  
   
-1.  Definieren Sie ein Grafikobjekt im Stapelrahmen. Initialisieren Sie das Objekt mit der „type“-spezifischen „create“-Funktion wie `CreatePen`. Initialisieren Sie alternativ das Objekt im Konstruktor. Finden Sie in den Ausführungen [ein- oder zweistufige Erstellung](../mfc/one-stage-and-two-stage-construction-of-objects.md), dem stellt Beispielcode bereit.  
+1.  Definieren Sie ein Grafikobjekt im Stapelrahmen. Initialisieren Sie das Objekt mit der „type“-spezifischen „create“-Funktion wie `CreatePen`. Initialisieren Sie alternativ das Objekt im Konstruktor. Lesen Sie die Beiträge [ein- oder zweistufige Erstellung](../mfc/one-stage-and-two-stage-construction-of-objects.md), der Beispielcode bereitgestellt wird.  
   
-2.  [Wählen Sie das Objekt, in der aktuelle Gerätekontext](../mfc/selecting-a-graphic-object-into-a-device-context.md), speichern dem alten Grafikobjekt, die vor dem ausgewählt wurde.  
+2.  [Wählen Sie das Objekt in der der aktuelle Gerätekontext](../mfc/selecting-a-graphic-object-into-a-device-context.md), speichern dem alten Grafikobjekt, die vor dem ausgewählt wurde.  
   
 3.  Wenn Sie mit dem aktuellen Grafikobjekt fertig sind, wählen Sie das alte Grafikobjekt zurück im Gerätekontext aus, um dessen Status wiederherzustellen.  
   

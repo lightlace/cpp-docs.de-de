@@ -1,5 +1,5 @@
 ---
-title: Prozess | Microsoft Docs
+title: Process | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b36ec42447aa076d0623707951f82b7b9c95d563
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 65ae8eef828a8abd4bf726c99850089c0f30b71b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704905"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032563"
 ---
 # <a name="process"></a>process
 
-Gibt an, dass der verwaltete Anwendungsprozess eine einzelne Kopie einer bestimmten globalen Variablen, einer statischen Membervariablen oder einer statischen lokalen Variablen haben soll, die von allen Anwendungsdomänen im Prozess verwendet wird. Dies wurde hauptsächlich verwendet werden, bei der Kompilierung mit **/CLR: pure**, d. h. in Visual Studio 2017 als veraltet markiert und in Visual Studio 2017 nicht unterstützt. Beim Kompilieren mit **"/ CLR"**, globale und statische Variablen werden standardmäßig pro-Prozess und müssen nicht mit `__declspec(process)`.
+Gibt an, dass der verwaltete Anwendungsprozess eine einzelne Kopie einer bestimmten globalen Variablen, einer statischen Membervariablen oder einer statischen lokalen Variablen haben soll, die von allen Anwendungsdomänen im Prozess verwendet wird. Dies wurde in erster Linie für die Verwendung vorgesehen werden beim Kompilieren mit **/CLR: pure**, das in Visual Studio 2017 als veraltet markiert und in Visual Studio 2017 nicht unterstützt. Beim Kompilieren mit **"/ CLR"**, globale und statische Variablen werden pro Prozess standardmäßig und müssen nicht mit **__declspec(process)**.
 
-Nur eine globale Variable, eine statische Membervariable oder eine statische lokale Variable des systemeigenen Typs können durch `__declspec(process)` markiert werden.
+Nur eine globale Variable, eine statische Membervariable oder eine statische lokale Variable des systemeigenen Typs kann mit markiert werden **__declspec(process)**.
 
-`process` gilt nur beim Kompilieren mit ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md).
+**Prozess** ist nur gültig, beim Kompilieren mit ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md).
 
-Wenn Sie jede Anwendungsdomäne eine eigene Kopie einer globalen Variablen haben soll, verwenden Sie [Appdomain](../cpp/appdomain.md).
+Wenn Sie jede Anwendungsdomäne eine eigene Kopie einer globalen Variablen haben möchten, verwenden Sie [Appdomain](../cpp/appdomain.md).
 
 Finden Sie unter [Anwendungsdomänen und Visual C++](../dotnet/application-domains-and-visual-cpp.md) für Weitere Informationen.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [__declspec](../cpp/declspec.md)
-- [Schlüsselwörter](../cpp/keywords-cpp.md)
+[__declspec](../cpp/declspec.md)<br/>
+[Schlüsselwörter](../cpp/keywords-cpp.md)

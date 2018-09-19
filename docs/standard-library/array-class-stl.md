@@ -106,12 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf54b113e5eb3750d02b887945345880dca94775
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c52a68e87e29aaa827a61e657e04364acf6205b4
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960042"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318786"
 ---
 # <a name="array-class-c-standard-library"></a>array-Klasse (C++-Standardvorlagenbibliothek)
 
@@ -202,7 +202,8 @@ array(const array& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* Objekt oder Bereich eingefügt.
+*right*<br/>
+Einzufügendes Objekt bzw. einzufügender Bereich.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -257,7 +258,8 @@ void assign(const Ty& val);
 
 ### <a name="parameters"></a>Parameter
 
-*Val* zuzuweisende Wert.
+*val*<br/>
+Der Wert, der zugewiesen werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -313,7 +315,8 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Off* den Zugriff auf die Position des Elements.
+*Ausschalten*<br/>
+Position des Elements, auf das zugegriffen wird
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1173,7 +1176,8 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Off* den Zugriff auf die Position des Elements.
+*Ausschalten*<br/>
+Position des Elements, auf das zugegriffen wird
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1220,12 +1224,13 @@ int main()
 Ersetzt die kontrollierte Sequenz.
 
 ```cpp
-array <Value>%  operator=(array <Value>% right);
+array<Value> operator=(array<Value> right);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* zu kopierende Container.
+*right*<br/>
+Der zu kopierende Container.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1602,7 +1607,8 @@ void swap(array& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* Inhalte mit auszutauschende Array.
+*right*<br/>
+Container für den Tausch von Inhalten.
 
 ### <a name="remarks"></a>Hinweise
 

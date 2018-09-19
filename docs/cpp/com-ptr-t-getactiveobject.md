@@ -16,53 +16,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccff761cb9b738de9e2f0debc470746d1482ab56
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b9f77a894c39fc907367e5d4f8c7a687cc703331
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940367"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056507"
 ---
 # <a name="comptrtgetactiveobject"></a>_com_ptr_t::GetActiveObject
-**Microsoft-spezifisch**  
-  
- Fügt zu einer vorhandenen Instanz eines angegebenen Objekts an eine `CLSID` oder `ProgID`.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-      HRESULT GetActiveObject(  
-   const CLSID& rclsid   
-) throw( );  
-HRESULT GetActiveObject(  
-   LPCWSTR clsidString   
-) throw( );  
-HRESULT GetActiveObject(  
-   LPCSTR clsidStringA   
-) throw( );  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *rclsid*  
- Die `CLSID` eines Objekts.  
-  
- *clsidString*  
- Eine Unicode-Zeichenfolge, die entweder eine `CLSID` (beginnend mit "**{**") oder ein `ProgID`.  
-  
- *clsidStringA*  
- Eine mehrbytezeichenfolge mit der ANSI-Codepage, die entweder eine `CLSID` (beginnend mit "**{**") oder ein `ProgID`.  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Memberfunktionen rufen `GetActiveObject` auf, um einen Zeiger auf ein ausgeführtes Objekt abzurufen, das mit OLE registriert wurde und dann den Schnittstellentyp des intelligenten Zeigers abfragt. Das Zeigerergebnis wird dann innerhalb dieses `_com_ptr_t`-Objekts gekapselt. `Release` wird aufgerufen, um den Verweiszähler für den zuvor gekapselten Zeiger zu verringern. Diese Routine gibt zurück, das HRESULT, um den Erfolg oder Fehler anzuzeigen.  
-  
--   **GetActiveObject (**`rclsid`**)** fügt zu einer vorhandenen Instanz eines angegebenen Objekts an eine `CLSID`.      
-  
--   **GetActiveObject (**`clsidString`**)** fügt sich einer vorhandenen Instanz eines Objekts, dem eine Unicodezeichenfolge, die entweder eine `CLSID` (beginnend mit "**{**") oder eine `ProgID`.      
-  
--   **GetActiveObject (**`clsidStringA`**)** fügt zu einer vorhandenen Instanz eines Objekts, dem eine Multibyte-Zeichenfolge, die entweder eine `CLSID` (beginnend mit "**{**") oder ein `ProgID`.     Aufrufe [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), dem wird davon ausgegangen, dass die Zeichenfolge in die ANSI-Codepage anstatt eine OEM-Codepage.  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md)
+
+**Microsoft-spezifisch**
+
+Fügt zu einer vorhandenen Instanz eines angegebenen Objekts an eine `CLSID` oder `ProgID`.
+
+## <a name="syntax"></a>Syntax
+
+```
+HRESULT GetActiveObject(
+   const CLSID& rclsid
+) throw( );
+HRESULT GetActiveObject(
+   LPCWSTR clsidString
+) throw( );
+HRESULT GetActiveObject(
+   LPCSTR clsidStringA
+) throw( );
+```
+
+#### <a name="parameters"></a>Parameter
+
+*rclsid*<br/>
+Die `CLSID` eines Objekts.
+
+*clsidString*<br/>
+Eine Unicode-Zeichenfolge, die entweder eine `CLSID` (beginnend mit "**{**") oder ein `ProgID`.
+
+*clsidStringA*<br/>
+Eine mehrbytezeichenfolge mit der ANSI-Codepage, die entweder eine `CLSID` (beginnend mit "**{**") oder ein `ProgID`.
+
+## <a name="remarks"></a>Hinweise
+
+Diese Memberfunktionen rufen **GetActiveObject** um einen Zeiger auf ein ausgeführtes Objekt abzurufen, die mit OLE registriert wurde, und klicken Sie dann Abfragen für dieses intelligenten Zeigers Schnittstellentyp. Das Zeigerergebnis wird dann innerhalb dieses `_com_ptr_t`-Objekts gekapselt. `Release` wird aufgerufen, um den Verweiszähler für den zuvor gekapselten Zeiger zu verringern. Diese Routine gibt zurück, das HRESULT, um den Erfolg oder Fehler anzuzeigen.
+
+- **GetActiveObject (**`rclsid`**)** fügt zu einer vorhandenen Instanz eines angegebenen Objekts an eine `CLSID`.
+
+- **GetActiveObject (**`clsidString`**)** fügt sich einer vorhandenen Instanz eines Objekts, dem eine Unicodezeichenfolge, die entweder eine `CLSID` (beginnend mit "**{**") oder eine `ProgID`.
+
+- **GetActiveObject (**`clsidStringA`**)** fügt zu einer vorhandenen Instanz eines Objekts, dem eine Multibyte-Zeichenfolge, die entweder eine `CLSID` (beginnend mit "**{**") oder ein `ProgID`. Aufrufe [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar), dem wird davon ausgegangen, dass die Zeichenfolge in die ANSI-Codepage anstatt eine OEM-Codepage.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md)

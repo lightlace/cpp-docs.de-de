@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d982aee3f5542e8bfcff1da96ce3e70775ead5fe
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c97b80031c60dabb22d3dfea905c9a46f7731f67
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961577"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716442"
 ---
 # <a name="uniformintdistribution-class"></a>uniform_int_distribution-Klasse
 
@@ -81,7 +81,8 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*IntType* standardmäßig der ganzzahligen Ergebnistyp **Int**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*IntType*<br/>
+Der Ergebnistyp für ganze Zahl, Standardwert **Int**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
@@ -200,13 +201,13 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*a*  
+*a*<br/>
 Die Untergrenze (einschließend) für Zufallswerte.
 
-*b*  
+*b*<br/>
 Die Obergrenze (ausschließend) für Zufallswerte.
 
-*parm*  
+*parm*<br/>
 Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.
 
 ### <a name="remarks"></a>Hinweise
@@ -236,13 +237,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*a*  
+*a*<br/>
 Die Untergrenze (einschließend) für Zufallswerte.
 
-*b*  
+*b*<br/>
 Die Obergrenze (ausschließend) für Zufallswerte.
 
-*right*  
+*right*<br/>
 Das mit diesem `param_type`-Objekt zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise

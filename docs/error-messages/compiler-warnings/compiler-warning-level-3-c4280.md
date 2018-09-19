@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 3) C4280 | Microsoft Docs
+title: Compilerwarnung (Stufe 3) C4280 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6d4e9743a584249e2ec51c639423f56280f2d8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa1446e6725ecbb990e38ede33071afddb54065f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289905"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118322"
 ---
 # <a name="compiler-warning-level-3-c4280"></a>Compilerwarnung (Stufe 3) C4280
-"Operator ->" wurde durch den Typ 'Typ'  
-  
- Code falsch ermöglicht **Operator ->** sich selbst aufruft.  
-  
- Im folgenden Beispiel wird C4280 generiert:  
-  
-```  
-// C4280.cpp  
-// compile with: /W3 /WX  
-struct A  
-{  
-   int z;  
-   A& operator ->();  
-};  
-  
-void f(A y)  
-{  
-   int i = y->z; // C4280  
-}  
+
+Operator "->" wurde durch den Typ 'Typ'
+
+Der Code nicht ordnungsgemäß zugelassen **Operator ->** selbst aufrufen.
+
+Im folgende Beispiel wird die C4280 generiert:
+
+```
+// C4280.cpp
+// compile with: /W3 /WX
+struct A
+{
+   int z;
+   A& operator ->();
+};
+
+void f(A y)
+{
+   int i = y->z; // C4280
+}
 ```

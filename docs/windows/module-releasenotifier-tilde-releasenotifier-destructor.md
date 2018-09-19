@@ -1,5 +1,5 @@
 ---
-title: 'Module:: releasenotifier:: ~ ReleaseNotifier-Destruktor | Microsoft Docs'
+title: 'Module:: releasenotifier:: ~ ReleaseNotifier-Destruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4483b71a2349251a6dbc9a3543ffa7ddd95f0d64
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 26ea9df5d5a615254b941c72d2847bbe9f22847d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876052"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599966"
 ---
 # <a name="modulereleasenotifierreleasenotifier-destructor"></a>Module::ReleaseNotifier::~ReleaseNotifier-Destruktor
-Hebt die Initialisierung der aktuellen Instanz der releasenotifier-Klasse.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-WRL_NOTHROW virtual ~ReleaseNotifier();  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [Module::ReleaseNotifier-Klasse](../windows/module-releasenotifier-class.md)
+
+Hebt die Initialisierung der aktuellen Instanz von der **releasenotifier** Klasse.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+WRL_NOTHROW virtual ~ReleaseNotifier();
+```
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[Module::ReleaseNotifier-Klasse](../windows/module-releasenotifier-class.md)

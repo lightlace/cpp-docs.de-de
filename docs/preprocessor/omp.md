@@ -1,5 +1,5 @@
 ---
-title: Marketplace | Microsoft Docs
+title: Omp | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87dd737b1bbe9263af5ef6416e7d6b8d287feb53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15491517ad95973d7eabf2998741dbcc89ca602b
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849469"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540599"
 ---
 # <a name="omp"></a>omp
 Akzeptiert mindestens eine OpenMP-Anweisung sowie beliebige optionale Anweisungsklauseln.  
@@ -31,12 +31,13 @@ Akzeptiert mindestens eine OpenMP-Anweisung sowie beliebige optionale Anweisungs
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 #pragma omp directive  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Finden Sie unter [OpenMP-Direktiven](../parallel/openmp/reference/openmp-directives.md) für Weitere Informationen.  
+ 
+Finden Sie unter [OpenMP-Anweisungen](../parallel/openmp/reference/openmp-directives.md) für Weitere Informationen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+
+[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

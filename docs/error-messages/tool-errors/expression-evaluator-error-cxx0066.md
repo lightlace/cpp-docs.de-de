@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0066 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0066 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a4e2f71de2f883e54a17a08aa4735f63f167915
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2985583b24decfbfd2da1a1a4bfb1344f57bac49
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298420"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026738"
 ---
 # <a name="expression-evaluator-error-cxx0066"></a>Ausdrucksauswertungsfehler CXX0066
-statische Member "nicht vorhanden"  
-  
- Ein statischer Member einer Klasse wurde nicht gefunden oder wurde nicht definiert. Dieser Fehler kann auftreten, aus einer statischen Klasse Member, die jedoch nicht deklariert wird definiert, oder nur definiert und in Modulen, die keine Debuginformationen enthalten verwiesen wird.  
-  
- Dieser Fehler ist mit CAN0066 identisch.
+
+statische Member nicht vorhanden
+
+Ein statischer Member einer Klasse wurde nicht gefunden oder wurde nicht definiert. Dieser Fehler kann auftreten, aus einer statischen Klasse Member, die jedoch nicht deklariert ist definiert, oder nur definiert und auf die in Modulen, die keine Debuginformationen enthalten verwiesen wird.
+
+Dieser Fehler ist mit CAN0066 identisch.

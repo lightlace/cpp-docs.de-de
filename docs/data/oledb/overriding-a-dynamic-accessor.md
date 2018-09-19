@@ -1,5 +1,5 @@
 ---
-title: Überschreiben eines dynamischen Accessors | Microsoft Docs
+title: Überschreiben einer dynamischen Zugriffsmethode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9309180b05a6d91e6749f80c7a7b717b1bc57526
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3602711a880bbfe97c2fe357982bb60a55299044
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33107856"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035538"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Überschreiben einer dynamischen Zugriffsmethode
-Bei Verwendung ein dynamisches Accessors wie z. B. `CDynamicAccessor`, den Befehl **öffnen** Methode erstellt einen Accessor für automatisch der Informationen in der Spalte des Rowsets bereits geöffnet anhand. Sie können den dynamischen Accessor, um zu steuern, wie genau die Spalten gebunden sind, überschreiben.  
+
+Bei Verwendung eine dynamische Zugriffsmethode wie z. B. `CDynamicAccessor`, den Befehl `Open` Methode erstellt einen Accessor, automatisch, basierend auf die Spalteninformationen des geöffneten Rowsets. Sie können die dynamischen Zugriffsmethode aus, um zu steuern, wie genau die Spalten gebunden sind, überschreiben.  
   
- Um den dynamischen Accessor zu überschreiben, übergeben **"false"** als letzter Parameter an die `CCommand::Open` Methode. Dies verhindert, dass **öffnen** einen Accessor automatisch zu erstellen. Sie können dann aufrufen `GetColumnInfo` , und rufen Sie `AddBindEntry` für jede Spalte, die Sie binden möchten. Der folgende Code zeigt, wie Sie dies durchführen:  
+Um die dynamischen Zugriffsmethode überschreiben möchten, übergeben **"false"** als letzten Parameter für die `CCommand::Open` Methode. Dies verhindert, dass `Open` aus einen Accessor automatisch erstellt. Sie können dann aufrufen `GetColumnInfo` , und rufen Sie `AddBindEntry` für jede Spalte, die Sie binden möchten. Der folgende Code zeigt, wie es geht:  
   
-```  
+```cpp  
 USES_CONVERSION;  
 double   dblProductID;  
   
@@ -80,4 +81,5 @@ while (product.MoveNext() == S_OK)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden von Zugriffsmethoden](../../data/oledb/using-accessors.md)
+
+[Verwenden von Zugriffsmethoden](../../data/oledb/using-accessors.md)

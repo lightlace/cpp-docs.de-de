@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2850 | Microsoft Docs
+title: Compilerfehler C2850 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e53f54aee2acdd163de0195c7475049fe2d6346
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89e3cc7065ed5a0a91ad77ea5a6c44b38622b8e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243969"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057885"
 ---
 # <a name="compiler-error-c2850"></a>Compilerfehler C2850
-'construct': nur im Dateigültigkeitsbereich; zulässig. in einer geschachtelten Konstrukts möglicherweise nicht  
-  
- Konstrukte, z. B. einige Pragmas können nur im globalen Gültigkeitsbereich angezeigt werden.  
-  
- Im folgende Beispiel wird C2850 generiert:  
-  
-```  
-// C2850.cpp  
-// compile with: /c /Yc  
-// try the following line instead  
-// #pragma hdrstop  
-namespace X {  
-   #pragma hdrstop   // C2850  
-};  
+
+'construct': nur Dateibereich zulässig. darf nicht in Konstrukt geschachtelt sein.
+
+Konstrukte, z. B. einige Pragmas, können nur im globalen Gültigkeitsbereich verwendet werden.
+
+Im folgende Beispiel wird die C2850 generiert:
+
+```
+// C2850.cpp
+// compile with: /c /Yc
+// try the following line instead
+// #pragma hdrstop
+namespace X {
+   #pragma hdrstop   // C2850
+};
 ```

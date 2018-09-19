@@ -1,5 +1,5 @@
 ---
-title: -Treibers (Windows NT-Kernelmodustreiber) | Microsoft Docs
+title: – DRIVER (Treiber für Windows NT-Kernel-Modus) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66291391ed38c27ce7446eccc6fca227c7c2c2d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ae096c502cdc94d47a516caf4c29ac4f3eceb4b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373113"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705548"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (Treiber für den Kernelmodus von Windows NT)
 
@@ -35,17 +35,17 @@ ms.locfileid: "32373113"
 
 Verwenden der **/Driver** Linkeroption, um einen Windows NT-Kernelmodustreiber zu erstellen.
 
-**/DRIVER:UPONLY** bewirkt, dass den Linker Hinzufügen der **IMAGE_FILE_UP_SYSTEM_ONLY** -Bit in den Eigenschaften in der Ausgabeheader, um anzugeben, dass es sich um einen Uniprozessor (Treiber DRILLUP) ist. Das Betriebssystem lehnt einen nach-oben-Treiber in einem Multiprozessorsystem (MP) zu laden.
+**: UPONLY** bewirkt, dass der Linker Hinzufügen der **IMAGE_FILE_UP_SYSTEM_ONLY** bit den Merkmalen im Ausgabeheader um anzugeben, dass es sich um einen uniprozessortreiber (UP)-Treiber ist. Das Betriebssystem verweigert die Anforderung einen UP-Treiber in einem Multiprozessorsystem von (MP) zu laden.
 
-**/ Driver: WDM** bewirkt, dass den Linker Festlegen der **IMAGE_DLLCHARACTERISTICS_WDM_DRIVER** -Bit im optionalen Headerfeld DllCharacteristics.
+**/ Driver: WDM** bewirkt, dass der Linker legen Sie die **IMAGE_DLLCHARACTERISTICS_WDM_DRIVER** bit im DllCharacteristics-Feld des optionalen Headers.
 
-Wenn **/Driver** nicht angegeben ist, werden diese Bits nicht vom Linker festgelegt werden.
+Wenn **/Driver** nicht angegeben ist, werden diese Komponenten sind nicht vom Linker festgelegt.
 
-Wenn **/Driver** angegeben ist:
+Wenn **/Driver** angegeben wird:
 
-- **Fixed** wirksam wird. Weitere Informationen finden Sie unter [/FIXED (Feste Basisadresse)](../../build/reference/fixed-fixed-base-address.md).
+- **/ Fixed: No** ist aktiviert. Weitere Informationen finden Sie unter [/FIXED (Feste Basisadresse)](../../build/reference/fixed-fixed-base-address.md).
 
-- Die Erweiterung der Ausgabedatei ist auf ".sys" festgelegt. Verwendung **/OUT** so ändern Sie den Standarddateinamen und die Erweiterung. Weitere Informationen finden Sie unter [/OUT (Ausgabedateiname)](../../build/reference/out-output-file-name.md).
+- Die Erweiterung der Ausgabedatei wird auf .sys festgelegt. Verwendung **/OUT** so ändern Sie den Standarddateinamen und die Erweiterung. Weitere Informationen finden Sie unter [/OUT (Ausgabedateiname)](../../build/reference/out-output-file-name.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
@@ -63,5 +63,5 @@ Wenn **/Driver** angegeben ist:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
+[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
 [Linkeroptionen](../../build/reference/linker-options.md)

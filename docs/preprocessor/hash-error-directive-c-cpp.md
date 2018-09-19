@@ -1,5 +1,5 @@
 ---
-title: '#Fehler-Direktive (C/C++) | Microsoft Docs'
+title: '#Fehler-Direktive (C/C++) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba4f0e06798bc6419f8db0471f19588039eb679a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d2da939fe52e41e122ecd4926e34fb9c4be735ae
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33905571"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541403"
 ---
 # <a name="error-directive-cc"></a>#error-Anweisung (C/C++)
-Die `#error`-Direktive gibt eine benutzerdefinierte Fehlermeldung zur Kompilierzeit aus und beendet dann die Kompilierung.  
+Die **#error** -Anweisung gibt eine benutzerdefinierte Fehlermeldung zur Kompilierzeit aus und beendet dann die Kompilierung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,7 +35,8 @@ Die `#error`-Direktive gibt eine benutzerdefinierte Fehlermeldung zur Kompilierz
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die Fehlermeldung, die dieser Richtlinie ausgibt enthält die *-Token-String* Parameter. Der `token-string`-Parameter unterliegt nicht der Makroerweiterung. Diese Direktive ist während der Vorverarbeitung am hilfreichsten, denn sie informiert den Entwickler über eine Programminkonsistenz oder einen Verstoß gegen eine Einschränkung. Das folgende Beispiel zeigt die Fehlerverarbeitung während der Vorverarbeitung:  
+ 
+Die Fehlermeldung, die diese Direktive ausgibt, enthält die *-Token-Zeichenfolge* Parameter. Die *-Token-Zeichenfolge* -Parameter unterliegt nicht der makroerweiterung. Diese Anweisung ist während der Vorverarbeitung am hilfreichsten, denn sie informiert den Entwickler über eine Programminkonsistenz oder einen Verstoß gegen eine Einschränkung. Das folgende Beispiel zeigt die Fehlerverarbeitung während der Vorverarbeitung:  
   
 ```  
 #if !defined(__cplusplus)  
@@ -44,4 +45,5 @@ Die `#error`-Direktive gibt eine benutzerdefinierte Fehlermeldung zur Kompilierz
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Präprozessordirektiven](../preprocessor/preprocessor-directives.md)
+ 
+[Präprozessordirektiven](../preprocessor/preprocessor-directives.md)

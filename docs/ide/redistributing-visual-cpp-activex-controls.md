@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b770bbacca06c6edfb3b9b4eda53fc7be8a7ae0
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d62669ffef0ae1e5788dcf4086a1c5b58e7728ff
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33331018"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683351"
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Neuverteilen von Visual C++ ActiveX-Steuerelementen
 Visual C++ 6.0 stellt ActiveX-Steuerelemente bereit, die Sie in Anwendungen verwenden können, die Sie dann verteilen. Diese Steuerelemente sind nicht mehr in Visual C++ enthalten. Aufgrund der Lizenzvereinbarungen für Visual C++ 6.0 können Sie diese Steuerelemente mit Anwendungen verteilen, die in Visual C++ entwickelt wurden.  
@@ -34,17 +34,15 @@ Visual C++ 6.0 stellt ActiveX-Steuerelemente bereit, die Sie in Anwendungen verw
   
 -   Asycfilt.dll  
   
--   Comcat.dll *  
+-   Comcat.dll \*  
   
--   Oleaut32.dll *  
+-   Oleaut32.dll \*  
   
--   Olepro32.dll *  
+-   Olepro32.dll \*  
   
 -   Stdole2.tlb  
   
  Wenn diese DLLs nicht auf dem Zielsystem verfügbar sind, müssen Sie sie mithilfe des vorgeschriebenen Mechanismus zum Aktualisieren des entsprechenden Betriebssystems aktualisieren. Sie können die neuesten Service Packs für Windows-Betriebssysteme unter [http://windowsupdate.microsoft.com](http://windowsupdate.microsoft.com) herunterladen.  
-  
- Wenn Ihre Anwendung eines der ActiveX-Steuerelemente verwendet, die eine Verbindung zu einer Datenbank herstellen, müssen die Microsoft Data Access Components (MDAC) auf dem Zielsystem installiert sein. Weitere Informationen finden Sie unter [Redistributing Database Support Files (Verteilen von Datenbankunterstützungsdateien)](../ide/redistributing-database-support-files.md).  
   
  Wenn Sie ein ActiveX-Steuerelement verwenden, das eine Verbindung zu einer Datenbank herstellt, müssen Sie auch den Namen der Datenquelle auf dem Zielcomputer replizieren. Diesen Vorgang können Sie mit Funktionen wie `ConfigDSN` programmgesteuert durchführen.  
   

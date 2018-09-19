@@ -1,5 +1,5 @@
 ---
-title: Systeminterne Funktionen "_InterlockedExchangePointer" | Microsoft Docs
+title: Funktionen "_InterlockedExchangePointer" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8482b7d5b21c113001b702e00f406b9a3fcfd9c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fa2aa8fb79a0590c437699bcf887f2a7e1c1bb21
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334937"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705015"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedExchangePointer“
 **Microsoft-spezifisch**  
@@ -72,11 +72,11 @@ void * _InterlockedExchangePointer_HLERelease(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in, out] `Target`  
- Zeiger auf den Zeiger auf den auszutauschenden Wert. Die Funktion setzt den Wert auf `Value` und gibt den vorherigen Wert zurück.  
+*Target*<br/>
+[in, out] Zeiger auf den Zeiger auf den auszutauschenden Wert. Die Funktion setzt den Wert auf `Value` und gibt den vorherigen Wert zurück.  
   
- [in] `Value`  
- Wert, der mit dem Wert ausgetauscht werden soll, auf den von `Target` gezeigt wird.  
+*Wert*<br/>
+[in] Wert, der mit dem Wert ausgetauscht werden verweist `Target`.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Die Funktion gibt den Anfangswert zurück, auf den `Target` zeigt.  
@@ -85,9 +85,9 @@ void * _InterlockedExchangePointer_HLERelease(
   
 |Systemintern|Architektur|Header|  
 |---------------|------------------|------------|  
-|`_InterlockedExchangePointer`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedExchangePointer`|X86, ARM, x64|\<intrin.h>|  
 |`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM|\<intrin.h>|  
-|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] mit HLE-Unterstützung|\<immintrin.h>|  
+|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|X64 mit HLE-Unterstützung|\<immintrin.h>|  
   
  In der x86-Architektur ist `_InterlockedExchangePointer` ein Makro, das `_InterlockedExchange` aufruft.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Weitere Informationen zu Aktualisierungen (ODBC) | Microsoft Docs'
+title: 'Recordset: Weitere Informationen zu Aktualisierungen (ODBC) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,92 +21,102 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ea46e0462f3763e04ec18ad9bff2b0d3ded1deee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e09ab80d8f525412d96d696c6ff3cb02926913d0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098666"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034979"
 ---
 # <a name="recordset-more-about-updates-odbc"></a>Recordset: Weitere Informationen zu Aktualisierungen (ODBC)
+
 Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
   
- In diesem Thema wird Folgendes erläutert:  
+In diesem Thema wird Folgendes erläutert:  
   
--   [Auswirkungen von Updates durch andere Vorgänge, wie Transaktionen,](#_core_how_transactions_affect_updates).  
+- [Auswirkungen auf andere Vorgänge, wie Transaktionen, Aktualisierungen](#_core_how_transactions_affect_updates).  
   
--   [Die Updates und die von anderen Benutzern](#_core_your_updates_and_the_updates_of_other_users).  
+- [Ihre Updates und anderer Benutzer](#_core_your_updates_and_the_updates_of_other_users).  
   
--   [Weitere Informationen über die Memberfunktionen Update- und Delete](#_core_more_about_update_and_delete).  
+- [Weitere Informationen zu den Update- und Delete-Memberfunktionen](#_core_more_about_update_and_delete).  
   
 > [!NOTE]
->  Dieses Thema bezieht sich auf von `CRecordset` abgeleitete Objekte, in denen das gesammelte Abrufen von Zeilen nicht implementiert wurde. Wenn Sie das gesammelte Abrufen von Zeilen implementiert haben, einige der Informationen ist nicht relevant. Angenommen, Sie können nicht aufgerufen werden der `AddNew`, **bearbeiten**, **löschen**, und **Update** Memberfunktionen; allerdings können Sie Transaktionen ausführen. Weitere Informationen über das gesammelte finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Dieses Thema bezieht sich auf von `CRecordset` abgeleitete Objekte, in denen das gesammelte Abrufen von Zeilen nicht implementiert wurde. Wenn Sie die massenzeilenabruf implementiert haben, einige der Informationen ist nicht relevant. Angenommen, Sie können nicht aufrufen, die `AddNew`, `Edit`, `Delete`, und `Update` Memberfunktionen; allerdings können Sie Transaktionen ausführen. Weitere Informationen zu gesammelten Abrufens von Zeilen, finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
 ##  <a name="_core_how_other_operations_affect_updates"></a> Auswirkungen von Aktualisierungen in anderen Vorgängen  
- Die Updates werden von Transaktionen faktisch zum Zeitpunkt des Updates durch Schließen des Recordsets vor dem Abschluss einer Transaktions und Durchführen eines Bildlaufs vor dem Abschluss einer Transaktions betroffen.  
+
+Ihre Updates sind von Transaktionen in Kraft zum Zeitpunkt des Updates durch Schließen des Recordsets vor dem Abschluss einer Transaktions und Durchführen eines Bildlaufs vor dem Abschluss einer Transaktions betroffen.  
   
 ###  <a name="_core_how_transactions_affect_updates"></a> Auswirkungen von Transaktionen auf Aktualisierungen  
- Neben wie `AddNew`, **bearbeiten**, und **löschen** arbeiten, ist es wichtig zu verstehen, wie die **BeginTrans**, **CommitTrans**, und **Rollback** Memberfunktionen der [CDatabase](../../mfc/reference/cdatabase-class.md) können Sie mit der Update-Funktionen von [CRecordset](../../mfc/reference/crecordset-class.md).  
+
+Über Kenntnisse wie `AddNew`, `Edit`, und `Delete` Arbeit, es ist wichtig zu verstehen, wie die `BeginTrans`, `CommitTrans`, und `Rollback` Memberfunktionen der [CDatabase](../../mfc/reference/cdatabase-class.md) funktionieren mit die Funktionen der Aktualisierung der [CRecordset](../../mfc/reference/crecordset-class.md).  
   
- Standardmäßig Aufrufe von `AddNew` und **bearbeiten** auswirken, die die Datenquelle sofort beim Aufruf **Update**. **Löschen Sie** Aufrufe werden sofort wirksam. Sie können jedoch eine Transaktion einrichten und ein Batch, der solche Aufrufe ausgeführt. Die Updates sind nicht dauerhaft, bis Sie ein Commit ausgeführt. Wenn Sie Ihre Meinung ändern, können Sie die Transaktion ein Commit anstelle von zurücksetzen.  
+Aufrufe in der Standardeinstellung `AddNew` und `Edit` Auswirkung, die die Datenquelle sofort beim Aufruf `Update`. `Delete` Aufrufe werden sofort wirksam. Sie können jedoch eine Transaktion einrichten und Ausführen ein Batches von solche Aufrufe. Die Updates sind nicht dauerhaft, bis ein Commit ausgeführt. Wenn Sie Ihre Meinung ändern, können Sie die Transaktion durch ein Commit zurücksetzen.  
   
- Weitere Informationen über Transaktionen finden Sie unter [Transaktion (ODBC)](../../data/odbc/transaction-odbc.md).  
+Weitere Informationen über Transaktionen finden Sie unter [Transaktion (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-###  <a name="_core_how_closing_the_recordset_affects_updates"></a> Wie das Recordset geschlossen Updates auswirkt.  
- Wenn Sie ein Recordset verwendet werden soll, oder die zugehörigen schließen `CDatabase` Objekt, mit einer Transaktion ausgeführt (Sie haben nicht aufgerufen [CDatabase:: CommitTrans](../../mfc/reference/cdatabase-class.md#committrans) oder [CDatabase](../../mfc/reference/cdatabase-class.md#rollback)), wird die Transaktion ein Rollback ausgeführt Sichern Sie automatisch (es sei denn, Ihre Datenbank-Back-End-Microsoft Jet-Datenbankmodul).  
+###  <a name="_core_how_closing_the_recordset_affects_updates"></a> Schließen das Recordset Updates Auswirkungen  
+
+Wenn Sie ein Recordset verwendet werden soll, oder die zugehörigen schließen `CDatabase` Objekt mit einer Transaktion ausgeführt (nicht aufgerufen [CDatabase:: CommitTrans](../../mfc/reference/cdatabase-class.md#committrans) oder [CDatabase](../../mfc/reference/cdatabase-class.md#rollback)), die Transaktion wird ein Rollback ausgeführt. Sichern Sie automatisch (sofern Ihre Datenbank-Back-End der Microsoft Jet-Datenbank-Engine darstellt).  
   
 > [!CAUTION]
->  Wenn Sie das Microsoft Jet-Datenbankmodul verwenden, führt Schließen eines Recordsets innerhalb einer expliziten Transaktion nicht zu Freigeben von Zeilen, die geändert wurden oder sperren, die gespeichert wurden, bis die explizite Transaktion ein Commit oder Rollback ist. Empfohlen wird, Sie öffnen und Schließen von Recordsets innerhalb oder außerhalb einer expliziten Jet-Transaktion.  
+>  Wenn Sie die Microsoft Jet-Datenbank-Engine verwenden, führt Schließen eines Recordsets innerhalb einer expliziten Transaktion nicht zu Freigeben von Zeilen, die geändert wurden oder sperren, die gespeichert wurden, bis die explizite Transaktion ein Commit oder Rollback ist. Empfohlen wird, Sie öffnen und Schließen von Recordsets innerhalb oder außerhalb einer expliziten Jet-Transaktion.  
   
-###  <a name="_core_how_scrolling_affects_updates"></a> Wie wirkt sich auf Durchführen eines Bildlaufs Updates  
- Wenn Sie [Recordset: Scrollen (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) in einem Recordset Bearbeitungspuffer mit jeder neuen aktuellen Datensatz, der (vorherigen Datensatzes ist dabei nicht zuerst gespeichert) gefüllt ist. Durchführen eines Bildlaufs überspringt Datensätze gelöscht zuvor ein. Wenn Sie einen Bildlauf nach dem Ausführen einer `AddNew` oder **bearbeiten** Aufruf ohne Aufruf **Update**, **CommitTrans**, oder **Rollback** zuerst alle Änderungen sind verloren (keine Warnung auf Sie), wie ein neuer Datensatz in den Bearbeitungspuffer geschaltet wird. Bearbeitungspuffer wird mit dem Zieldatensatz gefüllt, gespeicherte Datensatz wird freigegeben, und für die Datenquelle findet keine Änderung statt. Dies gilt für beide `AddNew` und **bearbeiten**.  
+###  <a name="_core_how_scrolling_affects_updates"></a> Durchführen eines Bildlaufs Updates Auswirkungen  
+
+Wenn Sie [Recordset: Scrollen (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) eines Recordsets Bearbeitungspuffer mit jeder neuen aktuellen Datensatz (des vorherigen Datensatzes ist dabei nicht zuerst gespeichert) gefüllt ist. Scrollen vorher gelöschte Datensätze überspringt. Wenn Sie nach dem Scrollen ein `AddNew` oder `Edit` Aufruf ohne `Update`, `CommitTrans`, oder `Rollback` zunächst alle Änderungen verloren (mit keine Warnung für Sie) wie ein neuer Datensatz in die Bearbeitungspuffer eingebunden ist. Bearbeitungspuffer wird gefüllt, mit dem Datensatz, der ein Bildlauf durchgeführt, und es erfolgt keine Änderung in der Datenquelle gespeicherte Datensatz wird freigegeben. Dies gilt für `AddNew` und `Edit`.  
   
-##  <a name="_core_your_updates_and_the_updates_of_other_users"></a> Die Updates und die Updates von anderen Benutzern  
- Wenn Sie ein Recordset verwenden, um Daten zu aktualisieren, wirkt sich Ihre Updates auf andere Benutzer. Auf ähnliche Weise wirkt sich auf die Updates von anderen Benutzern während der Lebensdauer des Recordsets.  
+##  <a name="_core_your_updates_and_the_updates_of_other_users"></a> Ihre Updates und die Updates für andere Benutzer  
+
+Wenn Sie ein Recordset verwenden, um Daten zu aktualisieren, Auswirkungen auf Ihre Updates auf andere Benutzer. Auf ähnliche Weise wirkt sich auf die Updates für andere Benutzer während der Lebensdauer des Recordsets.  
   
- In einer mehrbenutzerumgebung können andere Benutzer Recordsets öffnen, die einige der dieselben Datensätze enthalten, die Sie im Recordset ausgewählt haben. Änderungen an einen Datensatz, bevor Sie sie abrufen, werden im Recordset widergespiegelt. Da Dynasets einen Datensatz jedes Mal, die Sie ihm einen Bildlauf durchführen abzurufen, Änderungen Dynasets jedes Mal, wenn Sie einen zu einem Datensatz Bildlauf. Abrufen von Momentaufnahmen ein Datensatzes, zu blättern, damit Momentaufnahmen nur für diese Änderungen, die auftreten widerspiegeln, bevor Sie mit dem Datensatz zunächst einen Bildlauf, zum ersten Mal.  
+In einer mehrbenutzerumgebung können andere Benutzer Recordsets öffnen, die einige der gleichen Einträge enthalten, die Sie im Recordset ausgewählt haben. Änderungen an einem Datensatz, bevor Sie sie abrufen, werden im Recordset wiedergegeben. Da Dynasets ein Datensatzes jedes Mal, die Sie darin einen Bildlauf durchführen abrufen, wider Dynasets Änderungen jedes Mal, wenn Sie einen Bildlauf zu einem Datensatz durchführen. Abrufen von Momentaufnahmen ein Datensatzes beim ersten, die Sie darauf, scrollen, damit Momentaufnahmen nur diese Änderungen, die auftreten widerspiegeln, bevor Sie mit dem Datensatz zunächst einen Bildlauf durchführen.  
   
- Datensätze, die von anderen Benutzern hinzugefügt werden, nachdem Sie das Recordset geöffnet werden nicht im Recordset angezeigt, es sei denn, Sie abzufragen. Wenn das Recordset ein Dynaset ist, werden Änderungen an vorhandenen Datensätze von anderen Benutzern im Dynaset angezeigt, wenn Sie einen zu der betreffenden Datensatz Bildlauf. Wenn das Recordset eine Momentaufnahme ist, Änderungen nicht mehr anzeigen, bis Sie die Momentaufnahme erneut abgefragt. Wenn Sie verwenden möchten, finden Sie unter Datensätze hinzugefügt oder gelöscht, die von anderen Benutzern in Ihrer Momentaufnahme oder Datensätze, die von anderen Benutzern in Ihrer Dynaset hinzugefügt Aufrufen [CRecordset](../../mfc/reference/crecordset-class.md#requery) das Recordset neu erstellen. (Beachten Sie, dass das Löschen von anderen Benutzern unter "Dynaset" angezeigt.) Sie können auch aufrufen **Requery** Datensätze finden Sie hinzugefügt haben, aber nicht um finden Sie unter Ihr gelöscht.  
+Datensätze, die von anderen Benutzern hinzugefügt wird, nach dem Öffnen des Recordsets werden nicht im Recordset angezeigt, es sei denn, Sie diese erneut abfragen. Wenn das Recordset ein Dynaset ist, werden Änderungen an vorhandenen Datensätze, die von anderen Benutzern im Dynaset angezeigt, wenn Sie auf den betroffenen Datensatz Bildlauf ausführen. Wenn das Recordset eine Momentaufnahme ist, Änderungen nicht mehr anzeigen, solange Sie die Momentaufnahme erneut abfragen. Wenn Sie verwenden möchten, finden Sie unter Datensätze hinzugefügt wurden, oder rufen Sie die von anderen Benutzern im Snapshot oder von anderen Benutzern im Dynaset, hinzugefügte Datensätze gelöscht [CRecordset](../../mfc/reference/crecordset-class.md#requery) das Recordset neu zu erstellen. (Beachten Sie, dass die Löschen von anderen Benutzern im Dynaset angezeigt.) Sie können auch aufrufen, `Requery` Einträge sehen Sie hinzugefügt haben, aber nicht um finden Sie unter Ihrem löschungen.  
   
 > [!TIP]
->  Um eine gesamte Momentaufnahme gleichzeitig caching zu erzwingen, rufen Sie `MoveLast` sofort nach dem Öffnen von der Momentaufnahme. Rufen Sie anschließend **MoveFirst** zum Arbeiten mit den Datensätzen. `MoveLast` ist gleich alle Datensätze, aber es sie alle auf einmal abgerufen. Beachten Sie jedoch, dass die Leistung beeinträchtigt werden kann und möglicherweise nicht für einige Treiber erforderlich.  
+>  Rufen Sie zum Zwischenspeichern für eine gesamte Momentaufnahme auf einmal zu erzwingen, `MoveLast` sofort nach dem Öffnen von der Momentaufnahme. Rufen Sie anschließend `MoveFirst` , wie mit den Datensätzen arbeiten. `MoveLast` ist gleich alle Datensätze, aber es werden alle auf einmal abgerufen. Beachten Sie jedoch, dass dies die Leistung beeinträchtigt werden kann und möglicherweise nicht erforderlich, damit einige Treiber.  
   
- Die Auswirkungen von Updates für andere Benutzer sind ihre Auswirkungen auf die Sie ähnlich.  
+Die Auswirkungen Ihrer Updates für andere Benutzer sind die Auswirkungen auf die Sie ähnlich.  
   
-##  <a name="_core_more_about_update_and_delete"></a> Weitere Informationen zu Update- und Delete  
- Dieser Abschnitt enthält zusätzliche Informationen zum Arbeiten mit **Update** und **löschen**.  
+##  <a name="_core_more_about_update_and_delete"></a> Weitere Informationen zu aktualisieren und löschen  
+
+Dieser Abschnitt enthält zusätzliche Informationen, damit Ihnen die Arbeit mit `Update` und `Delete`.  
   
 ### <a name="update-success-and-failure"></a>Update Erfolg und Fehler  
- Wenn **Update** erfolgreich ist, die `AddNew` oder **bearbeiten** endet. Zum Starten einer `AddNew` oder **bearbeiten** Modus erneut aus, rufen `AddNew` oder **bearbeiten**.  
+
+Wenn `Update` erfolgreich ist, die `AddNew` oder `Edit` endet. Zum Starten einer `AddNew` oder `Edit` Modus erneut aus, rufen `AddNew` oder `Edit`.  
   
- Wenn **Update** ein Fehler auftritt (gibt **"false"** oder eine Ausnahme auslöst), Sie behalten immer die `AddNew` oder **bearbeiten** Modus, je nachdem welche Funktion Sie zuletzt aufgerufen haben. Sie können dann eine der folgenden Aktionen ausführen:  
+Wenn `Update` schlägt fehl ("false" zurückgibt, oder löst eine Ausnahme aus), Sie behalten immer die `AddNew` oder `Edit` Modus, je nachdem welche Funktion Sie zuletzt aufgerufen haben. Sie können dann eine der folgenden Aktionen ausführen:  
   
--   Ändern Sie einen Datenmember des Felds, und wiederholen Sie den **Update** erneut aus.  
+- Ändern Sie einen Datenmember des Felds, und versuchen Sie es der `Update` erneut aus.  
   
--   Rufen Sie `AddNew` um den Felddatenmembern auf Null zurückgesetzt, legen Sie den Felddatenmembern Werte fest, und rufen dann **Update** erneut aus.  
+- Rufen Sie `AddNew` um den Felddatenmembern auf Null zurückzusetzen, legen Sie die Werte der Felddatenmember, und rufen Sie dann `Update` erneut aus.  
   
--   Rufen Sie **bearbeiten** , die Werte erneut zu laden, die im Recordset vor dem ersten Aufruf von Waren `AddNew` oder **bearbeiten**, legen Sie den Felddatenmembern Werte fest und rufen dann **aktualisieren**erneut aus. Nach einer erfolgreichen **Update** aufrufen (außer nach einem `AddNew` aufrufen), die Felddatenmembern behalten ihre neuen Werte.  
+- Rufen Sie `Edit` das Neuladen von Werten, die das Recordset vor dem ersten Aufruf von wurden `AddNew` oder `Edit`, legen Sie die Werte der Felddatenmember des und rufen dann `Update` erneut. Nach einer erfolgreichen `Update` aufrufen (außer nach einem `AddNew` aufrufen), die Felddatenmembern behalten ihre neuen Werte.  
   
--   Rufen Sie **verschieben** (einschließlich **verschieben** mit einem Parameter des **AFX_MOVE_REFRESH**, oder 0), die alle leert ändert und beendet alle `AddNew` oder **Bearbeiten** Modus aktiv.  
+- Rufen Sie `Move` (einschließlich `Move` mit dem Parameter AFX_MOVE_REFRESH oder 0), die alle leert ändert und beendet alle `AddNew` oder `Edit` Modus aktiv.  
   
 ### <a name="update-and-delete"></a>Update- und Delete  
- Dieser Abschnitt gilt für beide **Update** und **löschen**.  
+
+Dieser Abschnitt gilt für beide `Update` und `Delete`.  
   
- Auf einem **Update** oder **löschen** Vorgang lediglich einen einzelnen Datensatz aktualisiert werden soll. Dieser Datensatz wird der aktuelle Datensatz, der die Datenwerte in den Feldern des Recordset-Objekts entspricht. Wenn es aus einem unbestimmten Grund keine Datensätze oder betroffen sind mehr als ein Datensatz ist, eine Ausnahme ausgelöst wird, enthält die folgenden **RETCODE** Werte:  
+Auf einem `Update` oder `Delete` -Vorgang nur ein Datensatz aktualisiert werden soll. Dieser Datensatz ist der aktuelle Datensatz, der die Datenwerte in den Feldern des Recordset-Objekts entspricht. Wenn aus irgendeinem Grund keine Datensätze oder betroffen sind mehr als einem Datensatz ist, eine Ausnahme ausgelöst wird, enthält die folgenden **"RETCODE"** Werte:  
   
--   **AFX_SQL_ERROR_NO_ROWS_AFFECTED**  
+- AFX_SQL_ERROR_NO_ROWS_AFFECTED  
   
--   **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED**  
+- AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED  
   
- Wenn diese Ausnahmen ausgelöst werden, verbleiben Sie in der `AddNew` oder **bearbeiten** Status Sie beim Aufrufen haben **Update** oder **löschen**. Hier sind die häufigsten Szenarien, in denen Sie diese Ausnahmen angezeigt werden. Sie sind am wahrscheinlichsten finden Sie unter:  
+Wenn diese Ausnahmen ausgelöst werden, verbleiben Sie in der `AddNew` oder `Edit` Status Sie beim Aufrufen haben `Update` oder `Delete`. Hier sind die häufigsten Szenarien, in denen Sie diese Ausnahmen sehen würden. Sie haben wahrscheinlich finden Sie unter:  
   
--   **AFX_SQL_ERROR_NO_ROWS_AFFECTED** bei optimistisches Sperrverhalten und ein anderer Benutzer Verwendung wurde geändert, den Datensatz in einer Weise, die verhindert, dass das Framework identifizieren den richtigen Datensatz zu aktualisieren oder zu löschen.  
+- AFX_SQL_ERROR_NO_ROWS_AFFECTED Sie optimistisches Sperrverhalten verwenden und ein anderer Benutzer hat den Datensatz in einer Weise geändert, die das Framework daran hindert, den richtigen Datensatz zu aktualisieren oder löschen.  
   
--   **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED** bei die Tabelle aktualisiert werden soll, wurde kein Primärschlüssel oder eindeutigen Index, und Sie haben nicht genügend Spalten im Recordset zur eindeutigen Identifizierung einer Zeile einer Tabelle.  
+- AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED in der Tabelle, die Sie aktualisieren möchten, wurde kein Primärschlüssel oder eindeutigen Index, und Sie haben nicht genügend Spalten im Recordset, um eine Zeile einer Tabelle eindeutig identifizieren.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)   
- [Recordset: Datensatzauswahl durch Recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)   
- [Datensatzfeldaustausch (RFX)](../../data/odbc/record-field-exchange-rfx.md)   
- [SQL](../../data/odbc/sql.md)   
- [Ausnahmen: Datenbankausnahmen](../../mfc/exceptions-database-exceptions.md)
+
+[Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
+[Recordset: Wie Recordsets Datensätze auswählen (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[Datensatzfeldaustausch (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
+[SQL](../../data/odbc/sql.md)<br/>
+[Ausnahmen: Datenbankausnahmen](../../mfc/exceptions-database-exceptions.md)

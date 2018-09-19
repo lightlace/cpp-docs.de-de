@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2350 | Microsoft Docs
+title: Compilerfehler C2350 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fe63342f0fc8d5464ffd97f5a4da5bb7335bc18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 155987923a1f25c3dae12f8ee8f31012eab5e3bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195866"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072406"
 ---
 # <a name="compiler-error-c2350"></a>Compilerfehler C2350
-"identifier" ist kein statisches Element  
-  
- Nicht statische Member einer Klasse oder Struktur können nicht definiert werden.
+
+"identifier" ist kein statisches Element
+
+Nicht statische Member einer Klasse oder Struktur können nicht definiert werden.

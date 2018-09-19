@@ -1,5 +1,5 @@
 ---
-title: Ldexp, Ldexpf, Ldexpl | Microsoft Docs
+title: Ldexp, Ldexpf, Ldexpl | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 012315e11ccf2dbe63e32c6208487f324ef29289
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ead91ce542ce547f9453f52455dc76d61045b87
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401417"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208414"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>Ldexp, Ldexpf, ldexpl
 
@@ -90,17 +90,17 @@ Ganzzahlexponent.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Ldexp** Funktionen Rückgabe des Werts der *x* * 2<sup>*exp* </sup> bei Erfolg. Bei einem Überlauf und abhängig vom Vorzeichen des *x*, **Ldexp** gibt **HUGE_VAL**; das **Errno** Wert wird festgelegt, um **ERANGE** .
+Die **Ldexp** Funktionen geben den Wert der *x* \* 2<sup>*"exp"* </sup> bei erfolgreicher Ausführung. Bei einem Überlauf und abhängig vom Vorzeichen *x*, **Ldexp** gibt **HUGE_VAL**; die **Errno** Wert wird festgelegt, um **ERANGE** .
 
-Weitere Informationen zu **Errno** und potenzieller Fehler Werte zurückgeben, finden Sie unter [Errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Weitere Informationen zu **Errno** und mögliche Rückgabewerte finden Sie unter [Errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Ldexp** nehmen **"float"** oder **lange** **doppelte** Typen. In einem C-Programm **Ldexp** immer ein **doppelte** und ein **Int** und gibt eine **doppelte**.
+Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Ldexp** , Take **"float"** oder **lange** **doppelte** Typen. In einem C-Programm **Ldexp** immer eine **doppelte** und **Int** und gibt eine **doppelte**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|C-Header|C++-Header|
+|-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
 |**Ldexp**, **Ldexpf**, **Ldexpl**|\<math.h>|\<cmath>|
 

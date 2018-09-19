@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2129 | Microsoft Docs
+title: Compilerfehler C2129 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d151c774672b1788ca893a9812deb3e41100dc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e86515a7d7c8954271578291c4ebcb1a52fc9863
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171717"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054284"
 ---
 # <a name="compiler-error-c2129"></a>Compilerfehler C2129
-statische Funktion 'Funktion' deklariert, aber nicht definiert  
-  
- Ein Vorwärtsverweis wird versucht, eine `static` -Funktion, die nie definiert ist.  
-  
- Ein `static` -Funktion im Dateibereich definiert werden muss. Wenn die Funktion in einer anderen Datei definiert ist, er muss deklariert werden `extern`.
+
+statische Funktion 'Funktion' deklariert, aber nicht definiert
+
+Ein Vorwärtsverweis wird versucht, eine `static` -Funktion, die nicht definiert ist.
+
+Ein `static` -Funktion im Dateibereich definiert werden muss. Wenn die Funktion in einer anderen Datei definiert ist, muss diese deklariert werden `extern`.

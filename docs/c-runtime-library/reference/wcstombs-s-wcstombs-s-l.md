@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f23c4836d178c64590536a809ac5fe6cbbdf8380
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1fec8a41a1c9d1a9d01952a0a72829d2122e0e40
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416500"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216976"
 ---
 # <a name="wcstombss-wcstombssl"></a>wcstombs_s, _wcstombs_s_l
 
@@ -103,7 +103,7 @@ Die Größe in Bytes, der die *Mbstr* Puffer.
 Zeigt auf die zu konvertierende Breitzeichenfolge.
 
 *count*<br/>
-Die maximale Anzahl von Bytes zum Speichern in der *Mbstr* Puffer, nicht einschließlich des abschließenden Null-Zeichens, oder [_TRUNCATE](../../c-runtime-library/truncate.md).
+Die maximale Anzahl von Bytes zum Speichern in der *Mbstr* Puffer, das abschließende Nullzeichen nicht eingeschlossen oder [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *locale*<br/>
 Das zu verwendende Gebietsschema.
@@ -116,40 +116,40 @@ Null, wenn erfolgreich, Fehlercode bei Fehler.
 |---------------------|------------------------------|
 |*Mbstr* ist **NULL** und *SizeInBytes* > 0|**EINVAL**|
 |*Wcstr* ist **NULL**|**EINVAL**|
-|Der Zielpuffer ist zu klein, um die konvertierte Zeichenfolge enthalten (es sei denn, *Anzahl* ist **_TRUNCATE**; finden Sie unter "Hinweise" weiter unten)|**ERANGE**|
+|Der Zielpuffer ist zu klein, um die konvertierte Zeichenfolge enthalten (es sei denn, *Anzahl* ist **_TRUNCATE**; Siehe Hinweise unten)|**ERANGE**|
 
-Wenn eine dieser Bedingungen auftritt, wird die Ausnahme für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion einen Fehlercode zurück und legt **Errno** wie in der Tabelle ersichtlich.
+Wenn eine dieser Bedingungen auftritt, wird die Ausnahme für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion einen Fehlercode zurück und legt **Errno** wie in der Tabelle angegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Wcstombs_s** -Funktion konvertiert eine Zeichenfolge mit Breitzeichen verweist *Wcstr* in multibyte-Zeichen im Puffer, die durch gespeicherte *Mbstr*. Die Konvertierung wird für jedes Zeichen fortgesetzt, bis eine der folgenden Bedingungen eintritt:
+Die **Wcstombs_s** -Funktion konvertiert eine Zeichenfolge mit Breitzeichen verweist *Wcstr* in den Puffer, der auf gespeicherte Multibytezeichen *Mbstr*. Die Konvertierung wird für jedes Zeichen fortgesetzt, bis eine der folgenden Bedingungen eintritt:
 
 - Ein Breitzeichen NULL wird erkannt.
 
 - Ein Breitzeichen, das nicht konvertiert werden kann, wird erkannt.
 
-- Die Anzahl der Bytes, die in gespeicherten der *Mbstr* Puffer ist gleich *Anzahl*.
+- Die Anzahl der Bytes in einem der *Mbstr* Puffer ist gleich *Anzahl*.
 
 Die Zielzeichenfolge endet immer mit NULL, selbst bei einem Fehler.
 
-Wenn *Anzahl* der spezielle Wert [_TRUNCATE](../../c-runtime-library/truncate.md), klicken Sie dann **Wcstombs_s** konvertiert größtmöglicher Teil der Zeichenfolge wie in den Zielpuffer passt, während weiterhin Platz für ein NULL-Wert bleibt Abschlusszeichen. Wenn die Zeichenfolge abgeschnitten wird, ist der Rückgabewert **STRUNCATE**, und die Konvertierung wird als erfolgreich betrachtet.
+Wenn *Anzahl* der spezielle Wert [_TRUNCATE](../../c-runtime-library/truncate.md), klicken Sie dann **Wcstombs_s** konvertiert Anteil der Zeichenfolge wie in den Zielpuffer passt, und weiterhin Platz für ein NULL-Wert Abschlusszeichen. Wenn die Zeichenfolge abgeschnitten wird, ist der Rückgabewert **STRUNCATE**, und die Konvertierung als erfolgreich betrachtet wird.
 
-Wenn **Wcstombs_s** die Quellzeichenfolge erfolgreich konvertiert er setzt die Größe in Bytes der konvertierten Zeichenfolge, einschließlich der null-Terminator in  *&#42;pReturnValue* (bereitgestellte  *pReturnValue* nicht **NULL**). Dies tritt auf, auch wenn die *Mbstr* Argument ist **NULL** und bietet eine Möglichkeit, die erforderliche Puffergröße bestimmen. Beachten Sie, dass bei *Mbstr* ist **NULL**, *Anzahl* wird ignoriert.
+Wenn **Wcstombs_s** die Quellzeichenfolge erfolgreich konvertiert wird die Größe in Byte der konvertierten Zeichenfolge ist, einschließlich der null-Terminator in  *&#42;pReturnValue* (bereitgestellte  *pReturnValue* nicht **NULL**). Dies tritt auf, auch wenn die *Mbstr* Argument **NULL** und bietet eine Möglichkeit, um die Größe des erforderlichen Puffers zu bestimmen. Beachten Sie, dass bei *Mbstr* ist **NULL**, *Anzahl* wird ignoriert.
 
-Wenn **Wcstombs_s** findet ein Breitzeichen, es kann nicht in einem multibyte-Zeichen konvertiert,-Zielpuffer 0 in  *&#42;pReturnValue*, Zielpuffers auf eine leere Zeichenfolge festgelegt wird, wird dadurch **Errno**  auf **EILSEQ**, und gibt **EILSEQ**.
+Wenn **Wcstombs_s** ein Breitzeichen, die in einem multibyte-Zeichen konvertiert werden kann erkennt, schreibt es 0 in  *&#42;pReturnValue*, festgelegt, der Zielpuffer auf eine leere Zeichenfolge **Errno**  zu **EILSEQ**, und gibt **EILSEQ**.
 
-Wenn die Sequenzen auf verweist *Wcstr* und *Mbstr* überlappen, ist das Verhalten des **Wcstombs_s** ist nicht definiert.
+Wenn die Sequenzen, zeigt *Wcstr* und *Mbstr* überlappen, ist das Verhalten der **Wcstombs_s** ist nicht definiert.
 
 > [!IMPORTANT]
-> Sicherstellen, dass *Wcstr* und *Mbstr* nicht überlappen und dass *Anzahl* die Anzahl der Breitzeichen, die zu konvertierende korrekt widerspiegelt.
+> Sicherstellen, dass *Wcstr* und *Mbstr* nicht überlappen und dass *Anzahl* die Anzahl zu konvertierender Breitzeichen korrekt darstellt.
 
-**Wcstombs_s** verwendet das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten; **_wcstombs_s_l** ist identisch mit **Wcstombs** identisch, jedoch das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+**Wcstombs_s** verwendet das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten; **_wcstombs_s_l** ist identisch mit **Wcstombs** mit dem Unterschied, dass sie das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**wcstombs_s**|\<stdlib.h>|
 
@@ -157,7 +157,7 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 
 ## <a name="example"></a>Beispiel
 
-Dieses Programm veranschaulicht das Verhalten von der **Wcstombs_s** Funktion.
+Dieses Programm stellt das Verhalten der **Wcstombs_s** Funktion.
 
 ```C
 // crt_wcstombs_s.c
@@ -208,4 +208,4 @@ Convert wide-character string:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

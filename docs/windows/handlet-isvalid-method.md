@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: IsValid-Methode | Microsoft Docs'
+title: 'Handlet:: IsValid-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42aca81b3c2a0ad3db652bf9f77c648e503098e2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef93be9a6994cf0e093380941810bc735961ee1c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873133"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593275"
 ---
 # <a name="handletisvalid-method"></a>HandleT::IsValid-Methode
-Gibt an, ob das aktuelle HandleT-Objekt ein Handle darstellt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-bool IsValid() const;  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- `true` Wenn die HandleT ein Handle darstellt; andernfalls `false`.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Siehe auch  
- [HandleT-Klasse](../windows/handlet-class.md)
+
+Gibt an, ob die aktuelle **HandleT** Objekt stellt ein Handle.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+bool IsValid() const;
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+**"true"** Wenn die **HandleT** stellt ein Handle ist, andernfalls **"false"**.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+
+[HandleT-Klasse](../windows/handlet-class.md)

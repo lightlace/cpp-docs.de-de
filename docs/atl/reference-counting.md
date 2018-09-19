@@ -18,30 +18,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0ce8b2cc412c576b0eded9662d8e70b34cf2ec
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9288eda15b0bac3d3694ee56a2f427aefb60e032
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850812"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086433"
 ---
 # <a name="reference-counting"></a>Zählen der Verweise
-COM selbst versucht automatisch nicht, ein Objekt aus dem Arbeitsspeicher entfernen, wenn er davon ausgeht, dass das Objekt nicht mehr verwendet wird. Stattdessen muss der Objektprogrammierer, das nicht verwendete Objekt entfernen. Der Programmierer bestimmt, ob ein Objekt basierend auf einen Verweiszähler entfernt werden kann.  
-  
- COM verwendet die `IUnknown` Methoden ["AddRef"](http://msdn.microsoft.com/library/windows/desktop/ms691379) und [Version](http://msdn.microsoft.com/library/windows/desktop/ms682317), um den Verweiszähler der Schnittstellen für ein Objekt zu verwalten. Die allgemeinen Regeln für das Aufrufen dieser Methoden sind:  
-  
--   Wenn ein Client einen Schnittstellenzeiger, empfängt `AddRef` muss für die Schnittstelle aufgerufen werden.  
-  
--   Wenn der Client mit den Schnittstellenzeiger auf abgeschlossen ist, muss er Aufrufen `Release`.  
-  
- In einer einfachen Implementierung jedes `AddRef` aufrufen, inkrementiert bzw. jede `Release` aufrufen, wird eine Counter-Variable innerhalb des Objekts. Wenn die Anzahl auf 0 (null) zurückgegeben wird, wird die Schnittstelle nicht mehr hat alle Benutzer und selbst aus dem Arbeitsspeicher entfernen kann.  
-  
- Verweiszählung kann auch implementiert werden, damit an, dass jeder Verweis auf das Objekt (nicht zu einer einzelnen Schnittstelle) gezählt wird. In diesem Fall jeder `AddRef` und `Release` Aufrufen des Delegaten an eine zentrale Implementierung für das Objekt und `Release` das gesamte Objekt frei, wenn der Verweiszähler null erreicht.  
-  
+
+COM selbst versucht automatisch nicht, ein Objekt aus dem Arbeitsspeicher entfernen, wenn er davon ausgeht, dass das Objekt nicht mehr verwendet wird. Stattdessen muss der Objektprogrammierer, das nicht verwendete Objekt entfernen. Der Programmierer bestimmt, ob ein Objekt basierend auf einen Verweiszähler entfernt werden kann.
+
+COM verwendet die `IUnknown` Methoden ["AddRef"](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) und [Version](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release), um den Verweiszähler der Schnittstellen für ein Objekt zu verwalten. Die allgemeinen Regeln für das Aufrufen dieser Methoden sind:
+
+- Wenn ein Client einen Schnittstellenzeiger, empfängt `AddRef` muss für die Schnittstelle aufgerufen werden.
+
+- Wenn der Client mit den Schnittstellenzeiger auf abgeschlossen ist, muss er Aufrufen `Release`.
+
+In einer einfachen Implementierung jedes `AddRef` aufrufen, inkrementiert bzw. jede `Release` aufrufen, wird eine Counter-Variable innerhalb des Objekts. Wenn die Anzahl auf 0 (null) zurückgegeben wird, wird die Schnittstelle nicht mehr hat alle Benutzer und selbst aus dem Arbeitsspeicher entfernen kann.
+
+Verweiszählung kann auch implementiert werden, damit an, dass jeder Verweis auf das Objekt (nicht zu einer einzelnen Schnittstelle) gezählt wird. In diesem Fall jeder `AddRef` und `Release` Aufrufen des Delegaten an eine zentrale Implementierung für das Objekt und `Release` das gesamte Objekt frei, wenn der Verweiszähler null erreicht.
+
 > [!NOTE]
->  Wenn eine `CComObject`-abgeleiteten Objekt wird erstellt, mit der **neue** -Operator, der Verweiszähler ist 0. Aus diesem Grund einen Aufruf `AddRef` müssen vorgenommen werden, nach erfolgreicher Erstellung der `CComObject`-abgeleitetes Objekt.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Einführung in COM](../atl/introduction-to-com.md)   
- [Verwalten der Lebensdauer von Objekten über die Verweiszählung](http://msdn.microsoft.com/library/windows/desktop/ms687260)
+>  Wenn eine `CComObject`-abgeleiteten Objekt wird erstellt, mit der **neue** -Operator, der Verweiszähler ist 0. Aus diesem Grund einen Aufruf `AddRef` müssen vorgenommen werden, nach erfolgreicher Erstellung der `CComObject`-abgeleitetes Objekt.
+
+## <a name="see-also"></a>Siehe auch
+
+[Einführung in COM](../atl/introduction-to-com.md)<br/>
+[Verwalten der Lebensdauer von Objekten über die Verweiszählung](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)
 

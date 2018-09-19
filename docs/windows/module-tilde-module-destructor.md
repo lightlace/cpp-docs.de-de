@@ -1,5 +1,5 @@
 ---
-title: 'Module:: ~ Module-Destruktor | Microsoft Docs'
+title: 'Module:: ~ Module-Destruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a85f5a483b329525d44688c61ac57df8d3b2ef1c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b32c1dcf00879d53193025d3ea8ce4bb9d538d8e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881363"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598203"
 ---
 # <a name="modulemodule-destructor"></a>Module::~Module-Destruktor
-Hebt die Initialisierung der aktuellen Instanz der Module-Klasse.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-virtual ~Module();  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL
- 
- ## <a name="see-also"></a>Siehe auch
- [Module-Klasse](../windows/module-class.md)
+
+Hebt die Initialisierung der aktuellen Instanz von der **Modul** Klasse.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+virtual ~Module();
+```
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+[Module-Klasse](../windows/module-class.md)

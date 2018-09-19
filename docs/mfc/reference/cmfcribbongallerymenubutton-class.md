@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonGalleryMenuButton Klasse | Microsoft Docs
+title: CMFCRibbonGalleryMenuButton-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,16 +28,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2dd3d47b2175a64be605ac8db9fdb1502ce2755
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: a63d72d9744928ca0871ed251cfaea254d0acb14
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041259"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751694"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>CMFCRibbonGalleryMenuButton-Klasse
 Implementiert eine Menüband-Menüschaltfläche, die Menübandkataloge enthält.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
    
 ## <a name="syntax"></a>Syntax  
   
@@ -133,28 +133,28 @@ CMFCRibbonGalleryMenuButton(
   
 ### <a name="parameters"></a>Parameter  
  *uiID*  
- Die Befehls-ID der Schaltfläche. Dies ist der Wert in der WM_COMMAND-Nachricht gesendet wird, wenn der Benutzer auf diese Schaltfläche klickt.  
+ Die Befehls-ID der Schaltfläche. Dies ist der Wert in die WM_COMMAND-Meldung gesendet wird, wenn der Benutzer diese Schaltfläche klickt.  
   
  *iImage*  
- Der Index des Bilds, das mit der katalogmenüschaltfläche angezeigt. Die Bilder befinden sich der *ImagesPalette* Parameter.  
+ Der Index des Bildes, das mit die katalogmenüschaltfläche angezeigt werden soll. Die Images gespeichert sind, der *ImagesPalette* Parameter.  
   
  *lpszText*  
- Der Text auf die Menüschaltfläche angezeigt werden sollen.  
+ Der Text, auf die Menüschaltfläche angezeigt werden sollen.  
   
  *imagesPalette*  
- Enthält die Liste der Images auf dem Katalog angezeigt werden sollen.  
+ Enthält die Liste der Images im Katalog angezeigt.  
   
  *uiImagesPaletteResID*  
- Die Ressourcen-ID für die Bildliste für die Bilder auf den Katalog angezeigt werden sollen.  
+ Die Ressourcen-ID der Liste der Bilder, für die Images im Katalog angezeigt.  
   
  *cxPaletteImage*  
- Gibt die Breite in Pixel des Bilds auf dem Katalog angezeigt werden sollen.  
+ Gibt die Breite in Pixel des Bildes, das im Katalog angezeigt.  
   
 ### <a name="remarks"></a>Hinweise  
  Die katalogmenüschaltfläche wird als ein Popupmenü angezeigt, die einen Pfeil aufweist. Wenn der Benutzer auf diese Schaltfläche klickt, wird ein Katalog von Bildern angezeigt.  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie mithilfe des Konstruktors, der die `CMFCRibbonGalleryMenuButton` Klasse. Dieser Codeausschnitt ist Teil der [MS Office 2007 Demobeispiel für](../../visual-cpp-samples.md).  
+ Im folgenden Beispiel wird veranschaulicht, wie den Konstruktor, der die `CMFCRibbonGalleryMenuButton` Klasse. Dieser Codeausschnitt ist Teil der [MS Office 2007-Demo-Beispiel](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#8](../../mfc/reference/codesnippet/cpp/cmfcribbongallerymenubutton-class_1.cpp)]  
   

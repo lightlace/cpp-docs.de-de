@@ -1,7 +1,7 @@
 ---
-title: Kombination von C (strukturiert)- und C++-Ausnahmen | Microsoft-Dokumentation
+title: Kombination von C (strukturierte) und C++-Ausnahmen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/14/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,33 +18,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 495f0fe9faf0c75257f2ac7bbe0a3457438ffdf9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1edd35ac9f32a28a19c4ea54b7e9fba2820d6095
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942041"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031625"
 ---
-# <a name="mixing-c-structured-and-c-exceptions"></a>Kombination von C (strukturiert)- und C++-Ausnahmen
-Wenn Sie besser portierbaren Code schreiben möchten, wird das Verwenden der strukturierten Ausnahmebehandlung in einem C++-Programm nicht empfohlen. Allerdings unter Umständen möchten Sie Kompilieren mit **/EHa** und strukturierte Ausnahmen und C++-Quellcode kombinieren und benötigen daher einige Funktionen zur Behandlung beider Arten von Ausnahmen. Da ein strukturierter Ausnahmehandler kein Konzept für die Objekte oder von typisierten Ausnahmen verfügt, kann nicht es von C++-Code ausgelöste Ausnahmen zu behandeln; jedoch C++ **catch** Handler können strukturierte Ausnahmen behandeln. Als solche, C++-ausnahmebehandlungssyntax (**versuchen**, **auslösen**, **catch**) wird nicht akzeptiert werden, durch den C-Compiler, aber strukturierte ausnahmebehandlungssyntax (**__try** , **__except**, **__finally**) wird von der C++-Compiler unterstützt.  
-  
- Finden Sie unter [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) Informationen zur Behandlung strukturierter Ausnahmen als C++-Ausnahmen.  
-  
- Wenn Sie strukturierte und C++-Ausnahmen kombinieren, beachten Sie Folgendes:  
-  
-1.  C++-Ausnahmen und strukturierte Ausnahmen können nicht in derselben Funktion kombiniert werden.  
-  
-2.  Beendigungshandler (**__finally** Blöcke) werden immer ausgeführt, sogar während des Entladens, nachdem eine Ausnahme ausgelöst wird.  
-  
-3.  C++-Ausnahmebehandlung kann abfangen und Beibehalten von entladungssemantik in allen Modulen mit kompiliert die [/EH](../build/reference/eh-exception-handling-model.md) -Compileroption (diese Option aktiviert die entladungssemantik).  
-  
-4.  Es kann Situationen geben, in denen Destruktorfunktionen nicht für alle Objekte aufgerufen werden. Wenn beispielsweise eine strukturierte Ausnahme beim Versuch auftritt, einen Funktionsaufruf über einen nicht initialisierten Funktionszeiger auszuführen, und diese Funktion Objekte als Parameter nutzt, die vor dem Aufruf erstellt wurden, werden die Destruktoren dieser Objekte nicht während der Stapelentladung aufgerufen.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?  
-  
--   [Verwenden von Setjmp oder Longjmp in C++-Programmen](../cpp/using-setjmp-longjmp.md)  
-  
--   [Unterschiede zwischen SEH und C++-EH](../cpp/exception-handling-differences.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [C++-Ausnahmebehandlung](../cpp/cpp-exception-handling.md)
+# <a name="mixing-c-structured-and-c-exceptions"></a>Kombination von C (strukturierte) und C++-Ausnahmen
+
+Wenn Sie portablen Code schreiben möchten, nicht die Verwendung der strukturierten Ausnahmebehandlung (SEH) in einem C++-Programm empfohlen. Allerdings unter Umständen möchten Sie Kompilieren mit der [/EHa](../build/reference/eh-exception-handling-model.md) und strukturierte Ausnahmen und C++-Quellcode kombinieren und benötigen daher einige Funktionen zur Behandlung beider Arten von Ausnahmen. Da ein strukturierter Ausnahmehandler kein Konzept für die Objekte oder von typisierten Ausnahmen verfügt, kann es von C++-Code ausgelöste Ausnahmen nicht behandeln. Jedoch C++ **catch** Handler können strukturierte Ausnahmen behandeln. C++-ausnahmebehandlungssyntax (**versuchen**, **auslösen**, **catch**) wird nicht akzeptiert, durch den C-Compiler, aber strukturierte ausnahmebehandlungssyntax (**__try**, **__except**, **__finally**) wird von der C++-Compiler unterstützt.
+
+Finden Sie unter [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) Informationen zur Behandlung strukturierte Ausnahmen als C++-Ausnahmen.
+
+Wenn Sie strukturierte kombinieren und C++-Ausnahmen, die dieser potenziellen Probleme berücksichtigen:
+
+- C++-Ausnahmen und strukturierte Ausnahmen können nicht in derselben Funktion kombiniert werden.
+
+- Beendigungshandler (**__finally** Blöcke) werden immer ausgeführt, sogar während des Entladens, nachdem eine Ausnahme ausgelöst wird.
+
+- C++-Ausnahmebehandlung kann abfangen und Beibehalten von entladungssemantik in allen Modulen mit kompiliert die [/EH](../build/reference/eh-exception-handling-model.md) Compileroptionen, die Entladesemantik für welche aktivieren.
+
+- Es kann Situationen geben, in denen Destruktorfunktionen nicht für alle Objekte aufgerufen werden. Z. B. wenn eine strukturierte Ausnahme tritt auf, bei dem Versuch, eine Funktion über einen nicht initialisierten Funktionszeiger aufrufen und diese Funktion Objekte als Parameter nutzt, die vor dem Aufruf erstellt wurden, die Destruktoren dieser Objekte nicht heißen während der stapelentladung.
+
+## <a name="next-steps"></a>Nächste Schritte
+
+- [Verwenden von Setjmp oder Longjmp in C++-Programmen](../cpp/using-setjmp-longjmp.md)
+
+  Finden Sie weitere Informationen zur Verwendung von `setjmp` und `longjmp` in C++-Programmen.
+
+- [Behandeln strukturierter Ausnahmen in C++](../cpp/exception-handling-differences.md)
+
+  Finden Sie Beispiele für die Möglichkeiten zum Ausnahmen behandeln, die strukturierte C++ verwendet werden können.
+
+## <a name="see-also"></a>Siehe auch
+
+[C++-Ausnahmebehandlung](../cpp/cpp-exception-handling.md)

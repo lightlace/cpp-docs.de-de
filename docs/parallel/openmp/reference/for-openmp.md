@@ -1,5 +1,5 @@
 ---
-title: für (OpenMP) | Microsoft Docs
+title: für (OpenMP) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f5aebaf586581446293147f56dfbce8bd3519a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 73b840eba35ec4291ffb6e57b17c9002b6c501a2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694861"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721655"
 ---
 # <a name="for-openmp"></a>for (OpenMP)
-Bewirkt, dass die Arbeit in einer for-Schleife innerhalb eines parallelen Bereichs zwischen Threads aufgeteilt werden.  
+Bewirkt, dass die Arbeit einer for-Schleife innerhalb eines parallelen Bereichs zwischen Threads aufgeteilt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,17 +33,16 @@ Bewirkt, dass die Arbeit in einer for-Schleife innerhalb eines parallelen Bereic
    for_statement  
 ```  
   
+## <a name="arguments"></a>Argumente
+
+*Klausel*<br/>
+(Optional) NULL oder mehr Klauseln. Finden Sie im Abschnitt "Hinweise" eine Liste von unterstützten Klauseln **für**.  
+  
+*for_Statement*<br/>
+Eine for-Schleife. Nicht definiertem Verhalten führt, wenn Benutzer im code die für die Schleife die Indexvariable ändert.  
+  
 ## <a name="remarks"></a>Hinweise  
- wobei  
-  
- `clause` (optional)  
- NULL oder mehr Klauseln. Finden Sie im Abschnitt "Hinweise" eine Liste von unterstützten Klauseln **für**.  
-  
- `for_statement`  
- Eine for-Schleife. Nicht definiertem Verhalten führt, wenn der Benutzer im code ist die für die Schleife die Indexvariable ändert.  
-  
-## <a name="remarks"></a>Hinweise  
- Die **für** Richtlinie unterstützt die folgenden OpenMP-Klauseln:  
+ Die **für** -Anweisung unterstützt die folgenden OpenMP-Klauseln:  
   
 -   [firstprivate](../../../parallel/openmp/reference/firstprivate.md)  
   
@@ -51,7 +50,7 @@ Bewirkt, dass die Arbeit in einer for-Schleife innerhalb eines parallelen Bereic
   
 -   [nowait](../../../parallel/openmp/reference/nowait.md)  
   
--   [sortiert](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
+-   [Sortiert](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
@@ -59,7 +58,7 @@ Bewirkt, dass die Arbeit in einer for-Schleife innerhalb eines parallelen Bereic
   
 -   [schedule](../../../parallel/openmp/reference/schedule.md)  
   
- Wenn **parallele** ebenfalls angegeben wird, `clause` kann jede beliebige Klausel vom akzeptiert die **parallele** oder **für** Direktiven, mit Ausnahme von **Nowait**.  
+ Wenn **parallele** ebenfalls angegeben wird, `clause` kann jede beliebige Klausel von akzeptiert die **parallele** oder **für** -Anweisungen außer **Nowait**.  
   
  Weitere Informationen finden Sie unter [2.4.1 for-Konstrukt](../../../parallel/openmp/2-4-1-for-construct.md).  
   

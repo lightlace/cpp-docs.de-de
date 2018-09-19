@@ -1,5 +1,5 @@
 ---
-title: -BEREICH | Microsoft Docs
+title: – BEREICH | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d06d699500ba3ea441af61a2e2a5a0da3f96903a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47e7525b8c1872616182141d624bff8f94571952
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374423"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712191"
 ---
 # <a name="range"></a>/RANGE
-Ändert die Ausgabe von Dumpbin bei Verwendung mit anderen Dumpbin-Optionen, z. B./RAWDATA oder/DISASM an.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-/RANGE:vaMin[,vaMax]  
-```  
-  
-## <a name="flags"></a>Flags  
- **vaMin**  
- Die virtuelle Adresse, an der Sie der Dumpbin beginnen soll.  
-  
- **VaMax** (optional)  
- Die virtuelle Adresse, an der die Dumpbin-Operation beendet werden soll. Wenn nicht angegeben wird, geht die Dumpbin bis zum Ende der Datei.  
-  
-## <a name="remarks"></a>Hinweise  
- Um die virtuellen Adressen für ein Bild angezeigt wird, verwenden Sie die Zuordnungsdatei für das Bild (RVA + Basis), die **DISASM** oder **/Headers** -Option von Dumpbin oder im Disassemblyfenster in Visual Studio-Debugger.  
-  
-## <a name="example"></a>Beispiel  
- In diesem Beispiel **/range** wird verwendet, um die Anzeige der Ändern der **DISASM** Option. In diesem Beispiel wird der Startwert wird als Dezimalzahl angegeben, und der Endwert als eine hexadezimale Zahl angegeben wird.  
-  
-```  
-dumpbin /disasm /range:4219334,0x004061CD t.exe  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [DUMPBIN-Optionen](../../build/reference/dumpbin-options.md)
+
+Ändert die Ausgabe des Dumpbin bei Verwendung mit anderen Dumpbin-Optionen, z. B./RAWDATA oder DISASM an.
+
+## <a name="syntax"></a>Syntax
+
+```
+/RANGE:vaMin[,vaMax]
+```
+
+## <a name="parameters"></a>Parameter
+
+*vaMin*<br/>
+Die virtuelle Adresse, an der Sie der Dumpbin beginnen soll.
+
+*vaMax*<br/>
+(Optional) Die virtuelle Adresse, an der Sie der Dumpbin enden soll. Wenn nicht angegeben ist, wechseln an das Ende der Datei Dumpbin.
+
+## <a name="remarks"></a>Hinweise
+
+Um die virtuellen Adressen für ein Bild anzuzeigen, verwenden Sie die Map-Datei für das Image (RVA + Basis), die **DISASM** oder **/Headers** Option von Dumpbin oder das Disassemblyfenster in Visual Studio-Debugger.
+
+## <a name="example"></a>Beispiel
+
+In diesem Beispiel **/range** wird verwendet, um die Anzeige des Ändern der **DISASM** Option. In diesem Beispiel ist der Startwert wird als Dezimalzahl ausgedrückt, und der Endwert als hexadezimale Zahl angegeben ist.
+
+```
+dumpbin /disasm /range:4219334,0x004061CD t.exe
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[DUMPBIN-Optionen](../../build/reference/dumpbin-options.md)

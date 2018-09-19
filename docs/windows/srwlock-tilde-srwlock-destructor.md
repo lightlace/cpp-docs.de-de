@@ -1,5 +1,5 @@
 ---
-title: 'SRWLock:: ~ SRWLock-Destruktor | Microsoft Docs'
+title: 'SRWLock:: ~ SRWLock-Destruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ed3bd38024d279d8f478a6ff4525122e66c47f2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: da5599aedcab352b73ef3df8285ea36cc88327ce
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889078"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594751"
 ---
 # <a name="srwlocksrwlock-destructor"></a>SRWLock::~SRWLock-Destruktor
-Hebt die Initialisierung einer Instanz der SRWLock-Klasse.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-~SRWLock();  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Siehe auch  
- [SRWLock-Klasse](../windows/srwlock-class.md)
+
+Hebt die Initialisierung einer Instanz von der **SRWLock** Klasse.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+~SRWLock();
+```
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+
+[SRWLock-Klasse](../windows/srwlock-class.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Hstring:: Makereference-Methode | Microsoft Docs'
+title: 'Hstring:: Makereference-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,46 +15,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e30b3ea3c6b791eb654a6fbbe91b3c87353f31c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 061b3be0e642bb8e7406f54a469723c70559d85a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882640"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610160"
 ---
 # <a name="hstringmakereference-method"></a>HString::MakeReference-Methode
-Erstellt ein HStringReference-Objekt aus einem angegebenen Zeichenfolgenparameter.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-template<unsigned int sizeDest>  
-    static HStringReference MakeReference(  
-              wchar_t const (&str)[ sizeDest]);  
-  
-    template<unsigned int sizeDest>  
-    static HStringReference MakeReference(  
-              wchar_t const (&str)[sizeDest],   
-              unsigned int len);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `sizeDest`  
- Ein Vorlagenparameter, der die Größe des Zielpuffers HStringReference angibt.  
-  
- `str`  
- Ein Verweis auf eine Zeichenfolge mit Breitzeichen.  
-  
- `len`  
- Die maximale Länge von der `str` Parameterpuffer bei diesem Vorgang verwenden. Wenn die `len` Parameter nicht angegeben ist, die gesamte `str` Parameter wird verwendet.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Ein HStringReference-Objekt, dessen Wert identisch mit dem angegebenen ist `str` Parameter.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Siehe auch  
- [HString-Klasse](../windows/hstring-class.md)
+
+Erstellt eine `HStringReference` Objekt aus einem angegebenen Zeichenfolgenparameter.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+template<unsigned int sizeDest>
+    static HStringReference MakeReference(
+              wchar_t const (&str)[ sizeDest]);
+
+    template<unsigned int sizeDest>
+    static HStringReference MakeReference(
+              wchar_t const (&str)[sizeDest],
+              unsigned int len);
+```
+
+### <a name="parameters"></a>Parameter
+
+*sizeDest*  
+Ein Vorlagenparameter, der angibt, die Größe des Ziels `HStringReference` Puffer.
+
+*str*  
+Ein Verweis auf eine Zeichenfolge mit Breitzeichen.
+
+*Len*  
+Die maximale Länge von der *str* Parameterpuffer auf diesen Vorgang verwendet. Wenn die *Len* Parameter nicht angegeben ist, die gesamte *str* Parameter wird verwendet.
+
+## <a name="return-value"></a>Rückgabewert
+
+Ein `HStringReference` -Objekt, dessen Wert identisch mit dem angegebenen ist *str* Parameter.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+
+[HString-Klasse](../windows/hstring-class.md)

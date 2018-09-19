@@ -17,76 +17,80 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd3d63ed06ee07943263e6f8a59bb9fceea4d99d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0da7d91ab32218e407c9be197e978f98ec481305
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383890"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067740"
 ---
 # <a name="considerations-when-writing-prologepilog-code"></a>Überlegungen zum Schreiben von Prolog- und Epilogcode
-**Microsoft-spezifisch**  
-  
- Vor dem Schreiben eigener Prolog- und Epilogcodesequenzen ist es wichtig, zu verstehen, wie der Stapelrahmen festgelegt ist. Es ist auch hilfreich zu wissen, wie die vordefinierte **__LOCAL_SIZE**-Konstante verwendet werden kann.  
-  
-##  <a name="_clang_c_stack_frame_layout"></a> Stapelrahmenlayout bei C  
- In diesem Beispiel wird der Standardprologcode veranschaulicht, der in einer 32-Bit-Funktion enthalten sein kann:  
-  
-```  
-push     ebp                 ; Save ebp  
-mov      ebp, esp            ; Set stack frame pointer  
-sub      esp, localbytes     ; Allocate space for locals  
-push     <registers>         ; Save registers  
-```  
-  
- Die `localbytes`-Variable gibt die Anzahl von Bytes an, die auf dem Stapel für lokale Variablen erforderlich sind. Die `registers`-Variable ist ein Platzhalter, der die Liste der Register darstellt, die auf dem Stapel gespeichert werden sollen. Nach dem Verschieben der Register können Sie alle weiteren entsprechenden Daten auf dem Stapel platzieren. Im Folgenden wird der entsprechende Epilogcode dargestellt:  
-  
-```  
-pop      <registers>         ; Restore registers  
-mov      esp, ebp            ; Restore stack pointer  
-pop      ebp                 ; Restore ebp  
-ret                          ; Return from function  
-```  
-  
- Der Stapel wächst immer nach unten (von hohen zu niedrigen Speicheradressen). Der Basiszeiger (`ebp`) zeigt auf den abgelegten `ebp`-Wert. Der Gültigkeitsbereich der lokalen Variablen beginnt bei `ebp-2`. Um auf lokale Variablen zuzugreifen, berechnen Sie einen Offset von `ebp`, indem Sie den entsprechenden Wert von `ebp` subtrahieren.  
-  
-##  <a name="_clang_the___local_size_constant"></a> Die __LOCAL_SIZE-Konstante  
- Der Compiler stellt eine Konstante, **__LOCAL_SIZE**, für die Verwendung im Inlineassemblerblock des Funktionsprologcodes bereit. Mit dieser Konstanten wird Speicherplatz für lokale Variablen im Stapelrahmen im benutzerdefinierten Prologcode zugeordnet.  
-  
- Der Compiler bestimmt den Wert von **__LOCAL_SIZE**. Der Wert ist die Gesamtzahl von Bytes aller benutzerdefinierten lokalen Variablen und der vom Compiler generierten temporären Variablen. **__LOCAL_SIZE** kann nur als unmittelbarer Operand verwendet werden. Er kann nicht in einem Ausdruck verwendet werden. Sie dürfen den Wert dieser Konstanten nicht ändern oder neu definieren. Zum Beispiel:  
-  
-```  
-mov      eax, __LOCAL_SIZE           ;Immediate operand--Okay  
-mov      eax, [ebp - __LOCAL_SIZE]   ;Error  
-```  
-  
- Das folgende Beispiel einer bloßen Funktion, welche benutzerdefinierte Prolog- und Epilogsequenzen enthält, verwendet **__LOCAL_SIZE** in der Prologsequenz:  
-  
-```  
-__declspec ( naked ) func()  
-{  
-   int i;  
-   int j;  
-  
-   __asm      /* prolog */  
-      {  
-      push   ebp  
-      mov      ebp, esp  
-      sub      esp, __LOCAL_SIZE  
-      }  
-  
-   /* Function body */  
-  
-   __asm      /* epilog */  
-      {  
-      mov      esp, ebp  
-      pop      ebp  
-      ret  
-      }  
-}     
-```  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Naked-Funktionen](../c-language/naked-functions.md)
+
+**Microsoft-spezifisch**
+
+Vor dem Schreiben eigener Prolog- und Epilogcodesequenzen ist es wichtig, zu verstehen, wie der Stapelrahmen festgelegt ist. Es ist auch hilfreich zu wissen, wie die vordefinierte **__LOCAL_SIZE**-Konstante verwendet werden kann.
+
+##  <a name="_clang_c_stack_frame_layout"></a> Stapelrahmenlayout bei C
+
+In diesem Beispiel wird der Standardprologcode veranschaulicht, der in einer 32-Bit-Funktion enthalten sein kann:
+
+```
+push     ebp                 ; Save ebp
+mov      ebp, esp            ; Set stack frame pointer
+sub      esp, localbytes     ; Allocate space for locals
+push     <registers>         ; Save registers
+```
+
+Die `localbytes`-Variable gibt die Anzahl von Bytes an, die auf dem Stapel für lokale Variablen erforderlich sind. Die `registers`-Variable ist ein Platzhalter, der die Liste der Register darstellt, die auf dem Stapel gespeichert werden sollen. Nach dem Verschieben der Register können Sie alle weiteren entsprechenden Daten auf dem Stapel platzieren. Im Folgenden wird der entsprechende Epilogcode dargestellt:
+
+```
+pop      <registers>         ; Restore registers
+mov      esp, ebp            ; Restore stack pointer
+pop      ebp                 ; Restore ebp
+ret                          ; Return from function
+```
+
+Der Stapel wächst immer nach unten (von hohen zu niedrigen Speicheradressen). Der Basiszeiger (`ebp`) zeigt auf den abgelegten `ebp`-Wert. Der Gültigkeitsbereich der lokalen Variablen beginnt bei `ebp-2`. Um auf lokale Variablen zuzugreifen, berechnen Sie einen Offset von `ebp`, indem Sie den entsprechenden Wert von `ebp` subtrahieren.
+
+##  <a name="_clang_the___local_size_constant"></a> Die __LOCAL_SIZE-Konstante
+
+Der Compiler stellt eine Konstante, **__LOCAL_SIZE**, für die Verwendung im Inlineassemblerblock des Funktionsprologcodes bereit. Mit dieser Konstanten wird Speicherplatz für lokale Variablen im Stapelrahmen im benutzerdefinierten Prologcode zugeordnet.
+
+Der Compiler bestimmt den Wert von **__LOCAL_SIZE**. Der Wert ist die Gesamtzahl von Bytes aller benutzerdefinierten lokalen Variablen und der vom Compiler generierten temporären Variablen. **__LOCAL_SIZE** kann nur als unmittelbarer Operand verwendet werden. Er kann nicht in einem Ausdruck verwendet werden. Sie dürfen den Wert dieser Konstanten nicht ändern oder neu definieren. Zum Beispiel:
+
+```
+mov      eax, __LOCAL_SIZE           ;Immediate operand--Okay
+mov      eax, [ebp - __LOCAL_SIZE]   ;Error
+```
+
+Das folgende Beispiel einer bloßen Funktion, welche benutzerdefinierte Prolog- und Epilogsequenzen enthält, verwendet **__LOCAL_SIZE** in der Prologsequenz:
+
+```
+__declspec ( naked ) func()
+{
+   int i;
+   int j;
+
+   __asm      /* prolog */
+      {
+      push   ebp
+      mov      ebp, esp
+      sub      esp, __LOCAL_SIZE
+      }
+
+   /* Function body */
+
+   __asm      /* epilog */
+      {
+      mov      esp, ebp
+      pop      ebp
+      ret
+      }
+}
+```
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Naked-Funktionen](../c-language/naked-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Roinitializewrapper:: Roinitializewrapper-Konstruktor | Microsoft Docs'
+title: 'Roinitializewrapper:: Roinitializewrapper-Konstruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,33 +15,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64f2af40c671760bb8d4e667c209598c46b24665
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 528c66da24c4cbf6c22af5b1b5f8dd3afffff64f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889204"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604645"
 ---
 # <a name="roinitializewrapperroinitializewrapper-constructor"></a>RoInitializeWrapper::RoInitializeWrapper-Konstruktor
-Initialisiert eine neue Instanz der RoInitializeWrapper-Klasse.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
+
+Initialisiert eine neue Instanz der dem **RoInitializeWrapper** Klasse.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
 RoInitializeWrapper(   RO_INIT_TYPE flags)  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `flags`  
- Einer der RO_INIT_TYPE Enumerationen, die zur Unterstützung von Windows-Runtime angibt.  
-  
-## <a name="remarks"></a>Hinweise  
- RoInitializeWrapper-Klasse ruft Windows::Foundation::Initialize (*Flags*).  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Siehe auch  
- [HandleT-Klasse](../windows/handlet-class.md)
+```
+
+### <a name="parameters"></a>Parameter
+
+*flags*  
+Einer der RO_INIT_TYPE Enumerationen, die angibt, die von der Windows-Runtime-Unterstützung.
+
+## <a name="remarks"></a>Hinweise
+
+Die **RoInitializeWrapper** Klasse ruft `Windows::Foundation::Initialize(flags)`.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+
+[HandleT-Klasse](../windows/handlet-class.md)

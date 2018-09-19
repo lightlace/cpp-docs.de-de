@@ -16,33 +16,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68ef72cfd256a2676c73223723f37374c50cb56f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 52ea719a2c9296ca1e64d881ac150994c041e206
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943562"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018729"
 ---
 # <a name="varianttsetstring"></a>_variant_t::SetString
-**Microsoft-spezifisch**  
-  
- Weist diesem `_variant_t`-Objekt eine Zeichenfolge zu.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-void SetString(const char* pSrc);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *pSrc*  
- Zeiger auf die Zeichenfolge.  
-  
-## <a name="remarks"></a>Hinweise  
- Konvertiert eine Zeichenfolge mit ANSI-Zeichen in eine Unicode-`BSTR`-Zeichenfolge und weist sie diesem `_variant_t`-Objekt zu.  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [_variant_t-Klasse](../cpp/variant-t-class.md)
+
+**Microsoft-spezifisch**
+
+Weist diesem `_variant_t`-Objekt eine Zeichenfolge zu.
+
+## <a name="syntax"></a>Syntax
+
+```
+void SetString(const char* pSrc);
+```
+
+#### <a name="parameters"></a>Parameter
+
+*pSrc*<br/>
+Zeiger auf die Zeichenfolge.
+
+## <a name="remarks"></a>Hinweise
+
+Konvertiert eine Zeichenfolge mit ANSI-Zeichen in eine Unicode-`BSTR`-Zeichenfolge und weist sie diesem `_variant_t`-Objekt zu.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[_variant_t-Klasse](../cpp/variant-t-class.md)

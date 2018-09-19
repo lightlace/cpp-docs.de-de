@@ -1,5 +1,5 @@
 ---
-title: Hergeleitete abhängige Elemente | Microsoft Docs
+title: Hergeleitete abhängige Elemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a86ed1a8fe6c97ae11af50f59cb639ef6fd7c1da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 631c5631b60f0e05dd1f1541facc767f35944d3d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367897"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701479"
 ---
 # <a name="inferred-dependents"></a>Hergeleitete abhängige Dateien
-Eine hergeleitete abhängige eine Rückschlussregel abgeleitet wird und vor expliziten abhängigen Dateien ausgewertet wird. Wenn eine hergeleitete abhängige in Bezug auf ihr Ziel veraltet ist, wird von NMAKE Befehlsblock für die Abhängigkeit aufgerufen. Wenn eine hergeleitete abhängige nicht vorhanden ist oder in Bezug auf seine eigenen abhängigen Elemente veraltet ist, wird von NMAKE zuerst hergeleitete abhängige aktualisiert. Weitere Informationen über hergeleitete abhängige Dateien finden Sie unter [Rückschlussregeln](../build/inference-rules.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Abhängige Dateien](../build/dependents.md)
+
+Eine hergeleitete abhängige stammt aus einer Rückschlussregel und ausgewertet wird, bevor der expliziten Abhängigkeiten. Wenn eine hergeleitete abhängige in Bezug auf sein Ziel veraltet ist, ruft NMAKE Befehlsblock für die Abhängigkeit. Wenn eine hergeleitete abhängige nicht vorhanden ist oder in Bezug auf seine eigenen Abhängigkeiten veraltet ist, aktualisiert die hergeleitete abhängige Datei zuerst. Weitere Informationen zu hergeleitete abhängige Dateien, finden Sie unter [Rückschlussregeln](../build/inference-rules.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Abhängige Dateien](../build/dependents.md)

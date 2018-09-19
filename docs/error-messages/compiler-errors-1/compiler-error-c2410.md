@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2410 | Microsoft Docs
+title: Compilerfehler C2410 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c2a2df0941130c4f2416806a05ce0378373eb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba4c2b57bcae062ccf811e33cf1deaea45f83737
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226444"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052451"
 ---
 # <a name="compiler-error-c2410"></a>Compilerfehler C2410
-'Bezeichner': mehrdeutigen Membernamen in 'Kontext'  
-  
- Der Bezeichner ist ein Mitglied von mehr als eine Struktur oder Union in diesem Kontext.  
-  
- Verwenden Sie einen Struktur oder Union-Spezifizierer für den Operanden, der den Fehler verursacht hat. Eine Struktur oder Union ist ein Bezeichner des Typs `struct` oder `union` (eine `typedef` Name oder eine Variable des gleichen Typs wie die Struktur oder Union, die auf die verwiesen wird). Der Bezeichner muss der linke Operand des ersten Memberauswahl Operators (.), der der Operand verwendet werden.
+
+'Bezeichner': Mehrdeutiger Elementname in 'Kontext'
+
+Der Bezeichner ist ein Mitglied von mehr als eine Struktur oder Union in diesem Kontext.
+
+Verwenden Sie einen Struktur oder Union-Spezifizierer für die Operanden, der den Fehler verursacht hat. Eine Struktur oder Union ist ein Bezeichner des Typs `struct` oder `union` (eine `typedef` Name oder eine Variable des gleichen Typs wie die Struktur oder Union, die auf die verwiesen wird). Der Bezeichner muss der linke Operand des der ersten Objektmember-auswahloperators (.) mit der Operand sein.

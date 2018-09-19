@@ -1,5 +1,5 @@
 ---
-title: SafeModulus | Microsoft Docs
+title: SafeModulus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,60 +12,66 @@ dev_langs:
 helpviewer_keywords:
 - SafeModulus function
 ms.assetid: ae5c81eb-5dcf-45a5-aa76-465fdfe68654
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 653293ac04be1e3a04e90412a9d9d8b988773329
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3c1ec84569058b11b20270ea1006bfc438288cf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888867"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717150"
 ---
 # <a name="safemodulus"></a>SafeModulus
-Führt die Modulo-Operation für zwei Zahlen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-template<typename T, typename U>  
-inline bool SafeModulus (  
-   const T t,  
-   const U u,  
-   T& result  
-) throw ();  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- [in] `t`  
- Der Divisor. Dies muss vom Typ t sein.  
-  
- [in] `u`  
- Der Dividend. Dies muss vom Typ u sein.  
-  
- [out] `result`  
- Der Parameter, in denen `SafeModulus` speichert das Ergebnis.  
-  
-## <a name="return-value"></a>Rückgabewert  
- `true` Wenn kein Fehler auftritt. `false` , wenn ein Fehler auftritt.  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Methode ist Teil des [SafeInt-Bibliothek](../windows/safeint-library.md) und ohne Erstellen einer Instanz von für eine einzelnes Modulo-Operation dient der [SafeInt-Klasse](../windows/safeint-class.md).  
-  
+
+Führt die Modulo-Operation für zwei Zahlen.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+template<typename T, typename U>
+inline bool SafeModulus (
+   const T t,
+   const U u,
+   T& result
+) throw ();
+```
+
+### <a name="parameters"></a>Parameter
+
+*t*<br/>
+[in] Der Divisor. Dies muss vom Typ `T`.
+
+*u*<br/>
+[in] Der Dividend. Dies muss vom Typ `U`.
+
+*Ergebnis*<br/>
+[out] Der Parameter, in denen **SafeModulus** speichert das Ergebnis.
+
+## <a name="return-value"></a>Rückgabewert
+
+**"true"** Wenn kein Fehler auftritt. **"false"** Wenn ein Fehler auftritt.
+
+## <a name="remarks"></a>Hinweise
+
+Diese Methode ist Teil des [SafeInt-Bibliothek](../windows/safeint-library.md) und ist ohne eine Instanz des für einen einzelnen Modulo-Vorgang für die [SafeInt-Klasse](../windows/safeint-class.md).
+
 > [!NOTE]
->  Diese Methode sollte nur verwendet werden, wenn eine einzelne mathematische Operation, die geschützt werden muss. Wenn mehrere Vorgänge vorhanden sind, sollten Sie verwenden die `SafeInt` Klasse anstelle von den einzelnen eigenständigen Funktionen aufrufen.  
-  
- Weitere Informationen zu den Vorlagentypen T "und" U, finden Sie unter [SafeInt-Funktionen](../windows/safeint-functions.md).  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** safeint.h  
-  
- **Namespace:** Microsoft::Utilities  
-  
-## <a name="see-also"></a>Siehe auch  
- [SafeInt-Funktionen](../windows/safeint-functions.md)   
- [SafeInt-Bibliothek](../windows/safeint-library.md)   
- [SafeInt-Klasse](../windows/safeint-class.md)   
- [SafeDivide](../windows/safedivide.md)
+> Diese Methode sollte nur verwendet werden, wenn eine einzelne mathematische Operation, die geschützt werden muss. Wenn mehrere Vorgänge vorhanden sind, sollten Sie verwenden die `SafeInt` Klasse anstelle von den einzelnen eigenständigen Funktionen.
+
+Weitere Informationen zu den Vorlagentypen `T` und `U`, finden Sie unter [SafeInt-Funktionen](../windows/safeint-functions.md).
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** safeint.h
+
+**Namespace:** Microsoft::Utilities
+
+## <a name="see-also"></a>Siehe auch
+
+[SafeInt-Funktionen](../windows/safeint-functions.md)  
+[SafeInt-Bibliothek](../windows/safeint-library.md)  
+[SafeInt-Klasse](../windows/safeint-class.md)  
+[SafeDivide](../windows/safedivide.md)

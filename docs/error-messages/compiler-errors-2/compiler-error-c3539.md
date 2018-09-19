@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3539 | Microsoft Docs
+title: Compilerfehler C3539 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f704bd283ab5228a8988d587707e978aa5b49e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b2f78b69e00290dcc283e3fc340d25a4a071776
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256401"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091880"
 ---
 # <a name="compiler-error-c3539"></a>Compilerfehler C3539
-'Typ': ein Vorlagenargument nicht mit einem Typ, der "auto" enthält  
-  
- Die angegebene Vorlage Argument darf nicht enthalten eine Verwendung von der `auto` Schlüsselwort.  
-  
-### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
-  
-1.  Geben Sie keine Vorlagenarguments mit dem `auto` Schlüsselwort.  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel ergibt C3539.  
-  
-```  
-// C3539.cpp  
-// Compile with /Zc:auto  
-template<class T> class C{};  
-int main()  
-{  
-   C<auto> c;   // C3539  
-   return 0;  
-}  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Auto-Schlüsselwort](../../cpp/auto-keyword.md)
+
+'Typ': ein Vorlagenargument handelt es sich nicht um ein Typ, der "auto" enthält
+
+Der Argumenttyp für die angegebene Vorlage darf keine Verwendung von enthalten die `auto` Schlüsselwort.
+
+### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
+
+1. Geben Sie nicht die Template-Argument, mit der `auto` Schlüsselwort.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel ergibt C3539.
+
+```
+// C3539.cpp
+// Compile with /Zc:auto
+template<class T> class C{};
+int main()
+{
+   C<auto> c;   // C3539
+   return 0;
+}
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Auto-Schlüsselwort](../../cpp/auto-keyword.md)

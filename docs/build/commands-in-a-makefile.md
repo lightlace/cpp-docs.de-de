@@ -1,5 +1,5 @@
 ---
-title: Befehle in einem Makefile | Microsoft Docs
+title: Befehle in einem Makefile | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,32 +14,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99e1eb5b4800ff1046ca60d4d4874d386809e2e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfbf931d2758a361c739ca410547273c5530366e
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366873"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894732"
 ---
 # <a name="commands-in-a-makefile"></a>Befehle in einem Makefile
-Eine Beschreibung Block oder mithilfe eines Rückschlusses Regel gibt einen Block von Befehlen, die ausgeführt werden, wenn die Abhängigkeit nicht mehr aktuell ist. NMAKE jeder Befehl vor der Ausführung angezeigt, es sei denn, / s, **. AUTOMATISCHE**, **! CMDSWITCHES**, oder @ verwendet wird. NMAKE sucht nach einer übereinstimmenden Rückschlussregel auf, wenn ein Beschreibungsblock von einem Befehlsblock nicht befolgt werden.  
-  
- Ein Befehlsblock enthält eine oder mehrere Befehle, die jeweils in einer eigenen Zeile. Zwischen der Abhängigkeit oder einer Regel und Befehlsblock kann keine leere Zeile angezeigt. Allerdings können Sie eine Zeile, enthält nur Leerzeichen oder Tabstopps angezeigt; Diese Zeile wird als null-Befehl, und kein Fehler auftritt. Zwischen Befehlszeilen sind leere Zeilen zulässig.  
-  
- Über die Befehlszeile beginnt mit Leerzeichen oder Tabstopps. Ein umgekehrten Schrägstrich (\) gefolgt von einem Zeilenumbruchzeichen wird als ein Leerzeichen im Befehl interpretiert. Verwenden Sie einen umgekehrten Schrägstrich am Ende einer Zeile, um einen Befehl auf die nächste Zeile zu fortfahren. NMAKE den umgekehrten Schrägstrich als Zeichenliteral interpretiert, wenn alle anderen Zeichen, z. B. ein Leerzeichen oder Tabstopp, den umgekehrten Schrägstrich folgt.  
-  
- Ein Befehl vorangestellt wird, durch ein Semikolon (;) auf eine abhängigkeitsregel Befehlszeile oder mithilfe eines Rückschlusses angezeigt werden können, und zwar unabhängig davon, ob ein Befehlsblock folgt:  
-  
-```  
-project.obj : project.c project.h ; cl /c project.c  
-```  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?  
- [Befehlsmodifizierer](../build/command-modifiers.md)  
-  
- [Syntax für Dateinamenteile](../build/filename-parts-syntax.md)  
-  
- [Inlinedateien in einem makefile](../build/inline-files-in-a-makefile.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [NMAKE-Referenz](../build/nmake-reference.md)
+
+Eine Beschreibung Block oder Typrückschluss-Regel gibt an, ein Block von Befehlen ausführen, wenn die Abhängigkeit nicht aktuell ist. NMAKE: jeder Befehl vor der Ausführung angezeigt, es sei denn, "/ s", **. AUTOMATISCHE**, **! CMDSWITCHES**, oder \@ verwendet wird. NMAKE: sucht nach einer übereinstimmenden Rückschlussregel, wenn ein Beschreibungsblock von einem Befehlsblock nicht befolgt wird.
+
+Ein Befehlsblock enthält einen oder mehrere Befehle, die auf einer eigenen Zeile. Es sind keine Leerzeilen kann zwischen der Abhängigkeit "oder" Regel "und" Befehlsblock angezeigt werden. Allerdings kann eine Zeile, enthält nur Leerzeichen oder Tabstopps angezeigt; Diese Zeile wird als null-Befehl interpretiert, und kein Fehler auftritt. Leere Zeilen dürfen zwischen Befehlszeilen.
+
+Eine Befehlszeile beginnt mit einem oder mehreren Leerzeichen oder Tabstopps. Ein umgekehrter Schrägstrich (\) gefolgt von einem neue Zeilenumbruchzeichen wird als ein Leerzeichen im Befehl interpretiert. Verwenden Sie einen umgekehrten Schrägstrich am Ende einer Zeile, um einen Befehl auf die nächste Zeile fortzusetzen. NMAKE interpretiert den umgekehrten Schrägstrich buchstäblich alle anderen Zeichen, einschließlich von einem Leerzeichen oder Tabstopp, den umgekehrten Schrägstrich folgt.
+
+Ein Befehl vorangestellt wird, wird ein Semikolon (;) auf eine abhängigkeitsregel oder Rückschlussregel angezeigt werden können, und zwar unabhängig davon, ob ein Befehlsblock folgt:
+
+```
+project.obj : project.c project.h ; cl /c project.c
+```
+
+## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?
+
+[Befehlsmodifizierer](../build/command-modifiers.md)
+
+[Syntax für Dateinamenteile](../build/filename-parts-syntax.md)
+
+[Inlinedateien in einem makefile](../build/inline-files-in-a-makefile.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[NMAKE-Referenz](../build/nmake-reference.md)

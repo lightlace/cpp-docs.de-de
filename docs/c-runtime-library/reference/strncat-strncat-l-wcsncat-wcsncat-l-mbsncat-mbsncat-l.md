@@ -67,19 +67,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d80ca39f4bb12fa28190c499d93ad4152831b4e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e689f29433712f2f8a2adc1730c803ab6c55ba82
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417586"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202867"
 ---
 # <a name="strncat-strncatl-wcsncat-wcsncatl-mbsncat-mbsncatl"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 
 Fügt Zeichen einer Zeichenfolge an. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dafür finden Sie unter [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) .
 
 > [!IMPORTANT]
-> **_mbsncat** und **_mbsncat_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncat** und **_mbsncat_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -152,14 +152,14 @@ Gibt einen Zeiger zur Zielzeichenfolge zurück. Kein Rückgabewert ist zur Fehle
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Strncat** -Funktion fügt höchstens die ersten *Anzahl* Zeichen des *StrSource* auf *StrDest*. Das erste Zeichen von *StrSource* überschreibt das abschließende Nullzeichen von *StrDest*. Wenn ein Null-Zeichen wird, in angezeigt *StrSource* vor *Anzahl* Zeichen angehängt wurden, **Strncat** fügt alle Zeichen von *StrSource*, bis zu dem Null-Zeichen. Wenn *Anzahl* ist größer als die Länge des *StrSource*, die Länge des *StrSource* wird verwendet, anstelle von *Anzahl*. In jedem Fall wird die Ergebniszeichenfolge mit einem NULL-Zeichen beendet. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
+Die **Strncat** Funktion fügt höchstens die ersten *Anzahl* Zeichen *StrSource* zu *StrDest*. Das erste Zeichen von *StrSource* überschreibt das abschließende Nullzeichen von *StrDest*. Wenn ein Null-Zeichen wird, in angezeigt *StrSource* vor *Anzahl* Zeichen angehängt wurden, **Strncat** fügt alle Zeichen von *StrSource*, bis zu dem Null-Zeichen. Wenn *Anzahl* ist größer als die Länge des *StrSource*, die Länge des *StrSource* dient anstelle von *Anzahl*. In jedem Fall wird die Ergebniszeichenfolge mit einem NULL-Zeichen beendet. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
 
 > [!IMPORTANT]
-> **Strncat** überprüft nicht auf genügend Speicherplatz *StrDest*; es ist daher eine mögliche Ursache von Pufferüberläufen. Beachten Sie, dass *Anzahl* begrenzt die Anzahl der Zeichen angefügt wird; es handelt sich nicht um eine Begrenzung auf die Größe des *StrDest*. Siehe das unten aufgeführte Beispiel. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> **Strncat** überprüft nicht auf genügend Speicherplatz *StrDest*; daher ist es eine mögliche Ursache von Pufferüberläufen. Beachten Sie, dass *Anzahl* begrenzt die Anzahl der angefügten Zeichen; es handelt es sich nicht um eine Begrenzung auf die Größe des *StrDest*. Siehe das unten aufgeführte Beispiel. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-**Wcsncat** und **_mbsncat** sind Breitzeichen- und multibytezeichenversionen von **Strncat**. Die Zeichenfolgenargumente und der Rückgabewert von **Wcsncat** sind Breitzeichen-Zeichenfolgen, die von **_mbsncat** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
+**Wcsncat** und **_mbsncat** sind Breitzeichen- und multibytezeichenversionen von Versionen von **Strncat**. Die Zeichenfolgenargumente und der Rückgabewert von **Wcsncat** sind Breitzeichen-Zeichenfolgen, die von **_mbsncat** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 In C++ gibt es für diese Funktionen Vorlagenüberladungen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -171,11 +171,11 @@ In C++ gibt es für diese Funktionen Vorlagenüberladungen. Weitere Informatione
 |**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
-> **_strncat_l** und **_wcsncat_l** haben keine gebietsschemaabhängigkeit und sollen nicht direkt aufgerufen werden. Sie dienen zur internen Verwendung durch **_tcsncat_l**.
+> **_strncat_l** und **_wcsncat_l** haben keine gebietsschemaabhängigkeit und sind nicht dafür vorgesehen, direkt aufgerufen werden. Sie dienen zur internen Verwendung durch **_tcsncat_l**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**strncat**|\<string.h>|
 |**wcsncat**|\<string.h> oder \<wchar.h>|

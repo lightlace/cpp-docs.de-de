@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67fae4e4fd130e8cb61554f7e2d41595070ee819
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: e0294a16c13941d74ccd3955f78e22e33ef8fc7a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852271"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725173"
 ---
 # <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox-Klasse
 Die `CMFCFontComboBox` Klasse erstellt ein Kombinationsfeld-Steuerelement, das eine Liste von Schriftarten enthält.  
@@ -59,7 +59,7 @@ class CMFCFontComboBox : public CComboBox
 |`CMFCFontComboBox::DrawItem`|Wird aufgerufen, durch das Framework um ein angegebenes Element in der aktuellen Schriftart Kombinationsfeld-Steuerelement zu zeichnen. (Überschreibt [CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem).)|  
 |[CMFCFontComboBox::GetSelFont](#getselfont)|Ruft Informationen zu den aktuell ausgewählten Schriftart ab.|  
 |`CMFCFontComboBox::MeasureItem`|Wird aufgerufen, durch das Framework, Windows, der die Dimensionen des ListBox-Felds in der aktuellen Schriftart Kombinationsfeld-Steuerelement zu informieren. (Überschreibt [CComboBox::MeasureItem](../../mfc/reference/ccombobox-class.md#measureitem).)|  
-|`CMFCFontComboBox::PreTranslateMessage`|Übersetzt fenstermeldungen, bevor sie um weitergeleitet werden die [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows-Funktionen. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMFCFontComboBox::PreTranslateMessage`|Übersetzt fenstermeldungen, bevor sie um weitergeleitet werden die [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows-Funktionen. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCFontComboBox::SelectFont](#selectfont)|Wählt die Schriftart, die den angegebenen Kriterien aus der Schriftarten-Kombinationsfeld entspricht.|  
 |[CMFCFontComboBox::Setup](#setup)|Initialisiert die Liste der Elemente in der Schriftarten-Kombinationsfeld.|  
   
@@ -132,14 +132,14 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDesc*  
- Verweist auf ein Schriftartobjekt-Beschreibung.  
+*pDesc*<br/>
+[in] Verweist auf ein Schriftartobjekt-Beschreibung.  
   
- [in] *Wert*  
- Gibt den Namen einer Schriftart an.  
+*Wert*<br/>
+[in] Gibt den Namen einer Schriftart an.  
   
- [in] *nCharSet*  
- Gibt einen Zeichensatz. Der Standardwert ist DEFAULT_CHARSET. Weitere Informationen finden Sie unter den `lfCharSet` Mitglied der ["LogFont"](http://msdn.microsoft.com/library/windows/desktop/dd145037) Struktur.  
+*nCharSet*<br/>
+[in] Gibt einen Zeichensatz. Der Standardwert ist DEFAULT_CHARSET. Weitere Informationen finden Sie unter den `lfCharSet` Mitglied der ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn ein Element in der Schriftarten-Kombinationsfeld die angegebene Schriftart-Beschreibungsobjekt oder Schriftartname und Zeichensatz übereinstimmt. andernfalls "false".  
@@ -164,14 +164,14 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nFontType*  
- Gibt die Schriftart an. Der Standardwert ist die bitweise Kombination (OR) DEVICE_FONTTYPE, RASTER_FONTTYPE, und TRUETYPE_FONTTYPE.  
+*nFontType*<br/>
+[in] Gibt die Schriftart an. Der Standardwert ist die bitweise Kombination (OR) DEVICE_FONTTYPE, RASTER_FONTTYPE, und TRUETYPE_FONTTYPE.  
   
- [in] *nCharSet*  
- Gibt den Zeichensatz der Schriftart an. Der Standardwert ist DEFAULT_CHARSET.  
+*nCharSet*<br/>
+[in] Gibt den Zeichensatz der Schriftart an. Der Standardwert ist DEFAULT_CHARSET.  
   
- [in] *nPitchAndFamily*  
- Gibt die Schriftbreite der Schriftart und -Familie. Der Standardwert ist DEFAULT_PITCH.  
+*nPitchAndFamily*<br/>
+[in] Gibt die Schriftbreite der Schriftart und -Familie. Der Standardwert ist DEFAULT_PITCH.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Schriftarten-Kombinationsfeld erfolgreich initialisiert wurde. andernfalls "false".  

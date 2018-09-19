@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3762 | Microsoft Docs
+title: Compilerfehler C3762 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40134353b713c855199ae0b062e263d31c37522
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4c9f5dc1c270f59dafa9e1076e3641cd1cd2c75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267227"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103346"
 ---
 # <a name="compiler-error-c3762"></a>Compilerfehler C3762
-Attribut "Attribut" kann nicht verarbeitet  
-  
- Ein benutzerdefiniertes Attribut, das von erbt `System.Security.Permissions.SecurityAttribute` wird verwendet, um ein Sicherheitsattribut zu definieren. Ein solches Attribut kann nicht in derselben Assembly verwendet werden, wo er definiert ist.
+
+Attribut 'Attribut' kann nicht verarbeitet
+
+Ein benutzerdefiniertes Attribut, das von erbt `System.Security.Permissions.SecurityAttribute` wird verwendet, um ein Sicherheitsattribut zu definieren. Ein solches Attribut kann nicht in derselben Assembly verwendet werden, in dem sie definiert ist.

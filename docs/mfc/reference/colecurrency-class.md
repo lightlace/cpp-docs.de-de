@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 596160b94370c4cb8ccbbe7a9003f893d9513a17
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: a26bae54e267dfa46b0ec8e6770b3643cc0b7ebb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028303"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681771"
 ---
 # <a name="colecurrency-class"></a>COleCurrency-Klasse
 Kapselt den `CURRENCY` -Datentyp der OLE-Automatisierung.  
@@ -133,15 +133,15 @@ COleCurrency(
   
 - COleCurrency() Konstrukte ein `COleCurrency` Objekt mit 0 (null) initialisiert.  
   
-- COleCurrency (`cySrc`) erstellt eine `COleCurrency` -Objekt aus einem [Währung](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) Wert.  
+- COleCurrency (`cySrc`) erstellt eine `COleCurrency` -Objekt aus einem [Währung](/windows/desktop/api/wtypes/ns-wtypes-tagcy) Wert.  
   
 - COleCurrency (`curSrc`) erstellt eine `COleCurrency` -Objekt aus einem vorhandenen `COleCurrency` Objekt. Das neue Objekt hat den gleichen Status wie das Quellobjekt.  
   
-- COleCurrency (`varSrc`) erstellt eine `COleCurrency` Objekt. Versucht, Konvertieren einer [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) Struktur oder `COleVariant` Objekt, das ein Währungswert (VT_CY). Wenn die Konvertierung erfolgreich ist, wird der konvertierte Wert in die neue kopiert `COleCurrency` Objekt. Ist dies nicht der Fall, den Wert des der `COleCurrency` Objekt auf 0 (null) und dessen Status als ungültig festgelegt ist.  
+- COleCurrency (`varSrc`) erstellt eine `COleCurrency` Objekt. Versucht, Konvertieren einer [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Struktur oder `COleVariant` Objekt, das ein Währungswert (VT_CY). Wenn die Konvertierung erfolgreich ist, wird der konvertierte Wert in die neue kopiert `COleCurrency` Objekt. Ist dies nicht der Fall, den Wert des der `COleCurrency` Objekt auf 0 (null) und dessen Status als ungültig festgelegt ist.  
   
 - `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency' Objekt aus den angegebenen numerischen Komponenten. Wenn der Bruchteil den absoluten Wert größer als 10.000 ist, wird die entsprechende Anpassung an die Einheiten vorgenommen. Beachten Sie, dass die Einheiten und der Teil mit Bruchzahlen von long-Werte mit Vorzeichen angegeben werden.  
   
- Weitere Informationen finden Sie unter den [Währung](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) und [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) Einträge in das Windows SDK.  
+ Weitere Informationen finden Sie unter den [Währung](/windows/desktop/api/wtypes/ns-wtypes-tagcy) und [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Einträge in das Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  Die folgenden Beispiele zeigen die Auswirkungen der Konstruktoren Parameter 0 (null) oder zwei Parameter:  
@@ -230,14 +230,14 @@ enum CurrencyStatus {
  [!code-cpp[NVC_MFCOleContainer#12](../../mfc/codesnippet/cpp/colecurrency-class_3.cpp)]  
   
 ##  <a name="m_cur"></a>  COleCurrency::m_cur  
- Die zugrunde liegende [Währung](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) Struktur für diese `COleCurrency` Objekt.  
+ Die zugrunde liegende [Währung](/windows/desktop/api/wtypes/ns-wtypes-tagcy) Struktur für diese `COleCurrency` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
   
 > [!CAUTION]
 >  Ändern des Werts in der `CURRENCY` Struktur, die Zugriff auf die von dieser Funktion zurückgegebenen Zeiger ändert sich den Wert dieser `COleCurrency` Objekt. Er ändert nicht den Status dieses `COleCurrency` Objekt.  
   
- Weitere Informationen finden Sie unter den [Währung](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) Eintrag in das Windows SDK.  
+ Weitere Informationen finden Sie unter den [Währung](/windows/desktop/api/wtypes/ns-wtypes-tagcy) Eintrag in das Windows SDK.  
   
 ##  <a name="m_status"></a>  COleCurrency::m_status  
  Der Typ dieses Datenelements ist den enumerierten Typ `CurrencyStatus`, definiert in der `COleCurrency` Klasse.  
@@ -304,7 +304,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
   
 - **Operator = (** *VarSrc* **)** Wenn die Konvertierung der `VARIANT` Wert (oder [COleVariant](../../mfc/reference/colevariant-class.md) Objekt) zu einer Währung ( `VT_CY`) ist erfolgreich ist, wird der konvertierte Wert in diese kopiert `COleCurrency` -Objekt und seinen Status zu ungültig festgelegt ist. Wenn die Konvertierung nicht erfolgreich ist, ist der Wert des der `COleCurrency` Objekt auf 0 und dessen Status als ungültig festgelegt ist.  
   
- Weitere Informationen finden Sie unter den [Währung](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) und [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) Einträge in das Windows SDK.  
+ Weitere Informationen finden Sie unter den [Währung](/windows/desktop/api/wtypes/ns-wtypes-tagcy) und [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Einträge in das Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCOleContainer#15](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  
@@ -350,7 +350,7 @@ const COleCurrency& operator-=(const COleCurrency& cur);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCOleContainer#17](../../mfc/codesnippet/cpp/colecurrency-class_6.cpp)]  
   
-##  <a name="operator_star"></a>  COleCurrency::operator * und /  
+##  <a name="operator_star"></a>  COleCurrency::operator \* und /  
  Ermöglichen Ihnen die Skalierung einer `COleCurrency` Wert durch einen ganzzahligen Wert.  
   
 ```  
@@ -370,7 +370,7 @@ COleCurrency operator/(long nOperand) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCOleContainer#18](../../mfc/codesnippet/cpp/colecurrency-class_7.cpp)]  
   
-##  <a name="operator_star_div_eq"></a>  COleCurrency::operator * =, / =  
+##  <a name="operator_star_div_eq"></a>  COleCurrency::operator \*=, / =  
  Ermöglichen es Ihnen, die Skalierung dieser `COleCurrency` Wert durch einen ganzzahligen Wert.  
   
 ```  
@@ -450,7 +450,7 @@ throw(COleException*);
 ### <a name="remarks"></a>Hinweise  
  Spezifikationen der lokalen Sprache (Gebietsschema-IDs) verwendet für die Bedeutung des nicht numerische Zeichen in der Quellzeichenfolge.  
   
- Eine Erläuterung der Gebietsschema-ID-Werten, finden Sie unter [unterstützen mehrere Sprachen](http://msdn.microsoft.com/47dc5add-232c-4268-b977-43e12da81ede).  
+ Eine Erläuterung der Gebietsschema-ID-Werten, finden Sie unter [unterstützen mehrere Sprachen](/previous-versions/windows/desktop/automat/supporting-multiple-national-languages).  
   
  Wenn die Zeichenfolge in eine Währung erfolgreich konvertiert wurde, den Wert dieses `COleCurrency` Objekt auf diesen Wert und ihren Status auf ungültig festgelegt ist.  
   

@@ -1,5 +1,5 @@
 ---
-title: Defaultbind | Microsoft Docs
+title: Defaultbind | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,47 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a92d4a7b617b8963c3ffbd78638a7a97515d8509
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58b275b74f9bf7f252fc2d26e9ce32fa7dc143dc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871460"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208354"
 ---
 # <a name="defaultbind"></a>defaultbind
-Gibt an, die einfache, bindbare Eigenschaft, die das Objekt am besten darstellt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-[defaultbind]  
-  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Die **Defaultbind** C++-Attribut hat die gleiche Funktionalität wie die [Defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) MIDL-Attribut.  
-  
-## <a name="example"></a>Beispiel  
- Siehe das Beispiel für [bindbare](../windows/bindable.md) ein Beispiel zum Verwenden von **Defaultbind**.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-### <a name="attribute-context"></a>Attributkontext  
-  
-|||  
-|-|-|  
-|**Betrifft**|Schnittstellenmethode|  
-|**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Keiner|  
-|**Ungültige Attribute**|Keiner|  
-  
- Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [IDL-Attribute](../windows/idl-attributes.md)   
- [Methodenattribut](../windows/method-attributes.md)   
- [Datenmemberattribute](../windows/data-member-attributes.md)   
- [displaybind](../windows/displaybind.md)   
- [immediatebind](../windows/immediatebind.md)   
- [requestedit](../windows/requestedit.md)   
+
+Gibt an, die einfache, bindbare Eigenschaft, die das Objekt am besten darstellt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+[defaultbind]
+```
+
+## <a name="remarks"></a>Hinweise
+
+Die **Defaultbind** C++-Attribut hat die gleiche Funktionalität wie die [Defaultbind](/windows/desktop/Midl/defaultbind) MIDL-Attribut.
+
+## <a name="example"></a>Beispiel
+
+Siehe das Beispiel für [bindbare](../windows/bindable.md) ein Beispiel zur Verwendung für **Defaultbind**.
+
+## <a name="requirements"></a>Anforderungen
+
+### <a name="attribute-context"></a>Attributkontext
+
+|||
+|-|-|
+|**Betrifft**|Schnittstellenmethode|
+|**Wiederholbar**|Nein|
+|**Erforderliche Attribute**|Keiner|
+|**Ungültige Attribute**|Keiner|
+
+Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[IDL-Attribute](../windows/idl-attributes.md)  
+[Methodenattribut](../windows/method-attributes.md)  
+[Datenmemberattribute](../windows/data-member-attributes.md)  
+[displaybind](../windows/displaybind.md)  
+[immediatebind](../windows/immediatebind.md)  
+[requestedit](../windows/requestedit.md)  

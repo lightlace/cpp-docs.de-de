@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58362b46050a7e2a504a4cd78085975e1c5e1a6
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c66ca089a54f00148cf683612e529f1cd0505445
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025769"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685405"
 ---
 # <a name="mfc-dll-wizard"></a>MFC-DLL-Assistent
 Wenn Sie die MFC-DLL-Assistenten verwenden, um ein MFC-DLL-Projekt erstellen, erhalten Sie einer funktionierende Starter-Anwendung mit integrierten Funktionen, die beim kompiliert, implementiert die grundlegenden Funktionen von einem [DLL](../../build/dlls-in-visual-cpp.md). Die MFC-Startprogramm enthält C++-Quelldateien (.cpp), Ressourcendateien (.rc) und eine Projektdatei (.vcxproj). In diesen Startdateien generierte Code basiert auf MFC. Ausführlichere Informationen finden Sie die Datei "Readme.txt", die für Ihr Projekt in Visual Studio generiert wird und [Klassen und Funktionen generiert vom MFC-DLL-Assistenten](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  
@@ -50,7 +50,6 @@ Wenn Sie die MFC-DLL-Assistenten verwenden, um ein MFC-DLL-Projekt erstellen, er
  [Erstellen und Verwalten von Visual C++-Projekten](../../ide/creating-and-managing-visual-cpp-projects.md)   
  [Eigenschaftenseiten](../../ide/property-pages-visual-cpp.md)   
  [Arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md)   
- [Bereitstellen von Anwendungen](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)   
  [MFC Class (MFC-Klasse)](../../mfc/reference/adding-an-mfc-class.md)   
  [Hinzufügen einer Memberfunktion](../../ide/adding-a-member-function-visual-cpp.md)   
  [Implementing an Interface (Implementieren einer Schnittstelle)](../../ide/implementing-an-interface-visual-cpp.md)   

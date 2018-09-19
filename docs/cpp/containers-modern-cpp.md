@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb9419562382d3494e64dd7fb0472882fe73c13
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1a05eada2b5828cfc654496355bddcabcafc8d60
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939038"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086147"
 ---
 # <a name="containers-modern-c"></a>Container (Modern C++)
 
@@ -49,6 +49,6 @@ Weitere Informationen zu Containern finden Sie unter [C++-Standardbibliothekcont
 
 ## <a name="see-also"></a>Siehe auch
 
-[Willkommen zurück bei C++](../cpp/welcome-back-to-cpp-modern-cpp.md)  
-[C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)  
-[C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)  
+[Willkommen zurück bei C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
+[C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)

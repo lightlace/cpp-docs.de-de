@@ -1,5 +1,5 @@
 ---
-title: Linkertoolfehler Lnk1201 | Microsoft Docs
+title: Linkertoolfehler Lnk1201 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ad83fecfe4df211cb7c5f301626454b5d2c9e47
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c133748f95846160e1387e31e023d9ce459b281
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298768"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055261"
 ---
 # <a name="linker-tools-error-lnk1201"></a>Linkertoolfehler LNK1201
-Fehler beim Schreiben in die Programmdatenbank 'Dateiname'; Suchen nach nicht genügend Speicherplatz verfügbar, Ungültiger Pfad oder unzureichend  
-  
- LINK konnte in die Programmdatenbank (PDB) für die Ausgabedatei nicht geschrieben werden.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:  
-  
-1.  Die Datei ist beschädigt. Löschen Sie PDB-Datei und anschließend.  
-  
-2.  Nicht genügend Speicherplatz zum Schreiben der Datei.  
-  
-3.  Laufwerk ist nicht verfügbar, möglicherweise aufgrund eines Netzwerkproblems.  
-  
-4.  Der Debugger ist aktiv, auf die Anwendung, die Sie verknüpfen möchten.  
-  
-5.  Nicht genügend Speicherplatz auf dem Heap.  Finden Sie unter [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) für Weitere Informationen.
+
+Fehler beim Schreiben in die Programmdatenbank 'Dateiname'; nicht genügend Speicherplatz, Ungültiger Pfad oder keine ausreichenden Berechtigungen überprüfen
+
+LINK konnte nicht in die Programmdatenbank (PDB) für die Ausgabedatei schreiben.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:
+
+1. Die Datei ist beschädigt. Löschen Sie die PDB-Datei und anschließend.
+
+1. Nicht genügend Speicherplatz zum Schreiben der Datei.
+
+1. Laufwerk ist nicht verfügbar ist, möglicherweise aufgrund eines Netzwerkproblems.
+
+1. Der Debugger ist auf die Anwendung, die Sie verknüpfen möchten.
+
+1. Kein weiterer Heapspeicher verfügbar.  Finden Sie unter [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) für Weitere Informationen.

@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7025e0d52aa882c26e2785279626959ca6b29ac1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 62bdeeddf0e81cf017c49eac51ca0e2eaaf046c1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962929"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104066"
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor-Klasse
 
@@ -131,9 +131,11 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 
 ### <a name="parameters"></a>Parameter
 
-*Anzahl* die Anzahl der Elemente, die für die ist ausreichend Speicherplatz zugeordnet werden.
+*count*<br/>
+Die Anzahl von Elementen, für die ausreichend Speicher zugewiesen werden soll.
 
-*Hinweis* ein Zeiger, der möglicherweise das zuweiserobjekt unterstützt, dazu sucht er die Adresse eines vor der Anforderung zugewiesenen Objekts.
+*Hinweis*<br/>
+Ein Zeiger, der möglicherweise das Zuweiserobjekt unterstützt, indem er die Adresse eines Objekts sucht, das vor der Anforderung zugewiesen wurde.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -168,15 +170,20 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 ### <a name="parameters"></a>Parameter
 
-*PTR* ein Zeiger auf die Speicheradresse, in dem das Objekt ist, erstellt werden soll.
+*ptr*<br/>
+Zeiger auf den Speicherort, in dem das Objekt erstellt werden soll.
 
-*Args* eine Liste von Argumenten.
+*args*<br/>
+Liste von Argumenten
 
-*erste* ein Objekt des ersten Typs in einem Paar.
+*Erste*<br/>
+Objekt des ersten Typs in einem Paar
 
-*zweite* ein Objekt des zweiten Typs in einem Paar.
+*Sekunde*<br/>
+Objekt des zweiten Typs in einem Paar
 
-*richtige* ein vorhandenes Objekt verschoben oder kopiert werden.
+*right*<br/>
+Zu verschiebendes oder kopierendes vorhandenes Objekt
 
 ### <a name="remarks"></a>Hinweise
 
@@ -208,9 +215,11 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>Parameter
 
-*PTR* ein Zeiger auf die Startposition der Objekte aufgehoben werden.
+*ptr*<br/>
+Ein Zeiger auf den Anfangsort des Objekts, dessen Zuweisung aufzuheben ist.
 
-*Anzahl* die Anzahl der Objekte beim Aufheben der Zuordnung.
+*count*<br/>
+Die Anzahl von Objekten, deren Zuweisung aufzuheben ist.
 
 ## <a name="destroy"></a>  scoped_allocator_adaptor:: Destroy
 
@@ -223,7 +232,8 @@ void destroy(Ty* ptr)
 
 ### <a name="parameters"></a>Parameter
 
-*PTR* ein Zeiger auf das Objekt zerstört werden soll.
+*ptr*<br/>
+Ein Zeiger auf das Objekt, das zerstört werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -283,10 +293,10 @@ scoped_allocator_adaptor();
 scoped_allocator_adaptor(const scoped_allocator_adaptor& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(
- const scoped_allocator_adaptor<Outer2, Inner...>& right) noexcept;
+const scoped_allocator_adaptor<Outer2, Inner...>& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(
- scoped_allocator_adaptor<Outer2, Inner...>&& right) noexcept;
+scoped_allocator_adaptor<Outer2, Inner...>&& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(Outer2&& al,
     const Inner&... rest) noexcept;
@@ -294,11 +304,14 @@ scoped_allocator_adaptor(Outer2&& al,
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* bestehendes `scoped_allocator_adaptor`.
+*right*<br/>
+Ein vorhandener `scoped_allocator_adaptor`.
 
-*Al* eine vorhandener zuweiser, der als äußerer zuweiser verwendet werden.
+*Al*<br/>
+Eine vorhandener Zuweiser, der als äußerer Zuweiser verwendet werden soll.
 
-*Rest* eine Liste von zuweisern, die als innere zuweiser verwendet werden.
+*Rest*<br/>
+Eine Liste von Zuweisern, die als innere Zuweiser verwendet werden sollen.
 
 ### <a name="remarks"></a>Hinweise
 

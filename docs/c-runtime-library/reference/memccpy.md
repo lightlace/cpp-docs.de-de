@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddb085fee2459abd4cdef8a400f291bea4f6313b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6addc369de344b40a616b2ee1efbe840e98cc6d4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401843"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199539"
 ---
 # <a name="memccpy"></a>_memccpy
 
@@ -70,17 +70,17 @@ Anzahl der Zeichen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn das Zeichen *c* wird kopiert, **_memccpy** gibt einen Zeiger auf die "Char" im *Dest* , die unmittelbar auf das Zeichen folgt. Wenn *c* nicht kopiert wird, gibt **NULL**.
+Wenn das Zeichen *c* kopiert wurde, **_memccpy** gibt einen Zeiger auf "Char" in *Dest* , die unmittelbar auf das Zeichen folgt. Wenn *c* nicht kopiert wurde, gibt **NULL**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_memccpy** 0 oder mehr Zeichen von der Funktion kopiert *Src* auf *Dest*, anhalten, wenn das Zeichen *c* kopiert wurde oder wenn *Anzahl* Zeichen kopiert wurden, welcher Fall zuerst eintritt.
+Die **_memccpy** -Funktion kopiert 0 oder mehr Zeichen von *Src* zu *Dest*, anhalten, wenn das Zeichen *c* kopiert wurde oder wenn *Anzahl* -Zeichen kopiert wurden, welcher Fall zuerst eintritt.
 
-**Sicherheitshinweis** Stellen Sie sicher, dass der Zielpuffer dieselbe Größe wie der Quellpuffer aufweist bzw. größer ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Sicherheitshinweis** Stellen Sie sicher, dass der Zielpuffer dieselbe Größe wie der Quellpuffer aufweist bzw. größer ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_memccpy**|\<memory.h> oder \<string.h>|
 

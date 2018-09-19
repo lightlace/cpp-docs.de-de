@@ -1,7 +1,7 @@
 ---
 title: CEdit-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e1521c73f92bbb941b1060cb5cf2051ead88ffb
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e8442f771cda2b7130a60148582288a31977fa59
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339591"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726634"
 ---
 # <a name="cedit-class"></a>CEdit Class
 Stellt die Funktionalität eines Windows-Bearbeitungssteuerelements bereit.  
@@ -221,7 +221,7 @@ class CEdit : public CWnd
   
  Bei der Erstellung einer `CEdit` Objekt innerhalb eines Zeitfensters, Sie müssen möglicherweise auch zerstören. Bei der Erstellung der `CEdit` Objekt im Stapel automatisch zerstört wird. Bei der Erstellung der `CEdit` Objekt auf dem Heap mit dem **neue** -Funktion, die Sie aufrufen müssen **löschen** edit-Steuerelement auf das Objekt, das es zerstört, wenn der Benutzer die Windows beendet. Wenn Sie im Arbeitsspeicher zuordnen der `CEdit` Objekt außer Kraft, indem die `CEdit` Destruktor, der Zuordnungen zu verwerfen.  
   
- So ändern Sie bestimmte Formate in einem Bearbeitungssteuerelement (z. B. ES_READONLY) müssen Sie bestimmte Nachrichten senden, auf das Steuerelement anstelle von [ModifyStyle](cwnd-class.md#modifystyle). Finden Sie unter [Bearbeiten der Stile von Listensteuerelementen](http://msdn.microsoft.com/library/windows/desktop/bb775464) in das Windows SDK.  
+ So ändern Sie bestimmte Formate in einem Bearbeitungssteuerelement (z. B. ES_READONLY) müssen Sie bestimmte Nachrichten senden, auf das Steuerelement anstelle von [ModifyStyle](cwnd-class.md#modifystyle). Finden Sie unter [Bearbeiten der Stile von Listensteuerelementen](/windows/desktop/Controls/edit-control-styles) in das Windows SDK.  
   
  Weitere Informationen zu `CEdit` finden Sie unter:  
   
@@ -252,7 +252,7 @@ BOOL CanUndo() const;
  Ungleich NULL, wenn der letzte Bearbeitungsvorgang durch einen Aufruf von rückgängig gemacht werden kann die `Undo` Memberfunktion; 0, wenn sie kann nicht rückgängig gemacht werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [EM_CANUNDO](http://msdn.microsoft.com/library/windows/desktop/bb775468) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_CANUNDO](/windows/desktop/Controls/em-canundo) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEdit::Undo](#undo).  
@@ -289,7 +289,7 @@ int CharFromPos(CPoint pt) const;
 > [!NOTE]
 >  Diese Memberfunktion wird ab, die mit Windows 95 und Windows NT 4.0 verfügbar.  
   
- Weitere Informationen finden Sie unter [EM_CHARFROMPOS](http://msdn.microsoft.com/library/windows/desktop/bb761566) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_CHARFROMPOS](/windows/desktop/Controls/em-charfrompos) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit#3](../../mfc/reference/codesnippet/cpp/cedit-class_2.cpp)]  
@@ -306,7 +306,7 @@ void Clear();
   
  Rufen Sie zum Löschen der aktuellen Auswahl, und fügen Sie den gelöschten Inhalt in die Zwischenablage kopieren, die [Ausschneiden](#cut) Member-Funktion.  
   
- Weitere Informationen finden Sie unter [WM_CLEAR](http://msdn.microsoft.com/library/windows/desktop/ms649020) im Windows SDK.  
+ Weitere Informationen finden Sie unter [WM_CLEAR](/windows/desktop/dataxchg/wm-clear) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit#4](../../mfc/reference/codesnippet/cpp/cedit-class_3.cpp)]  
@@ -319,7 +319,7 @@ void Copy();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [WM_COPY](http://msdn.microsoft.com/library/windows/desktop/ms649022) im Windows SDK.  
+ Weitere Informationen finden Sie unter [WM_COPY](/windows/desktop/dataxchg/wm-copy) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit#5](../../mfc/reference/codesnippet/cpp/cedit-class_4.cpp)]  
@@ -354,7 +354,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Hinweise  
  Sie erstellen eine `CEdit` Objekt in zwei Schritten. Rufen Sie zunächst die `CEdit` Konstruktor und rufen Sie dann `Create`, die das Steuerelement zum Bearbeiten von Windows erstellt, und fügt es der `CEdit` Objekt.  
   
- Wenn `Create` ausgeführt wird, handelt es sich bei Windows sendet die [WM_NCCREATE](http://msdn.microsoft.com/library/windows/desktop/ms632635), [WM_NCCALCSIZE](http://msdn.microsoft.com/library/windows/desktop/ms632634), [WM_CREATE](http://msdn.microsoft.com/library/windows/desktop/ms632619), und [WM_GETMINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632626) die Nachrichten an das Steuerelement zum Bearbeiten.  
+ Wenn `Create` ausgeführt wird, handelt es sich bei Windows sendet die [WM_NCCREATE](/windows/desktop/winmsg/wm-nccreate), [WM_NCCALCSIZE](/windows/desktop/winmsg/wm-nccalcsize), [WM_CREATE](/windows/desktop/winmsg/wm-create), und [WM_GETMINMAXINFO](/windows/desktop/winmsg/wm-getminmaxinfo) die Nachrichten an das Steuerelement zum Bearbeiten.  
   
  Diese Nachrichten werden standardmäßig behandelt der [OnNcCreate](cwnd-class.md#onnccreate), [OnNcCalcSize](cwnd-class.md#onnccalcsize), [OnCreate](cwnd-class.md#oncreate), und [OnGetMinMaxInfo](cwnd-class.md#ongetminmaxinfo) Memberfunktionen in der `CWnd` Basisklasse. Um die Standardbehandlung für die Nachricht zu erweitern, leiten Sie eine Klasse von `CEdit`, hinzufügen eine meldungszuordnung an die neue Klasse und überschreiben Sie die oben genannten Meldungshandler-Memberfunktionen. Außer Kraft setzen `OnCreate`, z. B. für die erforderliche Initialisierung für die neue Klasse.  
   
@@ -385,7 +385,7 @@ void Cut();
   
  Um die aktuelle Auswahl ohne den gelöschten Text in die Zwischenablage zu löschen, rufen die [löschen](#clear) Member-Funktion.  
   
- Weitere Informationen finden Sie unter [WM_CUT](http://msdn.microsoft.com/library/windows/desktop/ms649023) im Windows SDK.  
+ Weitere Informationen finden Sie unter [WM_CUT](/windows/desktop/dataxchg/wm-cut) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit#6](../../mfc/reference/codesnippet/cpp/cedit-class_6.cpp)]  
@@ -402,7 +402,7 @@ void EmptyUndoBuffer();
   
  Die rückgängig-Flag wird automatisch gelöscht, wenn die [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) oder [SetHandle auf](#sethandle) `CWnd` Memberfunktionen aufgerufen werden.  
   
- Weitere Informationen finden Sie unter [EM_EMPTYUNDOBUFFER](http://msdn.microsoft.com/library/windows/desktop/bb761568) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_EMPTYUNDOBUFFER](/windows/desktop/Controls/em-emptyundobuffer) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit#7](../../mfc/reference/codesnippet/cpp/cedit-class_7.cpp)]  
@@ -426,9 +426,9 @@ BOOL FmtLines(BOOL bAddEOL);
   
  Windows wird nur reagiert, wenn die `CEdit` Objekt ist eines mehrzeiligen Bearbeitungssteuerelements.  
   
- `FmtLines` wirkt sich nur auf den Puffer, der vom [GetHandle](#gethandle) und der zurückgegebene Text [WM_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632627). Es hat keine Auswirkungen auf die Anzeige des Texts in der Edit-Steuerelements.  
+ `FmtLines` wirkt sich nur auf den Puffer, der vom [GetHandle](#gethandle) und der zurückgegebene Text [WM_GETTEXT](/windows/desktop/winmsg/wm-gettext). Es hat keine Auswirkungen auf die Anzeige des Texts in der Edit-Steuerelements.  
   
- Weitere Informationen finden Sie unter [EM_FMTLINES](http://msdn.microsoft.com/library/windows/desktop/bb761570) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_FMTLINES](/windows/desktop/Controls/em-fmtlines) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit#8](../../mfc/reference/codesnippet/cpp/cedit-class_8.cpp)]  
@@ -445,11 +445,11 @@ CString GetCueBanner() const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *LpszText*  
- Ein Zeiger auf eine Zeichenfolge, die den Hinweistext enthält.  
+*lpszText*<br/>
+[out] Ein Zeiger auf eine Zeichenfolge, die den Hinweistext enthält.  
   
- [in] *CchText*  
- Die Anzahl der Zeichen, die empfangen werden können. Diese Zahl beinhaltet das abschließende Nullzeichen.  
+*cchText*<br/>
+[in] Die Anzahl der Zeichen, die empfangen werden können. Diese Zahl beinhaltet das abschließende Nullzeichen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  "True" für die erste Überladung Wenn die Methode erfolgreich ist; andernfalls "false".  
@@ -457,7 +457,7 @@ CString GetCueBanner() const;
  Für die der zweiten Überladung ist eine [CString](../../atl-mfc-shared/using-cstring.md) , die den Hinweistext enthält, wenn die Methode erfolgreich; andernfalls ist, die leere Zeichenfolge ("").  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [EM_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb761572) -Nachricht, die im Windows SDK beschrieben wird. Weitere Informationen finden Sie unter den [Edit_GetCueBannerText](http://msdn.microsoft.com/library/windows/desktop/bb761695) Makro.  
+ Diese Methode sendet die [EM_GETCUEBANNER](/windows/desktop/Controls/em-getcuebanner) -Nachricht, die im Windows SDK beschrieben wird. Weitere Informationen finden Sie unter den [Edit_GetCueBannerText](/windows/desktop/api/commctrl/nf-commctrl-edit_getcuebannertext) Makro.  
   
 ##  <a name="getfirstvisibleline"></a>  CEdit::GetFirstVisibleLine  
  Rufen Sie diese Funktion, um die oberste sichtbare Zeile in einem Bearbeitungssteuerelement zu bestimmen.  
@@ -470,7 +470,7 @@ int GetFirstVisibleLine() const;
  Der nullbasierte Index der obersten Linie angezeigt. Für einzeilige Bearbeitungssteuerelemente ist der Rückgabewert 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [EM_GETFIRSTVISIBLELINE](http://msdn.microsoft.com/library/windows/desktop/bb761574) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_GETFIRSTVISIBLELINE](/windows/desktop/Controls/em-getfirstvisibleline) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit#9](../../mfc/reference/codesnippet/cpp/cedit-class_9.cpp)]  
@@ -495,7 +495,7 @@ HLOCAL GetHandle() const;
 > [!NOTE]
 > `GetHandle` funktioniert nicht mit Windows 95/98. Wenn Sie aufrufen `GetHandle` in Windows 95/98, wird NULL zurückgegeben. `GetHandle` funktioniert wie beschrieben unter Windows NT, Version 3.51 und höher.  
   
- Weitere Informationen finden Sie unter [EM_GETHANDLE](http://msdn.microsoft.com/library/windows/desktop/bb761576) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_GETHANDLE](/windows/desktop/Controls/em-gethandle) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit#10](../../mfc/reference/codesnippet/cpp/cedit-class_10.cpp)]  
@@ -513,14 +513,14 @@ BOOL GetHighlight(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] *PichStart*|Nullbasierte Index des ersten Zeichens im Bereich von Text, der hervorgehoben ist.|  
-|[out] *PichEnd*|Nullbasierte Index des letzten Zeichens in den Bereich des Texts, die hervorgehoben ist.|  
+|*pichStart*|[out] Nullbasierte Index des ersten Zeichens im Bereich von Text, der hervorgehoben ist.|  
+|*pichEnd*|[out] Nullbasierte Index des letzten Zeichens in den Bereich des Texts, die hervorgehoben ist.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [EM_GETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761578) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [EM_GETHILITE](/windows/desktop/Controls/em-gethilite) -Nachricht, die im Windows SDK beschrieben wird. Beide `SetHighlight` und `GetHighlight` derzeit für nur UNICODE-builds aktiviert sind. 
   
 ##  <a name="getlimittext"></a>  CEdit::GetLimitText  
  Rufen Sie diese Memberfunktion rufen Sie den Text-Grenzwert für diesen `CEdit` Objekt.  
@@ -538,7 +538,7 @@ UINT GetLimitText() const;
 > [!NOTE]
 >  Diese Memberfunktion wird ab, die mit Windows 95 und Windows NT 4.0 verfügbar.  
   
- Weitere Informationen finden Sie unter [EM_GETLIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761582) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_GETLIMITTEXT](/windows/desktop/Controls/em-getlimittext) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit#11](../../mfc/reference/codesnippet/cpp/cedit-class_11.cpp)]  
@@ -573,7 +573,7 @@ int GetLine(
 ### <a name="remarks"></a>Hinweise  
  Die kopierte Zeile enthält einen Null-Terminierungszeichen nicht.  
   
- Weitere Informationen finden Sie unter [EM_GETLINE](http://msdn.microsoft.com/library/windows/desktop/bb761584) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_GETLINE](/windows/desktop/Controls/em-getline) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEdit::GetLineCount](#getlinecount).  
@@ -591,7 +591,7 @@ int GetLineCount() const;
 ### <a name="remarks"></a>Hinweise  
  `GetLineCount` Mehrzeilige Bearbeitungssteuerelemente wird nur verarbeitet.  
   
- Weitere Informationen finden Sie unter [EM_GETLINECOUNT](http://msdn.microsoft.com/library/windows/desktop/bb761586) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_GETLINECOUNT](/windows/desktop/Controls/em-getlinecount) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit#12](../../mfc/reference/codesnippet/cpp/cedit-class_12.cpp)]  
@@ -612,7 +612,7 @@ DWORD GetMargins() const;
 > [!NOTE]
 >  Diese Memberfunktion wird ab, die mit Windows 95 und Windows NT 4.0 verfügbar.  
   
- Weitere Informationen finden Sie unter [EM_GETMARGINS](http://msdn.microsoft.com/library/windows/desktop/bb761590) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_GETMARGINS](/windows/desktop/Controls/em-getmargins) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl).  
@@ -630,7 +630,7 @@ BOOL GetModify() const;
 ### <a name="remarks"></a>Hinweise  
  Windows verwaltet ein internes Flag gibt an, ob der Inhalt des Bearbeitungssteuerelements geändert wurde. Dieses Flag wird gelöscht, wenn das Bearbeitungssteuerelement zuerst erstellt und auch werden, durch den Aufruf gelöscht kann der [SetModify](#setmodify) Member-Funktion.  
   
- Weitere Informationen finden Sie unter [EM_GETMODIFY](http://msdn.microsoft.com/library/windows/desktop/bb761592) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_GETMODIFY](/windows/desktop/Controls/em-getmodify) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit#13](../../mfc/reference/codesnippet/cpp/cedit-class_13.cpp)]  
@@ -646,9 +646,9 @@ TCHAR GetPasswordChar() const;
  Gibt das Zeichen, die das Zeichen angezeigt werden, die der Benutzer eingegeben. Der Rückgabewert ist NULL, wenn kein Kennwortzeichen vorhanden ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie das Steuerelement zum Bearbeiten mit dem ES_PASSWORD-Stil erstellen, bestimmt die DLL, die das Steuerelement unterstützt das Standardkennwortzeichen an. Das Manifest oder [InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697) Methode bestimmt die DLL unterstützt das Steuerelement zum Bearbeiten. Wenn das Steuerelement zum Bearbeiten von "User32.dll" unterstützt wird, ist das das Standardkennwortzeichen Sternchen ("*", U + 002A). Wenn comctl32.dll Version 6 der Edit-Steuerelement unterstützt, ist das Standardzeichen SCHWARZER Kreis ("●", U + 25CF). Weitere Informationen zu der DLL und die Version unterstützt das häufig verwendeter Steuerelemente finden Sie unter [Shell und allgemeine Steuerelemente Versionen](http://msdn.microsoft.com/library/windows/desktop/bb776779).  
+ Wenn Sie das Steuerelement zum Bearbeiten mit dem ES_PASSWORD-Stil erstellen, bestimmt die DLL, die das Steuerelement unterstützt das Standardkennwortzeichen an. Das Manifest oder [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) Methode bestimmt die DLL unterstützt das Steuerelement zum Bearbeiten. Wenn das Steuerelement zum Bearbeiten von "User32.dll" unterstützt wird, ist das das Standardkennwortzeichen Sternchen ("*", U + 002A). Wenn comctl32.dll Version 6 der Edit-Steuerelement unterstützt, ist das Standardzeichen SCHWARZER Kreis ("●", U + 25CF). Weitere Informationen zu der DLL und die Version unterstützt das häufig verwendeter Steuerelemente finden Sie unter [Shell und allgemeine Steuerelemente Versionen](https://msdn.microsoft.com/library/windows/desktop/bb776779).  
   
- Diese Methode sendet die [EM_GETPASSWORDCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761594) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [EM_GETPASSWORDCHAR](/windows/desktop/Controls/em-getpasswordchar) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit#14](../../mfc/reference/codesnippet/cpp/cedit-class_14.cpp)]  
@@ -669,7 +669,7 @@ void GetRect(LPRECT lpRect) const;
   
  Des Formatierungsrechtecks eines mehrzeiligen Bearbeitungssteuerelements kann geändert werden, indem die [SetRect](#setrect) und [SetRectNP](#setrectnp) Memberfunktionen.  
   
- Weitere Informationen finden Sie unter [EM_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb761596) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_GETRECT](/windows/desktop/Controls/em-getrect) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEdit::LimitText](#limittext).  
@@ -696,7 +696,7 @@ void GetSel(
  Die Version, die einen DWORD-Wert zurückgibt, gibt einen Wert, der die Anfangsposition in das niederwertige Wort und die Position des ersten Zeichens nicht ausgewählten nach dem Ende der Auswahl in das höherwertige Wort enthält.  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [EM_GETSEL](http://msdn.microsoft.com/library/windows/desktop/bb761598) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_GETSEL](/windows/desktop/Controls/em-getsel) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit#15](../../mfc/reference/codesnippet/cpp/cedit-class_15.cpp)]  
@@ -712,7 +712,7 @@ BOOL HideBalloonTip();
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion sendet die [EM_HIDEBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb761604) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Funktion sendet die [EM_HIDEBALLOONTIP](/windows/desktop/Controls/em-hideballoontip) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="limittext"></a>  CEdit::LimitText  
  Rufen Sie diese Funktion, um die Länge des Texts zu beschränken, die der Benutzer in ein Bearbeitungssteuerelement eingeben kann.  
@@ -731,7 +731,7 @@ void LimitText(int nChars = 0);
 > [!NOTE]
 >  In Win32 (Windows NT und Windows 95/98), [SetLimitText](#setlimittext) diese Funktion ersetzt.  
   
- Weitere Informationen finden Sie unter [EM_LIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761607) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_LIMITTEXT](/windows/desktop/Controls/em-limittext) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit#17](../../mfc/reference/codesnippet/cpp/cedit-class_16.cpp)]  
@@ -755,7 +755,7 @@ int LineFromChar(int nIndex = -1) const;
   
  Diese Memberfunktion wird nur von mehrzeiligen Edit-Steuerelemente verwendet werden.  
   
- Weitere Informationen finden Sie unter [EM_LINEFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761609) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_LINEFROMCHAR](/windows/desktop/Controls/em-linefromchar) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit#18](../../mfc/reference/codesnippet/cpp/cedit-class_17.cpp)]  
@@ -779,7 +779,7 @@ int LineIndex(int nLine = -1) const;
   
  Diese Memberfunktion wird nur von mehrzeiligen Bearbeitungssteuerelemente verarbeitet.  
   
- Weitere Informationen finden Sie unter [EM_LINEINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761611) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_LINEINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761611) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit#19](../../mfc/reference/codesnippet/cpp/cedit-class_18.cpp)]  
@@ -798,16 +798,16 @@ int LineLength(int nLine = -1) const;
 ### <a name="return-value"></a>Rückgabewert  
  Für einzeilige Bearbeitungssteuerelemente ist der Rückgabewert der Länge des Texts in das Bearbeitungssteuerelement in TCHARs.  
   
- Für mehrzeilige Bearbeitungssteuerelemente, der Rückgabewert ist die Länge der Zeile anhand des in TCHARs, die *nLine* Parameter. Für [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] Text die Länge beträgt die Anzahl der Bytes in der Zeile, für die Unicode-Text, die Länge beträgt die Anzahl der Zeichen in der Zeile. Die Länge schließt nicht die Zeichen Wagenrücklauf am Ende der Zeile.  
+ Für mehrzeilige Bearbeitungssteuerelemente, der Rückgabewert ist die Länge der Zeile anhand des in TCHARs, die *nLine* Parameter. Für ANSI-Text ist die Länge der Anzahl der Bytes in der Zeile. für Unicode-Text ist die Länge der Anzahl der Zeichen in der Zeile. Die Länge schließt nicht die Zeichen Wagenrücklauf am Ende der Zeile.  
   
  Wenn die *nLine* -Parameter ist größer als die Anzahl der Zeichen in das Steuerelement, der Rückgabewert ist 0 (null).  
   
  Wenn die *nLine* Parameter ist 1, der Rückgabewert ist die Anzahl von nicht markierten Zeichen in den Zeilen, die markierte Zeichen enthalten. Wenn die Auswahl aus dem vierten Zeichen einer Zeile, die über das achte Zeichen vom Ende der nächsten Zeile erweitert wird, ist der Rückgabewert z. B. 10. D. h., drei Zeichen auf der ersten Zeile und sieben bei der nächsten.  
   
- Weitere Informationen zu den TCHAR-Typ, finden Sie unter der TCHAR-Zeile in der Tabelle im [Windows-Datentypen](http://msdn.microsoft.com/library/windows/desktop/aa383751).  
+ Weitere Informationen zu den TCHAR-Typ, finden Sie unter der TCHAR-Zeile in der Tabelle im [Windows-Datentypen](/windows/desktop/WinProg/windows-data-types).  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode wird von unterstützt die [EM_LINELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb761613) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode wird von unterstützt die [EM_LINELENGTH](/windows/desktop/Controls/em-linelength) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEdit::LineIndex](#lineindex).  
@@ -835,7 +835,7 @@ void LineScroll(
   
  `LineScroll` kann für einen horizontalen Bildlauf hinter dem letzten Zeichen in jeder Zeile verwendet werden.  
   
- Weitere Informationen finden Sie unter [EM_LINESCROLL](http://msdn.microsoft.com/library/windows/desktop/bb761615) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_LINESCROLL](/windows/desktop/Controls/em-linescroll) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEdit::GetFirstVisibleLine](#getfirstvisibleline).  
@@ -850,7 +850,7 @@ void Paste();
 ### <a name="remarks"></a>Hinweise  
  Daten werden eingefügt, nur, wenn die Zwischenablage Daten im HIERSVR Format enthält.  
   
- Weitere Informationen finden Sie unter [WM_PASTE](http://msdn.microsoft.com/library/windows/desktop/ms649028) im Windows SDK.  
+ Weitere Informationen finden Sie unter [WM_PASTE](/windows/desktop/dataxchg/wm-paste) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit#20](../../mfc/reference/codesnippet/cpp/cedit-class_19.cpp)]  
@@ -875,7 +875,7 @@ CPoint PosFromChar(UINT nChar) const;
 > [!NOTE]
 >  Diese Memberfunktion wird ab, die mit Windows 95 und Windows NT 4.0 verfügbar.  
   
- Weitere Informationen finden Sie unter [EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_POSFROMCHAR](/windows/desktop/Controls/em-posfromchar) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEdit::LineFromChar](#linefromchar).  
@@ -899,7 +899,7 @@ void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
   
  Wenn keine aktuelle Auswahl vorhanden ist, wird der Ersetzungstext an der aktuellen Cursorposition eingefügt.  
   
- Weitere Informationen finden Sie unter [EM_REPLACESEL](http://msdn.microsoft.com/library/windows/desktop/bb761633) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_REPLACESEL](/windows/desktop/Controls/em-replacesel) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEdit::LineIndex](#lineindex).  
@@ -917,11 +917,11 @@ BOOL SetCueBanner(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszText*  
- Zeiger auf eine Zeichenfolge, die das Stichwort dafür enthält, in das Bearbeitungssteuerelement angezeigt.  
+*lpszText*<br/>
+[in] Zeiger auf eine Zeichenfolge, die das Stichwort dafür enthält, in das Bearbeitungssteuerelement angezeigt.  
   
- [in] *fDrawWhenFocused*  
- False gibt an, wird das hinweisbanner nicht gezeichnet, wenn der Benutzer in der Edit-Steuerelement klickt und dem Steuerelement den Fokus gibt.  
+*fDrawWhenFocused*<br/>
+[in] False gibt an, wird das hinweisbanner nicht gezeichnet, wenn der Benutzer in der Edit-Steuerelement klickt und dem Steuerelement den Fokus gibt.  
   
  Bei "true", wird das hinweisbanner gezeichnet, selbst wenn das Steuerelement den Fokus besitzt. Das hinweisbanner wird ausgeblendet, wenn der Benutzer beginnt, geben Sie in das Steuerelement.  
   
@@ -931,7 +931,7 @@ BOOL SetCueBanner(
  True, wenn die Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [EM_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb761639) -Nachricht, die im Windows SDK beschrieben wird. Weitere Informationen finden Sie unter den [Edit_SetCueBannerTextFocused](http://msdn.microsoft.com/library/windows/desktop/bb761703) Makro.  
+ Diese Methode sendet die [EM_SETCUEBANNER](/windows/desktop/Controls/em-setcuebanner) -Nachricht, die im Windows SDK beschrieben wird. Weitere Informationen finden Sie unter den [Edit_SetCueBannerTextFocused](/windows/desktop/api/commctrl/nf-commctrl-edit_setcuebannertextfocused) Makro.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt die [CEdit::SetCueBanner](#setcuebanner) Methode.  
@@ -947,7 +947,7 @@ void SetHandle(HLOCAL hBuffer);
   
 ### <a name="parameters"></a>Parameter  
  *hBuffer*  
- Enthält ein Handle für den lokalen Speicher an. Dieses Handle muss durch einen vorherigen Aufruf erstellt wurden die [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723) Windows-Funktion, die mit dem Flag LMEM_MOVEABLE. Der Arbeitsspeicher wird angenommen, eine Null-terminierte Zeichenfolge enthalten. Wenn dies nicht der Fall ist, sollte das erste Byte des zugeordneten Speichers auf 0 festgelegt werden.  
+ Enthält ein Handle für den lokalen Speicher an. Dieses Handle muss durch einen vorherigen Aufruf erstellt wurden die [LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc) Windows-Funktion, die mit dem Flag LMEM_MOVEABLE. Der Arbeitsspeicher wird angenommen, eine Null-terminierte Zeichenfolge enthalten. Wenn dies nicht der Fall ist, sollte das erste Byte des zugeordneten Speichers auf 0 festgelegt werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Steuerelement zum Bearbeiten verwendet dann diesen Puffer zum Speichern des aktuell angezeigten Texts, anstatt einen eigenen Puffer zuzuweisen.  
@@ -963,7 +963,7 @@ void SetHandle(HLOCAL hBuffer);
 > [!NOTE]
 > `GetHandle` funktioniert nicht mit Windows 95/98. Wenn Sie aufrufen `GetHandle` in Windows 95/98, wird NULL zurückgegeben. `GetHandle` funktioniert wie beschrieben unter Windows NT, Version 3.51 und höher.  
   
- Weitere Informationen finden Sie unter [EM_SETHANDLE](http://msdn.microsoft.com/library/windows/desktop/bb761641), [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723), und [LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_SETHANDLE](/windows/desktop/Controls/em-sethandle), [LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc), und [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit#22](../../mfc/reference/codesnippet/cpp/cedit-class_21.cpp)]  
@@ -981,11 +981,11 @@ void SetHighlight(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *IchStart*|Nullbasierte Index des ersten Zeichens in den Textbereich hervorheben.|  
-|[in] *IchEnd*|Nullbasierte Index des letzten Zeichens in den Textbereich hervorheben.|  
+|*ichStart*|[in] Nullbasierte Index des ersten Zeichens in den Textbereich hervorheben.|  
+|*ichEnd*|[in] Nullbasierte Index des letzten Zeichens in den Textbereich hervorheben.|  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [EM_SETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761643) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) -Nachricht, die im Windows SDK beschrieben wird.  Diese Methode sendet die [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) -Nachricht, die im Windows SDK beschrieben wird. Beide `SetHighlight` und `GetHighlight` für nur UNICODE-builds aktiviert sind. 
   
 ##  <a name="setlimittext"></a>  CEdit::SetLimitText  
  Rufen Sie diese Memberfunktion zum Festlegen der textlimit für diesen `CEdit` Objekt.  
@@ -1005,7 +1005,7 @@ void SetLimitText(UINT nMax);
   
  Diese Funktion ersetzt [LimitText](#limittext) in Win32.  
   
- Weitere Informationen finden Sie unter [EM_SETLIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761647) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_SETLIMITTEXT](/windows/desktop/Controls/em-setlimittext) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl).  
@@ -1031,7 +1031,7 @@ void SetMargins(
 > [!NOTE]
 >  Diese Memberfunktion wird ab, die mit Windows 95 und Windows NT 4.0 verfügbar.  
   
- Weitere Informationen finden Sie unter [EM_SETMARGINS](http://msdn.microsoft.com/library/windows/desktop/bb761649) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_SETMARGINS](/windows/desktop/Controls/em-setmargins) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl).  
@@ -1050,7 +1050,7 @@ void SetModify(BOOL bModified = TRUE);
 ### <a name="remarks"></a>Hinweise  
  Das geänderte Flag gibt an, und zwar unabhängig davon, ob der Text im Bearbeitungssteuerelement geändert wurde. Es wird automatisch festgelegt, wenn der Benutzer den Text ändert. Der Wert abgerufen werden kann, mit der [GetModify](#getmodify) Member-Funktion.  
   
- Weitere Informationen finden Sie unter [EM_SETMODIFY](http://msdn.microsoft.com/library/windows/desktop/bb761651) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_SETMODIFY](/windows/desktop/Controls/em-setmodify) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEdit::GetModify](#getmodify).  
@@ -1073,9 +1073,9 @@ void SetPasswordChar(TCHAR ch);
   
  Wenn die `SetPasswordChar` Memberfunktion aufgerufen wird, `CEdit` wird neu gezeichnet werden alle sichtbar, mit dem durch angegebenen Zeichen *ch*.  
   
- Wenn das Steuerelement zum Bearbeiten mit erstellt haben, wird die [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) Stil, das das Standardkennwortzeichen auf ein Sternchen festgelegt ist ( **\***). Dieses Format wird entfernt, wenn `SetPasswordChar` aufgerufen wird und *ch* auf 0 festgelegt.  
+ Wenn das Steuerelement zum Bearbeiten mit erstellt haben, wird die [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) Stil, das das Standardkennwortzeichen auf ein Sternchen festgelegt ist ( <strong>\*</strong>). Dieses Format wird entfernt, wenn `SetPasswordChar` aufgerufen wird und *ch* auf 0 festgelegt.  
   
- Weitere Informationen finden Sie unter [EM_SETPASSWORDCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761653) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_SETPASSWORDCHAR](/windows/desktop/Controls/em-setpasswordchar) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit#16](../../mfc/reference/codesnippet/cpp/cedit-class_22.cpp)]  
@@ -1097,7 +1097,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ### <a name="remarks"></a>Hinweise  
  Die aktuelle Einstellung finden Sie, indem Sie die Tests die [ES_READONLY](styles-used-by-mfc.md#edit-styles) -Kennzeichen in den Rückgabewert der [CWnd::GetStyle](cwnd-class.md#getstyle).  
   
- Weitere Informationen finden Sie unter [EM_SETREADONLY](http://msdn.microsoft.com/library/windows/desktop/bb761655) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_SETREADONLY](/windows/desktop/Controls/em-setreadonly) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit#23](../../mfc/reference/codesnippet/cpp/cedit-class_23.cpp)]  
@@ -1122,7 +1122,7 @@ void SetRect(LPCRECT lpRect);
   
  Wenn `SetRect` aufgerufen wird, wird das Steuerelement zum Bearbeiten der Text auch neu formatiert und erneut angezeigt.  
   
- Weitere Informationen finden Sie unter [EM_SETRECT](http://msdn.microsoft.com/library/windows/desktop/bb761657) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_SETRECT](/windows/desktop/Controls/em-setrect) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit#24](../../mfc/reference/codesnippet/cpp/cedit-class_24.cpp)]  
@@ -1149,7 +1149,7 @@ void SetRectNP(LPCRECT lpRect);
   
  Dieses Element wird nur von mehrzeiligen Bearbeitungssteuerelemente verarbeitet.  
   
- Weitere Informationen finden Sie unter [EM_SETRECTNP](http://msdn.microsoft.com/library/windows/desktop/bb761659) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_SETRECTNP](/windows/desktop/Controls/em-setrectnp) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEdit::SetRect](#setrect).  
@@ -1183,7 +1183,7 @@ void SetSel(
  Gibt die Endposition.  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [EM_SETSEL](http://msdn.microsoft.com/library/windows/desktop/bb761661) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_SETSEL](/windows/desktop/Controls/em-setsel) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEdit::GetSel](#getsel).  
@@ -1223,7 +1223,7 @@ BOOL SetTabStops(
   
  `SetTabStops` wird nicht automatisch die Editor-Fenster neu zeichnen. Wenn Sie die Tabstopps für den Text im Bearbeitungssteuerelement bereits ändern, rufen Sie [CWnd::InvalidateRect](cwnd-class.md#invalidaterect) Editor-Fenster neu zeichnen.  
   
- Weitere Informationen finden Sie unter [EM_SETTABSTOPS](http://msdn.microsoft.com/library/windows/desktop/bb761663) und [GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_SETTABSTOPS](/windows/desktop/Controls/em-settabstops) und [GetDialogBaseUnits](/windows/desktop/api/winuser/nf-winuser-getdialogbaseunits) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEditView::SetTabStops](ceditview-class.md#settabstops).  
@@ -1245,16 +1245,16 @@ BOOL ShowBalloonTip(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *pEditBalloonTip*|Zeiger auf ein [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) -Struktur, der die SprechblasenInfo beschreibt.|  
-|[in] *LpszTitle*|Zeiger auf eine Unicodezeichenfolge, die den Titel der SprechblasenInfo enthält.|  
-|[in] *LpszText*|Zeiger auf eine Unicode-Zeichenfolge, die die Sprechblase QuickInfo-Text enthält.|  
-|[in] *TtiIcon*|Ein **INT** , die angibt, dass der Typ des Symbols, der die SprechblasenInfo zugeordnet werden soll. Der Standardwert ist TTI_NONE. Weitere Informationen finden Sie unter den `ttiIcon` Mitglied der [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) Struktur.|  
+|*pEditBalloonTip*|[in] Zeiger auf ein [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) -Struktur, der die SprechblasenInfo beschreibt.|  
+|*lpszTitle*|[in] Zeiger auf eine Unicodezeichenfolge, die den Titel der SprechblasenInfo enthält.|  
+|*lpszText*|[in] Zeiger auf eine Unicode-Zeichenfolge, die die Sprechblase QuickInfo-Text enthält.|  
+|*ttiIcon*|[in] Ein **INT** , die angibt, dass der Typ des Symbols, der die SprechblasenInfo zugeordnet werden soll. Der Standardwert ist TTI_NONE. Weitere Informationen finden Sie unter den `ttiIcon` Mitglied der [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) Struktur.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion sendet die [EM_SHOWBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb761668) -Nachricht, die im Windows SDK beschrieben wird. Weitere Informationen finden Sie unter den [Edit_ShowBalloonTip](http://msdn.microsoft.com/library/windows/desktop/bb761707) Makro.  
+ Diese Funktion sendet die [EM_SHOWBALLOONTIP](/windows/desktop/Controls/em-showballoontip) -Nachricht, die im Windows SDK beschrieben wird. Weitere Informationen finden Sie unter den [Edit_ShowBalloonTip](/windows/desktop/api/commctrl/nf-commctrl-edit_showballoontip) Makro.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert eine Variable, `m_cedit`, d. h. für den Zugriff auf das aktuelle Steuerelement zum Bearbeiten. Diese Variable wird im nächsten Beispiel verwendet.  
@@ -1279,7 +1279,7 @@ BOOL Undo();
 ### <a name="remarks"></a>Hinweise  
  Ein Rückgängig-Vorgang kann auch rückgängig gemacht werden. Sie können z. B. gelöschten Text mit dem ersten Aufruf von wiederherstellen `Undo`. Solange Sie keine beteiligten Bearbeitungsvorgang wird können, entfernen Sie den Text erneut mit einem zweiten Aufruf von `Undo`.  
   
- Weitere Informationen finden Sie unter [EM_UNDO](http://msdn.microsoft.com/library/windows/desktop/bb761670) im Windows SDK.  
+ Weitere Informationen finden Sie unter [EM_UNDO](/windows/desktop/Controls/em-undo) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit#25](../../mfc/reference/codesnippet/cpp/cedit-class_27.cpp)]  

@@ -1,5 +1,5 @@
 ---
-title: Speichern von Zeichenfolgen im OLE DB-Anbieter | Microsoft Docs
+title: Speichern von Zeichenfolgen im OLE DB-Anbieter | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a5ba289e7e53ba1bcaca550ba84c2d871d215306
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84ee07f236ac7ec79149b1cb36f358598f9c6c12
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106985"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112693"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Speichern von Zeichenfolgen im OLE DB-Anbieter
-In MyProviderRS.h, der ATL-OLE DB-Anbieter-Assistent erstellt einen Standard-Benutzerdatensatz aufgerufen `CWindowsFile`. Um die beiden Zeichenfolgen zu behandeln, ändern Sie entweder `CWindowsFile` oder eigene Benutzerdatensatz hinzufügen, wie im folgenden Code gezeigt:  
+
+In MyProviderRS.h, wird der ATL-OLE DB-Anbieter-Assistent erstellt ein Standard-Benutzer-Eintrag namens `CWindowsFile`. Um die beiden Zeichenfolgen zu behandeln, ändern Sie entweder `CWindowsFile` oder Ihre eigenen Benutzerdatensatz hinzufügen, wie im folgenden Code gezeigt:  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -50,11 +51,12 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- Die Datenmember `szCommand` und `szText` stehen für die zwei Zeichenfolgen mit `szCommand2` und `szText2` bei Bedarf zusätzliche Spalten bereitstellen. Das Datenelement `dwBookmark` ist für diesen einfachen schreibgeschützten Anbieters nicht erforderlich, jedoch wird später verwendet, um das Hinzufügen einer `IRowsetLocate` Schnittstelle; finden Sie unter [Erweitern des einfachen lesen nur Anbieters](../../data/oledb/enhancing-the-simple-read-only-provider.md). Die `==` Operator vergleicht Instanzen (Implementierung dieses Operators ist optional).  
+Die Datenmember `szCommand` und `szText` darstellen von zwei Zeichenfolgen mit `szCommand2` und `szText2` zusätzliche Spalten bereitstellen, falls erforderlich. Das Datenelement `dwBookmark` ist für diesen einfachen schreibgeschützten Anbieters nicht erforderlich, aber später verwendet wird, um das Hinzufügen einer `IRowsetLocate` Schnittstelle; finden Sie unter [Erweitern des einfachen lesen nur Anbieters](../../data/oledb/enhancing-the-simple-read-only-provider.md). Die `==` Operator vergleicht Instanzen (Implementierung dieses Operators ist optional).  
   
- Nachdem dies geschehen ist, sollte Ihr Anbieter bereit sein zu kompilieren und auszuführen. Um den Anbieter zu testen, benötigen Sie einen Consumer mit übereinstimmenden Funktionen. [Implementieren eines einfachen Consumers](../../data/oledb/implementing-a-simple-consumer.md) wird gezeigt, wie solche einen Testconsumer erstellen. Führen Sie den Testconsumer mit dem Anbieter an. Stellen Sie sicher, dass der Testconsumer Ruft die richtigen Zeichenfolgen vom Anbieter ab, wenn Sie auf die **ausführen** Schaltfläche der **Testconsumer** (Dialogfeld).  
+Wenn dies abgeschlossen ist, sollte Ihr Anbieter bereit sein zu kompilieren und auszuführen. Um den Anbieter zu testen, benötigen Sie einen Consumer mit übereinstimmenden Funktionen. [Implementieren eines einfachen Consumers](../../data/oledb/implementing-a-simple-consumer.md) zeigt, wie solche einen Testconsumer erstellen. Führen Sie den Testconsumer mit dem Anbieter ein. Stellen Sie sicher, dass der Testconsumer Ruft die richtigen Zeichenfolgen vom Anbieter ab, wenn Sie auf die **ausführen** Schaltfläche der **Testconsumer** Dialogfeld.  
   
- Wenn Sie Ihren Anbieter erfolgreich getestet haben, empfiehlt es sich um die Funktionalität zu erhöhen, indem Sie weitere Schnittstellen implementieren. Ein Beispiel ist dargestellt, [Erweitern des einfachen schreibgeschützten Anbieters](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
+Wenn Sie Ihren Anbieter erfolgreich getestet haben, empfiehlt es sich um die Funktionalität zu verbessern, indem Sie die Implementierung zusätzlicher Schnittstellen. Ein Beispiel ist in [Erweitern des einfachen schreibgeschützten Anbieters](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Implementieren des einfachen schreibgeschützten Anbieters](../../data/oledb/implementing-the-simple-read-only-provider.md)
+
+[Implementieren des einfachen schreibgeschützten Anbieters](../../data/oledb/implementing-the-simple-read-only-provider.md)

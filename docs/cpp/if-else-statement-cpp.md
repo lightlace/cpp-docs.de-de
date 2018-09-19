@@ -19,46 +19,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42174837f0f60f9a4e3ba9f19702210d6d34ccca
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e55788e280eb60f176a286cf9d1693e93447a077
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943159"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031456"
 ---
 # <a name="if-else-statement-c"></a>if-else-Anweisung (C++)
+
 Steuert den bedingten Branch. Anweisungen in der *If-Block* werden nur ausgeführt, wenn die *If-Ausdruck* ergibt einen Wert ungleich Null (oder "true"). Wenn der Wert des *Ausdruck* ungleich NULL ist, *statement1* und alle anderen Anweisungen im Block ausgeführt werden, und der else-Block, falls vorhanden, wird übersprungen. Wenn der Wert des *Ausdruck* 0 (null), wird der If-Block wird übersprungen, und der else-Block, falls vorhanden, wird ausgeführt. Ausdrücke, die ungleich NULL ausgewertet, werden.
 - true
 - ein nicht-Null-Zeiger ist,
-- alle arithmetischen Wert ungleich NULL, oder 
-- Geben Sie ein Klassentyp, der eine eindeutige Konvertierung in ein arithmetischer "," Boolean "oder" Zeiger definiert. (Weitere Informationen über Konvertierungen finden Sie unter [Standardkonvertierungen](../cpp/standard-conversions.md).)   
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-if ( expression )  
+- alle arithmetischen Wert ungleich NULL, oder
+- Geben Sie ein Klassentyp, der eine eindeutige Konvertierung in ein arithmetischer "," Boolean "oder" Zeiger definiert. (Weitere Informationen über Konvertierungen finden Sie unter [Standardkonvertierungen](../cpp/standard-conversions.md).)
+
+## <a name="syntax"></a>Syntax
+
+```
+if ( expression )
 {
    statement1;
-   ...  
+   ...
 }
 else  // optional
 {
    statement2;
    ...
-} 
+}
 
 // Visual Studio 2017 version 15.3 and later:
-if ( initialization; expression )  
+if ( initialization; expression )
 {
    statement1;
-   ...  
+   ...
 }
 else  // optional
 {
    statement2;
    ...
-}  
+}
 
 // Visual Studio 2017 version 15.3 and later:
 if constexpr (expression)
@@ -70,13 +70,13 @@ else  // optional
 {
    statement2;
    ...
-} 
-```  
+}
+```
 
-## <a name="example"></a>Beispiel  
+## <a name="example"></a>Beispiel
 
-```cpp  
-// if_else_statement.cpp  
+```cpp
+// if_else_statement.cpp
 #include <iostream>
 
 using namespace std;
@@ -104,10 +104,10 @@ int main()
   // no else statement
     if (x == 10)
     {
-        x = 0; 
+        x = 0;
     }
     
-  
+
     C* c;
   init(c);
     if (c)
@@ -119,18 +119,19 @@ int main()
         cout << "c is null!\n";
     }
 }
-```  
-## <a name="if-statement-with-an-initializer"></a>Wenn die Anweisung mit einem Initialisierer
-**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): ein **Wenn** Anweisung enthält möglicherweise auch einen Ausdruck, der deklariert und initialisiert eine benannte Variable. Verwenden Sie diese Form der If-Anweisung aus, wenn die Variable nur innerhalb des Bereichs der If-Block erforderlich ist. 
+```
+## <a name="if_with_init"></a> Wenn die Anweisung mit einem Initialisierer
+
+**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): ein **Wenn** Anweisung enthält möglicherweise auch einen Ausdruck, der deklariert und initialisiert eine benannte Variable. Verwenden Sie diese Form der If-Anweisung aus, wenn die Variable nur innerhalb des Bereichs der If-Block erforderlich ist.
 
 ```cpp
-## Example  
+## Example
+
 #include <iostream>
 #include <mutex>
 #include <map>
 #include <string>
 #include <algorithm>
-
 
 using namespace std;
 
@@ -159,22 +160,21 @@ int main()
         shared_flag = false;
     }
 
-
     string s{ "if" };
     if (auto keywords = { "if", "for", "while" }; any_of(keywords.begin(), keywords.end(), [&s](const char* kw) { return s == kw; }))
     {
         cout << "Error! Token must not be a keyword\n";
     }
-
 }
 ```
 
- In allen Arten von der **Wenn** Anweisung *Ausdruck*, die einen beliebigen Wert außer einer Struktur verfügen können ausgewertet wird, einschließlich aller Nebeneffekte. Wird die Steuerung von der **Wenn** Anweisung, um die nächste Anweisung im Programm, wenn eines der *Anweisung*s enthält eine [Break](../cpp/break-statement-cpp.md), [weiterhin](../cpp/continue-statement-cpp.md), oder [Goto](../cpp/goto-statement-cpp.md).  
-  
- Die **else** -Klausel eine `if...else` Anweisung bezieht sich auf die nächstgelegene vorherigen **Wenn** -Anweisung im gleichen Gültigkeitsbereich, der einen entsprechenden keinen **else** -Anweisung.   
+In allen Arten von der **Wenn** Anweisung *Ausdruck*, die einen beliebigen Wert außer einer Struktur verfügen können ausgewertet wird, einschließlich aller Nebeneffekte. Wird die Steuerung von der **Wenn** Anweisung, um die nächste Anweisung im Programm, wenn eines der *Anweisung*s enthält eine [Break](../cpp/break-statement-cpp.md), [weiterhin](../cpp/continue-statement-cpp.md), oder [Goto](../cpp/goto-statement-cpp.md).
 
-## <a name="constexpr-if-statements"></a>"constexpr" Wenn Anweisungen
-**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): In Funktionsvorlagen, können Sie eine `constexpr if` Anweisung, damit Verzweigungen Entscheidungen während der Kompilierung ohne zurückgreifen auf mehrere überlädt. Beispielsweise können Sie einer einzelnen Funktion schreiben, diese Handles Parameter Entpacken (keine Überladung für die NULL-Parameter ist erforderlich): 
+Die **else** -Klausel eine `if...else` Anweisung bezieht sich auf die nächstgelegene vorherigen **Wenn** -Anweisung im gleichen Gültigkeitsbereich, der einen entsprechenden keinen **else** -Anweisung.
+
+## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> Wenn "constexpr"-Anweisungen
+
+**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): In Funktionsvorlagen, können Sie eine **Wenn "constexpr"** Anweisung, damit Verzweigungen Entscheidungen treffen zu kompilieren auf mehreren funktionsüberladungen zurückgreifen müssen. Beispielsweise können Sie einer einzelnen Funktion schreiben, diese Handles Parameter Entpacken (keine Überladung für die NULL-Parameter ist erforderlich):
 
 ```cpp
 template <class T, class... Rest>
@@ -184,10 +184,9 @@ void f(T&& t, Rest&&... r)
    do_something(t);
 
    // handle r conditionally
-   constexpr if (sizeof...(r)) 
+   if constexpr (sizeof...(r))
    {
-      
-      f(r...); 
+      f(r...);
    }
    else
    {
@@ -196,9 +195,8 @@ void f(T&& t, Rest&&... r)
 }
 ```
 
-  
- 
-## <a name="see-also"></a>Siehe auch  
- [Auswahlanweisungen](../cpp/selection-statements-cpp.md)   
- [Stichwörter](../cpp/keywords-cpp.md)   
- [switch-Anweisung (C++)](../cpp/switch-statement-cpp.md)
+## <a name="see-also"></a>Siehe auch
+
+[Auswahlanweisungen](../cpp/selection-statements-cpp.md)<br/>
+[Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
+[switch-Anweisung (C++)](../cpp/switch-statement-cpp.md)

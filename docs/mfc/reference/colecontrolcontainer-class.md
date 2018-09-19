@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f33335e193997c0988cab0580c3eab612d0cc84
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f278ffd3d3210f899e86787d0872180df2d91d98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852301"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222858"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer-Klasse
 Dient als Steuerelementcontainer für ActiveX-Steuerelemente.  
@@ -149,7 +149,7 @@ class COleControlContainer : public CCmdTarget
 |[COleControlContainer::m_siteMap](#m_sitemap)|Die sitezuordnung.|  
   
 ## <a name="remarks"></a>Hinweise  
- Dies erfolgt durch die Unterstützung für einen oder mehrere ActiveX-Steuerelement-Standorte (durch implementiert `COleControlSite`). `COleControlContainer` vollständig implementiert die [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770) und [IOleContainer](http://msdn.microsoft.com/library/windows/desktop/ms690103) Schnittstellen, sodass die enthaltenen ActiveX-Steuerelemente, um die Qualifizierung jetzt als direktes Elemente zu erfüllen.  
+ Dies erfolgt durch die Unterstützung für einen oder mehrere ActiveX-Steuerelement-Standorte (durch implementiert `COleControlSite`). `COleControlContainer` vollständig implementiert die [IOleInPlaceFrame](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceframe) und [IOleContainer](/windows/desktop/api/oleidl/nn-oleidl-iolecontainer) Schnittstellen, sodass die enthaltenen ActiveX-Steuerelemente, um die Qualifizierung jetzt als direktes Elemente zu erfüllen.  
   
  Diese Klasse wird normalerweise verwendet, in Verbindung mit `COccManager` und `COleControlSite` zum Implementieren eines benutzerdefinierten ActiveX-Steuerelementcontainers mit benutzerdefinierten Websites für eine oder mehrere ActiveX-Steuerelemente.  
   
@@ -449,7 +449,7 @@ virtual UINT GetDlgItemInt(
  Zeiger auf eine boolesche Variable, die Wert einer Funktion Erfolg/Fehler empfängt ("true" gibt an, Erfolg, "false" gibt an, Fehler).  
   
  *bSigned*  
- Gibt an, ob die Funktion prüfen Sie den Text für ein Minuszeichen (-) am Anfang und eine Ganzzahl mit Vorzeichen zurück, wenn eine Datei gefunden werden soll. Wenn die *bSigned* Parameter ist "true", die angeben, dass der Wert abgerufen werden sollen eine Ganzzahl mit Vorzeichen, umgewandelt den Rückgabewert in einer **Int** Typ. Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Gibt an, ob die Funktion prüfen Sie den Text für ein Minuszeichen (-) am Anfang und eine Ganzzahl mit Vorzeichen zurück, wenn eine Datei gefunden werden soll. Wenn die *bSigned* Parameter ist "true", die angeben, dass der Wert abgerufen werden sollen eine Ganzzahl mit Vorzeichen, umgewandelt den Rückgabewert in einer **Int** Typ. Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wenn erfolgreich, die Variable, zeigt *LpTrans* auf "true" festgelegt ist und der Rückgabewert ist der übersetzte Wert, der den Text des Steuerelements.  
@@ -486,7 +486,7 @@ virtual int GetDlgItemText(
 ### <a name="return-value"></a>Rückgabewert  
  Wenn die Funktion erfolgreich ist, gibt der Rückgabewert die Anzahl der Zeichen kopiert werden, in den Puffer, der das abschließende Nullzeichen nicht eingeschlossen.  
   
- Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null. Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null. Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus  
  Bestimmt, ob der Container WM_SETFOCUS-Nachrichten verarbeitet.  

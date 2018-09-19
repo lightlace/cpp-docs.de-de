@@ -16,30 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3ca1bf5c716be10d079beaec3e49ae014df0932
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6dc5ecb7460e5813779cef8c9359983ae1007edf
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882097"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762784"
 ---
 # <a name="formatting-time-automation-classes"></a>Formatierung der Zeit: Automatisierungsklassen
-#### <a name="to-format-a-time"></a>So formatieren einen Zeitraum  
-  
- Verwenden der `Format` Memberfunktion entweder [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) oder [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) erstellen Sie eine Zeichenfolge, die bzw. der verstrichene Zeit darstellt.  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#179](../atl-mfc-shared/codesnippet/cpp/formatting-time-automation-classes_1.cpp)]  
-  
- Weitere Informationen finden Sie in der Klasse [COleVariant](../mfc/reference/colevariant-class.md).  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
-  
--   [Allgemeine Datums- und zeitprogrammierung in MFC](../atl-mfc-shared/date-and-time.md)  
-  
--   [Allgemeine Klassen für die Datums- und zeitprogrammierung](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
-  
--   [Arbeiten mit SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Datum und Uhrzeit: Automatisierungsunterstützung](../atl-mfc-shared/date-and-time-automation-support.md)
+
+## <a name="to-format-a-time"></a>So formatieren einen Zeitraum
+
+Verwenden der `Format` Memberfunktion entweder [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) oder [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) erstellen Sie eine Zeichenfolge, die bzw. der verstrichene Zeit darstellt.
+
+   [!code-cpp[NVC_ATLMFC_Utilities#179](../atl-mfc-shared/codesnippet/cpp/formatting-time-automation-classes_1.cpp)]
+
+Weitere Informationen finden Sie in der Klasse [COleVariant](../mfc/reference/colevariant-class.md).
+
+## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?
+
+- [Allgemeine Datums- und zeitprogrammierung in MFC](../atl-mfc-shared/date-and-time.md)
+
+- [Arbeiten mit SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Datum und Uhrzeit: Automatisierungsunterstützung](../atl-mfc-shared/date-and-time-automation-support.md)
 

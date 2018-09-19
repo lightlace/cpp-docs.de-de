@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4007f8b07b78618f4fdd8031d0f6dab5f1c12916
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6593168e87f8a0dde1dd996aeadf2d225adbbe72
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912640"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194178"
 ---
 # <a name="modifying-winver-and-win32winnt"></a>Ändern von WINVER und _WIN32_WINNT
 
@@ -59,11 +59,11 @@ Dies betrifft das Betriebssystem Windows 10. Diese Werte sind in der Windows-Hea
 Wenn nicht alle diese Windows-Versionen in der Kopie von SDKDDKVer.h angezeigt werden, die Sie sich ansehen, verwenden Sie wahrscheinlich eine ältere Version des Windows SDK. In der Standardeinstellung verwenden Win32-Projekte in Visual Studio 2017 das Windows 10 SDK.   
   
 > [!NOTE]
->  Es ist nicht gewährleistet, dass die Werte auf jeden Fall funktionieren, wenn Sie interne MFC-Header in die Anwendung aufnehmen.  
+> Es ist nicht gewährleistet, dass die Werte auf jeden Fall funktionieren, wenn Sie interne MFC-Header in die Anwendung aufnehmen.  
   
-Dieses Makro kann auch mithilfe der **/D** -Compileroption definiert werden. Weitere Informationen finden Sie unter [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md).  
+Dieses Makro kann auch mithilfe der `/D`-Compileroption definiert werden. Weitere Informationen finden Sie unter [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md).  
   
-Weitere Informationen zur Bedeutung dieser Makros finden Sie unter [Verwenden der Windows-Header](https://msdn.microsoft.com/library/windows/desktop/aa383745).  
+Weitere Informationen zur Bedeutung dieser Makros finden Sie unter [Verwenden der Windows-Header](/windows/desktop/WinProg/using-the-windows-headers).  
   
 ## <a name="see-also"></a>Siehe auch  
 

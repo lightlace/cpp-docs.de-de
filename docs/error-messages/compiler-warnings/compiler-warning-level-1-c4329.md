@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4329 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4329 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7eca757f361acaa0aeaf90332d33400f5a0ba6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f4d250bbd21e55a64009522e5f277493730f7d1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278004"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084899"
 ---
 # <a name="compiler-warning-level-1-c4329"></a>Compilerwarnung (Stufe 1) C4329
-__declspec(align()) wird für Enum ignoriert.  
-  
- Verwenden der [ausrichten](../../cpp/align-cpp.md) Schlüsselwort mit der [__declspec](../../cpp/declspec.md) Modifizierer ist nicht zulässig, auf ein `enum`. Im folgenden Beispiel wird C4329 generiert:  
-  
-```  
-// C4329.cpp  
-// compile with: /W1 /LD  
-enum __declspec(align(256)) TestEnum {   // C4329  
-   TESTVAL1,  
-   TESTVAL2,  
-   TESTVAL3  
-};  
-__declspec(align(256)) enum TestEnum1;  
+
+__declspec(align()) ist für die Enumeration ignoriert.
+
+Verwenden der [ausrichten](../../cpp/align-cpp.md) Schlüsselwort mit der [__declspec](../../cpp/declspec.md) Modifizierer ist nicht zulässig, auf eine `enum`. Im folgende Beispiel wird die C4329 generiert:
+
+```
+// C4329.cpp
+// compile with: /W1 /LD
+enum __declspec(align(256)) TestEnum {   // C4329
+   TESTVAL1,
+   TESTVAL2,
+   TESTVAL3
+};
+__declspec(align(256)) enum TestEnum1;
 ```

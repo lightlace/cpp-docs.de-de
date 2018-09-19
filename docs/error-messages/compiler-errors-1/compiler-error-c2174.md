@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2174 | Microsoft Docs
+title: Compilerfehler C2174 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4d11c4234bd4e1343198658b1dfcada556b0e1f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8a7dc9cee6bf24f4605455818a32bd757bcd60c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171948"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052372"
 ---
 # <a name="compiler-error-c2174"></a>Compilerfehler C2174
-'Funktion': Parameter hat den Typ 'Void': Parameter "number1", Parameterliste Nummer2  
-  
- Parameter `number1` übergebene Parameter `number2` ist eine `void` Parameter. Parameter sind keine Typ `void`. Verwenden Sie stattdessen `void*`.
+
+'Funktion': Parameter hat den Typ "Void": Parameter "number1", Parameterliste Nummer2
+
+Parameter `number1` übergebene Parameter `number2` ist eine `void` Parameter. Parameter keinen Typ `void`. Verwenden Sie stattdessen `void*`.

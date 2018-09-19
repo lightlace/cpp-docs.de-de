@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1080 | Microsoft Docs
+title: Schwerwiegender Fehler C1080 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1400478dc1bbef4ab435f96eaa75c9a6637b6bb5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdd3ad247bcdbfa30213eba57cdbbbc411438e79
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225406"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029935"
 ---
 # <a name="fatal-error-c1080"></a>Schwerwiegender Fehler C1080
-Compilerlimit: Befehlszeilenoption überschreitet die Grenze von Ziffern  
-  
- Ein Argument an den Compiler übergebene überschreitet 256 Zeichen.
+
+Compilerlimit: Befehlszeilenoption überschreitet die Grenze der Anzahl von Zeichen
+
+Ein Argument an den Compiler übergeben länger als 256 Zeichen.

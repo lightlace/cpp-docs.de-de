@@ -7,12 +7,12 @@ f1_keywords:
 - hash_map/std::swap
 - hash_map/std::swap (hash_map)
 ms.assetid: 28748cd0-71f7-41b9-b068-579183645fba
-ms.openlocfilehash: d8ae3102091b9057f45f6b0072e0c272dfb27458
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 12ceb799ccf0944b8f0e8d48975da25c39f22505
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958547"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100949"
 ---
 # <a name="lthashmapgt-functions"></a>&lt;Hash_map&gt; Funktionen
 
@@ -35,9 +35,11 @@ void swap(
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* das hash_map-Element, dessen Elemente sind mit denen der Zuordnung ausgetauscht werden sollen *linken*.
+*right*<br/>
+Das hash_map-Element, dessen Elemente sind mit denen der Zuordnung ausgetauscht werden sollen *linken*.
 
-*linken* das hash_map-Element, dessen Elemente sind mit denen der Zuordnung ausgetauscht werden sollen *rechten*.
+*left*<br/>
+Das hash_map-Element, dessen Elemente sind mit denen der Zuordnung ausgetauscht werden sollen *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -58,9 +60,11 @@ void swap(
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* die Hash_multimap, deren Elemente ausgetauscht werden, mit denen der Zuordnung *linken*.
+*right*<br/>
+Die Hash_multimap, deren Elemente ausgetauscht werden, mit denen der Zuordnung *linken*.
 
-*linken* die Hash_multimap, deren Elemente ausgetauscht werden, mit denen der Zuordnung *rechten*.
+*left*<br/>
+Die Hash_multimap, deren Elemente ausgetauscht werden, mit denen der Zuordnung *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 

@@ -14,39 +14,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3657e7076bf67a5a3870d7d127cc150f976ecde
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9b684d66a96a7a3a7d7d60a1b107792c2061ce57
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883657"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086602"
 ---
 # <a name="object-status-macros"></a>Objektstatus-Makros
-Dieses Makro legt die Flags, die für ActiveX-Steuerelemente gehören.  
-  
-|||  
-|-|-|  
+
+Dieses Makro legt die Flags, die für ActiveX-Steuerelemente gehören.
+
+|||
+|-|-|
 |[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|In ATL-ActiveX-Steuerelementen verwendet, werden die OLEMISC-Flags festgelegt.|  
 
-## <a name="requirements"></a>Anforderungen  
- **Header:** atlcom.h  
+## <a name="requirements"></a>Anforderungen
 
-##  <a name="declare_olemisc_status"></a>  DECLARE_OLEMISC_STATUS  
- In ATL-ActiveX-Steuerelementen verwendet, werden die OLEMISC-Flags festgelegt.  
-  
+**Header:** atlcom.h  
+
+##  <a name="declare_olemisc_status"></a>  DECLARE_OLEMISC_STATUS
+
+In ATL-ActiveX-Steuerelementen verwendet, werden die OLEMISC-Flags festgelegt.
+
 ```
 DECLARE_OLEMISC_STATUS( miscstatus )
-```  
-  
-### <a name="parameters"></a>Parameter  
- *MiscStatus*  
- Alle geltenden OLEMISC-Flags.  
-  
-### <a name="remarks"></a>Hinweise  
- Dieses Makro wird verwendet, werden die OLEMISC-Flags für ein ActiveX-Steuerelement festgelegt. Finden Sie unter [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) Weitere Details.  
-  
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Windowing#124](../../atl/codesnippet/cpp/object-status-macros_1.h)]  
-  
-## <a name="see-also"></a>Siehe auch  
- [Makros](../../atl/reference/atl-macros.md)
+```
+
+### <a name="parameters"></a>Parameter
+
+*MiscStatus*<br/>
+Alle geltenden OLEMISC-Flags.
+
+### <a name="remarks"></a>Hinweise
+
+Dieses Makro wird verwendet, werden die OLEMISC-Flags für ein ActiveX-Steuerelement festgelegt. Finden Sie unter [IOleObject::GetMiscStatus](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) Weitere Details.
+
+### <a name="example"></a>Beispiel
+
+[!code-cpp[NVC_ATL_Windowing#124](../../atl/codesnippet/cpp/object-status-macros_1.h)]
+
+## <a name="see-also"></a>Siehe auch
+
+[Makros](../../atl/reference/atl-macros.md)

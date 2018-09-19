@@ -29,30 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bde7a170eb499a9b179a909bfb95e75f8fc89518
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 46bcc0fa01a05b3942bb1588153ee35b5d6d25e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386559"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090463"
 ---
 # <a name="cifmod"></a>_CIfmod
-Berechnet den Gleitkommarest für die beiden obersten Werte im Stapel.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void __cdecl _CIfmod();  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Version der `fmod`-Funktion verfügt über eine spezielle Aufrufkonvention, die der Compiler versteht. Sie beschleunigt die Ausführung, da sie das Generieren von Kopien verhindert und bei der Registerzuweisung hilft.  
-  
- Der resultierende Wert wird oben auf dem Stapel abgelegt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Plattform:** x86  
-  
-## <a name="see-also"></a>Siehe auch  
- [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [fmod, fmodf](../c-runtime-library/reference/fmod-fmodf.md)
+
+Berechnet den Gleitkommarest für die beiden obersten Werte im Stapel.
+
+## <a name="syntax"></a>Syntax
+
+```
+void __cdecl _CIfmod();
+```
+
+## <a name="remarks"></a>Hinweise
+
+Diese Version der `fmod`-Funktion verfügt über eine spezielle Aufrufkonvention, die der Compiler versteht. Sie beschleunigt die Ausführung, da sie das Generieren von Kopien verhindert und bei der Registerzuweisung hilft.
+
+Der resultierende Wert wird oben auf dem Stapel abgelegt.
+
+## <a name="requirements"></a>Anforderungen
+ **Plattform:** x86
+
+## <a name="see-also"></a>Siehe auch
+
+[Alphabetische Funktionsreferenz](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[fmod, fmodf](../c-runtime-library/reference/fmod-fmodf.md)

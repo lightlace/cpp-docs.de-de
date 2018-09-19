@@ -1,5 +1,5 @@
 ---
-title: -RELEASE | Microsoft Docs
+title: -RELEASE | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b699080d1bf1967999cc33f7d567b640460ceaa6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 412f8057635a8a192e31f90f587f753d27c9713e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372630"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724593"
 ---
 # <a name="release"></a>/RELEASE
-```  
-/RELEASE  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Option wird die Prüfsumme im Header einer ausführbaren Datei.  
-  
- Das Betriebssystem benötigt die Prüfsumme für Gerätetreiber. Es wird empfohlen, dass Sie festlegen, dass die Prüfsumme für Releaseversionen der Gerätetreiber zur Sicherstellung der Kompatibilität mit zukünftigen Betriebssystemen.  
-  
-## <a name="see-also"></a>Siehe auch  
- [EDITBIN-Optionen](../../build/reference/editbin-options.md)
+
+```
+/RELEASE
+```
+
+## <a name="remarks"></a>Hinweise
+
+Diese Option wird die Prüfsumme im Header einer ausführbaren Datei.
+
+Das Betriebssystem ist die Prüfsumme für Gerätetreiber erforderlich. Es wird empfohlen, dass Sie die Prüfsumme für Releaseversionen der Gerätetreiber zur Sicherstellung der Kompatibilität mit zukünftigen Betriebssystemen festlegen.
+
+## <a name="see-also"></a>Siehe auch
+
+[EDITBIN-Optionen](../../build/reference/editbin-options.md)

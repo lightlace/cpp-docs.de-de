@@ -27,12 +27,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7305ff80c50c65e4b03a9879d39960e8c47786df
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d93ebf1bdc679c27d79392bf75576f47e8844a27
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027338"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709632"
 ---
 # <a name="errorcondition-class"></a>error_condition-Klasse
 
@@ -157,7 +157,7 @@ error_condition(_Enum _Errcode,
 
 Der erste Konstruktor speichert einen Fehlercodewert „Null“ und einen Zeiger auf [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-Der zweite Konstruktor speichert *Val* als Fehlercodewert und einen Zeiger auf [Error_category](http://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
+Der zweite Konstruktor speichert *Val* als Fehlercodewert und einen Zeiger auf [Error_category](../standard-library/error-category-class.md).
 
 Der dritte Konstruktor speichert `(value_type)_Errcode` als Fehlercodewert und einen Zeiger auf [generic_category](../standard-library/system-error-functions.md#generic_category).
 
@@ -252,7 +252,7 @@ template <class _Enum>
 error_condition(_Enum error,
     typename enable_if<is_error_condition_enum<_Enum>::value,
     error_condition>::type&
- operator=(Enum _Errcode);
+    operator=(Enum _Errcode);
 ```
 
 ### <a name="parameters"></a>Parameter

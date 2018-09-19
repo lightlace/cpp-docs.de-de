@@ -1,5 +1,5 @@
 ---
-title: Makros (C/C++) | Microsoft Docs
+title: Makros (C/C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6794cb56566e552a47f19d53f4092c1a9749969c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 459fe7eb55b20ff6c61e55f95577db256608423a
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850182"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541777"
 ---
 # <a name="macros-cc"></a>Makros (C/C++)
-Makros in allen Zeilen, die nicht Präprozessordirektiven sind vorverarbeitung erweitert (Linien, die keine **#** als erstes Zeichen nicht-Leerzeichen) und in Teilen der einige Direktiven, die nicht im Rahmen des übersprungen werden ein Bedingte Kompilierung. "Direktiven für die bedingte Kompilierung" ermöglichen es Ihnen, die Kompilierung von Teilen einer Quelldatei zu unterdrücken, indem sie einen konstanten Ausdruck oder einen Bezeichner testen, um zu bestimmen, welche Textblöcke an den Compiler übergeben werden und welche Textblöcke während des Präprozessorlaufs aus der Quelldatei entfernt werden .  
+Vorverarbeitung erweitert Makros in allen Zeilen, die keine Präprozessordirektiven sind (Zeilen, die keine **#** als erstes Zeichen ohne Leerzeichen) und in Teilen einiger Direktiven, die nicht als Teil des übersprungen werden ein für die bedingte Kompilierung. "Direktiven für die bedingte Kompilierung" ermöglichen es Ihnen, die Kompilierung von Teilen einer Quelldatei zu unterdrücken, indem sie einen konstanten Ausdruck oder einen Bezeichner testen, um zu bestimmen, welche Textblöcke an den Compiler übergeben werden und welche Textblöcke während des Präprozessorlaufs aus der Quelldatei entfernt werden .  
   
- Die `#define`-Direktive wird normalerweise verwendet, um aussagekräftige Bezeichner Konstanten, Schlüsselwörtern und häufig verwendeten Anweisungen oder Ausdrücken zuzuordnen. Bezeichner, die Konstanten darstellen, werden manchmal als "symbolische Konstanten "oder" Manifestkonstanten" bezeichnet. Bezeichner, die Anweisungen oder Ausdrücke darstellen, werden als "Makros" bezeichnet. In dieser Präprozessordokumentation wird nur der Begriff "Makro" verwendet.  
+Die `#define`-Direktive wird normalerweise verwendet, um aussagekräftige Bezeichner Konstanten, Schlüsselwörtern und häufig verwendeten Anweisungen oder Ausdrücken zuzuordnen. Bezeichner, die Konstanten darstellen, werden manchmal als "symbolische Konstanten "oder" Manifestkonstanten" bezeichnet. Bezeichner, die Anweisungen oder Ausdrücke darstellen, werden als "Makros" bezeichnet. In dieser Präprozessordokumentation wird nur der Begriff "Makro" verwendet.  
   
- Wenn der Name des Makros im Programmquelltext oder in den Argumenten von bestimmten anderen Präprozessorbefehlen erkannt wird, wird er als Aufruf dieses Makros behandelt. Der Makroname wird durch eine Kopie des Makrotexts ersetzt. Wenn das Makro Argumente akzeptiert, werden die tatsächlichen Argumente nach dem Makronamen durch formale Parameter im Makrotext ersetzt. Der Prozess des Ersetzens eines Makroaufrufs durch die verarbeitete Textkopie wird als "Erweiterung" des Makroaufrufs bezeichnet.  
+Wenn der Name des Makros im Programmquelltext oder in den Argumenten von bestimmten anderen Präprozessorbefehlen erkannt wird, wird er als Aufruf dieses Makros behandelt. Der Makroname wird durch eine Kopie des Makrotexts ersetzt. Wenn das Makro Argumente akzeptiert, werden die tatsächlichen Argumente nach dem Makronamen durch formale Parameter im Makrotext ersetzt. Der Prozess des Ersetzens eines Makroaufrufs durch die verarbeitete Textkopie wird als "Erweiterung" des Makroaufrufs bezeichnet.  
   
- Praktisch gibt es zwei Arten von Makros. "Object-like"-Makros akzeptieren keine Argumente, während "function-like"-Makros definiert werden können, um Argumente zu akzeptieren, damit sie wie Funktionsaufrufe aussehen und wie solche reagieren. Da Makros keine tatsächlichen Funktionsaufrufe generieren, können Sie manchmal erreichen, dass Programme schneller ausgeführt werden, indem Sie Funktionsaufrufe durch Makros ersetzen. (In C++ sind Inlinefunktionen häufig eine bevorzugte Methode.) Makros können jedoch Probleme verursachen, wenn Sie sie nicht sorgfältig definieren und verwenden. Möglicherweise müssen Sie Klammern bei Makrodefinitionen mit Argumenten verwenden, um die gewünschte Rangfolge in einem Ausdruck zu erhalten. Makros behandeln außerdem Ausdrücke mit Nebeneffekte möglicherweise nicht ordnungsgemäß. Finden Sie unter der `getrandom` Beispiel in [der #define-Direktive](../preprocessor/hash-define-directive-c-cpp.md) für Weitere Informationen.  
+Praktisch gibt es zwei Arten von Makros. "Object-like"-Makros akzeptieren keine Argumente, während "function-like"-Makros definiert werden können, um Argumente zu akzeptieren, damit sie wie Funktionsaufrufe aussehen und wie solche reagieren. Da Makros keine tatsächlichen Funktionsaufrufe generieren, können Sie manchmal erreichen, dass Programme schneller ausgeführt werden, indem Sie Funktionsaufrufe durch Makros ersetzen. (In C++ sind Inlinefunktionen häufig eine bevorzugte Methode.) Makros können jedoch Probleme verursachen, wenn Sie sie nicht sorgfältig definieren und verwenden. Möglicherweise müssen Sie Klammern bei Makrodefinitionen mit Argumenten verwenden, um die gewünschte Rangfolge in einem Ausdruck zu erhalten. Makros behandeln außerdem Ausdrücke mit Nebeneffekte möglicherweise nicht ordnungsgemäß. Finden Sie unter den `getrandom` Beispiel [der #define-Anweisung](../preprocessor/hash-define-directive-c-cpp.md) für Weitere Informationen.  
   
- Sobald Sie ein Makro definiert haben, können Sie es nicht mit einem anderen Wert neu definieren, ohne zuerst die ursprüngliche Definition zu entfernen. Sie können jedoch das Makro mit genau derselben Definition neu definieren. Daher kann dieselbe Definition in einem Programm mehrmals vorkommen.  
+Sobald Sie ein Makro definiert haben, können Sie es nicht mit einem anderen Wert neu definieren, ohne zuerst die ursprüngliche Definition zu entfernen. Sie können jedoch das Makro mit genau derselben Definition neu definieren. Daher kann dieselbe Definition in einem Programm mehrmals vorkommen.  
   
- Das #**Undef** -Direktive entfernt die Definition eines Makros. Sobald Sie die Definition entfernt haben, können Sie das Makro mit einem anderen Wert neu definieren. [Die #define-Direktive](../preprocessor/hash-define-directive-c-cpp.md) und [#undef-Direktive](../preprocessor/hash-undef-directive-c-cpp.md) erläutern die `#define` und `#undef` Direktiven bzw.  
+Die `#undef` -Anweisung entfernt die Definition eines Makros. Sobald Sie die Definition entfernt haben, können Sie das Makro mit einem anderen Wert neu definieren. [Die #define-Anweisung](../preprocessor/hash-define-directive-c-cpp.md) und [#undef-Direktive](../preprocessor/hash-undef-directive-c-cpp.md) erläutern die `#define` und `#undef` Anweisungen bzw.  
   
- Weitere Informationen finden Sie unter  
+Weitere Informationen finden Sie unter  
   
--   [Makros und C++](../preprocessor/macros-and-cpp.md)  
+- [Makros und C++](../preprocessor/macros-and-cpp.md)  
   
--   [Variadic-Makros](../preprocessor/variadic-macros.md)  
+- [Variadic-Makros](../preprocessor/variadic-macros.md)  
   
--   [Vordefinierte Makros](../preprocessor/predefined-macros.md)  
+- [Vordefinierte Makros](../preprocessor/predefined-macros.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [C/C++-Präprozessorreferenz](../preprocessor/c-cpp-preprocessor-reference.md)
+## <a name="see-also"></a>Siehe auch
+
+[C/C++-Präprozessorreferenz](../preprocessor/c-cpp-preprocessor-reference.md)

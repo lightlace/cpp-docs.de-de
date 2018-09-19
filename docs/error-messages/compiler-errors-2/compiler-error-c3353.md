@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3353 | Microsoft Docs
+title: Compilerfehler C3353 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47c9d1dd8c21e56613b9da00fc2bf4f7fbeafcca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 63316a5a74c3981ec0f68d949eba654f8d6bbfef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253904"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110197"
 ---
 # <a name="compiler-error-c3353"></a>Compilerfehler C3353
-'Delegat': Ein Delegat kann nur von einer globalen Funktion oder einer Memberfunktion eines verwalteten oder WinRT-Typs erstellt werden.  
-  
- Delegaten, deklariert, wobei die [Delegieren](../../windows/delegate-cpp-component-extensions.md) -Schlüsselwort verwenden, können nur im globalen Gültigkeitsbereich deklariert werden.  
-  
- Im folgenden Beispiel wird C3353 generiert:  
-  
-```  
-// C3353.cpp  
-// compile with: /clr  
-delegate int f;   // C3353  
+
+'Delegat': Ein Delegat kann nur von einer globalen Funktion oder einer Memberfunktion eines verwalteten oder WinRT-Typs erstellt werden.
+
+Delegaten, mit dem deklariert die [Delegieren](../../windows/delegate-cpp-component-extensions.md) Schlüsselwort kann nur im globalen Gültigkeitsbereich deklariert werden.
+
+Im folgenden Beispiel wird C3353 generiert:
+
+```
+// C3353.cpp
+// compile with: /clr
+delegate int f;   // C3353
 ```

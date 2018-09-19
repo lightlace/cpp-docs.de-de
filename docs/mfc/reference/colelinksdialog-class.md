@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5dd17c0541b573cba40146c55b46d14143209c87
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 3db235771156380c5f1b22af225d7aacbc4989b3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853877"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203504"
 ---
 # <a name="colelinksdialog-class"></a>COleLinksDialog-Klasse
 Wird für das OLE-Dialogfeld "Verknüpfungen bearbeiten" verwendet.  
@@ -64,7 +64,7 @@ class COleLinksDialog : public COleDialog
 > [!NOTE]
 >  Vom Assistenten generierten Container-Anwendungscode verwendet diese Klasse.  
   
- Weitere Informationen finden Sie unter den [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUIEDITLINKS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa) Struktur im Windows SDK.  
   
  Weitere Informationen zu OLE-spezifische Dialogfelder, finden Sie im Artikel [Dialogfelder in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -100,7 +100,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL, wenn der Benutzer das Dialogfeld abgebrochen hat.  
   
-- IDABORT, wenn ein Fehler aufgetreten. Wenn IDABORT zurückgegeben wird, rufen Sie die `COleDialog::GetLastError` Memberfunktion, um weitere Informationen zu den Typ des Fehlers zu erhalten, die aufgetreten sind. Eine Liste der möglichen Fehler, finden Sie unter den [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) -Funktion in das Windows SDK.  
+- IDABORT, wenn ein Fehler aufgetreten. Wenn IDABORT zurückgegeben wird, rufen Sie die `COleDialog::GetLastError` Memberfunktion, um weitere Informationen zu den Typ des Fehlers zu erhalten, die aufgetreten sind. Eine Liste der möglichen Fehler, finden Sie unter den [OleUIEditLinks](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa) -Funktion in das Windows SDK.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie die verschiedenen Dialogfeldsteuerelemente zu initialisieren, indem Sie Mitglieder festlegen möchten die [M_el](#m_el) Struktur die, Sie tun es vor dem Aufruf `DoModal`, allerdings nachdem das Dialogfeldobjekt erstellt wird.  
@@ -142,7 +142,7 @@ OLEUIEDITLINKS m_el;
 ### <a name="remarks"></a>Hinweise  
  Mitglieder dieser Struktur können entweder direkt oder über Memberfunktionen geändert werden.  
   
- Weitere Informationen finden Sie unter den [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUIEDITLINKS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa) Struktur im Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [COleDialog-Klasse](../../mfc/reference/coledialog-class.md)   

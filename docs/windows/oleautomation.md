@@ -1,5 +1,5 @@
 ---
-title: Oleautomation | Microsoft Docs
+title: Oleautomation | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,43 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8093a36199eeddf2a96ae0830c56ac0acde51cfe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ea14cd3e8c1eebbdbcad3a21d64652acee635407
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882289"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219938"
 ---
 # <a name="oleautomation"></a>oleautomation
-Gibt an, dass eine Schnittstelle mit der Automatisierung kompatibel ist.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-[oleautomation]  
-  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Die **Oleautomation** C++-Attribut hat die gleiche Funktionalität wie die [Oleautomation](http://msdn.microsoft.com/library/windows/desktop/aa367129) MIDL-Attribut.  
-  
-## <a name="example"></a>Beispiel  
- Siehe Beispiele für ["DefaultValue"](../windows/defaultvalue.md) und [nonextensible](../windows/nonextensible.md) für ein Beispiel für die Verwendung von **Oleautomation**.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-### <a name="attribute-context"></a>Attributkontext  
-  
-|||  
-|-|-|  
-|**Betrifft**|`interface`|  
-|**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Keiner|  
-|**Ungültige Attribute**|**dispinterface**|  
-  
- Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [IDL-Attribute](../windows/idl-attributes.md)   
- [Schnittstellenattribut](../windows/interface-attributes.md)   
+
+Gibt an, dass eine Schnittstelle mit der Automatisierung kompatibel ist.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+[oleautomation]
+```
+
+## <a name="remarks"></a>Hinweise
+
+Die **Oleautomation** C++-Attribut hat die gleiche Funktionalität wie die [Oleautomation](/windows/desktop/Midl/oleautomation) MIDL-Attribut.
+
+## <a name="example"></a>Beispiel
+
+Finden Sie unter den Beispielen für [Defaultvalue](../windows/defaultvalue.md) und [nonextensible](../windows/nonextensible.md) für ein Beispiel für die Verwendung von **Oleautomation**.
+
+## <a name="requirements"></a>Anforderungen
+
+### <a name="attribute-context"></a>Attributkontext
+
+|||
+|-|-|
+|**Betrifft**|**interface**|
+|**Wiederholbar**|Nein|
+|**Erforderliche Attribute**|Keiner|
+|**Ungültige Attribute**|**dispinterface**|
+
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[IDL-Attribute](../windows/idl-attributes.md)  
+[Schnittstellenattribut](../windows/interface-attributes.md)  

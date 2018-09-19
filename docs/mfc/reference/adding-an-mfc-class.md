@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b09ed632f22ec78e6b2fd8d5bf0a64cec1512ba8
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 39d6d1a1efc6f19662f9d809e3a353f61823a680
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028121"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682810"
 ---
 # <a name="adding-an-mfc-class"></a>Hinzufügen einer MFC-Klasse
-Verwenden Sie zum Hinzufügen von Klassen, die von Microsoft Foundation Class (MFC)-Library-Klassen zu Ihrem Projekt die **Klasse hinzufügen** Befehlszeile verfügbaren Transaktionsbefehl [Klassenansicht](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925). Geben Sie den Namen der neuen Klasse, wählen Sie die Basisklasse aus, und wählen Sie die ID im Dialogfeld mit dem sie verbunden (sofern vorhanden) ist. Der Code-Assistenten erstellt wird, eine Headerdatei und eine Implementierungsdatei und fügt sie dem Projekt hinzu.  
+Verwenden Sie zum Hinzufügen von Klassen, die von Microsoft Foundation Class (MFC)-Library-Klassen zu Ihrem Projekt die **Klasse hinzufügen** Befehlszeile verfügbaren Transaktionsbefehl [Klassenansicht](/visualstudio/ide/viewing-the-structure-of-code). Geben Sie den Namen der neuen Klasse, wählen Sie die Basisklasse aus, und wählen Sie die ID im Dialogfeld mit dem sie verbunden (sofern vorhanden) ist. Der Code-Assistenten erstellt wird, eine Headerdatei und eine Implementierungsdatei und fügt sie dem Projekt hinzu.  
   
 > [!NOTE]
 >  Sie können MFC-Klassen einer ATL-COM-Anwendung hinzufügen, wenn Sie anfänglich [erstellt die Anwendung mit MFC-Unterstützung](../../atl/reference/mfc-support-in-atl-projects.md). Sie können auch eine MFC-Klassen für Win32-Projekte hinzufügen, die MFC-Unterstützung verfügen.  

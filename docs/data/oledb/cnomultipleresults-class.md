@@ -1,5 +1,5 @@
 ---
-title: CNoMultipleResults-Klasse | Microsoft Docs
+title: CNoMultipleResults-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c2e588021b1600b1b3ac6e04f91ab07649755a2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67658f6edadd7723789288ab268b97cecdd611d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096825"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017352"
 ---
 # <a name="cnomultipleresults-class"></a>CNoMultipleResults-Klasse
-Als ein Vorlagenargument verwendet (*TMultiple*) zu [CCommand](../../data/oledb/ccommand-class.md) einen optimierten-Befehl zu erstellen, die ein einzelnes Ergebnis behandelt.  
+
+Als ein Vorlagenargument verwendet (*TMultiple*) zu [CCommand](../../data/oledb/ccommand-class.md) einen optimierten-Befehl zu erstellen, die ein einzelnes Ergebnis verarbeitet.  
   
 ## <a name="syntax"></a>Syntax
 
@@ -36,11 +37,14 @@ class CNoMultipleResults
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Sie einen Befehl aus, um mehrere Resultsets verarbeiten möchten, verwenden [CMultipleResults](../../data/oledb/cmultipleresults-class.md) stattdessen.  
+
+Wenn Sie einen Befehl aus, um mehrere Resultsets verarbeiten möchten, verwenden Sie [CMultipleResults](../../data/oledb/cmultipleresults-class.md) stattdessen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** atldbcli.h  
+
+**Header:** atldbcli.h  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

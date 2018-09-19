@@ -1,5 +1,5 @@
 ---
-title: __stosq | Microsoft Docs
+title: __stosq | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6afd5349595f849e8b7418fa1efb628c200b4b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03c38c5328500394871bee937cbc05395eb44cd5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332025"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715506"
 ---
 # <a name="stosq"></a>__stosq
 **Microsoft-spezifisch**  
@@ -41,14 +41,14 @@ void __stosb(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [out] `Dest`  
- Das Ziel des Vorgangs.  
+*dest*<br/>
+[out] Das Ziel des Vorgangs.  
   
- [in] `Data`  
- Die Daten zu speichern.  
+*Data*<br/>
+[in] Die zu speichernden Daten.  
   
- [in] `Count`  
- Die Länge des Blocks Quadwörter schreiben.  
+*Anzahl*<br/>
+[in] Die Länge des Blocks des Vierfachwörtern schreiben.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -59,7 +59,7 @@ void __stosb(
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Das Ergebnis ist, die die Vierfachwort `Data` wird geschrieben, in einen Block von `Count` Quadwort der `Dest` Zeichenfolge.  
+ Das Ergebnis ist, die die Vierfachwort `Data` wird geschrieben, in einen Block von `Count` Vierfachwörtern in die `Dest` Zeichenfolge.  
   
  Diese Routine ist nur als systeminterne Funktion verfügbar.  
   

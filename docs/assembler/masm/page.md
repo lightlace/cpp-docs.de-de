@@ -1,7 +1,7 @@
 ---
-title: SEITE "| Microsoft Docs
+title: SEITE | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 994a542b543fd58fa970c373243f18403b167c1d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: cc2057a850d050795ec605eca8e31b69a0086169
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057993"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692479"
 ---
 # <a name="page"></a>PAGE
-Die erste Anweisung legt Zeile *Länge* und Zeichen *Breite* die Programm-Auflistung. Wenn keine Argumente angegeben werden, generiert einen Seitenumbruch. Die zweite Anweisung erhöht die Anzahl der Abschnitt und die Seitenzahl auf 1 zurückgesetzt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-      PAGE [[[[length]], width]]  
-PAGE +  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+
+Die erste Anweisung legt die Zeile *Länge* und Zeichen *Breite* neben dem Eintrag des Programms. Wenn keine Argumente angegeben sind, generiert einen Seitenumbruch. Die zweite Anweisung inkrementiert die Anzahl der im Abschnitt und die Seitenzahl auf 1 zurückgesetzt.
+
+## <a name="syntax"></a>Syntax
+
+> Seite "[[*Länge*]] [[, *Breite*]]<br/><br/>
+> SEITE +
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Wertklassen und Strukturen (C + c++ / CX) | Microsoft Docs
+title: Wertklassen und Strukturen (C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -8,153 +8,155 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b623e706fae0dfd8fca6b9aaf217e76b27dbbda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d3e054bfbfe64630c426ff82bf0d76091c7e60c7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090712"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109031"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Wertklassen und Strukturen (C++/CX)
-Ein *wertstruktur* oder *-Wertklasse* ist ein Windows-Runtime-kompatiblen POD ("plain old Data Structure"). Sie verfügt über eine feste Größe und besteht nur aus Feldern. Anders als eine Verweisklasse hat sie keine Eigenschaften.  
-  
- Die folgenden Beispiele zeigen, wie Wertstrukturen deklariert und initialisiert werden.  
-  
-```  
-  
-// in mainpage.xaml.h:  
-    value struct TestStruct  
-    {  
-        Platform::String^ str;  
-        int i;  
-    };  
-  
-    value struct TestStruct2  
-    {  
-        TestStruct ts;  
-        Platform::String^ str;  
-        int i;  
-    };  
-  
-// in mainpage.cpp:  
-    // Initialize a value struct with an int and String  
-    TestStruct ts = {"I am a TestStruct", 1};  
-  
-    // Initialize a value struct that contains  
-    // another value struct, an int and a String  
-    TestStruct2 ts2 = {{"I am a TestStruct", 1}, "I am a TestStruct2", 2};  
-  
-    // Initialize value struct members individually.  
-    TestStruct ts3;   
-    ts3.i = 108;  
-    ts3.str = "Another way to init a value struct.";  
-  
-```  
-  
- Wenn eine Variable eines Werttyps einer anderen Variablen zugewiesen wird, wird der Wert kopiert, damit jede der beiden Variablen eine eigene Kopie der Daten besitzt. Eine *Wertstruktur* ist eine Struktur fester Größe, die nur öffentliche Datenfelder enthält und durch das Schlüsselwort `value struct` deklariert wird.  
-  
- Eine *Wertklasse* entspricht `value struct` , außer dass den zugehörigen Felder explizit öffentliche Zugreifbarkeit zugeordnet werden muss. Sie wird durch das Schlüsselwort `value class` deklariert.  
-  
- Eine wertstruktur oder Wertklasse kann als Felder nur grundlegende numerische Typen, Enumerationsklassen, enthalten `Platform::String^`, oder [ibox \<T > ^](../cppcx/platform-ibox-interface.md) wobei "T" ist eine Klasse der numerischen Typ oder eine Enumerationsklasse oder eine Wertklasse oder eine Struktur. Ein `IBox<T>^` -Feld kann den Wert `nullptr`haben. Auf diese Weise implementiert C++ das Konzept der auf *NULL festlegbaren Werttypen*.  
-  
- Eine Wertklasse oder Wertstruktur, die einen `Platform::String^` - oder `IBox<T>^` -Typ als Member enthält, das nicht `memcpy`-fähig ist.  
-  
- Da alle Member einer `value class` oder `value struct` öffentlich sind und in Metadaten ausgegeben werden, sind C++-Standardtypen als Member nicht zulässig. Dies unterscheidet sich von Verweisklassen, die `private` oder `internal` C++-Standardtypen enthalten können.  
-  
- Im folgenden Codefragment werden die `Coordinates` - und `City` -Typen als Wertstrukturen deklariert. Beachten Sie, dass einer der `City` -Datenmember ein `GeoCoordinates` -Typ ist. Eine `value struct` kann andere Wertstrukturen als Member enthalten.  
-  
- [!code-cpp[cx_classes#07](../cppcx/codesnippet/CPP/classesstructs/class1.h#07)]  
-  
-## <a name="parameter-passing-for-value-types"></a>Parameterübergabe für Werttypen  
- Wenn Sie über einen Werttyp als Funktions- oder Methodenparameter verfügen, wird er normalerweise als Wert übergeben. Bei größeren Objekten kann dies zu Leistungsproblemen führen. In Visual Studio 2013 und früher werden Werttypen in C++/CX immer als Wert übergeben. In Visual Studio 2015 und höher können Werttypen als Verweis oder als Wert übergeben werden.  
-  
- Verwenden Sie zum Deklarieren eines Parameters, der einen Werttyp als Wert übergibt, Code wie den folgenden:  
-  
-```  
-void Method1(MyValueType obj);  
-```  
-  
- Um einen Parameter zu deklarieren, der einen Werttyp als Verweis übergibt, verwenden Sie das Verweissymbol (&), wie im Folgenden dargestellt:  
-  
-```  
-void Method2(MyValueType& obj);  
-```  
-  
- Der Typ in „Method2“ ist ein Verweis auf „MyValueType“ und funktioniert in der gleichen Weise wie ein Verweistyp in standardmäßigem C++.  
-  
- Wenn Sie „Method1“ von einer anderen Sprache, wie etwa C#, aus aufrufen, brauchen Sie das Schlüsselwort `ref` oder `out` nicht zu verwenden. Wenn Sie „Method2“ aufrufen, verwenden Sie das `ref` -Schlüsselwort.  
-  
-```  
-Method2(ref obj);  
-```  
-  
- Sie können auch ein Zeigersymbol (*) verwenden, um einen Werttyp als Verweis zu übergeben. Das Verhalten in Bezug auf Aufrufer in anderen Sprachen ist identisch (Aufrufer in C# verwenden das `ref` -Schlüsselwort ), aber in der Methode ist der Typ ein Zeiger auf den Werttyp.  
-  
-## <a name="nullable-value-types"></a>Auf NULL festlegbare Werttypen  
- Wie bereits erwähnt, eine Wertklasse oder wertstruktur können eine Feld des Typs [ibox\<T > ^](../cppcx/platform-ibox-interface.md)– z. B. `IBox<int>^`. Ein solches Feld kann jeden beliebigen numerischen Wert haben, der für den Typ `int` gültig ist, oder er kann den Wert `nullptr`haben. Sie können ein auf NULL festlegbares Feld als Argument an eine Methode, deren Parameter als optional deklariert ist, oder an eine beliebige andere Stelle übergeben, für die ein Werttyp keinen Wert haben muss.  
-  
- Im folgenden Beispiel wird veranschaulicht, wie eine Struktur mit einem auf NULL festlegbaren Feld initialisiert wird.  
-  
-```  
-public value struct Student  
-{  
-    Platform::String^ Name;  
-    int EnrollmentYear;  
-    Platform::IBox<int>^ GraduationYear; // Null if not yet graduated.   
-};  
-//To create a Student struct, one must populate the nullable type.   
-MainPage::MainPage()  
-{  
-    InitializeComponent();  
-  
-    Student A;  
-    A.Name = "Alice";  
-    A.EnrollmentYear = 2008;  
-    A.GraduationYear = ref new Platform::Box<int>(2012);  
-  
-    Student B;  
-    B.Name = "Bob";  
-    B.EnrollmentYear = 2011;  
-    B.GraduationYear = nullptr;  
-  
-    IsCurrentlyEnrolled(A);  
-    IsCurrentlyEnrolled(B);  
-}  
-bool MainPage::IsCurrentlyEnrolled(Student s)  
-{  
-    if (s.GraduationYear == nullptr)  
-    {  
-        return true;  
-    }  
-    return false;  
-}  
-  
-```  
-  
- Eine Wertstruktur selbst kann genauso auf NULL festgelegt werden, wie hier dargestellt:  
-  
-```  
-  
-public value struct MyStruct  
-{  
-public:  
-    int i;  
-    Platform::String^ s;  
-};  
-  
-public ref class MyClass sealed  
-{  
-public:  
-    property Platform::IBox<MyStruct>^ myNullableStruct;  
-};  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Typsystem (C++/CX)](../cppcx/type-system-c-cx.md)   
- [Visual C++-Sprachreferenz](../cppcx/visual-c-language-reference-c-cx.md)   
- [Namespaceverweis](../cppcx/namespaces-reference-c-cx.md)   
- [Verweisklassen und Strukturen (C++-CX)](../cppcx/ref-classes-and-structs-c-cx.md)
+
+Ein *wertstruktur* oder *Wertklasse* ist eine Windows-Runtime-kompatiblen POD ("plain old Data Structure). Sie verfügt über eine feste Größe und besteht nur aus Feldern. Anders als eine Verweisklasse hat sie keine Eigenschaften.
+
+Die folgenden Beispiele zeigen, wie Wertstrukturen deklariert und initialisiert werden.
+
+```
+
+// in mainpage.xaml.h:
+    value struct TestStruct
+    {
+        Platform::String^ str;
+        int i;
+    };
+
+    value struct TestStruct2
+    {
+        TestStruct ts;
+        Platform::String^ str;
+        int i;
+    };
+
+// in mainpage.cpp:
+    // Initialize a value struct with an int and String
+    TestStruct ts = {"I am a TestStruct", 1};
+
+    // Initialize a value struct that contains
+    // another value struct, an int and a String
+    TestStruct2 ts2 = {{"I am a TestStruct", 1}, "I am a TestStruct2", 2};
+
+    // Initialize value struct members individually.
+    TestStruct ts3;
+    ts3.i = 108;
+    ts3.str = "Another way to init a value struct.";
+```
+
+Wenn eine Variable eines Werttyps einer anderen Variablen zugewiesen wird, wird der Wert kopiert, damit jede der beiden Variablen eine eigene Kopie der Daten besitzt. Eine *Wertstruktur* ist eine Struktur fester Größe, die nur öffentliche Datenfelder enthält und durch das Schlüsselwort `value struct` deklariert wird.
+
+Eine *Wertklasse* entspricht `value struct` , außer dass den zugehörigen Felder explizit öffentliche Zugreifbarkeit zugeordnet werden muss. Sie wird durch das Schlüsselwort `value class` deklariert.
+
+Eine wertstruktur oder Wertklasse kann als Felder nur grundlegende numerische Typen, Enumerationsklassen, enthalten `Platform::String^`, oder [Platform:: ibox \<T > ^](../cppcx/platform-ibox-interface.md) wobei T ist eine Klasse der numerischen Typ oder eine Enumerationsklasse oder eine Wertklasse oder eine Struktur. Ein `IBox<T>^` -Feld kann den Wert `nullptr`haben. Auf diese Weise implementiert C++ das Konzept der auf *NULL festlegbaren Werttypen*.
+
+Eine Wertklasse oder Wertstruktur, die einen `Platform::String^` - oder `IBox<T>^` -Typ als Member enthält, das nicht `memcpy`-fähig ist.
+
+Da alle Member einer `value class` oder `value struct` öffentlich sind und in Metadaten ausgegeben werden, sind C++-Standardtypen als Member nicht zulässig. Dies unterscheidet sich von Verweisklassen, die `private` oder `internal` C++-Standardtypen enthalten können.
+
+Im folgenden Codefragment werden die `Coordinates` - und `City` -Typen als Wertstrukturen deklariert. Beachten Sie, dass einer der `City` -Datenmember ein `GeoCoordinates` -Typ ist. Eine `value struct` kann andere Wertstrukturen als Member enthalten.
+
+[!code-cpp[cx_classes#07](../cppcx/codesnippet/CPP/classesstructs/class1.h#07)]
+
+## <a name="parameter-passing-for-value-types"></a>Parameterübergabe für Werttypen
+
+Wenn Sie über einen Werttyp als Funktions- oder Methodenparameter verfügen, wird er normalerweise als Wert übergeben. Bei größeren Objekten kann dies zu Leistungsproblemen führen. In Visual Studio 2013 und früher werden Werttypen in C++/CX immer als Wert übergeben. In Visual Studio 2015 und höher können Werttypen als Verweis oder als Wert übergeben werden.
+
+Verwenden Sie zum Deklarieren eines Parameters, der einen Werttyp als Wert übergibt, Code wie den folgenden:
+
+```
+void Method1(MyValueType obj);
+```
+
+Um einen Parameter zu deklarieren, der einen Werttyp als Verweis übergibt, verwenden Sie das Verweissymbol (&), wie im Folgenden dargestellt:
+
+```
+void Method2(MyValueType& obj);
+```
+
+Der Typ in „Method2“ ist ein Verweis auf „MyValueType“ und funktioniert in der gleichen Weise wie ein Verweistyp in standardmäßigem C++.
+
+Wenn Sie „Method1“ von einer anderen Sprache, wie etwa C#, aus aufrufen, brauchen Sie das Schlüsselwort `ref` oder `out` nicht zu verwenden. Wenn Sie „Method2“ aufrufen, verwenden Sie das `ref` -Schlüsselwort.
+
+```
+Method2(ref obj);
+```
+
+Sie können auch ein Zeigersymbol (*) verwenden, um einen Werttyp als Verweis zu übergeben. Das Verhalten in Bezug auf Aufrufer in anderen Sprachen ist identisch (Aufrufer in C# verwenden das `ref` -Schlüsselwort ), aber in der Methode ist der Typ ein Zeiger auf den Werttyp.
+
+## <a name="nullable-value-types"></a>Auf NULL festlegbare Werttypen
+
+Wie bereits erwähnt, eine Wertklasse oder wertstruktur haben ein Feld vom Typ [Platform:: ibox\<T > ^](../cppcx/platform-ibox-interface.md)– z. B. `IBox<int>^`. Ein solches Feld kann jeden beliebigen numerischen Wert haben, der für den Typ `int` gültig ist, oder er kann den Wert `nullptr`haben. Sie können ein auf NULL festlegbares Feld als Argument an eine Methode, deren Parameter als optional deklariert ist, oder an eine beliebige andere Stelle übergeben, für die ein Werttyp keinen Wert haben muss.
+
+Im folgenden Beispiel wird veranschaulicht, wie eine Struktur mit einem auf NULL festlegbaren Feld initialisiert wird.
+
+```
+public value struct Student
+{
+    Platform::String^ Name;
+    int EnrollmentYear;
+    Platform::IBox<int>^ GraduationYear; // Null if not yet graduated.
+};
+//To create a Student struct, one must populate the nullable type.
+MainPage::MainPage()
+{
+    InitializeComponent();
+
+    Student A;
+    A.Name = "Alice";
+    A.EnrollmentYear = 2008;
+    A.GraduationYear = ref new Platform::Box<int>(2012);
+
+    Student B;
+    B.Name = "Bob";
+    B.EnrollmentYear = 2011;
+    B.GraduationYear = nullptr;
+
+    IsCurrentlyEnrolled(A);
+    IsCurrentlyEnrolled(B);
+}
+bool MainPage::IsCurrentlyEnrolled(Student s)
+{
+    if (s.GraduationYear == nullptr)
+    {
+        return true;
+    }
+    return false;
+}
+```
+
+Eine Wertstruktur selbst kann genauso auf NULL festgelegt werden, wie hier dargestellt:
+
+```
+
+public value struct MyStruct
+{
+public:
+    int i;
+    Platform::String^ s;
+};
+
+public ref class MyClass sealed
+{
+public:
+    property Platform::IBox<MyStruct>^ myNullableStruct;
+};
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Typsystem (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
+[Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Namespaceverweis](../cppcx/namespaces-reference-c-cx.md)<br/>
+[Verweisklassen und Strukturen (C++-CX)](../cppcx/ref-classes-and-structs-c-cx.md)

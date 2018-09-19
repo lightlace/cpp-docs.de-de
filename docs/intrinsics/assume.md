@@ -1,5 +1,5 @@
 ---
-title: __assume | Microsoft Docs
+title: __assume | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec83775a007e3a07582f218c5588ae4fe7909b20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0cbb7f3bc7263165a988a910f0311d3d2c368e0c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340566"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104321"
 ---
 # <a name="assume"></a>__assume
 **Microsoft-spezifisch**  
@@ -38,8 +38,8 @@ __assume(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `expression`  
- Ein beliebiger Ausdruck, von dem angenommen wird, dass er "true" ergibt.  
+*Ausdruck*<br/>
+Ein beliebiger Ausdruck, von dem angenommen wird, dass er "true" ergibt.  
   
 ## <a name="remarks"></a>Hinweise  
  Der Optimierer geht davon aus, dass die durch `expression` dargestellte Bedingung zu dem Zeitpunkt "true" ist, zu dem das Schlüsselwort angezeigt wird, und "true" bleibt, bis `expression` geändert wird (z. B. durch die Zuweisung zu einer Variablen). Durch die selektive Verwendung von Hinweisen, die von `__assume` an den Optimierer übergeben werden, kann die Optimierung verbessert werden.  
@@ -59,7 +59,7 @@ __assume(
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__assume`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__assume`|X86, ARM, x64|  
   
 ## <a name="example"></a>Beispiel  
   

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 454507a3a3f33b43af0e50c25dab6703aa75a56b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 36aad914fc9552cea06eabd0898fe33b9b09481e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332779"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605830"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe eines Setup-Projekts
 In diesem Artikel wird beschrieben, wie Sie ein Setup-Projekt verwenden, um eine Visual C++-Anwendung bereitzustellen.  
@@ -27,7 +27,7 @@ In diesem Artikel wird beschrieben, wie Sie ein Setup-Projekt verwenden, um eine
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:  
   
--   Ein Computer, auf dem [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] installiert ist.  
+-   Ein Computer, auf dem Visual Studio 2012 installiert ist.  
   
 -   Einen zusätzlichen Computer, auf dem keine Visual C++-Bibliotheken vorhanden sind.  
   

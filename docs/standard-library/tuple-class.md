@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3735b6cd8b0397ae1e1092fdb37ba094248ab507
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4ea4a0c17422823f306942bc7d02514456bf8310
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963925"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712087"
 ---
 # <a name="tuple-class"></a>Tupelklasse
 
@@ -52,12 +52,12 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*TN*  
- Der Typ des N-ten Tupelelements.
+*TN*<br/>
+Der Typ des N-ten Tupelelements.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt ein Objekt, das N-Objekte des Typs speichert `T1`, `T2`,..., `TN`, bzw., in denen where `0 <= N <= Nmax`. Das Ausmaß der eine tupelinstanz `tuple<T1, T2, ..., TN>` ist die Anzahl `N` der dazugehörigen Vorlagenargumente. Der Index des dem Vorlagenargument `Ti` und des entsprechenden gespeicherten Werts des betreffenden Typs ist `i - 1`. Während wir die Typen von 1 bis N in dieser Dokumentation Zahl ist, Werte der entsprechende Index folglich reichen von 0 bis N - 1.
+Die Vorlagenklasse beschreibt ein Objekt, das N-Objekte des Typs speichert `T1`, `T2`,..., `TN`, wobei `0 <= N <= Nmax`. Das Ausmaß der eine tupelinstanz `tuple<T1, T2, ..., TN>` ist die Anzahl `N` der dazugehörigen Vorlagenargumente. Der Index des dem Vorlagenargument `Ti` und des entsprechenden gespeicherten Werts des betreffenden Typs ist `i - 1`. Während wir die Typen von 1 bis N in dieser Dokumentation Zahl ist, Werte der entsprechende Index folglich reichen von 0 bis N - 1.
 
 ## <a name="example"></a>Beispiel
 
@@ -154,11 +154,11 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parameter
 
-*AUFHEBEN*  
- Der Typ des N-ten kopierten Tupelelements.
+*AUFHEBEN*<br/>
+Der Typ des N-ten kopierten Tupelelements.
 
-*right*  
- Das Tupel, aus dem kopiert werden soll.
+*right*<br/>
+Das Tupel, aus dem kopiert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -263,11 +263,11 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parameter
 
-*AUFHEBEN*  
- Der Typ des N-ten kopierten Tupelelements.
+*AUFHEBEN*<br/>
+Der Typ des N-ten kopierten Tupelelements.
 
-*right*  
- Das Tupel, aus dem kopiert werden soll.
+*right*<br/>
+Das Tupel, aus dem kopiert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 

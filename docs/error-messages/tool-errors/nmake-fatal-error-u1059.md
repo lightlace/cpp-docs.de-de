@@ -1,7 +1,7 @@
 ---
-title: 'NMAKE: Schwerwiegender Fehler U1059 | Microsoft Docs'
+title: 'NMAKE: Schwerwiegender Fehler U1059 | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6eb038befdb7c587c6fe2a734003abba585c3e2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b54919398c757bfe05f747ff57341f31decfc61
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320702"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200789"
 ---
 # <a name="nmake-fatal-error-u1059"></a>NMAKE: Schwerwiegender Fehler U1059
-Syntaxfehler: '}' fehlt in der abhängigen  
-  
- Ein Suchpfad für eine abhängige Datei wurde falsch angegeben. Entweder ist ein Leerzeichen im Pfad oder die schließende geschweifte Klammer (**}**) wurde ausgelassen.  
-  
- Die Syntax für eine Verzeichnisangabe für eine abhängige Datei  
-  
- **{**   
- ***Verzeichnisse* } abhängige**  
-  
- wobei `directories` gibt einen oder mehrere Pfade, jeweils durch ein Semikolon getrennt (**;**). Es sind keine Leerzeichen zulässig.  
-  
- Wenn einem Suchpfad ganz oder teilweise von einem Makro ersetzt wird, stellen Sie sicher, dass keine Leerzeichen in der makroerweiterung vorhanden sind.
+
+> Syntaxfehler: '}' fehlt im abhängigen Element
+
+Ein Suchpfad für eine abhängige Datei wurde falsch angegeben. Entweder ist ein Leerzeichen im Pfad oder die schließende geschweifte Klammer (**}**) ausgelassen wurde.
+
+Die Syntax für eine Verzeichnisangabe für ein abhängiges Element ist
+
+> **{** *Verzeichnisse* **} abhängige**
+
+wo *Verzeichnisse* gibt einen oder mehrere Pfade, jeweils getrennt durch ein Semikolon (**;**). Es sind keine Leerzeichen zulässig.
+
+Stellen Sie teilweise oder vollständig einen Suchpfad angeben, die von einem Makro ersetzt wird, sicher, dass keine Leerzeichen enthalten, die in der makroerweiterung vorhanden sind.

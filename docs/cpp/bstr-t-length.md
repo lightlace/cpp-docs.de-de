@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::Length | Microsoft Docs
+title: _bstr_t::Length | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2979b9db6fc7b36d8f0d5581ae9397acf65b6977
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c38ff10368ff31cfd9da435e117c6619735b6274
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409136"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070495"
 ---
 # <a name="bstrtlength"></a>_bstr_t::length
-**Microsoft-spezifisch**  
-  
- Gibt die Anzahl von Zeichen in `_bstr_t` ohne das abschließende NULL-Zeichen des gekapselten `BSTR` zurück.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-unsigned int length ( ) const throw( );  
-  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [_bstr_t-Klasse](../cpp/bstr-t-class.md)
+
+**Microsoft-spezifisch**
+
+Gibt die Anzahl von Zeichen in `_bstr_t` ohne das abschließende NULL-Zeichen des gekapselten `BSTR` zurück.
+
+## <a name="syntax"></a>Syntax
+
+```
+unsigned int length ( ) const throw( );
+```
+
+## <a name="remarks"></a>Hinweise
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[_bstr_t-Klasse](../cpp/bstr-t-class.md)

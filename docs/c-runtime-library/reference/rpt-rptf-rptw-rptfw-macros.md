@@ -96,16 +96,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a53a069138b4e54988be008917e5ca2b24fa0a6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69347ab698661346b8d598dda1bb007d071a21f8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411883"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104146"
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT-, _RPTF-, _RPTW- und _RPTFW-Makros
 
-Verfolgt den Status einer Anwendung durch Generieren eines Debugberichts (nur in der Debugversion). Beachten Sie, dass *n* gibt die Anzahl von Argumenten in *Args* und 0, 1, 2, 3, 4 oder 5 sein können.
+Verfolgt den Status einer Anwendung durch Generieren eines Debugberichts (nur in der Debugversion). Beachten Sie, dass *n* gibt die Anzahl der Argumente im *Args* und 0, 1, 2, 3, 4 oder 5 sein kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -136,25 +136,28 @@ _RPTFWn(
 
 ### <a name="parameters"></a>Parameter
 
-*Definition* Berichtstyp: **_CRT_WARN**, **_CRT_ERROR**, oder **_CRT_ASSERT**.
+*reportType*<br/>
+Berichtstyp: **_CRT_WARN**, **_CRT_ERROR**, oder **_CRT_ASSERT**.
 
-*Format* formatsteuerzeichenfolge verwendet, um die Meldung für den Benutzer zu erstellen.
+*format*<br/>
+Formatsteuerelementzeichenfolge, mit der die Benutzermeldung erstellt wird.
 
-*Args* ersatzargumente verwendeten *Format*.
+*args*<br/>
+Von verwendete optionale ersatzargumente *Format*.
 
 ## <a name="remarks"></a>Hinweise
 
-Nehmen Sie alle diese Makros den *Definition* und *Format* Parameter. Darüber hinaus können sie auch bis zu vier zusätzliche Argumente annehmen, gekennzeichnet durch die zum Makronamen angefügte Zahl. Beispielsweise **_RPT0** und **_RPTF0** akzeptieren keine zusätzliche Argumente **_RPT1** und **_RPTF1** dauern *arg1*, **_RPT2** und **_RPTF2** dauern *arg1* und **arg2**und so weiter.
+Alle diese Makros nehmen die *ReportType* und *Format* Parameter. Darüber hinaus können sie auch bis zu vier zusätzliche Argumente annehmen, gekennzeichnet durch die zum Makronamen angefügte Zahl. Z. B. **_RPT0** und **_RPTF0** akzeptieren keine zusätzliche Argumente, **_RPT1** und **_RPTF1** dauern *arg1*, **_RPT2** und **_RPTF2** dauern *arg1* und **arg2**und so weiter.
 
-Die **_RPT** und **_RPTF** Makros ähneln den [Printf](printf-printf-l-wprintf-wprintf-l.md) funktionieren, da sie während des Debugprozesses Fortschritt einer Anwendung verwendet werden können. Diese Makros sind jedoch flexibler als **Printf** , da sie nicht in eingeschlossen werden müssen **#ifdef** Anweisungen nicht zu verhindern, dass in einer Verkaufsversion einer Anwendung aufgerufen. Diese Flexibilität wird erreicht, indem die [_DEBUG](../../c-runtime-library/debug.md) Makro; das **_RPT** und **_RPTF** Makros sind nur verfügbar, wenn die **_DEBUG** Flag ist definiert. Wenn **_DEBUG** ist nicht definiert ist, werden Aufrufe dieser Makros während der vorverarbeitung entfernt.
+Die **_RPT** und **_RPTF** Makros ähneln den [Printf](printf-printf-l-wprintf-wprintf-l.md) Funktion, da sie während des Debuggens Fortschritt einer Anwendung verwendet werden können. Diese Makros sind jedoch flexibler als **Printf** da sie nicht eingeschlossen werden müssen **#ifdef** Anweisungen, die sie verhindern, die in der Verkaufsversion einer Anwendung aufgerufen. Diese Flexibilität wird erreicht, indem die [_DEBUG](../../c-runtime-library/debug.md) Makro; die **_RPT** und **_RPTF** Makros sind nur verfügbar, wenn die **_DEBUG** Flag ist definiert. Wenn **_DEBUG** ist nicht definiert ist, werden Aufrufe dieser Makros während der vorverarbeitung entfernt.
 
-Die **_RPTW** und **_RPTFW** Makros sind Breitzeichenversionen dieser Makros. Sie entsprechen **"wprintf"** und Breitzeichen-Zeichenfolgen als Argumente nehmen.
+Die **_RPTW** und **_RPTFW** -Makros sind Breitzeichenversionen dieser Makros. Sie verhalten sich wie **Wprintf** und Breitzeichen-Zeichenfolgen als Argumente.
 
-Die **_RPT** Makros Aufruf der [_CrtDbgReport](crtdbgreport-crtdbgreportw.md) Funktion generiert einen Debugbericht mit einer Meldung für den Benutzer. Die **_RPTW** Makros Aufruf der **_CrtDbgReportW** Funktion zum Generieren von des gleichen Berichts mit Breitzeichen. Die **_RPTF** und **_RPTFW** Makros einen Debugbericht mit der Quelle und die Zeilennummer Anzahl, in das Berichtsmakro, außerdem auf die Meldung für den Benutzer aufgerufen wurde, erstellen. Die Meldung für den Benutzer wird erstellt, durch das Ersetzen der **Arg**[*n*] Argumente in der *Format* "string", mit den gleichen Regeln definiert werden, indem die [Printf](printf-printf-l-wprintf-wprintf-l.md)Funktion.
+Die **_RPT** -Makros rufen die [_CrtDbgReport](crtdbgreport-crtdbgreportw.md) Funktion, um einen Debugbericht mit einer benutzermeldung zu generieren. Die **_RPTW** -Makros rufen die **_CrtDbgReportW** Funktion, die den gleichen Berichts mit Breitzeichen zu generieren. Die **_RPTF** und **_RPTFW** -Makros erstellen einen Debugbericht mit der Quelle-Datei und Zeilennummer, in denen das Berichtsmakro, zusätzlich zur benutzermeldung aufgerufen wurde. Die benutzermeldung wird erstellt, indem Sie ersetzen die **Arg**[*n*]-Argumente in der *Format* string "," über die gleichen Regeln die [Printf](printf-printf-l-wprintf-wprintf-l.md)Funktion.
 
-**_CrtDbgReport** oder **_CrtDbgReportW** generiert den Debugbericht und bestimmt seine Ziele basierend auf den aktuellen berichtsmodi und der Datei für definiert *Definition*. Die Funktionen [_CrtSetReportMode](crtsetreportmode.md) und [_CrtSetReportFile](crtsetreportfile.md) werden verwendet, um die Ziele für jeden Berichtstyp zu definieren.
+**_CrtDbgReport** oder **_CrtDbgReportW** generiert den Debugbericht und bestimmt seine Ziele basierend auf den aktuellen berichtsmodi und der Datei definiert für *ReportType*. Die Funktionen [_CrtSetReportMode](crtsetreportmode.md) und [_CrtSetReportFile](crtsetreportfile.md) werden verwendet, um die Ziele für jeden Berichtstyp zu definieren.
 
-Wenn ein **_RPT** Makro wird aufgerufen, und weder **_CrtSetReportMode** noch **_CrtSetReportFile** wurde aufgerufen wird, werden Fehlermeldungen wie folgt angezeigt.
+Wenn ein **_RPT** -Makro aufgerufen wird und weder **_CrtSetReportMode** noch **_CrtSetReportFile** war aufgerufen wird, werden Fehlermeldungen wie folgt angezeigt.
 
 |Berichtstyp|Ausgabeziel|
 |-----------------|------------------------|
@@ -162,9 +165,9 @@ Wenn ein **_RPT** Makro wird aufgerufen, und weder **_CrtSetReportMode** noch **
 |**_CRT_ERROR**|Ein Popupfenster. So als ob `_CrtSetReportMode(_CRT_ERROR, _CRTDBG_MODE_WNDW);` angegeben worden wäre.|
 |**_CRT_ASSERT**|Identisch mit **_CRT_ERROR**.|
 
-Wenn das Ziel ein debugmeldungsfenster und der Benutzer wählt die **wiederholen** Schaltfläche, **_CrtDbgReport** oder **_CrtDbgReportW** gibt 1 zurück, verursacht diese Makros starten der Debugger, sofern die Just-in-Time (JIT)-Debuggen aktiviert ist. Weitere Informationen zum Verwenden dieser Makros als Behandlungsmechanismus für Debugfehler finden Sie unter [Verwenden von Makros zur Überprüfung und Berichterstellung](/visualstudio/debugger/macros-for-reporting).
+Wenn das Ziel ein debugmeldungsfenster und der Benutzer wählt die **wiederholen** Schaltfläche **_CrtDbgReport** oder **_CrtDbgReportW** gibt 1 zurück, verursacht diese Makros zum Starten der Debugger, sofern die just-in-Time-Debuggen (JIT) aktiviert ist. Weitere Informationen zum Verwenden dieser Makros als Behandlungsmechanismus für Debugfehler finden Sie unter [Verwenden von Makros zur Überprüfung und Berichterstellung](/visualstudio/debugger/macros-for-reporting).
 
-Zwei andere Makros sind vorhanden, die einen Debugbericht generieren. Das [_ASSERT](assert-asserte-assert-expr-macros.md)-Makro generiert einen Bericht, jedoch nur, wenn das Ausdrucksargument zu FALSE ausgewertet wird. [_ASSERTE](assert-asserte-assert-expr-macros.md) wird genau wie **_ASSERT**, jedoch den fehlgeschlagenen Ausdruck in der generierte Bericht enthält.
+Zwei andere Makros sind vorhanden, die einen Debugbericht generieren. Das [_ASSERT](assert-asserte-assert-expr-macros.md)-Makro generiert einen Bericht, jedoch nur, wenn das Ausdrucksargument zu FALSE ausgewertet wird. [_ASSERTE](assert-asserte-assert-expr-macros.md) ist genau wie **_ASSERT**, jedoch den fehlgeschlagenen Ausdruck im generierten Bericht enthält.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4706 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4706 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,72 +16,73 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1131147a9600525746cb3e89119189ed9e5026a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 843edeaf490f27475003e9303f7929b818e2b104
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296968"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036955"
 ---
 # <a name="compiler-warning-level-4-c4706"></a>Compilerwarnung (Stufe 4) C4706
-Zuordnung im Bedingungsausdruck  
-  
- Das Testintervall in einem bedingten Ausdruck war das Ergebnis einer Zuweisung.  
-  
- Eine Zuweisung hat einen Wert (der Wert auf der linken Seite der Zuweisung), der gesetzlich in einem anderen Ausdruck, z. B. einem Testausdruck verwendet werden kann.  
-  
- Im folgenden Beispiel wird C4706 generiert:  
-  
-```  
-// C4706a.cpp  
-// compile with: /W4  
-int main()  
-{  
-   int a = 0, b = 0;  
-   if ( a  = b ) // C4706  
-   {  
-   }  
-}  
-```  
-  
- Die Warnung wird auch auftreten, wenn Sie die Klammern um die testbedingung doppelklicken:  
-  
-```  
-// C4706b.cpp  
-// compile with: /W4  
-int main()  
-{  
-   int a = 0, b = 0;  
-   if ( ( a  =  b ) ) // C4706  
-   {  
-   }  
-}  
-```  
-  
- Wenn Sie beabsichtigen, eine Beziehung zu testen und nicht zu einer Zuordnung verwenden die `==` Operator. Z. B. folgende Zeile wird getestet, ob ein und b sind gleich:  
-  
-```  
-// C4706c.cpp  
-// compile with: /W4  
-int main()  
-{  
-   int a = 0, b = 0;  
-   if ( a == b )  
-   {  
-   }  
-}  
-```  
-  
- Wenn Sie beabsichtigen, den Test mit dem Wert des Ergebnis einer Zuweisung vornehmen, testen Sie, um sicherzustellen, dass die Zuordnung nicht 0 (null) oder nicht null ist. Der folgende Code generiert diese Warnung z. B. nicht:  
-  
-```  
-// C4706d.cpp  
-// compile with: /W4  
-int main()  
-{  
-   int a = 0, b = 0;  
-   if ( ( a = b ) != 0 )  
-   {  
-   }  
-}  
+
+Zuweisung in bedingtem Ausdruck
+
+Der Testwert in einem bedingten Ausdruck war das Ergebnis einer Zuweisung.
+
+Eine Zuweisung hat es sich um einen Wert (der Wert auf der linken Seite der Zuweisung), der gesetzlich in einem anderen Ausdruck verwenden, einschließlich einem Testausdruck verwendet werden kann.
+
+Im folgende Beispiel wird die C4706 generiert:
+
+```
+// C4706a.cpp
+// compile with: /W4
+int main()
+{
+   int a = 0, b = 0;
+   if ( a  = b ) // C4706
+   {
+   }
+}
+```
+
+Die Warnung wird auch auftreten, wenn Sie die Klammern um die testbedingung doppelklicken:
+
+```
+// C4706b.cpp
+// compile with: /W4
+int main()
+{
+   int a = 0, b = 0;
+   if ( ( a  =  b ) ) // C4706
+   {
+   }
+}
+```
+
+Wenn Sie beabsichtigen, eine Beziehung zu testen und zu verwenden, nicht um eine Zuordnung vorgenommen der `==` Operator. Z. B. die folgende Zeile wird getestet, ob ein und b sind gleich:
+
+```
+// C4706c.cpp
+// compile with: /W4
+int main()
+{
+   int a = 0, b = 0;
+   if ( a == b )
+   {
+   }
+}
+```
+
+Wenn Sie den Test mit dem Wert des Ergebnis einer Zuweisung vornehmen möchten, testen Sie, stellen Sie sicher, dass die Zuweisung nicht NULL oder not null ist. Der folgende Code generiert diese Warnung z. B. nicht:
+
+```
+// C4706d.cpp
+// compile with: /W4
+int main()
+{
+   int a = 0, b = 0;
+   if ( ( a = b ) != 0 )
+   {
+   }
+}
 ```

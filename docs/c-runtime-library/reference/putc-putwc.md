@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 931a1a586f46327dd800ca5e1b2ef9a0b22f469d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: af5c6987f88238398a00e9da7f0d769f246ffc54
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404375"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211068"
 ---
 # <a name="putc-putwc"></a>putc, putwc
 
@@ -73,13 +73,13 @@ Zeiger auf die **FILE**-Struktur.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das geschriebene Zeichen zurück. Um einen Fehler oder eine End-of-File-Bedingung anzugeben **Putc** und **Putchar** zurückgeben ** EOF`; **putwc` und **Putwchar** zurückgeben **WEOF**. Verwenden Sie bei allen vier Routinen [ferror](ferror.md) oder [feof](feof.md), um auf einen Fehler oder ein Dateiende zu prüfen. Wenn einen null-Zeiger übergeben wird, für die *Stream*, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EOF** oder **WEOF** und **Errno** auf **EINVAL**.
+Gibt das geschriebene Zeichen zurück. Um einen Fehler oder End-of-File-Bedingung anzugeben **Putc** und **Putchar** zurückgeben ** EOF`; **putwc` und **Putwchar** zurückgeben **WEOF**. Verwenden Sie bei allen vier Routinen [ferror](ferror.md) oder [feof](feof.md), um auf einen Fehler oder ein Dateiende zu prüfen. Wenn ein null-Zeiger *Stream*, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EOF** oder **WEOF** und **Errno** zu **EINVAL**.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Putc** -Routine schreibt das einzelne Zeichen *c* an die Ausgabe *Stream* an der aktuellen Position. Eine beliebige ganze Zahl übergeben werden kann, um **Putc**, aber es werden nur die unteren 8 Bits geschrieben. Die **Putchar** Routine ist identisch mit **Putc (** * c ***, "stdout")**. Wenn ein Lesefehler auftritt, wird für jede Routine die Fehleranzeige für den Stream festgelegt. **Putc** und **Putchar** ähneln **Fputc** und **_fputchar**, jedoch sowohl als Funktionen als auch als Makros implementiert werden (finden Sie unter [ Wahl zwischen Funktionen und Macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **Putwc** und **Putwchar** sind Breitzeichenversionen von **Putc** und **Putchar**zugeordnet. **Putwc** und **Putc** Verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Putc** derzeit die Ausgabe in eine Unicode-Stream unterstützt keine.
+Die **Putc** -Routine schreibt das einzelne Zeichen *c* an die Ausgabe *Stream* an der aktuellen Position. Eine ganze Zahl übergeben werden kann, um **Putc**, aber es werden nur die unteren 8 Bits geschrieben. Die **Putchar** Routine ist identisch mit `putc( c, stdout )`. Wenn ein Lesefehler auftritt, wird für jede Routine die Fehleranzeige für den Stream festgelegt. **Putc** und **Putchar** ähneln **Fputc** und **_fputchar**, jedoch sowohl als Funktionen als auch als Makros implementiert (finden Sie unter [ Wahl zwischen Funktionen und Makros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **Putwc** und **Putwchar** sind Breitzeichenversionen von **Putc** und **Putchar**bzw. **Putwc** und **Putc** Verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Putc** unterstützt derzeit keine Ausgabe in eine UNICODE-Stream.
 
 Die Versionen mit dem Suffix **_nolock** sind identisch, allerdings sind sie nicht vor Störungen durch andere Threads geschützt. Weitere Informationen finden Sie unter **_putc_nolock, _putwc_nolock**.
 
@@ -91,12 +91,12 @@ Die Versionen mit dem Suffix **_nolock** sind identisch, allerdings sind sie nic
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**putc**|\<stdio.h>|
 |**putwc**|\<stdio.h> oder \<wchar.h>|
 
-Die Konsole wird in apps der universellen Windows-Plattform (UWP) nicht unterstützt. Standardstream Handles, die mit der Konsole verknüpften sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in uwp-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Standardstreamhandles, die mit der Konsole verknüpft sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotheken
 

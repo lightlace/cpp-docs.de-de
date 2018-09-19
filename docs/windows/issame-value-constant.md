@@ -1,5 +1,5 @@
 ---
-title: 'Issame:: value-Konstante | Microsoft Docs'
+title: 'Issame:: value-Konstante | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,44 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aaf248622b6306af1a3eeebb258b296be43448da
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 299ee0f1c2a892a3219c2337e01d629eadec8a82
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875239"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42580993"
 ---
 # <a name="issamevalue-constant"></a>IsSame::value-Konstante
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-  template <typename T1, typename T2>  
-struct IsSame  
-{  
-    static const bool value = false;  
-};  
-  
-template <typename T1>  
-struct IsSame<T1, T1>  
-{  
-    static const bool value = true;  
-};  
-  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Gibt an, ob ein Typ mit einer anderen identisch ist.  
-  
- `value` ist **"true"** , wenn die Vorlagenparameter identisch sind und **"false"** Wenn die Vorlagenparameter unterscheiden.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** internal.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [IsSame-Struktur](../windows/issame-structure.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+template <typename T1, typename T2>
+struct IsSame
+{
+    static const bool value = false;
+};
+
+template <typename T1>
+struct IsSame<T1, T1>
+{
+    static const bool value = true;
+};
+```
+
+## <a name="remarks"></a>Hinweise
+
+Gibt an, ob ein Typ mit einer anderen identisch ist.
+
+**Wert** ist **"true"** , wenn die Vorlagenparameter identisch sind und **"false"** Wenn sich die Vorlagenparameter unterscheiden.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** internal.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[IsSame-Struktur](../windows/issame-structure.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

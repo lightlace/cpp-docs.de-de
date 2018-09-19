@@ -1,7 +1,7 @@
 ---
 title: CMFCButton-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/28/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e50f48ad935e74bff05fe41dd77a0b17c0bd26ed
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1ded79786aaed0bf917ef57f445882c3f7d05719
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337306"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709955"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton-Klasse
 Die `CMFCButton` Klasse fügt Funktionen für die [CButton](../../mfc/reference/cbutton-class.md) Klasse wie z. B. das Ausrichten des Schaltflächentexts, Kombinieren von Schaltflächentext mit einem Bild, Auswählen eines Cursors und Festlegen einer QuickInfo.  
@@ -137,7 +137,7 @@ class CMFCButton : public CButton
 |[CMFCButton::IsRadioButton](#isradiobutton)|Gibt an, ob eine Schaltfläche ein Optionsfeld ist.|  
 |[CMFCButton::IsWindowsThemingEnabled](#iswindowsthemingenabled)|Gibt an, ob der Stil des Rahmens der Schaltfläche für das aktuelle Windows-Design entspricht.|  
 |`CMFCButton::OnDrawParentBackground`|Zeichnet den Hintergrund einer Schaltfläche des übergeordneten Elements im angegebenen Bereich. (Überschreibt [AFX_GLOBAL_DATA::DrawParentBackground](../../mfc/reference/afx-global-data-structure.md)|  
-|`CMFCButton::PreTranslateMessage`|Übersetzt fenstermeldungen, bevor sie um weitergeleitet werden die [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows-Funktionen. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMFCButton::PreTranslateMessage`|Übersetzt fenstermeldungen, bevor sie um weitergeleitet werden die [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows-Funktionen. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCButton::SetAutorepeatMode](#setautorepeatmode)|Legt eine Schaltfläche zum automatischen als dem Wiederholungsmodus fest.|  
 |[CMFCButton::SetCheckedImage](#setcheckedimage)|Legt das Bild für die aktivierte Schaltfläche fest.|  
 |[CMFCButton::SetFaceColor](#setfacecolor)|Legt die Hintergrundfarbe für den Text der Schaltfläche fest.|  
@@ -165,12 +165,17 @@ class CMFCButton : public CButton
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|Gibt an, ob ein Fokusrechteck um eine Schaltfläche zu zeichnen.|  
-|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|Gibt an, ob eine BS_CHECKBOX-Schaltfläche zu markieren, wenn der Cursor darauf gezeigt wird.|  
-|[CMFCButton::m_bRightImage](#m_brightimage)|Gibt an, ob ein Bild auf der rechten Seite der Schaltfläche angezeigt werden soll.|  
-|[CMFCButton::m_bTransparent](#m_btransparent)|Gibt an, ob die Schaltfläche transparent ist.|  
 |[CMFCButton::m_nAlignStyle](#m_nalignstyle)|Gibt die Ausrichtung des Schaltflächentexts.|  
+|[CMFCButton::m_bDontUseWinXPTheme](#m_bDontUseWinXPTheme)|Gibt an, ob Windows XP-Designs verwendet werden soll.|
+|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|Gibt an, ob ein Fokusrechteck um eine Schaltfläche zu zeichnen.| 
 |[CMFCButton::m_nFlatStyle](#m_nflatstyle)|Gibt den Stil der Schaltfläche, z. B. randlose, Flatfiles, durch flachen oder 3D.|  
+|[CMFCButton::m_bGrayDisabled](#m_bGrayDisabled)|Bei "true", können eine nicht aktive Schaltfläche als abgeblendeten gezeichnet werden soll.|
+|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|Gibt an, ob eine BS_CHECKBOX-Schaltfläche zu markieren, wenn der Cursor darauf gezeigt wird.|  
+|[CMFCButton::m_bResponseOnButtonDown](#m_bResponseOnButtonDown)|Gibt an, ob auf Tastendruck Ereignisse zu reagieren.|
+|[CMFCButton::m_bRightImage](#m_brightimage)|Gibt an, ob ein Bild auf der rechten Seite der Schaltfläche angezeigt werden soll.|
+|[CMFCButton::m_bTopImage](#m_bTopImage)| Gibt an, ob das Bild auf die Schaltfläche ist.|
+|[CMFCButton::m_bTransparent](#m_btransparent)|Gibt an, ob die Schaltfläche transparent ist.|  
+|[CMFCButton::m_bWasDblClk](#m_bWasDblClk)| Gibt an, ob die letzte klicken Sie auf Ereignis ein Doppelklick wurde.|
   
 ## <a name="remarks"></a>Hinweise  
  Andere Arten von Schaltflächen davon abgeleitet sind die `CMFCButton` Klasse, z. B. die [CMFCURLLinkButton](../../mfc/reference/cmfclinkctrl-class.md) -Klasse, die Links unterstützt, und die `CMFCColorButton` Klasse, die ein Farben-Auswahldialogfeld unterstützt.  
@@ -218,8 +223,8 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bOn*  
- True, um die gesamte Text angezeigt. "False", Anzeigetext, die abgeschnitten werden.  
+*bOn*<br/>
+[in] True, um die gesamte Text angezeigt. "False", Anzeigetext, die abgeschnitten werden.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -233,11 +238,11 @@ void EnableMenuFont(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bOn*  
- True, um die Schriftart der Anwendung im Menü als Schriftart der Schaltfläche zu verwenden. FALSE, wenn die Systemschriftart verwenden. Der Standardwert ist "true".  
+*bOn*<br/>
+[in] True, um die Schriftart der Anwendung im Menü als Schriftart der Schaltfläche zu verwenden. FALSE, wenn die Systemschriftart verwenden. Der Standardwert ist "true".  
   
- [in] *bRedraw*  
- TRUE, um den Bildschirm sofort neu zu zeichnen, andernfalls "false". Der Standardwert ist "true".  
+*bRedraw*<br/>
+[in] TRUE, um den Bildschirm sofort neu zu zeichnen, andernfalls "false". Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie diese Methode nicht an die Schriftart der Schaltfläche verwenden, können Sie angeben, dass die Schriftart mit der [CWnd::SetFont](../../mfc/reference/cwnd-class.md#setfont) Methode. Wenn Sie eine Schriftart nicht auf allen angeben, legt das Framework eine Standardschriftart an.  
@@ -250,8 +255,8 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- True, um das aktuelle Windows-Design zum Zeichnen des Rahmens der Schaltfläche zu verwenden. "False", nicht die Windows-Designs zu verwenden. Der Standardwert ist "true".  
+*bAktivieren*<br/>
+[in] True, um das aktuelle Windows-Design zum Zeichnen des Rahmens der Schaltfläche zu verwenden. "False", nicht die Windows-Designs zu verwenden. Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wirkt sich auf alle Schaltflächen in der Anwendung, die abgeleitet sind die `CMFCButton` Klasse.  
@@ -376,7 +381,16 @@ static BOOL IsWindowsThemingEnabled();
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Stil des Rahmens der Schaltfläche für das aktuelle Windows-Design entspricht. andernfalls "false".  
-  
+
+
+
+## <a name="a-namembdontusewinxptheme-cmfcbuttonmbdontusewinxptheme"></a><a name="m_bDontUseWinXPTheme"/> CMFCButton::m_bDontUseWinXPTheme
+Gibt an, ob Windows XP-Designs zu verwenden, wenn die Schaltfläche zu zeichnen.
+
+```  
+BOOL m_bDontUseWinXPTheme;  
+```
+
 ##  <a name="m_bdrawfocus"></a>  CMFCButton::m_bDrawFocus  
  Gibt an, ob ein Fokusrechteck um eine Schaltfläche zu zeichnen.  
   
@@ -388,7 +402,15 @@ BOOL m_bDrawFocus;
  Legen Sie die `m_bDrawFocus` Member auf "true", um anzugeben, dass das Framework wird ein auf der Text der Schaltfläche Fokusrechteck und image, wenn die Schaltfläche den Fokus erhält.  
   
  Die `CMFCButton` Konstruktor initialisiert dieses Member auf "true".  
-  
+
+##  <a name="m_bGrayDisabled"></a>  CMFCButton::m_bGrayDisabled
+Bei "true", können eine nicht aktive Schaltfläche als abgeblendeten gezeichnet werden soll.
+
+
+```  
+BOOL m_bGrayDisabled;  
+```
+
 ##  <a name="m_bhighlightchecked"></a>  CMFCButton::m_bHighlightChecked  
  Gibt an, ob eine BS_CHECKBOX-Schaltfläche zu markieren, wenn der Cursor darauf gezeigt wird.  
   
@@ -398,14 +420,29 @@ BOOL m_bHighlightChecked;
   
 ### <a name="remarks"></a>Hinweise  
  Legen Sie die `m_bHighlightChecked` Member auf "true", um anzugeben, dass das Framework eine BS_CHECKBOX-Schaltfläche hervorgehoben wird, wenn die Maus darüber bewegt wird.  
-  
+
+##  <a name="m_bResponseOnButtonDown"></a> CMFCButton::m_bResponseOnButtonDown
+Gibt an, ob auf Tastendruck Ereignisse zu reagieren.
+
+```  
+BOOL m_bResponseOnButtonDown;  
+```  
+
 ##  <a name="m_brightimage"></a>  CMFCButton::m_bRightImage  
  Gibt an, ob ein Bild auf der rechten Seite der Schaltfläche angezeigt werden soll.  
   
 ```  
 BOOL m_bRightImage;  
 ```  
-  
+
+
+##  <a name="m_bTopImage"></a>  CMFCButton::m_bTopImage](#m_bTopImage)
+Gibt an, ob das Bild auf die Schaltfläche ist.
+
+```  
+BOOL m_bTopImage;  
+```
+
 ### <a name="remarks"></a>Hinweise  
  Legen Sie die `m_bRightImage` Member auf "true", um anzugeben, dass das Framework das Bild der Schaltfläche rechts neben der Schaltfläche die Bezeichnung angezeigt wird.  
   
@@ -436,7 +473,14 @@ AlignStyle m_nAlignStyle;
 |ALIGN_RIGHT|Richtet den Text der Schaltfläche rechts neben der Schaltfläche aus.|  
   
  Die `CMFCButton` Konstruktor initialisiert dieses Member zu ALIGN_CENTER.  
-  
+
+##  <a name="m_bWasDblClk"></a>  CMFCButton::m_bWasDblClk](#m_bWasDblClk) | 
+Gibt an, ob die letzte klicken Sie auf wurde Ereignis einen Doppelklick. |
+
+```  
+BOOL m_bWasDblClk;  
+```  
+
 ##  <a name="m_nflatstyle"></a>  CMFCButton::m_nFlatStyle  
  Gibt den Stil der Schaltfläche, z. B. randlose, Flatfiles, durch flachen oder 3D.  
   
@@ -473,14 +517,14 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein Verweis auf ein Rechteck, das die Schaltfläche mit den umschließt.  
+*Rect*<br/>
+[in] Ein Verweis auf ein Rechteck, das die Schaltfläche mit den umschließt.  
   
- [in] *UiState*  
- Der aktuelle Zustand der Schaltfläche. Weitere Informationen finden Sie unter den `itemState` Mitglied der [DRAWITEMSTRUCT-Struktur](../../mfc/reference/drawitemstruct-structure.md) Thema.  
+*uiState*<br/>
+[in] Der aktuelle Zustand der Schaltfläche. Weitere Informationen finden Sie unter den `itemState` Mitglied der [DRAWITEMSTRUCT-Struktur](../../mfc/reference/drawitemstruct-structure.md) Thema.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, um Ihren eigenen Code verwenden, um eine Schaltfläche zu zeichnen.  
@@ -496,14 +540,14 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *RectClient*  
- Ein Verweis auf ein Rechteck, das die Schaltfläche mit den umschließt.  
+*rectClient*<br/>
+[in] Ein Verweis auf ein Rechteck, das die Schaltfläche mit den umschließt.  
   
- [in] *UiState*  
- Der aktuelle Zustand der Schaltfläche. Weitere Informationen finden Sie unter den `itemState` Mitglied der [DRAWITEMSTRUCT-Struktur](../../mfc/reference/drawitemstruct-structure.md) Thema.  
+*uiState*<br/>
+[in] Der aktuelle Zustand der Schaltfläche. Weitere Informationen finden Sie unter den `itemState` Mitglied der [DRAWITEMSTRUCT-Struktur](../../mfc/reference/drawitemstruct-structure.md) Thema.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, um Ihren eigenen Code verwenden Sie zum Zeichnen des Rahmens an.  
@@ -518,11 +562,11 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *RectClient*  
- Ein Verweis auf ein Rechteck, das die Schaltfläche mit den umschließt.  
+*rectClient*<br/>
+[in] Ein Verweis auf ein Rechteck, das die Schaltfläche mit den umschließt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, um Ihren eigenen Code verwenden, um das Fokusrechteck gezeichnet werden soll.  
@@ -540,20 +584,20 @@ virtual void OnDrawText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein Verweis auf ein Rechteck, das die Schaltfläche mit den umschließt.  
+*Rect*<br/>
+[in] Ein Verweis auf ein Rechteck, das die Schaltfläche mit den umschließt.  
   
- [in] *StrText*  
- Der zu zeichnende Text.  
+*strText*<br/>
+[in] Der zu zeichnende Text.  
   
- [in] *UiDTFlags*  
- Flags, die angeben, wie Sie den Text zu formatieren. Weitere Informationen finden Sie unter den *nFormat* Parameter, der die [CDC:: DrawText](../../mfc/reference/cdc-class.md#drawtext) Methode.  
+*uiDTFlags*<br/>
+[in] Flags, die angeben, wie Sie den Text zu formatieren. Weitere Informationen finden Sie unter den *nFormat* Parameter, der die [CDC:: DrawText](../../mfc/reference/cdc-class.md#drawtext) Methode.  
   
- [in] *UiState*  
- (Reserviert).  
+*uiState*<br/>
+[in] Reserviert.
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, um Ihren eigenen Code verwenden, um den Text der Schaltfläche gezeichnet werden soll.  
@@ -568,11 +612,11 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *RectClient*  
- Ein Verweis auf ein Rechteck, das die Schaltfläche mit den umschließt.  
+*rectClient*<br/>
+[in] Ein Verweis auf ein Rechteck, das die Schaltfläche mit den umschließt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, um Ihren eigenen Code zum Zeichnen des Hintergrunds einer Schaltfläche zu verwenden.  
@@ -585,8 +629,8 @@ virtual CFont* SelectFont(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Überschreiben Sie diese Methode, um Ihren eigenen Code zu verwenden, um die Schriftart abzurufen.  
@@ -601,8 +645,8 @@ void SetAutorepeatMode(int nTimeDelay=500);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nTimeDelay*  
- Eine nicht negative Zahl, die das Intervall zwischen Nachrichten angibt, die für das übergeordnete Fenster gesendet werden. Das Intervall in Millisekunden gemessen wird, und der Standardwert ist 500 Millisekunden. Geben Sie 0 (null), um die automatische-Repeat-Modus zu deaktivieren.  
+*nTimeDelay*<br/>
+[in] Eine nicht negative Zahl, die das Intervall zwischen Nachrichten angibt, die für das übergeordnete Fenster gesendet werden. Das Intervall in Millisekunden gemessen wird, und der Standardwert ist 500 Millisekunden. Geben Sie 0 (null), um die automatische-Repeat-Modus zu deaktivieren.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode bewirkt, dass die Schaltfläche, um ständig WM_COMMAND-Meldungen für das übergeordnete Fenster gesendet, bis die Maustaste losgelassen wird, oder die *nTimeDelay* Parameter auf 0 (null) festgelegt ist.  
@@ -634,41 +678,41 @@ void SetCheckedImage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *hIcon*  
- Handle für das Symbol, das die Bitmap und eine Maske für das neue Abbild enthält.  
+*hIcon*<br/>
+[in] Handle für das Symbol, das die Bitmap und eine Maske für das neue Abbild enthält.  
   
- [in] *bAutoDestroy*  
- True, um anzugeben, dass die Bitmapressourcen automatisch zerstört werden. andernfalls "false". Der Standardwert ist "true".  
+*bAutoDestroy*<br/>
+[in] True, um anzugeben, dass die Bitmapressourcen automatisch zerstört werden. andernfalls "false". Der Standardwert ist "true".  
   
- [in] *hIconHot*  
- Handle für das Symbol, das das Bild für den ausgewählten Status enthält.  
+*hIconHot*<br/>
+[in] Handle für das Symbol, das das Bild für den ausgewählten Status enthält.  
   
- [in] *hBitmap*  
- Handle für die Bitmap, die das Bild für den nicht ausgewählten Zustand enthält.  
+*hBitmap*<br/>
+[in] Handle für die Bitmap, die das Bild für den nicht ausgewählten Zustand enthält.  
   
- [in] *hBitmapHot*  
- Handle für die Bitmap, die das Bild für den ausgewählten Status enthält.  
+*hBitmapHot*<br/>
+[in] Handle für die Bitmap, die das Bild für den ausgewählten Status enthält.  
   
- [in] *bMap3dColors*  
- Gibt eine transparente Farbe für den Schaltflächenhintergrund an. d. h. die Oberfläche der Schaltfläche. "True", verwenden Sie den Farbwert RGB (192, 192, 192); Verwenden Sie den Farbwert, der definiert, indem Sie "false" `AFX_GLOBAL_DATA::clrBtnFace`.  
+*bMap3dColors*<br/>
+[in] Gibt eine transparente Farbe für den Schaltflächenhintergrund an. d. h. die Oberfläche der Schaltfläche. "True", verwenden Sie den Farbwert RGB (192, 192, 192); Verwenden Sie den Farbwert, der definiert, indem Sie "false" `AFX_GLOBAL_DATA::clrBtnFace`.  
   
- [in] *UiBmpResId*  
- Ressourcen-ID für das Bild nicht ausgewählt.  
+*uiBmpResId*<br/>
+[in] Ressourcen-ID für das Bild nicht ausgewählt.  
   
- [in] *UiBmpHotResId*  
- Ressourcen-ID für das ausgewählte Image.  
+*uiBmpHotResId*<br/>
+[in] Ressourcen-ID für das ausgewählte Image.  
   
- [in] *hIconDisabled*  
- Handle für das Symbol für deaktivierten Bilds.  
+*hIconDisabled*<br/>
+[in] Handle für das Symbol für deaktivierten Bilds.  
   
- [in] *hBitmapDisabled*  
- Handle für die Bitmap, die das deaktivierte Bild enthält.  
+*hBitmapDisabled*<br/>
+[in] Handle für die Bitmap, die das deaktivierte Bild enthält.  
   
- [in] *UiBmpDsblResID*  
- Ressourcen-ID der Bitmap für die deaktiviert.  
+*uiBmpDsblResID*<br/>
+[in] Ressourcen-ID der Bitmap für die deaktiviert.  
   
- [in] *bAlphaBlend*  
- "True" verwenden nur 32-Bit-Images, die den alpha-Kanal zu verwenden; "FALSE", nicht nur alpha-Kanal-Images zu verwenden. Der Standardwert ist "false".  
+*bAlphaBlend*<br/>
+[in] "True" verwenden nur 32-Bit-Images, die den alpha-Kanal zu verwenden; "FALSE", nicht nur alpha-Kanal-Images zu verwenden. Der Standardwert ist "false".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -682,11 +726,11 @@ void SetFaceColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *CrFace*  
- Ein RGB-Farbwert.  
+*crFace*<br/>
+[in] Ein RGB-Farbwert.  
   
- [in] *bRedraw*  
- True, um den Bildschirm sofort neu zu zeichnen. andernfalls "false".  
+*bRedraw*<br/>
+[in] True, um den Bildschirm sofort neu zu zeichnen. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um eine neue Füllfarbe für den Hintergrund der Schaltfläche (Schrift) zu definieren. Beachten Sie, dass der Hintergrund nicht gefüllt, wenn die [CMFCButton::m_bTransparent](#m_btransparent) Membervariable ist "true".  
@@ -718,41 +762,41 @@ void SetImage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *hIcon*  
- Handle für das Symbol, das die Bitmap und eine Maske für das neue Abbild enthält.  
+*hIcon*<br/>
+[in] Handle für das Symbol, das die Bitmap und eine Maske für das neue Abbild enthält.  
   
- [in] *bAutoDestroy*  
- True, um anzugeben, dass die Bitmapressourcen automatisch zerstört werden. andernfalls "false". Der Standardwert ist "true".  
+*bAutoDestroy*<br/>
+[in] True, um anzugeben, dass die Bitmapressourcen automatisch zerstört werden. andernfalls "false". Der Standardwert ist "true".  
   
- [in] *hIconHot*  
- Handle für das Symbol, das das Bild für den ausgewählten Status enthält.  
+*hIconHot*<br/>
+[in] Handle für das Symbol, das das Bild für den ausgewählten Status enthält.  
   
- [in] *hBitmap*  
- Handle für die Bitmap, die das Bild für den nicht ausgewählten Zustand enthält.  
+*hBitmap*<br/>
+[in] Handle für die Bitmap, die das Bild für den nicht ausgewählten Zustand enthält.  
   
- [in] *hBitmapHot*  
- Handle für die Bitmap, die das Bild für den ausgewählten Status enthält.  
+*hBitmapHot*<br/>
+[in] Handle für die Bitmap, die das Bild für den ausgewählten Status enthält.  
   
- [in] *UiBmpResId*  
- Ressourcen-ID für das Bild nicht ausgewählt.  
+*uiBmpResId*<br/>
+[in] Ressourcen-ID für das Bild nicht ausgewählt.  
   
- [in] *UiBmpHotResId*  
- Ressourcen-ID für das ausgewählte Image.  
+*uiBmpHotResId*<br/>
+[in] Ressourcen-ID für das ausgewählte Image.  
   
- [in] *bMap3dColors*  
- Gibt eine transparente Farbe für den Schaltflächenhintergrund an. d. h. die Oberfläche der Schaltfläche. "True", verwenden Sie den Farbwert RGB (192, 192, 192); Verwenden Sie den Farbwert, der definiert, indem Sie "false" `AFX_GLOBAL_DATA::clrBtnFace`.  
+*bMap3dColors*<br/>
+[in] Gibt eine transparente Farbe für den Schaltflächenhintergrund an. d. h. die Oberfläche der Schaltfläche. "True", verwenden Sie den Farbwert RGB (192, 192, 192); Verwenden Sie den Farbwert, der definiert, indem Sie "false" `AFX_GLOBAL_DATA::clrBtnFace`.  
   
- [in] *hIconDisabled*  
- Handle für das Symbol für deaktivierten Bilds.  
+*hIconDisabled*<br/>
+[in] Handle für das Symbol für deaktivierten Bilds.  
   
- [in] *hBitmapDisabled*  
- Handle für die Bitmap, die das deaktivierte Bild enthält.  
+*hBitmapDisabled*<br/>
+[in] Handle für die Bitmap, die das deaktivierte Bild enthält.  
   
- [in] *UiBmpDsblResID*  
- Ressourcen-ID der Bitmap für die deaktiviert.  
+*uiBmpDsblResID*<br/>
+[in] Ressourcen-ID der Bitmap für die deaktiviert.  
   
- [in] *bAlphaBlend*  
- "True" verwenden nur 32-Bit-Images, die den alpha-Kanal zu verwenden; "FALSE", nicht nur alpha-Kanal-Images zu verwenden. Der Standardwert ist "false".  
+*bAlphaBlend*<br/>
+[in] "True" verwenden nur 32-Bit-Images, die den alpha-Kanal zu verwenden; "FALSE", nicht nur alpha-Kanal-Images zu verwenden. Der Standardwert ist "false".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -770,8 +814,8 @@ void SetMouseCursor(HCURSOR hcursor);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Hcursor*  
- Das Handle eines Cursors.  
+*hCursor*<br/>
+[in] Das Handle eines Cursors.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, die Schaltfläche mit den ein Cursorbild enthält, z. B. den Hand-Cursor zugeordnet werden soll. Der Cursor wird aus den Anwendungsressourcen geladen.  
@@ -803,14 +847,14 @@ void SetStdImage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Id*  
- Eine der Schaltfläche Image-IDs, die in definiert ist die `CMenuImage::IMAGES_IDS` Enumeration. Bilder, z. B. Pfeile, Stifte und Optionsfelder angeben, die Image-Werte.  
+*ID*<br/>
+[in] Eine der Schaltfläche Image-IDs, die in definiert ist die `CMenuImage::IMAGES_IDS` Enumeration. Bilder, z. B. Pfeile, Stifte und Optionsfelder angeben, die Image-Werte.  
   
- [in] *Zustand*  
- Eine der Schaltfläche Image Status-IDs, die in definiert ist die `CMenuImages::IMAGE_STATE` Enumeration. Die Image-Status geben Schaltflächenfarben wie z. B. Schwarz, grau, einfache grau, weiß und dunkel grau dargestellt. Der Standardwert ist `CMenuImages::ImageBlack`.  
+*state*<br/>
+[in] Eine der Schaltfläche Image Status-IDs, die in definiert ist die `CMenuImages::IMAGE_STATE` Enumeration. Die Image-Status geben Schaltflächenfarben wie z. B. Schwarz, grau, einfache grau, weiß und dunkel grau dargestellt. Der Standardwert ist `CMenuImages::ImageBlack`.  
   
- [in] *IdDisabled*  
- Eine der Schaltfläche Image-IDs, die in definiert ist die `CMenuImage::IMAGES_IDS` Enumeration. Das Bild gibt an, dass die Schaltfläche deaktiviert ist. Der Standardwert ist das erste Schaltflächenbild ( `CMenuImages::IdArrowDown`).  
+*idDisabled*<br/>
+[in] Eine der Schaltfläche Image-IDs, die in definiert ist die `CMenuImage::IMAGES_IDS` Enumeration. Das Bild gibt an, dass die Schaltfläche deaktiviert ist. Der Standardwert ist das erste Schaltflächenbild ( `CMenuImages::IdArrowDown`).  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -822,8 +866,8 @@ void SetTextColor(COLORREF clrText);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *ClrText*  
- Ein RGB-Farbwert.  
+*clrText*<br/>
+[in] Ein RGB-Farbwert.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -835,8 +879,8 @@ void SetTextHotColor(COLORREF clrTextHot);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *ClrTextHot*  
- Ein RGB-Farbwert.  
+*clrTextHot*<br/>
+[in] Ein RGB-Farbwert.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -848,8 +892,8 @@ void SetTooltip(LPCTSTR lpszToolTipText);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszToolTipText*  
- Zeiger auf den Text für die QuickInfo. Geben Sie NULL an, wenn die QuickInfo zu deaktivieren.  
+*lpszToolTipText*<br/>
+[in] Zeiger auf den Text für die QuickInfo. Geben Sie NULL an, wenn die QuickInfo zu deaktivieren.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -861,8 +905,8 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bCalcOnly*  
- True, um zu berechnen, aber nicht ändern, die neue Größe der Schaltfläche. "False", um die Größe der Schaltfläche ändern. Der Standardwert ist "false".  
+*bCalcOnly*<br/>
+[in] True, um zu berechnen, aber nicht ändern, die neue Größe der Schaltfläche. "False", um die Größe der Schaltfläche ändern. Der Standardwert ist "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein `CSize` Objekt, das die neue Größe der Schaltfläche enthält.  

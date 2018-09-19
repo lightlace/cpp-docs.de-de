@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a46e7d314281bd19773a5c86e70a63f3c93e14
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: aacbb7709daf6952f00276663e20131e967a554d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940321"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022356"
 ---
 # <a name="functions-c"></a>Funktionen (C++)
 
@@ -82,7 +82,7 @@ Die erforderlichen Bestandteile einer Funktionsdeklaration lauten:
 
 Optionale Bestandteile einer Funktionsdeklaration sind:
 
-1. **"constexpr"**, was bedeutet, dass der Rückgabewert der Funktion einen konstanten Wert wird zur Kompilierzeit berechnet werden kann.
+1. `constexpr`. Gibt an, dass es sich beim Rückgabewert der Funktion um einen konstanten Wert handelt, der zur Kompilierungszeit berechnet werden kann.
 
     ```cpp
     constexpr float exp(float x, int n)
@@ -114,7 +114,7 @@ Optionale Bestandteile einer Funktionsdeklaration sind:
 
      Weitere Informationen finden Sie unter [Inlinefunktionen](../cpp/inline-functions-cpp.md).
 
-1. Ein **"noexcept"** Ausdruck, der angibt, ob die Funktion eine Ausnahme auslösen kann. Im folgenden Beispiel ist die Funktion löst keine Ausnahme ab, wenn die `is_pod` Ausdruck wird zu **"true"**.
+1. Ein `noexcept` Ausdruck, der angibt, ob die Funktion eine Ausnahme auslösen kann. Im folgenden Beispiel ist die Funktion löst keine Ausnahme ab, wenn die `is_pod` Ausdruck wird zu **"true"**.
 
     ```cpp
     #include <type_traits>
@@ -127,7 +127,7 @@ Optionale Bestandteile einer Funktionsdeklaration sind:
 
 1. (Nur Memberfunktionen) Die cv-Qualifizierer, die angeben, ob die Funktion ist **const** oder **flüchtige**.
 
-1. (Nur Memberfunktionen) **virtuellen**, **überschreiben**, oder **endgültige**. **virtuelle** gibt an, dass eine Funktion in einer abgeleiteten Klasse überschrieben werden kann. **außer Kraft setzen** bedeutet, dass eine Funktion in einer abgeleiteten Klasse eine virtuelle Funktion außer Kraft gesetzt wird. **letzte** bedeutet, dass eine Funktion kann nicht in einem weiteren überschrieben werden abgeleitete Klasse. Weitere Informationen finden Sie unter [virtuelle Funktionen](../cpp/virtual-functions.md).
+1. (Nur Memberfunktionen) **virtuellen**, `override`, oder `final`. **virtuelle** gibt an, dass eine Funktion in einer abgeleiteten Klasse überschrieben werden kann. `override` bedeutet, dass eine Funktion in einer abgeleiteten Klasse eine virtuelle Funktion überschreibt. `final` bedeutet, dass eine Funktion in keiner weiteren abgeleiteten Klasse überschrieben werden kann. Weitere Informationen finden Sie unter [virtuelle Funktionen](../cpp/virtual-functions.md).
 
 1. (nur Memberfunktionen) **statische** angewendet auf einen Member-Funktion bedeutet, dass die Funktion nicht mit Objektinstanzen der Klasse verknüpft ist.
 
@@ -135,7 +135,7 @@ Optionale Bestandteile einer Funktionsdeklaration sind:
 
 Die folgende Abbildung zeigt die Teile einer Funktionsdefinition. Der schattierte Bereich ist der Funktionsrumpf.
 
- ![Teile einer Funktionsdefinition](../cpp/media/vc38ru1.gif "vc38RU1") Teile einer Funktionsdefinition
+![Teile einer Funktionsdefinition](../cpp/media/vc38ru1.gif "vc38RU1") Teile einer Funktionsdefinition
 
 ## <a name="function-definitions"></a>Funktionsdefinitionen
 
@@ -170,7 +170,7 @@ Im Textteil deklarierte Variablen werden als lokale Variablen bezeichnet. Sie ve
 
 Sie können eine Memberfunktion als deklarieren **const** um anzugeben, dass die Funktion zum Ändern der Werte von Datenmembern, die in der Klasse nicht zulässig ist. Durch die Deklaration einer Memberfunktion als **const**, Sie können den Compiler an, zu erzwingen *Const-Richtigkeit*. Wenn jemand versehentlich versucht haben, die das Objekt zu ändern, indem Sie mit einer Funktion deklariert **const**, wird ein Compilerfehler ausgelöst. Weitere Informationen finden Sie unter [const](const-cpp.md).
 
-Deklarieren Sie eine Funktion als **"constexpr"** zur Kompilierzeit bestimmt werden wenn möglich der Wert erzeugt. Eine Constexpr-Funktion führt im Allgemeinen schneller als eine reguläre Funktion. Weitere Informationen finden Sie unter ["constexpr"](constexpr-cpp.md).
+Deklarieren Sie eine Funktion als `constexpr` zur Kompilierzeit bestimmt werden wenn möglich der Wert erzeugt. Eine Constexpr-Funktion führt im Allgemeinen schneller als eine reguläre Funktion. Weitere Informationen finden Sie unter ["constexpr"](constexpr-cpp.md).
 
 ## <a name="function-templates"></a>Funktionsvorlagen
 
@@ -205,7 +205,7 @@ Wenn eine Funktion ein Argument ändert, das nach Verweis weitergegeben wird, ä
 void DoSomething(const std::string& input){...}
 ```
 
- **C++ 11:** verwenden, um Argumente explizit zu behandeln, das als Rvalue-Verweis oder Lvalue-Verweis übergeben werden, ein doppeltes kaufmännisches und-Zeichen für den Parameter um einen universellen Verweis anzugeben:
+**C++ 11:** verwenden, um Argumente explizit zu behandeln, das als Rvalue-Verweis oder Lvalue-Verweis übergeben werden, ein doppeltes kaufmännisches und-Zeichen für den Parameter um einen universellen Verweis anzugeben:
 
 ```cpp
 void DoSomething(const std::string&& input){...}
@@ -269,11 +269,11 @@ Wenn **automatisch** dient in Verbindung mit einem nachstehenden Rückgabetyp, f
 
 Wird aufgerufen, eine Variable, die in einem Funktionstext deklariert ist eine *lokale Variable* oder einfach als *lokalen*. Nicht statische lokale Variablen sind nur innerhalb des Funktionsrumpfs sichtbar, wenn sie auf dem Stapel deklariert werden, wenn den Bereich verlässt, wenn die Funktion vorhanden ist. Wenn Sie eine lokale Variable erstellen und nach Wert zurückgeben, kann der Compiler für gewöhnlich die Rückgabewertoptimierung vornehmen, um nicht erforderliche Kopiervorgänge zu vermeiden. Wenn Sie eine lokale Variable nach Verweis zurückgeben, stellt eine Compiler eine Warnung aus, da jeder Versuch durch den Aufrufer, diesen Verweis zu verwenden, erst nach der Zerstörung der lokalen Variablen auftritt.
 
-In C++ kann eine lokale Variable als statisch deklariert werden. Die Variable ist nur innerhalb des Funktionsrumpfs sichtbar. Es ist jedoch eine einzelne Kopie der Variable für alle Instanzen der Funktion vorhanden. Lokale statische Objekte werden zerstört, während der Beendigung, die gemäß des **von "atexit"**. Wenn kein statisches Objekt erstellt wurde, da die Ablaufsteuerung des Programms seine Deklaration umgangen ist, wird nicht versucht, das Objekt zu zerstören.
+In C++ kann eine lokale Variable als statisch deklariert werden. Die Variable ist nur innerhalb des Funktionsrumpfs sichtbar. Es ist jedoch eine einzelne Kopie der Variable für alle Instanzen der Funktion vorhanden. Lokale statische Objekte werden während der Beendigung zerstört, die von `atexit` angegeben wird. Wenn kein statisches Objekt erstellt wurde, da die Ablaufsteuerung des Programms seine Deklaration umgangen ist, wird nicht versucht, das Objekt zu zerstören.
 
 ##  <a name="type_deduction"></a> Typableitung in Rückgabetypen (C ++ 14)
 
-In C ++ 14 können Sie **automatisch** an den Compiler anzuweisen, den Rückgabetyp aus dem Funktionsrumpf abzuleiten, ohne einen nachstehenden Rückgabetyp anzugeben. Beachten Sie, dass **automatisch** immer eine Rückgabe per Wert ableitet. Verwendung **automatisch & &** an den Compiler anzuweisen, einen Verweis abzuleiten.
+In C ++ 14 können Sie **automatisch** an den Compiler anzuweisen, den Rückgabetyp aus dem Funktionsrumpf abzuleiten, ohne einen nachstehenden Rückgabetyp anzugeben. Beachten Sie, dass **automatisch** immer eine Rückgabe per Wert ableitet. Verwenden Sie `auto&&` um den Compiler anzuweisen, einen Verweis abzuleiten.
 
 In diesem Beispiel **automatisch** wird als eine nicht Konstante wertkopie der Summe von Lhs und Rhs abgeleitet werden.
 
@@ -306,7 +306,7 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
-## <a name="returning-multiple-values-from-a-function"></a>Zurückgeben von mehreren Werten aus einer Funktion
+## <a name="multi_val"></a> Zurückgeben von mehreren Werten aus einer Funktion
 
 Es gibt verschiedene Möglichkeiten, mehr als einen Wert aus einer Funktion zurückgeben:
 
@@ -315,22 +315,22 @@ Es gibt verschiedene Möglichkeiten, mehr als einen Wert aus einer Funktion zur�
     ```cpp
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-    
+
     struct S
     {
         string name;
         int num;
     };
-    
+
     S g()
     {
         string t{ "hello" };
         int u{ 42 };
         return { t, u };
     }
-    
+
     int main()
     {
         S s = g();
@@ -338,16 +338,16 @@ Es gibt verschiedene Möglichkeiten, mehr als einen Wert aus einer Funktion zur�
         return 0;
     }
     ```
-    
+
 1. Geben Sie ein Tuple "oder" Std:: Pair-Objekt zurück:
 
     ```cpp
     #include <tuple>
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-        
+
     tuple<int, string, double> f()
     {
         int i{ 108 };
@@ -355,20 +355,20 @@ Es gibt verschiedene Möglichkeiten, mehr als einen Wert aus einer Funktion zur�
         double d{ .01 };
         return { i,s,d };
     }
-    
+
     int main()
     {
         auto t = f();
         cout << get<0>(t) << " " << get<1>(t) << " " << get<2>(t) << endl;
-     
+
         // --or--
-    
+
         int myval;
         string myname;
         double mydecimal;
         tie(myval, myname, mydecimal) = f();
         cout << myval << " " << myname << " " << mydecimal << endl;
-    
+
         return 0;
     }
     ```
@@ -379,9 +379,9 @@ Es gibt verschiedene Möglichkeiten, mehr als einen Wert aus einer Funktion zur�
     #include <tuple>
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-    
+
     tuple<int, string, double> f()
     {
         int i{ 108 };
@@ -394,25 +394,25 @@ Es gibt verschiedene Möglichkeiten, mehr als einen Wert aus einer Funktion zur�
         string name;
         int num;
     };
-    
+
     S g()
     {
         string t{ "hello" };
         int u{ 42 };
         return { t, u };
     }
-    
+
     int main()
     {
         auto[x, y, z] = f(); // init from tuple
         cout << x << " " << y << " " << z << endl;
-    
+
         auto[a, b] = g(); // init from POD struct
         cout << a << " " << b << endl;
         return 0;
     }
     ```
-    
+
 1. Zusätzlich zur Verwendung des Rückgabewert selbst, können Sie "return" Werte durch die Definition eine beliebige Anzahl von Parametern, übergeben als Verweis zu verwenden, sodass die Funktion können Sie ändern oder Initialisieren der Werte von Objekten, die der Aufrufer enthält. Weitere Informationen finden Sie unter [Verweistyp Funktionsargumente](reference-type-function-arguments.md).
 
 ## <a name="function-pointers"></a>Funktionszeiger
@@ -436,9 +436,9 @@ Die vorhergehende Deklaration gleicht der Deklaration oben, die "typedef" verwen
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Funktionsüberladung](../cpp/function-overloading.md)
-- [Funktionen mit Variablenargumentlisten](../cpp/functions-with-variable-argument-lists-cpp.md)
-- [Explizit vorgegebene und gelöschte Funktionen](../cpp/explicitly-defaulted-and-deleted-functions.md)
-- [Argumentbezogene Namenssuche (Koenig) in Funktionen](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)
-- [Standardargumente](../cpp/default-arguments.md)
-- [Inlinefunktionen](../cpp/inline-functions-cpp.md)
+[Funktionsüberladung](../cpp/function-overloading.md)<br/>
+[Funktionen mit Variablenargumentlisten](../cpp/functions-with-variable-argument-lists-cpp.md)<br/>
+[Explizit vorgegebene und gelöschte Funktionen](../cpp/explicitly-defaulted-and-deleted-functions.md)<br/>
+[Argumentbezogene Namenssuche (Koenig) in Funktionen](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)<br/>
+[Standardargumente](../cpp/default-arguments.md)<br/>
+[Inlinefunktionen](../cpp/inline-functions-cpp.md)

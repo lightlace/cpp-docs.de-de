@@ -1,5 +1,5 @@
 ---
-title: _BitScanForward _BitScanForward64 | Microsoft Docs
+title: _BitScanForward, _BitScanForward64 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad785bb7789156a2f5105e89a493877fb30c2f3e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e563e7240c1797bf863ee0762f923e91a6f05bb0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331896"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699885"
 ---
 # <a name="bitscanforward-bitscanforward64"></a>_BitScanForward, _BitScanForward64
 **Microsoft-spezifisch**  
@@ -47,11 +47,11 @@ unsigned char _BitScanForward64(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [out] `Index`  
- Geladen mit der Bitposition des ersten festgelegten Bits (1), das ermittelt wurde.  
+*Index*<br/>
+[out] Geladen mit der Bitposition des ersten festgelegten Bits (1) wurde gefunden.  
   
- [in] `Mask`  
- Der zu suchende 32-Bit- oder 64-Bit-Wert.  
+*Maske*<br/>
+[in] Der 32-Bit oder 64-Bit-Wert zu suchen.  
   
 ## <a name="return-value"></a>Rückgabewert  
  0, wenn die Maske null ist; andernfalls ungleich null.  
@@ -63,8 +63,8 @@ unsigned char _BitScanForward64(
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`_BitScanForward`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_BitScanForward64`|ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_BitScanForward`|X86, ARM, x64|  
+|`_BitScanForward64`|ARM, x64|  
   
  **Headerdatei** \<intrin.h >  
   

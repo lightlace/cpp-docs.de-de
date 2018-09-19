@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73c1d560f0e2adfbecb72fe9df96d981d0bb93af
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 91ed7cb82bbf9036a32ee20ecf33a8138086a98c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957947"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103947"
 ---
 # <a name="abstract-classes-c"></a>Abstrakte Klassen (C++)
 
@@ -98,4 +98,4 @@ Wenn das Objekt, auf das `pDerived` zeigt, gelöscht wird, wird der Destruktor f
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Vererbung](../cpp/inheritance-cpp.md)
+[Vererbung](../cpp/inheritance-cpp.md)

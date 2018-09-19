@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eec19c574d9555fdfefaedd1b5ac05d896d15152
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 286c95b775b95d44ad8fd9dc216b161aed717796
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850760"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711983"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar-Klasse
 Implementiert ein Steuerelement, das den Fortschritt einer längeren Operation visuell darstellt.  
@@ -106,14 +106,14 @@ CMFCRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- Gibt die Befehls-ID für die Menüband-Statusanzeige an.  
+*nID*<br/>
+[in] Gibt die Befehls-ID für die Menüband-Statusanzeige an.  
   
- [in] *nWidth*  
- Gibt die Breite des der Menüband-Statusanzeige in Pixel an.  
+*nWidth*<br/>
+[in] Gibt die Breite des der Menüband-Statusanzeige in Pixel an.  
   
- [in] *nHeight*  
- Gibt die Höhe des der Menüband-Statusanzeige in Pixel an.  
+*nHeight*<br/>
+[in] Gibt die Höhe des der Menüband-Statusanzeige in Pixel an.  
   
 ##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
  Gibt die aktuelle Position der Statusanzeige zurück.  
@@ -151,7 +151,7 @@ int GetRangeMin() const;
  Der minimale Wert des aktuellen Bereichs.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonProgressBar::GetRegularSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
@@ -178,7 +178,7 @@ BOOL IsInfiniteMode() const;
  Im Modus "unendlich" füllt die Statusanzeige wiederholt aus der minimale Wert auf den maximalen Wert. Sie können unbegrenzte Modus verwenden, um anzugeben, dass ein Vorgang ausgeführt wird, aber die Dauer unbekannt ist.  
   
 ##  <a name="ondraw"></a>  CMFCRibbonProgressBar::OnDraw  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 virtual void OnDraw(CDC* pDC);
@@ -197,8 +197,8 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bSet*  
- "True", um anzugeben, dass die Statusanzeige im unendliche Modus; andernfalls "false".  
+*bSet*<br/>
+[in] "True", um anzugeben, dass die Statusanzeige im unendliche Modus; andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  In der Regel ist die Statusanzeige im unendliche Modus, ist es die Benutzer darüber informiert, dass ein Vorgang ausgeführt wird, aber die Dauer unbekannt ist. Daher füllt die Statusanzeige wiederholt aus der minimale Wert auf den maximalen Wert.  
@@ -213,11 +213,11 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nPos*  
- Gibt die Position, die auf der die Statusanzeige festgelegt ist.  
+*nPos*<br/>
+[in] Gibt die Position, die auf der die Statusanzeige festgelegt ist.  
   
- [in] *bRedraw*  
- Gibt an, ob die Statusanzeige neu gezeichnet werden muss.  
+*bRedraw*<br/>
+[in] Gibt an, ob die Statusanzeige neu gezeichnet werden muss.  
   
 ### <a name="remarks"></a>Hinweise  
  Bereich, der festgelegt wird muss innerhalb des Bereichs, der gemäß der [CMFCRibbonProgressBar::SetRange](#setrange) Methode.  
@@ -232,11 +232,11 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nmin.*  
- Gibt den Mindestwert des Bereichs an.  
+*nmin.*<br/>
+[in] Gibt den Mindestwert des Bereichs an.  
   
- [in] *nmax.*  
- Gibt den Höchstwert des Bereichs an.  
+*nmax.*<br/>
+[in] Gibt den Höchstwert des Bereichs an.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um den Bereich der Statusanzeige zu definieren, durch Festlegen der minimalen und maximalen Werte.  

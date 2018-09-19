@@ -1,5 +1,5 @@
 ---
-title: 'SRWLOCK:: Trylockshared-Methode | Microsoft Docs'
+title: 'SRWLOCK:: Trylockshared-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19ff9324f946f48f201678f9c9e7403ba774b2c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bcad153145432997841753828b3b01b728ff365d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892282"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608172"
 ---
 # <a name="srwlocktrylockshared-method"></a>SRWLock::TryLockShared-Methode
-Versucht, ein SRWLock-Objekt im freigegebenen Modus für das aktuelle oder angegebene SRWLock-Objekt zu erhalten.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-WRL_NOTHROW SyncLockShared TryLockShared();  
-WRL_NOTHROW static SyncLockShared TryLockShared(  
-   _In_ SRWLOCK* lock  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `lock`  
- Zeiger auf ein SRWLock-Objekt.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Bei Erfolg wird ein SRWLock-Objekt im Modus für gemeinsame Nutzung und der aufrufende Thread den Besitz der Sperre. Andernfalls ein SRWLock-Objekt, deren Zustand ungültig ist.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Siehe auch  
- [SRWLock-Klasse](../windows/srwlock-class.md)
+
+Versucht, für eine **SRWLock** Objekt im freigegebenen Modus für den aktuellen oder angegebenen **SRWLock** Objekt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+WRL_NOTHROW SyncLockShared TryLockShared();
+WRL_NOTHROW static SyncLockShared TryLockShared(
+   _In_ SRWLOCK* lock
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*lock*  
+Zeiger auf ein **SRWLock** Objekt.
+
+## <a name="return-value"></a>Rückgabewert
+
+Bei erfolgreicher Ausführung einen **SRWLock** Objekt im Modus für gemeinsame Nutzung und der aufrufende Thread übernimmt den Besitz der Sperre. Andernfalls ein **SRWLock** Objekt, dessen Status ungültig ist.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+
+[SRWLock-Klasse](../windows/srwlock-class.md)

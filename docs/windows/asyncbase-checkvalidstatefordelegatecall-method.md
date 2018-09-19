@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Checkvalidstatefordelegatecall-Methode | Microsoft Docs'
+title: 'Asyncbase:: Checkvalidstatefordelegatecall-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81e3420304b0432f635d04a4892e7984dd38f144
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cd3629fcaf8507abd2baf6cded3c6a63bc6fd64f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859874"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611499"
 ---
 # <a name="asyncbasecheckvalidstatefordelegatecall-method"></a>AsyncBase::CheckValidStateForDelegateCall-Methode
-Testet, ob in den aktuellen Status des asynchronen delegateigenschaften geändert werden können.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-inline HRESULT CheckValidStateForDelegateCall();  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn delegateigenschaften geändert werden können; andernfalls E_ILLEGAL_METHOD_CALL.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** async.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [AsyncBase-Klasse](../windows/asyncbase-class.md)
+
+Testet, ob in den aktuellen Status des asynchronen delegateigenschaften geändert werden können.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+inline HRESULT CheckValidStateForDelegateCall();
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+S_OK, wenn der delegateigenschaften geändert werden können; andernfalls E_ILLEGAL_METHOD_CALL.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** async.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[AsyncBase-Klasse](../windows/asyncbase-class.md)

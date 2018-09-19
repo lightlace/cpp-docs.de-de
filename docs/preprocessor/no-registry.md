@@ -1,5 +1,5 @@
 ---
-title: No_registry | Microsoft Docs
+title: No_registry | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 416663592f4362c110637fb4d4b4b418d9776cde
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 105c2b0ee4d2648a1cc43d0baca9f30146184e78
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849664"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539040"
 ---
 # <a name="noregistry"></a>no_registry
-`no_registry` weist den Compiler an, nicht die Registrierung für Typbibliotheken zu suchen, die mit `#import` importiert werden.  
+**No_registry** weist den Compiler nicht an die Registrierung nach Typbibliotheken, die mit importiert suchen `#import`.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 #import filename no_registry  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- *filename*  
- Eine Typbibliothek.  
+### <a name="parameters"></a>Parameter  
+*filename*  
+Eine Typbibliothek.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn eine referenzierte Typbibliothek nicht in den Verzeichnissen Include gefunden wird, schlägt die Kompilierung fehl, selbst wenn in der Registrierung die Typbibliothek ist.  `no_registry` wird an anderen Typbibliotheken implizit mit importiert übertragen `auto_search`.  
+ 
+Wenn keine referenzierte Typbibliothek in der Include-Verzeichnissen nicht gefunden wird, wird die Kompilierung fehlschlagen, auch wenn die Typbibliothek in der Registrierung ist.  **No_registry** überträgt auf andere Typbibliotheken importiert implizit mit `auto_search`.  
   
- Der Compiler durchsucht niemals die Registrierung nach Typbibliotheken, die mit Dateinamen angegeben und direkt an `#import` übergeben werden.  
+Der Compiler durchsucht niemals die Registrierung nach Typbibliotheken, die mit Dateinamen angegeben und direkt an `#import` übergeben werden.  
   
- Wenn `auto_search` angegeben wird, werden die zusätzlichen `#import`s mit der `no_registry`-Einstellung des ursprünglichen `#import` generiert (wenn die ursprüngliche `#import`-Direktive `no_registry` war, ist ein mit `auto_search` generiertes `#import` ebenfalls `no_registry`).  
+Bei der `auto_search` angegeben wird, die zusätzliche `#import`mit s generiert werden die **No_registry** -Einstellung des ursprünglichen `#import` (wenn der ursprüngliche `#import` Richtlinie wurde **No_registry** , `auto_search`-generiert `#import` auch **No_registry**.)  
   
- `no_registry` ist nützlich, wenn Sie Cross referenzierte Typbibliotheken ohne das Risiko, dass der Compiler eine ältere Version der Datei in der Registrierung suchen importieren möchten.  `no_registry` ist auch nützlich, wenn die Typbibliothek nicht registriert ist.  
+**No_registry** ist nützlich, wenn Sie plattformübergreifende Typbibliotheken ohne das Risiko des Compilers finden in der Registrierung eine ältere Version der Datei importieren möchten. **No_registry** ist auch nützlich, wenn die Typbibliothek nicht registriert ist.  
   
 ## <a name="see-also"></a>Siehe auch  
- [#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)   
- [#import-Direktive](../preprocessor/hash-import-directive-cpp.md)
+ 
+[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)   
+[#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)

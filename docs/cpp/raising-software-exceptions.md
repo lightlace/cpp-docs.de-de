@@ -23,63 +23,65 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e1ea4abadc3b751b8bad9f9521462d510c5227
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 75f882fe924ba825a5f3ec641a98175104635e92
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943775"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085812"
 ---
 # <a name="raising-software-exceptions"></a>Auslösen von Softwareausnahmen
-Einige der häufigsten Programmfehlerquellen werden vom System nicht als Ausnahmen gekennzeichnet. Wenn Sie beispielsweise versuchen, einen Speicherblock zu belegen, jedoch unzureichend Arbeitsspeicher vorhanden ist, löst die Laufzeit oder API-Funktion keine Ausnahme aus, sondern gibt einen Fehlercode zurück.  
-  
- Allerdings können Sie jede Bedingung, die auch als Ausnahme behandeln, durch die Bedingung in Ihrem Code erkennen und dann durch Aufrufen der [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) Funktion. Indem Sie Fehler auf diese Weise kennzeichnen, können Sie die Vorteile der strukturierten Ausnahmebehandlung für jede Art von Laufzeitfehler nutzen.  
-  
- So verwenden Sie die strukturierte Ausnahmebehandlung bei Fehlern  
-  
--   Definieren Sie einen eigenen Ausnahmecode für das Ereignis.  
-  
--   Rufen Sie `RaiseException` Wenn Sie ein Problem feststellen.  
-  
--   Verwenden Sie Ausnahmebehandlungsfilter, um den von Ihnen definierten Ausnahmecode zu testen.  
-  
- Die \<"Winerror.h" > Datei zeigt das Format für Ausnahmecodes. Um sicherzustellen, dass Sie keinen Code definieren, der in Konflikt mit einem vorhandenen Ausnahmecode steht, legen Sie das dritte höchstwertige Bit auf 1 fest. Die vier höchstwertigen Bits sollten so festgelegt werden, wie in der folgenden Tabelle gezeigt.  
-  
-|Bits|Empfohlene Binäreinstellung|Beschreibung|  
-|----------|--------------------------------|-----------------|  
-|31-30|11|Diese zwei Bits beschreiben den grundlegenden Status des Codes: 11 = Fehler, 00 = Erfolg, 01 = Information, 10 = Warnung.|  
-|29|1|Clientbit. Wird für benutzerdefinierten Code auf 1 festgelegt.|  
-|28|0|Reservierte Bitzahl. (Festlegung auf 0 beibehalten.)|  
-  
- Sie können die ersten zwei Bits optional auf eine andere Einstellung als binär 11 festlegen, obwohl die Einstellung "Fehler" für die meisten Ausnahmen angemessen ist. Es ist wichtig, daran zu denken, Bits 29 und 28 so festzulegen, wie es in der vorherigen Tabelle gezeigt wurde.  
-  
- Das fehlercodeergebnis sollte daher die vier höchsten Bits auf hexadezimales e festgelegt haben. Die folgenden Definitionen definieren beispielsweise Ausnahmecodes, die keinen Konflikt mit jeder Windows-Ausnahmecodes. (Sie müssen jedoch prüfen, welche Codes von Drittanbieter-DLLs verwendet werden).  
-  
-```cpp 
-#define STATUS_INSUFFICIENT_MEM       0xE0000001  
-#define STATUS_FILE_BAD_FORMAT        0xE0000002  
-```  
-  
- Nachdem Sie einen Ausnahmecode definiert haben, können Sie ihn verwenden, um eine Ausnahme auszulösen. Zum Beispiel löst der folgende Code die STATUS_INSUFFICIENT_MEM-Ausnahme als Reaktion auf ein Problem mit der Speicherbelegung aus:  
-  
-```cpp 
-lpstr = _malloc( nBufferSize );  
-if (lpstr == NULL)  
-    RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);  
-```  
-  
- Wenn Sie einfach eine Ausnahme auslösen möchten, können Sie die letzten drei Parameter auf 0 festlegen. Die drei letzten Parameter übergeben zusätzliche Informationen und legen Flags fest, die Handler beim Fortsetzen der Ausführung hindern. Finden Sie unter den [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) Funktion in der [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] für Weitere Informationen.  
-  
- In den Ausnahmebehandlungsfiltern können Sie dann die Codes testen, die Sie definiert haben. Zum Beispiel:  
-  
-```cpp 
-__try {  
-    ...  
-}  
-__except (GetExceptionCode() == STATUS_INSUFFICIENT_MEM ||  
-        GetExceptionCode() == STATUS_FILE_BAD_FORMAT )  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Schreiben eines Ausnahmehandlers](../cpp/writing-an-exception-handler.md)   
- [Strukturierte Ausnahmebehandlung (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+
+Einige der häufigsten Programmfehlerquellen werden vom System nicht als Ausnahmen gekennzeichnet. Wenn Sie beispielsweise versuchen, einen Speicherblock zu belegen, jedoch unzureichend Arbeitsspeicher vorhanden ist, löst die Laufzeit oder API-Funktion keine Ausnahme aus, sondern gibt einen Fehlercode zurück.
+
+Allerdings können Sie jede Bedingung, die auch als Ausnahme behandeln, durch die Bedingung in Ihrem Code erkennen und dann durch Aufrufen der [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552) Funktion. Indem Sie Fehler auf diese Weise kennzeichnen, können Sie die Vorteile der strukturierten Ausnahmebehandlung für jede Art von Laufzeitfehler nutzen.
+
+So verwenden Sie die strukturierte Ausnahmebehandlung bei Fehlern
+
+- Definieren Sie einen eigenen Ausnahmecode für das Ereignis.
+
+- Rufen Sie `RaiseException` Wenn Sie ein Problem feststellen.
+
+- Verwenden Sie Ausnahmebehandlungsfilter, um den von Ihnen definierten Ausnahmecode zu testen.
+
+Die \<"Winerror.h" > Datei zeigt das Format für Ausnahmecodes. Um sicherzustellen, dass Sie keinen Code definieren, der in Konflikt mit einem vorhandenen Ausnahmecode steht, legen Sie das dritte höchstwertige Bit auf 1 fest. Die vier höchstwertigen Bits sollten so festgelegt werden, wie in der folgenden Tabelle gezeigt.
+
+|Bits|Empfohlene Binäreinstellung|Beschreibung|
+|----------|--------------------------------|-----------------|
+|31-30|11|Diese zwei Bits beschreiben den grundlegenden Status des Codes: 11 = Fehler, 00 = Erfolg, 01 = Information, 10 = Warnung.|
+|29|1|Clientbit. Wird für benutzerdefinierten Code auf 1 festgelegt.|
+|28|0|Reservierte Bitzahl. (Festlegung auf 0 beibehalten.)|
+
+Sie können die ersten zwei Bits optional auf eine andere Einstellung als binär 11 festlegen, obwohl die Einstellung "Fehler" für die meisten Ausnahmen angemessen ist. Es ist wichtig, daran zu denken, Bits 29 und 28 so festzulegen, wie es in der vorherigen Tabelle gezeigt wurde.
+
+Das fehlercodeergebnis sollte daher die vier höchsten Bits auf hexadezimales e festgelegt haben. Die folgenden Definitionen definieren beispielsweise Ausnahmecodes, die keinen Konflikt mit jeder Windows-Ausnahmecodes. (Sie müssen jedoch prüfen, welche Codes von Drittanbieter-DLLs verwendet werden).
+
+```cpp
+#define STATUS_INSUFFICIENT_MEM       0xE0000001
+#define STATUS_FILE_BAD_FORMAT        0xE0000002
+```
+
+Nachdem Sie einen Ausnahmecode definiert haben, können Sie ihn verwenden, um eine Ausnahme auszulösen. Der folgende code beispielsweise löst der `STATUS_INSUFFICIENT_MEM` Ausnahme als Reaktion auf ein Speicherproblem für die Zuweisung:
+
+```cpp
+lpstr = _malloc( nBufferSize );
+if (lpstr == NULL)
+    RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);
+```
+
+Wenn Sie einfach eine Ausnahme auslösen möchten, können Sie die letzten drei Parameter auf 0 festlegen. Die drei letzten Parameter übergeben zusätzliche Informationen und legen Flags fest, die Handler beim Fortsetzen der Ausführung hindern. Finden Sie unter den [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552) Funktion im Windows SDK für Weitere Informationen.
+
+In den Ausnahmebehandlungsfiltern können Sie dann die Codes testen, die Sie definiert haben. Zum Beispiel:
+
+```cpp
+__try {
+    ...
+}
+__except (GetExceptionCode() == STATUS_INSUFFICIENT_MEM ||
+        GetExceptionCode() == STATUS_FILE_BAD_FORMAT )
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Schreiben eines Ausnahmehandlers](../cpp/writing-an-exception-handler.md)<br/>
+[Strukturierte Ausnahmebehandlung (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

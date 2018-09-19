@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f9e3f71a0d8647000f77863ecc9243b069f0521
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f94390b96770a84b35de67f4d3a38644132d8ce8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955826"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107428"
 ---
 # <a name="isconstructible-class"></a>is_constructible-Klasse
 
@@ -37,9 +37,11 @@ struct is_constructible;
 
 ### <a name="parameters"></a>Parameter
 
-*T* der abzufragende Typ.
+*T*<br/>
+Der abzufragende Typ.
 
-*Args* den Argumenttypen in einem Konstruktor, der entsprechend *T*.
+*Args*<br/>
+Die Argumenttypen in einem Konstruktor, der entsprechend *T*.
 
 ## <a name="remarks"></a>Hinweise
 

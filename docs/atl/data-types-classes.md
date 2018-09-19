@@ -17,22 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae961d47f77b630eaff91e1c02e244454b12dc80
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 46b65fa43ddc2fc26f2cd87746f763c8a8e7c924
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851313"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756310"
 ---
 # <a name="data-types-classes"></a>Benutzertypenklassen
-Die folgenden Klassen zu umschließen C++-Datentypen:  
-  
--   [CComBSTR](../atl/reference/ccombstr-class.md) dient als Wrapper für die `BSTR` -Datentyp.  
-  
--   [CComVariant](../atl/reference/ccomvariant-class.md) dient als Wrapper für die `VARIANT` -Datentyp.  
-  
--   [CComCurrency](../atl/reference/ccomcurrency-class.md) enthält Methoden und Operatoren zum Erstellen und Verwalten einer `CURRENCY` Objekt.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../atl/atl-class-overview.md)
+
+Die folgenden Klassen zu umschließen C++-Datentypen:
+
+- [CComBSTR](../atl/reference/ccombstr-class.md) dient als Wrapper für die `BSTR` -Datentyp.
+
+- [CComVariant](../atl/reference/ccomvariant-class.md) dient als Wrapper für die `VARIANT` -Datentyp.
+
+- [CComCurrency](../atl/reference/ccomcurrency-class.md) enthält Methoden und Operatoren zum Erstellen und Verwalten einer `CURRENCY` Objekt.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../atl/atl-class-overview.md)
 

@@ -53,12 +53,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 628e942ae77449f4dcd809d519da8696cd9fec6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 39f169c18554aa91e3f66a3e30a62a801c9d345d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415766"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208987"
 ---
 # <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
 
@@ -107,16 +107,16 @@ Weitere Informationen finden Sie unter [Format Specification Syntax: printf and 
 
 Die Anzahl geschriebener Zeichen oder ein negativer Wert im Falle eines Ausgabefehlers.
 
-Wie Sie die weniger sicheren Versionen dieser Funktionen ein, wenn *Format* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Darüber hinaus im Gegensatz zu den weniger sicheren Versionen dieser Funktionen Wenn *Format* gibt nicht an einem gültigen Format Ausnahme wegen eines ungültigen Parameters generiert wird. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, diese Funktionen einem Fehlercode zurück und legen **Errno** auf diesen Fehlercode. Der standardfehlercode ist **EINVAL** Wenn kein spezifischerer Wert zur Anwendung kommt.
+Wie Sie die weniger sicheren Versionen dieser Funktionen ein, wenn *Format* ist ein null-Zeiger der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Darüber hinaus im Gegensatz zu den weniger sicheren Versionen dieser Funktionen Wenn *Format* gibt nicht an einem gültigen Format vorliegt, wird eine Ausnahme für ungültige Parameter generiert. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, diese einem Fehlercode von Funktionen zurück und legen **Errno** auf diesen Fehlercode. Der standardfehlercode ist **EINVAL** Wenn kein spezifischerer Wert nicht anwendbar ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen verwendet einen Zeiger auf eine Argumentliste und formatiert und schreibt dann die angegebenen Daten in die Konsole. **_vcwprintf_s** ist die Breitzeichen-Version des **_vcprintf_s**. Eine Zeichenfolge mit Breitzeichen wird als Argument akzeptiert.
+Jede dieser Funktionen verwendet einen Zeiger auf eine Argumentliste und formatiert und schreibt dann die angegebenen Daten in die Konsole. **_vcwprintf_s** ist die Breitzeichen-Version von **_vcprintf_s**. Eine Zeichenfolge mit Breitzeichen wird als Argument akzeptiert.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter, der übergeben wird anstelle des aktuellen Gebietsschemas.
+Die Versionen dieser Funktionen, die **_l** -Suffix sind beinahe identisch, außer dass sie verwenden den Gebietsschemaparameter, der übergeben wird, anstelle des aktuellen Gebietsschemas.
 
 > [!IMPORTANT]
-> Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -127,7 +127,7 @@ Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, v
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionale Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionale Header|
 |-------------|---------------------|----------------------|
 |**_vcprintf_s**, **_vcprintf_s_l**|\<conio.h> and \<stdarg.h>|\<varargs.h>*|
 |**_vcwprintf_s**, **_vcwprintf_s_l**|\<conio.h> oder \<wchar.h> und \<stdarg.h>|\<varargs.h>*|

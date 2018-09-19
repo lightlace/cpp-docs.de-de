@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55fbe59128aef6fbc7df20dd14afd102b493f2fd
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: eefb2347cfe3a46dabbf72a46fd46fcb16f57d38
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322497"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578403"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Portieren auf die universelle Windows-Plattform (C++)
 
@@ -27,9 +27,9 @@ Die Windows-Entwicklungscenter-Dokumentation enthält eine Anleitung zum Portier
 
 Dieses Thema enthält die folgenden Verfahren zum Portieren von Code für die UWP.
 
-1. [Portieren einer Windows 8.1 Store-App auf UWP](#BK_81StoreApp)
+- [Portieren einer Windows 8.1 Store-App auf UWP](#BK_81StoreApp)
 
-2. [Portieren einer Windows 8.1-Runtime-Komponente auf UWP](#BK_81Component)
+- [Portieren einer Windows 8.1-Runtime-Komponente auf UWP](#BK_81Component)
 
 Wenn Sie über eine klassische Wind32-DLL-Datei für Desktopcomputer verfügen und sie über eine UWP-Anwendung aufrufen möchten, können Sie dies ebenfalls vornehmen. Auf diese Weise können Sie eine UWP-Benutzeroberflächenebene für eine vorhandene klassische Windows C++-Desktopcomputeranwendung oder Ihren plattformübergreifenden C++-Standardcode erstellen. Siehe [Vorgehensweise: Verwenden von vorhandenem C++-Code in einer universelle Windows-Plattform-App](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
 
@@ -41,9 +41,9 @@ Wenn Sie eine Windows 8.1 Store-App haben, können Sie sie mithilfe dieses Verfa
 
 1. Falls noch nicht erfolgt, öffnen Sie Ihr Windows 8.1-App-Projekt in Visual Studio 2017, und befolgen Sie die Anweisungen zum Aktualisieren der Projektdatei.
 
-   Sie müssen die Windows 8.1-Tools im Visual Studio-Setup installiert haben. Wenn Sie diese Tools installiert haben, starten Sie das Visual Studio-Setup über das Fenster „Programme und Funktionen“. Klicken Sie auf Visual Studio 2017, und wählen Sie im Setup-Fenster **Ändern** aus. Suchen Sie nach Windows 8.1-Tools, stellen Sie sicher, dass diese Option ausgewählt ist, und wählen Sie OK.
+   Sie müssen die **Windows 8.1-Tools im Visual Studio**-Setup installiert haben. Wenn Sie diese Tools nicht installiert haben, starten Sie das **Visual Studio**-Setup über das Fenster **Programme und Funktionen**. Klicken Sie auf **Visual Studio 2017**, und wählen Sie im Setup-Fenster **Ändern** aus. Suchen Sie nach **Windows 8.1-Tools**, stellen Sie sicher, dass diese Option ausgewählt ist, und klicken Sie auf **OK**.
 
-2. Öffnen Sie das Fenster „Projekteigenschaften“, und legen Sie unter „C++“ und „Allgemein“ das Plattformtoolset auf „v141“ (das Toolset für Visual Studio 2017) fest.
+2. Öffnen Sie das Fenster **Projekteigenschaften**, und legen Sie unter **C++** > **Allgemein** das **Plattformtoolset** auf **v141** (das Toolset für Visual Studio 2017) fest.
 
 3. Erstellen Sie das Projekt als Windows 8.1-Projekt, und lösen Sie alle Buildfehler. Fehler in dieser Phase liegen wahrscheinlich an wichtigen Änderungen an den Build-Tools und Bibliotheken. Unter [Änderungsverlauf von Visual C++ von 2003 bis 2015](../porting/visual-cpp-change-history-2003-2015.md) finden Sie eine ausführliche Erläuterung der Änderungen, die sich auf Ihren Code auswirken.
 
@@ -51,21 +51,21 @@ Wenn Sie eine Windows 8.1 Store-App haben, können Sie sie mithilfe dieses Verfa
 
 4. Erstellen Sie ein neues universelles Windows-App-Projekt mit der leeren Vorlage. Sie möchten dem Projekt möglicherweise den gleichen Namen wie dem vorhandenen Projekt geben, obwohl sich die Projekte dazu in unterschiedlichen Verzeichnissen befinden müssen.
 
-5. Schließen Sie die Projektmappe und verwenden Sie dann den Windows Explorer oder die Befehlszeile, kopieren Sie die Codedateien (mit den Dateierweiterungen CPP, H und XAML) aus Ihrem Windows 8.1-Projekt in denselben Ordner wie die Projektdatei (VCXPROJ) für das Projekt, das Sie in Schritt 1 erstellt haben. Kopieren Sie nicht die Datei "Package.appxmanifest", und wenn Sie eigenen Code für Windows 8.1 Desktop- und -Phone haben, wählen Sie zunächst eines als Portierungsziel aus (Sie müssen später zur Angleichung an die andere Anpassungen vornehmen). Achten Sie darauf, dass Sie ebenfalls alle Inhalte aus den Unterordnern kopieren. Wenn Sie aufgefordert werden, wählen Sie aus, dass Dateien mit doppelten Namen ersetzt werden.
+5. Schließen Sie die Projektmappe, und verwenden Sie dann den **Windows Explorer** oder die Befehlszeile, kopieren Sie die Codedateien (mit den Dateierweiterungen CPP, H und XAML) aus Ihrem Windows 8.1-Projekt in denselben Ordner wie die Projektdatei (VCXPROJ) für das Projekt, das Sie in Schritt 1 erstellt haben. Kopieren Sie nicht die Datei "Package.appxmanifest", und wenn Sie eigenen Code für Windows 8.1 Desktop- und -Phone haben, wählen Sie zunächst eines als Portierungsziel aus (Sie müssen später zur Angleichung an die andere Anpassungen vornehmen). Achten Sie darauf, dass Sie ebenfalls alle Inhalte aus den Unterordnern kopieren. Wenn Sie aufgefordert werden, wählen Sie aus, dass Dateien mit doppelten Namen ersetzt werden.
 
-6. Öffnen Sie die Projektmappe erneut, und wählen Sie **Vorhandenes Element hinzufügen** über das Kontextmenü für den Projektknoten aus. Wählen Sie alle kopierten Dateien, außer denen, die bereits Teil des Projekts sind.
+6. Öffnen Sie die Projektmappe erneut, und klicken Sie im Kontextmenü für den Projektknoten auf **Hinzufügen** > **Vorhandenes Element hinzufügen**. Wählen Sie alle kopierten Dateien, außer denen, die bereits Teil des Projekts sind.
 
    Überprüfen Sie die Unterordner, und stellen Sie sicher, dass die darin enthaltenen Dateien ebenfalls hinzufügt werden.
 
-7. Wenn Sie nicht den gleichen Projektnamen wie bei dem alten Projekt verwenden, öffnen Sie die Datei "Package.appxmanifest", und aktualisieren Sie den Einstiegspunkt entsprechend des Namespacenamens für die App-Klasse.
+7. Wenn Sie nicht den gleichen Projektnamen wie bei dem alten Projekt verwenden, öffnen Sie die Datei „Package.appxmanifest“, und aktualisieren Sie den **Einstiegspunkt** entsprechend des Namespacenamens für die `App`-Klasse.
 
-   Das Feld **Einstiegspunkt** in der Datei „Package.appxmanifest“ enthält einen bereichsbezogenen Namen für die App-Klasse, die den Namespace enthält, der die App-Klasse enthält. Wenn Sie ein universelles Windows-Projekt erstellen, wird für den Namespace der Name des Projekts festgelegt. Wenn Unterschiede zu den von Ihnen aus dem alten Projekt kopierten Dateien bestehen, müssen Sie eines der beiden Projekte aktualisieren, damit sie übereinstimmen.
+   Das Feld **Einstiegspunkt** in der Datei „Package.appxmanifest“ enthält einen bereichsbezogenen Namen für die `App`-Klasse, die den Namespace enthält, der die `App`-Klasse enthält. Wenn Sie ein universelles Windows-Projekt erstellen, wird für den Namespace der Name des Projekts festgelegt. Wenn Unterschiede zu den von Ihnen aus dem alten Projekt kopierten Dateien bestehen, müssen Sie eines der beiden Projekte aktualisieren, damit sie übereinstimmen.
 
 8. Erstellen Sie das Projekt, und lösen Sie alle Buildfehler durch wichtige Änderungen zwischen den verschiedenen Versionen des Windows SDK.
 
 9. Führen Sie das Projekt auf dem lokalen Desktop aus. Stellen Sie sicher, dass keine Bereitstellungsfehler vorliegen, das Layout der App angemessen ist und es korrekt auf dem Desktop funktioniert.
 
-10. Wenn Sie unterschiedliche Codedateien für XAML für ein anderes Gerät hatten, wie z. B. Windows Phone 8.1, überprüfen Sie den Code, und ermitteln Sie, wo er von dem für das Standardgerät abweicht. Ist der Unterschied nur im Layout, können Sie die XAML-Datei mit einem visuellen Status-Manager bearbeiten, damit sie an die Bildschirmgröße der Anzeige angepasst werden aknn. Um weitere Unterschiede anzuzeigen, können Sie die Bedingungsabschnitte in Ihrem Code mithilfe der folgenden #if-Anweisungen verwenden.
+10. Wenn Sie unterschiedliche Codedateien für XAML für ein anderes Gerät hatten, wie z. B. Windows Phone 8.1, überprüfen Sie den Code, und ermitteln Sie, wo er von dem für das Standardgerät abweicht. Ist der Unterschied nur im Layout, können Sie die XAML-Datei mit einem **Manager für den visuellen Zustand** bearbeiten, damit sie an die Bildschirmgröße der Anzeige angepasst werden kann. Um weitere Unterschiede anzuzeigen, können Sie die Bedingungsabschnitte in Ihrem Code mithilfe der folgenden #if-Anweisungen verwenden.
 
     ```cpp
     #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_PC_APP)

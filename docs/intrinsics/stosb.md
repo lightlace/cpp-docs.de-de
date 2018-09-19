@@ -18,79 +18,83 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d16c9ede6d815c2c697c1ed03dc10476f6dd3bac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6a685633b6e23a21d46ad3256188fea3ee16ccc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324573"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700778"
 ---
 # <a name="stosb"></a>__stosb
-**Microsoft-spezifisch**  
-  
- Generiert eine Store-Zeichenfolge-Anweisung (`rep stosb`).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void __stosb(   
-   unsigned char* Dest,   
-   unsigned char Data,   
-   size_t Count   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- [out] `Dest`  
- Das Ziel des Vorgangs.  
-  
- [in] `Data`  
- Die Daten zu speichern.  
-  
- [in] `Count`  
- Die Länge des Blocks der zu schreibenden Bytes.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Systemintern|Architektur|  
-|---------------|------------------|  
-|`__stosb`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-  
- **Headerdatei** \<intrin.h >  
-  
-## <a name="remarks"></a>Hinweise  
- Das Ergebnis ist, die das Zeichen `Data` wird geschrieben, in einen Block von `Count` Bytes in den `Dest` Zeichenfolge.  
-  
- Diese Routine ist nur als systeminterne Funktion verfügbar.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// stosb.c  
-// processor: x86, x64  
-#include <stdio.h>  
-#include <intrin.h>  
-  
+
+**Microsoft-spezifisch**
+
+Generiert eine Store-Zeichenfolge-Anweisung (`rep stosb`).
+
+## <a name="syntax"></a>Syntax
+
+```
+void __stosb(
+   unsigned char* Dest,
+   unsigned char Data,
+   size_t Count
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
+*dest*<br/>
+[out] Das Ziel des Vorgangs.
+
+*Data*<br/>
+[in] Die zu speichernden Daten.
+
+*Anzahl*<br/>
+[in] Die Länge des Blocks des zu schreibenden Bytes kennzeichnet.
+
+## <a name="requirements"></a>Anforderungen
+
+|Systemintern|Architektur|
+|---------------|------------------|
+|`__stosb`|x86, x64|
+
+**Headerdatei** \<intrin.h >
+
+## <a name="remarks"></a>Hinweise
+
+Das Ergebnis ist, die das Zeichen `Data` wird geschrieben, in einen Block von `Count` Bytes in den `Dest` Zeichenfolge.
+
+Diese Routine ist nur als systeminterne Funktion verfügbar.
+
+## <a name="example"></a>Beispiel
+
+```C
+// stosb.c
+// processor: x86, x64
+#include <stdio.h>
+#include <intrin.h>
+
 #pragma intrinsic(__stosb)  
-  
+
 int main()  
-{  
-    unsigned char c = 0x40; /* '@' character */  
-    unsigned char s[] = "*********************************";  
-  
-    printf_s("%s\n", s);  
-    __stosb((unsigned char*)s+1, c, 6);  
-    printf_s("%s\n", s);  
-  
-}  
+{
+    unsigned char c = 0x40; /* '@' character */
+    unsigned char s[] = "*********************************";
+
+    printf_s("%s\n", s);
+    __stosb((unsigned char*)s+1, c, 6);
+    printf_s("%s\n", s);
+
+}
 ```  
-  
-```Output  
+
+```Output
 *********************************  
 *@@@@@@**************************  
 ```  
-  
-**Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

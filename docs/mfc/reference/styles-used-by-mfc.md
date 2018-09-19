@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8c8868f83cb2e05a364b8977b014db5c02689c5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 043a046209d5e52439ed61165557cc6596db48e8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886062"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689320"
 ---
 # <a name="styles-used-by-mfc"></a>Von MFC verwendete Stile  
   
@@ -219,7 +219,7 @@ Verwenden Sie die folgenden Flags des Stils an Fensters oder Steuerelements auss
   
 ## <a name="button-styles"></a> Button-Stile  
   
-Button-Stile anwenden, um [CButton-Klasse](../../mfc/reference/cbutton-class.md) Objekte, z. B. Optionsfelder, Kontrollkästchen und Schaltflächen. Geben Sie eine Kombination der Formate in der *DwStyle* Parameter [CButton::Create](../../mfc/reference/cbutton-class.md#create). Weitere Informationen zu Button-Stile in Windows, finden Sie unter [Button-Stile (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951).  
+Button-Stile anwenden, um [CButton-Klasse](../../mfc/reference/cbutton-class.md) Objekte, z. B. Optionsfelder, Kontrollkästchen und Schaltflächen. Geben Sie eine Kombination der Formate in der *DwStyle* Parameter [CButton::Create](../../mfc/reference/cbutton-class.md#create). Weitere Informationen zu Button-Stile in Windows, finden Sie unter [Button-Stile (Windows)](/windows/desktop/Controls/button-styles).  
   
 ### <a name="button-types"></a>Schaltflächentypen  
   
@@ -232,15 +232,15 @@ In der folgenden Tabelle werden Schaltflächentypen aufgeführt. Sie können opt
 |BS_AUTOCHECKBOX|Erstellt eine Kontrollkästchen-Schaltfläche mit zwei Zuständen: BST_CHECKED und BST_UNCHECKED. Durch Klicken auf die Schaltfläche eine BN_CLICKED-Benachrichtigung an das Besitzerfenster gesendet, und ändert den Zustand der Schaltfläche. Standardmäßig wird zugehöriger Text auf der rechten Seite des Kontrollkästchens angezeigt. Verwenden Sie zum Anzeigen von Text auf der linken Seite des Kontrollkästchens BS_LEFTTEXT oder BS_RIGHTBUTTON-Stil.|  
 |BS_AUTORADIOBUTTON|Erstellt ein Optionsfeld mit zwei Zuständen: BST_CHECKED und BST_UNCHECKED. Optionsfelder werden normalerweise in Gruppen verwendet, wobei jede Gruppe über maximal eine aktivierte Option auf einmal verfügt. Durch Klicken auf die Schaltfläche eine BN_CLICKED-Benachrichtigung an das Besitzerfenster sendet, legt den Zustand des Optionsfelds wird auf BST_CHECKED, und die Zustände aller anderen Optionsfelder in der Optionsfeldgruppe werden auf BST_UNCHECKED. Standardmäßig wird zugehöriger Text auf der rechten Seite des Optionsfelds angezeigt. Verwenden Sie zum Anzeigen von Text auf der linken Seite des Optionsfelds BS_LEFTTEXT oder BS_RIGHTBUTTON-Stil.|  
 |BS_CHECKBOX|Erstellt eine Kontrollkästchen-Schaltfläche mit zwei Zuständen: BST_CHECKED und BST_UNCHECKED. Durch Klicken auf die Schaltfläche eine BN_CLICKED-Benachrichtigung an das Besitzerfenster gesendet, aber es ändert sich nicht auf den Zustand der Schaltfläche. Standardmäßig wird zugehöriger Text auf der rechten Seite des Kontrollkästchens angezeigt. Verwenden Sie zum Anzeigen von Text auf der linken Seite des Kontrollkästchens BS_LEFTTEXT oder BS_RIGHTBUTTON-Stil.|  
-|BS_COMMANDLINK|Erstellt eine Befehlslinkschaltfläche. Eine Befehlslinkschaltfläche ist eine spezielle Befehlsschaltfläche von [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)], die einen grünen Pfeil auf der linken Seite des zentralen Texts und eines Hinweises unterhalb des zentralen Texts anzeigt. Sie können festlegen, den Hinweistext mithilfe [CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote).|  
-|BS_DEFCOMMANDLINK|Erstellt eine Befehlslinkschaltfläche. Eine Befehlslinkschaltfläche ist eine spezielle Befehlsschaltfläche von [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)], die einen grünen Pfeil auf der linken Seite des zentralen Texts und eines Hinweises unterhalb des zentralen Texts anzeigt. Sie können festlegen, den Hinweistext mithilfe [CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote). Wenn die Schaltfläche in einem Dialogfeld befindet, sendet der Drücken der EINGABETASTE eine BN_CLICKED-Benachrichtigung an das Dialogfeld, selbst, wenn die Schaltfläche nicht den Eingabefokus verfügt.|  
+|BS_COMMANDLINK|Erstellt eine Befehlslinkschaltfläche. Eine Befehlslinkschaltfläche ist eine spezielle Befehlsschaltfläche von Windows Vista, das einen grünen Pfeil auf der linken Seite des zentralen Texts und eines Hinweises unterhalb des zentralen Texts anzeigt. Sie können festlegen, den Hinweistext mithilfe [CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote).|  
+|BS_DEFCOMMANDLINK|Erstellt eine Befehlslinkschaltfläche. Eine Befehlslinkschaltfläche ist eine spezielle Befehlsschaltfläche von Windows Vista, das einen grünen Pfeil auf der linken Seite des zentralen Texts und eines Hinweises unterhalb des zentralen Texts anzeigt. Sie können festlegen, den Hinweistext mithilfe [CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote). Wenn die Schaltfläche in einem Dialogfeld befindet, sendet der Drücken der EINGABETASTE eine BN_CLICKED-Benachrichtigung an das Dialogfeld, selbst, wenn die Schaltfläche nicht den Eingabefokus verfügt.|  
 |BS_DEFPUSHBUTTON|Erstellt eine Befehlsschaltfläche mit einem dicken schwarzen Rand. Wenn die Schaltfläche in einem Dialogfeld befindet, sendet der Drücken der EINGABETASTE eine BN_CLICKED-Benachrichtigung an das Dialogfeld, selbst, wenn die Schaltfläche nicht den Eingabefokus verfügt.|  
-|BS_DEFSPLITBUTTON|Erstellt eine unterteilte Schaltfläche. Eine unterteilte Schaltfläche ist eine spezielle Befehlsschaltfläche von [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)], die eine Schaltfläche neben einem Dropdownpfeil enthält. Wenn Sie auf die Schaltfläche klicken, wird der standardmäßige Befehl ausgeführt. Wenn Sie auf den Dropdownpfeil klicken, wird ein Menü mit zusätzlichen Befehlen angezeigt. Ist die unterteilte Schaltfläche in einem Dialogfeld, sendet Drücken der EINGABETASTE eine BN_CLICKED Benachrichtigung an das Dialogfeld auch, wenn die Schaltfläche nicht den Eingabefokus verfügt|  
+|BS_DEFSPLITBUTTON|Erstellt eine unterteilte Schaltfläche. Eine unterteilte Schaltfläche ist eine spezielle Befehlsschaltfläche von Windows Vista, das eine Schaltfläche neben einem Dropdownpfeil enthält. Wenn Sie auf die Schaltfläche klicken, wird der standardmäßige Befehl ausgeführt. Wenn Sie auf den Dropdownpfeil klicken, wird ein Menü mit zusätzlichen Befehlen angezeigt. Ist die unterteilte Schaltfläche in einem Dialogfeld, sendet Drücken der EINGABETASTE eine BN_CLICKED Benachrichtigung an das Dialogfeld auch, wenn die Schaltfläche nicht den Eingabefokus verfügt|  
 |BS_GROUPBOX|Erstellt ein Rechteck, in dem andere Schaltflächen gruppiert werden können. Text, der diesem Stil zugeordnet ist, wird in der oberen linken Ecke des Rechtecks angezeigt.|  
 |BS_OWNERDRAW|Erstellt eine Ownerdrawn-Schaltfläche. Die `DrawItem`-Methode wird vom Framework aufgerufen, wenn sich ein visueller Aspekt der Schaltfläche geändert hat. Dieser Stil muss bei Verwendung der `CBitmapButton`-Klasse festgelegt werden.|  
 |BS_PUSHBUTTON|Erstellt eine Befehlsschaltfläche, die eine BN_CLICKED-Benachrichtigung an das Besitzerfenster sendet, klickt der Benutzer die Schaltfläche.|  
 |BS_RADIOBUTTON|Erstellt ein Optionsfeld mit zwei Zuständen: BST_CHECKED und BST_UNCHECKED. Optionsfelder werden normalerweise in Gruppen verwendet, wobei jede Gruppe über maximal eine aktivierte Option auf einmal verfügt. Durch Klicken auf die Schaltfläche eine BN_CLICKED-Benachrichtigung an das Besitzerfenster gesendet, jedoch wird der Zustand einer Schaltfläche in der Gruppe nicht automatisch geändert. Standardmäßig wird zugehöriger Text auf der rechten Seite des Optionsfelds angezeigt. Verwenden Sie zum Anzeigen von Text auf der linken Seite des Optionsfelds BS_LEFTTEXT oder BS_RIGHTBUTTON-Stil.|  
-|BS_SPLITBUTTON|Erstellt eine unterteilte Schaltfläche. Eine unterteilte Schaltfläche ist eine spezielle Befehlsschaltfläche von [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)], die eine Schaltfläche neben einem Dropdownpfeil enthält. Wenn Sie auf die Schaltfläche klicken, wird der standardmäßige Befehl ausgeführt. Wenn Sie auf den Dropdownpfeil klicken, wird ein Menü mit zusätzlichen Befehlen angezeigt.|  
+|BS_SPLITBUTTON|Erstellt eine unterteilte Schaltfläche. Eine unterteilte Schaltfläche ist eine spezielle Befehlsschaltfläche von Windows Vista, das eine Schaltfläche neben einem Dropdownpfeil enthält. Wenn Sie auf die Schaltfläche klicken, wird der standardmäßige Befehl ausgeführt. Wenn Sie auf den Dropdownpfeil klicken, wird ein Menü mit zusätzlichen Befehlen angezeigt.|  
 |BS_USERBUTTON|Veraltet, wird jedoch für die Kompatibilität mit 16-Bit-Versionen von Windows bereitgestellt. Win32-basierten Anwendungen sollte stattdessen die BS_OWNERDRAW verwenden.|  
   
 ### <a name="radio-button-and-check-box-styles"></a>Radio-Schaltfläche und das Kontrollkästchen-Stile  
@@ -288,7 +288,7 @@ In der folgenden Tabelle werden zusätzliche Optionen aufgeführt, die Sie mit j
   
 ## <a name="combo-box-styles"></a>  Kombinationsfeldstile  
   
-In MFC sind die folgenden Stile für Kombinationsfelder verfügbar. Weitere Informationen über Stile für Kombinationsfelder in Windows finden Sie unter [Kombinationsfeldformate (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796).  
+In MFC sind die folgenden Stile für Kombinationsfelder verfügbar. Weitere Informationen über Stile für Kombinationsfelder in Windows finden Sie unter [Kombinationsfeldformate (Windows)](/windows/desktop/Controls/combo-box-styles).  
   
 |Stil|Beschreibung|  
 |-----------|-----------------|  
@@ -308,7 +308,7 @@ In MFC sind die folgenden Stile für Kombinationsfelder verfügbar. Weitere Info
   
 ## <a name="edit-styles"></a>  Bearbeiten von Stilen  
   
-Bearbeiten Sie Stile anwenden, um [CEdit-Klasse](../../mfc/reference/cedit-class.md) Objekte. Geben Sie eine Kombination der Formate in der *DwStyle* Parameter [CEdit::Create](../../mfc/reference/cedit-class.md#create). Weitere Informationen über Stile der Edit-Steuerelemente in Windows finden Sie unter [bearbeiten Stile von Listensteuerelementen (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
+Bearbeiten Sie Stile anwenden, um [CEdit-Klasse](../../mfc/reference/cedit-class.md) Objekte. Geben Sie eine Kombination der Formate in der *DwStyle* Parameter [CEdit::Create](../../mfc/reference/cedit-class.md#create). Weitere Informationen über Stile der Edit-Steuerelemente in Windows finden Sie unter [bearbeiten Stile von Listensteuerelementen (Windows)](/windows/desktop/Controls/edit-control-styles).  
   
 |Stil|Beschreibung|  
 |-----------|-----------------|  
@@ -339,7 +339,7 @@ Rahmenfensterstile gelten für [CFrameWnd-Klasse](../../mfc/reference/cframewnd-
   
 ## <a name="list-box-styles"></a> Listenfeldstile  
   
-Listenfeldstile gelten für [CListBox-Klasse](../../mfc/reference/clistbox-class.md) Objekte. Geben Sie eine Kombination der Formate in der *DwStyle* Parameter [CListBox::Create](../../mfc/reference/clistbox-class.md#create). Weitere Informationen über die Liste im Feld-Stile in Windows finden Sie unter [im Listenformate (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149).  
+Listenfeldstile gelten für [CListBox-Klasse](../../mfc/reference/clistbox-class.md) Objekte. Geben Sie eine Kombination der Formate in der *DwStyle* Parameter [CListBox::Create](../../mfc/reference/clistbox-class.md#create). Weitere Informationen über die Liste im Feld-Stile in Windows finden Sie unter [im Listenformate (Windows)](/windows/desktop/Controls/list-box-styles).  
   
 |Stil|Beschreibung|  
 |-----------|-----------------|  
@@ -362,7 +362,7 @@ Listenfeldstile gelten für [CListBox-Klasse](../../mfc/reference/clistbox-class
   
 ##<a name="message-box-styles"></a>  Meldungsfeldstile  
   
-Meldungsfeldstile gelten für [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) Elemente. Geben Sie eine Kombination der Formate in der *nType* Parameter `AfxMessageBox`. Weitere Informationen zu Message Box-Stile in Windows finden Sie unter [MessageBox-Funktion (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505).  
+Meldungsfeldstile gelten für [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) Elemente. Geben Sie eine Kombination der Formate in der *nType* Parameter `AfxMessageBox`. Weitere Informationen zu Message Box-Stile in Windows finden Sie unter [MessageBox-Funktion (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox).  
   
 Die folgenden meldungsfeldstile sind verfügbar.  
   
@@ -403,7 +403,7 @@ Die folgenden meldungsfeldstile sind verfügbar.
   
 ## <a name="scroll-bar-styles"></a> Stile des Schiebeleisten Steuerelements  
   
-Stile des Schiebeleisten Steuerelements gelten für [CScrollBar-Klasse](../../mfc/reference/cscrollbar-class.md) Objekte. Geben Sie eine Kombination der Formate in der *DwStyle* Parameter [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Weitere Informationen zu Bildlaufleiste Stile in Windows-Steuerelemente, finden Sie unter [Scroll-Leiste Stile von Listensteuerelementen (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533).  
+Stile des Schiebeleisten Steuerelements gelten für [CScrollBar-Klasse](../../mfc/reference/cscrollbar-class.md) Objekte. Geben Sie eine Kombination der Formate in der *DwStyle* Parameter [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Weitere Informationen zu Bildlaufleiste Stile in Windows-Steuerelemente, finden Sie unter [Scroll-Leiste Stile von Listensteuerelementen (Windows)](/windows/desktop/Controls/scroll-bar-control-styles).  
   
 |Stil|Beschreibung|  
 |-----------|-----------------|  
@@ -420,7 +420,7 @@ Stile des Schiebeleisten Steuerelements gelten für [CScrollBar-Klasse](../../mf
   
 ## <a name="static-styles"></a> Statische Stile  
   
-Statische Stile anwenden, um [CStatic-Klasse](../../mfc/reference/cstatic-class.md) Objekte. Geben Sie eine Kombination der Formate in der *DwStyle* Parameter [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Weitere Informationen zu Stilen der statisches Steuerelement in Windows finden Sie unter [statische Stile von Listensteuerelementen (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773).  
+Statische Stile anwenden, um [CStatic-Klasse](../../mfc/reference/cstatic-class.md) Objekte. Geben Sie eine Kombination der Formate in der *DwStyle* Parameter [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Weitere Informationen zu Stilen der statisches Steuerelement in Windows finden Sie unter [statische Stile von Listensteuerelementen (Windows)](/windows/desktop/Controls/static-control-styles).  
   
 |Stil|Beschreibung|  
 |-----------|-----------------|  
@@ -488,7 +488,7 @@ Window-Stile anwenden, um [CWnd-Klasse](../../mfc/reference/cwnd-class.md) Objek
   
 ## <a name="extended-window-styles"></a> Erweiterte Fensterstile  
   
-Erweiterte Fensterstile gelten für [CWnd-Klasse](../../mfc/reference/cwnd-class.md) Objekte. Geben Sie eine Kombination der Formate in der *DwExStyle* Parameter [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Weitere Informationen zu erweiterten Fensterstile in Windows finden Sie unter [erweiterte Fensterstile (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543).  
+Erweiterte Fensterstile gelten für [CWnd-Klasse](../../mfc/reference/cwnd-class.md) Objekte. Geben Sie eine Kombination der Formate in der *DwExStyle* Parameter [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Weitere Informationen zu erweiterten Fensterstile in Windows finden Sie unter [erweiterte Fensterstile (Windows)](/windows/desktop/winmsg/extended-window-styles).  
   
 |Stil|Beschreibung|  
 |-----------|-----------------|  
@@ -498,7 +498,7 @@ Erweiterte Fensterstile gelten für [CWnd-Klasse](../../mfc/reference/cwnd-class
 |WS_EX_CONTEXTHELP|Schließt ein Fragezeichen in der Titelleiste des Fensters. Wenn der Benutzer auf das Fragezeichen klickt, wird der Cursor zu einem Fragezeichen geändert. Wenn der Benutzer klicken Sie dann ein untergeordnetes Fenster klickt, empfängt das untergeordnete Element eine WM_HELP-Meldung.|  
 |WS_EX_CONTROLPARENT|Ermöglicht dem Benutzer, unter den untergeordneten Fenstern des Fensters zu navigieren, mit der TAB-Taste.|  
 |WS_EX_DLGMODALFRAME|Bezeichnet ein Fenster mit einem doppelten Rahmen, die mit einer Titelleiste, wenn Sie das WS_CAPTION-Style-Flag im angeben (optional) erstellt werden kann die *DwStyle* Parameter.|  
-|WS_EX_LAYERED|Das Fenster ist eine [überlappendes Fenster](http://msdn.microsoft.com/library/ms632599.aspx#layered). Dieses Format kann nicht verwendet werden, wenn das Fenster hat eine [-Klassenstil](http://msdn.microsoft.com/library/ms633574.aspx#class_styles) CS_OWNDC oder CS_CLASSDC. Allerdings [!INCLUDE[win8_first](../../mfc/reference/includes/win8_first_md.md)] unterstützt den WS_EX_LAYERED-Stil für die untergeordneten Fenster, in denen frühere Versionen von Windows nur für Fenster auf oberster Ebene unterstützt.|  
+|WS_EX_LAYERED|Das Fenster ist eine [überlappendes Fenster](/windows/desktop/winmsg/window-features). Dieses Format kann nicht verwendet werden, wenn das Fenster hat eine [-Klassenstil](/windows/desktop/winmsg/about-window-classes) CS_OWNDC oder CS_CLASSDC. Microsoft Windows 8 unterstützt styl WS_EX_LAYERED für untergeordnete Fenster, jedoch, in denen frühere Windows-Versionen es nur für Fenster der obersten Ebene unterstützen.|  
 |WS_EX_LEFT|Bietet allgemeine Links ausgerichtete Eigenschaften an. Dies ist die Standardeinstellung.|  
 |WS_EX_LEFTSCROLLBAR|Platziert eine vertikale Bildlaufleiste auf der linken Seite des Clientbereichs.|  
 |WS_EX_LTRREADING|Zeigt den Fenstertext mit Links-nach-rechts-leserichtungseigenschaften. Dies ist die Standardeinstellung.|  
@@ -524,14 +524,14 @@ Erweiterte Fensterstile gelten für [CWnd-Klasse](../../mfc/reference/cwnd-class
 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)  
 [CStatic::Create](../../mfc/reference/cstatic-class.md#create)  
 [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)  
-[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)  
-[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)  
-[Button-Stile (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)  
-[Kombinationsfeldformate (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)  
-[Bearbeiten der Stile von Listensteuerelementen (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464)  
-[Auflisten von Feld-Stile (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149) 
-[MessageBox-Funktion (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505) 
-[Stile des Schiebeleisten-Steuerelement Steuerelements (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533)  
-[Stile für statische Steuerelemente (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773)  
+[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)  
+[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)  
+[Button-Stile (Windows)](/windows/desktop/Controls/button-styles)  
+[Kombinationsfeldformate (Windows)](/windows/desktop/Controls/combo-box-styles)  
+[Bearbeiten der Stile von Listensteuerelementen (Windows)](/windows/desktop/Controls/edit-control-styles)  
+[Auflisten von Feld-Stile (Windows)](/windows/desktop/Controls/list-box-styles) 
+[MessageBox-Funktion (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox) 
+[Stile des Schiebeleisten-Steuerelement Steuerelements (Windows)](/windows/desktop/Controls/scroll-bar-control-styles)  
+[Stile für statische Steuerelemente (Windows)](/windows/desktop/Controls/static-control-styles)  
 [Window-Stile (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)  
-[Erweiterte Fensterstile (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)  
+[Erweiterte Fensterstile (Windows)](/windows/desktop/winmsg/extended-window-styles)  

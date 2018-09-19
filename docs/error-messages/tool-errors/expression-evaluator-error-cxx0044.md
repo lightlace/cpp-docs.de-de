@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0044 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0044 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7499c970396ce907a79fa5a666dd7dc1ab1e8c3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34adab6500683d8b78a4ce9c990eaf04c143e424
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297894"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064710"
 ---
 # <a name="expression-evaluator-error-cxx0044"></a>Ausdrucksauswertungsfehler CXX0044
-Verwendung von _based(void)-Zeigers erfordert: >-operator  
-  
- Ein Zeiger auf der Grundlage `void` kann nicht direkt verwendet werden. Sie müssen ein vollständiger Zeiger mit bilden die **: >** Operator.  
-  
- Dieser Fehler ist mit CAN0044 identisch.
+
+_based(void)-Zeigers erforderlich ist: >-Operator
+
+Ein Zeiger auf der Grundlage `void` kann nicht direkt verwendet werden. Sie müssen ein vollständiger Zeiger mit bilden die **: >** Operator.
+
+Dieser Fehler ist mit CAN0044 identisch.

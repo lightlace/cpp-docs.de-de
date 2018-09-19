@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: 0c297ddf24c1ed357a0756c5e0e5631e7b3d1c02
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 83958ee300143463a1da9b10d2edb6eb1707ec4f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964833"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703559"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt;-Operatoren
 
@@ -78,11 +78,11 @@ operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das erste der beiden valarray-Objekte, deren Elemente auf Ungleichheit getestet werden sollen.
+*left*<br/>
+Das erste der beiden valarray-Objekte, deren Elemente auf Ungleichheit getestet werden sollen.
 
-*right*  
- Das zweite der beiden valarray-Objekte, deren Elemente auf Ungleichheit getestet werden sollen.
+*right*<br/>
+Das zweite der beiden valarray-Objekte, deren Elemente auf Ungleichheit getestet werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -139,12 +139,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the not equal comparison test is the
  valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
-*\
+*/
 ```
 
 ## <a name="op_mod"></a> operator%
@@ -173,11 +173,11 @@ operator%(
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Ein Wert oder ein valarray-Objekt, der bzw. das als Dividend dient, durch den ein anderer Wert oder ein anderes valarray-Objekt dividiert wird.
+*left*<br/>
+Ein Wert oder ein valarray-Objekt, der bzw. das als Dividend dient, durch den ein anderer Wert oder ein anderes valarray-Objekt dividiert wird.
 
-*right*  
- Ein Wert oder ein valarray-Objekt, der bzw. das als Divisor dient und der einen anderen Wert oder ein anderes valarray-Objekt dividiert.
+*right*<br/>
+Ein Wert oder ein valarray-Objekt, der bzw. das als Divisor dient und der einen anderen Wert oder ein anderes valarray-Objekt dividiert.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -222,12 +222,12 @@ int main( )
          cout << vaREM [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 53 -67 53 -67 53 -67 ).
 The initial Right valarray is: ( 1 4 7 10 13 16 ).
 The remainders from the element-by-element division is the
  valarray: ( 0 -3 4 -7 1 -3 ).
-*\
+*/
 ```
 
 ## <a name="op_amp"></a> operator&amp;
@@ -256,11 +256,11 @@ operator&(
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das erste der beiden valarray-Objekte, deren Elemente jeweils mit dem bitweisen `AND`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der bitweise mit den Elementen eines valarray-Objekts verknüpft werden soll.
+*left*<br/>
+Das erste der beiden valarray-Objekte, deren Elemente jeweils mit dem bitweisen `AND`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der bitweise mit den Elementen eines valarray-Objekts verknüpft werden soll.
 
-*right*  
- Das zweite der beiden valarray-Objekte, deren Elemente jeweils mit dem bitweisen `AND`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der bitweise mit den Elementen eines valarray-Objekts verknüpft werden soll.
+*right*<br/>
+Das zweite der beiden valarray-Objekte, deren Elemente jeweils mit dem bitweisen `AND`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der bitweise mit den Elementen eines valarray-Objekts verknüpft werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -311,12 +311,12 @@ int main( )
          cout << vaBWA [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is:  ( 0 2 0 4 0 6 0 8 0 10 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the bitwise operator & is the
  valarray: ( 0 0 0 0 0 4 0 0 0 8 ).
-*\
+*/
 ```
 
 ## <a name="op_amp_amp"></a> operator&amp;&amp;
@@ -345,11 +345,11 @@ operator&&(
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das erste der beiden valarray-Objekte, deren Elemente jeweils mit dem logischen `AND`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der mit den Elementen eines valarray-Objekts verknüpft werden soll.
+*left*<br/>
+Das erste der beiden valarray-Objekte, deren Elemente jeweils mit dem logischen `AND`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der mit den Elementen eines valarray-Objekts verknüpft werden soll.
 
-*right*  
- Das zweite der beiden valarray-Objekte, deren Elemente jeweils mit dem logischen `AND`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der mit den Elementen eines valarray-Objekts verknüpft werden soll.
+*right*<br/>
+Das zweite der beiden valarray-Objekte, deren Elemente jeweils mit dem logischen `AND`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der mit den Elementen eines valarray-Objekts verknüpft werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -398,12 +398,12 @@ int main( )
          cout << vaLAA [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is:  ( 0 0 0 2 0 4 0 6 0 8 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the logical AND operator&& is the
  valarray: ( 0 0 0 1 0 1 0 1 0 1 ).
-*\
+*/
 ```
 
 ## <a name="op_gt"></a> operator&gt;
@@ -432,11 +432,11 @@ operator>(
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das erste der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
+*left*<br/>
+Das erste der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
 
-*right*  
- Das zweite der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
+*right*<br/>
+Das zweite der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -489,12 +489,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( -1 0 1 2 3 4 5 6 7 8 ).
 The element-by-element result of the greater than comparison test is the
  valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
-*\
+*/
 ```
 
 ## <a name="op_gt_eq"></a> operator&gt;=
@@ -523,11 +523,11 @@ operator>=(
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das erste der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
+*left*<br/>
+Das erste der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
 
-*right*  
- Das zweite der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
+*right*<br/>
+Das zweite der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -580,12 +580,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( -1 0 1 2 3 4 5 6 7 8 ).
 The element-by-element result of the greater than or equal test is the
  valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
-*\
+*/
 ```
 
 ## <a name="op_gt_gt"></a> operator&gt;&gt;
@@ -614,11 +614,11 @@ operator>>(
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Der Wert, der verschoben werden soll, oder das valarray-Objekt, dessen Elemente verschoben werden sollen.
+*left*<br/>
+Der Wert, der verschoben werden soll, oder das valarray-Objekt, dessen Elemente verschoben werden sollen.
 
-*right*  
- Der Wert, der den Betrag angibt, um den die Bits nach rechts verschoben werden, oder das valarray-Objekt, dessen Elemente den elementweisen Betrag angeben, um den die Bits nach rechts verschoben werden.
+*right*<br/>
+Der Wert, der den Betrag angibt, um den die Bits nach rechts verschoben werden, oder das valarray-Objekt, dessen Elemente den elementweisen Betrag angeben, um den die Bits nach rechts verschoben werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -667,12 +667,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 64 -64 64 -64 64 -64 64 -64 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the right shift is the
  valarray: ( 64 -32 16 -8 4 -2 1 -1 ).
-*\
+*/
 ```
 
 ## <a name="op_lt"></a> operator&lt;
@@ -701,11 +701,11 @@ operator<(
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das erste der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
+*left*<br/>
+Das erste der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
 
-*right*  
- Das zweite der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
+*right*<br/>
+Das zweite der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -758,12 +758,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the less-than comparson test is the
  valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
-*\
+*/
 ```
 
 ## <a name="op_lt_eq"></a> operator&lt;=
@@ -792,11 +792,11 @@ operator<=(
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das erste der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
+*left*<br/>
+Das erste der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
 
-*right*  
- Das zweite der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
+*right*<br/>
+Das zweite der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -849,12 +849,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( -1 0 1 2 3 4 5 6 7 8 ).
 The element-by-element result of the less than or equal test is the
  valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
-*\
+*/
 ```
 
 ## <a name="op_lt_lt"></a> operator&lt;&lt;
@@ -883,11 +883,11 @@ operator<<(
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Der Wert, der verschoben werden soll, oder das valarray-Objekt, dessen Elemente verschoben werden sollen.
+*left*<br/>
+Der Wert, der verschoben werden soll, oder das valarray-Objekt, dessen Elemente verschoben werden sollen.
 
-*right*  
- Der Wert, der den Betrag angibt, um den die Bits nach links verschoben werden, oder das valarray-Objekt, dessen Elemente den elementweisen Betrag angeben, um den die Bits nach links verschoben werden.
+*right*<br/>
+Der Wert, der den Betrag angibt, um den die Bits nach links verschoben werden, oder das valarray-Objekt, dessen Elemente den elementweisen Betrag angeben, um den die Bits nach links verschoben werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -936,12 +936,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 1 -1 1 -1 1 -1 1 -1 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the left shift is the
  valarray: ( 1 -2 4 -8 16 -32 64 -128 ).
-*\
+*/
 ```
 
 ## <a name="op_star"></a> operator*
@@ -970,11 +970,11 @@ operator*(
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das erste der beiden valarray-Objekte, deren Elemente multipliziert werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts multipliziert werden sollen.
+*left*<br/>
+Das erste der beiden valarray-Objekte, deren Elemente multipliziert werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts multipliziert werden sollen.
 
-*right*  
- Das zweite der beiden valarray-Objekte, deren Elemente multipliziert werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts multipliziert werden sollen.
+*right*<br/>
+Das zweite der beiden valarray-Objekte, deren Elemente multipliziert werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts multipliziert werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1019,12 +1019,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 2 -1 2 -1 2 -1 2 -1 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the multiplication is the
  valarray: ( 0 -1 4 -3 8 -5 12 -7 ).
-*\
+*/
 ```
 
 ## <a name="op_add"></a> operator+
@@ -1053,11 +1053,11 @@ operator+(
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das erste der beiden valarray-Objekte, deren Elemente addiert werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts addiert werden sollen.
+*left*<br/>
+Das erste der beiden valarray-Objekte, deren Elemente addiert werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts addiert werden sollen.
 
-*right*  
- Das zweite der beiden valarray-Objekte, deren Elemente addiert werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts addiert werden sollen.
+*right*<br/>
+Das zweite der beiden valarray-Objekte, deren Elemente addiert werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts addiert werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1102,12 +1102,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 2 -1 2 -1 2 -1 2 -1 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the sum is the
  valarray: ( 2 0 4 2 6 4 8 6 ).
-*\
+*/
 ```
 
 ## <a name="operator-"></a> operator-
@@ -1136,11 +1136,11 @@ operator-(
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Ein Wert oder ein valarray-Objekt, das als Minuend dient, von dem andere Werte oder valarray-Objekte subtrahiert werden und so eine Differenz ergeben.
+*left*<br/>
+Ein Wert oder ein valarray-Objekt, das als Minuend dient, von dem andere Werte oder valarray-Objekte subtrahiert werden und so eine Differenz ergeben.
 
-*right*  
- Ein Wert oder ein valarray-Objekt, das als Subtrahend dient, der von anderen Werten oder valarray-Objekten subtrahiert wird und so eine Differenz ergibt.
+*right*<br/>
+Ein Wert oder ein valarray-Objekt, das als Subtrahend dient, der von anderen Werten oder valarray-Objekten subtrahiert wird und so eine Differenz ergibt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1191,12 +1191,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 10 0 10 0 10 0 10 0 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the difference is the
  valarray: ( 10 -1 8 -3 6 -5 4 -7 ).
-*\
+*/
 ```
 
 ## <a name="op_div"></a> operator/
@@ -1225,11 +1225,11 @@ operator/(
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Ein Wert oder ein valarray-Objekt, der bzw. das als Dividend dient, durch den ein anderer Wert oder ein anderes valarray-Objekt dividiert wird und so den Quotienten ergibt.
+*left*<br/>
+Ein Wert oder ein valarray-Objekt, der bzw. das als Dividend dient, durch den ein anderer Wert oder ein anderes valarray-Objekt dividiert wird und so den Quotienten ergibt.
 
-*right*  
- Ein Wert oder ein valarray-Objekt, der bzw. das als Divisor dient und der einen anderen Wert oder ein anderes valarray-Objekt dividiert und so den Quotienten ergibt.
+*right*<br/>
+Ein Wert oder ein valarray-Objekt, der bzw. das als Divisor dient und der einen anderen Wert oder ein anderes valarray-Objekt dividiert und so den Quotienten ergibt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1280,12 +1280,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 100 -100 100 -100 100 -100 ).
 The initial Right valarray is: ( 0 2 4 6 8 10 ).
 The element-by-element result of the quotient is the
  valarray: ( inf -50 25 -16.6667 12.5 -10 ).
-*\
+*/
 ```
 
 ## <a name="op_eq_eq"></a> operator==
@@ -1314,11 +1314,11 @@ operator==(
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das erste der beiden valarray-Objekte, deren Elemente auf Gleichheit getestet werden sollen.
+*left*<br/>
+Das erste der beiden valarray-Objekte, deren Elemente auf Gleichheit getestet werden sollen.
 
-*right*  
- Das zweite der beiden valarray-Objekte, deren Elemente auf Gleichheit getestet werden sollen.
+*right*<br/>
+Das zweite der beiden valarray-Objekte, deren Elemente auf Gleichheit getestet werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1371,12 +1371,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the equality comparison test is the
  valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
-*\
+*/
 ```
 
 ## <a name="op_xor"></a> operator^
@@ -1405,11 +1405,11 @@ operator^(
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das erste der beiden valarray-Objekte, deren Elemente jeweils mit dem bitweisen **XOR**-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der bitweise mit den Elementen eines valarray-Objekts verknüpft werden soll.
+*left*<br/>
+Das erste der beiden valarray-Objekte, deren Elemente jeweils mit dem bitweisen **XOR**-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der bitweise mit den Elementen eines valarray-Objekts verknüpft werden soll.
 
-*right*  
- Das zweite der beiden valarray-Objekte, deren Elemente jeweils mit dem bitweisen **XOR**-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der bitweise mit den Elementen eines valarray-Objekts verknüpft werden soll.
+*right*<br/>
+Das zweite der beiden valarray-Objekte, deren Elemente jeweils mit dem bitweisen **XOR**-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der bitweise mit den Elementen eines valarray-Objekts verknüpft werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1464,12 +1464,12 @@ int main( )
          cout << vaLAA [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is:  ( 1 0 1 0 1 0 1 0 1 0 ).
 The initial Right valarray is: ( 0 0 1 3 3 4 6 6 7 9 ).
 The element-by-element result of the bitwise XOR operator^ is the
  valarray: ( 1 0 0 3 2 4 7 6 6 9 ).
-*\
+*/
 ```
 
 ## <a name="op_or"></a> operator|
@@ -1498,11 +1498,11 @@ operator|(
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das erste der beiden valarray-Objekte, deren Elemente jeweils mit dem bitweisen `OR`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der bitweise mit den Elementen eines valarray-Objekts verknüpft werden soll.
+*left*<br/>
+Das erste der beiden valarray-Objekte, deren Elemente jeweils mit dem bitweisen `OR`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der bitweise mit den Elementen eines valarray-Objekts verknüpft werden soll.
 
-*right*  
- Das zweite der beiden valarray-Objekte, deren Elemente jeweils mit dem bitweisen `OR`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der bitweise mit den Elementen eines valarray-Objekts verknüpft werden soll.
+*right*<br/>
+Das zweite der beiden valarray-Objekte, deren Elemente jeweils mit dem bitweisen `OR`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der bitweise mit den Elementen eines valarray-Objekts verknüpft werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1557,12 +1557,12 @@ int main( )
          cout << vaLAA [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is:  ( 1 0 1 0 1 0 1 0 1 0 ).
 The initial Right valarray is: ( 0 0 1 3 3 4 6 6 7 9 ).
 The element-by-element result of the bitwise OR operator| is the
  valarray: ( 1 0 1 3 3 4 7 6 7 9 ).
-*\
+*/
 ```
 
 ## <a name="op_lor"></a> operator||
@@ -1591,11 +1591,11 @@ operator||(
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Das erste der beiden valarray-Objekte, deren Elemente jeweils mit dem logischen `OR`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der mit den Elementen eines valarray-Objekts verknüpft werden soll.
+*left*<br/>
+Das erste der beiden valarray-Objekte, deren Elemente jeweils mit dem logischen `OR`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der mit den Elementen eines valarray-Objekts verknüpft werden soll.
 
-*right*  
- Das zweite der beiden valarray-Objekte, deren Elemente jeweils mit dem logischen `OR`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der mit den Elementen eines valarray-Objekts verknüpft werden soll.
+*right*<br/>
+Das zweite der beiden valarray-Objekte, deren Elemente jeweils mit dem logischen `OR`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der mit den Elementen eines valarray-Objekts verknüpft werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1648,12 +1648,12 @@ int main( )
          cout << vaLOR [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is:  ( 0 0 0 2 0 4 0 6 0 8 ).
 The initial Right valarray is: ( 0 0 0 3 0 0 6 0 0 9 ).
 The element-by-element result of the logical OR operator|| is the
  valarray: ( 0 0 0 1 0 1 1 1 0 1 ).
-*\
+*/
 ```
 
 ## <a name="see-also"></a>Siehe auch

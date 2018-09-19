@@ -1,5 +1,5 @@
 ---
-title: systeminternen __nop | Microsoft Docs
+title: __nop | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25ada52595b5d811f68a05813d8df5c68d4a70c6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 507f00b82a407b84d374d5f7b9fad8d29101a848
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328772"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682097"
 ---
 # <a name="nop"></a>__nop
 **Microsoft-spezifisch**  
   
- Generiert die plattformspezifischen Computercode, die keinen Vorgang ausführt.  
+ Generiert die plattformspezifische Computercode, der keinen Vorgang ausführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,14 +39,14 @@ void __nop();
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__nop`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__nop`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   
 **Ende Microsoft-spezifisch**  
   
 ## <a name="remarks"></a>Hinweise  
- Die `__nop` -Funktion ist gleichbedeutend mit der `NOP` computeranweisung. Weitere Informationen zu suchen, für das Dokument "Intel Architecture-Softwareentwickler manuell, Volume 2: Instruction Set-Reference" auf der [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) Standort.  
+ Die `__nop` -Funktion ist gleichbedeutend mit der `NOP` computeranweisung. Weitere Informationen zu suchen, nach dem Dokument "Intel Architecture-Softwareentwickler manuell, Volume 2: Instruction Set Reference," auf die [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) Standort.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)   

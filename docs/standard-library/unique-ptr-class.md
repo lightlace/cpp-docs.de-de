@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 554b6a1c405060c975e914340b5e4b312d9b25b7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fc013ca5cc8c941e0208b5921a73daebdae2264b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961554"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725191"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr-Klasse
 
@@ -104,17 +104,17 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*Rechts*  
- Ein `unique_ptr`.
+*Rechts*<br/>
+Ein `unique_ptr`.
 
-*Nptr*  
- Ein `rvalue` vom Typ `std::nullptr_t`.
+*Nptr*<br/>
+Ein `rvalue` vom Typ `std::nullptr_t`.
 
-*PTR*  
- Ein `pointer`.
+*PTR*<br/>
+Ein `pointer`.
 
-*Deleter*  
- Eine `deleter`-Funktion, die an `unique_ptr` gebunden ist.
+*Deleter*<br/>
+Eine `deleter`-Funktion, die an `unique_ptr` gebunden ist.
 
 ## <a name="exceptions"></a>Ausnahmen
 
@@ -348,8 +348,8 @@ void swap(unique_ptr& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Ein `unique_ptr`-Objekt, das zum Tauschen von Zeigern verwendet wird.
+*right*<br/>
+Ein `unique_ptr`-Objekt, das zum Tauschen von Zeigern verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 

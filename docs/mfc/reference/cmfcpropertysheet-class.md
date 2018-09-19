@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45624c094d7ae656c50b55cc932762b7f9aa6476
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: bae44c3d92c2e27802c3c1b0849fa23266e2f753
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854069"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723527"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet-Klasse
 Die Klasse `CMFCPropertySheet` unterstützt ein Eigenschaftenblatt, in dem jede Eigenschaftenseite durch eine Seitenregisterkarte, eine Symbolleisten-Schaltfläche, einen Strukturansichtsknoten oder ein Listenelement angegeben wird.  
@@ -91,9 +91,9 @@ class CMFCPropertySheet : public CPropertySheet
 |[CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol)|Initialisiert das Erscheinungsbild des aktuellen Eigenschaftsblatt-Steuerelements.|  
 |[CMFCPropertySheet::OnActivatePage](#onactivatepage)|Wird durch das Framework aufgerufen, wenn eine Eigenschaftsseite aktiviert wird.|  
 |[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)|Wird durch das Framework aufgerufen, um einen benutzerdefinierten Eigenschaftsseitenheader zu zeichnen.|  
-|`CMFCPropertySheet::OnInitDialog`|Verarbeitet die [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) Nachricht. (Überschreibt [CPropertySheet:: OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|  
+|`CMFCPropertySheet::OnInitDialog`|Verarbeitet die [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog) Nachricht. (Überschreibt [CPropertySheet:: OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|  
 |[CMFCPropertySheet::OnRemoveTreePage](#onremovetreepage)|Wird durch das Framework aufgerufen, um eine Eigenschaftsseite aus einem Struktursteuerelement zu entfernen.|  
-|`CMFCPropertySheet::PreTranslateMessage`|Übersetzt fenstermeldungen, bevor sie um weitergeleitet werden die [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows-Funktionen. (Überschreibt `CPropertySheet::PreTranslateMessage`.)|  
+|`CMFCPropertySheet::PreTranslateMessage`|Übersetzt fenstermeldungen, bevor sie um weitergeleitet werden die [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows-Funktionen. (Überschreibt `CPropertySheet::PreTranslateMessage`.)|  
 |[CMFCPropertySheet::RemoveCategory](#removecategory)|Entfernt einen Knoten aus dem Struktursteuerelement.|  
 |[CMFCPropertySheet::RemovePage](#removepage)|Entfernt eine Eigenschaftenseite aus dem Eigenschaftenblatt.|  
 |[CMFCPropertySheet::SetIconsList](#seticonslist)|Gibt die Liste der Bilder an, die in der Navigationssteuerung des Outlook-Bereichs verwendet werden.|  
@@ -151,8 +151,8 @@ void AddPage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *P_seite*  
- Zeiger auf ein Page-Objekt. Dieser Parameter darf nicht NULL sein.  
+*P_seite*<br/>
+[in] Zeiger auf ein Page-Objekt. Dieser Parameter darf nicht NULL sein.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode fügt die angegebene Eigenschaftenseite als die Registerkarte ganz rechts im Eigenschaftenfenster Eigenschaft an. Aus diesem Grund verwenden Sie diese Methode, um Seiten in links-nach-rechts-Reihenfolge hinzuzufügen.  
@@ -171,17 +171,17 @@ void AddPageToTree(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pCategory*  
- Zeiger auf einen übergeordneten Strukturknoten oder NULL, Knoten der obersten Ebene die angegebene Seite zugeordnet werden soll. Rufen Sie die [CMFCPropertySheet::AddTreeCategory](#addtreecategory) Methode zum Abrufen der this-Zeiger.  
+*pCategory*<br/>
+[in] Zeiger auf einen übergeordneten Strukturknoten oder NULL, Knoten der obersten Ebene die angegebene Seite zugeordnet werden soll. Rufen Sie die [CMFCPropertySheet::AddTreeCategory](#addtreecategory) Methode zum Abrufen der this-Zeiger.  
   
- [in] *P_seite*  
- Zeiger auf ein Eigenschaft-Page-Objekt.  
+*P_seite*<br/>
+[in] Zeiger auf ein Eigenschaft-Page-Objekt.  
   
- [in] *nIconNum*  
- Nullbasierte Index, der ein Symbol oder -1, wenn kein Symbol verwendet wird. Das Symbol wird neben der Eigenschaftenseite des Strukturansicht-Steuerelement angezeigt, wenn die Seite nicht aktiviert ist. Der Standardwert ist -1.  
+*nIconNum*<br/>
+[in] Nullbasierte Index, der ein Symbol oder -1, wenn kein Symbol verwendet wird. Das Symbol wird neben der Eigenschaftenseite des Strukturansicht-Steuerelement angezeigt, wenn die Seite nicht aktiviert ist. Der Standardwert ist -1.  
   
- [in] *nSelIconNum*  
- Nullbasierte Index, der ein Symbol oder -1, wenn kein Symbol verwendet wird. Das Symbol wird neben der Eigenschaftenseite des Strukturansicht-Steuerelement angezeigt, wenn die Seite aktiviert ist. Der Standardwert ist -1.  
+*nSelIconNum*<br/>
+[in] Nullbasierte Index, der ein Symbol oder -1, wenn kein Symbol verwendet wird. Das Symbol wird neben der Eigenschaftenseite des Strukturansicht-Steuerelement angezeigt, wenn die Seite aktiviert ist. Der Standardwert ist -1.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode fügt eine Eigenschaftenseite als ein Blatt ein Strukturansicht-Steuerelement hinzu. Erstellen Sie zum Hinzufügen einer Eigenschaftenseite ein `CMFCPropertySheet` Objekt, rufen Sie die [CMFCPropertySheet:: Setlook](#setlook) -Methode mit der *suchen* Parametersatz zu `CMFCPropertySheet::PropSheetLook_Tree`, und klicken Sie dann diese Methode verwenden, um die Eigenschaftenseite hinzufügen .  
@@ -198,17 +198,17 @@ CMFCPropertySheetCategoryInfo* AddTreeCategory(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszLabel*  
- Der Name des Knotens.  
+*lpszLabel*<br/>
+[in] Der Name des Knotens.  
   
- [in] *nIconNum*  
- Nullbasierte Index, der ein Symbol oder -1, wenn kein Symbol verwendet wird. Das Symbol wird neben der Eigenschaftenseite des Strukturansicht-Steuerelement angezeigt, wenn die Seite nicht aktiviert ist. Der Standardwert ist -1.  
+*nIconNum*<br/>
+[in] Nullbasierte Index, der ein Symbol oder -1, wenn kein Symbol verwendet wird. Das Symbol wird neben der Eigenschaftenseite des Strukturansicht-Steuerelement angezeigt, wenn die Seite nicht aktiviert ist. Der Standardwert ist -1.  
   
- [in] *nSelectedIconNum*  
- Nullbasierte Index, der ein Symbol oder -1, wenn kein Symbol verwendet wird. Das Symbol wird neben der Eigenschaftenseite des Strukturansicht-Steuerelement angezeigt, wenn die Seite aktiviert ist. Der Standardwert ist -1.  
+*nSelectedIconNum*<br/>
+[in] Nullbasierte Index, der ein Symbol oder -1, wenn kein Symbol verwendet wird. Das Symbol wird neben der Eigenschaftenseite des Strukturansicht-Steuerelement angezeigt, wenn die Seite aktiviert ist. Der Standardwert ist -1.  
   
- [in] *pParentCategory*  
- Zeiger auf einen übergeordneten Strukturknoten oder NULL, Knoten der obersten Ebene die angegebene Seite zugeordnet werden soll. Legen Sie diesen Parameter mit dem [CMFCPropertySheet::AddTreeCategory](#addtreecategory) Methode.  
+*pParentCategory*<br/>
+[in] Zeiger auf einen übergeordneten Strukturknoten oder NULL, Knoten der obersten Ebene die angegebene Seite zugeordnet werden soll. Legen Sie diesen Parameter mit dem [CMFCPropertySheet::AddTreeCategory](#addtreecategory) Methode.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf den neuen Knoten in der Strukturansicht.  
@@ -234,17 +234,17 @@ CMFCPropertySheet(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *PszCaption*  
- Eine Zeichenfolge, die Beschriftung des Eigenschaftsblatts enthält. Darf nicht NULL sein.  
+*pszCaption*<br/>
+[in] Eine Zeichenfolge, die Beschriftung des Eigenschaftsblatts enthält. Darf nicht NULL sein.  
   
- [in] *nIDCaption*  
- Ein Ressourcen-ID, die Beschriftung des Eigenschaftsblatts enthält.  
+*nIDCaption*<br/>
+[in] Ein Ressourcen-ID, die Beschriftung des Eigenschaftsblatts enthält.  
   
- [in] *pParentWnd*  
- Zeiger auf das übergeordnete Fenster des Eigenschaftenblatt oder NULL, wenn das übergeordnete Fenster, das Hauptfenster der Anwendung ist. Der Standardwert ist NULL.  
+*pParentWnd*<br/>
+[in] Zeiger auf das übergeordnete Fenster des Eigenschaftenblatt oder NULL, wenn das übergeordnete Fenster, das Hauptfenster der Anwendung ist. Der Standardwert ist NULL.  
   
- [in] *iSelectPage*  
- Der nullbasierte Index der Seite Top-Eigenschaft. Der Standardwert ist 0.  
+*iSelectPage*<br/>
+[in] Der nullbasierte Index der Seite Top-Eigenschaft. Der Standardwert ist 0.  
   
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie die Parameter für die [CPropertySheet::CPropertySheet](../../mfc/reference/cpropertysheet-class.md#cpropertysheet) Konstruktor.  
@@ -257,8 +257,8 @@ void EnablePageHeader(int nHeaderHeight);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nHeaderHeight*  
- Die Höhe des Headers, in Pixel.  
+*nHeaderHeight*<br/>
+[in] Die Höhe des Headers, in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie den Wert des der *nHeaderHeight* überschreiben Sie Parameter, um einen benutzerdefinierten Header, zeichnen die [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader) Methode.  
@@ -334,8 +334,8 @@ virtual void OnActivatePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *P_seite*  
- Zeiger auf ein Eigenschaft-Page-Objekt, das die enabled-Eigenschaft darstellt.  
+*P_seite*<br/>
+[in] Zeiger auf ein Eigenschaft-Page-Objekt, das die enabled-Eigenschaft darstellt.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig gewährleistet diese Methode an, dass die Seite für die enabled-Eigenschaft in die Ansicht gescrollt wird. Wenn das Format des aktuellen Eigenschaftsblatts einen Bereich von Microsoft Outlook enthält, legt diese Methode die entsprechende Schaltfläche "Outlook" aktiviert werden.  
@@ -351,14 +351,14 @@ virtual void OnDrawPageHeader(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Zeiger auf einen Gerätekontext.  
   
- [in] *. nSeite*  
- Die nullbasierte Eigenschaft Seitenzahl.  
+*. nSeite*<br/>
+[in] Die nullbasierte Eigenschaft Seitenzahl.  
   
- [in] *RectHeader*  
- Ein umgebendes Rechteck, das angibt, wo Sie die Header zu zeichnen.  
+*rectHeader*<br/>
+[in] Ein umgebendes Rechteck, das angibt, wo Sie die Header zu zeichnen.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig führt diese Methode keine Aktion. Wenn Sie diese Methode überschreiben, rufen Sie die [CMFCPropertySheet::EnablePageHeader](#enablepageheader) -Methode auf, bevor das Framework diese Methode ruft.  
@@ -371,8 +371,8 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *P_seite*  
- Zeiger auf ein Eigenschaft-Page-Objekt, das die zu entfernende Eigenschaftenseite darstellt.  
+*P_seite*<br/>
+[in] Zeiger auf ein Eigenschaft-Page-Objekt, das die zu entfernende Eigenschaftenseite darstellt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -385,8 +385,8 @@ void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pCategory*  
- Zeiger auf eine Kategorie (Knoten) entfernt.  
+*pCategory*<br/>
+[in] Zeiger auf eine Kategorie (Knoten) entfernt.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode zum Entfernen eines Knotens, der auch als eine Kategorie aus ein Strukturansicht-Steuerelement bezeichnet wird. Verwenden der [CMFCPropertySheet::AddTreeCategory](#addtreecategory) Methode zum Hinzufügen eines Knotens zu einem Strukturansicht-Steuerelement.  
@@ -400,11 +400,11 @@ void RemovePage(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *P_seite*  
- Zeiger auf die Eigenschaft-Page-Objekt, das die zu entfernende Eigenschaftenseite darstellt. Darf nicht NULL sein.  
+*P_seite*<br/>
+[in] Zeiger auf die Eigenschaft-Page-Objekt, das die zu entfernende Eigenschaftenseite darstellt. Darf nicht NULL sein.  
   
- [in] *. nSeite*  
- Nullbasierte Index des zu entfernenden Seite.  
+*. nSeite*<br/>
+[in] Nullbasierte Index des zu entfernenden Seite.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode entfernt die Seite für die angegebene Eigenschaft und ein zugehörigen Fenster zerstört. Die Eigenschaftsseite "-Objekt, das *P_seite* Parameter gibt an, wird nicht zerstört werden, bis der [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) Schließen des Fensters.  
@@ -421,17 +421,17 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiImageListResID*  
- Die Ressourcen-ID von einer Bildliste.  
+*uiImageListResID*<br/>
+[in] Die Ressourcen-ID von einer Bildliste.  
   
- [in] *Cx*  
- Die Breite der Symbole in der Bildliste in Pixel.  
+*CX*<br/>
+[in] Die Breite der Symbole in der Bildliste in Pixel.  
   
- [in] *ClrTransparent*  
- Die Farbe, transparentes Bild. Die Teile des Bilds an, die diese Farbe werden transparent sein. Der Standardwert ist das Farbe Magenta, RGB(255,0,255).  
+*clrTransparent*<br/>
+[in] Die Farbe, transparentes Bild. Die Teile des Bilds an, die diese Farbe werden transparent sein. Der Standardwert ist das Farbe Magenta, RGB(255,0,255).  
   
- [in] *hIcons*  
- Ein Handle für eine vorhandene Image-Liste.  
+*hIcons*<br/>
+[in] Ein Handle für eine vorhandene Image-Liste.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Überladen Sie bei der ersten Methode Syntax "true", wenn diese Methode erfolgreich ist; andernfalls "false".  
@@ -451,11 +451,11 @@ void SetLook(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *suchen*  
- Einer der Enumerationswerte, der die Darstellung des Eigenschaftsblatts angibt. Ist das Standardformat für ein Eigenschaftenblatt `CMFCPropertySheet::PropSheetLook_Tabs`. Weitere Informationen finden Sie in der Tabelle im Abschnitt "Hinweise" dieses Themas.  
+*Suchen Sie*<br/>
+[in] Einer der Enumerationswerte, der die Darstellung des Eigenschaftsblatts angibt. Ist das Standardformat für ein Eigenschaftenblatt `CMFCPropertySheet::PropSheetLook_Tabs`. Weitere Informationen finden Sie in der Tabelle im Abschnitt "Hinweise" dieses Themas.  
   
- [in] *nNavControlWidth*  
- Die Breite des Steuerelements Navigation in Pixel. Der Standardwert ist 100.  
+*nNavControlWidth*<br/>
+[in] Die Breite des Steuerelements Navigation in Pixel. Der Standardwert ist 100.  
   
 ### <a name="remarks"></a>Hinweise  
  Um ein Eigenschaftenblatt in einem Stil als den Standardwert anzuzeigen, rufen Sie diese Methode auf, bevor Sie das Eigenschaftenfenster für die Tabelle erstellen.  

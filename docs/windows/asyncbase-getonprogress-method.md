@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Getonprogress-Methode | Microsoft Docs'
+title: 'Asyncbase:: Getonprogress-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 83af39180da819349e95051c57dc137835db87bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5439e1c17b7ad654d44fad575ba51b9ebc4095bb
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859539"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592255"
 ---
 # <a name="asyncbasegetonprogress-method"></a>AsyncBase::GetOnProgress-Methode
-Kopiert die Adresse des aktuellen ereignishandlers Status der angegebenen Variablen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-STDMETHOD(  
-   GetOnProgress  
-)(TProgress** progressHandler);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `progressHandler`  
- Der Speicherort, in dem die Adresse des aktuellen ereignishandlers Status gespeichert wird.  
-  
-## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn erfolgreich; andernfalls E_ILLEGAL_METHOD_CALL.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** async.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [AsyncBase-Klasse](../windows/asyncbase-class.md)
+
+Kopiert die Adresse des aktuellen ereignishandlers Status an die angegebene Variable.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+STDMETHOD(
+   GetOnProgress
+)(TProgress** progressHandler);
+```
+
+### <a name="parameters"></a>Parameter
+
+*progressHandler*  
+Der Speicherort, in dem die Adresse des aktuellen ereignishandlers Status gespeichert wird.
+
+## <a name="return-value"></a>Rückgabewert
+
+S_OK, wenn erfolgreich; andernfalls E_ILLEGAL_METHOD_CALL.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** async.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[AsyncBase-Klasse](../windows/asyncbase-class.md)

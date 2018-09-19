@@ -1,7 +1,7 @@
 ---
-title: UNION | Microsoft Docs
+title: UNION | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71a2d7644e14903d2c4a9c4191ce54c8fea14849
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3b2d6ea844881961bdfb4a26a5e6cf79d8308de9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057668"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682471"
 ---
 # <a name="union"></a>UNION
-Deklariert eine Union von einem oder mehreren Datentypen. Die *Fielddeclarations* muss gültige Datendefinitionen. Lassen Sie die [endet](../../assembler/masm/ends-masm.md) *Namen* Bezeichnung auf geschachtelte **UNION** Definitionen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-      name   
-      UNION [[alignment]] [[, NONUNIQUE]]  
-   fielddeclarations  
-[[name]] ENDS  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+
+Deklariert eine Union von ein oder mehrere Datentypen. Die *Felddeklarationen* muss gültige Datendefinitionen. Lassen Sie die [endet](../../assembler/masm/ends-masm.md) *Namen* Bezeichnung auf geschachtelte **UNION** Definitionen.
+
+## <a name="syntax"></a>Syntax
+
+> *Namen* UNION [[*Ausrichtung*]] [[, nicht eindeutig]]<br/>
+> *Feld-Deklarationen*<br/>
+> [[*Namen*]] endet
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

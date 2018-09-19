@@ -17,69 +17,78 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a23dc598d499071183cfcf7b0172611a693e569d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c9185a71cc77cadb1ad7cdf577654730819147d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884235"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113135"
 ---
 # <a name="com-map-global-functions"></a>Globale COM-Zuordnungs-Funktionen
-Diese Funktionen bieten Unterstützung für COM-Zuordnung `IUnknown` Implementierungen.  
-  
-|||  
-|-|-|  
-|[AtlInternalQueryInterface](#atlinternalqueryinterface)|Delegiert an die `IUnknown` eines zusammengesetzten Objekts.|  
+
+Diese Funktionen bieten Unterstützung für COM-Zuordnung `IUnknown` Implementierungen.
+
+|||
+|-|-|
+|[AtlInternalQueryInterface](#atlinternalqueryinterface)|Delegiert an die `IUnknown` eines zusammengesetzten Objekts.|
 |[InlineIsEqualIUnknown](#inlineisequaliunknown)|Generiert von effizientem Code für den Vergleich von Schnittstellen für `IUnknown`.|  
 
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** atlbase.h  
+## <a name="requirements"></a>Anforderungen
 
-##  <a name="atlinternalqueryinterface"></a>  AtlInternalQueryInterface  
- Ruft einen Zeiger auf die angeforderte Schnittstelle ab.  
-  
+**Header:** atlbase.h  
+
+##  <a name="atlinternalqueryinterface"></a>  AtlInternalQueryInterface
+
+Ruft einen Zeiger auf die angeforderte Schnittstelle ab.
+
 ```
 HRESULT AtlInternalQueryInterface(
     void* pThis,
     const _ATL_INTMAP_ENTRY* pEntries,
     REFIID iid,
     void** ppvObject);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *pThis*  
- [in] Ein Zeiger auf das Objekt, das die Zuordnung der COM-Schnittstellen verfügbar gemacht werden, um enthält `QueryInterface`.  
-  
- *pEntries*  
- [in] Ein Array von `_ATL_INTMAP_ENTRY` Strukturen, die auf eine Karte der verfügbaren Schnittstellen zugreifen.  
-  
- *IID*  
- [in] Die GUID der Schnittstelle angefordert wird.  
-  
- *ppvObject*  
- [out] Ein Zeiger auf den Schnittstellenzeiger, der im angegebenen *Iid*, oder NULL, wenn die Schnittstelle nicht gefunden wird.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Einer der standardmäßigen HRESULT-Werte.  
-  
-### <a name="remarks"></a>Hinweise  
- `AtlInternalQueryInterface` behandelt nur Schnittstellen in der COM-Zuordnungstabelle. Wenn das Objekt aggregiert wird, `AtlInternalQueryInterface` ist das nicht an die äußere unbekannte delegieren. Sie können Schnittstellen eingeben, in die COM-Zuordnungstabelle mit dem Makro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) oder eine ihrer Varianten.  
-  
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Windowing#94](../../atl/codesnippet/cpp/com-map-global-functions_1.cpp)]  
-  
-##  <a name="inlineisequaliunknown"></a>  InlineIsEqualIUnknown  
- Rufen Sie diese Funktion, für die speziellen Test für `IUnknown`.  
-  
+```
+
+### <a name="parameters"></a>Parameter
+
+*pThis*<br/>
+[in] Ein Zeiger auf das Objekt, das die Zuordnung der COM-Schnittstellen verfügbar gemacht werden, um enthält `QueryInterface`.
+
+*pEntries*<br/>
+[in] Ein Array von `_ATL_INTMAP_ENTRY` Strukturen, die auf eine Karte der verfügbaren Schnittstellen zugreifen.
+
+*IID*<br/>
+[in] Die GUID der Schnittstelle angefordert wird.
+
+*ppvObject*<br/>
+[out] Ein Zeiger auf den Schnittstellenzeiger, der im angegebenen *Iid*, oder NULL, wenn die Schnittstelle nicht gefunden wird.
+
+### <a name="return-value"></a>Rückgabewert
+
+Einer der standardmäßigen HRESULT-Werte.
+
+### <a name="remarks"></a>Hinweise
+
+`AtlInternalQueryInterface` behandelt nur Schnittstellen in der COM-Zuordnungstabelle. Wenn das Objekt aggregiert wird, `AtlInternalQueryInterface` ist das nicht an die äußere unbekannte delegieren. Sie können Schnittstellen eingeben, in die COM-Zuordnungstabelle mit dem Makro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) oder eine ihrer Varianten.
+
+### <a name="example"></a>Beispiel
+
+[!code-cpp[NVC_ATL_Windowing#94](../../atl/codesnippet/cpp/com-map-global-functions_1.cpp)]
+
+##  <a name="inlineisequaliunknown"></a>  InlineIsEqualIUnknown
+
+Rufen Sie diese Funktion, für die speziellen Test für `IUnknown`.
+
 ```
 BOOL InlineIsEqualUnknown(REFGUID rguid1);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *rguid1*  
- [in] Die GUID, der zu vergleichende `IID_IUnknown`.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Funktionen](../../atl/reference/atl-functions.md)   
- [COM-Zuordnungs-Makros](../../atl/reference/com-map-macros.md)
+```
+
+### <a name="parameters"></a>Parameter
+
+*rguid1*<br/>
+[in] Die GUID, der zu vergleichende `IID_IUnknown`.
+
+## <a name="see-also"></a>Siehe auch
+
+[Funktionen](../../atl/reference/atl-functions.md)<br/>
+[COM-Zuordnungs-Makros](../../atl/reference/com-map-macros.md)

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43ad1d1d047b9e44da27d1c9eb24dde39fd429ef
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b1a4d3d44f7ce18486feab4096673970857a0907
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849915"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214976"
 ---
 # <a name="cscrollview-class"></a>CScrollView-Klasse
 Ein [CView](../../mfc/reference/cview-class.md) mit Bildlauffunktionen.  
@@ -86,9 +86,9 @@ class CScrollView : public CView
   
 -   Es wird automatisch als Reaktion auf Nachrichten von der Tastatur, Maus ohne Bildlauf oder das Rad IntelliMouse angezeigt.  
   
- Automatisch als Reaktion auf Nachrichten über die Tastatur einen Bildlauf durchführen, fügen Sie eine WM_KEYDOWN-Meldung hinzu und Testen für VK_DOWN, VK_PREV und Aufruf [SetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787597).  
+ Automatisch als Reaktion auf Nachrichten über die Tastatur einen Bildlauf durchführen, fügen Sie eine WM_KEYDOWN-Meldung hinzu und Testen für VK_DOWN, VK_PREV und Aufruf [SetScrollPos](/windows/desktop/api/winuser/nf-winuser-setscrollpos).  
   
- Sie können die Mausrad Scrollen selbst durch Überschreiben der Nachricht zugeordnete behandeln [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) und [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) Memberfunktionen. Wie für `CScrollView`, diese Memberfunktionen unterstützen das empfohlene Verhalten für [WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617), die Rad-Rotation-Nachricht.  
+ Sie können die Mausrad Scrollen selbst durch Überschreiben der Nachricht zugeordnete behandeln [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) und [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) Memberfunktionen. Wie für `CScrollView`, diese Memberfunktionen unterstützen das empfohlene Verhalten für [WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel), die Rad-Rotation-Nachricht.  
   
  Leiten Sie zur Nutzung des automatischen Bildlaufs Ihrer Ansichtsklasse aus `CScrollView` anstelle von `CView`. Wenn die Ansicht zuerst erstellt wird, sollten Sie die Größe der bildlauffähige Ansicht basierend auf der Größe des Dokuments Aufruf berechnet die `SetScrollSizes` Memberfunktion der Ihre Überschreibung der [CView:: OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) oder [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Sie müssen Ihren eigenen Code zum Abfragen der Größe des Dokuments schreiben. Ein Beispiel finden Sie unter den [Scribble-Beispiels](../../visual-cpp-samples.md).)  
   

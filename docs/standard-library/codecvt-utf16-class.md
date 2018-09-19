@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdfcf3c6a562f7aab0164e3d63d468ba39ec0023
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: aa4147f28e7b780e9d916526f0e46e91432fd1ce
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954098"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714232"
 ---
 # <a name="codecvtutf16"></a>codecvt_utf16
 
@@ -34,9 +34,14 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>Parameter
 
-*Elem* der Breitzeichen-Elementtyp.
-*Maxcode* die maximale Anzahl von Zeichen für das gebietsschemafacet.
-*Modus* Konfigurationsinformationen für das gebietsschemafacet.
+*Elem*<br/>
+Der Breitzeichen-Elementtyp.
+
+*Maxcode*<br/>
+Die maximale Anzahl der Zeichen für das Gebietsschemafacet.
+
+*Modus*<br/>
+Konfigurationsinformationen für das Gebietsschemafacet.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -46,4 +51,6 @@ Der Bytestream muss in eine binäre Datei geschrieben werden. Er kann beschädig
 
 ## <a name="requirements"></a>Anforderungen
 
-Header: \<codecvt> Namespace: std
+Header: \<Codecvt >
+
+Namespace: Standard

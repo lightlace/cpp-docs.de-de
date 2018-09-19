@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Erstellen eines Datenfluss-Agents | Microsoft Docs'
+title: 'Exemplarische Vorgehensweise: Erstellen eines Datenfluss-Agent | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33f7c7cf5e64d2ddf751bb97ee1b617d09df6af3
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f94692b6762e1dc24a7af910d2cfd52abc516598
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693093"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42541790"
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>Exemplarische Vorgehensweise: Erstellen eines Datenfluss-Agent
 In diesem Dokument wird das Erstellen von agentbasierten Anwendungen auf Basis eines Datenflusses anstelle eines Kontrollflusses veranschaulicht.  
   
- *Ablaufsteuerung* bezieht sich auf die Ausführungsreihenfolge von Vorgängen in einem Programm. Die Ablaufsteuerung wird mit Steuerungsstrukturen, z. B. Bedingungsanweisungen, Schleifen usw., geregelt. Alternativ können Sie *Datenfluss* bezieht sich auf ein Programmiermodell, das in dem Berechnungen erstellt werden, nur wenn alle erforderliche Daten verfügbar ist. Das Datenflussprogrammiermodell bezieht sich auf das Konzept der Nachrichtenübergabe, bei dem unabhängige Komponenten eines Programms miteinander kommunizieren, indem sie Nachrichten senden.  
+ *Ablaufsteuerung* bezieht sich auf die Ausführungsreihenfolge von Vorgängen in einem Programm. Die Ablaufsteuerung wird mit Steuerungsstrukturen, z. B. Bedingungsanweisungen, Schleifen usw., geregelt. Sie können auch *Datenfluss* bezieht sich auf ein Programmiermodell, das in der Berechnungen erstellt werden, nur wenn alle erforderliche Daten verfügbar ist. Das Datenflussprogrammiermodell bezieht sich auf das Konzept der Nachrichtenübergabe, bei dem unabhängige Komponenten eines Programms miteinander kommunizieren, indem sie Nachrichten senden.  
   
  Asynchrone Agents unterstützen sowohl das Ablaufsteuerungs- als auch das Datenflussprogrammiermodell. Das Ablaufsteuerungsmodell eignet sich in vielen Fällen, jedoch ist in anderen Fällen das Datenflussmodell angemessen, z. B. wenn ein Agent Daten empfängt und eine Aktion ausführt, die auf der Nutzlast dieser Daten basiert.  
   
@@ -83,7 +83,7 @@ In diesem Dokument wird das Erstellen von agentbasierten Anwendungen auf Basis e
   
  [!code-cpp[concrt-dataflow-agent#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_5.cpp)]  
   
-6.  Warten Sie, bis das `event`-Objekt und das `countdown event`-Objekt festgelegt sind. Diese Ereignisse signalisieren, dass der Agent den Sentinelwert empfangen hat und dass alle Vorgänge abgeschlossen wurden.  
+6.  Warten Sie, bis das `event`-Objekt und das `countdown event`-Objekt festgelegt sind. Diese Ereignisse signalisieren, dass der Agent den Sentinelwert empfangen hat und alle Vorgänge abgeschlossen wurden.  
   
  [!code-cpp[concrt-dataflow-agent#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_6.cpp)]  
   
@@ -95,9 +95,9 @@ In diesem Dokument wird das Erstellen von agentbasierten Anwendungen auf Basis e
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`increment_active`|Ein [Concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md) Objekt, das den aktiven Ereigniszähler erhöht und den Eingabewert an den Rest des Netzwerks übergibt.|  
-|`negatives`, `positives`|[Concurrency:: Call](../../parallel/concrt/reference/call-class.md) Objekte, die der Anzahl der Zahlen und dekrementiert den aktiven Ereigniszähler erhöht. Die einzelnen Objekte verwenden einen Filter, um entweder positive Zahlen oder negative Zahlen zu akzeptieren.|  
-|`sentinel`|Ein [Call](../../parallel/concrt/reference/call-class.md) -Objekt, das nur dem Sentinelwert 0 (null) und dekrementiert den aktiven Ereigniszähler akzeptiert.|  
+|`increment_active`|Ein [Concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md) Objekt, das den aktiven Ereigniszähler erhöht und den Eingabewert für den Rest des Netzwerks übergibt.|  
+|`negatives`, `positives`|[Concurrency:: Call](../../parallel/concrt/reference/call-class.md) Objekte, die der Anzahl und den aktiven Ereigniszähler erhöht. Die einzelnen Objekte verwenden einen Filter, um entweder positive Zahlen oder negative Zahlen zu akzeptieren.|  
+|`sentinel`|Ein [Concurrency:: Call](../../parallel/concrt/reference/call-class.md) Objekt, das nur dem Sentinelwert 0 (null) und verringert den aktiven Ereigniszähler akzeptiert.|  
 |`connector`|Ein [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) -Objekt, das den Quellnachrichtenpuffer mit dem internen Netzwerk verbunden.|  
   
  Da die `run`-Methode in einem eigenen Thread aufgerufen wird, können andere Threads Nachrichten an das Netzwerk senden, bevor dieses vollständig verbunden ist. Der `_source`-Datenmember ist ein `unbounded_buffer`-Objekt, das alle Eingaben puffert, die von der Anwendung an den Agent gesendet werden. Um sicherzustellen, dass das Netzwerk alle Eingabenachrichten verarbeitet, verknüpft der Agent zunächst die internen Knoten des Netzwerks, und anschließend verknüpft er den Anfang dieses Netzwerk (`connector`) mit dem `_source`-Datenmember. Dies stellt sicher, dass keine Nachrichten verarbeitet werden, während das Netzwerk erstellt wird.  
@@ -120,9 +120,9 @@ There are 499477 positive numbers.
 ```  
   
 ### <a name="compiling-the-code"></a>Kompilieren des Codes  
- Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, oder fügen Sie ihn in eine Datei mit dem Namen `dataflow-agent.cpp` und dann den folgenden Befehl in eine Visual Studio-Eingabeaufforderungsfenster ausführen.  
+ Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, oder fügen Sie ihn in eine Datei mit dem Namen `dataflow-agent.cpp` und führen Sie dann den folgenden Befehl in einem Fenster von Visual Studio-Eingabeaufforderung.  
   
- **CL.exe/EHsc / Dataflow-agent.cpp**  
+ **CL.exe/EHsc Dataflow-agent.cpp**  
   
  [[Nach oben](#top)]  
   
@@ -147,9 +147,9 @@ info: ===Logging finished.===
 ```  
   
 ### <a name="compiling-the-code"></a>Kompilieren des Codes  
- Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, oder fügen Sie ihn in eine Datei mit dem Namen `log-filter.cpp` und dann den folgenden Befehl in eine Visual Studio-Eingabeaufforderungsfenster ausführen.  
+ Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, oder fügen Sie ihn in eine Datei mit dem Namen `log-filter.cpp` und führen Sie dann den folgenden Befehl in einem Fenster von Visual Studio-Eingabeaufforderung.  
   
- **CL.exe/EHsc / Log-filter.cpp**  
+ **CL.exe/EHsc Log-filter.cpp**  
   
  [[Nach oben](#top)]  
   

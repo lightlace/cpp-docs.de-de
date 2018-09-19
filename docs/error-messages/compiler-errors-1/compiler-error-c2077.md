@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C2077 | Microsoft Docs
+title: Compilerfehler C2077 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba9395bd783307ae184cf7f23f187d4425523968
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a9025a61f9ca32679f5041256a2972ab1eaeea0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164371"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100655"
 ---
-# <a name="compiler-error-c2077"></a>Compilerfehler Fehler C2077
-nicht skalare Feldinitialisierer 'Bezeichner'  
-  
- Sie haben versucht, ein Bitfeld mit einem nicht skalare (Struktur, Union, Array oder Klasse) zu initialisieren. Verwenden Sie eine ganze Zahl oder einen Gleitkommawert an.
+# <a name="compiler-error-c2077"></a>Compilerfehler C2077
+
+Initialisierer für nicht skalaren Felds 'Identifier'
+
+Sie haben versucht, die mit einer nicht skalare (Struktur, Union, Array oder -Klasse) ein Bitfeld zu initialisieren. Verwenden Sie eine ganze Zahl oder Gleitkommazahl doppelter Genauigkeit.

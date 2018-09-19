@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1033 | Microsoft Docs
+title: Schwerwiegender Fehler C1033 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 837b155c1cbe3b8d6af730a4cb9fd65ea388a19c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6338325a788ec0c0e672c2dc28fa8fea73c3ec9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197389"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032197"
 ---
 # <a name="fatal-error-c1033"></a>Schwerwiegender Fehler C1033
-Programmdatenbank Pdb kann nicht geöffnet werden.  
-  
- Dieser Fehler kann durch Datenträgerfehler verursacht werden.  
-  
-  
- Weitere Informationen finden Sie unter [ http://support.microsoft.com/default.aspx?scid=kb; En-us; 246007](http://support.microsoft.com/default.aspx?scid=kb;en-us;246007).
+
+Programmdatenbank Pdb kann nicht geöffnet werden.
+
+Dieser Fehler kann durch Datenträgerfehler verursacht werden.
+
+
+Weitere Informationen finden Sie unter [ http://support.microsoft.com/default.aspx?scid=kb; En-us; 246007](http://support.microsoft.com/default.aspx?scid=kb;en-us;246007).

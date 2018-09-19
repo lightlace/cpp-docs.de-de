@@ -1,5 +1,5 @@
 ---
-title: Bss_seg | Microsoft Docs
+title: Bss_seg | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b82027066e66cc51be8982a19ab6209ff236ef2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3c3a80e50bd0b012773a5e5a197674965f73b526
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849807"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711153"
 ---
 # <a name="bssseg"></a>bss_seg
 Gibt das Segment an, in dem nicht initialisierte Variablen in der OBJ-Datei gespeichert werden.  
@@ -31,35 +31,35 @@ Gibt das Segment an, in dem nicht initialisierte Variablen in der OBJ-Datei gesp
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 #pragma bss_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- OBJ-Dateien können angezeigt werden, mit der [Dumpbin](../build/reference/dumpbin-command-line.md) Anwendung. Das Standardsegment für nicht initialisierte Variablen in der OBJ-Datei ist ".bss". In einigen Fällen zu verwenden, der **Bss_seg** beschleunigen können Ladezeiten, indem nicht initialisierte Daten in einen Abschnitt gruppiert.  
+
+OBJ-Dateien können angezeigt werden, mit der [Dumpbin](../build/reference/dumpbin-command-line.md) Anwendung. Das Standardsegment für nicht initialisierte Variablen in der OBJ-Datei ist ".bss". In einigen Fällen zu verwenden, der **Bss_seg** können Ladezeiten, indem nicht initialisierte Daten in einen Abschnitt gruppiert.  
   
- **Bss_seg** ohne Parameter setzt das Segment auf ".BSS".  
+**Bss_seg** ohne Parameter setzt das Segment auf ".BSS".  
   
- **Push**(optional)  
- Legt einen Datensatz auf den internen Compilerstapel. Ein **Push** kann ein *Bezeichner* und *Segmentnamen*.  
+**push**<br/>
+(Optional) Legt einen Datensatz auf dem internen compilerstapel ab. Ein *Pu*sh * kann ein *Bezeichner* und *Segment-Name*.  
   
- **POP** (optional)  
- Entfernt einen Datensatz von der obersten Position des internen Compilerstapels.  
+**pop**<br/>
+(Optional) Entfernt einen Datensatz von der obersten Position des internen Compilerstapels.  
   
- *Bezeichner* (optional)  
- Bei Verwendung mit **Push**, den Datensatz im internen compilerstapel ein Name zugewiesen. Bei Verwendung mit **pop**, Datensätze vom internen Stapel bis *Bezeichner* entfernt wird; Wenn *Bezeichner* befindet sich nicht im internen Stapel nichts per pop ausgelesen wird.  
+*identifier*<br/>
+(Optional) Bei Verwendung mit **Push**, den Datensatz im internen compilerstapel ein Name zugewiesen. Bei Verwendung mit **pop**, Datensätze vom internen Stapel bis *Bezeichner* wird entfernt; Wenn *Bezeichner* wurde nicht gefunden im internen Stapel, nichts per pop ausgelesen wird.  
   
- *Bezeichner* ermöglicht, mehrere Datensätze mit einem einzelnen entfernen **pop** Befehl.  
+*Bezeichner* ermöglicht, mehrere Datensätze mit einem einzelnen entfernen **pop** Befehl.  
   
- *"Segmentnamen"*(optional)  
- Der Name eines Segments. Bei Verwendung mit **pop**, wird der Stapel geholt und *Segmentnamen* wird zum aktiven Segmentnamen.  
+*"Segment-Name"*<br/>
+(Optional) Der Name eines Segments. Bei Verwendung mit **pop**, wird das Element im Stapel geholt und *Segment-Name* wird zum aktiven Segmentnamen.  
   
- *"Segmentklasse"* (optional)  
- Zum Gewährleisten der Kompatibilität mit C++ vor Version 2.0 eingeführt. Wird ignoriert.  
+*"Segment-Class"*<br/>
+(Optional) Für die Kompatibilität mit C++ vor Version 2.0 enthalten. Wird ignoriert.  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // pragma_directive_bss_seg.cpp  
 int i;                     // stored in .bss  
 #pragma bss_seg(".my_data1")  
@@ -75,11 +75,12 @@ int main() {
 }  
 ```  
   
- Sie können auch Abschnitte für initialisierte Daten angeben ([Data_seg](../preprocessor/data-seg.md)), Funktionen ([Code_seg](../preprocessor/code-seg.md)), und const-Variablen ([Const_seg](../preprocessor/const-seg.md)).  
+Sie können auch Abschnitte für initialisierte Daten angeben ([Data_seg](../preprocessor/data-seg.md)), Funktionen ([Code_seg](../preprocessor/code-seg.md)), und const-Variablen ([Const_seg](../preprocessor/const-seg.md)).  
   
- Daten, die mithilfe der **Bss_seg** Pragma behält keine Informationen über den Speicherort.  
+Daten, die mit der **Bss_seg** Pragma behält keine Informationen über den Speicherort.  
   
- Finden Sie unter [/SECTION](../build/reference/section-specify-section-attributes.md) eine Liste der Namen sollten Sie beim Erstellen eines Abschnitts nicht verwenden.  
+Finden Sie unter [/SECTION](../build/reference/section-specify-section-attributes.md) eine Liste der Namen sollten Sie beim Erstellen eines Abschnitts nicht verwenden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,5 +1,5 @@
 ---
-title: Version (C++) | Microsoft Docs
+title: Version (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,48 +18,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 43da63d75d3541915eba3e561ee08fe1048fa579
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87186ee70b5863f51a7cd91f8695052f361bd11c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890608"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222531"
 ---
 # <a name="version-c"></a>version (C++)
-Identifiziert eine bestimmte Version mehrere Versionen einer Klasse.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-      [ version(  
-   "version"  
-) ]  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *version*  
- Die Versionsnummer der Co-Klasse. Wenn nicht angegeben, wird 1.0 in der IDL-Datei gespeichert.  
-  
-## <a name="remarks"></a>Hinweise  
- Die **Version** C++-Attribut hat die gleiche Funktionalität wie die [Version](http://msdn.microsoft.com/library/windows/desktop/aa367306) MIDL-Attribut und der generierten IDL-Datei übergeben wird.  
-  
-## <a name="example"></a>Beispiel  
- Finden Sie unter der [bindbare](../windows/bindable.md) Beispiel für ein Beispiel für die Verwendung von **Version**.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-### <a name="attribute-context"></a>Attributkontext  
-  
-|||  
-|-|-|  
-|**Betrifft**|**Klasse**, `struct`|  
-|**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|**coclass**|  
-|**Ungültige Attribute**|Keiner|  
-  
- Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Compilerattribute](../windows/compiler-attributes.md)   
- [Klassenattribute](../windows/class-attributes.md)   
+
+Identifiziert eine bestimmte Version mehrere Versionen einer Klasse.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+[ version(
+   "version"
+) ]
+```
+
+### <a name="parameters"></a>Parameter
+
+*version*  
+Die Versionsnummer der `coclass`. Wenn nicht angegeben, wird 1.0 in der IDL-Datei platziert werden.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Version** C++-Attribut hat die gleiche Funktionalität wie die [Version](/windows/desktop/Midl/version) MIDL-Attribut, und wird in der generierten IDL-Datei übergeben.
+
+## <a name="example"></a>Beispiel
+
+Finden Sie unter den [bindbare](../windows/bindable.md) Beispiel für ein Beispiel für die Verwendung von **Version**.
+
+## <a name="requirements"></a>Anforderungen
+
+### <a name="attribute-context"></a>Attributkontext
+
+|||
+|-|-|
+|**Betrifft**|**Klasse**, **Struktur**|
+|**Wiederholbar**|Nein|
+|**Erforderliche Attribute**|**coclass**|
+|**Ungültige Attribute**|Keiner|
+
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Compilerattribute](../windows/compiler-attributes.md)  
+[Klassenattribute](../windows/class-attributes.md)  

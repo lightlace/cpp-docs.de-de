@@ -1,5 +1,5 @@
 ---
-title: / SECTION (Abschnittsattribute festlegen) | Microsoft Docs
+title: / SECTION (Abschnittsattribute festlegen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d9b0a724f0e9156c81db20bf283e4418dd2f22d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bf762718e507309e47d36b06baacf54c6cb01e3e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379522"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713724"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (Abschnittsattribute festlegen)
 
@@ -33,17 +33,17 @@ ms.locfileid: "32379522"
 
 Die **/SECTION** Option ändert die Attribute eines Abschnitts, überschreiben die Attribute festgelegt, wenn die OBJ-Datei für den Abschnitt kompiliert wurde.
 
-Ein *Abschnitt* in eine portierbare ausführbare Datei (PE)-Datei ist ein benannter Codeblock zusammenhängender Arbeitsspeicher, Code oder Daten enthält. Einige Abschnitte enthalten Code- oder Datenmenge, die das Programm deklariert und direkt verwendet, während andere Datenabschnitte vom Linker und Bibliotheks-Manager (lib.exe) für Sie erstellt werden und wichtige Informationen für das Betriebssystem enthalten. Weitere Informationen finden Sie unter [PE Format](https://msdn.microsoft.com/library/windows/desktop/ms680547).
+Ein *Abschnitt* in eine portierbare ausführbare Datei (PE)-Datei ist eine benannte, zusammenhängenden Speicherblock, der entweder Code oder Daten enthält. Einige Abschnitte enthalten Code oder Daten, die Ihr Programm deklariert und direkt verwendet, während andere Datenabschnitte für Sie, die vom Linker und bibliotheksverwaltung (lib.exe erstellt werden) und wichtige Informationen für das Betriebssystem enthalten. Weitere Informationen finden Sie unter [PE-Format](/windows/desktop/Debug/pe-format).
 
 Geben Sie einen Doppelpunkt (:)) und einen Abschnitt *Namen*. Die *Namen* Groß-/Kleinschreibung beachtet.
 
-Verwenden Sie die folgenden Namen nicht aus, wie sie mit der standardmäßigen Namen in Konflikt. Beispielsweise ist ".sdata" auf RISC-Plattformen verwendet werden:
+Verwenden Sie die folgenden Namen nicht aus, wie sie mit standard-Namen in Konflikt. Beispielsweise wird .sdata auf RISC-Plattformen verwendet werden:
 
 - .Arch
 
 - ".BSS"
 
-- .Data
+- ".Data"
 
 - .edata
 
@@ -55,45 +55,45 @@ Verwenden Sie die folgenden Namen nicht aus, wie sie mit der standardmäßigen N
 
 - .reloc
 
-- .rsrc
+- rsrc
 
 - .sbss
 
-- ".sdata"
+- .sdata
 
 - .srdata
 
-- .Text erstellen
+- .Text
 
 - .XData
 
-Geben Sie eine oder mehrere Attribute für den Abschnitt. Die Attributzeichen, die unten aufgeführten sind nicht in der Groß-/Kleinschreibung beachtet. Sie müssen alle Attribute angeben, die den Abschnitt zugewiesen werden soll. Ein ausgelassenes Attributzeichen bewirkt, dass dieses Attribut Bits ausgeschaltet werden muss. Wenn Sie keinen R, W oder E, Lese-, Schreib- oder ausführbaren Status unverändert bleibt.
+Geben Sie einen oder mehrere Attribute für den Abschnitt. Die Attributzeichen, die unten aufgeführten sind nicht in der Groß-/Kleinschreibung beachtet. Sie müssen alle Attribute angeben, die den Abschnitt zugewiesen werden soll. ein Attributzeichen für die ausgelassenen bewirkt, dass dieses Attribut Bit deaktiviert ist. Wenn Sie nicht, dass R, W oder E, Lese-, Schreib-angeben oder ausführbaren Status unverändert bleibt.
 
-Stellen Sie das Zeichen mit einem Ausrufezeichen (!) voran, um ein Attribut zu negieren. Die Bedeutung der Attributzeichen sind in dieser Tabelle dargestellt:
+Um ein Attribut zu negieren, stehen Sie das Zeichen mit einem Ausrufezeichen (!). Die Bedeutung der Attribut-Zeichen sind in dieser Tabelle dargestellt:
 
 |Zeichen|Attribut|Bedeutung|
 |---------------|---------------|-------------|
-|E|Ausführen|Der Abschnitt ist ausführbar|
+|E|Ausführen|Der Abschnitt ist ausführbar.|
 |R|Lesen|Ermöglicht Lesevorgänge für Daten|
 |W|Write|Ermöglicht Schreibvorgänge für Daten|
-|S|Freigegeben|Teilt den Abschnitt für alle Prozesse, die das Image laden|
-|D|Entfernbar|Markiert den Abschnitt als entfernbar|
-|K|Übertragen von zwischenspeicherbaren|Markiert den Abschnitt als nicht zwischenspeicherbar|
+|S|Freigegeben|Teilt den Abschnitt für alle Prozesse, die das Bild zu laden|
+|D|Entfernbare|Markiert den Abschnitt als entfernbar|
+|K|Zwischengespeichert werden können|Markiert den Abschnitt als nicht zwischenspeicherbar|
 |P|Auslagerbarer|Markiert den Abschnitt als nicht auslagerbar|
 
-K und P sind ungewöhnlich, dass der Abschnitt-Flags, die sie entsprechen negative insofern verwendet werden. Wenn eine von ihnen im Abschnitt ".text" Sie über geben die **/Section:.Text, K** aus, es besteht kein Unterschied in den Abschnitt-Flags, beim Ausführen von [DUMPBIN](../../build/reference/dumpbin-options.md) mit der  [ /Headers](../../build/reference/headers.md)option. Der Abschnitt wurde bereits implizit im Cache gespeichert. Um die Standardeinstellung zu entfernen, geben Sie   **/Section:.Text,! K** stattdessen. DUMPBIN eingeblendet Abschnittsmerkmale, einschließlich "Nicht zwischengespeichert."
+K "und" P sind ungewöhnlich, dass die Abschnitt-Flags, die sie entsprechen, im negativen Sinn verwendet werden. Wenn eines der im Abschnitt ".text" Sie über geben die **/Section:.Text, K** option, gibt es keinen Unterschied in den Abschnitt Flags beim Ausführen von [DUMPBIN](../../build/reference/dumpbin-options.md) mit der  [ /Headers](../../build/reference/headers.md)-Option Der Abschnitt wurde bereits implizit zwischengespeichert. Um die Standardeinstellung zu entfernen, geben   **/Section:.Text,! K** stattdessen. DUMPBIN zeigt Abschnittsmerkmale, einschließlich "Nicht zwischengespeichert."
 
-Ein Abschnitt in der PE-Datei, die keine E, R oder W festgelegt sind, ist wahrscheinlich ungültig.
+Ein Abschnitt in der PE-Datei, die nicht E, R oder W ist wahrscheinlich ungültig.
 
-Die **ALIGN =**_Anzahl_ Argument können Sie einen Ausrichtungswert für einen bestimmten Bereich angeben. Die _Anzahl_ Argument in Bytes und muss eine Potenz von zwei sein. Finden Sie unter [/AUSRICHTEN](../../build/reference/align-section-alignment.md) für Weitere Informationen.
+Die **ALIGN =**_Anzahl_ Argument können Sie angeben, einen Ausrichtungswert für einen bestimmten Abschnitt. Die _Anzahl_ Argument in Bytes und muss eine Potenz von zwei sein. Finden Sie unter [/ALIGN](../../build/reference/align-section-alignment.md) für Weitere Informationen.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **Befehlszeile** Eigenschaftenseite.
 
-1. Geben Sie die Option in der **Zusatzoptionen** Feld. Wählen Sie **OK** oder **übernehmen** um die Änderung zu übernehmen.
+1. Geben Sie die Option in der **zusätzliche Optionen** Feld. Wählen Sie **OK** oder **übernehmen** um die Änderung zu übernehmen.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
 
@@ -101,5 +101,5 @@ Die **ALIGN =**_Anzahl_ Argument können Sie einen Ausrichtungswert für einen b
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)  
-[Linkeroptionen](../../build/reference/linker-options.md)  
+[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
+[Linkeroptionen](../../build/reference/linker-options.md)

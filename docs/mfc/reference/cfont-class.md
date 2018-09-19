@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a598a05c31c36c7defd5fe2441031d3bccdf20f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2781a41ddadc6932e1c5797f098407b7dd5e4f29
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336789"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221227"
 ---
 # <a name="cfont-class"></a>CFont-Klasse
 Kapselt eine Schriftart der Windows GDI (Graphics Device Interface) und stellt Memberfunktionen zum Bearbeiten der Schriftart bereit.  
@@ -124,7 +124,7 @@ BOOL CreateFont(
   
 ### <a name="parameters"></a>Parameter  
  *nHeight*  
- Gibt die gewünschte Höhe (in logischen Einheiten) der Schriftart an. Finden Sie unter den `lfHeight` Mitglied der ["LogFont"](http://msdn.microsoft.com/library/windows/desktop/dd145037)Struktur im Windows SDK für eine Beschreibung. Der Absolute Wert des *nHeight* darf 16.384 Geräteeinheiten nicht überschreiten, nach der Konvertierung ist. Für alle Höhe Vergleiche sucht der Schriftartenmapper die größte Schriftart, die nicht die angeforderte Größe überschreitet oder die kleinste Schriftart alle Schriftarten auf die angeforderte Größe überschreiten.  
+ Gibt die gewünschte Höhe (in logischen Einheiten) der Schriftart an. Finden Sie unter den `lfHeight` Mitglied der ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)Struktur im Windows SDK für eine Beschreibung. Der Absolute Wert des *nHeight* darf 16.384 Geräteeinheiten nicht überschreiten, nach der Konvertierung ist. Für alle Höhe Vergleiche sucht der Schriftartenmapper die größte Schriftart, die nicht die angeforderte Größe überschreitet oder die kleinste Schriftart alle Schriftarten auf die angeforderte Größe überschreiten.  
   
  *nWidth*  
  Gibt die durchschnittliche Breite (in logischen Einheiten) der Zeichen in der Schriftart an. Wenn *nWidth* gleich 0 ist, wird das Seitenverhältnis des Geräts die Digitalisierung Seitenverhältnis von Schriftarten auf die bestmögliche Übereinstimmung wurde gefunden, das durch den absoluten Wert des Unterschieds bestimmt wird abgeglichen werden.  
@@ -173,7 +173,7 @@ BOOL CreateFont(
  Gibt Dichte und Familie der Schriftart an. Finden Sie unter den `lfPitchAndFamily` Element in der `LOGFONT` Struktur im Windows SDK für eine Liste von Werten und Weitere Informationen.  
   
  *lpszFacename*  
- Ein `CString` oder ein Zeiger auf eine auf Null endende Zeichenfolge, die den Namen der Schriftart angibt. Die Länge dieser Zeichenfolge darf 30 Zeichen nicht überschreiten. Die Windows [EnumFontFamilies](http://msdn.microsoft.com/library/windows/desktop/dd162619) Funktion kann zum Aufzählen aller derzeit verfügbaren Schriftarten verwendet werden. Wenn *LpszFacename* NULL ist, die GDI verwendet eine geräteunabhängige Schriftart ab.  
+ Ein `CString` oder ein Zeiger auf eine auf Null endende Zeichenfolge, die den Namen der Schriftart angibt. Die Länge dieser Zeichenfolge darf 30 Zeichen nicht überschreiten. Die Windows [EnumFontFamilies](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesa) Funktion kann zum Aufzählen aller derzeit verfügbaren Schriftarten verwendet werden. Wenn *LpszFacename* NULL ist, die GDI verwendet eine geräteunabhängige Schriftart ab.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -191,7 +191,7 @@ BOOL CreateFont(
  [!code-cpp[NVC_MFCDocView#71](../../mfc/codesnippet/cpp/cfont-class_2.cpp)]  
   
 ##  <a name="createfontindirect"></a>  CFont::CreateFontIndirect  
- Initialisiert eine `CFont` Objekt mit den Eigenschaften, die im angegebenen ein ["LogFont"](http://msdn.microsoft.com/library/windows/desktop/dd145037)Struktur.  
+ Initialisiert eine `CFont` Objekt mit den Eigenschaften, die im angegebenen ein ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)Struktur.  
   
 ```  
 BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
@@ -207,7 +207,7 @@ BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 ### <a name="remarks"></a>Hinweise  
  Die Schriftart kann anschließend als die aktuelle Schriftart für beliebige Geräte ausgewählt werden.  
   
- Diese Schriftart verfügt über die Eigenschaften, die im angegebenen die ["LogFont"](http://msdn.microsoft.com/library/windows/desktop/dd145037) Struktur. Wenn die Schriftart ausgewählt ist, mithilfe der [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) Memberfunktion wird die GDI-Schriftart-Mapper versucht, logische Schriftart mit einer vorhandenen physischen Schriftart entsprechend. Wenn der Schriftartenmapper eine genaue Übereinstimmung für die logische Schriftart zu finden, wird eine alternative Schriftart, deren Eigenschaften so viele der angeforderten Eigenschaften wie möglich übereinstimmen.  
+ Diese Schriftart verfügt über die Eigenschaften, die im angegebenen die ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) Struktur. Wenn die Schriftart ausgewählt ist, mithilfe der [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) Memberfunktion wird die GDI-Schriftart-Mapper versucht, logische Schriftart mit einer vorhandenen physischen Schriftart entsprechend. Wenn der Schriftartenmapper eine genaue Übereinstimmung für die logische Schriftart zu finden, wird eine alternative Schriftart, deren Eigenschaften so viele der angeforderten Eigenschaften wie möglich übereinstimmen.  
   
  Wenn Sie nicht mehr benötigen die `CFont` Objekt erstellt wurde, indem die `CreateFontIndirect` funktionieren, verwenden Sie `CDC::SelectObject` löschen Sie eine andere Schriftart für den Gerätekontext aus, klicken Sie dann die `CFont` -Objekt, das nicht mehr benötigt wird.  
   
@@ -256,7 +256,7 @@ BOOL CreatePointFontIndirect(
   
 ### <a name="parameters"></a>Parameter  
  *lpLogFont*  
- Verweist auf eine ["LogFont"](http://msdn.microsoft.com/library/windows/desktop/dd145037) Struktur, die die Merkmale der logische Schriftart definiert. Die `lfHeight` Mitglied der `LOGFONT` Struktur wird in Zehntelsekunden ein Punkt anstelle von logischen Einheiten gemessen. (Legen Sie z. B. `lfHeight` 120 eine Schriftart 12 Punkt anfordern.)  
+ Verweist auf eine ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) Struktur, die die Merkmale der logische Schriftart definiert. Die `lfHeight` Mitglied der `LOGFONT` Struktur wird in Zehntelsekunden ein Punkt anstelle von logischen Einheiten gemessen. (Legen Sie z. B. `lfHeight` 120 eine Schriftart 12 Punkt anfordern.)  
   
  *pDC*  
  Zeiger auf die [CDC](../../mfc/reference/cdc-class.md) Objekt, das verwendet werden, konvertieren die Höhe in `lfHeight` auf logischen Einheiten. Wenn NULL ist, wird ein Bildschirm Gerätekontext für die Konvertierung verwendet.  
@@ -301,7 +301,7 @@ int GetLogFont(LOGFONT* pLogFont);
   
 ### <a name="parameters"></a>Parameter  
  *pLogFont*  
- Zeiger auf die ["LogFont"](http://msdn.microsoft.com/library/windows/desktop/dd145037) Struktur zum Empfangen von Informationen über den.  
+ Zeiger auf die ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) Struktur zum Empfangen von Informationen über den.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn die Funktion erfolgreich ist, andernfalls 0.  
@@ -320,9 +320,9 @@ operator HFONT() const;
  Das Handle des Objekts der Windows-GDI-Schriftart angefügt `CFont` Wenn erfolgreich; andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Da dieser Operator automatisch für Konvertierungen von verwendet wird `CFont` zu [Schriftarten und Text](http://msdn.microsoft.com/library/windows/desktop/dd144819), können Sie übergeben `CFont` Objekte an Funktionen, die HFONTs erwarten.  
+ Da dieser Operator automatisch für Konvertierungen von verwendet wird `CFont` zu [Schriftarten und Text](/windows/desktop/gdi/fonts-and-text), können Sie übergeben `CFont` Objekte an Funktionen, die HFONTs erwarten.  
   
- Weitere Informationen zur Verwendung von Grafikobjekten finden Sie unter [Grafik Objekte](http://msdn.microsoft.com/library/windows/desktop/dd144962) im Windows SDK.  
+ Weitere Informationen zur Verwendung von Grafikobjekten finden Sie unter [Grafik Objekte](/windows/desktop/gdi/graphic-objects) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#77](../../mfc/codesnippet/cpp/cfont-class_8.cpp)]  

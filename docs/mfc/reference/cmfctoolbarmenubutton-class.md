@@ -102,16 +102,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93e913a2ea99697927ed99a452da395d657b6b05
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d5baebfa1d706bf18b9fc36d706ebe474b6b042d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851706"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721720"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton-Klasse
 Eine Symbolleisten-Schaltfläche, die ein Popupmenü enthält.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -154,7 +154,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 |[CMFCToolBarMenuButton::OnAfterCreatePopupMenu](#onaftercreatepopupmenu)||  
 |[CMFCToolBarMenuButton::OnBeforeDrag](#onbeforedrag)|Gibt an, ob die Schaltfläche gezogen werden kann. (Überschreibt [CMFCToolBarButton::OnBeforeDrag](../../mfc/reference/cmfctoolbarbutton-class.md#onbeforedrag).)|  
 |[CMFCToolBarMenuButton::OnCalculateSize](#oncalculatesize)|Wird aufgerufen, durch das Framework die Größe der Schaltfläche für den angegebenen Gerätekontext und Andockstatus berechnet. (Überschreibt [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
-|[CMFCToolBarMenuButton::OnCancelMode](#oncancelmode)|Wird aufgerufen, durch das Framework, behandeln die [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) Nachricht. (Überschreibt [CMFCToolBarButton::OnCancelMode](../../mfc/reference/cmfctoolbarbutton-class.md#oncancelmode).)|  
+|[CMFCToolBarMenuButton::OnCancelMode](#oncancelmode)|Wird aufgerufen, durch das Framework, behandeln die [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) Nachricht. (Überschreibt [CMFCToolBarButton::OnCancelMode](../../mfc/reference/cmfctoolbarbutton-class.md#oncancelmode).)|  
 |[CMFCToolBarMenuButton::OnChangeParentWnd](#onchangeparentwnd)|Vom Framework aufgerufen, wenn die Schaltfläche mit der in eine neue Symbolleiste eingefügt wird. (Überschreibt [CMFCToolBarButton::OnChangeParentWnd](cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
 |[CMFCToolBarMenuButton::OnClick](#onclick)|Vom Framework aufgerufen, wenn der Benutzer die Maustaste klickt. (Überschreibt [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
 |[CMFCToolBarMenuButton::OnClickMenuItem](#onclickmenuitem)|Wird vom Framework aufgerufen, wenn der Benutzer ein Element im Popup-Menü auswählt.|  
@@ -220,23 +220,23 @@ CMFCToolBarMenuButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Src*  
- Eine vorhandene `CMFCToolBarMenuButton` Objekt, das in diese kopiert werden `CMFCToolBarMenuButton` Objekt.  
+*src*<br/>
+[in] Eine vorhandene `CMFCToolBarMenuButton` Objekt, das in diese kopiert werden `CMFCToolBarMenuButton` Objekt.  
   
- [in] *UiID*  
- Die ID des Befehls, die ausgeführt werden, wenn ein Benutzer auf die Schaltfläche klickt. oder (UINT)-1 für eine Menüschaltfläche, die nicht direkt einen Befehl ausgeführt wird.  
+*uiID*<br/>
+[in] Die ID des Befehls, die ausgeführt werden, wenn ein Benutzer auf die Schaltfläche klickt. oder (UINT)-1 für eine Menüschaltfläche, die nicht direkt einen Befehl ausgeführt wird.  
   
- [in] *hMenu*  
- Ein Handle zu einem Menü oder NULL, wenn die Schaltfläche ein Menü nicht verfügt.  
+*hMenu*<br/>
+[in] Ein Handle zu einem Menü oder NULL, wenn die Schaltfläche ein Menü nicht verfügt.  
   
- [in] *iImage*  
- Der Index des Bilds für die Schaltfläche "; oder -1, wenn diese Schaltfläche, verfügt nicht über ein Symbol oder verwendet das Symbol für den Befehl anhand des *UiID*. Der Index ist dieselbe für jeden `CMFCToolBarImages` Objekt in der Anwendung.  
+*iImage*<br/>
+[in] Der Index des Bilds für die Schaltfläche "; oder -1, wenn diese Schaltfläche, verfügt nicht über ein Symbol oder verwendet das Symbol für den Befehl anhand des *UiID*. Der Index ist dieselbe für jeden `CMFCToolBarImages` Objekt in der Anwendung.  
   
- [in] *LpszText*  
- Der Text des der Symbolleisten-Schaltfläche im Menü.  
+*lpszText*<br/>
+[in] Der Text des der Symbolleisten-Schaltfläche im Menü.  
   
- [in] *bUserButton*  
- True, wenn die Schaltfläche ein benutzerdefiniertes Bild anzeigt. FALSE, wenn die Schaltfläche ein vordefiniertes Image gemäß Befehl zeigt *UiID*.  
+*bUserButton*<br/>
+[in] True, wenn die Schaltfläche ein benutzerdefiniertes Bild anzeigt. FALSE, wenn die Schaltfläche ein vordefiniertes Image gemäß Befehl zeigt *UiID*.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn *UiID* ist ein gültiger Befehls-ID, die Schaltfläche führt diesen Befehl aus, wenn der Benutzer darauf klickt. Wenn *hMenu* ist ein Menühandle gültig im die Schaltfläche bietet ein Dropdown-Menü aus, wenn es in einer Symbolleiste oder ein Untermenü angezeigt wird, wenn es in einem Menü angezeigt wird. Wenn beide *UiID* und *hMenu* gültig sind, die Schaltfläche ist eine unterteilte Schaltfläche mit den einen Teil, die den Befehl ausgeführt werden, wenn der Benutzer darauf klickt und ein Teil mit einem Abwärtspfeil angezeigt, die ein Menü Dropdown-Liste wird bei der der Benutzer auf diese klickt. Aber wenn *hMenu* gültig ist, ein Benutzer wird nicht in der Lage, klicken Sie auf die Schaltfläche, um einen Befehl auszuführen, wenn die Schaltfläche in einem Menü eingefügt wird.  
@@ -280,8 +280,8 @@ virtual void CreateFromMenu(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *hMenu*  
- Ein Handle für ein Menü.  
+*hMenu*<br/>
+[in] Ein Handle für ein Menü.  
   
 ### <a name="remarks"></a>Hinweise  
  Eine Symbolleisten-Schaltfläche im Menü kann ein Dropdown-Untermenü angezeigt.  
@@ -327,14 +327,14 @@ void DrawDocumentIcon(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger auf den Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf den Gerätekontext.  
   
- [in] *RectImage*  
- Die Koordinaten des umschließenden Rechtecks Bilds.  
+*rectImage*<br/>
+[in] Die Koordinaten des umschließenden Rechtecks Bilds.  
   
- [in] *hIcon*  
- Ein Handle für das Symbol.  
+*hIcon*<br/>
+[in] Ein Handle für das Symbol.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird das Symbol eines Dokuments und zeichnet es auf die Menüschaltfläche, der zentriert in den vom angegebenen Bereich *RectImage*.  
@@ -424,8 +424,8 @@ void GetImageRect(CRect& rectImage);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *RectImage*  
- Ein Verweis auf eine `CRect` Objekt, das die Koordinaten des umgebenden Rechtecks Images empfängt.  
+*rectImage*<br/>
+[out] Ein Verweis auf eine `CRect` Objekt, das die Koordinaten des umgebenden Rechtecks Images empfängt.  
   
 ##  <a name="getpaletterows"></a>  CMFCToolBarMenuButton::GetPaletteRows  
  Gibt die Anzahl der Zeilen in der Dropdown-Menü zurück, wenn Sie im Menü im Palettenmodus befindet.  
@@ -560,8 +560,8 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *SizeDefault*  
+*pDC*<br/>
+[in] [in] *SizeDefault*  
  [in] *bHorz*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -599,8 +599,8 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- [in] *bDelay*  
+*Aufnehmen*<br/>
+[in] [in] *bDelay*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -651,14 +651,14 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
- [in] *pImages*  
- [in] *bHorz*  
- [in] *bCustomizeMode*  
- [in] *bHighlight*  
- [in] *bDrawBorder*  
- [in] *bGrayDisabledButtons*  
+*pDC*<br/>
+[in] [in] *Rect*  
+*pImages*<br/>
+[in] [in] *bHorz*  
+*bCustomizeMode*<br/>
+[in] [in] *bHighlight*  
+*bDrawBorder*<br/>
+[in] [in] *bGrayDisabledButtons*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -673,8 +673,8 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
+*pDC*<br/>
+[in] [in] *Rect*  
  [in] *bSelected*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -689,8 +689,8 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Gibt an, das Fenster, das die Dropdown-Menübefehle empfängt. Es kann NULL sein, nur dann, wenn die Symbolleisten-Schaltfläche im Menü ein übergeordnetes Fenster verfügt.  
+*Aufnehmen*<br/>
+[in] Gibt an, das Fenster, das die Dropdown-Menübefehle empfängt. Es kann NULL sein, nur dann, wenn die Symbolleisten-Schaltfläche im Menü ein übergeordnetes Fenster verfügt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn eine [CMFCPopupMenu-Klasse](../../mfc/reference/cmfcpopupmenu-class.md) Objekt wurde erstellt und geöffnet wurde; andernfalls "false".  
@@ -759,8 +759,8 @@ void SetMenuOnly(BOOL bMenuOnly);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bMenuOnly*  
- TRUE, wenn diese Schaltfläche, wenn es eine gültige Befehls-ID und ein Untermenü "false" hat auf diese Schaltfläche einer unterteilten Schaltfläche angezeigt, wenn sie eine gültige Befehls-ID und ein Untermenü verfügt über eine Menüschaltfläche angezeigt werden.  
+*bMenuOnly*<br/>
+[in] TRUE, wenn diese Schaltfläche, wenn es eine gültige Befehls-ID und ein Untermenü "false" hat auf diese Schaltfläche einer unterteilten Schaltfläche angezeigt, wenn sie eine gültige Befehls-ID und ein Untermenü verfügt über eine Menüschaltfläche angezeigt werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn eine Symbolleisten-Schaltfläche im Menü sowohl eine Befehls-ID als auch ein Untermenü verfügt, wird das Menü in der Regel eine unterteilte Schaltfläche sein, die einer Hauptschaltfläche und eine angefügte nach-unten-Taste. Wenn Sie diese Methode aufrufen und *bMenuOnly* ist "true", die Schaltfläche, die stattdessen soll eine einzelne Menüschaltfläche mit einem Abwärtspfeil in der Schaltfläche angezeigt wird. Klickt der Benutzer auf den Pfeil in beiden Modi, das Untermenü wird geöffnet, und klickt der Benutzer wird der nicht-Taste Teil der Schaltfläche in beiden Modi das Framework der Befehl ausgeführt.  
@@ -775,11 +775,11 @@ void SetMenuPaletteMode(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bMenuPaletteMode*  
- Gibt an, ob der Dropdown-Menü im Palettenmodus befindet.  
+*bMenuPaletteMode*<br/>
+[in] Gibt an, ob der Dropdown-Menü im Palettenmodus befindet.  
   
- [in] *nPaletteRows*  
- Anzahl der Zeilen in der Palette.  
+*nPaletteRows*<br/>
+[in] Anzahl der Zeilen in der Palette.  
   
 ### <a name="remarks"></a>Hinweise  
  In der Palettenmodus werden alle Menüelemente als eine Palette für mehrere Spalten angezeigt. Sie geben die Anzahl der Zeilen mit *nPaletteRows*.  
@@ -816,8 +816,8 @@ virtual void SetTearOff(UINT uiBarID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiBarID*  
- Gibt an, eine neue abtrennbarer Leiste ID.  
+*uiBarID*<br/>
+[in] Gibt an, eine neue abtrennbarer Leiste ID.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um die ID für die abtrennbarer Leiste angeben, die erstellt wird, wenn der Benutzer die Schaltfläche auf einer Menüleiste zieht. Wenn die *UiBarID* Parameter gleich 0 ist, die der Benutzer kann nicht aus der Menüschaltfläche entfernen.  

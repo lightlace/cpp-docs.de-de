@@ -1,5 +1,5 @@
 ---
-title: Suchen von Binärdaten | Microsoft Docs
+title: Suchen von Binärdaten (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,32 +21,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 815975ac693885842d2e4b2287e14957abe8375f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5c24d2c4fbae86d6b906de039b8cf6a041858b2e
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873562"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315768"
 ---
 # <a name="finding-binary-data"></a>Suchen von Binärdaten
-Sie können für ASCII-Zeichenfolgen oder hexadezimale Bytes suchen. Angenommen, um "Hello" zu suchen, Sie können entweder die Zeichenfolge "Hello" oder suchen für "48 65 6 c 6 C 6F" (die hexadezimale Entsprechung).  
-  
-### <a name="to-find-binary-data"></a>Binäre Daten gefunden  
-  
-1.  Aus der **bearbeiten** Menü klicken Sie auf [suchen](/visualstudio/ide/reference/find-command).  
-  
-2.  In der **Suchen nach** Feld, wählen Sie einen früheren Suchbegriff aus der Dropdown-Liste aus, oder geben Sie die Daten, die Sie suchen möchten.  
-  
-3.  Aktivieren Sie keines der **suchen** Optionen.  
-  
-4.  Klicken Sie auf **Weitersuchen**.  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
-  
- Anforderungen  
-  
- Keiner  
-  
-## <a name="see-also"></a>Siehe auch  
- [Binary Editor](binary-editor.md)
 
+Sie können für ASCII-Zeichenfolgen oder hexadezimale Bytes suchen. Z. B. um "Hello" zu suchen, Sie können entweder die Zeichenfolge "Hello" oder suchen für "48 65 6 c 6 C 6F" (die hexadezimale Entsprechung).
+
+### <a name="to-find-binary-data"></a>Binärdaten suchen
+
+1. Von der **bearbeiten** Menü klicken Sie auf [finden](/visualstudio/ide/reference/find-command).
+
+2. In der **Suchen nach** Feld, wählen Sie einen früheren Suchbegriff aus der Dropdown-Liste aus, oder geben Sie die Daten, die Sie suchen möchten.
+
+3. Aktivieren Sie keines der **finden** Optionen.
+
+4. Klicken Sie auf **Weitersuchen**.
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Anforderungen
+
+Keiner
+
+## <a name="see-also"></a>Siehe auch
+
+[Binary Editor](binary-editor.md)

@@ -122,17 +122,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecefc377c620028b520945c6aaefd8b178d9ff9f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: cc9965371de0ea75ece0cb31c7ec5187b9279cef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338449"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726712"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx-Klasse
 Die `CMDIChildWndEx` Klasse stellt die Funktionalität von einem Windows untergeordnete-Fensters von multiple Document Interface (MDI). Es erweitert die Funktionalität von [CMDIChildWnd-Klasse](../../mfc/reference/cmdichildwnd-class.md). Das Framework benötigt diese Klasse, wenn eine MDI-Anwendung bestimmte MFC-Klassen verwendet.  
  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
 
   
 ## <a name="syntax"></a>Syntax  
@@ -192,7 +192,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 |[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|Vom Framework aufgerufen, wenn eine Bitmap für Windows 7-Taskleiste Registerkarte Vorschau der Miniaturansicht untergeordnete MDI-Element gestreckt werden muss.|  
 |[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|Wird aufgerufen, durch das Framework auf den Frametitel zu aktualisieren. (Überschreibt `CMDIChildWnd::OnUpdateFrameTitle`.)|  
 |[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|Gibt den Bereich, der den angegebenen Punkt enthält.|  
-|`CMDIChildWndEx::PreTranslateMessage`|Wird von der [CWinApp](../../mfc/reference/cwinapp-class.md) -Klasse verwendet, um Fenstermeldungen zu übersetzen, bevor diese an die Windows-Funktionen [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) gesendet werden. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMDIChildWndEx::PreTranslateMessage`|Von Klasse verwendeten [CWinApp](../../mfc/reference/cwinapp-class.md) um fenstermeldungen zu übersetzen, bevor sie um weitergeleitet werden die [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows-Funktionen. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMDIChildWndEx::RecalcLayout](#recalclayout)|Berechnet das Layout des Fensters.|  
 |[CMDIChildWndEx::RegisterTaskbarTab](#registertaskbartab)|Registriert untergeordnete MDI-Fenster mit Registerkarten für Windows 7-Taskleiste ein.|  
 |[CMDIChildWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Entfernt einen Bereich von Dock-Manager.|  
@@ -239,11 +239,11 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pControlBar*  
- Ein Zeiger auf den Bereich.  
+*pControlBar*<br/>
+[in] Ein Zeiger auf den Bereich.  
   
- [in] *bTail*  
- True, um den Bereich am Ende der Liste der Bereiche für Dock-Manager hinzufügen. andernfalls "false".  
+*bTail*<br/>
+[in] True, um den Bereich am Ende der Liste der Bereiche für Dock-Manager hinzufügen. andernfalls "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Bereich beim Dock-Manager erfolgreich registriert wurde. andernfalls "false".  
@@ -256,8 +256,8 @@ void AddTabbedPane(CDockablePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pControlBar*  
- Ein Zeiger auf den Bereich.  
+*pControlBar*<br/>
+[in] Ein Zeiger auf den Bereich.  
   
 ##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout  
  Passt das Layout des Docks an.  
@@ -267,8 +267,8 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Hdwp*  
- Handle für eine verzögerte Fenster Position-Struktur.  
+*hdwp*<br/>
+[in] Handle für eine verzögerte Fenster Position-Struktur.  
   
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs  
 
@@ -305,14 +305,14 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- Ein Zeiger auf den Bereich.  
+*pBar*<br/>
+[in] Ein Zeiger auf den Bereich.  
   
- [in] *nDockBarID*  
- Die ID des Bereichs.  
+*nDockBarID*<br/>
+[in] Die ID des Bereichs.  
   
- [in] *LpRect*  
- Ein Zeiger auf ein Rechteck.  
+*lpRect*<br/>
+[in] Ein Zeiger auf ein Rechteck.  
   
 ### <a name="remarks"></a>Hinweise  
  Die *LpRect* Parameter wird nicht verwendet.  
@@ -349,8 +349,8 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwDockStyle*  
- Gibt die Seiten im Hauptrahmenfenster, die aktiviert ist. Verwenden Sie eine oder mehrere der folgenden Flags.  
+*dwDockStyle*<br/>
+[in] Gibt die Seiten im Hauptrahmenfenster, die aktiviert ist. Verwenden Sie eine oder mehrere der folgenden Flags.  
   
 - CBRS_ALIGN_LEFT  
   
@@ -371,8 +371,8 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwDockStyle*  
- Gibt die andockbare Ausrichtung zu aktivieren.  
+*dwDockStyle*<br/>
+[in] Gibt die andockbare Ausrichtung zu aktivieren.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich ist. andernfalls "false".  
@@ -453,8 +453,8 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- Die Steuerelement-ID des Bereichs zu suchen.  
+*nID*<br/>
+[in] Die Steuerelement-ID des Bereichs zu suchen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf den Bereich, sofern gefunden, andernfalls NULL.  
@@ -506,14 +506,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pControlBar*  
- Ein Zeiger auf den Bereich eingefügt.  
+*pControlBar*<br/>
+[in] Ein Zeiger auf den Bereich eingefügt.  
   
- [in] *pTarget*  
- Ein Zeiger auf angrenzenden Bereich.  
+*pTarget*<br/>
+[in] Ein Zeiger auf angrenzenden Bereich.  
   
- [in] *bNach*  
- True gibt an, *pControlBar* eingefügt wird, nach dem *pTarget*. False gibt an, *pControlBar* eingefügt wird, bevor Sie *pTarget*.  
+*bNach*<br/>
+[in] True gibt an, *pControlBar* eingefügt wird, nach dem *pTarget*. False gibt an, *pControlBar* eingefügt wird, bevor Sie *pTarget*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn die Methode erfolgreich ist; FALSE andernfalls.  
@@ -529,14 +529,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Der angegebene Punkt.  
+*Zeigen Sie*<br/>
+[in] Der angegebene Punkt.  
   
- [in] *DwBarAlignment*  
- Gibt an, welchen Rand, in der Nähe der Punkt ist. Mögliche Werte sind CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP und CBRS_ALIGN_BOTTOM  
+*dwBarAlignment*<br/>
+[in] Gibt an, welchen Rand, in der Nähe der Punkt ist. Mögliche Werte sind CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP und CBRS_ALIGN_BOTTOM  
   
- [in] *bOuterEdge*  
- True, wenn der Punkt in der Nähe von der äußere Rahmen der DockPosition ist. "False" andernfalls.  
+*bOuterEdge*<br/>
+[in] True, wenn der Punkt in der Nähe von der äußere Rahmen der DockPosition ist. "False" andernfalls.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Punkt in der Nähe der DockPosition ist. andernfalls "false".  
@@ -580,8 +580,8 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pFrame*  
- Ein Zeiger auf ein Minirahmenfenster.  
+*pFrame*<br/>
+[in] Ein Zeiger auf ein Minirahmenfenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn die Methode erfolgreich ist, andernfalls "false".  
@@ -596,11 +596,11 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bPreview*  
- True gibt an, geben Sie die Seitenansicht. False gibt an, beendet die Seitenansicht-Modus.  
+*bPreview*<br/>
+[in] True gibt an, geben Sie die Seitenansicht. False gibt an, beendet die Seitenansicht-Modus.  
   
- [in] *pState*  
- Ein Zeiger auf die Seitenansicht-Status-Struktur.  
+*pState*<br/>
+[in] Ein Zeiger auf die Seitenansicht-Status-Struktur.  
   
 ##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle  
  Wird aufgerufen, durch das Framework auf den Frametitel zu aktualisieren.  
@@ -610,8 +610,8 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAddToTitle*  
- True gibt an, fügen Sie den Namen des Dokuments, auf den Titel.  
+*bAddToTitle*<br/>
+[in] True gibt an, fügen Sie den Namen des Dokuments, auf den Titel.  
   
 ##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint  
  Gibt den Bereich, der den angegebenen Punkt enthält.  
@@ -631,20 +631,20 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Gibt den Punkt in Bildschirmkoordinaten, um zu überprüfen.  
+*Zeigen Sie*<br/>
+[in] Gibt den Punkt in Bildschirmkoordinaten, um zu überprüfen.  
   
- [in] *nSensitivity*  
- Erhöhen Sie den Suchbereich, um diesen Betrag. Ein Bereich erfüllt die Suchkriterien, fällt die der angegebene Punkt in der höheren Bereich.  
+*nSensitivity*<br/>
+[in] Erhöhen Sie den Suchbereich, um diesen Betrag. Ein Bereich erfüllt die Suchkriterien, fällt die der angegebene Punkt in der höheren Bereich.  
   
- [in] *bExactBar*  
- "True", ignoriert der *nSensitivity* Parameter ist, andernfalls FALSE.  
+*bExactBar*<br/>
+[in] "True", ignoriert der *nSensitivity* Parameter ist, andernfalls FALSE.  
   
- [in] *pRTCBarType*  
- Wenn nicht NULL ist, sucht die Methode nur Bereiche des angegebenen Typs.  
+*pRTCBarType*<br/>
+[in] Wenn nicht NULL ist, sucht die Methode nur Bereiche des angegebenen Typs.  
   
- [in] *DwAlignment*  
- Wenn Sie ein Bereich am angegebenen Punkt gefunden wird, enthält dieser Parameter den Rand des Bereichs, der dem angegebenen Punkt am nächsten war. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
+*dwAlignment*<br/>
+[in] Wenn Sie ein Bereich am angegebenen Punkt gefunden wird, enthält dieser Parameter den Rand des Bereichs, der dem angegebenen Punkt am nächsten war. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die `CBasePane`-abgeleitete Objekt, das die angegebenen Punkt enthält, oder NULL, wenn kein Bereich gefunden wurde.  
@@ -662,8 +662,8 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bNotify*  
- True gibt an, erhält das aktive direkte-Element für das Fenster eine Benachrichtigung von der layoutänderung.  
+*bNotify*<br/>
+[in] True gibt an, erhält das aktive direkte-Element für das Fenster eine Benachrichtigung von der layoutänderung.  
   
 ##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager  
  Entfernt einen Bereich von Dock-Manager.  
@@ -678,20 +678,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pControlBar*  
- Ein Zeiger auf den Bereich zu entfernen.  
+*pControlBar*<br/>
+[in] Ein Zeiger auf den Bereich zu entfernen.  
   
- [in] *bDestroy*  
- Wenn "true", Bereich entfernte zerstört wird.  
+*bDestroy*<br/>
+[in] Wenn "true", Bereich entfernte zerstört wird.  
   
- [in] *bAdjustLayout*  
- True gibt an, passen Sie sofort das docking-Layout.  
+*bAdjustLayout*<br/>
+[in] True gibt an, passen Sie sofort das docking-Layout.  
   
- [in] *bAutoHide*  
- Bei "true", bezieht sich das docking-Layout der Liste der automatisch im Hintergrund Balken. False gibt an, bezieht sich das docking-Layout auf die Liste der regulären Bereiche.  
+*bAutoHide*<br/>
+[in] Bei "true", bezieht sich das docking-Layout der Liste der automatisch im Hintergrund Balken. False gibt an, bezieht sich das docking-Layout auf die Liste der regulären Bereiche.  
   
- [in] *pBarReplacement*  
- Ein Zeiger auf einen Bereich, der Bereich entfernten ersetzt.  
+*pBarReplacement*<br/>
+[in] Ein Zeiger auf einen Bereich, der Bereich entfernten ersetzt.  
   
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup  
 
@@ -717,10 +717,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- [in] *bShow*  
- [in] *bDelay*  
- [in] *bActivate*  
+*pBar*<br/>
+[in] [in] *bShow*  
+*bDelay*<br/>
+[in] [in] *bActivate*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -775,7 +775,7 @@ void SetTaskbarTabProperties(DWORD dwFlags);
   
 ### <a name="parameters"></a>Parameter  
  *dwFlags*  
- Eine Kombination von STPFLAG-Werten. Weitere Informationen finden Sie unter [itaskbarlist4:: Settabproperties](http://msdn.microsoft.com/library/dd562049\(vs.85\).aspx).  
+ Eine Kombination von STPFLAG-Werten. Weitere Informationen finden Sie unter [itaskbarlist4:: Settabproperties](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-itaskbarlist4-settabproperties).  
   
 ### <a name="remarks"></a>Hinweise  
   

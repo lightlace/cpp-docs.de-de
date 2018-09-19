@@ -1,5 +1,5 @@
 ---
-title: 'Hstring:: Operator = | Microsoft Docs'
+title: 'Hstring:: Operator = | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,33 +15,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6fd1082beb6d84c5dded008e20683f7292cbc1e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9294650db7a1b18c2542603988952a80b3f1905d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873871"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598544"
 ---
 # <a name="hstringoperator-operator"></a>HString::Operator=-Operator
-Verschiebt den Wert eines anderen HString-Objekts zum aktuellen HString-Objekt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
+
+Verschiebt den Wert eines anderen **HString** -Objekt mit dem aktuellen **HString** Objekt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
 HString& operator=(HString&& other) throw()  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `other`  
- Ein vorhandenes HString-Objekt.  
-  
-## <a name="remarks"></a>Hinweise  
- Der Wert des vorhandenen `other` Objekt kopiert wird, mit dem aktuellen HString-Objekt, und klicken Sie dann die `other` -Objekt zerstört wird.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Siehe auch  
- [HString-Klasse](../windows/hstring-class.md)
+```
+
+### <a name="parameters"></a>Parameter
+
+*other*  
+Eine vorhandene **HString** Objekt.
+
+## <a name="remarks"></a>Hinweise
+
+Der Wert des vorhandenen *andere* Objekt kopiert wird, mit dem aktuellen **HString** -Objekt, und klicken Sie dann die *andere* -Objekt zerstört wird.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+
+[HString-Klasse](../windows/hstring-class.md)

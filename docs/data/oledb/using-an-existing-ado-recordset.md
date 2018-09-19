@@ -1,5 +1,5 @@
 ---
-title: Verwenden eines vorhandenen ADO-Recordsets | Microsoft Docs
+title: Verwenden eines vorhandenen ADO-Recordsets | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36c74ec0d17c296707334930736d0cf237ecfe7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d3a0b2d2da67e4db55dbf3a3f5b23c0c88797dd7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103563"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065340"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Verwenden eines vorhandenen ADO-Recordsets
-Verwenden von ADO zum Mischen von OLE DB-Consumervorlagen und Active Data Objects (ADO) um zu einem Recordset (Dies entspricht in ein Rowset in der OLE DB-Consumervorlagen) zu öffnen. Wenn Sie ein Recordset haben, gehen Sie für die Verbindung zu einem OLE DB-Rowset:  
+
+Verwenden Sie zum Kombinieren von OLE DB-Consumervorlagen und Active Data Objects (ADO), ADO, um einem Recordset (entsprechend in ein Rowset in den OLE DB-Consumervorlagen) zu öffnen. Wenn Sie ein Recordset haben, gehen Sie zur Verbindung mit einem OLE DB-Rowset:  
   
-1.  Rufen Sie `QueryInterface` für die `IRowset` und `IAccessor` Zeiger.  
+1. Rufen Sie `QueryInterface` für die `IRowset` und `IAccessor` Zeiger.  
   
-    ```  
+    ```cpp  
     IRowset* lpRowset = NULL;  
     IAccessor* lpAccessor = NULL;  
     lpUnk->QueryInterface(IID_IRowset, (void**)&lpRowset);  
@@ -37,11 +38,11 @@ Verwenden von ADO zum Mischen von OLE DB-Consumervorlagen und Active Data Object
     ```  
   
     > [!NOTE]
-    >  *LpUnk* verweist auf die **IUnknown** Objekt von der ADO-Recordset.  
+    >  *LpUnk* verweist auf die `IUnknown` Objekt von der ADO-Recordset.  
   
-2.  Fügen Sie der Accessor und das Rowset an ihre entsprechenden OLE DB-Consumer-Vorlagenklassen an.  
+1. Fügen Sie den Accessor und das Rowset an ihre entsprechenden OLE DB-Consumer-Vorlagenklassen an.  
   
-    ```  
+    ```cpp  
     CRowset rs;  
     CAccessor accessor;  
   
@@ -51,4 +52,5 @@ Verwenden von ADO zum Mischen von OLE DB-Consumervorlagen und Active Data Object
     ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden von Zugriffsmethoden](../../data/oledb/using-accessors.md)
+
+[Verwenden von Zugriffsmethoden](../../data/oledb/using-accessors.md)

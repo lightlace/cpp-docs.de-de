@@ -1,5 +1,5 @@
 ---
-title: 'Chaininterfaces:: Casttounknown-Methode | Microsoft Docs'
+title: 'Chaininterfaces:: Casttounknown-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 696d632037f2a1fdc68e298b247e46720b81a343
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96e7428e2263beb57eb73e024815000d61e75d5f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855093"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612556"
 ---
 # <a name="chaininterfacescasttounknown-method"></a>ChainInterfaces::CastToUnknown-Methode
-Wandelt den Schnittstellenzeiger des Typs definiert, indem die `I0` Vorlagenparameter in einen Zeiger auf IUnknown.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-__forceinline IUnknown* CastToUnknown();  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf IUnknown.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** implements.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [ChainInterfaces-Struktur](../windows/chaininterfaces-structure.md)
+
+Wandelt den Schnittstellenzeiger, der den vom definierten Typ der *I0* Template-Parameter auf einen Zeiger auf `IUnknown`.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+__forceinline IUnknown* CastToUnknown();
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Ein Zeiger auf `IUnknown`.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** implements.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[ChainInterfaces-Struktur](../windows/chaininterfaces-structure.md)

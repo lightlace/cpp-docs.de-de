@@ -1,5 +1,5 @@
 ---
-title: Fehlermeldung Bearbeitungssteuerelement | Microsoft Docs
+title: Fehlermeldung Bearbeitungssteuerelement | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49a0852b0b73adb3c70ba1b01b8c7f4805f80321
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa0851f31487bf79ba3977bdedee86ce3b718f21
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369613"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701896"
 ---
 # <a name="error-message-edit-control"></a>Edit-Steuerelement für Fehlermeldungen
-Die **Fehlermeldung** Feld enthält den Text der Systemfehlermeldung oder Modulfehlermeldung auf Grundlage des eingegebenen Werts.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Edit-Steuerelement für Werte](../../build/reference/value-edit-control.md)
+
+Die **Fehlermeldung** Feld enthält den Text, der den System- oder Modulfehlermeldung auf den eingegebenen Wert.
+
+## <a name="see-also"></a>Siehe auch
+
+[Edit-Steuerelement für Werte](../../build/reference/value-edit-control.md)

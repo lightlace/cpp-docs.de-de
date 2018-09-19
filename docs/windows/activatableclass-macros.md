@@ -1,5 +1,5 @@
 ---
-title: ActivatableClass-Makros | Microsoft Docs
+title: ActivatableClass-Makros | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aeb68deddd1cdfa9e1e869a08bfb0a1f3bb8d6ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 398149d0d65b0dcf4c914d8f35e4c6faf209173f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857463"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606986"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass-Makros
 
@@ -54,17 +54,17 @@ ActivatableClassWithFactoryEx(
 ### <a name="parameters"></a>Parameter
 
 *Klassenname*  
-Name des zu erstellenden Klasse.  
+Name des zu erstellenden Klasse.
 
 *Factory*  
-Eine Factory, die eine Instanz der angegebenen Klasse erstellen.
+Eine Factory, die eine Instanz der angegebenen Klasse erstellt.
 
 *ServerName*  
-Ein Name, der eine Teilmenge der Factorys in das Modul angibt.
+Ein Name, der eine Teilmenge der Factorys im Modul angibt.
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie nicht diese Makros mit klassischen COM-es sei denn, Sie verwenden die `#undef` Richtlinie, um sicherzustellen, dass die **&#95; &#95;WRL_WINRT_STRICT&#95; &#95;** Makrodefinition wird entfernt.
+Verwenden Sie nicht diese Makros mit klassischen COM-es sei denn, Sie verwenden die `#undef` Richtlinie, um sicherzustellen, dass die `__WRL_WINRT_STRICT__` Makrodefinition entfernt wird.
 
 ## <a name="requirements"></a>Anforderungen
 

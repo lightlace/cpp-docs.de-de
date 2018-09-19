@@ -1,5 +1,5 @@
 ---
-title: Ändern des Layoutrasters | Microsoft Docs
+title: Ändern des Layoutrasters | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,37 +19,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5f73b1b2e2982d02fae1de67d4e5e2947f728f02
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 615138b44ab9fdbbf94d4130428ba708697c2aee
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880318"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601847"
 ---
 # <a name="modifying-the-layout-grid"></a>Ändern des Layoutrasters
-Beim platzieren oder Anordnen von Steuerelementen in einem Dialogfeld, können Sie das Layoutraster für eine genauere positionieren. Wenn das Raster aktiviert ist, werden die Steuerelemente ausgerichtet werden soll "auf die gepunkteten Zeilen des Rasters" einzurasten angezeigt. Sie können Aktivieren dieses Feature "am Raster ausrichten" aus, und deaktivieren und Ändern der Größe der Rasterzellen des Layouts.  
-  
-### <a name="to-turn-the-layout-grid-on-or-off"></a>Zum Aktivieren oder deaktivieren Sie des Layoutrasters  
-  
-1.  Aus der **Format** Menü wählen **Handbuch Einstellungen**.  
-  
-2.  In der [im Dialogfeld "Einstellungen" Handbuch](../windows/guide-settings-dialog-box.md)aktivieren oder Deaktivieren der **Raster** Schaltfläche.  
-  
-     Sie können weiterhin das Raster in einzelne Dialogfeld-Editor für Windows mit steuern die **Raster umschalten** Schaltfläche auf der [Dialog-Editor-Symbolleiste](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
-  
-### <a name="to-change-the-size-of-the-layout-grid"></a>So ändern Sie die Größe des Layoutrasters  
-  
-1.  Aus der **Format** Menü wählen **Handbuch Einstellungen**.  
-  
-2.  In der [im Dialogfeld "Einstellungen" Handbuch](../windows/guide-settings-dialog-box.md), geben Sie die Höhe und Breite in DLUs für die Zellen im Raster. Die minimale Höhe oder Breite beträgt 4 DLUs. Weitere Informationen über DLUs finden Sie unter [Anordnung von Steuerelementen in Dialogfeldern](../windows/arrangement-of-controls-on-dialog-boxes.md).  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
-  
- Anforderungen  
-  
- Win32  
-  
-## <a name="see-also"></a>Siehe auch  
- [Dialog-Editor-Status (Führungslinien und Raster)](../windows/dialog-editor-states-guides-and-grids.md)   
- [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)
 
+Beim Anordnen von Steuerelementen in einem Dialogfeld oder platziert werden, können Sie das Layoutraster für die eine genauere Positionierung verwenden. Wenn das Raster aktiviert ist, scheinen die Steuerelemente ", die gepunkteten Zeilen im Raster ausrichten" einzurasten. Sie können Aktivieren dieses Feature "am Raster ausrichten" ein, und deaktivieren und Ändern der Größe der Rasterzellen des Layouts.
+
+### <a name="to-turn-the-layout-grid-on-or-off"></a>Zum Aktivieren oder deaktivieren Sie des Layoutrasters
+
+1. Von der **Format** Menü wählen **Einstellungen für Führungslinien**.
+
+2. In der [im Dialogfeld "Einstellungen" Handbuch](../windows/guide-settings-dialog-box.md)aktivieren oder Deaktivieren der **Raster** Schaltfläche.
+
+   Sie können weiterhin steuern das Raster in einzelnen **Dialogfeld** -Editor-Fenster mit den **Raster umschalten** Schaltfläche der [Dialog-Editor-Symbolleiste](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+
+### <a name="to-change-the-size-of-the-layout-grid"></a>Ändern die Größe des Layoutrasters
+
+1. Von der **Format** Menü wählen **Einstellungen für Führungslinien**.
+
+2. In der [im Dialogfeld "Einstellungen" Handbuch](../windows/guide-settings-dialog-box.md), geben Sie die Höhe und Breite in DLUs für die Zellen im Raster. Die minimale Höhe oder Breite ist 4 DLUs. Weitere Informationen zu DLUs, finden Sie unter [Anordnung von Steuerelementen in Dialogfeldern](../windows/arrangement-of-controls-on-dialog-boxes.md).
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Anforderungen
+
+Win32
+
+## <a name="see-also"></a>Siehe auch
+
+[Modi des Dialog-Editors (Führungslinien und Raster)](../windows/dialog-editor-states-guides-and-grids.md)  
+[Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)

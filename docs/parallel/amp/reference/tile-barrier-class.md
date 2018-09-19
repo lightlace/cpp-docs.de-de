@@ -1,5 +1,5 @@
 ---
-title: Tile_barrier-Klasse | Microsoft Docs
+title: Tile_barrier-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62e81b7cab8d7e8774e6ac50c5de5f256d76b232
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a91cbb816deb18d9c4cf7356faa879c09a9d276c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686489"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025203"
 ---
 # <a name="tilebarrier-class"></a>tile_barrier-Klasse
 Synchronisiert die Ausführung von Threads, die in der Threadgruppe (die Kachel) mit `wait`-Methoden ausgeführt werden. Nur die Laufzeit kann diese Klasse instanziieren.  
@@ -64,7 +64,7 @@ class tile_barrier;
  **Namespace:** Parallelität  
 
 ## <a name="tile_barrier__ctor"></a>  Tile_barrier-Konstruktor  
- Initialisiert eine neue Instanz der Klasse durch Kopieren einer vorhandenen Arbeitsaufgabe an.  
+ Initialisiert eine neue Instanz der Klasse durch Kopieren einer vorhandenen Instanz an.  
   
 ### <a name="syntax"></a>Syntax 
   
@@ -74,8 +74,8 @@ tile_barrier(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Other`  
- Das zu kopierende `tile_barrier`-Objekt.  
+*_Sonstige*<br/>
+Das zu kopierende `tile_barrier`-Objekt.  
 
 ## <a name="wait"></a>  Warte 
 Weist alle Threads in der Threadgruppe (Kachel), um die Ausführung zu beenden, bis alle Threads in der Kachel den Wartevorgang beendet haben.  
@@ -106,7 +106,7 @@ void wait_with_global_memory_fence() const  restrict(amp);
 ```
 
 ## <a name="wait_with_tile_static_memory_fence"></a>  wait_with_tile_static_memory_fence   
-Blockiert die Ausführung aller Threads in einer Kachel, bis alle Threads in einer Kachel diesen Aufruf erreicht haben. Dadurch wird sichergestellt, dass `tile_static` -Speicherzugriffe für andere Threads in der threadkachel sichtbar sind und in der programmreihenfolge ausgeführt wurden.  
+Blockiert die Ausführung aller Threads in einer Kachel, bis alle Threads in einer Kachel diesen Aufruf erreicht haben. Dadurch wird sichergestellt, dass `tile_static` Arbeitsspeicher zugreift, für andere Threads in der threadkachel sichtbar sind, und in der programmreihenfolge ausgeführt wurden.  
   
 ### <a name="syntax"></a>Syntax 
   

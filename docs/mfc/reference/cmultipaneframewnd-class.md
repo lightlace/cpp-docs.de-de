@@ -90,17 +90,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 544b6ef8887ab9d6f5e5063fcee435c64e355645
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d4bc80f8370924377a089b3cb9838030943b9943
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852341"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706744"
 ---
 # <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd-Klasse
 Die `CMultiPaneFrameWnd` -Klasse erweitert [CPaneFrameWnd-Klasse](../../mfc/reference/cpaneframewnd-class.md). Es können mehrere Bereiche unterstützt werden. Anstelle eines einzelnen eingebetteten Handles für eine Steuerleiste `CMultiPaneFrameWnd` enthält eine [CPaneContainerManager-Klasse](../../mfc/reference/cpanecontainermanager-class.md) -Objekt, das dem Benutzer ermöglicht, eine Andocken `CMultiPaneFrameWnd` in einen anderen und dynamisch mehrere unverankerte zu erstellen, die im Registerkartenformat Windows.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -237,10 +237,10 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWndToDock*  
- [in] *PtMouse*  
- [in] *RectResult*  
- [in] *bDrawTab*  
+*pWndToDock*<br/>
+[in] [in] *PtMouse*  
+*rectResult*<br/>
+[in] [in] *bDrawTab*  
  [in] *PpTargetBar*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -307,8 +307,8 @@ virtual BOOL DockFrame(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDockedFrame*  
- [in] *DockMethod*  
+*pDockedFrame*<br/>
+[in] [in] *DockMethod*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -419,8 +419,8 @@ virtual BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pControlBar*  
- [in] *pTarget*  
+*pControlBar*<br/>
+[in] [in] *pTarget*  
  [in] *bNach*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -437,8 +437,8 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- [in] *UiID*  
+*lpszProfileName*<br/>
+[in] [in] *UiID*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -490,8 +490,8 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- [in] *bShow*  
+*pBar*<br/>
+[in] [in] *bShow*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -506,8 +506,8 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- [in] *nSensitivity*  
+*Zeigen Sie*<br/>
+[in] [in] *nSensitivity*  
  [in] *bCheckVisibility*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -534,8 +534,8 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- [in] *bDestroy*  
+*pBar*<br/>
+[in] [in] *bDestroy*  
  [in] *bNoDelayedDestroy*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -550,8 +550,8 @@ virtual void ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBarOrg*  
- [in] *pBarReplaceWith*  
+*pBarOrg*<br/>
+[in] [in] *pBarReplaceWith*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -565,8 +565,8 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- [in] *UiID*  
+*lpszProfileName*<br/>
+[in] [in] *UiID*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -619,8 +619,8 @@ virtual BOOL SetPreDockState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *PreDockState*  
- [in] *pBarToDock*  
+*preDockState*<br/>
+[in] [in] *pBarToDock*  
  [in] *DockMethod*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -649,8 +649,8 @@ virtual void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDockingBar*  
- [in] *pTabbedBar*  
+*pDockingBar*<br/>
+[in] [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>Hinweise  
   

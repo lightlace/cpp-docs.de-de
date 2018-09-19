@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: Attach-Methode | Microsoft Docs'
+title: 'Handlet:: Attach-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f7e70ec50ca76f1a7a525416b33d5eac46c08a4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 80918d2ab783472b37a9739045fd7539a92bd3e7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872520"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605631"
 ---
 # <a name="handletattach-method"></a>HandleT::Attach-Methode
-Ordnet das angegebene Handle mit dem aktuellen HandleT-Objekt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void Attach(  
-   typename HandleTraits::Type h  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `h`  
- Ein Handle.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Siehe auch  
- [HandleT-Klasse](../windows/handlet-class.md)
+
+Ordnet das angegebene Handle der aktuellen **HandleT** Objekt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+void Attach(
+   typename HandleTraits::Type h
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
+*h*  
+Ein Handle.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+
+[HandleT-Klasse](../windows/handlet-class.md)

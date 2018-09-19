@@ -35,16 +35,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba98f7d9ed14df1e017f8b83e73cf5d318610f9f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a33c6c41b2a9567ef8ed156901b8d04405b6eb46
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33336491"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578260"
 ---
 # <a name="general-property-page-project"></a>Eigenschaftenseite "Allgemein" (Projekt)
 
-Wenn Sie im Projektmappen-Explorer mit der rechten Maustaste auf einen Projektknoten klicken und **Eigenschaften** auswählen, werden auf der Eigenschaftenseite **Allgemein** unterhalb des Knotens **Konfigurationseigenschaften** im linken Bereich zwei Abschnitte mit Eigenschaften angezeigt:
+Wenn Sie im Projektmappen-Explorer mit der rechten Maustaste auf einen Projektknoten klicken und **Eigenschaften** auswählen, werden auf der Eigenschaftenseite **Allgemein** unter dem Knoten **Konfigurationseigenschaften** im linken Bereich zwei Abschnitte mit Eigenschaften angezeigt:
 
 - Allgemein
 

@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07e38d11ef25ebc2f1da888594ab84fe2261c53a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 8d45b08ee356fd217207b625ffe7bf4fb0abffec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028332"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708694"
 ---
 # <a name="multiset-class"></a>multiset-Klasse
 
@@ -116,13 +116,16 @@ class multiset
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* die Datentyp der Elemente in der Multimenge gespeichert werden.
+*Key*<br/>
+Der in der Multimenge zu speichernde Elementdatentyp.
 
-*Vergleichen Sie* der Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel, um deren relative Reihenfolge in der Multimenge zu bestimmen, vergleichen können. Das binäre Prädikat **less**\<Key> ist der Standardwert.
+*Compare*<br/>
+Der Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der Multimenge zu bestimmen. Das binäre Prädikat **less**\<Key> ist der Standardwert.
 
 In C ++ 14 können Sie heterogenes Nachschlagen durch Angabe des `std::less<>` oder `std::greater<>` Prädikats, das keine Typparameter aufweist, aktivieren. Weitere Informationen finden Sie unter [Heterogenes Nachschlagen in assoziativen Containern](../standard-library/stl-containers.md#sequence_containers)
 
-*Allocator* der Typ, der das gespeicherte Zuordnungsobjekt darstellt, die Details zum Belegen und Freigeben des Arbeitsspeichers der Multimenge gekapselt. Der Standardwert ist **Allocator ***\<Key >.*
+*Zuweisung*<br/>
+Der Typ, mit dem das gespeicherte Zuordnungsobjekt dargestellt wird, mit dem Details zum Belegen und Freigeben des Arbeitsspeichers der Multimenge gekapselt werden. Der Standardwert ist `allocator<Key>`.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -478,7 +481,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* der Schlüssel der Elemente, die von der Multimenge abgeglichen werden.
+*key*<br/>
+Der Schlüssel der Elemente, die aus „multiset“ abgeglichen werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -873,7 +877,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus dem durchsuchten Multiset verglichen werden soll.
+*key*<br/>
+Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Multimenge verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -957,13 +962,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Parameter
 
-*Wo* Position des Elements entfernt werden soll.
+*Where*<br/>
+Die Position des zu entfernenden Elements.
 
-*Erste* Position des ersten Elements entfernt werden soll.
+*Erste*<br/>
+Die Position des ersten zu entfernenden Elements.
 
-*Letzte* die Position direkt hinter dem letzten Element entfernt werden soll.
+*letzte*<br/>
+Die Position direkt hinter dem letzten zu entfernenden Element.
 
-*Schlüssel* den Schlüsselwert der zu entfernenden Elemente.
+*Key*<br/>
+Der Schlüsselwert der zu entfernenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -988,7 +997,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* den Schlüsselwert mit dem Sortierschlüssel eines Elements aus dem durchsuchten Multiset verglichen werden.
+*key*<br/>
+Der Schlüsselwert, der durch den Sortierschlüssel eines Elements aus dem durchsuchten Multiset verglichen wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1430,7 +1440,8 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus dem durchsuchten Multiset verglichen werden soll.
+*key*<br/>
+Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Multimenge verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2036,7 +2047,8 @@ void swap(
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* das multimengenargument, der die Elemente bereitstellt, mit der zielmultimenge getauscht werden soll.
+*right*<br/>
+Das Multimengenargument, das die Elemente bereitstellt, die mit der Zielmultimenge getauscht werden sollen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2104,7 +2116,8 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus dem durchsuchten Multiset verglichen werden soll.
+*key*<br/>
+Der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Multimenge verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2307,7 +2320,6 @@ The multiset has elements: 10 20.
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<Legen Sie > Elemente](http://msdn.microsoft.com/0c2d57c0-173f-4204-b579-c5f06aad8b95)<br/>
 [Container](../cpp/containers-modern-cpp.md)<br/>
 [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>

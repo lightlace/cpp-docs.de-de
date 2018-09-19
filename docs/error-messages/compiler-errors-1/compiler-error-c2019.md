@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C2019 | Microsoft Docs
+title: Compilerfehler C2019 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8f9f36bef278edc4c40c732b86c012180535f74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e6f1ae1b22cca0d00e990f64ccaf469359563f8e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164239"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038697"
 ---
-# <a name="compiler-error-c2019"></a>Compilerfehler Fehler C2019
-Präprozessordirektive erwartet, 'Zeichen' gefunden.  
-  
- Die Zeichen folgt ein `#` anmelden, aber es ist nicht der erste Buchstabe einer Präprozessordirektive.  
-  
- Im folgende Beispiel wird C2019 generiert:  
-  
-```  
-// C2019.cpp  
-#!define TRUE 1   // C2019  
-```  
-  
- Mögliche Lösung:  
-  
-```  
-// C2019b.cpp  
-// compile with: /c  
-#define TRUE 1  
+# <a name="compiler-error-c2019"></a>Compilerfehler C2019
+
+Präprozessordirektive erwartet, 'Zeichen' gefunden.
+
+Das Zeichen folgt ein `#` anmelden, aber es ist nicht der erste Buchstabe einer Präprozessordirektive.
+
+Im folgende Beispiel wird die C2019 generiert:
+
+```
+// C2019.cpp
+#!define TRUE 1   // C2019
+```
+
+Mögliche Lösung:
+
+```
+// C2019b.cpp
+// compile with: /c
+#define TRUE 1
 ```

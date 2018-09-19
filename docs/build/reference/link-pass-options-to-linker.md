@@ -1,5 +1,5 @@
 ---
-title: -Link (Optionen an Linker übergeben) | Microsoft Docs
+title: -Link (Optionen an Linker übergeben) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,43 +21,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b22e21022162a0f9f75e41e3e0bfdce348947e1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 663407e4948ebc4e3c0a1676c44e8d2b4bd53fcc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373292"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704118"
 ---
 # <a name="link-pass-options-to-linker"></a>/link (Optionen an Linker übergeben)
-Übergibt eine oder mehrere Optionen des Linkers an den Linker.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-/link linkeroptions  
-```  
-  
-## <a name="arguments"></a>Argumente  
- `linkeroptions`  
- Die Linkeroption oder Optionen an, an den Linker übergeben werden.  
-  
-## <a name="remarks"></a>Hinweise  
- Die **/link** Option und die Optionen des Linkers müssen nach allen Dateinamen und CL-Optionen angezeigt werden. Ein Leerzeichen ist erforderlich, zwischen **/link** und `linkeroptions`. Weitere Informationen finden Sie unter [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md).  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
-  
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
-  
-2.  Klicken Sie auf die **Linker** Ordner.  
-  
-3.  Klicken Sie auf eine Linker-Eigenschaftenseite.  
-  
-4.  Eine oder mehrere Eigenschaften zu ändern.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
-  
--   Diese Compileroption kann programmgesteuert geändert werden.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Compileroptionen](../../build/reference/compiler-options.md)   
- [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+
+Übergibt ein oder mehrere Optionen des Linkers an den Linker an.
+
+## <a name="syntax"></a>Syntax
+
+```
+/link linkeroptions
+```
+
+## <a name="arguments"></a>Argumente
+
+*linkeroptions*<br/>
+Die Linkeroption oder die Optionen an Linker übergeben werden.
+
+## <a name="remarks"></a>Hinweise
+
+Die **/link** Option und die Optionen des Linkers müssen nach jedem Dateinamen und CL-Optionen angezeigt werden. Ein Leerzeichen ist erforderlich, zwischen **/link** und `linkeroptions`. Weitere Informationen finden Sie unter [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
+
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+
+1. Klicken Sie auf die **Linker** Ordner.
+
+1. Klicken Sie auf ein Linker-Eigenschaftenseite.
+
+1. Ändern Sie eine oder mehrere Eigenschaften an.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
+
+- Diese Compileroption kann nicht programmgesteuert geändert werden.
+
+## <a name="see-also"></a>Siehe auch
+
+[Compileroptionen](../../build/reference/compiler-options.md)<br/>
+[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

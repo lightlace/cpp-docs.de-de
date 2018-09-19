@@ -1,5 +1,5 @@
 ---
-title: 'NMAKE: Schwerwiegender Fehler U1033 | Microsoft Docs'
+title: 'NMAKE: Schwerwiegender Fehler U1033 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1d39d4c35ec66d405d51d601b7c5d2b2ab37b02
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7492e5fd77f8e88b2191174f84c298c6166d8d89
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319269"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066378"
 ---
 # <a name="nmake-fatal-error-u1033"></a>NMAKE: Schwerwiegender Fehler U1033
-Syntaxfehler: 'Zeichenfolge' unerwartet  
-  
- Die Zeichenfolge ist nicht Teil der gültige Syntax für ein Makefile.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:  
-  
-1.  Falls die schließende spitze Klammern (**<<**) für eine Inlinedatei sind nicht am Anfang einer Zeile, tritt der folgende Fehler auf:  
-  
-    ```  
-    syntax error : 'EOF' unexpected  
-    ```  
-  
-2.  Wenn eine Makrodefinition im Makefile ein Gleichheitszeichen enthält (**=**) ohne eine vorangestellte Namen, oder wenn der Name definiert wird, ist ein Makro, das nicht erweitert, tritt der folgende Fehler auf:  
-  
-    ```  
-    syntax error : '=' unexpected  
-    ```  
-  
-3.  Wenn das Semikolon (**;**) in einer Kommentarzeile an in-TOOLS. INI ist nicht am Anfang der Zeile, tritt der folgende Fehler auf:  
-  
-    ```  
-    syntax error : ';' unexpected  
-    ```  
-  
-4.  Wenn Sie die Makefile von einem Textverarbeitungsprogramm formatiert wurde, kann der folgende Fehler auftreten:  
-  
-    ```  
-    syntax error : ':' unexpected  
+
+Syntaxfehler: "String" Unerwarteter
+
+Die Zeichenfolge ist nicht Teil der gültige Syntax für ein Makefile.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:
+
+1. Falls die schließende spitze Klammern (**<<**) für eine Inline-Datei an, die nicht am Anfang einer Zeile sind, tritt der folgende Fehler auf:
+
+    ```
+    syntax error : 'EOF' unexpected
+    ```
+
+1. Wenn eine Makrodefinition in das Makefile ein Gleichheitszeichen enthält (**=**) ohne einen vorangestellten Namen, oder wenn der Name definiert wird, wird ein Makro, das nicht erweitert, tritt der folgende Fehler auf:
+
+    ```
+    syntax error : '=' unexpected
+    ```
+
+1. Wenn das Semikolon (**;**) in einer Kommentarzeile in TOOLS. INI ist nicht am Anfang der Zeile, tritt der folgende Fehler auf:
+
+    ```
+    syntax error : ';' unexpected
+    ```
+
+1. Wenn das Makefile durch ein Textverarbeitungsprogramm formatiert wurde, kann der folgende Fehler auftreten:
+
+    ```
+    syntax error : ':' unexpected
     ```

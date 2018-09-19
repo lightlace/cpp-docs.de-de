@@ -1,5 +1,5 @@
 ---
-title: Linkertoolfehler Lnk1158 | Microsoft Docs
+title: Linkertoolfehler Lnk1158 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cee2a31d1a7b05104031fbf41e8e3addb82d7d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ce319aa4529c74cad00342b09aa0ed98bb49ce7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300185"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094168"
 ---
 # <a name="linker-tools-error-lnk1158"></a>Linkertoolfehler LNK1158
-'Dateiname' kann nicht ausgeführt werden.  
-  
- Die angegebene ausführbare Datei, die aufgerufen werden, indem [LINK](../../build/reference/linker-command-line-syntax.md) weder in das Verzeichnis mit LINK noch in einem Verzeichnis, in der PATH-Umgebungsvariablen angegeben ist.  
-  
- Angenommen, Sie erhalten diesen Fehler, wenn Sie versuchen, den PGOPTIMIZE-Parameter verwenden die [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) (Linkeroption) auf einem Computer mit einem 32-Bit-Betriebssystem.
+
+'Dateiname' kann nicht ausgeführt werden.
+
+Die angegebene ausführbare Datei, die aufgerufen werden, indem [LINK](../../build/reference/linker-command-line-syntax.md) ist nicht in das Verzeichnis mit LINK noch in einem in der PATH-Umgebungsvariablen angegebenen Verzeichnis.
+
+Beispielsweise erhalten Sie diesen Fehler, wenn Sie versuchen, den PGOPTIMIZE-Parameter, um die ["/ LTCG"](../../build/reference/ltcg-link-time-code-generation.md) Linkeroption auf einem Computer mit einem 32-Bit-Betriebssystem.

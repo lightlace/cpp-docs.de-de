@@ -1,5 +1,5 @@
 ---
-title: Helpstringdll | Microsoft Docs
+title: Helpstringdll | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,62 +17,65 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7cb3ab5fc624494d3292cd7a47031782ce7da70
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bc10f86a8fa646a1072de8b7c5e30121d98750cf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877344"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219951"
 ---
 # <a name="helpstringdll"></a>helpstringdll
-Gibt den Namen der DLL zu verwenden, um das Dokument Zeichenfolgensuche (Lokalisierung) ausführen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-      [ helpstringdll(  
-   "string"  
-) ]  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `string`  
- Die DLL-Datei verwenden, um Dokument Zeichenfolgensuche durchzuführen.  
-  
-## <a name="remarks"></a>Hinweise  
- Die **Helpstringdll** C++-Attribut hat die gleiche Funktionalität wie die [Helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) MIDL-Attribut.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// cpp_attr_ref_helpstringdll.cpp  
-// compile with: /LD  
-#include <unknwn.h>  
-[module(name="MyLib", helpstringdll="xx.dll")];  
-  
-[object, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface IMyI   
-{  
-   HRESULT xxx();  
-};  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-### <a name="attribute-context"></a>Attributkontext  
-  
-|||  
-|-|-|  
-|**Betrifft**|**Klasse**, `interface`,-Schnittstellenmethode|  
-|**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Keiner|  
-|**Ungültige Attribute**|Keiner|  
-  
- Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [IDL-Attribute](../windows/idl-attributes.md)   
- [Schnittstellenattribut](../windows/interface-attributes.md)   
- [Klassenattribute](../windows/class-attributes.md)   
- [Methodenattribut](../windows/method-attributes.md)   
+
+Gibt den Namen der DLL zu verwenden, um die Suche nach Dokument (Lokalisierung) ausführen.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+[ helpstringdll(
+   "string"
+) ]
+```
+
+### <a name="parameters"></a>Parameter
+
+*string*  
+Die DLL zu verwenden, um die Suche nach Dokument auszuführen.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Helpstringdll** C++-Attribut hat die gleiche Funktionalität wie die [Helpstringdll](/windows/desktop/Midl/helpstringdll) MIDL-Attribut.
+
+## <a name="example"></a>Beispiel
+
+```cpp
+// cpp_attr_ref_helpstringdll.cpp
+// compile with: /LD
+#include <unknwn.h>
+[module(name="MyLib", helpstringdll="xx.dll")];
+
+[object, uuid("00000000-0000-0000-0000-000000000001")]
+__interface IMyI
+{
+   HRESULT xxx();
+};
+```
+
+## <a name="requirements"></a>Anforderungen
+
+### <a name="attribute-context"></a>Attributkontext
+
+|||
+|-|-|
+|**Betrifft**|**Klasse**, **Schnittstelle**,-Schnittstellenmethode|
+|**Wiederholbar**|Nein|
+|**Erforderliche Attribute**|Keiner|
+|**Ungültige Attribute**|Keiner|
+
+Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[IDL-Attribute](../windows/idl-attributes.md)  
+[Schnittstellenattribut](../windows/interface-attributes.md)  
+[Klassenattribute](../windows/class-attributes.md)  
+[Methodenattribut](../windows/method-attributes.md)  

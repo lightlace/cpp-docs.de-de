@@ -1,5 +1,5 @@
 ---
-title: Concurrency-Namespace | Microsoft Docs
+title: Concurrency-Namespace | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5659c48b73eb8dfde4ffc7683de3c2cf721564d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4d5e7499bb1734b2093a60039e28b6f9f85920df
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695186"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681184"
 ---
 # <a name="concurrency-namespace"></a>concurrency-Namespace
 Der `Concurrency`-Namespace stellt Klassen und Funktionen bereit, die Ihnen den Zugriff auf die Concurrency Runtime ermöglichen, ein Framework zur parallelen Programmierung für C++. Weitere Informationen finden Sie unter [Concurrency Runtime](../../../parallel/concrt/concurrency-runtime.md).  
@@ -47,12 +47,6 @@ namespace concurrency;
 ```  
   
 ## <a name="members"></a>Member  
-  
-### <a name="namespaces"></a>Namespaces  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[Concurrency::Extensibility Namespace](http://msdn.microsoft.com/en-us/16a86ff2-128e-4edf-89e4-38aac79c81f9)||  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -81,8 +75,8 @@ namespace concurrency;
 |[concurrent_queue-Klasse](concurrent-queue-class.md)|Die `concurrent_queue`-Klasse ist eine Sequenzcontainerklasse, die "First In, First Out"-Zugriff auf ihre Elemente zulässt. Sie aktiviert einen beschränkten Satz von parallelitätssicheren Vorgängen, z. B. `push` und `try_pop`.|  
 |[concurrent_unordered_map-Klasse](concurrent-unordered-map-class.md)|Die `concurrent_unordered_map`- Klasse ist ein parallelitätssicherer Container, mit dem eine Folge von Elementen variierender Länge des Typs `std::pair<const K, _Element_type>` gesteuert wird. Die Sequenz wird so dargestellt, dass parallelitätssichere Vorgänge für Anfügen, Elementzugriff, Iteratorzugriff und Iteratordurchläufe ermöglicht werden.|  
 |[concurrent_unordered_multimap-Klasse](concurrent-unordered-multimap-class.md)|Die `concurrent_unordered_multimap`- Klasse ist ein parallelitätssicherer Container, mit dem eine Folge von Elementen variierender Länge des Typs `std::pair<const K, _Element_type>` steuert. Die Sequenz wird so dargestellt, dass parallelitätssichere Vorgänge für Anfügen, Elementzugriff, Iteratorzugriff und Iteratordurchläufe ermöglicht werden.|  
-|[concurrent_unordered_multiset-Klasse](concurrent-unordered-multiset-class.md)|Die `concurrent_unordered_multiset` Klasse ist ein parallelitätssicherer Container, der steuert, eine Elementsequenz variabler Länge Sequenz von Elementen des Typs K. Die Sequenz wird so dargestellt, mit denen ermöglicht für anfügen, Elementzugriff, Iteratorzugriff und Iteratordurchläufe sind.|  
-|[concurrent_unordered_set-Klasse](concurrent-unordered-set-class.md)|Die `concurrent_unordered_set` Klasse ist ein parallelitätssicherer Container, der steuert, eine Elementsequenz variabler Länge Sequenz von Elementen des Typs K. Die Sequenz wird so dargestellt, mit denen ermöglicht für anfügen, Elementzugriff, Iteratorzugriff und Iteratordurchläufe sind.|  
+|[concurrent_unordered_multiset-Klasse](concurrent-unordered-multiset-class.md)|Die `concurrent_unordered_multiset` Klasse ist ein parallelitätssicherer Container, das eine Elementsequenz variabler Länge-Sequenz von Elementen des Typs k steuert Die Sequenz wird dargestellt, auf eine Weise, die es parallelitätssichere ermöglicht anfügen, Elementzugriff, Iteratorzugriff und Iteratordurchläufe sind.|  
+|[concurrent_unordered_set-Klasse](concurrent-unordered-set-class.md)|Die `concurrent_unordered_set` Klasse ist ein parallelitätssicherer Container, das eine Elementsequenz variabler Länge-Sequenz von Elementen des Typs k steuert Die Sequenz wird dargestellt, auf eine Weise, die es parallelitätssichere ermöglicht anfügen, Elementzugriff, Iteratorzugriff und Iteratordurchläufe sind.|  
 |[concurrent_vector-Klasse](concurrent-vector-class.md)|Die `concurrent_vector`-Klasse ist eine Sequenzcontainerklasse, die zufälligen Zugriff auf jedes Element zulässt. Sie aktiviert parallelitätssichere Operationen für Anfügen, Elementzugriff, Iteratorzugriff und Iteratordurchlauf.|  
 |[context-Klasse](context-class.md)|Stellt eine Abstraktion für einen Ausführungskontext dar.|  
 |[context_self_unblock-Klasse](context-self-unblock-class.md)|Diese Klasse beschreibt eine Ausnahme, die ausgelöst wird, wenn die `Unblock`-Methode für ein `Context`-Objekt aufgerufen wird, das im gleichen Kontext aufgerufen wird. Das würde den Versuch eines angegebenen Kontexts zum Aufheben der eigenen Blockierung angeben.|  
@@ -135,9 +129,9 @@ namespace concurrency;
 |[structured_task_group-Klasse](structured-task-group-class.md)|Die `structured_task_group`-Klasse stellt eine stark strukturierte Auflistung paralleler Arbeit dar. Sie können einzelne parallele Aufgaben mithilfe von `structured_task_group`-Objekten in eine `task_handle` stellen und warten, bis sie abgeschlossen werden, oder Sie können die Aufgabengruppe abbrechen, bevor deren Ausführung beendet wird, wodurch auch alle Aufgaben abgebrochen werden, deren Ausführung nicht gestartet wurde.|  
 |[target_block-Klasse](target-block-class.md)|Die `target_block`-Klasse ist eine abstrakte Basisklasse, mit der grundlegende Linkmanagementfunktionalität und Fehlerüberprüfung für Nur-Ziel-Blöcke bereitgestellt werden.|  
 |[task-Klasse (Concurrency Runtime)](task-class.md)|Die Parallel Patterns Library (PPL) `task`-Klasse. Ein `task`-Objekt stellt Arbeit dar, die asynchron und übereinstimmend mit anderen Tasks und paralleler Arbeit , die von parallelen Algorithmen in der Concurrency Runtime erzeugt wird, ausgeführt werden kann. Es enthält bei erfolgreichem Abschluss ein Ergebnis vom Typ `_ResultType`. Tasks des Typs `task<void>` führen zu keinem Ergebnis. Ein Task kann erwartet und unabhängig von anderen Tasks abgebrochen werden. Er kann mit anderen Tasks mithilfe von Continuations (`then`) sowie Join-Muster (`when_all`) und Choise-Muster (`when_any`) erstellt werden.|  
-|[task_canceled-Klasse](task-canceled-class.md)|Diese Klasse beschreibt eine Ausnahme, die von den PPL-Aufgaben ausgelöst wird, um das Abbrechen der aktuellen Aufgabe zu erzwingen. Es wird auch ausgelöst, durch die `get()` Methode auf [Aufgabe](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f), für eine abgebrochene Aufgabe.|  
+|[task_canceled-Klasse](task-canceled-class.md)|Diese Klasse beschreibt eine Ausnahme, die von den PPL-Aufgaben ausgelöst wird, um das Abbrechen der aktuellen Aufgabe zu erzwingen. Es wird auch ausgelöst, durch die `get()` Methode [Aufgabe](task-class.md), für eine abgebrochene Aufgabe.|  
 |[task_completion_event-Klasse](task-completion-event-class.md)|Mit der `task_completion_event`-Klasse können Sie die Ausführung einer Aufgabe verzögern, bis eine Bedingung erfüllt ist, oder eine Aufgabe als Reaktion auf ein externes Ereignis starten.|  
-|[task_continuation_context-Klasse](task-continuation-context-class.md)|Mit der `task_continuation_context`-Klasse können Sie angeben, an welcher Stelle eine Fortsetzung ausgeführt werden soll. Es ist nur hilfreich, diese Klasse aus einer uwp-app zu verwenden. Für nicht - Windows-Runtime-apps ist Ausführungskontext der aufgabenfortsetzung von der Laufzeit bestimmt und kann nicht konfiguriert.|  
+|[task_continuation_context-Klasse](task-continuation-context-class.md)|Mit der `task_continuation_context`-Klasse können Sie angeben, an welcher Stelle eine Fortsetzung ausgeführt werden soll. Es ist nur hilfreich, diese Klasse von einer UWP-app zu verwenden. Für nicht - Windows-Runtime-apps ist die Ausführungskontext der aufgabenfortsetzung von der Laufzeit bestimmt und kann nicht konfiguriert.|  
 |[Task_group-Klasse](task-group-class.md)|Die `task_group`-Klasse stellt eine Auflistung der parallelen Arbeit dar, auf die gewartet oder die abgebrochen werden kann.|  
 |[task_handle-Klasse](task-handle-class.md)|Die `task_handle`-Klasse stellt eine einzelne parallele Arbeitsaufgabe dar. Sie kapselt die Anweisungen und die zum Ausführen eines Teils der Arbeit erforderlichen Daten.|  
 |[task_options-Klasse (Concurrency Runtime)](task-options-class-concurrency-runtime.md)|Stellt die zulässigen Optionen zum Erstellen einer Aufgabe dar|  
@@ -165,7 +159,7 @@ namespace concurrency;
 |[IUMSUnblockNotification-Struktur](iumsunblocknotification-structure.md)|Stellt eine Benachrichtigung vom Ressourcen-Manager darüber dar, dass ein Threadproxy, der blockiert und eine Rückkehr zum festgelegten Planungskontext des Planers ausgelöst hatte, die Blockierung aufgehoben hat und zum Planen bereit ist. Diese Schnittstelle ist ungültig, sobald der zugeordnete Ausführungskontext des Threadproxys, der von der `GetContext`-Methode zurückgegeben wurde, neu geplant wird.|  
 |[IVirtualProcessorRoot-Struktur](ivirtualprocessorroot-structure.md)|Eine Abstraktion für einen Hardwarethread, auf dem ein Threadproxy ausgeführt werden kann.|  
 |[scheduler_interface-Struktur](scheduler-interface-structure.md)|Planerschnittstelle|  
-|[scheduler_ptr-Struktur (Concurrency Runtime)](scheduler-ptr-structure-concurrency-runtime.md)|Stellt einen Zeiger auf einen Planer dar. Diese Klasse ist vorhanden, um die Spezifikation einer freigegebenen Lebensdauer mithilfe von "shared_ptr" oder nur eines einfachen Verweises und eines unformatierten Zeigers zu ermöglichen.|  
+|[scheduler_ptr-Struktur (Concurrency Runtime)](scheduler-ptr-structure-concurrency-runtime.md)|Stellt einen Zeiger auf einen Planer dar. Diese Klasse existiert, um die Spezifikation einer freigegebenen Lebensdauer mithilfe von "shared_ptr" oder nur eines einfachen Verweises mit unformatierten Zeigers zu ermöglichen.|  
   
 ### <a name="enumerations"></a>Enumerationen  
   
@@ -194,7 +188,7 @@ namespace concurrency;
 |[Asend-Funktion](concurrency-namespace-functions.md#asend)|Überladen. Ein asynchroner Sendevorgang, der eine Aufgabe zum Weitergeben der Daten an den Zielblock plant.|  
 |[Cancel_current_task-Funktion](concurrency-namespace-functions.md#cancel_current_task)|Bricht die gerade ausgeführte Aufgabe ab. Diese Funktion kann aus dem Text einer Aufgabe aufgerufen werden, um die Ausführung der Aufgabe abzubrechen und ihn dabei in den `canceled` Zustand übergehen zu lassen.<br /><br /> Der Aufruf dieser Funktion, wenn Sie sich nicht innerhalb des Texts von einem `task` befinden, ist kein unterstütztes Szenario. Dies würde zu nicht definiertem Verhalten, wie einem Absturz oder einem Hänger in der Anwendung, führen.|  
 |[Create_async-Funktion](concurrency-namespace-functions.md#create_async)|Erstellt ein asynchrones Konstrukt der Windows Runtime auf einem vom Benutzer angegebenes Lambda oder Funktionsobjekt. Der Rückgabetyp von `create_async` ist entweder `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` oder `IAsyncOperationWithProgress<TResult, TProgress>^` auf Grundlage der Signatur des Lambda-Ausdrucks, der an die Methode übergeben wurde.|  
-|[Create_task-Funktion](concurrency-namespace-functions.md#create_task)|Überladen. Erstellt ein PPL- [Aufgabe](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f) Objekt. Das Element `create_task` kann überall dort verwendet werden, wo Sie einen Aufgabenkonstruktor verwendet hätten. Es wird hauptsächlich der Einfachheit halber bereitgestellt, da es beim Erstellen eines Tasks die Verwendung des `auto`-Schlüsselwort ermöglicht.|  
+|[Create_task-Funktion](concurrency-namespace-functions.md#create_task)|Überladen. Erstellt ein PPL- [Aufgabe](task-class.md) Objekt. Das Element `create_task` kann überall dort verwendet werden, wo Sie einen Aufgabenkonstruktor verwendet hätten. Es wird hauptsächlich der Einfachheit halber bereitgestellt, da es beim Erstellen eines Tasks die Verwendung des `auto`-Schlüsselwort ermöglicht.|  
 |[CreateResourceManager-Funktion](concurrency-namespace-functions.md#createresourcemanager)|Gibt eine Schnittstelle zurück, die die Singletoninstanz des Ressourcen-Managers der Concurrency Runtime darstellt. Der Ressourcen-Manager ist für das Zuweisen von Ressourcen für Planer, die miteinander kooperieren möchten, zuständig.|  
 |[DisableTracing-Funktion](concurrency-namespace-functions.md#disabletracing)|Deaktiviert die Ablaufverfolgung in der Concurrency Runtime. Diese Funktion ist veraltet, da die Registrierung der ETW-Ablaufverfolgung standardmäßig aufgehoben wird.|  
 |[EnableTracing-Funktion](concurrency-namespace-functions.md#enabletracing)|Aktiviert die Ablaufverfolgung in der Concurrency Runtime. Diese Funktion ist veraltet, da die Registrierung der ETW-Ablaufverfolgung jetzt standardmäßig erfolgt.|  
@@ -230,8 +224,8 @@ namespace concurrency;
 |[Trace_agents_register_name-Funktion](concurrency-namespace-functions.md#trace_agents_register_name)|Ordnet den angegebenen Namen dem Nachrichtenblock oder dem Agent in der ETW-Ablaufverfolgung zu.|  
 |[Try_receive-Funktion](concurrency-namespace-functions.md#try_receive)|Überladen. Eine allgemeine try-receive-Implementierung, mit der ein Kontext Daten von genau einer Quelle suchen und die akzeptierten Werte filtern kann. Wenn die Daten nicht bereit sind, gibt die Methode "false" zurück.|  
 |[Wait-Funktion](concurrency-namespace-functions.md#wait)|Hält den aktuellen Kontext für eine bestimmte Zeit an.|  
-|[Funktion "when_all"](concurrency-namespace-functions.md#when_all)|Erstellt eine Aufgabe, die erfolgreich abgeschlossen wird, wenn alle als Argumente angegeben Aufgaben erfolgreich abgeschlossen werden.|  
-|[Funktion "when_any"](concurrency-namespace-functions.md#when_any)|Überladen. Erstellt eine Aufgabe, die erfolgreich abgeschlossen wird, wenn eine der als Argumente angegeben Aufgaben erfolgreich abgeschlossen wird.|  
+|[When_all-Funktion](concurrency-namespace-functions.md#when_all)|Erstellt eine Aufgabe, die erfolgreich abgeschlossen wird, wenn alle als Argumente angegeben Aufgaben erfolgreich abgeschlossen werden.|  
+|[When_any-Funktion](concurrency-namespace-functions.md#when_any)|Überladen. Erstellt eine Aufgabe, die erfolgreich abgeschlossen wird, wenn eine der als Argumente angegeben Aufgaben erfolgreich abgeschlossen wird.|  
   
 ### <a name="operators"></a>Operatoren  
   

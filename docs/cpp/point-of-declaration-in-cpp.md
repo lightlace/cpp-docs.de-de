@@ -1,5 +1,5 @@
 ---
-title: Zeitpunkt der Deklaration in C++ | Microsoft Docs
+title: Zeitpunkt der Deklaration in C++ | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,28 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e42f43e6187e19df6e9c1111c0e92aa4b9929199
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 68ac24fcfe35701dd75d74800661aa5e41c005f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072058"
 ---
 # <a name="point-of-declaration-in-c"></a>Zeitpunkt der Deklaration in C++
-Es wird angenommen, dass ein Name unmittelbar nach seinem Deklarator, jedoch vor seinem (optionalen) Initialisierer deklariert wird. (Weitere Informationen über Deklaratoren finden Sie unter [Deklarationen und Definitionen](declarations-and-definitions-cpp.md).)  
-  
- Betrachten Sie das folgende Beispiel:  
-  
-```  
-// point_of_declaration1.cpp  
-// compile with: /W1   
-double dVar = 7.0;  
-int main()  
-{  
-   double dVar = dVar;   // C4700  
-}  
-```  
-  
- Wäre der Zeitpunkt der Deklaration *nach* die Initialisierung, und klicken Sie dann auf der lokalen `dVar` würde werden auf 7,0 initialisiert, den Wert der globalen Variablen `dVar`. Da dies jedoch nicht der Fall ist, wird `dVar` mit einem nicht definierten Wert initialisiert.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Bereich](../cpp/scope-visual-cpp.md)
+
+Es wird angenommen, dass ein Name unmittelbar nach seinem Deklarator, jedoch vor seinem (optionalen) Initialisierer deklariert wird. (Weitere Informationen über Deklaratoren finden Sie unter [Deklarationen und Definitionen](declarations-and-definitions-cpp.md).)
+
+Betrachten Sie das folgende Beispiel:
+
+```cpp
+// point_of_declaration1.cpp
+// compile with: /W1
+double dVar = 7.0;
+int main()
+{
+   double dVar = dVar;   // C4700
+}
+```
+
+Wenn der Punkt der Deklaration *nach* die Initialisierung, und klicken Sie dann auf der lokalen `dVar` würde zu 7.0, den Wert der globalen Variablen initialisiert werden `dVar`. Da dies jedoch nicht der Fall ist, wird `dVar` mit einem nicht definierten Wert initialisiert.
+
+## <a name="see-also"></a>Siehe auch
+
+[Bereich](../cpp/scope-visual-cpp.md)

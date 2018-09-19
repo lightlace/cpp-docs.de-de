@@ -1,5 +1,5 @@
 ---
-title: DUMPBIN-Referenz | Microsoft Docs
+title: DUMPBIN-Referenz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,24 +20,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46d116ad1efde9ae144e17eb9a4ac2ad996add13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b9299be5e5b998d9fd8e779e4804a1ac681ad6f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372655"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719042"
 ---
 # <a name="dumpbin-reference"></a>DUMPBIN-Referenz
-Die Microsoft COFF-Binärdateidumper (DUMPBIN. EXE-Datei) zeigt Informationen zu den Binärdateien Common Object File Format (COFF). Verwenden von DUMPBIN COFF-Objektdateien, Standardbibliotheken von COFF-Objekten, ausführbaren Dateien und Dynamic Link Libraries (DLLs) untersuchen.  
-  
+
+Die Microsoft COFF-Binärdateidumper (DUMPBIN. EXE-Datei) zeigt Informationen über Common Object File Format (COFF)-Binärdateien. Sie können DUMPBIN verwenden, um COFF-Objektdateien, standard-Bibliotheken von COFF-Objekten, ausführbaren Dateien und Dynamic Link Libraries (DLLs) zu überprüfen.
+
 > [!NOTE]
->  Sie können dieses Tool nur von der [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]-Eingabeaufforderung aus starten. Sie können es nicht von einer Systemeingabeaufforderung oder vom Datei-Explorer aus starten.  
-  
- Nur die [/Headers](../../build/reference/headers.md) DUMPBIN-Option ist verfügbar für die Verwendung in den Dateien erstellt wird, mit der [/GL](../../build/reference/gl-whole-program-optimization.md) -Compileroption.  
-  
--   [DUMPBIN-Befehlszeile](../../build/reference/dumpbin-command-line.md)  
-  
--   [DUMPBIN-Optionen](../../build/reference/dumpbin-options.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md)
+>  Sie können dieses Tool nur über die Visual Studio-Eingabeaufforderung starten. Sie können es nicht von einer Systemeingabeaufforderung oder vom Datei-Explorer aus starten.
+
+Nur die [/Headers](../../build/reference/headers.md) DUMPBIN-Option ist verfügbar für die Verwendung in Dateien mit der ["/ GL"](../../build/reference/gl-whole-program-optimization.md) -Compileroption.
+
+- [DUMPBIN-Befehlszeile](../../build/reference/dumpbin-command-line.md)
+
+- [DUMPBIN-Optionen](../../build/reference/dumpbin-options.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md)

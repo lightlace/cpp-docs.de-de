@@ -1,5 +1,5 @@
 ---
-title: _mm_cvttss_si64x | Microsoft Docs
+title: _mm_cvttss_si64x | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fd8aebb3f9a4f0078c8174aa25b9abb9378f1b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d1d3e77dfc89fb67c467582c0ed7981ffae8022
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333628"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706341"
 ---
 # <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
 **Microsoft-spezifisch**  
   
- Gibt die X64 erweiterte Version des konvertieren mit Abschneiden mit einfacher Genauigkeit Floating-Nummer in 64-Bit-Ganzzahl (`cvttss2si`) Anweisung.  
+ Gibt die X64 erweiterte Version von Convert mit Abschneiden Floating-Point-Wert in 64-Bit-Ganzzahl mit einfacher Genauigkeit (`cvttss2si`) Anweisung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,22 +38,22 @@ __int64 _mm_cvttss_si64x(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `value`  
- Eine `__m128` Struktur, die Werte für Gleitkommazahlen mit einfacher Genauigkeit enthält.  
+*Wert*<br/>
+[in] Ein `__m128` Struktur, die Gleitkommawerte mit einfacher Genauigkeit enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Das Ergebnis der Konvertierung des ersten Gleitkommawerts in eine 64-Bit-Ganzzahl.  
+ Das Ergebnis der Konvertierung von der ersten Gleitkommawert in eine 64-Bit-Ganzzahl.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`_mm_cvttss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_cvttss_si64x`|x64|  
   
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Die systeminterne Funktion unterscheidet sich von `_mm_cvtss_si64x` nur darin, dass ungenaue Konvertierungen in Richtung 0 abgeschnitten werden. Da die `__m128` -Struktur stellt ein XMM-Register dar, die Anweisung generiert verschiebt Daten aus einer XMM-Register in den Systemarbeitsspeicher.  
+ Die systeminterne Funktion unterscheidet sich von `_mm_cvtss_si64x` nur darin, dass ungenaue Konvertierungen in Richtung Null abgeschnitten werden. Da die `__m128` -Struktur stellt ein XMM-Register dar, die generierte Anweisung verschiebt Daten aus einem XMM-Register im Systemspeicher.  
   
  Diese Routine ist nur als systeminterne Funktion verfügbar.  
   

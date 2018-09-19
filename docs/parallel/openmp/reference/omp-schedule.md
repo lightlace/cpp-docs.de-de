@@ -1,5 +1,5 @@
 ---
-title: OMP_SCHEDULE | Microsoft Docs
+title: OMP_SCHEDULE | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5052aaadc673e38a844ea5b0d1e11ff3a96f3fbe
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fd5bf96706b94ffbba8cb1b9aeeee8701b266e5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691754"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115039"
 ---
 # <a name="ompschedule"></a>OMP_SCHEDULE
-Verändert das Sitzungsverhalten, sodass die [Zeitplan](../../../parallel/openmp/reference/schedule.md) Klausel bei `schedule(runtime)` angegeben ist, eine `for` oder `parallel for` Richtlinie.  
+Ändert das Verhalten von der [Zeitplan](../../../parallel/openmp/reference/schedule.md) Klausel bei `schedule(runtime)` angegeben ist, eine `for` oder `parallel for` Richtlinie.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,14 +32,13 @@ Verändert das Sitzungsverhalten, sodass die [Zeitplan](../../../parallel/openmp
 set OMP_SCHEDULE[=type[,size]]  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- wobei  
+## <a name="arguments"></a>Argumente
+
+*size*<br/>
+(Optional) Gibt die Größe der Iterationen. `size` Eine positive ganze Zahl muss sein. Der Standardwert ist 1, außer wenn `type` ist statisch. Nicht gültig, wenn `type` ist `runtime`.  
   
- `size` (optional)  
- Gibt die Größe der Iterationen. `size` Eine positive ganze Zahl muss sein. Der Standard ist 1, außer wenn `type` ist statisch. Nicht gültig, wenn `type` ist `runtime`.  
-  
- `type`  
- Die Art der Planung:  
+*Typ*<br/>
+Die Art der Planung:  
   
 -   `dynamic`  
   
@@ -50,7 +49,7 @@ set OMP_SCHEDULE[=type[,size]]
 -   `static`  
   
 ## <a name="remarks"></a>Hinweise  
- Der Standardwert in der Visual C++-Implementierung der OpenMP-Standard ist `OMP_SCHEDULE=static,0`.  
+ Der Standardwert in der Visual C++-Implementierung des OpenMP-Standards ist `OMP_SCHEDULE=static,0`.  
   
  Weitere Informationen finden Sie unter [4.1 OMP_SCHEDULE](../../../parallel/openmp/4-1-omp-schedule.md).  
   

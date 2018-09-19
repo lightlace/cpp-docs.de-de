@@ -1,5 +1,5 @@
 ---
-title: Last_is | Microsoft Docs
+title: Last_is | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,53 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f27c0a12ddf5fe87f7065a16d042bd0afcfc0315
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e7b699f5b6aa023473416b822a94d9b3a91c2b07
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877520"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221118"
 ---
 # <a name="lastis"></a>last_is
-Gibt den Index des letzten Arrayelements übermittelt werden sollen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-      [ last_is(  
-   "expression"  
-) ]  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *Ausdruck*  
- Eine oder mehrere Programmiersprache C-Ausdrücke. Leere Argument Slots sind zulässig.  
-  
-## <a name="remarks"></a>Hinweise  
- Die **Last_is** C++-Attribut hat die gleiche Funktionalität wie die [Last_is](http://msdn.microsoft.com/library/windows/desktop/aa367066) MIDL-Attribut.  
-  
-## <a name="example"></a>Beispiel  
- Finden Sie unter [First_is](../windows/first-is.md) für ein Beispiel für einen Abschnitt eines Arrays angeben.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-### <a name="attribute-context"></a>Attributkontext  
-  
-|||  
-|-|-|  
-|**Betrifft**|Im Feld `struct` oder **Union**, Parameter interface, Schnittstelle Methode|  
-|**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Keiner|  
-|**Ungültige Attribute**|Keiner|  
-  
- Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [IDL-Attribute](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union- und Struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameterattribute](../windows/parameter-attributes.md)   
- [first_is](../windows/first-is.md)   
- [max_is](../windows/max-is.md)   
- [length_is](../windows/length-is.md)   
- [size_is](../windows/size-is.md)   
+
+Gibt den Index des letzten Elements Array übertragen werden.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+[ last_is(
+   "expression"
+) ]
+```
+
+### <a name="parameters"></a>Parameter
+
+*Ausdruck*  
+Eine oder mehrere Programmiersprache C-Ausdrücke. Leere Argumentliste Slots sind zulässig.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Last_is** C++-Attribut hat die gleiche Funktionalität wie die [Last_is](/windows/desktop/Midl/last-is) MIDL-Attribut.
+
+## <a name="example"></a>Beispiel
+
+Finden Sie unter [First_is](../windows/first-is.md) ein Beispiel für einen Abschnitt eines Arrays angeben.
+
+## <a name="requirements"></a>Anforderungen
+
+### <a name="attribute-context"></a>Attributkontext
+
+|||
+|-|-|
+|**Betrifft**|Im Feld **Struktur** oder **Union**, Schnittstellenparameter,-Schnittstellenmethode|
+|**Wiederholbar**|Nein|
+|**Erforderliche Attribute**|Keiner|
+|**Ungültige Attribute**|Keiner|
+
+Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[IDL-Attribute](../windows/idl-attributes.md)  
+[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Parameterattribute](../windows/parameter-attributes.md)  
+[first_is](../windows/first-is.md)  
+[max_is](../windows/max-is.md)  
+[length_is](../windows/length-is.md)  
+[size_is](../windows/size-is.md)  

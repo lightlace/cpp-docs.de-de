@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcencompiler: Fehler RC2151 | Microsoft Docs'
+title: 'Ressourcencompiler: Fehler RC2151 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8349aa14de6aec96fa1b526cbcffbe79036f804d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a15f3f1237df9e4b706a2c2048dddd6d5db395d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323471"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109781"
 ---
 # <a name="resource-compiler-error-rc2151"></a>Ressourcencompiler: Fehler RC2151
-Zeichenfolgenkonstanten kann nicht erneut verwendet werden.  
-  
- Sie verwenden den gleichen Wert zweimal in eine **STRINGTABLE** Anweisung. Stellen Sie sicher, dass Sie keine überlappenden dezimaler und hexadezimaler Werte.  
-  
- Jede ID in einer **STRINGTABLE** muss eindeutig sein. Maximaler Effizienz verwenden zusammenhängenden Konstanten, die auf ein Vielfaches von 16 beginnen.
+
+Zeichenfolgenkonstanten können nicht erneut verwendet werden.
+
+Sie verwenden den gleichen Wert, der zweimal in einem **STRINGTABLE** Anweisung. Stellen Sie sicher, dass Sie keine überlappenden dezimale und hexadezimale Werten.
+
+Jede ID in einem **STRINGTABLE** muss eindeutig sein. Für maximale Effizienz bei Verwendung zusammenhängenden Konstanten, die auf ein Vielfaches von 16 zu starten.

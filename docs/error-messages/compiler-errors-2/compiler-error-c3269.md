@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3269 | Microsoft Docs
+title: Compilerfehler C3269 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98e4e2a2df4271a3a0213b8abedc385f22c871aa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84cb9acdd6444b934e7ec51691d87a6912880de2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249741"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061800"
 ---
 # <a name="compiler-error-c3269"></a>Compilerfehler C3269
-'Funktion': eine Memberfunktion einer verwalteten oder WinRTtype kann nicht mit "..." deklariert werden  
-  
-Verwaltete und WinRT-Klassenmemberfunktionen können keine Parameterlisten variabler Länge deklarieren.  
-  
-Im folgenden Beispiel wird C3269 generiert und gezeigt, wie Sie diesen Fehler beheben:  
-  
-```  
-// C3269_2.cpp  
-// compile with: /clr  
-  
-ref struct A  
-{  
-   void func(int i, ...)   // C3269  
-   // try the following line instead  
-   // void func(int i )  
-   {  
-   }  
-};  
-  
-int main()  
-{  
-}  
-```  
+
+'Funktion': eine Memberfunktion einer verwalteten oder WinRTtype kann nicht mit '...' deklariert werden
+
+Verwaltete und WinRT-Klassenmemberfunktionen können keine Parameterlisten variabler Länge deklarieren.
+
+Im folgenden Beispiel wird C3269 generiert und gezeigt, wie Sie diesen Fehler beheben:
+
+```
+// C3269_2.cpp
+// compile with: /clr
+
+ref struct A
+{
+   void func(int i, ...)   // C3269
+   // try the following line instead
+   // void func(int i )
+   {
+   }
+};
+
+int main()
+{
+}
+```

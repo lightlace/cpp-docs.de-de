@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2415 | Microsoft Docs
+title: Compilerfehler C2415 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ad06cdf891c9b958f6cf08e724f4003a8507c2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd889880997828396521ddba638bb606552e7d92
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198546"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112576"
 ---
 # <a name="compiler-error-c2415"></a>Compilerfehler C2415
-Ungültiger Operandentyp  
-  
- Der Opcode verwendet keine Operanden dieses Typs.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:  
-  
-1.  Der Opcode unterstützt die Anzahl der verwendeten Operanden nicht. Lesen Sie in einem Assemblerreferenzhandbuch nach, wie viele Operanden zulässig sind.  
-  
-2.  Neuere Prozessoren unterstützen die Anweisung durch zusätzliche Typen. Anpassen der [/arch (minimale CPU-Architektur)](../../build/reference/arch-minimum-cpu-architecture.md) Option, um den neueren Prozessor verwenden.
+
+Ungültiger Operandentyp
+
+Der Opcode verwendet keine Operanden dieses Typs.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:
+
+1. Der Opcode unterstützt die Anzahl der verwendeten Operanden nicht. Lesen Sie in einem Assemblerreferenzhandbuch nach, wie viele Operanden zulässig sind.
+
+1. Neuere Prozessoren unterstützen die Anweisung durch zusätzliche Typen. Anpassen der [/arch (minimale CPU-Architektur)](../../build/reference/arch-minimum-cpu-architecture.md) Option, um den neueren Prozessor zu verwenden.

@@ -1,5 +1,5 @@
 ---
-title: ATL-Registrierungskomponente (Registrar) | Microsoft Docs
+title: ATL-Registrierungskomponente (Registrar) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,27 +20,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17c1aafdfd118a78aefff4fa32ac67f4e290596b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7d3f8f52e237fe364f73057c81eb17c8fd3def18
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354899"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041037"
 ---
 # <a name="atl-registry-component-registrar"></a>ATL-Registrierungskomponente (Registrar)
-ATL-Registrierung stellt die optimierten Zugriff auf die Registrierung über eine benutzerdefinierte Schnittstelle bereit. Die Registrierungsstelle ist Freethread- und statische Verknüpfung von Code für C++-Clients ermöglichen.  
-  
+
+Der ATL-Registrierung bietet optimierten Zugriff auf die Registrierung des Systems durch eine benutzerdefinierte Schnittstelle. Die Registrierungsstelle ist Freethread- und ermöglicht die statische Verknüpfung von Code für C++-Clients.
+
 > [!NOTE]
->  Der Quellcode für die ATL-Registrierung kann in atlmfc\include\atliface.h gefunden werden.  
-  
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Erstellen von Registrierungsskripts](../atl/creating-registrar-scripts.md)  
- Eine Anleitung zum Erstellen von Skripts für die Registrierungsstelle. Enthält Themen über die BNF-Syntax, Strukturen für die Analyse Registrierung Skriptbeispielen, mithilfe von ersetzbaren Parametern und Aufrufen von Skripts.  
-  
- [Einrichten einer statischen Verknüpfung an den Code Registrierungsstelle (nur C++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  
- Listet die Schritte zum Einrichten der statischen Verknüpfung mit der Registrierungsstelle.  
-  
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- Enthält Links zu konzeptionellen Themen über die Programmierung mit der Active Template Library.
+>  Der Quellcode für die ATL-Registrierung finden Sie in atlmfc\include\atliface.h.
+
+## <a name="in-this-section"></a>In diesem Abschnitt
+
+[Erstellen von Registrierungsskripts](../atl/creating-registrar-scripts.md)<br/>
+Eine Anleitung zum Erstellen von Skripts für die Registrierung. Enthält Themen, in der BNF-Syntax in analysestrukturen, Registrierung-Skriptbeispielen, mithilfe von ersetzbaren Parametern und das Aufrufen von Skripts.
+
+[Das Einrichten eines statischen Links zum Registrierungscode (nur C++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)<br/>
+Listet die Schritte zum Einrichten der statischen Verknüpfung mit der Registrierungsstelle.
+
+## <a name="related-sections"></a>Verwandte Abschnitte
+
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
+Enthält Links zu konzeptionellen Themen über die Programmierung mit der Active Template Library.
 

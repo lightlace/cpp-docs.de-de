@@ -1,5 +1,5 @@
 ---
-title: Einlesen von Zeichenfolgen in den OLE DB-Anbieter | Microsoft Docs
+title: Lesen von Zeichenfolgen in OLE DB-Anbieter | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 073ddbea18e728ffb6777ff16c86bfa4695e05cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e052de60234b065a137c5528c77d2d6c97490e8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33110167"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034850"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Einlesen von Zeichenfolgen in den OLE DB-Anbieter
-Die `RMyProviderRowset::Execute` -Funktion öffnet eine Datei und liest Zeichenfolgen. Der Consumer übergibt den Dateinamen an dem Anbieter durch Aufrufen von [ICommandText:: SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx). Der Anbieter empfängt den Dateinamen und speichert ihn in die Membervariable `m_szCommandText`. `Execute` liest den Dateinamen aus `m_szCommandText`. Wenn der Dateiname ungültig ist oder die Datei nicht verfügbar ist, `Execute` gibt einen Fehler zurück. Andernfalls die Datei und ruft Eröffnung `fgets` Zeichenfolgen abgerufen. Für jede von Zeichenfolgen er liest, legen Sie `Execute` erstellt eine Instanz des Benutzerdatensatzes (`CAgentMan`) und platziert es in ein Array.  
+
+Die `RMyProviderRowset::Execute` Funktion eine Datei öffnet und liest Zeichenfolgen. Der Consumer übergibt den Dateinamen an dem Anbieter an, durch den Aufruf [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757\(v=vs.85\)). Der Anbieter erhält den Dateinamen und speichert sie in der Membervariablen `m_szCommandText`. `Execute` liest den Dateinamen aus `m_szCommandText`. Wenn der Dateiname ungültig ist, oder die Datei nicht verfügbar ist ist, `Execute` gibt einen Fehler zurück. Sie geöffnet wird, andernfalls die Datei, und Aufrufe `fgets` die Zeichenfolgen ab. Für jede von Zeichenfolgen es liest, legen Sie `Execute` erstellt eine Instanz des Benutzerdatensatzes (`CAgentMan`) und setzt es in ein Array.  
   
- Wenn die Datei kann nicht geöffnet werden, `Execute` muss zurückgeben **DB_E_NOTABLE**. Wenn zurückgegeben **E_FAIL** stattdessen der Anbieter funktioniert nicht mit zahlreichen Consumern und OLE DB wird nicht erfolgreich [Konformitätstests](../../data/oledb/testing-your-provider.md).  
+Wenn die Datei kann nicht geöffnet werden, `Execute` DB_E_NOTABLE zurückgeben. Wenn sie stattdessen E_FAIL zurückgibt, wird der Anbieter funktioniert nicht mit vielen Consumern und der OLE DB wird nicht übergeben [Konformitätstests](../../data/oledb/testing-your-provider.md).  
   
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Beschreibung  
- Die bearbeitete `Execute` Funktion sieht wie folgt aus:  
+
+Die bearbeitete `Execute` Funktion sieht wie folgt aus:  
   
 ### <a name="code"></a>Code  
   
@@ -107,4 +109,5 @@ public:
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Implementieren des einfachen schreibgeschützten Anbieters](../../data/oledb/implementing-the-simple-read-only-provider.md)
+
+[Implementieren des einfachen schreibgeschützten Anbieters](../../data/oledb/implementing-the-simple-read-only-provider.md)

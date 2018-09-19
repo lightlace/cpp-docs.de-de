@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.openlocfilehash: 4dac24b73e2b0a228f712453b124ff01e5c13c46
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b3a67fb381e262ddec71c36f226412b8f9b74b68
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959682"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725126"
 ---
 # <a name="ltvectorgt-operators"></a>&lt;vector&gt;-Operatoren
 
@@ -44,9 +44,11 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parameter
 
-*linken* ein Objekt des Typs `vector`.
+*left*<br/>
+Ein Objekt vom Typ `vector`.
 
-*richtige* ein Objekt des Typs `vector`.
+*right*<br/>
+Ein Objekt vom Typ `vector`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -93,11 +95,11 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Ein Objekt vom Typ `vector`.
+*left*<br/>
+Ein Objekt vom Typ `vector`.
 
-*right*  
- Ein Objekt vom Typ `vector`.
+*right*<br/>
+Ein Objekt vom Typ `vector`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -144,11 +146,11 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Ein Objekt vom Typ `vector`.
+*left*<br/>
+Ein Objekt vom Typ `vector`.
 
-*right*  
- Ein Objekt vom Typ `vector`.
+*right*<br/>
+Ein Objekt vom Typ `vector`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -195,11 +197,11 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Ein Objekt vom Typ `vector`.
+*left*<br/>
+Ein Objekt vom Typ `vector`.
 
-*right*  
- Ein Objekt vom Typ `vector`.
+*right*<br/>
+Ein Objekt vom Typ `vector`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -246,11 +248,11 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Ein Objekt vom Typ `vector`.
+*left*<br/>
+Ein Objekt vom Typ `vector`.
 
-*right*  
- Ein Objekt vom Typ `vector`.
+*right*<br/>
+Ein Objekt vom Typ `vector`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -298,11 +300,11 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parameter
 
-*left*  
- Ein Objekt vom Typ `vector`.
+*left*<br/>
+Ein Objekt vom Typ `vector`.
 
-*right*  
- Ein Objekt vom Typ `vector`.
+*right*<br/>
+Ein Objekt vom Typ `vector`.
 
 ### <a name="return-value"></a>Rückgabewert
 

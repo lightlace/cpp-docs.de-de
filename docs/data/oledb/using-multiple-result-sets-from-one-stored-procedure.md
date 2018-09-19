@@ -1,5 +1,5 @@
 ---
-title: Verwenden mehrerer Resultsets aus einer gespeicherten Prozedur | Microsoft Docs
+title: Verwenden mehrerer Resultsets aus einer gespeicherten Prozedur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6393901839e8450ebc45b11f1d4bd2250da2ca56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3e75a100bb5b56b613419160a3ea063bce42bbdb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106309"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092322"
 ---
 # <a name="using-multiple-result-sets-from-one-stored-procedure"></a>Verwenden mehrerer Resultsets aus einer gespeicherten Prozedur
-Die meisten gespeicherte Prozeduren zurückgeben mehrere Resultsets. Eine solche gespeicherte Prozedur enthält in der Regel eine oder mehrere select-Anweisungen. Der Consumer muss dies die Resultsets verarbeiten sollte.  
+
+Die meisten gespeicherte Prozeduren zurückgeben mehrere Resultsets. Eine solche gespeicherte Prozedur enthält in der Regel eine oder mehr select-Anweisungen. Der Consumer muss diese Option, um alle Resultsets verarbeitet berücksichtigen.  
   
-### <a name="to-handle-multiple-result-sets"></a>Um mehrere Resultsets verarbeiten legt sie fest  
+### <a name="to-handle-multiple-result-sets"></a>Um mehrere Resultsets verarbeiten legt diese fest  
   
-1.  Erstellen einer `CCommand` -Klasse mit `CMultipleResults` als Vorlagenargument und mit dem Accessor auf Ihrer Wahl. Dies ist normalerweise einen dynamischen oder manuellen Accessor. Wenn Sie einen anderen Typ des Accessors verwenden, können Sie nicht die Ausgabespalten für jedes Rowset zu ermitteln sein.  
+1. Erstellen Sie eine `CCommand` Klasse mit `CMultipleResults` als Vorlagenargument und mit dem Accessor auf Ihrer Wahl. In der Regel ist dies eine dynamischen oder manuellen-Accessor. Wenn Sie einen anderen Typ des Accessors verwenden, Sie bestimmen die Ausgabespalten für jedes Rowset können möglicherweise nicht.  
   
-2.  Führen Sie die gespeicherte Prozedur wie gewohnt und binden Sie die Spalten (siehe [Gewusst wie: Abrufen von Daten?](../../data/oledb/fetching-data.md)).  
+1. Führen Sie die gespeicherte Prozedur wie gewohnt und binden Sie die Spalten (finden Sie unter [Abrufen von Daten?](../../data/oledb/fetching-data.md)).  
   
-3.  Verwenden Sie die Daten an.  
+1. Verwenden Sie die Daten an.  
   
-4.  Rufen Sie `GetNextResult` auf die `CCommand` Klasse. Wenn eine andere Ergebnisrowset verfügbar ist, wird `GetNextResult` gibt S_OK zurück, und Sie sollten Ihre Spalten erneut binden, wenn Sie einen manuellen Accessor verwenden. Wenn `GetNextResult` einen Fehler zurückgibt, es sind keine weiteren Resultsets nach zur Verfügung.  
+1. Rufen Sie `GetNextResult` auf die `CCommand` Klasse. Wenn eine andere Ergebnisrowset verfügbar ist, `GetNextResult` gibt S_OK zurück, und Sie sollten Ihre Spalten erneut binden, wenn Sie einen manuellen Accessor verwenden. Wenn `GetNextResult` ein Fehler zurückgegeben, es sind keine weiteren Resultsets nach zur Verfügung.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden von gespeicherten Prozeduren](../../data/oledb/using-stored-procedures.md)
+
+[Verwenden von gespeicherten Prozeduren](../../data/oledb/using-stored-procedures.md)

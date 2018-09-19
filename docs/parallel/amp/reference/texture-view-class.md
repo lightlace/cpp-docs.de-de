@@ -1,5 +1,5 @@
 ---
-title: Texture_view-Klasse | Microsoft Docs
+title: Texture_view-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3db02d9cafb87c0f173546687ad01390e09b9f68
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 03684d287072e6c27fa06343ff498bbc62d4449a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696265"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027075"
 ---
 # <a name="textureview-class"></a>texture_view-Klasse
 Stellt einer Textur Lese- und Schreibzugriff zur Verfügung. `texture_view` kann nur verwendet werden, um Texturen zu lesen, deren Werttyp `int`, `unsigned int` oder `float` mit 32-Bit-Standard ist. Verwenden Sie zum Lesen anderer Texturformate `texture_view<const value_type, _Rank>`.  
@@ -50,11 +50,11 @@ class texture_view<const value_type, _Rank>
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `value_type`  
- Der Typ der Elemente im Texturaggregat.  
+*value_type*<br/>
+Der Typ der Elemente im Texturaggregat.  
   
- `_Rank`  
- Der Rang des `texture_view`-Objekts.  
+*_Rank*<br/>
+Der Rang des `texture_view`-Objekts.  
   
 ## <a name="members"></a>Member  
   
@@ -156,28 +156,28 @@ texture_view(// [7] copy constructor
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Src`  
- [1, 2]-Konstruktor  
+*_Src*<br/>
+[1, 2]-Konstruktor  
  Das `texture`-Objekt, auf dem das schreibbare `texture_view`-Objekt erstellt wird.  
   
  [3, 4] Konstruktor  
  Das `texture`-Objekt, auf dem das nicht schreibbare `texture_view`-Objekt erstellt wird.  
   
- `_Other`  
- [5]-Kopierkonstruktor  
+*_Sonstige*<br/>
+[5]-Kopierkonstruktor  
  Das schreibbare `texture_view`-Quellobjekt.  
   
  [6, 7] Copy-Konstruktor  
  Das nicht schreibbare `texture_view`-Quellobjekt.  
   
- `_Mipmap_level`  
- Die bestimmte MipMap-Ebene auf dem `texture`-Quellobjekt, an das dieses schreibbare `texture_view`-Objekt gebunden wird. Der Standardwert ist 0, was die oberste (ausführlichste) MIP-Ebene darstellt.  
+*_Mipmap_level*<br/>
+Die bestimmte MipMap-Ebene auf dem `texture`-Quellobjekt, an das dieses schreibbare `texture_view`-Objekt gebunden wird. Der Standardwert ist 0, was die oberste (ausführlichste) MIP-Ebene darstellt.  
   
- `_Most_detailed_mip`  
- Die oberste (ausführlichste) Mip-Ebene für die Ansicht, relativ zum angegebenen `texture_view`-Objekt.  
+*_Most_detailed_mip*<br/>
+Die oberste (ausführlichste) Mip-Ebene für die Ansicht, relativ zum angegebenen `texture_view`-Objekt.  
   
- `_Mip_levels`  
- Die Anzahl von MipMap-Ebenen, die über das `texture_view`-Objekt verfügbar sind.  
+*_Mip_levels*<br/>
+Die Anzahl von MipMap-Ebenen, die über das `texture_view`-Objekt verfügbar sind.  
   
 ##  <a name="gather_red"></a> gather_red 
 
@@ -197,14 +197,14 @@ const gather_return_type gather_red(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Address_mode`  
- Der Adressmodus zum Prüfen des `texture_view`-Objekts. Der Adressmodus ist für alle Dimensionen identisch.  
+*_Address_mode*<br/>
+Der Adressmodus zum Prüfen des `texture_view`-Objekts. Der Adressmodus ist für alle Dimensionen identisch.  
   
- `_Sampler`  
- Die Samplerkonfiguration zur Prüfung des `texture_view`-Objekts.  
+*_Sampler*<br/>
+Die Samplerkonfiguration zur Prüfung des `texture_view`-Objekts.  
   
- `_Coord`  
- Die Koordinaten, an denen die Stichprobe genommen werden soll. Bruchkoordinatenwerte werden verwendet, um zwischen Beispieltexeln zu interpolieren.  
+*_Coord*<br/>
+Die Koordinaten, an denen die Stichprobe genommen werden soll. Bruchkoordinatenwerte werden verwendet, um zwischen Beispieltexeln zu interpolieren.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein kurzer Vektor des Rangs 4, der die rote (x)-Komponente der 4 geprüften Texelwerte enthält.  
@@ -227,14 +227,14 @@ const gather_return_type gather_green(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Address_mode`  
- Der Adressmodus zum Prüfen des `texture_view`-Objekts. Der Adressmodus ist für alle Dimensionen identisch.  
+*_Address_mode*<br/>
+Der Adressmodus zum Prüfen des `texture_view`-Objekts. Der Adressmodus ist für alle Dimensionen identisch.  
   
- `_Sampler`  
- Die Samplerkonfiguration zur Prüfung des `texture_view`-Objekts.  
+*_Sampler*<br/>
+Die Samplerkonfiguration zur Prüfung des `texture_view`-Objekts.  
   
- `_Coord`  
- Die Koordinaten, an denen die Stichprobe genommen werden soll. Bruchkoordinatenwerte werden verwendet, um zwischen Beispieltexeln zu interpolieren.  
+*_Coord*<br/>
+Die Koordinaten, an denen die Stichprobe genommen werden soll. Bruchkoordinatenwerte werden verwendet, um zwischen Beispieltexeln zu interpolieren.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein kurzer Vektor des Rangs 4, der die grüne (y)-Komponente der 4 geprüften Texelwerte enthält.  
@@ -257,14 +257,14 @@ const gather_return_type gather_blue(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Address_mode`  
- Der Adressmodus zum Prüfen des `texture_view`-Objekts. Der Adressmodus ist für alle Dimensionen identisch.  
+*_Address_mode*<br/>
+Der Adressmodus zum Prüfen des `texture_view`-Objekts. Der Adressmodus ist für alle Dimensionen identisch.  
   
- `_Sampler`  
- Die Samplerkonfiguration zur Prüfung des `texture_view`-Objekts.  
+*_Sampler*<br/>
+Die Samplerkonfiguration zur Prüfung des `texture_view`-Objekts.  
   
- `_Coord`  
- Die Koordinaten, an denen die Stichprobe genommen werden soll. Bruchkoordinatenwerte werden verwendet, um zwischen Beispieltexeln zu interpolieren.  
+*_Coord*<br/>
+Die Koordinaten, an denen die Stichprobe genommen werden soll. Bruchkoordinatenwerte werden verwendet, um zwischen Beispieltexeln zu interpolieren.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein kurzer Vektor des Rangs 4, der die rote (x)-Komponente der 4 geprüften Texelwerte enthält.  
@@ -287,14 +287,14 @@ const gather_return_type gather_alpha(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Address_mode`  
- Der Adressmodus zum Prüfen des `texture_view`-Objekts. Der Adressmodus ist für alle Dimensionen identisch.  
+*_Address_mode*<br/>
+Der Adressmodus zum Prüfen des `texture_view`-Objekts. Der Adressmodus ist für alle Dimensionen identisch.  
   
- `_Sampler`  
- Die Samplerkonfiguration zur Prüfung des `texture_view`-Objekts.  
+*_Sampler*<br/>
+Die Samplerkonfiguration zur Prüfung des `texture_view`-Objekts.  
   
- `_Coord`  
- Die Koordinaten, an denen die Stichprobe genommen werden soll. Bruchkoordinatenwerte werden verwendet, um zwischen Beispieltexeln zu interpolieren.  
+*_Coord*<br/>
+Die Koordinaten, an denen die Stichprobe genommen werden soll. Bruchkoordinatenwerte werden verwendet, um zwischen Beispieltexeln zu interpolieren.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein kurzer Vektor des Rangs 4, der die Alpha-(w)-Komponente der 4 geprüften Texelwerte enthält.  
@@ -314,11 +314,11 @@ value_type get(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Index`  
- Der Index des abzurufenden Elements, möglicherweise mehrdimensional.  
+*_Index*<br/>
+Der Index des abzurufenden Elements, möglicherweise mehrdimensional.  
   
- `_Mip_level`  
- Die MipMap-Ebene, von der der Wert abgerufen werden soll. Der Standardwert 0 stellt die ausführlichste MipMap-Ebene dar.  
+*_Mip_level*<br/>
+Die MipMap-Ebene, von der der Wert abgerufen werden soll. Der Standardwert 0 stellt die ausführlichste MipMap-Ebene dar.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Wert des Elements.  
@@ -341,8 +341,8 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Other`  
- [1, 2]-Kopierkonstruktor  
+*_Sonstige*<br/>
+[1, 2]-Kopierkonstruktor  
  Ein `texture_view`-Objekt, in das geschrieben werden kann.  
   
  [3]-Kopierkonstruktor  
@@ -369,11 +369,11 @@ value_type operator[] (int _I0) const restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Index`  
- Der Index, möglicherweise mehrdimensional.  
+*_Index*<br/>
+Der Index, möglicherweise mehrdimensional.  
   
- `_I0`  
- Der eindimensionale Index.  
+*_I0*<br/>
+Der eindimensionale Index.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der durch `_Index` indizierte Elementwert.  
@@ -421,17 +421,17 @@ value_type operator() (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Index`  
- Der Index, möglicherweise mehrdimensional.  
+*_Index*<br/>
+Der Index, möglicherweise mehrdimensional.  
   
- `_I0`  
- Die wichtigste Komponente des Index.  
+*_I0*<br/>
+Die wichtigste Komponente des Index.  
   
- `_I1`  
- Die zweitwichtigste Komponente des Index.  
+*_I1*<br/>
+Die zweitwichtigste Komponente des Index.  
   
- `_I2`  
- Die unwichtigste Komponente des Index.  
+*_I2*<br/>
+Die unwichtigste Komponente des Index.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der durch `_Index` indizierte Elementwert.  
@@ -457,25 +457,25 @@ value_type sample(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Filter_mode`  
- Der Filtermodus, der für das Sampling des texture_view-Objekts verwendet werden soll. Der Filtermodus ist für die Reduzierung, die Maximierung und die MipMap-Filter derselbe.  
+*_Filter_mode*<br/>
+Der Filtermodus, der für das Sampling des texture_view-Objekts verwendet werden soll. Der Filtermodus ist für die Reduzierung, die Maximierung und die MipMap-Filter derselbe.  
   
- `_Address_mode`  
- Der Adressmodus, der zum Sampling des texture_view-Objekts verwendet werden soll. Der Adressmodus ist für alle Dimensionen identisch.  
+*_Address_mode*<br/>
+Der Adressmodus, der zum Sampling des texture_view-Objekts verwendet werden soll. Der Adressmodus ist für alle Dimensionen identisch.  
   
- `_Sampler`  
- Die Samplerkonfiguration, die zum Sampling des texture_view-Objekts verwendet werden soll.  
+*_Sampler*<br/>
+Die Samplerkonfiguration, die zum Sampling des texture_view-Objekts verwendet werden soll.  
   
- `_Coord`  
- Die Koordinaten, an denen die Stichprobe genommen werden soll. Bruchkoordinatenwerte werden verwendet, um zwischen Texelwerten zu interpolieren.  
+*_Coord*<br/>
+Die Koordinaten, an denen die Stichprobe genommen werden soll. Bruchkoordinatenwerte werden verwendet, um zwischen Texelwerten zu interpolieren.  
   
- `_Level_of_detail`  
- Der Wert gibt die MipMap-Ebene für das Sampling an. Bruchwerte werden verwendet, um zwischen zwei MipMap-Ebenen zu interpolieren. Das Standarddetailniveau ist 0, was die ausführlichste MIP-Ebene darstellt.  
+*_Level_of_detail*<br/>
+Der Wert gibt die MipMap-Ebene für das Sampling an. Bruchwerte werden verwendet, um zwischen zwei MipMap-Ebenen zu interpolieren. Das Standarddetailniveau ist 0, was die ausführlichste MIP-Ebene darstellt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der interpolierte Beispielwert.  
   
-##  <a name="set"></a> Festlegen 
+##  <a name="set"></a> Legen Sie 
 
  Legt den Wert des Elements am angegebenen Index auf den angegebenen Wert fest.  
   
@@ -486,11 +486,11 @@ void set(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Index`  
- Der Index des festzulegenden Elements, möglicherweise mehrdimensional.  
+*_Index*<br/>
+Der Index des festzulegenden Elements, möglicherweise mehrdimensional.  
   
- `value`  
- Der Wert, auf den das Element festgelegt werden soll.  
+*Wert*<br/>
+Der Wert, auf den das Element festgelegt werden soll.  
   
 ##  <a name="value_type"></a> value_type 
 

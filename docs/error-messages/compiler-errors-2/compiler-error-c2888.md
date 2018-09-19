@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2888 | Microsoft Docs
+title: Compilerfehler C2888 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d083ba049558c08c6070d13d0d7a61ad319add0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a80f99eb4fcf888462d1356d60cb4b22af0d0f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242169"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023123"
 ---
 # <a name="compiler-error-c2888"></a>Compilerfehler C2888
-'Bezeichner': Symbol kann nicht im Namespace 'Namespace' definiert werden  
-  
- Ein Symbol, das zum A-Namespace gehören muss in einem Namespace definiert werden, die a umschließt.  
-  
- Im folgende Beispiel wird C2888 generiert:  
-  
-```  
-// C2888.cpp  
-// compile with: /c  
-namespace M {  
-   namespace N {  
-      void f1();  
-      void f2();  
-   }  
-  
-   void N::f1() {}   // OK: namspace M encloses N  
-}  
-  
-namespace O {  
-   void M::N::f2() {}   // C2888 namespace O does not enclose M  
-}  
+
+'Bezeichner': Symbol kann nicht im Namespace 'Namespace' definiert werden
+
+Ein Symbol, die auf ein-Namespace gehören muss in einem Namespace definiert werden, die a umschließt.
+
+Im folgende Beispiel wird die C2888 generiert:
+
+```
+// C2888.cpp
+// compile with: /c
+namespace M {
+   namespace N {
+      void f1();
+      void f2();
+   }
+
+   void N::f1() {}   // OK: namspace M encloses N
+}
+
+namespace O {
+   void M::N::f2() {}   // C2888 namespace O does not enclose M
+}
 ```

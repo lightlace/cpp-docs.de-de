@@ -1,5 +1,5 @@
 ---
-title: CMFCDragFrameImpl Klasse | Microsoft Docs
+title: CMFCDragFrameImpl-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 458288ecff0b457205ba1735494ad8106c3feae7
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: c8cd05dc5d4cdff535b8e571e94d9033d0220ccf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040947"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710163"
 ---
 # <a name="cmfcdragframeimpl-class"></a>CMFCDragFrameImpl-Klasse
 Die `CMFCDragFrameImpl` Klasse zeichnet das ziehrechteck, das angezeigt wird, wenn der Benutzer einen Bereich im standarddockmodus zieht.  
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
    
 ## <a name="syntax"></a>Syntax  
   
@@ -34,7 +34,7 @@ class CMFCDragFrameImpl
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Objekt dieser Klasse wird in den einzelnen eingebettet [CPane-Klasse](../../mfc/reference/cpane-class.md) Objekt. Deshalb jedes Bereichs, der verwendet die `CanFloat` Methode zeigt einem Rechteck aus, wenn der Benutzer gezogen.  
+ Ein Objekt dieser Klasse wird in den einzelnen eingebettet [CPane-Klasse](../../mfc/reference/cpane-class.md) Objekt. Daher wird jeder Bereich, der verwendet die `CanFloat` Methode zeigt ein Rechteck aus, wenn der Benutzer es zieht.  
   
  Sie können die Breite des Rechtecks ziehen Sie steuern, indem Sie mithilfe von [AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat) und [AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock).  
   
@@ -92,8 +92,8 @@ void PlaceTabPreDocking(CWnd* pCBarToPlaceOn);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pTabbedBar*  
- [in] *bFirstTime*  
+*pTabbedBar*<br/>
+[in] [in] *bFirstTime*  
  [in] *pCBarToPlaceOn*  
   
 ### <a name="remarks"></a>Hinweise  

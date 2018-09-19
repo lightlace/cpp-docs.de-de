@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0017 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0017 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7540dc701ffa6e0acb3d2661e1196e5f4552d2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 431071137fb3f5b1b276327ee7d21f323ac24c5b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300746"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136236"
 ---
 # <a name="expression-evaluator-error-cxx0017"></a>Ausdrucksauswertungsfehler CXX0017
-Symbol konnte nicht gefunden.  
-  
- Ein Symbol, das in einem Ausdruck konnte nicht gefunden werden.  
-  
- Eine mögliche Ursache dieses Fehlers ist ein Groß-/Kleinschreibung übereinstimmende Datentypen in den Symbolnamen. Da C und C++ Sprachen Groß-/Kleinschreibung beachtet werden, muss ein Symbolnamen in die genaue Groß-/Kleinschreibung eingegeben werden, in der sie in der Quelle definiert ist.  
-  
- Dieser Fehler kann auftreten, wenn eine Variable umgewandelt werden, um die Variable während des Debuggens überwachen möchten. Die `typedef` deklariert einen neuen Namen für einen Typ jedoch einen neuen Typ nicht definiert. Der Debugger versuchte Typumwandlung erfordert den Namen des definierten Typs.  
-  
- Dieser Fehler ist mit CAN0017 identisch.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>So beheben Sie den Fehler (unterschiedliche Lösungsmöglichkeiten)  
-  
-1.  Stellen Sie sicher, dass das Symbol an dem Punkt im Programm bereits deklariert wird, in dem sie verwendet wird.  
-  
-2.  Verwenden Sie zur Umwandlung von Variablen in der Debugger einen tatsächlicher Typname anstelle eines `typedef`-Namen definiert.
+
+Symbol konnte nicht gefunden.
+
+Ein Symbol angegeben, die in einem Ausdruck konnte nicht gefunden werden.
+
+Eine mögliche Ursache dieses Fehlers ist der Symbolname Groß-/Kleinschreibung übereinstimmen. Da C und C++ Groß-/Kleinschreibung, muss ein Symbolnamen in die genaue Groß-/Kleinschreibung eingegeben werden, in der sie in der Quelle definiert ist.
+
+Dieser Fehler kann auftreten, wenn eine Variablen umwandeln, um die Variable während des Debuggens überwachen möchten. Die `typedef` ein neuer Name für einen Typ, deklariert jedoch einen neuen Typ nicht definiert. Der Debugger versuchte Typumwandlung ist der Name des definierten Typs erforderlich.
+
+Dieser Fehler ist mit CAN0017 identisch.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>So beheben Sie den Fehler (unterschiedliche Lösungsmöglichkeiten)
+
+1. Stellen Sie sicher, dass das Symbol bereits an dem Punkt im Programm deklariert wird, in dem sie verwendet wird.
+
+1. Verwenden Sie einen tatsächlicher Typname umzuwandelnde Variablen im Debugger, anstelle eines `typedef`-Namen definiert.

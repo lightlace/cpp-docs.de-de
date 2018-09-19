@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten von Benachrichtigungen des Headersteuerelements | Microsoft Docs
+title: Verarbeiten von Benachrichtigungen des Headersteuerelements | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a0fe657089c33679cf8d18f95268a70335804c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 539e7411dcc47be17bb10a5322e30a524679ca8c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348890"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194210"
 ---
 # <a name="processing-header-control-notifications"></a>Verarbeiten von Benachrichtigungen des Headersteuerelements
-Verwenden Sie in Ihrer Klasse Ansichts- oder Dialogfeldobjekt des Eigenschaftenfensters zum Erstellen einer [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) Handlerfunktion mit einer Switch-Anweisung für eine beliebige Headersteuerelement ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) benachrichtigungsmeldungen werden sollen verarbeiten (siehe [Zuordnen von Meldungen zu Funktionen](../mfc/reference/mapping-messages-to-functions.md)). Benachrichtigungen werden an das übergeordnete Fenster gesendet, wenn der Benutzer klickt oder ein Headerelement zieht ein Unterteiler zwischen Elementen und So weiter doppelklickt.  
+In Ihrer Klasse Ansichts- oder Dialogfeldobjekt mithilfe des Fensters Eigenschaften zum Erstellen einer [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) Handlerfunktion mit einer Switch-Anweisung für beliebige Header-Steuerelemente ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) benachrichtigungsmeldungen werden sollen verarbeiten (siehe [Zuordnen von Meldungen zu Funktionen](../mfc/reference/mapping-messages-to-functions.md)). Benachrichtigungen werden an das übergeordnete Fenster gesendet, wenn der Benutzer klickt, oder ein Headerelement zieht eine Trennlinie zwischen Elementen und So weiter doppelklickt.  
   
- In die benachrichtigungsmeldungen verknüpft sind, mit dem Headersteuerelement aufgelisteten [Header Kontrollverweis](http://msdn.microsoft.com/library/windows/desktop/bb775239) im Windows SDK.  
+ Die benachrichtigungsmeldungen Zusammenhang mit einem Kopfzeilen-Steuerelement finden Sie in [Header Steuerelementverweis](https://msdn.microsoft.com/library/windows/desktop/bb775239) im Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CHeaderCtrl](../mfc/using-cheaderctrl.md)   

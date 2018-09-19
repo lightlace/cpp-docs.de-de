@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af6d3ce3beca7d9bb3b14ee9c9373a8505623376
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bb2a78219cd5474f879407e75c5a89f14f87b647
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954004"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315963"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
-Beschreibt ein Objekt, das ein geordnetes Paar von Objekten des Typs speichert **"float" **** das erste Objekt den reellen Teil einer komplexen Zahl und das zweite Objekt dem imaginären Teil.
+Beschreibt ein Objekt, das ein geordnetes Paar von Objekten des Typs speichert **"float"**, wird das erste Objekt den reellen Teil einer komplexen Zahl und das zweite Objekt dem imaginären Teil.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,11 +51,14 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parameter
 
-*_RealVal* der Wert des Typs **"float"** für den Realteil der komplexen Zahl, die erstellt wird.
+*_RealVal*<br/>
+Der Wert vom Typ **float** für den Realteil der zu erstellenden komplexen Zahl.
 
-*_ImagVal* der Wert des Typs **"float"** für den imaginären Teil der komplexen Zahl, die erstellt wird.
+*_ImagVal*<br/>
+Der Wert vom Typ **float** für den Imaginärteil der zu erstellenden komplexen Zahl.
 
-*ComplexNum* die komplexe Zahl vom Typ **doppelte** oder eines Typs **long double** , deren tatsächliche und imaginäre Teile werden verwendet, um eine komplexe Zahl des Typs initialisieren **"float"** erstellt wird.
+*complexNum*<br/>
+Die komplexe Zahl vom Typ **doppelte** oder eines Typs **long double** , deren tatsächliche und imaginäre Teile werden verwendet, um eine komplexe Zahl des Typs initialisieren **"float"** erstellt wird.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -109,7 +112,7 @@ int main( )
         << argc3 << " radians, which is " << argc3 * 180 / pi
         << " degrees." << endl;
 }
-\* Output:
+/* Output:
 Specifying initial real & imaginary parts,
  as type float gives c1 = (4,5)
 Implicit conversion from type double to type float,
@@ -119,7 +122,7 @@ Explicit conversion from type long double to type float,
 The modulus of c3 is recovered from c3 using: abs ( c3 ) = 5
 Argument of c3 is recovered from c3 using:
  arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Anforderungen

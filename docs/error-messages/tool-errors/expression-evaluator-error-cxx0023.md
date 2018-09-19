@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0023 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0023 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 426e074035d7f336963696e8924dfe641572f858
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94536a0499b4c226f1343bd27c44cc52bbbf3558
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296997"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034602"
 ---
 # <a name="expression-evaluator-error-cxx0023"></a>Ausdrucksauswertungsfehler CXX0023
-Ungültige Basis  
-  
- Der C#-Ausdrucksauswerter erkennt nicht die Basis angegeben. Dezimale, hexadezimale und oktale Basen sind nur gültig.  
-  
- Dieser Fehler ist mit CAN0023 identisch.
+
+Ungültige Basis
+
+Die C++-ausdrucksauswertung erkennt die angegebene Basis nicht. Dezimale, oktale und hexadezimale Basen sind nur gültig.
+
+Dieser Fehler ist mit CAN0023 identisch.

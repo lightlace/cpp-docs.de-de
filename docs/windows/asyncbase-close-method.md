@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Close-Methode | Microsoft Docs'
+title: 'Asyncbase:: Close-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f3f36656b9316fb6ad980349a836fad31c3a9a0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 732eb6f8668f7742e23e1ea410dcc659bc3d36c7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860794"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605345"
 ---
 # <a name="asyncbaseclose-method"></a>AsyncBase::Close-Methode
-Schließt den asynchronen Vorgang an.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-STDMETHOD(  
-   Close  
-)(void) override;  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn der Vorgang geschlossen wird oder bereits geschlossen. andernfalls E_ILLEGAL_STATE_CHANGE.  
-  
-## <a name="remarks"></a>Hinweise  
- Close() eine Standardimplementierung von IAsyncInfo::Close ist und keine tatsächliche Arbeit ausführt. Außer Kraft setzen Sie die OnClose() reine virtuelle Methode, um einen asynchronen Vorgang tatsächlich zu schließen.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** async.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [AsyncBase-Klasse](../windows/asyncbase-class.md)
+
+Schließt den asynchronen Vorgang an.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+STDMETHOD(
+   Close
+)(void) override;
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+S_OK, wenn der Vorgang geschlossen oder bereits ist geschlossen wurde, andernfalls E_ILLEGAL_STATE_CHANGE.
+
+## <a name="remarks"></a>Hinweise
+
+**Close()** ist eine Standardimplementierung der `IAsyncInfo::Close`, und keine Arbeit erledigt. Um einen asynchronen Vorgang tatsächlich zu schließen, außer Kraft setzen der `OnClose()` rein virtuelle Methode.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** async.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[AsyncBase-Klasse](../windows/asyncbase-class.md)

@@ -7,12 +7,14 @@ f1_keywords:
 - new/std::operator delete
 - new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
-ms.openlocfilehash: 5f21ec03bd36d889c6fbd8d24a2726fb7f18024f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+author: corob-msft
+ms.author: corob
+ms.openlocfilehash: 31db26453efbecceb136b614b8eabf178a0cdfea
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956110"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100365"
 ---
 # <a name="ltnewgt-operators"></a>&lt;new&gt;-Operatoren
 
@@ -37,13 +39,14 @@ void operator delete(void* ptr,
 
 ### <a name="parameters"></a>Parameter
 
-*PTR* den Zeiger, dessen Wert durch den Löschvorgang ungültig gerendert werden soll.
+*ptr*<br/>
+Der Zeiger, dessen Wert durch den Löschvorgang als ungültig gerendert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
 Die erste Funktion wird aufgerufen, durch einen Löschausdruck zum Rendern des Werts der *Ptr* ungültig. Das Programm kann eine Funktion mit dieser Funktionssignatur definieren, die die von der C++-Standardbibliothek definierte Standardversion ersetzt. Das erforderliche Verhalten ist, akzeptieren den Wert *Ptr* , Null, oder die durch einen früheren Aufruf zurückgegeben wurde [new-Operator](../standard-library/new-operators.md#op_new)(**"size_t"**).
 
-Das Standardverhalten für einen null-Wert des *Ptr* geschieht nichts. Jeder andere Wert von *Ptr* muss ein Wert, der zuvor durch einen Aufruf zurückgegeben wie zuvor beschrieben sein. Das Standardverhalten für diese einen Wert ungleich null der *Ptr* Freigebens von den früheren Aufruf zugeordnet ist. Es wird nicht angegeben, unter welchen Umständen Speicherplatz dieser Art ganz oder teilweise, durch einen nachfolgenden Aufruf von zugeordnet ist `operator new`(**"size_t"**), oder einem beliebigen `calloc`( **"size_t"**), `malloc`( **"size_t"**), oder `realloc`( **"void"\***, **"size_t"**).
+Das Standardverhalten für einen null-Wert des *Ptr* geschieht nichts. Jeder andere Wert von *Ptr* muss ein Wert, der zuvor durch einen Aufruf zurückgegeben wie zuvor beschrieben sein. Das Standardverhalten für diese einen Wert ungleich null der *Ptr* Freigebens von den früheren Aufruf zugeordnet ist. Es wird nicht angegeben, unter welchen Umständen Speicherplatz dieser Art ganz oder teilweise, durch einen nachfolgenden Aufruf von zugeordnet ist `operator new`(**"size_t"**), oder einem beliebigen `calloc`( **"size_t"**), `malloc`( **"size_t"**), oder `realloc`( **"void"**<strong>\*</strong>, **"size_t"**).
 
 Die zweite Funktion wird durch einen Placement-delete-Ausdruck für einen entsprechenden new-Ausdruck der Form **new**( **std:: size_t**) aufgerufen. Dabei wird keine Aktion ausgeführt.
 
@@ -69,11 +72,12 @@ void operator delete[](void* ptr,
 
 ### <a name="parameters"></a>Parameter
 
-*PTR* den Zeiger, dessen Wert durch den Löschvorgang ungültig gerendert werden soll.
+*ptr*<br/>
+Der Zeiger, dessen Wert durch den Löschvorgang als ungültig gerendert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Funktion wird aufgerufen, indem ein `delete[]` Ausdruck zum Rendern des Werts der *Ptr* ungültig. Die Funktion lässt sich ersetzen, da das Programm eine Funktion mit dieser Funktionssignatur definieren kann, die die von der C++-Standardbibliothek definierte Standardversion ersetzt. Das erforderliche Verhalten ist, akzeptieren den Wert *Ptr* , Null, oder die durch einen früheren Aufruf zurückgegeben wurde [new-Operator&#91;&#93;](../standard-library/new-operators.md#op_new_arr)(**"size_t"**). Das Standardverhalten für einen null-Wert des *Ptr* geschieht nichts. Jeder andere Wert von *Ptr* muss ein Wert, der zuvor durch einen Aufruf zurückgegeben wie zuvor beschrieben sein. Das Standardverhalten für diese einen Wert ungleich null der *Ptr* Freigebens von den früheren Aufruf zugeordnet ist. Es wird nicht angegeben, unter welchen Umständen Speicherplatz dieser Art ganz oder teilweise, durch einen nachfolgenden Aufruf von zugeordnet ist [new-Operator](../standard-library/new-operators.md#op_new)(**"size_t"**), oder einem beliebigen `calloc`(**"size_t"**), `malloc`(**"size_t"**), oder `realloc`( **"void"\***, **"size_t"**).
+Die erste Funktion wird aufgerufen, indem ein `delete[]` Ausdruck zum Rendern des Werts der *Ptr* ungültig. Die Funktion lässt sich ersetzen, da das Programm eine Funktion mit dieser Funktionssignatur definieren kann, die die von der C++-Standardbibliothek definierte Standardversion ersetzt. Das erforderliche Verhalten ist, akzeptieren den Wert *Ptr* , Null, oder die durch einen früheren Aufruf zurückgegeben wurde [new-Operator&#91;&#93;](../standard-library/new-operators.md#op_new_arr)(**"size_t"**). Das Standardverhalten für einen null-Wert des *Ptr* geschieht nichts. Jeder andere Wert von *Ptr* muss ein Wert, der zuvor durch einen Aufruf zurückgegeben wie zuvor beschrieben sein. Das Standardverhalten für diese einen nicht-Null-Wert, der *Ptr* Freigebens von den früheren Aufruf zugeordnet ist. Es wird nicht angegeben, unter welchen Umständen Speicherplatz dieser Art ganz oder teilweise, durch einen nachfolgenden Aufruf von zugeordnet ist [new-Operator](../standard-library/new-operators.md#op_new)(**"size_t"**), oder einem beliebigen `calloc`(**"size_t"**), `malloc`(**"size_t"**), oder `realloc`( **"void"**<strong>\*</strong>, **"size_t"**) .
 
 Die zweite Funktion wird aufgerufen, durch einen Placement- `delete[]` Ausdruck entspricht einer `new[]` Ausdruck der Form `new[]`(**Std:: size_t**). Dabei wird keine Aktion ausgeführt.
 
@@ -99,9 +103,11 @@ void* operator new(std::size_t count,
 
 ### <a name="parameters"></a>Parameter
 
-*Anzahl* die Anzahl der Bytes der Speicher zugeordnet wird.
+*count*<br/>
+Der zu belegende Speicherplatz in Bytes.
 
-*PTR* der Zeiger zurückgegeben werden.
+*ptr*<br/>
+Der Zeiger, der zurückgegeben werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -196,9 +202,11 @@ void* operator new[](std::size_t count,
 
 ### <a name="parameters"></a>Parameter
 
-*Anzahl* die Anzahl der Bytes der Speicher für das Arrayobjekt zugeordnet wird.
+*count*<br/>
+Der Speicherplatz in Bytes, der für ein Array-Objekt belegt werden soll.
 
-*PTR* der Zeiger zurückgegeben werden.
+*ptr*<br/>
+Der Zeiger, der zurückgegeben werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 

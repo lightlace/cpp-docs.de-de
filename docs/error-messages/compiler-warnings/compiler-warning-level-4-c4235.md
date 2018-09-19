@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4235 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4235 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc63640bc58caefa281b9207b9796ffdf387a7a8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9e709017e51101efe53a8697bb145014f200871
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292541"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031820"
 ---
 # <a name="compiler-warning-level-4-c4235"></a>Compilerwarnung (Stufe 4) C4235
-Nicht dem Standard entsprechende Erweiterung: Das Schlüsselwort 'Schlüsselwort' wird für diese Architektur nicht unterstützt  
-  
- Das von Ihnen verwendete Schlüsselwort wird vom Compiler nicht unterstützt.  
-  
- Diese Warnung wird automatisch zu einem Fehler heraufgestuft. Wenn Sie dieses Verhalten ändern möchten, verwenden Sie [#pragma Warning](../../preprocessor/warning.md). Um C4235 beispielsweise in eine Warnung der Stufe 2 umzuwandeln, verwenden Sie folgende Codezeile  
-  
-```  
-#pragma warning(2:4235)  
-```  
-  
- in der Quellcodedatei.
+
+Nicht dem Standard entsprechende Erweiterung: Das Schlüsselwort 'Schlüsselwort' wird für diese Architektur nicht unterstützt
+
+Das von Ihnen verwendete Schlüsselwort wird vom Compiler nicht unterstützt.
+
+Diese Warnung wird automatisch zu einem Fehler heraufgestuft. Wenn Sie dieses Verhalten ändern möchten, verwenden Sie [#pragma-Warnung](../../preprocessor/warning.md). Um C4235 beispielsweise in eine Warnung der Stufe 2 umzuwandeln, verwenden Sie folgende Codezeile
+
+```
+#pragma warning(2:4235)
+```
+
+in der Quellcodedatei.

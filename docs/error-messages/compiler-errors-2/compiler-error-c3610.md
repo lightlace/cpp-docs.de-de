@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3610 | Microsoft Docs
+title: Compilerfehler C3610 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f58d66e9d3dacfa2c0b38eb84fe51e0813a892d3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b46b3669978ff3735d5a16015ca0a01e65f07ae9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252431"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037852"
 ---
 # <a name="compiler-error-c3610"></a>Compilerfehler C3610
-"Valuetype": Werttyp muss geschachtelt werden, bevor die Methode 'Methode' aufgerufen werden kann  
-  
- Standardmäßig ist ein Werttyp nicht auf dem verwalteten Heap. Bevor Sie Methoden aus .NET Common Language Runtime-Klassen, z. B. aufrufen können `Object`, müssen Sie den Werttyp auf den verwalteten Heap zu verschieben.  
-  
- C3610 ist nur über die veraltete Compileroption erreichbar **/CLR: oldSyntax**.  
+
+"Valuetype": Werttyp muss geschachtelt werden, bevor die Methode 'Methode' aufgerufen werden kann
+
+Standardmäßig ist ein Werttyp nicht auf dem verwalteten Heap. Bevor Sie Methoden aus .NET Common Language Runtime-Klassen, z. B. aufrufen können `Object`, müssen Sie den Werttyp auf den verwalteten Heap zu verschieben.
+
+C3610 ist nur über die veraltete Compileroption erreichbar **oldSyntax**.

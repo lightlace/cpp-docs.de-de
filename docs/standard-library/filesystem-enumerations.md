@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8d933c80aa42ef9b954b6ae498632ab9835cb3d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: ff655573f77b901725fe18c2346c46306c9b853a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025938"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716806"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt;-Enumerationen
 
@@ -34,11 +34,13 @@ In diesem Thema werden die Enumerationen filesystem-Header beschrieben.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<experimental/Filesystem > **Namespace:** Std::experimental::filesystem
+**Header:** \<experimental/filesystem>
+
+**Namespace:** std::experimental::filesystem
 
 ## <a name="copy_options"></a> copy_options
 
-Eine Enumeration von Bitmaskenwerten, die mit den Funktionen [copy](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) und [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) verwendet wird, um Verhalten anzugeben.
+Eine Enumeration von Bitmaskenwerten, die mit den Funktionen [copy](filesystem-functions.md#copy) und [copy_file](filesystem-functions.md#copy_file) verwendet wird, um Verhalten anzugeben.
 
 ### <a name="syntax"></a>Syntax
 

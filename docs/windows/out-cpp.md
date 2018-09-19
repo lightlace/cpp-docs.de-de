@@ -1,5 +1,5 @@
 ---
-title: Out (C++) | Microsoft Docs
+title: Out (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,45 +17,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b23ff91a67962ec36cf6a9c2f5ebbf8122ab73c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 88e5960b4f809b9c0a43e10fa8fbb69544c9d9bc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876812"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194916"
 ---
 # <a name="out-c"></a>out (C++)
-Gibt die Zeigerparameter an, die von der aufgerufenen Prozedur an die aufrufende Prozedur zurückgegeben werden (vom Server an den Client).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-[out]  
-  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Das C++-Attribut **out** hat die gleiche Funktion wie das MIDL-Attribut [out](http://msdn.microsoft.com/library/windows/desktop/aa367136) .  
-  
-## <a name="example"></a>Beispiel  
- Ein Beispiel für die Verwendung von [bindable](../windows/bindable.md) finden Sie im Beispiel für **out**.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-### <a name="attribute-context"></a>Attributkontext  
-  
-|||  
-|-|-|  
-|**Betrifft**|Schnittstellenparameter|  
-|**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Keiner|  
-|**Ungültige Attribute**|Keiner|  
-  
- Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [IDL-Attribute](../windows/idl-attributes.md)   
- [Parameterattribute](../windows/parameter-attributes.md)   
- ["DefaultValue"](../windows/defaultvalue.md)   
- [ID](../windows/id.md)   
+
+Gibt die Zeigerparameter an, die von der aufgerufenen Prozedur an die aufrufende Prozedur zurückgegeben werden (vom Server an den Client).
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+[out]
+```
+
+## <a name="remarks"></a>Hinweise
+
+Die **out** C++-Attribut hat die gleiche Funktionalität wie die [out](/windows/desktop/Midl/out-idl) MIDL-Attribut.
+
+## <a name="example"></a>Beispiel
+
+Ein Beispiel für die Verwendung von [bindable](../windows/bindable.md) finden Sie im Beispiel für **out**.
+
+## <a name="requirements"></a>Anforderungen
+
+### <a name="attribute-context"></a>Attributkontext
+
+|||
+|-|-|
+|**Betrifft**|Schnittstellenparameter|
+|**Wiederholbar**|Nein|
+|**Erforderliche Attribute**|Keiner|
+|**Ungültige Attribute**|Keiner|
+
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[IDL-Attribute](../windows/idl-attributes.md)  
+[Parameterattribute](../windows/parameter-attributes.md)  
+[defaultvalue](../windows/defaultvalue.md)  
+[ID](../windows/id.md)  

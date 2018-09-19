@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40907720965647e076c6b516f1c2de9f1d3f9edb
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 089fe435c86b524acc41ba528452d93032d1b1a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850565"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214492"
 ---
 # <a name="colechangeicondialog-class"></a>COleChangeIconDialog-Klasse
 Wird für das OLE-Dialogfeld "Symbol ändern" verwendet.  
@@ -67,7 +67,7 @@ class COleChangeIconDialog : public COleDialog
 ## <a name="remarks"></a>Hinweise  
  Erstellen Sie ein Objekt der Klasse `COleChangeIconDialog` Wenn das Dialogfeld aufgerufen werden soll. Nach einer `COleChangeIconDialog` -Objekts wird, können Sie mit der [M_ci](#m_ci) Struktur zum Initialisieren der Werte oder Zustände von Steuerelementen im Dialogfeld. Die `m_ci` Struktur des Typs OLEUICHANGEICON ist. Weitere Informationen zur Verwendung dieser Dialogfeldklasse finden Sie unter den [DoModal](#domodal) Member-Funktion.  
   
- Weitere Informationen finden Sie unter den [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) Struktur im Windows SDK.  
   
  Weitere Informationen zu OLE-spezifische Dialogfelder, finden Sie im Artikel [Dialogfelder in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -122,7 +122,7 @@ explicit COleChangeIconDialog(
 ### <a name="remarks"></a>Hinweise  
  Um das Dialogfeld anzuzeigen, rufen die [DoModal](#domodal) Funktion.  
   
- Weitere Informationen finden Sie unter den [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) Struktur im Windows SDK.  
   
 ##  <a name="dochangeicon"></a>  COleChangeIconDialog::DoChangeIcon  
  Mit dieser Funktion können Sie das Symbol für das Element, nachdem Sie im Dialogfeld ausgewählte ändern [DoModal](#domodal) IDOK zurückgibt.  
@@ -152,7 +152,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL, wenn der Benutzer das Dialogfeld abgebrochen hat.  
   
-- IDABORT, wenn ein Fehler aufgetreten. Wenn IDABORT zurückgegeben wird, rufen Sie die `COleDialog::GetLastError` Memberfunktion, um weitere Informationen zu den Typ des Fehlers zu erhalten, die aufgetreten sind. Eine Liste der möglichen Fehler, finden Sie unter den [OleUIChangeIcon](http://msdn.microsoft.com/library/windows/desktop/ms688307) -Funktion in das Windows SDK.  
+- IDABORT, wenn ein Fehler aufgetreten. Wenn IDABORT zurückgegeben wird, rufen Sie die `COleDialog::GetLastError` Memberfunktion, um weitere Informationen zu den Typ des Fehlers zu erhalten, die aufgetreten sind. Eine Liste der möglichen Fehler, finden Sie unter den [OleUIChangeIcon](/windows/desktop/api/oledlg/nf-oledlg-oleuichangeicona) -Funktion in das Windows SDK.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie die verschiedenen Dialogfeldsteuerelemente zu initialisieren, indem Sie Mitglieder festlegen möchten die [M_ci](#m_ci) Struktur, sollten Sie dies tun, vor dem Aufruf `DoModal`, allerdings nachdem das Dialogfeldobjekt erstellt wird.  
@@ -179,7 +179,7 @@ OLEUICHANGEICON m_ci;
 ### <a name="remarks"></a>Hinweise  
  Mitglieder dieser Struktur können entweder direkt oder über Memberfunktionen geändert werden.  
   
- Weitere Informationen finden Sie unter den [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) Struktur im Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [COleDialog-Klasse](../../mfc/reference/coledialog-class.md)   

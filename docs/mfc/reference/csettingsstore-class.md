@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48bc0f76ce5b8b3c1bafe3fcd0d6d793a217ae63
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: c1cd37ee2ad7fe09e2838d5e3cecb3488594d2c9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849691"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706627"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 Kapselt Windows-API-Funktionen und stellt eine objektorientierte Schnittstelle für den Zugriff auf die Registrierung bereit.  
@@ -102,8 +102,8 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *PszPath*  
- Gibt den Namen eines Schlüssels erstellt oder geöffnet werden.  
+*pszPath*<br/>
+[in] Gibt den Namen eines Schlüssels erstellt oder geöffnet werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  0, wenn erfolgreich; andernfalls ein Wert ungleich NULL.  
@@ -121,16 +121,16 @@ CSettingsStore(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAdminpfad*  
- Boolescher Parameter, der angibt, ob die `CSettingsStore` Objekt dient, im Administratormodus.  
+*bAdminpfad*<br/>
+[in] Boolescher Parameter, der angibt, ob die `CSettingsStore` Objekt dient, im Administratormodus.  
   
- [in] *bReadOnly*  
- Boolescher Parameter, der angibt, ob die `CSettingsStore` Objekt wird in nur-Lese Modus erstellt.  
+*bReadOnly*<br/>
+[in] Boolescher Parameter, der angibt, ob die `CSettingsStore` Objekt wird in nur-Lese Modus erstellt.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn *bAdminpfad* ist auf TRUE festgelegt, die `m_hKey` Membervariable nastaven NA hodnotu **HKEY_LOCAL_MACHINE**. Setzen Sie *bAdminpfad* auf "FALSE" `m_hKey` nastaven NA hodnotu **HKEY_CURRENT_USER**.  
   
- Hängt von der Sicherheitszugriff der *bReadOnly* Parameter. Wenn *bReadonly* ist "false", der Sicherheitszugriff auf gesetzt **KEY_ALL_ACCESS**. Wenn *bReadyOnly* TRUE ist, wird eine Kombination aus der Sicherheitszugriff festgelegt **KEY_QUERY_VALUE, KEY_NOTIFY** und **KEY_ENUMERATE_SUB_KEYS nicht**. Weitere Informationen zu den Sicherheitszugriff, zusammen mit der Registrierung, finden Sie unter [Schlüssel Registrierungssicherheit und Zugriffsrechte](http://msdn.microsoft.com/library/windows/desktop/ms724878).  
+ Hängt von der Sicherheitszugriff der *bReadOnly* Parameter. Wenn *bReadonly* ist "false", der Sicherheitszugriff auf gesetzt **KEY_ALL_ACCESS**. Wenn *bReadyOnly* TRUE ist, wird eine Kombination aus der Sicherheitszugriff festgelegt **KEY_QUERY_VALUE, KEY_NOTIFY** und **KEY_ENUMERATE_SUB_KEYS nicht**. Weitere Informationen zu den Sicherheitszugriff, zusammen mit der Registrierung, finden Sie unter [Schlüssel Registrierungssicherheit und Zugriffsrechte](/windows/desktop/SysInfo/registry-key-security-and-access-rights).  
   
  Der Destruktor für `CSettingsStore` frei `m_hKey` automatisch.  
   
@@ -144,11 +144,11 @@ virtual BOOL DeleteKey(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *PszPath*  
- Der Name des Schlüssels, der gelöscht werden soll.  
+*pszPath*<br/>
+[in] Der Name des Schlüssels, der gelöscht werden soll.  
   
- [in] *bAdminpfad*  
- Der Schalter, der angibt, den Speicherort des Schlüssels zu löschen.  
+*bAdminpfad*<br/>
+[in] Der Schalter, der angibt, den Speicherort des Schlüssels zu löschen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -166,8 +166,8 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *PszValue*  
- Gibt das Wertfeld "zu entfernen.  
+*pszValue*<br/>
+[in] Gibt das Wertfeld "zu entfernen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -180,8 +180,8 @@ virtual BOOL Open(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *PszPath*  
- Der Name eines Registrierungsschlüssels.  
+*pszPath*<br/>
+[in] Der Name eines Registrierungsschlüssels.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -265,53 +265,53 @@ virtual BOOL Read(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *PszKey*  
- Zeiger auf eine Null-terminierte Zeichenfolge mit dem Namen des Werts, der aus der Registrierung gelesen.  
+*pszKey*<br/>
+[in] Zeiger auf eine Null-terminierte Zeichenfolge mit dem Namen des Werts, der aus der Registrierung gelesen.  
   
- [out] *iVal*  
- Verweis auf eine ganzzahlige Variable, die empfängt den Wert aus dem Registrierungsschlüssel zu lesen.  
+*iVal*<br/>
+[out] Verweis auf eine ganzzahlige Variable, die empfängt den Wert aus dem Registrierungsschlüssel zu lesen.  
   
- [out] *DwVal*  
- Verweis auf eine 32-Bit-Doppelwort-Variable, die empfängt den Wert aus dem Registrierungsschlüssel zu lesen.  
+*dwVal*<br/>
+[out] Verweis auf eine 32-Bit-Doppelwort-Variable, die empfängt den Wert aus dem Registrierungsschlüssel zu lesen.  
   
- [out] *sVal*  
- Verweis auf eine String-Variable, die empfängt den Wert aus dem Registrierungsschlüssel zu lesen.  
+*sVal*<br/>
+[out] Verweis auf eine String-Variable, die empfängt den Wert aus dem Registrierungsschlüssel zu lesen.  
   
- [out] *ScStringList*  
- Verweis auf eine Zeichenfolgenvariable in der Liste ein, die empfängt den Wert aus dem Registrierungsschlüssel zu lesen.  
+*scStringList*<br/>
+[out] Verweis auf eine Zeichenfolgenvariable in der Liste ein, die empfängt den Wert aus dem Registrierungsschlüssel zu lesen.  
   
- [out] *ScArray*  
- Verweis auf eine String-Array-Variable, die empfängt den Wert aus dem Registrierungsschlüssel zu lesen.  
+*scArray*<br/>
+[out] Verweis auf eine String-Array-Variable, die empfängt den Wert aus dem Registrierungsschlüssel zu lesen.  
   
- [out] *DwcArray*  
- Verweis auf eine 32-Bit-Doppelwort-Array-Variable, die empfängt den Wert aus dem Registrierungsschlüssel zu lesen.  
+*dwcArray*<br/>
+[out] Verweis auf eine 32-Bit-Doppelwort-Array-Variable, die empfängt den Wert aus dem Registrierungsschlüssel zu lesen.  
   
- [out] *WcArray*  
- Verweis auf eine 16-Bit-Wort-Array-Variable, die empfängt den Wert aus dem Registrierungsschlüssel zu lesen.  
+*wcArray*<br/>
+[out] Verweis auf eine 16-Bit-Wort-Array-Variable, die empfängt den Wert aus dem Registrierungsschlüssel zu lesen.  
   
- [out] *BcArray*  
- Verweis auf einen Byte-Array-Variable, die empfängt den Wert aus dem Registrierungsschlüssel zu lesen.  
+*bcArray*<br/>
+[out] Verweis auf einen Byte-Array-Variable, die empfängt den Wert aus dem Registrierungsschlüssel zu lesen.  
   
- [out] *LpPoint*  
- Verweis auf einen Zeiger auf eine `POINT` -Struktur, den Wert empfängt, aus dem Registrierungsschlüssel zu lesen.  
+*lpPoint*<br/>
+[out] Verweis auf einen Zeiger auf eine `POINT` -Struktur, den Wert empfängt, aus dem Registrierungsschlüssel zu lesen.  
   
- [out] *Rect*  
- Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) -Variable, den Wert empfängt, aus dem Registrierungsschlüssel zu lesen.  
+*Rect*<br/>
+[out] Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) -Variable, den Wert empfängt, aus dem Registrierungsschlüssel zu lesen.  
   
- [out] *PpData*  
- Zeiger auf einen Zeiger auf Daten, die empfängt den Wert aus dem Registrierungsschlüssel lesen.  
+*ppData*<br/>
+[out] Zeiger auf einen Zeiger auf Daten, die empfängt den Wert aus dem Registrierungsschlüssel lesen.  
   
- [out] *pBytes*  
- Zeiger auf die Variable eine ganze Zahl ohne Vorzeichen. Diese Variable empfängt die Größe des Puffers, *PpData* verweist auf.  
+*pBytes*<br/>
+[out] Zeiger auf die Variable eine ganze Zahl ohne Vorzeichen. Diese Variable empfängt die Größe des Puffers, *PpData* verweist auf.  
   
- [out] *Liste*  
- Ein Verweis auf eine [CObList](../../mfc/reference/coblist-class.md) -Variable, den Wert empfängt, aus dem Registrierungsschlüssel zu lesen.  
+*list*<br/>
+[out] Ein Verweis auf eine [CObList](../../mfc/reference/coblist-class.md) -Variable, den Wert empfängt, aus dem Registrierungsschlüssel zu lesen.  
   
- [out] *Obj*  
- Ein Verweis auf eine [CObject](../../mfc/reference/cobject-class.md) -Variable, den Wert empfängt, aus dem Registrierungsschlüssel zu lesen.  
+*obj*<br/>
+[out] Ein Verweis auf eine [CObject](../../mfc/reference/cobject-class.md) -Variable, den Wert empfängt, aus dem Registrierungsschlüssel zu lesen.  
   
- [out] *pObj*  
- Verweis auf einen Zeiger auf eine `CObject` -Variable, den Wert empfängt, aus dem Registrierungsschlüssel zu lesen.  
+*pObj*<br/>
+[out] Verweis auf einen Zeiger auf eine `CObject` -Variable, den Wert empfängt, aus dem Registrierungsschlüssel zu lesen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -395,53 +395,53 @@ virtual BOOL Write(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *PszKey*  
- Zeiger auf eine Zeichenfolge, die den Namen der den festzulegenden Wert enthält.  
+*pszKey*<br/>
+[in] Zeiger auf eine Zeichenfolge, die den Namen der den festzulegenden Wert enthält.  
   
- [in] *iVal*  
- Verweis auf eine ganzzahlige Variable, die die zu speichernden Daten enthält.  
+*iVal*<br/>
+[in] Verweis auf eine ganzzahlige Variable, die die zu speichernden Daten enthält.  
   
- [in] *DwVal*  
- Verweis auf eine 32-Bit-Doppelwort-Variable, die zu speichernden Daten enthält.  
+*dwVal*<br/>
+[in] Verweis auf eine 32-Bit-Doppelwort-Variable, die zu speichernden Daten enthält.  
   
- [in] *PszVal*  
- Zeiger auf eine Null-terminierte Zeichenfolge-Variable, die zu speichernden Daten enthält.  
+*pszVal*<br/>
+[in] Zeiger auf eine Null-terminierte Zeichenfolge-Variable, die zu speichernden Daten enthält.  
   
- [in] *ScStringList*  
- Ein Verweis auf eine [CStringList](../../mfc/reference/cstringlist-class.md) Variable, die die zu speichernden Daten enthält.  
+*scStringList*<br/>
+[in] Ein Verweis auf eine [CStringList](../../mfc/reference/cstringlist-class.md) Variable, die die zu speichernden Daten enthält.  
   
- [in] *BcArray*  
- Verweis auf eine Byte-Array-Variable, die zu speichernden Daten enthält.  
+*bcArray*<br/>
+[in] Verweis auf eine Byte-Array-Variable, die zu speichernden Daten enthält.  
   
- [in] *ScArray*  
- Verweis auf eine String-Array-Variable, die die zu speichernden Daten enthält.  
+*scArray*<br/>
+[in] Verweis auf eine String-Array-Variable, die die zu speichernden Daten enthält.  
   
- [in] *DwcArray*  
- Verweis auf eine 32-Bit-Doppelwort-Array-Variable, die zu speichernden Daten enthält.  
+*dwcArray*<br/>
+[in] Verweis auf eine 32-Bit-Doppelwort-Array-Variable, die zu speichernden Daten enthält.  
   
- [in] *WcArray*  
- Verweis auf eine 16-Bit-Wort-Array-Variable, die zu speichernden Daten enthält.  
+*wcArray*<br/>
+[in] Verweis auf eine 16-Bit-Wort-Array-Variable, die zu speichernden Daten enthält.  
   
- [in] *Rect*  
- Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Variable, die die zu speichernden Daten enthält.  
+*Rect*<br/>
+[in] Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Variable, die die zu speichernden Daten enthält.  
   
- [in] *LpPoint*  
- Verweis auf einen Zeiger auf eine `POINT` Variable, die die zu speichernden Daten enthält.  
+*lpPoint*<br/>
+[in] Verweis auf einen Zeiger auf eine `POINT` Variable, die die zu speichernden Daten enthält.  
   
- [in] *pData*  
- Zeiger auf einen Puffer, der die zu speichernden Daten enthält.  
+*pData*<br/>
+[in] Zeiger auf einen Puffer, der die zu speichernden Daten enthält.  
   
- [in] *nBytes*  
- Gibt die Größe in Bytes der Daten, die die *pData* -Parameter zeigt.  
+*nBytes*<br/>
+[in] Gibt die Größe in Bytes der Daten, die die *pData* -Parameter zeigt.  
   
- [in] *Liste*  
- Ein Verweis auf eine [CObList](../../mfc/reference/coblist-class.md) Variable, die die zu speichernden Daten enthält.  
+*list*<br/>
+[in] Ein Verweis auf eine [CObList](../../mfc/reference/coblist-class.md) Variable, die die zu speichernden Daten enthält.  
   
- [in] *Obj*  
- Ein Verweis auf eine [CObject](../../mfc/reference/cobject-class.md) Variable, die die zu speichernden Daten enthält.  
+*obj*<br/>
+[in] Ein Verweis auf eine [CObject](../../mfc/reference/cobject-class.md) Variable, die die zu speichernden Daten enthält.  
   
- [in] *pObj*  
- Zeiger auf einen Zeiger auf eine `CObject` Variable, die die zu speichernden Daten enthält.  
+*pObj*<br/>
+[in] Zeiger auf einen Zeiger auf eine `CObject` Variable, die die zu speichernden Daten enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn erfolgreich, andernfalls FALSE.  

@@ -124,17 +124,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d61c5698a0ad9d6eb2c13edc6147b757a86f20e9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 55233bb264231c3ddfd286a8f3d29883ed185a15
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850169"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711177"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel-Klasse
 Implementiert einen Bereich, der eine Anzahl von Menübandelementen enthält. Wenn der Bereich gezeichnet wird, werden darin so viele Elemente wie möglich angezeigt.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
  
   
 ## <a name="syntax"></a>Syntax  
@@ -235,8 +235,8 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in, out] *pElem*  
- Zeiger auf ein Menübandelement.  
+*pElem*<br/>
+[in, out] Zeiger auf ein Menübandelement.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -262,17 +262,17 @@ UINT uiDisabledResID = 0);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiToolbarResID*  
- Gibt an, die Ressourcen-ID der Symbolleiste hinzufügen.  
+*uiToolbarResID*<br/>
+[in] Gibt an, die Ressourcen-ID der Symbolleiste hinzufügen.  
   
- [in] *UiColdResID*  
- Gibt die Ressourcen-ID, der die inaktiven Symbolleistenbilder an.  
+*uiColdResID*<br/>
+[in] Gibt die Ressourcen-ID, der die inaktiven Symbolleistenbilder an.  
   
- [in] *UiHotResID*  
- Gibt die Ressourcen-ID der Symbolleiste auf die hervorgehobenen Bilder an.  
+*uiHotResID*<br/>
+[in] Gibt die Ressourcen-ID der Symbolleiste auf die hervorgehobenen Bilder an.  
   
- [in] *UiDisabledResID*  
- Gibt die Ressourcen-ID der deaktivierten Symbolleistenbilder an.  
+*uiDisabledResID*<br/>
+[in] Gibt die Ressourcen-ID der deaktivierten Symbolleistenbilder an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Rufen Sie diese Methode, um eine Symbolleiste zum Menübandbereich hinzufügen. Die Symbolleiste wird neben der Multifunktionsleisten-Element hinzugefügt, die vom vorherigen Aufruf von hinzugefügt [cmfcribbonpanel:: Add](#add).  
@@ -292,14 +292,14 @@ CMFCRibbonPanel(CMFCRibbonGallery* pPaletteButton);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Wert*  
- Der Name des im Menübandbereich.  
+*Wert*<br/>
+[in] Der Name des im Menübandbereich.  
   
- [in] *hIcon*  
- Handle für das Symbol als Standardschaltfläche des Menüband-Panels.  
+*hIcon*<br/>
+[in] Handle für das Symbol als Standardschaltfläche des Menüband-Panels.  
   
- [in] *pPaletteButton*  
- Zeiger auf ein Menüband für den Menübandbereich.  
+*pPaletteButton*<br/>
+[in] Zeiger auf ein Menüband für den Menübandbereich.  
   
 ##  <a name="findbydata"></a>  CMFCRibbonPanel::FindByData  
  Ruft die Menübandelement, das die angegebenen Daten zugeordnet ist.  
@@ -309,8 +309,8 @@ CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwData*  
- Die Daten, die ein Menübandelement zugeordnet wird.  
+*dwData*<br/>
+[in] Die Daten, die ein Menübandelement zugeordnet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf ein Menübandelement, wenn die Methode erfolgreich war; andernfalls NULL.  
@@ -325,8 +325,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmdID*  
- Die Befehls-ID von einem Menübandelement.  
+*uiCmdID*<br/>
+[in] Die Befehls-ID von einem Menübandelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Multifunktionsleisten-Element, das durch die angegebene Befehls-ID gekennzeichnet ist; andernfalls NULL, wenn keine Multifunktionsleisten-Element mit der angegebenen Befehls-ID identifiziert wird  
@@ -397,8 +397,8 @@ CMFCRibbonBaseElement* GetElement(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Gibt an, der nullbasierte Index des abzurufenden Elements.  
+*nIndex*<br/>
+[in] Gibt an, der nullbasierte Index des abzurufenden Elements.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein gültiger Zeiger auf die Basis Menübandelement befindet sich an der Position *nIndex* im Menübandbereich oder NULL, wenn kein Element am angegebenen Index vorhanden ist.  
@@ -411,8 +411,8 @@ void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arEleme
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *ArElements*  
- Ein Array mit alle Menübandelemente zu füllen, die in der Menübandbereich enthalten sind.  
+*arElements*<br/>
+[out] Ein Array mit alle Menübandelemente zu füllen, die in der Menübandbereich enthalten sind.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -426,11 +426,11 @@ CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmdID*  
- Befehls-ID für ein Menübandelement.  
+*uiCmdID*<br/>
+[in] Befehls-ID für ein Menübandelement.  
   
- [in] *ArElements*  
- Ein Array von Menübandelementen.  
+*arElements*<br/>
+[in] Ein Array von Menübandelementen.  
   
 ### <a name="remarks"></a>Hinweise  
  Nur Menübandelemente, die in der Menübandbereich enthalten sind, werden getestet.  
@@ -455,8 +455,8 @@ virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pElem*  
- Zeiger auf ein Menübandelement.  
+*pElem*<br/>
+[in] Zeiger auf ein Menübandelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Nullbasierte Index des angegebenen Menübandelements, wenn die Methode erfolgreich war, andernfalls andernfalls -1.  
@@ -471,8 +471,8 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *mit*  
- Die Liste der Befehls-IDs für Menübandelemente, die in der Menübandbereich enthalten sind.  
+*Mit*<br/>
+[out] Die Liste der Befehls-IDs für Menübandelemente, die in der Menübandbereich enthalten sind.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -528,8 +528,8 @@ virtual BOOL GetPreferedMenuLocation(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *Rect*  
- Dieser Parameter wird nicht verwendet.  
+*Rect*<br/>
+[out] Dieser Parameter wird nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt immer "false" zurück.  
@@ -569,8 +569,8 @@ BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pElem*  
- Zeiger auf ein Menübandelement.  
+*pElem*<br/>
+[in] Zeiger auf ein Menübandelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Menübandbereich der angegebenen Multifunktionsleisten-Element enthält. andernfalls "false".  
@@ -587,11 +587,11 @@ CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bHighlight*  
- TRUE, wenn der Menübandbereich zu markieren; FALSE, wenn der Menübandbereich unhighlight.  
+*bHighlight*<br/>
+[in] TRUE, wenn der Menübandbereich zu markieren; FALSE, wenn der Menübandbereich unhighlight.  
   
- [in] *zeigen*  
- Die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.  
+*Zeigen Sie*<br/>
+[in] Die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -605,11 +605,11 @@ BOOL bCheckPanelCaption = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.  
+*Zeigen Sie*<br/>
+[in] Die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.  
   
- [in] *bCheckPanelCaption*  
- True, um die Multifunktionsleiste bereichsbeschriftung zu testen. andernfalls "false".  
+*bCheckPanelCaption*<br/>
+[in] True, um die Multifunktionsleiste bereichsbeschriftung zu testen. andernfalls "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf ein Menübandelement, wenn der angegebene Punkt darin befindet; andernfalls NULL.  
@@ -625,8 +625,8 @@ virtual int HitTestEx(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.  
+*Zeigen Sie*<br/>
+[in] Die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index des Menübandelements, die den angegebenen Punkt befindet sich andernfalls andernfalls -1.  
@@ -644,11 +644,11 @@ int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in, out] *pElem*  
- Zeiger auf ein Menübandelement.  
+*pElem*<br/>
+[in, out] Zeiger auf ein Menübandelement.  
   
- [in] *nIndex*  
- Nullbasierter Wert von-1 bis hin zu die Anzahl der Menübandelemente, die im Array enthalten sind.  
+*nIndex*<br/>
+[in] Nullbasierter Wert von-1 bis hin zu die Anzahl der Menübandelemente, die im Array enthalten sind.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Menübandelement erfolgreich eingefügt wurden. andernfalls "false".  
@@ -664,8 +664,8 @@ virtual BOOL InsertSeparator(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Gibt an, der nullbasierte Index, an das Trennzeichen eingefügt wird.  
+*nIndex*<br/>
+[in] Gibt an, der nullbasierte Index, an das Trennzeichen eingefügt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Trennzeichen erfolgreich eingefügt wurde. andernfalls "false".  
@@ -769,11 +769,11 @@ int nHeight);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Zeiger auf einen Gerätekontext für das Menüband-Panel.  
+*pDC*<br/>
+[in] Zeiger auf einen Gerätekontext für das Menüband-Panel.  
   
- [in] *nHeight*  
- Die Höhe der im Menübandbereich.  
+*nHeight*<br/>
+[in] Die Höhe der im Menübandbereich.  
   
 ### <a name="remarks"></a>Hinweise  
  Ein Menübandbereich ändert die Layout-Konfiguration, die verfügbare Breite geändert.  
@@ -788,11 +788,11 @@ BOOL bDelete = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Gibt an, der nullbasierte Index des Elements, das aus der Menübandbereich entfernt wird.  
+*nIndex*<br/>
+[in] Gibt an, der nullbasierte Index des Elements, das aus der Menübandbereich entfernt wird.  
   
- [in] *bLöschen*  
- True, um das entfernte Element zu löschen. andernfalls "false".  
+*bLöschen*<br/>
+[in] True, um das entfernte Element zu löschen. andernfalls "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn das Element entfernt und gelöscht wurde (Wenn *bLöschen* ist "true"); FALSE, wenn das Element nicht entfernt wurde oder es ist keine Multifunktionsleisten-Element unter *nIndex*.  
@@ -820,8 +820,8 @@ CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Gibt an, der nullbasierte Index des zu ersetzenden Elements.  
+*nIndex*<br/>
+[in] Gibt an, der nullbasierte Index des zu ersetzenden Elements.  
   
  [in] [out] *pElem*  
  Ein gültiger Zeiger auf das Element, das das ursprüngliche Element ersetzt werden soll.  
@@ -842,8 +842,8 @@ CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmdID*  
- Gibt an, die Befehls-ID des Elements ersetzt.  
+*uiCmdID*<br/>
+[in] Gibt an, die Befehls-ID des Elements ersetzt.  
   
  [in] [out] *pElem*  
  Ein gültiger Zeiger auf das Element, das das ursprüngliche Element ersetzt wird.  
@@ -862,8 +862,8 @@ void SetCenterColumnVert(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bSet*  
- TRUE, um die vertikale Position von Menübandelemente in ihre Anzeigerechteck center; So deaktivieren Sie dieses Feature wird false ZURÜCKGEGEBEN.  
+*bSet*<br/>
+[in] TRUE, um die vertikale Position von Menübandelemente in ihre Anzeigerechteck center; So deaktivieren Sie dieses Feature wird false ZURÜCKGEGEBEN.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -875,8 +875,8 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwData*  
- Gibt die benutzerdefinierten Daten festlegen.  
+*dwData*<br/>
+[in] Gibt die benutzerdefinierten Daten festlegen.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um benutzerdefinierte Daten im Menübandbereich zuordnen.  
@@ -900,20 +900,20 @@ BOOL bRightAlign = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmdID*  
- Gibt an, die Befehls-ID des Menübandelements, wo Sie im Menü hinzugefügt wird.  
+*uiCmdID*<br/>
+[in] Gibt an, die Befehls-ID des Menübandelements, wo Sie im Menü hinzugefügt wird.  
   
- [in] *hMenu*  
- Gibt das Handle für das Windows-Menü zum Menübandbereich hinzufügen.  
+*hMenu*<br/>
+[in] Gibt das Handle für das Windows-Menü zum Menübandbereich hinzufügen.  
   
- [in] *bIsDefautCommand*  
- "True", um anzugeben, dass die Multifunktionsleisten-Element zugeordnete Befehl ausgeführt werden soll, wenn die Multifunktionsleisten-Element geklickt wird. In diesem Fall wird das Menü nur geöffnet, klickt der Benutzer auf den Pfeil neben der Multifunktionsleisten-Element. "False", um anzugeben, dass die Multifunktionsleisten-Element zugeordnete Befehl nicht ausgeführt werden soll, wenn die Multifunktionsleisten-Element geklickt wird. In diesem Fall wird im Popupmenü angezeigt, unabhängig davon, wo der Benutzer auf das Element klickt.  
+*bIsDefautCommand*<br/>
+[in] "True", um anzugeben, dass die Multifunktionsleisten-Element zugeordnete Befehl ausgeführt werden soll, wenn die Multifunktionsleisten-Element geklickt wird. In diesem Fall wird das Menü nur geöffnet, klickt der Benutzer auf den Pfeil neben der Multifunktionsleisten-Element. "False", um anzugeben, dass die Multifunktionsleisten-Element zugeordnete Befehl nicht ausgeführt werden soll, wenn die Multifunktionsleisten-Element geklickt wird. In diesem Fall wird im Popupmenü angezeigt, unabhängig davon, wo der Benutzer auf das Element klickt.  
   
- [in] *bRightAlign*  
- True, um anzugeben, dass das Popupmenü rechts ausgerichtet wird. andernfalls "false".  
+*bRightAlign*<br/>
+[in] True, um anzugeben, dass das Popupmenü rechts ausgerichtet wird. andernfalls "false".  
   
- [in] *UiMenuResID*  
- Gibt an, die Ressourcen-ID des Menüs zum Menübandbereich hinzufügen.  
+*uiMenuResID*<br/>
+[in] Gibt an, die Ressourcen-ID des Menüs zum Menübandbereich hinzufügen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn Sie im Menü auf das Menübandelement zugewiesen wurde. andernfalls "false".  
@@ -931,8 +931,8 @@ CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Gibt an, der nullbasierte Index des Menübandelements hinzufügen.  
+*nIndex*<br/>
+[in] Gibt an, der nullbasierte Index des Menübandelements hinzufügen.  
   
  [in] [out] *pRTC*  
  Ein Zeiger auf die laufzeitklasseninformationen für das Menübandelement, das zum Menübandbereich hinzugefügt wird.  
@@ -953,8 +953,8 @@ CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmdID*  
- Gibt an, die Befehls-ID des Menübandelements hinzufügen.  
+*uiCmdID*<br/>
+[in] Gibt an, die Befehls-ID des Menübandelements hinzufügen.  
   
  [in] [out] *pRTC*  
  Ein Zeiger auf die laufzeitklasseninformationen Zusammenhang mit der Multifunktionsleisten-Element, das zum Menübandbereich hinzugefügt wird.  
@@ -999,8 +999,8 @@ void SetJustifyColumns(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bSet*  
- True, um die Breite des Menübandelemente in der gleichen Spalte an die Breite des größten Menübandelements in der Spalte anzupassen. So deaktivieren Sie diese Anpassung der Breite wird false ZURÜCKGEGEBEN.  
+*bSet*<br/>
+[in] True, um die Breite des Menübandelemente in der gleichen Spalte an die Breite des größten Menübandelements in der Spalte anzupassen. So deaktivieren Sie diese Anpassung der Breite wird false ZURÜCKGEGEBEN.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn diese Funktion in einem Menübandbereich aktiviert ist, werden die Breiten der Menübandelemente in der gleichen Spalte an die Breite des größten Elements in der gleichen Spalte Multifunktionsleiste angepasst.  
@@ -1013,8 +1013,8 @@ void SetKeys(LPCTSTR lpszKeys);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszKeys*  
- Die Keytip für die Standardschaltfläche des Menüband-Bereichs.  
+*lpszKeys*<br/>
+[in] Die Keytip für die Standardschaltfläche des Menüband-Bereichs.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Schaltfläche "Standard" wird angezeigt, wenn es sich bei ein Menübandbereich genügend Speicherplatz, um alle Menübandelemente anzuzeigen ist.  
@@ -1027,8 +1027,8 @@ CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pButton*  
- Zeiger auf die Standardschaltfläche des Menüband-Panels.  
+*pButton*<br/>
+[in] Zeiger auf die Standardschaltfläche des Menüband-Panels.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf das Popup-Menü für das Menüband-Panel, wenn die Methode erfolgreich war; andernfalls NULL.  

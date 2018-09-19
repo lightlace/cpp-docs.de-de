@@ -1,5 +1,5 @@
 ---
-title: Hash_set (STL/CLR) | Microsoft Docs
+title: Hash_set (STL/CLR) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -105,21 +105,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9c701bfa64e96594050ddaf46d56c12849a0ad30
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 041f4ef77872bad4ed7177c6ae36187b6035de7f
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079747"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376276"
 ---
 # <a name="hashset-stlclr"></a>hash_set (STL/CLR)
-Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge steuert, die bidirektionalen Zugriff hat. Verwenden Sie den Container `hash_set` zum Verwalten einer Sequenz von Elementen als Hashtabelle verknüpft jeder Tabelleneintrag speichern eine bidirektionale Liste der Knoten, und jeder Knoten ein Element speichern kann. Der Wert jedes Element wird als Schlüssel für die Anordnung der Sequenz verwendet.  
+Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge Sequenz von Elementen steuert, die bidirektionalen Zugriff hat. Verwenden Sie den Container `hash_set` zum Verwalten einer Sequenz von Elementen als Hashtabelle verknüpften jeder Tabelleneintrag, der einen bidirektionalen speichern Liste von Knoten und jeder Knoten ein Element zu speichern. Der Wert jedes Elements wird als Schlüssel für die Sortierung der Sequenz verwendet.  
   
- In der folgenden Beschreibung `GValue` ist identisch mit `GKey`, die wiederum ist identisch mit `Key` , wenn die zweite Datei einen Ref-Typ ist, in diesem Fall wird `Key^`.  
+ In der folgenden Beschreibung `GValue` ist identisch mit `GKey`, die wiederum ist identisch mit *Schlüssel* , wenn die zweite ein Ref-Typ ist, in diesem Fall ist es `Key^`.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template<typename Key>  
     ref class hash_set  
         :   public  
@@ -134,11 +134,11 @@ template<typename Key>
 ```  
   
 ### <a name="parameters"></a>Parameter  
- Key  
- Der Typ, der die zentrale Komponente eines Elements in der kontrollierten Sequenz.  
+ *Key*  
+ Der Typ der Schlüsselkomponente eines Elements in der kontrollierten Sequenz.  
 
 ## <a name="requirements"></a>Anforderungen  
- **Header:** \<Cliext Hash_set/>  
+ **Header:** \<Cliext/Hash_set >  
   
  **Namespace:** Cliext  
 
@@ -149,7 +149,7 @@ template<typename Key>
 |[hash_set::const_iterator (STL/CLR)](#const_iterator)|Der Typ eines konstanten Iterators für die gesteuerte Sequenz.|  
 |[hash_set::const_reference (STL/CLR)](#const_reference)|Der Typ eines konstanten Verweises auf ein Element.|  
 |[hash_set::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Der Typ eines konstanten umgekehrten Iterators für die gesteuerte Sequenz.|  
-|[hash_set::difference_type (STL/CLR)](#difference_type)|Der Typ des Abstands zwischen zwei Elementen (möglicherweise mit Vorzeichen).|  
+|[hash_set::difference_type (STL/CLR)](#difference_type)|Der Typ eines Abstands zwischen den beiden Elementen mit (möglicherweise Vorzeichen).|  
 |[hash_set::generic_container (STL/CLR)](#generic_container)|Der Typ der generischen Schnittstelle für den Container.|  
 |[hash_set::generic_iterator (STL/CLR)](#generic_iterator)|Der Typ eines Iterators für die generische Schnittstelle für den Container.|  
 |[hash_set::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Der Typ eines umgekehrten Iterators für die generische Schnittstelle für den Container.|  
@@ -160,7 +160,7 @@ template<typename Key>
 |[hash_set::key_type (STL/CLR)](#key_type)|Der Typ eines Sortierschlüssels.|  
 |[hash_set::reference (STL/CLR)](#reference)|Der Typ eines Verweises auf ein Element.|  
 |[hash_set::reverse_iterator (STL/CLR)](#reverse_iterator)|Der Typ eines umgekehrten Iterators für die gesteuerte Sequenz.|  
-|[hash_set::size_type (STL/CLR)](#size_type)|Der Typ eines Abstands zwischen zwei Elementen (negativ).|  
+|[hash_set::size_type (STL/CLR)](#size_type)|Der Typ der eine Entfernung (negativ) zwischen zwei Elementen.|  
 |[hash_set::value_compare (STL/CLR)](#value_compare)|Der Delegat für zwei Elementwerte.|  
 |[hash_set::value_type (STL/CLR)](#value_type)|Der Typ eines Elements.|  
   
@@ -169,18 +169,18 @@ template<typename Key>
 |[hash_set::begin (STL/CLR)](#begin)|Legt den Anfang der kontrollierten Sequenz fest.|  
 |[hash_set::bucket_count (STL/CLR)](#bucket_count)|Zählt die Anzahl der Buckets an.|  
 |[hash_set::clear (STL/CLR)](#clear)|Entfernt alle Elemente.|  
-|[hash_set::count (STL/CLR)](#count)|Zählt die Elemente, die einem angegebenen Schlüssel entsprechen.|  
+|[hash_set::count (STL/CLR)](#count)|Zählt Elemente, die einem angegebenen Schlüssel entsprechen.|  
 |[hash_set::empty (STL/CLR)](#empty)|Testet, ob keine Elemente vorhanden sind.|  
 |[hash_set::end (STL/CLR)](#end)|Legt das Ende der kontrollierten Sequenz fest.|  
 |[hash_set::equal_range (STL/CLR)](#equal_range)|Sucht den Bereich, der einem angegebenen Schlüssel entspricht.|  
 |[hash_set::erase (STL/CLR)](#erase)|Entfernt Elemente an den angegebenen Positionen.|  
 |[hash_set::find (STL/CLR)](#find)|Sucht ein Element, das einem angegebenen Schlüssel entspricht.|  
-|[hash_set::hash_delegate (STL/CLR)](#hash_delegate)|Kopiert den hashing Delegaten für einen Schlüssel an.|  
+|[hash_set::hash_delegate (STL/CLR)](#hash_delegate)|Kopiert den Hashalgorithmus Delegaten für einen Schlüssel an.|  
 |[hash_set::hash_set (STL/CLR)](#hash_set)|Erstellt ein container-Objekt.|  
 |[hash_set::insert (STL/CLR)](#insert)|Fügt Elemente hinzu.|  
 |[hash_set::key_comp (STL/CLR)](#key_comp)|Kopiert der Delegat für zwei Schlüssel.|  
 |[hash_set::load_factor (STL/CLR)](#load_factor)|Zählt die durchschnittliche Anzahl von Elementen pro Bucket.|  
-|[hash_set::lower_bound (STL/CLR)](#lower_bound)|Sucht den Anfang des Bereichs, die einem angegebenen Schlüssel entspricht.|  
+|[hash_set::lower_bound (STL/CLR)](#lower_bound)|Sucht den Anfang des Bereichs, der einem angegebenen Schlüssel entspricht.|  
 |[hash_set::make_value (STL/CLR)](#make_value)|Erstellt ein Wertobjekt.|  
 |[hash_set::max_load_factor (STL/CLR)](#max_load_factor)|Ruft die maximale Anzahl von Elementen pro Bucket ab oder legt sie fest.|  
 |[hash_set::rbegin (STL/CLR)](#rbegin)|Legt den Anfang der umgekehrten kontrollierten Sequenz fest.|  
@@ -188,9 +188,9 @@ template<typename Key>
 |[hash_set::rend (STL/CLR)](#rend)|Legt das Ende der umgekehrten kontrollierten Sequenz fest.|  
 |[hash_set::size (STL/CLR)](#size)|Ermittelt die Anzahl von Elementen.|  
 |[hash_set::swap (STL/CLR)](#swap)|Vertauscht den Inhalt von zwei Containern.|  
-|[hash_set::to_array (STL/CLR)](#to_array)|Kopiert die gesteuerte Sequenz in ein neues Array.|  
-|[hash_set::upper_bound (STL/CLR)](#upper_bound)|Sucht nach Ende des Bereichs, die einem angegebenen Schlüssel entspricht.|  
-|[hash_set::value_comp (STL/CLR)](#value_comp)|Der Delegat für zwei Elementwerte wird kopiert.|  
+|[hash_set::to_array (STL/CLR)](#to_array)|Kopiert die kontrollierte Sequenz in ein neues Array.|  
+|[hash_set::upper_bound (STL/CLR)](#upper_bound)|Sucht das Ende des Bereichs, der einem angegebenen Schlüssel entspricht.|  
+|[hash_set::value_comp (STL/CLR)](#value_comp)|Kopiert der Delegat für zwei Elementwerte.|  
   
 |Operator|Beschreibung|  
 |--------------|-----------------|  
@@ -205,40 +205,40 @@ template<typename Key>
 |<xref:System.Collections.ICollection>|Behalten Sie die Gruppe von Elementen.|  
 |<xref:System.Collections.Generic.IEnumerable%601>|Durch die Elemente der typisierte Sequenz.|  
 |<xref:System.Collections.Generic.ICollection%601>|Behalten Sie die Gruppe von typisierten Elementen.|  
-|IHash\<Schlüssel, Wert >|Verwalten von generischen Container.|  
+|IHash\<Schlüssel, Wert >|Behalten Sie die generischen Container.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Objekt weist und Speicherplatz für die Sequenz, die als einzelner Knoten in einer verknüpften Liste des bidirektionalen Steuersoftware frei. Um den Zugriff zu beschleunigen, gibt das Objekt auch ein variabler Länge Array von Zeigern in der Liste (die Hashtabelle), effektive Verwaltung der gesamten Liste als Sequenz von Unterlisten, verwaltet oder buckets. Er fügt Elemente in einem Bucket, die darin geordnete die Links zwischen Knoten sind, nie durch Kopieren den Inhalt eines Knotens zu einem anderen ändern. Bedeutet, dass Sie einfügen können, und Elemente beliebig ohne beunruhigende verbleibenden Elemente entfernen.  
+ Das Objekt belegt und-Freigaben für die Sequenz, die es, wie die einzelnen Knoten im bidirektionale verknüpfte Liste steuert. Um Zugriff zu beschleunigen, gibt das Objekt auch ein variabler Länge-Array von Zeigern in der Liste (Hashtabelle), effektive Verwaltung der gesamten Liste als Sequenz von Unterlisten, verwaltet oder buckets. Er fügt Elemente in einem Bucket, den es geordnete hält, durch die Links zwischen Knoten nie durch Kopieren den Inhalt eines Knotens in ein anderes ändern. Das bedeutet, Sie können einfügen und Entfernen von Elementen ohne störende verbleibenden Elemente frei.  
   
- Das Objekt ordnet jedem Bucket Steuersoftware durch Aufrufen einer gespeicherten Delegatobjekt des Typs [hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Sie können das gespeicherte Delegatobjekt angeben, beim Erstellen von Hash_set; Wenn Sie keine Delegatobjekt angeben, wird der Standardwert ist der Vergleich `operator<=(key_type, key_type)`.  
+ Das Objekt sortiert die jedem Bucket, die es steuert, indem ein Delegatobjekt gespeicherten des Typs aufrufen [hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Sie können das gespeicherte Delegatobjekt angeben, beim Erstellen des Hash_set. Wenn Sie kein Delegatobjekt angeben, wird der Standardwert ist der Vergleich `operator<=(key_type, key_type)`.  
   
- Sie greifen auf das gespeicherte Delegatobjekt durch Aufrufen der Memberfunktion [hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Solche ein Delegatobjekt muss die entsprechende Reihenfolge zwischen Schlüssel vom Typ definieren [hash_set:: KEY_TYPE (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Bedeutet, dass für zwei beliebige Tasten `X` und `Y`:  
+ Sie greifen auf das gespeicherte Delegatobjekt durch Aufrufen der Memberfunktion [hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Solche ein Delegatobjekt muss entsprechende Reihenfolge zwischen den Schlüssel des Typs definieren [hash_set:: KEY_TYPE (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Bedeutet, dass für alle Schlüssel, der zwei `X` und `Y`:  
   
- `key_comp()(X, Y)` Gibt der gleiche booleschen führen bei jedem Aufruf.  
+ `key_comp()(X, Y)` Gibt der gleichen boolesche Ergebnis bei jedem Aufruf.  
   
  Wenn `key_comp()(X, Y) && key_comp()(Y, X)` ist "true", klicken Sie dann `X` und `Y` gelten als die entsprechende Reihenfolge aufweisen.  
   
- Jede Reihenfolge Regel, die sich wie verhält `operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` oder `operator==(key_type, key_type)` Eqivalent Sortierung definiert.  
+ Eine beliebige Sortierung Regel, deren Verhalten `operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` oder `operator==(key_type, key_type)` definiert Eqivalent Reihenfolge.  
   
- Beachten Sie, dass der Container nur wird sichergestellt, dass Elemente, deren Schlüssel die entsprechende Reihenfolge aufweisen (und welche Hash auf den gleichen Wert für ganze Zahl) in einem Bucket nebeneinander angeordnet sind. Im Gegensatz zur Vorlagenklasse [Hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md), ein Objekt der Vorlagenklasse `hash_set` wird sichergestellt, dass der Schlüssel für alle Elemente eindeutig sind. (Keine zwei Schlüssel verfügen, die entsprechende Reihenfolge.)  
+ Beachten Sie, dass der Container nur wird sichergestellt, dass Elemente, deren Schlüssel die entsprechende Reihenfolge aufweisen (und welche Hash mit den gleichen ganzzahligen Wert) in einem Bucket benachbart sind. Im Gegensatz zur Vorlagenklasse [Hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md), ein Objekt der Vorlagenklasse `hash_set` wird sichergestellt, dass der Schlüssel für alle Elemente eindeutig sind. (Keine zwei Schlüssel verfügen, die entsprechende Reihenfolge.)  
   
- Das Objekt bestimmt, welche Bucket einen bestimmten Reihenfolge Schlüssel enthalten soll, durch den Aufruf einer gespeicherten Delegatobjekt des Typs [hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Sie Zugriff auf diesem gespeicherten Objekt durch Aufrufen der Memberfunktion [hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` um einen ganzzahligen Wert zu erhalten, die den Schlüsselwert abhängt. Sie können das gespeicherte Delegatobjekt angeben, beim Erstellen von Hash_set; Wenn Sie keine Delegatobjekt angeben, wird der Standardwert ist die Funktion `System::Object::hash_value(key_type)`. Bedeutet, dass für sämtliche Schlüssel `X` und `Y`:  
+ Das Objekt bestimmt, welchem Bucket einen bestimmten Reihenfolge Schlüssel enthalten soll, durch den Aufruf einer gespeicherten Delegatobjekt des Typs [hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Sie greifen auf diese gespeicherten Objekt durch Aufrufen der Memberfunktion [hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` um einen ganzzahligen Wert zu erhalten, die den Schlüsselwert abhängig. Sie können das gespeicherte Delegatobjekt angeben, beim Erstellen des Hash_set. Wenn Sie kein Delegatobjekt angeben, wird der Standardwert ist die Funktion `System::Object::hash_value(key_type)`. Bedeutet, dass für alle Schlüssel `X` und `Y`:  
   
- `hash_delegate()(X)` Gibt den gleichen Ganzzahlergebnis bei jedem Aufruf zurück.  
+ `hash_delegate()(X)` Gibt das gleiche Ergebnis für die ganze Zahl bei jedem Aufruf zurück.  
   
  Wenn `X` und `Y` haben Sie die entsprechende Reihenfolge, klicken Sie dann `hash_delegate()(X)` sollte dasselbe Ergebnis als ganze Zahl zurückgeben `hash_delegate()(Y)`.  
   
- Jedes Element dient als Schlüssel und Wert. Die Sequenz wird so dargestellt, die ermöglicht Such-, Einfüge- und Entfernung eines beliebigen Elements mit einer Reihen von Vorgängen, die unabhängig von der Anzahl der Elemente in der Sequenz (Konstante Zeit)--mindestens das beste aus Fällen wird. Darüber hinaus führt das Einfügen eines Elements nicht dazu, dass Iteratoren ungültig werden, und durch das Entfernen eines Elements werden nur solche Iteratoren ungültig, die auf das entfernte Element gezeigt haben.  
+ Jedes Element dient als einen Schlüssel und Wert. Die Sequenz wird so dargestellt, die zulässt, Such-, Einfüge- und zum Entfernen eines beliebigen Elements mit einer Anzahl von Vorgängen, die unabhängig von der Anzahl der Elemente in der Sequenz (Konstante Zeit): mindestens das beste der Fälle wird. Darüber hinaus führt das Einfügen eines Elements nicht dazu, dass Iteratoren ungültig werden, und durch das Entfernen eines Elements werden nur solche Iteratoren ungültig, die auf das entfernte Element gezeigt haben.  
   
- Wenn die Hashwerte nicht gleichmäßig verteilt sind, kann jedoch eine Hashtabelle degenerierte. Im Extremfall – für eine Hashfunktion, die immer den gleichen Wert--zurückgibt werden Such-, Einfüge- und Entfernvorgänge proportional zur Anzahl der Elemente in der Sequenz (lineare Zeit). Der Container versucht wird, wählen Sie eine angemessene Hashfunktion, die mittlere Bucketgröße und Hashtabelle Größe (gesamte Anzahl der Buckets), aber Sie können einige oder alle diese Optionen außer Kraft setzen. Anzeigen, z. B. die Funktionen [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md) und [hash_set::rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md).  
+ Wenn die Hashwerte nicht gleichmäßig verteilt sind, kann jedoch eine Hashtabelle geraten. Im Extremfall – für eine Hashfunktion, die immer den gleichen Wert – zurückgibt werden Such-, Einfüge- und Entfernvorgänge proportional zur Anzahl der Elemente in der Sequenz (lineare Zeit). Der Container versucht wird, wählen Sie eine angemessene Hash-Funktion, die mittlere Bucketgröße und Größe der Hashtabelle (Gesamtzahl von Buckets), aber Sie können einige oder alle diese Optionen außer Kraft setzen. Sehen Sie beispielsweise die Funktionen [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md) und [hash_set::rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md).  
   
- Ein hash_set-Element unterstützt bidirektionale Iteratoren, was bedeutet, dass Sie schrittweise können, um benachbarte Elemente, die einen Iterator, der ein Element in der kontrollierten Sequenz angegeben. Ein spezieller Hauptknoten entspricht vom zurückgegebenen Iterator [hash_set:: End (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`. Dieser Iterator für das letzte Element in der kontrollierten Sequenz erreichen können ggf. verringert werden. Sie können einen Hash_set-Iterator für den Hauptknoten erreichen erhöhen und wird dann Vergleichen gleich `end()`. Aber Sie können nicht dereferenziert werden vom zurückgegebenen Iterator `end()`.  
+ Ein hash_set-Element unterstützt bidirektionale Iteratoren, was bedeutet, dass Sie schrittweise können, um benachbarte Elemente, die einen Iterator, der ein Element in der gesteuerten Sequenz angegeben. Ein spezieller Head-Knoten entspricht den von zurückgegeben Iterator [hash_set:: End (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`. Dieser Iterator das letzte Element in der kontrollierten Sequenz, erreichen können ggf. verringert werden. Sie können inkrementieren Sie einen Hash_set-Iterator, um den Head-Knoten zu erreichen, und es wird dann gleich `end()`. Aber Sie können nicht den Iterator zurückgegeben, die von dereferenziert `end()`.  
   
- Beachten Sie, dass Sie auf ein Hash_set-Element, das direkt erhält die numerische Position--, die einen Iterator mit zufälligem Zugriff erfordert verweisen können.  
+ Beachten Sie, dass Sie nicht auf ein Hash_set-Element, das direkt bei der numerischen Position verweisen können, –, der einen Iterator mit zufälligem Zugriff erfordert.  
   
- Ein Iterator Hash_set speichert ein Handle zum Knoten zugeordnete Hash_set, der wiederum ein Handle für den zugehörigen Container speichert. Sie können nur mit ihrer zugeordneten Containerobjekte Iteratoren verwenden. Ein Iterator Hash_set bleibt gültig, solange die Knoten der zugeordneten Hash_set einige Hash_set zugeordnet ist. Darüber hinaus ein gültiger Iterator ist dereferencable – können sie Zugriff haben und den Elementwert, die er festlegt – ändern, solange er nicht gleich `end()`.  
+ Ein Iterator Hash_set speichert ein Handle für den zugeordneten Hash_set-Knoten, der wiederum ein Handle für den zugehörigen Container gespeichert. Sie können Iteratoren nur mit ihren zugehörigen Container-Objekten verwenden. Ein Hash_set-Iterator bleibt gültig, solange Sie der Knoten zugeordneten Hash_set einige Hash_set zugeordnet ist. Darüber hinaus ein gültiger Iterator dereferencable – können sie Zugriff haben und ändern den Wert der Elements festlegt – solange sie nicht gleich ist `end()`.  
   
- Löschen oder Entfernen eines Elements ruft der Destruktor für den gespeicherten Wert. Zerstören von dem Container löscht alle Elemente. Somit wird sichergestellt, dass ein Container, dessen Elementtyp eine Verweisklasse ist, dass keine Elemente den Container Überleben. Beachten Sie jedoch, dass ein Container von Handles ist `not` seine Elemente zu zerstören.  
+ Löschen oder Entfernen eines Elements Ruft den Destruktor für ihren gespeicherten Wert auf. Löschen den Container löscht alle Elemente. Daher wird ein Container, dessen Elementtyp einer Verweisklasse ist, keine Elemente des Containers nicht überdauern. Beachten Sie jedoch, dass ein Container für Handles verfügt *nicht* seine Elemente zerstören.  
   
 ## <a name="members"></a>Member
 
@@ -247,12 +247,12 @@ Legt den Anfang der kontrollierten Sequenz fest.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 iterator begin();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt einen bidirektionalen Iterator, der das erste Element der kontrollierten Sequenz oder direkt hinter das Ende einer leeren Sequenz zurück. Es mit der einen Iterator abrufen, bestimmt die `current` Anfang der kontrollierten Sequenz kann ändern, wenn die Länge der gesteuerten Sequenz geändert wird.  
+ Die Memberfunktion gibt einen bidirektionalen Iterator, der das erste Element der kontrollierten Sequenz oder direkt hinter das Ende einer leeren Sequenz bestimmt. Sie können damit einen Iterator abrufen, bestimmt die `current` Anfang der kontrollierten Sequenz, aber der Status kann ändern, wenn die Länge der kontrollierten Sequenz ändert.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -280,7 +280,6 @@ int main()
     System::Console::WriteLine("*++begin() = {0}", *++it);   
     return (0);   
     }  
-  
 ```  
 
 ## <a name="bucket_count"></a> hash_set::bucket_count (STL/CLR)
@@ -288,12 +287,12 @@ Zählt die Anzahl der Buckets an.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 int bucket_count();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktionen gibt die aktuelle Anzahl von Buckets zurück. Sie können damit um die Größe der Hashtabelle zu bestimmen.  
+ Die Memberfunktion gibt die aktuelle Anzahl von Buckets zurück. Damit können Sie um die Größe der Hashtabelle zu bestimmen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -338,7 +337,6 @@ int main()
         c1.max_load_factor());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -361,12 +359,12 @@ Entfernt alle Elemente.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 void clear();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion ruft tatsächlich [hash_set:: Erase (STL/CLR)](../dotnet/hash-set-erase-stl-clr.md) `(` [hash_set:: begin (STL/CLR)](../dotnet/hash-set-begin-stl-clr.md) `(),` [hash_set:: End (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `())`. Sie verwenden es, um sicherzustellen, dass die kontrollierte Sequenz leer ist.  
+ Die Memberfunktion ruft effektiv [hash_set:: Erase (STL/CLR)](../dotnet/hash-set-erase-stl-clr.md) `(` [hash_set:: begin (STL/CLR)](../dotnet/hash-set-begin-stl-clr.md) `(),` [hash_set:: End (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `())`. Damit können Sie sicherstellen, dass die kontrollierte Sequenz leer ist.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -403,7 +401,6 @@ int main()
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -418,12 +415,12 @@ Der Typ eines konstanten Iterators für die gesteuerte Sequenz.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef T2 const_iterator;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ beschreibt ein Objekt vom angegebenen Typ `T2` , die als einen bidirektionalen Konstanten Iterator für die gesteuerte Sequenz dienen kann.  
+ Der Typ beschreibt ein Objekt vom nicht angegebenen Typ `T2` , das als konstanter bidirektionaler Iterator für die gesteuerte Sequenz fungieren kann.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -447,7 +444,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -459,7 +455,7 @@ Der Typ eines konstanten Verweises auf ein Element.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
@@ -491,7 +487,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -503,12 +498,12 @@ Der Typ eines Konstanten umgekehrten Iterators für die gesteuerte Sequenz...
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef T4 const_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ beschreibt ein Objekt vom angegebenen Typ `T4` , die als Konstanten umgekehrten Iterators für die gesteuerte Sequenz fungieren kann.  
+ Der Typ beschreibt ein Objekt vom nicht angegebenen Typ `T4` , das als konstanter reverse-Iterator für die gesteuerte Sequenz dienen kann.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -532,7 +527,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -544,16 +538,16 @@ Sucht die Anzahl von Elementen, die einem angegebenen Schlüssel entsprechen.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 size_type count(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Key  
+ *key*  
  Der zu suchende Schlüsselwert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt die Anzahl der Elemente in der kontrollierten Sequenz, die über entsprechende Sortierung mit `key`. Es können Sie verwenden, um die Anzahl der Elemente, die derzeit in der gesteuerten Sequenz zu ermitteln, die einen angegebenen Schlüssel entsprechen.  
+ Die Memberfunktion gibt die Anzahl der Elemente zurück, in der kontrollierten Sequenz, die entsprechende Sortierung mit *Schlüssel*. Damit können Sie um die Anzahl der Elemente, die derzeit in der gesteuerten Sequenz zu ermitteln, die einem angegebenen Schlüssel entsprechen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -580,7 +574,6 @@ int main()
     System::Console::WriteLine("count(L'C') = {0}", c1.count(L'C'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -591,16 +584,16 @@ count(L'C') = 0
 ```  
 
 ## <a name="difference_type"></a> hash_set:: difference_type (STL/CLR)
-Die Typen des Abstands mit Vorzeichen zwischen zwei Elementen.  
+Die Typen des Abstands zwischen den beiden Elementen mit Vorzeichen.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ beschreibt ein möglicherweise negativ Elementanzahl.  
+ Der Typ beschreibt eine möglicherweise negative Elementanzahl.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -635,7 +628,6 @@ int main()
     System::Console::WriteLine("begin()-end() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -649,12 +641,12 @@ Testet, ob keine Elemente vorhanden sind.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt „true“ für eine leere gesteuerte Sequenz zurück. Dies ist äquivalent zum [hash_set:: Size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md)`() == 0`. Sie verwenden sie zum Überprüfen, ob das hash_set-Objekt leer ist.  
+ Die Memberfunktion gibt „true“ für eine leere gesteuerte Sequenz zurück. Dies ist äquivalent zum [hash_set:: Size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md)`() == 0`. Damit können Sie überprüfen, ob das Hash_set leer ist.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -684,7 +676,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -700,12 +691,12 @@ Legt das Ende der kontrollierten Sequenz fest.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 iterator end();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt einem bidirektionalen Iterator, der direkt hinter das Ende der kontrollierten Sequenz verweist. Sie können damit einen Iterator abrufen, der das Ende der kontrollierten Sequenz bestimmt; der Status ist nicht nicht geändert werden, wenn die Länge der gesteuerten Sequenz geändert wird.  
+ Die Memberfunktion gibt einem bidirektionalen Iterator, der direkt hinter das Ende der kontrollierten Sequenz verweist. Damit können Sie einen Iterator abrufen, der das Ende der kontrollierten Sequenz bestimmt; der Status verfügt nicht geändert werden, wenn die Länge der kontrollierten Sequenz ändert.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -734,7 +725,6 @@ int main()
     System::Console::WriteLine("*--end() = {0}", *++it);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -748,16 +738,16 @@ Sucht den Bereich, der einem angegebenen Schlüssel entspricht.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 cliext::pair<iterator, iterator> equal_range(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Key  
+ *key*  
  Der zu suchende Schlüsselwert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt ein Paar von Iteratoren `cliext::pair<iterator, iterator>(` [hash_set:: lower_bound (STL/CLR)](../dotnet/hash-set-lower-bound-stl-clr.md) `(key),` [hash_set:: upper_bound (STL/CLR)](../dotnet/hash-set-upper-bound-stl-clr.md)`(key))`. Sie können damit um des Bereichs von Elementen, die derzeit in der gesteuerten Sequenz zu ermitteln, die einen angegebenen Schlüssel entsprechen.  
+ Die Memberfunktion gibt ein Paar von Iteratoren `cliext::pair<iterator, iterator>(` [hash_set:: lower_bound (STL/CLR)](../dotnet/hash-set-lower-bound-stl-clr.md) `(key),` [hash_set:: upper_bound (STL/CLR)](../dotnet/hash-set-upper-bound-stl-clr.md)`(key))`. Damit können Sie um des Bereichs von Elementen, die derzeit in der gesteuerten Sequenz zu ermitteln, die einem angegebenen Schlüssel entsprechen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -792,7 +782,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -806,33 +795,33 @@ Entfernt Elemente an den angegebenen Positionen.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 iterator erase(iterator where);  
 iterator erase(iterator first, iterator last);  
 bool erase(key_type key)  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- first  
- Anfang des Bereichs, der gelöscht.  
+ *Erste*  
+ Anfang des zu löschenden Bereichs.  
   
- Key  
- Der Schlüsselwert, zu löschen.  
+ *key*  
+ Schlüssel-Wert zu löschen.  
   
- last  
- Das Ende des Bereichs zu löschen.  
+ *last*  
+ Ende der zu löschenden Bereichs.  
   
- wo  
+ *where*  
  Element löschen.  
   
 ### <a name="remarks"></a>Hinweise  
- Die erste Memberfunktion entfernt das Element der kontrollierten Sequenz verweist `where`, und gibt einen Iterator, der das erste Element, das über das Element entfernt wurde, oder [hash_set:: End (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `()` Wenn kein solches Element vorhanden ist. Es können Sie verwenden, um ein einzelnes Element zu entfernen.  
+ Die erste Memberfunktion entfernt das Element der kontrollierten Sequenz verweist *, in denen*, und gibt einen Iterator, der das erste Element, das über das Element entfernt wurde, oder [hash_set:: End (STL / CLR)](../dotnet/hash-set-end-stl-clr.md) `()` Wenn kein solches Element vorhanden ist. Damit können Sie um ein einzelnes Element zu entfernen.  
   
- Die zweite Memberfunktion entfernt die Elemente der gesteuerten Sequenz im Bereich [`first`, `last`), und gibt einen Iterator, der das erste Element, das über alle Elemente entfernt wurden, oder `end()` Wenn kein solches Element vorhanden ist... Sie verwenden es, NULL oder mehr aufeinander folgende Elemente entfernt.  
+ Die zweite Memberfunktion entfernt die Elemente der gesteuerten Sequenz im Bereich [`first`, `last`), und gibt einen Iterator, der das erste Element entfernten Elemente hinaus verbliebene festlegt oder `end()` Wenn kein solches Element vorhanden ist... Damit können Sie um NULL oder mehr aufeinander folgende Elemente zu entfernen.  
   
- Die dritte Memberfunktion entfernt jedes Element der gesteuerten Sequenz, deren Schlüssel hat die entsprechende Reihenfolge, zu `key`, und gibt die Anzahl der entfernten Elemente zurück. Sie verwenden es, zu entfernen und alle Elemente, die einen angegebenen Schlüssel entsprechen gezählt.  
+ Die dritte Memberfunktion entfernt jedes Element der kontrollierten Sequenz, deren Schlüssel verfügt über entsprechende Reihenfolge, auf *Schlüssel*, und gibt die Anzahl die Anzahl der entfernten Elemente zurück. Damit können Sie entfernen und die Anzahl aller Elemente, die einen angegebenen Schlüssel entsprechen.  
   
- Jedes Element Löschung dauert einige Zeit, die proportional zum Logarithmus der Anzahl der Elemente in der kontrollierten Sequenz.  
+ Jedes Element Löschung braucht Zeit proportional zum Logarithmus der Anzahl der Elemente der gesteuerten Sequenz.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -872,7 +861,6 @@ int main()
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -888,16 +876,16 @@ Sucht ein Element, das einem angegebenen Schlüssel entspricht.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 iterator find(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Key  
+ *key*  
  Der zu suchende Schlüsselwert.  
   
 ### <a name="remarks"></a>Hinweise  
- Verfügt über mindestens ein Element in der kontrollierten Sequenz entsprechende Sortierung mit `key`, die Memberfunktion gibt einen Iterator Festlegen eines dieser Elemente zurück, andernfalls es [hash_set:: End (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `()`. Damit können sie ein Element aktuell in der kontrollierten Sequenz gesucht werden soll, die einem angegebenen Schlüssel entspricht.  
+ Verfügt über mindestens ein Element in der gesteuerten Sequenz entsprechende Sortierung mit *Schlüssel*, die Memberfunktion gibt einen Iterator zurück eins dieser Elemente; andernfalls [hash_set:: End (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `()`. Damit können Sie um ein Element derzeit in der gesteuerten Sequenz zu suchen, die einem angegebenen Schlüssel entspricht.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -927,7 +915,6 @@ int main()
         L'C', c1.find(L'C') != c1.end());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -942,7 +929,7 @@ Der Typ der generischen Schnittstelle für den Container.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::  
     IHash<GKey, GValue>  
     generic_container;  
@@ -990,7 +977,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1005,14 +991,14 @@ Der Typ eines Iterators für die Verwendung mit der generischen Schnittstelle f�
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ContainerBidirectionalIterator<generic_value>  
     generic_iterator;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ beschreibt einen generischen Iterator, der für diese Vorlage Container-Klasse mit der generischen Schnittstelle verwendet werden kann.  
+ Der Typ beschreibt einen generischen Iterator, der mit der generischen Schnittstelle für diese Vorlage Container-Klasse verwendet werden kann.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1046,7 +1032,6 @@ int main()
     System::Console::WriteLine(" {0}", gcval);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1060,14 +1045,14 @@ Der Typ eines umgekehrten Iterators für die Verwendung mit der generischen Schn
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ReverseRandomAccessIterator<generic_value>  
     generic_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ beschreibt einen generischen reverse-Iterator, der für diese Vorlage Container-Klasse mit der generischen Schnittstelle verwendet werden kann.  
+ Der Typ beschreibt einen generische reverse-Iterator, der mit der generischen Schnittstelle für diese Vorlage Container-Klasse verwendet werden kann.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1101,7 +1086,6 @@ int main()
     System::Console::WriteLine(" {0}", gcval);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1115,12 +1099,12 @@ Der Typ eines Elements für die Verwendung mit der generischen Schnittstelle fü
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ beschreibt ein Objekt des Typs `GValue` , beschreibt die gespeicherten Elementwert für die Verwendung mit der generischen Schnittstelle für diese Vorlage Container-Klasse.  
+ Der Typ beschreibt ein Objekt des Typs `GValue` , beschreibt den gespeichertes Element-Wert für die Verwendung mit der generischen Schnittstelle für diese Vorlage Container-Klasse.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1154,7 +1138,6 @@ int main()
     System::Console::WriteLine(" {0}", gcval);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1168,12 +1151,12 @@ Sucht ein Element, das einem angegebenen Schlüssel entspricht.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 hasher^ hash_delegate();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt der Delegat, der zum Konvertieren von Schlüssel-Wert in eine ganze Zahl zurück. Sie verwenden es, einen Schlüssel für den Hashvorgang.  
+ Die Memberfunktion gibt den Delegaten verwendet, um ein Schlüsselwert in eine ganze Zahl konvertiert. Damit können Sie um einen Schlüssel zu hashen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1192,7 +1175,6 @@ int main()
     System::Console::WriteLine("hash(L'b') = {0}", myhash(L'b'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1205,7 +1187,7 @@ Erstellt ein container-Objekt.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 hash_set();  
 explicit hash_set(key_compare^ pred);  
 hash_set(key_compare^ pred, hasher^ hashfn);  
@@ -1227,19 +1209,19 @@ hash_set(System::Collections::Generic::IEnumerable<GValue>^ right,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- first  
+ *Erste*  
  Anfang des Bereichs, der eingefügt.  
   
- hashfn  
- Hash-Funktion für die Zuordnung von Schlüsseln zu Buckets.  
+ *hashfn*  
+ Die Hashfunktion für die Zuordnung von Schlüsseln zu Buckets.  
   
- last  
- Das Ende des Bereichs einfügen.  
+ *last*  
+ Ende des Bereichs, der eingefügt.  
   
- pred  
- Sortierung Prädikat für die gesteuerte Sequenz.  
+ *Pred*  
+ Sortieren Prädikat für die gesteuerte Sequenz.  
   
- Rechts  
+ *right*  
  Einzufügendes Objekt bzw. einzufügender Bereich.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1247,67 +1229,67 @@ hash_set(System::Collections::Generic::IEnumerable<GValue>^ right,
   
  `hash_set();`  
   
- Initialisiert die gesteuerte Sequenz keine Elemente mit der standardmäßigen Reihenfolge Prädikat `key_compare()`, und klicken Sie mit der Standard-Hashfunktion. Sie können damit Geben Sie eine leere gesteuerte Sequenz, mit der standardmäßigen Reihenfolge Prädikat und Hash-Funktion.  
+ Initialisiert die kontrollierte Sequenz ohne Elemente, mit der standardmäßigen Reihenfolge Prädikat `key_compare()`, und klicken Sie mit der Standard-Hashfunktion. Damit können Sie eine leere gesteuerte Sequenz, mit der standardmäßigen Reihenfolge Prädikat und Hash-Funktion angeben.  
   
  Der Konstruktor:  
   
  `explicit hash_set(key_compare^ pred);`  
   
- Initialisiert die gesteuerte Sequenz keine Elemente, mit dem Prädikat Reihenfolge `pred`, und klicken Sie mit der Standard-Hashfunktion. Sie können damit Geben Sie eine leere gesteuerte Sequenz, mit der angegebenen Reihenfolge Prädikat und die Standard-Hashfunktion.  
+ Initialisiert die kontrollierte Sequenz ohne Elemente, mit der Sortierung Prädikat *Pred*, und klicken Sie mit der Standard-Hashfunktion. Damit können Sie eine leere gesteuerte Sequenz, mit dem angegebenen Prädikat für die Sortierung und die standardhashfunktion angeben.  
   
  Der Konstruktor:  
   
  `hash_set(key_compare^ pred, hasher^ hashfn);`  
   
- Initialisiert die gesteuerte Sequenz keine Elemente, mit dem Prädikat Reihenfolge `pred`, und bei der Hashfunktion `hashfn`. Sie können damit Geben Sie eine leere gesteuerte Sequenz, mit der angegebenen Reihenfolge Prädikat und Hash-Funktion.  
+ Initialisiert die kontrollierte Sequenz ohne Elemente, mit der Sortierung Prädikat *Pred*, und klicken Sie mit der Hashfunktion *Hashfn*. Damit können Sie eine leere gesteuerte Sequenz, mit der angegebenen Reihenfolge Prädikat und Hash der angegebenen Funktion angeben.  
   
  Der Konstruktor:  
   
  `hash_set(hash_set<Key>% right);`  
   
- Initialisiert die gesteuerte Sequenz durch die Sequenz [`right.begin()`, `right.end()`), mit dem Prädikat Reihenfolge und mit der Standard-Hashfunktion. Sie können damit eine gesteuerte Sequenz angeben, die eine Kopie der Sequenz, die von der Hash_set-Objekt gesteuert wird `right`, mit der Sortierung standardprädikat und Hash-Funktion.  
+ Initialisiert die kontrollierte Sequenz durch die Sequenz [`right.begin()`, `right.end()`), mit der standardmäßigen Reihenfolge Prädikat und mit der Standard-Hashfunktion. Damit können Sie eine gesteuerte Sequenz angeben, die eine Kopie der gesteuerte Sequenz durch das Hash_set-Objekt ist *rechten*, mit der standardmäßigen Sortierung Prädikat und Hash-Funktion.  
   
  Der Konstruktor:  
   
  `hash_set(hash_set<Key>^ right);`  
   
- Initialisiert die gesteuerte Sequenz durch die Sequenz [`right->begin()`, `right->end()`), mit dem Prädikat Reihenfolge und mit der Standard-Hashfunktion. Sie können damit eine gesteuerte Sequenz angeben, die eine Kopie der Sequenz, die von der Hash_set-Objekt gesteuert wird `right`, mit der Sortierung standardprädikat und Hash-Funktion.  
+ Initialisiert die kontrollierte Sequenz durch die Sequenz [`right->begin()`, `right->end()`), mit der standardmäßigen Reihenfolge Prädikat und mit der Standard-Hashfunktion. Damit können Sie eine gesteuerte Sequenz angeben, die eine Kopie der gesteuerte Sequenz durch das Hash_set-Objekt ist *rechten*, mit der standardmäßigen Sortierung Prädikat und Hash-Funktion.  
   
  Der Konstruktor:  
   
  `template<typename InIter> hash_set(InIter first, InIter last);`  
   
- Initialisiert die gesteuerte Sequenz durch die Sequenz [`first`, `last`), mit dem Prädikat Reihenfolge und mit der Standard-Hashfunktion. Sie mit ihrer Hilfe der gesteuerten Sequenz eine Kopie einer anderen Sequenz mit der standardmäßigen Reihenfolge Prädikat und Hash-Funktion.  
+ Initialisiert die kontrollierte Sequenz durch die Sequenz [`first`, `last`), mit der standardmäßigen Reihenfolge Prädikat und mit der Standard-Hashfunktion. Damit können Sie um der gesteuerten Sequenz eine Kopie einer anderen Sequenz, mit der standardmäßigen Reihenfolge Prädikat und Hash-Funktion zu erstellen.  
   
  Der Konstruktor:  
   
  `template<typename InIter> hash_set(InIter first, InIter last, key_compare^ pred);`  
   
- Initialisiert die gesteuerte Sequenz durch die Sequenz [`first`, `last`), mit der Sortierung Prädikat `pred`, und klicken Sie mit der Standard-Hashfunktion. Sie mit ihrer Hilfe der gesteuerten Sequenz eine Kopie einer anderen Sequenz, mit der angegebenen Reihenfolge Prädikat und die Standard-Hashfunktion.  
+ Initialisiert die kontrollierte Sequenz durch die Sequenz [`first`, `last`), mit der Sortierung Prädikat *Pred*, und klicken Sie mit der Standard-Hashfunktion. Damit können Sie um der gesteuerten Sequenz eine Kopie einer anderen Sequenz, mit dem angegebenen Prädikat für die Sortierung und die standardhashfunktion zu erstellen.  
   
  Der Konstruktor:  
   
  `template<typename InIter> hash_set(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`  
   
- Initialisiert die gesteuerte Sequenz durch die Sequenz [`first`, `last`), mit der Sortierung Prädikat `pred`, und bei der Hashfunktion `hashfn`. Sie mit ihrer Hilfe der gesteuerten Sequenz eine Kopie einer anderen Sequenz, mit der angegebenen Reihenfolge Prädikat und Hash-Funktion.  
+ Initialisiert die kontrollierte Sequenz durch die Sequenz [`first`, `last`), mit der Sortierung Prädikat *Pred*, und klicken Sie mit der Hashfunktion *Hashfn*. Damit können Sie um der gesteuerten Sequenz eine Kopie einer anderen Sequenz, mit der angegebenen Reihenfolge Prädikat und Hash-Funktion zu erstellen.  
   
  Der Konstruktor:  
   
  `hash_set(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- Initialisiert die gesteuerte Sequenz durch die Sequenz, die vom Enumerator festgelegte `right`, mit dem Prädikat Reihenfolge und mit der Standard-Hashfunktion. Sie mit ihrer Hilfe der gesteuerten Sequenz eine Kopie einer anderen Sequenz, die durch ein Enumerator, mit der standardmäßigen Reihenfolge Prädikat und Hash-Funktion beschrieben.  
+ Initialisiert die kontrollierte Sequenz durch die Sequenz, die vom Enumerator festgelegt *rechten*, mit der standardmäßigen Reihenfolge Prädikat und mit der Standard-Hashfunktion. Damit können Sie um der gesteuerten Sequenz eine Kopie einer anderen Sequenz, die von einem Enumerator, mit der standardmäßigen Reihenfolge Prädikat und Hash-Funktion beschrieben zu erstellen.  
   
  Der Konstruktor:  
   
  `hash_set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- Initialisiert die gesteuerte Sequenz durch die Sequenz, die vom Enumerator festgelegt `right`, mit der Sortierung Prädikat `pred`, und klicken Sie mit der Standard-Hashfunktion. Sie mit ihrer Hilfe der gesteuerten Sequenz eine Kopie einer anderen Sequenz, die durch ein Enumerator, mit der angegebenen Reihenfolge Prädikat und Standard-Hashfunktion beschrieben.  
+ Initialisiert die kontrollierte Sequenz durch die Sequenz, die vom Enumerator festgelegt *rechts*, mit der Sortierung Prädikat *Pred*, und klicken Sie mit der Standard-Hashfunktion. Damit können Sie um der gesteuerten Sequenz eine Kopie einer anderen Sequenz durch ein Enumerator, mit der angegebenen Reihenfolge Prädikat und Standard-Hashfunktion beschrieben zu erstellen.  
   
  Der Konstruktor:  
   
  `hash_set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`  
   
- Initialisiert die gesteuerte Sequenz durch die Sequenz, die vom Enumerator festgelegte `right`, mit der Sortierung Prädikat `pred`, und bei der Hashfunktion `hashfn`. Sie mit ihrer Hilfe der gesteuerten Sequenz eine Kopie einer anderen Sequenz, die durch ein Enumerator, mit der angegebenen Reihenfolge Prädikat und Hash-Funktion beschrieben.  
+ Initialisiert die kontrollierte Sequenz durch die Sequenz, die vom Enumerator festgelegt *rechten*, mit der Sortierung Prädikat *Pred*, und klicken Sie mit der Hash-Funktion *Hashfn*. Damit können Sie um der gesteuerten Sequenz eine Kopie einer anderen Sequenz durch ein Enumerator, mit der angegebenen Reihenfolge Prädikat und Hash-Funktion beschrieben zu erstellen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1415,7 +1397,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1443,7 +1424,7 @@ Der Hashalgorithmus Delegat für einen Schlüssel.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::UnaryDelegate<GKey, int>  
     hasher;  
 ```  
@@ -1468,7 +1449,6 @@ int main()
     System::Console::WriteLine("hash(L'b') = {0}", myhash(L'b'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1481,7 +1461,7 @@ Fügt Elemente hinzu.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 cliext::pair<iterator, bool> insert(value_type val);  
 iterator insert(iterator where, value_type val);  
 template<typename InIter>  
@@ -1490,33 +1470,33 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 ```  
   
 #### <a name="parameters"></a>Parameter  
- first  
+ *Erste*  
  Anfang des Bereichs, der eingefügt.  
   
- last  
- Das Ende des Bereichs einfügen.  
+ *last*  
+ Ende des Bereichs, der eingefügt.  
   
- Rechts  
- Die Enumeration eingefügt.  
+ *right*  
+ Die Enumeration zum Einfügen.  
   
- Val  
+ *val*  
  Schlüssel-Wert einfügen.  
   
- wo  
- Die Position, im Container (nur Hinweis) einfügen.  
+ *where*  
+ Die Position, im Container zum Einfügen (nur Hint).  
   
 ### <a name="remarks"></a>Hinweise  
  Jede der Memberfunktionen Fügt eine Sequenz, die von den verbleibenden Operanden angegeben.  
   
- Die erste Memberfunktion zum Einfügen eines Elements mit dem Wert versucht `val`, und gibt ein Wertepaar `X`. Wenn `X.second` ist "true", `X.first` bestimmt das neu eingefügte Element; andernfalls `X.first` kennzeichnet ein Element mit entsprechender Sortierung, die bereits vorhanden ist und kein neues Element eingefügt wird. Es können Sie verwenden, um ein einzelnes Element einzufügen.  
+ Die erste Memberfunktion versucht, ein Element mit dem Wert einfügen *Val*, und gibt ein Paar von Werten `X`. Wenn `X.second` ist "true" `X.first` bestimmt das neu eingefügte Element; andernfalls `X.first` kennzeichnet ein Element mit entsprechender Sortierung, die bereits vorhanden ist und kein neues Element eingefügt wird. Damit können Sie ein einzelnes Element einfügen.  
   
- Die zweite Memberfunktion Fügt ein Element mit dem Wert `val`mit `where` als Hinweis (zur Verbesserung der Leistung), und gibt einen Iterator, der das neu eingefügte Element festlegt. Damit können sie ein einzelnes Element einfügen, das neben einem Element möglicherweise, die Sie kennen.  
+ Die zweite Memberfunktion Fügt ein Element mit dem Wert *Val*mit *, in denen* als Hinweis (zur Verbesserung der Leistung), und gibt einen Iterator, der das neu eingefügte Element festlegt. Damit können Sie ein einzelnes Element einfügen, die neben einem Element möglicherweise, die Sie kennen.  
   
- Die dritte Memberfunktion fügt die Sequenz [`first`, `last`). Sie verwenden ihn zum Einfügen von NULL oder mehr Elementen aus einer anderen Sequenz kopiert.  
+ Die dritte Memberfunktion fügt die Sequenz [`first`, `last`). Sie verwenden ihn zum Einfügen von NULL oder mehr Elementen, die aus einer anderen Sequenz kopiert haben.  
   
- Die vierte Memberfunktion fügt die Sequenz, die vom angegebenen der `right`. Sie verwenden es, fügen Sie eine Sequenz, die durch einen Enumerator beschrieben.  
+ Die vierte Memberfunktion fügt die Sequenz, die vom angegebenen die *rechten*. Damit können Sie eine Sequenz, die von einem Enumerator beschrieben einfügen.  
   
- Jede elementeinfügung dauert einige Zeit, die proportional zum Logarithmus der Anzahl der Elemente in der kontrollierten Sequenz. Kann in amortisierter konstanter Zeit, jedoch die Einfügung erhält einen Hinweis, der ein Element, das neben der Einfügemarke festlegt.  
+ Jedes Element einfügen braucht Zeit proportional zum Logarithmus der Anzahl der Elemente der gesteuerten Sequenz. Einfügen kann in amortisierter konstanter Zeit, jedoch auftreten, erhalten einen Hinweis, der ein Element, das neben der Einfügemarke festlegt.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1576,7 +1556,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1595,12 +1574,12 @@ Der Typ eines Iterators für die gesteuerte Sequenz.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef T1 iterator;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ beschreibt ein Objekt vom angegebenen Typ `T1` , die als ein bidirektionaler Iterator für die gesteuerte Sequenz fungieren kann.  
+ Der Typ beschreibt ein Objekt vom nicht angegebenen Typ `T1` , die als bidirektionaler Iterator für die gesteuerte Sequenz fungieren kann.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1624,7 +1603,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1636,12 +1614,12 @@ Kopiert der Delegat für zwei Schlüssel.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 key_compare^key_comp();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt der Delegat zum Sortieren der kontrollierten Sequenz zurück. Sie können sie zwei Schlüssel vergleichen.  
+ Die Memberfunktion gibt der Delegat verwendet, um die kontrollierte Sequenz sortiert zurück. Damit können Sie zwei Schlüssel vergleichen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1676,7 +1654,6 @@ int main()
         kcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1694,12 +1671,12 @@ Kopiert der Delegat für zwei Schlüssel.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 key_compare^key_comp();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt der Delegat zum Sortieren der kontrollierten Sequenz zurück. Sie können sie zwei Schlüssel vergleichen.  
+ Die Memberfunktion gibt der Delegat verwendet, um die kontrollierte Sequenz sortiert zurück. Damit können Sie zwei Schlüssel vergleichen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1734,7 +1711,6 @@ int main()
         kcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1752,13 +1728,13 @@ Der Delegat für zwei Schlüssel.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>  
     key_compare;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ ist ein Synonym für den Delegaten, der die Reihenfolge der Schlüssel Argumente bestimmt.  
+ Der Typ ist ein Synonym für die der Delegat, der die Reihenfolge der wichtigsten Argumente bestimmt.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1793,7 +1769,6 @@ int main()
         kcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1811,12 +1786,12 @@ Der Typ eines Sortierschlüssels.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef Key key_type;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Type stellt ein Synonym für den Vorlagenparameter `Key` dar.  
+ Der Typ ist ein Synonym für den Vorlagenparameter *Schlüssel*.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1843,7 +1818,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1855,12 +1829,12 @@ Zählt die durchschnittliche Anzahl von Elementen pro Bucket.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 float load_factor();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt `(float)` [hash_set:: Size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md) `() /` [hash_set::bucket_count (STL/CLR)](../dotnet/hash-set-bucket-count-stl-clr.md)`()`. Sie verwenden sie zur Ermittlung der durchschnittlichen Bucketgröße.  
+ Die Memberfunktion gibt `(float)` [hash_set:: Size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md) `() /` [hash_set::bucket_count (STL/CLR)](../dotnet/hash-set-bucket-count-stl-clr.md)`()`. Damit können Sie um die durchschnittliche Bucketgröße zu bestimmen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1905,7 +1879,6 @@ int main()
         c1.max_load_factor());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1924,20 +1897,20 @@ max_load_factor() = 0.25
 ```  
 
 ## <a name="lower_bound"></a> hash_set:: lower_bound (STL/CLR)
-Sucht den Anfang des Bereichs, die einem angegebenen Schlüssel entspricht.  
+Sucht den Anfang des Bereichs, der einem angegebenen Schlüssel entspricht.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 iterator lower_bound(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Key  
+ *key*  
  Der zu suchende Schlüsselwert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion bestimmt das erste Element `X` in der kontrollierten Sequenz, die mit dem gleichen Bucket als hashes `key` und Sortierung `key`. Wenn kein solches Element vorhanden ist, gibt es [hash_set:: End (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`; andernfalls wird einen Iterator, `X`. Sie können damit derzeit suchen den Anfang einer Sequenz von Elementen in der kontrollierten Sequenz, die einen angegebenen Schlüssel entsprechen.  
+ Die Memberfunktion bestimmt das erste Element `X` in der kontrollierten Sequenz, die in das gleiche Bucket entschlüsselt als *Schlüssel* und dessen Sortierung *Schlüssel*. Wenn kein solches Element vorhanden ist, gibt es [hash_set:: End (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`; andernfalls wird einen Iterator, `X`. Damit können Sie derzeit suchen den Anfang einer Sequenz von Elementen in der kontrollierten Sequenz, die einen angegebenen Schlüssel entsprechen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1968,7 +1941,6 @@ int main()
         *c1.lower_bound(L'b'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1983,16 +1955,16 @@ Erstellt ein Wertobjekt.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 static value_type make_value(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Key  
- Schlüsselwert verwenden.  
+ *key*  
+ Schlüssel-Wert verwenden.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt eine `value_type` Objekts, dessen Schlüssel `key`. Sie verwenden es, um ein Objekt, das für die Verwendung mit anderen Memberfunktionen geeignet zu verfassen.  
+ Die Memberfunktion gibt ein `value_type` Objekts, dessen Schlüssel *Schlüssel*. Damit können Sie um ein Objekt kann mit anderen Memberfunktionen zu erstellen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2015,7 +1987,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2027,19 +1998,19 @@ Ruft die maximale Anzahl von Elementen pro Bucket ab oder legt sie fest.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 float max_load_factor();  
 void max_load_factor(float new_factor);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- new_factor  
- Neue maximale Lastfaktor zu speichern.  
+ *new_factor*  
+ Neue maximale Lastfaktor zum Speichern.  
   
 ### <a name="remarks"></a>Hinweise  
- Die erste Memberfunktion gibt den aktuellen gespeicherten maximalen Lastfaktor zurück. Sie können damit um die maximale durchschnittliche Bucketgröße zu bestimmen.  
+ Die erste Memberfunktion gibt den aktuellen gespeicherten maximalen Lastfaktor zurück. Damit können Sie um die maximale durchschnittliche Bucketgröße zu bestimmen.  
   
- Die zweite Memberfunktion ersetzt den maximalen Lastfaktor Store mit `new_factor`. Kein automatisches erneutes Hashing durchführen tritt auf, bis eine nachfolgende einfügen.  
+ Die zweite Memberfunktion ersetzt den Store Höchstlastfaktor mit *New_factor*. Kein automatisches erneutes Hashing durchführen tritt auf, bis ein nachfolgenden einfügungen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2084,7 +2055,6 @@ int main()
         c1.max_load_factor());   
     return (0);   
     }  
-  
 ```  
 
 ## <a name="op"></a> hash_set::Operator = (STL/CLR)
@@ -2092,16 +2062,16 @@ Ersetzt die kontrollierte Sequenz.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 hash_set<Key>% operator=(hash_set<Key>% right);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Rechts  
+ *right*  
  Der zu kopierende Container.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Member-Operator Kopien `right` klicken Sie dann auf das Objekt gibt `*this`. Sie können ihn verwenden, um die kontrollierte Sequenz durch eine Kopie der kontrollierten Sequenz in `right` zu ersetzen.  
+ Die Member-Operator Kopien *rechten* klicken Sie dann auf das Objekt, gibt `*this`. Damit können Sie die kontrollierte Sequenz durch eine Kopie der kontrollierten Sequenz in ersetzen *rechten*.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2132,7 +2102,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2145,12 +2114,12 @@ Legt den Anfang der umgekehrten kontrollierten Sequenz fest.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 reverse_iterator rbegin();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt einen umgekehrten Iterator, der das letzte Element der kontrollierten Sequenz oder nur vor dem Anfang einer leeren Sequenz zurück. Daher kennzeichnet es die `beginning` der umgekehrten Sequenz. Es mit der einen Iterator abrufen, bestimmt die `current` Anfang der kontrollierten Sequenz in umgekehrter Reihenfolge kann ändern, wenn die Länge der gesteuerten Sequenz geändert wird.  
+ Die Memberfunktion gibt einen umgekehrten Iterator, der das letzte Element der kontrollierten Sequenz oder unmittelbar nach dem Anfang einer leeren Sequenz bestimmt. Daher wird die `beginning` der umgekehrten Sequenz. Sie können damit einen Iterator abrufen, bestimmt die `current` Anfang der kontrollierten Sequenz in umgekehrter Reihenfolge, aber der Status kann ändern, wenn die Länge der kontrollierten Sequenz ändert.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2178,7 +2147,6 @@ int main()
     System::Console::WriteLine("*++rbegin() = {0}", *++rit);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2192,7 +2160,7 @@ Der Typ eines Verweises auf ein Element.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
@@ -2224,7 +2192,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2236,12 +2203,12 @@ Erstellt die Hashtabelle neu.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 void rehash();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion erstellt die Hashtabelle, die sicherstellen, dass neu [hash_set::load_factor (STL/CLR)](../dotnet/hash-set-load-factor-stl-clr.md) `() <=` [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md). Andernfalls wird die Hashtabelle vergrößert nur bei Bedarf nach einer Einfügung. (Es nimmt nie automatisch in der Größe.) Sie können damit passen Sie die Größe der Hashtabelle.  
+ Die Member-Funktion erstellt die Hashtabelle, um sicherzustellen, dass neu [hash_set::load_factor (STL/CLR)](../dotnet/hash-set-load-factor-stl-clr.md) `() <=` [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md). Andernfalls erhöht die Hashtabelle Größe, nur bei Bedarf nach einer Einfügung. (sie vergrößern nie automatisch.) Damit können Sie die Größe der Hashtabelle anpassen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2286,7 +2253,6 @@ int main()
         c1.max_load_factor());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2309,12 +2275,12 @@ Legt das Ende der umgekehrten kontrollierten Sequenz fest.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 reverse_iterator rend();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt einem reverse-Iterator, verweist direkt hinter dem Anfang der kontrollierten Sequenz zurück. Daher kennzeichnet es die `end` der umgekehrten Sequenz. Es mit der einen Iterator abrufen, bestimmt die `current` Ende der kontrollierten Sequenz in umgekehrter Reihenfolge, aber dessen Status kann ändern, wenn die Länge der gesteuerten Sequenz geändert wird.  
+ Die Memberfunktion gibt einem umgekehrten Iterator, der zeigt unmittelbar nach dem Anfang der kontrollierten Sequenz zurück. Daher wird die `end` der umgekehrten Sequenz. Sie können damit einen Iterator abrufen, bestimmt die `current` Ende der kontrollierten Sequenz in umgekehrter Reihenfolge, aber der Status kann ändern, wenn die Länge der kontrollierten Sequenz ändert.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2343,7 +2309,6 @@ int main()
     System::Console::WriteLine("*--rend() = {0}", *++rit);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2357,12 +2322,12 @@ Der Typ eines umgekehrten Iterators für die gesteuerte Sequenz.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef T3 reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ beschreibt ein Objekt vom angegebenen Typ `T3` , die als umgekehrten Iterators für die gesteuerte Sequenz dienen kann.  
+ Der Typ beschreibt ein Objekt vom nicht angegebenen Typ `T3` , die als reverse-Iterator für die gesteuerte Sequenz fungieren kann.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2386,7 +2351,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2398,12 +2362,12 @@ Ermittelt die Anzahl von Elementen.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt die Länge der gesteuerten Sequenz zurück. Sie können erkennen, die Anzahl der Elemente, die derzeit in der kontrollierten Sequenz. Wenn Sie von Interesse ist, ob die Sequenz ungleich Größe finden Sie unter hat, [hash_set:: Empty (STL/CLR)](../dotnet/hash-set-empty-stl-clr.md)`()`.  
+ Die Memberfunktion gibt die Länge der gesteuerten Sequenz zurück. Damit können Sie die Anzahl der Elemente, die derzeit in der kontrollierten Sequenz bestimmt. Wenn Sie besonders interessierenden lediglich, ob die Reihenfolge größer, finden Sie unter hat [hash_set:: Empty (STL/CLR)](../dotnet/hash-set-empty-stl-clr.md)`()`.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2436,7 +2400,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2447,16 +2410,16 @@ size() = 2 after adding 2
 ```  
 
 ## <a name="size_type"></a> hash_set:: size_type (STL/CLR)
-Der Typ eines Abstands mit Vorzeichen zwischen zwei Elementen.  
+Der Typ eines Abstands zwischen den beiden Elementen mit Vorzeichen.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ beschreibt ein nicht negativer Elementanzahl.  
+ Der Typ beschreibt eine nicht Negative Elementanzahl.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2485,7 +2448,6 @@ int main()
     System::Console::WriteLine("end()-begin() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2498,16 +2460,16 @@ Vertauscht den Inhalt von zwei Containern.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 void swap(hash_set<Key>% right);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Rechts  
+ *right*  
  Container für den Tausch von Inhalten.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion tauscht die kontrollierten Sequenzen zwischen `this` und `right`aus. Dies erfolgt in konstanter Zeit, und es löst keine Ausnahmen. Sie verwenden es als eine schnelle Möglichkeit zum Austauschen von den Inhalt von zwei Containern.  
+ Die Memberfunktion tauscht die kontrollierten Sequenzen zwischen `this` und *rechten*. Dies erfolgt in konstanter Zeit aus, und es löst keine Ausnahmen aus. Sie verwenden es als eine schnelle Möglichkeit, den Inhalt von zwei Containern austauschen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2549,7 +2511,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2560,16 +2521,16 @@ a b c
 ```  
 
 ## <a name="to_array"></a> hash_set::to_array (STL/CLR)
-Kopiert die gesteuerte Sequenz in ein neues Array.  
+Kopiert die kontrollierte Sequenz in ein neues Array.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 cli::array<value_type>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt ein Array mit der kontrollierten Sequenz zurück. Sie können sie eine Kopie der gesteuerten Sequenz im Arrayform abrufen.  
+ Die Memberfunktion gibt ein Array mit der kontrollierten Sequenz zurück. Damit können Sie eine Kopie der kontrollierten Sequenz in Arrayform abrufen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2600,7 +2561,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2609,20 +2569,20 @@ a b c
 ```  
 
 ## <a name="upper_bound"></a> hash_set:: upper_bound (STL/CLR)
-Sucht nach Ende des Bereichs, die einem angegebenen Schlüssel entspricht.  
+Sucht das Ende des Bereichs, der einem angegebenen Schlüssel entspricht.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 iterator upper_bound(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Key  
+ *key*  
  Der zu suchende Schlüsselwert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion bestimmt das letzte Element `X` in der kontrollierten Sequenz, die mit dem gleichen Bucket als hashes `key` und Sortierung `key`. Wenn kein solches Element vorhanden ist, oder wenn `X` ist das letzte Element in der kontrollierten Sequenz gibt [hash_set:: End (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`; andernfalls wird einen Iterator, der das erste Element nach zurückgegeben`X`. Sie können damit derzeit suchen das Ende einer Sequenz von Elementen in der kontrollierten Sequenz, die einen angegebenen Schlüssel entsprechen.  
+ Die Memberfunktion bestimmt das letzte Element `X` in der kontrollierten Sequenz, die in das gleiche Bucket entschlüsselt als *Schlüssel* und dessen Sortierung *Schlüssel*. Wenn kein solches Element vorhanden ist, oder wenn `X` ist das letzte Element in der gesteuerten Sequenz ist, gibt [hash_set:: End (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`; andernfalls wird einen Iterator, der das erste Element nach zurückgegeben`X`. Damit können Sie derzeit suchen das Ende einer Sequenz von Elementen in der kontrollierten Sequenz, die einen angegebenen Schlüssel entsprechen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2653,7 +2613,6 @@ int main()
         *c1.upper_bound(L'b'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2664,16 +2623,16 @@ upper_bound(L'x')==end() = True
 ```  
 
 ## <a name="value_comp"></a> hash_set:: value_comp (STL/CLR)
-Der Delegat für zwei Elementwerte wird kopiert.  
+Kopiert der Delegat für zwei Elementwerte.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 value_compare^ value_comp();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt der Delegat zum Sortieren der kontrollierten Sequenz zurück. Sie können sie um zwei Elementwerte zu vergleichen.  
+ Die Memberfunktion gibt der Delegat verwendet, um die kontrollierte Sequenz sortiert zurück. Damit können Sie zwei Elementwerte vergleichen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2711,13 +2670,13 @@ Der Delegat für zwei Elementwerte.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
     value_compare;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ ist ein Synonym für den Delegaten, der die Reihenfolge der Werteargumente bestimmt.  
+ Der Typ ist ein Synonym für die der Delegat, der die Reihenfolge der Werteargumente bestimmt.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2741,7 +2700,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2755,7 +2713,7 @@ Der Typ eines Elements.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef generic_value value_type;  
 ```  
   
@@ -2787,7 +2745,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  

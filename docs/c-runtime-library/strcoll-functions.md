@@ -27,41 +27,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e97e16ec3360764411b36bf129c344a3455ce6a6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c207bc94dbadf5e346c74d314e13df3530368fb9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418184"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080479"
 ---
 # <a name="strcoll-functions"></a>strcoll-Funktionen
-Jede der `strcoll`- und `wcscoll`-Funktionen vergleicht zwei Zeichenfolgen gemäß der Kategorieneinstellung für `LC_COLLATE` der aktuell verwendeten Gebietsschemacodepage. Jede der `_mbscoll`-Funktionen vergleicht zwei Zeichenfolgen gemäß der aktuell verwendeten Multibytecodepage. Verwenden Sie die `coll`-Funktionen für Zeichenfolgenvergleiche, wenn es in der aktuellen Codepage einen Unterschied zwischen der Reihenfolge des Zeichensatzes und der lexikografischen Zeichenreihenfolge gibt, und dieser Unterschied für den Zeichenfolgenvergleich relevant ist. Verwenden Sie die entsprechenden `cmp`-Funktionen, um nur Gleichheit der Zeichenfolgen zu prüfen.  
-  
-### <a name="strcoll-functions"></a>strcoll-Funktionen  
-  
-|SBCS|Unicode|MBCS|description|  
-|----------|-------------|----------|-----------------|  
-|[strcoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[wcscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[_mbscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|Sortieren von zwei Zeichenfolgen|  
-|[_stricoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_wcsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_mbsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|Sortieren von zwei Zeichenfolgen (ohne Berücksichtigung von Groß-/Kleinschreibung)|  
-|[_strncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_wcsncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_mbsncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|Sortieren der ersten `count` Zeichen von zwei Zeichenfolgen|  
-|[_strnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_wcsnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_mbsnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|Sortieren der ersten `count` Zeichen zweier Zeichenfolgen (ohne Berücksichtigung von Groß-/Kleinschreibung)|  
-  
-## <a name="remarks"></a>Hinweise  
- Die Versionen dieser Funktionen im Einzelbyte-Zeichensatz (Single-Byte Character Set, SBCS) (`strcoll`, `stricoll`, `_strncoll` und `_strnicoll`) vergleichen `string1` und `string2` gemäß der Kategorieneinstellung `LC_COLLATE` des aktuellen Gebietsschemas. Diese Funktionen unterscheiden sich von den entsprechenden `strcmp`-Funktionen dahingehend, dass die `strcoll`-Funktionen Gebietsschemacodepageinformationen mit Sortierreihenfolgen verwenden. Für Zeichenfolgenvergleiche in Gebietsschemas, in denen die Reihenfolge des Zeichensatzes und die lexikografische Zeichenreihenfolge abweichen, sollten die `strcoll`-Funktionen statt der entsprechenden `strcmp`-Funktionen verwendet werden. Weitere Informationen zu `LC_COLLATE` finden Sie unter [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).  
-  
- Bei manchen Codepages und entsprechenden Zeichensätzen kann die Reihenfolge der Zeichen im Zeichensatz möglicherweise von der lexikografischen Zeichenreihenfolge abweichen. Im "C "-Gebietsschema ist dies nicht der Fall: Die Reihenfolge der Zeichen im ASCII-Zeichensatz entspricht der lexikografischen Reihenfolge der Zeichen. In bestimmten europäischen Codepages beispielsweise steht im Zeichensatz das Zeichen "a" (Wert 0x61) vor dem Zeichen "ä" (Wert 0xE4), das Zeichen "ä" steht lexikografisch gesehen jedoch vor dem Zeichen "a". Um in solch einem Fall einen lexikografischen Vergleich durchzuführen, verwenden Sie `strcoll` statt `strcmp`. Sie können auch `strxfrm` für die ursprünglichen Zeichenfolgen verwenden, und dann `strcmp` für die resultierenden Zeichenfolgen.  
-  
- `strcoll`, `stricoll`, `_strncoll` und `_strnicoll` verarbeiten automatisch Multibytezeichenfolgen entsprechend der derzeit verwendeten Gebietsschemacodepage, wie es bei den jeweiligen äquivalenten Breitzeichen (Unicode) der Fall ist. Die Versionen dieser Funktionen im Multibyte-Zeichensatz (Multibyte-Character Set, MBCS) sortieren Zeichenfolgen jedoch auf Zeichenbasis entsprechend der aktuell verwendeten Multibytecodepage.  
-  
- Da die `coll`-Funktionen Zeichenfolgen für Vergleiche lexikografisch sortieren, während die `cmp`-Funktionen nur die Zeichenfolgengleichheit testen, sind die `coll`-Funktionen wesentlich langsamer als die entsprechenden `cmp`-Versionen. Daher sollten die `coll`-Funktionen nur verwendet werden, wenn es in der aktuellen Codepage einen Unterschied zwischen der Reihenfolge des Zeichensatzes und der lexikografischen Zeichenreihenfolge gibt, und dieser Unterschied für den Zeichenfolgenvergleich relevant ist.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Gebietsschema](../c-runtime-library/locale.md)   
- [Zeichenfolgenbearbeitung](../c-runtime-library/string-manipulation-crt.md)   
- [localeconv](../c-runtime-library/reference/localeconv.md)   
- [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)   
- [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [strcmp, wcscmp, _mbscmp](../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
+
+Jede der `strcoll`- und `wcscoll`-Funktionen vergleicht zwei Zeichenfolgen gemäß der Kategorieneinstellung für `LC_COLLATE` der aktuell verwendeten Gebietsschemacodepage. Jede der `_mbscoll`-Funktionen vergleicht zwei Zeichenfolgen gemäß der aktuell verwendeten Multibytecodepage. Verwenden Sie die `coll`-Funktionen für Zeichenfolgenvergleiche, wenn es in der aktuellen Codepage einen Unterschied zwischen der Reihenfolge des Zeichensatzes und der lexikografischen Zeichenreihenfolge gibt, und dieser Unterschied für den Zeichenfolgenvergleich relevant ist. Verwenden Sie die entsprechenden `cmp`-Funktionen, um nur Gleichheit der Zeichenfolgen zu prüfen.
+
+### <a name="strcoll-functions"></a>strcoll-Funktionen
+
+|SBCS|Unicode|MBCS|Beschreibung |
+|----------|-------------|----------|-----------------|
+|[strcoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[wcscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[_mbscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|Sortieren von zwei Zeichenfolgen|
+|[_stricoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_wcsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_mbsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|Sortieren von zwei Zeichenfolgen (ohne Berücksichtigung von Groß-/Kleinschreibung)|
+|[_strncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_wcsncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_mbsncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|Sortieren der ersten `count` Zeichen von zwei Zeichenfolgen|
+|[_strnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_wcsnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_mbsnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|Sortieren der ersten `count` Zeichen zweier Zeichenfolgen (ohne Berücksichtigung von Groß-/Kleinschreibung)|
+
+## <a name="remarks"></a>Hinweise
+
+Die Versionen dieser Funktionen im Einzelbyte-Zeichensatz (Single-Byte Character Set, SBCS) (`strcoll`, `stricoll`, `_strncoll` und `_strnicoll`) vergleichen `string1` und `string2` gemäß der Kategorieneinstellung `LC_COLLATE` des aktuellen Gebietsschemas. Diese Funktionen unterscheiden sich von den entsprechenden `strcmp`-Funktionen dahingehend, dass die `strcoll`-Funktionen Gebietsschemacodepageinformationen mit Sortierreihenfolgen verwenden. Für Zeichenfolgenvergleiche in Gebietsschemas, in denen die Reihenfolge des Zeichensatzes und die lexikografische Zeichenreihenfolge abweichen, sollten die `strcoll`-Funktionen statt der entsprechenden `strcmp`-Funktionen verwendet werden. Weitere Informationen zu `LC_COLLATE` finden Sie unter [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
+
+Bei manchen Codepages und entsprechenden Zeichensätzen kann die Reihenfolge der Zeichen im Zeichensatz möglicherweise von der lexikografischen Zeichenreihenfolge abweichen. Im "C "-Gebietsschema ist dies nicht der Fall: Die Reihenfolge der Zeichen im ASCII-Zeichensatz entspricht der lexikografischen Reihenfolge der Zeichen. In bestimmten europäischen Codepages beispielsweise steht im Zeichensatz das Zeichen "a" (Wert 0x61) vor dem Zeichen "ä" (Wert 0xE4), das Zeichen "ä" steht lexikografisch gesehen jedoch vor dem Zeichen "a". Um in solch einem Fall einen lexikografischen Vergleich durchzuführen, verwenden Sie `strcoll` statt `strcmp`. Sie können auch `strxfrm` für die ursprünglichen Zeichenfolgen verwenden, und dann `strcmp` für die resultierenden Zeichenfolgen.
+
+`strcoll`, `stricoll`, `_strncoll` und `_strnicoll` verarbeiten automatisch Multibytezeichenfolgen entsprechend der derzeit verwendeten Gebietsschemacodepage, wie es bei den jeweiligen äquivalenten Breitzeichen (Unicode) der Fall ist. Die Versionen dieser Funktionen im Multibyte-Zeichensatz (Multibyte-Character Set, MBCS) sortieren Zeichenfolgen jedoch auf Zeichenbasis entsprechend der aktuell verwendeten Multibytecodepage.
+
+Da die `coll`-Funktionen Zeichenfolgen für Vergleiche lexikografisch sortieren, während die `cmp`-Funktionen nur die Zeichenfolgengleichheit testen, sind die `coll`-Funktionen wesentlich langsamer als die entsprechenden `cmp`-Versionen. Daher sollten die `coll`-Funktionen nur verwendet werden, wenn es in der aktuellen Codepage einen Unterschied zwischen der Reihenfolge des Zeichensatzes und der lexikografischen Zeichenreihenfolge gibt, und dieser Unterschied für den Zeichenfolgenvergleich relevant ist.
+
+## <a name="see-also"></a>Siehe auch
+
+[Locale](../c-runtime-library/locale.md)<br/>
+[Zeichenfolgenbearbeitung](../c-runtime-library/string-manipulation-crt.md)<br/>
+[localeconv](../c-runtime-library/reference/localeconv.md)<br/>
+[_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)<br/>
+[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[strcmp, wcscmp, _mbscmp](../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)<br/>
+[strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
+[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
+[strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)

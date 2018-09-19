@@ -1,7 +1,7 @@
 ---
-title: Operator LROFFSET | Microsoft Docs
+title: Operator LROFFSET | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 245dc24b56557c26134712ca28c75945bdd97f5a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: dd04a306e85fbb3627729355dc05d55197d91134
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056589"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678531"
 ---
 # <a name="operator-lroffset"></a>Operator LROFFSET
-Gibt den Offset des *Ausdruck*. Identisch mit **OFFSET**, sondern generiert einen Ladeprogramm aufgelöst Offset, dem Windows Codesegmente verschieben kann.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-LROFFSET expression  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Operatoren – Referenz](../../assembler/masm/operators-reference.md)
+
+Gibt den Offset zurück *Ausdruck*. Identisch mit **OFFSET**, sondern generiert eine Ladeprogramm aufgelöst-Offset Windows Codesegmente verschieben kann.
+
+## <a name="syntax"></a>Syntax
+
+> LROFFSET-Ausdruck
+
+## <a name="see-also"></a>Siehe auch
+
+[Operatoren – Referenz](../../assembler/masm/operators-reference.md)<br/>

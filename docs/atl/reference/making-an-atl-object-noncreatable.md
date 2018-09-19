@@ -1,5 +1,5 @@
 ---
-title: Machen eine ATL-Objekt nicht erstellbare | Microsoft Docs
+title: Vornehmen eines ATL-Objekt als nicht erstellbares | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05707c6771d641d383825a07d0b26a90fdf46cb1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cf2b3d047a6618326e69dcb51f143f77fc10c8a6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358260"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099537"
 ---
-# <a name="making-an-atl-object-noncreatable"></a>Erstellen eine nicht erstellbare ATL-Objekt
-Sie können die Attribute eines ATL-basierten COM-Objekts ändern, sodass ein Client das Objekt direkt erstellt werden kann. In diesem Fall würde das Objekt werden durch einen Methodenaufruf zurückgegeben wird, auf einem anderen Objekt anstatt direkt erstellt.  
-  
-### <a name="to-make-an-object-noncreatable"></a>Ein Objekt Noncreatable vornehmen.  
-  
-1.  Entfernen Sie die [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) für das Objekt. Wenn Sie das Objekt nicht erstellbare das Steuerelement jedoch registriert werden soll, ersetzen Sie mit [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](object-map-macros.md#object_entry_non_createable_ex_auto).  
-  
-2.  Hinzufügen der [Noncreatable](../../windows/noncreatable.md) -Attribut auf die Co-Klasse in der IDL-Datei. Zum Beispiel:  
-  
- ```  
- [  
-    uuid(A1992E3D-3CF0-11D0-826F-00A0C90F2851), 
+# <a name="making-an-atl-object-noncreatable"></a>Vornehmen eines ATL-Objekt als nicht erstellbares
+
+Sie können die Attribute eines ATL-basierten COM-Objekts, dass ein Client direkt das Objekt nicht ändern. In diesem Fall wird das Objekt durch einen Methodenaufruf zurückgegeben wird, auf einem anderen Objekt anstatt direkt erstellt.
+
+### <a name="to-make-an-object-noncreatable"></a>Um ein Objekt als nicht erstellbares Objekt zu machen.
+
+1. Entfernen Sie die [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) für das Objekt. Wenn das Objekt als nicht erstellbares Objekt, aber das Steuerelement registriert werden soll, ersetzen Sie Sie mit [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](object-map-macros.md#object_entry_non_createable_ex_auto).
+
+2. Hinzufügen der [Noncreatable](../../windows/noncreatable.md) -Attribut auf die Co-Klasse in der IDL-Datei. Zum Beispiel:
+
+    ```  
+    [uuid(A1992E3D-3CF0-11D0-826F-00A0C90F2851), 
     helpstring("MyObject"), 
     noncreatable]  
     coclass MyObject  
- {  
- [default] interface IMyInterface;  
- }  
- ```  
-  
-## <a name="see-also"></a>Siehe auch  
- [ATL-Projekt-Assistent](../../atl/reference/atl-project-wizard.md)   
- [Visual C++-Projekttypen](../../ide/visual-cpp-project-types.md)   
- [Erstellen von Desktopprojekten mit Anwendungs-Assistenten](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
- [Programmieren mit ATL- und C-Laufzeitcode](../../atl/programming-with-atl-and-c-run-time-code.md)   
- [Grundlagen von ATL-COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)   
- [Standardmäßige ATL-Projektkonfigurationen](../../atl/reference/default-atl-project-configurations.md)
+    {  
+        [default] interface IMyInterface;  
+    }  
+    ```
+
+## <a name="see-also"></a>Siehe auch
+
+[ATL-Projekt-Assistent](../../atl/reference/atl-project-wizard.md)<br/>
+[Visual C++-Projekttypen](../../ide/visual-cpp-project-types.md)<br/>
+[Erstellen von Desktopprojekten mit Anwendungs-Assistenten](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Programmieren mit ATL- und C-Laufzeitcode](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Grundlagen von ARL COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)<br/>
+[Standardmäßige ATL-Projektkonfigurationen](../../atl/reference/default-atl-project-configurations.md)
 

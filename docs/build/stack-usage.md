@@ -1,5 +1,5 @@
 ---
-title: Verwendung des Stapels | Microsoft Docs
+title: Stack-Nutzung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,27 +12,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6f711636089a6f2966002002220aac88cebe17a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 827a129c0b7a444cc5b48ba68a3e360712e1c08e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379857"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721538"
 ---
 # <a name="stack-usage"></a>Verwendung von Stapeln
-Alle Speicher außerhalb der aktuellen Adresse des RSP gilt volatile: das Betriebssystem oder ein Debugger kann diesen Arbeitsspeicher während einer Debugsitzung für Benutzer oder ein nicht maskierbarer Interrupt überschreiben. Daher muss RSP immer festgelegt werden, bevor Sie versuchen, das Lesen und Schreiben von Werten in einen Stapelrahmen.  
-  
- Dieser Abschnitt beschreibt die Zuordnung von Stapelspeicher für lokale Variablen und die **Alloca** systeminterne.  
-  
--   [Stapelreservierung](../build/stack-allocation.md)  
-  
--   [Dynamische Parameterstapelbereichskonstruktion](../build/dynamic-parameter-stack-area-construction.md)  
-  
--   [Funktionstypen](../build/function-types.md)  
-  
--   [malloc-Ausrichtung](../build/malloc-alignment.md)  
-  
--   [alloca](../build/alloca.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [x64-Softwarekonventionen](../build/x64-software-conventions.md)
+
+Alle Speicher außerhalb der aktuellen Adresse der RSP gilt als flüchtige: das Betriebssystem und einen Debugger, kann dieser Arbeitsspeicher während einer Debugsitzung für Benutzer oder einem Interrupthandler überschreiben. RSP muss daher immer festgelegt werden, bevor Sie versuchen, das Lesen und Schreiben von Werten in einen Stapelrahmen.
+
+Dieser Abschnitt beschreibt die Zuordnung an Stapelspeicher für lokale Variablen und die **Alloca** systeminterne.
+
+- [Stapelreservierung](../build/stack-allocation.md)
+
+- [Dynamische Parameterstapelbereichskonstruktion](../build/dynamic-parameter-stack-area-construction.md)
+
+- [Funktionstypen](../build/function-types.md)
+
+- [malloc-Ausrichtung](../build/malloc-alignment.md)
+
+- [alloca](../build/alloca.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[x64-Softwarekonventionen](../build/x64-software-conventions.md)

@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0064 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0064 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7964eac628fa89695d1757cff8b7b329fd7fe713
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b16133484af5a2225f79c5d293a2c8edd948bdb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302135"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025892"
 ---
 # <a name="expression-evaluator-error-cxx0064"></a>Ausdrucksauswertungsfehler CXX0064
-Haltepunkt kann nicht auf gebundene virtuelle Memberfunktion festgelegt werden.  
-  
- Ein Haltepunkt wurde auf eine virtuelle Memberfunktion, die über einen Zeiger auf ein Objekt, z. B. festgelegt:  
-  
-```  
-pClass->vfunc( int );  
-```  
-  
- Ein Haltepunkt kann auf eine virtuelle Funktion durch die Klasse, wie z. B. Eingabe festgelegt werden:  
-  
-```  
-Class::vfunc( int );  
-```  
-  
- Dieser Fehler ist mit CAN0064 identisch.
+
+Haltepunkt kann nicht auf gebundene virtuelle Memberfunktion festgelegt werden.
+
+Ein Haltepunkt wurde für eine virtuelle Memberfunktion durch einen Zeiger auf ein Objekt, z. B. festgelegt:
+
+```
+pClass->vfunc( int );
+```
+
+Für eine virtuelle Funktion kann ein Haltepunkt festgelegt werden, durch die Klasse, wie z. B. eingeben:
+
+```
+Class::vfunc( int );
+```
+
+Dieser Fehler ist mit CAN0064 identisch.

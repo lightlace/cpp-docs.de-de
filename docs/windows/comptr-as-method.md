@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: As-Methode | Microsoft Docs'
+title: 'Comptr:: As-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,49 +17,53 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb9fd0ff09f6775a95ff881d9f8cbaa3edc61065
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ffb84fd072f4ddd3dc76445c720debef5c364642
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857271"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590434"
 ---
 # <a name="comptras-method"></a>ComPtr::As-Methode
-Gibt ein ComPtr-Objekt zurück, das die Schnittstelle darstellt, die durch den angegebenen Vorlagenparameter gekennzeichnet ist.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-template<typename U>  
-HRESULT As(  
-   _Out_ ComPtr<U>* p  
-) const;  
-  
-template<typename U>  
-HRESULT As(  
-   _Out_ Details::ComPtrRef<ComPtr<U>> p  
-) const;  
-  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `U`  
- Die Schnittstelle durch den Parameter dargestellt werden `p`.  
-  
- `p`  
- Ein ComPtr-Objekt, das vom Parameter angegebene Schnittstelle darstellt `U`. Parameter `p` muss nicht mit dem aktuellen ComPtr-Objekt verweisen.  
-  
-## <a name="remarks"></a>Hinweise  
- Die erste Vorlage ist die Form, die Sie in Ihrem Code verwenden sollten. Die zweite Vorlage ist eine interne Hilfsspezialisierung, die C++-Sprachfeatures unterstützt, wie etwa das Schlüsselwort [auto](../cpp/auto-cpp.md) zur Typableitung.  
-  
-## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [ComPtr-Klasse](../windows/comptr-class.md)
+
+Gibt eine **ComPtr** -Objekt, das die Schnittstelle, die durch den angegebenen Vorlagenparameter gekennzeichnet darstellt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+template<typename U>
+HRESULT As(
+   _Out_ ComPtr<U>* p
+) const;
+
+template<typename U>
+HRESULT As(
+   _Out_ Details::ComPtrRef<ComPtr<U>> p
+) const;
+```
+
+### <a name="parameters"></a>Parameter
+
+*U*  
+Die Schnittstelle, die vom Parameter dargestellt werden *p*.
+
+*p*  
+Ein **ComPtr** Objekt, das vom Parameter angegebene Schnittstelle darstellt *U*. Parameter *p* muss nicht mit dem aktuellen verweisen **ComPtr** Objekt.
+
+## <a name="remarks"></a>Hinweise
+
+Die erste Vorlage ist die Form, die Sie in Ihrem Code verwenden sollten. Die zweite Vorlage ist eine interne Hilfsspezialisierung, die C++-Sprachfeatures unterstützt, wie etwa das Schlüsselwort [auto](../cpp/auto-cpp.md) zur Typableitung.
+
+## <a name="return-value"></a>Rückgabewert
+
+S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[ComPtr-Klasse](../windows/comptr-class.md)

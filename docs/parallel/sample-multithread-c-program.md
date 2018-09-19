@@ -1,5 +1,5 @@
 ---
-title: Beispiel C-Multithreadprogramm | Microsoft Docs
+title: Beispiel C-Multithreadprogramm | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1584d52f9ea543c95363a0f7f03cdad80442ee1c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 08a5e75092aaa467c6e1f937cc00a541aaf24bfa
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687991"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131335"
 ---
 # <a name="sample-multithread-c-program"></a>Beispiel für ein C-Multithreadprogramm
-Bounce.c ist ein Beispiel für ein Multithreadprogramm, die eine neue erstellt bei jedem thread den Buchstaben **eine** oder **ein** typisiert ist. Bei jedem Thread bewegt sich ein lachendes Gesicht in einer anderen Farbe über den Bildschirm. Es können bis zu 32 Threads erstellt werden. Normale Beendigung des Programms tritt auf, wenn `q` oder **Q** typisiert ist. Informationen zum Kompilieren und Verknüpfen von Bounce.c finden Sie unter [kompilieren und Binden von Multithreadprogrammen](../parallel/compiling-and-linking-multithread-programs.md).  
+Bounce.c ist ein Beispiel für ein Multithreadprogramm, die eine neue erstellt Threads jedes Mal den Buchstaben `a` oder `A` typisiert ist. Bei jedem Thread bewegt sich ein lachendes Gesicht in einer anderen Farbe über den Bildschirm. Es können bis zu 32 Threads erstellt werden. Normale Beendigung des Programms tritt auf, wenn `q` oder `Q` typisiert ist. Informationen zum Kompilieren und Verknüpfen von Bounce.c finden Sie unter [kompilieren und Binden von Multithreadprogrammen](compiling-and-linking-multithread-programs.md).  
   
 ## <a name="example"></a>Beispiel  
   
 ### <a name="code"></a>Code  
   
-```  
+```c  
 // sample_multithread_c_program.c  
 // compile with: /c  
 //  
@@ -219,4 +219,5 @@ q
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Multithreading bei C und Win32](../parallel/multithreading-with-c-and-win32.md)
+
+[Multithreading bei C und Win32](multithreading-with-c-and-win32.md)

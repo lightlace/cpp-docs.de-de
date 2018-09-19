@@ -1,5 +1,5 @@
 ---
-title: '-FU (Name Forced #using-Datei) | Microsoft Docs'
+title: '-FU (Name Forced #using using-Datei) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,48 +20,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c9a27d8c689b198bde47047969d38cf14b41c46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 73edbed02a665d7e66478052c0fee13a227658aa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375674"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720530"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (Name der expliziten #using-Datei)
-Eine Compileroption, mit denen Sie als Alternative zum Übergeben eines Dateinamens, [#using-Direktive](../../preprocessor/hash-using-directive-cpp.md) im Quellcode.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-/FU file  
-```  
-  
-## <a name="arguments"></a>Argumente  
- `file`  
- Gibt die Metadatendatei, die in dieser Kompilierung zu verweisen.  
-  
-## <a name="remarks"></a>Hinweise  
- Der Schalter/fu akzeptiert nur einen Dateinamen an. Um mehrere Dateien anzugeben, verwenden Sie/fu mit jeweils ein.  
-  
- Bei Verwendung von [!INCLUDE[cppcli](../../build/reference/includes/cppcli_md.md)] und Metadaten mit Verweisen auf die [Friend-Assemblys](../../dotnet/friend-assemblies-cpp.md) Funktion, Sie können keine **/FU**. Sie müssen die Metadaten im Code verweisen, indem `#using`– zusammen mit den `[as friend]` Attribut. Friend-Assemblys werden nicht unterstützt, [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]).  
-  
- Weitere Informationen dazu, wie eine Assembly oder ein Modul für die common Language Runtime (CLR) zu erstellen, finden Sie unter [/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md). Informationen zum Erstellen in [!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)], finden Sie unter [Erstellen von apps und Bibliotheken](../../cppcx/building-apps-and-libraries-c-cx.md).  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
-  
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
-  
-2.  Wählen Sie die **C/C++-** Ordner.  
-  
-3.  Wählen Sie die **erweitert** Eigenschaftenseite.  
-  
-4.  Ändern der **Force #using** Eigenschaft.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
-  
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForcedUsingFiles%2A>.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Ausgabedatei (/ F) Optionen](../../build/reference/output-file-f-options.md)   
- [Compileroptionen](../../build/reference/compiler-options.md)   
- [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+
+Eine Compileroption, mit denen Sie als Alternative zum Übergeben eines Dateinamens zum [#using-Direktive](../../preprocessor/hash-using-directive-cpp.md) im Quellcode.
+
+## <a name="syntax"></a>Syntax
+
+> **/ FU** *Datei*
+
+## <a name="arguments"></a>Argumente
+
+*datei*<br/>
+Gibt die Metadatendatei, die in diesem Kompilierungsvorgang verwiesen.
+
+## <a name="remarks"></a>Hinweise
+
+Der Schalter/fu dauert nur einen Dateinamen an. Um mehrere Dateien anzugeben, verwenden Sie/fu mit jeweils ein.
+
+Wenn Sie C++ verwenden c++ / CLI und verweisen auf Metadaten mit den [Friend-Assemblys](../../dotnet/friend-assemblies-cpp.md) Funktion können keine **/FU**. Sie müssen die Metadaten im Code mithilfe von verweisen `#using`– zusammen mit den `[as friend]` Attribut. Friend-Assemblys werden nicht unterstützt, in Visual C++-komponentenerweiterungen C++ / CX.
+
+Informationen dazu, wie Sie eine Assembly oder ein Modul für die common Language Runtime (CLR) zu erstellen, finden Sie unter [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md). Informationen zur Verwendung für die Erstellung in C++ / CX, finden Sie unter [Erstellen von apps und Bibliotheken](../../cppcx/building-apps-and-libraries-c-cx.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
+
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+
+1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **erweitert** Eigenschaftenseite.
+
+1. Ändern der **erzwungene #using using** Eigenschaft.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
+
+- Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForcedUsingFiles%2A>.
+
+## <a name="see-also"></a>Siehe auch
+
+[Ausgabedatei (/ F) Optionen](../../build/reference/output-file-f-options.md)
+[Compileroptionen](../../build/reference/compiler-options.md)<br/>
+[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

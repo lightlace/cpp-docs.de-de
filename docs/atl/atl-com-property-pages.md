@@ -1,5 +1,5 @@
 ---
-title: ATL COM-Eigenschaftenseiten | Microsoft Docs
+title: ATL-COM-Eigenschaftenseiten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,36 +19,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d7904b9f31a1be858dadaa8a087c720c277465
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 208c89cad441a1fae70f5532204ec7856459de7f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357531"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095858"
 ---
 # <a name="atl-com-property-pages"></a>ATL COM-Eigenschaftenseiten
-COM-Eigenschaftenseiten stellen eine Benutzeroberfläche bereit, zum Festlegen der Eigenschaften (oder die Methoden aufrufen) von einem oder mehreren COM-Objekten. Eigenschaftenseiten werden häufig von ActiveX-Steuerelementen verwendet, für das Bereitstellen von komplexe Benutzeroberflächen, mit die Steuerelementeigenschaften zur Entwurfszeit festgelegt werden können.  
-  
- Eigenschaftenseiten sind COM-Objekte implementiert, die [IPropertyPage-Schnittstelle](http://msdn.microsoft.com/library/windows/desktop/ms691246) oder [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) Schnittstelle. Diese Schnittstellen bieten die Methoden, mit denen die Seite zugeordnet werden können eine `site` (ein COM-Objekt, das den Container der Seite darstellt) und eine Reihe von *Objekte* (COM-Objekte, deren Methoden, als Reaktion auf Änderungen aufgerufen werden, vom Benutzer vorgenommene der Eigenschaftenseite "). Die Eigenschaft seitendatencontainer ist zuständig für das Aufrufen von Methoden auf der Benutzeroberfläche für die Eigenschaftenseite die Seite zu informieren, wenn vom Benutzer auf die zugrunde liegenden Objekte anzeigen oder Ausblenden der Benutzeroberfläche und beim Anwenden die Änderungen vorgenommen.  
-  
- Jede Eigenschaftenseite kann vollständig unabhängig von den Objekten erstellt werden, dessen Eigenschaften festgelegt werden können. Alle ist eine Eigenschaftenseite benötigt, eine bestimmte Schnittstelle (oder ein Satz von Schnittstellen) zu verstehen und eine Benutzeroberfläche zum Aufrufen von Methoden für diese Schnittstelle bereitzustellen.  
-  
- Weitere Informationen finden Sie unter [Eigenschaftenblätter und Eigenschaftenseiten](http://msdn.microsoft.com/library/windows/desktop/ms686577) in der [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
-  
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Festlegen der Eigenschaftenseiten](../atl/specifying-property-pages.md)  
- Listet die Schritte zum Angeben von Eigenschaftenseiten für ein Steuerelement, und zeigt eine Beispielklasse.  
-  
- [Implementieren der Eigenschaftenseiten](../atl/implementing-property-pages.md)  
- Listet die Schritte zum Implementieren von Eigenschaftenseiten, einschließlich der Methoden überschreiben. Führt Sie durch ein vollständiges Beispiel, das basierend auf dem ATLPages-Beispielprogramm.  
-  
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [ATLPages-Beispiel](../visual-cpp-samples.md)  
- Die abstrakte Beispiel für das ATLPages-Beispiel, das eine Eigenschaft mit implementiert `IPropertyPageImpl`.  
-  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- Enthält Links zu konzeptionellen Themen über die Programmierung mit der Active Template Library.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Konzepte](../atl/active-template-library-atl-concepts.md)
+
+Com-Eigenschaftenseiten bieten eine Benutzeroberfläche zum Festlegen der Eigenschaften (oder Aufrufen der Methoden) von ein oder mehrere COM-Objekten. Eigenschaftenseiten werden häufig von ActiveX-Steuerelementen verwendet, für die Bereitstellung umfassender Benutzeroberflächen, mit die Eigenschaften des Steuerelements zur Entwurfszeit festgelegt werden können.
+
+Eigenschaftenseiten sind COM-Objekte, implementieren die [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) oder [IPropertyPage2](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage2) Schnittstelle. Diese Schnittstellen bieten Methoden, mit denen die Seite zugeordnet werden können. eine `site` (ein COM-Objekt, das den Container der Seite darstellt) und eine Reihe von *Objekte* (COM-Objekte, deren Methoden, als Reaktion auf Änderungen aufgerufen werden, vom Benutzer vorgenommene der Eigenschaftenseite auf). Die Seite Eigenschaftencontainer ist verantwortlich für das Aufrufen von Methoden für die Schnittstelle der Eigenschaftenseite auf die Seite informiert, wenn es sich bei ein- oder Ausblenden der Benutzeroberfläche und beim Anwenden die Änderungen durch den Benutzer an der zugrunde liegenden Objekten vorgenommen.
+
+Jede Eigenschaftenseite kann vollständig unabhängig von der Objekte erstellt werden, dessen Eigenschaften festgelegt werden können. Alles ist auf einer Eigenschaftenseite muss zu einer bestimmten Schnittstelle (oder eine Gruppe von Schnittstellen) und eine Benutzeroberfläche bereitstellen, für das Aufrufen von Methoden in dieser Schnittstelle.
+
+Weitere Informationen finden Sie unter [Eigenschaftenblätter und Eigenschaftenseiten](/windows/desktop/com/property-sheets-and-property-pages) im Windows SDK.
+
+## <a name="in-this-section"></a>In diesem Abschnitt
+
+[Festlegen der Eigenschaftenseiten](../atl/specifying-property-pages.md)<br/>
+Listet die Schritte zum Festlegen der Eigenschaftenseiten für ein Steuerelement, und zeigt eine Beispielklasse.
+
+[Implementieren der Eigenschaftenseiten](../atl/implementing-property-pages.md)<br/>
+Listet die Schritte zum Implementieren der Eigenschaftenseiten, einschließlich Methoden zum Überschreiben. Führt Sie durch ein vollständiges Beispiel für das Beispielprogramm ATLPages Grundlage.
+
+## <a name="related-sections"></a>Verwandte Abschnitte
+
+[ATLPages-Beispiel](../visual-cpp-samples.md)<br/>
+Der Beispiel-Zusammenfassung für das ATLPages-Beispiel implementiert eine Eigenschaft mit `IPropertyPageImpl`.
+
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
+Enthält Links zu konzeptionellen Themen über die Programmierung mit der Active Template Library.
+
+## <a name="see-also"></a>Siehe auch
+
+[Konzepte](../atl/active-template-library-atl-concepts.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Verwenden von TCHAR. Datentypen mit _MBCS-Code H | Microsoft Docs
+title: Verwenden von TCHAR. H-Datentypen in _MBCS-Code | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,33 +18,33 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e80ecd123e3fc47705563156e33f46ecd99a0321
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 445e4c9e5c3c7a71d527b6a378cad9e1d767354a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858353"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604730"
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Verwenden von TCHAR.H-Datentypen in _MBCS-Code
-Wenn die manifestkonstante **_MBCS** wird definiert, einen bestimmten generischen Textroutinen ist einem der folgenden Arten von Routinen:  
+Wenn die manifestkonstante `_MBCS` wird definiert, eine bestimmte generische Textroutine einer der folgenden Arten von Routinen zugeordnet:  
   
--   Eine SBCS-Routine, die ordnungsgemäß Multibytes, Zeichen und Zeichenfolgen verarbeitet. In diesem Fall werden die Zeichenfolgenargumente Typ erwartet **Char\***. Beispielsweise `_tprintf` ordnet `printf`; die Zeichenfolgenargumente auf `printf` sind vom Typ **Char\***. Bei Verwendung der **_TCHAR** Allgemeintext-Datentyp für die String-Typen, die die formale und tatsächliche Parametertypen für `printf` angepasst werden, weil **_TCHAR** \* ordnet **Char \***.  
+-   Eine SBCS-Routine, die ordnungsgemäß Multibytes, Zeichen und Zeichenfolgen verarbeitet. In diesem Fall werden Zeichenfolgenargumente vom Typ `char*` erwartet. Beispielsweise wird `_tprintf` `printf` zugeordnet; die Zeichenfolgenargumente für `printf` sind vom Typ `char*`. Wenn Sie generischen Text vom Datentyp `_TCHAR` für Ihre Zeichenfolgentypen verwenden, stimmen die formalen und tatsächlichen Parametertypen für `printf` überein, da `_TCHAR*` `char*` zugeordnet wird.  
   
--   Eine MBCS-spezifische Routine. In diesem Fall werden die Zeichenfolgenargumente Typ erwartet `unsigned` **Char\***. Beispielsweise `_tcsrev` ordnet `_mbsrev`, der erwartet, und gibt eine Zeichenfolge vom Typ `unsigned` **Char\***. Bei Verwendung der **_TCHAR** Allgemeintext-Datentyp für die Zeichenfolgen-Datentypen möglicherweise Konflikte Typ vorhanden ist, da **_TCHAR** Zuordnungen auf den Typ `char`.  
+-   Eine MBCS-spezifische Routine. In diesem Fall werden Zeichenfolgenargumente vom Typ `unsigned char*` erwartet. Beispielsweise wird `_tcsrev` `_mbsrev` zugeordnet, wobei eine Zeichenfolge vom Typ `unsigned char*` erwartet und zurückgegeben wird. Bei Verwendung der `_TCHAR` generischen Text vom Datentyp für Ihre Zeichenfolgentypen verwenden, es liegt ein Typkonflikt `_TCHAR` wird Typ `char`.  
   
  Im Folgenden werden drei Lösungen vorgestellt, um einen solchen Typenkonflikt (und die daraus resultierenden C-Compilerwarnungen oder C++-Compilerfehler) zu verhindern:  
   
--   Verwendet das Standardverhalten. TCHAR.h stellt generische Textroutinen für die Routinen in die Laufzeitbibliotheken wie im folgenden Beispiel.  
+-   Verwendet das Standardverhalten. TCHAR.h enthält generische Textroutinen für Routinen in Laufzeitbibliotheken, wie im folgenden Beispiel gezeigt.  
   
     ```  
     char * _tcsrev(char *);  
     ```  
   
-     Im Standardfall den Prototyp für `_tcsrev` ordnet `_mbsrev` über ein Thunk in Libc.lib. Dadurch werden die Typen von der `_mbsrev` eingehende Parameter und ausgehende Rückgabewert aus **_TCHAR \***  (d. h. `char` **\***) zu `unsigned` `char` **\***. Diese Methode wird sichergestellt, dass bei Verwendung von übereinstimmenden Typ **_TCHAR**, aber es ist wegen des Verwaltungsaufwands für Funktion Aufruf relativ langsam.  
+     Im Standardfall wird der Prototyp für `_tcsrev` ordnet `_mbsrev` über einen Thunk in Libc.lib. Dadurch werden die Typen von der `_mbsrev` eingehende-Parameter und der ausgehende Rückgabewert aus `_TCHAR*` (d. h. `char *`) zu `unsigned char *`. Diese Methode stellt typübereinstimmung bei Verwendung von sicher `_TCHAR`, aber es ist relativ gering aufgrund des Mehraufwands für den Funktionsaufruf.  
   
 -   Verwenden Sie Inlinefunktionen, indem Sie die folgende Präprozessoranweisung in Ihren Code integrieren.  
   
@@ -52,7 +52,7 @@ Wenn die manifestkonstante **_MBCS** wird definiert, einen bestimmten generische
     #define _USE_INLINING  
     ```  
   
-     Diese Methode verursacht eine Inline-Funktionsthunk, bereitgestellt in Tchar.h, generischen Textroutinen direkt an die entsprechende MBCS-Routine zuordnen. Im folgenden Codeauszug aus Tchar.h veranschaulicht, wie dies funktioniert.  
+     Diese Methode verursacht eine Inline-Funktionsthunk, bereitgestellt in Tchar.h, um die generische Textroutine direkt der entsprechenden MBCS-Routine zuzuordnen. Im folgenden Codeauszug aus Tchar.h enthält ein Beispiel wie dies vonstatten geht.  
   
     ```  
     __inline char *_tcsrev(char *_s1)  
@@ -61,19 +61,19 @@ Wenn die manifestkonstante **_MBCS** wird definiert, einen bestimmten generische
   
      Wenn Sie Inlining verwenden können, ist dies die beste Lösung, da es Typübereinstimmung sicherstellt und keinen zusätzlichen Zeit- oder Kostenaufwand mit sich bringt.  
   
--   Verwenden Sie direkte Zuordnung durch Integrieren der Präprozessor folgenden Anweisung im Code.  
+-   Verwenden Sie direkte Zuordnung, indem Sie die folgende präprozessoranweisung in Ihren Code integrieren.  
   
     ```  
     #define _MB_MAP_DIRECT  
     ```  
   
-     Dieser Ansatz bietet eine schnelle Alternative, wenn Sie das Standardverhalten nicht verwenden möchten oder kein Inlining verwenden können. Es bewirkt, dass die generischen Textroutinen von einem Makro direkt an die MBCS-Version der Routine, wie im folgenden Beispiel aus Tchar.h zugeordnet werden.  
+     Dieser Ansatz bietet eine schnelle Alternative, wenn Sie das Standardverhalten nicht verwenden möchten oder kein Inlining verwenden können. Es bewirkt, dass die generische Textroutine direkt an die MBCS-Version der Routine, wie im folgenden Beispiel aus TCHAR.h gezeigt von einem Makro zugeordnet werden.  
   
     ```  
     #define _tcschr _mbschr  
     ```  
   
-     Wenn Sie diesen Ansatz verwenden, müssen Sie darauf achten, die Verwendung der entsprechenden Datentypen für Zeichenfolgenargumente und Rückgabewerte Zeichenfolge stellt sicher sein. Zum Sicherstellen einer ordnungsgemäßen Typübereinstimmung können Sie die Typumwandlung oder generischen Text des Datentyps **_TXCHAR** verwenden. **_TXCHAR** Zuordnungen auf den Typ `char` in SBCS-Code jedoch Zuordnungen auf den Typ `unsigned` `char` in MBCS-Code. Weitere Informationen über generische Textfunktion Makros finden Sie unter [Zuordnen von generischem Text](../c-runtime-library/generic-text-mappings.md) in der *Run-Time Library Reference*.  
+     Wenn Sie diesen Ansatz verwenden, müssen Sie sorgfältig, um sicherzustellen, dass die Verwendung der entsprechenden Datentypen für Zeichenfolgenargumente und-Rückgabewerte sein. Um eine ordnungsgemäße Typübereinstimmung sicherzustellen, können Sie die Typumwandlung oder generischen Text vom Datentyp `_TXCHAR` verwenden. `_TXCHAR` wird Typ **Char** in SBCS-Code zugeordnet, jedoch Typ **unsigned Char** in MBCS-Code. Weitere Informationen zu generischen Textmakros finden Sie unter [Zuordnungen für generischen Text](../c-runtime-library/generic-text-mappings.md) in die *Run-Time Library Reference*.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zuordnungen für generischen Text in Tchar.h](../text/generic-text-mappings-in-tchar-h.md)

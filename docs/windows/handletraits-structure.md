@@ -1,5 +1,5 @@
 ---
-title: HANDLETraits-Struktur | Microsoft Docs
+title: HANDLETraits-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,44 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1aae09030ff6cad518028833ce5d4f7b06300a69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2193743da9e7b5667714650660cd8e1efdb5cf4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876647"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610980"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits-Struktur
-Definiert die gemeinsame Merkmale eines Handles.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-struct HANDLETraits;  
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-typedefs"></a>Öffentliche Typedefs  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|`Type`|Ein Synonym für HANDLE.|  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[HANDLETraits::Close-Methode](../windows/handletraits-close-method.md)|Schließt das angegebene Handle.|  
-|[HANDLETraits::GetInvalidValue-Methode](../windows/handletraits-getinvalidvalue-method.md)|Stellt ein ungültiges Handle dar.|  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `HANDLETraits`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>Siehe auch  
- [Microsoft::WRL::Wrappers::HandleTraits-Namespace](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+
+Definiert die allgemeinen Merkmale eines Handles.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+struct HANDLETraits;
+```
+
+## <a name="members"></a>Member
+
+### <a name="public-typedefs"></a>Öffentliche Typedefs
+
+|Name|Beschreibung|
+|----------|-----------------|
+|`Type`|Ein Synonym für den HANDLE.|
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[HANDLETraits::Close-Methode](../windows/handletraits-close-method.md)|Schließt das angegebene Handle.|
+|[HANDLETraits::GetInvalidValue-Methode](../windows/handletraits-getinvalidvalue-method.md)|Stellt ein ungültiges Handle dar.|
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`HANDLETraits`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>Siehe auch
+
+[Microsoft::WRL::Wrappers::HandleTraits-Namespace](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

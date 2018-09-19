@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2577 | Microsoft Docs
+title: Compilerfehler C2577 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af4fb6d5a2d7621df1b11e9040ca7dd4f5551289
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d9a2b09fc9b8b15c4fc21f5eb537f18f5d3b03e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232050"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065815"
 ---
 # <a name="compiler-error-c2577"></a>Compilerfehler C2577
-'Member': Destruktor/Finalizer kann einen Rückgabetyp haben  
-  
- Einen Destruktor oder Finalizer kann keinen Wert von zurückgeben `void` oder eines anderen Typs. Entfernen Sie die `return` Anweisung aus der Destruktordefinition.  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C2577 generiert.  
-  
-```  
-// C2577.cpp  
-// compile with: /c  
-class A {  
-public:  
-   A() {}  
-   ~A(){  
-      return 0;   // C2577  
-   }  
-};  
+
+"Member": Destruktor/Finalizer kann nicht keinen Rückgabetyp haben
+
+Einen Destruktor oder Finalizer kann nicht den Wert zurück `void` oder eines anderen Typs. Entfernen Sie die `return` Anweisung aus der Destruktordefinition.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C2577 generiert.
+
+```
+// C2577.cpp
+// compile with: /c
+class A {
+public:
+   A() {}
+   ~A(){
+      return 0;   // C2577
+   }
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0059 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0059 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dbd0944eabe57dc3dd1cc224da220ee7f6435c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55fc60014bdc408d581ed8299715aad139ef9862
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295859"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050462"
 ---
 # <a name="expression-evaluator-error-cxx0059"></a>Ausdrucksauswertungsfehler CXX0059
-linke Operand ist nicht auf einen Funktionsnamen-Klasse  
-  
- Der linke Operand eines Funktionsaufrufs war ein Klassenname und konnte nicht an einen Funktionsaufruf aufgelöst werden. Der Name einer Memberfunktion in einem Ausdruck weglassen, wird dieser Fehler kann verursacht.  
-  
- Dieser Fehler ist mit CAN0059 identisch.
+
+Linker Operand ist die Klasse nicht den Namen einer Funktion
+
+Der linke Operand eines Funktionsaufrufs war ein Klassenname und konnte nicht aufgelöst werden, auf ein Funktionsaufruf. Der Name einer Memberfunktion in einem Ausdruck weglassen, wird dieser Fehler kann verursacht.
+
+Dieser Fehler ist mit CAN0059 identisch.

@@ -1,5 +1,5 @@
 ---
-title: Concurrency-Namespace Operatoren | Microsoft Docs
+title: Concurrency-Namespace-Operatoren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,14 +13,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90c8fbbdd0e5d2baf0ba82998a6951242b73203a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 13b9288e39e372ecb23299d355abc921353444b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693509"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059873"
 ---
-# <a name="concurrency-namespace-operators"></a>Concurrency-Namespace Operatoren
+# <a name="concurrency-namespace-operators"></a>Concurrency-Namespace-Operatoren
 ||||  
 |-|-|-|  
 |[operator!=](#operator_neq)|[operator&amp;&amp;](#operator_amp_amp)|[operator&gt;](#operator_gt)|  
@@ -55,20 +55,20 @@ inline task<void> operator||(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `ReturnType`  
- Der Typ der zurückgegebenen Aufgabe.  
+*ReturnType*<br/>
+Der Typ der zurückgegebenen Aufgabe.  
   
- `lhs`  
- Die erste Aufgabe, die mit der resultierenden Aufgabe kombiniert werden soll.  
+*LHS*<br/>
+Die erste Aufgabe, die mit der resultierenden Aufgabe kombiniert werden soll.  
   
- `rhs`  
- Die zweite Aufgabe, die mit der resultierenden Aufgabe kombiniert werden soll.  
+*RS*<br/>
+Die zweite Aufgabe, die mit der resultierenden Aufgabe kombiniert werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Eine Aufgabe, die erfolgreich abgeschlossen wird, wenn eine der Eingabeaufgaben erfolgreich abgeschlossen wurde. Wenn die Eingabeaufgaben vom Typ `T` sind, wird die Ausgabe dieser Funktion `task<std::vector<T>` sein. Wenn die Eingabeaufgaben vom Typ `void` sind, ist die Ausgabeaufgabe auch `task<void>`.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn beide Aufgaben abgebrochen werden oder Ausnahmen auslösen, die zurückgegebene Aufgabe im Zustand "abgebrochen" abgeschlossen, und eine der Ausnahmen, wenn alle auftreten, wird ausgelöst, wenn Sie rufen `get()` oder `wait()` für diese Aufgabe.  
+ Wenn beide der Aufgaben abgebrochen werden oder Ausnahmen auslösen, wird die zurückgegebene Aufgabe im abgebrochenen Zustand abgeschlossen, und eine der Ausnahmen, wenn alle auftreten, werden ausgelöst, wenn Sie aufrufen `get()` oder `wait()` für diese Aufgabe.  
   
 ##  <a name="operator_amp_amp"></a>  Operator&amp; &amp; Operator  
  Erstellt eine Aufgabe, die erfolgreich abgeschlossen wird, wenn beide als Argumente angegeben Aufgaben erfolgreich abgeschlossen werden.  
@@ -104,14 +104,14 @@ inline task<void>  operator&&(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `ReturnType`  
- Der Typ der zurückgegebenen Aufgabe.  
+*ReturnType*<br/>
+Der Typ der zurückgegebenen Aufgabe.  
   
- `lhs`  
- Die erste Aufgabe, die mit der resultierenden Aufgabe kombiniert werden soll.  
+*LHS*<br/>
+Die erste Aufgabe, die mit der resultierenden Aufgabe kombiniert werden soll.  
   
- `rhs`  
- Die zweite Aufgabe, die mit der resultierenden Aufgabe kombiniert werden soll.  
+*RS*<br/>
+Die zweite Aufgabe, die mit der resultierenden Aufgabe kombiniert werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Eine Aufgabe, die erfolgreich abgeschlossen ist, wenn beide Eingabeaufgaben erfolgreich abgeschlossen wurden. Wenn die Eingabeaufgaben vom Typ `T` sind, wird die Ausgabe dieser Funktion `task<std::vector<T>>` sein. Wenn die Eingabeaufgaben vom Typ `void` sind, ist die Ausgabeaufgabe auch `task<void>`.  
@@ -130,28 +130,28 @@ inline bool operator== (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `T`  
- Der Datentyp der Elemente in der gleichzeitigen Vektoren gespeichert.  
+*T*<br/>
+Der Datentyp der Elemente in gleichzeitigen Vektoren gespeichert werden soll.  
   
- `A1`  
- Der Allocator-Typ des ersten `concurrent_vector` Objekt.  
+*A1*<br/>
+Die Allocator-Typ des ersten `concurrent_vector` Objekt.  
   
- `A2`  
- Die Allocator-Typ des zweiten `concurrent_vector` Objekt.  
+*A2*<br/>
+Die Allocator-Typ des zweiten `concurrent_vector` Objekt.  
   
- `_A`  
- Ein Objekt vom Typ `concurrent_vector`.  
+*_A*<br/>
+Ein Objekt vom Typ `concurrent_vector`.  
   
- `_B`  
- Ein Objekt vom Typ `concurrent_vector`.  
+*_B HAT*<br/>
+Ein Objekt vom Typ `concurrent_vector`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn Sie der gleichzeitige Vektor auf der linken Seite des Operators den gleichzeitigen Vektor auf der rechten Seite des Operators gleich ist; andernfalls `false`.  
+ `true` Wenn die gleichzeitige Vektor auf der linken Seite des Operators gleich dem gleichzeitigen Vektor rechts vom Operator ist; andernfalls `false`.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn sie über die gleiche Anzahl von Elementen verfügen und ihrer entsprechenden Elemente dieselben Werte aufweisen, werden die zwei gleichzeitige Vektoren gleich sind. Andernfalls sind sie ungleich.  
+ Zwei parallele Vektoren sind gleich, wenn sie die gleiche Anzahl von Elementen verfügen und die entsprechenden Elemente dieselben Werte aufweisen. Andernfalls sind sie ungleich.  
   
- Diese Methode ist nicht parallelitätssicher ist in Bezug auf die anderen Methoden, die entweder der gleichzeitigen Vektoren ändern könnten `_A` oder `_B`.  
+ Diese Methode ist nicht nebenläufigkeitssicher in Bezug auf andere Methoden, die entweder der gleichzeitigen Vektoren ändern könnten `_A` oder `_B`.  
   
 ##  <a name="operator_neq"></a>  Operator! =-Operator  
  Testet, ob das `concurrent_vector`-Objekt links vom Operator ungleich dem `concurrent_vector`-Objekt rechts vom Operator ist.  
@@ -164,28 +164,28 @@ inline bool operator!= (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `T`  
- Der Datentyp der Elemente in der gleichzeitigen Vektoren gespeichert.  
+*T*<br/>
+Der Datentyp der Elemente in gleichzeitigen Vektoren gespeichert werden soll.  
   
- `A1`  
- Der Allocator-Typ des ersten `concurrent_vector` Objekt.  
+*A1*<br/>
+Die Allocator-Typ des ersten `concurrent_vector` Objekt.  
   
- `A2`  
- Die Allocator-Typ des zweiten `concurrent_vector` Objekt.  
+*A2*<br/>
+Die Allocator-Typ des zweiten `concurrent_vector` Objekt.  
   
- `_A`  
- Ein Objekt vom Typ `concurrent_vector`.  
+*_A*<br/>
+Ein Objekt vom Typ `concurrent_vector`.  
   
- `_B`  
- Ein Objekt vom Typ `concurrent_vector`.  
+*_B HAT*<br/>
+Ein Objekt vom Typ `concurrent_vector`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn die gleichzeitige Vektoren ungleich sind; `false` , wenn die gleichzeitige Vektoren gleich sind.  
+ `true` Wenn die gleichzeitigen Vektoren ungleich sind; `false` Wenn gleichzeitigen Vektoren gleich sind.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn sie über die gleiche Anzahl von Elementen verfügen und ihrer entsprechenden Elemente dieselben Werte aufweisen, werden die zwei gleichzeitige Vektoren gleich sind. Andernfalls sind sie ungleich.  
+ Zwei parallele Vektoren sind gleich, wenn sie die gleiche Anzahl von Elementen verfügen und die entsprechenden Elemente dieselben Werte aufweisen. Andernfalls sind sie ungleich.  
   
- Diese Methode ist nicht parallelitätssicher ist in Bezug auf die anderen Methoden, die entweder der gleichzeitigen Vektoren ändern könnten `_A` oder `_B`.  
+ Diese Methode ist nicht nebenläufigkeitssicher in Bezug auf andere Methoden, die entweder der gleichzeitigen Vektoren ändern könnten `_A` oder `_B`.  
   
 ##  <a name="operator_lt"></a>  Operator&lt; Operator  
  Testet, ob das `concurrent_vector`-Objekt links vom Operator kleiner als das `concurrent_vector`-Objekt auf der rechten Seite ist.  
@@ -198,30 +198,30 @@ inline bool operator<(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `T`  
- Der Datentyp der Elemente in der gleichzeitigen Vektoren gespeichert.  
+*T*<br/>
+Der Datentyp der Elemente in gleichzeitigen Vektoren gespeichert werden soll.  
   
- `A1`  
- Der Allocator-Typ des ersten `concurrent_vector` Objekt.  
+*A1*<br/>
+Die Allocator-Typ des ersten `concurrent_vector` Objekt.  
   
- `A2`  
- Die Allocator-Typ des zweiten `concurrent_vector` Objekt.  
+*A2*<br/>
+Die Allocator-Typ des zweiten `concurrent_vector` Objekt.  
   
- `_A`  
- Ein Objekt vom Typ `concurrent_vector`.  
+*_A*<br/>
+Ein Objekt vom Typ `concurrent_vector`.  
   
- `_B`  
- Ein Objekt vom Typ `concurrent_vector`.  
+*_B HAT*<br/>
+Ein Objekt vom Typ `concurrent_vector`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn Sie der gleichzeitige Vektor auf der linken Seite des Operators kleiner als der gleichzeitigen Vektor rechts vom Operator ist; andernfalls `false`.  
+ `true` Wenn Sie der gleichzeitige Vektor links vom Operator kleiner als der gleichzeitigen Vektor rechts vom Operator ist. andernfalls `false`.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Verhalten dieses Operators ist identisch mit dem entsprechenden Operator für die `vector` -Klasse in der `std` Namespace.  
   
- Diese Methode ist nicht parallelitätssicher ist in Bezug auf die anderen Methoden, die entweder der gleichzeitigen Vektoren ändern könnten `_A` oder `_B`.  
+ Diese Methode ist nicht nebenläufigkeitssicher in Bezug auf andere Methoden, die entweder der gleichzeitigen Vektoren ändern könnten `_A` oder `_B`.  
   
-##  <a name="operator_lt_eq"></a>  Operator&lt;=-Operator  
+##  <a name="operator_lt_eq"></a>  Operator&lt;Operator =-Operator  
  Testet, ob das `concurrent_vector`-Objekt links vom Operator kleiner oder gleich dem `concurrent_vector`-Objekt auf der rechten Seite ist.  
   
 ```  
@@ -232,28 +232,28 @@ inline bool operator<= (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `T`  
- Der Datentyp der Elemente in der gleichzeitigen Vektoren gespeichert.  
+*T*<br/>
+Der Datentyp der Elemente in gleichzeitigen Vektoren gespeichert werden soll.  
   
- `A1`  
- Der Allocator-Typ des ersten `concurrent_vector` Objekt.  
+*A1*<br/>
+Die Allocator-Typ des ersten `concurrent_vector` Objekt.  
   
- `A2`  
- Die Allocator-Typ des zweiten `concurrent_vector` Objekt.  
+*A2*<br/>
+Die Allocator-Typ des zweiten `concurrent_vector` Objekt.  
   
- `_A`  
- Ein Objekt vom Typ `concurrent_vector`.  
+*_A*<br/>
+Ein Objekt vom Typ `concurrent_vector`.  
   
- `_B`  
- Ein Objekt vom Typ `concurrent_vector`.  
+*_B HAT*<br/>
+Ein Objekt vom Typ `concurrent_vector`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn Sie auf der linken Seite des Operators der gleichzeitige Vektor kleiner oder gleich dem gleichzeitigen Vektor auf der rechten Seite des Operators ist. andernfalls `false`.  
+ `true` Wenn die gleichzeitige Vektor links vom Operator kleiner oder gleich dem gleichzeitigen Vektor rechts vom Operator ist; andernfalls `false`.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Verhalten dieses Operators ist identisch mit dem entsprechenden Operator für die `vector` -Klasse in der `std` Namespace.  
   
- Diese Methode ist nicht parallelitätssicher ist in Bezug auf die anderen Methoden, die entweder der gleichzeitigen Vektoren ändern könnten `_A` oder `_B`.  
+ Diese Methode ist nicht nebenläufigkeitssicher in Bezug auf andere Methoden, die entweder der gleichzeitigen Vektoren ändern könnten `_A` oder `_B`.  
   
 ##  <a name="operator_gt"></a>  Operator&gt; Operator  
  Testet, ob das `concurrent_vector`-Objekt links vom Operator größer als das `concurrent_vector`-Objekt auf der rechten Seite ist.  
@@ -266,30 +266,30 @@ inline bool operator>(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `T`  
- Der Datentyp der Elemente in der gleichzeitigen Vektoren gespeichert.  
+*T*<br/>
+Der Datentyp der Elemente in gleichzeitigen Vektoren gespeichert werden soll.  
   
- `A1`  
- Der Allocator-Typ des ersten `concurrent_vector` Objekt.  
+*A1*<br/>
+Die Allocator-Typ des ersten `concurrent_vector` Objekt.  
   
- `A2`  
- Die Allocator-Typ des zweiten `concurrent_vector` Objekt.  
+*A2*<br/>
+Die Allocator-Typ des zweiten `concurrent_vector` Objekt.  
   
- `_A`  
- Ein Objekt vom Typ `concurrent_vector`.  
+*_A*<br/>
+Ein Objekt vom Typ `concurrent_vector`.  
   
- `_B`  
- Ein Objekt vom Typ `concurrent_vector`.  
+*_B HAT*<br/>
+Ein Objekt vom Typ `concurrent_vector`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn der gleichzeitige Vektor auf der linken Seite des Operators den gleichzeitigen Vektor auf der rechten Seite des Operators größer ist. andernfalls `false`.  
+ `true` Wenn der gleichzeitige Vektor links vom Operator größer als der gleichzeitigen Vektor rechts vom Operator ist; andernfalls `false`.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Verhalten dieses Operators ist identisch mit dem entsprechenden Operator für die `vector` -Klasse in der `std` Namespace.  
   
- Diese Methode ist nicht parallelitätssicher ist in Bezug auf die anderen Methoden, die entweder der gleichzeitigen Vektoren ändern könnten `_A` oder `_B`.  
+ Diese Methode ist nicht nebenläufigkeitssicher in Bezug auf andere Methoden, die entweder der gleichzeitigen Vektoren ändern könnten `_A` oder `_B`.  
   
-##  <a name="operator_gt_eq"></a>  Operator&gt;=-Operator  
+##  <a name="operator_gt_eq"></a>  Operator&gt;Operator =-Operator  
  Testet, ob das `concurrent_vector`-Objekt links vom Operator größer oder gleich dem `concurrent_vector`-Objekt auf der rechten Seite ist.  
   
 ```  
@@ -300,28 +300,28 @@ inline bool operator>= (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `T`  
- Der Datentyp der Elemente in der gleichzeitigen Vektoren gespeichert.  
+*T*<br/>
+Der Datentyp der Elemente in gleichzeitigen Vektoren gespeichert werden soll.  
   
- `A1`  
- Der Allocator-Typ des ersten `concurrent_vector` Objekt.  
+*A1*<br/>
+Die Allocator-Typ des ersten `concurrent_vector` Objekt.  
   
- `A2`  
- Die Allocator-Typ des zweiten `concurrent_vector` Objekt.  
+*A2*<br/>
+Die Allocator-Typ des zweiten `concurrent_vector` Objekt.  
   
- `_A`  
- Ein Objekt vom Typ `concurrent_vector`.  
+*_A*<br/>
+Ein Objekt vom Typ `concurrent_vector`.  
   
- `_B`  
- Ein Objekt vom Typ `concurrent_vector`.  
+*_B HAT*<br/>
+Ein Objekt vom Typ `concurrent_vector`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn auf der linken Seite des Operators der gleichzeitige Vektor größer oder gleich dem gleichzeitigen Vektor auf der rechten Seite des Operators ist. andernfalls `false`.  
+ `true` Wenn Sie der gleichzeitige Vektor links vom Operator größer als oder gleich dem gleichzeitigen Vektor rechts vom Operator ist. andernfalls `false`.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Verhalten dieses Operators ist identisch mit dem entsprechenden Operator für die `vector` -Klasse in der `std` Namespace.  
   
- Diese Methode ist nicht parallelitätssicher ist in Bezug auf die anderen Methoden, die entweder der gleichzeitigen Vektoren ändern könnten `_A` oder `_B`.  
+ Diese Methode ist nicht nebenläufigkeitssicher in Bezug auf andere Methoden, die entweder der gleichzeitigen Vektoren ändern könnten `_A` oder `_B`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)

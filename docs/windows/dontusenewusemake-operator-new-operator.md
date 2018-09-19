@@ -1,5 +1,5 @@
 ---
-title: 'Dontusenewusemake:: new-Operator | Microsoft Docs'
+title: 'Dontusenewusemake:: Neuer Operator | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,43 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9785ea27c79ff0a118ff3697a22804c520b265ee
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6c2de62df47e46183c1169956a18ddc10822b22a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873679"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611920"
 ---
 # <a name="dontusenewusemakeoperator-new-operator"></a>DontUseNewUseMake::operator new-Operator
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void* operator new(  
-   size_t,  
-   _In_ void* placement  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `__unnamed0`  
- Einen unbenannten Parameter, der die Anzahl der Bytes des zu belegenden Speichers angibt.  
-  
- `placement`  
- Der Typ zugeordnet werden soll.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Bietet eine Möglichkeit, zusätzliche Argumente zu übergeben, wenn Sie beim Überladen `new`.  
-  
-## <a name="remarks"></a>Hinweise  
- Überlädt `new` und verhindert, dass er im RuntimeClass verwendet werden.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [DontUseNewUseMake-Klasse](../windows/dontusenewusemake-class.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+void* operator new(
+   size_t,
+   _In_ void* placement
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*__unnamed0*  
+Einen unbenannten Parameter, der angibt, die Anzahl der Bytes an Arbeitsspeicher zugewiesen werden.
+
+*Platzierung*  
+Der Typ, zugeordnet werden.
+
+## <a name="return-value"></a>Rückgabewert
+
+Bietet eine Möglichkeit, zusätzliche Argumente zu übergeben, wenn Sie beim Überladen **neue**.
+
+## <a name="remarks"></a>Hinweise
+
+Überlädt **neue** und verhindert, dass deren verwendeten `RuntimeClass`.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[DontUseNewUseMake-Klasse](../windows/dontusenewusemake-class.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

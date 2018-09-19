@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b6043da3945b36bd756714049b2bb6c91a32bd4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 991c8c9505485e84aa4e8e1e0e8955b5ad2ac23a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966549"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712852"
 ---
 # <a name="moneyget-class"></a>money_get-Klasse
 
@@ -46,9 +46,11 @@ class money_get : public locale::facet;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType* den Typ innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet.
+*CharType*<br/>
+Der Typ, der innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet wird.
 
-*InputIterator* der Typ des Iterators, von dem die Get-Funktionen ihre Eingabe lesen.
+*InputIterator*<br/>
+Der Typ des Iterators, von dem die get-Funktionen ihre Eingabe lesen.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -113,17 +115,23 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*erste* Eingabe-Iterator, der den Anfang der zu konvertierenden Sequenz adressiert.
+*Erste*<br/>
+Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*letzte* Eingabe-Iterator, der das Ende der zu konvertierenden Sequenz adressiert.
+*last*<br/>
+Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*Intl* ein boolescher Wert, der angibt, des Typs des Currency Symbols in der Sequenz erwartet: **"true"** Wenn international; **"false"** Wenn National.
+*Intl*<br/>
+Ein boolescher Wert, der den Typ des in der Sequenz vorgesehenen Währungssymbols angibt (**TRUE**, wenn international; **FALSE**, wenn national).
 
-*Iosbase* ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist; andernfalls ist es erforderlich.
+*iosbase*<br/>
+Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
-*Status* legt die entsprechenden bitmaskenelemente für den Streamstatus, je nachdem, ob die Vorgänge oder nicht erfolgreich waren.
+*Zustand*<br/>
+Je nachdem, ob die Vorgänge erfolgreich waren, legt dieses Element die entsprechenden Bitmaskenelemente für den Streamstatus fest.
 
-*Val* eine Zeichenfolge, die zum Speichern der konvertierten Sequenz.
+*val*<br/>
+Eine Zeichenfolge zum Speichern der konvertierten Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -189,17 +197,23 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*erste* Eingabe-Iterator, der den Anfang der zu konvertierenden Sequenz adressiert.
+*Erste*<br/>
+Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*letzte* Eingabe-Iterator, der das Ende der zu konvertierenden Sequenz adressiert.
+*last*<br/>
+Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*Intl* ein boolescher Wert, der angibt, des Typs des Currency Symbols in der Sequenz erwartet: **"true"** Wenn international; **"false"** Wenn National.
+*Intl*<br/>
+Ein boolescher Wert, der den Typ des in der Sequenz vorgesehenen Währungssymbols angibt (**TRUE**, wenn international; **FALSE**, wenn national).
 
-*Iosbase* ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist; andernfalls ist es erforderlich
+*iosbase*<br/>
+Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
-*Status* legt die entsprechenden bitmaskenelemente für den Streamstatus, je nachdem, ob die Vorgänge erfolgreich waren.
+*Zustand*<br/>
+Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
 
-*Val* eine Zeichenfolge, die zum Speichern der konvertierten Sequenz.
+*val*<br/>
+Eine Zeichenfolge zum Speichern der konvertierten Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -280,7 +294,8 @@ explicit money_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parameter
 
-*_Refs* Ganzzahlwert verwendet, um den Typ für die Speicherverwaltung für das Objekt anzugeben.
+*_Refs*<br/>
+Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -294,7 +309,7 @@ Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
 
 Direkte Beispiele hierfür sind nicht möglich, da der Destruktor geschützt ist.
 
-Der Konstruktor initialisiert sein Basisobjekt mit **Locale::**[Facet](../standard-library/locale-class.md#facet_class)(**_ *** Refs*).
+Der Konstruktor initialisiert sein Basisobjekt mit **Locale::**[Facet](../standard-library/locale-class.md#facet_class)(*_Refs*).
 
 ## <a name="string_type"></a> money_get::string_type
 

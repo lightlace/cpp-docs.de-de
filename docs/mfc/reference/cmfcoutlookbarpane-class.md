@@ -50,15 +50,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81087eb5f611edd5ad41725177226c2c2b7a9c2d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: bc03777a490613cb3da111e4a3b678311f09f678
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851341"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706536"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane-Klasse
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
  Ein Steuerelement abgeleitet [CMFCToolBar-Klasse](../../mfc/reference/cmfctoolbar-class.md) , die eingefügt werden kann, in eine Outlook-Leiste ( [CMFCOutlookBar-Klasse](../../mfc/reference/cmfcoutlookbar-class.md)). Der Outlook-Leistenbereich enthält eine Spalte mit großen Schaltflächen. Der Benutzer kann einen Bildlauf durchführen, um die Liste der Schaltflächen nach oben bzw. unten zu verschieben, wenn sie größer ist als der Bereich. Wenn der Benutzer einen Outlook-Leistenbereich von der Outlook-Leiste trennt, ist er frei positionierbar oder kann im Hauptrahmenfenster andocken.  
   
@@ -184,32 +184,32 @@ BOOL AddButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiImage*  
- Gibt den Ressourcenbezeichner einer Bitmap an.  
+*uiImage*<br/>
+[in] Gibt den Ressourcenbezeichner einer Bitmap an.  
   
- [in] *LpszLabel*  
- Gibt an, der Text der Schaltfläche.  
+*lpszLabel*<br/>
+[in] Gibt an, der Text der Schaltfläche.  
   
- [in] *iIdCommand*  
- Gibt das Schaltflächen-Steuerelement-ID an.  
+*iIdCommand*<br/>
+[in] Gibt das Schaltflächen-Steuerelement-ID an.  
   
- [in] *iInsertAt*  
- Gibt den nullbasierten Index auf die Outlook-Leiste unter dem die Schaltfläche eingefügt werden soll.  
+*iInsertAt*<br/>
+[in] Gibt den nullbasierten Index auf die Outlook-Leiste unter dem die Schaltfläche eingefügt werden soll.  
   
- [in] *UiLabel*  
- Eine Zeichenfolge-Ressourcen-ID  
+*uiLabel*<br/>
+[in] Eine Zeichenfolge-Ressourcen-ID  
   
- [in] *SzBmpFileName*  
- Gibt den Namen der Abbilddatei geladen.  
+*szBmpFileName*<br/>
+[in] Gibt den Namen der Abbilddatei geladen.  
   
- [in] *SzLabel*  
- Gibt an, der Text der Schaltfläche.  
+*szLabel*<br/>
+[in] Gibt an, der Text der Schaltfläche.  
   
- [in] *hBmp*  
- Ein Handle für eine Schaltfläche in der Bitmap.  
+*hBmp*<br/>
+[in] Ein Handle für eine Schaltfläche in der Bitmap.  
   
- [in] *hIcon*  
- Ein Handle für ein Schaltflächen-Symbol.  
+*hIcon*<br/>
+[in] Ein Handle für ein Schaltflächen-Symbol.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn eine Schaltfläche erfolgreich hinzugefügt wurde. andernfalls "false".  
@@ -222,7 +222,7 @@ BOOL AddButton(
  Wenn der Index von angegebenen *iInsertAt* -1 ist, wird die Schaltfläche am Ende der Seite hinzugefügt.  
   
 ##  <a name="canbeattached"></a>  CMFCOutlookBarPane::CanBeAttached  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 virtual BOOL CanBeAttached() const;  
@@ -254,17 +254,17 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pParentWnd*  
- Gibt das übergeordnete Fenster des Outlook-Leiste-Steuerelements an. Nicht darf NULL sein.  
+*pParentWnd*<br/>
+[in] Gibt das übergeordnete Fenster des Outlook-Leiste-Steuerelements an. Nicht darf NULL sein.  
   
- [in] *DwStyle*  
- Der Fensterstil.  Eine Liste der Window-Stile, finden Sie unter [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] Der Fensterstil.  Eine Liste der Window-Stile, finden Sie unter [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *UiID*  
- Die Steuerelement-ID. So aktivieren Sie eindeutig sein speichern, der den Zustand des Steuerelements.  
+*uiID*<br/>
+[in] Die Steuerelement-ID. So aktivieren Sie eindeutig sein speichern, der den Zustand des Steuerelements.  
   
- [in] *DwControlBarStyle*  
- Gibt spezielle Formate, die das Verhalten des Outlook-Leiste-Steuerelements definieren, wenn sie in der Outlook-Leiste getrennt wird.  
+*dwControlBarStyle*<br/>
+[in] Gibt spezielle Formate, die das Verhalten des Outlook-Leiste-Steuerelements definieren, wenn sie in der Outlook-Leiste getrennt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich war. andernfalls "false".  
@@ -284,11 +284,11 @@ virtual BOOL EnableContextMenuItems(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pButton*  
- Ein Zeiger auf eine Symbolleisten-Schaltfläche, die der Benutzer geklickt hat.  
+*pButton*<br/>
+[in] Ein Zeiger auf eine Symbolleisten-Schaltfläche, die der Benutzer geklickt hat.  
   
- [in] *pPopup*  
- Ein Zeiger auf das Kontextmenü.  
+*pPopup*<br/>
+[in] Ein Zeiger auf das Kontextmenü.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt TRUE zurück, wenn das Kontextmenü angezeigt werden soll. andernfalls "false".  
@@ -309,8 +309,8 @@ void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bPageScroll*  
- Bei "true", aktivieren Sie die Seite Scrollen-Modus ein. False gibt an, deaktivieren Sie den Modus der Seite scrollen.  
+*bPageScroll*<br/>
+[in] Bei "true", aktivieren Sie die Seite Scrollen-Modus ein. False gibt an, deaktivieren Sie den Modus der Seite scrollen.  
   
 ##  <a name="getregularcolor"></a>  CMFCOutlookBarPane::GetRegularColor  
  Gibt den regulären (d. h. nicht ausgewählten) Textfarbe des Outlook-Leistenbereich.  
@@ -323,7 +323,7 @@ DECLARE_MESSAGE_MAPCOLORREF GetRegularColor() const;
  Die aktuelle Textfarbe als ein RGB-Farbwert.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwendung [CMFCOutlookBarPane::SetTextColor](#settextcolor) , legen Sie die aktuelle (reguläre und ausgewählte) Textfarbe der Outlook-Leiste. Sie erhalten die Standardtextfarbe durch Aufrufen der [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) -Funktion mit den COLOR_WINDOW-Index.  
+ Verwendung [CMFCOutlookBarPane::SetTextColor](#settextcolor) , legen Sie die aktuelle (reguläre und ausgewählte) Textfarbe der Outlook-Leiste. Sie erhalten die Standardtextfarbe durch Aufrufen der [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) -Funktion mit den COLOR_WINDOW-Index.  
   
 ##  <a name="isbackgroundtexture"></a>  CMFCOutlookBarPane::IsBackgroundTexture  
  Bestimmt, ob es ein Hintergrundbild für das Outlook-Leistenbereich geladen.  
@@ -365,8 +365,8 @@ BOOL RemoveButton(UINT iIdCommand);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iIdCommand*  
- Gibt an, die Befehls-ID einer Schaltfläche zu entfernen.  
+*iIdCommand*<br/>
+[in] Gibt an, die Befehls-ID einer Schaltfläche zu entfernen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Schaltfläche mit der erfolgreich entfernt wurde. "False", wenn die angegebene Befehls-ID ungültig ist.  
@@ -379,8 +379,8 @@ void SetBackColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Farbe*  
- Die neue Hintergrundfarbe angibt.  
+*Farbe*<br/>
+[in] Die neue Hintergrundfarbe angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion zum Festlegen der aktuellen Hintergrundfarbe für die Outlook-Leiste. Die Hintergrundfarbe wird verwendet, nur dann, wenn kein Hintergrundbild vorhanden ist.  
@@ -393,8 +393,8 @@ void SetBackImage(UINT uiImageID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiImageID*  
- Gibt an, die Image-Ressourcen-ID.  
+*uiImageID*<br/>
+[in] Gibt an, die Image-Ressourcen-ID.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode zum Festlegen der Outlook des Balkens Hintergrundbild. Die Liste der Hintergrundbilder verwaltet wird von den eingebetteten [CMFCToolBarImages-Klasse](../../mfc/reference/cmfctoolbarimages-class.md) Objekt.  
@@ -426,11 +426,11 @@ void SetTextColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *ClrRegText*  
- Gibt die neue Farbe für nicht ausgewählte Text.  
+*clrRegText*<br/>
+[in] Gibt die neue Farbe für nicht ausgewählte Text.  
   
- [in] *ClrSelText*  
- Gibt die neue Farbe für den ausgewählten Text an.  
+*clrSelText*<br/>
+[in] Gibt die neue Farbe für den ausgewählten Text an.  
   
 ##  <a name="settransparentcolor"></a>  CMFCOutlookBarPane::SetTransparentColor  
  Legt die transparente Farbe für den Outlook-Leistenbereich fest.  

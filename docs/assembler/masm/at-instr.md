@@ -1,7 +1,7 @@
 ---
-title: '@InStr | Microsoft Docs'
+title: '@InStr | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0fb92987de21f653440d6c4cc23d726ad323b69
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b0beb5fbde4433ad436d9dffa0dd3048b17a7fcd
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049280"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682992"
 ---
 # <a name="instr"></a>@InStr
-Makrofunktion, die das erste Vorkommen des findet *Zeichenfolge2* in *string1*, beginnend bei *Position* in *string1*. Wenn *Position* nicht angezeigt wird, Suche beginnt am Anfang *string1*. Gibt eine Position ganze Zahl oder 0 zurück, wenn *Zeichenfolge2* wurde nicht gefunden.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-@InStr( [[position]], string1, string2 )  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Symbole – Verweis](../../assembler/masm/symbols-reference.md)
+
+Makrofunktion, die das erste Vorkommen des findet *Zeichenfolge2* in *string1*, beginnend bei *Position* in *string1*. Wenn *Position* nicht angezeigt wird, beginnt der Suche am Anfang *string1*. Gibt eine Position ganze Zahl oder 0, wenn *Zeichenfolge2* wurde nicht gefunden.
+
+## <a name="syntax"></a>Syntax
+
+> @InStr([[positionieren Sie]], Zeichenfolge1, Zeichenfolge2)
+
+## <a name="see-also"></a>Siehe auch
+
+[Symbole – Verweis](../../assembler/masm/symbols-reference.md)<br/>

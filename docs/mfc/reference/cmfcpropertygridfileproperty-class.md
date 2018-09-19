@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dd70e67769d35bf50e52b7be4b2c8848c089cb0
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 82d1b4c3790f50032ac9775febf920e0e8c6c547
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851599"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700833"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty-Klasse
 Die `CMFCPropertyGridFileProperty` Klasse unterstützt, einem Eigenschaftenlisten-Steuerelement ein Element, das ein Dialogfeld zur Dateiauswahl geöffnet wird.  
@@ -78,34 +78,34 @@ CMFCPropertyGridFileProperty(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *StrName*  
- Der Eigenschaftenname.  
+*strName*<br/>
+[in] Der Eigenschaftenname.  
   
- [in] *bOpenFileDialog*  
- "True" Öffnen Sie eine **Datei öffnen** Dialogfeld "False" zum Öffnen einer **Datei speichern** Dialogfeld.  
+*bOpenFileDialog*<br/>
+[in] "True" Öffnen Sie eine **Datei öffnen** Dialogfeld "False" zum Öffnen einer **Datei speichern** Dialogfeld.  
   
- [in] *StrFileName*  
- Der ursprüngliche Dateiname.  
+*strFileName*<br/>
+[in] Der ursprüngliche Dateiname.  
   
- [in] *LpszDefExt*  
- Eine Zeichenfolge mit einer oder mehreren Dateierweiterungen. Der Standardwert ist NULL.  
+*lpszDefExt*<br/>
+[in] Eine Zeichenfolge, der eine oder mehrere Dateierweiterungen. Der Standardwert ist NULL.  
   
- [in] *DwFlags*  
- Dialogfeldflags. Der Standardwert ist eine bitweise Kombination (OR) von OFN_HIDEREADONLY und OFN_OVERWRITEPROMPT.  
+*dwFlags*<br/>
+[in] Dialogfeldflags. Der Standardwert ist eine bitweise Kombination (OR) von OFN_HIDEREADONLY und OFN_OVERWRITEPROMPT.  
   
- [in] *LpszFilter*  
- Eine Zeichenfolge mit einer oder mehreren Dateinfiltern. Der Standardwert ist NULL.  
+*lpszFilter*<br/>
+[in] Eine Zeichenfolge mit einem oder mehreren dateinfiltern. Der Standardwert ist NULL.  
   
- [in] *LpszDescr*  
- Die Beschreibung des Eigenschaftenelements. Der Standardwert ist NULL.  
+*lpszDescr*<br/>
+[in] Die Beschreibung des Eigenschaftenelements. Der Standardwert ist NULL.  
   
- [in] *DwData*  
- Anwendungsspezifische Daten, die dem Eigenschaftenelement zugeordnet sind. Zum Beispiel eine 32-Bit-Ganzzahl oder ein Zeiger auf andere Daten. Der Standardwert ist 0.  
+*dwData*<br/>
+[in] Anwendungsspezifische Daten, die dem Eigenschaftenelement zugeordnet ist. Zum Beispiel eine 32-Bit-Ganzzahl oder ein Zeiger auf andere Daten. Der Standardwert ist 0.  
   
 ### <a name="return-value"></a>Rückgabewert  
   
 ### <a name="remarks"></a>Hinweise  
- Eine vollständige Liste der verfügbaren Flags finden Sie unter [OPENFILENAME-Struktur](https://msdn.microsoft.com/library/ms646839.aspx).  
+ Eine vollständige Liste der verfügbaren Flags finden Sie unter [OPENFILENAME-Struktur](/windows/desktop/api/commdlg/ns-commdlg-tagofna).  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie ein Objekt mit dem Konstruktor der `CMFCPropertyGridFileProperty` Klasse erstellt wird. In diesem Beispiel ist Teil der [Visual Studio-Demobeispiel](../../visual-cpp-samples.md).  

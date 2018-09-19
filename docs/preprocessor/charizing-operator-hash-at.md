@@ -1,5 +1,5 @@
 ---
-title: Zeichenoperator (#@) | Microsoft Docs
+title: Zeichenoperator (#@) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,37 +18,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9e0c0d140d937b7359ff3abf9c0eae145a89210
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d86c49c8d7d0cda91ba2415167cc79c810a96b3d
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912731"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895304"
 ---
 # <a name="charizing-operator-"></a>Zeichenoperator (#@)
-**Microsoft-spezifisch**  
-  
- Der Zeichenoperator kann nur mit Argumenten von Makros verwendet werden. Wenn **#@** steht vor einem formalen Parameter in der Definition des Makros, das tatsächliche Argument in einfache Anführungszeichen eingeschlossen und als Zeichen behandelt wird, wenn das Makro erweitert wird. Zum Beispiel:  
-  
-```  
-#define makechar(x)  #@x  
-```  
-  
- führt dazu, dass die Anweisung  
-  
-```  
-a = makechar(b);  
-```  
-  
- erweitert wird auf  
-  
-```  
-a = 'b';  
-```  
-  
- Das einfache Anführungszeichen kann nicht mit dem Zeichenoperator verwendet werden.  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Präprozessoroperatoren](../preprocessor/preprocessor-operators.md)
+**Microsoft-spezifisch**
+
+Der Zeichenoperator kann nur mit Argumenten von Makros verwendet werden. Wenn `#@` steht einen formalen Parameter in der Definition des Makros ist das tatsächliche Argument in einfache Anführungszeichen eingeschlossen und als Zeichen behandelt wird, wenn das Makro erweitert wird. Zum Beispiel:
+
+```
+#define makechar(x)  #@x
+```
+
+führt dazu, dass die Anweisung
+
+```
+a = makechar(b);
+```
+
+erweitert wird auf
+
+```
+a = 'b';
+```
+
+Das einfache Anführungszeichen kann nicht mit dem Zeichenoperator verwendet werden.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Präprozessoroperatoren](../preprocessor/preprocessor-operators.md)

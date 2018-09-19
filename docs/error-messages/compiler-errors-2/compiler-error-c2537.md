@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2537 | Microsoft Docs
+title: Compilerfehler C2537 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6100f77d3a1487bfa1eb12a78ac8187cec43fe64
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65db4fa66d147cc46c1a6013d07048892dfa0800
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199956"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136022"
 ---
 # <a name="compiler-error-c2537"></a>Compilerfehler C2537
-"Spezifizierer": Ungültige Verknüpfungsspezifikation  
-  
- Mögliche Ursachen:  
-  
-1.  Der Bindungsspezifizierer wird nicht unterstützt. Der Bindungsspezifizierer "C" wird unterstützt.  
-  
-2.  Verknüpfung mit "C" wird für mehr als eine Funktion in einem Satz von überladenen Funktionen angegeben. Dies ist nicht zulässig.  
-  
- Im folgende Beispiel wird C2537 generiert:  
-  
-```  
-// C2537.cpp  
-// compile with: /c  
-extern "c" void func();   // C2537  
-extern "C" void func2();   // OK  
+
+"Spezifizierer": Unzulässige Angabe für Bindung
+
+Mögliche Ursachen:
+
+1. Der Bindungsspezifizierer wird nicht unterstützt. Nur der Bindungsspezifizierer "C" wird unterstützt.
+
+1. "C"-Verknüpfung ist für mehr als eine Funktion in einem Satz von überladenen Funktionen angegeben. Dies ist nicht zulässig.
+
+Im folgende Beispiel wird die C2537 generiert:
+
+```
+// C2537.cpp
+// compile with: /c
+extern "c" void func();   // C2537
+extern "C" void func2();   // OK
 ```

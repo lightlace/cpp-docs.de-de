@@ -1,5 +1,5 @@
 ---
-title: Darstellen von Bildern aus einer Bildliste | Microsoft Docs
+title: Darstellen von Bildern aus einer Bildliste | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ebc05a83eb22d494a75ed474e315112522af3fc
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 2f626b0dc4a8177268e72bc01f7d05ca00e326ba
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36932067"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217826"
 ---
 # <a name="drawing-images-from-an-image-list"></a>Darstellen von Bildern aus einer Bildliste
-Um ein Bild gezeichnet werden soll, verwenden Sie die [Memberfunktion CImageList:: Draw](../mfc/reference/cimagelist-class.md#draw) Memberfunktion. Geben Sie einen Zeiger auf ein Gerätekontextobjekt, den Index des Bilds gezeichnet werden soll, den Speicherort in den Gerätekontext, an dem das Bild gezeichnet werden soll, und eine Gruppe von Flags an, dass das Zeichnungsformat.  
+Um ein Bild zu zeichnen, verwenden die [Memberfunktion CImageList:: Draw](../mfc/reference/cimagelist-class.md#draw) Member-Funktion. Geben Sie einen Zeiger auf ein Gerät Context-Objekt, den Index des Bildes, das gezeichnet werden soll, den Speicherort in den Gerätekontext, an dem das Bild gezeichnet werden soll, und einen Satz von Flags an, dass das Zeichnungsformat.  
   
- Geben Sie bei der **ILD_TRANSPARENT** Stil `Draw` verwendet einen zweistufiger Prozess, ein maskiertes Bild gezeichnet werden soll. Zuerst führt eine logische- und -Vorgang für die Bits des Bilds und das Bit der Maske. Dann führt es eine logische XOR-Operation für die Ergebnisse des ersten Vorgangs und die Hintergrundbits im des Zielgerätekontexts. Dieser Prozess wird transparente Bereiche in das resultierende Image erstellt; bewirkt, dass jedes Bit der Maske weiß das entsprechende Bit in das resultierende Image transparent.  
+ Bei Angabe der **ILD_TRANSPARENT** Stil `Draw` verwendet einen zweistufiger Prozess, ein maskiertes Bild gezeichnet werden soll. Erstens führt eine logische- und -Vorgang für die Bits des Abbilds und die Bits der Maske. Er führt dann eine Logisches XOR-Operation für die Ergebnisse des ersten Vorgangs und die Hintergrundbits des Zielgerätekontexts. Dieser Prozess erstellt transparente Bereiche, in das resultierende Image. bewirkt, dass jeder weiß Bit in der Maske das entsprechende Bit in das resultierende Image transparent sein.  
   
- Sie sollten vor dem Zeichnen eines maskierten Bilds in einem Hintergrundthread Volltonfarbe, verwenden die [SetBkColor](../mfc/reference/cimagelist-class.md#setbkcolor) Memberfunktion versucht, die die Hintergrundfarbe der Bildliste auf dieselbe Farbe als Ziel festgelegt. Festlegen der Farbe entfällt die Notwendigkeit, transparente Bereiche in der Abbildung erstellen und ermöglicht `Draw` das Abbild auf den Zielgerätekontext, was zu einem beträchtlichen Anstieg Leistung zu kopieren. Um das Bild gezeichnet werden soll, geben Sie die **ILD_NORMAL** Format zuzuweisen, wenn Sie aufrufen `Draw`.  
+ Bevor Sie ein maskiertes Bild wird auf einen einfarbigen Hintergrund zeichnen, verwenden Sie die [SetBkColor](../mfc/reference/cimagelist-class.md#setbkcolor) Memberfunktion versucht, die die Hintergrundfarbe der Liste der Bilder auf die gleiche Farbe als Ziel festzulegen. Festlegen der Textfarbe entfällt die Notwendigkeit, transparente Bereiche in der Abbildung zu erstellen, und ermöglicht `Draw` , das Abbild auf den Ziel-Gerätekontext, was zu einer erheblichen Zunahme der Leistung zu kopieren. Geben Sie zum Zeichnen des Bilds, das **ILD_NORMAL** Format zuzuweisen, wenn Sie aufrufen `Draw`.  
   
- Sie können die Hintergrundfarbe für eine maskierte Bildliste festlegen ([CImageList](../mfc/reference/cimagelist-class.md)) zu einem beliebigen Zeitpunkt so, dass die It ordnungsgemäß auf jedem ausgefüllten Hintergrund zeichnet. Festlegen der Hintergrundfarbe auf **CLR_NONE führt dazu** bewirkt, dass Bilder standardmäßig transparent gezeichnet werden. Um die Farbe des Hintergrunds einer Bildliste abzurufen, verwenden Sie die [GetBkColor](../mfc/reference/cimagelist-class.md#getbkcolor) Memberfunktion.  
+ Sie können die Hintergrundfarbe für eine maskierte Bildliste festlegen ([CImageList](../mfc/reference/cimagelist-class.md)) zu einem beliebigen Zeitpunkt so, dass die It ordnungsgemäß auf alle Volltonfarbe für den Hintergrund zeichnet. Festlegen der Farbe des Hintergrunds auf **CLR_NONE führt dazu** bewirkt, dass Images, standardmäßig transparent gezeichnet werden soll. Verwenden Sie zum Abrufen der Farbe des Hintergrunds einer Bildliste der [GetBkColor](../mfc/reference/cimagelist-class.md#getbkcolor) Member-Funktion.  
   
- Die **ILD_BLEND25** und **ILD_BLEND50** Stile mischen des Abbilds mit der Hervorhebungsfarbe des Systems. Diese Formate sind nützlich, wenn Sie ein maskiertes Bild verwenden, um ein Objekt darzustellen, die der Benutzer auswählen kann. Beispielsweise können Sie die **ILD_BLEND50** Stil für das Bild gezeichnet werden soll, wenn der Benutzer sie auswählt.  
+ Die **ILD_BLEND25** und **ILD_BLEND50** Stile mischen, das Image mit der Hervorhebungsfarbe des Systems. Diese Formate sind nützlich, wenn Sie ein maskiertes Image verwenden, um ein Objekt darzustellen, die der Benutzer auswählen kann. Beispielsweise können Sie die **ILD_BLEND50** Stil zum Zeichnen des Bilds, wenn der Benutzer sie auswählt.  
   
- Nicht maskierten Bildes in den Kontext mit Ziel Gerät kopiert die `SRCCOPY` auszuführenden Vorgangs. Die Farben in der Abbildung werden unabhängig von die Hintergrundfarbe des Gerätekontexts angezeigt. Die im angegebenen zeichnungsarten `Draw` auch haben keinen Einfluss auf die Darstellung eines nicht maskierten Bilds.  
+ Ein nicht maskierte Image wird kopiert, auf das Ziel Gerät Kontext die `SRCCOPY` rastervorgang. Die Farben in der Abbildung werden unabhängig von die Hintergrundfarbe des Gerätekontexts angezeigt. Die zeichnungsarten in angegebenen `Draw` auch haben keine Auswirkungen auf die Darstellung eines nicht maskierte Images.  
   
- Zusätzlich zu den Draw-Memberfunktion einer anderen Funktion [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), reicht die Möglichkeit, ein Bild zu rendern. `DrawIndirect` akzeptiert, die als Parameter ein [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) Struktur. Diese Struktur kann verwendet werden, um das Rendering des aktuellen Images, einschließlich der Verwendung von rastervorgangscode (ROP) anzupassen. Weitere Informationen zu ROP Codes finden Sie unter [Rastervorgangscode](http://msdn.microsoft.com/library/windows/desktop/dd162892) und [Bitmaps als Pinsel](http://msdn.microsoft.com/library/windows/desktop/dd183378) im Windows SDK.  
+ Zusätzlich zu den Draw-Memberfunktion, eine andere Funktion [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), erweitert die Möglichkeit, ein Bild zu rendern. `DrawIndirect` erfordert, als Parameter ein [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams) Struktur. Diese Struktur kann verwendet werden, um das Rendering des aktuellen Bilds, einschließlich der Verwendung von rastervorgangscode (ROP) anpassen. Weitere Informationen zu ROP-Codes finden Sie unter [Rastervorgangscode](/windows/desktop/gdi/raster-operation-codes) und [Bitmaps als Pinsel](/windows/desktop/gdi/bitmaps-as-brushes) im Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CImageList](../mfc/using-cimagelist.md)   

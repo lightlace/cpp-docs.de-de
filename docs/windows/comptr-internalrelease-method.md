@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Internalrelease-Methode | Microsoft Docs'
+title: 'Comptr:: Internalrelease-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 375a44d3f541e5eb5e01c328093d831cfe158717
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ba3e4b916556ebe83303228cfa9a056780962e3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881717"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612926"
 ---
 # <a name="comptrinternalrelease-method"></a>ComPtr::InternalRelease-Methode
-Führt einen COM-Freigabe-Vorgang für die Schnittstelle aus, die diesem ComPtr-Objekt zugeordnet ist.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void InternalRelease();  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Methode ist geschützt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [ComPtr-Klasse](../windows/comptr-class.md)
+
+Führt einen COM-Freigabe-Vorgang für die Schnittstelle zugeordneten **ComPtr**.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+void InternalRelease();
+```
+
+## <a name="remarks"></a>Hinweise
+
+Diese Methode ist geschützt.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[ComPtr-Klasse](../windows/comptr-class.md)

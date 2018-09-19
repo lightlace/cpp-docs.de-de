@@ -48,17 +48,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3278824e565f34a61943b466ccc6ffef9c4f0be0
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b9ba9f6c2de8260ea846b51e2192ecfb967c5502
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337015"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719978"
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar-Klasse
 Die `CMFCAutoHideBar`-Klasse ist eine besondere Symbolleistenklasse, die die Funktion „Automatisch im Hintergrund“ implementiert.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.    
 ## <a name="syntax"></a>Syntax  
   
 ```  
@@ -136,11 +136,11 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pAutoHideWnd*  
- Das Fenster, das Sie ausblenden möchten.  
+*pAutoHideWnd*<br/>
+[in] Das Fenster, das Sie ausblenden möchten.  
   
- [in] *DwAlignment*  
- Ein Wert, der die Ausrichtung der Automatisch-im-Hintergrund-Schaltfläche zum Anwendungsfenster angibt.  
+*dwAlignment*<br/>
+[in] Ein Wert, der die Ausrichtung der automatisch ausblendbaren Schaltfläche an das Anwendungsfenster angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -176,8 +176,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -207,12 +207,12 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *"lpszclassname"*  
- [in] *DwStyle*  
- [in] *Rect*  
- [in] *pParentWnd*  
- [in] *nID*  
- [in] *DwControlBarStyle*  
+*"lpszclassname"*<br/>
+[in] [in] *DwStyle*  
+*Rect*<br/>
+[in] [in] *pParentWnd*  
+*nID*<br/>
+[in] [in] *DwControlBarStyle*  
  [in] *"pContext"*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -342,11 +342,11 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nLength*  
- Der Wert wird in der Basisimplementierung nicht verwendet. Verwenden Sie diesen Wert in abgeleiteten Implementierungen, um die Länge des Bereichs mit der geänderten Größe anzuzeigen.  
+*nLength*<br/>
+[in] Der Wert wird in der basisimplementierung nicht verwendet. Verwenden Sie diesen Wert in abgeleiteten Implementierungen, um die Länge des Bereichs mit der geänderten Größe anzuzeigen.  
   
- [in] *bHoriz*  
- Der Wert wird in der Basisimplementierung nicht verwendet. Verwenden Sie in abgeleiteten Implementierungen "true" Handle der Fall, in dem die automatisch ausblendbare Leiste vertikal reduziert wird, und "false" für den Fall, in dem die automatisch ausblendbare Leiste horizontal reduziert wird.  
+*bHoriz*<br/>
+[in] Der Wert wird in der basisimplementierung nicht verwendet. Verwenden Sie in abgeleiteten Implementierungen "true" Handle der Fall, in dem die automatisch ausblendbare Leiste vertikal reduziert wird, und "false" für den Fall, in dem die automatisch ausblendbare Leiste horizontal reduziert wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die resultierende Größe des Bereichs, dessen Größe geändert wurde.  

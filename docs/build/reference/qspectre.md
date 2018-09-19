@@ -1,5 +1,5 @@
 ---
-title: / Qspectre | Microsoft Docs
+title: / Qspectre | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 1/23/2018
 ms.technology:
@@ -15,16 +15,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d87850ae5413ccf876eb4d4b44b34e34527ef9a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5dde5d8bb2e7b973b505b467165a710546f2a6a0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379418"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716026"
 ---
 # <a name="qspectre"></a>/Qspectre
 
-Gibt die compilergenerierung von Anweisungen, um bestimmte Absorptionsspektrum Variant 1 Sicherheitsrisiken zu minimieren.
+Gibt an, der compilergenerierung von Anweisungen, um bestimmte Spectre-Variante 1-Sicherheitsrisiken zu verringern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,43 +32,53 @@ Gibt die compilergenerierung von Anweisungen, um bestimmte Absorptionsspektrum V
 
 ## <a name="remarks"></a>Hinweise
 
-Die **/Qspectre** Option veranlasst den Compiler, fügen Sie Anweisungen, um bestimmte mindern [Absorptionsspektrum Sicherheitsrisiken](https://spectreattack.com/spectre.pdf). Diese Sicherheitslücken, aufgerufen *seitenkanalangriffe spekulative Ausführung*, wirken sich auf viele Betriebssysteme und moderne Prozessoren, die Prozessoren von Intel, AMD, einschließlich und ARM.
+Die **"/ qspectre"** Option ist in Visual Studio 2017 Version 15.7 und höher verfügbar. Veranlasst den Compiler zum Einfügen von Anweisungen, um bestimmte verringern [Spectre-Sicherheitsrisiken](https://spectreattack.com/spectre.pdf). Diese Sicherheitsrisiken namens *seitenkanalangriffe mit spekulativer Ausführung*, wirken sich auf viele Betriebssysteme und modernen Prozessoren, einschließlich der Prozessoren von Intel, AMD und ARM.
 
-Die **/Qspectre** Option ist standardmäßig deaktiviert.
+Die **"/ qspectre"** Option ist standardmäßig deaktiviert.
 
-In der ersten Version der **/Qspectre** Option funktioniert nur in optimiertem Code. Nehmen Sie Sie sicher, dass der Code mit allen Optionen für die Optimierung kompiliert wird (z. B. [/O2 oder/O1](o1-o2-minimize-size-maximize-speed.md) , aber nicht [/Od](od-disable-debug.md)) um sicherzustellen, dass das Minderung angewendet wird. Auf ähnliche Weise überprüfen jeglicher Code, der verwendet [#pragma optimieren ("Stg", off)](../../preprocessor/optimize.md).
+In der ersten Version der **"/ qspectre"** Option funktioniert nur in optimiertem Code. Stellen Sie sicher, um Ihren Code mit einer der Optionen für die Optimierung zu kompilieren (z. B. ["/ O2" oder "/ O1"](o1-o2-minimize-size-maximize-speed.md) , nicht jedoch [/Od](od-disable-debug.md)) um sicherzustellen, dass die Lösung angewendet wird. Auf ähnliche Weise Überprüfen von Code, der verwendet [#pragma optimieren ("Stg", deaktiviert)](../../preprocessor/optimize.md).
 
 ### <a name="applicability"></a>Anwendbarkeit
 
-Wenn der Code arbeitet mit Daten, die eine Vertrauensgrenze gekreuzt wir empfehlen die Verwendung der **/Qspectre** Option zum Erstellen und bereitzustellen, den Code, um dieses Problem so bald wie möglich zu minimieren. Beispiele für Code, der auf Daten ausgeführt wird, die eine Vertrauensgrenze gekreuzt sind Code, der nicht vertrauenswürdigen Eingabe lädt, die Ausführung beeinflussen können, z. B. Code, mit der Remoteprozeduraufruf, aufruft, analysiert nicht vertrauenswürdige Eingaben oder Dateien oder andere lokale prozessübergreifende verwendet Kommunikation (IPC)-Schnittstellen. Standard-Sandkasten Techniken möglicherweise nicht ausreichend. Sie sollten Ihre Sandkästen sorgfältig untersuchen, bevor Sie sich entscheiden, dass der Code keine Vertrauensgrenze durchgestrichen ist.
+Wenn Ihr Code ausgeführt wird, auf Daten, die eine Vertrauensgrenze gekreuzt empfehlen wir die Verwendung der **"/ qspectre"** Option neu erstellen und Bereitstellen von Ihren Code, um dieses Problem so schnell wie möglich zu beheben. Beispiele für Code, der für Daten ausgeführt wird, die eine Vertrauensgrenze gekreuzt sind Code, der nicht vertrauenswürdige Eingaben lädt, die Ausführung beeinflussen können, z. B. Code, mit der Remoteprozeduraufruf, aufruft, analysiert wird, nicht vertrauenswürdige Eingaben oder Dateien oder andere lokale prozessübergreifende verwendet Kommunikation (IPC)-Schnittstellen. Standard-Sandkasten-Verfahren möglicherweise nicht ausreichend. Sie sollten Ihre Sandkästen sorgfältig untersuchen, bevor Sie sich entscheiden, dass Ihr Code eine Vertrauensgrenze nicht überschreiten, ist.
 
 ### <a name="availability"></a>Verfügbarkeit
 
-Die **/Qspectre** Option steht in Visual Studio 2017 Version 15.5.5 und alle Updates für Microsoft Visual C++-Compiler (MSVC), die am oder nach 23 Januar 2018 vorgenommen.
+Die **"/ qspectre"** Option ist in Visual Studio 2017 Version 15.5.5 und alle Updates für Microsoft Visual C++-Compiler (MSVC) am oder nach dem 23. Januar 2018 verfügbar. Verwenden Sie Visual Studio-Installer, um den Compiler zu aktualisieren und die Bibliotheken mit Spectre-verringert als einzelne Komponenten zu installieren. Die **"/ qspectre"** Option steht auch in Visual Studio 2015 Update 3 über einen Patch. Weitere Informationen finden Sie unter [KB 4338871](https://support.microsoft.com/help/4338871).
 
-Alle Versionen von Visual Studio 2017 Version 15.5 und alle Vorschauen von Visual Studio Version 15,6 enthalten bereits eine nicht dokumentierte Option **/d2guardspecload**, entspricht das ursprüngliche Verhalten der **/Qspectre**. Sie können **/d2guardspecload** , gelten die gleichen Maßnahmen in den Code in diesen Versionen des Compilers. Aktualisieren Sie den Build mit **/Qspectre** im Compiler, die die Option; unterstützen die **/Qspectre** Option kann außerdem neue Maßnahmen in höheren Versionen des Compilers unterstützen.
+Alle Versionen von Visual Studio 2017 Version 15.5 und alle Preview-Versionen von Visual Studio Version 15.6 enthalten bereits eine nicht dokumentierte Option, **/d2guardspecload**, entspricht das ursprüngliche Verhalten der **"/ qspectre"**. Sie können **/d2guardspecload** auf die gleichen Schutzmaßnahmen auf den Code in diesen Versionen des Compilers anwenden. Aktualisieren Sie Ihren Build mit **"/ qspectre"** im Compiler, die die Option; unterstützen die **"/ qspectre"** Option kann auch neue Lösungen unterstützen, in höheren Versionen des Compilers.
 
 ### <a name="effect"></a>Effekt
 
-Die **/Qspectre** Option gibt Code zur Abwehr von Specter Variant 1, Grenzen überprüfen umgehen, [CVE-2017-5753](https://nvd.nist.gov/vuln/detail/CVE-2017-5753). Funktionsweise von Einfügung von Anweisungen, die als Barriere Ausführung spekulative Code fungieren. Die spezifischen Anweisungen zum Prozessor Spekulatives zu mindern hängt von den Prozessor und seine Micro-Architektur und möglicherweise in zukünftigen Versionen des Compilers ändern.
+Die **"/ qspectre"** Option gibt Code an Schreckgespenst Variant-Wert 1, Grenzen, überprüfen Sie umgehen, verringern [CVE-2017-5753](https://nvd.nist.gov/vuln/detail/CVE-2017-5753). Dies funktioniert durch Einfügen von Anweisungen, die als Grenze Ausführung spekulative Code dienen. Folgen Sie den Anweisungen zum Verringern der Prozessor Spekulatives verwendet hängen von den Prozessor und die Micro-Architektur, und können in zukünftigen Versionen des Compilers ändern.
 
-Wenn die **/Qspectre** aktiviert ist, versucht der Compiler, um Instanzen zu identifizieren, in denen spekulative Ausführung Grenzen überspringen kann, und fügt die Barriere-Anweisungen. Es ist wichtig zu beachten, dass es Einschränkungen für die Analyse, die ein Compiler ausführen können gibt, um Instanzen von Variant 1 zu identifizieren. Daher besteht keine Garantie, die alle mögliche Instanzen vom Typ Variant 1 unter instrumentiert werden **/Qspectre**.
+Wenn die **"/ qspectre"** aktiviert ist, versucht der Compiler zur Identifikation von Instanzen, in denen spekulativer Ausführung Grenzen überspringen kann, und fügt die Barriere-Anweisungen. Es ist wichtig zu beachten, dass es Grenzen für die Analyse, die ein Compiler ausführen können gibt, um die Identifikation von Instanzen des Variant-Wert 1. Daher besteht keine Garantie, die alle mögliche Instanzen vom Typ Variant 1 unter instrumentiert werden **"/ qspectre"**.
 
 ### <a name="performance-impact"></a>Auswirkungen auf die Leistung
 
-Die Leistungseinbußen **/Qspectre** in mehrere sehr große Codebasen vernachlässigbar sein angezeigt wurde, aber es gibt keine Garantie, Leistung des Codes bei **/Qspectre** bleibt unverändert. Sie sollten den Code, um die Auswirkungen der die Option auf die Leistung zu vergleichen. Wenn Sie wissen, dass das Minderung in einem leistungskritischen Block oder die Schleife nicht erforderlich ist, das Minderung kann selektiv deaktiviert werden mithilfe einer [__declspec(spectre(nomitigation))](../../cpp/spectre.md) Richtlinie. Diese Richtlinie ist nicht verfügbar in Compilern, die ausschließlich unterstützen die **/d2guardspecload** Option.
+Auswirkungen auf die Leistung **"/ qspectre"** in verschiedene sehr große Codebasen vernachlässigbar sein angezeigt wurde, aber es gibt keine Garantie, die Leistung Ihres Codes unter **"/ qspectre"** bleibt unverändert. Sie sollten-benchmark, Ihren Code, um die Auswirkungen der Option auf die Leistung zu testen. Wenn Sie wissen, dass die Lösung nicht in einem leistungskritischen Block oder eine Schleife erforderlich ist, die Lösung kann selektiv deaktiviert werden mithilfe einer [__declspec(spectre(nomitigation))](../../cpp/spectre.md) Richtlinie. Diese Richtlinie ist nicht verfügbar in Compilern, die nur unterstützen die **/d2guardspecload** Option.
+
+### <a name="required-libraries"></a>Erforderlichen Bibliotheken
+
+Die **"/ qspectre"** -Compileroption generiert Code, der implizit Versionen der Common Language Runtime-Bibliotheken verknüpft, die zum Bereitstellen von Spectre-entschärfungen erstellt wurden. Diese Bibliotheken sind optionale Komponenten, die mithilfe von Visual Studio-Installer installiert werden müssen:
+
+- VC++ 2017, Version *Version_number* Bibliotheken, für Spectre (X86- und X64)
+- Visual C++-ATL (x86/x64) mit Spectre-Entschärfungen
+- Visual C++-MFC für x86/x64 mit Spectre-Entschärfungen
+
+Wenn Sie Ihren Code mit erstellen **"/ qspectre"** und diese Bibliotheken sind nicht installiert ist, die Erstellen von Systemberichten **Warnung MSB8038: Spectre-Entschärfung ist aktiviert, aber Entschärften Bibliotheken wurden nicht gefunden**. Wenn MFC- oder ATL-Code nicht erstellt werden, und der Linker einen Fehler, z. B. meldet **Schwerwiegender Fehler LNK1104: Datei "oldnames.lib" kann nicht geöffnet werden**, diese fehlenden Bibliotheken können die Ursache sein.
 
 ### <a name="additional-information"></a>Zusätzliche Informationen
 
-Für weitere Details Sie den offiziellen finden [Microsoft Security Advisory ADV180002, Hinweise, spekulative Ausführung Seiten-Kanal Sicherheitsrisiken zu beseitigen](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002). Anleitungen finden Sie auch von Intel, [spekulative Ausführung clientseitigen Kanal Gegenmaßnahmen](https://software.intel.com/sites/default/files/managed/c5/63/336996-Speculative-Execution-Side-Channel-Mitigations.pdf), und ARM "," [Cache Spekulatives dienstseitige-Kanäle](https://developer.arm.com/-/media/Files/pdf/Cache_Speculation_Side-channels.pdf). Eine Windows-spezifische Absorptionsspektrum und überdauern Gegenmaßnahmen Überblick finden Sie unter [verstehen von Auswirkungen auf die Leistung Absorptionsspektrum und überdauern Maßnahmen auf Windows-Systemen](https://cloudblogs.microsoft.com/microsoftsecure/2018/01/09/understanding-the-performance-impact-of-spectre-and-meltdown-mitigations-on-windows-systems/) im Microsoft Secure-Blog. Eine Übersicht über Absorptionsspektrum Sicherheitslücke MSVC Gegenmaßnahmen, finden Sie unter [Absorptionsspektrum Gegenmaßnahmen in MSVC](https://blogs.msdn.microsoft.com/vcblog/2018/01/15/spectre-mitigations-in-msvc./) im Visual C++-Team-Blog.
+Weitere Informationen finden Sie den offiziellen [Microsoft Security Advisory ADV180002, Anleitungen zum Verringern von Sicherheitsrisiken in seitenkanalangriffe mit spekulativer Ausführung](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002). Anleitungen finden Sie auch von Intel, [spekulative Ausführung Seite Kanal Entschärfungen](https://software.intel.com/sites/default/files/managed/c5/63/336996-Speculative-Execution-Side-Channel-Mitigations.pdf), und ARM, [Cache Spekulatives dienstseitige-Kanäle](https://developer.arm.com/-/media/Files/pdf/Cache_Speculation_Side-channels.pdf). Eine Übersicht der Windows-spezifische Spectre und Meltdown Lösungen, finden Sie [verstehen der Leistungseinbußen bei Spectre und Meltdown Maßnahmen auf Windows-Systemen](https://cloudblogs.microsoft.com/microsoftsecure/2018/01/09/understanding-the-performance-impact-of-spectre-and-meltdown-mitigations-on-windows-systems/) Blog des Microsoft Secure. Einen Überblick über die Spectre-Sicherheitsrisiko behoben, indem die MSVC-Lösungen, finden Sie unter [Spectre-entschärfungen in MSVC](https://blogs.msdn.microsoft.com/vcblog/2018/01/15/spectre-mitigations-in-msvc./) im Visual C++-Teamblog.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Befehlszeile** Eigenschaftenseite.
 
-1. Geben Sie die **/Qspectre** -Compileroption in der **Zusatzoptionen** Feld. Wählen Sie **OK** um die Änderung zu übernehmen.
+1. Geben Sie die **"/ qspectre"** -Compileroption in der **zusätzliche Optionen** Feld. Wählen Sie **OK** um die Änderung zu übernehmen.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
 
@@ -76,6 +86,6 @@ Für weitere Details Sie den offiziellen finden [Microsoft Security Advisory ADV
 
 ## <a name="see-also"></a>Siehe auch
 
-[/Q-Optionen (Vorgänge auf niedriger Ebene)](../../build/reference/q-options-low-level-operations.md)  
-[Compileroptionen](../../build/reference/compiler-options.md)  
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)  
+[/ Q-Optionen (Operationen auf niedriger Ebene)](../../build/reference/q-options-low-level-operations.md)
+[Compileroptionen](../../build/reference/compiler-options.md)<br/>
+[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

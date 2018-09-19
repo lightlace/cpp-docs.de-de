@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba8ef2a2044c55da258c4dbcde6690112d52f1a9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2fdb8fea78d62202dd460f5dd219f2686bd99c6b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963601"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710230"
 ---
 # <a name="vector-class"></a>vector-Klasse
 
@@ -116,11 +116,11 @@ class vector
 
 ### <a name="parameters"></a>Parameter
 
-*Type*  
- Der im Vektor zu speichernde Elementdatentyp.
+*Type*<br/>
+Der im Vektor zu speichernde Elementdatentyp.
 
-*Zuweisung*  
- Der Typ, der das gespeicherte allocator-Objekt darstellt, das Details zum Belegen und Freigeben von Arbeitsspeicher für den Vektor kapselt. Dieses Argument ist optional, und der Standardwert ist **Allocator ***\<Typ >.*
+*Zuweisung*<br/>
+Der Typ, der das gespeicherte allocator-Objekt darstellt, das Details zum Belegen und Freigeben von Arbeitsspeicher für den Vektor kapselt. Dieses Argument ist optional, und der Standardwert ist `allocator<Type>`.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -234,20 +234,20 @@ void assign(InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*  
- Die Position des ersten Elements in dem zu kopierenden Elementbereich.
+*Erste*<br/>
+Die Position des ersten Elements in dem zu kopierenden Elementbereich.
 
-*letzte*  
- Die Position des ersten Elements nach dem zu kopierenden Elementbereich.
+*letzte*<br/>
+Die Position des ersten Elements nach dem zu kopierenden Elementbereich.
 
-*Anzahl*  
- Die Anzahl von Kopien eines Elements, das in den Vektor eingefügt wird.
+*Anzahl*<br/>
+Die Anzahl von Kopien eines Elements, das in den Vektor eingefügt wird.
 
-*val*  
- Der Wert des Elements, das in den Vektor eingefügt wird.
+*val*<br/>
+Der Wert des Elements, das in den Vektor eingefügt wird.
 
-*IList*  
- Das initializer_list-Element, in den die zu kopierenden Elemente eingefügt werden.
+*IList*<br/>
+Das initializer_list-Element, in den die zu kopierenden Elemente eingefügt werden.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -313,8 +313,8 @@ const_reference at(size_type _Pos) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Pos*  
- Dier Feldindex oder Positionsnummer des Elements, das auf den Vektor verweisen soll.
+*_Pos*<br/>
+Dier Feldindex oder Positionsnummer des Elements, das auf den Vektor verweisen soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1187,7 +1187,7 @@ int main( )
    const int& ii = v1.front( );
 
    cout << "The first integer of v1 is "<< i << endl;
-   // by incrementing i, we move the the front reference to the second element
+   // by incrementing i, we move the front reference to the second element
    i++;
    cout << "Now, the first integer of v1 is "<< i << endl;
 }
@@ -1561,7 +1561,8 @@ void push_back(T&& Val);
 
 ### <a name="parameters"></a>Parameter
 
-*Val* den Wert, der am Ende des Vektors hinzugefügten Element zugewiesen.
+*val*<br/>
+Der Wert, der dem am Ende des Vektors hinzugefügten Element zugewiesen werden soll.
 
 ### <a name="example"></a>Beispiel
 
@@ -1725,8 +1726,8 @@ void reserve(size_type count);
 
 ### <a name="parameters"></a>Parameter
 
-*count*  
- Die minimale Speicherlänge, die für für den Vektor zugeordnet werden soll.
+*count*<br/>
+Die minimale Speicherlänge, die für für den Vektor zugeordnet werden soll.
 
 ### <a name="example"></a>Beispiel
 
@@ -1767,11 +1768,11 @@ void resize(size_type Newsize, Type Val);
 
 ### <a name="parameters"></a>Parameter
 
-*NewSize*  
- Die neue Größe des Vektors.
+*NewSize*<br/>
+Die neue Größe des Vektors.
 
-*val*  
- Der Initialisierungswert für neue Elemente, der zum Vektor hinzugefügt wird, wenn die neue Größe die Originalgröße übersteigt. Wenn der Wert ausgelassen wird, verwenden die neuen Objekte ihren Standardkonstruktor.
+*val*<br/>
+Der Initialisierungswert für neue Elemente, der zum Vektor hinzugefügt wird, wenn die neue Größe die Originalgröße übersteigt. Wenn der Wert ausgelassen wird, verwenden die neuen Objekte ihren Standardkonstruktor.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2009,11 +2010,11 @@ friend void swap(
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Ein Vektor, der die auszutauschenden Elemente oder ein Vektor, dessen Elemente ausgetauscht werden, mit denen des Vektors *linken*.
+*right*<br/>
+Ein Vektor, der die auszutauschenden Elemente oder ein Vektor, dessen Elemente ausgetauscht werden, mit denen des Vektors *linken*.
 
-*left*  
- Ein Vektor, dessen Elemente ausgetauscht werden, mit denen des Vektors *rechten*.
+*left*<br/>
+Ein Vektor, dessen Elemente ausgetauscht werden, mit denen des Vektors *rechten*.
 
 ### <a name="example"></a>Beispiel
 

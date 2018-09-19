@@ -1,5 +1,5 @@
 ---
-title: AsyncResultType-Enumeration | Microsoft Docs
+title: AsyncResultType-Enumeration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de4a8465dd61e52425a0335e171cf516591ae589
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2a79ef02302208aa14bc1620e486fcfbc6e12253
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863308"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591262"
 ---
 # <a name="asyncresulttype-enumeration"></a>AsyncResultType-Enumeration
-Gibt den Typ des durch die Methode „GetResults()“ zurückgegebenen Ergebnisses zurück.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-enum AsyncResultType;  
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="values"></a>Werte  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|`MultipleResults`|Ein Satz von mehreren Ergebnissen, die zwischen Start- und vor dem Aufruf von Close() progressiv dargestellt werden.|  
-|`SingleResult`|Ein einzelnes Ergebnis, die angezeigt wird, nachdem das Abschlussereignis tritt auf.|  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** async.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)
+
+Gibt den Typ der zurückgegebenen Ergebnisse der `GetResults()` Methode.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+enum AsyncResultType;
+```
+
+## <a name="members"></a>Member
+
+### <a name="values"></a>Werte
+
+|Name|Beschreibung|
+|----------|-----------------|
+|`MultipleResults`|Mehrere Resultsets, die progressiv zwischen dargestellt werden `Start` Zustand und vor dem `Close()` aufgerufen wird.|
+|`SingleResult`|Ein einzelnes Ergebnis, das nach dem vorgelegt wird die `Complete` Ereignis auftritt.|
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** async.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)

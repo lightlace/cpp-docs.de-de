@@ -1,5 +1,5 @@
 ---
-title: CMyProviderCommand (MyProviderRS.H) | Microsoft Docs
+title: CMyProviderCommand (MyProviderRS.H) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8c18742d9b3b1039033ad8d42939e0f5a4578fbb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 919455c1f0e1bae0491226e2f2d0f53bb35f7ad8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098146"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046601"
 ---
 # <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
-Die `CMyProviderCommand` Klasse ist die Implementierung für die Anbieter-Befehlsobjekt. Sie stellt die Implementierung für die `IAccessor`, `ICommandText`, und **ICommandProperties** Schnittstellen. Die `IAccessor` Schnittstelle ist identisch mit der im Rowset. Das Befehlsobjekt verwendet die Zugriffsmethode, um Bindungen für Parameter anzugeben. Das Rowsetobjekt, das verwendet werden, um Bindungen für Ausgabespalten anzugeben. Die `ICommandText` Schnittstelle ist eine gute Möglichkeit, einen Textbefehl anzugeben. Dieses Beispiel verwendet die `ICommandText` Schnittstelle später, wenn sie benutzerdefinierten Code hinzufügt, überschreibt auch die `ICommand::Execute` Methode. Die **ICommandProperties** Schnittstelle behandelt alle Eigenschaften für die Befehls- und Rowsetobjekte-Objekte.  
+
+Die `CMyProviderCommand` Klasse ist die Implementierung für die Anbieter-Befehlsobjekt. Es stellt die Implementierung für die `IAccessor`, `ICommandText`, und `ICommandProperties` Schnittstellen. Die `IAccessor` Schnittstelle ist identisch mit den im Rowset. Das Befehlsobjekt verwendet die Zugriffsmethode, um Bindungen für Parameter anzugeben. Das Rowsetobjekt, das verwendet werden, um Bindungen für Ausgabespalten anzugeben. Die `ICommandText` Schnittstelle ist eine gute Möglichkeit, einen Textbefehl anzugeben. Dieses Beispiel verwendet die `ICommandText` Schnittstelle später noch Mal, wenn sie benutzerdefinierten Code hinzufügt; Außerdem überschreibt er die `ICommand::Execute` Methode. Die `ICommandProperties` Schnittstelle verarbeitet alle Eigenschaften für die Befehls- und Rowsetobjekte-Objekte.  
   
-```  
+```cpp  
 // CMyProviderCommand  
 class ATL_NO_VTABLE CMyProviderCommand :   
 class ATL_NO_VTABLE CMyProviderCommand :   
@@ -42,11 +43,12 @@ class ATL_NO_VTABLE CMyProviderCommand :
    public IColumnsInfoImpl<CMyProviderCommand>  
 ```  
   
- Die `IAccessor` Schnittstelle verwaltet alle Bindungen, die bei der Befehle und Rowsets verwendet. Der Consumer ruft **IAccessor:: CreateAccessor** mit einem Array von **DBBINDING** Strukturen. Jede **DBBINDING** Struktur enthält die Informationen darüber, wie die spaltenbindungen (z. B. Typ und Länge) behandelt werden sollen. Der Anbieter empfängt die Strukturen und bestimmt dann, wie die Daten übertragen werden sollen, und gibt an, ob eine Konvertierung erforderlich sind. Die `IAccessor` -Schnittstelle im Befehlsobjekt verwendet, um alle Parameter im Befehl zu behandeln.  
+Die `IAccessor` Schnittstelle verwaltet alle Bindungen in Befehle und Rowsets verwendet. Der Consumer ruft `IAccessor::CreateAccessor` mit einem Array von `DBBINDING` Strukturen. Jede `DBBINDING` Struktur enthält die Informationen darüber, wie die spaltenbindungen (z. B. Typ und Länge) behandelt werden sollen. Der Anbieter empfängt die Strukturen und bestimmt dann, wie die Daten übertragen werden sollen, und gibt an, ob eine Konvertierung erforderlich sind. Die `IAccessor` Schnittstelle wird im Befehlsobjekt verwendet, um alle Parameter im Befehl zu verarbeiten.  
   
- Das Command-Objekt stellt auch eine Implementierung von `IColumnsInfo`. OLE DB benötigt die `IColumnsInfo` Schnittstelle. Die Schnittstelle ermöglicht es, Abrufen von Informationen zu den Parametern des Befehls. Das Rowsetobjekt verwendet die `IColumnsInfo` -Schnittstelle zur Rückgabe von Informationen zu den Ausgabespalten an den Anbieter.  
+Das Command-Objekt enthält auch eine Implementierung des `IColumnsInfo`. OLE DB erfordert die `IColumnsInfo` Schnittstelle. Die Schnittstelle ermöglicht es, Informationen zu Parametern des Befehls abrufen. Verwendet das Rowsetobjekt, das die `IColumnsInfo` -Schnittstelle zur Rückgabe von Informationen zu den Ausgabespalten an den Anbieter.  
   
- Der Anbieter enthält auch eine Schnittstelle mit dem Namen `IObjectWithSite`. Die `IObjectWithSite` Schnittstelle wurde in ATL 2.0 implementiert und ermöglicht es dem Implementierer Informationen über sich selbst an den untergeordneten übergeben. Das Befehlsobjekt verwendet die `IObjectWithSite` Informationen anzuweisen, alle generierten Rowset-Objekte, die sie erstellt wurden.  
+Der Anbieter enthält auch eine Schnittstelle namens `IObjectWithSite`. Die `IObjectWithSite` Schnittstelle wurde in ATL 2.0 implementiert, und ermöglicht der Implementierung, die Informationen über sich selbst zu ihrem untergeordneten Element übergeben. Das Befehlsobjekt verwendet die `IObjectWithSite` generiert anzuweisen, eine Rowset-Objekte, die sie erstellt wurden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Vom Anbieter-Assistenten generierte Dateien](../../data/oledb/provider-wizard-generated-files.md)
+
+[Vom Anbieter-Assistenten generierte Dateien](../../data/oledb/provider-wizard-generated-files.md)

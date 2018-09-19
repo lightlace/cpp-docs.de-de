@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcencompiler: Schwerwiegender Fehler RW1022 | Microsoft Docs'
+title: 'Ressourcencompiler: Schwerwiegender Fehler RW1022 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57bb435d17cf1d539d558b5dead9c299f83494a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: caaefc045a31ca64aa9843927d550ef66285cb2e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319181"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099842"
 ---
 # <a name="resource-compiler-fatal-error-rw1022"></a>Ressourcencompiler: Schwerwiegender Fehler RW1022
-**E/a-Fehler beim Schreiben der Datei**  
-  
- Der Ressourcencompiler konnte nicht in eine Datei schreiben.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:  
-  
-1.  Es ist nicht genügend Speicherplatz verfügbar. Freier Speicherplatz muss über mindestens zwei Mal die Größe der ausführbaren Datei entsprechen, die Sie erstellen.  
-  
-2.  Das Volume ist schreibgeschützt.  
-  
-3.  Es liegt ein beschädigter Sektor vor.  
-  
-4.  Freigabeverletzung.
+
+**E/a-Fehler beim Schreiben der Datei**
+
+Der Ressourcencompiler konnte nicht in eine Datei schreiben.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:
+
+1. Es ist nicht genügend Speicherplatz verfügbar. Freier Speicherplatz muss mindestens zweimal die Größe der ausführbaren Datei entsprechen, die Sie erstellen.
+
+1. Das Volume ist schreibgeschützt.
+
+1. Es liegt ein beschädigter Sektor vor.
+
+1. Freigabeverletzung.

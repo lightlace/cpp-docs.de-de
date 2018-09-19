@@ -1,5 +1,5 @@
 ---
-title: Plattform, Default- und Cli-Namespaces (Komponentenerweiterungen für C++) | Microsoft Docs
+title: Platform-, Default- und Cli-Namespaces (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,69 +19,75 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b466a94aba9f19907a5438a8b8e623d65aa0ac2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 726c9e2653f2914c01d4a45a572614438e12bc8f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880741"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194648"
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Platform-, default- und cli-Namespaces (Komponentenerweiterungen für C++)
-Ein Namespace qualifiziert die Namen von Sprachelementen, sodass sie keinen Konflikt mit ansonsten identischen Namen an anderer Stelle im Quellcode verursachen. Angenommen, ein Konflikt von geschachteltem Klassennamen könnten verhindern, dass den Compiler erkennen [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md). Namespaces werden vom Compiler verwendet, jedoch nicht in der kompilierten Assembly beibehalten.  
-  
-## <a name="all-runtimes"></a>Alle Laufzeiten  
- Beim Erstellen des Projekts stellt Visual C++ einen Standardnamespace für das Projekt bereit. Sie können den Namespace manuell umbenennen, obwohl in Windows-Runtime der Namen der winmd-Datei den Namen des Stammnamespace übereinstimmen muss.  
-  
-## <a name="windows-runtime"></a>Windows-Runtime  
- Weitere Informationen finden Sie unter [Namespaces und typsichtbarkeit (C + c++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh969551.aspx).  
-  
-### <a name="requirements"></a>Anforderungen  
- Compileroption: **/ZW**  
-  
-## <a name="common-language-runtime"></a>Common Language Runtime 
- **Syntax**  
-  
-```  
-using namespace cli;  
-```  
-  
- **Hinweise**  
-  
- Die C + c++ / CLI unterstützt die `cli` Namespace. Beim Kompilieren mit **"/ CLR"** die `using` -Anweisung im Syntaxabschnitt wird impliziert.  
-  
- Die folgenden Sprachfunktionen sind im `cli`-Namespace:  
-  
--   [Arrays](../windows/arrays-cpp-component-extensions.md)  
-  
--   [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)  
-  
--   [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)  
-  
--   ["safe_cast"](../windows/safe-cast-cpp-component-extensions.md)  
-  
-### <a name="requirements"></a>Anforderungen  
- Compileroption: **/clr**  
-  
-### <a name="examples"></a>Beispiele  
- **Beispiel**  
-  
- Im folgenden Codebeispiel wird veranschaulicht, dass es möglich ist, ein Symbol im `cli`-Namespace als benutzerdefiniertes Symbol im Code zu verwenden.  Sobald dies geschehen ist, müssen Sie die Verweise jedoch explizit oder implizit auf das `cli`-Sprachelement des gleichen Namens qualifizieren.  
-  
-```  
-// cli_namespace.cpp  
-// compile with: /clr  
-using namespace cli;  
-int main() {  
-   array<int> ^ MyArray = gcnew array<int>(100);  
-   int array = 0;  
-  
-   array<int> ^ MyArray2 = gcnew array<int>(100);   // C2062  
-  
-   // OK  
-   cli::array<int> ^ MyArray2 = gcnew cli::array<int>(100);  
-   ::array<int> ^ MyArray3 = gcnew ::array<int>(100);  
-}  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+
+Ein Namespace qualifiziert die Namen von Sprachelementen, sodass sie keinen Konflikt mit ansonsten identischen Namen an anderer Stelle im Quellcode verursachen. Z. B. ein Namenskonflikt möglicherweise verhindern, dass den Compiler erkennt [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md). Namespaces werden vom Compiler verwendet, jedoch nicht in der kompilierten Assembly beibehalten.
+
+## <a name="all-runtimes"></a>Alle Laufzeiten
+
+Beim Erstellen des Projekts stellt Visual C++ einen Standardnamespace für das Projekt bereit. Sie können den Namespace manuell umbenennen, obwohl in Windows-Runtime der Namen der winmd-Datei den Namen des Stammnamespace übereinstimmen muss.
+
+## <a name="windows-runtime"></a>Windows-Runtime
+
+Weitere Informationen finden Sie unter [Namespaces und typsichtbarkeit (C++ / CX)](https://msdn.microsoft.com/library/windows/apps/hh969551.aspx).
+
+### <a name="requirements"></a>Anforderungen
+
+Compileroption: `/ZW`
+
+## <a name="common-language-runtime"></a>Common Language Runtime
+
+### <a name="syntax"></a>Syntax
+
+```cpp
+using namespace cli;
+```
+
+### <a name="remarks"></a>Hinweise
+
+C++ / CLI unterstützt die **Cli** Namespace. Beim Kompilieren mit `/clr`, **mit** -Anweisung im Syntaxabschnitt wird impliziert.
+
+Die folgenden Sprachfunktionen sind in der **Cli** Namespace:
+
+- [Arrays](../windows/arrays-cpp-component-extensions.md)
+
+- [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)
+
+- [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)
+
+- ["safe_cast"](../windows/safe-cast-cpp-component-extensions.md)
+
+### <a name="requirements"></a>Anforderungen
+
+Compileroption: `/clr`
+
+### <a name="examples"></a>Beispiele
+
+Im folgenden Codebeispiel wird veranschaulicht, dass es möglich ist, verwenden Sie ein Symbol in der **Cli** Namespace als benutzerdefiniertes Symbol im Code.  Sobald Sie dies erledigt haben, Sie müssen jedoch explizit oder implizit qualifiziert die Verweise auf die **Cli** Language-Element mit dem gleichen Namen.
+
+```cpp
+// cli_namespace.cpp
+// compile with: /clr
+using namespace cli;
+int main() {
+   array<int> ^ MyArray = gcnew array<int>(100);
+   int array = 0;
+
+   array<int> ^ MyArray2 = gcnew array<int>(100);   // C2062
+
+   // OK
+   cli::array<int> ^ MyArray2 = gcnew cli::array<int>(100);
+   ::array<int> ^ MyArray3 = gcnew ::array<int>(100);
+}
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

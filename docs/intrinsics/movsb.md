@@ -1,5 +1,5 @@
 ---
-title: __movsb | Microsoft Docs
+title: __movsb | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9c72910a6b8084d015f151d7e701f6b63ffd1d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34fedf8a30a5ed47837f593012e4cd836782bb66
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328226"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720134"
 ---
 # <a name="movsb"></a>__movsb
 **Microsoft-spezifisch**  
@@ -41,25 +41,25 @@ void __movsb(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [out] `Destination`  
- Ein Zeiger auf das Ziel des Kopiervorgangs.  
+*Ziel*<br/>
+[out] Ein Zeiger auf das Ziel des Kopiervorgangs.  
   
- [in] `Source`  
- Ein Zeiger auf die Quelle der Kopie.  
+*Source*<br/>
+[in] Ein Zeiger auf die Quelle der Kopie.  
   
- [in] `Count`  
- Die Anzahl der zu kopierenden Bytes.  
+*Anzahl*<br/>
+[in] Die Anzahl der zu kopierenden Bytes an.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__movsb`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsb`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Das Ergebnis ist, die die erste `Count` Bytes verweist `Source` kopiert werden, um die `Destination` Zeichenfolge.  
+ Das Ergebnis ist, die erste `Count` Bytes verweist `Source` kopiert werden, um die `Destination` Zeichenfolge.  
   
  Diese Routine ist nur als systeminterne Funktion verfügbar.  
   

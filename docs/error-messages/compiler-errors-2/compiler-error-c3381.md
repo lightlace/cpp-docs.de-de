@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3381 | Microsoft Docs
+title: Compilerfehler C3381 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a27961694bc5fad4080d8aceaf2f1cb65404319c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bd6c1d641f7476d3c372939b948931a306e0f80
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251097"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080713"
 ---
 # <a name="compiler-error-c3381"></a>Compilerfehler C3381
-'Assembly': Assemblyzugriffsspezifizierer sind nur in Code verfügbar, der mit einer /clr-Option kompiliert wurde  
-  
- Systemeigene Typen können außerhalb der Assembly sichtbar sein, aber Sie können nur Assemblyzugriff für systemeigene Typen in einem **"/ CLR"** Kompilierung.  
-  
- Weitere Informationen finden Sie unter [geben Sichtbarkeit](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) und [/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C3381 generiert.  
-  
-```  
-// C3381.cpp  
-// compile with: /c  
-public class A {};   // C3381  
+
+'Assembly': Assemblyzugriffsspezifizierer sind nur in Code verfügbar, der mit einer /clr-Option kompiliert wurde
+
+Systemeigene Typen können außerhalb der Assembly sichtbar sein, aber Sie können nur Assemblyzugriff für systemeigene Typen in einem **"/ CLR"** Kompilierung.
+
+Weitere Informationen finden Sie unter [geben Sichtbarkeit](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) und [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C3381 generiert.
+
+```
+// C3381.cpp
+// compile with: /c
+public class A {};   // C3381
 ```

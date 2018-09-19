@@ -1,5 +1,5 @@
 ---
-title: Linkertoolwarnung Lnk4010 | Microsoft Docs
+title: Linkertoolwarnung LNK4010 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 266e377a917fe3ce9ae7bae228134f49384e15cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e214f603c31c72533d81a140023363880532191c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302671"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068066"
 ---
 # <a name="linker-tools-warning-lnk4010"></a>Linkertoolwarnung LNK4010
-Ungültige Anzahl subsystemversionsnummer; Angenommen, dass Subsystem-Standardversion  
-  
- Sie können eine Version für das Bild des Subsystems angeben ([/Subsystem](../../build/reference/subsystem-specify-subsystem.md)). Jedes Subsystem sind mindestens Version erforderlich. Wenn die angegebene Version niedriger als der Mindestwert ist, diese Warnung wird ausgegeben, und der Linker wird nur das Standard-Subsystem verwenden.
+
+Ungültige Anzahl Versionsnummer ist. Standardversion des Subsystems davon ausgegangen, dass
+
+Sie können eine Version für das Bild des Subsystems angeben ([/Subsystem](../../build/reference/subsystem-specify-subsystem.md)). Jedes Subsystem sind mindestens Version erforderlich. Wenn die angegebene Version niedriger als die Minimalanzahl ist ist, wird diese Warnung ausgegeben werden, und der Linker das Standard-Subsystem verwenden.

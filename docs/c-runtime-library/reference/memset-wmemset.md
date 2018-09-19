@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0cbc05c0e337560982f69a5ca920340bc1b0de8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6b26f0c200f19cab4bb2710be686b25a9dce014
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401242"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202009"
 ---
 # <a name="memset-wmemset"></a>memset, wmemset
 
@@ -74,17 +74,17 @@ Anzahl der Zeichen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Wert der *Dest*.
+Der Wert des *Dest*.
 
 ## <a name="remarks"></a>Hinweise
 
-Legt das erste *Anzahl* Zeichen des *Dest* auf das Zeichen *c*.
+Legt die ersten *Anzahl* Zeichen *Dest* auf das Zeichen *c*.
 
-**Sicherheitshinweis** stellen Sie sicher, dass der Zielpuffer ausreichend Platz für mindestens *Anzahl* Zeichen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Sicherheitshinweis** stellen Sie sicher, dass der Zielpuffer genug Platz für mindestens über *Anzahl* Zeichen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**memset**|\<memory.h> oder \<string.h>|
 |**wmemset**|\<wchar.h>|

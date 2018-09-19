@@ -1,5 +1,5 @@
 ---
-title: __writegsbyte __writegsdword, __writegsqword __writegsword | Microsoft Docs
+title: __writegsbyte, __writegsdword, __writegsqword, __writegsword | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,17 +22,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c9eec7bb0da65bfd327726078766ab1befacbde
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8376300f4234f355cce49c2aae90fdc0e67f9a18
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328275"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725867"
 ---
 # <a name="writegsbyte-writegsdword-writegsqword-writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
 **Microsoft-spezifisch**  
   
- Schreiben Sie Speicher an einem Speicherort, ein Offset relativ zum Anfang der GS-Segment angegeben wird.  
+ Schreibvorgänge im Speicher an einem Speicherort, ein Offset relativ zum Beginn der GS-Segment angegeben wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,20 +56,20 @@ void __writegsqword(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `Offset`  
- Der Offset vom Anfang des GS zu schreiben.  
+*Offset*<br/>
+[in] Der Offset vom Anfang des GS zu schreiben.  
   
- [in] `Data`  
- Der zu schreibende Wert.  
+*Data*<br/>
+[in] Der zu schreibende Wert.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__writegsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__writegsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__writegsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__writegsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writegsbyte`|x64|  
+|`__writegsdword`|x64|  
+|`__writegsqword`|x64|  
+|`__writegsword`|x64|  
   
  **Headerdatei** \<intrin.h >  
   

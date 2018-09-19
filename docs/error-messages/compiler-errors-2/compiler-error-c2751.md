@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C2751 | Microsoft Docs
+title: Compilerfehler C2751 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26fe5354061c0839cd7569c018e84b0e4f2905e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97a4021eb4cc5092f4bb9424e141666aea4a00f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232113"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021784"
 ---
-# <a name="compiler-error-c2751"></a>Compilerfehler Fehler C2751
-'Parameter': der Name eines Funktionsparameters kann nicht qualifiziert werden  
-  
- Einen qualifizierten Name kann nicht als Funktionsparameter verwenden werden.  
-  
- Im folgende Beispiel wird C2751 generiert:  
-  
-```  
-// C2751.cpp  
-namespace std {  
-   template<typename T>  
-   class list {};  
-}  
-  
-#define list std::list  
-void f(int &list){}   // C2751  
+# <a name="compiler-error-c2751"></a>Compilerfehler C2751
+
+'Parameter': der Name eines Funktionsparameters kann nicht qualifiziert sein
+
+Sie können keinen qualifizierten Name als Funktionsparameter verwenden.
+
+Im folgende Beispiel wird die C2751 generiert:
+
+```
+// C2751.cpp
+namespace std {
+   template<typename T>
+   class list {};
+}
+
+#define list std::list
+void f(int &list){}   // C2751
 ```

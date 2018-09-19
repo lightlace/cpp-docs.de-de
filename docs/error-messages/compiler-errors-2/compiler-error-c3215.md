@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3215 | Microsoft Docs
+title: Compilerfehler C3215 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2612441a5a7da7757bce4c2c8005720bf10eafd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ea9b7cb22f5a3d61a661d7344673bf567f7d629
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251569"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093895"
 ---
 # <a name="compiler-error-c3215"></a>Compilerfehler C3215
-"Typ1": Der generische Typparameter wird bereits von "Typ2" eingeschränkt.  
-  
- Eine Einschränkung wurde mehrmals angegeben.  
-  
- Weitere Informationen zu Generika finden Sie unter [Generics](../../windows/generics-cpp-component-extensions.md).  
-  
- Im folgenden Beispiel wird C3215 generiert:  
-  
-```  
-// C3215.cpp  
-// compile with: /clr  
-interface struct A {};  
-  
-generic <class T>  
-where T : A,A  
-ref class C {};   // C3215  
-```  
-  
- Mögliche Lösung:  
-  
-```  
-// C3215b.cpp  
-// compile with: /clr /c  
-interface struct A {};  
-  
-generic <class T>  
-where T : A  
-ref class C {};  
+
+"Typ1": Der generische Typparameter wird bereits von "Typ2" eingeschränkt.
+
+Eine Einschränkung wurde mehrmals angegeben.
+
+Weitere Informationen zu Generika finden Sie unter [Generics](../../windows/generics-cpp-component-extensions.md).
+
+Im folgenden Beispiel wird C3215 generiert:
+
+```
+// C3215.cpp
+// compile with: /clr
+interface struct A {};
+
+generic <class T>
+where T : A,A
+ref class C {};   // C3215
+```
+
+Mögliche Lösung:
+
+```
+// C3215b.cpp
+// compile with: /clr /c
+interface struct A {};
+
+generic <class T>
+where T : A
+ref class C {};
 ```

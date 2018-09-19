@@ -1,5 +1,5 @@
 ---
-title: __writecr3 | Microsoft Docs
+title: __writecr3 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 291cb73d3469264ad3b889cbd01c59622c4a370b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 10acb6af23dffef0a7067883ac5dbac5abd9234f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324703"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724244"
 ---
 # <a name="writecr3"></a>__writecr3
 **Microsoft-spezifisch**  
   
- Schreibt den Wert `Data` der CR3 registriert wird.  
+ Schreibt den Wert `Data` dem CR3-Register.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,14 +37,14 @@ void writecr3(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `Data`  
- Der Wert, der registriert wird, CR3 zu schreiben.  
+*Data*<br/>
+[in] Der Wert, der registriert wird, CR3 geschrieben werden soll.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__writecr3`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writecr3`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

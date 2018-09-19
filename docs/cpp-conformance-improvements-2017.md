@@ -1,7 +1,7 @@
 ---
 title: C++-Konformitätsverbesserungen | Microsoft Docs
 ms.custom: ''
-ms.date: 03/11/2018
+ms.date: 08/15/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -10,14 +10,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ed2165f75103f5e2aecd3d73dfe9518341d926e
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: e12c8eeb162d93a41c2bad85fda3570f3ffc1127
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042328"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220215"
 ---
-# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157"></a>C++-Konformitätsverbesserungen in Visual Studio 2017, Versionen 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156) und [15.7](#improvements_157)
+# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>C++-Konformitätsverbesserungen in Visual Studio 2017, Versionen 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157) und [15.8](#update_158)
 
 Der Microsoft Visual C++-Compiler ist jetzt vollständig mit Unterstützung für generalisierte contextpr und NSDMI für Aggregate für Funktionen, die im C++14-Standard hinzugefügt wurden. Beachten Sie, dass dem Compiler noch einige Funktionen der C++11- und C++98-Standards fehlen. Eine Tabelle mit dem aktuellen Compilerstatus finden Sie unter [Visual C++-Sprachkonformität](visual-cpp-language-conformance.md).
 
@@ -55,19 +55,19 @@ Bereichsbezogene for-Schleifen erfordern nicht mehr, dass „begin()“ und „e
 
 ### <a name="constexpr-lambdas"></a>constexpr-Lambdas
 
-Lambdaausdrücke können jetzt in konstanten Ausdrücken verwendet werden. Weitere Informationen finden Sie unter [Constexpr Lambda](http://open-std.org/JTC1/SC22/WG21/docs/papers/2015/n4487.pdf).
+Lambdaausdrücke können jetzt in konstanten Ausdrücken verwendet werden. Weitere Informationen finden Sie unter [constexpr-Lambdaausdrücke in C++](cpp/lambda-expressions-constexpr.md).
 
 ### <a name="if-constexpr-in-function-templates"></a>„if constexpr“ in Funktionsvorlagen
 
-Eine Funktionsvorlage kann `if constexpr`-Anweisungen zum Branchen zur Kompilierzeit enthalten. Weitere Informationen finden Sie unter [if constexpr](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0128r1.html).
+Eine Funktionsvorlage kann `if constexpr`-Anweisungen zum Branchen zur Kompilierzeit enthalten. Weitere Informationen finden Sie unter [if constexpr statements (if constexpr-Anweisungen)](cpp/if-else-statement-cpp.md#if_constexpr).
 
 ### <a name="selection-statements-with-initializers"></a>Auswahlanweisungen mit Initialisierern
 
-Eine `if`-Anweisung kann einen Initialisierer enthalten, der im Blockbereich innerhalb der Anweisung selbst eine Variable einführt. Weitere Informationen finden Sie unter [Selection statements with initializer](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0305r1.html) (Auswahlanweisungen mit Initialisierer).
+Eine `if`-Anweisung kann einen Initialisierer enthalten, der im Blockbereich innerhalb der Anweisung selbst eine Variable einführt. Weitere Informationen finden Sie unter [if statements with initializer (if-Anweisungen mit Initialisierer)](cpp/if-else-statement-cpp.md#if_with_init).
 
 ### <a name="maybeunused-and-nodiscard-attributes"></a>Die Attribute [[maybe_unused]] und [[nodiscard]]
 
-Neue Attribute zum Unterdrücken von Warnungen, wenn eine Entität nicht verwendet wird, oder zum Erstellen einer Warnung, wenn der Rückgabewert eines Funktionsaufrufs verworfen wird. Weitere Informationen finden Sie unter [Wording for maybe_unused attribute](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0212r0.pdf) (Formulierungen für maybe_unused-Attribut) und [Proposal of unused, nodiscard and fallthrough attributes](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0068r0.pdf) (Vorschlag der Attribute „unused“, „nodiscard“ und „fallthrough“).
+Neue Attribute zum Unterdrücken von Warnungen, wenn eine Entität nicht verwendet wird, oder zum Erstellen einer Warnung, wenn der Rückgabewert eines Funktionsaufrufs verworfen wird. Weitere Informationen finden Sie unter [Attribute in C++](cpp/attributes.md).
 
 ### <a name="using-attribute-namespaces-without-repetition"></a>Verwenden von Attributnamespaces ohne Wiederholung
 
@@ -75,13 +75,13 @@ Neue Syntax, um nur einen einzigen Namespacebezeichner in einer Attributliste zu
 
 ### <a name="structured-bindings"></a>Strukturierte Bindungen
 
-Es ist jetzt möglich, einen Wert mit individuellen Namen für die verschiedenen Komponenten in einer einzigen Anweisung zu speichern. Dies gilt, wenn der Wert ein Array, „std::tuple“ oder „std::pair“ ist oder nur öffentliche, nicht statische Datenmembers enthält. Weitere Informationen finden Sie unter [Structured Bindings](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf) (Strukturierte Bindungen).
+Es ist jetzt möglich, einen Wert mit individuellen Namen für die verschiedenen Komponenten in einer einzigen Anweisung zu speichern. Dies gilt, wenn der Wert ein Array, „std::tuple“ oder „std::pair“ ist oder nur öffentliche, nicht statische Datenmembers enthält. Weitere Informationen finden Sie unter [Structured Bindings (Strukturierte Bindungen)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf) und [Returning multiple values from a function (Zurückgeben von mehreren Werten aus einer Funktion)](cpp/functions-cpp.md#multi_val).
 
 ### <a name="construction-rules-for-enum-class-values"></a>Erstellungsregeln für enum-Klassenwerte
 
-Es gibt jetzt eine implizite/nicht einschränkende Umwandlung des zugrunde liegenden Typs einer bereichsbezogenen Enumeration in die Enumeration selbst, wenn deren Definition keinen Enumerator einführt und die Quelle eine list-initialization-Syntax verwendet. Weitere Informationen finden Sie unter [Construction Rules for enum class Values (Erstellungsregeln für enum-Klassenwerte)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf).
+Es gibt jetzt eine implizite/nicht einschränkende Umwandlung des zugrunde liegenden Typs einer bereichsbezogenen Enumeration in die Enumeration selbst, wenn deren Definition keinen Enumerator einführt und die Quelle eine list-initialization-Syntax verwendet. Weitere Informationen finden Sie unter [Construction Rules for enum class Values (Erstellungsregeln für enum-Klassenwerte)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf) und [Enumerations (Enumerationen)](cpp/enumerations-cpp.md#no_enumerators).
 
-### <a name="capturing-this-by-value"></a>Erfassen von „*this“ anhand des Werts
+### <a name="capturing-this-by-value"></a>Erfassen von „\*this“ anhand des Werts
 
 Das `*this`-Objekt in einem Lambdaausdruck kann jetzt anhand des Werts erfasst werden. Das ermöglicht Szenarios in denen der Lambdaausdruck in parallelen und asynchronen Vorgängen aufgerufen wird, insbesondere in neueren Computerarchitekturen. Weitere Informationen finden Sie unter [Lambda Capture of \*this by Value as [=,\*this]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html) (Lambdaerfassung von „*this“ anhand des Werts als [=,*this]).
 
@@ -93,7 +93,7 @@ Das `*this`-Objekt in einem Lambdaausdruck kann jetzt anhand des Werts erfasst w
 
 Das Schlüsselwort `register`, das als veraltet gekennzeichnet wurde (und vom Visual C++-Compiler ignoriert wurde), wurde jetzt aus der Sprache entfernt. Weitere Informationen finden Sie unter [Remove Deprecated Use of the register Keyword](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html) (Entfernen der Verwendung des veralteten register-Schlüsselworts).
 
-Eine vollständige Liste der Konformitätsverbesserungen bis zum Visual Studio 2015 Update 3 finden Sie unter [Visual C++ What's New 2003 through 2015 (Visual C++ – Neues von 2003 bis 2015)](https://msdn.microsoft.com/en-us/library/mt723604.aspx).
+Eine vollständige Liste der Konformitätsverbesserungen bis zum Visual Studio 2015 Update 3 finden Sie unter [Visual C++ What's New 2003 through 2015 (Visual C++ – Neues von 2003 bis 2015)](https://msdn.microsoft.com/library/mt723604.aspx).
 
 ## <a name="improvements_155"></a> Verbesserungen in Visual Studio 2017 Version 15.5
 
@@ -212,6 +212,8 @@ struct B : A {
 
 B b(42L); // now calls B(int)
 ```
+
+Weitere Informationen finden Sie unter [Konstruktoren](cpp/constructors-cpp.md#inheriting_constructors).
 
 ### <a name="c17-extended-aggregate-initialization"></a>C++17: Erweiterte Aggregatinitialisierung
 
@@ -333,7 +335,7 @@ void bar(A<0> *p)
 
 ### <a name="c17-repairing-elementary-string-conversions"></a>C++17: Elementare Zeichenfolgenkonvertierungen
 
-[P0682R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0682r1.html) Verschieben Sie die elementaren Zeichenfolgenkonvertierungsfunktionen von P0067R5 in einen neuen Header, \<charconv>, und führen Sie andere Verbesserungen durch, einschließlich der Fehlerbehandlung zur Verwendung von `std::errc` anstelle von `std::error_code`.
+[P0682R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0682r1.html) Verschieben Sie die elementaren Funktionen für die Zeichenfolgenkonvertierung von P0067R5 in einen neuen Header, \<charconv>, und führen Sie andere Verbesserungen durch, einschließlich der Fehlerbehandlung zur Verwendung von `std::errc` anstelle von `std::error_code`.
 
 ### <a name="c17-constexpr-for-chartraits-partial"></a>C++17: constexpr für char_traits (partiell)
 
@@ -1625,6 +1627,8 @@ int main() {
 
 ## <a name="update_158"></a>Fehlerkorrekturen und Verhaltensänderungen in Visual Studio 2017 Version 15.8
 
+Sämtliche Compileränderungen in Visual Studio 2017, Version 15.8, fallen unter in die Kategorie der Fehlerbehebungen und Verhaltensänderungen. Die Änderungen werden im Folgenden aufgeführt:
+
 ### <a name="typename-on-unqualified-identifiers"></a>typename für nicht qualifizierte Bezeichner
 
 Im Modus [/permissive-](build/reference/permissive-standards-conformance.md) werden falsche `typename`-Schlüsselwörter für nicht qualifizierte Bezeichner in Definitionen von Aliasvorlagen nicht mehr vom Compiler akzeptiert. Der folgende Code erzeugt nun die Fehlermeldung C7511 *'T': 'typename' keyword must be followed by a qualified name* („T“: Dem Schlüsselwort „typename“ muss ein qualifizierter Name folgen):
@@ -1678,6 +1682,8 @@ struct S : Base<T> {
 ```
 
 Ändern Sie die Anweisung `return` in `return this->base_value;`, um den Fehler zu beheben.
+
+**Hinweis:** In der Boost-Python-Bibliothek gibt es seit Langem eine MSVC-spezifische Problemumgehung für eine Vorlagenvorwärtsdeklaration in [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp). Im Modus [/permissive-](build/reference/permissive-standards-conformance.md) ab Visual Studio 2017 Version 15.8 (_MSC_VER=1915) führt der MSVC-Compiler argumentabhängige Namensauflösung (argument dependent name lookup, ADL) richtig aus und ist konsistent mit anderen Compilern, sodass diese Problemumgehung nicht mehr erforderlich ist. Um den Fehler *C3861: „unwind_type“: Der Bezeichner wurde nicht gefunden.* zu vermeiden, lesen Sie unter [PR 229](https://github.com/boostorg/python/pull/229) im Boostorg-Repository, wie Sie die Headerdatei aktualisieren. Das Boost-Paket [vcpkg](vcpkg.md) wurde bereits gepatcht. Wenn Sie also Ihre Boost-Quellen aus vcpkg abrufen oder aktualisieren möchten, müssen Sie den Patch nicht separat anwenden.
 
 ### <a name="forward-declarations-and-definitions-in-namespace-std"></a>Vorwärtsdeklarationen und -definitionen im Namespace „std“
 

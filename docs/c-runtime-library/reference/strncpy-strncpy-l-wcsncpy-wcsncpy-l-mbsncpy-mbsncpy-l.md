@@ -71,19 +71,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4b4ec53451b750e92d952a57257709e9a0cde09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f01e69129b0884b3385b7a17289a067f36f65e3a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418236"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213236"
 ---
 # <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
 Kopieren von Zeichen aus einer Zeichenfolge in eine andere. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsncpy** und **_mbsncpy_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncpy** und **_mbsncpy_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -182,16 +182,16 @@ Gibt *StrDest*. Kein Rückgabewert ist zur Fehleranzeige reserviert.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Strncpy** Funktion übernimmt die anfänglichen *Anzahl* Zeichen des *StrSource* auf *StrDest* und gibt *StrDest* . Wenn *Anzahl* ist kleiner oder gleich der Länge des *StrSource*, ein Null-Zeichen wird nicht automatisch an die kopierte Zeichenfolge angefügt. Wenn *Anzahl* ist größer als die Länge des *StrSource*, wird die Zielzeichenfolge mit Nullzeichen bis zur Länge aufgefüllt *Anzahl*. Das Verhalten des **Strncpy** ist undefiniert, wenn die Quell- und Zielzeichenfolgen überlappen.
+Die **Strncpy** Funktion übernimmt die anfänglichen *Anzahl* Zeichen *StrSource* zu *StrDest* und gibt *StrDest* . Wenn *Anzahl* ist kleiner oder gleich der Länge der *StrSource*, ein Null-Zeichen wird nicht automatisch an die kopierte Zeichenfolge angefügt. Wenn *Anzahl* ist größer als die Länge des *StrSource*, wird die Zielzeichenfolge mit Nullzeichen bis zur Länge aufgefüllt *Anzahl*. Das Verhalten der **Strncpy** ist undefiniert, wenn die Quell- und Zielzeichenfolgen überlappen.
 
 > [!IMPORTANT]
-> **Strncpy** überprüft nicht auf genügend Speicherplatz *StrDest*; dadurch eine mögliche Ursache von Pufferüberläufen. Die *Anzahl* -Argument begrenzt die Anzahl der kopierten Zeichen; es handelt sich nicht um eine Begrenzung auf die Größe des *StrDest*. Weitere Informationen finden Sie im folgenden Beispiel. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> **Strncpy** überprüft nicht auf genügend Speicherplatz *StrDest*; dadurch eine mögliche Ursache von Pufferüberläufen. Die *Anzahl* -Argument begrenzt die Anzahl der kopierten Zeichen; es handelt es sich nicht um eine Begrenzung auf die Größe des *StrDest*. Weitere Informationen finden Sie im folgenden Beispiel. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-Wenn *StrDest* oder *StrSource* ist ein **NULL** -Zeiger ist, oder wenn *Anzahl* ist kleiner als oder gleich 0 (null), die Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen – 1 zurück und legen Sie **Errno** auf **EINVAL**.
+Wenn *StrDest* oder *StrSource* ist eine **NULL** -Zeiger ist, oder wenn *Anzahl* ist kleiner als oder gleich 0 (null), wird der Handler für ungültige Parameter aufgerufen, Siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
 
-**Wcsncpy** und **_mbsncpy** sind Breitzeichen- und multibytezeichenversionen von **Strncpy**. Die Argumente und der Rückgabewert von **Wcsncpy** und **_mbsncpy** unterscheiden sich entsprechend. Diese sechs Funktionen verhalten sich andernfalls identisch.
+**Wcsncpy** und **_mbsncpy** sind Breitzeichen- und multibytezeichenversionen von Versionen von **Strncpy**. Die Argumente und der Rückgabewert von **Wcsncpy** und **_mbsncpy** unterscheiden sich entsprechend. Diese sechs Funktionen verhalten sich andernfalls identisch.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, außer dass sie das Gebietsschema für den übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie das Gebietsschema für den übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -203,11 +203,11 @@ In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sich
 |**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
 
 > [!NOTE]
-> **_strncpy_l** und **_wcsncpy_l** haben keine gebietsschemaabhängigkeit; sie dienen nur zur **_tcsncpy_l** und dürfen nicht direkt aufgerufen werden.
+> **_strncpy_l** und **_wcsncpy_l** haben keine gebietsschemaabhängigkeit; sie stehen nur für **_tcsncpy_l** und werden nicht direkt aufgerufen werden soll.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**strncpy**|\<string.h>|
 |**wcsncpy**|\<string.h> oder \<wchar.h>|
@@ -217,7 +217,7 @@ Weitere Informationen zur Plattformkompatibilität finden Sie unter [Kompatibili
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht die Verwendung von **Strncpy** und wie es missbraucht werden kann, um das Programmfehler und Sicherheitslücken verursachen. Der Compiler generiert eine Warnung für jeden Aufruf von **Strncpy** ähnelt **crt_strncpy_x86.c(15): Warnung C4996: "Strncpy": Diese Funktion oder Variable unsicher sein. Verwenden Sie stattdessen „strncpy_s“. Zum Deaktivieren der Veraltungswarnung verwenden Sie „_CRT_SECURE_NO_WARNINGS“. Details finden Sie in der Onlinehilfe.**
+Das folgende Beispiel zeigt die Verwendung von **Strncpy** und wie es missbraucht werden kann, um Programmfehlern und Sicherheitsprobleme entstehen. Der Compiler generiert eine Warnung für jeden Aufruf von **Strncpy** ähnelt **crt_strncpy_x86.c(15):: Warnung C4996: 'Strncpy': Diese Funktion oder Variable ist möglicherweise unsicher. Verwenden Sie stattdessen „strncpy_s“. Zum Deaktivieren der Veraltungswarnung verwenden Sie „_CRT_SECURE_NO_WARNINGS“. Details finden Sie in der Onlinehilfe.**
 
 ```C
 // crt_strncpy_x86.c

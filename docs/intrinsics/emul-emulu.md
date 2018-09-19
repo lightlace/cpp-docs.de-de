@@ -1,5 +1,5 @@
 ---
-title: __emul __emulu | Microsoft Docs
+title: __emul, __emulu | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddc98119f6174f299b8de72383610aac72032d42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f3bf997006d98cfbd05a47140baf53ef7032876
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331034"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719419"
 ---
 # <a name="emul-emulu"></a>__emul, __emulu
 **Microsoft-spezifisch**  
   
- Führt Multiplikationen, die "Überlauf", was eine ganze 32-Bit-Zahl aufnehmen kann.  
+ Führt Multiplikationen, die überlaufen, was eine 32-Bit-Ganzzahl aufnehmen kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,11 +46,11 @@ unsigned __int64 __emulu(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `a`  
- Der erste Operand vom Typ ganze Zahl der Multiplikation.  
+*a*<br/>
+[in] Der erste Operand vom Typ ganze Zahl der Multiplikation.  
   
- [in] `b`  
- Der zweite Operand vom Typ ganze Zahl der Multiplikation.  
+*b*<br/>
+[in] Der zweite Operand vom Typ ganze Zahl der Multiplikation.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Das Ergebnis der Multiplikation.  
@@ -59,15 +59,15 @@ unsigned __int64 __emulu(
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__emul`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__emulu`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__emul`|x86, x64|  
+|`__emulu`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- `__emul` nimmt zwei 32-Bit-Werte mit Vorzeichen und gibt das Ergebnis der Multiplikation als 64-Bit-Ganzzahlwert mit Vorzeichen zurück.  
+ `__emul` akzeptiert zwei 32-Bit-Werte mit Vorzeichen und gibt das Ergebnis der Multiplikation als ein 64-Bit-Ganzzahlwert mit Vorzeichen zurück.  
   
- `__emulu` zwei 32-Bit-Ganzzahl ohne Vorzeichen Werte und gibt das Ergebnis der Multiplikation als ein 64-Bit-Ganzzahlwert ohne Vorzeichen zurück.  
+ `__emulu` akzeptiert zwei 32-Bit-Ganzzahlwerte ohne Vorzeichen und gibt das Ergebnis der Multiplikation als ein 64-Bit-Ganzzahlwert ohne Vorzeichen zurück.  
   
 ## <a name="example"></a>Beispiel  
   

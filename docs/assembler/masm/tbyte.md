@@ -1,7 +1,7 @@
 ---
-title: TBYTE | Microsoft Docs
+title: TBYTE | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b7c8b3f4cbe26eda9709f27a18ccb4a9cf2bbb1
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 1a75c07885c0460af6035c8d6fb1b42c6aa733e4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057992"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692885"
 ---
 # <a name="tbyte"></a>TBYTE
-Zum Belegen und optional initialisiert 10 Bytes des Speichers für die einzelnen `initializer`. Kann auch verwendet werden, als Typspezifizierer an einer beliebigen Stelle ist ein Typ zulässig.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-[[name]] TBYTEinitializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Direktiven – Referenz](../../assembler/masm/directives-reference.md)   
- [DT](../../assembler/masm/dt.md)
+
+Zugewiesen und initialisiert Sie optional 10 Bytes Speicherplatz für die einzelnen `initializer`. Kann auch als Typspezifizierer verwendet werden ein Typ ist überall zulässig.
+
+## <a name="syntax"></a>Syntax
+
+> [[Name]] TBYTEinitializer [[, Initialisierer]]...
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>
+[DT](../../assembler/masm/dt.md)<br/>

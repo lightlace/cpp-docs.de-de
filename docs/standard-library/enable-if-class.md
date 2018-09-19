@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2192ea954df1e7a63157d6deb04c7d34cd42337c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c4cdc26c66c05cda821b43367b806ecc2a2a8168
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966484"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100805"
 ---
 # <a name="enableif-class"></a>enable_if-Klasse
 
@@ -37,9 +37,11 @@ struct enable_if;
 
 ### <a name="parameters"></a>Parameter
 
-*B* den Wert, der bestimmt, ob der resultierende Typ vorhanden ist.
+*B*<br/>
+Der Wert, der das Vorhandensein des Ergebnistyps bestimmt.
 
-*T* der Typ, wenn instanziieren *B* ist "true".
+*T*<br/>
+Der Typ, wenn instanziieren *B* ist "true".
 
 ## <a name="remarks"></a>Hinweise
 
@@ -64,12 +66,12 @@ Im Folgenden finden Sie vier Beispielszenarien:
     template <your_stuff>
 typename enable_if<your_condition, your_return_type>::type
     yourfunction(args) {// ...
- }
+}
 // The alias template makes it more concise:
     template <your_stuff>
 enable_if_t<your_condition, your_return_type>
 yourfunction(args) {// ...
- }
+}
 ```
 
 - Szenario 2: Hinzufügen eines Funktionsparameters mit einem Standardargument:
@@ -78,7 +80,7 @@ yourfunction(args) {// ...
     template <your_stuff>
 your_return_type_if_present
     yourfunction(args, enable_if_t<your condition, FOO> = BAR) {// ...
- }
+}
 ```
 
 - Szenario 3: Hinzufügen eines Vorlagenparameters mit einem Standardargument:
@@ -95,7 +97,7 @@ rest_of_function_declaration_goes_here
 void your_function(const T& t,
     enable_if_t<is_something<T>::value, const string&>
 s) {// ...
- }
+}
 ```
 
 Szenario 1 funktioniert nicht mit Konstruktoren und Konvertierungsoperatoren, da diese keine Rückgabetypen haben.

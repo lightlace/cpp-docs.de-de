@@ -1,6 +1,6 @@
 ---
-title: Compilerwarnung (Stufe 3) C4839 | Microsoft Docs
-ms.date: 10/25/2017
+title: Compilerwarnung (Stufe 3) C4839 | Microsoft-Dokumentation
+ms.date: 09/13/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -15,24 +15,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b72289eef03c56356865b0b62a999c417da570a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14a79c6abb118fb173382be87ebda4316545c65a
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291956"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601404"
 ---
-# <a name="compiler-warning-level-4-c4839"></a>Compilerwarnung (Stufe 4) C4839
+# <a name="compiler-warning-level-3-c4839"></a>Compilerwarnung (Stufe 3) C4839
 
 > nicht standardmäßige Verwendung der Klasse*Typ*"als Argument an eine Variadic-Funktion
 
-In Visual Studio 2017 Klassen oder Strukturen, die an einer Variadic übergeben werden, funktionieren wie z. B. `printf` belanglos kopierbare werden muss. Wenn solche Objekte übergeben werden, macht der Compiler einfach eine bitweise Kopie und ruft keinen Konstruktor oder Destruktor auf.
+Klassen oder Strukturen, die an eine Variadic-Funktion, z. B. übergeben werden `printf` muss einfach kopierbar sein. Wenn solche Objekte übergeben werden, macht der Compiler einfach eine bitweise Kopie und ruft keinen Konstruktor oder Destruktor auf.
+
+Diese Warnung ist ab, die in Visual Studio 2017 verfügbar.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird C4839 generiert:
+Im folgende Beispiel wird die C4839 generiert:
 
 ```cpp
+// C4839.cpp
+// compile by using: cl /EHsc /W3 C4839.cpp
 #include <atomic>
 #include <memory>
 #include <stdio.h>
@@ -42,20 +46,10 @@ int main()
     std::atomic<int> i(0);
     printf("%i\n", i); // error C4839: non-standard use of class 'std::atomic<int>'
                         // as an argument to a variadic function
-                        // note: the constructor and destructor will not be called; 
+                        // note: the constructor and destructor will not be called;
                         // a bitwise copy of the class will be passed as the argument
                         // error C2280: 'std::atomic<int>::atomic(const std::atomic<int> &)':
                         // attempting to reference a deleted function
-
-    struct S {
-        S(int i) : i(i) {}
-        S(const S& other) : i(other.i) {}
-        operator int() { return i; }
-    private:
-        int i;
-    } s(0);
-    printf("%i\n", s); // warning C4840 : non-portable use of class 'main::S'
-                      // as an argument to a variadic function
 }
 ```
 
@@ -66,14 +60,7 @@ Sie können eine Memberfunktion aufrufen, die einen einfachen kopierbaren Typ zu
     printf("%i\n", i.load());
 ```
 
-oder Sie führen eine statische Umwandlung aus, um das Objekt zu konvertieren, bevor es übergeben wird:
-
-```cpp
-    struct S {/* as before */} s(0);
-    printf("%i\n", static_cast<int>(s))
-```
-
-Für Zeichenfolgen erstellt und verwaltet mithilfe `CStringW`, bereitgestellten `operator LPCWSTR()` sollte verwendet werden, um die Umwandlung einer `CStringW` Objekt in der C-Zeiger erwartet wird die Formatzeichenfolge.
+Für Zeichenfolgen mit erstellte und verwaltete `CStringW`, bereitgestellten `operator LPCWSTR()` sollte verwendet werden, um die Umwandlung einer `CStringW` Objekt an den C-Zeiger, die von der Formatzeichenfolge erwartet wird.
 
 ```cpp
     CStringW str1;

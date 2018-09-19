@@ -1,5 +1,5 @@
 ---
-title: __invlpg | Microsoft Docs
+title: __invlpg | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 373e9c1f8cc24ca4de4f0a78dd75011681c78056
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ada416217be672da8f93c777b0b2a6e12684711
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327524"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703026"
 ---
 # <a name="invlpg"></a>__invlpg
 **Microsoft-spezifisch**  
   
- Generiert die X86 `invlpg` -Anweisung, die für die Seite zugeordnete Speicher verweist, zu den Übersetzung Lookaside-Puffer (TLB) erklärt `Address`.  
+ Generiert die X86 `invlpg` -Anweisung, die die Translation Lookaside Buffer, TLB (TLB) für die Seite mit dem zugeordneten Speicher verweist erklärt `Address`.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,19 +39,19 @@ void __invlpg(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in]  `Address`  
- Eine 64-Bit-Adresse.  
+*Adresse*<br/>
+[in] Eine 64-Bit-Adresse.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__invlpg`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__invlpg`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Die systeminterne Funktion `__invlpg` eine privilegierte Anweisung ausgibt, und ist nur verfügbar im Kernel-Modus mit einer Berechtigungsstufe (Systemsteuerungsoption) 0.  
+ Die systeminterne Funktion `__invlpg` eine privilegierte Anweisung ausgibt, und ist nur verfügbar im Kernel-Modus mit einer Berechtigungsstufe (CPL) von 0.  
   
  Diese Routine ist nur als systeminterne Funktion verfügbar.  
   

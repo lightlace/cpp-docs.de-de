@@ -1,5 +1,5 @@
 ---
-title: Anbieter-Assistenten generierte Dateien | Microsoft Docs
+title: Anbieter-Assistenten generierte Dateien | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ac23f06bf1ae697ecd627d493aa5902219488138
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26e20e0417e2253158930a8d3d055171fe767001
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106007"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108403"
 ---
 # <a name="provider-wizard-generated-files"></a>Vom Anbieter-Assistenten generierte Dateien
-Der ATL-OLE DB-Anbieter-Assistent generiert die folgenden Dateien. Verwenden Sie in den folgenden Themen des kurzen Namens "MyProvider", aber die genauen Dateinamen hängt die Wahl, die Sie beim Erstellen des Anbieters vorgenommen.  
+
+Der ATL-OLE DB-Anbieter-Assistent generiert die folgenden Dateien. In den folgenden Themen verwenden Sie den kurzen Namen "Meinanbieter", aber die exakten Dateinamen hängt die Wahl, die Sie vorgenommen werden, wenn Sie den Anbieter zu erstellen.  
   
 |Dateiname|Beschreibung|  
 |---------------|-----------------|  
-|MyProviderRS.cpp|Enthält den Befehl Helper `Execute` -Methode und der Anbieter-spaltenzuordnung.|  
-|MyProviderDS.h|Implementiert das Datenquellenobjekt. Diese Headerdatei enthält die eigenschaftenzuordnung für Eigenschaften der Datenquelle.|  
-|MyProviderRS.h|Implementiert die Befehls- und Rowsetobjekte-Objekte. Diese Headerdatei enthält die eigenschaftenzuordnung für Eigenschaften von Rowset- und Befehlsobjekte.|  
-|MyProviderSess.h|Implementiert das Sitzungsobjekt. Diese Headerdatei enthält die eigenschaftenzuordnung für Sitzungseigenschaften.|  
+|MyProviderRS.cpp|Der Befehl-Hilfe enthält `Execute` -Methode und die Anbieter-Spalte-Zuordnung.|  
+|MyProviderDS.h|Implementiert das Datenquellenobjekt. Diese Headerdatei enthält die eigenschaftenzuordnung für die Eigenschaften der Datenquelle.|  
+|MyProviderRS.h|Implementiert die Befehls- und Rowsetobjekte-Objekte. Diese Headerdatei enthält die eigenschaftenzuordnung Rowset- und Eigenschaften.|  
+|MyProviderSess.h|Implementiert das Session-Objekt. Diese Headerdatei enthält die eigenschaftenzuordnung für die Eigenschaften der leistungssitzung aus.|  
 |MyProvider.rgs|Enthält die registrierten Objekte, die vom OLE DB-Anbieter-Assistenten generiert.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen eines OLE DB-Anbieters](../../data/oledb/creating-an-ole-db-provider.md)
+
+[Erstellen eines OLE DB-Anbieters](../../data/oledb/creating-an-ole-db-provider.md)

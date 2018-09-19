@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3384 | Microsoft Docs
+title: Compilerfehler C3384 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab09df08edb9f1d5808f2214535c76b20fda62b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75c904556951838de0308aea499980132440cbdb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251405"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061603"
 ---
 # <a name="compiler-error-c3384"></a>Compilerfehler C3384
-"type_parameter" : Die Werteinschränkung und die ref-Einschränkung schließen sich gegenseitig aus  
-  
- Sie können einen generischen Typ nicht gleichzeitig auf `value class` und `ref class`einschränken.  
-  
- Finden Sie unter [Einschränkungen für generische Typparameter (C + c++ / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) für Weitere Informationen.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C3384 generiert.  
-  
-```  
-// C3384.cpp  
-// compile with: /c /clr  
-generic <typename T>  
-where T : ref class  
-where T : value class   // C3384  
-ref class List {};  
+
+"type_parameter" : Die Werteinschränkung und die ref-Einschränkung schließen sich gegenseitig aus
+
+Sie können einen generischen Typ nicht gleichzeitig auf `value class` und `ref class`einschränken.
+
+Finden Sie unter [Einschränkungen für generische Typparameter (C++ / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) für Weitere Informationen.
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C3384 generiert.
+
+```
+// C3384.cpp
+// compile with: /c /clr
+generic <typename T>
+where T : ref class
+where T : value class   // C3384
+ref class List {};
 ```

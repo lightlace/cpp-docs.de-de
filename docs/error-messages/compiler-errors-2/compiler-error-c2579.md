@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2579 | Microsoft Docs
+title: Compilerfehler C2579 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5761f475d12375baccad9c19a597215c9c6fc3cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c15351e694e6e26671f50a1d3efb266f4a667029
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227303"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056013"
 ---
 # <a name="compiler-error-c2579"></a>Compilerfehler C2579
-kann nicht Typ "Type" (Offset) aufgelöst werden. Es wird in der Datei erwartet.  
-  
- C2579 folgt immer C4691. Weitere Informationen finden Sie unter [Compilerwarnung (Stufe 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md).
+
+kann nicht Typ 'Typ' (Offset) aufgelöst. Es wird in der Datei erwartet.
+
+C2579 folgt immer C4691. Weitere Informationen finden Sie unter [Compilerwarnung (Stufe 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md).

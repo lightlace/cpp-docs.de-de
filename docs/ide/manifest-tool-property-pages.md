@@ -14,17 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2221430522329616dd19f32484b66dc957593c3a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 16a5033a2656cea3f1cecea1e5b97f4ad9c117ad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33321986"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222206"
 ---
 # <a name="manifest-tool-property-pages"></a>Eigenschaftenseiten des Manifesttools
 Verwenden Sie die **Manifesttooleigenschaftenseiten**, um Buildoptionen für „mt.exe“ festzulegen.  
   
- Weitere Informationen zum Manifesttool finden Sie unter [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+ Weitere Informationen zum Manifesttool finden Sie unter [Mt.exe](https://msdn.microsoft.com/library/aa375649).  
   
  [General, Manifest Tool, Configuration Properties, \<Projectname> Property Pages Dialog Box (Allgemein, Manifesttool, Konfigurationseigenschaften, <Projektname>-Eigenschaftenseiten (Dialogfeld))](../ide/general-manifest-tool-configuration-properties.md)  
   

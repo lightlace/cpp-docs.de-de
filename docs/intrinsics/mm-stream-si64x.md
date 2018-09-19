@@ -1,5 +1,5 @@
 ---
-title: _mm_stream_si64x | Microsoft Docs
+title: _mm_stream_si64x | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ea6b9bdc57765b15128ebcc6f9a17bba2612e29
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb647b164ad63a952141e70b9b72e3fab3fda3c3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328788"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701180"
 ---
 # <a name="mmstreamsi64x"></a>_mm_stream_si64x  
   
 **Microsoft-spezifisch**  
   
- Generiert die MOVNTI-Anweisung. Schreibt die Daten in `Source` auf einen Speicherbereich durch angegebenen `Dest`, ohne die Caches beschädigen.  
+ Generiert die MOVNTI-Anweisung. Schreibt die Daten in `Source` auf einen Speicherbereich durch angegebene `Dest`, ohne die Caches zu entwickeln.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,17 +41,17 @@ void _mm_stream_si64x(
   
 #### <a name="parameters"></a>Parameter  
   
- [out] `Dest`  
- Ein Zeiger auf die Position, an die Quelldaten zu schreiben.  
+*dest*<br/>
+[out] Ein Zeiger auf den Speicherort die Quelldaten zu schreiben.  
   
- [in] `Source`  
- Den zu schreibenden Daten.  
+*Source*<br/>
+[in] Die Daten geschrieben werden soll.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`_mm_stream_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_stream_si64x`|x64|  
   
  **Headerdatei** \<intrin.h >  
   

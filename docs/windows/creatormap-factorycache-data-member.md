@@ -1,5 +1,5 @@
 ---
-title: 'Creatormap:: Factorycache-Datenmember | Microsoft Docs'
+title: 'Creatormap:: Factorycache-Datenmember | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ce9beccabd06e4182e05e4a1e447db189986ef2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4b231aa38b0146e40f779e0fa8d75c71ec5d0a6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871148"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606332"
 ---
 # <a name="creatormapfactorycache-data-member"></a>CreatorMap::factoryCache-Datenmember
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-FactoryCache* factoryCache;  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Den Zeiger auf den kanalfactorycache für die CreatorMap gespeichert.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [CreatorMap-Struktur](../windows/creatormap-structure.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+FactoryCache* factoryCache;
+```
+
+## <a name="remarks"></a>Hinweise
+
+Speichert den Zeiger auf den Cache Factory für die **CreatorMap**.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[CreatorMap-Struktur](../windows/creatormap-structure.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

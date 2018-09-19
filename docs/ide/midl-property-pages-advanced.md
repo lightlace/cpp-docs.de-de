@@ -26,37 +26,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f87518c23848cea91a3e3c48361aa0a63fa88a2
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ed9d6ba12e65eac325008cb2a448abdab087ee46
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330803"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197959"
 ---
 # <a name="midl-property-pages-advanced"></a>Eigenschaftenseiten "MIDL": "Erweitert"
 Die Eigenschaftenseite **Erweitert** im Ordner **MIDL** gibt die folgenden MIDL-Compileroptionen an:  
   
--   Aktivieren der Fehlerüberprüfung ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Aktivieren der Fehlerüberprüfung ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Überprüfen der Speicherbelegungen ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Überprüfen der Speicherbelegungen ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Überprüfen der Begrenzungen ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Überprüfen der Begrenzungen ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Überprüfen des Enumerationsbereichs ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Überprüfen des Enumerationsbereichs ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Überprüfen der Verweiszeiger ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Überprüfen der Verweiszeiger ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Überprüfen der Stub-Daten ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Überprüfen der Stub-Daten ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Überprüfen von Parametern ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363))*  
+-   Überprüfen von Parametern ([/robust](https://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
   
--   Ausrichten der Strukturmembers ([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
+-   Ausrichten der Strukturmembers ([/Zp](https://msdn.microsoft.com/library/windows/desktop/aa367388))  
   
--   Umleiten der Ausgabe ([/o](http://msdn.microsoft.com/library/windows/desktop/aa367351))  
+-   Umleiten der Ausgabe ([/o](https://msdn.microsoft.com/library/windows/desktop/aa367351))  
   
--   C-Präprozessoroptionen ([/cpp_opt](http://msdn.microsoft.com/library/windows/desktop/aa367318))  
+-   C-Präprozessoroptionen ([/cpp_opt](https://msdn.microsoft.com/library/windows/desktop/aa367318))  
   
--   Aufheben der Präprozessordefinitionen ([/U](http://msdn.microsoft.com/library/windows/desktop/aa367373))  
+-   Aufheben der Präprozessordefinitionen ([/U](https://msdn.microsoft.com/library/windows/desktop/aa367373))  
   
  \*/robust wird nur bei der Erstellung für einen Computer mit Windows 2000 oder höher verwendet. Wenn Sie ein ATL-Projekt erstellen und /robust verwenden möchten, müssen Sie die folgende Zeile in der Datei „dlldatax.c“ ändern:  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Implementshelper:: Casttounknown-Methode | Microsoft Docs'
+title: 'Implementshelper:: Casttounknown-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e5a5c71fd0a6ca8fa3b04ad39f46ba5583fbd670
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b786bb41e9f0667ebbb81329b2f0977525d4ba96
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874498"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598061"
 ---
 # <a name="implementshelpercasttounknown-method"></a>ImplementsHelper::CastToUnknown-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-IUnknown* CastToUnknown();  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die zugrunde liegende IUnknown-Schnittstelle.  
-  
-## <a name="remarks"></a>Hinweise  
- Ruft einen Zeiger auf die zugrunde liegenden IUnknown-Schnittstelle für die aktuelle Implements-Struktur.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [ImplementsHelper-Struktur](../windows/implementshelper-structure.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+IUnknown* CastToUnknown();
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Zeiger auf die zugrunde liegende `IUnknown` Schnittstelle.
+
+## <a name="remarks"></a>Hinweise
+
+Ruft einen Zeiger auf die zugrunde liegende `IUnknown` Schnittstelle für den aktuellen `Implements` Struktur.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[ImplementsHelper-Struktur](../windows/implementshelper-structure.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

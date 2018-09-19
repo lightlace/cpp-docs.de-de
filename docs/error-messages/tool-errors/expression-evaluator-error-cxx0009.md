@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0009 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0009 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d579c22ee72992b16cd39a2cedb82e1219972c5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95c2706f4b1eb758eea24cc16ea16f4b561155c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295443"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109794"
 ---
 # <a name="expression-evaluator-error-cxx0009"></a>Ausdrucksauswertungsfehler CXX0009
-Fehlendes ' nach Zeichenkonstante  
-  
- Das einfache Anführungszeichen am Ende der Zeichenkonstante erwartet fehlte. Geben Sie den Ausdruck, die Zeichenkonstante in einfache Anführungszeichen einschließen.  
-  
- Dieser Fehler ist mit CAN0009 identisch.
+
+Fehlendes ' nach Zeichenkonstante
+
+Das einfache Anführungszeichen am Ende die Zeichenkonstante erwartet war nicht vorhanden. Geben Sie den Ausdruck an, die Zeichenkonstante in einfache Anführungszeichen einschließen.
+
+Dieser Fehler ist mit CAN0009 identisch.

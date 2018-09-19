@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c77c8cc20588df8329951167db502a65a67b3756
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 424d98236b37dabe1c671a9890f049063a8e50a1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849339"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212275"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer-Klasse
 Wird für OLE-Server mit direkter Aktivierung, Automatisierungsserver und Linkcontainer verwendet (also in Anwendungen, die Links zu Einbettungen unterstützen).  
@@ -106,7 +106,7 @@ void ConnectTemplate(
  Gibt an, ob eine einzelne Instanz der Anwendung mehrere Instanziierungen unterstützt. Wenn "true" werden mehrere Instanzen der Anwendung für jede Anforderung zum Erstellen eines Objekts gestartet.  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [Schlüssel CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) im Windows SDK.  
+ Weitere Informationen finden Sie unter [Schlüssel CLSID](/windows/desktop/com/clsid-key-hklm) im Windows SDK.  
   
 ##  <a name="unregister"></a>  COleTemplateServer::Unregister  
  Hebt die Registrierung der Vorlage zugeordnete Dokument.  
@@ -162,7 +162,7 @@ void UpdateRegistry(
   
  Die Informationen in den Argumenten *RglpszRegister* und *RglpszOverwrite* richtet sich an der Registrierung durch einen Aufruf von [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass). Informationen über das Standardformat, das registriert wird, wenn die beiden Argumente NULL sind, ist für die meisten Anwendungen geeignet. Informationen für die Struktur der Informationen in diesen Argumenten finden Sie unter `AfxOleRegisterServerClass`.  
   
- Weitere Informationen finden Sie unter [Implementieren der IDispatch-Schnittstelle](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ Weitere Informationen finden Sie unter [Implementieren der IDispatch-Schnittstelle](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
   
 ## <a name="see-also"></a>Siehe auch  
  [MFC-Beispiel HIERSVR](../../visual-cpp-samples.md)   

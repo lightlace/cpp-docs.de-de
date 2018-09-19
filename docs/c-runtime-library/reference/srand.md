@@ -38,16 +38,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b527561e312ce9c50dce106a243d7e49a1d303
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7972ddfe6ae9c1d591bdbd4cc5e208d78e826037
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406887"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107526"
 ---
 # <a name="srand"></a>srand
 
-Legt den Startwert für den pseudozufallszahlengenerator verwendet werden, indem Sie die **Rand** Funktion.
+Legt den Startwert für den pseudozufallszahlengenerator ein, die die **Rand** Funktion.
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,15 +59,16 @@ void srand(
 
 ### <a name="parameters"></a>Parameter
 
-*Ausgangswert* Ausgangswert für die pseudozufallszahlengenerierung
+*Startwert*<br/>
+Startwert für die Pseudozufallszahlengenerierung
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Srand** -Funktion legt den Ausgangspunkt für das Generieren von pseudozufallsganzzahlen im aktuellen Thread fest. Um den Generator zum Erstellen von derselben Sequenz von Ergebnissen erneut zu initialisieren, rufen Sie die **Srand** Funktion, und verwenden Sie den gleichen *Ausgangswert* -Argument erneut. Jeder andere Wert für *Ausgangswert* definiert den Erzeuger auf einen anderen Startpunkt in der pseudozufallssequenz. **Rand** Ruft den pseudozufälligen Zahlen, die generiert werden. Aufrufen von **Rand** vor irgendeinem Aufruf von **Srand** generiert die gleiche Sequenz wie das Aufrufen **Srand** mit *Ausgangswert* übergeben als 1.
+Die **Srand** Funktion legt den Ausgangspunkt für das Generieren von pseudozufallsganzzahlen im aktuellen Thread fest. Aufrufen, um den Generators zum Erstellen der gleichen Reihenfolge der Ergebnisse erneut zu initialisieren, die **Srand** Funktion, und verwenden Sie den gleichen *Ausgangswert* -Argument erneut. Jeder andere Wert für *Ausgangswert* des Generators auf einen anderen Startpunkt in der pseudozufallssequenz festgelegt. **Rand** Ruft ab, der Pseudozufallszahlen, die generiert werden. Aufrufen von **Rand** vor dem Aufruf **Srand** generiert die gleiche Sequenz wie das Aufrufen **Srand** mit *Ausgangswert* übergeben als 1.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**srand**|\<stdlib.h>|
 

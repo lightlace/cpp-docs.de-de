@@ -1,5 +1,5 @@
 ---
-title: Linkertoolwarnung Lnk4222 | Microsoft Docs
+title: Linkertoolwarnung LNK4222 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 359af4c4d3b1079b2d56f108bff0ee1488ea71f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: abc4f85fbc361b37d9325f9d395a1c34e1eeed2e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302148"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106926"
 ---
 # <a name="linker-tools-warning-lnk4222"></a>Linkertoolwarnung LNK4222
-exportiertes Symbol 'Symbol' sollte eine Ordinalzahl nicht zugewiesen werden  
-  
- Die folgenden Symbole darf nicht nach Ordnungszahl exportiert werden:  
-  
--   `DllCanUnloadNow`  
-  
--   `DllGetClassObject`  
-  
--   `DllGetClassFactoryFromClassString`  
-  
--   `DllInstall`  
-  
--   `DllRegisterServer`  
-  
--   `DllRegisterServerEx`  
-  
--   `DllUnregisterServer`  
-  
- Diese Funktionen befinden sich immer anhand des Namens, mit `GetProcAddress`. Der Linker warnt diese Art der Export ist, da es zu einem größeren Bilds führen kann. Dies kann passieren, wenn der Bereich ordinal Berichten mit relativ wenigen Exporten groß ist. Ein auf ein Objekt angewendeter  
-  
-```  
-EXPORTS  
-   DllGetClassObject   @1  
-   MyOtherAPI      @100  
-```  
-  
- ist erforderlich, dass 100 in der Exporttabelle für die Adresse mit 98 davon (2-99) nur Abdeckung slots. Andererseits  
-  
-```  
-EXPORTS  
-   DllGetClassObject  
-   MyOtherAPI      @100  
-```  
-  
- Sie benötigen zwei Steckplätze. (Beachten Sie, dass Sie auch mit exportieren können der [/EXPORT](../../build/reference/export-exports-a-function.md) (Linkeroption).)
+
+dem exportierten Symbol 'Symbol' sollte keine Ordinalzahl zugewiesen werden
+
+Die folgenden Symbole sollen nach Ordnungszahl nicht exportiert werden:
+
+- `DllCanUnloadNow`
+
+- `DllGetClassObject`
+
+- `DllGetClassFactoryFromClassString`
+
+- `DllInstall`
+
+- `DllRegisterServer`
+
+- `DllRegisterServerEx`
+
+- `DllUnregisterServer`
+
+Diese Funktionen befinden sich immer den Namen mithilfe von `GetProcAddress`. Der Linker warnt vor dieser Art der Export ist, da es zu vergrößern führen kann. Dies kann passieren, wenn der Bereich Ihrer ordinal Exporte mit relativ wenigen Exporten groß ist. Ein auf ein Objekt angewendeter
+
+```
+EXPORTS
+   DllGetClassObject   @1
+   MyOtherAPI      @100
+```
+
+ist erforderlich, dass die slots von 100 in der Exporttabelle der Adresse 98 davon nur Filler (2-99). Auf der anderen Seite
+
+```
+EXPORTS
+   DllGetClassObject
+   MyOtherAPI      @100
+```
+
+Sie benötigen zwei Slots. (Beachten Sie, dass Sie auch exportieren können, mit der [/EXPORT](../../build/reference/export-exports-a-function.md) -Linkeroption.)

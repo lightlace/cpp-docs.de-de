@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b7b604fd58c3f320b62c022e6b5d1749c1f3a87
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f6b4faf2ac5f04a2dcc9e1e9112016038fa2fcec
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954889"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106450"
 ---
 # <a name="messages-class"></a>messages-Klasse
 
@@ -54,7 +54,8 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType* den Typ innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet.
+*CharType*<br/>
+Der Typ, der innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet wird.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -114,7 +115,8 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Catval* das zu schließende Katalog.
+*_Catval*<br/>
+Der zu schließende Katalog.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -130,7 +132,8 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Catval* das zu schließende Katalog.
+*_Catval*<br/>
+Der zu schließende Katalog.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -156,13 +159,17 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Parameter
 
-*_Catval* den ID-Wert, der den meldungskatalog zu durchsuchenden angeben.
+*_Catval*<br/>
+Der Identifikationswert, der den zu suchenden Katalog angibt.
 
-*_Nicht* der erste identifizierte zum finden einer Meldung in einem meldungskatalog verwendet.
+*_Nicht*<br/>
+Der erste identifizierte, der zum Finden einer Meldung in einem Meldungskatalog verwendet wird.
 
-*_Nachricht* identifiziert die zweite zum finden einer Meldung in einem meldungskatalog verwendet.
+*_Nachricht*<br/>
+Der zweite identifizierte, der zum Finden einer Meldung in einem Meldungskatalog verwendet wird.
 
-*_Dfault* Zeichenfolge, die bei einem Fehler zurückgegeben werden.
+*_Dfault*<br/>
+Die Zeichenfolge, die zurückgegeben werden soll, wenn ein Fehler auftritt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -188,9 +195,11 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Parameter
 
-*_Catname* der Name des Katalogs ein, der gesucht werden soll.
+*_Catname*<br/>
+Der Name des zu suchenden Katalogs.
 
-*_Loc* das Gebietsschema, die im Katalog gesucht wird.
+*_Loc*<br/>
+Das Gebietsschema, nach dem im Katalog gesucht werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -220,13 +229,17 @@ string_type get(
 
 ### <a name="parameters"></a>Parameter
 
-*_Catval* den ID-Wert, der den meldungskatalog zu durchsuchenden angeben.
+*_Catval*<br/>
+Der Identifikationswert, der den zu suchenden Katalog angibt.
 
-*_Nicht* der erste identifizierte zum finden einer Meldung in einem meldungskatalog verwendet.
+*_Nicht*<br/>
+Der erste identifizierte, der zum Finden einer Meldung in einem Meldungskatalog verwendet wird.
 
-*_Nachricht* identifiziert die zweite zum finden einer Meldung in einem meldungskatalog verwendet.
+*_Nachricht*<br/>
+Der zweite identifizierte, der zum Finden einer Meldung in einem Meldungskatalog verwendet wird.
 
-*_Dfault* Zeichenfolge, die bei einem Fehler zurückgegeben werden.
+*_Dfault*<br/>
+Die Zeichenfolge, die zurückgegeben werden soll, wenn ein Fehler auftritt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -251,9 +264,11 @@ protected: messages(
 
 ### <a name="parameters"></a>Parameter
 
-*_Refs* Ganzzahlwert verwendet, um den Typ für die Speicherverwaltung für das Objekt anzugeben.
+*_Refs*<br/>
+Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
 
-*_Locname* den Namen des Gebietsschemas.
+*_Locname*<br/>
+Der Name des Gebietsschemas.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -281,9 +296,11 @@ catalog open(
 
 ### <a name="parameters"></a>Parameter
 
-*_Catname* der Name des Katalogs ein, der gesucht werden soll.
+*_Catname*<br/>
+Der Name des zu suchenden Katalogs.
 
-*_Loc* das Gebietsschema, die im Katalog gesucht wird.
+*_Loc*<br/>
+Das Gebietsschema, nach dem im Katalog gesucht werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 

@@ -1,5 +1,5 @@
 ---
-title: 'Comptrrefbase:: Operator IInspectable **-Operator | Microsoft Docs'
+title: 'Comptrrefbase:: Operator IInspectable ** | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e337f6bbc92718c839fc2bd12c9df9f0caa5d5aa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f711a9d1f5fe92e5f35bf333fc0b3473fc0eebf4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883458"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604405"
 ---
-# <a name="comptrrefbaseoperator-iinspectable-operator"></a>ComPtrRefBase::operator IInspectable**-Operator
+# <a name="comptrrefbaseoperator-iinspectable-operator"></a>Comptrrefbase:: "iinspectable"\* \* Operator
 
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,11 +36,11 @@ operator IInspectable**() const;
 
 ## <a name="remarks"></a>Hinweise
 
-Wandelt das aktuelle [Ptr_](../windows/comptrrefbase-ptr-data-member.md) -Datenmember auf einen Zeiger-auf-a-Zeiger-to "iinspectable"-Schnittstelle.
+Wandelt das aktuelle [Ptr_](../windows/comptrrefbase-ptr-data-member.md) Datenmembers, der einen Zeiger an eine-Zeiger-an die `IInspectable` Schnittstelle.
 
-Ein Fehler wird ausgegeben, wenn die aktuelle ComPtrRefBase von "iinspectable" abgeleitet werden, nicht.
+Ein Fehler wird ausgegeben, wenn die aktuelle **ComPtrRefBase** nicht abgeleitet `IInspectable`.
 
-Diese Umwandlung ist verfügbar nur, wenn **&#95; &#95;WRL_CLASSIC_COM&#95; &#95;** definiert ist.
+Diese Umwandlung ist verfügbar nur, wenn `__WRL_CLASSIC_COM__` definiert ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,5 +50,5 @@ Diese Umwandlung ist verfügbar nur, wenn **&#95; &#95;WRL_CLASSIC_COM&#95; &#95
 
 ## <a name="see-also"></a>Siehe auch
 
-[ComPtrRefBase-Klasse](../windows/comptrrefbase-class.md)   
+[ComPtrRefBase-Klasse](../windows/comptrrefbase-class.md)  
 [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

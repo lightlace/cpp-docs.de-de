@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2752 generiert | Microsoft Docs
+title: Compilerfehler C2752 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ff4ee5060f0fa3cfd657daf9e05759e64b15bd2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea33ef80847a8699115a92e316fec156c3c51607
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233472"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081649"
 ---
-# <a name="compiler-error-c2752"></a>Compiler-Fehler C2752 generiert
-'Template': mehr als eine teilweiser Spezialisierung entspricht die Vorlagenargumentliste  
-  
- Eine Instanziierung ist mehrdeutig.  
-  
- Im folgende Beispiel wird C2752 generiert:  
-  
-```  
-// C2752.cpp  
-template<class T, class U>   
-struct A {};  
-  
-template<class T, class U>   
-struct A<T*, U> {};  
-  
-template<class T, class U>   
-struct A<T,U*> {};  
-  
-// try the following line instead  
-// template<class T, class U> struct A<T*,U*> {};  
-  
-int main() {  
-   A<char*,int*> a;   // C2752 an instantiation  
-  
-   // OK  
-   A<char*,int> a1;  
-   A<char,int*> a2;  
-   A<char,int> a3;  
-}  
+# <a name="compiler-error-c2752"></a>Compilerfehler C2752
+
+"Template": mehr als eine teilweiser Spezialisierung stimmt der Vorlagenargumentliste überein.
+
+Eine Instanziierung war mehrdeutig.
+
+Im folgende Beispiel wird die C2752 generiert:
+
+```
+// C2752.cpp
+template<class T, class U>
+struct A {};
+
+template<class T, class U>
+struct A<T*, U> {};
+
+template<class T, class U>
+struct A<T,U*> {};
+
+// try the following line instead
+// template<class T, class U> struct A<T*,U*> {};
+
+int main() {
+   A<char*,int*> a;   // C2752 an instantiation
+
+   // OK
+   A<char*,int> a1;
+   A<char,int*> a2;
+   A<char,int> a3;
+}
 ```

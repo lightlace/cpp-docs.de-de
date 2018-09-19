@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t-Memberfunktionen | Microsoft Docs
+title: _com_ptr_t-Memberfunktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f95423f2e5489676c18a5e8535f1fcd7a9d2d7aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7f3ab6709dd73c9f7df7f948806703092a090f0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408568"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040400"
 ---
 # <a name="comptrt-member-functions"></a>_com_ptr_t-Memberfunktionen
-Informationen zu den `_com_ptr_t` Memberfunktionen, finden Sie unter [_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md)
+
+Informationen zu den **_com_ptr_t** Member-Funktionen, finden Sie unter [_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md)

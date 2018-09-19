@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddc4868d7cc3c094ad2bb81b5d9706a2b749553d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 56e93bf1485cefed9a44e0e6260358650ab8b296
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339346"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032587"
 ---
 # <a name="bitmap-structure"></a>BITMAP-Struktur
 Die **BITMAP** Struktur definiert die Höhe, Breite, Farbformat und die Bitwerte einer logischen Bitmap **.**  
@@ -67,25 +67,21 @@ typedef struct tagBITMAP {  /* bm */
   
  Überprüfungen werden für eine monochrome Bitmap der Höhe wie folgt organisiert *n*:  
   
- `Scan 0`  
-  
- `Scan 1`  
-  
- `.`  
-  
- `.`  
-  
- `.`  
-  
- `Scan n-2`  
-  
- `Scan n-1`  
+```
+Scan 0
+Scan 1
+.
+.
+.
+Scan n-2
+Scan n-1
+```
   
  Die Pixel auf einem monochromen Gerät sind entweder schwarz oder weiß. Wenn das entsprechende Bit in der Bitmap 1 ist, wird das Pixel aktiviert (weiß). Wenn das entsprechende Bit in der Bitmap 0 ist, wird das Pixel deaktiviert (schwarz).  
   
  Alle Geräte unterstützen Bitmaps, den RC_BITBLT-bit-Satz in der RASTERCAPS-Index, der die [GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) Member-Funktion.  
   
- Jedes Gerät hat ein eigenes eindeutiges Farbformat. Um eine Bitmap von einem Gerät in einen anderen übertragen möchten, verwenden Sie die [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) und [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) Windows-Funktionen.  
+ Jedes Gerät hat ein eigenes eindeutiges Farbformat. Um eine Bitmap von einem Gerät in einen anderen übertragen möchten, verwenden Sie die [GetDIBits](/windows/desktop/api/wingdi/nf-wingdi-getdibits) und [SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits) Windows-Funktionen.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** wingdi.h  

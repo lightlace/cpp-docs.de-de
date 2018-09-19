@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3018 | Microsoft Docs
+title: Compilerfehler C3018 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71695816672fa0f806accc32ac4f5a373557bdd9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9813bd92834a2bc421b55c60eda2220ea14c7d97
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254332"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079413"
 ---
 # <a name="compiler-error-c3018"></a>Compilerfehler C3018
-"var1": Der Test oder das Inkrement in der For-Anweisung von OpenMP muss die Indexvariable "var2" verwenden.  
-  
- Eine `for` -Schleife in einer OpenMP-Anweisung muss dieselbe Variable für ihren Test und ihr Inkrement wie für ihren Index verwenden.  
-  
- Im folgenden Beispiel wird C3018 generiert:  
-  
-```  
-// C3018.cpp  
-// compile with: /openmp  
-int main()  
-{  
-   int i = 0, j = 5;  
-  
-   #pragma omp parallel  
-   {  
-      #pragma omp for  
-      for (i = 0; j < 10; ++i)   // C3018  
-      // try the the following line instead  
-      // for (i = 0; i < 10; ++i)  
-         j *= 2;  
-  
-      #pragma omp for  
-      for (i = 0; i < 10; j = j + i)   // C3018  
-      // try the the following line instead  
-      // for (i = 0; i < 10; i = j + i)  
-         j *= 2;  
-   }  
-}  
+
+"var1": Der Test oder das Inkrement in der For-Anweisung von OpenMP muss die Indexvariable "var2" verwenden.
+
+Eine `for` -Schleife in einer OpenMP-Anweisung muss dieselbe Variable für ihren Test und ihr Inkrement wie für ihren Index verwenden.
+
+Im folgenden Beispiel wird C3018 generiert:
+
+```
+// C3018.cpp
+// compile with: /openmp
+int main()
+{
+   int i = 0, j = 5;
+
+   #pragma omp parallel
+   {
+      #pragma omp for
+      for (i = 0; j < 10; ++i)   // C3018
+      // try the following line instead
+      // for (i = 0; i < 10; ++i)
+         j *= 2;
+
+      #pragma omp for
+      for (i = 0; i < 10; j = j + i)   // C3018
+      // try the following line instead
+      // for (i = 0; i < 10; i = j + i)
+         j *= 2;
+   }
+}
 ```

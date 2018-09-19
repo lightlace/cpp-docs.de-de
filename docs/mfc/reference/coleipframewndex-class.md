@@ -104,16 +104,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80244a328fb374c4302f068c3c8b64f5b5d5c676
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 114ddba64de255c0f034fb9dbcbe55a45ca72bba
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850133"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723969"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx-Klasse
-Die Klasse `COleIPFrameWndEx` implementiert einen OLE-Container, der MFC unterstützt. Sie müssen die Klasse für das direkte Rahmenfenster der Anwendung von der `COleIPFrameWndEx` -Klasse ableiten und nicht von der [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)-Klasse. 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]   
+Die Klasse `COleIPFrameWndEx` implementiert einen OLE-Container, der MFC unterstützt. Sie müssen die Klasse für das direkte Rahmenfenster der Anwendung von der `COleIPFrameWndEx` -Klasse ableiten und nicht von der [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)-Klasse. Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.   
   
 ## <a name="syntax"></a>Syntax  
   
@@ -217,8 +216,8 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pControlBar*  
- [in] *bTail*  
+*pControlBar*<br/>
+[in] [in] *bTail*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -247,8 +246,8 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- [in] *nDockBarID*  
+*pBar*<br/>
+[in] [in] *nDockBarID*  
  [in] *LpRect*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -263,11 +262,11 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- Ein Zeiger auf den Bereich anzudocken.  
+*pBar*<br/>
+[in] Ein Zeiger auf den Bereich anzudocken.  
   
- [in] *pLeftOf*  
- Ein Zeiger auf den Bereich, der als Ursprung dient.  
+*pLeftOf*<br/>
+[in] Ein Zeiger auf den Bereich, der als Ursprung dient.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt TRUE zurück, wenn der Vorgang erfolgreich ist. Andernfalls wird false ZURÜCKGEGEBEN.  
@@ -317,12 +316,12 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- [in] *UiCustomizeCmd*  
- [in] *StrCustomizeLabel*  
- [in] *UiViewToolbarsMenuEntryID*  
- [in] *bContextMenuShowsToolbarsOnly*  
- [in] *bViewMenuShowsToolbarsOnly*  
+*bAktivieren*<br/>
+[in] [in] *UiCustomizeCmd*  
+*strCustomizeLabel*<br/>
+[in] [in] *UiViewToolbarsMenuEntryID*  
+*bContextMenuShowsToolbarsOnly*<br/>
+[in] [in] *bViewMenuShowsToolbarsOnly*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -446,11 +445,11 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pButton*  
- Zeiger auf die Schaltfläche.  
+*pButton*<br/>
+[in] Zeiger auf die Schaltfläche.  
   
- [in] *StrTTText*  
- Zeiger auf den QuickInfo-Text.  
+*strTTText*<br/>
+[in] Zeiger auf den QuickInfo-Text.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Standardimplementierung gibt 0 zurück.  
@@ -469,14 +468,14 @@ void InitUserToolbars(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszRegEntry*  
- Der Registrierungseintrag, in denen die Bibliothek Symbolleiste benutzereinstellungen speichert.  
+*lpszRegEntry*<br/>
+[in] Der Registrierungseintrag, in denen die Bibliothek Symbolleiste benutzereinstellungen speichert.  
   
- [in] *UiUserToolbarFirst*  
- Steuerelement-ID, die die erste benutzerdefinierte Symbolleiste zugewiesen.  
+*uiUserToolbarFirst*<br/>
+[in] Steuerelement-ID, die die erste benutzerdefinierte Symbolleiste zugewiesen.  
   
- [in] *UiUserToolbarLast*  
- Steuerelement-ID der letzten eine benutzerdefinierte Symbolleiste zugewiesen.  
+*uiUserToolbarLast*<br/>
+[in] Steuerelement-ID der letzten eine benutzerdefinierte Symbolleiste zugewiesen.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Funktion, um einen Bereich von Steuerelement-IDs für die Zuweisung zu Symbolleisten zu initialisieren, der Benutzer dynamisch zu definieren. Die Parameter *UiUserToolbarFirst* und *UiUserToolbarLast* definieren Sie einen Bereich von zulässigen Symbolleistensteuerelement-IDs. Legen Sie zum Deaktivieren der Erstellung von benutzerdefinierten Symbolleisten *UiUserToolbarFirst* oder *UiUserToolbarLast* -1.  
@@ -492,8 +491,8 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pControlBar*  
- [in] *pTarget*  
+*pControlBar*<br/>
+[in] [in] *pTarget*  
  [in] *bNach*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -524,8 +523,8 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- [in] *DwBarAlignment*  
+*Zeigen Sie*<br/>
+[in] [in] *DwBarAlignment*  
  [in] *bOuterEdge*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -544,10 +543,10 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIDResource*  
- [in] *DwDefaultStyle*  
- [in] *pParentWnd*  
- [in] *"pContext"*  
+*nIDResource*<br/>
+[in] [in] *DwDefaultStyle*  
+*pParentWnd*<br/>
+[in] [in] *"pContext"*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -589,8 +588,8 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pMenuPopup*  
- Ein Zeiger auf das Popup-Menü-Objekt.  
+*pMenuPopup*<br/>
+[in] Ein Zeiger auf das Popup-Menü-Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode zum Empfangen von Benachrichtigungen von `CMFCPopupMenu` Objekte beim WM_DESTROY-Nachrichten verarbeiten.  
@@ -607,10 +606,10 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- [in] *nCode*  
- [in] *pExtra*  
- [in] *pHandlerInfo*  
+*nID*<br/>
+[in] [in] *nCode*  
+*pExtra*<br/>
+[in] [in] *pHandlerInfo*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -627,14 +626,14 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Zeiger auf den Gerätekontext.  
+*pDC*<br/>
+[in] Zeiger auf den Gerätekontext.  
   
- [in] *pMenuButton*  
- Zeiger auf die Menüschaltfläche.  
+*pMenuButton*<br/>
+[in] Zeiger auf die Menüschaltfläche.  
   
- [in] *RectImage*  
- Das Bild, der dem Menüelement zugeordnet wird.  
+*rectImage*<br/>
+[in] Das Bild, der dem Menüelement zugeordnet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Standardimplementierung führt keine Aktion aus und gibt 0 zurück.  
@@ -653,14 +652,14 @@ virtual void OnDrawMenuLogo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Zeiger auf den Gerätekontext.  
+*pDC*<br/>
+[in] Zeiger auf den Gerätekontext.  
   
- [in] *pMenu*  
- Zeiger auf das Popup-Menü-Objekt.  
+*pMenu*<br/>
+[in] Zeiger auf das Popup-Menü-Objekt.  
   
- [in] *RectLogo*  
- Zeiger auf das Logo angezeigt.  
+*rectLogo*<br/>
+[in] Zeiger auf das Logo angezeigt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, um ein Logo im Zusammenhang mit der Menüleiste, die im Besitz von Popupmenü Anzeigen der `COleIPFrameWndEx`-abgeleitetes Objekt. Bei der Standardimplementierung wird keine Aktion ausgeführt.  
@@ -711,8 +710,8 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bPreview*  
- [in] *pState*  
+*bPreview*<br/>
+[in] [in] *pState*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -726,8 +725,8 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pMenuPane*  
- [in] *UiToolbarID*  
+*pMenuPane*<br/>
+[in] [in] *UiToolbarID*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -755,8 +754,8 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pMenuPopup*  
- Zeiger auf das Popupmenü angezeigt werden soll.  
+*pMenuPopup*<br/>
+[in] Zeiger auf das Popupmenü angezeigt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Standardimplementierung führt keine Aktion aus und gibt einen Wert ungleich NULL zurück. Die Implementierung sollte "false" zurückgeben, wenn das Popup-Menü nicht angezeigt werden kann.  
@@ -774,11 +773,11 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pMenuPopup*  
- Ein Zeiger auf das Popup-Menü, das der Benutzer ausgewählt.  
+*pMenuPopup*<br/>
+[in] Ein Zeiger auf das Popup-Menü, das der Benutzer ausgewählt.  
   
- [in] *pBar*  
- Ein Zeiger auf den Bereich, der Sie im Menü hostet.  
+*pBar*<br/>
+[in] Ein Zeiger auf den Bereich, der Sie im Menü hostet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn Sie das Framework das Popupmenü aktivieren möchten. andernfalls "false". Der Standardwert ist "true".  
@@ -804,10 +803,10 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- [in] *nSensitivity*  
- [in] *bExactBar*  
- [in] *pRTCBarType*  
+*Zeigen Sie*<br/>
+[in] [in] *nSensitivity*  
+*bExactBar*<br/>
+[in] [in] *pRTCBarType*  
  [in] *DwAlignment*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -853,10 +852,10 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pControlBar*  
- [in] *bDestroy*  
- [in] *bAdjustLayout*  
- [in] *bAutoHide*  
+*pControlBar*<br/>
+[in] [in] *bDestroy*  
+*bAdjustLayout*<br/>
+[in] [in] *bAutoHide*  
  [in] *pBarReplacement*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -869,8 +868,8 @@ void SetDockState(const CDockState& state);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Zustand*  
- Gibt den andockzustand an.  
+*state*<br/>
+[in] Gibt den andockzustand an.  
   
 ### <a name="remarks"></a>Hinweise  
  Mit dieser Funktion können Sie eine neue Andockstatus für Bereiche angeben, die zu gehören die `COleIPFrameWndEx` Objekt.  
@@ -886,14 +885,14 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Menü*  
- Ein Verweis auf eine [CMenu](../../mfc/reference/cmenu-class.md) Objekt geändert werden.  
+*Menü "*<br/>
+[in] Ein Verweis auf eine [CMenu](../../mfc/reference/cmenu-class.md) Objekt geändert werden.  
   
- [in] *UiViewUserToolbarCmdFirst*  
- Gibt den ersten benutzerdefinierten-Befehl.  
+*uiViewUserToolbarCmdFirst*<br/>
+[in] Gibt den ersten benutzerdefinierten-Befehl.  
   
- [in] *UiViewUserToolbarCmdLast*  
- Gibt an, mit dem letzten benutzerdefinierte-Befehl.  
+*uiViewUserToolbarCmdLast*<br/>
+[in] Gibt an, mit dem letzten benutzerdefinierte-Befehl.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -909,10 +908,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- [in] *bShow*  
- [in] *bDelay*  
- [in] *bActivate*  
+*pBar*<br/>
+[in] [in] *bShow*  
+*bDelay*<br/>
+[in] [in] *bActivate*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -929,8 +928,8 @@ virtual void WinHelp(
  [in] dwData  
  Gibt an, Daten nach Bedarf für den Typ der Hilfe, die anhand des *nCmd*.  
   
- [in] *nCmd*  
- Gibt den Typ der angeforderten Hilfe an. Eine Liste der möglichen Werte und deren Auswirkungen auf die *DwData* Parameter finden Sie unter den [WinHelp-Funktion](http://msdn.microsoft.com/library/windows/desktop/bb762267) im Windows SDK.  
+*nCmd*<br/>
+[in] Gibt den Typ der angeforderten Hilfe an. Eine Liste der möglichen Werte und deren Auswirkungen auf die *DwData* Parameter finden Sie unter den [WinHelp-Funktion](/windows/desktop/api/winuser/nf-winuser-winhelpa) im Windows SDK.  
   
 ### <a name="remarks"></a>Hinweise  
   

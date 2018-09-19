@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C2768 | Microsoft Docs
+title: Compilerfehler C2768 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ee0fd3fa213639e70199cfe5653ee2034bc39b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c76173f99dbc2fb415b60212109242845501694
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233382"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109105"
 ---
-# <a name="compiler-error-c2768"></a>Compilerfehler Fehler C2768
-'Funktion': Unzulässige Verwendung der expliziten Vorlagenargumente  
-  
- Der Compiler konnte nicht ermitteln, wenn eine Funktionsdefinition eine explizite Spezialisierung einer Funktionsvorlage sein oder der Definition der Funktion für eine neue Funktion werden soll.  
-  
- Dieser Fehler wurde in Visual Studio .NET 2003 sind als Teil der Compiler Conformance Verbesserungen eingeführt.  
-  
- Im folgenden Beispiel wird C2768 generiert:  
-  
-```  
-// C2768.cpp  
-template<typename T>  
-void f(T) {}  
-  
-void f<int>(int) {}   // C2768  
-  
-// an explicit specialization  
-template<>  
-void f<int>(int) {}   
-  
-// global nontemplate function overload  
-void f(int) {}  
+# <a name="compiler-error-c2768"></a>Compilerfehler C2768
+
+'Funktion': Unzulässige Verwendung von expliziten Vorlagenargumenten
+
+Der Compiler konnte nicht bestimmen, ob eine Funktionsdefinition eigentlich eine explizite Spezialisierung einer Funktionsvorlage sein, oder wenn die Funktionsdefinition wurde für eine neue Funktion sein.
+
+Dieser Fehler wurde in Visual Studio .NET 2003 sind als Teil der Übereinstimmung mit Standards Verbesserungen des Compilers eingeführt.
+
+Im folgende Beispiel wird die C2768 generiert:
+
+```
+// C2768.cpp
+template<typename T>
+void f(T) {}
+
+void f<int>(int) {}   // C2768
+
+// an explicit specialization
+template<>
+void f<int>(int) {}
+
+// global nontemplate function overload
+void f(int) {}
 ```

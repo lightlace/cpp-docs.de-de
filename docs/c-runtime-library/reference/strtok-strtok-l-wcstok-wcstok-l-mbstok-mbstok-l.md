@@ -55,19 +55,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45e2155f830a302f316aa96ce41b65a71709bc0d
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5b714d8b78ecfc28db9f6e69308777ed53be7987
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451796"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210872"
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
 Sucht das nächste Token in einer Zeichenfolge unter Verwendung des angegebenen Gebietsschemas oder eines Gebietsschemas, das übergeben wird. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l](strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md).
 
 > [!IMPORTANT]
-> **_mbstok** und **_mbstok_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbstok** und **_mbstok_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -104,16 +104,16 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf das nächste Token in gefunden *StrToken*. Diese zurückgeben **NULL** Wenn keine weiteren Token gefunden werden. Jeder Aufruf ändert *StrToken* durch das Ersetzen von Trennzeichen, das nach dem zurückgegebenen Token auftritt, ein Null-Zeichen.
+Gibt einen Zeiger auf das nächste Token finden Sie im *StrToken*. Geben sie zurück **NULL** Wenn keine weiteren Token gefunden wurden. Jeder Aufruf ändert *StrToken* durch Ersetzen von Trennzeichen, das nach dem zurückgegebenen Token auftritt, ein Null-Zeichen.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Strtok** -Funktion sucht das nächste Token in *StrToken*. Der Satz von Zeichen im *StrDelimit* gibt mögliche Trennzeichen des Tokens in gefunden werden *StrToken* für den aktuellen Aufruf. **Wcstok** und **_mbstok** sind Breitzeichen- und multibytezeichenversionen von **Strtok**. Die Argumente und der Rückgabewert von **Wcstok** sind Breitzeichen-Zeichenfolgen, die von **_mbstok** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
+Die **Strtok** -Funktion sucht das nächste Token in *StrToken*. Der Satz von Zeichen im *StrDelimit* gibt mögliche Trennzeichen des Tokens in zu suchenden *StrToken* für den aktuellen Aufruf. **Wcstok** und **_mbstok** sind Breitzeichen- und multibytezeichenversionen von Versionen von **Strtok**. Die Argumente und der Rückgabewert von **Wcstok** sind Breitzeichen-Zeichenfolgen, die von **_mbstok** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
 
 > [!IMPORTANT]
-> Diese Funktionen stellen eine mögliche Bedrohung aufgrund eines Pufferüberlaufproblems dar. Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Diese Funktionen stellen eine mögliche Bedrohung aufgrund eines Pufferüberlaufproblems dar. Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-Beim ersten Aufruf von **Strtok**, die Funktion vorangestellte Trennzeichen überspringt und gibt einen Zeiger auf das erste Token in *StrToken*, beendet das Token mit einem Null-Zeichen. Weitere Token können der Rest des geholt werden *StrToken* durch eine Reihe von Aufrufen an **Strtok**. Jeder Aufruf von **Strtok** ändert *StrToken* durch ein Null-Zeichen nach dem Einfügen der **token** zurückgegebenen. Lesen Sie das nächste Token von *StrToken*, rufen Sie **Strtok** mit einer **NULL** Wert für die *StrToken* Argument. Die **NULL** *StrToken* Argument bewirkt, dass **Strtok** , suchen Sie nach dem nächsten Token im geänderten *StrToken*. Die *StrDelimit* Argument kann jeden beliebigen Wert annehmen zwischen zwei aufrufen zur nächsten, damit der Satz von Trennzeichen variieren kann.
+Beim ersten Aufruf von **Strtok**, die Funktion vorangestellte Trennzeichen überspringt und gibt einen Zeiger auf das erste Token in *StrToken*, beendet das Token mit einem Null-Zeichen. Weitere Token können in den restlichen geholt werden *StrToken* durch eine Reihe von Aufrufen an **Strtok**. Jeder Aufruf von **Strtok** ändert *StrToken* durch ein Null-Zeichen nach dem Einfügen der **token** von diesem Aufruf zurückgegeben. Lesen Sie das nächste Token von *StrToken*, rufen Sie **Strtok** mit einer **NULL** Wert für die *StrToken* Argument. Die **NULL** *StrToken* Argument bewirkt, dass **Strtok** , suchen Sie nach dem nächsten Token im geänderten *StrToken*. Die *StrDelimit* -Argument kann einen beliebigen Wert aus einem Aufruf an den nächsten annehmen, so, dass der Satz von Trennzeichen variieren kann.
 
 Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
@@ -129,7 +129,7 @@ Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**strtok**|\<string.h>|
 |**wcstok**|\<string.h> oder \<wchar.h>|

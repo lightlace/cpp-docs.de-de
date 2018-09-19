@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4131 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4131 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6563d5faf3a9f050deb3cb7831c1a908739c8532
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43de917b2a6aff38602a6118e599c0d9df262a70
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291989"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033185"
 ---
 # <a name="compiler-warning-level-4-c4131"></a>Compilerwarnung (Stufe 4) C4131
-"function": Verwendet Deklarator für altes Format  
-  
- Die angegebene Funktionsdeklaration weist keine Prototypform auf.  
-  
- Funktionsdeklarationen im alten Format sollten in die Prototypform konvertiert werden.  
-  
- Im folgenden Beispiel wird eine Funktionsdeklaration im alten Stil veranschaulicht:  
-  
-```  
-// C4131.c  
-// compile with: /W4 /c  
-void addrec( name, id ) // C4131 expected  
-char *name;  
-int id;  
-{ }  
-```  
-  
- Im folgenden Beispiel wird eine Prototypform veranschaulicht:  
-  
-```  
-void addrec( char *name, int id )  
-{ }  
+
+"function": Verwendet Deklarator für altes Format
+
+Die angegebene Funktionsdeklaration weist keine Prototypform auf.
+
+Funktionsdeklarationen im alten Format sollten in die Prototypform konvertiert werden.
+
+Im folgenden Beispiel wird eine Funktionsdeklaration im alten Stil veranschaulicht:
+
+```
+// C4131.c
+// compile with: /W4 /c
+void addrec( name, id ) // C4131 expected
+char *name;
+int id;
+{ }
+```
+
+Im folgenden Beispiel wird eine Prototypform veranschaulicht:
+
+```
+void addrec( char *name, int id )
+{ }
 ```

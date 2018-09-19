@@ -1,5 +1,5 @@
 ---
-title: 'Synclockt:: IsLocked-Methode | Microsoft Docs'
+title: 'Synclockt:: IsLocked-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 067b3763e10b2bbb310b213f7d748e953ba2a902
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ca4391539e4f6987431e8b9b036053db02218007
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888474"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593054"
 ---
 # <a name="synclocktislocked-method"></a>SyncLockT::IsLocked-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-bool IsLocked() const;  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- **"true"** ist das SyncLockT-Objekt gesperrt ist, andernfalls **"false"**.  
-  
-## <a name="remarks"></a>Hinweise  
- Gibt an, ob das aktuelle SyncLockT-Objekt eine Ressource besitzt. SyncLockT-Objekt ist *gesperrt*.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [SyncLockT-Klasse](../windows/synclockt-class.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+bool IsLocked() const;
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+**"true"** Wenn die **SyncLockT** Objekt gesperrt ist; andernfalls **"false"**.
+
+## <a name="remarks"></a>Hinweise
+
+Gibt an, ob die aktuelle **SyncLockT** Objekt besitzt eine Ressource, d. h. die **SyncLockT** Objekt *gesperrt*.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[SyncLockT-Klasse](../windows/synclockt-class.md)

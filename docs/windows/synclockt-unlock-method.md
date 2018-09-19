@@ -1,5 +1,5 @@
 ---
-title: Synclockt-Methode | Microsoft Docs
+title: 'Synclockt:: Unlock-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4073d6e2b8924ae08e6af10a8e028f273f1fdfd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f050916f9957531e9275cf76fd3efb6f612cc988
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892305"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598851"
 ---
 # <a name="synclocktunlock-method"></a>SyncLockT::Unlock-Method
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void Unlock();  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Kontrolle über die Ressource frei, die für das aktuelle SyncLockT-Objekt frei, sofern vorhanden.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [SyncLockT-Klasse](../windows/synclockt-class.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+void Unlock();
+```
+
+## <a name="remarks"></a>Hinweise
+
+Gibt die Steuerung der Ressource frei, die von der aktuellen frei **SyncLockT** Objekt, sofern vorhanden.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[SyncLockT-Klasse](../windows/synclockt-class.md)

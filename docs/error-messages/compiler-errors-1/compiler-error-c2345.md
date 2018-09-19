@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2345 | Microsoft Docs
+title: Compilerfehler C2345 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 528afe4ba6c9dd0b22b4664de706ba4370497c88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb20a744c2a8ef67901da10c4933bc38402c710f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196126"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048122"
 ---
 # <a name="compiler-error-c2345"></a>Compilerfehler C2345
-align(wert: ungültiger Ausrichtungswert  
-  
- Sie haben einen Wert an das Schlüsselwort [align](../../cpp/align-cpp.md) übergeben, er außerhalb des zulässigen Bereichs liegt.  
-  
- Durch den folgenden Code wird der Fehler C2345 ausgelöst:  
-  
-```  
-// C2345.cpp  
-// compile with: /c  
-__declspec(align(0)) int a;   // C2345  
-__declspec(align(1)) int a;   // OK  
+
+align(wert: ungültiger Ausrichtungswert
+
+Sie haben einen Wert an das Schlüsselwort [align](../../cpp/align-cpp.md) übergeben, er außerhalb des zulässigen Bereichs liegt.
+
+Durch den folgenden Code wird der Fehler C2345 ausgelöst:
+
+```
+// C2345.cpp
+// compile with: /c
+__declspec(align(0)) int a;   // C2345
+__declspec(align(1)) int a;   // OK
 ```

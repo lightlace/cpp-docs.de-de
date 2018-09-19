@@ -104,12 +104,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ab94a9aadc40b4313995a71171d6712657e7ff0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6bc4fa8da5d9fa2d15febc3c7b016622e614129a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964951"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100962"
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf-Klasse
 
@@ -124,9 +124,11 @@ class basic_streambuf;
 
 ### <a name="parameters"></a>Parameter
 
-*Elem* ein [Char_type](#char_type).
+*Elem*<br/>
+Ein [char_type](#char_type).
 
-*TR* das Zeichen [Traits_type](#traits_type).
+*Tr*<br/>
+Der [traits_type](#traits_type) der Zeichen.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -250,7 +252,8 @@ basic_streambuf(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* ein Lvalue-Verweis auf die `basic_streambuf` -Objekt, das verwendet wird, zum Festlegen der Werte für diese `basic_streambuf` Objekt.
+*right*<br/>
+Ein lvalue-Verweis auf das `basic_streambuf`-Objekt, das dazu verwendet wird, Werte für dieses `basic_streambuf`-Objekt festzulegen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -312,7 +315,8 @@ void gbump(int count);
 
 ### <a name="parameters"></a>Parameter
 
-*Anzahl* der Betrag, um den Zeiger nach vorne verschoben.
+*count*<br/>
+Der Betrag, um den der Zeiger nach vorne verschoben werden soll.
 
 ## <a name="getloc"></a> basic_streambuf::getloc
 
@@ -370,7 +374,8 @@ virtual void imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parameter
 
-*_Loc* einen Verweis auf ein Gebietsschema.
+*_Loc*<br/>
+Ein Verweis auf ein Gebietsschema.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -436,7 +441,8 @@ basic_streambuf& operator=(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* ein Lvalue-Verweis auf die `basic_streambuf` -Objekt, das verwendet wird, um dieses Objekt Werte zuzuweisen.
+*right*<br/>
+Ein lvalue-Verweis auf das `basic_streambuf`-Objekt, das dazu verwendet wird, diesem Objekt Werte zuzuweisen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -452,7 +458,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parameter
 
-*_Meta* das Zeichen, das in den Puffer eingefügt oder **Traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
+*_Meta*<br/>
+Das Zeichen, das in den Puffer eingefügt werden soll, oder **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -486,7 +493,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parameter
 
-*_Meta* das Zeichen, das in den Puffer eingefügt oder **Traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
+*_Meta*<br/>
+Das Zeichen, das in den Puffer eingefügt werden soll, oder **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -524,7 +532,8 @@ void pbump(int count);
 
 ### <a name="parameters"></a>Parameter
 
-*Anzahl* vorwärts positionieren Sie die Anzahl der Zeichen, um den Schreibvorgang verschoben.
+*count*<br/>
+Die Anzahl der Zeichen, um die die Schreibposition nach vorne verschoben werden soll.
 
 ## <a name="pos_type"></a> basic_streambuf::pos_type
 
@@ -556,7 +565,8 @@ locale pubimbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parameter
 
-*_Loc* einen Verweis auf ein Gebietsschema.
+*_Loc*<br/>
+Ein Verweis auf ein Gebietsschema.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -582,11 +592,14 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="parameters"></a>Parameter
 
-*_Off* die Position, die für die Suche, relativ zum *_Way*.
+*_Off*<br/>
+Die Position, die für die Suche, relativ zum *_Way*.
 
-*_Way* den Startpunkt für offsetvorgänge. Mögliche Werte sind unter [seekdir](../standard-library/ios-base-class.md#seekdir) aufgeführt.
+*_Way*<br/>
+Gibt den Startpunkt für Offsetvorgänge an. Mögliche Werte sind unter [seekdir](../standard-library/ios-base-class.md#seekdir) aufgeführt.
 
-*_Which* gibt den Modus für die Position des Zeigers. Standardmäßig können Lese- und Schreibpositionen geändert werden.
+*_Which*<br/>
+Gibt den Modus für die Zeigerposition an. Standardmäßig können Lese- und Schreibpositionen geändert werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -606,9 +619,11 @@ pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios
 
 ### <a name="parameters"></a>Parameter
 
-*_Sp* die Position, die für die Suche.
+*_Sp*<br/>
+Die Position, nach der gesucht werden soll.
 
-*_Which* gibt den Modus für die Position des Zeigers. Standardmäßig können Lese- und Schreibpositionen geändert werden.
+*_Which*<br/>
+Gibt den Modus für die Zeigerposition an. Standardmäßig können Lese- und Schreibpositionen geändert werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -630,9 +645,11 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
 
 ### <a name="parameters"></a>Parameter
 
-*_Buffer* ein Zeiger auf `char_type` für diese Instanziierung.
+*_Buffer*<br/>
+Ein Zeiger auf `char_type` für diese Instanziierung.
 
-*Anzahl* die Größe des Puffers.
+*count*<br/>
+Die Größe des Puffers.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -664,7 +681,7 @@ Das aktuelle Element.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn eine Leseposition verfügbar ist, gibt die Memberfunktion **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **\***[gptr](#gptr)) zurück und erhöht den nächsten Zeiger für den Eingabespeicher. Andernfalls wird [uflow](#uflow) zurückgegeben.
+Wenn eine Leseposition verfügbar ist, gibt die Memberfunktion **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( <strong>\*</strong>[gptr](#gptr)) zurück und erhöht den nächsten Zeiger für den Eingabespeicher. Andernfalls wird [uflow](#uflow) zurückgegeben.
 
 ### <a name="example"></a>Beispiel
 
@@ -707,11 +724,14 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Parameter
 
-*_Off* die Position, die für die Suche, relativ zum *_Way*.
+*_Off*<br/>
+Die Position, die für die Suche, relativ zum *_Way*.
 
-*_Way* den Startpunkt für offsetvorgänge. Mögliche Werte sind unter [seekdir](../standard-library/ios-base-class.md#seekdir) aufgeführt.
+*_Way*<br/>
+Gibt den Startpunkt für Offsetvorgänge an. Mögliche Werte sind unter [seekdir](../standard-library/ios-base-class.md#seekdir) aufgeführt.
 
-*_Which* gibt den Modus für die Position des Zeigers. Standardmäßig können Lese- und Schreibpositionen geändert werden.
+*_Which*<br/>
+Gibt den Modus für die Zeigerposition an. Standardmäßig können Lese- und Schreibpositionen geändert werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -741,9 +761,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>Parameter
 
-*_Sp* die Position, die für die Suche.
+*_Sp*<br/>
+Die Position, nach der gesucht werden soll.
 
-*_Which* gibt den Modus für die Position des Zeigers. Standardmäßig können Lese- und Schreibpositionen geändert werden.
+*_Which*<br/>
+Gibt den Modus für die Zeigerposition an. Standardmäßig können Lese- und Schreibpositionen geändert werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -769,9 +791,11 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>Parameter
 
-*_Buffer* Zeiger auf einen Puffer.
+*_Buffer*<br/>
+Ein Zeiger auf einen Puffer.
 
-*Anzahl* Größe des Puffers.
+*count*<br/>
+Größe des Puffers.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -793,11 +817,14 @@ void setg(char_type* _Gbeg,
 
 ### <a name="parameters"></a>Parameter
 
-*_Gbeg* ein Zeiger auf den Anfang des Puffers.
+*_Gbeg*<br/>
+Ein Zeiger auf den Anfang des Puffers.
 
-*_Gnext* ein Zeiger auf eine Position in der Mitte des Puffers.
+*_Gnext*<br/>
+Ein Zeiger auf eine Position in der Mitte des Puffers.
 
-*_Gend* ein Zeiger auf das Ende des Puffers.
+*_Gend*<br/>
+Ein Zeiger auf das Ende des Puffers.
 
 ## <a name="setp"></a> basic_streambuf::setp
 
@@ -809,9 +836,11 @@ void setp(char_type* _Pbeg, char_type* _Pend);
 
 ### <a name="parameters"></a>Parameter
 
-*_Pbeg* ein Zeiger auf den Anfang des Puffers.
+*_Pbeg*<br/>
+Ein Zeiger auf den Anfang des Puffers.
 
-*_Pend* ein Zeiger auf das Ende des Puffers.
+*_Pend*<br/>
+Ein Zeiger auf das Ende des Puffers.
 
 ## <a name="sgetc"></a> basic_streambuf::sgetc
 
@@ -863,9 +892,11 @@ streamsize sgetn(
 
 ### <a name="parameters"></a>Parameter
 
-*PTR* der Puffer, der die extrahierten Zeichen enthalten.
+*ptr*<br/>
+Der Puffer, der die extrahierten Zeichen enthalten soll.
 
-*Anzahl* die Anzahl der zu lesenden Elemente.
+*count*<br/>
+Die Anzahl der zu lesenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -967,7 +998,8 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="parameters"></a>Parameter
 
-*_Ch* das Zeichen.
+*_Ch*<br/>
+Das Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1014,7 +1046,8 @@ int_type sputc(char_type _Ch);
 
 ### <a name="parameters"></a>Parameter
 
-*_Ch* das Zeichen.
+*_Ch*<br/>
+Das Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1056,9 +1089,11 @@ streamsize sputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Parameter
 
-*PTR* der Zeichenfolge.
+*ptr*<br/>
+Die Zeichenfolge.
 
-*Anzahl* die Anzahl von Zeichen.
+*count*<br/>
+Die Anzahl der Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1281,9 +1316,11 @@ virtual streamsize xsgetn(
 
 ### <a name="parameters"></a>Parameter
 
-*PTR* der Puffer, der die extrahierten Zeichen enthalten.
+*ptr*<br/>
+Der Puffer, der die extrahierten Zeichen enthalten soll.
 
-*Anzahl* die Anzahl der zu extrahierenden Elemente.
+*count*<br/>
+Die Anzahl der zu extrahierenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1303,9 +1340,11 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Parameter
 
-*PTR* Zeiger auf Elemente einfügen.
+*ptr*<br/>
+Zeiger auf die einzufügenden Elemente.
 
-*Anzahl* Anzahl der einzufügenden Elemente.
+*count*<br/>
+Die Anzahl einzufügender Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
 

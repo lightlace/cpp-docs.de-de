@@ -142,15 +142,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e25fda2f6d30ea13882ae3b40875fb3d4ec61c7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a7a91920906d5693eafbbf79a4bdd00814c79108
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854121"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703715"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd-Klasse
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
  Implementiert ein Minirahmenfenster, das einen Bereich enthält. Der Bereich füllt den Clientbereich des Fensters aus.  
   
@@ -210,7 +210,7 @@ class CPaneFrameWnd : public CWnd
 |[CPaneFrameWnd::OnShowPane](#onshowpane)|Wird vom Framework aufgerufen, wenn ein Bereich im Minirahmenfenster angezeigt oder ausgeblendet wird.|  
 |[CPaneFrameWnd::PaneFromPoint](#panefrompoint)|Gibt einen Bereich zurück, wenn er einen vom Benutzer angegebenen Punkt innerhalb einer Minirahmenfensters enthält.|  
 |[CPaneFrameWnd::Pin](#pin)||  
-|`CPaneFrameWnd::PreTranslateMessage`|Wird von der [CWinApp](../../mfc/reference/cwinapp-class.md) -Klasse verwendet, um Fenstermeldungen zu übersetzen, bevor diese an die Windows-Funktionen [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) gesendet werden.|  
+|`CPaneFrameWnd::PreTranslateMessage`|Von Klasse verwendeten [CWinApp](../../mfc/reference/cwinapp-class.md) um fenstermeldungen zu übersetzen, bevor sie um weitergeleitet werden die [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows-Funktionen.|  
 |[CPaneFrameWnd::RedrawAll](#redrawall)|Zeichnet alle Minirahmenfenster neu.|  
 |[CPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|Wird vom Framework aufgerufen, um ungültige Bereiche zu entfernen.|  
 |[CPaneFrameWnd::RemovePane](#removepane)|Entfernt einen Bereich aus dem Minirahmenfenster.|  
@@ -271,8 +271,8 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Der Bereich hinzufügen können.  
+*Aufnehmen*<br/>
+[in] Der Bereich hinzufügen können.  
   
 ##  <a name="addremovepanefromgloballist"></a>  CPaneFrameWnd::AddRemovePaneFromGlobalList  
  Fügt einen Bereich zur globalen Liste hinzu oder entfernt ihn daraus.  
@@ -284,11 +284,11 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Der Bereich zum Hinzufügen oder entfernen.  
+*Aufnehmen*<br/>
+[in] Der Bereich zum Hinzufügen oder entfernen.  
   
- [in] *hinzufügen*  
- Wenn ungleich NULL ist, fügen Sie im Bereich hinzu. Wenn der Wert 0, entfernen Sie im Bereich.  
+*Hinzufügen*<br/>
+[in] Wenn ungleich NULL ist, fügen Sie im Bereich hinzu. Wenn der Wert 0, entfernen Sie im Bereich.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn die Methode erfolgreich war; andernfalls 0.  
@@ -317,8 +317,8 @@ virtual void CalcBorderSize(CRect& rectBorderSize) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *RectBorderSize*  
- Enthält die Größe in Pixel des Rahmens das Minirahmenfenster an.  
+*rectBorderSize*<br/>
+[out] Enthält die Größe in Pixel des Rahmens das Minirahmenfenster an.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird vom Framework zum Berechnen der Größe des Rahmens eines Fensters Benutzer aufgerufen. Die zurückgegebene Größe hängt davon ab, ob ein Minirahmenfenster eine Symbolleiste enthält oder eine [CDockablePane](../../mfc/reference/cdockablepane-class.md).  
@@ -336,20 +336,20 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWndToDock*  
- Ein Zeiger auf das Fenster angedockt werden soll.  
+*pWndToDock*<br/>
+[in] Ein Zeiger auf das Fenster angedockt werden soll.  
   
- [in] *PtMouse*  
- Die Position des Mauszeigers.  
+*ptMouse*<br/>
+[in] Die Position des Mauszeigers.  
   
- [out] *RectResult*  
- Das berechnete Rechteck.  
+*rectResult*<br/>
+[out] Das berechnete Rechteck.  
   
- [out] *bDrawTab*  
- Wenn "true", zeichnen Sie eine Registerkarte. Zeichnen Sie eine Registerkarte nicht, wenn "FALSE".  
+*bDrawTab*<br/>
+[out] Wenn "true", zeichnen Sie eine Registerkarte. Zeichnen Sie eine Registerkarte nicht, wenn "FALSE".  
   
- [out] *PpTargetBar*  
- Ein Zeiger auf den Bereich "Ziel".  
+*ppTargetBar*<br/>
+[out] Ein Zeiger auf den Bereich "Ziel".  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode berechnet das Rechteck, das ein Fenster einnehmen würde, wenn ein Benutzer im Fenster auf den vom angegebenen Punkt gezogen *PtMouse* und es gibt es angedockt.  
@@ -372,8 +372,8 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDockingBar*  
- Ein Bereich.  
+*pDockingBar*<br/>
+[in] Ein Bereich.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn die Minirahmenfensters an angedockt werden kann *pDockingBar*, andernfalls 0.  
@@ -407,14 +407,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszWindowName*  
- Gibt den Text, die auf das Minirahmenfenster angezeigt.  
+*lpszWindowName*<br/>
+[in] Gibt den Text, die auf das Minirahmenfenster angezeigt.  
   
- [in] *DwStyle*  
- Gibt den Fensterstil an. Weitere Informationen finden Sie unter [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] Gibt den Fensterstil an. Weitere Informationen finden Sie unter [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *Rect*  
- Gibt an, die anfängliche Größe und Position des Fensters Benutzer.  
+*Rect*<br/>
+[in] Gibt an, die anfängliche Größe und Position des Fensters Benutzer.  
   
  [in] [out] *pParentWnd*  
  Gibt den übergeordneten Rahmen das Minirahmenfenster an. Dieser Wert darf nicht NULL sein.  
@@ -442,17 +442,17 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwStyleEx*  
- Gibt den erweiterten Fensterstil. Weitere Informationen finden Sie unter [erweiterte Fensterstile](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
+*dwStyleEx*<br/>
+[in] Gibt den erweiterten Fensterstil. Weitere Informationen finden Sie unter [erweiterte Fensterstile](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
- [in] *LpszWindowName*  
- Gibt den Text, die auf das Minirahmenfenster angezeigt.  
+*lpszWindowName*<br/>
+[in] Gibt den Text, die auf das Minirahmenfenster angezeigt.  
   
- [in] *DwStyle*  
- Gibt den Fensterstil an. Weitere Informationen finden Sie unter [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] Gibt den Fensterstil an. Weitere Informationen finden Sie unter [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *Rect*  
- Gibt an, die anfängliche Größe und Position des Fensters Benutzer.  
+*Rect*<br/>
+[in] Gibt an, die anfängliche Größe und Position des Fensters Benutzer.  
   
  [in] [out] *pParentWnd*  
  Gibt den übergeordneten Rahmen das Minirahmenfenster an. Dieser Wert darf nicht NULL sein.  
@@ -474,8 +474,8 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *bWasDocked*  
- True, wenn der Bereich bereits angedockt wurde. andernfalls "false".  
+*bWasDocked*<br/>
+[out] True, wenn der Bereich bereits angedockt wurde. andernfalls "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wenn der Vorgang erfolgreich war, die `CDockablePane` , dass der Bereich angedockt ist, andernfalls NULL wurde.  
@@ -488,8 +488,8 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- Stellt die Steuerelement-ID des Bereichs zu suchen.  
+*nID*<br/>
+[in] Stellt die Steuerelement-ID des Bereichs zu suchen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Im Bereich mit der angegebenen Steuerelement-ID; Andernfalls ist NULL, wenn kein Bereich über die angegebene Steuerelement-ID verfügt  
@@ -506,17 +506,17 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pt*  
- Der Punkt in Bildschirmkoordinaten.  
+*pt*<br/>
+[in] Der Punkt in Bildschirmkoordinaten.  
   
- [in] *nSensitivity*  
- Erhöhen Sie den Suchbereich, der das Minirahmenfenster, indem Sie diese Größe. Ein Minirahmenfenster erfüllt die Suchkriterien, fällt die der angegebene Punkt in der höheren Bereich.  
+*nSensitivity*<br/>
+[in] Erhöhen Sie den Suchbereich, der das Minirahmenfenster, indem Sie diese Größe. Ein Minirahmenfenster erfüllt die Suchkriterien, fällt die der angegebene Punkt in der höheren Bereich.  
   
- [in] *pFrameToExclude*  
- Gibt an, ein Minirahmenfenster, der Suche ausgeschlossen werden sollen.  
+*pFrameToExclude*<br/>
+[in] Gibt an, ein Minirahmenfenster, der Suche ausgeschlossen werden sollen.  
   
- [in] *bFloatMultiOnly*  
- Bei "true", sucht nur die CBRS_FLOAT_MULTI Formatvorlage Minirahmenfenster. False gibt an, suchen Sie alle Minirahmenfenster.  
+*bFloatMultiOnly*<br/>
+[in] Bei "true", sucht nur die CBRS_FLOAT_MULTI Formatvorlage Minirahmenfenster. False gibt an, suchen Sie alle Minirahmenfenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf das Minirahmenfenster an, die enthält *pt*; andernfalls NULL.  
@@ -532,7 +532,7 @@ virtual int GetCaptionHeight() const;
  Die Höhe in Pixel, der das Minirahmenfenster.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode, um die Höhe eines Minirahmenfensters bestimmt. Standardmäßig ist die Höhe auf SM_CYSMCAPTION festgelegt. Weitere Informationen finden Sie unter [GetSystemMetrics Funktion](http://msdn.microsoft.com/library/windows/desktop/ms724385).  
+ Rufen Sie diese Methode, um die Höhe eines Minirahmenfensters bestimmt. Standardmäßig ist die Höhe auf SM_CYSMCAPTION festgelegt. Weitere Informationen finden Sie unter [GetSystemMetrics Funktion](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics).  
   
 ##  <a name="getcaptionrect"></a>  CPaneFrameWnd::GetCaptionRect  
  Berechnet das umschließende Rechteck der Beschriftung eines Minirahmenfensters.  
@@ -542,8 +542,8 @@ virtual void GetCaptionRect(CRect& rectCaption) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *RectCaption*  
- Enthält die Größe und Position von der Beschriftung des Minirahmenfensters in Bildschirmkoordinaten.  
+*rectCaption*<br/>
+[out] Enthält die Größe und Position von der Beschriftung des Minirahmenfensters in Bildschirmkoordinaten.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird vom Framework berechnet das umschließende Rechteck der Beschriftung einer Minirahmenfensters aufgerufen.  
@@ -688,11 +688,11 @@ virtual LRESULT HitTest(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Der Punkt, um zu testen.  
+*Zeigen Sie*<br/>
+[in] Der Punkt, um zu testen.  
   
- [in] *bDetectCaption*  
- True gibt an, überprüfen Sie den Punkt für die Beschriftung an. False gibt an, ignorieren Sie die Beschriftung an.  
+*bDetectCaption*<br/>
+[in] True gibt an, überprüfen Sie den Punkt für die Beschriftung an. False gibt an, ignorieren Sie die Beschriftung an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Einer der folgenden Werte:  
@@ -780,11 +780,11 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- Der Profilname.  
+*lpszProfileName*<br/>
+[in] Der Profilname.  
   
- [in] *UiID*  
- Der Bereich-ID  
+*uiID*<br/>
+[in] Der Bereich-ID  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Zustand des Bereichs erfolgreich geladen wurde. andernfalls "false".  
@@ -836,8 +836,8 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Der Gerätekontext zum Zeichnen des Rahmens.  
+*pDC*<br/>
+[in] Der Gerätekontext zum Zeichnen des Rahmens.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird vom Framework zum Zeichnen der Rahmen das Minirahmenfenster aufgerufen.  
@@ -859,11 +859,11 @@ virtual void OnMovePane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- Ein Zeiger auf einen Bereich (ignoriert).  
+*pBar*<br/>
+[in] Ein Zeiger auf einen Bereich (ignoriert).  
   
- [in] *PtOffset*  
- Der Offset, um die im Bereich verschoben werden soll.  
+*ptOffset*<br/>
+[in] Der Offset, um die im Bereich verschoben werden soll.  
   
 ##  <a name="onpanerecalclayout"></a>  CPaneFrameWnd::OnPaneRecalcLayout  
  Passt das Layout eines Bereichs innerhalb eines Minirahmenfensters.  
@@ -894,11 +894,11 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- Der Bereich, die angezeigt oder ausgeblendet.  
+*pBar*<br/>
+[in] Der Bereich, die angezeigt oder ausgeblendet.  
   
- [in] *bShow*  
- True, wenn der Bereich angezeigt wird. "False", wenn der Bereich ausgeblendet ist.  
+*bShow*<br/>
+[in] True, wenn der Bereich angezeigt wird. "False", wenn der Bereich ausgeblendet ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Vom Framework aufgerufen, wenn Sie ein Bereich im Minirahmenfenster angezeigt oder ausgeblendet wird. Bei der Standardimplementierung wird keine Aktion ausgeführt.  
@@ -926,14 +926,14 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Der Punkt, die der Benutzer geklickt hat, in Bildschirmkoordinaten.  
+*Zeigen Sie*<br/>
+[in] Der Punkt, die der Benutzer geklickt hat, in Bildschirmkoordinaten.  
   
- [in] *nSensitivity*  
- Dieser Parameter wird nicht verwendet.  
+*nSensitivity*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
- [in] *bCheckVisibility*  
- "True", um anzugeben, dass nur sichtbaren Bereiche zurückgegeben werden sollen; andernfalls "false".  
+*bCheckVisibility*<br/>
+[in] "True", um anzugeben, dass nur sichtbaren Bereiche zurückgegeben werden sollen; andernfalls "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Bereich, den der Benutzer geklickt hat, oder NULL, wenn kein Bereich an diesem Speicherort vorhanden ist.  
@@ -969,14 +969,14 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Ein Zeiger auf den Bereich zu entfernen.  
+*Aufnehmen*<br/>
+[in] Ein Zeiger auf den Bereich zu entfernen.  
   
- [in] *bDestroy*  
- Gibt an, was geschieht, um das Minirahmenfenster. Wenn *bDestroy* "true", wird diese Methode zerstört das Minirahmenfenster sofort. Wenn es auf "false" ist, löscht diese Methode das Minirahmenfenster nach einer gewissen Verzögerung.  
+*bDestroy*<br/>
+[in] Gibt an, was geschieht, um das Minirahmenfenster. Wenn *bDestroy* "true", wird diese Methode zerstört das Minirahmenfenster sofort. Wenn es auf "false" ist, löscht diese Methode das Minirahmenfenster nach einer gewissen Verzögerung.  
   
- [in] *bNoDelayedDestroy*  
- Bei "true", ist die verzögerte Löschung deaktiviert. False gibt an, dass verzögerte Löschung aktiviert ist.  
+*bNoDelayedDestroy*<br/>
+[in] Bei "true", ist die verzögerte Löschung deaktiviert. False gibt an, dass verzögerte Löschung aktiviert ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework kann Minirahmenfenster sofort oder nach einer gewissen Verzögerung zerstört werden. Wenn Sie die Zerstörung von Minirahmenfenster verzögern möchten, übergeben Sie "false", in der *bNoDelayedDestroy* Parameter. Verzögerte Löschung tritt auf, wenn das Framework die AFX_WM_CHECKEMPTYMINIFRAME-Nachricht verarbeitet.  
@@ -991,11 +991,11 @@ virtual void ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBarOrg*  
- Ein Zeiger auf den ursprünglichen Bereich.  
+*pBarOrg*<br/>
+[in] Ein Zeiger auf den ursprünglichen Bereich.  
   
- [in] *pBarReplaceWith*  
- Ein Zeiger auf den Bereich, der den ursprünglichen Bereich ersetzt.  
+*pBarReplaceWith*<br/>
+[in] Ein Zeiger auf den Bereich, der den ursprünglichen Bereich ersetzt.  
   
 ##  <a name="savestate"></a>  CPaneFrameWnd::SaveState  
  Speichert den Zustand des Bereichs in der Registrierung.  
@@ -1007,11 +1007,11 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- Der Profilname.  
+*lpszProfileName*<br/>
+[in] Der Profilname.  
   
- [in] *UiID*  
- Der Bereich-ID  
+*uiID*<br/>
+[in] Der Bereich-ID  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Zustand des Bereichs erfolgreich gespeichert wurde. andernfalls "false".  
@@ -1024,8 +1024,8 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwButtons*  
- Bitweiser OR-Kombination der folgenden Werte:  
+*dwButtons*<br/>
+[in] Bitweiser OR-Kombination der folgenden Werte:  
   
 - AFX_CAPTION_BTN_CLOSE  
   
@@ -1067,8 +1067,8 @@ void SetDockingTimer(UINT nTimeOut);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *%ntimeout*  
- Der Timeoutwert in Millisekunden.  
+*%ntimeout*<br/>
+[in] Der Timeoutwert in Millisekunden.  
   
 ##  <a name="setdockstate"></a>  CPaneFrameWnd::SetDockState  
  Legt den Andockzustand fest.  
@@ -1078,8 +1078,8 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDockManager*  
- Ein Zeiger auf eine Dock-Manager.  
+*pDockManager*<br/>
+[in] Ein Zeiger auf eine Dock-Manager.  
   
 ##  <a name="sethotpoint"></a>  CPaneFrameWnd::SetHotPoint  
 
@@ -1104,8 +1104,8 @@ virtual BOOL SetPreDockState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *PreDockState*  
- Mögliche Werte:  
+*preDockState*<br/>
+[in] Mögliche Werte:  
   
 - PDS_NOTHING,  
   
@@ -1113,11 +1113,11 @@ virtual BOOL SetPreDockState(
   
 - PDS_DOCK_TO_TAB  
   
- [in] *pBarToDock*  
- Ein Zeiger auf den Bereich anzudocken.  
+*pBarToDock*<br/>
+[in] Ein Zeiger auf den Bereich anzudocken.  
   
- [in] *DockMethod*  
- Die docking-Methode. (Dieser Parameter wird ignoriert.)  
+*dockMethod*<br/>
+[in] Die docking-Methode. (Dieser Parameter wird ignoriert.)  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Minirahmenfenster abgedockt. "False", wenn es angedockt ist.  
@@ -1140,8 +1140,8 @@ BOOL StartTearOff(CMFCPopu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pMenu*  
- Ein Zeiger auf ein Menü.  
+*pMenu*<br/>
+[in] Ein Zeiger auf ein Menü.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich war. andernfalls "false".  
@@ -1168,8 +1168,8 @@ virtual void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDockingBar*  
- [in] *pTabbedBar*  
+*pDockingBar*<br/>
+[in] [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>Hinweise  
   

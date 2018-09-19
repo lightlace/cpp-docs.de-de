@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 066459593be4970fde141333a6f22f0846f8bbc4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc14f5831904e2fea9bfa7ef7607f2085d1f0e58
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412650"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061265"
 ---
 # <a name="using-tcharh-data-types-with-mbcs"></a>Verwenden von TCHAR.H-Datentypen mit _MBCS
 
@@ -35,7 +35,7 @@ Wie aus die Tabelle mit den Zuordnungen für generische Textroutinen hervorgeht 
 
 - Eine MBCS-spezifische Routine. In diesem Fall werden Zeichenfolgenargumente vom Typ __unsigned char&#42;__ erwartet. Zum Beispiel wird **_tcsrev** zu **_mbsrev** zugeordnet, was eine Zeichenfolge vom Typ __unsigned char&#42;__ erwartet und zurückgibt. Wenn Sie erneut den generischen Text vom Datentyp **_TCHAR** für Ihre Zeichenfolgentypen verwenden, kommt es möglicherweise zu einem Typenkonflikt, da **_TCHAR** dem Typ **char** zugeordnet wird.
 
- Im Folgenden werden drei Lösungen vorgestellt, um einen solchen Typenkonflikt (und die daraus resultierenden C-Compilerwarnungen oder C++-Compilerfehler) zu verhindern:
+Im Folgenden werden drei Lösungen vorgestellt, um einen solchen Typenkonflikt (und die daraus resultierenden C-Compilerwarnungen oder C++-Compilerfehler) zu verhindern:
 
 - Verwendet das Standardverhalten. TCHAR.H enthält Prototypen von generischen Textroutinen für Routinen in Laufzeitbibliotheken, wie im folgenden Beispiel gezeigt wird.
 

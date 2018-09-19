@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C2014 | Microsoft Docs
+title: Compilerfehler C2014 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 839fececb10897c799473ae328afb9f422b4c390
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a9167d71e717490b89c1861abe9a9da9e0ab6a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165960"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064848"
 ---
-# <a name="compiler-error-c2014"></a>Compilerfehler Fehler C2014
-Präprozessorbefehl muss mit dem ersten beginnen.  
-  
- Die `#` Signieren einer Präprozessordirektive muss das erste Zeichen in einer Zeile, der kein Leerzeichen ist.  
-  
- Im folgenden Beispiel wird C2014 generiert:  
-  
-```  
-// C2014.cpp  
-int k; #include <stdio.h>   // C2014  
-```  
-  
- Mögliche Lösung:  
-  
-```  
-// C2014b.cpp  
-// compile with: /c  
-int k;   
-#include <stdio.h>  
+# <a name="compiler-error-c2014"></a>Compilerfehler C2014
+
+Präprozessorbefehl muss mit dem ersten beginnen.
+
+Die `#` Anzeichen einer Präprozessordirektive muss das erste Zeichen in einer Zeile, das kein Leerzeichen ist.
+
+Im folgende Beispiel wird die C2014 generiert:
+
+```
+// C2014.cpp
+int k; #include <stdio.h>   // C2014
+```
+
+Mögliche Lösung:
+
+```
+// C2014b.cpp
+// compile with: /c
+int k;
+#include <stdio.h>
 ```

@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f96fbe8525ee4eef44da70261bd62e079aa279a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 16d22cef053dab691d74351aacf7380764861152
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960589"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314494"
 ---
 # <a name="istreambufiterator-class"></a>istreambuf_iterator-Klasse
 
@@ -49,9 +49,11 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>Parameter
 
-*CharType* der Typ, der den Zeichentyp für das istreambuf_iterator-Objekt darstellt.
+*CharType*<br/>
+Der Typ, der den Zeichentyp für das istreambuf_iterator-Objekt darstellt.
 
-*"Traits"* der Typ, der den Zeichentyp für das istreambuf_iterator-Objekt darstellt. Dieses Argument ist optional, und der Standardwert ist `char_traits`\< *CharType>.*
+*Merkmale*<br/>
+Der Typ, der den Zeichentyp für das istreambuf_iterator-Objekt darstellt. Dieses Argument ist optional, und der Standardwert ist `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Hinweise
 
@@ -150,7 +152,8 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* der Iterator für die auf Gleichheit überprüft.
+*right*<br/>
+Der Iterator für die Durchführung von Gleichheitsüberprüfungen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -214,9 +217,9 @@ int main( )
    istreambuf_iterator<char>::int_type inttype1 = 100;
    cout << "The inttype1 = " << inttype1 << "." << endl;
 }
-\* Output:
+/* Output:
 The inttype1 = 100.
-*\
+*/
 ```
 
 ## <a name="istream_type"></a> istreambuf_iterator::istream_type
@@ -246,9 +249,11 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Strbuf* der Eingabestreampuffer, dem die `istreambuf_iterator` angefügt wird.
+*strbuf*<br/>
+Der Eingabestreampuffer, dem der `istreambuf_iterator` angefügt wird.
 
-*_Istr* der Eingabestream, der die `istreambuf_iterator` angefügt wird.
+*_Istr*<br/>
+Der Eingabestream, dem der `istreambuf_iterator` angefügt wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -319,7 +324,7 @@ int main( )
    ostreambuf_iterator<char> outpos ( cout );
    while ( inpos != endpos )
    {
- *outpos = *inpos;   //Put value of outpos equal to inpos
+*outpos = *inpos;   //Put value of outpos equal to inpos
       ++inpos;
       ++outpos;
    }
@@ -364,7 +369,7 @@ int main( )
    ostreambuf_iterator<char> outpos ( cout );
    while ( inpos != endpos )
    {
- *outpos = *inpos;
+*outpos = *inpos;
       ++inpos;   //Increment istreambuf_iterator
       ++outpos;
    }

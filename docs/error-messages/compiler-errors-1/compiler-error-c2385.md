@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2385 | Microsoft Docs
+title: Compilerfehler C2385 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,66 +16,68 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc152cd9d83b163632e64d1e2d8a0c5692439987
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a52a932d45c94fb63f3d7b943b2cd78fa1862e4f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196191"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029051"
 ---
 # <a name="compiler-error-c2385"></a>Compilerfehler C2385
-Mehrdeutiger Zugriff von "Member"  
-  
- Das Element kann mehr als ein Objekt abgeleitet sein (von mehr als einem Objekt geerbt).  Um diesen Fehler zu beheben.  
-  
--   Stellen Sie das Element eindeutig durch eine Typumwandlung.  
-  
--   Benennen Sie die mehrdeutigen Member in Basisklassen.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C2385 generiert.  
-  
-```  
-// C2385.cpp  
-// C2385 expected  
-#include <stdio.h>  
-  
-struct A   
-{  
-    void x(int i)   
-    {  
-        printf_s("\nIn A::x");  
-    }  
-};  
-  
-struct B   
-{  
-    void x(char c)   
-    {  
-        printf_s("\nIn B::x");  
-    }  
-};  
-  
-// Delete the following line to resolve.  
-struct C : A, B {}  
-  
-// Uncomment the following 4 lines to resolve.  
-// struct C : A, B   
-// {  
-//     using B::x;  
-//     using A::x;  
-// };  
-  
-int main()   
-{  
-    C aC;  
-    aC.x(100);  
-    aC.x('c');  
-}  
-  
-struct C : A, B   
-{  
-    using B::x;  
-    using A::x;  
-};  
+
+Mehrdeutiger Zugriff von "Member"
+
+Der Member kann von mehr als einem Objekt abgeleitet werden (es wird von mehr als ein Objekt geerbt).  Um diesen Fehler zu beheben
+
+- Stellen Sie das Element eindeutig durch eine Typumwandlung.
+
+- Benennen Sie die mehrdeutigen Member in Basisklassen.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird C2385 generiert.
+
+```
+// C2385.cpp
+// C2385 expected
+#include <stdio.h>
+
+struct A
+{
+    void x(int i)
+    {
+        printf_s("\nIn A::x");
+    }
+};
+
+struct B
+{
+    void x(char c)
+    {
+        printf_s("\nIn B::x");
+    }
+};
+
+// Delete the following line to resolve.
+struct C : A, B {}
+
+// Uncomment the following 4 lines to resolve.
+// struct C : A, B
+// {
+//     using B::x;
+//     using A::x;
+// };
+
+int main()
+{
+    C aC;
+    aC.x(100);
+    aC.x('c');
+}
+
+struct C : A, B
+{
+    using B::x;
+    using A::x;
+};
 ```

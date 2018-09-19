@@ -1,5 +1,5 @@
 ---
-title: '/ Zc: rvaluecast (typkonvertierungsregeln erzwingen) | Microsoft Docs'
+title: '/ Zc: rvaluecast (typkonvertierungsregeln erzwingen) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
@@ -22,16 +22,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d730563d01a3b59d4f2ac6bbadc980ca51112203
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 626cabbec169d541a63dd65c22a7380718613b79
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379883"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706588"
 ---
 # <a name="zcrvaluecast-enforce-type-conversion-rules"></a>/Zc:rvalueCast (Typkonvertierungsregeln erzwingen)
 
-Wenn die **/Zc: rvaluecast** angegeben wird, identifiziert der Compiler ordnungsgemäß einen Rvalue-Verweistyp als Ergebnis eines Umwandlungsvorgangs entsprechend dem standard C ++ 11. Wenn diese Option nicht angegeben ist, entspricht das Compilerverhalten dem von Visual Studio 2012.
+Wenn die **/Zc: rvaluecast** angegeben wurde, identifiziert der Compiler ordnungsgemäß einen Rvalue-Verweistyp als Ergebnis eines Umwandlungsvorgangs entsprechend dem standard C ++ 11. Wenn diese Option nicht angegeben ist, entspricht das Compilerverhalten dem von Visual Studio 2012.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,11 +39,11 @@ Wenn die **/Zc: rvaluecast** angegeben wird, identifiziert der Compiler ordnungs
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn **/Zc: rvaluecast** angegeben wird, folgt der Compiler Abschnitt 5.4 des standard C ++ 11 und behandelt nur Umwandlungsausdrücke, die in Typen ohne Verweis führen sowie Umwandlungsausdrücke, die zu Rvalue-verweisen zu nichtfunktionstypen führen als Rvalue-Typen. Standardmäßig oder wenn **/Zc:rvalueCast-** angegeben wird, der Compiler nicht konform und behandelt alle Umwandlungsausdrücke, die zu Rvalue-Verweise als Rvalues führen. Für Konformität und um Fehler bei der Verwendung von Umwandlungen zu vermeiden, empfehlen wir die Verwendung **/Zc: rvaluecast**.
+Wenn **/Zc: rvaluecast** angegeben wird, der Compiler folgt Abschnitt 5.4 des standard C ++ 11 und behandelt nur Umwandlungsausdrücke, die zu nicht-Verweistypen und Umwandlungsausdrücke, die zu Rvalue-verweisen zu nichtfunktionstypen führen als Rvalue-Typen. Standardmäßig oder wenn **/Zc:rvalueCast-** angegeben wird, der Compiler nicht konform und behandelt alle Umwandlungsausdrücke, die zu Rvalue-Referenzen, als Rvalues führen. Für Konformität und um Fehler bei der Verwendung von Umwandlungen zu vermeiden, es wird empfohlen, die Sie verwenden **/Zc: rvaluecast**.
 
-Standardmäßig **/Zc: rvaluecast** ist deaktiviert (**/Zc:rvalueCast-**). Die [/ liberalen-](permissive-standards-conformance.md) Compileroption legt implizit diese Option, jedoch können sie mithilfe von außer Kraft gesetzt werden **/Zc:rvalueCast-**.
+In der Standardeinstellung **/Zc: rvaluecast** ist deaktiviert (**/Zc:rvalueCast-**). Die [/ PERMISSIVE--](permissive-standards-conformance.md) -Compileroption legt implizit diese Option, aber sie kann überschrieben werden, mithilfe von **/Zc:rvalueCast-**.
 
-Verwendung **/Zc: rvaluecast** , wenn Sie einen Umwandlungsausdruck als Argument an eine Funktion übergeben, die einen Rvalue-Verweistyp akzeptiert. Das Standardverhalten verursacht Compilerfehler [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) Wenn der Compiler fälschlicherweise den Typ des Umwandlungsausdrucks bestimmt. In diesem Beispiel demonstriert einen Compilerfehler im korrekten code beim **/Zc: rvaluecast** nicht angegeben wird:
+Verwendung **/Zc: rvaluecast** , wenn Sie einen Umwandlungsausdruck als Argument an eine Funktion übergeben, die einen Rvalue-Verweistyp akzeptiert. Das Standardverhalten verursacht Compilerfehler [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) Wenn der Compiler fälschlicherweise den Typ des Umwandlungsausdrucks bestimmt. In diesem Beispiel demonstriert einen Compilerfehler im korrekten code, wenn **/Zc: rvaluecast** nicht angegeben wird:
 
 ```cpp
 // Test of /Zc:rvalueCast
@@ -63,8 +63,8 @@ struct Thing {
    T& thing2;
 };
 
-// Create a Thing, using move semantics if possible  
-template <typename T>  
+// Create a Thing, using move semantics if possible
+template <typename T>
 Thing<T> make_thing(T&& t1, T&& t2)
 {
    return (Thing<T>(std::forward<T>(t1), std::forward<T>(t2)));
@@ -74,19 +74,19 @@ struct Test1 {
    long a;
    long b;
 
-   Thing<long> test() { 
+   Thing<long> test() {
       // Use identity casts to create rvalues as arguments
       return make_thing(static_cast<long>(a), static_cast<long>(b));
    }
 };
 ```
 
-Das standardmäßige Compilerverhalten meldet möglicherweise keinen Fehler C2102, wenn dies angemessen ist. In diesem Beispiel wird der Compiler meldet keine Fehler ab, wenn die Adresse des durch eine Identität umgewandelt identitätsumwandlung erstellten Rvalue verwendet wird **/Zc: rvaluecast** nicht angegeben wird:
+Das standardmäßige Compilerverhalten meldet möglicherweise keinen Fehler C2102, wenn dies angemessen ist. In diesem Beispiel ist der Compiler meldet keine Fehler ab, wenn die Adresse des durch eine identitätsumwandlung erstellten Rvalue, wenn verwendet wird **/Zc: rvaluecast** nicht angegeben wird:
 
 ```cpp
 int main() {
    int a = 1;
-   int *p = &a;   // Okay, take address of lvalue 
+   int *p = &a;   // Okay, take address of lvalue
                   // Identity cast creates rvalue from lvalue;
    p = &(int)a;   // problem: should cause C2102: '&' requires l-value
 }
@@ -96,11 +96,11 @@ Weitere Informationen über Konformitätsprobleme in Visual C++ finden Sie unter
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Befehlszeile** Eigenschaftenseite.
 
-1. Ändern der **Zusatzoptionen** Eigenschaft einschließen **/Zc: rvaluecast** und wählen Sie dann **OK**.
+1. Ändern der **zusätzliche Optionen** Eigenschaft sollen **/Zc: rvaluecast** und wählen Sie dann **OK**.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,5 +1,5 @@
 ---
-title: Marshal_as | Microsoft Docs
+title: Marshal_as | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ebca4a94fa48feb4ff5fb897293303a395ac4eb8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f57db502be6e34d275e3aba0e7705992b3c4d0d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33133778"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701622"
 ---
 # <a name="marshalas"></a>marshal_as
 Bei dieser Methode werden Daten zwischen systemeigenen und verwalteten Umgebungen konvertiert.  
@@ -38,8 +38,8 @@ To_Type marshal_as<To_Type>(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `input`  
- Der Wert, der zu einer `To_Type`-Variable gemarshallt werden soll.  
+*Eingabe*<br/>
+[in] Der Wert, der zum Marshallen soll eine `To_Type` Variable.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Eine Variable vom Typ `To_Type`, bei dem es sich um den konvertierten Wert von `input` handelt.  
@@ -78,5 +78,5 @@ int main() {
  **Namespace:** msclr::interop  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über das Marshaling in C++](../dotnet/overview-of-marshaling-in-cpp.md)   
+ [Übersicht über das Marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md)   
  [marshal_context-Klasse](../dotnet/marshal-context-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Systeminterne Funktionen "_InterlockedExchangeAdd" | Microsoft Docs
+title: Funktionen "_InterlockedExchangeAdd" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -65,17 +65,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c141caf090eb34482fe53a03138ff71d2740e2fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d438d31088c6ded53df3137e76ebc6a2953890e6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340553"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700915"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedExchangeAdd“
 **Microsoft-spezifisch**  
   
- Geben Sie die systeminterne Compiler-Unterstützung für die Win32- [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [_InterlockedExchangeAdd Intrinsic Functions](../intrinsics/interlockedexchangeadd-intrinsic-functions.md) Funktion.  
+ Geben Sie die systeminterne Compiler-Unterstützung für das Win32-Windows-SDK [_InterlockedExchangeAdd Intrinsic Functions](../intrinsics/interlockedexchangeadd-intrinsic-functions.md) Funktion.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -164,11 +164,11 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in, out] `Addend`  
- Der hinzuzufügende Wert; ersetzt durch das Ergebnis der Addition.  
+*Addend*<br/>
+[in, out] Der Wert hinzugefügt werden. ersetzt durch das Ergebnis der Addition.  
   
- [in] `Value`  
- Der hinzuzufügende Wert.  
+*Wert*<br/>
+[in] Der hinzuzufügende Wert.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Der Rückgabewert ist der Anfangswert der Variablen, auf die der `Addend`-Parameter zeigt.  
@@ -177,9 +177,9 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
   
 |Systemintern|Architektur|Header|  
 |---------------|------------------|------------|  
-|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`, `_InterlockedExchangeAdd64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`, `_InterlockedExchangeAdd64`|X86, ARM, x64|\<intrin.h>|  
 |`_InterlockedExchangeAdd_acq`, `_InterlockedExchangeAdd_rel`, `_InterlockedExchangeAdd_nf`, `_InterlockedExchangeAdd8_acq`, `_InterlockedExchangeAdd8_rel`, `_InterlockedExchangeAdd8_nf`,`_InterlockedExchangeAdd16_acq`, `_InterlockedExchangeAdd16_rel`, `_InterlockedExchangeAdd16_nf`, `_InterlockedExchangeAdd64_acq`, `_InterlockedExchangeAdd64_rel`, `_InterlockedExchangeAdd64_nf`|ARM|\<intrin.h>|  
-|`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`, `_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`, `_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x86, x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>Hinweise  
  Es gibt mehrere Varianten von `_InterlockedExchangeAdd`, die sich basierend auf den beinhalteten Datentypen und in Abhängigkeit davon unterscheiden, ob prozessorspezifische Semantiken zum Abrufen bzw. Freigeben verwendet werden.  
@@ -190,10 +190,10 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
   
  Auf Intel-Plattformen, die Hardware Lock Elision (HLE)-Anweisungen unterstützen, enthalten die systeminternen Funktionen mit den Suffixen `_HLEAcquire` und `_HLERelease` einen Hinweis für den Prozessor, wie die Leistung durch den Wegfall der Schreibsperre in der Hardware beschleunigt werden kann. Wenn diese systeminternen Funktionen auf Plattformen aufgerufen werden, die HLE nicht unterstützen, wird der Hinweis ignoriert.  
   
- Diese Routinen sind nur als systeminterne Funktionen verfügbar. Folglich sind dies systeminterne Funktionen gibt an, ob davon [/Oi](../build/reference/oi-generate-intrinsic-functions.md) oder [#pragma intrinsic](../preprocessor/intrinsic.md) verwendet wird. Es ist nicht möglich, verwenden Sie [#pragma Function](../preprocessor/function-c-cpp.md) für diese systeminternen Funktionen.  
+ Diese Routinen sind nur als systeminterne Funktionen verfügbar. Folglich sind dies systeminterne Funktionen gibt an, ob davon [/Oi](../build/reference/oi-generate-intrinsic-functions.md) oder [#pragma intrinsic](../preprocessor/intrinsic.md) verwendet wird. Es ist nicht möglich, verwenden Sie [#pragma-funhtion](../preprocessor/function-c-cpp.md) für diese systeminternen Funktionen.  
   
 ## <a name="example"></a>Beispiel  
- Ein Beispiel zum Verwenden von `_InterlockedExchangeAdd`, finden Sie unter [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
+ Ein Beispiel zur Verwendung `_InterlockedExchangeAdd`, finden Sie unter [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
   
 **Ende Microsoft-spezifisch**  
   

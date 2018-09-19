@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c269951eacfc2f7a5d40c8fad1e4fb67cc1d2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: edd5410f74a9d6ad1bf5d63754dc74cd2e9871c7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392090"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026542"
 ---
 # <a name="accesss-waccesss"></a>_access_s, _waccess_s
 
@@ -74,21 +74,21 @@ Berechtigungseinstellung.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede Funktion gibt 0 zurück, wenn sich die Datei im angegebenen Modus befindet. Die Funktion gibt einen Fehlercode zurück, wenn die angegebene Datei nicht vorhanden ist oder im angegebenen Modus nicht auf sie zugegriffen werden kann. In diesem Fall gibt die Funktion einen Fehlercode aus dem Satz wie folgt und setzt auch **Errno** auf den gleichen Wert.
+Jede Funktion gibt 0 zurück, wenn sich die Datei im angegebenen Modus befindet. Die Funktion gibt einen Fehlercode zurück, wenn die angegebene Datei nicht vorhanden ist oder im angegebenen Modus nicht auf sie zugegriffen werden kann. In diesem Fall gibt die Funktion einen Fehlercode zurück und legt `errno` auf diesen Code fest.
 
 |errno-Wert|Bedingung|
 |-|-|
-**EACCES**|Zugriff verweigert. Aufgrund der Berechtigungen wird der Zugriff im angegebenen Modus verweigert.
-**ENOENT**|Der Dateiname oder der Pfad wurde nicht gefunden.
-**EINVAL**|Ungültiger Parameter.
+`EACCES`|Zugriff verweigert. Aufgrund der Berechtigungen wird der Zugriff im angegebenen Modus verweigert.
+`ENOENT`|Der Dateiname oder der Pfad wurde nicht gefunden.
+`EINVAL`|Ungültiger Parameter.
 
 Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Bei Verwendung mit Dateien, die **_access_s** -Funktion bestimmt, ob die angegebene Datei vorhanden ist und kann, als zugegriffen werden durch den Wert der angegebenen *Modus*. Bei Verwendung mit Verzeichnisse **_access_s** bestimmt nur, ob das angegebene Verzeichnis vorhanden ist. Unter Windows 2000 und späteren Betriebssystemen alle Verzeichnisse verfügen über Lese- und Schreibzugriff auf.
+Bei Verwendung mit Dateien, die **_access_s** Funktion bestimmt, ob die angegebene Datei vorhanden ist, und werden, als zugegriffen kann durch den Wert der angegebenen *Modus*. Bei Verwendung mit Verzeichnissen **_access_s** bestimmt nur, ob das angegebene Verzeichnis vorhanden ist. In Windows 2000 und höher werden alle Verzeichnisse Lese- und Schreibzugriff.
 
-|Moduswert|überprüft nur, ob die Datei|
+|Mode-Wert|überprüft nur, ob die Datei|
 |----------------|---------------------|
 |00|existiert.|
 |02|Schreibberechtigung.|
@@ -97,26 +97,26 @@ Bei Verwendung mit Dateien, die **_access_s** -Funktion bestimmt, ob die angegeb
 
 Die Berechtigung zum Lesen oder Schreiben einer Datei garantiert nicht, dass diese Datei auch geöffnet werden kann. Z. B. wenn eine Datei von einem anderen Prozess gesperrt ist, möglicherweise nicht zugegriffen werden kann, obwohl **_access_s** gibt 0 zurück.
 
-**_waccess_s** ist eine Breitzeichen-Version von **_access_s**, wobei die *Pfad* Argument **_waccess_s** ist eine Breitzeichen-Zeichenfolge. Andernfalls **_waccess_s** und **_access_s** Verhalten sich identisch.
+**waccess_s** ist eine Breitzeichen-Version von **_access_s**, wobei die *Pfad* Argument **waccess_s** ist eine Breitzeichen-Zeichenfolge. Andernfalls **waccess_s** und **_access_s** Verhalten sich identisch.
 
-Diese Funktionen überprüfen ihre Parameter. Wenn *Pfad* ist **NULL** oder *Modus* gültiger Modus ist, gibt nicht an den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EINVAL** inventurüberprüfung **EINVAL**.
+Diese Funktionen überprüfen ihre Parameter. Wenn *Pfad* ist NULL oder *Modus* gibt keinen gültigen Modus, den Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben `EINVAL` zurück.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
 |Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_taccess_s**|**_access_s**|**_access_s**|**_waccess_s**|
+|`_taccess_s`|**_access_s**|**_access_s**|**_waccess_s**|
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionaler Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|
 |-------------|---------------------|---------------------|
 |**_access_s**|\<io.h>|\<errno.h>|
 |**_waccess_s**|\<wchar.h> oder \<io.h>|\<errno.h>|
 
 ## <a name="example"></a>Beispiel
 
-Dieses Beispiel verwendet **_access_s** , überprüfen Sie die Datei mit dem Namen crt_access_s.c, um festzustellen, ob es vorhanden ist und ob Schreibvorgänge zulässig ist.
+Dieses Beispiel verwendet **_access_s** überprüfen Sie die Datei crt_access_s.c, um festzustellen, ob es vorhanden ist und ob Schreiben zulässig ist.
 
 ```C
 // crt_access_s.c
@@ -165,4 +165,4 @@ File crt_access_s.c does not have write permission.
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>
-[_stat- und _wstat-Funktionen](stat-functions.md)<br/>
+[_stat- und _wstat-Funktionen](stat-functions.md)

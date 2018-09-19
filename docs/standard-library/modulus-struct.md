@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5b9ae4ae3b7d741624d220ba00006d51a61fd20
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 8b277a31eafafa4ae33066653b7a080bb3474408
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962161"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104120"
 ---
 # <a name="modulus-struct"></a>modulus-Struktur
 
@@ -51,9 +51,11 @@ struct modulus<void>
 
 *Typ*, *T*, *U* jeder Typ, unterstützt eine `operator%` , das Operanden angegebener oder abgeleiteter Typen akzeptiert.
 
-*Links* der linke Operand des modulusvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
+*Links*<br/>
+Der linke Operand des Modulusvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
 
-*Rechts* der Rechte Operand des modulusvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
+*Rechts*<br/>
+Der rechte Operand des Modulusvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -115,8 +117,8 @@ int main( )
 The vector v1 = ( 5 10 15 20 25 30 )
 The vector v2 = ( 3 6 9 12 15 18 )
 The element-wise remainders of the modular division
- are: ( 2 4 6 8 10 12 )
- */
+are: ( 2 4 6 8 10 12 )
+*/
 ```
 
 ## <a name="requirements"></a>Anforderungen

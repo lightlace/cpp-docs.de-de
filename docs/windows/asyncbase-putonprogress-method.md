@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Putonprogress-Methode | Microsoft Docs'
+title: 'Asyncbase:: Putonprogress-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c12709bdcac615937c938468bcf0e2daca437675
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b2bc46f916e4aaaedc74e8b6d94faafa1ead3b9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859786"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595486"
 ---
 # <a name="asyncbaseputonprogress-method"></a>AsyncBase::PutOnProgress-Methode
-Legt die Adresse des ereignishandlers Status mit dem angegebenen Wert fest.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-STDMETHOD(  
-   PutOnProgress  
-)(TProgress* progressHandler);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `progressHandler`  
- Die Adresse, die auf der der Status-Ereignishandler festgelegt ist.  
-  
-## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn erfolgreich; andernfalls E_ILLEGAL_METHOD_CALL.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** async.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [AsyncBase-Klasse](../windows/asyncbase-class.md)
+
+Legt die Adresse des ereignishandlers Status mit dem angegebenen Wert fest.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+STDMETHOD(
+   PutOnProgress
+)(TProgress* progressHandler);
+```
+
+### <a name="parameters"></a>Parameter
+
+*progressHandler*  
+Die Adresse, die auf der der Status-Ereignishandler festgelegt ist.
+
+## <a name="return-value"></a>Rückgabewert
+
+S_OK, wenn erfolgreich; andernfalls E_ILLEGAL_METHOD_CALL.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** async.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[AsyncBase-Klasse](../windows/asyncbase-class.md)

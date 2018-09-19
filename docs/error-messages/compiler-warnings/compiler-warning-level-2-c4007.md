@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 2) C4007 | Microsoft Docs
+title: Compilerwarnung (Stufe 2) C4007 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82e902b3e2f18332ac6a9804a14c1c39b58d74c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3c9903af3537e9e4003a913fc12412c9b87d614
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291725"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044417"
 ---
 # <a name="compiler-warning-level-2-c4007"></a>Compilerwarnung (Stufe 2) C4007
-'Funktion': 'Attribut' muss  
-  
- Ein erforderliches Attribut für eine Funktion ist nicht explizit angegeben. Zum Beispiel gibt die Funktion **main** benötigen die `__cdecl` Attribut. Der Compiler erzwingt, dass das Attribut.
+
+'Funktion': 'Attribut' sein
+
+Ein erforderliches Attribut für eine Funktion ist nicht explizit angegeben. Zum Beispiel der Funktion **main** müssen die `__cdecl` Attribut. Der Compiler erzwingt, dass das Attribut.

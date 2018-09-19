@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C3113 | Microsoft Docs
+title: Compilerfehler C3113 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220f400bd1ce80be039dcd8d572d20fad5da09f4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e830fe5aff3912b48dbf9a633a0537dff4d05c91
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245718"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082702"
 ---
-# <a name="compiler-error-c3113"></a>Compilerfehler Fehler C3113
-ein 'Structure' darf keine Vorlagen-/generische sein.  
-  
- Sie haben versucht, eine Klassenvorlage oder eine Klasse aus einer Schnittstelle oder einer Enumeration generische vornehmen.  
-  
- Im folgende Beispiel wird C3113 generiert:  
-  
-```  
-// C3113.cpp  
-// compile with: /c  
-template <class T>   
-enum E {};   // C3113  
-// try the following line instead  
-// class MyClass{};  
+# <a name="compiler-error-c3113"></a>Compilerfehler C3113
+
+"Struktur" darf keine Vorlagen-/generische sein.
+
+Sie haben versucht, eine Klassenvorlage oder eine Klasse aus einer Schnittstelle oder einer Enumeration generisch zu gestalten.
+
+Im folgende Beispiel wird die C3113 generiert:
+
+```
+// C3113.cpp
+// compile with: /c
+template <class T>
+enum E {};   // C3113
+// try the following line instead
+// class MyClass{};
 ```

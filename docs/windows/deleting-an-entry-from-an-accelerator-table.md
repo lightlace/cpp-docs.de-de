@@ -1,5 +1,5 @@
 ---
-title: Löschen eines Eintrags aus einer Zugriffstastentabelle | Microsoft Docs
+title: Löschen eines Eintrags aus einer Zugriffstastentabelle (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68f6c7e9383527e3ba77d87d6d08ce5a3e1bcc8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 747e0db32a73a277ef26e18e787e3e5a31f69578
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880497"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315118"
 ---
-# <a name="deleting-an-entry-from-an-accelerator-table"></a>Löschen eines Eintrags aus einer Zugriffstastentabelle
-### <a name="to-delete-an-entry-from-an-accelerator-table"></a>So löschen Sie einen Eintrag aus einer Zugriffstastentabelle  
-  
-1.  Öffnen Sie die Zugriffstastentabelle, indem Sie doppelklicken auf das Symbol in [Ressourcenansicht](../windows/resource-view-window.md).  
-  
-    > [!NOTE]
-    >  Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  Wählen Sie den zu löschenden Eintrag aus. (Halten Sie die **STRG** oder **UMSCHALT** gedrückt, während Sie auf mehrere Einträge auswählen.)  
-  
-3.  Mit der rechten Maustaste, und wählen Sie **löschen** aus dem Kontextmenü (oder wählen Sie **löschen** aus der **bearbeiten** Menü).  
-  
- \- oder –  
-  
--   Drücken Sie die ENTF-TASTE.  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.*  
-  
- **Anforderungen**  
-  
- Win32  
-  
-## <a name="see-also"></a>Siehe auch  
- [Bearbeiten von Zugriffstastentabellen](../windows/editing-accelerator-tables.md)   
- [Zugriffstasten-Editor](../windows/accelerator-editor.md)
+# <a name="deleting-an-entry-from-an-accelerator-table-c"></a>Löschen eines Eintrags aus einer Zugriffstastentabelle (C++)
+
+### <a name="to-delete-an-entry-from-an-accelerator-table"></a>So löschen Sie einen Eintrag aus einer Zugriffstastentabelle
+
+1. Öffnen Sie die Zugriffstastentabelle durch Doppelklicken auf das Symbol im [Ressourcenansicht](../windows/resource-view-window.md).
+
+   > [!NOTE]
+   > Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).
+
+2. Wählen Sie den zu löschenden Eintrag aus. (Halten Sie die **STRG** oder **UMSCHALT** beim Klicken auf die Schlüssel, um mehrere Einträge auszuwählen.)
+
+3. Mit der rechten Maustaste, und wählen Sie **löschen** aus dem Kontextmenü (oder wählen Sie **löschen** aus der **bearbeiten** Menü).
+
+\- oder –
+
+- Drücken Sie die **löschen** Schlüssel.
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.
+
+## <a name="requirements"></a>Anforderungen
+
+Win32
+
+## <a name="see-also"></a>Siehe auch
+
+[Bearbeiten von Zugriffstastentabellen](../windows/editing-accelerator-tables.md)  
+[Zugriffstasten-Editor](../windows/accelerator-editor.md)

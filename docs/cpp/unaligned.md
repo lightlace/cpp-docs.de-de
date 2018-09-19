@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a7a9de35e225dabadbf9f4a3731f6d57fd9e99a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 9593a0b3c6e6980f5be2ce9dcf13e505e94dcace
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940412"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040195"
 ---
 # <a name="unaligned"></a>__unaligned
 

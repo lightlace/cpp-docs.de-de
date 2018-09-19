@@ -1,5 +1,5 @@
 ---
-title: Max_is | Microsoft Docs
+title: Max_is | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,53 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 697eff3264c7e4a627086b072ae45b3c7ffedac2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e2aa0b6e3928affbd30e08030f41a0b0183e46d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878969"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200680"
 ---
 # <a name="maxis"></a>max_is
-Legt fest, den maximalen Wert für eine gültige Arrayindex.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-      [ max_is(  
-   "expression"  
-) ]  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *Ausdruck*  
- Eine oder mehrere Programmiersprache C-Ausdrücke. Leere Argument Slots sind zulässig.  
-  
-## <a name="remarks"></a>Hinweise  
- Die **Max_is** C++-Attribut hat die gleiche Funktionalität wie die [Max_is](http://msdn.microsoft.com/library/windows/desktop/aa367074) MIDL-Attribut.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-### <a name="attribute-context"></a>Attributkontext  
-  
-|||  
-|-|-|  
-|**Betrifft**|Im Feld `struct` oder **Union**, Parameter interface, Schnittstelle Methode|  
-|**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Keiner|  
-|**Ungültige Attribute**|**size_is**|  
-  
- Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
-  
-## <a name="example"></a>Beispiel  
- Finden Sie unter [First_is](../windows/first-is.md) für ein Beispiel für einen Abschnitt eines Arrays angeben.  
-  
-## <a name="see-also"></a>Siehe auch  
- [IDL-Attribute](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union- und Struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameterattribute](../windows/parameter-attributes.md)   
- [first_is](../windows/first-is.md)   
- [last_is](../windows/last-is.md)   
- [length_is](../windows/length-is.md)   
- [size_is](../windows/size-is.md)   
+
+Legt fest, den maximalen Wert für ein gültiges Array-Index.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+[ max_is(
+   "expression"
+) ]
+```
+
+### <a name="parameters"></a>Parameter
+
+*Ausdruck*  
+Eine oder mehrere Programmiersprache C-Ausdrücke. Leere Argumentliste Slots sind zulässig.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Max_is** C++-Attribut hat die gleiche Funktionalität wie die [Max_is](/windows/desktop/Midl/max-is) MIDL-Attribut.
+
+## <a name="requirements"></a>Anforderungen
+
+### <a name="attribute-context"></a>Attributkontext
+
+|||
+|-|-|
+|**Betrifft**|Im Feld **Struktur** oder **Union**, Schnittstellenparameter,-Schnittstellenmethode|
+|**Wiederholbar**|Nein|
+|**Erforderliche Attribute**|Keiner|
+|**Ungültige Attribute**|**size_is**|
+
+Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).
+
+## <a name="example"></a>Beispiel
+
+Finden Sie unter [First_is](../windows/first-is.md) ein Beispiel für einen Abschnitt eines Arrays angeben.
+
+## <a name="see-also"></a>Siehe auch
+
+[IDL-Attribute](../windows/idl-attributes.md)  
+[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Parameterattribute](../windows/parameter-attributes.md)  
+[first_is](../windows/first-is.md)  
+[last_is](../windows/last-is.md)  
+[length_is](../windows/length-is.md)  
+[size_is](../windows/size-is.md)  

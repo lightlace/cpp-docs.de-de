@@ -50,19 +50,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86822cfeb26428a53e94d50a3d831732241007ee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1d714499ebb33d1d4dc2636ab80b2ad727ccac39
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411662"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195157"
 ---
 # <a name="strinc-wcsinc-mbsinc-mbsincl"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
 
 Versetzt einen Zeichenfolgenzeiger um ein Zeichen nach vorn.
 
 > [!IMPORTANT]
-> **_mbsinc** und **_mbsinc_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsinc** und **_mbsinc_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -95,22 +95,22 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Routinen gibt einen Zeiger auf das Zeichen, das unmittelbar folgt *aktuelle*.
+Jede dieser Routinen gibt einen Zeiger auf das Zeichen, die unmittelbar folgt *aktuelle*.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbsinc** Funktion gibt einen Zeiger auf das erste Byte des multibytezeichens, die unmittelbar folgt *aktuelle*. **_mbsinc** erkennt Multibyte-Zeichenfolgen gemäß der [multibyte-Codepage](../../c-runtime-library/code-pages.md) , die sich derzeit in Verwendung; **_mbsinc_l** ist nahezu identisch, verwendet jedoch stattdessen den Gebietsschemaparameter das übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die **_mbsinc** Funktion gibt einen Zeiger auf das erste Byte des multibytezeichens, die unmittelbar folgt *aktuelle*. **_mbsinc** erkennt multibytezeichensequenzen gemäß der [multibyte-Codepage](../../c-runtime-library/code-pages.md) , der sich derzeit in Verwendung; **_mbsinc_l** ist identisch, verwendet jedoch stattdessen den Gebietsschemaparameter, der übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Die generische Textfunktion **_tcsinc**in Zuordnungen, Tchar.h definierte **_mbsinc** Wenn **_MBCS** definiert wurde, oder auf **_wcsinc** Wenn **_UNICODE** definiert wurde. Andernfalls **_tcsinc** ordnet **_strinc**. **_strinc** und **_wcsinc** sind Single-Byte-Zeichen und Breitzeichenversionen von **_mbsinc**. **_strinc** und **_wcsinc** werden nur für diese Zuordnung bereitgestellt und sollten nicht Zwecke verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Zuordnungen für generischen Text](../../c-runtime-library/using-generic-text-mappings.md) und [Textzuordnungen für generischen Text](../../c-runtime-library/generic-text-mappings.md).
+Die Funktion für generischen Text **_tcsinc**in Tchar.h, Zuordnungen, die definierte **_mbsinc** Wenn **_MBCS** definiert wurde, oder **_wcsinc** Wenn **_UNICODE** definiert wurde. Andernfalls **_tcsinc** ordnet **_strinc**. **_strinc** und **_wcsinc** sind Single-Byte-Zeichen und Breitzeichen von **_mbsinc**. **_strinc** und **_wcsinc** werden nur für diese Zuordnung bereitgestellt und sollte nicht anderweitig verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Zuordnungen für generischen Text](../../c-runtime-library/using-generic-text-mappings.md) und [Textzuordnungen für generischen Text](../../c-runtime-library/generic-text-mappings.md).
 
-Wenn *aktuelle* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Diese Funktion gibt zurück, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **EINVAL** und legt **Errno** auf **EINVAL**.
+Wenn *aktuelle* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Diese Funktion gibt zurück, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **EINVAL** und **Errno** zu **EINVAL**.
 
 > [!IMPORTANT]
-> Diese Funktionen sind möglicherweise für Pufferüberlaufrisiken anfällig. Pufferüberläufe können für Systemangriffe eingesetzt werden, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Diese Funktionen sind möglicherweise für Pufferüberlaufrisiken anfällig. Pufferüberläufe können für Systemangriffe eingesetzt werden, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_mbsinc**|\<mbstring.h>|
 |**_mbsinc_l**|\<mbstring.h>|

@@ -1,5 +1,5 @@
 ---
-title: Eigenschaft "Modifizierer" Accelerator | Microsoft Docs
+title: Accelerator-Modifier-Eigenschaft (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,30 +15,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d99d4656f2835f9adb60f310e429c4ccb97ac7b6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 793e02b4ac083d6fe84ba2cc76ee340bcf2484e9
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854053"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316054"
 ---
-# <a name="accelerator-modifier-property"></a>Eigenschaft "Modifizierer" von Zugriffstasten
-Die folgenden sind Einträge zulässig für die Eigenschaft "Modifizierer" in der Zugriffstastentabelle.  
-  
-|Wert|Beschreibung|  
-|-----------|-----------------|  
-|**Keine**|Benutzer drückt die Schlüssel-Wert. Dies ist am effizientesten mit den ASCII/ANSI-Werten 001 bis 026, was interpretiert wird als ^ A bis ^ Z (STRG + A bis STRG-Z).|  
-|**ALT-Taste**|Der Benutzer muss vor dem Schlüssel-Wert die ALT-Taste drücken.|  
-|**STRG**|Benutzer muss vor dem Schlüssel-Wert die STRG-Taste drücken. Mit dem ASCII-Typ ist ungültig.|  
-|**Umschalttaste gedrückt**|Der Benutzer muss die UMSCHALTTASTE gedrückt, bevor der Schlüssel-Wert drücken.|  
-|**Strg + Alt**|Der Benutzer muss die STRG-Taste und bevor der Schlüssel-Wert die ALT-Taste drücken. Mit dem ASCII-Typ ist ungültig.|  
-|**STRG + UMSCHALT**|Benutzer muss drücken Sie die STRG-Taste und die UMSCHALTTASTE gedrückt, bevor der Schlüssel-Wert. Mit dem ASCII-Typ ist ungültig.|  
-|**ALT + UMSCHALT**|Benutzer muss drücken Sie die ALT-Taste und die UMSCHALTTASTE gedrückt, bevor der Schlüssel-Wert. Mit dem ASCII-Typ ist ungültig.|  
-|**Strg + Alt + Umschalt**|Benutzer drücken vor dem Schlüssel-Wert STRG und ALT, UMSCHALT. Mit dem ASCII-Typ ist ungültig.|  
-  
-## <a name="requirements"></a>Anforderungen  
- Win32  
-  
-## <a name="see-also"></a>Siehe auch  
- [Festlegen von Zugriffstasteneigenschaften](../windows/setting-accelerator-properties.md)   
- [Zugriffstasten-Editor](../windows/accelerator-editor.md)
+# <a name="accelerator-modifier-property-c"></a>Accelerator-Modifier-Eigenschaft (C++)
+
+Die folgenden sind Einträge zulässig für die Eigenschaft "Modifizierer" in der tastenkombinationstabelle.
+
+|Wert|Beschreibung|
+|-----------|-----------------|
+|**Keine**|Benutzer drückt nur die **Schlüssel** Wert. Dies ist am effizientesten mit den ASCII/ANSI-Werten 001 bis 026, was interpretiert wird als ^ A bis ^ Z (STRG + A über STRG + Z).|
+|**ALT**|Drücken Sie die Benutzer muss die **Alt** Schlüssel vor der **Schlüssel** Wert.|
+|**STRG**|Drücken Sie die Benutzer muss die **STRG** Schlüssel vor der **Schlüssel** Wert. Mit dem ASCII-Typ nicht gültig.|
+|**UMSCHALTTASTE**|Drücken Sie die Benutzer muss die **UMSCHALT** Schlüssel vor der **Schlüssel** Wert.|
+|**Strg + Alt +**|Drücken Sie die Benutzer muss die **STRG** Schlüssel und die **Alt** Schlüssel vor der **Schlüssel** Wert. Mit dem ASCII-Typ nicht gültig.|
+|**STRG + UMSCHALT**|Drücken Sie die Benutzer muss die **STRG** Schlüssel und die **UMSCHALT** Schlüssel vor der **Schlüssel** Wert. Mit dem ASCII-Typ nicht gültig.|
+|**ALT + UMSCHALT**|Drücken Sie die Benutzer muss die **Alt** Schlüssel und die **UMSCHALT** Schlüssel vor der **Schlüssel** Wert. Mit dem ASCII-Typ nicht gültig.|
+|**Strg + Alt + Umschalt**|Der Benutzer muss drücken **STRG**, **Alt**, und **UMSCHALT** vor der **Schlüssel** Wert. Mit dem ASCII-Typ nicht gültig.|
+
+## <a name="requirements"></a>Anforderungen
+
+Win32
+
+## <a name="see-also"></a>Siehe auch
+
+[Festlegen von Eigenschaften für Zugriffstasten](../windows/setting-accelerator-properties.md)  
+[Zugriffstasten-Editor](../windows/accelerator-editor.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01add77f68ac35b4c669391504461dd516b55d3d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e88890917986e54b3b912d50e97da77032abab34
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325382"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078789"
 ---
 # <a name="ltparamgt-visual-c"></a>&lt;param&gt; (Visual C++)
 Das \<param>-Tag sollte im Kommentar für eine Methodendeklaration verwendet werden, um einen der Methodenparameter zu beschreiben.  
@@ -35,20 +35,20 @@ Das \<param>-Tag sollte im Kommentar für eine Methodendeklaration verwendet wer
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `name`  
- Der Name eines Methodenparameters.  Setzen Sie den Namen in einfache oder doppelte Anführungszeichen.  Der Compiler gibt eine Warnung aus, wenn er `name` nicht findet.  
+*name*<br/>
+Der Name eines Methodenparameters.  Setzen Sie den Namen in einfache oder doppelte Anführungszeichen.  Der Compiler gibt eine Warnung aus, wenn er `name` nicht findet.  
   
- `description`  
- Eine Beschreibung für den Parameter  
+*Beschreibung*<br/>
+Eine Beschreibung für den Parameter  
   
 ## <a name="remarks"></a>Hinweise  
- Der Text für das \<param>-Tag wird in IntelliSense, dem [Objektkatalog](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470), und im Webbericht für Codekommentare angezeigt.  
+ Der Text für das \<param>-Tag wird in IntelliSense, dem [Objektkatalog](/visualstudio/ide/viewing-the-structure-of-code), und im Webbericht für Codekommentare angezeigt.  
   
  Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // xml_param_tag.cpp  
 // compile with: /clr /doc /LD  
 // post-build command: xdcmake xml_param_tag.dll  

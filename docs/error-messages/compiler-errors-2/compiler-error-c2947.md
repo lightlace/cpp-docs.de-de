@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2947 | Microsoft Docs
+title: Compilerfehler C2947 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1af4e6a5a27c13d69351eaf0cddfafe11ba5f22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 508c2ae29b0290332cc7c2b49aac0a1ecb10528f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243430"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054518"
 ---
 # <a name="compiler-error-c2947"></a>Compilerfehler C2947
-erwartet wurde ">" zum Beenden von Konstrukt gefunden "Syntax"  
-  
- Eine generische oder Vorlagenklasse Argumentliste wurde möglicherweise nicht ordnungsgemäß beendet.  
-  
- C2947 kann auch durch Syntaxfehler generiert werden.  
-  
- Im folgenden Beispiel wird C2947 generiert:  
-  
-```  
-// C2947.cpp  
-// compile with: /c  
-template <typename T>=   // C2947  
-// try the following line instead  
-// template <typename T>  
-struct A {};  
+
+erwartet ' >' gefunden. zum Beenden Konstrukt "Syntax"
+
+Eine generische oder Vorlagenklasse Argumentliste wurde möglicherweise nicht ordnungsgemäß beendet.
+
+C2947 kann auch durch Syntaxfehler generiert werden.
+
+Im folgende Beispiel wird die C2947 generiert:
+
+```
+// C2947.cpp
+// compile with: /c
+template <typename T>=   // C2947
+// try the following line instead
+// template <typename T>
+struct A {};
 ```

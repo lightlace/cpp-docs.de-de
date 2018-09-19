@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcencompiler: Warnung RW4001 | Microsoft Docs'
+title: 'Ressourcencompiler: Warnung RW4001 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d74ff4164d1e0ace3fced51df4f8028b782e62d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6e430dd0c42ced94fb01c2d29fff0270e090dc6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323572"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040348"
 ---
 # <a name="resource-compiler-warning-rw4001"></a>Ressourcencompiler: Warnung RW4001
-. Optionen für die Verarbeitung von EXE-Datei (/ l/m/p/t/k/e /31 oder /30)  
-  
- Sie Verarbeitungsoptionen exe-Datei angegeben, aber es wurde keine ausführbare Datei zu verarbeiten. Verwenden Sie diese Optionen nicht mit eine RES-Datei an.
+
+. Optionen für die Verarbeitung von EXE-Datei (/ l/m/p/t/k/e /31 oder /30)
+
+Sie Verarbeitungsoptionen exe-Datei angegeben. es wurde jedoch keine ausführbare Datei für die Verarbeitung. Verwenden Sie diese Optionen nicht durch eine RES-Datei an.

@@ -1,5 +1,5 @@
 ---
-title: -Funktion (C++) | Microsoft Docs
+title: -Funktion (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e24dac191e05cc3b47192cb6ec7fb0fc48dd447
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 76ab5b2911d349c62ff18967e7a660cdc3589ddd
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849482"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540597"
 ---
 # <a name="function-cc"></a>function (C/C++)
 Gibt an, dass Funktionsaufrufe generiert werden, die in der Argumentliste des Pragmas angegeben sind.  
@@ -31,18 +31,18 @@ Gibt an, dass Funktionsaufrufe generiert werden, die in der Argumentliste des Pr
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 #pragma function( function1 [, function2, ...] )  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Bei Verwendung der **systeminterne** Pragma (oder/Oi) um den Compiler aufzufordern, systeminterne Funktionen generieren (systeminterne Funktionen werden als Inlinecode und nicht als Funktionsaufrufe generiert), können Sie die **Funktion** Pragma Um einen Funktionsaufruf explizit zu erzwingen. Sobald ein function-Pragma angezeigt wird, tritt es mit der ersten Funktionsdefinition in Kraft, die eine bestimmte intrinsische Funktion enthält. Die Wirkung dauert bis an das Ende der Quelldatei oder bis zum Auftreten einer **systeminterne** Pragmas, die die gleiche intrinsische Funktion angibt. Die **Funktion** Pragma kann nur außerhalb einer Funktion verwendet werden – auf globaler Ebene.  
+
+Bei Verwendung der `intrinsic` Pragma (oder/Oi) um den Compiler anweisen, intrinsische Funktionen generieren (intrinsische Funktionen werden als Inlinecode und nicht als Funktionsaufrufe generiert), können Sie die **Funktion** Pragma, um explizit zu erzwingen einer Funktionsaufruf. Sobald ein function-Pragma angezeigt wird, tritt es mit der ersten Funktionsdefinition in Kraft, die eine bestimmte intrinsische Funktion enthält. Die Wirkung dauert bis an das Ende der Quelldatei oder bis zum Auftreten einer `intrinsic` Pragmas, die gleiche intrinsische Funktion angibt. Die **Funktion** Pragma kann nur außerhalb einer Funktion verwendet werden – auf globaler Ebene.  
   
- Listen der Funktionen mit systeminternen Formen finden Sie unter [#pragma intrinsic](../preprocessor/intrinsic.md).  
+Die Funktionen mit systeminternen Formen finden Sie unter [#pragma intrinsic](../preprocessor/intrinsic.md).  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // pragma_directive_function.cpp  
 #include <ctype.h>  
 #include <stdio.h>  
@@ -92,5 +92,6 @@ str is 'Now************'
 str is '!!!!!!!!!!!!!!!'  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Siehe auch
+
+[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

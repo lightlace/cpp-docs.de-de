@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e97ce9daf097e85dfc9b7b1b74bfcbf6a149fdd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: b454a86957911060e33c82e79832e107313e0300
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027231"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703598"
 ---
 # <a name="errorcode-class"></a>error_code-Klasse
 
@@ -172,7 +172,7 @@ error_code(_Enum _Errcode,
 
 Der erste Konstruktor speichert einen Fehlercodewert „Null“ und einen Zeiger auf [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-Der zweite Konstruktor speichert *Val* als Fehlercodewert und einen Zeiger auf [Error_category](http://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
+Der zweite Konstruktor speichert *Val* als Fehlercodewert und einen Zeiger auf [Error_category](../standard-library/error-category-class.md).
 
 Der dritte Konstruktor speichert `(value_type)_Errcode` als Fehlercodewert und einen Zeiger auf [generic_category](../standard-library/system-error-functions.md#generic_category).
 
@@ -238,7 +238,7 @@ Der Memberoperator gibt `!(*this == right)`zurück.
 
 ## <a name="op_lt"></a> error_code::operator bool&lt;
 
-Testet, ob ein [error_code](http://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31)-Objekt kleiner ist als das Objekt `error_code`, das für den Vergleich übergeben wurde.
+Testet, ob das `error_code`-Objekt kleiner ist als das `error_code`-Objekt, das für den Vergleich übergeben wurde.
 
 ```cpp
 bool operator<(const error_code& right) const;
@@ -260,13 +260,12 @@ Der Memberoperator gibt `category() < right.category() || category() == right.ca
 
 ## <a name="op_eq"></a> error_code::operator=
 
-Weist dem [error_code](http://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31)-Objekt einen neuen Enumerationswert zu.
+Weist dem `error_code`-Objekt einen neuen Enumerationswert zu.
 
 ```cpp
 template <class _Enum>
-typename enable_if<is_error_code_enum<_Enum>::value,
-    error_code>::type&
- operator=(_Enum _Errcode);
+typename enable_if<is_error_code_enum<_Enum>::value, error_code>::type&
+    operator=(_Enum _Errcode);
 ```
 
 ### <a name="parameters"></a>Parameter

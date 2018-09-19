@@ -36,12 +36,12 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: 8b3f6ed544bd4726b8bed2b63394a8b28c54c339
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c92f4f845552f5f6c14adb08191f1bd0519c7ba9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956071"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712451"
 ---
 # <a name="ltlocalegt-functions"></a>&lt;locale&gt;-Funktionen
 
@@ -64,7 +64,8 @@ bool has_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Parameter
 
-*LOC* das Gebietsschema, das das Vorhandensein eines Facets getestet werden soll.
+*Loc*<br/>
+Das Gebietsschema, das auf das Vorhandensein eines Facets getestet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -106,9 +107,11 @@ bool isalnum(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parameter
 
-*CH* das zu testende alphanumerische Element.
+*CH*<br/>
+Das zu testende alphanumerische Element.
 
-*LOC* das Gebietsschema, das das zu testende alphanumerische Element enthält.
+*Loc*<br/>
+Das Gebietsschema, das das zu testende alphanumerische Element enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -171,9 +174,11 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parameter
 
-*CH* die zu testende Element.
+*CH*<br/>
+Das zu testende Element.
 
-*LOC* das Gebietsschema, das die zu testende alphabetische Element enthält.
+*Loc*<br/>
+Das Gebietsschema, das das zu testende alphabetische Element enthält, welches getestet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -234,9 +239,11 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parameter
 
-*CH* die zu testende Element.
+*CH*<br/>
+Das zu testende Element.
 
-*LOC* das Gebietsschema, das die zu testende Element enthält.
+*Loc*<br/>
+Das Gebietsschema, das das zu testende Element enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -297,9 +304,11 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parameter
 
-*CH* die zu testende Element.
+*CH*<br/>
+Das zu testende Element.
 
-*LOC* das Gebietsschema, das die zu testende Element enthält.
+*Loc*<br/>
+Das Gebietsschema, das das zu testende Element enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -360,9 +369,11 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parameter
 
-*CH* die zu testende Element.
+*CH*<br/>
+Das zu testende Element.
 
-*LOC* das Gebietsschema, das die zu testende Element enthält.
+*Loc*<br/>
+Das Gebietsschema, das das zu testende Element enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -423,9 +434,11 @@ bool islower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parameter
 
-*CH* die zu testende Element.
+*CH*<br/>
+Das zu testende Element.
 
-*LOC* das Gebietsschema, das die zu testende Element enthält.
+*Loc*<br/>
+Das Gebietsschema, das das zu testende Element enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -486,9 +499,11 @@ bool isprint(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parameter
 
-*CH* die zu testende Element.
+*CH*<br/>
+Das zu testende Element.
 
-*LOC* das Gebietsschema, das die zu testende Element enthält.
+*Loc*<br/>
+Das Gebietsschema, das das zu testende Element enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -548,9 +563,11 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parameter
 
-*CH* die zu testende Element.
+*CH*<br/>
+Das zu testende Element.
 
-*LOC* das Gebietsschema, das die zu testende Element enthält.
+*Loc*<br/>
+Das Gebietsschema, das das zu testende Element enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -611,9 +628,11 @@ bool isspace(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parameter
 
-*CH* die zu testende Element.
+*CH*<br/>
+Das zu testende Element.
 
-*LOC* das Gebietsschema, das die zu testende Element enthält.
+*Loc*<br/>
+Das Gebietsschema, das das zu testende Element enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -674,9 +693,11 @@ bool isupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parameter
 
-*CH* die zu testende Element.
+*CH*<br/>
+Das zu testende Element.
 
-*LOC* das Gebietsschema, das die zu testende Element enthält.
+*Loc*<br/>
+Das Gebietsschema, das das zu testende Element enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -737,9 +758,11 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parameter
 
-*CH* die zu testende Element.
+*CH*<br/>
+Das zu testende Element.
 
-*LOC* das Gebietsschema, das die zu testende Element enthält.
+*Loc*<br/>
+Das Gebietsschema, das das zu testende Element enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -802,9 +825,11 @@ CharType tolower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parameter
 
-*CH* das Zeichen in Kleinbuchstaben konvertiert werden soll.
+*CH*<br/>
+Das Zeichen, das in einen Kleinbuchstaben umgewandelt werden soll.
 
-*LOC* das Gebietsschema, mit dem Zeichen konvertiert werden.
+*Loc*<br/>
+Das Gebietsschema, das das zu konvertierende Zeichen enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -849,9 +874,11 @@ CharType toupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parameter
 
-*CH* das Zeichen in Großbuchstaben konvertiert werden soll.
+*CH*<br/>
+Das Zeichen, das in einen Großbuchstaben umgewandelt werden soll.
 
-*LOC* das Gebietsschema, mit dem Zeichen konvertiert werden.
+*Loc*<br/>
+Das Gebietsschema, das das zu konvertierende Zeichen enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -896,7 +923,8 @@ const Facet& use_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Parameter
 
-*LOC* das const-Gebietsschema, die den Typ des Facets, die auf die verwiesen wird.
+*Loc*<br/>
+Das const-Gebietsschema, das den Typ des Facets enthält, auf den verwiesen wird.
 
 ### <a name="return-value"></a>Rückgabewert
 

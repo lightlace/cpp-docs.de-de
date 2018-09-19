@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Abrufen von Summen und anderen Aggregatergebnissen (ODBC) | Microsoft Docs'
+title: 'Recordset: Abrufen von Summen und anderen Aggregatergebnissen (ODBC) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,83 +21,85 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4aa6de58e7e2c530a7a353281ba5af747f48cd4e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d78b6375736c35b7a1d49436c870d7f807f6c78
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092072"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032366"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Recordset: Abrufen von Summen und anderen Aggregatergebnissen (ODBC)
+
 Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
   
- In diesem Thema wird erläutert, wie zum Abrufen von Aggregatergebnissen mithilfe des folgenden [SQL](../../data/odbc/sql.md) Schlüsselwörter:  
+In diesem Thema wird erläutert, wie zum Abrufen der Ergebnisse mit den folgenden [SQL](../../data/odbc/sql.md) Schlüsselwörter:  
   
--   **Summe** berechnet die Summe der Werte in einer Spalte mit einem numerischen Datentyp.  
+- **Summe** berechnet die Summe der Werte in einer Spalte mit einem numerischen Datentyp.  
   
--   **MIN** extrahiert den kleinsten Wert in einer Spalte mit einem numerischen Datentyp.  
+- **Min.** extrahiert den kleinsten Wert in einer Spalte mit einem numerischen Datentyp.  
   
--   **Max.** extrahiert den größten Wert in einer Spalte mit einem numerischen Datentyp.  
+- **Max.** extrahiert den größten Wert in einer Spalte mit einem numerischen Datentyp.  
   
--   **AVG** berechnet den Durchschnitt aller Werte in einer Spalte mit einem numerischen Datentyp.  
+- **Durchschn.** berechnet den Durchschnitt aller Werte in einer Spalte mit einem numerischen Datentyp.  
   
--   **Anzahl** zählt die Anzahl der Datensätze in einer Spalte eines beliebigen Datentyps.  
+- **Anzahl** zählt die Anzahl der Datensätze in einer Spalte eines beliebigen Datentyps.  
   
- Statistische Informationen zu den Datensätzen in einer Datenquelle abrufen, anstatt Datensätze aus der Datenquelle zu extrahieren, verwenden Sie diese SQL-Funktionen. Das Recordset, das in der Regel erstellt wird, besteht aus einem einzelnen Datensatz (wenn alle Spalten Aggregate sind), die einen Wert enthält. (Es kann mehr als ein Datensatz sein, wenn Sie verwendet ein **GROUP BY** Klausel.) Dieser Wert ist das Ergebnis der Berechnung oder extrahieren, die von der SQL-Funktion ausgeführt wird.  
+Sie können diese SQL-Funktionen verwenden, um statistische Informationen zu den Datensätzen in einer Datenquelle abzurufen, statt zum Extrahieren von Datensätzen aus der Datenquelle. Das Recordset, das in der Regel erstellt wird, besteht aus einem einzelnen Datensatz (wenn alle Spalten Aggregate sind), die einen Wert enthält. (Es kann mehr als einem Datensatz sein, wenn Sie verwendet eine **GROUP BY** Klausel.) Dieser Wert ist das Ergebnis der Berechnung oder extrahieren, die von der SQL-Funktion ausgeführt wird.  
   
 > [!TIP]
->  Hinzufügen eine SQL **GROUP BY** -Klausel (und möglicherweise eine **HAVING** Klausel) in die SQL-Anweisung fügt diese am Ende der **M_strFilter**. Zum Beispiel:  
+>  Hinzufügen eine SQL **GROUP BY** Klausel (und möglicherweise eine **HAVING** Klausel) der SQL-Anweisung, fügen sie am Ende der `m_strFilter`. Zum Beispiel:  
   
 ```  
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";  
 ```  
   
- Sie können die Anzahl der Datensätze einschränken, die Sie verwenden, so aggregieren Sie Ergebnisse filtern und sortieren die Spalten erhalten.  
+Sie können die Anzahl der Datensätze einschränken, die Sie verwenden, um aggregierte Ergebnisse zu erhalten, durch Filtern und Sortieren nach Spalten.  
   
 > [!CAUTION]
->  Einige Aggregation Operator gibt einen anderen Datentyp zurück, aus den Spalten, die über denen sie die Aggregation durchgeführt werden.  
+>  Einige aggregationsoperatoren zurückgeben ein anderen Datentyps aus den Spalten, die über die sie ausgeführt werden.  
   
--   **Summe** und **AVG** möglicherweise den größeren Datentyp zurück (z. B. Aufrufen mit `int` gibt **lange** oder **doppelte**).  
+- **Summe** und **AVG** möglicherweise den größeren Datentyp zurück (z. B. Aufrufen mit `int` gibt **lange** oder **doppelte**).  
   
--   **Anzahl** in der Regel gibt **lange** unabhängig vom Typ der Zielspalte.  
+- **Anzahl** gibt i. d. r. **lange** unabhängig vom Typ der Zielspalte.  
   
--   **Max.** und **MIN** den gleichen Datentyp wie die Spalten, die sie berechnen zurückgeben.  
+- **Max.** und **MIN** denselben Datentyp wie die Spalten, die berechnet, zurückgegeben.  
   
-     Z. B. die **Klasse hinzufügen** -Assistent erstellt `long` `m_lSales` ersetzen Sie dabei auf eine Salesspalte, aber Sie müssen eine `double m_dblSumSales` Datenmember, um das aggregierte Ergebnis zu berücksichtigen. Weitere Informationen finden Sie im folgenden Beispiel.  
+     Z. B. die **Klasse hinzufügen** -Assistent erstellt `long` `m_lSales` eine Salesspalte, aber Sie berücksichtigen muss, ersetzen Sie dies mit einem `double m_dblSumSales` Datenmembers, der das aggregierte Ergebnis zu berücksichtigen. Weitere Informationen finden Sie im folgenden Beispiel.  
   
-#### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Um eine aggregierte Ergebnis für ein Recordset zu erhalten  
+#### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Um eine aggregierte Ergebnis für ein Recordset zu erhalten.  
   
-1.  Erstellen Sie ein Recordset, wie beschrieben in [Hinzufügen eines MFC-ODBC-Consumers](../../mfc/reference/adding-an-mfc-odbc-consumer.md) mit den Spalten, die von dem Sie aggregierte Ergebnisse abrufen möchten.  
+1. Erstellen Sie ein Recordset, wie im [Hinzufügen eines MFC-ODBC-Consumers](../../mfc/reference/adding-an-mfc-odbc-consumer.md) mit den Spalten, die aus dem Aggregieren der Ergebnisse abgerufen werden sollen.  
   
-2.  Ändern der [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) Funktion für das Recordset. Ersetzen Sie die Zeichenfolge, die den Namen der Spalte darstellt (das zweite Argument für die [RFX](../../data/odbc/record-field-exchange-using-rfx.md) Funktionsaufrufe) mit einer Zeichenfolge, die die Aggregatfunktion für die Spalte darstellt. Ersetzen Sie beispielsweise:  
+1. Ändern der [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) -Funktion für das Recordset. Ersetzen Sie die Zeichenfolge, die den Namen der Spalte darstellt (das zweite Argument der der [RFX](../../data/odbc/record-field-exchange-using-rfx.md) Funktionsaufrufe) mit einer Zeichenfolge, die die Aggregatfunktion für die Spalte darstellt. Ersetzen Sie z. B.:  
   
     ```  
     RFX_Long(pFX, "Sales", m_lSales);  
     ```  
   
-     Mit:  
+     Durch:  
   
     ```  
     RFX_Double(pFX, "Sum(Sales)", m_dblSumSales)  
     ```  
   
-3.  Öffnen des Recordsets. Das Ergebnis des Aggregationsvorgangs verbleibt im `m_dblSumSales`.  
+1. Öffnen des Recordsets. Das Ergebnis des Aggregationsvorgangs verbleibt im `m_dblSumSales`.  
   
 > [!NOTE]
->  Der Assistent weist tatsächlich den Datenmembernamen ohne Ungarisch Präfixe. Der Assistent wäre z. B. `m_Sales` für eine Salesspalte statt über das `m_lSales` Namen, die zuvor zur Veranschaulichung verwendet.  
+>  Der Assistent weist tatsächlich Datenmembernamen ohne Ungarisch Präfixe. Der Assistent wäre z. B. `m_Sales` für eine Spalte "Sales" anstelle der `m_lSales` Namen, die zuvor zur Veranschaulichung verwendet.  
   
- Bei Verwendung einer [CRecordView](../../mfc/reference/crecordview-class.md) Klasse, um die Daten anzuzeigen, müssen Sie den DDX-Funktionsaufruf. zum Anzeigen der neuen Daten Elementwert; ändern in diesem Fall ändern Sie es aus:  
+Bei Verwendung einer [CRecordView](../../mfc/reference/crecordview-class.md) Klasse, um die Daten anzuzeigen, müssen Sie so ändern den DDX-Funktionsaufruf zum Anzeigen des neuen Werts des Daten-Element; in diesem Fall Änderung von:  
   
 ```  
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_lSales, m_pSet);  
 ```  
   
- Nach:  
+Nach:  
   
 ```  
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)   
- [Recordset: Wie Recordsets Datensätze auswählen (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+
+[Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
+[Recordset: Wie Recordsets Datensätze auswählen (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

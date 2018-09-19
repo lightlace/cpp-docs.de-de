@@ -1,7 +1,7 @@
 ---
-title: DF | Microsoft Docs
+title: DF | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 264c65e70b3ee6967b884b816a57181596d9840c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 2cb82703d503b41994baedd4e94edba85214671c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051745"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687268"
 ---
 # <a name="df"></a>DF
-Zum Belegen und optional initialisiert 6 Bytes des Speichers für die einzelnen `initializer`. `DF` ist ein Synonym für [FWORD](../../assembler/masm/fword.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-[[name]] DF initializer [[, initializer]]...  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Kann auch verwendet werden, als Typspezifizierer an einer beliebigen Stelle ist ein Typ zulässig.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+
+Zugewiesen und initialisiert Sie optional 6 Bytes Speicherplatz für die einzelnen `initializer`. `DF` ist ein Synonym für [FWORD](../../assembler/masm/fword.md).
+
+## <a name="syntax"></a>Syntax
+
+> [[Name]] DF-Initialisierer [[, Initialisierer]]...
+
+## <a name="remarks"></a>Hinweise
+
+Kann auch verwendet werden, als Typspezifizierer an einer beliebigen Stelle ist ein Typ zulässig.
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

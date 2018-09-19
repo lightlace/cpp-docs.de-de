@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03b88f2c295ae4fa31a0afd2093251c94e1c6b79
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: dcf5cbf6522d90b6338b817eebac434c81bf7c9a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853861"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080687"
 ---
 # <a name="crgn-class"></a>CRgn-Klasse
 Kapselt einen Bereich der Windows GDI (Graphics Device Interface).  
@@ -326,13 +326,12 @@ BOOL CreatePolygonRgn(
  *lpPoints*  
  Verweist auf ein Array von `POINT` Strukturen oder ein Array von `CPoint` Objekte. Jede Struktur gibt an, die X-Koordinate und y-Koordinate eines scheitels des Polygons. Die `POINT` Struktur weist folgende Form:  
   
- `typedef struct tagPOINT {`  
-  
- `int x;`  
-  
- `int y;`  
-  
- `} POINT;`  
+```cpp
+typedef struct tagPOINT {
+    int x;
+    int y;
+} POINT;
+```
   
  *nCount*  
  Gibt die Anzahl der `POINT` Strukturen oder `CPoint` Objekte im Array zeigt *LpPoints*.  
@@ -372,13 +371,12 @@ BOOL CreatePolyPolygonRgn(
  *lpPoints*  
  Verweist auf ein Array von `POINT` Strukturen oder ein Array von `CPoint` Objekte, die den Vertices für die Polygone definiert. Jedes Polygon muss explizit geschlossen werden, da das System nicht diese automatisch geschlossen wird. Die Polygone werden nacheinander angegeben werden. Die `POINT` Struktur weist folgende Form:  
   
- `typedef struct tagPOINT {`  
-  
- `int x;`  
-  
- `int y;`  
-  
- `} POINT;`  
+```cpp
+typedef struct tagPOINT {
+    int x;
+    int y;
+} POINT;
+```
   
  *lpPolyCounts*  
  Zeigt auf ein Array von ganzen Zahlen. Die erste ganze Zahl gibt die Anzahl der Scheitelpunkte im ersten Polygons in die *LpPoints* Array ist, die zweite ganze Zahl gibt die Anzahl der Scheitelpunkte in der zweiten Polygon- und So weiter.  
@@ -453,17 +451,14 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
  *lpRect*  
  Verweist auf eine `RECT` Struktur oder `CRect` Objekt, das die logischen Koordinaten der oberen linken und rechten unteren Ecke des Bereichs enthält. Die `RECT` Struktur weist folgende Form:  
   
- `typedef struct tagRECT {`  
-  
- `int left;`  
-  
- `int top;`  
-  
- `int right;`  
-  
- `int bottom;`  
-  
- `} RECT;`  
+```cpp
+typedef struct tagRECT {
+    int left;
+    int top;
+    int right;
+    int bottom;
+} RECT;
+```
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn der Vorgang erfolgreich war; andernfalls 0.  
@@ -678,7 +673,7 @@ operator HRGN() const;
 ### <a name="remarks"></a>Hinweise  
  Dieser Operator ist ein Umwandlungsoperator, die direkte Verwendung eines Objekts HRGN unterstützt.  
   
- Weitere Informationen zur Verwendung von Grafikobjekten finden Sie im Artikel [Grafik Objekte](http://msdn.microsoft.com/library/windows/desktop/dd144962) im Windows SDK.  
+ Weitere Informationen zur Verwendung von Grafikobjekten finden Sie im Artikel [Grafik Objekte](/windows/desktop/gdi/graphic-objects) im Windows SDK.  
   
 ##  <a name="ptinregion"></a>  CRgn::PtInRegion  
  Überprüft, ob der Punkt, der von *x* und *y* ist in der Region gespeichert, der `CRgn` Objekt.  
@@ -715,17 +710,14 @@ BOOL RectInRegion(LPCRECT lpRect) const;
  *lpRect*  
  Verweist auf eine `RECT` Struktur oder `CRect` Objekt. Die `RECT` Struktur weist folgende Form:  
   
- `typedef struct tagRECT {`  
-  
- `int left;`  
-  
- `int top;`  
-  
- `int right;`  
-  
- `int bottom;`  
-  
- `} RECT;`  
+```cpp
+typedef struct tagRECT {
+    int left;
+    int top;
+    int right;
+    int bottom;
+} RECT;
+```
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn alle Teil des angegebenen Rechtecks liegt innerhalb der Grenzen des Bereichs; andernfalls 0.  

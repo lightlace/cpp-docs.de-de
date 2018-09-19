@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Detach-Methode | Microsoft Docs'
+title: 'Comptr:: Detach-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: afa5976d26351ed3022c58fa8226b6038fa816c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 84db0a82dfe6f9333f6a533aa9bc2bb529854fa2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883592"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593411"
 ---
 # <a name="comptrdetach-method"></a>ComPtr::Detach-Methode
-Hebt die Zuordnung dieser `ComPtr` Objekt von der Schnittstelle, die es darstellt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-T* Detach();  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die Schnittstelle, die von diesem dargestellt wurde `ComPtr` Objekt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [ComPtr-Klasse](../windows/comptr-class.md)
+
+Hebt die Zuordnung dieser **ComPtr** Objekt von der Schnittstelle, die es darstellt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+T* Detach();
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Ein Zeiger auf die Schnittstelle, die von diesem dargestellt wurde **ComPtr** Objekt.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[ComPtr-Klasse](../windows/comptr-class.md)

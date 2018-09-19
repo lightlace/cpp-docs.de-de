@@ -1,5 +1,5 @@
 ---
-title: Anzeigen von Ressourcensymbolen | Microsoft Docs
+title: Anzeigen von Ressourcensymbolen (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,40 +10,40 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- resources [Visual Studio], viewing
+- resources [C++], viewing
 - resource symbols
-- symbols, viewing
+- symbols [C++], viewing
 ms.assetid: 4bcc06d9-7d36-486a-8a37-71da0541643c
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea57af6ef6ff91b7149006f63963cff55f6eebc4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0a0a73657d5ea2167e8156a2567e39acf16f055d
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891106"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317679"
 ---
 # <a name="viewing-resource-symbols"></a>Anzeigen von Ressourcensymbolen
-### <a name="to-view-resource-symbols"></a>So zeigen Sie Ressourcensymbole an  
-  
-1.  In [Ressourcenansicht](../windows/resource-view-window.md), mit der rechten Maustaste der RC-Datei.  
-  
-    > [!NOTE]
-    >  Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  Wählen Sie **Ressourcensymbole** aus dem Kontextmenü anzeigen eine Ressourcensymboltabelle im die [Ressourcensymbole (Dialogfeld)](../windows/resource-symbols-dialog-box.md).  
-  
-    > [!NOTE]
-    >  Überprüfen Sie zum Anzeigen vordefinierter Symbole das **schreibgeschützte Symbole anzeigen** Kontrollkästchen.  
-  
 
-  
- **Anforderungen**  
-  
- Win32  
-  
-## <a name="see-also"></a>Siehe auch  
- [Symbole: Ressourcenbezeichner](../windows/symbols-resource-identifiers.md)
+### <a name="to-view-resource-symbols"></a>So zeigen Sie Ressourcensymbole an
+
+1. In [Ressourcenansicht](../windows/resource-view-window.md), mit der rechten Maustaste in der RC-Datei.
+
+   > [!NOTE]
+   > Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).
+
+2. Wählen Sie **Ressourcensymbole** aus dem Kontextmenü zum Anzeigen einer Ressourcensymboltabelle im der [Dialogfeld Ressourcensymbole](../windows/resource-symbols-dialog-box.md).
+
+   > [!NOTE]
+   > Vordefinierte Symbole sehen Sie die **schreibgeschützte Symbole anzeigen** Kontrollkästchen.
+
+## <a name="requirements"></a>Anforderungen
+
+Win32
+
+## <a name="see-also"></a>Siehe auch
+
+[Symbole: Ressourcenbezeichner](../windows/symbols-resource-identifiers.md)

@@ -1,5 +1,5 @@
 ---
-title: Inline_recursion | Microsoft Docs
+title: Inline_recursion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f81347c8286dfa1f0651af43bd3134565a22aade
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 222cb7151d975219d0e92bd1270778586e89b4d3
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849495"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42543127"
 ---
 # <a name="inlinerecursion"></a>inline_recursion
 Steuert die Inlineerweiterung von direkten oder wechselseitig rekursiven Funktionsaufrufen.  
@@ -31,16 +31,17 @@ Steuert die Inlineerweiterung von direkten oder wechselseitig rekursiven Funktio
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 #pragma inline_recursion( [{on | off}] )  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Mit diesem Pragma Steuerungsfunktionen markiert ist, als [Inline](../cpp/inline-functions-cpp.md) und [__inline](../cpp/inline-functions-cpp.md) oder Funktionen, die der Compiler automatisch unter der/Ob2-Option erweitert. Die Verwendung dieses Pragmas erfordert eine [tatsächlich](../build/reference/ob-inline-function-expansion.md) Einstellung von 1 oder 2. Standardmäßig ist `inline_recursion` deaktiviert. Dieses Pragma tritt mit dem ersten Funktionsaufruf in Kraft, nachdem das Pragma angezeigt wird, und hat keinen Einfluss auf die Definition der Funktion.  
+ 
+Mit diesem Pragma Steuerungsfunktionen für die als markiert [Inline](../cpp/inline-functions-cpp.md) und ["__inline"](../cpp/inline-functions-cpp.md) oder Funktionen, die der Compiler automatisch unter Erweitert die `/Ob2` Option. Verwendung dieses Pragmas erfordert eine [tatsächlich](../build/reference/ob-inline-function-expansion.md) Einstellung von 1 oder 2. Der Standardzustand für **Inline_recursion** ist deaktiviert. Dieses Pragma tritt mit dem ersten Funktionsaufruf in Kraft, nachdem das Pragma angezeigt wird, und hat keinen Einfluss auf die Definition der Funktion.  
   
- Das `inline_recursion`-Pragma legt fest, wie rekursive Funktionen erweitert werden. Wenn `inline_recursion` deaktiviert ist und eine Inlinefunktion sich selbst aufruft (entweder direkt oder indirekt), wird die Funktion nur einmal erweitert. Wenn `inline_recursion` ist, wird die Funktion mehrmals erweitert, bis er mit festlegen Wert erreicht die [Inline_depth](../preprocessor/inline-depth.md) Pragma, der Standardwert für rekursive Funktionen, die von definiert ist die `inline_depth` Pragma oder Kapazität beschränken .  
+Die **Inline_recursion** Pragma steuert, wie rekursive Funktionen erweitert werden. Wenn **Inline_recursion** ist deaktiviert und ist eine Inlinefunktion sich selbst (entweder direkt oder indirekt), die Funktion aufruft, nur einmal erweitert. Wenn **Inline_recursion** ist, wird die Funktion mehrmals erweitert, bis sie den mit festgelegten Wert erreicht die [Inline_depth](../preprocessor/inline-depth.md) Pragma, der Standardwert für rekursive Funktionen, die durch die definiertist`inline_depth` -Pragma, oder eine Kapazität zu beschränken.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [inline_depth](../preprocessor/inline-depth.md)   
- [/Ob (Inlinefunktionserweiterung)](../build/reference/ob-inline-function-expansion.md)
+ 
+[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[inline_depth](../preprocessor/inline-depth.md)   
+[/Ob (Inlinefunktionserweiterung)](../build/reference/ob-inline-function-expansion.md)

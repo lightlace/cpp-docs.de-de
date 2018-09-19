@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen von CLR-Konsolenanwendungen (C + c++ / CLI) | Microsoft Docs'
+title: 'Vorgehensweise: Erstellen von CLR-Konsolenanwendungen (C++ / CLI) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3257d690ac949edff7958615656db052c3468c01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60804b3863a4b44bc963f289b1d6a8c2f2d5cbf7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33132569"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211156"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>Gewusst wie: Erstellen von CLR-Konsolenanwendungen (C++/CLI)
 Sie können die Vorlage für Konsolenanwendungen zum Erstellen eines Konsolen-App-Projekts verwenden, das bereits wesentliche Projektverweise und Dateien enthält.  
@@ -32,7 +32,7 @@ Sie können die Vorlage für Konsolenanwendungen zum Erstellen eines Konsolen-Ap
   
 -   Verweise auf diese .NET Framework-Namespaces:  
   
-    -   [System](https://msdn.microsoft.com/en-us/library/system.appdomainmanager.appdomainmanager.aspx)– Enthält grundlegende Klassen und Basisklassen zur Definition allgemein verwendeter Werte und Verweisdatentypen, Ereignisse und Ereignishandler, Schnittstellen, Attribute und Verarbeitungsausnahmen.  
+    -   [System](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)– enthält grundlegende Klassen und Basisklassen, definieren häufig, verwendete Werte und Verweisdatentypen, Ereignisse und Ereignishandler, Schnittstellen, Attribute und Verarbeitungsausnahmen.  
   
     -   mscorlib – Assembly-DLL, die die .NET Framework-Entwicklung unterstützt.  
   
@@ -71,6 +71,6 @@ Sie können die Vorlage für Konsolenanwendungen zum Erstellen eines Konsolen-Ap
 4.  Klicken Sie auf die Schaltfläche **OK** .  
   
 ## <a name="see-also"></a>Siehe auch  
- [CLR-Projekte](../ide/files-created-for-clr-projects.md)   
+ [CLR Projects (CLR-Projekte)](../ide/files-created-for-clr-projects.md)   
 
 

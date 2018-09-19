@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2135 | Microsoft Docs
+title: Compilerfehler C2135 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8029738e18af87b8c6a9f3e6ee9d9d2e3f6a46f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4945753bec1ab8d315c8f8028bf10513dcb21c1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168476"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070067"
 ---
 # <a name="compiler-error-c2135"></a>Compilerfehler C2135
-'bit operator': Ungültiger Bitfeldvorgang.  
-  
- Der address-of-Operator (`&`) kann nicht auf ein Bitfeld angewendet werden.  
-  
- Das folgende Beispiel generiert C2135:  
-  
-```  
-// C2135.cpp  
-struct S {  
-   int i : 1;  
-};  
-  
-struct T {  
-   int j;  
-};  
-int main() {  
-   &S::i;   // C2135 address of a bit field  
-   &T::j;   // OK  
-}  
+
+'bit operator': Ungültiger Bitfeldvorgang.
+
+Der address-of-Operator (`&`) kann nicht auf ein Bitfeld angewendet werden.
+
+Das folgende Beispiel generiert C2135:
+
+```
+// C2135.cpp
+struct S {
+   int i : 1;
+};
+
+struct T {
+   int j;
+};
+int main() {
+   &S::i;   // C2135 address of a bit field
+   &T::j;   // OK
+}
 ```

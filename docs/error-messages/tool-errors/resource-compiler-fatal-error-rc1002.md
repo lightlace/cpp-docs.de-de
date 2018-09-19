@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcencompiler: Schwerwiegender Fehler RC1002 | Microsoft Docs'
+title: 'Ressourcencompiler: Schwerwiegender Fehler RC1002 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 886b44d0a51df10295428daa69c8ea358660fd25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d54f49b7cce988c5902a01142efe061ba03e424
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321664"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114526"
 ---
 # <a name="resource-compiler-fatal-error-rc1002"></a>Ressourcencompiler: Schwerwiegender Fehler RC1002
-Heap erschöpft  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>So beheben Sie den Fehler (unterschiedliche Lösungsmöglichkeiten)  
-  
-1.  Den Windows-Auslagerungsdatei Speicherplatz zu erhöhen. Weitere Informationen zum Vergrößern der Auslagerungsdatei finden Sie unter Virtueller Arbeitsspeicher im Windows-Hilfe.  
-  
-2.  Teilen Sie die aktuelle Datei in kleinere Dateien, und kompilieren Sie diese separat.  
-  
-3.  Entfernen Sie andere Programme oder Treiber auf dem System ausgeführt wird.
+
+kein weiterer Heapspeicher verfügbar
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>So beheben Sie den Fehler (unterschiedliche Lösungsmöglichkeiten)
+
+1. Den Windows-Auslagerungsdatei Speicherplatz zu erhöhen. Weitere Informationen zum Erhöhen der Auslagerungsdatei finden Sie unter Virtueller Arbeitsspeicher im Windows-Hilfe.
+
+1. Die aktuelle Datei in kleinere Dateien aufgeteilt, und kompilieren Sie sie separat.
+
+1. Entfernen Sie andere Programme oder Treiber, die auf dem System ausgeführt.

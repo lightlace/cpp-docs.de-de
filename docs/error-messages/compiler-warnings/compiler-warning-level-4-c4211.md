@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4211 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4211 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8112927940e5e2f17a4e74e2855a035bc7d5e5cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f2c92ef68768f4a9f8ac606716d5ae53c4aa72e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292346"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048213"
 ---
 # <a name="compiler-warning-level-4-c4211"></a>Compilerwarnung (Stufe 4) C4211
-nicht dem Standard entsprechende Erweiterung: Neudefinition von Extern als statisch  
-  
- Mit den Standard-Microsoft-Erweiterungen (/ Ze), können Sie definieren eine `extern` Bezeichner als **statische**.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// C4211.c  
-// compile with: /W4  
-extern int i;  
-static int i;   // C4211  
-  
-int main()  
-{  
-}  
-```  
-  
- Derartige Neudefinitionen sind ungültig, ANSI-Kompatibilität (["/ Za"](../../build/reference/za-ze-disable-language-extensions.md)).  
-  
-## <a name="see-also"></a>Siehe auch  
+
+nicht dem Standard entsprechende Erweiterung: Neudefinition von Extern als statisch
+
+Mit den Standard-Microsoft-Erweiterungen (/ Ze), können Sie definieren eine `extern` Bezeichner als **statische**.
+
+## <a name="example"></a>Beispiel
+
+```
+// C4211.c
+// compile with: /W4
+extern int i;
+static int i;   // C4211
+
+int main()
+{
+}
+```
+
+Derartige Neudefinitionen sind ungültig, ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+
+## <a name="see-also"></a>Siehe auch
 
 

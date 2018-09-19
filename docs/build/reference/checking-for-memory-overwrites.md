@@ -1,5 +1,5 @@
 ---
-title: Die Überprüfung auf Speicherüberschreibung | Microsoft Docs
+title: Überprüfung auf Speicherüberschreibung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,28 +14,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 258aa6ae01d48df6717135f7dc8b73fc3f9e697a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 246f625e899016080662f27a5901962c1c62f1a8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369850"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718642"
 ---
 # <a name="checking-for-memory-overwrites"></a>Suchen nach Speicherüberschreibungen
-Wenn Sie eine zugriffsverletzung bei einem Aufruf an eine Funktion der Heap Manipulation erhalten, ist es möglich, dass das Programm auf den Heap beschädigt ist. Ein häufig auftretendes Problem diese Situation würde folgendermaßen lauten:  
-  
-```  
-Access Violation in _searchseg  
-```  
-  
- Die [_heapchk](../../c-runtime-library/reference/heapchk.md) -Funktion steht in sowohl Debug- und Releasebuilds (nur Windows NT) zum Überprüfen der Integrität des Heaps zur Laufzeit-Bibliothek. Können Sie `_heapchk` im großen und ganzen genauso wie die `AfxCheckMemory` Funktion, um einen Heap überschreiben, z. B. zu isolieren:  
-  
-```  
-if(_heapchk()!=_HEAPOK)  
-   DebugBreak();  
-```  
-  
- Wenn diese Funktion einmal ein Fehler auftritt, müssen Sie isolieren an diesem, die Punkt der Heap beschädigt wurde.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Beheben von Problemen mit dem Releasebuild](../../build/reference/fixing-release-build-problems.md)
+
+Wenn Sie eine zugriffsverletzung bei einem Aufruf von Manipulation heapfunktion erhalten, ist es möglich, dass das Programm im Heap beschädigt hat. Ein häufig auftretendes Problem, diese Situation wäre:
+
+```
+Access Violation in _searchseg
+```
+
+Die [_heapchk](../../c-runtime-library/reference/heapchk.md) Funktion steht in sowohl für Debug- und Releasebuilds (nur Windows NT) zum Überprüfen der Integrität des Heaps-Bibliothek zur Laufzeit. Sie können `_heapchk` in die gleiche Weise wie der `AfxCheckMemory` Funktion, um einen Heap überschreiben, z. B. zu isolieren:
+
+```
+if(_heapchk()!=_HEAPOK)
+   DebugBreak();
+```
+
+Wenn diese Funktion immer ein Fehler auftritt, müssen Sie zu isolieren, Zeitpunkt der Heap beschädigt wurde.
+
+## <a name="see-also"></a>Siehe auch
+
+[Beheben von Problemen mit dem Releasebuild](../../build/reference/fixing-release-build-problems.md)

@@ -1,5 +1,5 @@
 ---
-title: __writecr4 | Microsoft Docs
+title: __writecr4 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d59949c031db6e33bbfb1ac56151c5bc57a972d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ab6941e891d75e06aaea1ca492a3c64e509b0f7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326130"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711671"
 ---
 # <a name="writecr4"></a>__writecr4
 **Microsoft-spezifisch**  
   
- Schreibt den Wert `Data` die CR4 registriert wird.  
+ Schreibt den Wert `Data` dem CR4-Register.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,14 +37,14 @@ void writecr4(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `Data`  
- Der Wert, der registriert wird, CR4 zu schreiben.  
+*Data*<br/>
+[in] Der Wert, der registriert wird, CR4 geschrieben werden soll.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__writecr4`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writecr4`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

@@ -1,5 +1,5 @@
 ---
-title: Rename_namespace | Microsoft Docs
+title: Rename_namespace | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a51114787dde2f858a8409538083282ef292d599
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0876aed966db79b23d506bffd9247dd68d4a3935
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839390"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540424"
 ---
 # <a name="renamenamespace"></a>rename_namespace
 **C++-spezifisch**  
   
- Benennt den Namespace, der die Inhalte der Typbibliothek enthält, um.  
+Benennt den Namespace, der die Inhalte der Typbibliothek enthält, um.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,17 +34,19 @@ ms.locfileid: "33839390"
 rename_namespace("NewName")  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `NewName`  
- Der neue Name des neuen Namespace.  
+### <a name="parameters"></a>Parameter  
+*Neuer Name*  
+Der neue Name des neuen Namespace.  
   
 ## <a name="remarks"></a>Hinweise  
- Es akzeptiert ein einzelnes Argument *NewName*, die den neuen Namen für den Namespace angibt.  
+ 
+Es dauert ein einzelnes Argument, *NewName*, die den neuen Namen für den Namespace angibt.  
   
- Verwenden Sie zum Entfernen des Namespaces der [No_namespace](../preprocessor/no-namespace.md) Attribut.  
+Verwenden Sie zum Entfernen des Namespaces der [No_namespace](../preprocessor/no-namespace.md) Attribut.  
   
- **Ende C++-spezifisch**  
+**Ende C++-spezifisch**  
   
 ## <a name="see-also"></a>Siehe auch  
- [#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)   
- [#import-Direktive](../preprocessor/hash-import-directive-cpp.md)
+ 
+[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)   
+[#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)

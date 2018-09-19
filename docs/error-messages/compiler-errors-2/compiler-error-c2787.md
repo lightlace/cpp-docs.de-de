@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2787 generiert | Microsoft Docs
+title: Compilerfehler C2787 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6b45d27c295b37d859d6451281f52c166dc1691
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4096e5dbd5b885afe3dec136a111ec69a10784f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234625"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109131"
 ---
-# <a name="compiler-error-c2787"></a>Compiler-Fehler C2787 generiert
-'Bezeichner': keine GUID dieses Objekt zugeordnet wurde  
-  
- Die [__uuidof](../../cpp/uuidof-operator.md) -Operator hat einen benutzerdefinierten Typ mit einer GUID verbundenen oder ein Objekt eines solchen benutzerdefinierten Typs. Dieser Fehler tritt auf, wenn das Argument einen benutzerdefinierten Typ ohne GUID ist.  
-  
- Im folgende Beispiel wird C2787 generiert:  
-  
-```  
-// C2787.cpp  
-#include <windows.h>  
-struct F {};  
-  
-struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) F2;  
-  
-int main() {  
-   __uuidof(F);   // C2787  
-   __uuidof(F2);   // OK  
-}  
+# <a name="compiler-error-c2787"></a>Compilerfehler C2787
+
+'Bezeichner': keine GUID dieses Objekt zugeordnet wurde
+
+Die [__uuidof](../../cpp/uuidof-operator.md) -Operator akzeptiert einen benutzerdefinierten Typ mit einer GUID verbundenen oder ein Objekt eines solchen benutzerdefinierten Typs. Dieser Fehler tritt auf, wenn das Argument mit einem benutzerdefinierten Typ mit keine GUID ist.
+
+Im folgende Beispiel wird die C2787 generiert:
+
+```
+// C2787.cpp
+#include <windows.h>
+struct F {};
+
+struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) F2;
+
+int main() {
+   __uuidof(F);   // C2787
+   __uuidof(F2);   // OK
+}
 ```

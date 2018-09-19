@@ -1,5 +1,5 @@
 ---
-title: Aufgabenklasse (Concurrency Runtime) | Microsoft Docs
+title: Task-Klasse (Concurrency Runtime) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5887350d9ccdf6fc4a41d72ae8a70fa38d939390
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3cd783baafec4171618a6994ac4fde13dfe41f56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694094"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097496"
 ---
 # <a name="task-class-concurrency-runtime"></a>Aufgabenklasse (Concurrency Runtime)
-Die Parallel Patterns Library (PPL) `task`-Klasse. Ein `task`-Objekt stellt Arbeit dar, die asynchron und übereinstimmend mit anderen Tasks und paralleler Arbeit , die von parallelen Algorithmen in der Concurrency Runtime erzeugt wird, ausgeführt werden kann. Es enthält bei erfolgreichem Abschluss ein Ergebnis vom Typ `_ResultType`. Tasks des Typs `task<void>` führen zu keinem Ergebnis. Eine Aufgabe kann erwartet und unabhängig von anderen Aufgaben abgebrochen werden. Er kann auch mit anderen Tasks mithilfe von Fortsetzungen erstellt werden ( `then`), und Join ( `when_all`) und Auswahl ( `when_any`) Muster.  
+Die Parallel Patterns Library (PPL) `task`-Klasse. Ein `task`-Objekt stellt Arbeit dar, die asynchron und übereinstimmend mit anderen Tasks und paralleler Arbeit , die von parallelen Algorithmen in der Concurrency Runtime erzeugt wird, ausgeführt werden kann. Es enthält bei erfolgreichem Abschluss ein Ergebnis vom Typ `_ResultType`. Tasks des Typs `task<void>` führen zu keinem Ergebnis. Eine Aufgabe kann erwartet und unabhängig von anderen Aufgaben abgebrochen werden. Sie können auch mit anderen Aufgaben, die mithilfe von Fortsetzungen, bestehen ( `then`), und verbinden ( `when_all`) und Auswahl ( `when_any`) Muster.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,10 +48,12 @@ class task;
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
- `T`  
- `_ReturnType`  
- Der Ergebnistyp dieser Aufgabe.  
+
+*T*<br/>
+Der Typ des Task-Objekt.
+
+*_ReturnType*<br/>
+Der Ergebnistyp dieser Aufgabe.  
   
 ## <a name="members"></a>Mitglieder  
   
@@ -114,7 +116,7 @@ void get() const;
  Wenn die Aufgabe abgebrochen wird, einen Aufruf von `get` löst eine [Task_canceled](task-canceled-class.md) Ausnahme. Wenn die Aufgabe eine Ausnahme während der Ausführung feststellt oder an sie eine Ausnahme aus einer vorherigen Aufgabe weitergegeben wurde, löst ein Aufruf von `get` diese Ausnahme aus.  
   
 > [!IMPORTANT]
->  Rufen Sie in einer app (Universelle Windows Plattform) nicht [Concurrency::task::wait](#wait) oder `get` ( `wait` Aufrufe `get`) im Code, der auf dem STA ausgeführt wird. Andernfalls löst die Laufzeit [invalid_operation](invalid-operation-class.md) da diese Methoden den aktuellen Thread blockieren und dazu führen, die app dass können reagiert. Sie können jedoch die `get`-Methode aufrufen, um das Ergebnis der vorangegangenen Aufgabe in einer aufgabenbasierten Fortsetzung zu erhalten, da das Ergebnis sofort verfügbar ist.  
+>  Rufen Sie in einer app (Universelle Windows Plattform) nicht [Concurrency:: Task::](#wait) oder `get` ( `wait` Aufrufe `get`) im Code, der auf dem STA ausgeführt wird. Andernfalls löst die Laufzeit [invalid_operation](invalid-operation-class.md) daran, dass diese Methoden den aktuellen Thread blockieren, und dazu führen, die app dass kann reagiert. Sie können jedoch die `get`-Methode aufrufen, um das Ergebnis der vorangegangenen Aufgabe in einer aufgabenbasierten Fortsetzung zu erhalten, da das Ergebnis sofort verfügbar ist.  
   
 ##  <a name="is_apartment_aware"></a> is_apartment_aware 
 
@@ -127,7 +129,7 @@ bool is_apartment_aware() const;
 ### <a name="return-value"></a>Rückgabewert  
  `true`, wenn die Aufgabe eine `IAsyncInfo`-Schnittstelle entpackt oder von einer solchen Aufgabe abgeleitet wird, andernfalls `false`.  
   
-##  <a name="is_done"></a>  Task:: is_done-Methode (Concurrency Runtime)   
+##  <a name="is_done"></a>  Task:: is_done-Methode (Concurrency Runtime)  
  Bestimmt, ob die Aufgabe abgeschlossen wurde.  
   
 ```
@@ -151,7 +153,8 @@ bool operator!= (const task<void>& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Rhs`  
+*_Rhs*<br/>
+Die Aufgabe, die verglichen werden soll.
   
 ### <a name="return-value"></a>Rückgabewert  
  `true`, wenn die Objekte sich auf unterschiedliche zugrunde liegenden Aufgaben beziehen, und andernfalls `false`.  
@@ -167,8 +170,8 @@ task& operator= (task&& _Other);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Other`  
- Das `task`-Quellobjekt.  
+*_Sonstige*<br/>
+Das `task`-Quellobjekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -186,7 +189,8 @@ bool operator== (const task<void>& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Rhs`  
+*_Rhs*<br/>
+Die Aufgabe, die verglichen werden soll.
   
 ### <a name="return-value"></a>Rückgabewert  
  `true`, wenn die Objekte auf die gleiche zugrunde liegende Aufgabe verweisen, andernfalls `false`.  
@@ -224,20 +228,20 @@ task(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `T`  
- Der Typ des Parameters, von dem die Aufgabe erstellt werden soll.  
+*T*<br/>
+Der Typ des Parameters, von dem die Aufgabe erstellt werden soll.  
   
- `_Param`  
- Der Parameter, von dem die Aufgabe erstellt werden soll. Dies ist möglicherweise ein Lambda-Ausdruck, ein Funktionsobjekt, ein `task_completion_event<result_type>` Objekt oder eine iasyncinfo Sie Aufgaben in der Windows-Runtime-app. Das Objekt Lambda- oder Funktionsobjekt muss einen Typ entspricht `std::function<X(void)>`, wobei X eine Variable des Typs sein kann `result_type`, `task<result_type>`, oder eine Windows::Foundation::IAsyncInfo in Windows-Runtime-apps.  
+*_Param*<br/>
+Der Parameter, von dem die Aufgabe erstellt werden soll. Ist dies möglicherweise einen Lambda-Ausdruck, der ein Funktionsobjekt, einem `task_completion_event<result_type>` Objekt oder eine iasyncinfo, wenn Sie Aufgaben in Ihrer Windows-Runtime-app verwenden. Lambda-Ausdrucks oder Funktion muss ein Typ wie `std::function<X(void)>`, wobei X eine Variable des Typs sein kann `result_type`, `task<result_type>`, oder eine iasyncinfo in Windows-Runtime-apps.  
   
- `_TaskOptions`  
- Die Aufgabenoptionen enthalten Abbruchtoken, Planer usw.  
+*_TaskOptions*<br/>
+Die Aufgabenoptionen enthalten Abbruchtoken, Planer usw.  
   
- `_Other`  
- Das `task`-Quellobjekt.  
+*_Sonstige*<br/>
+Das `task`-Quellobjekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Standardkonstruktor für `task` ist nur vorhanden, damit Aufgaben in Containern verwendet werden können. Eine erstellte Standardaufgabe kann nicht verwendet werden, bis Sie ihr eine gültige Aufgabe zuweisen. Methoden, z. B. `get`, `wait` oder `then` löst ein [Invalid_argument](../../../standard-library/invalid-argument-class.md) -Ausnahme aus, wenn für eine erstellte Standardaufgabe aufgerufen.  
+ Der Standardkonstruktor für `task` ist nur vorhanden, damit Aufgaben in Containern verwendet werden können. Eine erstellte Standardaufgabe kann nicht verwendet werden, bis Sie ihr eine gültige Aufgabe zuweisen. Methoden, z. B. `get`, `wait` oder `then` löst eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme aus, wenn für eine erstellte Standardaufgabe aufgerufen.  
   
  Eine Aufgabe, die aus einem `task_completion_event` erstellt wird, wird abgeschlossen (und danach werden ihre Fortsetzungen geplant), wenn das Aufgabenabschlussereignis festgelegt ist.  
   
@@ -247,7 +251,7 @@ task(
   
  `task` verhält sich wie ein intelligenter Zeiger und kann mehrmals als Wert übergeben werden. Ein Zugriff ist durch mehrere Threads ohne Sperren möglich.  
   
- Die Konstruktorüberladung, die eine Schnittstelle Windows::Foundation::IAsyncInfo oder einen Lambda-Ausdruck, der eine solche Schnittstelle zurückgibt, sind nur für Windows-Runtime-apps verfügbar.  
+ Konstruktorüberladungen, die eine iasyncinfo-Schnittstelle oder einen Lambda-Ausdruck, der eine solche Schnittstelle zurückgibt, sind nur für Windows-Runtime-apps verfügbar.  
   
  Weitere Informationen finden Sie unter [Aufgabenparallelität](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
@@ -289,28 +293,28 @@ __declspec(
 ```   
   
 ### <a name="parameters"></a>Parameter  
- `_Function`  
- Der Typ des Funktionsobjekts, das von dieser Aufgabe aufgerufen wird.  
+*_Function*<br/>
+Der Typ des Funktionsobjekts, das von dieser Aufgabe aufgerufen wird.  
   
- `_Func`  
- Die Fortsetzungsfunktion, die ausgeführt werden soll, wenn diese Aufgabe abgeschlossen ist. Diese Fortsetzungsfunktion muss als Eingabe die Variable `result_type` oder `task<result_type>` verwenden, wobei `result_type` der Ergebnistyp ist, den diese Aufgabe erzeugt.  
+*_Func*<br/>
+Die Fortsetzungsfunktion, die ausgeführt werden soll, wenn diese Aufgabe abgeschlossen ist. Diese Fortsetzungsfunktion muss als Eingabe die Variable `result_type` oder `task<result_type>` verwenden, wobei `result_type` der Ergebnistyp ist, den diese Aufgabe erzeugt.  
   
- `_TaskOptions`  
- Die Aufgabenoptionen umfassen das Abbruchtoken, den Planer und den Fortsetzungskontext. Standardmäßig werden die vorherigen drei Optionen von der Vorgängeraufgabe geerbt.  
+*_TaskOptions*<br/>
+Die Aufgabenoptionen umfassen das Abbruchtoken, den Planer und den Fortsetzungskontext. Standardmäßig werden die vorherigen drei Optionen von der Vorgängeraufgabe geerbt.  
   
- `_CancellationToken`  
- Das Abbruchtoken, das der Fortsetzungsaufgabe zugeordnet werden soll. Eine Fortsetzungsaufgabe, die ohne ein Abbruchtoken erstellt wird, erbt das Token von der Vorgängeraufgabe.  
+*_CancellationToken*<br/>
+Das Abbruchtoken, das der Fortsetzungsaufgabe zugeordnet werden soll. Eine Fortsetzungsaufgabe, die ohne ein Abbruchtoken erstellt wird, erbt das Token von der Vorgängeraufgabe.  
   
- `_ContinuationContext`  
- Eine Variable, die angibt, wo die Fortsetzung ausgeführt werden soll. Diese Variable ist nur nützlich, wenn in einer uwp-app verwendet. Weitere Informationen finden Sie unter [Task_continuation_context](task-continuation-context-class.md)  
+*_ContinuationContext*<br/>
+Eine Variable, die angibt, wo die Fortsetzung ausgeführt werden soll. Diese Variable ist nur nützlich, wenn in einer UWP-app verwendet. Weitere Informationen finden Sie unter [Task_continuation_context](task-continuation-context-class.md)  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die neu erstellte Fortsetzungsaufgabe. Der Ergebnistyp der zurückgegebenen Aufgabe wird von dem bestimmt, was `_Func` zurückgibt.  
   
 ### <a name="remarks"></a>Hinweise  
- Überladungen der `then` , dass nehmen einen Lambda-Ausdruck oder ein Funktionselement ist, eine Windows::Foundation::IAsyncInfo-Schnittstelle zurückgibt, sind nur für Windows-Runtime-apps verfügbar.  
+ Die Überladungen der `then` , dass ein Lambda oder Funktionselement ist, eine iasyncinfo-Schnittstelle zurückgibt, sind nur für Windows-Runtime-apps verfügbar.  
   
- Weitere Informationen zum Task Fortsetzungen zu verwenden, um asynchrone Aufgaben zu erstellen, finden Sie unter [Aufgabenparallelität](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
+ Weitere Informationen zur Verwendung von aufgabenfortsetzungen für asynchrone Aufgaben finden Sie unter [Aufgabenparallelität](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
 ##  <a name="wait"></a> Warte 
 
@@ -326,7 +330,7 @@ task_status wait() const;
 ### <a name="remarks"></a>Hinweise  
   
 > [!IMPORTANT]
->  Rufen Sie in einer app (Universelle Windows Plattform) nicht `wait` im Code, der auf dem STA ausgeführt wird. Andernfalls löst die Laufzeit [invalid_operation](invalid-operation-class.md) daran, dass diese Methode den aktuellen Thread blockiert und dazu führen, die app dass können reagiert. Sie können jedoch Aufrufen der [Concurrency](#get) Methode, um das Ergebnis der Vorgängeraufgabe in einer aufgabenbasierten Fortsetzung zu erhalten.  
+>  Rufen Sie in einer app (Universelle Windows Plattform) nicht `wait` im Code, der auf dem STA ausgeführt wird. Andernfalls löst die Laufzeit [invalid_operation](invalid-operation-class.md) daran, dass diese Methode den aktuellen Thread blockiert und dazu führen, die app dass kann reagiert. Allerdings rufen Sie die [Concurrency](#get) Methode, um das Ergebnis der Vorgängeraufgabe in einer aufgabenbasierten Fortsetzung zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)

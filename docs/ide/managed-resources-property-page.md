@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2922a0a92a121d6838478daaf2c32f1c7a630d21
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e88f7ccf6f510ad5bcc7178af87714ca22a97252
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340358"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688610"
 ---
 # <a name="managed-resources-property-page"></a>Verwaltete Ressourcen (Eigenschaftenseite)
 Aktiviert Einstellungen für den Ressourcencompiler.  
@@ -42,6 +42,6 @@ Aktiviert Einstellungen für den Ressourcencompiler.
  Informationen zum Zugreifen auf die Eigenschaftenseiten **Verwaltete Ressourcen** finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Using RC (The RC Command Line) (Verwenden des Ressourcencompilers (die RC-Befehlszeile))](http://msdn.microsoft.com/library/windows/desktop/aa381055)   
+ [Using RC (The RC Command Line) (Verwenden des Ressourcencompilers (die RC-Befehlszeile))](/windows/desktop/menurc/using-rc-the-rc-command-line-)   
  [Eigenschaftenseiten](../ide/property-pages-visual-cpp.md)   
  [/ASSEMBLYRESOURCE (Verwaltete Ressource einbetten)](../build/reference/assemblyresource-embed-a-managed-resource.md)

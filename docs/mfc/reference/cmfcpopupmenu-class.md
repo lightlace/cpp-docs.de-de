@@ -170,16 +170,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b80dbc4383b18f3e8183ae06d2259398b5e1223
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 065529796ead2a37b9a417f5e1a2352deb429aba
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852548"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711242"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu-Klasse
 Implementiert die Funktionalität eines Windows-Popupmenüs und erweitert sie durch zusätzliche Funktionen wie abtrennbare Menüs und QuickInfos.
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
+Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.    
   
 ## <a name="syntax"></a>Syntax  
   
@@ -315,8 +315,8 @@ static BOOL __stdcall ActivatePopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pTopFrame*  
- [in] *pPopupMenu*  
+*pTopFrame*<br/>
+[in] [in] *pPopupMenu*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -330,8 +330,8 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bShow*  
- True, wenn Sie im Popupmenü leere Einträge angezeigt werden kann. "False" andernfalls.  
+*bShow*<br/>
+[in] True, wenn Sie im Popupmenü leere Einträge angezeigt werden kann. "False" andernfalls.  
   
 ##  <a name="areallcommandsshown"></a>  CMFCPopupMenu::AreAllCommandsShown  
 
@@ -352,8 +352,8 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *PtScreen*  
- Ein Punkt in Bildschirmkoordinaten.  
+*ptScreen*<br/>
+[in] Ein Punkt in Bildschirmkoordinaten.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein MENUAREA_TYPE-Parameter, der angibt, in dem der Punkt relativ zu dem Popup-Menü befindet.  
@@ -395,11 +395,11 @@ CMFCPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pCustPage*  
- Ein Zeiger auf eine Seite "Anpassung".  
+*pCustPage*<br/>
+[in] Ein Zeiger auf eine Seite "Anpassung".  
   
- [in] *LpszTitle*  
- Eine Zeichenfolge mit der Beschriftung.  
+*lpszTitle*<br/>
+[in] Eine Zeichenfolge mit der Beschriftung.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ordnet die Ressourcen für eine `CMFCPopupMenu`. Rufen Sie zum Erstellen der Popup-Menüelement [CMFCPopupMenu::Create](#create).  
@@ -418,23 +418,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWndParent*  
- Das übergeordnete Fenster für die `CMFCPopupMenu`.  
+*pWndParent*<br/>
+[in] Das übergeordnete Fenster für die `CMFCPopupMenu`.  
   
- [in] *x*  
- Die horizontale Bildschirmkoordinate für den Speicherort des Popupmenüs  
+*w*<br/>
+[in] Die horizontale Bildschirmkoordinate für den Speicherort des Popupmenüs  
   
- [in] *y*  
- Die vertikale Bildschirmkoordinate für den Speicherort der Pop-Menü.  
+*y*<br/>
+[in] Die vertikale Bildschirmkoordinate für den Speicherort der Pop-Menü.  
   
- [in] *hMenu*  
- Ein Handle für eine Menüressource.  
+*hMenu*<br/>
+[in] Ein Handle für eine Menüressource.  
   
- [in] *blockiert*  
- Ein boolescher Parameter, der angibt, ob Sie im Menü angepasst werden kann. FALSE gibt an, dass Sie im Popupmenü angepasst werden kann.  
+*Blockiert*<br/>
+[in] Ein boolescher Parameter, der angibt, ob Sie im Menü angepasst werden kann. FALSE gibt an, dass Sie im Popupmenü angepasst werden kann.  
   
- [in] *bOwnMessage*  
- Ein boolescher Parameter, der angibt, wie das Framework die Menü-Nachrichten weiterleitet. Finden Sie im Abschnitt "Hinweise" Weitere Details.  
+*bOwnMessage*<br/>
+[in] Ein boolescher Parameter, der angibt, wie das Framework die Menü-Nachrichten weiterleitet. Finden Sie im Abschnitt "Hinweise" Weitere Details.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich ist. andernfalls "false".  
@@ -458,8 +458,8 @@ virtual CPane* CreateTearOffBar(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWndMain*  
- [in] *UiID*  
+*pWndMain*<br/>
+[in] [in] *UiID*  
  [in] *Wert*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -487,11 +487,11 @@ void EnableMenuLogo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iLogoSize*  
- Die Größe des Logos, in Pixel.  
+*iLogoSize*<br/>
+[in] Die Größe des Logos, in Pixel.  
   
- [in] *nLogoLocation*  
- Ein Aufzählungsdatentyp, der den Speicherort des Logos angibt.  
+*nLogoLocation*<br/>
+[in] Ein Aufzählungsdatentyp, der den Speicherort des Logos angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn das Logo anzeigen möchten, implementieren Sie die Methode [CFrameWndEx::OnDrawMenuLogo](../../mfc/reference/cframewndex-class.md#ondrawmenulogo) im Hauptrahmenfenster.  
@@ -506,11 +506,11 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- TRUE, um den Sound, andernfalls "false" aktivieren.  
+*bAktivieren*<br/>
+[in] TRUE, um den Sound, andernfalls "false" aktivieren.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie Sound aktivieren, um das Framework Ruft die [PlaySound](http://msdn.microsoft.com/library/windows/desktop/bb774426) Methode, wenn ein Benutzer ein Popupmenü oder einen Befehl auswählt. Standardmäßig ist dieses Feature aktiviert.  
+ Wenn Sie Sound aktivieren, um das Framework Ruft die [PlaySound](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iusernotification-playsound) Methode, wenn ein Benutzer ein Popupmenü oder einen Befehl auswählt. Standardmäßig ist dieses Feature aktiviert.  
   
 ##  <a name="enableresize"></a>  CMFCPopupMenu::EnableResize  
 
@@ -596,8 +596,8 @@ static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bNoSystem*  
- Ein boolescher Parameter, der angibt, ob diese Methode den globalen Wert überprüft. FALSE, wenn diese Methode zum Zurückgeben des Animationsstil ein Stils für diese Instanz die [CMFCPopupMenu-Klasse](../../mfc/reference/cmfcpopupmenu-class.md).  
+*bNoSystem*<br/>
+[in] Ein boolescher Parameter, der angibt, ob diese Methode den globalen Wert überprüft. FALSE, wenn diese Methode zum Zurückgeben des Animationsstil ein Stils für diese Instanz die [CMFCPopupMenu-Klasse](../../mfc/reference/cmfcpopupmenu-class.md).  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Enumerationswert, der den Animationstyp beschreibt.  
@@ -682,8 +682,8 @@ CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iIndex*  
- Der nullbasierte Index eines Menüelements.  
+*iIndex*<br/>
+[in] Der nullbasierte Index eines Menüelements.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf ein Menüelement. NULL, wenn der Indexwert ungültig ist.  
@@ -849,11 +849,11 @@ int InsertItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Schaltfläche*  
- Ein Verweis auf das Menüelement hinzufügen.  
+*Schaltfläche "*<br/>
+[in] Ein Verweis auf das Menüelement hinzufügen.  
   
- [in] *iInsertAt*  
- Der nullbasierte Index für das neue Element. Wenn *iInsertAt* -1 ist, wird das Element am Ende des Menüs hinzugefügt.  
+*iInsertAt*<br/>
+[in] Der nullbasierte Index für das neue Element. Wenn *iInsertAt* -1 ist, wird das Element am Ende des Menüs hinzugefügt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index der Position, an dem das Element eingefügt wurde. -1, wenn die Methode fehlschlägt.  
@@ -869,8 +869,8 @@ int InsertSeparator(int iInsertAt = -1);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iInsertAt*  
- Der nullbasierte Index der Position, in dem diese Methode für das Trennzeichen eingefügt wird.  
+*iInsertAt*<br/>
+[in] Der nullbasierte Index der Position, in dem diese Methode für das Trennzeichen eingefügt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index der Position, an dem das Trennzeichen eingefügt wurde. 1, wenn diese Methode schlägt fehl.  
@@ -1073,10 +1073,10 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- [in] *nCode*  
- [in] *pExtra*  
- [in] *pHandlerInfo*  
+*nID*<br/>
+[in] [in] *nCode*  
+*pExtra*<br/>
+[in] [in] *pHandlerInfo*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -1137,8 +1137,8 @@ BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iIndex*  
- Der nullbasierte Index des zu löschenden Elements.  
+*iIndex*<br/>
+[in] Der nullbasierte Index des zu löschenden Elements.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich ist. andernfalls "false".  
@@ -1163,8 +1163,8 @@ static void SetAnimationSpeed(UINT nElapse);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nElapse*  
- Die neue animationsgeschwindigkeit, in Millisekunden.  
+*nElapse*<br/>
+[in] Die neue animationsgeschwindigkeit, in Millisekunden.  
   
 ### <a name="remarks"></a>Hinweise  
  Die animationsgeschwindigkeit ist ein globaler Wert und wirkt sich auf alle Popup-Menüs in der Anwendung. Dieser Wert gibt an, wie lange es für die Animation für die ein Popupmenü abgeschlossen dauert.  
@@ -1179,8 +1179,8 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Typ*  
- Ein Aufzählungsdatentyp, der den Typ der Animation angibt.  
+*Typ*<br/>
+[in] Ein Aufzählungsdatentyp, der den Typ der Animation angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [CMFCPopupMenu::GetAnimationType](#getanimationtype) eine Liste der gültigen Werte für *Typ*.  
@@ -1205,8 +1205,8 @@ void SetDefaultItem(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmd*  
- Die Menübefehl-ID des neuen Standardbefehls.  
+*uiCmd*<br/>
+[in] Die Menübefehl-ID des neuen Standardbefehls.  
   
 ### <a name="remarks"></a>Hinweise  
  Der Standardbefehl im Popupmenü ist der Befehl, der ausgewählt wird, wenn das Popup-Menü angezeigt wird.  
@@ -1219,8 +1219,8 @@ static void SetForceMenuFocus(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bValue*  
- TRUE, wenn das Framework den Eingabefokus auf der Menüleiste, wenn ein Popup-Menü angezeigt wird erzwungen, das angezeigt werden sollen. "False", wenn Sie im Popupmenü den Fokus beibehalten möchten.  
+*bValue*<br/>
+[in] TRUE, wenn das Framework den Eingabefokus auf der Menüleiste, wenn ein Popup-Menü angezeigt wird erzwungen, das angezeigt werden sollen. "False", wenn Sie im Popupmenü den Fokus beibehalten möchten.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode legt ein Flag, das für alle Popup-Menüs in der Anwendung global ist. Standardmäßig ist dieses Feature nicht aktiviert.  
@@ -1233,8 +1233,8 @@ static void SetForceShadow(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bValue*  
- TRUE, wenn das Framework Menü Schatten, andernfalls "false" gezeichnet werden sollen.  
+*bValue*<br/>
+[in] TRUE, wenn das Framework Menü Schatten, andernfalls "false" gezeichnet werden sollen.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie diese Methode aufrufen, wird ein globalen Kennzeichen geben in Ihrer Anwendung festgelegt. Dieses Flags wirkt sich auf alle Popupmenüs in Ihrer Anwendung.  
@@ -1247,8 +1247,8 @@ void SetMaxWidth(int iMaxWidth);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iMaxWidth*  
- Die maximale Breite für die Popup-Menü in Pixel.  
+*iMaxWidth*<br/>
+[in] Die maximale Breite für die Popup-Menü in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie einen Menübefehl zugeordnete Text nicht in die maximale Breite passen, wird Sie abgeschnitten, und das Teil, das nicht passt, wird durch drei Punkte ersetzt.  
@@ -1306,8 +1306,8 @@ void SetRightAlign(BOOL bRightAlign = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bRightAlign*  
- Ein boolescher Wert, der die Menü-Ausrichtung angibt. TRUE gibt an, rechtsbündig, "false" gibt linksbündige Ausrichtung an.  
+*bRightAlign*<br/>
+[in] Ein boolescher Wert, der die Menü-Ausrichtung angibt. TRUE gibt an, rechtsbündig, "false" gibt linksbündige Ausrichtung an.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig sind alle Popup-Menüs linksbündig ausgerichtet.  
@@ -1320,8 +1320,8 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bSet*  
- TRUE, wenn Sie im Popupmenü die übergeordneten Rahmen, benachrichtigt.  
+*bSet*<br/>
+[in] TRUE, wenn Sie im Popupmenü die übergeordneten Rahmen, benachrichtigt.  
   
 ### <a name="remarks"></a>Hinweise  
  Dies ist eine globale Option für alle Popup-Menüs in einer Anwendung. Wenn es aktiviert ist, werden von den Popup-Menüs WM_MENUSELECT Nachricht an den übergeordneten Rahmen senden, wenn der Benutzer einen Befehl auswählt.  
@@ -1353,8 +1353,8 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LprectScreen*  
- Ein Rechteck, das den Bereich zu aktualisieren, in Bildschirmkoordinaten angibt.  
+*lprectScreen*<br/>
+[in] Ein Rechteck, das den Bereich zu aktualisieren, in Bildschirmkoordinaten angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ist nützlich, wenn Popup-Menüs angezeigt werden, über animierte Steuerelemente oder anderen Fenstern, die dynamischen Inhalt haben.  
@@ -1367,8 +1367,8 @@ void UpdateShadow(LPRECT lprectScreen = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LprectScreen*  
- Ein Rechteck in Bildschirmkoordinaten, das die Begrenzungen des zu aktualisierenden Bereichs angibt.  
+*lprectScreen*<br/>
+[in] Ein Rechteck in Bildschirmkoordinaten, das die Begrenzungen des zu aktualisierenden Bereichs angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Aufgerufen Sie diese Methode wird, wenn ein Popup-Menü, das über einen Schatten verfügt ein animiertes Bild überschneidet.  

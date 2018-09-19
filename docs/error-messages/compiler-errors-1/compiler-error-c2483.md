@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2483 | Microsoft Docs
+title: Compilerfehler C2483 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/15/2017
 ms.technology:
@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a10fd33ebeef43904db964fc327fb749029f963
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be2a2caef9e1252bf1ab36253a7f5f715b94d5a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197974"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031612"
 ---
 # <a name="compiler-error-c2483"></a>Compilerfehler C2483
 
->"*Bezeichner*": Objekt mit dem Konstruktor oder Destruktor kann nicht 'thread' deklariert werden
+>"*Bezeichner*": Objekt mit dem Konstruktor oder Destruktor kann nicht als "thread" deklariert werden
 
-Diese Fehlermeldung wird in Visual Studio 2015 und höher veraltet. In früheren Versionen Variablen deklariert, mit der `thread` Attribut kann nicht initialisiert werden, mit einem Konstruktor oder ein anderer Ausdruck, der zur Laufzeit Auswertung erfordert. Ein statischer Ausdruck ist erforderlich, um initialisieren `thread` Daten.
+Diese Fehlermeldung ist in Visual Studio 2015 und höher veraltet. In früheren Versionen Variablen deklariert, mit der `thread` Attribut kann nicht initialisiert werden, mit einem Konstruktor oder ein anderer Ausdruck, der Auswertung der Laufzeit erfordert. Ein statischer Ausdruck ist erforderlich, um das Initialisieren `thread` Daten.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird C2483 generiert in Visual Studio 2013 und früheren Versionen.
+Im folgende Beispiel wird die C2483 generiert in Visual Studio 2013 und früheren Versionen.
 
 ```cpp
 // C2483.cpp
@@ -39,7 +39,7 @@ Im folgende Beispiel wird C2483 generiert in Visual Studio 2013 und früheren Ve
 __declspec(thread) struct A {
    A(){}
    ~A(){}
-} aa;   // C2483 error  
+} aa;   // C2483 error
 
 __declspec(thread) struct B {} b;   // OK
 ```

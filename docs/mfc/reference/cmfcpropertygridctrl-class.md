@@ -160,15 +160,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfb9ed3e141a6728c298102d94ab48ad0a7fa312
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a9b17c62c767b6665f70e91bfd04dc03379e08ab
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852067"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724671"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl-Klasse
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
  Unterstützt ein bearbeitbares Eigenschaftenraster-Steuerelement, das Eigenschaften in alphabetischer oder hierarchischer Reihenfolge anzeigen kann.  
   
@@ -246,7 +246,7 @@ class CMFCPropertyGridCtrl : public CWnd
 |[CMFCPropertyGridCtrl::IsShowDragContext](#isshowdragcontext)|Gibt an, ob das Framework zeichnet die Spalten Name und Wert der aktuellen Eigenschaftenraster-Steuerelement aus, wenn ein Benutzer die Größe der Spalten ändert.|  
 |[CMFCPropertyGridCtrl::IsVSDotNetLook](#isvsdotnetlook)|Gibt an, ob die Darstellung des Eigenschaftenraster-Steuerelement in das Format ist, die von Visual Studio .NET verwendet wird.|  
 |[CMFCPropertyGridCtrl::MarkModifiedProperties](#markmodifiedproperties)|Gibt an, wie geänderte Eigenschaften angezeigt.|  
-|`CMFCPropertyGridCtrl::PreTranslateMessage`|Wird von der [CWinApp](../../mfc/reference/cwinapp-class.md) -Klasse verwendet, um Fenstermeldungen zu übersetzen, bevor diese an die Windows-Funktionen [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) gesendet werden. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMFCPropertyGridCtrl::PreTranslateMessage`|Von Klasse verwendeten [CWinApp](../../mfc/reference/cwinapp-class.md) um fenstermeldungen zu übersetzen, bevor sie um weitergeleitet werden die [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows-Funktionen. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCPropertyGridCtrl::RemoveAll](#removeall)|Entfernt alle Property-Objekte über ein Eigenschaftenraster-Steuerelement.|  
 |[CMFCPropertyGridCtrl::ResetOriginalValues](#resetoriginalvalues)|Stellt den ursprünglichen Wert aller Eigenschaften.|  
 |[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)|Legt fest oder setzt alphabetischen Modus.|  
@@ -332,8 +332,8 @@ virtual HRESULT accSelect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *FlagsSelect*  
- [in] *VarChild*  
+*flagsSelect*<br/>
+[in] [in] *VarChild*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -350,14 +350,14 @@ int AddProperty(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pProp*  
- Zeiger auf eine Eigenschaft.  
+*pProp*<br/>
+[in] Zeiger auf eine Eigenschaft.  
   
- [in] *bRedraw*  
- True, um die Eigenschaft sofort neu zu zeichnen. andernfalls "false". Der Standardwert ist "true".  
+*bRedraw*<br/>
+[in] True, um die Eigenschaft sofort neu zu zeichnen. andernfalls "false". Der Standardwert ist "true".  
   
- [in] *bAdjustLayout*  
- True, um das Zeichnen des Texts und Werts der Eigenschaft und zeichnen Sie dann die Eigenschaft neu zu berechnen. "False", um die vorhandene Berechnungen verwenden, um die Eigenschaft zu zeichnen. Der Standardwert ist "true".  
+*bAdjustLayout*<br/>
+[in] True, um das Zeichnen des Texts und Werts der Eigenschaft und zeichnen Sie dann die Eigenschaft neu zu berechnen. "False", um die vorhandene Berechnungen verwenden, um die Eigenschaft zu zeichnen. Der Standardwert ist "true".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wenn diese Methode, den nullbasierten Index der Position in das Eigenschaftenraster-Steuerelement erfolgreich ist, in dem die Eigenschaft hinzugefügt wird. andernfalls -1.  
@@ -447,17 +447,17 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwStyle*  
- Eine bitweise Kombination (OR) von [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] Eine bitweise Kombination (OR) von [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *Rect*  
- Ein umgebendes Rechteck, der angibt, die Größe und Position des Fensters, in die Client-Koordinaten *pParentWnd*.  
+*Rect*<br/>
+[in] Ein umgebendes Rechteck, der angibt, die Größe und Position des Fensters, in die Client-Koordinaten *pParentWnd*.  
   
- [in] *pParentWnd*  
- Zeiger auf das übergeordnete Fenster. Nicht darf NULL sein.  
+*pParentWnd*<br/>
+[in] Zeiger auf das übergeordnete Fenster. Nicht darf NULL sein.  
   
- [in] *nID*  
- Die ID des untergeordneten Fensters.  
+*nID*<br/>
+[in] Die ID des untergeordneten Fensters.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Fenster erfolgreich erstellt wurde. andernfalls "false".  
@@ -481,14 +481,14 @@ BOOL DeleteProperty(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pProp*  
- Zeiger auf eine Eigenschaft.  
+*pProp*<br/>
+[in] Zeiger auf eine Eigenschaft.  
   
- [in] *bRedraw*  
- TRUE, das Eigenschaftenraster-Steuerelement neu gezeichnet werden soll. andernfalls "false". Der Standardwert ist "true".  
+*bRedraw*<br/>
+[in] TRUE, das Eigenschaftenraster-Steuerelement neu gezeichnet werden soll. andernfalls "false". Der Standardwert ist "true".  
   
- [in] *bAdjustLayout*  
- True, um wie der Text, Bilder und Elemente in das Eigenschaftenraster-Steuerelement zu zeichnen, und zeichnen Sie das Steuerelement neu zu berechnen. andernfalls "false". Der Standardwert ist "true".  
+*bAdjustLayout*<br/>
+[in] True, um wie der Text, Bilder und Elemente in das Eigenschaftenraster-Steuerelement zu zeichnen, und zeichnen Sie das Steuerelement neu zu berechnen. andernfalls "false". Der Standardwert ist "true".  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -517,11 +517,11 @@ virtual BOOL EditItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pProp*  
- Zeiger auf eine Eigenschaft.  
+*pProp*<br/>
+[in] Zeiger auf eine Eigenschaft.  
   
- [in] *LptClick*  
- Der Punkt in dem Eigenschaftenraster-Steuerelement, das der Benutzer geklickt hat, um den Bearbeitungsvorgang zu starten. Der Punkt ist in den Clientkoordinaten des Steuerelements. Der Standardwert ist NULL.  
+*lptClick*<br/>
+[in] Der Punkt in dem Eigenschaftenraster-Steuerelement, das der Benutzer geklickt hat, um den Bearbeitungsvorgang zu starten. Der Punkt ist in den Clientkoordinaten des Steuerelements. Der Standardwert ist NULL.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich ist. andernfalls "false".  
@@ -536,8 +536,8 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- True, um den Beschreibungsbereich aktivieren. "False", um den Beschreibungsbereich zu deaktivieren. Der Standardwert ist "true".  
+*bAktivieren*<br/>
+[in] True, um den Beschreibungsbereich aktivieren. "False", um den Beschreibungsbereich zu deaktivieren. Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
  Der Beschreibungsbereich wird am unteren Rand der Eigenschaftenraster-Steuerelement angezeigt. Standardmäßig ist der Beschreibungsbereich deaktiviert und nicht sichtbar.  
@@ -553,14 +553,14 @@ void EnableHeaderCtrl(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- "True", um das Kopfzeilen-Steuerelement zu aktivieren; So deaktivieren Sie das Kopfzeilen-Steuerelement wird false ZURÜCKGEGEBEN. Der Standardwert ist "true".  
+*bAktivieren*<br/>
+[in] "True", um das Kopfzeilen-Steuerelement zu aktivieren; So deaktivieren Sie das Kopfzeilen-Steuerelement wird false ZURÜCKGEGEBEN. Der Standardwert ist "true".  
   
- [in] *LpszLeftColumn*  
- Der Titel der linken Spalte mit dem Kopfzeilen-Steuerelement. Der Standardwert ist **Eigenschaft**.  
+*lpszLeftColumn*<br/>
+[in] Der Titel der linken Spalte mit dem Kopfzeilen-Steuerelement. Der Standardwert ist **Eigenschaft**.  
   
- [in] *LpszRightColumn*  
- Der Titel der rechten Spalte mit dem Kopfzeilen-Steuerelement. Der Standardwert ist **Wert**.  
+*lpszRightColumn*<br/>
+[in] Der Titel der rechten Spalte mit dem Kopfzeilen-Steuerelement. Der Standardwert ist **Wert**.  
   
 ##  <a name="endedititem"></a>  CMFCPropertyGridCtrl::EndEditItem  
  Vom Framework aufgerufen, wenn der Benutzer abgeschlossen ist, Ändern einer Eigenschaft.  
@@ -570,8 +570,8 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bUpdateData*  
- True, um anzugeben, dass die Eigenschaft "Änderung" Daten überprüft werden müssen, wenn der Bearbeitungsvorgang abgeschlossen ist. andernfalls "false". Der Standardwert ist "true".  
+*bUpdateData*<br/>
+[in] True, um anzugeben, dass die Eigenschaft "Änderung" Daten überprüft werden müssen, wenn der Bearbeitungsvorgang abgeschlossen ist. andernfalls "false". Der Standardwert ist "true".  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Bearbeitungsvorgang erfolgreich beendet. "False", wenn die Eigenschaft "Änderung" Daten nicht gültig ist oder wenn der Bearbeitungsvorgang fortgesetzt werden soll.  
@@ -588,11 +588,11 @@ void EnsureVisible(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pProp*  
- Zeiger auf eine Eigenschaft.  
+*pProp*<br/>
+[in] Zeiger auf eine Eigenschaft.  
   
- [in] *bExpandParents*  
- True, um die übergeordneten Elemente, um die angegebene Eigenschaft sichtbar zu machen zu erweitern. andernfalls "false". Der Standardwert ist "false".  
+*bExpandParents*<br/>
+[in] True, um die übergeordneten Elemente, um die angegebene Eigenschaft sichtbar zu machen zu erweitern. andernfalls "false". Der Standardwert ist "false".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -604,8 +604,8 @@ void ExpandAll(BOOL bExpand=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bExpand*  
- True, um alle Knoten zu erweitern. "False", um alle Knoten zu reduzieren. Der Standardwert ist "true".  
+*bExpand*<br/>
+[in] True, um alle Knoten zu erweitern. "False", um alle Knoten zu reduzieren. Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -619,11 +619,11 @@ CMFCPropertyGridProperty* FindItemByData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwData*  
- Ein DWORD-Wert.  
+*dwData*<br/>
+[in] Ein DWORD-Wert.  
   
- [in] *bSearchSubItems*  
- True, um die untergeordnete Eigenschaftenelemente zu suchen. andernfalls "false". Der Standardwert ist "true".  
+*bSearchSubItems*<br/>
+[in] True, um die untergeordnete Eigenschaftenelemente zu suchen. andernfalls "false". Der Standardwert ist "true".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf das Objekt zugeordnete Eigenschaft, wenn diese Methode erfolgreich ist; andernfalls NULL.  
@@ -669,8 +669,8 @@ virtual HRESULT get_accHelp(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *VarChild*  
- [in] *PszHelp*  
+*varChild*<br/>
+[in] [in] *PszHelp*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -687,8 +687,8 @@ virtual HRESULT get_accHelpTopic(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *PszHelpFile*  
- [in] *VarChild*  
+*pszHelpFile*<br/>
+[in] [in] *VarChild*  
  [in] *PidTopic*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -705,8 +705,8 @@ virtual HRESULT get_accKeyboardShortcut(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *VarChild*  
- [in] *PszKeyboardShortcut*  
+*varChild*<br/>
+[in] [in] *PszKeyboardShortcut*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -776,26 +776,26 @@ void GetCustomColors(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *ClrBackground*  
- Die Hintergrundfarbe von Eigenschaftswerten.  
+*clrBackground*<br/>
+[out] Die Hintergrundfarbe von Eigenschaftswerten.  
   
- [out] *ClrText*  
- Die Farbe von Eigenschaftennamen und der Text der Eigenschaft-Wert.  
+*clrText*<br/>
+[out] Die Farbe von Eigenschaftennamen und der Text der Eigenschaft-Wert.  
   
- [out] *ClrGroupBackground*  
- Die Hintergrundfarbe einer Eigenschaftengruppe.  
+*clrGroupBackground*<br/>
+[out] Die Hintergrundfarbe einer Eigenschaftengruppe.  
   
- [out] *ClrGroupText*  
- Die Farbe des Texts in der Eigenschaftengruppe.  
+*clrGroupText*<br/>
+[out] Die Farbe des Texts in der Eigenschaftengruppe.  
   
- [out] *ClrDescriptionBackground*  
- Die Hintergrundfarbe des Bereichs Beschreibung.  
+*clrDescriptionBackground*<br/>
+[out] Die Hintergrundfarbe des Bereichs Beschreibung.  
   
- [out] *ClrDescriptionText*  
- Die Farbe des Texts im Beschreibungsbereich.  
+*clrDescriptionText*<br/>
+[out] Die Farbe des Texts im Beschreibungsbereich.  
   
- [out] *ClrLine*  
- Die Farbe der Zeilen, die zwischen Eigenschaften gezeichnet werden.  
+*clrLine*<br/>
+[out] Die Farbe der Zeilen, die zwischen Eigenschaften gezeichnet werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden der [CMFCPropertyGridCtrl::SetCustomColors](#setcustomcolors) Methode zum Festlegen von Farben.  
@@ -883,8 +883,8 @@ CMFCPropertyGridProperty* GetProperty(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Der nullbasierte Index, der eine Eigenschaft Grid-Steuerelement ein Element.  
+*nIndex*<br/>
+[in] Der nullbasierte Index, der eine Eigenschaft Grid-Steuerelement ein Element.  
   
  Diese Methode bestätigt wird, wenn die *nIndex* -Parameter ist kleiner als 0 (null) oder größer als oder gleich der Anzahl von Eigenschaften.  
   
@@ -939,8 +939,8 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nBar*  
- Die Ausrichtung der Bildlaufleiste, die SB_VERT sein muss.  
+*nBar*<br/>
+[in] Die Ausrichtung der Bildlaufleiste, die SB_VERT sein muss.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf eine Schiebeleiste Objekt oder NULL, wenn es keine Bildlaufleiste oder die Schiebeleistenausrichtung ist SB_HORZ.  
@@ -972,14 +972,14 @@ CMFCPropertyGridProperty* HitTest(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pt*  
- Ein Punkt in Clientkoordinaten.  
+*pt*<br/>
+[in] Ein Punkt in Clientkoordinaten.  
   
- [in, out] *PnArea*  
- Ein Zeiger auf eine `ClickArea` Variable. Wenn diese Methode zurückgegeben, gibt Sie die Variable an die *Eigenschaft Bereich* , die den angegebenen Punkt enthält. Weitere Informationen zu einem Eigenschaft-Bereich finden Sie unter "Hinweise".  
+*pnArea*<br/>
+[in, out] Ein Zeiger auf eine `ClickArea` Variable. Wenn diese Methode zurückgegeben, gibt Sie die Variable an die *Eigenschaft Bereich* , die den angegebenen Punkt enthält. Weitere Informationen zu einem Eigenschaft-Bereich finden Sie unter "Hinweise".  
   
- [in] *bPropsOnly*  
- True, um nur die Eigenschaft Bereich zu testen. "False" zum Testen der *Beschreibungsbereich* ist der angegebene Punkt nicht im Bereich "Eigenschaft". Der Standardwert ist "false". Weitere Informationen zu den Beschreibungsbereich finden Sie unter "Hinweise".  
+*bPropsOnly*<br/>
+[in] True, um nur die Eigenschaft Bereich zu testen. "False" zum Testen der *Beschreibungsbereich* ist der angegebene Punkt nicht im Bereich "Eigenschaft". Der Standardwert ist "false". Weitere Informationen zu den Beschreibungsbereich finden Sie unter "Hinweise".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wenn die *bPropsOnly* Parameter ist "true" und der angegebene Punkt befindet sich in einem Eigenschaft-Bereich, der Rückgabewert ist ein Zeiger auf das entsprechende Eigenschaftenobjekt. Darüber hinaus die *PnArea* Parameter festgelegt ist, zu dem bestimmten Bereich, der den angegebenen Punkt enthält. Andernfalls ist der Rückgabewert NULL und *PnArea* Parameter nicht geändert.  
@@ -1127,11 +1127,11 @@ void MarkModifiedProperties(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bMark*  
- True, um anzuzeigen Eigenschaften in fettformatierung; geändert "False", um geänderte Eigenschaften im regulären Format anzuzeigen. Der Standardwert ist "true".  
+*bMark*<br/>
+[in] True, um anzuzeigen Eigenschaften in fettformatierung; geändert "False", um geänderte Eigenschaften im regulären Format anzuzeigen. Der Standardwert ist "true".  
   
- [in] *bRedraw*  
- "True" Neuzeichnen der Eigenschaftenraster-Steuerelement sofort; andernfalls "false". Der Standardwert ist "true".  
+*bRedraw*<br/>
+[in] "True" Neuzeichnen der Eigenschaftenraster-Steuerelement sofort; andernfalls "false". Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1148,8 +1148,8 @@ virtual void OnChangeSelection(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *pNewSel*|Zeiger auf die neu ausgewählte Eigenschaft.|  
-|[in] *pOldSel*|Zeiger auf die zuvor ausgewählte Eigenschaft.|  
+|*pNewSel*|[in] Zeiger auf die neu ausgewählte Eigenschaft.|  
+|*pOldSel*|[in] Zeiger auf die zuvor ausgewählte Eigenschaft.|  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardimplementierung dieser Methode führt keine Aktion.  
@@ -1162,8 +1162,8 @@ virtual void OnClickButton(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Ein Punkt in Clientkoordinaten.  
+*Zeigen Sie*<br/>
+[in] Ein Punkt in Clientkoordinaten.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig aktualisiert diese Methode den aktuellen Eigenschaftswert.  
@@ -1176,8 +1176,8 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1191,11 +1191,11 @@ virtual void OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein Rechteck, das angibt, wo Sie den Beschreibungsbereich zu zeichnen.  
+*Rect*<br/>
+[in] Ein Rechteck, das angibt, wo Sie den Beschreibungsbereich zu zeichnen.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden der [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea) Methode, um den Beschreibungsbereich anzuzeigen.  
@@ -1208,8 +1208,8 @@ virtual void OnDrawList(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1223,11 +1223,11 @@ virtual int OnDrawProperty(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pProp*  
- Ein Zeiger auf ein Objekt.  
+*pProp*<br/>
+[in] Ein Zeiger auf ein Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -1242,8 +1242,8 @@ virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pProp*  
- Ein Zeiger auf ein Objekt, dessen Wert geändert wurde.  
+*pProp*<br/>
+[in] Ein Zeiger auf ein Objekt, dessen Wert geändert wurde.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet standardmäßig den [AFX_WM_PROPERTY_CHANGED](../../mfc/reference/afx-messages.md) Nachricht an den Besitzer des dem Eigenschaftenraster-Steuerelement.  
@@ -1274,8 +1274,8 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bRedraw*  
- True, um der Liste der neu gezeichnet werden. andernfalls "false". Der Standardwert ist "true".  
+*bRedraw*<br/>
+[in] True, um der Liste der neu gezeichnet werden. andernfalls "false". Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1287,8 +1287,8 @@ void SetAlphabeticMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bSet*  
- "True" Festlegen von alphabetischen Modus; "False" setzen alphabetischen Modus zurück. Der Standardwert ist "true".  
+*bSet*<br/>
+[in] "True" Festlegen von alphabetischen Modus; "False" setzen alphabetischen Modus zurück. Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn das Eigenschaftenraster-Steuerelement in der alphabetischen Modus ist, sortiert das Steuerelement die Eigenschaften, die sie mit dem Namen ihrer Eigenschaft enthält.  
@@ -1303,11 +1303,11 @@ void SetBoolLabels(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszTrue*  
- Die Textzeichenfolge, die für den booleschen Wert "true" angezeigt.  
+*lpszTrue*<br/>
+[in] Die Textzeichenfolge, die für den booleschen Wert "true" angezeigt.  
   
- [in] *LpszFalse*  
- Die Textzeichenfolge, die für den booleschen Wert "false" angezeigt.  
+*lpszFalse*<br/>
+[in] Die Textzeichenfolge, die für den booleschen Wert "false" angezeigt.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1321,11 +1321,11 @@ void SetCurSel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pProp*  
- Ein Zeiger auf ein Objekt.  
+*pProp*<br/>
+[in] Ein Zeiger auf ein Objekt.  
   
- [in] *bRedraw*  
- "True" Neuzeichnen der Eigenschaftenraster-Steuerelement sofort; andernfalls "false". Der Standardwert ist "true".  
+*bRedraw*<br/>
+[in] "True" Neuzeichnen der Eigenschaftenraster-Steuerelement sofort; andernfalls "false". Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode zum Aufheben der Auswahl des aktuellen Elements in dem Eigenschaftenraster-Steuerelement, und wählen Sie dann auf das Element, das der angegebenen Eigenschaft entspricht.  
@@ -1345,26 +1345,26 @@ void SetCustomColors(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *ClrBackground*  
- Die Hintergrundfarbe von Eigenschaftswerten.  
+*clrBackground*<br/>
+[in] Die Hintergrundfarbe von Eigenschaftswerten.  
   
- [in] *ClrText*  
- Die Farbe von Eigenschaftennamen und der Text der Eigenschaft-Wert.  
+*clrText*<br/>
+[in] Die Farbe von Eigenschaftennamen und der Text der Eigenschaft-Wert.  
   
- [in] *ClrGroupBackground*  
- Die Hintergrundfarbe einer Eigenschaftengruppe.  
+*clrGroupBackground*<br/>
+[in] Die Hintergrundfarbe einer Eigenschaftengruppe.  
   
- [in] *ClrGroupText*  
- Die neue Textfarbe der Eigenschaftengruppe.  
+*clrGroupText*<br/>
+[in] Die neue Textfarbe der Eigenschaftengruppe.  
   
- [in] *ClrDescriptionBackground*  
- Die Hintergrundfarbe des Bereichs Beschreibung.  
+*clrDescriptionBackground*<br/>
+[in] Die Hintergrundfarbe des Bereichs Beschreibung.  
   
- [in] *ClrDescriptionText*  
- Die Farbe des Texts im Beschreibungsbereich.  
+*clrDescriptionText*<br/>
+[in] Die Farbe des Texts im Beschreibungsbereich.  
   
- [in] *ClrLine*  
- Die Farbe der Zeilen, die zwischen Eigenschaften gezeichnet werden.  
+*clrLine*<br/>
+[in] Die Farbe der Zeilen, die zwischen Eigenschaften gezeichnet werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Geben Sie für alle Parameter der `((COLORREF)-1)` color-Wert, der die Standardfarbe für dieses Element, von dem Eigenschaftenraster-Steuerelement.  
@@ -1379,8 +1379,8 @@ void SetDescriptionRows(int nDescRows);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nDescRows*  
- Die Anzahl der Zeilen in der Beschreibung der Eigenschaft angezeigt.  
+*nDescRows*<br/>
+[in] Die Anzahl der Zeilen in der Beschreibung der Eigenschaft angezeigt.  
   
 ##  <a name="setgroupnamefullwidth"></a>  CMFCPropertyGridCtrl::SetGroupNameFullWidth  
  Gibt an, ob die gesamte Breite des Kategorienamens für eine Gruppe von Eigenschaften in der aktuellen Eigenschaftenraster-Steuerelement angezeigt werden soll.  
@@ -1392,11 +1392,11 @@ void SetGroupNameFullWidth(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bGroupNameFullWidth*  
- TRUE, um die vollständige Breite des Kategorienamens unabhängig von der Breite der Spalte Name Eigenschaft anzuzeigen. "False", um die Breite der Kategoriename, für die Breite der Eigenschaft Name-Spalte zu beschränken. Der Standardwert ist "true".  
+*bGroupNameFullWidth*<br/>
+[in] TRUE, um die vollständige Breite des Kategorienamens unabhängig von der Breite der Spalte Name Eigenschaft anzuzeigen. "False", um die Breite der Kategoriename, für die Breite der Eigenschaft Name-Spalte zu beschränken. Der Standardwert ist "true".  
   
- [in] *bRedraw*  
- True, um das Eigenschaftenraster-Steuerelement sofort aktualisieren Tritt auf "false", um das Steuerelement zu aktualisieren, wenn das nächste Ereignis neu gezeichnet werden. Der Standardwert ist "true".  
+*bRedraw*<br/>
+[in] True, um das Eigenschaftenraster-Steuerelement sofort aktualisieren Tritt auf "false", um das Steuerelement zu aktualisieren, wenn das nächste Ereignis neu gezeichnet werden. Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
  Das Eigenschaftenraster-Steuerelement besteht aus einer in der Größe veränderbaren *Eigenschaftennamen* Spalte und eine *Eigenschaftswert* Spalte. Das Ende der Spalte "Name" ist auch den Anfang der Wertspalte. Ziehen Sie den Rand zwischen den Spalten, zum Ändern der Größe der Spalten.  
@@ -1411,8 +1411,8 @@ void SetListDelimiter(TCHAR c);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *c*  
- Ein Zeichen, die als Trennzeichen fungieren.  
+*c*<br/>
+[in] Ein Zeichen, die als Trennzeichen fungieren.  
   
 ### <a name="remarks"></a>Hinweise  
  Mit dieser Methode können Sie um ein Trennzeichen in einer Liste der Eigenschaftswerte zu definieren, die verwendet werden die [CMFCPropertyGridProperty::CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#cmfcpropertygridproperty) Konstruktor. Legen Sie diesen Konstruktor, der *bIsValueList* Parameter auf "true".  
@@ -1427,8 +1427,8 @@ void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bShowDragContext*  
- True, um die Spalten Name und Wert während einer Änderung neu gezeichnet werden. FALSE, wenn die Spalten neu zu zeichnen, nachdem der Drag-Vorgang abgeschlossen ist. Der Standardwert ist "true".  
+*bShowDragContext*<br/>
+[in] True, um die Spalten Name und Wert während einer Änderung neu gezeichnet werden. FALSE, wenn die Spalten neu zu zeichnen, nachdem der Drag-Vorgang abgeschlossen ist. Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
  Der Benutzer kann die Spalten Name und Wert ein Eigenschaftenraster-Steuerelement durch Ziehen der Leiste für geteilte, die zwischen den Spalten ändern. Wenn der Drag-Kontext angezeigt wird, werden die Spalten Name und Wert Größe geändert werden, solange der Benutzer die Leiste für geteilte zieht. Andernfalls Leiste für geteilte verschiebt, sondern die Spalten werden nicht neu gezeichnet, bis der Drag-Vorgang abgeschlossen ist.  
@@ -1441,8 +1441,8 @@ void SetVSDotNetLook(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bSet*  
- "True" Set steuern das Eigenschaftenraster auf die Format, das in Visual Studio .NET verwendet wird; andernfalls "false". Der Standardwert ist "true".  
+*bSet*<br/>
+[in] "True" Set steuern das Eigenschaftenraster auf die Format, das in Visual Studio .NET verwendet wird; andernfalls "false". Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1454,8 +1454,8 @@ virtual void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Farbe*  
- Ein RGB-Farbwert.  
+*Farbe*<br/>
+[in] Ein RGB-Farbwert.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode bestätigt im Debugmodus ausgeführt, wenn die aktuell ausgewählte Eigenschaft ein, der das Eigenschaftenraster-Steuerelement nicht über eine Color-Eigenschaft ist.  
@@ -1471,7 +1471,7 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *pProp*|Zeiger auf eine Eigenschaft. Dieser Parameter wird nicht verwendet.|  
+|*pProp*|[in] Zeiger auf eine Eigenschaft. Dieser Parameter wird nicht verwendet.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Immer "true".  

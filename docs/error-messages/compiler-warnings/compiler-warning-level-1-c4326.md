@@ -1,7 +1,7 @@
 ---
-title: Compilerwarnung (Stufe 1) C4326 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4326 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,24 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 838c79d6ba897905dad18788adc5ee682ff2fa2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cee18a9ccc807370cf2fb40748939f211a4ba52f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283129"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211003"
 ---
 # <a name="compiler-warning-level-1-c4326"></a>Compilerwarnung (Stufe 1) C4326
-Rückgabetyp "Funktion" sollte "Typ1" anstelle von "Typ2" sein.  
-  
- Eine Funktion hat einen Typ zurückgegeben, außer ***Typ1***. Beispiel für die Verwendung ["/ Za"](../../build/reference/za-ze-disable-language-extensions.md), Main hat keine zurückgegeben. ein `int`.  
-  
- Im folgenden Beispiel wird C4326 generiert:  
-  
-```  
-// C4326.cpp  
-// compile with: /Za /W1  
-char main()  
-{   // C4326 try int main  
-}  
+
+> der Rückgabetyp des '*Funktion*'muss'*type1*"anstelle von"*Typ2*"
+
+## <a name="remarks"></a>Hinweise
+
+Eine Funktion hat einen Typ zurückgegeben, außer *type1*. Verwenden Sie beispielsweise [/Za](../../build/reference/za-ze-disable-language-extensions.md), **main** hat keine zurückgegeben ein **Int**.
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C4326 generiert und gezeigt, wie Sie diesen Fehler beheben:
+
+```cpp
+// C4326.cpp
+// compile with: /Za /W1
+char main()
+{
+    // C4326, instead use int main()
+}
 ```

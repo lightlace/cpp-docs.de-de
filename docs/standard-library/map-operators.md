@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: 22d8d5d348dc4bf4bd50ee56db360e4490503b78
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 92314d923c591cce886683fcf536a24b404ba133
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959257"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314864"
 ---
 # <a name="ltmapgt-operators"></a>&lt;map&gt;-Operatoren
 
@@ -48,9 +48,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* ein Objekt des Typs `map`.
+*left*<br/>
+Ein Objekt vom Typ `map`.
 
-*richtige* ein Objekt des Typs `map`.
+*right*<br/>
+Ein Objekt vom Typ `map`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -92,10 +94,10 @@ int main( )
    else
       cout << "The maps m1 and m3 are equal." << endl;
 }
-\* Output:
+/* Output:
 The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
-*\
+*/
 ```
 
 ## <a name="op_lt"></a> operator&lt;
@@ -110,9 +112,11 @@ bool operator<(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* ein Objekt des Typs `map`.
+*left*<br/>
+Ein Objekt vom Typ `map`.
 
-*richtige* ein Objekt des Typs `map`.
+*right*<br/>
+Ein Objekt vom Typ `map`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -154,10 +158,10 @@ int main( )
    else
       cout << "The map m1 is not less than the map m3." << endl;
 }
-\* Output:
+/* Output:
 The map m1 is less than the map m2.
 The map m1 is not less than the map m3.
-*\
+*/
 ```
 
 ## <a name="op_lt_eq"></a> operator&lt;=
@@ -172,9 +176,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* ein Objekt des Typs `map`.
+*left*<br/>
+Ein Objekt vom Typ `map`.
 
-*richtige* ein Objekt des Typs `map`.
+*right*<br/>
+Ein Objekt vom Typ `map`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -218,11 +224,11 @@ int main( )
    else
       cout << "The map m1 is greater than the map m4." << endl;
 }
-\* Output:
+/* Output:
 The map m1 is less than or equal to the map m2.
 The map m1 is greater than the map m3.
 The map m1 is less than or equal to the map m4.
-*\
+*/
 ```
 
 ## <a name="op_eq_eq"></a> operator==
@@ -237,9 +243,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* ein Objekt des Typs `map`.
+*left*<br/>
+Ein Objekt vom Typ `map`.
 
-*richtige* ein Objekt des Typs `map`.
+*right*<br/>
+Ein Objekt vom Typ `map`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -281,10 +289,10 @@ int main( )
    else
       cout << "The maps m1 and m3 are not equal." << endl;
 }
-\* Output:
+/* Output:
 The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
-*\
+*/
 ```
 
 ## <a name="op_gt"></a> operator&gt;
@@ -299,9 +307,11 @@ bool operator>(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* ein Objekt des Typs `map`.
+*left*<br/>
+Ein Objekt vom Typ `map`.
 
-*richtige* ein Objekt des Typs `map`.
+*right*<br/>
+Ein Objekt vom Typ `map`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -343,10 +353,10 @@ int main( )
    else
       cout << "The map m1 is not greater than the map m3." << endl;
 }
-\* Output:
+/* Output:
 The map m1 is not greater than the map m2.
 The map m1 is greater than the map m3.
-*\
+*/
 ```
 
 ## <a name="op_gt_eq"></a>operator&gt;=
@@ -361,9 +371,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* ein Objekt des Typs `map`.
+*left*<br/>
+Ein Objekt vom Typ `map`.
 
-*richtige* ein Objekt des Typs `map`.
+*right*<br/>
+Ein Objekt vom Typ `map`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -407,11 +419,11 @@ int main( )
    else
       cout << "The map m1 is less than the map m4." << endl;
 }
-\* Output:
+/* Output:
 The map m1 is less than the map m2.
 Map m1 is greater than or equal to map m3.
 Map m1 is greater than or equal to map m4.
-*\
+*/
 ```
 
 ## <a name="op_neq_multimap"></a> operator!= (multimap)
@@ -426,9 +438,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* ein Objekt des Typs `multimap`.
+*left*<br/>
+Ein Objekt vom Typ `multimap`.
 
-*richtige* ein Objekt des Typs `multimap`.
+*right*<br/>
+Ein Objekt vom Typ `multimap`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -470,10 +484,10 @@ int main( )
    else
       cout << "The multimaps m1 and m3 are equal." << endl;
 }
-\* Output:
+/* Output:
 The multimaps m1 and m2 are not equal.
 The multimaps m1 and m3 are equal.
-*\
+*/
 ```
 
 ## <a name="op_lt_multimap"></a> operator&lt;
@@ -488,9 +502,11 @@ bool operator<(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* ein Objekt des Typs `multimap`.
+*left*<br/>
+Ein Objekt vom Typ `multimap`.
 
-*richtige* ein Objekt des Typs `multimap`.
+*right*<br/>
+Ein Objekt vom Typ `multimap`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -532,10 +548,10 @@ int main( )
    else
       cout << "The multimap m1 is not less than the multimap m3." << endl;
 }
-\* Output:
+/* Output:
 The multimap m1 is less than the multimap m2.
 The multimap m1 is not less than the multimap m3.
-*\
+*/
 ```
 
 ## <a name="eq_multimap"></a> operator&lt;=
@@ -550,9 +566,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* ein Objekt des Typs `multimap`.
+*left*<br/>
+Ein Objekt vom Typ `multimap`.
 
-*richtige* ein Objekt des Typs `multimap`.
+*right*<br/>
+Ein Objekt vom Typ `multimap`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -596,11 +614,11 @@ int main( )
    else
       cout << "m1 is greater than m4" << endl;
 }
-\* Output:
+/* Output:
 m1 is less than or equal to m2
 m1 is greater than m3
 m1 is less than or equal to m4
-*\
+*/
 ```
 
 ## <a name="op_eq_eq_multimap"></a> operator==
@@ -615,9 +633,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* ein Objekt des Typs `multimap`.
+*left*<br/>
+Ein Objekt vom Typ `multimap`.
 
-*richtige* ein Objekt des Typs `multimap`.
+*right*<br/>
+Ein Objekt vom Typ `multimap`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -659,10 +679,10 @@ int main( )
    else
       cout << "m1 and m3 are not equal" << endl;
 }
-\* Output:
+/* Output:
 m1 and m2 are not equal
 m1 and m3 are equal
-*\
+*/
 ```
 
 ## <a name="op_gt_multimap"></a> operator&gt;
@@ -677,9 +697,11 @@ bool operator>(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* ein Objekt des Typs `multimap`.
+*left*<br/>
+Ein Objekt vom Typ `multimap`.
 
-*richtige* ein Objekt des Typs `multimap`.
+*right*<br/>
+Ein Objekt vom Typ `multimap`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -721,10 +743,10 @@ int main( )
    else
       cout << "The multimap m1 is not greater than the multimap m3." << endl;
 }
-\* Output:
+/* Output:
 Multimap m1 is not greater than multimap m2.
 The multimap m1 is greater than the multimap m3.
-*\
+*/
 ```
 
 ## <a name="op_gt_eq_multimap"></a> operator&gt;=
@@ -739,9 +761,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parameter
 
-*linken* ein Objekt des Typs `multimap`.
+*left*<br/>
+Ein Objekt vom Typ `multimap`.
 
-*richtige* ein Objekt des Typs `multimap`.
+*right*<br/>
+Ein Objekt vom Typ `multimap`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -785,11 +809,11 @@ int main( )
    else
       cout << "The multimap m1 is less than the multimap m4." << endl;
 }
-\* Output:
+/* Output:
 The multimap m1 is less than the multimap m2.
 The multimap m1 is greater than or equal to the multimap m3.
 The multimap m1 is greater than or equal to the multimap m4.
-*\
+*/
 ```
 
 ## <a name="see-also"></a>Siehe auch

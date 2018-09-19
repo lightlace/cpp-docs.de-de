@@ -1,5 +1,5 @@
 ---
-title: -APPCONTAINER | Microsoft Docs
+title: -APPCONTAINER | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,24 +18,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c47154d7a5eddd26573612708462c0352da30ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3d8e19724183963329b959286a996b4f21d18b4c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368433"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709178"
 ---
 # <a name="appcontainer"></a>/APPCONTAINER
-Kennzeichnet eine ausführbare Datei, die in einem app-Container ausgeführt werden muss, z. B. eine Microsoft-Store- oder universellen Windows-app.  
-  
-```  
-  
-/APPCONTAINER[:NO]  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Eine ausführbare Datei, bei der die **/APPCONTAINER** -Option festgelegt wurde, kann nur in einem App-Container ausgeführt werden. Das ist die in Windows 8 eingeführte Prozessisolationsumgebung. Bei Microsoft Store und universelle Windows-apps muss diese Option festgelegt werden.  
-  
-## <a name="see-also"></a>Siehe auch  
- [EDITBIN-Optionen](../../build/reference/editbin-options.md)   
- [Was ist eine universelle Windows-App?](http://go.microsoft.com/fwlink/p/?LinkID=522074)
+
+Markiert eine ausführbare Datei, die in einem app-Container ausgeführt werden muss, z. B. ein Microsoft Store oder eine universelle Windows-app.
+
+```
+
+/APPCONTAINER[:NO]
+```
+
+## <a name="remarks"></a>Hinweise
+
+Eine ausführbare Datei, bei der die **/APPCONTAINER** -Option festgelegt wurde, kann nur in einem App-Container ausgeführt werden. Das ist die in Windows 8 eingeführte Prozessisolationsumgebung. Für Microsoft Store und universelle Windows-apps muss diese Option festgelegt werden.
+
+## <a name="see-also"></a>Siehe auch
+
+[EDITBIN-Optionen](../../build/reference/editbin-options.md)<br/>
+[Was ist eine universelle Windows-App?](/windows/uwp/get-started/universal-application-platform-guide)

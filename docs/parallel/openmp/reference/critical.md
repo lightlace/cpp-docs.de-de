@@ -1,5 +1,5 @@
 ---
-title: kritische | Microsoft Docs
+title: kritische | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb5747530f4c3aaa7bcfddc7a44c0c8d91e1270
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 90638ad00f120e23e4c9168710d1e099c2c74d09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691299"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716949"
 ---
 # <a name="critical"></a>critical
-Gibt an, dass der Code wird nur in einem Thread zu einem Zeitpunkt ausgeführt werden.  
+Gibt an, dass der Code ist nur in einem Thread zu einem Zeitpunkt ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,14 +35,13 @@ Gibt an, dass der Code wird nur in einem Thread zu einem Zeitpunkt ausgeführt w
 }  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- wobei  
+## <a name="arguments"></a>Argumente
+
+*name*<br/>
+(Optional) Ein Name zur Identifizierung des kritischen Codes. Beachten Sie, dass dieser Name in Klammern eingeschlossen werden muss.  
   
- (`name`) (optional)  
- Ein Name zum Identifizieren der kritischen Code. Beachten Sie, dass dieser Name in Klammern eingeschlossen werden muss.  
-  
 ## <a name="remarks"></a>Hinweise  
- Die **kritische** Richtlinie unterstützt kein OpenMP-Klauseln.  
+ Die **kritische** -Anweisung unterstützt keine OpenMP-Klauseln.  
   
  Weitere Informationen finden Sie unter [2.6.2 kritische erstellen](../../../parallel/openmp/2-6-2-critical-construct.md).  
   

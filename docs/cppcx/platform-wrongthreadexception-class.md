@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: wrongthreadexception-Klasse | Microsoft Docs'
+title: 'Platform:: wrongthreadexception-Klasse | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,37 +12,41 @@ dev_langs:
 helpviewer_keywords:
 - Platform::WrongThreadException
 ms.assetid: c193f97e-0392-4535-a4c4-0711e4e4a836
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f01b52470f5c70c588c7905a2c46f7cae9b26d06
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1fe772f1c2925ce28d0e445023ab14d82b9b3f23
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088257"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107691"
 ---
 # <a name="platformwrongthreadexception-class"></a>Platform::WrongThreadException-Klasse
-Wird ausgelöst, wenn ein Thread über einen Schnittstellenzeiger einen Aufruf für ein Proxyobjekt tätigt, das nicht zu dem Apartment des Threads gehört.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-public ref class WrongThreadException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [COMException](../cppcx/platform-comexception-class.md).  
-  
-### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client:** Windows 8  
-  
- **Unterstützter Server:** Windows Server 2012  
-  
- **Namespace:** Platform  
-  
- **Metadaten:** platform.winmd  
-  
-## <a name="see-also"></a>Siehe auch  
- [Platform::COMException-Klasse](../cppcx/platform-comexception-class.md)
+
+Wird ausgelöst, wenn ein Thread über einen Schnittstellenzeiger einen Aufruf für ein Proxyobjekt tätigt, das nicht zu dem Apartment des Threads gehört.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+public ref class WrongThreadException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Hinweise
+
+Weitere Informationen finden Sie unter [COMException](../cppcx/platform-comexception-class.md).
+
+### <a name="requirements"></a>Anforderungen
+
+**Unterstützter Client (Min.):** Windows 8
+
+**Unterstützter Server (Min.):** Windows Server 2012
+
+**Namespace:** Platform
+
+**Metadaten:** platform.winmd
+
+## <a name="see-also"></a>Siehe auch
+
+[Platform::COMException-Klasse](../cppcx/platform-comexception-class.md)

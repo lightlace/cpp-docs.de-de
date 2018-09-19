@@ -1,5 +1,5 @@
 ---
-title: __writefsbyte __writefsdword, __writefsqword __writefsword | Microsoft Docs
+title: __writefsbyte, __writefsdword, __writefsqword, __writefsword | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85749ff1325c3535c265a445ce76d37522bc252a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77791bdf33f38417d38ebdec3c73b83d96bde36f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338301"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718470"
 ---
 # <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte, __writefsdword, __writefsqword, __writefsword
 **Microsoft-spezifisch**  
   
- Schreiben Sie Speicher an einem Speicherort, ein Offset relativ zum Anfang des Segments FS angegeben wird.  
+ Schreibvorgänge im Speicher an einem Speicherort, ein Offset relativ zum Anfang des Segments FS angegeben wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,11 +60,11 @@ void __writefsqword(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `Offset`  
- Der Offset vom Anfang des FS zu schreiben.  
+*Offset*<br/>
+[in] Der Offset vom Anfang des FS so zu schreiben.  
   
- [in] `Data`  
- Der zu schreibende Wert.  
+*Data*<br/>
+[in] Der zu schreibende Wert.  
   
 ## <a name="requirements"></a>Anforderungen  
   

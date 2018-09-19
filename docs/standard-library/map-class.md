@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40b84e3daac5a1e5574c09e656d39dc774b57031
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: ccab97a7ac1fd0ad073a3f507dfa6687f311efc4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027744"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703923"
 ---
 # <a name="map-class"></a>map-Klasse
 
@@ -123,15 +123,19 @@ class map;
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* Geben Sie die wichtigen Daten in der Zuordnung gespeichert werden.
+*Key*<br/>
+Der in der Zuordnung zu speichernde Schlüsseldatentyp.
 
-*Typ* die Datentyp der Elemente in der Zuordnung gespeichert werden.
+*Type*<br/>
+Der in der Zuordnung zu speichernde Elementdatentyp.
 
-*"Traits"* der Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel, um deren relative Reihenfolge in der Zuordnung zu bestimmen, vergleichen kann. Dieses Argument ist optional, und das binäre Prädikat `less<Key>` ist der Standardwert.
+*Merkmale*<br/>
+Der Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der Zuordnung zu bestimmen. Dieses Argument ist optional, und das binäre Prädikat `less<Key>` ist der Standardwert.
 
 In C ++ 14 können Sie heterogenes Nachschlagen durch Angabe des std::less<>-Prädikats aktivieren, das keine Typparameter aufweist. Weitere Informationen finden Sie unter [Heterogenes Nachschlagen in assoziativen Containern](../standard-library/stl-containers.md#sequence_containers)
 
-*Allocator* der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers der Zuordnung kapselt. Dieses Argument ist optional, und der Standardwert ist `allocator<pair<const Key, Type> >`.
+*Zuweisung*<br/>
+Der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers der Zuordnung kapselt. Dieses Argument ist optional, und der Standardwert ist `allocator<pair<const Key, Type> >`.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -572,7 +576,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* den Schlüsselwert der aus der Zuordnung zu entfernenden Elemente.
+*key*<br/>
+Der Schlüsselwert der aus der Zuordnung zu entfernenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1035,7 +1040,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* der argumentschlüsselwert, mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Zuordnung verglichen werden soll.
+*key*<br/>
+Der Argumentschlüsselwert, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Zuordnung verglichen wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1121,13 +1127,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Parameter
 
-*Wo* Position des Elements entfernt werden soll.
+*Where*<br/>
+Die Position des zu entfernenden Elements.
 
-*Erste* Position des ersten Elements entfernt werden soll.
+*Erste*<br/>
+Die Position des ersten zu entfernenden Elements.
 
-*Letzte* die Position direkt hinter dem letzten Element entfernt werden soll.
+*letzte*<br/>
+Die Position direkt hinter dem letzten zu entfernenden Element.
 
-*Schlüssel* den Schlüsselwert der zu entfernenden Elemente.
+*Key*<br/>
+Der Schlüsselwert der zu entfernenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1229,7 +1239,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* den Schlüsselwert, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Zuordnung übereinstimmt.
+*key*<br/>
+Der Schlüsselwert, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Zuordnung übereinstimmt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1561,11 +1572,11 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Hinweise
 
-Die `iterator` durch kartenpunkte auf Elemente, Objekte des definierten [Value_type](#value_type), d. h. vom Typ `pair` * \< * **ConstKey**, * *Typ *** >*, dessen erster Member ist der Schlüssel zum Element und dessen zweiter Member ist das zugeordnete Datum, das vom Element gehalten.
+Der Iterator, der durch Map zeigt auf Elemente, Objekte des definierten [Value_type](#value_type), d. h. vom Typ `pair<const Key, Type>`, dessen erster Member ist der Schlüssel zum Element und dessen zweiter Member ist das zugeordnete Datum, das vom Element gehalten.
 
-Dereferenziert eine **Iterator** `Iter` auf ein Element in einer Zuordnung zeigt, verwenden Sie die `->` Operator.
+Auf einen Iterator dereferenzieren *Iter* auf ein Element in einer Zuordnung zeigt, verwenden Sie die `->` Operator.
 
-Verwenden Sie `Iter` -> **first**, das (\* `Iter`). **first** entspricht, um auf den Wert des Schlüssels für das Element zuzugreifen. Verwenden Sie `Iter` -> **second**, das (\* `Iter`). **second**.
+Um den Wert des Schlüssels für das Element zuzugreifen, verwenden `Iter->first`, dies entspricht dem `(*Iter).first`. Um den Wert des zugeordneten Datums für das Element zuzugreifen, verwenden `Iter->second`, dies entspricht dem `(*Iter).second`.
 
 ### <a name="example"></a>Beispiel
 
@@ -1587,7 +1598,7 @@ Gibt das Funktionsobjekt zurück, das eine Zuordnung zum Sortieren ihrer Element
 
 Das gespeicherte Objekt definiert die Memberfunktion
 
-**Bool-Operator**( **ConstKey &**`left`, **const Key &**`right`);
+`bool operator(const Key& left, const Key& right);`
 
 die **TRUE** zurückgibt, wenn `left` vorangestellt ist und nicht gleich `right` in der Sortierreihenfolge ist.
 
@@ -1690,7 +1701,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* der argumentschlüsselwert, mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Zuordnung verglichen werden soll.
+*key*<br/>
+Der Argumentschlüsselwert, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden Zuordnung verglichen wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2402,9 +2414,9 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 Ein `reverse_iterator`-Typ kann nicht den Wert eines Elements ändern und wird verwendet, um die Zuordnung in umgekehrter Reihenfolge zu durchlaufen.
 
-Die `reverse_iterator` durch kartenpunkte auf Elemente, Objekte des definierten [Value_type](#value_type), d. h. vom Typ `pair` * \< * **ConstKey**, * *Typ *** >*, dessen erster Member ist der Schlüssel zum Element und dessen zweiter Member ist das zugeordnete Datum, das vom Element gehalten.
+Die `reverse_iterator` durch kartenpunkte auf Elemente, Objekte des definierten [Value_type](#value_type), d. h. vom Typ `pair<const Key, Type>`, dessen erster Member ist der Schlüssel zum Element und dessen zweiter Member ist das zugeordnete Datum, das vom Element gehalten.
 
-Dereferenziert eine `reverse_iterator` `rIter` auf ein Element in einer Zuordnung zeigt, verwenden Sie die `->` Operator.
+Dereferenziert eine `reverse_iterator` *rIter* auf ein Element in einer Zuordnung zeigt, verwenden Sie die `->` Operator.
 
 Verwenden Sie `rIter` -> **first**, das (\* `rIter`). **first** entspricht, um auf den Wert des Schlüssels für das Element zuzugreifen. Verwenden Sie `rIter` -> **second**, das (\* `rIter`). **first** entspricht, um auf den Wert des zugeordneten Datums für das Element zuzugreifen.
 
@@ -2479,7 +2491,8 @@ void swap(
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* das Map-Argument, in dem Elemente mit die zielzuordnung getauscht werden soll.
+*right*<br/>
+Das map-Argument, das die Elemente bereitstellt, mit denen die Zielzuordnung getauscht werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2549,7 +2562,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* der argumentschlüsselwert, mit dem Sortierschlüsselwert eines Elements aus der zu durchsuchenden Zuordnung verglichen werden soll.
+*key*<br/>
+Der Argumentschlüsselwert, der mit dem Sortierschlüsselwert eines Elements aus der zu durchsuchenden Zuordnung verglichen wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2738,7 +2752,6 @@ int main( )
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<Map > Elemente](http://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
 [Container](../cpp/containers-modern-cpp.md)<br/>
 [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: OLE DB-Vorlagen | Microsoft Docs
+title: OLE DB-Vorlagen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,53 +17,56 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3133341b3dffa27cb5a6cec60ab58254fbe12dea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60c7e33a0a486bf0880b06a2eb159ba02300dec7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33109572"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118244"
 ---
 # <a name="ole-db-templates"></a>OLE DB-Vorlagen
-Der OLE DB-Vorlagen erleichtern das OLE DB-Datenzugriff. Visual C++ bietet Vorlagenklassen, die viele häufig verwendeten OLE DB-Schnittstellen implementieren. Sie können die Visual C++-Consumervorlagen eine OLE DB-Clientanwendung (Consumer) zu schreiben und die Anbietervorlagen, eine Serveranwendung (Provider) zu schreiben.  
+
+Der OLE DB-Vorlagen erleichtern das OLE DB-Datenzugriff. Visual C++ bietet Vorlagenklassen, die viele häufig verwendeten OLE DB-Schnittstellen implementieren. Sie können die Visual C++-Consumervorlagen zum Schreiben einer OLE DB-Client (Consumer)-Anwendung und die Anbietervorlagen zum Schreiben einer Serveranwendung (Provider) verwenden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)  
- Enthält Links zu den OLE DB-Consumervorlagen Klassen durch Verwendung aufgeführt.  
+
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+Enthält Links zu den OLE DB-Consumervorlagen-Klassen, die nach Verwendung aufgeführt.  
   
- [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-reference.md)  
- Enthält Links zu den OLE DB-Anbietervorlage Klassen durch Verwendung aufgeführt.  
+[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
+Enthält Links zu den OLE DB-Anbietervorlage-Klassen, die nach Verwendung aufgeführt.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Übersicht über die OLE DB-Programmierung](../../data/oledb/ole-db-programming-overview.md)  
- Informationen zu Neuheiten OLE DB und Universal Data Access in OLE DB-erläutert.  
+
+[Übersicht über die OLE DB-Programmierung](../../data/oledb/ole-db-programming-overview.md)<br/>
+Informationen zu Neuheiten OLE DB und erläutert, Universal Data Access in der OLE DB.  
   
- [OLE DB-Programmierreferenz](https://msdn.microsoft.com/en-us/library/ms713643.aspx)  
- Enthält Links zum Windows SDK-Dokumentation über OLE DB.  
+[OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643\(v=vs.85\))  
+Enthält Links zur Windows-SDK-Dokumentation über OLE DB.  
   
- [Beispiele für OLE DB-Vorlagen](../../visual-cpp-samples.md)  
- Enthält Links zu den Beispielen von OLE DB-Vorlagen, die zeigen, wie OLE DB in Ihren Projekten zu verwenden.  
+[Beispiele für OLE DB-Vorlagen](../../visual-cpp-samples.md)<br/>
+Enthält Links zu den OLE DB-Vorlagen-Beispiele zeigen, wie OLE DB in Ihren Projekten verwenden.  
   
- [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)  
- Der OLE DB-Consumervorlagen erörtert konzeptionellen Materialien.  
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+Die OLE DB-Consumervorlagen erörtert konzeptionellen Materialien.  
   
- [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)  
- Der OLE DB-Anbietervorlagen erörtert konzeptionellen Materialien.  
+[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+Der OLE DB-Anbietervorlagen erörtert konzeptionellen Materialien.  
   
- [Erstellen eines OLE DB-Consumers](../../data/oledb/creating-an-ole-db-consumer.md)  
- Beschreibt das Erstellen eines Consumers von OLE DB-Vorlagen, mit oder ohne den ATL OLE DB-Consumer-Assistenten.  
+[Erstellen eines OLE DB-Consumers](../../data/oledb/creating-an-ole-db-consumer.md)<br/>
+Beschreibt das Erstellen eines Consumers OLE DB-Vorlagen, mit oder ohne die ATL-OLE DB-Consumer-Assistenten.  
   
- [Erstellen eines einfachen schreibgeschützten Anbieters](../../data/oledb/creating-a-simple-read-only-provider.md)  
- Beschreibt das Erstellen eines einfachen schreibgeschützten Anbieters, das ein Paar von Zeichenfolgen liest.  
+[Erstellen eines einfachen schreibgeschützten Anbieters](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>
+Beschreibt das Erstellen eines einfachen schreibgeschützten Anbieters, das ein Paar von Zeichenfolgen liest.  
   
- [Erstellen eines aktualisierbaren Anbieters](../../data/oledb/creating-an-updatable-provider.md)  
- Beschreibt, Erstellen von Anbietern, die in den Datenspeicher geschrieben werden können.  
+[Erstellen eines aktualisierbaren Anbieters](../../data/oledb/creating-an-updatable-provider.md)<br/>
+Beschreibt, Erstellen von Anbietern, die an den Datenspeicher geschrieben werden können.  
   
- [OLE DB-Consumerattribute](../../windows/ole-db-consumer-attributes.md)  
- Erläutert eine vereinfachte Schnittstelle zum Einfügen von Code basierend auf den OLE DB-Consumervorlagen arbeiten OLE DB-Consumer zu erstellen.  
+[OLE DB-Consumerattribute](../../windows/ole-db-consumer-attributes.md)<br/>
+Erläutert, eine vereinfachte Schnittstelle zum Einfügen von Code auf Grundlage der OLE DB-Consumervorlagen arbeiten-OLE DB-Consumer zu erstellen.  
   
- [Active Template Library (ATL)-Referenz](../../atl/atl-com-desktop-components.md)  
- Enthält Referenzmaterial zur ATL-Bibliothek, einer Gruppe vorlagenbasierter Visual C++-Klassen, die die Programmierung von COM-Objekten vereinfachen.  
+[Active Template Library (ATL)-Referenz](../../atl/atl-com-desktop-components.md)<br/>
+Enthält Referenzmaterial zur ATL-Bibliothek, einer Gruppe vorlagenbasierter Visual C++-Klassen, die die Programmierung von COM-Objekten vereinfachen.  
   
- [Debuggen](/visualstudio/debugger/debugging-in-visual-studio)  
- Stellt Links zum Visual Studio-Debugger für die Behebung logischer Fehler in Ihrer Anwendung oder in gespeicherten Prozeduren bereit.
+[Debuggen](/visualstudio/debugger/debugging-in-visual-studio)<br/>
+Stellt Links zum Visual Studio-Debugger für die Behebung logischer Fehler in Ihrer Anwendung oder in gespeicherten Prozeduren bereit.

@@ -17,30 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a8a734eae486ca5e88009301b13d71b21473d9f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 444f56c1a999f09a79d725173c9f0f19399ab363
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939255"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118361"
 ---
 # <a name="comptrtrelease"></a>_com_ptr_t::Release
-**Microsoft-spezifisch**  
-  
- Ruft die `Release` Memberfunktion `IUnknown` für den gekapselten Schnittstellenzeiger auf.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-void Release( );  
-  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Aufrufe `IUnknown::Release` für den gekapselten Schnittstellenzeiger auf, das Auslösen eines E_POINTER-Fehlers, wenn dieser Schnittstellenzeiger NULL ist.  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md)
+
+**Microsoft-spezifisch**
+
+Ruft die **Version** Memberfunktion `IUnknown` für den gekapselten Schnittstellenzeiger auf.
+
+## <a name="syntax"></a>Syntax
+
+```
+void Release( );
+```
+
+## <a name="remarks"></a>Hinweise
+
+Aufrufe `IUnknown::Release` für den gekapselten Schnittstellenzeiger, Auslösen einer `E_POINTER` Fehler, wenn dieser Schnittstellenzeiger NULL ist.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md)

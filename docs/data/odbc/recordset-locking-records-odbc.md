@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Sperren von Datensätzen (ODBC) | Microsoft Docs'
+title: 'Recordset: Sperren von Datensätzen (ODBC) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,57 +21,61 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1fcef3233e4c2035cc481128d81723dad03fb18b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb6ed678cab6ecc08ac47275648c5cdd01a0cd6f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092136"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021160"
 ---
 # <a name="recordset-locking-records-odbc"></a>Recordset: Sperren von Datensätzen (ODBC)
+
 Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
   
- In diesem Thema wird Folgendes erläutert:  
+In diesem Thema wird Folgendes erläutert:  
   
--   [Die Arten von Datensatz zu sperren](#_core_record.2d.locking_modes).  
+- [Die Art von Datensatz zu sperren](#_core_record.2d.locking_modes).  
   
--   [Das Sperren von Datensätzen im Recordset während eines Updates](#_core_locking_records_in_your_recordset).  
+- [Gewusst wie: Sperren Sie Datensätze im Recordset während eines Updates](#_core_locking_records_in_your_recordset).  
   
- Wenn Sie ein Recordset verwenden, um einen Datensatz in der Datenquelle zu aktualisieren, kann die Anwendung den Datensatz sperren, sodass kein anderer Benutzer den Datensatz zur gleichen Zeit aktualisiert werden kann. Der Status eines Datensatzes, der von zwei Benutzern gleichzeitig aktualisiert ist nicht definiert, es sei denn, das System garantieren kann, dass einen Datensatz von zwei Benutzern gleichzeitig aktualisiert werden können.  
+Wenn Sie ein Recordset verwenden, um einen Datensatz für die Datenquelle zu aktualisieren, kann die Anwendung den Datensatz sperren, damit kein anderer Benutzer den Datensatz gleichzeitig aktualisiert werden kann. Der Status eines Datensatzes von zwei Benutzern aktualisiert werden, zur gleichen Zeit ist nicht definiert, es sei denn, das System, dass zwei Benutzer einen Datensatz gleichzeitig aktualisieren können nicht garantieren kann.  
   
 > [!NOTE]
->  Dieses Thema bezieht sich auf von `CRecordset` abgeleitete Objekte, in denen das gesammelte Abrufen von Zeilen nicht implementiert wurde. Wenn Sie das gesammelte Abrufen von Zeilen implementiert haben, einige der Informationen ist nicht relevant. Angenommen, Sie können nicht aufgerufen werden der **bearbeiten** und **Update** Memberfunktionen. Weitere Informationen über das gesammelte finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Dieses Thema bezieht sich auf von `CRecordset` abgeleitete Objekte, in denen das gesammelte Abrufen von Zeilen nicht implementiert wurde. Wenn Sie die massenzeilenabruf implementiert haben, einige der Informationen ist nicht relevant. Angenommen, Sie können nicht aufrufen, die `Edit` und `Update` Memberfunktionen. Weitere Informationen zu gesammelten Abrufens von Zeilen, finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="_core_record.2d.locking_modes"></a> Datensatz Sperrverhalten  
- Die Datenbankklassen bieten zwei [Datensatz Sperrverhalten](../../mfc/reference/crecordset-class.md#setlockingmode):  
+##  <a name="_core_record.2d.locking_modes"></a> Datensatzsperrung Modi  
+
+Die Datenbankklassen stellen zwei [Datensatzsperre Modi](../../mfc/reference/crecordset-class.md#setlockingmode):  
   
--   Eingeschränktes Sperren (Standard)  
+- Eingeschränktes Sperren (Standard)  
   
--   vollständige Sperren  
+- Pessimistische Sperrung  
   
- Aktualisieren eines Datensatzes erfolgt in drei Schritten:  
+Aktualisieren eines Datensatzes erfolgt in drei Schritten:  
   
-1.  Starten Sie den Vorgang durch einen Aufruf der [bearbeiten](../../mfc/reference/crecordset-class.md#edit) Memberfunktion.  
+1. Starten Sie den Vorgang, durch einen Aufruf der [bearbeiten](../../mfc/reference/crecordset-class.md#edit) Member-Funktion.  
   
-2.  Sie ändern die entsprechenden Feldern des aktuellen Datensatzes.  
+1. Sie ändern die entsprechenden Felder des aktuellen Datensatzes.  
   
-3.  Sie den Vorgang beenden, und normalerweise einen commit für das Update – durch Aufrufen der [aktualisieren](../../mfc/reference/crecordset-class.md#update) Memberfunktion.  
+1. Erhalten Sie den Vorgang, und normalerweise einen commit für das Update – durch Aufrufen der [aktualisieren](../../mfc/reference/crecordset-class.md#update) Member-Funktion.  
   
- Eingeschränktes Sperren sperrt den Datensatz in der Datenquelle nur während der **Update** aufrufen. Bei Verwendung von Parallelität in einer mehrbenutzerumgebung, sollte die Anwendung verarbeiten einer **Update** fehlerbedingung. Eingeschränkte Sperren wird den Datensatz als Sie rufen **bearbeiten** und ist nicht freigegeben werden, bis Sie Aufruf **Update** (Fehler werden angezeigt, über die `CDBException` Mechanismus nicht in einem Abstand von **"False"** zurückgegebenes **Update**). Vollständige Sperren eine Leistungseinbuße für andere Benutzer hat, da es sich bei gleichzeitigen Zugriff auf den gleichen Datensatz möglicherweise warten, bis zur Fertigstellung Ihrer Anwendung **Update** Prozess.  
+Der Datensatz für die Datenquelle nur während der optimistischen Sperre gesperrt, die `Update` aufrufen. Die Anwendung bei Verwendung von Parallelität in einer mehrbenutzerumgebung verarbeiten sollte ein `Update` fehlerbedingung. Der Datensatz pessimistische Sperrung gesperrt werden, sobald Sie aufrufen `Edit` aufgehoben wird, es bis Aufruf `Update` (Fehler werden angezeigt, über die `CDBException` Mechanismus nicht durch den Wert "false" zurückgegeben, die von `Update`). Pessimistische Sperrung eine Leistungseinbuße für andere Benutzer hat, da der gleichzeitige Zugriff auf den gleichen Datensatz möglicherweise warten, bis zur Beendigung der Anwendung `Update` Prozess.  
   
 ##  <a name="_core_locking_records_in_your_recordset"></a> Sperren von Datensätzen im Recordset  
- Wenn Sie einem Recordset-Objekt ändern möchten [Sperrverhalten](#_core_record.2d.locking_modes) von der Standardeinstellung müssen Sie den Modus ändern, vor dem Aufruf **bearbeiten**.  
+
+Wenn Sie einem Recordset-Objekt ändern möchten [Sperrmodus](#_core_record.2d.locking_modes) von der standardmäßigen, müssen Sie den Modus ändern, vor dem Aufruf `Edit`.  
   
-#### <a name="to-change-the-current-locking-mode-for-your-recordset"></a>So ändern Sie das aktuelle Sperrverhalten für das recordset  
+#### <a name="to-change-the-current-locking-mode-for-your-recordset"></a>So ändern Sie den aktuellen Sperrmodus für das recordset  
   
-1.  Rufen Sie die [SetLockingMode](../../mfc/reference/crecordset-class.md#setlockingmode) -Memberfunktion, entweder **pessimistic** oder **CRecordset:: optimistic**.  
+1. Rufen Sie die [SetLockingMode](../../mfc/reference/crecordset-class.md#setlockingmode) Memberfunktion, dabei wird entweder `CRecordset::pessimistic` oder `CRecordset::optimistic`.  
   
- Das neue Sperrverhalten bleibt wirksam, bis Sie ihn erneut ändern oder das Recordset geschlossen wird.  
+Das neue Sperrverhalten bleibt wirksam, bis Sie es erneut ändern, oder das Recordset geschlossen wird.  
   
 > [!NOTE]
->  Nur relativ wenige ODBC-Treiber unterstützen zurzeit pessimistische Sperren.  
+>  Nur relativ wenige ODBC-Treiber unterstützen derzeit die pessimistische Sperrung.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)   
- [Recordset: Ausführen einer Verknüpfung (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)   
- [Recordset: Hinzufügen, Aktualisieren und Löschen von Datensätzen (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+
+[Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
+[Recordset: Ausführen eines Join (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)<br/>
+[Recordset: Hinzufügen, Aktualisieren und Löschen von Datensätzen (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

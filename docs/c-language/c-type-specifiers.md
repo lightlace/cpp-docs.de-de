@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e37ac421627d4c4503d75eaf65188bbe234af015
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 16c204636baf87cd88f80294b1f413cacc9f5ddc
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388382"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764263"
 ---
 # <a name="c-type-specifiers"></a>C-Typspezifizierer
 
@@ -29,18 +29,18 @@ Typspezifizierer in Deklarationen definieren den Typ einer Variablen oder Funkti
 ## <a name="syntax"></a>Syntax
 
 *type-specifier*:  
-&nbsp;&nbsp;**void**  
-&nbsp;&nbsp;**char**  
-&nbsp;&nbsp;**short**  
-&nbsp;&nbsp;**int**  
-&nbsp;&nbsp;**long**  
-&nbsp;&nbsp;**float**  
-&nbsp;&nbsp;**double**  
-&nbsp;&nbsp;**signed**  
-&nbsp;&nbsp;**unsigned**  
-&nbsp;&nbsp;*struct-or-union-specifier*  
-&nbsp;&nbsp;*enum-specifier*  
-&nbsp;&nbsp;*typedef-name*  
+&nbsp;&nbsp;&nbsp;&nbsp;**void**  
+&nbsp;&nbsp;&nbsp;&nbsp;**char**  
+&nbsp;&nbsp;&nbsp;&nbsp;**short**  
+&nbsp;&nbsp;&nbsp;&nbsp;**int**  
+&nbsp;&nbsp;&nbsp;&nbsp;**long**  
+&nbsp;&nbsp;&nbsp;&nbsp;**float**  
+&nbsp;&nbsp;&nbsp;&nbsp;**double**  
+&nbsp;&nbsp;&nbsp;&nbsp;**signed**  
+&nbsp;&nbsp;&nbsp;&nbsp;**unsigned**  
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*  
+&nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier*  
+&nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*  
 
 Die Typen **signed char**, **signed int**, **signed short int** und **signed long int** werden zusammen mit ihren **unsigned**-Äquivalenten und **enum** als *ganzzahlige* Typen bezeichnet. Die Typspezifizierer **float**, **double** sowie **long double** werden als *Gleitkommatypen* bezeichnet. Sie können einen beliebigen ganzzahligen oder Gleitkomma-Typspezifizierer in einer Variablen oder einer Funktionsdeklaration verwenden. Wenn ein *type-specifier* in einer Deklaration nicht angegeben ist, wird dafür **int** angenommen.
 
@@ -79,7 +79,7 @@ pi = pu;  /* Now generates warning */
 
 Ausdrücke vom Typ **void** werden im Hinblick auf Nebeneffekte ausgewertet. Sie können den (nicht vorhandenen) Wert eines Ausdrucks, der vom Typ **void** ist, in keiner Weise verwenden, noch können Sie einen **void**-Ausdruck (durch implizite oder explizite Konvertierung) in einen beliebigen Typ außer **void** konvertieren. Wenn Sie einen Ausdruck eines anderen Typs in einem Kontext verwenden, in dem ein **void**-Ausdruck erforderlich ist, wird dessen Wert verworfen.
 
-Zur Einhaltung der ANSI-Spezifikation darf **void\*\*** nicht als **int\*\*** verwendet werden. Nur **void\*** kann als Zeiger auf einen nicht angegebenen Typ verwendet werden.
+Zur Einhaltung der ANSI-Spezifikation darf <strong>void\*\*</strong> nicht als <strong>int\*\*</strong> verwendet werden. Nur **void**<strong>\*</strong> kann als Zeiger auf einen nicht angegebenen Typ verwendet werden.
 
 **Ende Microsoft-spezifisch**
 

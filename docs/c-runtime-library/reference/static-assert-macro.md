@@ -28,16 +28,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbbab8314a038d796ebd1a13342f3054e59f3e68
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8eda76666679b133b2d5486d21cd4c8e24d1fdf3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407365"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105080"
 ---
 # <a name="staticassert-macro"></a>_STATIC_ASSERT-Makro
 
-Auswerten eines Ausdrucks zum Zeitpunkt der Kompilierung und ein Fehler generiert, wenn das Ergebnis ist **"false"**.
+Auswerten eines Ausdrucks zur Kompilierzeit und ein Fehler generiert, wenn das Ergebnis ist **"false"**.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,15 +49,16 @@ _STATIC_ASSERT(
 
 ### <a name="parameters"></a>Parameter
 
-*boolescher Ausdruck* Ausdruck (einschließlich Zeiger), der zu ungleich null ergibt (**"true"**) oder 0 (**"false"**).
+*boolescher Ausdruck*<br/>
+Ausdruck (einschließlich Zeiger), der zu ungleich null ergibt (**"true"**) oder 0 (**"false"**).
 
 ## <a name="remarks"></a>Hinweise
 
-Dieses Makro ähnelt der [_ASSERT- und _ASSERTE-Makros](assert-asserte-assert-expr-macros.md), außer dass *boolescher* wird zur Kompilierzeit statt zur Laufzeit ausgewertet. Wenn *boolescher* ergibt **"false"** (0), [Compilerfehler C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) wird generiert.
+Dieses Makro ähnelt den [_ASSERT "und" _ASSERTE-Makros](assert-asserte-assert-expr-macros.md), außer dass *boolescher Ausdruck* wird zur Kompilierzeit statt zur Laufzeit ausgewertet. Wenn *boolescher Ausdruck* ergibt **"false"** (0), [Compilerfehler C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) wird generiert.
 
 ## <a name="example"></a>Beispiel
 
-In diesem Beispiel überprüfen wir, ob die ["sizeof"](../../c-language/sizeof-operator-c.md) ein **Int** ist größer als oder gleich 2 Byte und gibt an, ob die ["sizeof"](../../c-language/sizeof-operator-c.md) eine **lange** 1 Byte. Das Programm nicht kompiliert, und es wird generiert, [Compilerfehler C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) da eine **lange** ist größer als 1 Byte.
+In diesem Beispiel überprüfen wir, ob die ["sizeof"](../../c-language/sizeof-operator-c.md) ein **Int** ist größer als oder gleich 2 Bytes und gibt an, ob die ["sizeof"](../../c-language/sizeof-operator-c.md) eine **lange** 1 Byte. Das Programm wird nicht kompiliert und generiert [Compilerfehler C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) da eine **lange** ist größer als 1 Byte.
 
 ```C
 // crt__static_assert.c

@@ -1,5 +1,5 @@
 ---
-title: Linkertoolfehler Lnk1240 | Microsoft Docs
+title: Linkertoolfehler Lnk1240 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5f21d12e9d3b2673e5dfcf65dc726e9d3cc6a36
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0aa394d11726597bd720bfd2d206f41ab9e077e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295063"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111887"
 ---
 # <a name="linker-tools-error-lnk1240"></a>Linkertoolfehler LNK1240
-Fehler beim Kompilieren der IDL-Inhalt  
-  
- Der Linker erzeugte "MIDL", um eingebettete IDL zu kompilieren, aber es wurde ein Problem aufgetreten. Überprüfen Sie die Fehler, die durch "MIDL" angegeben.
+
+Fehler beim Kompilieren von IDL-Inhalt
+
+Der Linker erzeugt MIDL zum Kompilieren der eingebetteten IDL, aber es wurde ein Problem aufgetreten. Überprüfen Sie die Fehler, die von MIDL angegeben.

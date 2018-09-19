@@ -1,5 +1,5 @@
 ---
-title: Datenmember Module::GenericReleaseNotifier::callback_ | Microsoft Docs
+title: Datenmember Module::GenericReleaseNotifier::callback_ | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c6f7c430fcd75033e10e0a23d9d0ab78675653bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5c15b03682fa96287db29d1160932135cea0186
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880689"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589258"
 ---
 # <a name="modulegenericreleasenotifiercallback-data-member"></a>Module::GenericReleaseNotifier::callback_-Datenmember
-Enthält den Lambda, Funktionselement oder Zeiger auf Funktion Ereignishandler, die dem aktuellen genericreleasenotifier-Objekt zugeordnet.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-T callback_;  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [Module::GenericReleaseNotifier-Klasse](../windows/module-genericreleasenotifier-class.md)
+
+Enthält den Lambda, Funktionselement oder Zeiger auf Funktion zugeordnete Ereignishandler die aktuelle `Module::GenericReleaseNotifier` Objekt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+T callback_;
+```
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[Module::GenericReleaseNotifier-Klasse](../windows/module-genericreleasenotifier-class.md)

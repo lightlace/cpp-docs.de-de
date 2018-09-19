@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2517 | Microsoft Docs
+title: Compilerfehler C2517 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15ae07d3585b3d2f281e8dd639b8361cea873bfb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4209f0ababf6262af3f273b9e76e2bb2dfaa68fb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229302"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110912"
 ---
 # <a name="compiler-error-c2517"></a>Compilerfehler C2517
-'Bezeichner': rechts in der '::' ist nicht definiert  
-  
- Der Bezeichner am rechten Rand der Bereichsauflösungsoperator (`::`) muss ein definierter Member der Klasse, Struktur oder Union auf der linken Seite. Wenn keine Klasse, Struktur oder Union benannt wird, muss der Bezeichner auf der rechten Seite mit globalem Gültigkeitsbereich deklariert werden.
+
+'Bezeichner': rechts in der '::' ist nicht definiert
+
+Der Bezeichner für die rechts neben der Bereichsauflösungsoperator (`::`) muss ein definiertes Element von der Klasse, Struktur oder Union auf der linken Seite. Wenn Sie keine Klasse, Struktur oder Union benannt wird, muss der Bezeichner auf der rechten Seite mit globalem Gültigkeitsbereich deklariert werden.

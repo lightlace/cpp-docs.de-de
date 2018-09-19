@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2392 | Microsoft Docs
+title: Compilerfehler C2392 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,55 +16,57 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffb2ce4ef752d91eaadc66d17aadf3838ee560df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c45c5b271235e4ada0945a79087186a213c75343
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197909"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064268"
 ---
 # <a name="compiler-error-c2392"></a>Compilerfehler C2392
-"Methode1": verwaltete kovariant zurückgibt, die Typen werden in nicht unterstützt oder würden WinRTtypes, andernfalls "Methode2" überschrieben werden  
-  
- Covariant-Rückgabetypen sind unzulässig für Windows-Runtime-Memberfunktionen oder beim Kompilieren mit der [/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md) Option.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C2392 generiert und gezeigt, wie Sie diesen Fehler beheben:  
-  
-```  
-// C2392.cpp  
-// compile with: /clr  
-public ref struct B {  
-public:  
-   int i;  
-};  
-  
-public ref struct D: public B{};  
-  
-public ref struct B1 {  
-public:  
-   virtual B^ mf() {  
-      B^ pB = gcnew B;  
-      pB->i = 11;  
-      return pB;  
-   }  
-};  
-  
-public ref struct D1: public B1 {  
-public:  
-   virtual D^ mf() override {  // C2392  
-   // try the following line instead  
-   // virtual B^ mf() override {  
-   // return type D^ is covariant with B^, not allowed with CLR types  
-      D^ pD = gcnew D;  
-      pD->i = 12;  
-      return pD;  
-   }  
-};  
-  
-int main() {  
-   B1^ pB1 = gcnew D1;  
-   B^ pB = pB1->mf();  
-   D^ pD = dynamic_cast<D^>(pB);  
-}  
+
+"Methode1": covariant-Rückgaben Typen nicht, in unterstützt werden verwalteten oder WinRTtypes, andernfalls "Methode2" überschrieben werden
+
+Kovariante Rückgabetypen sind nicht zulässig für Windows-Runtime-Memberfunktionen oder beim Kompilieren mit der [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) Option.
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C2392 generiert und gezeigt, wie Sie diesen Fehler beheben:
+
+```
+// C2392.cpp
+// compile with: /clr
+public ref struct B {
+public:
+   int i;
+};
+
+public ref struct D: public B{};
+
+public ref struct B1 {
+public:
+   virtual B^ mf() {
+      B^ pB = gcnew B;
+      pB->i = 11;
+      return pB;
+   }
+};
+
+public ref struct D1: public B1 {
+public:
+   virtual D^ mf() override {  // C2392
+   // try the following line instead
+   // virtual B^ mf() override {
+   // return type D^ is covariant with B^, not allowed with CLR types
+      D^ pD = gcnew D;
+      pD->i = 12;
+      return pD;
+   }
+};
+
+int main() {
+   B1^ pB1 = gcnew D1;
+   B^ pB = pB1->mf();
+   D^ pD = dynamic_cast<D^>(pB);
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Größe von individuellen Steuerelementen | Microsoft Docs
+title: Größe der einzelnen Steuerelemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,46 +18,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03577dbf831c21ec9878a787d937d39b5e8bcd66
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 929cf8eea66b928fe4889a98ca0a78fa7224bf17
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890111"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612507"
 ---
 # <a name="sizing-individual-controls"></a>Festlegen der Größe von individuellen Steuerelementen
-Verwenden Sie den Ziehpunkt, um die Größe eines Steuerelements. Wenn der Zeiger an einem Ziehpunkt befindet, ändert er Form an, dass die Anweisungen in denen Größe des Steuerelements geändert werden kann. Aktive Ziehpunkte sind gefüllt. Wenn Sie ein Ziehpunkt leer ist, kann nicht entlang dieser Achse Größe des Steuerelements geändert werden.  
-  
- Sie können auch die Größe eines Steuerelements ändern, indem das Steuerelement in den Handbüchern oder die Ränder andocken, oder durch Verschieben einer "angedockt" Handbuch Weg von einem anderen und Steuerelement.  
-  
-### <a name="to-size-a-control"></a>Größe eines Steuerelements  
-  
-1.  Wählen Sie das Steuerelement.  
-  
-2.  Ziehen Sie die Ziehpunkte zum Ändern der Größe des Steuerelements ein:  
-  
-    -   Ziehpunkte am oberen und Seiten werden die horizontale oder vertikale Größe ändern.  
-  
-    -   Ziehpunkte an den Ecken werden horizontale und vertikale Größe ändern.  
-  
-    > [!TIP]
-    >  Sie können das Steuerelement um eine Dialogeinheit (DLU) zu einem Zeitpunkt ändern, indem Sie die UMSCHALTTASTE gedrückt halten und die rechts und nach-unten-Tasten verwenden.  
-  
-### <a name="to-automatically-size-a-control-to-fit-the-text-within-it"></a>Ein Steuerelement, um die Textgröße darin automatisch angepasst  
-  
-1.  Wählen Sie **Größe an Inhalt anpassen** aus der **Format** Menü.  
-  
- \- oder –  
-  
--   Mit der rechten Maustaste in des Steuerelements, und wählen Sie **Größe an Inhalt anpassen** aus dem Kontextmenü.  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
-  
- Anforderungen  
-  
- Win32  
-  
-## <a name="see-also"></a>Siehe auch  
- [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
 
+Verwenden Sie die Ziehpunkte, um die Größe eines Steuerelements. Wenn der Zeiger an einem Ziehpunkt befindet, ändert es Form an, dass die Anweisungen in denen Größe des Steuerelements geändert werden kann. Es sind aktive Ziehpunkte gefüllt. Wenn ein Ziehpunkt leerer ist, kann nicht das Steuerelement entlang dieser Achse Größe geändert werden.
+
+Sie können auch die Größe eines Steuerelements ändern, durch das das Steuerelement an Führungslinien oder Rand andocken, oder durch das Verschieben einer Kontrolle und Anleitung von einem anderen angedockt.
+
+### <a name="to-size-a-control"></a>Größe eines Steuerelements
+
+1. Wählen Sie das Steuerelement.
+
+2. Ziehen Sie die Ziehpunkte, um die Größe des Steuerelements zu ändern:
+
+   - Ziehpunkte an den oberen und den Seiten die horizontale oder vertikale Größe geändert.
+
+   - Ziehpunkte an den Ecken ändern Sie horizontale und vertikale Größe.
+
+   > [!TIP]
+   > Sie können die Steuerelement ein Dialog-Einheit (DLU) zu einem Zeitpunkt ändern, halten die **UMSCHALT** Schlüssel- und unter Verwendung der **Pfeil nach rechts** und **nach-unten-** Schlüssel.
+
+### <a name="to-automatically-size-a-control-to-fit-the-text-within-it"></a>Automatisch die Größe ein Steuerelement für den Text angepasst
+
+1. Wählen Sie **Größe an Inhalt anpassen** aus der **Format** Menü.
+
+\- oder –
+
+- Klicken Sie auf das Steuerelement, und wählen Sie **Größe an Inhalt anpassen** aus dem Kontextmenü.
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Anforderungen
+
+Win32
+
+## <a name="see-also"></a>Siehe auch
+
+[Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)  
+[Steuerelemente](../mfc/controls-mfc.md)

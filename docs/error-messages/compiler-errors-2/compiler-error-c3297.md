@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3297 | Microsoft Docs
+title: Compilerfehler C3297 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5afdf54e7a335dda86a4046a01b31875a0c91575
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7aa23cebc7ad7019c375c351f723b7ad1573ab86
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249365"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069832"
 ---
 # <a name="compiler-error-c3297"></a>Compilerfehler C3297
-'Einschränkung_2': 'Einschränkung_1' kann nicht als Einschränkung verwendet werden, da 'Einschränkung_1' die Werteinschränkung aufweist.  
-  
- Wertklassen sind versiegelt. Wenn eine Einschränkung eine Wertklasse ist, kann von ihr keine andere Einschränkung abgeleitet werden.  
-  
- Weitere Informationen finden Sie unter [Einschränkungen für generische Typparameter (C + c++ / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C3297 generiert:  
-  
-```  
-// C3297.cpp  
-// compile with: /clr /c  
-generic<class T, class U>  
-where T : value class  
-where U : T   // C3297  
-public ref struct R {};  
+
+'Einschränkung_2': 'Einschränkung_1' kann nicht als Einschränkung verwendet werden, da 'Einschränkung_1' die Werteinschränkung aufweist.
+
+Wertklassen sind versiegelt. Wenn eine Einschränkung eine Wertklasse ist, kann von ihr keine andere Einschränkung abgeleitet werden.
+
+Weitere Informationen finden Sie unter [Einschränkungen für generische Typparameter (C++ / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C3297 generiert:
+
+```
+// C3297.cpp
+// compile with: /clr /c
+generic<class T, class U>
+where T : value class
+where U : T   // C3297
+public ref struct R {};
 ```

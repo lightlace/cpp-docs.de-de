@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 661735e91084bad45553de71e80a599afd674028
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: f07efa6ebbea70f83803238bf73e2d3e806ea457
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336825"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204568"
 ---
 # <a name="persistence-of-ole-controls"></a>Persistenz der OLE-Steuerelemente
 Eine Funktion der OLE-Steuerelemente ist Persistenz (oder Serialisierung), wodurch die OLE-Steuerelements, das Lesen und Schreiben von Eigenschaftswerten in und aus einer Datei oder den Stream. Eine Container-Anwendung kann die Serialisierung verwenden, um Eigenschaftswerte des Steuerelements zu speichern, auch nachdem die Anwendung das Steuerelement gelöscht wurde. Die Eigenschaftswerte des OLE-Steuerelements können Sie dann aus der Datei gelesen werden, oder Stream, wenn eine neue Instanz des Steuerelements zu einem späteren Zeitpunkt erstellt wird.  
@@ -93,7 +93,7 @@ hBlobDefault
   
 -   Ein Speicherblock, der die Binärdaten enthält.  
   
- Beachten Sie, dass `PX_Blob` wird Arbeitsspeicher zuweisen, mit der Windows [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) -API, die beim Laden von Eigenschaften des BLOB-Typ. Sie sind verantwortlich für das Freigeben dieses Speichers. Aus diesem Grund sollte der Destruktor des Steuerelements aufrufen [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) auf einer beliebigen BLOB-Type-Eigenschaft Handles für kostenlose zu Ihrem Steuerelement zugewiesener Speicher einrichten.  
+ Beachten Sie, dass `PX_Blob` wird Arbeitsspeicher zuweisen, mit der Windows [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) -API, die beim Laden von Eigenschaften des BLOB-Typ. Sie sind verantwortlich für das Freigeben dieses Speichers. Aus diesem Grund sollte der Destruktor des Steuerelements aufrufen [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree) auf einer beliebigen BLOB-Type-Eigenschaft Handles für kostenlose zu Ihrem Steuerelement zugewiesener Speicher einrichten.  
   
 ##  <a name="px_bool"></a>  PX_Bool  
  Mit dieser Funktion wird innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die zu serialisierenden bzw. zu eine Eigenschaft vom Typ "bool" zu initialisieren.  

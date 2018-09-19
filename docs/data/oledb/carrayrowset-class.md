@@ -1,5 +1,5 @@
 ---
-title: CArrayRowset-Klasse | Microsoft Docs
+title: CArrayRowset-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,38 +11,77 @@ f1_keywords:
 - CArrayRowset
 - ATL::CArrayRowset
 - ATL::CArrayRowset<TAccessor>
+- ATL::CArrayRowset::CArrayRowset
+- CArrayRowset.CArrayRowset
+- ATL.CArrayRowset.CArrayRowset
+- ATL.CArrayRowset<TAccessor>.CArrayRowset
+- CArrayRowset::CArrayRowset
+- CArrayRowset
+- CArrayRowset<TAccessor>::CArrayRowset
+- ATL::CArrayRowset<TAccessor>::CArrayRowset
+- CArrayRowset<TAccessor>.Snapshot
+- ATL::CArrayRowset::Snapshot
+- Snapshot
+- CArrayRowset<TAccessor>::Snapshot
+- ATL.CArrayRowset.Snapshot
+- ATL.CArrayRowset<TAccessor>.Snapshot
+- ATL::CArrayRowset<TAccessor>::Snapshot
+- CArrayRowset::Snapshot
+- CArrayRowset.Snapshot
+- CArrayRowset::operator[]
+- CArrayRowset.operator[]
+- ATL::CArrayRowset::m_nRowsRead
+- ATL::CArrayRowset<TAccessor>::m_nRowsRead
+- CArrayRowset<TAccessor>::m_nRowsRead
+- ATL.CArrayRowset<TAccessor>.m_nRowsRead
+- CArrayRowset.m_nRowsRead
+- m_nRowsRead
+- ATL.CArrayRowset.m_nRowsRead
+- CArrayRowset::m_nRowsRead
 dev_langs:
 - C++
 helpviewer_keywords:
 - CArrayRowset class
+- CArrayRowset class, constructor
+- Snapshot method
+- operator [], arrays
+- '[] operator'
+- operator[], arrays
+- m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 691776f39c54e843cec478c3c42871e7b7e81da1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e13f262b90ff46955d6ba63fb83a941d712b017a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091101"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087876"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset-Klasse
+
 Greift auf die Elemente eines Rowsets mit Arraysyntax.  
   
 ## <a name="syntax"></a>Syntax
 
 ```cpp
 template < class TAccessor >  
-class CArrayRowset :   
-   public CVirtualBuffer <TAccessor>,   
+class CArrayRowset : 
+   public CVirtualBuffer <TAccessor>, 
    protected CBulkRowset <TAccessor>  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `TAccessor`  
- Der Typ der Accessorklasse, die das Rowset verwendet werden soll.  
+### <a name="parameters"></a>Parameter  
+
+*TAccessor*<br/>
+Der Typ der Accessor-Klasse, die Sie auf das Rowset verwenden möchten.  
+
+## <a name="requirements"></a>Anforderungen  
+
+**Header:** atldbcli.h  
   
 ## <a name="members"></a>Member  
   
@@ -50,25 +89,84 @@ class CArrayRowset :
   
 |||  
 |-|-|  
-|[CArrayRowset](../../data/oledb/carrayrowset-carrayrowset.md)|Konstruktor.|  
-|[Snapshot](../../data/oledb/carrayrowset-snapshot.md)|Liest das gesamte Rowset in den Speicher.|  
+|[CArrayRowset](#carrayrowset)|Konstruktor.|  
+|[Snapshot](#snapshot)|Liest das gesamte Rowset in den Speicher an.|  
   
 ### <a name="operators"></a>Operatoren  
   
 |||  
 |-|-|  
-|[Operator&#91;&#93;](../../data/oledb/carrayrowset-operator.md)|Greift auf ein Element des Rowsets.|  
+|[Operator&#91;&#93;](#operator)|Greift auf ein Element des Rowsets.|  
   
 ### <a name="data-members"></a>Datenmember  
   
 |||  
 |-|-|  
-|[CArrayRowset::m_nRowsRead](../../data/oledb/carrayrowset-m-nrowsread.md)|Die Anzahl der Zeilen, die bereits gelesen.|  
+|[CArrayRowset::m_nRowsRead](#nrowsread)|Die Anzahl der Zeilen, die bereits gelesen.|  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** atldbcli.h  
+## <a name="carrayrowset"></a> CArrayRowset:: CArrayRowset
+
+Erstellt ein neues `CArrayRowset`-Objekt.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+CArrayRowset(int nMax = 100000);  
+```  
+  
+#### <a name="parameters"></a>Parameter  
+
+*nmax.*<br/>
+[in] Maximale Anzahl von Zeilen im Rowset. 
+
+## <a name="snapshot"></a> CArrayRowset:: Snapshot
+
+Liest das gesamte Rowset in den Speicher, erstellen ein Bild oder eine Momentaufnahme davon.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+HRESULT Snapshot() throw();  
+```  
+
+## <a name="operator"></a> CArrayRowset:: Operator
+
+Stellt arrayähnlichen Syntax für den Zugriff auf eine Zeile im Rowset bereit.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+TAccessor & operator[](int nrow);  
+```  
+  
+#### <a name="parameters"></a>Parameter  
+
+*TAccessor*<br/>
+Auf Vorlagen basierenden Parameter, der den Typ des Accessors gespeichert, in dem Rowset angibt.  
+  
+*Funktionen "nrow"*<br/>
+[in] Anzahl von der Zeile (Arrayelement), die Sie zugreifen möchten.  
+  
+### <a name="return-value"></a>Rückgabewert  
+
+Der Inhalt der die angeforderte Zeile.  
+  
+### <a name="remarks"></a>Hinweise  
+
+Wenn *Funktionen "nrow"* überschreitet die Anzahl der Zeilen im Rowset, wird eine Ausnahme ausgelöst.  
+
+## <a name="nrowsread"></a> CArrayRowset:: M_nrowsread
+
+Enthält die Anzahl der Zeilen im Rowset, die bereits gelesen wurden.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+ULONG m_nRowsRead;  
+```  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB-Consumer-Vorlagenreferenz](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CRowset-Klasse](../../data/oledb/crowset-class.md)
+
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CRowset-Klasse](../../data/oledb/crowset-class.md)

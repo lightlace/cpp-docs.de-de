@@ -50,16 +50,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15038e42b87a9803312df79eb5d235f1add51669
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43c9da102f81654062518ca8e886aab1c49df623
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405015"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314962"
 ---
 # <a name="mbsnbicmp-mbsnbicmpl"></a>_mbsnbicmp, _mbsnbicmp_l
 
-Vergleicht **n** Bytes von zwei Multibyte-Zeichenfolgen und die Groß-/Kleinschreibung ignoriert.
+Vergleicht **n** Bytes von zwei Multibyte-Zeichenfolgen und ignoriert Groß-/Kleinschreibung.
 
 > [!IMPORTANT]
 > Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -76,7 +76,7 @@ int _mbsnbicmp(
 
 ### <a name="parameters"></a>Parameter
 
-*String1*, *Zeichenfolge2*<br/>
+*Zeichenfolge1*, *Zeichenfolge2*<br/>
 Zu vergleichende mit NULL endende Zeichenfolgen.
 
 *count*<br/>
@@ -88,23 +88,23 @@ Der Rückgabewert gibt die Beziehung zwischen den untergeordneten Zeichenfolgen 
 
 |Rückgabewert|Beschreibung|
 |------------------|-----------------|
-|< 0|*String1* Teilzeichenfolge höchstens *Zeichenfolge2* Teilzeichenfolge.|
-|0|*String1* Teilzeichenfolge, die identisch mit *Zeichenfolge2* Teilzeichenfolge.|
-|> 0|*String1* Teilzeichenfolge, die größer als *Zeichenfolge2* Teilzeichenfolge.|
+|< 0|*Zeichenfolge1* Teilzeichenfolge höchstens *Zeichenfolge2* Teilzeichenfolge.|
+|0|*Zeichenfolge1* identisch *Zeichenfolge2* Teilzeichenfolge.|
+|> 0|*Zeichenfolge1* größer als *Zeichenfolge2* Teilzeichenfolge.|
 
-Bei einem Fehler **_mbsnbicmp** gibt **_NLSCMPERROR**, die in String.h und Mbstring.h definiert ist.
+Bei einem Fehler **_mbsnbicmp** gibt **_NLSCMPERROR**, definiert in String.h und Mbstring.h.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbsnbicmp** -Funktion führt einen Ordinalvergleich von höchstens der ersten *Anzahl* Bytes *string1* und *Zeichenfolge2*. Der Vergleich wird ausgeführt, indem jedes Zeichen in Kleinbuchstaben konvertiert werden; [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) ist eine Groß-/Kleinschreibung Version von **_mbsnbicmp**. Der Vergleich endet, wenn ein abschließendes Nullzeichen, in jeder Zeichenfolge vor dem erreicht wird *Anzahl* Zeichen verglichen wurden. Wenn die Zeichenfolgen gleich sind. wenn ein abschließendes Nullzeichen erreicht ist in jeder Zeichenfolge vor dem *Anzahl* Zeichen verglichen wurden, ist die kürzere Zeichenfolge kleiner.
+Die **_mbsnbicmp** -Funktion führt einen Ordinalvergleich von höchstens der ersten *Anzahl* Bytes *string1* und *Zeichenfolge2*. Der Vergleich wird ausgeführt, indem jedes Zeichen in Kleinbuchstaben konvertiert werden; [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) ist eine Groß-/Kleinschreibung Version **_mbsnbicmp**. Der Vergleich endet, wenn ein abschließendes Nullzeichen, in jeder Zeichenfolge vor dem erreicht ist *Anzahl* Zeichen verglichen wurden. Wenn die Zeichenfolgen gleich sind. wenn ein abschließendes Nullzeichen erreicht ist in jeder Zeichenfolge vor dem *Anzahl* Zeichen verglichen wurden, die kürzere Zeichenfolge kleiner ist.
 
-**_mbsnbicmp** ähnelt [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), außer dass es bis zu Zeichenfolgen vergleicht *Anzahl* Bytes anstelle von Zeichen.
+**_mbsnbicmp** ähnelt [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), außer dass es bis zu Zeichenfolgen vergleicht *Anzahl* Bytes anstatt Zeichen.
 
-Abhängig von der Großschreibung ist der Vergleich von zwei Zeichenfolgen mit Zeichen zwischen „Z“ und „a“ in der ASCII-Tabelle ('[', '\\', ']', '^', '_' und '\`') unterschiedlich. Z. B. die beiden Zeichenfolgen "ABCDE" und "ABCD ^" eine Richtung verglichen, wenn Kleinschreibung vorliegt ("Abcde" > "Abcd ^") und eine andere Möglichkeit ("ABCDE" < "ABCD ^"), wenn Großschreibung vorliegt.
+Abhängig von der Großschreibung ist der Vergleich von zwei Zeichenfolgen mit Zeichen zwischen „Z“ und „a“ in der ASCII-Tabelle ('[', '\\', ']', '^', '_' und '\`') unterschiedlich. Z. B. die beiden Zeichenfolgen "ABCDE" und "ABCD ^" eine Richtung verglichen, wenn Kleinschreibung vorliegt ("Abcde" > "Abcd ^") und die andere Möglichkeit ("ABCDE" < "ABCD ^"), wenn Großschreibung vorliegt.
 
-**_mbsnbicmp** erkennt Multibyte-Zeichenfolgen gemäß der [multibyte-Codepage](../../c-runtime-library/code-pages.md) aktuell in Verwendung. Die aktuelle Gebietsschemaeinstellung nimmt dabei keinen Einfluss.
+**_mbsnbicmp** erkennt multibytezeichensequenzen gemäß der [multibyte-Codepage](../../c-runtime-library/code-pages.md) aktuell. Die aktuelle Gebietsschemaeinstellung nimmt dabei keinen Einfluss.
 
-Wenn entweder *string1* oder *Zeichenfolge2* ist ein null-Zeiger **_mbsnbicmp** wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **_NLSCMPERROR** und legt **Errno** auf **EINVAL**.
+Wenn entweder *string1* oder *Zeichenfolge2* ist ein null-Zeiger **_mbsnbicmp** ruft der Handler für ungültige Parameter wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **_NLSCMPERROR** und **Errno** zu **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -115,9 +115,9 @@ Wenn entweder *string1* oder *Zeichenfolge2* ist ein null-Zeiger **_mbsnbicmp** 
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
-|**_mbsnbicmp**|<mbstring.h>|
+|**_mbsnbicmp**|\<mbstring.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

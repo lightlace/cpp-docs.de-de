@@ -15,16 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13971ede3aef6d223b1c631c4a28f8bf190e7174
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 29a462f83bff3bab158e9bcf9fa7947efb56a79b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37938782"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074473"
 ---
 # <a name="restrictions-on-exception-handlers"></a>Einschränkungen bei Ereignishandlern
-Die haupteinschränkung bei Verwendung von ausnahmehandlern im Code ist, dass keine **Goto** gesprungen-Anweisung eine **__try** Anweisungsblock. Stattdessen müssen Sie den Anweisungsblock über die normale Ablaufsteuerung eingeben. Können Sie direkt von einem **__try** Anweisung blockieren und Ausnahmehandler schachteln, wie Sie auswählen.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Schreiben eines Ausnahmehandlers](../cpp/writing-an-exception-handler.md)   
- [Strukturierte Ausnahmebehandlung (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+
+Die haupteinschränkung bei Verwendung von ausnahmehandlern im Code ist, dass keine **Goto** gesprungen-Anweisung eine **__try** Anweisungsblock. Stattdessen müssen Sie den Anweisungsblock über die normale Ablaufsteuerung eingeben. Können Sie direkt von einem **__try** Anweisung blockieren und Ausnahmehandler schachteln, wie Sie auswählen.
+
+## <a name="see-also"></a>Siehe auch
+
+[Schreiben eines Ausnahmehandlers](../cpp/writing-an-exception-handler.md)<br/>
+[Strukturierte Ausnahmebehandlung (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

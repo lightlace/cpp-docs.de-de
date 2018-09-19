@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2523 | Microsoft Docs
+title: Compilerfehler C2523 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4546e576ced8d57a35c4c4861f29824a8d91d910
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77f440bf282d6159af3a96bfeb1aa7db8941e87b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228340"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022798"
 ---
 # <a name="compiler-error-c2523"></a>Compilerfehler C2523
-' Klasse:: ~ Identifier': Destruktor/Finalizer Tag Konflikt  
-  
- Der Name des Destruktors muss der Klassenname mit einer Tilde (`~`). Der Konstruktor noch der Destruktor werden nur Member, die den gleichen Namen wie die Klasse haben.  
-  
- Im folgende Beispiel wird C2523 generiert:  
-  
-```  
-// C2523.cpp  
-// compile with: /c  
-class A {  
-   ~B();    // C2523  
-   ~A();   // OK  
-};  
+
+' Klasse:: ~ Identifier ": Destruktor/Finalizer-Tag stimmt nicht überein
+
+Der Name des Destruktors muss der Klassenname mit einer vorangestelltentilde (`~`). Sind nur Member mit den gleichen Namen wie die Klasse, Konstruktor und Destruktor.
+
+Im folgende Beispiel wird die C2523 generiert:
+
+```
+// C2523.cpp
+// compile with: /c
+class A {
+   ~B();    // C2523
+   ~A();   // OK
+};
 ```

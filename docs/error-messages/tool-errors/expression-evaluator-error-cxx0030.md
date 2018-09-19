@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0030 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0030 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 669c585c637129c1fb6a480d91b31e5a1264fd22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb2921013d116b7d8f02e1e29380ca3cd14086b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298115"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102810"
 ---
 # <a name="expression-evaluator-error-cxx0030"></a>Ausdrucksauswertungsfehler CXX0030
-Ausdruck kann nicht ausgewertet werden  
-  
- Ausdrucksauswertung des Debuggers konnte einen Wert für den Ausdruck nicht abgerufen werden, wenn geschrieben. Eine wahrscheinliche Ursache ist, dass der Ausdruck in den Speicher verweist, die außerhalb des Programms Adressraum (dereferenzierender null-Zeiger ist ein Beispiel). Windows lässt nicht den Zugriff auf Speicher, der außerhalb des Programms Adressraum ist.  
-  
- Möglicherweise möchten die Verwendung von Klammern zur Steuerung der Reihenfolge der Auswertung Ausdruck neu schreiben.  
-  
- Dieser Fehler ist mit CAN0030 identisch.
+
+Ausdruck kann nicht ausgewertet werden
+
+Ausdrucksauswertung des Debuggers konnte einen Wert für den Ausdruck nicht abrufen, laut. Eine wahrscheinliche Ursache ist, dass der Ausdruck in den Speicher verweist, die außerhalb des Programms-Adressraum ist (einen null-Zeiger zu dereferenzieren, ist ein Beispiel). Windows lässt sich nicht auf den Zugriff auf den Speicher aus, die außerhalb des Programms Adressraum ist.
+
+Möglicherweise möchten den Ausdruck, der die Verwendung von Klammern zur Steuerung der Reihenfolge der Auswertung zu schreiben.
+
+Dieser Fehler ist mit CAN0030 identisch.

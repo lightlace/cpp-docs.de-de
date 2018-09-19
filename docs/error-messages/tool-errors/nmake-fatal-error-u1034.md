@@ -1,5 +1,5 @@
 ---
-title: 'NMAKE: Schwerwiegender Fehler U1034 | Microsoft Docs'
+title: 'NMAKE: Schwerwiegender Fehler U1034 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86b8442ffcab4a800902a634ddb015c7bcb4b91c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a8f6f64f3f24ebb6294f16c451a1fb6027ec1f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322678"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105187"
 ---
 # <a name="nmake-fatal-error-u1034"></a>NMAKE: Schwerwiegender Fehler U1034
-Syntaxfehler: fehlendes Trennzeichen  
-  
- Der Doppelpunkt (**:**) zur Trennung von Zielen und abhängigen Elemente ist nicht vorhanden.
+
+Syntaxfehler: Trennzeichen fehlt
+
+Der Doppelpunkt (**:**) zur Trennung von Zielen und die abhängigen Elemente ist nicht vorhanden.

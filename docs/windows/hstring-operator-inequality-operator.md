@@ -1,5 +1,5 @@
 ---
-title: Hstring::! =-Operator | Microsoft Docs
+title: Hstring::! =-Operator | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,49 +15,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74fc15d10818d14467b866ec37c9e353348ce882
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96131bc566271de9d99d1530ffb407c0870c71a7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877030"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604324"
 ---
 # <a name="hstringoperator-operator"></a>HString::Operator!=-Operator
-Gibt an, ob die zwei Parameter ungleich sind.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-inline bool operator!=( const HString& lhs,   
-                        const HString& rhs) throw()  
-  
-inline bool operator!=( const HStringReference& lhs,   
-                        const HString& rhs) throw()  
-  
-inline bool operator!=( const HString& lhs,   
-                        const HStringReference& rhs) throw()  
-  
-inline bool operator!=( const HSTRING& lhs,   
-                        const HString& rhs) throw()  
-  
-inline bool operator!=( const HString& lhs,   
+
+Gibt an, ob die zwei Parameter ungleich sind.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+inline bool operator!=( const HString& lhs,
+                        const HString& rhs) throw()
+
+inline bool operator!=( const HStringReference& lhs,
+                        const HString& rhs) throw()
+
+inline bool operator!=( const HString& lhs,
+                        const HStringReference& rhs) throw()
+
+inline bool operator!=( const HSTRING& lhs,
+                        const HString& rhs) throw()
+
+inline bool operator!=( const HString& lhs,
                         const HSTRING& rhs) throw()  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `lhs`  
- Der erste Parameter, verglichen werden soll. `lhs` kann ein HString oder HStringReference-Objekt oder ein HSTRING-Handle.  
-  
- `rhs`  
- Der zweite Parameter, verglichen werden soll.`rhs` kann ein HString oder HStringReference-Objekt oder ein HSTRING-Handle.  
-  
-## <a name="return-value"></a>Rückgabewert  
- `true` Wenn die `lhs` und `rhs` Parameter sind nicht gleich sind, andernfalls `false`.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Siehe auch  
- [HString-Klasse](../windows/hstring-class.md)
+```
+
+### <a name="parameters"></a>Parameter
+
+*LHS*  
+Der erste Parameter, verglichen werden soll. *LHS* kann ein **HString** oder `HStringReference` Objekt oder ein HSTRING-Handle.
+
+*RS*  
+Der zweite Parameter, verglichen werden soll. *RS* kann ein **HString** oder `HStringReference` Objekt oder ein HSTRING-Handle.
+
+## <a name="return-value"></a>Rückgabewert
+
+**"true"** Wenn die *Lhs* und *RS* Parameter sind nicht gleich sind, andernfalls **"false"**.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+
+[HString-Klasse](../windows/hstring-class.md)

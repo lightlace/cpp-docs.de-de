@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2262 | Microsoft Docs
+title: Compilerfehler C2262 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 199c5d109cf994a8f69e29f893cd13dd7028ca82
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 44e60bfcf00e3e01340c3df1b79004e84e93f56c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170764"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071444"
 ---
 # <a name="compiler-error-c2262"></a>Compilerfehler C2262
-"attribute_specifiers": Für InternalsVisibleTo-Deklarationen kann keine Version, Kultur oder Prozessorarchitektur angegeben sein  
-  
- Das <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> -Attribut wurde nicht ordnungsgemäß angegeben.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C2262 generiert.  
-  
-```  
-// C2262.cpp  
-// compile with: /clr /c  
-using namespace System::Runtime::CompilerServices;  
-[assembly: InternalsVisibleTo("assembly_name, version=1.2.3.7")];   // C2262  
-[assembly: InternalsVisibleTo("assembly_name ")];   // OK  
+
+"attribute_specifiers": Für InternalsVisibleTo-Deklarationen kann keine Version, Kultur oder Prozessorarchitektur angegeben sein
+
+Das <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> -Attribut wurde nicht ordnungsgemäß angegeben.
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C2262 generiert.
+
+```
+// C2262.cpp
+// compile with: /clr /c
+using namespace System::Runtime::CompilerServices;
+[assembly: InternalsVisibleTo("assembly_name, version=1.2.3.7")];   // C2262
+[assembly: InternalsVisibleTo("assembly_name ")];   // OK
 ```

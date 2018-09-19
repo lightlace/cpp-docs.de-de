@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6bd4a7827ec5223297f3ec3195724b62d4dc72c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a956212df2579298f1f947bf2388dec1532dff10
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955305"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721733"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine-Klasse
 
@@ -46,17 +46,17 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Parameter
 
-*UIntType*  
- Der unsigned integer-Ergebnistyp. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*UIntType*<br/>
+Der unsigned integer-Ergebnistyp. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
-*W*  
- **Wortgröße**. Größe jedes einzelnen Wortes der Zustandssequenz in Bits. **Vorbedingung**:`0 < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**Wortgröße**. Größe jedes einzelnen Wortes der Zustandssequenz in Bits. **Vorbedingung**:`0 < W ≤ numeric_limits<UIntType>::digits`
 
-*S*  
- **Kurze Verzögerung**. Anzahl der Ganzzahlwerte. **Vorbedingung**:`0 < S < R`
+*S*<br/>
+**Kurze Verzögerung**. Anzahl der Ganzzahlwerte. **Vorbedingung**:`0 < S < R`
 
-*R*  
- **Lange Verzögerung**. Bestimmt die Wiederholungsrate in der generierten Serie.
+*R*<br/>
+**Lange Verzögerung**. Bestimmt die Wiederholungsrate in der generierten Serie.
 
 ## <a name="members"></a>Mitglieder
 
@@ -84,7 +84,7 @@ Obwohl Sie direkt aus dieser Engine einen Generator konstruieren können, könne
 `ranlux48_base`: Wird als Grundlage für `ranlux48` verwendet.
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`
 
-Ausführliche Informationen über den Algorithmus „subtract with carry engine“ erhalten Sie im Wikipedia-Artikel [Lagged Fibonacci generator (Kongruenzgenerator, in englischer Sprache)](http://go.microsoft.com/fwlink/p/?linkid=402445).
+Ausführliche Informationen über den Algorithmus „subtract with carry engine“ erhalten Sie im Wikipedia-Artikel [Lagged Fibonacci generator (Kongruenzgenerator, in englischer Sprache)](https://en.wikipedia.org/wiki/Lagged_Fibonacci_generator).
 
 ## <a name="requirements"></a>Anforderungen
 

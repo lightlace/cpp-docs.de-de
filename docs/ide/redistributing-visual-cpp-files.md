@@ -18,19 +18,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e67ad87f1dce47f3d02dcbe907285cf0513a8ce9
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 09d65a19ecf573cc11d71fe49cdb40c1a748aafa
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337547"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681916"
 ---
 # <a name="redistributing-visual-c-files"></a>Verteilen von Visual C++-Dateien
 
 > [!NOTE]
 > Möchten Sie eine der Visual C++-Runtimedateien herunterladen? Navigieren Sie zur [Microsoft-Website](http://www.microsoft.com/), und geben Sie im Suchfeld **Visual C++ Redistributable** ein. Laden Sie das verteilbare Paket für die Architektur Ihres Computers (z.B. x64, wenn Sie 64-Bit-Windows ausführen) und die erforderliche Version von Visual C++ (z.B. 2015) herunter, und installieren Sie diese.
 
-Wenn Sie eine Anwendung bereitstellen, müssen Sie auch die Dateien bereitstellen, die zu ihrer Unterstützung erforderlich sind. Wenn eine dieser Dateien von Microsoft zur Verfügung gestellt wird, überprüfen Sie, ob Sie sie weiterverteilen dürfen. Weitere Informationen zu den Visual Studio-Lizenzbedingungen finden Sie über den Link „Lizenzbedingungen“ im Dialogfeld „Info zu Microsoft Visual Studio“ in der IDE. Alternativ können Sie die Datei [Microsoft-Softwarelizenzbedingungen](http://go.microsoft.com/fwlink/p/?LinkId=831114) herunterladen. Informationen zum Anzeigen der „REDIST-Liste“, auf die im Abschnitt „Verteilbarer Code“ der Microsoft-Softwarelizenzbedingungen für bestimmte Editionen von Visual Studio verwiesen wird, finden Sie unter [Distributable Code for Microsoft Visual Studio 2017 and Microsoft Visual Studio 2017 SDK (Includes Utilities and BuildServer Files) (Verteilbarer Code für Microsoft Visual Studio 2017 oder Microsoft Visual Studio 2017 SDK (einschließlich Hilfsprogramme und BuildServer-Dateien))](http://go.microsoft.com/fwlink/p/?LinkId=823098). Für Visual Studio 2015 finden Sie diese unter [Distributable Code for Microsoft Visual Studio 2015 and Microsoft Visual Studio 2015 SDK (Verteilbarer Code für Microsoft Visual Studio 2015 und Microsoft Visual Studio 2015 SDK)](http://go.microsoft.com/fwlink/p/?LinkId=523763). Weitere Informationen zu verteilbaren Dateien finden Sie unter [Ermitteln der zu verteilenden DLLs](../ide/determining-which-dlls-to-redistribute.md) und [Bereitstellungsbeispiele](../ide/deployment-examples.md).
+Wenn Sie eine Anwendung bereitstellen, müssen Sie auch die Dateien bereitstellen, die zu ihrer Unterstützung erforderlich sind. Wenn eine dieser Dateien von Microsoft zur Verfügung gestellt wird, überprüfen Sie, ob Sie sie weiterverteilen dürfen. Weitere Informationen zu den Visual Studio-Lizenzbedingungen finden Sie über den Link „Lizenzbedingungen“ im Dialogfeld „Info zu Microsoft Visual Studio“ in der IDE. Alternativ können Sie die Datei [Microsoft-Softwarelizenzbedingungen](https://visualstudio.microsoft.com/license-terms/mlt687465/) herunterladen. Informationen zum Anzeigen der „REDIST-Liste“, auf die im Abschnitt „Verteilbarer Code“ der Microsoft-Softwarelizenzbedingungen für bestimmte Editionen von Visual Studio verwiesen wird, finden Sie unter [Distributable Code for Microsoft Visual Studio 2017 and Microsoft Visual Studio 2017 SDK (Includes Utilities and BuildServer Files) (Verteilbarer Code für Microsoft Visual Studio 2017 oder Microsoft Visual Studio 2017 SDK (einschließlich Hilfsprogramme und BuildServer-Dateien))](/visualstudio/productinfo/2017-redistribution-vs). Für Visual Studio 2015 finden Sie diese unter [Distributable Code for Microsoft Visual Studio 2015 and Microsoft Visual Studio 2015 SDK (Verteilbarer Code für Microsoft Visual Studio 2015 und Microsoft Visual Studio 2015 SDK)](/visualstudio/productinfo/2015-redistribution-vs). Weitere Informationen zu verteilbaren Dateien finden Sie unter [Ermitteln der zu verteilenden DLLs](../ide/determining-which-dlls-to-redistribute.md) und [Bereitstellungsbeispiele](../ide/deployment-examples.md).
 
 Zum Bereitstellen von verteilbaren Visual C++-Dateien können Sie die Visual C++ Redistributable Packages (VCRedist\_x86.exe, VCRedist\_x64.exe, oder VCRedist\_arm.exe) verwenden, die in Visual Studio enthalten sind. Für Visual Studio 2017 befinden sich diese Dateien im Ordner „Programme (x86)\\Microsoft Visual Studio\\2017\\_Edition_\\VC\\Redist\\MSVC\\_Bibliotheksversion_“. Hierbei steht _Edition_ für die installierte Edition von Visual Studio und _Bibliotheksversion_ für die Version der zu verteilenden Bibliotheken. In Visual Studio 2015 befinden sich diese Dateien im Visual Studio-Installationsverzeichnis unter „Programme (x86)\Microsoft Visual Studio *version*\VC\redist\\*locale*\\“. Eine weitere Möglichkeit besteht in der Verwendung von verteilbaren Mergemodulen (MSM-Dateien), die sich in Visual Studio 2017 im Ordner „Programme (x86)\\Microsoft Visual Studio\\2017\\_Edition_\\VC\\Redist\\MSVC\\_Bibliotheksversion_\\MergeModules\\“ befinden. In Visual Studio 2015 befinden sich diese unter „Programme (x86)\Common Files\Merge Modules\\“. Es ist auch möglich, verteilbare Visual C++-DLLs direkt in den *lokalen Anwendungsordner* zu installieren. Dabei handelt es sich um den Ordner, der die ausführbare Anwendungsdatei enthält. Aus Wartungsgründen empfehlen wir, diesen Speicherort nicht für die Installation zu verwenden.
 
@@ -48,11 +48,10 @@ Stellen Sie sicher, dass der Installer die Anwendung richtig erstellt und dass d
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-|Titel|description|
+|Titel|Beschreibung |
 |-----------|-----------------|
 |[Redistributing By Using Merge Modules (Verteilen mithilfe von Mergemodulen)](../ide/redistributing-components-by-using-merge-modules.md)|Beschreibt die Verwendung von verteilbaren Visual C++-Mergemodulen zur Installation der Visual C++-Laufzeitbibliotheken als freigegebene DLLs im Ordner „%windir%\system32\“.|
 |[Neuverteilen von Visual C++ ActiveX-Steuerelementen](../ide/redistributing-visual-cpp-activex-controls.md)|Beschreibt, wie eine Anwendung, die ActiveX-Steuerelemente verwendet, verteilt wird.|
-|[Neuverteilen von Datenbankunterstützungsdateien](../ide/redistributing-database-support-files.md)|Erläutert, wie Unterstützungsdateien für Datenzugriffsobjekte (DAO) und die Datenbanktechnologien im Microsoft Data Access SDK weiterverteilt werden.|
 |[Neuverteilen der MFC-Bibliothek](../ide/redistributing-the-mfc-library.md)|Beschreibt, wie eine Anwendung, die MFC verwendet, verteilt wird.|
 |[Neuverteilen von ATL-Anwendungen](../ide/redistributing-an-atl-application.md)|Beschreibt, wie eine Anwendung, die ATL verwendet, neu verteilt wird. Ab Visual Studio 2012 ist keine verteilbare Bibliothek für ATL erforderlich.|
 |[Bereitstellungsbeispiele](../ide/deployment-examples.md)|Links zu Beispielen, die veranschaulichen, wie Visual C++-Anwendungen bereitgestellt werden.|

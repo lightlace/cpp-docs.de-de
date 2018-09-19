@@ -1,7 +1,7 @@
 ---
-title: Debuggen und Listen für die Inlineassembly | Microsoft Docs
+title: Debuggen und Listen für die Inlineassembly | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -19,24 +19,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 457402626edcdb2be05923aa33bbd26b1cab7137
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b6cca954ae15252b97d883ba8491fdb98e506f68
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050115"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689288"
 ---
 # <a name="debugging-and-listings-for-inline-assembly"></a>Debuggen und Listen für die Inlineassembly
-## <a name="microsoft-specific"></a>Microsoft-spezifisch  
- Programme mit Inline-Assemblycode können mit einem Debugger auf Quellcodeebene gedebuggt werden, wenn beim Kompilieren mit der [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) Option.  
-  
- Innerhalb des Debuggers können Sie Haltepunkte für C- oder C++ und Assemblersprache Zeilen festlegen. Wenn Sie gemischten Assembly und der Modus aktivieren, können Sie die Quell- und den disassemblierten Form der Assemblycode anzeigen.  
-  
- Beachten Sie, dass mehrere Assemblyanweisungen oder Quellsprache-Anweisungen in einer Zeile platzieren Debuggen behindern kann. Im Modus "Quelle" können Sie den Debugger verwenden, Festlegen von Haltepunkten in einer einzelnen Zeile, jedoch nicht auf einzelne Anweisungen in derselben Zeile. Das gleiche Prinzip gilt für eine `__asm` Block als C-Makro, der erweitert, um einen einzelnen logischen Zeile wird definiert.  
-  
- Bei der Erstellung einer gemischten Quell- und die Assembly, die mit der [Angabe von/FAS](../../build/reference/fa-fa-listing-file.md) (Compileroption), die Liste enthält sowohl die Quell-als auch die Assembly Formen von jeder Zeile Assemblersprache. Makros werden in den Codebeispielen nicht erweitert, aber sie werden erweitert, während der Kompilierung.  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden der Assemblysprache in __asm-Blöcken](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Microsoft-spezifisch**
+
+Programme mit Inline-Assemblycode können mit einem Debugger auf Quellcodeebene gedebuggt werden, bei der Kompilierung mit der ["/ Zi"](../../build/reference/z7-zi-zi-debug-information-format.md) Option.
+
+Innerhalb des Debuggers können Sie Haltepunkte in C oder C++ und Assemblysprache Zeilen festlegen. Wenn Sie gemischten Assembly und die Source-Modus aktivieren, können Sie sowohl die Quell-als auch die disassemblierten Form von Code für die Assembly anzeigen.
+
+Beachten Sie, dass mehrere Assemblyanweisungen oder Source-Sprache-Anweisungen in einer Zeile einfügen Debuggen erschweren kann. Im Quellmodus können Sie den Debugger verwenden, zum Festlegen von Breakpoints in einer einzelnen Zeile jedoch nicht in einzelnen Anweisungen in der gleichen Zeile. Das gleiche Prinzip gilt für eine `__asm` blockieren, die definiert, wie ein C-Makro, das in einer einzelnen logischen Zeile erweitert wird.
+
+Bei der Erstellung von einem gemischten Quelle und einer Assembly, die Liste, die mit der [/FAS](../../build/reference/fa-fa-listing-file.md) -Compileroption verwenden, die Liste enthält sowohl die Quell-als auch die Assembly Formulare jeder Zeile der Assemblysprache. Makros werden in Codebeispielen nicht erweitert, aber sie werden erweitert, während der Kompilierung.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden der Assemblysprache in __asm-Blöcken](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

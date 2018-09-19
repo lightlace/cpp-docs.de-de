@@ -1,5 +1,5 @@
 ---
-title: Inject_statement | Microsoft Docs
+title: Inject_statement | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 115f5b3d7012ae3e9073d81e0c1005dcb513e045
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eb4142b742ae6c2a758c2a2fb5e09c604959433f
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849339"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42543129"
 ---
 # <a name="injectstatement"></a>inject_statement
 **C++-spezifisch**  
   
- Fügt das Argument als Quelltext in den Header der Typbibliothek ein.  
+Fügt das Argument als Quelltext in den Header der Typbibliothek ein.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,15 +34,17 @@ ms.locfileid: "33849339"
 inject_statement("source_text")  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `source_text`  
- In die Headerdatei der Typbibliothek einzufügender Quelltext.  
+### <a name="parameters"></a>Parameter  
+*source_text*  
+In die Headerdatei der Typbibliothek einzufügender Quelltext.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Text wird am Anfang der Namespacedeklaration platziert, die den Typbibliotheksinhalt in der Headerdatei umschließt.  
+ 
+Der Text wird am Anfang der Namespacedeklaration platziert, die den Typbibliotheksinhalt in der Headerdatei umschließt.  
   
- **Ende C++-spezifisch**  
+**Ende C++-spezifisch**  
   
 ## <a name="see-also"></a>Siehe auch  
- [#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)   
- [#import-Direktive](../preprocessor/hash-import-directive-cpp.md)
+ 
+[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)   
+[#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e786dc176558900223b2b482a7161abe5e0d84d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6e921faf20fd7c2bbac967bf73b62dd33c8220a4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336272"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688227"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Animationssteuerelements bereit.  
@@ -147,7 +147,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parameter  
  *dwStyle*  
- Gibt das Animationssteuerelement-Stil. Wenden Sie eine beliebige Kombination der Formate, die im Abschnitt "Hinweise" und der Stile von Listensteuerelementen Animation beschrieben, die in beschriebenen Windows [Stile von Listensteuerelementen Animation](http://msdn.microsoft.com/library/windows/desktop/bb761886) im Windows SDK.  
+ Gibt das Animationssteuerelement-Stil. Wenden Sie eine beliebige Kombination der Formate, die im Abschnitt "Hinweise" und der Stile von Listensteuerelementen Animation beschrieben, die in beschriebenen Windows [Stile von Listensteuerelementen Animation](/windows/desktop/Controls/animation-control-styles) im Windows SDK.  
   
  *Rect*  
  Gibt an, Position und Größe des Animationssteuerelements. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](../../mfc/reference/rect-structure1.md) Struktur.  
@@ -174,7 +174,7 @@ virtual BOOL Create(
   
  Wenn Sie erweiterte Fensterstile mit dem Animationssteuerelement verwenden möchten, rufen Sie [CreateEx](#createex) anstelle von `Create`.  
   
- Zusätzlich zu den oben aufgeführten Window-Stile können Sie eine oder mehrere der Animation Steuerelementstilen an ein Animationssteuerelement anwenden möchten. Das Windows SDK Weitere Informationen finden Sie [Stile von Listensteuerelementen Animation](http://msdn.microsoft.com/library/windows/desktop/bb761886).  
+ Zusätzlich zu den oben aufgeführten Window-Stile können Sie eine oder mehrere der Animation Steuerelementstilen an ein Animationssteuerelement anwenden möchten. Das Windows SDK Weitere Informationen finden Sie [Stile von Listensteuerelementen Animation](/windows/desktop/Controls/animation-control-styles).  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
@@ -193,13 +193,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parameter  
  *dwExStyle*  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) im Windows SDK.  
   
  *dwStyle*  
- Gibt das Animationssteuerelement-Stil. Wenden Sie eine beliebige Kombination aus dem Fenster und Steuerelement animationsstile beschrieben [Stile von Listensteuerelementen Animation](http://msdn.microsoft.com/library/windows/desktop/bb761886) im Windows SDK.  
+ Gibt das Animationssteuerelement-Stil. Wenden Sie eine beliebige Kombination aus dem Fenster und Steuerelement animationsstile beschrieben [Stile von Listensteuerelementen Animation](/windows/desktop/Controls/animation-control-styles) im Windows SDK.  
   
  *Rect*  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.  
+ Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.  
   
  *pParentWnd*  
  Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.  
@@ -224,7 +224,7 @@ BOOL IsPlaying() const;
  True, wenn ein AVI-Clips wiedergegeben wird. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [ACM_ISPLAYING](http://msdn.microsoft.com/library/windows/desktop/bb761895) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [ACM_ISPLAYING](/windows/desktop/Controls/acm-isplaying) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="open"></a>  CAnimateCtrl::Open  
  Rufen Sie diese Funktion zum Öffnen des AVI-Clips und zum Anzeigen der erste Frame.  

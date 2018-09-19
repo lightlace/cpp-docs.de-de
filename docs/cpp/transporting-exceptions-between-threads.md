@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99f2d785e9f7ab7fa91f51d22299ebab0f39197e
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 46cdf86d431b69704b5a67fea3024365470de945
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942067"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066361"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Transportieren von Ausnahmen zwischen threads
 
@@ -106,7 +106,7 @@ In den folgenden Abschnitten wird beschrieben, wie zum Transportieren von Ausnah
 
 ## <a name="exceptionptr-type"></a>exception_ptr-Typ
 
-Verwenden Sie ein `exception_ptr`-Objekt, um auf die aktuelle Ausnahme oder eine Instanz einer vom Benutzer angegebenen Ausnahme zu verweisen. In der Microsoft-Implementierung wird eine Ausnahme von einer [EXCEPTION_RECORD](https://msdn.microsoft.com/library/windows/desktop/aa363082)-Struktur dargestellt. Jedes `exception_ptr`-Objekt enthält ein Ausnahmeverweisfeld, das auf eine Kopie der `EXCEPTION_RECORD`-Struktur zeigt, die die Ausnahme darstellt.
+Verwenden Sie ein `exception_ptr`-Objekt, um auf die aktuelle Ausnahme oder eine Instanz einer vom Benutzer angegebenen Ausnahme zu verweisen. In der Microsoft-Implementierung wird eine Ausnahme von einer [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-_exception_record)-Struktur dargestellt. Jedes `exception_ptr`-Objekt enthält ein Ausnahmeverweisfeld, das auf eine Kopie der `EXCEPTION_RECORD`-Struktur zeigt, die die Ausnahme darstellt.
 
 Wenn Sie eine `exception_ptr`-Variable deklarieren, wird die Variable keiner Ausnahme zugeordnet. Das heißt, das Ausnahmeverweisfeld ist NULL. Ein solches `exception_ptr`-Objekt wird als *null exception_ptr* bezeichnet.
 
@@ -266,6 +266,6 @@ exception_ptr 1: Caught a  myException exception.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Ausnahmebehandlung](../cpp/exception-handling-in-visual-cpp.md)
-- [/EH (Ausnahmebehandlungsmodell)](../build/reference/eh-exception-handling-model.md)
-- [/clr (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md)
+[Ausnahmebehandlung](../cpp/exception-handling-in-visual-cpp.md)<br/>
+[/EH (Ausnahmebehandlungsmodell)](../build/reference/eh-exception-handling-model.md)<br/>
+[/clr (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md)

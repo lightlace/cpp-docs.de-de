@@ -19,22 +19,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f89651ba671bf66d7d27edb047db6d1b6b15ee06
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 4b57e2c4e6631683afdabec983f155941b8cd2da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940923"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107461"
 ---
-# <a name="storage-classes-c"></a>Speicherklassen (C++)  
-  
-Ein *Speicherklasse* im Kontext von C++-Variablendeklarationen ist ein Typbezeichner, der die Lebensdauer, Bindung und Speicherort von Objekten steuert. Ein angegebenes Objekt kann nur eine Speicherklasse haben. Variablen, die innerhalb eines Blocks definiert haben automatischen Speicher, sofern nicht anders angegeben, mit der **"extern"**, **statische**, oder `thread_local` Spezifizierer. Automatische Objekte und Variablen haben keine Bindung; sie sind für Code außerhalb des Blocks nicht sichtbar.  
-  
-**Notizen**  
-  
-1.  Die [änderbare](../cpp/mutable-data-members-cpp.md) Schlüsselwort als Speicherklassenspezifizierer angesehen werden kann. Es ist jedoch nur in der Memberliste einer Klassendefinition verfügbar.  
-  
-2.  **Visual C++ 2010 und höher:** der **automatisch** Schlüsselwort ist nicht mehr eine C++-Speicherklassenspezifizierer, und die **registrieren** Schlüsselwort ist veraltet. **Visual Studio 2017 Version 15.7 und höher:** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): die **registrieren** Schlüsselwort aus der Programmiersprache C++ entfernt.
+# <a name="storage-classes-c"></a>Speicherklassen (C++)
+
+Ein *Speicherklasse* im Kontext von C++-Variablendeklarationen ist ein Typbezeichner, der die Lebensdauer, Bindung und Speicherort von Objekten steuert. Ein angegebenes Objekt kann nur eine Speicherklasse haben. Variablen, die innerhalb eines Blocks definiert haben automatischen Speicher, sofern nicht anders angegeben, mit der **"extern"**, **statische**, oder `thread_local` Spezifizierer. Automatische Objekte und Variablen haben keine Bindung; sie sind für Code außerhalb des Blocks nicht sichtbar.
+
+**Notizen**
+
+1. Die [änderbare](../cpp/mutable-data-members-cpp.md) Schlüsselwort als Speicherklassenspezifizierer angesehen werden kann. Es ist jedoch nur in der Memberliste einer Klassendefinition verfügbar.
+
+1. **Visual C++ 2010 und höher:** der **automatisch** Schlüsselwort ist nicht mehr eine C++-Speicherklassenspezifizierer, und die **registrieren** Schlüsselwort ist veraltet. **Visual Studio 2017 Version 15.7 und höher:** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): die **registrieren** Schlüsselwort aus der Programmiersprache C++ entfernt.
 
 
 ```cpp
@@ -148,14 +148,14 @@ using namespace std;
 struct C {
    void Test(int value) {
       static int var = 0;
-      if (var == value) 
+      if (var == value)
          cout << "var == value" << endl;
       else
          cout << "var != value" << endl;
 
       var = value;
    }
-}; 
+};
 
 int main() {
    C c1;
@@ -185,9 +185,9 @@ Der folgende Code zeigt zwei **"extern"** Deklarationen `DefinedElsewhere` (die 
 ```cpp
 // external.cpp
 // DefinedElsewhere is defined in another translation unit
-extern int DefinedElsewhere;   
+extern int DefinedElsewhere;
 int main() {
-   int DefinedHere; 
+   int DefinedHere;
    {
       // refers to DefinedHere in the enclosing scope
       extern int DefinedHere;
@@ -205,7 +205,7 @@ thread_local float f = 42.0; // Global namespace. Not implicitly static.
 struct S // cannot be applied to type definition
 {
     thread_local int i; // Illegal. The member must be static.
-    thread_local static char buf[10]; // OK 
+    thread_local static char buf[10]; // OK
 };
 
 void DoSomething()
@@ -224,15 +224,15 @@ Punkte zu beachten die `thread_local` Bezeichner:
 
 -  Sie können anwenden `thread_local` nur auf Datendeklarationen und-Definitionen; `thread_local` kann nicht für Funktionsdeklarationen oder-Definitionen verwendet werden.
 
--  Sie können `thread_local` nur für Datenelemente mit statischer Speicherdauer angeben. Hierzu zählen globale Datenobjekte (sowohl **statische** und **"extern"**), lokale statische Objekte sowie statische Datenmember von Klassen. Jede lokale Variable deklariert `thread_local` ist implizit statisch, wenn keine anderen Speicherklasse angegeben wird; das heißt, im Blockbereich `thread_local` entspricht `thread_local static`. 
+-  Sie können `thread_local` nur für Datenelemente mit statischer Speicherdauer angeben. Hierzu zählen globale Datenobjekte (sowohl **statische** und **"extern"**), lokale statische Objekte sowie statische Datenmember von Klassen. Jede lokale Variable deklariert `thread_local` ist implizit statisch, wenn keine anderen Speicherklasse angegeben wird; das heißt, im Blockbereich `thread_local` entspricht `thread_local static`.
 
 -  Sie müssen das `thread_local` für die Deklaration und Definition eines lokalen Threadobjekts angeben, egal ob die Deklaration und Definition in der gleichen Datei oder in separaten Dateien auftreten.
 
-Auf Windows `thread_local` ist funktionell gleichwertig mit [__declspec(thread)](../cpp/thread.md) mit dem Unterschied, dass `__declspec(thread)` kann auf eine Typdefinition angewendet werden und in C-Code gültig ist. Verwenden Sie nach Möglichkeit `thread_local`, da dies ein Teil des C++-Standards ist und daher besser zu potieren ist.
+Auf Windows `thread_local` ist funktionell gleichwertig mit [__declspec(thread)](../cpp/thread.md) mit dem Unterschied, dass **__declspec(thread)** kann auf eine Typdefinition angewendet werden und in C-Code gültig ist. Verwenden Sie nach Möglichkeit `thread_local`, da dies ein Teil des C++-Standards ist und daher besser zu potieren ist.
 
 ##  <a name="register"></a>  Registrieren
 
-**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): die **registrieren** Schlüsselwort ist nicht mehr unterstützte Speicherklasse. Das Schlüsselwort ist immer noch in der Standard für die zukünftige Verwendung reserviert. 
+**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): die **registrieren** Schlüsselwort ist nicht mehr unterstützte Speicherklasse. Das Schlüsselwort ist immer noch in der Standard für die zukünftige Verwendung reserviert.
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -323,4 +323,4 @@ Es gibt einige Punkte zu beachten über das Programm:
 
 ## <a name="see-also"></a>Siehe auch
 
- [Deklarationen und Definitionen](../cpp/declarations-and-definitions-cpp.md)
+[Deklarationen und Definitionen](../cpp/declarations-and-definitions-cpp.md)

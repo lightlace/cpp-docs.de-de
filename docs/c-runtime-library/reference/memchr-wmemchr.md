@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c2ba300275f0154e84f7d2ced21b0893bbe3d85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43c76ae09f491ff163391f0ee46564af7bb629fe
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401684"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181171"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -92,20 +92,20 @@ Anzahl der zu prüfenden Zeichen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Im Erfolgsfall gibt Sie einen Zeiger auf den ersten Speicherort eines *c* in *Puffer*. Andernfalls wird zurückgegeben **NULL**.
+Wenn erfolgreich, gibt Sie einen Zeiger auf den ersten Speicherort der *c* in *Puffer*. Andernfalls wird NULL zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-**Memchr** und **Wmemchr** suchen Sie nach dem ersten Vorkommen des *c* in der ersten *Anzahl* Bytes *Puffer*. Es wird beendet, wenn er findet *c* oder wenn es das erste überprüft hat *Anzahl* Bytes.
+`memchr` und `wmemchr` suchen Sie nach dem ersten Vorkommen des *c* in der ersten *Anzahl* Bytes *Puffer*. Es wird beendet, wenn er findet *c* oder wenn sie die erste aktiviert hat *Anzahl* Bytes.
 
-In C akzeptieren diese Funktionen eine ** const ** Zeiger als erstes Argument. In C++ sind zwei Überladungen verfügbar. Die Überladung, die einen Zeiger auf ** const ** gibt einen Zeiger auf **const **; die Version, die einen Zeiger auf nicht-akzeptiert**const ** gibt einen Zeiger auf nicht-** const **. Das Makro _CRT_CONST_CORRECT_OVERLOADS wird definiert, wenn sowohl die **const ** und nicht-** const ** Versionen dieser Funktionen sind verfügbar. Wenn Sie das nicht-** const **-Verhalten für beide C++-Overloadsin C++, definieren Sie das Symbol _CONST_RETURN.
+In C akzeptieren diese Funktionen eine **const** Zeiger für das erste Argument. In C++ sind zwei Überladungen verfügbar. Die Überladung, die einen Zeiger auf **const** gibt einen Zeiger auf **const**; die Version, die einen Zeiger auf nicht-akzeptiert**const** gibt einen Zeiger auf nicht-**const** . Das Makro _CRT_CONST_CORRECT_OVERLOADS definiert ist, wenn sowohl die **const** und nicht-**const** Versionen dieser Funktionen sind verfügbar. Wenn Sie nicht benötigen**const** Verhalten für beide C++ Überladungen in C++ benötigen, definieren Sie das Symbol _CONST_RETURN.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
-|**memchr**|\<memory.h> oder \<string.h>|
-|**wmemchr**|\<wchar.h>|
+|`memchr`|\<memory.h> oder \<string.h>|
+|`wmemchr`|\<wchar.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

@@ -147,12 +147,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd7a7489c07572a9e3865698dc02988768983669
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 52073a97e062d4ab96e50fed534edc24add0f8c5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960576"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715597"
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap-Klasse
 
@@ -369,8 +369,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*keyVal*  
- Der zuzuordnende Schlüsselwert.
+*keyVal*<br/>
+Der zuzuordnende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -411,7 +411,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -486,7 +486,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -514,8 +514,8 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parameter
 
-*nbucket*  
- Die Bucketnummer.
+*nbucket*<br/>
+Die Bucketnummer.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -556,7 +556,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -674,7 +674,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -880,8 +880,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*keyVal*  
- Der zu suchende Schlüsselwert.
+*keyVal*<br/>
+Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -920,7 +920,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 count('A') == 0
 count('b') == 1
 count('C') == 0
@@ -981,7 +981,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 end()-begin() == 3
 begin()-end() == -3
 ```
@@ -1106,7 +1106,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -1201,8 +1201,8 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Parameter
 
-*keyVal*  
- Der zu suchende Schlüsselwert.
+*keyVal*<br/>
+Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1254,7 +1254,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 equal_range('x'):
 equal_range('b'): [b, 2]
 ```
@@ -1277,17 +1277,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Parameter
 
-*Where*  
- Die Position des zu entfernenden Elements.
+*Where*<br/>
+Die Position des zu entfernenden Elements.
 
-*Erste*  
- Die Position des ersten zu entfernenden Elements.
+*Erste*<br/>
+Die Position des ersten zu entfernenden Elements.
 
-*letzte*  
- Die Position direkt hinter dem letzten zu entfernenden Element.
+*letzte*<br/>
+Die Position direkt hinter dem letzten zu entfernenden Element.
 
-*Key*  
- Der Schlüsselwert der zu entfernenden Elemente.
+*Key*<br/>
+Der Schlüsselwert der zu entfernenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1309,8 +1309,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*keyVal*  
- Der zu suchende Schlüsselwert.
+*keyVal*<br/>
+Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1355,7 +1355,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 find('A') == false
 find('b') == true: [b, 2]
 ```
@@ -1980,7 +1980,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -2011,8 +2011,8 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parameter
 
-*factor*  
- Der neue maximale Lastfaktor.
+*factor*<br/>
+Der neue maximale Lastfaktor.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2076,7 +2076,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -2291,8 +2291,8 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parameter
 
-*nbuckets*  
- Die angeforderte Anzahl von Buckets.
+*nbuckets*<br/>
+Die angeforderte Anzahl von Buckets.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2346,7 +2346,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_load_factor() == 4
@@ -2419,7 +2419,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -2475,7 +2475,8 @@ void swap(unordered_multimap& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* den Container, mit dem getauscht.
+*right*<br/>
+Der Container für den Tauschvorgang.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2581,7 +2582,7 @@ unordered_multimap(
 
 template <class InputIterator>
 unordered_multimap(
- InputIterator first, InputIterator last,
+InputIterator first, InputIterator last,
     size_type Bucket_count = N0,
     const Hash& Hash = Hash(),
     const Comp& Comp = Pred(),
@@ -2606,7 +2607,7 @@ Der erste Konstruktor gibt eine Kopie der gesteuerte Sequenz durch *rechts*. Mit
 
 Alle Konstruktoren initialisieren auch einige gespeicherte Werte. Für den Kopierkonstruktor werden die Werte erhalten Sie vom *rechts*. Andernfalls gilt:
 
-die minimale Anzahl von Buckets ist das Argument *Bucket_count*, wenn vorhanden; andernfalls den Standardwert beschrieben wird hier als der implementierungsdefinierte Wert `N0`.
+Die minimale Anzahl von Buckets ist das Argument *Bucket_count*, wenn vorhanden; andernfalls den Standardwert beschrieben wird hier als der implementierungsdefinierte Wert `N0`.
 
 Das hashfunktionsobjekt ist das Argument *Hash*, wenn vorhanden; andernfalls es ist `Hash()`.
 
@@ -2733,9 +2734,9 @@ int main()
 
 ```Output
 [a, 1] [b, 2] [c, 3] [d, 4] [e, 5] [f, 6] [a, 1] [b, 2] [c, 3] [a, 1] [b, 2] [c, 3] [5, g] [6, h] [7, i] [8, j] [a, 1] [b, 2] [c, 3] [a, 1] [b, 2] [c, 3] [a, 1] [b, 2] [c, 3] [a, 1] [b, 2] [c, 3] [c, 3] [b, 2] [a, 1]
- [f, 6] [e, 5] [d, 4]
- [c, 3] [b, 2] [a, 1]
- [c, 3] [b, 2] [a, 1]
+[f, 6] [e, 5] [d, 4]
+[c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 ```
 
 ## <a name="value_type"></a> unordered_multimap::value_type

@@ -1,5 +1,5 @@
 ---
-title: _BitScanReverse _BitScanReverse64 | Microsoft Docs
+title: _BitScanReverse, _BitScanReverse64 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35d51f3e7eaf0daeca006ff669398c9a3727a098
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab174484cb305e26c23d1c1d6b5e573341c9035c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323650"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716963"
 ---
 # <a name="bitscanreverse-bitscanreverse64"></a>_BitScanReverse, _BitScanReverse64
 **Microsoft-spezifisch**  
@@ -47,11 +47,11 @@ unsigned char _BitScanReverse64(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [out] `Index`  
- Geladen mit der Bitposition des ersten festgelegten Bits (1), das ermittelt wurde.  
+*Index*<br/>
+[out] Geladen mit der Bitposition des ersten festgelegten Bits (1) wurde gefunden.  
   
- [in] `Mask`  
- Der zu suchende 32-Bit- oder 64-Bit-Wert.  
+*Maske*<br/>
+[in] Der 32-Bit oder 64-Bit-Wert zu suchen.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ungleich null, wenn `Index` festgelegt wurde, oder null (0), wenn keine festgelegten Bits gefunden wurden.  
@@ -60,8 +60,8 @@ unsigned char _BitScanReverse64(
   
 |Systemintern|Architektur|Header|  
 |---------------|------------------|------------|  
-|`_BitScanReverse`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_BitScanReverse64`|ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]||  
+|`_BitScanReverse`|X86, ARM, x64|\<intrin.h>|  
+|`_BitScanReverse64`|ARM, x64||  
   
 ## <a name="example"></a>Beispiel  
   

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea2c87a3ce87bbf15f99609a643a9a72f6d2058e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a8b2ca6ebbc0201a3c56c9239b665c55ccd9eb13
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853484"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202744"
 ---
 # <a name="colechangesourcedialog-class"></a>COleChangeSourceDialog-Klasse
 Wird für das OLE-Dialogfeld "Quelle ändern" verwendet.  
@@ -77,9 +77,9 @@ class COleChangeSourceDialog : public COleDialog
 |[COleChangeSourceDialog::m_cs](#m_cs)|Eine Struktur, die das Verhalten des Dialogfelds steuert.|  
   
 ## <a name="remarks"></a>Hinweise  
- Erstellen Sie ein Objekt der Klasse `COleChangeSourceDialog` Wenn das Dialogfeld aufgerufen werden soll. Nach einer `COleChangeSourceDialog` -Objekts wird, können Sie mit der [M_cs](#m_cs) Struktur zum Initialisieren der Werte oder Zustände von Steuerelementen im Dialogfeld. Die `m_cs` Struktur ist vom Typ [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160). Weitere Informationen zur Verwendung dieser Dialogfeldklasse finden Sie unter den [DoModal](#domodal) Member-Funktion.  
+ Erstellen Sie ein Objekt der Klasse `COleChangeSourceDialog` Wenn das Dialogfeld aufgerufen werden soll. Nach einer `COleChangeSourceDialog` -Objekts wird, können Sie mit der [M_cs](#m_cs) Struktur zum Initialisieren der Werte oder Zustände von Steuerelementen im Dialogfeld. Die `m_cs` Struktur ist vom Typ [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea). Weitere Informationen zur Verwendung dieser Dialogfeldklasse finden Sie unter den [DoModal](#domodal) Member-Funktion.  
   
- Weitere Informationen finden Sie unter den [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) Struktur im Windows SDK.  
   
  Weitere Informationen zu OLE-spezifische Dialogfelder, finden Sie im Artikel [Dialogfelder in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -120,7 +120,7 @@ explicit COleChangeSourceDialog(
 ### <a name="remarks"></a>Hinweise  
  Um das Dialogfeld anzuzeigen, rufen die [DoModal](#domodal) Funktion.  
   
- Weitere Informationen finden Sie unter den [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Struktur und [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) -Funktion in Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) Struktur und [OleUIChangeSource](/windows/desktop/api/oledlg/nf-oledlg-oleuichangesourcea) -Funktion in Windows SDK.  
   
 ##  <a name="domodal"></a>  COleChangeSourceDialog::DoModal  
  Rufen Sie diese Funktion, um das Dialogfeld für die Quelle für das OLE-ändern anzuzeigen.  
@@ -136,7 +136,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL, wenn der Benutzer das Dialogfeld abgebrochen hat.  
   
-- IDABORT, wenn ein Fehler aufgetreten. Wenn IDABORT zurückgegeben wird, rufen Sie die [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) Memberfunktion, um weitere Informationen zu den Typ des Fehlers zu erhalten, die aufgetreten sind. Eine Liste der möglichen Fehler, finden Sie unter den [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) -Funktion in Windows SDK.  
+- IDABORT, wenn ein Fehler aufgetreten. Wenn IDABORT zurückgegeben wird, rufen Sie die [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) Memberfunktion, um weitere Informationen zu den Typ des Fehlers zu erhalten, die aufgetreten sind. Eine Liste der möglichen Fehler, finden Sie unter den [OleUIChangeSource](/windows/desktop/api/oledlg/nf-oledlg-oleuichangesourcea) -Funktion in Windows SDK.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie die verschiedenen Dialogfeldsteuerelemente zu initialisieren, indem Sie Mitglieder festlegen möchten die [M_cs](#m_cs) Struktur, sollten Sie dies tun, vor dem Aufruf `DoModal`, allerdings nachdem das Dialogfeldobjekt erstellt wird.  
@@ -185,9 +185,9 @@ CString GetFromPrefix();
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion nur nach dem Aufruf [DoModal](#domodal) IDOK zurückgibt.  
   
- Dieser Wert stammt direkt aus der `lpszFrom` Mitglied der [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Struktur.  
+ Dieser Wert stammt direkt aus der `lpszFrom` Mitglied der [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) Struktur.  
   
- Weitere Informationen finden Sie unter den [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) Struktur im Windows SDK.  
   
 ##  <a name="getitemname"></a>  COleChangeSourceDialog::GetItemName  
  Rufen Sie diese Funktion zum Abrufen des Element-Moniker-Teils des Anzeigenamens für den verknüpften Client-Element.  
@@ -215,12 +215,12 @@ CString GetToPrefix();
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion nur nach dem Aufruf [DoModal](#domodal) IDOK zurückgibt.  
   
- Dieser Wert stammt direkt aus der `lpszTo` Mitglied der [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Struktur.  
+ Dieser Wert stammt direkt aus der `lpszTo` Mitglied der [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) Struktur.  
   
- Weitere Informationen finden Sie unter den [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) Struktur im Windows SDK.  
   
 ##  <a name="m_cs"></a>  COleChangeSourceDialog::m_cs  
- Datenmember ist eine Struktur des Typs [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160).  
+ Datenmember ist eine Struktur des Typs [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea).  
   
 ```  
 OLEUICHANGESOURCE m_cs;  
@@ -229,7 +229,7 @@ OLEUICHANGESOURCE m_cs;
 ### <a name="remarks"></a>Hinweise  
  `OLEUICHANGESOURCE` Dient zum Steuern des Verhaltens des Dialogfelds Quelle für das OLE-ändern. Mitglieder dieser Struktur können direkt geändert werden.  
   
- Weitere Informationen finden Sie unter den [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) Struktur im Windows SDK.  
   
 ##  <a name="isvalidsource"></a>  COleChangeSourceDialog::IsValidSource  
  Rufen Sie diese Funktion, um zu bestimmen, ob die neue Quelle gültig ist.  
@@ -244,7 +244,7 @@ BOOL IsValidSource();
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion nur nach dem Aufruf [DoModal](#domodal) IDOK zurückgibt.  
   
- Weitere Informationen finden Sie unter den [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) Struktur im Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [COleDialog-Klasse](../../mfc/reference/coledialog-class.md)   

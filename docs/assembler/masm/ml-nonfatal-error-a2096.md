@@ -1,7 +1,7 @@
 ---
-title: ML nicht schwerwiegende Fehler A2096 | Microsoft Docs
+title: Schwerwiegender ML--Fehler A2096 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e5d07afa864c9f6f4214de953aa9e03fe0e7e4f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 82f4ef76dca10b1208a931bc3e1cc09d82a639d2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053671"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679597"
 ---
 # <a name="ml-nonfatal-error-a2096"></a>Nicht schwerwiegender ML-Fehler A2096
-**Segment, eine Gruppe oder Segmentregister erwartet**  
-  
- Ein Segment oder eine Gruppe wurde erwartet, aber wurde nicht gefunden.  
-  
- Eine der folgenden aufgetreten ist:  
-  
--   Der linke Operand mit dem Segment angegeben überschreiben-Operator (**:**) konnte sich nicht um ein Segment (CS, DS, SS, ES, FS oder GS), Gruppe RegisterName, Segmentnamen oder Segment Ausdruck.  
-  
--   Die [VORAUSSETZEN](../../assembler/masm/assume.md) Richtlinie wurde ein Segment registrieren, ohne ein gültiges Segmentadresse, Segment registrieren, Gruppe oder die spezielle angegeben **Flatfile** Gruppe.  
-  
-## <a name="see-also"></a>Siehe auch  
- [ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)
+
+**Segment, einer Gruppe oder Segmentregister erwartet**
+
+Ein Segment oder eine Gruppe wurde erwartet, jedoch wurde nicht gefunden.
+
+Eine der folgenden aufgetreten ist:
+
+- Der linke Operand, der mit dem Segment angegeben überschreiben Operator (**:**) war nicht Segment (CS, DS, SS, ES, FS oder GS), Gruppe RegisterName, Segmentname oder Segment-Ausdruck.
+
+- Die [VORAUSSETZEN](../../assembler/masm/assume.md) Direktive wurde ein Segmentregister, ohne eine gültige Segmentadresse, Segment registrieren, Gruppe oder die spezielle angegeben **Flatfile** Gruppe.
+
+## <a name="see-also"></a>Siehe auch
+
+[ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)<br/>

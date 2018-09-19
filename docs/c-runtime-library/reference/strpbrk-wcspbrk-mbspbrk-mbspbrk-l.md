@@ -54,19 +54,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd62d95e971ac5fd927cce1b7b4eb600ebcf7df6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db26c60badceab6c1422146a32de3d6dd2ecb8bd
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415877"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181132"
 ---
 # <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
 Durchsucht Zeichenfolgen nach Zeichen in angegebenen Zeichensätzen.
 
 > [!IMPORTANT]
-> **_mbspbrk** und **_mbspbrk_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> `_mbspbrk` und `_mbspbrk_l` können nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -137,36 +137,36 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf das erste Vorkommen eines beliebigen Zeichens von *StrCharSet* in *str*, oder ein **NULL** Zeiger, wenn zwei Zeichenfolgenargumente keine Zeichen enthalten.
+Gibt einen Zeiger auf das erste Vorkommen eines beliebigen Zeichens aus *StrCharSet* in *str*, oder ein NULL-Zeiger, wenn die beiden Zeichenfolgenargumente gemeinsame keine Zeichen aufweisen.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Strpbrk** Funktion gibt einen Zeiger auf das erste Vorkommen eines Zeichens in *str* angehört, die den Satz von Zeichen in *StrCharSet*. Die Suche umfasst nicht das abschließende Nullzeichen.
+Die `strpbrk` Funktion gibt einen Zeiger auf das erste Vorkommen eines Zeichens in *str* gehört, die den Satz von Zeichen in *StrCharSet*. Die Suche umfasst nicht das abschließende Nullzeichen.
 
-**Wcspbrk** und **_mbspbrk** sind Breitzeichen- und multibytezeichenversionen von **Strpbrk**. Die Argumente und der Rückgabewert von **Wcspbrk** sind Breitzeichen-Zeichenfolgen, die von **_mbspbrk** sind Multibyte Zeichenfolgen.
+`wcspbrk` und `_mbspbrk` sind Breitzeichen- und Multibytezeichenversionen von `strpbrk`. Die Argumente und der Rückgabewert von `wcspbrk` sind Breitzeichen-Zeichenfolgen; die von `_mbspbrk` sind Mehrbyte-Zeichenfolgen.
 
-**_mbspbrk** überprüft die eigenen Parameter. Wenn *str* oder *StrCharSet* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **_mbspbrk** gibt **NULL** und legt **Errno** auf **EINVAL**. **Strpbrk** und **Wcspbrk** überprüfen ihre Parameter nicht. Diese drei Funktionen verhalten sich andernfalls identisch.
+`_mbspbrk` überprüft die eigenen Parameter. Wenn *str* oder *StrCharSet* NULL ist, den Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, `_mbspbrk` gibt NULL zurück und legt `errno` zu EINVAL. `strpbrk` und `wcspbrk` überprüfen ihre Parameter nicht. Diese drei Funktionen verhalten sich andernfalls identisch.
 
-**_mbspbrk** ähnelt **_mbscspn** mit dem Unterschied, dass **_mbspbrk** gibt einen Zeiger anstelle eines Werts vom Typ [Size_t](../../c-runtime-library/standard-types.md).
+`_mbspbrk` ähnelt `_mbscspn`, außer dass `_mbspbrk` einen Zeiger anstelle eines Werts vom Typ [size_t](../../c-runtime-library/standard-types.md) zurückgibt.
 
-In C akzeptieren diese Funktionen eine ** const ** Zeiger als erstes Argument. In C++ sind zwei Überladungen verfügbar. Die Überladung, die einen Zeiger auf ** const ** gibt einen Zeiger auf **const **; die Version, die einen Zeiger auf nicht-akzeptiert**const ** gibt einen Zeiger auf nicht-** const **. Das Makro **_CRT_CONST_CORRECT_OVERLOADS** wird definiert, wenn sowohl die **const ** und nicht-** const ** Versionen dieser Funktionen sind verfügbar. Wenn Sie das nicht-** const **-Verhalten für beide C++-Überladungen, definieren Sie das Symbol **_CONST_RETURN**.
+In C akzeptieren diese Funktionen eine **const** Zeiger für das erste Argument. In C++ sind zwei Überladungen verfügbar. Die Überladung, die einen Zeiger auf **const** gibt einen Zeiger auf **const**; die Version, die einen Zeiger auf nicht-akzeptiert**const** gibt einen Zeiger auf nicht-**const** . Das Makro _CRT_CONST_CORRECT_OVERLOADS definiert ist, wenn sowohl die **const** und nicht-**const** Versionen dieser Funktionen sind verfügbar. Wenn Sie nicht benötigen**const** Verhalten für beide C++-Überladungen, definieren Sie das Symbol _CONST_RETURN.
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** Kategorie des Gebietsschemas für Weitere Informationen finden Sie unter [Setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Version mit der **_l** -Suffix ist beinahe identisch, außer dass mithilfe den Locale-Parameter Stattdessen übergeben. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Einstellung von den LC_CTYPE--kategorieeinstellung des Gebietsschemas betroffen; Weitere Informationen finden Sie unter [Setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Version mit der **_l** -Suffix ist beinahe identisch, außer dass mithilfe den Locale-Parameter Stattdessen übergeben. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
 |TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcspbrk**|**strpbrk**|**_mbspbrk**|**wcspbrk**|
-|**n/v**|**n/v**|**_mbspbrk_l**|**n/v**|
+|`_tcspbrk`|`strpbrk`|`_mbspbrk`|`wcspbrk`|
+|**n/v**|**n/v**|`_mbspbrk_l`|**n/v**|
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
-|**strpbrk**|\<string.h>|
-|**wcspbrk**|\<string.h> oder \<wchar.h>|
-|**_mbspbrk**, **_mbspbrk_l**|\<mbstring.h>|
+|`strpbrk`|\<string.h>|
+|`wcspbrk`|\<string.h> oder \<wchar.h>|
+|`_mbspbrk`, `_mbspbrk_l`|\<mbstring.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

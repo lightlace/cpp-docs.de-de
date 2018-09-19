@@ -1,5 +1,5 @@
 ---
-title: __inwordstring | Microsoft Docs
+title: __inwordstring | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 073c1303661aece3340f9ac84d37ccf23e29d556
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7075a20fa552a169505b445f592448f77bcdc9d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333361"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711112"
 ---
 # <a name="inwordstring"></a>__inwordstring
 **Microsoft-spezifisch**  
@@ -41,20 +41,20 @@ void __inwordstring(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `Port`  
- Der Port, aus dem gelesen werden soll.  
+*Port*<br/>
+[in] Der Port, der gelesen werden.  
   
- [out] `Buffer`  
- Die aus den Port gelesenen Daten werden hier geschrieben.  
+*Buffer*<br/>
+[out] Die vom Port gelesenen Daten werden hier geschrieben.  
   
- [in] `Count`  
- Die Anzahl der Worte der zu lesenden Daten.  
+*Anzahl*<br/>
+[in] Die Anzahl von Wörtern, der zu lesenden Daten.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__inwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__inwordstring`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

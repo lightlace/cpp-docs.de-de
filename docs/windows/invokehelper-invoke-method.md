@@ -1,5 +1,5 @@
 ---
-title: 'InvokeHelper:: Invoke-Methode | Microsoft Docs'
+title: 'InvokeHelper:: Invoke-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,90 +17,96 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d3fc5ac67d6c03cef7f096f898db0e2f29d125c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a9d59ca1d404e56e7d85a8f0edfe653dc5692558
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882302"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584320"
 ---
 # <a name="invokehelperinvoke-method"></a>InvokeHelper::Invoke-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-STDMETHOD(  
-   Invoke  
-)();  
-STDMETHOD(  
-   Invoke  
-)(typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `arg1`  
- Argument 1.  
-  
- `arg2`  
- Argument 2.  
-  
- `arg3`  
- 3-Argument.  
-  
- `arg4`  
- 4-Argument.  
-  
- `arg5`  
- 5-Argument.  
-  
- `arg6`  
- 6-Argument.  
-  
- `arg7`  
- 7-Argument.  
-  
- `arg8`  
- 8-Argument.  
-  
- `arg9`  
- 9-Argument.  
-  
-## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler beschreibt.  
-  
-## <a name="remarks"></a>Hinweise  
- Ruft den Ereignishandler, dessen Signatur mit der angegebene Anzahl von Argumenten enthält.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** event.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [InvokeHelper-Struktur](../windows/invokehelper-structure.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+STDMETHOD(
+   Invoke
+)();
+STDMETHOD(
+   Invoke
+)(typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+```
+
+### <a name="parameters"></a>Parameter
+
+*arg1*  
+Das Argument 1.
+
+*Arg2*  
+Argument 2.
+
+*Arg3*  
+Argument 3.
+
+*Arg4*  
+4-Argument.
+
+*Arg5*  
+5-Argument.
+
+*Arg6*  
+6-Argument.
+
+*Arg7*  
+7-Argument.
+
+*Arg8*  
+8-Argument.
+
+*Arg9*  
+9-Argument.
+
+## <a name="return-value"></a>Rückgabewert
+
+S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler beschreibt.
+
+## <a name="remarks"></a>Hinweise
+
+Ruft den Ereignishandler, dessen Signatur mit die angegebene Anzahl von Argumenten enthält.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** event.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[InvokeHelper-Struktur](../windows/invokehelper-structure.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

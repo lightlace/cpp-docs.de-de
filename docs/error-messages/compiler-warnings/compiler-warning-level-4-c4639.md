@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4639 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4639 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ad4b3159eb83c6dd050bba41032a461716f556a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0ab2e08878e2172337ef373ebcbc8a37359b85f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294231"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117672"
 ---
 # <a name="compiler-warning-level-4-c4639"></a>Compilerwarnung (Stufe 4) C4639
-MSXML Fehler, XML-Dokumentkommentare werden nicht verarbeitet. reason  
-  
- Diese Warnung kann aus verschiedenen Gründen auftreten.  
-  
- Um diese Warnung zu beheben:  
-  
--   Kompilieren Sie erneut.  
-  
--   Installieren Sie MSXML durch eine Neuinstallation der common Language Runtime neu.  
-  
--   Bearbeiten Sie oder entfernen Sie die Dokumentationskommentar ist, der die Warnung und die Neukompilierung verursacht hat.  
-  
- Wenn C4639 ausgegeben wird, alle XML-Kommentar Weiterverarbeitung ist deaktiviert, und die XDC-Datei wird nicht generiert.
+
+MSXML-Fehler: XML-Dokument, das Kommentare nicht verarbeitet werden. reason
+
+Diese Warnung kann aus verschiedenen Gründen auftreten.
+
+Um diese Warnung zu beheben:
+
+- Kompilieren Sie neu.
+
+- Installieren Sie MSXML durch eine Neuinstallation der common Language Runtime neu.
+
+- Bearbeiten oder Entfernen der Dokumentationskommentar, der die Warnung und die Neukompilierung verursacht hat.
+
+Wenn C4639 ausgegeben wird, alle weiteren Verarbeitung von XML-Kommentar ist deaktiviert, und die XDC-Datei wird nicht generiert.

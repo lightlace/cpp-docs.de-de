@@ -65,12 +65,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28854866824b1750fb1887d5e822d2165034f687
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 175d7895331ec960244354870c6bd6845baf37d1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956842"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725321"
 ---
 # <a name="basicios-class"></a>basic_ios-Klasse
 
@@ -86,9 +86,11 @@ class basic_ios : public ios_base
 
 ### <a name="parameters"></a>Parameter
 
-*Elem* eines Typs.
+*Elem*<br/>
+Ein Typ.
 
-*"Traits"* eine Variable vom Typ `char_traits`.
+*Merkmale*<br/>
+Eine Variable des Typs `char_traits`.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -202,7 +204,8 @@ basic_ios();
 
 ### <a name="parameters"></a>Parameter
 
-*SB* Standardpuffer zum Speichern von Eingabe-oder Ausgabeelementen.
+*SB*<br/>
+Standardpuffer zum Speichern von Eingabe- oder Ausgabeelementen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -227,9 +230,11 @@ void clear(io_state state);
 
 ### <a name="parameters"></a>Parameter
 
-*Status* (optional) die Flags, die Sie nach dem Löschen aller Flags festlegen möchten. Wird standardmäßig auf `goodbit` festgelegt.
+*state*<br/>
+(Optional) Die Flags, die Sie nach dem Löschen aller Flags festlegen möchten. Wird standardmäßig auf `goodbit` festgelegt.
 
-*reraise-* (optional) gibt an, ob die Ausnahme erneut ausgelöst werden soll. Standardmäßig **"false"** (wird nicht erneut auslösen die Ausnahme).
+*reraise-*<br/>
+(Optional) Gibt an, ob die Ausnahme erneut ausgelöst werden soll. Standardmäßig **"false"** (wird nicht erneut auslösen die Ausnahme).
 
 ### <a name="remarks"></a>Hinweise
 
@@ -256,7 +261,8 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* der Stream, dessen Flags Sie kopieren möchten.
+*right*<br/>
+Der Stream, dessen Flags Sie kopieren möchten.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -338,7 +344,8 @@ void exceptions(io_state Newexcept);
 
 ### <a name="parameters"></a>Parameter
 
-*Newexcept* die Flags, die eine Ausnahme ausgelöst werden sollen.
+*Newexcept*<br/>
+Die Flags, die eine Ausnahme auslösen sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -426,7 +433,8 @@ char_type fill(char_type Char);
 
 ### <a name="parameters"></a>Parameter
 
-*Char* das Zeichen, die das Füllzeichen dienen sollen.
+*Char*<br/>
+Das Zeichen, das als das Füllzeichen dienen soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -489,7 +497,8 @@ locale imbue(const locale& Loc);
 
 ### <a name="parameters"></a>Parameter
 
-*LOC* eine lokale Zeichenfolge.
+*Loc*<br/>
+Eine lokale Zeichenfolge.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -531,9 +540,11 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 ### <a name="parameters"></a>Parameter
 
-*_Sb* Standardpuffer zum Speichern von Eingabe-oder Ausgabeelementen.
+*_Sb*<br/>
+Standardpuffer zum Speichern von Eingabe- oder Ausgabeelementen.
 
-*_Isstd* gibt an, ob es sich um einen Standardstream handelt.
+*_Isstd*<br/>
+Gibt an, ob es sich um einen Standardstream handelt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -577,7 +588,8 @@ void move(basic_ios&& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* der `ios_base` Objekt, das Werte verschoben.
+*right*<br/>
+Das `ios_base`-Objekt, aus dem Werte verschoben werden sollen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -593,9 +605,11 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="parameters"></a>Parameter
 
-*Char* der **Char** konvertieren.
+*Char*<br/>
+Die **Char** konvertieren.
 
-*Standard* der **Char** , zurückgegeben werden sollen, wenn keine Entsprechung gefunden wird.
+*Default*<br/>
+Die **Char** , zurückgegeben werden sollen, wenn keine Entsprechung gefunden wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -726,7 +740,8 @@ basic_streambuf<Elem, Traits>* _Sb);
 
 ### <a name="parameters"></a>Parameter
 
-*_Sb* einen Stream.
+*_Sb*<br/>
+Ein Stream.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -817,7 +832,8 @@ void setstate(iostate _State);
 
 ### <a name="parameters"></a>Parameter
 
-*_State* zusätzlich festzulegende Flags.
+*_State*<br/>
+Zusätzlich festzulegende Flags.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -866,7 +882,8 @@ basic_streambuf<Elem, Tr>* strbuf)
 
 ### <a name="parameters"></a>Parameter
 
-*Strbuf* der Streampuffer zum Lesepuffer werden.
+*strbuf*<br/>
+Der Streampuffer, der zum Lesepuffer werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -884,7 +901,8 @@ basic_ostream<Elem, Traits>* str);
 
 ### <a name="parameters"></a>Parameter
 
-*Str* einen Stream.
+*str*<br/>
+Ein Stream.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -930,7 +948,8 @@ char_type widen(char Char) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Char* das zu konvertierende Zeichen.
+*Char*<br/>
+Das zu konvertierende Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -971,7 +990,8 @@ void swap(basic_ios&& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* der `basic_ios` -Objekt, das zum Austauschen von Werten verwendet wird.
+*right*<br/>
+Das `basic_ios`-Objekt, das zum Austauschen von Werten verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 

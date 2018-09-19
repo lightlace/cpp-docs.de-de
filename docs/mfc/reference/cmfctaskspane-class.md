@@ -204,15 +204,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da86312e425f6b54abf6422af09a04c45aa733f2
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 453bbb5d99d87a03a8627d231e45316cb5456794
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028381"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702052"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane-Klasse
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
  Die `CMFCTasksPane`-Klasse implementiert eine Liste anklickbarer Elemente (Aufgaben).  
   
@@ -284,7 +284,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::IsToolBox](#istoolbox)||  
 |[CMFCTasksPane::IsWrapLabelsEnabled](#iswraplabelsenabled)|Gibt an, ob der Aufgabenbereich Wörter in Bezeichnungen umbricht.|  
 |[CMFCTasksPane::IsWrapTasksEnabled](#iswraptasksenabled)|Gibt an, ob der Aufgabenbereich Wörter in Aufgaben umbricht.|  
-|[CMFCTasksPane::LoadState](#loadstate)|(Überschreibt [CDockablePane:: LoadState](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917).)|  
+|[CMFCTasksPane::LoadState](#loadstate)|(Überschreibt [CDockablePane:: LoadState](cdockablepane-class.md#loadstate).)|  
 |[CMFCTasksPane::OnCancel](#oncancel)||  
 |[CMFCTasksPane::OnClickTask](#onclicktask)|Wird vom Framework aufgerufen, wenn der Benutzer auf ein Element im Aufgabenbereich klickt.|  
 |[CMFCTasksPane::OnOK](#onok)||  
@@ -293,17 +293,17 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::OnPressHomeButton](#onpresshomebutton)|Wird vom Framework aufgerufen, wenn der Benutzer auf die Navigationsschaltfläche Startseite klickt.|  
 |[CMFCTasksPane::OnPressOtherButton](#onpressotherbutton)||  
 |[CMFCTasksPane::OnSetAccData](#onsetaccdata)|(Überschreibt [cbasepane:: Onsetaccdata](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|  
-|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(Überschreibt [CDockablePane:: OnUpdateCmdUI](http://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
-|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(Überschreibt [CDockablePane:: PreTranslateMessage](http://msdn.microsoft.com/49a242cc-b158-400e-9e01-0345ec9c3ffd).)|  
+|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(Überschreibt [CDockablePane:: OnUpdateCmdUI](cdockablepane-class.md).)|  
+|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(Überschreibt [CDockablePane:: PreTranslateMessage](cdockablepane-class.md).)|  
 |[CMFCTasksPane::RecalcLayout](#recalclayout)|(Überschreibt [cpane:: RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
 |[CMFCTasksPane::RemoveAllGroups](#removeallgroups)|Entfernt alle Gruppen auf der angegebenen Seite.|  
 |[CMFCTasksPane::RemoveAllPages](#removeallpages)|Entfernt alle Seiten aus dem Aufgabenbereich mit Ausnahme der Standardseite (erste).|  
 |[CMFCTasksPane::RemoveAllTasks](#removealltasks)|Entfernt alle Aufgaben aus der Gruppe.|  
 |[CMFCTasksPane::RemoveGroup](#removegroup)|Entfernt eine Gruppe.|  
-|[CMFCTasksPane::RemovePage](#removepage)|Entfernt eine angegebene Seite aus dem Aufgabenbereich.|  
+|[CMFCTasksPane::RemovePage](#removepage)|Entfernt eine angegebene Seite aus dem Aufgabenbereich.|
 |[CMFCTasksPane::RemoveTask](#removetask)|Entfernt eine Aufgabe aus einer Aufgabengruppe.|  
-|[CMFCTasksPane::SaveState](#savestate)|(Überschreibt [CDockablePane:: SaveState](http://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
-|[CMFCTasksPane::Serialize](#serialize)|(Überschreibt [CDockablePane:: SaveState](http://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6).)|  
+|[CMFCTasksPane::SaveState](#savestate)|(Überschreibt [CDockablePane:: SaveState](cdockablepane-class.md).)|  
+|[CMFCTasksPane::Serialize](#serialize)|(Überschreibt [CDockablePane:: SaveState]().)|  
 |[CMFCTasksPane::SetActivePage](#setactivepage)|Aktiviert eine angegebene Seite im Aufgabenbereich.|  
 |[CMFCTasksPane::SetCaption](#setcaption)|Legt den Beschriftungsnamen eines Aufgabenbereichs fest.|  
 |[CMFCTasksPane::SetGroupCaptionHeight](#setgroupcaptionheight)|Legt die Höhe einer Gruppenbeschriftung fest.|  
@@ -318,7 +318,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::SetTaskName](#settaskname)|Legt den Namen für eine Aufgabe fest.|  
 |[CMFCTasksPane::SetTasksIconHorzOffset](#settasksiconhorzoffset)||  
 |[CMFCTasksPane::SetTasksIconVertOffset](#settasksiconvertoffset)||  
-|[CMFCTasksPane::SetTaskTextColor](#settasktextcolor)|Legt die Textfarbe für eine Aufgabe fest.|  
+|[CMFCTasksPane::SetTaskTextColor](#settasktextcolor)|Legt die Textfarbe für eine Aufgabe fest.| 
 |[CMFCTasksPane::SetTasksHorzOffset](#settaskshorzoffset)|Legt den horizontale Offset von Aufgaben vom linken und rechten Rand der übergeordneten Gruppen fest.|  
 |[CMFCTasksPane::SetVertMargin](#setvertmargin)|Legt den vertikalen Abstand zwischen einem Aufgabenbereich und den Rändern des Clientbereichs fest.|  
 |[CMFCTasksPane::SetWindowHeight](#setwindowheight)|Legt die Höhe eines Fensters fest.|  
@@ -399,20 +399,20 @@ int AddGroup(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nPageIdx*  
- Gibt an, der nullbasierte Index.  
+*nPageIdx*<br/>
+[in] Gibt an, der nullbasierte Index.  
   
- [in] *LpszGroupName*  
- Gibt den Gruppennamen.  
+*lpszGroupName*<br/>
+[in] Gibt den Gruppennamen.  
   
- [in] *bBottomLocation*  
- True, um die Gruppe am unteren Rand der Aufgabenbereich-Steuerelement zu erstellen. andernfalls "false".  
+*bBottomLocation*<br/>
+[in] True, um die Gruppe am unteren Rand der Aufgabenbereich-Steuerelement zu erstellen. andernfalls "false".  
   
- [in] *bBesondere*  
- "True", markieren Sie diese Gruppe als eine *spezielle* Gruppe; andernfalls "false". Weitere Informationen zu besonderen Gruppen finden Sie im Abschnitt "Hinweise" `CMFCTasksPane`.  
+*bBesondere*<br/>
+[in] "True", markieren Sie diese Gruppe als eine *spezielle* Gruppe; andernfalls "false". Weitere Informationen zu besonderen Gruppen finden Sie im Abschnitt "Hinweise" `CMFCTasksPane`.  
   
- [in] *hIcon*  
- Gibt das Symbol in der gruppenbeschriftung angezeigt.  
+*hIcon*<br/>
+[in] Gibt das Symbol in der gruppenbeschriftung angezeigt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index der Gruppe in der internen Liste von Gruppen, die die Klasse verwaltet.  
@@ -434,17 +434,17 @@ int AddLabel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Ngruppe*  
- Gibt den Index der Gruppe, in dem die Bezeichnung hinzugefügt wird.  
+*Ngruppe*<br/>
+[in] Gibt den Index der Gruppe, in dem die Bezeichnung hinzugefügt wird.  
   
- [in] *LpszLabelName*  
- Gibt den Namen der Bezeichnung.  
+*lpszLabelName*<br/>
+[in] Gibt den Namen der Bezeichnung.  
   
- [in] *nTaskIcon*  
- Gibt das Symbol neben der Bezeichnung angezeigt werden soll. Das Framework speichert Symbole in eine Liste der Images. Dieser Parameter ist ein Index in der Liste.  
+*nTaskIcon*<br/>
+[in] Gibt das Symbol neben der Bezeichnung angezeigt werden soll. Das Framework speichert Symbole in eine Liste der Images. Dieser Parameter ist ein Index in der Liste.  
   
- [in] *bIsBold*  
- True, um die Bezeichnung in Fettdruck anzuzeigen. andernfalls "false".  
+*bIsBold*<br/>
+[in] True, um die Bezeichnung in Fettdruck anzuzeigen. andernfalls "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index der Gruppe, in dem die Bezeichnung hinzugefügt wurde, oder -1, wenn die Gruppe angegeben *Ngruppe* ist nicht vorhanden.  
@@ -462,11 +462,11 @@ int AddMRUFilesList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Ngruppe*  
- Gibt den Index einer Gruppe. Diese Methode fügt der Liste der zuletzt verwendeten Dateien von diesem Parameter angegebenen Gruppe.  
+*Ngruppe*<br/>
+[in] Gibt den Index einer Gruppe. Diese Methode fügt der Liste der zuletzt verwendeten Dateien von diesem Parameter angegebenen Gruppe.  
   
- [in] *nMaxFiles*  
- Gibt die Anzahl von Dateien, die in der Liste der zuletzt verwendeten Dateien angezeigt.  
+*nMaxFiles*<br/>
+[in] Gibt die Anzahl von Dateien, die in der Liste der zuletzt verwendeten Dateien angezeigt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index der Gruppe, in der Liste der zuletzt verwendeten Dateien hinzugefügt wurde, oder -1, wenn die Gruppe angegeben *Ngruppe* ist nicht vorhanden.  
@@ -479,8 +479,8 @@ int AddPage(LPCTSTR lpszPageLabel);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszPageLabel*  
- Gibt die Bezeichnung für die Seite.  
+*lpszPageLabel*<br/>
+[in] Gibt die Bezeichnung für die Seite.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index der neuen Seite.  
@@ -512,20 +512,20 @@ int AddTask(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Ngruppe*  
- Gibt an, der gruppenindex, in dem die Aufgabe hinzugefügt wird.  
+*Ngruppe*<br/>
+[in] Gibt an, der gruppenindex, in dem die Aufgabe hinzugefügt wird.  
   
- [in] *LpszTaskName*  
- Gibt den Namen der Aufgabe.  
+*lpszTaskName*<br/>
+[in] Gibt den Namen der Aufgabe.  
   
- [in] *nTaskIcon*  
- Gibt das Symbol neben der Aufgabe angezeigt werden soll. Das Framework speichert Symbole in eine Liste der Images. Dieser Parameter ist ein Index in der Liste.  
+*nTaskIcon*<br/>
+[in] Gibt das Symbol neben der Aufgabe angezeigt werden soll. Das Framework speichert Symbole in eine Liste der Images. Dieser Parameter ist ein Index in der Liste.  
   
- [in] *UiCommandID*  
- Gibt an, die Befehls-ID des Befehls, die ausgeführt werden, wenn der Benutzer klickt. Der Task wird als Bezeichnung behandelt, wenn *UiCommandID* ist 0.  
+*uiCommandID*<br/>
+[in] Gibt an, die Befehls-ID des Befehls, die ausgeführt werden, wenn der Benutzer klickt. Der Task wird als Bezeichnung behandelt, wenn *UiCommandID* ist 0.  
   
- [in] *DwUserData*  
- Gibt die benutzerdefinierten Daten mit dem Task zugeordnet werden soll.  
+*dwUserData*<br/>
+[in] Gibt die benutzerdefinierten Daten mit dem Task zugeordnet werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index der Gruppe, in dem die Aufgabe hinzugefügt wurde, andernfalls-1 durch die Gruppe angegeben *Ngruppe* ist nicht vorhanden.  
@@ -543,20 +543,20 @@ int AddWindow(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Ngruppe*  
- Gibt an, der gruppenindex, an dem das Fenster hinzugefügt wird.  
+*Ngruppe*<br/>
+[in] Gibt an, der gruppenindex, an dem das Fenster hinzugefügt wird.  
   
- [in] *HwndTask*  
- Gibt das Handle des Fensters hinzufügen.  
+*hwndTask*<br/>
+[in] Gibt das Handle des Fensters hinzufügen.  
   
- [in] *nWndHeight*  
- Gibt die Höhe des Fensters.  
+*nWndHeight*<br/>
+[in] Gibt die Höhe des Fensters.  
   
- [in] *bAutoDestroyWindow*  
- True, um das Fenster zu löschen, wenn die Aufgabe entfernt wird. andernfalls "false".  
+*bAutoDestroyWindow*<br/>
+[in] True, um das Fenster zu löschen, wenn die Aufgabe entfernt wird. andernfalls "false".  
   
- [in] *DwUserData*  
- Gibt die benutzerdefinierten Daten, die mit der Aufgabe verknüpft ist.  
+*dwUserData*<br/>
+[in] Gibt die benutzerdefinierten Daten, die mit der Aufgabe verknüpft ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index der Gruppe, in das Fenster hinzugefügt wurde, oder -1, wenn die Gruppe angegeben *Ngruppe* ist nicht vorhanden.  
@@ -584,8 +584,8 @@ void CollapseAllGroups(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bCollapse*  
- [in] *nPageIdx*  
+*bCollapse*<br/>
+[in] [in] *nPageIdx*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -604,14 +604,14 @@ BOOL CollapseGroup(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pGroup*  
- Gibt die Gruppe zu reduzieren.  
+*pGroup*<br/>
+[in] Gibt die Gruppe zu reduzieren.  
   
- [in] *bCollapse*  
- True, um die Gruppe zu reduzieren. FALSE, wenn die Gruppe zu erweitern.  
+*bCollapse*<br/>
+[in] True, um die Gruppe zu reduzieren. FALSE, wenn die Gruppe zu erweitern.  
   
- [in] *Ngruppe*  
- Gibt an, der nullbasierte Index der Gruppe, die in der internen Liste von Gruppen zu reduzieren.  
+*Ngruppe*<br/>
+[in] Gibt an, der nullbasierte Index der Gruppe, die in der internen Liste von Gruppen zu reduzieren.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Gruppe reduziert oder erweitert, erfolgreich wird. andernfalls "false".  
@@ -656,8 +656,8 @@ void EnableAnimation(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- True, um die Animation zu aktivieren, die auftritt, wenn eine Aufgabengruppe, erweitert oder reduziert. andernfalls "false".  
+*bAktivieren*<br/>
+[in] True, um die Animation zu aktivieren, die auftritt, wenn eine Aufgabengruppe, erweitert oder reduziert. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Die Animation, die tritt auf, wenn eine Aufgabengruppe, erweitert oder reduziert ist standardmäßig aktiviert.  
@@ -670,8 +670,8 @@ void EnableGroupCollapse(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- True, wenn Benutzer Aufgabengruppen reduziert werden können. andernfalls "false".  
+*bAktivieren*<br/>
+[in] True, wenn Benutzer Aufgabengruppen reduziert werden können. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Eine Aufgabengruppe, die reduziert ist zeigt nur die gruppenbeschriftung; die Liste der Aufgaben ist ausgeblendet.  
@@ -684,8 +684,8 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- "True" Enable Dropdown-Menüs in die **Weiter** und **zurück** Navigationsschaltflächen ist, andernfalls FALSE.  
+*bAktivieren*<br/>
+[in] "True" Enable Dropdown-Menüs in die **Weiter** und **zurück** Navigationsschaltflächen ist, andernfalls FALSE.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig werden in der Dropdown-Menüs in die **Weiter** und **zurück** Schaltflächen werden deaktiviert.  
@@ -706,17 +706,17 @@ void EnableNavigationToolbar(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- TRUE die Navigationssymbolleiste aktiviert. andernfalls "false".  
+*bAktivieren*<br/>
+[in] TRUE die Navigationssymbolleiste aktiviert. andernfalls "false".  
   
- [in] *UiToolbarBmpRes*  
- Gibt an, die Ressourcen-ID der Bitmap, die die auf der Symbolleiste anzuzeigenden Bilder enthält.  
+*uiToolbarBmpRes*<br/>
+[in] Gibt an, die Ressourcen-ID der Bitmap, die die auf der Symbolleiste anzuzeigenden Bilder enthält.  
   
- [in] *SizeToolbarImage*  
- Gibt die Größe eines Bilds für die Symbolleiste.  
+*sizeToolbarImage*<br/>
+[in] Gibt die Größe eines Bilds für die Symbolleiste.  
   
- [in] *SizeToolbarButton*  
- Gibt die Größe einer Symbolleisten-Schaltfläche.  
+*sizeToolbarButton*<br/>
+[in] Gibt die Größe einer Symbolleisten-Schaltfläche.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Navigationssymbolleiste befindet es sich um eine Symbolleiste, in dem das Framework am oberen Rand des Aufgabenbereichs angezeigt. Die Navigationssymbolleiste enthält die **wieder**, **Vorwärts**, und **Startseite** Navigationsschaltflächen und einer Menüschaltfläche, die die Liste der verfügbaren Seiten enthält.  
@@ -743,8 +743,8 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- "True", scrollen Sie im Aufgabenbereich statt einer Bildlaufleiste angezeigt werden sollen; andernfalls "false".  
+*bAktivieren*<br/>
+[in] "True", scrollen Sie im Aufgabenbereich statt einer Bildlaufleiste angezeigt werden sollen; andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig zeigt das Framework scrollschaltflächen im Aufgabenbereich an.  
@@ -757,8 +757,8 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- "True" Wrap den Text in Bezeichnungen, die im Aufgabenbereich angezeigt werden; andernfalls "false".  
+*bAktivieren*<br/>
+[in] "True" Wrap den Text in Bezeichnungen, die im Aufgabenbereich angezeigt werden; andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig wird das Framework den Text nicht in Bezeichnungen umbrochen. Wenn Zeilenumbruch aktiviert ist, kann der Text in Bezeichnungen in mehreren Zeilen angezeigt. Die Bezeichnung kann für einen Zeilenumbruch Marker wie z. B. enthalten `\n` und die Markierung "Unterstreichen" `&`.  
@@ -771,8 +771,8 @@ void EnableWrapTasks(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- "True", um Aufgaben in den Aufgabenbereich zu umschließen; andernfalls "false".  
+*bAktivieren*<br/>
+[in] "True", um Aufgaben in den Aufgabenbereich zu umschließen; andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig ist der Wortumbruch für Aufgaben deaktiviert.  
@@ -840,11 +840,11 @@ BOOL GetGroupLocation(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pGroup*  
- Gibt an, die Aufgabengruppe, deren Speicherort abgerufen wird.  
+*pGroup*<br/>
+[in] Gibt an, die Aufgabengruppe, deren Speicherort abgerufen wird.  
   
- [out] *Ngruppe*  
- Enthält den nullbasierten Index der Aufgabengruppe.  
+*Ngruppe*<br/>
+[out] Enthält den nullbasierten Index der Aufgabengruppe.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Aufgabengruppe gefunden wurde. andernfalls "false".  
@@ -894,11 +894,11 @@ BOOL GetPageByGroup(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Ngruppe*  
- Gibt den nullbasierten Index der Aufgabengruppe.  
+*Ngruppe*<br/>
+[in] Gibt den nullbasierten Index der Aufgabengruppe.  
   
- [out] *. nSeite*  
- Enthält den Seitenindex für die angegebene Gruppe. Wenn die Aufgabengruppe, die nur eine Standardseite enthält, ist der zurückgegebene Wert 0.  
+*. nSeite*<br/>
+[out] Enthält den Seitenindex für die angegebene Gruppe. Wenn die Aufgabengruppe, die nur eine Standardseite enthält, ist der zurückgegebene Wert 0.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn die Gruppe *Ngruppe* vorhanden ist; andernfalls "false".  
@@ -949,11 +949,11 @@ CMFCTasksPaneTask* GetTask(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Ngruppe*  
- Gibt an, der nullbasierte Index der Gruppe, die den Task enthält.  
+*Ngruppe*<br/>
+[in] Gibt an, der nullbasierte Index der Gruppe, die den Task enthält.  
   
- [in] *nTask*  
- Der nullbasierte Index der Aufgabe gibt an, in der Liste, die anhand des *Ngruppe*.  
+*nTask*<br/>
+[in] Der nullbasierte Index der Aufgabe gibt an, in der Liste, die anhand des *Ngruppe*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Aufgabe am angegebenen Index.  
@@ -966,8 +966,8 @@ int GetTaskCount(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Ngruppe*  
- Gibt den Index der Aufgabengruppe.  
+*Ngruppe*<br/>
+[in] Gibt den Index der Aufgabengruppe.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der Aufgaben in der angegebenen Gruppe oder 0, wenn *Ngruppe* ist ungültig.  
@@ -980,8 +980,8 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Ngruppe*  
- Gibt den nullbasierten Index des abzurufenden Gruppe.  
+*Ngruppe*<br/>
+[in] Gibt den nullbasierten Index des abzurufenden Gruppe.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Aufgabengruppe am angegebenen Index.  
@@ -1007,20 +1007,20 @@ BOOL GetTaskLocation(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCommandID*  
- Gibt an, die Befehls-ID der Aufgabe zu finden.  
+*uiCommandID*<br/>
+[in] Gibt an, die Befehls-ID der Aufgabe zu finden.  
   
- [out] *Ngruppe*  
- Enthält den gruppenindex der Aufgabe.  
+*Ngruppe*<br/>
+[out] Enthält den gruppenindex der Aufgabe.  
   
- [out] *nTask*  
- Enthält den Index der Aufgabe in der Aufgabengruppe.  
+*nTask*<br/>
+[out] Enthält den Index der Aufgabe in der Aufgabengruppe.  
   
- [in] *HwndTask*  
- Gibt an, das Fenster mit der Aufgabe verknüpft ist.  
+*hwndTask*<br/>
+[in] Gibt an, das Fenster mit der Aufgabe verknüpft ist.  
   
- [in] *pTask*  
- Gibt an, die zu suchende Aufgabe.  
+*pTask*<br/>
+[in] Gibt an, die zu suchende Aufgabe.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der taskspeicherort gefunden wurde. "False", wenn die angegebene Aufgabe nicht vorhanden ist.  
@@ -1199,8 +1199,8 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- [in] *nIndex*  
+*lpszProfileName*<br/>
+[in] [in] *nIndex*  
  [in] *UiID*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1238,17 +1238,17 @@ virtual void OnClickTask(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nGroupNumber*  
- Gibt an, der nullbasierte Index der Gruppe, die das geklickt wurde-Task enthält.  
+*nGroupNumber*<br/>
+[in] Gibt an, der nullbasierte Index der Gruppe, die das geklickt wurde-Task enthält.  
   
- [in] *nTaskNumber*  
- Gibt an, der nullbasierte Index der Aufgabe auf den geklickt wurde.  
+*nTaskNumber*<br/>
+[in] Gibt an, der nullbasierte Index der Aufgabe auf den geklickt wurde.  
   
- [in] *UiCommandID*  
- Gibt an, die Befehls-ID der Aufgabe zugeordnet.  
+*uiCommandID*<br/>
+[in] Gibt an, die Befehls-ID der Aufgabe zugeordnet.  
   
- [in] *DwUserData*  
- Enthält benutzerdefinierte Daten, die mit der geklickt wurde Aufgabe verknüpft ist.  
+*dwUserData*<br/>
+[in] Enthält benutzerdefinierte Daten, die mit der geklickt wurde Aufgabe verknüpft ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Methode aus, klickt ein Benutzer eine Aufgabe. Wird standardmäßig das Framework überprüft die Befehls-ID der geklickt wurde Aufgabe zugeordnet und ist dies nicht NULL ist, sendet die WM_COMMAND-Meldung an den Besitzer des Aufgabenbereich-Steuerelement.  
@@ -1310,8 +1310,8 @@ virtual void OnPressOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Pbtn*  
- [in] *pWndOwner*  
+*pbtn*<br/>
+[in] [in] *pWndOwner*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1339,8 +1339,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pTarget*  
- [in] *bDisableIfNoHndler*  
+*pTarget*<br/>
+[in] [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1378,8 +1378,8 @@ void RemoveAllGroups(int nPageIdx = 0);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nPageIdx*  
- Gibt an, der nullbasierte Index der Seite.  
+*nPageIdx*<br/>
+[in] Gibt an, der nullbasierte Index der Seite.  
   
 ### <a name="remarks"></a>Hinweise  
  Entfernt alle Gruppen auf der Seite, die anhand des *nPageIdx*, oder alle Gruppen, wenn nur eine Standardseite vorhanden ist.  
@@ -1399,8 +1399,8 @@ void RemoveAllTasks(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Ngruppe*  
- Gibt an, der nullbasierte Index der Gruppe.  
+*Ngruppe*<br/>
+[in] Gibt an, der nullbasierte Index der Gruppe.  
   
 ##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup  
  Entfernt eine Gruppe.  
@@ -1410,8 +1410,8 @@ void RemoveGroup(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Ngruppe*  
- Gibt an, der nullbasierte Index der Gruppe "entfernen".  
+*Ngruppe*<br/>
+[in] Gibt an, der nullbasierte Index der Gruppe "entfernen".  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode entfernt eine einzelne Gruppe. Um alle Gruppen zu entfernen, rufen [CMFCTasksPane::RemoveAllGroups](#removeallgroups) stattdessen.  
@@ -1426,8 +1426,8 @@ void RemovePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nPageIdx*  
- Gibt den nullbasierten Index des zu entfernenden Seite.  
+*nPageIdx*<br/>
+[in] Gibt den nullbasierten Index des zu entfernenden Seite.  
   
 ##  <a name="removetask"></a>  CMFCTasksPane::RemoveTask  
  Entfernt eine Aufgabe aus einer Aufgabengruppe.  
@@ -1440,14 +1440,14 @@ BOOL RemoveTask(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Ngruppe*  
- Gibt den nullbasierten Index der Aufgabengruppe, die die zu entfernende Aufgabe enthält.  
+*Ngruppe*<br/>
+[in] Gibt den nullbasierten Index der Aufgabengruppe, die die zu entfernende Aufgabe enthält.  
   
- [in] *nTask*  
- Gibt den nullbasierten Index des dem Task zum Entfernen an.  
+*nTask*<br/>
+[in] Gibt den nullbasierten Index des dem Task zum Entfernen an.  
   
- [in] *bRedraw*  
- True, um den Aufgabenbereich neu gezeichnet werden. andernfalls "false".  
+*bRedraw*<br/>
+[in] True, um den Aufgabenbereich neu gezeichnet werden. andernfalls "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Funktion erfolgreich ist. FALSE, wenn *Ngruppe* oder *nTask* ist ungültig.  
@@ -1463,8 +1463,8 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- [in] *nIndex*  
+*lpszProfileName*<br/>
+[in] [in] *nIndex*  
  [in] *UiID*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1491,8 +1491,8 @@ void SetActivePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nPageIdx*  
- Gibt den nullbasierten Index des anzuzeigenden Seite.  
+*nPageIdx*<br/>
+[in] Gibt den nullbasierten Index des anzuzeigenden Seite.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode bestätigt wird, wenn die *nPageIdx* ist ungültig.  
@@ -1505,8 +1505,8 @@ void SetCaption(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Wert*  
- Gibt den Beschriftungsnamen.  
+*Wert*<br/>
+[in] Gibt den Beschriftungsnamen.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn ein Aufgabenbereich auf mehrere Seiten umfasst, hat die Standardseite die Beschriftung, die mit dieser Funktion festgelegt wurde.  
@@ -1519,8 +1519,8 @@ void SetGroupCaptionHeight(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *n*  
- Gibt die Höhe der Beschriftung.  
+*n*<br/>
+[in] Gibt die Höhe der Beschriftung.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um die Ränder der Elemente im Bereich Tasks anpassen.  
@@ -1535,8 +1535,8 @@ void SetGroupCaptionHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *n*  
- Gibt den horizontalen Offset des der gruppenbeschriftung an.  
+*n*<br/>
+[in] Gibt den horizontalen Offset des der gruppenbeschriftung an.  
   
 ##  <a name="setgroupcaptionvertoffset"></a>  CMFCTasksPane::SetGroupCaptionVertOffset  
  Legt den vertikalen Offset einer Gruppenbeschriftung fest.  
@@ -1546,8 +1546,8 @@ void SetGroupCaptionVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *n*  
- Gibt den vertikalen Offset, der die gruppenbeschriftung in Pixel an.  
+*n*<br/>
+[in] Gibt den vertikalen Offset, der die gruppenbeschriftung in Pixel an.  
   
 ##  <a name="setgroupname"></a>  CMFCTasksPane::SetGroupName  
  Legt einen Gruppennamen fest.  
@@ -1559,11 +1559,11 @@ BOOL SetGroupName(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Ngruppe*  
- Gibt an, der nullbasierte Index der Gruppe.  
+*Ngruppe*<br/>
+[in] Gibt an, der nullbasierte Index der Gruppe.  
   
- [in] *LpszGroupName*  
- Gibt den Namen der Gruppe an.  
+*lpszGroupName*<br/>
+[in] Gibt den Namen der Gruppe.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Gruppenname wurde erfolgreich festgelegt wurde. andernfalls "false".  
@@ -1579,14 +1579,14 @@ BOOL SetGroupTextColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Ngruppe*  
- Gibt an, der nullbasierte Index der Gruppe.  
+*Ngruppe*<br/>
+[in] Gibt an, der nullbasierte Index der Gruppe.  
   
- [in] *Farbe*  
- Gibt die Farbe des Textes an.  
+*Farbe*<br/>
+[in] Gibt die Farbe des Textes an.  
   
- [in] *ColorHot*  
- Gibt die Textfarbe für die markierte Gruppe an. Wenn-1 ist, wird die standardmäßige Hervorhebungsfarbe verwendet.  
+*colorHot*<br/>
+[in] Gibt die Textfarbe für die markierte Gruppe an. Wenn-1 ist, wird die standardmäßige Hervorhebungsfarbe verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Textfarbe für die Gruppe wurde erfolgreich geändert wurde. andernfalls "false".  
@@ -1599,8 +1599,8 @@ void SetGroupVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *n*  
- Gibt den vertikalen Offset.  
+*n*<br/>
+[in] Gibt den vertikalen Offset.  
   
 ### <a name="remarks"></a>Hinweise  
  Der vertikale Offset ist der Abstand zwischen einer Aufgabengruppe und dem Rahmen des Aufgabenbereichs.  
@@ -1615,8 +1615,8 @@ void SetHorzMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *n*  
- Gibt den Rand in Pixel an.  
+*n*<br/>
+[in] Gibt den Rand in Pixel an.  
   
 ### <a name="remarks"></a>Hinweise  
  Die horizontale Rand ist der Abstand zwischen einem Aufgabenbereich und dem oberen oder unteren Rand des Clientbereichs.  
@@ -1636,17 +1636,17 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiImageListResID*  
- Gibt die Ressourcen-ID der Liste der Bilder an.  
+*uiImageListResID*<br/>
+[in] Gibt die Ressourcen-ID der Liste der Bilder an.  
   
- [in] *Cx*  
- Gibt die Größe der Symbole in der Bildliste an.  
+*CX*<br/>
+[in] Gibt die Größe der Symbole in der Bildliste an.  
   
- [in] *ClrTransparent*  
- Gibt die transparente Farbe an.  
+*clrTransparent*<br/>
+[in] Gibt die transparente Farbe an.  
   
- [in] *hIcons*  
- Gibt die Liste der Bilder, die die Symbole für den Aufgabenbereich enthält.  
+*hIcons*<br/>
+[in] Gibt die Liste der Bilder, die die Symbole für den Aufgabenbereich enthält.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework speichert Symbole in einer Bildliste. Aufgaben sind verknüpft mit Symbolen, die in der Liste gespeichert werden.  
@@ -1663,11 +1663,11 @@ void SetPageCaption(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nPageIdx*  
- Gibt an, der nullbasierte Index der Seite.  
+*nPageIdx*<br/>
+[in] Gibt an, der nullbasierte Index der Seite.  
   
- [in] *Wert*  
- Gibt den Beschriftungstext, die auf der Seite angezeigt.  
+*Wert*<br/>
+[in] Gibt den Beschriftungstext, die auf der Seite angezeigt.  
   
 ### <a name="remarks"></a>Hinweise  
  Ein Aufgabenbereich hat mehrere Seiten, die Standardseite die Beschriftung, die mit dieser Methode festgelegt wurde.  
@@ -1683,14 +1683,14 @@ BOOL SetTaskName(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Ngruppe*  
- Gibt den nullbasierten Index der Aufgabengruppe.  
+*Ngruppe*<br/>
+[in] Gibt den nullbasierten Index der Aufgabengruppe.  
   
- [in] *nTask*  
- Gibt an, der nullbasierte Index der Aufgabe.  
+*nTask*<br/>
+[in] Gibt an, der nullbasierte Index der Aufgabe.  
   
- [in] *LpszTaskName*  
- Gibt den Aufgabennamen.  
+*lpszTaskName*<br/>
+[in] Gibt den Aufgabennamen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Name der Aufgabe wurde erfolgreich festgelegt wurde. andernfalls "false".  
@@ -1703,8 +1703,8 @@ void SetTasksHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *n*  
- Gibt den horizontalen Offset.  
+*n*<br/>
+[in] Gibt den horizontalen Offset.  
   
 ### <a name="remarks"></a>Hinweise  
  Der horizontale Offset ist der Abstand in Pixel vom linken und rechten Rand einer Gruppe.  
@@ -1749,17 +1749,17 @@ BOOL SetTaskTextColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Ngruppe*  
- Gibt den nullbasierten Index des der Aufgabengruppe, die die Aufgabe enthält.  
+*Ngruppe*<br/>
+[in] Gibt den nullbasierten Index des der Aufgabengruppe, die die Aufgabe enthält.  
   
- [in] *nTask*  
- Gibt an, der nullbasierte Index der Aufgabe.  
+*nTask*<br/>
+[in] Gibt an, der nullbasierte Index der Aufgabe.  
   
- [in] *Farbe*  
- Gibt die Textfarbe für die Aufgabe an.  
+*Farbe*<br/>
+[in] Gibt die Textfarbe für die Aufgabe an.  
   
- [in] *ColorHot*  
- Gibt die Textfarbe für die markierte Gruppe an. Wenn-1 ist, verwendet diese Methode die Standardfarbe für die Hervorhebung an.  
+*colorHot*<br/>
+[in] Gibt die Textfarbe für die markierte Gruppe an. Wenn-1 ist, verwendet diese Methode die Standardfarbe für die Hervorhebung an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Textfarbe für die Aufgabe erfolgreich festgelegt wurde. andernfalls "false".  
@@ -1772,8 +1772,8 @@ void SetVertMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *n*  
- Gibt den vertikalen Rand festgelegt.  
+*n*<br/>
+[in] Gibt den vertikalen Rand festgelegt.  
   
 ### <a name="remarks"></a>Hinweise  
  Die vertikale Rand ist der Abstand zwischen einem Aufgabenbereich und den vertikalen Rändern des Clientbereichs.  
@@ -1796,14 +1796,14 @@ BOOL SetWindowHeight(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Ngruppe*  
- Gibt den nullbasierten Index der Gruppe, die das Window-Steuerelement enthält.  
+*Ngruppe*<br/>
+[in] Gibt den nullbasierten Index der Gruppe, die das Window-Steuerelement enthält.  
   
- [in] *HwndTask*  
- Gibt das Handle für das Window-Steuerelement an.  
+*hwndTask*<br/>
+[in] Gibt das Handle für das Window-Steuerelement an.  
   
- [in] *nWndHeight*  
- Gibt die Höhe fest.  
+*nWndHeight*<br/>
+[in] Gibt die Höhe fest.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Höhe des Steuerelements im Fenster erfolgreich festgelegt wurde. FALSE, wenn *Ngruppe* ist ungültig oder, wenn *HwndTask* ist nicht vorhanden.  
@@ -1835,17 +1835,17 @@ BOOL ShowTask(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Ngruppe*  
- Gibt an, der nullbasierte Index der Gruppe.  
+*Ngruppe*<br/>
+[in] Gibt an, der nullbasierte Index der Gruppe.  
   
- [in] *nTask*  
- Gibt an, der nullbasierte Index der Aufgabe angezeigt oder ausgeblendet.  
+*nTask*<br/>
+[in] Gibt an, der nullbasierte Index der Aufgabe angezeigt oder ausgeblendet.  
   
- [in] *bShow*  
- True, um die Aufgabe angezeigt. FALSE, wenn die Aufgabe auszublenden.  
+*bShow*<br/>
+[in] True, um die Aufgabe angezeigt. FALSE, wenn die Aufgabe auszublenden.  
   
- [in] *bRedraw*  
- True, um den Aufgabenbereich neu gezeichnet werden. andernfalls "false".  
+*bRedraw*<br/>
+[in] True, um den Aufgabenbereich neu gezeichnet werden. andernfalls "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Aufgabe erfolgreich angezeigt oder ausgeblendet wurde. "False", wenn die angegebene Gruppe oder eine Aufgabe nicht vorhanden ist.  
@@ -1864,14 +1864,14 @@ BOOL ShowTaskByCmdId(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCommandID*  
- Gibt an, die Befehls-ID der Aufgabe zum Anzeigen oder ausblenden.  
+*uiCommandID*<br/>
+[in] Gibt an, die Befehls-ID der Aufgabe zum Anzeigen oder ausblenden.  
   
- [in] *bShow*  
- True, um die Aufgabe angezeigt. FALSE, wenn die Aufgabe auszublenden.  
+*bShow*<br/>
+[in] True, um die Aufgabe angezeigt. FALSE, wenn die Aufgabe auszublenden.  
   
- [in] *bRedraw*  
- True, um den Aufgabenbereich neu gezeichnet werden. andernfalls "false".  
+*bRedraw*<br/>
+[in] True, um den Aufgabenbereich neu gezeichnet werden. andernfalls "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Aufgabe erfolgreich angezeigt oder ausgeblendet wurde. FALSE, wenn eine Aufgabe mit den angegebenen Befehl ID nicht vorhanden.  

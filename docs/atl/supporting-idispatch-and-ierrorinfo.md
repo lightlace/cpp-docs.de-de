@@ -1,5 +1,5 @@
 ---
-title: Unterstützung der IDispatch und IErrorInfo | Microsoft Docs
+title: Unterstützen von IDispatch und IErrorInfo | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94f4c99da3989cce84bd5b6bd3bbfee8df97ff43
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d9c27dfe81c3bbd2978f418c8e942ac20190b30
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360948"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753607"
 ---
-# <a name="supporting-idispatch-and-ierrorinfo"></a>Unterstützung der IDispatch und IErrorInfo
-Können Sie die Vorlagenklasse [IDispatchImpl](../atl/reference/idispatchimpl-class.md) , geben Sie eine Standardimplementierung der `IDispatch Interface` Teil jeder dualen Schnittstellen für das Objekt.  
-  
- Wenn Ihr Objekt verwendet die `IErrorInfo` Schnittstelle zum Melden von Fehlern zurück an den Client, dann muss Ihr Objekt unterstützen die `ISupportErrorInfo Interface` Schnittstelle. Die Vorlagenklasse [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) bietet eine einfache Möglichkeit zur Implementierung dieser Funktion, wenn Sie nur eine einzelne Schnittstelle verfügen, die Fehler für das Objekt generiert.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Grundlagen von ARL COM-Objekten](../atl/fundamentals-of-atl-com-objects.md)
+# <a name="supporting-idispatch-and-ierrorinfo"></a>Unterstützen von IDispatch und IErrorInfo
+
+Können Sie die Vorlagenklasse [IDispatchImpl](../atl/reference/idispatchimpl-class.md) zu einer standardmäßigen Implementierung von der `IDispatch Interface` Teil aller duale Schnittstellen für das Objekt.
+
+Wenn das Objekt verwendet die `IErrorInfo` Schnittstelle zum Melden von Fehlern zurück an den Client, und dann das Objekt muss unterstützen die `ISupportErrorInfo Interface` Schnittstelle. Die Vorlagenklasse [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) bietet eine einfache Möglichkeit, dies zu implementieren, wenn Sie nur eine einzige Benutzeroberfläche verfügen, die Fehler für das Objekt generiert.
+
+## <a name="see-also"></a>Siehe auch
+
+[Grundlagen von ARL COM-Objekten](../atl/fundamentals-of-atl-com-objects.md)
 

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85fe930ba0616e27b06aee863285638613f7e31d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3b90a96816855e08610d0f63f3ab5c237d564453
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858928"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217948"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -85,7 +85,7 @@ Definiert eine Klasse, einen Operator und mehrere Vorlagen, die beim Zuordnen un
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|Die Vorlagenklasse beschreibt ein Objekt, das die Speicherbelegung und -freigabe für Objektarrays des Typs **Type** verwaltet.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Beschreibt ein Objekt, das alle Informationen bestimmt, die für einen zuweisungsfähigen Container erforderlich ist.|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|Die Vorlagenklasse beschreibt ein Objekt, in dem ein Zeiger auf ein zugeordnetes Objekt des Typs **Type\*** gespeichert wird, das das Löschen des Objekts, auf das verwiesen wird, sicherstellt, wenn das einschließende „auto_ptr“ zerstört wird.|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|Die Vorlagenklasse beschreibt ein Objekt, das einen Zeiger auf ein zugeordnetes Objekt des Typs speichert **Typ** <strong>\*</strong> wird sichergestellt, dass das Objekt, das auf das Löschen, wenn das einschließende Auto_ptr Ruft zerstört.|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|Meldet eine ungültige weak_ptr-Ausnahme.|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|Hilft bei der Erstellung von `shared_ptr`.|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|Stellt Informationen bereit, die für ein Objekt der Vorlagenklasse `allocator_traits` erforderlich sind, um eine Zuweisung mit Zeigertyp `Ptr` zu beschreiben.|

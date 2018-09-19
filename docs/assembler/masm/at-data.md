@@ -1,7 +1,7 @@
 ---
-title: '@data | Microsoft Docs'
+title: '@data | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91da35eafb019d1067106c2d6057754ed6c4ae89
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3da3ffc3f6668b0b79d5604d4e010205b4b93aac
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049886"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681532"
 ---
 # <a name="data"></a>@data
-Der Name des Standard-Datengruppe. Ergibt für alle Modelle außer DGROUP **Flatfile**. Ergibt **Flatfile** unter der **Flatfile** Speichermodell (Textmakro).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-@data  
-  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Symbole – Verweis](../../assembler/masm/symbols-reference.md)
+
+Der Name der standarddatengruppe. Ergibt für alle Modelle, mit Ausnahme von DGROUP **Flatfile**. Ergibt **Flatfile** unter der **Flatfile** Speichermodell (Textmakro).
+
+## <a name="syntax"></a>Syntax
+
+> @data
+
+## <a name="see-also"></a>Siehe auch
+
+[Symbole – Verweis](../../assembler/masm/symbols-reference.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3194 generiert | Microsoft Docs
+title: Compilerfehler C3194 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd6fad304dc4e400d6ca25c7e835b2d0a6935117
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 923e4d5535a1be4f4c8a3f7b60730eb6a656ac33
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247799"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077099"
 ---
-# <a name="compiler-error-c3194"></a>Compiler-Fehler C3194 generiert
-'Member': ein Werttyp keinen Zuweisungsoperator  
-  
- Spezielle Memberfunktionen, die automatischen Aufruf durch den Compiler, z. B. ein Kopierkonstruktor oder Kopierzuweisungsoperator erfordern werden innerhalb einer Wertklasse nicht unterstützt.  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C3194 generiert.  
-  
-```  
-// C3194.cpp  
-// compile with: /clr /c  
-value struct MyStruct {  
-   MyStruct& operator= (const MyStruct& i) { return *this; }   // C3194  
-};  
-  
-ref struct MyStruct2 {  
-   MyStruct2% operator= (const MyStruct2% i) { return *this; }   // OK  
-};  
+# <a name="compiler-error-c3194"></a>Compilerfehler C3194
+
+'Member': ein Werttyp kann nicht keinen Zuweisungsoperator aufweisen
+
+Spezielle Memberfunktionen, die automatischen Aufruf durch den Compiler an, wie z. B. ein Kopierkonstruktor oder kopierzuordnungsoperator erfordern, werden in einer Wertklasse nicht unterstützt.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C3194 generiert.
+
+```
+// C3194.cpp
+// compile with: /clr /c
+value struct MyStruct {
+   MyStruct& operator= (const MyStruct& i) { return *this; }   // C3194
+};
+
+ref struct MyStruct2 {
+   MyStruct2% operator= (const MyStruct2% i) { return *this; }   // OK
+};
 ```

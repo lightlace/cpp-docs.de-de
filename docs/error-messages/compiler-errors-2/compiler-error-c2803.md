@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2803 | Microsoft Docs
+title: Compilerfehler C2803 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51cf2a8b38a86fcd97ab693b3853fe25527a0bb3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7885735ebad1ff90afaf4ba8eaf6dfca9f3e0ab3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236222"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027036"
 ---
 # <a name="compiler-error-c2803"></a>Compilerfehler C2803
-'Operator Operator' muss mindestens einen formalen Parameter des Klassentyps haben.  
-  
- Der überladene Operator hat einen Parameter vom Klassentyp.  
-  
- Müssen Sie mindestens einen Parameter als Verweis (ohne Verwendung der Zeiger jedoch Verweise) oder als Wert zu schreiben können übergeben "ein < b" (ein und b wird der Typklasse ein).  
-  
- Wenn beide Parameter Zeiger werden ein reiner Vergleich der Zeigeradressen und die benutzerdefinierte Konvertierung wird nicht verwendet.  
-  
- Im folgenden Beispiel wird C2803 generiert:  
-  
-```  
-// C2803.cpp  
-// compile with: /c  
-class A{};  
-bool operator< (const A *left, const A *right);   // C2803  
-// try the following line instead  
-// bool operator< (const A& left, const A& right);  
+
+'Operator Operator' muss mindestens einen formalen Parameter des Klassentyps haben.
+
+Der überladene Operator hat einen Parameter vom Klassentyp.
+
+Müssen Sie mindestens einen Parameter als Verweis (nicht mit Zeigern, sondern Verweise) oder anhand des Werts zu schreiben können übergeben "ein < b" (ein und b von Typklasse-A).
+
+Wenn beide Parameter Zeiger ein reiner Vergleich der Zeigeradressen werden und die benutzerdefinierte Konvertierung wird nicht verwendet.
+
+Im folgende Beispiel wird die C2803 generiert:
+
+```
+// C2803.cpp
+// compile with: /c
+class A{};
+bool operator< (const A *left, const A *right);   // C2803
+// try the following line instead
+// bool operator< (const A& left, const A& right);
 ```

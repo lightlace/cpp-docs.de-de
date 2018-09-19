@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4550 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4550 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d08529006e54427e4327ce96666e551046c07e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 926a2bcca82fb76e4fb13450531a9ceb0089c979
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276684"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052973"
 ---
 # <a name="compiler-warning-level-1-c4550"></a>Compilerwarnung (Stufe 1) C4550
-Ausdruck ergibt eine Funktion, die eine Argumentliste fehlt  
-  
- Ein Funktionszeiger an eine Funktion ist eine Argumentliste fehlt.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// C4550.cpp  
-// compile with: /W1  
-bool f()  
-{  
-   return true;  
-}  
-  
-typedef bool (*pf_t)();  
-  
-int main()  
-{  
-   pf_t pf = f;  
-   if (*pf) {}  // C4550  
-   return 0;  
-}  
+
+Ausdruck ausgewertet wird, um eine Funktion, die eine Argumentliste fehlt
+
+Ein dereferenzierter Zeiger auf eine Funktion ist eine Argumentliste fehlt.
+
+## <a name="example"></a>Beispiel
+
+```
+// C4550.cpp
+// compile with: /W1
+bool f()
+{
+   return true;
+}
+
+typedef bool (*pf_t)();
+
+int main()
+{
+   pf_t pf = f;
+   if (*pf) {}  // C4550
+   return 0;
+}
 ```

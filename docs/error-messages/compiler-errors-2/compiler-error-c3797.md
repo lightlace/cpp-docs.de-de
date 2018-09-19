@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3797 | Microsoft Docs
+title: Compilerfehler C3797 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 231db7e59eab4e59b4b51d113db431fc484c5fb3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ac1ded1c95f7e8bea9598e468010c75d8bd917a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274143"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033419"
 ---
 # <a name="compiler-error-c3797"></a>Compilerfehler C3797
-"override": Ereignisdeklaration keine Überschreibungsspezifizierer (Platzieren auf Ereignis hinzufügen/entfernen/Raise-Methoden stattdessen)  
-  
- Sie können ein triviales Ereignis (ein Ereignis ohne explizit definierte Accessormethoden) mit einem anderen trivialen Ereignis nicht überschreiben. Die überschreibende Ereignis muss sein Verhalten mit Accessorfunktionen definieren.  
-  
- Weitere Informationen finden Sie unter [Ereignis](../../windows/event-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C3797 generiert.  
-  
-```  
-// C3797.cpp  
-// compile with: /clr /c  
-delegate void MyDel();  
-  
-ref class Class1 {  
-public:  
-   virtual event MyDel ^ E;  
-};  
-  
-ref class Class2 : public Class1 {  
-public:  
-   virtual event MyDel ^ E override;   // C3797  
-};  
-  
-// OK  
-ref class Class3 : public Class1 {  
-public:  
-   virtual event MyDel ^ E {  
-      void add(MyDel ^ d) override {}  
-      void remove(MyDel ^ d) override {}  
-   }  
-};  
+
+"override": Ereignisdeklaration darf keinen Überschreibungsspezifizierer (sollte platziert werden. auf Ereignis hinzufügen/entfernen/Raise-Methoden stattdessen)
+
+Ein triviales Ereignis (ein Ereignis ohne explizit definierte Accessormethoden) mit einem anderen triviales Ereignis kann nicht überschrieben werden. Das Ereignis überschreiben muss deren Verhalten mit Accessor-Funktionen definieren.
+
+Weitere Informationen finden Sie unter [Ereignis](../../windows/event-cpp-component-extensions.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C3797 generiert.
+
+```
+// C3797.cpp
+// compile with: /clr /c
+delegate void MyDel();
+
+ref class Class1 {
+public:
+   virtual event MyDel ^ E;
+};
+
+ref class Class2 : public Class1 {
+public:
+   virtual event MyDel ^ E override;   // C3797
+};
+
+// OK
+ref class Class3 : public Class1 {
+public:
+   virtual event MyDel ^ E {
+      void add(MyDel ^ d) override {}
+      void remove(MyDel ^ d) override {}
+   }
+};
 ```

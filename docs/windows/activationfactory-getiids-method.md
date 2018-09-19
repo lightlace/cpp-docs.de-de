@@ -1,5 +1,5 @@
 ---
-title: 'Activationfactory:: Getiids-Methode | Microsoft Docs'
+title: 'Activationfactory:: Getiids-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f411f3b2f9e777a4e458b64176ace77a8d13e86
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49ef07365675ddb9cdedee1f6a2cdfb676188dc6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855509"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42576708"
 ---
 # <a name="activationfactorygetiids-method"></a>ActivationFactory::GetIids-Methode
-Ruft ein Array von implementierten Schnittstellen-IDs ab.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-STDMETHOD(  
-   GetIids  
-)(_Out_ ULONG *iidCount, _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `iidCount`  
- Wenn dieser Vorgang abgeschlossen wird, die Anzahl der interace-IDs in der `iids` Array.  
-  
- `iids`  
- Wenn dieser Vorgang abgeschlossen ist, implementiert ein Array von Schnittstellen-IDs an.  
-  
-## <a name="return-value"></a>Rückgabewert  
- „S_OK“ im Erfolgsfall, andernfalls ein HRESULT, das den Fehler beschreibt. E_OUTOFMEMORY ist möglicherweise ein Fehler HRESULT.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [ActivationFactory-Klasse](../windows/activationfactory-class.md)
+
+Ruft ein Array von implementierten Schnittstellen-IDs ab.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+STDMETHOD(
+   GetIids
+)(_Out_ ULONG *iidCount, _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);
+```
+
+### <a name="parameters"></a>Parameter
+
+*iidCount*  
+Wenn dieser Vorgang abgeschlossen ist, die Anzahl der interace-IDs in die *Iids* Array.
+
+*IIDs*  
+Wenn dieser Vorgang abgeschlossen ist, implementiert ein Array von Schnittstellen-IDs an.
+
+## <a name="return-value"></a>Rückgabewert
+
+„S_OK“ im Erfolgsfall, andernfalls ein HRESULT, das den Fehler beschreibt. E_OUTOFMEMORY ist möglicherweise ein Fehler HRESULT.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[ActivationFactory-Klasse](../windows/activationfactory-class.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcencompiler: Schwerwiegender Fehler RC1020 | Microsoft Docs'
+title: 'Ressourcencompiler: Schwerwiegender Fehler RC1020 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c90d3a5bb880ad10dcc4fb24d31fdc107f898840
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe19b079a0407f07796bd8141db2cbedaf02cbbb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320342"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032964"
 ---
 # <a name="resource-compiler-fatal-error-rc1020"></a>Ressourcencompiler: Schwerwiegender Fehler RC1020
-Unerwartetes "#endif"  
-  
- Ein `#endif` Richtlinie angezeigt wurden, ohne ein passendes `#if`, **#ifdef**, oder **#ifndef** Richtlinie.  
-  
- Stellen Sie sicher, dass es kein entsprechendes ist `#endif` für jede `#if`, **#ifdef**, und **#ifndef** Anweisung.
+
+Unerwarteter "#endif"
+
+Ein `#endif` Richtlinie angezeigt werden, ohne ein entsprechendes `#if`, **#ifdef**, oder **#ifndef** Richtlinie.
+
+Stellen Sie sicher, dass ein entsprechendes `#endif` für jede `#if`, **#ifdef**, und **#ifndef** Anweisung.

@@ -1,5 +1,5 @@
 ---
-title: _mm_stream_ss | Microsoft Docs
+title: _mm_stream_ss | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5058ac6c415f155b6a7cab712002d4769983d1f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef5910f47fdf9c058cfb4493c9df486749da18fc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339487"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714388"
 ---
 # <a name="mmstreamss"></a>_mm_stream_ss  
   
 **Microsoft-spezifisch**  
   
- Schreibt 32-Bit-Daten auf eine Speicheradresse, ohne die Caches beschädigen.  
+ Schreibt 32-Bit-Daten an einem Speicherort, ohne die Caches zu entwickeln.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,11 +41,11 @@ void _mm_stream_ss(
   
 #### <a name="parameters"></a>Parameter  
   
- [out] `Dest`  
- Ein Zeiger auf den Speicherort, in die Quelldaten geschrieben wird.  
+*dest*<br/>
+[out] Ein Zeiger auf den Speicherort, in denen die Quelldaten geschrieben werden.  
   
- [in] `Source`  
- Eine 128-Bit-Zahl, die enthält die `float` Wert in die unteren 32 Bits geschrieben werden...  
+*Source*<br/>
+[in] Eine 128-Bit-Zahl, die enthält die `float` Wert, der in der unteren 32 Bits geschrieben werden...  
   
 ## <a name="return-value"></a>Rückgabewert  
   
@@ -61,9 +61,9 @@ void _mm_stream_ss(
   
 ## <a name="remarks"></a>Hinweise  
   
-Diese systeminterne Funktion generiert die `movntss` Anweisung. Um Hardware-Unterstützung für diese Anweisung zu bestimmen, rufen die `__cpuid` systeminternen Funktionen mit `InfoType=0x80000001` und überprüfen Sie Bit 6 von `CPUInfo[2] (ECX)`. Dieses Bit ist 1, wenn die Anweisung unterstützt wird und 0 andernfalls.  
+Dieser systeminternen Funktion generiert die `movntss` Anweisung. Um hardwareunterstützung für diese Anweisung zu bestimmen, rufen die `__cpuid` systeminternen Funktionen mit `InfoType=0x80000001` und überprüfen Sie wenig 6 `CPUInfo[2] (ECX)`. Dieses Bit ist 1, wenn die Anweisung unterstützt wird, und andernfalls 0.  
   
-Wenn Sie Code ausführen, verwendet der `_mm_stream_ss` syteminternen Funktion bei der Hardware, die nicht unterstützt wird die `movntss` -Anweisung, die die Ergebnisse sind unvorhersehbar.  
+Wenn Sie Code ausführen, verwendet der `_mm_stream_ss` syteminternen Funktion bei Hardware, die nicht unterstützt. die `movntss` -Anweisung, die die Ergebnisse sind unvorhersehbar.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -99,7 +99,7 @@ f[2] = -3, f[3] = 3
   
 **Ende Microsoft-spezifisch**  
 
-Copyright 2007 erweiterte Micro-Geräte, Inc. Alle Rechte vorbehalten. Reproduziert mit Genehmigung Advanced Micro-Geräte, Inc.  
+Copyright 2007 erweiterten Micro-Geräte, Inc. Alle Rechte vorbehalten. Reproduziert werden, mit der Berechtigung, die von erweiterten Micro-Geräte, Inc.  
   
 ## <a name="see-also"></a>Siehe auch  
  [_mm_stream_sd](../intrinsics/mm-stream-sd.md)   

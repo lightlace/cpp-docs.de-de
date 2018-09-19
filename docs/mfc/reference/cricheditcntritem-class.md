@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a0566ef5eead5950f2b4de1f6e1a220f79bcfbe
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 17f50f5e4fb8b9330a09d4964aa99fbf01f4b34d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849326"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206970"
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem-Klasse
 Mit [CRichEditView](../../mfc/reference/cricheditview-class.md) und [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md), stellt die Funktionalität des rich-Edit-Steuerelements im Kontext der MFC Dokument-/ Ansichtarchitektur bereit.  
@@ -84,7 +84,7 @@ CRichEditCntrItem(
   
 ### <a name="parameters"></a>Parameter  
  *preo*  
- Zeiger auf ein [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) Struktur, die ein OLE-Element beschreibt. Die neue `CRichEditCntrItem` Objekt wird erstellt, um diese OLE-Element. Wenn *Preo* NULL ist, die Client-Element ist leer.  
+ Zeiger auf ein [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) Struktur, die ein OLE-Element beschreibt. Die neue `CRichEditCntrItem` Objekt wird erstellt, um diese OLE-Element. Wenn *Preo* NULL ist, die Client-Element ist leer.  
   
  *pContainer*  
  Zeiger auf das Containerdokument, das dieses Element enthält. Wenn *pContainer* NULL ist, müssen Sie explizit aufrufen [COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem) dieses Clientelement zu einem Dokument hinzufügen.  
@@ -92,10 +92,10 @@ CRichEditCntrItem(
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion führt keine OLE-Initialisierung aus.  
   
- Weitere Informationen finden Sie unter den [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) Struktur im Windows SDK.  
   
 ##  <a name="synctoricheditobject"></a>  CRichEditCntrItem::SyncToRichEditObject  
- Mit dieser Funktion können Sie den Aspekt Gerät synchronisieren [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318), dieses `CRichEditCntrltem` , angegeben durch *Reo*.  
+ Mit dieser Funktion können Sie den Aspekt Gerät synchronisieren [DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect), dieses `CRichEditCntrltem` , angegeben durch *Reo*.  
   
 ```  
 void SyncToRichEditObject(REOBJECT& reo);
@@ -103,10 +103,10 @@ void SyncToRichEditObject(REOBJECT& reo);
   
 ### <a name="parameters"></a>Parameter  
  *REO*  
- Ein Verweis auf ein [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) Struktur, die ein OLE-Element beschreibt.  
+ Ein Verweis auf ein [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) Struktur, die ein OLE-Element beschreibt.  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) im Windows SDK.  
+ Weitere Informationen finden Sie unter [DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect) im Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [MFC-Beispiel WORDPAD](../../visual-cpp-samples.md)   

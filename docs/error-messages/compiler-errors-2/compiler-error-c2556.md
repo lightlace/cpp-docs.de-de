@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2556 | Microsoft Docs
+title: Compilerfehler C2556 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb090b932daa93c2c680d4ec871b36c78f09a7c3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 880234d1d11556b8882bfd564fdf64bc587d56ae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228233"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107783"
 ---
 # <a name="compiler-error-c2556"></a>Compilerfehler C2556
-'Bezeichner': überladene Funktionen unterscheiden sich nur durch den Rückgabetyp  
-  
- Überladenen Funktionen haben unterschiedliche Rückgabetypen jedoch derselben Parameterliste. Jede überladene Funktion muss eine eigene Liste formaler Parameter haben.  
-  
- Im folgende Beispiel wird C2556 generiert:  
-  
-```  
-// C2556.cpp  
-// compile with: /c  
-class C {  
-   int func();  
-   double func();   // C2556  
-   int func(int i);   // ok parameter lists differ  
-};  
+
+"Bezeichner": überladene Funktionen unterscheiden sich nur durch den Rückgabetyp
+
+Die überladenen Funktionen haben verschiedene Rückgabetypen, aber die gleichen Parameterliste. Jede überladene Funktion muss es sich um eine eigene Liste formaler Parameter haben.
+
+Im folgende Beispiel wird die C2556 generiert:
+
+```
+// C2556.cpp
+// compile with: /c
+class C {
+   int func();
+   double func();   // C2556
+   int func(int i);   // ok parameter lists differ
+};
 ```

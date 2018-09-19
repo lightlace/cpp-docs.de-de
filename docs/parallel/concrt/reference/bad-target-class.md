@@ -1,5 +1,5 @@
 ---
-title: Bad_target-Klasse | Microsoft Docs
+title: Bad_target-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be10e5e4105dd16a68ad2854538d6181e90bfbe9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 12e035a27693fcad095cd83880aba99c37ba1c1f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705340"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027634"
 ---
 # <a name="badtarget-class"></a>bad_target-Klasse
 Diese Klasse beschreibt eine Ausnahme, die dann ausgelöst wird, wenn einem Meldungsblock ein Zeiger auf ein Ziel zugeordnet wird, das für die auszuführende Operation ungültig ist.  
@@ -43,7 +43,7 @@ class bad_target : public std::exception;
 |[bad_target](#ctor)|Überladen. Erstellt ein `bad_target`-Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Ausnahme wird normalerweise aus Gründen, z. B. ein Ziel, bei dem Versuch, eine Nachricht entgegenzunehmen, die für ein anderes Ziel reserviert ist, oder eine Reservierung, die er nicht aufrechterhält freigeben.  
+ Diese Ausnahme wird normalerweise aus Gründen, z. B. ein Ziel versucht, eine Nachricht zu verarbeiten, die für ein anderes Ziel reserviert ist, oder veröffentlichen eine Reservierung, die er nicht aufrechterhält.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `exception`  
@@ -66,8 +66,8 @@ bad_target() throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Message`  
- Eine beschreibende Fehlermeldung.  
+*_Nachricht*<br/>
+Eine beschreibende Fehlermeldung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   

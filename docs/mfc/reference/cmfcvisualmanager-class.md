@@ -354,17 +354,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 021b66393b37cdc83a514ca194baef8049f5c62f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: fa578e3abdaeb070e32d950887443855c2af8ba9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853562"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726829"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager-Klasse
 Bietet Unterstützung zum Ändern der Darstellung der Anwendung auf einer globalen Ebene. Die `CMFCVisualManager` -Klasse arbeitet mit einer Klasse zusammen, die Anweisungen bereitstellt, um die GUI-Steuerelemente der Anwendung in einem konsistenten Stil zu zeichnen. Diese anderen Klassen werden als visuelle Manager bezeichnet, sie erben von `CMFCBaseVisualManager`.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -674,10 +674,10 @@ void DoDrawHeaderSortArrow(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
- [in] *bIsUp*  
- [in] *bDlgCtrl*  
+*pDC*<br/>
+[in] [in] *Rect*  
+*bIsUp*<br/>
+[in] [in] *bDlgCtrl*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -694,8 +694,8 @@ virtual BOOL DrawComboBorderWinXP(CDC*,
   
 ### <a name="parameters"></a>Parameter  
  [in] *CDC**  
- [in] *CRect*  
- [in] *"Bool"*  
+*CRect*<br/>
+[in] [in] *"Bool"*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -714,8 +714,8 @@ virtual BOOL DrawComboDropButtonWinXP(CDC*,
   
 ### <a name="parameters"></a>Parameter  
  [in] *CDC**  
- [in] *CRect*  
- [in] *"Bool"*  
+*CRect*<br/>
+[in] [in] *"Bool"*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -733,8 +733,8 @@ virtual BOOL DrawPushButtonWinXP(CDC*,
   
 ### <a name="parameters"></a>Parameter  
  [in] *CDC**  
- [in] *CRect*  
- [in] *CMFCButton**  
+*CRect*<br/>
+[in] [in] *CMFCButton**  
  [in] *"Uint"*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -755,12 +755,12 @@ virtual BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *StrText*  
- [in] *Rect*  
- [in] *DwFlags*  
- [in] *nGlowSize*  
- [in] *ClrText*  
+*pDC*<br/>
+[in] [in] *StrText*  
+*Rect*<br/>
+[in] [in] *DwFlags*  
+*nGlowSize*<br/>
+[in] [in] *ClrText*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -786,11 +786,11 @@ virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pButton*  
- Ein Zeiger auf eine Schaltfläche zum automatischen ausblenden.  
+*pButton*<br/>
+[in] Ein Zeiger auf eine Schaltfläche zum automatischen ausblenden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, der angibt, der die Textfarbe des *pButton*.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) Parameter, der angibt, der die Textfarbe des *pButton*.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse die Textfarbe einer Schaltfläche zum automatischen Ausblenden in Ihrer Anwendung anpassen. Zu diesem Zweck geben Sie die gewünschte Farbe, Ihrer Anwendung zur Verwendung als Farbe des Textes zurück.  
@@ -816,11 +816,11 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBar*  
- Ein Zeiger auf die Titelleiste.  
+*pBar*<br/>
+[in] Ein Zeiger auf die Titelleiste.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, der die Farbe des Texts im angibt *pBar*.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) Parameter, der die Farbe des Texts im angibt *pBar*.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in der abgeleiteten Klasse die Textfarbe für eine Titelleiste anpassen. Geben Sie in der überschriebenen Methode die gewünschte Farbe zurück.  
@@ -924,8 +924,8 @@ virtual COLORREF GetMenuItemTextColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pButton*  
- [in] *bHighlighted*  
+*pButton*<br/>
+[in] [in] *bHighlighted*  
  [in] *bDeaktiviert*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -953,8 +953,8 @@ virtual CSize GetNcBtnSize(BOOL bSmall) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bSmall*  
- Ein boolescher Parameter, der angibt, ob `GetNcBtnSize` sollte die Größe der Schaltfläche klein oder Groß System abzurufen. Wenn *bSmall* ist "true", `GetNcBtnSize` gibt die Größe einer Schaltfläche kleine System zurück. Andernfalls wird die Größe der Schaltfläche große System zurückgegeben.  
+*bSmall*<br/>
+[in] Ein boolescher Parameter, der angibt, ob `GetNcBtnSize` sollte die Größe der Schaltfläche klein oder Groß System abzurufen. Wenn *bSmall* ist "true", `GetNcBtnSize` gibt die Größe einer Schaltfläche kleine System zurück. Andernfalls wird die Größe der Schaltfläche große System zurückgegeben.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein [CSize](../../atl-mfc-shared/reference/csize-class.md) Parameter, der die Größe der Systemschaltflächen anzugeben.  
@@ -994,11 +994,11 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pPropList*  
- Ein Zeiger auf die Eigenschaftenliste, die das Framework gezeichnet wird.  
+*pPropList*<br/>
+[in] Ein Zeiger auf die Eigenschaftenliste, die das Framework gezeichnet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, der die Farbe des Hintergrunds angibt *pPropList*.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) Parameter, der die Farbe des Hintergrunds angibt *pPropList*.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, um die Farbe des Hintergrunds einer Eigenschaftenliste in Ihrer Anwendung anpassen.  
@@ -1011,11 +1011,11 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pPropList*  
- Ein Zeiger auf die Eigenschaftenliste.  
+*pPropList*<br/>
+[in] Ein Zeiger auf die Eigenschaftenliste.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, der die Textfarbe der Eigenschaftenliste angibt.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) Parameter, der die Textfarbe der Eigenschaftenliste angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, um die Textfarbe einer Eigenschaftenliste in Ihrer Anwendung anpassen.  
@@ -1098,12 +1098,12 @@ virtual void GetRibbonSliderColors(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pSlider*  
- [in] *bIsHighlighted*  
- [in] *bIsPressed*  
- [in] *bIsDisabled*  
- [in] *ClrLine*  
- [in] *ClrFill*  
+*pSlider*<br/>
+[in] [in] *bIsHighlighted*  
+*bIsPressed*<br/>
+[in] [in] *bIsDisabled*  
+*clrLine*<br/>
+[in] [in] *ClrFill*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1131,8 +1131,8 @@ virtual int GetShowAllMenuItemsHeight(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *SizeDefault*  
+*pDC*<br/>
+[in] [in] *SizeDefault*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -1148,8 +1148,8 @@ virtual void GetSmartDockingBaseGuideColors(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *ClrBaseGroupBackground*  
- [in] *ClrBaseGroupBorder*  
+*clrBaseGroupBackground*<br/>
+[in] [in] *ClrBaseGroupBorder*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1186,8 +1186,8 @@ virtual COLORREF GetStatusBarPaneTextColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pStatusBar*  
- [in] *pPane*  
+*pStatusBar*<br/>
+[in] [in] *pPane*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -1210,32 +1210,32 @@ virtual void GetTabFrameColors(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pTabWnd*  
- Ein Zeiger auf die Fenster im Registerkartenformat, in dem der Frame eine Registerkarte zeichnet.  
+*pTabWnd*<br/>
+[in] Ein Zeiger auf die Fenster im Registerkartenformat, in dem der Frame eine Registerkarte zeichnet.  
   
- [out] *ClrDark*  
- Ein Verweis auf eine [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, in dem diese Methode die Farbe für den dunklen Rahmen einer Registerkarte speichert.  
+*clrDark*<br/>
+[out] Ein Verweis auf eine [COLORREF](/windows/desktop/gdi/colorref) Parameter, in dem diese Methode die Farbe für den dunklen Rahmen einer Registerkarte speichert.  
   
- [out] *ClrBlack*  
- Ein Verweis auf eine COLORREF-Parameter, in dem diese Methode die Farbe für den Rand des Fensters Registerkarte speichert. Die Standardfarbe für den Rahmen ist "Schwarz".  
+*clrBlack*<br/>
+[out] Ein Verweis auf eine COLORREF-Parameter, in dem diese Methode die Farbe für den Rand des Fensters Registerkarte speichert. Die Standardfarbe für den Rahmen ist "Schwarz".  
   
- [out] *ClrHighlight*  
- Ein Verweis auf eine COLORREF-Parameter, in dem diese Methode die Farbe für den Status der Hervorhebung des Fensters Registerkarte speichert.  
+*clrHighlight*<br/>
+[out] Ein Verweis auf eine COLORREF-Parameter, in dem diese Methode die Farbe für den Status der Hervorhebung des Fensters Registerkarte speichert.  
   
- [out] *ClrFace*  
- Ein Verweis auf eine COLORREF-Parameter, in dem diese Methode die Farbe für die Fläche des Fensters Registerkarte speichert.  
+*clrFace*<br/>
+[out] Ein Verweis auf eine COLORREF-Parameter, in dem diese Methode die Farbe für die Fläche des Fensters Registerkarte speichert.  
   
- [out] *ClrDarkShadow*  
- Ein Verweis auf eine COLORREF-Parameter, in dem diese Methode die Farbe des Schattens des Fensters Registerkarte speichert.  
+*clrDarkShadow*<br/>
+[out] Ein Verweis auf eine COLORREF-Parameter, in dem diese Methode die Farbe des Schattens des Fensters Registerkarte speichert.  
   
- [out] *ClrLight*  
- Ein Verweis auf eine COLORREF-Parameter, in dem diese Methode die Farbe für den hellen Rand des Fensters Registerkarte speichert.  
+*clrLight*<br/>
+[out] Ein Verweis auf eine COLORREF-Parameter, in dem diese Methode die Farbe für den hellen Rand des Fensters Registerkarte speichert.  
   
- [out] *PbrFace*  
- Ein Zeiger auf einen Verweis für einen Pinsel. Diese Methode speichert den Pinsel, den zum Füllen Sie des Gesichts des Fensters Registerkarte in diesem Parameter verwendet.  
+*pbrFace*<br/>
+[out] Ein Zeiger auf einen Verweis für einen Pinsel. Diese Methode speichert den Pinsel, den zum Füllen Sie des Gesichts des Fensters Registerkarte in diesem Parameter verwendet.  
   
- [out] *PbrBlack*  
- Ein Zeiger auf einen Verweis für einen Pinsel. Diese Methode speichert der Pinsel, den sie verwendet, um die schwarze Rand des Fensters Registerkarte in diesem Parameter auszufüllen.  
+*pbrBlack*<br/>
+[out] Ein Zeiger auf einen Verweis für einen Pinsel. Diese Methode speichert der Pinsel, den sie verwendet, um die schwarze Rand des Fensters Registerkarte in diesem Parameter auszufüllen.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion in einer abgeleiteten Klasse, sollten Sie den Satz von Farben anpassen, die das Framework verwendet, wenn es sich um eine im Registerkartenfenster zeichnet.  
@@ -1265,8 +1265,8 @@ virtual COLORREF GetTabTextColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *CMFCBaseTabCtrl&#42;*  
- [in] *Int*  
+*CMFCBaseTabCtrl&#42;*<br/>
+[in] [in] *Int*  
  [in] *"Bool"*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1382,11 +1382,11 @@ virtual COLORREF GetToolbarButtonTextColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pButton*  
- Ein Zeiger auf die Symbolleisten-Schaltfläche.  
+*pButton*<br/>
+[in] Ein Zeiger auf die Symbolleisten-Schaltfläche.  
   
- [in] *Zustand*  
- Der Status des der Symbolleisten-Schaltfläche.  
+*state*<br/>
+[in] Der Status des der Symbolleisten-Schaltfläche.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Textfarbe des *pButton* hat er den Status, angegeben durch *Zustand*.  
@@ -1452,8 +1452,8 @@ virtual BOOL GetToolTipInfo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Params*  
- [in] *nType*  
+*params*<br/>
+[in] [in] *nType*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -1691,8 +1691,8 @@ virtual void OnActivateApp(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- [in] *bActive*  
+*Aufnehmen*<br/>
+[in] [in] *bActive*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1708,17 +1708,17 @@ virtual void OnDrawAutoHideButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *RectBounds*  
- Die Größe und Position der automatisch ausblendbaren Schaltfläche.  
+*rectBounds*<br/>
+[in] Die Größe und Position der automatisch ausblendbaren Schaltfläche.  
   
- [in] *RectBorderSize*  
- Ein [CRect](../../atl-mfc-shared/reference/crect-class.md) Parameter, der die Größen der Rahmen enthält.  
+*rectBorderSize*<br/>
+[in] Ein [CRect](../../atl-mfc-shared/reference/crect-class.md) Parameter, der die Größen der Rahmen enthält.  
   
- [in] *pButton*  
- Ein Zeiger auf die Schaltfläche zum automatischen ausblenden. Das Framework ist den Rahmen für diese Schaltfläche zeichnen.  
+*pButton*<br/>
+[in] Ein Zeiger auf die Schaltfläche zum automatischen ausblenden. Das Framework ist den Rahmen für diese Schaltfläche zeichnen.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse, wenn Sie die Darstellung des Rahmens der Schaltfläche zum automatischen Ausblenden anpassen möchten. Standardmäßig füllt diese Methode einen flachen Rahmen um die Standardfarbe für die Schattenkopien für Ihre Anwendung.  
@@ -1737,17 +1737,17 @@ virtual void OnDrawBarGripper(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger auf den Gerätekontext für eine Steuerleiste.  
+*pDC*<br/>
+[in] Ein Zeiger auf den Gerätekontext für eine Steuerleiste.  
   
- [in] *RectGripper*  
- Das umschließende Rechteck für die Steuerleiste.  
+*rectGripper*<br/>
+[in] Das umschließende Rechteck für die Steuerleiste.  
   
- [in] *bHorz*  
- Ein boolescher Parameter, der angibt, ob die Steuerleiste, horizontal oder vertikal angedockt wird.  
+*bHorz*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Steuerleiste, horizontal oder vertikal angedockt wird.  
   
- [in] *pBar*  
- Ein Zeiger auf eine Steuerleiste. Visuelle Manager zeichnet das ziehelement der dieser Steuerleiste.  
+*pBar*<br/>
+[in] Ein Zeiger auf eine Steuerleiste. Visuelle Manager zeichnet das ziehelement der dieser Steuerleiste.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardimplementierung dieser Methode werden die standardmäßigen ziehelements angezeigt. Diese Methode in einer benutzerdefinierten Klasse, die von abgeleiteten überschreiben, um die Darstellung des ziehelements anzupassen, die `CMFCVisualManager` Klasse.  
@@ -1765,20 +1765,20 @@ virtual BOOL OnDrawBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein Rechteck, der angibt, die Grenze für die Schaltfläche zum Durchsuchen.  
+*Rect*<br/>
+[in] Ein Rechteck, der angibt, die Grenze für die Schaltfläche zum Durchsuchen.  
   
- [in] *pEdit*  
- Ein Zeiger auf ein Bearbeitungssteuerelement. Visuelle Manager zeichnet die Schaltfläche zum Durchsuchen für dieses Bearbeitungssteuerelement.  
+*pEdit*<br/>
+[in] Ein Zeiger auf ein Bearbeitungssteuerelement. Visuelle Manager zeichnet die Schaltfläche zum Durchsuchen für dieses Bearbeitungssteuerelement.  
   
- [in] *Zustand*  
- Ein Enumerationswert, der den Zustand der Schaltfläche angibt.  
+*state*<br/>
+[in] Ein Enumerationswert, der den Zustand der Schaltfläche angibt.  
   
- [out] *ClrText*  
- Ein Verweis auf eine [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter. Dies ist ein reservierter Wert und wird derzeit nicht verwendet.  
+*clrText*<br/>
+[out] Ein Verweis auf eine [COLORREF](/windows/desktop/gdi/colorref) Parameter. Dies ist ein reservierter Wert und wird derzeit nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn erfolgreich, andernfalls FALSE.  
@@ -1798,17 +1798,17 @@ virtual void OnDrawButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger auf den Gerätekontext, eine Symbolleisten-Schaltfläche.  
+*pDC*<br/>
+[in] Ein Zeiger auf den Gerätekontext, eine Symbolleisten-Schaltfläche.  
   
- [in] *pButton*  
- Ein Zeiger auf eine Symbolleisten-Schaltfläche. Das Framework zeichnet den Rahmen dieser Schaltfläche.  
+*pButton*<br/>
+[in] Ein Zeiger auf eine Symbolleisten-Schaltfläche. Das Framework zeichnet den Rahmen dieser Schaltfläche.  
   
- [in] *Rect*  
- Ein Rechteck, das die Begrenzungen des der Symbolleisten-Schaltfläche angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Begrenzungen des der Symbolleisten-Schaltfläche angibt.  
   
- [in] *Zustand*  
- Ein Aufzählungsdatentyp, der den aktuellen Status der Symbolleisten-Schaltfläche angibt.  
+*state*<br/>
+[in] Ein Aufzählungsdatentyp, der den aktuellen Status der Symbolleisten-Schaltfläche angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardimplementierung dieser Methode wird der standard-Rahmen angezeigt. Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager anpassen die Darstellung des Rahmens eine Symbolleisten-Schaltfläche.  
@@ -1828,10 +1828,10 @@ virtual void OnDrawButtonSeparator(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pButton*  
- [in] *Rect*  
- [in] *Zustand*  
+*pDC*<br/>
+[in] [in] *pButton*  
+*Rect*<br/>
+[in] [in] *Zustand*  
  [in] *bHorz*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1849,20 +1849,20 @@ virtual void OnDrawCaptionBarBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pBar*  
- Ein Zeiger auf eine `CMFCCaptionBar` Objekt. Das Framework zeichnet diese Titelleiste an.  
+*pBar*<br/>
+[in] Ein Zeiger auf eine `CMFCCaptionBar` Objekt. Das Framework zeichnet diese Titelleiste an.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen der Titelleiste angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen der Titelleiste angibt.  
   
- [in] *ClrBarBorder*  
- Die Farbe des Rahmens.  
+*clrBarBorder*<br/>
+[in] Die Farbe des Rahmens.  
   
- [in] *bFlatBorder*  
- Ein boolescher Parameter, der angibt, ob der Rahmen um ein Flatfile, 2D-Aussehen hat.  
+*bFlatBorder*<br/>
+[in] Ein boolescher Parameter, der angibt, ob der Rahmen um ein Flatfile, 2D-Aussehen hat.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse zum Anpassen der Darstellung des Rahmens der Titelleiste an.  
@@ -1883,14 +1883,14 @@ virtual void OnDrawCaptionBarButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pBar*  
- [in] *Rect*  
- [in] *bIsPressed*  
- [in] *bIsHighlighted*  
- [in] *bIsDisabled*  
- [in] *bHasDropDownArrow*  
- [in] *bIsSysButton*  
+*pDC*<br/>
+[in] [in] *pBar*  
+*Rect*<br/>
+[in] [in] *bIsPressed*  
+*bIsHighlighted*<br/>
+[in] [in] *bIsDisabled*  
+*bHasDropDownArrow*<br/>
+[in] [in] *bIsSysButton*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1905,8 +1905,8 @@ virtual void OnDrawCaptionBarInfoArea(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pBar*  
+*pDC*<br/>
+[in] [in] *pBar*  
  [in] *Rect*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1926,26 +1926,26 @@ virtual void OnDrawCaptionButton (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pButton*  
- Ein Zeiger auf eine `CMFCCaptionButton` Objekt. Das Framework zeichnet diese Titelleisten-Schaltfläche.  
+*pButton*<br/>
+[in] Ein Zeiger auf eine `CMFCCaptionButton` Objekt. Das Framework zeichnet diese Titelleisten-Schaltfläche.  
   
- [in] *bActive*  
- Ein boolescher Parameter, der angibt, ob die Schaltfläche aktiv ist.  
+*bActive*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Schaltfläche aktiv ist.  
   
- [in] *bHorz*  
- Ein boolescher Parameter, der angibt, ob die Beschriftung einer horizontalen Position befindet.  
+*bHorz*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Beschriftung einer horizontalen Position befindet.  
   
- [in] *bMaximized*  
- Ein boolescher Parameter, der angibt, ob der übergeordnete Bereich maximiert ist.  
+*bMaximized*<br/>
+[in] Ein boolescher Parameter, der angibt, ob der übergeordnete Bereich maximiert ist.  
   
- [in] *bDeaktiviert*  
- Ein boolescher Parameter, der angibt, ob die Schaltfläche "Titel" deaktiviert ist.  
+*bDeaktiviert*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Schaltfläche "Titel" deaktiviert ist.  
   
- [in] *nImageID*  
- Der Bildindex für das Symbol für die Schaltfläche zu verwenden. Wenn *nImageID* ist-1, diese Methode wird verwendet, die den Index des Bildes in aufgezeichnet *pButton*.  
+*nImageID*<br/>
+[in] Der Bildindex für das Symbol für die Schaltfläche zu verwenden. Wenn *nImageID* ist-1, diese Methode wird verwendet, die den Index des Bildes in aufgezeichnet *pButton*.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardimplementierung dieser Methode zeigt eine kleine Schaltfläche aus der globalen Instanz die `CMenuImages` Klasse. Die Schaltflächen finden Sie in der Headerdatei für `CMenuImages`. Beispiele hierfür sind `CMenuImages::IdClose`, `CMenuImages::IdArowLeft`, `CMenuImages::IdArowRight`, `CMenuImages::IdArowDown`, `CMenuImages::IdArowUp`, und `CMenuImages::IdPinHorz`.  
@@ -1965,10 +1965,10 @@ virtual void OnDrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
- [in] *bHighlighted*  
- [in] *bChecked*  
+*pDC*<br/>
+[in] [in] *Rect*  
+*bHighlighted*<br/>
+[in] [in] *bChecked*  
  [in] *bAktiviert*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1987,12 +1987,12 @@ virtual void OnDrawCheckBoxEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
- [in] *nState*  
- [in] *bHighlighted*  
- [in] *bPressed*  
- [in] *bAktiviert*  
+*pDC*<br/>
+[in] [in] *Rect*  
+*nState*<br/>
+[in] [in] *bHighlighted*  
+*bPressed*<br/>
+[in] [in] *bAktiviert*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -2010,23 +2010,23 @@ virtual void OnDrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger auf den Gerätekontext, der eine Kombinationsfelds-Schaltfläche.  
+*pDC*<br/>
+[in] Ein Zeiger auf den Gerätekontext, der eine Kombinationsfelds-Schaltfläche.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen der kombinationsfeldschaltfläche angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen der kombinationsfeldschaltfläche angibt.  
   
- [in] *bDeaktiviert*  
- Ein boolescher Parameter, der angibt, ob der kombinationsfeldschaltfläche nicht verfügbar ist.  
+*bDeaktiviert*<br/>
+[in] Ein boolescher Parameter, der angibt, ob der kombinationsfeldschaltfläche nicht verfügbar ist.  
   
- [in] *bIsDropped*  
- Ein boolescher Parameter, der angibt, ob das Kombinationsfeld unten gelöscht wird.  
+*bIsDropped*<br/>
+[in] Ein boolescher Parameter, der angibt, ob das Kombinationsfeld unten gelöscht wird.  
   
- [in] *bIsHighlighted*  
- Ein boolescher Parameter, der angibt, ob der kombinationsfeldschaltfläche hervorgehoben ist.  
+*bIsHighlighted*<br/>
+[in] Ein boolescher Parameter, der angibt, ob der kombinationsfeldschaltfläche hervorgehoben ist.  
   
- [in] *pButton*  
- Ein Zeiger auf eine `CMFCToolBarComboBoxButton` Objekt. Das Framework zeichnet dieses Kombinationsfelds-Schaltfläche.  
+*pButton*<br/>
+[in] Ein Zeiger auf eine `CMFCToolBarComboBoxButton` Objekt. Das Framework zeichnet dieses Kombinationsfelds-Schaltfläche.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in Ihrer abgeleiteten visuellen Manager zum Anpassen der Darstellung des Rahmens des Kombinationsfelds.  
@@ -2045,23 +2045,23 @@ virtual void OnDrawComboDropButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen der Dropdown-Schaltfläche angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen der Dropdown-Schaltfläche angibt.  
   
- [in] *bDeaktiviert*  
- Ein boolescher Parameter, der angibt, ob die Dropdown-Schaltfläche nicht verfügbar ist.  
+*bDeaktiviert*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Dropdown-Schaltfläche nicht verfügbar ist.  
   
- [in] *bIsDropped*  
- Ein boolescher Parameter, der angibt, ob das Kombinationsfeld unten gelöscht wird.  
+*bIsDropped*<br/>
+[in] Ein boolescher Parameter, der angibt, ob das Kombinationsfeld unten gelöscht wird.  
   
- [in] *bIsHighlighted*  
- Ein boolescher Parameter, der angibt, ob die Schaltfläche "löschen" hervorgehoben ist.  
+*bIsHighlighted*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Schaltfläche "löschen" hervorgehoben ist.  
   
- [in] *pButton*  
- Ein Zeiger auf eine `CMFCToolBarComboBoxButton` Objekt. Das Framework zeichnet die Schaltfläche "löschen" für dieses Kombinationsfelds-Schaltfläche.  
+*pButton*<br/>
+[in] Ein Zeiger auf eine `CMFCToolBarComboBoxButton` Objekt. Das Framework zeichnet die Schaltfläche "löschen" für dieses Kombinationsfelds-Schaltfläche.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in Ihrer abgeleiteten visuellen Manager anpassen die Darstellung der löschen-Schaltfläche einer Kombinationsfelds-Schaltfläche.  
@@ -2091,20 +2091,20 @@ virtual void OnDrawDefaultRibbonImage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *RectImage*  
- Ein Rechteck, das die Grenzen des Standardbilds angibt.  
+*rectImage*<br/>
+[in] Ein Rechteck, das die Grenzen des Standardbilds angibt.  
   
- [in] *bIsDisabled*  
- Ein boolescher Parameter, der angibt, ob die Menüband-Schaltfläche nicht verfügbar ist.  
+*bIsDisabled*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Menüband-Schaltfläche nicht verfügbar ist.  
   
- [in] *bIsPressed*  
- Ein boolescher Parameter, der angibt, ob die Menüband-Schaltfläche gedrückt wird.  
+*bIsPressed*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Menüband-Schaltfläche gedrückt wird.  
   
- [in] *bIsHighlighted*  
- Ein boolescher Parameter, der angibt, ob die Menüband-Schaltfläche markiert wird.  
+*bIsHighlighted*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Menüband-Schaltfläche markiert wird.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager, sollten Sie das Image anpassen, das für die Menübandschaltfläche verwendet wird.  
@@ -2122,20 +2122,20 @@ virtual void OnDrawEditBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein Rechteck, das die Begrenzungen des gibt an, die `CMFCToolBarEditBoxButton` Objekt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Begrenzungen des gibt an, die `CMFCToolBarEditBoxButton` Objekt.  
   
- [in] *bDeaktiviert*  
- Ein boolescher Parameter, der angibt, ob die Schaltfläche nicht verfügbar ist.  
+*bDeaktiviert*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Schaltfläche nicht verfügbar ist.  
   
- [in] *bIsHighlighted*  
- Ein boolescher Parameter, der angibt, ob die Schaltfläche markiert wird.  
+*bIsHighlighted*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Schaltfläche markiert wird.  
   
- [in] *pButton*  
- Ein Zeiger auf eine `CMFCToolBarEditBoxButton` Objekt. Das Framework zeichnet den Rahmen dieser Schaltfläche "Feld bearbeiten".  
+*pButton*<br/>
+[in] Ein Zeiger auf eine `CMFCToolBarEditBoxButton` Objekt. Das Framework zeichnet den Rahmen dieser Schaltfläche "Feld bearbeiten".  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einem abgeleiteten visual-Manager den Rahmen anpassen einer `CMFCToolBarEditBoxButton` Objekt.  
@@ -2152,10 +2152,10 @@ virtual void OnDrawExpandingBox(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
- [in] *bIsOpened*  
- [in] *ColorBox*  
+*pDC*<br/>
+[in] [in] *Rect*  
+*bIsOpened*<br/>
+[in] [in] *ColorBox*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -2171,17 +2171,17 @@ virtual void OnDrawFloatingToolbarBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pToolBar*  
- Ein Zeiger auf das unverankerte Symbolleiste.  
+*pToolBar*<br/>
+[in] Ein Zeiger auf das unverankerte Symbolleiste.  
   
- [in] *RectBorder*  
- Ein Rechteck, das die Grenzen der unverankerte Symbolleiste angibt.  
+*rectBorder*<br/>
+[in] Ein Rechteck, das die Grenzen der unverankerte Symbolleiste angibt.  
   
- [in] *RectBorderSize*  
- Ein Rechteck, der angibt, die Rahmengröße der Symbolleiste.  
+*rectBorderSize*<br/>
+[in] Ein Rechteck, der angibt, die Rahmengröße der Symbolleiste.  
   
 ### <a name="remarks"></a>Hinweise  
  Unverankerte Symbolleiste ist eine Symbolleiste, die als ein Minirahmenfenster angezeigt wird. Dies tritt in der Regel, wenn ein Benutzer eine Symbolleiste zieht, damit sie nicht mehr angedockt wird.  
@@ -2203,20 +2203,20 @@ virtual void OnDrawHeaderCtrlBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pCtrl*  
- Ein Zeiger auf eine `CMFCHeaderCtrl` Objekt. Das Framework zeichnet den Rahmen dieses Kopfzeilen-Steuerelement.  
+*pCtrl*<br/>
+[in] Ein Zeiger auf eine `CMFCHeaderCtrl` Objekt. Das Framework zeichnet den Rahmen dieses Kopfzeilen-Steuerelement.  
   
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen des Headersteuerelements angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen des Headersteuerelements angibt.  
   
- [in] *bIsPressed*  
- Ein boolescher Parameter, der angibt, ob das Kopfzeilen-Steuerelement gedrückt wird.  
+*bIsPressed*<br/>
+[in] Ein boolescher Parameter, der angibt, ob das Kopfzeilen-Steuerelement gedrückt wird.  
   
- [in] *bIsHighlighted*  
- Ein boolescher Parameter, der angibt, ob das Kopfzeilen-Steuerelement hervorgehoben ist.  
+*bIsHighlighted*<br/>
+[in] Ein boolescher Parameter, der angibt, ob das Kopfzeilen-Steuerelement hervorgehoben ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einem abgeleiteten visual-Manager den Rahmen des Headersteuerelements anpassen.  
@@ -2233,17 +2233,17 @@ virtual void OnDrawHeaderCtrlSortArrow(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pCtrl*  
- Ein Zeiger auf einem Kopfzeilen-Steuerelement. Visuelle Manager zeichnet den Sortierpfeil dieses [CMFCHeaderCtrl-Klasse](../../mfc/reference/cmfcheaderctrl-class.md) Objekt.  
+*pCtrl*<br/>
+[in] Ein Zeiger auf einem Kopfzeilen-Steuerelement. Visuelle Manager zeichnet den Sortierpfeil dieses [CMFCHeaderCtrl-Klasse](../../mfc/reference/cmfcheaderctrl-class.md) Objekt.  
   
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen des Pfeils Sortierung angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen des Pfeils Sortierung angibt.  
   
- [in] *bIsUp*  
- Ein boolescher Wert, der die Richtung des Pfeils Sortierung angibt.  
+*bIsUp*<br/>
+[in] Ein boolescher Wert, der die Richtung des Pfeils Sortierung angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn *bIsUp* ist "true", der visuelle Manager zeichnet einen Sortierpfeil. Wenn es auf "false" ist, zeichnet der visuelle Manager einen Sortierpfeil. Außer Kraft setzen `OnDrawHeaderCtrlSortArrow` in einer abgeleiteten Klasse anpassen die Darstellung der Schaltfläche zum Sortieren.  
@@ -2259,8 +2259,8 @@ virtual void OnDrawMenuArrowOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *RectCommand*  
+*pDC*<br/>
+[in] [in] *RectCommand*  
  [in] *bSelected*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -2276,14 +2276,14 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger auf den Gerätekontext für einen `CMFCPopupMenu` Objekt.  
+*pDC*<br/>
+[in] Ein Zeiger auf den Gerätekontext für einen `CMFCPopupMenu` Objekt.  
   
- [in] *pMenu*  
- Ein Zeiger auf eine `CMFCPopupMenu` Objekt. Das Framework zeichnet einen Rahmen um das Popup-Menü.  
+*pMenu*<br/>
+[in] Ein Zeiger auf eine `CMFCPopupMenu` Objekt. Das Framework zeichnet einen Rahmen um das Popup-Menü.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen des Popupmenüs angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen des Popupmenüs angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardimplementierung dieser Methode werden den Standardmenü Rahmen angezeigt. Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung des Rahmens im Menü.  
@@ -2301,10 +2301,10 @@ virtual void OnDrawMenuCheck(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pButton*  
- [in] *Rect*  
- [in] *bHighlight*  
+*pDC*<br/>
+[in] [in] *pButton*  
+*Rect*<br/>
+[in] [in] *bHighlight*  
  [in] *bIsRadio*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -2322,10 +2322,10 @@ virtual void OnDrawMenuItemButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pButton*  
- [in] *RectButton*  
- [in] *bHighlight*  
+*pDC*<br/>
+[in] [in] *pButton*  
+*rectButton*<br/>
+[in] [in] *bHighlight*  
  [in] *bDeaktiviert*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -2340,8 +2340,8 @@ virtual COLORREF OnDrawMenuLabel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
+*pDC*<br/>
+[in] [in] *Rect*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -2358,8 +2358,8 @@ virtual void OnDrawMenuResizeBar(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
+*pDC*<br/>
+[in] [in] *Rect*  
  [in] *nResizeFlags*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -2378,23 +2378,23 @@ virtual void OnDrawMenuScrollButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen der Bildlaufschaltfläche angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen der Bildlaufschaltfläche angibt.  
   
- [in] *bIsScrollDown*  
- Ein boolescher Wert, der angibt, welche Art von Schaltfläche mit der visuelle Manager zeichnet. Der Wert TRUE gibt an, dass es sich bei der visuelle Manager eine nach-unten-Taste zeichnet.  
+*bIsScrollDown*<br/>
+[in] Ein boolescher Wert, der angibt, welche Art von Schaltfläche mit der visuelle Manager zeichnet. Der Wert TRUE gibt an, dass es sich bei der visuelle Manager eine nach-unten-Taste zeichnet.  
   
- [in] *bIsHighlited*  
- Ein boolescher Wert, der angibt, ob die Schaltfläche markiert wird.  
+*bIsHighlited*<br/>
+[in] Ein boolescher Wert, der angibt, ob die Schaltfläche markiert wird.  
   
- [in] *bIsPressed*  
- Ein boolescher Wert, der angibt, ob die Schaltfläche gedrückt wird.  
+*bIsPressed*<br/>
+[in] Ein boolescher Wert, der angibt, ob die Schaltfläche gedrückt wird.  
   
- [in] *bIsDisabled*  
- Ein boolescher Wert, der angibt, ob die Schaltfläche deaktiviert ist.  
+*bIsDisabled*<br/>
+[in] Ein boolescher Wert, der angibt, ob die Schaltfläche deaktiviert ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einen abgeleiteten visuellen Manager anpassen die Darstellung des Scroll-Menüschaltflächen. Scrollschaltflächen der im Menü am Rand des Popup-Menüs angezeigt, wenn die gesamte Höhe der Menüelemente die Höhe des Popupmenüs überschreitet.  
@@ -2416,14 +2416,14 @@ virtual void OnDrawMenuShadow(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *RectClient*  
- [in] *RectExclude*  
- [in] *nDepth*  
- [in] *iMinBrightness*  
- [in] *iMaxBrightness*  
- [in] *pBmpSaveBottom*  
- [in] *pBmpSaveRight*  
+*pDC*<br/>
+[in] [in] *RectClient*  
+*rectExclude*<br/>
+[in] [in] *nDepth*  
+*iMinBrightness*<br/>
+[in] [in] *iMaxBrightness*  
+*pBmpSaveBottom*<br/>
+[in] [in] *pBmpSaveRight*  
  [in] *bRTL*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -2441,20 +2441,20 @@ virtual void OnDrawMenuSystemButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein Rechteck, das die Begrenzungen der Schaltfläche angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Begrenzungen der Schaltfläche angibt.  
   
- [in] *UiSystemCommand*  
- Ein Flag, das angibt, welcher Systembefehl Schaltfläche zugeordnet ist. Mögliche Werte sind SC_CLOSE SC_MINIMIZE und SC_RESTORE.  
+*uiSystemCommand*<br/>
+[in] Ein Flag, das angibt, welcher Systembefehl Schaltfläche zugeordnet ist. Mögliche Werte sind SC_CLOSE SC_MINIMIZE und SC_RESTORE.  
   
- [in] *nStyle*  
- Ein Flag, das das aktuelle Format der Schaltfläche angibt. Mögliche Werte sind TBBS_PRESSED TBBS_DISABLED und 0.  
+*nStyle*<br/>
+[in] Ein Flag, das das aktuelle Format der Schaltfläche angibt. Mögliche Werte sind TBBS_PRESSED TBBS_DISABLED und 0.  
   
- [in] *bHighlight*  
- Ein boolescher Parameter, der angibt, ob die Schaltfläche markiert wird.  
+*bHighlight*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Schaltfläche markiert wird.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Menü-System-Schaltflächen sind die **schließen**, **Minimieren**, **Maximieren**, und **wiederherstellen** Schaltflächen in der Titelleiste des Fensters befindet.  
@@ -2473,10 +2473,10 @@ virtual void OnDrawMiniFrameBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pFrameWnd*  
- [in] *RectBorder*  
- [in] *RectBorderSize*  
+*pDC*<br/>
+[in] [in] *pFrameWnd*  
+*rectBorder*<br/>
+[in] [in] *RectBorderSize*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -2490,11 +2490,11 @@ virtual void OnDrawOutlookBarSplitter(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *RectSplitter*  
- Ein Rechteck, das die Grenzen des Splitters angibt.  
+*rectSplitter*<br/>
+[in] Ein Rechteck, das die Grenzen des Splitters angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einem abgeleiteten visual-Manager, um die Darstellung von Bereichen für eine Outlook-Leiste anzupassen.  
@@ -2511,17 +2511,17 @@ virtual void OnDrawOutlookPageButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *RectBtn*  
- Ein Rechteck, das die Begrenzung des Outlook-Seite-Schaltfläche angibt.  
+*rectBtn*<br/>
+[in] Ein Rechteck, das die Begrenzung des Outlook-Seite-Schaltfläche angibt.  
   
- [in] *bIsHighlighted*  
- Ein boolescher Wert, der angibt, ob die Schaltfläche markiert wird.  
+*bIsHighlighted*<br/>
+[in] Ein boolescher Wert, der angibt, ob die Schaltfläche markiert wird.  
   
- [in] *bIsPressed*  
- Ein boolescher Wert, der angibt, ob die Schaltfläche gedrückt wird.  
+*bIsPressed*<br/>
+[in] Ein boolescher Wert, der angibt, ob die Schaltfläche gedrückt wird.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einen benutzerdefinierten visuellen Manager so ändern Sie die Darstellung der die Outlook-Seite-Schaltfläche.  
@@ -2537,14 +2537,14 @@ virtual void OnDrawPaneBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger auf den Gerätekontext einer Steuerleiste.  
+*pDC*<br/>
+[in] Ein Zeiger auf den Gerätekontext einer Steuerleiste.  
   
- [in] *pBar*  
- Ein Zeiger auf einen Bereich. Visuelle Manager zeichnet den Rahmen dieses Bereichs.  
+*pBar*<br/>
+[in] Ein Zeiger auf einen Bereich. Visuelle Manager zeichnet den Rahmen dieses Bereichs.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen des Bereichs angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen des Bereichs angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardimplementierung dieser Methode wird der standard-Rahmen angezeigt. Überschreiben Sie diese Methode in einer abgeleiteten Klasse die Darstellung des Rahmens anpassen.  
@@ -2562,23 +2562,23 @@ virtual COLORREF OnDrawPaneCaption(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pBar*  
- Ein Zeiger auf eine `CDockablePane` Objekt. Das Framework zeichnet die Beschriftung für diesen Bereich.  
+*pBar*<br/>
+[in] Ein Zeiger auf eine `CDockablePane` Objekt. Das Framework zeichnet die Beschriftung für diesen Bereich.  
   
- [in] *bActive*  
- Ein boolescher Parameter, der angibt, ob die Steuerleiste aktiv ist.  
+*bActive*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Steuerleiste aktiv ist.  
   
- [in] *RectCaption*  
- Ein Rechteck, das die Grenzen der Beschriftung angibt.  
+*rectCaption*<br/>
+[in] Ein Rechteck, das die Grenzen der Beschriftung angibt.  
   
- [in] *RectButtons*  
- Ein Rechteck, das die Grenzen von Schaltflächen mit der Beschriftung angibt.  
+*rectButtons*<br/>
+[in] Ein Rechteck, das die Grenzen von Schaltflächen mit der Beschriftung angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, der die Textfarbe der Beschriftung angibt.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) Parameter, der die Textfarbe der Beschriftung angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einen abgeleiteten visuellen Manager anpassen die Darstellung der Bereich Beschriftungen.  
@@ -2595,10 +2595,10 @@ virtual void OnDrawPaneDivider(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pSlider*  
- [in] *Rect*  
- [in] *bAutoHideMode*  
+*pDC*<br/>
+[in] [in] *pSlider*  
+*Rect*<br/>
+[in] [in] *bAutoHideMode*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -2612,8 +2612,8 @@ virtual void OnDrawPopupWindowBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
+*pDC*<br/>
+[in] [in] *Rect*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -2628,8 +2628,8 @@ virtual void OnDrawPopupWindowButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *RectClient*  
+*pDC*<br/>
+[in] [in] *RectClient*  
  [in] *pButton*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -2645,8 +2645,8 @@ virtual COLORREF OnDrawPopupWindowCaption(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *RectCaption*  
+*pDC*<br/>
+[in] [in] *RectCaption*  
  [in] *pPopupWnd*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -2663,11 +2663,11 @@ virtual void OnDrawRibbonApplicationButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pButton*  
- Ein Zeiger auf die **Schaltfläche "Main"** auf dem Menüband.  
+*pButton*<br/>
+[in] Ein Zeiger auf die **Schaltfläche "Main"** auf dem Menüband.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode in einen abgeleiteten visuellen Manager überschreiben, wenn Sie die Darstellung anpassen möchten die **Schaltfläche "Main"**.  
@@ -2682,11 +2682,11 @@ virtual void OnDrawRibbonButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pButton*  
- Ein Zeiger auf eine [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) Objekt. Das Framework zeichnet den Rahmen für diese Schaltfläche des Menübands.  
+*pButton*<br/>
+[in] Ein Zeiger auf eine [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) Objekt. Das Framework zeichnet den Rahmen für diese Schaltfläche des Menübands.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einen abgeleiteten visuellen Manager zum Anpassen der Darstellung einer `CMFCRibbonButton`.  
@@ -2702,14 +2702,14 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pGroup*  
- Ein Zeiger auf eine Gruppe von Schaltflächen auf dem Menüband. Das Framework zeichnet diese Gruppe von Schaltflächen an.  
+*pGroup*<br/>
+[in] Ein Zeiger auf eine Gruppe von Schaltflächen auf dem Menüband. Das Framework zeichnet diese Gruppe von Schaltflächen an.  
   
- [in] *RectGroup*  
- Ein Rechteck, das die Begrenzungen der Gruppe angibt.  
+*rectGroup*<br/>
+[in] Ein Rechteck, das die Begrenzungen der Gruppe angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein reservierter Wert. Die Standardimplementierung gibt -1 zurück.  
@@ -2729,17 +2729,17 @@ virtual void OnDrawRibbonCaption(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pBar*  
- Ein Zeiger auf eine menübandleiste. Visuelle Manager zeichnet dies menübandleiste.  
+*pBar*<br/>
+[in] Ein Zeiger auf eine menübandleiste. Visuelle Manager zeichnet dies menübandleiste.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen der menübandleiste angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen der menübandleiste angibt.  
   
- [in] *RectText*  
- Ein Rechteck, das die Grenzen für den Text der Titelleiste angibt.  
+*rectText*<br/>
+[in] Ein Rechteck, das die Grenzen für den Text der Titelleiste angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion in einen abgeleiteten visuellen Manager anpassen die Darstellung der Titelleiste an. Diese Methode wirkt sich auf der Titelleiste, nur dann, wenn das Menüband im Hauptrahmenfenster integriert ist.  
@@ -2774,14 +2774,14 @@ virtual void OnDrawRibbonCategory(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pCategory*  
- Ein Zeiger auf eine `CMFCRibbonCategory` Objekt. Das Framework zeichnet diese Menübandkategorie.  
+*pCategory*<br/>
+[in] Ein Zeiger auf eine `CMFCRibbonCategory` Objekt. Das Framework zeichnet diese Menübandkategorie.  
   
- [in] *RectCategory*  
- Ein Rechteck, der angibt, die Grenze alle Bereiche für die Kategorie auf dem Menüband.  
+*rectCategory*<br/>
+[in] Ein Rechteck, der angibt, die Grenze alle Bereiche für die Kategorie auf dem Menüband.  
   
 ### <a name="remarks"></a>Hinweise  
  Eine Menübandkategorie ist eine logische Gruppierung der Befehle im Menü. Weitere Informationen zu menübandkategorien, finden Sie unter [CMFCRibbonCategory-Klasse](../../mfc/reference/cmfcribboncategory-class.md).  
@@ -2798,14 +2798,14 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Im Zeichnungskontext.  
+*pDC*<br/>
+[in] Im Zeichnungskontext.  
   
- [in] *pContextCaption*  
- Ein Zeiger auf die Titelleiste. Visuelle Manager zeichnet diese [CMFCRibbonContextCaption-Klasse](../../mfc/reference/cmfcribboncontextcaption-class.md) Objekt.  
+*pContextCaption*<br/>
+[in] Ein Zeiger auf die Titelleiste. Visuelle Manager zeichnet diese [CMFCRibbonContextCaption-Klasse](../../mfc/reference/cmfcribboncontextcaption-class.md) Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, der die Farbe des Texts in der Titelleiste angibt.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) Parameter, der die Farbe des Texts in der Titelleiste angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse, die die Darstellung der Titelleiste für eine Menübandkategorie anpassen. Weitere Informationen zu der Titelleiste, finden Sie unter [CMFCRibbonContextCaption-Klasse](../../mfc/reference/cmfcribboncontextcaption-class.md).  
@@ -2820,8 +2820,8 @@ virtual void OnDrawRibbonCategoryScroll(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pScroll*  
+*pDC*<br/>
+[in] [in] *pScroll*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -2836,14 +2836,14 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pTab*  
- Ein Zeiger auf eine Instanz von der `CMFCRibbonTab` Klasse. Das Framework zeichnet diese Registerkarte.  
+*pTab*<br/>
+[in] Ein Zeiger auf eine Instanz von der `CMFCRibbonTab` Klasse. Das Framework zeichnet diese Registerkarte.  
   
- [in] *bIsActive*  
- Ein boolescher Parameter, der angibt, ob die Registerkarte aktiv ist.  
+*bIsActive*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Registerkarte aktiv ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Farbe, die für den Text auf der Registerkarte des Menübands Kategorie verwendet wird.  
@@ -2864,10 +2864,10 @@ virtual void OnDrawRibbonCheckBoxOnList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pCheckBox*  
- [in] *Rect*  
- [in] *bIsSelected*  
+*pDC*<br/>
+[in] [in] *pCheckBox*  
+*Rect*<br/>
+[in] [in] *bIsSelected*  
  [in] *bHighlighted*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -2890,16 +2890,16 @@ virtual void OnDrawRibbonColorPaletteBox(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pColorButton*  
- [in] *pIcon*  
- [in] *Farbe*  
- [in] *Rect*  
- [in] *bDrawTopEdge*  
- [in] *bDrawBottomEdge*  
- [in] *bIsHighlighted*  
- [in] *bIsChecked*  
- [in] *bIsDisabled*  
+*pDC*<br/>
+[in] [in] *pColorButton*  
+*pIcon*<br/>
+[in] [in] *Farbe*  
+*Rect*<br/>
+[in] [in] *bDrawTopEdge*  
+*bDrawBottomEdge*<br/>
+[in] [in] *bIsHighlighted*  
+*bIsChecked*<br/>
+[in] [in] *bIsDisabled*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -2913,11 +2913,11 @@ virtual void OnDrawRibbonDefaultPaneButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pButton*  
- Ein Zeiger auf die Standardschaltfläche für das Menüband im Bereich.  
+*pButton*<br/>
+[in] Ein Zeiger auf die Standardschaltfläche für das Menüband im Bereich.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework zeigt die Schaltfläche "Standard" aus, wenn ein Menüband-Bereich wird die minimale Größe angepasst, und es keinen Bereich gibt, um den Inhalt für den Bereich anzuzeigen. Wenn der Benutzer auf die Schaltfläche "Standard" klickt, zeigt das Framework eine Dropdown-Menü, das den Inhalt für den Bereich enthält.  
@@ -2934,8 +2934,8 @@ virtual void OnDrawRibbonDefaultPaneButtonContext(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pButton*  
+*pDC*<br/>
+[in] [in] *pButton*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -2952,10 +2952,10 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pButton*  
- [in] *Rect*  
- [in] *bIsSelected*  
+*pDC*<br/>
+[in] [in] *pButton*  
+*Rect*<br/>
+[in] [in] *bIsSelected*  
  [in] *bHighlighted*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -2971,8 +2971,8 @@ virtual void OnDrawRibbonGalleryBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pButton*  
+*pDC*<br/>
+[in] [in] *pButton*  
  [in] *RectBorder*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -2987,8 +2987,8 @@ virtual void OnDrawRibbonGalleryButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pButton*  
+*pDC*<br/>
+[in] [in] *pButton*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -3004,10 +3004,10 @@ virtual void OnDrawRibbonKeyTip(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pElement*  
- [in] *Rect*  
- [in] *str*  
+*pDC*<br/>
+[in] [in] *pElement*  
+*Rect*<br/>
+[in] [in] *str*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -3022,14 +3022,14 @@ virtual void OnDrawRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pLabel*  
- Ein Zeiger auf eine [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) Objekt. Das Framework zeichnet diese Menüband-Bezeichnung.  
+*pLabel*<br/>
+[in] Ein Zeiger auf eine [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) Objekt. Das Framework zeichnet diese Menüband-Bezeichnung.  
   
- [in] *Rect*  
- Ein Rechteck, das die Begrenzungen des Menübandbereich angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Begrenzungen des Menübandbereich angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse zum Anpassen der Menüband-Bezeichnung an.  
@@ -3044,11 +3044,11 @@ virtual void OnDrawRibbonMainPanelButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pButton*  
- Ein Zeiger auf eine `CMFCRibbonButton` befindet sich auf den Hauptbereich des Menübands. Das Framework zeichnet den Rahmen für diese Schaltfläche.  
+*pButton*<br/>
+[in] Ein Zeiger auf eine `CMFCRibbonButton` befindet sich auf den Hauptbereich des Menübands. Das Framework zeichnet den Rahmen für diese Schaltfläche.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager anpassen die Darstellung des Rahmens für ein `CMFCRibbonButton` auf die **Main** Bereich.  
@@ -3064,14 +3064,14 @@ virtual void OnDrawRibbonMainPanelFrame(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pPanel*  
- Ein Zeiger auf die `CMFCRibbonMainPanel`.  
+*pPanel*<br/>
+[in] Ein Zeiger auf die `CMFCRibbonMainPanel`.  
   
- [in] *Rect*  
- Ein Rechteck, das die Begrenzungen des gibt an, die `CMFCRibbonMainPanel`.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Begrenzungen des gibt an, die `CMFCRibbonMainPanel`.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einen abgeleiteten visuellen Manager anpassen die Darstellung des Rahmens für den `CMFCRibbonMainPanel`.  
@@ -3087,8 +3087,8 @@ virtual void OnDrawRibbonMenuCheckFrame(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pButton*  
+*pDC*<br/>
+[in] [in] *pButton*  
  [in] *Rect*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -3105,17 +3105,17 @@ virtual COLORREF OnDrawRibbonPanel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pPanel*  
- Ein Zeiger auf eine `CMFCRibbonPanel` Objekt. Das Framework zeichnet diese Menübandbereich.  
+*pPanel*<br/>
+[in] Ein Zeiger auf eine `CMFCRibbonPanel` Objekt. Das Framework zeichnet diese Menübandbereich.  
   
- [in] *RectPanel*  
- Ein Rechteck, das die Grenzen des Bereichs angibt.  
+*rectPanel*<br/>
+[in] Ein Rechteck, das die Grenzen des Bereichs angibt.  
   
- [in] *RectCaption*  
- Ein Rechteck, das die Grenzen der Beschriftung für den Bereich angibt.  
+*rectCaption*<br/>
+[in] Ein Rechteck, das die Grenzen der Beschriftung für den Bereich angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Farbe des Texts im Menübandbereich.  
@@ -3134,14 +3134,14 @@ virtual void OnDrawRibbonPanelCaption(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pPanel*  
- Ein Zeiger auf eine `CMFCRibbonPanel` Objekt. Das Framework zeichnet die Beschriftung für diesen Menübandbereich.  
+*pPanel*<br/>
+[in] Ein Zeiger auf eine `CMFCRibbonPanel` Objekt. Das Framework zeichnet die Beschriftung für diesen Menübandbereich.  
   
- [in] *RectCaption*  
- Ein Rechteck, das die Grenzen der Beschriftung für die Menübandbereich angibt.  
+*rectCaption*<br/>
+[in] Ein Rechteck, das die Grenzen der Beschriftung für die Menübandbereich angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse, um die Darstellung von Beschriftungen für die menübandbereiche anzupassen.  
@@ -3159,20 +3159,20 @@ virtual void OnDrawRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pProgress*  
- Ein Zeiger auf eine `CMFCRibbonProgressBar` Objekt. Das Framework zeichnet diese Statusanzeige.  
+*pProgress*<br/>
+[in] Ein Zeiger auf eine `CMFCRibbonProgressBar` Objekt. Das Framework zeichnet diese Statusanzeige.  
   
- [in] *RectProgress*  
- Ein Rechteck, das die Begrenzungen der Statusanzeige angibt.  
+*rectProgress*<br/>
+[in] Ein Rechteck, das die Begrenzungen der Statusanzeige angibt.  
   
- [in] *RectChunk*  
- Ein Rechteck, das die Grenzen des Bereichs der Statusanzeige um angibt.  
+*rectChunk*<br/>
+[in] Ein Rechteck, das die Grenzen des Bereichs der Statusanzeige um angibt.  
   
- [in] *bInfiniteMode*  
- Ein boolescher Parameter, der den Modus der Statusanzeige angibt. Der Wert "true" bedeutet ist die Leiste im unendliche-Modus. Die Standardimplementierung wird dieser Parameter nicht verwendet werden.  
+*bInfiniteMode*<br/>
+[in] Ein boolescher Parameter, der den Modus der Statusanzeige angibt. Der Wert "true" bedeutet ist die Leiste im unendliche-Modus. Die Standardimplementierung wird dieser Parameter nicht verwendet werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse anpassen die Darstellung einer Statusanzeige dar.  
@@ -3188,14 +3188,14 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pSeparator*  
- Ein Zeiger auf eine [CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md) Objekt. Das Framework zeichnet dieses Menüband-Trennzeichen.  
+*pSeparator*<br/>
+[in] Ein Zeiger auf eine [CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md) Objekt. Das Framework zeichnet dieses Menüband-Trennzeichen.  
   
- [in] *Rect*  
- Ein Rechteck, das die Abmessungen der Trennung angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Abmessungen der Trennung angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse zum Anpassen der Darstellung des Menüband-Trennzeichen auf der **Symbolleiste für den Schnellzugriff**.  
@@ -3211,14 +3211,14 @@ virtual void OnDrawRibbonRecentFilesFrame(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pPanel*  
- Ein Zeiger auf die **Main** auf dem Menüband.  
+*pPanel*<br/>
+[in] Ein Zeiger auf die **Main** auf dem Menüband.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen des Rahmens für die Liste der zuletzt verwendeten Dateien angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen des Rahmens für die Liste der zuletzt verwendeten Dateien angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung der Liste der zuletzt verwendeten Dateien.  
@@ -3234,14 +3234,14 @@ virtual void OnDrawRibbonSliderChannel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pSlider*  
- Ein Zeiger auf ein CMFCRibbonSlider-Objekt. Das Framework zeichnet den Kanal für dieses Schiebereglers Menüband.  
+*pSlider*<br/>
+[in] Ein Zeiger auf ein CMFCRibbonSlider-Objekt. Das Framework zeichnet den Kanal für dieses Schiebereglers Menüband.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen für den Kanal des Schiebereglers Menüband angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen für den Kanal des Schiebereglers Menüband angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse die Darstellung des Kanals des Schiebereglers Menüband anpassen.  
@@ -3260,23 +3260,23 @@ virtual void OnDrawRibbonSliderThumb(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pSlider*  
- Ein Zeiger auf eine `CMFCRibbonSlider`. Das Framework zeichnet das Thumb-Steuerelement für dieses Schiebereglers Menüband.  
+*pSlider*<br/>
+[in] Ein Zeiger auf eine `CMFCRibbonSlider`. Das Framework zeichnet das Thumb-Steuerelement für dieses Schiebereglers Menüband.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen des Ziehpunkts für den Schieberegler für die Multifunktionsleiste angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen des Ziehpunkts für den Schieberegler für die Multifunktionsleiste angibt.  
   
- [in] *bIsHighlighted*  
- Ein boolescher Parameter, der angibt, ob das Thumb-Steuerelement ausgewählt ist.  
+*bIsHighlighted*<br/>
+[in] Ein boolescher Parameter, der angibt, ob das Thumb-Steuerelement ausgewählt ist.  
   
- [in] *bIsPressed*  
- Ein boolescher Parameter, der angibt, ob das Thumb-Steuerelement geklickt wird.  
+*bIsPressed*<br/>
+[in] Ein boolescher Parameter, der angibt, ob das Thumb-Steuerelement geklickt wird.  
   
- [in] *bIsDisabled*  
- Ein boolescher Parameter, der angibt, wenn das Thumb-Steuerelement nicht verfügbar ist.  
+*bIsDisabled*<br/>
+[in] Ein boolescher Parameter, der angibt, wenn das Thumb-Steuerelement nicht verfügbar ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einen abgeleiteten visuellen Manager anpassen die Darstellung des Ziehpunkts für eine `CMFCRibbonSlider`.  
@@ -3296,26 +3296,26 @@ virtual void OnDrawRibbonSliderZoomButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pSlider*  
- Ein Zeiger auf eine `CMFCRibbonSlider` Objekt. Das Framework zeichnet dieses Menüband.  
+*pSlider*<br/>
+[in] Ein Zeiger auf eine `CMFCRibbonSlider` Objekt. Das Framework zeichnet dieses Menüband.  
   
- [in] *Rect*  
- Ein Rechteck, das die Begrenzungen des den Zoomschaltflächen gibt an, auf dem Menüband-Schieberegler.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Begrenzungen des den Zoomschaltflächen gibt an, auf dem Menüband-Schieberegler.  
   
- [in] *bIsZoomOut*  
- Ein boolescher Parameter, der angibt, auf welche Schaltfläche zeichnet das Framework. Der Wert "true" gibt an, die linke Maustaste mit einem "-" für verkleinern. Der Wert "false" gibt an, mit einem "+" für Zoom in der rechten Maustaste.  
+*bIsZoomOut*<br/>
+[in] Ein boolescher Parameter, der angibt, auf welche Schaltfläche zeichnet das Framework. Der Wert "true" gibt an, die linke Maustaste mit einem "-" für verkleinern. Der Wert "false" gibt an, mit einem "+" für Zoom in der rechten Maustaste.  
   
- [in] *bIsHighlighted*  
- Ein boolescher Parameter, der angibt, ob die Schaltfläche markiert wird.  
+*bIsHighlighted*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Schaltfläche markiert wird.  
   
- [in] *bIsPressed*  
- Ein boolescher Parameter, der angibt, ob die Schaltfläche gedrückt wird.  
+*bIsPressed*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Schaltfläche gedrückt wird.  
   
- [in] *bIsDisabled*  
- Ein boolescher Parameter, der angibt, ob die Schaltfläche nicht verfügbar ist.  
+*bIsDisabled*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Schaltfläche nicht verfügbar ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Zoomschaltflächen auf dem Menüband Schieberegler werden standardmäßig ein Kreis mit einem + oder – melden Sie sich im Center. Überschreiben Sie diese Methode in einen abgeleiteten visuellen Manager, um die Darstellung der Zoomschaltflächen anpassen.  
@@ -3331,14 +3331,14 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pBar*  
- Ein Zeiger auf der Statusleiste an, die den Bereich enthält.  
+*pBar*<br/>
+[in] Ein Zeiger auf der Statusleiste an, die den Bereich enthält.  
   
- [in] *pPane*  
- Ein Zeiger auf einen Statusleistenbereich. Das Framework zeichnet diese [CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md) Objekt.  
+*pPane*<br/>
+[in] Ein Zeiger auf einen Statusleistenbereich. Das Framework zeichnet diese [CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md) Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein reservierter Wert. Die Standardimplementierung gibt -1 zurück.  
@@ -3385,10 +3385,10 @@ virtual void OnDrawScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
- [in] *nBorderSize*  
- [in] *iImage*  
+*pDC*<br/>
+[in] [in] *Rect*  
+*nBorderSize*<br/>
+[in] [in] *iImage*  
  [in] *bHilited*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -3405,17 +3405,17 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger auf den Gerätekontext für eine Steuerleiste.  
+*pDC*<br/>
+[in] Ein Zeiger auf den Gerätekontext für eine Steuerleiste.  
   
- [in] *pBar*  
- Ein Zeiger auf einen Bereich, der das Trennzeichen enthält.  
+*pBar*<br/>
+[in] Ein Zeiger auf einen Bereich, der das Trennzeichen enthält.  
   
- [in] *Rect*  
- Ein Rechteck, das die Abmessungen der Trennung angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Abmessungen der Trennung angibt.  
   
- [in] *bIsHoriz*  
- Ein boolescher Parameter, der die Ausrichtung eines angedockten Bereichs angibt. Der Wert "true" gibt an, dass im Bereich horizontal angedockt ist. Der Wert "false" gibt an, dass im Bereich vertikal angedockt ist.  
+*bIsHoriz*<br/>
+[in] Ein boolescher Parameter, der die Ausrichtung eines angedockten Bereichs angibt. Der Wert "true" gibt an, dass im Bereich horizontal angedockt ist. Der Wert "false" gibt an, dass im Bereich vertikal angedockt ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Trennzeichen werden Schiebeleisten-Steuerelemente in separate Gruppen der entsprechenden Symbole verwendet. Die Standardimplementierung für diese Methode zeigt die standard-Trennzeichen. Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager anpassen die Darstellung des Trennzeichens.  
@@ -3431,8 +3431,8 @@ virtual void OnDrawShowAllMenuItems(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
+*pDC*<br/>
+[in] [in] *Rect*  
  [in] *Zustand*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -3450,20 +3450,20 @@ virtual void OnDrawSpinButtons(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *RectSpin*  
- Ein Rechteck, das die Grenzen des Drehfeld-Steuerelements angibt.  
+*rectSpin*<br/>
+[in] Ein Rechteck, das die Grenzen des Drehfeld-Steuerelements angibt.  
   
- [in] *nState*  
- Ein Flag, das den Zustand des Drehfeld-Steuerelements angibt. Weitere Informationen finden Sie im Abschnitt Hinweise.  
+*nState*<br/>
+[in] Ein Flag, das den Zustand des Drehfeld-Steuerelements angibt. Weitere Informationen finden Sie im Abschnitt Hinweise.  
   
- [in] *bOrientation*  
- Ein boolescher Parameter, der angibt, der die Ausrichtung des Drehfeld-Steuerelement. Der Wert TRUE gibt an, dass das Drehfeld-Steuerelement einer horizontalen Position befindet. Andernfalls ist er vertikal.  
+*bOrientation*<br/>
+[in] Ein boolescher Parameter, der angibt, der die Ausrichtung des Drehfeld-Steuerelement. Der Wert TRUE gibt an, dass das Drehfeld-Steuerelement einer horizontalen Position befindet. Andernfalls ist er vertikal.  
   
- [in] *pSpinCtrl*  
- Ein Zeiger auf ein Drehfeld-Steuerelement. Das Framework zeichnet die Schaltflächen für dieses Steuerelement.  
+*pSpinCtrl*<br/>
+[in] Ein Zeiger auf ein Drehfeld-Steuerelement. Das Framework zeichnet die Schaltflächen für dieses Steuerelement.  
   
 ### <a name="remarks"></a>Hinweise  
  Die *nState* Parameter gibt den Status des Drehfeld-Steuerelements an. Der Parameter ist einer der folgenden Werte:  
@@ -3491,14 +3491,14 @@ virtual void OnDrawSplitterBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pSplitterWnd*  
- Ein Zeiger auf ein Teilungsfenster. Das Framework zeichnet den Rahmen für dieses Fenster.  
+*pSplitterWnd*<br/>
+[in] Ein Zeiger auf ein Teilungsfenster. Das Framework zeichnet den Rahmen für dieses Fenster.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen des Splitterfensters angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen des Splitterfensters angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung des Rahmens für ein Teilungsfenster.  
@@ -3514,14 +3514,14 @@ virtual void OnDrawSplitterBox(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pSplitterWnd*  
- Ein Zeiger auf ein Teilungsfenster. Das Framework zeichnet das Kontrollkästchen für diese Teilungsfenster.  
+*pSplitterWnd*<br/>
+[in] Ein Zeiger auf ein Teilungsfenster. Das Framework zeichnet das Kontrollkästchen für diese Teilungsfenster.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen des Splitterfensters angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen des Splitterfensters angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung des Dialogfelds ziehen Sie für ein Teilungsfenster.  
@@ -3539,20 +3539,20 @@ virtual void OnDrawStatusBarPaneBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pBar*  
- Ein Zeiger auf eine `CMFCStatusBar` Objekt. Das Framework zeichnet diesen Status Bar-Objekt.  
+*pBar*<br/>
+[in] Ein Zeiger auf eine `CMFCStatusBar` Objekt. Das Framework zeichnet diesen Status Bar-Objekt.  
   
- [in] *RectPane*  
- Ein Rechteck, das die Grenzen der Statusleiste angibt.  
+*rectPane*<br/>
+[in] Ein Rechteck, das die Grenzen der Statusleiste angibt.  
   
- [in] *UiID*  
- Die ID der Statusleiste.  
+*uiID*<br/>
+[in] Die ID der Statusleiste.  
   
- [in] *nStyle*  
- Der Stil der Statusleiste.  
+*nStyle*<br/>
+[in] Der Stil der Statusleiste.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager anpassen die Darstellung des Rahmens für ein `CMFCStatusBar` Objekt.  
@@ -3574,32 +3574,32 @@ virtual void OnDrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger auf den Gerätekontext für die Statusleiste.  
+*pDC*<br/>
+[in] Ein Zeiger auf den Gerätekontext für die Statusleiste.  
   
- [in] *pStatusBar*  
- Die `CMFCStatusBar` Objekt, das die Statusanzeige enthält.  
+*pStatusBar*<br/>
+[in] Die `CMFCStatusBar` Objekt, das die Statusanzeige enthält.  
   
- [in] *RectProgress*  
- Ein Rechteck, das die Begrenzungen der Statusanzeige angibt.  
+*rectProgress*<br/>
+[in] Ein Rechteck, das die Begrenzungen der Statusanzeige angibt.  
   
- [in] *nProgressTotal*  
- Die Gesamtanzahl der Statusanzeige.  
+*nProgressTotal*<br/>
+[in] Die Gesamtanzahl der Statusanzeige.  
   
- [in] *nProgressCurr*  
- Der aktuelle Status für die Statusanzeige.  
+*nProgressCurr*<br/>
+[in] Der aktuelle Status für die Statusanzeige.  
   
- [in] *ClrBar*  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter, der die Ausgangsfarbe, die für die Statusanzeige angibt. Der Wert ist entweder den Anfang ein Farbverlauf oder die vollständige Farbe der Statusleiste.  
+*clrBar*<br/>
+[in] Ein [COLORREF](/windows/desktop/gdi/colorref) Parameter, der die Ausgangsfarbe, die für die Statusanzeige angibt. Der Wert ist entweder den Anfang ein Farbverlauf oder die vollständige Farbe der Statusleiste.  
   
- [in] *ClrProgressBarDest*  
- Eine COLORREF-Parameter, der das Ende einer-Anfangsfarbe des Farbverlaufs für die Statusanzeige angibt. Wenn *ClrProgressBarDest* -1 ist, zeichnet das Framework keine Statusanzeige als einem Farbverlauf. Stattdessen füllt die gesamte Statusanzeige mit der Farbe anhand des *ClrBar*.  
+*clrProgressBarDest*<br/>
+[in] Eine COLORREF-Parameter, der das Ende einer-Anfangsfarbe des Farbverlaufs für die Statusanzeige angibt. Wenn *ClrProgressBarDest* -1 ist, zeichnet das Framework keine Statusanzeige als einem Farbverlauf. Stattdessen füllt die gesamte Statusanzeige mit der Farbe anhand des *ClrBar*.  
   
- [in] *ClrProgressText*  
- Eine COLORREF-Parameter, der die Textfarbe für die Textdarstellung des aktuellen Status angibt. Dieser Parameter wird ignoriert, wenn *bProgressText* auf "false" festgelegt ist.  
+*clrProgressText*<br/>
+[in] Eine COLORREF-Parameter, der die Textfarbe für die Textdarstellung des aktuellen Status angibt. Dieser Parameter wird ignoriert, wenn *bProgressText* auf "false" festgelegt ist.  
   
- [in] *bProgressText*  
- Ein boolescher Parameter, der angibt, ob die Textdarstellung der aktuelle Status angezeigt.  
+*bProgressText*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Textdarstellung der aktuelle Status angezeigt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einen abgeleiteten visuellen Manager zum Anpassen der Darstellung der `CMFCStatusBar` Objekt.  
@@ -3615,14 +3615,14 @@ virtual void OnDrawStatusBarSizeBox(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pStatBar*  
- Ein Zeiger auf eine Statusleiste. Das Framework zeichnet Größeneinstellungsfeld für diese Statusleiste.  
+*pStatBar*<br/>
+[in] Ein Zeiger auf eine Statusleiste. Das Framework zeichnet Größeneinstellungsfeld für diese Statusleiste.  
   
- [in] *RectSizeBox*  
- Ein Rechteck, das die Begrenzungen des Größeneinstellungsfeld angibt.  
+*rectSizeBox*<br/>
+[in] Ein Rechteck, das die Begrenzungen des Größeneinstellungsfeld angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung des Dialogfelds Größe auf einen `CMFCStatusBar`.  
@@ -3640,20 +3640,20 @@ virtual void OnDrawTab(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *RectTab*  
- Ein Rechteck, das die Grenzen des Registersteuerelements angibt.  
+*rectTab*<br/>
+[in] Ein Rechteck, das die Grenzen des Registersteuerelements angibt.  
   
- [in] *iTab*  
- Der Index der Registerkarte, die das Framework zeichnet.  
+*iTab*<br/>
+[in] Der Index der Registerkarte, die das Framework zeichnet.  
   
- [in] *bIsActive*  
- Ein boolescher Parameter, der angibt, ob die Registerkarte aktiv ist.  
+*bIsActive*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Registerkarte aktiv ist.  
   
- [in] *pTabWnd*  
- Ein Zeiger auf eine `CMFCBaseTabCtrl` Objekt. Das Framework zeichnet diese Registerkarten-Steuerelement.  
+*pTabWnd*<br/>
+[in] Ein Zeiger auf eine `CMFCBaseTabCtrl` Objekt. Das Framework zeichnet diese Registerkarten-Steuerelement.  
   
 ### <a name="remarks"></a>Hinweise  
  Ein `CMFCBaseTabCtrl` Objekt ruft diese Methode auf, wenn sie die WM_PAINT-Meldung verarbeitet.  
@@ -3674,23 +3674,23 @@ virtual void OnDrawTabCloseButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein Rechteck, das die Begrenzungen des gibt an, die **schließen** Schaltfläche.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Begrenzungen des gibt an, die **schließen** Schaltfläche.  
   
- [in] *pTabWnd*  
- Ein Zeiger auf ein Registerkarten-Steuerelement. Zeichnet das Framework die **schließen** Schaltfläche für diese Registerkarten-Steuerelement.  
+*pTabWnd*<br/>
+[in] Ein Zeiger auf ein Registerkarten-Steuerelement. Zeichnet das Framework die **schließen** Schaltfläche für diese Registerkarten-Steuerelement.  
   
- [in] *bIsHighlighted*  
- Ein boolescher Parameter, der angibt, ob die **schließen** Schaltfläche wird hervorgehoben.  
+*bIsHighlighted*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die **schließen** Schaltfläche wird hervorgehoben.  
   
- [in] *bIsPressed*  
- Ein boolescher Parameter, der angibt, ob die **schließen** gedrückt wird.  
+*bIsPressed*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die **schließen** gedrückt wird.  
   
- [in] *bIsDisabled*  
- Ein boolescher Parameter, der angibt, ob die **schließen** Schaltfläche ist deaktiviert.  
+*bIsDisabled*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die **schließen** Schaltfläche ist deaktiviert.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einen abgeleiteten visuellen Manager zum Anpassen der Darstellung der **schließen** Schaltfläche auf der aktiven Registerkarte der *pTabWnd*.  
@@ -3709,23 +3709,23 @@ virtual void OnDrawTabContent(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *RectTab*  
- Ein Rechteck, das die Begrenzungen des inneren Registerkarte angibt.  
+*rectTab*<br/>
+[in] Ein Rechteck, das die Begrenzungen des inneren Registerkarte angibt.  
   
- [in] *iTab*  
- Der nullbasierte Index der Registerkarte. Das Framework zeichnet das innere dieser Registerkarte.  
+*iTab*<br/>
+[in] Der nullbasierte Index der Registerkarte. Das Framework zeichnet das innere dieser Registerkarte.  
   
- [in] *bIsActive*  
- Ein boolescher Parameter, der angibt, ob eine Registerkarte aktiv ist.  
+*bIsActive*<br/>
+[in] Ein boolescher Parameter, der angibt, ob eine Registerkarte aktiv ist.  
   
- [in] *pTabWnd*  
- Ein Zeiger auf die Registerkarten-Steuerelement, das die Registerkarte mit dem gerade gezeichneten enthält.  
+*pTabWnd*<br/>
+[in] Ein Zeiger auf die Registerkarten-Steuerelement, das die Registerkarte mit dem gerade gezeichneten enthält.  
   
- [in] *ClrText*  
- Die Farbe des Texts in das Innere der Registerkarte.  
+*clrText*<br/>
+[in] Die Farbe des Texts in das Innere der Registerkarte.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Innere einer Registerkarte enthält den Text und Symbole der Registerkarte. Überschreiben Sie diese Methode in einem abgeleiteten visual-Manager, um die Darstellung der Registerkarten anzupassen.  
@@ -3743,20 +3743,20 @@ virtual void OnDrawTabsButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen der Schaltfläche Registerkarte angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen der Schaltfläche Registerkarte angibt.  
   
- [in] *pButton*  
- Ein Zeiger auf eine [CMFCButton](../../mfc/reference/cmfcbutton-class.md) Objekt. Das Framework zeichnet den Rahmen für diese `CMFCButton` Instanz.  
+*pButton*<br/>
+[in] Ein Zeiger auf eine [CMFCButton](../../mfc/reference/cmfcbutton-class.md) Objekt. Das Framework zeichnet den Rahmen für diese `CMFCButton` Instanz.  
   
- [in] *UiState*  
- Eine ganze Zahl ohne Vorzeichen, die den Zustand der Schaltfläche angibt.  
+*uiState*<br/>
+[in] Eine ganze Zahl ohne Vorzeichen, die den Zustand der Schaltfläche angibt.  
   
- [in] *pWndTab*  
- Ein Zeiger auf die Registerkarte übergeordnete Fenster.  
+*pWndTab*<br/>
+[in] Ein Zeiger auf die Registerkarte übergeordnete Fenster.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einen abgeleiteten visuellen Manager zum Anpassen der Darstellung des Rahmens der Schaltfläche "Registerkarte".  
@@ -3774,20 +3774,20 @@ virtual void OnDrawTask(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pTask*  
- Ein Zeiger auf eine [CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) Objekt. Das Framework zeichnet diese Aufgabe.  
+*pTask*<br/>
+[in] Ein Zeiger auf eine [CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) Objekt. Das Framework zeichnet diese Aufgabe.  
   
- [in] *pIcons*  
- Ein Zeiger auf die Bildliste mit dem Aufgabenbereich verknüpft ist. Jede Aufgabe enthält einen Index für ein Bild in der Liste.  
+*pIcons*<br/>
+[in] Ein Zeiger auf die Bildliste mit dem Aufgabenbereich verknüpft ist. Jede Aufgabe enthält einen Index für ein Bild in der Liste.  
   
- [in] *bIsHighlighted*  
- Ein boolescher Parameter, der angibt, ob die Aufgabe angezeigten hervorgehoben ist.  
+*bIsHighlighted*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Aufgabe angezeigten hervorgehoben ist.  
   
- [in] *bIsSelected*  
- Ein boolescher Parameter, der angibt, ob die Aufgabe angezeigten ausgewählt ist.  
+*bIsSelected*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Aufgabe angezeigten ausgewählt ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework werden die Aufgaben auf der Taskleiste ein Symbol und die Text angezeigt. Die *pIcons* Parameter enthält das Symbol für den Task erkennbar *pTask*.  
@@ -3806,17 +3806,17 @@ virtual void OnDrawTasksGroupAreaBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen des Gruppenbereichs gibt an, der im Aufgabenbereich.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen des Gruppenbereichs gibt an, der im Aufgabenbereich.  
   
- [in] *bBesondere*  
- Ein boolescher Parameter, der angibt, ob der Rahmen hervorgehoben ist. Der Wert "true" gibt an, dass der Rahmen hervorgehoben ist.  
+*bBesondere*<br/>
+[in] Ein boolescher Parameter, der angibt, ob der Rahmen hervorgehoben ist. Der Wert "true" gibt an, dass der Rahmen hervorgehoben ist.  
   
- [in] *bNoTitle*  
- Ein boolescher Parameter, der angibt, ob der Gruppenbereich einen Titel verfügt. Der Wert "true" gibt an, dass der Gruppenbereich keinen Titel verfügt.  
+*bNoTitle*<br/>
+[in] Ein boolescher Parameter, der angibt, ob der Gruppenbereich einen Titel verfügt. Der Wert "true" gibt an, dass der Gruppenbereich keinen Titel verfügt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion in einer abgeleiteten Klasse zum Anpassen des Rahmens um ein spaltengruppenbereich im Aufgabenbereich an.  
@@ -3834,20 +3834,20 @@ virtual void OnDrawTasksGroupCaption(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pGroup*  
- Ein Zeiger auf eine `CMFCTasksPaneTaskGroup` Objekt. Das Framework zeichnet die Beschriftung für diese Gruppe.  
+*pGroup*<br/>
+[in] Ein Zeiger auf eine `CMFCTasksPaneTaskGroup` Objekt. Das Framework zeichnet die Beschriftung für diese Gruppe.  
   
- [in] *bIsHighlighted*  
- Ein boolescher Parameter, der angibt, ob die Gruppe hervorgehoben ist.  
+*bIsHighlighted*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Gruppe hervorgehoben ist.  
   
- [in] *bIsSelected*  
- Ein boolescher Parameter, der angibt, ob die Gruppe derzeit ausgewählt ist.  
+*bIsSelected*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Gruppe derzeit ausgewählt ist.  
   
- [in] *bCanCollapse*  
- Ein boolescher Parameter, der angibt, ob die Gruppe reduziert werden kann.  
+*bCanCollapse*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Gruppe reduziert werden kann.  
   
 ### <a name="remarks"></a>Hinweise  
  Aufgabengruppen angezeigt werden, auf die [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) Objekt.  
@@ -3868,12 +3868,12 @@ virtual void OnDrawTasksGroupIcon(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pGroup*  
- [in] *nIconHOffset*  
- [in] *bIsHighlighted*  
- [in] *bIsSelected*  
- [in] *bCanCollapse*  
+*pDC*<br/>
+[in] [in] *pGroup*  
+*nIconHOffset*<br/>
+[in] [in] *bIsHighlighted*  
+*bIsSelected*<br/>
+[in] [in] *bCanCollapse*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -3888,14 +3888,14 @@ virtual void OnDrawTearOffCaption(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen der Beschriftung angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen der Beschriftung angibt.  
   
- [in] *bIsActive*  
- True, wenn die Beschriftung aktiv ist. "False" andernfalls.  
+*bIsActive*<br/>
+[in] True, wenn die Beschriftung aktiv ist. "False" andernfalls.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion wird aufgerufen, durch das Framework bei der ein `CMFCPopupMenu` -Objekt eine WM_PAINT-Meldung verarbeitet und müssen eine Beschriftung abtrennbare zeichnen.  
@@ -3912,8 +3912,8 @@ virtual void OnDrawToolBoxFrame(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *Rect*  
+*pDC*<br/>
+[in] [in] *Rect*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -3927,11 +3927,11 @@ virtual BOOL OnEraseMDIClientArea(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *RectClient*  
- Ein Rechteck, das die Grenzen des Clientbereichs MDI angibt.  
+*rectClient*<br/>
+[in] Ein Rechteck, das die Grenzen des Clientbereichs MDI angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein reservierter Wert. Die Standardimplementierung gibt "false" zurück.  
@@ -3950,8 +3950,8 @@ virtual void OnErasePopupWindowButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *RectClient*  
+*pDC*<br/>
+[in] [in] *RectClient*  
  [in] *pButton*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -3967,14 +3967,14 @@ virtual void OnEraseTabsArea(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen des Registerkartenbereichs angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen des Registerkartenbereichs angibt.  
   
- [in] *pTabWnd*  
- Ein Zeiger auf eine "Verwaltung". Das Framework löscht den Registerkartenbereich für das Fenster für die angegebene Registerkarte.  
+*pTabWnd*<br/>
+[in] Ein Zeiger auf eine "Verwaltung". Das Framework löscht den Registerkartenbereich für das Fenster für die angegebene Registerkarte.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion wird aufgerufen, durch das Framework bei einer [CMFCBaseTabCtrl-Klasse](../../mfc/reference/cmfcbasetabctrl-class.md) -Objekt eine WM_PAINT-Meldung verarbeitet und löscht den Registerkartenbereich.  
@@ -3993,17 +3993,17 @@ virtual void OnEraseTabsButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen der Schaltfläche Registerkarte angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen der Schaltfläche Registerkarte angibt.  
   
- [in] *pButton*  
- Ein Zeiger auf eine Registerkarte "-Schaltfläche. Das Framework löscht den Text und Symbol für diese Schaltfläche.  
+*pButton*<br/>
+[in] Ein Zeiger auf eine Registerkarte "-Schaltfläche. Das Framework löscht den Text und Symbol für diese Schaltfläche.  
   
- [in] *pWndTab*  
- Ein Zeiger auf das Registerkarten-Steuerelement, das die Schaltfläche "Registerkarte" enthält.  
+*pWndTab*<br/>
+[in] Ein Zeiger auf das Registerkarten-Steuerelement, das die Schaltfläche "Registerkarte" enthält.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework löscht den Text und Symbol für eine Schaltfläche bei einem [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) Objekt verarbeitet die Nachricht WM_ERASEBKGND.  
@@ -4021,14 +4021,14 @@ virtual BOOL OnEraseTabsFrame(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen des Fensters Registerkarte angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen des Fensters Registerkarte angibt.  
   
- [in] *pTabWnd*  
- Ein Zeiger auf eine "Verwaltung". Das Framework Löscht einen Rahmen für diese `CMFCBaseTabCtrl`.  
+*pTabWnd*<br/>
+[in] Ein Zeiger auf eine "Verwaltung". Das Framework Löscht einen Rahmen für diese `CMFCBaseTabCtrl`.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich ist. "False" andernfalls.  
@@ -4047,14 +4047,14 @@ virtual void OnFillAutoHideButtonBackground(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen der automatisch ausblendbaren Schaltfläche angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen der automatisch ausblendbaren Schaltfläche angibt.  
   
- [in] *pButton*  
- Ein Zeiger auf eine [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) Objekt. Das Framework, den Hintergrund für diese Schaltfläche zum automatischen Ausblenden füllt.  
+*pButton*<br/>
+[in] Ein Zeiger auf eine [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) Objekt. Das Framework, den Hintergrund für diese Schaltfläche zum automatischen Ausblenden füllt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung einer Schaltfläche zum automatischen ausblenden.  
@@ -4072,20 +4072,20 @@ virtual void OnFillBarBackground(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger auf den Gerätekontext für eine Steuerleiste.  
+*pDC*<br/>
+[in] Ein Zeiger auf den Gerätekontext für eine Steuerleiste.  
   
- [in] *pBar*  
- Ein Zeiger auf eine `CBasePane` Objekt. Das Framework füllt den Hintergrund des in diesem Bereich.  
+*pBar*<br/>
+[in] Ein Zeiger auf eine `CBasePane` Objekt. Das Framework füllt den Hintergrund des in diesem Bereich.  
   
- [in] *RectClient*  
- Ein Rechteck, das die Grenzen des Bereichs angibt.  
+*rectClient*<br/>
+[in] Ein Rechteck, das die Grenzen des Bereichs angibt.  
   
- [in] *RectClip*  
- Ein Rechteck, das Clipping Teil des Bereichs angibt.  
+*rectClip*<br/>
+[in] Ein Rechteck, das Clipping Teil des Bereichs angibt.  
   
- [in] *bNCArea*  
- Ein reservierter Wert.  
+*bNCArea*<br/>
+[in] Ein reservierter Wert.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardimplementierung dieser Methode füllt den Hintergrund der Leiste mit 3d Hintergrundfarbe aus der globalen Variablen `afxGlobalData`. Überschreiben Sie diese Methode in einem abgeleiteten visual-Manager, um den Hintergrund eines Bereichs anzupassen.  
@@ -4107,17 +4107,17 @@ virtual void OnFillButtonInterior(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger auf den Gerätekontext, eine Symbolleisten-Schaltfläche.  
+*pDC*<br/>
+[in] Ein Zeiger auf den Gerätekontext, eine Symbolleisten-Schaltfläche.  
   
- [in] *pButton*  
- Ein Zeiger auf eine [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md). Das Framework füllt den Hintergrund für diese Schaltfläche.  
+*pButton*<br/>
+[in] Ein Zeiger auf eine [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md). Das Framework füllt den Hintergrund für diese Schaltfläche.  
   
- [in] *Rect*  
- Ein Rechteck, das die Begrenzungen des der Symbolleisten-Schaltfläche angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Begrenzungen des der Symbolleisten-Schaltfläche angibt.  
   
- [in] *Zustand*  
- Der Status des der Symbolleisten-Schaltfläche.  
+*state*<br/>
+[in] Der Status des der Symbolleisten-Schaltfläche.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardimplementierung dieser Methode verwendet die Standardfarbe, dem der Hintergrund ausgefüllt. Überschreiben Sie diese Methode in einem abgeleiteten visual-Manager, um den Hintergrund einer Symbolleisten-Schaltfläche anzupassen.  
@@ -4140,14 +4140,14 @@ virtual COLORREF OnFillCaptionBarButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pBar*  
- [in] *Rect*  
- [in] *bIsPressed*  
- [in] *bIsHighlighted*  
- [in] *bIsDisabled*  
- [in] *bHasDropDownArrow*  
- [in] *bIsSysButton*  
+*pDC*<br/>
+[in] [in] *pBar*  
+*Rect*<br/>
+[in] [in] *bIsPressed*  
+*bIsHighlighted*<br/>
+[in] [in] *bIsDisabled*  
+*bHasDropDownArrow*<br/>
+[in] [in] *bIsSysButton*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -4164,14 +4164,14 @@ virtual COLORREF OnFillCommandsListBackground(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein Rechteck, das die Begrenzungen der Schaltfläche angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Begrenzungen der Schaltfläche angibt.  
   
- [in] *bIsSelected*  
- Ein boolescher Parameter, der angibt, ob die Schaltfläche ausgewählt wird.  
+*bIsSelected*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Schaltfläche ausgewählt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Textfarbe für das Symbolleisten-Schaltfläche.  
@@ -4190,14 +4190,14 @@ virtual void OnFillHeaderCtrlBackground(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pCtrl*  
- Ein Zeiger auf eine [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) Objekt. Das Framework füllt den Hintergrund für diese Kopfzeilen-Steuerelement.  
+*pCtrl*<br/>
+[in] Ein Zeiger auf eine [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) Objekt. Das Framework füllt den Hintergrund für diese Kopfzeilen-Steuerelement.  
   
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen des Headersteuerelements angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen des Headersteuerelements angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager anpassen die Darstellung von einem Kopfzeilen-Steuerelement.  
@@ -4214,17 +4214,17 @@ virtual COLORREF OnFillMiniFrameCaption(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *RectCaption*  
- Ein Rechteck, das die Grenzen der Titelleiste angibt.  
+*rectCaption*<br/>
+[in] Ein Rechteck, das die Grenzen der Titelleiste angibt.  
   
- [in] *pFrameWnd*  
- Ein Zeiger auf ein Mini-Rahmenfenster. Das Framework zeichnet die Titelleiste für dieses Fenster.  
+*pFrameWnd*<br/>
+[in] Ein Zeiger auf ein Mini-Rahmenfenster. Das Framework zeichnet die Titelleiste für dieses Fenster.  
   
- [in] *bActive*  
- Ein boolescher Parameter, der angibt, ob das Fenster aktiv ist.  
+*bActive*<br/>
+[in] Ein boolescher Parameter, der angibt, ob das Fenster aktiv ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Farbe, die verwendet wird, um den Hintergrund der Titelleiste zu füllen.  
@@ -4243,14 +4243,14 @@ virtual void OnFillOutlookBarCaption(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *RectCaption*  
- Ein Rechteck, das die Grenzen der Titelleiste angibt.  
+*rectCaption*<br/>
+[in] Ein Rechteck, das die Grenzen der Titelleiste angibt.  
   
- [out] *ClrText*  
- Ein Verweis auf eine [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter. Die Methode schreibt die Farbe des Texts in der Titelleiste an diesen Parameter an.  
+*clrText*<br/>
+[out] Ein Verweis auf eine [COLORREF](/windows/desktop/gdi/colorref) Parameter. Die Methode schreibt die Farbe des Texts in der Titelleiste an diesen Parameter an.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardimplementierung dieser Methode füllt die Titelleiste, durch die Farbe für den Schatten basierend auf dem aktuellen Design. Überschreiben Sie diese Methode in einem abgeleiteten visual-Manager, um die Farbe der Beschriftung Outlook-Leiste anzupassen.  
@@ -4268,20 +4268,20 @@ virtual void OnFillOutlookPageButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein Rechteck, das die Begrenzungen des Outlook-Seite-Schaltfläche angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Begrenzungen des Outlook-Seite-Schaltfläche angibt.  
   
- [in] *bIsHighlighted*  
- Ein boolescher Parameter, der angibt, ob die Schaltfläche markiert wird.  
+*bIsHighlighted*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Schaltfläche markiert wird.  
   
- [in] *bIsPressed*  
- Ein boolescher Parameter, der angibt, ob die Schaltfläche gedrückt wird.  
+*bIsPressed*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Schaltfläche gedrückt wird.  
   
- [out] *ClrText*  
- Ein Verweis auf eine [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter. Diese Methode speichert die Textfarbe für die Outlook-Seite-Schaltfläche in diesem Parameter.  
+*clrText*<br/>
+[out] Ein Verweis auf eine [COLORREF](/windows/desktop/gdi/colorref) Parameter. Diese Methode speichert die Textfarbe für die Outlook-Seite-Schaltfläche in diesem Parameter.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion in einen abgeleiteten visuellen Manager anpassen die Darstellung von Outlook Seitenschaltflächen.  
@@ -4296,11 +4296,11 @@ virtual void OnFillPopupWindowBackground(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein Rechteck, das die Begrenzungen des Popup-Fenster angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Begrenzungen des Popup-Fenster angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager anpassen die Darstellung der Popup-Fenster.  
@@ -4315,11 +4315,11 @@ virtual COLORREF OnFillRibbonButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pButton*  
- Ein Zeiger auf eine [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) Objekt. Das Framework füllt das innere dieser Schaltfläche des Menübands.  
+*pButton*<br/>
+[in] Ein Zeiger auf eine [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) Objekt. Das Framework füllt das innere dieser Schaltfläche des Menübands.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Farbe des Texts für die Menübandschaltfläche gemäß *pButton* , wenn die Menüband-Schaltfläche Text unterstützt. Der Wert 1, wenn der Text für die Menübandschaltfläche ungültig ist.  
@@ -4344,32 +4344,32 @@ virtual void OnFillRibbonEdit(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pEdit*  
- Ein Zeiger auf eine `CMFCRibbonRichEditCtrl` Objekt. Das Framework füllt das Innere dieses Bearbeitungssteuerelement.  
+*pEdit*<br/>
+[in] Ein Zeiger auf eine `CMFCRibbonRichEditCtrl` Objekt. Das Framework füllt das Innere dieses Bearbeitungssteuerelement.  
   
- [in] *Rect*  
- Ein Rechteck, das die Begrenzungen des Bearbeitungssteuerelements angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Begrenzungen des Bearbeitungssteuerelements angibt.  
   
- [in] *bIsHighlighted*  
- Ein boolescher Parameter, der angibt, ob das Steuerelement zum Bearbeiten hervorgehoben ist.  
+*bIsHighlighted*<br/>
+[in] Ein boolescher Parameter, der angibt, ob das Steuerelement zum Bearbeiten hervorgehoben ist.  
   
- [in] *bIsPaneHighlighted*  
- Ein boolescher Parameter, der angibt, ob der übergeordnete Bereich hervorgehoben ist.  
+*bIsPaneHighlighted*<br/>
+[in] Ein boolescher Parameter, der angibt, ob der übergeordnete Bereich hervorgehoben ist.  
   
- [in] *bIsDisabled*  
- Ein boolescher Parameter, der angibt, ob das Bearbeitungssteuerelement nicht verfügbar ist.  
+*bIsDisabled*<br/>
+[in] Ein boolescher Parameter, der angibt, ob das Bearbeitungssteuerelement nicht verfügbar ist.  
   
- [in] *ClrText*  
- Ein Verweis auf die Textfarbe des Edit-Steuerelements.  
+*clrText*<br/>
+[in] Ein Verweis auf die Textfarbe des Edit-Steuerelements.  
   
- [in] *ClrSelBackground*  
- Ein Verweis auf die Hintergrundfarbe der Edit-Steuerelements, wenn er hervorgehoben wird.  
+*clrSelBackground*<br/>
+[in] Ein Verweis auf die Hintergrundfarbe der Edit-Steuerelements, wenn er hervorgehoben wird.  
   
- [in] *ClrSelText*  
- Ein Verweis auf die Farbe des ausgewählten Text im Bearbeitungssteuerelement.  
+*clrSelText*<br/>
+[in] Ein Verweis auf die Farbe des ausgewählten Text im Bearbeitungssteuerelement.  
   
 ### <a name="remarks"></a>Hinweise  
  Die `CMFCRibbonRichEditCtrl` erkennbar *pEdit* Teil einer Kombinationsfelds-Schaltfläche im Menüband sein können.  
@@ -4386,11 +4386,11 @@ virtual COLORREF OnFillRibbonMainPanelButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pButton*  
- Ein Zeiger auf eine [CMFCRibbonButton-Klasse](../../mfc/reference/cmfcribbonbutton-class.md) Objekt. Das Framework füllt diese Schaltfläche des Menübands.  
+*pButton*<br/>
+[in] Ein Zeiger auf eine [CMFCRibbonButton-Klasse](../../mfc/reference/cmfcribbonbutton-class.md) Objekt. Das Framework füllt diese Schaltfläche des Menübands.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Farbe des Texts für die Menübandschaltfläche gemäß *pButton* , wenn die Menüband-Schaltfläche Text unterstützt. Der Wert 1, wenn der Text für die Menübandschaltfläche ungültig ist.  
@@ -4409,14 +4409,14 @@ virtual void OnFillRibbonMenuFrame(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pPanel*  
- Ein Zeiger auf eine Instanz von der [CMFCRibbonMainPanel-Klasse](../../mfc/reference/cmfcribbonmainpanel-class.md). Das Framework füllt die Menü-Frame für diesen Menübandbereich.  
+*pPanel*<br/>
+[in] Ein Zeiger auf eine Instanz von der [CMFCRibbonMainPanel-Klasse](../../mfc/reference/cmfcribbonmainpanel-class.md). Das Framework füllt die Menü-Frame für diesen Menübandbereich.  
   
- [in] *Rect*  
- Ein Rechteck, das die Begrenzungen des Menü-Frame angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Begrenzungen des Menü-Frame angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager anpassen die Darstellung der Menüleiste für die `CMFCRibbonMainPanel`.  
@@ -4432,8 +4432,8 @@ virtual void OnFillRibbonQuickAccessToolBarPopup(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- [in] *pMenuBar*  
+*pDC*<br/>
+[in] [in] *pMenuBar*  
  [in] *Rect*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -4449,14 +4449,14 @@ virtual void OnFillSplitterBackground(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pSplitterWnd*  
- Ein Zeiger auf eine Instanz von der [CSplitterWndEx Klasse](csplitterwndex-class.md). Das Framework füllt den Hintergrund für diese Teilungsfenster.  
+*pSplitterWnd*<br/>
+[in] Ein Zeiger auf eine Instanz von der [CSplitterWndEx Klasse](csplitterwndex-class.md). Das Framework füllt den Hintergrund für diese Teilungsfenster.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen des Splitterfensters angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen des Splitterfensters angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einem abgeleiteten visual-Manager, um die Darstellung eines unterteilten Fensters anzupassen.  
@@ -4475,23 +4475,23 @@ virtual void OnFillTab(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *RectFill*  
- Ein Rechteck, das die Grenzen für das Registerkartenfenster angibt.  
+*rectFill*<br/>
+[in] Ein Rechteck, das die Grenzen für das Registerkartenfenster angibt.  
   
- [in] *PbrFill*  
- Ein Zeiger auf einen Pinsel. Das Framework verwendet dieses Pinsels, um das Registerkartenfenster ausfüllen.  
+*pbrFill*<br/>
+[in] Ein Zeiger auf einen Pinsel. Das Framework verwendet dieses Pinsels, um das Registerkartenfenster ausfüllen.  
   
- [in] *iTab*  
- Nullbasierter Index der Aktivierreihenfolge einer Registerkarte für die das Framework der Hintergrund ausgefüllt wird.  
+*iTab*<br/>
+[in] Nullbasierter Index der Aktivierreihenfolge einer Registerkarte für die das Framework der Hintergrund ausgefüllt wird.  
   
- [in] *bIsActive*  
- True, wenn die Registerkarte aktiv ist. andernfalls "false".  
+*bIsActive*<br/>
+[in] True, wenn die Registerkarte aktiv ist. andernfalls "false".  
   
- [in] *pTabWnd*  
- Ein Zeiger auf den übergeordneten Registerkarten-Steuerelement.  
+*pTabWnd*<br/>
+[in] Ein Zeiger auf den übergeordneten Registerkarten-Steuerelement.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einem abgeleiteten visual-Manager, um die Darstellung der Registerkarten anzupassen.  
@@ -4507,14 +4507,14 @@ virtual void OnFillTasksGroupInterior(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen der Aufgabengruppe angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen der Aufgabengruppe angibt.  
   
- [in] *bBesondere*  
- Ein boolescher Wert, der angibt, ob das innere durch eine besondere Farbe gefüllt wird.  
+*bBesondere*<br/>
+[in] Ein boolescher Wert, der angibt, ob das innere durch eine besondere Farbe gefüllt wird.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager anpassen die Darstellung einer Aufgabengruppe.  
@@ -4529,11 +4529,11 @@ virtual void OnFillTasksPaneBackground(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *RectWorkArea*  
- Ein Rechteck, das die Grenzen des Aufgabenbereichs angibt.  
+*rectWorkArea*<br/>
+[in] Ein Rechteck, das die Grenzen des Aufgabenbereichs angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einen abgeleiteten visuellen Manager zum Anpassen der Darstellung einer `CMFCTasksPane` Objekt.  
@@ -4550,17 +4550,17 @@ virtual void OnHighlightMenuItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger auf den Gerätekontext für ein Menü.  
+*pDC*<br/>
+[in] Ein Zeiger auf den Gerätekontext für ein Menü.  
   
- [in] *pButton*  
- Ein Zeiger auf eine [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) Objekt angezeigt. Die Standardimplementierung wird dieser Parameter nicht verwendet werden.  
+*pButton*<br/>
+[in] Ein Zeiger auf eine [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) Objekt angezeigt. Die Standardimplementierung wird dieser Parameter nicht verwendet werden.  
   
- [in] *Rect*  
- Ein Rechteck, das die Grenzen des Menüelements angibt.  
+*Rect*<br/>
+[in] Ein Rechteck, das die Grenzen des Menüelements angibt.  
   
- [in] *ClrText*  
- Die aktuelle Textfarbe der Menüelemente hervorgehoben. Die Standardimplementierung wird dieser Parameter nicht verwendet werden.  
+*clrText*<br/>
+[in] Die aktuelle Textfarbe der Menüelemente hervorgehoben. Die Standardimplementierung wird dieser Parameter nicht verwendet werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardimplementierung dieser Methode verwendet nicht die Parameter *pButton* oder *ClrText*. Es füllt anhand des Rechtecks *Rect* mit der standard-Hintergrundfarbe.  
@@ -4577,11 +4577,11 @@ virtual void OnHighlightRarelyUsedMenuItems(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *RectRarelyUsed*  
- Ein Rechteck, das die Grenzen von den hervorgehobenen Befehl angibt.  
+*rectRarelyUsed*<br/>
+[in] Ein Rechteck, das die Grenzen von den hervorgehobenen Befehl angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einen abgeleiteten visuellen Manager anpassen die Darstellung des markierten Menübefehle.  
@@ -4596,8 +4596,8 @@ virtual BOOL OnNcActivate(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- [in] *bActive*  
+*Aufnehmen*<br/>
+[in] [in] *bActive*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -4614,14 +4614,14 @@ virtual BOOL OnNcPaint(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Ein Zeiger auf das Fenster, deren nicht-Clientbereich, das Framework zeichnet.  
+*Aufnehmen*<br/>
+[in] Ein Zeiger auf das Fenster, deren nicht-Clientbereich, das Framework zeichnet.  
   
- [in] *LstSysButtons*  
- Eine Liste der Systemschaltflächen. Dies sind auch bekannt als Schaltflächen Beschriftung.  
+*lstSysButtons*<br/>
+[in] Eine Liste der Systemschaltflächen. Dies sind auch bekannt als Schaltflächen Beschriftung.  
   
- [in] *RectRedraw*  
- Ein Rechteck, das die Begrenzungen des nicht-Clientbereich angibt.  
+*rectRedraw*<br/>
+[in] Ein Rechteck, das die Begrenzungen des nicht-Clientbereich angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein reservierter Wert. Die Standardimplementierung gibt "false" zurück.  
@@ -4639,11 +4639,11 @@ virtual BOOL OnSetWindowRegion(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Ein Zeiger auf das Fenster mit der Region, die sich geändert.  
+*Aufnehmen*<br/>
+[in] Ein Zeiger auf das Fenster mit der Region, die sich geändert.  
   
- [in] *SizeWindow*  
- Die Größe des Fensters.  
+*sizeWindow*<br/>
+[in] Die Größe des Fensters.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich ist. "False" andernfalls.  
@@ -4690,8 +4690,8 @@ static void SetDefaultManager(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pRTI*  
- Ein Zeiger auf die Common Language Runtime-Informationen für einen visuellen Manager.  
+*pRTI*<br/>
+[in] Ein Zeiger auf die Common Language Runtime-Informationen für einen visuellen Manager.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden der `CMFCVisualManager` -Klasse und alle abgeleiteten Erscheinungsbild-Manager, um die Darstellung Ihrer Anwendung anzupassen. Nach dem Festlegen der standardmäßigen visuellen Manager zeichnet diese Methode Ihrer Anwendung mit dem neuen visuellen Manager neu. Weitere Informationen über das Erscheinungsbild-Manager verwenden, finden Sie unter [Visualisierungs-Manager](../../mfc/visualization-manager.md).  
@@ -4706,8 +4706,8 @@ void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bEmboss*  
- Ein boolescher Parameter, der angibt, ob die Geprägte Modus für deaktivierten Symbolleistenbilder aktiviert.  
+*bEmboss*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Geprägte Modus für deaktivierten Symbolleistenbilder aktiviert.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie die Funktion [CMFCVisualManager::IsEmbossDisabledImage](#isembossdisabledimage) zu bestimmen, ob Geprägte Modus aktiviert ist.  
@@ -4720,8 +4720,8 @@ void SetFadeInactiveImage(BOOL bFade = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bFade*  
- Ein boolescher Parameter, der angibt, ob die Auswirkungen der Beleuchtung aktiviert.  
+*bFade*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Auswirkungen der Beleuchtung aktiviert.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Feature-steuert, ob inaktive Bilder angezeigt werden, die in einem Menü oder Symbolleiste Fehler. Verwenden Sie die Methode [CMFCVisualManager::IsFadeInactiveImage](#isfadeinactiveimage) zu bestimmen, ob dieses Feature aktiviert ist.  
@@ -4734,8 +4734,8 @@ void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bMenuFlatLook*  
- Ein boolescher Parameter, der angibt, ob die Menü-Schaltflächen flach dargestellt.  
+*bMenuFlatLook*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die Menü-Schaltflächen flach dargestellt.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig ist dieses Feature nicht aktiviert.  
@@ -4748,8 +4748,8 @@ void SetMenuShadowDepth(int nDepth);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nDepth*  
- Eine ganze Zahl, die die Tiefe des Schattens Menü in Pixel angibt.  
+*nDepth*<br/>
+[in] Eine ganze Zahl, die die Tiefe des Schattens Menü in Pixel angibt.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Höhe und Breite des Schattens Menü müssen identisch sein. Der Standardwert ist 7 Pixel.  
@@ -4762,8 +4762,8 @@ void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bShadow*  
- Ein boolescher Parameter, der angibt, ob die visuelle Manager einen Schatten unter hervorgehobenen Bilder angezeigt.  
+*bShadow*<br/>
+[in] Ein boolescher Parameter, der angibt, ob die visuelle Manager einen Schatten unter hervorgehobenen Bilder angezeigt.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig ist dieses Feature deaktiviert.  

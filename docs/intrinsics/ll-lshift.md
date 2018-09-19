@@ -1,5 +1,5 @@
 ---
-title: __ll_lshift | Microsoft Docs
+title: __ll_lshift | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94cf50287c28fe530df939488c4e707d17aede03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4bfb567774191edb86a9eb34a38be69344f19575
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327371"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702077"
 ---
 # <a name="lllshift"></a>__ll_lshift
 **Microsoft-spezifisch**  
@@ -40,27 +40,27 @@ unsigned __int64 __ll_lshift(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `Mask`  
- Der 64-Bit-Ganzzahl-Wert, nach links verschoben werden soll.  
+*Maske*<br/>
+[in] Der 64-Bit-Ganzzahl-Wert, um nach links verschoben werden soll.  
   
- [in] `nBit`  
- Die Anzahl der zu verschiebenden Bits.  
+*nBit*<br/>
+[in] Die Anzahl der zu verschiebenden Bits.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Die Maske verschoben nach links `nBit` Bits.  
+ Die Maske verschoben nach links durch `nBit` Bits.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__ll_lshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ll_lshift`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Sie das Programm die Verwendung der 64-Bit-Architektur kompiliert und `nBit` ist größer als 63, ist die Anzahl der zu verschiebenden Bits `nBit` modulo 64. Wenn Sie das Programm die Verwendung der 32-Bit-Architektur kompiliert und `nBit` ist größer als 31, ist die Anzahl der zu verschiebenden Bits `nBit` modulo 32.  
+ Wenn Sie das Programm mithilfe der 64-Bit-Architektur kompilieren und `nBit` ist größer als 63, ist die Anzahl der zu verschiebenden Bits `nBit` modulo-64. Wenn Sie das Programm, das die 32-Bit-Architektur kompilieren und `nBit` ist größer als 31, die Anzahl der zu verschiebenden Bits wird `nBit` modulo 32.  
   
- Die `ll` im Namen gibt an, dass dies eine Operation auf `long long` (`__int64`).  
+ Die `ll` im Namen gibt an, dass dieser eine Operation auf `long long` (`__int64`).  
   
 ## <a name="example"></a>Beispiel  
   
@@ -89,7 +89,7 @@ int main()
 10000  
 ```  
   
- **Hinweis** keine nicht signierten Version des Vorgangs nach links verschieben vorhanden ist. Grund hierfür ist, `__ll_lshift` bereits ohne Vorzeichen Eingabeparameter verwendet. Im Gegensatz zu den nach rechts verschieben gibt es keine Abhängigkeit Anmeldung für die Verschiebung nach links, da das niederwertigste Bit im Ergebnis immer unabhängig vom Vorzeichen des Werts verschoben, auf NULL festgelegt ist.  
+ **Beachten Sie** keine nicht signierten Version des Vorgangs nach links verschieben vorhanden ist. Grund hierfür ist, `__ll_lshift` bereits ohne Vorzeichen Eingabeparameter verwendet. Im Gegensatz zu den nach rechts verschieben besteht es keine Abhängigkeit Anmeldung für die Verschiebung nach links, da das niederwertigste Bit im Ergebnis immer auf NULL, unabhängig vom Vorzeichen des Werts verschoben festgelegt ist.  
   
 **Ende Microsoft-spezifisch**  
   

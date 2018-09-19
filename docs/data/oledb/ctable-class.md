@@ -1,5 +1,5 @@
 ---
-title: CTable-Klasse | Microsoft Docs
+title: CTable-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,25 +9,31 @@ f1_keywords:
 - ATL::CTable
 - ATL.CTable
 - CTable
+- ATL.CTable.Open
+- ATL::CTable::Open
+- CTable::Open
+- CTable.Open
 dev_langs:
 - C++
 helpviewer_keywords:
 - CTable class
+- Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e12ec9f7cc7db4da78df8f3b49ed4fdadef3f769
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c94152a9322b64acafe91e1fb0eb34ab82aa2902
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33100144"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081298"
 ---
 # <a name="ctable-class"></a>CTable-Klasse
-Bietet eine Möglichkeit, direkt ein einfaches Rowsets (eine ohne Parameter) zuzugreifen.  
+
+Bietet eine Möglichkeit, direkt auf ein einfaches Rowset (ohne Parameter) zuzugreifen.  
   
 ## <a name="syntax"></a>Syntax
 
@@ -38,12 +44,17 @@ class CTable :
    public CAccessorRowset <TAccessor, TRowset>  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `TAccessor`  
- Ein Accessorklasse.  
+### <a name="parameters"></a>Parameter  
+
+*TAccessor*<br/>
+Ein Accessor-Klasse.  
   
- `TRowset`  
- Eine Rowsetklasse.  
+*TRowset*<br/>
+Eine Rowset-Klasse.  
+
+## <a name="requirements"></a>Anforderungen  
+
+**Header:** atldbcli.h  
   
 ## <a name="members"></a>Member  
   
@@ -51,15 +62,64 @@ class CTable :
   
 |||  
 |-|-|  
-|[Öffnen](../../data/oledb/ctable-open.md)|Öffnet die Tabelle.|  
+|[Öffnen](#open)|Öffnet die Tabelle.|  
   
 ## <a name="remarks"></a>Hinweise  
- Finden Sie unter [CCommand](../../data/oledb/ccommand-class.md) Informationen zum Ausführen eines Befehls auf einem Rowset zugreifen.  
+
+Finden Sie unter [CCommand](../../data/oledb/ccommand-class.md) Informationen zum Ausführen eines Befehls in ein Rowset zugreifen.  
+
+## <a name="open"></a> CTable:: Open
+
+Öffnet die Tabelle.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** atldbcli.h  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+HRESULT Open(const CSession& session,  
+   LPCWSTR wszTableName,  
+   DBPROPSET* pPropSet = NULL,  
+   ULONG ulPropSets = 0) throw ();  
+
+HRESULT Open(const CSession& session,  
+   LPCSTR szTableName,  
+   DBPROPSET* pPropSet = NULL,  
+   ULONG ulPropSets = 0) throw ();  
+
+HRESULT Open(const CSession& session,  
+   DBID& dbid,  
+   DBPROPSET* pPropSet = NULL,  
+   ULONG ulPropSets = 0) throw ();  
+```  
+  
+#### <a name="parameters"></a>Parameter  
+
+*Sitzung*<br/>
+[in] Die Sitzung, für die in der Tabelle geöffnet wird.  
+  
+*wszTableName*<br/>
+[in] Der Name der Tabelle zu öffnen, werden als Unicode-Zeichenfolge übergeben.  
+  
+*szTableName*<br/>
+[in] Der Name der Tabelle zu öffnen, werden als eine ANSI-Zeichenfolge übergeben.  
+  
+*dbid*<br/>
+[in] Die `DBID` der Tabelle zu öffnen.  
+  
+*pPropSet*<br/>
+[in] Ein Zeiger auf ein Array von [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) Strukturen, die Eigenschaften und Werte festgelegt werden. Finden Sie unter [Eigenschaftensätze und Eigenschaftengruppen](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) in die *OLE DB-Programmierreferenz* in das Windows SDK. Der Standardwert NULL gibt an, keine Eigenschaften.  
+  
+*ulPropSets*<br/>
+[in] Die Anzahl der [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) Strukturen zu übergeben, der *DBPROPSET* Argument.  
+  
+### <a name="return-value"></a>Rückgabewert  
+
+Ein standard-HRESULT.  
+  
+### <a name="remarks"></a>Hinweise  
+
+Weitere Informationen finden Sie unter [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB-Consumer-Vorlagenreferenz](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [IOpenRowset::OpenRowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx)
+
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)   

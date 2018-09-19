@@ -1,7 +1,7 @@
 ---
-title: ML nicht schwerwiegende Fehler A2008 | Microsoft Docs
+title: Schwerwiegender ML--Fehler A2008 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50f7329f698d23f875a29bc316067c39e8d1b8c1
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 774cf4c2a51bf084fb63e572cc99b0c8e3cba26f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055218"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679374"
 ---
 # <a name="ml-nonfatal-error-a2008"></a>Nicht schwerwiegender ML-Fehler A2008
-**Syntaxfehler:**  
-  
- Ein Token an der aktuellen Position verursachte einen Syntaxfehler.  
-  
- Eine der folgenden möglicherweise aufgetreten:  
-  
--   Ein Punkt-Präfix wurde hinzugefügt oder in eine Direktive nicht angegeben.  
-  
--   Ein reserviertes Wort (z. B. **C** oder **Größe**) wurde als Bezeichner verwendet.  
-  
--   Eine Anweisung wurde verwendet, die nicht mit der aktuellen Auswahl der Prozessor oder Coprozessor verfügbar war.  
-  
--   Ein Laufzeit-Vergleichsoperator (z. B. `==`) wurde in einer bedingten Assembly-Anweisung statt ein relationaler Operator verwendet (z. B. [EQ](../../assembler/masm/operator-eq.md)).  
-  
--   Eine Anweisung oder in der Richtlinie wurden zu wenige Operanden zugewiesen:  
-  
--   Es wurde eine veraltete-Direktive verwendet.  
-  
-## <a name="see-also"></a>Siehe auch  
- [ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)
+
+**Syntaxfehler:**
+
+Ein Token an der aktuellen Position verursachte einen Syntaxfehler.
+
+Eine der folgenden möglicherweise aufgetreten:
+
+- Ein Punkt-Präfix wurde hinzugefügt oder in einer Anweisung ausgelassen.
+
+- Ein reserviertes Wort (z. B. **C** oder **Größe**), die als Bezeichner verwendet wurde.
+
+- Eine Anweisung wurde verwendet, die nicht mit der aktuellen Auswahl von Prozessoren oder -Coprozessor verfügbar war.
+
+- Ein Laufzeit-Vergleichsoperator (z. B. `==`) wurde in einer bedingten Assembly-Anweisung, anstatt einen relationalen Operator verwendet (z. B. [EQ](../../assembler/masm/operator-eq.md)).
+
+- Eine Anweisung oder die Richtlinie wurde nicht genügend Operanden angegeben.
+
+- Es wurde eine veraltete-Direktive verwendet.
+
+## <a name="see-also"></a>Siehe auch
+
+[ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)<br/>

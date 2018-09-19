@@ -1,5 +1,5 @@
 ---
-title: Systeminterne Funktionen "_InterlockedAnd" | Microsoft Docs
+title: Funktionen "_InterlockedAnd" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -66,12 +66,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 009c3dd2fd7e7ce123f760ae832c2c4e25fedd92
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26ae6034e9a54a6cf198b39c81d688f10616d1d0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334924"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707862"
 ---
 # <a name="interlockedand-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedAnd“
 **Microsoft-spezifisch**  
@@ -180,11 +180,11 @@ __int64 _InterlockedAnd64_rel(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in, out] `value`  
- Ein Zeiger auf den ersten Operanden, der durch das Ergebnis ersetzt wird.  
+*Wert*<br/>
+[in, out] Ein Zeiger auf den ersten Operanden, durch das Ergebnis ersetzt wird.  
   
- [in] `mask`  
- Der zweite Operand.  
+*Maske*<br/>
+[in] Der zweite Operand.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Der ursprüngliche Wert des ersten Operanden.  
@@ -193,10 +193,10 @@ __int64 _InterlockedAnd64_rel(
   
 |Systemintern|Architektur|Header|  
 |---------------|------------------|------------|  
-|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`, `_InterlockedAnd64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`, `_InterlockedAnd64`|X86, ARM, x64|\<intrin.h>|  
 |`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM|\<intrin.h>|  
-|`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|x64|\<intrin.h>|  
+|`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86, x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>Hinweise  
  Die Nummer im Namen jeder einzelnen Funktion gibt die Bitgröße der Argumente an.  

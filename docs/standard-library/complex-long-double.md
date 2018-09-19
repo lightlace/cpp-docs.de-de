@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bf1de055318f61c4d4322a2c9149c8c28b9afb9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 92b0a7c9ae697bc28ad9fe3bd89d37f22d7a8cdc
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962857"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313467"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
@@ -47,11 +47,14 @@ complex(
 
 ### <a name="parameters"></a>Parameter
 
-*_RealVal* der Wert des Typs **long double** für den Realteil der komplexen Zahl, die erstellt wird.
+*_RealVal*<br/>
+Der Wert des Typs **long double** für den Realteil der komplexen Zahl, die erstellt wird
 
-*_ImagVal* der Wert des Typs **long double** für den imaginären Teil der komplexen Zahl, die erstellt wird.
+*_ImagVal*<br/>
+Der Wert des Typs **long double** für den imaginären Teil der komplexen Zahl, die erstellt wird.
 
-*ComplexNum* die komplexe Zahl vom Typ **doppelte** oder eines Typs **"float"** , deren tatsächliche und imaginäre Teile werden verwendet, um eine komplexe Zahl des Typs initialisieren **long double**erstellt wird.
+*complexNum*<br/>
+Die komplexe Zahl vom Typ **doppelte** oder eines Typs **"float"** , deren tatsächliche und imaginäre Teile werden verwendet, um eine komplexe Zahl des Typs initialisieren **long double** erstellt wird.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -105,17 +108,17 @@ int main( )
         << argc3 << " radians, which is " << argc3 * 180 / pi
         << " degrees." << endl;
 }
-\* Output:
+/* Output:
 Specifying initial real & imaginary parts,
- as type float gives c1 = (4,5)
+as type float gives c1 = (4,5)
 Implicit conversion from type float to type long double,
- gives c2longdouble = (1,3)
+gives c2longdouble = (1,3)
 Implicit conversion from type long double to type float,
- gives c3longdouble = (3,4)
+gives c3longdouble = (3,4)
 The modulus of c3 is recovered from c3 using: abs ( c3 ) = 5
 Argument of c3 is recovered from c3 using:
- arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.
-*\
+arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.
+*/
 ```
 
 ## <a name="requirements"></a>Anforderungen

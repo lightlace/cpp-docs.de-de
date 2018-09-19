@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1c6b7ef094715e052bdea023bcff0437492325c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8bb8efba0146a0a230a85a7980f1e71381fcf4b2
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854755"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208401"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -53,13 +53,13 @@ for (auto num : vec)
 
 Es gibt fünf Kategorien von Iteratoren. Die Kategorien zum Erhöhen der Leistung sind:
 
-- **Output**. Ein Ausgabeiterator`X` kann eine Sequenz mit dem Operator ++ vorwärts durchlaufen, und ein Element nur einmal mit dem Operator * schreiben.
+- **Output**. Ein Ausgabeiterator `X` kann vorwärts Durchlaufen einer Sequenz mithilfe der ++-Operator, und Sie können ein Element nur einmal mit schreiben die \* Operator.
 
-- **Input**. Ein Eingabeiterator`X` kann eine Sequenz mit dem Operator ++ vorwärts durchlaufen, und ein Element mit dem Operator * beliebig oft lesen. Sie können Eingabeiteratoren mithilfe der Iteratoren ++ und != vergleichen. Nach der Inkrementierung einer Kopie eines Eingabeiterators kann keine der anderen Kopien sicher verglichen, dereferenziert oder inkrementiert werden.
+- **Input**. Ein eingabeiterator `X` kann vorwärts Durchlaufen einer Sequenz mithilfe der ++-Operator, und erhalten ein Element beliebig häufig mithilfe der \* Operator. Sie können Eingabeiteratoren mithilfe der Iteratoren ++ und != vergleichen. Nach der Inkrementierung einer Kopie eines Eingabeiterators kann keine der anderen Kopien sicher verglichen, dereferenziert oder inkrementiert werden.
 
-- **Forward**. Ein Forward-Iterator`X` kann eine Sequenz mit dem Operator ++ vorwärts durchlaufen, und ein beliebiges Element lesen oder nicht konstante Elemente beliebig oft mit dem Operator * schreiben. Sie können mithilfe des Operators -> auf Elementmitglieder zugreifen und Forward-Iteratoren mithilfe der Operatoren == und != vergleichen. Sie können mehrere Kopien eines Forward-Iterators anfertigen, wobei jede einzelne unabhängig dereferenziert und inkrementiert werden kann. Ein Forward-Iterator, der ohne Bezug zu einem beliebigen Container initialisiert ist, wird Null-Forward-Iterator genannt. Null-Forward-Iteratoren vergleichen immer gleich.
+- **Forward**. Ein forward-Iterator `X` eine Sequenz mit kann vorwärts durchlaufen die ++-Operator und beliebiges Element lesen oder Schreiben nicht Konstante Elemente beliebig häufig mithilfe der \* Operator. Sie können mithilfe des Operators -> auf Elementmitglieder zugreifen und Forward-Iteratoren mithilfe der Operatoren == und != vergleichen. Sie können mehrere Kopien eines Forward-Iterators anfertigen, wobei jede einzelne unabhängig dereferenziert und inkrementiert werden kann. Ein Forward-Iterator, der ohne Bezug zu einem beliebigen Container initialisiert ist, wird Null-Forward-Iterator genannt. Null-Forward-Iteratoren vergleichen immer gleich.
 
-- Bidirektional. Ein bidirektionaler Iterator `X` kann an die Stelle eines Forward-Iterators treten. Sie können einen bidirektionalen Iterator jedoch wie in --`X`, `X`-- oder (`V` = *`X`--) auch verringern. Sie können auf Elementmitglieder zugreifen und bidirektionale Iteratoren genauso wie Forward-Iteratoren vergleichen.
+- Bidirektional. Ein bidirektionaler Iterator `X` kann an die Stelle eines Forward-Iterators treten. Sie können jedoch auch einen bidirektionaler Iterator, wie in--verringern`X`, `X`–, oder (`V` = \*`X`–). Sie können auf Elementmitglieder zugreifen und bidirektionale Iteratoren genauso wie Forward-Iteratoren vergleichen.
 
 - **Random Access**. Ein Random-Access-Iterator `X` kann an die Stelle eines bidirektionalen Iterators treten. Mit einem Random-Access-Iterator können Sie den Unterskriptoperator [] zum Zugriff auf Elemente verwenden. Sie können sich mit dem Operatoren +, -, += und -= eine bestimmte Anzahl an Elementen vorwärts oder rückwärts bewegen und den Abstand zwischen Iteratoren berechnen. Sie können bidirektionale Iteratoren mithilfe von ==, !=, \<, >, \<=, und >= vergleichen.
 
@@ -67,18 +67,18 @@ Alle Iteratoren können zugewiesen oder kopiert werden. Es wird angenommen, dass
 
 Die Hierarchie der Iteratorkategorien kann durch das Zeigen von drei Sequenzen zusammengefasst werden. Für den schreibgeschützten Zugriff auf eine Sequenz können Sie Folgendes verwenden:
 
-> Output-iterator<br/>
+> Ausgabe-iterator<br/>
 > forward-Iterator -><br/>
-> bidirektionaler Iterator -><br/>
+> bidirektionaler Iterator, der -><br/>
 > random-Access-Iterator -><br/>
 
 Der Pfeil nach rechts meint: „kann ersetzt werden durch“. Jeder einen Ausgabeiterator aufrufende Algorithmus sollte beispielsweise problemlos mit einem Forward-Iterator funktionieren; dies gilt jedoch *nicht* umgekehrt.
 
 Für den schreibgeschützten Zugriff auf eine Sequenz können Sie Folgendes verwenden:
 
-> Input-iterator<br/>
+> Eingabe-iterator<br/>
 > forward-Iterator -><br/>
-> bidirektionaler Iterator -><br/>
+> bidirektionaler Iterator, der -><br/>
 > random-Access-Iterator -><br/>
 
 In diesem Fall ist ein Eingabeiterator die schwächste aller Kategorien.
@@ -86,7 +86,7 @@ In diesem Fall ist ein Eingabeiterator die schwächste aller Kategorien.
 Schließlich können Sie für den Lese-/Schreibzugriff auf eine Sequenz Folgendes verwenden:
 
 > Forward-iterator<br/>
-> bidirektionaler Iterator -><br/>
+> bidirektionaler Iterator, der -><br/>
 > random-Access-Iterator -><br/>
 
 Ein Objektzeiger kann immer als ein Random-Access-Iterator fungieren. Er kann demnach als eine beliebige Kategorie des Iterators fungieren, wenn er den entsprechenden Lese-/Schreibzugriff auf die Sequenz unterstützt, die er festlegt.
@@ -96,9 +96,9 @@ Ein Iterator `Iterator`, der dem Objektzeiger nicht entspricht, muss zudem die M
 Es ist wichtig, die Zusagen und Einschränkungen jeder Iteratorkategorie zu verstehen, um nachzuvollziehen, wie Iteratoren durch Container und Algorithmen in der C++-Standardbibliothek verwendet werden.
 
 > [!NOTE]
-> Sie können die explizite Verwendung von Iteratoren mithilfe von range-for-Schleifen umgehen. Weitere Informationen finden Sie unter [Range-based for-Anweisung](../cpp/range-based-for-statement-cpp.md).
+> Sie können die explizite Verwendung von Iteratoren mithilfe von range-for-Schleifen umgehen. Weitere Informationen finden Sie unter [bereichsbasiert für Anweisung](../cpp/range-based-for-statement-cpp.md).
 
-Visual C++ bietet jetzt checked-Iteratoren und Debug-Iteratoren, um sicherzustellen, dass Sie die Grenzen des Containers nicht überschreiben. Weitere Informationen finden Sie unter [Überprüfte Iteratoren](../standard-library/checked-iterators.md) und [Unterstützung für Iteratordebugging](../standard-library/debug-iterator-support.md).
+Visual C++ bietet jetzt überprüfte Iteratoren und Debug-Iteratoren, um sicherzustellen, dass Sie die Grenzen Ihres Containers nicht überschreiben. Weitere Informationen finden Sie unter [Überprüfte Iteratoren](../standard-library/checked-iterators.md) und [Unterstützung für Iteratordebugging](../standard-library/debug-iterator-support.md).
 
 ## <a name="see-also"></a>Siehe auch
 

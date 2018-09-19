@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonCustomizePropertyPage Klasse | Microsoft Docs
+title: CMFCRibbonCustomizePropertyPage-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 542c34fc02eca1f090072f49b9688d3edd4d78e6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 7bb2f799dedd11ed1c8e0e909e7a5b1dcbb7adc5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040674"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707501"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>CMFCRibbonCustomizePropertyPage-Klasse
 Implementiert eine benutzerdefinierte Seite für die **anpassen** Dialogfeld in Menüband-basierten Anwendungen.  
@@ -53,13 +53,13 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 |||  
 |-|-|  
 |Name|Beschreibung|  
-|[CMFCRibbonCustomizePropertyPage::AddCustomCategory](#addcustomcategory)|Fügt eine benutzerdefinierte Kategorie, um die **Befehle** Kombinationsfeld.|  
+|[CMFCRibbonCustomizePropertyPage::AddCustomCategory](#addcustomcategory)|Fügt eine benutzerdefinierte Kategorie, um die **Befehle** im Kombinationsfeld.|  
 |`CMFCRibbonCustomizePropertyPage::CreateObject`|Wird vom Framework verwendet, um eine dynamische Instanz dieses Klassentyps zu erstellen.|  
-|`CMFCRibbonCustomizePropertyPage::GetThisClass`|Durch das Framework verwendet wird, um einen Zeiger auf die [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das diesem Klassentyp zugeordnet ist.|  
-|[CMFCRibbonCustomizePropertyPage::OnOK](#onok)|Vom System aufgerufen wird, wenn ein Benutzer klickt **OK** auf die **anpassen** (Dialogfeld).|  
+|`CMFCRibbonCustomizePropertyPage::GetThisClass`|Durch das Framework verwendet wird, einen Zeiger zum Abrufen der [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das diesem Klassentyp zugeordnet ist.|  
+|[CMFCRibbonCustomizePropertyPage::OnOK](#onok)|Vom System aufgerufen wird, wenn ein Benutzer klickt **OK** auf die **anpassen** Dialogfeld.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Sie benutzerdefinierte Befehle hinzufügen möchten die **anpassen** (Dialogfeld), müssen Sie die Nachricht AFX_WM_ON_RIBBON_CUSTOMIZE behandeln. Instanziieren Sie in der Message-Handler einer `CMFCRibbonCustomizePropertyPage` Objekt auf dem Stapel. Erstellen Sie eine Liste von benutzerdefinierten Befehlen, und rufen dann `AddCustomCategory` hinzuzufügende neue Seite, um die **anpassen** (Dialogfeld).  
+ Sollten Sie benutzerdefinierte Befehle hinzufügen, um die **anpassen** (Dialogfeld), müssen Sie die Nachricht AFX_WM_ON_RIBBON_CUSTOMIZE behandeln. Instanziieren Sie in der Message-Handler, ein `CMFCRibbonCustomizePropertyPage` Objekt im Stapel. Erstellen Sie eine Liste mit benutzerdefinierten Befehlen, und klicken Sie dann rufen `AddCustomCategory` die neue Seite hinzufügen der **anpassen** Dialogfeld.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht das Erstellen einer `CMFCRibbonCustomizePropertyPage` Objekt und eine benutzerdefinierte Kategorie hinzufügen.  
@@ -85,7 +85,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
  **Header:** afxribboncustomizedialog.h  
   
 ##  <a name="addcustomcategory"></a>  CMFCRibbonCustomizePropertyPage::AddCustomCategory  
- Fügt eine benutzerdefinierte Kategorie, um die **Befehle** Kombinationsfeld.  
+ Fügt eine benutzerdefinierte Kategorie, um die **Befehle** im Kombinationsfeld.  
   
 ```  
 void AddCustomCategory(
@@ -98,11 +98,11 @@ void AddCustomCategory(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] *Wert*|Gibt den Namen der benutzerdefinierten Softwarekategorie an.|  
-|[in] *LstIDS*|Enthält die Menübandbefehls-IDs in der benutzerdefinierten Kategorie angezeigt werden.|  
+|*Wert*|[in] Gibt den Namen der benutzerdefinierten Kategorie an.|  
+|*lstIDS*|[in] Enthält die Multifunktionsleiste Befehls-IDs in der benutzerdefinierten Kategorie angezeigt werden.|  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode fügt eine Kategorie mit dem Namen *Wert* auf die **Befehle** Kombinationsfeld. Wenn der Benutzer die Kategorie auswählt, wird die Befehle in angegebenen *LstIDS* in der Befehlsliste angezeigt.  
+ Diese Methode fügt eine Kategorie mit dem Namen *Wert* auf die **Befehle** im Kombinationsfeld. Wenn der Benutzer die Kategorie auswählt, werden die Befehle in angegebenen *LstIDS* angezeigt werden, in der Befehlsliste.  
   
 ##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  Erstellt ein `CMFCRibbonCustomizePropertyPage`-Objekt.  
@@ -112,18 +112,18 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pRibbonBar*  
- Ein Zeiger auf ein Menübandsteuerelement für die die Optionen zum Anpassen.  
+*pRibbonBar*<br/>
+[in] Ein Zeiger auf ein Menüband-Steuerelement für die die Optionen zum Anpassen.  
   
 ##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK  
- Vom System klickt ein Benutzer Calleld **OK** auf die **anpassen** (Dialogfeld).  
+ Calleld durch das System, wenn ein Benutzer klickt **OK** auf die **anpassen** Dialogfeld.  
   
 ```  
 virtual void OnOK();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die standardmäßige Implementierung gilt, die im ausgewählten Optionen der **anpassen** Dialogfeld auf der Symbolleiste für den Schnellzugriff.  
+ Die standardmäßige Implementierung gilt, die im ausgewählten Optionen der **anpassen** im Dialogfeld auf der Symbolleiste für den Schnellzugriff.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

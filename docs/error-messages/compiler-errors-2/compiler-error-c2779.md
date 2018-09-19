@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2779 generiert | Microsoft Docs
+title: Compilerfehler C2779 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce1f16bd0e756895b0da98fd43d0d6b2fdee6e8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43067c780accfea1d55f9fd9c9dbce69fe41a43a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233927"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046783"
 ---
-# <a name="compiler-error-c2779"></a>Compiler-Fehler C2779 generiert
-'Declaration': Eigenschaftenmethoden können nur nicht statische Datenmember zugeordnet werden  
-  
- Die `property` erweitertes Attribut wurde falsch auf einen statischen Datenmember angewendet.  
-  
- Im folgende Beispiel wird C2779 generiert:  
-  
-```  
-// C2779.cpp  
-struct A {  
-   static __declspec(property(put=PutProp))  
-   // try the following line instead  
-   __declspec(property(put=PutProp))  
-      int prop;   // C2779  
-   int PutProp(void);  
-};  
+# <a name="compiler-error-c2779"></a>Compilerfehler C2779
+
+'Declaration': Eigenschaftenmethoden können nur mit nicht statischen Datenmember verbunden werden
+
+Die `property` erweiterte-Attribut nicht ordnungsgemäß auf ein statisches Datenmember angewendet wird.
+
+Im folgende Beispiel wird die C2779 generiert:
+
+```
+// C2779.cpp
+struct A {
+   static __declspec(property(put=PutProp))
+   // try the following line instead
+   __declspec(property(put=PutProp))
+      int prop;   // C2779
+   int PutProp(void);
+};
 ```

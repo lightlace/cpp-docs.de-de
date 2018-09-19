@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4048 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4048 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 303c9922575bca905378a61d43c14ac630ed6566
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e705d570522cdd645ee8d72159b74be750c147a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279434"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112446"
 ---
 # <a name="compiler-warning-level-1-c4048"></a>Compilerwarnung (Stufe 1) C4048
-unterschiedliche Arraygrößen: "Bezeichner1" und "Bezeichner2"  
-  
- Einen Ausdruck beinhaltet Zeigern auf Arrays mit anderen Größe an. Die Zeiger werden ohne Konvertierung verwendet.  
-  
- Diese Warnung kann behoben werden, wenn Sie explizit in den Arrays den gleichen oder eines entsprechenden Typ umwandeln.
+
+unterschiedliche Arraygrößen: 'Bezeichner1' und 'Bezeichner2'
+
+Einen Ausdruck beinhaltet Zeiger zu Arrays mit einer anderen Größe. Die Zeiger werden ohne Konvertierung verwendet.
+
+Diese Warnung kann behoben werden, wenn Sie explizit die Arrays in den gleichen bzw. gleichwertigen Typ umwandeln.

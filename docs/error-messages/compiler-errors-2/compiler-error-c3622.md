@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3622 | Microsoft Docs
+title: Compilerfehler C3622 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d8c7ab18bfba899c2df41becb457ed2e7725f81
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 13ba39a2baf9da2039bbc97fe459f8840effacea
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260091"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062409"
 ---
 # <a name="compiler-error-c3622"></a>Compilerfehler C3622
-'Klasse': eine Klasse deklariert, wie 'Schlüsselwort' kann nicht instanziiert werden  
-  
-Es wurde versucht, beim Instanziieren einer Klasse, die als gekennzeichnete [abstrakte](../../windows/abstract-cpp-component-extensions.md). Eine Klasse als markiert `abstract` können eine Basisklasse sein, aber nicht instanziiert werden.  
-  
-## <a name="example"></a>Beispiel  
-Im folgende Beispiel wird C3622 generiert.  
-  
-```  
-// C3622.cpp  
-// compile with: /clr  
-ref class a abstract {};  
-  
-int main() {  
-   a aa;   // C3622  
-}  
-```  
+
+'Klasse': eine Klasse deklariert werden, da 'Schlüsselwort' kann nicht instanziiert werden
+
+Es wurde versucht, zum Instanziieren einer Klasse, die als [abstrakte](../../windows/abstract-cpp-component-extensions.md). Eine Klasse als markiert `abstract` kann eine Basisklasse sein, aber nicht instanziiert werden.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C3622 generiert.
+
+```
+// C3622.cpp
+// compile with: /clr
+ref class a abstract {};
+
+int main() {
+   a aa;   // C3622
+}
+```

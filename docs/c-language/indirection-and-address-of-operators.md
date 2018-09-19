@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75afd44b8c0a31d9f3731a4c6f9fb86c15de4328
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 618a8053bea59896615d23514c2cf8aff29bea93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389419"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087479"
 ---
 # <a name="indirection-and-address-of-operators"></a>Dereferenzierungs- und Address-of-Operatoren
 
@@ -52,7 +52,6 @@ Der unäre address-of-Operator (**&**) gibt die Adresse seines Operanden aus. De
 
 Wenn der Operand das Ergebnis eines unären __&#42;__-Operators ist, wird keiner der Operatoren ausgewertet, und das Ergebnis ist so, als seien beide übersprungen worden. Das Ergebnis ist kein lvalue, und die Einschränkungen der Operatoren gelten weiterhin. Wenn der Operand das Ergebnis eines __&#91;&#93;__-Operators ist, wird weder der __&__-Operator noch der unäre __&#42;__-Operator, die vom __&#91;&#93;__-Operator impliziert werden, ausgewertet. Das Ergebnis hat die gleichen Auswirkungen wie das Entfernen des __&__-Operators und das Ändern des __&#91;&#93;__-Operators in einen __+__-Operator. Andernfalls ist das Ergebnis ein Zeiger auf ein Objekt oder eine Funktion, die vom Operanden festgelegt wird.
 
-
 ## <a name="examples"></a>Beispiele
 
 Im folgenden Beispiel werden diese gängigen Deklarationen verwendet:
@@ -65,7 +64,7 @@ double d;
 
 Die Anweisung verwendet den address-of-Operator (**&**), um die Adresse des sechsten Elements des `a`-Arrays abzurufen. Das Ergebnis wird in der Zeigervariable `pa` gespeichert:
 
-```C  
+```C
 pa = &a[5];
 ```
 
@@ -89,11 +88,11 @@ int roundup( void );     /* Function declaration */
 int  *proundup  = roundup;
 int  *pround  = &roundup;
 assert( pround == proundup );
-```  
+```
 
 Sobald die Funktion `roundup` deklariert ist, werden zwei Zeiger auf `roundup` deklariert und initialisiert. Der erste Zeiger `proundup` wird unter ausschließlicher Verwendung des Namens der Funktion initialisiert, während der zweite Zeiger `pround` den address-of-Operator bei der Initialisierung verwendet. Die Initialisierungen entsprechen sich.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Dereferenzierungsoperator: &#42;](../cpp/indirection-operator-star.md)  
-[address-of-Operator](../cpp/address-of-operator-amp.md)  
+[Dereferenzierungsoperator: &#42;](../cpp/indirection-operator-star.md)<br/>
+[address-of-Operator](../cpp/address-of-operator-amp.md)

@@ -1,7 +1,7 @@
 ---
 title: longjmp | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/14/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -31,16 +31,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6c26cae9a3fe83012387c93e31c4005d5614d97
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 196f95ae134458f2eaf00ab037c3a560d1317515
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401720"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109689"
 ---
 # <a name="longjmp"></a>longjmp
 
-Stellt die Stapelumgebung und das Ausführungsgebietschema wieder her
+Stellt den Stapel und des ausführungsgebietschemas festlegen, indem eine `setjmp` aufrufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,39 +53,48 @@ void longjmp(
 
 ### <a name="parameters"></a>Parameter
 
-*Env* Variable, in welcher Umgebung gespeichert wird.
+*env*<br/>
+Variable, in der die Umgebung gespeichert wird.
 
-*Wert* zu zurückzugebenden Werts **Setjmp** aufrufen.
+*Wert*<br/>
+Der Wert, der dem Aufruf `setjmp` zurückgegeben wird.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Longjmp** Funktion stellt einen zuvor gespeicherten im Stapel und des ausführungsgebietschemas *Env* von **Setjmp**. **Setjmp** und **Longjmp** bieten eine Möglichkeit zum Ausführen einer nichtlokale **Goto**; sie werden normalerweise verwendet, um die ausführungssteuerung an den Fehlerbehandlungs- oder Wiederherstellung Code in einer vorher aufgerufenen Routine ohne übergeben Mithilfe der normalen aufrufen und Rückgabekonventionen.
+Die **Longjmp** Funktion stellt einen Stapel und des ausführungsgebietschemas zuvor gespeicherten *Env* von `setjmp`. `setjmp` und **Longjmp** bieten eine Möglichkeit, die Ausführung eines nicht lokalen **Goto**; sie werden in der Regel verwendet, um die ausführungssteuerung an Fehlerbehandlungs- oder Wiederherstellungscode in einer vorher aufgerufenen Routine zu übergeben, ohne mit dem normalen Aufruf und Rückgabekonventionen.
 
-Ein Aufruf von **Setjmp** bewirkt, dass die aktuelle Stapel Umgebung gespeichert werden kann *Env*. Ein nachfolgender Aufruf von **Longjmp** stellt die gespeicherte Umgebung wieder her, und die Steuerung an den Punkt unmittelbar nach der entsprechenden zurückgegeben **Setjmp** aufrufen. Ausführung fortgesetzt wird als *Wert* war nur zurückgegebenes der **Setjmp** aufrufen. Die Werte aller Variablen (mit Ausnahme der Variablen registrieren zu können), die für die Übergabe der Steuerung Routine zugänglich sind, enthalten die Werte, die ihnen zugewiesen, wenn waren **Longjmp** aufgerufen wurde. Die Werte der Registervariablen sind unvorhersehbar. Der Rückgabewert von **Setjmp** nicht NULL sein darf. Wenn der *Wert* als 0 übergeben wird, wird der Wert 1 in der tatsächlichen Rückgabe ersetzt.
+Ein Aufruf von `setjmp` bewirkt, dass die aktuelle stapelumgebung gespeichert werden soll *Env*. Ein nachfolgender Aufruf von **Longjmp** stellt die gespeicherte Umgebung wieder her und übergibt die Steuerung an den Punkt sofort nach der entsprechenden `setjmp` aufrufen. Die Ausführung wird fortgesetzt, als ob der *Wert* gerade vom `setjmp`-Aufruf zurückgegeben worden wäre. Die Werte aller Variablen (mit Ausnahme der Variablen "register"), die für die Übergabe der Steuerung Routine zugänglich sind, enthalten die Werte, die ihnen zugewiesen, wenn waren **Longjmp** aufgerufen wurde. Die Werte der Registervariablen sind unvorhersehbar. Der Wert, der von `setjmp` zurückgegeben wird, muss ungleich null sein. Wenn der *Wert* als 0 übergeben wird, wird der Wert 1 in der tatsächlichen Rückgabe ersetzt.
 
-Rufen Sie **Longjmp** vor der Funktion, die aufgerufen **Setjmp** zurückgibt; andernfalls sind die Ergebnisse unvorhersehbar.
+**Microsoft-spezifisch**
 
-Beachten Sie die folgenden Einschränkungen, wenn Sie mit **Longjmp**:
+In Microsoft C++-Code in Windows **Longjmp** verwendet dieselbe stapelentladung Semantik als Code zur Ausnahmebehandlung. Es ist sicher in denselben Situationen verwendet werden, dass die C++-Ausnahmen ausgelöst werden können. Jedoch diese Syntax ist nicht übertragbar und ist mit einigen wichtigsten Einschränkungen.
 
-- Gehen Sie nicht davon aus, dass die Werte der Registervariablen unverändert bleiben. Die Werte der registervariablen in der aufrufenden Routine **Setjmp** möglicherweise nicht wiederhergestellt werden, um die richtigen Werte nach **Longjmp** ausgeführt wird.
+Rufen Sie nur **Longjmp** vor der Funktion, die aufgerufen `setjmp` zurückgegeben; andernfalls sind die Ergebnisse unvorhersehbar.
 
-- Verwenden Sie keine **Longjmp** Steuerung aus eine Interrupt-Behandlungsroutine übertragen werden, es sei denn, das die Unterbrechung durch eine Gleitkommaausnahme verursacht wird. In diesem Fall ein Programm über ein nicht maskierbarer Interrupt über gelegten **Longjmp** Wenn es mathematischen gleitkommapaket zunächst durch Aufrufen erneut initialisiert **_fpreset**.
+Beachten Sie die folgenden Einschränkungen bei Verwendung **Longjmp**:
 
-     **Hinweis** werden mit Vorsicht **Setjmp** und **Longjmp** in C ++ ‑Programme. Da diese Funktionen keine C++-Objektsemantik unterstützt, ist es sicherer, den C++-Mechanismus zur Behandlung von Ausnahmen zu verwenden.
+- Gehen Sie nicht davon aus, dass die Werte der Registervariablen unverändert bleiben. Die Werte der Variablen "Register" in der aufrufenden Routine `setjmp` kann nicht wiederhergestellt werden, auf die richtigen Werte nach **Longjmp** ausgeführt wird.
+
+- Verwenden Sie keine **Longjmp** auf das Steuerelement aus einer interruptbehandlungsroutine zu übertragen, es sei denn, der die Unterbrechung durch eine Gleitkommaausnahme verursacht wird. In diesem Fall kann ein Programm aus einem Interrupthandler über zurückgeben **Longjmp** , wenn es zuerst mathematischen gleitkommapaket durch den Aufruf initialisiert [_fpreset](fpreset.md).
+
+- Verwenden Sie keine **Longjmp** zum Übertragen von Steuerelement über eine Rückrufroutine, die direkt oder indirekt von der Windows-Code aufgerufen.
+
+- Wenn der Code kompiliert wird, mit **/EHs** oder **/EHsc** und die Funktion, die enthält die **Longjmp** Aufruf **"noexcept"** klicken Sie dann lokale Objekte darin, dass die Funktion während der stapelentladung nicht zerstört werden kann.
+
+**Ende Microsoft-spezifisch**
+
+> [!NOTE]
+> In der portablen C++-Code kann nicht davon ausgehen `setjmp` und `longjmp` C++-Objektsemantik unterstützt. Insbesondere eine `setjmp` / `longjmp` Aufruf Paar hat ein undefiniertes Verhalten ersetzen die `setjmp` und `longjmp` von **catch** und **auslösen** aufrufen würde Jede nicht triviale Destruktoren für automatische Objekte. In C++-Programme wird empfohlen, dass Sie den C++-Ausnahmebehandlung-Mechanismus verwenden.
 
 Weitere Informationen finden Sie unter [Verwenden von „setjmp/longjmp“](../../cpp/using-setjmp-longjmp.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**longjmp**|\<setjmp.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
-
-## <a name="libraries"></a>Bibliotheken
-
-Alle Versionen [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -94,4 +103,4 @@ Siehe das Beispiel für [_fpreset](fpreset.md).
 ## <a name="see-also"></a>Siehe auch
 
 [Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)<br/>
-[setjmp](setjmp.md)<br/>
+[setjmp](setjmp.md)

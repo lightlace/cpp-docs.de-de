@@ -1,5 +1,5 @@
 ---
-title: 'Implementshelper:: Cancastto-Methode | Microsoft Docs'
+title: 'Implementshelper:: Cancastto-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,52 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6de971f2de2421a2d7987dab30ba73fa2d225b15
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ab1f2c16f7329f455fbd1fea525b17c9cc433a36
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876552"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593154"
 ---
 # <a name="implementshelpercancastto-method"></a>ImplementsHelper::CanCastTo-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-HRESULT CanCastTo(  
-   REFIID riid,  
-   _Deref_out_ void **ppv  
-);  
-  
-HRESULT CanCastTo(  
-   _In_ const IID &iid,  
-   _Deref_out_ void **ppv  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `riid`  
- Verweis auf eine Schnittstellen-ID.  
-  
- `ppv`  
- Wenn dieser Vorgang erfolgreich ist, ein Zeiger auf die Schnittstelle gemäß `riid` oder `iid`.  
-  
- `iid`  
- Verweis auf eine Schnittstellen-ID.  
-  
-## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.  
-  
-## <a name="remarks"></a>Hinweise  
- Ruft einen Zeiger auf die angegebene Schnittstellen-ID.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [ImplementsHelper-Struktur](../windows/implementshelper-structure.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+HRESULT CanCastTo(
+   REFIID riid,
+   _Deref_out_ void **ppv
+);
+
+HRESULT CanCastTo(
+   _In_ const IID &iid,
+   _Deref_out_ void **ppv
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*riid*  
+Verweis auf eine Schnittstellen-ID.
+
+*ppv*  
+Wenn dieser Vorgang erfolgreich ist, ein Zeiger auf die Schnittstelle angegeben *Riid* oder *Iid*.
+
+*IID*  
+Verweis auf eine Schnittstellen-ID.
+
+## <a name="return-value"></a>Rückgabewert
+
+S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.
+
+## <a name="remarks"></a>Hinweise
+
+Ruft einen Zeiger auf die angegebene Schnittstellen-ID.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[ImplementsHelper-Struktur](../windows/implementshelper-structure.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: Aufrufen systemeigener Funktionen aus verwaltetem Code | Microsoft Docs
+title: Aufrufen systemeigener Funktionen aus verwaltetem Code | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c0d7e69c95790122f44dc59d06f2843afbddfb2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 002093a6a9044c65e5780035ad6c19db35d6b648
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112042"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116746"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Aufrufen systemeigener Funktionen aus verwaltetem Code
 Die Common Language Runtime stellt Platform Invocation Services, oder PInvoke, zur Verfügung, wodurch verwalteter Code Funktionen in C-Format in systemeigenen DLLs (Dynamic Link Libraries) aufrufen kann. Hierbei wird das gleiche Datenmarshalling verwendet wie für die COM-Interoperabilität mit der Laufzeit und für den IJW („It Just Works“)-Mechanismus.  
@@ -35,8 +35,6 @@ Die Common Language Runtime stellt Platform Invocation Services, oder PInvoke, z
 -   [Verwenden von explizitem PInvoke in C++ (DllImport-Attribut)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)  
   
 -   [Verwenden von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
-  
--   [Genauere Betrachtung von Plattformaufrufen](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
   
  In den Beispielen dieses Abschnitts wird veranschaulicht, wie `PInvoke` verwendet werden kann. `PInvoke` kann angepasstes Datenmarshalling vereinfachen, da Sie die Marshallinginformationen deklarativ in Attributen bereitstellen, anstatt prozeduralen Marshallingcode zu schreiben.  
   
@@ -107,7 +105,7 @@ int main() {
   
  In diesem Beispiel arbeitet ein Visual C++-Programm mit der MessageBox-Funktion zusammen, die Teil der Win32-API ist.  
   
-```  
+```cpp  
 // platform_invocation_services_4.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -134,16 +132,17 @@ int main() {
   
  Zur Verwendung von PInvoke in einer Visual C++-Anwendung würde der Code in etwa folgendermaßen aussehen:  
   
- `[DllImport("mylib")]`  
-  
- `extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);`  
+```cpp
+[DllImport("mylib")]
+extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);
+```
   
  Die Schwierigkeit dabei ist, dass wir den Speicher für die nicht verwaltete Zeichenfolge, die von MakeSpecial zurückgegeben wird, nicht löschen können. Andere über PInvoke aufgerufene Funktionen geben einen Zeiger auf einen internen Puffer zurück, der nicht durch den Benutzer freigegeben werden muss. In diesem Fall ist es naheliegend, das IJW-Feature zu verwenden.  
   
 ## <a name="limitations-of-pinvoke"></a>Beschränkungen von PInvoke  
  Sie dürfen nicht den gleichen exakten Zeiger von einer systemeigenen Funktion zurückgeben lassen, den Sie als Parameter verwendet haben. Gibt eine systemeigene Funktion den Zeiger zurück, der mit PInvoke für sie gemarshallt wurde, kann dies Speicherschäden und Ausnahmen zur Folge haben.  
   
-```  
+```cpp  
 __declspec(dllexport)  
 char* fstringA(char* param) {  
    return param;  
@@ -180,7 +179,7 @@ int main() {
   
 |wtypes.h|Visual C++|Visual C++ mit /clr|Common Language Runtime|  
 |--------------|------------------|-----------------------------|-----------------------------|  
-|HANDLE|void*|void*|IntPtr, UIntPtr|  
+|HANDLE|"Void" \*|"Void" \*|IntPtr, UIntPtr|  
 |BYTE|unsigned char|unsigned char|Byte|  
 |SHORT|short|short|Int16|  
 |WORD|unsigned short|unsigned short|UInt16|  
@@ -191,10 +190,10 @@ int main() {
 |DWORD|unsigned long|unsigned long|UInt32|  
 |ULONG|unsigned long|unsigned long|UInt32|  
 |CHAR|char|char|Char|  
-|LPCSTR|char*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|  
-|LPCSTR|const char*|String ^|Zeichenfolge|  
-|LPWSTR|wchar_t*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|  
-|LPCWSTR|const wchar_t *|String ^|Zeichenfolge|  
+|LPCSTR|Char \*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|  
+|LPCSTR|const char \*|String ^|Zeichenfolge|  
+|LPWSTR|"wchar_t" \*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|  
+|LPCWSTR|const wchar_t \*|String ^|Zeichenfolge|  
 |FLOAT|float|float|Single|  
 |DOUBLE|double|double|Double|  
   
@@ -202,9 +201,9 @@ int main() {
   
  Im weiter oben gezeigten Beispiel gibt der CharSet-Parameter von DllImport an, wie verwaltete Zeichenfolgen gemarshallt werden sollen; in diesem Fall sollen sie für die native Seite zu ANSI-Zeichenfolgen gemarshallt werden.  
   
- Sie können Marshallinginformationen für einzelne Argumente einer systemeigenen Funktion mit dem MarshalAs-Attribut angeben. Es gibt mehrere Möglichkeiten, ein String *-Argument zu marshallen: BStr, ANSIBStr, TBStr, LPStr, LPWStr und LPTStr. Der Standard ist LPStr.  
+ Sie können Marshallinginformationen für einzelne Argumente einer nativen Funktion mit dem MarshalAs-Attribut angeben. Es gibt mehrere Möglichkeiten für das Marshalling einer Zeichenfolge \* Argument: BStr, ANSIBStr, TBStr, LPStr, LPWStr und LPTStr. Der Standard ist LPStr.  
   
- In diesem Beispiel wird die Zeichenfolge als Doppelbyte-Unicode-Zeichenfolge, LPWStr, gemarshallt. Die Ausgabe ist der erste Buchstabe der Hello World! Da das zweite Byte der gemarshallten Zeichenfolge null ist und ein einfacher Zugriff interpretiert dies als das Ende der Zeichenfolge-Marker.  
+ In diesem Beispiel wird die Zeichenfolge als Doppelbyte-Unicode-Zeichenfolge, LPWStr, gemarshallt. Die Ausgabe ist der erste Buchstabe des Hello World! Da das zweite Byte der gemarshallten Zeichenfolge null ist, und setzt interpretiert dies als das Ende der Zeichenfolge Marker.  
   
 ```  
 // platform_invocation_services_3.cpp  

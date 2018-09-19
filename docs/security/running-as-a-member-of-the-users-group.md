@@ -1,5 +1,5 @@
 ---
-title: Ausführen als Mitglied der Gruppe Benutzer | Microsoft Docs
+title: Als Mitglied der Gruppe der Benutzer mit | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4faeae9100cf6e60a2eeda19baea20ba42be197f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1fd9d0deded3180529bfa714519a9b8d415c6b15
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841659"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586321"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>Ausführen als Mitglied der Gruppe Benutzer
 Dieses Thema zeigt, wie Sie durch Konfigurieren von Windows-Benutzerkonten als ein Mitglied der Gruppe Benutzer (im Gegensatz zur Gruppe Administratoren) die Sicherheit erhöhen und die Wahrscheinlichkeit einer Infektion mit bösartigem Code verringern.  
@@ -36,7 +36,7 @@ Dieses Thema zeigt, wie Sie durch Konfigurieren von Windows-Benutzerkonten als e
  Eine Ausführung als Administrator macht ihr System anfällig für Sicherheitsangriffe, z. B. durch "Trojaner" oder "Pufferüberlauf". Schon das Besuchen einer Internetsite als Administrator kann dem System schaden, da von einer Internetsite heruntergeladener, bösartiger Code den Computer angreifen kann. Bei einem erfolgreichen Angriff erbt der Angreifer die Administratorrechte und kann anschließend z. B. alle Dateien löschen, die Festplatte formatieren oder ein neues Benutzerkonto mit Administratorzugriff erstellen.  
   
 ## <a name="non-administrator-user-groups"></a>Benutzergruppen ohne Administratorrechte  
- Die von Entwicklern normalerweise verwendeten Windows-Benutzerkonten sollten entweder der Gruppe Benutzer oder der Gruppe Hauptbenutzer hinzugefügt werden. Entwickler sollten zusätzlich der Debuggergruppe hinzugefügt werden. Als Mitglied der Gruppe Benutzer können Sie Routineaufgaben ausführen, z. B. Programme ausführen und Internetsites besuchen, ohne dabei den Computer unnötigen Sicherheitsrisiken auszusetzen. Als Mitglied der Gruppe Hauptbenutzer können Sie darüber hinaus weitere Aufgaben ausführen, z. B. das Installieren von Anwendungen, die Installation eines Druckers und einen Großteil der Operationen der Systemsteuerung. Wenn Sie Verwaltungsaufgaben wie die Aktualisierung des Betriebssystems oder die Konfiguration von Systemparametern ausführen müssen, sollten Sie sich nur solange als Administrator anmelden, wie es für die Ausführung der Verwaltungsaufgabe erforderlich ist. Alternativ können Sie die Windows **Runas** Befehl kann verwendet werden, um bestimmte Anwendungen mit Verwaltungszugriff zu starten.  
+ Die von Entwicklern normalerweise verwendeten Windows-Benutzerkonten sollten entweder der Gruppe Benutzer oder der Gruppe Hauptbenutzer hinzugefügt werden. Entwickler sollten zusätzlich der Debuggergruppe hinzugefügt werden. Als Mitglied der Gruppe Benutzer können Sie Routineaufgaben ausführen, z. B. Programme ausführen und Internetsites besuchen, ohne dabei den Computer unnötigen Sicherheitsrisiken auszusetzen. Als Mitglied der Gruppe Hauptbenutzer können Sie darüber hinaus weitere Aufgaben ausführen, z. B. das Installieren von Anwendungen, die Installation eines Druckers und einen Großteil der Operationen der Systemsteuerung. Wenn Sie Verwaltungsaufgaben wie die Aktualisierung des Betriebssystems oder die Konfiguration von Systemparametern ausführen müssen, sollten Sie sich nur solange als Administrator anmelden, wie es für die Ausführung der Verwaltungsaufgabe erforderlich ist. Sie können auch die Windows **Runas** Befehl kann verwendet werden, um bestimmte Anwendungen mit Verwaltungszugriff zu starten.  
   
 ## <a name="exposing-customers-to-security-risks"></a>Sicherheitsrisiken für Kunden  
  Insbesondere für Entwickler ist es wichtig, nicht Mitglied der Gruppe Administratoren zu sein. Abgesehen vom Schutz der Entwicklungscomputer werden Entwickler auf diese Weise daran gehindert, unbeabsichtigt Anwendungscode zu schreiben, für dessen spätere Ausführung die Kunden Mitglieder der Gruppe Administratoren sein müssen. Wenn bei der Entwicklung Code eingeführt wird, der Administratorzugriff erfordert, schlägt die Ausführung des Codes zur Laufzeit fehl, und Sie werden in einer Warnung darauf hingewiesen, dass die Kunden für die Fortführung der Anwendung als Administratoren angemeldet sein müssen.  

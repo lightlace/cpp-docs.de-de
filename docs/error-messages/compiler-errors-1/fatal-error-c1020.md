@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1020 | Microsoft Docs
+title: Schwerwiegender Fehler C1020 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c70727b5e0d83b03099b637e0f768f65d271b05
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ab0da342e575c0af452ec70d1759fe34188db9a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224638"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066868"
 ---
 # <a name="fatal-error-c1020"></a>Schwerwiegender Fehler C1020
-Unerwartetes #endif  
-  
- Die `#endif` -Direktive hat keine entsprechende `#if`-, `#ifdef`- oder `#ifndef` -Direktive. Stellen Sie sicher, dass jede `#endif` -Direktive über eine entsprechende Direktive verfügt.  
-  
- Im folgenden Beispiel wird C1020 generiert:  
-  
-```  
-// C1020.cpp  
-#endif     // C1020  
-```  
-  
- Mögliche Lösung:  
-  
-```  
-// C1020b.cpp  
-// compile with: /c  
-#if 1  
-#endif  
+
+Unerwartetes #endif
+
+Die `#endif` -Direktive hat keine entsprechende `#if`-, `#ifdef`- oder `#ifndef` -Direktive. Stellen Sie sicher, dass jede `#endif` -Direktive über eine entsprechende Direktive verfügt.
+
+Im folgenden Beispiel wird C1020 generiert:
+
+```
+// C1020.cpp
+#endif     // C1020
+```
+
+Mögliche Lösung:
+
+```
+// C1020b.cpp
+// compile with: /c
+#if 1
+#endif
 ```

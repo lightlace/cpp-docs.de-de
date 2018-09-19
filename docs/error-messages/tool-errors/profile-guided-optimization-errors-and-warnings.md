@@ -1,5 +1,5 @@
 ---
-title: Profilgesteuerte Optimierung Errors and Warnings | Microsoft Docs
+title: Profilgesteuerte Optimierung-Fehler und Warnungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24e467c3ba418bfb0c95a0054e30773301c614f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 775702c7ecfdb579d8edcfb3e1786f5152dfcc7c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317319"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109417"
 ---
 # <a name="profile-guided-optimization-errors-and-warnings"></a>Fehler und Warnungen in der profilgesteuerten Optimierung
-Dieser Abschnitt ist eine Referenz zu den von den Buildtools ausgegebenen Fehlermeldungen. Um Hilfe zu einer bestimmten Fehlermeldung, entweder klicken Sie auf die Fehlernummer im Ausgabefenster angezeigt, und drücken Sie F1, geben die Fehlernummer in der **suchen Sie nach** im Index ein, oder klicken Sie auf den entsprechenden Link:  
-  
- [Fehler in profilgesteuerter Optimierung: PG0165](../../error-messages/tool-errors/profile-guided-optimization-error-pg0165.md)  
-  
- [Warnung bei profilgesteuerter Optimierung: PG1039](../../error-messages/tool-errors/profile-guided-optimization-warning-pg1039.md)  
-  
- [Warnung bei profilgesteuerter Optimierung: PG1087](../../error-messages/tool-errors/profile-guided-optimization-warning-pg1087.md)
+
+Dieser Abschnitt ist eine Referenz zu den von den Buildtools ausgegebenen Fehlermeldungen. Hilfe zu einer bestimmten Fehlermeldung, entweder klicken Sie auf die Fehlernummer im Ausgabefenster angezeigt, und drücken Sie F1, geben Sie die Fehlernummer in der **suchen Sie nach** Feld im Index, oder klicken Sie auf den entsprechenden Link:
+
+[Fehler in profilgesteuerter Optimierung: PG0165](../../error-messages/tool-errors/profile-guided-optimization-error-pg0165.md)
+
+[Warnung bei profilgesteuerter Optimierung: PG1039](../../error-messages/tool-errors/profile-guided-optimization-warning-pg1039.md)
+
+[Warnung bei profilgesteuerter Optimierung: PG1087](../../error-messages/tool-errors/profile-guided-optimization-warning-pg1087.md)

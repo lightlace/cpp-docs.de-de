@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4611 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4611 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5946c10b5e0e0e7e08f1ee37c77120896937adb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 723976dc8b7085ede9b3157445ff3026de6fc4b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293152"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091048"
 ---
 # <a name="compiler-warning-level-4-c4611"></a>Compilerwarnung (Stufe 1) C4600
-Interaktion zwischen "Function" und die Zerstörung von C++ ist nicht portabel  
-  
- Auf manchen Plattformen, Funktionen, die enthalten **catch** unterstützen möglicherweise keine C++-Objekt-Semantik der Zerstörung außerhalb des Bereichs.  
-  
- Um unerwartetes Verhalten zu vermeiden, verwenden Sie **catch** in Funktionen, die Konstruktoren und Destruktoren besitzen.  
-  
- Diese Warnung wird nur einmal ausgegeben; finden Sie unter [Pragma Warnung](../../preprocessor/warning.md).
+
+Interaktion zwischen "Function" und C++-objektlöschung ist nicht portabel
+
+Auf manchen Plattformen ist die Funktionen, die umfassen **catch** unterstützen möglicherweise keine C++-Objektsemantik der Zerstörung, wenn außerhalb des gültigen Bereichs.
+
+Verwenden Sie zum Vermeiden von unerwartetem Verhalten **catch** in Funktionen, die Konstruktoren und Destruktoren besitzen.
+
+Diese Warnung wird nur einmal ausgegeben; finden Sie unter [Pragma-Warnung](../../preprocessor/warning.md).

@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2d26ecc120565556651057b764a5fdd7ae64d43
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: cec1f3fe6a3a1955b18dacd695d5a459b5550c05
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958252"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318693"
 ---
 # <a name="ostreambufiterator-class"></a>ostreambuf_iterator Class
 
@@ -45,9 +45,11 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="parameters"></a>Parameter
 
-*CharType* der Typ, der den Zeichentyp für das Ostreambuf_iterator darstellt. Dieses Argument ist optional, und der Standardwert ist **Char**.
+*CharType*<br/>
+Der Typ, der den Zeichentyp für das ostreambuf_iterator-Objekt darstellt. Dieses Argument ist optional, und der Standardwert ist **Char**.
 
-*"Traits"* der Typ, der den Zeichentyp für das Ostreambuf_iterator darstellt. Dieses Argument ist optional, und der Standardwert ist `char_traits`\< *CharType>.*
+*Merkmale*<br/>
+Der Typ, der den Zeichentyp für das ostreambuf_iterator-Objekt darstellt. Dieses Argument ist optional, und der Standardwert ist `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Hinweise
 
@@ -78,7 +80,7 @@ Die ostreambuf_iterator-Klasse muss den Anforderungen für einen Ausgabeiterator
 
 |Operator|Beschreibung|
 |-|-|
-|[operator*](#op_star)|Der Dereferenzierungsoperator, der zum Implementieren des Ausgabeiteratorausdrucks *`i` = `x` verwendet wird.|
+|[operator*](#op_star)|Der Dereferenzierungsoperator, der zum Implementieren des ausgabeiteratorausdrucks \* `i`  =  `x`.|
 |[operator++](#op_add_add)|Ein nicht funktionaler Inkrementoperator, der einen `ostreambuf_iterator` zum gleichen Objekt zurückgibt, das er adressiert hat, bevor der Vorgang aufgerufen wurde.|
 |[operator=](#op_eq)|Der Operator fügt ein Zeichen in den zugeordneten Streampuffer ein.|
 
@@ -124,18 +126,18 @@ int main( )
    // elements to the output streambuf:
    cout << "The characters written to the output stream\n"
         << " by charOutBuf are: ";
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;
- *charOutBuf = 'U';
+*charOutBuf = 'U';
    charOutBuf++;
- *charOutBuf = 'T';
+*charOutBuf = 'T';
    charOutBuf++;
    cout << "." << endl;
 }
-\* Output:
+/* Output:
 The characters written to the output stream
- by charOutBuf are: OUT.
-*\
+by charOutBuf are: OUT.
+*/
 ```
 
 ## <a name="failed"></a> ostreambuf_iterator::failed
@@ -172,9 +174,9 @@ int main( )
 
 *charOut = 'a';
    charOut ++;
- *charOut  = 'b';
+*charOut  = 'b';
    charOut ++;
- *charOut = 'c';
+*charOut = 'c';
    cout << " are characters output individually." << endl;
 
    bool b1 = charOut.failed ( );
@@ -183,13 +185,13 @@ int main( )
    else
        cout << "No insertions failed." << endl;
 }
-\* Output:
+/* Output:
 abc are characters output individually.
 No insertions failed.
-*\
+*/
 ```
 
-## <a name="op_star"></a> ostreambuf_iterator::operator*
+## <a name="op_star"></a>  ostreambuf_iterator:: Operator\*
 
 Ein nicht funktionaler Dereferenzierungsoperator, der zum Implementieren des Ausgabeiteratorausdrucks \* *i* = *x* verwendet wird.
 
@@ -225,15 +227,15 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;   // no effect on iterator position
- *charOutBuf = 'U';
- *charOutBuf = 'T';
+*charOutBuf = 'U';
+*charOutBuf = 'T';
 }
-\* Output:
+/* Output:
 Elements written to output stream:
 OUT
-*\
+*/
 ```
 
 ## <a name="op_add_add"></a> ostreambuf_iterator::operator++
@@ -273,15 +275,15 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;      // No effect on iterator position
- *charOutBuf = 'U';
- *charOutBuf = 'T';
+*charOutBuf = 'U';
+*charOutBuf = 'T';
 }
-\* Output:
+/* Output:
 Elements written to output stream:
 OUT
-*\
+*/
 ```
 
 ## <a name="op_eq"></a> ostreambuf_iterator::operator=
@@ -294,7 +296,8 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 
 ### <a name="parameters"></a>Parameter
 
-*_Char* das Zeichen, das in den Streampuffer eingefügt werden soll.
+*_Char*<br/>
+Das in den Streampuffer einzufügende Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -324,15 +327,15 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;      // No effect on iterator position
- *charOutBuf = 'U';
- *charOutBuf = 'T';
+*charOutBuf = 'U';
+*charOutBuf = 'T';
 }
-\* Output:
+/* Output:
 Elements written to output stream:
 OUT
-*\
+*/
 ```
 
 ## <a name="ostreambuf_iterator_ostreambuf_iterator"></a> ostreambuf_iterator::ostreambuf_iterator
@@ -346,9 +349,11 @@ ostreambuf_iterator(ostream_type& Ostr) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Strbuf* das Streambuf-Ausgabeobjekt verwendet, um den Zeiger auf den ausgabestreampuffer zu initialisieren.
+*strbuf*<br/>
+Das zur Initialiserung des Ausgabestreampufferzeigers verwendete streambuf-Ausgabeobjekt.
 
-*Ostr* das ausgabestreamobjekt verwendet, um den Zeiger auf den ausgabestreampuffer zu initialisieren.
+*Ostr*<br/>
+Das zur Initialiserung des Ausgabestreampufferzeigers verwendete Streamausgabeobjekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -374,19 +379,19 @@ int main( )
 
 *charOut = 'O';
    charOut ++;
- *charOut  = 'U';
+*charOut  = 'U';
    charOut ++;
- *charOut = 'T';
+*charOut = 'T';
    cout << " are characters output individually." << endl;
 
    ostreambuf_iterator<char> strOut ( cout );
    string str = "These characters are being written to the output stream.\n ";
    copy ( str.begin ( ), str. end ( ), strOut );
 }
-\* Output:
+/* Output:
 OUT are characters output individually.
 These characters are being written to the output stream.
-*\
+*/
 ```
 
 ## <a name="ostreambuf_iterator_ostream_type"></a> ostreambuf_iterator::ostream_type
@@ -457,18 +462,18 @@ int main( )
    // elements to the output streambuf:
    cout << "The characters written to the output stream\n"
         << " by charOutBuf are: ";
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;
- *charOutBuf = 'U';
+*charOutBuf = 'U';
    charOutBuf++;
- *charOutBuf = 'T';
+*charOutBuf = 'T';
    charOutBuf++;
    cout << "." << endl;
 }
-\* Output:
+/* Output:
 The characters written to the output stream
- by charOutBuf are: OUT.
-*\
+by charOutBuf are: OUT.
+*/
 ```
 
 ## <a name="see-also"></a>Siehe auch

@@ -17,41 +17,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23f204e7e8a545fbee7ab516495ed711d7984a9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 50f9a17c93849dec49c2c9a72825a5797d8c040c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943687"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068623"
 ---
 # <a name="bstrtcopy"></a>_bstr_t::copy
-**Microsoft-spezifisch**  
-  
- Erstellt eine Kopie des gekapselten `BSTR`.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-BSTR copy( bool fCopy = true ) const;  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *fCopy*  
- True gibt an, `copy` gibt eine Kopie des enthaltenen `BSTR`, andernfalls `copy` den tatsächlichen BSTR zurück.  
-  
-## <a name="remarks"></a>Hinweise  
- Gibt eine neu zugeordnete Kopie des gekapselten `BSTR`-Objekts zurück.  
-  
-## <a name="example"></a>Beispiel  
-  
-```cpp 
-STDMETHODIMP CAlertMsg::get_ConnectionStr(BSTR *pVal){ //  m_bsConStr is _bstr_t  
-   *pVal = m_bsConStr.copy();  
-}  
-```  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [_bstr_t-Klasse](../cpp/bstr-t-class.md)
+
+**Microsoft-spezifisch**
+
+Erstellt eine Kopie des gekapselten `BSTR`.
+
+## <a name="syntax"></a>Syntax
+
+```
+BSTR copy( bool fCopy = true ) const;
+```
+
+#### <a name="parameters"></a>Parameter
+
+*fCopy*<br/>
+True gibt an, **Kopie** gibt eine Kopie des enthaltenen `BSTR`, andernfalls **Kopie** den tatsächlichen BSTR zurück.
+
+## <a name="remarks"></a>Hinweise
+
+Gibt eine neu zugeordnete Kopie des gekapselten `BSTR`-Objekts zurück.
+
+## <a name="example"></a>Beispiel
+
+```cpp
+STDMETHODIMP CAlertMsg::get_ConnectionStr(BSTR *pVal){ //  m_bsConStr is _bstr_t
+   *pVal = m_bsConStr.copy();
+}
+```
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[_bstr_t-Klasse](../cpp/bstr-t-class.md)

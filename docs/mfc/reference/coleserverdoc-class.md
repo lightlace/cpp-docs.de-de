@@ -92,12 +92,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67920590979c4b9bf3099e8c64c142aeb813b1ce
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a02ade5beb9c3a8480672211fff4b9d23fe48562
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851657"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217588"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc-Klasse
 Die Basisklasse für OLE-Serverdokumente.  
@@ -296,7 +296,7 @@ LPOLECLIENTSITE GetClientSite() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ruft einen Zeiger auf die zugrunde liegende [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706) Schnittstelle.  
+ Ruft einen Zeiger auf die zugrunde liegende [IOleClientSite](/windows/desktop/api/oleidl/nn-oleidl-ioleclientsite) Schnittstelle.  
   
 ##  <a name="getdocobjectserver"></a>  COleServerDoc::GetDocObjectServer  
  Überschreiben Sie diese Funktion zum Erstellen eines neuen `CDocObjectServer` Element aus, und geben Sie einen Zeiger darauf zurück.  
@@ -492,7 +492,7 @@ virtual void OnClose(OLECLOSE dwCloseOption);
 ### <a name="remarks"></a>Hinweise  
  Die Standardimplementierung ruft `CDocument::OnCloseDocument`.  
   
- Weitere Informationen und weitere Werte finden Sie unter [OLECLOSE](http://msdn.microsoft.com/library/windows/desktop/ms680623) im Windows SDK.  
+ Weitere Informationen und weitere Werte finden Sie unter [OLECLOSE](/windows/desktop/api/oleidl/ne-oleidl-tagoleclose) im Windows SDK.  
   
 ##  <a name="ondeactivate"></a>  COleServerDoc::OnDeactivate  
  Vom Framework aufgerufen, wenn der Benutzer ein eingebettetes oder verknüpftes Element deaktiviert, die derzeit direkt aktiv ist.  
@@ -668,7 +668,7 @@ virtual void OnResizeBorder(
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion ändert die Größe und passt Symbolleisten und andere Elemente der Benutzeroberfläche in Übereinstimmung mit der neuen Fenstergröße.  
   
- Weitere Informationen finden Sie unter [IOleInPlaceUIWindow](http://msdn.microsoft.com/library/windows/desktop/ms680716) im Windows SDK.  
+ Weitere Informationen finden Sie unter [IOleInPlaceUIWindow](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceuiwindow) im Windows SDK.  
   
  Dies ist ein fortschrittlicher überschreibbar.  
   

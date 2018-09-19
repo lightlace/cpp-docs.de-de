@@ -12,26 +12,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdf65de941486cb8256ba8e30a3f186d3e3702d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c2c558c5d32f75561d5722a656450d5f18f5166a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381693"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084938"
 ---
 # <a name="character-testing"></a>Zeichentests
-**ANSI 4.3.1** Die Zeichensätze, auf die die Funktionen `isalnum`, `isalpha`, `iscntrl`, `islower`, `isprint` und `isupper` prüfen  
-  
- Die folgende Liste beschreibt diese Funktionen, wie sie vom Microsoft C-Compiler implementiert werden.  
-  
-|Funktion|Tests für|  
-|--------------|---------------|  
-|`isalnum`|Die Zeichen 0-9, A-Z, a-z ASCII 48-57, 65-90, 97-122|  
-|`isalpha`|Die Zeichen A-Z, a-z ASCII 65-90, 97-122|  
-|`iscntrl`|ASCII 0 –31, 127|  
-|`islower`|Die Zeichen A–Z ASCII 97-122|  
-|`isprint`|Die Zeichen A-Z, a-z, 0-9, Satzzeichen, Leerzeichen-ASCII 32-126|  
-|`isupper`|Die Zeichen A–Z ASCII 65-90|  
-  
-## <a name="see-also"></a>Siehe auch  
- [Bibliotheksfunktionen](../c-language/library-functions.md)
+
+**ANSI 4.3.1** Die Zeichensätze, auf die die Funktionen `isalnum`, `isalpha`, `iscntrl`, `islower`, `isprint` und `isupper` prüfen
+
+Die folgende Liste beschreibt diese Funktionen, wie sie vom Microsoft C-Compiler implementiert werden.
+
+|Funktion|Tests für|
+|--------------|---------------|
+|`isalnum`|Die Zeichen 0-9, A-Z, a-z ASCII 48-57, 65-90, 97-122|
+|`isalpha`|Die Zeichen A-Z, a-z ASCII 65-90, 97-122|
+|`iscntrl`|ASCII 0 –31, 127|
+|`islower`|Die Zeichen A–Z ASCII 97-122|
+|`isprint`|Die Zeichen A-Z, a-z, 0-9, Satzzeichen, Leerzeichen-ASCII 32-126|
+|`isupper`|Die Zeichen A–Z ASCII 65-90|
+
+## <a name="see-also"></a>Siehe auch
+
+[Bibliotheksfunktionen](../c-language/library-functions.md)

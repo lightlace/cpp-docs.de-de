@@ -1,5 +1,5 @@
 ---
-title: Multithreading bei C und Win32 | Microsoft Docs
+title: Multithreading bei C und Win32 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/02/2018
 ms.technology:
@@ -20,39 +20,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 993bee92c9dacc831a8bbc8fc000ec982025a399
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 444421a099fac7635dd668c12b22600d33d60f8b
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687542"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130752"
 ---
 # <a name="multithreading-with-c-and-win32"></a>Multithreading bei C und Win32
-Microsoft Visual C++ bietet Unterstützung für Multithreadanwendungen erstellen. Sie sollten in Betracht ziehen, mehrere Threads verwenden, wenn Ihre Anwendung benötigt, um kostenintensive Vorgänge auszuführen, die die Benutzeroberfläche reagiert führen würde.  
+Microsoft Visual C++ bietet Unterstützung für die Entwicklung von Multithreadanwendungen. Sie sollten mit mehr als einem Thread aus, wenn Ihre Anwendung benötigt, kostenintensive Vorgänge ausführen, die die Benutzeroberfläche reagiert verursachen würde.  
   
- Visual C++ ermöglicht zwei Arten der Programmierung mit mehreren Threads: mit der MFC-Bibliothek (Microsoft Foundation Classes) oder der C-Laufzeitbibliothek und der Win32-API. Informationen zum Erstellen von Multithreadanwendungen mit MFC finden Sie unter [Multithreading mit C++ und MFC](../parallel/multithreading-with-cpp-and-mfc.md) nach dem Lesen der folgenden Themen über Multithreading in c  
+Visual C++ ermöglicht zwei Arten der Programmierung mit mehreren Threads: mit der MFC-Bibliothek (Microsoft Foundation Classes) oder der C-Laufzeitbibliothek und der Win32-API. Weitere Informationen zum Erstellen von Multithreadanwendungen mit MFC, finden Sie unter [Multithreading mit C++ und MFC](multithreading-with-cpp-and-mfc.md) nach dem Lesen der folgenden Themen über Multithreading in c  
   
- In diesen Themen werden die Funktionen von Visual C++ erläutert, die die Erstellung von Multithreadprogrammen unterstützen.  
+In diesen Themen werden die Funktionen von Visual C++ erläutert, die die Erstellung von Multithreadprogrammen unterstützen.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?  
   
--   [Was multithreading geht es um](../parallel/multithread-programs.md)  
+- [Was multithreading geht es um](multithread-programs.md)  
   
--   [Bibliotheksunterstützung für multithreading](../parallel/library-support-for-multithreading.md)  
+- [Bibliotheksunterstützung für multithreading](library-support-for-multithreading.md)  
   
--   [Includedateien für multithreading](../parallel/include-files-for-multithreading.md)  
+- [Includedateien für multithreading](include-files-for-multithreading.md)  
   
--   [C Run-Time Library-Funktionen zur Threadsteuerung](../parallel/c-run-time-library-functions-for-thread-control.md)  
+- [C Run-Time-Bibliotheksfunktionen zur Threadsteuerung](c-run-time-library-functions-for-thread-control.md)  
   
--   [Beispiel-Multithreadprogramm C](../parallel/sample-multithread-c-program.md)  
+- [Multithread-Beispielprogramm in C](sample-multithread-c-program.md)  
   
--   [Schreiben von Win32-Multithreadprogrammen](../parallel/writing-a-multithreaded-win32-program.md)  
+- [Schreiben von Win32-Multithreadprogrammen](writing-a-multithreaded-win32-program.md)  
   
--   [Kompilieren und Binden von Multithreadprogrammen](../parallel/compiling-and-linking-multithread-programs.md)  
+- [Kompilieren und Verknüpfen von Multithreadprogrammen](compiling-and-linking-multithread-programs.md)  
   
--   [Vermeiden von Problembereichen bei Multithreadprogrammen](../parallel/avoiding-problem-areas-with-multithread-programs.md)  
+- [Vermeiden von Problembereichen bei Multithreadprogrammen](avoiding-problem-areas-with-multithread-programs.md)  
   
--   [Lokaler Threadspeicher (TLS)](../parallel/thread-local-storage-tls.md)  
+- [Lokaler Threadspeicher (TLS)](thread-local-storage-tls.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Multithreadingunterstützung für älteren Code (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)
+ 
+[Multithreadingunterstützung für älteren Code (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)

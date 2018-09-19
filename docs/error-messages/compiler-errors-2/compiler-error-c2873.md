@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2873 | Microsoft Docs
+title: Compilerfehler C2873 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a04d650729bdda949754c5070a6c307d390929
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf0cc5663d81d6c1e7ad6a9f1a5f7ca167f12909
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244377"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049903"
 ---
 # <a name="compiler-error-c2873"></a>Compilerfehler C2873
-'Symbol': Symbol kann nicht in einer using-Deklaration verwendet werden  
-  
- Ein `using` -Direktive fehlt eine [Namespace](../../cpp/namespaces-cpp.md) Schlüsselwort. Dies bewirkt, dass den Compiler den Code als fälschlicherweise eine [using-Deklaration](../../cpp/using-declaration.md) anstelle eines [using-Direktive](../../cpp/namespaces-cpp.md#using_directives).
+
+'Symbol': Symbol kann nicht in eine using-Deklaration verwendet werden
+
+Ein `using` -Direktive fehlt ein [Namespace](../../cpp/namespaces-cpp.md) Schlüsselwort. Dies bewirkt, dass den Compiler fälschlicherweise den Code als ein [using-Deklaration](../../cpp/using-declaration.md) anstelle eines [using-Direktive](../../cpp/namespaces-cpp.md#using_directives).

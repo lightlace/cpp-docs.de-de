@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1311 | Microsoft Docs
+title: Schwerwiegender Fehler C1311 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53b3759a5fec4b072f9a9b300670d61cb0d101c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d93aa28d0cef3c07fd469349d485c4009fa4771d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226674"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091061"
 ---
 # <a name="fatal-error-c1311"></a>Schwerwiegender Fehler C1311
-COFF-Format kann "Var" mit der Nummer Byte(s) einer Adresse nicht statisch initialisieren  
-  
- Eine Adresse, deren Wert zur Kompilierzeit nicht bekannt ist, kann statisch einer Variablen zugewiesen werden, dessen Typ Speicher von weniger als vier Bytes enthält.  
-  
- Dieser Fehler kann auftreten, Code, der andernfalls ist C++-gültig.  
-  
- Das folgende Beispiel zeigt eine Bedingung, die C1311 verursachen können.  
-  
-```  
-char c = (char)"Hello, world";   // C1311  
-char *d = (char*)"Hello, world";   // OK  
+
+Das COFF-Format kann "Var" mit der Anzahl Byte(s) einer Adresse nicht statisch initialisieren
+
+Eine Adresse, deren Wert zum Zeitpunkt der Kompilierung nicht bekannt ist, kann nicht statisch einer Variablen zugewiesen werden, dessen Typ Speicher mit weniger als vier Bytes ist.
+
+Dieser Fehler kann auftreten, auf den Code, die C++-gültig.
+
+Das folgende Beispiel zeigt eine Bedingung, die C1311 verursachen können.
+
+```
+char c = (char)"Hello, world";   // C1311
+char *d = (char*)"Hello, world";   // OK
 ```

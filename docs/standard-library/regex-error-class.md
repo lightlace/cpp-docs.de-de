@@ -1,7 +1,7 @@
 ---
 title: regex_error-Klasse | Microsoft-Dokumente
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7983857b3814f8ddd9c10ab37676bc2e87e9a59c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 7358af41e1a7172daec619bec3e701ff4541fd0c
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964144"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384981"
 ---
 # <a name="regexerror-class"></a>regex_error-Klasse
 
@@ -32,25 +32,65 @@ Meldet ein ungültiges basic_regex-Objekt.
 
 ```cpp
 class regex_error
- : public std::runtime_error {
-public:
-    explicit regex_error(regex_constants::error_code error);
-
-    regex_constants::error_code code() const;
-
-
-};
+: public std::runtime_error
 ```
 
 ## <a name="remarks"></a>Hinweise
 
 Die Klasse beschreibt ein Ausnahmeobjekt, das ausgelöst wurde, um einen Fehler bei der Erstellung oder Verwendung eines `basic_regex` -Objekts zu melden.
 
+### <a name="constructors"></a>Konstruktoren
+
+|Konstruktor|Beschreibung|
+|-|-|
+|[regex_error](#regex_error)|Erstellt das Objekt.|
+
+### <a name="member-functions"></a>Memberfunktionen
+
+|Member-Funktion|Beschreibung|
+|-|-|
+|[Code](#code)|Gibt den Fehlercode zurück.|
+
 ## <a name="requirements"></a>Anforderungen
 
 **Header:** \<regex >
 
 **Namespace:** std
+
+## <a name="example"></a>Beispiel
+
+```cpp
+// std__regex__regex_error.cpp
+// compile with: /EHsc
+#include <regex>
+#include <iostream>
+
+int main()
+    {
+    std::regex_error paren(std::regex_constants::error_paren);
+
+    try
+        {
+        std::regex rx("(a");
+        }
+    catch (const std::regex_error& rerr)
+        {
+        std::cout << "regex error: "
+            << (rerr.code() == paren.code() ? "unbalanced parentheses" : "")
+            << std::endl;
+        }
+    catch (...)
+        {
+        std::cout << "unknown exception" << std::endl;
+        }
+
+    return (0);
+    }
+```
+
+```Output
+regex error: unbalanced parentheses
+```
 
 ## <a name="code"></a> regex_error::code
 
@@ -64,43 +104,6 @@ regex_constants::error_code code() const;
 
 Die Memberfunktion gibt den Wert zurück, der an den Konstruktor des Objekts übergeben wurde.
 
-### <a name="example"></a>Beispiel
-
-```cpp
-// std__regex__regex_error_code.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex_error paren(std::regex_constants::error_paren);
-
-    try
-        {
-        std::regex rx("(a");
-        }
-    catch (const std::regex_error& rerr)
-        {
-        std::cout << "regex error: "
-            << (rerr.code() == paren.code()
-                 "unbalanced parentheses" : "")
-            << std::endl;
-        }
-    catch (...)
-        {
-        std::cout << "unknown exception" << std::endl;
-        }
-
-    return (0);
-    }
-
-```
-
-```Output
-regex error: unbalanced parentheses
-```
-
 ## <a name="regex_error"></a> regex_error::regex_error
 
 Erstellt das Objekt.
@@ -111,48 +114,12 @@ regex_error(regex_constants::error_code error);
 
 ### <a name="parameters"></a>Parameter
 
-*Fehler* den Fehlercode.
+*Fehler*<br/>
+Der Fehlercode.
 
 ### <a name="remarks"></a>Hinweise
 
 Der Konstruktor erstellt ein Objekt, das den Wert enthält *Fehler*.
-
-### <a name="example"></a>Beispiel
-
-```cpp
-// std__regex__regex_error_construct.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex_error paren(std::regex_constants::error_paren);
-
-    try
-        {
-        std::regex rx("(a");
-        }
-    catch (const std::regex_error& rerr)
-        {
-        std::cout << "regex error: "
-            << (rerr.code() == paren.code()
-                 "unbalanced parentheses" : "")
-            << std::endl;
-        }
-    catch (...)
-        {
-        std::cout << "unknown exception" << std::endl;
-        }
-
-    return (0);
-    }
-
-```
-
-```Output
-regex error: unbalanced parentheses
-```
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,5 +1,5 @@
 ---
-title: 'ComPtr:: ~ ComPtr-Destruktor | Microsoft Docs'
+title: 'ComPtr:: ~ ComPtr-Destruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5f430e11c2d213273b46b6b6d2d502407ae84ab6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5125ff259847162d75d3e2c7553f0887e177b0ee
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883445"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601300"
 ---
 # <a name="comptrcomptr-destructor"></a>ComPtr::~ComPtr-Destruktor
-Hebt die Initialisierung einer Instanz von ComPtr auf.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-WRL_NOTHROW ~ComPtr();  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [ComPtr-Klasse](../windows/comptr-class.md)
+
+Hebt die Initialisierung einer Instanz von **ComPtr**.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+WRL_NOTHROW ~ComPtr();
+```
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[ComPtr-Klasse](../windows/comptr-class.md)

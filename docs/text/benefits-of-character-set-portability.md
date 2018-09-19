@@ -1,5 +1,5 @@
 ---
-title: Vorteile der Zeichensatzportabilität | Microsoft Docs
+title: Vorteile der Zeichensatzportabilität | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,23 +11,23 @@ helpviewer_keywords:
 - character sets [C++], benefits
 - portability [C++], character sets
 ms.assetid: bd60b925-1498-4e4f-897b-4c8ce66edcf7
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d1b78048baebfd89aed0ccc898c2bb9e3612525
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b812b0712e6df24422ebe4a3b73376619051b484
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853816"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586804"
 ---
 # <a name="benefits-of-character-set-portability"></a>Vorteile der Zeichensatzportabilität
-Sie können MFC- und C-Laufzeit Portabilität-Funktionen verwenden, auch wenn Sie nicht gerade beabsichtigen, Ihre Anwendung internationalisieren profitieren:  
+Sie profitieren von MFC- und C-Laufzeit-Portabilität-Funktionen verwenden, auch wenn Sie nicht derzeit beabsichtigen, Ihre Anwendung internationalisieren wollten:  
   
--   Portables verleiht der CodeBase flexibel. Sie können ihn später in Unicode oder MBCS problemlos verschieben.  
+-   Portables, macht der CodeBase flexibel. Sie können es später noch Mal in Unicode oder MBCS problemlos verschieben.  
   
--   Verwenden von Unicode effizienter Anwendungen für Windows. Da Windows Unicode verwendet, müssen nicht-Unicode-Zeichenfolgen übergeben, und vom Betriebssystem übersetzt werden, was Mehraufwand bedeutet.  
+-   Verwenden von Unicode wird Ihre Anwendungen für Windows effizienter. Da Windows Unicode verwendet, müssen nicht-Unicode-Zeichenfolgen übergeben, und vom Betriebssystem übersetzt werden, was Mehraufwand bedeutet.  
 
   
 ## <a name="see-also"></a>Siehe auch  

@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::uninitialized_fill_n [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d104d8a64dd60e5aaa7244e5bf5f535343f6e132
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b740613666c7e4e1b5cc2c1b14c5cbf04b0fe6ef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957424"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702870"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt;-Funktionen
 
@@ -113,7 +113,8 @@ T* addressof(T& Val);
 
 ### <a name="parameters"></a>Parameter
 
-*Val* Objekts bzw. der Funktion für die die echte Adresse abgerufen.
+*val*<br/>
+Das Objekt oder die Funktion, für das bzw. die die echte Adresse abgerufen wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -136,13 +137,17 @@ void* align(
 
 ### <a name="parameters"></a>Parameter
 
-*Ausrichtung* die auszuprobierende Ausrichtungsgrenze.
+*Ausrichtung*<br/>
+Die auszuprobierende Ausrichtungsgrenze.
 
-*Größe* die Größe in Bytes für den ausgerichteten Speicher.
+*Size*<br/>
+Die Größe in Bytes für den ausgerichteten Speicher.
 
-*PTR* die Startadresse des verfügbaren zusammenhängenden Speicherpools verwenden. Dieser Parameter ist auch ein Output-Parameter, und es wird festgelegt, um die neue Startadresse enthalten, wenn die Ausrichtung erfolgreich ist. Wenn `align()` nicht erfolgreich ist, wird dieser Parameter nicht geändert.
+*PTR*<br/>
+Die Startadresse des verfügbaren zusammenhängenden Speicherpools, der verwendet werden soll. Dieser Parameter ist auch ein Output-Parameter, und es wird festgelegt, um die neue Startadresse enthalten, wenn die Ausrichtung erfolgreich ist. Wenn `align()` nicht erfolgreich ist, wird dieser Parameter nicht geändert.
 
-*Speicherplatz* die gesamte verfügbare Speicherplatz, `align()` beim Erstellen des ausgerichteten Speichers verwendet. Dieser Parameter ist auch ein Ausgabeparameter und enthält den angepassten Speicherplatz, der im Speicherpuffer verblieben ist, nachdem der ausgerichtete Speicher und der zugeordnete Mehraufwand subtrahiert wurden.
+*LEERTASTE*<br/>
+Der gesamte verfügbare Speicherplatz, den `align()` beim Erstellen des ausgerichteten Speichers verwendet. Dieser Parameter ist auch ein Ausgabeparameter und enthält den angepassten Speicherplatz, der im Speicherpuffer verblieben ist, nachdem der ausgerichtete Speicher und der zugeordnete Mehraufwand subtrahiert wurden.
 
 Wenn `align()` nicht erfolgreich ist, wird dieser Parameter nicht geändert.
 
@@ -189,9 +194,11 @@ allocate_shared(Allocator Alloc, Types&&... Args);
 
 ### <a name="parameters"></a>Parameter
 
-*Alloc* die Zuweisung, die zum Erstellen von Objekten verwendet.
+*Alloc*<br/>
+Die Zuweisung wird zur Erstellung von Objekten verwendet.
 
-*Args* NULL oder mehr Argumente, die die Objekte werden.
+*Args*<br/>
+Keine oder mehrere Argumente, die zu Objekten werden.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -209,11 +216,14 @@ const_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parameter
 
-*Ty* gesteuerte mit dem zurückgegebenen Typ freigegebene Zeiger.
+*Ty*<br/>
+Der Typ, der vom zurückgegebenen gemeinsamen Zeiger (shared pointer) gesteuert wird.
 
-*Andere* vom Argument für den gemeinsamen Zeiger gesteuerte Typ.
+*Andere*<br/>
+Der Typ, der vom Argument für den gemeinsamen Zeiger gesteuert wird.
 
-*Andere* Argument für den gemeinsamen Zeiger.
+*Andere*<br/>
+Das Argument für den gemeinsamen Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -275,7 +285,8 @@ void declare_reachable(void* ptr);
 
 ### <a name="parameters"></a>Parameter
 
-*PTR* ein Zeiger auf einen Bereich erreichbar, gültigen zugewiesenen Speicher.
+*ptr*<br/>
+Ein Zeiger auf einen erreichbaren zugewiesenen gültigen Speicherbereich.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -296,9 +307,11 @@ struct default_delete {
 
 ### <a name="parameters"></a>Parameter
 
-*PTR* Zeiger auf das Objekt zu löschen.
+*PTR*<br/>
+Zeiger auf das zu löschende Objekt.
 
-Andere den Typ der Elemente im Array, das gelöscht werden.
+*Andere*<br/>
+Die anderen Typen von Elementen im Array, die gelöscht werden sollen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -316,11 +329,14 @@ dynamic_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parameter
 
-*Ty* gesteuerte mit dem zurückgegebenen Typ freigegebene Zeiger.
+*Ty*<br/>
+Der Typ, der vom zurückgegebenen gemeinsamen Zeiger (shared pointer) gesteuert wird.
 
-*Andere* vom Argument für den gemeinsamen Zeiger gesteuerte Typ.
+*Andere*<br/>
+Der Typ, der vom Argument für den gemeinsamen Zeiger gesteuert wird.
 
-*SP* Argument für den gemeinsamen Zeiger.
+*SP*<br/>
+Das Argument für den gemeinsamen Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -373,11 +389,14 @@ D* get_deleter(const shared_ptr<Ty>& sp);
 
 ### <a name="parameters"></a>Parameter
 
-*D* den Typ der Deleter.
+*D*<br/>
+Der Deleter-Typ.
 
-*Ty* vom gemeinsamen Zeiger gesteuerte Typ.
+*Ty*<br/>
+Der vom freigegebenen Zeiger gesteuerte Typ.
 
-*SP* der freigegebene Zeiger.
+*SP*<br/>
+Der freigegebene Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -451,7 +470,8 @@ pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
 
 ### <a name="parameters"></a>Parameter
 
-*Anzahl* die maximale Anzahl von Elementen, für welchen Speicher angefordert wird, die zugeordnet werden.
+*count*<br/>
+Die maximale Anzahl der angeforderten Elemente, denen Speicher zugewiesen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -619,15 +639,20 @@ make_unique(Types&&...) = delete;
 
 ### <a name="parameters"></a>Parameter
 
-*T* den Typ des Objekts, das die `unique_ptr` zeigen auf.
+*T*<br/>
+Der Typ des Objekts, auf das `unique_ptr` zeigt.
 
-*Typen* die Typen der Konstruktorargumente gemäß *Args*.
+*Typen*<br/>
+Die Typen der Konstruktorargumente gemäß *Args*.
 
-*Args* an den Konstruktor des Objekts vom Typ zu übergebenden Argumente *T*.
+*Args*<br/>
+Die Argumente an den Konstruktor des Objekts vom Typ zu übergebenden *T*.
 
-*Elem* ein Array von Elementen des Typs *T*.
+*Elem*<br/>
+Ein Array von Elementen des Typs *T*.
 
-*Größe* die Anzahl der Elemente zum Zuweisen von Speicherplatz für die im neuen Array.
+*Size*<br/>
+Die Anzahl von Elementen, denen im neue Array ein Bereich zugeordnet werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -684,9 +709,11 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>Parameter
 
-*_left* ein freigegebener oder schwacher Zeiger.
+*_left*<br/>
+Ein freigegebener oder schwacher Zeiger.
 
-*richtige* ein freigegebener oder schwacher Zeiger.
+*right*<br/>
+Ein freigegebener oder schwacher Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -703,7 +730,8 @@ void return_temporary_buffer(Type* _Pbuf);
 
 ### <a name="parameters"></a>Parameter
 
-*_Pbuf* ein Zeiger auf den Speicher aufgehoben werden.
+*_Pbuf*<br/>
+Ein Zeiger auf dem freizugebenden Speicher.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -744,7 +772,7 @@ int main( )
 ```Output
 The number of integers in the array is: 7.
 The number of elements that the allocated memory
- could store is given by: resultPair.second = 7.
+could store is given by: resultPair.second = 7.
 ```
 
 ## <a name="static_pointer_cast"></a> static_pointer_cast
@@ -759,11 +787,14 @@ static_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parameter
 
-*Ty* gesteuerte mit dem zurückgegebenen Typ freigegebene Zeiger.
+*Ty*<br/>
+Der Typ, der vom zurückgegebenen gemeinsamen Zeiger (shared pointer) gesteuert wird.
 
-*Andere* vom Argument für den gemeinsamen Zeiger gesteuerte Typ.
+*Andere*<br/>
+Der Typ, der vom Argument für den gemeinsamen Zeiger gesteuert wird.
 
-*Andere* Argument für den gemeinsamen Zeiger.
+*Andere*<br/>
+Das Argument für den gemeinsamen Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -818,13 +849,17 @@ void swap(weak_ptr<Ty>& left, weak_ptr<Other>& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Ty* vom linken gemeinsamen/schwachen Zeiger gesteuerte Typ.
+*Ty*<br/>
+Der vom linken gemeinsamen/schwachen Zeiger gesteuerte Typ.
 
-*Andere* vom rechten gemeinsamen/schwachen Zeiger gesteuerte Typ.
+*Andere*<br/>
+Der vom rechten gemeinsamen/schwachen Zeiger gesteuerte Typ.
 
-*linken* linken gemeinsamen/schwachen Zeiger.
+*left*<br/>
+Der linke gemeinsame/schwache Zeiger.
 
-*richtige* der Rechte gemeinsame/schwache Zeiger.
+*right*<br/>
+Der rechte gemeinsame/schwache Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -927,11 +962,14 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 
 ### <a name="parameters"></a>Parameter
 
-*erste* ein eingabeiterator, der das erste Element im Quellbereich adressiert.
+*Erste*<br/>
+Ein Eingabeiterator, der das erste Element im Quellbereich adressiert.
 
-*letzte* ein eingabeiterator, der das letzte Element im Quellbereich adressiert.
+*last*<br/>
+Ein Eingabeiterator, der das letzte Element im Quellbereich adressiert.
 
-*Dest* ein forward-Iterator, der das erste Element im Zielbereich adressiert.
+*dest*<br/>
+Ein Forward-Iterator, der das erste Element im Zielbereich adressiert.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1032,11 +1070,14 @@ ForwardIterator uninitialized_copy_n(
 
 ### <a name="parameters"></a>Parameter
 
-*erste* ein Eingabe-Iterator, der auf das zu kopierende Objekt verweist.
+*Erste*<br/>
+Ein Eingabeiterator, der auf das zu kopierende Objekt verweist.
 
-*Anzahl* ein signiert oder unsigned Integer-Datentyp, der die Anzahl der Male angibt, die das Objekt zu kopieren.
+*count*<br/>
+Ein Ganzzahltyp mit oder ohne Vorzeichen, der die Anzahl von Kopiervorgängen für das Objekt angibt.
 
-*Dest* ein forward-Iterator, der, die neuen Kopien wo verweist.
+*dest*<br/>
+Ein Forward-Iterator, der auf den Speicherort der neuen Kopien verweist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1066,11 +1107,14 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 
 ### <a name="parameters"></a>Parameter
 
-*erste* ein vorwärtsiterator, der das erste Element im Zielbereich, die ausgelöst werden soll.
+*Erste*<br/>
+Ein Forward-Iterator, der die Position des ersten Elements im zu initiierenden Zielbereich adressiert.
 
-*letzte* ein vorwärtsiterator, der das letzte Element im Zielbereich, die ausgelöst werden soll.
+*last*<br/>
+Ein Forward-Iterator, der die Position des letzten Elements im zu initiierenden Zielbereich adressiert.
 
-*Val* der Wert, der zum Initialisieren des Zielbereichs verwendet werden.
+*val*<br/>
+Der Wert, der zum Initialisieren des Zielbereichs verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1135,11 +1179,14 @@ void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 
 ### <a name="parameters"></a>Parameter
 
-*erste* ein forward-Iterator, der das erste Element im Zielbereich adressiert, initiiert werden.
+*Erste*<br/>
+Ein Forward-Iterator, der die Position des ersten Elements im zu initiierenden Zielbereich adressiert.
 
-*Anzahl* die Anzahl von Elementen initialisiert wird.
+*count*<br/>
+Die Anzahl von zu initialisierenden Elementen.
 
-*Val* der Wert, der zum Initialisieren des Zielbereichs verwendet werden.
+*val*<br/>
+Der Wert, der zum Initialisieren des Zielbereichs verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 

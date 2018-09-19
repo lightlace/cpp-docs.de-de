@@ -40,19 +40,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb62c18f7508a21e24fb5628e8ac01162db1405e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d26cc39039b95b8c12e429d333918e83628b2619
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402711"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110603"
 ---
 # <a name="exit-exit-exit"></a>exit, _Exit, _exit
 
 Beendet den aufrufenden Prozess. Die **beenden** Funktion beendet ihn nach der Bereinigung; **_exit** und **_Exit** beenden ihn sofort.
 
 > [!NOTE]
-> Verwenden Sie diese Methode nicht, um eine app (Universelle Windows Plattform) mit Ausnahme von schließen in Test- oder Debugszenarien. Programmgesteuerte oder UI-Methoden zum Schließen einer Store-app sind nicht zulässig, gemäß der [Microsoft Store-Richtlinien](/legal/windows/agreements/store-policies). Weitere Informationen finden Sie unter [uwp-App-Lebenszyklus](/windows/uwp/launch-resume/app-lifecycle). Weitere Informationen zu Windows 10-Apps finden Sie unter [Anleitungen für Windows 10-Apps](http://go.microsoft.com/fwlink/p/?linkid=619133).
+> Verwenden Sie diese Methode nicht, eine app (Universelle Windows Plattform) mit Ausnahme von Herunterfahren in Test- oder Debugszenarien. Programmgesteuerte oder UI-Methoden zum Schließen einer Store-app sind nicht zulässig, gemäß der [Microsoft Store Richtlinien](/legal/windows/agreements/store-policies). Weitere Informationen finden Sie unter [UWP-App-Lebenszyklus](/windows/uwp/launch-resume/app-lifecycle). Weitere Informationen zu Windows 10-Apps finden Sie unter [Anleitungen für Windows 10-Apps](https://developer.microsoft.com/en-us/windows/apps).
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,13 +70,14 @@ void _exit(
 
 ### <a name="parameters"></a>Parameter
 
-*Status* Beendigungsstatuscode.
+*status*<br/>
+Beendigungsstatuscode.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **beenden**, **_Exit** und **_exit** Funktionen beenden den aufrufenden Prozess. Die **beenden** -Funktionsaufrufe Destruktoren für threadlokale Objekte, und ruft dann – Last in First Out (LIFO) nacheinander – die Funktionen, die von registrierten **Atexit** und **_onexit**, und klicken Sie dann alle Puffer geleert, bevor der Prozess beendet wird. Die **_Exit** und **_exit** Funktionen der Prozess beendet, ohne threadlokale Objekte zu zerstören oder Verarbeitung **Atexit** oder **_onexit**Funktionen, und ohne die Datenstrompuffer.
+Die **beenden**, **_Exit** und **_exit** Funktionen beenden den aufrufenden Prozess. Die **beenden** Funktionsaufrufe Destruktoren für threadlokale Objekte und ruft dann – in der Reihenfolge von Last-in-First-Out (LIFO) – die Funktionen, die von registriert werden **von "atexit"** und **_onexit**, und klicken Sie dann alle Dateipuffer geleert, bevor der Prozess beendet wird. Die **_Exit** und **_exit** Funktionen wird der Prozess beendet, ohne threadlokale Objekte zu zerstören oder Verarbeitung **von "atexit"** oder **_onexit**-Funktionen und ohne den Streampuffer.
 
-Obwohl die **beenden**, **_Exit** und **_exit** Aufrufe geben einen Wert, der Wert in nicht zurück *Status* hostumgebung zur Verfügung gestellt wird oder aufrufende Prozess warten, wenn eine vorhanden ist, nachdem der Prozess beendet wird. In der Regel der Aufrufer legt den *Status* Wert zur kennzeichnen einer normalen Beendigung auf 0 oder auf einen anderen Wert einen Fehler an. Die *Status* -Wert steht dem Betriebssystem-Batchbefehl **ERRORLEVEL** und wird durch eine der beiden Konstanten repräsentiert: **EXIT_SUCCESS**, die einen Wert darstellt 0 (null) oder **EXIT_FAILURE**, die einen Wert von 1 darstellt.
+Obwohl die **beenden**, **_Exit** und **_exit** Aufrufe geben einen Wert, der Wert in nicht zurück *Status* an die hostumgebung zur Verfügung gestellt wird oder aufrufende Prozess wartet, wenn nach des Prozesses beenden vorhanden. In der Regel der Aufrufer legt den *Status* Wert auf 0 zum Kennzeichnen einer normalen Beendigung oder auf einen anderen Wert einen Fehler an. Die *Status* -Wert steht dem Betriebssystem-Batchbefehl **ERRORLEVEL** und wird durch eine der beiden Konstanten repräsentiert: **EXIT_SUCCESS**, der einen Wert darstellt von 0 (null) oder **EXIT_FAILURE**, der einen Wert von 1 darstellt.
 
 Die **beenden**, **_Exit**, **_exit**, **Quick_exit**, **_cexit**, und **_c_exit** Funktionen verhalten sich wie folgt.
 
@@ -89,7 +90,7 @@ Die **beenden**, **_Exit**, **_exit**, **Quick_exit**, **_cexit**, und **_c_exit
 |**_cexit**|Führt vollständige C-Bibliotheksbeendigungsprozeduren aus und kehrt zum Aufrufer zurück. Der Prozess wird nicht beendet.|
 |**_c_exit**|Führt minimale C-Bibliotheksbeendigungsprozeduren aus und kehrt zum Aufrufer zurück. Der Prozess wird nicht beendet.|
 
-Beim Aufrufen der **beenden**, **_Exit** oder **_exit** -Funktion, die Destruktoren für alle temporären oder automatischen Objekte, die zum Zeitpunkt des Aufrufs vorhanden sind, werden nicht aufgerufen. Ein automatisches Objekt wird ein nicht statisches lokales Objekt in einer Funktion definiert. Ein temporäres Objekt ist ein Objekt, das durch den Compiler, z. B. einen durch einen Funktionsaufruf zurückgegebenen Wert erstellt wird. Um ein automatisches Objekt zu zerstören, bevor Sie rufen **beenden**, **_Exit**, oder **_exit**explizit den Destruktor für das Objekt aufrufen, wie hier gezeigt:
+Beim Aufrufen der **beenden**, **_Exit** oder **_exit** -Funktion, die Destruktoren für jedes zum Zeitpunkt des Aufrufs vorhandene temporäre oder automatische Objekt nicht aufgerufen. Ein automatisches Objekt ist ein lokales nichtstatischen-Objekt in einer Funktion definiert. Ein temporäres Objekt ist ein Objekt, das durch den Compiler an, wie z. B. einen durch einen Funktionsaufruf zurückgegebenen Wert erstellt wird. Zum Zerstören eines automatischen Objekts vor dem Aufruf **beenden**, **_Exit**, oder **_exit**explizit rufen Sie den Destruktor für das Objekt an, wie hier gezeigt:
 
 ```cpp
 void last_fn() {}
@@ -100,7 +101,7 @@ void last_fn() {}
 }
 ```
 
-Verwenden Sie keine **DLL_PROCESS_ATTACH** Aufrufen **beenden** aus **DllMain**. Zum Beenden der **DLLMain** funktionieren, zurückgeben **"false"** aus **DLL_PROCESS_ATTACH**.
+Verwenden Sie keine **DLL_PROCESS_ATTACH** aufzurufende **beenden** aus **DllMain**. Zum Beenden der **DLLMain** funktionieren, zurückgeben **"false"** aus **DLL_PROCESS_ATTACH**.
 
 ## <a name="requirements"></a>Anforderungen
 

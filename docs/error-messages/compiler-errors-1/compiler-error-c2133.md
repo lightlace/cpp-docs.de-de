@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2133 | Microsoft Docs
+title: Compilerfehler C2133 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 878f6fa4a36e7de28bfc084f7f716d50b52c363a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 169b24787f1b180c7ba70c5d779e341e60ea2150
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171912"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025190"
 ---
 # <a name="compiler-error-c2133"></a>Compilerfehler C2133
-'Bezeichner': Unbekannte Größe  
-  
- Ein Array ohne Größenangabe wird als ein Mitglied aus einer Klasse, Struktur, Union oder Enumeration deklariert. Die Option/Za (ANSI C) lässt sich nicht auf Memberarrays aus.  
-  
- Im folgende Beispiel wird C2133 generiert:  
-  
-```  
-// C2133.cpp  
-// compile with: /Za  
-struct X {  
-   int a[0];   // C2133 unsized array  
-};  
-```  
-  
- Mögliche Lösung:  
-  
-```  
-// C2133b.cpp  
-// compile with: /c  
-struct X {  
-   int a[0];   // no /Za  
-};  
+
+'Bezeichner': Unbekannte Größe
+
+Ein Array ohne Größenangabe wird als ein Mitglied aus einer Klasse, Struktur, Union oder Enumeration deklariert. Die Option/Za (ANSI-C) lässt sich nicht auf Memberarrays aus.
+
+Im folgende Beispiel wird die C2133 generiert:
+
+```
+// C2133.cpp
+// compile with: /Za
+struct X {
+   int a[0];   // C2133 unsized array
+};
+```
+
+Mögliche Lösung:
+
+```
+// C2133b.cpp
+// compile with: /c
+struct X {
+   int a[0];   // no /Za
+};
 ```

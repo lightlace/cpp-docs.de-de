@@ -148,12 +148,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e02be0369821cc6f8aa37210c9a3b7f9479be84
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9082e4a8269e692bf9e1d9b8a27f61291b2707a9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954720"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726231"
 ---
 # <a name="unorderedmap-class"></a>unordered_map-Klasse
 
@@ -417,7 +417,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*KeyVal* die zuzuordnende Schlüsselwert.
+*keyVal*<br/>
+Der zuzuordnende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -457,7 +458,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -560,8 +561,8 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parameter
 
-*nbucket*  
- Die Bucketnummer.
+*nbucket*<br/>
+Die Bucketnummer.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -601,7 +602,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -718,7 +719,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -924,8 +925,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*keyVal*  
- Der zu suchende Schlüsselwert.
+*keyVal*<br/>
+Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -964,7 +965,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 count('A') == 0
 count('b') == 1
 count('C') == 0
@@ -1024,7 +1025,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 end()-begin() == 3
 begin()-end() == -3
 ```
@@ -1148,7 +1149,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -1189,8 +1190,8 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*keyVal*  
- Der zu suchende Schlüsselwert.
+*keyVal*<br/>
+Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1242,7 +1243,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 equal_range('x'):
 equal_range('b'): [b, 2]
 ```
@@ -1259,17 +1260,17 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>Parameter
 
-*Where*  
- Die Position des zu entfernenden Elements.
+*Where*<br/>
+Die Position des zu entfernenden Elements.
 
-*Erste*  
- Die Position des ersten zu entfernenden Elements.
+*Erste*<br/>
+Die Position des ersten zu entfernenden Elements.
 
-*letzte*  
- Die Position direkt hinter dem letzten zu entfernenden Element.
+*letzte*<br/>
+Die Position direkt hinter dem letzten zu entfernenden Element.
 
-*Key*  
- Der Schlüsselwert der zu entfernenden Elemente.
+*Key*<br/>
+Der Schlüsselwert der zu entfernenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1291,8 +1292,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*keyVal*  
- Der zu suchende Schlüsselwert.
+*keyVal*<br/>
+Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1337,7 +1338,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 find('A') == false
 find('b') == true: [b, 2]
 ```
@@ -1784,7 +1785,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -1977,7 +1978,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -2008,8 +2009,8 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parameter
 
-*factor*  
- Der neue maximale Lastfaktor.
+*factor*<br/>
+Der neue maximale Lastfaktor.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2073,7 +2074,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -2141,7 +2142,7 @@ Ty& operator[](Key&& keyval);
 
 |Parameter|Beschreibung|
 |-|-|
-|*KeyVal*|Der zu suchende oder einzufügende Schlüsselwert.|
+|*keyVal*|Der zu suchende oder einzufügende Schlüsselwert.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2203,10 +2204,10 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 c1['A'] == 0
 c1['a'] == 1
- [c, 3] [b, 2] [A, 0] [a, 1]
+[c, 3] [b, 2] [A, 0] [a, 1]
 c2[move(str)] == 0
 c2["abc"] == 1
 ```
@@ -2380,8 +2381,8 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parameter
 
-*nbuckets*  
- Die angeforderte Anzahl von Buckets.
+*nbuckets*<br/>
+Die angeforderte Anzahl von Buckets.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2435,7 +2436,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_load_factor() == 4
@@ -2508,7 +2509,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -2564,8 +2565,8 @@ void swap(unordered_map& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Der Container für den Tauschvorgang.
+*right*<br/>
+Der Container für den Tauschvorgang.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2664,7 +2665,7 @@ unordered_map(
 
 template <class InIt>
 unordered_map(
- InputIterator First,
+InputIterator First,
     InputIterator Last,
     size_type Bucket_count = N0,
     const Hash& Hash = Hash(),
@@ -2820,18 +2821,18 @@ int main()
 ```
 
 ```Output
- [a, 1] [b, 2] [c, 3]
- [d, 4] [e, 5] [f, 6]
- [a, 1] [b, 2] [c, 3]
- [a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
+[d, 4] [e, 5] [f, 6]
+[a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
 
 [5, g] [6, h] [7, i] [8, j]
- [a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
 
 [a, 1] [b, 2] [c, 3]
- [a, 1] [b, 2] [c, 3]
- [a, 1] [b, 2] [c, 3]
- ```
+[a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
+```
 
 ## <a name="value_type"></a> unordered_map::value_type
 

@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2391 | Microsoft Docs
+title: Compilerfehler C2391 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a16ed19f5cac9d6c23a3f709e40fc290223e93c7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1201651ffc52dae7b8f184895f8005750ee4697e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224764"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102371"
 ---
 # <a name="compiler-error-c2391"></a>Compilerfehler C2391
-'Bezeichner': 'Friend' kann nicht verwendet werden, während der Typdefinition  
-  
- Die `friend` Deklaration enthält eine vollständige Klassendeklaration. Ein `friend` Deklaration kann eine Memberfunktion oder Typbezeichnern, aber nicht mit einer vollständigen Klassendeklaration angeben.  
-  
- Im folgenden Beispiel wird C2326 generiert:  
-  
-```  
-// C2391.cpp  
-// compile with: /c  
-class D {   
-   void func( int );   
-};  
-  
-class A {  
-   friend class B { int i; };   // C2391  
-  
-   // OK  
-   friend class C;  
-   friend void D::func(int);  
-};  
+
+'Bezeichner': 'Friend' kann nicht verwendet werden, während der Typdefinition
+
+Die `friend` Deklaration enthält eine vollständige Klassendeklaration. Ein `friend` Deklaration kann eine Memberfunktion oder ein ausgearbeiteter Typspezifizierer, aber keine vollständige Klassendeklaration angeben.
+
+Im folgenden Beispiel wird C2326 generiert:
+
+```
+// C2391.cpp
+// compile with: /c
+class D {
+   void func( int );
+};
+
+class A {
+   friend class B { int i; };   // C2391
+
+   // OK
+   friend class C;
+   friend void D::func(int);
+};
 ```

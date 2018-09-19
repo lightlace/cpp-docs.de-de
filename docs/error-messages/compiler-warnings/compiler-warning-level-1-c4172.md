@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4172 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4172 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 746442638820d0c81144611a678996dc4c8483b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56f606b48fb060472dd67d34800c06946bc41712
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276658"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043507"
 ---
 # <a name="compiler-warning-level-1-c4172"></a>Compilerwarnung (Stufe 1) C4172
-Adresse einer lokalen Variable oder temporäre zurückgeben  
-  
- Eine Funktion gibt die Adresse einer lokalen Variable oder temporäre Objekt zurück. Lokale Variablen und temporäre Objekte werden zerstört, damit die zurückgegebene Adresse ungültig ist bei Rückgabe eine Funktion.  
-  
- Überarbeiten Sie die Funktion, so, dass dies die Adresse eines Objekts zurückgegeben wird.  
-  
- Im folgenden Beispiel wird C4172 generiert:  
-  
-```  
-// C4172.cpp  
-// compile with: /W1 /LD  
-float f = 10;  
-  
-const double& bar() {  
-// try the following line instead  
-// const float& bar() {  
-   return f;   // C4172  
-}  
+
+Zurückgeben der Adresse einer lokalen Variablen oder temporäre
+
+Eine Funktion gibt die Adresse einer lokalen Variable oder temporäre-Objekts. Lokale Variablen und die temporären Objekte zerstört, wenn eine Funktion zurückgibt, damit die zurückgegebene Adresse nicht gültig ist.
+
+Wandeln Sie die Funktion, sodass sie nicht die Adresse eines Objekts zurückgibt.
+
+Im folgende Beispiel wird die C4172 generiert:
+
+```
+// C4172.cpp
+// compile with: /W1 /LD
+float f = 10;
+
+const double& bar() {
+// try the following line instead
+// const float& bar() {
+   return f;   // C4172
+}
 ```

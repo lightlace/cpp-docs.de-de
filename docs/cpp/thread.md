@@ -19,22 +19,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f268dd12ca0eca55cbc91bffe5daccbc23ef4dbe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 80ea212f8c888680edf50e269c89e62988a0ee36
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940149"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104386"
 ---
 # <a name="thread"></a>Thread
 
 **Microsoft-spezifisch**
 
-Die **Thread** erweiterte Speicherklassenmodifizierer wird verwendet, um eine threadlokale Variable zu deklarieren. Verwenden Sie für das Portable entspricht in C ++ 11 und höher, die [Thread_local](../cpp/storage-classes-cpp.md#thread_local) Speicherklassenspezifizierer für portablen Code. Auf Windows `thread_local` wird implementiert, mit `__declspec(thread)`.
+Die **Thread** erweiterte Speicherklassenmodifizierer wird verwendet, um eine threadlokale Variable zu deklarieren. Verwenden Sie für das Portable entspricht in C ++ 11 und höher, die [Thread_local](../cpp/storage-classes-cpp.md#thread_local) Speicherklassenspezifizierer für portablen Code. Auf Windows `thread_local` wird implementiert, mit **__declspec(thread)**.
 
 ## <a name="syntax"></a>Syntax
 
-> **__declspec (Thread)** *Deklarator*  
+> **__declspec (Thread)** *Deklarator*
 
 ## <a name="remarks"></a>Hinweise
 
@@ -97,6 +97,6 @@ Darüber hinaus müssen Sie diese Richtlinien beachten, wenn Sie threadlokale Ob
 
 ## <a name="see-also"></a>Siehe auch
 
-[__declspec](../cpp/declspec.md)  
-[Schlüsselwörter](../cpp/keywords-cpp.md)  
-[Threadlokaler Speicher (TLS)](../parallel/thread-local-storage-tls.md)  
+[__declspec](../cpp/declspec.md)<br/>
+[Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
+[Threadlokaler Speicher (TLS)](../parallel/thread-local-storage-tls.md)

@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C3167 | Microsoft Docs
+title: Compilerfehler C3167 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc98f3f66041b86dcc93459132e3431e271bde5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b1b242b0e98e0309e2a98ca2c8e59ecaeff8b7a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247976"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024189"
 ---
-# <a name="compiler-error-c3167"></a>Compilerfehler Fehler C3167
-Kann nicht initialisiert werden, .NET Framework: Stellen Sie sicher, dass es installiert ist  
-  
- .NET Framework ist auf diesem Computer nicht installiert. Installieren Sie .NET Framework.
+# <a name="compiler-error-c3167"></a>Compilerfehler C3167
+
+Kann nicht initialisiert werden .NET Framework: Stellen Sie sicher, dass es installiert wurde
+
+.NET Framework ist auf diesem Computer nicht installiert. Installieren von .NET Framework.

@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::Details Namespace | Microsoft Docs
+title: Platform::Collections::Details-Namespace | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -9,37 +9,41 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: d5ac76ee-b568-4841-882f-738ed6fa4f1e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5afb046b7e609b053d6dcd0b7d10d864b6194fe5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 699ccd3bf97df9e278d101e23ccd8e4dbc3cf323
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088127"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104023"
 ---
 # <a name="platformcollectionsdetails-namespace"></a>Platform::Collections::Details-Namespace
-Dieser Namespace unterstützt die `Platform` -Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-  
-namespace Platform {  namespace Collections {    namespace Details {}}}  
-```  
-  
-### <a name="members"></a>Member  
- Member dieses Namespace werden in "collection.h" definiert und nicht im Objektkatalog angezeigt.  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [Platform::Collections-Namespace](../cppcx/platform-collections-namespace.md)  
-  
-### <a name="requirements"></a>Anforderungen  
- **Header:** Collection.h  
-  
- **Namespace:** Platform::Collection::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [Platform-Namespace](platform-namespace-c-cx.md)
+
+Dieser Namespace unterstützt die `Platform` -Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+namespace Platform {  namespace Collections {    namespace Details {}}}
+```
+
+### <a name="members"></a>Member
+
+Member dieses Namespace werden in "collection.h" definiert und nicht im Objektkatalog angezeigt.
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+[Platform::Collections-Namespace](../cppcx/platform-collections-namespace.md)
+
+### <a name="requirements"></a>Anforderungen
+
+**Header:** Collection.h
+
+**Namespace:** Platform::Collection::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[Plattform-Namespace](platform-namespace-c-cx.md)

@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4076 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4076 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cfa28469e099dbf2b6bd43213073c304d0b2894
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f0a8066b8e79b75f3d5ede37f4e5ad6b61db168
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275472"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037878"
 ---
 # <a name="compiler-warning-level-1-c4076"></a>Compilerwarnung (Stufe 1) C4076
-"Typmodifizierer": Kann nicht mit Typ "Typname" verwendet werden  
-  
- Ein Typmodifizierer kann unabhängig davon, ob er **signed** oder `unsigned`ist, nicht mit einem Typ verwendet werden, der nicht ganzzahlig ist. ***Typmodifizierer*** wird ignoriert.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C4076 generiert:  
-  
-```  
-// C4076.cpp  
-// compile with: /W1 /LD  
-unsigned double x;   // C4076  
+
+> "*Typmodifizierer*": kann nicht verwendet werden, mit dem Typ '*Typename*"
+
+## <a name="remarks"></a>Hinweise
+
+Ein Typmodifizierer kann, ob **signiert** oder **ohne Vorzeichen**, kann nicht mit einem nicht ganzzahligen Datentyp verwendet werden. *Typmodifizierer* wird ignoriert.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird C4076 generiert; Um dies zu beheben, entfernen Sie die **ohne Vorzeichen** Typmodifizierer:
+
+```cpp
+// C4076.cpp
+// compile with: /W1 /LD
+unsigned double x;   // C4076
 ```

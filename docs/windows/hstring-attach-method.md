@@ -1,5 +1,5 @@
 ---
-title: 'Hstring:: Attach-Methode | Microsoft Docs'
+title: 'Hstring:: Attach-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,33 +15,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8738c44c11c69f8d2479335ce3effc4135dfe0f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c7bdf5c17fc9364eb69d86f067bbb00cf40ebc5d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876065"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595315"
 ---
 # <a name="hstringattach-method"></a>HString::Attach-Methode
-Ordnet das angegebene HString-Objekt dem aktuellen HString-Objekt zu.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-void Attach(  
-       HSTRING hstr  
+
+Ordnet die angegebene **HString** Objekt mit dem aktuellen **HString** Objekt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+void Attach(
+       HSTRING hstr
        ) throw()  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `hstr`  
- Ein vorhandenes HString-Objekt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Siehe auch  
- [HString-Klasse](../windows/hstring-class.md)
+```
+
+### <a name="parameters"></a>Parameter
+
+*HSTR*  
+Eine vorhandene **HString** Objekt.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+
+[HString-Klasse](../windows/hstring-class.md)

@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 515d74b30e63fbc40411ec9cd62b2b1ab6d92591
-ms.sourcegitcommit: b8b1cba85ff423142d73c888be26baa8c33f3cdc
+ms.openlocfilehash: 78bfdcc4ea0e73fa27b05c1c043e5f8d6eeb5e00
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39093006"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693134"
 ---
 # <a name="file-handling-and-io-ccli"></a>Dateibehandlung und E/A (C++/CLI)
 Veranschaulicht verschiedene Dateioperationen mit .NET Framework.  
@@ -337,6 +337,6 @@ int main()
 ## <a name="see-also"></a>Siehe auch   
  [.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 
- [Datei- und Stream-E/A](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)
+ [Datei- und Stream-E/A](/dotnet/standard/io/index)
 
  [System.IO-namespace](https://msdn.microsoft.com/library/system.io.aspx)

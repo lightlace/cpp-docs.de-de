@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3824 | Microsoft Docs
+title: Compilerfehler C3824 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e5202ff0236fca8d14c87bd55f1d314baa6bb2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03d42f80716b81f4409449262af650220b1ad92b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268891"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083950"
 ---
 # <a name="compiler-error-c3824"></a>Compilerfehler C3824
-'Member': Dieser Typ darf nicht in diesem Kontext (Funktionsparameter, Rückgabetyp oder einen statischen Member)  
-  
- Feste Zeiger nicht Parameter und Rückgabetypen oder deklariert `static`.  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C3824 generiert:  
-  
-```  
-// C3824a.cpp  
-// compile with: /clr /c  
-void func() {  
-   static pin_ptr<int> a; // C3824  
-   pin_ptr<int> b; // OK  
-}  
-```  
+
+'Member': Dieser Typ kann nicht verwendet werden, in diesem Kontext (Funktionsparameter, Rückgabetyp oder einen statischen Member)
+
+Feste Zeiger nicht Funktionsparameter, Rückgabetypen oder deklariert `static`.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C3824 generiert:
+
+```
+// C3824a.cpp
+// compile with: /clr /c
+void func() {
+   static pin_ptr<int> a; // C3824
+   pin_ptr<int> b; // OK
+}
+```

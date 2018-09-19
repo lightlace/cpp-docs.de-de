@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2337 | Microsoft Docs
+title: Compilerfehler C2337 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af10023a044e8f4f602ca6a018139d557b99dffe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f1b3ed1193d7a5c81e84a152bd01a26bfd04bab0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195125"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105516"
 ---
 # <a name="compiler-error-c2337"></a>Compilerfehler C2337
-'Attributname': Das Attribut wurde nicht gefunden.  
-  
- Sie haben ein Attribut verwendet, das in dieser Version von Visual C++ nicht unterstützt wird.  
-  
- Im folgenden Beispiel wird C2337 generiert:  
-  
-```  
-// C2337.cpp  
-// compile with: /c  
-[emitidl];  
-[module(name="x")];  
-[grasshopper]   // C2337, not a supported attribute  
-class a{};  
+
+'Attributname': Das Attribut wurde nicht gefunden.
+
+Sie haben ein Attribut verwendet, das in dieser Version von Visual C++ nicht unterstützt wird.
+
+Im folgenden Beispiel wird C2337 generiert:
+
+```
+// C2337.cpp
+// compile with: /c
+[emitidl];
+[module(name="x")];
+[grasshopper]   // C2337, not a supported attribute
+class a{};
 ```

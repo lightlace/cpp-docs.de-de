@@ -1,5 +1,5 @@
 ---
-title: Concurrency-Namespace-Operatoren (AMP) | Microsoft Docs
+title: Concurrency-Namespace-Operatoren (AMP) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d3bb77599fc81fa29f2c8155a6fd491ed2d639c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d6e8d2a198105e9cd63581dd8ed8445b681da2e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686707"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026932"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Concurrency-Namespace-Operatoren (AMP)
 ||||  
@@ -38,14 +38,14 @@ bool operator== (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Rank`  
- Der Rang der Tupel-Argumente.  
+*_Rank*<br/>
+Der Rang der Tupel-Argumente.  
   
- `_Lhs`  
- Eines der zu vergleichenden Tupel.  
+*_Lhs*<br/>
+Eines der zu vergleichenden Tupel.  
   
- `_Rhs`  
- Eines der zu vergleichenden Tupel.  
+*_Rhs*<br/>
+Eines der zu vergleichenden Tupel.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true`, wenn die Tupel gleich sind, andernfalls `false`.  
@@ -64,14 +64,14 @@ bool operator!= (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Rank`  
- Der Rang der Tupel-Argumente.  
+*_Rank*<br/>
+Der Rang der Tupel-Argumente.  
   
- `_Lhs`  
- Eines der zu vergleichenden Tupel.  
+*_Lhs*<br/>
+Eines der zu vergleichenden Tupel.  
   
- `_Rhs`  
- Eines der zu vergleichenden Tupel.  
+*_Rhs*<br/>
+Eines der zu vergleichenden Tupel.  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true`, wenn die Tupel nicht gleich sind, andernfalls `false`.  
@@ -109,14 +109,14 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Rank`  
- Der Rang der Tupel-Argumente.  
+*_Rank*<br/>
+Der Rang der Tupel-Argumente.  
   
- `_Lhs`  
- Eines der hinzuzufügenden Argumente.  
+*_Lhs*<br/>
+Eines der hinzuzufügenden Argumente.  
   
- `_Rhs`  
- Eines der hinzuzufügenden Argumente.  
+*_Rhs*<br/>
+Eines der hinzuzufügenden Argumente.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die komponentenbezogene Summe der angegebenen Argumente.  
@@ -154,14 +154,14 @@ _Tuple_type<_Rank>   operator-(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Rank`  
- Der Rang der Tupel-Argumente.  
+*_Rank*<br/>
+Der Rang der Tupel-Argumente.  
   
- `_Lhs`  
- Das Argument, von dem subtrahiert werden soll.  
+*_Lhs*<br/>
+Das Argument, von dem subtrahiert werden soll.  
   
- `_Rhs`  
- Das zu subtrahierende Argument.  
+*_Rhs*<br/>
+Das zu subtrahierende Argument.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Differenz zwischen den angegebenen Argumenten pro Komponente.  
@@ -190,14 +190,14 @@ _Tuple_type<_Rank>   operator*(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Rank`  
- Der Rang der Tupel-Argumente.  
+*_Rank*<br/>
+Der Rang der Tupel-Argumente.  
   
- `_Lhs`  
- Eines der zu multiplizierenden Tupel.  
+*_Lhs*<br/>
+Eines der zu multiplizierenden Tupel.  
   
- `_Rhs`  
- Eines der zu multiplizierenden Tupel.  
+*_Rhs*<br/>
+Eines der zu multiplizierenden Tupel.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Das komponentenbezogene Produkt der angegebenen Argumente.  
@@ -226,14 +226,14 @@ _Tuple_type<_Rank>   operator/(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Rank`  
- Der Rang der Tupel-Argumente.  
+*_Rank*<br/>
+Der Rang der Tupel-Argumente.  
   
- `_Lhs`  
- Das zu dividierende Tupel.  
+*_Lhs*<br/>
+Das zu dividierende Tupel.  
   
- `_Rhs`  
- Das Tupel für die Division.  
+*_Rhs*<br/>
+Das Tupel für die Division.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der komponentenbezogene Quotient der angegebenen Argumente.  
@@ -262,14 +262,14 @@ _Tuple_type<_Rank>   operator%(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Rank`  
- Der Rang der Tupel-Argumente.  
+*_Rank*<br/>
+Der Rang der Tupel-Argumente.  
   
- `_Lhs`  
- Das Tupel, auf dessen Basis das Modulo berechnet wird.  
+*_Lhs*<br/>
+Das Tupel, auf dessen Basis das Modulo berechnet wird.  
   
- `_Rhs`  
- Das Tupel für die Modulo-Berechnung.  
+*_Rhs*<br/>
+Das Tupel für die Modulo-Berechnung.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Das Ergebnis des ersten angegebenen Arguments ergibt das zweite angegebene Argument.  

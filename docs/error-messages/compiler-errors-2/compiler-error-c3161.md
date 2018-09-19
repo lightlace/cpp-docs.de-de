@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3161 generiert | Microsoft Docs
+title: Compilerfehler C3161 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2d7aff3eb41c03f5be774704922340ac54126fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 11396ccad33489b41d18759ba4d2f00b445e94a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250702"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136074"
 ---
-# <a name="compiler-error-c3161"></a>Compiler-Fehler C3161 generiert
-'Schnittstelle': Schachteln von Klasse, Struktur, Union oder eine Schnittstelle in einer Schnittstelle ist nicht zulässig. Schachteln einer Schnittstelle in einer Klasse, Struktur oder Union ist nicht zulässig  
-  
- Ein [__interface](../../cpp/interface.md) kann nur verwendet werden, im globalen Gültigkeitsbereich oder innerhalb eines Namespace. Eine Klasse, Struktur oder Union kann nicht in einer Schnittstelle angezeigt.  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C3161 generiert.  
-  
-```  
-// C3161.cpp  
-// compile with: /c  
-__interface X {  
-   __interface Y {};   // C3161 A nested interface  
-};  
+# <a name="compiler-error-c3161"></a>Compilerfehler C3161
+
+'Schnittstelle': Schachteln von Klasse, Struktur, Union oder Schnittstelle in einer Schnittstelle ist nicht zulässig. Schachteln einer Schnittstelle in einer Klasse, Struktur oder Union ist nicht zulässig
+
+Ein [__interface](../../cpp/interface.md) darf nur im globalen Gültigkeitsbereich oder in einem Namespace. Eine Klasse, Struktur oder Union kann nicht in einer Schnittstelle angezeigt.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C3161 generiert.
+
+```
+// C3161.cpp
+// compile with: /c
+__interface X {
+   __interface Y {};   // C3161 A nested interface
+};
 ```

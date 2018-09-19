@@ -1,5 +1,5 @@
 ---
-title: Index-Klasse | Microsoft Docs
+title: Index-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594ee94bbbfc19bc6fcceb9ae7f0760d9ec877dc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: da6dae3aa76e593a3a98ff25b4d327faf284459e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695336"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097132"
 ---
 # <a name="index-class"></a>index-Klasse
 Definiert eine *N*-dimensionalen Index Pographics-Cpp-amp.md.  
@@ -36,8 +36,8 @@ class index;
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `_Rank`  
- Der Rang oder die Anzahl von Dimensionen.  
+*_Rank*<br/>
+Der Rang oder die Anzahl von Dimensionen.  
   
 ## <a name="members"></a>Member  
   
@@ -72,7 +72,7 @@ class index;
  `index`  
   
 ## <a name="remarks"></a>Hinweise  
- Die `index` Struktur stellt einen-Koordinate Vektor eines *N* ganze Zahlen, der angibt, in eine eindeutige Position ein *N*-dimensionalen Raum. Die Werte im Vektor sind vom wichtigsten zum am wenigsten wichtigen Wert sortiert. Sie können die Werte der Komponenten mit abrufen [Operator =](#operator_eq).  
+ Die `index` Struktur stellt einen koordinatenvektor von *N* ganze Zahlen, der angibt, eine eindeutige Position in einer *N*-dimensionalen Raum. Die Werte im Vektor sind vom wichtigsten zum am wenigsten wichtigen Wert sortiert. Sie können die Werte der Komponenten mit abrufen [Operator =](#operator_eq).  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** amp.h  
@@ -81,7 +81,7 @@ class index;
 
 
 ## <a name="index_ctor"></a> Index-Konstruktor
-Initialisiert eine neue Instanz der indexklasse an.
+Initialisiert eine neue Instanz der indexklasse.
 
 ```  
 index() restrict(amp,cpu);
@@ -122,11 +122,11 @@ _I1
 Die Länge der zweitwichtigsten Dimension.  
 _I2  
 Die Länge der unwichtigsten Dimension.  
-_Other  
+_Sonstige  
 Ein Indexobjekt, das auf dem das neue Indexobjekt basiert.  
 
 ## <a name="operator--"></a>  Operator--
-Dekrementiert jedes Element des Index-Objekts.  
+Dekrementiert jedes Element des Index-Objekt.  
 ```  
 index<_Rank>& operator--() restrict(amp,cpu);  
 
@@ -138,7 +138,7 @@ index operator--(
 Für den Präfixoperator das Indexobjekt (* dies). Für den suffixoperator ein neues Indexobjekt.
 
 ## <a name="operator_mod_eq"></a>  Operator(MOD) =   
-Berechnet den Modul (Rest) jedes Elements im Index-Objekt, wenn dieses Element mit der angegebenen Zahl dividiert wird.
+Berechnet den Modul (Rest) jedes Elements im Index-Objekt, wenn das Element mit der angegebenen Zahl dividiert wird.
 
 ```  
 index<_Rank>& operator%=(
@@ -146,11 +146,11 @@ index<_Rank>& operator%=(
 ) restrict(cpu, amp);
 ```  
 ### <a name="parameters"></a>Parameter
-_Rhs die Zahl, dividiert durch den Modulo finden.
+_Rhs die Zahl, durch Teilen, um das Modul zu suchen.
 Der Rückgabewert die Index-Objekt.
 
 ## <a name="operator_star_eq"></a>  Operator * =   
-Multipliziert jedes Element in das Indexobjekt, um die angegebene Anzahl an.
+Multipliziert jedes Element in die Index-Objekt, mit der angegebenen Zahl.
 ```
 index<_Rank>& operator*=(
    int _Rhs
@@ -161,7 +161,7 @@ index<_Rank>& operator*=(
 _Rhs die zu multiplizierende Zahl.
 
 ## <a name="operator_div_eq"></a>  Operator / = 
-Dividiert jedes Element in die Index-Objekt mit der angegebenen Zahl.
+Dividiert jedes Element im Index-Objekt mit der angegebenen Zahl.
 
 ```
 index<_Rank>& operator/=(
@@ -200,8 +200,8 @@ std::cout << idx[1] << "\n";
 std::cout << idx[2] << "\n";
 ```
 
-## <a name="operator_add_add"></a>  Operator ++   
-Inkrementiert jedes Element des Index-Objekts.
+## <a name="operator_add_add"></a>  "Operator++"   
+Inkrementiert jedes Element des Index-Objekt.
 ```  
 index<_Rank>& operator++() restrict(amp,cpu);
 
@@ -213,7 +213,7 @@ index<_Rank> operator++(
 Für den Präfixoperator das Indexobjekt (* dies). Für den suffixoperator ein neues Indexobjekt.
 
 ## <a name="operator_add_eq"></a>  Operator +=   
-Fügt die angegebene Anzahl auf jedes Element des Index-Objekts.
+Fügt die angegebene Anzahl auf jedes Element der Index-Objekt.
 ```  
 index<_Rank>& operator+=(
    const index<_Rank>& _Rhs
@@ -227,7 +227,7 @@ index<_Rank>& operator+=(
 _Rhs die zu addierende Zahl.
 
 ### <a name="return-value"></a>Rückgabewert
-Die Indexobjekt.
+Das Indexobjekt.
 
 ## <a name="operator_eq"></a> operator=   
 Kopiert den Inhalt des Objekts angegebenen Index in dieses Objekt.
@@ -237,7 +237,7 @@ index<_Rank>& operator=(
 ) restrict(amp,cpu);
 ``` 
 ### <a name="parameters"></a>Parameter
-_Other die Indexobjekt, das kopiert.
+_Sonstige die Indexobjekt, das kopiert werden.
 
 ### <a name="return-value"></a>Rückgabewert
 Ein Verweis auf dieses Indexobjekt.
@@ -257,10 +257,10 @@ index<_Rank>& operator-=(
 _Rhs die zu subtrahierende Zahl.
 
 ### <a name="return-value"></a>Rückgabewert
-Die Indexobjekt.   
+Das Indexobjekt.   
 
 ## <a name="rank"></a>  Rang  
-  Ruft den Rang des Index-Objekts ab.
+  Ruft den Rang des Index-Objekt ab.
 ```
 static const int rank = _Rank;
 ``` 

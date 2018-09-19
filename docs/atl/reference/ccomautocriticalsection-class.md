@@ -1,5 +1,5 @@
 ---
-title: CComAutoCriticalSection Klasse | Microsoft Docs
+title: CComAutoCriticalSection-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,68 +18,76 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae0c3cd1d00ce83a4e952d60a978663bfa76f814
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ff8687783907cb84af36122c5d7828f8845d595d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357228"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073459"
 ---
 # <a name="ccomautocriticalsection-class"></a>CComAutoCriticalSection-Klasse
-`CComAutoCriticalSection` Stellt Methoden zum Abrufen und Freigeben des Besitzes von einem kritischen Abschnittsobjekt bereit.  
-  
-## <a name="syntax"></a>Syntax  
-  
+
+`CComAutoCriticalSection` Stellt Methoden zum Abrufen und Freigeben des Besitzes von einem kritischen Abschnittsobjekt bereit.
+
+## <a name="syntax"></a>Syntax
+
 ```
 class CComAutoCriticalSection : public CComCriticalSection
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CComAutoCriticalSection::CComAutoCriticalSection](#ccomautocriticalsection)|Der Konstruktor.|  
-|[CComAutoCriticalSection:: ~ CComAutoCriticalSection](#dtor)|Der Destruktor.|  
-  
-## <a name="remarks"></a>Hinweise  
- `CComAutoCriticalSection` Klasse ähnelt ["CComCriticalSection"](../../atl/reference/ccomcriticalsection-class.md), mit Ausnahme von `CComAutoCriticalSection` automatisch die kritischen Abschnittsobjekt im Konstruktor initialisiert.  
-  
- Verwenden Sie in der Regel `CComAutoCriticalSection` über die `typedef` Namen [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). Dieser Name verweist auf `CComAutoCriticalSection` Wenn [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) verwendet wird.  
+```
 
-  
- Die `Init` und `Term` Methoden aus ["CComCriticalSection"](../../atl/reference/ccomcriticalsection-class.md) sind nicht verfügbar, wenn Sie diese Klasse verwenden.  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)  
-  
- `CComAutoCriticalSection`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** atlcore.h  
-  
-##  <a name="ccomautocriticalsection"></a>  CComAutoCriticalSection::CComAutoCriticalSection  
- Der Konstruktor.  
-  
+## <a name="members"></a>Member
+
+### <a name="public-constructors"></a>Öffentliche Konstruktoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CComAutoCriticalSection::CComAutoCriticalSection](#ccomautocriticalsection)|Der Konstruktor.|
+|[CComAutoCriticalSection:: ~ CComAutoCriticalSection](#dtor)|Der Destruktor.|
+
+## <a name="remarks"></a>Hinweise
+
+`CComAutoCriticalSection` ist vergleichbar mit der Klasse [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md), mit Ausnahme von `CComAutoCriticalSection` automatisch initialisiert das Objekt des kritischen Abschnitts im Konstruktor.
+
+Normalerweise verwenden Sie `CComAutoCriticalSection` über die `typedef` Namen [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). Dieser Name verweist auf `CComAutoCriticalSection` beim [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) verwendet wird.  
+
+Die `Init` und `Term` Methoden [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) sind nicht verfügbar, wenn Sie diese Klasse verwenden.
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)
+
+`CComAutoCriticalSection`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** atlcore.h
+
+##  <a name="ccomautocriticalsection"></a>  CComAutoCriticalSection::CComAutoCriticalSection
+
+Der Konstruktor.
+
 ```
 CComAutoCriticalSection();
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Ruft die Win32-Funktion [InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472), die die kritischen Abschnittsobjekt initialisiert.  
-  
-##  <a name="dtor"></a>  CComAutoCriticalSection:: ~ CComAutoCriticalSection  
- Der Destruktor.  
-  
+```
+
+### <a name="remarks"></a>Hinweise
+
+Ruft die Win32-Funktion [InitializeCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection), die Objekt des kritischen Abschnitts initialisiert.
+
+##  <a name="dtor"></a>  CComAutoCriticalSection:: ~ CComAutoCriticalSection
+
+Der Destruktor.
+
 ```
 ~CComAutoCriticalSection() throw();
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Der Destruktor ruft [DeleteCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682552), die alle von der kritischen Abschnittsobjekt verwendeten Systemressourcen frei.  
-  
-## <a name="see-also"></a>Siehe auch  
- [CComFakeCriticalSection-Klasse](../../atl/reference/ccomfakecriticalsection-class.md)   
- [Klassenübersicht](../../atl/atl-class-overview.md)   
- [CComCriticalSection-Klasse](../../atl/reference/ccomcriticalsection-class.md)
+```
+
+### <a name="remarks"></a>Hinweise
+
+Der Destruktor ruft [DeleteCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-deletecriticalsection), die alle vom Objekt kritischen Abschnitts verwendete Systemressourcen frei.
+
+## <a name="see-also"></a>Siehe auch
+
+[CComFakeCriticalSection-Klasse](../../atl/reference/ccomfakecriticalsection-class.md)<br/>
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
+[CComCriticalSection-Klasse](../../atl/reference/ccomcriticalsection-class.md)

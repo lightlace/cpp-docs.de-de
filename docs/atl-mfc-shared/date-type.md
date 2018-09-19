@@ -21,59 +21,61 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 314b943b171d43f8b1723321ac3a942ed33fd100
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d5a6ade991e3a2def588bdd3139cbea8089d3124
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883465"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758010"
 ---
 # <a name="date-type"></a>DATE-Typ
-Der DATE-Datentyp wird über eine 8-Byte-Gleitkommazahl implementiert. Tage werden durch ganze Zahl erhöht werden ab 30. Dezember 1899 Mitternacht als Zeit 0 (null) dargestellt. Stundenwerte werden als der Absolute Wert des Bruchteils der Zahl ausgedrückt. Die folgende Tabelle zeigt verschiedene Datumsangaben sowie das Datum numerischen Typ-äquivalent:  
-  
-|Datum und Uhrzeit|Darstellung|  
-|-------------------|--------------------|  
-|Am 30. Dezember 1899 Mitternacht|0,00|  
-|1. Januar 1900, Mitternacht|2.00|  
-|4. Januar 1900, Mitternacht|5.00|  
-|4. Januar 1900, 6 Uhr morgens|5.25|  
-|4. Januar 1900 Mittag|5.50|  
-|4. Januar 1900, 21: 00 Uhr|5.875|  
-  
- Der DATE-Datentyp, als auch die `COleDateTime` Klasse, stellt-Datumsangaben und Uhrzeiten als eine klassische-Position. Die `COleDateTime` Klasse enthält mehrere Methoden zum Bearbeiten von Datumswerten, einschließlich der Konvertierung in und aus anderen gängige Datumsformate.  
-  
- Folgendes sollte geachtet werden, bei der Arbeit mit diesen Datums- und Uhrzeitformate in Automation:  
-  
--   Datumsangaben werden in Ortszeit angegeben. Synchronisierung muss manuell ausgeführt werden, bei der Arbeit mit Daten in verschiedenen Zeitzonen.  
-  
--   Der Date-Datentypen werden nicht für die Sommerzeit berücksichtigt.  
-  
--   Die Date-Zeitachse wird (vor dem 30. Dezember 1899) für die Date-Werte kleiner als 0 ist nicht zusammenhängend. Dies ist, da der ganzzahlige Teil des Datumswerts behandelt wird, als signiert, während der Bruchteil behandelt wird, als Zahl ohne Vorzeichen. Das heißt, der ganzzahlige Teil des Datumswerts möglicherweise positiv oder negativ ist, während der Bruchteil den Date-Wert immer dem gesamten logischen Datum hinzugefügt wird. Die folgende Tabelle zeigt einige Beispiele:  
-  
-|Datum und Uhrzeit|Darstellung|  
-|-------------------|--------------------|  
-|27 Dezember 1899 wieder, Mitternacht|-3.00|  
-|28 Dezember 1899 wieder, Noon|-2.50|  
-|28 Dezember 1899 wieder, Mitternacht|-2.00|  
-|29. Dezember 1899, Mitternacht|-1.00|  
-|Am 30. Dezember 1899 18: 00 Uhr|-0.75|  
-|Am 30. Dezember 1899 Mittag|-0.50|  
-|Am 30. Dezember 1899 6 Uhr morgens|-0.25|  
-|Am 30. Dezember 1899 Mitternacht|0,00|  
-|Am 30. Dezember 1899 6 Uhr morgens|0.25|  
-|Am 30. Dezember 1899 Mittag|0.50|  
-|Am 30. Dezember 1899 18: 00 Uhr|0.75|  
-|31. Dezember 1899, Mitternacht|1.00|  
-|1. Januar 1900, Mitternacht|2.00|  
-|1. Januar 1900 Mittag|2.50|  
-|2 Januar 1900 (Mitternacht)|3.00|  
-  
+
+Der DATE-Datentyp wird über eine 8-Byte-Gleitkommazahl implementiert. Tage werden durch ganze Zahl erhöht werden ab 30. Dezember 1899 Mitternacht als Zeit 0 (null) dargestellt. Stundenwerte werden als der Absolute Wert des Bruchteils der Zahl ausgedrückt. Die folgende Tabelle zeigt verschiedene Datumsangaben sowie das Datum numerischen Typ-äquivalent:
+
+|Datum und Uhrzeit|Darstellung|
+|-------------------|--------------------|
+|Am 30. Dezember 1899 Mitternacht|0,00|
+|1. Januar 1900, Mitternacht|2.00|
+|4. Januar 1900, Mitternacht|5.00|
+|4. Januar 1900, 6 Uhr morgens|5.25|
+|4. Januar 1900 Mittag|5.50|
+|4. Januar 1900, 21: 00 Uhr|5.875|
+
+Der DATE-Datentyp, als auch die `COleDateTime` Klasse, stellt-Datumsangaben und Uhrzeiten als eine klassische-Position. Die `COleDateTime` Klasse enthält mehrere Methoden zum Bearbeiten von Datumswerten, einschließlich der Konvertierung in und aus anderen gängige Datumsformate.
+
+Folgendes sollte geachtet werden, bei der Arbeit mit diesen Datums- und Uhrzeitformate in Automation:
+
+- Datumsangaben werden in Ortszeit angegeben. Synchronisierung muss manuell ausgeführt werden, bei der Arbeit mit Daten in verschiedenen Zeitzonen.
+
+- Der Date-Datentypen werden nicht für die Sommerzeit berücksichtigt.
+
+- Die Date-Zeitachse wird (vor dem 30. Dezember 1899) für die Date-Werte kleiner als 0 ist nicht zusammenhängend. Dies ist, da der ganzzahlige Teil des Datumswerts behandelt wird, als signiert, während der Bruchteil behandelt wird, als Zahl ohne Vorzeichen. Das heißt, der ganzzahlige Teil des Datumswerts möglicherweise positiv oder negativ ist, während der Bruchteil den Date-Wert immer dem gesamten logischen Datum hinzugefügt wird. Die folgende Tabelle zeigt einige Beispiele:
+
+|Datum und Uhrzeit|Darstellung|
+|-------------------|--------------------|
+|27 Dezember 1899 wieder, Mitternacht|-3.00|
+|28 Dezember 1899 wieder, Noon|-2.50|
+|28 Dezember 1899 wieder, Mitternacht|-2.00|
+|29. Dezember 1899, Mitternacht|-1.00|
+|Am 30. Dezember 1899 18: 00 Uhr|-0.75|
+|Am 30. Dezember 1899 Mittag|-0.50|
+|Am 30. Dezember 1899 6 Uhr morgens|-0.25|
+|Am 30. Dezember 1899 Mitternacht|0,00|
+|Am 30. Dezember 1899 6 Uhr morgens|0.25|
+|Am 30. Dezember 1899 Mittag|0.50|
+|Am 30. Dezember 1899 18: 00 Uhr|0.75|
+|31. Dezember 1899, Mitternacht|1.00|
+|1. Januar 1900, Mitternacht|2.00|
+|1. Januar 1900 Mittag|2.50|
+|2 Januar 1900 (Mitternacht)|3.00|
+
 > [!CAUTION]
->  Beachten Sie, dass 06:00 Uhr wird immer durch einen Teilwert 0,25 unabhängig davon, ob die ganze Zahl, die den Tag darstellt (nach dem 30. Dezember 1899 wieder) positiv ist dargestellt oder negativ (vor dem 30. Dezember 1899 wieder), ein einfachen floating-Point-Vergleich wird fälschlicherweise sortieren beliebiges Datum für 6:00 an einem Tag älter als 12/30/1899 zurück als *später* als ein Datum, der für 7:00 für denselben Tag.  
-  
- Weitere Informationen zu Problemen im Zusammenhang mit der das Datum und `COleDateTime` Typen finden Sie unter [COleDateTime-Klasse](../atl-mfc-shared/reference/coledatetime-class.md) und [Datum und Uhrzeit: Automatisierungsunterstützung](../atl-mfc-shared/date-and-time-automation-support.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Datum und Uhrzeit](../atl-mfc-shared/date-and-time.md)   
- [COleDateTime-Klasse](../atl-mfc-shared/reference/coledatetime-class.md)
+>  Beachten Sie, dass 06:00 Uhr wird immer durch einen Teilwert 0,25 unabhängig davon, ob die ganze Zahl, die den Tag darstellt (nach dem 30. Dezember 1899 wieder) positiv ist dargestellt oder negativ (vor dem 30. Dezember 1899 wieder), ein einfachen floating-Point-Vergleich wird fälschlicherweise sortieren beliebiges Datum für 6:00 an einem Tag älter als 12/30/1899 zurück als *später* als ein Datum, der für 7:00 für denselben Tag.
+
+Weitere Informationen zu Problemen im Zusammenhang mit der das Datum und `COleDateTime` Typen finden Sie unter [COleDateTime-Klasse](../atl-mfc-shared/reference/coledatetime-class.md) und [Datum und Uhrzeit: Automatisierungsunterstützung](../atl-mfc-shared/date-and-time-automation-support.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Datum und Uhrzeit](../atl-mfc-shared/date-and-time.md)   
+[COleDateTime-Klasse](../atl-mfc-shared/reference/coledatetime-class.md)
 

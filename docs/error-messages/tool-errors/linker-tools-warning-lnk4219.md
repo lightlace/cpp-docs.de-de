@@ -1,5 +1,5 @@
 ---
-title: Linkertoolwarnung Lnk4219 | Microsoft Docs
+title: Linkertoolwarnung LNK4219 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59cb7376957b7985b7ae2335ea472171d490ff42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: daf097cd8715a7c523e6e8a2ea46714481ca7d2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301134"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105207"
 ---
 # <a name="linker-tools-warning-lnk4219"></a>Linkertoolwarnung LNK4219
-Fixup Namen Fixup-Überlauf. Ziel "Symbolname Target" ist außerhalb des gültigen Bereichs, Thunk  
-  
- Der Linker eingefügt einen Thunk in einer Situation, in dem die Adresse bzw. den Offset konnte nicht in die angegebene Anweisung nicht finden, da das Zielsymbol zu weit von der Anweisung Speicherort ist.  
-  
- Möglicherweise möchten Sie das Bild neu anordnen (mithilfe der [/ORDER](../../build/reference/order-put-functions-in-order.md) option, z. B.), die zusätzliche Dereferenzierungsebene zu vermeiden.
+
+Fixup Namen Fixup-Überlauf. Ziel "Zielsymbolname" ist außerhalb des gültigen Bereichs, Thunk wird eingefügt.
+
+Der Linker eingefügt einen Thunk in einer Situation, in dem der Offset oder der Adresse konnte nicht in die angegebene Anweisung nicht finden, da das Zielsymbol zu weit entfernt von Zielsymbol und vorhanden ist.
+
+Möglicherweise möchten Sie die Anwendung neu anordnen (mithilfe der [/ORDER](../../build/reference/order-put-functions-in-order.md) -Option verwenden, z. B.), das zusätzliche Maß an Dereferenzierung zu vermeiden.

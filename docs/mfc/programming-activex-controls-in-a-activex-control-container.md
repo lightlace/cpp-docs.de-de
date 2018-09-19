@@ -1,7 +1,7 @@
 ---
-title: 'ActiveX-Steuerelementcontainer: Programmieren von ActiveX-Steuerelementen in einem ActiveX-Steuerelementcontainer | Microsoft Docs'
+title: 'ActiveX-Steuerelementcontainer: Programmieren von ActiveX-Steuerelementen in einem ActiveX-Steuerelementcontainer | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -22,77 +22,82 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1bd8a99faa4cf0444782f402e69da761a8c25e2
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: f68e74c5374379019fd8fd5b0348b34e36005171
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929954"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535326"
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>ActiveX-Steuerelementcontainer: Programmieren von ActiveX-Steuerelementen in einem ActiveX-Steuerelementcontainer
-Dieser Artikel beschreibt den Prozess für den Zugriff auf den verfügbar gemachten [Methoden](../mfc/mfc-activex-controls-methods.md) und [Eigenschaften](../mfc/mfc-activex-controls-properties.md) von eingebetteten ActiveX-Steuerelementen. Im Wesentlichen müssen Sie die folgenden Schritte ausführen:  
+Dieser Artikel beschreibt den Prozess für den Zugriff auf den verfügbar gemachten [Methoden](../mfc/mfc-activex-controls-methods.md) und [Eigenschaften](../mfc/mfc-activex-controls-properties.md) eingebettete ActiveX-Steuerelemente. 
+
+>[!IMPORTANT]
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
+
+Im Grunde genommen, führen Sie die folgenden Schritte aus:  
   
-1.  [Die ActiveX-Steuerelementcontainer-Projekt ein ActiveX-Steuerelement einfügen](../mfc/inserting-a-control-into-a-control-container-application.md) mit Gallery.  
+1.  [Fügen Sie ein ActiveX-Steuerelement in das ActiveX-Container-Projekt](../mfc/inserting-a-control-into-a-control-container-application.md) Katalog verwenden.  
   
-2.  [Definieren Sie eine Membervariable](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) (oder andere Art des Zugriffs) des gleichen Typs wie die ActiveX-Wrapperklasse.  
+2.  [Definieren Sie eine Membervariable](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) (oder andere Art des Zugriffs) steuern, von den gleichen Typ wie die ActiveX-Wrapperklasse.  
   
-3.  [Programmieren Sie das ActiveX-Steuerelement](#_core_programming_the_activex_control) mit vordefinierten Memberfunktionen der Wrapperklasse.  
+3.  [Programmieren von ActiveX-Steuerelements](#_core_programming_the_activex_control) vordefinierte Memberfunktionen der Wrapperklasse.  
   
- Bei dieser Erläuterung wird davon ausgegangen Sie, dass die Erstellung einer Dialogfeldern basierende Projektnamen (Container) mit Unterstützung für ActiveX-Steuerelement. Das daraus resultierende Projekt wird die Circ Beispiel-Steuerelement hinzugefügt.  
+ Bei diesem Thema wird davon ausgegangen Sie, dass Sie ein dialogfeldbasiertes-Projekt (mit dem Namen "Container") erstellt haben mit ActiveX-Steuerelemente unterstützen. Die Circ Beispiel-Steuerelement aus dem wird das resultierende Projekt hinzugefügt werden.  
   
- Sobald das Circ-Steuerelement in das Projekt (Schritt 1) eingefügt wird, fügen Sie eine Instanz des Steuerelements Circ Hauptdialogfeld der Anwendung.  
+ Sobald das Circ-Steuerelement in das Projekt (Schritt 1) eingefügt wird, legen Sie eine Instanz des Steuerelements Circ in Hauptdialogfelds der Anwendung ein.  
   
 ## <a name="procedures"></a>Verfahren  
   
-#### <a name="to-add-the-circ-control-to-the-dialog-template"></a>Der Dialogfeldvorlage das Circ-Steuerelement hinzu  
+#### <a name="to-add-the-circ-control-to-the-dialog-template"></a>Das Steuerelement Circ Dialogfeldvorlage hinzu  
   
-1.  Laden Sie die ActiveX-Steuerelementcontainer-Projekt. In diesem Beispiel verwendet die `Container` Projekt.  
+1.  Laden Sie das ActiveX-Steuerelement-Container-Projekt. In diesem Beispiel verwenden Sie die `Container` Projekt.  
   
 2.  Klicken Sie auf der Registerkarte "Ressourcenansicht".  
   
 3.  Öffnen der **Dialogfeld** Ordner.  
   
-4.  Doppelklicken Sie auf die wichtigsten Dialogfeldvorlage. Verwenden Sie für dieses Beispiel **Sie IDD_CONTAINER_DIALOG**.  
+4.  Doppelklicken Sie auf die wichtigsten Dialogfeldvorlage. In diesem Beispiel verwenden **Sie IDD_CONTAINER_DIALOG**.  
   
-5.  Klicken Sie auf das Symbol "Steuerelement Circ" in der Toolbox.  
+5.  Klicken Sie auf das Symbol in der Toolbox Circ-Steuerelement.  
   
-6.  Klicken Sie auf eine Stelle nach oben im Dialogfeld auf das Steuerelement Circ einfügen.  
+6.  Klicken Sie auf eine Stelle innerhalb des Dialogfelds, um das Steuerelement Circ einzufügen.  
   
-7.  Aus der **Datei** Menü wählen **alle speichern** um alle Änderungen an der Dialogfeldvorlage speichern.  
+7.  Von der **Datei** Menü wählen **Alles speichern** um alle Änderungen an der Dialogfeldvorlage speichern.  
   
 ## <a name="modifications-to-the-project"></a>Änderungen am Projekt  
- Damit kann der Steuerelementcontainer-Anwendung auf das Steuerelement Circ, fügt Visual C++ automatisch die Wrapperklasse (`CCirc`) Implementierungsdatei (. CPP), das Container-Projekt und den klassenheader für den Wrapper (. H)-Datei in der Headerdatei für Dialogfeld-Feld:  
+ Um die Container-Anwendung auf das Steuerelement Circ zu aktivieren, fügt Visual C++ automatisch die Wrapperklasse (`CCirc`) Implementierungsdatei (. CPP), das Container-Projekt und den klassenheader Wrapper (. H)-Datei der Dialogfeld-Box-Headerdatei:  
   
  [!code-cpp[NVC_MFC_AxCont#1](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_1.h)]  
   
 ##  <a name="_core_the_wrapper_class_header_28h29_file"></a> Die Header der Wrapper-Klasse (. H)-Datei  
- Zum Abrufen und Festlegen von Eigenschaften (und Aufrufen von Methoden) für das Steuerelement Circ der `CCirc` Wrapperklasse eine Deklaration alle verfügbar gemachten Methoden und Eigenschaften. In diesem Beispiel befinden sich diese Deklarationen in CIRC. H. Im folgende Beispiel ist der Teil der Klasse `CCirc` , die verfügbar gemachten Schnittstellen des ActiveX-Steuerelements definiert:  
+ Zum Abrufen und Festlegen von Eigenschaften (und Aufrufen von Methoden) für das Steuerelement Circ der `CCirc` Wrapper-Klasse stellt eine Deklaration alle verfügbar gemachten Methoden und Eigenschaften bereit. In diesem Beispiel befinden sich diese Deklarationen im CIRC. H. Im folgende Beispiel ist der Teil der Klasse `CCirc` , die das ActiveX-Steuerelement verfügbar gemachten Schnittstellen definiert:  
   
  [!code-cpp[NVC_MFC_AxCont#2](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_2.h)]  
 [!code-cpp[NVC_MFC_AxCont#3](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_3.h)]  
   
- Diese Funktionen können dann von anderen Prozeduren der Anwendung, die mit normaler C++-Syntax aufgerufen werden. Weitere Informationen zur Verwendung von dieser Memberfunktion legen Sie auf die Methoden und Eigenschaften des Steuerelements zugreifen, finden Sie im Abschnitt [Programmieren das ActiveX-Steuerelement](#_core_programming_the_activex_control).  
+ Diese Funktionen können dann von anderen von der Anwendung-Prozeduren, die unter Verwendung normalen C++-Syntax aufgerufen werden. Weitere Informationen zur Verwendung dieser Memberfunktion, die auf Methoden und Eigenschaften des Steuerelements festlegen, finden Sie im Abschnitt [Programmieren von ActiveX-Steuerelements](#_core_programming_the_activex_control).  
   
 ##  <a name="_core_member_variable_modifications_to_the_project"></a> Member Variable Änderungen am Projekt  
- Sobald das ActiveX-Steuerelement dem Projekt hinzugefügt und in einem Dialogfeld Feld Container eingebettet wurde, kann es von anderen Teilen des Projekts zugegriffen werden. Die einfachste Möglichkeit zum Zugriff auf das Steuerelement entspricht [erstellen Sie eine Membervariable](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) der Dialogklasse, `CContainerDlg` (Schritt 2), d. h. den gleichen Typ aufweisen wie die Wrapperklasse, die dem Projekt hinzugefügt, die von Visual C++. Sie können die Membervariable klicken Sie dann auf das eingebettete Steuerelement zu einem beliebigen Zeitpunkt verwenden.  
+ Sobald das ActiveX-Steuerelement zum Projekt hinzugefügt und in einem Dialogfeld Feld Container eingebettet wurde, kann es von anderen Teilen des Projekts zugegriffen werden. Die einfachste Möglichkeit zum Zugriff auf das Steuerelement ist [erstellen Sie eine Membervariable](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) der Dialogklasse, `CContainerDlg` (Schritt 2), d. h. des gleichen Typs wie die Wrapperklasse, die von Visual C++ zum Projekt hinzugefügt. Sie können dann die Membervariable verwenden, auf das integrierte Steuerelement zu einem beliebigen Zeitpunkt.  
   
- Wenn die **Hinzufügen von Membervariablen** das Dialogfeld fügt die *M_circctl* Member-Variable auf das Projekt ist, werden außerdem hinzugefügt, die folgenden Zeilen der Headerdatei (. H) von der `CContainerDlg` Klasse:  
+ Wenn die **Hinzufügen von Membervariablen** das Dialogfeld fügt die *M_circctl* Member Variablen auf das Projekt, es sowie die folgenden Zeilen der Headerdatei (. H) von der `CContainerDlg` Klasse:  
   
  [!code-cpp[NVC_MFC_AxCont#4](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_4.h)]  
 [!code-cpp[NVC_MFC_AxCont#5](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_5.h)]  
   
- Darüber hinaus einen Aufruf von **DDX_Control** wird automatisch hinzugefügt, die `CContainerDlg`der Implementierung von `DoDataExchange`:  
+ Darüber hinaus einen Aufruf von **DDX_Control** wird automatisch hinzugefügt, die `CContainerDlg`Implementierung von `DoDataExchange`:  
   
  [!code-cpp[NVC_MFC_AxCont#6](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_6.cpp)]  
   
-##  <a name="_core_programming_the_activex_control"></a> Programmieren von ActiveX-Steuerelement  
- An diesem Punkt haben Sie das ActiveX-Steuerelement in der Dialogfeldvorlage eingefügt und eine Membervariable für sie erstellt. Allgemeine C++-Syntax können jetzt die Eigenschaften und Methoden des eingebetteten Steuerelements zuzugreifen.  
+##  <a name="_core_programming_the_activex_control"></a> Programmieren von ActiveX-Steuerelements  
+ An diesem Punkt haben Sie das ActiveX-Steuerelement in Ihre Dialogfeldvorlage eingefügt und eine Membervariable erstellt. Sie können jetzt allgemeine C++-Syntax verwenden, auf die Eigenschaften und Methoden des eingebetteten Steuerelements zuzugreifen.  
   
- Wie bereits erwähnt (in [der Wrapper Headerdatei (. H) Datei](#_core_the_wrapper_class_header_28h29_file)), die Headerdatei (. H) für die `CCirc` Wrapperklasse in diesem Fall CIRC. H, enthält eine Liste der Member-Funktionen, die Sie verwenden können, auf alle verfügbar gemachten Eigenschaftswert abrufen und festlegen. Memberfunktionen für verfügbar gemachten Methoden sind auch verfügbar.  
+ Wie bereits erwähnt (in [der Wrapper Headerdatei (. H) Datei](#_core_the_wrapper_class_header_28h29_file)), die Header-Datei (. H) für die `CCirc` Wrapperklasse, in diesem Fall CIRC. H, enthält eine Liste der Member-Funktionen, die Sie zum Abrufen und Festlegen der Werte aller verfügbar gemachten Eigenschaften verwenden können. Member-Funktionen für die verfügbar gemachten Methoden sind auch verfügbar.  
   
- So ändern Sie die Eigenschaften des Steuerelements wird häufig den `OnInitDialog` Memberfunktion der Hauptdialogfeld-Klasse. Diese Funktion wird aufgerufen, kurz bevor das Dialogfeld wird angezeigt und verwendet wird, um seinen Inhalt, einschließlich aller seiner Steuerelemente zu initialisieren.  
+ So ändern Sie die Eigenschaften des Steuerelements wird häufig der `OnInitDialog` Memberfunktion die Hauptdialogfeldklasse. Diese Funktion wird aufgerufen, kurz bevor das Dialogfeld wird angezeigt, und verwendet wird, um seinen Inhalt, einschließlich aller seiner Steuerelemente zu initialisieren.  
   
- Im folgenden Codebeispiel wird mit der *M_circctl* Membervariable beim Ändern der Beschriftung und CircleShape Eigenschaften des eingebetteten Circ Steuerelements:  
+ Im folgenden Codebeispiel wird die *M_circctl* Member-Variable, um die Beschriftung und CircleShape Eigenschaften des eingebetteten Steuerelements Circ ändern:  
   
  [!code-cpp[NVC_MFC_AxCont#7](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_7.cpp)]  
   

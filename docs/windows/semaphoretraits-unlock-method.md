@@ -1,5 +1,5 @@
 ---
-title: 'Semaphoretraits:: Unlock-Methode | Microsoft Docs'
+title: 'Semaphoretraits:: Unlock-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0914c6ff83e881f92963fc8a548ddeff587db75e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e993c58ea6fc84e0b4001b488632858e5251d67b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892246"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583970"
 ---
 # <a name="semaphoretraitsunlock-method"></a>SemaphoreTraits::Unlock-Methode
-Versionen Kontrolle über eine freigegebene Ressource.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-inline static void Unlock(  
-   _In_ Type h  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `h`  
- Handle für einen Semaphorobjekt.  
-  
-## <a name="remarks"></a>Hinweise  
- Wenn die Unlock-Vorgang nicht erfolgreich ist, gibt Unlock() einen Fehler, der die Ursache des Fehlers angibt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>Siehe auch  
- [SemaphoreTraits-Struktur](../windows/semaphoretraits-structure.md)
+
+Releases-Steuerelement eine gemeinsam genutzte Ressource.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+inline static void Unlock(
+   _In_ Type h
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*h*  
+Handle für ein **Semaphor** Objekt.
+
+## <a name="remarks"></a>Hinweise
+
+Wenn sich "Entsperren"-Vorgangs nicht erfolgreich ist **Unlock()** gibt einen Fehler, der die Ursache des Fehlers angibt.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>Siehe auch
+
+[SemaphoreTraits-Struktur](../windows/semaphoretraits-structure.md)

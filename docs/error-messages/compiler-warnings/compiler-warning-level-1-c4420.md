@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4420 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4420 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98336a30e7174b62df48e93a04ba9ee7ddcc919a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1ba4ef4c4fc006e1a5950d0d16dc530ccc06a1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279109"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049747"
 ---
 # <a name="compiler-warning-level-1-c4420"></a>Compilerwarnung (Stufe 1) C4420
-'Operator': Operator nicht verfügbar ist, verwenden Sie stattdessen; "Operator" Überprüfen zur Laufzeit möglicherweise gefährdet  
-  
- Diese Warnung wird generiert, wenn Sie mithilfe der [damit/RTCv](../../build/reference/rtc-run-time-error-checks.md) (Vektor prüfen neu/löschen) und wenn kein Vektor Formular gefunden wird. In diesem Fall wird das Formular nicht Vektor verwendet.  
-  
- In Reihenfolge damit/RTCv ordnungsgemäß funktioniert, sollte der Compiler immer Vektorform Aufrufen [neue](../../cpp/new-operator-cpp.md)/[löschen](../../cpp/delete-operator-cpp.md) Wenn die Vektorsyntax verwendet wurde.
+
+'Operator': Operator nicht verfügbar ist, verwenden stattdessen "Operator" laufzeitüberprüfung beeinträchtigt werden
+
+Diese Warnung wird generiert, wenn Sie verwenden die [damit/RTCv](../../build/reference/rtc-run-time-error-checks.md) (Vektor prüfen neuer/löschen) und wenn keine Vektorform gefunden wird. In diesem Fall wird der nicht-Vektor-Formular verwendet.
+
+In der Reihenfolge, damit/RTCv ordnungsgemäß funktioniert, sollte der Compiler immer Vektorform Aufrufen [neue](../../cpp/new-operator-cpp.md)/[löschen](../../cpp/delete-operator-cpp.md) , wenn die Vektorsyntax verwendet wurde.

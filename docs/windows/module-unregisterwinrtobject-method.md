@@ -1,5 +1,5 @@
 ---
-title: 'Module:: unregisterwinrtobject-Methode | Microsoft Docs'
+title: 'Module:: unregisterwinrtobject-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aab0ec29dbda428a1173d57e2671f1e4b609e085
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 88cafb7796ba0dfd1e37902821872e860ddc4baf
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882601"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592183"
 ---
 # <a name="moduleunregisterwinrtobject-method"></a>Module::UnregisterWinRTObject-Methode
-Hebt die Registrierung auf ein oder mehrere Windows-Runtime-Objekte, damit andere Clientanwendungen auf sie keine Verbindung herstellen können.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-virtual HRESULT UnregisterWinRTObject(  
-   unsigned int,  
-   _Inout_ WINRT_REGISTRATION_COOKIE* cookie  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `cookie`  
- Ein Zeiger auf einen Wert an, der das Klassenobjekt identifiziert, dessen Registrierung aufgehoben werden.  
-  
-## <a name="return-value"></a>Rückgabewert  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL
- 
- ## <a name="see-also"></a>Siehe auch
- [Module-Klasse](../windows/module-class.md)
+
+Hebt die Registrierung für ein oder mehrere Windows-Runtime-Objekte, damit andere Anwendungen darauf keine Verbindung herstellen können.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+virtual HRESULT UnregisterWinRTObject(
+   unsigned int,
+   _Inout_ WINRT_REGISTRATION_COOKIE* cookie
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*Cookie*  
+Ein Zeiger auf ein Wert, der das Klassenobjekt identifiziert, dessen Registrierung aufgehoben werden.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+[Module-Klasse](../windows/module-class.md)

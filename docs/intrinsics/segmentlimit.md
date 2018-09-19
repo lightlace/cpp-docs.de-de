@@ -1,5 +1,5 @@
 ---
-title: __segmentlimit | Microsoft Docs
+title: __segmentlimit | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64fffacbaebc99d3298b5463a014db1e9117cd7b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e9ca899b7ad0f83faed4b8aefe318d2c62abb76
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330751"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704989"
 ---
 # <a name="segmentlimit"></a>__segmentlimit
 **Microsoft-spezifisch**  
@@ -38,22 +38,22 @@ unsigned long __segmentlimit(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `a`  
- Eine Konstante, die Auswahl des Segments angibt.  
+*a*<br/>
+[in] Eine Konstante, die Segment-Auswahl angibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Das Segment Limit des Segments auswahlzeigers gemäß `a`, vorausgesetzt, dass die Auswahl auf der aktuellen Berechtigungsebene gültig und sichtbar ist.  
+ Das Segment Limit des Selektors Segment gemäß `a`, vorausgesetzt, dass die Auswahl auf der aktuellen Berechtigungsebene gültig und sichtbar ist.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__segmentlimit`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__segmentlimit`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn das Segment Limit kann nicht abgerufen werden, schlägt diese Anweisung fehl. Diese Anweisung löscht die ZF-Flag und der Rückgabewert nicht definiert ist, bei einem Fehler.  
+ Wenn das Limit des Segments kann nicht abgerufen werden, schlägt diese Anweisung fehl. Diese Anweisung löscht das ZF-Flag und der Rückgabewert nicht definiert ist, bei einem Fehler.  
   
  Diese Routine ist nur als systeminterne Funktion verfügbar.  
   

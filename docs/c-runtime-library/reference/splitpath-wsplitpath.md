@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220e2befc40dba342a7f8c2aa4c94294bc667ce0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 46d29b55e215ce426bbfd465b3d54e1d267a1bb1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411421"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103917"
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
 
@@ -75,21 +75,26 @@ void _wsplitpath(
 
 ### <a name="parameters"></a>Parameter
 
-*Pfad* vollständiger Pfad.
+*path*<br/>
+Vollständiger Pfad
 
-*Laufwerk* Laufwerksbuchstaben beginnen, gefolgt von einem Doppelpunkt (**:**). Sie können übergeben **NULL** für diesen Parameter, wenn Sie nicht den Buchstaben des Laufwerks erforderlich ist.
+*Laufwerk*<br/>
+Laufwerkbuchstabe, gefolgt von einem Doppelpunkt (**:**). Sie können übergeben **NULL** für diesen Parameter, wenn Sie nicht der Buchstabe des Laufwerks erforderlich ist.
 
-*Dir* Verzeichnispfad aufweist, einschließlich des nachgestellten Schrägstrich. Schrägstriche ( **/** ), umgekehrten Schrägstrichen ( **\\** ), oder beides verwendet werden können. Sie können übergeben **NULL** für diesen Parameter, wenn Sie keinen Pfad für das Verzeichnis benötigen.
+*dir*<br/>
+Verzeichnispfad, einschl. nachstehender Schrägstrich. Schrägstriche ( **/** ), umgekehrte Schrägstriche ( **\\** ), oder beides verwendet werden können. Sie können übergeben **NULL** für diesen Parameter, wenn Sie den Verzeichnispfad nicht erforderlich ist.
 
-*Fname* Dateiname (ohne Erweiterung) basieren. Sie können übergeben **NULL** für diesen Parameter, wenn Sie den Dateinamen nicht benötigen.
+*fname*<br/>
+Basisdateiname (ohne Erweiterung). Sie können übergeben **NULL** für diesen Parameter, wenn Sie den Dateinamen nicht erforderlich ist.
 
-*Ext* Dateierweiterung, einschließlich führender Zeitraum (**.**). Sie können übergeben **NULL** für diesen Parameter, wenn Sie nicht mit die Erweiterung benötigen.
+*ext*<br/>
+Dateierweiterung, einschl. führender Punkt (**.**). Sie können übergeben **NULL** für diesen Parameter, wenn Sie die Dateierweiterung nicht erforderlich ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_splitpath** Funktion teilt einen Pfad in vier Komponenten. **_splitpath** automatisch behandelt Multibyte-Zeichenfolgenargumente nach Bedarf, erkennen Multibyte-Zeichensequenzen entsprechend der multibyte-Codepage aktuell in Verwendung. **_wsplitpath** ist eine Breitzeichen-Version von **_splitpath**; die Argumente für **_wsplitpath** sind Zeichenfolgen mit Breitzeichen. Anderenfalls verhalten sich diese Funktionen identisch.
+Die **_splitpath** -Funktion teilt einen Pfad in seine vier Komponenten. **_splitpath** behandelt automatisch Multibyte-Zeichenfolge nach Bedarf erkennt multibytezeichensequenzen gemäß dem multibyte-Codepage aktuell. **_wsplitpath** ist eine Breitzeichen-Version von **_splitpath**; die Argumente für **_wsplitpath** sind Breitzeichen Zeichenfolgen. Anderenfalls verhalten sich diese Funktionen identisch.
 
-**Sicherheitshinweis:** Diese Funktionen stellen eine mögliche Bedrohung aufgrund eines Pufferüberlaufproblems dar. Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795). Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
+**Sicherheitshinweis:** Diese Funktionen stellen eine mögliche Bedrohung aufgrund eines Pufferüberlaufproblems dar. Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns). Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -97,7 +102,7 @@ Die **_splitpath** Funktion teilt einen Pfad in vier Komponenten. **_splitpath**
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath**|**_splitpath**|**_splitpath**|**_wsplitpath**|
 
-Jede Komponente des vollständigen Pfads wird in einem separaten Puffer gespeichert. die Manifestkonstanten **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**, und **_MAX_EXT** (definiert in STDLIB. H) Geben Sie die maximale Größe für jede Komponente. Dateikomponenten, die größer als die entsprechenden Manifestkonstanten sind, können zur Beschädigung des Heaps führen.
+Jede Komponente des vollständigen Pfads wird in einem separaten Puffer gespeichert. die Manifestkonstanten **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**, und **_MAX_EXT** (definiert in STDLIB. H) Geben Sie die maximale Größe für jede Dateikomponente an. Dateikomponenten, die größer als die entsprechenden Manifestkonstanten sind, können zur Beschädigung des Heaps führen.
 
 Jeder Puffer muss so groß wie die entsprechende Manifestkonstante sein, damit ein potenzieller Pufferüberlauf vermieden werden kann.
 
@@ -110,15 +115,15 @@ In der folgenden Tabelle werden die Werte der Manifestkonstanten aufgelistet.
 |**_MAX_FNAME**|256|
 |**_MAX_EXT**|256|
 
-Wenn der vollständige Pfad eine Komponente (z. B. ein Dateiname), keinen enthält **_splitpath** weist leere Zeichenfolgen in der entsprechenden Puffer.
+Wenn der vollständige Pfad keine Komponente (z. B. Dateiname), enthält **_splitpath** leere Zeichenfolgen zu den entsprechenden Puffern.
 
-Sie können übergeben **NULL** auf **_splitpath** für alle Parameter außer *Pfad* , die nicht erforderlich.
+Sie können übergeben **NULL** zu **_splitpath** für alle Parameter außer *Pfad* , das ist nicht erforderlich.
 
-Wenn *Pfad* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und die Funktion gibt **EINVAL**.
+Wenn *Pfad* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und die Funktion gibt **EINVAL**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_splitpath**|\<stdlib.h>|
 |**_wsplitpath**|\<stdlib.h> oder \<wchar.h>|

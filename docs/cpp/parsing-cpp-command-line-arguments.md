@@ -1,5 +1,5 @@
 ---
-title: Analysieren von C++-Befehlszeilenargumenten | Microsoft Docs
+title: Analysieren von C++-Befehlszeilenargumenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,66 +18,70 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147461584f1a978be55502d783bc527b5632d20f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a48e731e714f59a249e5fa689e046e94faf360e6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040218"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analysieren von C++-Befehlszeilenargumenten
-**Microsoft-spezifisch**  
-  
- Beim Interpretieren von Argumenten, die in der Befehlszeile des Betriebssystems angegeben werden, verwendet der Microsoft C/C++-Startcode die folgenden Regeln:  
-  
--   Argumente werden durch einen Leerraum (Leerzeichen oder Tabstopp) abgegrenzt.  
-  
--   Die Einfügemarke (^) wird nicht als Escape- oder Trennzeichen erkannt. Das Zeichen wird vom Befehlszeilenparser im Betriebssystem vollständig verarbeitet, bevor es an das `argv`-Array im Programm übergeben wird.  
-  
--   Eine in doppelte Anführungszeichen eingeschlossene Zeichenfolge ("*Zeichenfolge*") wird als einzelnes Argument enthaltenen Leerräume interpretiert. Eine Zeichenfolge in Anführungszeichen kann in ein Argument eingebettet sein.  
-  
--   Wenn dem Anführungszeichen ein umgekehrter Schrägstrich (\\") vorangestellt wird, wird diese Zeichenfolge als literales Anführungszeichen (") interpretiert.  
-  
--   Ein umgekehrter Schrägstrich wird als solcher interpretiert, sofern er nicht unmittelbar vor einem Anführungszeichen steht.  
-  
--   Wenn ein doppeltes Anführungszeichen auf eine gerade Anzahl umgekehrter Schrägstriche folgt, wird für jedes Paar umgekehrter Schrägstriche ein umgekehrter Schrägstrich im `argv`-Array platziert. Das doppelte Anführungszeichen wird als Zeichenfolgentrennzeichen interpretiert.  
-  
--   Wenn auf eine ungerade Anzahl umgekehrter Schrägstriche ein doppeltes Anführungszeichen folgt, wird für jedes Paar von umgekehrten Schrägstrichen ein umgekehrter Schrägstrich in das `argv`-Array eingefügt, und das doppelte Anführungszeichen wird vom verbleibenden umgekehrten Schrägstrich mit einem Escapezeichen versehen, sodass ein echtes doppeltes Anführungszeichen (") in `argv` eingefügt wird.  
-  
-## <a name="example"></a>Beispiel  
- Das folgende Programm zeigt, wie Befehlszeilenargumente übergeben werden:  
-  
-```  
-// command_line_arguments.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-  
-using namespace std;  
-int main( int argc,      // Number of strings in array argv  
-          char *argv[],   // Array of command-line argument strings  
-          char *envp[] )  // Array of environment variable strings  
-{  
-    int count;  
-  
-    // Display each command-line argument.  
-    cout << "\nCommand-line arguments:\n";  
-    for( count = 0; count < argc; count++ )  
-         cout << "  argv[" << count << "]   "  
-                << argv[count] << "\n";  
-}  
-```  
-  
- Die folgende Tabelle zeigt beispielhafte Eingaben und zu erwartende Ausgaben, wobei die Regeln in der vorangehenden Liste aufgezeigt werden.  
-  
-### <a name="results-of-parsing-command-lines"></a>Ergebnisse der Analyse von Befehlszeilen  
-  
-|Befehlszeileneingabe|argv[1]|argv[2]|argv[3]|  
-|-------------------------|---------------|---------------|---------------|  
-|`"abc" d e`|`abc`|`d`|`e`|  
-|`a\\b d"e f"g h`|`a\\b`|`de fg`|`h`|  
-|`a\\\"b c d`|`a\"b`|`c`|`d`|  
-|`a\\\\"b c" d e`|`a\\b c`|`d`|`e`|  
-  
-**Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [main: Programmstart](../cpp/main-program-startup.md)
+
+**Microsoft-spezifisch**
+
+Beim Interpretieren von Argumenten, die in der Befehlszeile des Betriebssystems angegeben werden, verwendet der Microsoft C/C++-Startcode die folgenden Regeln:
+
+- Argumente werden durch einen Leerraum (Leerzeichen oder Tabstopp) abgegrenzt.
+
+- Die Einfügemarke (^) wird nicht als Escape- oder Trennzeichen erkannt. Das Zeichen wird vom Befehlszeilenparser im Betriebssystem vollständig verarbeitet, bevor es an das `argv`-Array im Programm übergeben wird.
+
+- Eine Zeichenfolge, umgeben von doppelten Anführungszeichen ("*Zeichenfolge*") wird als ein einzelnes Argument, enthaltenen Leerräume interpretiert. Eine Zeichenfolge in Anführungszeichen kann in ein Argument eingebettet sein.
+
+- Wenn dem Anführungszeichen ein umgekehrter Schrägstrich (\\") vorangestellt wird, wird diese Zeichenfolge als literales Anführungszeichen (") interpretiert.
+
+- Ein umgekehrter Schrägstrich wird als solcher interpretiert, sofern er nicht unmittelbar vor einem Anführungszeichen steht.
+
+- Wenn ein doppeltes Anführungszeichen auf eine gerade Anzahl umgekehrter Schrägstriche folgt, wird für jedes Paar umgekehrter Schrägstriche ein umgekehrter Schrägstrich im `argv`-Array platziert. Das doppelte Anführungszeichen wird als Zeichenfolgentrennzeichen interpretiert.
+
+- Wenn auf eine ungerade Anzahl umgekehrter Schrägstriche ein doppeltes Anführungszeichen folgt, wird für jedes Paar von umgekehrten Schrägstrichen ein umgekehrter Schrägstrich in das `argv`-Array eingefügt, und das doppelte Anführungszeichen wird vom verbleibenden umgekehrten Schrägstrich mit einem Escapezeichen versehen, sodass ein echtes doppeltes Anführungszeichen (") in `argv` eingefügt wird.
+
+## <a name="example"></a>Beispiel
+
+Das folgende Programm zeigt, wie Befehlszeilenargumente übergeben werden:
+
+```cpp
+// command_line_arguments.cpp
+// compile with: /EHsc
+#include <iostream>
+
+using namespace std;
+int main( int argc,      // Number of strings in array argv
+          char *argv[],   // Array of command-line argument strings
+          char *envp[] )  // Array of environment variable strings
+{
+    int count;
+
+    // Display each command-line argument.
+    cout << "\nCommand-line arguments:\n";
+    for( count = 0; count < argc; count++ )
+         cout << "  argv[" << count << "]   "
+                << argv[count] << "\n";
+}
+```
+
+Die folgende Tabelle zeigt beispielhafte Eingaben und zu erwartende Ausgaben, wobei die Regeln in der vorangehenden Liste aufgezeigt werden.
+
+### <a name="results-of-parsing-command-lines"></a>Ergebnisse der Analyse von Befehlszeilen
+
+|Befehlszeileneingabe|argv[1]|argv[2]|argv[3]|
+|-------------------------|---------------|---------------|---------------|
+|`"abc" d e`|`abc`|`d`|`e`|
+|`a\\b d"e f"g h`|`a\\b`|`de fg`|`h`|
+|`a\\\"b c d`|`a\"b`|`c`|`d`|
+|`a\\\\"b c" d e`|`a\\b c`|`d`|`e`|
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[main: Programmstart](../cpp/main-program-startup.md)

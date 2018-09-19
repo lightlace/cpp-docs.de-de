@@ -1,5 +1,5 @@
 ---
-title: _mm_cvtsi64x_ss | Microsoft Docs
+title: _mm_cvtsi64x_ss | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb529e8aab204df85de2da0a2fdf4c820964239
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb253ab776565339aeaeade26d6d355b4f6a742b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340605"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699999"
 ---
 # <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
 **Microsoft-spezifisch**  
   
- Generiert die [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] erweiterte Version der Konvertieren von 64-Bit-Ganzzahl, mit einfacher Genauigkeit Floating-Skalarwert (`cvtsi2ss`) Anweisung.  
+ Generiert die X64 erweiterte Version der Konvertieren von 64-Bit-Ganzzahl, mit einfacher Genauigkeit Floating-Point-Skalarwert (`cvtsi2ss`) Anweisung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,14 +39,14 @@ __m128 _mm_cvtsi64x_ss(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `a`  
- Eine `__m128` Struktur mit vier Gleitkommawerten mit einfacher Genauigkeit.  
+*a*<br/>
+[in] Ein `__m128` Struktur, die vier Werte für Gleitkommazahlen mit einfacher Genauigkeit enthält.  
   
- [in] `b`  
- Eine 64-Bit-Ganzzahl in einen Gleitkommawert konvertiert wird.  
+*b*<br/>
+[in] Eine 64-Bit-Ganzzahl in einen Gleitkommawert konvertiert werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Eine `__m128` -Struktur, deren erste Gleitkommawert das Ergebnis der Konvertierung ist. Die anderen drei Werte sind dieselben wie kopiert `a`.  
+ Ein `__m128` -Struktur, deren erste Gleitkommawert das Ergebnis der Konvertierung ist. Die anderen drei Werte beim Übertragungsvorgang kopiert werden gegenüber `a`.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -57,7 +57,7 @@ __m128 _mm_cvtsi64x_ss(
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Die `__m128` Struktur darstellt, ein XMM-Register, sodass dieser systeminternen Funktion als Wert kann `b` registrieren vom Systemspeicher in eine XMM verschoben werden soll.  
+ Die `__m128` Werttypstruktur ein XMM-Register, sodass dieser systeminternen Funktion als Wert kann `b` registrieren im Systemspeicher in einer XMM verschoben werden soll.  
   
  Diese Routine ist nur als systeminterne Funktion verfügbar.  
   

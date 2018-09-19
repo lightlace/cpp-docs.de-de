@@ -1,5 +1,5 @@
 ---
-title: Verknüpfen eines Menübefehls mit einer Zugriffstaste | Microsoft Docs
+title: Verknüpfen eines Menübefehls mit einer Zugriffstaste (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,51 +8,53 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- keyboard shortcuts, menu association
-- commands, associating menu commands with accelerator keys
-- menu commands, associating with keyboard shortcuts
+- keyboard shortcuts [C++], menu association
+- commands [C++], associating menu commands with accelerator keys
+- menu commands [C++], associating with keyboard shortcuts
 ms.assetid: ad2de43f-b20a-4c9f-bda8-0420179da48c
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c4f1aa4b80aec2e7c16485c08d2505695b21f4d5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b55535e9306d272d47f098e7cf15d28a764f3620
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858081"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316288"
 ---
-# <a name="associating-a-menu-command-with-an-accelerator-key"></a>Verknüpfen eines Menübefehls mit einer Zugriffstaste
-Häufig ist es wünschenswert, dass ein Menübefehl und eine Tastenkombination den gleichen Programmbefehl ausgeben. Sie erreichen dies, indem Sie im Menü-Editor dem Menübefehl und einem Eintrag in der Zugriffstastentabelle Ihrer Anwendung den gleichen Ressourcenbezeichner zuordnen. Anschließend bearbeiten Sie die [Beschriftung](../windows/menu-command-properties.md) des Menübefehls so, dass sie den Namen der Zugriffstaste anzeigt.  
-  
-### <a name="to-associate-a-menu-command-with-an-accelerator-key"></a>So ordnen Sie einen Menübefehl einer Zugriffstaste zu  
-  
-1.  Wählen Sie im **Menü** -Editor den gewünschten Menübefehl aus.  
-  
-2.  Fügen Sie im [Eigenschaftenfenster](/visualstudio/ide/reference/properties-window)der Eigenschaft **Caption** den Namen der Zugriffstaste hinzu:  
-  
-    -   Geben Sie im Anschluss an die Menübeschriftung die Escapesequenz für einen Tabulator (\t) ein, damit alle Zugriffstasten des Menüs links ausgerichtet sind.  
-  
-    -   Geben Sie den Namen der Modifizierertaste (**STRG**, **ALT**oder **UMSCHALT**) ein, gefolgt von einem Pluszeichen (**+**) und dem Namen, Buchstaben oder Symbol der zusätzlichen Taste.  
-  
-         Wenn Sie beispielsweise **STRG+O** zum Befehl **Öffnen** im Menü **Datei** zuordnen möchten, ändern Sie die **Beschriftung** des Menübefehls, sodass sie aussieht wie hier dargestellt:  
-  
-        ```  
-        &Open...\tCtrl+O   
-        ```  
-  
-         Der Menübefehl im Menü-Editor wird aktualisiert, um die neue Beschriftung so darzustellen, wie Sie sie eingeben.  
-  
-3.  [Erstellen Sie den Zugriffstastentabellen-Eintrag](../windows/adding-an-entry-to-an-accelerator-table.md) im **Zugriffstasten** -Editor, und weisen Sie ihm den gleichen Bezeichner wie dem Menübefehl zu. Verwenden Sie eine Tastenkombination, die Ihrer Ansicht nach leicht zu merken ist.  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
-  
- **Anforderungen**  
-  
- Win32  
-  
-## <a name="see-also"></a>Siehe auch  
- [Hinzufügen von Befehlen zu einem Menü](../windows/adding-commands-to-a-menu.md)   
- [Menü-Editor](../windows/menu-editor.md)
+# <a name="associating-a-menu-command-with-an-accelerator-key-c"></a>Verknüpfen eines Menübefehls mit einer Zugriffstaste (C++)
+
+Häufig ist es wünschenswert, dass ein Menübefehl und eine Tastenkombination den gleichen Programmbefehl ausgeben. Verwenden Sie hierzu die **Menü** -Editor, um den gleichen Ressourcenbezeichner des Menübefehls und ein Eintrag in der Zugriffstastentabelle Ihrer Anwendung zugewiesen. Anschließend bearbeiten Sie die [Beschriftung](../windows/menu-command-properties.md) des Menübefehls so, dass sie den Namen der Zugriffstaste anzeigt.
+
+### <a name="to-associate-a-menu-command-with-an-accelerator-key"></a>So ordnen Sie einen Menübefehl einer Zugriffstaste zu
+
+1. Wählen Sie im **Menü** -Editor den gewünschten Menübefehl aus.
+
+2. Fügen Sie im [Eigenschaftenfenster](/visualstudio/ide/reference/properties-window)der Eigenschaft **Caption** den Namen der Zugriffstaste hinzu:
+
+   - Geben Sie im Anschluss an die Menübeschriftung die Escapesequenz für einen Tabulator (\t) ein, damit alle Zugriffstasten des Menüs links ausgerichtet sind.
+
+   - Geben Sie den Namen der Modifizierertaste (**STRG**, **Alt**, oder **UMSCHALT**) gefolgt von einem Pluszeichen (**+**) und den Namen, Buchstaben, oder Symbol der zusätzlichen Taste.
+
+       Beispielsweise weisen **STRG**+**O** auf die **öffnen** Befehl die **Datei** im Menü Sie ändern, dass der Menübefehl  **Beschriftung** , damit sie wie folgt aussieht:
+
+        ```
+        &Open...\tCtrl+O
+        ```
+
+       Der Menübefehl in die **Menü** Editor wird aktualisiert, um die neue Beschriftung so darzustellen, wie Sie es eingeben.
+
+3. [Erstellen Sie den Zugriffstastentabellen-Eintrag](../windows/adding-an-entry-to-an-accelerator-table.md) im **Zugriffstasten** -Editor, und weisen Sie ihm den gleichen Bezeichner wie dem Menübefehl zu. Verwenden Sie eine Tastenkombination, die Ihrer Ansicht nach leicht zu merken ist.
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Anforderungen
+
+Win32
+
+## <a name="see-also"></a>Siehe auch
+
+[Hinzufügen von Befehlen zu einem Menü](../windows/adding-commands-to-a-menu.md)  
+[Menü-Editor](../windows/menu-editor.md)

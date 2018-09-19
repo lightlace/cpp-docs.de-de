@@ -112,12 +112,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22e48299b6a97f4cb6acba87c7c7bf9a68b16240
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1f67107b17f304c5a9c4d6f68d68797370502065
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339253"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761182"
 ---
 # <a name="clistbox-class"></a>CListBox-Klasse
 Stellt die Funktionalität eines Windows-Listenfelds bereit.  
@@ -644,7 +644,7 @@ DWORD_PTR GetItemData(int nIndex) const;
  [!code-cpp[NVC_MFC_CListBox#15](../../mfc/codesnippet/cpp/clistbox-class_15.cpp)]  
   
 ##  <a name="getitemdataptr"></a>  CListBox::GetItemDataPtr  
- Ruft ab, der von der Anwendung bereitgestellten 32-Bit-Wert zugeordnet ist, mit dem angegebenen Listenfeld-Element als Zeiger ( **"void"\***).  
+ Ruft ab, der von der Anwendung bereitgestellten 32-Bit-Wert zugeordnet ist, mit dem angegebenen Listenfeld-Element als Zeiger (**"void"** <strong>\*</strong>).  
   
 ```  
 void* GetItemDataPtr(int nIndex) const;  
@@ -710,7 +710,7 @@ DWORD GetListBoxInfo() const;
  Anzahl von Elementen pro Spalte der `CListBox` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion emuliert die Funktionen des die [LB_GETLISTBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775208) Nachricht, wie im Windows SDK beschrieben.  
+ Diese Memberfunktion emuliert die Funktionen des die [LB_GETLISTBOXINFO](/windows/desktop/Controls/lb-getlistboxinfo) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="getlocale"></a>  CListBox::GetLocale  
  Ruft das Gebietsschema ein, die im Listenfeld ab.  
@@ -1144,7 +1144,7 @@ int SetItemData(
  [!code-cpp[NVC_MFC_CListBox#34](../../mfc/codesnippet/cpp/clistbox-class_34.cpp)]  
   
 ##  <a name="setitemdataptr"></a>  CListBox::SetItemDataPtr  
- Legt den 32-Bit-Wert, der das angegebene Element in einem Listenfeld angegebenen Zeiger zugeordnet ( **"void"\***).  
+ Legt den 32-Bit-Wert, der das angegebene Element in einem Listenfeld angegebenen Zeiger zugeordnet ( **"void"** <strong>\*</strong>).  
   
 ```  
 int SetItemDataPtr(

@@ -14,24 +14,24 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-author: mamillmsft
-ms.author: mikeblome
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c355924ce1f264ce63e02f5fda948a62675e675
-ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
+ms.openlocfilehash: 0800812e39d4d5240b87b24961585610814cd367
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38102464"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384955"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>C++-Entwickler-Leitfaden für spekulative Ausführung dienstseitige Kanäle
 
-Dieser Artikel enthält Anleitungen für Entwickler zur Unterstützung beim Identifizieren und Beheben von Sicherheitsrisiken durch spekulative Ausführung Seite Kanal Hardware in der C++-Software. Diese Sicherheitsrisiken können sensible Informationen offengelegt werden über Vertrauensgrenzen hinweg und können die Software, die auf Prozessoren ausgeführt wird, die spekulative Ausführung außerhalb der Reihenfolge von Anweisungen unterstützen beeinträchtigen. Diese Klasse von Sicherheitsrisiken wurde zuerst im Januar 2018 beschrieben und zusätzliche Hintergrundinformationen und Anleitungen finden Sie im [von Microsoft-sicherheitsempfehlung](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002).
+Dieser Artikel enthält Anleitungen für Entwickler zur Unterstützung beim Identifizieren und Beheben von Sicherheitsrisiken durch spekulative Ausführung Seite Kanal Hardware in der C++-Software. Diese Sicherheitsrisiken können sensible Informationen offengelegt werden über Vertrauensgrenzen hinweg und können die Software, die auf Prozessoren ausgeführt wird, die spekulative Ausführung außerhalb der Reihenfolge von Anweisungen unterstützen beeinträchtigen. Diese Klasse von Sicherheitsrisiken wurde zuerst im Januar 2018 beschrieben und zusätzliche Hintergrundinformationen und Anleitungen finden Sie im [von Microsoft-sicherheitsempfehlung](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002).
 
 Die Anleitung in diesem Artikel bezieht sich auf die Klassen von Sicherheitsrisiken durch dargestellt:
 
-1. CVE-2017-5753, auch bekannt als Spectre-Variante 1. Dieses Sicherheitsrisiko Hardwareklasse bezieht sich auf dienstseitige Kanäle, die aufgrund der spekulativen Ausführung auftreten können, die als Ergebnis eine bedingte Verzweigung Misprediction auftritt, haben. Visual C++-Compiler in Visual Studio 2017 (ab Version 15.5.5) bietet Unterstützung für die `/Qspectre` eine Lösung während der Kompilierung für eine begrenzte Anzahl von potenziell anfällige Codierungsmuster bietet-Schalter im Zusammenhang mit der CVE-2017-5753. Die Dokumentation für die ["/ qspectre"](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) Flag enthält weitere Informationen zu dessen Auswirkungen und Nutzung. 
+1. CVE-2017-5753, auch bekannt als Spectre-Variante 1. Dieses Sicherheitsrisiko Hardwareklasse bezieht sich auf dienstseitige Kanäle, die aufgrund der spekulativen Ausführung auftreten können, die als Ergebnis eine bedingte Verzweigung Misprediction auftritt, haben. Visual C++-Compiler in Visual Studio 2017 (ab Version 15.5.5) bietet Unterstützung für die `/Qspectre` eine Lösung während der Kompilierung für eine begrenzte Anzahl von potenziell anfällige Codierungsmuster bietet-Schalter im Zusammenhang mit der CVE-2017-5753. Die `/Qspectre` Switch steht auch in Visual Studio 2015 Update 3 über [KB 4338871](https://support.microsoft.com/help/4338871). Die Dokumentation für die ["/ qspectre"](https://docs.microsoft.com/cpp/build/reference/qspectre) Flag enthält weitere Informationen zu dessen Auswirkungen und Nutzung. 
 
 2. CVE-2018-3639, auch bekannt als [spekulative Store umgehen (SSB)](https://aka.ms/sescsrdssb). Dieses Sicherheitsrisiko Hardwareklasse bezieht sich auf dienstseitige Kanäle, die aufgrund der spekulativen Ausführung eines Auslastungstests vor einem abhängigen Speicher als Ergebnis eine Arbeitsspeicher-Access-Misprediction auftreten können.
 
@@ -184,7 +184,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-Anzumerken ist, dass in beiden Beispielen spekulative Änderung der Stapel zugeordneten indirekte branchzeiger umfassen. Es ist möglich, dass die spekulative Änderung auch für globale Variablen, den Heap reservierte Speicher und sogar schreibgeschützten Speicher für einige CPUs auftreten kann. Für den Stapel zugeordneten Arbeitsspeicher wird Visual C++-Compiler noch Maßnahmen erschweren spekulativer indirekte Branch Stapel zugeordneten Ziele, z. B. durch die neuanordnung von lokalen Variablen, sodass Puffer ein Sicherheitscookie als nebeneinander platziert werden geändert Teil der [/GS](https://docs.microsoft.com/en-us/cpp/build/reference/gs-buffer-security-check) Compiler Sicherheitsfunktion.
+Anzumerken ist, dass in beiden Beispielen spekulative Änderung der Stapel zugeordneten indirekte branchzeiger umfassen. Es ist möglich, dass die spekulative Änderung auch für globale Variablen, den Heap reservierte Speicher und sogar schreibgeschützten Speicher für einige CPUs auftreten kann. Für den Stapel zugeordneten Arbeitsspeicher wird Visual C++-Compiler noch Maßnahmen erschweren spekulativer indirekte Branch Stapel zugeordneten Ziele, z. B. durch die neuanordnung von lokalen Variablen, sodass Puffer ein Sicherheitscookie als nebeneinander platziert werden geändert Teil der [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check) Compiler Sicherheitsfunktion.
 
 ## <a name="speculative-type-confusion"></a>Spekulative Typ Verwirrung
 
@@ -368,6 +368,6 @@ Ein weiteres Verfahren, das zum Verringern von Sicherheitsrisiken in spekulative
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anleitungen zum Verringern von Sicherheitsrisiken in seitenkanalangriffe mit spekulativer Ausführung](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)
+[Anleitungen zum Verringern von Sicherheitsrisiken in seitenkanalangriffe mit spekulativer Ausführung](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)
 
 [Beheben von Sicherheitsrisiken durch spekulative Ausführung Seite Kanal hardware](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

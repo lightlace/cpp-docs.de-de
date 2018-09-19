@@ -42,16 +42,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff7dc09e4305c16ebe710cb99c9e1bdd24490761
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6f6d75df13263c0eb6a239f2fe6f4f5a400e03d3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405055"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210081"
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat, _mbsnbcat_l
 
-Fügt höchstens die ersten **n** Bytes einer Multibyte-Zeichenfolge in eine andere. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_mbsnbcat_s, _mbsnbcat_s_l](mbsnbcat-s-mbsnbcat-s-l.md).
+Fügt höchstens die ersten **n** Bytes einer Multibyte-Zeichenfolge in einen anderen. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_mbsnbcat_s, _mbsnbcat_s_l](mbsnbcat-s-mbsnbcat-s-l.md).
 
 > [!IMPORTANT]
 > Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -94,7 +94,7 @@ Auf NULL endende Multibytezielzeichenfolge.
 Auf NULL endende Multibytequellzeichenfolge.
 
 *count*<br/>
-Anzahl der Bytes vom *Src* zum Anfügen an *Dest*.
+Anzahl von Bytes aus *Src* anzufügende *Dest*.
 
 *locale*<br/>
 Zu verwendendes Gebietsschema.
@@ -105,13 +105,13 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbsnbcat** -Funktion fügt höchstens die ersten *Anzahl* Bytes *Src* auf *Dest*. Wenn das Byte direkt vor dem Nullzeichen in *Dest* ist ein führendes Byte ist, das ursprüngliche Byte von *Src* überschreibt dieses führende Byte. Andernfalls das ursprüngliche Byte von *Src* überschreibt das abschließende Nullzeichen von *Dest*. Wenn ein in Nullbyte *Src* vor *Anzahl* Bytes angefügt werden, **_mbsnbcat** fügt alle Bytes von *Src*, bis zu dem Null-Zeichen. Wenn *Anzahl* ist größer als die Länge des *Src*, die Länge des *Src* wird verwendet, anstelle von *Anzahl*. Die resultierende Zeichenfolge wird mit einem NULL-Zeichen beendet. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
+Die **_mbsnbcat** Funktion fügt höchstens die ersten *Anzahl* Bytes *Src* zu *Dest*. Wenn das Byte direkt vor dem Nullzeichen in *Dest* ist ein führendes Byte ist, das ursprüngliche Byte von *Src* überschreibt dieses führende Byte. Andernfalls das ursprüngliche Byte von *Src* überschreibt das abschließende Nullzeichen von *Dest*. Wenn ein in Nullbyte *Src* vor *Anzahl* Bytes angefügt werden, **_mbsnbcat** fügt alle Bytes von *Src*, bis zu dem Null-Zeichen. Wenn *Anzahl* ist größer als die Länge des *Src*, die Länge des *Src* dient anstelle von *Anzahl*. Die resultierende Zeichenfolge wird mit einem NULL-Zeichen beendet. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die **_mbsnbcat** Version der Funktion verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die **_mbsnbcat_l** -Version ist beinahe identisch, verwenden jedoch den Gebietsschemaparameter übergebene. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die **_mbsnbcat** Version der Funktion verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die **_mbsnbcat_l** -Version ist beinahe identisch, außer dass sie den stattdessen den übergebenen Gebietsschemaparameter verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-**Sicherheitshinweis** Verwenden Sie eine mit NULL endende Zeichenfolge. Die mit NULL endende Zeichenfolge darf die Größe des Zielpuffers nicht überschreiten. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Sicherheitshinweis** Verwenden Sie eine mit NULL endende Zeichenfolge. Die mit NULL endende Zeichenfolge darf die Größe des Zielpuffers nicht überschreiten. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-Wenn *Dest* oder *Src* ist **NULL**, generiert die Funktion einen Fehler über ungültige Parameter, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn der Fehler behandelt wird, gibt die Funktion **EINVAL** und legt **Errno** auf **EINVAL**.
+Wenn *Dest* oder *Src* ist **NULL**, generiert die Funktion einen Fehler über ungültige Parameter, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn der Fehler behandelt wird, gibt die Funktion **EINVAL** und **Errno** zu **EINVAL**.
 
 In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -124,7 +124,7 @@ In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sich
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_mbsnbcat**|\<mbstring.h>|
 |**_mbsnbcat_l**|\<mbstring.h>|

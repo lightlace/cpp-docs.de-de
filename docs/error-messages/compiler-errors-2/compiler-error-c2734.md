@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2734 generiert | Microsoft Docs
+title: Compilerfehler C2734 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fdc5dda82fe7410afc6e8580f3bedd8ddc289ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc3322d97761f1a463426c71bde58de3591ded4a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237358"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100707"
 ---
-# <a name="compiler-error-c2734"></a>Compiler-Fehler C2734 generiert
-'Bezeichner': Konstantes Objekt muss initialisiert werden, wenn nicht "extern"  
-  
- Der Bezeichner wurde deklariert `const` , aber nicht initialisiert oder `extern`.  
-  
- Im folgende Beispiel wird C2734 generiert:  
-  
-```  
-// C2734.cpp  
-const int j;   // C2734  
-extern const int i;   // OK, declared as extern  
+# <a name="compiler-error-c2734"></a>Compilerfehler C2734
+
+'Bezeichner': Konstantes Objekt muss initialisiert werden, wenn es nicht Extern
+
+Der Bezeichner wurde deklariert `const` , aber nicht initialisiert oder `extern`.
+
+Im folgende Beispiel wird die C2734 generiert:
+
+```
+// C2734.cpp
+const int j;   // C2734
+extern const int i;   // OK, declared as extern
 ```

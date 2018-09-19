@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2208 | Microsoft Docs
+title: Compilerfehler C2208 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24377d17735fc63e9dc0541dfd9fb432eb0e0cda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6721166efad2fc214ccf2c2a45ec2342b67c39e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172108"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101714"
 ---
 # <a name="compiler-error-c2208"></a>Compilerfehler C2208
-'Typ': keine Member definiert diesen Typ verwenden  
-  
- Ein Bezeichner, die in einen Typnamen aufgelöst ist, in der Deklaration eines aggregieren, aber der Compiler kann ein Element nicht deklariert werden.  
-  
- Im folgende Beispiel wird C2208 generiert:  
-  
-```  
-// C2208.cpp  
-class C {  
-   C;   // C2208  
-   C(){}   // OK  
-};  
+
+'Typ': keine Elemente definiert, mit dem folgenden Typ
+
+Ein Bezeichner, der in einen Namen aufgelöst wird in der Deklaration eines aggregierten, aber der Compiler kann keinen Member deklarieren.
+
+Im folgende Beispiel wird die C2208 generiert:
+
+```
+// C2208.cpp
+class C {
+   C;   // C2208
+   C(){}   // OK
+};
 ```

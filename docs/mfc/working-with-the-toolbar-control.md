@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit dem Toolbar-Steuerelement | Microsoft Docs
+title: Arbeiten mit dem Symbolleisten-Steuerelement | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32d3cc6244bc2f928c8d1d0c6e46d1bc5a57aa3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e488d4b475cbc73f57bb90ccd081b6d490221d58
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385936"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202259"
 ---
 # <a name="working-with-the-toolbar-control"></a>Arbeiten mit dem ToolBar-Steuerelement
-In diesem Artikel wird erläutert, wie Sie zugreifen können die [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) Objekt zugrunde liegenden eine [CToolBar](../mfc/reference/ctoolbar-class.md) für größere Kontrolle über Ihre Symbolleisten. Dies ist ein-Thema für fortgeschrittene.  
+In diesem Artikel wird erläutert, wie Sie zugreifen können die [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) Objekt zugrunde liegenden eine [CToolBar](../mfc/reference/ctoolbar-class.md) um mehr Kontrolle über der Symbolleisten. Dies ist ein Thema für fortgeschrittene.  
   
 ## <a name="procedures"></a>Verfahren  
   
-#### <a name="to-access-the-toolbar-common-control-underlying-your-ctoolbar-object"></a>Auf die zugrunde liegenden Objekts CToolBar allgemeine Symbolleisten-Steuerelement  
+#### <a name="to-access-the-toolbar-common-control-underlying-your-ctoolbar-object"></a>Auf der zugrunde liegenden Objekts CToolBar allgemeine Symbolleisten-Steuerelement  
   
 1.  Rufen Sie [GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl).  
   
- `GetToolBarCtrl` Gibt einen Verweis auf eine [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) Objekt. Sie können den Verweis zum Aufrufen von Memberfunktionen der Steuerelementklasse Symbolleiste verwenden.  
+ `GetToolBarCtrl` Gibt einen Verweis auf eine [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) Objekt. Sie können den Verweis verwenden, zum Aufrufen von Memberfunktionen der Symbolleisten-Steuerelement-Klasse.  
   
 > [!CAUTION]
->  Beim Aufrufen `CToolBarCtrl` **abrufen** Funktionen sicher ist, seien Sie beim Aufrufen der **festgelegt** Funktionen. Dies ist ein-Thema für fortgeschrittene. Normalerweise müssen Sie darf nicht das zugrunde liegende Symbolleisten-Steuerelement zugreifen.  
+>  Beim Aufrufen `CToolBarCtrl` **erhalten** Funktionen sicher ist, rufen Sie mit Bedacht vor der **festgelegt** Funktionen. Dies ist ein Thema für fortgeschrittene. Normalerweise müssen Sie sollte nicht das zugrunde liegende Symbolleisten-Steuerelement zugreifen.  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
   
--   [Steuerelemente (Allgemeine Windows-Steuerelemente)](../mfc/controls-mfc.md)  
+-   [Steuerelemente (Windows-Standardsteuerelemente)](../mfc/controls-mfc.md)  
   
--   [Grundlagen zu Symbolleisten](../mfc/toolbar-fundamentals.md)  
+-   [Grundlegendes über Symbolleisten](../mfc/toolbar-fundamentals.md)  
   
 -   [Andockbare und unverankerte Symbolleisten](../mfc/docking-and-floating-toolbars.md)  
   
@@ -64,7 +64,7 @@ In diesem Artikel wird erläutert, wie Sie zugreifen können die [CToolBarCtrl](
   
 -   [Steuerleisten](../mfc/control-bars.md)  
   
- Allgemeine Informationen zu allgemeinen Windows-Steuerelemente verwenden, finden Sie unter [Standardsteuerelementen](http://msdn.microsoft.com/library/windows/desktop/bb775493).  
+ Allgemeine Informationen zur Verwendung von Windows-Standardsteuerelemente, finden Sie unter [Standardsteuerelementen](/windows/desktop/Controls/common-controls-intro).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Implementieren der MFC-Symbolleiste](../mfc/mfc-toolbar-implementation.md)

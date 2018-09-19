@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2390 | Microsoft Docs
+title: Compilerfehler C2390 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a32a9ca77ba43e5f2866baed91b99103224dbc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5de5a9af8f8aa04219f0a7d61162336745fd4bfa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198715"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098212"
 ---
 # <a name="compiler-error-c2390"></a>Compilerfehler C2390
-'Bezeichner': falsches Speicherklasse "Spezifizierer"  
-  
- Die Speicherklasse gilt nicht für den globalen Gültigkeitsbereich-Bezeichner. Die Standardspeicherklasse wird anstelle der ungültige Klasse verwendet.  
-  
- Folgende Lösungen möglich:  
-  
--   Wenn der Bezeichner eine Funktion ist, deklarieren Sie es mit `extern` Speicher.  
-  
--   Wenn der Bezeichner ein formaler Parameter oder eine lokale Variable ist, deklarieren Sie es mit dem automatisch Speicher.  
-  
--   Wenn der Bezeichner eine globale Variable ist, deklarieren Sie ihn mit keine Speicherklasse (Auto-Speicher) ein.  
-  
-## <a name="example"></a>Beispiel  
-  
--   Im folgende Beispiel wird C2390 generiert:  
-  
-```  
-// C2390.cpp  
-register int i;   // C2390  
-  
-int main() {  
-   register int j;   // OK  
-}  
+
+'Bezeichner': 'Spezifizierer' ist eine inkorrekte Speicherklasse
+
+Die Speicherklasse gilt nicht für die Bezeichner im globalen Gültigkeitsbereich. Anstelle der ungültige Klasse ist die Standardspeicherklasse dient.
+
+Mögliche Lösungen:
+
+- Wenn der Bezeichner einer Funktion ist, deklarieren Sie ihn mit `extern` Speicher.
+
+- Wenn der Bezeichner ein formaler Parameter oder lokale Variable ist, deklarieren Sie es mit automatischem Speicher ein.
+
+- Wenn der Bezeichner eine globale Variable ist, deklarieren Sie ihn mit keine Speicherklasse (Auto-Speicher) ein.
+
+## <a name="example"></a>Beispiel
+
+- Im folgende Beispiel wird die C2390 generiert:
+
+```
+// C2390.cpp
+register int i;   // C2390
+
+int main() {
+   register int j;   // OK
+}
 ```

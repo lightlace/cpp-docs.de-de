@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1904 | Microsoft Docs
+title: Schwerwiegender Fehler C1904 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96e95fbce8bb87638365c534f906de5c7ede282f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c84f65909ed17060ec4347975b7e7f34a782da95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199819"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079023"
 ---
 # <a name="fatal-error-c1904"></a>Schwerwiegender Fehler C1904
-Schlechte Anbieterinteraktion: "Datei"  
-  
- Dieser Fehler gibt den Ausfall eines Attributanbieters an.  
-  
- Notieren Sie die Umstände des Fehlers, versuchen Sie, das Problem zu isolieren, und erstellen einen reproduzierbaren Testfall wenden Sie sich an [sprechen Sie mit uns](/visualstudio/ide/talk-to-us).
+
+Schlechte Anbieterinteraktion: "Datei"
+
+Dieser Fehler gibt den Ausfall eines Attributanbieters an.
+
+Notieren Sie die Umstände des Fehlers, versuchen Sie, isolieren das Problem, und erstellen einen reproduzierbaren Testfall, dann wenden Sie sich an [wenden Sie sich an uns](/visualstudio/ide/talk-to-us).

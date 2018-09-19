@@ -1,5 +1,5 @@
 ---
-title: Bitfelder | Microsoft Docs
+title: Bitfelder | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85db49f138cc733326e47a3008e79bae5ab4b7cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a7451ea6afee81cc296fb091705bde48041ef5d1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360779"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722487"
 ---
 # <a name="bitfields"></a>Bitfelder
-Struktur-Bitfelder sind auf 64 Bits beschränkt und kann vom Typ Int, Int ohne Vorzeichen, int64 oder ohne Vorzeichen int64 signiert. Bitfelder, die Typ-Anwendungsgrenze überschreiten, überspringt Bits das Bitfeld in die nächste Typ Ausrichtung ausrichten. Beispielsweise kann ganze Zahl Bitfelder keine 32-Bit-überschreiten.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Typen und Speicher](../build/types-and-storage.md)
+
+Struktur-Bitfelder sind auf 64-Bit beschränkt und kann vom Typ signiert Int "," unsigned Int "," int64 "oder" nicht-signierter int64. Bitfelder, die die Typgrenze überschreiten, werden Bits das Bitfeld der Ausrichtung der nächsten Typ ausrichten übersprungen. Beispielsweise können ganzzahlige Bitfeldern keine 32-Bit-überschreiten.
+
+## <a name="see-also"></a>Siehe auch
+
+[Typen und Speicher](../build/types-and-storage.md)

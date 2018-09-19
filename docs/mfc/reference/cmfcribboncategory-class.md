@@ -140,12 +140,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e292ff062449fd53aba0c5f4775e1b2e0b8ff909
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 73cf6b78475ca438c39e52263c4e91b10de60f8c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852385"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020419"
 ---
 # <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory-Klasse
 Die `CMFCRibbonCategory` -Klasse implementiert eine Registerkarte des Menübands, die eine Gruppe von enthält [Bereiche des Menübands](../../mfc/reference/cmfcribbonpanel-class.md).  
@@ -237,23 +237,18 @@ class CMFCRibbonCategory : public CObject
   
  Im folgenden Beispiel veranschaulicht das Erstellen einer Menübandkategorie, und fügen Sie ein Panel hinzu.  
   
- `// Create a new ribbon category and get a pointer to it`  
-  
- `CMFCRibbonCategory* pCategory = m_wndRibbonBar.AddCategory`  
-  
- `(_T("&Write"),           // Category name`  
-  
- `IDB_WRITE,              // Category small images (16 x 16)`  
-  
- `IDB_WRITE_LARGE);   // Category large images (32 x 32)`  
-  
- `// Add a panel to the new category`  
-  
- `CMFCRibbonPanel* pPanel = pCategory->AddPanel (`  
-  
- `_T("Clipboard"),                       // Panel name`  
-  
- `m_PanelIcons.ExtractIcon (0));  // Panel icon`  
+```cpp
+// Create a new ribbon category and get a pointer to it`  
+CMFCRibbonCategory* pCategory = m_wndRibbonBar.AddCategory
+    (_T("&Write"),           // Category name
+    IDB_WRITE,               // Category small images (16 x 16)
+    IDB_WRITE_LARGE);        // Category large images (32 x 32)
+
+// Add a panel to the new category
+CMFCRibbonPanel* pPanel = pCategory->AddPanel (
+    _T("Clipboard"),                // Panel name
+    m_PanelIcons.ExtractIcon (0));  // Panel icon
+```
   
  Das folgende Diagramm zeigt eine Abbildung von der Kategorie "Startseite" aus der beispielanwendung RibbonApp.  
   
@@ -275,8 +270,8 @@ void AddHidden(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pElem*  
- Zeiger auf ein Menübandelement.  
+*pElem*<br/>
+[in] Zeiger auf ein Menübandelement.  
   
 ### <a name="remarks"></a>Hinweise  
  Menübandelemente im Dialogfeld "Anpassungen" sind die Befehle, die Sie auf die Schnellzugriff-Symbolleiste hinzufügen können.  
@@ -292,14 +287,14 @@ CMFCRibbonPanel* AddPanel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszPanelName*  
- Zeiger auf den Namen des neuen Menübands Bereichs.  
+*lpszPanelName*<br/>
+[in] Zeiger auf den Namen des neuen Menübands Bereichs.  
   
- [in] *hIcon*  
- Handle für das Standardsymbol für das neue Menübandbereich.  
+*hIcon*<br/>
+[in] Handle für das Standardsymbol für das neue Menübandbereich.  
   
- [in] *pRTI*  
- Zeiger auf die laufzeitklasseninformationen für ein benutzerdefiniertes Menüband-Bereich.  
+*pRTI*<br/>
+[in] Zeiger auf die laufzeitklasseninformationen für ein benutzerdefiniertes Menüband-Bereich.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf die neue Menübandbereich, wenn die Methode erfolgreich war; Wenn der Bereich nicht erstellt wurde, andernfalls NULL.  
@@ -330,23 +325,23 @@ CMFCRibbonCategory(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pParenrRibbonBar*  
- Zeiger auf die übergeordnete menübandleiste der Menübandkategorie.  
+*pParenrRibbonBar*<br/>
+[in] Zeiger auf die übergeordnete menübandleiste der Menübandkategorie.  
   
- [in] *Wert*  
- Der Name der Menübandkategorie.  
+*Wert*<br/>
+[in] Der Name der Menübandkategorie.  
   
- [in] *UiSmallImagesResID*  
- Ressourcen-ID, der Liste der Bilder für kleine Bilder, die durch die Menübandelemente in die Menübandkategorie verwendet werden.  
+*uiSmallImagesResID*<br/>
+[in] Ressourcen-ID, der Liste der Bilder für kleine Bilder, die durch die Menübandelemente in die Menübandkategorie verwendet werden.  
   
- [in] *UiLargeImagesResID*  
- Ressourcen-ID, der Liste der Bilder für große Bilder, die durch die Menübandelemente in die Menübandkategorie verwendet werden.  
+*uiLargeImagesResID*<br/>
+[in] Ressourcen-ID, der Liste der Bilder für große Bilder, die durch die Menübandelemente in die Menübandkategorie verwendet werden.  
   
- [in] *SizeSmallImage*  
- Die Standardgröße der kleine Bilder für die Menübandelemente in der Menübandkategorie.  
+*sizeSmallImage*<br/>
+[in] Die Standardgröße der kleine Bilder für die Menübandelemente in der Menübandkategorie.  
   
- [in] *SizeLargeImage*  
- Die Standardgröße von Bildern für die Menübandelemente in der Menübandkategorie.  
+*sizeLargeImage*<br/>
+[in] Die Standardgröße von Bildern für die Menübandelemente in der Menübandkategorie.  
   
 ##  <a name="copyfrom"></a>  CMFCRibbonCategory::CopyFrom  
  Kopiert den Zustand des angegebenen [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) mit dem aktuellen [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) Objekt.  
@@ -356,8 +351,8 @@ virtual void CopyFrom(CMFCRibbonCategory& src);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Src*  
- Das `CMFCRibbonCategory`-Quellobjekt.  
+*src*<br/>
+[in] Die Quelle `CMFCRibbonCategory` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -371,11 +366,11 @@ CMFCRibbonBaseElement* FindByData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwData*  
- Die Daten, die ein Menübandelement zugeordnet wird.  
+*dwData*<br/>
+[in] Die Daten, die ein Menübandelement zugeordnet wird.  
   
- [in] *bVisibleOnly*  
- True, um schnellen Zugriff Menübandelemente in die Suche einbeziehen. "False", um schnellen Zugriff Menübandelemente in der Suche auszuschließen.  
+*bVisibleOnly*<br/>
+[in] True, um schnellen Zugriff Menübandelemente in die Suche einbeziehen. "False", um schnellen Zugriff Menübandelemente in der Suche auszuschließen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf ein Menübandelement, wenn die Methode erfolgreich war; andernfalls NULL.  
@@ -392,11 +387,11 @@ CMFCRibbonBaseElement* FindByID(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmdID*  
- Befehls-ID, die mit einem Menübandelement verknüpft sind.  
+*uiCmdID*<br/>
+[in] Befehls-ID, die mit einem Menübandelement verknüpft sind.  
   
- [in] *bVisibleOnly*  
- True, um schnellen Zugriff Menübandelemente in die Suche einbeziehen. "False", um schnellen Zugriff Menübandelemente in der Suche auszuschließen.  
+*bVisibleOnly*<br/>
+[in] True, um schnellen Zugriff Menübandelemente in die Suche einbeziehen. "False", um schnellen Zugriff Menübandelemente in der Suche auszuschließen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf ein Menübandelement, wenn die Methode erfolgreich war; andernfalls NULL.  
@@ -411,8 +406,8 @@ CMFCRibbonPanel* FindPanelWithElem(const CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pElement*  
- Zeiger auf ein Menübandelement.  
+*pElement*<br/>
+[in] Zeiger auf ein Menübandelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf einen Menübandbereich, wenn die Methode erfolgreich war; andernfalls NULL.  
@@ -463,8 +458,8 @@ void GetElements(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in, out] *ArElements*  
- Ein Verweis auf eine [CArray](../../mfc/reference/carray-class.md) von Menübandelementen.  
+*arElements*<br/>
+[in, out] Ein Verweis auf eine [CArray](../../mfc/reference/carray-class.md) von Menübandelementen.  
   
 ### <a name="remarks"></a>Hinweise  
  Menübandelemente, die für die Verwendung bei der schnellen zugriffssymbolleiste entwickelt wurden, sind im Array enthalten.  
@@ -479,11 +474,11 @@ void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmdID*  
- Befehls-ID, die mit einem Menübandelement verknüpft sind.  
+*uiCmdID*<br/>
+[in] Befehls-ID, die mit einem Menübandelement verknüpft sind.  
   
- [in, out] *ArElements*  
- Ein Verweis auf eine [CArray](../../mfc/reference/carray-class.md) von Menübandelementen.  
+*arElements*<br/>
+[in, out] Ein Verweis auf eine [CArray](../../mfc/reference/carray-class.md) von Menübandelementen.  
   
 ### <a name="remarks"></a>Hinweise  
  Menübandelemente, die für die Verwendung bei der schnellen zugriffssymbolleiste entwickelt wurden, sind im Array enthalten.  
@@ -532,8 +527,8 @@ int GetImageCount(BOOL bIsLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bIsLargeImage*  
- "True" für die Anzahl von Bildern in der Liste der großen Bilder; "False" für die Anzahl von Bildern in der Liste der kleinen Bilder werden.  
+*bIsLargeImage*<br/>
+[in] "True" für die Anzahl von Bildern in der Liste der großen Bilder; "False" für die Anzahl von Bildern in der Liste der kleinen Bilder werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der Bilder in der Liste angegebenen Bild.  
@@ -548,8 +543,8 @@ CSize GetImageSize(BOOL bIsLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bIsLargeImage*  
- "True" für die Größe des großen Bildern; "False" für die Größe der kleine Bilder.  
+*bIsLargeImage*<br/>
+[in] "True" für die Größe des großen Bildern; "False" für die Größe der kleine Bilder.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Größe eines Bilds in der Liste angegebenen Bild.  
@@ -567,11 +562,11 @@ void GetItemIDsList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *mit*  
- Die Liste der Befehls-IDs für die Menübandelemente in der Menübandkategorie.  
+*Mit*<br/>
+[out] Die Liste der Befehls-IDs für die Menübandelemente in der Menübandkategorie.  
   
- [in] *bHiddenOnly*  
- True, um ausschließen Menübandelemente, die auf den menübandbereichen in der Menübandkategorie angezeigt. "False", um alle Menübandelemente in der Menübandkategorie einzuschließen.  
+*bHiddenOnly*<br/>
+[in] True, um ausschließen Menübandelemente, die auf den menübandbereichen in der Menübandkategorie angezeigt. "False", um alle Menübandelemente in der Menübandkategorie einzuschließen.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -605,8 +600,8 @@ int GetMaxHeight(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Zeiger auf einen Gerätekontext für das ein Menübandbereich enthalten.  
+*pDC*<br/>
+[in] Zeiger auf einen Gerätekontext für das ein Menübandbereich enthalten.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die maximale Höhe der menübandbereiche, die in der Menübandkategorie enthalten sind.  
@@ -634,8 +629,8 @@ CMFCRibbonPanel* GetPanel(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Der nullbasierte Index von einem Menübandbereich.  
+*nIndex*<br/>
+[in] Der nullbasierte Index von einem Menübandbereich.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger zum Menübandbereich, der sich am angegebenen Index befindet.  
@@ -661,8 +656,8 @@ CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.  
+*Zeigen Sie*<br/>
+[in] Die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf einen Menübandbereich, wenn die Methode erfolgreich war; andernfalls NULL.  
@@ -678,8 +673,8 @@ int GetPanelIndex(const CMFCRibbonPanel* pPanel) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pPanel*  
- Zeiger auf ein Menübandbereich.  
+*pPanel*<br/>
+[in] Zeiger auf ein Menübandbereich.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Nullbasierte Index des angegebenen Menübandbereich, wenn die Methode erfolgreich war. andernfalls -1.  
@@ -822,11 +817,11 @@ CMFCRibbonPanel* HighlightPanel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pHLPanel*  
- Zeiger zum Menübandbereich zu markieren.  
+*pHLPanel*<br/>
+[in] Zeiger zum Menübandbereich zu markieren.  
   
- [in] *zeigen*  
- Die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.  
+*Zeigen Sie*<br/>
+[in] Die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf die zuvor markierte Menübandbereich; Wenn keine Menübandbereich markiert ist, wenn diese Methode aufgerufen wird, andernfalls NULL.  
@@ -844,11 +839,11 @@ CMFCRibbonBaseElement* HitTest(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Die x- und y-Koordinaten des Mauszeigers relativ zu der oberen linken Ecke des Fensters.  
+*Zeigen Sie*<br/>
+[in] Die x- und y-Koordinaten des Mauszeigers relativ zu der oberen linken Ecke des Fensters.  
   
- [in] *bCheckPanelCaption*  
- True, um die Multifunktionsleiste bereichsbeschriftung zu testen. "False", um die Multifunktionsleiste bereichsbeschriftung auszuschließen.  
+*bCheckPanelCaption*<br/>
+[in] True, um die Multifunktionsleiste bereichsbeschriftung zu testen. "False", um die Multifunktionsleiste bereichsbeschriftung auszuschließen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf ein Menübandelement, wenn die Methode erfolgreich war; andernfalls NULL.  
@@ -864,8 +859,8 @@ int HitTestEx(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Die x- und y-Koordinaten des Mauszeigers relativ zu der oberen linken Ecke des Fensters.  
+*Zeigen Sie*<br/>
+[in] Die x- und y-Koordinaten des Mauszeigers relativ zu der oberen linken Ecke des Fensters.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Nullbasierte Index des ein Menübandelement, wenn die Methode erfolgreich war. andernfalls -1.  
@@ -881,8 +876,8 @@ CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Der Punkt, um zu testen.  
+*Zeigen Sie*<br/>
+[in] Der Punkt, um zu testen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wenn *zeigen* fällt in das umschließende Rechteck des entweder links oder rechts Bildlaufschaltfläche der Menübandkategorie, gibt einen Zeiger auf die Schaltfläche oder gibt andernfalls NULL.  
@@ -939,17 +934,17 @@ virtual BOOL NotifyControlCommand(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAccelerator*  
- TRUE, wenn der Befehl andernfalls stammt von einer Zugriffstaste oder "false".  
+*bAccelerator*<br/>
+[in] TRUE, wenn der Befehl andernfalls stammt von einer Zugriffstaste oder "false".  
   
- [in] *nNotifyCode*  
- Der Benachrichtigungscode.  
+*nNotifyCode*<br/>
+[in] Der Benachrichtigungscode.  
   
- [in] *wParam-Parameter*  
- Der WPARAM-Feld der Nachricht.  
+*wParam-Parameter*<br/>
+[in] Der WPARAM-Feld der Nachricht.  
   
- [in] *lParam*  
- Der LPARAM-Feld der Nachricht.  
+*lParam*<br/>
+[in] Der LPARAM-Feld der Nachricht.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt true zurück, wenn die Meldung behandelt wurde, bzw. FALSE, wenn nicht.  
@@ -973,8 +968,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Zeiger auf einen Gerätekontext für die Menübandkategorie.  
+*pDC*<br/>
+[in] Zeiger auf einen Gerätekontext für die Menübandkategorie.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -992,23 +987,23 @@ virtual BOOL OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Zeiger auf einen Gerätekontext für das Image.  
+*pDC*<br/>
+[in] Zeiger auf einen Gerätekontext für das Image.  
   
- [in] *Rect*  
- Rechteck für das Bild wird angezeigt.  
+*Rect*<br/>
+[in] Rechteck für das Bild wird angezeigt.  
   
- [in] *pElement*  
- Zeiger auf das Menübandelement, das das Bild enthält.  
+*pElement*<br/>
+[in] Zeiger auf das Menübandelement, das das Bild enthält.  
   
- [in] *bIsLargeImage*  
- True, wenn das Bild sehr groß ist. FALSE, wenn das Bild auf die kleine Größe ist.  
+*bIsLargeImage*<br/>
+[in] True, wenn das Bild sehr groß ist. FALSE, wenn das Bild auf die kleine Größe ist.  
   
- [in] *nImageIndex*  
- Nullbasierte Index des Bilds in das Image-Array, das in der Menübandkategorie enthalten ist.  
+*nImageIndex*<br/>
+[in] Nullbasierte Index des Bilds in das Image-Array, das in der Menübandkategorie enthalten ist.  
   
- [in] *bCenter*  
- True, um das Bild in das Anzeigerechteck center. "False" zum Zeichnen des Bilds in der oberen linken Ecke des Rechtecks angezeigt werden.  
+*bCenter*<br/>
+[in] True, um das Bild in das Anzeigerechteck center. "False" zum Zeichnen des Bilds in der oberen linken Ecke des Rechtecks angezeigt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich war. andernfalls "false".  
@@ -1025,11 +1020,11 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Dieser Parameter wird nicht verwendet.  
+*pDC*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
- [in] *pMenuBar*  
- Dieser Parameter wird nicht verwendet.  
+*pMenuBar*<br/>
+[in] Dieser Parameter wird nicht verwendet.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig führt diese Methode keine Aktion. Überschreiben Sie diese Methode, um das Zeichnen des Rahmens eines Popup-Menüs an.  
@@ -1055,8 +1050,8 @@ virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Die x- und y-Koordinaten des Mauszeigers relativ zu der oberen linken Ecke des Fensters.  
+*Zeigen Sie*<br/>
+[in] Die x- und y-Koordinaten des Mauszeigers relativ zu der oberen linken Ecke des Fensters.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf ein Menübandelement, wenn die Methode erfolgreich war; andernfalls NULL.  
@@ -1071,8 +1066,8 @@ virtual void OnLButtonUp(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.  
+*Zeigen Sie*<br/>
+[in] Die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1084,8 +1079,8 @@ virtual void OnMouseMove(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.  
+*Zeigen Sie*<br/>
+[in] Die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1097,8 +1092,8 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bIsRTL*  
- True, wenn das Layout befindet sich rechts-nach-links. FALSE, wenn das Layout befindet sich links-nach-rechts.  
+*bIsRTL*<br/>
+[in] True, wenn das Layout befindet sich rechts-nach-links. FALSE, wenn das Layout befindet sich links-nach-rechts.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode passt das Layout aller menübandbereichen und Menübandelemente, die in der Menübandkategorie enthalten sind.  
@@ -1113,11 +1108,11 @@ virtual BOOL OnScrollHorz(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bScrollLeft*  
- True, um auf der linken Seite einen Bildlauf durchführen. "False", um nach rechts scrollen.  
+*bScrollLeft*<br/>
+[in] True, um auf der linken Seite einen Bildlauf durchführen. "False", um nach rechts scrollen.  
   
- [in] *nScrollOffset*  
- Das Scroll-Abstand in Pixel.  
+*nScrollOffset*<br/>
+[in] Das Scroll-Abstand in Pixel.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Menübandkategorie in horizontaler Richtung verschoben. andernfalls "false".  
@@ -1135,14 +1130,14 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nämlich pCmdUI*  
- Zeiger auf die `CMFCRibbonCmdUI` Objekt, das angibt, die Elemente der Benutzeroberfläche in aktiviert werden und welche deaktiviert werden soll.  
+*nämlich pCmdUI*<br/>
+[in] Zeiger auf die `CMFCRibbonCmdUI` Objekt, das angibt, die Elemente der Benutzeroberfläche in aktiviert werden und welche deaktiviert werden soll.  
   
- [in] *pTarget*  
- Zeiger auf das Empfangsfenster steuert das Aktivieren oder Deaktivieren der Elemente der Benutzeroberfläche.  
+*pTarget*<br/>
+[in] Zeiger auf das Empfangsfenster steuert das Aktivieren oder Deaktivieren der Elemente der Benutzeroberfläche.  
   
- [in] *bDisableIfNoHndler*  
- True, um das Element der Benutzeroberfläche zu deaktivieren, wenn kein Handler in einer meldungszuordnung definiert ist. andernfalls "false".  
+*bDisableIfNoHndler*<br/>
+[in] True, um das Element der Benutzeroberfläche zu deaktivieren, wenn kein Handler in einer meldungszuordnung definiert ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1154,8 +1149,8 @@ virtual void RecalcLayout(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Zeiger auf einen Gerätekontext für die Menübandkategorie.  
+*pDC*<br/>
+[in] Zeiger auf einen Gerätekontext für die Menübandkategorie.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1169,11 +1164,11 @@ BOOL RemovePanel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Die Indexnummer des zu entfernenden. Durch den Aufruf der [CMFCRibbonCategory::GetPanelIndex](#getpanelindex) Methode.  
+*nIndex*<br/>
+[in] Die Indexnummer des zu entfernenden. Durch den Aufruf der [CMFCRibbonCategory::GetPanelIndex](#getpanelindex) Methode.  
   
- [in] *bLöschen*  
- "True", um das Panelobjekt aus dem Speicher zu löschen; "False", um das Panelobjekt zu entfernen, ohne ihn zu löschen.  
+*bLöschen*<br/>
+[in] "True", um das Panelobjekt aus dem Speicher zu löschen; "False", um das Panelobjekt zu entfernen, ohne ihn zu löschen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich war. andernfalls "false".  
@@ -1186,8 +1181,8 @@ virtual void ReposPanels(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Zeiger auf einen Gerätekontext für die menübandbereiche, die in der Menübandkategorie enthalten sind.  
+*pDC*<br/>
+[in] Zeiger auf einen Gerätekontext für die menübandbereiche, die in der Menübandkategorie enthalten sind.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1199,8 +1194,8 @@ void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *ArCollapseOrder*  
- Gibt die Reihenfolge reduzieren. Das Array enthält die nullbasierten Indizes ein Menübandbereich enthalten.  
+*arCollapseOrder*<br/>
+[in] Gibt die Reihenfolge reduzieren. Das Array enthält die nullbasierten Indizes ein Menübandbereich enthalten.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Bibliothek definiert die Reihenfolge, reduzieren. Allerdings können Sie dieses Verhalten anpassen, durch die Bereitstellung der Kategorie, mit der Liste der Indizes, die angibt, die Reihenfolge reduzieren.  
@@ -1222,8 +1217,8 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwData*  
- Die benutzerdefinierten Daten.  
+*dwData*<br/>
+[in] Die benutzerdefinierten Daten.  
   
 ##  <a name="setkeys"></a>  CMFCRibbonCategory::SetKeys  
  Die Menübandkategorie ein Keytip zugeordnet.  
@@ -1233,8 +1228,8 @@ void SetKeys(LPCTSTR lpszKeys);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszKeys*  
- Der Text des Keytip.  
+*lpszKeys*<br/>
+[in] Der Text des Keytip.  
   
 ### <a name="remarks"></a>Hinweise  
  Zugriffstasteninfos werden angezeigt, wenn der Benutzer die Alt-Taste oder F10-TASTE drückt.  
@@ -1247,8 +1242,8 @@ void SetName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Wert*  
- Der Name und der Keytip der Menübandkategorie.  
+*Wert*<br/>
+[in] Der Name und der Keytip der Menübandkategorie.  
   
 ### <a name="remarks"></a>Hinweise  
  Fügen Sie zum Festlegen des Keytip für die Menübandkategorie eine neue-Zeile-Escape-Sequenz gefolgt von den Keytip-Zeichen zu *Wert*.  
@@ -1261,8 +1256,8 @@ void SetTabColor(AFX_RibbonCategoryColor color);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Farbe*  
- Gibt die neue Farbe der Menübandkategorie.  
+*Farbe*<br/>
+[in] Gibt die neue Farbe der Menübandkategorie.  
   
 ### <a name="remarks"></a>Hinweise  
  Farbe der folgenden Werte sind möglich:  

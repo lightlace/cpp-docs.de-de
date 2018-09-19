@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3469 | Microsoft Docs
+title: Compilerfehler C3469 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f9ddd172678ea9895bb5daa32e7a325ed8eaa01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f39889052b85ee6ab5595f388f939403fe3d2a46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256973"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016987"
 ---
 # <a name="compiler-error-c3469"></a>Compilerfehler C3469
-'typ': Eine generische Klasse kann nicht weitergeleitet werden.  
-  
- Typweiterleitung kann nicht für generische Klassen verwendet werden.  
-  
- Weitere Informationen finden Sie unter [Typweiterleitung (C + c++ / CLI)](../../windows/type-forwarding-cpp-cli.md).  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird eine Komponente erstellt:  
-  
-```  
-// C3469.cpp  
-// compile with: /clr /LD  
-generic<typename T>  
-public ref class GR {};  
-  
-public ref class GR2 {};  
-```  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C3466 generiert:  
-  
-```  
-// C3469_b.cpp  
-// compile with: /clr /c  
-#using "C3469.dll"  
-[assembly:TypeForwardedTo(GR::typeid)];   // C3469  
-[assembly:TypeForwardedTo(GR2::typeid)];   // OK  
+
+'typ': Eine generische Klasse kann nicht weitergeleitet werden.
+
+Typweiterleitung kann nicht für generische Klassen verwendet werden.
+
+Weitere Informationen finden Sie unter [Typweiterleitung (C++ / CLI)](../../windows/type-forwarding-cpp-cli.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird eine Komponente erstellt:
+
+```
+// C3469.cpp
+// compile with: /clr /LD
+generic<typename T>
+public ref class GR {};
+
+public ref class GR2 {};
+```
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C3466 generiert:
+
+```
+// C3469_b.cpp
+// compile with: /clr /c
+#using "C3469.dll"
+[assembly:TypeForwardedTo(GR::typeid)];   // C3469
+[assembly:TypeForwardedTo(GR2::typeid)];   // OK
 ```

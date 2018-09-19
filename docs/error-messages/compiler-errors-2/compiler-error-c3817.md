@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3817 | Microsoft Docs
+title: Compilerfehler C3817 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c5ff6f5579a12f14d0f2e39598f53dd3ea8cc68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fd4ff7b7ba597d5e5d0bdd9a451ab421f308b3d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268231"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051788"
 ---
 # <a name="compiler-error-c3817"></a>Compilerfehler C3817
-'Declaration': Eigenschaft kann nur auf eine Funktion angewendet werden  
-  
- Die `property` Schlüsselwort kann nur auf einer Funktionsdefinition angewendet werden.  
-  
- C3817 ist nur über die veraltete Compileroption erreichbar **/CLR: oldSyntax**.  
+
+'Declaration': Eigenschaft kann nur auf eine Funktion angewendet werden
+
+Die `property` Schlüsselwort kann nur eine Definition einer Funktion angewendet werden.
+
+C3817 ist nur über die veraltete Compileroption erreichbar **oldSyntax**.

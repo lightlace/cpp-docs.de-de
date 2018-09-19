@@ -1,7 +1,7 @@
 ---
-title: Präprozessor-Grammatik | Microsoft Docs
+title: Präprozessor-Grammatik | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/04/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,97 +16,86 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d14a3e00e18a2d3ac69dd472ac4056a379ada224
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 56df4d0bfdaf87ace87a9f9dcbde85166929e642
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843365"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766115"
 ---
 # <a name="preprocessor-grammar"></a>Präprozessor-Grammatik
-**#define***Bezeichner* *-Token-String*abonnieren  
-  
- *#* **Definieren Sie***Bezeichner*[**(** *Bezeichner*opt **,** *...*  **,** *Bezeichner*opt **)**] *-Token-String*abonnieren  
-  
- **definiert (***Bezeichner* **)**  
-  
- **definiert***Bezeichner*  
-  
- `#include` **"***Path-Spec***"**  
-  
- `#include` **\<***Path-spec***>**  
-  
- **#line***Ziffernfolge***"** *Filename* **"** abonnieren  
-  
- *#* **Undef***Bezeichner*   
-  
- **#error***-Token-Zeichenfolge*  
-  
- **#pragma***-Token-Zeichenfolge*   
-  
- *bedingte* :  
- *If-Teil Elif-Teile*opt*else-Teil*opt*Endif-Zeile*  
-  
- *If-Teil* :  
- *if-linetext*  
-  
- *If-Line-* :  
- **#if***Konstantenausdruck*  
-  
- **#ifdef***Bezeichner*   
-  
- **#ifndef***Bezeichner*  
-  
- *Elif-Teile* :  
- *Elif-Line-text*  
-  
- *Elif-Teile Elif-Line-text*  
-  
- *Elif-Line-* :  
- **#elif***Konstantenausdruck*   
-  
- *else-Teil* :  
- *else-linetext*  
-  
- *Else-Line* :  
- `#else`  
-  
- *Endif-Line-* :  
- `#endif`  
-  
- *Ziffernfolge* :  
- *digit*  
-  
- *digit-sequence digit*  
-  
- *Ziffer* : einer der  
- **0 1 2 3 4 5 6 7 8 9**  
-  
- *Token-String* :  
- Zeichenfolge von Tokens  
-  
- *Token* :  
- *keyword*  
-  
- *identifier*  
-  
- *constant*  
-  
- *operator*  
-  
- `punctuator`  
-  
- *FileName* :  
- Gültiger Dateiname des Betriebssystems  
-  
- *Path-Spec* :  
- Gültiger Dateipfad  
-  
- *Text* :  
- Eine beliebige Textsequenz  
-  
+
+*Steuerelement-Line-*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** *Bezeichner* *-Token-Zeichenfolge*<sub>deaktivieren</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>Bezeichner</em>**(** *Bezeichner*<sub>opt</sub> **,** ... **,** *Bezeichner*<sub>opt</sub> **)** *-Token-Zeichenfolge*<sub>deaktivieren</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *Path-Spec* **"**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *Path-Spec* **>**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#line** *Ziffernfolge***"** *Filename* **"**<sub>deaktivieren  </sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *Bezeichner*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#error** *-Token-Zeichenfolge*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *-Token-Zeichenfolge*
+
+*constant-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**definiert (** *Bezeichner* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**definiert** *Bezeichner*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;ein anderer konstanter Ausdruck
+
+*bedingte* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*If-Part* *Elif-Teile*<sub>opt</sub> *else-Teil*<sub>opt</sub> *Endif-Zeile*
+
+*If-Part* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*If-Line-* *Text*
+
+*If-Line-* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#if** *konstanter Ausdruck*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *Bezeichner*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *Bezeichner*
+
+*Elif-Teile* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Elif-Line-* *Text*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Elif-Teile* *Elif-Line-* *Text*
+
+*Elif-Line-* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *konstanter Ausdruck*
+
+*else-Teil* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Else-Line* *Text*
+
+*Else-Line* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#else**
+
+*Endif-Line-* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#endif**
+
+*Digit-Sequence* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Ziffer*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Digit-Sequence* *Ziffer*
+
+*Ziffer* : eines der<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
+
+*Token-Zeichenfolge* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Zeichenfolge von tokens
+
+*Token* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Schlüsselwort*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Bezeichner*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Konstante*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Operator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Markierungszeichen*
+
+*FileName* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Rechtliche Betriebssystem-Dateiname
+
+*Path-Spec* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Gültiger Dateipfad
+
+*Text* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Eine beliebige Sequenz von text
+
 > [!NOTE]
->  Die folgenden Nichtterminale werden der [lexikalische Konventionen](../cpp/lexical-conventions.md) Teil der *C++-Sprachreferenz*: `constant`, `constant` - *Ausdruck* , *Bezeichner*, *Schlüsselwort*, `operator`, und `punctuator`.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Grammatikzusammenfassung (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
+> Die folgenden Nichtterminale werden in der [lexikalische Konventionen](../cpp/lexical-conventions.md) Teil der *C++-Sprachreferenz*: *Konstanten*, *konstanter Ausdruck* , *Bezeichner*, *Schlüsselwort*, *Operator*, und *Punctuator*.
+
+## <a name="see-also"></a>Siehe auch
+
+[Grammatikzusammenfassung (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2548 | Microsoft Docs
+title: Compilerfehler C2548 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4ac92463c904147631a33e30601e0b9e150e5e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b4fd5087613466ecb483ad4ec28018c9321453ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230399"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050502"
 ---
 # <a name="compiler-error-c2548"></a>Compilerfehler C2548
-'class:: Member': Fehlender Standardparameter für Parameter angeben  
-  
- Der Standardparameterliste fehlt ein Parameter. Wenn Sie einen Standardparameter an einer beliebigen Stelle in einer Parameterliste angeben, müssen Sie die Standardparameter für alle nachfolgenden Parameter definieren.  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C2548 generiert:  
-  
-```  
-// C2548.cpp  
-// compile with: /c  
-void func( int = 1, int, int = 3);  // C2548  
-  
-// OK  
-void func2( int, int, int = 3);  
-void func3( int, int = 2, int = 3);  
+
+"Class:: Member": Fehlender Standardparameter für Parameter-Parameter
+
+Die Standardparameterliste fehlt ein Parameter. Wenn Sie einen Standardparameter an einer beliebigen Stelle in einer Parameterliste angeben, müssen Sie die Standardparameter für alle nachfolgenden Parameter definieren.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C2548 generiert:
+
+```
+// C2548.cpp
+// compile with: /c
+void func( int = 1, int, int = 3);  // C2548
+
+// OK
+void func2( int, int, int = 3);
+void func3( int, int = 2, int = 3);
 ```

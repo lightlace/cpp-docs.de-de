@@ -1,5 +1,5 @@
 ---
-title: Wie BSCMAKE erstellt ein. BSC-Datei | Microsoft Docs
+title: Erstellen mit BSCMAKE ein. BSC-Datei | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,23 +14,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cdc8a2840e3beb1272b33b2794f70a979684f46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aadf3b29b0714cc47850e177ebe6e1d0e54df784
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373487"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719432"
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>Erstellen einer BSC-Datei mit BSCMAKE
-BSCMAKE erstellt oder neu erstellt eine BSC-Datei in die effizienteste Methode können. Um potenzielle Probleme zu vermeiden, ist es wichtig zu verstehen, die Build-Prozesses.  
-  
- Wenn eine Browseinformationsdatei von BSCMAKE erstellt wird, schneidet die SBR-Dateien, um die Länge 0. Während einer nachfolgenden Builds der gleichen Datei weist eine leere (oder leer) SBR-Datei BSCMAKE, dass die SBR-Datei keine neuen Beiträge. Sie können wissen, dass ein Update dieses Teils der Datei nicht erforderlich ist und ein inkrementeller Build ausreicht, BSCMAKE. Bei jedem Build (es sei denn, die/n-Option angegeben ist), BSCMAKE zuerst versucht wird, aktualisieren die Datei inkrementell, mit der nur die SBR-Dateien, die geändert wurden.  
-  
- BSCMAKE sucht nach einer BSC-Datei, die den Namen, die mit der/o-Option angegeben hat. Wenn/o nicht angegeben wird, sucht BSCMAKE für eine Datei mit den Basisnamen der ersten SBR-Datei mit der Erweiterung BSC. Wenn die Datei vorhanden ist, führt BSCMAKE der Browserinformationsdatei, die nur die zugehörigen SBR-Dateien mit einen inkrementellen Build aus. Wenn die Datei nicht vorhanden ist, führt BSCMAKE einen vollständigen Build mit allen SBR-Dateien. Die Regeln für Builds sind wie folgt aus:  
-  
--   Für einen vollständigen Build erfolgreich ist alle angegebenen SBR-Dateien müssen vorhanden sein und müssen nicht abgeschnitten werden. Wenn eine SBR-Datei abgeschnitten ist, müssen Sie ihn neu erstellen (durch erneutes kompilieren oder Assemblieren) vor dem Ausführen von BSCMAKE.  
-  
--   Für inkrementelle Builds erfolgreich ausgeführt werden kann muss die BSC-Datei vorhanden sein. Alle zugehörigen SBR-Dateien, dies gilt auch für leere Dateien, muss vorhanden sein und muss in der BSCMAKE-Befehlszeile angegeben werden. Wenn Sie eine SBR-Datei über die Befehlszeile weglassen, wird BSCMAKE seinen Beitrag aus der Datei entfernt.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Erstellen einer BSC-Datei](../../build/reference/building-a-dot-bsc-file.md)
+
+BSCMAKE erstellt oder neu erstellt eine BSC-Datei in die effizienteste Methode, die dies möglich. Um potenzielle Probleme zu vermeiden, ist es wichtig zu verstehen, des Buildprozesses.
+
+Wenn BSCMAKE eine Browseinformationsdatei erstellt wird, schneidet die SBR-Dateien, um die Länge Null. Während eines nachfolgende Builds der gleichen Datei weist eine Zeichenfolge der Länge Null (oder leer) SBR-Datei BSCMAKE, dass die SBR-Datei keine neue Beiträge enthält. Sie können BSCMAKE wissen, dass ein Update dieses Teils der Datei nicht erforderlich ist, und ein inkrementelles Builds wird ausreichend sein. Bei jedem Build (es sei denn, die/n-Option angegeben ist), BSCMAKE zuerst versucht, inkrementell aktualisieren Sie die Datei mit der nur die SBR-Dateien, die geändert wurden.
+
+BSCMAKE sucht nach einer BSC-Datei, die den Namen, die mit der/o-Option angegeben hat. Wenn/o nicht angegeben ist, sucht BSCMAKE für eine Datei mit dem Basisnamen der ersten SBR-Datei und der Erweiterung BSC. Wenn die Datei vorhanden ist, führt BSCMAKE als inkrementellen Build des der Browserinformationsdatei mithilfe der zugehörigen SBR-Dateien. Wenn die Datei nicht vorhanden ist, wird ein vollständiger Build, der alle .sbr-Dateien mithilfe von BSCMAKE ausgeführt. Die Regeln für Builds sind wie folgt aus:
+
+- Für einen vollständigen Build erfolgreich ausgeführt werden kann alle angegebenen SBR-Dateien müssen vorhanden sein und müssen nicht abgeschnitten werden. Wenn eine SBR-Datei abgeschnitten ist, müssen Sie es neu erstellen (durch erneutes kompilieren oder Assemblieren) vor der Ausführung von BSCMAKE.
+
+- Für einen inkrementellen Build erfolgreich ausgeführt werden kann muss die BSC-Datei vorhanden sein. Alle zugehörigen .sbr-Dateien, sogar leere Dateien, muss vorhanden sein und muss in der BSCMAKE-Befehlszeile angegeben werden. Wenn Sie eine SBR-Datei über die Befehlszeile weglassen, wird BSCMAKE seinen Beitrag aus der Datei entfernt.
+
+## <a name="see-also"></a>Siehe auch
+
+[Erstellen einer BSC-Datei](../../build/reference/building-a-dot-bsc-file.md)

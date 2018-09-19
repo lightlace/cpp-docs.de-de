@@ -1,5 +1,5 @@
 ---
-title: Omp_set_lock | Microsoft Docs
+title: Omp_set_lock | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d905da37b6e3203fcf37611d7404fa2e4f9ea96
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 390090b0f4bf5f8795373db9f61f8365257ee95b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691101"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024908"
 ---
 # <a name="ompsetlock"></a>omp_set_lock
-Blöcke thread Ausführung, bis eine Sperre verfügbar ist.  
+Blöcke Threadausführung, bis eine Sperre verfügbar ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,11 +34,10 @@ void omp_set_lock(
 );  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- wobei  
+### <a name="parameters"></a>Parameter
   
- `lock`  
- Eine Variable vom Typ [Omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md) , die mit initialisiert wurde [Omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md).  
+*lock*<br/>
+Eine Variable vom Typ [Omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md) , die mit initialisiert wurde [Omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md).  
   
 ## <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [3.2.3 Omp_set_lock- und Omp_set_nest_lock-Funktionen](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md).  

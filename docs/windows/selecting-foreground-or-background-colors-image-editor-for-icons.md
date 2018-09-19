@@ -1,5 +1,5 @@
 ---
-title: Auswählen von Vordergrund- oder Hintergrundfarben (Bildbearbeitung für Symbole) | Microsoft Docs
+title: Auswählen von Vordergrund- oder Hintergrundfarben (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,30 +18,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: acd86e9a1d48465df4656b4b0cb8247712f4e12d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: adaf5f28bd115602c51d20e34d593ce42644c5d4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888645"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613628"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Auswählen von Vordergrund- oder Hintergrundfarben (Bildbearbeitung für Symbole)
-Mit Ausnahme der **Radierer**, tools für die **Grafik-Editor** Symbolleiste Zeichnen-Befehl in der aktuellen Vordergrund- oder Hintergrundfarbe, wenn Sie die linke oder rechte Maustaste drücken.  
-  
-### <a name="to-select-a-foreground-color"></a>So wählen Sie eine Vordergrundfarbe aus  
-  
-1.  Klicken Sie mit der linken Maustaste auf die auf die gewünschte Farbe der [Farben (Palette)](../windows/colors-window-image-editor-for-icons.md).  
-  
-### <a name="to-select-a-background-color"></a>So wählen Sie eine Hintergrundfarbe aus  
-  
-1.  Klicken Sie mit der rechten Maustaste auf die auf die gewünschte Farbe der **Farben** Palette.  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.*  
-  
- Anforderungen  
-  
- Keiner  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Arbeiten mit Farben](../windows/working-with-color-image-editor-for-icons.md)
+
+Mit Ausnahme der **Radierer**, tools auf die **Bildbearbeitung** Symbolleiste Zeichnen-Befehl in der aktuellen Vordergrund- oder Hintergrundfarbe, wenn Sie die linke oder rechte Maustaste drücken.
+
+### <a name="to-select-a-foreground-color"></a>So wählen Sie eine Vordergrundfarbe aus
+
+1. Die linke Maustaste gedrückt, und klicken Sie auf die gewünschte Farbe auf den [Farben (Palette)](../windows/colors-window-image-editor-for-icons.md).
+
+### <a name="to-select-a-background-color"></a>So wählen Sie eine Hintergrundfarbe aus
+
+1. Klicken Sie mit der rechten Maustaste auf die gewünschte Farbe auf den **Farben** Palette.
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.
+
+## <a name="requirements"></a>Anforderungen
+
+Keiner
+
+## <a name="see-also"></a>Siehe auch
+
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Arbeiten mit Farben](../windows/working-with-color-image-editor-for-icons.md)

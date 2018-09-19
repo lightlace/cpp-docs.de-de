@@ -1,5 +1,5 @@
 ---
-title: 'Implementshelper:: Fillarraywithiid-Methode | Microsoft Docs'
+title: 'Implementshelper:: Fillarraywithiid-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9313ade1f5731319732a2ee3efc0af191af14f05
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 876f2bde68c53a27c1c40e9206b6285b8562bd91
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879922"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591138"
 ---
 # <a name="implementshelperfillarraywithiid-method"></a>ImplementsHelper::FillArrayWithIid-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void FillArrayWithIid(  
-   _Inout_ unsigned long *index,   
-   _Inout_ IID* iids) throw();  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `index`  
- Ein nullbasierter Index, der das Array Startelement für diesen Vorgang angibt. Wenn dieser Vorgang abgeschlossen ist, `index` um 1 erhöht.  
-  
- `iids`  
- Ein Array des Typs IIDs.  
-  
-## <a name="remarks"></a>Hinweise  
- Fügt die Schnittstellen-ID, die durch den aktuellen nullte Vorlagenparameter in das angegebene Array-Element angegeben.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [ImplementsHelper-Struktur](../windows/implementshelper-structure.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+void FillArrayWithIid(
+   _Inout_ unsigned long *index,
+   _Inout_ IID* iids) throw();
+```
+
+### <a name="parameters"></a>Parameter
+
+*index*  
+Ein nullbasierter Index, der das Startelement "Array" für diesen Vorgang angibt. Klicken Sie nach Abschluss dieses Vorgangs *Index* um 1 erhöht.
+
+*IIDs*  
+Ein Array vom Typ IIDs werden soll.
+
+## <a name="remarks"></a>Hinweise
+
+Fügt die Schnittstellen-ID, die durch den aktuellen nullten Vorlagenparameter angegeben wird, in das angegebene Array-Element.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[ImplementsHelper-Struktur](../windows/implementshelper-structure.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

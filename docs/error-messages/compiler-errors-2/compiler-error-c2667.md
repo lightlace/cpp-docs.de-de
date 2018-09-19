@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C2667 | Microsoft Docs
+title: Compilerfehler C2667 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5458bc5dc9500ea7850833b073d40d66bfc6e2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d6d14cf04ae399b10cbaa393d9e9fcc7133f274
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232355"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095247"
 ---
-# <a name="compiler-error-c2667"></a>Compilerfehler Fehler C2667
-'Funktion': keiner der Zahl Überladungen hat es sich um eine optimale Konvertierung  
-  
- Aufruf einer überladenen Funktion ist mehrdeutig und kann nicht aufgelöst werden.  
-  
- Die Konvertierung erforderlich, um die tatsächliche Parameter im Aufruf Funktion in einer der überladenen Funktionen entsprechen muss unbedingt besser als die Konvertierungen, die von allen anderen überladenen Funktionen erforderlich.  
-  
- Finden Sie für partielle Reihenfolge von Funktionsvorlagen in der Knowledge Base-Artikel Q240869 für Weitere Informationen.
+# <a name="compiler-error-c2667"></a>Compilerfehler C2667
+
+'Funktion': keine Anzahl Überladungen ist ein beste Konvertierung
+
+Aufruf einer überladenen Funktion ist mehrdeutig und kann nicht aufgelöst werden.
+
+Die Konvertierung erforderlich, um die tatsächlichen Parameter im Funktionsaufruf an eine der überladenen Funktionen übereinstimmen, muss unbedingt besser, als die Konvertierungen, die von allen anderen überladene Funktionen erforderlich.
+
+Finden Sie in Knowledge Base-Artikel Q240869 Informationen auf der partiellen Reihenfolge von Funktionsvorlagen.

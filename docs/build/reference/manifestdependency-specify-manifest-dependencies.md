@@ -1,5 +1,5 @@
 ---
-title: -MANIFESTDEPENDENCY (Angeben von Manifestabhängigkeiten) | Microsoft Docs
+title: -MANIFESTDEPENDENCY (Manifestabhängigkeiten angeben) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,71 +18,70 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f9b2de39f5b5340eff22c7e22244aca3d05af67
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b82bd32bec0e665f815563ccea2ee05f6ae5172
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376571"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315417"
 ---
 # <a name="manifestdependency-specify-manifest-dependencies"></a>/MANIFESTDEPENDENCY (Angeben von Manifestabhängigkeiten)
-```  
-/MANIFESTDEPENDENCY:manifest_dependency  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- / MANIFESTDEPENDENCY können Sie die Attribute angeben, die in platziert werden, wird die \<Abhängigkeit > Abschnitt der Manifestdatei.  
-  
- Finden Sie unter ["/ manifest" (Create-Seite-an-Seite-Assemblymanifest)](../../build/reference/manifest-create-side-by-side-assembly-manifest.md) Informationen zum Erstellen einer Manifestdatei.  
-  
- Weitere Informationen zu den \<Abhängigkeit > Abschnitt finden Sie in der Manifestdatei, [Herausgeberkonfigurationsdateien](http://msdn.microsoft.com/library/aa375682).  
-  
- / MANIFESTDEPENDENCY Informationen können an den Linker in einer von zwei Methoden übergeben werden:  
-  
--   Direkt in der Befehlszeile (oder in einer Antwortdatei) mit/MANIFESTDEPENDENCY.  
-  
--   Über die [Kommentar](../../preprocessor/comment-c-cpp.md) Pragma.  
-  
- Das folgende Beispiel zeigt einen/MANIFESTDEPENDENCY-Kommentar über Pragma,  
-  
-```  
-#pragma comment(linker, "\"/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"")  
-```  
-  
- Dies führt in den folgenden Eintrag in der Manifestdatei:  
-  
-```  
-<dependency>  
-  <dependentAssembly>  
-    <assemblyIdentity type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*' />  
-  </dependentAssembly>  
-</dependency>  
-```  
-  
- Die gleichen/MANIFESTDEPENDENCY Kommentare können in der Befehlszeile wie folgt übergeben:  
-  
-```  
-"/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"  
-```  
-  
- Der Linker erfasst/MANIFESTDEPENDENCY Kommentare, doppelte Einträge, und fügen Sie die resultierende XML-Zeichenfolge in die Manifestdatei hinzu.  Wenn der Linker sucht nach widersprüchliche Einträge, die Manifestdatei beschädigt und die Anwendung kann nicht gestartet (ein Eintrag kann in das Ereignisprotokoll, der angibt, die Ursache des Fehlers hinzugefügt werden).  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
-  
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
-  
-2.  Erweitern Sie die **Konfigurationseigenschaften** Knoten.  
-  
-3.  Erweitern Sie die **Linker** Knoten.  
-  
-4.  Wählen Sie die **Manifestdatei** Eigenschaftenseite.  
-  
-5.  Ändern der **zusätzliche Manifest Abhängigkeiten** Eigenschaft.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
-  
-1.  Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalManifestDependencies%2A>.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
- [Linkeroptionen](../../build/reference/linker-options.md)
+
+```
+/MANIFESTDEPENDENCY:manifest_dependency
+```
+
+## <a name="remarks"></a>Hinweise
+
+/ MANIFESTDEPENDENCY können Sie die Attribute angeben, die aufgenommen werden sollen die \<Dependency > im Abschnitt der Manifestdatei.
+
+Finden Sie unter ["/ manifest" (Create-Seite-an-Seite-Assemblymanifest)](../../build/reference/manifest-create-side-by-side-assembly-manifest.md) Informationen zur Vorgehensweise: Erstellen Sie eine Manifestdatei.
+
+Weitere Informationen zu den \<Abhängigkeit > Abschnitt finden Sie in der Manifestdatei, [Herausgeberkonfigurationsdateien](/windows/desktop/SbsCs/publisher-configuration-files).
+
+/ MANIFESTDEPENDENCY-Informationen können an den Linker auf zwei Arten übergeben werden:
+
+- Direkt in der Befehlszeile (oder in einer Antwortdatei) mit Linkerkommentar.
+
+- Über die [Kommentar](../../preprocessor/comment-c-cpp.md) Pragma.
+
+Das folgende Beispiel zeigt einen Linkerkommentar Kommentar über Pragma übergeben,
+
+```cpp
+#pragma comment(linker, "\"/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"")
+```
+
+Dadurch ist in den folgenden Eintrag in der Manifestdatei:
+
+```xml
+<dependency>
+  <dependentAssembly>
+    <assemblyIdentity type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*' />
+  </dependentAssembly>
+</dependency>
+```
+
+Die gleichen Linkerkommentar Kommentare können wie folgt in der Befehlszeile übergeben werden:
+
+```cmd
+"/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"
+```
+
+Der Linker Linkerkommentar Kommentare sammeln, doppelte Einträge, und klicken Sie dann die resultierende XML-Zeichenfolge zur Manifestdatei hinzufügen.  Wenn der Linker sucht nach widersprüchliche Einträge, die Manifestdatei ist beschädigt, und die Anwendung kann nicht gestartet (ein Eintrag kann hinzugefügt werden im Ereignisprotokoll zu erfassen, der angibt, die Ursache des Fehlers).
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
+
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+
+1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **Manifestdatei** Eigenschaftenseite.
+
+1. Ändern der **zusätzliche Manifestabhängigkeiten** Eigenschaft.
+
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
+
+1. Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalManifestDependencies%2A>.
+
+## <a name="see-also"></a>Siehe auch
+
+[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
+[Linkeroptionen](../../build/reference/linker-options.md)

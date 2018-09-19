@@ -1,5 +1,5 @@
 ---
-title: _InterlockedAddLargeStatistic | Microsoft Docs
+title: _InterlockedAddLargeStatistic | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 602cfb415c17c9e57d9fc1e932777cd1929e5f40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ee14f187545e09bbdca81f760b85e771fba3936d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331396"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703910"
 ---
 # <a name="interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
 **Microsoft-spezifisch**  
   
- Führt eine ineinander greifende Addition, in der der erste Operand einer 64-Bit-Wert ist.  
+ Führt eine ineinander greifende Addition, in der der erste Operand ein 64-Bit-Wert ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,11 +40,11 @@ long _InterlockedAddLargeStatistic(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in, out] `Addend`  
- Ein Zeiger auf den ersten Operanden für den Add-Vorgang. Der Wert, auf die gezeigt wird durch das Ergebnis der Addition ersetzt.  
+*Addend*<br/>
+[in, out] Ein Zeiger auf den ersten Operanden, der Vorgang zum Hinzufügen. Der Wert, der auf den verwiesen wird, wird durch das Ergebnis der Addition ersetzt.  
   
- [in] `Value`  
- Der zweite Operand; der erste Operand hinzuzufügende Wert.  
+*Wert*<br/>
+[in] Der zweite Operand; Wert, der erste Operand hinzugefügt.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Der Wert des zweiten Operanden.  
@@ -58,9 +58,9 @@ long _InterlockedAddLargeStatistic(
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Diese systeminterne Funktion ist nicht unteilbar, da er implementiert wurde, wie zwei separate von gesperrten Anweisungen. Ein atomic 64-Bit-Lesevorgang, die in einem anderen Thread während der Ausführung dieses systeminterne auftritt verursachen inkonsistent der gelesene Wert.  
+ Diese systeminterne Funktion ist nicht unteilbar, da er implementiert wird, wenn zwei gesperrte Anweisungen trennen. Ein atomic 64-Bit-Lesevorgang, die in einem anderen Thread während der Ausführung dieser Funktion tritt auf, verursachen in einem inkonsistenten Wert gelesen wird.  
   
- Diese Funktion verhält sich wie ein Hindernis für Lese-/ Schreibzugriff. Weitere Informationen finden Sie unter [ReadWriteBarrier](../intrinsics/readwritebarrier.md).  
+ Diese Funktion verhält sich wie eine Barriere Lese-/ Schreibzugriff. Weitere Informationen finden Sie unter [ReadWriteBarrier](../intrinsics/readwritebarrier.md).  
   
 **Ende Microsoft-spezifisch**  
   

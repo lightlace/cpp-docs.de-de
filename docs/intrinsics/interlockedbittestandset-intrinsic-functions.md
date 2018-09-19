@@ -1,5 +1,5 @@
 ---
-title: systeminterne Funktionen "_interlockedbittestandset" | Microsoft Docs
+title: Funktionen "_interlockedbittestandset" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6789a8e602fded02d4d521be74e602557ebdaefe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5327470057928466c1aede37205ac4f35175b899
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340332"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712217"
 ---
 # <a name="interlockedbittestandset-intrinsic-functions"></a>Intrinsische Funktionen „_interlockedbittestandset“
 **Microsoft-spezifisch**  
@@ -82,11 +82,11 @@ unsigned char _interlockedbittestandset64_HLERelease(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `a`  
- Ein Zeiger auf den zu untersuchenden Speicher.  
+*a*<br/>
+[in] Ein Zeiger auf den zu untersuchenden Speicher.  
   
- [in] `b`  
- Die zu testende Bitposition.  
+*b*<br/>
+[in] Die zu testende Bitposition.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Der Wert des Bits an Position `b`, bevor er festgelegt wird.  
@@ -95,14 +95,14 @@ unsigned char _interlockedbittestandset64_HLERelease(
   
 |Systemintern|Architektur|Header|  
 |---------------|------------------|------------|  
-|`_interlockedbittestandset`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_interlockedbittestandset`|X86, ARM, x64|\<intrin.h>|  
 |`_interlockedbittestandset_acq`, `_interlockedbittestandset_nf`, `_interlockedbittestandset_rel`|ARM|\<intrin.h>|  
-|`_interlockedbittestandset_HLEAcquire`, `_interlockedbittestandset_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
-|`_interlockedbittestandset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_interlockedbittestandset64_HLEAcquire`, `_interlockedbittestandset64_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_interlockedbittestandset_HLEAcquire`, `_interlockedbittestandset_HLERelease`|x86, x64|\<immintrin.h>|  
+|`_interlockedbittestandset64`|x64|\<intrin.h>|  
+|`_interlockedbittestandset64_HLEAcquire`, `_interlockedbittestandset64_HLERelease`|x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>Hinweise  
- Auf x86- und [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]-Prozessoren verwenden diese systeminternen Funktionen die `lock bts`-Anweisungen zum Lesen und Festlegen des angegebenen Bits auf 1. Der Vorgang ist atomarisch.  
+ Auf X86 und X64-Prozessoren, verwenden diese systeminternen Funktionen die `lock bts` Anweisung zum Lesen und des angegebenen Bits auf 1 festgelegt. Der Vorgang ist atomarisch.  
   
  Verwenden Sie auf ARM-Prozessoren die systeminternen Funktionen mit den Suffixen `_acq` und `_rel`, wenn Sie Semantiken zum Abrufen bzw. Freigeben benötigen, wie am Anfang und Ende eines kritischen Abschnitts. Die systeminternen ARM-Funktionen mit dem Suffix `_nf` („no fence“) dienen nicht als Arbeitsspeicherbarriere.  
   

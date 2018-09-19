@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3205 | Microsoft Docs
+title: Compilerfehler C3205 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3419643e846bab394ab032dc428d4f06a1040164
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b47054bcddbb2d171f7ab8fadb861c065e5b1a5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249708"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109404"
 ---
 # <a name="compiler-error-c3205"></a>Compilerfehler C3205
-Argumentliste für den Vorlagenparameter "Parameter" fehlt.  
-  
-Ein [Vorlagenparameter](../../cpp/templates-cpp.md) fehlt.  
-  
-## <a name="example"></a>Beispiel  
-Im folgenden Beispiel wird C3205 generiert:  
-  
-```cpp  
-// C3205.cpp  
-template<template<class> class T> struct A {  
-   typedef T unparameterized_type;   // C3205  
-   // try the following line instead  
-   // typedef T<int> unparameterized_type;  
-};  
-  
-template <class T>  
-struct B {  
-   typedef int value_type;  
-};  
-  
-int main() {  
-   A<B> x;  
-}  
+
+Argumentliste für den Vorlagenparameter "Parameter" fehlt.
+
+Ein [Vorlagenparameter](../../cpp/templates-cpp.md) fehlt.
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C3205 generiert:
+
+```cpp
+// C3205.cpp
+template<template<class> class T> struct A {
+   typedef T unparameterized_type;   // C3205
+   // try the following line instead
+   // typedef T<int> unparameterized_type;
+};
+
+template <class T>
+struct B {
+   typedef int value_type;
+};
+
+int main() {
+   A<B> x;
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: __writecr8 | Microsoft Docs
+title: __writecr8 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26c8b474c8b2c37e082c8c49f0d232f3f91d6a2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7369261efb43cdf9cd92f0924d1043cde50ac440
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324628"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704014"
 ---
 # <a name="writecr8"></a>__writecr8
 **Microsoft-spezifisch**  
   
- Schreibt den Wert `Data` die CR8 registriert wird.  
+ Schreibt den Wert `Data` dem CR8-Register.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,14 +37,14 @@ void writecr8(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `Data`  
- Der Wert, der registriert wird, CR8 zu schreiben.  
+*Data*<br/>
+[in] Der Wert, der registriert wird, CR8 geschrieben werden soll.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__writecr8`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writecr8`|x64|  
   
  **Headerdatei** \<intrin.h >  
   

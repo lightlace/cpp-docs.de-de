@@ -1,5 +1,5 @@
 ---
-title: Platform::Details::HeapAllocationTrackingLevel Enumeration | Microsoft Docs
+title: Platform::Details::HeapAllocationTrackingLevel-Enumeration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,37 +11,41 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Details::HeapAllocationTrackingLevel Enumeration
 ms.assetid: dc341bc0-b47b-4eb2-9445-fbaf788e7b1a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc1c3dd382604e51f049ac157faba38e0d7d0032
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec5b9d2bcad76e220b94da53d517523e62121325
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086927"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104237"
 ---
 # <a name="platformdetailsheapallocationtrackinglevel-enumeration"></a>Platform::Details::HeapAllocationTrackingLevel-Enumeration
-Diese Enumeration ist nur für den internen Gebrauch vorgesehen und nicht zur Verwendung bei der Entwicklung bestimmt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-  
-enumm class HeapAllocationTrackingLevel;  
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Diese Enumeration wird nur aus Gründen der Vollständigkeit bereitgestellt, da sie mit Browsern überprüft werden kann.  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `Platform`  
-  
-### <a name="requirements"></a>Anforderungen  
- **Metadaten:** platform.winmd  
-  
- **Namespace:** Platform::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [Platform-Namespace](platform-namespace-c-cx.md)
+
+Diese Enumeration ist nur für den internen Gebrauch vorgesehen und nicht zur Verwendung bei der Entwicklung bestimmt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+enumm class HeapAllocationTrackingLevel;
+```
+
+### <a name="remarks"></a>Hinweise
+
+Diese Enumeration wird nur aus Gründen der Vollständigkeit bereitgestellt, da sie mit Browsern überprüft werden kann.
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`Platform`
+
+### <a name="requirements"></a>Anforderungen
+
+**Metadaten:** platform.winmd
+
+**Namespace:** Platform::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[Plattform-Namespace](platform-namespace-c-cx.md)

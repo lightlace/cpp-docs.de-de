@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01eb327458331ca457b7b7f23d8c69668fbf1fa7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b9aa8c65632f2a4c1555e211985d3b3005fabe11
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964157"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316925"
 ---
 # <a name="binaryfunction-struct"></a>binary_function-Struktur
 
@@ -41,11 +41,9 @@ struct binary_function {
 
 Die Vorlagenstruktur dient als Basis für Klassen, die eine Memberfunktion der folgenden Form definieren:
 
-**result_type operator()**( **constfirst_argument_type&**,
+> *RESULT_TYPE* ** operator() (Const ** <em>First_argument_type</em>**&, const** <em>Second_argument_type</em>**&) const**
 
-**const second_argument_type&** ) **const**
-
-Alle diese binären Funktionen können auf ihren ersten Argumenttyp als verweisen `first_argument_type`, ihren zweiten Argumenttyp als `second_argument_type`, und ihren Rückgabetyp als ***Result_type***.
+Alle binären Funktionen dieser Art können auf ihren ersten Argumenttyp als *first_argument_type*, ihren zweiten Argumenttyp als *second_argument_type* und ihren Rückgabetyp als *result_type* verweisen.
 
 ## <a name="example"></a>Beispiel
 
@@ -100,12 +98,11 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-\* Output:
+/* Output:
 The vector v1 = ( 11 5.5 3.66667 2.75 2.2 1.83333 )
 The vector v2 = ( -0 -2 -4 -6 -8 -10 )
 The element-wise averages are: ( 5.5 1.75 -0.166667 -1.625 -2.9 -4.08333 )
-*\
-
+*/
 ```
 
 ## <a name="requirements"></a>Anforderungen

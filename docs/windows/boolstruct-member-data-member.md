@@ -1,5 +1,5 @@
 ---
-title: 'Boolstruct:: Datenmember | Microsoft Docs'
+title: 'Boolstruct:: Datenmember | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7f01f2c642686c1cf7c01fe9322e06f165d5ada9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46e2a87515e2b129c31f68e31b3231eb1699e844
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859812"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591107"
 ---
 # <a name="boolstructmember-data-member"></a>BoolStruct::Member-Datenmember
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int Member;  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Gibt an, dass eine [ComPtr](../windows/comptr-class.md) ist, oder verwalten die Objektlebensdauer einer Schnittstelle nicht der Fall ist.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** internal.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [BoolStruct-Struktur](../windows/boolstruct-structure.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+int Member;
+```
+
+## <a name="remarks"></a>Hinweise
+
+Gibt an, dass eine [ComPtr](../windows/comptr-class.md) ist, oder ist nicht der Fall, die Objektlebensdauer einer Schnittstelle verwalten.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** internal.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[BoolStruct-Struktur](../windows/boolstruct-structure.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

@@ -18,30 +18,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5408cf05910bdc1802213d69a286707199f0be76
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a69bd0245035191f95f874bb6a4383c2e148e0a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940228"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070846"
 ---
 # <a name="bstrtoperator-"></a>_bstr_t::operator !
-**Microsoft-spezifisch**  
-  
- Überprüft, ob das gekapselte `BSTR` ist eine NULL-Zeichenfolge.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-bool operator!( ) const throw( );  
-  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Er gibt TRUE zurück, wenn dies der Fall, FALSE, wenn nicht.  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [_bstr_t-Klasse](../cpp/bstr-t-class.md)
+
+**Microsoft-spezifisch**
+
+Überprüft, ob das gekapselte `BSTR` ist eine NULL-Zeichenfolge.
+
+## <a name="syntax"></a>Syntax
+
+```
+bool operator!( ) const throw( );
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Er gibt TRUE zurück, wenn dies der Fall, FALSE, wenn nicht.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[_bstr_t-Klasse](../cpp/bstr-t-class.md)

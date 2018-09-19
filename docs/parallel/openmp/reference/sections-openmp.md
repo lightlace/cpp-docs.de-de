@@ -1,5 +1,5 @@
 ---
-title: Abschnitte (OpenMP) | Microsoft Docs
+title: Abschnitte (OpenMP) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60bc94685a7e6128e22cc3545ae8702abe6d472e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d3b369cfbd68edd32b644c9a4ec0520329507b6e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692076"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708031"
 ---
 # <a name="sections-openmp"></a>sections (OpenMP)
-Identifiziert die Codeabschnitte auf allen Threads aufgeteilt werden.  
+Identifiziert die Codeabschnitte, die auf allen Threads aufgeteilt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,16 +39,15 @@ Identifiziert die Codeabschnitte auf allen Threads aufgeteilt werden.
 }  
 ```  
   
+## <a name="arguments"></a>Argumente
+
+*Klausel*<br/>
+(Optional) NULL oder mehr Klauseln. Finden Sie im Abschnitt "Hinweise" eine Liste von unterstützten Klauseln **Abschnitte**.
+
 ## <a name="remarks"></a>Hinweise  
- wobei  
+ Die **Abschnitte** Richtlinie kann 0 (null) oder mehrere enthalten **Abschnitt** Anweisungen.  
   
- `clause` (optional)  
- NULL oder mehr Klauseln. Finden Sie im Abschnitt "Hinweise" eine Liste von unterstützten Klauseln **Abschnitte**.  
-  
-## <a name="remarks"></a>Hinweise  
- Die **Abschnitte** Richtlinie darf null oder mehr **Abschnitt** Direktiven.  
-  
- Die **Abschnitte** Richtlinie unterstützt die folgenden OpenMP-Klauseln:  
+ Die **Abschnitte** -Anweisung unterstützt die folgenden OpenMP-Klauseln:  
   
 -   [firstprivate](../../../parallel/openmp/reference/firstprivate.md)  
   
@@ -60,7 +59,7 @@ Identifiziert die Codeabschnitte auf allen Threads aufgeteilt werden.
   
 -   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
- Wenn **parallele** ebenfalls angegeben wird, `clause` kann jede beliebige Klausel vom akzeptiert die **parallele** oder **Abschnitte** Direktiven, mit Ausnahme von `nowait`.  
+ Wenn **parallele** ebenfalls angegeben wird, `clause` kann jede beliebige Klausel von akzeptiert die **parallele** oder **Abschnitte** -Anweisungen außer `nowait`.  
   
  Weitere Informationen finden Sie unter [2.4.2 sections-Konstrukt](../../../parallel/openmp/2-4-2-sections-construct.md).  
   

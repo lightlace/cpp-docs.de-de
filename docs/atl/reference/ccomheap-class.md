@@ -21,127 +21,148 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d45a999f777a2d497542544c2d3c7f079b7a32b0
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b38aabbb418a355f85917a2d287c2f473cb2e7df
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881603"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062916"
 ---
 # <a name="ccomheap-class"></a>CComHeap-Klasse
-Diese Klasse implementiert [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mithilfe der COM-speicherbelegungsfunktionen.  
-  
+
+Diese Klasse implementiert [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mithilfe der COM-speicherbelegungsfunktionen.
+
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
-  
-## <a name="syntax"></a>Syntax  
-  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
+
+## <a name="syntax"></a>Syntax
+
 ```
 class CComHeap : public IAtlMemMgr
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CComHeap::Allocate](#allocate)|Rufen Sie diese Methode auf, um einen Speicherblock zu belegen.|  
-|[Ccomheap:: Free](#free)|Rufen Sie diese Methode, um einen Block von diesem Speicher-Manager zugeordneten Arbeitsspeicher freizugeben.|  
-|[CComHeap::GetSize](#getsize)|Rufen Sie diese Methode zum Abrufen der zugeordneten Größe eines Speicherblocks, der von diesem Speicher-Manager zugeordnet.|  
-|[Ccomheap:: ReAllocate](#reallocate)|Rufen Sie diese Methode auf, um den von diesem Speicher-Manager zugeordneten Arbeitsspeicher neu zuzuordnen.|  
-  
-## <a name="remarks"></a>Hinweise  
- `CComHeap` implementiert mithilfe der COM-Zuordnung-Funktionen, einschließlich genutzten speicherzuweisungsfunktionen [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226), und [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280). Die Höchstmenge an Arbeitsspeicher, die zugeordnet werden kann, ist gleich INT_MAX (2147483647) Bytes.  
-  
-## <a name="example"></a>Beispiel  
- Siehe das Beispiel für [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `IAtlMemMgr`  
-  
- `CComHeap`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** ATLComMem.h  
-  
-##  <a name="allocate"></a>  CComHeap::Allocate  
- Rufen Sie diese Methode auf, um einen Speicherblock zu belegen.  
-  
+```
+
+## <a name="members"></a>Member
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CComHeap::Allocate](#allocate)|Rufen Sie diese Methode auf, um einen Speicherblock zu belegen.|
+|[Ccomheap:: Free](#free)|Rufen Sie diese Methode, um einen Block von diesem Speicher-Manager zugeordneten Arbeitsspeicher freizugeben.|
+|[CComHeap::GetSize](#getsize)|Rufen Sie diese Methode zum Abrufen der zugeordneten Größe eines Speicherblocks, der von diesem Speicher-Manager zugeordnet.|
+|[Ccomheap:: ReAllocate](#reallocate)|Rufen Sie diese Methode auf, um den von diesem Speicher-Manager zugeordneten Arbeitsspeicher neu zuzuordnen.|
+
+## <a name="remarks"></a>Hinweise
+
+`CComHeap` implementiert mithilfe der COM-Zuordnung-Funktionen, einschließlich genutzten speicherzuweisungsfunktionen [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree), [IMalloc::GetSize](/windows/desktop/api/objidlbase/nf-objidlbase-imalloc-getsize), und [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc). Die Höchstmenge an Arbeitsspeicher, die zugeordnet werden kann, ist gleich INT_MAX (2147483647) Bytes.
+
+## <a name="example"></a>Beispiel
+
+Siehe das Beispiel für [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`IAtlMemMgr`
+
+`CComHeap`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** ATLComMem.h
+
+##  <a name="allocate"></a>  CComHeap::Allocate
+
+Rufen Sie diese Methode auf, um einen Speicherblock zu belegen.
+
 ```
 virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
-```  
-  
-### <a name="parameters"></a>Parameter  
- *nBytes*  
- Die angeforderte Anzahl von Bytes im neuen Speicherblock.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Gibt einen Zeiger auf den Anfang des neu belegten Speicherblocks zurück.  
-  
-### <a name="remarks"></a>Hinweise  
- Rufen Sie [ccomheap:: Free](#free) oder [ccomheap:: ReAllocate](#reallocate) um den von dieser Methode belegten Arbeitsspeicher freizugeben.  
-  
- Mithilfe von implementiert [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727).  
-  
-##  <a name="free"></a>  Ccomheap:: Free  
- Rufen Sie diese Methode, um einen Block von diesem Speicher-Manager zugeordneten Arbeitsspeicher freizugeben.  
-  
+```
+
+### <a name="parameters"></a>Parameter
+
+*nBytes*<br/>
+Die angeforderte Anzahl von Bytes im neuen Speicherblock.
+
+### <a name="return-value"></a>Rückgabewert
+
+Gibt einen Zeiger auf den Anfang des neu belegten Speicherblocks zurück.
+
+### <a name="remarks"></a>Hinweise
+
+Rufen Sie [ccomheap:: Free](#free) oder [ccomheap:: ReAllocate](#reallocate) um den von dieser Methode belegten Arbeitsspeicher freizugeben.
+
+Mithilfe von implementiert [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc).
+
+##  <a name="free"></a>  Ccomheap:: Free
+
+Rufen Sie diese Methode, um einen Block von diesem Speicher-Manager zugeordneten Arbeitsspeicher freizugeben.
+
 ```
 virtual void Free(void* p) throw();
-```  
-  
-### <a name="parameters"></a>Parameter  
- *p*  
- Ein Zeiger auf den Arbeitsspeicher, der zuvor von diesem Speicher-Manager zugeordnet wurde. NULL ist ein gültiger Wert und hat keine Auswirkungen.  
-  
-### <a name="remarks"></a>Hinweise  
- Mithilfe von implementiert [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722).  
-  
-##  <a name="getsize"></a>  CComHeap::GetSize  
- Rufen Sie diese Methode zum Abrufen der zugeordneten Größe eines Speicherblocks, der von diesem Speicher-Manager zugeordnet.  
-  
+```
+
+### <a name="parameters"></a>Parameter
+
+*p*<br/>
+Ein Zeiger auf den Arbeitsspeicher, der zuvor von diesem Speicher-Manager zugeordnet wurde. NULL ist ein gültiger Wert und hat keine Auswirkungen.
+
+### <a name="remarks"></a>Hinweise
+
+Mithilfe von implementiert [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree).
+
+##  <a name="getsize"></a>  CComHeap::GetSize
+
+Rufen Sie diese Methode zum Abrufen der zugeordneten Größe eines Speicherblocks, der von diesem Speicher-Manager zugeordnet.
+
 ```
 virtual size_t GetSize(void* p) throw();
-```  
-  
-### <a name="parameters"></a>Parameter  
- *p*  
- Ein Zeiger auf den Arbeitsspeicher, der zuvor von diesem Speicher-Manager zugeordnet wurde.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Gibt die Größe des belegten Speicherblocks in Bytes zurück.  
-  
-### <a name="remarks"></a>Hinweise  
- Mithilfe von implementiert [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226).  
-  
-##  <a name="reallocate"></a>  Ccomheap:: ReAllocate  
- Rufen Sie diese Methode auf, um den von diesem Speicher-Manager zugeordneten Arbeitsspeicher neu zuzuordnen.  
-  
+```
+
+### <a name="parameters"></a>Parameter
+
+*p*<br/>
+Ein Zeiger auf den Arbeitsspeicher, der zuvor von diesem Speicher-Manager zugeordnet wurde.
+
+### <a name="return-value"></a>Rückgabewert
+
+Gibt die Größe des belegten Speicherblocks in Bytes zurück.
+
+### <a name="remarks"></a>Hinweise
+
+Mithilfe von implementiert [IMalloc::GetSize](/windows/desktop/api/objidlbase/nf-objidlbase-imalloc-getsize).
+
+##  <a name="reallocate"></a>  Ccomheap:: ReAllocate
+
+Rufen Sie diese Methode auf, um den von diesem Speicher-Manager zugeordneten Arbeitsspeicher neu zuzuordnen.
+
 ```
 virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
-```  
-  
-### <a name="parameters"></a>Parameter  
- *p*  
- Ein Zeiger auf den Arbeitsspeicher, der zuvor von diesem Speicher-Manager zugeordnet wurde.  
-  
- *nBytes*  
- Die angeforderte Anzahl von Bytes im neuen Speicherblock.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Gibt einen Zeiger auf den Anfang des neu belegten Speicherblocks zurück.  
-  
-### <a name="remarks"></a>Hinweise  
- Rufen Sie [ccomheap:: Free](#free) um den von dieser Methode belegten Arbeitsspeicher freizugeben.  
-  
- Mithilfe von implementiert [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280).  
-  
-## <a name="see-also"></a>Siehe auch  
- [-Beispiel-Beispiel](../../visual-cpp-samples.md)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)   
- [CWin32Heap-Klasse](../../atl/reference/cwin32heap-class.md)   
- [CLocalHeap-Klasse](../../atl/reference/clocalheap-class.md)   
- [CGlobalHeap-Klasse](../../atl/reference/cglobalheap-class.md)   
- [Ccomheap-Klasse](../../atl/reference/ccrtheap-class.md)   
- [IAtlMemMgr-Klasse](../../atl/reference/iatlmemmgr-class.md)
+```
+
+### <a name="parameters"></a>Parameter
+
+*p*<br/>
+Ein Zeiger auf den Arbeitsspeicher, der zuvor von diesem Speicher-Manager zugeordnet wurde.
+
+*nBytes*<br/>
+Die angeforderte Anzahl von Bytes im neuen Speicherblock.
+
+### <a name="return-value"></a>Rückgabewert
+
+Gibt einen Zeiger auf den Anfang des neu belegten Speicherblocks zurück.
+
+### <a name="remarks"></a>Hinweise
+
+Rufen Sie [ccomheap:: Free](#free) um den von dieser Methode belegten Arbeitsspeicher freizugeben.
+
+Mithilfe von implementiert [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc).
+
+## <a name="see-also"></a>Siehe auch
+
+[-Beispiel-Beispiel](../../visual-cpp-samples.md)<br/>
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
+[CWin32Heap-Klasse](../../atl/reference/cwin32heap-class.md)<br/>
+[CLocalHeap-Klasse](../../atl/reference/clocalheap-class.md)<br/>
+[CGlobalHeap-Klasse](../../atl/reference/cglobalheap-class.md)<br/>
+[CComHeap-Klasse](../../atl/reference/ccrtheap-class.md)<br/>
+[IAtlMemMgr-Klasse](../../atl/reference/iatlmemmgr-class.md)

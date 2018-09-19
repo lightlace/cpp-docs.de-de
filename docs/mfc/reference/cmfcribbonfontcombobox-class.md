@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb5fa8f56f242ce40f6be9c27bc1cbd9c5d61ff
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 79facf2498769c0f4385f6dbc84133c3773fe0e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852522"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705690"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox-Klasse
 Implementiert ein Kombinationsfeld, das eine Liste von Schriftarten enthält. Das Kombinationsfeld kann in einem Menübandbereich platziert werden.  
@@ -106,14 +106,14 @@ void BuildFonts(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nFontType*  
- Gibt die Schriftart der Schriftarten hinzufügen.  
+*nFontType*<br/>
+[in] Gibt die Schriftart der Schriftarten hinzufügen.  
   
- [in] *nCharSet*  
- Gibt den Zeichensatz der Schriftarten hinzufügen.  
+*nCharSet*<br/>
+[in] Gibt den Zeichensatz der Schriftarten hinzufügen.  
   
- [in] *nPitchAndFamily*  
- Gibt die Schriftbreite und Schriftfamilie der Schriftarten hinzufügen.  
+*nPitchAndFamily*<br/>
+[in] Gibt die Schriftbreite und Schriftfamilie der Schriftarten hinzufügen.  
   
 ##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
  Erstellt und initialisiert ein [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md) Objekt.  
@@ -128,28 +128,28 @@ CMFCRibbonFontComboBox(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- Die Befehls-ID des Befehls, der ausgeführt wird, wenn der Benutzer ein Element aus dem Kombinationsfeld auswählt.  
+*nID*<br/>
+[in] Die Befehls-ID des Befehls, der ausgeführt wird, wenn der Benutzer ein Element aus dem Kombinationsfeld auswählt.  
   
- [in] *nFontType*  
- Gibt an, welche Schriftart zu Typen, für die im Kombinationsfeld angezeigt. Gültige Optionen sind DEVICE_FONTTYPE, RASTER_FONTTYPE, und TRUETYPE_FONTTYPE oder jede bitweise Kombination davon.  
+*nFontType*<br/>
+[in] Gibt an, welche Schriftart zu Typen, für die im Kombinationsfeld angezeigt. Gültige Optionen sind DEVICE_FONTTYPE, RASTER_FONTTYPE, und TRUETYPE_FONTTYPE oder jede bitweise Kombination davon.  
   
- [in] *nCharSet*  
- Filtert die Schriftarten in das Kombinationsfeld, mit denen, die den angegebenen Zeichensatz angehören...  
+*nCharSet*<br/>
+[in] Filtert die Schriftarten in das Kombinationsfeld, mit denen, die den angegebenen Zeichensatz angehören...  
   
- [in] *nPitchAndFamily*  
- Gibt die Schriftbreite und Schriftfamilie der Schriftarten, die im Kombinationsfeld angezeigt werden.  
+*nPitchAndFamily*<br/>
+[in] Gibt die Schriftbreite und Schriftfamilie der Schriftarten, die im Kombinationsfeld angezeigt werden.  
   
- [in] *nWidth*  
- Die Breite angibt in Pixel des Kombinationsfelds.  
+*nWidth*<br/>
+[in] Die Breite angibt in Pixel des Kombinationsfelds.  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen zu möglichen *nFontType* Parameterwerten finden Sie unter [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) in der Windows SDK-Dokumentation.  
+ Weitere Informationen zu möglichen *nFontType* Parameterwerten finden Sie unter [EnumFontFamProc](https://msdn.microsoft.com/library/windows/desktop/dd162621) in der Windows SDK-Dokumentation.  
   
- Weitere Informationen zu gültigen Zeichensätzen, die zugewiesen werden können *nCharSet*, und der gültigen Werte, die zugewiesen werden können *nPitchAndFamily*, finden Sie unter ["LogFont"](http://msdn.microsoft.com/library/windows/desktop/dd145037) in der Windows SDK-Dokumentation.  
+ Weitere Informationen zu gültigen Zeichensätzen, die zugewiesen werden können *nCharSet*, und der gültigen Werte, die zugewiesen werden können *nPitchAndFamily*, finden Sie unter ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) in der Windows SDK-Dokumentation.  
   
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;  

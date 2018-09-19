@@ -1,5 +1,5 @@
 ---
-title: CInstantaneousTransition-Klasse | Microsoft Docs
+title: CInstantaneousTransition-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76980dab9246527162e124b9ce599791b49c8a26
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: f83775e04c7b5c4c104f9790870ea067392b0bce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038405"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209213"
 ---
 # <a name="cinstantaneoustransition-class"></a>CInstantaneousTransition-Klasse
 Kapselt einen unmittelbaren Übergang.  
@@ -50,7 +50,7 @@ class CInstantaneousTransition : public CBaseTransition;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CInstantaneousTransition::Create](#create)|Ruft den Übergangsbibliothek, um die gekapselte COM-Übergangsobjekt zu erstellen. (Überschreibt [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CInstantaneousTransition::Create](#create)|Ruft den Übergangsbibliothek, um gekapselte COM-Übergangsobjekt zu erstellen. (Überschreibt [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
@@ -59,7 +59,7 @@ class CInstantaneousTransition : public CBaseTransition;
 |[CInstantaneousTransition::m_dblFinalValue](#m_dblfinalvalue)|Der Wert der Animationsvariablen am Ende des Übergangs.|  
   
 ## <a name="remarks"></a>Hinweise  
- Während einen unmittelbaren Übergang ändert den Wert der Animationsvariablen sofort vom aktuellen Wert in einem angegebenen Endwert. Die Dauer der dieser Übergang ist immer 0 (null). Da alle Übergänge automatisch gelöscht werden, es wird empfohlen, belegt sie mit dem Operator new. Das gekapselte IUIAnimationTransition-COM-Objekt wird von CAnimationController:: erst erstellt, ist es auf NULL. Ändern Membervariablen, nach der Erstellung dieses COM-Objekt hat keine Auswirkung.  
+ Während einen unmittelbaren Übergang ändert den Wert der Animationsvariablen sofort vom aktuellen Wert in einem angegebenen Endwert. Die Dauer der dieser Übergang ist immer 0 (null). Da alle Übergänge automatisch gelöscht werden, es wird empfohlen, sie mit dem Operator new. Das gekapselte IUIAnimationTransition COM-Objekt wird von CAnimationController:: erst erstellt, ist es auf NULL. Ändern Membervariablen des Typs an, nach der Erstellung dieses COM-Objekt hat keine Auswirkungen.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -83,7 +83,7 @@ CInstantaneousTransition(DOUBLE dblFinalValue);
  Der Wert der Animationsvariablen am Ende des Übergangs.  
   
 ##  <a name="create"></a>  CInstantaneousTransition::Create  
- Ruft den Übergangsbibliothek, um die gekapselte COM-Übergangsobjekt zu erstellen.  
+ Ruft den Übergangsbibliothek, um gekapselte COM-Übergangsobjekt zu erstellen.  
   
 ```  
 virtual BOOL Create(
@@ -93,7 +93,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parameter  
 *pLibrary*  
- Ein Zeiger auf ein [IUIAnimationTransitionLibrary-Schnittstelle](https://msdn.microsoft.com/library/windows/desktop/dd371897), die eine Bibliothek mit standard-Übergänge definiert.  
+ Ein Zeiger auf ein [IUIAnimationTransitionLibrary Schnittstelle](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), das eine Bibliothek mit standard-Übergänge definiert.  
 
   
 ### <a name="return-value"></a>Rückgabewert  

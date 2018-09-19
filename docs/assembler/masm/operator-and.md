@@ -1,7 +1,7 @@
 ---
-title: Operator AND | Microsoft Docs
+title: Operator AND | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f972002a57bdb2dd3ff2003fa922d1aa0f7e1536
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 0c7246f03be6f6939351f9d8a33e33bfd733a92d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056859"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682931"
 ---
 # <a name="operator-and"></a>Operator AND
-Gibt das Ergebnis einer bitweisen AND-Operation für *expression1* und *expression2*.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-expression1 AND expression2  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Operatoren – Referenz](../../assembler/masm/operators-reference.md)
+
+Gibt das Ergebnis einer bitweisen AND-Operation für *expression1* und *expression2*.
+
+## <a name="syntax"></a>Syntax
+
+> Ausdruck1 und Ausdruck2
+
+## <a name="see-also"></a>Siehe auch
+
+[Operatoren – Referenz](../../assembler/masm/operators-reference.md)<br/>

@@ -16,36 +16,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4895153abe248265e0aacfbe636b9a4bd46ed205
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 9b3aa001270a3dc608fabf73fce28ce51eb9295e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941196"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031300"
 ---
 # <a name="bstrtgetaddress"></a>_bstr_t::GetAddress
-**Microsoft-spezifisch**  
-  
- Setzt etwaig vorhandene Zeichenfolgen frei und gibt die Adresse einer neu zugeordneten Zeichenfolge zurück.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-BSTR* GetAddress( );  
-  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf den `BSTR` umschlossen von `_bstr_t`.  
-  
-## <a name="remarks"></a>Hinweise  
- `GetAddress` wirkt sich auf alle `_bstr_t`-Objekte aus, die ein `BSTR` freigeben. Mehr als eine `_bstr_t` können Freigeben einer `BSTR` durch die Verwendung des Kopierkonstruktors und und **Operator =**.  
-  
-## <a name="example"></a>Beispiel  
- Finden Sie unter [_bstr_t:: Assign](../cpp/bstr-t-assign.md) ein mit `GetAddress`.  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [_bstr_t-Klasse](../cpp/bstr-t-class.md)
+
+**Microsoft-spezifisch**
+
+Setzt etwaig vorhandene Zeichenfolgen frei und gibt die Adresse einer neu zugeordneten Zeichenfolge zurück.
+
+## <a name="syntax"></a>Syntax
+
+```
+BSTR* GetAddress( );
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Ein Zeiger auf den `BSTR` umschlossen von `_bstr_t`.
+
+## <a name="remarks"></a>Hinweise
+
+**GetAddress** wirkt sich auf alle `_bstr_t` Objekte die Freigabe einer `BSTR`. Mehr als eine `_bstr_t` können Freigeben einer `BSTR` durch die Verwendung des Kopierkonstruktors und **Operator =**.
+
+## <a name="example"></a>Beispiel
+
+Finden Sie unter [_bstr_t:: Assign](../cpp/bstr-t-assign.md) ein mit **GetAddress**.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[_bstr_t-Klasse](../cpp/bstr-t-class.md)

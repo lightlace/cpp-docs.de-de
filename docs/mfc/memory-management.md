@@ -1,5 +1,5 @@
 ---
-title: Die Verwaltung des Arbeitsspeichers | Microsoft Docs
+title: Speicherverwaltung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928a954be6a96f5026a98f724a77bebd51be27f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28191191572e508828a23f0e719a57d63163b08d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345077"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222350"
 ---
 # <a name="memory-management"></a>Speicherverwaltung
-Diese Gruppe von Artikeln wird beschrieben, wie die allgemeinen Dienste von der Microsoft Foundation Class-Bibliothek (MFC) im Zusammenhang mit der Verwaltung des Arbeitsspeichers nutzen wird. Speicherbelegung kann in zwei Hauptkategorien unterteilt werden: Zuordnungen und Heapzuordnungen frame.  
+Dieser Gruppe von Artikeln wird beschrieben, wie Sie von der Microsoft Foundation Class-Bibliothek (MFC) im Zusammenhang mit der Speicherverwaltung über die allgemeinen Dienste nutzen können. Speicherbelegung kann in zwei Hauptkategorien unterteilt werden: frame-Zuordnungen und Heap-Zuordnungen.  
   
- Ein Hauptunterschied zwischen den beiden Zuordnung Techniken ist, dass mit Frame Zuordnungseinheiten, die Sie in der Regel mit den tatsächlichen Arbeitsspeicher arbeiten selbst zu blockieren, während mit Heapzuordnung Sie immer einen Zeiger zum Speicherblock Dateinamenangabe. Eine andere Hauptunterschied zwischen den beiden Schemas ist, dass die Frame-Objekten automatisch gelöscht werden, während Heapobjekte explizit vom Programmierer gelöscht werden müssen.  
+ Ein Hauptunterschied zwischen den zwei Zuordnung Techniken ist, dass die Frame-Zuordnung, die Sie in der Regel mit den tatsächlichen Arbeitsspeicher arbeiten, zu blockieren, während mit Heapzuordnung Sie immer einen Zeiger zum Speicherblock erhalten. Eine andere Hauptunterschied zwischen den beiden Schemas ist, dass der Keyframe-Objekte automatisch gelöscht werden, während die Heap-Objekte explizit gelöscht werden müssen, können Sie durch den Programmierer.  
   
- MFC-fremde Informationen zur Verwaltung des Arbeitsspeichers in Programmen für Windows finden Sie unter [Speicherverwaltung](http://msdn.microsoft.com/library/windows/desktop/aa366779) im Windows SDK.  
+ MFC-fremde Informationen zur Verwaltung des Arbeitsspeichers in Programmen für Windows finden Sie [Speicherverwaltung](https://msdn.microsoft.com/library/windows/desktop/aa366779) im Windows SDK.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
   
@@ -38,13 +38,13 @@ Diese Gruppe von Artikeln wird beschrieben, wie die allgemeinen Dienste von der 
   
 -   [Heapzuordnung](../mfc/memory-management-heap-allocation.md)  
   
--   [Belegen von Speicher für ein array](../mfc/memory-management-examples.md)  
+-   [Zuordnen von Speicher für ein array](../mfc/memory-management-examples.md)  
   
 -   [Freigeben von Speicher für ein Array aus dem heap](../mfc/memory-management-examples.md)  
   
--   [Belegen von Speicher für eine Datenstruktur](../mfc/memory-management-examples.md)  
+-   [Zuweisen von Arbeitsspeicher für eine Datenstruktur](../mfc/memory-management-examples.md)  
   
--   [Belegen von Speicher für ein Objekt](../mfc/memory-management-examples.md)  
+-   [Zuordnen von Speicher für ein Objekt](../mfc/memory-management-examples.md)  
   
 -   [Größenveränderbare Speicherblöcke](../mfc/memory-management-resizable-memory-blocks.md)  
   

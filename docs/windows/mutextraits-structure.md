@@ -1,5 +1,5 @@
 ---
-title: MutexTraits-Struktur | Microsoft Docs
+title: MutexTraits-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0406ec7938a623be7b16e0535e9d2c0c769f8392
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 529265c4b1e5f510a92295a1ceff6d0a012163fe
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874589"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584170"
 ---
 # <a name="mutextraits-structure"></a>MutexTraits-Struktur
-Definiert die gemeinsame Merkmale der [Mutex](../windows/mutex-class1.md) Klasse.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-struct MutexTraits : HANDLENullTraits;  
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[MutexTraits::Unlock-Methode](../windows/mutextraits-unlock-method.md)|Gibt die exklusive Kontrolle über eine freigegebene Ressource frei.|  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `HANDLENullTraits`  
-  
- `MutexTraits`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>Siehe auch  
- [Microsoft::WRL::Wrappers::HandleTraits-Namespace](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+
+Definiert die allgemeinen Merkmale der [Mutex](../windows/mutex-class1.md) Klasse.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+struct MutexTraits : HANDLENullTraits;
+```
+
+## <a name="members"></a>Member
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[MutexTraits::Unlock-Methode](../windows/mutextraits-unlock-method.md)|Gibt die exklusive Kontrolle über eine freigegebene Ressource frei.|
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`HANDLENullTraits`
+
+`MutexTraits`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>Siehe auch
+
+[Microsoft::WRL::Wrappers::HandleTraits-Namespace](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

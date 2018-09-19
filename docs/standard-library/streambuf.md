@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 138ec5bb28e108751a7d4b03651826db38c098fa
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 25ec172fb38fb3b200086c5f9317ccd8e5e54281
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026931"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691479"
 ---
 # <a name="ltstreambufgt"></a>&lt;streambuf&gt;
 
@@ -45,7 +45,7 @@ Fügen Sie den iostreams-Standardheader \<streambuf> ein, um die Vorlagenklasse 
 
 |Klasse|Beschreibung|
 |-|-|
-|[basic_streambuf-Klasse](http://msdn.microsoft.com/d9c706ba-ce01-43e0-b0b2-a558fc53ea8d)|Die Vorlagenklasse beschreibt eine abstrakte Basisklasse für die Ableitung eines Streampuffers, der die Übertragung von Elementen in eine und aus einer bestimmten Darstellung eines Streams steuert.|
+|[basic_streambuf-Klasse](basic-streambuf-class.md)|Die Vorlagenklasse beschreibt eine abstrakte Basisklasse für die Ableitung eines Streampuffers, der die Übertragung von Elementen in eine und aus einer bestimmten Darstellung eines Streams steuert.|
 
 ## <a name="see-also"></a>Siehe auch
 

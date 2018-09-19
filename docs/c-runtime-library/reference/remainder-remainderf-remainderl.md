@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f277292f413e09b9c41a87cd82e438e0e1e883a8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 96d87a213029ab33e4d3c0269c4e7ba41e1aed43
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406666"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209416"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -71,13 +71,13 @@ Der Nenner.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Den Gleitkommarest von *x* / *y*. Wenn der Wert der *y* ist "0,0", " **Rest** gibt ein stilles NaN zurück. Informationen zu der Darstellung des ein stilles NaN, durch die **Printf** Familie finden Sie unter [Printf, _printf_l, Wprintf _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+Der Gleitkommarest von *x* / *y*. Wenn der Wert des *y* ist 0,0, **Rest** ein stilles NaN zurückgegeben. Informationen über die Darstellung eines stillen NaN durch die **Printf** -Familie finden Sie unter [Printf, _printf_l, Wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Rest** Funktionen berechnet den Gleitkommarest *r* von *x* / *y* so, dass *x*   =  *n* * *y* + *r*, wobei *n*ist die in den Wert, der nächste Ganzzahl *x* / *y* und *n*ist auch bei jedem &#124; *n*  -  *x* / *y* &#124; = 1/2. Wenn *r* = 0, *r* hat die gleichen Vorzeichen wie *x*.
+Die **Rest** Funktionen berechnet den Gleitkommarest *r* von *x* / *y* so, dass *x*   =  *n* \* *y* + *r*, wobei *n*ist die Integer-Wert zum nächsten *x* / *y* und *n*sogar wenn &#124; *n*  -  *x* / *y* &#124; = 1/2. Wenn *r* = 0, *r* hat die gleichen Vorzeichen wie *x*.
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Rest** verwenden und zurückgeben **"float"** oder **lange** **doppelte** Werte. In einem C-Programm **Rest** immer zwei **doppelte** Argumente und gibt eine **doppelte**.
+Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Rest** verwenden und zurückgeben **"float"** oder **lange** **doppelte** Werte. In einem C-Programm **Rest** nimmt immer zwei **doppelte** Argumente und gibt eine **doppelte**.
 
 ## <a name="requirements"></a>Anforderungen
 

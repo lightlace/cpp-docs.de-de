@@ -17,39 +17,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9837b42148062bdd2c44855c129f085ca47cdec0
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4da59a76ccc4d51e82fd43805daa73d513fcde17
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848793"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044274"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL-Auflistungen und -Enumerationen
-Ein `collection` ist eine COM-Objekt, das eine Schnittstelle bereitstellt, die Zugriff auf eine Gruppe von Datenelementen (unformatierte Daten oder andere Objekte) ermöglicht. Eine Schnittstelle, die den Standards entspricht, für den Zugriff auf eine Gruppe von Objekten als bekannt ist, eine *sammlungsschnittstelle*.  
-  
- Mindestens Auflistungsschnittstellen bieten müssen eine `Count` Eigenschaft, die die Anzahl der Elemente in der Auflistung zurückgibt ein `Item` Eigenschaft, die ein Element aus der Auflistung, die auf Grundlage eines Indexes, zurückgibt und ein `_NewEnum` Eigenschaft, die zurückgibt ein Enumerator für die Auflistung. Optional können der Sammelschnittstellen angeben `Add` und `Remove` Methoden, um Elemente in eingefügt oder aus der Auflistung gelöscht werden und ein `Clear` Methode, um alle Elemente zu entfernen.  
-  
- Ein `enumerator` ein COM-Objekt, das eine Schnittstelle zum Durchlaufen der Elemente in einer Auflistung bereitstellt. Enumeratorschnittstellen bieten seriellen Zugriff auf die Elemente einer Sammlung über vier Methoden für die erforderlichen: `Next`, `Skip`, `Reset`, und `Clone`.  
-  
- Sie können weitere Informationen zu Enumeratorschnittstellen lesen das Verkaufspersonal (aber vollständig imaginären) [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx) Schnittstelle.  
-  
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [ATL-Auflistungen und -Enumeratorklassen](../atl/atl-collection-and-enumerator-classes.md)  
- Beschreibt kurz, und bietet Links zu den ATL-Klassen, mit denen Sie Sammlungen und Enumeratoren implementiert.  
-  
- [Designrichtlinien für Auflistungs- und Enumeratorschnittstellen](../atl/design-principles-for-collection-and-enumerator-interfaces.md)  
- Erläutert, die verschiedene Entwurfsprinzipien für jede Art von Schnittstelle.  
-  
- [Implementieren einer auf der C++-Standardbibliothek basierten Auflistung](../atl/implementing-an-stl-based-collection.md)  
- Ein erweitertes Beispiel, das Sie durch die Implementierung einer C++-Standardbibliothek basierten Auflistung führt.  
-  
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- Enthält Links zu konzeptionellen Themen über die Programmierung mit der Active Template Library.  
-  
- [-Beispiel](../visual-cpp-samples.md)  
- Ein Beispiel, das die Verwendung von veranschaulicht `ICollectionOnSTLImpl` und `CComEnumOnSTL`, und die Implementierung von benutzerdefinierten Kopierrichtlinienklassen.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Konzepte](../atl/active-template-library-atl-concepts.md)
+
+Ein `collection` ist eine COM-Objekt, das eine Schnittstelle bereitstellt, die Zugriff auf eine Gruppe von Datenelementen (unformatierte Daten oder andere Objekte) ermöglicht. Eine Schnittstelle, die den Standards entspricht, für den Zugriff auf eine Gruppe von Objekten als bekannt ist, eine *sammlungsschnittstelle*.
+
+Mindestens Auflistungsschnittstellen bieten müssen eine `Count` Eigenschaft, die die Anzahl der Elemente in der Auflistung zurückgibt ein `Item` Eigenschaft, die ein Element aus der Auflistung, die auf Grundlage eines Indexes, zurückgibt und ein `_NewEnum` Eigenschaft, die zurückgibt ein Enumerator für die Auflistung. Optional können der Sammelschnittstellen angeben `Add` und `Remove` Methoden, um Elemente in eingefügt oder aus der Auflistung gelöscht werden und ein `Clear` Methode, um alle Elemente zu entfernen.
+
+Ein `enumerator` ein COM-Objekt, das eine Schnittstelle zum Durchlaufen der Elemente in einer Auflistung bereitstellt. Enumeratorschnittstellen bieten seriellen Zugriff auf die Elemente einer Sammlung über vier Methoden für die erforderlichen: `Next`, `Skip`, `Reset`, und `Clone`.
+
+Erfahren Sie mehr über Enumeratorschnittstellen lesen referenzinhalt wie z. B. [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) Schnittstelle.
+
+## <a name="in-this-section"></a>In diesem Abschnitt
+
+[ATL-Auflistungen und -Enumeratorklassen](../atl/atl-collection-and-enumerator-classes.md)<br/>
+Beschreibt kurz, und bietet Links zu den ATL-Klassen, mit denen Sie Sammlungen und Enumeratoren implementiert.
+
+[Designrichtlinien für Auflistungs- und Enumeratorschnittstellen](../atl/design-principles-for-collection-and-enumerator-interfaces.md)<br/>
+Erläutert, die verschiedene Entwurfsprinzipien für jede Art von Schnittstelle.
+
+[Implementieren einer auf der C++-Standardbibliothek basierten Auflistung](../atl/implementing-an-stl-based-collection.md)<br/>
+Ein erweitertes Beispiel, das Sie durch die Implementierung einer C++-Standardbibliothek basierten Auflistung führt.
+
+## <a name="related-sections"></a>Verwandte Abschnitte
+
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
+Enthält Links zu konzeptionellen Themen über die Programmierung mit der Active Template Library.
+
+[-Beispiel](../visual-cpp-samples.md)<br/>
+Ein Beispiel, das die Verwendung von veranschaulicht `ICollectionOnSTLImpl` und `CComEnumOnSTL`, und die Implementierung von benutzerdefinierten Kopierrichtlinienklassen.
+
+## <a name="see-also"></a>Siehe auch
+
+[Konzepte](../atl/active-template-library-atl-concepts.md)
 

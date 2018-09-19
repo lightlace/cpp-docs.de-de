@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: CopyTo-Methode | Microsoft Docs'
+title: 'Comptr:: CopyTo-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,58 +17,64 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 680c1278ca2b17c7ea35e72946fb5d5030c5e7c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c295767070da04d0173e3299576338e700a1c6aa
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870870"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597012"
 ---
 # <a name="comptrcopyto-method"></a>ComPtr::CopyTo-Methode
-Kopiert die aktuelle oder angegebene-Schnittstelle, die diesem comptr-Objekt an den angegebenen Zeiger zugeordnet ist.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-HRESULT CopyTo(  
-   _Deref_out_ InterfaceType** ptr  
-);  
-  
-HRESULT CopyTo(  
-   REFIID riid,  
-   _Deref_out_ void** ptr  
-) const;  
 
-template<typename U>  
-HRESULT CopyTo(  
-   _Deref_out_ U** ptr  
-) const;  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `U`  
- Ein Typname.  
-  
- `ptr`  
- Wenn dieser Vorgang abgeschlossen wird, einen Zeiger auf die angeforderte Schnittstelle.  
-  
- `riid`  
- Eine Schnittstellen-ID.  
-  
-## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn erfolgreich; andernfalls ein HRESULT, der angibt, warum die implizite QueryInterface-Vorgang fehlgeschlagen ist.  
-  
-## <a name="remarks"></a>Hinweise  
- Die erste Funktion gibt eine Kopie des einen Zeiger auf die Schnittstelle, die diesem comptr-Objekt zugeordnet. Diese Funktion gibt immer S_OK zurück.  
-  
- Die zweite Funktion führt eine QueryInterface-Operation für die Schnittstelle, die diesem comptr-Objekt für die angegebene Schnittstelle zugeordneten der `riid` Parameter.  
-  
- Die dritte Funktion führt eine QueryInterface-Operation für die Schnittstelle, die diesem comptr-Objekt für die zugrunde liegende Schnittstelle des zugeordneten der `U` Parameter.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [ComPtr-Klasse](../windows/comptr-class.md)
+Kopiert die aktuelle oder angegebene-Schnittstelle, die zugeordneten **ComPtr** an den angegebenen Zeiger.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+HRESULT CopyTo(
+   _Deref_out_ InterfaceType** ptr
+);
+
+HRESULT CopyTo(
+   REFIID riid,
+   _Deref_out_ void** ptr
+) const;
+
+template<typename U>
+HRESULT CopyTo(
+   _Deref_out_ U** ptr
+) const;
+```
+
+### <a name="parameters"></a>Parameter
+
+*U*  
+Ein Typname.
+
+*ptr*  
+Wenn dieser Vorgang abgeschlossen ist, einen Zeiger auf die angeforderte Schnittstelle.
+
+*riid*  
+Eine Schnittstellen-ID.
+
+## <a name="return-value"></a>Rückgabewert
+
+S_OK, wenn erfolgreich; andernfalls ein HRESULT, das gibt an, warum das implizite `QueryInterface` Fehler beim Vorgang.
+
+## <a name="remarks"></a>Hinweise
+
+Die erste Funktion gibt eine Kopie eines Zeigers auf die Schnittstelle zugeordneten **ComPtr**. Diese Funktion gibt stets S_OK zurück.
+
+Die zweite Funktion führt eine `QueryInterface` Vorgang für die Schnittstelle zugeordneten **comptr-Objekt** für die angegebene Schnittstelle die *Riid* Parameter.
+
+Die dritte Funktion führt eine `QueryInterface` Vorgang für die Schnittstelle zugeordneten **comptr-Objekt** für die zugrunde liegenden Schnittstelle die *U* Parameter.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[ComPtr-Klasse](../windows/comptr-class.md)

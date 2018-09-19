@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2217 | Microsoft Docs
+title: Compilerfehler C2217 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7c60ac95be1a0b21ed2cb7df43117ff7ece7a39
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4eb8b9fcaffa30f3a5ced5362a0f9d54a45f07e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172263"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050618"
 ---
 # <a name="compiler-error-c2217"></a>Compilerfehler C2217
-'Attribut1' erfordert 'Attribut2'  
-  
- Die erste Funktionsattribut ist das zweite Attribut erforderlich.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:  
-  
-1.  Unterbrechen (`__interrupt`) als Funktion deklariert `near`. Unterbrechen Funktionen muss `far`.  
-  
-2.  Unterbrechen Sie die Funktion deklariert mit `__stdcall`, oder `__fastcall`. Diese Funktionen müssen verwenden C Aufrufkonventionen.  
-  
-## <a name="example"></a>Beispiel  
- C2217 kann auch auftreten, wenn Sie versuchen, einen Delegaten an eine CLR-Funktion zu binden, die eine Variable Anzahl von Argumenten akzeptiert. Wenn die Funktion auch Parameterarrayüberladung aufweist, verwenden Sie stattdessen. Im folgenden Beispiel wird C2217 generiert.  
-  
-```  
-// C2217.cpp  
-// compile with: /clr  
-using namespace System;  
-delegate void MyDel(String^, Object^, Object^, ...);   // C2217  
-delegate void MyDel2(String ^, array<Object ^> ^);   // OK  
-  
-int main() {  
-   MyDel2^ wl = gcnew MyDel2(Console::WriteLine);  
-   array<Object ^ > ^ x = gcnew array<Object ^>(2);  
-   x[0] = safe_cast<Object^>(0);  
-   x[1] = safe_cast<Object^>(1);  
-  
-   // wl("{0}, {1}", 0, 1);  
-   wl("{0}, {1}", x);  
-}  
+
+"attribute1" muss "attribute2"
+
+Das erste Funktionsattribut ist das zweite Attribut erforderlich.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:
+
+1. Unterbrechen (`__interrupt`) Funktion deklariert wird, als `near`. Unterbrechen Funktionen muss `far`.
+
+1. Unterbrochen mit deklarierte Funktion `__stdcall`, oder `__fastcall`. Diese Funktionen müssen mithilfe C++ Aufrufkonventionen.
+
+## <a name="example"></a>Beispiel
+
+C2217 kann auch auftreten, wenn Sie versuchen, einen Delegaten an eine CLR-Funktion zu binden, die eine Variable Anzahl von Argumenten akzeptiert. Wenn die Funktion auch Parameterarrayüberladung verfügt, verwenden Sie stattdessen. Im folgende Beispiel wird die C2217 generiert.
+
+```
+// C2217.cpp
+// compile with: /clr
+using namespace System;
+delegate void MyDel(String^, Object^, Object^, ...);   // C2217
+delegate void MyDel2(String ^, array<Object ^> ^);   // OK
+
+int main() {
+   MyDel2^ wl = gcnew MyDel2(Console::WriteLine);
+   array<Object ^ > ^ x = gcnew array<Object ^>(2);
+   x[0] = safe_cast<Object^>(0);
+   x[1] = safe_cast<Object^>(1);
+
+   // wl("{0}, {1}", 0, 1);
+   wl("{0}, {1}", x);
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3114 generiert | Microsoft Docs
+title: Compilerfehler C3114 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69001d415167f976d0f30c2dd5a0181cc032d0d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7d0e324c00c4b304deca1d2538913a88690d023
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246267"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054609"
 ---
-# <a name="compiler-error-c3114"></a>Compiler-Fehler C3114 generiert
-'Argument': kein gültiges benanntes Attributargument.  
-  
- In der Reihenfolge für Datenmember einer Attributklasse ein gültiges benanntes Argument sein, er muss nicht gekennzeichnet werden `static`, `const`, oder `literal`. Wenn eine Eigenschaft, die Eigenschaft muss nicht `static` und verfügen über get- und set-Accessoren müssen.  
-  
- Weitere Informationen finden Sie unter [Eigenschaft](../../windows/property-cpp-component-extensions.md) und [benutzerdefinierte Attribute](../../windows/user-defined-attributes-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C3114 generiert.  
-  
-```  
-// C3114.cpp  
-// compile with: /clr /c  
-public ref class A : System::Attribute {  
-public:  
-   static property int StaticProp {  
-      int get();  
-   }  
-  
-   property int Prop2 {  
-      int get();  
-      void set(int i);  
-   }  
-};  
-  
-[A(StaticProp=123)]   // C3114  
-public ref class R {};  
-  
-[A(Prop2=123)]   // OK  
-public ref class S {};  
+# <a name="compiler-error-c3114"></a>Compilerfehler C3114
+
+'Argument': kein gültiges benanntes Attributargument.
+
+In der Reihenfolge für Datenmember einer Attributklasse ein benanntes Argument gültig ist, es muss nicht gekennzeichnet werden `static`, `const`, oder `literal`. Wenn eine Eigenschaft, die Eigenschaft muss nicht `static` und muss über get- und set-Accessoren.
+
+Weitere Informationen finden Sie unter [Eigenschaft](../../windows/property-cpp-component-extensions.md) und [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C3114 generiert.
+
+```
+// C3114.cpp
+// compile with: /clr /c
+public ref class A : System::Attribute {
+public:
+   static property int StaticProp {
+      int get();
+   }
+
+   property int Prop2 {
+      int get();
+      void set(int i);
+   }
+};
+
+[A(StaticProp=123)]   // C3114
+public ref class R {};
+
+[A(Prop2=123)]   // OK
+public ref class S {};
 ```

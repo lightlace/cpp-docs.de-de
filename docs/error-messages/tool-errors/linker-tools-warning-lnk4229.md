@@ -1,5 +1,5 @@
 ---
-title: Linkertoolwarnung Lnk4229 | Microsoft Docs
+title: Linkertoolwarnung LNK4229 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c82599d414ddfcd3bd75097a32d8bfce31752cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0837942c7701f8349983f4651005123b5ba89232
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302749"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118881"
 ---
 # <a name="linker-tools-warning-lnk4229"></a>Linkertoolwarnung LNK4229
-Ungültige Direktive/directive gefunden; ignoriert  
-  
- Eine Richtlinie übergeben, über die [Kommentar](../../preprocessor/comment-c-cpp.md) Pragma war ungültig. Der vom Linker ignoriert `/directive`.
+
+Ungültige Anweisung/Directive gefunden; ignoriert
+
+Eine Richtlinie übergeben wird, über die [Kommentar](../../preprocessor/comment-c-cpp.md) Pragma war ungültig. Der vom Linker ignoriert `/directive`.

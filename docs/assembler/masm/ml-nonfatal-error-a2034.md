@@ -1,7 +1,7 @@
 ---
-title: ML nicht schwerwiegende Fehler A2034 | Microsoft Docs
+title: Schwerwiegender ML--Fehler A2034 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddaec88f92ff37042aaa651f977a93f0940e4579
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 9169146d5554004570df4d901631996a2f85c99d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057340"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682110"
 ---
 # <a name="ml-nonfatal-error-a2034"></a>Nicht schwerwiegender ML-Fehler A2034
-**muss im Segment block**  
-  
- Eine der folgenden wurde nicht außerhalb eines Blocks Segment gefunden:  
-  
--   Eine Anweisung  
-  
--   Eine Bezeichnung-definition  
-  
--   Ein [THIS](../../assembler/masm/operator-this.md) Operator  
-  
--   Ein [ $ ](../../assembler/masm/dollar.md) Operator  
-  
--   Eine Definition einer Prozedur  
-  
--   Ein [AUSRICHTEN](../../assembler/masm/align-masm.md) Richtlinie  
-  
--   Ein [ORG](../../assembler/masm/org.md) Richtlinie  
-  
-## <a name="see-also"></a>Siehe auch  
- [ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)
+
+**muss im Segment-Block sein.**
+
+Eine der folgenden wurde nicht außerhalb eines Blocks Segment gefunden:
+
+- Eine Anweisung
+
+- Eine Bezeichnung-definition
+
+- Ein [diese](../../assembler/masm/operator-this.md) Operator
+
+- Ein [ $ ](../../assembler/masm/dollar.md) Operator
+
+- Definition einer Prozedur
+
+- Ein [AUSRICHTEN](../../assembler/masm/align-masm.md) Richtlinie
+
+- Ein [ORG](../../assembler/masm/org.md) Richtlinie
+
+## <a name="see-also"></a>Siehe auch
+
+[ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)<br/>

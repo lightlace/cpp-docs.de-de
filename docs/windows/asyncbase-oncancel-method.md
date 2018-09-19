@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: OnCancel-Methode | Microsoft Docs'
+title: 'Asyncbase:: OnCancel-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7c5fabc84d6abb44a904c951c39eaf54a5c16b2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6297b2d9313a8bc2c7a4f90632affa054c49c662
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865822"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595266"
 ---
 # <a name="asyncbaseoncancel-method"></a>AsyncBase::OnCancel-Methode
-Ruft beim Überschreiben in einer abgeleiteten Klasse Bricht einen asynchronen Vorgang ab.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-virtual void OnCancel(  
-   void  
-) = 0;  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** async.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [AsyncBase-Klasse](../windows/asyncbase-class.md)   
- [AsyncBase::Cancel-Methode](../windows/asyncbase-cancel-method.md)
+
+Ruft beim Überschreiben in einer abgeleiteten Klasse Bricht einen asynchronen Vorgang ab.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+virtual void OnCancel(
+   void
+) = 0;
+```
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** async.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[AsyncBase-Klasse](../windows/asyncbase-class.md)  
+[AsyncBase::Cancel-Methode](../windows/asyncbase-cancel-method.md)

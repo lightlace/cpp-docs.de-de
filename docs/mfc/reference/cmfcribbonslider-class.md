@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 307b7f769035a9ddb84a3d0e51e0ff6d8a016472
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 165dbf85e22a6f30089bbf1523068057b972b7e8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850851"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709331"
 ---
 # <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider-Klasse
 Die `CMFCRibbonSlider` -Klasse implementiert ein Schieberegler-Steuerelement, das einer menübandleiste oder einer Menüband-Statusleiste hinzugefügt werden können. Das Schieberegler-Steuerelement im Menüband ähnelt den Zoomschiebereglern, die in Office 2007-Anwendungen verwendet werden.  
@@ -112,8 +112,8 @@ CMFCRibbonSlider(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nID*  
- Schieberegler-ID.  
+*nID*<br/>
+[in] Schieberegler-ID.  
   
  [in]. *nWidth*  
  Schieberegler Breite in Pixel.  
@@ -152,7 +152,7 @@ int GetRangeMin() const;
  Das minimale Inkrement, das der Schieberegler auf das Schieberegler-Steuerelement übertragen werden kann.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonSlider::GetRegularSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
@@ -186,7 +186,7 @@ BOOL HasZoomButtons() const;
  True, wenn der Schieberegler Zoomschaltflächen hat. "False" andernfalls.  
   
 ##  <a name="ondraw"></a>  CMFCRibbonSlider::OnDraw  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 virtual void OnDraw(CDC* pDC);
@@ -207,11 +207,11 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nPos*  
- Gibt die Position, die für den Schieberegler festgelegt. Die Position ist relativ zum Anfang des Schiebereglers.  
+*nPos*<br/>
+[in] Gibt die Position, die für den Schieberegler festgelegt. Die Position ist relativ zum Anfang des Schiebereglers.  
   
- [in] *bRedraw*  
- Wenn TRUE, wird der Schieberegler neu gezeichnet werden.  
+*bRedraw*<br/>
+[in] Wenn TRUE, wird der Schieberegler neu gezeichnet werden.  
   
 ##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
  Legen Sie den Bereich der Werte für das Schieberegler-Steuerelement.  
@@ -223,11 +223,11 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nmin.*  
- Gibt die minimalen Wert des Slider-Steuerelements an.  
+*nmin.*<br/>
+[in] Gibt die minimalen Wert des Slider-Steuerelements an.  
   
- [in] *nmax.*  
- Gibt die maximale Wert des Slider-Steuerelements an.  
+*nmax.*<br/>
+[in] Gibt die maximale Wert des Slider-Steuerelements an.  
   
 ### <a name="remarks"></a>Hinweise  
  Gibt den Bereich der Werte für das Schieberegler-Steuerelement durch Festlegen der minimalen und maximalen Werte an.  
@@ -251,8 +251,8 @@ void SetZoomIncrement(int nZoomIncrement);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nZoomIncrement*  
- Gibt den Zoomschritt des Schieberegler-Steuerelements an.  
+*nZoomIncrement*<br/>
+[in] Gibt den Zoomschritt des Schieberegler-Steuerelements an.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

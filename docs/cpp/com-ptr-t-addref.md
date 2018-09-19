@@ -16,30 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40ed48b54a3862f7ac5804e7652d98b661bb071d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b66f4944d9ccdfb36587817c5f856c127513784e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940991"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087701"
 ---
 # <a name="comptrtaddref"></a>_com_ptr_t::AddRef
-**Microsoft-spezifisch**  
-  
- Ruft die `AddRef` Memberfunktion `IUnknown` für den gekapselten Schnittstellenzeiger auf.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-void AddRef( );  
-  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Aufrufe `IUnknown::AddRef` für den gekapselten Schnittstellenzeiger auf, das Auslösen eines E_POINTER-Fehlers, wenn der Zeiger NULL ist.  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md)
+
+**Microsoft-spezifisch**
+
+Ruft die `AddRef` Memberfunktion `IUnknown` für den gekapselten Schnittstellenzeiger auf.
+
+## <a name="syntax"></a>Syntax
+
+```
+void AddRef( );
+```
+
+## <a name="remarks"></a>Hinweise
+
+Aufrufe `IUnknown::AddRef` für den gekapselten Schnittstellenzeiger, Auslösen einer `E_POINTER` Fehler, wenn der Zeiger NULL ist.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md)

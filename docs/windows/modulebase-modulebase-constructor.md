@@ -1,5 +1,5 @@
 ---
-title: 'Modulebase:: Modulebase-Konstruktor | Microsoft Docs'
+title: 'Modulebase:: Modulebase-Konstruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b18d33b962c277347e74819e5ff34f3562821f45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2bfc53148a6c0813f3dbe82123db1db5e657a206
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875889"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603826"
 ---
 # <a name="modulebasemodulebase-constructor"></a>ModuleBase::ModuleBase-Konstruktor
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-ModuleBase();  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Initialisiert eine Instanz der Module-Klasse.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [ModuleBase-Klasse](../windows/modulebase-class.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+ModuleBase();
+```
+
+## <a name="remarks"></a>Hinweise
+
+Initialisiert eine Instanz der `Module`-Klasse.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[ModuleBase-Klasse](../windows/modulebase-class.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

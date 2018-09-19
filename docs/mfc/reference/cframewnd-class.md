@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d2dee6c5157858fef2bd26101ac128ff3d53d23
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 817c828c56fe2e95756e517c3d930d365714ad99
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337381"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701713"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd-Klasse
 Stellt die Funktionalität eines Windows-SDI-Rahmenfensters (Single Document Interface) bereit, wobei es sich um ein überlappendes oder ein Popupfenster handeln kann. Ebenfalls bereitgestellt werden Member zum Verwalten des Fensters.  
@@ -986,7 +986,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *nState*|Gibt an, ob die Menü anzeigen oder ausblenden. Die *nState* Parameter kann die folgenden Werte aufweisen:<br /><br /> -AFX_MBS_VISIBLE (0 x 01) – zeigt das Menü an, wenn es ausgeblendet ist, aber Sie hat keine Auswirkungen, wenn es sichtbar ist.<br />-AFX_MBS_HIDDEN (0 x 02) – Blendet das Menü aus, wenn es sichtbar ist, aber Sie hat keine Auswirkungen, wenn es ausgeblendet ist.|  
+|*nState*|[in] Gibt an, ob die Menü anzeigen oder ausblenden. Die *nState* Parameter kann die folgenden Werte aufweisen:<br /><br /> -AFX_MBS_VISIBLE (0 x 01) – zeigt das Menü an, wenn es ausgeblendet ist, aber Sie hat keine Auswirkungen, wenn es sichtbar ist.<br />-AFX_MBS_HIDDEN (0 x 02) – Blendet das Menü aus, wenn es sichtbar ist, aber Sie hat keine Auswirkungen, wenn es ausgeblendet ist.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich der Menü-Zustand ändert. andernfalls "false".  
@@ -1005,12 +1005,12 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *nStyle*|Gibt an, ob im Menü standardmäßig ausgeblendet ist oder sichtbar ist und den Fokus besitzt. Die *nStyle* Parameter kann die folgenden Werte aufweisen:<br /><br /> -AFX_MBV_KEEPVISIBLE (0 X 01 –)<br />     Klicken Sie im Menü angezeigt wird, jederzeit und standardmäßig verfügt nicht über den Fokus.<br />-AFX_MBV_DISPLAYONFOCUS (0 X 02):<br />     Klicken Sie im Menü ist standardmäßig ausgeblendet. Wenn Sie im Menü ausgeblendet ist, drücken Sie ALT gedrückt, um das Menü anzuzeigen, und geben Sie ihm den Fokus. Wenn Sie im Menü angezeigt wird, drücken Sie die ALT-Taste oder die ESC-Taste So blenden Sie im Menü aus.<br />-AFX_MBV_ DISPLAYONFOCUS (0 x 02) &#124; AFX_MBV_DISPLAYONF10 (0 x 04)<br />     (bitweise Kombination (OR)) – klicken Sie im Menü ist standardmäßig ausgeblendet. Wenn Sie im Menü ausgeblendet ist, drücken Sie die Taste F10, um das Menü anzuzeigen, und geben Sie ihm den Fokus. Wenn Sie im Menü angezeigt wird, drücken Sie die Taste F10, um den Fokus aktivieren oder deaktivieren Sie im Menü zu wechseln. Klicken Sie im Menü wird angezeigt, bis Sie der ALT-Taste oder die ESC-Taste drücken, um es auszublenden.|  
+|*nStyle*|[in] Gibt an, ob im Menü standardmäßig ausgeblendet ist oder sichtbar ist und den Fokus besitzt. Die *nStyle* Parameter kann die folgenden Werte aufweisen:<br /><br /> -AFX_MBV_KEEPVISIBLE (0 X 01 –)<br />     Klicken Sie im Menü angezeigt wird, jederzeit und standardmäßig verfügt nicht über den Fokus.<br />-AFX_MBV_DISPLAYONFOCUS (0 X 02):<br />     Klicken Sie im Menü ist standardmäßig ausgeblendet. Wenn Sie im Menü ausgeblendet ist, drücken Sie ALT gedrückt, um das Menü anzuzeigen, und geben Sie ihm den Fokus. Wenn Sie im Menü angezeigt wird, drücken Sie die ALT-Taste oder die ESC-Taste So blenden Sie im Menü aus.<br />-AFX_MBV_ DISPLAYONFOCUS (0 x 02) &#124; AFX_MBV_DISPLAYONF10 (0 x 04)<br />     (bitweise Kombination (OR)) – klicken Sie im Menü ist standardmäßig ausgeblendet. Wenn Sie im Menü ausgeblendet ist, drücken Sie die Taste F10, um das Menü anzuzeigen, und geben Sie ihm den Fokus. Wenn Sie im Menü angezeigt wird, drücken Sie die Taste F10, um den Fokus aktivieren oder deaktivieren Sie im Menü zu wechseln. Klicken Sie im Menü wird angezeigt, bis Sie der ALT-Taste oder die ESC-Taste drücken, um es auszublenden.|  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn der Wert des der *nStyle* Parameter ungültig ist, im Debugmodus befindet und löst diese Methode bestätigt [CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md) im Releasemodus. Bei andere Laufzeitfehler, diese Methode Assertionen im Debugmodus befindet und löst eine Ausnahme, abgeleitet aus den [CException](../../mfc/reference/cexception-class.md) Klasse.  
   
- Diese Methode wirkt sich auf den Zustand des Menüs in Anwendungen für [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] und höher.  
+ Diese Methode wirkt sich auf den Zustand des Menüs in Anwendungen für Windows Vista und höher.  
   
 ##  <a name="setmessagetext"></a>  CFrameWnd::SetMessageText  
  Rufen Sie diese Funktion, um eine Zeichenfolge in der Statusleiste zu platzieren, das eine ID von 0 hat.  

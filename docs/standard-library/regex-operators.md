@@ -14,12 +14,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: ccabc523ed502a3841cb9299ea2ccd2115115743
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 667de3f580734230cbc70afbe29c17aee8e35950
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961541"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107028"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt;-Operatoren
 
@@ -70,15 +70,20 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parameter
 
-*BidIt* der iteratortyp.
+*BidIt*<br/>
+Der Iteratortyp.
 
-*IOtraits* die Zeichenfolge "traits"-Klasse.
+*IOtraits*<br/>
+Die Trait-Klasse der Zeichenfolge.
 
-*Alloc* Allocator-Klasse.
+*Alloc*<br/>
+Die Zuweisungsklasse.
 
-*linken* das linke zu vergleichende Objekt.
+*left*<br/>
+Das linke zu vergleichende Objekt.
 
-*richtige* die Rechte zu vergleichende Objekt.
+*right*<br/>
+Das rechte zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -181,15 +186,20 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parameter
 
-*BidIt* der iteratortyp.
+*BidIt*<br/>
+Der Iteratortyp.
 
-*IOtraits* die Zeichenfolge "traits"-Klasse.
+*IOtraits*<br/>
+Die Trait-Klasse der Zeichenfolge.
 
-*Alloc* Allocator-Klasse.
+*Alloc*<br/>
+Die Zuweisungsklasse.
 
-*linken* das linke zu vergleichende Objekt.
+*left*<br/>
+Das linke zu vergleichende Objekt.
 
-*richtige* die Rechte zu vergleichende Objekt.
+*right*<br/>
+Das rechte zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -262,17 +272,23 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>Parameter
 
-*Elem* Typ des Elements.
+*Elem*<br/>
+Der Elementtyp.
 
-*IOtraits* die Zeichenfolge "traits"-Klasse.
+*IOtraits*<br/>
+Die Trait-Klasse der Zeichenfolge.
 
-*Alloc* Allocator-Klasse.
+*Alloc*<br/>
+Die Zuweisungsklasse.
 
-*BidIt* der iteratortyp.
+*BidIt*<br/>
+Der Iteratortyp.
 
-*OS* den Ausgabestream.
+*Betriebssystem*<br/>
+Der Ausgabestream.
 
-*richtige* das einzufügende Objekt.
+*right*<br/>
+Das einzufügende Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -342,15 +358,20 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parameter
 
-*BidIt* der iteratortyp.
+*BidIt*<br/>
+Der Iteratortyp.
 
-*IOtraits* die Zeichenfolge "traits"-Klasse.
+*IOtraits*<br/>
+Die Trait-Klasse der Zeichenfolge.
 
-*Alloc* Allocator-Klasse.
+*Alloc*<br/>
+Die Zuweisungsklasse.
 
-*linken* das linke zu vergleichende Objekt.
+*left*<br/>
+Das linke zu vergleichende Objekt.
 
-*richtige* die Rechte zu vergleichende Objekt.
+*right*<br/>
+Das rechte zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -452,15 +473,20 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parameter
 
-*BidIt* der iteratortyp.
+*BidIt*<br/>
+Der Iteratortyp.
 
-*IOtraits* die Zeichenfolge "traits"-Klasse.
+*IOtraits*<br/>
+Die Trait-Klasse der Zeichenfolge.
 
-*Alloc* Allocator-Klasse.
+*Alloc*<br/>
+Die Zuweisungsklasse.
 
-*linken* das linke zu vergleichende Objekt.
+*left*<br/>
+Das linke zu vergleichende Objekt.
 
-*richtige* die Rechte zu vergleichende Objekt.
+*right*<br/>
+Das rechte zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -571,15 +597,20 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parameter
 
-*BidIt* der iteratortyp.
+*BidIt*<br/>
+Der Iteratortyp.
 
-*IOtraits* die Zeichenfolge "traits"-Klasse.
+*IOtraits*<br/>
+Die Trait-Klasse der Zeichenfolge.
 
-*Alloc* Allocator-Klasse.
+*Alloc*<br/>
+Die Zuweisungsklasse.
 
-*linken* das linke zu vergleichende Objekt.
+*left*<br/>
+Das linke zu vergleichende Objekt.
 
-*richtige* die Rechte zu vergleichende Objekt.
+*right*<br/>
+Das rechte zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -677,15 +708,20 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parameter
 
-*BidIt* der iteratortyp.
+*BidIt*<br/>
+Der Iteratortyp.
 
-*IOtraits* die Zeichenfolge "traits"-Klasse.
+*IOtraits*<br/>
+Die Trait-Klasse der Zeichenfolge.
 
-*Alloc* Allocator-Klasse.
+*Alloc*<br/>
+Die Zuweisungsklasse.
 
-*linken* das linke zu vergleichende Objekt.
+*left*<br/>
+Das linke zu vergleichende Objekt.
 
-*richtige* die Rechte zu vergleichende Objekt.
+*right*<br/>
+Das rechte zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
 

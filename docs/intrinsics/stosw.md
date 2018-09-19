@@ -1,5 +1,5 @@
 ---
-title: __stosw | Microsoft Docs
+title: __stosw | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a9f73b401d953c026c60d504fbb016838720b7c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cf0e6157f184cb91605d9da8bcaea0c22806f03c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329344"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705155"
 ---
 # <a name="stosw"></a>__stosw
 **Microsoft-spezifisch**  
@@ -41,25 +41,25 @@ void __stosw(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [out] `Dest`  
- Das Ziel des Vorgangs.  
+*dest*<br/>
+[out] Das Ziel des Vorgangs.  
   
- [in] `Data`  
- Die Daten zu speichern.  
+*Data*<br/>
+[in] Die zu speichernden Daten.  
   
- [in] `Count`  
- Die Länge des Blocks von Wörtern zu schreiben.  
+*Anzahl*<br/>
+[in] Die Länge des Blocks Wörter zu schreiben.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__stosw`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosw`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Das Ergebnis ist, die das Wort `Data` wird geschrieben, in einen Block von `Count` Wörter der `Dest` Zeichenfolge.  
+ Das Ergebnis ist, die das Wort `Data` wird geschrieben, in einen Block von `Count` Wörter den `Dest` Zeichenfolge.  
   
  Diese Routine ist nur als systeminterne Funktion verfügbar.  
   

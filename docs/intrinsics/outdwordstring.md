@@ -1,5 +1,5 @@
 ---
-title: __outdwordstring | Microsoft Docs
+title: __outdwordstring | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 942a98b9a9d43d349f6273b77c8d56967b927eae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ff43920400028e0fb13fc17615fb58cc551726b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331759"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704222"
 ---
 # <a name="outdwordstring"></a>__outdwordstring
 **Microsoft-spezifisch**  
   
- Generiert die `rep outsd` -Anweisung, die sendet `Count` Doppelwort beginnenden `Buffer` Ausgang von angegebenen e/a- `Port`.  
+ Generiert die `rep outsd` -Anweisung, die sendet `Count` Doppelwort beginnend `Buffer` der e/a-Port anhand des `Port`.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,20 +41,20 @@ void __outdwordstring(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `Port`  
- Der Port, an die die Daten gesendet werden soll.  
+*Port*<br/>
+[in] Der Port, der die Daten zu senden.  
   
- [in] `Buffer`  
- Ein Zeiger auf die Daten auf den angegebenen Port gesendet werden.  
+*Buffer*<br/>
+[in] Ein Zeiger auf Daten, die über den angegebenen Port gesendet werden.  
   
- [in] `Count`  
- Die Anzahl der Doppelwort senden.  
+*Anzahl*<br/>
+[in] Die Anzahl der Doppelwort senden.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__outdwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outdwordstring`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

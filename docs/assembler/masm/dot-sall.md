@@ -1,7 +1,7 @@
 ---
-title: . %SALLE | Microsoft Docs
+title: . %SALLE | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cd82c1e90dc59fd7df9edc91a23c17e57241975
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e0689dbc58460ec1a48d46d7ad86aa034d0bce22
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052992"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683158"
 ---
 # <a name="sall"></a>.SALL
-Finden Sie unter [. NOLISTMACRO](../../assembler/masm/dot-nolistmacro.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-.SALL  
-  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+
+Finden Sie unter [. NOLISTMACRO](../../assembler/masm/dot-nolistmacro.md).
+
+## <a name="syntax"></a>Syntax
+
+> .SALL
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

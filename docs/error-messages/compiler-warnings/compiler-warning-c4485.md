@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung C4485 | Microsoft Docs
+title: Compilerwarnung C4485 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b84d2976e31d5cc3a9b6547d0c4b02a61327ce0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb83700bf8ca79960599d85ed3d335f80c9fc7f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270437"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117750"
 ---
 # <a name="compiler-warning-c4485"></a>Compilerwarnung C4485
-'Überschreibungsfunktion': Basis Ref-Klassenmethode "Basisklassenfunktion" entspricht, ist jedoch nicht markierte 'new' oder 'override'; "new" (und "virtual") werden angenommen.  
-  
- Ein Accessor überschreibt mit oder ohne die `virtual` -Schlüsselwort, eine Basisklasse Accessor-Funktion, aber die `override` oder `new` Spezifizierer war nicht Teil der überschreibenden Funktionssignatur. Hinzufügen der `new` oder `override` Spezifizierer, um diese Warnung zu beheben.  
-  
- Finden Sie unter [überschreiben](../../windows/override-cpp-component-extensions.md) und [new (neuer Slot in Vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md) für Weitere Informationen.  
-  
- C4485 wird immer als Fehler ausgegeben. Verwenden der [Warnung](../../preprocessor/warning.md) -Pragma, um C4485 zu unterdrücken.  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C4485 generiert:  
-  
-```  
-// C4485.cpp  
-// compile with: /clr  
-delegate void Del();  
-  
-ref struct A {  
-   virtual event Del ^E;  
-};  
-  
-ref struct B : A {  
-   virtual event Del ^E;   // C4485  
-};  
-  
-ref struct C : B {  
-   virtual event Del ^E {  
-      void raise() override {}  
-      void add(Del ^) override {}  
-      void remove(Del^) override {}  
-   }  
-};  
+
+'Überschreibungsfunktion': entspricht der Klassenmethode "Basisklassenfunktion" Basismethode der Verweisklasse ist allerdings nicht markierte 'new' oder 'override'; "new" (und "virtual") werden angenommen.
+
+Überschreibt ein Accessor, mit oder ohne die `virtual` -Schlüsselwort, eine Basisklasse Accessor-Funktion, aber die `override` oder `new` Spezifizierer war nicht Teil der überschreibenden Funktionssignatur. Hinzufügen der `new` oder `override` Spezifizierer, um diese Warnung zu beheben.
+
+Finden Sie unter [überschreiben](../../windows/override-cpp-component-extensions.md) und [new (neuer Slot in Vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md) für Weitere Informationen.
+
+C4485 wird immer als Fehler ausgegeben. Verwenden der [Warnung](../../preprocessor/warning.md) Pragma C4485 zu unterdrücken.
+
+## <a name="example"></a>Beispiel
+
+Das folgende Beispiel generiert C4485
+
+```
+// C4485.cpp
+// compile with: /clr
+delegate void Del();
+
+ref struct A {
+   virtual event Del ^E;
+};
+
+ref struct B : A {
+   virtual event Del ^E;   // C4485
+};
+
+ref struct C : B {
+   virtual event Del ^E {
+      void raise() override {}
+      void add(Del ^) override {}
+      void remove(Del^) override {}
+   }
+};
 ```

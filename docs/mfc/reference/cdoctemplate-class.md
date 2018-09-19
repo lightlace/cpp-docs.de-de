@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 243881a2ca18ba54e3a6c9cafee407f07746baca
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: cd7e80d3c01cf84080ba2b5851da99584122ec4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336984"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023942"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate-Klasse
 Eine abstrakte Basisklasse, die die grundlegende Funktionalität für Dokumentvorlagen definiert.  
@@ -167,17 +167,15 @@ CDocTemplate (
  Gibt die ID der mit dem Dokument verwendeten Ressourcen. Dies kann im Menü "," Symbol "," Zugriffstastentabelle "und" Zeichenfolgenressourcen enthalten.  
   
  Die Zeichenfolgenressource besteht aus bis zu sieben Teilzeichenfolgen, die durch das Zeichen '\n' getrennte (das Zeichen '\n' wird als Platzhalter benötigt, wenn eine untergeordnete Zeichenfolge nicht enthalten ist; nachfolgende '\n'-Zeichen sind jedoch nicht erforderlich); Diese Teilzeichenfolgen beschreiben den Dokumenttyp an. Weitere Informationen dazu, das die Teilzeichenfolgen, finden Sie unter [GetDocString](#getdocstring). Diese Zeichenfolgenressource in die Ressourcendatei der Anwendung gefunden. Zum Beispiel:  
-  
- `// MYCALC.RC`  
-  
- `STRINGTABLE PRELOAD DISCARDABLE`  
-  
- `BEGIN`  
-  
- `IDR_SHEETTYPE "\nSheet\nWorksheet\nWorksheets (*.myc)\n.myc\n MyCalcSheet\nMyCalc Worksheet"`  
-  
- `END`  
-  
+
+```RC
+// MYCALC.RC
+STRINGTABLE PRELOAD DISCARDABLE
+BEGIN
+  IDR_SHEETTYPE "\nSheet\nWorksheet\nWorksheets (*.myc)\n.myc\n MyCalcSheet\nMyCalc Worksheet"
+END
+```
+
  Beachten Sie, dass die Zeichenfolge mit einem '\n'-Zeichen beginnt. Dies ist, da die erste Teilzeichenfolge nicht für MDI-Anwendungen verwendet wird und daher nicht enthalten ist. Sie können diese Zeichenfolge, die mit den Zeichenfolgen-Editor bearbeiten. die gesamte Zeichenfolge wird als einzelner Eintrag in den Editor für Zeichenfolgen, nicht als sieben separate Einträge angezeigt.  
   
  *pDocClass*  
@@ -431,11 +429,11 @@ virtual CDocument* OpenDocumentFile(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszPathName*  
- Zeiger auf den Pfad der Datei, die mit dem Dokument geöffnet werden soll.  
+*lpszPathName*<br/>
+[in] Zeiger auf den Pfad der Datei, die mit dem Dokument geöffnet werden soll.  
   
- [in] *bAddToMRU*  
- TRUE gibt an, dass das Dokument eine von der zuletzt verwendeten Dateien ist; FALSE gibt an, dass das Dokument nicht die zuletzt verwendeten Dateien ist.  
+*bAddToMRU*<br/>
+[in] TRUE gibt an, dass das Dokument eine von der zuletzt verwendeten Dateien ist; FALSE gibt an, dass das Dokument nicht die zuletzt verwendeten Dateien ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf das Dokument, dessen Datei wird dem Namen *LpszPathName*; NULL, wenn der Vorgang fehlschlägt.  

@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4232 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4232 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 093f9eeeb27b402b58f3d53ae34952c34dca3779
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 450c764cfc130acf28e3edfb40fcd17c8ac3b664
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293825"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118283"
 ---
 # <a name="compiler-warning-level-4-c4232"></a>Compilerwarnung (Stufe 4) C4232
-nicht dem Standard entsprechende Erweiterung: 'Bezeichner': Adresse von Dllimport 'Dllimport' ist nicht statisch, Identität nicht garantiert.  
-  
- Sie können unter Microsoft-Erweiterungen (/ Ze), einen nicht statischen Wert geben, wie mit der Adresse einer Funktion deklariert die **Dllimport** Modifizierer. ANSI-Kompatibilität (["/ Za"](../../build/reference/za-ze-disable-language-extensions.md)), dies verursacht einen Fehler.  
-  
- Im folgenden Beispiel wird C4232 generiert:  
-  
-```  
-// C4232.c  
-// compile with: /W4 /Ze /c  
-int __declspec(dllimport) f();  
-int (*pfunc)() = &f;   // C4232  
+
+nicht dem Standard entsprechende Erweiterung: "Bezeichner": Adresse von Dllimport 'Dllimport' ist nicht statisch, Identität nicht garantiert.
+
+Sie können Microsoft-Erweiterungen (/ Ze), einen nicht statischen Wert geben, wie Sie mit der Adresse einer Funktion deklariert die **Dllimport** Modifizierer. ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)), dies verursacht einen Fehler.
+
+Im folgende Beispiel wird die C4232 generiert:
+
+```
+// C4232.c
+// compile with: /W4 /Ze /c
+int __declspec(dllimport) f();
+int (*pfunc)() = &f;   // C4232
 ```

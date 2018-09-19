@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2753 generiert | Microsoft Docs
+title: Compilerfehler C2753 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acbf5736c7c263293bc1c2782cab7df4f0af2083
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 722176744dc614e54d7b25ffd75be679ef9e63dc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235362"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060584"
 ---
-# <a name="compiler-error-c2753"></a>Compiler-Fehler C2753 generiert
-"*Vorlage*": teilweiser Spezialisierung darf nicht Argumentliste für den primären Vorlage übereinstimmen.  
-  
- Wenn die Vorlagenargumentliste die Parameterliste übereinstimmt, behandelt der Compiler ihn als die gleiche Vorlage an. Definieren die gleiche Vorlage zweimal ist nicht zulässig.  
-  
+# <a name="compiler-error-c2753"></a>Compilerfehler C2753
+
+"*Vorlage*": teilweiser Spezialisierung darf nicht mit der Argumentliste für die primäre Vorlage übereinstimmen
+
+Wenn die Vorlagenargumentliste die Parameterliste entspricht, behandelt der Compiler ihn als die gleiche Vorlage an. Definieren die gleiche Vorlage zweimal ist nicht zulässig.
+
 ## <a name="example"></a>Beispiel
- Im folgenden Beispiel wird C2753 generiert und zeigt eine Möglichkeit, sie diesen Fehler beheben:  
-  
-```cpp  
-// C2753.cpp  
+
+Im folgenden Beispiel wird C2753 generiert und zeigt, wie Sie diesen Fehler beheben:
+
+```cpp
+// C2753.cpp
 // compile with: cl /c C2753.cpp
-template<class T>  
-struct A {};  
-  
-template<class T>  
-struct A<T> {};   // C2753  
-// try the following line instead  
-// struct A<int> {};  
-  
-template<class T, class U, class V, class W, class X>  
-struct B {};  
+template<class T>
+struct A {};
+
+template<class T>
+struct A<T> {};   // C2753
+// try the following line instead
+// struct A<int> {};
+
+template<class T, class U, class V, class W, class X>
+struct B {};
 ```

@@ -1,15 +1,19 @@
 ---
-title: C++-Standard Attribute | Microsoft-Dokumentation
+title: Attribute in C++ | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/28/2017
+ms.date: 06/01/2018
 ms.topic: language-reference
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: 4a7ddcd7a83c64fe160d06d9b8ae378874e7518c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+author: mikeblome
+ms.author: mblome
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f2a6ef80edc5f6bbeaf43bbc5851336b67d8cf36
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940676"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118829"
 ---
 # <a name="attributes-in-c"></a>Attribute in C++
 
@@ -41,7 +45,7 @@ Attribute, die eine standardisierte Alternative zu anbieterspezifischer Erweiter
 
 - `[[carries_dependency]]` Gibt an, dass die Funktion datenabhängigkeits-Reihenfolge in Bezug auf die Synchronisierung von Threads verteilt. Das Attribut kann angewendet werden, um einen oder mehrere Parameter, um anzugeben, dass das übergebene Argument eine Abhängigkeit in den Funktionstext enthält. Für die Funktion selbst, um anzugeben, dass der Rückgabewert eine Abhängigkeit aus der Funktion enthält, kann das Attribut angewendet werden. Diese Informationen können der Compiler effizienteren Code generiert.
 
-- `[[deprecated]]` **Visual Studio 2015 und höher:** gibt an, dass eine Funktion nicht vorgesehen ist, verwendet werden, und möglicherweise nicht vorhanden in zukünftigen Versionen einer Bibliothek-Schnittstelle. Der Compiler kann dies verwenden, um eine informationsmeldung zu generieren, wenn Clientcode versucht die Funktion aufgerufen. Kann auf die Deklaration einer Klasse, einen Typedef-Namen, eine Variable, einen nicht statischen Datenmember, eine Funktion, einen Namespace, eine Enumeration, einen Enumerator oder eine Spezialisierung einer Klassenvorlage angewendet werden.  
+- `[[deprecated]]` **Visual Studio 2015 und höher:** gibt an, dass eine Funktion nicht vorgesehen ist, verwendet werden, und möglicherweise nicht vorhanden in zukünftigen Versionen einer Bibliothek-Schnittstelle. Der Compiler kann dies verwenden, um eine informationsmeldung zu generieren, wenn Clientcode versucht die Funktion aufgerufen. Kann auf die Deklaration einer Klasse, einen Typedef-Namen, eine Variable, einen nicht statischen Datenmember, eine Funktion, einen Namespace, eine Enumeration, einen Enumerator oder eine Spezialisierung einer Klassenvorlage angewendet werden.
 
 - `[[fallthrough]]` **Visual Studio 2017 und höher:** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) die `[[fallthrough]]` -Attribut kann verwendet werden, im Kontext des [wechseln](switch-statement-cpp.md) Anweisungen als Hinweis für den Compiler (oder Leser der Code), die das Fallthrough-Verhalten vorgesehen ist. Visual C++-Compiler warnt derzeit nicht auf Fallthrough-Verhalten, damit dieses Attribut keine Wirkung Compilerverhalten hat.
 

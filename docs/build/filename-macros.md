@@ -1,5 +1,5 @@
 ---
-title: Dateinamenmakros | Microsoft Docs
+title: Dateinamenmakros | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e28ba5923d8b62973860c0ba503d13682b3c5e79
-ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
+ms.openlocfilehash: bc231dfb156460a2a0cc383b6d038a98c6e2015b
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34458861"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894407"
 ---
 # <a name="filename-macros"></a>Dateinamenmakros
-Dateinamenmakros sind als der Abhängigkeit (nicht der vollständige Dateiname Spezifikationen auf dem Datenträger) angegebene Dateinamen vordefiniert. Diese Makros müssen nicht in Klammern, die beim Aufrufen eingeschlossen werden. Geben Sie nur ein $ wie gezeigt.  
-  
-|Makro|Bedeutung|  
-|-----------|-------------|  
-|**$@**|Aktuelle Ziel vollständigen Namen (Pfad, Basisname, Erweiterung), wie zurzeit angegeben.|  
-|**$$@**|Aktuelle Ziel vollständigen Namen (Pfad, Basisname, Erweiterung), wie zurzeit angegeben. Nur als abhängige Datei in eine Abhängigkeit gültig.|  
-|**$&#42;**|Des Ziels für den aktuellen Pfad und Base Namen ohne die Dateierweiterung.|  
-|**$&#42;&#42;**|Alle abhängigen Elemente des aktuellen Ziels.|  
-|**$?**|Alle abhängigen Elemente mit einem höheren Zeitstempel als das aktuelle Ziel.|  
-|**$<**|Abhängige Datei mit einem höheren Zeitstempel als das aktuelle Ziel. Nur in Befehlen in Rückschlussregeln gültig.|  
-  
- Um Teil eines vordefinierten Dateinamenmakros anzugeben, fügen Sie einen Makromodifizierer aus, und schließen Sie das geänderte Makro in Klammern ein.  
-  
-|Modifizierer|Teil des Dateinamens|  
-|--------------|-----------------------------|  
-|**D**|Laufwerk plus Verzeichnis|  
-|**B**|Basisname|  
-|**F**|Basisnamen und Erweiterung|  
-|**R**|Laufwerk plus Verzeichnis plus Basisname|  
-  
-## <a name="see-also"></a>Siehe auch  
- [Besondere NMAKE-Makros](../build/special-nmake-macros.md)
+
+Dateinamenmakros sind als der Abhängigkeit (nicht den vollständigen Dateinamen Spezifikationen auf dem Datenträger) angegebene Dateinamen vordefiniert. Diese Makros müssen nicht in Klammern, die beim Aufruf eingeschlossen werden; Geben Sie lediglich an, wie gezeigt.
+
+|Makro|Bedeutung|
+|-----------|-------------|
+|**$\@**|Aktuelles Ziel vollständigen Namen (Pfad, Basisname, Erweiterung), wie zurzeit angegeben.|
+|**$$\@**|Aktuelles Ziel vollständigen Namen (Pfad, Basisname, Erweiterung), wie zurzeit angegeben. Nur als ein abhängiges Element in einer Abhängigkeit gültig.|
+|**$&#42;**|Aktuelles Ziel-Pfad und den Basis-Name ohne die Dateierweiterung.|
+|**$&#42;&#42;**|Alle abhängigen Elemente des aktuellen Ziels.|
+|**$?**|Alle abhängigen Elemente mit dem späteren Zeitstempel, als das aktuelle Ziel.|
+|**$<**|Abhängige Datei mit dem späteren Zeitstempel, als das aktuelle Ziel. Nur in Befehlen in Rückschlussregeln gültig.|
+
+Um Teil eines vordefinierten Dateinamenmakros anzugeben, fügen Sie einen Makromodifizierer, und schließen Sie das geänderte-Makro in Klammern ein.
+
+|Modifizierer|Teil des Dateinamens|
+|--------------|-----------------------------|
+|**D**|Laufwerk und Verzeichnis|
+|**B**|Basisname|
+|**F**|Basisnamen und Erweiterung|
+|**R**|Laufwerk und Verzeichnis mit Basisname|
+
+## <a name="see-also"></a>Siehe auch
+
+[Besondere NMAKE-Makros](../build/special-nmake-macros.md)

@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 222aef46fb8080ba044904dbbedd5546cec51929
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 24a750afa3f4cbc84b4fbfe306c1f97be23200d7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963082"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710800"
 ---
 # <a name="uniformrealdistribution-class"></a>uniform_real_distribution-Klasse
 
@@ -77,11 +77,12 @@ public:
    result_type min() const;
    result_type max() const;
 };
- ```
+```
 
 ### <a name="parameters"></a>Parameter
 
-*RealType* der gleitkommaergebnistyp standardmäßig **doppelte**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType*<br/>
+Der gleitkommaergebnistyp standardmäßig **doppelte**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
@@ -199,13 +200,13 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*a*  
+*a*<br/>
 Die Untergrenze (einschließend) für Zufallswerte.
 
-*b*  
+*b*<br/>
 Die Obergrenze (ausschließend) für Zufallswerte.
 
-*parm*  
+*parm*<br/>
 Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.
 
 ### <a name="remarks"></a>Hinweise
@@ -234,13 +235,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*a*  
+*a*<br/>
 Die Untergrenze (einschließend) für Zufallswerte.
 
-*b*  
+*b*<br/>
 Die Obergrenze (ausschließend) für Zufallswerte.
 
-*right*  
+*right*<br/>
 Das mit diesem `param_type`-Objekt zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise

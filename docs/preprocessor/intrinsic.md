@@ -1,5 +1,5 @@
 ---
-title: systeminterne | Microsoft Docs
+title: systeminterne | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/11/2018
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e908a07253e924fa3cfc0a11cdef57a9253eee00
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9c222a939ccb00dc3b7466a1cb1a83abe7ea4036
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844789"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539602"
 ---
 # <a name="intrinsic"></a>intrinsic
 
@@ -39,7 +39,7 @@ Gibt an, dass Funktionsaufrufe, die in der Argumentliste des Pragmas angegeben s
 
 Die **systeminterne** Pragma informiert den Compiler an, dass eine Funktion ein bekanntes Verhalten aufweist.  Der Compiler kann die Funktion aufrufen und den Funktionsaufruf nicht durch Inlineanweisungen ersetzen, wenn dies zu einer besseren Leistung führt.
 
-Die Bibliotheksfunktionen mit systeminternen Formularen werden nachfolgend aufgeführt. Sobald ein **systeminterne** Pragma angezeigt wird, er wird wirksam, mit der ersten Funktionsdefinition, die eine bestimmte intrinsische Funktion enthält. Die Wirkung dauert bis an das Ende der Quelldatei oder bis zum Auftreten einer **Funktion** Pragmas, die die gleiche intrinsische Funktion angibt. Die **systeminterne** Pragma kann nur außerhalb einer Funktionsdefinition verwendet werden – auf globaler Ebene.
+Die Bibliotheksfunktionen mit systeminternen Formularen werden nachfolgend aufgeführt. Sobald ein **systeminterne** Pragma angezeigt wird, er wird wirksam, mit der ersten Funktionsdefinition, die eine bestimmte intrinsische Funktion enthält. Die Wirkung dauert bis an das Ende der Quelldatei oder bis zum Auftreten einer `function` Pragmas, die gleiche intrinsische Funktion angibt. Die **systeminterne** Pragma kann nur außerhalb einer Funktionsdefinition verwendet werden – auf globaler Ebene.
 
 Die folgenden Funktionen haben systeminterne Formen und die systeminternen Formen werden verwendet, bei der Angabe [/Oi](../build/reference/oi-generate-intrinsic-functions.md):
 
@@ -56,11 +56,11 @@ Programme, die intrinsische Funktionen verwenden, sind schneller, da sie nicht d
 
 **X86 bestimmte**
 
-Die **_disable** und **_aktivieren** systeminterne Funktionen generieren kernelmodusanweisungen zu deaktivieren bzw. aktivieren und kann in Kernelmodustreibern hilfreich sein.
+Die `_disable` und `_enable` systeminterne Funktionen generieren kernelmodusanweisungen zu deaktivieren bzw. aktivieren und kann in Kernelmodustreibern hilfreich sein.
 
 ### <a name="example"></a>Beispiel
 
-Kompilieren Sie den folgenden Code in der Befehlszeile mit "cl -c -FAs sample.c", und überprüfen Sie sample.asm, um zu sehen, dass diese in x86-Anweisungen CLI und STI umgewandelt werden:
+Kompilieren Sie den folgenden Code über die Befehlszeile mit `cl -c -FAs sample.c` und überprüfen Sie Sample.asm zu erkennen, dass sie in X86 umwandeln Anweisungen CLI und Sti umgewandelt werden:
 
 ```cpp
 // pragma_directive_intrinsic.cpp
@@ -86,7 +86,7 @@ Die unten aufgeführten Gleitkommafunktionen haben keine echten systeminternen F
 |[acos](../c-runtime-library/reference/acos-acosf-acosl.md)|[cosh](../c-runtime-library/reference/cosh-coshf-coshl.md)|[pow](../c-runtime-library/reference/pow-powf-powl.md)|[tanh](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|
 |[asin](../c-runtime-library/reference/asin-asinf-asinl.md)|[fmod](../c-runtime-library/reference/fmod-fmodf.md)|[sinh](../c-runtime-library/reference/sinh-sinhf-sinhl.md)||
 
- Die unten aufgeführten Gleitkommafunktionen haben echte systeminterne Formen, bei der Angabe [/Oi](../build/reference/oi-generate-intrinsic-functions.md), [/Og](../build/reference/og-global-optimizations.md), und [/fp: fast](../build/reference/fp-specify-floating-point-behavior.md) (oder eine Option aus, die/Og: [/ Ox](../build/reference/ox-full-optimization.md), [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md), und/O2 enthält):
+ Die unten aufgeführten Gleitkommafunktionen haben echte systeminterne Formen, bei der Angabe [/Oi](../build/reference/oi-generate-intrinsic-functions.md), ["/ Og"](../build/reference/og-global-optimizations.md), und [fast](../build/reference/fp-specify-floating-point-behavior.md) (oder eine Option, die "/ Og" enthält: [/ Ox](../build/reference/ox-full-optimization.md), ["/ O1"](../build/reference/o1-o2-minimize-size-maximize-speed.md), und "/ O2"):
 
 |||||
 |-|-|-|-|
@@ -94,11 +94,11 @@ Die unten aufgeführten Gleitkommafunktionen haben keine echten systeminternen F
 |[atan2](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|[log](../c-runtime-library/reference/log-logf-log10-log10f.md)|[sin](../c-runtime-library/reference/sin-sinf-sinl.md)|[tan](../c-runtime-library/reference/tan-tanf-tanl.md)|
 |[cos](../c-runtime-library/reference/cos-cosf-cosl.md)||||
 
-Sie können [/fp: strict](../build/reference/fp-specify-floating-point-behavior.md) oder ["/ Za"](../build/reference/za-ze-disable-language-extensions.md) Generierung von echten systeminternen Gleitkommaoptionen zu überschreiben. In diesem Fall werden die Funktionen als Bibliotheksroutinen erzeugt, die Argumente direkt an den Gleitkommachip übergeben, statt sie auf dem Programmstapel abzulegen.
+Sie können [/fp: strict](../build/reference/fp-specify-floating-point-behavior.md) oder [/Za](../build/reference/za-ze-disable-language-extensions.md) Generierung von echten systeminternen Gleitkommaoptionen zu überschreiben. In diesem Fall werden die Funktionen als Bibliotheksroutinen erzeugt, die Argumente direkt an den Gleitkommachip übergeben, statt sie auf dem Programmstapel abzulegen.
 
-Finden Sie unter [#pragma Function](../preprocessor/function-c-cpp.md) Informationen und ein Beispiel zum Aktivieren/Deaktivieren von systeminternen Funktionen für einen Block des Quelltexts.
+Finden Sie unter [#pragma-funhtion](../preprocessor/function-c-cpp.md) Informationen und ein Beispiel zum Aktivieren/Deaktivieren von systeminternen Funktionen für einen Block an Quelltext.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
+[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
+[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)  

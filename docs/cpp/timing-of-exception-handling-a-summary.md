@@ -21,41 +21,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2ac5abb13ae700e464635efc90a91c4a5835ab
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 59131994708f2cb78f00b05611c1db7f550f6a87
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939415"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076917"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Zeitliche Steuerung der Ausnahmebehandlung: Eine Zusammenfassung
-Ein Beendigungshandler wird ausgeführt, unabhängig davon, wie die **__try** -Anweisungsblock beendet wird. Ursachen gehören das Herausspringen aus dem **__try** Block, eine `longjmp` -Anweisung, die überträgt die Steuerung aus den Block, und das Entladen des Stapels aufgrund einer Ausnahmebehandlung.  
-  
+
+Ein Beendigungshandler wird ausgeführt, unabhängig davon, wie die **__try** -Anweisungsblock beendet wird. Ursachen gehören das Herausspringen aus dem **__try** Block, eine `longjmp` -Anweisung, die überträgt die Steuerung aus den Block, und das Entladen des Stapels aufgrund einer Ausnahmebehandlung.
+
 > [!NOTE]
->  Visual C++ unterstützt zwei Formen der Anweisungen `setjmp` und `longjmp`. Die schnelle Version umgeht die Abbruchbehandlung, ist jedoch effizienter. Um diese Version zu verwenden, schließen Sie die Datei \<setjmp.h >. Die andere Version unterstützt die Abbruchbehandlung, wie im vorherigen Abschnitt beschrieben. Um diese Version zu verwenden, schließen Sie die Datei \<setjmpex.h >. Die Leistungssteigerung der schnellen Version hängt von der Hardwarekonfiguration ab.  
-  
- Das Betriebssystem führt alle Abbruchbehandlungen in der richtigen Reihenfolge aus, bevor ein anderer Code ausgeführt werden kann, einschließlich des Texts eines Ausnahmehandlers.  
-  
- Wenn die Ursache für die Unterbrechung eine Ausnahme ist, muss das System erst den Filterteil einer oder mehrerer Ausnahmehandler ausführen, bevor entschieden wird, was beendet werden soll. Die Reihenfolge der Ereignisse lautet:  
-  
-1.  Eine Ausnahme wird ausgelöst.  
-  
-2.  Das System untersucht die Hierarchie der aktiven Ereignishandler und führt den Filter des Handlers mit der höchsten Rangstufe aus. Hierbei handelt es sich um den Ausnahmehandler, der im Hinblick auf Blöcke und Funktionsaufrufe zuletzt installiert wurde und am tiefsten geschachtelt ist.  
-  
-3.  Wenn dieser Filter die Steuerung übergibt (0 zurückgibt), wird der Prozess fortgesetzt, bis ein Filter gefunden wird, der die Steuerung nicht übergibt.  
-  
-4.  Wenn dieser Filter-1 zurückgegeben wird, wird die Ausführung fortgesetzt, wo die Ausnahme wurde ausgelöst und findet keine Beendigung statt.  
-  
-5.  Wenn der Filter 1 zurückgibt, werden folgende Ereignisse ausgelöst:  
-  
-    -   Das System entlädt den Stapel und löscht alle Stapelrahmen zwischen dem gerade ausgeführten Code (bei dem die Ausnahme ausgelöst wurde) und dem Stapelrahmen, der den Ausnahmehandler enthält, der nun die Steuerung übernimmt.  
-  
-    -   Beim Entladen des Stapels wird jeder Beendigungshandler im Stapel ausgeführt.  
-  
-    -   Der Ausnahmehandler selbst wird ausgeführt.  
-  
-    -   Die Steuerung wird nach dem Ende des Ausnahmehandlers an die Codezeile übergeben.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Schreiben eines Beendigungshandlers](../cpp/writing-a-termination-handler.md)   
- [Strukturierte Ausnahmebehandlung (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+>  Visual C++ unterstützt zwei Formen der Anweisungen `setjmp` und `longjmp`. Die schnelle Version umgeht die Abbruchbehandlung, ist jedoch effizienter. Um diese Version zu verwenden, schließen Sie die Datei \<setjmp.h >. Die andere Version unterstützt die Abbruchbehandlung, wie im vorherigen Abschnitt beschrieben. Um diese Version zu verwenden, schließen Sie die Datei \<setjmpex.h >. Die Leistungssteigerung der schnellen Version hängt von der Hardwarekonfiguration ab.
+
+Das Betriebssystem führt alle Abbruchbehandlungen in der richtigen Reihenfolge aus, bevor ein anderer Code ausgeführt werden kann, einschließlich des Texts eines Ausnahmehandlers.
+
+Wenn die Ursache für die Unterbrechung eine Ausnahme ist, muss das System erst den Filterteil einer oder mehrerer Ausnahmehandler ausführen, bevor entschieden wird, was beendet werden soll. Die Reihenfolge der Ereignisse lautet:
+
+1. Eine Ausnahme wird ausgelöst.
+
+1. Das System untersucht die Hierarchie der aktiven Ereignishandler und führt den Filter des Handlers mit der höchsten Rangstufe aus. Hierbei handelt es sich um den Ausnahmehandler, der im Hinblick auf Blöcke und Funktionsaufrufe zuletzt installiert wurde und am tiefsten geschachtelt ist.
+
+1. Wenn dieser Filter die Steuerung übergibt (0 zurückgibt), wird der Prozess fortgesetzt, bis ein Filter gefunden wird, der die Steuerung nicht übergibt.
+
+1. Wenn dieser Filter-1 zurückgegeben wird, wird die Ausführung fortgesetzt, wo die Ausnahme wurde ausgelöst und findet keine Beendigung statt.
+
+1. Wenn der Filter 1 zurückgibt, werden folgende Ereignisse ausgelöst:
+
+   - Das System entlädt den Stapel und löscht alle Stapelrahmen zwischen dem gerade ausgeführten Code (bei dem die Ausnahme ausgelöst wurde) und dem Stapelrahmen, der den Ausnahmehandler enthält, der nun die Steuerung übernimmt.
+
+   - Beim Entladen des Stapels wird jeder Beendigungshandler im Stapel ausgeführt.
+
+   - Der Ausnahmehandler selbst wird ausgeführt.
+
+   - Die Steuerung wird nach dem Ende des Ausnahmehandlers an die Codezeile übergeben.
+
+## <a name="see-also"></a>Siehe auch
+
+[Schreiben eines Beendigungshandlers](../cpp/writing-a-termination-handler.md)<br/>
+[Strukturierte Ausnahmebehandlung (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

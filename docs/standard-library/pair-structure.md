@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ad86773fdc78f3cb8d5219ce14919a035755f3b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f11fb76f4009f6497020c26f26184d2ddca4506b
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955331"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318266"
 ---
 # <a name="pair-structure"></a>pair-Struktur
 
@@ -54,11 +54,14 @@ struct pair
 
 ### <a name="parameters"></a>Parameter
 
-*Wert1* Wert initialisiert das erste Element der `pair`.
+*Wert1*<br/>
+Der Wert, der das erste Element von `pair` initialisiert.
 
-*Val2* Wert initialisieren das zweite Element der `pair`.
+*Wert2*<br/>
+Der Wert, der das zweite Element von `pair` initialisiert.
 
-*Rechts* ein Paar, dessen Werte verwendet werden, um die Elemente eines anderen Paars zu initialisieren.
+*Rechts*<br/>
+Ein Paar, dessen Werte verwendet werden, um die Elemente eines anderen Paars zu initialisieren.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -151,16 +154,16 @@ int main( )
            << " is already in m1,\n so the insertion failed." << endl;
    }
 }
-\* Output:
+/* Output:
 The pair p1 is: ( 10, 0.011 ).
 The pair p2 is: ( 10, 0.222 ).
 The pair p3 is: ( 10, 0.011 ).
 The element pairs of the map m1 are: ( 1, 10 ) ( 2, 20 ) ( 3, 30 ).
 The element (4,40) was inserted successfully in m1.
 The element with a key value of
- ( (pr2.first) -> first ) = 1 is already in m1,
- so the insertion failed.
-*\
+( (pr2.first) -> first ) = 1 is already in m1,
+so the insertion failed.
+*/
 ```
 
 ## <a name="requirements"></a>Anforderungen

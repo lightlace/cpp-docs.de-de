@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3754 | Microsoft Docs
+title: Compilerfehler C3754 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8555732fbe3321c65a4da9689b0b8816ff356532
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9d25d09343cc2a8d341925727529be7d435d9da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268603"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023474"
 ---
 # <a name="compiler-error-c3754"></a>Compilerfehler C3754
-Delegatkonstruktor: Member-Funktion 'Funktion' kann nicht in einer Instanz von Typ 'Typ' aufgerufen werden  
-  
- Eine Puffermethode wurde eine Funktion durch einen Zeiger auf einen Typ aufgerufen, die die Funktion nicht enthält.  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C3754 generiert:  
-  
-```  
-// C3754a.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-delegate void MyDel();  
-  
-interface class MyInterface {};  
-  
-ref struct MyClass : MyInterface {  
-   void f() {}  
-};  
-  
-int main() {  
-   MyInterface^ p = gcnew MyClass;  
-   MyDel^ q = gcnew MyDel(p, &MyClass::f);   // C3754  
-   // try the following line instead  
-//   MyDel^ q = gcnew MyDel(safe_cast<MyClass^>(p), &MyClass::f);  
-}  
-```  
+
+Delegatkonstruktor: Member-Funktion 'Funktion' kann nicht in einer Instanz von Typ 'Typ' aufgerufen werden
+
+Eine Funktion über einen Zeiger auf einen Typ wurde aufgerufen, die die Funktion nicht enthält.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C3754 generiert:
+
+```
+// C3754a.cpp
+// compile with: /clr
+using namespace System;
+
+delegate void MyDel();
+
+interface class MyInterface {};
+
+ref struct MyClass : MyInterface {
+   void f() {}
+};
+
+int main() {
+   MyInterface^ p = gcnew MyClass;
+   MyDel^ q = gcnew MyDel(p, &MyClass::f);   // C3754
+   // try the following line instead
+//   MyDel^ q = gcnew MyDel(safe_cast<MyClass^>(p), &MyClass::f);
+}
+```

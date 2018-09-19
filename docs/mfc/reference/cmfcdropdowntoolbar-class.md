@@ -30,17 +30,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e12799f10fe86ef5dd556eac4e344aa972e2503
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 23ca73629208e0ac80f7c516f8249e83ae0d41a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027309"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719237"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar-Klasse
 Eine Symbolleiste, die angezeigt wird, wenn der Benutzer eine Symbolleisten-Schaltfläche der obersten Ebene drückt und gedrückt hält.  
   
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
 ## <a name="syntax"></a>Syntax  
   
 ```  
@@ -59,7 +59,7 @@ class CMFCDropDownToolBar : public CMFCToolBar
 |[CMFCDropDownToolBar::OnLButtonUp](#onlbuttonup)||  
 |[CMFCDropDownToolBar::OnMouseMove](#onmousemove)||  
 |[CMFCDropDownToolBar::OnSendCommand](#onsendcommand)|(Überschreibt `CMFCToolBar::OnSendCommand`.)|  
-|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(Überschreibt [CMFCToolBar::OnUpdateCmdUI](http://msdn.microsoft.com/571a38ab-2a56-4968-9796-273516126f80).)|  
+|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(Überschreibt [CMFCToolBar::OnUpdateCmdUI](cmfctoolbar-class.md).|  
   
 ### <a name="remarks"></a>Hinweise  
  Ein `CMFCDropDownToolBar` -Objekt kombiniert die visuelle Darstellung des eine Symbolleiste mit dem Verhalten eines Popup-Menüs. Wenn ein Benutzer drückt und gedrückt hält eine Dropdown-Symbolleisten-Schaltfläche (finden Sie unter [CMFCDropDownToolbarButton-Klasse](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)), wird eine Dropdown-Symbolleiste angezeigt, und der Benutzer kann aus der Dropdown-Symbolleiste eine Schaltfläche auswählen, indem Sie einen Bildlauf dorthin durchführen und Freigeben der Maus Schaltfläche ". Nachdem der Benutzer eine Schaltfläche in der Dropdown-Symbolleiste ausgewählt hat, wird diese Schaltfläche als die aktuelle Schaltfläche auf der Symbolleiste der obersten Ebene angezeigt.  
@@ -133,23 +133,23 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiResID*  
- Die Ressourcen-ID der Bitmap, die auf die aktiven Symbolleistenbilder verweist.  
+*uiResID*<br/>
+[in] Die Ressourcen-ID der Bitmap, die auf die aktiven Symbolleistenbilder verweist.  
   
- [in] *UiColdResID*  
- Die Ressourcen-ID der Bitmap, die auf die inaktiven Symbolleistenbilder verweist.  
+*uiColdResID*<br/>
+[in] Die Ressourcen-ID der Bitmap, die auf die inaktiven Symbolleistenbilder verweist.  
   
- [in] *UiMenuResID*  
- Die Ressourcen-ID der Bitmap, die auf die normalen Menübilder verweist.  
+*uiMenuResID*<br/>
+[in] Die Ressourcen-ID der Bitmap, die auf die normalen Menübilder verweist.  
   
- [in] *blockiert*  
- True, um die Symbolleiste zu sperren. andernfalls "false".  
+*Blockiert*<br/>
+[in] True, um die Symbolleiste zu sperren. andernfalls "false".  
   
- [in] *UiDisabledResID*  
- Die Ressourcen-ID der Bitmap, die auf die deaktivierten Symbolleistenbilder verweist.  
+*uiDisabledResID*<br/>
+[in] Die Ressourcen-ID der Bitmap, die auf die deaktivierten Symbolleistenbilder verweist.  
   
- [in] *UiMenuDisabledResID*  
- Die Ressourcen-ID der Bitmap, die auf die deaktivierten Menübilder verweist.  
+*uiMenuDisabledResID*<br/>
+[in] Die Ressourcen-ID der Bitmap, die auf die deaktivierten Menübilder verweist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Wert ungleich 0 (null), wenn die Methode erfolgreich ausgeführt wird, andernfalls 0 (null).  
@@ -174,12 +174,12 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiResID*  
- [in] *UiColdResID*  
- [in] *UiMenuResID*  
- [in] *"Bool"*  
- [in] *UiDisabledResID*  
- [in] *UiMenuDisabledResID*  
+*uiResID*<br/>
+[in] [in] *UiColdResID*  
+*uiMenuResID*<br/>
+[in] [in] *"Bool"*  
+*uiDisabledResID*<br/>
+[in] [in] *UiMenuDisabledResID*  
  [in] *UiHotResID*  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -196,8 +196,8 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nFlags*  
- [in] *zeigen*  
+*nFlags*<br/>
+[in] [in] *zeigen*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -211,8 +211,8 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nFlags*  
- [in] *zeigen*  
+*nFlags*<br/>
+[in] [in] *zeigen*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -240,8 +240,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pTarget*  
- [in] *bDisableIfNoHndler*  
+*pTarget*<br/>
+[in] [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Hinweise  
   

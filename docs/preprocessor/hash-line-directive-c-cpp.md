@@ -1,5 +1,5 @@
 ---
-title: '#line-Direktive (C/C++) | Microsoft Docs'
+title: '#line-Direktive (C/C++) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 10/18/2017
 ms.technology:
@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ebbcea7432b27e9269b5041d90d14534a77b812
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0994c8266828ab8bff8d43171c275d9058a3b7ce
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839753"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540207"
 ---
 # <a name="line-directive-cc"></a>#line-Anweisung (C/C++)
 
-Die `#line`-Direktive weist den Präprozessor an, die vom Compiler intern gespeicherte Zeilennummer und den Dateinamen in eine bestimmte Zeilennummer und einen bestimmten Dateinamen zu ändern.
+Die **#line** -Direktive weist den Präprozessor an, den Compiler intern gespeicherte Zeilennummer und den Dateinamen in einen angegebenen Zeilennummer und den Dateinamen zu ändern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,21 +39,21 @@ Der Compiler verwendet die Zeilennummer und den optionalen Dateinamen, um auf Fe
 
 Die *Ziffernfolge* Wert kann eine beliebige Integerkonstante sein. Makroersetzungen können für die Vorverarbeitungstoken durchgeführt werden, das Ergebnis muss jedoch anhand der richtigen Syntax ausgewertet werden. Die *Filename* kann eine beliebige Kombination von Zeichen sein und muss in doppelte Anführungszeichen eingeschlossen werden (**""**). Wenn *Filename* wird weggelassen, bleibt der vorherige Dateiname unverändert.
 
-Sie können auch die Quellzeilennummer und den Quelldateinamen ändern, indem Sie eine `#line`-Direktiven schreiben. Das Konvertierungsprogramm verwendet die Zeilennummer und den Dateinamen zur Bestimmung der Werte der vordefinierten Makros **&#95; &#95;Datei&#95; &#95;** und **&#95; &#95;Zeile&#95; &#95;**. Sie können diese Makros verwenden, um selbsterklärende Fehlermeldungen in den Programmtext einzufügen. Weitere Informationen zu diesen vordefinierten Makros finden Sie unter [vordefinierte Makros](../preprocessor/predefined-macros.md).
+Sie können auch die Quellzeilennummer und den Dateinamen ändern, indem Sie das Schreiben einer **#line** Richtlinie. Das Konvertierungsprogramm verwendet die Zeilennummer und den Dateinamen, um zu bestimmen, die Werte der vordefinierten Makros `__FILE__` und `__LINE__`. Sie können diese Makros verwenden, um selbsterklärende Fehlermeldungen in den Programmtext einzufügen. Weitere Informationen zu diesen vordefinierten Makros finden Sie unter [vordefinierte Makros](../preprocessor/predefined-macros.md).
 
-Die **&#95; &#95;Datei&#95; &#95;** -Makro wird in eine Zeichenfolge, deren Inhalt der Dateiname in doppelten Anführungszeichen (**""**).
+Die `__FILE__` Makro erweitert wird, um eine Zeichenfolge, deren Inhalt der Dateiname in doppelten Anführungszeichen (**""**).
 
-Wenn Sie die Zeilennummer und den Dateinamen ändern, ignoriert der Compiler die vorherigen Werte und setzt die Verarbeitung mit den neuen Werten fort. Die `#line`-Direktive wird in der Regel von Programm-Generatoren verwendet, damit Fehlermeldungen auf die ursprüngliche Quelldatei und nicht auf das generierte Programm verweisen.
+Wenn Sie die Zeilennummer und den Dateinamen ändern, ignoriert der Compiler die vorherigen Werte und setzt die Verarbeitung mit den neuen Werten fort. Die **#line** Richtlinie wird in der Regel von Programm-Generatoren verwendet, um die Fehlermeldungen angezeigt, auf die ursprüngliche Quelldatei anstatt auf das generierte Programm verweisen.
 
-Die folgenden Beispiele veranschaulichen `#line` und **&#95; &#95;Zeile&#95; &#95;** und **&#95; &#95;Datei&#95; &#95;** Makros.
+Die folgenden Beispiele veranschaulichen **#line** und `__LINE__` und `__FILE__` Makros.
 
-In dieser Anweisung die intern gespeicherte Zeilennummer auf 151 festgelegt ist, und der Dateiname auf copy.c geändert wird.
+In dieser Anweisung ist die intern gespeicherte Zeilennummer auf 151 festgelegt, und der Dateinamen in copy.c geändert wird.
 
 ```cpp
 #line 151 "copy.c"
 ```
 
- In diesem Beispiel wird das Makro `ASSERT` verwendet vordefinierte Makros **&#95; &#95;Zeile&#95; &#95;** und **&#95; &#95;Datei&#95; &#95;** So drucken Sie ein Fehlermeldung zur Quelldatei ist eine bestimmte Assertion nicht "true".
+In diesem Beispiel ist das Makro `ASSERT` werden die vordefinierten Makros `__LINE__` und `__FILE__` um eine Fehlermeldung zur Quelldatei auszugeben, wenn es sich bei eine bestimmte Assertion nicht erfüllt ist.
 
 ```cpp
 #define ASSERT(cond) if( !(cond) )\

@@ -1,5 +1,5 @@
 ---
-title: _bittest _bittest64 | Microsoft Docs
+title: _bittest, _bittest64 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b2259e7eecd820d35527a6ab8908f274e3e287
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6d316c272a2db1bdb3351aa54f72db46dd66583
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334252"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713205"
 ---
 # <a name="bittest-bittest64"></a>_bittest, _bittest64
 **Microsoft-spezifisch**  
@@ -47,11 +47,11 @@ unsigned char _bittest64(
 ```  
   
 ### <a name="parameters"></a>Parameter  
-[in] `a`  
-Ein Zeiger auf den zu untersuchenden Speicher.  
+*a*<br/>
+[in] Ein Zeiger auf den zu untersuchenden Speicher.  
   
-[in] `b`  
-Die zu testende Bitposition.  
+*b*<br/>
+[in] Die zu testende Bitposition.  
   
 ### <a name="return-value"></a>Rückgabewert  
 Das Bit an der angegebenen Position.  
@@ -60,8 +60,8 @@ Das Bit an der angegebenen Position.
   
 |Systemintern|Architektur|Header|  
 |---------------|------------------|------------|  
-|`_bittest`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_bittest64`|ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_bittest`|X86, ARM, x64|\<intrin.h>|  
+|`_bittest64`|ARM, x64|\<intrin.h>|  
   
 ## <a name="remarks"></a>Hinweise  
 Diese Routine ist nur als systeminterne Funktion verfügbar.  

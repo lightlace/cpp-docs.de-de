@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2222 | Microsoft Docs
+title: Compilerfehler C2222 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78679021289e41ed9c584abdd94348b55e30184e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f97e96a7a5548de25ba9b0b45f76e4cdef87baa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170036"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072588"
 ---
 # <a name="compiler-error-c2222"></a>Compilerfehler C2222
-Unerwarteter Typ 'type': Es wurde eine Basisklasse oder ein Member erwartet  
-  
- Die Initialisiererliste kann nur Basisklassen oder Member eines Typs initialisieren. Überprüfen Sie zum Beheben dieses Fehlers, ob nur Basisklassen oder Member des Typs in der Initialisiererliste initialisiert sind.
+
+Unerwarteter Typ 'type': Es wurde eine Basisklasse oder ein Member erwartet
+
+Die Initialisiererliste kann nur Basisklassen oder Member eines Typs initialisieren. Überprüfen Sie zum Beheben dieses Fehlers, ob nur Basisklassen oder Member des Typs in der Initialisiererliste initialisiert sind.

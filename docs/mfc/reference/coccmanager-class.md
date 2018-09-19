@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cabf1cde43f11997de27b2b2f148482d4f024455
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 627fb8e1ad1341257e3064ee195952c37dd4a481
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852366"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195537"
 ---
 # <a name="coccmanager-class"></a>COccManager-Klasse
 Verwaltet unterschiedliche benutzerdefinierte ControlSites. Wird von `COleControlContainer` - und `COleControlSite` -Objekten implementiert.  
@@ -334,7 +334,7 @@ static void AFX_CDECL SetDefaultButton(
 ### <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  Das Steuerelement muss OLEMISC_ACTSLIKEBUTTON Status-bit-Satz verfügen. Weitere Informationen zu OLEMISC-Flags finden Sie unter den [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) Thema in der Windows-SDK.  
+>  Das Steuerelement muss OLEMISC_ACTSLIKEBUTTON Status-bit-Satz verfügen. Weitere Informationen zu OLEMISC-Flags finden Sie unter den [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) Thema in der Windows-SDK.  
   
 ##  <a name="splitdialogtemplate"></a>  COccManager::SplitDialogTemplate  
  Vom Framework aufgerufen, die ActiveX-Steuerelemente von Dialogfeld-Standardsteuerelementen aufzuteilen.  

@@ -1,5 +1,5 @@
 ---
-title: 'Makeallocator:: Allocate-Methode | Microsoft Docs'
+title: 'Makeallocator:: Allocate-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0e8d387dea7687ad61d85f975d58aa47489266d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4422dea0b0bfb07904d0c4defad8f33281a51bec
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876215"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609861"
 ---
 # <a name="makeallocatorallocate-method"></a>MakeAllocator::Allocate-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-__forceinline void* Allocate();  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Bei Erfolg, ein Zeiger auf den belegten Speicher; andernfalls `nullptr`.  
-  
-## <a name="remarks"></a>Hinweise  
- Belegt Speicher aus, und ordnet dieses dem aktuellen MakeAllocator-Objekt.  
-  
- Die Größe des belegten ist die Größe des Typs mit dem aktuellen MakeAllocator-Vorlagenparameter angegeben.  
-  
- Ein Entwickler muss nur die Allocate()-Methode, um eine andere Zuordnung Speichermodell implementieren außer Kraft setzen.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [MakeAllocator-Klasse](../windows/makeallocator-class.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+__forceinline void* Allocate();
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Bei Erfolg einen Zeiger auf den reservierten Speicher; andernfalls **"nullptr"**.
+
+## <a name="remarks"></a>Hinweise
+
+Weist Speicher zu und ordnet es die aktuellen **MakeAllocator** Objekt.
+
+Die Größe des zugeordneten Speichers ist die Größe des vom aktuellen angegebenen Typs **MakeAllocator** Template-Parameter.
+
+Ein Entwickler benötigt, um nur überschreiben die **Allocate()** zu einer anderen Zuordnung Speichermodell zu implementierende Methode.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[MakeAllocator-Klasse](../windows/makeallocator-class.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

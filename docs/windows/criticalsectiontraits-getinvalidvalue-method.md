@@ -1,5 +1,5 @@
 ---
-title: 'Criticalsectiontraits:: Getinvalidvalue-Methode | Microsoft Docs'
+title: 'Criticalsectiontraits:: Getinvalidvalue-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d72c9dce0765029ee31e079315baec72afd16a46
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4a23445cc9df0553a40d4f78a7ce3095a343d5d0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883146"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599235"
 ---
 # <a name="criticalsectiontraitsgetinvalidvalue-method"></a>CriticalSectionTraits::GetInvalidValue-Methode
-CriticalSection Vorlage spezialisiert, damit, dass die Vorlage immer ungültig ist.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-inline static Type GetInvalidValue();  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Gibt immer einen Zeiger auf einen ungültigen kritischen Abschnitt zurück.  
-  
-## <a name="remarks"></a>Hinweise  
- Die *Typ* Modifizierer ist definiert als `typedef CRITICAL_SECTION* Type;`.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>Siehe auch  
- [CriticalSectionTraits-Struktur](../windows/criticalsectiontraits-structure.md)
+
+Spezialisiert hat eine **CriticalSection** Vorlage so, dass die Vorlage immer ungültig ist.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+inline static Type GetInvalidValue();
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Gibt immer einen Zeiger auf einen ungültigen kritischen Abschnitt zurück.
+
+## <a name="remarks"></a>Hinweise
+
+Die `Type` Modifizierer ist definiert als `typedef CRITICAL_SECTION* Type;`.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>Siehe auch
+
+[CriticalSectionTraits-Struktur](../windows/criticalsectiontraits-structure.md)

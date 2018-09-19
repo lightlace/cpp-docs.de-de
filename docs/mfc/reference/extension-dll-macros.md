@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee79ccad55d2fd360166b9d693f3d4757fe2049f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: d3f34a6bc42f1c01783e21e1c3b0f9f04adad46f
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339227"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317757"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Makros und Funktionen für die Verwaltung von DLLs
 
@@ -99,7 +99,7 @@ void AFXAPI AfxOleInitModule( );
  Wenn Sie ein OLE-Steuerelement erstellen und verwenden `COleControlModule`, rufen Sie nicht `AfxOleInitModule` da die `InitInstance` Memberfunktion `COleControlModule` Aufrufe `AfxOleInitModule`.  
    
 ### <a name="requirements"></a>Anforderungen  
- **Header**: < afxdll_.h >  
+ **Header**: \<afxdll_.h >  
    
 ### <a name="see-also"></a>Siehe auch  
  [Makros und globale Variablen](mfc-macros-and-globals.md)   
@@ -117,7 +117,7 @@ void AFXAPI AfxNetInitModule( );
  Die MFC-Sockets-DLL ist eine MFC-Erweiterungs-DLL. in der Reihenfolge für eine MFC-Erweiterungs-DLL in wired erhalten eine `CDynLinkLibrary` Kette, müssen sie erstellen eine `CDynLinkLibrary` Objekt im Kontext von jedem Modul, die sie verwenden möchten. `AfxNetInitModule` erstellt die `CDynLinkLibrary` Objekts in Ihre regulären MFC DLL Kontext, sodass es in wired Ruft die `CDynLinkLibrary` Objekt Kette von der regulären MFC-DLL.  
    
 ### <a name="requirements"></a>Anforderungen  
- **Header:** < afxdll_.h >  
+ **Header:** \<afxdll_.h >  
    
 ### <a name="see-also"></a>Siehe auch  
  [Makros und globale Variablen](mfc-macros-and-globals.md)   

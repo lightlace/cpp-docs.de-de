@@ -1,5 +1,5 @@
 ---
-title: Projektbuildfehler PRJ0050 | Microsoft Docs
+title: Projektbuildfehler PRJ0050 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ad17614f693e313190dba9cc767c023981dec34
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb3949ea0db2f1667aecf1aeeefd922b192cbf41
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318512"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100590"
 ---
 # <a name="project-build-error-prj0050"></a>Projektbuildfehler PRJ0050
-Fehler beim Registrieren der Ausgabe. Stellen Sie sicher, dass Sie die entsprechenden Berechtigungen zum Ändern der Registrierung haben.  
-  
- Das Buildsystem von Visual C++ konnte nicht aus, um die Ausgabe des Builds (Dll oder .exe) zu registrieren. Sie müssen als Administrator die Registrierung geändert angemeldet sein.  
-  
- Wenn Sie eine DLL-Datei erstellen, können Sie versuchen, die DLL-Datei manuell mit regsvr32.exe registrieren, es können Informationen zu den Ursachen der Build wird angezeigt.  
-  
- Wenn Sie eine DLL-Datei nicht erstellen, sehen Sie sich das Buildprotokoll für den Befehl, der einen Fehler verursacht hat.
+
+Fehler beim Registrieren der Ausgabe. Stellen Sie sicher, dass Sie die entsprechenden Berechtigungen zum Ändern der Registrierung haben.
+
+Das Visual C++-Buildsystem konnte nicht aus, um die Ausgabe des Builds (Dll oder .exe) zu registrieren. Sie müssen als Administrator zum Ändern der Registrierung angemeldet sein.
+
+Wenn Sie eine DLL-Datei erstellen, können Sie versuchen, registrieren Sie die DLL-Datei manuell mit regsvr32.exe, dies sollte angezeigt werden Informationen, warum der Build fehlgeschlagen ist.
+
+Wenn Sie eine DLL-Datei nicht erstellen, betrachten Sie das Buildprotokoll für den Befehl aus, der einen Fehler verursacht hat.

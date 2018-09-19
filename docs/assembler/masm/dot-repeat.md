@@ -1,7 +1,7 @@
 ---
-title: . WIEDERHOLEN SIE DIE | Microsoft Docs
+title: . WIEDERHOLEN SIE DIE | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41e3dadaa95cb4bf0ca4a17af32332d5b5471245
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8856ed0e1d86277a413baac2c56e5c5ca2ea9ff0
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052449"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "43687951"
 ---
 # <a name="repeat"></a>.REPEAT
-Generiert Code, durch die Ausführung des Blocks des wiederholt *Anweisungen* bis `condition` wird "true". [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md), die "true" wird, wenn CX NULL ist, kann als Ersatz für [. BIS](../../assembler/masm/dot-until.md). Die `condition` ist optional mit **. UNTILCXZ**.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-   .REPEAT  
-statements  
-.UNTIL condition  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)
+
+Generiert Code, durch die Ausführung des Blocks von wiederholt *Anweisungen* bis `condition` wird "true". [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md), wenn CX 0 (null), ist "true" wird möglicherweise durch ersetzt [. BIS](../../assembler/masm/dot-until.md). Die `condition` ist optional, mit **. UNTILCXZ**.
+
+## <a name="syntax"></a>Syntax
+
+> .REPEAT<br/>
+> Anweisungen<br/>
+> . BIS Bedingung
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>

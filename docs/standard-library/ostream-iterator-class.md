@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ee931abb2273ab3119fa62b9219ad69448b2048
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e3f18f3d312adb00370d6dc51203542c259914ec
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963523"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314247"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator-Klasse
 
@@ -42,11 +42,14 @@ class ostream_iterator
 
 ### <a name="parameters"></a>Parameter
 
-*Typ* den Typ des Objekts in den Ausgabestream eingefügt werden soll.
+*Type*<br/>
+Der Typ des in den Ausgabestream einzufügenden Objekts.
 
-*CharType* der Typ, der den Zeichentyp für das `ostream_iterator`. Dieses Argument ist optional, und der Standardwert ist **Char**.
+*CharType*<br/>
+Der Typ, der den Zeichentyp für `ostream_iterator` darstellt. Dieses Argument ist optional, und der Standardwert ist **Char**.
 
-*"Traits"* der Typ, der den Zeichentyp für das `ostream_iterator`. Dieses Argument ist optional, und der Standardwert ist `char_traits`\< *CharType>.*
+*Merkmale*<br/>
+Der Typ, der den Zeichentyp für `ostream_iterator` darstellt. Dieses Argument ist optional, und der Standardwert ist `char_traits`\< *CharType>.*
 
 Die ostream_iterator-Klasse muss den Anforderungen für einen Ausgabeiterator entsprechen. Algorithmen können mit `ostream_iterator` direkt in Ausgabestreams geschrieben werden.
 
@@ -68,9 +71,9 @@ Die ostream_iterator-Klasse muss den Anforderungen für einen Ausgabeiterator en
 
 |Operator|Beschreibung|
 |-|-|
-|[operator*](#op_star)|Der Dereferenzierungsoperator, der zum Implementieren des Ausgabeiteratorausdrucks *`i` = `x` verwendet wird.|
+|[operator*](#op_star)|Der Dereferenzierungsoperator, der zum Implementieren des ausgabeiteratorausdrucks \* `i`  =  `x`.|
 |[operator++](#op_add_add)|Ein nicht funktionaler Inkrementoperator, der einen `ostream_iterator` zum gleichen Objekt zurückgibt, das er adressiert hat, bevor der Vorgang aufgerufen wurde.|
-|[operator=](#op_eq)|Ein Zuweisungsoperator, der zum Implementieren des Ausgabeiteratorausdrucks *`i` = `x` zum Schreiben in einen Ausgabestream verwendet wird.|
+|[operator=](#op_eq)|Zuweisungsoperator, der zum Implementieren des ausgabeiteratorausdrucks \* `i`  =  `x` zum Schreiben in einen Ausgabestream.|
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -114,17 +117,17 @@ int main( )
    // elements to the output stream:
    cout << "The integers written to the output stream\n"
         << "by intOut are:" << endl;
- *intOut = 10;
- *intOut = 20;
- *intOut = 30;
+*intOut = 10;
+*intOut = 20;
+*intOut = 30;
 }
-\* Output:
+/* Output:
 The integers written to the output stream
 by intOut are:
 10
 20
 30
-*\
+*/
 ```
 
 ## <a name="op_star"></a> ostream_iterator::operator*
@@ -163,17 +166,17 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
-\* Output:
+/* Output:
 Elements written to output stream:
 10
 20
 30
-*\
+*/
 ```
 
 ## <a name="op_add_add"></a> ostream_iterator::operator++
@@ -213,22 +216,22 @@ int main( )
    // standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
-\* Output:
+/* Output:
 Elements written to output stream:
 10
 20
 30
-*\
+*/
 ```
 
 ## <a name="op_eq"></a> ostream_iterator::operator=
 
-Ein Zuweisungsoperator, der zum Implementieren des Ausgabeiteratorausdrucks *`i` = `x` zum Schreiben in einen Ausgabestream verwendet wird.
+Zuweisungsoperator verwendet, um das Implementieren des ausgabeiteratorausdrucks \* `i`  =  `x` zum Schreiben in einen Ausgabestream.
 
 ```cpp
 ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
@@ -236,7 +239,8 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="parameters"></a>Parameter
 
-*Val* den Wert des Objekts vom Typ `Type` in den Ausgabestream eingefügt werden soll.
+*val*<br/>
+Der Wert des Objekts des `Type`-Typs, der in den Ausgabestream einzufügen ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -244,7 +248,7 @@ Der Operator fügt *Val* in den Ausgabestream, der dem Objekt zugeordnet wird, g
 
 ### <a name="remarks"></a>Hinweise
 
-Die Anforderungen für einen Ausgabeiterator, der `ostream_iterator` erfüllen muss, benötigen nur den gültigen Ausdruck * `ii` = `t`, und sagen nichts über den operator oder den operator= selbst. Dieser Memberoperator gibt `*this` zurück.
+Die Anforderungen für einen Ausgabeiterator, der `ostream_iterator` erfüllen müssen, benötigen Sie nur den Ausdruck \* `ii`  =  `t` gültig sein, und sagen nichts über den Operator oder den Operator = selbst. Dieser Memberoperator gibt `*this` zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -266,17 +270,17 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
-\* Output:
+/* Output:
 Elements written to output stream:
 10
 20
 30
-*\
+*/
 ```
 
 ## <a name="ostream_iterator"></a> ostream_iterator::ostream_iterator
@@ -294,9 +298,11 @@ ostream_iterator(
 
 ### <a name="parameters"></a>Parameter
 
-*_Ostr* der Ausgabestream vom Typ [ostream_iterator:: ostream_type](#ostream_type) durchlaufen werden soll.
+*_Ostr*<br/>
+Der Ausgabestream vom Typ [ostream_iterator:: ostream_type](#ostream_type), der eine Schleife durchlaufen wird.
 
-*_Delimiter* das Trennzeichen, das in den Ausgabestream zwischen Werten eingefügt wird.
+*_Delimiter*<br/>
+Das Trennzeichen, das in den Ausgabestream zwischen Werten eingefügt wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -319,9 +325,9 @@ int main( )
 
    // ostream_iterator for stream cout
    ostream_iterator<int> intOut ( cout , "\n" );
- *intOut = 10;
+*intOut = 10;
    intOut++;
- *intOut = 20;
+*intOut = 20;
    intOut++;
 
    int i;
@@ -343,12 +349,12 @@ int main( )
           ostream_iterator<int> ( cout, " : " ) );
    cout << endl;
 }
-\* Output:
+/* Output:
 10
 20
 Elements output without delimiter: 123456
 Elements output with delimiter: 1 : 2 : 3 : 4 : 5 : 6 :
-*\
+*/
 ```
 
 ## <a name="ostream_type"></a> ostream_iterator::ostream_type
@@ -404,17 +410,17 @@ int main( )
    // elements to the output stream:
    cout << "The integers written to output stream\n"
         << "by intOut are:" << endl;
- *intOut = 1;
- *intOut = 10;
- *intOut = 100;
+*intOut = 1;
+*intOut = 10;
+*intOut = 100;
 }
-\* Output:
+/* Output:
 The integers written to output stream
 by intOut are:
 1
 10
 100
-*\
+*/
 ```
 
 ## <a name="see-also"></a>Siehe auch

@@ -1,5 +1,5 @@
 ---
-title: __inbyte | Microsoft Docs
+title: __inbyte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad2e02d4e1bc1ee5d1694769b2ec217cd7acbaba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a503cb71ee1a7121a4770d5a401e33fe14fc649
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329828"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716521"
 ---
 # <a name="inbyte"></a>__inbyte
 **Microsoft-spezifisch**  
   
- Generiert die `in` -Anweisung, ein Byte zurückgeben Auslesen von angegebene Port `Port`.  
+ Generiert die `in` -Anweisung, ein Byte Zurückgeben der Port anhand des auslesen `Port`.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,8 +39,8 @@ unsigned char __inbyte(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `Port`  
- Der Port, aus dem gelesen werden soll.  
+*Port*<br/>
+[in] Der Port, der gelesen werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Das gelesene Byte aus dem angegebenen Port.  
@@ -49,7 +49,7 @@ unsigned char __inbyte(
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__inbyte`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__inbyte`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

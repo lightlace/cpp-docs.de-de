@@ -1,5 +1,5 @@
 ---
-title: Nil-Struktur | Microsoft Docs
+title: Nil-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,34 +15,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb260114a8010d441f0556cf2a21734c0ac23cca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 628443cf967e70b5f05ecebc0975abbcd1d44650
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881425"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596171"
 ---
 # <a name="nil-structure"></a>Nil-Struktur
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-struct Nil;  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Wird verwendet, um einen Vorlagenparameter nicht angegeben, optional eine anzugeben.  
-  
- NULL ist eine leere Struktur.  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `Nil`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+struct Nil;
+```
+
+## <a name="remarks"></a>Hinweise
+
+Wird verwendet, um einen Vorlagenparameter nicht angegeben, optional eine anzugeben.
+
+**Nil** ist eine leere Struktur.
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`Nil`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

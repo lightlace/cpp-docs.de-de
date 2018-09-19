@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0521d09f4f96c73c20022d88621671564e7ada78
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9f95c9d85ab3649c1710881c73df1ae325f9cb60
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965525"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724814"
 ---
 # <a name="valarray-class"></a>valarray-Klasse
 
@@ -131,9 +131,11 @@ valarray<Type> apply(Type _Func(constType&)) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Func(Type)* das Funktionsobjekt auf jedes Element des Valarray-Operanden angewendet werden.
+*_Func(Type)*<br/>
+Das Funktionsobjekt, das auf alle Elemente des valarray-Operanden angewendet werden soll.
 
-*_Func(const Type&)* das Funktionsobjekt für Const, das auf die einzelnen Elemente des Valarray-Operanden angewendet werden.
+*_Func(const Type&)*<br/>
+Das Funktionsobjekt für const, das auf alle Elemente des valarray-Operanden angewendet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -141,7 +143,7 @@ Ein valarray-Objekt, dessen Elemente `_Func` elementweise auf die Elemente des v
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt ein Objekt der Klasse [valarray](../standard-library/valarray-class.md)**\<Type>** mit der Länge [size](#size) zurück, dessen Elemente `I` jeweils **func**(( **\*this**)[ `I`]) sind.
+Die Memberfunktion gibt ein Objekt der Klasse [Valarray](../standard-library/valarray-class.md)**\<Typ >**, Länge [Größe](#size), jedes, deren Elemente *ich*ist `_Func((*this)[I])`.
 
 ### <a name="example"></a>Beispiel
 
@@ -185,11 +187,11 @@ int main( int argc, char* argv[] )
       cout << " " << vaApplied[i];
    cout << " )" << endl;
 }
-\* Output:
+/* Output:
 The initial Right valarray is: ( 0 0 -2 3 0 -5 6 0 -8 9 )
 The element-by-element result of applying MyApplyFunc to vaR is the
 valarray: (  0 0 -4 6 0 -10 12 0 -16 18 )
-*\
+*/
 ```
 
 ## <a name="cshift"></a> valarray::cshift
@@ -202,8 +204,8 @@ valarray<Type> cshift(int count) const;
 
 ### <a name="parameters"></a>Parameter
 
-*count*  
- Die Anzahl der Stellen, um die die Elemente nach vorn verschoben werden.
+*count*<br/>
+Die Anzahl der Stellen, um die die Elemente nach vorn verschoben werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -259,14 +261,14 @@ int main()
         cout << " " << va2[i];
     cout << ")" << endl;
 }
-\* Output:
+/* Output:
 The operand valarray va1 is: ( 0 1 2 3 4 5 6 7 8 9)
 The cyclically shifted valarray va1 is:
 va1.cshift (4) = ( 4 5 6 7 8 9 0 1 2 3)
 The operand valarray va2 is: ( 10 9 8 7 6 5 4 3 2 1)
 The cyclically shifted valarray va2 is:
 va2.shift (-4) = ( 4 3 2 1 10 9 8 7 6 5)
-*\
+*/
 ```
 
 ## <a name="free"></a> valarray::free
@@ -334,10 +336,10 @@ int main( )
    cout << "The largest element in the valarray is: "
         << MaxValue  << "." << endl;
 }
-\* Output:
+/* Output:
 The operand valarray is: ( 0 1 8 3 7 5 6 13 2 9 ).
 The largest element in the valarray is: 13.
-*\
+*/
 ```
 
 ## <a name="min"></a> valarray::min
@@ -386,10 +388,10 @@ int main( )
    cout << "The smallest element in the valarray is: "
         << MinValue  << "." << endl;
 }
-\* Output:
+/* Output:
 The operand valarray is: ( 0 2 3 -3 8 0 -6 14 -3 -9 ).
 The smallest element in the valarray is: -9.
-*\
+*/
 ```
 
 ## <a name="op_not"></a> valarray::operator!
@@ -442,11 +444,11 @@ int main( )
          cout << vaNOT [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial valarray is:  ( 0 0 0 2 0 4 0 6 0 8 ).
 The element-by-element result of the logical NOT operator! is the
  valarray: ( 1 1 1 0 1 0 1 0 1 0 ).
-*\
+*/
 ```
 
 ## <a name="op_mod_eq"></a> valarray::operator%=
@@ -461,8 +463,8 @@ valarray<Type>& operator%=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Division des valarray-Operanden identisch ist.
+*right*<br/>
+Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Division des valarray-Operanden identisch ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -506,12 +508,12 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial valarray is: ( 53 -67 53 -67 53 -67 ).
 The initial  right valarray is: ( 1 4 7 10 13 16 ).
 The remainders from the element-by-element division is the
  valarray: ( 0 -3 4 -7 1 -3 ).
-*\
+*/
 ```
 
 ## <a name="and_eq"></a> valarray::operator&amp;=
@@ -526,8 +528,8 @@ valarray<Type>& operator&=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Das valarray-Objekts oder der Wert eines Elementtyps identisch mit dem des Valarray-Operanden, die kombiniert werden, durch den logischen elementweise `AND` mit dem Valarray-Operanden.
+*right*<br/>
+Das valarray-Objekts oder der Wert eines Elementtyps identisch mit dem des Valarray-Operanden, die kombiniert werden, durch den logischen elementweise `AND` mit dem Valarray-Operanden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -577,12 +579,12 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial valarray is:  ( 0 0 0 2 0 4 0 6 0 8 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the logical AND operator&= is the
  valarray: ( 0 0 0 2 0 4 0 6 0 8 ).
-*\
+*/
 ```
 
 ## <a name="op_gt_gt_eq"></a> valarray::operator&gt;&gt;=
@@ -597,8 +599,8 @@ valarray<Type>& operator>>=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Der Wert, der den Betrag angibt, um den die Bits nach rechts verschoben werden, oder das valarray-Objekt, dessen Elemente den elementweisen Betrag angeben, um den die Bits nach rechts verschoben werden.
+*right*<br/>
+Der Wert, der den Betrag angibt, um den die Bits nach rechts verschoben werden, oder das valarray-Objekt, dessen Elemente den elementweisen Betrag angeben, um den die Bits nach rechts verschoben werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -646,12 +648,12 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial operand valarray is: ( 64 -64 64 -64 64 -64 64 -64 ).
 The  right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the right shift is the
  valarray: ( 64 -32 16 -8 4 -2 1 -1 ).
-*\
+*/
 ```
 
 ## <a name="op_lt_lt_eq"></a> valarray::operator&lt;&lt;=
@@ -666,8 +668,8 @@ valarray<Type>& operator<<=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Der Wert, der den Betrag angibt, um den die Bits nach links verschoben werden, oder das valarray-Objekt, dessen Elemente den elementweisen Betrag angeben, um den die Bits nach links verschoben werden.
+*right*<br/>
+Der Wert, der den Betrag angibt, um den die Bits nach links verschoben werden, oder das valarray-Objekt, dessen Elemente den elementweisen Betrag angeben, um den die Bits nach links verschoben werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -715,13 +717,13 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial operand valarray is: ( 1 -1 1 -1 1 -1 1 -1 ).
 The  right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the left shift
  on the operand array is the valarray:
  ( 1 -2 4 -8 16 -32 64 -128 ).
-*\
+*/
 ```
 
 ## <a name="op_star_eq"></a> valarray::operator*=
@@ -736,8 +738,8 @@ valarray<Type>& operator*=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Multiplikation des valarray-Operanden identisch ist.
+*right*<br/>
+Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Multiplikation des valarray-Operanden identisch ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -781,12 +783,12 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial valarray is: ( 2 -1 2 -1 2 -1 2 -1 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the multiplication is the
  valarray: ( 0 -1 4 -3 8 -5 12 -7 ).
-*\
+*/
 ```
 
 ## <a name="op_add"></a> valarray::operator+
@@ -833,11 +835,11 @@ int main( )
          cout << vaPLUS [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial valarray is:  ( 0 0 -2 2 -4 4 -6 6 -8 8 ).
 The element-by-element result of the operator+ is the
  valarray: ( 0 0 -2 2 -4 4 -6 6 -8 8 ).
-*\
+*/
 ```
 
 ## <a name="op_add_eq"></a> valarray::operator+=
@@ -852,8 +854,8 @@ valarray<Type>& operator+=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Addition mit dem valarray-Operanden identisch ist.
+*right*<br/>
+Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Addition mit dem valarray-Operanden identisch ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -897,12 +899,12 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial valarray is: ( 2 -1 2 -1 2 -1 2 -1 ).
 The initial  right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the sum is the
  valarray: ( 2 0 4 2 6 4 8 6 ).
-*\
+*/
 ```
 
 ## <a name="valarray__operator-"></a> valarray::operator-
@@ -949,11 +951,11 @@ int main( )
          cout << vaMINUS [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial valarray is:  ( 0 0 -2 2 -4 4 -6 6 -8 8 ).
 The element-by-element result of the operator+ is the
  valarray: ( 0 0 2 -2 4 -4 6 -6 8 -8 ).
-*\
+*/
 ```
 
 ## <a name="valarray__operator-_eq"></a> valarray::operator-=
@@ -968,8 +970,8 @@ valarray<Type>& operator-=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Subtraktion vom valarray-Operanden identisch ist.
+*right*<br/>
+Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Subtraktion vom valarray-Operanden identisch ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1013,12 +1015,12 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial valarray is: ( 10 0 10 0 10 0 10 0 ).
 The initial  right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the difference is the
  valarray: ( 10 -1 8 -3 6 -5 4 -7 ).
-*\
+*/
 ```
 
 ## <a name="op_div_eq"></a> valarray::operator/=
@@ -1033,8 +1035,8 @@ valarray<Type>& operator/=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Division durch den valarray-Operanden identisch ist.
+*right*<br/>
+Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Division durch den valarray-Operanden identisch ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1078,12 +1080,12 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial valarray is: ( 100 -100 100 -100 100 -100 ).
 The initial Right valarray is: ( 0 2 4 6 8 10 ).
 The element-by-element result of the quotient is the
  valarray: ( inf -50 25 -16.6667 12.5 -10 ).
-*\
+*/
 ```
 
 ## <a name="op_eq"></a> valarray::operator=
@@ -1108,23 +1110,23 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Das valarray-Objekt, das in den valarray-Operanden kopiert wird.
+*right*<br/>
+Das valarray-Objekt, das in den valarray-Operanden kopiert wird.
 
-*val*  
- Der Wert, der den Elementen des valarray-Operanden zugewiesen wird.
+*val*<br/>
+Der Wert, der den Elementen des valarray-Operanden zugewiesen wird.
 
-*_Slicearray*  
- Das slice_array-Element, das in den valarray-Operanden kopiert wird.
+*_Slicearray*<br/>
+Das slice_array-Element, das in den valarray-Operanden kopiert wird.
 
-*_Gslicearray*  
- Das gslice_array-Element, das in den valarray-Operanden kopiert wird.
+*_Gslicearray*<br/>
+Das gslice_array-Element, das in den valarray-Operanden kopiert wird.
 
-*_Maskarray*  
- Das mask_array-Element, das in den valarray-Operanden kopiert wird.
+*_Maskarray*<br/>
+Das mask_array-Element, das in den valarray-Operanden kopiert wird.
 
-*_Indarray*  
- Das indirect_array-Element, das in den valarray-Operanden kopiert wird.
+*_Indarray*<br/>
+Das indirect_array-Element, das in den valarray-Operanden kopiert wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1186,12 +1188,12 @@ int main( )
          cout << " " << va [ i ];
    cout << endl;
 }
-\* Output:
+/* Output:
 The operand valarray va is: 0 1 2 3 4 5 6 7 8 9
 The operand valarray vaR is: 10 9 8 7 6 5 4 3 2 1
 The reassigned valarray va is: 10 9 8 7 6 5 4 3 2 1
 The reassigned valarray va is: 10 10 10 10 10 10 10 10 10 10
-*\
+*/
 ```
 
 ## <a name="op_at"></a> valarray::operator[]
@@ -1226,20 +1228,20 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Off*  
- Der Index des Elements, das einem Wert zugewiesen werden soll.
+*_Off*<br/>
+Der Index des Elements, das einem Wert zugewiesen werden soll.
 
-*_Slicearray*  
- Ein slice_array-Element eines valarray-Objekts, das eine Teilmenge angibt, die ausgewählt oder an ein neues valarray-Objekt zurückgegeben werden soll.
+*_Slicearray*<br/>
+Ein slice_array-Element eines valarray-Objekts, das eine Teilmenge angibt, die ausgewählt oder an ein neues valarray-Objekt zurückgegeben werden soll.
 
-*_Gslicearray*  
- Ein gslice_array-Element eines valarray-Objekts, das eine Teilmenge angibt, die ausgewählt oder an ein neues valarray-Objekt zurückgegeben werden soll.
+*_Gslicearray*<br/>
+Ein gslice_array-Element eines valarray-Objekts, das eine Teilmenge angibt, die ausgewählt oder an ein neues valarray-Objekt zurückgegeben werden soll.
 
-*_Boolarray*  
- Ein bool_array-Element eines valarray-Objekts, das eine Teilmenge angibt, die ausgewählt oder an ein neues valarray-Objekt zurückgegeben werden soll.
+*_Boolarray*<br/>
+Ein bool_array-Element eines valarray-Objekts, das eine Teilmenge angibt, die ausgewählt oder an ein neues valarray-Objekt zurückgegeben werden soll.
 
-*_Indarray*  
- Ein indirect_array-Element eines valarray-Objekts, das eine Teilmenge angibt, die ausgewählt oder an ein neues valarray-Objekt zurückgegeben werden soll.
+*_Indarray*<br/>
+Ein indirect_array-Element eines valarray-Objekts, das eine Teilmenge angibt, die ausgewählt oder an ein neues valarray-Objekt zurückgegeben werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1247,7 +1249,7 @@ Ein Verweis auf ein Element oder auf den Wert, den es am angegebenen Index oder 
 
 ### <a name="remarks"></a>Hinweise
 
-Der Memberoperator wird überladen, um bieten verschiedene Möglichkeiten zum Auswählen von Sequenzen von Elementsequenzen aus denjenigen von gesteuert *\****dies**. Die erste Gruppe von fünf Memberoperatoren werden zusammen mit verschiedenen Überladungen von [operator=](#op_eq) (und anderen zuweisenden Operatoren) verwendet, um ein selektives Ersetzen (Slicing) der gesteuerten Sequenz zu ermöglichen. Dabei müssen die ausgewählten Elemente vorhanden sein.
+Der Memberoperator wird überladen, um bieten verschiedene Möglichkeiten zum Auswählen von Sequenzen von Elementsequenzen aus denjenigen von gesteuert  <strong>\*dies</strong>. Die erste Gruppe von fünf Memberoperatoren werden zusammen mit verschiedenen Überladungen von [operator=](#op_eq) (und anderen zuweisenden Operatoren) verwendet, um ein selektives Ersetzen (Slicing) der gesteuerten Sequenz zu ermöglichen. Dabei müssen die ausgewählten Elemente vorhanden sein.
 
 Wenn [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) beim Kompilieren als 1 oder 2 definiert ist, tritt beim Zugriff auf ein Element außerhalb des valarray-Objekts ein Laufzeitfehler auf.  Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
 
@@ -1267,8 +1269,8 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem valarray-Operanden identisch ist, der durch den logischen **XOR**-Operator mit dem valarray-Operanden elementweise verknüpft werden soll.
+*right*<br/>
+Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem valarray-Operanden identisch ist, der durch den logischen **XOR**-Operator mit dem valarray-Operanden elementweise verknüpft werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1320,12 +1322,12 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial operand valarray is:  ( 1 0 1 0 1 0 1 0 1 0 ).
 The  right valarray is: ( 0 0 1 3 3 4 6 6 7 9 ).
 The element-by-element result of the bitwise XOR operator^= is the
  valarray: ( 1 0 0 3 2 4 7 6 6 9 ).
-*\
+*/
 ```
 
 ## <a name="op_or_eq"></a> valarray::operator|=
@@ -1340,8 +1342,8 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*  
- Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem valarray-Operanden identisch ist, der durch den bitweisen `OR`-Operator mit dem valarray-Operanden elementweise verknüpft werden soll.
+*right*<br/>
+Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem valarray-Operanden identisch ist, der durch den bitweisen `OR`-Operator mit dem valarray-Operanden elementweise verknüpft werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1395,7 +1397,7 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial operand valarray is:
  ( 1 0 1 0 1 0 1 0 1 0 ).
 The  right valarray is:
@@ -1403,7 +1405,7 @@ The  right valarray is:
 The element-by-element result of the logical OR
  operator|= is the valarray:
  ( 1 0 1 3 3 4 7 6 7 9 ).
-*\
+*/
 ```
 
 ## <a name="op_dtor"></a> valarray::operator~
@@ -1486,7 +1488,8 @@ int main( )
          cout << vaNOT2 [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+
+/* Output:
 The initial valarray <unsigned short int> is:  ( 0 5 2 15 4 25 6 35 8 45 ).
 The element-by-element result of the bitwise NOT operator~ is the
  valarray: ( 65535 65530 65533 65520 65531 65510 65529 65500 65527 65490 ).
@@ -1497,7 +1500,7 @@ The element-by-element result of the bitwise NOT operator~ is the
 The element-by-element result of adding one
  is the negative of the original elements the
  valarray: ( 0 2 -2 6 -4 10 -6 14 -8 18 ).
-*\
+*/
 ```
 
 ## <a name="resize"></a> valarray::resize
@@ -1515,11 +1518,11 @@ void resize(
 
 ### <a name="parameters"></a>Parameter
 
-*_Newsize*  
- Die Anzahl der Elemente im „valarray“, dessen Größe angepasst wird.
+*_Newsize*<br/>
+Die Anzahl der Elemente im „valarray“, dessen Größe angepasst wird.
 
-*val*  
- Der Wert, der an die Elemente des „valarray“ übergeben wird, dessen Größe angepasst wird.
+*val*<br/>
+Der Wert, der an die Elemente des „valarray“ übergeben wird, dessen Größe angepasst wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1586,8 +1589,8 @@ valarray<Type> shift(int count) const;
 
 ### <a name="parameters"></a>Parameter
 
-*count*  
- Die Anzahl der Stellen, um die die Elemente nach vorn verschoben werden.
+*count*<br/>
+Die Anzahl der Stellen, um die die Elemente nach vorn verschoben werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1642,12 +1645,12 @@ int main( )
          cout << va2 [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The operand valarray va1(10) is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The shifted valarray va1 is: va1.shift (4) = ( 4 5 6 7 8 9 0 0 0 0 ).
 The operand valarray va2(10) is: ( 10 9 8 7 6 5 4 3 2 1 ).
 The shifted valarray va2 is: va2.shift (-4) = ( 0 0 0 0 10 9 8 7 6 5 ).
-*\
+*/
 ```
 
 ## <a name="size"></a> valarray::size
@@ -1770,10 +1773,10 @@ int main( )
    cout << "The sum of elements in the valarray is: "
         << sumva  << "." <<endl;
 }
-\* Output:
+/* Output:
 The operand valarray va (10) is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The sum of elements in the valarray is: 45.
-*\
+*/
 ```
 
 ## <a name="swap"></a> valarray::swap
@@ -1836,32 +1839,32 @@ valarray(
 
 ### <a name="parameters"></a>Parameter
 
-*Anzahl*  
- Die Anzahl von Elementen im Wertarray.
+*Anzahl*<br/>
+Die Anzahl von Elementen im Wertarray.
 
-*val*  
- Der beim Initialisieren der Elemente im Wertarray zu verwendende Wert.
+*val*<br/>
+Der beim Initialisieren der Elemente im Wertarray zu verwendende Wert.
 
-*PTR*  
- Zeiger auf die beim Initialisieren der Elemente im Wertarray zu verwendenden Werte.
+*PTR*<br/>
+Zeiger auf die beim Initialisieren der Elemente im Wertarray zu verwendenden Werte.
 
-*Rechts*  
- Ein vorhandenes Wertarray, mit dem das neue Wertarray initialisiert wird.
+*Rechts*<br/>
+Ein vorhandenes Wertarray, mit dem das neue Wertarray initialisiert wird.
 
-*SliceArray*  
- Ein slice_array-Element, dessen Elementwerte beim Initialisieren der Elemente des zu erstellenden Wertarrays verwendet werden sollen.
+*SliceArray*<br/>
+Ein slice_array-Element, dessen Elementwerte beim Initialisieren der Elemente des zu erstellenden Wertarrays verwendet werden sollen.
 
-*GsliceArray*  
- Ein gslice_array-Element, dessen Elementwerte beim Initialisieren der Elemente des zu erstellenden Wertarrays verwendet werden sollen.
+*GsliceArray*<br/>
+Ein gslice_array-Element, dessen Elementwerte beim Initialisieren der Elemente des zu erstellenden Wertarrays verwendet werden sollen.
 
-*MaskArray*  
- Ein mask_array-Element, dessen Elementwerte beim Initialisieren der Elemente des zu erstellenden Wertarrays verwendet werden sollen.
+*MaskArray*<br/>
+Ein mask_array-Element, dessen Elementwerte beim Initialisieren der Elemente des zu erstellenden Wertarrays verwendet werden sollen.
 
-*IndArray*  
- Ein indirect_array-Element, dessen Elementwerte beim Initialisieren der Elemente des zu erstellenden Wertarrays verwendet werden sollen.
+*IndArray*<br/>
+Ein indirect_array-Element, dessen Elementwerte beim Initialisieren der Elemente des zu erstellenden Wertarrays verwendet werden sollen.
 
-*IList*  
- Das initializer_list-Element, in dem die zu kopierenden Elemente enthalten sind.
+*IList*<br/>
+Das initializer_list-Element, in dem die zu kopierenden Elemente enthalten sind.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1973,11 +1976,11 @@ int main( )
          cout << va [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial operand valarray is:  ( 0 -1 2 -1 4 -1 6 -1 8 -1 ).
 The decalared value_type Right is: 10
 The resulting valarray is:  ( 0 -10 20 -10 40 -10 60 -10 80 -10 ).
-*\
+*/
 ```
 
 ## <a name="see-also"></a>Siehe auch

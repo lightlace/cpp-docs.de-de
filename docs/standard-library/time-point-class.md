@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::chrono [C++], time_point
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99209063e8856ffe9ea26ffaaf0917e1f6cd487b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: eb5390ad8fec7e355181c9711de1bb14d3b17820
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954259"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705977"
 ---
 # <a name="timepoint-class"></a>time_point-Klasse
 
@@ -111,8 +111,8 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parameter
 
-*Abfragedauer*  
- Ein `duration`-Objekt.
+*Abfragedauer*<br/>
+Ein `duration`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -128,8 +128,8 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parameter
 
-*Abfragedauer*  
- Ein `duration`-Objekt.
+*Abfragedauer*<br/>
+Ein `duration`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -150,17 +150,17 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>Parameter
 
-*Abfragedauer*  
- Ein [duration](../standard-library/duration-class.md)-Objekt.
+*Abfragedauer*<br/>
+Ein [duration](../standard-library/duration-class.md)-Objekt.
 
-*TP*  
- Ein `time_point`-Objekt.
+*TP*<br/>
+Ein `time_point`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
 Mit dem ersten Konstruktor wird ein Objekt erstellt, dessen gespeicherter `duration`-Wert [duration::zero](../standard-library/duration-class.md#zero) entspricht.
 
-Der zweite Konstruktor erstellt ein Objekt, dessen gespeicherte Duration-Wert gleich ist *Dur*. Sofern `is_convertible<Duration2, duration>` *wahr ist*, wird der zweite Konstruktor nicht an der Überladungsauflösung beteiligt. Weitere Informationen finden Sie unter [<type_traits>](../standard-library/type-traits.md).
+Der zweite Konstruktor erstellt ein Objekt, dessen gespeicherte Duration-Wert gleich ist *Dur*. Es sei denn, `is_convertible<Duration2, duration>` enthält "true", der zweite Konstruktor nicht an der überladungsauflösung beteiligt. Weitere Informationen finden Sie unter [<type_traits>](../standard-library/type-traits.md).
 
 Mit dem dritten Konstruktor wird der `duration`-Wert initialisiert, indem `Tp.time_since_epoch()` verwendet wird.
 

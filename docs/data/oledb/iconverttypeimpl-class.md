@@ -1,5 +1,5 @@
 ---
-title: IConvertTypeImpl-Klasse | Microsoft Docs
+title: IConvertTypeImpl-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,25 +11,30 @@ f1_keywords:
 - ATL.IConvertTypeImpl
 - ATL::IConvertTypeImpl
 - ATL::IConvertTypeImpl<T>
+- IConvertTypeImpl.CanConvert
+- CanConvert
+- IConvertTypeImpl::CanConvert
 dev_langs:
 - C++
 helpviewer_keywords:
 - IConvertTypeImpl class
+- CanConvert method
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b9a8fdef3abf0c33fb6fca857086e6490ec959e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ed4eefe8c05e2b5b027ba1d7c1fec022c9e44409
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33100043"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104945"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl-Klasse
-Stellt eine Implementierung von der [IConvertType](https://msdn.microsoft.com/en-us/library/ms715926.aspx) Schnittstelle.  
+
+Stellt eine Implementierung der [IConvertType](/previous-versions/windows/desktop/ms715926\(v=vs.85\)) Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax
 
@@ -39,9 +44,14 @@ class ATL_NO_VTABLE IConvertTypeImpl
    : public IConvertType, public CConvertHelper  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `T`  
- Die Klasse abgeleitet `IConvertTypeImpl`.  
+### <a name="parameters"></a>Parameter  
+
+*T*<br/>
+Abgeleitet von die Klasse `IConvertTypeImpl`.  
+
+## <a name="requirements"></a>Anforderungen  
+
+**Header:** „atldb.h“  
   
 ## <a name="members"></a>Member  
   
@@ -49,14 +59,33 @@ class ATL_NO_VTABLE IConvertTypeImpl
   
 |||  
 |-|-|  
-|[CanConvert](../../data/oledb/iconverttypeimpl-canconvert.md)|Erhalten Informationen über die Verfügbarkeit von typkonvertierungen aus, auf einen Befehl oder für ein Rowset.|  
+|[CanConvert](#canconvert)|Erhalten Informationen über die Verfügbarkeit von typkonvertierungen für einen Befehl oder in einem Rowset.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Schnittstelle ist verbindlich auf Befehle, Rowsets und Index-Rowsets. **IConvertTypeImpl** implementiert die Schnittstelle, indem Sie auf die vom OLE DB-Konvertierungsobjekt delegieren.  
+
+Diese Schnittstelle ist obligatorisch. Befehle, Rowsets und Indexes-Schemarowsets. `IConvertTypeImpl` implementiert die Schnittstelle durch delegieren, auf das Konvertierungsobjekt von OLE DB bereitgestellt.  
+
+## <a name="canconvert"></a> Iconverttypeimpl:: CanConvert
+
+Erhalten Informationen über die Verfügbarkeit von typkonvertierungen für einen Befehl oder in einem Rowset.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** „atldb.h“  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+STDMETHOD(CanConvert)(DBTYPE wFromType,   
+   DBTYPE wToType,   
+   DBCONVERTFLAGS dwConvertFlags);  
+```  
+  
+#### <a name="parameters"></a>Parameter  
+
+Finden Sie unter [IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+  
+### <a name="remarks"></a>Hinweise  
+
+Verwendet OLE DB-Datenkonvertierung in `MSADC.DLL`.  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

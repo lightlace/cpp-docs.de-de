@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3163 | Microsoft Docs
+title: Compilerfehler C3163 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7be8fbba29cf82070d6fd96c76f810bda961489
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e712a70bdd443d9a6c640853b958f29dac78dbd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250888"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061967"
 ---
 # <a name="compiler-error-c3163"></a>Compilerfehler C3163
-'construct': Attribute, die mit der vorherigen Deklaration nicht konsistent.  
-  
- Die Attribute, die für die Definition einer angewendet werden in Konflikt mit den Attributen, die eine Deklaration angewendet werden.  
-  
- Eine Möglichkeit zum Auflösen von C3163 ist um Attribute für die Vorwärtsdeklaration zu entfernen. Alle Attribute in einer Vorwärtsdeklaration sollte niedriger sein als die Attribute für die Definition oder höchstens gleich.  
-  
- Eine mögliche Ursache des Fehlers C3163 umfasst Microsoft Source Code Annotation Language (SAL). Die SAL-Makros nicht erweitern, wenn Sie das Projekt, mithilfe kompiliert der **/ analyze** Flag. Ein Programm, das kompiliert wird ordnungsgemäß heruntergefahren, ohne / analyze möglicherweise C3163 auslösen, wenn Sie versuchen, kompilieren sie mit der / analyze-Option. Weitere Informationen zu SAL, finden Sie unter [SAL-Anmerkungen](../../c-runtime-library/sal-annotations.md).  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C3163 generiert.  
-  
-```  
-// C3163.cpp  
-// compile with: /clr /c  
-using namespace System;  
-  
-[CLSCompliant(true)] void f();  
-[CLSCompliant(false)] void f() {}   // C3163  
-// try the following line instead  
-// [CLSCompliant(true)] void f() {}  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [SAL-Anmerkungen](../../c-runtime-library/sal-annotations.md)
+
+'construct': Attribute, die mit der vorherigen Deklaration inkonsistent.
+
+Die Attribute, die zu einem Konflikt Definition mit die Attribute angewendet werden, die auf eine Deklaration angewendet werden.
+
+Eine Möglichkeit zum Beheben von C3163 werden Attribute in der Vorwärtsdeklaration zu vermeiden. Alle Attribute in einer Vorwärtsdeklaration sollte niedriger sein als die Attribute in der Definition oder höchstens gleich an Sie.
+
+Eine mögliche Ursache des Fehlers C3163 umfasst die Microsoft Source Code Annotation Language (SAL). Die SAL-Makros nicht erweitern, wenn das Projekt kompilieren mit der **/ analyze** Flag. Ein Programm, das problemlos kompilieren ohne / analyze kann C3163 auslösen, wenn Sie versuchen, kompilieren sie mit dem / analyze-Option. Weitere Informationen zu SAL, finden Sie unter [SAL-Anmerkungen](../../c-runtime-library/sal-annotations.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C3163 generiert.
+
+```
+// C3163.cpp
+// compile with: /clr /c
+using namespace System;
+
+[CLSCompliant(true)] void f();
+[CLSCompliant(false)] void f() {}   // C3163
+// try the following line instead
+// [CLSCompliant(true)] void f() {}
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[SAL-Anmerkungen](../../c-runtime-library/sal-annotations.md)

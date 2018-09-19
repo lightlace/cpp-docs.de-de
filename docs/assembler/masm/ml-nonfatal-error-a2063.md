@@ -1,7 +1,7 @@
 ---
-title: ML nicht schwerwiegende Fehler A2063 | Microsoft Docs
+title: Schwerwiegender ML--Fehler A2063 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0d270a2e2d039ee14ddbcb72ca666d9d54e6d9c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c5ce02fcbab6452b45f38d7d8becff64a880d403
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057655"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680735"
 ---
 # <a name="ml-nonfatal-error-a2063"></a>Nicht schwerwiegender ML-Fehler A2063
-**AUSRICHTEN können, nur auf Potenz von 2: Ausdruck**  
-  
- Mit der angegebene Ausdruck der [AUSRICHTEN](../../assembler/masm/align-masm.md) Richtlinie war ungültig.  
-  
- Die **AUSRICHTEN** Ausdruck muss eine Potenz von 2 zwischen 2 und 256 sein und muss kleiner oder gleich der Ausrichtung des die aktuelle Segment, Struktur oder Union.  
-  
-## <a name="see-also"></a>Siehe auch  
- [ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)
+
+**AUSRICHTEN können, nur auf die Potenz von 2: Ausdruck**
+
+Der Ausdruck angegeben wird, mit der [AUSRICHTEN](../../assembler/masm/align-masm.md) Direktive war ungültig.
+
+Die **AUSRICHTEN** Ausdruck muss eine Potenz von 2 zwischen 2 und 256 sein und muss kleiner oder gleich die Ausrichtung des die aktuelle Segment, Struktur oder Union.
+
+## <a name="see-also"></a>Siehe auch
+
+[ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)<br/>

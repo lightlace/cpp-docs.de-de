@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91f9dfd76348859513875c2dfca98d5fd11c96d2
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 9eb3b70851cb5e51ef2ddc0e99347c81fe632b6d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338697"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726660"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl-Klasse
 Kapselt die Funktionalität eines Steuerelements für die Datums- und Zeitauswahl.  
@@ -98,7 +98,7 @@ class CDateTimeCtrl : public CWnd
 ## <a name="remarks"></a>Hinweise  
  Die Datums- / Zeitauswahl-Steuerelement (DTP-Steuerelement) bietet eine einfache Schnittstelle zum Austauschen von Informationen über Datum und Uhrzeit mit einem Benutzer. Diese Schnittstelle enthält Felder, von die jede einen Teil der Datum und Uhrzeit-Informationen, die in das Steuerelement gespeichert werden angezeigt. Der Benutzer kann die Informationen in das Steuerelement gespeichert werden, ändern Sie den Inhalt der Zeichenfolge in einem bestimmten Feld ändern. Der Benutzer kann von Feld zu Feld mit der Maus oder Tastatur navigieren.  
   
- Sie können den Datums- / Zeitauswahl-Steuerelement anpassen, indem Sie eine Vielzahl von Formaten auf das Objekt angewendet werden, bei der Erstellung. Finden Sie unter [Datums- und Uhrzeitformate Zeitauswahl-Steuerelement](http://msdn.microsoft.com/library/windows/desktop/bb761728) im Windows SDK für Weitere Informationen zu Stilen, die spezifisch für die Datums- / Zeitauswahl-Steuerelement. Sie können das Anzeigeformat des DTP-Steuerelements mit Datenformate festlegen. Diese Stile Format werden unter "Format-Stile" beschrieben, in dem Windows SDK-Thema [Datums- und Uhrzeitformate Zeitauswahl-Steuerelement](http://msdn.microsoft.com/library/windows/desktop/bb761728).  
+ Sie können den Datums- / Zeitauswahl-Steuerelement anpassen, indem Sie eine Vielzahl von Formaten auf das Objekt angewendet werden, bei der Erstellung. Finden Sie unter [Datums- und Uhrzeitformate Zeitauswahl-Steuerelement](/windows/desktop/Controls/date-and-time-picker-control-styles) im Windows SDK für Weitere Informationen zu Stilen, die spezifisch für die Datums- / Zeitauswahl-Steuerelement. Sie können das Anzeigeformat des DTP-Steuerelements mit Datenformate festlegen. Diese Stile Format werden unter "Format-Stile" beschrieben, in dem Windows SDK-Thema [Datums- und Uhrzeitformate Zeitauswahl-Steuerelement](/windows/desktop/Controls/date-and-time-picker-control-styles).  
   
  Die Datums- / Zeitauswahl-Steuerelement außerdem Benachrichtigungen und Rückrufe, die in beschriebenen verwendet [Verwenden von CDateTimeCtrl](../../mfc/using-cdatetimectrl.md).  
   
@@ -129,7 +129,7 @@ void CloseMonthCal() const;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [DTM_CLOSEMONTHCAL](http://msdn.microsoft.com/library/windows/desktop/bb761753) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [DTM_CLOSEMONTHCAL](/windows/desktop/Controls/dtm-closemonthcal) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable *M_dateTimeCtrl*, d. h. verwendet, um die Datums- / Zeitauswahl-Steuerelement programmgesteuert zugreifen. Diese Variable wird im nächsten Beispiel verwendet.  
@@ -154,10 +154,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parameter  
  *dwStyle*  
- Gibt die Kombination aus Datum Uhrzeit Stile von Listensteuerelementen an. Finden Sie unter [Datums- und Uhrzeitformate Zeitauswahl-Steuerelement](http://msdn.microsoft.com/library/windows/desktop/bb761728) im Windows SDK für Weitere Informationen zu Datums- / Zeitauswahl-Stilen.  
+ Gibt die Kombination aus Datum Uhrzeit Stile von Listensteuerelementen an. Finden Sie unter [Datums- und Uhrzeitformate Zeitauswahl-Steuerelement](/windows/desktop/Controls/date-and-time-picker-control-styles) im Windows SDK für Weitere Informationen zu Datums- / Zeitauswahl-Stilen.  
   
  *Rect*  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Position und Größe von den Datums- / Zeitauswahl-Steuerelement ist.  
+ Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Position und Größe von den Datums- / Zeitauswahl-Steuerelement ist.  
   
  *pParentWnd*  
  Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) -Objekt, das das übergeordnete Fenster von der Datums- / Zeitauswahl-Steuerelement ist. Es darf nicht NULL sein.  
@@ -192,13 +192,13 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] *pDateTimePickerInfo*|Ein Zeiger auf eine [DATETIMEPICKERINFO](http://msdn.microsoft.com/library/windows/desktop/bb761729) Struktur, die eine Beschreibung der aktuellen Datums- / Zeitauswahl-Steuerelement empfängt.<br /><br /> Der Aufrufer ist verantwortlich für die Zuordnung von dieser Struktur. Aber diese Methode initialisiert die *CbSize* Member der Struktur.|  
+|*pDateTimePickerInfo*|[out] Ein Zeiger auf eine [DATETIMEPICKERINFO](/windows/desktop/api/commctrl/ns-commctrl-tagdatetimepickerinfo) Struktur, die eine Beschreibung der aktuellen Datums- / Zeitauswahl-Steuerelement empfängt.<br /><br /> Der Aufrufer ist verantwortlich für die Zuordnung von dieser Struktur. Aber diese Methode initialisiert die *CbSize* Member der Struktur.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [DTM_GETDATETIMEPICKERINFO](http://msdn.microsoft.com/library/windows/desktop/bb761755) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [DTM_GETDATETIMEPICKERINFO](/windows/desktop/Controls/dtm-getdatetimepickerinfo) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable *M_dateTimeCtrl*, d. h. verwendet, um die Datums- / Zeitauswahl-Steuerelement programmgesteuert zugreifen. Diese Variable wird im nächsten Beispiel verwendet.  
@@ -225,7 +225,7 @@ COLORREF GetMonthCalColor(int iColor) const;
  Eine COLORREF-Wert, der die Farbe-Einstellung für den angegebenen Teil des Monatskalender-Steuerelements im Erfolgsfall darstellt. Die Funktion gibt-1 zurück, wenn der Vorgang fehlschlägt.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [DTM_GETMCCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761759), wie im Windows SDK beschrieben.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [DTM_GETMCCOLOR](/windows/desktop/Controls/dtm-getmccolor), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_5.cpp)]  
@@ -267,10 +267,10 @@ DWORD GetMonthCalStyle() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Stil, der im Dropdown-Monatskalender-Steuerelement, das eine bitweise Kombination ist (oder) von Datums- und Zeitformaten der Datumsauswahl-Steuerelement. Weitere Informationen finden Sie unter [Month Calendar-Steuerelement-Stile](http://msdn.microsoft.com/library/windows/desktop/bb760919).  
+ Der Stil, der im Dropdown-Monatskalender-Steuerelement, das eine bitweise Kombination ist (oder) von Datums- und Zeitformaten der Datumsauswahl-Steuerelement. Weitere Informationen finden Sie unter [Month Calendar-Steuerelement-Stile](/windows/desktop/Controls/month-calendar-control-styles).  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [DTM_GETMCSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb761763) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [DTM_GETMCSTYLE](/windows/desktop/Controls/dtm-getmcstyle) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="getrange"></a>  CDateTimeCtrl::GetRange  
  Ruft die aktuellen minimalen und maximalen zulässig Systemzeiten für einen Datums- / Zeitauswahl-Steuerelement ab.  
@@ -304,7 +304,7 @@ DWORD GetRange(
  der erste Parameter ungültig ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [DTM_GETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761767), wie im Windows SDK beschrieben. In der MFC-Implementierung, geben Sie entweder `COleDateTime` oder `CTime` Verwendungen.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [DTM_GETRANGE](/windows/desktop/Controls/dtm-getrange), wie im Windows SDK beschrieben. In der MFC-Implementierung, geben Sie entweder `COleDateTime` oder `CTime` Verwendungen.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#4](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_7.cpp)]  
@@ -323,15 +323,15 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
  In der ersten Version, die einen Verweis auf eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt, das die Zeitinformationen System erhält. In der zweiten Version, die einen Verweis auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) -Objekt, das die Zeitinformationen System erhält.  
   
  *pTimeDest*  
- Ein Zeiger auf die [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, um die Systeminformationen für die Zeit zu erhalten. Nicht darf NULL sein.  
+ Ein Zeiger auf die [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, um die Systeminformationen für die Zeit zu erhalten. Nicht darf NULL sein.  
   
 ### <a name="return-value"></a>Rückgabewert  
- In der ersten Version, die ungleich NULL, wenn die Zeit erfolgreich, um geschrieben wurde die `COleDateTime` -Objekt, andernfalls 0. In den zweiten und dritten-Versionen, ein DWORD-Wert gleich Wert der *DwFlag* Elementgruppe das [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) Struktur. Finden Sie unter den **"Hinweise"** Informationen weiter unten im Abschnitt.  
+ In der ersten Version, die ungleich NULL, wenn die Zeit erfolgreich, um geschrieben wurde die `COleDateTime` -Objekt, andernfalls 0. In den zweiten und dritten-Versionen, ein DWORD-Wert gleich Wert der *DwFlag* Elementgruppe das [NMDATETIMECHANGE](/windows/desktop/api/commctrl/ns-commctrl-tagnmdatetimechange) Struktur. Finden Sie unter den **"Hinweise"** Informationen weiter unten im Abschnitt.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [DTM_GETSYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/bb761769), wie im Windows SDK beschrieben. In der MFC-Implementierung von `GetTime`, können Sie `COleDateTime` oder `CTime` Klassen, oder Sie können eine `SYSTEMTIME` Struktur, um die Informationen zu speichern.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [DTM_GETSYSTEMTIME](/windows/desktop/Controls/dtm-getsystemtime), wie im Windows SDK beschrieben. In der MFC-Implementierung von `GetTime`, können Sie `COleDateTime` oder `CTime` Klassen, oder Sie können eine `SYSTEMTIME` Struktur, um die Informationen zu speichern.  
   
- Der Rückgabewert DWORD in die zweiten und dritten-Versionen, oben gibt an, und zwar unabhängig davon, ob die Datums- / Zeitauswahl-Steuerelement auf den Status "kein Datum" festgelegt ist wie angegeben in der [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) Strukturmember *DwFlags* . Wenn der zurückgegebene Wert GDT_NONE gleich ist, wird das Steuerelement auf "kein Datum" Status festgelegt ist, und verwendet den DTS_SHOWNONE-Stil. Wenn der zurückgegebene Wert GDT_VALID gleich ist, wird die Systemzeit am Zielspeicherort wurde erfolgreich gespeichert.  
+ Der Rückgabewert DWORD in die zweiten und dritten-Versionen, oben gibt an, und zwar unabhängig davon, ob die Datums- / Zeitauswahl-Steuerelement auf den Status "kein Datum" festgelegt ist wie angegeben in der [NMDATETIMECHANGE](/windows/desktop/api/commctrl/ns-commctrl-tagnmdatetimechange) Strukturmember *DwFlags* . Wenn der zurückgegebene Wert GDT_NONE gleich ist, wird das Steuerelement auf "kein Datum" Status festgelegt ist, und verwendet den DTS_SHOWNONE-Stil. Wenn der zurückgegebene Wert GDT_VALID gleich ist, wird die Systemzeit am Zielspeicherort wurde erfolgreich gespeichert.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#5](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_8.cpp)]  
@@ -347,13 +347,13 @@ BOOL GetIdealSize(LPSIZE psize) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] *Psize*|Zeiger auf eine [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) -Struktur, die optimale Größe für das Steuerelement enthält.|  
+|*psize*|[out] Zeiger auf eine [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) -Struktur, die optimale Größe für das Steuerelement enthält.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Rückgabewert ist immer "true".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [DTM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb761757) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [DTM_GETIDEALSIZE](/windows/desktop/Controls/dtm-getidealsize) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable *M_dateTimeCtrl*, d. h. verwendet, um die Datums- / Zeitauswahl-Steuerelement programmgesteuert zugreifen. Diese Variable wird im nächsten Beispiel verwendet.  
@@ -383,7 +383,7 @@ BOOL SetFormat(LPCTSTR pstrFormat);
 >  Erfolg oder Fehler für diesen Aufruf wird der Benutzereingabe nicht ermittelt werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [DTM_SETFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb761771), wie im Windows SDK beschrieben.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [DTM_SETFORMAT](/windows/desktop/Controls/dtm-setformat), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#6](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_10.cpp)]  
@@ -417,7 +417,7 @@ COLORREF SetMonthCalColor(
  Eine COLORREF-Wert, der die vorherige Farbe-Einstellung für den angegebenen Teil des Monatskalender-Steuerelements im Erfolgsfall darstellt. Die Nachricht zurückgegeben, andernfalls -1.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [DTM_SETMCCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761773), wie im Windows SDK beschrieben.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [DTM_SETMCCOLOR](/windows/desktop/Controls/dtm-setmccolor), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CDateTimeCtrl::GetMonthCalColor](#getmonthcalcolor).  
@@ -439,7 +439,7 @@ void SetMonthCalFont(
  Gibt an, ob das Steuerelement sofort neu muss beim Festlegen der Schriftartformats gezeichnet werden. Wenn dieser Parameter auf "true" bewirkt, dass das Steuerelement selbst neu zeichnet.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [DTM_SETMCFONT](http://msdn.microsoft.com/library/windows/desktop/bb761775), wie im Windows SDK beschrieben.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [DTM_SETMCFONT](/windows/desktop/Controls/dtm-setmcfont), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#7](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_11.cpp)]  
@@ -458,13 +458,13 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *DwStyle*|Einen neuen Monat Monatskalender Steuerelementstil, die eine bitweise Kombination (OR) von Month Calendar-Steuerelement-Stile ist. Weitere Informationen finden Sie unter [Month Calendar-Steuerelement-Stile](http://msdn.microsoft.com/library/windows/desktop/bb760919).|  
+|*dwStyle*|[in] Einen neuen Monat Monatskalender Steuerelementstil, die eine bitweise Kombination (OR) von Month Calendar-Steuerelement-Stile ist. Weitere Informationen finden Sie unter [Month Calendar-Steuerelement-Stile](/windows/desktop/Controls/month-calendar-control-styles).|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Den vorherigen Stil des im Dropdown-Monatskalender-Steuerelement.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [DTM_SETMCSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb761778) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [DTM_SETMCSTYLE](/windows/desktop/Controls/dtm-setmcstyle) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable *M_dateTimeCtrl*, d. h. verwendet, um die Datums- / Zeitauswahl-Steuerelement programmgesteuert zugreifen. Diese Variable wird im nächsten Beispiel verwendet.  
@@ -501,7 +501,7 @@ BOOL SetRange(
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [DTM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761780), wie im Windows SDK beschrieben. In der MFC-Implementierung, geben Sie entweder `COleDateTime` oder `CTime` Verwendungen. Wenn die `COleDateTime` Objekt weist den Status NULL, wird der Bereich entfernt. Wenn die `CTime` Zeiger oder die `COleDateTime` Zeiger NULL ist, wird der Bereich entfernt.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [DTM_SETRANGE](/windows/desktop/Controls/dtm-setrange), wie im Windows SDK beschrieben. In der MFC-Implementierung, geben Sie entweder `COleDateTime` oder `CTime` Verwendungen. Wenn die `COleDateTime` Objekt weist den Status NULL, wird der Bereich entfernt. Wenn die `CTime` Zeiger oder die `COleDateTime` Zeiger NULL ist, wird der Bereich entfernt.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CDateTimeCtrl::GetRange](#getrange).  
@@ -520,13 +520,13 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
  Ein Verweis auf eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) Objekt mit der auf dem das Steuerelement festgelegt wird.  
   
  *pTimeNew*  
- In der zweiten Version über einen Zeiger auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) -Objekt, enthält die Zeit, die auf den das Steuerelement festgelegt werden. In der dritten Version über einen Zeiger auf eine [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) -Struktur, enthält die Zeit, die auf den das Steuerelement festgelegt werden.  
+ In der zweiten Version über einen Zeiger auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) -Objekt, enthält die Zeit, die auf den das Steuerelement festgelegt werden. In der dritten Version über einen Zeiger auf eine [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) -Struktur, enthält die Zeit, die auf den das Steuerelement festgelegt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [DTM_SETSYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/bb761782), wie im Windows SDK beschrieben. In der MFC-Implementierung von `SetTime`, können Sie die `COleDateTime` oder `CTime` Klassen, oder Sie können eine `SYSTEMTIME` Struktur, die Zeitinformationen festlegen.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [DTM_SETSYSTEMTIME](/windows/desktop/Controls/dtm-setsystemtime), wie im Windows SDK beschrieben. In der MFC-Implementierung von `SetTime`, können Sie die `COleDateTime` oder `CTime` Klassen, oder Sie können eine `SYSTEMTIME` Struktur, die Zeitinformationen festlegen.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#8](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_13.cpp)]  

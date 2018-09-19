@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2594 | Microsoft Docs
+title: Compilerfehler C2594 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b1de853b8992d3c02eb94c0b050d72539fc3282
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9be22544930bb94c36ec5906cbf60d5caac143fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230689"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058008"
 ---
 # <a name="compiler-error-c2594"></a>Compilerfehler C2594
-'Operator': mehrdeutige Konvertierungen von "Typ1" in "Typ2"  
-  
- Keine Konvertierung von *Typ1* auf *Typ2* wurde eine direktere als alle anderen Werte. Wir empfehlen zwei mögliche Lösungen für die Konvertierung von *Typ1* auf *Typ2*. Die erste Möglichkeit besteht, definieren Sie eine direkte Konvertierung vom *Typ1* auf *Typ2*, und die zweite Möglichkeit ist die Angabe eine Sequenz von Konvertierungen von *Typ1* auf  *Typ2*.  
-  
- Im folgende Beispiel wird C2594 generiert. Die vorgeschlagene Lösung des Fehlers ist eine Sequenz von Konvertierungen:  
-  
-```  
-// C2594.cpp  
-// compile with: /c  
-struct A{};  
-struct I1 : A {};  
-struct I2 : A {};  
-struct D : I1, I2 {};  
-  
-A *f (D *p) {  
-   return (A*) (p);    // C2594  
-  
-// try the following line instead  
-// return static_cast<A *>(static_cast<I1 *>(p));  
-}  
+
+'Operator': Mehrdeutige Konvertierung von 'type1' in 'Typ2'
+
+Keine Konvertierung von *type1* zu *Typ2* war als alle anderen direkter. Sollten zwei mögliche Lösungen zum Konvertieren von *type1* zu *Typ2*. Die erste Möglichkeit besteht, definieren Sie eine direkte Konvertierung von *type1* zu *Typ2*, und die zweite Option zur Angabe einer Abfolge von Konvertierungen von *type1* zu  *Typ2*.
+
+Im folgende Beispiel wird die C2594 generiert. Die vorgeschlagene Lösung an den Fehler ist eine Sequenz von Konvertierungen:
+
+```
+// C2594.cpp
+// compile with: /c
+struct A{};
+struct I1 : A {};
+struct I2 : A {};
+struct D : I1, I2 {};
+
+A *f (D *p) {
+   return (A*) (p);    // C2594
+
+// try the following line instead
+// return static_cast<A *>(static_cast<I1 *>(p));
+}
 ```

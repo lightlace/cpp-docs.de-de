@@ -1,7 +1,7 @@
 ---
-title: '@ (Linker-Antwortdateien festlegen) | Microsoft Docs'
+title: '@ (Festlegen von Linker-Antwortdateien) | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -20,35 +20,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f182abcb26561bd07d62581b3beb9c0d3497ddb1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f692dd8006618661d6710ee6e8e681047fea3b1f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369080"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706300"
 ---
 # <a name="-specify-a-linker-response-file"></a>@ (Festlegen von Linker-Antwortdateien)
-```  
-@response_file  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Dabei gilt:  
-  
- `response_file`  
- Eine Textdatei, Linkerbefehle angeben.  
-  
-## <a name="remarks"></a>Hinweise  
- Finden Sie unter [@ (Geben Sie einen Compiler-Antwortdateien)](../../build/reference/at-specify-a-compiler-response-file.md) für Weitere Informationen.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
-  
-1.  Diese Linkeroption ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
-  
-1.  Diese Linkeroption kann programmgesteuert geändert werden.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
- [Linkeroptionen](../../build/reference/linker-options.md)
+
+Gibt die Linker-Antwortdateien an.
+
+## <a name="syntax"></a>Syntax
+
+> **\@**<em>response_file</em>
+
+## <a name="arguments"></a>Argumente
+
+*response_file*<br/>
+Eine Textdatei Linkerbefehle angeben.
+
+## <a name="remarks"></a>Hinweise
+
+Finden Sie unter [@ (Geben Sie Compiler-Antwortdateien)](../../build/reference/at-specify-a-compiler-response-file.md) für Weitere Informationen.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
+
+- Diese Linkeroption ist nicht verfügbar ist, aus der Visual Studio-Entwicklungsumgebung.
+
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
+
+- Diese Linkeroption kann nicht programmgesteuert geändert werden.
+
+## <a name="see-also"></a>Siehe auch
+
+[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
+[Linkeroptionen](../../build/reference/linker-options.md)

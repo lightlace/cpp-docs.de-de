@@ -1,5 +1,5 @@
 ---
-title: Helpstringcontext | Microsoft Docs
+title: Helpstringcontext | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,67 +17,70 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97b4b43f8cbd8f08cca4f6cf2f21294a625f289c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49fada071661bd647e012bfdfac2aeedabba68fa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874576"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206601"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
-Gibt die ID des Hilfethemas in einer HLP oder CHM-Datei an.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-      [ helpstringcontext(  
-   contextID  
-) ]  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `contextID`  
- Eine 32-Bit-Hilfekontextbezeichner in der Hilfedatei.  
-  
-## <a name="remarks"></a>Hinweise  
- Die **Helpstringcontext** C++-Attribut hat die gleiche Funktionalität wie die [Helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL-Attribut.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// cpp_attr_ref_helpstringcontext.cpp  
-// compile with: /LD  
-#include <unknwn.h>  
-[module(name="MyLib")];  
-  
-[   object,   
-   helpstring("help string"),   
-   helpstringcontext(1),   
-   uuid="11111111-1111-1111-1111-111111111111"  
-]  
-__interface IMyI   
-{  
-   HRESULT xx();  
-};  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-### <a name="attribute-context"></a>Attributkontext  
-  
-|||  
-|-|-|  
-|**Betrifft**|**Klasse**, `interface`,-Schnittstellenmethode|  
-|**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Keiner|  
-|**Ungültige Attribute**|Keiner|  
-  
- Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [IDL-Attribute](../windows/idl-attributes.md)   
- [Schnittstellenattribut](../windows/interface-attributes.md)   
- [Klassenattribute](../windows/class-attributes.md)   
- [Methodenattribut](../windows/method-attributes.md)   
- [Modul](../windows/module-cpp.md)   
+
+Gibt die ID des Hilfethemas in eine .hlp oder CHM-Datei an.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+[ helpstringcontext(
+   contextID
+) ]
+```
+
+### <a name="parameters"></a>Parameter
+
+*contextID*  
+Eine 32-Bit-Hilfekontextbezeichner in die **Hilfe** Datei.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Helpstringcontext** C++-Attribut hat die gleiche Funktionalität wie die [Helpstringcontext](/windows/desktop/Midl/helpstringcontext) ODL-Attribut.
+
+## <a name="example"></a>Beispiel
+
+```cpp
+// cpp_attr_ref_helpstringcontext.cpp
+// compile with: /LD
+#include <unknwn.h>
+[module(name="MyLib")];
+
+[   object,
+   helpstring("help string"),
+   helpstringcontext(1),
+   uuid="11111111-1111-1111-1111-111111111111"
+]
+__interface IMyI
+{
+   HRESULT xx();
+};
+```
+
+## <a name="requirements"></a>Anforderungen
+
+### <a name="attribute-context"></a>Attributkontext
+
+|||
+|-|-|
+|**Betrifft**|**Klasse**, **Schnittstelle**,-Schnittstellenmethode|
+|**Wiederholbar**|Nein|
+|**Erforderliche Attribute**|Keiner|
+|**Ungültige Attribute**|Keiner|
+
+Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[IDL-Attribute](../windows/idl-attributes.md)  
+[Schnittstellenattribut](../windows/interface-attributes.md)  
+[Klassenattribute](../windows/class-attributes.md)  
+[Methodenattribut](../windows/method-attributes.md)  
+[Modul](../windows/module-cpp.md)  

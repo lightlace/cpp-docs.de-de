@@ -54,17 +54,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7a303e80b58207e555dbd9067982ee1e2c506bb3
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 198fd5bee9ea65888f24a0514ed6a2b79b0fa8c3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110020"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678028"
 ---
 # <a name="windows-operations-ccli"></a>Windows-Vorgänge (C++/CLI)
-Veranschaulicht verschiedene Windows-spezifische Aufgaben mit der [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
+Veranschaulicht verschiedene Windows-spezifische Aufgaben, die mit dem Windows SDK.  
   
- In den folgenden Themen veranschaulichen die verschiedenen Windows-Operationen mit den [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] mithilfe von Visual C++.  
+ In den folgenden Themen veranschaulichen die verschiedenen Windows-Operationen mit dem Windows SDK, die mit Visual C++.  
 
 ## <a name="determine_shutdown"></a> Bestimmt, ob das Herunterfahren begonnen hat
 Im folgenden Codebeispiel wird veranschaulicht, zu bestimmen, ob die Anwendung oder .NET Framework gerade beendet wird. Dies ist nützlich für den Zugriff auf statische Elemente in .NET Framework, da während des Herunterfahrens können diese Konstrukte durch das System beendet werden und können nicht zuverlässig verwendet werden kann. Durch Überprüfen der <xref:System.Environment.HasShutdownStarted%2A> Eigenschaft zunächst können Sie potenzielle Fehler vermeiden, indem Sie nicht auf diese Elemente zugreifen.  
@@ -499,12 +499,10 @@ int main()
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Sie können .NET Framework verwenden, um Zugriff auf die Registrierung mit der <xref:Microsoft.Win32.Registry> und [RegistryKey](https://msdn.microsoft.com/en-us/library/microsoft.win32.registrykey.aspx) Klassen, die beide sind definiert, der <xref:Microsoft.Win32> Namespace. Die **Registrierung** Klasse ist ein Container für statische Instanzen von der <xref:Microsoft.Win32.RegistryKey> Klasse. Jede Instanz stellt einen Stammregistrierungsknoten dar. Die Instanzen sind <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine> und <xref:Microsoft.Win32.Registry.Users>.  
+ Sie können .NET Framework verwenden, um Zugriff auf die Registrierung mit der <xref:Microsoft.Win32.Registry> und [RegistryKey](https://msdn.microsoft.com/library/microsoft.win32.registrykey.aspx) Klassen, die beide sind definiert, der <xref:Microsoft.Win32> Namespace. Die **Registrierung** Klasse ist ein Container für statische Instanzen von der <xref:Microsoft.Win32.RegistryKey> Klasse. Jede Instanz stellt einen Stammregistrierungsknoten dar. Die Instanzen sind <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine> und <xref:Microsoft.Win32.Registry.Users>.  
 
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  <xref:System.Environment>  
   
 ## <a name="see-also"></a>Siehe auch  
  [.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
-
- [Einführung in die Überwachung der Leistung](http://msdn.microsoft.com/en-us/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35) 

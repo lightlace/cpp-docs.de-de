@@ -1,5 +1,5 @@
 ---
-title: Systeminterne Funktionen "_InterlockedAdd" | Microsoft Docs
+title: Funktionen "_InterlockedAdd" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c06e2f2b490aacc424e1c8ad0d31c0011bcf989b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7607083a50d98a1b531d6ea45e04866f253a7dfb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333946"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709526"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedAdd“
 **Microsoft-spezifisch**  
@@ -86,11 +86,11 @@ __int64 _InterlockedAdd64_rel(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in, out] `Addend`  
- Zeiger auf die hinzuzufügende ganze Zahl; ersetzt durch das Ergebnis der Addition.  
+*Addend*<br/>
+[in, out] Zeiger auf die ganze Zahl, die hinzugefügt werden; ersetzt durch das Ergebnis der Addition.  
   
- [in] `Value`  
- Der hinzuzufügende Wert.  
+*Wert*<br/>
+[in] Der hinzuzufügende Wert.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Beide Funktionen geben das Ergebnis der Addition zurück.  

@@ -1,5 +1,5 @@
 ---
-title: 'Mutex:: Lock-Methode | Microsoft Docs'
+title: 'Mutex:: Lock-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,42 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37044dbd884c4e38c70677bf9a8fa0a51fda0a88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 38bd11620f8d403bbd1667ab6fa4f3f827362c88
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880871"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600872"
 ---
 # <a name="mutexlock-method"></a>Mutex::Lock-Methode
-Wartet, bis das aktuelle Objekt oder die Mutex-Objekt, das dem angegebenen Handle zugeordnete frei Mutex oder das angegebene Timeoutintervall abgelaufen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-SyncLock Lock(  
-   DWORD milliseconds = INFINITE  
-);  
-  
-static SyncLock Lock(  
-   HANDLE h,  
-   DWORD milliseconds = INFINITE  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `milliseconds`  
- Das Timeoutintervall in Millisekunden. Der Standardwert ist INFINITE, der unbegrenzt wartet.  
-  
- `h`  
- Das Handle des ein Mutex-Objekt.  
-  
-## <a name="return-value"></a>Rückgabewert  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers
- 
- ## <a name="see-also"></a>Siehe auch
- [Mutex-Klasse](../windows/mutex-class1.md)
+
+Wartet, bis das aktuelle Objekt, oder die **Mutex** Objekt verknüpft, die mit dem angegebenen Handle, Versionen, die den Mutex oder das angegebene Timeoutintervall verstrichen ist.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+SyncLock Lock(
+   DWORD milliseconds = INFINITE
+);
+
+static SyncLock Lock(
+   HANDLE h,
+   DWORD milliseconds = INFINITE
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*Millisekunden*  
+Das Timeoutintervall in Millisekunden. Der Standardwert ist UNENDLICH sein, was die unbegrenzt wartet.
+
+*h*  
+Das Handle für ein **Mutex** Objekt.
+
+## <a name="return-value"></a>Rückgabewert
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+[Mutex-Klasse](../windows/mutex-class1.md)

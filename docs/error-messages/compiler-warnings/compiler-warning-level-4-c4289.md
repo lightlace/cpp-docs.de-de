@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4289 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4289 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f7f09bd85d3740d43b6e4b6a80ed562f8cc2261
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 35cb22c767c0ea64a1536bd4d02ad8653bb94250
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292606"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102839"
 ---
 # <a name="compiler-warning-level-4-c4289"></a>Compilerwarnung (Stufe 4) C4289
-Nicht dem Standard entsprechende Erweiterung: 'var': Die loop-Steuerelementvariable, die in der for-Schleife deklariert wurde, wird außerhalb des for-Schleifenbereichs verwendet  
-  
- Beim Kompilieren mit ["/ Ze"](../../build/reference/za-ze-disable-language-extensions.md) und **/Zc: forScope**, eine Variable deklariert, die einer [für](../../cpp/for-statement-cpp.md) Schleife verwendet wurde, nach der **für**-Schleife-Bereich.  
-  
- Finden Sie unter [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) Informationen über das Standardverhalten in angeben **für** mit Schleifen **"/ Ze"**.  
-  
- Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
-  
- Im folgenden Beispiel wird C4289 generiert:  
-  
-```  
-// C4289.cpp  
-// compile with: /W4 /Zc:forScope-  
-#pragma warning(default:4289)  
-int main() {  
-   for (int i = 0 ; ; )   // C4289  
-      break;  
-   i++;  
-}  
+
+Nicht dem Standard entsprechende Erweiterung: 'var': Die loop-Steuerelementvariable, die in der for-Schleife deklariert wurde, wird außerhalb des for-Schleifenbereichs verwendet
+
+Beim Kompilieren mit [/Ze](../../build/reference/za-ze-disable-language-extensions.md) und **/Zc: forScope**, eine Variable deklariert, die einer [für](../../cpp/for-statement-cpp.md) Schleife wurde verwendet, nach der **für**-Schleife-Bereich.
+
+Finden Sie unter [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) Informationen zur Vorgehensweise beim Angeben der gemäß dem Standardverhalten in **für** mit Schleifen **/Ze**.
+
+Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
+
+Im folgende Beispiel wird die C4289 generiert:
+
+```
+// C4289.cpp
+// compile with: /W4 /Zc:forScope-
+#pragma warning(default:4289)
+int main() {
+   for (int i = 0 ; ; )   // C4289
+      break;
+   i++;
+}
 ```

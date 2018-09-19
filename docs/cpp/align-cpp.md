@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a83adda5acc51bd7e2d85e907d84e62a70d5cb
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 177fdb46971a0e932a41881cb9e6a08a800a60bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940727"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076293"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -34,7 +34,7 @@ Verwenden Sie `__declspec(align(#))`, um die Ausrichtung von benutzerdefinierten
 
 ## <a name="syntax"></a>Syntax
 
-> **__declspec (align (** *#* **))** *Deklarator*  
+> **__declspec (align (** *#* **))** *Deklarator*
 
 ## <a name="remarks"></a>Hinweise
 
@@ -50,7 +50,7 @@ Der Compiler gewährleistet oder versucht nicht, das Ausrichtungsattribut der Da
 
 Die Ausrichtung für Funktionsparameter können Sie nicht angeben. Wenn die Daten, die über ein Ausrichtungsattribut verfügen, als Wert auf dem Stapel übergeben werden, wird die Ausrichtung durch die Aufrufkonvention gesteuert. Falls die Datenausrichtung in der aufgerufenen Funktion wichtig ist, kopieren Sie vor der Verwendung den Parameter in den korrekt ausgerichteten Speicher.
 
-Ohne `__declspec(align(#))`, der Compiler richtet in der Regel die Daten an natürlichen Begrenzungen entsprechend dem Zielprozessor und der Größe der Daten bis zu 4-Byte-Begrenzungen auf 32-Bit-Prozessoren und 8-Byte-Begrenzungen auf 64-Bit-Prozessoren. Daten in Klassen oder Strukturen werden in der Klasse oder Struktur am Minimum ihrer natürlichen Ausrichtung und der aktuellen verpackungseinstellung ausgerichtet (von #pragma **Pack** oder **/Zp** -Compileroption).
+Ohne `__declspec(align(#))`, der Compiler richtet in der Regel die Daten an natürlichen Begrenzungen entsprechend dem Zielprozessor und der Größe der Daten bis zu 4-Byte-Begrenzungen auf 32-Bit-Prozessoren und 8-Byte-Begrenzungen auf 64-Bit-Prozessoren. Daten in Klassen oder Strukturen werden in der Klasse oder Struktur am Minimum ihrer natürlichen Ausrichtung und der aktuellen Verpackungseinstellung ausgerichtet (von #Pragma `pack` oder der `/Zp`-Compileroption).
 
 In diesem Beispiel wird die Verwendung von `__declspec(align(#))` veranschaulicht:
 
@@ -179,7 +179,7 @@ void fn() {
 }
 ```
 
-Wenn der Speicher für Heaps zugewiesen wird, hängt die Ausrichtung davon ab, welche Speicherbelegungsfunktion aufgerufen wird.  Wenn Sie verwenden, z. B. **Malloc**, das Ergebnis hängt von der Größe des Operanden. Wenn *Arg* > = 8, der zurückgegebene Arbeitsspeicher mit 8 Bytes ausgerichtet ist. Wenn *Arg* < 8, der die Ausrichtung des zurückgegebenen Arbeitsspeichers ist die erste Potenz von 2 weniger als *Arg*. Wenn Sie beispielsweise "malloc(7)" verwenden, ist die Ausrichtung 4 Bytes.
+Wenn der Speicher für Heaps zugewiesen wird, hängt die Ausrichtung davon ab, welche Speicherbelegungsfunktion aufgerufen wird.  Wenn Sie beispielsweise `malloc` verwenden, hängt das Ergebnis von der Größe des Operanden ab. Wenn *Arg* > = 8, der zurückgegebene Arbeitsspeicher mit 8 Bytes ausgerichtet ist. Wenn *Arg* < 8, der die Ausrichtung des zurückgegebenen Arbeitsspeichers ist die erste Potenz von 2 weniger als *Arg*. Wenn Sie beispielsweise "malloc(7)" verwenden, ist die Ausrichtung 4 Bytes.
 
 ##  <a name="vclrf_declspecaligntypedef"></a> Definieren neuer Typen mit __declspec(align(#))
 
@@ -219,9 +219,9 @@ __declspec(thread) struct S9 a;
 
 ##  <a name="vclrfhowalignworkswithdatapacking"></a> Funktionsweise der Ausrichtung mit der Verpackung von Daten
 
-Die **/Zp** Compileroption und das **Pack** Pragma wirken sich das Verpacken von Daten für Struktur-und Unionmember. Dieses Beispiel zeigt, wie **/Zp** und `__declspec(align(#))` zusammenarbeiten:
+Die `/Zp` Compileroption und das `pack` Pragma wirken sich das Verpacken von Daten für Struktur-und Unionmember. Dieses Beispiel zeigt, wie `/Zp` und `__declspec(align(#))` zusammenarbeiten:
 
-```c[[]]
+```cpp
 struct S {
    char a;
    short b;
@@ -232,7 +232,7 @@ struct S {
 };
 ```
 
-Die folgende Tabelle enthält den Offset eines jeden Members mit einer Vielzahl von **/Zp** (oder #pragma **Pack**) Werten, wobei gezeigt, wie die beiden interagieren.
+Die folgende Tabelle zeigt den Offset eines jeden Members mit einer Vielzahl von `/Zp` (oder #pragma `pack`)-Werten, wobei gezeigt wird, wie die beiden interagieren.
 
 |Variable|/Zp1|/Zp2|/Zp4|/Zp8|
 |--------------|-----------|-----------|-----------|-----------|
@@ -252,6 +252,6 @@ Der Offset eines Objekts basiert auf dem Offset des vorherigen Objekts und der a
 
 ## <a name="see-also"></a>Siehe auch
 
-[__declspec](../cpp/declspec.md)  
-[Übersicht über ARM-ABI-Konventionen](../build/overview-of-arm-abi-conventions.md)  
-[Übersicht über x64-Aufrufkonventionen](../build/overview-of-x64-calling-conventions.md)  
+[__declspec](../cpp/declspec.md)<br/>
+[Übersicht über ARM-ABI-Konventionen](../build/overview-of-arm-abi-conventions.md)<br/>
+[Übersicht über x64-Aufrufkonventionen](../build/overview-of-x64-calling-conventions.md)

@@ -14,87 +14,90 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51479d6571a58fccf57c9060254cd0c445f8483b
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c53b2ddb24c0eb6e905f121b835870f2b88a4ca7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943936"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118673"
 ---
 # <a name="relational-function-templates"></a>Relationale Funktionsvorlagen
-**Microsoft-spezifisch**  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-template<typename _InterfaceType> bool operator==(  
-   int NULL,  
-   _com_ptr_t<_InterfaceType>& p   
-);  
-template<typename _Interface,  
-   typename _InterfacePtr> bool operator==(  
-   _Interface* i,  
-   _com_ptr_t<_InterfacePtr>& p   
-);  
-template<typename _Interface> bool operator!=(  
-   int NULL,  
-   _com_ptr_t<_Interface>& p   
-);  
-template<typename _Interface,  
-   typename _InterfacePtr> bool operator!=(  
-   _Interface* i,  
-   _com_ptr_t<_InterfacePtr>& p   
-);  
-template<typename _Interface> bool operator<(  
-   int NULL,  
-   _com_ptr_t<_Interface>& p   
-);  
-template<typename _Interface,  
-   typename _InterfacePtr> bool operator<(  
-   _Interface* i,  
-   _com_ptr_t<_InterfacePtr>& p   
-);  
-template<typename _Interface> bool operator>(  
-   int NULL,  
-   _com_ptr_t<_Interface>& p   
-);  
-template<typename _Interface,  
-   typename _InterfacePtr> bool operator>(  
-   _Interface* i,  
-   _com_ptr_t<_InterfacePtr>& p   
-);  
-template<typename _Interface> bool operator<=(  
-   int NULL,  
-   _com_ptr_t<_Interface>& p   
-);  
-template<typename _Interface,  
-   typename _InterfacePtr> bool operator<=(  
-   _Interface* i,  
-   _com_ptr_t<_InterfacePtr>& p   
-);  
-template<typename _Interface> bool operator>=(  
-   int NULL,  
-   _com_ptr_t<_Interface>& p   
-);  
-template<typename _Interface,  
-   typename _InterfacePtr> bool operator>=(  
-   _Interface* i,  
-   _com_ptr_t<_InterfacePtr>& p   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *i*  
- Ein unformatierter Schnittstellenzeiger.  
-  
- *p*  
- Ein intelligenter Zeiger.  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Funktionsvorlagen ermöglichen den Vergleich mit einem intelligenten Zeiger auf der rechten Seite des Vergleichsoperators. Dies sind keine Memberfunktionen von `_com_ptr_t`.  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md)
+
+**Microsoft-spezifisch**
+
+## <a name="syntax"></a>Syntax
+
+```
+template<typename _InterfaceType> bool operator==(
+   int NULL,
+   _com_ptr_t<_InterfaceType>& p
+);
+template<typename _Interface,
+   typename _InterfacePtr> bool operator==(
+   _Interface* i,
+   _com_ptr_t<_InterfacePtr>& p
+);
+template<typename _Interface> bool operator!=(
+   int NULL,
+   _com_ptr_t<_Interface>& p
+);
+template<typename _Interface,
+   typename _InterfacePtr> bool operator!=(
+   _Interface* i,
+   _com_ptr_t<_InterfacePtr>& p
+);
+template<typename _Interface> bool operator<(
+   int NULL,
+   _com_ptr_t<_Interface>& p
+);
+template<typename _Interface,
+   typename _InterfacePtr> bool operator<(
+   _Interface* i,
+   _com_ptr_t<_InterfacePtr>& p
+);
+template<typename _Interface> bool operator>(
+   int NULL,
+   _com_ptr_t<_Interface>& p
+);
+template<typename _Interface,
+   typename _InterfacePtr> bool operator>(
+   _Interface* i,
+   _com_ptr_t<_InterfacePtr>& p
+);
+template<typename _Interface> bool operator<=(
+   int NULL,
+   _com_ptr_t<_Interface>& p
+);
+template<typename _Interface,
+   typename _InterfacePtr> bool operator<=(
+   _Interface* i,
+   _com_ptr_t<_InterfacePtr>& p
+);
+template<typename _Interface> bool operator>=(
+   int NULL,
+   _com_ptr_t<_Interface>& p
+);
+template<typename _Interface,
+   typename _InterfacePtr> bool operator>=(
+   _Interface* i,
+   _com_ptr_t<_InterfacePtr>& p
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*i*<br/>
+Ein unformatierter Schnittstellenzeiger.
+
+*p*<br/>
+Ein intelligenter Zeiger.
+
+## <a name="remarks"></a>Hinweise
+
+Diese Funktionsvorlagen ermöglichen den Vergleich mit einem intelligenten Zeiger auf der rechten Seite des Vergleichsoperators. Dies sind keine Memberfunktionen von `_com_ptr_t`.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md)

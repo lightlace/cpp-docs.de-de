@@ -1,5 +1,5 @@
 ---
-title: Concurrency::Graphics::Direct3D Namespace Funktionen | Microsoft Docs
+title: Concurrency::Graphics::Direct3D Namespace-Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ed95ed8df8a42dc62684c71a3005c2f33fecd18
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 78fbf9c260b1a53bb16628846033ef15ab04684f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686333"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110184"
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::Graphics::Direct3D Namespace-Funktionen
 ||||  
@@ -38,11 +38,11 @@ IUnknown* get_sampler(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Av`  
- Eine D3D-Zugriffstastenansicht, auf der der D3D-Samplerstatus erstellt werden soll.  
+*_Av*<br/>
+Eine D3D-Zugriffstastenansicht, auf der der D3D-Samplerstatus erstellt werden soll.  
   
- `_Sampler`  
- Ein Samplerobjekt, für das die zugrunde liegende D3D-Samplerstatus-Schnittstelle erstellt wird.  
+*_Sampler*<br/>
+Ein Samplerobjekt, für das die zugrunde liegende D3D-Samplerstatus-Schnittstelle erstellt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der IUnknown-Schnittstellenzeiger, der dem D3D-Samplerstatus entspricht, der den angegebenen Sampler darstellt.  
@@ -78,14 +78,14 @@ _Ret_ IUnknown *get_texture(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `value_type`  
- Der Elementtyp der Textur.  
+*value_type*<br/>
+Der Elementtyp der Textur.  
   
- `_Rank`  
- Der Rang der Textur.  
+*_Rank*<br/>
+Der Rang der Textur.  
   
- `_Texture`  
- Eine Textur oder Texturansicht, die mit dem accelerator_view-Objekt verknüpft ist, für das die zugrunde liegende Direct3D-Texturschnittstelle zurückgegeben wird.  
+*_Texture*<br/>
+Eine Textur oder Texturansicht, die mit dem accelerator_view-Objekt verknüpft ist, für das die zugrunde liegende Direct3D-Texturschnittstelle zurückgegeben wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der IUnknown-Schnittstellenzeiger, der der Direct3D-Textur entspricht, die der Textur zugrunde liegt.  
@@ -98,8 +98,8 @@ sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_D3D_sampler`  
- IUnknown-Schnittstellenzeiger des D3D-Samplerstatus zum Erstellen des Samplers.  
+*_D3D_sampler*<br/>
+IUnknown-Schnittstellenzeiger des D3D-Samplerstatus zum Erstellen des Samplers.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Sampler stellt den bereitgestellten D3D-Samplerstatus dar.  
@@ -119,20 +119,20 @@ texture<value_type, _Rank> make_texture(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `value_type`  
- Der Typ der Elemente in der Textur.  
+*value_type*<br/>
+Der Typ der Elemente in der Textur.  
   
- `_Rank`  
- Der Rang der Textur.  
+*_Rank*<br/>
+Der Rang der Textur.  
   
- `_Av`  
- Eine D3D-Zugriffstastenansicht, in der die Textur erstellt werden soll.  
+*_Av*<br/>
+Eine D3D-Zugriffstastenansicht, in der die Textur erstellt werden soll.  
   
- `_D3D_texture`  
- IUnknown-Schnittstellenzeiger der D3D-Textur zum Erstellen der Textur.  
+*_D3D_texture*<br/>
+IUnknown-Schnittstellenzeiger der D3D-Textur zum Erstellen der Textur.  
   
- `_View_format`  
- Das DXGI-Format, das für Ansichten verwendet werden soll, die mit dieser Textur erstellt werden. Übergeben Sie DXGI_FORMAT_UNKNOWN (Standardeinstellung), um das Format aus der zugrunde liegenden Formats von _D3D_texture und die Value_type dieser Vorlage abzuleiten. Das bereitgestellte Format muss mit dem zugrunde liegenden Format von _D3D_texture kompatibel sein.  
+*_View_format*<br/>
+Das DXGI-Format, das für Ansichten verwendet werden soll, die mit dieser Textur erstellt werden. Übergeben Sie DXGI_FORMAT_UNKNOWN (Standardeinstellung), um das Format von der zugrunde liegenden Formats von _D3D_texture und die Value_type dieser Vorlage abgeleitet werden. Das bereitgestellte Format muss mit dem zugrunde liegenden Format von _D3D_texture kompatibel sein.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Eine Textur, die die bereitgestellte D3D-Textur verwendet.  
@@ -148,14 +148,14 @@ inline uint4 msad4(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Reference`  
- Das Verweisarray von 4 Bytes in einem UINT-Wert  
+*_Primärer*<br/>
+Das Verweisarray von 4 Bytes in einem UINT-Wert  
   
- `_Source`  
- Das Quellarray von 8 Bytes in einen Vektor von zwei UINT-Werten.  
+*_Quelle*<br/>
+Das Quellarray von 8 Bytes in einen Vektor von zwei UINT-Werten.  
   
- `_Accum`  
- Ein Vektor von 4 Werten, die der maskierten Summe von absoluten Differenzen der verschiedenen Byteausrichtungen zwischen Verweiswert und Quellwert hinzugefügt werden müssen.  
+*_Accum*<br/>
+Ein Vektor von 4 Werten, die der maskierten Summe von absoluten Differenzen der verschiedenen Byteausrichtungen zwischen Verweiswert und Quellwert hinzugefügt werden müssen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Vektor von 4 Summen zurück. Jede Summe entspricht der maskierten Summe von absoluten Differenzen von verschiedenen Byteausrichtungen zwischen Verweiswert und Quellwert.  

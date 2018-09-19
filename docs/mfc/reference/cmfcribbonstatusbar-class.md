@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e82f22861016f5046cde1fa3a37889c994f111c8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 3123206c90bd5dd901e25ff3fe26e48ba8809452
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852453"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710507"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar-Klasse
 Die `CMFCRibbonStatusBar` -Klasse implementiert ein Statusleisten-Steuerelement, das Menübandelemente anzeigen kann.  
@@ -149,8 +149,8 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pElement*  
- Ein Zeiger auf ein dynamisches Element.  
+*pElement*<br/>
+[in] Ein Zeiger auf ein dynamisches Element.  
   
 ### <a name="remarks"></a>Hinweise  
  Im Gegensatz zu regulären Elementen dynamischen Elemente sind nicht anpassbar, und klicken Sie im Menü "anpassen" der Statusleiste nicht angezeigt.  
@@ -166,14 +166,14 @@ void AddElement(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pElement*  
- Ein Zeiger auf das hinzugefügte Element.  
+*pElement*<br/>
+[in] Ein Zeiger auf das hinzugefügte Element.  
   
- [in] *LpszLabel*  
- Eine Beschriftung des Elements.  
+*lpszLabel*<br/>
+[in] Eine Beschriftung des Elements.  
   
- [in] *bIsVisible*  
- TRUE, wenn Sie das Element als sichtbar ist, "false" hinzufügen möchten, wenn Sie das Element als ausgeblendet hinzufügen möchten.  
+*bIsVisible*<br/>
+[in] TRUE, wenn Sie das Element als sichtbar ist, "false" hinzufügen möchten, wenn Sie das Element als ausgeblendet hinzufügen möchten.  
   
 ##  <a name="addextendedelement"></a>  CMFCRibbonStatusBar::AddExtendedElement  
  Fügt ein Menübandelement zu erweiterten Bereich des Status-Menübands.  
@@ -186,14 +186,14 @@ void AddExtendedElement(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pElement*  
- Ein Zeiger auf das hinzugefügte Element.  
+*pElement*<br/>
+[in] Ein Zeiger auf das hinzugefügte Element.  
   
- [in] *LpszLabel*  
- Die textbezeichnung des Elements.  
+*lpszLabel*<br/>
+[in] Die textbezeichnung des Elements.  
   
- [in] *bIsVisible*  
- TRUE, wenn Sie das Element als sichtbar ist, "false" hinzufügen möchten, wenn Sie das Element als ausgeblendet hinzufügen möchten.  
+*bIsVisible*<br/>
+[in] TRUE, wenn Sie das Element als sichtbar ist, "false" hinzufügen möchten, wenn Sie das Element als ausgeblendet hinzufügen möchten.  
   
 ### <a name="remarks"></a>Hinweise  
  Der erweiterte Bereich befindet sich rechts vom Statusleisten-Steuerelement.  
@@ -219,14 +219,14 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pParentWnd*  
- Ein Zeiger auf das übergeordnete Fenster.  
+*pParentWnd*<br/>
+[in] Ein Zeiger auf das übergeordnete Fenster.  
   
- [in] *DwStyle*  
- Eine logische OR-Kombination der Stile von Listensteuerelementen.  
+*dwStyle*<br/>
+[in] Eine logische OR-Kombination der Stile von Listensteuerelementen.  
   
- [in] *nID*  
- Die Steuerelement-ID der Statusleiste.  
+*nID*<br/>
+[in] Die Steuerelement-ID der Statusleiste.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn "false" auf die Statusleiste erfolgreich, andernfalls erstellt wird.  
@@ -259,15 +259,15 @@ BOOL CreateEx(
  TRUE, wenn "false" auf die Statusleiste erfolgreich, andernfalls erstellt wird.  
   
 ##  <a name="findbyid"></a>  CMFCRibbonStatusBar::FindByID  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmdID*  
- [in] *"Bool"*  
+*uiCmdID*<br/>
+[in] [in] *"Bool"*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -281,8 +281,8 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiID*  
- Die ID des Elements.  
+*uiID*<br/>
+[in] Die ID des Elements.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf das Element mit der angegebenen Befehls-ID. NULL, wenn kein solches Element vorhanden ist.  
@@ -305,8 +305,8 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Gibt einen nullbasierten Index eines Elements, das im Hauptbereich des das StatusBar-Steuerelement befindet.  
+*nIndex*<br/>
+[in] Gibt einen nullbasierten Index eines Elements, das im Hauptbereich des das StatusBar-Steuerelement befindet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf das Element, das sich am angegebenen Index befindet. NULL, wenn der Index negativ ist oder die Anzahl der Elemente in der Statusleiste angezeigt überschreitet.  
@@ -331,8 +331,8 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Bestimmt den Null-basierten Index eines Elements, das sich im erweiterten Bereich des Statusleisten-Steuerelements befindet.  
+*nIndex*<br/>
+[in] Gibt den nullbasierten Index eines Elements, das im erweiterten Bereich des das StatusBar-Steuerelement befindet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf das Element, das sich an einem angegebenen Index im erweiterten Bereich des Status-Menübands befindet. NULL, wenn *nIndex* ist negativ oder überschreitet die Anzahl der Elemente im erweiterten Bereich des Status-Menübands.  
@@ -340,7 +340,7 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getextendedarea"></a>  CMFCRibbonStatusBar::GetExtendedArea  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 virtual BOOL GetExtendedArea(CRect& rect) const;  
@@ -354,7 +354,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getspace"></a>  CMFCRibbonStatusBar::GetSpace  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 int GetSpace() const;  
@@ -365,7 +365,7 @@ int GetSpace() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="isbottomframe"></a>  CMFCRibbonStatusBar::IsBottomFrame  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 BOOL IsBottomFrame() const;  
@@ -376,7 +376,7 @@ BOOL IsBottomFrame() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="isextendedelement"></a>  CMFCRibbonStatusBar::IsExtendedElement  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;  
@@ -413,20 +413,20 @@ virtual void OnDrawInformation(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *StrInfo*  
- Die Informationszeichenfolge.  
+*strInfo*<br/>
+[in] Die Informationszeichenfolge.  
   
- [in] *RectInfo*  
- Das umschließende Rechteck.  
+*rectInfo*<br/>
+[in] Das umschließende Rechteck.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse, wenn Sie die Darstellung der Zeichenfolge in der Statusleiste anpassen möchten. Verwenden der [CMFCRibbonStatusBar::SetInformation](#setinformation) Methode, um die Statusleiste in den Informationen im Modus versetzen. In diesem Modus wird die Statusleiste Blendet alle Bereiche und zeigt die Informationszeichenfolge gemäß *StrInfo*.  
   
 ##  <a name="recalclayout"></a>  CMFCRibbonStatusBar::RecalcLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 virtual void RecalcLayout();
@@ -449,8 +449,8 @@ BOOL RemoveElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiID*  
- Die ID des Elements in der Statusleiste zu entfernen.  
+*uiID*<br/>
+[in] Die ID des Elements in der Statusleiste zu entfernen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn ein Element mit dem angegebenen *UiID* wird entfernt. "False" andernfalls.  
@@ -463,8 +463,8 @@ void SetInformation(LPCTSTR lpszInfo);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszInfo*  
- Die Informationszeichenfolge.  
+*lpszInfo*<br/>
+[in] Die Informationszeichenfolge.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um die Statusleiste in den Modus für die Informationen zu platzieren. In diesem Modus wird die Statusleiste Blendet alle Bereiche und zeigt die Informationszeichenfolge gemäß *LpszInfo*.  

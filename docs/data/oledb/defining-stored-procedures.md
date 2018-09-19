@@ -1,5 +1,5 @@
 ---
-title: Definieren von gespeicherten Prozeduren | Microsoft Docs
+title: Definieren von gespeicherten Prozeduren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,23 +18,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1e03a5ae2e7c75d905216a6be92630376484d047
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 79899bb4ff2dada8f459a6c25499be25d078353e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33101301"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105374"
 ---
 # <a name="defining-stored-procedures"></a>Definieren von gespeicherten Prozeduren
-Bevor Sie eine gespeicherte Prozedur aufrufen, müssen Sie zuerst definieren, mit der [DEFINE_COMMAND](../../data/oledb/define-command.md) Makro. Wenn Sie den Befehl definieren, kennzeichnen Sie Parameter mit einem Fragezeichen (?) als Parametermarker ein:  
+
+Bevor Sie eine gespeicherte Prozedur aufrufen, müssen Sie zuerst definieren, mit der [DEFINE_COMMAND](../../data/oledb/define-command.md) Makro. Wenn Sie den Befehl definieren, zu kennzeichnen Sie Parametern mit einem Fragezeichen (?) als parametermarkierung:  
   
 ```  
 DEFINE_COMMAND(CMySProcAccessor, _T("{INSERT {name, phone} into shippers  (?,?)}")  
 ```  
   
- Beachten Sie, dass die in den Codebeispielen in diesem Thema verwendete Syntax (die Verwendung von Klammern usw.) für SQL Server spezifisch ist. Die Syntax, die Sie in den gespeicherten Prozeduren verwenden, kann je nach Anbieter variieren, die Sie verwenden.  
+Beachten Sie, dass die in den Codebeispielen in diesem Thema verwendete Syntax (die Verwendung von Klammern usw.) für SQL Server spezifisch ist. Die Syntax, die Sie in den gespeicherten Prozeduren verwenden variieren nach Anbieter, die Sie verwenden.  
   
- Geben Sie anschließend in der Parameter-Zuordnung zu die Parametern, die Sie im Befehl verwendet, die Parameter in der Reihenfolge im Befehl Auftretens auflisten:  
+Geben Sie als Nächstes in der parameterzuordnung und die Parameter, die Sie im Befehl verwendet, die Parameter in der Reihenfolge, in die Zeitpunkte im Befehl auflisten:  
   
 ```  
 BEGIN_PARAM_MAP(CMySProcAccessor)  
@@ -45,22 +46,22 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()  
 ```  
   
- Im vorherige Beispiel definiert eine gespeicherte Prozedur unter-. Normalerweise enthält der eine Datenbank für die effiziente Wiederverwendung von Code einen Satz von vordefinierten gespeicherte Prozeduren mit Namen wie "Sales by Year" oder "Dt_adduserobject." Sie können die Definitionen mithilfe von SQL Server Enterprise Manager anzeigen. Rufen sie wie folgt (die Platzierung der "?" Parameter hängt von der gespeicherten Prozedur-Schnittstelle):  
+Im vorherigen Beispiel wird eine gespeicherte Prozedur definiert, wie es geht. In der Regel enthält der eine Datenbank für die effiziente Wiederverwendung von Code eine Reihe von vordefinierten gespeicherten Prozeduren mit Namen wie "Sales by Year" oder "Dt_adduserobject." Sie können die Definitionen mithilfe von SQL Server Enterprise Manager anzeigen. Rufen sie wie folgt (die Platzierung von der '?' Parameter hängt von der gespeicherten Prozedur-Schnittstelle):  
   
 ```  
 DEFINE_COMMAND(CMySProcAccessor, _T("{CALL \"Sales by Year\" (?,?) }")  
 DEFINE_COMMAND(CMySProcAccessor, _T("{CALL dbo.dt_adduserobject (?,?) }")  
 ```  
   
- Deklarieren Sie als Nächstes die Befehlsklasse:  
+Im nächsten Schritt deklariere die Klasse des Befehls:  
   
-```  
+```cpp  
 class CMySProc : public CCommand<CAccessor<CMySProcAccessor>>  
 ```  
   
- Rufen Sie anschließend die gespeicherte Prozedur in `OpenRowset` wie folgt:  
+Schließlich rufen Sie die gespeicherte Prozedur im `OpenRowset` wie folgt:  
   
-```  
+```cpp  
 CSession m_session;  
 
 HRESULT OpenRowset()  
@@ -69,11 +70,12 @@ HRESULT OpenRowset()
 }  
 ```  
   
- Beachten Sie, dass Sie eine gespeicherte Prozedur mit dem datenbankattribut definieren können [Db_command](../../windows/db-command.md) wie folgt:  
+Beachten Sie, dass Sie eine gespeicherte Prozedur, die mit dem datenbankattribut definieren können [Db_command](../../windows/db-command.md) wie folgt:  
   
-```  
+```cpp  
 db_command("{ ? = CALL dbo.dt_adduserobject }")  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden von gespeicherten Prozeduren](../../data/oledb/using-stored-procedures.md)
+
+[Verwenden von gespeicherten Prozeduren](../../data/oledb/using-stored-procedures.md)

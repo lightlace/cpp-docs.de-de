@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca8621067c851b5a1e107eb16800d546562fbb6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3cfafc2c17ef804cb8d87c1189c8a7f3163d3c46
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959928"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104133"
 ---
 # <a name="function-class"></a>function-Klasse
 
@@ -89,9 +89,11 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*Fty* der zu umschließende Funktionstyp.
+*Fty*<br/>
+Der zu umschließende Funktionstyp.
 
-*AX* die Zuweisungsfunktion.
+*AX*<br/>
+Die Zuweisungsfunktion.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -164,11 +166,14 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parameter
 
-*_Func* ein aufrufbares Objekt.
+*_Func*<br/>
+Ein aufrufbares Objekt.
 
-*_Fnref* ein verweiswrapper, der ein aufrufbares Objekt enthält.
+*_Fnref*<br/>
+Ein Verweiswrapper, der ein aufrufbares Objekt enthält.
 
-*AX* ein Zuweisungsobjekt.
+*AX*<br/>
+Ein Zuweisungsobjekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -199,17 +204,23 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* die zu kopierende Funktionsobjekt.
+*right*<br/>
+Das zu kopierende Funktionsobjekt.
 
-*FX* den Typ des aufrufbaren Objekts.
+*FX*<br/>
+Der Typ des aufrufbaren Objekts.
 
-*_Func* der zu umschließende Objekt.
+*_Func*<br/>
+Das zu umschließende Objekt.
 
-*Alloc* der Zuweisungstyp.
+*Alloc*<br/>
+Der Zuweisungstyp.
 
-*AX* die allocator-Klasse.
+*AX*<br/>
+Die Zuweisung.
 
-*_Fnref* die aufrufbare Objektverweis umschließen.
+*_Fnref*<br/>
+Der zu umschließende aufrufbare Objektverweis.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -340,9 +351,11 @@ result_type operator()(
 
 ### <a name="parameters"></a>Parameter
 
-*TN* den Typ des der n-te Aufrufargument.
+*TN*<br/>
+Der Typ des n-ten Aufrufarguments.
 
-*tN* der n-te Aufrufargument.
+*TN*<br/>
+Das n-te Aufrufargument.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -391,13 +404,17 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parameter
 
-*%npc* eine null-Zeiger-Konstante.
+*%npc*<br/>
+Eine NULL-Zeiger-Konstante.
 
-*richtige* die zu kopierende Funktionsobjekt.
+*right*<br/>
+Das zu kopierende Funktionsobjekt.
 
-*fn* der zu umschließende Objekt.
+*fn*<br/>
+Das zu umschließende Objekt.
 
-*Fnref* die aufrufbare Objektverweis umschließen.
+*fnref*<br/>
+Der zu umschließende aufrufbare Objektverweis.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -506,7 +523,8 @@ void swap(function& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* das Funktionsobjekt, mit dem getauscht.
+*right*<br/>
+Das Funktionsobjekt, mit dem getauscht werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -567,7 +585,8 @@ template <class Fty2>
 
 ### <a name="parameters"></a>Parameter
 
-*Fty2* der Ziel-aufrufbare Objekt, das zu überprüfende Typ.
+*Fty2*<br/>
+Der zu überprüfende Typ des aufrufbaren Zielobjekts.
 
 ### <a name="remarks"></a>Hinweise
 

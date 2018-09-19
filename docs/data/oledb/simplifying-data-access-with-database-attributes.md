@@ -1,5 +1,5 @@
 ---
-title: Vereinfachen des Datenzugriffs mit Datenbankattributen | Microsoft Docs
+title: Vereinfachen des Datenzugriffs mit Datenbankattributen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,44 +29,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e665369f292a646353d1a180661982ce4c902665
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41d1692fc69ba4ff29e091ca736cae60b10a402a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111714"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054076"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>Vereinfachen des Datenzugriffs mit Datenbankattributen
+
 Dieses Thema veranschaulicht die Verwendung von Datenbankattributen, um Datenbankvorgänge zu vereinfachen.  
   
- Der grundlegende Zugriff auf Informationen aus einer Datenbank besteht darin, eine Klasse Befehlsklasse (oder Tabellenklasse) und eine Benutzerdatensatz-Klasse für eine bestimmte Tabelle in der Datenbank zu erstellen. Der Datenbankattribute vereinfachen Sie einige der Vorlagendeklarationen, die Sie zuvor bereits profitierten möchten.  
+Die einfachste Möglichkeit, Zugriff auf Informationen aus einer Datenbank ist eine Befehlsklasse (oder Tabellenklasse)-Klasse und eine Benutzerdatensatz-Klasse für eine bestimmte Tabelle in der Datenbank zu erstellen. Der Datenbankattribute vereinfachen Teile der Vorlagendeklarationen, die Sie zuvor musste.  
   
- Um die Verwendung von Datenbankattributen zu demonstrieren, die folgenden Abschnitte zeigen zwei entsprechende Tabelle und die Benutzerdatensatz-Klassendeklarationen Benutzer: die erste verwendet Attribute und die zweite OLE DB-Vorlagen. Solcher Deklarationscode ist in der Regel in einer Headerdatei, die mit dem Namen für die Tabelle oder Befehl-Objekt, z. B. authors.h.  
+Um die Verwendung von Datenbankattributen zu veranschaulichen, die folgenden Abschnitte zeigen, zwei entsprechende Tabelle und die Benutzerdatensatz-Klassendeklarationen Benutzer: die erste verwendet Attribute und die zweite verwendet OLE DB-Vorlagen. Solcher Deklarationscode ist in der Regel in einer Headerdatei mit dem Namen für die Tabelle oder der Befehl-Objekt, z. B. authors.h.  
   
- Vergleichen Sie die beiden Dateien, können Sie sehen, wie viel einfacher ist es zum Verwenden von Attributen. Einige Unterschiede:  
+Vergleichen Sie die beiden Dateien, können Sie sehen, wie viel einfacher ist es zum Verwenden von Attributen. Zu den Unterschieden zählen:  
   
--   Verwenden von Attributen, Sie müssen nur eine Klasse deklarieren: `CAuthors`, während mit Vorlagen Sie zwei deklarieren müssen: `CAuthorsNoAttrAccessor` und `CAuthorsNoAttr`.  
+- Verwenden von Attributen, Sie müssen nur eine Klasse zu deklarieren: `CAuthors`, während mit Vorlagen Sie zwei deklarieren müssen: `CAuthorsNoAttrAccessor` und `CAuthorsNoAttr`.  
   
--   Die `db_source` Aufruf in der Version entspricht der `OpenDataSource()` rufen Sie in der Vorlagendeklaration.  
+- Die `db_source` Aufruf in der Version entspricht der `OpenDataSource()` rufen Sie in der Vorlagendeklaration.  
   
--   Die **Db_table** Aufruf in der Version entspricht der folgenden Vorlagendeklaration:  
+- Die `db_table` Aufruf in der Version entspricht der folgenden Vorlage-Deklaration:  
   
     ```  
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>  
     ```  
   
--   Die **Db_column** Aufrufe in der Version entsprechen der spaltenzuordnung (siehe `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) in der Vorlagendeklaration.  
+- Die `db_column` Aufrufe in der Version entsprechen der spaltenzuordnung (finden Sie unter `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) in der Vorlagendeklaration.  
   
- Die Attribute einfügen eine Benutzerdatensatz-Klassendeklaration für Sie. Die Benutzerdatensatz-Klasse entspricht `CAuthorsNoAttrAccessor` in der Vorlagendeklaration. Wenn Ihre Tabellenklasse `CAuthors`, wird die eingefügte Benutzerdatensatz-Klasse mit dem Namen `CAuthorsAccessor`, und Sie können nur der Deklaration im eingefügten Code anzeigen. Weitere Informationen finden Sie unter "Attribute-Injected Benutzerdatensatz-Klassen" in [Benutzerdatensätze](../../data/oledb/user-records.md).  
+Sie injizieren die Attribute eine Benutzerdatensatz-Klassendeklaration auf. Die Benutzerdatensatz-Klasse entspricht `CAuthorsNoAttrAccessor` in der Vorlagendeklaration. Wenn Ihre Tabellenklasse ist `CAuthors`, wird die eingefügte Benutzerdatensatz-Klasse mit dem Namen `CAuthorsAccessor`, und Sie können nur der Deklaration im eingefügten Code anzeigen. Weitere Informationen finden Sie unter "Attribute-Injected Benutzerdatensatz-Klassen" in [Benutzerdatensätze](../../data/oledb/user-records.md).  
   
- Beachten Sie, dass die attributierte sowohl auf Vorlagen basierende Code, Sie Rowseteigenschaften mit festlegen müssen `CDBPropSet::AddProperty`.  
+Beachten Sie, dass die attributierte sowohl, in den auf Vorlagen basierende Code Sie mithilfe von Rowset-Eigenschaften festlegen müssen `CDBPropSet::AddProperty`.  
   
- Weitere Informationen zu den Attributen, die in diesem Thema erläutert, finden Sie unter [OLE DB-Consumerattribute](../../windows/ole-db-consumer-attributes.md).  
+Weitere Informationen zu den Attributen, die in diesem Thema erläutert, finden Sie unter [OLE DB-Consumerattribute](../../windows/ole-db-consumer-attributes.md).  
   
-## <a name="table-and-accessor-declaration-using-attributes"></a>Tabelle und der Accessordeklaration, die mithilfe von Attributen  
- Der folgende code ruft `db_source` und **Db_table** in der Tabellenklasse. `db_source` Gibt die Datenquelle und die zu verwendende Verbindung. **Db_table** wird die entsprechende Vorlagencode zum Deklarieren einer Tabellenklasse eingefügt. **Db_column** der spaltenzuordnung angeben und die Accessordeklaration einfügen. Sie können OLE DB-Consumerattribute in jedem Projekt verwenden, die ATL unterstützt.  
+## <a name="table-and-accessor-declaration-using-attributes"></a>Tabellen- und Zugriffsmethoden-Deklaration, die mithilfe von Attributen  
+
+Der folgende code ruft `db_source` und `db_table` in der Tabellenklasse. `db_source` Gibt die Datenquelle und die zu verwendende Verbindung. `db_table` Fügt den geeigneten Code zum Deklarieren einer Tabellenklasse an. `db_column` Geben Sie die spaltenzuordnung, und fügen Sie die Zugriffsmethoden-Deklaration. Sie können OLE DB-Consumerattribute in jedem Projekt verwenden, die ATL unterstützt.  
   
- Hier ist die Tabelle "und"-Accessor-Deklaration, die mithilfe von Attributen:  
+Hier ist die Tabelle "und"-Accessor-Deklaration, die mithilfe von Attributen:  
   
 ```cpp
 //////////////////////////////////////////////////////////////////////  
@@ -101,8 +103,9 @@ public:
 };  
 ```  
   
-## <a name="table-and-accessor-declaration-using-templates"></a>Tabelle und der Accessordeklaration, die mithilfe von Vorlagen  
- Hier ist die Tabelle "und"-Accessor-Deklaration, die mithilfe von Vorlagen.  
+## <a name="table-and-accessor-declaration-using-templates"></a>Tabellen- und Zugriffsmethoden-Deklaration, die mithilfe von Vorlagen  
+
+Hier ist die Tabelle "und"-Accessor-Deklaration, die mithilfe von Vorlagen.  
   
 ```cpp
 //////////////////////////////////////////////////////////////////////  
@@ -207,5 +210,5 @@ HRESULT hr = Open(m_session, "Authors", pPropSet);
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE Consumerattribute DB-](../../windows/ole-db-consumer-attributes.md)   
- [Exemplarische Vorgehensweisen für Attribute](http://msdn.microsoft.com/en-us/73df1d5d-261a-4521-98fb-06dcbf5ec0d0)
+
+[OLE DB-Consumerattribute](../../windows/ole-db-consumer-attributes.md)   

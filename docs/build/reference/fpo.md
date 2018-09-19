@@ -1,5 +1,5 @@
 ---
-title: -FPO | Microsoft Docs
+title: -FPO | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e0c761dc34d1b9dfc88b31754e00dbe77bffe1c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 957782d9f360ad5d7a16c46c6b65ae19dd0adec8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372482"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717146"
 ---
 # <a name="fpo"></a>/FPO
-```  
-/FPO  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Option zeigt Frame Zeiger Optimierung (FPO) Datensätze.  
-  
- Nur die [/Headers](../../build/reference/headers.md) DUMPBIN-Option ist verfügbar für die Verwendung in den Dateien erstellt wird, mit der [/GL](../../build/reference/gl-whole-program-optimization.md) -Compileroption.  
-  
-## <a name="see-also"></a>Siehe auch  
- [DUMPBIN-Optionen](../../build/reference/dumpbin-options.md)
+
+```
+/FPO
+```
+
+## <a name="remarks"></a>Hinweise
+
+Diese Option zeigt die Frame-Zeigereinträge Optimierung (FPO).
+
+Nur die [/Headers](../../build/reference/headers.md) DUMPBIN-Option ist verfügbar für die Verwendung in Dateien mit der ["/ GL"](../../build/reference/gl-whole-program-optimization.md) -Compileroption.
+
+## <a name="see-also"></a>Siehe auch
+
+[DUMPBIN-Optionen](../../build/reference/dumpbin-options.md)

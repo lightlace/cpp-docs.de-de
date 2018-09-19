@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4710 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4710 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c1cc77d8ee5393fe600ceadd9c1335d76e32efe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1f6de17f7005db3834bfcfc93aff03f12f0293ce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296386"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046094"
 ---
 # <a name="compiler-warning-level-4-c4710"></a>Compilerwarnung (Stufe 4) C4710
-'Funktion': Funktion nicht inline  
-  
- Die angegebene Funktion für die Inlineerweiterung ausgewählt wurde, aber der Compiler hat nicht ausgeführt, das inlining.  
-  
- Inlining erfolgt nach Ermessen des Compilers. Die **Inline** Schlüsselwort, z. B. die **registrieren** Schlüsselwort dient als Hinweis für den Compiler. Der Compiler verwendet Heuristik, um festzustellen, ob es eine bestimmte Funktion, die Code beschleunigen, beim Kompilieren für Geschwindigkeit sollten oder wenn es eine bestimmte Funktion, den Code beim Kompilieren für Speicherplatz verkleinern sollten. Der Compiler nur Inline wird beim Kompilieren für Speicherplatz sehr kleine Funktionen.  
-  
- In einigen Fällen der Compiler wird nicht Inline eine bestimmte Funktion mechanische Gründen. Finden Sie unter [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) eine Liste der Gründe, die der Compiler kann eine Funktion nicht Inline.  
-  
- Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
+
+'Funktion': Funktion, die nicht "inline"
+
+Die angegebene Funktion für die Inlineerweiterung ausgewählt wurde, aber der Compiler hat nicht ausgeführt, das inlining.
+
+Inlining wird nach Ermessen des Compilers ausgeführt. Die **Inline** Schlüsselwort, z. B. die **registrieren** Schlüsselwort dient als Hinweis für den Compiler. Der Compiler verwendet Heuristik beim Ermitteln, ob sollte eine bestimmte Funktion, um den Code zu beschleunigen, beim Kompilieren für Geschwindigkeit, oder wenn sie eine bestimmte Funktion, den Code zu verkleinern beim Kompilieren für Speicherplatz sollte. Der Compiler nur Inline wird beim Kompilieren für Speicherplatz sehr kleine Funktionen.
+
+In einigen Fällen der Compiler werden nicht Inline eine bestimmte Funktion technischen Gründen. Finden Sie unter [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) eine Liste der Gründe, die der Compiler kann eine Funktion nicht Inline.
+
+Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .

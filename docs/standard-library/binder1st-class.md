@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8191b572595b8ada96f59357af095baf5d846bc4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 876aa74de2a7cadd780198146b7902c1fcdeb2e6
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961720"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314143"
 ---
 # <a name="binder1st-class"></a>binder1st-Klasse
 
@@ -53,11 +53,14 @@ protected:
 
 ### <a name="parameters"></a>Parameter
 
-*Func* die binäres Funktionsobjekt in ein unäres Funktionsobjekt konvertiert werden.
+*Func*<br/>
+Das binäre Funktionsobjekt, das in ein unäres Funktionsobjekt konvertiert werden soll.
 
-*linken* den Wert, ist das erste Argument des binären Funktionsobjekts gebunden werden soll.
+*left*<br/>
+Der Wert, an den das erste Argument des binären Funktionsobjekts gebunden werden soll.
 
-*richtige* den Wert des Arguments, das das angepasste binäre Objekt mit dem festen Wert des zweiten Arguments vergleicht.
+*right*<br/>
+Der Wert des Arguments, den das angepasste binäre Objekt mit dem festen Wert des zweiten Arguments vergleicht.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -112,11 +115,11 @@ int main()
     cout << "The number of elements in v1 less than 10 is: "
          << result2 << "." << endl;
 }
-\* Output:
+/* Output:
 The vector v1 = ( 0 5 10 15 20 25 )
 The number of elements in v1 greater than 10 is: 3.
 The number of elements in v1 less than 10 is: 2.
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Anforderungen

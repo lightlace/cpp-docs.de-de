@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Ptr_-Datenmember | Microsoft Docs'
+title: 'Comptr:: Ptr_-Datenmember | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d995c8e35ed35d4581d8eec8b74fda1ebbca6519
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8c1e1a8bc076144d80358191cd8eca209057b869
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880801"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599176"
 ---
 # <a name="comptrptr-data-member"></a>ComPtr::ptr_-Datenmember
-Enthält einen Zeiger auf die Schnittstelle, die diesem ComPtr-Objekt zugeordnet ist und von ihm verwaltet wird.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-InterfaceType *ptr_;  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- `ptr_` eine interne, geschützte Daten gehört.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [ComPtr-Klasse](../windows/comptr-class.md)
+
+Enthält einen Zeiger auf die Schnittstelle, die zugeordnet wird, und das von diesem verwaltet **ComPtr**.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+InterfaceType *ptr_;
+```
+
+## <a name="remarks"></a>Hinweise
+
+**Ptr_** ist ein interne, geschützte Datenmember.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[ComPtr-Klasse](../windows/comptr-class.md)

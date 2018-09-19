@@ -23,24 +23,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c247874f96fa3b91af8f5b03840f716b6eb6516
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 93e3534f839417b6f601f4e8bc345342cc77ac1c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963971"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040965"
 ---
 # <a name="message-handler-functions"></a>Meldungshandlerfunktionen
-ATL stellt drei Arten von Meldungshandlerfunktionen bereit:  
-  
-|Typ des meldungshandlers|Entsprechende Nachricht-Makro|  
-|-----------------------------|---------------------------------|  
-|[MessageHandler](../atl/messagehandler.md)|[MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler)|  
-|[CommandHandler](../atl/commandhandler.md)|[COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)|  
-|[NotifyHandler](../atl/notifyhandler.md)|[NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)|  
-  
-## <a name="see-also"></a>Siehe auch  
- [Implementieren eines Fensters](../atl/implementing-a-window.md)   
- [Meldungszuordnungen](../atl/message-maps-atl.md)   
- [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
+
+ATL stellt drei Arten von Meldungshandlerfunktionen bereit:
+
+|Typ des meldungshandlers|Entsprechende Nachricht-Makro|
+|-----------------------------|---------------------------------|
+|[MessageHandler](../atl/messagehandler.md)|[MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler)|
+|[CommandHandler](../atl/commandhandler.md)|[COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)|
+|[NotifyHandler](../atl/notifyhandler.md)|[NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)|
+
+## <a name="see-also"></a>Siehe auch
+
+[Implementieren eines Fensters](../atl/implementing-a-window.md)<br/>
+[Meldungszuordnungen](../atl/message-maps-atl.md)<br/>
+[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

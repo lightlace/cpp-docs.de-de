@@ -1,5 +1,5 @@
 ---
-title: Module::GenericReleaseNotifier::GenericReleaseNotifier Konstruktor | Microsoft Docs
+title: Module::GenericReleaseNotifier::GenericReleaseNotifier-Konstruktor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb07c7f53e27e380ba5775369611299cad0f60d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98bcc3d3fcaf7aea3b2632cacb1ff38eedb868b8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875057"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612311"
 ---
 # <a name="modulegenericreleasenotifiergenericreleasenotifier-constructor"></a>Module::GenericReleaseNotifier::GenericReleaseNotifier-Konstruktor
-Initialisiert eine neue Instanz der genericreleasenotifier-Klasse.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-      GenericReleaseNotifier(  
-   T callback,   
-   bool release  
-) throw() : ReleaseNotifier(release), callback_(callback);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `callback`  
- Ein Lambda, Funktionselement oder Zeiger auf Funktion Ereignishandler, die mit der Funktion klammeroperator aufgerufen werden können (`()`).  
-  
- `release`  
- Geben Sie `true` So aktivieren Sie das zugrunde liegende Aufrufen [Modul:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) Methode; andernfalls geben `false`.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [Module::GenericReleaseNotifier-Klasse](../windows/module-genericreleasenotifier-class.md)
+
+Initialisiert eine neue Instanz der dem **genericreleasenotifier** Klasse.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+GenericReleaseNotifier(
+   T callback,
+   bool release
+) throw() : ReleaseNotifier(release), callback_(callback);
+```
+
+### <a name="parameters"></a>Parameter
+
+*Rückruf*  
+Ein Lambda, Funktionselement oder Zeiger auf Funktion-Ereignishandler, der mit dem Klammernoperator-Funktion aufgerufen werden kann (`()`).
+
+*release*  
+Geben Sie **"true"** aktivieren aufrufen, die zugrunde liegende [Modul:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) Methode geben Sie andernfalls **"false"**.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[Module::GenericReleaseNotifier-Klasse](../windows/module-genericreleasenotifier-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1070 | Microsoft Docs
+title: Schwerwiegender Fehler C1070 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99650b93819c4bc0192d612b0f1344e1b99671d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e7e871b69bb189140a4001d574736a255eefaf61
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228174"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055623"
 ---
 # <a name="fatal-error-c1070"></a>Schwerwiegender Fehler C1070
-Fehlende Zuordnung von #if und #endif in Datei "Dateiname"  
-  
- Einer `#if`-, `#ifdef`- oder `#ifndef` -Direktive fehlt das entsprechende `#endif`.  
-  
- Im folgenden Beispiel wird C1070 generiert:  
-  
-```  
-// C1070.cpp  
-#define TEST  
-  
-#ifdef TEST  
-  
-#ifdef TEST  
-#endif  
-// C1070  
-```  
-  
- Mögliche Lösung:  
-  
-```  
-// C1070b.cpp  
-// compile with: /c  
-#define TEST  
-  
-#ifdef TEST  
-#endif  
-  
-#ifdef TEST  
-#endif  
+
+Fehlende Zuordnung von #if und #endif in Datei "Dateiname"
+
+Einer `#if`-, `#ifdef`- oder `#ifndef` -Direktive fehlt das entsprechende `#endif`.
+
+Im folgenden Beispiel wird C1070 generiert:
+
+```
+// C1070.cpp
+#define TEST
+
+#ifdef TEST
+
+#ifdef TEST
+#endif
+// C1070
+```
+
+Mögliche Lösung:
+
+```
+// C1070b.cpp
+// compile with: /c
+#define TEST
+
+#ifdef TEST
+#endif
+
+#ifdef TEST
+#endif
 ```

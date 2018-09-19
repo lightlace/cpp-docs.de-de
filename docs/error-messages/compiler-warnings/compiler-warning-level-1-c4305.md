@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4305 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4305 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 1/17/2018
 ms.technology:
@@ -15,24 +15,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7694c511f57b6907227d62f969b61218f836cb14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 88ae0fb38b7e6af14525906e90486a68ce22ee56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277822"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086823"
 ---
 # <a name="compiler-warning-level-1-c4305"></a>Compilerwarnung (Stufe 1) C4305
 
-> "*Kontext*': Verkürzung von '*Typ1*'to'*Typ2*"  
+> "*Kontext*': Verkürzung von '*type1*'to'*Typ2*"
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Warnung wird ausgegeben, wenn ein Wert in einen kleineren Typ in einer Initialisierung oder als ein Konstruktorargument führt zu einem Dienstausfall Informationen konvertiert wird.
+Diese Warnung wird ausgegeben, wenn ein Wert in einen kleineren Typ in einer Initialisierung oder als Konstruktorargument, was zu einem Verlust von Informationen konvertiert wird.
 
 ## <a name="example"></a>Beispiel
 
-In diesem Beispiel werden zwei Möglichkeiten, die Sie möglicherweise diese Warnung angezeigt:
+Dieses Beispiel zeigt zwei Möglichkeiten, die Sie möglicherweise diese Warnung angezeigt:
 
 ```cpp
 // C4305.cpp
@@ -51,4 +51,4 @@ int main()
 }
 ```
 
-Um dieses Problem zu beheben, initialisieren Sie, indem Sie einen Wert mit dem richtigen Typ, oder verwenden Sie eine explizite Umwandlung in den richtigen Typ. Verwenden Sie z. B. eine **"float"** z. B. 2.71828f anstelle von literalen eine **doppelte** (dem Standardtyp für gleitkommaliterale) initialisiert werden, eine **"float"** Variable, oder Übergabe an ein Konstruktor, akzeptiert eine **"float"** Argument.
+Um dieses Problem zu beheben, initialisieren Sie, indem Sie mit einem Wert den richtigen Typ aufweist, oder verwenden Sie eine explizite Umwandlung in den richtigen Typ. Beispielsweise verwenden eine **"float"** wie z. B. 2.71828f anstelle von literalen eine **doppelte** (dem Standardtyp für gleitkommaliterale) zum Initialisieren eine **"float"** Variable oder Übergabe an eine Konstruktor, eine **"float"** Argument.

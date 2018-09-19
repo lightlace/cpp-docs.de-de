@@ -170,12 +170,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a66b351ba03ad6d8afb9d7423a2d1833eec8e2b7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a502ae93b43320fb3a8f43b36b5bc4ef43c23dd2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418522"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217003"
 ---
 # <a name="standard-types"></a>Standardtypen
 Die Microsoft-Laufzeitbibliothek definiert die folgenden Standardtypen und TypeDefs.  
@@ -198,7 +198,7 @@ Die Microsoft-Laufzeitbibliothek definiert die folgenden Standardtypen und TypeD
 |int_fast64_t, uint_fast64_t|long long, unsigned long long|  
 |intmax_t, uintmax_t|long long, unsigned long long|  
   
-|Typ|description|Deklariert in|  
+|Typ|Beschreibung |Deklariert in|  
 |----------|-----------------|-----------------|  
 |`clock_t` (lang)|Speichert Zeitwerte, die von [clock](../c-runtime-library/reference/clock.md) verwendet werden.|TIME.H|  
 |`_complex`-Struktur|Speicher tatsächliche und imaginäre Teile komplexer Zahlen, die von [_cabs](../c-runtime-library/reference/cabs.md) verwendet werden.|MATH.H|  
@@ -211,14 +211,14 @@ Die Microsoft-Laufzeitbibliothek definiert die folgenden Standardtypen und TypeD
 |`div_t`-, `ldiv_t`- und `lldiv_t`-Strukturen|Speichern Werte, die von [div](../c-runtime-library/reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md) und [lldiv](../c-runtime-library/reference/ldiv-lldiv.md) zurückgegeben werden.|STDLIB.H|  
 |`errno_t`-Integer|Wird für einen Parameter oder einen Funktionsrückgabetyp verwendet, der Fehlercodes von `errno` behandelt.|STDDEF.H,<br /><br /> CRTDEFS.H|  
 |`_exception`-Struktur|Speichert Fehlerinformationen für [_matherr](../c-runtime-library/reference/matherr.md).|MATH.H|  
-|`_EXCEPTION_POINTERS`|Enthält einen Ausnahmedatensatz. Weitere Informationen finden Sie unter [EXCEPTION_POINTERS](http://msdn.microsoft.com/library/windows/desktop/ms679331).|FPIEEE.H|  
+|`_EXCEPTION_POINTERS`|Enthält einen Ausnahmedatensatz. Weitere Informationen finden Sie unter [EXCEPTION_POINTERS](/windows/desktop/api/winnt/ns-winnt-_exception_pointers).|FPIEEE.H|  
 |`FILE`-Struktur|Speichert Informationen zum aktuellen Zustand des Streams; wird in allen E/A-Operationen eines Streams verwendet.|STDIO.H|  
 |`_finddata_t`-, `_wfinddata_t`-, `_finddata32_t`-, `_wfinddata32_t`-, `_finddatai64_t`-, `_wfinddatai64_t`-, `__finddata64_t`-, `__wfinddata64_t`-, `__finddata32i64_t`-, `__wfinddata32i64_t`-, `__finddata64i32_t`-, `__wfinddata64i32_t`-Strukturen|Speichern Dateiattributinformationen, die von [_findfirst, _wfindfirst und verwandten Funktionen](../c-runtime-library/reference/findfirst-functions.md) sowie [_findnext, _wfindnext und verwandten Funktionen](../c-runtime-library/reference/findnext-functions.md) zurückgegeben werden. Informationen über Strukturmember finden Sie unter [Dateinamen-Suchfunktionen](../c-runtime-library/filename-search-functions.md).|IO.H, WCHAR.H|  
 |`_FPIEEE_RECORD`-Struktur|Enthält Informationen zur IEEE-Gleitkommaausnahme; wird an einen benutzerdefinierten Traphandler durch [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md) übergeben.|FPIEEE.H|  
 |`fpos_t` (lange ganze Zahl, `__int64` oder Struktur, abhängig von der Zielplattform)|Wird von [fgetpos](../c-runtime-library/reference/fgetpos.md) und [fsetpos](../c-runtime-library/reference/fsetpos.md) verwendet, um Informationen für die eindeutige Angabe aller Positionen in einer Datei aufzuzeichnen.|STDIO.H|  
 |`_fsize_t` (lange ganze Zahl ohne Vorzeichen)|Wird verwendet, um die Größe einer Datei anzuzeigen.|IO.H,<br /><br /> WCHAR.H|  
 |`_HEAPINFO`-Struktur|Enthält Informationen zum nächsten Heapeintrag für [_heapwalk](../c-runtime-library/reference/heapwalk.md).|MALLOC.H|  
-|`_HFILE` (void *)|Ein Betriebssystem-Dateihandle.|CRTDBG.H|  
+|`_HFILE` (void \*)|Ein Betriebssystem-Dateihandle.|CRTDBG.H|  
 |`imaxdiv_t`|Der Typ des Werts, der von der [imaxdiv](../c-runtime-library/reference/imaxdiv.md)-Funktion zurückgegeben wird und den Quotienten und den Rest enthält.|inttypes.h|  
 |`ino_t`, `_ino_t` (kurz ohne Vorzeichen)|Zur Rückgabe von Statusinformationen.|WCHAR.H|  
 |`intmax_t`|Ein ganzzahliger Typ mit Vorzeichen, der beliebige Werte eines ganzzahligen Typs mit Vorzeichen darstellen kann.|stdint.h|  

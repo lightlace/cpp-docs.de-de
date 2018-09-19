@@ -1,5 +1,5 @@
 ---
-title: OMP_NUM_THREADS | Microsoft Docs
+title: OMP_NUM_THREADS | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e25369f18f542198638e324110ba14d10b8ddc69
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 39f45b9c81d5339b2b6afe4c77fdc9bac6b5d731
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691767"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091165"
 ---
 # <a name="ompnumthreads"></a>OMP_NUM_THREADS
-Legt die maximale Anzahl von Threads in den parallelen Bereich, es sei denn, durch Überschreiben [Omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) oder [Num_threads](../../../parallel/openmp/reference/num-threads.md).  
+Legt die maximale Anzahl von Threads in den parallelen Bereich fest, es sei denn, durch außer Kraft gesetzt [Omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) oder [Num_threads](../../../parallel/openmp/reference/num-threads.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,21 +32,20 @@ Legt die maximale Anzahl von Threads in den parallelen Bereich, es sei denn, dur
 set OMP_NUM_THREADS[=num]  
 ```  
   
+### <a name="parameters"></a>Parameter
+  
+*num*<br/>
+Die maximale Anzahl von Threads, die Sie in den parallelen Bereich, bis zu 64 in der Visual C++-Implementierung verwenden möchten.  
+  
 ## <a name="remarks"></a>Hinweise  
- wobei  
+ Die **OMP_NUM_THREADS** Umgebungsvariable kann überschrieben werden, indem die [Omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) Funktion oder durch [Num_threads](../../../parallel/openmp/reference/num-threads.md).  
   
- `num`  
- Die maximale Anzahl von Threads ab, die in den parallelen Bereich, bis zu 64 in der Visual C++-Implementierung werden sollen.  
-  
-## <a name="remarks"></a>Hinweise  
- Die **OMP_NUM_THREADS** -Umgebungsvariable kann überschrieben werden, indem die [Omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) Funktion oder durch [Num_threads](../../../parallel/openmp/reference/num-threads.md).  
-  
- Der Standardwert von `num` in der Visual C++-Implementierung des OpenMP-Standards ist die Anzahl virtueller Prozessoren, einschließlich der Hyperthreading-CPUs.  
+ Der Standardwert von `num` in der Visual C++-Implementierung der OpenMP-Standard ist die Anzahl virtueller Prozessoren, einschließlich CPUs mit Hyperthreading.  
   
  Weitere Informationen finden Sie unter [4.2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md).  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Befehl legt die **OMP_NUM_THREADS** -Umgebungsvariable um 16:  
+ Der folgende Befehl legt die **OMP_NUM_THREADS** -Umgebungsvariable auf 16:  
   
 ```  
 set OMP_NUM_THREADS=16  

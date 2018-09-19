@@ -56,19 +56,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52b99b08fc7761f5fb2d15761bf7726ac0faf64d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2c9c2f461df538f405af8295c65f67dbefe46bb7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415425"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198093"
 ---
 # <a name="strrev-wcsrev-mbsrev-mbsrevl"></a>_strrev, _wcsrev, _mbsrev, _mbsrev_l
 
 Kehrt die Zeichen einer Zeichenfolge um.
 
 > [!IMPORTANT]
-> **_mbsrev** und **_mbsrev_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsrev** und **_mbsrev_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -102,14 +102,14 @@ Gibt einen Zeiger zur geänderten Zeichenfolge zurück. Kein Rückgabewert ist z
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_strrev** Funktion kehrt die Reihenfolge der Zeichen im *str*. Das abschließende NULL-Zeichen bleibt bestehen. **_wcsrev** und **_mbsrev** sind Breitzeichen- und multibytezeichenversionen von **_strrev**. Die Argumente und der Rückgabewert von **_wcsrev** sind Breitzeichen-Zeichenfolgen, die von **_mbsrev** sind Multibyte Zeichenfolgen. Für **_mbsrev**, die Reihenfolge der Bytes in jedem Multibytezeichen in *str* wird nicht geändert. Diese drei Funktionen verhalten sich andernfalls identisch.
+Die **_strrev** Funktion kehrt die Reihenfolge der Zeichen in *str*. Das abschließende NULL-Zeichen bleibt bestehen. **_wcsrev** und **_mbsrev** sind Breitzeichen- und multibytezeichenversionen von Versionen von **_strrev**. Die Argumente und der Rückgabewert von **_wcsrev** sind Breitzeichen-Zeichenfolgen, die von **_mbsrev** sind Multibyte Zeichenfolgen. Für **_mbsrev**, die Reihenfolge der Bytes in jedem Multibytezeichen in *str* wird nicht geändert. Diese drei Funktionen verhalten sich andernfalls identisch.
 
-**_mbsrev** überprüft die eigenen Parameter. Wenn entweder *string1* oder *Zeichenfolge2* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **_mbsrev** gibt **NULL** und legt **Errno** auf **EINVAL**. **_strrev** und **_wcsrev** überprüfen ihre Parameter nicht.
+**_mbsrev** überprüft die eigenen Parameter. Wenn entweder *string1* oder *Zeichenfolge2* ist ein null-Zeiger der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **_mbsrev** gibt **NULL** und **Errno** zu **EINVAL**. **_strrev** und **_wcsrev** überprüfen ihre Parameter nicht.
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale, _wsetlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen sind nahezu identisch, außer dass diejenigen ohne haben die **_l** -Suffix verwenden das aktuelle Gebietsschema und die diejenigen mit den **_l** -Suffix verwenden stattdessen den Gebietsschemaparameter, der übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert wird von der Einstellung beeinflusst die **LC_CTYPE** -kategorieeinstellung des Gebietsschemas, siehe [Setlocale, _wsetlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen sind nahezu identisch, außer dass diejenigen ohne haben die **_l** -Suffix verwenden das aktuelle Gebietsschema und diejenigen, auf denen die **_l** -Suffix verwenden stattdessen den Gebietsschemaparameter, der übergeben. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
-> Diese Funktionen sind möglicherweise für Pufferüberlaufrisiken anfällig. Pufferüberläufe können für Systemangriffe eingesetzt werden, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Diese Funktionen sind möglicherweise für Pufferüberlaufrisiken anfällig. Pufferüberläufe können für Systemangriffe eingesetzt werden, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -120,7 +120,7 @@ Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kateg
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_strrev**|\<string.h>|
 |**_wcsrev**|\<string.h> oder \<wchar.h>|

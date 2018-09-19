@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb3a2bce257717c695c1458b12f3e6d4f11b9d7a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 3cf85ec6de81ca18f32b8cd6bea015341f78287c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849736"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715358"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog-Klasse
 Die `CMFCColorDialog` Klasse stellt ein Dialogfeld zur Farbauswahl dar.  
@@ -63,7 +63,7 @@ class CMFCColorDialog : public CDialogEx
 |----------|-----------------|  
 |[CMFCColorDialog::GetColor](#getcolor)|Gibt die aktuelle ausgewählte Farbe zurück.|  
 |[CMFCColorDialog::GetPalette](#getpalette)|Gibt die Farbe der Palette zurück.|  
-|`CMFCColorDialog::PreTranslateMessage`|Übersetzt fenstermeldungen, bevor sie um weitergeleitet werden die [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows-Funktionen. Syntax und Weitere Informationen finden Sie unter [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Überschreibt `CDialogEx::PreTranslateMessage`.)|  
+|`CMFCColorDialog::PreTranslateMessage`|Übersetzt fenstermeldungen, bevor sie um weitergeleitet werden die [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows-Funktionen. Syntax und Weitere Informationen finden Sie unter [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Überschreibt `CDialogEx::PreTranslateMessage`.)|  
 |[CMFCColorDialog::RebuildPalette](#rebuildpalette)|Leitet eine Palette aus der Systempalette an.|  
 |[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|Legt die aktuelle ausgewählte Farbe fest.|  
 |[CMFCColorDialog::SetNewColor](#setnewcolor)|Legt die Farbe am gleich einem angegebenen RGB-Wert fest.|  
@@ -125,17 +125,17 @@ CMFCColorDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *ClrInit*  
- Die Standardauswahl für die Farbe. Wenn kein Wert angegeben wird, ist die Standardeinstellung RGB(0,0,0) (Schwarz).  
+*clrInit*<br/>
+[in] Die Standardauswahl für die Farbe. Wenn kein Wert angegeben wird, ist die Standardeinstellung RGB(0,0,0) (Schwarz).  
   
- [in] *DwFlags*  
- (Reserviert).  
+*dwFlags*<br/>
+[in] Reserviert.
   
- [in] *pParentWnd*  
- Ein Zeiger auf das übergeordnete Element oder Besitzer des Dialogfelds-Fenster.  
+*pParentWnd*<br/>
+[in] Ein Zeiger auf das übergeordnete Element oder Besitzer des Dialogfelds-Fenster.  
   
- [in] *hPal*  
- Ein Handle für eine Farbpalette.  
+*hPal*<br/>
+[in] Ein Handle für eine Farbpalette.  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -149,7 +149,7 @@ COLORREF GetColor() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) -Wert, der den RGB-Informationen für das Dialogfeld "Farbe" ausgewählte Farbe an.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) -Wert, der den RGB-Informationen für das Dialogfeld "Farbe" ausgewählte Farbe an.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion aufzurufen, nachdem Sie die `DoModal` Methode.  
@@ -182,8 +182,8 @@ void SetCurrentColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Rgb*  
- Ein RGB-Farbwert  
+*rgb*<br/>
+[in] Ein RGB-Farbwert  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -195,8 +195,8 @@ void SetNewColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Rgb*  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) , die eine RGB-Farbe angibt.  
+*rgb*<br/>
+[in] Ein [COLORREF](/windows/desktop/gdi/colorref) , die eine RGB-Farbe angibt.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -211,14 +211,14 @@ void SetPageOne(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *R*  
- Gibt an, der roten Anteil der RGB-Wert.  
+*R*<br/>
+[in] Gibt an, der roten Anteil der RGB-Wert.  
   
- [in] *G*  
- Gibt an, der grünen Anteil der RGB-Wert.  
+*G*<br/>
+[in] Gibt an, der grünen Anteil der RGB-Wert.  
   
- [in] *B*  
- Gibt die blaue Komponente den RGB-Wert.  
+*B*<br/>
+[in] Gibt die blaue Komponente den RGB-Wert.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -233,14 +233,14 @@ void SetPageTwo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *R*  
- Gibt eine rote den RGB-Wert-Komponente  
+*R*<br/>
+[in] Gibt eine rote den RGB-Wert-Komponente  
   
- [in] *G*  
- Gibt eine grüne RGB-Wert-Komponente  
+*G*<br/>
+[in] Gibt eine grüne RGB-Wert-Komponente  
   
- [in] *B*  
- Gibt an, eine blaue Komponente des RGB-Wert  
+*B*<br/>
+[in] Gibt an, eine blaue Komponente des RGB-Wert  
   
 ### <a name="remarks"></a>Hinweise  
   

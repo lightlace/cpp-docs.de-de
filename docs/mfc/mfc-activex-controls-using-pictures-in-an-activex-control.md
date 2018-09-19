@@ -1,5 +1,5 @@
 ---
-title: 'MFC-ActiveX-Steuerelemente: Verwenden von Bildern in einem ActiveX-Steuerelement | Microsoft Docs'
+title: 'MFC-ActiveX-Steuerelemente: Verwenden von Bildern in einem ActiveX-Steuerelement | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 356d7acd67747f4310ed0e4f564df7d1533e88ed
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ebe0c28f1f2d6ee2eab81d9de2af3c033ecd484a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930647"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199673"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Verwenden von Bildern in einem ActiveX-Steuerelement
 In diesem Artikel werden der allgemeine Bildtyp und dessen Implementierung in das ActiveX-Steuerelement beschrieben. Folgende Themen werden behandelt:  
@@ -71,7 +71,7 @@ In diesem Artikel werden der allgemeine Bildtyp und dessen Implementierung in da
      Diese Änderungen werden für mehrere Funktionen ausgeführt, die für die Darstellung des ActiveX-Steuerelements verantwortlich sind.  
   
 ##  <a name="_core_additions_to_your_control_project"></a> Zusätze zum Steuerelementprojekt  
- Um die Eigenschaftenseiten-ID für die standardbildeigenschaften hinzuzufügen, fügen Sie die folgende Zeile nach der BEGIN_PROPPAGEIDS-Makro in der Implementierungsdatei des Steuerelements (. CPP):  
+ Um die Eigenschaftenseiten-ID für die standardbildeigenschaften hinzuzufügen, fügen Sie die folgende Zeile nach dem BEGIN_PROPPAGEIDS-Makro in der Implementierungsdatei des Steuerelements (. CPP):  
   
  [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]  
   
@@ -83,7 +83,7 @@ In diesem Artikel werden der allgemeine Bildtyp und dessen Implementierung in da
   
  [!code-cpp[NVC_MFC_AxPic#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_3.h)]  
   
- Es ist nicht notwendig, den Datenmember *M_pic*; einen beliebigen Namen reicht aus.  
+ Es ist nicht erforderlich, um den Datenmember *M_pic*; einen beliebigen Namen genügt.  
   
  Fügen Sie als nächstes eine benutzerdefinierte Eigenschaft hinzu, die einen Bildtyp unterstützt:  
   
@@ -99,7 +99,7 @@ In diesem Artikel werden der allgemeine Bildtyp und dessen Implementierung in da
   
 5.  Geben Sie im Feld **Eigenschaftsname** den Namen der Eigenschaft ein. In diesem Verfahren wird z. B. `ControlPicture` verwendet.  
   
-6.  In der **Eigenschaftentyp** wählen Sie im **Lpicturedisp\***  für den Eigenschaftentyp.  
+6.  In der **Eigenschaftentyp** Kontrollkästchen **IPictureDisp** <strong>\*</strong> für den Eigenschaftentyp.  
   
 7.  Klicken Sie unter **Implementierungstyp**auf **Get/Set-Methoden**.  
   
@@ -123,7 +123,7 @@ In diesem Artikel werden der allgemeine Bildtyp und dessen Implementierung in da
 >  Die von Ihnen verwendeten Steuerelementklassen und Funktionsnamen können von denen im oben genannten Beispiel abweichen.  
   
 ###  <a name="_core_modifications_to_your_control_project"></a> Änderungen am Steuerelementprojekt  
- Nachdem Sie dem Steuerelementprojekt die notwendigen Zusätze hinzugefügt haben, müssen Sie mehrere Funktionen ändern, die das Rendern des ActiveX-Steuerelements beeinflussen. Die Funktionen `OnResetState`und `OnDraw`sowie die Get-/Set-Funktionen einer benutzerdefinierten Bildeigenschaft befinden sich in der Implementierungsdatei des Steuerelements. (Beachten Sie, dass in diesem Beispiel die Steuerelementklasse aufgerufen wird `CSampleCtrl`, `CPictureHolder` Datenmember heißt *M_pic*, und die benutzerdefinierte Bildeigenschaft wird `ControlPicture`.)  
+ Nachdem Sie dem Steuerelementprojekt die notwendigen Zusätze hinzugefügt haben, müssen Sie mehrere Funktionen ändern, die das Rendern des ActiveX-Steuerelements beeinflussen. Die Funktionen `OnResetState`und `OnDraw`sowie die Get-/Set-Funktionen einer benutzerdefinierten Bildeigenschaft befinden sich in der Implementierungsdatei des Steuerelements. (Beachten Sie, dass in diesem Beispiel die Control-Klasse heißt `CSampleCtrl`, `CPictureHolder` Datenmember wird aufgerufen, *M_pic*, und der benutzerdefinierten Bildeigenschaft `ControlPicture`.)  
   
  Fügen Sie in der `OnResetState` -Funktion des Steuerelements hinter dem Aufruf von `COleControl::OnResetState`die folgende optionale Zeile ein:  
   

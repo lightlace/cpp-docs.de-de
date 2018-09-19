@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2661 generiert | Microsoft Docs
+title: Compilerfehler C2661 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcab577ae9cfd84c757ceb194d4a59ee63057993
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8443e21db273aa7def879bd82ab823afb8a508a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231030"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074395"
 ---
-# <a name="compiler-error-c2661"></a>Compiler-Fehler C2661 generiert
-'Funktion': keine überladene Funktion akzeptiert Parameter  
-  
- Mögliche Ursachen:  
-  
-1.  Falsche tatsächliche Parameter im Funktionsaufruf.  
-  
-2.  Fehlende Funktionsdeklaration.  
-  
- Im folgende Beispiel wird C2661 generiert:  
-  
-```  
-// C2661.cpp  
-void func( int ){}  
-void func( int, int ){}  
-int main() {  
-   func( );   // C2661 func( void ) was not declared  
-   func( 1 );   // OK func( int ) was declared  
-}  
+# <a name="compiler-error-c2661"></a>Compilerfehler C2661
+
+'Funktion': keine überladene Funktion akzeptiert Parameter
+
+Mögliche Ursachen:
+
+1. Falsche übergebene Parameter im Funktionsaufruf.
+
+1. Fehlenden Funktionsdeklaration.
+
+Im folgende Beispiel wird die C2661 generiert:
+
+```
+// C2661.cpp
+void func( int ){}
+void func( int, int ){}
+int main() {
+   func( );   // C2661 func( void ) was not declared
+   func( 1 );   // OK func( int ) was declared
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: BSCMAKE-Fehler BK1509 | Microsoft Docs
+title: BSCMAKE-Fehler BK1509 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825d1e1e119aa80445c5ae15804bbdde4a3d8bf9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 091fab63737c7ee1b3b85753a354bb7214cfa411
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295622"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025242"
 ---
 # <a name="bscmake-error-bk1509"></a>BSCMAKE-Fehler BK1509
-Heap erschöpft  
-  
- BSCMAKE war nicht genügend Arbeitsspeicher, einschließlich des virtuellen Speichers.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>So beheben Sie den Fehler (unterschiedliche Lösungsmöglichkeiten)  
-  
-1.  Geben Sie Speicherplatz frei.  
-  
-2.  Vergrößern der Auslagerungsdatei.  
-  
-3.  Vergrößern Sie die Windows-Auslagerungsdatei.  
-  
-4.  Reduzieren Sie die BSCMAKE erfordert, dass Ei mit Speicher oder/es einsetzen, um einige auszuschließen Eingabedateien oder/em, um Makrotext zu beseitigen.
+
+kein weiterer Heapspeicher verfügbar
+
+BSCMAKE war nicht genügend Arbeitsspeicher, einschließlich des virtuellen Speichers.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>So beheben Sie den Fehler (unterschiedliche Lösungsmöglichkeiten)
+
+1. Geben Sie Festplattenspeicher frei.
+
+1. Erhöhen Sie die Größe der Auslagerungsdatei.
+
+1. Vergrößern Sie die Windows-Auslagerungsdatei.
+
+1. Reduzieren Sie den Speicher, die, den mithilfe von Ei BSCMAKE erfordert, dass, oder/es einsetzen, um einige auszuschließen Eingabedateien oder/em um Makrotext zu beseitigen.

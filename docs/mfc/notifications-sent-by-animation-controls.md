@@ -1,5 +1,5 @@
 ---
-title: Von Animationssteuerelementen gesendete Benachrichtigungen | Microsoft Docs
+title: Von Animationssteuerelementen gesendete Benachrichtigungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1696389ce3dc40c5d02ec660ebaeb6bf3e6c3ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d7aff43577a4b1aa55fc0725ba4753228e334000
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345240"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199660"
 ---
 # <a name="notifications-sent-by-animation-controls"></a>Von Animationssteuerelementen gesendete Benachrichtigungen
-Eines Animationssteuerelements ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) zwei verschiedene Arten von Benachrichtigungen sendet. Die Benachrichtigungen werden gesendet, in Form von [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachrichten.  
+Ein Animationssteuerelement ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) zwei verschiedene Arten von Benachrichtigungen sendet. Die Benachrichtigungen werden gesendet, in Form von [WM_COMMAND](/windows/desktop/menurc/wm-command) Nachrichten.  
   
- Die [ACN_START](http://msdn.microsoft.com/library/windows/desktop/bb761891) Nachricht wird gesendet, wenn die Animation-Steuerelement einen Clip-Wiedergabe gestartet wurde. Die [ACN_STOP](http://msdn.microsoft.com/library/windows/desktop/bb761893) Nachricht wird gesendet, wenn die Animationssteuerelements abgeschlossen oder einen Clip-Wiedergabe beendet wurde.  
+ Die [ACN_START](/windows/desktop/Controls/acn-start) Nachricht wird gesendet, wenn das Animationssteuerelement gestartet wurde, einen Audioclip abspielen. Die [ACN_STOP](/windows/desktop/Controls/acn-stop) Nachricht wird gesendet, wenn das Animationssteuerelement abgeschlossen oder beendet einen Audioclip abspielen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CAnimateCtrl](../mfc/using-canimatectrl.md)   

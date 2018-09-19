@@ -1,5 +1,5 @@
 ---
-title: CloakedIid-Struktur | Microsoft Docs
+title: CloakedIid-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57ad76b48b92519eaeed089dfb14817c38273588
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3a60d12adfade18c9989d1dc8609a38252d32073
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856159"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599097"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid-Struktur
-Zeigt „RuntimeClass“-, „Implements“- und „ChainInterfaces“-Vorlagen an, dass auf die angegebene Schnittstelle in der IID-Liste nicht zugegriffen werden kann.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-template<typename T>  
-struct CloakedIid : T;  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `T`  
- Die Schnittstelle, die ausgeblendet ist (verdeckt).  
-  
-## <a name="remarks"></a>Hinweise  
- Folgender Ausdruck ist ein Beispiel für die Verwendung CloakedIid: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `T`  
-  
- `CloakedIid`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** implements.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)
+
+Gibt an, um die `RuntimeClass`, `Implements` und `ChainInterfaces` Vorlagen, dass die angegebene Schnittstelle nicht zugegriffen werden kann, in der IID-Liste ist.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+template<typename T>
+struct CloakedIid : T;
+```
+
+#### <a name="parameters"></a>Parameter
+
+*T*  
+Die Schnittstelle, die ausgeblendet ist (verdeckt).
+
+## <a name="remarks"></a>Hinweise
+
+Im folgenden ist ein Beispiel dafür, wie **CloakedIid** wird verwendet: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`T`
+
+`CloakedIid`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** implements.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)

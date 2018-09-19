@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24fee4d4a73fb2933b00160879be130f4c33083b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ffb17f8f38e83399ec32b792338f818cc06215dc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854056"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703760"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton-Klasse
 Eine Symbolleisten-Schaltfläche, die ein Kombinationsfeld-Steuerelement enthält ( [CComboBox-Klasse](../../mfc/reference/ccombobox-class.md)).  
@@ -168,11 +168,11 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszItem*  
- Der Text des Elements, das im Listenfeld hinzugefügt werden soll.  
+*lpszItem*<br/>
+[in] Der Text des Elements, das im Listenfeld hinzugefügt werden soll.  
   
- [in] *DwData*  
- Die Daten, die dem Element im Listenfeld hinzuzufügende zugeordnet.  
+*dwData*<br/>
+[in] Die Daten, die dem Element im Listenfeld hinzuzufügende zugeordnet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Index des letzten Elements im Listenfeld.  
@@ -192,11 +192,11 @@ virtual INT_PTR AddSortedItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszItem*  
- Der Text des Elements, das im Listenfeld hinzugefügt werden soll.  
+*lpszItem*<br/>
+[in] Der Text des Elements, das im Listenfeld hinzugefügt werden soll.  
   
- [in] *DwData*  
- Die Daten, die dem Element im Listenfeld hinzuzufügende zugeordnet.  
+*dwData*<br/>
+[in] Die Daten, die dem Element im Listenfeld hinzuzufügende zugeordnet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Index des Elements, das im Listenfeld hinzugefügt wurde.  
@@ -226,17 +226,17 @@ CMFCToolBarComboBoxButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiID*  
- Die Befehls-ID von der Schaltfläche "Neu".  
+*uiID*<br/>
+[in] Die Befehls-ID von der Schaltfläche "Neu".  
   
- [in] *iImage*  
- Der Bildindex des Bilds der Schaltfläche "Neu" zugeordnet.  
+*iImage*<br/>
+[in] Der Bildindex des Bilds der Schaltfläche "Neu" zugeordnet.  
   
- [in] *DwStyle*  
- Die Darstellung der Schaltfläche "Neu".  
+*dwStyle*<br/>
+[in] Die Darstellung der Schaltfläche "Neu".  
   
- [in] *iWidth*  
- Die Breite in Pixel der Schaltfläche "Neu".  
+*iWidth*<br/>
+[in] Die Breite in Pixel der Schaltfläche "Neu".  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardbreite beträgt 150 Pixel.  
@@ -263,11 +263,11 @@ virtual int Compare(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *lpszItem1*  
- Die erste zu vergleichende Zeichenfolge.  
+*lpszItem1*<br/>
+[in] Die erste zu vergleichende Zeichenfolge.  
   
- [in] *lpszItem2*  
- Die zweite zu vergleichende Zeichenfolge.  
+*lpszItem2*<br/>
+[in] Die zweite zu vergleichende Zeichenfolge.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Wert, der die Groß-/Kleinschreibung lexikografische Beziehung zwischen den Zeichenfolgen angibt. In der folgende Tabelle sind die möglichen Werte aufgeführt:  
@@ -293,8 +293,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Src*  
- Das `CMFCToolBarComboBoxButton`-Quellobjekt.  
+*src*<br/>
+[in] Die Quelle `CMFCToolBarComboBoxButton` Objekt.  
   
 ##  <a name="createcombo"></a>  CMFCToolBarComboBoxButton::CreateCombo  
  Erstellt ein neues Kombinationsfeld für den Kombinationsfelds-Schaltfläche.  
@@ -306,11 +306,11 @@ virtual CComboBox* CreateCombo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWndParent*  
- Ein Zeiger auf das übergeordnete Fenster der Schaltfläche.  
+*pWndParent*<br/>
+[in] Ein Zeiger auf das übergeordnete Fenster der Schaltfläche.  
   
- [in] *Rect*  
- Umschließende Rechteck des Kombinationsfelds.  
+*Rect*<br/>
+[in] Umschließende Rechteck des Kombinationsfelds.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf das neue Kombinationsfeld, wenn die Methode erfolgreich war; andernfalls NULL.  
@@ -326,14 +326,14 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWndParent*  
- Ein Zeiger auf das übergeordnete Fenster der Schaltfläche.  
+*pWndParent*<br/>
+[in] Ein Zeiger auf das übergeordnete Fenster der Schaltfläche.  
   
- [in] *Rect*  
- Umschließende Rechteck des neuen im Bearbeitungsfeld.  
+*Rect*<br/>
+[in] Umschließende Rechteck des neuen im Bearbeitungsfeld.  
   
- [in] *DwEditStyle*  
- Format des neuen Steuerelements im Bearbeitungsfeld.  
+*dwEditStyle*<br/>
+[in] Format des neuen Steuerelements im Bearbeitungsfeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf den neuen Eingabefeld zurück, wenn die Methode erfolgreich war; andernfalls NULL.  
@@ -351,14 +351,14 @@ BOOL DeleteItem(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iIndex*  
- Der nullbasierte Index des Elements, das gelöscht werden.  
+*iIndex*<br/>
+[in] Der nullbasierte Index des Elements, das gelöscht werden.  
   
- [in] *DwData*  
- Die Daten, die zu löschenden Elements zugeordnet.  
+*dwData*<br/>
+[in] Die Daten, die zu löschenden Elements zugeordnet.  
   
- [in] *LpszText*  
- Der Text des Elements, das gelöscht werden. Wenn mehrere Elemente mit dem gleichen Text vorhanden sind, wird das erste Element gelöscht.  
+*lpszText*<br/>
+[in] Der Text des Elements, das gelöscht werden. Wenn mehrere Elemente mit dem gleichen Text vorhanden sind, wird das erste Element gelöscht.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Element gefunden und erfolgreich gelöscht wurde. andernfalls "false".  
@@ -383,8 +383,8 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- True, um die Felder bearbeiten und das Kombinationsfeld zu aktivieren. So deaktivieren Sie die Felder bearbeiten und Kombinationsfeld wird false ZURÜCKGEGEBEN.  
+*bAktivieren*<br/>
+[in] True, um die Felder bearbeiten und das Kombinationsfeld zu aktivieren. So deaktivieren Sie die Felder bearbeiten und Kombinationsfeld wird false ZURÜCKGEGEBEN.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn deaktiviert, werden die Steuerelemente können nicht aktiv und können keine Benutzereingaben akzeptieren.  
@@ -397,8 +397,8 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *MenuButton*  
- Verweis auf eine Schaltfläche.  
+*MenuButton*<br/>
+[out] Verweis auf eine Schaltfläche.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Immer "true".  
@@ -411,8 +411,8 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszText*  
- Der Text für die Sie in das Listenfeld gesucht werden soll.  
+*lpszText*<br/>
+[in] Der Text für die Sie in das Listenfeld gesucht werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Index des Elements, andernfalls oder CB_ERR, wenn das Element nicht gefunden wird.  
@@ -429,11 +429,11 @@ static CMFCToolBarComboBoxButton* GetByCmd(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmd*  
- Die Befehls-ID des Kombinationsfelds-Schaltfläche.  
+*uiCmd*<br/>
+[in] Die Befehls-ID des Kombinationsfelds-Schaltfläche.  
   
- [in] *bIsFocus*  
- Konzentrieren Schaltflächen, "true" nur gesucht; "False", um alle Schaltflächen zu suchen.  
+*bIsFocus*<br/>
+[in] Konzentrieren Schaltflächen, "true" nur gesucht; "False", um alle Schaltflächen zu suchen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf eine kombinationsfeldschaltfläche; oder NULL, wenn die Schaltfläche "nicht gefunden wird.  
@@ -482,8 +482,8 @@ static int GetCountAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmd*  
- Die Befehls-ID des Kombinationsfelds-Schaltfläche.  
+*uiCmd*<br/>
+[in] Die Befehls-ID des Kombinationsfelds-Schaltfläche.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der Elemente im Listenfeld; Andernfalls wird CB_ERR, wenn das Kombinationsfeld für den Schaltfläche Feld nicht gefunden.  
@@ -511,8 +511,8 @@ static int GetCurSelAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmd*  
- Die Befehls-ID des Kombinationsfelds-Schaltfläche.  
+*uiCmd*<br/>
+[in] Die Befehls-ID des Kombinationsfelds-Schaltfläche.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Index des derzeit ausgewählten Elements im Listenfeld; CB_ERR, wenn kein Element ausgewählt ist oder ein kombinationsfeldschaltfläche ist, andernfalls nicht gefunden.  
@@ -550,8 +550,8 @@ LPCTSTR GetItem(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iIndex*  
- Nullbasierte Index eines Elements in das Listenfeld.  
+*iIndex*<br/>
+[in] Nullbasierte Index eines Elements in das Listenfeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die Zeichenfolge, die dem Element zugeordnet ist; andernfalls, NULL, wenn der Indexparameter ungültig ist, oder wenn der Indexparameter ist-1 und gibt es kein ausgewähltes Element im Kombinationsfeld ist.  
@@ -569,11 +569,11 @@ static LPCTSTR GetItemAll(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmd*  
- Die Befehls-ID des Kombinationsfelds-Schaltfläche.  
+*uiCmd*<br/>
+[in] Die Befehls-ID des Kombinationsfelds-Schaltfläche.  
   
- [in] *iIndex*  
- Der nullbasierte Index eines Elements in das Listenfeld.  
+*iIndex*<br/>
+[in] Der nullbasierte Index eines Elements in das Listenfeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf Zeichenfolge des Elements, wenn die Methode erfolgreich war; andernfalls, NULL, wenn der Indexwert ungültig ist, eine kombinationsfeldschaltfläche nicht gefunden wird, oder wenn der Index ist 1, und es ist kein ausgewählte Element im Kombinationsfeld.  
@@ -589,8 +589,8 @@ DWORD_PTR GetItemData(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iIndex*  
- Der nullbasierte Index eines Elements in das Listenfeld.  
+*iIndex*<br/>
+[in] Der nullbasierte Index eines Elements in das Listenfeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Daten, die dem Element zugeordnet, oder 0, wenn das Element nicht vorhanden ist.  
@@ -608,11 +608,11 @@ static DWORD_PTR GetItemDataAll(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmd*  
- Die Befehls-ID des Kombinationsfelds-Schaltfläche.  
+*uiCmd*<br/>
+[in] Die Befehls-ID des Kombinationsfelds-Schaltfläche.  
   
- [in] *iIndex*  
- Der nullbasierte Index eines Elements in das Listenfeld.  
+*iIndex*<br/>
+[in] Der nullbasierte Index eines Elements in das Listenfeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Daten, die dem Element zugeordnet, wenn die Methode erfolgreich war; andernfalls 0, wenn der angegebene Index nicht gültig ist oder CB_ERR, wenn das Kombinationsfeld für den Schaltfläche Feld wurde nicht gefunden.  
@@ -630,11 +630,11 @@ static void* GetItemDataPtrAll(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmd*  
- Die Befehls-ID des Kombinationsfelds-Schaltfläche.  
+*uiCmd*<br/>
+[in] Die Befehls-ID des Kombinationsfelds-Schaltfläche.  
   
- [in] *iIndex*  
- Der nullbasierte Index eines Elements in das Listenfeld.  
+*iIndex*<br/>
+[in] Der nullbasierte Index eines Elements in das Listenfeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger, der dem Element zugeordnet, wenn die Methode erfolgreich war; andernfalls-1, wenn ein Fehler auftritt, oder NULL, wenn das Kombinationsfeld für den Schaltfläche Feld wurde nicht gefunden.  
@@ -674,8 +674,8 @@ static LPCTSTR GetTextAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmd*  
- Die Befehls-ID von einer bestimmten Kombinationsfelds-Schaltfläche.  
+*uiCmd*<br/>
+[in] Die Befehls-ID von einer bestimmten Kombinationsfelds-Schaltfläche.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Text im Bearbeitungsfeld, wenn die Methode erfolgreich war. andernfalls NULL.  
@@ -728,8 +728,8 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Hwnd*  
- Ein Fensterhandle.  
+*HWND*<br/>
+[in] Ein Fensterhandle.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Handle zugeordnetes mit der kombinationsfeldschaltfläche oder eines seiner untergeordneten Elemente. andernfalls "false".  
@@ -765,8 +765,8 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iNotifyCode*  
- Die Benachrichtigung, die mit dem Befehl zugeordnet ist.  
+*iNotifyCode*<br/>
+[in] Die Benachrichtigung, die mit dem Befehl zugeordnet ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt an, ob der kombinationsfeldschaltfläche die Nachricht verarbeitet.  
@@ -789,14 +789,14 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Der Gerätekontext, in dem der kombinationsfeldschaltfläche angezeigt.  
+*pDC*<br/>
+[in] Der Gerätekontext, in dem der kombinationsfeldschaltfläche angezeigt.  
   
- [in] *SizeDefault*  
- Die Standardgröße des Kombinationsfelds-Schaltfläche.  
+*sizeDefault*<br/>
+[in] Die Standardgröße des Kombinationsfelds-Schaltfläche.  
   
- [in] *bHorz*  
- Der Status der Andocken der übergeordneten Symbolleiste. TRUE, wenn die Symbolleiste horizontal und "false" verankert ist, wenn die Symbolleiste vertikal verankert ist.  
+*bHorz*<br/>
+[in] Der Status der Andocken der übergeordneten Symbolleiste. TRUE, wenn die Symbolleiste horizontal und "false" verankert ist, wenn die Symbolleiste vertikal verankert ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein `SIZE` Struktur, die die Abmessungen der Schaltfläche im Kombinationsfeld in Pixel enthält.  
@@ -809,8 +809,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWndParent*  
- Zeiger auf den neuen übergeordneten Symbolleiste.  
+*pWndParent*<br/>
+[in] Zeiger auf den neuen übergeordneten Symbolleiste.  
   
 ##  <a name="onclick"></a>  CMFCToolBarComboBoxButton::OnClick  
  Vom Framework aufgerufen, wenn der Benutzer die Kombinationsfelds-Schaltfläche klickt.  
@@ -822,11 +822,11 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *aufnehmen*  
- Zeiger auf das übergeordnete Fenster des Kombinationsfelds-Schaltfläche.  
+*Aufnehmen*<br/>
+[in] Zeiger auf das übergeordnete Fenster des Kombinationsfelds-Schaltfläche.  
   
- [in] *bDelay*  
- Für die Verwendung in einer abgeleiteten Klasse reserviert.  
+*bDelay*<br/>
+[in] Für die Verwendung in einer abgeleiteten Klasse reserviert.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode das Ereignis behandelt. andernfalls "false".  
@@ -841,11 +841,11 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Der Gerätekontext, in dem der kombinationsfeldschaltfläche angezeigt.  
+*pDC*<br/>
+[in] Der Gerätekontext, in dem der kombinationsfeldschaltfläche angezeigt.  
   
- [in] *nCtlColor*  
- Nicht verwendet.  
+*nCtlColor*<br/>
+[in] Nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Handle für den Pinsel aus, dem das Framework verwendet, um den Hintergrund der kombinationsfeldschaltfläche zu zeichnen.  
@@ -869,29 +869,29 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Pdc*  
- Der Gerätekontext, in dem die Schaltfläche angezeigt.  
+*PDC*<br/>
+[in] Der Gerätekontext, in dem die Schaltfläche angezeigt.  
   
- [in] *Rect*  
- Das umschließende Rechteck der Schaltfläche.  
+*Rect*<br/>
+[in] Das umschließende Rechteck der Schaltfläche.  
   
- [in] *pImages*  
- Die Auflistung der Bilder, die mit der Schaltfläche zugeordnet ist.  
+*pImages*<br/>
+[in] Die Auflistung der Bilder, die mit der Schaltfläche zugeordnet ist.  
   
- [in] *bHorz*  
- Der Status der Andocken der übergeordneten Symbolleiste. TRUE, wenn die Symbolleiste horizontal und "false" verankert ist, wenn die Symbolleiste vertikal verankert ist.  
+*bHorz*<br/>
+[in] Der Status der Andocken der übergeordneten Symbolleiste. TRUE, wenn die Symbolleiste horizontal und "false" verankert ist, wenn die Symbolleiste vertikal verankert ist.  
   
- [in] *bCustomizeMode*  
- Gibt an, ob die Anwendung im Anpassungsmodus aktiviert ist.  
+*bCustomizeMode*<br/>
+[in] Gibt an, ob die Anwendung im Anpassungsmodus aktiviert ist.  
   
- [in] *bHighlight*  
- Angibt, ob zum Zeichnen der kombinationsfeldschaltfläche hervorgehoben.  
+*bHighlight*<br/>
+[in] Angibt, ob zum Zeichnen der kombinationsfeldschaltfläche hervorgehoben.  
   
- [in] *bDrawBorder*  
- Ob der kombinationsfeldschaltfläche mit einem Rahmen gezeichnet werden soll.  
+*bDrawBorder*<br/>
+[in] Ob der kombinationsfeldschaltfläche mit einem Rahmen gezeichnet werden soll.  
   
- [in] *bGrayDisabledButtons*  
- Deaktivierte Schaltflächen schattiert ist "true" Draw; FALSE, wenn die Auflistung der deaktivierten Bilder verwendet werden soll.  
+*bGrayDisabledButtons*<br/>
+[in] Deaktivierte Schaltflächen schattiert ist "true" Draw; FALSE, wenn die Auflistung der deaktivierten Bilder verwendet werden soll.  
   
 ##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
  Wird aufgerufen, durch das Framework für das Zeichnen der kombinationsfeldschaltfläche der **Befehle** im Bereich der **anpassen** Dialogfeld.  
@@ -904,14 +904,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Der Gerätekontext, in dem der kombinationsfeldschaltfläche angezeigt.  
+*pDC*<br/>
+[in] Der Gerätekontext, in dem der kombinationsfeldschaltfläche angezeigt.  
   
- [in] *Rect*  
- Das umschließende Rechteck des Kombinationsfelds-Schaltfläche.  
+*Rect*<br/>
+[in] Das umschließende Rechteck des Kombinationsfelds-Schaltfläche.  
   
- [in] *bSelected*  
- True, wenn der kombinationsfeldschaltfläche ausgewählt ist. andernfalls "false".  
+*bSelected*<br/>
+[in] True, wenn der kombinationsfeldschaltfläche ausgewählt ist. andernfalls "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Breite des Kombinationsfelds-Schaltfläche in Pixel.  
@@ -938,8 +938,8 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bShow*  
- Ob der kombinationsfeldschaltfläche anzeigen oder ausblenden.  
+*bShow*<br/>
+[in] Ob der kombinationsfeldschaltfläche anzeigen oder ausblenden.  
   
 ##  <a name="onsize"></a>  CMFCToolBarComboBoxButton::OnSize  
  Wird aufgerufen, durch das Framework zum Ändern der Größe der kombinationsfeldschaltfläche, wenn die übergeordneten Symbolleiste Größe ändert.  
@@ -949,8 +949,8 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iSize*  
- Die neue Breite des Kombinationsfelds-Schaltfläche.  
+*iSize*<br/>
+[in] Die neue Breite des Kombinationsfelds-Schaltfläche.  
   
 ##  <a name="onupdatetooltip"></a>  CMFCToolBarComboBoxButton::OnUpdateToolTip  
  Vom Framework aufgerufen, wenn der Benutzer die QuickInfo für die kombinationsfeldschaltfläche ändert.  
@@ -964,17 +964,17 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWndParent*  
- Zeiger auf das übergeordnete Fenster für die Kombinationsfelds-Schaltfläche.  
+*pWndParent*<br/>
+[in] Zeiger auf das übergeordnete Fenster für die Kombinationsfelds-Schaltfläche.  
   
- [in] *iButtonIndex*  
- ID des Kombinationsfelds-Schaltfläche.  
+*iButtonIndex*<br/>
+[in] ID des Kombinationsfelds-Schaltfläche.  
   
- [in] *WndToolTip*  
- Die QuickInfo der kombinationsfeldschaltfläche zugeordnet werden soll.  
+*wndToolTip*<br/>
+[in] Die QuickInfo der kombinationsfeldschaltfläche zugeordnet werden soll.  
   
- [in] *str*  
- Der QuickInfo-Text.  
+*str*<br/>
+[in] Der QuickInfo-Text.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode das Ereignis behandelt. andernfalls "false".  
@@ -1002,17 +1002,17 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iIndex*  
- Der nullbasierte Index eines Elements in das Listenfeld.  
+*iIndex*<br/>
+[in] Der nullbasierte Index eines Elements in das Listenfeld.  
   
- [in] *bNotify*  
- True, um der Auswahl der kombinationsfeldschaltfläche zu benachrichtigen. andernfalls "false".  
+*bNotify*<br/>
+[in] True, um der Auswahl der kombinationsfeldschaltfläche zu benachrichtigen. andernfalls "false".  
   
- [in] *DwData*  
- Die Daten, die einem Element im Listenfeld zugeordnet wird.  
+*dwData*<br/>
+[in] Die Daten, die einem Element im Listenfeld zugeordnet wird.  
   
- [in] *LpszText*  
- Der Text eines Elements in das Listenfeld.  
+*lpszText*<br/>
+[in] Der Text eines Elements in das Listenfeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich war. andernfalls "false".  
@@ -1039,17 +1039,17 @@ static BOOL SelectItemAll(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmd*  
- Die Befehls-ID von der kombinationsfeldschaltfläche, die im Listenfeld enthält.  
+*uiCmd*<br/>
+[in] Die Befehls-ID von der kombinationsfeldschaltfläche, die im Listenfeld enthält.  
   
- [in] *iIndex*  
- Der nullbasierte Index des Elements im Listenfeld. Der Wert-1 wird eine aktuelle Auswahl im Listenfeld entfernt und löscht im Bearbeitungsfeld.  
+*iIndex*<br/>
+[in] Der nullbasierte Index des Elements im Listenfeld. Der Wert-1 wird eine aktuelle Auswahl im Listenfeld entfernt und löscht im Bearbeitungsfeld.  
   
- [in] *DwData*  
- Die Daten eines Elements in das Listenfeld.  
+*dwData*<br/>
+[in] Die Daten eines Elements in das Listenfeld.  
   
- [in] *LpszText*  
- Der Text eines Elements in das Listenfeld.  
+*lpszText*<br/>
+[in] Der Text eines Elements in das Listenfeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich war. andernfalls "false".  
@@ -1064,8 +1064,8 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in, out] *Ar*  
- Die `CArchive` zu serialisierende Objekt.  
+*ar*<br/>
+[in, out] Die `CArchive` zu serialisierende Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
  Einstellungen in der `CArchive` Objekt zu ermitteln, ob diese Methode liest oder schreibt in das Archiv.  
@@ -1080,11 +1080,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pParent*  
- Das übergeordnete Fenster von der kombinationsfeldschaltfläche.  
+*pParent*<br/>
+[in] Das übergeordnete Fenster von der kombinationsfeldschaltfläche.  
   
- [out] *Daten*  
- Ein `CAccessibilityData` Objekt, das die barrierefreiheitsdaten aus der kombinationsfeldschaltfläche empfängt.  
+*data*<br/>
+[out] Ein `CAccessibilityData` Objekt, das die barrierefreiheitsdaten aus der kombinationsfeldschaltfläche empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich war. andernfalls "false".  
@@ -1097,8 +1097,8 @@ static void SetCenterVert(BOOL bCenterVert=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bCenterVert*  
- "True" Center die Kombinationsfelds-Schaltfläche auf der Symbolleiste "False" an das die Kombinationsfelds-Schaltfläche am oberen Rand der Symbolleiste.  
+*bCenterVert*<br/>
+[in] "True" Center die Kombinationsfelds-Schaltfläche auf der Symbolleiste "False" an das die Kombinationsfelds-Schaltfläche am oberen Rand der Symbolleiste.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig werden die Schaltflächen oben ausgerichtet.  
@@ -1111,8 +1111,8 @@ void SetContextMenuID(UINT uiResID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiResID*  
- Die Verknüpfung im Menü-Ressourcen-ID.  
+*uiResID*<br/>
+[in] Die Verknüpfung im Menü-Ressourcen-ID.  
   
 ##  <a name="setdropdownheight"></a>  CMFCToolBarComboBoxButton::SetDropDownHeight  
  Legt die Höhe des Listenfelds fest, wenn sie nach unten gelöscht wird.  
@@ -1122,8 +1122,8 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nHeight*  
- Die Höhe in Pixel des Listenfelds.  
+*nHeight*<br/>
+[in] Die Höhe in Pixel des Listenfelds.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardhöhe ist 150 Pixel.  
@@ -1136,8 +1136,8 @@ static void SetFlatMode(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bFlat*  
- "True" für eine flache Darstellung; andernfalls "false".  
+*bFlat*<br/>
+[in] "True" für eine flache Darstellung; andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Die flache Standardstil für Schaltflächen ist "false".  
@@ -1150,8 +1150,8 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nStyle*  
- Eine bitweise Kombination (OR) von Toolbar-Stile.  
+*nStyle*<br/>
+[in] Eine bitweise Kombination (OR) von Toolbar-Stile.  
   
 ### <a name="remarks"></a>Hinweise  
  Eine Liste der Formatvorlagen für Symbolleistenschaltflächen finden Sie unter [ToolBar-Steuerelement-Stile](../../mfc/reference/toolbar-control-styles.md)  
@@ -1164,8 +1164,8 @@ void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszText*  
- Zeiger auf eine Zeichenfolge, die die den Text für das Bearbeitungsfeld enthält.  
+*lpszText*<br/>
+[in] Zeiger auf eine Zeichenfolge, die den Text für das Bearbeitungsfeld enthält.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

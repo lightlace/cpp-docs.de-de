@@ -1,5 +1,5 @@
 ---
-title: Projektbuildfehler prj0005 | Microsoft Docs
+title: Projektbuildfehler prj0005 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b02e831c9adc8d7ff7fce759334263f847d24cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1be1ac49d5d6fa3b85b327305bc4919d183b962e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327765"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016512"
 ---
 # <a name="project-build-error-prj0005"></a>Projektbuildfehler PRJ0005
-Erstellen einer temporären Datei im Verzeichnis 'Directory' kann nicht ausgeführt werden.  
-  
- Fehler beim Aufruf eine temporäre Datei erstellen. Fehlerursachen:  
-  
--   War nicht genügend temporären Dateinamen.  
-  
--   Das temporäre Verzeichnis ist schreibgeschützt.  
-  
--   Es ist kein Verzeichnis temp oder TMP-Umgebungsvariable.  
-  
--   Ihr Computer ist nicht genügend freier Speicherplatz vorhanden.
+
+Erstellen einer temporären Datei im Verzeichnis 'Directory' kann nicht ausgeführt werden.
+
+Fehler beim Aufruf eine temporäre Datei erstellen. Fehlerursachen beinhalten:
+
+- Temporären Dateinamen nicht genügend.
+
+- Das temporäre Verzeichnis ist schreibgeschützt.
+
+- Es gibt kein Verzeichnis temp oder TMP-Umgebungsvariable.
+
+- Ihr Computer ist nicht genügend freier Speicherplatz vorhanden.

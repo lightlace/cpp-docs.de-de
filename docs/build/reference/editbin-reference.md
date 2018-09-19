@@ -1,5 +1,5 @@
 ---
-title: EDITBIN-Referenz | Microsoft Docs
+title: EDITBIN-Referenz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,24 +19,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c20191fdb133fe09ed4f6a462cd777098acd5f05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 809d1d4f25611b2310d651702f01e1e98888ad4a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372307"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699946"
 ---
 # <a name="editbin-reference"></a>EDITBIN-Referenz
-Der Microsoft COFF-Binär-Editor (EDITBIN. EXE-Datei) ändert die Binärdateien Common Object File Format (COFF). EDITBIN können um Objektdateien, ausführbaren Dateien und Dynamic Link Libraries (DLL) zu ändern.  
-  
+
+Die Microsoft COFF-Binärdatei-Editor (EDITBIN. EXE-Datei) ändert, Binärdateien Common Object File Format (COFF). EDITBIN können Sie die um Objektdateien, ausführbaren Dateien und Dynamic Link Libraries (DLL) zu ändern.
+
 > [!NOTE]
->  Sie können dieses Tool nur von der [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]-Eingabeaufforderung aus starten. Sie können es nicht von einer Systemeingabeaufforderung oder vom Datei-Explorer aus starten.  
-  
- EDITBIN ist nicht verfügbar für die Verwendung in den Dateien erstellt wird, mit der [/GL](../../build/reference/gl-whole-program-optimization.md) -Compileroption. Alle Änderungen auf die Binärdateien, die mit/GL erzeugten müssen erreicht werden, indem Sie neu zu kompilieren und verknüpfen.  
-  
--   [EDITBIN-Befehlszeile](../../build/reference/editbin-command-line.md)  
-  
--   [EDITBIN-Optionen](../../build/reference/editbin-options.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md)
+>  Sie können dieses Tool nur über die Visual Studio-Eingabeaufforderung starten. Sie können es nicht von einer Systemeingabeaufforderung oder vom Datei-Explorer aus starten.
+
+EDITBIN ist nicht verfügbar für die Verwendung in Dateien mit der ["/ GL"](../../build/reference/gl-whole-program-optimization.md) -Compileroption. Änderungen an Binärdateien, die mit "/ GL" erstellt wurde, müssen Sie erreicht werden, indem Sie neu zu kompilieren und verknüpfen.
+
+- [EDITBIN-Befehlszeile](../../build/reference/editbin-command-line.md)
+
+- [EDITBIN-Optionen](../../build/reference/editbin-options.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md)

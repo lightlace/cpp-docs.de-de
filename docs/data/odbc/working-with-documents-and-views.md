@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit Dokumenten und Ansichten | Microsoft Docs
+title: Arbeiten mit Dokumenten und Ansichten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 71750507d6b3c6cf14a721971d809347f8adfd3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdaf290cde69f6d269b4bf055c70171800aa1489
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092945"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053965"
 ---
 # <a name="working-with-documents-and-views"></a>Arbeiten mit Dokumenten und Ansichten
-Die Microsoft Foundation Classes (MFC)-Bibliothek basiert auf einer Dokument-/Ansichtarchitektur für viele Features. In der Regel ein Dokument speichert Ihre Daten und eine Ansicht im Clientbereich eines Rahmenfensters angezeigt und verwaltet eine Benutzerinteraktion mit den Daten. Die Ansicht kommuniziert mit dem Dokument zum Abrufen und aktualisieren die Daten. Sie können die Datenbankklassen mit Framework oder ohne verwenden.  
+
+Die Microsoft Foundation Classes (MFC)-Bibliothek basiert auf einer Dokument-/Ansichtarchitektur für viele der Features. In der Regel ein Dokument speichert Ihre Daten und eine Ansicht im Clientbereich eines Fensters Frame wird angezeigt und verwaltet die Interaktion mit den Daten des Benutzers. Die Ansicht kommuniziert mit dem Dokument zum Abrufen und aktualisieren Sie die Daten. Sie können die Datenbankklassen mit dem Framework oder ohne ihn verwenden.  
   
- Weitere Informationen zum Verwenden von Datenbankklassen im Framework finden Sie unter [MFC: Verwenden von Datenbankklassen mit Dokumenten und Ansichten](../../data/mfc-using-database-classes-with-documents-and-views.md).  
+Weitere Informationen zum Verwenden von Datenbankklassen in das Framework finden Sie unter [MFC: Verwenden von Datenbankklassen mit Dokumenten und Ansichten](../../data/mfc-using-database-classes-with-documents-and-views.md).  
   
- Standardmäßig erstellt der MFC-Anwendung-Assistent eine skelettanwendung ohne Unterstützung für die Datenbank an. Allerdings können Sie Optionen aus, um den minimalen datenbankunterstützung oder eine umfassendere Unterstützung der formularbasierten enthalten auswählen. Weitere Informationen zu Assistenten Anwendungsoptionen, finden Sie unter [Datenbankunterstützung, MFC-Anwendungs-Assistent](../../mfc/reference/database-support-mfc-application-wizard.md).  
+Standardmäßig erstellt die MFS-Anwendungsassistenten ein Anwendungsgerüst ohne Unterstützung für die Datenbank an. Allerdings können Sie Optionen zum minimalen datenbankunterstützung oder eine umfassendere Unterstützung der formularbasierten auswählen. Weitere Informationen zu Assistenten-Optionen für Anwendungen, finden Sie unter [Datenbankunterstützung, MFC-Anwendungs-Assistent](../../mfc/reference/database-support-mfc-application-wizard.md).  
   
- Die Datenbankklassen können auch ohne Verwendung der vollständigen Dokument-/Ansichtarchitektur. Weitere Informationen finden Sie unter [MFC: Verwenden von Datenbankklassen ohne Dokumente und Ansichten](../../data/mfc-using-database-classes-without-documents-and-views.md).  
+Sie können auch die Datenbankklassen ohne Verwendung der vollständigen Dokument-/Ansichtarchitektur verwenden. Weitere Informationen finden Sie unter [MFC: Verwenden von Datenbankklassen ohne Dokumente und Ansichten](../../data/mfc-using-database-classes-without-documents-and-views.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [ODBC und MFC](../../data/odbc/odbc-and-mfc.md)
+
+[ODBC und MFC](../../data/odbc/odbc-and-mfc.md)

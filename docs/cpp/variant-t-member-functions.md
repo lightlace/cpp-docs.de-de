@@ -1,5 +1,5 @@
 ---
-title: _variant_t-Memberfunktionen | Microsoft Docs
+title: _variant_t-Memberfunktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b618440aa97b6890f10eccb7319a40103562c218
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ddbf5b7f354ed7d18f28290482b9ca2673d639a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420849"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117639"
 ---
 # <a name="variantt-member-functions"></a>_variant_t-Memberfunktionen
-Informationen zu den `_variant_t` Memberfunktionen, finden Sie unter [_variant_t-Klasse](../cpp/variant-t-class.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [_variant_t-Klasse](../cpp/variant-t-class.md)
+
+Informationen zu den **_variant_t** Member-Funktionen, finden Sie unter [_variant_t-Klasse](../cpp/variant-t-class.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[_variant_t-Klasse](../cpp/variant-t-class.md)

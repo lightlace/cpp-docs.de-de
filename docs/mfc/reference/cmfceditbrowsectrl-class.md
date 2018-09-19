@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d00488a7e9a87116317aec35c82b73b40077d8c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 8a0da6941a3076b23eb127cdcb87fee2953a80b9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854007"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707465"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl-Klasse
 Die `CMFCEditBrowseCtrl` Klasse unterstützt das Bearbeitungssteuerelement durchsuchen, als editierbares Textfeld, das optional eine Schaltfläche zum Durchsuchen enthält. Wenn der Benutzer auf die Schaltfläche zum Durchsuchen klicken, führt das Steuerelement eine benutzerdefinierte Aktion aus oder zeigt ein Standarddialogfeld an, das einen Dateibrowser oder einen Ordnerbrowser enthält.  
@@ -74,7 +74,7 @@ class CMFCEditBrowseCtrl : public CEdit
 |[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|Zeichnet das aktuelle Steuerelement zum Bearbeiten durchsuchen.|  
 |[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|Wird aufgerufen, durch das Framework die Durchsuchen-Schaltfläche gezeichnet werden soll.|  
 |[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|Vom Framework aufgerufen, wenn Sie ein ungültigen Dateinamen in das Bearbeitungssteuerelement eingegeben wurde.|  
-|`CMFCEditBrowseCtrl::PreTranslateMessage`|Übersetzt fenstermeldungen, bevor sie um weitergeleitet werden die [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows-Funktionen. Syntax und Weitere Informationen finden Sie unter [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
+|`CMFCEditBrowseCtrl::PreTranslateMessage`|Übersetzt fenstermeldungen, bevor sie um weitergeleitet werden die [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows-Funktionen. Syntax und Weitere Informationen finden Sie unter [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
 |[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|Legt ein benutzerdefiniertes Image für die Schaltfläche zum Durchsuchen.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -84,14 +84,17 @@ class CMFCEditBrowseCtrl : public CEdit
   
  Die `CMFCEditBrowseCtrl` Klasse unterstützt die folgenden Modi.  
   
- **Benutzerdefinierter Modus**  
- Eine benutzerdefinierte Aktion wird ausgeführt, wenn der Benutzer die Schaltfläche zum Durchsuchen klickt. Sie können z. B. eine anwendungsspezifische-Dialogfeld angezeigt.  
+- **Benutzerdefinierter Modus**
+
+   Eine benutzerdefinierte Aktion wird ausgeführt, wenn der Benutzer die Schaltfläche zum Durchsuchen klickt. Sie können z. B. eine anwendungsspezifische-Dialogfeld angezeigt.  
   
- **Datei-Modus**  
- Ein Dialogfeld zur standard-Datei wird angezeigt, wenn der Benutzer die Schaltfläche zum Durchsuchen klickt.  
+- **Datei-Modus**
+
+   Ein Dialogfeld zur standard-Datei wird angezeigt, wenn der Benutzer die Schaltfläche zum Durchsuchen klickt.  
   
- **Folder-Modus**  
- Klickt der Benutzer die Schaltfläche zum Durchsuchen, wird ein Dialogfeld zur Standardordner angezeigt.  
+- **Folder-Modus**
+
+   Klickt der Benutzer die Schaltfläche zum Durchsuchen, wird ein Dialogfeld zur Standardordner angezeigt.  
   
 ## <a name="how-to-specify-an-edit-browse-control"></a>Gewusst wie: Angeben eines durchsuchen-Bearbeitungssteuerelements  
  Führen Sie die folgenden Schritte aus, um ein Bearbeitungssteuerelement durchsuchen, in Ihrer Anwendung zu integrieren:  
@@ -174,7 +177,7 @@ void EnableFileBrowseButton(
 ### <a name="remarks"></a>Hinweise  
  Wenn das Steuerelement zum Bearbeiten und Durchsuchen sich im Dateidurchsuchungsmodus befindet und der Benutzer auf die Schaltfläche zum Durchsuchen klickt, zeigt das Steuerelement das standardmäßige Dialogfeld zur Dateiauswahl an.  
   
- Eine vollständige Liste der verfügbaren Flags finden Sie unter [OPENFILENAME-Struktur](https://msdn.microsoft.com/library/ms646839.aspx).  
+ Eine vollständige Liste der verfügbaren Flags finden Sie unter [OPENFILENAME-Struktur](/windows/desktop/api/commdlg/ns-commdlg-tagofna).  
   
 ##  <a name="enablefolderbrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFolderBrowseButton  
  Zeigt die Schaltfläche zum Durchsuchen auf das aktuelle Steuerelement zum Bearbeiten durchsuchen und versetzt das Steuerelement in *Ordnersuche* Modus.  

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80e89573e67113900db7b35ffe3f1189de1c524a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: fdcec255c7d2398e1bb0efa7f86a31fc5dd938e4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336331"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210202"
 ---
 # <a name="cctrlview-class"></a>CCtrlView-Klasse
 Passt die Dokument-/Ansichtarchitektur den allgemeinen Steuerelemente an, die von Windows 98 und Windows NT-Versionen 3,51 (und höher) unterstützt werden.  
@@ -140,7 +140,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
   
 ### <a name="parameters"></a>Parameter  
  *cs*  
- Ein [CREATESTRUCT](http://msdn.microsoft.com/library/windows/desktop/ms632603) Struktur.  
+ Ein [CREATESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632603) Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Legen Sie ungleich NULL, wenn es sich bei der fenstererstellung fortgesetzt werden soll; 0, um Fehler bei der wiederherstellungspunkterstellung anzugeben.  

@@ -1,7 +1,7 @@
 ---
-title: Operator &amp; | Microsoft Docs
+title: Operator &amp; | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -19,22 +19,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50a6a0b3188fcbbaf17036c88f6efa3e757ef65c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 03d8425b1ad0a2407e523a3b4039401d45442e8e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057083"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693452"
 ---
 # <a name="operator-amp"></a>Operator &amp;
-Bitweiser **AND**. Verwendet nur in [. IF](../../assembler/masm/dot-if.md), [. WÄHREND](../../assembler/masm/dot-while.md), oder [. Wiederholen Sie die](../../assembler/masm/dot-repeat.md) blockiert und zur Laufzeit nicht zum Zeitpunkt der Assembly ausgewertet.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-expression1 & expression2  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Operatoren – Referenz](../../assembler/masm/operators-reference.md)
+
+Bitweiser **und**. Verwendet nur in [. IF](../../assembler/masm/dot-if.md), [. WÄHREND](../../assembler/masm/dot-while.md), oder [. Wiederholen Sie die](../../assembler/masm/dot-repeat.md) blockiert und nicht zum Zeitpunkt der Assembly zur Laufzeit ausgewertet.
+
+## <a name="syntax"></a>Syntax
+
+> Ausdruck1 und Ausdruck2
+
+## <a name="see-also"></a>Siehe auch
+
+[Operatoren – Referenz](../../assembler/masm/operators-reference.md)<br/>

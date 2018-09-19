@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01a3d5aa898dccd680ea575a5753bc5cc3b8abf9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6a385ac850148caab582821b039fece5709f75b6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962828"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701661"
 ---
 # <a name="bitset-class"></a>bitset-Klasse
 
@@ -64,7 +64,8 @@ class bitset
 
 ### <a name="parameters"></a>Parameter
 
-*N* gibt die Anzahl der Bits in Bitset-Objekt eine ganze Zahl ungleich NULL vom Typ `size_t` , die zum Zeitpunkt der Kompilierung bekannt sein muss.
+*N*<br/>
+Gibt die Anzahl der Bits in Bitset-Objekt eine ganze Zahl ungleich NULL vom Typ `size_t` , die zum Zeitpunkt der Kompilierung bekannt sein muss.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -237,19 +238,26 @@ explicit bitset(
 
 ### <a name="parameters"></a>Parameter
 
-*Val* die Ganzzahl ohne Vorzeichen, deren Darstellung zur Basis 2 wird verwendet, um das Initialisieren der Bits im Bitset erstellt wird.
+*val*<br/>
+Die ganze Zahl ohne Vorzeichen, deren Darstellung zur Basis 2 verwendet wird, um die Bits im zu erstellenden Bitset zu initialisieren.
 
-*Str* die Zeichenfolge von Nullen und Einsen verwendet, um die Bitwerte des bitsets zu initialisieren.
+*str*<br/>
+Die Zeichenfolge von Nullen und Einsen, die verwendet wird, um die Bitwerte des Bitsets zu initialisieren.
 
-*_CStr* eine C-Stil-Zeichenfolge von Nullen und Einsen verwendet, um die Bitwerte des bitsets zu initialisieren.
+*_CStr*<br/>
+Eine Zeichenfolge von Nullen und Einsen im C-Format, die verwendet wird, um die Bitwerte des Bitsets zu initialisieren.
 
-*_Pos* die Position des Zeichens in der Zeichenfolge, die von links nach rechts und beginnend mit 0 (null), gezählt verwendet, um das erste Bit im Bitset zu initialisieren.
+*_Pos*<br/>
+Die Position des Zeichens in der Zeichenfolge, von links nach rechts gezählt und beginnend mit 0 (null), die verwendet wird, um das erste Bit im Bitset zu initialisieren.
 
-*Anzahl* die Anzahl der Zeichen in der Zeichenfolge, die verwendet wird, um Anfangswerte für die Bits im Bitset bereitzustellen.
+*count*<br/>
+Die Anzahl der Zeichen in der Zeichenfolge, die verwendet wird, um Anfangswerte für die Bits im Bitset bereitzustellen.
 
-*_Zero* das Zeichen, das verwendet wird, um eine 0 (null) darzustellen. Standardmäßig ist dies '0'.
+*_Zero*<br/>
+Das Zeichen, das verwendet wird, um eine 0 (null) darzustellen. Standardmäßig ist dies '0'.
 
-*_Ein* das Zeichen, das verwendet wird, um eine Eins darzustellen. Standardmäßig ist dies '1'.
+*_Ein*<br/>
+Das Zeichen, das verwendet wird, um eine Eins darzustellen. Standardmäßig ist dies '1'.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -465,7 +473,8 @@ bitset\<N>& flip(size_t _Pos);
 
 ### <a name="parameters"></a>Parameter
 
-*_Pos* die Position eines der Bits, dessen Wert umgekehrt werden soll.
+*_Pos*<br/>
+Die Position des Bits, dessen Wert umgekehrt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -473,7 +482,7 @@ Eine Kopie des geänderten Bitsets, für das die Memberfunktion aufgerufen wurde
 
 ### <a name="remarks"></a>Hinweise
 
-Die zweite Memberfunktion löst eine [Out_of_range](../standard-library/out-of-range-class.md) -Ausnahme aus, wenn die als Parameter angegebene Position größer als die Größe wird *N* von der **Bitset\<***N***  >**  , dessen Bit umgekehrt wurde.
+Die zweite Memberfunktion löst eine [Out_of_range](../standard-library/out-of-range-class.md) -Ausnahme aus, wenn die als Parameter angegebene Position größer als die Größe wird *N* von der **Bitset\<**  *N* **>** , dessen Bit umgekehrt wurde.
 
 ### <a name="example"></a>Beispiel
 
@@ -593,7 +602,8 @@ bool operator!=(const bitset\<N>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* das Bitset, das mit dem zielbitset auf Ungleichheit verglichen werden soll.
+*right*<br/>
+Das Bitset, das mit dem Zielbitset auf Ungleichheit verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -654,7 +664,8 @@ bitset\<N>& operator&=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* das Bitset, das bitweise mit dem zielbitset kombiniert werden soll.
+*right*<br/>
+Das Bitset, das bitweise mit dem Zielbitset kombiniert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -688,7 +699,7 @@ int main( )
 
    b1 &= b2;
    cout << "After bitwise AND combination,\n"
-        << " the target bitset b1 becomes:   ( "<< b1 << " )."
+        << "the target bitset b1 becomes:   ( "<< b1 << " )."
         << endl;
 
    // Note that the parameter-specified bitset is unchanged
@@ -706,7 +717,7 @@ The target bitset b1 is:    ( 00111 ).
 The parameter bitset b2 is: ( 01011 ).
 
 After bitwise AND combination,
- the target bitset b1 becomes:   ( 00011 ).
+the target bitset b1 becomes:   ( 00011 ).
 The parameter bitset b2 remains: ( 01011 ).
 ```
 
@@ -720,7 +731,8 @@ bitset\<N> operator<<(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Pos* die Anzahl von Positionen nach links verschoben werden sollen, die die Bits im Bitset.
+*_Pos*<br/>
+Die Anzahl von Positionen, die Bits im Bitset nach links verschoben werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -771,7 +783,8 @@ bitset\<N>& operator<<=(size_t _Pos);
 
 ### <a name="parameters"></a>Parameter
 
-*_Pos* die Anzahl von Positionen auf der linken Seite die Bits im Bitset sind verschoben werden sollen.
+*_Pos*<br/>
+Die Anzahl der Positionen, um die die Bits im Bitset nach links verschoben werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -796,7 +809,7 @@ int main( )
    cout << "The target bitset b1 is: ( "<< b1 << " )." << endl;
    b1 <<= 2;
    cout << "After shifting the bits 2 positions to the left,\n"
-        << " the target bitset b1 becomes: ( "<< b1 << " )."
+        << "the target bitset b1 becomes: ( "<< b1 << " )."
         << endl;
 }
 ```
@@ -804,7 +817,7 @@ int main( )
 ```Output
 The target bitset b1 is: ( 00111 ).
 After shifting the bits 2 positions to the left,
- the target bitset b1 becomes: ( 11100 ).
+the target bitset b1 becomes: ( 11100 ).
 ```
 
 ## <a name="op_eq_eq"></a> bitset::operator==
@@ -817,7 +830,8 @@ bool operator==(const bitset\<N>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* das Bitset, das mit dem zielbitset auf Gleichheit verglichen werden soll.
+*right*<br/>
+Das Bitset, das mit dem Zielbitset auf Gleichheit verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -877,7 +891,8 @@ bitset\<N> operator>>(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Pos* die Anzahl von Positionen nach rechts, die die Bits im Bitset sind verschoben werden sollen.
+*_Pos*<br/>
+Die Anzahl der Positionen, um die die Bits im Bitset nach rechts verschoben werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -901,12 +916,12 @@ int main( )
    b2 = b1 << 2;
 
    cout << "After shifting the bits 2 positions to the left,\n"
-        << " the bitset b2 is: ( "<< b2 << " )."
+        << "the bitset b2 is: ( "<< b2 << " )."
         << endl;
    bitset<5> b3 = b2 >> 1;
 
    cout << "After shifting the bits 1 position to the right,\n"
-        << " the bitset b3 is: ( " << b3 << " )."
+        << "the bitset b3 is: ( " << b3 << " )."
         << endl;
 }
 ```
@@ -914,9 +929,9 @@ int main( )
 ```Output
 The bitset b1 is: ( 00111 ).
 After shifting the bits 2 positions to the left,
- the bitset b2 is: ( 11100 ).
+the bitset b2 is: ( 11100 ).
 After shifting the bits 1 position to the right,
- the bitset b3 is: ( 01110 ).
+the bitset b3 is: ( 01110 ).
 ```
 
 ## <a name="op_rshift_eq"></a> bitset::operator&gt;&gt;=
@@ -929,7 +944,8 @@ bitset\<N>& operator>>=(size_t _Pos);
 
 ### <a name="parameters"></a>Parameter
 
-*_Pos* die Anzahl von Positionen nach rechts, die die Bits im Bitset sind verschoben werden sollen.
+*_Pos*<br/>
+Die Anzahl der Positionen, um die die Bits im Bitset nach rechts verschoben werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -955,7 +971,7 @@ int main( )
 
    b1 >>= 2;
    cout << "After shifting the bits 2 positions to the right,\n"
-        << " the target bitset b1 becomes: ( "<< b1 << " )."
+        << "the target bitset b1 becomes: ( "<< b1 << " )."
         << endl;
 }
 ```
@@ -963,7 +979,7 @@ int main( )
 ```Output
 The target bitset b1 is: ( 11100 ).
 After shifting the bits 2 positions to the right,
- the target bitset b1 becomes: ( 00111 ).
+the target bitset b1 becomes: ( 00111 ).
 ```
 
 ## <a name="op_at"></a> bitset::operator[]
@@ -977,7 +993,8 @@ reference operator[](size_t _Pos);
 
 ### <a name="parameters"></a>Parameter
 
-*_Pos* die Position des Bits innerhalb des bitsets.
+*_Pos*<br/>
+Die Position des Bits innerhalb des Bitsets.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1019,7 +1036,8 @@ bitset\<N>& operator^=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* das Bitset, das bitweise mit dem zielbitset kombiniert werden soll.
+*right*<br/>
+Das Bitset, das bitweise mit dem Zielbitset kombiniert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1052,7 +1070,7 @@ int main( )
 
    b1 ^= b2;
    cout << "After bitwise exclusive OR combination,\n"
-        << " the target bitset b1 becomes:   ( "<< b1 << " )."
+        << "the target bitset b1 becomes:   ( "<< b1 << " )."
         << endl;
 
    // Note that the parameter-specified bitset in unchanged
@@ -1070,7 +1088,7 @@ The target bitset b1 is:    ( 00111 ).
 The parameter bitset b2 is: ( 01011 ).
 
 After bitwise exclusive OR combination,
- the target bitset b1 becomes:   ( 01100 ).
+the target bitset b1 becomes:   ( 01100 ).
 The parameter bitset b2 remains: ( 01011 ).
 ```
 
@@ -1084,7 +1102,8 @@ bitset\<N>& operator|=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>Parameter
 
-*richtige* das Bitset, das bitweise mit dem zielbitset kombiniert werden soll.
+*right*<br/>
+Das Bitset, das bitweise mit dem Zielbitset kombiniert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1118,7 +1137,7 @@ int main( )
 
    b1 |= b2;
    cout << "After bitwise inclusive OR combination,\n"
-        << " the target bitset b1 becomes:   ( "<< b1 << " )."
+        << "the target bitset b1 becomes:   ( "<< b1 << " )."
         << endl;
 
    // Note that the parameter-specified bitset in unchanged
@@ -1136,7 +1155,7 @@ The target bitset b1 is:    ( 00111 ).
 The parameter bitset b2 is: ( 01011 ).
 
 After bitwise inclusive OR combination,
- the target bitset b1 becomes:   ( 01111 ).
+the target bitset b1 becomes:   ( 01111 ).
 The parameter bitset b2 remains: ( 01011 ).
 ```
 
@@ -1203,9 +1222,11 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*Val* den Wert des Objekts vom Typ **"bool"** , etwas in einem Bitset zugewiesen werden soll.
+*val*<br/>
+Der Wert des Objekts vom Typ **"bool"** , etwas in einem Bitset zugewiesen werden soll.
 
-*_Bitref* einen Verweis im Format *X [i]* , der dem Bit an Position *ich* in Bitset *x*.
+*_Bitref*<br/>
+Ein Verweis im Format *x [ i ]* auf das Bit an Position *i* in Bitset *x*.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1213,7 +1234,7 @@ Ein Verweis auf das Bit in dem Bitset, das durch die Argumentposition für die e
 
 ### <a name="remarks"></a>Hinweise
 
-Die Klasse `reference` existiert nur als Hilfsprogrammklasse für das Bitset `operator[]`. Die Memberklasse beschreibt ein Objekt, das auf ein einzelnes Bit in einem Bitset zugreifen kann. Lassen Sie *b* sich um ein Objekt des Typs **"bool"**, *x* und *y* Objekte des Typs **Bitset\<***N***  >** , und *ich* und *j* gültige Positionen innerhalb eines solchen Objekts. Die Notation *x [i]* verweist auf das Bit an Position *i* in Bitset *x*. Die Memberfunktionen der Klasse `reference` stellen in der genannten Reihenfolge die folgenden Vorgänge bereit:
+Die Klasse `reference` existiert nur als Hilfsprogrammklasse für das Bitset `operator[]`. Die Memberklasse beschreibt ein Objekt, das auf ein einzelnes Bit in einem Bitset zugreifen kann. Lassen Sie *b* sich um ein Objekt des Typs **"bool"**, *x* und *y* Objekte des Typs **Bitset\<**  *N* **>**, und *ich* und *j* gültige Positionen innerhalb eines solchen Objekts. Die Notation *x [i]* verweist auf das Bit an Position *i* in Bitset *x*. Die Memberfunktionen der Klasse `reference` stellen in der genannten Reihenfolge die folgenden Vorgänge bereit:
 
 |Vorgang|Definition|
 |---------------|----------------|
@@ -1246,13 +1267,13 @@ int main( )
    // in bitset x
    b1[ 0 ] = true;
    cout << "The bitset<5> b1 with the bit at position 0 set to 1"
-        << " is: ( "<< b1 << " )" << endl;
+        << "is: ( "<< b1 << " )" << endl;
 
    // Example of x [i] = y [j] storing the bool value of the
    // bit at position j in bitset y at bit position i in bitset x
    b2 [4] = b1 [0];      // b1 [0] = true
    cout << "The bitset<5> b2 with the bit at position 4 set to the "
-        << "value\n of the bit at position 0 of the bit in "
+        << "value\nof the bit at position 0 of the bit in "
         << "bitset<5> b1 is: ( "<<  b2  << " )" << endl;
 
    // Example of b = ~x [i] flipping the value of the bit at
@@ -1279,14 +1300,14 @@ int main( )
    // Example of x [i] . flip ( ) toggling the value of the bit at
    // position i of bitset x
    cout << "Before flipping the value of the bit at position 4 in "
-        << "bitset b2,\n it is ( "<<  b2  << " )." << endl;
+        << "bitset b2,\nit is ( "<<  b2  << " )." << endl;
    b2 [4].flip( );
    cout << "After flipping the value of the bit at position 4 in "
-        << "bitset b2,\n it becomes ( "<<  b2  << " )." << endl;
+        << "bitset b2,\nit becomes ( "<<  b2  << " )." << endl;
    bool c;
    c = b2 [4].flip( );
-   cout << "After a second flip, the value of the position 4"
-        << " bit in b2 is now: " << c << ".";
+   cout << "After a second flip, the value of the position 4 "
+        << "bit in b2 is now: " << c << ".";
 }
 ```
 
@@ -1295,13 +1316,13 @@ The initialized bitset<5> b1( 2 ) is: ( 00010 ).
 The initialized bitset<5> b2( 6 ) is: ( 00110 ).
 The bitset<5> b1 with the bit at position 0 set to 1 is: ( 00011 )
 The bitset<5> b2 with the bit at position 4 set to the value
- of the bit at position 0 of the bit in bitset<5> b1 is: ( 10110 )
+of the bit at position 0 of the bit in bitset<5> b1 is: ( 10110 )
 The value of the object b = ~b2 [4] of type bool is false.
 The value of the object b = b2 [4] of type bool is true.
 Before flipping the value of the bit at position 4 in bitset b2,
- it is ( 10110 ).
+it is ( 10110 ).
 After flipping the value of the bit at position 4 in bitset b2,
- it becomes ( 00110 ).
+it becomes ( 00110 ).
 After a second flip, the value of the position 4 bit in b2 is now: 1.
 ```
 
@@ -1316,7 +1337,8 @@ bitset\<N>& reset(size_t _Pos);
 
 ### <a name="parameters"></a>Parameter
 
-*_Pos* die Position des Bits im Bitset auf 0 zurückgesetzt werden soll.
+*_Pos*<br/>
+Die Position des auf 0 zurückzusetzenden Bits im Bitset.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1345,13 +1367,13 @@ int main( )
    bitset<5> b1r3;
    b1r3 = b1.reset( 2 );
    cout << "The collecion of bits obtained from resetting the\n"
-        << " third bit of bitset b1 is: ( "<< b1r3 << " )"
+        << "third bit of bitset b1 is: ( "<< b1r3 << " )"
         << endl;
 
    bitset<5> b1r;
    b1r = b1.reset( );
    cout << "The collecion of bits obtained from resetting all\n"
-        << " the elements of the bitset b1 is: ( "<< b1r << " )"
+        << "the elements of the bitset b1 is: ( "<< b1r << " )"
         << endl;
 }
 ```
@@ -1359,9 +1381,9 @@ int main( )
 ```Output
 The set of bits in bitset<5> b1(13) is: ( 01101 )
 The collecion of bits obtained from resetting the
- third bit of bitset b1 is: ( 01001 )
+third bit of bitset b1 is: ( 01001 )
 The collecion of bits obtained from resetting all
- the elements of the bitset b1 is: ( 00000 )
+the elements of the bitset b1 is: ( 00000 )
 ```
 
 ## <a name="set"></a> bitset::set
@@ -1378,9 +1400,11 @@ bitset\<N>& set(
 
 ### <a name="parameters"></a>Parameter
 
-*_Pos* die Position des Bits im Bitset festgelegt werden, um ein Wert zugewiesen.
+*_Pos*<br/>
+Die Position des Bits im Bitset, das auf einen zugewiesenen Wert gesetzt werden soll.
 
-*Val* der Wert, der dem Bit an der angegebenen Position zugewiesen werden soll.
+*val*<br/>
+Der Wert, der dem Bit an der angegebenen Position zugewiesen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1409,13 +1433,13 @@ int main( )
    bitset<5> b1s0;
    b1s0 = b1.set( 0 );
    cout << "The collecion of bits obtained from setting the\n"
-        << " zeroth bit of bitset b1 is: ( "<< b1s0 << " )"
+        << "zeroth bit of bitset b1 is: ( "<< b1s0 << " )"
         << endl;
 
    bitset<5> bs1;
    bs1 = b1.set( );
    cout << "The collecion of bits obtained from setting all the\n"
-        << " elements of the bitset b1 is: ( "<< bs1 << " )"
+        << "elements of the bitset b1 is: ( "<< bs1 << " )"
         << endl;
 }
 ```
@@ -1423,9 +1447,9 @@ int main( )
 ```Output
 The set of bits in bitset<5> b1(6) is: ( 00110 )
 The collecion of bits obtained from setting the
- zeroth bit of bitset b1 is: ( 00111 )
+zeroth bit of bitset b1 is: ( 00111 )
 The collecion of bits obtained from setting all the
- elements of the bitset b1 is: ( 11111 )
+elements of the bitset b1 is: ( 11111 )
 ```
 
 ## <a name="size"></a> bitset::size
@@ -1482,7 +1506,8 @@ bool test(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Pos* die Position des Bits im Bitset auf dessen Wert überprüft werden soll.
+*_Pos*<br/>
+Die Position des auf seinen Wert zu prüfenden Bits im Bitset.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1491,4 +1516,3 @@ bool test(size_t _Pos) const;
 ### <a name="remarks"></a>Hinweise
 
 Die Memberfunktion gibt [out_of_range](../standard-library/out-of-range-class.md) aus.
-

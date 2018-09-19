@@ -1,7 +1,7 @@
 ---
-title: Operator! = (MASM) | Microsoft Docs
+title: Operator! = (MASM) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,22 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4b0292d95fcd2b0b7c816c98a3d4709b4fdc5e6
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 6dc66aac000cc346ae04d06c4b0c2374ff0762e4
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054636"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "43688053"
 ---
 # <a name="operator--masm"></a>Operator != (MASM)
-Ist nicht gleich. Verwendet nur in [. IF](../../assembler/masm/dot-if.md), [. WÄHREND](../../assembler/masm/dot-while.md), oder [. Wiederholen Sie die](../../assembler/masm/dot-repeat.md) blockiert und zur Laufzeit nicht zum Zeitpunkt der Assembly ausgewertet.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-expression1 != expression2  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Operatoren – Referenz](../../assembler/masm/operators-reference.md)
+
+Ist nicht gleich. Verwendet nur in [. IF](../../assembler/masm/dot-if.md), [. WÄHREND](../../assembler/masm/dot-while.md), oder [. Wiederholen Sie die](../../assembler/masm/dot-repeat.md) blockiert und nicht zum Zeitpunkt der Assembly zur Laufzeit ausgewertet.
+
+## <a name="syntax"></a>Syntax
+
+> expression1! = expression2
+
+## <a name="see-also"></a>Siehe auch
+
+[Operatoren – Referenz](../../assembler/masm/operators-reference.md)<br/>

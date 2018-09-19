@@ -1,5 +1,5 @@
 ---
-title: entsprechen | Microsoft Docs
+title: entsprechen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,46 +19,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b145225cfed3131b406d15827b589aed718d16bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cb14af38c4bffed4b9f5c60d2d89fd84a892025b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843742"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721746"
 ---
 # <a name="conform"></a>conform
 **C++-spezifisch**  
-  
- Gibt das Verhalten zur Laufzeit die [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) -Compileroption.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-#pragma conform(name [, show ] [, on | off ] [ [, push | pop ] [, identifier ] ] )  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *name*  
- Gibt den Namen der zu ändernden Compileroption an. Der einzige gültige *Namen* ist `forScope`.  
-  
- **anzeigen** (optional)  
- Bewirkt, dass die aktuelle Einstellung der *Namen* ("true" oder "false"), die während der Kompilierung mittels einer Warnmeldung angezeigt werden. Beispielsweise `#pragma conform(forScope, show)`.  
-  
- **On, off**(optional)  
- Festlegen von *Namen* auf **auf** ermöglicht die [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) (Compileroption). Die Standardeinstellung ist **deaktiviert**.  
-  
- **Push** (optional)  
- Legt den aktuellen Wert der *Namen* auf dem internen compilerstapel ab. Bei Angabe von *Bezeichner*, können Sie angeben, die **auf** oder **deaktiviert** Wert für *Namen* auf den Stapel verschoben werden. Beispielsweise `#pragma conform(forScope, push, myname, on)`.  
-  
- **POP** (optional)  
- Legt den Wert des *Namen* auf den Wert am oberen Rand der internen compilerstapel ab und ruft den Stapel dann. Wenn Bezeichner angegeben wird **pop**, der Stapel reduziert, bis er den Datensatz mit findet *Bezeichner*, die ebenfalls entfernt wird; der aktuelle Wert für *Namen* in der nächste Datensatz auf dem Stapel wird der neue Wert für *Namen*. Bei Angabe von Pop mit einer *Bezeichner* , die sich nicht in einem Datensatz im Stapel befindet, die **pop** wird ignoriert.  
-  
- *Bezeichner*(optional)  
- Kann enthalten eine **Push** oder **pop** Befehl. Wenn *Bezeichner* verwendet wird, wird eine **auf** oder **deaktiviert** Spezifizierer kann auch verwendet werden.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
+
+Gibt das Verhalten zur Laufzeit die [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) -Compileroption.
+
+## <a name="syntax"></a>Syntax
+
+> **#pragma entsprechen (** *Namen* [**, zeigen** ] [**,** { **auf** | **aus** }] [[**,** { **Push** | **pop** }] [**,** *Bezeichner* ]] **)**
+
+### <a name="parameters"></a>Parameter
+
+*name*<br/>
+Gibt den Namen der zu ändernden Compileroption an. Der einzige gültige *Namen* ist `forScope`.
+
+**Anzeigen**<br/>
+(Optional) Bewirkt, dass die aktuelle Einstellung der *Namen* ("true" oder "false"), die während der Kompilierung mittels einer Warnmeldung angezeigt werden. Beispielsweise `#pragma conform(forScope, show)`.
+
+**auf**, **deaktivieren**<br/>
+(Optional) Festlegen von *Namen* zu **auf** ermöglicht die [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) -Compileroption. Der Standardwert ist **aus**.
+
+**push**<br/>
+(Optional) Legt den aktuellen Wert der *Namen* auf dem internen compilerstapel ab. Bei Angabe von *Bezeichner*, können Sie angeben, die **auf** oder **aus** Wert für *Namen* auf den Stapel verschoben werden. Beispielsweise `#pragma conform(forScope, push, myname, on)`.
+
+**pop**<br/>
+(Optional) Legt den Wert der *Namen* auf den Wert am Anfang der internen Compilerstapels fest und ruft dann den Stapel. Wenn Bezeichner angegeben wird **pop**, die Stapel zurück, bis er feststellt, dass den Datensatz mit *Bezeichner*, die ebenfalls entfernt wird; der aktuelle Wert für *Namen* in der nächste Datensatz im Stapel wird der neue Wert für *Namen*. Bei Angabe von **pop** mit einer *Bezeichner* das ist nicht in einem Datensatz auf dem Stapel, der **pop** wird ignoriert.
+
+*identifier*<br/>
+(Optional) Können mit einbezogen werden eine **Push** oder **pop** Befehl. Wenn *Bezeichner* verwendet wird, wird eine **auf** oder **aus** Bezeichner kann auch verwendet werden.
+
+## <a name="example"></a>Beispiel
+
+```cpp
 // pragma_directive_conform.cpp  
 // compile with: /W1  
 // C4811 expected  
@@ -72,7 +71,8 @@ ms.locfileid: "33843742"
 #pragma conform(forScope, show)  
   
 int main() {}  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

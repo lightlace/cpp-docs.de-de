@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be5afa2dc4980f9393deb498c7a5decdc56aece5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 127438da4929e58e07e10701dd64869b084fe4c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387371"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078581"
 ---
 # <a name="inline-functions"></a>Inlinefunktionen
 
@@ -45,7 +45,7 @@ Die Verwendung von Inlinefunktionen generiert einen schnelleren Code und kann ma
 
 Funktionen, die `__inline` verwenden, sollten nicht mit Inlineassemblercode verwechselt werden. Weitere Informationen finden Sie unter [Inlineassembler](../c-language/inline-assembler-c.md).
 
-**Ende Microsoft-spezifisch**  
+**Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
 

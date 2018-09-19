@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2487 | Microsoft Docs
+title: Compilerfehler C2487 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26d2f74f1d189cf2be71d812dd8da01bb6fe8bdb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36b2b0a71ef29edc7bbd7fec7b359c4a5a10df1c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225462"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018912"
 ---
 # <a name="compiler-error-c2487"></a>Compilerfehler C2487
-'Bezeichner': Member der Klasse kann nicht mit der Dll-Schnittstelle deklariert werden  
-  
- Sie können eine ganze Klasse oder bestimmte Member einer Klasse-fremde DLL-Schnittstelle, mit der DLL-Schnittstelle deklarieren. Sie können deklarieren Sie eine Klasse mit DLL-Schnittstelle und deklarieren Sie einen Member dieser Klasse mit DLL-Schnittstelle.
+
+'Bezeichner': Member der Klasse darf nicht mit Dll-Schnittstelle deklariert werden
+
+Sie können eine ganze Klasse oder bestimmte Member einer Klasse-fremde DLL-Schnittstelle, mit der DLL-Schnittstelle deklarieren. Sie können nicht deklarieren Sie eine Klasse mit DLL-Schnittstelle, und klicken Sie dann einen Member dieser Klasse mit DLL-Schnittstelle deklarieren.

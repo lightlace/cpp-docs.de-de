@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1054 | Microsoft Docs
+title: Schwerwiegender Fehler C1054 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9daac4944c57dbf08fe0ebcbc95993a97838585
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 439019b1f510127ae54e77d445d59e86be09a49b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198897"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101968"
 ---
 # <a name="fatal-error-c1054"></a>Schwerwiegender Fehler C1054
-Compilerlimit: zu tiefe Schachtelung von Initialisierungen  
-  
- Der Code überschreitet die maximale Schachtelungstiefe für Initialisierer (abhängig von der Kombination von Typen, die derzeit initialisiert die Stufen von 10 bis 15).  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>So beheben Sie den Fehler (unterschiedliche Lösungsmöglichkeiten)  
-  
-1.  Vereinfachen Sie die Datentypen, die zur Reduzierung der Schachtelungsebenen initialisiert wird.  
-  
-2.  Initialisieren von Variablen in separaten Anweisungen nach der Deklaration.
+
+Compilerlimit: zu tiefe Schachtelung von Initialisierungen
+
+Der Code überschreitet die maximale Schachtelungstiefe auf Initialisierer (abhängig von der Kombination von Typen, die initialisiert wird die Stufen von 10 bis 15).
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>So beheben Sie den Fehler (unterschiedliche Lösungsmöglichkeiten)
+
+1. Vereinfachen Sie die Datentypen, die zur Reduzierung der Schachtelungsebenen initialisiert wird.
+
+1. Initialisieren von Variablen in separaten Anweisungen nach der Deklaration.

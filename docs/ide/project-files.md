@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e66d6e94e4938c72adc5aea1a478ce6c0658e56e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9aa8994ebbb9f00afa6858597fce17554f3c3dfc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327228"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578615"
 ---
 # <a name="project-files"></a>Projektdateien
 Eine Visual C++-Projektdatei ist eine XML-basierte Datei, die über die Erweiterung „VCXPROJ“ verfügt und Informationen enthält, die zum Erstellen eines Visual C++-Projekts erforderlich sind.  
   
 ## <a name="example"></a>Beispiel  
- Die folgende VCXPROJ-Beispieldatei wurde erstellt, indem eine **Win32-Konsolenanwendung** im Dialogfeld **Neues Projekt** angegeben wurde. Verwenden Sie zum Verarbeiten einer Projektdatei entweder das Tool „msbuild.exe“ in der Befehlszeile oder den Befehl **Build** in [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]. (Dieses Beispiel kann nicht verarbeitet werden, da die erforderlichen Quell- und Headerdateien nicht bereitgestellt werden.) Weitere Informationen über die XML-Elemente in einer Projektdatei finden Sie unter [Referenz zum Projektdateischema](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
+ Die folgende VCXPROJ-Beispieldatei wurde erstellt, indem eine **Win32-Konsolenanwendung** im Dialogfeld **Neues Projekt** angegeben wurde. Verwenden Sie entweder das Tool „msbuild.exe“ in der Befehlszeile oder den Befehl **Build** in der IDE. (Dieses Beispiel kann nicht verarbeitet werden, da die erforderlichen Quell- und Headerdateien nicht bereitgestellt werden.) Weitere Informationen über die XML-Elemente in einer Projektdatei finden Sie unter [Referenz zum Projektdateischema](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  

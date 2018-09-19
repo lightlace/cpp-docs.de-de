@@ -321,17 +321,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec349041ff51441d49b5de39968417bdd071cad6
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 7e9ee255afd70ff789a1d6fb833253b7114d9ad3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027978"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711398"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar-Klasse
 Die `CMFCToolBar` ähnelt [CToolBar-Klasse](../../mfc/reference/ctoolbar-class.md), bietet aber zusätzliche Unterstützung für Benutzeroberflächenfunktionen. Dazu gehören flache Symbolleisten, Symbolleisten mit hervorgehobenen Bilder, große Symbole, Pagerschaltflächen, gesperrte Symbolleisten, Grundleisten-Steuerelemente, Texte unter Bildern, Hintergrundbilder und Symbolleisten im Registerkartenformat. Die `CMFCToolBar` -Klasse enthält auch integrierte Unterstützung zur Anpassung folgender Elemente und Funktionen: Symbolleisten und Menüs, Drag &amp; Drop zwischen Symbolleisten und Menüs, Schaltflächen für Kombinations- und Bearbeitungsfelder, Farbwähler und Rollup-Schaltflächen.
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.    
   
 ## <a name="syntax"></a>Syntax  
   
@@ -563,8 +563,8 @@ static void __stdcall AddBasicCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmd*  
- Gibt an, den Befehl zum Hinzufügen.  
+*uiCmd*<br/>
+[in] Gibt an, den Befehl zum Hinzufügen.  
   
 ### <a name="remarks"></a>Hinweise  
  Ein einfachen Befehl wird immer angezeigt, wenn das Menü geöffnet wird. Diese Methode ist sinnvoll, wenn der Benutzer auswählt, zuletzt verwendeten Befehle anzuzeigen.  
@@ -579,8 +579,8 @@ static void __stdcall AddCommandUsage(UINT uiCommand);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCommand*  
- Gibt an, der Befehl Zähler erhöht.  
+*uiCommand*<br/>
+[in] Gibt an, der Befehl Zähler erhöht.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Methode auf, wenn der Benutzer ein Menüelement auswählt.  
@@ -603,23 +603,23 @@ static BOOL __stdcall AddToolBarForImageCollection(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiResID*  
- Ressourcen-ID einer Symbolleiste mit Bildern zu laden.  
+*uiResID*<br/>
+[in] Ressourcen-ID einer Symbolleiste mit Bildern zu laden.  
   
- [in] *UiBmpResID*  
- Ressourcen-ID einer Bitmap mit Symbolleistenbilder.  
+*uiBmpResID*<br/>
+[in] Ressourcen-ID einer Bitmap mit Symbolleistenbilder.  
   
- [in] *UiColdResID*  
- Ressourcen-ID einer Bitmap mit "kalt" Symbolleistenbilder.  
+*uiColdResID*<br/>
+[in] Ressourcen-ID einer Bitmap mit "kalt" Symbolleistenbilder.  
   
- [in] *UiMenuResID*  
- Ressourcen-ID einer Bitmap mit Menübilder.  
+*uiMenuResID*<br/>
+[in] Ressourcen-ID einer Bitmap mit Menübilder.  
   
- [in] *UiDisabledResID*  
- Ressourcen-ID einer Bitmap mit deaktivierten Symbolleistenbilder.  
+*uiDisabledResID*<br/>
+[in] Ressourcen-ID einer Bitmap mit deaktivierten Symbolleistenbilder.  
   
- [in] *UiMenuDisabledResID*  
- Ressourcen-ID einer Bitmap mit deaktivierten Menübilder.  
+*uiMenuDisabledResID*<br/>
+[in] Ressourcen-ID einer Bitmap mit deaktivierten Menübilder.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich ist. FALSE, wenn *UiResID* oder *UiBmpResID* Geben Sie keine gültige Ressourcen oder ein anderer Fehler auftritt.  
@@ -709,14 +709,14 @@ static void AutoGrayInactiveImages(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- Ein boolescher Wert, der angibt, ob inaktive Images dim angibt. Wenn dieser Parameter TRUE ist, sind inaktiv Images abgeblendet. Inaktive Bilder sind, andernfalls nicht abgeblendet.  
+*bAktivieren*<br/>
+[in] Ein boolescher Wert, der angibt, ob inaktive Images dim angibt. Wenn dieser Parameter TRUE ist, sind inaktiv Images abgeblendet. Inaktive Bilder sind, andernfalls nicht abgeblendet.  
   
- [in] *nGrayImagePercentage*  
- Gibt den Prozentsatz der Leuchtdichte für inaktive Images. Wenn *bAktivieren* "false", ist dieser Wert wird ignoriert.  
+*nGrayImagePercentage*<br/>
+[in] Gibt den Prozentsatz der Leuchtdichte für inaktive Images. Wenn *bAktivieren* "false", ist dieser Wert wird ignoriert.  
   
- [in] *bRedrawAllToolbars*  
- Ein boolescher Wert, der angibt, ob alle Symbolleisten in der Anwendung neu gezeichnet werden soll. Wenn dieser Parameter TRUE ist, zeichnet diese Methode alle Symbolleisten.  
+*bRedrawAllToolbars*<br/>
+[in] Ein boolescher Wert, der angibt, ob alle Symbolleisten in der Anwendung neu gezeichnet werden soll. Wenn dieser Parameter TRUE ist, zeichnet diese Methode alle Symbolleisten.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn *bAktivieren* ist "true", das Framework verwendet *nGrayImagePercentage* inaktiv Abbilder von regulären Abbildern zu generieren. Andernfalls müssen Sie den Satz von inaktiven Images bereitstellen, mit der [CMFCToolBar::GetColdImages](#getcoldimages) Methode. Standardmäßig ist diese Option deaktiviert.  
@@ -731,8 +731,8 @@ int ButtonToIndex(const CMFCToolBarButton* pButton) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pButton*  
- Ein Zeiger auf die Symbolleiste Button-Objekt.  
+*pButton*<br/>
+[in] Ein Zeiger auf die Symbolleiste Button-Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Index *pButton* in der internen Liste der Symbolleisten-Schaltflächen; oder -1, wenn die angegebene Schaltfläche nicht auf diese Symbolleiste ist.  
@@ -747,11 +747,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bStretch*  
- "True" für die die Symbolleiste, um die Größe des übergeordneten Rahmens stretching durchgeführt werden.  
+*bStretch*<br/>
+[in] "True" für die die Symbolleiste, um die Größe des übergeordneten Rahmens stretching durchgeführt werden.  
   
- [in] *bHorz*  
- True, um die Symbolleiste horizontal ausrichten. "False" auf die Symbolleiste vertikal auszurichten.  
+*bHorz*<br/>
+[in] True, um die Symbolleiste horizontal ausrichten. "False" auf die Symbolleiste vertikal auszurichten.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein `CSize` -Objekt, das die Größe der Symbolleiste angibt.  
@@ -784,8 +784,8 @@ virtual CSize CalcSize(BOOL bVertDock);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bVertDock*  
- True, um anzugeben, dass die Symbolleiste vertikal verankert ist. "False", um anzugeben, dass die Symbolleiste horizontal angedockt ist.  
+*bVertDock*<br/>
+[in] True, um anzugeben, dass die Symbolleiste vertikal verankert ist. "False", um anzugeben, dass die Symbolleiste horizontal angedockt ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein `CSize` Objekt, das die Gesamtgröße der Schaltflächen auf der Symbolleiste angibt.  
@@ -887,11 +887,11 @@ int CommandToIndex(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIDFind*  
- Gibt an, die Befehls-ID.  
+*nIDFind*<br/>
+[in] Gibt an, die Befehls-ID.  
   
- [in] *iIndexFirst*  
- Gibt den ersten Index aus starten.  
+*iIndexFirst*<br/>
+[in] Gibt den ersten Index aus starten.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Nullbasierte Index des der Symbolleisten-Schaltfläche, wenn die Methode erfolgreich war. 1, wenn es keine Schaltfläche mit der angegebenen ID. ist  
@@ -912,14 +912,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pParentWnd*  
- Ein Zeiger auf das übergeordnete Fenster der Symbolleiste.  
+*pParentWnd*<br/>
+[in] Ein Zeiger auf das übergeordnete Fenster der Symbolleiste.  
   
- [in] *DwStyle*  
- Der Stil für die Symbolleiste. Finden Sie unter [Toolbar-Steuerelement und Button-Stile](http://msdn.microsoft.com/library/windows/desktop/bb760439) im Windows SDK für die Liste der Stile.  
+*dwStyle*<br/>
+[in] Der Stil für die Symbolleiste. Finden Sie unter [Toolbar-Steuerelement und Button-Stile](/windows/desktop/Controls/toolbar-control-and-button-styles) im Windows SDK für die Liste der Stile.  
   
- [in] *nID*  
- Die ID des untergeordneten Fensters der Symbolleiste.  
+*nID*<br/>
+[in] Die ID des untergeordneten Fensters der Symbolleiste.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn diese Methode erfolgreich ist. andernfalls "false".  
@@ -943,20 +943,20 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pParentWnd*  
- Ein Zeiger auf das übergeordnete Fenster der Symbolleiste.  
+*pParentWnd*<br/>
+[in] Ein Zeiger auf das übergeordnete Fenster der Symbolleiste.  
   
- [in] *DwCtrlStyle*  
- Weitere Formate für die Erstellung der eingebetteten Steuerleistenobjekt.  
+*dwCtrlStyle*<br/>
+[in] Weitere Formate für die Erstellung der eingebetteten Steuerleistenobjekt.  
   
- [in] *DwStyle*  
- Der Stil für die Symbolleiste. Finden Sie unter [Toolbar-Steuerelement und Button-Stile](http://msdn.microsoft.com/library/windows/desktop/bb760439) eine Liste der entsprechenden Stile.  
+*dwStyle*<br/>
+[in] Der Stil für die Symbolleiste. Finden Sie unter [Toolbar-Steuerelement und Button-Stile](/windows/desktop/Controls/toolbar-control-and-button-styles) eine Liste der entsprechenden Stile.  
   
- [in] *RcBorders*  
- Ein `CRect` Objekt, das die Breite der Symbolleiste im Fensterrahmen angibt.  
+*rcBorders*<br/>
+[in] Ein `CRect` Objekt, das die Breite der Symbolleiste im Fensterrahmen angibt.  
   
- [in] *nID*  
- Die ID des untergeordneten Fensters der Symbolleiste.  
+*nID*<br/>
+[in] Die ID des untergeordneten Fensters der Symbolleiste.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn diese Methode erfolgreich ist. andernfalls 0.  
@@ -990,8 +990,8 @@ virtual void DoPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird vom Framework aufgerufen, wenn ein Teil der Symbolleiste neu gezeichnet werden muss.  
@@ -1011,20 +1011,20 @@ virtual BOOL DrawButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *pButton*  
- Ein Zeiger auf eine Schaltfläche gezeichnet werden soll.  
+*pButton*<br/>
+[in] Ein Zeiger auf eine Schaltfläche gezeichnet werden soll.  
   
- [in] *pImages*  
- Ein Zeiger auf die Symbolleistenbilder.  
+*pImages*<br/>
+[in] Ein Zeiger auf die Symbolleistenbilder.  
   
- [in] *bHighlighted*  
- True, wenn die Schaltfläche markiert wird. andernfalls "false".  
+*bHighlighted*<br/>
+[in] True, wenn die Schaltfläche markiert wird. andernfalls "false".  
   
- [in] *bDrawDisabledImages*  
- True, wenn deaktivierte Schaltflächen abgeblendet sind. andernfalls "false".  
+*bDrawDisabledImages*<br/>
+[in] True, wenn deaktivierte Schaltflächen abgeblendet sind. andernfalls "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Schaltfläche neu gezeichnet wurde. "False", wenn die Schaltfläche ausgeblendet ist.  
@@ -1045,14 +1045,14 @@ virtual void DrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
- [in] *Rect*  
- Das umschließende Rechteck des Speicherorts, in dem das Trennzeichen in Pixel gezeichnet wird.  
+*Rect*<br/>
+[in] Das umschließende Rechteck des Speicherorts, in dem das Trennzeichen in Pixel gezeichnet wird.  
   
- [in] *bHorz*  
- TRUE, wenn das Trennzeichen horizontal, "false" ist das Trennzeichen vertikal ist.  
+*bHorz*<br/>
+[in] TRUE, wenn das Trennzeichen horizontal, "false" ist das Trennzeichen vertikal ist.  
   
 ### <a name="remarks"></a>Hinweise  
  [CMFCToolBar::DoPaint](#dopaint) ruft diese Methode für die einzelnen [CMFCToolBar::DrawSeparator](#drawseparator) Objekt, das den Stil TBBS_SEPARATOR, statt verfügt [CMFCToolBar::DrawButton](#drawbutton) für Benutzer Schaltflächen.  
@@ -1078,20 +1078,20 @@ void EnableCustomizeButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- Aktiviert oder deaktiviert die Schaltfläche "anpassen".  
+*bAktivieren*<br/>
+[in] Aktiviert oder deaktiviert die Schaltfläche "anpassen".  
   
- [in] *iCustomizeCmd*  
- Die Befehls-ID von der Schaltfläche "anpassen".  
+*iCustomizeCmd*<br/>
+[in] Die Befehls-ID von der Schaltfläche "anpassen".  
   
- [in] *StrCustomizeText*  
- Die textbezeichnung des der Schaltfläche "anpassen".  
+*strCustomizeText*<br/>
+[in] Die textbezeichnung des der Schaltfläche "anpassen".  
   
- [in] *UiCustomizeTextResId*  
- Die Ressourcen-ID der Zeichenfolge der die Beschriftung der Schaltfläche anpassen.  
+*uiCustomizeTextResId*<br/>
+[in] Die Ressourcen-ID der Zeichenfolge der die Beschriftung der Schaltfläche anpassen.  
   
- [in] *bQuickCustomize*  
- Aktiviert oder deaktiviert die **Schaltflächen hinzufügen oder entfernen** im Menü "", die über die Schaltfläche angezeigt wird.  
+*bQuickCustomize*<br/>
+[in] Aktiviert oder deaktiviert die **Schaltflächen hinzufügen oder entfernen** im Menü "", die über die Schaltfläche angezeigt wird.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn *iCustomizeCmd* ist-1. das Framework zeigt Schaltfläche anpassen, wenn nicht passen mehrere Schaltflächen der Symbolleiste auf der Symbolleiste angezeigt. Die Schaltfläche angezeigt, die einen doppelten nach links zeigenden Pfeil oder Chevron, was bedeutet, dass weitere Schaltflächen vorhanden sind.  
@@ -1108,8 +1108,8 @@ virtual void EnableDocking(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *DwAlignment*  
- Gibt die andockbare Ausrichtung zu aktivieren.  
+*dwAlignment*<br/>
+[in] Gibt die andockbare Ausrichtung zu aktivieren.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode erweitert die basisklassenimplementierung [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking), durch Festlegen der `CBasePane::m_dwControlBarStyle` Datenmember, AFX_CBRS_FLOAT. Diese Methode übergibt dann *DwAlignment* für die Implementierung der Basisklasse.  
@@ -1122,8 +1122,8 @@ void EnableLargeIcons(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- "True", um große Symbole, "false" zu aktivieren, um große Symbole zu deaktivieren.  
+*bAktivieren*<br/>
+[in] "True", um große Symbole, "false" zu aktivieren, um große Symbole zu deaktivieren.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig sind große Symbole aktiviert.  
@@ -1136,8 +1136,8 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- TRUE, um schnelle Anpassung, "false" zu aktivieren, um schnelle Anpassung zu deaktivieren.  
+*bAktivieren*<br/>
+[in] TRUE, um schnelle Anpassung, "false" zu aktivieren, um schnelle Anpassung zu deaktivieren.  
   
 ##  <a name="enablereflections"></a>  CMFCToolBar::EnableReflections  
  Aktiviert oder deaktiviert die Reflektion des Befehls.  
@@ -1147,8 +1147,8 @@ void EnableReflections(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bAktivieren*  
- True, um den Befehl Reflektion zu aktivieren. So deaktivieren Sie den Befehl Reflektion wird false ZURÜCKGEGEBEN.  
+*bAktivieren*<br/>
+[in] True, um den Befehl Reflektion zu aktivieren. So deaktivieren Sie den Befehl Reflektion wird false ZURÜCKGEGEBEN.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um den Befehl Reflektion für Schaltflächen der Symbolleiste zu aktivieren, die eingebettete Steuerelemente wie Kombinationsfelder enthalten.  
@@ -1177,8 +1177,8 @@ static CMFCToolBar* __stdcall FromHandlePermanent(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Hwnd*  
- Das Fensterhandle, der gesucht werden soll.  
+*HWND*<br/>
+[in] Das Fensterhandle, der gesucht werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die `CMFCToolBar` -Objekt, das angegebene Fensterhandle oder NULL enthält, wenn kein entsprechender `CMFCToolBar` Objekt vorhanden ist.  
@@ -1227,8 +1227,8 @@ CMFCToolBarButton* GetButton(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iIndex*  
- Gibt den Index der Schaltfläche zurück.  
+*iIndex*<br/>
+[in] Gibt den Index der Schaltfläche zurück.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die Symbolleisten-Schaltfläche, falls vorhanden; oder NULL, wenn diese Schaltfläche nicht vorhanden ist.  
@@ -1245,17 +1245,17 @@ void GetButtonInfo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Gibt den Index der Schaltfläche in der Liste der Schaltflächen auf der Symbolleiste an.  
+*nIndex*<br/>
+[in] Gibt den Index der Schaltfläche in der Liste der Schaltflächen auf der Symbolleiste an.  
   
- [out] *nID*  
- Die Befehls-ID einer Schaltfläche.  
+*nID*<br/>
+[out] Die Befehls-ID einer Schaltfläche.  
   
- [out] *nStyle*  
- Der Stil der Schaltfläche.  
+*nStyle*<br/>
+[out] Der Stil der Schaltfläche.  
   
- [out] *iImage*  
- Der Index des Bilds für die Schaltfläche.  
+*iImage*<br/>
+[out] Der Index des Bilds für die Schaltfläche.  
   
 ### <a name="remarks"></a>Hinweise  
  Die `GetButtonInfo` Methode sucht nach einer Symbolleisten-Schaltfläche am angegebenen Index und ruft den Befehls-ID "," Stil "und" Image Index der Schaltfläche ab.  
@@ -1283,8 +1283,8 @@ UINT GetButtonStyle(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Gibt den Index einer Symbolleisten-Schaltfläche.  
+*nIndex*<br/>
+[in] Gibt den Index einer Symbolleisten-Schaltfläche.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Wert, der das Format der Symbolleisten-Schaltfläche angibt. sein. Finden Sie unter [ToolBar-Steuerelement-Stile](../../mfc/reference/toolbar-control-styles.md) eine Liste der möglichen Formate.  
@@ -1304,11 +1304,11 @@ void GetButtonText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Der Index des eine Symbolleisten-Schaltfläche.  
+*nIndex*<br/>
+[in] Der Index des eine Symbolleisten-Schaltfläche.  
   
- [out] *rString*  
- Der Bezeichnungstext der Symbolleisten-Schaltfläche.  
+*rString*<br/>
+[out] Der Bezeichnungstext der Symbolleisten-Schaltfläche.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Bezeichnungstext der Symbolleisten-Schaltfläche.  
@@ -1352,11 +1352,11 @@ static int GetCommandButtons(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmd*  
- Die Befehls-ID der Schaltflächen.  
+*uiCmd*<br/>
+[in] Die Befehls-ID der Schaltflächen.  
   
- [out] *ListButtons*  
- Ein Verweis auf eine [CObList-Klasse](../../mfc/reference/coblist-class.md) Objekt, das die Liste der Symbolleisten-Schaltflächen empfängt.  
+*listButtons*<br/>
+[out] Ein Verweis auf eine [CObList-Klasse](../../mfc/reference/coblist-class.md) Objekt, das die Liste der Symbolleisten-Schaltflächen empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der Schaltflächen mit der angegebenen Befehls-ID.  
@@ -1394,8 +1394,8 @@ static int GetDefaultImage(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiID*  
- Gibt die Befehls-ID der Schaltfläche an.  
+*uiID*<br/>
+[in] Gibt die Befehls-ID der Schaltfläche an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Index des Bilds Symbolleiste in der freigegebenen Liste der Images.  
@@ -1437,8 +1437,8 @@ CMFCToolBarMenuButton* GetDroppedDownMenu(int* pIndex = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *pIndex*  
- Erhält den Index der Schaltfläche in der Auflistung der Symbolleisten-Schaltflächen an.  
+*pIndex*<br/>
+[out] Erhält den Index der Schaltfläche in der Auflistung der Symbolleisten-Schaltflächen an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf das Menü-Schaltfläche-Objekt, das die Untermenü oder NULL angezeigt wird, wenn kein Menü dem Untermenü angezeigt wird.  
@@ -1493,7 +1493,7 @@ static COLORREF GetHotTextColor();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) -Wert, der die aktuelle Farbe des hervorgehobenen Text darstellen.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) -Wert, der die aktuelle Farbe des hervorgehobenen Text darstellen.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie [CMFCToolBar::SetHotTextColor](#sethottextcolor) um eine neue Farbe für die markierten Symbolleistenschaltflächen festzulegen.  
@@ -1573,11 +1573,11 @@ virtual void GetInvalidateItemRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Der Index der Schaltfläche für den Clientbereich abgerufen werden soll.  
+*nIndex*<br/>
+[in] Der Index der Schaltfläche für den Clientbereich abgerufen werden soll.  
   
- [out] *LpRect*  
- Ein Zeiger auf eine RECT-Objekt, das den Bereich des Clientbereichs empfängt.  
+*lpRect*<br/>
+[out] Ein Zeiger auf eine RECT-Objekt, das den Bereich des Clientbereichs empfängt.  
   
 ### <a name="remarks"></a>Hinweise  
  Die *LpRect* Parameter darf nicht NULL sein. Wenn keine Schaltfläche am angegebenen Index vorhanden ist *LpRect* empfängt ein RECT-Objekt, das 0 (null) initialisiert wird.  
@@ -1590,8 +1590,8 @@ UINT GetItemID(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Gibt den Index der Symbolleisten-Schaltfläche.  
+*nIndex*<br/>
+[in] Gibt den Index der Symbolleisten-Schaltfläche.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Befehls-ID der Symbolleisten-Schaltfläche; oder 0 (null), wenn die Schaltfläche mit dem angegebenen Index nicht vorhanden ist.  
@@ -1606,11 +1606,11 @@ virtual void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Gibt den Index einer Symbolleisten-Schaltfläche.  
+*nIndex*<br/>
+[in] Gibt den Index einer Symbolleisten-Schaltfläche.  
   
- [out] *LpRect*  
- Ein Zeiger auf `CRect` Objekt, das die Koordinaten des umgebenden Rechtecks Images empfängt.  
+*lpRect*<br/>
+[out] Ein Zeiger auf `CRect` Objekt, das die Koordinaten des umgebenden Rechtecks Images empfängt.  
   
 ### <a name="remarks"></a>Hinweise  
  Die `CRect` -Objekt, dem *LpRect* Punkte auf 0 festgelegt ist, wenn eine Schaltfläche am angegebenen Index nicht vorhanden ist.  
@@ -1904,8 +1904,8 @@ virtual int HitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *zeigen*  
- Der Punkt, die in Clientkoordinaten getestet werden.  
+*Zeigen Sie*<br/>
+[in] Der Punkt, die in Clientkoordinaten getestet werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Index der Schaltfläche, die an der angegebenen Position oder -1 befindet, sofern es gibt keine solche Schaltfläche oder auf ist ein Trennzeichen.  
@@ -1925,11 +1925,11 @@ virtual int InsertButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Schaltfläche*  
- Gibt die Schaltfläche zum Einfügen.  
+*Schaltfläche "*<br/>
+[in] Gibt die Schaltfläche zum Einfügen.  
   
- [in] *iInsertAt*  
- Gibt die nullbasierte Position, um auf die Schaltfläche einzufügen.  
+*iInsertAt*<br/>
+[in] Gibt die nullbasierte Position, um auf die Schaltfläche einzufügen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Position, an dem die Schaltfläche eingefügt wurde oder -1, wenn ein Fehler auftritt.  
@@ -1947,8 +1947,8 @@ virtual int InsertSeparator(INT_PTR iInsertAt=-1);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iInsertAt*  
- Gibt die nullbasierte Position zum Einfügen von Trennzeichen am. Dieser Parameter muss größer als 0 sein.  
+*iInsertAt*<br/>
+[in] Gibt die nullbasierte Position zum Einfügen von Trennzeichen am. Dieser Parameter muss größer als 0 sein.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Position, an dem das Trennzeichen eingefügt wurde, oder -1, wenn ein Fehler auftritt, wird.  
@@ -1968,8 +1968,8 @@ CMFCToolBarButton* InvalidateButton(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Der nullbasierte Index der Schaltfläche auf der Symbolleiste.  
+*nIndex*<br/>
+[in] Der nullbasierte Index der Schaltfläche auf der Symbolleiste.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die `CMFCToolBarButton` -Objekt, das am angegebenen Index oder NULL vorhanden ist, wenn kein entsprechendes Objekt vorhanden ist.  
@@ -2022,8 +2022,8 @@ static BOOL IsBasicCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmd*  
- Gibt den Befehl aus, um zu überprüfen.  
+*uiCmd*<br/>
+[in] Gibt den Befehl aus, um zu überprüfen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der angegebene Befehl die Liste mit den grundlegenden Befehlen gehört. andernfalls "false".  
@@ -2054,8 +2054,8 @@ BOOL IsButtonHighlighted(int iButton) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iButton*  
- Gibt den Index einer Symbolleisten-Schaltfläche.  
+*iButton*<br/>
+[in] Gibt den Index einer Symbolleisten-Schaltfläche.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die angegebene Schaltfläche markiert ist. andernfalls "false".  
@@ -2070,8 +2070,8 @@ static BOOL IsCommandPermitted(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmd*  
- Gibt den Befehl aus, um zu überprüfen.  
+*uiCmd*<br/>
+[in] Gibt den Befehl aus, um zu überprüfen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der angegebene Befehl zulässig ist. andernfalls "false".  
@@ -2089,8 +2089,8 @@ static BOOL IsCommandRarelyUsed(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmd*  
- Gibt den Befehl aus, um zu überprüfen.  
+*uiCmd*<br/>
+[in] Gibt den Befehl aus, um zu überprüfen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der angegebene Befehl nur selten verwendet wird. andernfalls "false".  
@@ -2131,8 +2131,8 @@ BOOL IsDragButton(const CMFCToolBarButton* pButton) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pButton*  
- Zeiger auf eine Symbolleisten-Schaltfläche.  
+*pButton*<br/>
+[in] Zeiger auf eine Symbolleisten-Schaltfläche.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die angegebene Schaltfläche gezogen wird. andernfalls "false".  
@@ -2187,8 +2187,8 @@ static BOOL IsLastCommandFromButton(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pButton*  
- Zeiger auf die Schaltfläche.  
+*pButton*<br/>
+[in] Zeiger auf die Schaltfläche.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn Sie über die Schaltfläche mit dem letzte Befehl gesendet wurde, *pButton* gibt; andernfalls "false".  
@@ -2222,7 +2222,7 @@ BOOL IsOneRowWithSibling();
  True, wenn die Symbolleiste und gleichgeordnete auf derselben Zeile positioniert ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Die [cmfccustomizebutton:: CreatePopupMenu](http://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) Methode ruft diese Methode, um zu bestimmen, wie zum Anzeigen der **anpassen** Popup-Menü. Wenn diese Methode TRUE zurückgibt, zeigt das Framework die **Schaltflächen in einer Zeile anzeigen** Schaltfläche. Andernfalls zeigt das Framework die **Schaltflächen in zwei Reihen anzeigen** Schaltfläche.  
+ Die [cmfccustomizebutton:: CreatePopupMenu](internal-classes.md) Methode ruft diese Methode, um zu bestimmen, wie zum Anzeigen der **anpassen** Popup-Menü. Wenn diese Methode TRUE zurückgibt, zeigt das Framework die **Schaltflächen in einer Zeile anzeigen** Schaltfläche. Andernfalls zeigt das Framework die **Schaltflächen in zwei Reihen anzeigen** Schaltfläche.  
   
  Sie müssen dieser Methode normalerweise nicht verwenden. So aktivieren Sie die **Schaltflächen in einer Zeile anzeigen** oder **Schaltflächen in zwei Reihen anzeigen** , rufen [cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar).  
   
@@ -2272,23 +2272,23 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiResID*  
- Die Ressourcen-ID der Bitmap, die auf die aktiven Symbolleistenbilder verweist.  
+*uiResID*<br/>
+[in] Die Ressourcen-ID der Bitmap, die auf die aktiven Symbolleistenbilder verweist.  
   
- [in] *UiColdResID*  
- Die Ressourcen-ID der Bitmap, die auf die inaktiven Symbolleistenbilder verweist.  
+*uiColdResID*<br/>
+[in] Die Ressourcen-ID der Bitmap, die auf die inaktiven Symbolleistenbilder verweist.  
   
- [in] *UiMenuResID*  
- Die Ressourcen-ID der Bitmap, die auf die normalen Menübilder verweist.  
+*uiMenuResID*<br/>
+[in] Die Ressourcen-ID der Bitmap, die auf die normalen Menübilder verweist.  
   
- [in] *blockiert*  
- True, um die Symbolleiste zu sperren. andernfalls "false".  
+*Blockiert*<br/>
+[in] True, um die Symbolleiste zu sperren. andernfalls "false".  
   
- [in] *UiDisabledResID*  
- Die Ressourcen-ID der Bitmap, die auf die deaktivierten Symbolleistenbilder verweist.  
+*uiDisabledResID*<br/>
+[in] Die Ressourcen-ID der Bitmap, die auf die deaktivierten Symbolleistenbilder verweist.  
   
- [in] *UiMenuDisabledResID*  
- Die Ressourcen-ID der Bitmap, die auf die deaktivierten Menübilder verweist.  
+*uiMenuDisabledResID*<br/>
+[in] Die Ressourcen-ID der Bitmap, die auf die deaktivierten Menübilder verweist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Wert ungleich 0 (null), wenn die Methode erfolgreich ausgeführt wird, andernfalls 0 (null).  
@@ -2308,8 +2308,8 @@ virtual BOOL LoadBitmapEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *Params*  
- [in] *blockiert*  
+*params*<br/>
+[in] [in] *blockiert*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -2337,8 +2337,8 @@ static BOOL LoadParameters(LPCTSTR lpszProfileName=NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- Gibt den relativen Pfad des Windows-Registrierungsschlüssels.  
+*lpszProfileName*<br/>
+[in] Gibt den relativen Pfad des Windows-Registrierungsschlüssels.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Wert ungleich 0 (null), wenn die Methode erfolgreich ausgeführt wird, andernfalls 0 (null).  
@@ -2359,14 +2359,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- Gibt den relativen Pfad des Windows-Registrierungsschlüssels.  
+*lpszProfileName*<br/>
+[in] Gibt den relativen Pfad des Windows-Registrierungsschlüssels.  
   
- [in] *nIndex*  
- Gibt die Steuerelement-ID der Symbolleiste an.  
+*nIndex*<br/>
+[in] Gibt die Steuerelement-ID der Symbolleiste an.  
   
- [in] *UiID*  
- Gibt die Ressourcen-ID der Symbolleiste an.  
+*uiID*<br/>
+[in] Gibt die Ressourcen-ID der Symbolleiste an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Wert ungleich 0 (null), wenn die Methode erfolgreich ausgeführt wird, andernfalls 0 (null).  
@@ -2389,26 +2389,26 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiResID*  
- Die Ressourcen-ID der Symbolleiste.  
+*uiResID*<br/>
+[in] Die Ressourcen-ID der Symbolleiste.  
   
- [in] *UiColdResID*  
- Die Ressourcen-ID der Bitmap, die auf die inaktiven Symbolleistenbilder verweist.  
+*uiColdResID*<br/>
+[in] Die Ressourcen-ID der Bitmap, die auf die inaktiven Symbolleistenbilder verweist.  
   
- [in] *UiMenuResID*  
- Die Ressourcen-ID der Bitmap, die auf die normalen Menübilder verweist.  
+*uiMenuResID*<br/>
+[in] Die Ressourcen-ID der Bitmap, die auf die normalen Menübilder verweist.  
   
- [in] *blockiert*  
- Ein boolescher Wert, der angibt, ob die Symbolleiste oder nicht gesperrt ist. Wenn dieser Parameter ist *"true"*, die Symbolleiste ist gesperrt. Andernfalls wird die Symbolleiste nicht gesperrt werden.  
+*Blockiert*<br/>
+[in] Ein boolescher Wert, der angibt, ob die Symbolleiste oder nicht gesperrt ist. Wenn dieser Parameter ist *"true"*, die Symbolleiste ist gesperrt. Andernfalls wird die Symbolleiste nicht gesperrt werden.  
   
- [in] *UiDisabledResID*  
- Die Ressourcen-ID der Bitmap, die auf die deaktivierten Symbolleistenbilder verweist.  
+*uiDisabledResID*<br/>
+[in] Die Ressourcen-ID der Bitmap, die auf die deaktivierten Symbolleistenbilder verweist.  
   
- [in] *UiMenuDisabledResID*  
- Die Ressourcen-ID der Bitmap, die auf die deaktivierten Menübilder verweist.  
+*uiMenuDisabledResID*<br/>
+[in] Die Ressourcen-ID der Bitmap, die auf die deaktivierten Menübilder verweist.  
   
- [in] *UiHotResID*  
- Die Ressourcen-ID der Bitmap, die auf die aktiven Symbolleistenbilder verweist.  
+*uiHotResID*<br/>
+[in] Die Ressourcen-ID der Bitmap, die auf die aktiven Symbolleistenbilder verweist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Wert ungleich 0 (null), wenn die Methode erfolgreich ausgeführt wird, andernfalls 0 (null).  
@@ -2433,14 +2433,14 @@ virtual BOOL LoadToolBarEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiToolbarResID*  
- Die Ressourcen-ID der Symbolleiste.  
+*uiToolbarResID*<br/>
+[in] Die Ressourcen-ID der Symbolleiste.  
   
- [in] *Params*  
- Ein Verweis auf eine `CMFCToolBarInfo` Objekt, das die Ressourcen-IDs für die Symbolleistenbilder enthält.  
+*params*<br/>
+[in] Ein Verweis auf eine `CMFCToolBarInfo` Objekt, das die Ressourcen-IDs für die Symbolleistenbilder enthält.  
   
- [in] *blockiert*  
- Ein boolescher Wert, der angibt, ob die Symbolleiste oder nicht gesperrt ist. Wenn dieser Parameter TRUE ist, wird die Symbolleiste gesperrt. Andernfalls wird die Symbolleiste nicht gesperrt werden.  
+*Blockiert*<br/>
+[in] Ein boolescher Wert, der angibt, ob die Symbolleiste oder nicht gesperrt ist. Wenn dieser Parameter TRUE ist, wird die Symbolleiste gesperrt. Andernfalls wird die Symbolleiste nicht gesperrt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Wert ungleich 0 (null), wenn die Methode erfolgreich ausgeführt wird, andernfalls 0 (null).  
@@ -2481,11 +2481,11 @@ virtual BOOL OnBeforeRemoveButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pButton*  
- Nicht verwendet.  
+*pButton*<br/>
+[in] Nicht verwendet.  
   
- [in] *-DropEffect-*  
- Nicht verwendet.  
+*-DropEffect-*<br/>
+[in] Nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -2499,8 +2499,8 @@ virtual void OnChangeHot(int iHot);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iHot*  
- Gibt den Index des der Symbolleisten-Schaltfläche, die ausgewählt ist; oder -1, wenn keine Symbolleisten-Schaltfläche aktiviert ist.  
+*iHot*<br/>
+[in] Gibt den Index des der Symbolleisten-Schaltfläche, die ausgewählt ist; oder -1, wenn keine Symbolleisten-Schaltfläche aktiviert ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode zum Verarbeiten von Benachrichtigungen, dass der Benutzer eine Schaltfläche auf einer Symbolleiste ausgewählt.  
@@ -2522,8 +2522,8 @@ virtual void OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pDC*  
- Ein Zeiger zu einem Gerätekontext.  
+*pDC*<br/>
+[in] Ein Zeiger auf einen Gerätekontext.  
   
 ### <a name="remarks"></a>Hinweise  
  [CMFCToolBar::DoPaint](#dopaint) ruft diese Methode auf, wenn der Hintergrund einer Symbolleiste gefüllt wurde. Bei der Standardimplementierung wird keine Aktion ausgeführt.  
@@ -2573,8 +2573,8 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pButton*  
- Verweist auf eine Schaltfläche, deren Text festgelegt wird.  
+*pButton*<br/>
+[in] Verweist auf eine Schaltfläche, deren Text festgelegt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  "True" Ifthe Text wurde erfolgreich wiederhergestellt werden; andernfalls "false".  
@@ -2594,11 +2594,11 @@ virtual BOOL OnUserToolTip(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pButton*  
- Verweist auf eine Symbolleisten-Schaltfläche, die für die eine QuickInfo angezeigt werden.  
+*pButton*<br/>
+[in] Verweist auf eine Symbolleisten-Schaltfläche, die für die eine QuickInfo angezeigt werden.  
   
- [out] *StrTTText*  
- Ein Verweis auf `CString` Objekt, das den Text der QuickInfo empfängt.  
+*strTTText*<br/>
+[out] Ein Verweis auf `CString` Objekt, das den Text der QuickInfo empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn *StrTTText* wurde mit dem QuickInfo-Text aufgefüllt; andernfalls "false".  
@@ -2627,8 +2627,8 @@ BOOL ProcessCommand(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pButton*  
- Zeiger auf eine Schaltfläche auf der Symbolleiste.  
+*pButton*<br/>
+[in] Zeiger auf eine Schaltfläche auf der Symbolleiste.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Diese Methode sollte immer "true" zurückgeben. FALSE-Werte wird von MFC intern verwendet.  
@@ -2656,8 +2656,8 @@ virtual BOOL RemoveButton(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *iIndex*  
- Gibt an, der nullbasierte Index der Schaltfläche zu entfernen.  
+*iIndex*<br/>
+[in] Gibt an, der nullbasierte Index der Schaltfläche zu entfernen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn die Methode erfolgreich ist, oder FALSE, wenn der angegebene Indexwert ungültig ist oder der Index bezieht sich auf die **anpassen** Schaltfläche.  
@@ -2678,14 +2678,14 @@ virtual BOOL RemoveStateFromRegistry(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- Gibt den Registrierungsschlüssel auf dem sich die Informationen über den Zustand befindet.  
+*lpszProfileName*<br/>
+[in] Gibt den Registrierungsschlüssel auf dem sich die Informationen über den Zustand befindet.  
   
- [in] *nIndex*  
- Die Steuerelement-ID der Symbolleiste.  
+*nIndex*<br/>
+[in] Die Steuerelement-ID der Symbolleiste.  
   
- [in] *UiID*  
- Die Ressourcen-ID der Symbolleiste. Wenn dieser Parameter-1 ist, wird diese Methode verwendet die [CWnd::GetDlgCtrlID](../../mfc/reference/cwnd-class.md#getdlgctrlid) Methode, um die Ressourcen-ID abrufen  
+*uiID*<br/>
+[in] Die Ressourcen-ID der Symbolleiste. Wenn dieser Parameter-1 ist, wird diese Methode verwendet die [CWnd::GetDlgCtrlID](../../mfc/reference/cwnd-class.md#getdlgctrlid) Methode, um die Ressourcen-ID abrufen  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Wert ungleich 0 (null), wenn die Methode erfolgreich ausgeführt wird, andernfalls 0 (null).  
@@ -2706,14 +2706,14 @@ int ReplaceButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *UiCmd*  
- Die Befehls-ID der Schaltfläche zu ersetzen.  
+*uiCmd*<br/>
+[in] Die Befehls-ID der Schaltfläche zu ersetzen.  
   
- [in] *Schaltfläche*  
- Ein Verweis auf die `CMFCToolBarButton` eingefügt.  
+*Schaltfläche "*<br/>
+[in] Ein Verweis auf die `CMFCToolBarButton` eingefügt.  
   
- [in] *bAll*  
- Ein boolescher Wert, der angibt, ob alle Schaltflächen ersetzt, die die Befehls-ID gemäß *UiCmd*. Wenn dieser Parameter TRUE ist, werden alle Schaltflächen mit der angegebenen Befehls-ID ersetzt. Andernfalls wird die erste Schaltfläche ersetzt.  
+*bAll*<br/>
+[in] Ein boolescher Wert, der angibt, ob alle Schaltflächen ersetzt, die die Befehls-ID gemäß *UiCmd*. Wenn dieser Parameter TRUE ist, werden alle Schaltflächen mit der angegebenen Befehls-ID ersetzt. Andernfalls wird die erste Schaltfläche ersetzt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der Schaltflächen, die ersetzt werden. Diese Methode gibt 0 zurück, wenn eine Schaltfläche mit der angegebenen Befehls-ID auf der Symbolleiste nicht vorhanden ist.  
@@ -2805,14 +2805,14 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszProfileName*  
- Gibt den relativen Pfad des Windows-Registrierungsschlüssels.  
+*lpszProfileName*<br/>
+[in] Gibt den relativen Pfad des Windows-Registrierungsschlüssels.  
   
- [in] *nIndex*  
- Die Steuerelement-ID der Symbolleiste.  
+*nIndex*<br/>
+[in] Die Steuerelement-ID der Symbolleiste.  
   
- [in] *UiID*  
- Die Ressourcen-ID der Symbolleiste.  
+*uiID*<br/>
+[in] Die Ressourcen-ID der Symbolleiste.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Wert ungleich 0 (null), wenn die Methode erfolgreich ausgeführt wird, andernfalls 0 (null).  
@@ -2828,8 +2828,8 @@ static void __stdcall SetBasicCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LstCommands*  
- Ein Verweis auf eine `CList` Objekt, das eine Auflistung von Befehlen enthält.  
+*lstCommands*<br/>
+[in] Ein Verweis auf eine `CList` Objekt, das eine Auflistung von Befehlen enthält.  
   
 ### <a name="remarks"></a>Hinweise  
  Ein einfachen Befehl wird immer angezeigt, wenn das Menü geöffnet wird. Diese Methode ist sinnvoll, wenn der Benutzer auswählt, zuletzt verwendeten Befehle anzuzeigen.  
@@ -2850,17 +2850,17 @@ void SetButtonInfo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Der nullbasierte Index der Schaltfläche, dessen Eigenschaften festgelegt werden.  
+*nIndex*<br/>
+[in] Der nullbasierte Index der Schaltfläche, dessen Eigenschaften festgelegt werden.  
   
- [in] *nID*  
- Die Befehls-ID der Schaltfläche.  
+*nID*<br/>
+[in] Die Befehls-ID der Schaltfläche.  
   
- [in] *nStyle*  
- Der Stil der Schaltfläche. Finden Sie unter [ToolBar-Steuerelement-Stile](../../mfc/reference/toolbar-control-styles.md) für die Liste der Formatvorlagen für Symbolleistenschaltflächen von verfügbar.  
+*nStyle*<br/>
+[in] Der Stil der Schaltfläche. Finden Sie unter [ToolBar-Steuerelement-Stile](../../mfc/reference/toolbar-control-styles.md) für die Liste der Formatvorlagen für Symbolleistenschaltflächen von verfügbar.  
   
- [in] *iImage*  
- Der nullbasierte Bildindex der Schaltfläche (d. h. der Index in der Auflistung von symbolleistenbildern).  
+*iImage*<br/>
+[in] Der nullbasierte Bildindex der Schaltfläche (d. h. der Index in der Auflistung von symbolleistenbildern).  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode zum Festlegen der Eigenschaften einer Symbolleisten-Schaltfläche auf.  
@@ -2880,14 +2880,14 @@ virtual BOOL SetButtons(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpIDArray*  
- Ein Zeiger auf das Array der Befehls-IDs der Schaltflächen zum Einfügen.  
+*lpIDArray*<br/>
+[in] Ein Zeiger auf das Array der Befehls-IDs der Schaltflächen zum Einfügen.  
   
- [in] *nIDCount*  
- Die Anzahl der Elemente in *LpIDArray*.  
+*nIDCount*<br/>
+[in] Die Anzahl der Elemente in *LpIDArray*.  
   
- [in] *bRemapImages*  
- Ein boolescher Wert, der angibt, ob die eingefügten Schaltflächen der vorhandenen Schaltflächenbilder zugeordnet. Wenn dieser Parameter TRUE ist, werden die Images neu zugeordnet werden.  
+*bRemapImages*<br/>
+[in] Ein boolescher Wert, der angibt, ob die eingefügten Schaltflächen der vorhandenen Schaltflächenbilder zugeordnet. Wenn dieser Parameter TRUE ist, werden die Images neu zugeordnet werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Wert ungleich 0 (null), wenn die Methode erfolgreich ausgeführt wird, andernfalls 0 (null).  
@@ -2907,11 +2907,11 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Der nullbasierte Index der Symbolleisten-Schaltfläche, dessen Stil ist, festgelegt werden.  
+*nIndex*<br/>
+[in] Der nullbasierte Index der Symbolleisten-Schaltfläche, dessen Stil ist, festgelegt werden.  
   
- [in] *nStyle*  
- Der Stil der Schaltfläche. Finden Sie unter [ToolBar-Steuerelement-Stile](../../mfc/reference/toolbar-control-styles.md) für die Liste der Formatvorlagen für Symbolleistenschaltflächen von verfügbar.  
+*nStyle*<br/>
+[in] Der Stil der Schaltfläche. Finden Sie unter [ToolBar-Steuerelement-Stile](../../mfc/reference/toolbar-control-styles.md) für die Liste der Formatvorlagen für Symbolleistenschaltflächen von verfügbar.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode entfernt den TBBS_PRESSED-Stil aus, wenn *nStyle* TBBS_DISABLED ist, da der Benutzer nicht auf eine nicht aktive Schaltfläche klicken kann.  
@@ -2926,11 +2926,11 @@ BOOL SetButtonText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Der Index des der Symbolleisten-Schaltfläche.  
+*nIndex*<br/>
+[in] Der Index des der Symbolleisten-Schaltfläche.  
   
- [in] *LpszText*  
- Die textbezeichnung des der Symbolleisten-Schaltfläche. Darf nicht NULL sein.  
+*lpszText*<br/>
+[in] Die textbezeichnung des der Symbolleisten-Schaltfläche. Darf nicht NULL sein.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Methode erfolgreich ist. andernfalls "false".  
@@ -2948,11 +2948,11 @@ static BOOL SetCommandUsageOptions(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nStartCount*  
- Gibt an, dass die Anzahl der Male, die Befehle ausgeführt werden muss, bevor das Framework nur die grundlegenden und kürzlich verwendete Befehle angezeigt.  
+*nStartCount*<br/>
+[in] Gibt an, dass die Anzahl der Male, die Befehle ausgeführt werden muss, bevor das Framework nur die grundlegenden und kürzlich verwendete Befehle angezeigt.  
   
- [in] *nMinUsagePercentage*  
- Der Prozentsatz der Fälle, in denen ein Befehl ausgeführt werden muss, um einen kürzlich verwendete Befehl berücksichtigt zu werden.  
+*nMinUsagePercentage*<br/>
+[in] Der Prozentsatz der Fälle, in denen ein Befehl ausgeführt werden muss, um einen kürzlich verwendete Befehl berücksichtigt zu werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  FALSE, wenn *nMinUsagePercentage* gleich oder größer als 100 ist; andernfalls "true".  
@@ -2970,8 +2970,8 @@ static BOOL __stdcall SetCustomizeMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bSet*  
- Ein boolescher Wert, der angibt, ob zum Aktivieren oder Deaktivieren der Anpassungsmodus aktiviert. Legen Sie diesen Parameter auf "true" Anpassungsmodus aktivieren oder "false", um ihn zu deaktivieren.  
+*bSet*<br/>
+[in] Ein boolescher Wert, der angibt, ob zum Aktivieren oder Deaktivieren der Anpassungsmodus aktiviert. Legen Sie diesen Parameter auf "true" Anpassungsmodus aktivieren oder "false", um ihn zu deaktivieren.  
   
 ### <a name="return-value"></a>Rückgabewert  
  "True" ändert, wenn diese Methode aufrufen, den Anpassungsmodus; andernfalls "false".  
@@ -2987,8 +2987,8 @@ void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bGrayDisabledButtons*  
- Ein boolescher Wert, der angibt, wie nicht verfügbar angezeigt werden sollen. Wenn dieser Parameter TRUE ist, wird das Framework die Schaltflächen abgeblendet. Andernfalls verwendet das Framework die Auflistung der Bilder der Schaltfläche nicht verfügbar ist.  
+*bGrayDisabledButtons*<br/>
+[in] Ein boolescher Wert, der angibt, wie nicht verfügbar angezeigt werden sollen. Wenn dieser Parameter TRUE ist, wird das Framework die Schaltflächen abgeblendet. Andernfalls verwendet das Framework die Auflistung der Bilder der Schaltfläche nicht verfügbar ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig sind nicht verfügbare-Schaltflächen abgeblendet.  
@@ -3001,8 +3001,8 @@ void SetHeight(int cyHeight);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *CyHeight*  
- Die Höhe der Symbolleiste, in Pixel.  
+*cyHeight*<br/>
+[in] Die Höhe der Symbolleiste, in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode zeichnet die Symbolleiste neu, nachdem er legt die Höhe fest.  
@@ -3041,8 +3041,8 @@ void SetHotBorder(BOOL bShowHotBorder);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bShowHotBorder*  
- Ein boolescher Wert, der angibt, ob Symbolleisten-Schaltflächen HotTracking angibt. Wenn dieser Parameter "true", "Hot": verfolgt die Symbolleiste die Schaltflächen. Andernfalls der Symbolleiste ist nicht "Hot" – die Schaltflächen nachverfolgen.  
+*bShowHotBorder*<br/>
+[in] Ein boolescher Wert, der angibt, ob Symbolleisten-Schaltflächen HotTracking angibt. Wenn dieser Parameter "true", "Hot": verfolgt die Symbolleiste die Schaltflächen. Andernfalls der Symbolleiste ist nicht "Hot" – die Schaltflächen nachverfolgen.  
   
 ### <a name="remarks"></a>Hinweise  
  Ist eine Schaltfläche vorselektierten, werden das Framework die Schaltfläche mit den hervorgehoben, wenn der Mauszeiger darüber bewegt wird. Standardmäßig ist jeder Symbolleiste "Hot": verfolgt die Schaltflächen.  
@@ -3057,8 +3057,8 @@ static void SetHotTextColor(COLORREF clrText);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *ClrText*  
- Gibt die Textfarbe für Schaltflächen der Symbolleiste, die "Hot" nachverfolgt werden.  
+*clrText*<br/>
+[in] Gibt die Textfarbe für Schaltflächen der Symbolleiste, die "Hot" nachverfolgt werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen zu hot Track-Symbolleisten-Schaltflächen, finden Sie unter [CMFCToolBar::GetHotBorder](#gethotborder) und [CMFCToolBar::SetHotBorder](#sethotborder).  
@@ -3083,8 +3083,8 @@ static void SetLargeIcons(BOOL bLargeIcons=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bLargeIcons*  
- Ein boolescher Wert, der angibt, welche Symbole verwenden. Wenn dieser Parameter TRUE ist, zeigt das Framework große Symbole an. Andernfalls zeigt das Framework regulären Symbole an.  
+*bLargeIcons*<br/>
+[in] Ein boolescher Wert, der angibt, welche Symbole verwenden. Wenn dieser Parameter TRUE ist, zeigt das Framework große Symbole an. Andernfalls zeigt das Framework regulären Symbole an.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Methode aus, wenn der Benutzer den Zustand ändert die **große Symbole** Kontrollkästchen in der **Optionen** auf der Registerkarte die **anpassen** Dialogfeld. Diese Methode ändert alle Symbolleisten in der Anwendung.  
@@ -3104,11 +3104,11 @@ void SetLockedSizes(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *SizeButton*  
- Gibt die Größe von gesperrte Symbolleisten-Schaltflächen.  
+*sizeButton*<br/>
+[in] Gibt die Größe von gesperrte Symbolleisten-Schaltflächen.  
   
- [in] *SizeImage*  
- Gibt die Größe des gesperrten Symbolleistenbilder an.  
+*sizeImage*<br/>
+[in] Gibt die Größe des gesperrten Symbolleistenbilder an.  
   
  *bDontScale*  
  Gibt an, ob Skalierung Symbolleistenbilder im Modus für hohe DPI-Wert gesperrt.  
@@ -3140,11 +3140,11 @@ static void __stdcall SetMenuSizes(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *SizeButton*  
- Gibt die Größe der Schaltflächen der Symbolleiste in Pixel an.  
+*sizeButton*<br/>
+[in] Gibt die Größe der Schaltflächen der Symbolleiste in Pixel an.  
   
- [in] *SizeImage*  
- Gibt die Größe des Symbolleistenbilder, in Pixel an.  
+*sizeImage*<br/>
+[in] Gibt die Größe des Symbolleistenbilder, in Pixel an.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig haben Menüschaltflächen und Images eine nicht definierte Größe.  
@@ -3161,8 +3161,8 @@ static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LstCommands*  
- Ein Verweis auf eine `CList` -Objekt, das die Befehle enthält, die vom Benutzer ausgeführt werden kann.  
+*lstCommands*<br/>
+[in] Ein Verweis auf eine `CList` -Objekt, das die Befehle enthält, die vom Benutzer ausgeführt werden kann.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode aus, um zu verhindern, dass den Benutzer bestimmte Befehle auswählen. Beispielsweise empfiehlt es sich um zu verhindern, dass den Benutzer bestimmte Befehle aus Sicherheitsgründen auswählen. Siehe die Beispiele MDITabsDemo und MenuSubSet Beispiele, in denen diese Methode verwenden.  
@@ -3203,8 +3203,8 @@ void SetPermament(BOOL bPermament=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bPermament*  
- Ein boolescher Wert, der angibt, ob ein Benutzer auf die Symbolleiste schließen kann. Wenn dieser Parameter TRUE ist, kann Benutzer die Symbolleiste nicht schließen. Andernfalls kann ein Benutzer die Symbolleiste schließen.  
+*bPermament*<br/>
+[in] Ein boolescher Wert, der angibt, ob ein Benutzer auf die Symbolleiste schließen kann. Wenn dieser Parameter TRUE ist, kann Benutzer die Symbolleiste nicht schließen. Andernfalls kann ein Benutzer die Symbolleiste schließen.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig kann Benutzer jeder Symbolleiste schließen.  
@@ -3219,8 +3219,8 @@ void SetRouteCommandsViaFrame(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bValue*  
- Wenn dieser Parameter TRUE ist, sendet der übergeordneten Rahmen Befehle an der Symbolleiste. Andernfalls sendet der Besitzer Befehle auf der Symbolleiste.  
+*bValue*<br/>
+[in] Wenn dieser Parameter TRUE ist, sendet der übergeordneten Rahmen Befehle an der Symbolleiste. Andernfalls sendet der Besitzer Befehle auf der Symbolleiste.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig sendet der übergeordneten Frame Befehle auf der Symbolleiste. Rufen Sie die [CMFCToolBar::GetRouteCommandsViaFrame](#getroutecommandsviaframe) Methode, um zu bestimmen, ob die übergeordneten Rahmens oder der Besitzer die Befehle an die Symbolleiste sendet.  
@@ -3233,8 +3233,8 @@ static void SetShowTooltips(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *bValue*  
- Wenn dieser Parameter TRUE ist, zeigt das Framework QuickInfos an. Andernfalls wird das Framework QuickInfos ausgeblendet.  
+*bValue*<br/>
+[in] Wenn dieser Parameter TRUE ist, zeigt das Framework QuickInfos an. Andernfalls wird das Framework QuickInfos ausgeblendet.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig zeigt das Framework QuickInfos.  
@@ -3249,8 +3249,8 @@ void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pBrotherToolbar*  
- Ein Zeiger auf der Symbolleiste gleichgeordnetes Element.  
+*pBrotherToolbar*<br/>
+[in] Ein Zeiger auf der Symbolleiste gleichgeordnetes Element.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ermöglicht die **Schaltflächen in einer Zeile anzeigen** oder **Schaltflächen in zwei Reihen anzeigen** Schaltflächen, die angezeigt werden, wenn der Benutzer zeigt die **anpassen** Popup-Menü. Rufen Sie diese Methode auf, wenn Sie möchten, damit der Benutzer an, ob verwandte Symbolleisten auf der gleichen Zeile oder auf unterschiedlichen Zeilen angezeigt werden.  
@@ -3269,11 +3269,11 @@ static void __stdcall SetSizes(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *SizeButton*  
- Die Größe der Schaltflächen der Symbolleiste in Pixel.  
+*sizeButton*<br/>
+[in] Die Größe der Schaltflächen der Symbolleiste in Pixel.  
   
- [in] *SizeImage*  
- Die Größe des Symbolleisten-Schaltflächen, in Pixel.  
+*sizeImage*<br/>
+[in] Die Größe des Symbolleisten-Schaltflächen, in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardgröße des Symbolleisten-Schaltflächen ist 23 x 22 Pixel. Die Standardgröße des Symbolleisten-Schaltflächen ist 16 x 15 Pixel.  
@@ -3292,17 +3292,17 @@ void SetToolBarBtnText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nBtnIndex*  
- Der nullbasierte Index der Symbolleisten-Schaltfläche in der Liste der Symbolleisten-Schaltflächen.  
+*nBtnIndex*<br/>
+[in] Der nullbasierte Index der Symbolleisten-Schaltfläche in der Liste der Symbolleisten-Schaltflächen.  
   
- [in] *SzText*  
- Gibt an, die textbezeichnung des der Symbolleisten-Schaltfläche.  
+*szText*<br/>
+[in] Gibt an, die textbezeichnung des der Symbolleisten-Schaltfläche.  
   
- [in] *bShowText*  
- Wenn dieser Parameter TRUE ist, zeigt das Framework die textbezeichnung. Andernfalls wird das Framework die textbezeichnung ausgeblendet.  
+*bShowText*<br/>
+[in] Wenn dieser Parameter TRUE ist, zeigt das Framework die textbezeichnung. Andernfalls wird das Framework die textbezeichnung ausgeblendet.  
   
- [in] *bShowImage*  
- Wenn dieser Parameter TRUE ist, zeigt das Framework das Symbolleistenbild-Schaltfläche. Andernfalls wird das Framework das Symbolleistenbild für die Schaltfläche ausgeblendet.  
+*bShowImage*<br/>
+[in] Wenn dieser Parameter TRUE ist, zeigt das Framework das Symbolleistenbild-Schaltfläche. Andernfalls wird das Framework das Symbolleistenbild für die Schaltfläche ausgeblendet.  
   
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig wird das Framework zeigt das Bild der Symbolleisten-Schaltflächen, aber die textbezeichnung des Symbolleisten-Schaltflächen nicht angezeigt.  
@@ -3331,8 +3331,8 @@ static BOOL SetUserImages(CMFCToolBarImages* pUserImages);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pUserImages*  
- Ein Zeiger auf die Sammlung von benutzerdefinierten Images.  
+*pUserImages*<br/>
+[in] Ein Zeiger auf die Sammlung von benutzerdefinierten Images.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn die Methode erfolgreich ist; andernfalls 0, wenn das angegebene `CMFCToolBarImages` Objekt ist ungültig oder weist eine Imagegröße, die von der Symbolleiste die Standard-Bildgröße abweicht.  
@@ -3356,11 +3356,11 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nLength*  
- Das Ausmaß in Pixel, um stretch-Bereich.  
+*nLength*<br/>
+[in] Das Ausmaß in Pixel, um stretch-Bereich.  
   
- [in] *bHoriz*  
- Bei "true", wird den Bereich vertikal gestreckt. False gibt an, wird den Bereich horizontal gestreckt.  
+*bHoriz*<br/>
+[in] Bei "true", wird den Bereich vertikal gestreckt. False gibt an, wird den Bereich horizontal gestreckt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein `CSize` -Objekt, das die Größe des Clientbereichs Symbolleiste angibt.  
@@ -3378,8 +3378,8 @@ virtual BOOL TranslateChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nChar*  
- Gibt ein virtueller Tastencode an. Eine Liste der standardmäßige virtuelle Tastencodes finden Sie in der Winuser.h  
+*NChar*<br/>
+[in] Gibt ein virtueller Tastencode an. Eine Liste der standardmäßige virtuelle Tastencodes finden Sie in der Winuser.h  
   
 ### <a name="return-value"></a>Rückgabewert  
  FALSE, wenn der angegebene Schlüssel-Code ist nicht mehr gedruckt oder entspricht keine gültige Tastenkombination; True, wenn der angegebene Schlüssel-Code eine Option im Dropdownmenü entspricht. andernfalls der Rückgabewert von [CMFCToolBar::ProcessCommand](#processcommand).  
@@ -3395,8 +3395,8 @@ void UpdateButton(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nIndex*  
- Gibt an, der nullbasierte Index der Schaltfläche zu aktualisieren.  
+*nIndex*<br/>
+[in] Gibt an, der nullbasierte Index der Schaltfläche zu aktualisieren.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -3413,17 +3413,17 @@ int WrapToolBar(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *nWidth*  
- Maximale Breite der Symbolleiste.  
+*nWidth*<br/>
+[in] Maximale Breite der Symbolleiste.  
   
- [in] *nHeight*  
- Maximale Höhe der Symbolleiste. Nicht verwendet, wenn die Symbolleiste unverankert ist.  
+*nHeight*<br/>
+[in] Maximale Höhe der Symbolleiste. Nicht verwendet, wenn die Symbolleiste unverankert ist.  
   
- [in] *pDC*  
- Zeiger zu einem Gerätekontext. Wenn der Wert NULL ist, wird der Gerätekontext für die Symbolleiste verwendet.  
+*pDC*<br/>
+[in] Zeiger auf einen Gerätekontext. Wenn der Wert NULL ist, wird der Gerätekontext für die Symbolleiste verwendet.  
   
- [in] *nColumnWidth*  
- Breite der Schaltfläche. Wenn-1 ist, wird die aktuelle Breite verwendet.  
+*nColumnWidth*<br/>
+[in] Breite der Schaltfläche. Wenn-1 ist, wird die aktuelle Breite verwendet.  
   
  [in] m *nRowHeight*  
  Höhe der Schaltfläche. Wenn-1 ist, wird die aktuelle Höhe verwendet.  

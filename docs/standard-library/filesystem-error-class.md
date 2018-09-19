@@ -1,7 +1,7 @@
 ---
 title: filesystem_error-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1acf34f8478bc075b53780f1e48df125c22608b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a5756c01969dba0773e0327e1a34a0c7492b972a
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845491"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691522"
 ---
 # <a name="filesystemerror-class"></a>filesystem_error-Klasse
 
@@ -33,9 +33,31 @@ class filesystem_error    : public system_error;
 
 ## <a name="remarks"></a>Hinweise
 
-Die Klasse fungiert als Basisklasse für alle Ausnahmen, die ausgelöst werden, um einen Fehler in \<filesystem>-Funktionen zu melden. Sie speichert ein Objekt vom Typ „string“, das hier zur Veranschaulichung den Namen „mymesg“ erhält. Sie speichert außerdem zwei Objekte vom Typ „path“ namens „mypval1“ und „mypval2“.
+Die Klasse fungiert als Basisklasse für alle Ausnahmen, die ausgelöst werden, um einen Fehler in \<filesystem>-Funktionen zu melden. Sie speichert ein Objekt des Typs `string`namens `mymesg` hier, um den Zweck der Darstellung. Es speichert zudem zwei Objekte des Typs `path`namens `mypval1` und `mypval2`.
 
-## <a name="filesystemerrorfilesystemerror"></a>filesystem_error::filesystem_error
+### <a name="constructors"></a>Konstruktoren
+
+|Konstruktor|Beschreibung|
+|-|-|
+|[filesystem_error](#filesystem_error)|Erstellt eine `filesystem_error` Nachricht.|
+
+### <a name="member-functions"></a>Memberfunktionen
+
+|Member-Funktion|Beschreibung|
+|-|-|
+|[path1](#path1)|Gibt `mypval1` zurück.|
+|[path2](#path2)|Gibt `mypval2` zurück.|
+|[Was](#what)|Gibt einen Zeiger auf ein `NTBS` zurück.|
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** \<Filesystem >
+
+**Namespace:** std::experimental::filesystem
+
+## <a name="filesystem_error"></a> filesystem_error:: filesystem_error
+
+Der erste Konstruktor erstellt die Meldung aus *"what_arg"* und *Ec*. Der zweite Konstruktor erstellt auch die Meldung aus *"pval1"*, die in gespeichert `mypval1`. Der dritte Konstruktor erstellt auch die Meldung aus *"pval1"*, die in gespeichert `mypval1`, und von *pval2*, die in gespeichert `mypval2`.
 
 ```cpp
 filesystem_error(const string& what_arg,
@@ -51,37 +73,43 @@ filesystem_error(const string& what_arg,
     error_code ec);
 ```
 
-Der erste Konstruktor erstellt die Meldung aus „what_arg“ und „ec“. Der zweite Konstruktor erstellt die Meldung aus „pval1“, die in „mypval1“ gespeichert wird. Der dritte Konstruktor erstellt die Meldung auch aus „pval1“, die in „mypval1“ gespeichert wird, sowie aus „pval2“, die wiederum in „mypval2“ gespeichert wird.
+### <a name="parameters"></a>Parameter
 
-## <a name="filesystemerrorpath1"></a>filesystem_error::path1
+*"what_arg"*<br/>
+Angegebene Nachricht.
+
+*EC*<br/>
+Angegebene Fehlercode.
+
+*"mypval1"*<br/>
+Weitere angegebenen Meldungsparameter.
+
+*"mypval2"*<br/>
+Weitere Nachricht der angegebenen Parameter.
+
+## <a name="path1"></a> filesystem_error:: path1
+
+Die Memberfunktion gibt `mypval1` zurück.
 
 ```cpp
 const path& path1() const noexcept;
 ```
 
-Die Memberfunktion gibt „mypval1“ zurück.
+## <a name="path2"></a> filesystem_error:: path2
 
-## <a name="filesystemerrorpath2"></a>filesystem_error::path2
+Die Memberfunktion gibt `mypval2` zurück.
 
 ```cpp
 const path& path2() const noexcept;
 ```
 
-Die Memberfunktion gibt „mypval2“ zurück.
+## <a name="what"></a> filesystem_error::What
 
-## <a name="filesystemerrorwhat"></a>filesystem_error::what
+Die Memberfunktion gibt einen Zeiger auf ein `NTBS`vorzugsweise aus besteht aus `runtime_error::what()`, `system_error::what()`, `mymesg`, `mypval1.native_string()`, und `mypval2.native_string()`.
 
 ```cpp
 const char *what() const noexcept;
 ```
-
-Die Memberfunktion gibt einen Zeiger auf ein NTBS zurück, das vorzugsweise aus „runtime_error::what()“, „system_error::what()“, „mymesg“, „mypval1.native_string()“ und „mypval2.native_string()“ besteht.
-
-## <a name="requirements"></a>Anforderungen
-
-**Header:** \<Filesystem >
-
-**Namespace:** std::experimental::filesystem
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2fc6fe93b3c7b798a53f6989d95e83c3be4b022
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2cb6364a9f1cb74f9a002e37c278f3686b9916ca
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959819"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110122"
 ---
 # <a name="numget-class"></a>num_get-Klasse
 
@@ -44,9 +44,11 @@ class num_get : public locale::facet;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType* den Typ innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet.
+*CharType*<br/>
+Der Typ, der innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet wird.
 
-*InputIterator* der Typ des Iterators, von dem die numerische get-Funktionen, ihre Eingabe lesen.
+*InputIterator*<br/>
+Der Typ des Iterators, von dem die numerische get-Funktionen ihre Eingabe lesen.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -175,15 +177,20 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>Parameter
 
-*erste* den Anfang des Bereichs von Zeichen aus dem die Zahl gelesen.
+*Erste*<br/>
+Der Anfang des Zeichenbereichs, aus dem die Zahl gelesen wird.
 
-*letzte* das Ende des Bereichs von Zeichen aus dem die Zahl gelesen.
+*last*<br/>
+Das Ende des Zeichenbereichs, aus dem die Zahl gelesen wird.
 
-*"_Iosbase"* der [Ios_base](../standard-library/ios-base-class.md) , deren Flags durch die Konvertierung verwendet werden.
+*"_Iosbase"*<br/>
+Die [ios_base](../standard-library/ios-base-class.md), deren Flags durch die Konvertierung verwendet werden.
 
-*_State* den Status zu dem die Failbit (finden Sie unter [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) bei einem Fehler hinzugefügt wird.
+*_State*<br/>
+Der Zustand, zu dem die Failbit (siehe [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) bei einem Fehler hinzugefügt wird.
 
-*Val* der Wert, der gelesen wurde.
+*val*<br/>
+Der gelesene Wert.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -417,15 +424,20 @@ iter_type get(
 
 ### <a name="parameters"></a>Parameter
 
-*erste* den Anfang des Bereichs von Zeichen aus dem die Zahl gelesen.
+*Erste*<br/>
+Der Anfang des Zeichenbereichs, aus dem die Zahl gelesen wird.
 
-*letzte* das Ende des Bereichs von Zeichen aus dem die Zahl gelesen.
+*last*<br/>
+Das Ende des Zeichenbereichs, aus dem die Zahl gelesen wird.
 
-*"_Iosbase"* der [Ios_base](../standard-library/ios-base-class.md) , deren Flags durch die Konvertierung verwendet werden.
+*"_Iosbase"*<br/>
+Die [ios_base](../standard-library/ios-base-class.md), deren Flags durch die Konvertierung verwendet werden.
 
-*_State* den Status zu dem die Failbit (finden Sie unter [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) bei einem Fehler hinzugefügt wird.
+*_State*<br/>
+Der Zustand, zu dem die Failbit (siehe [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) bei einem Fehler hinzugefügt wird.
 
-*Val* der Wert, der gelesen wurde.
+*val*<br/>
+Der gelesene Wert.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -571,7 +583,8 @@ explicit num_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parameter
 
-*_Refs* Ganzzahlwert verwendet, um den Typ für die Speicherverwaltung für das Objekt anzugeben.
+*_Refs*<br/>
+Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 

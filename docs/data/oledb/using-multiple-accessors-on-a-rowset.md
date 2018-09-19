@@ -1,5 +1,5 @@
 ---
-title: Verwenden mehrerer Accessoren für ein Rowset | Microsoft Docs
+title: Verwenden mehrerer Zugriffsmethoden für ein Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,45 +18,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a30108ec344091631094cd55f6a3bd3f0f4a4a54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56dd2e864fa7a0e01b618fcc4143bde74b3a46ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111314"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110756"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Verwenden mehrerer Zugriffsmethoden für ein Rowset
-Es gibt drei grundlegende Szenarien, in denen Sie mehrere Accessoren für Ereigniseigenschaften verwenden müssen:  
+
+Es gibt drei grundlegende Szenarien, in denen Sie mehrere Accessoren für Ereigniseigenschaften verwenden möchten:  
   
--   **Mehrere Rowsets von Lese-/Schreibzugriff.** In diesem Szenario müssen Sie eine Tabelle mit einem Primärschlüssel. Sie möchten können alle Spalten in der Zeile, einschließlich des primären Schlüssels lesen. Sie sollten auch in der Lage, Daten für alle Spalten außer dem Primärschlüssel zu schreiben (da Sie in der Primärschlüsselspalte schreiben können). In diesem Fall richten Sie zwei Zugriffsmethoden:  
+- **Mehrere Rowsets von Lese-/Schreibzugriff.** In diesem Szenario müssen Sie eine Tabelle mit einem Primärschlüssel. Sie möchten können alle Spalten in der Zeile, einschließlich des primären Schlüssels lesen. Sie möchten auch in der Lage, zum Schreiben von Daten für alle Spalten außer dem Primärschlüssel (da Sie in der Primärschlüsselspalte schreiben können). In diesem Fall richten Sie zwei Zugriffsmethoden:  
   
     -   Accessor 0 enthält alle Spalten.  
   
     -   Accessor 1 enthält alle Spalten außer dem Primärschlüssel.  
   
--   **Leistung:** In diesem Szenario enthält eine oder mehrere Spalten eine große Menge an Daten, z. B. Grafiken, Audio oder video-Dateien. Jedes Mal, wenn Sie auf eine Zeile verschieben, möchten wahrscheinlich nicht Sie die Spalte mit der Datei große Datenmengen abrufen, da dadurch die Leistung Ihrer Anwendung so verlangsamen würde.  
+- **Leistung:** In diesem Szenario enthalten eine oder mehrere Spalten für eine große Menge von Daten, z. B. Grafiken, Audio- oder video-Dateien. Jedes Mal, wenn Sie auf eine Zeile verschieben, möchten wahrscheinlich nicht Sie die Spalte mit der Datei große Datenmengen abrufen, da dadurch die Leistung Ihrer Anwendung also verlangsamen würde.  
   
-     Sie können separate Accessoren einrichten, in dem die erste Accessor enthält alle Spalten außer der Datensatz mit großen Datenmengen und er ruft Daten aus diesen Spalten automatisch; Dies ist die automatische-Zugriffsmethode. Der zweite Accessor ruft nur die Spalte, die umfangreiche Daten enthält, aber es Ruft Daten aus dieser Spalte nicht automatisch ab. Sie können die anderen Methoden aktualisieren oder Abrufen umfangreichen Daten bei Bedarf verwenden.  
+     Sie können separate Accessoren einrichten, in der die erste Accessor enthält alle Spalten mit Ausnahme des mit großen Datenmengen, und er ruft Daten aus diesen Spalten automatisch; Dies ist die automatische-Accessor. Der zweite Accessor ruft nur die Spalte, die umfangreiche Daten enthält, aber es werden Daten aus dieser Spalte nicht automatisch abgerufen. Sie können die anderen Methoden aktualisieren oder Abrufen umfangreicher Datenmengen bei Bedarf verwenden.  
   
-    -   0-Accessor ist eine automatische Accessor; alle Spalten außer dem mit umfangreichen Daten abgerufen.  
+    -   Accessor 0 ist eine automatische Accessor verfügbar. alle Spalten mit Ausnahme des mit umfangreichen Daten abgerufen.  
   
-    -   Accessor 1 kann es sich nicht um einen automatischen Accessor; die Spalte mit großen Datenmengen abgerufen.  
+    -   1-Accessor kann es sich nicht um einen automatischen Accessor; Sie ruft die Spalte mit großen Datenmengen ab.  
   
-     Verwenden Sie das Autoargument, um anzugeben, ob der Accessor eine automatische-Zugriffsmethode ist.  
+     Verwenden Sie das automatische-Argument, um anzugeben, ob der Accessor ein Autoaccessor ist.  
   
--   **Mehrere ISequentialStream-Spalten.** In diesem Szenario haben Sie mehr als eine Spalte mit `ISequentialStream` Daten. Jeder Accessor ist jedoch beschränkt auf einen `ISequentialStream` -Datenstrom. Um dieses Problem zu lösen, Einrichten mehrere Accessoren mit je einer `ISequentialStream` Zeiger.  
+- **Mehrere Spalten von einer ISequentialStream-Schnittstelle.** In diesem Szenario verfügen Sie über mehr als eine Spalte mit `ISequentialStream` Daten. Jeder Accessor kann jedoch nur einmal `ISequentialStream` -Datenstrom. Um dieses Problem zu beheben, legen Sie Sie mehrere Accessoren, jeweils eine `ISequentialStream` Zeiger.  
   
- Normalerweise erstellen Sie Accessoren mit der [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) und [END_ACCESSOR](../../data/oledb/end-accessor.md) Makros. Sie können auch die [Db_accessor](../../windows/db-accessor.md) Attribut. (Zugriffsmethoden sind in der beschriebenen [Benutzerdatensätze](../../data/oledb/user-records.md).) Die Makros oder das Attribut angeben, ob ein Accessor eine automatische oder einen Accessor nicht automatische:  
+Normalerweise erstellen Sie Accessoren mit der [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) und [END_ACCESSOR](../../data/oledb/end-accessor.md) Makros. Sie können auch die [Db_accessor](../../windows/db-accessor.md) Attribut. (Accessoren werden ausführlich in [Benutzerdatensätze](../../data/oledb/user-records.md).) Die Makros oder das Attribut angeben, ob eine Zugriffsmethode eine automatische oder eine nicht automatische-Accessor ist:  
   
--   Verschieben Sie bei einem automatischen Accessor Methoden wie z. B. **MoveFirst**, `MoveLast`, `MoveNext`, und `MovePrev` Abrufen von Daten für alle Spalten automatisch angegeben. Accessor 0 sollte der automatische Accessor sein.  
+- Bei einem automatischen Accessor, verschieben Sie Methoden wie z. B. `MoveFirst`, `MoveLast`, `MoveNext`, und `MovePrev` Abrufen von Daten für alle Spalten automatisch angegebenen. Accessor 0 sollte die automatische Zugriffsmethode.  
   
--   In einem Accessor nicht automatische der Abruf erfolgt erst, wenn Sie explizit einer Methode wie z. B. Aufrufen **Update**, **einfügen**, **Fetch**, oder **Löschen**. In den oben beschriebenen Szenarien können Sie nicht alle Spalten, die bei jedem Wechsel abrufen möchten. Sie können eine oder mehrere Spalten in einem separaten Accessor platzieren und stellen, dass einen Accessor nicht automatische, wie unten dargestellt.  
+- In einem Accessor nicht automatische der Abruf erfolgt erst, wenn Sie explizit eine Methode z. B. Aufrufen `Update`, `Insert`, `Fetch`, oder `Delete`. In den oben beschriebenen Szenarien können Sie nicht alle Spalten für jede einzelne Verschiebung abrufen möchten. Können Sie eine oder mehrere Spalten in einem separaten Accessor zu platzieren und stellen, dass einen nicht automatische-Accessor, wie unten dargestellt.  
   
- Im folgende Beispiel werden mehrere Accessoren für Lese- und Schreibberechtigungen für die Tabelle mit Aufträgen des SQL Server Pubs-Datenbank verwenden mehrerer Accessoren verwendet. Dies ist die häufigste Verwendung von mehreren Accessoren; finden Sie unter "mehrere Lese-/Schreibzugriff Rowsets" Szenario oben.  
+Im folgende Beispiel werden mehrere Accessoren zum Lesen und Schreiben in die Tabelle der Aufträge des SQL Server Pubs-Datenbank verwenden mehrerer Zugriffsmethoden verwendet. Dies ist die häufigste Verwendung mehrere Accessoren. finden Sie unter dem oben beschriebenen Szenario für "mehrere Lese-/Schreibzugriff Rowsets".  
   
- Die Benutzerdatensatz-Klasse lautet wie folgt. Er richtet zwei Zugriffsmethoden: Accessor 0 enthält nur die Primärschlüsselspalte (ID) und Accessor 1 enthält andere Spalten.  
+Die Benutzerdatensatz-Klasse lautet wie folgt aus. Richtet zwei Zugriffsmethoden: 0-Accessor enthält nur die Primärschlüsselspalte (ID) und 1-Accessor enthält andere Spalten.  
   
-```  
+```cpp  
 class CJobs  
 {  
 public:  
@@ -89,9 +90,9 @@ END_ACCESSOR_MAP()
 };  
 ```  
   
- Die Hauptcodedatei lautet wie folgt. Aufrufen von `MoveNext` automatisch Ruft Daten aus der Primärschlüsselspalte ID mit Accessor 0 ab. Hinweis wie die **einfügen** Methode in der Nähe der Accessor End verwendet 1, um das Schreiben in die Primärschlüsselspalte zu vermeiden.  
+Die wichtigsten Code lautet wie folgt aus. Aufrufen von `MoveNext` automatisch Ruft Daten aus der Primärschlüsselspalte-ID, die mit Accessor 0 ab. Beachten Sie die `Insert` Methode in der Nähe der Accessor End verwendet 1, um das Schreiben in die Primärschlüsselspalte zu vermeiden.  
   
-```  
+```cpp  
 int main(int argc, char* argv[])  
 {  
     // Initalize COM  
@@ -167,5 +168,6 @@ int main(int argc, char* argv[])
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden von Accessoren](../../data/oledb/using-accessors.md)   
- [Benutzerdatensätze](../../data/oledb/user-records.md)
+
+[Verwenden von Zugriffsmethoden](../../data/oledb/using-accessors.md)<br/>
+[Benutzerdatensätze](../../data/oledb/user-records.md)

@@ -1,7 +1,7 @@
 ---
-title: ML nicht schwerwiegende Fehler A2206 | Microsoft Docs
+title: Schwerwiegender ML--Fehler A2206 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a00733bb82c2c81a44f0e7c0dc86286987dac23
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 10edbe68ca7f0093cdeb6a9ca5a02cde07f556e6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057063"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676347"
 ---
 # <a name="ml-nonfatal-error-a2206"></a>Nicht schwerwiegender ML-Fehler A2206
-**Operator im Ausdruck fehlt**  
-  
- Ein Ausdruck kann nicht ausgewertet werden, da er einen Operator fehlt. Diese Fehlermeldung kann auch ein Nebeneffekt einer vorangehenden Programmfehler sein.  
-  
- Die folgende Zeile wird dieser Fehler generiert:  
-  
-```  
-value1 = ( 1 + 2 ) 3  
-  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)
+
+**Operator im Ausdruck fehlt**
+
+Ein Ausdruck kann nicht ausgewertet werden, da einen Operator fehlt. Diese Fehlermeldung kann auch ein Nebeneffekt einer vorherigen Programmfehler sein.
+
+Dieser Fehler wird durch die folgende Zeile generiert:
+
+```asm
+value1 = ( 1 + 2 ) 3
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)<br/>

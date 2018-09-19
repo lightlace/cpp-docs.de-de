@@ -1,5 +1,5 @@
 ---
-title: Verwenden eines Zeichentools (Bildbearbeitung für Symbole) | Microsoft Docs
+title: Verwenden eines Zeichentools (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,63 +19,64 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 17211518789113c11194314b57b741ab2b274ddc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5e7f1c678cc2f5c3595f1782f1bb3561ae90b86a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891671"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609948"
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>Verwenden eines Zeichentools (Bildbearbeitung für Symbole)
-Grafik-Editor des Freihandlinie zeichnen und das Löschen von Tools, die auf die gleiche Weise wie die gesamte Arbeit: Wählen Sie das Tool und, falls erforderlich, [auswählen von Vordergrund- und Hintergrundfarben](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) und Größe und Form-Optionen. Sie klicken Sie dann den Mauszeiger auf das Abbild und klicken oder Ziehen zum Zeichnen und löschen.  
-  
- Bei Auswahl der **Radierer** Tool **Pinsel** -Tool oder **Airbrush** Tool, das Optionsauswahl Zeigt Optionen für das Tool.  
-  
-> [!TIP]
->  Anstatt die **Radierer** Tool, Sie könnten praktischerweise mehr in die Farbe des Hintergrunds eines der Zeichenwerkzeuge gezeichnet werden soll.  
-  
- Zeichentools wählen Sie aus der **Grafik-Editor** Symbolleiste oder die **Image** Menü.  
-  
-### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Um auszuwählen, und verwenden Sie ein zeichnen-Tool über die Symbolleiste des Grafik-Editor  
-  
-1.  Klicken Sie auf eine Schaltfläche auf der **Bildbearbeitung** Symbolleiste.  
-  
-    -   Die **Radierer** tool Paint auf das Bild mit der aktuellen Hintergrundfarbe, wenn Sie die linke Maustaste drücken.  
-  
-    -   Die **Zeichenstift** Tool zeichnet Freihand in einer konstanten Stärke von einem Pixel.  
-  
-    -   Die **Optionsauswahl Form und Größe der Pinsel**.  
-  
-    -   Die **Airbrush** Tool nach dem Zufallsprinzip verteilt Farbe Pixel um den Mittelpunkt des Pinsels.  
-  
-        > [!TIP]
-        >  QuickInfos angezeigt werden, wenn Sie den Cursor auf die Schaltflächen auf zeigen die [Grafik-Editor-Symbolleiste](../windows/toolbar-image-editor-for-icons.md). Diese Tipps helfen Ihnen, die bestimmten Schaltflächen, die hier genannten zu identifizieren.  
-  
-2.  Bei Bedarf einen Pinsel und Farben auswählen:  
-  
-    -   In der [Farben (Palette)](../windows/colors-window-image-editor-for-icons.md), klicken Sie auf die linke Maustaste gedrückt, wählen Sie eine Vordergrundfarbe oder der rechten Maustaste auf eine Hintergrundfarbe auswählen.  
-  
-    -   In der [Optionsauswahl](../windows/toolbar-image-editor-for-icons.md), klicken Sie auf eine Form, die den gewünschten Pinsel darstellt.  
-  
-3.  Zeigen Sie auf die Stelle auf dem Bild mit dem zeichnen soll oder zeichnen. Die Form des Zeigers ändert sich entsprechend das Tool, das Sie ausgewählt haben.  
-  
-4.  Drücken Sie die linke Maustaste gedrückt (für die Vordergrundfarbe) oder (für die Farbe des Hintergrunds) die rechte Maustaste, und halten Sie zeichnen-Befehl.  
-  
-### <a name="to-select-and-use-a-drawing-tool-from-the-image-menu"></a>Um auszuwählen, und verwenden Sie ein zeichnen-Tool aus dem Menü "Bild"  
-  
-1.  Klicken Sie auf die **Image** , und wählen Sie im Menü der **Tools** Befehl.  
-  
-2.  Wählen Sie im Untermenü das Tool an, die, das Sie verwenden möchten.  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
-  
- Anforderungen  
-  
- Keiner  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)   
- [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)   
- [Arbeiten mit Farben](../windows/working-with-color-image-editor-for-icons.md)
 
+Die **Image** Editor Freihandzeichnen und Tools, die alle auf die gleiche Weise funktionieren löschen: Wählen Sie das Tool und, falls erforderlich, [auswählen von Vordergrund- und Hintergrundfarben](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) und Optionen für Größe und Form. Klicken Sie dann den Mauszeiger auf das Bild und klicken oder ziehen, um zu zeichnen und zu löschen.
+
+Bei der Auswahl der **Radierer** -Tool, **Pinsel** -Tool oder **Airbrush** Tool die Optionsauswahl des Tools-Optionen angezeigt.
+
+> [!TIP]
+> Anstatt die **Radierer** Tool Umständen ist es praktischer, im mit einem der Zeichenwerkzeuge die Farbe Hintergrunds zu zeichnen.
+
+Zeichentools wählen Sie aus der **Bildbearbeitung** Symbolleiste oder die **Image** Menü.
+
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Auswählen und verwenden ein Zeichenwerkzeug aus der Symbolleiste der Bildbearbeitung
+
+1. Klicken Sie auf eine Schaltfläche auf der **Bildbearbeitung** Symbolleiste.
+
+   - Die **Radierer** tool zeichnet das Bild mit der aktuellen Hintergrundfarbe, wenn Sie die linke Maustaste drücken.
+
+   - Die **Zeichenstift** Tool zeichnet freehand eine feste Breite von einem Pixel.
+
+   - Die **Optionsauswahl Form und Größe des Tools Pinsel**.
+
+   - Die **Airbrush** Tool nach dem Zufallsprinzip verteilt Farbpixel, um den Mittelpunkt des Pinsels.
+
+        > [!TIP]
+        >  QuickInfos angezeigt werden, wenn Sie den Cursor auf die Schaltflächen auf zeigen die [Symbolleiste der Bildbearbeitung](../windows/toolbar-image-editor-for-icons.md). Diese Tipps helfen Ihnen die hier genannten Funktionen der Schaltflächen zu identifizieren.
+
+2. Bei Bedarf einen Pinsel und Farben auswählen:
+
+   - In der [Farben (Palette)](../windows/colors-window-image-editor-for-icons.md), klicken Sie auf die linke Maustaste gedrückt, wählen Sie eine Vordergrundfarbe oder der rechten Maustaste auf eine Hintergrundfarbe auswählen.
+
+   - In der [Optionsauswahl](../windows/toolbar-image-editor-for-icons.md), klicken Sie auf eine Form den Pinsel, die Sie verwenden möchten, die darstellt.
+
+3. Zeigen Sie auf die direkt auf das Bild, in dem Sie beginnen möchten, oder die Darstellung. Die Form des Zeigers ändert sich entsprechend dem Tool, das Sie ausgewählt haben.
+
+4. Drücken Sie die linke Maustaste gedrückt (für die Vordergrundfarbe) oder (für die Hintergrundfarbe) der rechten Maustaste, und halten sie Sie wie Zeichnen-Befehl.
+
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-menu"></a>Auswählen und verwenden ein Zeichenwerkzeug aus dem Menü "Bild"
+
+1. Klicken Sie auf die **Image** und wählen die **Tools** Befehl.
+
+2. Wählen Sie im Untermenü das Tool an, die, das Sie verwenden möchten.
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Anforderungen
+
+Keiner
+
+## <a name="see-also"></a>Siehe auch
+
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)  
+[Arbeiten mit Farben](../windows/working-with-color-image-editor-for-icons.md)

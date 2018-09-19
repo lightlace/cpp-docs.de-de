@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4242 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4242 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: befe02b363c17a670d3b33632ffa50ed8a7cb1f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9879b9258902a496dd46c59c44f7bf211726e460
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294481"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056871"
 ---
 # <a name="compiler-warning-level-4-c4242"></a>Compilerwarnung (Stufe 4) C4242
-'Bezeichner': Konvertierung von 'Typ1' in 'type2', möglicher Datenverlust  
-  
- Die Typen unterscheiden. Typkonvertierung kann zu Datenverlust führen. Der Compiler stellt die typkonvertierung.  
-  
- Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
-  
- Weitere Informationen über C4242 finden Sie unter [Häufige Compilerfehler](http://msdn.microsoft.com/library/windows/desktop/aa384160).  
-  
- Im folgenden Beispiel wird C4242 generiert:  
-  
-```  
-// C4242.cpp  
-// compile with: /W4  
-#pragma warning(4:4242)  
-int func() {  
-   return 0;  
-}  
-  
-int main() {  
-   char a;  
-   a = func();   // C4242, return type and variable type do not match  
-}  
+
+'Bezeichner': Konvertierung von 'type1' in 'type2', möglicher Datenverlust
+
+Die Typen unterscheiden. Typkonvertierung kann zu Datenverlust führen. Der Compiler stellt die typkonvertierung.
+
+Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
+
+Weitere Informationen über C4242, finden Sie unter [Häufige Compilerfehler](/windows/desktop/WinProg64/common-compiler-errors).
+
+Im folgende Beispiel wird die C4242 generiert:
+
+```
+// C4242.cpp
+// compile with: /W4
+#pragma warning(4:4242)
+int func() {
+   return 0;
+}
+
+int main() {
+   char a;
+   a = func();   // C4242, return type and variable type do not match
+}
 ```

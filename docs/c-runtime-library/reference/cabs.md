@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80ea966b748407d51283823073a0c10a40717cf5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cad3c873dd7e0bab2a7b75e785fb91c704e616de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393536"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085282"
 ---
 # <a name="cabs"></a>_cabs
 
@@ -64,15 +64,15 @@ Komplexe Zahl.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_cabs** gibt im Erfolgsfall den absoluten Wert des Arguments zurück. Bei einem Überlauf **_cabs** gibt **HUGE_VAL** und legt **Errno** auf **ERANGE**. Sie können die Fehlerbehandlung mit [_matherr](matherr.md) ändern.
+**_cabs** gibt im Erfolgsfall den absoluten Wert des Arguments zurück. Bei einem Überlauf **_cabs** gibt **HUGE_VAL** und **Errno** zu **ERANGE**. Sie können die Fehlerbehandlung mit [_matherr](matherr.md) ändern.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_cabs** -Funktion berechnet den absoluten Wert einer komplexen Zahl, die eine Struktur des Typs sein muss [_complex](../../c-runtime-library/standard-types.md). Die Struktur *z* besteht aus einer reellen Komponente *x* und einer imaginären Komponente *y*. Ein Aufruf von **_cabs** erzeugt den Wert des Ausdrucks gleich `sqrt( z.x * z.x + z.y * z.y )`.
+Die **_cabs** -Funktion berechnet den absoluten Wert einer komplexen Zahl, die eine Struktur des Typs sein muss [_complex](../../c-runtime-library/standard-types.md). Die Struktur *z* besteht aus einer reellen Komponente *x* und einer imaginären Komponente *y*. Ein Aufruf von **_cabs** dieser Wert entspricht der Ausdruck `sqrt( z.x * z.x + z.y * z.y )`.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_cabs**|\<math.h>|
 
@@ -107,4 +107,4 @@ The absolute value of 3.000000 + 4.000000i is 5.000000
 
 [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
-[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)   
+[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)

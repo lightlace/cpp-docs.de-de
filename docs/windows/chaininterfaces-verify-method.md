@@ -1,5 +1,5 @@
 ---
-title: 'Chaininterfaces:: Verify-Methode | Microsoft Docs'
+title: 'Chaininterfaces:: Verify-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c83479434a936f32fb0f7367d8cd02c6676c74e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e6dbc595714cbecf2ad13db13051866e31e5ebcd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860693"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42581057"
 ---
 # <a name="chaininterfacesverify-method"></a>ChainInterfaces::Verify-Methode
-Stellt sicher, dass jede Schnittstelle durch den Vorlagenparameter definiert `I0` über `I9` erbt von IUnknown und/oder "iinspectable", und dass `I0` erbt von `I1` über `I9`.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-WRL_NOTHROW __forceinline static void Verify();  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Wenn der Überprüfungsvorgang fehlschlägt, eine `static_assert` gibt eine Fehlermeldung, die den Fehler beschreibt.  
-  
-## <a name="remarks"></a>Hinweise  
- Vorlagenparameter `I0` und `I1` sind erforderlich, und die Parameter `I2` über `I9` sind optional.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** implements.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [ChainInterfaces-Struktur](../windows/chaininterfaces-structure.md)
+
+Stellt sicher, dass jede Schnittstelle Vorlagenparameter definiert *I0* über *I9* erbt `IUnknown` und/oder `IInspectable`, und dass *I0* erbt von *I1* über *I9*.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+WRL_NOTHROW __forceinline static void Verify();
+```
+
+## <a name="remarks"></a>Hinweise
+
+Wenn der Überprüfungsvorgang fehlschlägt, eine **"static_assert"** gibt eine Fehlermeldung, die den Fehler beschreibt.
+
+Vorlagenparameter *I0* und *I1* sind erforderlich, und die Parameter *I2* über *I9* sind optional.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** implements.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[ChainInterfaces-Struktur](../windows/chaininterfaces-structure.md)

@@ -1,5 +1,5 @@
 ---
-title: Benutzerdefiniertes Bild (Dialogfeld) (Bildbearbeitung für Symbole) | Microsoft Docs
+title: Dialogfeld "benutzerdefiniertes Image (C++) (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,34 +10,39 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Custom Image dialog box
+- Custom Image dialog box [C++]
 ms.assetid: 68e2cc5c-19de-428e-bc25-ec6b260247d0
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a0f8f4506d21c530f5131363cea9a9d142d5957
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1e5aff6796804d7868b4d61c94e4a181b88e9ab6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883133"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704835"
 ---
-# <a name="custom-image-dialog-box-image-editor-for-icons"></a>Benutzerdefiniertes Bild (Dialogfeld) (Bildbearbeitung für Symbole)
-Ermöglicht es Ihnen, ein neues Image mit einer benutzerdefinierten Größe und Anzahl der Farben zu erstellen.
- **Breite**  
- Dient zur Eingabe von der Breite des benutzerdefinierten Bilds in Pixel (1-512, Max. 2048).  
+# <a name="custom-image-dialog-box-c-image-editor-for-icons"></a>Dialogfeld "benutzerdefiniertes Image (C++) (Bildbearbeitung für Symbole)
+
+Können Sie ein neues Image mit einer benutzerdefinierten Größe und Anzahl der Farben zu erstellen.
+
+- **Breite**
+
+   Dient zur Eingabe der Breite des benutzerdefinierten Images in Pixel (1-512, Max. 2048).
   
- **Höhe**  
- Dient zur Sie die Höhe des benutzerdefinierten Images in Pixel (1-512, Max. 2048) eingeben.  
+- **Höhe**
+
+   Dient zur Eingabe der Höhe für das benutzerdefinierte Image in Pixel (1-512, Max. 2048).
   
- **Farben**  
- Dient zur Sie die Anzahl der Farben für das benutzerdefinierte Bild auswählen: 2, 16 oder 256.  
+- **Farben**
+
+   Ein Eingabefeld für die Anzahl der Farben für das benutzerdefinierte Image auswählen: 2, 16 und 256.
   
-## <a name="requirements"></a>Anforderungen  
- Keiner  
+## <a name="requirements"></a>Anforderungen
+ Keiner
   
-## <a name="see-also"></a>Siehe auch  
- [Neue \<Gerät > Bildeigenschaften (Dialogfeld)](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)   
+## <a name="see-also"></a>Siehe auch
+ [Neue \<Gerät > Bildeigenschaften (Dialogfeld)](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)  
  [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)

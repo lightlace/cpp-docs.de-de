@@ -1,5 +1,5 @@
 ---
-title: '/ Zc: forScope (Übereinstimmung in for-Schleifenbereich erzwingen) | Microsoft Docs'
+title: '/ Zc: forScope (Übereinstimmung in for-Schleifenbereich erzwingen) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b21c844cd29c7fb45e58f44fdf8eaae427b74235
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bef68f47fe8fdc430138a6961078139b48030b3d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378612"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723592"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (Übereinstimmung in for-Schleifenbereich erzwingen)
 
@@ -40,7 +40,7 @@ Verwendet zum Implementieren von Standard-C++-Verhalten für [for](../../cpp/for
 
 Standardverhalten bedeutet, den Initialisierer einer **for** -Schleife nach der **for** -Schleife den Gültigkeitsbereich verlassen zu lassen. Unter **/Zc:forScope-** und [/Ze](../../build/reference/za-ze-disable-language-extensions.md)bleibt der Initialisierer der **for** -Schleife im Gültigkeitsbereich, bis der lokale Gültigkeitsbereich endet.
 
-Die **/Zc: forScope** Option ist standardmäßig aktiviert. **/ Zc: forScope** ist nicht betroffen, wenn die [/ liberalen-](permissive-standards-conformance.md) angegeben wird.
+Die **/Zc: forScope** Option ist standardmäßig aktiviert. **/ Zc: forScope** hat keine Auswirkungen, wenn die [/ PERMISSIVE--](permissive-standards-conformance.md) angegeben wird.
 
 Die Option **/Zc:forScope-** ist veraltet und wird in einer der nächsten Versionen entfernt. Eine Verwendung von **/Zc:forScope-** generiert die Veraltungswarnung D9035.
 
@@ -49,7 +49,7 @@ Der folgende Code wird unter **/Ze** , aber nicht unter **/Za**kompiliert:
 ```cpp
 // zc_forScope.cpp
 // compile by using: cl /Zc:forScope- /Za zc_forScope.cpp
-// C2065, D9035 expected  
+// C2065, D9035 expected
 int main() {
     // Compile by using cl /Zc:forScope- zc_forScope.cpp
     // to compile this non-standard code as-is.
@@ -65,13 +65,13 @@ Wenn Sie **/Zc:forScope-** verwenden, wird die Warnmeldung C4288 (standardmäßi
 
 Sie können das Laufzeitverhalten von **/Zc:forScope** ändern, indem Sie das [conform](../../preprocessor/conform.md) -Pragma verwenden.
 
-Wenn Sie **/Zc:forScope-** in einem Projekt verwenden, für das es eine vorhandene PCH-Datei gibt, wird eine Warnung generiert, wird **/Zc:forScope-** ignoriert, und wird die Kompilierung mit der vorhandenen PCH-Dateien fortgesetzt. Wenn Sie eine neue PCH-Datei erstellen möchten, verwenden Sie [/Yc (Datei der vorkompilierten Header erstellen)](../../build/reference/yc-create-precompiled-header-file.md).
+Wenn Sie **/Zc:forScope-** in einem Projekt verwenden, für das es eine vorhandene PCH-Datei gibt, wird eine Warnung generiert, wird **/Zc:forScope-** ignoriert, und wird die Kompilierung mit der vorhandenen PCH-Dateien fortgesetzt. Wenn Sie eine neue PCH-Datei erstellen möchten, verwenden Sie ["/ Yc" (Erstellen vorkompilierter Headerdatei)](../../build/reference/yc-create-precompiled-header-file.md).
 
 Weitere Informationen über Konformitätsprobleme in Visual C++ finden Sie unter [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Sprache** Eigenschaftenseite.
 

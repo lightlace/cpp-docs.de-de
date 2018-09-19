@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0047 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0047 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31597324c81675c268787915c4cb5ad2cfcb7db2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 42e40abb4b14bc821c043b79cf7ff7786c0dcc14
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296808"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040868"
 ---
 # <a name="expression-evaluator-error-cxx0047"></a>Ausdrucksauswertungsfehler CXX0047
-Liste der Typargumente stimmt nicht mit eine Funktion überein.  
-  
- Ein Ausdruck, der eine Funktion mit einer tatsächlichen Parameterliste, die nicht mit die Liste der formalen Parameter von jeder Funktion mit dem gleichen Namen im Programm definiert übereinstimmte aufgerufen wird.  
-  
- Überladene Funktionen können aufgerufen werden, nur dann, wenn eine exakte Übereinstimmung der Parameter oder nach einer Übereinstimmung, die nicht mit die Erstellung eines Objekts erfordert.  
-  
- Dieser Fehler ist mit CAN0047 identisch.
+
+Argumentliste stimmt nicht mit eine Funktion überein.
+
+Ein Ausdruck, der Namen einer Funktion mit einer Liste von übergebener Parameter, die nicht mit der formalen Parameterliste von jeder Funktion mit dem gleichen Namen im Programm definiert übereinstimmt.
+
+Überladene Funktionen können aufgerufen werden, nur dann, wenn eine genaue Übereinstimmung oder nach einer Übereinstimmung, die nicht über die Erstellung eines Objekts erfordert.
+
+Dieser Fehler ist mit CAN0047 identisch.

@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3276 | Microsoft Docs
+title: Compilerfehler C3276 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 337418220b31fc9bad82dce46eef1047ac16f4ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bae371b0e50dca96da49b66d8c9226ba9c25ef06
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248241"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016312"
 ---
 # <a name="compiler-error-c3276"></a>Compilerfehler C3276
-'Schlüsselwort': Herausspringen aus __finally/finally-Block ist ein nicht definiertes Verhalten während der Abbruchbehandlung  
-  
- Dieser Fehler ist identisch mit der [C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md) Warnung. Allerdings bei Verwendung von "/ CLR" diese Bedingung kann nicht deaktiviert werden mit der [Warnung](../../preprocessor/warning.md) Pragma.
+
+'Schlüsselwort': Aussprung aus __finally/finally-Block hat ein undefiniertes Verhalten während der Abbruchbehandlung
+
+Dieser Fehler ist identisch mit der [C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md) Warnung. Aber wenn Sie "/ CLR" verwenden, diese Bedingung kann nicht deaktiviert werden mit der [Warnung](../../preprocessor/warning.md) Pragma.

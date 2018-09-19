@@ -12,29 +12,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85cf817a4d50346b9d10a9a9d1bc27abb5904433
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5cf3b52b8a4e76062d06b0b9ca3d4535b79595c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382389"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061512"
 ---
 # <a name="character-sequences"></a>Zeichensequenzen
-**ANSI 3.8.2** Die Zuordnung der Quelldatei-Zeichenfolgen  
-  
- Präprozessoranweisungen verwenden den gleichen Zeichensatz wie Quelldateianweisungen, mit der Ausnahme, dass Escapesequenzen nicht unterstützt werden.  
-  
- Um einen Pfad für eine Includedatei anzugeben, verwenden Sie nur einen umgekehrten Schrägstrich:  
-  
-```  
-#include "path1\path2\myfile"  
-```  
-  
- Im Quellcode sind zwei umgekehrte Schrägstriche erforderlich:  
-  
-```  
-fil = fopen( "path1\\path2\\myfile", "rt" );  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Präprozessoranweisungen](../c-language/preprocessing-directives.md)
+
+**ANSI 3.8.2** Die Zuordnung der Quelldatei-Zeichenfolgen
+
+Präprozessoranweisungen verwenden den gleichen Zeichensatz wie Quelldateianweisungen, mit der Ausnahme, dass Escapesequenzen nicht unterstützt werden.
+
+Um einen Pfad für eine Includedatei anzugeben, verwenden Sie nur einen umgekehrten Schrägstrich:
+
+```
+#include "path1\path2\myfile"
+```
+
+Im Quellcode sind zwei umgekehrte Schrägstriche erforderlich:
+
+```
+fil = fopen( "path1\\path2\\myfile", "rt" );
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Präprozessoranweisungen](../c-language/preprocessing-directives.md)

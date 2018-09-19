@@ -12,21 +12,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7394de248075473c6956821023361014a543201d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3046e0c486280701fcc777f0b10db822ee720983
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384423"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087174"
 ---
 # <a name="lifetime-scope-visibility-and-linkage"></a>Lebensdauer, Bereich, Sichtbarkeit und Verknüpfung
-Um die Funktionsweise eines C-Programms zu verstehen, müssen Sie die Regeln kennen, anhand derer die Verwendung der Funktionen und Variablen im Programm festgelegt wird. Einige Konzepte sind für das Verständnis dieser Regeln ganz entscheidend:  
-  
--   [Lebensdauer](../c-language/lifetime.md)  
-  
--   [Bereich und Sichtbarkeit](../c-language/scope-and-visibility.md)  
-  
--   [Verknüpfung](../c-language/linkage.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Programmstruktur](../c-language/program-structure.md)
+
+Um die Funktionsweise eines C-Programms zu verstehen, müssen Sie die Regeln kennen, anhand derer die Verwendung der Funktionen und Variablen im Programm festgelegt wird. Einige Konzepte sind für das Verständnis dieser Regeln ganz entscheidend:
+
+- [Lebensdauer](../c-language/lifetime.md)
+
+- [Bereich und Sichtbarkeit](../c-language/scope-and-visibility.md)
+
+- [Verknüpfung](../c-language/linkage.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Programmstruktur](../c-language/program-structure.md)

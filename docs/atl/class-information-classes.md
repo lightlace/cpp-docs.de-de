@@ -16,18 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5df4f70d069c2d77cf828665986c892281ba27cd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: eaf582d364ddddb41c066c901af7ccd806c5484d
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956682"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767815"
 ---
 # <a name="class-information-classes"></a>Klasseninformationsklassen
-Die folgende Klasse bietet Unterstützung für das Abrufen von Informationen an:  
-  
--   [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md) bietet Zugriff auf Typinformationen. Ruft die ausgehende IID für Standardereignissatz des Objekts ab.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../atl/atl-class-overview.md)
+
+Die folgende Klasse bietet Unterstützung für das Abrufen von Informationen an:
+
+- [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md) bietet Zugriff auf Typinformationen. Ruft die ausgehende IID für Standardereignissatz des Objekts ab.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../atl/atl-class-overview.md)
 

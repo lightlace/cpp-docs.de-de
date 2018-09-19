@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3459 | Microsoft Docs
+title: Compilerfehler C3459 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eec65ba8acf231a15c6cab15449cc306cdfad4fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: abde90828cac4f45685b7a21b50705474aedde72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255344"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026789"
 ---
 # <a name="compiler-error-c3459"></a>Compilerfehler C3459
-"attribute": Das Attribut ist nur für den Klassenindexer (indizierte Standardeigenschaft) zulässig  
-  
-Ein Attribut, das auf eine Klassenindexer-Eigenschaft angewendet werden soll, wurde falsch verwendet.  
-  
-Weitere Informationen finden Sie unter [wie: Verwenden von Eigenschaften in C + c++ / CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).  
-  
-## <a name="example"></a>Beispiel  
-Im folgenden Beispiel wird C3459 generiert.  
-  
-```  
-// C3459.cpp  
-// compile with: /clr /c  
-public ref class MyString {  
-public:  
-   [System::Runtime::CompilerServices::IndexerName("Chars")]   // C3459  
-   property int Prop;  
-};  
-  
-// OK  
-public ref class MyString2 {  
-   array<int>^ MyArr;  
-public:  
-   MyString2() {  
-      MyArr = gcnew array<int>(5);  
-   }  
-  
-   [System::Runtime::CompilerServices::IndexerName("Chars")]   // OK  
-   property int default[int] {  
-      int get(int index) {  
-         return MyArr[index];  
-      }  
-      void set(int index, int value) {  
-         MyArr[index] = value;  
-      }  
-   }  
-};  
+
+"attribute": Das Attribut ist nur für den Klassenindexer (indizierte Standardeigenschaft) zulässig
+
+Ein Attribut, das auf eine Klassenindexer-Eigenschaft angewendet werden soll, wurde falsch verwendet.
+
+Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden von Eigenschaften in C++ / CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C3459 generiert.
+
+```
+// C3459.cpp
+// compile with: /clr /c
+public ref class MyString {
+public:
+   [System::Runtime::CompilerServices::IndexerName("Chars")]   // C3459
+   property int Prop;
+};
+
+// OK
+public ref class MyString2 {
+   array<int>^ MyArr;
+public:
+   MyString2() {
+      MyArr = gcnew array<int>(5);
+   }
+
+   [System::Runtime::CompilerServices::IndexerName("Chars")]   // OK
+   property int default[int] {
+      int get(int index) {
+         return MyArr[index];
+      }
+      void set(int index, int value) {
+         MyArr[index] = value;
+      }
+   }
+};
 ```

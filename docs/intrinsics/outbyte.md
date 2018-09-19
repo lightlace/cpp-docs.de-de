@@ -1,5 +1,5 @@
 ---
-title: __outbyte | Microsoft Docs
+title: __outbyte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c73d32b9300a5a581306d926688230660cd998b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cff8c2e8abfff713b4044ce58104c58b0a96da12
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330622"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719265"
 ---
 # <a name="outbyte"></a>__outbyte
 **Microsoft-spezifisch**  
   
- Generiert die `out` -Anweisung, die 1 Byte angegeben sendet `Data` Ausgang von angegebenen e/a- `Port`.  
+ Generiert die `out` -Anweisung, die mit 1 Byte gemäß sendet `Data` der e/a-Port anhand des `Port`.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,17 +39,17 @@ void __outbyte(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `Port`  
- Der Port, an die die Daten gesendet werden soll.  
+*Port*<br/>
+[in] Der Port, der die Daten zu senden.  
   
- [in] `Data`  
- Das Byte, das den angegebenen Port gesendet werden.  
+*Data*<br/>
+[in] Das Byte, die über den angegebenen Port gesendet werden.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__outbyte`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outbyte`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

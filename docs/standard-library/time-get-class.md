@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d0ab896860d1e759b5ad1df6bb23e93f42d28f9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 98ef24f5a714b1df5cb9be0875cdfd5adcb3fe62
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960130"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704873"
 ---
 # <a name="timeget-class"></a>time_get-Klasse
 
@@ -69,11 +69,11 @@ class time_get : public time_base;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType*  
- Der Typ, der innerhalb eines Programms verwendet wird, um Zeichen zu codieren.
+*CharType*<br/>
+Der Typ, der innerhalb eines Programms verwendet wird, um Zeichen zu codieren.
 
-*InputIterator*  
- Der Iterator, von dem die Zeitwerte gelesen werden.
+*InputIterator*<br/>
+Der Iterator, von dem die Zeitwerte gelesen werden.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -216,7 +216,7 @@ Liest und konvertiert Zeichendaten in einen Zeitwert. Verwendet einen Konvertier
 ```cpp
 virtual iter_type
     do_get(
- iter_type first,
+iter_type first,
     iter_type last,
     ios_base& iosbase,
     ios_base::iostate& state,
@@ -227,19 +227,26 @@ virtual iter_type
 
 ### <a name="parameters"></a>Parameter
 
-*erste* ein eingabeiterator, der den Anfang der zu konvertierenden Sequenz angibt.
+*Erste*<br/>
+Ein Eingabeiterator, der den Anfang der zu konvertierenden Sequenz angibt.
 
-*letzte* ein eingabeiterator, der das Ende der Sequenz angibt.
+*last*<br/>
+Ein Eingabeiterator, der das Ende der Sequenz angibt.
 
-*Iosbase* ein Datenstromobjekt.
+*iosbase*<br/>
+Ein Streamobjekt.
 
-*Status* ein Feld in Iosbase, in dem entsprechende bitmaskenelemente festgelegt werden, um Fehler anzugeben.
+*state*<br/>
+Ein Feld in Iosbase, in dem entsprechende bitmaskenelemente festgelegt werden, um Fehler anzugeben.
 
-*Ptm* ein Zeiger auf die Zeitstruktur, in dem die Zeit gespeichert werden.
+*ptm*<br/>
+Ein Zeiger auf die Zeitstruktur, in der die Zeit gespeichert werden soll.
 
-*FMT* eine konvertierungsspezifiziererzeichen.
+*FMT*<br/>
+Eine Konvertierungsspezifiziererzeichen.
 
-*MOD* ein optionales modifiziererzeichen.
+*MOD*<br/>
+Ein optionales Modifiziererzeichen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -313,20 +320,20 @@ virtual iter_type do_get_date(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*  
- Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
+*Erste*<br/>
+Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*last*  
- Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
+*last*<br/>
+Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*iosbase*  
- Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
+*iosbase*<br/>
+Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
-*state*  
- Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
+*state*<br/>
+Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
 
-*ptm*  
- Ein Zeiger auf den Ort, an dem die Datumsinformation gespeichert werden soll.
+*ptm*<br/>
+Ein Zeiger auf den Ort, an dem die Datumsinformation gespeichert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -364,20 +371,20 @@ virtual iter_type do_get_monthname(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*  
- Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
+*Erste*<br/>
+Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*last*  
- Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
+*last*<br/>
+Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*iosbase*  
- Nicht verwendet.
+*iosbase*<br/>
+Nicht verwendet.
 
-*state*  
- Ein Ausgabeparameter, der die entsprechenden Bitmaskenelemente für den Streamstatus festlegt, je nachdem, ob die Vorgänge erfolgreich waren.
+*state*<br/>
+Ein Ausgabeparameter, der die entsprechenden Bitmaskenelemente für den Streamstatus festlegt, je nachdem, ob die Vorgänge erfolgreich waren.
 
-*ptm*  
- Ein Zeiger auf den Ort, an dem die Monatsinformation gespeichert werden soll.
+*ptm*<br/>
+Ein Zeiger auf den Ort, an dem die Monatsinformation gespeichert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -407,20 +414,20 @@ virtual iter_type do_get_time(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*  
- Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
+*Erste*<br/>
+Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*last*  
- Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
+*last*<br/>
+Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*iosbase*  
- Nicht verwendet.
+*iosbase*<br/>
+Nicht verwendet.
 
-*state*  
- Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
+*state*<br/>
+Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
 
-*ptm*  
- Ein Zeiger auf den Ort, an dem die Datumsinformation gespeichert werden soll.
+*ptm*<br/>
+Ein Zeiger auf den Ort, an dem die Datumsinformation gespeichert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -458,20 +465,20 @@ virtual iter_type do_get_weekday(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*  
- Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
+*Erste*<br/>
+Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*last*  
- Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
+*last*<br/>
+Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*iosbase*  
- Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
+*iosbase*<br/>
+Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
-*state*  
- Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
+*state*<br/>
+Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
 
-*ptm*  
- Ein Zeiger auf den Ort, an dem die Wochentagsinformation gespeichert werden soll.
+*ptm*<br/>
+Ein Zeiger auf den Ort, an dem die Wochentagsinformation gespeichert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -501,20 +508,20 @@ virtual iter_type do_get_year(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*  
- Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
+*Erste*<br/>
+Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*last*  
- Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
+*last*<br/>
+Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*iosbase*  
- Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
+*iosbase*<br/>
+Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
-*state*  
- Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
+*state*<br/>
+Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
 
-*ptm*  
- Ein Zeiger auf den Ort, an dem die Jahresinformation gespeichert werden soll.
+*ptm*<br/>
+Ein Zeiger auf den Ort, an dem die Jahresinformation gespeichert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -556,32 +563,32 @@ iter_type get(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*  
- Eingabeiterator, der angibt, wo die zu konvertierende Sequenz beginnt.
+*Erste*<br/>
+Eingabeiterator, der angibt, wo die zu konvertierende Sequenz beginnt.
 
-*last*  
- Eingabeiterator, der das Ende der zu konvertierenden Sequenz angibt.
+*last*<br/>
+Eingabeiterator, der das Ende der zu konvertierenden Sequenz angibt.
 
-*iosbase*  
- Der Stream (Datenstrom).
+*iosbase*<br/>
+Der Stream (Datenstrom).
 
-*state*  
- Die entsprechenden Bitmaskenelemente werden für den Streamzustand festgelegt, um Fehler zu kennzeichnen.
+*state*<br/>
+Die entsprechenden Bitmaskenelemente werden für den Streamzustand festgelegt, um Fehler zu kennzeichnen.
 
-*ptm*  
- Zeiger auf die Zeitstruktur, in der die Zeit gespeichert werden soll.
+*ptm*<br/>
+Zeiger auf die Zeitstruktur, in der die Zeit gespeichert werden soll.
 
-*FMT*  
- Eine Konvertierungsspezifiziererzeichen.
+*FMT*<br/>
+Eine Konvertierungsspezifiziererzeichen.
 
-*MOD*  
- Ein optionales Modifiziererzeichen.
+*MOD*<br/>
+Ein optionales Modifiziererzeichen.
 
-*fmt_first*  
- Zeigt auf die Stelle, an der die Formatanweisungen beginnen.
+*fmt_first*<br/>
+Zeigt auf die Stelle, an der die Formatanweisungen beginnen.
 
-*fmt_last*  
- Zeigt auf das Ende der Formatanweisungen.
+*fmt_last*<br/>
+Zeigt auf das Ende der Formatanweisungen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -613,20 +620,20 @@ iter_type get_date(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*  
- Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
+*Erste*<br/>
+Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*last*  
- Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
+*last*<br/>
+Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*iosbase*  
- Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
+*iosbase*<br/>
+Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
-*state*  
- Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
+*state*<br/>
+Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
 
-*ptm*  
- Ein Zeiger auf den Ort, an dem die Datumsinformation gespeichert werden soll.
+*ptm*<br/>
+Ein Zeiger auf den Ort, an dem die Datumsinformation gespeichert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -707,20 +714,20 @@ iter_type get_monthname(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*  
- Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
+*Erste*<br/>
+Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*last*  
- Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
+*last*<br/>
+Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*iosbase*  
- Nicht verwendet.
+*iosbase*<br/>
+Nicht verwendet.
 
-*state*  
- Ein Ausgabeparameter, der die entsprechenden Bitmaskenelemente für den Streamstatus festlegt, je nachdem, ob die Vorgänge erfolgreich waren.
+*state*<br/>
+Ein Ausgabeparameter, der die entsprechenden Bitmaskenelemente für den Streamstatus festlegt, je nachdem, ob die Vorgänge erfolgreich waren.
 
-*ptm*  
- Ein Zeiger auf den Ort, an dem die Monatsinformation gespeichert werden soll.
+*ptm*<br/>
+Ein Zeiger auf den Ort, an dem die Monatsinformation gespeichert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -799,20 +806,20 @@ iter_type get_time(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*  
- Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
+*Erste*<br/>
+Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*last*  
- Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
+*last*<br/>
+Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*iosbase*  
- Nicht verwendet.
+*iosbase*<br/>
+Nicht verwendet.
 
-*state*  
- Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
+*state*<br/>
+Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
 
-*ptm*  
- Ein Zeiger auf den Ort, an dem die Datumsinformation gespeichert werden soll.
+*ptm*<br/>
+Ein Zeiger auf den Ort, an dem die Datumsinformation gespeichert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -880,20 +887,20 @@ iter_type get_weekday(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*  
- Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
+*Erste*<br/>
+Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*last*  
- Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
+*last*<br/>
+Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*iosbase*  
- Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
+*iosbase*<br/>
+Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
-*state*  
- Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
+*state*<br/>
+Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
 
-*ptm*  
- Ein Zeiger auf den Ort, an dem die Wochentagsinformation gespeichert werden soll.
+*ptm*<br/>
+Ein Zeiger auf den Ort, an dem die Wochentagsinformation gespeichert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -957,20 +964,20 @@ iter_type get_year(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*  
- Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
+*Erste*<br/>
+Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*last*  
- Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
+*last*<br/>
+Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*iosbase*  
- Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
+*iosbase*<br/>
+Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
-*state*  
- Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
+*state*<br/>
+Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
 
-*ptm*  
- Ein Zeiger auf den Ort, an dem die Jahresinformation gespeichert werden soll.
+*ptm*<br/>
+Ein Zeiger auf den Ort, an dem die Jahresinformation gespeichert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1043,8 +1050,8 @@ explicit time_get(size_t refs = 0);
 
 ### <a name="parameters"></a>Parameter
 
-*Refs*  
- Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
+*Refs*<br/>
+Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 

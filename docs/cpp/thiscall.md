@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1b7718e4c6d270536f5d7973a1b5a3ec0e61f28
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: af20b6d406b0e2119df04d5348c554b3405e8597
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941586"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103372"
 ---
 # <a name="thiscall"></a>__thiscall
 
@@ -48,4 +48,4 @@ Wenn die Funktion bei nicht statischen Klassenfunktionen abweichend definiert is
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Argumentübergabe und Benennungskonventionen](../cpp/argument-passing-and-naming-conventions.md)
+[Argumentübergabe und Benennungskonventionen](../cpp/argument-passing-and-naming-conventions.md)

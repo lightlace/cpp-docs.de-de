@@ -1,5 +1,5 @@
 ---
-title: __inword | Microsoft Docs
+title: __inword | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40d0662e50059661b5d586aca2b865772a99235
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5895f8e4efd56ddcc9ab16a91a6242db443f0821
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328736"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722916"
 ---
 # <a name="inword"></a>__inword
 **Microsoft-spezifisch**  
@@ -39,17 +39,17 @@ unsigned short __inword(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- [in] `Port`  
- Der Port, aus dem gelesen werden soll.  
+*Port*<br/>
+[in] Der Port, der gelesen werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Das Wort Daten gelesen werden.  
+ Das Wort gelesenen Daten.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__inword`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__inword`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

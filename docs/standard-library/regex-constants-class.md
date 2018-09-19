@@ -1,7 +1,7 @@
 ---
 title: regex_constants-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -92,14 +92,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcf3a5fcdb8c604dac368b60cf4a368bdb1c3f14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0e330cccb83ad702994b3d31d762cc0203e78de0
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865753"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384994"
 ---
-# <a name="regexconstants-class"></a>regex_constants-Klasse
+# <a name="regexconstants-namespace"></a>Regex_constants-namespace
 
 Namespace für Flags für reguläre Ausdrücke.
 
@@ -110,12 +110,18 @@ namespace regex_constants {
     enum syntax_option_type;
     enum match_flag_type;
     enum error_type;
- }
+}
 ```
 
 ## <a name="remarks"></a>Hinweise
 
 Der Namespace `regex_constants` kapselt mehrere Flagtypen und ihre zugeordneten Flagwerte.
+
+|||
+|-|-|
+|[error_type](#error_type)|Flags für die Berichterstellung bei Syntaxfehlern für reguläre Ausdrücke.|
+|[match_flag_type](#match_flag_type)|Flags für Optionen zum Vergleichen regulärer Ausdrücke.|
+|[syntax_option_type](#syntax_option_type)|Flags zum Auswählen von Syntaxoptionen.|
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -214,7 +220,7 @@ Der Typ ist eine „Bitmaske“, die Optionen für den Vergleich einer Textseque
 
 Vergleichsoptionen:
 
-`match_default`
+*match_default*<br/>
 
 `match_not_bol`: Die erste Position in der Zielsequenz nicht als Zeilenanfang behandeln.
 

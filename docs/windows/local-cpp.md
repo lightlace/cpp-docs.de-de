@@ -1,5 +1,5 @@
 ---
-title: lokale (C++) | Microsoft Docs
+title: lokal (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,45 +17,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 17a57ad56402b345aa64e4e4fd02bc57dd7f0321
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b910ce2416dc345e2a36c9858f260ef5b42c2cc8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877916"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203321"
 ---
 # <a name="local-c"></a>local (C++)
-Bei Verwendung in der Schnittstelle Header können Sie die MIDL-Compiler als ein Header-Generator zu verwenden. Wenn in einer einzelnen Funktion verwendet wird, kennzeichnet eine lokale Prozedur für die keine Stubs generiert werden.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-[local]  
-  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Die `local` C++-Attribut hat die gleiche Funktionalität wie die [lokale](http://msdn.microsoft.com/library/windows/desktop/aa367071) MIDL-Attribut.  
-  
-## <a name="example"></a>Beispiel  
- Finden Sie unter [Aufruf als](../windows/call-as.md) ein Beispiel zum Verwenden von `local`.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-### <a name="attribute-context"></a>Attributkontext  
-  
-|||  
-|-|-|  
-|**Betrifft**|`interface`,-Schnittstellenmethode|  
-|**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Keiner|  
-|**Ungültige Attribute**|**dispinterface**|  
-  
- Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [IDL-Attribute](../windows/idl-attributes.md)   
- [Schnittstellenattribut](../windows/interface-attributes.md)   
- [Methodenattribut](../windows/method-attributes.md)   
- [call_as](../windows/call-as.md)   
+
+Wenn in der Kopfzeile der Schnittstelle verwendet wird, können Sie Sie den MIDL-Compiler als ein Header-Generator zu verwenden. Bei Verwendung in einer einzelnen Funktion kennzeichnet eine lokale Prozedur, die für die keine Stubs generiert werden.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+[local]
+```
+
+## <a name="remarks"></a>Hinweise
+
+Die **lokalen** C++-Attribut hat die gleiche Funktionalität wie die [lokalen](/windows/desktop/Midl/local) MIDL-Attribut.
+
+## <a name="example"></a>Beispiel
+
+Finden Sie unter [Call_as](../windows/call-as.md) ein Beispiel zur Verwendung für **lokalen**.
+
+## <a name="requirements"></a>Anforderungen
+
+### <a name="attribute-context"></a>Attributkontext
+
+|||
+|-|-|
+|**Betrifft**|**Schnittstelle**,-Schnittstellenmethode|
+|**Wiederholbar**|Nein|
+|**Erforderliche Attribute**|Keiner|
+|**Ungültige Attribute**|`dispinterface`|
+
+Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[IDL-Attribute](../windows/idl-attributes.md)  
+[Schnittstellenattribut](../windows/interface-attributes.md)  
+[Methodenattribut](../windows/method-attributes.md)  
+[call_as](../windows/call-as.md)  

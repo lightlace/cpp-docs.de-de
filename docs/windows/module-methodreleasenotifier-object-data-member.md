@@ -1,5 +1,5 @@
 ---
-title: Datenmember Module::MethodReleaseNotifier::object_ | Microsoft Docs
+title: Datenmember Module::MethodReleaseNotifier::object_ | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2ed7505943f71e2fb1817d075d7afaf69323160
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 05b11608db505ecd8db3133db14e1447ca3ad4a9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881535"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610104"
 ---
 # <a name="modulemethodreleasenotifierobject-data-member"></a>Module::MethodReleaseNotifier::object_-Datenmember
-Enthält einen Zeiger auf das Objekt, dessen Memberfunktion die Ereignishandler für das aktuelle methodreleasenotifier-Objekt ist.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-T* object_;  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [Module::MethodReleaseNotifier-Klasse](../windows/module-methodreleasenotifier-class.md)
+
+Enthält einen Zeiger auf das Objekt, dessen Memberfunktion der Ereignishandler für das aktuelle ist **methodreleasenotifier** Objekt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+T* object_;
+```
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[Module::MethodReleaseNotifier-Klasse](../windows/module-methodreleasenotifier-class.md)

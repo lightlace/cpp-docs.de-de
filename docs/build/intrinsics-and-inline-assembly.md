@@ -1,5 +1,5 @@
 ---
-title: Systeminterne Funktionen und Inlineassemblys | Microsoft Docs
+title: Systeminterne Funktionen und Inlineassemblys | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,17 +12,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b8651bea0b1ee9f54ec0af704d92feef0722368
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6a87e577af339099eda56a3b9d91929a05253a43
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367978"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716247"
 ---
 # <a name="intrinsics-and-inline-assembly"></a>Systeminterne Funktionen und Inlineassemblys
-Eine der Einschränkungen für die [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] Compiler besteht darin, keine Inline-Assembler-Unterstützung. Das bedeutet, die Funktionen, die kann in C oder C++ geschrieben werden, entweder als Unterroutinen oder als systeminterne Funktionen unterstützt, die vom Compiler geschrieben werden müssen. Bestimmte Funktionen sind Leistung vertrauliche, andere hingegen nicht. Leistungsabhängigen Funktionen sollten als systeminterne Funktionen implementiert werden.  
-  
- Die systeminternen Funktionen, die vom Compiler unterstützt werden in beschrieben [Compilerfunktionen](../intrinsics/compiler-intrinsics.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [x64-Softwarekonventionen](../build/x64-software-conventions.md)
+
+Eine der Einschränkungen für die X64 Compiler nicht Inline-Assembler unterstützt werden. Dies bedeutet, die, die Funktionen, kann nicht in C oder C++ geschrieben werden, entweder als Unterroutinen oder als systeminterne Funktionen, die vom Compiler unterstützt geschrieben werden müssen. Bestimmte Funktionen sind leistungsabhängig, andere hingegen nicht. Leistungsorientierte Funktionen sollte als systeminterne Funktionen implementiert werden.
+
+Die systeminternen Funktionen, die vom Compiler unterstützt werden, werden in beschrieben [intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[x64-Softwarekonventionen](../build/x64-software-conventions.md)

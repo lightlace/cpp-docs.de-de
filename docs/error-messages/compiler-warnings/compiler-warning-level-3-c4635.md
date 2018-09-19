@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 3) C4635 | Microsoft Docs
+title: Compilerwarnung (Stufe 3) C4635 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dcc4b7466ed53a187b7f34ec45084a94adb59b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7651012d4c48d420734a9c6ec2ff051718f82007
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291771"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038112"
 ---
 # <a name="compiler-warning-level-3-c4635"></a>Compilerwarnung (Stufe 3) C4635
-XML-Dokumentkommentarziel: Ungültige XML: Grund  
-  
- Der Compiler hat ein Problem mit XML-Tags gefunden.  Beheben Sie das Problem, und führen Sie die Kompilierung erneut durch.  
-  
- Im folgenden Beispiel wird C4635 generiert:  
-  
-```  
-// C4635.cpp  
-// compile with: /doc /clr /W3 /c  
-/// <summary>     
-/// The contents of the folder have changed.  
-/// <summary/>   // C4635  
-  
-// try the following line instead  
-// /// </summary>  
-public ref class Test {};  
-```  
-  
- Beachten Sie, dass die Ausgabe für dieses Beispiel wie folgt lautet: **Das Endtag 'member' stimmt nicht mit dem Starttag 'summary' überein.**  
-  
- Das Problem bei diesem Beispiel wird das Endtag für \<Zusammenfassung > nicht ordnungsgemäß formuliert ist, und der Compiler erkennt es als jedoch nicht die \<Zusammenfassung >-Endtag.  Die \<Member >-Tag wird vom Compiler in jeder/doc-Kompilierung in der XDC-Datei eingebettet.  Daher hier ist das Problem, das das Endtag \</member >, entspricht nicht das vorherigen Starttag, die vom Compiler verarbeitet wurde (\<summary >.
+
+XML-Dokumentkommentarziel: Ungültige XML: Grund
+
+Der Compiler hat ein Problem mit XML-Tags gefunden.  Beheben Sie das Problem, und führen Sie die Kompilierung erneut durch.
+
+Im folgenden Beispiel wird C4635 generiert:
+
+```
+// C4635.cpp
+// compile with: /doc /clr /W3 /c
+/// <summary>
+/// The contents of the folder have changed.
+/// <summary/>   // C4635
+
+// try the following line instead
+// /// </summary>
+public ref class Test {};
+```
+
+Beachten Sie, dass die Ausgabe für dieses Beispiel wie folgt lautet: **Das Endtag 'member' stimmt nicht mit dem Starttag 'summary' überein.**
+
+Das Problem mit diesem Beispiel ist, dass das Endtag für \<summary > nicht ordnungsgemäß formuliert ist, und der Compiler ihn als nicht erkennt die \<summary >-Endtag.  Die \<Member >-Tag wird vom Compiler in jeder Kompilierung/doc in der XDC-Datei eingebettet.  Das Problem ist hier ist also das Endtag \</member >, entspricht nicht das vorherigen Starttag, die der Compiler verarbeitet (\<summary >.

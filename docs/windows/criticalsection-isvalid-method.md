@@ -1,5 +1,5 @@
 ---
-title: 'CriticalSection:: IsValid-Methode | Microsoft Docs'
+title: 'CriticalSection:: IsValid-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d004fd43a6cad78df62a19e5b703867a990861f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 031575c7d8e6cc9b9b56cdd172e75c45f45ca606
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870373"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592062"
 ---
 # <a name="criticalsectionisvalid-method"></a>CriticalSection::IsValid-Methode
-Gibt an, ob der aktuelle kritische Abschnitt gültig ist.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-bool IsValid() const;  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Standardmäßig immer zurück `true`.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Siehe auch  
- [CriticalSection-Klasse](../windows/criticalsection-class.md)
+
+Gibt an, ob der aktuelle kritische Abschnitt gültig ist.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+bool IsValid() const;
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Immer in der Standardeinstellung gibt **"true"**.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+
+[CriticalSection-Klasse](../windows/criticalsection-class.md)

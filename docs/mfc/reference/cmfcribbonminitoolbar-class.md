@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d97e3e993571392893533be220e243b045b81e30
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ef348275059fd2623ca83b40730f010a7d18d6d5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852886"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721174"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar-Klasse
 Implementiert eine kontextbezogene Popup-Symbolleiste.  
@@ -98,11 +98,11 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pRibbonBar*  
- Die menübandleiste, die die Minisymbolleiste für die anzuzeigenden Schaltflächen sucht.  
+*pRibbonBar*<br/>
+[in] Die menübandleiste, die die Minisymbolleiste für die anzuzeigenden Schaltflächen sucht.  
   
- [in] *LstCommands*  
- Die Liste der Befehle aus, um auf die Minisymbolleiste angezeigt werden. Alle menübandkategorien werden durchsucht, um die zugeordneten Schaltflächen zu suchen.  
+*lstCommands*<br/>
+[in] Die Liste der Befehle aus, um auf die Minisymbolleiste angezeigt werden. Alle menübandkategorien werden durchsucht, um die zugeordneten Schaltflächen zu suchen.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Funktion, Festlegen der Liste der Befehle in die Minisymbolleiste angezeigt werden.  
@@ -122,11 +122,11 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *x*  
- Gibt die horizontale Position der Minisymbolleiste in Bildschirmkoordinaten.  
+*w*<br/>
+[in] Gibt die horizontale Position der Minisymbolleiste in Bildschirmkoordinaten.  
   
- [in] *y*  
- Gibt die vertikale Position der Minisymbolleiste in Bildschirmkoordinaten.  
+*y*<br/>
+[in] Gibt die vertikale Position der Minisymbolleiste in Bildschirmkoordinaten.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Minisymbolleiste erfolgreich angezeigt wurde. andernfalls "false".  
@@ -143,17 +143,17 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *x*  
- Gibt die horizontale Position des Kontextmenüs in Bildschirmkoordinaten.  
+*w*<br/>
+[in] Gibt die horizontale Position des Kontextmenüs in Bildschirmkoordinaten.  
   
- [in] *y*  
- Gibt die vertikale Position des Kontextmenüs in Bildschirmkoordinaten.  
+*y*<br/>
+[in] Gibt die vertikale Position des Kontextmenüs in Bildschirmkoordinaten.  
   
- [in] *UiMenuResID*  
- Gibt an, die Ressourcen-ID des Kontextmenüs angezeigt.  
+*uiMenuResID*<br/>
+[in] Gibt an, die Ressourcen-ID des Kontextmenüs angezeigt.  
   
- [in] *pWndOwner*  
- Gibt das Fenster, das Nachrichten, aus dem Kontextmenü empfängt.  
+*pWndOwner*<br/>
+[in] Gibt das Fenster, das Nachrichten, aus dem Kontextmenü empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Kontextmenü erfolgreich angezeigt wurde. andernfalls "false".  
@@ -162,7 +162,7 @@ BOOL ShowWithContextMenu(
  Verwenden Sie diese Funktion, um eine Minisymbolleiste anzuzeigen, die ein Kontextmenü angezeigt hat. Im Kontextmenü ist positionierte 15 Pixel unterhalb der Minisymbolleiste.  
   
 ##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 BOOL IsContextMenuMode() const;  
@@ -173,7 +173,7 @@ BOOL IsContextMenuMode() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="isribbonminitoolbar"></a>  CMFCRibbonMiniToolBar::IsRibbonMiniToolBar  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 virtual BOOL IsRibbonMiniToolBar() const;  

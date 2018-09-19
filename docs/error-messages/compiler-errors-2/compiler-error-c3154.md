@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3154 generiert | Microsoft Docs
+title: Compilerfehler C3154 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33afc69bb44488d56b51797c72f2cd5ea4105420
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 92a888020e306e762ffb242cb92636cc14680bf5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251110"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074655"
 ---
-# <a name="compiler-error-c3154"></a>Compiler-Fehler C3154 generiert
-Erwartet ',', bevor Sie mit den Auslassungspunkten. Nicht durch Trennzeichen getrennte Auslassungszeichen werden unter Parameter Array-Funktionen nicht unterstützt.  
-  
- Eine Variablen argumentsfunktion wurde nicht ordnungsgemäß deklariert.  
-  
- Weitere Informationen finden Sie unter [Variablenargumentlisten (...) (C + C++ / CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C3154 generiert.  
-  
-```  
-// C3154.cpp  
-// compile with: /clr  
-ref struct R {  
-   void Func(int ... array<int> ^);   // C3154  
-   void Func2(int i, ... array<int> ^){}   // OK  
-   void Func3(array<int> ^){}   // OK  
-   void Func4(... array<int> ^){}   // OK  
-};  
-  
-int main() {  
-   R ^ r = gcnew R;  
-   r->Func4(1,2,3);  
-}  
+# <a name="compiler-error-c3154"></a>Compilerfehler C3154
+
+Erwartet ',', bevor Sie mit den Auslassungspunkten. Nicht durch Trennzeichen getrennt, mit den Auslassungspunkten für Parameterarrayfunktionen nicht unterstützt wird.
+
+Eine Funktion mit Variablen Argumenten wurde nicht ordnungsgemäß deklariert.
+
+Weitere Informationen finden Sie unter [Variablenargumentlisten (...) (C++ / CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C3154 generiert.
+
+```
+// C3154.cpp
+// compile with: /clr
+ref struct R {
+   void Func(int ... array<int> ^);   // C3154
+   void Func2(int i, ... array<int> ^){}   // OK
+   void Func3(array<int> ^){}   // OK
+   void Func4(... array<int> ^){}   // OK
+};
+
+int main() {
+   R ^ r = gcnew R;
+   r->Func4(1,2,3);
+}
 ```

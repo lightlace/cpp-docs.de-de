@@ -1,5 +1,5 @@
 ---
-title: Linkertoolfehler Lnk1120 | Microsoft Docs
+title: Linkertoolfehler Lnk1120 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/17/2017
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fab2b937f8bf941219c678c638e9757903ee7698
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea6cc7fdde3d68c9b00ba60c7fa650cbdfd3bd8d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298511"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086342"
 ---
 # <a name="linker-tools-error-lnk1120"></a>Linkertoolfehler LNK1120
-*Anzahl* nicht aufgelöste externe an  
-  
-Linkertoolfehler LNK1120 meldet die Anzahl die (*Anzahl*) nicht aufgelöstes externes Symbol Fehler für diesen Link-Vorgang. Die meisten nicht aufgelöste externe Symbol-Fehler werden gemeldet, einzeln durch [Linkertoolfehler LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md) und [Linkertoolfehler LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md), die vor dieser Fehlermeldung angezeigt, einmal für alle nicht aufgelösten externen stehen Symbol für Fehler.  
-  
-Um diesen Fehler zu beheben, korrigieren Sie alle anderen nicht aufgelöste externe Fehler oder andere Linkerfehler behandelt, die sich in der Buildausgabe davor aus. Dieser Fehler wird nicht gemeldet, wenn nicht aufgelöste externe fehlerfrei bleiben.  
+
+> *Anzahl* nicht aufgelöste externe
+
+Linkertoolfehler LNK1120 meldet die Anzahl die (*Anzahl*) nicht aufgelöstes externes Symbol-Fehler für diesen Link-Vorgang. Die meisten nicht aufgelöste externe Symbol-Fehler werden gemeldet, einzeln von [Linkertoolfehler LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md) und [Linkertoolfehler LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md), die vor dieser Fehlermeldung angezeigt, einmal für alle nicht aufgelösten externen stehen symbolfehler.
+
+Um diesen Fehler zu beheben, korrigieren Sie alle anderen nicht aufgelöste externe Fehler oder andere Linkerfehler, die sich in der Buildausgabe davor. Dieser Fehler wird nicht gemeldet, wenn nicht aufgelöste externe fehlerfrei bleiben.

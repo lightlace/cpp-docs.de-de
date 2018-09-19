@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ce7b3085a66cf731da4373c534a95d09225d8ae
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 37a7591e185b1436bb3cd0f8b56a625f71bf8ed2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943231"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073644"
 ---
 # <a name="logical-or-operator-"></a>Logischer OR-Operator: ||
 
@@ -74,6 +74,6 @@ int main() {
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C++-Built-Operatoren, Rangfolge und Assoziativität](cpp-built-in-operators-precedence-and-associativity.md)
-- [C++-Built-in-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
-- [C-Operatoren (logisch)](../c-language/c-logical-operators.md)
+[C++-Built-Operatoren, Rangfolge und Assoziativität](cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C++-Built-in-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C-Operatoren (logisch)](../c-language/c-logical-operators.md)

@@ -17,59 +17,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a95f012b36e30c171fde1cbc8d28a21a074e281
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: abe0c1a2e443e88879cd7005d944acfcacc3c17d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943262"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031469"
 ---
 # <a name="raise"></a>__raise
-Hebt die Aufrufsite eines Ereignisses hervor.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-__raise method-declarator;  
-  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Aus verwaltetem Code kann ein Ereignis nur innerhalb der Klasse ausgelöst werden, in der es definiert ist. Finden Sie unter [Ereignis](../windows/event-cpp-component-extensions.md) für Weitere Informationen.  
-  
- Das Schlüsselwort **__raise** verursacht einen Fehler, wenn Sie einem nicht ereignisgebundenen Aufruf ausgegeben werden soll.  
-  
+
+Hebt die Aufrufsite eines Ereignisses hervor.
+
+## <a name="syntax"></a>Syntax
+
+```
+__raise method-declarator;
+```
+
+## <a name="remarks"></a>Hinweise
+
+Aus verwaltetem Code kann ein Ereignis nur innerhalb der Klasse ausgelöst werden, in der es definiert ist. Finden Sie unter [Ereignis](../windows/event-cpp-component-extensions.md) für Weitere Informationen.
+
+Das Schlüsselwort **__raise** verursacht einen Fehler, wenn Sie einem nicht ereignisgebundenen Aufruf ausgegeben werden soll.
+
 > [!NOTE]
->  Eine von einer Vorlage gebildete Klasse oder Struktur kann keine Ereignisse enthalten.  
-  
-## <a name="example"></a>Beispiel  
-  
-```cpp 
-// EventHandlingRef_raise.cpp  
-struct E {  
-   __event void func1();  
-   void func1(int) {}  
-  
-   void func2() {}  
-  
-   void b() {  
-      __raise func1();  
-      __raise func1(1);  // C3745: 'int Event::bar(int)':   
-                         // only an event can be 'raised'  
-      __raise func2();   // C3745  
-   }  
-};  
-  
-int main() {  
-   E e;  
-   __raise e.func1();  
-   __raise e.func1(1);  // C3745  
-   __raise e.func2();   // C3745  
-}  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Stichwörter](../cpp/keywords-cpp.md)   
- [Behandlung von Ereignissen](../cpp/event-handling.md)   
- [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+>  Eine von einer Vorlage gebildete Klasse oder Struktur kann keine Ereignisse enthalten.
+
+## <a name="example"></a>Beispiel
+
+```cpp
+// EventHandlingRef_raise.cpp
+struct E {
+   __event void func1();
+   void func1(int) {}
+
+   void func2() {}
+
+   void b() {
+      __raise func1();
+      __raise func1(1);  // C3745: 'int Event::bar(int)':
+                         // only an event can be 'raised'
+      __raise func2();   // C3745
+   }
+};
+
+int main() {
+   E e;
+   __raise e.func1();
+   __raise e.func1(1);  // C3745
+   __raise e.func2();   // C3745
+}
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
+[Ereignisbehandlung](../cpp/event-handling.md)<br/>
+[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

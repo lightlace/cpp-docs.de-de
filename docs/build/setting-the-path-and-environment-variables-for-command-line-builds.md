@@ -1,5 +1,5 @@
 ---
-title: Festlegen der Pfad- und Umgebungsvariablen für Befehlszeilenbuilds | Microsoft Docs
+title: Festlegen der Pfad- und Umgebungsvariablen für Befehlszeilenbuilds | Microsoft-Dokumentation
 ms.custom: conceptual
 ms.date: 11/04/2016
 ms.technology:
@@ -27,28 +27,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b72f13fe25330b81a48d1447b707bdc4626ab3f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3e4b24e3ec209273b0f547c99685e8e804a74bc0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381134"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724247"
 ---
 # <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>Festlegen der Pfad- und Umgebungsvariablen für Befehlszeilenbuilds
 
-Visual C++-Befehlszeilen-Buildtools erfordern mehrere Umgebungsvariablen, die angepasst werden, für die Installation und Build-Konfiguration. Nach der Installation einer C++-arbeitsauslastung durch den [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] Installer erstellt angepasste Befehlsdateien oder Batchdateien, die die erforderlichen Umgebungsvariablen festlegen. Das Installationsprogramm verwendet dann diese Befehlsdateien zum Erstellen von Verknüpfungen für die Windows-Startmenü zu einer Developer-Eingabeaufforderungsfenster zu öffnen. Die folgenden Tastenkombinationen, richten Sie die Umgebungsvariablen für eine bestimmte Buildkonfiguration. Wenn Sie die Befehlszeilentools verwenden möchten, können Sie eine dieser Verknüpfungen ausführen oder Sie können ein einfaches Eingabeaufforderungsfenster öffnen, und führen Sie einen benutzerdefinierten Befehl Dateien in der Buildumgebung für die Konfiguration selbst festlegen. Weitere Informationen finden Sie unter [C/C++-Code erstellen, in der Befehlszeile](building-on-the-command-line.md).  
-  
-Die Visual C++-Befehlszeilentools verwenden die Umgebungsvariablen PATH, TMP, INCLUDE, LIB und LIBPATH und auch andere Umgebungsvariablen, die spezifisch für Ihre installierten Tools, Plattformen und SDKs verwenden. Auch eine einfache [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] Installation kann 20 oder mehr Umgebungsvariablen festgelegt. Da die Werte dieser Umgebungsvariablen spezifisch für die Installation und die Auswahl der Buildkonfiguration sind und durch produktaktualisierungen oder -Upgrades geändert werden können, es wird dringend empfohlen, dass Sie eine Developer-eingabeaufforderungsverknüpfung oder eines verwenden die Benutzerdefinierte Befehlsdateien, die sie festlegen, statt sie in der Windows-Umgebung selbst festzulegen. 
+Die Visual C++-Befehlszeilen-Buildtools erfordern mehrere Umgebungsvariablen, die angepasst werden, für die Installation und Build-Konfiguration. Bei eine C++-Workload von Visual Studio-Installer installiert ist, erstellt benutzerdefinierte Befehlsdateien oder Batchdateien, die die erforderlichen Umgebungsvariablen festlegen. Das Installationsprogramm verwendet dann diese Befehlsdateien zum Erstellen von Verknüpfungen für das Windows-Startmenü zu einem Developer-Eingabeaufforderungsfenster zu öffnen. Diese Tastenkombinationen, richten Sie die Umgebungsvariablen für eine bestimmte erstellen Konfiguration. Wenn Sie die Befehlszeilentools verwenden möchten, können Sie eine dieser Verknüpfungen ausführen oder Sie können ein einfaches Eingabeaufforderungsfenster öffnen, und führen Sie dann einen benutzerdefinierten Befehl Dateien in der Buildumgebung für die Konfiguration selbst festlegen. Weitere Informationen finden Sie unter [C/C++-Code erstellen, in der Befehlszeile](building-on-the-command-line.md).
 
-Um festzustellen, welche Umgebungsvariablen durch eine Developer-eingabeaufforderungsverknüpfung festgelegt sind, können Sie den SET-Befehl. Ein einfaches Eingabeaufforderungsfenster öffnen und die Ausgabe des Befehls "SET" für eine Basislinie zu erfassen. Öffnen Sie ein Developer-Eingabeaufforderungsfenster, und erfassen Sie die Ausgabe des Befehls "SET" für den Vergleich zu. Einem Vergleichstool wie in der Visual Studio-IDE integriert kann hilfreich sein, vergleichen die Umgebungsvariablen und sehen, was von der Developer-Eingabeaufforderung festgelegt ist. Informationen, die bestimmte Umgebungsvariablen, die durch den Compiler und Linker verwendet, finden Sie unter [CL-Umgebungsvariablen](../build/reference/cl-environment-variables.md) und [LINK-Umgebungsvariablen](../build/reference/link-environment-variables.md).  
-  
+Die Visual C++-Befehlszeilentools verwenden Sie die Umgebungsvariablen PATH, TMP, INCLUDE, LIB und LIBPATH und auch andere Umgebungsvariablen, die spezifisch für Ihre installierte Tools, Plattformen und -SDKs verwenden. Eine einfache Visual Studio-Installation kann 20 oder mehr Umgebungsvariablen festgelegt werden. Da die Werte dieser Variablen spezifisch für die Installation und die Auswahl der Buildkonfiguration sind und durch produktaktualisierungen oder -Upgrades geändert werden können, es wird dringend empfohlen, dass Sie eine Developer-eingabeaufforderungsverknüpfung oder eines verwenden die Benutzerdefinierte Befehlsdateien aus, die sie festlegen, statt sie in der Windows-Umgebung selbst festzulegen.
+
+Um anzuzeigen, welche Umgebungsvariablen festgelegt werden, indem Sie eine Developer-eingabeaufforderungsverknüpfung, können Sie den SET-Befehl. Ein einfaches Eingabeaufforderungsfenster öffnen und die Ausgabe des Befehls "SET" für eine Baseline erfassen. Öffnen Sie ein Developer-Eingabeaufforderungsfenster, und erfassen Sie die Ausgabe des Befehls "SET" für den Vergleich. Ein difftool, z. B. die in Visual Studio-IDE integriert kann hilfreich sein, vergleichen die Umgebungsvariablen, und sehen, was von der Developer-Eingabeaufforderung festgelegt ist. Weitere Informationen, die bestimmte Umgebungsvariablen, die durch den Compiler und Linker verwendet, finden Sie unter [CL-Umgebungsvariablen](../build/reference/cl-environment-variables.md) und [LINK-Umgebungsvariablen](../build/reference/link-environment-variables.md).
+
 > [!NOTE]
->  Mehrere Befehlszeilentools oder Tooloptionen möglicherweise Administratorrechte erforderlich. Wenn Sie Berechtigungsproblemen verfügen, wenn Sie sie verwenden, es wird empfohlen, dass Sie die Developer-Eingabeaufforderungsfenster öffnen, indem Sie die **als Administrator ausführen** Option. Unter Windows 10 mit der rechten Maustaste um das Kontextmenü für das Eingabeaufforderungsfenster zu öffnen, und wählen Sie dann **weitere**, **als Administrator ausführen**.  
-  
-## <a name="see-also"></a>Siehe auch  
+>  Mehrere Befehlszeilentools oder Tooloptionen möglicherweise Administratorberechtigungen erforderlich. Wenn Sie die Berechtigungsprobleme verfügen, wenn Sie diese verwenden, es wird empfohlen, Sie die Developer-Eingabeaufforderungsfenster mithilfe Öffnen der **als Administrator ausführen** Option. Unter Windows 10, mit der rechten Maustaste um das Kontextmenü für das Eingabeaufforderungsfenster zu öffnen, und wählen Sie dann **weitere**, **als Administrator ausführen**.
 
-[Erstellen von C/C++-Code in der Befehlszeile](../build/building-on-the-command-line.md)   
-[Verknüpfen](../build/reference/linking.md)   
-[Optionen des Linkers](../build/reference/linker-options.md)   
-[Kompilieren eines C/C++-Programms](../build/reference/compiling-a-c-cpp-program.md)   
+## <a name="see-also"></a>Siehe auch
+
+[Erstellen von C/C++-Code in der Befehlszeile](../build/building-on-the-command-line.md)<br/>
+[Verknüpfen](../build/reference/linking.md)<br/>
+[Linkeroptionen](../build/reference/linker-options.md)<br/>
+[Kompilieren eines C/C++-Programms](../build/reference/compiling-a-c-cpp-program.md)<br/>
 [Compileroptionen](../build/reference/compiler-options.md)

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8151b69b92566f45766c4ffa25d40bb5f077c606
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 592deab171a8085e2260a27ae642b3cd5c4af810
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337257"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722242"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Abkürzungstasten-Steuerelements bereit.  
@@ -75,7 +75,7 @@ class CHotKeyCtrl : public CWnd
   
  Wenn der Benutzer eine Tastenkombination ausgewählt hat, kann die Anwendung die angegebene Tastenkombination aus dem Steuerelement abzurufen und verwenden die WM_SETHOTKEY-Nachricht im System den Schlüssel für den direkten einrichten. Wenn der Benutzer die Abkürzungstaste danach von einem beliebigen Teil des Systems drückt empfängt das Fenster, in der Meldung WM_SETHOTKEY angegebene eine Angabe SC_HOTKEY WM_SYSCOMMAND-Nachricht. Diese Nachricht wird das Fenster, das er empfängt aktiviert. Die Abkürzungstaste bleibt gültig, bis die Anwendung, die WM_SETHOTKEY beendet aufgerufen wird.  
   
- Dieser Mechanismus unterscheidet sich von "Hot" Key-Unterstützung, von denen abhängig von der WM_HOTKEY-Nachricht und die Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) und [UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327) Funktionen.  
+ Dieser Mechanismus unterscheidet sich von "Hot" Key-Unterstützung, von denen abhängig von der WM_HOTKEY-Nachricht und die Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) und [UnregisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646327) Funktionen.  
   
  Weitere Informationen zur Verwendung von `CHotKeyCtrl`, finden Sie unter [Steuerelemente](../../mfc/controls-mfc.md) und [Verwenden von CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).  
   
@@ -111,7 +111,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parameter  
  *dwStyle*  
- Gibt die Abkürzungstasten-Steuerelements die Art an. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen. Finden Sie unter [allgemeinen Stile von Listensteuerelementen](http://msdn.microsoft.com/library/windows/desktop/bb775498) im Windows SDK für Weitere Informationen.  
+ Gibt die Abkürzungstasten-Steuerelements die Art an. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen. Finden Sie unter [allgemeinen Stile von Listensteuerelementen](/windows/desktop/Controls/common-control-styles) im Windows SDK für Weitere Informationen.  
   
  *Rect*  
  Gibt an, die Abkürzungstasten-Steuerelements die Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT-Struktur](../../mfc/reference/rect-structure1.md).  
@@ -144,13 +144,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parameter  
  *dwExStyle*  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) im Windows SDK.  
   
  *dwStyle*  
- Gibt die Abkürzungstasten-Steuerelements die Art an. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen. Weitere Informationen finden Sie unter [allgemeinen Stile von Listensteuerelementen](http://msdn.microsoft.com/library/windows/desktop/bb775498) im Windows SDK.  
+ Gibt die Abkürzungstasten-Steuerelements die Art an. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen. Weitere Informationen finden Sie unter [allgemeinen Stile von Listensteuerelementen](/windows/desktop/Controls/common-control-styles) im Windows SDK.  
   
  *Rect*  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.  
+ Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.  
   
  *pParentWnd*  
  Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.  
@@ -176,11 +176,11 @@ void GetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] *wVirtualKeyCode*  
- Virtuellem Tastencode der Tastenkombination. Eine Liste der standardmäßige virtuelle Tastencodes finden Sie unter "Winuser.h".  
+*wVirtualKeyCode*<br/>
+[out] Virtuellem Tastencode der Tastenkombination. Eine Liste der standardmäßige virtuelle Tastencodes finden Sie unter "Winuser.h".  
   
- [out] *wModifiers*  
- Eine bitweise Kombination (OR) von Flags, die die Zusatztasten in die Tastenkombination angeben.  
+*wModifiers*<br/>
+[out] Eine bitweise Kombination (OR) von Flags, die die Zusatztasten in die Tastenkombination angeben.  
   
  Die Modifiziererflags lauten wie folgt aus:  
   
@@ -245,11 +245,11 @@ void SetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *wVirtualKeyCode*  
- Virtuellem Tastencode der Tastenkombination. Eine Liste der standardmäßige virtuelle Tastencodes finden Sie unter "Winuser.h".  
+*wVirtualKeyCode*<br/>
+[in] Virtuellem Tastencode der Tastenkombination. Eine Liste der standardmäßige virtuelle Tastencodes finden Sie unter "Winuser.h".  
   
- [in] *wModifiers*  
- Eine bitweise Kombination (OR) von Flags, die die Zusatztasten in die Tastenkombination angeben.  
+*wModifiers*<br/>
+[in] Eine bitweise Kombination (OR) von Flags, die die Zusatztasten in die Tastenkombination angeben.  
   
  Die Modifiziererflags lauten wie folgt aus:  
   

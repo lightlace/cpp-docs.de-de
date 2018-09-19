@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4187 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4187 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef80cda402cd52ae503a0e69046bcbfa09a398bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e065afba508cf4c532f33924fd89cb1fef1fd5a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276554"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064723"
 ---
 # <a name="compiler-warning-level-1-c4187"></a>Compilerwarnung (Stufe 1) C4187
-\#Import Attribute 'Attribut1' und 'Attribut2' sind inkompatibel. beide ignoriert  
-  
- Eine [#import](../../preprocessor/hash-import-directive-cpp.md) -Anweisung hat `no_implementation` - und `implementation_only` -Attribute angegeben. Beide werden ignoriert.
+
+\#Import-Attribute 'Attribut1' und 'Attribut2' sind inkompatibel; beide ignoriert
+
+Eine [#import](../../preprocessor/hash-import-directive-cpp.md) -Anweisung hat `no_implementation` - und `implementation_only` -Attribute angegeben. Beide werden ignoriert.

@@ -1,5 +1,5 @@
 ---
-title: Abort-Funktion | Microsoft Docs
+title: Abort-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/01/2017
 ms.technology:
@@ -14,16 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4acfbb5a0790dec6f7b5770832cc6b09f69a28d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6e0b7dc49fbc53eb5e079657d98380d10bedf4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408024"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036487"
 ---
 # <a name="abort-function"></a>abort-Funktion
 
-Die **abort** -Funktion, auch in der standardincludedatei deklariert \<stdlib.h >, beendet ein C++-Programm. Der Unterschied zwischen **beenden** und **abort** handelt, **beenden** ermöglicht die C++-Laufzeit Beendigung eine Verarbeitung stattfinden (globale Objekt Destruktoren aufgerufen werden), während **abort** das Programm sofort beendet. Weitere Informationen finden Sie unter [abort](../c-runtime-library/reference/abort.md) in der *Run-Time Library Reference*.
+Die **Abbrechen** -Funktion, auch in der standardincludedatei deklariert \<stdlib.h >, beendet ein C++-Programm. Der Unterschied zwischen `exit` und **Abbrechen** ist, die `exit` ermöglicht die Verarbeitung der C++-Laufzeit-Beendigung durchzuführen (globale Objekt Destruktoren aufgerufen werden), während **Abbrechen** das Programm beendet sofort. Weitere Informationen finden Sie unter [Abbrechen](../c-runtime-library/reference/abort.md) in die *Run-Time Library Reference*.
 
 ## <a name="see-also"></a>Siehe auch
 

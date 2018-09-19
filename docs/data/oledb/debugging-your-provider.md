@@ -1,5 +1,5 @@
 ---
-title: Debuggen des Anbieters | Microsoft Docs
+title: Debuggen des Anbieters | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,31 +18,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c6258ddd3fd4317c608cb20486c364918fb5c73a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5552b9c3d3d697b322b8c1d71eaf0e71630fac38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106392"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040198"
 ---
 # <a name="debugging-your-provider"></a>Debuggen des Anbieters
+
 Es gibt zwei Möglichkeiten zum Debuggen von Ihrem Anbieters:  
   
--   Da der Anbieter im Prozess erstellt werden, können Sie mithilfe der OLE DB-Consumervorlagen und einen Einzelschritt in den Anbieter normalerweise Consumercode erstellen.  
+- Da der Anbieter im Prozess erstellt wurden, können Sie normalerweise mit Hilfe der OLE DB-Consumervorlagen und einen Einzelschritt in den Anbieter erstellen.  
   
--   Sie können das ITEST-Hilfsprogramm verwenden, das mit Visual C++ enthalten ist.  
+- Sie können das ITEST-Dienstprogramm verwenden, das mit Visual C++ enthalten ist.  
   
-### <a name="to-use-the-itest-utility"></a>Zum Verwenden des Hilfsprogramms ITEST  
+### <a name="to-use-the-itest-utility"></a>Verwenden des Dienstprogramms ITEST  
   
-1.  Öffnen Sie das Anbieterprojekt.  
+1. Öffnen Sie das Anbieterprojekt.  
   
-2.  Auf der **Projekte** Menü klicken Sie auf **Einstellungen**.  
+1. Auf der **Projekte** Menü klicken Sie auf **Einstellungen**.  
   
-3.  In der **Eigenschaftenseiten** (Dialogfeld), klicken Sie auf die **Debuggen** Registerkarte.  
+1. In der **Eigenschaftenseiten** Dialogfeld klicken Sie auf die **Debuggen** Registerkarte.  
   
-4.  In der **ausführbare Datei für die Debugsitzung** wählen das ITEST.  
+1. In der **ausführbare Datei für Debugsitzung** wählen das ITEST.  
   
-5.  Legen Sie Haltepunkte, und klicken Sie dann wie üblich Debuggen.  
+1. Legen Sie Haltepunkte fest, und klicken Sie dann wie gewohnt debuggen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit OLE DB-Anbietervorlagen](../../data/oledb/working-with-ole-db-provider-templates.md)
+
+[Arbeiten mit OLE DB-Anbietervorlagen](../../data/oledb/working-with-ole-db-provider-templates.md)

@@ -1,7 +1,7 @@
 ---
-title: Verwenden von C- oder C++-Symbolen in __asm-Blöcken | Microsoft Docs
+title: Verwenden von C- oder C++-Symbolen in __asm-Blöcken | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -18,28 +18,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 746614de653649747bf20ae4c223e5687ee53f5c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8ba8426e2a7ae1152a41fafa0c239498801c6e4d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049426"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678892"
 ---
 # <a name="using-c-or-c-symbols-in-asm-blocks"></a>Verwenden von C- oder C++-Symbolen in __asm-Blöcken
-## <a name="microsoft-specific"></a>Microsoft-spezifisch  
- Ein `__asm` Block kann finden Sie in einem C- oder C++-Symbol im Bereich, in dem der Block wird angezeigt. (C und C++ Symbole sind, Variablennamen, Funktionsnamen, und Bezeichnungen; die Namen, die keine symbolische Konstanten sind oder `enum` Elemente. Sie können keine C++ Memberfunktionen aufrufen.)  
-  
- Die Verwendung von C und C++-Symbolen gelten einige Einschränkungen:  
-  
--   Jede assemblysprachanweisung darf nur eine C- oder C++-Symbol. Mehrere Symbole angezeigt werden können, in der gleichen Assemblyanweisung nur mit **Länge**, **Typ**, und **Größe** Ausdrücke.  
-  
--   Funktionen, die auf die verwiesen wird einer `__asm` Block muss zuvor in der Anwendung (Prototypen) deklariert werden. Andernfalls der Compiler kann nicht unterschieden Funktionsnamen und Bezeichnungen in der `__asm` Block.  
-  
--   Ein `__asm` Block kann keine Symbole C- oder C++ verwenden, mit der gleichen Schreibweise wie MASM reservierte Wörter (unabhängig von der Schreibweise). MASM-reservierte Wörter enthalten Anweisungsnamen, z. B. **PUSH** und Namen, z. B. SI zu registrieren.  
-  
--   Struktur- und Union-Tags werden nicht erkannt. `__asm` blockiert.  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von C oder C++ in __asm-Blöcken](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)
+
+**Microsoft-spezifisch**
+
+Ein `__asm` Block kann auf jeder C- oder C++-Symbol, in der Block steht verweisen. (C und C++-Symbole sind Variablennamen, Funktionsnamen, und die Bezeichnungen; die, Namen, die nicht der symbolischen Konstanten oder `enum` Member. Sie können keine C++-Memberfunktionen Funktionen aufrufen.)
+
+Einige Einschränkungen gelten für die Verwendung von C- und C++-Symbolen:
+
+- Jede Assembly-Language-Anweisung kann nur eine C- oder C++-Symbol enthalten. Mehrere Symbole können angezeigt werden, in der gleichen Assemblyanweisung nur mit **Länge**, **Typ**, und **Größe** Ausdrücke.
+
+- Funktionen, die auf die verwiesen wird einer `__asm` Block (Prototyp) weiter oben in das Programm deklariert werden. Andernfalls vom Compiler nicht unterscheiden Funktionsnamen und Bezeichnungen in der `__asm` Block.
+
+- Ein `__asm` Block keine Symbole für C- oder C++ mit der gleichen Schreibweise wie MASM reservierte Wörter (unabhängig von der Schreibweise) nicht verwendet werden. MASM-reservierten Wörter enthalten Anweisungsnamen, z. B. **PUSH** und Namen, z. B. SI zu registrieren.
+
+- Struktur- und Unionmember Tags werden nicht erkannt. `__asm` Blöcke.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von C oder C++ in __asm-Blöcken](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>
