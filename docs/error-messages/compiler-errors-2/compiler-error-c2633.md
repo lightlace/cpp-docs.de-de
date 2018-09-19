@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2633 generiert | Microsoft Docs
+title: Compilerfehler C2633 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97bc51896487b0520245aa714eafb25a393365e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2750cad468158ec5f8eddc967392ea68c1029119
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233095"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108553"
 ---
-# <a name="compiler-error-c2633"></a>Compiler-Fehler C2633 generiert
-"Bezeichner": "Inline" ist der einzige zulässige Speicherklasse für Konstruktoren  
-  
- Ein Konstruktor ist als eine Speicherklasse als Inline deklariert.  
-  
- Im folgende Beispiel wird C2633 generiert:  
-  
-```  
-// C2633.cpp  
-// compile with: /c  
-class C {  
-   extern C();   // C2633, not inline  
-   inline C();   // OK  
-};  
+# <a name="compiler-error-c2633"></a>Compilerfehler C2633
+
+'Bezeichner': 'Inline' ist der einzig zulässige Speicherklasse für Konstruktoren
+
+Ein Konstruktor wird als eine Speicherklasse als Inline deklariert.
+
+Im folgende Beispiel wird die C2633 generiert:
+
+```
+// C2633.cpp
+// compile with: /c
+class C {
+   extern C();   // C2633, not inline
+   inline C();   // OK
+};
 ```

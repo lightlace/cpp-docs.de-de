@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit OLE DB-Anbietervorlagen | Microsoft Docs
+title: Arbeiten mit OLE DB-Anbietervorlagen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,32 +18,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7996d3d3950882dd31e0eb7f52a94329a8fa45df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 16f628b5895ca137394186eaa13c6848f2884e50
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112068"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107644"
 ---
 # <a name="working-with-ole-db-provider-templates"></a>Arbeiten mit OLE DB-Anbietervorlagen
-Informationen zum Arbeiten mit OLE DB-Anbietervorlagen, finden Sie unter den folgenden Themen:  
+
+Arbeiten mit dem OLE DB-Anbietervorlagen finden Sie unter den folgenden Themen:  
   
--   [Hinzufügen einer Schnittstelle zum Anbieter](../../data/oledb/adding-an-interface-to-your-provider.md)  
+- [Hinzufügen einer Schnittstelle zum Anbieter](../../data/oledb/adding-an-interface-to-your-provider.md)  
   
--   [Verweisen auf eine Eigenschaft im Anbieter](../../data/oledb/referencing-a-property-in-your-provider.md)  
+- [Verweisen auf eine Eigenschaft im Anbieter](../../data/oledb/referencing-a-property-in-your-provider.md)  
   
--   [Festlegen von Eigenschaften im Anbieter](../../data/oledb/setting-properties-in-your-provider.md)  
+- [Festlegen von Eigenschaften im Anbieter](../../data/oledb/setting-properties-in-your-provider.md)  
   
--   [Dynamisches Binden von Spalten im Anbieter](../../data/oledb/dynamically-binding-columns-in-your-provider.md)  
+- [Dynamisches Binden von Spalten im Anbieter](../../data/oledb/dynamically-binding-columns-in-your-provider.md)  
   
--   [Unterstützen des Freethreadings im Anbieter](../../data/oledb/supporting-free-threading-in-your-provider.md)  
+- [Unterstützen des Freethreadings im Anbieter](../../data/oledb/supporting-free-threading-in-your-provider.md)  
   
--   [Testen des Anbieters](../../data/oledb/testing-your-provider.md)  
+- [Testen des Anbieters](../../data/oledb/testing-your-provider.md)  
   
--   [Debuggen des Anbieters](../../data/oledb/debugging-your-provider.md)  
+- [Debuggen des Anbieters](../../data/oledb/debugging-your-provider.md)  
   
--   [Konvertieren von Daten, die nicht vom Anbieter unterstützt werden](../../data/oledb/converting-data-not-supported-by-the-provider.md)  
+- [Konvertieren von Daten, die nicht vom Anbieter unterstützt werden](../../data/oledb/converting-data-not-supported-by-the-provider.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Anbieter-Vorlagenreferenz](../../data/oledb/ole-db-provider-templates-reference.md)   
- [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)
+
+[Referenz der OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)

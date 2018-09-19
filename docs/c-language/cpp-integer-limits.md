@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c95e0affa9047aa41ee5ff04b011ac0fbd8d63d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 02a4194d69bf07d27777ad30cf9ed0e5794c04c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388051"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136282"
 ---
 # <a name="c-integer-limits"></a>Ganzzahlige Grenzen in C++
 
@@ -56,4 +56,4 @@ Wenn ein Wert die größte Ganzzahldarstellung übersteigt, generiert der Micros
 
 ## <a name="see-also"></a>Siehe auch
 
-[C-Ganzzahlkonstanten](../c-language/c-integer-constants.md)  
+[C-Ganzzahlkonstanten](../c-language/c-integer-constants.md)

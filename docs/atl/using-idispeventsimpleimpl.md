@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a47cef741e9db3237bbc9f6477cdf2863b38e4e3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 00dadde438af1b4de820316dd4dc50e773827aca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760369"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107520"
 ---
 # <a name="using-idispeventsimpleimpl"></a>Verwenden von IDispEventSimpleImpl
 
@@ -46,7 +46,7 @@ Das folgende Beispiel veranschaulicht das Behandeln der `DocumentChange` Ereigni
 Das Beispiel stammt aus dem [ATLEventHandling-Beispiel](../visual-cpp-samples.md).  
 
 ```cpp
-[ uuid(000209F7-0000-0000-C000-000000000046), hidden ]  
+[ uuid(000209F7-0000-0000-C000-000000000046), hidden ]
 dispinterface ApplicationEvents {
 properties:
 methods:
@@ -77,6 +77,6 @@ Der folgende Code stammt aus Simple.cpp:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Behandlung von Ereignissen](../atl/event-handling-and-atl.md)   
+[Ereignisbehandlung](../atl/event-handling-and-atl.md)<br/>
 [ATLEventHandling-Beispiel](../visual-cpp-samples.md)
 
