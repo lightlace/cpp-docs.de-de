@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76a85b840aba9d52600b3cf730eada0e8095eb98
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8ffe21526dd106ad067c68da49d6b07bb9e50cf8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756323"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039828"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject-Klasse
 
@@ -41,14 +41,14 @@ Diese Klasse implementiert die [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-
 ## <a name="syntax"></a>Syntax
 
 ```
-template<class contained>  
-class CComAggObject : public IUnknown, 
+template<class contained>
+class CComAggObject : public IUnknown,
    public CComObjectRootEx<contained::_ThreadModel::ThreadModelNoCS>
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*enthalten sind*  
+*enthalten sind*<br/>
 Abgeleitet von die Klasse [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oder [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), wie auch über andere Schnittstellen für das Objekt unterstützt werden sollen.
 
 ## <a name="members"></a>Member
@@ -119,7 +119,7 @@ CComAggObject(void* pv);
 
 ### <a name="parameters"></a>Parameter
 
-*PV*  
+*PV*<br/>
 [in] Die äußere unbekannte.
 
 ### <a name="remarks"></a>Hinweise
@@ -152,7 +152,7 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>Parameter
 
-*PP*  
+*PP*<br/>
 [out] Ein Zeiger auf eine **CComAggObject\<**<em>enthaltenen</em> **>** Zeiger. Wenn `CreateInstance` nicht erfolgreich ist, ist *pp* auf NULL festgelegt ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -195,7 +195,7 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>Parameter
 
-*enthalten sind*  
+*enthalten sind*<br/>
 [in] Abgeleitet von die Klasse [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oder [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), wie auch über andere Schnittstellen für das Objekt unterstützt werden sollen.
 
 ### <a name="remarks"></a>Hinweise
@@ -214,13 +214,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Parameter
 
-*IID*  
+*IID*<br/>
 [in] Der Bezeichner der angeforderten Schnittstelle.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Ein Zeiger auf den Schnittstellenzeiger vom *Iid*. Wenn das Objekt nicht über diese Schnittstelle unterstützt *PpvObject* auf NULL festgelegt ist.
 
-*PP*  
+*PP*<br/>
 [out] Ein Zeiger auf den Schnittstellenzeiger vom Typ `Q`. Wenn das Objekt nicht über diese Schnittstelle unterstützt *pp* auf NULL festgelegt ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -245,9 +245,9 @@ In Debugbuilds `Release` gibt einen Wert an, die möglicherweise bei der Diagnos
 
 ## <a name="see-also"></a>Siehe auch
 
-[CComObject-Klasse](../../atl/reference/ccomobject-class.md)   
-[CComPolyObject-Klasse](../../atl/reference/ccompolyobject-class.md)   
-[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
-[DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)   
-[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
+[CComObject-Klasse](../../atl/reference/ccomobject-class.md)<br/>
+[CComPolyObject-Klasse](../../atl/reference/ccompolyobject-class.md)<br/>
+[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)<br/>
+[DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)<br/>
+[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

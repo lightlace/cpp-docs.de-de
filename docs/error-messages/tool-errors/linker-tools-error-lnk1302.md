@@ -1,5 +1,5 @@
 ---
-title: Linkertoolfehler Lnk1302 | Microsoft Docs
+title: Linkertoolfehler Lnk1302 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aa84a411f91303c84acb44e2e6c0ab3d975e19f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dc85b37d58e12602c02c2207c1f38bda9344e59
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299418"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045509"
 ---
 # <a name="linker-tools-error-lnk1302"></a>Linkertoolfehler LNK1302
-Verknüpfen sichere NETMODULE-Dateien nur zu unterstützen; Datei .netmodule kann nicht verknüpft  
-  
- Eine NETMODULE-Datei (kompiliert mit **/ln**) wurde in den Versuch eines Benutzers zum Aufrufen der MSIL-Verknüpfung an den Linker übergeben.  Ein C++-Modul ist gültig für MSIL verknüpfen, wenn die Kompilierung mit **/CLR: safe**.  
-  
- Um diesen Fehler zu beheben, kompilieren Sie mit **/CLR: safe** MSIL Verknüpfen aktivieren, oder übergeben der **"/ CLR"** oder **/CLR: pure** OBJ-Datei an den Linker anstelle des Moduls.  
-  
- Weitere Informationen finden Sie unter  
-  
--   [/LN (MSIL-Modul erstellen)](../../build/reference/ln-create-msil-module.md)  
-  
--   [.NETMODULE-Dateien als Eingabe für den Linker](../../build/reference/netmodule-files-as-linker-input.md)
+
+nur die Verknüpfung sicherer .netmodules unterstützt; Datei .netmodule kann nicht verknüpft
+
+Eine NETMODULE-Datei (kompiliert mit **/ln**) an den Linker den Versuch eines Benutzers zum Aufrufen der MSIL-Verknüpfung übergeben wurde.  Ein C++-Modul ist gültig für MSIL verknüpfen, wenn die Kompilierung mit **/CLR: safe**.
+
+Um diesen Fehler zu beheben, kompilieren Sie mit **/CLR: safe** MSIL-linking aktivieren, oder übergeben die **"/ CLR"** oder **/CLR: pure** OBJ-Datei an den Linker anstelle des Moduls.
+
+Weitere Informationen finden Sie unter
+
+- [/LN (MSIL-Modul erstellen)](../../build/reference/ln-create-msil-module.md)
+
+- [.NETMODULE-Dateien als Eingabe für den Linker](../../build/reference/netmodule-files-as-linker-input.md)
