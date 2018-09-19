@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2138 | Microsoft Docs
+title: Compilerfehler C2138 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e066c3de938b85431ea837c91b0ae51ad0cd4e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ba28cd6d2772a0d7027f591b35c07c42941d440
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166532"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107462"
 ---
 # <a name="compiler-error-c2138"></a>Compilerfehler C2138
-definieren eine Enumeration ohne Mitglieder nicht zulässig  
-  
- Eine Enumeration muss mindestens ein Mitglied haben Wenn "/ Za" (Microsoft-Erweiterungen deaktivieren) ausgewählt ist.
+
+definieren eine Enumeration ohne Elemente nicht zulässig
+
+Eine Enumeration müssen mindestens ein Mitglied bei der/Za (Microsoft-Erweiterungen deaktivieren) aktiviert ist.

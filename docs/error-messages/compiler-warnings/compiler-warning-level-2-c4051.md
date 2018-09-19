@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 2) C4051 | Microsoft Docs
+title: Compilerwarnung (Stufe 2) C4051 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 672de8924f7a04d1849ff79349c8334ed123a418
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5074ca6f048aec06f98b6081d932ee85868cb9d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296655"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103404"
 ---
 # <a name="compiler-warning-level-2-c4051"></a>Compilerwarnung (Stufe 2) C4051
-Typkonvertierung; möglicher Datenverlust  
-  
- Ein Ausdruck enthält zwei Datenelemente mit unterschiedlichen Basistypen. Die Konvertierung eines Typs bewirkt, dass das Datenelement abgeschnitten wird.  
-  
- Diese Warnung kann behoben werden, wenn Sie die Datenelemente in den geeigneten Typ umwandeln.
+
+Typkonvertierung; möglicher Datenverlust
+
+Ein Ausdruck enthält zwei Datenelemente mit unterschiedlichen Basistypen. Die Konvertierung eines Typs bewirkt, dass das Datenelement abgeschnitten wird.
+
+Diese Warnung kann behoben werden, wenn Sie die Datenelemente in den geeigneten Typ umwandeln.

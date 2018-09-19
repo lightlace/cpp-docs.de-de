@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62bb1ca2cc4ba07e3f3262f6babee3ed4c52caa2
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: db4e6a01fbf7384cfbc2e1ef2b3c5ed48991998d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708213"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095434"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx-Klasse
 Implementiert die Funktionalität eines Windows-SDI-Rahmenfensters (Single Document Interface), wobei es sich um ein überlappendes oder ein Popupfenster handeln kann. Ebenfalls bereitgestellt werden Member zum Verwalten des Fensters. Es erweitert die [CFrameWnd](../../mfc/reference/cframewnd-class.md) Klasse.  
@@ -1198,17 +1198,12 @@ afx_msg LRESULT OnMenuChar(
   
 ### <a name="return-value"></a>Rückgabewert  
  Das höherwertige Wort muss es sich um einen der folgenden Werte sein.  
-  
- `0`  
- Das Framework sollte die Tastatureingabe ignoriert werden.  
-  
- `1`  
- Das Framework sollte das Menü schließen.  
-  
- `2`  
- Das Framework sollten eines der Elemente angezeigt wird, klicken Sie im Menü auswählen. Das niederwertige Wort enthält die ID des Befehls auswählen.  
-  
-### <a name="remarks"></a>Hinweise  
+
+|||
+|-|-|
+ `0` | Das Framework sollte die Tastatureingabe ignoriert werden.  
+ `1`  | Das Framework sollte das Menü schließen.  
+ `2`  | Das Framework sollten eines der Elemente angezeigt wird, klicken Sie im Menü auswählen. Das niederwertige Wort enthält die ID des Befehls auswählen.  
   
 ##  <a name="onmousemove"></a>  CFrameWndEx::OnMouseMove  
  Das Framework ruft diese Methode auf, wenn der Mauszeiger bewegt wird.  

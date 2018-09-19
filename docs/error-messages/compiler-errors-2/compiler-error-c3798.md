@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3798 | Microsoft Docs
+title: Compilerfehler C3798 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da4ca81f2110ff1f76fdc9d0377234087a532017
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 217aa46cdd643361fed16f8a69de7f8ec75214fb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269053"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099839"
 ---
 # <a name="compiler-error-c3798"></a>Compilerfehler C3798
-"Spezifizierer": Eigenschaftendeklaration keine Überschreibungsspezifizierer (sollte in der Eigenschaft Get/Set-Methoden stattdessen platziert werden)  
-  
- Eine Eigenschaft wurde falsch deklariert. Weitere Informationen finden Sie unter  
-  
--   [Eigenschaft](../../windows/property-cpp-component-extensions.md)  
-  
--   [abstract](../../windows/abstract-cpp-component-extensions.md)  
-  
--   [sealed](../../windows/sealed-cpp-component-extensions.md)  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C3798 generiert:  
-  
-```  
-// C3798.cpp  
-// compile with: /clr /c  
-ref struct A {  
-   property int Prop_1 abstract;   // C3798  
-   property int Prop_2 sealed;   // C3798  
-  
-   // OK  
-   property int Prop_3 {  
-      virtual int get() abstract;  
-      virtual void set(int i) abstract;  
-   }  
-  
-   property int Prop_4 {  
-      virtual int get() sealed;  
-      virtual void set(int i) sealed;  
-   }  
-};  
+
+"Spezifizierer": Eigenschaftendeklaration darf keinen Überschreibungsspezifizierer (sollte in der Eigenschaft Get/Set-Methoden stattdessen platziert werden)
+
+Eine Eigenschaft wurde falsch deklariert. Weitere Informationen finden Sie unter
+
+- [Eigenschaft](../../windows/property-cpp-component-extensions.md)
+
+- [abstract](../../windows/abstract-cpp-component-extensions.md)
+
+- [sealed](../../windows/sealed-cpp-component-extensions.md)
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird C3798 generiert:
+
+```
+// C3798.cpp
+// compile with: /clr /c
+ref struct A {
+   property int Prop_1 abstract;   // C3798
+   property int Prop_2 sealed;   // C3798
+
+   // OK
+   property int Prop_3 {
+      virtual int get() abstract;
+      virtual void set(int i) abstract;
+   }
+
+   property int Prop_4 {
+      virtual int get() sealed;
+      virtual void set(int i) sealed;
+   }
+};
 ```

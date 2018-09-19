@@ -1,5 +1,5 @@
 ---
-title: Befehlszeilenwarnung D9024 | Microsoft Docs
+title: Befehlszeilenwarnung D9024 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47089a580285a7d2d0f49848e7e8e5ad90f32616
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dae28f28a07049fa19b56af7efcf43285b2a751b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296912"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092673"
 ---
 # <a name="command-line-warning-d9024"></a>Befehlszeilenwarnung D9024
-Unbekannte Quellen Datei 'Dateiname'-Typ, Objektdatei wird angenommen  
-  
- Die Erweiterung der angegebenen Datei wurde nicht erkannt. Die Datei wurde davon ausgegangen, dass eine Objektdatei und an den Linker übergeben wurde.  
-  
- Die folgenden Erweiterungen erkannt werden:  
-  
--   c (C-Quelldatei)  
-  
--   .cxx (C++-Quelldatei)  
-  
--   .cpp (C++-Quelldatei)  
-  
--   obj (Objektdatei)  
-  
--   LIB (Bibliotheksdatei)  
-  
--   DEF (Moduldefinitionsdatei)  
-  
--   EXP (Linker exportiert erstellt, indem LINK/LIB-Datei)
+
+Unbekannte Quelle file "Typ"Dateiname"", Objektdatei wird angenommen
+
+Die Erweiterung der angegebenen Datei wurde nicht erkannt. Die Datei wurde davon ausgegangen, dass eine Objektdatei und an den Linker übergeben wurde.
+
+Es werden die folgenden Erweiterungen erkannt:
+
+- c (C-Quelldatei)
+
+- .cxx (C++-Quelldatei)
+
+- .cpp (C++-Quelldatei)
+
+- obj (Objekt-Datei)
+
+- LIB (Library-Datei)
+
+- DEF (Moduldefinitionsdatei)
+
+- EXP (Linker exportiert erstellt LINK/LIB-Datei)

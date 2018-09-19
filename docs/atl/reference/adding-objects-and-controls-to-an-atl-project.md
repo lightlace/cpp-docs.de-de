@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e70ac6f333312fc62854478897912fc28f3c2f8e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a5cb510bb02f71f71b35191d3ba9c4fee6b7059d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756560"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093960"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Hinzufügen von Objekten und Steuerelementen zu einem ATL-Projekt
 
@@ -56,10 +56,10 @@ Sie können eines der ATL-Code-Assistenten verwenden, ein Objekt oder ein Steuer
 
 ## <a name="see-also"></a>Siehe auch
 
-[ATL-Projekt-Assistent](../../atl/reference/atl-project-wizard.md)   
-[Visual C++ Project Types (Visual C++-Projekttypen)](../../ide/visual-cpp-project-types.md)   
-[Creating Desktop Projects By Using Application Wizards (Erstellen von Desktopprojekten mit Anwendungs-Assistenten)](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
-[Grundlagen von ARL COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)   
-[Programmieren mit ATL- und C-Laufzeitcode](../../atl/programming-with-atl-and-c-run-time-code.md)   
+[ATL-Projekt-Assistent](../../atl/reference/atl-project-wizard.md)<br/>
+[Visual C++-Projekttypen](../../ide/visual-cpp-project-types.md)<br/>
+[Erstellen von Desktopprojekten mit Anwendungs-Assistenten](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Grundlagen von ARL COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)<br/>
+[Programmieren mit ATL- und C-Laufzeitcode](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Standardmäßige ATL-Projektkonfigurationen](../../atl/reference/default-atl-project-configurations.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2894 | Microsoft Docs
+title: Compilerfehler C2894 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92c412aa753d4440a25f8123b4b25e40360b7a3e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14305b88042421817133a3def8fd73db57055026
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243318"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095728"
 ---
 # <a name="compiler-error-c2894"></a>Compilerfehler C2894
-Vorlagen können nicht deklariert werden, damit 'C'-Bindung  
-  
- Dieser Fehler kann verursacht werden, von einer Vorlage definiert, die innerhalb einer `extern` Block "C".  
-  
- Im folgende Beispiel wird C2894 generiert:  
-  
-```  
-// C2894.cpp  
-extern "C" {  
-   template<class T> class stack {};   // C2894 fail  
-  
-   template<class T> void f(const T &aT) {}   // C2894  
-}  
-```  
-  
- Im folgende Beispiel wird C2894 generiert:  
-  
-```  
-// C2894b.cpp  
-// compile with: /c  
-extern "C" template<class T> void f(const T &aT) {}   // C2894  
-  
-template<class T> void f2(const T &aT) {}   // OK  
+
+Vorlagen können nicht mit "C"-Bindung deklariert werden
+
+Dieser Fehler kann verursacht werden, in der Vorlage definiert, die innerhalb einer `extern` "C"-Block.
+
+Im folgende Beispiel wird die C2894 generiert:
+
+```
+// C2894.cpp
+extern "C" {
+   template<class T> class stack {};   // C2894 fail
+
+   template<class T> void f(const T &aT) {}   // C2894
+}
+```
+
+Im folgende Beispiel wird die C2894 generiert:
+
+```
+// C2894b.cpp
+// compile with: /c
+extern "C" template<class T> void f(const T &aT) {}   // C2894
+
+template<class T> void f2(const T &aT) {}   // OK
 ```

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0da9a0299679ec140888e9536329f0957a786279
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 208c89cad441a1fae70f5532204ec7856459de7f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760002"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095858"
 ---
 # <a name="atl-com-property-pages"></a>ATL COM-Eigenschaftenseiten
 
@@ -38,18 +38,18 @@ Weitere Informationen finden Sie unter [Eigenschaftenblätter und Eigenschaftens
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Festlegen der Eigenschaftenseiten](../atl/specifying-property-pages.md)  
+[Festlegen der Eigenschaftenseiten](../atl/specifying-property-pages.md)<br/>
 Listet die Schritte zum Festlegen der Eigenschaftenseiten für ein Steuerelement, und zeigt eine Beispielklasse.
 
-[Implementieren der Eigenschaftenseiten](../atl/implementing-property-pages.md)  
+[Implementieren der Eigenschaftenseiten](../atl/implementing-property-pages.md)<br/>
 Listet die Schritte zum Implementieren der Eigenschaftenseiten, einschließlich Methoden zum Überschreiben. Führt Sie durch ein vollständiges Beispiel für das Beispielprogramm ATLPages Grundlage.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-[ATLPages-Beispiel](../visual-cpp-samples.md)  
+[ATLPages-Beispiel](../visual-cpp-samples.md)<br/>
 Der Beispiel-Zusammenfassung für das ATLPages-Beispiel implementiert eine Eigenschaft mit `IPropertyPageImpl`.
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Enthält Links zu konzeptionellen Themen über die Programmierung mit der Active Template Library.
 
 ## <a name="see-also"></a>Siehe auch

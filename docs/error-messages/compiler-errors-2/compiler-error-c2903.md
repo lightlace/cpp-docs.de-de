@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2903 | Microsoft Docs
+title: Compilerfehler C2903 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c822870f9e73b28a5ebeb7fd43438054e45ee75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f06baeaa262905d36306e8e36985018db9eeb819
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248254"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091256"
 ---
 # <a name="compiler-error-c2903"></a>Compilerfehler C2903
-'Bezeichner': Symbol ist weder eine Klassenvorlage noch eine Funktionsvorlage.  
-  
- Der Code versucht die explizite Instanziierung eines Elements, bei dem es sich nicht um eine Vorlage handelt.  
-  
- Im folgenden Beispiel wird C2903 generiert:  
-  
-```  
-// C2903.cpp  
-// compile with: /c  
-namespace N {  
-   template<class T> class X {};  
-   class Y {};  
-}  
-void g() {  
-   N::template Y y;   // C2903  
-   N::X<N::Y> y;   // OK  
-}  
-```  
-  
- C2903 kann auch auftreten, wenn Generika verwendet werden:  
-  
-```  
-// C2903b.cpp  
-// compile with: /clr /c  
-namespace N {  
-   class Y {};  
-   generic<class T> ref class Z {};  
-}  
-  
-void f() {  
-   N::generic Y y;   // C2903  
-   N:: generic Z<int>^ z;   // OK  
-}  
+
+'Bezeichner': Symbol ist weder eine Klassenvorlage noch eine Funktionsvorlage.
+
+Der Code versucht die explizite Instanziierung eines Elements, bei dem es sich nicht um eine Vorlage handelt.
+
+Im folgenden Beispiel wird C2903 generiert:
+
+```
+// C2903.cpp
+// compile with: /c
+namespace N {
+   template<class T> class X {};
+   class Y {};
+}
+void g() {
+   N::template Y y;   // C2903
+   N::X<N::Y> y;   // OK
+}
+```
+
+C2903 kann auch auftreten, wenn Generika verwendet werden:
+
+```
+// C2903b.cpp
+// compile with: /clr /c
+namespace N {
+   class Y {};
+   generic<class T> ref class Z {};
+}
+
+void f() {
+   N::generic Y y;   // C2903
+   N:: generic Z<int>^ z;   // OK
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Mathematischer Fehler M6201 | Microsoft Docs
+title: Mathematischer Fehler M6201 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6a15e841cfc8daf1abdafc9997698807e7356af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87d2c09d6448bcf7fb0557fa3a174c60205a34ea
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332064"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099394"
 ---
 # <a name="math-error-m6201"></a>Mathematischer Fehler M6201
-'Funktion': _DOMAIN-Fehler  
-  
- Ein Argument an die angegebene Funktion wurde außerhalb der Domäne der zulässigen Eingabewerte für diese Funktion.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-result = sqrt(-1.0)   // C statement  
-result = SQRT(-1.0)   !  FORTRAN statement  
-```  
-  
- Dieser Fehler-Ruft die `_matherr` -Funktion mit den Namen der Funktion, die Argumente und den Fehlertyp. Sie können Umschreiben der `_matherr` Funktion, um die Behandlung bestimmter Gleitkommaoperationen zur Laufzeit anzupassen.
+
+'Funktion': _DOMAIN-Fehler
+
+Ein Argument für die angegebene Funktion war außerhalb der Domäne des zulässige Eingabewerte für diese Funktion.
+
+## <a name="example"></a>Beispiel
+
+```
+result = sqrt(-1.0)   // C statement
+result = SQRT(-1.0)   !  FORTRAN statement
+```
+
+Dieser Fehler führt zum Aufruf der `_matherr` -Funktion mit den Namen der Funktion, die Argumente und den Fehlertyp. Sie können Umschreiben der `_matherr` Funktion, um die Behandlung bestimmter Gleitkommaoperationen Laufzeit anpassen.

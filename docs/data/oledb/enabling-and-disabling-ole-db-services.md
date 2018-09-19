@@ -1,5 +1,5 @@
 ---
-title: Aktivieren und Deaktivieren von OLE DB-Dienste | Microsoft Docs
+title: Aktivieren und Deaktivieren von OLE DB-Diensten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 785997cafec76bfa438382ace6930d53c31c4dc9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6edd507edc21d58d17435b1d31d918a965db624a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33099471"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100733"
 ---
 # <a name="enabling-and-disabling-ole-db-services"></a>Aktivieren und Deaktivieren von OLE DB-Diensten
-Komponenten-Manager für OLE DB-Dienst vergleicht die Eigenschaften, die vom Consumer vom Anbieter, um festzustellen, ob einzelne Dienstkomponenten aufgerufen werden können, um erweiterte Funktionalität, die vom Consumer angeforderte erfüllen unterstützten angegeben werden. Wenn eine Anwendung, welches einen bildlauffähigen Cursor anfordert, und der Anbieter nur einen Vorwärtscursor unterstützt, ruft die Dienst-Standortkomponenten-Manager die Client-Cursormoduls-Dienstkomponente um bildlauffähigen Funktionalität bereitzustellen. Wenn die Anwendung ist auf die erweiterten Funktionen, die standardmäßig für den Anbieter-Rowset unterstützt zurückzugreifen, und die Anwendung nicht explizit die Eigenschaften, um anzufordern, dass Funktionen, die Funktionalität für das vom Client zurückgegebenen Rowset nicht angezeigt wird ggf. Cursor-Modul. Um interoperable werden Anwendungen sollten immer Eigenschaften festlegen, um erweiterte Funktionalität explizit anfordern, falls erforderlich.  
+
+Der OLE DB Service Standortkomponenten-Manager vergleicht die Eigenschaften, die vom Consumer, die vom Anbieter zu bestimmen, ob einzelne Dienstkomponenten aufgerufen werden können, um erweiterte Funktionen, die vom Consumer angeforderte erfüllen unterstützt angegeben werden. Ruft z. B. wenn eine Anwendung, welches einen bildlauffähigen Cursor anfordert, und der Anbieter nur einen Vorwärtscursor unterstützt, die Dienst-Standortkomponenten-Manager die Client-Cursor-Engine-Komponente, um bildlauffähigen Funktionalität bereitzustellen. Wenn die Anwendung setzt voraus, erweiterte Funktionen, die standardmäßig für den Anbieter-Rowset unterstützt dass, und die Anwendung nicht explizit die Eigenschaften, um anzufordern, dass Funktionen, die Funktionalität nicht in dem vom Client zurückgegebenen Rowset scheint festlegt Cursor-Engine. Um interoperable, Anwendungen sollten immer Eigenschaften festlegen, um erweiterte Funktionen explizit anfordern, falls erforderlich.  
   
- In einigen Fällen ist es möglicherweise notwendig, einzelne OLE DB-Dienste mit vorhandenen Anwendungen optimiert, die Annahmen über die Merkmale eines Anbieters treffen zu deaktivieren. OLE DB-Dienste bieten die Möglichkeit, einzelne Dienste oder alle Dienste, entweder für eine Verbindung von Verbindung oder für alle Anwendungen, die über einen einzelnen Anbieter deaktivieren.  
+In einigen Fällen ist es möglicherweise notwendig, einzelne OLE DB-Dienste auch mit vorhandenen Anwendungen arbeiten, die Annahmen zu den Eigenschaften von einem Anbieter zu deaktivieren. OLE DB-Dienste bieten die Möglichkeit, einzelne Dienste oder alle Dienste, die für eine Verbindungs-von-Verbindung oder für alle Anwendungen, die mit einem einzigen Anbieter deaktivieren.  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Ressourcenpooling und -Dienste](../../data/oledb/ole-db-resource-pooling-and-services.md)
+
+[OLE DB-Ressourcenpooling und -Dienste](../../data/oledb/ole-db-resource-pooling-and-services.md)

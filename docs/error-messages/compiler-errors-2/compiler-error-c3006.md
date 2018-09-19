@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3006 | Microsoft Docs
+title: Compilerfehler C3006 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3019a4017170b13da21820931a572370db1862e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 098a39fa6a2918a6a168c28ce322544fe944a1c6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258199"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103171"
 ---
 # <a name="compiler-error-c3006"></a>Compilerfehler C3006
-"Klausel": In der Klausel für die "directive"-Direktive von OpenMP fehlt ein erwartetes Argument.  
-  
- Bei einer OpenMP-Direktive fehlt ein erwartetes Argument.  
-  
- Im folgenden Beispiel wird C3006 generiert:  
-  
-```  
-// C3006.c  
-// compile with: /openmp  
-int main()  
-{  
-   #pragma omp parallel shared   // C3006  
-   // Try the following line instead:  
-   // #pragma omp parallel shared(x) {}  
-  
-}  
+
+"Klausel": In der Klausel für die "directive"-Direktive von OpenMP fehlt ein erwartetes Argument.
+
+Bei einer OpenMP-Direktive fehlt ein erwartetes Argument.
+
+Im folgenden Beispiel wird C3006 generiert:
+
+```
+// C3006.c
+// compile with: /openmp
+int main()
+{
+   #pragma omp parallel shared   // C3006
+   // Try the following line instead:
+   // #pragma omp parallel shared(x) {}
+
+}
 ```

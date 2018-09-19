@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3675 | Microsoft Docs
+title: Compilerfehler C3675 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b4aaa53ae1d92364fad143f127ee3e7b504acdd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c4b6656753ab4a611dcb80d1473e0b44bf47a270
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273643"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094779"
 ---
 # <a name="compiler-error-c3675"></a>Compilerfehler C3675
-'Funktion': ist reserviert, da 'Eigenschaft' definiert ist  
-  
- Wenn Sie eine einfache Eigenschaft deklarieren, generiert der Compiler die Get- und Set-Zugriffsmethoden und den Namen in den Bereich des Programms vorhanden sind.  Die vom Compiler generierte gebildet vorangestellt Get_ und Set_ des Eigenschaftennamens.  Aus diesem Grund können Sie Funktionen mit dem gleichen Namen wie die vom Compiler generierten Accessoren nicht deklarieren.  
-  
- Weitere Informationen finden Sie unter [property](../../windows/property-cpp-component-extensions.md) .  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C3675 generiert.  
-  
-```  
-// C3675.cpp  
-// compile with: /clr /c  
-ref struct C {  
-public:  
-   property int Size;  
-   int get_Size() { return 0; }   // C3675  
-};  
+
+'Funktion': ist reserviert, weil "Eigenschaft" definiert ist
+
+Wenn Sie eine einfache Eigenschaft deklarieren, generiert der Compiler die Get- und Set-Accessormethode und die Namen in den Bereich des Programms vorhanden sind.  Die vom Compiler generierten Namen werden durch voranstellen Get_- und Set_ an den Eigenschaftennamen gebildet.  Aus diesem Grund können Sie Funktionen mit dem gleichen Namen wie die vom Compiler generierten Accessoren nicht deklarieren.
+
+Weitere Informationen finden Sie unter [property](../../windows/property-cpp-component-extensions.md) .
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C3675 generiert.
+
+```
+// C3675.cpp
+// compile with: /clr /c
+ref struct C {
+public:
+   property int Size;
+   int get_Size() { return 0; }   // C3675
+};
 ```

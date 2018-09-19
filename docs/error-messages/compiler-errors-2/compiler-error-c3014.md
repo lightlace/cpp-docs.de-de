@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3014 | Microsoft Docs
+title: Compilerfehler C3014 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,70 +16,71 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5623d64adc3fc5f47e4dd63a82078906a11db1b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5fdfc786b3c54bbe30c723ba97f35d3cea37b2f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243146"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098502"
 ---
 # <a name="compiler-error-c3014"></a>Compilerfehler C3014
-Es wurde erwartet, dass auf die Direktive 'direktive' von OpenMP eine For-Schleife folgt.  
-  
- Direktes Folgen auf eine `for` -Direktive stellt für alles, was keine `#pragma omp for` -Schleife ist, einen Fehler dar.  
-  
- Im folgenden Beispiel wird C3014 generiert:  
-  
-```  
-// C3014.cpp  
-// compile with: /openmp  
-int main()  
-{  
-   int i = 0;  
-  
-   #pragma omp parallel  
-   {  
-      #pragma omp for  
-      for (i = 0; i < 10; ++i)   // OK  
-      {  
-      }  
-   }  
-  
-   #pragma omp parallel for  
-   for (i = 0; i < 10; ++i)   // OK  
-   {  
-   }  
-  
-   #pragma omp parallel  
-   {  
-      #pragma omp for  
-      {   // C3014  
-         for (i = 0; i < 10; ++i)  
-         {  
-         }  
-      }  
-   }  
-  
-   #pragma omp parallel for  
-   {   // C3014  
-      for (i = 0; i < 10; ++i)  
-      {  
-      }  
-   }  
-  
-   #pragma omp parallel  
-   {  
-      #pragma omp for  
-      i *= 2;   // C3014  
-      for (i = 0; i < 10; ++i)  
-      {  
-      }  
-   }  
-  
-   #pragma omp parallel for  
-   i *= 2;   // C3014  
-   for (i = 0; i < 10; ++i)  
-   {  
-   }  
-}  
+
+Es wurde erwartet, dass auf die Direktive 'direktive' von OpenMP eine For-Schleife folgt.
+
+Direktes Folgen auf eine `for` -Direktive stellt für alles, was keine `#pragma omp for` -Schleife ist, einen Fehler dar.
+
+Im folgenden Beispiel wird C3014 generiert:
+
+```
+// C3014.cpp
+// compile with: /openmp
+int main()
+{
+   int i = 0;
+
+   #pragma omp parallel
+   {
+      #pragma omp for
+      for (i = 0; i < 10; ++i)   // OK
+      {
+      }
+   }
+
+   #pragma omp parallel for
+   for (i = 0; i < 10; ++i)   // OK
+   {
+   }
+
+   #pragma omp parallel
+   {
+      #pragma omp for
+      {   // C3014
+         for (i = 0; i < 10; ++i)
+         {
+         }
+      }
+   }
+
+   #pragma omp parallel for
+   {   // C3014
+      for (i = 0; i < 10; ++i)
+      {
+      }
+   }
+
+   #pragma omp parallel
+   {
+      #pragma omp for
+      i *= 2;   // C3014
+      for (i = 0; i < 10; ++i)
+      {
+      }
+   }
+
+   #pragma omp parallel for
+   i *= 2;   // C3014
+   for (i = 0; i < 10; ++i)
+   {
+   }
+}
 ```

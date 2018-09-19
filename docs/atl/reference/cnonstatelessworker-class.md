@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb3b6411e9ce34ba0196d25c8a63f3f066d78549
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a4aa07273e68f0320823d258f324bb8631aef77a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765121"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095598"
 ---
 # <a name="cnonstatelessworker-class"></a>CNonStatelessWorker-Klasse
 
@@ -38,13 +38,13 @@ Empfängt Anforderungen aus dem Threadpool und übergibt sie an eine Worker-Obje
 ## <a name="syntax"></a>Syntax
 
 ```
-template <class Worker>  
+template <class Worker>
 class CNonStatelessWorker
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*Worker*  
+*Worker*<br/>
 Eine Worker-Thread-Klasse, die mit der [Worker Archetyp](../../atl/reference/worker-archetype.md) geeignet, für die Verarbeitung von Anforderungen für in die Warteschlange [CThreadPool](../../atl/reference/cthreadpool-class.md).
 
 ## <a name="members"></a>Member
@@ -130,6 +130,6 @@ Diese Klasse führt keine Bereinigungen `Terminate`.
 
 ## <a name="see-also"></a>Siehe auch
 
-[CThreadPool-Klasse](../../atl/reference/cthreadpool-class.md)   
-[Worker-Archetype](../../atl/reference/worker-archetype.md)   
+[CThreadPool-Klasse](../../atl/reference/cthreadpool-class.md)<br/>
+[Worker Archetype](../../atl/reference/worker-archetype.md)<br/>
 [Klassen](../../atl/reference/atl-classes.md)

@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2929 | Microsoft Docs
+title: Compilerfehler C2929 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7a6069060541f884bfbeb298845f5001b35d561
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9d7eee14296178fb90d4a3c34a28926032fcb04b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244959"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102826"
 ---
 # <a name="compiler-error-c2929"></a>Compilerfehler C2929
-"Bezeichner": Explizite Instanziierung; Instanziierung eines Elements einer Vorlagenklasse kann nicht explizit erzwungen und unterdrückt werden  
-  
- Sie können einen Bezeichner nicht explizit instanziieren und gleichzeitig verhindern, dass er instanziiert wird.  
-  
- Im folgenden Beispiel wird C2929 generiert:  
-  
-```  
-// C2929.cpp  
-// compile with: /c  
-template<typename T>  
-class A {  
-public:  
-   A() {}  
-};  
-  
-template A<int>::A();  
-  
-extern template A<int>::A();   // C2929  
+
+"Bezeichner": Explizite Instanziierung; Instanziierung eines Elements einer Vorlagenklasse kann nicht explizit erzwungen und unterdrückt werden
+
+Sie können einen Bezeichner nicht explizit instanziieren und gleichzeitig verhindern, dass er instanziiert wird.
+
+Im folgenden Beispiel wird C2929 generiert:
+
+```
+// C2929.cpp
+// compile with: /c
+template<typename T>
+class A {
+public:
+   A() {}
+};
+
+template A<int>::A();
+
+extern template A<int>::A();   // C2929
 ```

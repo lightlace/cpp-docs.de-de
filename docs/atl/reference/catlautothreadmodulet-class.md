@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebf3ba07ac5608a47f4e2bbbe853cb37c033e5f7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 46198390ce25cb655b94c0ca4769321fc3e9362d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757614"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099697"
 ---
 # <a name="catlautothreadmodulet-class"></a>CAtlAutoThreadModuleT-Klasse
 
@@ -35,21 +35,21 @@ Diese Klasse stellt Methoden zum Implementieren eines COM-Servers in einem Threa
 ## <a name="syntax"></a>Syntax
 
 ```
-template <class T, 
+template <class T,
          class ThreadAllocator = CComSimpleThreadAllocator,
-         DWORD dwWait = INFINITE>  
+         DWORD dwWait = INFINITE>
 class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Die Klasse, die die COM-Server implementiert werden.
 
-*ThreadAllocator*  
+*ThreadAllocator*<br/>
 Die Verwaltung von threadauswahl-Klasse. Der Standardwert ist [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).
 
-*dwWait*  
+*dwWait*<br/>
 Gibt das Timeoutintervall in Millisekunden an. Der Standardwert ist INFINITE, der Timeoutintervall der Methode nie bedeutet, abgelaufen ist dass.
 
 ## <a name="members"></a>Member
@@ -95,7 +95,7 @@ Die Anzahl der Threads im Modul exe-Datei erstellt werden.
 
 ## <a name="see-also"></a>Siehe auch
 
-[IAtlAutoThreadModule-Klasse](../../atl/reference/iatlautothreadmodule-class.md)   
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)   
-[IAtlAutoThreadModule-Klasse](../../atl/reference/iatlautothreadmodule-class.md)   
+[IAtlAutoThreadModule-Klasse](../../atl/reference/iatlautothreadmodule-class.md)<br/>
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
+[IAtlAutoThreadModule-Klasse](../../atl/reference/iatlautothreadmodule-class.md)<br/>
 [Modulklassen](../../atl/atl-module-classes.md)

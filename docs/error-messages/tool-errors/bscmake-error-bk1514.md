@@ -1,5 +1,5 @@
 ---
-title: BSCMAKE-Fehler BK1514 | Microsoft Docs
+title: BSCMAKE-Fehler BK1514 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23f1c72760f0597709de430588052445366e434d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20f66c5c48547e92aef00568d5488a6293303be1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302275"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094714"
 ---
 # <a name="bscmake-error-bk1514"></a>BSCMAKE-Fehler BK1514
-Alle. SBR-Dateien abgeschnitten, keiner gefunden in Dateiname  
-  
- Keine der SBR-Dateien für ein Update angegeben wurden Teil der ursprünglichen Browserinformationsdatei (.bsc). Um den Namen der SBR-Dateien zu suchen, die diesen Fehler verursacht hat, lesen Sie die [BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md) Warnungen, die sich davor.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:  
-  
-1.  Falscher Dateiname wurde für die SBR-Datei oder BSC.  
-  
-2.  Beschädigte .bsc-Datei erforderlich, BSCMAKE, ihn neu erstellen.
+
+Alle. SBR-Dateien abgeschnitten, keine Dateiname gefunden
+
+Keine der SBR-Dateien für eine Aktualisierung angegeben waren Teil der ursprünglichen Browserinformationsdatei (.bsc). Um die Namen der Dateien zu suchen, die diesen Fehler verursacht hat, lesen Sie die [BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md) Warnungen, die ihm voranstehen.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:
+
+1. Falscher Dateiname angegeben wird, für die SBR-Datei oder BSC.
+
+1. Beschädigte .bsc-Datei erforderlich, BSCMAKE, um es erneut zu erstellen.

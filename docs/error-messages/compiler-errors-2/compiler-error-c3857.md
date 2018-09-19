@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3857 | Microsoft Docs
+title: Compilerfehler C3857 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,51 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a9277ccd6a4e1e71faaf634498ccf32378fc961
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 279ed343b57380df9db9180aa475e4d77ddf5ae5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267825"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097600"
 ---
 # <a name="compiler-error-c3857"></a>Compilerfehler C3857
-'Typ': mehrere Typparameterlisten sind nicht zulässig.  
-  
- Größer als eine Vorlage oder generische wurde angegeben, für den gleichen Typ, was nicht zulässig ist.  
-  
- Im folgenden Beispiel wird C3857 generiert:  
-  
-```  
-// C3857.cpp  
-template <class T, class TT>  
-template <class T2>    // C3857  
-struct B {};  
-```  
-  
- Mögliche Lösung:  
-  
-```  
-// C3857b.cpp  
-// compile with: /c  
-template <class T, class TT, class T2>   
-struct B {};  
-```  
-  
- C3857 kann auch auftreten, wenn Generika verwendet werden:  
-  
-```  
-// C3857c.cpp  
-// compile with: /clr  
-generic <typename T>  
-generic <typename U>  
-ref class GC;   // C3857  
-```  
-  
- Mögliche Lösung:  
-  
-```  
-// C3857d.cpp  
-// compile with: /clr /c  
-generic <typename U>  
-ref class GC;  
+
+'Typ': mehrere Typparameterlisten sind nicht zulässig.
+
+Mehr als eine Vorlage oder generisch wurde angegeben, für den gleichen Typ, was nicht zulässig ist.
+
+Im folgende Beispiel wird die C3857 generiert:
+
+```
+// C3857.cpp
+template <class T, class TT>
+template <class T2>    // C3857
+struct B {};
+```
+
+Mögliche Lösung:
+
+```
+// C3857b.cpp
+// compile with: /c
+template <class T, class TT, class T2>
+struct B {};
+```
+
+C3857 kann auch auftreten, wenn Generika verwendet werden:
+
+```
+// C3857c.cpp
+// compile with: /clr
+generic <typename T>
+generic <typename U>
+ref class GC;   // C3857
+```
+
+Mögliche Lösung:
+
+```
+// C3857d.cpp
+// compile with: /clr /c
+generic <typename U>
+ref class GC;
 ```

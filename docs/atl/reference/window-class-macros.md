@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985289041f1461ef9486a55fedd9816c1ebb3f35
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5650707f9c08c144d2f5832744117dfdd06acc08
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752562"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106908"
 ---
 # <a name="window-class-macros"></a>Fensterklassen-Makros
 
@@ -29,8 +29,8 @@ Diese Makros definieren Hilfsprogramme für Fenster-Klasse.
 
 |||
 |-|-|
-|[DECLARE_WND_CLASS](#declare_wnd_class)|Können Sie den Namen der eine neue Windows-Klasse angeben.| 
-|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017) Ermöglicht Ihnen, geben Sie den Namen, der eine neue Windows-Klasse und der einschließenden Klasse, dessen Fensterprozedur die neue Klasse verwendet wird.| 
+|[DECLARE_WND_CLASS](#declare_wnd_class)|Können Sie den Namen der eine neue Windows-Klasse angeben.|
+|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017) Ermöglicht Ihnen, geben Sie den Namen, der eine neue Windows-Klasse und der einschließenden Klasse, dessen Fensterprozedur die neue Klasse verwendet wird.|
 |[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|Können Sie den Namen der eine vorhandene Fensterklasse angeben, auf dem eine neue Windows-Klasse basieren soll.|
 |[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|Können Sie die Parameter einer Klasse angeben.|  
 
@@ -48,7 +48,7 @@ DECLARE_WND_CLASS( WndClassName )
 
 ### <a name="parameters"></a>Parameter
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] Der Name der neuen Window-Klasse. Wenn der Wert NULL ist, generiert ATL einen Klassennamen der Fenster.
 
 ### <a name="remarks"></a>Hinweise
@@ -83,10 +83,10 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 
 ### <a name="parameters"></a>Parameter
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] Der Name der neuen Window-Klasse. Wenn der Wert NULL ist, generiert ATL einen Klassennamen der Fenster. 
 
-*EnclosingClass*  
+*EnclosingClass*<br/>
 [in] Der Name der Fensterklasse, die die neue Windows-Klasse umschließt. Darf nicht NULL sein.
 
 ### <a name="remarks"></a>Hinweise
@@ -104,10 +104,10 @@ DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
 
 ### <a name="parameters"></a>Parameter
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] Der Name des Fensters Klasse diese Informationen werden *OrigWndClassName*. Wenn der Wert NULL ist, generiert ATL einen Klassennamen der Fenster.
 
-*OrigWndClassName*  
+*OrigWndClassName*<br/>
 [in] Der Name der eine vorhandene Fensterklasse.
 
 ### <a name="remarks"></a>Hinweise
@@ -134,13 +134,13 @@ DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
 
 ### <a name="parameters"></a>Parameter
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] Der Name der neuen Window-Klasse. Wenn der Wert NULL ist, generiert ATL einen Klassennamen der Fenster.
 
-*Stil*  
+*Stil*<br/>
 [in] Der Stil des Fensters.
 
-*Hintergrund*  
+*Hintergrund*<br/>
 [in] Die Hintergrundfarbe des Fensters.
 
 ### <a name="remarks"></a>Hinweise

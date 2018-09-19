@@ -1,5 +1,5 @@
 ---
-title: unorm_2-Klasse | Microsoft Docs
+title: unorm_2-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 678cb8a782d07b64b93f87963b0ead500136fbcf
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6f49d51fc939df8fc26000627552afc19a0208d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685982"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106206"
 ---
 # <a name="unorm2-class"></a>unorm_2-Klasse
 Stellt einen kurzen Vektor aus zwei normalen Zahlen ohne Vorzeichen dar.  
@@ -89,7 +89,7 @@ class unorm_2;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|unorm_2::--||  
+|unorm_2:::||  
 |unorm_2:: * =||  
 |unorm_2:: Operator / =||  
 |unorm_2:: Operator++-||  
@@ -186,17 +186,17 @@ explicit inline unorm_2(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_V0`  
- Der Wert 0-Element initialisiert werden.  
+*_V0*<br/>
+Der Wert, der 0-Element zu initialisieren.  
   
- `_V1`  
- Der Wert 1 Element initialisiert werden.  
+*_V1*<br/>
+Der Wert 1 Element initialisiert werden.  
   
- `_V`  
- Der Wert für die Initialisierung.  
+*_V*<br/>
+Der Wert für die Initialisierung.  
   
- `_Other`  
- Das Objekt, das zum Initialisieren verwendet.  
+*_Sonstige*<br/>
+Das Objekt, das zum Initialisieren verwendet.  
   
 ##  <a name="unorm_2__size"></a> Größe 
 

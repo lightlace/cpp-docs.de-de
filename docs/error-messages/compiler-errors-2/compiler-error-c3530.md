@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3530 | Microsoft Docs
+title: Compilerfehler C3530 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6514d655ab813ae21ecb440415f87bce63f3591
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5866e2ea44b84f3afeb0cef8423abc28f8e056ab
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253517"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094792"
 ---
 # <a name="compiler-error-c3530"></a>Compilerfehler C3530
-'Auto' kann nicht mit einem anderen Typspezifizierer kombiniert werden  
-  
- Ein Typspezifizierer wird verwendet, mit dem `auto` Schlüsselwort.  
-  
-### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
-  
-1.  Verwenden Sie keinen Typspezifizierer in einer Variablendeklaration, die mithilfe der `auto` Schlüsselwort.  
-  
-## <a name="example"></a>Beispiel  
- Das folgende Beispiel wird C3530 erzeugt, da Variable `x` wird deklariert, mit der `auto` -Schlüsselwort und Datentyp `int`, und da im Beispiel mit kompiliert wird **/Zc: Auto**.  
-  
-```  
-// C3530.cpp  
-// Compile with /Zc:auto  
-int main()  
-{  
-   auto int x;   // C3530  
-   return 0;  
-}  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Auto-Schlüsselwort](../../cpp/auto-keyword.md)
+
+'Auto' kann nicht mit einem anderen Typspezifizierer kombiniert werden
+
+Ein Typspezifizierer der Verwendung der `auto` Schlüsselwort.
+
+### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
+
+1. Verwenden Sie keinen Typspezifizierer in einer Variablendeklaration, die verwendet die `auto` Schlüsselwort.
+
+## <a name="example"></a>Beispiel
+
+Das folgenden Beispiel wird C3530 erzeugt, weil Variablen `x` wird deklariert, mit der `auto` -Schlüsselwort und Typ `int`, und da im Beispiel wird die Kompilierung mit **/Zc: Auto**.
+
+```
+// C3530.cpp
+// Compile with /Zc:auto
+int main()
+{
+   auto int x;   // C3530
+   return 0;
+}
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Auto-Schlüsselwort](../../cpp/auto-keyword.md)

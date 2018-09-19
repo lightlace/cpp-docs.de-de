@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4708f180a1a1f5e936a6b30650a6432d48878d53
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 148bb42b7dc6b650bb85860b0bcce3b70c61318e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726751"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099893"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 Kapselt die Funktionalität eines ToolTip-Steuerelements. Dabei handelt es sich um ein kleines Popupfenster, das eine einzelne Textzeile anzeigt, die den Zweck eines Tools der Anwendung beschreibt.  
@@ -573,24 +573,25 @@ BOOL HitTest(
   
  Die `TTHITTESTINFO` Struktur ist folgendermaßen definiert:  
   
- `typedef struct _TT_HITTESTINFO { // tthti`  
+```cpp
+typedef struct _TT_HITTESTINFO { // tthti
+    HWND hwnd;   // handle of tool or window with tool
+    POINT pt;    // client coordinates of point to test
+    TOOLINFO ti; // receives information about the tool
+} TTHITTESTINFO, FAR * LPHITTESTINFO;
+```
   
- `HWND hwnd;   // handle of tool or window with tool`  
+- `hwnd`  
+
+   Gibt das Tool den Handle.  
   
- `POINT pt;    // client coordinates of point to test`  
+- `pt`  
+
+   Gibt die Koordinaten eines Punkts an, ob es sich bei der Punkt umschließenden ist, in des Tools des Rechtecks.  
   
- `TOOLINFO ti; // receives information about the tool`  
-  
- `} TTHITTESTINFO, FAR * LPHITTESTINFO;`  
-  
- `hwnd`  
- Gibt das Tool den Handle.  
-  
- `pt`  
- Gibt die Koordinaten eines Punkts an, ob es sich bei der Punkt umschließenden ist, in des Tools des Rechtecks.  
-  
- `ti`  
- Informationen zu diesem Tool. Weitere Informationen zu den `TOOLINFO` Struktur, siehe [CToolTipCtrl::GetToolInfo](#gettoolinfo).  
+- `ti`  
+
+   Informationen zu diesem Tool. Weitere Informationen zu den `TOOLINFO` Struktur, siehe [CToolTipCtrl::GetToolInfo](#gettoolinfo).  
   
 ##  <a name="pop"></a>  CToolTipCtrl::Pop  
  Eine angezeigte QuickInfo-Fenster aus der Ansicht gelöscht.  

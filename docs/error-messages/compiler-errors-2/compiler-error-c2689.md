@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2689 generiert | Microsoft Docs
+title: Compilerfehler C2689 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 973f8a007080d728a07afae8818ffa2c7bd8ed4a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fedb865a1c0c6e1bbefc94c03549936951b84e17
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231636"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099877"
 ---
-# <a name="compiler-error-c2689"></a>Compiler-Fehler C2689 generiert
-'Funktion': eine Friend-Funktion kann nicht innerhalb einer lokalen Klasse definiert werden  
-  
- Sie können deklarieren, aber nicht in einer lokalen Klasse definiert eine Friend-Funktion.  
-  
- Im folgende Beispiel wird C2689 generiert:  
-  
-```  
-// C2689.cpp  
-// compile with: /c  
-void g() {  
-   void f2();  
-   class X {  
-      friend void f2(){}   // C2689  
-      friend void f2();   // OK  
-   };  
-}  
+# <a name="compiler-error-c2689"></a>Compilerfehler C2689
+
+'Funktion': eine Friend-Funktion kann nicht innerhalb einer lokalen Klasse definiert werden
+
+Sie können deklarieren, aber keine Friend-Funktion in einer lokalen Klasse definiert.
+
+Im folgende Beispiel wird die C2689 generiert:
+
+```
+// C2689.cpp
+// compile with: /c
+void g() {
+   void f2();
+   class X {
+      friend void f2(){}   // C2689
+      friend void f2();   // OK
+   };
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4129 generiert | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4129 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc095a32e5cb0d5a0bf240282e11c3fa3382ffe5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e02f38044180c45e221099d2874b7f8ff48d62f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276642"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098445"
 ---
-# <a name="compiler-warning-level-1-c4129"></a>Compilerwarnung (Stufe 1) C4129 generiert
-"Character": Unbekannte Escape-Zeichensequenz  
-  
- Die `character` hinter einem umgekehrten Schrägstrich (\\) in ein Zeichen oder eine Zeichenfolge Konstante nicht als gültige Escape-Sequenz erkannt wird. Der umgekehrte Schrägstrich wird ignoriert und nicht gedruckt. Das Zeichen hinter dem umgekehrten Schrägstrich wird gedruckt.  
-  
- Um einen einzelnen umgekehrten Schrägstrich drucken möchten, geben Sie einen doppelten umgekehrten Schrägstrich (\\\\).  
-  
- Der C++-standard, in Abschnitt 2.13.2 erläutert Escapesequenzen.  
-  
- Im folgende Beispiel wird C4129 generiert:  
-  
-```  
-// C4129.cpp  
-// compile with: /W1  
-int main() {  
-   char array1[] = "\/709";   // C4129  
-   char array2[] = "\n709";   // OK  
-}  
+# <a name="compiler-warning-level-1-c4129"></a>Compilerwarnung (Stufe 1) C4129
+
+'Zeichen': nicht erkannte Zeichen-Escapesequenz
+
+Die `character` hinter einem umgekehrten Schrägstrich (\\) in einer Zeichen- oder Konstante nicht als gültige Escape-Sequenz erkannt wird. Der umgekehrte Schrägstrich wird ignoriert und nicht gedruckt. Das Zeichen, die dem umgekehrten Schrägstrich folgt, wird ausgegeben.
+
+Um einen einzelnen umgekehrten Schrägstrich drucken möchten, geben Sie einen doppelten umgekehrten Schrägstrich (\\\\).
+
+Der C++-standard, klicken Sie im Abschnitt 2.13.2 werden Escape-Sequenzen.
+
+Im folgende Beispiel wird die C4129 generiert:
+
+```
+// C4129.cpp
+// compile with: /W1
+int main() {
+   char array1[] = "\/709";   // C4129
+   char array2[] = "\n709";   // OK
+}
 ```

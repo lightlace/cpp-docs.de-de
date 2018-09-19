@@ -1,5 +1,5 @@
 ---
-title: Location-Klasse | Microsoft Docs
+title: Location-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdfb555375df4b9f791db25fa2dee47222f79063
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a7d441aff74faede9ecbc41f03fe52cd05528e06
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688023"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104763"
 ---
 # <a name="location-class"></a>location-Klasse
 Die Abstraktion eines physischen Speicherorts auf der Hardware.  
@@ -49,16 +49,16 @@ class location;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Aktuelle](#current)|Gibt eine `location` Objekt, das die spezifischste Stelle den aufrufende Thread ausgeführt wird, darstellt.|  
+|[Aktuelle](#current)|Gibt eine `location` Objekt, das die spezifischste Stelle, die den aufrufende Thread ausgeführt wird, darstellt.|  
 |[from_numa_node](#from_numa_node)|Gibt eine `location` Objekt, das einen bestimmten NUMA-Knoten darstellt.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[operator!=](#operator_neq)|Bestimmt, ob zwei `location` Objekte darstellen anderen Speicherort.|  
-|[operator=](#operator_eq)|Weist den Inhalt eines anderen `location` -Objekts in dieses Objekt.|  
-|[operator==](#operator_eq_eq)|Bestimmt, ob zwei `location` Objekte darstellen, den gleichen Speicherort.|  
+|[operator!=](#operator_neq)|Bestimmt, ob zwei `location` Objekte darstellen, anderen Speicherort.|  
+|[operator=](#operator_eq)|Weist den Inhalt von einem anderen `location` -Objekts in dieses Objekt.|  
+|[operator==](#operator_eq_eq)|Bestimmt, ob zwei `location` Objekte darstellen, am gleichen Speicherort.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `location`  
@@ -78,7 +78,7 @@ class location;
   
 ##  <a name="current"></a> Aktuelle 
 
- Gibt eine `location` Objekt, das die spezifischste Stelle den aufrufende Thread ausgeführt wird, darstellt.  
+ Gibt eine `location` Objekt, das die spezifischste Stelle, die den aufrufende Thread ausgeführt wird, darstellt.  
   
 ```
 static location __cdecl current();
@@ -96,8 +96,8 @@ static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_NumaNodeNumber`  
- Die NUMA-Knotennummer um einen Speicherort für zu erstellen.  
+*_NumaNodeNumber*<br/>
+Die NUMA-Knotennummer um einen Speicherort für zu erstellen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Eine Position, die gemäß den NUMA-Knoten darstellt. die `_NumaNodeNumber` Parameter.  
@@ -120,56 +120,63 @@ location(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Src`  
- `_LocationType`  
- `_Id`  
- `_BindingId`  
- `_PBinding`  
-  
+*_Src*<br/>
+
+*_LocationType*<br/>
+
+*_Id*<br/>
+
+*_BindingId*<br/>
+
+*_PBinding*<br/>
+(Optional) Bindung Zeiger.
+
 ### <a name="remarks"></a>Hinweise  
- Ein standardmäßig erstelltes Speicherort stellt das System als Ganzes dar.  
+ Ein Standardverzeichnis erstellt stellt das System als Ganzes dar.  
   
 ##  <a name="operator_neq"></a> Operator! = 
 
- Bestimmt, ob zwei `location` Objekte darstellen anderen Speicherort.  
+ Bestimmt, ob zwei `location` Objekte darstellen, anderen Speicherort.  
   
 ```
 bool operator!= (const location& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Rhs`  
+*_Rhs*<br/>
+Operand `location`.
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn es sich bei die beiden Speicherorten unterscheiden, `false` andernfalls.  
+ `true` Wenn die zwei Orten unterschiedlich sind, `false` andernfalls.  
   
 ##  <a name="operator_eq"></a> Operator = 
 
- Weist den Inhalt eines anderen `location` -Objekts in dieses Objekt.  
+ Weist den Inhalt von einem anderen `location` -Objekts in dieses Objekt.  
   
 ```
 location& operator= (const location& _Rhs);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Rhs`  
- Das `location`-Quellobjekt.  
+*_Rhs*<br/>
+Das `location`-Quellobjekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
   
 ##  <a name="operator_eq_eq"></a> Operator == 
 
- Bestimmt, ob zwei `location` Objekte darstellen, den gleichen Speicherort.  
+ Bestimmt, ob zwei `location` Objekte darstellen, am gleichen Speicherort.  
   
 ```
 bool operator== (const location& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_Rhs`  
+*_Rhs*<br/>
+Operand `location`.
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn es sich bei die beiden Speicherorten identisch sind und `false` andernfalls.  
+ `true` Wenn es sich bei die beiden Standorten identisch sind und `false` andernfalls.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)

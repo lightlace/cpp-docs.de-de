@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 828c3881771aa37181822859cc54894e8771c2cb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eddeb6467dfb3bf578c0287161de989e8ba12483
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767593"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097470"
 ---
 # <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Verwenden von ersetzbaren Parametern (die Registrierungsstelle&#39;s Präprozessor)
 
@@ -36,8 +36,8 @@ Die [ATL-Steuerelement-Assistent](../atl/reference/atl-control-wizard.md) generi
 
 Eine weitere Verwendungsmöglichkeit der Präprozessor ist zur Laufzeit Daten mit Skriptdaten verketten. Nehmen wir beispielsweise an, die ein Eintrag ist erforderlich, die einen vollständigen Pfad zu einem Modul mit der Zeichenfolge enthält "`, 1`" am Ende angefügt. Definieren Sie zuerst die folgenden Erweiterungen:
 
-```  
-'MySampleKey' = s '%MODULE%, 1'  
+```
+'MySampleKey' = s '%MODULE%, 1'
 ```
 
 Klicken Sie dann vor dem Aufrufen eines der aufgeführten Methoden für die skriptverarbeitung [Aufrufen von Skripts](../atl/invoking-scripts.md), Ersatz der Zuordnung hinzuzufügen:
@@ -53,8 +53,8 @@ Während der Analyse des Skripts, die Registrierungsstelle erweitert `'%MODULE%,
 >  Um Ersatzwerte zur Laufzeit zu ersetzen, entfernen Sie den Aufruf in das Skript die [DECLARE_REGISTRY_RESOURCE](../atl/reference/registry-macros.md#declare_registry_resource) oder [DECLARE_REGISTRY_RESOURCEID](../atl/reference/registry-macros.md#declare_registry_resourceid) Makro. Ersetzen Sie ihn stattdessen durch Ihre eigenen `UpdateRegistry` -Methode, die Aufrufe [CAtlModule::UpdateRegistryFromResourceD](../atl/reference/catlmodule-class.md#updateregistryfromresourced) oder [CAtlModule::UpdateRegistryFromResourceS](../atl/reference/catlmodule-class.md#updateregistryfromresources), und übergeben Sie Ihr Array mit _ATL_REGMAP_ Eintrag-Strukturen. Das Array von _ATL_REGMAP_ENTRY müssen mindestens einen Eintrag, der auf {NULL, NULL} festgelegt ist, und diesen Eintrag sollte immer der letzte Eintrag sein. Andernfalls kann ein Zugriffsverletzungsfehler werden generiert, wenn `UpdateRegistryFromResource` aufgerufen wird.
 
 > [!NOTE]
->  Beim Erstellen eines Projekts, der eine ausführbare Datei ausgibt, fügt ATL automatisch Anführungszeichen um den Pfadnamen erstellt zur Laufzeit mit der **Modul %** Registrierungsstelle Script-Parameter. Wenn Sie nicht über den Pfadnamen an, die Anführungszeichen ebenfalls angeben möchten, verwenden Sie die neue **%MODULE_RAW%** Parameter stattdessen.  
->   
+>  Beim Erstellen eines Projekts, der eine ausführbare Datei ausgibt, fügt ATL automatisch Anführungszeichen um den Pfadnamen erstellt zur Laufzeit mit der **Modul %** Registrierungsstelle Script-Parameter. Wenn Sie nicht über den Pfadnamen an, die Anführungszeichen ebenfalls angeben möchten, verwenden Sie die neue **%MODULE_RAW%** Parameter stattdessen.
+>
 >  Beim Erstellen eines Projekts, das eine DLL-Datei ausgibt, ATL wird nicht hinzufügen, Anführungszeichen im Pfadnamen Wenn **Modul %** oder **%MODULE_RAW%** verwendet wird.
 
 ## <a name="see-also"></a>Siehe auch

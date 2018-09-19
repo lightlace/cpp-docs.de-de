@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8786af730567155ca865440e612bb983e2bea8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 076ccfcf164eb17e2a855f175c8714cd63a91817
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402977"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093043"
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -56,16 +56,16 @@ void * _aligned_malloc_dbg(
 
 ### <a name="parameters"></a>Parameter
 
-*size*  
+*size*<br/>
 Größe der angeforderten Speicherzuweisung.
 
-*Ausrichtung*  
+*Ausrichtung*<br/>
 Der Ausrichtungswert, der eine ganzzahlige Potenz von 2 sein muss.
 
-*filename*  
+*filename*<br/>
 Zeiger zum Namen der Quelldatei, der die Belegung angefordert hat, oder NULL.
 
-*linenumber*  
+*linenumber*<br/>
 Zeilennummer in der Quelldatei, in der die Belegung angefordert wurde, oder NULL.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -96,4 +96,4 @@ Nur Debugversionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-libr
 
 ## <a name="see-also"></a>Siehe auch
 
-[Debugroutinen](../../c-runtime-library/debug-routines.md)  
+[Debugroutinen](../../c-runtime-library/debug-routines.md)

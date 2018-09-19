@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b27def7f37bda8d4ed5fe5e37a8b5907b542a6ba
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c8426a0113ca245f6c9390a5c95f350398938731
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759469"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106232"
 ---
 # <a name="marshaling-global-functions"></a>Marshalling globale Funktionen
 
@@ -50,7 +50,7 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 
 ### <a name="parameters"></a>Parameter
 
-*pStream*  
+*pStream*<br/>
 [in] Ein Zeiger auf die `IStream` Schnittstelle für den Stream, der für das Marshalling verwendet.
 
 ### <a name="example"></a>Beispiel
@@ -70,13 +70,13 @@ HRESULT AtlMarshalPtrInProc(
 
 ### <a name="parameters"></a>Parameter
 
-*pUnk*  
+*pUnk*<br/>
 [in] Ein Zeiger auf die Schnittstelle, die gemarshallt werden.
 
-*IID*  
+*IID*<br/>
 [in] Die GUID der Schnittstelle, die gemarshallt werden.
 
-*ppStream*  
+*ppStream*<br/>
 [out] Ein Zeiger auf die `IStream` Schnittstelle für das neue Streamobjekt, das für das Marshalling verwendet.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -108,13 +108,13 @@ HRESULT AtlUnmarshalPtr(
 
 ### <a name="parameters"></a>Parameter
 
-*pStream*  
+*pStream*<br/>
 [in] Ein Zeiger auf den Stream, werden Marshalling.
 
-*IID*  
+*IID*<br/>
 [in] Die GUID der Schnittstelle werden Marshalling.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] Ein Zeiger auf die Marshalling-Schnittstelle.
 
 ### <a name="return-value"></a>Rückgabewert

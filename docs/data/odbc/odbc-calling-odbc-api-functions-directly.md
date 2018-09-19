@@ -23,34 +23,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c0bd8ade91e2e543e8ccf1c0a9b04525b8d81b43
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 24701e2bab154f0815408f4e2e3e37e56ad6d823
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572746"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092531"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: Direktes Aufrufen von ODBC-API-Funktionen
+
 Die Datenbankklassen bieten eine einfachere Schnittstelle zu einem [Datenquelle](../../data/odbc/data-source-odbc.md) als ODBC ist. Daher sind die Klassen nicht alle ODBC-API kapseln. Für alle Funktionen, die außerhalb der Fähigkeiten der Klassen liegt, müssen Sie ODBC API-Funktionen direkt aufrufen. Sie müssen z. B. den ODBC-Katalogfunktionen aufrufen (`::SQLColumns`, `::SQLProcedures`, `::SQLTables`, usw.) direkt.  
   
 > [!NOTE]
 >  Auf ODBC-Datenquellen können Sie über die MFC-ODBC-Klassen zugreifen, wie in diesem Thema beschrieben, oder über die MFC-Datenzugriffsobjekt-Klassen (DAO-Klassen).  
   
- Zum Aufrufen von einer ODBC-API-Funktion müssen Sie direkt die gleichen Schritte ausführen, die Sie ergreifen würden, wenn Sie die Aufrufe ohne das Framework erzielt wurde. Diese Schritte sind:  
+Zum Aufrufen von einer ODBC-API-Funktion müssen Sie direkt die gleichen Schritte ausführen, die Sie ergreifen würden, wenn Sie die Aufrufe ohne das Framework erzielt wurde. Diese Schritte sind:  
   
--   Zuordnen von Speicher für Ergebnisse, die Rückgabe des Aufrufs.  
+- Zuordnen von Speicher für Ergebnisse, die Rückgabe des Aufrufs.  
   
--   Übergeben Sie einen ODBC `HDBC` oder `HSTMT` zu behandeln, abhängig von der Parametersignatur der Funktion. Verwenden der [AFXGetHENV](../../mfc/reference/database-macros-and-globals.md#afxgethenv) Makro, um das ODBC-Handle abzurufen.  
+- Übergeben Sie einen ODBC `HDBC` oder `HSTMT` zu behandeln, abhängig von der Parametersignatur der Funktion. Verwenden der [AFXGetHENV](../../mfc/reference/database-macros-and-globals.md#afxgethenv) Makro, um das ODBC-Handle abzurufen.  
   
      Membervariablen `CDatabase::m_hdbc` und `CRecordset::m_hstmt` sind verfügbar, sodass Sie nicht benötigen, reservieren und diese selbst zu initialisieren.  
   
--   Rufen Sie bei Bedarf zusätzliche ODBC-Funktionen, um vorzubereiten, oder folgen der main-Aufruf.  
+- Rufen Sie bei Bedarf zusätzliche ODBC-Funktionen, um vorzubereiten, oder folgen der main-Aufruf.  
   
--   Wenn Sie fertig sind, heben Sie die Zuordnung "Storage".  
+- Wenn Sie fertig sind, heben Sie die Zuordnung "Storage".  
   
- Weitere Informationen zu diesen Schritten finden Sie unter den [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) -SDK in der MSDN-Dokumentation.  
+Weitere Informationen zu diesen Schritten finden Sie unter den [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) -SDK in der MSDN-Dokumentation.  
   
- Zusätzlich zu diesen Schritten müssen Sie auch zusätzliche Schritte zum Überprüfen von Rückgabewerten der Funktion, stellen Sie sicher, dass das Programm nicht wartet, für einen asynchronen Aufruf abzuschließen, und so weiter. Sie können diese letzten Schritte vereinfachen, mit der AFX_SQL_ASYNC und AFX_SQL_SYNC-Makros. Weitere Informationen finden Sie unter [Makros und Globals](../../mfc/reference/mfc-macros-and-globals.md) in die *MFC-Referenz*.  
+Zusätzlich zu diesen Schritten müssen Sie auch zusätzliche Schritte zum Überprüfen von Rückgabewerten der Funktion, stellen Sie sicher, dass das Programm nicht wartet, für einen asynchronen Aufruf abzuschließen, und so weiter. Sie können diese letzten Schritte vereinfachen, mit der AFX_SQL_ASYNC und AFX_SQL_SYNC-Makros. Weitere Informationen finden Sie unter [Makros und Globals](../../mfc/reference/mfc-macros-and-globals.md) in die *MFC-Referenz*.  
 
 ## <a name="see-also"></a>Siehe auch  
- [Grundlagen zu ODBC](../../data/odbc/odbc-basics.md)
+
+[Grundlagen zu ODBC](../../data/odbc/odbc-basics.md)

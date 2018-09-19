@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d888478be18063b00e1e5e8eabead510349584cf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9f230e66689578f1b7ea95326d9bc73efc8746c0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752535"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093046"
 ---
 # <a name="cw2wex-class"></a>CW2WEX-Klasse
 
@@ -37,13 +37,13 @@ Diese Klasse wird von der Zeichenfolgen-konvertierungsmakros CW2TEX und CT2WEX u
 ## <a name="syntax"></a>Syntax
 
 ```
-template <int t_nBufferLength = 128>  
+template <int t_nBufferLength = 128>
 class CW2WEX
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 Die Größe des Puffers, die in der Übersetzungsprozess verwendet werden soll. Die Standardeinstellung ist 128 Bytes.
 
 ## <a name="members"></a>Member
@@ -109,10 +109,10 @@ CW2WEX( LPCWSTR  psz) throw(...);
 
 ### <a name="parameters"></a>Parameter
 
-*psz*  
+*psz*<br/>
 Die Textzeichenfolge, die konvertiert werden.
 
-*nCodePage*  
+*nCodePage*<br/>
 Die Codepage. In dieser Klasse verwendet nicht.
 
 ### <a name="remarks"></a>Hinweise
@@ -151,7 +151,7 @@ wchar_t m_szBuffer[t_nBufferLength];
 
 CAST-Operator.
 
-```  
+```
 operator LPWSTR() const throw();
 ```
 
@@ -161,9 +161,9 @@ Gibt die Zeichenfolge, LPWSTR eingeben.
 
 ## <a name="see-also"></a>Siehe auch
 
-[CA2AEX-Klasse](../../atl/reference/ca2aex-class.md)   
-[CA2CAEX-Klasse](../../atl/reference/ca2caex-class.md)   
-[CA2WEX-Klasse](../../atl/reference/ca2wex-class.md)   
-[CW2AEX-Klasse](../../atl/reference/cw2aex-class.md)   
-[CW2CWEX-Klasse](../../atl/reference/cw2cwex-class.md)   
+[CA2AEX-Klasse](../../atl/reference/ca2aex-class.md)<br/>
+[CA2CAEX-Klasse](../../atl/reference/ca2caex-class.md)<br/>
+[CA2WEX-Klasse](../../atl/reference/ca2wex-class.md)<br/>
+[CW2AEX-Klasse](../../atl/reference/cw2aex-class.md)<br/>
+[CW2CWEX-Klasse](../../atl/reference/cw2cwex-class.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

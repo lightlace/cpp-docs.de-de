@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2974 | Microsoft Docs
+title: Compilerfehler C2974 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,59 +16,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12af6bcd61642d8563eb08888229aab6217b6085
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 478639ee1eccf841361e8e7e880ac33669d69e1e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242045"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100479"
 ---
 # <a name="compiler-error-c2974"></a>Compilerfehler C2974
-Ungültiger Typ das Argument "Zahl", Typ erwartet  
-  
- Die generische oder Vorlagenklasse Argument entspricht nicht der generische oder Vorlagendeklaration. Ein Typ die spitzen Klammern angezeigt. Überprüfen Sie die generische oder Vorlagenklasse Definition so, dass die richtigen Typen zu ermitteln.  
-  
- Im folgenden Beispiel wird C2974 generiert:  
-  
-```  
-// C2974.cpp  
-// C2974 expected  
-template <class T>  
-struct TC {};  
-  
-template <typename T>  
-void tf(T){}  
-  
-int main() {  
-   // Delete the following 2 lines to resolve  
-   TC<1>* tc;  
-   tf<"abc">("abc");  
-  
-   TC<int>* tc;  
-   tf<const char *>("abc");  
-}  
-```  
-  
- C2974 kann auch auftreten, wenn Generika verwendet werden:  
-  
-```  
-// C2974b.cpp  
-// compile with: /clr  
-// C2974 expected  
-using namespace System;  
-generic <class T>  
-ref struct GCtype {};  
-  
-generic <typename T>  
-void gf(T){}  
-  
-int main() {  
-   // Delete the following 2 lines to resolve  
-   GCtype<"a">^ gc;  
-   gf<"a">("abc");  
-  
-   // OK  
-   GCtype<int>^ gc;  
-   gf<String ^>("abc");  
-}  
+
+Ungültiger Typ das Argument "Zahl", erwartet wurde der Typ
+
+Das generische oder Vorlagenklasse Argument entspricht nicht der generische oder Vorlagendeklaration. Ein Typ sollte in spitzen Klammern angezeigt werden. Überprüfen Sie die generische oder Vorlagenklasse Definition so, dass die richtigen Typen zu ermitteln.
+
+Im folgende Beispiel wird die C2974 generiert:
+
+```
+// C2974.cpp
+// C2974 expected
+template <class T>
+struct TC {};
+
+template <typename T>
+void tf(T){}
+
+int main() {
+   // Delete the following 2 lines to resolve
+   TC<1>* tc;
+   tf<"abc">("abc");
+
+   TC<int>* tc;
+   tf<const char *>("abc");
+}
+```
+
+C2974 kann auch auftreten, wenn Generika verwendet werden:
+
+```
+// C2974b.cpp
+// compile with: /clr
+// C2974 expected
+using namespace System;
+generic <class T>
+ref struct GCtype {};
+
+generic <typename T>
+void gf(T){}
+
+int main() {
+   // Delete the following 2 lines to resolve
+   GCtype<"a">^ gc;
+   gf<"a">("abc");
+
+   // OK
+   GCtype<int>^ gc;
+   gf<String ^>("abc");
+}
 ```

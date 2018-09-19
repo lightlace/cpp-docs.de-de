@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cf8c27d118984422ec3a78f442a3f11f13e1c75
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bee312cd5e7a88dd0798778d5f8385df265d78a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766031"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099772"
 ---
 # <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow-Schnittstelle
 
@@ -79,10 +79,10 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*pUnkControl*  
+*pUnkControl*<br/>
 [in] Ein Zeiger auf die `IUnknown` Schnittstelle des Steuerelements auf das Hostobjekt angefügt werden.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Ein Handle für das Fenster, für das Hosten von verwendet werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -102,13 +102,13 @@ STDMETHOD(CreateControl)(
 
 ### <a name="parameters"></a>Parameter
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in] Eine Zeichenfolge, die das zu erstellende Steuerelement identifiziert. Kann eine CLSID (die geschweiften Klammern müssen einschließen), die ProgID, die URL oder die unformatiertes HTML sein (das Präfix **MSHTML:**).
 
-*hWnd*  
+*hWnd*<br/>
 [in] Ein Handle für das Fenster, für das Hosten von verwendet werden.
 
-*pStream*  
+*pStream*<br/>
 [in] Ein Schnittstellenzeiger für einen Stream, der Daten für das Steuerelement enthält. NULL kann sein.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -139,22 +139,22 @@ STDMETHOD(CreateControlEx)(
 
 ### <a name="parameters"></a>Parameter
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in] Eine Zeichenfolge, die das zu erstellende Steuerelement identifiziert. Kann eine CLSID (die geschweiften Klammern müssen einschließen), die ProgID, die URL oder die unformatiertes HTML sein (mit dem Präfix **MSHTML:**).
 
-*hWnd*  
+*hWnd*<br/>
 [in] Ein Handle für das Fenster, für das Hosten von verwendet werden.
 
-*pStream*  
+*pStream*<br/>
 [in] Ein Schnittstellenzeiger für einen Stream, der Daten für das Steuerelement enthält. NULL kann sein.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] Die Adresse eines Zeigers, der erhält die `IUnknown` Schnittstelle des erstellten Steuerelements. NULL kann sein.
 
-*riidAdvise*  
+*riidAdvise*<br/>
 [in] Der Schnittstellenbezeichner einer ausgehenden Schnittstelle für das enthaltene Objekt. IID_NULL kann sein.
 
-*punkAdvise*  
+*punkAdvise*<br/>
 [in] Ein Zeiger auf die `IUnknown` -Schnittstelle des Senkenobjekts mit dem Verbindungspunkt am anhand des enthaltenen Objekts verbunden sein, `iidSink`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -179,10 +179,10 @@ STDMETHOD(QueryControl)(
 
 ### <a name="parameters"></a>Parameter
 
-*riid*  
+*riid*<br/>
 [in] Die ID einer Schnittstelle für das Steuerelement angefordert wird.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Die Adresse eines Zeigers, die die angegebene Schnittstelle des erstellten Steuerelements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -199,7 +199,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 
 ### <a name="parameters"></a>Parameter
 
-*pDisp*  
+*pDisp*<br/>
 [in] Ein Zeiger auf ein `IDispatch` Schnittstelle.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -216,7 +216,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 ### <a name="parameters"></a>Parameter
 
-*pDisp*  
+*pDisp*<br/>
 [in] Ein Zeiger auf ein `IDocHostUIHandlerDispatch` Schnittstelle.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -229,7 +229,7 @@ Diese Funktion wird von Steuerelementen (z. B. das Webbrowser-Steuerelement), di
 
 ## <a name="see-also"></a>Siehe auch
 
-[IAxWinAmbientDispatch-Schnittstelle](../../atl/reference/iaxwinambientdispatch-interface.md)   
-[CAxWindow:: QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
+[IAxWinAmbientDispatch-Schnittstelle](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
+[CAxWindow:: QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
 

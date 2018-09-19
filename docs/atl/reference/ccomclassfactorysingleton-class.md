@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 6b812ddd4dbd3c81d9018be926d9103bca3ec796
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7f26a9d603238c83aa4243092e88719d1de4fda1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755972"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093072"
 ---
 # <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton-Klasse
 
@@ -34,13 +34,13 @@ Diese Klasse wird von [CComClassFactory](../../atl/reference/ccomclassfactory-cl
 ## <a name="syntax"></a>Syntax
 
 ```
-template<class T>  
+template<class T>
 class CComClassFactorySingleton : public CComClassFactory
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Die Klasse.
 
 `CComClassFactorySingleton` leitet sich von [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) und verwendet [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) um ein einzelnes Objekt zu erstellen. Jeder Aufruf der `CreateInstance` -Methode fragt einfach dieses Objekt für einen Schnittstellenzeiger auf.
@@ -91,13 +91,13 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 ### <a name="parameters"></a>Parameter
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in] Wenn das Objekt dann als Teil eines Aggregats erstellt wird *pUnkOuter* muss die äußere unbekannte sein. Andernfalls *pUnkOuter* muss NULL sein.
 
-*riid*  
+*riid*<br/>
 [in] Die IID der angeforderten Schnittstelle. Wenn *pUnkOuter* ungleich NULL, *Riid* muss `IID_IUnknown`.
 
-*ppvObj*  
+*ppvObj*<br/>
 [out] Ein Zeiger auf den Schnittstellenzeiger vom *Riid*. Wenn das Objekt nicht über diese Schnittstelle unterstützt *PpvObj* auf NULL festgelegt ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -120,9 +120,9 @@ Beachten Sie, dass das aktuelle Formular des `m_spObj` stellt eine bedeutende Ä
 
 ## <a name="see-also"></a>Siehe auch
 
-[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)   
-[CComClassFactory2-Klasse](../../atl/reference/ccomclassfactory2-class.md)   
-[CComClassFactoryAutoThread-Klasse](../../atl/reference/ccomclassfactoryautothread-class.md)   
-[CComObjectRootEx-Klasse](../../atl/reference/ccomobjectrootex-class.md)   
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
+[CComClassFactory2-Klasse](../../atl/reference/ccomclassfactory2-class.md)<br/>
+[CComClassFactoryAutoThread-Klasse](../../atl/reference/ccomclassfactoryautothread-class.md)<br/>
+[CComObjectRootEx-Klasse](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2791 generiert | Microsoft Docs
+title: Compilerfehler C2791 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65a3d399ed6c7f25b849335328550526ecf7a816
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 853e9b8a7741b31a57af172427656be8a78a99f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236495"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098146"
 ---
-# <a name="compiler-error-c2791"></a>Compiler-Fehler C2791 generiert
-Unzulässige Verwendung von 'Super': 'Class' besitzt keine Basisklassen  
-  
- Das Schlüsselwort [super](../../cpp/super.md) wurde im Kontext einer Memberfunktion einer Klasse, die über keinen Basis-Klassen verwendet.  
-  
- Im folgende Beispiel wird C2791 generiert:  
-  
-```  
-// C2791.cpp  
-struct D {  
-   void mf() {  
-      __super::mf();   // C2791  
-   }  
-};  
+# <a name="compiler-error-c2791"></a>Compilerfehler C2791
+
+Unzulässige Verwendung von "Super": "Klasse" besitzt keine Basisklassen
+
+Das Schlüsselwort [super](../../cpp/super.md) im Kontext einer Memberfunktion einer Klasse, die keine Basisklassen verwendet wurde.
+
+Im folgende Beispiel wird die C2791 generiert:
+
+```
+// C2791.cpp
+struct D {
+   void mf() {
+      __super::mf();   // C2791
+   }
+};
 ```

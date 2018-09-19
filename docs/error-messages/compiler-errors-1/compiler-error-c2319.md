@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2319 | Microsoft Docs
+title: Compilerfehler C2319 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fa9d2c0aeae56ea678a9f2aa2cbfabfc43e71c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f485d26ac2a05cc91a1c918c63e319e893b8cf95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222393"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103146"
 ---
 # <a name="compiler-error-c2319"></a>Compilerfehler C2319
-Auf 'try/catch' muss eine zusammengesetzte Anweisung folgen. '{' fehlt  
-  
- Es wurde kein `try` - oder `catch` -Block gefunden, der auf die `try` - oder `catch` -Anweisung folgt. Der Block muss in geschweifte Klammern eingeschlossen werden.  
-  
- Im folgenden Beispiel wird C2319 generiert:  
-  
-```  
-// C2319.cpp  
-// compile with: /EHsc  
-#include <eh.h>  
-class C {};  
-int main() {  
-   try {  
-      throw "ooops!";  
-   }  
-   catch( C ) ;    // C2319  
-   // try the following line instead  
-   // catch( C ) {}  
-}  
+
+Auf 'try/catch' muss eine zusammengesetzte Anweisung folgen. '{' fehlt
+
+Es wurde kein `try` - oder `catch` -Block gefunden, der auf die `try` - oder `catch` -Anweisung folgt. Der Block muss in geschweifte Klammern eingeschlossen werden.
+
+Im folgenden Beispiel wird C2319 generiert:
+
+```
+// C2319.cpp
+// compile with: /EHsc
+#include <eh.h>
+class C {};
+int main() {
+   try {
+      throw "ooops!";
+   }
+   catch( C ) ;    // C2319
+   // try the following line instead
+   // catch( C ) {}
+}
 ```

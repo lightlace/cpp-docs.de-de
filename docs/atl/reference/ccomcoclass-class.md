@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37df260d16c04210fb7e66c0ec9a747a3dad7da4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 11c391e6ad467c835cd8c65ec872db74b85404a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760161"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097613"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass-Klasse
 
@@ -36,16 +36,16 @@ Diese Klasse stellt Methoden zum Erstellen von Instanzen einer Klasse und ihre E
 ## <a name="syntax"></a>Syntax
 
 ```
-template <class T, const CLSID* pclsid = &CLSID_NULL>  
+template <class T, const CLSID* pclsid = &CLSID_NULL>
 class CComCoClass
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Abgeleitet von die Klasse `CComCoClass`.
 
-*pclsid*  
+*pclsid*<br/>
 Ein Zeiger auf die CLSID des Objekts.
 
 ## <a name="members"></a>Member
@@ -91,13 +91,13 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
 
 ### <a name="parameters"></a>Parameter
 
-*Q*  
+*Q*<br/>
 Die COM-Schnittstelle, die über zurückgegeben werden sollen *pp*.
 
-*punkOuter*  
+*punkOuter*<br/>
 [in] Die äußere unbekannte oder "Unbekannt" des Aggregats steuern.
 
-*PP*  
+*PP*<br/>
 [out] Die Adresse einer Zeigervariablen, die den angeforderten Schnittstellenzeiger empfängt, wenn Erstellung erfolgreich ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -166,24 +166,25 @@ static HRESULT Error(
 
 ### <a name="parameters"></a>Parameter
 
-*lpszDesc*  
-[in] Die Zeichenfolge, die den Fehler beschreibt. Die Unicode-Version von `Error` gibt an, dass *LpszDesc* vom LPCOLESTR geben an, die ANSI-Version gibt eine Art von LPCSTR.  
-*IID*  
+*lpszDesc*<br/>
+[in] Die Zeichenfolge, die den Fehler beschreibt. Die Unicode-Version von `Error` gibt an, dass *LpszDesc* vom LPCOLESTR geben an, die ANSI-Version gibt eine Art von LPCSTR.
+
+*IID*<br/>
 [in] Die IID der Schnittstelle definieren den Fehler oder die GUID_NULL (Standardwert), wenn der Fehler vom Betriebssystem definiert ist.
 
-*' hres '*  
+*' hres '*<br/>
 [in] Das HRESULT, Sie möchten, die an den Aufrufer zurückgegeben werden. Der Standardwert ist 0. Weitere Informationen zu *' hres '*, finden Sie unter "Hinweise".
 
-*nID*  
+*nID*<br/>
 [in] Der Ressourcenbezeichner, in dem die Zeichenfolge zur fehlerbeschreibung gespeichert ist. Dieser Wert sollte zwischen 0 x 0200 und 0xFFFF liegen. In Debugbuilds einer **ASSERT** führt, wenn *nID* indiziert sich nicht auf eine gültige Zeichenfolge. In Releasebuilds wird die Zeichenfolge zur fehlerbeschreibung festgelegt, "Unbekannter Fehler."
 
-*dwHelpID*  
+*dwHelpID*<br/>
 [in] Den Hilfekontextbezeichner für den Fehler.
 
-*lpszHelpFile*  
+*lpszHelpFile*<br/>
 [in] Der Pfad und Name der Hilfedatei, die den Fehler beschreibt.
 
-*hInst*  
+*hInst*<br/>
 [in] Das Handle für die Ressource. Standardmäßig ist dieser Parameter `_AtlModule::GetResourceInstance`, wobei `_AtlModule` ist die globale Instanz des [CAtlModule](../../atl/reference/catlmodule-class.md).
 
 ### <a name="return-value"></a>Rückgabewert

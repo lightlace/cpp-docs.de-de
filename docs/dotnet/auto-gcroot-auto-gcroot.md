@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::auto_gcroot | Microsoft Docs
+title: auto_gcroot::auto_gcroot | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: df9650c5a013d6308869de002919c33a08b2ae04
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc168596c43c4ea8f26da5157656822b862bdc1e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105828"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100440"
 ---
 # <a name="autogcrootautogcroot"></a>auto_gcroot::auto_gcroot
 Die `auto_gcroot` Konstruktor.  
@@ -46,14 +46,14 @@ auto_gcroot(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `_ptr`  
- Das Objekt als Besitzer.  
+*_ptr*<br/>
+Das Objekt als Besitzer.  
   
- `_right`  
- Ein vorhandener `auto_gcroot`.  
+*_Right*<br/>
+Ein vorhandener `auto_gcroot`.  
   
 ## <a name="remarks"></a>Hinweise  
- Beim Erstellen einer `auto_gcroot` aus einer vorhandenen `auto_gcroot`, den vorhandenen `auto_gcroot` frei sein Objekt vor dem Übertragen des Besitzes des Objekts mit dem neuen `auto_gcroot`.  
+ Beim Erstellen einer `auto_gcroot` aus einer vorhandenen `auto_gcroot`, die vorhandene `auto_gcroot` gibt das Objekt vor dem Übertragen des Besitzes des Objekts, das die neue `auto_gcroot`.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -148,7 +148,7 @@ done
  **Namespace** Msclr  
   
 ## <a name="see-also"></a>Siehe auch  
- [Auto_gcroot-Elemente](../dotnet/auto-gcroot-members.md)   
+ [Auto_gcroot-Members](../dotnet/auto-gcroot-members.md)   
  [auto_gcroot::Attach](../dotnet/auto-gcroot-attach.md)   
  [auto_gcroot::Operator =](../dotnet/auto-gcroot-operator-assign.md)   
  [auto_gcroot::~auto_gcroot](../dotnet/auto-gcroot-tilde-auto-gcroot.md)

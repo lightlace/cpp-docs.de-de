@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8642bf2bb6b2db06ecb33fa6ec1cc44d5e68317c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 672da1c98ebc51a7440e29234950be2adb5e1c0e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766229"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093050"
 ---
 # <a name="csecurityattributes-class"></a>CSecurityAttributes-Klasse
 
@@ -80,10 +80,10 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 
 ### <a name="parameters"></a>Parameter
 
-*rSecurityDescriptor*  
+*rSecurityDescriptor*<br/>
 Verweis auf den Sicherheitsdeskriptor.
 
-*bInheritsHandle*  
+*bInheritsHandle*<br/>
 Gibt an, ob das zurückgegebene Handle geerbt wird, wenn ein neuer Prozess erstellt wird. Wenn dieses Element auf true festgelegt ist, erbt der neue Prozess das Handle.
 
 ##  <a name="set"></a>  CSecurityAttributes:: Set
@@ -96,10 +96,10 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 
 ### <a name="parameters"></a>Parameter
 
-*rSecurityDescriptor*  
+*rSecurityDescriptor*<br/>
 Verweis auf den Sicherheitsdeskriptor.
 
-*bInheritHandle*  
+*bInheritHandle*<br/>
 Gibt an, ob das zurückgegebene Handle geerbt wird, wenn ein neuer Prozess erstellt wird. Wenn dieses Element auf true festgelegt ist, erbt der neue Prozess das Handle.
 
 ### <a name="remarks"></a>Hinweise
@@ -108,8 +108,8 @@ Diese Methode wird verwendet, durch den Konstruktor zum Initialisieren der `CSec
 
 ## <a name="see-also"></a>Siehe auch
 
-[Beispiel für die Sicherheit](../../visual-cpp-samples.md)   
-[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)   
-[Sicherheitsbeschreibung](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)   
+[Beispiel für die Sicherheit](../../visual-cpp-samples.md)<br/>
+[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)<br/>
+[Sicherheitsbeschreibung](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
 [Globale Sicherheitsfunktionen](../../atl/reference/security-global-functions.md)

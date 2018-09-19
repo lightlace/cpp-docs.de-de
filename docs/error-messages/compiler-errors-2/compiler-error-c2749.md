@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2749 generiert | Microsoft Docs
+title: Compilerfehler C2749 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1738bdcc66e05512932fcd9029484dc55e3fc4a0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5cccc06d9202297e1c86d87735621e12dd346cca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236893"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095214"
 ---
-# <a name="compiler-error-c2749"></a>Compiler-Fehler C2749 generiert
-'Typ': kann nur ausgelöst oder abgefangen Handle für eine verwaltete Klasse mit/clr: safe  
-  
- Bei Verwendung **/CLR: safe**, kann nur ausgelöst oder abgefangen einen Referenztyp darstellt.  
-  
- Weitere Informationen finden Sie unter [/clr (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C2749 generiert:  
-  
-```  
-// C2749.cpp  
-// compile with: /clr:safe  
-ref struct MyStruct {  
-public:  
-   int i;  
-};  
-  
-int main() {  
-   MyStruct ^x = gcnew MyStruct;  
-  
-   // Delete the following 4 lines to resolve.  
-   try {   
-      throw (1);   // C2749  
-   }  
-   catch(int){}  
-  
-   // OK  
-   try {  
-      throw (x);  
-   }  
-   catch(MyStruct ^){}   
-}  
+# <a name="compiler-error-c2749"></a>Compilerfehler C2749
+
+'Typ': kann nur ausgelöst oder abgefangen Handle für eine verwaltete Klasse mit/clr: safe
+
+Bei Verwendung **/CLR: safe**, Sie können nur ausgelöst oder abgefangen einen Verweistyp handelt.
+
+Weitere Informationen finden Sie unter [/clr (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C2749 generiert:
+
+```
+// C2749.cpp
+// compile with: /clr:safe
+ref struct MyStruct {
+public:
+   int i;
+};
+
+int main() {
+   MyStruct ^x = gcnew MyStruct;
+
+   // Delete the following 4 lines to resolve.
+   try {
+      throw (1);   // C2749
+   }
+   catch(int){}
+
+   // OK
+   try {
+      throw (x);
+   }
+   catch(MyStruct ^){}
+}
 ```

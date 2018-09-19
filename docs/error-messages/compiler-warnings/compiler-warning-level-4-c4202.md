@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4202 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4202 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dea55835c75a0ac1d5646a542675eefa2c5e5254
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4fd44b436369e908d471ff56d193f3afab97a769
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293009"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103307"
 ---
 # <a name="compiler-warning-level-4-c4202"></a>Compilerwarnung (Stufe 4) C4202
-nicht dem Standard entsprechende Erweiterung: "...": Prototypparameter in der Liste ist ungültig  
-  
- Eine Funktionsdefinition im alten Stil enthält Variable Argumente. Diese Definitionen generiert einen Fehler unter ANSI-Kompatibilität (["/ Za"](../../build/reference/za-ze-disable-language-extensions.md)).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// C4202.c  
-// compile with: /W4  
-void func( a, b, ...)   // C4202  
-int a, b;  
-{}  
-  
-int main()  
-{  
-}  
+
+nicht dem Standard entsprechende Erweiterung: "...": Prototypparameter in der Namensliste ist unzulässig
+
+Eine herkömmliche Funktionsdefinition enthält Variable Argumente. Diese Definitionen generiert einen Fehler ANSI-Kompatibilität ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+
+## <a name="example"></a>Beispiel
+
+```
+// C4202.c
+// compile with: /W4
+void func( a, b, ...)   // C4202
+int a, b;
+{}
+
+int main()
+{
+}
 ```

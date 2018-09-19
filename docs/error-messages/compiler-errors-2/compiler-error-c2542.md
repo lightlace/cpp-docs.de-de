@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2542 | Microsoft Docs
+title: Compilerfehler C2542 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 039d5853da3876dbe079ff1e4a38be4afdb34bd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81f6f9aa48a4a0ee1a0b414879ae3673c13529fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229078"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097240"
 ---
 # <a name="compiler-error-c2542"></a>Compilerfehler C2542
-'Bezeichner': Klassenobjekt besitzt keinen Konstruktor zur Initialisierung  
-  
- Es ist kein Konstruktor mit einer Parameterliste, die die Initialisierung entspricht.  
-  
- Dieser Fehler kann durch falsche Parameter in der Initialisierung verursacht werden.
+
+'Bezeichner': Objekt einer Klasse besitzt keinen Konstruktor zur Initialisierung
+
+Es ist kein Konstruktor mit einer Parameterliste, die die Initialisierung entspricht.
+
+Dieser Fehler kann durch falsche Parameter in der Initialisierung verursacht werden.

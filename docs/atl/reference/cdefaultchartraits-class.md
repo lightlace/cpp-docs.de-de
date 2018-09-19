@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 080a7b9f5da71535f8b141555ec1890a521fe715
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 69b6a7b94e993641452154ede11d65929424df5e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761981"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095754"
 ---
 # <a name="cdefaultchartraits-class"></a>CDefaultCharTraits-Klasse
 
@@ -33,13 +33,13 @@ Diese Klasse stellt zwei statische Funktionen zum Konvertieren von Zeichen zwisc
 ## <a name="syntax"></a>Syntax
 
 ```
-template <typename T>  
+template <typename T>
 class CDefaultCharTraits
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Der Typ der Daten in der Auflistung gespeichert werden.
 
 ## <a name="members"></a>Member
@@ -64,13 +64,13 @@ Diese Klasse bietet Funktionen, die von der Klasse verwendet werden [CStringElem
 Rufen Sie diese Funktion, um ein Zeichen in Kleinbuchstaben zu konvertieren.
 
 ```
-static wchar_t CharToLower(wchar_t x);  
+static wchar_t CharToLower(wchar_t x);
 static char CharToLower(char x);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*w*  
+*w*<br/>
 Das Zeichen in Kleinbuchstaben konvertiert werden soll.
 
 ### <a name="example"></a>Beispiel
@@ -82,13 +82,13 @@ Das Zeichen in Kleinbuchstaben konvertiert werden soll.
 Mit dieser Funktion können Sie ein Zeichen in Großbuchstaben zu konvertieren.
 
 ```
-static wchar_t CharToUpper(wchar_t x);  
+static wchar_t CharToUpper(wchar_t x);
 static char CharToUpper(char x);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*w*  
+*w*<br/>
 Das Zeichen, die in Großbuchstaben zu konvertieren.
 
 ## <a name="see-also"></a>Siehe auch

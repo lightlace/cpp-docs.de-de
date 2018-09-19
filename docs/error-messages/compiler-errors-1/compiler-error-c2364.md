@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2364 | Microsoft Docs
+title: Compilerfehler C2364 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3802deefb8a62f7952a5ce7a32c589c76c84513
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d35701eb47bdf633377652094b847ccdfb31e59
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196009"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100629"
 ---
 # <a name="compiler-error-c2364"></a>Compilerfehler C2364
-'Typ': Unzulässiger Typ für das benutzerdefinierte Attribut  
-  
- Benannte Argumente für benutzerdefinierte Attribute sind zum Kompilieren von Konstanten beschränkt. Z. B. ganzzahlige Typen (Int, Char, usw.), System:: Type ^, und das System:: Object ^.  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C2364 generiert.  
-  
-```  
-// c2364.cpp  
-// compile with: /clr /c  
-using namespace System;  
-  
-[attribute(AttributeTargets::All)]  
-public ref struct ABC {  
-public:  
-   // Delete the following line to resolve.  
-   ABC( Enum^ ) {}   // C2364  
-   ABC( int ) {}   // OK  
-};  
+
+'Typ': Unzulässiger Typ für das benutzerdefinierte Attribut
+
+Benannte Argumente für benutzerdefinierte Attribute sind zum Kompilieren von Konstanten zur beschränkt. Z. B. ganzzahligen Typen (Int, Char, usw.), System:: Type ^, und das System:: Object ^.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C2364 generiert.
+
+```
+// c2364.cpp
+// compile with: /clr /c
+using namespace System;
+
+[attribute(AttributeTargets::All)]
+public ref struct ABC {
+public:
+   // Delete the following line to resolve.
+   ABC( Enum^ ) {}   // C2364
+   ABC( int ) {}   // OK
+};
 ```

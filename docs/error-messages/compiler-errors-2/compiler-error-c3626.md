@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3626 | Microsoft Docs
+title: Compilerfehler C3626 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ede2ec42b3afc581126d2591cba072817dcc8748
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba6fb7c03c7c957999ca75e3946e4f78d290b78a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266167"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094701"
 ---
 # <a name="compiler-error-c3626"></a>Compilerfehler C3626
-'Schlüsselwort': '__event'-Schlüsselwort kann nur verwendet werden, auf COM-Schnittstellen, Memberfunktionen und Datenmember, die Zeiger auf Delegaten  
-  
- Ein Schlüsselwort wurde falsch verwendet.  
-  
- Im folgende Beispiel wird C3626 generiert:  
-  
-```  
-// C3626.cpp  
-// compile with: /c  
-struct A {  
-   __event int i;   // C3626  
-// try the following line instead  
-// __event int i();  
-};  
+
+'Schlüsselwort': '__event'-Schlüsselwort kann nur verwendet werden, auf die COM-Schnittstellen, Memberfunktionen und Datenmember, die Zeiger auf Delegate sind
+
+Ein Schlüsselwort wurde falsch verwendet.
+
+Im folgende Beispiel wird die C3626 generiert:
+
+```
+// C3626.cpp
+// compile with: /c
+struct A {
+   __event int i;   // C3626
+// try the following line instead
+// __event int i();
+};
 ```
