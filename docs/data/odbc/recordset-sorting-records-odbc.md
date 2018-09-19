@@ -17,25 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c78603e12aec7653e7c5c62d9a0282241ccda99e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 0c32c156b43dfa4617061aedac60d9570bebfbf8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337829"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092387"
 ---
 # <a name="recordset-sorting-records-odbc"></a>Recordset: Sortieren von Datensätzen (ODBC)
+
 Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
   
- In diesem Thema wird erläutert, wie das Recordset sortiert wird. Sie können angeben, dass eine oder mehrere Spalten auf dem die Sortierung basieren, und Sie können angeben, auf- oder absteigender Reihenfolge (**ASC** oder **DESC**; **ASC** ist die Standardeinstellung) für jede Spalte angegeben. Z. B. Wenn Sie zwei Spalten angeben, werden die Datensätze zuerst in der ersten Spalte, die mit dem Namen, und klicken Sie dann auf der zweiten Spalte, die mit dem Namen sortiert. Eine SQL **ORDER BY** -Klausel definiert eine Sortierung. Wenn das Framework fügt der **ORDER BY** -Klausel, um dem Recordset SQL-Abfragen, die Klausel-Steuerelemente, die die Auswahl der Sortierung.  
+In diesem Thema wird erläutert, wie das Recordset sortiert wird. Sie können angeben, dass eine oder mehrere Spalten auf dem die Sortierung basieren, und Sie können angeben, auf- oder absteigender Reihenfolge (**ASC** oder **DESC**; **ASC** ist die Standardeinstellung) für jede Spalte angegeben. Z. B. Wenn Sie zwei Spalten angeben, werden die Datensätze zuerst in der ersten Spalte, die mit dem Namen, und klicken Sie dann auf der zweiten Spalte, die mit dem Namen sortiert. Eine SQL **ORDER BY** -Klausel definiert eine Sortierung. Wenn das Framework fügt der **ORDER BY** -Klausel, um dem Recordset SQL-Abfragen, die Klausel-Steuerelemente, die die Auswahl der Sortierung.  
   
- Sie müssen ein Recordset Sortierreihenfolge einrichten, nach dem Erstellen des Objekts, aber vor dem Aufruf der `Open` Member-Funktion (oder vor dem Aufruf der `Requery` Memberfunktion für ein bereits vorhandenes Recordset-Objekt, dessen `Open` Memberfunktion wurde zuvor aufgerufen).  
+Sie müssen ein Recordset Sortierreihenfolge einrichten, nach dem Erstellen des Objekts, aber vor dem Aufruf der `Open` Member-Funktion (oder vor dem Aufruf der `Requery` Memberfunktion für ein bereits vorhandenes Recordset-Objekt, dessen `Open` Memberfunktion wurde zuvor aufgerufen).  
   
 #### <a name="to-specify-a-sort-order-for-a-recordset-object"></a>Eine Sortierreihenfolge für ein Recordset-Objekt an  
   
-1.  Erstellen Sie ein neues Recordsetobjekt (oder aufrufen vorbereiten `Requery` für ein bereits vorhandenes).  
+1. Erstellen Sie ein neues Recordsetobjekt (oder aufrufen vorbereiten `Requery` für ein bereits vorhandenes).  
   
-2.  Legen Sie den Wert des Objekts des [M_strSort](../../mfc/reference/crecordset-class.md#m_strsort) -Datenmember.  
+1. Legen Sie den Wert des Objekts des [M_strSort](../../mfc/reference/crecordset-class.md#m_strsort) -Datenmember.  
   
      Die Sortierung ist eine Null-terminierte Zeichenfolge. Es enthält den Inhalt der **ORDER BY** -Klausel jedoch nicht das Schlüsselwort **ORDER BY**. Beispielsweise verwenden:  
   
@@ -49,11 +50,11 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
     recordset.m_strSort = "ORDER BY LastName DESC, FirstName DESC";  
     ```  
   
-3.  Legen Sie ggf. Weitere Optionen, die Sie benötigen, die können Sie z. B. einen Filter, Sperrmodus oder Parameter.  
+1. Legen Sie ggf. Weitere Optionen, die Sie benötigen, die können Sie z. B. einen Filter, Sperrmodus oder Parameter.  
   
-4.  Rufen Sie `Open` für das neue Objekt (oder `Requery` für ein vorhandenes Objekt).  
+1. Rufen Sie `Open` für das neue Objekt (oder `Requery` für ein vorhandenes Objekt).  
   
- Die ausgewählten Datensätze werden sortiert nach den Angaben. Um eine Gruppe von Datensätzen für Schüler und Studenten, in absteigender Reihenfolge nach Nachnamen und dann die Vornamen sortieren möchten, führen Sie z. B. folgende ein:  
+Die ausgewählten Datensätze werden sortiert nach den Angaben. Um eine Gruppe von Datensätzen für Schüler und Studenten, in absteigender Reihenfolge nach Nachnamen und dann die Vornamen sortieren möchten, führen Sie z. B. folgende ein:  
   
 ```cpp  
 // Construct the recordset  
@@ -64,12 +65,13 @@ rsStudent.m_strSort = "LastName DESC, FirstName DESC";
 rsStudent.Open( );  
 ```  
   
- Das Recordset enthält alle Studentendatensätze, sortiert in absteigender Reihenfolge (Z bis A) nach dem Nachnamen, klicken Sie dann nach Vornamen.  
+Das Recordset enthält alle Studentendatensätze, sortiert in absteigender Reihenfolge (Z bis A) nach dem Nachnamen, klicken Sie dann nach Vornamen.  
   
 > [!NOTE]
 >  Wenn Sie auswählen, um dem Recordset Standard-SQL-Zeichenfolge zu überschreiben, indem Sie eine eigene SQL-Zeichenfolge zu übergeben `Open`, eine Sortierung ist nicht festgelegt werden, wenn die benutzerdefinierte Zeichenfolge enthält eine **ORDER BY** Klausel.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)   
- [Recordset: Parametrisieren eines Recordsets (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)   
- [Recordset: Filtern von Datensätzen (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
+
+[Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
+[Recordset: Parametrisieren eines Recordsets (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
+[Recordset: Filtern von Datensätzen (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)

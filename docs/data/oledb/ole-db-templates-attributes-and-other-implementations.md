@@ -17,46 +17,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7338f513754722bc00a96f5ee71cce06591f031d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6e5fa63a0da718b80c2b0d61e5215a947e21d496
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685989"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101711"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Vorlagen, Attribute und andere Implementierungen von OLE DB
+
 ## <a name="atl-ole-db-templates"></a>ATL-OLE DB-Vorlagen  
- OLE DB-Vorlagen, die Teil der ATL (Active Template Library) sind, stellen die hohe Leistung OLE DB-datenbanktechnologie einfacher zu verwenden, indem Sie Klassen, die viele häufig verwendeten OLE DB-Schnittstellen implementieren. Zusammen mit dieser Vorlage wird die Bibliothek Unterstützung des Assistenten zum Erstellen von OLE DB-startanwendungen.  
+
+OLE DB-Vorlagen, die Teil der ATL (Active Template Library) sind, stellen die hohe Leistung OLE DB-datenbanktechnologie einfacher zu verwenden, indem Sie Klassen, die viele häufig verwendeten OLE DB-Schnittstellen implementieren. Zusammen mit dieser Vorlage wird die Bibliothek Unterstützung des Assistenten zum Erstellen von OLE DB-startanwendungen.  
   
- Diese Vorlagenbibliothek besteht aus zwei Teilen:  
+Diese Vorlagenbibliothek besteht aus zwei Teilen:  
   
--   **OLE DB-Consumervorlagen** verwendet, um eine OLE DB-Clientanwendung (Consumer) zu implementieren.  
+- **OLE DB-Consumervorlagen** verwendet, um eine OLE DB-Clientanwendung (Consumer) zu implementieren.  
   
--   **OLE DB-Anbietervorlagen** verwendet, um eine OLE DB-Server (Provider)-Anwendung zu implementieren.  
+- **OLE DB-Anbietervorlagen** verwendet, um eine OLE DB-Server (Provider)-Anwendung zu implementieren.  
   
- Sie sollten mit C++-Vorlagen, COM und den OLE DB-Schnittstellen vertraut sein, um OLE DB-Vorlagen verwenden zu können. Wenn Sie nicht mit OLE DB vertraut sind, finden Sie unter [OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643\(v=vs.85\)).  
+Sie sollten mit C++-Vorlagen, COM und den OLE DB-Schnittstellen vertraut sein, um OLE DB-Vorlagen verwenden zu können. Wenn Sie nicht mit OLE DB vertraut sind, finden Sie unter [OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643\(v=vs.85\)).  
   
- Weitere Informationen können Sie folgende Aktionen ausführen:  
+Weitere Informationen können Sie folgende Aktionen ausführen:  
   
--   Lesen Sie die Themen zu den [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md) oder [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md).  
+- Lesen Sie die Themen zu den [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md) oder [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md).  
   
--   Erstellen Sie eine [OLE DB-Consumer](../../data/oledb/creating-an-ole-db-consumer.md) oder [OLE DB-Anbieter](../../data/oledb/creating-an-ole-db-provider.md).  
+- Erstellen Sie eine [OLE DB-Consumer](../../data/oledb/creating-an-ole-db-consumer.md) oder [OLE DB-Anbieter](../../data/oledb/creating-an-ole-db-provider.md).  
   
--   Die Liste der [OLE DB-Consumer-Klassen](../../data/oledb/ole-db-consumer-templates-reference.md) oder [OLE DB-Anbieterklassen](../../data/oledb/ole-db-provider-templates-reference.md).  
+- Die Liste der [OLE DB-Consumer-Klassen](../../data/oledb/ole-db-consumer-templates-reference.md) oder [OLE DB-Anbieterklassen](../../data/oledb/ole-db-provider-templates-reference.md).  
   
--   Die Liste der [OLE DB-Vorlagenbeispiele](https://github.com/Microsoft/VCSamples).  
+- Die Liste der [OLE DB-Vorlagenbeispiele](https://github.com/Microsoft/VCSamples).  
   
--   Finden Sie unter [OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) (in der Windows-SDK).  
+- Finden Sie unter [OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) (in der Windows-SDK).  
   
 ## <a name="ole-db-attributes"></a>OLE DB-Attribute  
- Die [OLE DB-Consumerattribute](../../windows/ole-db-consumer-attributes.md) bieten eine einfache Möglichkeit zum Erstellen von OLE DB-Consumer. Die OLE DB-Attribute fügen Code auf Grundlage der [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md) arbeiten OLE DB-Consumer und-Anbieter zu erstellen. Bei Bedarf an Funktionen, die durch die Attribute nicht unterstützt, können Sie OLE DB-Vorlagen in Verbindung mit den Attributen in Ihrem Code verwenden.  
+
+Die [OLE DB-Consumerattribute](../../windows/ole-db-consumer-attributes.md) bieten eine einfache Möglichkeit zum Erstellen von OLE DB-Consumer. Die OLE DB-Attribute fügen Code auf Grundlage der [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md) arbeiten OLE DB-Consumer und-Anbieter zu erstellen. Bei Bedarf an Funktionen, die durch die Attribute nicht unterstützt, können Sie OLE DB-Vorlagen in Verbindung mit den Attributen in Ihrem Code verwenden.  
   
 ## <a name="mfc-ole-db-classes"></a>MFC-OLE DB-Klassen  
- Die MFC-Bibliothek enthält eine Klasse, [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), die Datenbankdatensätze in Steuerelementen anzeigt. Die Ansicht ist eine Formularansicht können Sie direkt mit verbundenen eine `CRowset` -Objekts und zeigt die Felder der `CRowset` Objekt in der Dialogfeldvorlage-Steuerelementen. Außerdem gibt er eine Standardimplementierung für das Verschieben von mit dem ersten, nächsten, vorherigen oder letzten Datensatz und eine Schnittstelle zum Aktualisieren der aktuell angezeigten Datensatzes. Weitere Informationen finden Sie unter `COleDBRecordView`.  
+
+Die MFC-Bibliothek enthält eine Klasse, [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), die Datenbankdatensätze in Steuerelementen anzeigt. Die Ansicht ist eine Formularansicht können Sie direkt mit verbundenen eine `CRowset` -Objekts und zeigt die Felder der `CRowset` Objekt in der Dialogfeldvorlage-Steuerelementen. Außerdem gibt er eine Standardimplementierung für das Verschieben von mit dem ersten, nächsten, vorherigen oder letzten Datensatz und eine Schnittstelle zum Aktualisieren der aktuell angezeigten Datensatzes. Weitere Informationen finden Sie unter `COleDBRecordView`.  
   
 ## <a name="ole-db-sdk-interfaces"></a>OLE DB-SDK-Schnittstellen  
- In den Fällen, in denen OLE DB-Vorlagen keine OLE DB-Funktionen unterstützen, müssen Sie den OLE DB-Schnittstellen verwenden. Weitere Informationen finden Sie unter [OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) im Windows SDK.  
+
+In den Fällen, in denen OLE DB-Vorlagen keine OLE DB-Funktionen unterstützen, müssen Sie den OLE DB-Schnittstellen verwenden. Weitere Informationen finden Sie unter [OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) im Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Programmierung](../../data/oledb/ole-db-programming.md)   
- [Übersicht über die OLE DB-Programmierung](../../data/oledb/ole-db-programming-overview.md)
+
+[OLE DB-Programmierung](../../data/oledb/ole-db-programming.md)<br/>
+[Übersicht über die OLE DB-Programmierung](../../data/oledb/ole-db-programming-overview.md)

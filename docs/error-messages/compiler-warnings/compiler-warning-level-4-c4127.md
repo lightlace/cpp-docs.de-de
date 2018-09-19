@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bfd913b95b84d8425649476649f9bffa6163141
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: 561173e2b451a0b736d97042667a2fb14b3a7eb7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601521"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094896"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>Compilerwarnung (Stufe 4) C4127
 
@@ -38,10 +38,10 @@ Wenn der steuernde Ausdruck einer `while` Schleife ist eine Konstante, da die Sc
 Das folgende Beispiel zeigt zwei Möglichkeiten, C4127 generiert und gezeigt, wie, eine for-Schleife, um die Warnung zu vermeiden:
 
 ```cpp
-// C4127.cpp  
-// compile with: /W4  
-#include <stdio.h>  
-int main() {  
+// C4127.cpp
+// compile with: /W4
+#include <stdio.h>
+int main() {
    if (true) {}           // OK in VS2015 update 3 and later
    if (1 == 1) {}         // C4127
    while (42) { break; }  // C4127

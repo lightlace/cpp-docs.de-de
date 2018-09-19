@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a77ed656d39888e85e607ee4fdd96b384d0d250
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cf2b3d047a6618326e69dcb51f143f77fc10c8a6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761455"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099537"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>Vornehmen eines ATL-Objekt als nicht erstellbares
 
@@ -46,10 +46,10 @@ Sie können die Attribute eines ATL-basierten COM-Objekts, dass ein Client direk
 
 ## <a name="see-also"></a>Siehe auch
 
-[ATL-Projekt-Assistent](../../atl/reference/atl-project-wizard.md)   
-[Visual C++ Project Types (Visual C++-Projekttypen)](../../ide/visual-cpp-project-types.md)   
-[Creating Desktop Projects By Using Application Wizards (Erstellen von Desktopprojekten mit Anwendungs-Assistenten)](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
-[Programmieren mit ATL- und C-Laufzeitcode](../../atl/programming-with-atl-and-c-run-time-code.md)   
-[Grundlagen von ARL COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)   
+[ATL-Projekt-Assistent](../../atl/reference/atl-project-wizard.md)<br/>
+[Visual C++-Projekttypen](../../ide/visual-cpp-project-types.md)<br/>
+[Erstellen von Desktopprojekten mit Anwendungs-Assistenten](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Programmieren mit ATL- und C-Laufzeitcode](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Grundlagen von ARL COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Standardmäßige ATL-Projektkonfigurationen](../../atl/reference/default-atl-project-configurations.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3854 | Microsoft Docs
+title: Compilerfehler C3854 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbaed18984dbcc06b976a367ef9911528792ce52
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d94d2462662fd5f99e80ba205b8e2df41d7c716b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275511"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099550"
 ---
 # <a name="compiler-error-c3854"></a>Compilerfehler C3854
-Ausdruck links von '=' wird als Funktion ausgewertet. Kann nicht an eine Funktion zuweisen (eine Funktion ist kein l-Wert)  
-  
- Ein Verweis kann nicht erneut initialisiert werden. Dereferenziert einen Verweis auf eine Funktion ergibt eine Funktion, die ein Rvalue ist, den Sie zuweisen können. Aus diesem Grund nicht über einen Verweis auf eine Funktion zugewiesen.  
-  
- Im folgende Beispiel wird C3854 generiert:  
-  
-```  
-// C3854.cpp  
-int afunc(int i)  
-{  
-   return i;  
-}  
-  
-typedef int (& rFunc_t)(int);  
-typedef int (* pFunc_t)(int);  
-  
-int main()  
-{  
-   rFunc_t rf = afunc;   // OK binding a reference to function  
-   pFunc_t pf = &afunc;   // OK initializing a pointer to function  
-  
-   *pf = &afunc;   // C3854  
-   // try the following line instead  
-   // pf = &afunc;  
-   *rf = &afunc;   // C3854  
-}  
+
+Ausdruck links von '=' wird als Funktion ausgewertet. Eine Funktion kann nicht zugewiesen (eine Funktion ist kein l-Wert)
+
+Ein Verweis kann nicht erneut initialisiert werden. Dereferenzieren eines Verweises auf eine Funktion führt eine Funktion, die ein Rvalue-Wert, wird auf die Sie zuweisen können. Aus diesem Grund nicht über einen Verweis auf eine Funktion zugewiesen.
+
+Im folgende Beispiel wird die C3854 generiert:
+
+```
+// C3854.cpp
+int afunc(int i)
+{
+   return i;
+}
+
+typedef int (& rFunc_t)(int);
+typedef int (* pFunc_t)(int);
+
+int main()
+{
+   rFunc_t rf = afunc;   // OK binding a reference to function
+   pFunc_t pf = &afunc;   // OK initializing a pointer to function
+
+   *pf = &afunc;   // C3854
+   // try the following line instead
+   // pf = &afunc;
+   *rf = &afunc;   // C3854
+}
 ```

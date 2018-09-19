@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2325 | Microsoft Docs
+title: Compilerfehler C2325 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 095959dd432de52c2a0d32cbd7198ea434223407
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae66d00c6831d102cb3f6fd47d024745480674fc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195099"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107791"
 ---
 # <a name="compiler-error-c2325"></a>Compilerfehler C2325
-"Typ": Unerwarteter Typ auf der rechten Seite des "Name"  
-  
- Erfolgt ein Aufruf von einem Destruktor mit falschen Typ.  
-  
- Im folgende Beispiel wird C2325 generiert:  
-  
-```  
-// C2325.cpp  
-// compile with: /c  
-class A {};  
-typedef A* pA_t;  
-void f() {  
-    A** ppa = new A *;  
-    ppa->~A*;   // C2325  
-  
-   pA_t *ppa2 = new pA_t;  
-   ppa2->~pA_t();   // OK  
-}  
+
+'Typ': unerwarteten Typ auf der rechten Seite von 'Name'
+
+Von einem Destruktor des falschen Typs wird aufgerufen.
+
+Im folgende Beispiel wird die C2325 generiert:
+
+```
+// C2325.cpp
+// compile with: /c
+class A {};
+typedef A* pA_t;
+void f() {
+    A** ppa = new A *;
+    ppa->~A*;   // C2325
+
+   pA_t *ppa2 = new pA_t;
+   ppa2->~pA_t();   // OK
+}
 ```

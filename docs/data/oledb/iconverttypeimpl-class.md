@@ -25,14 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e176cc20dc3f6f13eb868133b99c0ce7e86d25c4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ed4eefe8c05e2b5b027ba1d7c1fec022c9e44409
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572837"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104945"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl-Klasse
+
 Stellt eine Implementierung der [IConvertType](/previous-versions/windows/desktop/ms715926\(v=vs.85\)) Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax
@@ -44,11 +45,13 @@ class ATL_NO_VTABLE IConvertTypeImpl
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *T*  
- Abgeleitet von die Klasse `IConvertTypeImpl`.  
+
+*T*<br/>
+Abgeleitet von die Klasse `IConvertTypeImpl`.  
 
 ## <a name="requirements"></a>Anforderungen  
- **Header:** „atldb.h“  
+
+**Header:** „atldb.h“  
   
 ## <a name="members"></a>Member  
   
@@ -59,9 +62,11 @@ class ATL_NO_VTABLE IConvertTypeImpl
 |[CanConvert](#canconvert)|Erhalten Informationen über die Verfügbarkeit von typkonvertierungen für einen Befehl oder in einem Rowset.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Schnittstelle ist obligatorisch. Befehle, Rowsets und Indexes-Schemarowsets. `IConvertTypeImpl` implementiert die Schnittstelle durch delegieren, auf das Konvertierungsobjekt von OLE DB bereitgestellt.  
+
+Diese Schnittstelle ist obligatorisch. Befehle, Rowsets und Indexes-Schemarowsets. `IConvertTypeImpl` implementiert die Schnittstelle durch delegieren, auf das Konvertierungsobjekt von OLE DB bereitgestellt.  
 
 ## <a name="canconvert"></a> Iconverttypeimpl:: CanConvert
+
 Erhalten Informationen über die Verfügbarkeit von typkonvertierungen für einen Befehl oder in einem Rowset.  
   
 ### <a name="syntax"></a>Syntax  
@@ -73,11 +78,14 @@ STDMETHOD(CanConvert)(DBTYPE wFromType,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+
+Finden Sie unter [IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwendet OLE DB-Datenkonvertierung in `MSADC.DLL`.  
+
+Verwendet OLE DB-Datenkonvertierung in `MSADC.DLL`.  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

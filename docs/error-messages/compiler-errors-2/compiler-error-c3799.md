@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3799 | Microsoft Docs
+title: Compilerfehler C3799 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5e13e1e92b3f821ffbed62b06bd601baac7aad9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1022a2a1f5c5bb6279fc4af0acedbf28d7723aa6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267302"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105266"
 ---
 # <a name="compiler-error-c3799"></a>Compilerfehler C3799
-indizierte Eigenschaft kann nicht über eine leere Parameterliste verfügen.  
-  
-Eine indizierte Eigenschaft wurde falsch deklariert. Weitere Informationen finden Sie unter [wie: Verwenden von Eigenschaften in C + c++ / CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).  
-  
-## <a name="example"></a>Beispiel  
-Im folgende Beispiel wird C3799 generiert und gezeigt, wie sie diesen Fehler beheben.  
-  
-```cpp  
-// C3799.cpp  
-// compile with: /clr /c  
-ref struct C {  
-   property int default[] {   // C3799  
-   // try the following line instead  
-   // property int default[int] {  
-      int get(int index) { return 0; }  
-      void set(int index, int value) {}  
-   }  
-};  
+
+indizierte Eigenschaft kann keine leere Parameterliste aufweisen.
+
+Eine indizierte Eigenschaft wurde falsch deklariert. Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden von Eigenschaften in C++ / CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C3799 generiert und gezeigt, wie Sie diesen Fehler beheben.
+
+```cpp
+// C3799.cpp
+// compile with: /clr /c
+ref struct C {
+   property int default[] {   // C3799
+   // try the following line instead
+   // property int default[int] {
+      int get(int index) { return 0; }
+      void set(int index, int value) {}
+   }
+};
 ```

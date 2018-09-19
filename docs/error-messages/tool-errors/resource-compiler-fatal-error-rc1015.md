@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcencompiler: Schwerwiegender Fehler RC1015 | Microsoft Docs'
+title: 'Ressourcencompiler: Schwerwiegender Fehler RC1015 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7744242e44ecfc72ee57ab979969ad81b209e57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a72cba53ebe9a286ac2e7cbbf2c41b78f4e4e08
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322821"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100762"
 ---
 # <a name="resource-compiler-fatal-error-rc1015"></a>Ressourcencompiler: Schwerwiegender Fehler RC1015
-Includedatei 'Dateiname' kann nicht geöffnet werden  
-  
- Die angegebene Includedatei ist nicht vorhanden, konnte nicht geöffnet werden oder wurde nicht gefunden.  
-  
- Stellen Sie sicher, dass die Umgebungseinstellungen gültig sind und der richtige Pfad für die Datei angegeben wurde. Stellen Sie sicher, dass genügend Dateihandles Ressourcencompiler zur Verfügung stehen. Wenn die Datei auf einem Netzlaufwerk befindet, stellen Sie sicher, dass Sie über Berechtigungen zum Öffnen der Datei verfügen.  
-  
- RC1015 kann auftreten, auch wenn die Include-Datei vorhanden, in ein Verzeichnis angegeben ist, wie ein zusätzliches Includeverzeichnis in den Konfigurationseigenschaften -> Ressourcen -> Eigenschaftenseite Allgemein; Geben Sie den vollständigen Pfad zu der Include-Datei.  
-  
- Weitere Informationen finden Sie im Knowledge Base-Artikel Q326987: RC1015 Fehler beim Verwenden von Ressource Ansicht Wenn Includepfad ist zu lang.
+
+Includedatei 'Dateiname' kann nicht geöffnet werden
+
+Die angegebenen Include-Datei ist nicht vorhanden, konnte nicht geöffnet werden oder wurde nicht gefunden.
+
+Stellen Sie sicher, dass die Umgebungseinstellungen gültig sind und der richtige Pfad für die Datei angegeben wurde. Stellen Sie sicher, dass genügend Dateihandles Ressourcencompiler zur Verfügung stehen. Ist die Datei auf einem Netzlaufwerk, stellen Sie sicher, dass Sie über Berechtigungen zum Öffnen der Datei verfügen.
+
+RC1015 kann auch auftreten, wenn die Include-Datei vorhanden, in einem Verzeichnis ist als zusätzliches Includeverzeichnis in den Konfigurationseigenschaften -> Ressourcen angegeben -> Eigenschaftenseite "Allgemein"; Geben Sie den vollständigen Pfad zur Include-Datei.
+
+Weitere Informationen finden Sie im Knowledge Base-Artikel Q326987: RC1015 Fehler bei der Using Resource View If der Includepfad ist zu lang.

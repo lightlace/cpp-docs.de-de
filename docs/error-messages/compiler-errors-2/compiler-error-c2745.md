@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2745 generiert | Microsoft Docs
+title: Compilerfehler C2745 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11f371629c3811821d9c7dce56cc44137534058c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d08e89fe3dbcfbff8c947b432bda94e9ac15ef99
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231874"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099863"
 ---
-# <a name="compiler-error-c2745"></a>Compiler-Fehler C2745 generiert
-"token": dieses Token kann nicht in einen Bezeichner konvertiert werden  
-  
- Bezeichner müssen zulässiger Zeichen bestehen.  
-  
- Im folgende Beispiel wird C2745 generiert:  
-  
-```  
-// C2745.cpp  
-// compile with: /clr  
-int main() {  
-   int __identifier([));   // C2745  
-}  
+# <a name="compiler-error-c2745"></a>Compilerfehler C2745
+
+"token": dieses Token kann nicht auf einen Bezeichner konvertiert werden
+
+Bezeichner müssen aus zulässigen Zeichen bestehen.
+
+Im folgende Beispiel wird die C2745 generiert:
+
+```
+// C2745.cpp
+// compile with: /clr
+int main() {
+   int __identifier([));   // C2745
+}
 ```

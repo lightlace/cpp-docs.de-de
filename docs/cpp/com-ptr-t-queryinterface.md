@@ -17,42 +17,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20d22fac89b151a28e856ac4eaf61021faa6bfd5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e0add1d8f3fc73f78cee3e10642d7b5a12968a6a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407431"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106871"
 ---
 # <a name="comptrtqueryinterface"></a>_com_ptr_t::QueryInterface
-**Microsoft-spezifisch**  
-  
- Ruft die **QueryInterface** Memberfunktion `IUnknown` für den gekapselten Schnittstellenzeiger auf.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-template<typename _InterfaceType> HRESULT QueryInterface (  
-   const IID& iid,  
-   _InterfaceType*& p   
-) throw ( );  
-template<typename _InterfaceType> HRESULT QueryInterface (  
-   const IID& iid,  
-   _InterfaceType** p  
-) throw( );  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *IID*  
- `IID` eines Schnittstellenzeigers.  
-  
- *p*  
- Nicht formatierter Schnittstellenzeiger.  
-  
-## <a name="remarks"></a>Hinweise  
- Aufrufe `IUnknown::QueryInterface` für den gekapselten Schnittstellenzeiger mit dem angegebenen `IID` und gibt den resultierenden unformatierten Schnittstellenzeiger in *p*. Diese Routine gibt zurück, das HRESULT, um den Erfolg oder Fehler anzuzeigen.  
-  
- **Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md)
+
+**Microsoft-spezifisch**
+
+Ruft die **QueryInterface** Memberfunktion `IUnknown` für den gekapselten Schnittstellenzeiger auf.
+
+## <a name="syntax"></a>Syntax
+
+```
+template<typename _InterfaceType> HRESULT QueryInterface (
+   const IID& iid,
+   _InterfaceType*& p
+) throw ( );
+template<typename _InterfaceType> HRESULT QueryInterface (
+   const IID& iid,
+   _InterfaceType** p
+) throw( );
+```
+
+#### <a name="parameters"></a>Parameter
+
+*IID*<br/>
+`IID` eines Schnittstellenzeigers.
+
+*p*<br/>
+Nicht formatierter Schnittstellenzeiger.
+
+## <a name="remarks"></a>Hinweise
+
+Aufrufe `IUnknown::QueryInterface` für den gekapselten Schnittstellenzeiger mit dem angegebenen `IID` und gibt den resultierenden unformatierten Schnittstellenzeiger in *p*. Diese Routine gibt zurück, das HRESULT, um den Erfolg oder Fehler anzuzeigen.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md)

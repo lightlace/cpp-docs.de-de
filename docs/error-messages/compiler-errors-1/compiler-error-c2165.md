@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2165 | Microsoft Docs
+title: Compilerfehler C2165 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db8d434993ad913efca3fdff58fb7ed9cc0715e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0e9047b7f096c855bbefec745b454e2289c05e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170478"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101110"
 ---
 # <a name="compiler-error-c2165"></a>Compilerfehler C2165
-'Schlüsselwort': Zeiger auf Daten können nicht geändert werden.  
-  
- Das `__stdcall`-, `__cdecl`- oder `__fastcall` -Schlüsselwort versucht, einen Zeiger auf Daten zu ändern.  
-  
- Im folgenden Beispiel wird C2165 generiert:  
-  
-```  
-// C2165.cpp  
-// compile with: /c  
-char __cdecl *p;   // C2165  
-char *p;   // OK  
+
+'Schlüsselwort': Zeiger auf Daten können nicht geändert werden.
+
+Das `__stdcall`-, `__cdecl`- oder `__fastcall` -Schlüsselwort versucht, einen Zeiger auf Daten zu ändern.
+
+Im folgenden Beispiel wird C2165 generiert:
+
+```
+// C2165.cpp
+// compile with: /c
+char __cdecl *p;   // C2165
+char *p;   // OK
 ```

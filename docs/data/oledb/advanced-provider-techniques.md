@@ -1,5 +1,5 @@
 ---
-title: Erweiterte Anbietertechniken | Microsoft Docs
+title: Erweiterte Anbietertechniken | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,26 +15,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7a982702ce01a7f979d8bd868a781c2134ece160
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ebe324ce569077654db8d9462a9c32b570748bba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088871"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092400"
 ---
 # <a name="advanced-provider-techniques"></a>Erweiterte Anbietertechniken
+
 Weitere Informationen über erweiterte Anbietertechniken finden Sie unter den folgenden Themen:  
   
--   [Unterstützen von Benachrichtigungen](../../data/oledb/supporting-notifications.md)  
+- [Unterstützen von Benachrichtigungen](../../data/oledb/supporting-notifications.md)  
   
--   [Supporting Schema Rowsets](../../data/oledb/supporting-schema-rowsets.md)  
+- [Supporting Schema Rowsets](../../data/oledb/supporting-schema-rowsets.md)  
   
--   [Anbieterunterstützung für Lesezeichen](../../data/oledb/provider-support-for-bookmarks.md)  
+- [Anbieterunterstützung für Lesezeichen](../../data/oledb/provider-support-for-bookmarks.md)  
   
--   [Erfolgreiche Durchführung der OLE DB-Konformitätstests](../../data/oledb/passing-ole-db-conformance-tests.md)  
+- [Erfolgreiche Durchführung der OLE DB-Konformitätstests](../../data/oledb/passing-ole-db-conformance-tests.md)  
   
--   [OLE DB-Ressourcenpooling und -Dienste](../../data/oledb/ole-db-resource-pooling-and-services.md)  
+- [OLE DB-Ressourcenpooling und -Dienste](../../data/oledb/ole-db-resource-pooling-and-services.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Anbieter-Vorlagenreferenz](../../data/oledb/ole-db-provider-templates-reference.md)   
- [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)
+
+[Referenz der OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)

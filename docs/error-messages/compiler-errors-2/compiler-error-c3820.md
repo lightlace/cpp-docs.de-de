@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3820 | Microsoft Docs
+title: Compilerfehler C3820 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6a21afc6831c0fb51c96fa6ff8c43de1bebb812
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4332b48ea9ea0a69c1545fbfac8b7df5cf5f8be3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272073"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093349"
 ---
 # <a name="compiler-error-c3820"></a>Compilerfehler C3820
-"name": Initialisierer müssen verwaltet sein.  
-  
- Der *name* -Initialisierer eines verwalteten Typs muss ebenfalls verwaltet sein.  
-  
-### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
-  
-1.  Geben Sie eine verwaltete Initialisierermethode an.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Initialisierer](../../cpp/initializers.md)   
- [Zusätzliche Überlegungen zum Starten](../../cpp/additional-startup-considerations.md)
+
+"name": Initialisierer müssen verwaltet sein.
+
+Der *name* -Initialisierer eines verwalteten Typs muss ebenfalls verwaltet sein.
+
+### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
+
+1. Geben Sie eine verwaltete Initialisierermethode an.
+
+## <a name="see-also"></a>Siehe auch
+
+[Initialisierer](../../cpp/initializers.md)<br/>
+[Zusätzliche Überlegungen zum Starten](../../cpp/additional-startup-considerations.md)

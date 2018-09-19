@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb32d65b119330e49773118e38e1c8b618d03cfc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ffa46ef8e7f56d4be7ca88d2553623910cbcd43f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204757"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091646"
 ---
 # <a name="compiler-error-c3132"></a>Compilerfehler C3132
-"Funktion-Parameter": Parameterarrays können nur auf formale Argumente vom Typ "eindimensionales verwaltetes Array" angewendet werden  
-  
- Die [ParamArray](https://msdn.microsoft.com/library/system.paramarrayattribute.aspx) -Attribut wurde auf einen Parameter, der kein eindimensionales Array war angewendet.  
-  
- Im folgende Beispiel wird die C3132 generiert:  
-  
-```  
-// C3132.cpp  
-// compile with: /clr /c  
-using namespace System;  
-void f( [ParamArray] Int32[,] );   // C3132  
-void g( [ParamArray] Int32[] );   // C3132  
-  
-void h( [ParamArray] array<Char ^> ^ MyArray );   // OK  
-  
+
+"Funktion-Parameter": Parameterarrays können nur auf formale Argumente vom Typ "eindimensionales verwaltetes Array" angewendet werden
+
+Die [ParamArray](https://msdn.microsoft.com/library/system.paramarrayattribute.aspx) -Attribut wurde auf einen Parameter, der kein eindimensionales Array war angewendet.
+
+Im folgende Beispiel wird die C3132 generiert:
+
+```
+// C3132.cpp
+// compile with: /clr /c
+using namespace System;
+void f( [ParamArray] Int32[,] );   // C3132
+void g( [ParamArray] Int32[] );   // C3132
+
+void h( [ParamArray] array<Char ^> ^ MyArray );   // OK
+
 ```

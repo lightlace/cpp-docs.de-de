@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2705 generiert | Microsoft Docs
+title: Compilerfehler C2705 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dce6bdb0a5c20fbe54b04eaf83ee8f90427017c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c0eefd19645ee6ac06664249f7953d904cd5896
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235454"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093700"
 ---
-# <a name="compiler-error-c2705"></a>Compiler-Fehler C2705 generiert
-'Bezeichnung': Unzulässiger Sprung in den Bereich "Ausnahmehandlerblock"  
-  
- Die Ausführung springt zu einer Bezeichnung in einem `try` / `catch`, `__try` / `__except`, `__try` / `__finally` Block. Weitere Informationen finden Sie unter [Ausnahmebehandlung (Task Parallel Library)](../../cpp/exception-handling-in-visual-cpp.md).  
-  
- Im folgende Beispiel wird C2705 generiert:  
-  
-```  
-// C2705.cpp  
-int main() {  
-goto trouble;  
-   __try {  
-      trouble: ;   // C2705  
-   }  
-   __finally {}  
-  
-   // try the following line instead  
-   // trouble: ;  
-}  
+# <a name="compiler-error-c2705"></a>Compilerfehler C2705
+
+'Bezeichnung': Unzulässiger Sprung in den Bereich für "Ausnahmehandlerblock"
+
+Springt zu einer Bezeichnung in einem `try` / `catch`, `__try` / `__except`, `__try` / `__finally` Block. Weitere Informationen finden Sie unter [Ausnahmebehandlung (Task Parallel Library)](../../cpp/exception-handling-in-visual-cpp.md).
+
+Im folgende Beispiel wird die C2705 generiert:
+
+```
+// C2705.cpp
+int main() {
+goto trouble;
+   __try {
+      trouble: ;   // C2705
+   }
+   __finally {}
+
+   // try the following line instead
+   // trouble: ;
+}
 ```

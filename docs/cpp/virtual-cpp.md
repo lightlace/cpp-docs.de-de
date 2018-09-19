@@ -20,40 +20,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84035f2007f3c45c33c1dfa342caf5c788580205
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2471dac12db574aa045142a654effafadbabd732
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460918"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092267"
 ---
 # <a name="virtual-c"></a>virtual (C++)
-Die **virtuellen** -Schlüsselwort deklariert eine virtuelle Funktion oder eine virtuelle Basisklasse.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-virtual [type-specifiers] member-function-declarator  
-virtual [access-specifier] base-class-name  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *Typspezifizierer*  
- Gibt den Rückgabetyp der virtuellen Memberfunktion an.  
-  
- *Member der funktionsdeklarator*  
- Deklariert eine Memberfunktion.  
-  
- *Zugriffsspezifizierer*  
- Definiert die Ebene des Zugriffs auf die Basisklasse, **öffentliche**, **geschützt** oder **private**. Kann vor oder nach dem Auftreten der **virtuellen** Schlüsselwort.  
-  
- *Basis-Class-name*  
- Identifiziert einen zuvor deklarierten Klassentyp.  
-  
-## <a name="remarks"></a>Hinweise  
- Finden Sie unter [virtuelle Funktionen](../cpp/virtual-functions.md) für Weitere Informationen.  
-  
- Siehe auch die folgenden Schlüsselwörter: [Klasse](../cpp/class-cpp.md), [private](../cpp/private-cpp.md), [öffentliche](../cpp/public-cpp.md), und [geschützt](../cpp/protected-cpp.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Schlüsselwörter](../cpp/keywords-cpp.md)
+
+Die **virtuellen** -Schlüsselwort deklariert eine virtuelle Funktion oder eine virtuelle Basisklasse.
+
+## <a name="syntax"></a>Syntax
+
+```
+virtual [type-specifiers] member-function-declarator
+virtual [access-specifier] base-class-name
+```
+
+#### <a name="parameters"></a>Parameter
+
+*Typspezifizierer*<br/>
+Gibt den Rückgabetyp der virtuellen Memberfunktion an.
+
+*Member der funktionsdeklarator*<br/>
+Deklariert eine Memberfunktion.
+
+*Zugriffsspezifizierer*<br/>
+Definiert die Ebene des Zugriffs auf die Basisklasse, **öffentliche**, **geschützt** oder **private**. Kann vor oder nach dem Auftreten der **virtuellen** Schlüsselwort.
+
+*Basis-Class-name*<br/>
+Identifiziert einen zuvor deklarierten Klassentyp.
+
+## <a name="remarks"></a>Hinweise
+
+Finden Sie unter [virtuelle Funktionen](../cpp/virtual-functions.md) für Weitere Informationen.
+
+Siehe auch die folgenden Schlüsselwörter: [Klasse](../cpp/class-cpp.md), [private](../cpp/private-cpp.md), [öffentliche](../cpp/public-cpp.md), und [geschützt](../cpp/protected-cpp.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Schlüsselwörter](../cpp/keywords-cpp.md)

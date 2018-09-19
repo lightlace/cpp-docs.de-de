@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b82aa22c3cc1c217ba4dfd332c43f6663c94638e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fe5f3234738a16b4c072b667982d36032e30f7dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761874"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107116"
 ---
 # <a name="ioleobjectimpl-class"></a>IOleObjectImpl-Klasse
 
@@ -76,13 +76,13 @@ Diese Klasse implementiert `IUnknown` und ist die Dienstprinzipale-Schnittstelle
 ## <a name="syntax"></a>Syntax
 
 ```
-template<class T>  
+template<class T>
 class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Abgeleitet von die Klasse `IOleObjectImpl`.
 
 ## <a name="members"></a>Member
@@ -219,10 +219,10 @@ HRESULT DoVerbDiscardUndo(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parameter
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Zeiger auf das Rechteck des Containers möchte das Steuerelement in gezeichnet.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Handle des Fensters, das das Steuerelement enthält.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -239,10 +239,10 @@ HRESULT DoVerbHide(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parameter
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Zeiger auf das Rechteck des Containers möchte das Steuerelement in gezeichnet.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Handle des Fensters, das das Steuerelement enthält. In der ATL-Implementierung verwendet nicht.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -259,10 +259,10 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parameter
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Zeiger auf das Rechteck des Containers möchte das Steuerelement in gezeichnet.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Handle des Fensters, das das Steuerelement enthält. In der ATL-Implementierung verwendet nicht.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -283,10 +283,10 @@ HRESULT DoVerbOpen(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parameter
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Zeiger auf das Rechteck des Containers möchte das Steuerelement in gezeichnet.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Handle des Fensters, das das Steuerelement enthält.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -303,10 +303,10 @@ HRESULT DoVerbPrimary(LPCRECT prcPosRect, HWND hwndParent);
 
 ### <a name="parameters"></a>Parameter
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Zeiger auf das Rechteck des Containers möchte das Steuerelement in gezeichnet.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Handle des Fensters, das das Steuerelement enthält.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -327,10 +327,10 @@ HRESULT DoVerbShow(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parameter
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Zeiger auf das Rechteck des Containers möchte das Steuerelement in gezeichnet.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Handle des Fensters, das das Steuerelement enthält. In der ATL-Implementierung verwendet nicht.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -347,10 +347,10 @@ HRESULT DoVerbUIActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parameter
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Zeiger auf das Rechteck des Containers möchte das Steuerelement in gezeichnet.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Handle des Fensters, das das Steuerelement enthält. In der ATL-Implementierung verwendet nicht.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -833,6 +833,6 @@ Finden Sie unter [IOleObject::Update](/windows/desktop/api/oleidl/nf-oleidl-iole
 
 ## <a name="see-also"></a>Siehe auch
 
-[CComControl-Klasse](../../atl/reference/ccomcontrol-class.md)   
-[ActiveX-Steuerelemente Schnittstellen](/windows/desktop/com/activex-controls-interfaces)   
+[CComControl-Klasse](../../atl/reference/ccomcontrol-class.md)<br/>
+[ActiveX-Steuerelemente Schnittstellen](/windows/desktop/com/activex-controls-interfaces)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4983984c8bf1cad2996818625091b60cdb732a9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1aecfcb493bfc35e0d6f059c296af1b358eee93f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758556"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103209"
 ---
 # <a name="cdefaultcomparetraits-class"></a>CDefaultCompareTraits-Klasse
 
@@ -33,13 +33,13 @@ Diese Klasse stellt die standardmäßige Element Vergleichsfunktionen.
 ## <a name="syntax"></a>Syntax
 
 ```
-template<typename T>  
+template<typename T>
 class CDefaultCompareTraits
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Der Typ der Daten in der Auflistung gespeichert werden.
 
 ## <a name="members"></a>Member
@@ -71,10 +71,10 @@ static bool CompareElements(const T& element1, const T& element2);
 
 ### <a name="parameters"></a>Parameter
 
-*Element1*  
+*Element1*<br/>
 Das erste Element.
 
-*Element2*  
+*Element2*<br/>
 Das zweite Element.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -95,10 +95,10 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
 
 ### <a name="parameters"></a>Parameter
 
-*Element1*  
+*Element1*<br/>
 Das erste Element.
 
-*Element2*  
+*Element2*<br/>
 Das zweite Element.
 
 ### <a name="return-value"></a>Rückgabewert

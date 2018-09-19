@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2005 generiert | Microsoft Docs
+title: Compilerfehler C2005 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 484c6b690b54ea7f847128091500e75192440bc8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6dfba3b960a046bf40751c135c3b99fbe843545
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169289"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100671"
 ---
-# <a name="compiler-error-c2005"></a>Compiler-Fehler C2005 generiert
-\#Zeile erwartet eine Zeilennummer "token" gefunden  
-  
- Die `#line` Richtlinie muss eine Zeilennummer folgen.  
-  
- Im folgende Beispiel wird C2005 generiert:  
-  
-```  
-// C2005.cpp  
-int main() {  
-   int i = 0;  
-   #line i   // C2005  
-}  
-```  
-  
- Mögliche Lösung:  
-  
-```  
-// C2005b.cpp  
-int main() {  
-   int i = 0;  
-   #line 0  
-}  
+# <a name="compiler-error-c2005"></a>Compilerfehler C2005
+
+\#Zeile erwartet eine Zeilennummer 'token' gefunden
+
+Die `#line` Richtlinie muss die Nummer einer Zeile folgen.
+
+Im folgende Beispiel wird die C2005 generiert:
+
+```
+// C2005.cpp
+int main() {
+   int i = 0;
+   #line i   // C2005
+}
+```
+
+Mögliche Lösung:
+
+```
+// C2005b.cpp
+int main() {
+   int i = 0;
+   #line 0
+}
 ```

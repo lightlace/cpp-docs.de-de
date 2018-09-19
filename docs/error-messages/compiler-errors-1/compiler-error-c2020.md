@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler Fehler C2020 | Microsoft Docs
+title: Compilerfehler C2020 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 267c71d987587ce1b4308a80f40cdc4fa9ecefc2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b79bc9340e39d5cdc886db4b81d220bbfe88bbd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165320"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099797"
 ---
-# <a name="compiler-error-c2020"></a>Compilerfehler Fehler C2020
-'Member': Neudefinition der 'Class'-Member  
-  
- Ein Element von einer Basisklasse der Klasse oder Struktur geerbt wird neu definiert. Geerbte Member nicht neu definiert werden, es sei denn, die als deklariert `virtual` in der Basisklasse.
+# <a name="compiler-error-c2020"></a>Compilerfehler C2020
+
+'Member': 'Class'-Neudefinition eines Elements
+
+Ein Member, die von einer Klasse oder Struktur geerbt wird, neu definiert. Geerbte Member nicht neu definiert werden, es sei denn, die als deklariert `virtual` in der Basisklasse.

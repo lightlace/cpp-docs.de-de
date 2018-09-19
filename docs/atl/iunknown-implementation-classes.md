@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 914e11c71d4f015f7b62797d4ba2ab3bfca3c7fb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 42c42b43fdc04978fabe36b0ea64f39b9a5d333f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754132"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098484"
 ---
 # <a name="iunknown-implementation-classes"></a>IUnknown-Implementierung-Klassen
 
@@ -55,8 +55,8 @@ Die folgenden Klassen implementieren `IUnknown` und verwandten Methoden:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über die Klasse](../atl/atl-class-overview.md)   
-[Aggregation und Klassenfactory-Makros](../atl/reference/aggregation-and-class-factory-macros.md)   
-[COM-Zuordnungs-Makros](../atl/reference/com-map-macros.md)   
+[Übersicht über die Klasse](../atl/atl-class-overview.md)<br/>
+[Aggregation und Klassenfactory-Makros](../atl/reference/aggregation-and-class-factory-macros.md)<br/>
+[COM-Zuordnungs-Makros](../atl/reference/com-map-macros.md)<br/>
 [Globale COM-Zuordnungs-Funktionen](../atl/reference/com-map-global-functions.md)
 

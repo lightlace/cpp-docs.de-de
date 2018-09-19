@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2464 | Microsoft Docs
+title: Compilerfehler C2464 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98949ba463f432666753cb39de37bb4bf8f7276f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff74085364d6638772ab2376aace93fea741056b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226025"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103140"
 ---
 # <a name="compiler-error-c2464"></a>Compilerfehler C2464
-'Bezeichner': kann nicht "new" verwenden, um einen Verweis zuweisen  
-  
- Der Verweisbezeichner zugeordnet wurde die `new` Operator. Verweise sind also nicht Speicherobjekte, `new` nicht möglich, einen Zeiger auf diese zurück. Verwenden Sie die standardmäßigen Variablendeklaration-Syntax, um einen Verweis zu deklarieren.  
-  
- Im folgende Beispiel wird C2464 generiert:  
-  
-```  
-// C2464.cpp  
-int main() {  
-   new ( int& ir );   // C2464  
-}  
+
+'Bezeichner': kann nicht "new" verwenden, um die Zuordnung eines Verweises
+
+Eine Referenz-ID zugeordnet war die `new` Operator. Verweise sind also nicht Memory-Objekte, `new` kann keinen Zeiger darauf zurückgeben. Verwenden Sie die standard-Variablendeklaration-Syntax, um einen Verweis zu deklarieren.
+
+Im folgende Beispiel wird die C2464 generiert:
+
+```
+// C2464.cpp
+int main() {
+   new ( int& ir );   // C2464
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 4) C4517 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4517 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bcfca18512d7a5af18bf978fc4f6549799bbdc7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f71fca2804a6869fbb58073eb0c11a3ac1f18153
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297692"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098883"
 ---
 # <a name="compiler-warning-level-4-c4517"></a>Compilerwarnung (Stufe 4) C4517
-Access-Deklarationen sind veraltet. using-Deklarationen bieten eine bessere alternative  
-  
- Die ANSI C++ Committee wurde Zugriffsdeklarationen deklariert (Ändern der Zugriffsebene eines Members in einer abgeleiteten Klasse ohne die [mit](../../cpp/using-declaration.md) Schlüsselwort) veraltet sein. Access-Deklarationen möglicherweise in künftigen Versionen von C++ nicht unterstützt.
+
+Access-Deklarationen sind veraltet. using-Deklarationen stellen eine bessere Alternative dar
+
+Das ANSI C++ Committee hat Zugriffsdeklarationen (Ändern der Zugriffsebene eines Members in einer abgeleiteten Klasse, ohne die [mit](../../cpp/using-declaration.md) Schlüsselwort) veraltet sein. Access-Deklarationen können in künftigen Versionen von C++ nicht unterstützt.

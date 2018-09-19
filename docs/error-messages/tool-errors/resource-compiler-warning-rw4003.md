@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcencompiler: Warnung RW4003 | Microsoft Docs'
+title: 'Ressourcencompiler: Warnung RW4003 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d584811e056995e19cac0ec68cb58f25ccc921e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f800fc37d41102044c0b8b88921d8bad216d5984
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321999"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101123"
 ---
 # <a name="resource-compiler-warning-rw4003"></a>Ressourcencompiler: Warnung RW4003
-SHIFT oder CONTROL wurden ohne VIRTKEY verwendet.  
-  
- In einer Zugriffstastentabelle ist SHIFT oder CONTROL VIRTKEY erforderlich. Da SHIFT und CONTROL in einer VIRTKEY-Typzugriffstaste als Flagbits gekennzeichnet sind, können sie nicht unabhängig von VIRTKEY existieren.
+
+SHIFT oder CONTROL wurden ohne VIRTKEY verwendet.
+
+In einer Zugriffstasten-Tabellenressource ist SHIFT oder CONTROL VIRTKEY erforderlich. Da SHIFT und CONTROL in einer VIRTKEY-Typzugriffstaste als Flagbits gekennzeichnet sind, können sie nicht unabhängig von VIRTKEY existieren.

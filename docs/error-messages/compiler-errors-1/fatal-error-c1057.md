@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1057 | Microsoft Docs
+title: Schwerwiegender Fehler C1057 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3e00b79757d87b54efd8be2492b473a54c73d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b2fde010917e9e22c523b86ad816929e8526b6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224651"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092672"
 ---
 # <a name="fatal-error-c1057"></a>Schwerwiegender Fehler C1057
-Unerwartetes Dateiende bei der Erweiterung eines Makros  
-  
- Der Compiler das Ende der Quelldatei, die beim Sammeln von Makroaufruf Argumente, wahrscheinlich aufgrund einer fehlenden schließenden Klammer im Makroaufruf wurde erreicht.
+
+Unerwartetes Dateiende bei der Erweiterung eines Makros
+
+Der Compiler hat das Ende der Quelldatei beim Sammeln von Makroaufruf Argumente, wahrscheinlich aufgrund einer fehlenden schließenden Klammer im Makroaufruf erreicht.

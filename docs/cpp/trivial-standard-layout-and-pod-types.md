@@ -8,24 +8,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 824beed4c49556f564ff933575d1bbd0d844e2d7
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: c9bb4a84b42cadeb2e076548a220725f1e867fe9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42571600"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099702"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>Trivial, Standardlayout-POD und Literaltypen
 
 Der Begriff *Layout* bezieht sich auf wie die Member eines Objekts der Klasse, Struktur oder union-Typ im Arbeitsspeicher angeordnet werden. In einigen Fällen ist das Layout klar definierte, durch die Language-Spezifikation. Wenn eine Klasse oder Struktur bestimmte C++-Sprachfeatures wie virtuelle Basisklassen, die virtuelle Funktionen, die Mitglieder mit anderen Access Control enthält, klicken Sie dann der Compiler ist jedoch ein Layout auswählen. Das Layout kann variieren, je nachdem, welche Optimierungen ausgeführt werden, und in vielen Fällen möglicherweise Objekt einen zusammenhängenden Bereich des Arbeitsspeichers nicht selbst belegt. Wenn eine Klasse virtuelle Funktionen verfügt, können alle Instanzen dieser Klasse z. B. eine einzelne virtuelle Funktionstabelle freigeben. Solche Typen werden natürlich sehr nützlich, aber sie haben auch Einschränkungen. Da das Layout nicht definiert ist. können nicht sie auf Programme, die in anderen Sprachen wie z. B. C, geschrieben übergeben werden, und da sie nicht zusammenhängende möglicherweise nicht zuverlässig kopiert werden mit schnellen Low-Level-Funktionen wie z. B. `memcopy` oder über ein Netzwerk serialisiert.
 
- Damit können Compiler als auch C++-Programmen und Metaprograms Grund bezüglich der Eignung eines beliebigen angegebenen Typs für Vorgänge, die von einer bestimmten Speicherlayout abhängen, C ++ 14 drei Kategorien von einfachen Klassen und Strukturen eingeführt: *trivial*, *Standardlayout-*, und *POD* oder Plain Old Data. Die Standardbibliothek hat die Funktionsvorlagen `is_trivial<T>`, `is_standard_layout<T>` und `is_pod<T>` , die bestimmen, ob ein bestimmtes Typs zu einer bestimmten Kategorie gehört.
+Damit können Compiler als auch C++-Programmen und Metaprograms Grund bezüglich der Eignung eines beliebigen angegebenen Typs für Vorgänge, die von einer bestimmten Speicherlayout abhängen, C ++ 14 drei Kategorien von einfachen Klassen und Strukturen eingeführt: *trivial*, *Standardlayout-*, und *POD* oder Plain Old Data. Die Standardbibliothek hat die Funktionsvorlagen `is_trivial<T>`, `is_standard_layout<T>` und `is_pod<T>` , die bestimmen, ob ein bestimmtes Typs zu einer bestimmten Kategorie gehört.
 
 ## <a name="trivial-types"></a>Einfache Typen
 
- Wenn eine Klasse oder Struktur in C++ hat der Compiler bereitgestellten, oder explizit auf den Standardwert festgelegte spezielle Memberfunktionen ist es ein einfacher Typ. Es nimmt einen zusammenhängenden Bereich ein. Sie können Elemente mit verschiedenen Zugriffsspezifizierer haben. In C++ kann der Compiler wie Anordnen der Elemente in diesem Fall werden soll. Aus diesem Grund können Sie Memcopy solche Objekte, aber Sie können nicht zuverlässig nutzen müssen, von einem C-Programm. Ein einfacher Typ T kann in ein Array von Char "oder" unsigned Char kopiert, und sicher wieder in einer T-Variablen kopiert werden. Beachten Sie, dass aufgrund der ausrichtungsanforderungen, kann es Auffüll-Bytes zwischen Typmember.
+Wenn eine Klasse oder Struktur in C++ hat der Compiler bereitgestellten, oder explizit auf den Standardwert festgelegte spezielle Memberfunktionen ist es ein einfacher Typ. Es nimmt einen zusammenhängenden Bereich ein. Sie können Elemente mit verschiedenen Zugriffsspezifizierer haben. In C++ kann der Compiler wie Anordnen der Elemente in diesem Fall werden soll. Aus diesem Grund können Sie Memcopy solche Objekte, aber Sie können nicht zuverlässig nutzen müssen, von einem C-Programm. Ein einfacher Typ T kann in ein Array von Char "oder" unsigned Char kopiert, und sicher wieder in einer T-Variablen kopiert werden. Beachten Sie, dass aufgrund der ausrichtungsanforderungen, kann es Auffüll-Bytes zwischen Typmember.
 
- Einfache Typen haben einen trivialen Standardkonstruktor trivialen Kopierkonstruktor, Kopierzuweisungsoperator und trivialen Destruktor. In jedem Fall *trivial* bedeutet, dass der Konstruktor/Operator/Destruktor ist nicht vom Benutzer bereitgestellte und gehört zu einer Klasse mit
+Einfache Typen haben einen trivialen Standardkonstruktor trivialen Kopierkonstruktor, Kopierzuweisungsoperator und trivialen Destruktor. In jedem Fall *trivial* bedeutet, dass der Konstruktor/Operator/Destruktor ist nicht vom Benutzer bereitgestellte und gehört zu einer Klasse mit
 
 - keine virtuellen Funktionen oder der virtuellen Basisklassen
 
@@ -40,7 +40,7 @@ struct Trivial
 {
       int i;
 private:
-   int j;  
+   int j;
    };
 
 struct Trivial2
@@ -55,7 +55,7 @@ struct Trivial2
 
 ## <a name="standard-layout-types"></a>Standardlayout-Typen
 
- Wenn eine Klasse oder Struktur enthält keine bestimmte Funktionen der Programmiersprache C++ wie z. B. virtuelle Funktionen, die in der Programmiersprache C nicht gefunden werden, und alle Elemente verfügen über die gleichen Access Control, ist es ein Standardlayout. Memcopy-fähig ist, und das Layout wird ausreichend definiert, dass sie von C-Programmen verwendet werden kann. Standardlayout-können spezielle Memberfunktionen aufweisen. Standardlayout Typen haben außerdem folgende Eigenschaften:
+Wenn eine Klasse oder Struktur enthält keine bestimmte Funktionen der Programmiersprache C++ wie z. B. virtuelle Funktionen, die in der Programmiersprache C nicht gefunden werden, und alle Elemente verfügen über die gleichen Access Control, ist es ein Standardlayout. Memcopy-fähig ist, und das Layout wird ausreichend definiert, dass sie von C-Programmen verwendet werden kann. Standardlayout-können spezielle Memberfunktionen aufweisen. Standardlayout Typen haben außerdem folgende Eigenschaften:
 
 - keine virtuellen Funktionen oder die virtuelle Basisklassen
 
@@ -85,7 +85,7 @@ struct SL
 };
 ```
 
- Die letzten beiden Anforderungen können vielleicht besser mit Code dargestellt werden. Im nächsten Beispiel, obwohl Basis ist Standardlayout, `Derived` ist nicht Standardlayout, da beide It (die am stärksten abgeleitete Klasse) und `Base` nicht statischen Datenmember aufweisen:
+Die letzten beiden Anforderungen können vielleicht besser mit Code dargestellt werden. Im nächsten Beispiel, obwohl Basis ist Standardlayout, `Derived` ist nicht Standardlayout, da beide It (die am stärksten abgeleitete Klasse) und `Base` nicht statischen Datenmember aufweisen:
 
 ```cpp
 struct Base
@@ -103,7 +103,7 @@ struct Derived : public Base
 
 ```
 
- In diesem Beispiel `Derived` Standardlayout-ist da `Base` verfügt über keine nicht statischen Datenmember:
+In diesem Beispiel `Derived` Standardlayout-ist da `Base` verfügt über keine nicht statischen Datenmember:
 
 ```cpp
 struct Base
@@ -119,11 +119,11 @@ struct Derived : public Base
 };
 ```
 
- Abgeleitete wäre auch Standardlayout-Wenn `Base` hatte die Datenmember und `Derived` mussten nur die Member-Funktionen.
+Abgeleitete wäre auch Standardlayout-Wenn `Base` hatte die Datenmember und `Derived` mussten nur die Member-Funktionen.
 
 ## <a name="pod-types"></a>POD-Typen
 
- Wenn eine Klasse oder Struktur sowohl einfache als auch Standardlayout-ist, ist es ein POD (Plain Old Data)-Typ. Das Speicherlayout der POD-Typen ist daher zusammenhängenden, und jedes Element verfügt über eine höhere Adresse als die Member, die davor, deklariert wurde, sodass Byte für Byte kopiert und binäre e/a für diese Typen ausgeführt werden können.  Skalare Typen wie Int sind auch die POD-Typen. POD-Typen, die Klassen sind, können nur POD-Typen als nicht statischen Datenmember besitzen.
+Wenn eine Klasse oder Struktur sowohl einfache als auch Standardlayout-ist, ist es ein POD (Plain Old Data)-Typ. Das Speicherlayout der POD-Typen ist daher zusammenhängenden, und jedes Element verfügt über eine höhere Adresse als die Member, die davor, deklariert wurde, sodass Byte für Byte kopiert und binäre e/a für diese Typen ausgeführt werden können.  Skalare Typen wie Int sind auch die POD-Typen. POD-Typen, die Klassen sind, können nur POD-Typen als nicht statischen Datenmember besitzen.
 
 ## <a name="example"></a>Beispiel
 
@@ -201,4 +201,5 @@ Das Layout eines Literaltyps kann zur Kompilierzeit bestimmt werden. Folgende Ty
 - Eine Klasse, die einen trivialen Destruktor und einen oder mehrere constexpr-Konstruktoren aufweist, die keine Konstruktoren zum Verschieben oder Kopieren sind. Darüber hinaus müssen alle nicht statischen Datenmember und Basisklassen Literaltypen und permanent sein.
 
 ## <a name="see-also"></a>Siehe auch
- [Grundlegende Konzepte](../cpp/basic-concepts-cpp.md)
+
+[Grundlegende Konzepte](../cpp/basic-concepts-cpp.md)

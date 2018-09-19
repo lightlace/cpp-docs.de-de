@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2087 generiert | Microsoft Docs
+title: Compilerfehler C2087 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a6012bd49d9d68cbc3318afb390b5f5b411e39f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38b6ce6c0b2435143ece8d431271c97a3f48a2b2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167108"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101948"
 ---
-# <a name="compiler-error-c2087"></a>Compiler-Fehler C2087 generiert
-'Bezeichner': Feldindex fehlt  
-  
- Die Definition eines Arrays mit mehreren Indizes fehlt ein Indexwert für eine Dimension, die höher als 1.  
-  
- Im folgende Beispiel wird C2087 generiert:  
-  
-```  
-// C2087.cpp  
-int main() {  
-   char a[10][];   // C2087  
-}  
-```  
-  
- Mögliche Lösung:  
-  
-```  
-// C2087b.cpp  
-int main() {  
-   char b[4][5];  
-}  
+# <a name="compiler-error-c2087"></a>Compilerfehler C2087
+
+"Bezeichner": Feldindex fehlt
+
+Die Definition eines Arrays mit mehreren Indizes fehlt ein Indexwert für eine Dimension, die höher als 1.
+
+Im folgende Beispiel wird die C2087 generiert:
+
+```
+// C2087.cpp
+int main() {
+   char a[10][];   // C2087
+}
+```
+
+Mögliche Lösung:
+
+```
+// C2087b.cpp
+int main() {
+   char b[4][5];
+}
 ```

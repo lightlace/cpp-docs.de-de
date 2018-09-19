@@ -1,5 +1,5 @@
 ---
-title: C-Laufzeitfehler R6019 | Microsoft Docs
+title: C-Laufzeitfehler R6019 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95950254d4a0611d9690b8636eb50f2fc1f0f264
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95bc763ab39df16c1cfc1b05689560edecf70570
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314228"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093302"
 ---
 # <a name="c-runtime-error-r6019"></a>C-Laufzeitfehler R6019
-Console-Gerät kann nicht geöffnet  
-  
+
+Konsole Gerät kann nicht geöffnet
+
 > [!NOTE]
->  Wenn Sie diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app beendet, da versucht wurde, Zugriff auf die Konsole, aber es wurde nicht über ausreichende Berechtigungen verfügen. Es gibt mehrere mögliche Ursachen für diesen Fehler ist in der Regel, da das Programm als Administrator ausgeführt werden muss oder ein Fehler im Programm vorhanden ist.  
->   
->  Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:  
->   
->  -   Führen Sie das Programm als Administrator an.  
-> -   Verwenden der **Apps und Funktionen** oder **Programme und Funktionen** auf der Seite der **Systemsteuerung** reparieren oder neu installieren die Anwendung.  
-> -   Überprüfen Sie **Windows Update** in der **Systemsteuerung** für Softwareupdates.  
-> -   Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den Hersteller der app.  
-  
- **Informationen für Programmierer**  
-  
- Dieser Fehler tritt auf, da die app eine Konsole die Funktion aufgerufen, aber das Betriebssystem haben Zugriff auf die Konsole nicht erteilt. Mit Ausnahme von sind im Debugmodus, Konsolenfunktionen in der Regel nicht in Microsoft Store-apps zulässig. Falls Ihre app Administratorrechte zum Ausführen benötigt, stellen Sie sicher, dass es zum Ausführen als Administrator in der Standardeinstellung installiert wird.
+>  Wenn Sie diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app beendet, da versucht wurde, Zugriff auf die Konsole, aber es nicht über ausreichende Berechtigungen verfügen. Es gibt mehrere mögliche Gründe für diesen Fehler, aber dies ist normalerweise, weil das Programm als Administrator ausgeführt werden muss oder ein Fehler im Programm vorhanden ist.
+>
+>  Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:
+>
+>  -   Führen Sie das Programm als Administrator an.
+> -   Verwenden der **Apps und Features** oder **Programme und Funktionen** auf der Seite die **Systemsteuerung** zu reparieren oder installieren Sie das Programm neu.
+> -   Überprüfen Sie **Windows Update** in die **Systemsteuerung** für Softwareupdates.
+> -   Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den app-Anbieter.
+
+**Informationen für Programmierer**
+
+Dieser Fehler tritt auf, da die app eine der hat, das Betriebssystem hat jedoch Zugriff auf die Konsole. Mit Ausnahme von sind im Debugmodus, Konsolenfunktionen in der Regel nicht in Microsoft Store-apps zulässig. Wenn Ihre app Administratorrechte ausführen erfordert, stellen Sie sicher, dass er standardmäßig als Administrator ausführen installiert ist.

@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksauswertungsfehler CXX0050 | Microsoft Docs
+title: Ausdrucksauswertungsfehler CXX0050 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32d5510c0db76cc688c850538d9bd5f75c653151
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34b5bde82eff004628073f1ec6d8b372bd02afc0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296093"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095428"
 ---
 # <a name="expression-evaluator-error-cxx0050"></a>Ausdrucksauswertungsfehler CXX0050
-linke Seite des:: muss die Klasse/Struktur/Union sein  
-  
- Das Symbol auf der linken Seite des Operators Bereichsauflösungsoperator (`::`) war keiner Klasse, Struktur oder Union.  
-  
- Dieser Fehler ist mit CAN0050 identisch.
+
+linke Seite des:: Klasse/Struktur/Union sein
+
+Das Symbol auf der linken Seite des Operators Bereichsauflösungsoperator (`::`) war keiner Klasse, Struktur oder Union.
+
+Dieser Fehler ist mit CAN0050 identisch.

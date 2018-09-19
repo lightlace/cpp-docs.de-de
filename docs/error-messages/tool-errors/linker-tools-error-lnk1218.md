@@ -1,5 +1,5 @@
 ---
-title: Linkertoolfehler Lnk1218 | Microsoft Docs
+title: Linkertoolfehler Lnk1218 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0a0596a648c44be928e6bbbae89734911550c27
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8808a52724aa3dc1bdfd33fec5945ba40680ca3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298888"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095318"
 ---
 # <a name="linker-tools-error-lnk1218"></a>Linkertoolfehler LNK1218
-Warnung als Fehler behandelt; keine Ausgabedatei generiert  
-  
- Wenn Sie eine Verknüpfung mit **/WX**alle linkerwarnungen als Fehler behandelt werden und keine Ausgabedatei erstellt werden.  
-  
- Finden Sie unter [/WX (Linkerwarnungen als Fehler behandeln)](../../build/reference/wx-treat-linker-warnings-as-errors.md) für Weitere Informationen.
+
+Warnung als Fehler behandelt; keine Ausgabedatei generiert.
+
+Wenn Sie eine Verknüpfung mit **/WX**alle linkerwarnungen als Fehler behandelt werden und keine Ausgabedatei erstellt werden.
+
+Finden Sie unter [/WX (Linkerwarnungen als Fehler behandeln)](../../build/reference/wx-treat-linker-warnings-as-errors.md) für Weitere Informationen.

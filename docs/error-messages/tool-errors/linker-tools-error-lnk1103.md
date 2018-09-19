@@ -1,5 +1,5 @@
 ---
-title: Linkertoolfehler Lnk1103 | Microsoft Docs
+title: Linkertoolfehler Lnk1103 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8211ef39b3524dbb1c0c3e8d25cabb84ee5f6b5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3abb7472e37edbec80381bbf6b4329d9da718d19
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298219"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095427"
 ---
 # <a name="linker-tools-error-lnk1103"></a>Linkertoolfehler LNK1103
-Debuginformationen beschädigt; Kompilieren Sie Modul  
-  
- Dieser Fehler kann verursacht werden, da es sich bei die Kompilierung beendet wurde, bevor Sie eine gültige Objektdatei erstellt wurde.  
-  
- Kompilieren Sie die angegebene Objektdatei neu. Wenn Neukompilierung das Problem nicht behebt, notieren Sie die Umstände des Fehlers, versuchen Sie, das Problem zu isolieren und einen reproduzierbaren Testfall zu erstellen. Wenden Sie sich dann an die Hilfedatei für technischen Support oder den technischen Support-Abschnitt eines Ihrer Handbücher.
+
+Debuginformationen beschädigt; Kompilieren Sie Modul erneut
+
+Dieser Fehler kann verursacht werden, da die Kompilierung beendet wurde, bevor Sie eine gültige Objekt-Datei erstellt wurde.
+
+Kompilieren Sie erneut die angegebene Objektdatei. Wenn das Problem durch Erneutes Kompilieren nicht behoben wird, notieren Sie die Umstände des Fehlers, versuchen Sie es, um das Problem zu isolieren und einen reproduzierbaren Testfall zu erstellen. Klicken Sie dann finden Sie in der Hilfedatei für technischen Support oder im technischen Support-Abschnitt eines Ihrer Handbücher.

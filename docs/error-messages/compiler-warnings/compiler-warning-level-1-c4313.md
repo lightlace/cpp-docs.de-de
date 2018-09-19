@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4313 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4313 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e42bd8f19ac9a70f93a26265af6e310fb51e7229
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df3600483ee5c6fe2ec0f9a339ec7ce5b94569af
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283938"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090920"
 ---
 # <a name="compiler-warning-level-1-c4313"></a>Compilerwarnung (Stufe 1) C4313
-'Funktion': 'Formatbezeichner' in der Formatzeichenfolge steht mit der Argumentennummer vom Typ 'Typ' in Konflikt.  
-  
- Es besteht ein Konflikt zwischen dem angegebenen Format und dem Wert, den Sie übergeben. Beispielsweise haben Sie einen 64-Bit-Parameter an einen nicht qualifizierten Formatbezeichner „%d“ übergeben, wohingegen ein 32-Bit-Ganzzahl-Parameter erwartet wird. Diese Warnung ist nur aktiv, wenn der Code für 64-Bit-Ziele kompiliert wird.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird C4313 generiert, wenn dies für 64-Bit-Ziele kompiliert wird.  
-  
-```  
-// C4313.cpp  
-// Compile by using: cl /W1 C4313.cpp  
-#include <stdio.h>  
-int main() {  
-   int * pI = 0;  
-   printf("%d", pI);   // C4313 on 64-bit platform code  
-   // Try one of the following lines instead:  
-   // printf("%p\n", pI);  
-   // printf("%Id\n", pI);   // %I64d expects 64-bits of information  
-}  
+
+'Funktion': 'Formatbezeichner' in der Formatzeichenfolge steht mit der Argumentennummer vom Typ 'Typ' in Konflikt.
+
+Es besteht ein Konflikt zwischen dem angegebenen Format und dem Wert, den Sie übergeben. Beispielsweise haben Sie einen 64-Bit-Parameter an einen nicht qualifizierten Formatbezeichner „%d“ übergeben, wohingegen ein 32-Bit-Ganzzahl-Parameter erwartet wird. Diese Warnung ist nur aktiv, wenn der Code für 64-Bit-Ziele kompiliert wird.
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Codebeispiel wird C4313 generiert, wenn dies für 64-Bit-Ziele kompiliert wird.
+
+```
+// C4313.cpp
+// Compile by using: cl /W1 C4313.cpp
+#include <stdio.h>
+int main() {
+   int * pI = 0;
+   printf("%d", pI);   // C4313 on 64-bit platform code
+   // Try one of the following lines instead:
+   // printf("%p\n", pI);
+   // printf("%Id\n", pI);   // %I64d expects 64-bits of information
+}
 ```

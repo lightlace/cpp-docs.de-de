@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4541 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4541 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d1f750ad9362f868b29ba93ea383b60156e648d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6c5b8959d7bdfb92c2813e4c7d81de652625942b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274676"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098978"
 ---
 # <a name="compiler-warning-level-1-c4541"></a>Compilerwarnung (Stufe 1) C4541
-'Bezeichner' für polymorphen Typ 'Typ' mit/GR-verwendet; zu unvorhersehbares Verhalten kann führen.  
-  
- Sie haben versucht, eine Funktion zu verwenden, die zur Laufzeit-Typinformationen erfordert, ohne die Laufzeit-Typeninformation aktivieren. Kompilieren Sie erneut mit [/Gr](../../build/reference/gr-enable-run-time-type-information.md).
+
+"Bezeichner" für polymorphen Typ "Typ" mit/GR-verwendet; verwendet Es kann zu unvorhersehbarem Verhalten führen.
+
+Sie haben versucht, eine Funktion verwenden, die Laufzeit-Typeninformation ohne Aktivierung der Laufzeit Typinformationen erfordert. Kompilieren Sie erneut mit [/Gr](../../build/reference/gr-enable-run-time-type-information.md).

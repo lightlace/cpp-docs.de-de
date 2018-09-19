@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2492 | Microsoft Docs
+title: Compilerfehler C2492 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68b3d769c5b86be172a0a27828fb1dc3905959d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2fcb9058bf1aac584e8b7728616f821bda4b33f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197363"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096274"
 ---
 # <a name="compiler-error-c2492"></a>Compilerfehler C2492
-"*Variable*": Daten mit Speicherdauer Thread können keine Dll-Schnittstelle    
-  
- Die Variable wird deklariert, mit der [Thread](../../cpp/thread.md) -Attribut und mit der DLL-Schnittstelle. Die Adresse der `thread` Variable ist nicht erst zur Laufzeit bekannt, damit es mit einer DLL-Import oder Export verknüpft werden kann.  
-  
- Im folgende Beispiel wird C2492 generiert:  
-  
-```  
-// C2492.cpp  
-// compile with: /c  
-class C {  
-public:  
-   char   ch;  
-};  
-  
-__declspec(dllexport) __declspec(thread) C c_1;   // C2492  
-__declspec(thread) C c_1;   // OK  
+
+"*Variable*': Daten mit threadspeicherdauer dürfen keine Dll-Schnittstelle haben
+
+Die Variable wird deklariert, mit der [Thread](../../cpp/thread.md) Attribut, und die DLL-Schnittstelle. Die Adresse der `thread` Variable ist nicht bis zur Laufzeit bekannt, damit nicht zu einer DLL-Import oder Export verknüpft werden.
+
+Im folgende Beispiel wird die C2492 generiert:
+
+```
+// C2492.cpp
+// compile with: /c
+class C {
+public:
+   char   ch;
+};
+
+__declspec(dllexport) __declspec(thread) C c_1;   // C2492
+__declspec(thread) C c_1;   // OK
 ```

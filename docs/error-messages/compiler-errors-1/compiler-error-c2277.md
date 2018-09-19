@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2277 | Microsoft Docs
+title: Compilerfehler C2277 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7338efab684e9812704673ece8585cd58c850b23
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 212ae84917e664116c83df3135577e00cda19446
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171730"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101937"
 ---
 # <a name="compiler-error-c2277"></a>Compilerfehler C2277
-'Bezeichner': Adresse von dieser Memberfunktion nicht übernehmen  
-  
- Die Adresse einer Memberfunktion ist nicht möglich.  
-  
- Im folgende Beispiel wird C2277 generiert:  
-  
-```  
-// C2277.cpp  
-class A {  
-public:  
-   A();  
-};  
-(*pctor)() = &A::A;   // C2277   
+
+'Bezeichner': Adresse von dieser Memberfunktion nicht übernehmen
+
+Die Adresse einer Memberfunktion ist nicht möglich.
+
+Im folgende Beispiel wird die C2277 generiert:
+
+```
+// C2277.cpp
+class A {
+public:
+   A();
+};
+(*pctor)() = &A::A;   // C2277
 ```
