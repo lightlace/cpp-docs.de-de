@@ -1,7 +1,7 @@
 ---
 title: Gemischte (Native und verwaltete) Assemblys | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -23,18 +23,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2a48f34edec8a9f24f22d35be482d3b297215dbe
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4ee94905bc4c40f6d080e34098e24bd71d495141
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210624"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494490"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Gemischte (native und verwaltete) Assemblys
 
-Gemischte Assemblys können sowohl nicht verwaltete Maschinenanweisungen als auch MSIL-Anweisungen enthalten. Dadurch können sie .NET-Komponenten aufrufen und von ihnen aufgerufen werden, wobei die Kompatibilität mit vollständig nicht verwalteten Komponenten erhalten bleibt. Mit gemischten Assemblys können Entwickler Anwendungen mit einer Mischung aus verwalteten und nicht verwalteten Funktionen erstellen. Deshalb sind gemischte Assemblys optimal für das Migrieren von vorhandenen Visual C++-Anwendungen zur .NET-Plattform geeignet.
+Gemischte Assemblys können sowohl nicht verwaltete Maschinenanweisungen als auch MSIL-Anweisungen enthalten. Dadurch können sie zum Aufrufen und die Beibehaltung der Kompatibilität mit nativen C++-Bibliotheken von .NET Komponenten, aufgerufen werden. Mit gemischten Assemblys können Entwickler Anwendungen mit einer Mischung von .NET- und systemeigenen C++-Code erstellen.
 
-Beispielsweise kann eine vorhandene Anwendung besteht ausschließlich aus nicht verwalteten Funktionen in die .NET-Plattform geschaltet werden, durch das erneute Kompilieren lediglich ein Modul mit dem **"/ CLR"** Compilerschalter. Dieses Modul kann dann .NET-Funktionen verwenden, bleibt aber mit dem Rest der Anwendung kompatibel. Dadurch kann eine Anwendung schrittweise in die .NET-Plattform konvertiert werden. Es ist auch möglich, zum entscheiden zwischen verwaltetem und nicht verwaltete Kompilierung pro Funktion von innerhalb der gleichen Datei (finden Sie unter [verwaltete, unverwaltete](../preprocessor/managed-unmanaged.md)).
+Beispielsweise kann eine vorhandene Bibliothek besteht ausschließlich aus systemeigenen C++-Code in die .NET-Plattform geschaltet werden, durch das erneute Kompilieren lediglich ein Modul mit dem **"/ CLR"** Compilerschalter. Dieses Modul kann dann .NET-Funktionen verwenden, bleibt aber mit dem Rest der Anwendung kompatibel. Es ist auch möglich, zum entscheiden zwischen verwalteten und nativen Kompilierung pro Funktion von innerhalb der gleichen Datei (finden Sie unter [verwaltete, unverwaltete](../preprocessor/managed-unmanaged.md)).
 
 Visual C++ unterstützt die Generierung von gemischten verwalteten Assemblys nur mithilfe der **"/ CLR"** -Compileroption. Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt werden. Wenn Sie die reinen oder überprüfbare verwaltete Assemblys benötigen, empfehlen wir, dass Sie sie mithilfe von c# erstellen.
 
