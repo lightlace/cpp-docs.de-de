@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8128859f2b136fb945376eeea8afa0d1ef8e6e1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: f00fd37f41461933221996c8940c333bd71620ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317107"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388686"
 ---
 # <a name="controls-in-dialog-box-ces"></a>Steuert, es im Dialogfeld (C++)
 
@@ -64,6 +64,6 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](../windows/adding-event-handlers-for-dialog-box-controls.md)  
-[Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)  
+[Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
+[Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)<br/>
 [Dialog-Editor](../windows/dialog-editor.md)

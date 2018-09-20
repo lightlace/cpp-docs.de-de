@@ -18,53 +18,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af30dd9d7ff6ac64d6c0659520a6e7a15f2d0d93
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c2f81df9289824782ba241d9ddb16caaef08ff02
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116642"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373973"
 ---
 # <a name="operationtimedout-class"></a>operation_timed_out-Klasse
-Diese Klasse beschreibt eine Ausnahme, die ausgelöst wird, wenn das Timeout einer Operation erreicht wurde.  
-  
-## <a name="syntax"></a>Syntax  
-  
+
+Diese Klasse beschreibt eine Ausnahme, die ausgelöst wird, wenn das Timeout einer Operation erreicht wurde.
+
+## <a name="syntax"></a>Syntax
+
 ```
 class operation_timed_out : public std::exception;
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[operation_timed_out](#ctor)|Überladen. Erstellt ein `operation_timed_out`-Objekt.|  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `exception`  
-  
- `operation_timed_out`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h hinzu  
-  
- **Namespace:** Parallelität  
-  
-##  <a name="ctor"></a> operation_timed_out 
+```
 
- Erstellt ein `operation_timed_out`-Objekt.  
-  
+## <a name="members"></a>Member
+
+### <a name="public-constructors"></a>Öffentliche Konstruktoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[operation_timed_out](#ctor)|Überladen. Erstellt ein `operation_timed_out`-Objekt.|
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`exception`
+
+`operation_timed_out`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** concrt.h hinzu
+
+**Namespace:** Parallelität
+
+##  <a name="ctor"></a> operation_timed_out
+
+Erstellt ein `operation_timed_out`-Objekt.
+
 ```
 explicit _CRTIMP operation_timed_out(_In_z_ const char* _Message) throw();
 
 operation_timed_out() throw();
-```  
-  
-### <a name="parameters"></a>Parameter  
+```
+
+### <a name="parameters"></a>Parameter
+
 *_Nachricht*<br/>
-Eine beschreibende Fehlermeldung.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Concurrency-Namespace](concurrency-namespace.md)
+Eine beschreibende Fehlermeldung.
+
+## <a name="see-also"></a>Siehe auch
+
+[Concurrency-Namespace](concurrency-namespace.md)

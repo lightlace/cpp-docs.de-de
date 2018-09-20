@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf6ca06ffbd3912ac3545bc3c014224412c01bc1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4bbb5c62fb53d1246c1b8cc282b4ee36f0fcf58e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221169"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377317"
 ---
 # <a name="aggregates"></a>Aggregate
 
@@ -42,10 +42,10 @@ Gibt an, dass das Objekt das von der CLSID angegebene Objekt aggregiert.
 
 ### <a name="parameters"></a>Parameter
 
-*clsid*  
+*clsid*<br/>
 Gibt die CLSID des aggregierbaren Objekts an.
 
-*variable_name*  
+*variable_name*<br/>
 Der Name der Variable, die eingefügt werden soll. Diese Variable enthält die `IUnknown` des Objekts, die aggregiert wird.
 
 ## <a name="remarks"></a>Hinweise
@@ -106,9 +106,9 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 
 ## <a name="see-also"></a>Siehe auch
 
-[COM-Attribute](../windows/com-attributes.md)  
-[Klassenattribute](../windows/class-attributes.md)  
-[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Aggregation](/windows/desktop/com/aggregation)  
-[Aggregiert](/windows/desktop/Midl/aggregatable)  
+[COM-Attribute](../windows/com-attributes.md)<br/>
+[Klassenattribute](../windows/class-attributes.md)<br/>
+[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[Aggregation](/windows/desktop/com/aggregation)<br/>
+[Aggregiert](/windows/desktop/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)  

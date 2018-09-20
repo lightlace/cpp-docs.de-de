@@ -18,50 +18,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a816bd4df165b3df9de723560192ac9072b29c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7ef1bb6e4804fc71531f694a3dac4c5504941bf0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718834"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393762"
 ---
 # <a name="outbytestring"></a>__outbytestring
-**Microsoft-spezifisch**  
-  
- Generiert die `rep outsb` -Anweisung, die die erste sendet `Count` Datenbytes verweist `Buffer` an den Port, der anhand des `Port`.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void __outbytestring(   
-   unsigned short Port,   
-   unsigned char* Buffer,   
-   unsigned long Count   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+
+**Microsoft-spezifisch**
+
+Generiert die `rep outsb` -Anweisung, die die erste sendet `Count` Datenbytes verweist `Buffer` an den Port, der anhand des `Port`.
+
+## <a name="syntax"></a>Syntax
+
+```
+void __outbytestring( 
+   unsigned short Port, 
+   unsigned char* Buffer, 
+   unsigned long Count 
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
 *Port*<br/>
-[in] Der Port, der die Daten zu senden.  
-  
+[in] Der Port, der die Daten zu senden.
+
 *Buffer*<br/>
-[in] Die Daten, die über den angegebenen Port gesendet werden.  
-  
+[in] Die Daten, die über den angegebenen Port gesendet werden.
+
 *Anzahl*<br/>
-[in] Die Anzahl der Bytes an Daten gesendet werden.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Systemintern|Architektur|  
-|---------------|------------------|  
-|`__outbytestring`|x86, x64|  
-  
- **Headerdatei** \<intrin.h >  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Routine ist nur als systeminterne Funktion verfügbar.  
-  
-**Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[in] Die Anzahl der Bytes an Daten gesendet werden.
+
+## <a name="requirements"></a>Anforderungen
+
+|Systemintern|Architektur|
+|---------------|------------------|
+|`__outbytestring`|x86, x64|
+
+**Headerdatei** \<intrin.h >
+
+## <a name="remarks"></a>Hinweise
+
+Diese Routine ist nur als systeminterne Funktion verfügbar.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

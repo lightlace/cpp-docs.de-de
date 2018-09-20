@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 775fbe39edc9478b1fce3afb39ee2bf1f6d5ed36
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0c7ebdf83730b661cbd855ba730da1abeee936c5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714310"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377070"
 ---
 # <a name="interface-class--c-component-extensions"></a>interface class (Komponentenerweiterungen für C++)
 
@@ -36,21 +36,21 @@ Deklariert eine Schnittstelle.  Weitere Informationen zu systemeigenen Schnittst
 ```cpp
 interface_access
 interface class
- name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
+name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*interface_access*  
+*interface_access*<br/>
 Der Zugriff auf eine Schnittstelle außerhalb der Assembly.  Mögliche Werte sind **öffentliche** und **private**.  **private** ist die Standardeinstellung. Sind keine verschachtelte Schnittstellen ein *Interface_access* Spezifizierer.
 
-*name*  
+*name*<br/>
 Der Name der Schnittstelle.
 
-*inherit_access*  
+*inherit_access*<br/>
 Der Zugriff auf *Base_interface*.  Die einzige Eingabehilfen für zulässig ist eine Basisschnittstelle **öffentliche** (Standard).
 
-*base_interface*  
+*base_interface*<br/>
 (Optional) Eine Basisschnittstelle für die Schnittstelle *Namen*.
 
 ### <a name="remarks"></a>Hinweise

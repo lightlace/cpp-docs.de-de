@@ -1,5 +1,5 @@
 ---
-title: Zeichnen und Drucken von Klassen | Microsoft Docs
+title: Zeichnen und Drucken von Klassen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,16 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 930075a459424e5ffac00d4e620e18cd2c318273
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 331fabe63a3abad1ea19fe4440f8eec0c05481d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344779"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380329"
 ---
 # <a name="drawing-and-printing-classes"></a>Klassen zum Zeichnen und Drucken
-Alle grafische Ausgabe wird in Windows auf einem virtuellen Zeichenbereich bezeichnet einen Gerätekontext (DC) gezeichnet. MFC enthält Klassen, um die verschiedenen Typen von Domänencontrollern als auch Encapsulations für Windows-Zeichenwerkzeuge wie Bitmaps, Pinsel, Paletten und Stifte zu kapseln.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+
+In Windows wird allen grafische Ausgabe auf einer virtuellen Zeichnungsbereich bezeichnet einen Gerätekontext (DC) gezeichnet. MFC stellt Klassen für die verschiedenen Typen von Domänencontrollern als auch kapselungen für Windows-Zeichnungsprogramme wie Bitmaps, Pinseln, Paletten und Stifte zu kapseln.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../mfc/class-library-overview.md)
 

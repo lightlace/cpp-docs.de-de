@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten von Benachrichtigungsmeldungen in Monatskalender-Steuerelementen | Microsoft Docs
+title: Verarbeiten von Benachrichtigungsmeldungen in Monatskalender-Steuerelementen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce9906a738ed6c577f46d2919a5cdac80b877110
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 5bbdb3728009cdee978bb08ef8df8817f1ef5e41
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930988"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378175"
 ---
 # <a name="processing-notification-messages-in-month-calendar-controls"></a>Verarbeiten von Benachrichtigungsmeldungen in Monatskalender-Steuerelementen
-Als Benutzer mit der im Monatskalender-Steuerelement (Auswahl von Datumsangaben und/oder einen anderen Monat anzeigen), das Steuerelement interagieren (`CMonthCalCtrl`) sendet benachrichtigungsmeldungen an das übergeordnete Fenster, normalerweise ein Ansichts- oder Dialogfeldobjekt-Objekt. Behandeln Sie diese Nachrichten, wenn Sie darauf reagieren möchten. Wenn der Benutzer einen neuen Monat anzeigen auswählt, können Sie z. B. einen Satz mit Datumsangaben bereitstellen, die hervorgehoben werden sollen.  
-  
- Verwenden Sie das Eigenschaftenfenster, um der übergeordneten Klasse Benachrichtigungshandler für die Nachrichten hinzuzufügen, die Sie implementieren möchten.  
-  
- Die folgende Liste beschreibt die verschiedenen Benachrichtigungen per im Monatskalender-Steuerelement.  
-  
--   MCN_GETDAYSTATE fordert Informationen darüber, welche Tage in Fettschrift angezeigt werden soll. Informationen zur Behandlung dieser benachrichtigungs finden Sie unter [Einstellen des Tagesstatus für ein Monatskalender-Steuerelement](../mfc/setting-the-day-state-of-a-month-calendar-control.md).  
-  
--   MCN_SELCHANGE benachrichtigt das übergeordnete Element, das das ausgewählte Datum oder der Datumsbereich geändert wurde.  
-  
--   MCN_SELECT benachrichtigt das übergeordnete Element, das eine explizite Datumsauswahl festgelegt wurde.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+
+Während Benutzer mit der im Monatskalender-Steuerelement (Auswahl von Datumsangaben und/oder einen anderen Monat anzeigen), das Steuerelement interagieren (`CMonthCalCtrl`) sendet benachrichtigungsmeldungen an das übergeordnete Fenster, normalerweise ein Ansichts- oder Dialogfeldobjekt-Objekt. Behandeln Sie diese Nachrichten, wenn Sie darauf reagieren möchten. Wenn der Benutzer an einen neuen Monat auswählt, können Sie beispielsweise einen Satz mit Datumsangaben bereitstellen, die hervorgehoben werden soll.
+
+Verwenden Sie das Eigenschaftenfenster, um der übergeordneten Klasse Benachrichtigungshandler für die Nachrichten hinzuzufügen, die Sie implementieren möchten.
+
+Die folgende Liste beschreibt die verschiedenen Benachrichtigungen, die von der im Monatskalender-Steuerelement gesendet werden.
+
+- MCN_GETDAYSTATE fordert Informationen darüber, welche Tage in Fettschrift angezeigt werden sollen. Weitere Informationen zur Behandlung dieser Benachrichtigung finden Sie unter [Einstellen des Tagesstatus für ein Monatskalender-Steuerelement](../mfc/setting-the-day-state-of-a-month-calendar-control.md).
+
+- MCN_SELCHANGE benachrichtigt das übergeordnete Element, das das ausgewählte Datum oder der Datumsbereich geändert wurde.
+
+- MCN_SELECT benachrichtigt das übergeordnete Element, das eine explizites Datumsauswahl getroffen wurde.
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)<br/>
+[Steuerelemente](../mfc/controls-mfc.md)
 

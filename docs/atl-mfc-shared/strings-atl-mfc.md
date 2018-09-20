@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a918866710575ecc091fcce4564a7617d28a102d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f0751b218fe540a49c2cf0efde1dcf8976f2ebf6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752774"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387314"
 ---
 # <a name="strings-atlmfc"></a>Zeichenfolgen (ATL/MFC)
 
@@ -44,18 +44,18 @@ Fast alle Programme funktionieren mit Zeichenfolgendaten auf. Visual C++ bietet 
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Verwenden von CStringT](../atl-mfc-shared/using-cstringt.md)  
+[Verwenden von CStringT](../atl-mfc-shared/using-cstringt.md)<br/>
 Beschreibt die Programmierung mit der Vorlagenklasse CStringT.
 
-[Verwenden von CString](../atl-mfc-shared/using-cstring.md)  
+[Verwenden von CString](../atl-mfc-shared/using-cstring.md)<br/>
 Beschreibt die Programmierung mithilfe von CString-Objekts, die standardmäßige Implementierung von CStringT.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-[CStringT-Übersicht](../atl-mfc-shared/reference/cstringt-class.md)  
+[CStringT-Übersicht](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 Enthält Referenzinformationen zu den freigegebenen `CStringT` Klasse.
 
-[MFC-Konzepte](../mfc/mfc-concepts.md)  
+[MFC-Konzepte](../mfc/mfc-concepts.md)<br/>
 Enthält konzeptionelle und aufgabenbasierte Themen, die Ihnen helfen Programmierung mit MFC-Bibliothek.
 
 ## <a name="see-also"></a>Siehe auch

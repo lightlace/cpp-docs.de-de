@@ -1,5 +1,5 @@
 ---
-title: Anderer Fensteraktionen | Microsoft Docs
+title: Orchestrieren anderer Fensteraktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,16 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 488d34ead9a56250febe24bec7ebd4323ec07d95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c689504efbafe40cce54b9c333724a1390925cf9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345640"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375838"
 ---
 # <a name="orchestrating-other-window-actions"></a>Orchestrieren anderer Fensteraktionen
-Das Rahmenfenster orchestriert halbmodaler Zustand, etwa kontextsensitive Hilfe und Seitenansicht. Eine Beschreibung der Rolle "das Rahmenfenster" in der Seitenansicht, finden Sie unter [drucken und Druckvorschau](../mfc/printing-and-print-preview.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von Rahmenfenstern](../mfc/using-frame-windows.md)
+
+Das Rahmenfenster halbmodaler Zustand, etwa kontextbezogene Hilfe orchestriert und Seitenansicht. Eine Beschreibung des Rahmenfensters-Rolle in der Seitenansicht angezeigt wird, finden Sie unter [drucken und Druckvorschau](../mfc/printing-and-print-preview.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von Rahmenfenstern](../mfc/using-frame-windows.md)
 

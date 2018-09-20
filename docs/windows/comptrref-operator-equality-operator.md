@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abf78644f7cad90d25d365f6237407aeaeb6917b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 78daa0ad22ad3bb6a63900d4c2f69d5eafb5cb6b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42575702"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372122"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator==-Operator
 
@@ -57,10 +57,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-*a*  
+*a*<br/>
 Ein Verweis auf eine **ComPtrRef** Objekt.
 
-*b*  
+*b*<br/>
 Ein Verweis auf einen anderen **ComPtrRef** Objekt oder ein Zeiger auf einen anonymen Typ (`void*`).
 
 ## <a name="return-value"></a>Rückgabewert
@@ -83,5 +83,5 @@ Gibt an, ob zwei **ComPtrRef** Objekte gleich sind.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)<br/>
 [ComPtrRef-Klasse](../windows/comptrref-class.md)

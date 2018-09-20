@@ -18,82 +18,88 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2b7abb9cbc3f75c2b4f50f87a1bfdd818e6a3f8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7df892a3d3f038655f37b78fa88babb09d50df2d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707342"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373465"
 ---
 # <a name="csplitterwndex-class"></a>CSplitterWndEx-Klasse
 
 
 
-Stellt ein benutzerdefiniertes unterteiltes Fenster dar.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-class CSplitterWndEx : public CSplitterWnd  
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|`CSplitterWndEx::CSplitterWndEx`|Standardkonstruktor|  
-|`CSplitterWndEx::~CSplitterWndEx`|Destruktor.|  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Wird aufgerufen, durch das Framework zum Zeichnen eines unterteilten Fensters. (Überschreibt [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|  
-  
-## <a name="remarks"></a>Hinweise  
- Überschreiben der `OnDrawSplitter` Methode, um die Darstellung der grafischen Komponenten eines unterteilten Fensters anpassen.  
-  
- Die `CSplitterWndEx` -Klasse dient zusammen mit den [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), und [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) -Methoden, die sind durch einen visuellen Manager implementiert. Um einen visuellen Manager zum Zeichnen ein Teilungsfenster in Ihrer Anwendung zu verursachen, ersetzen Sie die Deklarationen der `CSplitterWnd` -Klasse mit der `CSplitterWndEx` Klasse. Für Anwendungen der Frame-Fenster ist die Fensterklasse des Splitters in der CMainFrame-Klasse deklariert, die in "MainFrm.h" befindet. Ein Beispiel finden Sie unter den `OutlookDemo` Beispiel im Verzeichnis "Samples".  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [Von CObject](cobject-class.md)  
-  
- [CCmdTarget](ccmdtarget-class.md)  
-  
- [CWnd](cwnd-class.md)  
-  
- [CSplitterWnd](csplitterwnd-class.md)  
-   
-## <a name="requirements"></a>Anforderungen  
- **Header:** afxsplitterwndex.h  
-  
-##  <a name="ondrawsplitter"></a>  CSplitterWndEx::OnDrawSplitter  
- Wird aufgerufen, durch das Framework zum Zeichnen eines unterteilten Fensters.  
-  
-```  
-virtual void OnDrawSplitter(  
-   CDC* pDC,  
-   ESplitType nType,  
-   const CRect& rect   
-);  
-```  
-  
-### <a name="parameters"></a>Parameter  
+Stellt ein benutzerdefiniertes unterteiltes Fenster dar.
+
+## <a name="syntax"></a>Syntax
+
+```
+class CSplitterWndEx : public CSplitterWnd
+```
+
+## <a name="members"></a>Member
+
+### <a name="public-constructors"></a>Öffentliche Konstruktoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|`CSplitterWndEx::CSplitterWndEx`|Standardkonstruktor|
+|`CSplitterWndEx::~CSplitterWndEx`|Destruktor.|
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Wird aufgerufen, durch das Framework zum Zeichnen eines unterteilten Fensters. (Überschreibt [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|
+
+## <a name="remarks"></a>Hinweise
+
+Überschreiben der `OnDrawSplitter` Methode, um die Darstellung der grafischen Komponenten eines unterteilten Fensters anpassen.
+
+Die `CSplitterWndEx` -Klasse dient zusammen mit den [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), und [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) -Methoden, die sind durch einen visuellen Manager implementiert. Um einen visuellen Manager zum Zeichnen ein Teilungsfenster in Ihrer Anwendung zu verursachen, ersetzen Sie die Deklarationen der `CSplitterWnd` -Klasse mit der `CSplitterWndEx` Klasse. Für Anwendungen der Frame-Fenster ist die Fensterklasse des Splitters in der CMainFrame-Klasse deklariert, die in "MainFrm.h" befindet. Ein Beispiel finden Sie unter den `OutlookDemo` Beispiel im Verzeichnis "Samples".
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+[Von CObject](cobject-class.md)
+
+[CCmdTarget](ccmdtarget-class.md)
+
+[CWnd](cwnd-class.md)
+
+[CSplitterWnd](csplitterwnd-class.md)
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** afxsplitterwndex.h
+
+##  <a name="ondrawsplitter"></a>  CSplitterWndEx::OnDrawSplitter
+
+Wird aufgerufen, durch das Framework zum Zeichnen eines unterteilten Fensters.
+
+```
+virtual void OnDrawSplitter(
+   CDC* pDC,
+   ESplitType nType,
+   const CRect& rect
+);
+```
+
+### <a name="parameters"></a>Parameter
+
 *pDC*<br/>
-[in] Zeiger auf den Gerätekontext. Wenn dieser Parameter NULL ist, zeichnet das Framework des aktiven Fensters.  
-  
+[in] Zeiger auf den Gerätekontext. Wenn dieser Parameter NULL ist, zeichnet das Framework des aktiven Fensters.
+
 *nType*<br/>
-[in] Eines der `CSplitterWnd::ESplitType` Enumerationswerte, der angibt, das Splitter-Fenster-Element zu zeichnen. Gültige Werte sind `splitBox`, `splitBar`, `splitIntersection` und `splitBorder`.  
-  
+[in] Eines der `CSplitterWnd::ESplitType` Enumerationswerte, der angibt, das Splitter-Fenster-Element zu zeichnen. Gültige Werte sind `splitBox`, `splitBar`, `splitIntersection` und `splitBorder`.
+
 *Rect*<br/>
-[in] Ein umgebendes Rechteck, das die Abmessungen und Position Zeichnen des Elements der angegebenen Splitter Fenster angibt.  
-  
-### <a name="remarks"></a>Hinweise  
-  
-## <a name="see-also"></a>Siehe auch  
- [Hierarchiediagramm](../hierarchy-chart.md)   
- [Klassen](mfc-classes.md)   
- [CSplitterWnd-Klasse](csplitterwnd-class.md)   
- [CMFCVisualManager-Klasse](cmfcvisualmanager-class.md)
+[in] Ein umgebendes Rechteck, das die Abmessungen und Position Zeichnen des Elements der angegebenen Splitter Fenster angibt.
+
+### <a name="remarks"></a>Hinweise
+
+## <a name="see-also"></a>Siehe auch
+
+[Hierarchiediagramm](../hierarchy-chart.md)<br/>
+[Klassen](mfc-classes.md)<br/>
+[CSplitterWnd-Klasse](csplitterwnd-class.md)<br/>
+[CMFCVisualManager-Klasse](cmfcvisualmanager-class.md)

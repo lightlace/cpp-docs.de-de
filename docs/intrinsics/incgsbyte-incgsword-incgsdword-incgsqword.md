@@ -26,55 +26,59 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611786246df9da54d94e673da1a5e48940ca7241
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 56cdce805e2048cff22007a89da42c736dd14fd4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711125"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373287"
 ---
 # <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
-**Microsoft-spezifisch**  
-  
- Fügen Sie eine auf den Wert an einer Speicheradresse, die durch ein Offset relativ zum Anfang des angegebenen die `GS` Segment.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void __incgsbyte(   
-   unsigned long Offset   
-);  
-void __incgsword(   
-   unsigned long Offset   
-);  
-void __incgsdword(   
-   unsigned long Offset  
-);  
-void __incgsqword(   
-   unsigned long Offset   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+
+**Microsoft-spezifisch**
+
+Fügen Sie eine auf den Wert an einer Speicheradresse, die durch ein Offset relativ zum Anfang des angegebenen die `GS` Segment.
+
+## <a name="syntax"></a>Syntax
+
+```
+void __incgsbyte( 
+   unsigned long Offset 
+);
+void __incgsword( 
+   unsigned long Offset 
+);
+void __incgsdword( 
+   unsigned long Offset
+);
+void __incgsqword( 
+   unsigned long Offset 
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
 *Offset*<br/>
-[in] Der Offset vom Anfang des `GS`.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Systemintern|Architektur|  
-|---------------|------------------|  
-|`__incgsbyte`|x64|  
-|`__incgsword`|x64|  
-|`__incgsdword`|x64|  
-|`__incgsqword`|x64|  
-  
-## <a name="remarks"></a>Hinweise  
- Diese systeminternen Funktionen sind nur im Kernelmodus verfügbar, und die Routinen sind nur als systeminterne Funktionen verfügbar.  
-  
-**Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)   
- [__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)   
- [__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)   
- [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[in] Der Offset vom Anfang des `GS`.
+
+## <a name="requirements"></a>Anforderungen
+
+|Systemintern|Architektur|
+|---------------|------------------|
+|`__incgsbyte`|x64|
+|`__incgsword`|x64|
+|`__incgsdword`|x64|
+|`__incgsqword`|x64|
+
+## <a name="remarks"></a>Hinweise
+
+Diese systeminternen Funktionen sind nur im Kernelmodus verfügbar, und die Routinen sind nur als systeminterne Funktionen verfügbar.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)<br/>
+[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)<br/>
+[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)<br/>
+[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3409e0e2c1cac5f3934902523edd2653839989ed
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 46450142c0455dd4eb96f627abd077e478d96fea
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42575757"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383505"
 ---
 # <a name="moduleunregistercomobject-method"></a>Module::UnregisterCOMObject-Methode
 
@@ -39,13 +39,13 @@ virtual HRESULT UnregisterCOMObject(
 
 ### <a name="parameters"></a>Parameter
 
-*ServerName*  
+*ServerName*<br/>
 (Nicht verwendeten)
 
-*Cookies*  
+*Cookies*<br/>
 Ein Array von Zeigern auf Werte, die identifizieren, Objekte der Klasse, deren Registrierung aufgehoben werden. Das Array erstellt wurde, indem die [RegisterCOMObject](../windows/module-registercomobject-method.md) Methode.
 
-*count*  
+*count*<br/>
 Die Anzahl der Klassen zum Aufheben der Registrierung.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -59,4 +59,5 @@ S_OK, wenn dieser Vorgang erfolgreich ist; andernfalls ein Fehler HRESULT, das d
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Siehe auch
+
 [Module-Klasse](../windows/module-class.md)

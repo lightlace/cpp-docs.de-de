@@ -16,43 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d5cabbd1d779de4c6c081b57b8f241d9fa92f62
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dffb51782e87903feaeb733765fcf9f4763a64f6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709059"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385143"
 ---
 # <a name="readdr"></a>__readdr
-Liest den Wert des angegebenen Debug-Registers.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-unsigned         __readdr(unsigned int DebugRegister);  
-unsigned __int64 __readdr(unsigned int DebugRegister);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+
+Liest den Wert des angegebenen Debug-Registers.
+
+## <a name="syntax"></a>Syntax
+
+```
+unsigned         __readdr(unsigned int DebugRegister);
+unsigned __int64 __readdr(unsigned int DebugRegister);
+```
+
+#### <a name="parameters"></a>Parameter
+
 *DebugRegister*<br/>
-[in] Registrieren Sie eine Konstante, von 0 bis 7, die das Debuggen identifiziert.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Der Wert des angegebenen Debug-Registers.  
-  
-## <a name="remarks"></a>Hinweise  
- Diese systeminternen Funktionen sind nur im Kernelmodus verfügbar, und die Routinen sind nur als systeminterne Funktionen verfügbar.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Systemintern|Architektur|  
-|---------------|------------------|  
-|`__readdr`|x86, x64|  
-  
- **Headerdatei** \<intrin.h >  
-  
-**Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)   
- [__readeflags](../intrinsics/readeflags.md)
+[in] Registrieren Sie eine Konstante, von 0 bis 7, die das Debuggen identifiziert.
+
+## <a name="return-value"></a>Rückgabewert
+
+Der Wert des angegebenen Debug-Registers.
+
+## <a name="remarks"></a>Hinweise
+
+Diese systeminternen Funktionen sind nur im Kernelmodus verfügbar, und die Routinen sind nur als systeminterne Funktionen verfügbar.
+
+## <a name="requirements"></a>Anforderungen
+
+|Systemintern|Architektur|
+|---------------|------------------|
+|`__readdr`|x86, x64|
+
+**Headerdatei** \<intrin.h >
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
+[__readeflags](../intrinsics/readeflags.md)

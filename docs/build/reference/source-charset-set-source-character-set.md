@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c36f898c005a989a7be78e436b560fe9a0536b57
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3154f2db3c95154c425b116e05ec1b47096e33ff
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715064"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383557"
 ---
 # <a name="source-charset-set-source-character-set"></a>/ Source-CharSet (Quellzeichensatz festlegen)
 
@@ -67,6 +67,6 @@ Wenn Sie sowohl die Quell- und ausführungszeichensatz in UTF-8 festlegen möcht
 
 [Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
-[/ Execution-CharSet (Ausführungszeichensatz festlegen)](../../build/reference/execution-charset-set-execution-character-set.md)
-[/utf-8 (Quelle festlegen und ausführbare Datei legt in UTF-8-Zeichen)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
- [ /Validate-CharSet (überprüfen nach kompatiblen Zeichen)](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+[/ Execution-CharSet (Ausführungszeichensatz festlegen)](../../build/reference/execution-charset-set-execution-character-set.md)<br/>
+[/utf-8 (Quelle und ausführbare Zeichensätze auf UTF-8 festlegen)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
+[/validate-charset (Auf kompatible Zeichen überprüfen)](../../build/reference/validate-charset-validate-for-compatible-characters.md)

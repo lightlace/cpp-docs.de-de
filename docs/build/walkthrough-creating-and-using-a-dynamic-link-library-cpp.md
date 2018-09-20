@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb47b64277aea568cf3cad8e2c4b6203e43f1b2f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5175d89925ddc09fdcd552aa57d2967071e750f7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723248"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376966"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Exemplarische Vorgehensweise: Erstellen Sie und verwenden Sie Ihren eigenen Dynamic Link Library (C++)
 
@@ -411,5 +411,5 @@ Wenn Sie Ihre app bereitstellen, müssen Sie auch die DLLs bereitstellen, verwen
 
 [DLLs in Visual C++](../build/dlls-in-visual-cpp.md)<br/>
 [Deploying Desktop Applications (Bereitstellen von Desktopanwendungen)](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
-[Exemplarische Vorgehensweise: Bereitstellen des Programms (C++)](../ide/walkthrough-deploying-your-program-cpp.md)
-[Aufrufen von DLL-Funktionen aus Visual Basic-Anwendungen](../build/calling-dll-functions-from-visual-basic-applications.md)
+[Exemplarische Vorgehensweise: Bereitstellen des Programms (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
+[Aufrufen von DLL-Funktionen aus Visual Basic-Anwendungen heraus](../build/calling-dll-functions-from-visual-basic-applications.md)

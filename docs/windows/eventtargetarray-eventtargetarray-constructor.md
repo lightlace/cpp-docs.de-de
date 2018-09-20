@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2bbf6cb67973d7538aa7aea0d846cbadf030d585
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dc59b9c93cebb622f40881d961709079abcd9166
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590651"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388628"
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>EventTargetArray::EventTargetArray-Konstruktor
 
@@ -39,7 +39,7 @@ EventTargetArray(
 
 ### <a name="parameters"></a>Parameter
 
-*HR*  
+*HR*<br/>
 Nach diesem Konstruktor-Vorgänge Parameter *hr* gibt an, ob das Array Zuordnung erfolgreich war oder nicht. Die folgende Tabelle enthält die möglichen Werte für *hr*.
 
 S_OK der Vorgang war erfolgreich.
@@ -48,7 +48,7 @@ E_OUTOFMEMORY Arbeitsspeicher konnte nicht für das Array zugeordnet werden.
 
 S_FALSE Parameter *Elemente* ist kleiner als oder gleich 0 (null).
 
-*Elemente*  
+*Elemente*<br/>
 Die Anzahl der Elemente des Arrays zugewiesen werden.
 
 ## <a name="remarks"></a>Hinweise
@@ -65,5 +65,5 @@ Initialisiert eine neue Instanz der dem **EventTargetArray** Klasse.
 
 ## <a name="see-also"></a>Siehe auch
 
-[EventTargetArray-Klasse](../windows/eventtargetarray-class.md)  
+[EventTargetArray-Klasse](../windows/eventtargetarray-class.md)<br/>
 [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
