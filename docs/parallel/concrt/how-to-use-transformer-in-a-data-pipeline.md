@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verwenden von Transformer in einer Datenpipeline | Microsoft Docs'
+title: 'Gewusst wie: Verwenden von Transformer in einer Datenpipeline | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,53 +16,57 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a291b5c53338137ae59d9361ee36b6df29df277e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2c39491543c4d3a16202dac3caee50122ba0c7cf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686580"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403122"
 ---
 # <a name="how-to-use-transformer-in-a-data-pipeline"></a>Gewusst wie: Verwenden von transformer in einer Datenpipeline
-Dieses Thema enthält ein einfaches Beispiel, das zeigt, wie Sie die [Concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md) Klasse in einer Datenpipeline. Ein vollständigeres Beispiel, das eine Datenpipeline verwendet wird, um bildverarbeitung, finden Sie unter [Exemplarische Vorgehensweise: Erstellen einer Bildverarbeitungsnetzwerks](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).  
-  
- *Datenpipelinefunktionen* ist ein allgemeines Muster, bei der gleichzeitigen Programmierung. Eine Datenpipeline besteht aus einer Reihe von Phasen, wobei in jeder einzelnen Phase Arbeiten ausführt und das jeweilige Ergebnis dann an die nächste Phase weitergeleitet wird. Die `transformer`-Klasse ist eine Hauptkomponente in Datenpipelines, da sie einen Eingabewert empfängt, Arbeiten für diesen Wert ausführt und dann ein Ergebnis erzeugt, das von einer anderen Komponente verwendet werden kann.  
-  
-## <a name="example"></a>Beispiel  
- Bei diesem Beispiel wird zur Ausführung einer Reihe von Transformationen, denen ein ursprünglicher Eingabewert zugrunde liegt, folgende Datenpipeline verwendet:  
-  
-1.  In der ersten Phase wird der absolute Wert der Eingabe berechnet.  
-  
-2.  In der zweiten Phase wird die Quadratwurzel der Eingabe berechnet.  
-  
-3.  In der dritten Phase wird das Quadrat der Eingabe berechnet.  
-  
-4.  In der vierten Phase wird die Eingabe negiert.  
-  
-5.  In der fünften Phase wird das Endergebnis in einen Meldungspuffer geschrieben.  
-  
- Bei diesem Beispiel wird schließlich das Ergebnis der Pipeline auf der Konsole gedruckt.  
-  
- [!code-cpp[concrt-data-pipeline#1](../../parallel/concrt/codesnippet/cpp/how-to-use-transformer-in-a-data-pipeline_1.cpp)]  
-  
- Dieses Beispiel erzeugt die folgende Ausgabe:  
-  
-```Output  
-The result is -42.  
-```  
-  
- Es kommt bei einer Datenpipeline häufig vor, dass bei einer Phase ein Wert ausgegeben wird, dessen Typ sich vom Eingabewert unterscheidet. Bei diesem Beispiel wird in der zweiten Phase ein Wert des `int`-Typs als Eingabe verwendet und die Quadratwurzel dieses Werts (ein `double`) als Ausgabe erzeugt.  
-  
+
+Dieses Thema enthält ein einfaches Beispiel, das zeigt, wie Sie mit der [Concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md) Klasse in einer Datenpipeline. Ein vollständigeres Beispiel, das eine Datenpipeline verwendet wird, um bildverarbeitung, finden Sie unter [Exemplarische Vorgehensweise: Erstellen einer Bildverarbeitungsnetzwerks](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+
+*Datenpipelinefunktionen* ist ein gängiges Muster, bei der gleichzeitigen Programmierung. Eine Datenpipeline besteht aus einer Reihe von Phasen, wobei in jeder einzelnen Phase Arbeiten ausführt und das jeweilige Ergebnis dann an die nächste Phase weitergeleitet wird. Die `transformer`-Klasse ist eine Hauptkomponente in Datenpipelines, da sie einen Eingabewert empfängt, Arbeiten für diesen Wert ausführt und dann ein Ergebnis erzeugt, das von einer anderen Komponente verwendet werden kann.
+
+## <a name="example"></a>Beispiel
+
+Bei diesem Beispiel wird zur Ausführung einer Reihe von Transformationen, denen ein ursprünglicher Eingabewert zugrunde liegt, folgende Datenpipeline verwendet:
+
+1. In der ersten Phase wird der absolute Wert der Eingabe berechnet.
+
+1. In der zweiten Phase wird die Quadratwurzel der Eingabe berechnet.
+
+1. In der dritten Phase wird das Quadrat der Eingabe berechnet.
+
+1. In der vierten Phase wird die Eingabe negiert.
+
+1. In der fünften Phase wird das Endergebnis in einen Meldungspuffer geschrieben.
+
+Bei diesem Beispiel wird schließlich das Ergebnis der Pipeline auf der Konsole gedruckt.
+
+[!code-cpp[concrt-data-pipeline#1](../../parallel/concrt/codesnippet/cpp/how-to-use-transformer-in-a-data-pipeline_1.cpp)]
+
+Dieses Beispiel erzeugt die folgende Ausgabe:
+
+```Output
+The result is -42.
+```
+
+Es kommt bei einer Datenpipeline häufig vor, dass bei einer Phase ein Wert ausgegeben wird, dessen Typ sich vom Eingabewert unterscheidet. Bei diesem Beispiel wird in der zweiten Phase ein Wert des `int`-Typs als Eingabe verwendet und die Quadratwurzel dieses Werts (ein `double`) als Ausgabe erzeugt.
+
 > [!NOTE]
->  Die Datenpipeline in diesem Beispiel dient zur Veranschaulichung. Da der Arbeitsmehraufwand jedes Transformationsvorgangs gering ist, kann der Mehraufwand zum Ausführen der Meldungsübergabe die Vorteile einer Datenpipeline zunichte machen.  
-  
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, oder fügen Sie ihn in eine Datei mit dem Namen `data-pipeline.cpp` und dann den folgenden Befehl in eine Visual Studio-Eingabeaufforderungsfenster ausführen.  
-  
- **CL.exe/EHsc / Data-pipeline.cpp**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)   
- [Asynchrone Nachrichtenblöcke](../../parallel/concrt/asynchronous-message-blocks.md)   
- [Exemplarische Vorgehensweise: Erstellen eines Bildverarbeitungsnetzwerks](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)
+>  Die Datenpipeline in diesem Beispiel dient zur Veranschaulichung. Da der Arbeitsmehraufwand jedes Transformationsvorgangs gering ist, kann der Mehraufwand zum Ausführen der Meldungsübergabe die Vorteile einer Datenpipeline zunichte machen.
+
+## <a name="compiling-the-code"></a>Kompilieren des Codes
+
+Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, oder fügen Sie ihn in eine Datei mit dem Namen `data-pipeline.cpp` und führen Sie dann den folgenden Befehl in einem Fenster von Visual Studio-Eingabeaufforderung.
+
+**CL.exe/EHsc Data-pipeline.cpp**
+
+## <a name="see-also"></a>Siehe auch
+
+[Asynchrone Agents Library](../../parallel/concrt/asynchronous-agents-library.md)<br/>
+[Asynchrone Nachrichtenblöcke](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
+[Exemplarische Vorgehensweise: Erstellen eines Bildverarbeitungsnetzwerks](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)
 

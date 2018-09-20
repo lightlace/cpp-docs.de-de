@@ -18,57 +18,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2120f274dd783da00a43106338476c43cc0a9dad
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 65937e1daee2bcd75300f5dc6b19c444ee542f64
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021745"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412612"
 ---
 # <a name="invalidlinktarget-class"></a>invalid_link_target-Klasse
-Diese Klasse beschreibt eine Ausnahme, die ausgelöst wird, wenn die `link_target`-Methode eines Meldungsblocks aufgerufen wird und der Meldungsblock keine Verknüpfung mit dem Ziel erstellen kann. Dies kann das Ergebnis vom Überschreiten der Anzahl zulässiger Links für den Meldungsblock sein oder das Ergebnis von Versuchen, ein bestimmtes Ziel zweimal mit der gleichen Quelle zu verknüpfen.  
-  
-## <a name="syntax"></a>Syntax  
-  
+
+Diese Klasse beschreibt eine Ausnahme, die ausgelöst wird, wenn die `link_target`-Methode eines Meldungsblocks aufgerufen wird und der Meldungsblock keine Verknüpfung mit dem Ziel erstellen kann. Dies kann das Ergebnis vom Überschreiten der Anzahl zulässiger Links für den Meldungsblock sein oder das Ergebnis von Versuchen, ein bestimmtes Ziel zweimal mit der gleichen Quelle zu verknüpfen.
+
+## <a name="syntax"></a>Syntax
+
 ```
 class invalid_link_target : public std::exception;
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[invalid_link_target](#ctor)|Überladen. Erstellt ein `invalid_link_target`-Objekt.|  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `exception`  
-  
- `invalid_link_target`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h hinzu  
-  
- **Namespace:** Parallelität  
-  
-##  <a name="ctor"></a> invalid_link_target 
+```
 
- Erstellt ein `invalid_link_target`-Objekt.  
-  
+## <a name="members"></a>Member
+
+### <a name="public-constructors"></a>Öffentliche Konstruktoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[invalid_link_target](#ctor)|Überladen. Erstellt ein `invalid_link_target`-Objekt.|
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`exception`
+
+`invalid_link_target`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** concrt.h hinzu
+
+**Namespace:** Parallelität
+
+##  <a name="ctor"></a> invalid_link_target
+
+Erstellt ein `invalid_link_target`-Objekt.
+
 ```
 explicit _CRTIMP invalid_link_target(_In_z_ const char* _Message) throw();
 
 invalid_link_target() throw();
-```  
-  
-### <a name="parameters"></a>Parameter  
+```
+
+### <a name="parameters"></a>Parameter
+
 *_Nachricht*<br/>
-Eine beschreibende Fehlermeldung.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Concurrency-Namespace](concurrency-namespace.md)   
- [Asynchrone Nachrichtenblöcke](../../../parallel/concrt/asynchronous-message-blocks.md)
+Eine beschreibende Fehlermeldung.
 
+## <a name="see-also"></a>Siehe auch
 
+[Concurrency-Namespace](concurrency-namespace.md)<br/>
+[Asynchrone Nachrichtenblöcke](../../../parallel/concrt/asynchronous-message-blocks.md)
 
