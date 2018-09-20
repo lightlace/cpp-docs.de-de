@@ -1,5 +1,5 @@
 ---
-title: Abgeleitete Ansichtsklassen in MFC verfügbare | Microsoft Docs
+title: Abgeleitete Ansichtsklassen in MFC verfügbare | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b166e64c57482586e145cecc9e79317eea282b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f8d058891b361b3747caafd9c4bd279c7626856
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345663"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426914"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>In MFC verfügbare abgeleitete Ansichtsklassen
-Die folgende Tabelle zeigt die Klassen von MFC Ansicht und deren Beziehungen untereinander. Die Funktionen der Ansichtsklasse hängen von der MFC-View-Klasse, die von der er abgeleitet wird.  
-  
-### <a name="view-classes"></a>Ansichtsklassen  
-  
-|Klasse|Beschreibung|  
-|-----------|-----------------|  
-|[CView](../mfc/reference/cview-class.md)|Die Basisklasse aller Ansichten.|  
-|[CCtrlView](../mfc/reference/cctrlview-class.md)|Basisklasse des `CTreeView`, `CListView`, `CEditView`, und `CRichEditView`. Diese Klassen können Sie die Dokument-/Ansichtarchitektur mit der angegebenen Windows-Standardsteuerelemente verwenden.|  
-|[CEditView](../mfc/reference/ceditview-class.md)|Eine einfache Sicht, die von der Windows-basierten bearbeiten-Steuerelement. Ermöglicht das eingeben und Bearbeiten von Text und kann als Grundlage für einen einfachen Text-Editor-Anwendung verwendet werden. Siehe auch `CRichEditView`.|  
-|[CRichEditView](../mfc/reference/cricheditview-class.md)|Eine Sicht mit einem [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) Objekt. Diese Klasse ist analog zu `CEditView`, aber im Gegensatz zum `CEditView`, `CRichEditView` Handles formatierten Text.|  
-|[CListView](../mfc/reference/clistview-class.md)|Eine Sicht mit einem [CListCtrl](../mfc/reference/clistctrl-class.md) Objekt.|  
-|[CTreeView](../mfc/reference/ctreeview-class.md)|Eine Sicht mit einem [CTreeCtrl](../mfc/reference/ctreectrl-class.md) -Objekt, um Sichten, die das Fenster Projektmappen-Explorer in Visual C++ ähneln.|  
-|[CScrollView](../mfc/reference/cscrollview-class.md)|Basisklasse des `CFormView`, `CRecordView`, und `CDaoRecordView`. Implementiert einen Bildlauf der Ansicht Inhalt.|  
-|[CFormView](../mfc/reference/cformview-class.md)|Eine Formularansicht, eine Sicht, die Steuerelemente enthält. Eine formularbasierte Anwendung stellt eine oder mehrere solche Formular Schnittstellen bereit.|  
-|[CHtmlView](../mfc/reference/chtmlview-class.md)|Eine Webbrowseransicht, mit dem Benutzer der Anwendung Websites die World Wide Web sowie die Ordner im lokalen Dateisystem und in einem Netzwerk navigieren kann. Die Webbrowseransicht kann auch als Active Document-Container arbeiten.|  
-|[CRecordView](../mfc/reference/crecordview-class.md)|Eine Formularansicht, die ODBC-Datenbankdatensätze in Steuerelementen anzeigt. Bei Auswahl von ODBC-Unterstützung in Ihrem Projekt wird die Sicht Basisklasse `CRecordView`. Die Ansicht mit verbunden ist ein `CRowset` Objekt.|  
-|[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)|Eine Formularansicht die DAO-Datenbankdatensätze in Steuerelementen anzeigt. Bei Auswahl von DAO-Unterstützung in Ihrem Projekt wird die Sicht Basisklasse `CDaoRecordView`. Die Ansicht mit verbunden ist ein `CDaoRecordset` Objekt.|  
-|[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)|Eine Formularansicht, die OLE DB-Datensätze in Steuerelementen anzeigt. Bei Auswahl von OLE DB-Unterstützung in Ihrem Projekt wird die Sicht Basisklasse `COleDBRecordView`. Die Ansicht mit verbunden ist ein `CRowset` Objekt.|  
-  
+
+Die folgende Tabelle zeigt die MFC Klassen und deren Beziehungen untereinander. Die Funktionen der Ansichtsklasse, abhängig von der MFC-Ansicht-Klasse, die von der er abgeleitet.
+
+### <a name="view-classes"></a>Ansichtsklassen
+
+|Klasse|Beschreibung|
+|-----------|-----------------|
+|[CView](../mfc/reference/cview-class.md)|Basisklasse für alle Ansichten.|
+|[CCtrlView](../mfc/reference/cctrlview-class.md)|Die Basisklasse des `CTreeView`, `CListView`, `CEditView`, und `CRichEditView`. Diese Klassen können Sie die Dokument-/Ansichtarchitektur mit die angegebenen Windows-Standardsteuerelemente verwenden.|
+|[CEditView](../mfc/reference/ceditview-class.md)|Eine einfache Ansicht basierend auf dem Windows bearbeiten-Steuerelement. Ermöglicht das eingeben und Bearbeiten von Text und können als Grundlage für einen einfachen Text-Editor-Anwendung verwendet werden. Siehe auch `CRichEditView`.|
+|[CRichEditView](../mfc/reference/cricheditview-class.md)|Eine Ansicht mit einem [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) Objekt. Diese Klasse ist analog zu `CEditView`, aber im Gegensatz zum `CEditView`, `CRichEditView` Handles von formatiertem Text.|
+|[CListView](../mfc/reference/clistview-class.md)|Eine Ansicht mit einem [CListCtrl](../mfc/reference/clistctrl-class.md) Objekt.|
+|[CTreeView](../mfc/reference/ctreeview-class.md)|Eine Ansicht mit einem [CTreeCtrl](../mfc/reference/ctreectrl-class.md) -Objekt, um Sichten, die die Projektmappen-Explorer-Fenster in Visual C++ entsprechen.|
+|[CScrollView](../mfc/reference/cscrollview-class.md)|Die Basisklasse des `CFormView`, `CRecordView`, und `CDaoRecordView`. Implementiert den Inhalt der Ansicht zu scrollen.|
+|[CFormView](../mfc/reference/cformview-class.md)|Eine Formularansicht und eine Ansicht, die Steuerelemente enthält. Eine formularbasierte Anwendung enthält eine oder mehrere solche Form Schnittstellen.|
+|[CHtmlView](../mfc/reference/chtmlview-class.md)|Eine Web-Browser-Ansicht mit der Benutzer der Anwendung, Websites auf der World Wide Web sowie die Ordner im lokalen Dateisystem und in einem Netzwerk suchen kann. Die Webbrowseransicht kann auch als Active Document-Container funktionieren.|
+|[CRecordView](../mfc/reference/crecordview-class.md)|Eine Formularansicht, die ODBC-Datenbankdatensätze in Steuerelementen anzeigt. Wenn Sie ODBC-Unterstützung in Ihrem Projekt auswählen, ist die Basisklasse der Ansicht `CRecordView`. Die Ansicht verbunden ist, um eine `CRowset` Objekt.|
+|[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)|Eine Formularansicht die DAO-Datenbankdatensätze in Steuerelementen anzeigt. Wenn Sie die DAO-Unterstützung in Ihrem Projekt auswählen, ist die Basisklasse der Ansicht `CDaoRecordView`. Die Ansicht verbunden ist, um eine `CDaoRecordset` Objekt.|
+|[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)|Eine Formularansicht die OLE DB-Datensätze in Steuerelementen anzeigt. Wenn Sie OLE DB-Unterstützung in Ihrem Projekt auswählen, ist die Basisklasse der Ansicht `COleDBRecordView`. Die Ansicht verbunden ist, um eine `CRowset` Objekt.|
+
 > [!NOTE]
->  Ab MFC 4.0 `CEditView` stammt aus `CCtrlView`.  
-  
- Zum Verwenden dieser Klassen in der Anwendung werden Sie Ansichtsklassen für die Anwendung, die von ihnen abgeleitet. Weitere Informationen finden Sie unter [Bildlauf und Skalierung von Ansichten](../mfc/scrolling-and-scaling-views.md). Weitere Informationen zu den Datenbankklassen, finden Sie unter [(Übersicht): Datenbank-Programmierung](../data/data-access-programming-mfc-atl.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von Ansichten](../mfc/using-views.md)
+>  Ab MFC 4.0 `CEditView` ergibt sich aus `CCtrlView`.
+
+Um diese Klassen in Ihrer Anwendung verwenden zu können, werden leiten Sie der Anwendung Klassen von ihnen ab. Weitere Informationen finden Sie unter [Bildlauf und Skalierung von Ansichten](../mfc/scrolling-and-scaling-views.md). Weitere Informationen zu den Datenbankklassen, finden Sie unter [Overview: Programmieren von Datenbank](../data/data-access-programming-mfc-atl.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von Ansichten](../mfc/using-views.md)
 

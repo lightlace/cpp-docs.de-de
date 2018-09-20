@@ -1,5 +1,5 @@
 ---
-title: Beispiele für die Month Calendar-Steuerelemente | Microsoft Docs
+title: Steuerelement Beispiele für Monatskalender | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77dcf22e82fda1d0326c35f3e56ced19a1ca05fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 653c81da4cb9cd1a4beff453b4a36847e1837491
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342906"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437065"
 ---
 # <a name="month-calendar-control-examples"></a>Beispiele für Monatskalender-Steuerelemente
-Die [CMNCTRL1](../visual-cpp-samples.md) beispielanwendung für veranschaulicht, die verschiedene Attribute der `CMonthCalCtrl` Klasse. Das Steuerelement, finden Sie auf eine separate Registerkarte im Beispiel veranschaulicht die grundlegende Funktionalität und ermöglicht dem Benutzer, bestimmte Attribute dynamisch zu ändern.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+
+Die [CMNCTRL1](../visual-cpp-samples.md) beispielanwendung veranschaulicht die verschiedenen Attribute des der `CMonthCalCtrl` Klasse. Das Steuerelement, finden Sie auf einer separaten Registerkarte im Beispiel veranschaulicht die grundlegende Funktionalität und ermöglicht dem Benutzer, die bestimmte Attribute dynamisch zu ändern.
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)<br/>
+[Steuerelemente](../mfc/controls-mfc.md)
 
