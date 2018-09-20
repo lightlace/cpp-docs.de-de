@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0fc65d2aeab01de022e23d0645682800a7d555d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 88ddd3dd59000b629f6e72933b1a0b02cc582c89
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602364"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409870"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces-Struktur
 
@@ -63,43 +63,43 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
 
 ### <a name="parameters"></a>Parameter
 
-*I0*  
+*I0*<br/>
 (Erforderlich) Schnittstellen-ID 0.
 
-*I1*  
+*I1*<br/>
 (Erforderlich) Schnittstellen-ID 1.
 
-*I2*  
+*I2*<br/>
 (Optional) Schnittstellen-ID 2.
 
-*I3*  
+*I3*<br/>
 (Optional) Schnittstellen-ID 3.
 
-*I4*  
+*I4*<br/>
 (Optional) Schnittstellen-ID 4.
 
-*I5*  
+*I5*<br/>
 (Optional) Schnittstellen-ID 5.
 
-*I6*  
+*I6*<br/>
 (Optional) Schnittstellen-ID 6.
 
-*I7*  
+*I7*<br/>
 (Optional) Schnittstellen-ID 7.
 
-*I8*  
+*I8*<br/>
 (Optional) Schnittstellen-ID 8.
 
-*I9*  
+*I9*<br/>
 (Optional) Schnittstellen-ID-9.
 
-*DerivedType*  
+*DerivedType*<br/>
 Ein abgeleiteter Typ.
 
-*BaseType*  
+*BaseType*<br/>
 Der Basistyp eines abgeleiteten Typs.
 
-*hasImplements*  
+*hasImplements*<br/>
 Ein boolescher Wert, auch wenn **"true"**, bedeutet, dass Sie nicht verwenden eine [MixIn](../windows/mixin-structure.md) Struktur mit einer Klasse, die nicht von abgeleitet ist die [implementiert](../windows/implements-structure.md) abgeschrägten Designs.
 
 ## <a name="members"></a>Member

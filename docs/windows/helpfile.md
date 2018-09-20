@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 424c6b642bba04a22ee4dedd59e38761260ac8eb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 66cd89c28ea01c3a75d0cb25aa6f96a234e379b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221928"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418202"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -38,7 +38,7 @@ Legt den Namen der Hilfedatei für die Typbibliothek.
 
 ### <a name="parameters"></a>Parameter
 
-*filename*  
+*filename*<br/>
 Der Name der Datei, die die Hilfethemen enthält.
 
 ## <a name="remarks"></a>Hinweise
@@ -64,10 +64,10 @@ Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-c
 
 ## <a name="see-also"></a>Siehe auch
 
-[IDL-Attribute](../windows/idl-attributes.md)  
-[Schnittstellenattribut](../windows/interface-attributes.md)  
-[Klassenattribute](../windows/class-attributes.md)  
-[Methodenattribut](../windows/method-attributes.md)  
-[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  
-[helpcontext](../windows/helpcontext.md)  
+[IDL-Attribute](../windows/idl-attributes.md)<br/>
+[Schnittstellenattribut](../windows/interface-attributes.md)<br/>
+[Klassenattribute](../windows/class-attributes.md)<br/>
+[Methodenattribut](../windows/method-attributes.md)<br/>
+[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[helpcontext](../windows/helpcontext.md)<br/>
 [helpstring](../windows/helpstring.md)  
