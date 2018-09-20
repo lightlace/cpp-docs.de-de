@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d21348d9c252fbcd3024ca6531671979d8834eb
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 138921cfb635125210e5f5bf9305c91243c4489c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605817"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387223"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -39,10 +39,10 @@ Gibt die Dispatch-Schnittstellen, die erzwungen werden, um die IDL-Co-Klasse ang
 
 ### <a name="parameters"></a>Parameter
 
-*interfaces*  
+*interfaces*<br/>
 Eine durch Trennzeichen getrennte Liste von Schnittstellen, die ein Mitglied der IDL-Co-Klasse. Ist eine kurzmethode zur Angabe einer einzelnen Schnittstelle **implementiert (** *Interface_name* **)**.
 
-*Disp-Schnittstellen*  
+*Disp-Schnittstellen*<br/>
 Eine durch Trennzeichen getrennte Liste von die Disp-Schnittstelle, die ein Mitglied der IDL-Co-Klasse. Ist eine kurzmethode zur Angabe einer einzelnen Dispinterface **implementiert (Disp-Schnittstellen =** *Dispinterface_name* **)**.
 
 ## <a name="remarks"></a>Hinweise
@@ -558,5 +558,5 @@ public:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compilerattribute](../windows/compiler-attributes.md)  
+[Compilerattribute](../windows/compiler-attributes.md)<br/>
 [Klassenattribute](../windows/class-attributes.md)  

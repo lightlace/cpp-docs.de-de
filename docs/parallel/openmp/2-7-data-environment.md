@@ -1,5 +1,5 @@
 ---
-title: 2.7 Datenumgebung | Microsoft Docs
+title: 2.7 Datenumgebung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,16 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1b0f253ce14ffc5d3740e582a9a51feea56ad32
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 17c60c621defa15c034f57d0af8f14637db54f03
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690064"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378136"
 ---
 # <a name="27-data-environment"></a>2.7 Datenumgebung
-In diesem Abschnitt werden eine Direktive und mehrere Klauseln zum Steuern der datenumgebung während der Ausführung des parallelen Regionen wie folgt:  
-  
--   Ein **Threadprivate** Richtlinie (siehe folgenden Abschnitt) dient der um Dateigültigkeitsbereich, Namespace-Gültigkeitsbereich oder Blockbereiche statische Variablen lokalen an einen Thread zu machen.  
-  
--   Klauseln, die auf die Richtlinien so steuern Sie die Freigabe Attribute von Variablen für die Dauer der parallelen oder Arbeit-Freigabe-Konstrukte angegeben werden können, werden in beschrieben [Abschnitt 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) auf Seite "25".
+
+In diesem Abschnitt wird eine Richtlinie und mehrere Klauseln zum Steuern der datenumgebung während der Ausführung von parallelen Bereichen wie folgt:
+
+- Ein **Threadprivate** Richtlinie (siehe folgenden Abschnitt) wird bereitgestellt werden, um für einen Thread Dateigültigkeitsbereichs-, -Namespace-Gültigkeitsbereich oder Blockbereiche mit statischen Variablen lokalen machen.
+
+- Klauseln, die auf die Direktiven zum Steuern der Freigabe Attribute von Variablen für die Dauer der parallelen oder Freigabe von Arbeit Konstrukte angegeben werden können, werden in beschrieben [Abschnitt 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) auf Seite 25.

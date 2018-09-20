@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 052616134fa1d650bc49fbc9d56e30a27bc9ee96
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0a4748184ddf6281270da00572ffbd5374a6d2aa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318563"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386886"
 ---
 # <a name="changing-unassigned-symbols"></a>Ändern nicht zugewiesener Symbole
 
@@ -47,7 +47,7 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anzeigen von Ressourcensymbolen](../windows/viewing-resource-symbols.md)  
-[Beschränkungen bei Symbolnamen](../windows/symbol-name-restrictions.md)  
-[Beschränkungen bei Symbolwerten](../windows/symbol-value-restrictions.md)  
+[Anzeigen von Ressourcensymbolen](../windows/viewing-resource-symbols.md)<br/>
+[Beschränkungen bei Symbolnamen](../windows/symbol-name-restrictions.md)<br/>
+[Beschränkungen bei Symbolwerten](../windows/symbol-value-restrictions.md)<br/>
 [Vordefinierte Symbol-IDs](../windows/predefined-symbol-ids.md)

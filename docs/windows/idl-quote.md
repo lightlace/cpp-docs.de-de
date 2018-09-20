@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a79f731ef0080e38e2c1b60d8e4924a5bf75089e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fdea60808118ecd7caa04fab3421c481d908e833
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600294"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391812"
 ---
 # <a name="idlquote"></a>idl_quote
 
@@ -38,7 +38,7 @@ Ermöglicht es Ihnen, die IDL-Konstrukte verwenden, die in der aktuellen Version
 
 ### <a name="parameters"></a>Parameter
 
-*Text*  
+*Text*<br/>
 Der Attributname, die Visual C++-Compiler mit der generierten IDL-Datei übergeben, ohne einen Compilerfehler zurückgegeben werden sollen.
 
 ## <a name="remarks"></a>Hinweise
@@ -99,5 +99,5 @@ Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-c
 
 ## <a name="see-also"></a>Siehe auch
 
-[IDL-Attribute](../windows/idl-attributes.md)  
+[IDL-Attribute](../windows/idl-attributes.md)<br/>
 [Eigenständige Attribute](../windows/stand-alone-attributes.md)  

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 72c312bdec9248cdc38150163d914b2ac7036ab8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 993f0e190d87b140fba0008872d57f2a34b6a5cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711086"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377265"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum class (Komponentenerweiterungen für C++)
 
@@ -44,23 +44,23 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="parameters"></a>Parameter
 
-*Zugriff*  
+*Zugriff*<br/>
 Der Zugriff der Enumeration, die möglicherweise **öffentliche** oder **private**.
 
-*enumeration-identifier*  
+*enumeration-identifier*<br/>
 Der Name der Enumeration.
 
-*underlying-type*  
+*underlying-type*<br/>
 (Optional) Der zugrunde liegende Typ der Enumeration.
 
 (Optional. Nur Windows-Runtime) der zugrunde liegende Typ der Enumeration, die möglicherweise **"bool"**, **Char**, `char16`, `int16`, `uint16`, **Int**, `uint32`, `int64`, oder `uint64`.
 
-*enumerator-list*  
+*enumerator-list*<br/>
 Eine durch Komma getrennte Liste mit Enumeratornamen.
 
 Der Wert jedes Enumerators ist ein konstanter Ausdruck, der entweder implizit vom Compiler oder explizit durch die Notation *enumerator*`=`*constant-expression*. Standardmäßig ist der Wert des ersten Enumerators Null, wenn er implizit definiert ist. Der Wert jedes folgenden implizit definierten Enumerators ist der Wert des vorherigen Enumerators + 1.
 
-*var*  
+*var*<br/>
 (Optional) Der Name einer Variablen des Enumerationstyps.
 
 ### <a name="remarks"></a>Hinweise
@@ -92,19 +92,19 @@ accessenum structname [:type] { enumerator-list } var;
 
 ### <a name="parameters"></a>Parameter
 
-*Zugriff*  
+*Zugriff*<br/>
 Die Zugriff der Enumeration. Kann es sich um **öffentliche** oder **private**.
 
-*enumerator-list*  
+*enumerator-list*<br/>
 Eine durch Komma getrennte Liste der Bezeichner (Enumeratoren) in der Enumeration.
 
-*name*  
+*name*<br/>
 Der Name der Enumeration. Anonyme verwaltete Enumerationen sind nicht zulässig.
 
-*Typ*  
+*Typ*<br/>
 (Optional) Der zugrunde liegende Typ der *Bezeichner*. Dies kann einen beliebigen skalaren Typ, z. B. Versionen mit oder ohne Vorzeichen von sein **Int**, **kurze**, oder **lange**.  **"bool"** oder **Char** ist ebenfalls zulässig.
 
-*var*  
+*var*<br/>
 (Optional) Der Name einer Variablen des Enumerationstyps.
 
 ### <a name="remarks"></a>Hinweise

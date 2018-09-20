@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ccea9a053f47ae206cbe5c8412c387f07bd5b52
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1b6aa9b8e27aa4eaf3e581db59f2c9d2c7201d39
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603426"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386788"
 ---
 # <a name="mixin-structure"></a>MixIn-Struktur
 
@@ -42,13 +42,13 @@ struct MixIn;
 
 ### <a name="parameters"></a>Parameter
 
-*Abgeleitete*  
+*Abgeleitete*<br/>
 Ein abgeleiteter Typ von der [implementiert](../windows/implements-structure.md) Struktur.
 
-*MixInType*  
+*MixInType*<br/>
 Ein Basistyp.
 
-*hasImplements*  
+*hasImplements*<br/>
 **"true"** Wenn *MixInType* ist abgeleitet von der aktuellen Implementierung Basistyp **"false"** andernfalls.
 
 ## <a name="remarks"></a>Hinweise

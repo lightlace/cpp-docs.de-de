@@ -1,5 +1,5 @@
 ---
-title: 'Speicherverwaltung: Heap Zuordnung | Microsoft Docs'
+title: 'Speicherverwaltung: Heap-Zuordnung | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,20 +21,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7ef166201103b1544d0a36d82452b485af75418
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: cc158ceda21bfb04053bbc490a3333a76e2d7afe
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928608"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383810"
 ---
 # <a name="memory-management-heap-allocation"></a>Speicherverwaltung: Heapbelegung
-Für die Zuordnung arbeitsspeicheranforderungen des Programms wird im Heap reserviert. Es ist ein Bereich, abgesehen von den Programmcode und den Stapel. Standard-C-Programmen verwenden Sie die Funktionen **"malloc"** und **freien** zu reservieren und Freigeben von Speicher für den Heap. Die Debugversion von MFC bietet geänderte Versionen von den integrierten C++-Operatoren **neue** und **löschen** reservieren und Freigeben von Objekten im Heap Arbeitsspeicher.  
-  
- Bei Verwendung von **neue** und **löschen** anstelle von **"malloc"** und **freien**, können Sie der Klassenbibliothek nutzen Speicher-Management-debugverbesserungen, die beim Erkennen von Speicherverlusten hilfreich sein können. Beim Erstellen des Programms mit der endgültigen Produktversion von den Standardversionen von MFC die **neue** und **löschen** Operatoren bieten eine effiziente Methode zum Belegen und Freigeben von Arbeitsspeicher (der endgültigen Produktversion von MFC stellt keine geänderte Versionen dieser Operatoren bereit).  
-  
- Beachten Sie, dass die Gesamtgröße der Objekte, die auf dem Heap reserviert nur von Ihrem System verfügbaren virtuellen Speicher beschränkt ist.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Speicherverwaltung](../mfc/memory-management.md)
+
+Der Heap ist für die arbeitsspeicheranforderungen für die Zuordnung des Programms reserviert. Es ist ein Bereich von Programmcode und den Stapel. Typische C-Programmen. verwenden Sie die Funktionen **Malloc** und **kostenlose** zum Reservieren und Freigeben von Speicher für den Heap. Die Debugversion von MFC bietet geänderte Versionen von den integrierten C++-Operatoren **neue** und **löschen** zum Reservieren und Freigeben von Objekten im Heap-Arbeitsspeicher.
+
+Bei Verwendung von **neue** und **löschen** anstelle von **Malloc** und **kostenlose**, können Sie der Klassenbibliothek nutzen Speicher-Management-debugverbesserungen, die was bei der Erkennung von Speicherverlusten nützlich sein kann. Das Programm mit der Version von MFC, die Versionen standard, der beim Erstellen der **neue** und **löschen** Operatoren bieten eine effiziente Möglichkeit zum Reservieren und Freigeben von Speicher (die veröffentlichte Version von MFC stellt keine geänderte Versionen dieser Operatoren bereit).
+
+Beachten Sie, dass die Gesamtgröße der Objekte, die auf dem Heap reserviert nur durch den verfügbaren Speichers des Systems beschränkt ist.
+
+## <a name="see-also"></a>Siehe auch
+
+[Speicherverwaltung](../mfc/memory-management.md)
 

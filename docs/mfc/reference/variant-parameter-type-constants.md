@@ -45,53 +45,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d61930bda4560baaf628ce018cc0161527d9d07e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 64b68fb930c6de732e009a251c5e8363bace80ec
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885948"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374736"
 ---
 # <a name="variant-parameter-type-constants"></a>Variant-Parametertypkonstanten
-Dieses Thema enthält neue Konstanten, die angeben, variant Parametertypen, die für die Verwendung mit der OLE-Steuerelementklassen von den Microsoft Foundation Class-Bibliothek entwickelt.  
-  
- Im folgenden finden eine Liste von Konstanten der Klasse:  
-  
-##  <a name="_mfc_variant_data_constants"></a> Variant-Datenkonstanten  
-  
--   VTS_COLOR ein 32-Bit-Ganzzahl, der einen RGB-Farbwert darstellt.  
-  
--   VTS_FONT ein Zeiger auf die `IFontDisp` -Schnittstelle eines Objekts der OLE-Schriftart.  
-  
--   VTS_HANDLE ein Windows-Handle-Wert.  
-  
--   VTS_PICTURE ein Zeiger auf die `IPictureDisp` Schnittstelle eines Bild OLE-Objekts.  
-  
--   VTS_OPTEXCLUSIVE-ein 16-Bit-Wert verwendet, die für ein Steuerelement, das in einer Gruppe von Steuerelementen, wie z. B. Optionsfelder verwendet werden soll. Dieser Typ weist den Container, dass alle anderen verfügt ein Steuerelement in einer Gruppe auf einen Wert "true", "false" sein müssen.  
-  
--   VTS_TRISTATE ein 16-Bit-Ganzzahl mit Vorzeichen verwendet, die für Eigenschaften, die einen von drei möglichen Werten (ausgewählte, gelöscht, nicht verfügbar), z. B. ein Kontrollkästchen enthalten können.  
-  
--   VTS_XPOS_HIMETRIC ein 32-Bit-Ganzzahl ohne Vorzeichen verwendet, um eine Position entlang der x-Achse in HIMETRIC-Einheiten darstellen.  
-  
--   VTS_YPOS_HIMETRIC ein 32-Bit-Ganzzahl ohne Vorzeichen verwendet, um eine Position entlang der y-Achse in HIMETRIC-Einheiten darstellen.  
-  
--   VTS_XPOS_PIXELS ein 32-Bit-Ganzzahl ohne Vorzeichen verwendet, um eine Position entlang der x-Achse in Pixel darstellen.  
-  
--   VTS_YPOS_PIXELS ein 32-Bit-Ganzzahl ohne Vorzeichen verwendet, um eine Position entlang der y-Achse in Pixel darstellen.  
-  
--   VTS_XSIZE_PIXELS ein 32-Bit-Ganzzahl ohne Vorzeichen, der die Breite eines Objekts Bildschirm in Pixel darstellt.  
-  
--   VTS_YSIZE_PIXELS ein 32-Bit-Ganzzahl ohne Vorzeichen, der die Höhe eines Objekts Bildschirm in Pixel darstellt.  
-  
--   VTS_XSIZE_HIMETRIC ein 32-Bit-Ganzzahl ohne Vorzeichen verwendet, um die Breite des ein Bildschirmobjekt in HIMETRIC-Einheiten darstellen.  
-  
--   VTS_YSIZE_HIMETRIC ein 32-Bit-Ganzzahl ohne Vorzeichen verwendet, um die Höhe des ein Bildschirmobjekt in HIMETRIC-Einheiten darstellen.  
-  
+
+Dieses Thema enthält neue Konstanten, die angeben, variant Parametertypen, die für die Verwendung mit der OLE-Steuerelementklassen von den Microsoft Foundation Class-Bibliothek entwickelt.
+
+Im folgenden finden eine Liste von Konstanten der Klasse:
+
+##  <a name="_mfc_variant_data_constants"></a> Variant-Datenkonstanten
+
+- VTS_COLOR ein 32-Bit-Ganzzahl, der einen RGB-Farbwert darstellt.
+
+- VTS_FONT ein Zeiger auf die `IFontDisp` -Schnittstelle eines Objekts der OLE-Schriftart.
+
+- VTS_HANDLE ein Windows-Handle-Wert.
+
+- VTS_PICTURE ein Zeiger auf die `IPictureDisp` Schnittstelle eines Bild OLE-Objekts.
+
+- VTS_OPTEXCLUSIVE-ein 16-Bit-Wert verwendet, die für ein Steuerelement, das in einer Gruppe von Steuerelementen, wie z. B. Optionsfelder verwendet werden soll. Dieser Typ weist den Container, dass alle anderen verfügt ein Steuerelement in einer Gruppe auf einen Wert "true", "false" sein müssen.
+
+- VTS_TRISTATE ein 16-Bit-Ganzzahl mit Vorzeichen verwendet, die für Eigenschaften, die einen von drei möglichen Werten (ausgewählte, gelöscht, nicht verfügbar), z. B. ein Kontrollkästchen enthalten können.
+
+- VTS_XPOS_HIMETRIC ein 32-Bit-Ganzzahl ohne Vorzeichen verwendet, um eine Position entlang der x-Achse in HIMETRIC-Einheiten darstellen.
+
+- VTS_YPOS_HIMETRIC ein 32-Bit-Ganzzahl ohne Vorzeichen verwendet, um eine Position entlang der y-Achse in HIMETRIC-Einheiten darstellen.
+
+- VTS_XPOS_PIXELS ein 32-Bit-Ganzzahl ohne Vorzeichen verwendet, um eine Position entlang der x-Achse in Pixel darstellen.
+
+- VTS_YPOS_PIXELS ein 32-Bit-Ganzzahl ohne Vorzeichen verwendet, um eine Position entlang der y-Achse in Pixel darstellen.
+
+- VTS_XSIZE_PIXELS ein 32-Bit-Ganzzahl ohne Vorzeichen, der die Breite eines Objekts Bildschirm in Pixel darstellt.
+
+- VTS_YSIZE_PIXELS ein 32-Bit-Ganzzahl ohne Vorzeichen, der die Höhe eines Objekts Bildschirm in Pixel darstellt.
+
+- VTS_XSIZE_HIMETRIC ein 32-Bit-Ganzzahl ohne Vorzeichen verwendet, um die Breite des ein Bildschirmobjekt in HIMETRIC-Einheiten darstellen.
+
+- VTS_YSIZE_HIMETRIC ein 32-Bit-Ganzzahl ohne Vorzeichen verwendet, um die Höhe des ein Bildschirmobjekt in HIMETRIC-Einheiten darstellen.
+
     > [!NOTE]
-    >  Für alle variant-Typen, mit Ausnahme von VTS_FONT und VTS_PICTURE, wurden zusätzliche variant Konstanten definiert, die einen Zeiger auf die Konstante variant-Daten bereitstellen. Diese Konstanten werden mit dem Namen mit den VTS_P`constantname` Konvention. VTS_PCOLOR ist z. B. ein Zeiger auf eine VTS_COLOR-Konstante.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** afxdisp.h  
-  
-## <a name="see-also"></a>Siehe auch  
- [Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)
+    >  Für alle variant-Typen, mit Ausnahme von VTS_FONT und VTS_PICTURE, wurden zusätzliche variant Konstanten definiert, die einen Zeiger auf die Konstante variant-Daten bereitstellen. Diese Konstanten werden mit dem Namen mit den VTS_P`constantname` Konvention. VTS_PCOLOR ist z. B. ein Zeiger auf eine VTS_COLOR-Konstante.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** afxdisp.h
+
+## <a name="see-also"></a>Siehe auch
+
+[Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68cfd7eb96cbf19f5675cec17a9270b9b37b2105
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 340b8827e10e4b539ee34e7dde998b18a34e2414
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599818"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384402"
 ---
 # <a name="supporterrorinfo"></a>support_error_info
 
@@ -38,7 +38,7 @@ Implementiert die Unterstützung für die Zurückgabe ausführlicher Fehler.
 
 ### <a name="parameters"></a>Parameter
 
-*error_interface*  
+*error_interface*<br/>
 Der Bezeichner der Schnittstelle implementieren `IErrorInfo`.
 
 ## <a name="remarks"></a>Hinweise
@@ -86,5 +86,5 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 
 ## <a name="see-also"></a>Siehe auch
 
-[COM-Attribute](../windows/com-attributes.md)  
+[COM-Attribute](../windows/com-attributes.md)<br/>
 [Klassenattribute](../windows/class-attributes.md)  

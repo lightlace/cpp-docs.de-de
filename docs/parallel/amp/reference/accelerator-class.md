@@ -50,734 +50,758 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee005091c95bbac5fca64851f631b443bd33cca
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7748ae0f3993c1df97dcf97308fd6dfbfafdc8b6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106767"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375874"
 ---
 # <a name="accelerator-class"></a>Zugriffstastenklasse
-Eine Zugriffstaste ist eine Hardwarefunktion, die für datenparallele Computervorgänge optimiert ist. Eine Zugriffstaste ist ein Gerät, das einem PCIe-Bus angefügt wird (wie einem GPU-Computer), oder es handelt sich um einen erweiterten Befehl, der auf der Haupt-CPU festgelegt ist.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-class accelerator;  
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[Accelerator-Konstruktor](#ctor)|Initialisiert eine neue Instanz der `accelerator`-Klasse.|  
-|[~ Accelerator-Destruktor](#ctor)|Zerstört das `accelerator`-Objekt.|  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[create_view](#create_view)|Erstellt und gibt ein `accelerator_view`-Objekt auf dieser Zugriffstaste zurück.|  
-|[get_all](#get_all)|Gibt einen Vektor von `accelerator`-Objekten zurück, die alle verfügbaren Zugriffstasten darstellen.|  
-|[get_auto_selection_view](#get_auto_selection_view)|Gibt das `accelerator_view`-Objekt für die automatische Auswahl zurück.|  
-|[get_dedicated_memory](#get_dedicated_memory)|Gibt den dedizierten Arbeitsspeicher für das `accelerator`-Objekt in KB zurück.|  
-|[get_default_cpu_access_type](#get_default_cpu_access_type)|Gibt den Standardwert zurück [Access_type](concurrency-namespace-enums-amp.md#access_type) für Puffer, die auf dieser Zugriffstaste erstellt.|  
-|[get_default_view](#get_default_view)|Gibt das standardmäßige `accelerator_view`-Objekt zurück, das mit dem `accelerator`-Objekt verknüpft ist.|  
-|[get_description](#get_description)|Gibt eine kurze Beschreibung des `accelerator`-Geräts zurück.|  
-|[get_device_path](#get_device_path)|Gibt den Pfad des physischen Geräts zurück.|  
-|[get_has_display](#get_has_display)|Bestimmt, ob das `accelerator`-Objekt mit einer Anzeige verbunden ist.|  
-|[get_is_debug](#get_is_debug)|Bestimmt, für das `accelerator`-Objekt die DEBUG-Ebene für eine umfangreiche Fehlerberichterstattung aktiviert ist.|  
-|[get_is_emulated](#get_is_emulated)|Bestimmt, ob das `accelerator`-Objekt emuliert ist.|  
-|[get_supports_cpu_shared_memory](#get_supports_cpu_shared_memory)|Bestimmt, ob das `accelerator`-Objekt freigegebenen Arbeitsspeicher unterstützt|  
-|[get_supports_double_precision](#get_supports_double_precision)|Bestimmt, ob das `accelerator`-Objekt mit einer Anzeige verbunden ist.|  
-|[get_supports_limited_double_precision](#get_supports_limited_double_precision)|Bestimmt, ob das `accelerator`-Objekt über beschränkte Unterstützung für mathematische Funktionen mit doppelter Genauigkeit verfügt.|  
-|[get_version](#get_version)|Gibt die Version des `accelerator`-Objekts zurück.|  
-|[set_default](#set_default)|Gibt den Pfad der Standardzugriffstaste zurück.|  
-|[set_default_cpu_access_type](#set_default_cpu_access_type)|Legt die Standard-CPU [Access_type](concurrency-namespace-enums-amp.md#access_type)für Arrays und implizite speicherbelegungen für diese `accelerator`.|  
-  
-### <a name="public-operators"></a>Öffentliche Operatoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[operator!=](#operator_neq)|Vergleicht dieses `accelerator`-Objekt mit einem anderen und gibt `false` zurück, wenn sie identisch sind; gibt andernfalls `true` zurück.|  
-|[operator=](#operator_eq)|Kopiert den Inhalt des angegebenen `accelerator`-Objekts in dieses Objekt.|  
-|[operator==](#operator_eq_eq)|Vergleicht dieses `accelerator`-Objekt mit einem anderen und gibt `true` zurück, wenn sie identisch sind; gibt andernfalls `false` zurück.|  
-  
-### <a name="public-data-members"></a>Öffentliche Datenmember  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[cpu_accelerator](#cpu_accelerator)|Ruft eine Zeichenfolgenkonstante für die CPU-`accelerator` ab.|  
-|[dedicated_memory](#dedicated_memory)|Ruft den dedizierten Arbeitsspeicher für das `accelerator`-Objekt in KB ab.|  
-|[default_accelerator](#default_accelerator)|Ruft eine Zeichenfolgenkonstante für die standardmäßige `accelerator` ab.|  
-|[default_cpu_access_type](#default_cpu_access_type)|Ruft ab oder legt die Standard-CPU [Access_type](concurrency-namespace-enums-amp.md#access_type)für Arrays und implizite speicherbelegungen für diese `accelerator`.|  
-|[default_view](#default_view)|Ruft das standardmäßige `accelerator_view`-Objekt ab, das dem `accelerator`-Element zugeordnet ist.|  
-|[Beschreibung](#description)|Ruft eine kurze Beschreibung des `accelerator`-Geräts ab.|  
-|[device_path](#device_path)|Ruft den Pfad des physischen Geräts ab.|  
-|[direct3d_ref](#direct3d_ref)|Ruft eine Zeichenfolgenkonstante für eine Direct3D-Verweis-`accelerator` ab.|  
-|[direct3d_warp](#direct3d_warp)|Ruft die Zeichenfolge für die Konstante einen `accelerator` Objekt, das Sie verwenden können, für die Ausführung von C++ AMP-Codes auf Multikern-CPUs, die Streaming SIMD Extensions (SSE) verwenden.|  
-|[has_display](#has_display)|Ruft einen booleschen Wert ab, der angibt, ob das `accelerator`-Objekt mit einer Anzeige verbunden ist.|  
-|[is_debug](#is_debug)|Gibt an, ob für das `accelerator`-Objekt die DEBUG-Ebene für eine umfangreiche Fehlerberichterstattung aktiviert ist.|  
-|[is_emulated](#is_emulated)|Gibt an, ob das `accelerator`-Objekt emuliert ist.|  
-|[supports_cpu_shared_memory](#supports_cpu_shared_memory)|Gibt an, ob das `accelerator`-Objekt freigegebenen Arbeitsspeicher unterstützt.|  
-|[supports_double_precision](#supports_double_precision)|Gibt an, ob die Zugriffstaste mathematische Funktionen mit doppelter Genauigkeit unterstützt.|  
-|[supports_limited_double_precision](#supports_limited_double_precision)|Gibt an, ob die Zugriffstaste über beschränkte Unterstützung für mathematische Funktionen mit doppelter Genauigkeit verfügt.|  
-|[version](#version)|Ruft die Version der `accelerator` ab.|  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `accelerator`  
-  
-## <a name="remarks"></a>Hinweise  
- Eine Zugriffstaste ist eine Hardwarefunktion, die für datenparallele Computervorgänge optimiert ist. Eine Zugriffstaste ist häufig eine einzelne GPU, kann jedoch auch eine virtuelle hostseitige Entität wie ein DirectX REF-Gerät, ein WARP-Gerät (ein CPU-seitiges Gerät, das mithilfe von SSE-Anweisungen beschleunigt wird) oder die CPU selbst sein.  
-  
- Sie können ein `accelerator`-Objekt erstellen, indem Sie die verfügbaren Geräte auflisten oder das Standardgerät, das Referenzgerät oder das WARP-Gerät abrufen.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** amprt.h  
-  
- **Namespace:** Parallelität  
-  
-##  <a name="dtor"></a> </a> ~ Accelerator 
 
- Zerstört das `accelerator`-Objekt.  
-  
-```  
+Eine Zugriffstaste ist eine Hardwarefunktion, die für datenparallele Computervorgänge optimiert ist. Eine Zugriffstaste ist ein Gerät, das einem PCIe-Bus angefügt wird (wie einem GPU-Computer), oder es handelt sich um einen erweiterten Befehl, der auf der Haupt-CPU festgelegt ist.
+
+## <a name="syntax"></a>Syntax
+
+```
+class accelerator;
+```
+
+## <a name="members"></a>Member
+
+### <a name="public-constructors"></a>Öffentliche Konstruktoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[Accelerator-Konstruktor](#ctor)|Initialisiert eine neue Instanz der `accelerator`-Klasse.|
+|[~ Accelerator-Destruktor](#ctor)|Zerstört das `accelerator`-Objekt.|
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[create_view](#create_view)|Erstellt und gibt ein `accelerator_view`-Objekt auf dieser Zugriffstaste zurück.|
+|[get_all](#get_all)|Gibt einen Vektor von `accelerator`-Objekten zurück, die alle verfügbaren Zugriffstasten darstellen.|
+|[get_auto_selection_view](#get_auto_selection_view)|Gibt das `accelerator_view`-Objekt für die automatische Auswahl zurück.|
+|[get_dedicated_memory](#get_dedicated_memory)|Gibt den dedizierten Arbeitsspeicher für das `accelerator`-Objekt in KB zurück.|
+|[get_default_cpu_access_type](#get_default_cpu_access_type)|Gibt den Standardwert zurück [Access_type](concurrency-namespace-enums-amp.md#access_type) für Puffer, die auf dieser Zugriffstaste erstellt.|
+|[get_default_view](#get_default_view)|Gibt das standardmäßige `accelerator_view`-Objekt zurück, das mit dem `accelerator`-Objekt verknüpft ist.|
+|[get_description](#get_description)|Gibt eine kurze Beschreibung des `accelerator`-Geräts zurück.|
+|[get_device_path](#get_device_path)|Gibt den Pfad des physischen Geräts zurück.|
+|[get_has_display](#get_has_display)|Bestimmt, ob das `accelerator`-Objekt mit einer Anzeige verbunden ist.|
+|[get_is_debug](#get_is_debug)|Bestimmt, für das `accelerator`-Objekt die DEBUG-Ebene für eine umfangreiche Fehlerberichterstattung aktiviert ist.|
+|[get_is_emulated](#get_is_emulated)|Bestimmt, ob das `accelerator`-Objekt emuliert ist.|
+|[get_supports_cpu_shared_memory](#get_supports_cpu_shared_memory)|Bestimmt, ob das `accelerator`-Objekt freigegebenen Arbeitsspeicher unterstützt|
+|[get_supports_double_precision](#get_supports_double_precision)|Bestimmt, ob das `accelerator`-Objekt mit einer Anzeige verbunden ist.|
+|[get_supports_limited_double_precision](#get_supports_limited_double_precision)|Bestimmt, ob das `accelerator`-Objekt über beschränkte Unterstützung für mathematische Funktionen mit doppelter Genauigkeit verfügt.|
+|[get_version](#get_version)|Gibt die Version des `accelerator`-Objekts zurück.|
+|[set_default](#set_default)|Gibt den Pfad der Standardzugriffstaste zurück.|
+|[set_default_cpu_access_type](#set_default_cpu_access_type)|Legt die Standard-CPU [Access_type](concurrency-namespace-enums-amp.md#access_type)für Arrays und implizite speicherbelegungen für diese `accelerator`.|
+
+### <a name="public-operators"></a>Öffentliche Operatoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[operator!=](#operator_neq)|Vergleicht dieses `accelerator`-Objekt mit einem anderen und gibt `false` zurück, wenn sie identisch sind; gibt andernfalls `true` zurück.|
+|[operator=](#operator_eq)|Kopiert den Inhalt des angegebenen `accelerator`-Objekts in dieses Objekt.|
+|[operator==](#operator_eq_eq)|Vergleicht dieses `accelerator`-Objekt mit einem anderen und gibt `true` zurück, wenn sie identisch sind; gibt andernfalls `false` zurück.|
+
+### <a name="public-data-members"></a>Öffentliche Datenmember
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[cpu_accelerator](#cpu_accelerator)|Ruft eine Zeichenfolgenkonstante für die CPU-`accelerator` ab.|
+|[dedicated_memory](#dedicated_memory)|Ruft den dedizierten Arbeitsspeicher für das `accelerator`-Objekt in KB ab.|
+|[default_accelerator](#default_accelerator)|Ruft eine Zeichenfolgenkonstante für die standardmäßige `accelerator` ab.|
+|[default_cpu_access_type](#default_cpu_access_type)|Ruft ab oder legt die Standard-CPU [Access_type](concurrency-namespace-enums-amp.md#access_type)für Arrays und implizite speicherbelegungen für diese `accelerator`.|
+|[default_view](#default_view)|Ruft das standardmäßige `accelerator_view`-Objekt ab, das dem `accelerator`-Element zugeordnet ist.|
+|[Beschreibung](#description)|Ruft eine kurze Beschreibung des `accelerator`-Geräts ab.|
+|[device_path](#device_path)|Ruft den Pfad des physischen Geräts ab.|
+|[direct3d_ref](#direct3d_ref)|Ruft eine Zeichenfolgenkonstante für eine Direct3D-Verweis-`accelerator` ab.|
+|[direct3d_warp](#direct3d_warp)|Ruft die Zeichenfolge für die Konstante einen `accelerator` Objekt, das Sie verwenden können, für die Ausführung von C++ AMP-Codes auf Multikern-CPUs, die Streaming SIMD Extensions (SSE) verwenden.|
+|[has_display](#has_display)|Ruft einen booleschen Wert ab, der angibt, ob das `accelerator`-Objekt mit einer Anzeige verbunden ist.|
+|[is_debug](#is_debug)|Gibt an, ob für das `accelerator`-Objekt die DEBUG-Ebene für eine umfangreiche Fehlerberichterstattung aktiviert ist.|
+|[is_emulated](#is_emulated)|Gibt an, ob das `accelerator`-Objekt emuliert ist.|
+|[supports_cpu_shared_memory](#supports_cpu_shared_memory)|Gibt an, ob das `accelerator`-Objekt freigegebenen Arbeitsspeicher unterstützt.|
+|[supports_double_precision](#supports_double_precision)|Gibt an, ob die Zugriffstaste mathematische Funktionen mit doppelter Genauigkeit unterstützt.|
+|[supports_limited_double_precision](#supports_limited_double_precision)|Gibt an, ob die Zugriffstaste über beschränkte Unterstützung für mathematische Funktionen mit doppelter Genauigkeit verfügt.|
+|[version](#version)|Ruft die Version der `accelerator` ab.|
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`accelerator`
+
+## <a name="remarks"></a>Hinweise
+
+Eine Zugriffstaste ist eine Hardwarefunktion, die für datenparallele Computervorgänge optimiert ist. Eine Zugriffstaste ist häufig eine einzelne GPU, kann jedoch auch eine virtuelle hostseitige Entität wie ein DirectX REF-Gerät, ein WARP-Gerät (ein CPU-seitiges Gerät, das mithilfe von SSE-Anweisungen beschleunigt wird) oder die CPU selbst sein.
+
+Sie können ein `accelerator`-Objekt erstellen, indem Sie die verfügbaren Geräte auflisten oder das Standardgerät, das Referenzgerät oder das WARP-Gerät abrufen.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** amprt.h
+
+**Namespace:** Parallelität
+
+##  <a name="dtor"></a> </a> ~ Accelerator
+
+Zerstört das `accelerator`-Objekt.
+
+```
 ~accelerator();
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
-  
-##  <a name="ctor"></a> Zugriffstaste 
+```
 
- Initialisiert eine neue Instanz der dem [zugriffstastenklasse](accelerator-class.md).  
-  
-```  
+### <a name="return-value"></a>Rückgabewert
+
+##  <a name="ctor"></a> Zugriffstaste
+
+Initialisiert eine neue Instanz der dem [zugriffstastenklasse](accelerator-class.md).
+
+```
 accelerator();
 
- 
 explicit accelerator(const std::wstring& _Device_path);
 
- 
 accelerator(const accelerator& _Other);
-```  
-  
-### <a name="parameters"></a>Parameter  
+```
+
+### <a name="parameters"></a>Parameter
+
 *_Device_path*<br/>
-Der Pfad des physischen Geräts.  
-  
+Der Pfad des physischen Geräts.
+
 *_Sonstige*<br/>
-Die zu kopierende Zugriffstaste.  
-  
-##  <a name="cpu_accelerator"></a> cpu_accelerator 
+Die zu kopierende Zugriffstaste.
 
- Ruft eine Zeichenfolge für die CPU-Zugriffstaste Konstanten.  
-  
-```  
-static const wchar_t cpu_accelerator[];  
-```  
-  
-##  <a name="create_view"></a> CREATE_VIEW 
+##  <a name="cpu_accelerator"></a> cpu_accelerator
 
- Erstellt und gibt eine `accelerator_view` Objekt auf dieser Zugriffstaste, die unter Verwendung der angegebenen Warteschlange. Wenn der queuingmodus nicht angegeben wird, wird die neue `accelerator_view` verwendet die [queuing_mode::immediate](concurrency-namespace-enums-amp.md#queuing_mode) queuingmodus.  
-  
-```  
+Ruft eine Zeichenfolge für die CPU-Zugriffstaste Konstanten.
+
+```
+static const wchar_t cpu_accelerator[];
+```
+
+##  <a name="create_view"></a> CREATE_VIEW
+
+Erstellt und gibt eine `accelerator_view` Objekt auf dieser Zugriffstaste, die unter Verwendung der angegebenen Warteschlange. Wenn der queuingmodus nicht angegeben wird, wird die neue `accelerator_view` verwendet die [queuing_mode::immediate](concurrency-namespace-enums-amp.md#queuing_mode) queuingmodus.
+
+```
 accelerator_view create_view(queuing_mode qmode = queuing_mode_automatic);
-```  
-  
-### <a name="parameters"></a>Parameter  
+```
+
+### <a name="parameters"></a>Parameter
+
 *qmode*<br/>
-Der Warteschlangen-Modus.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein neues `accelerator_view` Objekt auf dieser Zugriffstaste, die unter Verwendung der angegebenen Warteschlange.  
-  
-##  <a name="dedicated_memory"></a> dedicated_memory 
+Der Warteschlangen-Modus.
 
- Ruft den dedizierten Arbeitsspeicher für das `accelerator`-Objekt in KB ab.  
-  
-```  
-__declspec(property(get= get_dedicated_memory)) size_t dedicated_memory;  
-```  
-  
-##  <a name="default_accelerator"></a> default_accelerator 
+### <a name="return-value"></a>Rückgabewert
 
- Ruft eine Zeichenfolgenkonstante für die standardmäßige `accelerator` ab.  
-  
-```  
-static const wchar_t default_accelerator[];  
-```  
-  
-##  <a name="default_cpu_access_type"></a> default_cpu_access_type-Objekt 
+Ein neues `accelerator_view` Objekt auf dieser Zugriffstaste, die unter Verwendung der angegebenen Warteschlange.
 
- Der Standardwert cpu [Access_type](concurrency-namespace-enums-amp.md#access_type)für Arrays und implizite speicherbelegungen für diese `accelerator`.  
-  
-```  
-__declspec(property(get= get_default_cpu_access_type)) access_type default_cpu_access_type;  
-```  
-  
-##  <a name="default_view"></a> default_view 
+##  <a name="dedicated_memory"></a> dedicated_memory
 
- Ruft die Zugriffstaste-Standardansicht, die zugeordnet wird ab dem `accelerator`.  
-  
-```  
-__declspec(property(get= get_default_view)) accelerator_view default_view;  
-```  
-  
-##  <a name="description"></a> Beschreibung 
+Ruft den dedizierten Arbeitsspeicher für das `accelerator`-Objekt in KB ab.
 
- Ruft eine kurze Beschreibung des `accelerator`-Geräts ab.  
-  
-```  
-__declspec(property(get= get_description)) std::wstring description;  
-```  
-  
-##  <a name="device_path"></a> device_path 
+```
+__declspec(property(get= get_dedicated_memory)) size_t dedicated_memory;
+```
 
- Ruft den Pfad der Zugriffstaste. Der Pfad ist im System eindeutig.  
-  
-```  
-__declspec(property(get= get_device_path)) std::wstring device_path;  
-```  
-  
-##  <a name="direct3d_ref"></a> direct3d_ref 
+##  <a name="default_accelerator"></a> default_accelerator
 
- Ruft eine Zeichenfolge für eine Direct3D-Verweis-Accelerator Konstanten.  
-  
-```  
-static const wchar_t direct3d_ref[];  
-```  
-  
-##  <a name="direct3d_warp"></a> direct3d_warp 
+Ruft eine Zeichenfolgenkonstante für die standardmäßige `accelerator` ab.
 
- Ruft die Zeichenfolge für die Konstante einen `accelerator` Objekt, das Sie zur Ausführung von C++ AMP-Code auf Multikern-CPUs, die mithilfe von Streaming SIMD Extensions (SSE) verwenden können.  
-  
-```  
-static const wchar_t direct3d_warp[];  
-```  
-  
-##  <a name="get_all"></a> get_all 
+```
+static const wchar_t default_accelerator[];
+```
 
- Gibt einen Vektor von `accelerator`-Objekten zurück, die alle verfügbaren Zugriffstasten darstellen.  
-  
-```  
+##  <a name="default_cpu_access_type"></a> default_cpu_access_type-Objekt
+
+Der Standardwert cpu [Access_type](concurrency-namespace-enums-amp.md#access_type)für Arrays und implizite speicherbelegungen für diese `accelerator`.
+
+```
+__declspec(property(get= get_default_cpu_access_type)) access_type default_cpu_access_type;
+```
+
+##  <a name="default_view"></a> default_view
+
+Ruft die Zugriffstaste-Standardansicht, die zugeordnet wird ab dem `accelerator`.
+
+```
+__declspec(property(get= get_default_view)) accelerator_view default_view;
+```
+
+##  <a name="description"></a> Beschreibung
+
+Ruft eine kurze Beschreibung des `accelerator`-Geräts ab.
+
+```
+__declspec(property(get= get_description)) std::wstring description;
+```
+
+##  <a name="device_path"></a> device_path
+
+Ruft den Pfad der Zugriffstaste. Der Pfad ist im System eindeutig.
+
+```
+__declspec(property(get= get_device_path)) std::wstring device_path;
+```
+
+##  <a name="direct3d_ref"></a> direct3d_ref
+
+Ruft eine Zeichenfolge für eine Direct3D-Verweis-Accelerator Konstanten.
+
+```
+static const wchar_t direct3d_ref[];
+```
+
+##  <a name="direct3d_warp"></a> direct3d_warp
+
+Ruft die Zeichenfolge für die Konstante einen `accelerator` Objekt, das Sie zur Ausführung von C++ AMP-Code auf Multikern-CPUs, die mithilfe von Streaming SIMD Extensions (SSE) verwenden können.
+
+```
+static const wchar_t direct3d_warp[];
+```
+
+##  <a name="get_all"></a> get_all
+
+Gibt einen Vektor von `accelerator`-Objekten zurück, die alle verfügbaren Zugriffstasten darstellen.
+
+```
 static inline std::vector<accelerator> get_all();
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Der Vektor der verfügbaren Zugriffstasten  
-  
-##  <a name="get_auto_selection_view"></a> get_auto_selection_view 
+```
 
- Gibt das accelerator_view-Objekt zur automatischen Auswahl zurück, das, sofern als parallel_for_each-Ziel angegeben, im accelerator_view-Ziel resultiert, damit der parallel_for_each-Kernels von der Laufzeit automatisch ausgewählt wird. Für alle anderen Zwecke ist das von dieser Methode zurückgegebene accelerator_view-Objekt, mit dem accelerator_view-Standardobjekt der Standardzugriffstaste identisch.  
-  
-```  
+### <a name="return-value"></a>Rückgabewert
+
+Der Vektor der verfügbaren Zugriffstasten
+
+##  <a name="get_auto_selection_view"></a> get_auto_selection_view
+
+Gibt das accelerator_view-Objekt zur automatischen Auswahl zurück, das, sofern als parallel_for_each-Ziel angegeben, im accelerator_view-Ziel resultiert, damit der parallel_for_each-Kernels von der Laufzeit automatisch ausgewählt wird. Für alle anderen Zwecke ist das von dieser Methode zurückgegebene accelerator_view-Objekt, mit dem accelerator_view-Standardobjekt der Standardzugriffstaste identisch.
+
+```
 static accelerator_view __cdecl get_auto_selection_view();
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Das accelerator_view-Objekt zur automatischen Auswahl.  
-  
-##  <a name="get_dedicated_memory"></a> get_dedicated_memory 
+```
 
- Gibt den dedizierten Arbeitsspeicher für das `accelerator`-Objekt in KB zurück.  
-  
-```  
+### <a name="return-value"></a>Rückgabewert
+
+Das accelerator_view-Objekt zur automatischen Auswahl.
+
+##  <a name="get_dedicated_memory"></a> get_dedicated_memory
+
+Gibt den dedizierten Arbeitsspeicher für das `accelerator`-Objekt in KB zurück.
+
+```
 size_t get_dedicated_memory() const;
 
- 
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Den dedizierten Arbeitsspeicher für die `accelerator`, in Kilobyte.  
-  
-##  <a name="get_default_cpu_access_type"></a> get_default_cpu_access_type 
+```
 
- Ruft das standardmäßige CPU-access_type-Objekt für die Puffer zurück, die auf dieser Zugriffstaste erstellt werden.  
-  
-```  
+### <a name="return-value"></a>Rückgabewert
+
+Den dedizierten Arbeitsspeicher für die `accelerator`, in Kilobyte.
+
+##  <a name="get_default_cpu_access_type"></a> get_default_cpu_access_type
+
+Ruft das standardmäßige CPU-access_type-Objekt für die Puffer zurück, die auf dieser Zugriffstaste erstellt werden.
+
+```
 access_type get_default_cpu_access_type() const;
 
- 
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Das standardmäßige CPU-access_type-Objekt für die Puffer, die auf dieser Zugriffstaste erstellt werden.  
-  
-##  <a name="get_default_view"></a> get_default_view 
+```
 
- Gibt das standardmäßige `accelerator_view`-Objekt zurück, das mit dem `accelerator`-Objekt verknüpft ist.  
-  
-```  
+### <a name="return-value"></a>Rückgabewert
+
+Das standardmäßige CPU-access_type-Objekt für die Puffer, die auf dieser Zugriffstaste erstellt werden.
+
+##  <a name="get_default_view"></a> get_default_view
+
+Gibt das standardmäßige `accelerator_view`-Objekt zurück, das mit dem `accelerator`-Objekt verknüpft ist.
+
+```
 accelerator_view get_default_view() const;
 
- 
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Der Standardwert `accelerator_view` Objekt zugeordnet ist, das die `accelerator`.  
-  
-##  <a name="get_description"></a> get_Description 
+```
 
- Gibt eine kurze Beschreibung des `accelerator`-Geräts zurück.  
-  
-```  
+### <a name="return-value"></a>Rückgabewert
+
+Der Standardwert `accelerator_view` Objekt zugeordnet ist, das die `accelerator`.
+
+##  <a name="get_description"></a> get_Description
+
+Gibt eine kurze Beschreibung des `accelerator`-Geräts zurück.
+
+```
 std::wstring get_description() const;
 
- 
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Eine kurze Beschreibung der `accelerator` Gerät.  
-  
-##  <a name="get_device_path"></a> get_device_path 
+```
 
- Gibt den Pfad der Zugriffstaste. Der Pfad ist im System eindeutig.  
-  
-```  
+### <a name="return-value"></a>Rückgabewert
+
+Eine kurze Beschreibung der `accelerator` Gerät.
+
+##  <a name="get_device_path"></a> get_device_path
+
+Gibt den Pfad der Zugriffstaste. Der Pfad ist im System eindeutig.
+
+```
 std::wstring get_device_path() const;
 
- 
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Der Pfad für den eine systemweite eindeutige Geräte-Instanz.  
-  
-##  <a name="get_has_display"></a> get_has_display 
+```
 
- Gibt einen booleschen Wert, der angibt, ob die `accelerator` an eine Anzeige ausgeben kann.  
-  
-```  
+### <a name="return-value"></a>Rückgabewert
+
+Der Pfad für den eine systemweite eindeutige Geräte-Instanz.
+
+##  <a name="get_has_display"></a> get_has_display
+
+Gibt einen booleschen Wert, der angibt, ob die `accelerator` an eine Anzeige ausgeben kann.
+
+```
 bool get_has_display() const;
 
- 
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- `true`, wenn die `accelerator` an eine Anzeige ausgeben kann; andernfalls `false`.  
-  
-##  <a name="get_is_debug"></a> get_is_debug 
+```
 
- Bestimmt, für das `accelerator`-Objekt die DEBUG-Ebene für eine umfangreiche Fehlerberichterstattung aktiviert ist.  
-  
-```  
+### <a name="return-value"></a>Rückgabewert
+
+`true`, wenn die `accelerator` an eine Anzeige ausgeben kann; andernfalls `false`.
+
+##  <a name="get_is_debug"></a> get_is_debug
+
+Bestimmt, für das `accelerator`-Objekt die DEBUG-Ebene für eine umfangreiche Fehlerberichterstattung aktiviert ist.
+
+```
 bool get_is_debug() const;
 
- 
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- `true`, wenn für das `accelerator`-Objekt die DEBUG-Ebene für eine umfangreiche Fehlerberichterstattung aktiviert ist. Andernfalls `false`.  
-  
-##  <a name="get_is_emulated"></a> get_is_emulated 
+```
 
- Bestimmt, ob das `accelerator`-Objekt emuliert ist.  
-  
-```  
+### <a name="return-value"></a>Rückgabewert
+
+`true`, wenn für das `accelerator`-Objekt die DEBUG-Ebene für eine umfangreiche Fehlerberichterstattung aktiviert ist. Andernfalls `false`.
+
+##  <a name="get_is_emulated"></a> get_is_emulated
+
+Bestimmt, ob das `accelerator`-Objekt emuliert ist.
+
+```
 bool get_is_emulated() const;
 
- 
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- `true`, wenn das `accelerator`-Objekt emuliert wird. Andernfalls `false`.  
-  
-##  <a name="get_supports_cpu_shared_memory"></a> get_supports_cpu_shared_memory 
+```
 
- Gibt einen booleschen Wert zurück, der angibt, ob die Zugriffstaste Arbeitsspeicher unterstützt, auf den sowohl die Zugriffstaste als auch die CPU zugreifen können.  
-  
-```  
+### <a name="return-value"></a>Rückgabewert
+
+`true`, wenn das `accelerator`-Objekt emuliert wird. Andernfalls `false`.
+
+##  <a name="get_supports_cpu_shared_memory"></a> get_supports_cpu_shared_memory
+
+Gibt einen booleschen Wert zurück, der angibt, ob die Zugriffstaste Arbeitsspeicher unterstützt, auf den sowohl die Zugriffstaste als auch die CPU zugreifen können.
+
+```
 bool get_supports_cpu_shared_memory() const;
 
- 
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- `true`, wenn die Zugriffstaste freigegebenen CPU-Arbeitsspeicher unterstützt; andernfalls `false`.  
-  
-##  <a name="get_supports_double_precision"></a> get_supports_double_precision 
+```
 
- Gibt einen booleschen Wert zurück, der angibt, ob die Zugriffstaste mathematische Funktionen mit doppelter Genauigkeit unterstützt, einschließlich Fused Multiply Add (FMA), Division, Kehrwert und Umwandlung zwischen `int` und `double`.  
-  
-```  
+### <a name="return-value"></a>Rückgabewert
+
+`true`, wenn die Zugriffstaste freigegebenen CPU-Arbeitsspeicher unterstützt; andernfalls `false`.
+
+##  <a name="get_supports_double_precision"></a> get_supports_double_precision
+
+Gibt einen booleschen Wert zurück, der angibt, ob die Zugriffstaste mathematische Funktionen mit doppelter Genauigkeit unterstützt, einschließlich Fused Multiply Add (FMA), Division, Kehrwert und Umwandlung zwischen `int` und `double`.
+
+```
 bool get_supports_double_precision() const;
 
- 
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- `true`, wenn die Zugriffstaste mathematische Funktionen mit doppelter Genauigkeit unterstützt; andernfalls `false`.  
-  
-##  <a name="get_supports_limited_double_precision"></a> get_supports_limited_double_precision 
+```
 
- Gibt einen booleschen Wert, der angibt, ob die Zugriffstaste über beschränkte Unterstützung für double Precision mathematische hat. Verfügt die Zugriffstaste nur eingeschränkte Unterstützung, klicken Sie dann die fused multiply hinzufügen (FMA), Division, Kehrwert und Umwandlung zwischen `int` und `double` werden nicht unterstützt.  
-  
-```  
+### <a name="return-value"></a>Rückgabewert
+
+`true`, wenn die Zugriffstaste mathematische Funktionen mit doppelter Genauigkeit unterstützt; andernfalls `false`.
+
+##  <a name="get_supports_limited_double_precision"></a> get_supports_limited_double_precision
+
+Gibt einen booleschen Wert, der angibt, ob die Zugriffstaste über beschränkte Unterstützung für double Precision mathematische hat. Verfügt die Zugriffstaste nur eingeschränkte Unterstützung, klicken Sie dann die fused multiply hinzufügen (FMA), Division, Kehrwert und Umwandlung zwischen `int` und `double` werden nicht unterstützt.
+
+```
 bool get_supports_limited_double_precision() const;
 
- 
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- `true` Wenn die Zugriffstaste über beschränkte Unterstützung für double Precision mathematische; hat andernfalls `false`.  
-  
-##  <a name="get_version"></a> get_version 
+```
 
- Gibt die Version des `accelerator`-Objekts zurück.  
-  
-```  
+### <a name="return-value"></a>Rückgabewert
+
+`true` Wenn die Zugriffstaste über beschränkte Unterstützung für double Precision mathematische; hat andernfalls `false`.
+
+##  <a name="get_version"></a> get_version
+
+Gibt die Version des `accelerator`-Objekts zurück.
+
+```
 unsigned int get_version() const;
 
- 
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Die Version der `accelerator`.  
-  
-##  <a name="has_display"></a> has_display 
+```
 
- Ruft einen booleschen Wert, der angibt, ob die `accelerator` an eine Anzeige ausgeben kann.  
-  
-```  
-__declspec(property(get= get_has_display)) bool has_display;  
-```  
-  
-##  <a name="is_debug"></a> is_debug 
+### <a name="return-value"></a>Rückgabewert
 
- Ruft einen booleschen Wert, der angibt, ob die `accelerator` die DEBUG-Ebene, die für eine umfangreiche Fehlerberichterstattung aktiviert ist.  
-  
-```  
-__declspec(property(get= get_is_debug)) bool is_debug;  
-```  
-  
-##  <a name="is_emulated"></a> is_emulated 
+Die Version der `accelerator`.
 
- Ruft einen booleschen Wert, der angibt, ob die `accelerator` emuliert wird.  
-  
-```  
-__declspec(property(get= get_is_emulated)) bool is_emulated;  
-```  
-  
-##  <a name="operator_neq"></a> Operator! = 
+##  <a name="has_display"></a> has_display
 
- Vergleicht dieses `accelerator`-Objekt mit einem anderen und gibt `false` zurück, wenn sie identisch sind; gibt andernfalls `true` zurück.  
-  
-```  
+Ruft einen booleschen Wert, der angibt, ob die `accelerator` an eine Anzeige ausgeben kann.
+
+```
+__declspec(property(get= get_has_display)) bool has_display;
+```
+
+##  <a name="is_debug"></a> is_debug
+
+Ruft einen booleschen Wert, der angibt, ob die `accelerator` die DEBUG-Ebene, die für eine umfangreiche Fehlerberichterstattung aktiviert ist.
+
+```
+__declspec(property(get= get_is_debug)) bool is_debug;
+```
+
+##  <a name="is_emulated"></a> is_emulated
+
+Ruft einen booleschen Wert, der angibt, ob die `accelerator` emuliert wird.
+
+```
+__declspec(property(get= get_is_emulated)) bool is_emulated;
+```
+
+##  <a name="operator_neq"></a> Operator! =
+
+Vergleicht dieses `accelerator`-Objekt mit einem anderen und gibt `false` zurück, wenn sie identisch sind; gibt andernfalls `true` zurück.
+
+```
 bool operator!= (const accelerator& _Other) const;
 
- 
-```  
-  
-### <a name="parameters"></a>Parameter  
-*_Sonstige*<br/>
-Die `accelerator` Objekt, das mit dieser verglichen werden soll.  
-  
-### <a name="return-value"></a>Rückgabewert  
- `false` Wenn die beiden `accelerator` -Objekte gleich sind; andernfalls `true`.  
-  
-##  <a name="operator_eq"></a> Operator = 
+```
 
- Kopiert den Inhalt des angegebenen `accelerator`-Objekts in dieses Objekt.  
-  
-```  
+### <a name="parameters"></a>Parameter
+
+*_Sonstige*<br/>
+Die `accelerator` Objekt, das mit dieser verglichen werden soll.
+
+### <a name="return-value"></a>Rückgabewert
+
+`false` Wenn die beiden `accelerator` -Objekte gleich sind; andernfalls `true`.
+
+##  <a name="operator_eq"></a> Operator =
+
+Kopiert den Inhalt des angegebenen `accelerator`-Objekts in dieses Objekt.
+
+```
 accelerator& operator= (const accelerator& _Other);
-```  
-  
-### <a name="parameters"></a>Parameter  
-*_Sonstige*<br/>
-Das `accelerator`-Objekt, aus dem kopiert werden soll.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein Verweis auf das `accelerator`-Objekt.  
-  
-##  <a name="operator_eq_eq"></a> Operator == 
+```
 
- Vergleicht dieses `accelerator`-Objekt mit einem anderen und gibt `true` zurück, wenn sie identisch sind; gibt andernfalls `false` zurück.  
-  
-```  
+### <a name="parameters"></a>Parameter
+
+*_Sonstige*<br/>
+Das `accelerator`-Objekt, aus dem kopiert werden soll.
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein Verweis auf das `accelerator`-Objekt.
+
+##  <a name="operator_eq_eq"></a> Operator ==
+
+Vergleicht dieses `accelerator`-Objekt mit einem anderen und gibt `true` zurück, wenn sie identisch sind; gibt andernfalls `false` zurück.
+
+```
 bool operator== (const accelerator& _Other) const;
 
- 
-```  
-  
-### <a name="parameters"></a>Parameter  
-*_Sonstige*<br/>
-Die `accelerator` Objekt, das mit dieser verglichen werden soll.  
-  
-### <a name="return-value"></a>Rückgabewert  
- `true` Wenn die andere `accelerator` Objekt entspricht dies `accelerator` Objekt; andernfalls `false`.  
-  
-##  <a name="set_default"></a> set_default 
+```
 
- Legt die Standardzugriffstaste fest, die für jeden Vorgang verwendet werden soll, der die Standardzugriffstaste implizit verwendet. Diese Methode ist nur erfolgreich, wenn die von der Laufzeit ausgewählte Standardzugriffstaste nicht bereits in einem Vorgang verwendet wurde, der die Standardzugriffstaste implizit verwendet  
-  
-```  
+### <a name="parameters"></a>Parameter
+
+*_Sonstige*<br/>
+Die `accelerator` Objekt, das mit dieser verglichen werden soll.
+
+### <a name="return-value"></a>Rückgabewert
+
+`true` Wenn die andere `accelerator` Objekt entspricht dies `accelerator` Objekt; andernfalls `false`.
+
+##  <a name="set_default"></a> set_default
+
+Legt die Standardzugriffstaste fest, die für jeden Vorgang verwendet werden soll, der die Standardzugriffstaste implizit verwendet. Diese Methode ist nur erfolgreich, wenn die von der Laufzeit ausgewählte Standardzugriffstaste nicht bereits in einem Vorgang verwendet wurde, der die Standardzugriffstaste implizit verwendet
+
+```
 static inline bool set_default(std::wstring _Path);
-```  
-  
-### <a name="parameters"></a>Parameter  
+```
+
+### <a name="parameters"></a>Parameter
+
 *_Path*<br/>
-Der Pfad zur Zugriffstaste.  
-  
-### <a name="return-value"></a>Rückgabewert  
- `true`, wenn der Aufruf die Einstellung der Standardzugriffstaste erfolgreich vornimmt. Andernfalls `false`.  
-  
-##  <a name="set_default_cpu_access_type"></a> set_default_cpu_access_type 
+Der Pfad zur Zugriffstaste.
 
- Legen Sie das standardmäßige CPU-access_type-Objekt für Arrays, die auf dieser Zugriffstaste erstellt oder für speicherbelegungen als Teil des array_views-Objekts auf dieser Zugriffstaste zugegriffen. Diese Methode ist nur erfolgreich, wenn das default_cpu_access_type-Objekt für die Zugriffstaste nicht bereits von einem vorherigen Aufruf dieser Methode überschrieben wurde und das von der Laufzeit ausgewählte default_cpu_access_type-Objekt für diese Zugriffstaste noch nicht für das Zuordnen eines Arrays oder einer impliziten Speicherbelegung verwendet wurde, die ein array_view-Objekt unterstützt, auf das über diese Zugriffstaste zugegriffen wird.  
-  
-```  
+### <a name="return-value"></a>Rückgabewert
+
+`true`, wenn der Aufruf die Einstellung der Standardzugriffstaste erfolgreich vornimmt. Andernfalls `false`.
+
+##  <a name="set_default_cpu_access_type"></a> set_default_cpu_access_type
+
+Legen Sie das standardmäßige CPU-access_type-Objekt für Arrays, die auf dieser Zugriffstaste erstellt oder für speicherbelegungen als Teil des array_views-Objekts auf dieser Zugriffstaste zugegriffen. Diese Methode ist nur erfolgreich, wenn das default_cpu_access_type-Objekt für die Zugriffstaste nicht bereits von einem vorherigen Aufruf dieser Methode überschrieben wurde und das von der Laufzeit ausgewählte default_cpu_access_type-Objekt für diese Zugriffstaste noch nicht für das Zuordnen eines Arrays oder einer impliziten Speicherbelegung verwendet wurde, die ein array_view-Objekt unterstützt, auf das über diese Zugriffstaste zugegriffen wird.
+
+```
 bool set_default_cpu_access_type(access_type _Default_cpu_access_type);
-```  
-  
-### <a name="parameters"></a>Parameter  
+```
+
+### <a name="parameters"></a>Parameter
+
 *_Default_cpu_access_type*<br/>
-Das Standard-CPU-access_type-Objekt, das für array/array_view-Speicherbelegungen auf dieser Zugriffstaste verwendet wird.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein boolescher Wert, der angibt, ob das Standard-CPU-access_type-Objekt für die Zugriffstaste erfolgreich festgelegt wurde.  
-  
-##  <a name="supports_cpu_shared_memory"></a> supports_cpu_shared_memory 
+Das Standard-CPU-access_type-Objekt, das für array/array_view-Speicherbelegungen auf dieser Zugriffstaste verwendet wird.
 
- Ruft einen booleschen Wert ab, der angibt, ob das `accelerator`-Objekt freigegebenen Arbeitsspeicher unterstützt.  
-  
-```  
-__declspec(property(get= get_supports_cpu_shared_memory)) bool supports_cpu_shared_memory;  
-```  
-  
-##  <a name="supports_double_precision"></a> supports_double_precision 
+### <a name="return-value"></a>Rückgabewert
 
- Ruft einen booleschen Wert, der angibt, ob die Zugriffstaste mathematische Funktionen mit doppelter Genauigkeit unterstützt.  
-  
-```  
-__declspec(property(get= get_supports_double_precision)) bool supports_double_precision;  
-```  
-  
-##  <a name="supports_limited_double_precision"></a> supports_limited_double_precision 
+Ein boolescher Wert, der angibt, ob das Standard-CPU-access_type-Objekt für die Zugriffstaste erfolgreich festgelegt wurde.
 
- Ruft einen booleschen Wert, der angibt, ob die Zugriffstaste über beschränkte Unterstützung für double Precision mathematische hat. Verfügt die Zugriffstaste nur eingeschränkte Unterstützung, klicken Sie dann die fused multiply hinzufügen (FMA), Division, Kehrwert und Umwandlung zwischen `int` und `double` werden nicht unterstützt.  
-  
-```  
-__declspec(property(get= get_supports_limited_double_precision)) bool supports_limited_double_precision;  
-```  
-  
-##  <a name="version"></a> Version 
+##  <a name="supports_cpu_shared_memory"></a> supports_cpu_shared_memory
 
- Ruft die Version der `accelerator` ab.  
-  
-```  
-__declspec(property(get= get_version)) unsigned int version;  
-```  
-  
-##  <a name="dtor"></a> </a> ~ accelerator_view-Objekt 
+Ruft einen booleschen Wert ab, der angibt, ob das `accelerator`-Objekt freigegebenen Arbeitsspeicher unterstützt.
 
- Zerstört die ["accelerator_view"](accelerator-view-class.md) Objekt.  
-  
-```  
+```
+__declspec(property(get= get_supports_cpu_shared_memory)) bool supports_cpu_shared_memory;
+```
+
+##  <a name="supports_double_precision"></a> supports_double_precision
+
+Ruft einen booleschen Wert, der angibt, ob die Zugriffstaste mathematische Funktionen mit doppelter Genauigkeit unterstützt.
+
+```
+__declspec(property(get= get_supports_double_precision)) bool supports_double_precision;
+```
+
+##  <a name="supports_limited_double_precision"></a> supports_limited_double_precision
+
+Ruft einen booleschen Wert, der angibt, ob die Zugriffstaste über beschränkte Unterstützung für double Precision mathematische hat. Verfügt die Zugriffstaste nur eingeschränkte Unterstützung, klicken Sie dann die fused multiply hinzufügen (FMA), Division, Kehrwert und Umwandlung zwischen `int` und `double` werden nicht unterstützt.
+
+```
+__declspec(property(get= get_supports_limited_double_precision)) bool supports_limited_double_precision;
+```
+
+##  <a name="version"></a> Version
+
+Ruft die Version der `accelerator` ab.
+
+```
+__declspec(property(get= get_version)) unsigned int version;
+```
+
+##  <a name="dtor"></a> </a> ~ accelerator_view-Objekt
+
+Zerstört die ["accelerator_view"](accelerator-view-class.md) Objekt.
+
+```
 ~accelerator_view();
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
-  
-##  <a name="accelerator"></a> Zugriffstaste 
+```
 
- Ruft die `accelerator` -Objekt für die ["accelerator_view"](accelerator-view-class.md) Objekt.  
-  
-```  
-__declspec(property(get= get_accelerator)) Concurrency::accelerator accelerator;  
-```  
-  
-##  <a name="ctor"></a> accelerator_view-Objekt 
+### <a name="return-value"></a>Rückgabewert
 
- Initialisiert eine neue Instanz der dem ["accelerator_view"](accelerator-view-class.md) -Klasse durch Kopieren einer vorhandenen `accelerator_view` Objekt.  
-  
-```  
+##  <a name="accelerator"></a> Zugriffstaste
+
+Ruft die `accelerator` -Objekt für die ["accelerator_view"](accelerator-view-class.md) Objekt.
+
+```
+__declspec(property(get= get_accelerator)) Concurrency::accelerator accelerator;
+```
+
+##  <a name="ctor"></a> accelerator_view-Objekt
+
+Initialisiert eine neue Instanz der dem ["accelerator_view"](accelerator-view-class.md) -Klasse durch Kopieren einer vorhandenen `accelerator_view` Objekt.
+
+```
 accelerator_view(const accelerator_view& _Other);
-```  
-  
-### <a name="parameters"></a>Parameter  
+```
+
+### <a name="parameters"></a>Parameter
+
 *_Sonstige*<br/>
-Das zu kopierende `accelerator_view`-Objekt.  
-  
-##  <a name="create_marker"></a> create_marker 
+Das zu kopierende `accelerator_view`-Objekt.
 
- Gibt ein future-Objekt zurück, um den Abschluss aller Befehle nachzuverfolgen, die bis jetzt zu diesem `accelerator_view`-Objekt gesendet wurden.  
-  
-```  
+##  <a name="create_marker"></a> create_marker
+
+Gibt ein future-Objekt zurück, um den Abschluss aller Befehle nachzuverfolgen, die bis jetzt zu diesem `accelerator_view`-Objekt gesendet wurden.
+
+```
 concurrency::completion_future create_marker();
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein future-Objekt zum Nachverfolgen des Abschlusses aller Befehle, die bis jetzt zu diesem `accelerator_view`-Objekt gesendet wurden.  
-  
-##  <a name="flush"></a> leeren 
+```
 
- Sendet alle ausstehenden Befehle in der Warteschlange für die ["accelerator_view"](accelerator-view-class.md) Objekt mit dem Accelerator für die Ausführung.  
-  
-```  
+### <a name="return-value"></a>Rückgabewert
+
+Ein future-Objekt zum Nachverfolgen des Abschlusses aller Befehle, die bis jetzt zu diesem `accelerator_view`-Objekt gesendet wurden.
+
+##  <a name="flush"></a> leeren
+
+Sendet alle ausstehenden Befehle in der Warteschlange für die ["accelerator_view"](accelerator-view-class.md) Objekt mit dem Accelerator für die Ausführung.
+
+```
 void flush();
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Gibt `void`zurück.  
-  
-##  <a name="get_accelerator"></a> get_accelerator 
+```
 
- Gibt die `accelerator` -Objekt für die ["accelerator_view"](accelerator-view-class.md) Objekt.  
-  
-```  
+### <a name="return-value"></a>Rückgabewert
+
+Gibt `void`zurück.
+
+##  <a name="get_accelerator"></a> get_accelerator
+
+Gibt die `accelerator` -Objekt für die ["accelerator_view"](accelerator-view-class.md) Objekt.
+
+```
 accelerator get_accelerator() const;
 
- 
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Die `accelerator` -Objekt für die `accelerator_view` Objekt.  
-  
-##  <a name="get_is_auto_selection"></a> get_is_auto_selection 
+```
 
- Gibt einen booleschen Wert, der angibt, ob die Laufzeit automatisch eine entsprechende Zugriffstaste auswählt, wenn die "accelerator_view", um übergeben wird eine [Parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each).  
-  
-```  
+### <a name="return-value"></a>Rückgabewert
+
+Die `accelerator` -Objekt für die `accelerator_view` Objekt.
+
+##  <a name="get_is_auto_selection"></a> get_is_auto_selection
+
+Gibt einen booleschen Wert, der angibt, ob die Laufzeit automatisch eine entsprechende Zugriffstaste auswählt, wenn die "accelerator_view", um übergeben wird eine [Parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each).
+
+```
 bool get_is_auto_selection() const;
 
- 
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- `true`, wenn die Laufzeit eine entsprechende Zugriffstaste automatisch auswählt; andernfalls `false`.  
-  
-##  <a name="get_is_debug"></a> get_is_debug 
+```
 
- Gibt einen booleschen Wert, der angibt, ob die ["accelerator_view"](accelerator-view-class.md) Objekt hat die DEBUG-Ebene, die für eine umfangreiche Fehlerberichterstattung aktiviert.  
-  
-```  
+### <a name="return-value"></a>Rückgabewert
+
+`true`, wenn die Laufzeit eine entsprechende Zugriffstaste automatisch auswählt; andernfalls `false`.
+
+##  <a name="get_is_debug"></a> get_is_debug
+
+Gibt einen booleschen Wert, der angibt, ob die ["accelerator_view"](accelerator-view-class.md) Objekt hat die DEBUG-Ebene, die für eine umfangreiche Fehlerberichterstattung aktiviert.
+
+```
 bool get_is_debug() const;
 
- 
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein boolescher Wert, der angibt, ob die `accelerator_view` Objekt hat die DEBUG-Ebene, die für eine umfangreiche Fehlerberichterstattung aktiviert.  
-  
-##  <a name="get_queuing_mode"></a> get_queuing_mode 
+```
 
- Gibt den queuingmodus für das ["accelerator_view"](accelerator-view-class.md) Objekt.  
-  
-```  
+### <a name="return-value"></a>Rückgabewert
+
+Ein boolescher Wert, der angibt, ob die `accelerator_view` Objekt hat die DEBUG-Ebene, die für eine umfangreiche Fehlerberichterstattung aktiviert.
+
+##  <a name="get_queuing_mode"></a> get_queuing_mode
+
+Gibt den queuingmodus für das ["accelerator_view"](accelerator-view-class.md) Objekt.
+
+```
 queuing_mode get_queuing_mode() const;
 
- 
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Den queuingmodus für das `accelerator_view` Objekt.  
-  
-##  <a name="get_version"></a> get_version 
+```
 
- Gibt die Version von der ["accelerator_view"](accelerator-view-class.md).  
-  
-```  
+### <a name="return-value"></a>Rückgabewert
+
+Den queuingmodus für das `accelerator_view` Objekt.
+
+##  <a name="get_version"></a> get_version
+
+Gibt die Version von der ["accelerator_view"](accelerator-view-class.md).
+
+```
 unsigned int get_version() const;
 
- 
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Die Version der `accelerator_view`.  
-  
-##  <a name="is_auto_selection"></a> is_auto_selection 
+```
 
- Ruft einen booleschen Wert, der angibt, ob die Laufzeit automatisch eine entsprechende Zugriffstaste auswählt, wenn die "accelerator_view", um übergeben wird eine [Parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each).  
-  
-```  
-__declspec(property(get= get_is_auto_selection)) bool is_auto_selection;  
-```  
-  
-##  <a name="is_debug"></a> is_debug 
+### <a name="return-value"></a>Rückgabewert
 
- Ruft einen booleschen Wert, der angibt, ob die ["accelerator_view"](accelerator-view-class.md) Objekt hat die DEBUG-Ebene, die für eine umfangreiche Fehlerberichterstattung aktiviert.  
-  
-```  
-__declspec(property(get= get_is_debug)) bool is_debug;  
-```  
-  
-##  <a name="operator_neq"></a> Operator! = 
+Die Version der `accelerator_view`.
 
- Vergleicht diese ["accelerator_view"](accelerator-view-class.md) Objekt mit einem anderen und gibt `false` , wenn sie gleich sind, andernfalls `true`.  
-  
-```  
+##  <a name="is_auto_selection"></a> is_auto_selection
+
+Ruft einen booleschen Wert, der angibt, ob die Laufzeit automatisch eine entsprechende Zugriffstaste auswählt, wenn die "accelerator_view", um übergeben wird eine [Parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each).
+
+```
+__declspec(property(get= get_is_auto_selection)) bool is_auto_selection;
+```
+
+##  <a name="is_debug"></a> is_debug
+
+Ruft einen booleschen Wert, der angibt, ob die ["accelerator_view"](accelerator-view-class.md) Objekt hat die DEBUG-Ebene, die für eine umfangreiche Fehlerberichterstattung aktiviert.
+
+```
+__declspec(property(get= get_is_debug)) bool is_debug;
+```
+
+##  <a name="operator_neq"></a> Operator! =
+
+Vergleicht diese ["accelerator_view"](accelerator-view-class.md) Objekt mit einem anderen und gibt `false` , wenn sie gleich sind, andernfalls `true`.
+
+```
 bool operator!= (const accelerator_view& _Other) const;
 
- 
-```  
-  
-### <a name="parameters"></a>Parameter  
-*_Sonstige*<br/>
-Die `accelerator_view` Objekt, das mit dieser verglichen werden soll.  
-  
-### <a name="return-value"></a>Rückgabewert  
- `false`, wenn die beiden Objekte identisch sind, andernfalls `true`.  
-  
-##  <a name="operator_eq"></a> Operator = 
+```
 
- Kopiert den Inhalt des angegebenen ["accelerator_view"](accelerator-view-class.md) -Objekts in dieses Objekt.  
-  
-```  
+### <a name="parameters"></a>Parameter
+
+*_Sonstige*<br/>
+Die `accelerator_view` Objekt, das mit dieser verglichen werden soll.
+
+### <a name="return-value"></a>Rückgabewert
+
+`false`, wenn die beiden Objekte identisch sind, andernfalls `true`.
+
+##  <a name="operator_eq"></a> Operator =
+
+Kopiert den Inhalt des angegebenen ["accelerator_view"](accelerator-view-class.md) -Objekts in dieses Objekt.
+
+```
 accelerator_view& operator= (const accelerator_view& _Other);
-```  
-  
-### <a name="parameters"></a>Parameter  
-*_Sonstige*<br/>
-Das `accelerator_view`-Objekt, aus dem kopiert werden soll.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein Verweis auf die geänderte `accelerator_view` Objekt.  
-  
-##  <a name="operator_eq_eq"></a> Operator == 
+```
 
- Vergleicht diese ["accelerator_view"](accelerator-view-class.md) Objekt mit einem anderen und gibt `true` , wenn sie gleich sind, andernfalls `false`.  
-  
-```  
+### <a name="parameters"></a>Parameter
+
+*_Sonstige*<br/>
+Das `accelerator_view`-Objekt, aus dem kopiert werden soll.
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein Verweis auf die geänderte `accelerator_view` Objekt.
+
+##  <a name="operator_eq_eq"></a> Operator ==
+
+Vergleicht diese ["accelerator_view"](accelerator-view-class.md) Objekt mit einem anderen und gibt `true` , wenn sie gleich sind, andernfalls `false`.
+
+```
 bool operator== (const accelerator_view& _Other) const;
 
- 
-```  
-  
-### <a name="parameters"></a>Parameter  
+```
+
+### <a name="parameters"></a>Parameter
+
 *_Sonstige*<br/>
-Die `accelerator_view` Objekt, das mit dieser verglichen werden soll.  
-  
-### <a name="return-value"></a>Rückgabewert  
- `true`, wenn die beiden Objekte identisch sind, andernfalls `false`.  
-  
-##  <a name="queuing_mode"></a> queuing_mode 
+Die `accelerator_view` Objekt, das mit dieser verglichen werden soll.
 
- Ruft den queuingmodus für das ["accelerator_view"](accelerator-view-class.md) Objekt.  
-  
-```  
-__declspec(property(get= get_queuing_mode)) Concurrency::queuing_mode queuing_mode;  
-```  
-  
-##  <a name="version"></a> Version 
+### <a name="return-value"></a>Rückgabewert
 
- Ruft die Version des der ["accelerator_view"](accelerator-view-class.md).  
-  
-```  
-__declspec(property(get= get_version)) unsigned int version;  
-```  
-  
-##  <a name="wait"></a> Warte 
+`true`, wenn die beiden Objekte identisch sind, andernfalls `false`.
 
- Wartet darauf, dass alle Befehle, die gesendet werden, um die ["accelerator_view"](accelerator-view-class.md) Objekt, um den Vorgang abzuschließen.  
-  
-```  
+##  <a name="queuing_mode"></a> queuing_mode
+
+Ruft den queuingmodus für das ["accelerator_view"](accelerator-view-class.md) Objekt.
+
+```
+__declspec(property(get= get_queuing_mode)) Concurrency::queuing_mode queuing_mode;
+```
+
+##  <a name="version"></a> Version
+
+Ruft die Version des der ["accelerator_view"](accelerator-view-class.md).
+
+```
+__declspec(property(get= get_version)) unsigned int version;
+```
+
+##  <a name="wait"></a> Warte
+
+Wartet darauf, dass alle Befehle, die gesendet werden, um die ["accelerator_view"](accelerator-view-class.md) Objekt, um den Vorgang abzuschließen.
+
+```
 void wait();
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Gibt `void`zurück.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Concurrency-Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Gibt `void`zurück.
+
+## <a name="see-also"></a>Siehe auch
+
+[Concurrency-Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)

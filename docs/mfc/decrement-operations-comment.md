@@ -1,5 +1,5 @@
 ---
-title: --Vorgänge-Kommentar | Microsoft Docs
+title: --Operations-Kommentar | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ee6bf4a330a5fdf1ac294157e69dab39b5f2bdd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73c4a7a70c9f2ed987337426793bd462c2a94309
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342270"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372495"
 ---
 # <a name="-operations-comment"></a>// Operations-Kommentar
-Die `// Operations` Abschnitt der Deklaration eines MFC-Klasse enthält, Memberfunktionen, die Sie, auf das Objekt aufrufen können, das Aktionen oder Aktionen, die (Vorgänge) erleichtern. Diese Funktionen befinden sich in der Regel nicht -**const** , da sie in der Regel Nebeneffekte haben. Sie können virtuell oder je nach den Anforderungen der Klasse nicht virtuell sein. In der Regel sind diese Member öffentlich.  
-  
- In der Stichprobe, die von Klasse auflisten `CStdioFile`im [ein Beispiel für die Kommentare](../mfc/an-example-of-the-comments.md), die Liste enthält zwei Memberfunktionen unter dieser Kommentar: `ReadString` und `WriteString`.  
-  
- Wie bei Attributen, können Vorgänge weiter unterteilt werden.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden der MFC-Quelldateien](../mfc/using-the-mfc-source-files.md)   
- [Ein Beispiel für Kommentare](../mfc/an-example-of-the-comments.md)   
- [/ / Implementierungskommentar](../mfc/decrement-implementation-comment.md)   
- [Konstruktoren Kommentar](../mfc/decrement-constructors-comment.md)   
- [Attributekommentar](../mfc/decrement-attributes-comment.md)   
- [Overridables-Kommentar](../mfc/decrement-overridables-comment.md)
+
+Die `// Operations` Abschnitt der Deklaration einer MFC-Klasse enthält Member-Funktionen, die Sie, auf das Objekt aufrufen können, das können sie die Schritte oder Aktionen, die (Vorgänge). Diese Funktionen sind in der Regel nicht -**const** , da sie in der Regel Nebeneffekte haben. Sie können virtuell oder je nach den Anforderungen der Klasse nicht virtuell sein. In der Regel sind diese Member öffentlich.
+
+In diesem Beispiel aus der Klasse auflisten `CStdioFile`im [ein Beispiel für die Kommentare](../mfc/an-example-of-the-comments.md), die Liste enthält zwei Memberfunktionen unter diesen Kommentar: `ReadString` und `WriteString`.
+
+Wie bei Attributen, können Vorgängen weiter unterteilt werden.
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden der MFC-Quelldateien](../mfc/using-the-mfc-source-files.md)<br/>
+[Ein Beispiel für die Kommentare](../mfc/an-example-of-the-comments.md)<br/>
+[/ / Implementierungskommentar](../mfc/decrement-implementation-comment.md)<br/>
+[/ Constructors-Kommentar](../mfc/decrement-constructors-comment.md)<br/>
+[Attributekommentar](../mfc/decrement-attributes-comment.md)<br/>
+[/ / Overridables-Kommentar](../mfc/decrement-overridables-comment.md)
 

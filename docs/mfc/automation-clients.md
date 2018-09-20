@@ -1,5 +1,5 @@
 ---
-title: Automatisierungsclients | Microsoft Docs
+title: Benutzeroberflächenautomatisierungs-Clients | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a29b11028df84a7e5e67adb7588386f77adcff06
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: cca4818d0ace6270b986ddb9b99068ca9532f1b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929038"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395510"
 ---
 # <a name="automation-clients"></a>Automatisierungsclients
-Automatisierung ermöglicht es, für die Anwendung in einer anderen Anwendung implementierten Objekte zu bearbeiten oder Objekte verfügbar zu machen, damit sie bearbeitet werden können. Ein Automatisierungsclient ist eine Anwendung, die verfügbar gemachten Objekten gehören zu einer anderen Anwendung bearbeitet werden kann. Die Anwendung, die die Objekte verfügbar macht, wird den Automation-Server aufgerufen. Der Client bearbeitet die Serveranwendung Objekte durch den Zugriff auf diese Objekte Eigenschaften und Funktionen.  
-  
-### <a name="types-of-automation-clients"></a>Typen von Automatisierungsclients  
- Es gibt zwei Arten von Benutzeroberflächenautomatisierungs-Clients:  
-  
--   Clients, die dynamisch (zur Laufzeit) Informationen über die Eigenschaften und Vorgänge des Servers zu erhalten.  
-  
--   Clients, die statischen Informationen (zum Zeitpunkt der Kompilierung) besitzen, die die Eigenschaften und Vorgänge des Servers angibt.  
-  
- Clients die erste Art Abrufen von Informationen über Methoden und Eigenschaften des Servers durch Abfragen der OLE-System `IDispatch` Mechanismus. Obwohl es ausreichend, um verwenden Sie für dynamische Clients ist `IDispatch` ist schwierig zu verwenden für statische Clients, auf dem Zeitpunkt kompilieren Objekte gesteuert wird zum bekannt sein muss. Geben Sie die Microsoft Foundation Classes für statisch gebundene Clients gilt, die [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md) Klasse.  
-  
- Statisch gebundene Clients verwenden eine Proxyklasse, die statisch ist, mit der Clientanwendung. Diese Klasse bietet eine typsichere C++ Kapselung von Eigenschaften und Vorgänge der Server-Anwendungsverzeichnis.  
-  
- Die Klasse `COleDispatchDriver` bietet Unterstützung für die Clientseite der Automatisierung Prinzipale. Mithilfe der **neues Element hinzufügen** (Dialogfeld), erstellen Sie eine Klasse, die von abgeleiteten `COleDispatchDriver`.  
-  
- Geben Sie dann die Typbibliothek-Datei, die die Eigenschaften und Funktionen des Objekts die Serveranwendung beschrieben. Das Element hinzufügen-Dialogfeld liest diese Datei und erstellt die `COleDispatchDriver`-abgeleitete Klasse, mit Memberfunktionen, die Ihre Anwendung aufrufen kann, um die Serveranwendung-Objekten in C++ in einer typsicheren Weise zugreifen. Zusätzliche Funktionen von geerbten `COleDispatchDriver` vereinfacht den Prozess den richtigen Automatisierungsserver aufrufen.  
-  
-### <a name="handling-events-in-automation-clients"></a>Behandlung von Ereignissen in Benutzeroberflächenautomatisierungs-Clients  
- Wenn Sie Ereignisse in Ihren Automatisierungsclient behandeln möchten, müssen Sie eine Senkenschnittstelle hinzufügen. MFC bietet assistentenunterstützung senkenschnittstellen für ActiveX-Steuerelemente hinzufügen, jedoch für andere COM_Server nicht unterstützt. Informationen zum Hinzufügen einer Senkenschnittstelle in einem MFC-Client für die Schnittstellen beschrieben, die von COM-Servern finden Sie unter So wird's gemacht: Erstellen Sie eine Senke-Schnittstelle in MFC-basierte COM-Client (KB 181845) am [ http://support.microsoft.com/default.aspxscid=kb; En-us; 181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Automatisierungsclients: Verwenden von Typbibliotheken](../mfc/automation-clients-using-type-libraries.md)   
- [Benutzeroberflächenautomatisierung](../mfc/automation.md)   
- [MFC-Anwendungs-Assistent](../mfc/reference/mfc-application-wizard.md)
+
+Automation ermöglicht es für Ihre Anwendung in einer anderen Anwendung implementierten Objekte zu bearbeiten oder Objekte verfügbar zu machen, damit sie bearbeitet werden können. Ein Automatisierungsclient ist eine Anwendung, die verfügbar gemachten Objekten gehören zu einer anderen Anwendung bearbeiten können. Die Anwendung, die die Objekte verfügbar macht, wird den Automation-Server aufgerufen. Der Client bearbeitet die Serveranwendung Objekte durch den Zugriff auf diese Objekte Eigenschaften und Funktionen.
+
+### <a name="types-of-automation-clients"></a>Typen von Benutzeroberflächenautomatisierungs-Clients
+
+Es gibt zwei Arten von Benutzeroberflächenautomatisierungs-Clients:
+
+- Clients, die dynamisch (zur Laufzeit) Informationen zu den Eigenschaften und Vorgänge des Servers abrufen.
+
+- Clients, die statischen Informationen (zum Zeitpunkt der Kompilierung) verfügen, die die Eigenschaften und Vorgänge des Servers angibt.
+
+Clients für die erste Art Abrufen von Informationen zu Methoden und Eigenschaften des Servers durch Abfragen der OLE-System `IDispatch` Mechanismus. Obwohl es ausreichend, um verwenden Sie für dynamische Clients ist `IDispatch` ist schwierig, die für statische Clients zu verwenden, kompilieren Sie die Objekte, die derzeit zum bekannt sein muss, in denen Zeit. Geben Sie der Microsoft Foundation Classes für statische Clients gebunden, die [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md) Klasse.
+
+Statisch gebundene Clients verwenden eine Proxyklasse, die statisch verknüpft ist, mit der Clientanwendung. Diese Klasse stellt eine typsichere C++-Kapselung von Eigenschaften und Operationen der Serveranwendung.
+
+Die Klasse `COleDispatchDriver` bietet die Dienstprinzipale-Unterstützung für die Clientseite der Automatisierung. Mithilfe der **neues Element hinzufügen** Dialogfeld erstellen Sie eine Klasse, die von abgeleiteten `COleDispatchDriver`.
+
+Anschließend geben Sie die Typbibliothek-Datei, die die Eigenschaften und Funktionen der Serveranwendung Objekts beschreibt. Das Dialogfeld "Element hinzufügen" liest diese Datei und erstellt die `COleDispatchDriver`-abgeleitete Klasse sein, mit Memberfunktionen, die Ihre Anwendung aufrufen können, die Server-Anwendung Zugriff auf Objekte in C++ in einer typsicheren Weise. Zusätzliche Funktionen, die von geerbten `COleDispatchDriver` vereinfacht das Aufrufen des entsprechenden Automatisierungsservers.
+
+### <a name="handling-events-in-automation-clients"></a>Behandeln von Ereignissen in Benutzeroberflächenautomatisierungs-Clients
+
+Sie können zum Behandeln von Ereignissen in Ihrem Automatisierungsclient müssen Sie eine Senkenschnittstelle hinzufügen. MFC enthält assistentenunterstützung senkenschnittstellen für ActiveX-Steuerelemente hinzufügen, jedoch nicht für andere COM_Server unterstützt. Informationen zum Hinzufügen einer Ereignissenken-Schnittstelle in einem MFC-Client für Quellschnittstellen durch COM-Server beschrieben wird, finden Sie unter So wird's gemacht: Erstellen Sie eine Ereignissenken-Schnittstelle in COM-Client für die MFC-basierte (KB 181845) auf [ http://support.microsoft.com/default.aspxscid=kb; En-us; 181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845).
+
+## <a name="see-also"></a>Siehe auch
+
+[Automatisierungsclients: Verwenden von Typbibliotheken](../mfc/automation-clients-using-type-libraries.md)<br/>
+[Automatisierung](../mfc/automation.md)<br/>
+[MFC-Anwendungs-Assistent](../mfc/reference/mfc-application-wizard.md)
 

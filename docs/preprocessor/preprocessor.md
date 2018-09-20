@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 980058c588e02751113b889d44cf0bb5f69066f1
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: b693d83872ca1c918c97e47f75c89f788748353c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538629"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375902"
 ---
 # <a name="preprocessor"></a>Präprozessor
 Der Präprozessor ist ein Textprozessor, der den Text einer Quelldatei im Rahmen der ersten Übersetzungsphase bearbeitet. Der Präprozessor analysiert den Quelltext zwar nicht, teilt ihn jedoch in Token auf, um Makroaufrufe zu finden. Obwohl der Compiler den Präprozessor normalerweise im ersten Durchlauf aufruft, kann der Präprozessor auch separat aufgerufen werden, um Text ohne Kompilierung zu verarbeiten.  
@@ -48,5 +48,5 @@ Der Begriff "Variable" bezeichnet ein einfaches C-Datenobjekt. Der Begriff "Obje
   
 ## <a name="see-also"></a>Siehe auch  
  
-[C/C++-Präprozessorreferenz](../preprocessor/c-cpp-preprocessor-reference.md)   
+[C/C++-Präprozessorreferenz](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
 [Phasen der Übersetzung](../preprocessor/phases-of-translation.md)

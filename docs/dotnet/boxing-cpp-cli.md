@@ -1,5 +1,5 @@
 ---
-title: Boxing (C + c++ / CLI) | Microsoft Docs
+title: Boxing (C++ / CLI) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,22 +13,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3b9898b4a640d2f3aa4e38ceb621521ffb301fed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c513b0148e2553440e02f9b0d255a0d5750e2d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105890"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372511"
 ---
 # <a name="boxing-ccli"></a>Boxing (C++/CLI)
-Boxing ist der Prozess der Konvertierung von eines Werttyp in den Typ `object` oder auf einen beliebigen anderen Schnittstellentyp, der durch den Werttyp implementiert wird. Wenn die common Language Runtime (CLR) einen Werttyp, umschließt er den Wert in einer `System.Object` und auf dem verwalteten Heap gespeichert. Durch Unboxing wird der Werttyp aus dem Objekt extrahiert. Boxing ist implizit, Unboxing ist explizit.  
-  
-## <a name="related-articles"></a>Verwandte Artikel  
-  
-|Titel|Beschreibung|  
-|-----------|-----------------|  
-|[Vorgehensweise: Explizites Anfordern von Boxing](../dotnet/how-to-explicitly-request-boxing.md)|Beschreibt, wie Boxing für eine Variable explizit anfordern.|  
-|[Vorgehensweise: Verwenden von gcnew zum Erstellen von Werttypen und für implizites Boxing](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)|Zeigt, wie `gcnew` einen geschachtelter Werttyp erstellen, die auf dem verwalteten Heap mit Garbage collection platziert werden können.|  
-|[Vorgehensweise: Unboxing](../dotnet/how-to-unbox.md)|Zeigt, wie Unboxing und einen Wert ändern.|  
-|[Standardumwandlungen und implizites Boxing](../dotnet/standard-conversions-and-implicit-boxing.md)|Zeigt, dass eine standardkonvertierung vom Compiler über eine Konvertierung ausgewählt wird, das Boxing erfordert.|  
-|[.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Der übergeordnete Artikel für .NET Programmieren in Visual C++-Dokumentation.|
+
+Boxing ist der Prozess der Konvertierung eines Werttyps in den Typ `object` oder einen beliebigen anderen Schnittstellentyp, der durch den Werttyp implementiert wird. Wenn die common Language Runtime (CLR) auf einen Werttyp schachtelt, umschließt er den Wert in eine `System.Object` und speichert sie auf dem verwalteten Heap. Durch Unboxing wird der Werttyp aus dem Objekt extrahiert. Boxing ist implizit, Unboxing ist explizit.
+
+## <a name="related-articles"></a>Verwandte Artikel
+
+|Titel|Beschreibung|
+|-----------|-----------------|
+|[Vorgehensweise: Explizites Anfordern von Boxing](../dotnet/how-to-explicitly-request-boxing.md)|Beschreibt, wie Boxing in einer Variable explizit anfordern.|
+|[Vorgehensweise: Verwenden von gcnew zum Erstellen von Werttypen und für implizites Boxing](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)|Zeigt, wie `gcnew` ein geschachtelten Werttyps zu erstellen, die auf dem verwalteten Heap mit Garbage collection platziert werden können.|
+|[Vorgehensweise: Unboxing](../dotnet/how-to-unbox.md)|Zeigt, wie mittels Unboxing zu konvertieren, und ändern einen Wert.|
+|[Standardumwandlungen und implizites Boxing](../dotnet/standard-conversions-and-implicit-boxing.md)|Zeigt, dass eine standardkonvertierung vom Compiler eine Konvertierung ausgewählt ist, das Boxing erforderlich.|
+|[.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Der übergeordnete Artikel für .NET-Programmierung in Visual C++-Dokumentation.|

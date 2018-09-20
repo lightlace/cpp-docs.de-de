@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38e031ada2f7375607ddaf5bc298ee1b5d87680c
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 85f12cea7004ef8e2bbf46fcb3b3e76f463be3b9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316938"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378877"
 ---
 # <a name="module-attributes"></a>Modulattribute
 Das folgende Attribut kann nur angewendet werden, um die [Modul](../windows/module-cpp.md) Attribut.
@@ -31,4 +31,5 @@ Das folgende Attribut kann nur angewendet werden, um die [Modul](../windows/modu
 |[helpstringdll](../windows/helpstringdll.md)|Gibt den Namen der DLL zu verwenden, um die Suche nach Dokument (Lokalisierung) ausführen.|
   
 ## <a name="see-also"></a>Siehe auch
- [Attribute nach Verwendung](../windows/attributes-by-usage.md)
+
+[Attribute nach Verwendung](../windows/attributes-by-usage.md)

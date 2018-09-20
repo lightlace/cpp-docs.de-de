@@ -1,5 +1,5 @@
 ---
-title: 'Stammklasse: CObject | Microsoft Docs'
+title: 'Stammklasse: CObject | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2398f1e775dfa8b9331a4abc0137207c85531aff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0804397888d64ac5b6cab9a60f9912b27358bc43
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385069"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373320"
 ---
 # <a name="root-class-cobject"></a>Stammklasse: CObject
-Die meisten Klassen in der Bibliothek der Microsoft Foundation Class (MFC) werden von einer einzigen Basisklasse auf der Stammebene der Hierarchie von Klassen abgeleitet. `CObject` bietet eine Reihe von nützliche Funktionen, die alle Klassen, die davon abgeleitet, mit sehr geringem Mehraufwand verbunden. Weitere Informationen zu `CObject` und seine Funktionen finden Sie unter [Verwenden von CObject](../mfc/using-cobject.md).  
-  
- [CObject](../mfc/reference/cobject-class.md)  
- Die übergeordnete Basisklasse von den meisten MFC-Klassen. Unterstützt das Serialisieren von Daten und das Abrufen von Laufzeitinformationen über eine Klasse.  
-  
- [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)  
- -Struktur verwendet, um die genaue Klasse eines Objekts zur Laufzeit zu bestimmen.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+
+Die meisten Klassen in der Microsoft Foundation Class (MFC)-Bibliothek werden von einer einzigen Basisklasse am Stamm der Klassenhierarchie abgeleitet. `CObject` enthält einige nützliche Funktionen für alle Klassen abgeleitet ist, mit sehr geringem Mehraufwand. Weitere Informationen zu `CObject` und seinen Funktionen finden Sie unter [mithilfe von CObject](../mfc/using-cobject.md).
+
+[Von CObject](../mfc/reference/cobject-class.md)<br/>
+Die ultimative Basisklasse von den meisten MFC-Klassen. Unterstützt das Serialisieren von Daten und Abrufen von Laufzeitinformationen zu einer Klasse.
+
+[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)<br/>
+-Struktur verwendet, um die exakte Klasse eines Objekts zur Laufzeit zu bestimmen.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../mfc/class-library-overview.md)
 

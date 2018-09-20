@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6faa29858e94c7d80d6039e35278b6a7ae263a85
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 69aecab15ffb1914dbc8a6a6ae15fca307bc77ef
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213976"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386248"
 ---
 # <a name="tn006-message-maps"></a>TN006: Meldungszuordnungen
 
@@ -87,7 +87,7 @@ Eine Signatur für die standard-Funktion wurde für die Parameter der einzelnen 
 > [!NOTE]
 > Klassen-Assistent setzt voraus, dass Sie die **Afx_msg** -Schlüsselwort in die Nachricht Map-Handler-Deklarationen.
 
- Diese Signaturen von aktivitätsfunktionen wurden mithilfe einer einfachen Konvention abgeleitet. Der Name der Funktion beginnt immer mit `"On`". Dies folgt den Namen der Windows-Meldung mit der "WM_" entfernt und dem ersten Buchstaben jedes Worts in Großbuchstaben angegeben. Die Reihenfolge der Parameter ist *wParam* gefolgt von `LOWORD`(*lParam*) klicken Sie dann `HIWORD`(*lParam*). Nicht verwendete Parameter werden nicht übergeben. Alle Handles, die von MFC-Klassen umschlossen werden, werden in Zeiger auf die entsprechenden MFC-Objekte konvertiert. Das folgende Beispiel zeigt, wie die WM_PAINT-Meldung zu behandeln und dazu führen, dass die `CMyWnd::OnPaint` Funktion aufgerufen werden:
+Diese Signaturen von aktivitätsfunktionen wurden mithilfe einer einfachen Konvention abgeleitet. Der Name der Funktion beginnt immer mit `"On`". Dies folgt den Namen der Windows-Meldung mit der "WM_" entfernt und dem ersten Buchstaben jedes Worts in Großbuchstaben angegeben. Die Reihenfolge der Parameter ist *wParam* gefolgt von `LOWORD`(*lParam*) klicken Sie dann `HIWORD`(*lParam*). Nicht verwendete Parameter werden nicht übergeben. Alle Handles, die von MFC-Klassen umschlossen werden, werden in Zeiger auf die entsprechenden MFC-Objekte konvertiert. Das folgende Beispiel zeigt, wie die WM_PAINT-Meldung zu behandeln und dazu führen, dass die `CMyWnd::OnPaint` Funktion aufgerufen werden:
 
 ```cpp
 BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
@@ -97,7 +97,7 @@ BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
 END_MESSAGE_MAP()
 ```
 
- Die Message-Zuordnungstabelle muss außerhalb des Bereichs von jeder Funktions- oder Klassendefinition definiert werden. Sie sollten nicht in einem Extern "C"-Block abgelegt werden.
+Die Message-Zuordnungstabelle muss außerhalb des Bereichs von jeder Funktions- oder Klassendefinition definiert werden. Sie sollten nicht in einem Extern "C"-Block abgelegt werden.
 
 > [!NOTE]
 > Klassen-Assistent ändert die Meldungszuordnungseinträge, die zwischen der / / {{und / /}} Kommentar Klammer.
@@ -223,7 +223,7 @@ Beispiele für die der folgenden Formen:
     }
     ```
 
- Fortgeschrittene Benutzer können eine Auswahl von Befehlen behandeln, indem Sie mit einem einzigen Befehlshandler: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) oder ON_COMMAND_RANGE_EX. Finden Sie in der Produktdokumentation für Weitere Informationen zu diesen Makros.
+Fortgeschrittene Benutzer können eine Auswahl von Befehlen behandeln, indem Sie mit einem einzigen Befehlshandler: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) oder ON_COMMAND_RANGE_EX. Finden Sie in der Produktdokumentation für Weitere Informationen zu diesen Makros.
 
 > [!NOTE]
 > Klassen-Assistent unterstützt die Erstellung ON_COMMAND und ON_UPDATE_COMMAND_UI-Handler erstellen ON_COMMAND_EX oder ON_COMMAND_RANGE-Handler wird nicht unterstützt. Allerdings-Klassen-Assistent analysiert und lassen Sie alle vier Befehl Handler Varianten zu durchsuchen.
@@ -251,5 +251,5 @@ Die Windows-Standardsteuerelemente verwenden die leistungsstärkere [WM_NOTIFY](
 
 ## <a name="see-also"></a>Siehe auch
 
-[Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)  
-[Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)  
+[Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
+[Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)

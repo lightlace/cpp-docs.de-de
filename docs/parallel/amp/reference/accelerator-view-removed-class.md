@@ -19,83 +19,88 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1c8963fee0fa7718c6ea8fe67904613b2dca8ad
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e937c2f5afedf1c78a46e864ea0b081ddf18e99d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020255"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373300"
 ---
 # <a name="acceleratorviewremoved-class"></a>accelerator_view_removed-Klasse
-Die Ausnahme, die ausgelöst wird, wenn ein zugrunde liegender DirectX-Aufruf aufgrund des Windows-TDR-Mechanismus (Timeout Detection and Recovery) fehlschlägt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-class accelerator_view_removed : public runtime_exception;  
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[Accelerator_view_removed-Konstruktor](#ctor)|Initialisiert eine neue Instanz der `accelerator_view_removed`-Klasse.|  
 
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[get_view_removed_reason](#get_view_removed_reason)|Gibt einen HRESULT-Fehlercode, der angibt, der Ursache für die `accelerator_view` Entfernung des Objekts.|  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `exception`  
-  
- `runtime_exception`  
-  
- `out_of_memory`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** amprt.h  
-  
- **Namespace:** Parallelität  
+Die Ausnahme, die ausgelöst wird, wenn ein zugrunde liegender DirectX-Aufruf aufgrund des Windows-TDR-Mechanismus (Timeout Detection and Recovery) fehlschlägt.
 
-## <a name="ctor"></a> accelerator_view_removed 
+## <a name="syntax"></a>Syntax
 
-Initialisiert eine neue Instanz der dem [Accelerator_view_removed](accelerator-view-removed-class.md) Klasse.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```  
-explicit accelerator_view_removed(  
-    const char * _Message,  
-    HRESULT _View_removed_reason ) throw();  
-  
-explicit accelerator_view_removed(  
-    HRESULT _View_removed_reason ) throw();  
-```  
-  
-### <a name="parameters"></a>Parameter  
+```
+class accelerator_view_removed : public runtime_exception;
+```
+
+## <a name="members"></a>Member
+
+### <a name="public-constructors"></a>Öffentliche Konstruktoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[Accelerator_view_removed-Konstruktor](#ctor)|Initialisiert eine neue Instanz der `accelerator_view_removed`-Klasse.|
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[get_view_removed_reason](#get_view_removed_reason)|Gibt einen HRESULT-Fehlercode, der angibt, der Ursache für die `accelerator_view` Entfernung des Objekts.|
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`exception`
+
+`runtime_exception`
+
+`out_of_memory`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** amprt.h
+
+**Namespace:** Parallelität
+
+## <a name="ctor"></a> accelerator_view_removed
+
+Initialisiert eine neue Instanz der dem [Accelerator_view_removed](accelerator-view-removed-class.md) Klasse.
+
+### <a name="syntax"></a>Syntax
+
+```
+explicit accelerator_view_removed(
+    const char * _Message,
+    HRESULT _View_removed_reason ) throw();
+
+explicit accelerator_view_removed(
+    HRESULT _View_removed_reason ) throw();
+```
+
+### <a name="parameters"></a>Parameter
+
 *_Nachricht*<br/>
-Eine Beschreibung des Fehlers.  
-  
-*_View_removed_reason*<br/>
-Ein HRESULT-Fehlercode, der angibt, der Ursache für das Entfernen der `accelerator_view` Objekt.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Eine neue Instanz der Accelerator_view_removed-Klasse.  
-  
-## <a name="get_view_removed_reason_method"></a> get_view_removed_reason 
+Eine Beschreibung des Fehlers.
 
-Gibt einen HRESULT-Fehlercode, der angibt, der Ursache für die `accelerator_view` Entfernung des Objekts.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```  
-HRESULT get_view_removed_reason() const throw();  
-```  
-  
- 
-## <a name="see-also"></a>Siehe auch  
- [Concurrency-Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
+*_View_removed_reason*<br/>
+Ein HRESULT-Fehlercode, der angibt, der Ursache für das Entfernen der `accelerator_view` Objekt.
+
+### <a name="return-value"></a>Rückgabewert
+
+Eine neue Instanz der Accelerator_view_removed-Klasse.
+
+## <a name="get_view_removed_reason_method"></a> get_view_removed_reason
+
+Gibt einen HRESULT-Fehlercode, der angibt, der Ursache für die `accelerator_view` Entfernung des Objekts.
+
+### <a name="syntax"></a>Syntax
+
+```
+HRESULT get_view_removed_reason() const throw();
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Concurrency-Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
