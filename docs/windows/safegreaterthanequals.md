@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4bafae070d3ff9fe80070e3598cd36867abcf830
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b5b7ab93665ce4f5f15aed68520a130897bdcd90
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707199"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397155"
 ---
 # <a name="safegreaterthanequals"></a>SafeGreaterThanEquals
 
@@ -69,9 +69,9 @@ Weitere Informationen zu den Vorlagentypen `T` und `U`, finden Sie unter [SafeIn
 
 ## <a name="see-also"></a>Siehe auch
 
-[SafeInt-Funktionen](../windows/safeint-functions.md)  
-[SafeInt-Bibliothek](../windows/safeint-library.md)  
-[SafeInt-Klasse](../windows/safeint-class.md)  
-[SafeGreaterThan](../windows/safegreaterthan.md)  
-[SafeLessThanEquals](../windows/safelessthanequals.md)  
+[SafeInt-Funktionen](../windows/safeint-functions.md)<br/>
+[SafeInt-Bibliothek](../windows/safeint-library.md)<br/>
+[SafeInt-Klasse](../windows/safeint-class.md)<br/>
+[SafeGreaterThan](../windows/safegreaterthan.md)<br/>
+[SafeLessThanEquals](../windows/safelessthanequals.md)<br/>
 [SafeLessThan](../windows/safelessthan.md)

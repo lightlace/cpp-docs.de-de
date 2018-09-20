@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3eade86404bcd4fef7ce3356d36a43ac6a59a8f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 047754338566d476fa8e832d58dd2d4cd0776a63
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597754"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418397"
 ---
 # <a name="argtraits-structure"></a>ArgTraits-Struktur
 
@@ -120,37 +120,37 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
 
 ### <a name="parameters"></a>Parameter
 
-*TMemberFunction*  
+*TMemberFunction*<br/>
 TypeName-Parameter für eine ArgTraits-Struktur, die einer entsprechen, kann keine `Invoke` Methodensignatur.
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 Ein Delegat-Schnittstelle.
 
-*TArg1*  
+*TArg1*<br/>
 Der Typ, der das erste Argument von der `Invoke` Methode.
 
-*TArg2*  
+*TArg2*<br/>
 Der Typ des zweiten Arguments des der `Invoke` Methode.
 
-*TArg3*  
+*TArg3*<br/>
 Der Typ des dritten Arguments der der `Invoke` Methode.
 
-*TArg4*  
+*TArg4*<br/>
 Der Typ des vierten Arguments der der `Invoke` Methode.
 
-*TArg5*  
+*TArg5*<br/>
 Der Typ des fünften Arguments der der `Invoke` Methode.
 
-*TArg6*  
+*TArg6*<br/>
 Der Typ des sechsten Arguments der der `Invoke` Methode.
 
-*TArg7*  
+*TArg7*<br/>
 Der Typ des siebten Arguments der der `Invoke` Methode.
 
-*TArg8*  
+*TArg8*<br/>
 Der Typ des Arguments achte der `Invoke` Methode.
 
-*TArg9*  
+*TArg9*<br/>
 Der Typ des neunten Arguments der der `Invoke` Methode.
 
 ## <a name="remarks"></a>Hinweise

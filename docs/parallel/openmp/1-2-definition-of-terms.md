@@ -1,5 +1,5 @@
 ---
-title: 1.2. Begriffsdefinition | Microsoft Docs
+title: 1.2. Begriffsdefinition | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,60 +12,77 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8563bb757ad8d30f1639f017769bfd6c4084efa0
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e95ad940aac14892ac14e8d56ba64f49d0bbf7c0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688595"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423831"
 ---
 # <a name="12-definition-of-terms"></a>1.2. Begriffsdefinition
-In diesem Dokument werden die folgenden Begriffe verwendet:  
-  
- barrier  
- Ein Synchronisierungspunkt,, der von allen Threads in einem Team erreicht werden muss.  Jeder Thread wartet, bis alle Threads im Team zu diesem Zeitpunkt eingehen. Es sind explizite Barrieren identifizierte Direktiven und implizite Barrieren, die durch die Implementierung erstellt.  
-  
- Konstrukt  
- Ein Konstrukt ist eine Anweisung an. Er besteht aus einer Richtlinie und die nachfolgenden strukturierten Block. Beachten Sie, dass einige Direktiven nicht Teil eines Konstrukts sind. (Siehe *-Direktive von Openmp* in [Anhang C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)).  
-  
- Anweisung  
- Eine C- oder C++ **#pragma** gefolgt von der **Omp** Bezeichner, Text und eine neue Zeile. Die Richtlinie gibt Verhalten des Programms an.  
-  
- Dynamische Block  
- Alle Anweisungen in der *lexikalischen Block*, sowie jede Anweisung innerhalb einer Funktion, die als Ergebnis der Ausführung von Anweisungen innerhalb der lexikalische Block ausgeführt wird. Ein dynamische Block wird auch als bezeichnet eine *Region*.  
-  
- lexikalische Block  
- Lexikalisch enthaltenen Anweisungen eine *strukturierten Block*.  
-  
- Master-thread  
- Der Thread, der ein Team erstellt bei einer *parallelen Bereichs* eingegeben wird.  
-  
- parallelen Bereichs  
- Anweisungen, die mit einer parallelen OpenMP-Konstrukt gebunden und können von mehreren Threads ausgeführt werden.  
-  
- private  
- Eine private Variable benennt einen Block von Speicher, der an den Thread, der den Verweis eindeutig ist. Beachten Sie, dass es mehrere Möglichkeiten gibt, um anzugeben, dass eine Variable privat ist: eine Definition innerhalb eines parallelen Bereichs ein **Threadprivate** Richtlinie eine **private**, **Firstprivate**, **Lastprivate**, oder **Verringerung** -Klausel oder der Nutzung von Variablen, so wie eine **für**Loop-Steuerelementvariable in einem **für** Schleife unmittelbar nach einem **für** oder **für parallele** Richtlinie.  
-  
- Bereich  
- Eine dynamische Block.  
-  
- serielle region  
- Nur von ausgeführte Anweisungen der *"master" Thread* außerhalb der dynamischen Ausmaß eines beliebigen *parallelen Bereichs*.  
-  
- Serialisieren  
- Zum Ausführen eines parallelen Konstrukts mit einem Team von Threads, bestehend aus nur einem einzelnen Thread (also die master-Thread für das parallele Konstrukt) mit seriellen Ausführungsreihenfolge für die Anweisungen in einem strukturierten Block (dieselbe Reihenfolge, als wäre der Block nicht Teil eines parallelen Konstrukts) und hat keine Auswirkungen auf den Rückgabewert von **omp_in_parallel()** (abgesehen von den Auswirkungen eines beliebigen geschachtelte den parallele Konstrukten).  
-  
- Freigegeben  
- Eine freigegebene Variable benennt einen einzelnen Block Storage. Alle Threads in einem Team, die diese Variable zugreifen, werden dieser einzelnen Block Storage zugreifen.  
-  
- strukturierten block  
- Ein strukturierter Block ist eine Anweisung (einzelne oder zusammengesetzte) an, die einen einzelnen Eintrag und einer einzelnen Beendigung verfügt. Keine Anweisung wird, ist einem strukturierten Block bei ein Sprung in oder aus dieser Anweisung (einschließlich eines Aufrufs von **Longjmp**(3 C) oder die Verwendung von **auslösen**, aber einen Aufruf von **beenden** ist zulässig). Eine verbundanweisung ist einem strukturierten Block aus, wenn seine Ausführung immer an das öffnende beginnt **{** und endet immer mit dem schließenden **}**. Eine Ausdrucksanweisung, selektionsanweisung,-iterationsanweisung, oder **versuchen** Block ist einem strukturierten Block aus, wenn die entsprechende verbundanweisung erworben haben, schließen Sie ihn in **{** und **}** ein strukturierter Block wäre. Eine Jump-Anweisung, eine Anweisung mit Bezeichnung oder eine deklarationsanweisung ist keinem strukturierten Block.  
-  
- Team  
- Einen oder mehrere Threads, die bei der Ausführung eines Konstrukts zusammenarbeiten.  
-  
- Thread  
- Eine Ausführung-Entität mit einem seriellen Kontrollfluss, einen Satz von private Variablen und Zugriff auf freigegebene Variablen.  
-  
- -Variable  
- Ein Bezeichner, die optional durch den Namespace-Namen qualifiziert benennt, die ein Objekt.
+
+Die folgenden Begriffe werden in diesem Dokument verwendet:
+
+- barrier
+
+   Ein Synchronisierungspunkt,, der von allen Threads in einem Team erreicht werden muss.  Jeder Thread wartet, bis alle Threads im Team, das an dieser Stelle eingehen. Es sind explizite Barrieren identifizierte Direktiven und implizite Hindernisse, die durch die Implementierung erstellt.
+
+- Konstrukt
+
+   Ein Konstrukt ist eine Anweisung an. Es besteht aus einer Richtlinie und die nachfolgenden strukturierten Block. Beachten Sie, dass einige Direktiven nicht Teil eines Konstrukts sind. (Finden Sie unter *-Direktive von Openmp* in [Anhang C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)).
+
+- Anweisung
+
+   Eine C- oder C++ **#pragma** gefolgt von der **Omp** Bezeichner, andere Text und eine neue Zeile. Die Richtlinie gibt Verhalten des Programms an.
+
+- Dynamische Block
+
+   Alle Anweisungen in der *lexikalische Block*, und jede Anweisung innerhalb einer Funktion, die als Ergebnis der Ausführung von Anweisungen innerhalb der lexikalischen Block ausgeführt wird. Einem dynamischen Grad wird auch als bezeichnet ein *Region*.
+
+- lexikalische Block
+
+   Lexikalisch enthaltenen Anweisungen eine *vor einem strukturierten Block*.
+
+-  Master-thread
+
+   Der Thread, der ein Team erstellt bei einer *parallelen Bereichs* eingegeben wird.
+
+- parallelen Bereichs
+
+   Anweisungen, die an einer parallelen OpenMP-Konstrukt gebunden und können von mehreren Threads ausgeführt werden.
+
+- private
+
+   Eine private Variable benennt einen Block von Speicher, der für den Thread, der den Verweis eindeutig ist. Beachten Sie, dass es mehrere Möglichkeiten gibt, um anzugeben, dass eine Variable privat ist: eine Definition innerhalb eines parallelen Bereichs ist, eine **Threadprivate** -Direktive einer **private**, **Firstprivate**, **Lastprivate**, oder **Verringerung** -Klausel, oder Verwenden der Variable als einen **für**Loop-Steuerelementvariable in einer **für** Schleife unmittelbar nach einem **für** oder **für parallele** Richtlinie.
+
+- Bereich
+
+   Eine dynamische Umfang.
+
+- serielle region
+
+   Nur ausgeführte Anweisungen der *master-Thread* außerhalb der dynamischen Wertebereich einer *parallelen Bereichs*.
+
+- Serialisieren
+
+   Zum Ausführen eines parallelen Konstrukts mit einem Team besteht aus nur einem Thread (der die master-Thread für das parallele Konstrukt ist), mit der Reihenfolge der Ausführung für die Anweisungen in einem strukturierten Block Threads (dieselbe Reihenfolge, als wäre der Block nicht Teil eines parallelen Konstrukts) und hat keine Auswirkungen auf den Rückgabewert von **omp_in_parallel()** (abgesehen von den Auswirkungen einer parallele Konstrukten geschachtelt).
+
+- Freigegeben
+
+   Eine freigegebene Variable benennt einen einzelnen Block des Speichers. Alle Threads in einem Team, die auf diese Variable zugreifen, werden diese einzelnen Block Storage zugreifen.
+
+- vor einem strukturierten block
+
+   Ein strukturierter Block ist eine Anweisung aus (einzelne oder zusammengesetzte), die einen einzelnen Eintrag, und eine einzelne beenden. Keine Anweisung ist einem strukturierten Block bei ein Sprung in oder aus dieser Anweisung (einschließlich einen Aufruf von **Longjmp**(3 C) oder die Verwendung der **auslösen**, aber ein Aufruf von **beenden** ist zulässig). Eine verbundanweisung ist einem strukturierten Block aus, wenn die Ausführung immer an das öffnende beginnt **{** und immer endet mit dem schließenden **}**. Eine Ausdrucksanweisung, auswahlanweisung, iterationsanweisung oder **versuchen** Block ist einem strukturierten Block auf, wenn die entsprechende verbundanweisung erworben haben, schließen Sie ihn in **{** und **}** ein strukturierter Block wäre. Eine Jump-Anweisung, die Anweisung mit Bezeichnung oder die deklarationsanweisung ist keinem strukturierten Block.
+
+-  Team
+
+   Ein oder mehrere Threads, die bei der Ausführung eines Konstrukts darstellen.
+
+- Thread
+
+   Eine Ausführung-Entität mit einem seriellen Kontrollfluss, ein Satz von privaten Variablen und Zugriff auf freigegebene Variablen.
+
+- -Variable
+
+   Ein Bezeichner, der optional von Namespace-Namen qualifizierten Namen, die ein Objekt.

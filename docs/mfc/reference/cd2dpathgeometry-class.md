@@ -1,5 +1,5 @@
 ---
-title: CD2DPathGeometry-Klasse | Microsoft Docs
+title: CD2DPathGeometry-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,169 +36,193 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b6d090d6ac85ecc6af36052c0c61fe74a1283c8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 80d4116d71eb92474675968e15846f109b7390f0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953742"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388848"
 ---
 # <a name="cd2dpathgeometry-class"></a>CD2DPathGeometry-Klasse
-Ein Wrapper für ID2D1PathGeometry.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-class CD2DPathGeometry : public CD2DGeometry;  
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CD2DPathGeometry::CD2DPathGeometry](#cd2dpathgeometry)|Erstellt ein CD2DPathGeometry-Objekt.|  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CD2DPathGeometry::Attach](#attach)|Hängt die vorhandene Ressourcenschnittstelle, um das Objekt|  
-|[CD2DPathGeometry::Create](#create)|Erstellt einen CD2DPathGeometry. (Überschreibt [CD2DResource:: Create](../../mfc/reference/cd2dresource-class.md#create).)|  
-|[CD2DPathGeometry::Destroy](#destroy)|Zerstört ein CD2DPathGeometry-Objekt. (Überschreibt [CD2DGeometry:: Destroy](../../mfc/reference/cd2dgeometry-class.md#destroy).)|  
-|[CD2DPathGeometry::Detach](#detach)|Trennt Ressourcenschnittstelle aus dem Objekt|  
-|[CD2DPathGeometry::GetFigureCount](#getfigurecount)|Ruft die Anzahl der Zahlen in der Pfadgeometrie ab.|  
-|[CD2DPathGeometry::GetSegmentCount](#getsegmentcount)|Ruft die Anzahl der Segmente in der Pfadgeometrie ab.|  
-|[CD2DPathGeometry::Open](#open)|Ruft die Geometrie-Ereignissenke, die zum Auffüllen der Pfadgeometrie mit Abbildungen und Segmente verwendet wird.|  
-|[CD2DPathGeometry::Stream](#stream)|Kopiert den Inhalt der Pfadgeometrie auf den angegebenen ID2D1GeometrySink an.|  
-  
-### <a name="protected-data-members"></a>Geschützte Datenmember  
-  
-|name|Beschreibung|  
-|----------|-----------------|  
-|[CD2DPathGeometry::m_pPathGeometry](#m_ppathgeometry)|Ein Zeiger auf eine ID2D1PathGeometry.|  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
-  
- [CD2DGeometry](../../mfc/reference/cd2dgeometry-class.md)  
-  
- `CD2DPathGeometry`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** afxrendertarget.h  
-  
-##  <a name="attach"></a>  CD2DPathGeometry::Attach  
- Hängt die vorhandene Ressourcenschnittstelle, um das Objekt  
-  
-```  
+
+Ein Wrapper für ID2D1PathGeometry.
+
+## <a name="syntax"></a>Syntax
+
+```
+class CD2DPathGeometry : public CD2DGeometry;
+```
+
+## <a name="members"></a>Member
+
+### <a name="public-constructors"></a>Öffentliche Konstruktoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CD2DPathGeometry::CD2DPathGeometry](#cd2dpathgeometry)|Erstellt ein CD2DPathGeometry-Objekt.|
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CD2DPathGeometry::Attach](#attach)|Hängt die vorhandene Ressourcenschnittstelle für das Objekt|
+|[CD2DPathGeometry::Create](#create)|Erstellt eine CD2DPathGeometry an. (Überschreibt [CD2DResource:: Create](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DPathGeometry::Destroy](#destroy)|Zerstört ein CD2DPathGeometry-Objekt. (Überschreibt [CD2DGeometry:: Destroy](../../mfc/reference/cd2dgeometry-class.md#destroy).)|
+|[CD2DPathGeometry::Detach](#detach)|Resource-Schnittstelle aus dem Objekt getrennt|
+|[CD2DPathGeometry::GetFigureCount](#getfigurecount)|Ruft die Anzahl der Zahlen in der Pfadgeometrie ab.|
+|[CD2DPathGeometry::GetSegmentCount](#getsegmentcount)|Ruft die Anzahl der Segmente in der Pfadgeometrie ab.|
+|[CD2DPathGeometry::Open](#open)|Ruft die Geometriesenke, die zum Auffüllen der Pfadgeometrie mit Formen und Segmente verwendet wird.|
+|[CD2DPathGeometry::Stream](#stream)|Kopiert den Inhalt der Pfadgeometrie auf den angegebenen ID2D1GeometrySink an.|
+
+### <a name="protected-data-members"></a>Geschützte Datenmember
+
+|name|Beschreibung|
+|----------|-----------------|
+|[CD2DPathGeometry::m_pPathGeometry](#m_ppathgeometry)|Ein Zeiger auf ein ID2D1PathGeometry.|
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+
+[CD2DGeometry](../../mfc/reference/cd2dgeometry-class.md)
+
+`CD2DPathGeometry`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** afxrendertarget.h
+
+##  <a name="attach"></a>  CD2DPathGeometry::Attach
+
+Hängt die vorhandene Ressourcenschnittstelle für das Objekt
+
+```
 void Attach(ID2D1PathGeometry* pResource);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *pResource*  
- Vorhandene Ressourcenschnittstelle. NULL darf nicht sein  
-  
-##  <a name="cd2dpathgeometry"></a>  CD2DPathGeometry::CD2DPathGeometry  
- Erstellt ein CD2DPathGeometry-Objekt.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+*pResource*<br/>
+Vorhandene Ressourcenschnittstelle. NULL darf nicht sein
+
+##  <a name="cd2dpathgeometry"></a>  CD2DPathGeometry::CD2DPathGeometry
+
+Erstellt ein CD2DPathGeometry-Objekt.
+
+```
 CD2DPathGeometry(
-    CRenderTarget* pParentTarget,  
+    CRenderTarget* pParentTarget,
     BOOL bAutoDestroy = TRUE);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *pParentTarget*  
- Ein Zeiger auf das Renderziel.  
-  
- *bAutoDestroy*  
- Gibt an, dass das Objekt vom Besitzer (pParentTarget) zerstört wird.  
-  
-##  <a name="create"></a>  CD2DPathGeometry::Create  
- Erstellt einen CD2DPathGeometry.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+*pParentTarget*<br/>
+Ein Zeiger auf das Renderziel.
+
+*bAutoDestroy*<br/>
+Gibt an, dass vom Besitzer (pParentTarget) das Objekt zerstört wird.
+
+##  <a name="create"></a>  CD2DPathGeometry::Create
+
+Erstellt eine CD2DPathGeometry an.
+
+```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *pRenderTarget*  
- Ein Zeiger auf das Renderziel.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Wenn die Methode erfolgreich ist, wird S_OK zurückgegeben. Andernfalls wird einen HRESULT-Fehlercode zurückgegeben.  
-  
-##  <a name="destroy"></a>  CD2DPathGeometry::Destroy  
- Zerstört ein CD2DPathGeometry-Objekt.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+*pRenderTarget*<br/>
+Ein Zeiger auf das Renderziel.
+
+### <a name="return-value"></a>Rückgabewert
+
+Wenn die Methode erfolgreich ist, wird S_OK zurückgegeben. Andernfalls wird einen HRESULT-Fehlercode zurückgegeben.
+
+##  <a name="destroy"></a>  CD2DPathGeometry::Destroy
+
+Zerstört ein CD2DPathGeometry-Objekt.
+
+```
 virtual void Destroy();
-```  
-  
-##  <a name="detach"></a>  CD2DPathGeometry::Detach  
- Trennt Ressourcenschnittstelle aus dem Objekt  
-  
-```  
+```
+
+##  <a name="detach"></a>  CD2DPathGeometry::Detach
+
+Resource-Schnittstelle aus dem Objekt getrennt
+
+```
 ID2D1PathGeometry* Detach();
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Zeiger auf getrennten Ressourcenschnittstelle.  
-  
-##  <a name="getfigurecount"></a>  CD2DPathGeometry::GetFigureCount  
- Ruft die Anzahl der Zahlen in der Pfadgeometrie ab.  
-  
-```  
-int GetFigureCount() const;  
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Gibt die Anzahl der Zahlen in der Pfadgeometrie zurück.  
-  
-##  <a name="getsegmentcount"></a>  CD2DPathGeometry::GetSegmentCount  
- Ruft die Anzahl der Segmente in der Pfadgeometrie ab.  
-  
-```  
-int GetSegmentCount() const;  
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Gibt die Anzahl der Segmente in der Pfadgeometrie zurück.  
-  
-##  <a name="m_ppathgeometry"></a>  CD2DPathGeometry::m_pPathGeometry  
- Ein Zeiger auf eine ID2D1PathGeometry.  
-  
-```  
-ID2D1PathGeometry* m_pPathGeometry;  
-```  
-  
-##  <a name="open"></a>  CD2DPathGeometry::Open  
- Ruft die Geometrie-Ereignissenke, die zum Auffüllen der Pfadgeometrie mit Abbildungen und Segmente verwendet wird.  
-  
-```  
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Zeiger auf getrennten Resource-Schnittstelle.
+
+##  <a name="getfigurecount"></a>  CD2DPathGeometry::GetFigureCount
+
+Ruft die Anzahl der Zahlen in der Pfadgeometrie ab.
+
+```
+int GetFigureCount() const;
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Gibt die Anzahl der Zahlen in der Pfadgeometrie zurück.
+
+##  <a name="getsegmentcount"></a>  CD2DPathGeometry::GetSegmentCount
+
+Ruft die Anzahl der Segmente in der Pfadgeometrie ab.
+
+```
+int GetSegmentCount() const;
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Gibt die Anzahl der Segmente in der Pfadgeometrie zurück.
+
+##  <a name="m_ppathgeometry"></a>  CD2DPathGeometry::m_pPathGeometry
+
+Ein Zeiger auf ein ID2D1PathGeometry.
+
+```
+ID2D1PathGeometry* m_pPathGeometry;
+```
+
+##  <a name="open"></a>  CD2DPathGeometry::Open
+
+Ruft die Geometriesenke, die zum Auffüllen der Pfadgeometrie mit Formen und Segmente verwendet wird.
+
+```
 ID2D1GeometrySink* Open();
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die ID2D1GeometrySink, die zum Auffüllen der Pfadgeometrie mit Abbildungen und Segmente verwendet wird.  
-  
-##  <a name="stream"></a>  CD2DPathGeometry::Stream  
- Kopiert den Inhalt der Pfadgeometrie auf den angegebenen ID2D1GeometrySink an.  
-  
-```  
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein Zeiger auf die ID2D1GeometrySink, die zum Auffüllen der Pfadgeometrie mit Formen und Segmente verwendet wird.
+
+##  <a name="stream"></a>  CD2DPathGeometry::Stream
+
+Kopiert den Inhalt der Pfadgeometrie auf den angegebenen ID2D1GeometrySink an.
+
+```
 BOOL Stream(ID2D1GeometrySink* geometrySink);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *geometrySink*  
- Die Senke, die in der Inhalt der Pfadgeometrie kopiert werden. Ändern diese Senke ändert sich nicht auf den Inhalt dieser Pfadgeometrie aus.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Wenn die Methode erfolgreich ist, wird "Wahr" zurückgegeben. Andernfalls wird "false" zurückgegeben.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassen](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>Parameter
+
+*geometrySink*<br/>
+Die Senke, die auf die der Pfadgeometrie Inhalt kopiert wird. Ändern diese Senke ändert sich nicht auf den Inhalt dieser Geometrie Pfad aus.
+
+### <a name="return-value"></a>Rückgabewert
+
+Wenn die Methode erfolgreich ist, wird "true" zurückgegeben. Andernfalls wird FALSE zurückgegeben.
+
+## <a name="see-also"></a>Siehe auch
+
+[Klassen](../../mfc/reference/mfc-classes.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1117ba3933d714486f314510d0288f0c63bf4b8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 029528baabcc32c14fb6b35e4a13f4118602d5d5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202375"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417799"
 ---
 # <a name="asyncuuid"></a>async_uuid
 
@@ -38,7 +38,7 @@ Gibt an, die UUID, die den MIDL-Compiler definiert synchrone und asynchrone Vers
 
 ### <a name="parameters"></a>Parameter
 
-*uuid*  
+*uuid*<br/>
 Eine UUID, die die Version der Schnittstelle angibt.
 
 ## <a name="remarks"></a>Hinweise
@@ -74,5 +74,5 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 
 ## <a name="see-also"></a>Siehe auch
 
-[IDL-Attribute](../windows/idl-attributes.md)  
+[IDL-Attribute](../windows/idl-attributes.md)<br/>
 [Schnittstellenattribut](../windows/interface-attributes.md)  

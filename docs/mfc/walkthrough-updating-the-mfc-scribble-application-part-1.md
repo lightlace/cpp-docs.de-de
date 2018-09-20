@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce50d2c70107b4c88f223e32fdd8cc083df38840
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e2a780719e106c6045d1f80227045ab40607b336
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685544"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426542"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 1)
 
@@ -292,5 +292,5 @@ Sie haben das klassische MFC-Beispiel Scribble 1.0 so geändert, das der Menüba
 
 ## <a name="see-also"></a>Siehe auch
 
-[Exemplarische Vorgehensweisen](../mfc/walkthroughs-mfc.md)  
-[Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 2)] (.. / mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)  
+[Exemplarische Vorgehensweisen](../mfc/walkthroughs-mfc.md)<br/>
+[Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 2)] (.. / mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)

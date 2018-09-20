@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2710609cbf20861c77dae1cb0aea327983efef6e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9142ba85a78259c0a6e5ae06f3745d414e62e908
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098172"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425626"
 ---
 # <a name="smart-pointers-modern-c"></a>Intelligente Zeiger (Modern C++)
 
@@ -86,29 +86,39 @@ Verwenden Sie vorrangig diese intelligenten Zeiger zum Kapseln von Zeigern auf e
 
 Wenn Sie mit COM-Objekten arbeiten, sollten Sie Schnittstellenzeiger mit einem geeigneten Typ eines intelligenten Zeigers kapseln. Die ATL (Active Template Library) definiert mehrere intelligente Zeiger für verschiedene Zwecke. Sie können auch den Typ `_com_ptr_t` eines intelligenten Zeigers verwenden, den der Compiler einsetzt, wenn er Wrapperklassen von .tlb-Dateien erstellt. Er ist die beste Wahl, wenn Sie die ATL-Headerdateien nicht einschließen möchten.
 
-[CComPtr-Klasse](../atl/reference/ccomptr-class.md) verwenden Sie diese Option, es sei denn, Sie ATL nicht verwenden können Führt Referenzzählung mithilfe der Methoden `AddRef` und `Release` aus. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen und Verwenden von CComPtr- und CComQIPtr-Instanzen](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
+[CComPtr-Klasse](../atl/reference/ccomptr-class.md)<br/>
+Verwenden Sie diesen, sofern Sie ATL nicht verwenden können. Führt Referenzzählung mithilfe der Methoden `AddRef` und `Release` aus. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen und Verwenden von CComPtr- und CComQIPtr-Instanzen](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
 
-[CComQIPtr-Klasse](../atl/reference/ccomqiptr-class.md) Resembles `CComPtr` bietet jedoch auch vereinfachte Syntax zum Aufrufen `QueryInterface` für COM-Objekte. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen und Verwenden von CComPtr- und CComQIPtr-Instanzen](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
+[CComQIPtr-Klasse](../atl/reference/ccomqiptr-class.md)<br/>
+Ähnelt `CComPtr`, stellt jedoch zusätzlich vereinfachte Syntax zum Aufrufen von `QueryInterface` in COM-Objekten bereit. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen und Verwenden von CComPtr- und CComQIPtr-Instanzen](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
 
-[CComHeapPtr-Klasse](../atl/reference/ccomheapptr-class.md) intelligenter Zeiger auf Objekte, mit denen `CoTaskMemFree` um Arbeitsspeicher freizugeben.
+[CComHeapPtr-Klasse](../atl/reference/ccomheapptr-class.md)<br/>
+Intelligenter Zeiger auf Objekte, die `CoTaskMemFree` verwenden, um Arbeitsspeicher freizugeben.
 
-[CComGITPtr-Klasse](../atl/reference/ccomgitptr-class.md) intelligenter Zeiger für Schnittstellen, die aus der globalen Schnittstellentabelle (GIT) abgerufen werden.
+[CComGITPtr-Klasse](../atl/reference/ccomgitptr-class.md)<br/>
+Intelligenter Zeiger für Schnittstellen, die aus der globalen Schnittstellentabelle (Global Interface Table, Git) abgerufen werden.
 
-[_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md) Resembles `CComQIPtr` an der Funktionalität, aber nicht von ATL-Headern abhängig ist.
+[_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md)<br/>
+Ähnelt `CComQIPtr` bezüglich der Funktionalität, ist jedoch nicht von ATL-Headern abhängig.
 
 ### <a name="atl-smart-pointers-for-poco-objects"></a>Intelligente Zeiger der ATL für POCO-Objekte
 
 Zusätzlich zu den intelligenten Zeigern für COM-Objekte definiert ATL auch intelligente Zeiger sowie Auflistungen von intelligenten Zeigern für einfache alte C++-Objekte. In der klassischen Windows-Programmierung werden diese Typen nützliche Alternativen zu den C++-Standardbibliothek-Auflistungen, insbesondere wenn Codeportabilität nicht erforderlich ist, oder wenn Sie nicht, kombinieren Sie die Programmiermodelle von der C++-Standardbibliothek und ATL möchten
 
-[CAutoPtr-Klasse](../atl/reference/cautoptr-class.md) intelligenter Zeiger, der eindeutigen Besitz erzwingt, indem Sie die Kopie übertragen. Vergleichbar mit der veralteten `std::auto_ptr`-Klasse.
+[CAutoPtr-Klasse](../atl/reference/cautoptr-class.md)<br/>
+Intelligenter Zeiger, der eindeutigen Besitz erzwingt, indem er den Besitz auf die Kopie überträgt. Vergleichbar mit der veralteten `std::auto_ptr`-Klasse.
 
-[CHeapPtr-Klasse](../atl/reference/cheapptr-class.md) intelligenter Zeiger für Objekte, die zugewiesen werden, mit der C [Malloc](../c-runtime-library/reference/malloc.md) Funktion.
+[CHeapPtr-Klasse](../atl/reference/cheapptr-class.md)<br/>
+Intelligenter Zeiger für Objekte, die zugewiesen werden, mit der C [Malloc](../c-runtime-library/reference/malloc.md) Funktion.
 
-[CAutoVectorPtr-Klasse](../atl/reference/cautovectorptr-class.md) intelligenter Zeiger für Arrays, die mit zugeordnet sind `new[]`.
+[CAutoVectorPtr-Klasse](../atl/reference/cautovectorptr-class.md)<br/>
+Intelligenter Zeiger für Arrays, die mit `new[]` zugeordnet werden.
 
-[CAutoPtrArray-Klasse](../atl/reference/cautoptrarray-class.md) Klasse, die ein Array von kapselt `CAutoPtr` Elemente.
+[CAutoPtrArray-Klasse](../atl/reference/cautoptrarray-class.md)<br/>
+Klasse, die ein Array mit `CAutoPtr`-Elementen kapselt.
 
-[CAutoPtrList-Klasse](../atl/reference/cautoptrlist-class.md) Klasse, die Methoden zum Bearbeiten einer Liste von kapselt `CAutoPtr` Knoten.
+[CAutoPtrList-Klasse](../atl/reference/cautoptrlist-class.md)<br/>
+Klasse, die Methoden zum Bearbeiten einer Liste von `CAutoPtr`-Knoten kapselt.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -18,34 +18,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5fbd58954e5b5b0bf16a052e3a667e28f6bc981
-ms.sourcegitcommit: 6e479e33e8fd8e30ea32801edbff2e3415f31bf7
+ms.openlocfilehash: ed3c7ce85d416e1933b79fc618e6bf748eb32b2c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "33383308"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446309"
 ---
 # <a name="using-crebarctrl"></a>Verwenden von CReBarCtrl
-Einem Grundleisten-Steuerelement fungiert als Container für untergeordnete Fenster. Diese untergeordnete Fenster, die häufig für andere Steuerelemente, werden ein Infoleistenband-Steuerelements zugewiesen. Einem Grundleisten-Steuerelement kann eine oder mehrere Bänder, die für jedes Band müssen eine beliebige Kombination von eine Ziehpunktleiste, eine Bitmap, einer textbezeichnung und einem untergeordneten Fenster enthalten. Allerdings darf keine Bänder mehr als ein untergeordnetes Fenster enthalten.  
-  
- Die folgende Abbildung zeigt ein Grundleistensteuerelement, das zwei Bändern. Eine enthält das eine Ziehpunktleiste, eine Beschriftung ("Address") und ein Kombinationsfeld Feld untergeordnetes Fenster. Das andere Band enthält eine Ziehpunktleiste einer textbezeichnung und eine flache Symbolleiste (implementiert mit einem untergeordneten Fenster).  
-  
- ![Grundleisten-Steuerelement mit zwei Bändern](../mfc/media/vc4ruz1.gif "vc4ruz1")  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
-  
--   [CReBar im Vergleich zu CReBarCtrl](../mfc/crebar-vs-crebarctrl.md)  
-  
--   [Erstellen eines Grundleisten-Steuerelements](../mfc/creating-a-rebar-control.md)  
-  
--   [Grundleisten-Steuerelemente und Bänder](../mfc/rebar-controls-and-bands.md)  
-  
--   [Verwenden einer Bildliste mit einem Grundleisten-Steuerelement](../mfc/using-an-image-list-with-a-rebar-control.md)  
-  
--   [Verwenden einer Dialogleiste mit einem Grundleisten-Steuerelement](../mfc/using-a-dialog-bar-with-a-rebar-control.md)  
-  
--   [Verarbeiten von Benachrichtigungsmeldungen in einem Grundleisten-Steuerelement](../mfc/processing-notification-messages-in-a-rebar-control.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Steuerelemente](../mfc/controls-mfc.md)
+
+Einem Grundleisten-Steuerelement fungiert als Container für untergeordnete Fenster. Diese untergeordnete Fenster, die häufig für andere Steuerelemente, werden ein Infoleistenband-Steuerelements zugewiesen. Einem Grundleisten-Steuerelement kann eine oder mehrere Bänder, die für jedes Band müssen eine beliebige Kombination von eine Ziehpunktleiste, eine Bitmap, einer textbezeichnung und einem untergeordneten Fenster enthalten. Allerdings darf keine Bänder mehr als ein untergeordnetes Fenster enthalten.
+
+Die folgende Abbildung zeigt ein Grundleistensteuerelement, das zwei Bändern. Eine enthält das eine Ziehpunktleiste, eine Beschriftung ("Address") und ein Kombinationsfeld Feld untergeordnetes Fenster. Das andere Band enthält eine Ziehpunktleiste einer textbezeichnung und eine flache Symbolleiste (implementiert mit einem untergeordneten Fenster).
+
+![Grundleisten-Steuerelement mit zwei Bändern](../mfc/media/vc4ruz1.gif "vc4ruz1")
+
+## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+
+- [CReBar im Vergleich zu CReBarCtrl](../mfc/crebar-vs-crebarctrl.md)
+
+- [Erstellen eines Grundleisten-Steuerelements](../mfc/creating-a-rebar-control.md)
+
+- [Grundleisten-Steuerelemente und Bänder](../mfc/rebar-controls-and-bands.md)
+
+- [Verwenden einer Bildliste mit einem Grundleisten-Steuerelement](../mfc/using-an-image-list-with-a-rebar-control.md)
+
+- [Verwenden einer Dialogleiste mit einem Grundleisten-Steuerelement](../mfc/using-a-dialog-bar-with-a-rebar-control.md)
+
+- [Verarbeiten von Benachrichtigungsmeldungen in einem Grundleisten-Steuerelement](../mfc/processing-notification-messages-in-a-rebar-control.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Steuerelemente](../mfc/controls-mfc.md)
 

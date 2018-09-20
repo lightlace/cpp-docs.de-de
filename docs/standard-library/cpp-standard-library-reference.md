@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcf760219f06ab71684d9d67240712fa501b3c00
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0c38485e84f0b06e79e02ba780926b6e08378220
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722604"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392917"
 ---
 # <a name="c-standard-library-reference"></a>C++-Standardbibliotheksreferenz
 
@@ -32,10 +32,13 @@ Weitere Informationen zu Visual C++-Laufzeitbibliotheken finden Sie unter [CRT-B
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md) bietet eine Übersicht über die Microsoft-Implementierung der C++-Standardbibliothek.
+[Überblick über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)<br/>
+Bietet eine Übersicht der Implementierung von Microsoft für die C++-Standardbibliothek
 
-[Iostream-Programmierung](../standard-library/iostream-programming.md) bietet einen Überblick über die Iostream-Programmierung.
+[iostream-Programmierung](../standard-library/iostream-programming.md)<br/>
+Übersicht über E/A-Streamprogrammierung.
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md) enthält Links zu Referenzthemen, auf die C++-Standardbibliothek-Headerdateien mit Codebeispielen erörtert.
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
+Bietet Links zu Referenzthemen, in denen die Headerdateien der C++-Standardbibliothek mit Codebeispielen erörtert werden.
 
 

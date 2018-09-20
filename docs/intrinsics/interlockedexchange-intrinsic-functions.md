@@ -54,140 +54,146 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7a450d683bfa2c358e26a4109a2e8a75c04e233
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f35e3a435025a9758d1ad713eadcef744333441d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716216"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382426"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedExchange“
-**Microsoft-spezifisch**  
-  
- Generiert eine atomare Anweisung, um einen angegebenen Wert festzulegen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-long _InterlockedExchange(  
-   long volatile * Target,  
-   long Value  
-);  
-long _InterlockedExchange_acq(  
-   long volatile * Target,  
-   long Value  
-);  
-long _InterlockedExchange_HLEAcquire(  
-   long volatile * Target,  
-   long Value  
-);  
-long _InterlockedExchange_HLERelease(  
-   long volatile * Target,  
-   long Value  
-);  
-long _InterlockedExchange_nf(  
-   long volatile * Target,  
-   long Value  
-);  
-long _InterlockedExchange_rel(  
-   long volatile * Target,  
-   long Value  
-);  
-char _InterlockedExchange8(  
-   char volatile * Target,  
-   char Value  
-);  
-char _InterlockedExchange8_acq(  
-   char volatile * Target,  
-   char Value  
-);  
-char _InterlockedExchange8_nf(  
-   char volatile * Target,  
-   char Value  
-);  
-char _InterlockedExchange8_rel(  
-   char volatile * Target,  
-   char Value  
-);  
-short _InterlockedExchange16(  
-   short volatile * Target,  
-   short Value  
-);  
-short _InterlockedExchange16_acq(  
-   short volatile * Target,  
-   short Value  
-);  
-short _InterlockedExchange16_nf(  
-   short volatile * Target,  
-   short Value  
-);  
-short _InterlockedExchange16_rel(  
-   short volatile * Target,  
-   short Value  
-);  
-__int64 _InterlockedExchange64(  
-   __int64 volatile * Target,  
-   __int64 Value  
-);  
-__int64 _InterlockedExchange64_acq(  
-   __int64 volatile * Target,  
-   __int64 Value  
-);  
-__int64 _InterlockedExchange64_HLEAcquire(  
-   __int64 volatile * Target,  
-   __int64 Value  
-);  
-__int64 _InterlockedExchange64_HLERelease(  
-   __int64 volatile * Target,  
-   __int64 Value  
-);  
-__int64 _InterlockedExchange64_nf(  
-   __int64 volatile * Target,  
-   __int64 Value  
-);  
-__int64 _InterlockedExchange64_rel(  
-   __int64 volatile * Target,  
-   __int64 Value  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+
+**Microsoft-spezifisch**
+
+Generiert eine atomare Anweisung, um einen angegebenen Wert festzulegen.
+
+## <a name="syntax"></a>Syntax
+
+```
+long _InterlockedExchange(
+   long volatile * Target,
+   long Value
+);
+long _InterlockedExchange_acq(
+   long volatile * Target,
+   long Value
+);
+long _InterlockedExchange_HLEAcquire(
+   long volatile * Target,
+   long Value
+);
+long _InterlockedExchange_HLERelease(
+   long volatile * Target,
+   long Value
+);
+long _InterlockedExchange_nf(
+   long volatile * Target,
+   long Value
+);
+long _InterlockedExchange_rel(
+   long volatile * Target,
+   long Value
+);
+char _InterlockedExchange8(
+   char volatile * Target,
+   char Value
+);
+char _InterlockedExchange8_acq(
+   char volatile * Target,
+   char Value
+);
+char _InterlockedExchange8_nf(
+   char volatile * Target,
+   char Value
+);
+char _InterlockedExchange8_rel(
+   char volatile * Target,
+   char Value
+);
+short _InterlockedExchange16(
+   short volatile * Target,
+   short Value
+);
+short _InterlockedExchange16_acq(
+   short volatile * Target,
+   short Value
+);
+short _InterlockedExchange16_nf(
+   short volatile * Target,
+   short Value
+);
+short _InterlockedExchange16_rel(
+   short volatile * Target,
+   short Value
+);
+__int64 _InterlockedExchange64(
+   __int64 volatile * Target,
+   __int64 Value
+);
+__int64 _InterlockedExchange64_acq(
+   __int64 volatile * Target,
+   __int64 Value
+);
+__int64 _InterlockedExchange64_HLEAcquire(
+   __int64 volatile * Target,
+   __int64 Value
+);
+__int64 _InterlockedExchange64_HLERelease(
+   __int64 volatile * Target,
+   __int64 Value
+);
+__int64 _InterlockedExchange64_nf(
+   __int64 volatile * Target,
+   __int64 Value
+);
+__int64 _InterlockedExchange64_rel(
+   __int64 volatile * Target,
+   __int64 Value
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
 *Target*<br/>
-[in, out] Zeiger auf den Wert ausgetauscht werden sollen. Die Funktion legt diese Variable auf `Value` fest und gibt ihren vorherigen Wert zurück.  
-  
+[in, out] Zeiger auf den Wert ausgetauscht werden sollen. Die Funktion legt diese Variable auf `Value` fest und gibt ihren vorherigen Wert zurück.
+
 *Wert*<br/>
-[in] Wert, der mit dem Wert ausgetauscht werden verweist `Target`.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Gibt den Anfangswert zurück, auf den von `Target` gezeigt wird.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Systemintern|Architektur|Header|  
-|---------------|------------------|------------|  
-|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|X86, ARM, x64|\<intrin.h>|  
-|`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM|\<intrin.h>|  
-|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`, `_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x86, x64|\<immintrin.h>|  
-  
-## <a name="remarks"></a>Hinweise  
- `_InterlockedExchange` bietet systeminterne compilerunterstützung für die Win32-Windows-SDK [InterlockedExchange](/windows/desktop/api/winbase/nf-winbase-interlockedexchange) Funktion.  
-  
- Es gibt mehrere Varianten von `_InterlockedExchange`, die sich basierend auf den beinhalteten Datentypen und in Abhängigkeit davon unterscheiden, ob prozessorspezifische Semantiken zum Abrufen bzw. Freigeben verwendet werden.  
-  
- Die `_InterlockedExchange`-Funktion funktioniert mit ganzzahligen 32-Bit-Werten, `_InterlockedExchange8` funktioniert mit ganzzahligen 8-Bit-Werten, `_InterlockedExchange16` funktioniert mit ganzzahligen 16-Bit-Werten, und `_InterlockedExchange64` funktioniert mit ganzzahligen 64-Bit-Werten.  
-  
- Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel` für Semantiken zum Abrufen bzw. Freigeben, z. B. am Beginn und am Ende eines kritischen Abschnitts. Die systeminternen Funktionen mit einer `_nf`-Suffix ("no fence") fungieren nicht als Speicherbarriere.  
-  
- Auf Intel-Plattformen, die Hardware Lock Elision (HLE)-Anweisungen unterstützen, enthalten die systeminternen Funktionen mit den Suffixen `_HLEAcquire` und `_HLERelease` einen Hinweis für den Prozessor, wie die Leistung durch den Wegfall der Schreibsperre in der Hardware beschleunigt werden kann. Wenn diese systeminternen Funktionen auf Plattformen aufgerufen werden, die HLE nicht unterstützen, wird der Hinweis ignoriert.  
-  
- Diese Routinen sind nur als systeminterne Funktionen verfügbar.  
-  
-## <a name="example"></a>Beispiel  
- Ein Beispiel zur Verwendung `_InterlockedExchange`, finden Sie unter [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
-  
-**Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)   
- [Stichwörter](../cpp/keywords-cpp.md)   
- [Konflikt mit dem x86-Compiler](../build/conflicts-with-the-x86-compiler.md)
+[in] Wert, der mit dem Wert ausgetauscht werden verweist `Target`.
+
+## <a name="return-value"></a>Rückgabewert
+
+Gibt den Anfangswert zurück, auf den von `Target` gezeigt wird.
+
+## <a name="requirements"></a>Anforderungen
+
+|Systemintern|Architektur|Header|
+|---------------|------------------|------------|
+|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|X86, ARM, x64|\<intrin.h>|
+|`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM|\<intrin.h>|
+|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`, `_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x86, x64|\<immintrin.h>|
+
+## <a name="remarks"></a>Hinweise
+
+`_InterlockedExchange` bietet systeminterne compilerunterstützung für die Win32-Windows-SDK [InterlockedExchange](/windows/desktop/api/winbase/nf-winbase-interlockedexchange) Funktion.
+
+Es gibt mehrere Varianten von `_InterlockedExchange`, die sich basierend auf den beinhalteten Datentypen und in Abhängigkeit davon unterscheiden, ob prozessorspezifische Semantiken zum Abrufen bzw. Freigeben verwendet werden.
+
+Die `_InterlockedExchange`-Funktion funktioniert mit ganzzahligen 32-Bit-Werten, `_InterlockedExchange8` funktioniert mit ganzzahligen 8-Bit-Werten, `_InterlockedExchange16` funktioniert mit ganzzahligen 16-Bit-Werten, und `_InterlockedExchange64` funktioniert mit ganzzahligen 64-Bit-Werten.
+
+Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel` für Semantiken zum Abrufen bzw. Freigeben, z. B. am Beginn und am Ende eines kritischen Abschnitts. Die systeminternen Funktionen mit einer `_nf`-Suffix ("no fence") fungieren nicht als Speicherbarriere.
+
+Auf Intel-Plattformen, die Hardware Lock Elision (HLE)-Anweisungen unterstützen, enthalten die systeminternen Funktionen mit den Suffixen `_HLEAcquire` und `_HLERelease` einen Hinweis für den Prozessor, wie die Leistung durch den Wegfall der Schreibsperre in der Hardware beschleunigt werden kann. Wenn diese systeminternen Funktionen auf Plattformen aufgerufen werden, die HLE nicht unterstützen, wird der Hinweis ignoriert.
+
+Diese Routinen sind nur als systeminterne Funktionen verfügbar.
+
+## <a name="example"></a>Beispiel
+
+Ein Beispiel zur Verwendung `_InterlockedExchange`, finden Sie unter [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
+[Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
+[Konflikt mit dem x86-Compiler](../build/conflicts-with-the-x86-compiler.md)

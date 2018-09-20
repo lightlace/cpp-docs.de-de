@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46b09b5cbe74849c3dc08e8faee3ee4ca645a55b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 13ce7d2a35245716adc70b9e84532ea7d1a4a440
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602933"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432404"
 ---
 # <a name="delegate--c-component-extensions"></a>delegate (Komponentenerweiterungen für C++)
 
@@ -57,16 +57,16 @@ delegate-type-identifier
 
 ### <a name="parameters"></a>Parameter
 
-*Zugriff*  
+*Zugriff*<br/>
 (optional) Der Zugriff auf den Delegaten, der sein kann **öffentliche** (Standard) oder **private**. Der Funktionsprototyp kann auch qualifiziert werden, mit der **const** oder **flüchtige** Schlüsselwörter.
 
-*Rückgabetyp*  
+*Rückgabetyp*<br/>
 Der Rückgabetyp von den Funktionsprototyp.
 
-*Delegate-Type-identifier*  
+*Delegate-Type-identifier*<br/>
 Der Name des der deklarierten Delegattyp.
 
-*Parameter*  
+*Parameter*<br/>
 (Optional) Die Typen und Bezeichner, der den Funktionsprototyp.
 
 ### <a name="remarks"></a>Hinweise
@@ -91,10 +91,10 @@ function_declaration
 
 ### <a name="parameters"></a>Parameter
 
-*Zugriff*  
+*Zugriff*<br/>
 (optional) Der Zugriff auf den Delegaten außerhalb der Assembly kann öffentlich oder privat sein.  Der Standardwert ist privat.  Innerhalb einer Klasse kann ein Delegat aller Zugriffsebenen verfügen.
 
-*function_declaration*  
+*function_declaration*<br/>
 Die Signatur der Funktion, die an den Delegaten gebunden werden kann. Der Rückgabetyp eines Delegaten kann es sich um einen verwalteten Typ sein. Aus Gründen der Interoperabilität empfiehlt es sich, dass der Rückgabetyp eines Delegaten ein CLS-Typ sein.
 
 Definieren Sie einen ungebundenen Delegaten, der erste Parameter im *Function_declaration* muss der Typ des der **dies** Zeiger für das Objekt.

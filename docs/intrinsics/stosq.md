@@ -18,78 +18,82 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03c38c5328500394871bee937cbc05395eb44cd5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8f8aa8c1fd1a5dad6fd70c566cb59bf8dddc4cc3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715506"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380131"
 ---
 # <a name="stosq"></a>__stosq
-**Microsoft-spezifisch**  
-  
- Generiert eine Store-Zeichenfolge-Anweisung (`rep stosq`).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void __stosb(   
-   unsigned __int64* Dest,   
-   unsigned __int64 Data,   
-   size_t Count   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+
+**Microsoft-spezifisch**
+
+Generiert eine Store-Zeichenfolge-Anweisung (`rep stosq`).
+
+## <a name="syntax"></a>Syntax
+
+```
+void __stosb( 
+   unsigned __int64* Dest, 
+   unsigned __int64 Data, 
+   size_t Count 
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
 *dest*<br/>
-[out] Das Ziel des Vorgangs.  
-  
+[out] Das Ziel des Vorgangs.
+
 *Data*<br/>
-[in] Die zu speichernden Daten.  
-  
+[in] Die zu speichernden Daten.
+
 *Anzahl*<br/>
-[in] Die Länge des Blocks des Vierfachwörtern schreiben.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Systemintern|Architektur|  
-|---------------|------------------|  
-|`__stosq`|AMD64|  
-  
- **Headerdatei** \<intrin.h >  
-  
-## <a name="remarks"></a>Hinweise  
- Das Ergebnis ist, die die Vierfachwort `Data` wird geschrieben, in einen Block von `Count` Vierfachwörtern in die `Dest` Zeichenfolge.  
-  
- Diese Routine ist nur als systeminterne Funktion verfügbar.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// stosq.c  
-// processor: x64  
-#include <stdio.h>  
-#include <intrin.h>  
-  
-#pragma intrinsic(__stosq)  
-  
-int main()  
-{  
-   unsigned __int64 val = 0xFFFFFFFFFFFFI64;  
-   unsigned __int64 a[10];  
-   memset(a, 0, sizeof(a));  
-   __stosq(a+1, val, 2);  
-   printf("%I64x %I64x %I64x %I64x", a[0], a[1], a[2], a[3]);   
-}  
-```  
-  
-## <a name="output"></a>Ausgabe  
-  
-```  
-0 ffffffffffff ffffffffffff 0  
-```  
-  
-**Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[in] Die Länge des Blocks des Vierfachwörtern schreiben.
+
+## <a name="requirements"></a>Anforderungen
+
+|Systemintern|Architektur|
+|---------------|------------------|
+|`__stosq`|AMD64|
+
+**Headerdatei** \<intrin.h >
+
+## <a name="remarks"></a>Hinweise
+
+Das Ergebnis ist, die die Vierfachwort `Data` wird geschrieben, in einen Block von `Count` Vierfachwörtern in die `Dest` Zeichenfolge.
+
+Diese Routine ist nur als systeminterne Funktion verfügbar.
+
+## <a name="example"></a>Beispiel
+
+```
+// stosq.c
+// processor: x64
+#include <stdio.h>
+#include <intrin.h>
+
+#pragma intrinsic(__stosq)
+
+int main()
+{
+   unsigned __int64 val = 0xFFFFFFFFFFFFI64;
+   unsigned __int64 a[10];
+   memset(a, 0, sizeof(a));
+   __stosq(a+1, val, 2);
+   printf("%I64x %I64x %I64x %I64x", a[0], a[1], a[2], a[3]);
+}
+```
+
+## <a name="output"></a>Ausgabe
+
+```
+0 ffffffffffff ffffffffffff 0
+```
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

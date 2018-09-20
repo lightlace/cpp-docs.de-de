@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 037200c509574199dbecf56c950590e00e7aa71f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 875bc3163bc579c7d6da8055a0a24275e8be92a1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313610"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393853"
 ---
 # <a name="attributes-by-usage"></a>Attribute nach Verwendung
 
@@ -43,7 +43,7 @@ Wenn ein Attribut ein Visual C++-Element vorangestellt, die nicht im Bereich fü
 
 ## <a name="see-also"></a>Siehe auch
 
-[C++-Attributreferenz](../windows/cpp-attributes-reference.md)  
-[Konzepte](../windows/attributed-programming-concepts.md)  
-[Attribute nach Gruppen](../windows/attributes-by-group.md)  
+[C++-Attributreferenz](../windows/cpp-attributes-reference.md)<br/>
+[Konzepte](../windows/attributed-programming-concepts.md)<br/>
+[Attribute nach Gruppen](../windows/attributes-by-group.md)<br/>
 [Alphabetische Attributreferenz](../windows/attributes-alphabetical-reference.md)

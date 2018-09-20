@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 116ddca6ed9f5e0b3ea02652958931f88cc8fc13
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5935c0642ba0cd69992c68c521d284c3e8733ce4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703221"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390031"
 ---
 # <a name="cc-building-reference"></a>Referenz zur C/C++-Erstellung
 
@@ -32,40 +32,58 @@ Wenn Ihr Programm eine VCXPROJ-Datei, anstatt ein Makefile verwendet wird, könn
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Kompilieren eines C/C++-Programms](../../build/reference/compiling-a-c-cpp-program.md) beschreibt den Compiler an, die eine Objektdatei mit Computercode, Linkerdirektiven, Abschnitte, externe Verweise und Namen von Funktionen/Daten erstellt.
+[Kompilieren eines C/C++-Programms](../../build/reference/compiling-a-c-cpp-program.md)<br/>
+Beschreibt den Compiler, der eine Objektdatei mit Computercode, Linkerdirektiven, Abschnitte, externe Verweise und Namen von Funktionen/Daten erstellt.
 
-[Verknüpfen von](../../build/reference/linking.md) beschreibt den Linker an, der Code aus der Objektdateien, die vom Compiler erstellt wird und statisch verknüpfte Bibliotheken kombiniert wird, löst die Namensverweise und erstellt eine ausführbare Datei.
+[Verknüpfen](../../build/reference/linking.md)<br/>
+Beschreibt den Linker an, der Code aus der Objektdateien, die vom Compiler erstellt wird und statisch verknüpfte Bibliotheken kombiniert wird, löst die Namensverweise, und erstellt eine ausführbare Datei.
 
-[Releasebuilds](../../build/reference/release-builds.md) zeigt Informationen zu warum und wann Sie von einem Debugbuild in ein Releasebuild ändern möchten, und erörtert einige der Probleme auftreten, wenn von einer Debugversion in einem Releasebuild ändern.
+[Releasebuilds](../../build/reference/release-builds.md)<br/>
+Enthält Informationen dazu, warum und wann Sie von einem Debugbuild ändern möchten, einen Releasebuild zu erstellen und erörtert einige der Probleme, die möglicherweise auftreten, wenn von einer Debugversion in einem Releasebuild ändern.
 
-[Optimieren Sie Ihren Code](../../build/reference/optimizing-your-code.md) enthält Links zu Themen, in denen die Mechanismen zur Optimierung von Code:
+[Codeoptimierung](../../build/reference/optimizing-your-code.md)<br/>
+Enthält Links zu Themen, in denen die Mechanismen zur Optimierung von Code:
 
-[C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md) bietet die folgenden Befehlszeilentools zum Anzeigen oder Bearbeiten von Build-Ausgabe:
+[C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md)<br/>
+Bietet die folgenden Befehlszeilentools zum Anzeigen oder Bearbeiten von Build-Ausgabe:
 
-[C/C++-Buildfehler](../../error-messages/compiler-errors-1/c-cpp-build-errors.md) führt den Abschnitt über Build Fehler in der Tabelle des Inhalts.
+[C/C++-Buildfehler](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)<br/>
+Führt den Abschnitt über Build Fehler in der Tabelle des Inhalts an.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-[Referenz zur C/C++-Präprozessor](../../preprocessor/c-cpp-preprocessor-reference.md) beschreibt den Präprozessor an, die Quelldateien für den Compiler vorbereitet, durch die Übersetzung von Makros, Operatoren und Anweisungen.
+[C/C++-Präprozessorreferenz](../../preprocessor/c-cpp-preprocessor-reference.md)<br/>
+Beschreibt den Präprozessor an, der Quelldateien für den Compiler vorbereitet, durch die Übersetzung von Makros, Operatoren und Anweisungen an.
 
-[Grundlagen benutzerdefinierter Buildschritte und Buildereignisse](../../ide/understanding-custom-build-steps-and-build-events.md) Anpassen des Buildprozesses erläutert.
+[Grundlagen benutzerdefinierter Buildschritte und Buildereignisse](../../ide/understanding-custom-build-steps-and-build-events.md)<br/>
+Beschreibt das Anpassen des Buildprozesses.
 
-[Erstellen eines C/C++-Programms](../../build/building-c-cpp-programs.md) enthält Links zu Themen, in denen die programmerstellung über die Befehlszeile oder aus der integrierten Entwicklungsumgebung von Visual Studio.
+[Erstellen eines C/C++-Programms](../../build/building-c-cpp-programs.md)<br/>
+Bietet Links zu Themen, in denen das Erstellen von Programmen über die Befehlszeile oder die integrierte Entwicklungsumgebung von Visual Studio beschrieben sind.
 
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md) Festlegen von Compileroptionen in der Entwicklungsumgebung oder in der Befehlszeile beschrieben.
+[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
+Beschreibt, Festlegen von Compileroptionen in der Entwicklungsumgebung oder in der Befehlszeile.
 
-[Compileroptionen](../../build/reference/compiler-options.md) enthält Links zu Themen über die Verwendung von Compileroptionen.
+[Compileroptionen](../../build/reference/compiler-options.md)<br/>
+Enthält Links zu Themen über die Verwendung von Compileroptionen.
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md) wird beschrieben, Festlegen von Linkeroptionen innerhalb oder außerhalb der integrierten Entwicklungsumgebung.
+[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
+Beschreibt, Festlegen von Linkeroptionen innerhalb oder außerhalb der integrierten Entwicklungsumgebung.
 
-[Optionen des Linkers](../../build/reference/linker-options.md) enthält Links zu Themen über die Verwendung der Optionen des Linkers.
+[Linkeroptionen](../../build/reference/linker-options.md)<br/>
+Enthält Links zu Themen über die Verwendung der Optionen des Linkers.
 
-[BSCMAKE-Referenz](../../build/reference/bscmake-reference.md) beschreibt das Microsoft Browse Information Maintenance-Dienstprogramm (BSCMAKE. (EXE), erstellt die eine Browseinformationsdatei (.bsc) aus SBR-Dateien, die während der Kompilierung erstellt.
+[BSCMAKE-Referenz](../../build/reference/bscmake-reference.md)<br/>
+Beschreibt das Microsoft Browse Information Maintenance-Dienstprogramm (BSCMAKE. (EXE), erstellt die eine Browseinformationsdatei (.bsc) aus SBR-Dateien, die während der Kompilierung erstellt.
 
-[LIB-Referenz](../../build/reference/lib-reference.md) wird beschrieben, die Microsoft Bibliotheksverwaltung (LIB.exe), die erstellt und verwaltet eine Bibliothek mit Objektdateien Common Object File Format (COFF).
+[LIB-Referenz](../../build/reference/lib-reference.md)<br/>
+Beschreibt die Microsoft Bibliotheksverwaltung (LIB.exe), die erstellt und verwaltet eine Bibliothek mit Objektdateien Common Object File Format (COFF).
 
-[EDITBIN-Referenz](../../build/reference/editbin-reference.md) wird beschrieben, die Microsoft COFF-Binärdatei-Editor (EDITBIN. (EXE), ändert der Binärdateien Common Object File Format (COFF).
+[EDITBIN-Referenz](../../build/reference/editbin-reference.md)<br/>
+Beschreibt die Microsoft COFF-Binär-Editor (EDITBIN. (EXE), ändert der Binärdateien Common Object File Format (COFF).
 
-[DUMPBIN-Referenz](../../build/reference/dumpbin-reference.md) wird beschrieben, die Microsoft COFF-Binärdateidumper (DUMPBIN. (EXE), zeigt die Informationen über Common Object File Format (COFF)-Binärdateien.
+[DUMPBIN-Referenz](../../build/reference/dumpbin-reference.md)<br/>
+Beschreibt die Microsoft COFF-Binärdateidumper (DUMPBIN. (EXE), zeigt die Informationen über Common Object File Format (COFF)-Binärdateien.
 
-[NMAKE-Referenz](../../build/nmake-reference.md) beschreibt das Microsoft Program Maintenance Utility (NMAKE. (EXE), dies ist ein Tool, das Projekte erstellt basierend auf in einer Beschreibungsdatei enthaltenen Befehlen.
+[NMAKE-Referenz](../../build/nmake-reference.md)<br/>
+Beschreibt das Microsoft Program Maintenance Utility (NMAKE. (EXE), dies ist ein Tool, das Projekte erstellt basierend auf in einer Beschreibungsdatei enthaltenen Befehlen.

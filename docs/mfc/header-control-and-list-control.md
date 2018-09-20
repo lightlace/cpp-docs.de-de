@@ -1,5 +1,5 @@
 ---
-title: Headersteuerelement und Listensteuerelement | Microsoft Docs
+title: Headersteuerelement und Listensteuerelement | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,32 +19,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acee0508243f468f41c645a0cde825ca7c828657
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 24d40ea26a6ff52490b4a501a8b62c0aace660b1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931593"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407633"
 ---
 # <a name="header-control-and-list-control"></a>Headersteuerelement und Listensteuerelement
-In den meisten Fällen verwenden Sie das Headersteuerelement, das in eingebettet ist ein [CListCtrl](../mfc/reference/clistctrl-class.md) oder [CListView](../mfc/reference/clistview-class.md) Objekt. Es gibt jedoch Situationen, in denen ein separates Headerobjekt Steuerelement wünschenswert sein, z. B. das Bearbeiten von Daten, die in Spalten oder Zeilen angeordnet sind, einem [CView](../mfc/reference/cview-class.md)-abgeleitetes Objekt. In diesen Fällen benötigen Sie mehr Kontrolle über die Darstellung und das Standardverhalten des eingebetteten Headersteuerelements.  
-  
- In den meisten Fällen, dass Sie dem Headersteuerelement Standard bereitstellen möchten, Standardverhalten, das Sie verwenden möchten [CListCtrl](../mfc/reference/clistctrl-class.md) oder [CListView](../mfc/reference/clistview-class.md) stattdessen. Verwendung `CListCtrl` Wenn Sie die Funktionalität des Standard-Headersteuerelements, eingebettet in einem Listenansicht-Steuerelement allgemeine möchten. Verwendung [CListView](../mfc/reference/clistview-class.md) Wenn Sie die Funktionalität des Standard-Headersteuerelements, eingebettet in einem Objekt anzeigen möchten.  
-  
+
+In den meisten Fällen verwenden Sie das Kopfzeilen-Steuerelement, das in eingebettet ist eine [CListCtrl](../mfc/reference/clistctrl-class.md) oder [CListView](../mfc/reference/clistview-class.md) Objekt. Es gibt jedoch Situationen, in denen ein separates Headerobjekt Steuerelement wünschenswert sein, z. B. zum Bearbeiten von Daten, die in Spalten oder Zeilen angeordnet werden, einem [CView](../mfc/reference/cview-class.md)-abgeleitetes Objekt. In diesen Fällen benötigen Sie größere Kontrolle über die Darstellung und das Standardverhalten von einem eingebetteten Kopfzeilen-Steuerelement.
+
+In den meisten Fällen, dass Sie einem Kopfzeilen-Steuerelement Standard bereitstellen möchten, ein Standardverhalten, das Sie verwenden möchten [CListCtrl](../mfc/reference/clistctrl-class.md) oder [CListView](../mfc/reference/clistview-class.md) stattdessen. Verwendung `CListCtrl` Wenn die Funktionalität von einem standardmäßigen Kopfzeilen-Steuerelement in einem Listenansicht-Steuerelement allgemeine eingebettet werden sollen. Verwendung [CListView](../mfc/reference/clistview-class.md) Wenn die Funktionalität von einem standardmäßigen Kopfzeilen-Steuerelement in ein Objekt eingebettet werden sollen.
+
 > [!NOTE]
->  Diese Steuerelemente nur ein integrierte Headersteuerelement einschließen, wenn Listenansicht-Steuerelement erstellt wird, mit der **LVS_REPORT** Stil.  
-  
- In den meisten Fällen kann die Darstellung des eingebetteten Headersteuerelements geändert werden, durch Ändern der Stile eines enthaltenden Listenansicht-Steuerelement. Darüber hinaus kann Informationen über das Headersteuerelement über Memberfunktionen des übergeordneten Listenansicht-Steuerelement abgerufen werden. Allerdings wird für die vollständige Kontrolle und Zugriff auf die Attribute und-Stile eines eingebetteten Headersteuerelement empfohlen, dass ein Zeiger auf das Headersteuerelement-Objekt abgerufen werden.  
-  
- Das Steuerelementobjekt eingebettete Header kann entweder aus zugegriffen werden `CListCtrl` oder `CListView` mit einem Aufruf von der jeweiligen Klasse `GetHeaderCtrl` Memberfunktion. Der folgende Code veranschaulicht dies:  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#14](../mfc/codesnippet/cpp/header-control-and-list-control_1.cpp)]  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
-  
--   [Verwenden von Image Listen in Headersteuerelementen](../mfc/using-image-lists-with-header-controls.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+>  Diese Steuerelemente umfassen nur eine integrierte Kopfzeilen-Steuerelement, wenn das Listenansicht-Steuerelement erstellt wird, mit der **LVS_REPORT** Stil.
+
+In den meisten Fällen kann die Darstellung von eingebetteten Headersteuerelements geändert werden, durch Ändern der Stile eines mit Listenansicht-Steuerelement. Darüber hinaus kann Informationen zu dem Kopfzeilen-Steuerelement über Memberfunktionen der übergeordneten Listenansicht-Steuerelement abgerufen werden. Allerdings wird für vollständige Kontrolle und -Zugriff, um die Attribute und-Stile eines eingebetteten Headersteuerelement, empfohlen, dass ein Zeiger auf das Headersteuerelement-Objekt abgerufen werden.
+
+Das eingebettete Headersteuerelement-Objekt kann zugegriffen werden, entweder `CListCtrl` oder `CListView` mit einem Aufruf von der jeweiligen Klasse `GetHeaderCtrl` Member-Funktion. Der folgende Code veranschaulicht dies:
+
+[!code-cpp[NVC_MFCControlLadenDialog#14](../mfc/codesnippet/cpp/header-control-and-list-control_1.cpp)]
+
+## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+
+- [Verwenden von Bildlisten in Headersteuerelementen](../mfc/using-image-lists-with-header-controls.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
+[Steuerelemente](../mfc/controls-mfc.md)
 

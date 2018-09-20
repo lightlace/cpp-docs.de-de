@@ -1,5 +1,5 @@
 ---
-title: Eigenschaftendeklaration | Microsoft Docs
+title: Eigenschaftendeklaration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,96 +17,98 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bc2cf76384078e579756abe653fb45fd1e97707f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 019b8eae17952bfe53fd8fbf14db4bafce1bf463
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161576"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438300"
 ---
 # <a name="property-declaration"></a>Eigenschaftendeklaration
-Die Möglichkeit zum Deklarieren einer Eigenschaft in einer verwalteten Klasse wurde von Managed Extensions für C++ in Visual C++ geändert.  
-  
- In Managed Extensions entwerfen, jede `set` oder `get` Eigenschaftenaccessor als unabhängige Methode angegeben ist. Die Deklaration der einzelnen Methoden vorangestellt ist die `__property` Schlüsselwort. Der Name der Methode beginnt entweder mit `set_` oder `get_` gefolgt von den tatsächlichen Namen der Eigenschaft (wie für den Benutzer sichtbar). Folglich eine `Vector` Bereitstellen einer `x` koordinieren `get` Eigenschaft nennen sie `get_x` und der Benutzer würde rufen Sie sie als `x`. Diese Benennungskonvention und die Methoden eine separate Spezifikation tatsächlich wiedergibt die zugrunde liegenden Common Language Runtime-Implementierung der Eigenschaft. Hier ist z. B. unsere `Vector` mit einem Satz von Koordinaten Eigenschaften:  
-  
-```  
-public __gc __sealed class Vector {  
-public:  
-   __property double get_x(){ return _x; }  
-   __property double get_y(){ return _y; }  
-   __property double get_z(){ return _z; }  
-  
-   __property void set_x( double newx ){ _x = newx; }  
-   __property void set_y( double newy ){ _y = newy; }  
-   __property void set_z( double newz ){ _z = newz; }  
-};  
-```  
-  
- Die Funktionen in Zusammenhang mit der Eigenschaft ausbreitet, und erfordert, dass der Benutzer die zugeordneten Sets und ruft lexikalisch vereinheitlichen. Darüber hinaus ist es ausführlich. In der neuen Syntax von c# ähnelt, die `property` Schlüsselwort folgt den Typ der Eigenschaft und ihr einfacher Name. Die `set` und `get` -Zugriffsmethode werden innerhalb eines Blocks nach dem Eigenschaftennamen. Beachten Sie, dass anders als bei c#, die Signatur der Zugriffsmethode angegeben ist. Hier ist z. B. im Codebeispiel oben in der neuen Syntax übersetzt wird.  
-  
-```  
-public ref class Vector sealed {   
-public:  
-   property double x {  
-      double get() {  
-         return _x;  
-      }  
-  
-      void set( double newx ) {  
-         _x = newx;  
-      }  
-   } // Note: no semi-colon  
-};  
-```  
-  
- Die Zugriffsmethoden der Eigenschaft unterschiedliche Zugriffsebenen - wieder, wie z. B. eine `public get` und ein `private` oder `protected set`, eine Bezeichnung explicit Zugriff kann angegeben werden. Standardmäßig gibt die Zugriffsebene der Eigenschaft, die für die einschließende Zugriffsebene wieder. Beispielsweise ist in der obigen Definition von `Vector`, die beide die `get` und `set` Methoden sind `public`. Vornehmen der `set` Methode `protected` oder `private`, die Definition würde wie folgt überarbeitet werden:  
-  
-```  
-public ref class Vector sealed {   
-public:  
-   property double x {  
-      double get() {  
-         return _x;  
-      }  
-  
-   private:  
-      void set( double newx ) {  
-         _x = newx;  
-      }  
-  
-   } // note: extent of private culminates here  
-  
-// note: dot is a public method of Vector  
-double dot( const Vector^ wv );  
-  
-// etc.  
-};  
-```  
-  
- Der Gültigkeitsbereich eines Zugriffsschlüsselworts auf innerhalb einer Eigenschaft erstreckt sich bis zu der schließenden Klammer der Eigenschaft oder die Spezifikation eines Zugriffsschlüsselworts auf zusätzliche. Es ist nicht länger als die Definition der Eigenschaft, die die einschließende Zugriffsebene sein, anhand derer die Eigenschaft definiert ist. In der oben genannten Deklaration, z. B. `Vector::dot()` ist eine öffentliche Methode.  
-  
- Das Schreiben der Set/Get-Eigenschaften für die drei `Vector` Koordinaten umfasst drei Schritte:  
-  
-1.  Deklarieren Sie einen privaten Status-Member des entsprechenden Typs.  
-  
-2.  Geben sie zurück, wenn der Benutzer den Wert abrufen möchte.  
-  
-3.  Weisen sie den neuen Wert.  
-  
- In der neuen Syntax steht eine Kurzsyntax für die Eigenschaft der dieses Nutzungsmuster automatisiert:  
-  
-```  
-public ref class Vector sealed {   
-public:  
-   // equivalent shorthand property syntax  
-   property double x;   
-   property double y;  
-   property double z;  
-};  
-```  
-  
- Interessante Nebeneffekt von der Eigenschaft Kurzsyntax besteht darin, dass obwohl das backstage-Status-Element vom Compiler generiert wird, nicht innerhalb der Klasse mit Ausnahme der Set/Get-Accessoren zugegriffen werden kann.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Memberdeklarationen innerhalb einer Klasse oder Schnittstelle (C + c++ / CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [Eigenschaft](../windows/property-cpp-component-extensions.md)
+
+Die Möglichkeit zum Deklarieren einer Eigenschaft in einer verwalteten Klasse wurde von Managed Extensions für C++ in Visual C++ geändert.
+
+In der Managed Extensions erstellen, von denen jede `set` oder `get` Eigenschaftenaccessor als unabhängige Methode angegeben ist. Die Deklaration der einzelnen Methoden wird mit dem Präfix die `__property` Schlüsselwort. Der Name der Methode beginnt entweder mit `set_` oder `get_` gefolgt von den tatsächlichen Namen der Eigenschaft (wie für den Benutzer sichtbar). Daher eine `Vector` Bereitstellen einer `x` koordinieren `get` Eigenschaft würde nennen Sie sie `get_x` und der Benutzer würde so aufrufen, als `x`. Diese Benennungskonvention und eine separate Spezifikation der Methoden gibt tatsächlich die zugrunde liegenden laufzeitimplementierung der Eigenschaft an. Hier ist z. B. unsere `Vector` mit einem Satz von Koordinaten Eigenschaften:
+
+```
+public __gc __sealed class Vector {
+public:
+   __property double get_x(){ return _x; }
+   __property double get_y(){ return _y; }
+   __property double get_z(){ return _z; }
+
+   __property void set_x( double newx ){ _x = newx; }
+   __property void set_y( double newy ){ _y = newy; }
+   __property void set_z( double newz ){ _z = newz; }
+};
+```
+
+Dies verteilt, die Funktionalität, die mit einer Eigenschaft und muss der Benutzer die zugeordneten Sets und ruft lexikalisch zu vereinheitlichen. Darüber hinaus ist es ausführlich. In der neuen Syntax, handelt es sich eher dem C# -Code, der `property` Schlüsselwort folgt durch den Typ der Eigenschaft und nicht erweiterten Namen. Die `set` und `get` -Zugriffsmethode werden innerhalb eines Blocks nach dem Eigenschaftennamen. Beachten Sie, dass im Gegensatz zu c#, die Signatur der Zugriffsmethode angegeben ist. Hier ist z. B. im obenstehenden Codebeispiel wird in der neuen Syntax übersetzt.
+
+```
+public ref class Vector sealed {
+public:
+   property double x {
+      double get() {
+         return _x;
+      }
+
+      void set( double newx ) {
+         _x = newx;
+      }
+   } // Note: no semi-colon
+};
+```
+
+Die Zugriffsmethoden der Eigenschaft unterschiedliche Zugriffsebenen - wieder, wie z. B. eine `public get` und `private` oder `protected set`, eine Bezeichnung explizit Zugriff kann angegeben werden. Standardmäßig gibt die Zugriffsebene der Eigenschaft, die von der einschließenden Zugriffsebene an. Z. B. in der obigen Definition von `Vector`sowohl die `get` und `set` Methoden sind `public`. Zu den `set` Methode `protected` oder `private`, würde die Definition wie folgt überarbeitet werden:
+
+```
+public ref class Vector sealed {
+public:
+   property double x {
+      double get() {
+         return _x;
+      }
+
+   private:
+      void set( double newx ) {
+         _x = newx;
+      }
+
+   } // note: extent of private culminates here
+
+// note: dot is a public method of Vector
+double dot( const Vector^ wv );
+
+// etc.
+};
+```
+
+Im Rahmen eines Zugriffsschlüsselworts auf innerhalb einer Eigenschaft erweitert, bis die schließende Klammer der Eigenschaft oder die Spezifikation eines Zugriffsschlüsselworts zusätzliche auf. Es geht nicht über die Definition der Eigenschaft, die die einschließende Zugriffsebene hinaus in dem die Eigenschaft definiert ist. In der oben genannten Deklaration, z. B. `Vector::dot()` ist eine öffentliche Methode.
+
+Das Schreiben der festlegen/Abrufen von Eigenschaften für die drei `Vector` Koordinaten umfasst drei Schritte:
+
+1. Deklarieren Sie einen privaten Status-Member des entsprechenden Typs.
+
+1. Wenn der Benutzer wünscht, dass zum Abrufen des Werts zurückgeben.
+
+1. Weisen sie den neuen Wert.
+
+In der neuen Syntax ist steht eine Kurzsyntax für die Eigenschaft der dieses Nutzungsmuster automatisiert:
+
+```
+public ref class Vector sealed {
+public:
+   // equivalent shorthand property syntax
+   property double x;
+   property double y;
+   property double z;
+};
+```
+
+Die interessanten Nebeneffekt, dass die Kurzschreibweise der Syntax-Eigenschaft ist, dass obwohl der statusmember der backstage vom Compiler generiert wird, nicht innerhalb der Klasse nur über die Set/Get-Accessoren.
+
+## <a name="see-also"></a>Siehe auch
+
+[Memberdeklarationen innerhalb einer Klasse oder Schnittstelle (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)<br/>
+[Eigenschaft](../windows/property-cpp-component-extensions.md)

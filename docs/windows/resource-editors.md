@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4dab1ce421582d865895fcec0d55685bdbf30db
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 6b9b9666e9c20e955d8f3705ebd93e7c890d2bc0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315222"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391918"
 ---
 # <a name="resource-editors"></a>Ressourcen-Editor
 
@@ -57,7 +57,7 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Arbeiten mit Ressourcendateien](../windows/working-with-resource-files.md)  
-[Ressourcendateien](../windows/resource-files-visual-studio.md)  
-[Symbole: Ressourcenbezeichner](../windows/symbols-resource-identifiers.md)  
+[Arbeiten mit Ressourcendateien](../windows/working-with-resource-files.md)<br/>
+[Ressourcendateien](../windows/resource-files-visual-studio.md)<br/>
+[Symbole: Ressourcenbezeichner](../windows/symbols-resource-identifiers.md)<br/>
 [Menüs und weitere Ressourcen](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

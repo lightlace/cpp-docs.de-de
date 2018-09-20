@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d79707eaa3e5e93ab5c05e120d1556ee86168af2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d3dfa87d950a12f115fb157124765fa5fd06eced
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607297"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396104"
 ---
 # <a name="comptrasiid-method"></a>ComPtr::AsIID-Methode
 
@@ -39,10 +39,10 @@ WRL_NOTHROW HRESULT AsIID(
 
 ### <a name="parameters"></a>Parameter
 
-*riid*  
+*riid*<br/>
 Eine Schnittstellen-ID.
 
-*p*  
+*p*<br/>
 Wenn das Objekt eine Schnittstelle verfügt, deren ID gleich *Riid*, ein doppelt indirekter Zeiger auf die angegebene Schnittstelle die *Riid* Parameter ist, andernfalls ein Zeiger auf `IUnknown`.
 
 ## <a name="return-value"></a>Rückgabewert

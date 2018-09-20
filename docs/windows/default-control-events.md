@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a57cb6c72d7d444c345140f4a738a3d4a3232c0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 95c3d15414dbb312c60029a86707c1d32df56adc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315612"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405514"
 ---
 # <a name="default-control-events"></a>Standardereignisse für Steuerelemente
 
@@ -63,9 +63,9 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Definieren von Membervariablen für Dialogfeld-Steuerelemente](../windows/defining-member-variables-for-dialog-controls.md)  
-[Mit Benutzeroberflächenobjekten verknüpfte Meldungstypen](../mfc/reference/message-types-associated-with-user-interface-objects.md)  
-[Bearbeiten eines Meldungshandlers](../mfc/reference/editing-a-message-handler.md)  
-[Definieren eines Meldungshandlers für eine reflektierte Meldung](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)  
-[Deklarieren einer auf der neuen Steuerelementklasse basierenden Variable](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)  
+[Definieren von Membervariablen für Dialogfeld-Steuerelemente](../windows/defining-member-variables-for-dialog-controls.md)<br/>
+[Mit Benutzeroberflächenobjekten verknüpfte Meldungstypen](../mfc/reference/message-types-associated-with-user-interface-objects.md)<br/>
+[Bearbeiten eines Meldungshandlers](../mfc/reference/editing-a-message-handler.md)<br/>
+[Definieren eines Meldungshandlers für eine reflektierte Meldung](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)<br/>
+[Deklarieren einer auf der neuen Steuerelementklasse basierenden Variable](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)<br/>
 [Überschreiben einer virtuellen Funktion](../ide/overriding-a-virtual-function-visual-cpp.md)

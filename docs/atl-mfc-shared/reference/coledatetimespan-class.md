@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ee7ccca718a05529e5ebc88bccc7d23d258810c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f313b659629f824828c52948b9a73c50f86b5e40
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758361"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434179"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan-Klasse
 
@@ -763,9 +763,9 @@ Eine kurze Beschreibung dieser Status-Werte finden Sie in der folgenden Liste:
 
 ## <a name="see-also"></a>Siehe auch
 
-[COleDateTime-Klasse](../../atl-mfc-shared/reference/coledatetime-class.md)   
-[CTime-Klasse](../../atl-mfc-shared/reference/ctime-class.md)   
-[CTimeSpan-Klasse](../../atl-mfc-shared/reference/ctimespan-class.md)   
-[Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+[COleDateTime-Klasse](../../atl-mfc-shared/reference/coledatetime-class.md)<br/>
+[CTime-Klasse](../../atl-mfc-shared/reference/ctime-class.md)<br/>
+[CTimeSpan-Klasse](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
+[Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [Freigegebene ATL-/MFC-Klassen](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

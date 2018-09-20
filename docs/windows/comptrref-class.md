@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aaeb641fc7b2276567edfb30fd36c46db6cfc5ae
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d4ec1139efae422035ef34030cfcffcc5547f0a2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613688"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418501"
 ---
 # <a name="comptrref-class"></a>ComPtrRef-Klasse
 
@@ -39,7 +39,7 @@ class ComPtrRef : public ComPtrRefBase<T>;
 
 #### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Ein [ComPtr\<T >](../windows/comptr-class.md) Typ oder einem Typ abgeleitet ist, nicht nur die Schnittstelle der `ComPtr`.
 
 ## <a name="remarks"></a>Hinweise

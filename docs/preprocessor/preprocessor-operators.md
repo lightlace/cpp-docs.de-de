@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fca1c097a01f34fb2cc708489338391dfced982f
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: b80c9c8ef371808fc98d0475afc00223b13194ea
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539038"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384038"
 ---
 # <a name="preprocessor-operators"></a>Präprozessoroperatoren
 Vier präprozessorspezifische Operatoren werden im Kontext der `#define`-Direktive verwendet (die jeweilige Zusammenfassung finden Sie in der nachfolgenden Liste). Zeichenfolgenoperatoren, Zeichenoperatoren und Operatoren zum Einfügen eines Tokens werden in den nächsten drei Abschnitten erläutert. Informationen zu den `defined` -Operator, finden Sie unter [#if-, #elif-, #else- und #endif-Direktiven](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).  
@@ -34,6 +34,6 @@ Vier präprozessorspezifische Operatoren werden im Kontext der `#define`-Direkti
   
 ## <a name="see-also"></a>Siehe auch  
  
-[Präprozessoranweisungen](../preprocessor/preprocessor-directives.md)   
-[Vordefinierte Makros](../preprocessor/predefined-macros.md)   
+[Präprozessordirektiven](../preprocessor/preprocessor-directives.md)<br/>
+[Vordefinierte Makros](../preprocessor/predefined-macros.md)<br/>
 [C/C++-Präprozessorreferenz](../preprocessor/c-cpp-preprocessor-reference.md)

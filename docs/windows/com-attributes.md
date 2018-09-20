@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e18f64d48b357ed691f42fc900f68c8e8054776
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 71ff4e3fdb80b48e306e543bdb683c3dd2b26ec3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317250"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443331"
 ---
 # <a name="com-attributes"></a>COM-Attribute
 Die COM-Attribute fügen Code um zahlreiche Bereiche von COM-Entwicklung und .NET Framework common Language Runtime-Entwicklung zu unterstützen. Diese Bereiche reichen von benutzerdefinierten schnittstellenimplementierung und Unterstützung von vorhandenen Schnittstellen für die Unterstützung von vordefinierten Eigenschaften, Methoden und Ereignisse. Darüber hinaus Unterstützung für zusammengesetzte und Implementierung des ActiveX-Steuerelements finden.
@@ -44,4 +44,5 @@ Die COM-Attribute fügen Code um zahlreiche Bereiche von COM-Entwicklung und .NE
 |[vi_progid](../windows/vi-progid.md)|Definiert eine versionsunabhängige Programm-ID für ein Steuerelement an.|
   
 ## <a name="see-also"></a>Siehe auch
- [Attribute nach Gruppen](../windows/attributes-by-group.md)
+
+[Attribute nach Gruppen](../windows/attributes-by-group.md)

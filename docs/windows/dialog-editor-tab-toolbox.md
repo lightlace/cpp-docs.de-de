@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fa16a2cf15d5004ff80dda3188d79ffcba72ec1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4b6e05e654b66c2178b7dc6e772c95df89512d1d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316210"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399846"
 ---
 # <a name="dialog-editor-tab-toolbox-c"></a>Registerkarte "Dialog-Editor", Toolbox (C++)
 
@@ -100,10 +100,10 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Steuerelemente](../mfc/controls-mfc.md)  
-[Steuerelementklassen](../mfc/control-classes.md)  
-[Dialogfeldklassen](../mfc/dialog-box-classes.md)  
-[Stile des Schiebeleisten-Steuerelements](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)  
-[Beispiele für RichEdit-Steuerelemente](../mfc/rich-edit-control-examples.md)  
-[Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+[Steuerelemente](../mfc/controls-mfc.md)<br/>
+[Steuerelementklassen](../mfc/control-classes.md)<br/>
+[Dialogfeldklassen](../mfc/dialog-box-classes.md)<br/>
+[Stile des Schiebeleisten-Steuerelements](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)<br/>
+[Beispiele für RichEdit-Steuerelemente](../mfc/rich-edit-control-examples.md)<br/>
+[Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)

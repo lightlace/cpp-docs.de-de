@@ -1,5 +1,5 @@
 ---
-title: Ziehen und Ablegen von Dateien in einem Rahmenfenster | Microsoft Docs
+title: Ziehen und Ablegen von Dateien in einem Rahmenfenster | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa326dba7772ddcdccb304900df4460ce9754665
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fc68923de531240a2d59336c79e54f6562b369c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345570"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380528"
 ---
 # <a name="dragging-and-dropping-files-in-a-frame-window"></a>Ziehen und Fallenlassen von Dateien in einem Rahmenfenster
-Das Rahmenfenster wird eine Beziehung mit Datei-Explorer oder Datei-Manager verwaltet.  
-  
- Durch Hinzufügen von wenigen Initialisieren der Außerkraftsetzung von aufruft der `CWinApp` Memberfunktion `InitInstance`, wie in beschrieben [CWinApp: die Anwendungsklasse](../mfc/cwinapp-the-application-class.md), können Sie Ihre Rahmenfenster indirekt Öffnen von Dateien aus der Datei gezogen haben Explorer oder Datei-Manager und in das Rahmenfenster gelöscht. Finden Sie unter [Manager für Dateiserver Drag & Drop](../mfc/special-cwinapp-services.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von Rahmenfenstern](../mfc/using-frame-windows.md)
+
+Das Rahmenfenster verwaltet eine Beziehung mit Datei-Explorer oder Datei-Manager.
+
+Durch Hinzufügen von ein paar initialisieren aufruft, in der Überschreibung der der `CWinApp` Memberfunktion `InitInstance`, wie in beschrieben [CWinApp: die Anwendungsklasse](../mfc/cwinapp-the-application-class.md), können Sie Ihr Rahmenfenster indirekt Öffnen von Dateien, die aus der Datei gezogen haben Explorer oder Datei-Manager und in das Rahmenfenster gelöscht. Finden Sie unter [Manager für Dateiserver Drag & Drop](../mfc/special-cwinapp-services.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von Rahmenfenstern](../mfc/using-frame-windows.md)
 

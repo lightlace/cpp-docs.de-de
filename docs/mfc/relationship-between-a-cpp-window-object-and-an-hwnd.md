@@ -1,5 +1,5 @@
 ---
-title: Beziehung zwischen einem C++-Fensterobjekt und einem HWND | Microsoft Docs
+title: Beziehung zwischen einem C++-Fensterobjekt und einem HWND | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,19 +20,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3864de8b3133fd2284b3ce57b75b30d8f41c26a7
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 844f62b110f54ba3e2c8909a78d58c9f2c01dcac
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928527"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392813"
 ---
 # <a name="relationship-between-a-c-window-object-and-an-hwnd"></a>Beziehung zwischen einem C++-Fensterobjekt und einem HWND
-Das Fenster *Objekt* ist ein Objekt der C++-Komponente `CWnd` -Klasse (oder einer abgeleiteten Klasse), die das Programm direkt erstellt. Es kommt und wird als Antwort auf das Programm Konstruktor und Destruktor aufruft. Die Windows *Fenster*, andererseits, ist ein nicht transparentes Handle zu einer internen Windows-Datenstruktur, die einem Fenster entspricht und Systemressourcen vorhanden. Ein Windows-Fenster wird durch ein "Fensterhandle" identifiziert (`HWND`) und wird erstellt, nachdem die `CWnd` objekterstellung durch einen Aufruf der `Create` Memberfunktion der Klasse `CWnd`. Das Fenster kann entweder durch einen Aufruf der Anwendung oder durch eine Benutzeraktion zerstört werden. Das Fensterhandle wird gespeichert, in des Fensterobjekts *M_hWnd* Membervariablen gespeichert. Die folgende Abbildung zeigt die Beziehung zwischen C++-Fensterobjekt und das Windows-Fenster. Erstellen von Fenstern wird erläutert, [erstellen Windows](../mfc/creating-windows.md). Zerstören von Fenstern finden [Zerstören von Fensterobjekten](../mfc/destroying-window-objects.md).  
-  
- ![CWnd-Fensterobjekt und resultierendes Fenster](../mfc/media/vc37fj1.gif "vc37fj1")  
-window-Objekt und Windows-Fenster  
-  
-## <a name="see-also"></a>Siehe auch  
- [Fensterobjekte](../mfc/window-objects.md)
+
+Das Fenster *Objekt* ist ein Objekt der C++- `CWnd` -Klasse (oder in einer abgeleiteten Klasse), die Ihre Anwendung direkt erstellt. Er stammt und wird als Reaktion auf Ihres Programms Konstruktor und Destruktor aufrufen. Die Windows *Fenster*, auf der anderen Seite ist ein nicht transparentes Handle auf eine interne Windows-Datenstruktur, die in einem Fenster entspricht und beansprucht Systemressourcen vorhanden. Ein Windows-Fenster wird durch ein "Fensterhandle" identifiziert (`HWND`) und erstellt wird, nachdem die `CWnd` objekterstellung durch einen Aufruf der `Create` Memberfunktion der Klasse `CWnd`. Das Fenster kann entweder durch einen Aufruf der Anwendung oder durch die Aktion eines Benutzers zerstört werden. Das Handle des Fensters befindet sich in des Fensterobjekts *M_hWnd* Membervariablen gespeichert. Die folgende Abbildung zeigt die Beziehung zwischen dem C++-Fensterobjekt und das Windows-Fenster. Erstellen von Windows erläutert [erstellen Windows](../mfc/creating-windows.md). Zerstören von Fenstern ausführlicher [Zerstören von Fensterobjekten](../mfc/destroying-window-objects.md).
+
+![CWnd-Fensterobjekt und resultierendes Fenster](../mfc/media/vc37fj1.gif "vc37fj1") -Fensterobjekt und Windows-Fenster
+
+## <a name="see-also"></a>Siehe auch
+
+[Fensterobjekte](../mfc/window-objects.md)
 

@@ -19,34 +19,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: da63d58136d61bbea75daa90ac01cee5b44ac86d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 48412a932ff3752b0613f7045cd88992332b7917
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039100"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423226"
 ---
 # <a name="autogcroot-class"></a>auto_gcroot-Klasse
-Automatische ressourcenverwaltung (z. B. [Auto_ptr-Klasse](../standard-library/auto-ptr-class.md)) die zum Einbetten von eines virtuellen Handles in einen systemeigenen Typ verwendet werden können.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-template<typename _element_type>  
-class auto_gcroot;  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+
+Automatische ressourcenverwaltung (z. B. [Auto_ptr-Klasse](../standard-library/auto-ptr-class.md)) die zum Einbetten von eines virtuellen Handles in einen systemeigenen Typ verwendet werden können.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+template<typename _element_type>
+class auto_gcroot;
+```
+
+#### <a name="parameters"></a>Parameter
+
 *_element_type*<br/>
-Der verwaltete Typ eingebettet werden.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Headerdatei** \<msclr\auto_gcroot.h >  
-  
- **Namespace** Msclr  
-  
-## <a name="see-also"></a>Siehe auch  
- [auto_gcroot](../dotnet/auto-gcroot.md)   
- [Auto_gcroot-Members](../dotnet/auto-gcroot-members.md)   
- [Vorgehensweise: Deklarieren von Handles in systemeigenen Typen](../dotnet/how-to-declare-handles-in-native-types.md)   
- [auto_handle-Klasse](../dotnet/auto-handle-class.md)
+Der verwaltete Typ eingebettet werden.
+
+## <a name="requirements"></a>Anforderungen
+
+**Headerdatei** \<msclr\auto_gcroot.h >
+
+**Namespace** Msclr
+
+## <a name="see-also"></a>Siehe auch
+
+[auto_gcroot](../dotnet/auto-gcroot.md)<br/>
+[auto_gcroot-Members](../dotnet/auto-gcroot-members.md)<br/>
+[Vorgehensweise: Deklarieren von Handles in nativen Typen](../dotnet/how-to-declare-handles-in-native-types.md)<br/>
+[auto_handle-Klasse](../dotnet/auto-handle-class.md)

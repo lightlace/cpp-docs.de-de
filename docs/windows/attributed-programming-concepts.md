@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f91474ec4c435b6fb2a005b47c67210a54d0804
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: abe76a4153ecfb0e4db4ce9e92eb63f5b00067ff
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317263"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394646"
 ---
 # <a name="attributed-programming-concepts"></a>Konzepte der attributierten Programmierung
 
@@ -32,27 +32,27 @@ Während einige der ausführliche das Schreiben von Code zum Schreiben von COM-O
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Attributzwecke](../windows/purpose-of-attributes.md)  
+[Attributzwecke](../windows/purpose-of-attributes.md)<br/>
 Bietet eine Übersicht über attributiertes programmieren.
 
-[Grundlegende Funktionsweise der Attribute](../windows/basic-mechanics-of-attributes.md)  
+[Grundlegende Funktionsweise der Attribute](../windows/basic-mechanics-of-attributes.md)<br/>
 Beschreibt die Funktionsweise von Attributen in Ihrem Projekt.
 
-[Erstellen eines attributierten Programms](../windows/building-an-attributed-program.md)  
+[Erstellen eines attributierten Programms](../windows/building-an-attributed-program.md)<br/>
 Enthält Informationen zur Verwendung von C++-Compileroptionen in Ihrem Projekt.
 
-[Attributkategorien](../windows/attribute-categories.md)  
+[Attributkategorien](../windows/attribute-categories.md)<br/>
 Enthält Links zu den Kategorien von Attributen, die in Visual C++ verwendet.
 
-[Attribut Programmming – häufig gestellte Fragen](../windows/attribute-programming-faq.md)  
+[Attribut Programmming – häufig gestellte Fragen](../windows/attribute-programming-faq.md)<br/>
 Antworten auf häufig gestellte Fragen zur attributierten Programmierung.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-[Attributreferenz](../windows/cpp-attributes-reference.md)  
+[Attributreferenz](../windows/cpp-attributes-reference.md)<br/>
 Enthält Links zu Referenzthemen, die den einzelnen Attributen und ihrer Verwendung beschreibt.
 
-[Debuggen von eingefügtem Code](/visualstudio/debugger/how-to-debug-injected-code)  
+[Debuggen von eingefügtem Code](/visualstudio/debugger/how-to-debug-injected-code)<br/>
 Beschreibt das Debuggen von attributierten Programme.
 
 [__super](../cpp/super.md)und [__interface](../cpp/interface.md)  

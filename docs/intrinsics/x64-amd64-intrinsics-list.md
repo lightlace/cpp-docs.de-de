@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eedbc29b5012c3a4355178d0fbd83aad81e9cb95
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 006b6ce67182b698a1f6d0bb5d87d8165fba9cde
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680411"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406866"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>Liste der intrinsischen Funktionen für x64 (amd64)
 
@@ -1282,6 +1282,6 @@ Die folgende Tabelle enthält die systeminternen Funktionen, die auf x64-Prozess
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)  
-[Intrinsische ARM-Funktionen](../intrinsics/arm-intrinsics.md)  
-[X86 systeminterne Funktionen](../intrinsics/x86-intrinsics-list.md)    
+[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrinsische ARM-Funktionen](../intrinsics/arm-intrinsics.md)<br/>
+[X86 systeminterne Funktionen](../intrinsics/x86-intrinsics-list.md)

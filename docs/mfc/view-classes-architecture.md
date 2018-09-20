@@ -1,5 +1,5 @@
 ---
-title: Anzeigen von Klassen (Architektur) | Microsoft Docs
+title: Anzeigen von Klassen (Architektur) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,62 +19,66 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11bb3d9e551089a156d255f7b27fb55cbe87bdbe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 12987a7563b685018de64201d60d0447d3a5d4cc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383746"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393816"
 ---
 # <a name="view-classes-architecture"></a>Ansichtsklassen (Architektur)
-`CView` und die abgeleiteten Klassen sind untergeordnete Fenster, die den Clientbereich eines Rahmenfensters darstellen. Ansichten anzeigen von Daten und Eingaben für ein Dokument.  
-  
- View-Klasse, die einer Dokumentklasse und einem Rahmenfenster (Klasse) mit einem Dokument Template-Objekt zugeordnet ist.  
-  
- [CView](../mfc/reference/cview-class.md)  
- Die Basisklasse für eine anwendungsspezifische Ansicht der Daten eines Dokuments. Ansichten anzeigen von Daten und Benutzereingaben zum Bearbeiten, oder wählen Sie die Daten akzeptieren. Leiten Sie Ihre Ansicht Klasse(n) aus `CView`.  
-  
- [CScrollView](../mfc/reference/cscrollview-class.md)  
- Die Basisklasse für Ansichten mit Bildlauffunktionen. Leiten Sie Ihre Ansichtsklasse aus `CScrollView` für den automatischen Bildlauf.  
-  
-## <a name="form-and-record-views"></a>Formular und Datensatzansichten  
- Formularansichten sind auch Sichten Durchführen eines Bildlaufs. Sie basieren auf einer Dialogfeldvorlage.  
-  
- Formularansichten sind Datensatzansichten abgeleitet. Zusätzlich zu der Dialogfeldvorlage verfügen über eine Verbindung mit einer Datenbank.  
-  
- [CFormView](../mfc/reference/cformview-class.md)  
- Eine Scroll-Sicht, deren Layout in einer Dialogfeldvorlage definiert ist. Leiten Sie eine Klasse von `CFormView` eine Benutzeroberfläche, die basierend auf einer Dialogfeldvorlage implementieren.  
-  
- [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)  
- Stellt eine Form anzeigen, die direkt mit einem Recordset-Objekt (Datenzugriffsobjekt) verbunden. Alle Formularansichten, wie eine `CDaoRecordView` basiert auf einer Dialogfeldvorlage.  
-  
- [CHtmlView](../mfc/reference/chtmlview-class.md)  
- Unterstützt ein Steuerelement für Webbrowser innerhalb einer Anwendung. Das Steuerelement unterstützt dynamische HTML in MFC.  
-  
- [COLEDBRecordView](../mfc/reference/coledbrecordview-class.md)  
- Bietet MFC-OLE DB-Unterstützung für Formularansichten.  
-  
- [CRecordView](../mfc/reference/crecordview-class.md)  
- Stellt eine Form anzeigen, die direkt mit einer Open Database Connectivity (ODBC)-Recordset-Objekt verbunden. Alle Formularansichten, wie eine `CRecordView` basiert auf einer Dialogfeldvorlage.  
-  
-## <a name="control-views"></a>Steuerelementansicht  
- Steuerelementansicht Anzeigen eines Steuerelements als eigene Ansicht.  
-  
- [CCtrlView](../mfc/reference/cctrlview-class.md)  
- Die Basisklasse für alle Ansichten, die Windows-Steuerelementen zugeordnet. Die Ansichten, die basierend auf Steuerelemente werden nachfolgend beschrieben.  
-  
- [CEditView](../mfc/reference/ceditview-class.md)  
- Bearbeitungssteuerelement für eine Sicht, einen Windows-Standard enthält (siehe [CEdit](../mfc/reference/cedit-class.md)). Bearbeiten Sie die Steuerelemente unterstützen Textbearbeitung, suchen, ersetzen und Bildlauffunktionen.  
-  
- [CRichEditView](../mfc/reference/cricheditview-class.md)  
- Eine Sicht, enthält eine umfangreiche Windows-Bearbeitungssteuerelements (finden Sie unter [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Zusätzlich zu den Funktionen eines Bearbeitungssteuerelements bearbeiten Rich Steuerelemente Unterstützung Schriftarten, Farben, absatzformatierung und eingebetteten OLE-Objekten.  
-  
- [CListView](../mfc/reference/clistview-class.md)  
- Eine Sicht, ein Windows-Listensteuerelement enthält (siehe [CListCtrl](../mfc/reference/clistctrl-class.md)). Ein Listenfeld-Steuerelement zeigt die Symbole und Zeichenfolgen ähnlich wie in den rechten Bereich des Datei-Explorer.  
-  
- [CTreeView](../mfc/reference/ctreeview-class.md)  
- Eine Sicht, ein Windows-Strukturansicht-Steuerelement enthält (siehe [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Ein Strukturansicht-Steuerelement zeigt Symbole und Zeichenfolgen, die in einer Hierarchie auf ähnliche Weise in den linken Bereich des Datei-Explorers angeordnet sind.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+
+`CView` und die abgeleiteten Klassen sind untergeordnete Fenster, die darstellen, das den Clientbereich eines Rahmenfensters. Ansichten Daten anzeigen und akzeptieren eine Eingabe für ein Dokument.
+
+Eine Ansichtsklasse ist mit einer Dokumentklasse und einem Rahmenfenster (Klasse) mit einem Dokumentvorlagen-Objekt zugeordnet.
+
+[CView](../mfc/reference/cview-class.md)<br/>
+Die Basisklasse für anwendungsspezifische Sichten der Daten eines Dokuments. Ansichten anzeigen von Daten und Benutzereingaben, um zu bearbeiten, oder wählen Sie die Daten akzeptieren. Leiten Sie Ihre Ansicht Klassen verfügen über `CView`.
+
+[CScrollView](../mfc/reference/cscrollview-class.md)<br/>
+Die Basisklasse für Ansichten mit Bildlauffunktionen. Ableiten der Klasse "View" aus `CScrollView` für den automatischen Bildlauf.
+
+## <a name="form-and-record-views"></a>Formular und Datensatzansichten
+
+Formularansichten sind auch Ansichten Bildlauf. Sie basiert auf einer Dialogfeldvorlage.
+
+Datensatzansichten werden von Formularansichten abgeleitet. Zusätzlich zu der Dialogfeldvorlage haben sie auch eine Verbindung mit einer Datenbank.
+
+[CFormView](../mfc/reference/cformview-class.md)<br/>
+Eine Bildlaufansicht, deren Layout in eine Dialogfeldvorlage definiert ist. Leiten Sie eine Klasse von `CFormView` zur Implementierung einer Benutzeroberfläche, die basierend auf einer Dialogfeldvorlage.
+
+[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
+Stellt eine Form anzeigen, die direkt mit einem Recordset-Objekt (Data Access Object, DAO) verbunden. Alle Formularansichten, wie eine `CDaoRecordView` basiert auf einer Dialogfeldvorlage.
+
+[CHtmlView](../mfc/reference/chtmlview-class.md)<br/>
+Unterstützt ein Steuerelement für das Browsen im Web in einer Anwendung. Unterstützung für dynamic HTML des Steuerelements in MFC.
+
+[COLEDBRecordView](../mfc/reference/coledbrecordview-class.md)<br/>
+Stellt MFC-OLE DB-Unterstützung, die für Formularansichten.
+
+[CRecordView](../mfc/reference/crecordview-class.md)<br/>
+Stellt eine Form anzeigen, die direkt mit einer Open Database Connectivity (ODBC)-Recordset-Objekt verbunden. Alle Formularansichten, wie eine `CRecordView` basiert auf einer Dialogfeldvorlage.
+
+## <a name="control-views"></a>Steuerelementansicht
+
+Steuerelementansicht Steuerelement, die als ihre Ansicht angezeigt wird.
+
+[CCtrlView](../mfc/reference/cctrlview-class.md)<br/>
+Die Basisklasse für alle Ansichten, die Windows-Steuerelementen zugeordnet. Die Ansichten, die basierend auf werden nachfolgend beschrieben.
+
+[CEditView](../mfc/reference/ceditview-class.md)<br/>
+Bearbeitungssteuerelement für eine Sicht, einen Windows-Standard enthält (siehe [CEdit](../mfc/reference/cedit-class.md)). Bearbeiten Sie die Steuerelemente unterstützen Text-Bearbeitung, suchen, ersetzen und Bildlauffunktionen.
+
+[CRichEditView](../mfc/reference/cricheditview-class.md)<br/>
+Eine Ansicht, enthält eine umfassende Windows-Bearbeitungssteuerelement (finden Sie unter [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Zusätzlich zu den Funktionen eines Steuerelements bearbeiten Bearbeiten umfangreiche Steuerelemente unterstützen Schriftarten, Farben, absatzformatierung und eingebettete OLE-Objekte.
+
+[CListView](../mfc/reference/clistview-class.md)<br/>
+Eine Sicht, ein Windows-Steuerelement enthält (siehe [CListCtrl](../mfc/reference/clistctrl-class.md)). Ein Listensteuerelement zeigt Symbole und Zeichenfolgen ähnlich wie in den rechten Bereich des Datei-Explorers.
+
+[CTreeView](../mfc/reference/ctreeview-class.md)<br/>
+Eine Sicht, ein Windows-Strukturansicht-Steuerelement enthält (siehe [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Ein Strukturansicht-Steuerelement zeigt Symbole und Zeichenfolgen, die in einer Hierarchie auf ähnliche Weise auf den linken Bereich des Datei-Explorers angeordnet.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../mfc/class-library-overview.md)
 

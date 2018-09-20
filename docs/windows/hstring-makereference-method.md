@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 061b3be0e642bb8e7406f54a469723c70559d85a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ebc8632d273e650cf11e70177bbfbeb0e90e8601
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610160"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394854"
 ---
 # <a name="hstringmakereference-method"></a>HString::MakeReference-Methode
 
@@ -41,13 +41,13 @@ template<unsigned int sizeDest>
 
 ### <a name="parameters"></a>Parameter
 
-*sizeDest*  
+*sizeDest*<br/>
 Ein Vorlagenparameter, der angibt, die Größe des Ziels `HStringReference` Puffer.
 
-*str*  
+*str*<br/>
 Ein Verweis auf eine Zeichenfolge mit Breitzeichen.
 
-*Len*  
+*Len*<br/>
 Die maximale Länge von der *str* Parameterpuffer auf diesen Vorgang verwendet. Wenn die *Len* Parameter nicht angegeben ist, die gesamte *str* Parameter wird verwendet.
 
 ## <a name="return-value"></a>Rückgabewert

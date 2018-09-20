@@ -15,40 +15,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8271b1bca61ca05d1348261e1c579dc1c79fec1a
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 3cf1ee9b2bd45da321a9d333e48b6cf0a3d178b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541219"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405995"
 ---
 # <a name="cc-preprocessor-reference"></a>C/C++-Präprozessorreferenz
 Die *C/C++-Präprozessorreferenz* wird den Präprozessor erläutert, wie sie in Microsoft C/C++ implementiert ist. Der Präprozessor führt vorbereitende Vorgänge für C- und C++-Dateien aus, bevor sie an den Compiler übergeben werden. Sie können den Präprozessor verwenden, um Code bedingt zu kompilieren, Dateien einzufügen, Kompilierzeit-Fehlermeldungen anzugeben und computerspezifische Regeln auf Codeabschnitte anzuwenden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  
-[Präprozessordirektiven](../preprocessor/preprocessor-directives.md)  
+[Präprozessordirektiven](../preprocessor/preprocessor-directives.md)<br/>
 Beschreibt die Anweisungen, die normalerweise verwendet werden, um das Ändern und Kompilieren von Quellprogrammen in unterschiedlichen Ausführungsumgebungen zu vereinfachen.  
   
-[Präprozessoroperatoren](../preprocessor/preprocessor-operators.md)  
+[Präprozessoroperatoren](../preprocessor/preprocessor-operators.md)<br/>
 Erläutert die vier präprozessorspezifischen Operatoren, die im Kontext der `#define`-Direktive verwendet werden.  
   
-[Vordefinierte Makros](../preprocessor/predefined-macros.md)  
+[Vordefinierte Makros](../preprocessor/predefined-macros.md)<br/>
 Erläutert vordefinierte Makros, wie von ANSI und Microsoft C++ angegeben.  
   
-[Pragmas](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
+[Pragmas](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
 Erläutert Pragmas, die jedem Compiler eine Möglichkeit bieten, computer- und betriebssystemspezifische Funktionen bereitzustellen und dabei die Gesamtkompatibilität mit anderen C- und C++-Programmiersprachen beizubehalten.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  
-[C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)  
+[C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
 Enthält Referenzmaterial für die Microsoft-Implementierung der Programmiersprache C++.  
   
-[C-Sprachreferenz](../c-language/c-language-reference.md)  
+[C-Sprachreferenz](../c-language/c-language-reference.md)<br/>
 Enthält Referenzmaterial für die Microsoft-Implementierung der Programmiersprache C.  
   
-[Erstellen eines C/C++-Programms](../build/reference/c-cpp-building-reference.md)  
+[Erstellen eines C/C++-Programms](../build/reference/c-cpp-building-reference.md)<br/>
 Enthält Links zu Themen, in denen die Verwendung von Compiler- und Linkeroptionen erörtert wird.  
   
-[Erstellen und Verwalten von Visual C++-Projekten](../ide/creating-and-managing-visual-cpp-projects.md)  
+[Erstellen und Verwalten von Visual C++-Projekten](../ide/creating-and-managing-visual-cpp-projects.md)<br/>
 Beschreibt die Benutzeroberfläche in Visual Studio, die Ihnen die Möglichkeit gibt, die Verzeichnisse festzulegen, die das Projektsystem durchsucht, um Dateien für das C++-Projekt zu suchen.

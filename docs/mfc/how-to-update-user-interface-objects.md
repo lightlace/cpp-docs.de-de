@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Aktualisieren von Benutzeroberflächenobjekten | Microsoft Docs'
+title: 'Vorgehensweise: Aktualisieren von Benutzeroberflächenobjekten | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,30 +23,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 422be3d80614c526c7e634d22a0930458e4b4e26
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8afe8f6f7594c2dff75125aa56a210505bf5301d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346206"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410584"
 ---
 # <a name="how-to-update-user-interface-objects"></a>Gewusst wie: Aktualisieren von Benutzeroberflächenobjekten
-So haben Menüelemente und Symbolleisten-Schaltflächen in der Regel mehr als einen Statuswert an. Ein Menüelement ist z. B. (abgeblendet) abgeblendet, wenn sie nicht im aktuellen Kontext verfügbar ist. Menüelemente können auch aktiviert oder deaktiviert sein. Eine Symbolleisten-Schaltfläche kann auch deaktiviert werden, wenn nicht verfügbar oder kann überprüft werden.  
-  
- Wer aktualisiert den Status der diese Elemente, die netzwerkbedingungen ändern logisch zu programmieren, wenn ein Menüelement ein Befehls generiert, das von behandelt wird, z. B. ein Dokument, ist es sinnvoll, das Dokument, das das Menüelement aktualisiert haben. Das Dokument enthält wahrscheinlich die Informationen auf der das Update basiert.  
-  
- Wenn mehrere Objekte der Benutzeroberfläche (z. B. ein Menüelement und eine Symbolleisten-Schaltfläche) über einen Befehl verfügt, werden beide an die gleichen Handlerfunktion weitergeleitet. Benutzeroberflächen-Aktualisierungscode für alle Objekte in einer einzelnen Stelle entsprechende Benutzeroberfläche gekapselt.  
-  
- Das Framework bietet eine geeignete Benutzeroberfläche zum automatischen Aktualisieren von Benutzeroberflächenobjekten. Sie können auswählen, das Aktualisieren auf andere Weise, aber die bereitgestellte Schnittstelle ist effizient und einfach zu verwenden.  
-  
- Die folgenden Themen erläutern die Verwendung von Aktualisierungshandler:  
-  
--   [Wann müssen updatehandler aufgerufen werden](../mfc/when-update-handlers-are-called.md)  
-  
--   [ON_UPDATE_COMMAND_UI-Makro](../mfc/on-update-command-ui-macro.md)  
-  
--   [Die CCmdUI-Klasse](../mfc/the-ccmdui-class.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Menüs](../mfc/menus-mfc.md)
+
+Menüelemente und Symbolleisten-Schaltflächen müssen in der Regel mehr als einem Zustand auf. Beispielsweise wird ein Menüelement (abgeblendet) abgeblendet, im aktuellen Kontext nicht verfügbar ist. Menüelemente können auch aktiviert oder deaktiviert sein. Eine Symbolleisten-Schaltfläche kann auch deaktiviert werden, wenn nicht verfügbar oder kann überprüft werden.
+
+Die den Status der diese Elemente logischerweise Programmieren von Bedingungen sich ändern, wenn ein Menüelement ein Befehls generiert, das von behandelt wird, z. B. ein Dokument aktualisiert wird, ist es sinnvoll, das Dokument, das das Menüelement zu aktualisieren. Das Dokument enthält wahrscheinlich die Informationen, die auf der das Update basiert.
+
+Wenn ein Befehl mehrere UI-Objekte (z. B. ein Menüelement und eine Symbolleisten-Schaltfläche) enthält, werden sowohl auf die gleiche Handlerfunktion weitergeleitet. Diese kapselt Ihren Aktualisierungscode der Benutzeroberfläche für alle entsprechenden Benutzeroberflächen-Objekte an einem Ort.
+
+Das Framework bietet eine einfache Schnittstelle zum automatischen Aktualisieren von Benutzeroberflächenobjekten. Sie können auswählen, der Aktualisierung auf andere Weise, aber die bereitgestellte Schnittstelle ist effizient und einfach zu verwenden.
+
+Die folgenden Themen erläutern die Verwendung von updatehandler:
+
+- [Wann müssen updatehandler aufgerufen werden?](../mfc/when-update-handlers-are-called.md)
+
+- [Die ON_UPDATE_COMMAND_UI-Makro](../mfc/on-update-command-ui-macro.md)
+
+- [Die CCmdUI-Klasse](../mfc/the-ccmdui-class.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Menüs](../mfc/menus-mfc.md)
 

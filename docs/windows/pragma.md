@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f24c01c225cf971592083162fbebddd99700814
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2e6d5d832cd051c8e527b1d161158483d8fcaed1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209113"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428754"
 ---
 # <a name="pragma"></a>pragma
 
@@ -38,7 +38,7 @@ Gibt die angegebene Zeichenfolge in der generierten IDL-Datei ohne die Verwendun
 
 ### <a name="parameters"></a>Parameter
 
-*pragma_statement*  
+*pragma_statement*<br/>
 Das Pragma, das in der generierten IDL-Datei aufgenommen werden sollen.
 
 ## <a name="remarks"></a>Hinweise
@@ -76,6 +76,6 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 
 ## <a name="see-also"></a>Siehe auch
 
-[IDL-Attribute](../windows/idl-attributes.md)  
-[Eigenständige Attribute](../windows/stand-alone-attributes.md)  
+[IDL-Attribute](../windows/idl-attributes.md)<br/>
+[Eigenständige Attribute](../windows/stand-alone-attributes.md)<br/>
 [pack](../preprocessor/pack.md)  

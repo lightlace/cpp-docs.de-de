@@ -1,5 +1,5 @@
 ---
-title: 'Zwischenablage: Verwenden des jeweiligen Zwischenablagemechanismus | Microsoft Docs'
+title: 'Zwischenablage: Verwenden des jeweiligen Zwischenablagemechanismus | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,28 +19,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2d7ab966eb0fcb5592f55a1b24f1558946dbd16
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18b8a772dd58cf9623d4076665e7859d191bb27e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341925"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379813"
 ---
 # <a name="clipboard-when-to-use-each-clipboard-mechanism"></a>Zwischenablage: Verwenden des jeweiligen Zwischenablagemechanismus
-Befolgen Sie diese Richtlinien in die Zwischenablage zu verwenden:  
-  
--   Verwenden des OLE-zwischenablagemechanismus jetzt in der Zukunft neue Funktionen zu aktivieren. Während der standardmäßigen Zwischenablage-API verwaltet wird, ist der OLE-Mechanismus der Zukunft der Datenübertragung.  
-  
--   Verwenden Sie die OLE-zwischenablagemechanismus, wenn eine OLE-Anwendung schreiben, oder Sie möchten die OLE-Funktionen wie drag und drop.  
-  
--   Verwenden Sie die OLE-zwischenablagemechanismus, wenn Sie OLE-Formate bereit sind.  
-  
-## <a name="what-do-you-want-to-do"></a>Was möchten Sie tun  
-  
--   [Verwenden des OLE-zwischenablagemechanismus](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
-  
--   [Verwenden des Windows-Zwischenablage-Mechanismus](../mfc/clipboard-using-the-windows-clipboard.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zwischenablage](../mfc/clipboard.md)
+
+Beachten Sie Folgendes in die Zwischenablage zu verwenden:
+
+- Mithilfe des OLE-zwischenablagemechanismus nun um neue Funktionen in der Zukunft zu aktivieren. Während der standardmäßigen Zwischenablage-API verwaltet wird, ist der OLE-Mechanismus die Zukunft der Datenübertragung an.
+
+- Verwenden Sie die OLE-zwischenablagemechanismus, wenn eine OLE-Anwendung schreiben, oder Sie möchten die OLE-Features wie z. B. Drag & drop.
+
+- Verwenden des OLE-zwischenablagemechanismus an, wenn Sie eine OLE-Formate bereitstellen.
+
+## <a name="what-do-you-want-to-do"></a>Was möchten Sie tun
+
+- [Verwenden des OLE-zwischenablagemechanismus](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+
+- [Verwenden Sie den Mechanismus der Windows-Zwischenablage](../mfc/clipboard-using-the-windows-clipboard.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Zwischenablage](../mfc/clipboard.md)
 

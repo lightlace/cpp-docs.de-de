@@ -28,211 +28,220 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a14b217df2bdc8aec8e8d823df7661e8b4754b38
-ms.sourcegitcommit: b8b1cba85ff423142d73c888be26baa8c33f3cdc
+ms.openlocfilehash: ae7abc7d8683d282be4c2e1cd24d8f51bd28be86
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39092993"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437781"
 ---
 # <a name="managed-types-ccli"></a>Verwaltete Typen (C++/CLI)
-Visual C++ können den Zugriff auf Features für .NET über verwaltete Typen, die bieten Unterstützung für Features der common Language Runtime bereitgestellt und unterliegen die Vorteile und Einschränkungen der Runtime.  
-  
+
+Visual C++ können den Zugriff auf Features für .NET über verwaltete Typen, die bieten Unterstützung für Features der common Language Runtime bereitgestellt und unterliegen die Vorteile und Einschränkungen der Runtime.
+
 ## <a name="main_functions"></a> Verwaltete Typen und die main-Funktion
-Beim Schreiben einer Anwendung mit **"/ CLR"**, die Argumente der **main()** Funktion kann nicht von einem verwalteten Typ sein.  
-  
- Ein Beispiel für eine ordnungsgemäße Signatur ist:  
-  
-```cpp  
-// managed_types_and_main.cpp  
-// compile with: /clr  
-int main(int, char*[], char*[]) {}  
-```  
+
+Beim Schreiben einer Anwendung mit **"/ CLR"**, die Argumente der **main()** Funktion kann nicht von einem verwalteten Typ sein.
+
+Ein Beispiel für eine ordnungsgemäße Signatur ist:
+
+```cpp
+// managed_types_and_main.cpp
+// compile with: /clr
+int main(int, char*[], char*[]) {}
+```
 
 ## <a name="dotnet"></a> .NET Framework-Entsprechungen der systemeigenen Typen in C++
-Die folgende Tabelle zeigt die Schlüsselwörter für integrierte Visual C++-Typen, die Aliase der vordefinierten Typen sind in der **System** Namespace.  
-  
-|Visual C++-Typ|.NET Framework-Typ|  
-|-----------------------|-------------------------|  
-|**bool**|**System.Boolean**|  
-|**Char signiert** (finden Sie unter [/j](../build/reference/j-default-char-type-is-unsigned.md) Informationen)|**System.SByte**|  
-|**unsigned char**|**System.Byte**|  
-|**wchar_t**|**System.Char**|  
-|**doppelte** und **long double**|**System.Double**|  
-|**float**|**System.Single**|  
-|**Int**, **signiert Int**, **lange**, und **lange signiert**|**System.Int32**|  
-|**ganze Zahl ohne Vorzeichen** und **unsigned long**|**System.UInt32**|  
-|**__int64** und **signiert __int64**|**System.Int64**|  
-|**__int64 ohne Vorzeichen**|**System.UInt64**|  
-|**kurze** und **kurz signiert**|**System.Int16**|  
-|**unsigned short**|**System.UInt16**|  
-|**void**|**System.Void**|  
-  
+
+Die folgende Tabelle zeigt die Schlüsselwörter für integrierte Visual C++-Typen, die Aliase der vordefinierten Typen sind in der **System** Namespace.
+
+|Visual C++-Typ|.NET Framework-Typ|
+|-----------------------|-------------------------|
+|**bool**|**System.Boolean**|
+|**Char signiert** (finden Sie unter [/j](../build/reference/j-default-char-type-is-unsigned.md) Informationen)|**System.SByte**|
+|**unsigned char**|**System.Byte**|
+|**wchar_t**|**System.Char**|
+|**doppelte** und **long double**|**System.Double**|
+|**float**|**System.Single**|
+|**Int**, **signiert Int**, **lange**, und **lange signiert**|**System.Int32**|
+|**ganze Zahl ohne Vorzeichen** und **unsigned long**|**System.UInt32**|
+|**__int64** und **signiert __int64**|**System.Int64**|
+|**__int64 ohne Vorzeichen**|**System.UInt64**|
+|**kurze** und **kurz signiert**|**System.Int16**|
+|**unsigned short**|**System.UInt16**|
+|**void**|**System.Void**|
+
 ## <a name="version_issues"></a> Versionsprobleme bei in systemeigenen Typen geschachtelten Werttypen
-Beispiel: eine mit Vorzeichen (starker Name)-Assembly-Komponente verwendet, um eine Clientassembly zu erstellen. Die Komponente enthält, einen Werttyp, der auf dem Client als Typ für ein Mitglied aus einer systemeigenen Union, eine Klasse oder ein Array verwendet wird. Wenn die Größe oder das Layout des Werttyps eine zukünftige Version der Komponente geändert wird, muss der Client neu kompiliert werden.  
-  
- Erstellen Sie eine Schlüsseldatei mit [sn.exe](/dotnet/framework/tools/sn-exe-strong-name-tool) (`sn -k mykey.snk`).  
-  
-### <a name="example"></a>Beispiel  
- Im folgende Beispiel ist die Komponente.  
-  
-```cpp 
-// nested_value_types.cpp  
-// compile with: /clr /LD  
-using namespace System::Reflection;  
-[assembly:AssemblyVersion("1.0.0.*"),   
-assembly:AssemblyKeyFile("mykey.snk")];  
-  
-public value struct S {  
-   int i;  
-   void Test() {  
-      System::Console::WriteLine("S.i = {0}", i);  
-   }  
-};  
-```  
-  
-### <a name="example"></a>Beispiel  
- In diesem Beispiel ist der Client:  
-  
-```cpp  
-// nested_value_types_2.cpp  
-// compile with: /clr  
-#using <nested_value_types.dll>  
-  
-struct S2 {  
-   S MyS1, MyS2;  
-};  
-  
-int main() {  
-   S2 MyS2a, MyS2b;  
-   MyS2a.MyS1.i = 5;  
-   MyS2a.MyS2.i = 6;  
-   MyS2b.MyS1.i = 10;  
-   MyS2b.MyS2.i = 11;  
-  
-   MyS2a.MyS1.Test();  
-   MyS2a.MyS2.Test();  
-   MyS2b.MyS1.Test();  
-   MyS2b.MyS2.Test();  
-}  
-```  
-  
-### <a name="output"></a>Ausgabe  
-  
-```  
-S.i = 5  
-S.i = 6  
-S.i = 10  
-S.i = 11  
-```  
-  
-### <a name="comments"></a>Kommentare  
- Aber wenn Sie ein anderes Element hinzufügen `struct S` in nested_value_types.cpp, (z. B. `double d;`) und auf die Komponente neu kompilieren, ohne erneute Kompilierung des Clients, auf das Ergebnis ist eine nicht behandelte Ausnahme (vom Typ <xref:System.IO.FileLoadException?displayProperty=fullName>).  
+
+Beispiel: eine mit Vorzeichen (starker Name)-Assembly-Komponente verwendet, um eine Clientassembly zu erstellen. Die Komponente enthält, einen Werttyp, der auf dem Client als Typ für ein Mitglied aus einer systemeigenen Union, eine Klasse oder ein Array verwendet wird. Wenn die Größe oder das Layout des Werttyps eine zukünftige Version der Komponente geändert wird, muss der Client neu kompiliert werden.
+
+Erstellen Sie eine Schlüsseldatei mit [sn.exe](/dotnet/framework/tools/sn-exe-strong-name-tool) (`sn -k mykey.snk`).
+
+### <a name="example"></a>Beispiel
+
+Im folgende Beispiel ist die Komponente.
+
+```cpp
+// nested_value_types.cpp
+// compile with: /clr /LD
+using namespace System::Reflection;
+[assembly:AssemblyVersion("1.0.0.*"),
+assembly:AssemblyKeyFile("mykey.snk")];
+
+public value struct S {
+   int i;
+   void Test() {
+      System::Console::WriteLine("S.i = {0}", i);
+   }
+};
+```
+
+### <a name="example"></a>Beispiel
+
+In diesem Beispiel ist der Client:
+
+```cpp
+// nested_value_types_2.cpp
+// compile with: /clr
+#using <nested_value_types.dll>
+
+struct S2 {
+   S MyS1, MyS2;
+};
+
+int main() {
+   S2 MyS2a, MyS2b;
+   MyS2a.MyS1.i = 5;
+   MyS2a.MyS2.i = 6;
+   MyS2b.MyS1.i = 10;
+   MyS2b.MyS2.i = 11;
+
+   MyS2a.MyS1.Test();
+   MyS2a.MyS2.Test();
+   MyS2b.MyS1.Test();
+   MyS2b.MyS2.Test();
+}
+```
+
+### <a name="output"></a>Ausgabe
+
+```Output
+S.i = 5
+S.i = 6
+S.i = 10
+S.i = 11
+```
+
+### <a name="comments"></a>Kommentare
+
+Aber wenn Sie ein anderes Element hinzufügen `struct S` in nested_value_types.cpp, (z. B. `double d;`) und auf die Komponente neu kompilieren, ohne erneute Kompilierung des Clients, auf das Ergebnis ist eine nicht behandelte Ausnahme (vom Typ <xref:System.IO.FileLoadException?displayProperty=fullName>).
 
 ## <a name="test_equality"></a> Vorgehensweise: Test auf Gleichheit
-Im folgenden Beispiel wird ein Test auf Gleichheit, die Managed Extensions for C++ verwendet hängt von was die Handles verweisen.  
-  
-### <a name="example"></a>Beispiel  
-  
-```cpp  
-// mcppv2_equality_test.cpp  
-// compile with: /clr /LD  
-using namespace System;  
-  
-bool Test1() {  
-   String ^ str1 = "test";  
-   String ^ str2 = "test";  
-   return (str1 == str2);  
-}  
-```  
-  
- Die IL für dieses Programm zeigt, dass der zurückgegebene Wert mit dem Aufruf von Op_Equality implementiert wird.  
-  
-```  
-IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,  
-                                                               string)  
-```  
+
+Im folgenden Beispiel wird ein Test auf Gleichheit, die Managed Extensions for C++ verwendet hängt von was die Handles verweisen.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// mcppv2_equality_test.cpp
+// compile with: /clr /LD
+using namespace System;
+
+bool Test1() {
+   String ^ str1 = "test";
+   String ^ str2 = "test";
+   return (str1 == str2);
+}
+```
+
+Die IL für dieses Programm zeigt, dass der zurückgegebene Wert mit dem Aufruf von Op_Equality implementiert wird.
+
+```MSIL
+IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,
+                                                               string)
+```
 
 ## <a name="diagnose_fix"></a> Vorgehensweise: Diagnose und Behebung von Kompatibilitätsproblemen bei Assemblys
-In diesem Thema wird erläutert, was passieren kann, wenn die Version einer Assembly, auf die verwiesen wird zum Zeitpunkt der Kompilierung nicht mit der Version der Assembly verwiesen wird, während der Laufzeit übereinstimmt und wie Sie das Problem zu vermeiden.  
-  
- Wenn eine Assembly kompiliert wird, können andere Assemblys verwiesen werden, mit der `#using` Syntax. Diese Assemblys erfolgt während der Kompilierung vom Compiler verwendet wird. Informationen über diese Assemblys wird verwendet, um Entscheidungen zur Optimierung.  
-  
- Wenn jedoch die referenzierte Assembly geändert und neu kompiliert wird und Sie werden nicht erneut kompilieren die verweisende Assembly, die davon abhängig ist, die Assemblys möglicherweise nicht immer noch kompatibel sein. Optimierungsentscheidungen, die bei gültig waren möglicherweise zuerst nicht richtig in Bezug auf die neue Version der Assembly sein. Aufgrund dieser Inkompatibilitäten können verschiedene Laufzeitfehler auftreten. Es ist keine spezifische Ausnahme, die in diesen Fällen erzeugt werden. Die Möglichkeit, die der Fehler zur Laufzeit gemeldet wird, hängt von der Art der die Änderung des Codes, die die Ursache des Problems ab.  
-  
- Dieser Fehler sollte kein Problem in der endgültigen Produktionscode, solange die gesamte Anwendung für die veröffentlichte Version des Produkts neu erstellt wird. Assemblys, die für die Öffentlichkeit freigegeben werden sollte mit einer offiziellen Versionsnummer, markiert werden, um sicherzustellen, dass diese Probleme vermieden werden. Weitere Informationen dazu finden Sie unter [Assemblyversionen](/dotnet/framework/app-domains/assembly-versioning).  
-  
-### <a name="diagnosing-and-fixing-an-incompatibility-error"></a>Diagnostizieren und Beheben eines Inkompatibilitätsfehlers  
-  
-1.  Wenn Sie auftreten, Common Language Runtime-Ausnahmen oder andere fehlerbedingungen, die im Code auftreten, die eine andere Assembly verweist, und keine anderen identifizierten Ursache haben, können Sie mit einer Assembly nicht mehr aktuell zu tun.  
-  
-2.  Zunächst zu isolieren und die Ausnahme oder anderen Fehlerzustand zu reproduzieren. Ein Problem, aufgrund einer veralteten Ausnahme auftritt, sollten reproduziert werden.  
-  
-3.  Überprüfen Sie den Zeitstempel aller Assemblys, die in Ihrer Anwendung verwiesen wird.  
-  
-4.  Wenn die Zeitstempel der alle referenzierten Assemblys höher als der Zeitstempel der letzten Kompilierung Ihrer Anwendung sind, ist Ihre Anwendung nicht mehr aktuell. In diesem Fall kompilieren Sie die Anwendung mit der neuesten Assembly neu, und stellen Sie codeänderungen erforderlich.  
-  
-5.  Führen Sie die Anwendung erneut aus, führen Sie die Schritte, die das Problem reproduzieren, und stellen Sie sicher, dass die Ausnahme nicht auftritt.  
-  
-### <a name="example"></a>Beispiel  
- Das folgende Programm veranschaulicht das Problem durch reduzieren den Zugriff auf eine Methode, und diese Methode in einer anderen Assembly ohne erneute Kompilierung zugreifen möchten. Kompilieren Sie `changeaccess.cpp` erste. Dies ist die referenzierte Assembly, die geändert wird. Kompilieren Sie dann `referencing.cpp`. Die Kompilierung erfolgreich ist. Nun, verringern Sie den Zugriff auf die aufgerufene Methode. RECOMPILE `changeaccess.cpp` mit dem Flag `/DCHANGE_ACCESS`. Dadurch wird die Methode geschützt, und nicht als "private", damit mehr gesetzlich aufgerufen werden kann. Ohne erneute Kompilierung `referencing.exe`, führen Sie die Anwendung erneut aus. Eine Ausnahme <xref:System.MethodAccessException> führt.  
-  
-```cpp  
-// changeaccess.cpp  
-// compile with: /clr:safe /LD  
-// After the initial compilation, add /DCHANGE_ACCESS and rerun  
-// referencing.exe to introduce an error at runtime. To correct  
-// the problem, recompile referencing.exe  
-  
-public ref class Test {  
-#if defined(CHANGE_ACCESS)  
-protected:  
-#else  
-public:  
-#endif  
-  
-  int access_me() {  
-    return 0;  
-  }  
-  
-};  
-  
-```  
-  
-```cpp  
-// referencing.cpp  
-// compile with: /clr:safe   
-#using <changeaccess.dll>  
-  
-// Force the function to be inline, to override the compiler's own  
-// algorithm.  
-__forceinline  
-int CallMethod(Test^ t) {  
-  // The call is allowed only if access_me is declared public  
-  return t->access_me();  
-}  
-  
-int main() {  
-  Test^ t = gcnew Test();  
-  try  
-  {  
-    CallMethod(t);  
-    System::Console::WriteLine("No exception.");  
-  }  
-  catch (System::Exception ^ e)  
-  {  
-    System::Console::WriteLine("Exception!");  
-  }  
-  return 0;  
-}  
-  
-```  
 
-## <a name="see-also"></a>Siehe auch  
- [.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+In diesem Thema wird erläutert, was passieren kann, wenn die Version einer Assembly, auf die verwiesen wird zum Zeitpunkt der Kompilierung nicht mit der Version der Assembly verwiesen wird, während der Laufzeit übereinstimmt und wie Sie das Problem zu vermeiden.
 
- [Interoperabilität mit anderen .NET-Sprachen (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)
+Wenn eine Assembly kompiliert wird, können andere Assemblys verwiesen werden, mit der `#using` Syntax. Diese Assemblys erfolgt während der Kompilierung vom Compiler verwendet wird. Informationen über diese Assemblys wird verwendet, um Entscheidungen zur Optimierung.
 
- [Verwaltete Typen (C++/CLI)](../dotnet/managed-types-cpp-cli.md)
+Wenn jedoch die referenzierte Assembly geändert und neu kompiliert wird und Sie werden nicht erneut kompilieren die verweisende Assembly, die davon abhängig ist, die Assemblys möglicherweise nicht immer noch kompatibel sein. Optimierungsentscheidungen, die bei gültig waren möglicherweise zuerst nicht richtig in Bezug auf die neue Version der Assembly sein. Aufgrund dieser Inkompatibilitäten können verschiedene Laufzeitfehler auftreten. Es ist keine spezifische Ausnahme, die in diesen Fällen erzeugt werden. Die Möglichkeit, die der Fehler zur Laufzeit gemeldet wird, hängt von der Art der die Änderung des Codes, die die Ursache des Problems ab.
 
- [#using-Direktive](../preprocessor/hash-using-directive-cpp.md) 
+Dieser Fehler sollte kein Problem in der endgültigen Produktionscode, solange die gesamte Anwendung für die veröffentlichte Version des Produkts neu erstellt wird. Assemblys, die für die Öffentlichkeit freigegeben werden sollte mit einer offiziellen Versionsnummer, markiert werden, um sicherzustellen, dass diese Probleme vermieden werden. Weitere Informationen dazu finden Sie unter [Assemblyversionen](/dotnet/framework/app-domains/assembly-versioning).
+
+### <a name="diagnosing-and-fixing-an-incompatibility-error"></a>Diagnostizieren und Beheben eines Inkompatibilitätsfehlers
+
+1. Wenn Sie auftreten, Common Language Runtime-Ausnahmen oder andere fehlerbedingungen, die im Code auftreten, die eine andere Assembly verweist, und keine anderen identifizierten Ursache haben, können Sie mit einer Assembly nicht mehr aktuell zu tun.
+
+1. Zunächst zu isolieren und die Ausnahme oder anderen Fehlerzustand zu reproduzieren. Ein Problem, aufgrund einer veralteten Ausnahme auftritt, sollten reproduziert werden.
+
+1. Überprüfen Sie den Zeitstempel aller Assemblys, die in Ihrer Anwendung verwiesen wird.
+
+1. Wenn die Zeitstempel der alle referenzierten Assemblys höher als der Zeitstempel der letzten Kompilierung Ihrer Anwendung sind, ist Ihre Anwendung nicht mehr aktuell. In diesem Fall kompilieren Sie die Anwendung mit der neuesten Assembly neu, und stellen Sie codeänderungen erforderlich.
+
+1. Führen Sie die Anwendung erneut aus, führen Sie die Schritte, die das Problem reproduzieren, und stellen Sie sicher, dass die Ausnahme nicht auftritt.
+
+### <a name="example"></a>Beispiel
+
+Das folgende Programm veranschaulicht das Problem durch reduzieren den Zugriff auf eine Methode, und diese Methode in einer anderen Assembly ohne erneute Kompilierung zugreifen möchten. Kompilieren Sie `changeaccess.cpp` erste. Dies ist die referenzierte Assembly, die geändert wird. Kompilieren Sie dann `referencing.cpp`. Die Kompilierung erfolgreich ist. Nun, verringern Sie den Zugriff auf die aufgerufene Methode. RECOMPILE `changeaccess.cpp` mit dem Flag `/DCHANGE_ACCESS`. Dadurch wird die Methode geschützt, und nicht als "private", damit mehr gesetzlich aufgerufen werden kann. Ohne erneute Kompilierung `referencing.exe`, führen Sie die Anwendung erneut aus. Eine Ausnahme <xref:System.MethodAccessException> führt.
+
+```cpp
+// changeaccess.cpp
+// compile with: /clr:safe /LD
+// After the initial compilation, add /DCHANGE_ACCESS and rerun
+// referencing.exe to introduce an error at runtime. To correct
+// the problem, recompile referencing.exe
+
+public ref class Test {
+#if defined(CHANGE_ACCESS)
+protected:
+#else
+public:
+#endif
+
+  int access_me() {
+    return 0;
+  }
+
+};
+```
+
+```cpp
+// referencing.cpp
+// compile with: /clr:safe
+#using <changeaccess.dll>
+
+// Force the function to be inline, to override the compiler's own
+// algorithm.
+__forceinline
+int CallMethod(Test^ t) {
+  // The call is allowed only if access_me is declared public
+  return t->access_me();
+}
+
+int main() {
+  Test^ t = gcnew Test();
+  try
+  {
+    CallMethod(t);
+    System::Console::WriteLine("No exception.");
+  }
+  catch (System::Exception ^ e)
+  {
+    System::Console::WriteLine("Exception!");
+  }
+  return 0;
+}
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+
+[Interoperabilität mit anderen .NET-Sprachen (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)
+
+[Verwaltete Typen (C++/CLI)](../dotnet/managed-types-cpp-cli.md)
+
+[#using-Direktive](../preprocessor/hash-using-directive-cpp.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 597d4c2e6fa9904906c2971c3c442a9f26779834
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3f1616168829d488a0b0a899f1dd09f9b02700ee
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215077"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389342"
 ---
 # <a name="iidis"></a>iid_is
 
@@ -38,7 +38,7 @@ Gibt die IID für die COM-Schnittstelle, die einen Schnittstellenzeiger einen ve
 
 ### <a name="parameters"></a>Parameter
 
-*Ausdruck*  
+*Ausdruck*<br/>
 Ein Ausdruck der C-Sprache, der eine IID einer COM-Schnittstelle angibt, auf einen Schnittstellenzeiger zeigt.
 
 ## <a name="remarks"></a>Hinweise
@@ -79,5 +79,5 @@ Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-c
 
 ## <a name="see-also"></a>Siehe auch
 
-[IDL-Attribute](../windows/idl-attributes.md)  
+[IDL-Attribute](../windows/idl-attributes.md)<br/>
 [Parameterattribute](../windows/parameter-attributes.md)  

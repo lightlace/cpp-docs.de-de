@@ -16,51 +16,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fe629c2f279b6b258f4824229490f7b72b4ce4d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2819faa25e2dbd41d6578d60780d13011bb645c0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338811"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388393"
 ---
 # <a name="msg-structure1"></a>MSG-Struktur 1
-Die `MSG` Struktur enthält Meldungsinformationen aus der Nachrichtenwarteschlange eines Threads.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-typedef struct tagMSG {     // msg    
-    HWND hwnd;  
-    UINT message;  
-    WPARAM wParam;  
-    LPARAM lParam;  
-    DWORD time;  
-    POINT pt;  
-} MSG;  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *HWND*  
- Gibt das Fenster, dessen Fensterprozedur die Meldung empfängt.  
-  
- *message*  
- Gibt die Nummer der Meldung an.  
-  
- *wParam-Parameter*  
- Gibt zusätzliche Informationen über die Meldung an. Die genaue Bedeutung hängt von den Wert des der `message` Member.  
-  
- *lParam*  
- Gibt zusätzliche Informationen über die Meldung an. Die genaue Bedeutung hängt von den Wert des der `message` Member.  
-  
- *time*  
- Gibt die Uhrzeit, zu der die Nachricht gepostet wurde.  
-  
- *pt*  
- Gibt an der Cursorposition ein, in Bildschirmkoordinaten, wenn die Nachricht gepostet wurde.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** winuser.h  
-  
-## <a name="see-also"></a>Siehe auch  
- [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+
+Die `MSG` Struktur enthält Meldungsinformationen aus der Nachrichtenwarteschlange eines Threads.
+
+## <a name="syntax"></a>Syntax
+
+```
+typedef struct tagMSG {     // msg
+    HWND hwnd;
+    UINT message;
+    WPARAM wParam;
+    LPARAM lParam;
+    DWORD time;
+    POINT pt;
+} MSG;
+```
+
+#### <a name="parameters"></a>Parameter
+
+*HWND*<br/>
+Gibt das Fenster, dessen Fensterprozedur die Meldung empfängt.
+
+*message*<br/>
+Gibt die Nummer der Meldung an.
+
+*wParam-Parameter*<br/>
+Gibt zusätzliche Informationen über die Meldung an. Die genaue Bedeutung hängt von den Wert des der `message` Member.
+
+*lParam*<br/>
+Gibt zusätzliche Informationen über die Meldung an. Die genaue Bedeutung hängt von den Wert des der `message` Member.
+
+*time*<br/>
+Gibt die Uhrzeit, zu der die Nachricht gepostet wurde.
+
+*pt*<br/>
+Gibt an der Cursorposition ein, in Bildschirmkoordinaten, wenn die Nachricht gepostet wurde.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** winuser.h
+
+## <a name="see-also"></a>Siehe auch
+
+[Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 

@@ -18,56 +18,62 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c189649447b318a651957c82b8cfab8cd11fb60a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9e903a3d5e269a273a191fd733ff8813b75b53a5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054830"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416907"
 ---
 # <a name="invalidoperation-class"></a>invalid_operation-Klasse
-Diese Klasse beschreibt eine Ausnahme, die bei Ausführen einer ungültigen Operation ausgelöst wird, die nicht genauer von einem anderen von der Concurrency Runtime ausgelösten Ausnahmetyp beschrieben wird.  
-  
-## <a name="syntax"></a>Syntax  
-  
+
+Diese Klasse beschreibt eine Ausnahme, die bei Ausführen einer ungültigen Operation ausgelöst wird, die nicht genauer von einem anderen von der Concurrency Runtime ausgelösten Ausnahmetyp beschrieben wird.
+
+## <a name="syntax"></a>Syntax
+
 ```
 class invalid_operation : public std::exception;
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[invalid_operation](#ctor)|Überladen. Erstellt ein `invalid_operation`-Objekt.|  
-  
-## <a name="remarks"></a>Hinweise  
- Die verschiedenen Methoden, die diese Ausnahme auslösen, dokumentieren im Allgemeinen die Umstände, unter denen sie diese auslösen.  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `exception`  
-  
- `invalid_operation`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h hinzu  
-  
- **Namespace:** Parallelität  
-  
-##  <a name="ctor"></a> invalid_operation 
+```
 
- Erstellt ein `invalid_operation`-Objekt.  
-  
+## <a name="members"></a>Member
+
+### <a name="public-constructors"></a>Öffentliche Konstruktoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[invalid_operation](#ctor)|Überladen. Erstellt ein `invalid_operation`-Objekt.|
+
+## <a name="remarks"></a>Hinweise
+
+Die verschiedenen Methoden, die diese Ausnahme auslösen, dokumentieren im Allgemeinen die Umstände, unter denen sie diese auslösen.
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`exception`
+
+`invalid_operation`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** concrt.h hinzu
+
+**Namespace:** Parallelität
+
+##  <a name="ctor"></a> invalid_operation
+
+Erstellt ein `invalid_operation`-Objekt.
+
 ```
 explicit _CRTIMP invalid_operation(_In_z_ const char* _Message) throw();
 
 invalid_operation() throw();
-```  
-  
-### <a name="parameters"></a>Parameter  
+```
+
+### <a name="parameters"></a>Parameter
+
 *_Nachricht*<br/>
-Eine beschreibende Fehlermeldung.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Concurrency-Namespace](concurrency-namespace.md)
+Eine beschreibende Fehlermeldung.
+
+## <a name="see-also"></a>Siehe auch
+
+[Concurrency-Namespace](concurrency-namespace.md)

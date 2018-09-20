@@ -21,19 +21,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9004d62caa5368294a5a53e4e2587da05d1d495c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ba9f3143fb110b25f384e462e7dfcd69c0140802
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204541"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439574"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>Initialisierung gemischter Assemblys
 
 Windows-Entwickler müssen immer mit Skepsis Loadersperre sein, bei der Ausführung von Code während der `DllMain`. Es gibt jedoch einige zusätzlichen Überlegungen, die ins Spiel, beim Umgang mit C++ kommen / Clr gemischte Assemblys.
 
 Code in [DllMain](/windows/desktop/Dlls/dllmain) darf nicht auf CLR zugreifen. Dies bedeutet, dass `DllMain` keine verwalteten Funktionen – weder direkt noch indirekt – aufrufen sollte; in `DllMain`sollte kein verwalteter Code deklariert oder implementiert werden; und in `DllMain`sollte weder eine Garbagecollection noch automatisches Laden der Bibliothek stattfinden.
-  
+
 ## <a name="causes-of-loader-lock"></a>Ursachen für die Loadersperre
 
 Mit der Einführung der .NET-Plattform stehen zwei verschiedene Mechanismen für das Laden eines Ausführungsmoduls (EXE oder DLL) zur Verfügung: einer für Windows, der für nicht verwaltete Module verwendet wird, und einer für die .NET-Common Language Runtime (CLR), der .NET-Assemblys lädt. Das Problem beim Laden gemischter DLLs konzentriert sich auf den Loader des Microsoft Windows-Betriebssystems.
@@ -130,7 +130,7 @@ Da der gleiche Header möglicherweise enthalten sowohl durch C++-Dateien mit der
 Zur Erleichterung für Benutzer, die sich mit Loadersperren auseinandersetzen müssen, wählt der Linker die native Implementierung über die verwaltete Direktive, wenn er mit beiden konfrontiert wird. So werden die oben genannten Probleme vermieden. Aufgrund ungelöster Probleme mit dem Compiler gibt es jedoch zwei Ausnahmen von dieser Regel in dieser Version:
 
 - Der Aufruf einer Inlinefunktion erfolgt über einen globalen statischen Funktionszeiger. Dieses Szenario ist besonders bemerkenswert, da virtuelle Funktionen über globale Funktionszeiger aufgerufen werden. Ein auf ein Objekt angewendeter
-  
+
 ```cpp
 #include "definesmyObject.h"
 #include "definesclassC.h"
@@ -170,15 +170,15 @@ Um die bestimmte MSIL-Funktion zu identifizieren, die unter der Loadersperre auf
    Zu diesem Zweck öffnen Sie die **Eigenschaften** Raster für das Startprojekt in der Projektmappe. Wählen Sie **Konfigurationseigenschaften** > **Debuggen**. Legen Sie die **Debuggertyp** zu **nur nativ**.
 
 1. Starten Sie den Debugger (F5).
-  
+
 1. Wenn die **"/ CLR"** -Diagnose generiert wurde, wählen Sie **wiederholen** und wählen Sie dann **unterbrechen**.
-  
+
 1. Öffnen Sie das Fenster „Aufrufliste“. (Wählen Sie auf der Menüleiste **Debuggen** > **Windows** > **Aufrufliste**.) Die auslösende `DllMain` oder statischer Initialisierer wird mit einem grünen Pfeil gekennzeichnet. Wenn die auslösende Funktion nicht erkannt wird, müssen die folgenden Schritte ausgeführt werden, um sie zu finden.
 
 1. Öffnen der **direkt** Fenster (Wählen Sie auf der Menüleiste **Debuggen** > **Windows** > **direkt**.)
 
 1. Geben Sie .load sos.dll in die **direkt** Fenster aus, um die SOS-Debugdienst zu laden.
-  
+
 1. Typ! Dumpstack der **direkt** Fenster aus, um eine vollständige Liste des internen erhalten **"/ CLR"** Stapel.
 
 1. Suchen Sie nach der ersten Instanz (nahe dem Ende des Stapels) von entweder _CorDllMain (Wenn `DllMain` bewirkt, dass das Problem) oder _VTableBootstrapThunkInitHelperStub bzw. GetTargetForVTableEntry (wenn ein statische Initialisierer das Problem verursacht). Der Stapeleintrag direkt unterhalb dieses Aufrufs ist der Aufruf der MSIL-implementierten Funktion, die eine Ausführung unter der Loadersperre versuchte.

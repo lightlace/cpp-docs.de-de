@@ -1,5 +1,5 @@
 ---
-title: Initialisieren der Teile eines CStatusBarCtrl-Objekts | Microsoft Docs
+title: Initialisieren der Teile eines CStatusBarCtrl-Objekts | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,25 +22,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89cea1516924530f821003affd96e2848687882b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5fa5c4da3bb91983eceea739d42fae12e73b9b0f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344336"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406736"
 ---
 # <a name="initializing-the-parts-of-a-cstatusbarctrl-object"></a>Initialisieren der Teile eines CStatusBarCtrl-Objekts
-Standardmäßig wird eine Statusleiste Statusinformationen über separate Bereiche angezeigt: Diese Bereiche (auch als Komponenten bezeichnet) können entweder eine Textzeichenfolge, ein Symbol oder beides enthalten.  
-  
- Verwendung [Sie SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts) zum definieren, wie viele Teile und die Länge die Statusleiste haben wird. Nachdem Sie die Teile der Statusleiste erstellt haben, Aufrufe an [SetText](../mfc/reference/cstatusbarctrl-class.md#settext) und [SetIcon](../mfc/reference/cstatusbarctrl-class.md#seticon) der Text bzw. kein Symbol für einen bestimmten Teil der Statusleiste festlegen. Nachdem das Webpart erfolgreich festgelegt wurde, wird das Steuerelement automatisch neu gezeichnet.  
-  
- Im folgende Beispiel initialisiert eine vorhandene `CStatusBarCtrl` Objekt (`m_StatusBarCtrl`) mit vier Bereichen und legt dann im zweiten Schritt werden ein Symbol (IDI_ICON1) und etwas Text.  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#31](../mfc/codesnippet/cpp/initializing-the-parts-of-a-cstatusbarctrl-object_1.cpp)]  
-  
- Weitere Informationen zum Festlegen des eine `CStatusBarCtrl` Objekt, das einfache, finden Sie unter [Festlegen des CStatusBarCtrl-Objekts](../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+
+Standardmäßig werden in eine Statusleiste Statusinformationen, die über separate Bereiche angezeigt. Diese Bereiche (auch als Teile bezeichnet) können entweder eine Textzeichenfolge, einem Symbol oder beides enthalten.
+
+Verwendung [Sie SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts) zum definieren, wie viele Teile und die Länge der Statusleiste angezeigt haben. Nachdem Sie die Teile der Statusleiste erstellt haben, führen Aufrufe an [SetText](../mfc/reference/cstatusbarctrl-class.md#settext) und [SetIcon](../mfc/reference/cstatusbarctrl-class.md#seticon) den Text oder das Symbol für einen bestimmten Teil der Statusleiste fest. Nachdem das Webpart erfolgreich festgelegt wurde, wird das Steuerelement automatisch neu gezeichnet.
+
+Im folgende Beispiel initialisiert eine vorhandene `CStatusBarCtrl` Objekt (`m_StatusBarCtrl`) mit vier Bereiche zur Verfügung, und klicken Sie dann ein Symbol (IDI_ICON1) und Text im zweiten Teil festgelegt.
+
+[!code-cpp[NVC_MFCControlLadenDialog#31](../mfc/codesnippet/cpp/initializing-the-parts-of-a-cstatusbarctrl-object_1.cpp)]
+
+Weitere Informationen zum Festlegen des einer `CStatusBarCtrl` Objekt, das einfach, finden Sie unter [Festlegen des CStatusBarCtrl-Objektmodus](../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
+[Steuerelemente](../mfc/controls-mfc.md)
 

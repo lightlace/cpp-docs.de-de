@@ -22,28 +22,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59600343a06a2c3c0d4f5b55efadaa09c43452d9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 71a02b89e7b2098f8a125d1477cff2a0d1cda30a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067700"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429960"
 ---
 # <a name="extent-class-c-amp"></a>extent-Klasse (C++ AMP)
+
 Stellt einen Vektor von *N* ganzzahlige Werte, die angeben, das die Begrenzungen des ein *N*-dimensionalen Raum mit dem Ursprung 0. Die Werte im Vektor sind vom wichtigsten zum am wenigsten wichtigen Wert sortiert.
 
 ### <a name="syntax"></a>Syntax
 
-```  
+```
 template <int _Rank>
 class extent;
-```  
+```
 
 ### <a name="parameters"></a>Parameter
+
 *_Rank*<br/>
 Der Rang des `extent`-Objekts.
 
 ## <a name="requirements"></a>Anforderungen
+
 **Header:** amp.h
 
 **Namespace:** Parallelität
@@ -80,7 +83,6 @@ Der Rang des `extent`-Objekts.
 |[operator=](#operator_eq)|Kopiert den Inhalt eines anderen `extent`-Objekts in dieses Objekt.|
 |[operator-=](#operator_min_eq)|Subtrahiert die angegebene Anzahl von jedem Element des `extent`-Objekts.|
 
-
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
 |name|Beschreibung|
@@ -88,8 +90,8 @@ Der Rang des `extent`-Objekts.
 |[Rank-Konstante](#rank)|Ruft den Rang des `extent`-Objekts ab.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
-`extent`  
 
+`extent`
 
 ## <a name="contains"></a> Enthält
 
@@ -97,15 +99,17 @@ Gibt an, ob das angegebene [Index](index-class.md) Wert innerhalb des Objekts "B
 
 ### <a name="syntax"></a>Syntax
 
-```  
+```
 bool contains(const index<rank>& _Index) const restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parameter
+
 *_Index*<br/>
 Der zu testende `index`-Wert.
 
 ### <a name="return-value"></a>Rückgabewert
+
 `true`, wenn der angegebene `index`-Wert im `extent`-Objekt enthalten ist; andernfalls `false`.
 
 ##  <a name="ctor"></a> Wertebereich
@@ -114,16 +118,17 @@ Initialisiert eine neue Instanz der Klasse "Block".
 
 ### <a name="syntax"></a>Syntax
 
-```  
+```
 extent() restrict(amp,cpu);
 extent(const extent<_Rank>& _Other) restrict(amp,cpu);
 explicit extent(int _I) restrict(amp,cpu);
 extent(int _I0,  int _I1) restrict(amp,cpu);
 extent(int _I0,  int _I1, int _I2) restrict(amp,cpu);
 explicit extent(const int _Array[_Rank])restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parameter
+
 *_Array*<br/>
 Ein Array mit ganzen `_Rank`-Zahlen, mit dem das neue `extent`-Objekt erstellt wird.
 
@@ -143,6 +148,7 @@ Die Länge der unwichtigsten Dimension.
 Ein `extent`-Objekt, auf dem das neue `extent`-Objekt basiert.
 
 ## <a name="remarks"></a>Hinweise
+
 Der parameterlose Konstruktor initialisiert ein `extent`-Objekt, das den Rang 3 hat.
 
 Wenn ein Array verwendet wird, um ein `extent`-Objekt zu erstellen, muss die Länge des Arrays mit dem Rang des `extent`-Objekts übereinstimmen.
@@ -153,15 +159,17 @@ Berechnet den Modul (Rest) jedes Elements in der "Block", wenn dieses Element du
 
 ### <a name="syntax"></a>Syntax
 
-```  
+```
 extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
-```  
+```
 
 ### <a name="parameters"></a>Parameter
+
 *_Rhs*<br/>
 Die Anzahl der Betrag zu finden.
 
 ### <a name="return-value"></a>Rückgabewert
+
 Das `extent`-Objekt.
 
 ##  <a name="operator_star_eq"></a> Operator * =
@@ -170,15 +178,17 @@ Multipliziert jedes Element in das "Extent"-Objekt, mit der angegebenen Zahl.
 
 ### <a name="syntax"></a>Syntax
 
-```  
+```
 extent<_Rank>& operator*=(int _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parameter
+
 *_Rhs*<br/>
 Die zu multiplizierende Zahl.
 
 ### <a name="return-value"></a>Rückgabewert
+
 Das `extent`-Objekt.
 
 ## <a name="operator_add"></a> Operator +-
@@ -187,15 +197,17 @@ Gibt ein neues `extent`-Objekt zurück, das durch Hinzufügen der entsprechenden
 
 ### <a name="syntax"></a>Syntax
 
-```  
+```
 extent<_Rank> operator+(const index<_Rank>& _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parameter
+
 *_Rhs*<br/>
 Das `index`-Objekt, das die hinzuzufügenden Elemente enthält.
 
 ### <a name="return-value"></a>Rückgabewert
+
 Das neue `extent`-Objekt.
 
 ##  <a name="operator_add_add"></a> "Operator++"
@@ -204,12 +216,13 @@ Inkrementiert jedes Element des Objekts "Block".
 
 ### <a name="syntax"></a>Syntax
 
-```  
+```
 extent<_Rank>& operator++() restrict(amp,cpu);
 extent<_Rank> operator++(int)restrict(amp,cpu);
-```  
+```
 
 ### <a name="return-value"></a>Rückgabewert
+
 Für den Präfixoperator das `extent`-Objekt (`*this`). Für den Suffixoperator ein neues `extent`-Objekt.
 
 ##  <a name="operator_add_eq"></a> Operator +=
@@ -218,17 +231,19 @@ Fügt die angegebene Anzahl auf jedes Element des Objekts "Block".
 
 ### <a name="syntax"></a>Syntax
 
-```  
+```
 extent<_Rank>& operator+=(const extent<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator+=(const index<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parameter
+
 *_Rhs*<br/>
 Die Zahl, der Index oder der Wertebereich, die bzw. der hinzugefügt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
+
 Das resultierende `extent`-Objekt.
 
 ##  <a name="operator_min"></a> Operator-
@@ -237,15 +252,17 @@ Erstellt ein neues `extent`-Objekt durch Subtrahieren der einzelnen Elemente im 
 
 ### <a name="syntax"></a>Syntax
 
-```  
+```
 extent<_Rank> operator-(const index<_Rank>& _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parameter
+
 *_Rhs*<br/>
 Das `index`-Objekt, das die zu subtrahierenden Elemente enthält.
 
 ### <a name="return-value"></a>Rückgabewert
+
 Das neue `extent`-Objekt.
 
 ##  <a name="operator_min_min"></a> Operator--
@@ -254,12 +271,13 @@ Dekrementiert jedes Element in das "Extent"-Objekt.
 
 ### <a name="syntax"></a>Syntax
 
-```  
+```
 extent<_Rank>& operator--() restrict(amp,cpu);
 extent<_Rank> operator--(int)restrict(amp,cpu);
-```  
+```
 
 ### <a name="return-value"></a>Rückgabewert
+
 Für den Präfixoperator das `extent`-Objekt (`*this`). Für den Suffixoperator ein neues `extent`-Objekt.
 
 ##  <a name="operator_div_eq"></a> Operator / =
@@ -268,15 +286,17 @@ Dividiert jedes Element in das "Extent"-Objekt mit der angegebenen Zahl.
 
 ### <a name="syntax"></a>Syntax
 
-```  
+```
 extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parameter
+
 *_Rhs*<br/>
 Die Zahl, durch die dividiert wird.
 
 ### <a name="return-value"></a>Rückgabewert
+
 Das `extent`-Objekt.
 
 ##  <a name="operator_min_eq"></a> Operator =
@@ -285,17 +305,19 @@ Subtrahiert die angegebene Anzahl von jedem Element des Objekts "Block".
 
 ### <a name="syntax"></a>Syntax
 
-```  
+```
 extent<_Rank>& operator-=(const extent<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator-=(const index<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parameter
+
 *_Rhs*<br/>
 Die zu subtrahierende Zahl.
 
 ### <a name="return-value"></a>Rückgabewert
+
 Das resultierende `extent`-Objekt.
 
 ##  <a name="operator_eq"></a> Operator =
@@ -304,32 +326,37 @@ Kopiert den Inhalt eines anderen "Block"-Objekts in dieses Objekt.
 
 ### <a name="syntax"></a>Syntax
 
-```  
+```
 extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parameter
+
 *_Sonstige*<br/>
 Das `extent`-Objekt, aus dem kopiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
+
 Ein Verweis auf das `extent`-Objekt.
 
 ##  <a name="operator_at"></a> Extent:: \[\]
+
 Gibt das Element am angegebenen Index zurück.
 
 ### <a name="syntax"></a>Syntax
 
-```  
+```
 int operator[](unsigned int _Index) const restrict(amp,cpu);
 int& operator[](unsigned int _Index) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parameter
+
 *_Index*<br/>
 Eine ganze Zahl von 0 durch den Rang minus 1.
 
 ### <a name="return-value"></a>Rückgabewert
+
 Das Element am angegebenen Index.
 
 ##  <a name="rank_constant"></a> Rang
@@ -338,9 +365,9 @@ Speichert den Rang des Objekts "Block".
 
 ### <a name="syntax"></a>Syntax
 
-```  
+```
 static const int rank = _Rank;
-```  
+```
 
 ##  <a name="size"></a> Größe
 
@@ -348,9 +375,9 @@ Gibt die lineare Gesamtgröße der `extent` Objekt (in Einheiten von Elementen).
 
 ### <a name="syntax"></a>Syntax
 
-```  
+```
 unsigned int size() const restrict(amp,cpu);
-```  
+```
 
 ## <a name="tile"></a> Kachel "
 
@@ -365,8 +392,9 @@ tiled_extent<_Dim0, _Dim1> tile() const ;
 
 template <int _Dim0, int _Dim1, int _Dim2>
 tiled_extent<_Dim0, _Dim1, _Dim2> tile() const ;
-```  
+```
 ### <a name="parameters"></a>Parameter
+
 *_Dim0*<br/>
 Die wichtigste Komponente des unterteilten Wertebereichs.
 *_Dim1*<br/>

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dab76460dcbbb70f55dac864292ad9a6f1fca99
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a8b02b51dca4ae3712274b2b011c1967e5006637
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607819"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422401"
 ---
 # <a name="make-function"></a>Make-Funktion
 
@@ -174,61 +174,61 @@ ComPtr<T> Make();
 
 ### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Eine benutzerdefinierte-Klasse, die von erbt `WRL::RuntimeClass`.
 
-*TArg1*  
+*TArg1*<br/>
 Typ des Arguments 1, der auf die angegebene Runtime-Klasse übergeben wird.
 
-*TArg2*  
+*TArg2*<br/>
 Typ des Arguments, 2, das auf die angegebene Runtime-Klasse übergeben wird.
 
-*TArg3*  
+*TArg3*<br/>
 Typ des Arguments, 3, das auf die angegebene Runtime-Klasse übergeben wird.
 
-*TArg4*  
+*TArg4*<br/>
 Typ des Arguments, 4, der auf die angegebene Runtime-Klasse übergeben wird.
 
-*TArg5*  
+*TArg5*<br/>
 Typ des Arguments, 5, der auf die angegebene Runtime-Klasse übergeben wird.
 
-*TArg6*  
+*TArg6*<br/>
 Typ des Arguments, 6, die an die angegebene Runtime-Klasse übergeben wird.
 
-*TArg7*  
+*TArg7*<br/>
 Typ des Arguments, 7, das auf die angegebene Runtime-Klasse übergeben wird.
 
-*TArg8*  
+*TArg8*<br/>
 Typ des Arguments, 8, das auf die angegebene Runtime-Klasse übergeben wird.
 
-*TArg9*  
+*TArg9*<br/>
 Typ des Arguments, 9, die an die angegebene Runtime-Klasse übergeben wird.
 
-*arg1*  
+*arg1*<br/>
 Argument 1, das an die angegebene Runtime-Klasse übergeben wird.
 
-*Arg2*  
+*Arg2*<br/>
 Argument 2, auf die angegebene Runtime-Klasse übergeben wird.
 
-*Arg3*  
+*Arg3*<br/>
 Argument 3, das an die angegebene Runtime-Klasse übergeben wird.
 
-*Arg4*  
+*Arg4*<br/>
 Argument 4, das an die angegebene Runtime-Klasse übergeben wird.
 
-*Arg5*  
+*Arg5*<br/>
 Argument 5, für die angegebene Runtime-Klasse übergeben wird.
 
-*Arg6*  
+*Arg6*<br/>
 Argument 6, auf die angegebene Runtime-Klasse übergeben wird.
 
-*Arg7*  
+*Arg7*<br/>
 Argument 7, das an die angegebene Runtime-Klasse übergeben wird.
 
-*Arg8*  
+*Arg8*<br/>
 Argument 8, das an die angegebene Runtime-Klasse übergeben wird.
 
-*Arg9*  
+*Arg9*<br/>
 Argument 9, auf die angegebene Runtime-Klasse übergeben wird.
 
 ## <a name="return-value"></a>Rückgabewert

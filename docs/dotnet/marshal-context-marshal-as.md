@@ -20,67 +20,74 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f88d086c76ea6b56f1bb049b886df70ceadbdbb9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: cc17010ccccc25679918bc02884774f1644dca69
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707901"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379131"
 ---
 # <a name="marshalcontextmarshalas"></a>marshal_context::marshal_as
-Führt das Marshalling für ein bestimmtes Objekt zwischen einer verwalteten und nativer Datentyp konvertieren.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-To_Type marshal_as<To_Type>(  
-   From_Type input   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+
+Führt das Marshalling für ein bestimmtes Objekt zwischen einer verwalteten und nativer Datentyp konvertieren.
+
+## <a name="syntax"></a>Syntax
+
+```
+To_Type marshal_as<To_Type>(
+   From_Type input
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
 *Eingabe*<br/>
-[in] Der Wert, der zum Marshallen soll eine `To_Type` Variable.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Eine Variable vom Typ `To_Type`, bei dem es sich um den konvertierten Wert von `input` handelt.  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Funktion führt das Marshalling für ein bestimmtes Objekt. Verwenden Sie diese Funktion nur für die Konvertierungen, die von der Tabelle im angegebenen [Overview of Marshaling in C++](../dotnet/overview-of-marshaling-in-cpp.md).  
-  
- Wenn Sie versuchen, ein Paar von Datentypen zu marshallen, die nicht unterstützt werden, `marshal_as` generiert einen Fehler [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) zum Zeitpunkt der Kompilierung. Weitere Informationen zu dem Fehler finden Sie in der zugehörigen Meldung. Der Fehler `C4996` kann auch bei anderen Problemen als veralteten Funktionen generiert werden. Zwei Bedingungen, die diesen Fehler zu generieren, werden versucht, ein Paar von Datentypen zu marshallen, die nicht unterstützt werden und verwenden möchten `marshal_as` für eine Konvertierung, die einen Kontext erfordert.  
-  
- Die Marshallingbibliothek besteht aus mehreren Headerdateien. Für jede Konvertierung ist nur eine Datei erforderlich, Sie können bei Bedarf jedoch zusätzliche Dateien für andere Konvertierungen einbinden. Die Tabelle in `Marshaling Overview in C++` gibt an, welche Marshalling-Datei für jede Konvertierung enthalten sein sollten.  
-  
-## <a name="example"></a>Beispiel  
- In diesem Beispiel erstellt einen Kontext für das Marshalling von einem `System::String` zu einem `const char *` Variablentyp. Die konvertierten Daten werden nicht gültig nach der Zeile sein, die den Kontext löscht.  
-  
-```  
-// marshal_context_test.cpp  
-// compile with: /clr  
-#include <stdlib.h>  
-#include <string.h>  
-#include <msclr\marshal.h>  
-  
-using namespace System;  
-using namespace msclr::interop;  
-  
-int main() {  
-   marshal_context^ context = gcnew marshal_context();  
-   String^ message = gcnew String("Test String to Marshal");  
-   const char* result;  
-   result = context->marshal_as<const char*>( message );  
-   delete context;  
-   return 0;  
-}  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
- **Headerdatei:** \<msclr\marshal.h >, \<msclr\marshal_windows.h >, \<msclr\marshal_cppstd.h >, oder \<msclr\marshal_atl.h >  
-  
- **Namespace:** msclr::interop  
-  
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über das Marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md)   
- [marshal_as](../dotnet/marshal-as.md)   
- [marshal_context-Klasse](../dotnet/marshal-context-class.md)
+[in] Der Wert, der zum Marshallen soll eine `To_Type` Variable.
+
+## <a name="return-value"></a>Rückgabewert
+
+Eine Variable vom Typ `To_Type`, bei dem es sich um den konvertierten Wert von `input` handelt.
+
+## <a name="remarks"></a>Hinweise
+
+Diese Funktion führt das Marshalling für ein bestimmtes Objekt. Verwenden Sie diese Funktion nur für die Konvertierungen, die von der Tabelle im angegebenen [Overview of Marshaling in C++](../dotnet/overview-of-marshaling-in-cpp.md).
+
+Wenn Sie versuchen, ein Paar von Datentypen zu marshallen, die nicht unterstützt werden, `marshal_as` generiert einen Fehler [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) zum Zeitpunkt der Kompilierung. Weitere Informationen zu dem Fehler finden Sie in der zugehörigen Meldung. Der Fehler `C4996` kann auch bei anderen Problemen als veralteten Funktionen generiert werden. Zwei Bedingungen, die diesen Fehler zu generieren, werden versucht, ein Paar von Datentypen zu marshallen, die nicht unterstützt werden und verwenden möchten `marshal_as` für eine Konvertierung, die einen Kontext erfordert.
+
+Die Marshallingbibliothek besteht aus mehreren Headerdateien. Für jede Konvertierung ist nur eine Datei erforderlich, Sie können bei Bedarf jedoch zusätzliche Dateien für andere Konvertierungen einbinden. Die Tabelle in `Marshaling Overview in C++` gibt an, welche Marshalling-Datei für jede Konvertierung enthalten sein sollten.
+
+## <a name="example"></a>Beispiel
+
+In diesem Beispiel erstellt einen Kontext für das Marshalling von einem `System::String` zu einem `const char *` Variablentyp. Die konvertierten Daten werden nicht gültig nach der Zeile sein, die den Kontext löscht.
+
+```
+// marshal_context_test.cpp
+// compile with: /clr
+#include <stdlib.h>
+#include <string.h>
+#include <msclr\marshal.h>
+
+using namespace System;
+using namespace msclr::interop;
+
+int main() {
+   marshal_context^ context = gcnew marshal_context();
+   String^ message = gcnew String("Test String to Marshal");
+   const char* result;
+   result = context->marshal_as<const char*>( message );
+   delete context;
+   return 0;
+}
+```
+
+## <a name="requirements"></a>Anforderungen
+
+**Headerdatei:** \<msclr\marshal.h >, \<msclr\marshal_windows.h >, \<msclr\marshal_cppstd.h >, oder \<msclr\marshal_atl.h >
+
+**Namespace:** msclr::interop
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über das Marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md)<br/>
+[marshal_as](../dotnet/marshal-as.md)<br/>
+[marshal_context-Klasse](../dotnet/marshal-context-class.md)

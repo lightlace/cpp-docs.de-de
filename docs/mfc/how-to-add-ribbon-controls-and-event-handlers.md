@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Hinzufügen von Menübandsteuerelementen und Ereignishandlern | Microsoft Docs'
+title: 'Vorgehensweise: Hinzufügen von Menübandsteuerelementen und Ereignishandlern | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,40 +15,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 176323137b2ace0d27d9de162da7fa022441aa88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3c4af695553bc97815915454bda2aae481543e9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344418"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427952"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Gewusst wie: Hinzufügen von Menüband-Steuerelementen und Ereignishandlern
-Menübandsteuerelemente sind Elemente, z. B. Schaltflächen und Kombinationsfelder, die Bereiche hinzugefügt. Bereiche sind Bereiche der menübandleiste, in denen eine Gruppe von verwandten Steuerelementen angezeigt.  
-  
- In diesem Thema die Menüband-Designer zu öffnen, eine Schaltfläche "hinzufügen" und verknüpfen Sie ein Ereignis, das "Hello World" angezeigt.  
-  
-### <a name="to-open-the-ribbon-designer"></a>Zum Öffnen des Menüband-Designers  
-  
-1.  In Visual Studio auf die **Ansicht** Menü klicken Sie auf **Ressourcenansicht**.  
-  
-2.  In **Ressourcenansicht**, doppelklicken Sie auf die menübandressource für die Anzeige auf der Entwurfsoberfläche angezeigt.  
-  
-### <a name="to-add-a-button-and-an-event-handler"></a>So fügen Sie eine Schaltfläche und ein Ereignishandler hinzu.  
-  
-1.  Aus der **Symbolleiste**, klicken Sie auf **Schaltfläche** und ziehen Sie es an ein Panel in der Entwurfsoberfläche angezeigt.  
-  
-2.  Der rechten Maustaste, und klicken Sie auf **Ereignishandler hinzufügen**.  
-  
-3.  In der **Ereignishandler-Assistent**, bestätigen Sie die Standardeinstellungen, und klicken Sie auf **hinzufügen und Bearbeiten von**. Weitere Informationen finden Sie unter [Ereignishandler-Assistent](../ide/event-handler-wizard.md).  
-  
-4.  Fügen Sie im Code-Editor den folgenden Code in die Handlerfunktion:  
-  
- ```  
+
+Menübandsteuerelemente sind Elemente, z. B. Schaltflächen und Kombinationsfelder, die Panels hinzugefügt. Bereiche werden Bereiche der menübandleiste, die eine Gruppe von verwandten Steuerelementen angezeigt werden.
+
+In diesem Thema werden Sie der Menüband-Designer zu öffnen, eine Schaltfläche "hinzufügen" und verknüpfen Sie dann ein Ereignis, das "Hello World" angezeigt.
+
+### <a name="to-open-the-ribbon-designer"></a>Um dem Menüband-Designer zu öffnen.
+
+1. In Visual Studio auf die **Ansicht** Menü klicken Sie auf **Ressourcenansicht**.
+
+1. In **Ressourcenansicht**, doppelklicken Sie auf die menübandressource, um sie auf der Entwurfsoberfläche anzuzeigen.
+
+### <a name="to-add-a-button-and-an-event-handler"></a>Eine Schaltfläche und einen Ereignishandler hinzufügen
+
+1. Von der **Symbolleiste**, klicken Sie auf **Schaltfläche** und ziehen Sie sie in einen Bereich in der Entwurfsoberfläche.
+
+1. Der rechten Maustaste, und klicken Sie auf **Ereignishandler hinzufügen**.
+
+1. In der **Ereignishandler-Assistent**, bestätigen Sie die Standardeinstellungen, und klicken Sie auf **hinzufügen und Bearbeiten von**. Weitere Informationen finden Sie unter [Ereignishandler-Assistent](../ide/event-handler-wizard.md).
+
+1. Fügen Sie im Code-Editor den folgenden Code in die Handler-Funktion:
+
+```
     MessageBox((LPCTSTR)L"Hello World");
 
- ```  
-  
-## <a name="see-also"></a>Siehe auch  
- [RibbonGadgets-Beispiel: Gadgets Menübandanwendung](../visual-cpp-samples.md)   
- [Menüband-Designer (MFC)](../mfc/ribbon-designer-mfc.md)
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[RibbonGadgets-Beispiel: Gadgets Menübandanwendung](../visual-cpp-samples.md)<br/>
+[Menüband-Designer (MFC)](../mfc/ribbon-designer-mfc.md)
 

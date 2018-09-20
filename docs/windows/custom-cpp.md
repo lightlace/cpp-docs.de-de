@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 848ea415d0638b6135c69cd14e442f45dab40237
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ec3ba8280ab481211d98c9dc5256c94e76e193e2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220360"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396442"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -39,10 +39,10 @@ Definiert die Metadaten für ein Objekt in der Typbibliothek.
 
 ### <a name="parameters"></a>Parameter
 
-*uuid*  
+*uuid*<br/>
 Eine eindeutige ID.
 
-*Wert*  
+*Wert*<br/>
 Ein Wert, der in eine Variante platziert werden kann.
 
 ## <a name="remarks"></a>Hinweise
@@ -66,10 +66,10 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 
 ## <a name="see-also"></a>Siehe auch
 
-[IDL-Attribute](../windows/idl-attributes.md)  
-[Eigenständige Attribute](../windows/stand-alone-attributes.md)  
-[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Parameterattribute](../windows/parameter-attributes.md)  
-[Methodenattribut](../windows/method-attributes.md)  
-[Klassenattribute](../windows/class-attributes.md)  
+[IDL-Attribute](../windows/idl-attributes.md)<br/>
+[Eigenständige Attribute](../windows/stand-alone-attributes.md)<br/>
+[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[Parameterattribute](../windows/parameter-attributes.md)<br/>
+[Methodenattribut](../windows/method-attributes.md)<br/>
+[Klassenattribute](../windows/class-attributes.md)<br/>
 [Schnittstellenattribut](../windows/interface-attributes.md)  

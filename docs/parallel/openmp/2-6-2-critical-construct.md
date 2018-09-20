@@ -1,5 +1,5 @@
 ---
-title: 2.6.2 critical-Konstrukt | Microsoft Docs
+title: 2.6.2 critical-Konstrukt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,20 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae7070fcc590307e71b0c34259bcbe1c12200550
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e51bd425999081c7a06a7d5692dbea16c887fa0b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689596"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417851"
 ---
 # <a name="262-critical-construct"></a>2.6.2 critical-Konstrukt
-Die **kritische** Richtlinie identifiziert ein Konstrukt, die Ausführung des zugehörigen strukturierten Block auf einem einzelnen Thread zu einem Zeitpunkt beschränkt. Die Syntax der **kritische** Richtlinie lautet wie folgt:  
-  
-```  
-#pragma omp critical [(name)]  new-linestructured-block  
-```  
-  
- Ein optionales *Namen* kann verwendet werden, um die kritischen Bereichs zu identifizieren. Bezeichner, die zur Identifizierung einer kritischen Bereichs haben externe Verknüpfung und in einem Namespace von Namespaces, die von Bezeichnungen, Tags, Mitglieder und normale Bezeichner verwendet werden.  
-  
- Ein Thread wartet am Anfang eines kritischen Bereichs, bis keine anderen Thread einen kritischen Bereich (eine beliebige Stelle im Programm), mit dem gleichen Namen ausgeführt wird. Alle unbenannten **kritische** Direktiven in den nicht angegebenen Namen zugeordnet.
+
+Die **kritische** -Direktive identifiziert ein Konstrukt, die Ausführung von einem zugeordneten strukturierten Block auf einen einzelnen Thread zu einem Zeitpunkt beschränkt. Die Syntax der **kritische** Richtlinie lautet wie folgt:
+
+```
+#pragma omp critical [(name)]  new-linestructured-block
+```
+
+Eine optionale *Namen* kann zum Identifizieren des kritischen Bereichs verwendet werden. Bezeichner, die zum Identifizieren von eines kritischen Bereichs verfügen über eine externe Bindung, und in einem Namespace ist unabhängig von den Namespaces, die von Bezeichnungen, Tags, Mitglieder und wie gewöhnliche Bezeichner verwendet werden.
+
+Ein Thread wartet am Anfang des einem kritischen Bereich, bis kein anderer Thread einen kritischen Bereich (eine beliebige Stelle im Programm), mit dem gleichen Namen ausgeführt wird. Alle unbenannten **kritische** Anweisungen in den nicht angegebenen Namen zugeordnet.

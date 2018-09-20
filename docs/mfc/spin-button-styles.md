@@ -1,5 +1,5 @@
 ---
-title: Drehfeld-Schaltflächenstile | Microsoft Docs
+title: Drehfeld-Schaltflächenstile | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 223b7e0875a5382edf5f4d350c9343d117768c41
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 71da44858ea018d0393af6267e4bb522a2c57391
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953777"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393593"
 ---
 # <a name="spin-button-styles"></a>Drehfeld-Schaltflächenstile
-Viele der Einstellungen für ein Drehfeld ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) von Stilen gesteuert werden. Sie können festlegen, dass die folgenden Formate, die mit der **Eigenschaften** Fenster in den Dialog-Editor.  
-  
--   **Ausrichtung** entweder vertikal oder Horizontal. Steuert die Ausrichtung der Pfeiltasten an. Das Format UDS_HORZ zugeordnet ist.  
-  
--   **Ausrichtung** getrennt, links oder rechts. Steuert den Speicherort für das Drehfeld. Positionieren das Drehfeld neben dem Buddyfenster, links und rechts. Die Breite des Fensters Buddy wird verringert, um das Drehfeld aufzunehmen. Die Stile UDS_ALIGNLEFT und UDS_ALIGNRIGHT zugeordnet ist.  
-  
--   **Auto-Buddy** wählt automatisch den vorherige Fenster in Z-Reihenfolge als Buddyfenster, um das Drehfeld. In einer Dialogfeldvorlage ist dies die steuern, die welche das Drehfeld in der Aktivierreihenfolge vorangestellt. Das Format UDS_AUTOBUDDY zugeordnet ist.  
-  
--   **Legen Sie Buddy-Integer** bewirkt, dass das Drehfeld-Steuerelement zum Inkrementieren und Dekrementieren die Beschriftung des Fensters Buddy als die aktuelle Position ändert sich. Das Format UDS_SETBUDDYINT zugeordnet ist.  
-  
--   **Keine Tausende** werden keine Tausendertrennzeichen eingefügt Trennzeichen in der die Beschriftung des Fensters Buddy-Werten. Das Format UDS_NOTHOUSANDS zugeordnet ist.  
-  
+
+Viele der Einstellungen für ein Drehfeld ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) von Stilen gesteuert werden. Sie können festlegen, dass die folgenden Formate, die mit der **Eigenschaften** -Fensters im Dialog-Editor.
+
+- **Ausrichtung** entweder vertikal oder Horizontal. Steuert die Ausrichtung der Pfeiltasten an. Styl UDS_HORZ zugeordnet ist.
+
+- **Ausrichtung** eines getrennt, links oder rechts. Steuert den Speicherort der die Schaltfläche "starten". Links und rechts positionieren das Drehfeld neben dem Buddyfenster. Die Breite des Buddy-Fensters wird verringert, um die Schaltfläche "starten" zu ermöglichen. Die Stile UDS_ALIGNLEFT und UDS_ALIGNRIGHT zugeordnet ist.
+
+- **Auto Buddy** wählt automatisch die vorherige Fenster, in der Z-Reihenfolge, als Buddy-Fenster auf die Schaltfläche "starten". In einer Dialogfeldvorlage ist dies das Steuerelement mit dem die Schaltfläche "starten" in der Reihenfolge vor. Styl UDS_AUTOBUDDY zugeordnet ist.
+
+- **Legen Sie Buddy Integer** bewirkt, dass das Drehfeld-Steuerelement zum Inkrementieren und Dekrementieren die Beschriftung des Buddy-Fensters, wenn sich die aktuelle Position ändert. Styl UDS_SETBUDDYINT zugeordnet ist.
+
+- **Keine Tausende** werden keine Tausendertrennzeichen eingefügt Trennzeichen in den Wert in der Beschriftung des Buddy-Fensters. Styl UDS_NOTHOUSANDS zugeordnet ist.
+
     > [!NOTE]
-    >  Legen Sie dieses Format, wenn Dialogdatenaustausch (DDX) zu verwenden, um den ganzzahligen Wert aus dem Buddysteuerelement abgerufen werden sollen. `DDX_Text` nimmt keine eingebettete Tausendertrennzeichen an.  
-  
--   **Umschließen** bewirkt, dass die Position, um "binden", wie der Wert inkrementiert oder dekrementiert außerhalb des gültigen Bereichs des Steuerelements ist. Das Format UDS_WRAP zugeordnet ist.  
-  
--   **Pfeiltasten** bewirkt, dass das Drehfeld, um inkrementiert oder dekrementiert die Position, wenn die nach-oben und nach-unten-Taste gedrückt wird. Das Format UDS_ARROWKEYS zugeordnet ist.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+    >  Festlegen Sie dieser Stil, sollten Sie Dialogdatenaustausch (DDX) verwenden, um den ganzzahligen Wert aus dem Buddysteuerelement zu erhalten. `DDX_Text` nimmt keine eingebettete Tausendertrennzeichen an.
+
+- **Umschließen** bewirkt, dass die Position, die "wrap", wie der Wert inkrementiert oder dekrementiert außerhalb des Gültigkeitsbereichs für das Steuerelement ist. Styl UDS_WRAP zugeordnet ist.
+
+- **Pfeiltasten** bewirkt, dass die Drehfeld-Schaltfläche, um inkrementiert oder dekrementiert die Position, wenn die nach-oben und nach-unten-Tasten gedrückt werden. Styl UDS_ARROWKEYS zugeordnet ist.
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)<br/>
+[Steuerelemente](../mfc/controls-mfc.md)
 

@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e218002171b7ad2d141be227ab277851487f0f5
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3835d3c3d2900b97c16bc82963df2d08f35a879d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678799"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416291"
 ---
 # <a name="preprocessor-directives"></a>Präprozessoranweisungen
 
@@ -43,6 +43,6 @@ Präprozessoranweisungen können an beliebiger Stelle in einer Quelldatei auftre
 
 ## <a name="see-also"></a>Siehe auch
 
-[Präprozessoroperatoren](../preprocessor/preprocessor-operators.md)  
-[Vordefinierte Makros](../preprocessor/predefined-macros.md)  
+[Präprozessoroperatoren](../preprocessor/preprocessor-operators.md)<br/>
+[Vordefinierte Makros](../preprocessor/predefined-macros.md)<br/>
 [C/C++-Präprozessorreferenz](../preprocessor/c-cpp-preprocessor-reference.md)  

@@ -1,5 +1,5 @@
 ---
-title: Message-Handler | Microsoft Docs
+title: Message-Handler | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be4ccf9ec33e5ddf497193c1942e9f300f8cae57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 22dde243bb6d8e8a283e670804d4b8b6cad9082c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347629"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406749"
 ---
 # <a name="message-handlers"></a>Meldungshandler
-In MFC, eine dedizierte *Handler* Funktion verarbeitet jede separate Nachricht. Meldungshandlerfunktionen sind Memberfunktionen einer Klasse. In dieser Dokumentation werden die Begriffe verwendet *Nachrichtenhandler Memberfunktion*, *Meldungshandlerfunktion*, *Nachrichtenhandler*, und *Handler*austauschbar. Einige Arten von Meldungshandler werden auch als "Befehlshandler" bezeichnet.  
-  
- Schreiben Nachricht Handler Konten ein Großteil der Arbeit in einem Framework-Anwendung schreiben. Diese Artikelreihe wird beschrieben, wie der Nachrichtenverarbeitung Mechanismus funktioniert.  
-  
- Leistungsumfang den Handler für eine Nachricht dafür ist, was Sie als Antwort auf diese Nachricht geschehen soll. Sie können die Handler erstellen, indem Sie das Fenster "Eigenschaften" der Klasse, und füllen Sie dann auf die mit dem Quellcode-Editors Handlercode.  
-  
- Sie können alle Funktionen von Microsoft Visual C++ und MFC verwenden, die Handler zu schreiben. Eine Liste aller Klassen, finden Sie unter [Class Library Overview](../mfc/class-library-overview.md) in der *MFC-Referenz*.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Meldungen und Befehle im Framework](../mfc/messages-and-commands-in-the-framework.md)
+
+In MFC, ein dediziertes *Handler* Funktion verarbeitet jede separate Nachricht. Meldungshandler-Funktionen werden die Memberfunktionen einer Klasse. In dieser Dokumentation werden die Begriffe verwendet *-Nachrichtenhandler-Memberfunktion*, *-Meldungshandler*, *Meldungshandler*, und *Handler*Synonym verwenden lassen. Einige Arten von Meldungshandler werden auch als "Befehlshandler." bezeichnet.
+
+Das Message-Handler-Konten ein Großteil der Arbeit beim Schreiben einer Framework-Anwendung schreiben. In diesen Abschnitten wird beschrieben, wie der Mechanismus für die Verarbeitung von Nachrichten funktioniert.
+
+Funktionsweise den Handler für eine Nachricht dafür ist, was als Reaktion auf diese Nachricht geschehen soll. Sie können die Handler erstellen, indem Sie das Fenster "Eigenschaften" der Klasse, und geben Sie dann in der Handler-Code, die mithilfe der Quellcode-Editor.
+
+Sie können alle Funktionen von Microsoft Visual C++ und MFC verwenden, die Handler zu schreiben. Eine Liste aller Klassen, finden Sie unter [Übersicht über die Klassenbibliothek](../mfc/class-library-overview.md) in die *MFC-Referenz*.
+
+## <a name="see-also"></a>Siehe auch
+
+[Meldungen und Befehle im Framework](../mfc/messages-and-commands-in-the-framework.md)
 

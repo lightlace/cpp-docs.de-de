@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6734391e56f076f247bd8887a7fdb61142b3669
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: fa4d894fb3fc436abab84bfee11199f59bd66f78
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317861"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402394"
 ---
 # <a name="defining-member-variables-for-dialog-controls-c"></a>Definieren von Membervariablen für Dialogfeld-Steuerelemente (C++)
 
@@ -55,11 +55,11 @@ MFC
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zuordnen von Meldungen zu Funktionen](../mfc/reference/mapping-messages-to-functions.md)  
-[Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../ide/adding-functionality-with-code-wizards-cpp.md)  
-[MFC-Klassen-Assistent](../mfc/reference/mfc-class-wizard.md)  
-[Hinzufügen einer Klasse](../ide/adding-a-class-visual-cpp.md)  
-[Hinzufügen einer Memberfunktion](../ide/adding-a-member-function-visual-cpp.md)  
-[Adding a Member Variable (Hinzufügen einer Membervariablen)](../ide/adding-a-member-variable-visual-cpp.md)  
-[Überschreiben einer virtuellen Funktion](../ide/overriding-a-virtual-function-visual-cpp.md)  
+[Zuordnen von Meldungen zu Funktionen](../mfc/reference/mapping-messages-to-functions.md)<br/>
+[Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[MFC-Klassen-Assistent](../mfc/reference/mfc-class-wizard.md)<br/>
+[Hinzufügen einer Klasse](../ide/adding-a-class-visual-cpp.md)<br/>
+[Hinzufügen einer Memberfunktion](../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Adding a Member Variable (Hinzufügen einer Membervariablen)](../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Überschreiben einer virtuellen Funktion](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [MFC Message Handler (MFC-Meldungshandler)](../mfc/reference/adding-an-mfc-message-handler.md)

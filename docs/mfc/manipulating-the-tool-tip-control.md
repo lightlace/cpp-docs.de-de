@@ -1,5 +1,5 @@
 ---
-title: Bearbeiten des QuickInfo-Steuerelements | Microsoft Docs
+title: Bearbeiten des QuickInfo-Steuerelements | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,35 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91e2e247acb85188c1280713e9e5ad8ef8f19448
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 336ba8466e1d1eefbd07d35c4856b273faea7537
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929827"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377369"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>Bearbeiten des QuickInfo-Steuerelements
-Klasse `CToolTipCtrl` bietet eine Gruppe von Member Funktionen, die die verschiedenen Attribute steuern die `CToolTipCtrl` Objekt und das QuickInfo-Fenster.  
-  
- Die anfängliche, Popup- und Wiederholungsdauern für QuickInfo-Fenster können festgelegt und, die durch Aufrufe von abgerufen [GetDelayTime](../mfc/reference/ctooltipctrl-class.md#getdelaytime) und [SetDelayTime](../mfc/reference/ctooltipctrl-class.md#setdelaytime).  
-  
- Ändern Sie die Darstellung der QuickInfo-Fenster mit den folgenden Funktionen:  
-  
--   [GetMargin](../mfc/reference/ctooltipctrl-class.md#getmargin) und [SetMargin](../mfc/reference/ctooltipctrl-class.md#setmargin) ab oder legt der Abstand zwischen dem QuickInfo-Rahmen und das Tool QuickInfo-Text.  
-  
--   [GetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#getmaxtipwidth) und [SetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#setmaxtipwidth) ab oder legt die maximale Breite des Tools QuickInfo-Fensters.  
-  
--   [GetTipBkColor](../mfc/reference/ctooltipctrl-class.md#gettipbkcolor) und [SetTipBkColor](../mfc/reference/ctooltipctrl-class.md#settipbkcolor) ab oder legt die Farbe des Hintergrunds des Tools QuickInfo-Fensters.  
-  
--   [GetTipTextColor](../mfc/reference/ctooltipctrl-class.md#gettiptextcolor) und [SetTipTextColor](../mfc/reference/ctooltipctrl-class.md#settiptextcolor) ab oder legt die Textfarbe des Tools QuickInfo-Fensters.  
-  
- In der Reihenfolge für das QuickInfo-Steuerelement wichtige Nachrichten, z. B. WM_LBUTTONXXX-Nachrichten benachrichtigt werden müssen Sie die Nachrichten, die QuickInfo-Steuerelement leiten. Die beste Methode für dieses Relay wird, um einen Aufruf an [CToolTipCtrl:: RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent)in die `PreTranslateMessage` Funktion des Besitzerfensters. Das folgende Beispiel veranschaulicht eine mögliche Methode (vorausgesetzt, das QuickInfo-Steuerelement heißt `m_ToolTip`):  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/cpp/manipulating-the-tool-tip-control_1.cpp)]  
-  
- Um ein Tipp Toolfenster sofort zu entfernen, rufen Sie die [Pop](../mfc/reference/ctooltipctrl-class.md#pop) Memberfunktion.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+
+Klasse `CToolTipCtrl` stellt eine Gruppe von der Members-Funktionen, die die verschiedenen Attribute des steuern die `CToolTipCtrl` -Objekt und das QuickInfo-Fenster.
+
+Die ursprüngliche, Popup- und Wiederholungsdauern für QuickInfo-Fenster können festgelegt und, die mit Aufrufen von abgerufen [GetDelayTime](../mfc/reference/ctooltipctrl-class.md#getdelaytime) und [SetDelayTime](../mfc/reference/ctooltipctrl-class.md#setdelaytime).
+
+Ändern Sie die Darstellung der QuickInfo-Fenster mit den folgenden Funktionen:
+
+- [GetMargin](../mfc/reference/ctooltipctrl-class.md#getmargin) und [SetMargin](../mfc/reference/ctooltipctrl-class.md#setmargin) ab oder legt die Breite zwischen dem QuickInfo-Rahmen und das Tool den QuickInfo-Text.
+
+- [GetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#getmaxtipwidth) und [SetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#setmaxtipwidth) ab oder legt die maximale Breite des Tools QuickInfo-Fensters.
+
+- [GetTipBkColor](../mfc/reference/ctooltipctrl-class.md#gettipbkcolor) und [SetTipBkColor](../mfc/reference/ctooltipctrl-class.md#settipbkcolor) ab oder legt die Hintergrundfarbe des Tools QuickInfo-Fensters.
+
+- [GetTipTextColor](../mfc/reference/ctooltipctrl-class.md#gettiptextcolor) und [SetTipTextColor](../mfc/reference/ctooltipctrl-class.md#settiptextcolor) ab oder legt die Textfarbe des Tools QuickInfo-Fensters.
+
+In der Reihenfolge für das QuickInfo-Steuerelement über wichtige Meldungen, z. B. WM_LBUTTONXXX-Nachrichten benachrichtigt werden müssen Sie die Nachrichten auf Ihre QuickInfo-Steuerelement weiterleiten. Die beste Methode für dieses Relay wird ein Aufruf von [CToolTipCtrl:: RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent)in die `PreTranslateMessage` Funktion das besitzende Fenster. Das folgende Beispiel veranschaulicht eine mögliche Methode (vorausgesetzt, das QuickInfo-Steuerelement heißt `m_ToolTip`):
+
+[!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/cpp/manipulating-the-tool-tip-control_1.cpp)]
+
+Um sofort eine QuickInfo-Fenster zu entfernen, rufen Sie die [Pop](../mfc/reference/ctooltipctrl-class.md#pop) Member-Funktion.
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
+[Steuerelemente](../mfc/controls-mfc.md)
 

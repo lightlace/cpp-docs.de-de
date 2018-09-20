@@ -1,5 +1,5 @@
 ---
-title: MAPI-Beispiele | Microsoft Docs
+title: MAPI-Beispiele | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6260c7bc9875e92e66920fb8837810132d0a4a50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a6427ec6748ffcb32f401a4b9efe46127dd64f2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344116"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430682"
 ---
 # <a name="mapi-samples"></a>MAPI-Beispiele
-Finden Sie unter den folgenden Beispielprogramme, Microsoft MAPI Messaging Application Programming Interface ()-Funktionen:  
-  
--   [NPP](../visual-cpp-samples.md)  
-  
--   [DRAWCLI](../visual-cpp-samples.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [MAPI](../mfc/mapi.md)
+
+Finden Sie die folgenden Beispielprogramme, die Microsoft Messaging Application Programming Interface (MAPI)-Funktionen zu veranschaulichen:
+
+- [NPP](../visual-cpp-samples.md)
+
+- [DRAWCLI](../visual-cpp-samples.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[MAPI](../mfc/mapi.md)
 

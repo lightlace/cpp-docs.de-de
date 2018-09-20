@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0600f3a6f220d54085ff7c2ff8d60c2148ced625
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 504909cba41588c0ccefccabfbd541a39d4327b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593309"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387342"
 ---
 # <a name="argtraitsargs-constant"></a>ArgTraits::args-Konstante
 
@@ -50,5 +50,5 @@ Wenn **Args** gleich-1 gibt an, es darf keine Übereinstimmung für die `Invoke`
 
 ## <a name="see-also"></a>Siehe auch
 
-[ArgTraits-Struktur](../windows/argtraits-structure.md)  
+[ArgTraits-Struktur](../windows/argtraits-structure.md)<br/>
 [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

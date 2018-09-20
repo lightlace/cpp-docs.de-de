@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen flimmerfreier Aktivierung | Microsoft Docs
+title: Bereitstellen flimmerfreier Aktivierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9d9c0108ce4afd2e65678280248488181ad34f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd9f780472b8256f6d8332ecbde08138d85c8ebd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356553"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378321"
 ---
 # <a name="providing-flicker-free-activation"></a>Bereitstellen flimmerfreier Aktivierung
-Wenn das Steuerelement sich selbst in die inaktiven und den aktiven Status identisch zeichnet (und nicht fensterlosen Aktivierung verwendet), können Sie vermeiden die Zeichenoperationen und die begleitende visual Flimmern, die normalerweise vorkommen, wenn Sie den Übergang zwischen den inaktiven vornehmen und aktiv. Um dies zu erreichen, fügen die **NoFlickerActivate** -Flag in der Gruppe von Flags, die zurückgegebene [COleControl:: GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Zum Beispiel:  
-  
- [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-flicker-free-activation_1.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#13](../mfc/codesnippet/cpp/providing-flicker-free-activation_2.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/providing-flicker-free-activation_3.cpp)]  
-  
- Der Code auf dieses Flag einschließen, wird automatisch generiert, wenn Sie die Option der **flimmerfreier Aktivierung** option die [Steuerelementeinstellungen](../mfc/reference/control-settings-mfc-activex-control-wizard.md) Seite zum Erstellen des Steuerelements mit MFC-ActiveX-Steuerelement-Assistenten.  
-  
- Wenn Sie fensterlosen Aktivierung verwenden, ist diese Optimierung wirkungslos.  
-  
-## <a name="see-also"></a>Siehe auch  
- [MFC-ActiveX-Steuerelemente: Optimierung](../mfc/mfc-activex-controls-optimization.md)
+
+Wenn das Steuerelement sich genauso wie im inaktive und aktive Zustand zeichnet (und keine fensterlosen Aktivierung verwendet) können ausgeschlossen werden die Zeichenoperationen und die damit verbundene Flimmern, die normalerweise auftreten, wenn es sich bei den Übergang zwischen den inaktiv machen und aktiven Status. Um dies zu erreichen, fügen die **NoFlickerActivate** -Flag in einem Satz von Flags, die vom [COleControl:: GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Zum Beispiel:
+
+[!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-flicker-free-activation_1.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#13](../mfc/codesnippet/cpp/providing-flicker-free-activation_2.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/providing-flicker-free-activation_3.cpp)]
+
+Der Code auf dieses Flag einschließen, wird automatisch generiert, wenn Sie die Option der **flimmerfreier Aktivierung** option die [Steuerelementeinstellungen](../mfc/reference/control-settings-mfc-activex-control-wizard.md) Seite, wenn das Steuerelement mit dem MFC-ActiveX-Steuerelement-Assistenten erstellen.
+
+Wenn Sie fensterlosen Aktivierung verwenden, ist diese Optimierung wirkungslos.
+
+## <a name="see-also"></a>Siehe auch
+
+[MFC-ActiveX-Steuerelemente: Optimierung](../mfc/mfc-activex-controls-optimization.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 2. Direktiven | Microsoft Docs
+title: 2. Direktiven | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,13 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b1c56bb4daaa6b87cf8e59e072cb73a746712f9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ab664bf15dd098b9d3e3bd7d6bd9c73db47fff2e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695888"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436909"
 ---
 # <a name="2-directives"></a>2. Anweisungen
-Richtlinien basieren auf **#pragma** Direktiven in den C- und C++-Standards definiert.  Compiler, die OpenMP-C- und C++-API unterstützen, schließt eine Befehlszeilenoption ein, die aktiviert und alle OpenMP Compilerdirektiven Interpretation ermöglicht.
+
+Anweisungen basieren auf **#pragma** Direktiven, die in den C- und C++-Standards definiert.  Compiler, die der OpenMP-C- und C++-API unterstützen, werden eine Befehlszeilenoption enthalten, die aktiviert und ermöglicht die Darstellung alle OpenMP Compilerdirektiven.

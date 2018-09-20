@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2872f1639a11d537dd79b878a166a3afb5fd8667
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 65794dafe5e45cbd4c0e2a7eb49c34377009deee
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719165"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392982"
 ---
 # <a name="safecast"></a>SafeCast
 
@@ -67,6 +67,6 @@ Weitere Informationen zu den Vorlagentypen T "und" U, finden Sie unter [SafeInt-
 
 ## <a name="see-also"></a>Siehe auch
 
-[SafeInt-Funktionen](../windows/safeint-functions.md)  
-[SafeInt-Bibliothek](../windows/safeint-library.md)  
+[SafeInt-Funktionen](../windows/safeint-functions.md)<br/>
+[SafeInt-Bibliothek](../windows/safeint-library.md)<br/>
 [SafeInt-Klasse](../windows/safeint-class.md)

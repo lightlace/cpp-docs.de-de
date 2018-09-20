@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca78687f79cdbf1d8bdb60c1a877c489498624ee
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5f11590a78cb691f4812e7b503350fb72a4bdc95
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766190"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390733"
 ---
 # <a name="using-cstringt"></a>Verwenden von CStringT
 
@@ -27,10 +27,10 @@ In die Themen in diesem Abschnitt beschreiben die Programmierung mit der Vorlage
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Speicherverwaltung mit CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)  
+[Speicherverwaltung mit CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)<br/>
 Erläutert die Verwaltung des Arbeitsspeichers mit `CStringT`, eine Vorlagenklasse, die zum Bearbeiten von Zeichenfolgen mit variabler Länge verwendet.
 
-[Exportieren von Zeichenfolgenklassen mit CStringT](../atl-mfc-shared/exporting-string-classes-using-cstringt.md)  
+[Exportieren von Zeichenfolgenklassen mit CStringT](../atl-mfc-shared/exporting-string-classes-using-cstringt.md)<br/>
 So exportieren Sie Ihre eigenen String-Klasse aus einer DLL mithilfe der CStringT < >-Vorlage-Klasse erläutert.
 
 ## <a name="reference"></a>Referenz

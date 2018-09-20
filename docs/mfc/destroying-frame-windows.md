@@ -1,5 +1,5 @@
 ---
-title: Zerstören von Rahmenfenstern | Microsoft Docs
+title: Zerstören von Frame Windows | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,24 +25,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81182c0e5633e19126d3036b5793de7658ad3d2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 742ea2fedff2e4f044e46242a4152c12855ab15e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343475"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396154"
 ---
 # <a name="destroying-frame-windows"></a>Zerstören von Rahmenfenstern
-Die MFC-Grundstruktur verwaltet fensterzerstörung sowie das Erstellen von diesen Fenstern Framework Dokumente und Ansichten zugeordnet. Wenn Sie zusätzliche Fenster erstellen, können Sie sie zerstören.  
-  
- In dem Framework, wenn der Benutzer das Rahmenfenster des Fensters Standardeinstellung schließt [OnClose](../mfc/reference/cwnd-class.md#onclose) Ereignishandler ruft [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow). Ist die letzte Memberfunktion aufgerufen, wenn das Windows-Fenster zerstört wird [OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy), führt die Cleanup, ruft der [Standard](../mfc/reference/cwnd-class.md#default) Member Funktion, um die Windows-Bereinigung durchführen, und schließlich ruft der virtuelle Memberfunktion [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy). Die [CFrameWnd](../mfc/reference/cframewnd-class.md) Implementierung von `PostNcDestroy` löscht die C++-Fensterobjekt. Sie sollten niemals verwenden, die C++ **löschen** -Operator in einem Rahmenfenster. Verwenden Sie stattdessen `DestroyWindow`.  
-  
- Wenn das Hauptfenster geschlossen wird, wird die Anwendung geschlossen. Wenn es nicht gespeicherte Dokumente geändert werden, wird das Framework zeigt ein Meldungsfeld gefragt, ob die Dokumente gespeichert werden soll, und stellt sicher, dass die entsprechenden Dokumente gespeichert werden, bei Bedarf.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
-  
--   [Erstellen von Dokument Rahmenfenster](../mfc/creating-document-frame-windows.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von Rahmenfenstern](../mfc/using-frame-windows.md)
+
+MFC-Framework verwaltet fensterzerstörung sowie die Erstellung für diese Windows Framework Dokumente und Ansichten zugeordnet. Wenn Sie zusätzliche Fenster erstellen, sind Sie verantwortlich für das sie löschen.
+
+Im Framework, wenn der Benutzer das Rahmenfenster, des Fensters Standardmäßig schließt [OnClose](../mfc/reference/cwnd-class.md#onclose) handleraufrufen [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow). Ist die letzte Memberfunktion aufgerufen, wenn das Windows-Fenster zerstört wird [OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy), geschieht das Cleanup, ruft der [Standard](../mfc/reference/cwnd-class.md#default) Member Funktion, um die Windows-Bereinigung durchführen, und schließlich Ruft die virtuelle Memberfunktion [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy). Die [CFrameWnd](../mfc/reference/cframewnd-class.md) Implementierung `PostNcDestroy` löscht das C++-Fensterobjekt. Verwenden Sie niemals die C++ **löschen** Operators für ein Rahmenfenster. Verwenden Sie stattdessen `DestroyWindow`.
+
+Wenn das Hauptfenster geschlossen wird, wird die Anwendung geschlossen. Wenn es nicht gespeicherte Dokumente geändert werden, wird das Framework zeigt ein Meldungsfeld, um anzufordern, wenn die Dokumente gespeichert werden soll, und stellt sicher, dass die entsprechenden Dokumente gespeichert werden, falls erforderlich.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+
+- [Erstellen eines Dokuments Rahmenfenster](../mfc/creating-document-frame-windows.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von Rahmenfenstern](../mfc/using-frame-windows.md)
 

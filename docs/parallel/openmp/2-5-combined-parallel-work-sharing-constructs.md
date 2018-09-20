@@ -1,5 +1,5 @@
 ---
-title: 2.5 kombinierte parallele Arbeitsteilungskonstrukte | Microsoft Docs
+title: 2.5 kombinierte parallele Arbeitsteilungskonstrukte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7aea758cbf43cd49affc01afda0e9f34c24b3331
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3c456eceb39d969e6841e3d3bf9028fae4bf5000
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689297"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404760"
 ---
 # <a name="25-combined-parallel-work-sharing-constructs"></a>2.5 Kombinierte parallele Arbeitsteilungskonstrukte
-Kombinierte parallele Arbeitsteilungskonstrukte sind die Tastenkombinationen für die Angabe eines parallelen Bereichs, das nur eine Arbeit sharing-Konstrukt enthält. Die Semantik dieser Direktiven sind identisch mit der explizites Angeben einer **parallele** -Direktive gefolgt von einem single-Konstrukt, der auf der Arbeit Freigabe.  
-  
- Die folgenden Abschnitte beschreiben die kombinierte parallele Arbeitsteilungskonstrukte:  
-  
--   die **für parallele** Richtlinie.  
-  
--   die **parallel Sections-** Richtlinie.
+
+Kombinierte parallele Arbeitsteilungskonstrukte werden Verknüpfungen zum Angeben eines parallelen Bereichs, das nur eine gemeinsame Verwendung von Work-Konstrukt enthält. Die Semantik dieser Anweisungen ist identisch mit dem der explizite Angabe einer **parallele** -Direktive gefolgt von einer single-Konstrukt, der auf der Freigabe von Arbeit.
+
+In den folgenden Abschnitten wird beschrieben, die kombinierte parallele Arbeitsteilungskonstrukte werden:
+
+- die **für parallele** Richtlinie.
+
+- die **parallel Sections-** Richtlinie.

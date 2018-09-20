@@ -1,5 +1,5 @@
 ---
-title: Automatisierungsserver | Microsoft Docs
+title: Automatisierungsserver | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,49 +17,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 337d5a1ec25e8fc80cf867aecef0452b1d03fb2b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2cc163559b4946626e754b70a1b54d4fe20306c7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343943"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377617"
 ---
 # <a name="automation-servers"></a>Automatisierungsserver
-Automatisierung ermöglicht es, für die Anwendung in einer anderen Anwendung implementierten Objekte zu bearbeiten oder Objekte verfügbar zu machen, damit sie bearbeitet werden können. Ein Automatisierungsserver ist eine Anwendung, die programmierbare Objekte (Automatisierungsobjekte genannt) für andere Anwendungen verfügbar macht (aufgerufen [Automatisierungsclients](../mfc/automation-clients.md)). Automatisierungsserver werden manchmal als Automatisierungskomponenten bezeichnet.  
-  
- Verfügbarmachen von Automation-Objekten ermöglicht es Clients, die für bestimmte Vorgänge zu automatisieren, indem Sie direkten Zugriff auf die Objekte und Funktionalität der Server verfügbar macht. Verfügbarmachen von Objekten auf diese Weise ist nützlich, wenn Anwendungen Funktionen bereitstellen, die für andere Anwendungen hilfreich sind. Beispielsweise kann ein Textverarbeitungsprogramm seine Funktion zur Rechtschreibprüfung verfügbar machen, damit er von anderen Programmen verwendet werden können. Verfügbarmachen von Objekten ermöglicht es daher Herstellern, ihre Anwendungen Funktionalität mithilfe der vordefinierten Funktionen von anderen Anwendungen zu verbessern.  
-  
- Diese Automatisierung-Objekte besitzen Eigenschaften und Methoden als ihre externen Schnittstelle. Eigenschaften werden die Attribute des Automatisierungsobjekts benannt. Eigenschaften sind z. B. der Datenmember einer C++-Klasse. Methoden sind Funktionen, die Automatisierungsobjekte ergänzen. Methoden sind wie die öffentliche Memberfunktionen einer C++-Klasse.  
-  
+
+Automation ermöglicht es für Ihre Anwendung in einer anderen Anwendung implementierten Objekte zu bearbeiten oder Objekte verfügbar zu machen, damit sie bearbeitet werden können. Ein Automatisierungsserver ist eine Anwendung, die programmierbare Objekte (Automatisierungsobjekte genannt) für andere Anwendungen verfügbar macht (namens [Automatisierungsclients](../mfc/automation-clients.md)). Automatisierungsserver werden manchmal als Automatisierungskomponenten bezeichnet.
+
+Verfügbarmachen von Automation-Objekten ermöglicht Clients, die für bestimmte Vorgänge zu automatisieren, indem Sie direkten Zugriff auf die Objekte und Funktionalität der Server zur Verfügung. Verfügbarmachen von Objekten auf diese Weise ist von Vorteil, wenn Anwendungen Funktionen bereitstellen, die für andere Anwendungen nützlich ist. Beispielsweise kann ein reines Textverarbeitungsprogramm die rechtschreibprüfungsfunktion verfügbar machen, damit anderen Programmen verwendet werden kann. Das Verfügbarmachen von Objekten ermöglicht daher Herstellern, die Funktionalität ihrer Anwendungen zu verbessern, indem Sie die vordefinierten Funktionen von anderen Anwendungen.
+
+Diese Automatisierungsobjekte besitzen Eigenschaften und Methoden als externe Schnittstelle. Der benannte Eigenschaften sind Attribute des Automatisierungsobjekts. Eigenschaften sind z. B. Datenmember einer C++-Klasse. Methoden sind Funktionen, die für Automation-Objekte zusammenarbeiten. Methoden sind wie die öffentlichen Member-Funktionen eine C++-Klasse.
+
 > [!NOTE]
->  Obwohl die Eigenschaften wie die C++-Datenmember sind, sind sie nicht direkt zugegriffen werden kann. Um transparenten Zugriff zu gewährleisten, können Sie eine interne Variable in das Automatisierungsobjekt mit ein Paar von Memberfunktionen Get/Set richten Sie, um darauf zugreifen.  
-  
- Durch Verfügbarmachen von Anwendungsfunktionen über eine gemeinsame, klar definierte Schnittstelle, kann Automatisierung zum Erstellen von Anwendungen in einer einzelnen allgemeinen Programmiersprache wie Microsoft Visual Basic statt in verschiedenen, anwendungsspezifische-Makro Sprachen.  
-  
-##  <a name="_core_support_for_automation_servers"></a> Unterstützung für Automatisierungsserver  
- Visual C++ und MFC-Frameworks bieten umfassende Unterstützung für Automatisierungsserver. Sie behandeln Großteil der Aufwand beim Erstellen eines Automatisierungsservers Sie Ihre bemühungen auf die Funktionalität der Anwendung konzentrieren können.  
-  
- Das Framework principal Mechanismus für die Unterstützung der Automatisierung ist die Dispatchzuordnung, einen Satz von Makros, die in die Deklarationen und Aufrufe erforderlich, um Methoden und Eigenschaften für OLE verfügbar machen erweitert wird. Eine typische Dispatchzuordnung sieht wie folgt:  
-  
- [!code-cpp[NVC_MFCAutomation#1](../mfc/codesnippet/cpp/automation-servers_1.cpp)]  
-  
- Das Fenster "Eigenschaften" und die Klassenansicht unterstützen Dispatchzuordnungen verwalten. Wenn Sie eine neue Methode oder Eigenschaft einer Klasse hinzufügen, fügt Visual C++ eine entsprechende `DISP_FUNCTION` oder `DISP_PROPERTY` Makro mit Parametern, der angibt, den Klassennamen, die externen und internen Namen der Methode oder Eigenschaft und Datentypen.  
-  
- Die **Klasse hinzufügen** Dialogfeld vereinfacht auch die Deklaration von Automatisierungsklassen und die Verwaltung von deren Eigenschaften und Vorgänge. Wenn Sie das Dialogfeld "Klasse hinzufügen" verwenden, um eine Klasse zu Ihrem Projekt hinzuzufügen, geben Sie ihre Basisklasse auf. Wenn die Basisklasse Automation zulässt, zeigt das Dialogfeld Klasse hinzufügen Steuerelemente, die Sie verwenden, um die festlegen, ob die neue Klasse Automatisierung unterstützen soll, ob es "OLE erstellt" (d. h., ob Objekte der Klasse auf eine Anforderung von einem COM-Client erstellt werden können) an. , und den externen Namen für den COM-Client verwenden.  
-  
- Die **Klasse hinzufügen** Dialogfeld erstellt dann eine Klassendeklaration, einschließlich der entsprechenden Makros für die OLE-Funktionen angegeben haben. Darüber hinaus wird das Codegerüst für die Implementierung von Memberfunktionen der Klasse hinzugefügt.  
-  
- Die MFC-Anwendung-Assistent vereinfacht die Schritte zum Abrufen Ihrer automatisierungsserveranwendung Deaktivieren von Grund auf neu. Bei Auswahl der **Automatisierung** Kontrollkästchen aus der **erweiterte Funktionen** Seite, die MFC-Anwendung-Assistent fügt Ihrer Anwendung `InitInstance` Funktionsaufrufe erforderlich, um die Automatisierung registrieren Objekte und führen Sie die Anwendung als Automatisierungsserver.  
-  
-### <a name="what-do-you-want-to-do"></a>Was möchten Sie tun  
-  
--   [Erfahren Sie mehr über die Benutzeroberflächenautomatisierungs-clients](../mfc/automation-clients.md)  
-  
--   [Erfahren Sie mehr über CCmdTarget-Klasse](../mfc/reference/ccmdtarget-class.md)  
-  
--   [Erfahren Sie mehr über COleDispatchDriver-Klasse](../mfc/reference/coledispatchdriver-class.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Benutzeroberflächenautomatisierung](../mfc/automation.md)   
- [MFC-Anwendungs-Assistent](../mfc/reference/mfc-application-wizard.md)
+>  Auch Eigenschaften wie die C++-Datenmember sind, sind sie nicht direkt zugegriffen werden kann. Um transparenten Zugriff bereitzustellen, können Sie eine interne Variable im Automation-Objekt mit einem Paar von Memberfunktionen get-/Set richten Sie ein, für den Zugriff darauf.
+
+Durch Verfügbarmachen von Anwendungsfunktionen über eine gemeinsame, klar definierte Schnittstelle, ermöglicht Automation die Erstellung von Anwendungen in einer einzelnen allgemeinen Programmiersprache wie Microsoft Visual Basic nicht in unterschiedlichen, anwendungsspezifische-Makro Sprachen.
+
+##  <a name="_core_support_for_automation_servers"></a> Unterstützung für Automatisierungsserver
+
+Visual C++ und MFC-Framework bieten umfassende Unterstützung für Automatisierungsserver aus. Sie behandeln Großteil des Aufwands beim Durchführen eines Automatisierungsservers, damit Sie Ihre bemühungen auf die Funktionalität Ihrer Anwendung konzentrieren können.
+
+Die Framework principal-Mechanismus für die Unterstützung der Automatisierung ist die Dispatchzuordnung, mit einem Satz von Makros, die in den Deklarationen und Aufrufe erforderlich, um Methoden und Eigenschaften für OLE verfügbar machen erweitert wird. Eine typische Dispatchzuordnung sieht folgendermaßen aus:
+
+[!code-cpp[NVC_MFCAutomation#1](../mfc/codesnippet/cpp/automation-servers_1.cpp)]
+
+Das Fenster "Eigenschaften" und Class View unterstützen bei der Verwaltung von Dispatchzuordnungen. Wenn Sie eine neue Methode oder Eigenschaft auf eine Klasse hinzufügen, fügt Visual C++ eine entsprechende `DISP_FUNCTION` oder `DISP_PROPERTY` Makro mit Parametern, der angibt, den Klassennamen, die externen und internen Namen der Methode oder Eigenschaft und Daten.
+
+Die **Klasse hinzufügen** Dialogfeld vereinfacht auch die Deklaration des Automation-Klassen und die Verwaltung von deren Eigenschaften und Operationen. Wenn Sie das Dialogfeld "Klasse hinzufügen" verwenden, um eine Klasse zu Ihrem Projekt hinzuzufügen, geben Sie ihrer Basisklasse. Wenn die Basisklasse Automation zulässt, zeigt das Dialogfeld Klasse hinzufügen Steuerelemente, die Sie verwenden, um die festlegen, ob die neue Klasse Automatisierung unterstützen sollte, ob es "OLE erstellt" (d. h., ob Objekte der Klasse für eine Anforderung von einem COM-Client erstellt werden können) an. , und den externen Namen für die COM-Client verwenden.
+
+Die **Klasse hinzufügen** Dialogfeld erstellt dann eine Klassendeklaration, einschließlich der die entsprechenden Makros für die OLE-features Sie angegeben haben. Darüber hinaus wird das Codegerüst für die Implementierung von Memberfunktionen der Klasse hinzugefügt.
+
+Der MFC-Anwendung-Assistent vereinfacht die Schritte zum Abrufen Ihrer Automation-Server-Anwendung das fliegen. Bei Auswahl von der **Automation** Kontrollkästchen aus der **erweiterte Funktionen** Seite MFS-Anwendungsassistenten fügt der Anwendung das `InitInstance` Funktionsaufrufe erforderlich, um die Automatisierung zu registrieren Objekte und Ihre Anwendung als Automatisierungsserver ausführen.
+
+### <a name="what-do-you-want-to-do"></a>Was möchten Sie tun
+
+- [Erfahren Sie mehr über die Benutzeroberflächenautomatisierungs-clients](../mfc/automation-clients.md)
+
+- [Erfahren Sie mehr über CCmdTarget-Klasse](../mfc/reference/ccmdtarget-class.md)
+
+- [Erfahren Sie mehr über COleDispatchDriver-Klasse](../mfc/reference/coledispatchdriver-class.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Automatisierung](../mfc/automation.md)<br/>
+[MFC-Anwendungs-Assistent](../mfc/reference/mfc-application-wizard.md)
 
