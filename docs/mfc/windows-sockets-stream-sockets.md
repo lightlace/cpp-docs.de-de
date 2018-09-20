@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: Streamen von Sockets | Microsoft Docs'
+title: 'Windows Sockets: Stream Sockets | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5499395e517f056ffb224c22c888a3cc0382133
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87045d02238071170d776ff1675fb7283d1295bd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386105"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423857"
 ---
 # <a name="windows-sockets-stream-sockets"></a>Windows Sockets: Blockieren
-Dieser Artikel beschreibt Streamsockets, einer der zwei Windows Socket-Typen. (Der andere Typ ist der [Datagrammsocket](../mfc/windows-sockets-datagram-sockets.md).)  
-  
- Streamsockets sorgen für einen Datenfluss ohne datensatzbegrenzungen: einen Datenstrom von Bytes, die bidirektionalen sein können (die Anwendung wird im Vollduplexmodus: Es kann sowohl Übertragung oder den Empfang durch das Socket). Datenströme können zurückgegriffen werden, um Sequenzierte, nicht duplizierter Daten. ("Sequenziert" bedeutet, dass Pakete in der gesendeten Reihenfolge zugestellt werden. "Keine Duplikate" bedeutet, dass Sie ein bestimmtes Paket nur einmal erhalten.) Empfang von Nachrichten Stream wird garantiert, und Streams eignen sich gut für die Verarbeitung großer Datenmengen.  
-  
- Die Netzwerktransportschicht zusammensetzen oder Gruppieren von Daten in einer vernünftigen Größe Pakete. Die `CSocket` Klasse wird die Komprimierung und Entpacken Sie behandeln.  
-  
- Streams basieren auf explizite Verbindungen: Socket A fordert eine Verbindung mit Socket B; Socket B zugelassen oder die Verbindung abgelehnt.  
-  
- Ein Telefonanruf bietet eine gute Analogie für einen Datenstrom. Unter normalen Umständen hört die empfangende Partei an, was in der Reihenfolge sagen, dass Sie es, ohne Duplikate oder Verlust angegeben werden. Streamsockets sind geeignet, z. B. für Implementierungen, z. B. das Protokoll FTP (File Transfer), das die Übertragung von ASCII oder Binärdateien beliebiger Größe vereinfacht.  
-  
- Streamsockets sind Datagrammsockets vorzuziehen, wenn die Daten gewährleistet werden müssen, auf das eingehen und Daten sehr groß ist. Weitere Informationen zu Streamsockets finden Sie unter der Windows Sockets-Spezifikation. Die Spezifikation ist im Windows SDK verfügbar.  
-  
- Die Verwendung von Streamsockets kann von Anwendungen entwickelt, um einen Datagrammsocket verwenden, für die Übertragung an alle empfangenden Sockets im Netzwerk, da überlegen sein  
-  
--   Broadcast Modell unterliegt Netzwerkprobleme geleiteten (oder "Storm").  
-  
--   Anschließend übernommen Client / Server-Modell ist jedoch effizienter.  
-  
--   Das Stream-Modell liefert zuverlässige Datenübertragungen, in dem das Datagramm-Modell nicht der Fall ist.  
-  
--   Das fertige Modell nutzt die Möglichkeit für die Kommunikation zwischen Unicode und ANSI Socketanwendungen mit dieser Klasse, die CArchive CSocket-Klasse zu nutzen.  
-  
+
+Dieser Artikel beschreibt Streamsockets, eines der zwei Windows Socket-Typen. (Der andere Typ ist der [Datagrammsocket](../mfc/windows-sockets-datagram-sockets.md).)
+
+Stream-Sockets Geben Sie für einen Datenfluss ohne datensatzbegrenzungen: ein Datenstrom von Bytes, die auch bidirektional sein kann (die Anwendung wird im Vollduplexmodus: es übertragen und kann über den Socket empfangen). Datenströme können zurückgegriffen werden, um sequenzierter, die nicht doppelten Daten zu übermitteln. ("Sequenziert" bedeutet, dass Pakete in der gesendeten Reihenfolge übermittelt werden. "Nicht dupliziert" bedeutet, dass Sie ein bestimmtes Paket nur einmal erhalten.) Der Empfang von definitiv und Datenströme eignen sich gut für die Verarbeitung großer Datenmengen.
+
+Die Netzwerktransportschicht aufteilen oder Gruppieren von Daten in Pakete angemessene Größe. Die `CSocket` Klasse übernimmt das Packen und Entpacken Sie.
+
+Streams basieren auf explizite Verbindungen: Socket ein anfordert, eine Verbindung mit der Socket B; B-Socket akzeptiert oder die Verbindung abgelehnt.
+
+Ein Telefonanruf bietet eine gute Analogie für einen Stream. Unter normalen Umständen hört die empfangende Partei an, was Sie in der Reihenfolge sagen, dass Sie es, ohne Duplikate oder Verlust sagen. Stream-Sockets sind geeignet, z. B. für Implementierungen wie z. B. die FTP File Transfer Protocol (), die Übertragung ASCII- oder binäre Dateien beliebiger Größe erleichtert.
+
+Stream-Sockets sind Datagrammsockets vorzuziehen, wenn Daten ankommen garantiert sein müssen und Daten sehr umfangreich sind. Weitere Informationen zu Streamsockets finden Sie unter der Windows Sockets-Spezifikation. Die Spezifikation ist im Windows SDK verfügbar.
+
+Streamsockets kann besser als Anwendungen, die dafür ausgelegt, einen Datagrammsocket verwenden, für die Übertragung an alle empfangenden Sockets im Netzwerk, da sein
+
+- Die broadcast-Modells unterliegt Netzwerkprobleme Flut (oder "Storm") ab.
+
+- Das Client / Server-Modell, das anschließend übernommen ist effizienter.
+
+- Das Stream-Modell bietet zuverlässige Datenübertragungen, in dem das Datagramm-Modell nicht der Fall ist.
+
+- Das endgültige Modell nutzt die Möglichkeit für die Kommunikation zwischen Unicode und ANSI Socketanwendungen mit dieser Klasse, die CArchive CSocket-Klasse ist.
+
     > [!NOTE]
-    >  Bei Verwendung von Klasse `CSocket`, müssen Sie einen Datenstrom verwenden. MFC-Assertion schlägt fehl, wenn Sie angeben, dass den Sockettyp als **SOCK_DGRAM**.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Windows-Sockets in MFC](../mfc/windows-sockets-in-mfc.md)   
- [Windows-Sockets: Hintergrund](../mfc/windows-sockets-background.md)
+    >  Bei Verwendung der Klasse `CSocket`, müssen Sie einen Datenstrom verwenden. MFC-Assertion schlägt fehl, wenn Sie angeben, dass den Sockettyp als **SOCK_DGRAM**.
+
+## <a name="see-also"></a>Siehe auch
+
+[Windows-Sockets in MFC](../mfc/windows-sockets-in-mfc.md)<br/>
+[Windows-Sockets: Hintergrund](../mfc/windows-sockets-background.md)
 
