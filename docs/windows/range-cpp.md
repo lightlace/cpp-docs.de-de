@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4f84684c5d8f8feb8595da628976c90a2593c96
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 80b8546e461930ac184e0f5b3ed2b34499cc8d3c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201350"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384221"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -39,10 +39,10 @@ Gibt einen Bereich der zulässigen Werte für die Argumente oder Felder, deren W
 
 ### <a name="parameters"></a>Parameter
 
-*low*  
+*low*<br/>
 Der untere Bereichswert.
 
-*high*  
+*high*<br/>
 Der Wert des hohen Bereichs.
 
 ## <a name="remarks"></a>Hinweise
@@ -80,7 +80,7 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 
 ## <a name="see-also"></a>Siehe auch
 
-[IDL-Attribute](../windows/idl-attributes.md)  
-[Methodenattribut](../windows/method-attributes.md)  
-[Parameterattribute](../windows/parameter-attributes.md)  
+[IDL-Attribute](../windows/idl-attributes.md)<br/>
+[Methodenattribut](../windows/method-attributes.md)<br/>
+[Parameterattribute](../windows/parameter-attributes.md)<br/>
 [Datenmemberattribute](../windows/data-member-attributes.md)  

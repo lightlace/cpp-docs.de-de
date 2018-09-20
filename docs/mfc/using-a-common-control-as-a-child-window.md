@@ -1,5 +1,5 @@
 ---
-title: Verwenden eines Standardsteuerelements als untergeordnetes Fenster | Microsoft Docs
+title: Verwenden eines Standardsteuerelements als untergeordnetes Fenster | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50d21675d913211026a2077a0830b7d8ed1225c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73ddb010aeb8190c063d2691806e3ebd89d0f744
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382823"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417968"
 ---
 # <a name="using-a-common-control-as-a-child-window"></a>Verwenden eines Standardsteuerelements als untergeordnetes Fenster
-Alle allgemeinen Windows-Steuerelemente können als untergeordnetes Fenster von einem anderen Fenster verwendet werden. Das folgende Verfahren beschreibt, wie ein allgemeines Steuerelement dynamisch zu erstellen, und klicken Sie dann mit ihm gearbeitet wird.  
-  
-### <a name="to-use-a-common-control-as-a-child-window"></a>Verwenden ein Standardsteuerelements als untergeordnetes Fenster  
-  
-1.  Definieren Sie das Steuerelement in der zugehörigen Klasse oder der Handler.  
-  
-2.  Verwenden des Steuerelements: f Überschreibung von der [CWnd:: Create](../mfc/reference/cwnd-class.md#create) Methode, um das Windows-Steuerelement zu erstellen.  
-  
-3.  Nachdem das Steuerelement erstellt wurde (so früh wie die `OnCreate` Handler Wenn Sie eine Unterklasse des Steuerelements), können Sie das Steuerelement über seine Memberfunktionen ändern. Siehe die Beschreibung der einzelnen Steuerelementen zur [Steuerelemente](../mfc/controls-mfc.md) ausführliche Informationen über Methoden.  
-  
-4.  Wenn Sie mit dem Steuerelement fertig sind, verwenden Sie [CWnd:: DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) zerstört das Steuerelement.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Erstellen und Verwenden von Steuerelementen](../mfc/making-and-using-controls.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+
+Eines der allgemeinen Windows-Steuerelemente kann als untergeordnetes Fenster von einem anderen Fenster verwendet werden. Das folgende Verfahren beschreibt ein allgemeines Steuerelement dynamisch zu erstellen und mit dem Sie arbeiten.
+
+### <a name="to-use-a-common-control-as-a-child-window"></a>Verwenden ein Standardsteuerelements als untergeordnetes Fenster
+
+1. Definieren Sie das Steuerelement in der entsprechenden Klasse oder der Handler.
+
+1. Verwenden Sie die Überschreibung von der [CWnd:: Create](../mfc/reference/cwnd-class.md#create) Methode, um das Windows-Steuerelement zu erstellen.
+
+1. Nachdem das Steuerelement erstellt wurde (wie früher als die `OnCreate` Handler Wenn Sie eine Unterklasse des Steuerelements), können Sie das Steuerelement über seine Memberfunktionen ändern. Finden Sie in den Beschreibungen der einzelnen Steuerelemente am [Steuerelemente](../mfc/controls-mfc.md) Weitere Informationen zu Methoden.
+
+1. Wenn Sie mit dem Steuerelement fertig sind, verwenden Sie [CWnd:: DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) zerstört das Steuerelement.
+
+## <a name="see-also"></a>Siehe auch
+
+[Erstellen und Verwenden von Steuerelementen](../mfc/making-and-using-controls.md)<br/>
+[Steuerelemente](../mfc/controls-mfc.md)
 

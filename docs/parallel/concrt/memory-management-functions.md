@@ -1,5 +1,5 @@
 ---
-title: Speicherverwaltungsfunktionen | Microsoft Docs
+title: Speicherverwaltungsfunktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,33 +14,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0a298c7fb9e50bb17d37224b69ce342c54115d7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: bfbef45593a95cb8b317e7585119a6afbffd7a4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687295"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423610"
 ---
 # <a name="memory-management-functions"></a>Speicherverwaltungsfunktionen
-Dieses Dokument beschreibt die Speicherverwaltungsfunktionen, die die Concurrency Runtime bereitstellt, mit denen Sie reservieren und Freigeben von Arbeitsspeicher parallel.  
-  
+
+Dieses Dokument beschreibt die Speicherverwaltungsfunktionen, die die Concurrency Runtime bereitstellt, mit denen Sie die Belegung und Freigabe von Arbeitsspeicher parallel.
+
 > [!TIP]
->  Die Concurrency Runtime stellt einen Standardplaner bereit. Sie müssen daher keinen in Ihrer Anwendung erstellen. Da der Taskplaner Sie beim Optimieren der Leistung Ihrer Anwendungen unterstützt, empfiehlt es sich, dass die zu Beginn der [Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) oder [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md) Domänenmodus noch nicht mit der Concurrency Runtime.  
-  
- Die Concurrency Runtime stellt zwei Speicherverwaltungsfunktionen, die für das zuordnen und befreien von Speicherblöcken parallel optimiert sind. Die [Concurrency:: Alloc](reference/concurrency-namespace-functions.md#alloc) Funktion belegt einen Speicherblock mit der angegebenen Größe. Die [Free](reference/concurrency-namespace-functions.md#free) Funktion gibt den Arbeitsspeicher frei, die vom zugeordnet wurde `Alloc`.  
-  
+>  Die Concurrency Runtime stellt einen Standardplaner bereit. Sie müssen daher keinen in Ihrer Anwendung erstellen. Da der Taskplaner die Leistung Ihrer Anwendungen optimieren können, es wird empfohlen, zunächst die [Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) oder [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md) möchten noch nicht mit der Concurrency Runtime.
+
+Die Concurrency Runtime stellt zwei Speicherverwaltungsfunktionen, die für das zuordnen und befreien von Speicherblöcken parallel optimiert sind. Die [Concurrency:: Alloc](reference/concurrency-namespace-functions.md#alloc) Funktion belegt einen Speicherblock mithilfe der angegebenen Größe. Die [Concurrency](reference/concurrency-namespace-functions.md#free) Funktion gibt den Arbeitsspeicher frei, der von belegt wurde `Alloc`.
+
 > [!NOTE]
->  Die `Alloc` und `Free` Funktionen von voneinander abhängig. Verwenden der `Free` Funktion nur für das Freigeben des Speichers, der zugewiesen werden mithilfe der `Alloc` Funktion. Auch bei Verwendung der `Alloc` Funktion nur verwenden, um Arbeitsspeicher die `Free` Funktion um, dass der Arbeitsspeicher freizugeben.  
-  
- Verwenden der `Alloc` und `Free` -Funktion bei der Belegung und Freigabe einen festen Satz von zuordnungsgrößen aus verschiedenen Threads oder Aufgaben. Die Concurrency Runtime zwischenspeichert, Arbeitsspeicher, ihn aus dem C-Laufzeit-Heap belegt. Die Concurrency Runtime verwaltet für jeden ausgeführten Thread einen separaten Arbeitsspeichercache; aus diesem Grund verwaltet die Laufzeit Arbeitsspeicher, ohne die Verwendung von Sperren oder Arbeitsspeicherbarrieren zu. Eine Anwendung Vorteile erbringt Weitere Artikel aus der `Alloc` und `Free` -Funktion bei der Arbeitsspeichercache häufiger zugegriffen wird. Angenommen, ein Thread, der häufig aufruft `Alloc` und `Free` Vorteile, die mehr als ein Thread, in erster Linie aufruft `Alloc` oder `Free`.  
-  
+>  Die `Alloc` und `Free` Funktionen aufeinander angewiesen sind. Verwenden der `Free` Funktion nur, um Arbeitsspeicher freizugeben, die Sie mithilfe von Zuordnen der `Alloc` Funktion. Auch bei Verwendung der `Alloc` Funktion zum Zuordnen von Arbeitsspeicher verwenden Sie nur die `Free` Funktion, die diesen Speicher freizugeben.
+
+Verwenden der `Alloc` und `Free` funktioniert, wenn die Belegung und Freigabe einen festen Satz von zuordnungsgrößen von anderen Threads oder Aufgaben. Die Concurrency Runtime wird Arbeitsspeicher, die sie aus dem Heap der C-Laufzeit weist zwischengespeichert. Die Concurrency Runtime verwaltet für jeden ausgeführten Thread einen separaten Arbeitsspeichercache; aus diesem Grund verwaltet die Laufzeit Arbeitsspeicher, ohne die Verwendung von Sperren oder Arbeitsspeicherbarrieren zu. Vorteile von eine Anwendung mehr über die `Alloc` und `Free` funktioniert, wenn auf der Arbeitsspeichercache häufiger zugegriffen wird. Z. B. ein Thread, der sowohl häufig ruft `Alloc` und `Free` Vorteile, die mehr als ein Thread, die in erster Linie aufruft `Alloc` oder `Free`.
+
 > [!NOTE]
->  Wenn Sie verwenden diese Speicherverwaltungsfunktionen, und Ihre Anwendung verwendet viel Speicher, die Anwendung möglicherweise Geben Sie eine Bedingung Speichermangel früher als Sie erwarten. Da die Speicherblöcke, die von einem Thread zwischengespeichert werden nicht zu keinem anderen Thread verfügbar werden, wenn ein Thread viel Speicher enthält, ist, dass der Arbeitsspeicher nicht verfügbar.  
-  
-## <a name="example"></a>Beispiel  
- Ein Beispiel, verwendet der `Alloc` und `Free` Funktionen zur Verbesserung der Leistung von Speicher finden Sie unter [Vorgehensweise: verwenden Alloc und Free zum Verbessern der Arbeitsspeicherleistung](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Taskplaner](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
- [Vorgehensweise: Verbessern der Arbeitsspeicherleistung mithilfe von Alloc und Free](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)
+>  Wenn Sie diesen Speicherverwaltungsfunktionen, und Ihre Anwendung verwendet viel Arbeitsspeicher, die Anwendung möglicherweise Geben Sie ein wenig Arbeitsspeicher vorhanden ist früher als Sie erwarten. Da die Speicherblöcke, die von einem Thread zwischengespeichert werden nicht zur Verfügung keinem anderen Thread, stehen Wenn ein Thread viel Speicher enthält, ist, dass der Speicher nicht verfügbar.
+
+## <a name="example"></a>Beispiel
+
+Ein Beispiel für die Verwendung der `Alloc` und `Free` Funktionen zur Verbesserung der speicherleistung finden Sie unter [Vorgehensweise: verwenden-Alloc und Free zum Verbessern der Arbeitsspeicherleistung](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Aufgabenplanung](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
+[Vorgehensweise: Verbessern der Arbeitsspeicherleistung mithilfe von Alloc und Free](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)
 

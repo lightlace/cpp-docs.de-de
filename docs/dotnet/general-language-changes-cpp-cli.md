@@ -1,5 +1,5 @@
 ---
-title: Allgemeine Sprachänderungen (C + c++ / CLI) | Microsoft Docs
+title: Allgemeine Sprachänderungen (C++ / CLI) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,32 +13,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: aede6cc0d4bd8e50d8662f301ffdfb7b6179a230
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b48ebdf0bf25399b08f8a1cb1240a857cfad352
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33109137"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418457"
 ---
 # <a name="general-language-changes-ccli"></a>Allgemeine Sprachänderungen (C++/CLI)
-Eine Anzahl von CLR-Sprachfunktionen, die von Managed Extensions for C++ auf Visual C++ geändert.  
-  
- Die Änderungen, die in diesem Abschnitt beschriebenen sind eine Art von Language – Vermischtes. Es beinhaltet eine Änderung bei der Behandlung von Zeichenfolgenliteralen, eine Änderung an der die überladungsauflösung zwischen einem Auslassungszeichen und das `Param` -Attributs sind die Änderung des `typeof` zu `typeid`, eine Änderung in der aufrufenden von Initialisiererlisten Konstruktor, und die eine neue Umwandlungsnotation Einführung der `safe_cast`.  
-  
- [Zeichenfolgenliteral](../dotnet/string-literal.md)  
- Erläutert, wie die Behandlung von Zeichenfolgenliteralen geändert hat.  
-  
- [Parameterarray und Ellipse](../dotnet/param-array-and-ellipsis.md)  
- Erläutert, wie `ParamArray` ist jetzt Vorrang vor den drei Punkten (`...`) zum Auflösen von Funktionsaufrufen mit einer unterschiedlichen Anzahl von Argumenten.  
-  
- [typeof wird zu T::typeid](../dotnet/typeof-goes-to-t-typeid.md)  
- Erläutert, wie die `typeof` -Operator wurde ersetzt wurde, indem Sie `typeid`.  
-  
- [Initialisiererlisten](../dotnet/initializer-lists.md)  
- Werden Änderungen in der aufrufenden Reihenfolge von Initialisiererlisten erläutert.  
-  
- [Umwandlungsnotation und Einführung in safe_cast<>](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md)  
- Erläutert Änderungen an Umwandlungsnotation und insbesondere die Einführung von `safe_cast`.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Einführung in die C++/CLI-Migration](../dotnet/cpp-cli-migration-primer.md)
+
+Eine Anzahl von CLR-Sprachfunktionen, die von Managed Extensions for C++ auf Visual C++ geändert.
+
+Die Änderungen, die in diesem Abschnitt beschriebenen sind eine Art von Sprache – Vermischtes. Es beinhaltet eine Änderung bei der Behandlung von Zeichenfolgenliteralen, die eine Änderung der Auflösung von funktionsüberladungen zwischen einem Auslassungszeichen und `Param` Attribut, die Änderung des `typeof` zu `typeid`, eine Änderung in der Aufruf von Initialisierungslisten, und die Einführung in eine neue Umwandlungsnotation, mit der `safe_cast`.
+
+[Zeichenfolgenliteral](../dotnet/string-literal.md)<br/>
+Erläutert, wie die Behandlung von Zeichenfolgenliteralen geändert hat.
+
+[Parameterarray und Ellipse](../dotnet/param-array-and-ellipsis.md)<br/>
+Erläutert, wie `ParamArray` erhält Vorrang vor jetzt auf die Auslassungspunkte (`...`) zum Auflösen von Funktionsaufrufen, die mit einer unterschiedlichen Anzahl von Argumenten.
+
+[typeof wird zu T::typeid](../dotnet/typeof-goes-to-t-typeid.md)<br/>
+Erläutert, wie die `typeof` -Operator wurde ersetzt wurde, indem `typeid`.
+
+[Initialisiererlisten](../dotnet/initializer-lists.md)<br/>
+Werden Änderungen in die Aufrufreihenfolge von Initialisiererlisten erläutert.
+
+[Umwandlungsnotation und Einführung in safe_cast<>](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md)<br/>
+Erläutert Änderungen Umwandlungsnotation und insbesondere bei die Einführung von `safe_cast`.
+
+## <a name="see-also"></a>Siehe auch
+
+[Einführung in die C++/CLI-Migration](../dotnet/cpp-cli-migration-primer.md)
