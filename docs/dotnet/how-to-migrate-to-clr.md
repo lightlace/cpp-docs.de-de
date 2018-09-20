@@ -1,7 +1,7 @@
 ---
 title: 'Vorgehensweise: Migrieren auf - Clr | Microsoft-Dokumentation'
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -20,16 +20,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 818b6e102d9da759aa8889779515917b96e22c89
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cf55b6f5dc422bb01babe0bdf8d8c27ce50371da
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412963"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494464"
 ---
 # <a name="how-to-migrate-to-clr"></a>Gewusst wie: Migrieren zu /clr
 
-Dieses Thema behandelt Probleme, die beim Kompilieren mit auftreten **"/ CLR"** (finden Sie unter [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md) Informationen). **"/ CLR"** Visual C++ Module aufgerufen und die Beibehaltung der Kompatibilität mit nicht verwalteten Modulen von .NET-Assemblys aus aufgerufen werden können. Finden Sie unter [gemischte (Native und verwaltete) Assemblys](../dotnet/mixed-native-and-managed-assemblies.md) und [Native und .NET Interoperabilität](../dotnet/native-and-dotnet-interoperability.md) für Weitere Informationen zu den Vorteilen der Kompilierung mit **"/ CLR"**.
+Dieses Thema behandelt Probleme, die beim Kompilieren mit auftreten **"/ CLR"** (finden Sie unter [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md) Informationen). **"/ CLR"** systemeigenen C++-Code aufrufen und von .NET-Assemblys zusätzlich zu anderen systemeigenen C++-Code aus aufgerufen werden können. Finden Sie unter [gemischte (Native und verwaltete) Assemblys](../dotnet/mixed-native-and-managed-assemblies.md) und [Native und .NET Interoperabilität](../dotnet/native-and-dotnet-interoperability.md) für Weitere Informationen zu den Vorteilen der Kompilierung mit **"/ CLR"**.
 
 ## <a name="known-issues-compiling-library-projects-with-clr"></a>Bekannte Probleme beim Kompilieren von Bibliotheksprojekten mit /clr
 
@@ -132,7 +132,7 @@ Unterschiedliche Datentypversionen können den Linker scheitern lassen, weil die
 
 ### <a name="loader-lock-deadlock"></a>Ladeprogrammsperren-Deadlocks
 
-In Visual Studio 2010 und höher wurde der "Ladeprogrammsperren-Deadlock" weiterhin möglich, wie in früheren Versionen, aber deterministisch ist und erkannt und zur Laufzeit gemeldet. Finden Sie unter [Initialization of Mixed Assemblies](../dotnet/initialization-of-mixed-assemblies.md) für Ausführliche Hintergrundinformationen, Anleitungen und Lösungen.
+Der "Ladeprogrammsperren-Deadlock" können auftreten, jedoch ist deterministisch erkannt und zur Laufzeit gemeldet. Finden Sie unter [Initialization of Mixed Assemblies](../dotnet/initialization-of-mixed-assemblies.md) für Ausführliche Hintergrundinformationen, Anleitungen und Lösungen.
 
 ### <a name="data-exports"></a>Datenexporte
 
