@@ -1,5 +1,5 @@
 ---
-title: 'Concurrency:: Graphics-Namespace Enumerationen | Microsoft Docs'
+title: 'Concurrency:: Graphics Namespace-Enumerationen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,33 +13,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbb02becbcfebf935107acb85ae3991476b67796
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b5c66771c9b27d568e32f7d4a361586ff5a62da9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695446"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384974"
 ---
-# <a name="concurrencygraphics-namespace-enums"></a>Concurrency:: Graphics-Namespace-Enumerationen
-|||  
-|-|-|  
-|[_Modus-enumeration](#address_mode)|[Filter_mode-Enumeration](#filter_mode)|  
-  
-##  <a name="address_mode"></a>  Address_mode-Enumeration  
- Enumerationstyp zur Angabe der unterstützten Adressmodi für das Textursampling.  
-  
-```  
-enum address_mode;  
-```  
-  
-##  <a name="filter_mode"></a>  Filter_mode-Enumeration  
- Enumerationstyp zur Angabe der unterstützten Filtermodi für das Textursampling.  
-  
-```  
-enum filter_mode;  
-```  
+# <a name="concurrencygraphics-namespace-enums"></a>Concurrency:: Graphics Namespace-Enumerationen
+
+|||
+|-|-|
+|[_Modus-enumeration](#address_mode)|[Filter_mode-Enumeration](#filter_mode)|
+
+##  <a name="address_mode"></a>  Address_mode-Enumeration
+
+Enumerationstyp zur Angabe der unterstützten Adressmodi für das Textursampling.
+
+```
+enum address_mode;
+```
+
+##  <a name="filter_mode"></a>  Filter_mode-Enumeration
+
+Enumerationstyp zur Angabe der unterstützten Filtermodi für das Textursampling.
+
+```
+enum filter_mode;
+```
 ## <a name="requirements"></a>Anforderungen
+
 **Header:** amp_graphics.h **Namespace:** Concurrency:: Graphics
 
-## <a name="see-also"></a>Siehe auch  
- [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)
+## <a name="see-also"></a>Siehe auch
+
+[Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

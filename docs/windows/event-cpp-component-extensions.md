@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d301f2bc7464d52be643d252e4febf7049657c2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f001f61a9425a064d3b899beb6cbb689471da5bf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724759"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442590"
 ---
 # <a name="event--c-component-extensions"></a>event (Komponentenerweiterungen für C++)
 
@@ -50,19 +50,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parameter
 
-*Modifizierer*  
+*Modifizierer*<br/>
 Ein Modifizierer, der entweder für die Ereignisdeklaration oder eine Ereigniszugriffsmethode verwendet werden kann.  Mögliche Werte sind **statische** und **virtuellen**.
 
-*delegate*  
+*delegate*<br/>
 Die [Delegieren](../windows/delegate-cpp-component-extensions.md), deren Signatur der Ereignishandler übereinstimmen muss.
 
-*event_name*  
+*event_name*<br/>
 Der Name des Ereignisses.
 
-*return_value*  
+*return_value*<br/>
 Der Rückgabewert der Ereigniszugriffsmethode.  Um überprüfbar zu sein, muss der Rückgabetyp **"void"**.
 
-*Parameter*  
+*Parameter*<br/>
 (optional) Parameter für die `raise` -Methode, die der Signatur der entsprechen den *Delegieren* Parameter.
 
 ### <a name="remarks"></a>Hinweise
@@ -71,10 +71,10 @@ Ein Ereignis ist eine Zuordnung zwischen einem Delegaten und einer Memberfunktio
 
 Es gibt zwei Arten von Ereignisdeklarationen:
 
-*Ereignis-Datenmember*  
+*Ereignis-Datenmember*<br/>
 Der Compiler erstellt automatisch Speicherplatz für das Ereignis in Form eines Members des Delegattyps und erstellt interne Memberfunktionen `add()`, `remove()` und `raise()`. Ein Ereignisdatenmember muss innerhalb einer Klasse deklariert werden. Der Rückgabetyp des Rückgabetyps des Delegaten muss dem Rückgabetyp des Ereignishandlers entsprechen.
 
-*Event-block*  
+*Event-block*<br/>
 Ein Event-Block ermöglicht es Ihnen, das Verhalten der Methoden `add()`, `remove()` und `raise()` explizit zu deklarieren und anzupassen.
 
 Können Sie **Operatoren +=** und **Operator-=** hinzufügen und entfernen ein Ereignis-Handler, oder rufen die `add()` und `remove()` Methoden explizit.
@@ -114,19 +114,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parameter
 
-*Modifizierer*  
+*Modifizierer*<br/>
 Ein Modifizierer, der entweder für die Ereignisdeklaration oder eine Ereigniszugriffsmethode verwendet werden kann.  Mögliche Werte sind **statische** und **virtuellen**.
 
-*delegate*  
+*delegate*<br/>
 Die [Delegieren](../windows/delegate-cpp-component-extensions.md), deren Signatur der Ereignishandler übereinstimmen muss.
 
-*event_name*  
+*event_name*<br/>
 Der Name des Ereignisses.
 
-*return_value*  
+*return_value*<br/>
 Der Rückgabewert der Ereigniszugriffsmethode.  Um überprüfbar zu sein, muss der Rückgabetyp **"void"**.
 
-*Parameter*  
+*Parameter*<br/>
 (optional) Parameter für die `raise` -Methode, die der Signatur der entsprechen den *Delegieren* Parameter.
 
 ### <a name="remarks"></a>Hinweise
@@ -137,10 +137,10 @@ Der Delegat kann eine oder mehrere zugeordnete Methoden haben, die aufgerufen we
 
 Es gibt zwei Arten von Ereignisdeklarationen:
 
-*Ereignis-Datenmember*  
+*Ereignis-Datenmember*<br/>
 Speicher für das Ereignis in der Form eines Members des Delegattyps wird vom Compiler für Datenmemberereignisse erstellt.  Ein Ereignisdatenmember muss innerhalb einer Klasse deklariert werden. Dies wird auch als triviales Ereignis bezeichnet (siehe untenstehendes Codebeispiel).
 
-*Ereignis-Blöcke*  
+*Ereignis-Blöcke*<br/>
 Über Ereignis-Blöcke können Sie das Verhalten der Add-, Remove- und Raise-Methoden anpassen, indem Sie Add-, Remove- und Raise-Methoden implementieren. Die Signatur der Add-, Remove- und Raise-Methoden muss mit der Signatur des Delegaten übereinstimmen.  Event-Block-Ereignisse sind keine Datenmember und jede Verwendung als Datenmember führt zu einem Compilerfehler.
 
 Der Rückgabetyp des Ereignishandlers muss dem Rückgabetyp des Delegaten entsprechen.

@@ -1,5 +1,5 @@
 ---
-title: Stile der Schieberegler-Steuerelement | Microsoft Docs
+title: Stile der Schieberegler-Steuerelemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f76fbe9f85d978a5c2865b48720588b620508a07
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 8ddc96133f07011969e3d2afc4b1707e9f395e6b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951051"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424117"
 ---
 # <a name="slider-control-styles"></a>Stile der Schieberegler-Steuerelemente
-Schieberegler-Steuerelemente ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) haben eine vertikale oder horizontale Ausrichtung. Teilstriche auf beiden Seiten über verfügen beide Seiten oder keines von beiden. Sie können auch verwendet werden, um einen Bereich aufeinander folgender Werte anzugeben. Mithilfe des Schiebereglers Steuerelementtypen, die Sie angeben, wenn Sie das Schieberegler-Steuerelement erstellen, werden diese Eigenschaften gesteuert.  
-  
- Die Formate TBS_HORZ und TBS_VERT Bestimmen der Ausrichtung des Schieberegler-Steuerelements. Wenn Sie keine Ausrichtung angeben, wird das Schieberegler-Steuerelement horizontal ausgerichtet.  
-  
- Das TBS_AUTOTICKS-Format erstellt ein Schieberegler-Steuerelement, das in dessen Bereich der Werte ein Teilstrichs für jede inkrementelle verfügt. Diese Teilstriche werden automatisch hinzugefügt, beim Aufrufen der [SetRange](../mfc/reference/csliderctrl-class.md#setrange) Memberfunktion. Wenn Sie TBS_AUTOTICKS nicht angeben, können Sie Memberfunktionen, z. B. [SetTic](../mfc/reference/csliderctrl-class.md#settic) und [Memberfunktion SetTicFreq](../mfc/reference/csliderctrl-class.md#setticfreq), um anzugeben, die Positionen der Teilstriche. Um ein Schieberegler-Steuerelement zu erstellen, die keine Teilstriche angezeigt werden, können Sie das Format TBS_NOTICKS verwenden.  
-  
- Sie können die Teilstriche auf einer oder beiden Seiten des Schieberegler-Steuerelements anzeigen. Für horizontale Schieberegler-Steuerelemente können Sie die Formatvorlage TBS_BOTTOM oder das TBS_TOP angeben. Für den vertikalen Schieberegler-Steuerelemente können Sie das Format TBS_RIGHT oder TBS_LEFT angeben. (TBS_BOTTOM und TBS_RIGHT sind die Standardeinstellungen.) Geben Sie für die Teilstriche auf beiden Seiten des Schieberegler-Steuerelements in alle Ausrichtung den TBS_BOTH-Stil.  
-  
- Ein Schieberegler-Steuerelement kann einen Auswahlbereich angezeigt werden, nur, wenn Sie die Formatvorlage TBS_ENABLESELRANGE angeben, bei der Erstellung. Wenn ein Schieberegler-Steuerelement dieses Format aufweist, wird die Teilstriche an den Positionen, Start- und Enddaten eines Auswahlbereichs werden als Dreiecke (statt senkrechte Striche) angezeigt, und Auswahlbereich wird hervorgehoben. Beispielsweise können Auswahl Bereiche in einer einfachen planungsanwendung nützlich sein. Der Benutzer konnte wählen Sie einen Bereich von Teilstrichen für Stunden eines Tages zu einem Zeitpunkt geplante Besprechung zu identifizieren.  
-  
- Standardmäßig ändert sich die Länge des Schiebereglers ein Schieberegler-Steuerelement die Auswahl Bereichs ändert. Wenn das Schieberegler-Steuerelement das TBS_FIXEDLENGTH-Format aufweist, bleibt die Länge des Schiebereglers, selbst wenn der Auswahlbereich ändert. Ein Schieberegler-Steuerelement, das den Stil TBS_NOTHUMB verfügt umfasst einen Schieberegler nicht.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von CSliderCtrl](../mfc/using-csliderctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+
+Schieberegler-Steuerelemente ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) haben eine vertikale oder horizontale Ausrichtung. Sie können die Teilstriche auf einer Seite, haben sowohl Seiten oder keines von beiden. Sie können auch verwendet werden, um einen Bereich aufeinander folgender Werte anzugeben. Mithilfe von Slider-Steuerelement-Stile, die Sie angeben, wenn Sie das Schieberegler-Steuerelement erstellen, werden diese Eigenschaften gesteuert.
+
+Die Formate TBS_HORZ und TBS_VERT Bestimmen der Ausrichtung des Schieberegler-Steuerelements. Wenn Sie keine Ausrichtung angeben, wird das Schieberegler-Steuerelement horizontal ausgerichtet.
+
+Styl TBS_AUTOTICKS erstellt ein Schieberegler-Steuerelement, das ein Teilstrichs für jedes Inkrement in der Wertebereich hat. Die Teilstriche werden automatisch hinzugefügt, beim Aufrufen der [SetRange](../mfc/reference/csliderctrl-class.md#setrange) Member-Funktion. Wenn Sie keine TBS_AUTOTICKS angeben, können Member-Funktionen, z. B. [SetTic](../mfc/reference/csliderctrl-class.md#settic) und [Memberfunktion SetTicFreq](../mfc/reference/csliderctrl-class.md#setticfreq), um anzugeben, die Positionen der Teilstriche. Um ein Schieberegler-Steuerelement zu erstellen, die nicht die Teilstriche angezeigt wird, können Sie den Stil TBS_NOTICKS verwenden.
+
+Sie können die Teilstriche auf einer oder beide Seiten des Schieberegler-Steuerelements anzeigen. Für die horizontale Schieberegler-Steuerelemente können Sie den Stil TBS_BOTTOM oder das TBS_TOP angeben. Für den vertikalen Schieberegler-Steuerelemente können Sie den Stil TBS_RIGHT oder TBS_LEFT angeben. (TBS_BOTTOM und TBS_RIGHT sind die Standardeinstellungen.) Geben Sie für die Teilstriche auf beiden Seiten des Schieberegler-Steuerelements in alle Ausrichtung das TBS_BOTH-Format an.
+
+Ein Schieberegler-Steuerelement kann einen Auswahlbereich angezeigt werden, nur dann, wenn Sie den Stil TBS_ENABLESELRANGE angeben, bei der Erstellung. Wenn ein Schieberegler-Steuerelement dieses Format aufweist, wird die Teilstriche an den Stellen Anfangs- und Endposition eines Bereichs Auswahl werden als Dreiecke (anstelle von senkrechte Striche) angezeigt, und der Auswahlbereich wird hervorgehoben. Beispielsweise können Auswahl Bereiche in einer einfachen Anwendung für die zeitplanung nützlich. Der Benutzer kann einen Bereich von Stunden an einem Tag zum Identifizieren des geplanten Zeitpunkt für Teilstriche auswählen.
+
+Standardmäßig ändert sich die Länge des ein Schieberegler Steuerelement als die Auswahl geändert. Verfügt das Schieberegler-Steuerelement den TBS_FIXEDLENGTH-Stil, bleibt die Länge des Schiebereglers gleich, auch wenn der Auswahlbereich ändert. Ein Schiebereglersteuerelement, das dem TBS_NOTHUMB-Format enthält, umfasst keinen Schieberegler.
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von CSliderCtrl](../mfc/using-csliderctrl.md)<br/>
+[Steuerelemente](../mfc/controls-mfc.md)
 

@@ -18,54 +18,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90774b304a4649c72b6232b5908bf9ff14a4412d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 36bfc6053ddbfb68598e1465896f94bb0a895f1b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057352"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435895"
 ---
 # <a name="contextselfunblock-class"></a>context_self_unblock-Klasse
-Diese Klasse beschreibt eine Ausnahme, die ausgelöst wird, wenn die `Unblock`-Methode für ein `Context`-Objekt aufgerufen wird, das im gleichen Kontext aufgerufen wird. Das würde den Versuch eines angegebenen Kontexts zum Aufheben der eigenen Blockierung angeben.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-class context_self_unblock : public std::exception;  
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[context_self_unblock](#ctor)|Überladen. Erstellt ein `context_self_unblock`-Objekt.|  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `exception`  
-  
- `context_self_unblock`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h hinzu  
-  
- **Namespace:** Parallelität  
-  
-##  <a name="ctor"></a> context_self_unblock 
 
- Erstellt ein `context_self_unblock`-Objekt.  
-  
-```  
+Diese Klasse beschreibt eine Ausnahme, die ausgelöst wird, wenn die `Unblock`-Methode für ein `Context`-Objekt aufgerufen wird, das im gleichen Kontext aufgerufen wird. Das würde den Versuch eines angegebenen Kontexts zum Aufheben der eigenen Blockierung angeben.
+
+## <a name="syntax"></a>Syntax
+
+```
+class context_self_unblock : public std::exception;
+```
+
+## <a name="members"></a>Member
+
+### <a name="public-constructors"></a>Öffentliche Konstruktoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[context_self_unblock](#ctor)|Überladen. Erstellt ein `context_self_unblock`-Objekt.|
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`exception`
+
+`context_self_unblock`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** concrt.h hinzu
+
+**Namespace:** Parallelität
+
+##  <a name="ctor"></a> context_self_unblock
+
+Erstellt ein `context_self_unblock`-Objekt.
+
+```
 explicit _CRTIMP context_self_unblock(_In_z_ const char* _Message) throw();
 
- 
 context_self_unblock() throw();
-```  
-  
-### <a name="parameters"></a>Parameter  
+```
+
+### <a name="parameters"></a>Parameter
+
 *_Nachricht*<br/>
-Eine beschreibende Fehlermeldung.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Concurrency-Namespace](concurrency-namespace.md)
+Eine beschreibende Fehlermeldung.
+
+## <a name="see-also"></a>Siehe auch
+
+[Concurrency-Namespace](concurrency-namespace.md)

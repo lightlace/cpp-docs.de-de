@@ -25,42 +25,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb1f1d9eed313fefc04a14a004af8c35309949bf
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 6fadc159f0924c3714616778cd1fd148b5ff0e84
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45534988"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423069"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>MFC-ActiveX-Steuerelemente: Verwenden von vordefinierten Eigenschaftenseiten
+
 Dieser Artikel beschreibt die vordefinierten Eigenschaftenseiten, die für ActiveX-Steuerelemente und deren Verwendung zur Verfügung.
 
 >[!IMPORTANT]
-> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).  
-  
- Weitere Informationen zur Verwendung von Eigenschaftenseiten in einem ActiveX-Steuerelement finden Sie unter den folgenden Artikeln:  
-  
--   [MFC-ActiveX-Steuerelemente: Eigenschaftenseite](../mfc/mfc-activex-controls-property-pages.md)  
-  
--   [MFC-ActiveX-Steuerelemente: Hinzufügen einer weiteren benutzerdefinierten Eigenschaftenseite](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
-  
- MFC bietet drei vordefinierten Eigenschaftenseiten für die Verwendung von ActiveX-Steuerelementen: `CLSID_CColorPropPage`, `CLSID_CFontPropPage`, und `CLSID_CPicturePropPage`. Diese Seiten wird eine Benutzeroberfläche für die vordefinierten Farbe, Schriftart und Bildeigenschaften, bzw. angezeigt.  
-  
- Um diese Eigenschaftenseiten in einem Steuerelement zu integrieren, wird der Code, der des Steuerelements-Array von Eigenschaftenseiten-IDs initialisiert, deren IDs hinzugefügt. Im folgenden Beispiel befindet sich dieser Code, in der Implementierungsdatei des Steuerelements (. CPP), das Array für alle drei vordefinierten Eigenschaftenseiten und die Standardseite für die Eigenschaft initialisiert (mit dem Namen `CMyPropPage` in diesem Beispiel):  
-  
- [!code-cpp[NVC_MFC_AxOpt#21](../mfc/codesnippet/cpp/mfc-activex-controls-using-stock-property-pages_1.cpp)]  
-  
- Beachten Sie, dass die Anzahl der Eigenschaftenseiten, in dem BEGIN_PROPPAGEIDS-Makro 4 ist. Dies stellt die Anzahl der Eigenschaftenseiten von ActiveX-Steuerelement unterstützt werden.  
-  
- Nachdem diese Änderungen vorgenommen wurden, erstellen Sie Ihr Projekt neu. Das Steuerelement verfügt jetzt über die Eigenschaftenseiten für die Schriftart, Bild und Farbeigenschaften.  
-  
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
+
+Weitere Informationen zur Verwendung von Eigenschaftenseiten in einem ActiveX-Steuerelement finden Sie unter den folgenden Artikeln:
+
+- [MFC-ActiveX-Steuerelemente: Eigenschaftenseite](../mfc/mfc-activex-controls-property-pages.md)
+
+- [MFC-ActiveX-Steuerelemente: Hinzufügen einer weiteren benutzerdefinierten Eigenschaftenseite](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+
+MFC bietet drei vordefinierten Eigenschaftenseiten für die Verwendung von ActiveX-Steuerelementen: `CLSID_CColorPropPage`, `CLSID_CFontPropPage`, und `CLSID_CPicturePropPage`. Diese Seiten wird eine Benutzeroberfläche für die vordefinierten Farbe, Schriftart und Bildeigenschaften, bzw. angezeigt.
+
+Um diese Eigenschaftenseiten in einem Steuerelement zu integrieren, wird der Code, der des Steuerelements-Array von Eigenschaftenseiten-IDs initialisiert, deren IDs hinzugefügt. Im folgenden Beispiel befindet sich dieser Code, in der Implementierungsdatei des Steuerelements (. CPP), das Array für alle drei vordefinierten Eigenschaftenseiten und die Standardseite für die Eigenschaft initialisiert (mit dem Namen `CMyPropPage` in diesem Beispiel):
+
+[!code-cpp[NVC_MFC_AxOpt#21](../mfc/codesnippet/cpp/mfc-activex-controls-using-stock-property-pages_1.cpp)]
+
+Beachten Sie, dass die Anzahl der Eigenschaftenseiten, in dem BEGIN_PROPPAGEIDS-Makro 4 ist. Dies stellt die Anzahl der Eigenschaftenseiten von ActiveX-Steuerelement unterstützt werden.
+
+Nachdem diese Änderungen vorgenommen wurden, erstellen Sie Ihr Projekt neu. Das Steuerelement verfügt jetzt über die Eigenschaftenseiten für die Schriftart, Bild und Farbeigenschaften.
+
 > [!NOTE]
->  Wenn die vordefinierten Eigenschaftenseiten Steuerelement können nicht zugegriffen werden, möglicherweise darauf zurückzuführen, bis die MFC-DLL (MFCxx.DLL) mit dem aktuellen Betriebssystem nicht ordnungsgemäß registriert wurde. Dies führt in der Regel installieren Sie Visual C++ unter einem Betriebssystem, die sich von dem derzeit ausgeführt.  
-  
+>  Wenn die vordefinierten Eigenschaftenseiten Steuerelement können nicht zugegriffen werden, möglicherweise darauf zurückzuführen, bis die MFC-DLL (MFCxx.DLL) mit dem aktuellen Betriebssystem nicht ordnungsgemäß registriert wurde. Dies führt in der Regel installieren Sie Visual C++ unter einem Betriebssystem, die sich von dem derzeit ausgeführt.
+
 > [!TIP]
->  Wenn die vordefinierten Eigenschaftenseiten nicht sichtbar sind (siehe vorherigen Hinweis), die DLL mit RegSvr32.exe über die Befehlszeile mit dem Namen der vollständige Pfad zur DLL registrieren.  
-  
-## <a name="see-also"></a>Siehe auch  
- [MFC ActiveX Controls (MFC-ActiveX-Steuerelemente)](../mfc/mfc-activex-controls.md)   
- [MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Eigenschaften](../mfc/mfc-activex-controls-adding-stock-properties.md)
+>  Wenn die vordefinierten Eigenschaftenseiten nicht sichtbar sind (siehe vorherigen Hinweis), die DLL mit RegSvr32.exe über die Befehlszeile mit dem Namen der vollständige Pfad zur DLL registrieren.
+
+## <a name="see-also"></a>Siehe auch
+
+[MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)<br/>
+[MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Eigenschaften](../mfc/mfc-activex-controls-adding-stock-properties.md)
 

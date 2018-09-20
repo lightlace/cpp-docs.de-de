@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97bba578e2759d335c4ad51e541ef3fc336aa888
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 10bb2f3bf1c15683b770fd9db143153c5e3aa53c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205304"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436441"
 ---
 # <a name="optional-c"></a>optional (C++)
 
@@ -70,5 +70,5 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 
 ## <a name="see-also"></a>Siehe auch
 
-[IDL-Attribute](../windows/idl-attributes.md)  
+[IDL-Attribute](../windows/idl-attributes.md)<br/>
 [Parameterattribute](../windows/parameter-attributes.md)  

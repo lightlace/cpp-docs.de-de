@@ -1,5 +1,5 @@
 ---
-title: NOWAIT | Microsoft Docs
+title: NOWAIT | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,79 +16,82 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8eeaed1295d411239925ece0c21980e8beb0fd13
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3fa4579aabf8a62e5117e096c5a49225451af6e7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688010"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381061"
 ---
 # <a name="nowait"></a>nowait
-Überschreibt die Grenze, die in einer Anweisung implizit.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-nowait  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- `nowait` gilt für die folgenden Direktiven:  
-  
--   [for](../../../parallel/openmp/reference/for-openmp.md)  
-  
--   [Abschnitte](../../../parallel/openmp/reference/sections-openmp.md)  
-  
--   [single](../../../parallel/openmp/reference/single.md)  
-  
- Weitere Informationen finden Sie unter [2.4.1 for-Konstrukt](../../../parallel/openmp/2-4-1-for-construct.md), [2.4.2 sections-Konstrukt](../../../parallel/openmp/2-4-2-sections-construct.md), und [2.4.3 einzelne erstellen](../../../parallel/openmp/2-4-3-single-construct.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// omp_nowait.cpp  
-// compile with: /openmp /c  
-#include <stdio.h>  
-  
-#define SIZE 5  
-  
-void test(int *a, int *b, int *c, int size)   
-{  
-    int i;  
-    #pragma omp parallel  
-    {  
-        #pragma omp for nowait  
-        for (i = 0; i < size; i++)  
-            b[i] = a[i] * a[i];  
-  
-        #pragma omp for nowait  
-        for (i = 0; i < size; i++)  
-            c[i] = a[i]/2;  
-    }  
-}  
-  
-int main( )   
-{  
-    int a[SIZE], b[SIZE], c[SIZE];  
-    int i;  
-  
-    for (i=0; i<SIZE; i++)  
-        a[i] = i;  
-  
-    test(a,b,c, SIZE);  
-  
-    for (i=0; i<SIZE; i++)  
-        printf_s("%d, %d, %d\n", a[i], b[i], c[i]);  
-}  
-```  
-  
-```Output  
-0, 0, 0  
-1, 1, 0  
-2, 4, 1  
-3, 9, 1  
-4, 16, 2  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klauseln](../../../parallel/openmp/reference/openmp-clauses.md)
+
+Überschreibt die Grenze, die in einer Anweisung implizit.
+
+## <a name="syntax"></a>Syntax
+
+```
+nowait
+```
+
+## <a name="remarks"></a>Hinweise
+
+`nowait` gilt für die folgenden Anweisungen:
+
+- [for](../../../parallel/openmp/reference/for-openmp.md)
+
+- [Abschnitte](../../../parallel/openmp/reference/sections-openmp.md)
+
+- [single](../../../parallel/openmp/reference/single.md)
+
+Weitere Informationen finden Sie unter [2.4.1 for-Konstrukt](../../../parallel/openmp/2-4-1-for-construct.md), [2.4.2 sections-Konstrukt](../../../parallel/openmp/2-4-2-sections-construct.md), und [2.4.3 einzelne erstellen](../../../parallel/openmp/2-4-3-single-construct.md).
+
+## <a name="example"></a>Beispiel
+
+```
+// omp_nowait.cpp
+// compile with: /openmp /c
+#include <stdio.h>
+
+#define SIZE 5
+
+void test(int *a, int *b, int *c, int size)
+{
+    int i;
+    #pragma omp parallel
+    {
+        #pragma omp for nowait
+        for (i = 0; i < size; i++)
+            b[i] = a[i] * a[i];
+
+        #pragma omp for nowait
+        for (i = 0; i < size; i++)
+            c[i] = a[i]/2;
+    }
+}
+
+int main( )
+{
+    int a[SIZE], b[SIZE], c[SIZE];
+    int i;
+
+    for (i=0; i<SIZE; i++)
+        a[i] = i;
+
+    test(a,b,c, SIZE);
+
+    for (i=0; i<SIZE; i++)
+        printf_s("%d, %d, %d\n", a[i], b[i], c[i]);
+}
+```
+
+```Output
+0, 0, 0
+1, 1, 0
+2, 4, 1
+3, 9, 1
+4, 16, 2
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Klauseln](../../../parallel/openmp/reference/openmp-clauses.md)
