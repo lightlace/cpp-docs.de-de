@@ -56,44 +56,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 037eaa864f4b24622fdd72e15674fb8489f9b4bb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ac529c3084917bd43fbb0a9fd51f1f0e3942447b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220013"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416022"
 ---
 # <a name="reflected-window-message-ids"></a>Reflektierte Fenstermeldungs-IDs
-Eine schnelle Möglichkeit, ein ActiveX-Steuerelement oder andere spezielle Steuerelement zu erstellen ist ein Fenster, um eine Unterklasse. Weitere Informationen finden Sie unter [MFC-ActiveX-Steuerelemente: Erstellen von Unterklassen für ein Windows-Steuerelement](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  
-  
- Um zu verhindern, dass der Container des Steuerelements empfangen die fenstermeldungen, die von einem untergeordnetes Windows-Steuerelement gesendet [COleControl](../mfc/reference/colecontrol-class.md) erstellt ein Fenster "Reflector", um bestimmte Windows-Meldungen abzufangen, und senden sie zurück an das Steuerelement. Steuerelements in der Fensterprozedur auf, kann dann diese reflektierten Meldungen verarbeiten, indem Aktionen, die für ein ActiveX-Steuerelement.  
-  
- Die folgende Tabelle zeigt die Nachrichten, die abgefangen werden und die entsprechenden Nachrichten, die das Fenster "Reflector" sendet.  
-  
-|Vom Steuerelement gesendete Nachricht|Meldung reflektiert, um das Steuerelement|  
-|---------------------------------|--------------------------------------|  
-|[WM_COMMAND](/windows/desktop/menurc/wm-command)|OCM_COMMAND|  
-|[WM_CTLCOLORBTN](/windows/desktop/Controls/wm-ctlcolorbtn)|OCM_CTLCOLORBTN|  
-|[WM_CTLCOLOREDIT](/windows/desktop/Controls/wm-ctlcoloredit)|OCM_CTLCOLOREDIT|  
-|[WM_CTLCOLORDLG](/windows/desktop/dlgbox/wm-ctlcolordlg)|OCM_CTLCOLORDLG|  
-|[WM_CTLCOLORLISTBOX](/windows/desktop/Controls/wm-ctlcolorlistbox)|OCM_CTLCOLORLISTBOX|  
-|[WM_CTLCOLORSCROLLBAR](/windows/desktop/Controls/wm-ctlcolorscrollbar)|OCM_CTLCOLORSCROLLBAR|  
-|[WM_CTLCOLORSTATIC](/windows/desktop/Controls/wm-ctlcolorstatic)|OCM_CTLCOLORSTATIC|  
-|[WM_DRAWITEM](/windows/desktop/Controls/wm-drawitem)|OCM_DRAWITEM|  
-|[WM_MEASUREITEM](/windows/desktop/Controls/wm-measureitem)|OCM_MEASUREITEM|  
-|[WM_DELETEITEM](/windows/desktop/Controls/wm-deleteitem)|OCM_DELETEITEM|  
-|[WM_VKEYTOITEM](/windows/desktop/Controls/wm-vkeytoitem)|OCM_VKEYTOITEM|  
-|[WM_CHARTOITEM](/windows/desktop/Controls/wm-chartoitem)|OCM_CHARTOITEM|  
-|[WM_COMPAREITEM](/windows/desktop/Controls/wm-compareitem)|OCM_COMPAREITEM|  
-|[WM_HSCROLL](/windows/desktop/Controls/wm-hscroll)|OCM_HSCROLL|  
-|[WM_VSCROLL](/windows/desktop/Controls/wm-vscroll)|OCM_VSCROLL|  
-|[WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY|  
-|[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)|OCM_NOTIFY|  
-  
+
+Eine schnelle Möglichkeit, ein ActiveX-Steuerelement oder andere spezielle Steuerelement zu erstellen ist ein Fenster, um eine Unterklasse. Weitere Informationen finden Sie unter [MFC-ActiveX-Steuerelemente: Erstellen von Unterklassen für ein Windows-Steuerelement](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+
+Um zu verhindern, dass der Container des Steuerelements empfangen die fenstermeldungen, die von einem untergeordnetes Windows-Steuerelement gesendet [COleControl](../mfc/reference/colecontrol-class.md) erstellt ein Fenster "Reflector", um bestimmte Windows-Meldungen abzufangen, und senden sie zurück an das Steuerelement. Steuerelements in der Fensterprozedur auf, kann dann diese reflektierten Meldungen verarbeiten, indem Aktionen, die für ein ActiveX-Steuerelement.
+
+Die folgende Tabelle zeigt die Nachrichten, die abgefangen werden und die entsprechenden Nachrichten, die das Fenster "Reflector" sendet.
+
+|Vom Steuerelement gesendete Nachricht|Meldung reflektiert, um das Steuerelement|
+|---------------------------------|--------------------------------------|
+|[WM_COMMAND](/windows/desktop/menurc/wm-command)|OCM_COMMAND|
+|[WM_CTLCOLORBTN](/windows/desktop/Controls/wm-ctlcolorbtn)|OCM_CTLCOLORBTN|
+|[WM_CTLCOLOREDIT](/windows/desktop/Controls/wm-ctlcoloredit)|OCM_CTLCOLOREDIT|
+|[WM_CTLCOLORDLG](/windows/desktop/dlgbox/wm-ctlcolordlg)|OCM_CTLCOLORDLG|
+|[WM_CTLCOLORLISTBOX](/windows/desktop/Controls/wm-ctlcolorlistbox)|OCM_CTLCOLORLISTBOX|
+|[WM_CTLCOLORSCROLLBAR](/windows/desktop/Controls/wm-ctlcolorscrollbar)|OCM_CTLCOLORSCROLLBAR|
+|[WM_CTLCOLORSTATIC](/windows/desktop/Controls/wm-ctlcolorstatic)|OCM_CTLCOLORSTATIC|
+|[WM_DRAWITEM](/windows/desktop/Controls/wm-drawitem)|OCM_DRAWITEM|
+|[WM_MEASUREITEM](/windows/desktop/Controls/wm-measureitem)|OCM_MEASUREITEM|
+|[WM_DELETEITEM](/windows/desktop/Controls/wm-deleteitem)|OCM_DELETEITEM|
+|[WM_VKEYTOITEM](/windows/desktop/Controls/wm-vkeytoitem)|OCM_VKEYTOITEM|
+|[WM_CHARTOITEM](/windows/desktop/Controls/wm-chartoitem)|OCM_CHARTOITEM|
+|[WM_COMPAREITEM](/windows/desktop/Controls/wm-compareitem)|OCM_COMPAREITEM|
+|[WM_HSCROLL](/windows/desktop/Controls/wm-hscroll)|OCM_HSCROLL|
+|[WM_VSCROLL](/windows/desktop/Controls/wm-vscroll)|OCM_VSCROLL|
+|[WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY|
+|[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)|OCM_NOTIFY|
+
 > [!NOTE]
->  Wenn das Steuerelement auf einem Win32-System ausgeführt wird, es gibt mehrere Typen von WM_CTLCOLOR\* sie erhalten möglicherweise Nachrichten. Weitere Informationen finden Sie unter WM_CTLCOLORBTN, WM_CTLCOLORDLG, WM_CTLCOLOREDIT, WM_CTLCOLORLISTBOX, WM_CTLCOLORMSGBOX, WM_CTLCOLORSCROLLBAR, WM_CTLCOLORSTATIC.  
-  
-## <a name="see-also"></a>Siehe auch  
- [MFC-ActiveX-Steuerelemente: Erstellen von Unterklassen für ein Windows-Steuerelement](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)   
- [TN062: Meldungsreflektion für Windows-Steuerelemente](../mfc/tn062-message-reflection-for-windows-controls.md)
+>  Wenn das Steuerelement auf einem Win32-System ausgeführt wird, es gibt mehrere Typen von WM_CTLCOLOR\* sie erhalten möglicherweise Nachrichten. Weitere Informationen finden Sie unter WM_CTLCOLORBTN, WM_CTLCOLORDLG, WM_CTLCOLOREDIT, WM_CTLCOLORLISTBOX, WM_CTLCOLORMSGBOX, WM_CTLCOLORSCROLLBAR, WM_CTLCOLORSTATIC.
+
+## <a name="see-also"></a>Siehe auch
+
+[MFC-ActiveX-Steuerelemente: Erstellen einer Fenstersteuerelement-Unterklasse](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
+[TN062: Meldungsreflektion für Windows-Steuerelemente](../mfc/tn062-message-reflection-for-windows-controls.md)
 

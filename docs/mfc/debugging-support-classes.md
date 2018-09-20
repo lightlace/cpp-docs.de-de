@@ -1,5 +1,5 @@
 ---
-title: Debuggen von Unterstützungsklassen | Microsoft Docs
+title: Debuggen von Unterstützungsklassen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,22 +22,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 942302a07a55adf7d7a1a89ac2b518e3dcaefe2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9d513eb8d51f5161e70b168bb541fe899b74f41c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342604"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419073"
 ---
 # <a name="debugging-support-classes"></a>Debugunterstützungsklassen
-MFC bietet die folgenden Klassen, um dynamische Speicherbelegungsprobleme Debuggen zu erleichtern.  
-  
- [CDumpContext](../mfc/reference/cdumpcontext-class.md)  
- Stellt ein Ziel für Dumps für bereit.  
-  
- [CMemoryState](../mfc/reference/cmemorystate-structure.md)  
- -Struktur, die Momentaufnahmen Speicherverwendung bereitstellt. Auch verwendet zum Vergleichen von früheren und späteren Speichermomentaufnahmen.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+
+MFC enthält die folgenden Klassen, damit Sie die dynamische Speicherreservierungsproblemen Debuggen können.
+
+[CDumpContext](../mfc/reference/cdumpcontext-class.md)<br/>
+Stellt ein Ziel für Diagnosedaten Speicherabbilder.
+
+[CMemoryState](../mfc/reference/cmemorystate-structure.md)<br/>
+-Struktur, die Momentaufnahmen der speicherauslastung bereitstellt. Auch verwendet, um älterer und neuerer Arbeitsspeicher-Momentaufnahmen zu vergleichen.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../mfc/class-library-overview.md)
 

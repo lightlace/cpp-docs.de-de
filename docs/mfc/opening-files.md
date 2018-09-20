@@ -1,5 +1,5 @@
 ---
-title: Öffnen von Dateien | Microsoft Docs
+title: Öffnen von Dateien | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,39 +26,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ba12cce799d0d1ed9a02f3a4d3a268ca86d4447
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: a4abd2bf866a97e13324af22032cce9ebcaba4da
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931566"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408517"
 ---
 # <a name="opening-files"></a>Öffnen von Dateien
-In MFC ist die gängigste Methode zum Öffnen einer Datei ein zweistufiger Prozess.  
-  
-#### <a name="to-open-a-file"></a>Öffnen eine Datei  
-  
-1.  Erstellen Sie das Objekt "Datei" ohne einen Pfad oder Berechtigungsflags anzugeben.  
-  
-     Sie erstellen ein Objekt "Datei" in der Regel durch Deklarieren einer [CFile](../mfc/reference/cfile-class.md) Variablen im Stapelrahmen.  
-  
-2.  Rufen Sie die [öffnen](../mfc/reference/cfile-class.md#open) Memberfunktion für das Objekt "Datei", einen Pfad und Berechtigungsflags bereitstellt.  
-  
-     Der Rückgabewert für `Open` ist ungleich NULL, wenn die Datei erfolgreich geöffnet wurde oder gleich 0 sein, wenn die angegebene Datei konnte nicht geöffnet werden. Die `Open` Memberfunktion ist der Prototyp wie folgt:  
-  
-     `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`  
-  
-     Die open-Flags festlegen, welche Berechtigungen, z. B. schreibgeschützt, Sie möchten, für die Datei. Die möglichen Flagwerte sind definiert als aufgezählte Konstanten in der `CFile` Klasse, damit sie mit qualifiziert sind "`CFile::`" wie in `CFile::modeRead`. Verwenden der `CFile::modeCreate` auszugeben, wenn Sie die Datei erstellen möchten.  
-  
- Im folgende Beispiel veranschaulicht das Erstellen einer neuen Datei mit Lese-/Schreibberechtigung (Ersetzen eine vorhandene Datei mit dem gleichen Pfad):  
-  
- [!code-cpp[NVC_MFCFiles#1](../atl-mfc-shared/reference/codesnippet/cpp/opening-files_1.cpp)]  
-  
+
+In MFC ist die gängigste Methode zum Öffnen einer Datei ein zweistufiger Prozess.
+
+#### <a name="to-open-a-file"></a>Zum Öffnen einer Datei
+
+1. Erstellen Sie das Objekt "Datei", ohne einen Pfad oder die Berechtigung-Flags.
+
+     Sie erstellen ein Objekt "Datei" in der Regel durch Deklarieren einer [CFile](../mfc/reference/cfile-class.md) Variablen im Stapelrahmen.
+
+1. Rufen Sie die [öffnen](../mfc/reference/cfile-class.md#open) Member-Funktion für das File-Objekt, einen Pfad und der Berechtigung Flags angeben.
+
+     Der Rückgabewert für `Open` werden ungleich NULL, wenn die Datei erfolgreich geöffnet wurde, oder 0, wenn die angegebene Datei konnte nicht geöffnet werden. Die `Open` Member-Funktion wird wie folgt:
+
+     `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
+
+     Die open-Flags festlegen, welche Berechtigungen ein, z. B. schreibgeschützt, Sie möchten, für die Datei. Die möglichen Flagwerte sind definiert als aufgezählte Konstanten in der `CFile` Klasse, damit sie mit gekennzeichnet sind "`CFile::`" wie in `CFile::modeRead`. Verwenden der `CFile::modeCreate` auszugeben, wenn Sie die Datei erstellen möchten.
+
+Das folgende Beispiel zeigt, wie Sie eine neue Datei mit Lese-/Schreibberechtigung (ersetzen Sie alle vorherige Datei mit dem gleichen Pfad) zu erstellen:
+
+[!code-cpp[NVC_MFCFiles#1](../atl-mfc-shared/reference/codesnippet/cpp/opening-files_1.cpp)]
+
 > [!NOTE]
->  In diesem Beispiel erstellt und öffnet eine Datei. Wenn Probleme auftreten, die `Open` Aufruf zurückgeben kann ein `CFileException` Objekt in der letzten Parameter, wie hier gezeigt. Das TRACE-Makro druckt den Dateinamen und einen Code, der angibt, der Ursache für Fehler. Sie erreichen die `AfxThrowFileException` funktioniert, wenn gewünscht, ausführlichere-Fehlerberichterstattung.  
-  
-## <a name="see-also"></a>Siehe auch  
- [CFile-Klasse](../mfc/reference/cfile-class.md)   
- [CFile::Open](../mfc/reference/cfile-class.md#open)   
- [Dateien](../mfc/files-in-mfc.md)
+>  In diesem Beispiel erstellt und öffnet eine Datei. Wenn Probleme auftreten, die `Open` Aufruf zurückgeben kann eine `CFileException` Objekt in der letzte Parameter, wie hier gezeigt. Das TRACE-Makro gibt sowohl den Dateinamen und einen Code, der angibt, der Ursache für Fehler. Rufen Sie die `AfxThrowFileException` ausgeführt werden, wenn gewünscht, ausführlichere-Fehlerberichterstattung.
+
+## <a name="see-also"></a>Siehe auch
+
+[CFile-Klasse](../mfc/reference/cfile-class.md)<br/>
+[CFile::Open](../mfc/reference/cfile-class.md#open)<br/>
+[Dateien](../mfc/files-in-mfc.md)
 

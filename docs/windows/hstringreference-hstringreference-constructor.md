@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c13635f4b73ee34de11b8c18b0cdd9943b261a29
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6123f87abb9922a9736ac56f64d28e78887a0fdd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591184"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403572"
 ---
 # <a name="hstringreferencehstringreference-constructor"></a>HStringReference::HStringReference-Konstruktor
 
@@ -41,16 +41,16 @@ HStringReference(HStringReference&& other) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*sizeDest*  
+*sizeDest*<br/>
 Ein Vorlagenparameter, der angibt, die Größe des Ziels **HStringReference** Puffer.
 
-*str*  
+*str*<br/>
 Ein Verweis auf eine Zeichenfolge mit Breitzeichen.
 
-*Len*  
+*Len*<br/>
 Die maximale Länge von der *str* Parameterpuffer auf diesen Vorgang verwendet. Wenn die *Len* Parameter nicht angegeben ist, die gesamte *str* Parameter wird verwendet. Wenn *Len* ist größer als *SizeDest*, *Len* nastaven NA hodnotu *SizeDest*-1.
 
-*other*  
+*other*<br/>
 Eine andere **HStringReference** Objekt.
 
 ## <a name="remarks"></a>Hinweise

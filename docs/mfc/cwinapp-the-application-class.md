@@ -1,5 +1,5 @@
 ---
-title: 'CWinApp: Die Anwendungsklasse | Microsoft Docs'
+title: 'CWinApp: Die Anwendungsklasse | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,31 +24,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0c3641441554d73e0c7657dd220be86f0c0cab0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a6b076798c9ad07a8ca8da1a898c263997e27fd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343004"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414588"
 ---
 # <a name="cwinapp-the-application-class"></a>CWinApp: Die Anwendungsklasse
-Die Hauptassembly der Anwendung-Klasse in MFC kapselt die Initialisierung, Ausführung und Beendigung einer Anwendung für Windows-Betriebssystems. Eine Anwendung, die auf das Framework benötigen eine und nur ein Objekt einer Klasse abgeleitet [CWinApp](../mfc/reference/cwinapp-class.md). Dieses Objekt wird erstellt, bevor Windows erstellt werden.  
-  
- `CWinApp` stammt aus `CWinThread`, der den Hauptthread der Ausführung Ihrer Anwendung, die möglicherweise einen oder mehrere Threads darstellt. In den neuesten Versionen der MFC die `InitInstance`, **ausführen**, `ExitInstance`, und `OnIdle` Memberfunktionen befinden sich nämlich in Klasse `CWinThread`. Diese Funktionen werden hier erläutert, als wären sie `CWinApp` Mitglieder stattdessen, da die Diskussion des Objekts Rolle als Application-Objekt und nicht als primären Thread bezieht.  
-  
+
+Die Hauptanwendungsklasse in MFC kapselt die Initialisierung, Ausführung und Beendigung einer Anwendung für das Windows-Betriebssystem. Eine Anwendung, die auf das Framework muss eine und nur ein Objekt einer Klasse abgeleitet [CWinApp](../mfc/reference/cwinapp-class.md). Dieses Objekt wird erstellt, bevor Windows erstellt werden.
+
+`CWinApp` stammt aus `CWinThread`, steht für den Hauptthread Ihrer Anwendung, die möglicherweise von einem oder mehreren Threads ausgeführt. In früheren Versionen von MFC die `InitInstance`, **ausführen**, `ExitInstance`, und `OnIdle` Memberfunktionen sind tatsächlich in Klasse `CWinThread`. Diese Funktionen werden hier erläutert, als wären sie `CWinApp` Member stattdessen, da es sich bei die Diskussion bezieht sich auf die Rolle des Objekts, als Application-Objekt und nicht als primären Thread.
+
 > [!NOTE]
->  Die Anwendungsklasse bildet die Anwendung primären Thread der Ausführung. Mithilfe von Win32-API-Funktionen können Sie auch sekundäre Ausführungsthreads erstellen. Diese Threads können die MFC-Bibliothek. Weitere Informationen finden Sie unter [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
-  
- Genau wie jedes Programm für Windows-Betriebssystems, die Framework-Anwendung verfügt eine `WinMain` Funktion. In einer Framework-Anwendung jedoch nicht schreiben Sie `WinMain`. Es wird von der Klassenbibliothek bereitgestellt und wird aufgerufen, wenn die Anwendung wird gestartet. `WinMain` führt die Standarddienste z. B. das Registrieren von Fensterklassen. Er ruft Sie Memberfunktionen des Anwendungsobjekts zu initialisieren, und führen Sie die Anwendung. (Sie können anpassen, `WinMain` durch Überschreiben der `CWinApp` Memberfunktionen, die `WinMain` aufrufen.)  
-  
- Zum Initialisieren der Anwendung `WinMain` ruft des Anwendungsobjekts `InitApplication` und `InitInstance` Memberfunktionen. Zum Ausführen der Nachrichtenschleife für die Anwendung, `WinMain` Aufrufe der **ausführen** Memberfunktion. Beim Beenden `WinMain` ruft des Anwendungsobjekts `ExitInstance` Memberfunktion.  
-  
+>  Ihrer Anwendungsklasse bildet Ihrer Anwendung primären Thread der Ausführung. Win32-API-Funktionen verwenden, können Sie auch den sekundären Ausführungsthreads erstellen. Diese Threads können die MFC-Bibliothek verwenden. Weitere Informationen finden Sie unter [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
+
+Wie jedes andere Programm für das Windows-Betriebssystem, die Framework-Anwendung verfügt über eine `WinMain` Funktion. In einer Framework-Anwendung jedoch, Sie nicht schreiben `WinMain`. Es wird von der Klassenbibliothek bereitgestellt und wird aufgerufen, wenn die Anwendung wird gestartet. `WinMain` führt die Standarddienste, wie z. B. das Registrieren von Fensterklassen. Es ruft Sie Memberfunktionen des Anwendungsobjekts zu initialisieren und Ausführen der Anwendung. (Sie können anpassen, `WinMain` durch Überschreiben der `CWinApp` Memberfunktionen, die `WinMain` aufrufen.)
+
+Zum Initialisieren der Anwendung `WinMain` Aufrufe des Anwendungsobjekts `InitApplication` und `InitInstance` Memberfunktionen. Zum Ausführen der Anwendung Meldungsschleife `WinMain` Aufrufe der **ausführen** Member-Funktion. Beim Beenden `WinMain` ruft des Anwendungsobjekts `ExitInstance` Member-Funktion.
+
 > [!NOTE]
->  Im angezeigten Namen **fett** zeigen Sie in dieser Dokumentation Elemente, die von der Microsoft Foundation Class-Bibliothek und Visual C++ bereitgestellt. Im angezeigten Namen `monospaced` Typ anzugeben, Elemente, die Sie erstellen oder außer Kraft setzen.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Allgemeine MFC-Themen](../mfc/general-mfc-topics.md)   
- [CWinApp und der MFC-Anwendungs-Assistent](../mfc/cwinapp-and-the-mfc-application-wizard.md)   
- [Überschreibbare CWinApp-Memberfunktionen](../mfc/overridable-cwinapp-member-functions.md)   
- [Spezielle CWinApp-Dienste](../mfc/special-cwinapp-services.md)
+>  Im angezeigten Namen **fett** in dieser Dokumentation zeigen Sie Elemente, die von der Microsoft Foundation Class-Bibliothek und die Visual C++ bereitgestellt. Im angezeigten Namen `monospaced` Typ angeben, Elemente, die Sie erstellen oder überschreiben.
+
+## <a name="see-also"></a>Siehe auch
+
+[Allgemeine MFC-Themen](../mfc/general-mfc-topics.md)<br/>
+[CWinApp und der MFC-Anwendungs-Assistent](../mfc/cwinapp-and-the-mfc-application-wizard.md)<br/>
+[Überschreibbare CWinApp-Memberfunktionen](../mfc/overridable-cwinapp-member-functions.md)<br/>
+[Spezielle CWinApp-Dienste](../mfc/special-cwinapp-services.md)
 
