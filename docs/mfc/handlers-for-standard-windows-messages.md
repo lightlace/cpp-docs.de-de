@@ -1,5 +1,5 @@
 ---
-title: Handler für Windows-Standardmeldungen | Microsoft Docs
+title: Handler für Standard-Windows-Meldungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,32 +20,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eb904d67463cefd9fecdb33c7367bfde79e27f8
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 4c74e97d8b89a72fc49f41b8c7e1bf90da2ba06c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928514"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417812"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Handler für Windows-Standardmeldungen
-Standard-Handler für standard-Windows-Meldungen (**WM_**) sind in Klasse vordefiniert `CWnd`. Die Klassenbibliothek Basen Namen für diese Handler auf den Nachrichtennamen. Z. B. der Handler für das **WM_PAINT** Nachricht im deklarierten `CWnd` als:  
-  
- `afx_msg void OnPaint();`  
-  
- Die **Afx_msg** Schlüsselwort schlägt vor, Ihnen die Auswirkungen der C++-Komponente **virtuellen** Schlüsselwort, indem die Handler von anderen unterschieden `CWnd` Memberfunktionen. Beachten Sie jedoch, dass diese Funktionen nicht tatsächlich virtuelle sind; Sie werden stattdessen über meldungszuordnungen implementiert. Meldungszuordnungen richten sich ausschließlich auf standard Präprozessormakros und nicht für alle Erweiterungen der Programmiersprache C++. Die **Afx_msg** Schlüsselwort in Leerzeichen aufgelöst wird, nach der vorverarbeitung.  
-  
- Um einen Handler definiert, die in einer Basisklasse zu überschreiben, definieren Sie einfach eine Funktion mit den gleichen Prototyp, in der abgeleiteten Klasse und einen meldungszuordnung Eintrag für den Handler vornehmen. Der Handler überschreibt"" ein Handler mit dem gleichen Namen in einer der Basisklassen der Klasse.  
-  
- In einigen Fällen sollte der Handler den überschriebenen Handler in der Basisklasse aufrufen, damit die Basisklasse(n) und das Fenster für die Nachricht ausgeführt werden können. In denen Sie den Basisklassen-Handler in der Überschreibung aufrufen, hängt von den Umständen ab. In einigen Fällen müssen Sie rufen zuerst den Basisklassen-Handler und manchmal last. In einigen Fällen rufen Sie die Basisklasse Handler bedingt, wenn Sie nicht die Nachricht selbst behandeln. In einigen Fällen sollten Sie den Handler der Basisklasse aufrufen und anschließend bedingt auszuführen, eine eigene Handlercode, je nach Wert oder von der Basisklasse-Handler zurückgegeben wurden.  
-  
+
+Standard-Handler für standard-Windows-Meldungen (**WM_**) sind in der Klasse vordefiniert `CWnd`. Die Klassenbibliothek Basen Namen für diese Handler auf den Nachrichtennamen. Z. B. den Handler für die **WM_PAINT** Nachricht im deklarierten `CWnd` als:
+
+`afx_msg void OnPaint();`
+
+Die **Afx_msg** Schlüsselwort schlägt vor, die Auswirkungen der C++- **virtuellen** Schlüsselwort durch die Handler von anderen unterscheiden `CWnd` Memberfunktionen. Beachten Sie jedoch, dass diese Funktionen nicht virtuelle sind. Sie werden stattdessen über meldungszuordnungen implementiert. Meldungszuordnungen hängt ausschließlich standard Präprozessormakros und nicht für alle Erweiterungen der Programmiersprache C++. Die **Afx_msg** Schlüsselwort in Leerzeichen aufgelöst wird, nach der vorverarbeitung.
+
+Um einen Handler, der definiert, die in einer Basisklasse zu überschreiben, definieren Sie einfach eine Funktion mit den gleichen Prototyp, in der abgeleiteten Klasse und einen meldungszuordnung Eintrag für den Ereignishandler. Der Handler überschreibt"" ein Handler mit dem gleichen Namen in einer der Basisklassen Ihrer Klasse fest.
+
+In einigen Fällen sollte der Handler den außer Kraft gesetzte Handler in der Basisklasse aufrufen, damit der Basisklasse(n) und Windows für die Nachricht ausgeführt werden können. In dem Sie den Handler für die Basisklasse in der Überschreibung aufrufen, hängt von den Umständen ab. Manchmal müssen Sie rufen den Handler für die Basisklasse zuerst und zuletzt manchmal. Manchmal rufen Sie die Basisklassenhandler bedingt, wenn Sie nicht die Meldung zu behandeln. Manchmal sollten Sie den Handler der Basisklasse aufrufen und dann Ihre eigenen Handlercode, je nach Wert oder Zustand, die von der Basisklasse Handler zurückgegebene bedingt auszuführen.
+
 > [!CAUTION]
->  Es ist nicht sicher ist, ändern die Argumente, die an einen Ereignishandler übergeben werden, wenn Sie beabsichtigen, die sie auf einen Basisklassen-Handler zu übergeben. Ändern möchten, z. B. möglicherweise die *nChar* Argument der `OnChar` Handler (in Großbuchstaben zu konvertieren, z. B.). Dieses Verhalten ist ziemlich kryptische, aber wenn Sie diesen Effekt zu erzielen verwenden die `CWnd` Memberfunktion `SendMessage` stattdessen.  
-  
- Wie Sie das richtige Verfahren für eine bestimmte Nachricht überschrieben werden, wenn das Eigenschaftenfenster des Grundgerüsts die Handlerfunktion für eine bestimmte Nachricht schreibt bestimmen – ein `OnCreate` Handler für **WM_CREATE**, z. B. – es Skizzen in Form von die empfohlene überschriebene Member-Funktion. Im folgende Beispiel empfiehlt die der Handler zuerst den Handler der Basisklasse aufrufen, und fahren Sie fort, nur, wenn er nicht-1 zurückgibt.  
-  
- [!code-cpp[NVC_MFCMessageHandling#3](../mfc/codesnippet/cpp/handlers-for-standard-windows-messages_1.cpp)]  
-  
- Beginnen gemäß der Konvention werden die Namen dieser Handler mit dem Präfix "On". Einige dieser Handler akzeptieren keine Argumente, während andere mehrere verwenden können. Einige haben auch einen Rückgabetyp außer **"void"**. Die Standardhandler für alle **WM_** Nachrichten werden in dokumentiert die *MFC-Referenz* als Memberfunktionen der Klasse `CWnd` , deren Namen beginnen mit "Weiter". In den memberfunktionsdeklarationen `CWnd` vorangestellt **Afx_msg**.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Deklarieren von Meldungshandlerfunktionen](../mfc/declaring-message-handler-functions.md)
+>  Es ist nicht sicher ist, ändern die Argumente, die an einen Ereignishandler übergeben werden, wenn Sie beabsichtigen, die sie auf einen Basisklassen-Handler übergeben. Z. B. möglicherweise versucht, das Ändern der *nChar* Argument der `OnChar` Handler (in Großbuchstaben umzuwandelnde, z. B.). Dieses Verhalten ist recht undurchsichtig, aber wenn Sie diesen Effekt erzielen, durchführen müssen, verwenden die `CWnd` Memberfunktion `SendMessage` stattdessen.
+
+Wie bestimmt der richtige Weg, um eine bestimmte Nachricht zu überschreiben, wenn das Fenster "Eigenschaften" das Gerüst der Handlerfunktion für eine bestimmte Nachricht schreibt – ein `OnCreate` Handler für **WM_CREATE**, z. B. – es in Form von Skizzen die empfohlene überschriebenen Member-Funktion. Im folgende Beispiel empfiehlt, dass der Handler zuerst den Handler der Basisklasse aufrufen, und fahren Sie fort, nur, wenn kein-1 zurückgegeben wird.
+
+[!code-cpp[NVC_MFCMessageHandling#3](../mfc/codesnippet/cpp/handlers-for-standard-windows-messages_1.cpp)]
+
+Gemäß der Konvention beginnen die Namen dieser Handler mit dem Präfix "On". Einige dieser Handler akzeptieren keine Argumente, während die anderen mehrere verwendet werden. Einige haben auch einen Rückgabetyp als **"void"**. Die Standardhandler für alle **WM_** Nachrichten werden in dokumentiert die *MFC-Referenz* als Memberfunktionen der Klasse `CWnd` , deren Namen beginnen mit "On". In den memberfunktionsdeklarationen `CWnd` vorangestellt **Afx_msg**.
+
+## <a name="see-also"></a>Siehe auch
+
+[Deklarieren von Meldungshandlerfunktionen](../mfc/declaring-message-handler-functions.md)

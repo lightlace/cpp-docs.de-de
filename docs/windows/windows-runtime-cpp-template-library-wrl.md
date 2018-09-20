@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c758226935151bd11faec12aed459aeb2606ca9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8b220ecd69ce539c03339ac73048efb2750d2e32
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684823"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401798"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows Runtime C++ Template Library (WRL)
 
@@ -50,43 +50,43 @@ Die Windows Runtime C++ Template Library und C++ / CX bieten unterschiedliche Vo
 
 Hier sind einige Ressourcen, mit die Sie mit der Windows Runtime C++ Template Library sofort loslegen können.
 
-[Die Windows-Runtime-Bibliothek (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
+[Die Windows-Runtime-Bibliothek (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
 Erfahren Sie in diesem Channel 9-Video mehr darüber, wie die Windows Runtime C++ Template Library hilft, dass Sie die apps der universellen Windows-Plattform (UWP) und Informationen zum Erstellen und nutzen die Windows-Runtime-Komponenten schreiben.
 
-[Vorgehensweise: Aktivieren und Verwenden einer Windows-Runtime-Komponente](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)  
+[Vorgehensweise: Aktivieren und Verwenden einer Windows-Runtime-Komponente](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
 Zeigt, wie Sie mit der Windows-Runtime zu initialisieren und zu aktivieren und verwenden eine Windows-Runtime-Komponente der Windows Runtime C++ Template Library.
 
-[Vorgehensweise: Abschließen asynchroner Vorgänge](../windows/how-to-complete-asynchronous-operations-using-wrl.md)  
+[Vorgehensweise: Abschließen asynchroner Vorgänge](../windows/how-to-complete-asynchronous-operations-using-wrl.md)<br/>
 Zeigt, wie Sie mit der Windows Runtime C++ Template Library asynchrone Vorgänge starten und Arbeiten ausführen, wenn die Vorgänge abgeschlossen.
 
-[Vorgehensweise: Behandeln von Ereignissen](../windows/how-to-handle-events-using-wrl.md)  
+[Vorgehensweise: Behandeln von Ereignissen](../windows/how-to-handle-events-using-wrl.md)<br/>
 Zeigt, wie Sie mit der Windows Runtime C++ Template Library abonnieren und Behandeln der Ereignisse von einem Windows-Runtime-Objekt.
 
-[Exemplarische Vorgehensweise: Erstellen einer UWP-App mithilfe von WRL und Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+[Exemplarische Vorgehensweise: Erstellen einer UWP-App mithilfe von WRL und Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)<br/>
 Erfahren Sie, wie Sie eine UWP-app zu erstellen, verwendet [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
 
-[Vorgehensweise: Erstellen einer klassischen COM-Komponente](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
+[Vorgehensweise: Erstellen einer klassischen COM-Komponente](../windows/how-to-create-a-classic-com-component-using-wrl.md)<br/>
 Zeigt, wie die Windows Runtime C++ Template Library verwenden, um eine grundlegende COM-Komponente und eine einfache Möglichkeit zur Registrierung und Nutzung der COM-Komponente aus einer desktop-app zu erstellen.
 
-[Vorgehensweise: Direktes Instanziieren von WRL-Komponenten](../windows/how-to-instantiate-wrl-components-directly.md)  
+[Vorgehensweise: Direktes Instanziieren von WRL-Komponenten](../windows/how-to-instantiate-wrl-components-directly.md)<br/>
 Erfahren Sie, wie Sie mit der [Microsoft::WRL::Make](../windows/make-function.md) und [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) Funktionen, um eine Komponente aus dem Modul instanziieren, das sie definiert.
 
-[Vorgehensweise: Verwenden von winmdidl.exe und midlrt.exe zum Erstellen von .h-Dateien aus Windows-Metadaten](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)  
+[Vorgehensweise: Verwenden von winmdidl.exe und midlrt.exe zum Erstellen von .h-Dateien aus Windows-Metadaten](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
 Zeigt, wie benutzerdefinierte Komponenten für Windows-Runtime von WRL durch Erstellen einer IDL-Datei von den WINMD-Metadaten verarbeitet werden.
 
-[Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
+[Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
 Zeigt, wie die [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) und [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) Schnittstellen zusammen mit Aufgaben für HTTP-GET und POST-Anforderungen an einen Webdienst in einer UWP-app zu senden.
 
-[Beispiel des Reise-Optimierer von Bing Maps](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)  
+[Beispiel des Reise-Optimierer von Bing Maps](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
 Verwendet die `HttpRequest` -Klasse, die in definierten [Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) im Rahmen einer vollständigen UWP-app.
 
-[Beispiel zum Erstellen einer Windows Runtime DLL-Komponente mit C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)  
+[Beispiel zum Erstellen einer Windows Runtime DLL-Komponente mit C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 Zeigt, wie die Windows Runtime C++ Template Library eine prozessinterne DLL-Komponente zu erstellen und nutzen es in C++ / CX, JavaScript und c#.
 
-[DirectX marble Maze-Beispiel](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)  
+[DirectX marble Maze-Beispiel](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
 Veranschaulicht, wie die Windows Runtime C++ Template Library verwenden, um die Lebensdauer von COM-Komponenten wie DirectX und Media Foundation im Rahmen eines vollständigen 3D-Spiels verwalten.
 
-[Senden von toastbenachrichtigungen aus desktop-apps-Beispiel](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)  
+[Senden von toastbenachrichtigungen aus desktop-apps-Beispiel](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
 Veranschaulicht, wie Sie die Windows Runtime C++ Template Library mit toastbenachrichtigungen aus einer desktop-app verwenden.
 
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Windows Runtime C++ Template Library, die im Vergleich mit ATL
