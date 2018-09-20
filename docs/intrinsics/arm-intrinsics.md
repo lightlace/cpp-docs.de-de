@@ -1941,644 +1941,657 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0c2138de2becc7afa9d2392c2fa5240b584b6d3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 092ac94cac92b3ba327aa7c7853ec286268a00af
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46018248"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434101"
 ---
 # <a name="arm-intrinsics"></a>Systeminterne ARM-Funktionen
-Der Visual C++-Compiler stellt die folgenden systeminternen Funktionen in der ARM-Architektur zur Verfügung. Weitere Informationen zu ARM finden Sie unter den [ARM-Architektur-Reference Manuals](http://go.microsoft.com/fwlink/p/?LinkId=522049) und [ARM Assembler Tools Guide](http://go.microsoft.com/fwlink/p/?LinkId=246102) auf der ARM-Infocenter-Website.  
-  
-##  <a name="top"></a> NEON  
- Die Anweisungssatzerweiterungen für den NEON-Vektor für ARM bieten SIMD-Funktionen (Single Instruction Multiple Data), die den Funktionen in den MMX- und SSE-Vektor-Anweisungssätzen ähneln, die bei x86- und x64-Architekturprozessoren vorkommen.  
-  
- Systeminterne NEON-Funktionen werden unterstützt, wie in der Headerdatei `arm_neon.h` angegeben. Der Visual C++-Compiler-Unterstützung für systeminterne NEON-Funktionen, die von der ARM-Compiler, die in Anhang G der dokumentiert ist, ähnelt die [ARM Compiler-toolkette, Version 4.1 Compiler Reference](http://go.microsoft.com/fwlink/p/?LinkId=251083) auf der ARM-Infocenter-Website.  
-  
- Der Hauptunterschied zwischen dem Visual C++-Compiler und dem ARM-Compiler besteht darin, dass der Visual C++-Compiler `_ex`-Varianten der `vldX`- und `vstX`-Vektoranweisungen zum Laden und Speichern hinzufügt. Die `_ex`-Varianten benötigen einen zusätzlichen Parameter, der die Ausrichtung des Zeigerargument angibt, sind aber ansonsten identisch mit ihren Nicht-`_ex`-Entsprechungen.  
-  
-##  <a name="A"></a> Auflisten der ARM-spezifischen systeminternen Funktionen  
-  
-|Funktionsname|Anweisung|Funktionsprototyp|  
-|-------------------|-----------------|------------------------|  
-|_arm_smlal|SMLAL|__int64 _arm_smlal (\___int64 _RdHiLo, _Rn Int, Int _Rm)|  
-|_arm_umlal|UMLAL|unsigned __int64 _arm_umlal(unsigned \__int64 _RdHiLo, unsigned int _Rn, unsigned int _Rm)|  
-|_arm_clz|CLZ|unsigned int _arm_clz(unsigned int _Rm)|  
-|_arm_qadd|QADD|int _arm_qadd(int _Rm, int _Rn)|  
-|_arm_qdadd|QDADD|int _arm_qdadd(int _Rm, int _Rn)|  
-|_arm_qdsub|QDSUB|int _arm_qdsub(int _Rm, int _Rn)|  
-|_arm_qsub|QSUB|int _arm_qsub(int _Rm, int _Rn)|  
-|_arm_smlabb|SMLABB|int _arm_smlabb(int _Rn, int _Rm, int _Ra)|  
-|_arm_smlabt|SMLABT|int _arm_smlabt(int _Rn, int _Rm, int _Ra)|  
-|_arm_smlatb|SMLATB|int _arm_smlatb(int _Rn, int _Rm, int _Ra)|  
-|_arm_smlatt|SMLATT|int _arm_smlatt(int _Rn, int _Rm, int _Ra)|  
-|_arm_smlalbb|SMLALBB|__int64 _arm_smlalbb (\___int64 _RdHiLo, _Rn Int, Int _Rm)|  
-|_arm_smlalbt|SMLALBT|__int64 _arm_smlalbt (\___int64 _RdHiLo, _Rn Int, Int _Rm)|  
-|_arm_smlaltb|SMLALTB|__int64 _arm_smlaltb (\___int64 _RdHiLo, _Rn Int, Int _Rm)|  
-|_arm_smlaltt|SMLALTT|__int64 _arm_smlaltt (\___int64 _RdHiLo, _Rn Int, Int _Rm)|  
-|_arm_smlawb|SMLAWB|int _arm_smlawb(int _Rn, int _Rm, int _Ra)|  
-|_arm_smlawt|SMLAWT|int _arm_smlawt(int _Rn, int _Rm, int _Ra)|  
-|_arm_smulbb|SMULBB|int _arm_smulbb(int _Rn, int _Rm)|  
-|_arm_smulbt|SMULBT|int _arm_smulbt(int _Rn, int _Rm)|  
-|_arm_smultb|SMULTB|int _arm_smultb(int _Rn, int _Rm)|  
-|_arm_smultt|SMULTT|int _arm_smultt(int _Rn, int _Rm)|  
-|_arm_smulwb|SMULWB|int _arm_smulwb(int _Rn, int _Rm)|  
-|_arm_smulwt|SMULWT|int _arm_smulwt(int _Rn, int _Rm)|  
-|_arm_sadd16|SADD16|int _arm_sadd16(int _Rn, int _Rm)|  
-|_arm_sadd8|SADD8|int _arm_sadd8(int _Rn, int _Rm)|  
-|_arm_sasx|SASX|int _arm_sasx(int _Rn, int _Rm)|  
-|_arm_ssax|SSAX|int _arm_ssax(int _Rn, int _Rm)|  
-|_arm_ssub16|SSUB16|int _arm_ssub16(int _Rn, int _Rm)|  
-|_arm_ssub8|SSUB8|int _arm_ssub8(int _Rn, int _Rm)|  
-|_arm_shadd16|SHADD16|int _arm_shadd16(int _Rn, int _Rm)|  
-|_arm_shadd8|SHADD8|int _arm_shadd8(int _Rn, int _Rm)|  
-|_arm_shasx|SHASX|int _arm_shasx(int _Rn, int _Rm)|  
-|_arm_shsax|SHSAX|int _arm_shsax(int _Rn, int _Rm)|  
-|_arm_shsub16|SHSUB16|int _arm_shsub16(int _Rn, int _Rm)|  
-|_arm_shsub8|SHSUB8|int _arm_shsub8(int _Rn, int _Rm)|  
-|_arm_qadd16|QADD16|int _arm_qadd16(int _Rn, int _Rm)|  
-|_arm_qadd8|QADD8|int _arm_qadd8(int _Rn, int _Rm)|  
-|_arm_qasx|QASX|int _arm_qasx(int _Rn, int _Rm)|  
-|_arm_qsax|QSAX|int _arm_qsax(int _Rn, int _Rm)|  
-|_arm_qsub16|QSUB16|int _arm_qsub16(int _Rn, int _Rm)|  
-|_arm_qsub8|QSUB8|int _arm_qsub8(int _Rn, int _Rm)|  
-|_arm_uadd16|UADD16|unsigned int _arm_uadd16(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_uadd8|UADD8|unsigned int _arm_uadd8(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_uasx|UASX|unsigned int _arm_uasx(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_usax|USAX|unsigned int _arm_usax(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_usub16|USUB16|unsigned int _arm_usub16(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_usub8|USUB8|unsigned int _arm_usub8(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_uhadd16|UHADD16|unsigned int _arm_uhadd16(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_uhadd8|UHADD8|unsigned int _arm_uhadd8(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_uhasx|UHASX|unsigned int _arm_uhasx(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_uhsax|UHSAX|unsigned int _arm_uhsax(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_uhsub16|UHSUB16|unsigned int _arm_uhsub16(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_uhsub8|UHSUB8|unsigned int _arm_uhsub8(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_uqadd16|UQADD16|unsigned int _arm_uqadd16(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_uqadd8|UQADD8|unsigned int _arm_uqadd8(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_uqasx|UQASX|unsigned int _arm_uqasx(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_uqsax|UQSAX|unsigned int _arm_uqsax(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_uqsub16|UQSUB16|unsigned int _arm_uqsub16(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_uqsub8|UQSUB8|unsigned int _arm_uqsub8(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_sxtab|SXTAB|int _arm_sxtab(int _Rn, int _Rm, unsigned int _Rotation)|  
-|_arm_sxtab16|SXTAB16|int _arm_sxtab16(int _Rn, int _Rm, unsigned int _Rotation)|  
-|_arm_sxtah|SXTAH|int _arm_sxtah(int _Rn, int _Rm, unsigned int _Rotation)|  
-|_arm_uxtab|UXTAB|unsigned int _arm_uxtab(unsigned int _Rn, unsigned int _Rm, unsigned int _Rotation)|  
-|_arm_uxtab16|UXTAB16|unsigned int _arm_uxta16b(unsigned int _Rn, unsigned int _Rm, unsigned int _Rotation)|  
-|_arm_uxtah|UXTAH|unsigned int _arm_uxtah(unsigned int _Rn, unsigned int _Rm, unsigned int _Rotation)|  
-|_arm_sxtb|SXTB|int _arm_sxtb(int _Rn, unsigned int _Rotation)|  
-|_arm_sxtb16|SXTB16|int _arm_sxtb16(int _Rn, unsigned int _Rotation)|  
-|_arm_sxth|SXTH|int _arm_sxth(int _Rn, unsigned int _Rotation)|  
-|_arm_uxtb|UXTB|unsigned int _arm_uxtb(unsigned int _Rn, unsigned int _Rotation)|  
-|_arm_uxtb16|UXTB16|unsigned int _arm_uxtb16(unsigned int _Rn, unsigned int _Rotation)|  
-|_arm_uxth|UXTH|unsigned int _arm_uxth(unsigned int _Rn, unsigned int _Rotation)|  
-|_arm_pkhbt|PKHBT|int _arm_pkhbt(int _Rn, int _Rm, unsigned int _Lsl_imm)|  
-|_arm_pkhtb|PKHTB|int _arm_pkhtb(int _Rn, int _Rm, unsigned int _Asr_imm)|  
-|_arm_usad8|USAD8|unsigned int _arm_usad8(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_usada8|USADA8|unsigned int _arm_usada8(unsigned int _Rn, unsigned int _Rm, unsigned int _Ra)|  
-|_arm_ssat|SSAT|int _arm_ssat(unsigned int _Sat_imm, _int _Rn, _ARMINTR_SHIFT_T _Shift_type, unsigned int _Shift_imm)|  
-|_arm_usat|USAT|int _arm_usat(unsigned int _Sat_imm, _int _Rn, _ARMINTR_SHIFT_T _Shift_type, unsigned int _Shift_imm)|  
-|_arm_ssat16|SSAT16|int _arm_ssat16(unsigned int _Sat_imm, _int _Rn)|  
-|_arm_usat16|USAT16|int _arm_usat16(unsigned int _Sat_imm, _int _Rn)|  
-|_arm_rev|REV|unsigned int _arm_rev(unsigned int _Rm)|  
-|_arm_rev16|REV16|unsigned int _arm_rev16(unsigned int _Rm)|  
-|_arm_revsh|REVSH|unsigned int _arm_revsh(unsigned int _Rm)|  
-|_arm_smlad|SMLAD|int _arm_smlad(int _Rn, int _Rm, int _Ra)|  
-|_arm_smladx|SMLADX|int _arm_smladx(int _Rn, int _Rm, int _Ra)|  
-|_arm_smlsd|SMLSD|int _arm_smlsd(int _Rn, int _Rm, int _Ra)|  
-|_arm_smlsdx|SMLSDX|int _arm_smlsdx(int _Rn, int _Rm, int _Ra)|  
-|_arm_smmla|SMMLA|int _arm_smmla(int _Rn, int _Rm, int _Ra)|  
-|_arm_smmlar|SMMLAR|int _arm_smmlar(int _Rn, int _Rm, int _Ra)|  
-|_arm_smmls|SMMLS|int _arm_smmls(int _Rn, int _Rm, int _Ra)|  
-|_arm_smmlsr|SMMLSR|int _arm_smmlsr(int _Rn, int _Rm, int _Ra)|  
-|_arm_smmul|SMMUL|int _arm_smmul(int _Rn, int _Rm)|  
-|_arm_smmulr|SMMULR|int _arm_smmulr(int _Rn, int _Rm)|  
-|_arm_smlald|SMLALD|__int64 _arm_smlald (\___int64 _RdHiLo, _Rn Int, Int _Rm)|  
-|_arm_smlaldx|SMLALDX|__int64 _arm_smlaldx (\___int64 _RdHiLo, _Rn Int, Int _Rm)|  
-|_arm_smlsld|SMLSLD|__int64 _arm_smlsld (\___int64 _RdHiLo, _Rn Int, Int _Rm)|  
-|_arm_smlsldx|SMLSLDX|__int64 _arm_smlsldx (\___int64 _RdHiLo, _Rn Int, Int _Rm)|  
-|_arm_smuad|SMUAD|int _arm_smuad(int _Rn, int _Rm)|  
-|_arm_smuadx|SMUADX|int _arm_muadxs(int _Rn, int _Rm)|  
-|_arm_smusd|SMUSD|int _arm_smusd(int _Rn, int _Rm)|  
-|_arm_smusdx|SMUSDX|int _arm_smusdx(int _Rn, int _Rm)|  
-|_arm_smull|SMULL|__int64 _arm_smull(int _Rn, int _Rm)|  
-|_arm_umull|UMULL|unsigned __int64 _arm_umull(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_umaal|UMAAL|unsigned __int64 _arm_umaal(unsigned int _RdLo, unsigned int _RdHi, unsigned int _Rn, unsigned int _Rm)|  
-|_arm_bfc|BFC|unsigned int _arm_bfc(unsigned int _Rd, unsigned int _Lsb, unsigned int _Width)|  
-|_arm_bfi|BFI|unsigned int _arm_bfi(unsigned int _Rd, unsigned int _Rn, unsigned int _Lsb, unsigned int _Width)|  
-|_arm_rbit|RBIT|unsigned int _arm_rbit(unsigned int _Rm)|  
-|_arm_sbfx|SBFX|int _arm_sbfx(int _Rn, unsigned int _Lsb, unsigned int _Width)|  
-|_arm_ubfx|UBFX|unsigned int _arm_ubfx(unsigned int _Rn, unsigned int _Lsb, unsigned int _Width)|  
-|_arm_sdiv|SDIV|int _arm_sdiv(int _Rn, int _Rm)|  
-|_arm_udiv|UDIV|unsigned int _arm_udiv(unsigned int _Rn, unsigned int _Rm)|  
-|__cps|CPS|void __cps(unsigned int _Ops, unsigned int _Flags, unsigned int _Mode)|  
-|__dmb|DMB|void __dmb(unsigned int `_Type`)<br /><br /> Fügt einen Speicherabgrenzungsvorgang in den Anweisungsstream ein. Der Parameter `_Type` gibt die Art der Einschränkung an, die die Grenze erzwingt.<br /><br /> Weitere Informationen zu den Arten von Beschränkungen, die erzwungen werden können, finden Sie unter [Einschränkungen der Speicherabgrenzung](#BarrierRestrictions).|  
-|__dsb|DSB|void __dsb(unsigned int _Type)<br /><br /> Fügt einen Speicherabgrenzungsvorgang in den Anweisungsstream ein. Der Parameter `_Type` gibt die Art der Einschränkung an, die die Grenze erzwingt.<br /><br /> Weitere Informationen zu den Arten von Beschränkungen, die erzwungen werden können, finden Sie unter [Einschränkungen der Speicherabgrenzung](#BarrierRestrictions).|  
-|__isb|ISB|void __isb(unsigned int _Type)<br /><br /> Fügt einen Speicherabgrenzungsvorgang in den Anweisungsstream ein. Der Parameter `_Type` gibt die Art der Einschränkung an, die die Grenze erzwingt.<br /><br /> Weitere Informationen zu den Arten von Beschränkungen, die erzwungen werden können, finden Sie unter [Einschränkungen der Speicherabgrenzung](#BarrierRestrictions).|  
-|__emit||"void" __emit (ohne Vorzeichen \___int32 Opcode)<br /><br /> Fügt eine angegebene Anweisung in den Anweisungsstream ein, der vom Compiler ausgegeben wird.<br /><br /> Der Wert von `opcode` muss ein konstanter Ausdruck sein, der zum Zeitpunkt der Kompilierung bekannt ist. Die Größe eines Anweisungsworts beträgt 16 Bit, und die höchstwertigen 16 Bits von `opcode` werden ignoriert.<br /><br /> Der Compiler unternimmt keinen Versuch, die Interpretation des Inhalts von `opcode` zu interpretieren und garantiert keinen CPU- oder Speicherstatus, bevor die eingefügte Anweisung ausgeführt wird.<br /><br /> Der Compiler geht davon aus, dass der CPU- und Speicherstatus nicht geändert wurde, nachdem die eingefügte Anweisung ausgeführt wird. Aus diesem Grund können Anweisungen, die den Status ändern, negative Auswirkungen auf normalen Code haben, der vom Compiler generiert wird.<br /><br /> Verwenden Sie daher `emit` nur, um Anweisungen einzufügen, die einen CPU-Status beeinflussen, den der Compiler normalerweise nicht verarbeitet, z. B. den Coprozessorstatus – oder um Funktionen zu implementieren, die mit `declspec(naked)` deklariert werden.|  
-|__hvc|HVC|unsigned int __hvc(unsigned int, ...)|  
-|__iso_volatile_load16||__int16 \__iso_volatile_load16 (const Volatile \___int16 \*)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|  
-|__iso_volatile_load32||__int32 \__iso_volatile_load32 (const Volatile \___int32 \*)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|  
-|__iso_volatile_load64||__int64 \__iso_volatile_load64 (const Volatile \___int64 \*)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|  
-|__iso_volatile_load8||__int8 \__iso_volatile_load8 (const Volatile \__int8 \*)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|  
-|__iso_volatile_store16||"void" __iso_volatile_store16 (Volatile \___int16 \*, \___int16)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|  
-|__iso_volatile_store32||"void" __iso_volatile_store32 (Volatile \___int32 \*, \___int32)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|  
-|__iso_volatile_store64||"void" __iso_volatile_store64 (Volatile \___int64 \*, \___int64)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|  
-|__iso_volatile_store8||"void" __iso_volatile_store8 (Volatile \__int8 \*, \__int8)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|  
-|__ldrexd|LDREXD|__int64 \__ldrexd (const Volatile \___int64 \*)|  
-|__prefetch|PLD|"void" __cdecl \__prefetch (const Void \*)<br /><br /> Stellt einen `PLD`-Speicherhinweis für das System bereit, dass auf den Speicher an oder in der Nähe der angegebenen Adresse bald zugegriffen werden kann. Einige Systeme führen möglicherweise eine Optimierung für dieses Speicherzugriffsmuster aus, um die Leistung zur Laufzeit zu verbessern. Aus Sicht der C++-Sprache hat die Funktion jedoch keine sichtbaren Auswirkungen und hat möglicherweise gar keinen Nutzen.|  
-|__rdpmccntr64||__int64 ohne Vorzeichen \__rdpmccntr64(void)|  
-|__sev|SEV|void __sev(void)|  
-|__static_assert||"void" __static_assert (Int, const Char \*)|  
-|__swi|SVC|unsigned int __swi(unsigned int, ...)|  
-|__trap|BKPT|int __trap(int, ...)|  
-|__wfe|WFE|void __wfe(void)|  
-|__wfi|WFI|void __wfi(void)|  
-|_AddSatInt|QADD|int _AddSatInt(int, int)|  
-|_CopyDoubleFromInt64||Doppelte _CopyDoubleFromInt64 (\___int64)|  
-|_CopyFloatFromInt32||float _CopyFloatFromInt32(\__int32)|  
-|_CopyInt32FromFloat||__int32 _CopyInt32FromFloat(float)|  
-|_CopyInt64FromDouble||__int64 _CopyInt64FromDouble(double)|  
-|_CountLeadingOnes||unsigned int _CountLeadingOnes(unsigned long)|  
-|_CountLeadingOnes64||unsigned Int _CountLeadingOnes64 (ohne Vorzeichen \___int64)|  
-|_CountLeadingSigns||unsigned int _CountLeadingSigns(long)|  
-|_CountLeadingSigns64||ganze Zahl ohne Vorzeichen _CountLeadingSigns64 (\___int64)|  
-|_CountLeadingZeros||unsigned int _CountLeadingZeros(unsigned long)|  
-|_CountLeadingZeros64||unsigned Int _CountLeadingZeros64 (ohne Vorzeichen \___int64)|  
-|_CountOneBits||unsigned int _CountOneBits(unsigned long)|  
-|_CountOneBits64||unsigned Int _CountOneBits64 (ohne Vorzeichen \___int64)|  
-|_DAddSatInt|QDADD|int _DAddSatInt(int, int)|  
-|_DSubSatInt|QDSUB|int _DSubSatInt(int, int)|  
-|_isunordered||int _isunordered(double, double)|  
-|_isunorderedf||int _isunorderedf(float, float)|  
-|_MoveFromCoprocessor|MRC|unsigned int _MoveFromCoprocessor(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Liest Daten mithilfe der Coprozessor-Datenübertragungsanweisungen aus einem ARM-Coprozessor. Weitere Informationen finden Sie unter [, _MoveFromCoprocessor _MoveFromCoprocessor2](#MoveFromCo).|  
-|_MoveFromCoprocessor2|MRC2|unsigned int _MoveFromCoprocessor2(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Liest Daten mithilfe der Coprozessor-Datenübertragungsanweisungen aus einem ARM-Coprozessor. Weitere Informationen finden Sie unter [, _MoveFromCoprocessor _MoveFromCoprocessor2](#MoveFromCo).|  
-|_MoveFromCoprocessor64|MRRC|unsigned __int64 _MoveFromCoprocessor64(unsigned int, unsigned int, unsigned int)<br /><br /> Liest Daten mithilfe der Coprozessor-Datenübertragungsanweisungen aus einem ARM-Coprozessor. Weitere Informationen finden Sie unter [_MoveFromCoprocessor64](#MoveFromCo64).|  
-|_MoveToCoprocessor|MCR|void _MoveToCoprocessor(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Liest Daten mithilfe der Coprozessor-Datenübertragungsanweisungen aus einem ARM-Coprozessor. Weitere Informationen finden Sie unter [_MoveToCoprocessor, _MoveToCoprocessor2](#MoveToCo).|  
-|_MoveToCoprocessor2|MCR2|void _MoveToCoprocessor2(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Liest Daten mithilfe der Coprozessor-Datenübertragungsanweisungen aus einem ARM-Coprozessor. Weitere Informationen finden Sie unter [_MoveToCoprocessor, _MoveToCoprocessor2](#MoveToCo).|  
-|_MoveToCoprocessor64|MCRR|"void" _MoveToCoprocessor64 (ohne Vorzeichen \___int64 "," unsigned Int und "unsigned Int und unsigned Int)<br /><br /> Liest Daten mithilfe der Coprozessor-Datenübertragungsanweisungen aus einem ARM-Coprozessor. Weitere Informationen finden Sie unter [_MoveToCoprocessor64](#MoveToCo64).|  
-|_MulHigh||long _MulHigh(long, long)|  
-|_MulUnsignedHigh||unsigned long _MulUnsignedHigh(unsigned long, unsigned long)|  
-|_ReadBankedReg|MRS|int _ReadBankedReg(int _Reg)|  
-|_ReadStatusReg|MRS|int _ReadStatusReg(int)|  
-|_SubSatInt|QSUB|int _SubSatInt(int, int)|  
-|_WriteBankedReg|MSR|void _WriteBankedReg(int _Value, int _Reg)|  
-|_WriteStatusReg|MSR|void _WriteStatusReg(int, int, int)|  
-  
- [[NEON](#top)]  
-  
-###  <a name="BarrierRestrictions"></a> Einschränkungen der Speicherabgrenzung  
- Die systeminterne Funktionen `__dmb` (Datenspeicherabgrenzung) `__dsb` (Datensynchronisierungsabgrenzung) und `__isb` (Anweisungssynchronisierungsabgrezung) verwenden die folgenden vordefinierten Werte, um die Speicherabgrenzungseinschränkung in Bezug auf das Freigeben der Domäne und der Art des Zugriffs an, die von dem Vorgang betroffen sind.  
-  
-|Einschränkungswert|Beschreibung|  
-|-----------------------|-----------------|  
-|_ARM_BARRIER_SY|Gesamtes System, Lese- und Schreibvorgänge.|  
-|_ARM_BARRIER_ST|Gesamtes System, nur Schreibvorgänge.|  
-|_ARM_BARRIER_ISH|Innen teilbar, Lese- und Schreibvorgänge.|  
-|_ARM_BARRIER_ISHST|Innen teilbar, nur Schreibvorgänge.|  
-|_ARM_BARRIER_NSH|Nicht teilbar, Lese- und Schreibvorgänge.|  
-|_ARM_BARRIER_NSHST|Nicht teilbar, nur Schreibvorgänge.|  
-|_ARM_BARRIER_OSH|Außen teilbar, Lese- und Schreibvorgänge.|  
-|_ARM_BARRIER_OSHST|Außen teilbar, nur Schreibvorgänge.|  
-  
- Für die systeminterne Funktion `__isb` ist _ARM_BARRIER_SY die einzig derzeit gültige Einschränkung; alle anderen Werte werden von der Architektur reserviert.  
-  
-###  <a name="IsoVolatileLoadStore"></a> __iso_volatile_load/Store instrinsics  
- Diese intrinsischen Funktionen führen explizit Lade- und Speichervorgänge aus, die nicht Compileroptimierungen unterliegen.  
-  
-```  
-__int16 __iso_volatile_load16(const volatile __int16 * Location)  
-__int32 __iso_volatile_load32(const volatile __int32 * Location)  
-__int64 __iso_volatile_load64(const volatile __int64 * Location)  
-__int8 __iso_volatile_load8(const volatile __int8 * Location)  
-  
-void __iso_volatile_store16(volatile __int16 * Location, __int16 Value)  
-void __iso_volatile_store32(volatile __int32 * Location, __int32 Value)  
-void __iso_volatile_store64(volatile __int64 * Location, __int64 Value)  
-void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)  
-  
-```  
-  
- **Parameter**  
-  
+
+Der Visual C++-Compiler stellt die folgenden systeminternen Funktionen in der ARM-Architektur zur Verfügung. Weitere Informationen zu ARM finden Sie unter den [ARM-Architektur-Reference Manuals](http://go.microsoft.com/fwlink/p/?LinkId=522049) und [ARM Assembler Tools Guide](http://go.microsoft.com/fwlink/p/?LinkId=246102) auf der ARM-Infocenter-Website.
+
+##  <a name="top"></a> NEON
+
+Die Anweisungssatzerweiterungen für den NEON-Vektor für ARM bieten SIMD-Funktionen (Single Instruction Multiple Data), die den Funktionen in den MMX- und SSE-Vektor-Anweisungssätzen ähneln, die bei x86- und x64-Architekturprozessoren vorkommen.
+
+Systeminterne NEON-Funktionen werden unterstützt, wie in der Headerdatei `arm_neon.h` angegeben. Der Visual C++-Compiler-Unterstützung für systeminterne NEON-Funktionen, die von der ARM-Compiler, die in Anhang G der dokumentiert ist, ähnelt die [ARM Compiler-toolkette, Version 4.1 Compiler Reference](http://go.microsoft.com/fwlink/p/?LinkId=251083) auf der ARM-Infocenter-Website.
+
+Der Hauptunterschied zwischen dem Visual C++-Compiler und dem ARM-Compiler besteht darin, dass der Visual C++-Compiler `_ex`-Varianten der `vldX`- und `vstX`-Vektoranweisungen zum Laden und Speichern hinzufügt. Die `_ex`-Varianten benötigen einen zusätzlichen Parameter, der die Ausrichtung des Zeigerargument angibt, sind aber ansonsten identisch mit ihren Nicht-`_ex`-Entsprechungen.
+
+##  <a name="A"></a> Auflisten der ARM-spezifischen systeminternen Funktionen
+
+|Funktionsname|Anweisung|Funktionsprototyp|
+|-------------------|-----------------|------------------------|
+|_arm_smlal|SMLAL|__int64 _arm_smlal (\___int64 _RdHiLo, _Rn Int, Int _Rm)|
+|_arm_umlal|UMLAL|unsigned __int64 _arm_umlal(unsigned \__int64 _RdHiLo, unsigned int _Rn, unsigned int _Rm)|
+|_arm_clz|CLZ|unsigned int _arm_clz(unsigned int _Rm)|
+|_arm_qadd|QADD|int _arm_qadd(int _Rm, int _Rn)|
+|_arm_qdadd|QDADD|int _arm_qdadd(int _Rm, int _Rn)|
+|_arm_qdsub|QDSUB|int _arm_qdsub(int _Rm, int _Rn)|
+|_arm_qsub|QSUB|int _arm_qsub(int _Rm, int _Rn)|
+|_arm_smlabb|SMLABB|int _arm_smlabb(int _Rn, int _Rm, int _Ra)|
+|_arm_smlabt|SMLABT|int _arm_smlabt(int _Rn, int _Rm, int _Ra)|
+|_arm_smlatb|SMLATB|int _arm_smlatb(int _Rn, int _Rm, int _Ra)|
+|_arm_smlatt|SMLATT|int _arm_smlatt(int _Rn, int _Rm, int _Ra)|
+|_arm_smlalbb|SMLALBB|__int64 _arm_smlalbb (\___int64 _RdHiLo, _Rn Int, Int _Rm)|
+|_arm_smlalbt|SMLALBT|__int64 _arm_smlalbt (\___int64 _RdHiLo, _Rn Int, Int _Rm)|
+|_arm_smlaltb|SMLALTB|__int64 _arm_smlaltb (\___int64 _RdHiLo, _Rn Int, Int _Rm)|
+|_arm_smlaltt|SMLALTT|__int64 _arm_smlaltt (\___int64 _RdHiLo, _Rn Int, Int _Rm)|
+|_arm_smlawb|SMLAWB|int _arm_smlawb(int _Rn, int _Rm, int _Ra)|
+|_arm_smlawt|SMLAWT|int _arm_smlawt(int _Rn, int _Rm, int _Ra)|
+|_arm_smulbb|SMULBB|int _arm_smulbb(int _Rn, int _Rm)|
+|_arm_smulbt|SMULBT|int _arm_smulbt(int _Rn, int _Rm)|
+|_arm_smultb|SMULTB|int _arm_smultb(int _Rn, int _Rm)|
+|_arm_smultt|SMULTT|int _arm_smultt(int _Rn, int _Rm)|
+|_arm_smulwb|SMULWB|int _arm_smulwb(int _Rn, int _Rm)|
+|_arm_smulwt|SMULWT|int _arm_smulwt(int _Rn, int _Rm)|
+|_arm_sadd16|SADD16|int _arm_sadd16(int _Rn, int _Rm)|
+|_arm_sadd8|SADD8|int _arm_sadd8(int _Rn, int _Rm)|
+|_arm_sasx|SASX|int _arm_sasx(int _Rn, int _Rm)|
+|_arm_ssax|SSAX|int _arm_ssax(int _Rn, int _Rm)|
+|_arm_ssub16|SSUB16|int _arm_ssub16(int _Rn, int _Rm)|
+|_arm_ssub8|SSUB8|int _arm_ssub8(int _Rn, int _Rm)|
+|_arm_shadd16|SHADD16|int _arm_shadd16(int _Rn, int _Rm)|
+|_arm_shadd8|SHADD8|int _arm_shadd8(int _Rn, int _Rm)|
+|_arm_shasx|SHASX|int _arm_shasx(int _Rn, int _Rm)|
+|_arm_shsax|SHSAX|int _arm_shsax(int _Rn, int _Rm)|
+|_arm_shsub16|SHSUB16|int _arm_shsub16(int _Rn, int _Rm)|
+|_arm_shsub8|SHSUB8|int _arm_shsub8(int _Rn, int _Rm)|
+|_arm_qadd16|QADD16|int _arm_qadd16(int _Rn, int _Rm)|
+|_arm_qadd8|QADD8|int _arm_qadd8(int _Rn, int _Rm)|
+|_arm_qasx|QASX|int _arm_qasx(int _Rn, int _Rm)|
+|_arm_qsax|QSAX|int _arm_qsax(int _Rn, int _Rm)|
+|_arm_qsub16|QSUB16|int _arm_qsub16(int _Rn, int _Rm)|
+|_arm_qsub8|QSUB8|int _arm_qsub8(int _Rn, int _Rm)|
+|_arm_uadd16|UADD16|unsigned int _arm_uadd16(unsigned int _Rn, unsigned int _Rm)|
+|_arm_uadd8|UADD8|unsigned int _arm_uadd8(unsigned int _Rn, unsigned int _Rm)|
+|_arm_uasx|UASX|unsigned int _arm_uasx(unsigned int _Rn, unsigned int _Rm)|
+|_arm_usax|USAX|unsigned int _arm_usax(unsigned int _Rn, unsigned int _Rm)|
+|_arm_usub16|USUB16|unsigned int _arm_usub16(unsigned int _Rn, unsigned int _Rm)|
+|_arm_usub8|USUB8|unsigned int _arm_usub8(unsigned int _Rn, unsigned int _Rm)|
+|_arm_uhadd16|UHADD16|unsigned int _arm_uhadd16(unsigned int _Rn, unsigned int _Rm)|
+|_arm_uhadd8|UHADD8|unsigned int _arm_uhadd8(unsigned int _Rn, unsigned int _Rm)|
+|_arm_uhasx|UHASX|unsigned int _arm_uhasx(unsigned int _Rn, unsigned int _Rm)|
+|_arm_uhsax|UHSAX|unsigned int _arm_uhsax(unsigned int _Rn, unsigned int _Rm)|
+|_arm_uhsub16|UHSUB16|unsigned int _arm_uhsub16(unsigned int _Rn, unsigned int _Rm)|
+|_arm_uhsub8|UHSUB8|unsigned int _arm_uhsub8(unsigned int _Rn, unsigned int _Rm)|
+|_arm_uqadd16|UQADD16|unsigned int _arm_uqadd16(unsigned int _Rn, unsigned int _Rm)|
+|_arm_uqadd8|UQADD8|unsigned int _arm_uqadd8(unsigned int _Rn, unsigned int _Rm)|
+|_arm_uqasx|UQASX|unsigned int _arm_uqasx(unsigned int _Rn, unsigned int _Rm)|
+|_arm_uqsax|UQSAX|unsigned int _arm_uqsax(unsigned int _Rn, unsigned int _Rm)|
+|_arm_uqsub16|UQSUB16|unsigned int _arm_uqsub16(unsigned int _Rn, unsigned int _Rm)|
+|_arm_uqsub8|UQSUB8|unsigned int _arm_uqsub8(unsigned int _Rn, unsigned int _Rm)|
+|_arm_sxtab|SXTAB|int _arm_sxtab(int _Rn, int _Rm, unsigned int _Rotation)|
+|_arm_sxtab16|SXTAB16|int _arm_sxtab16(int _Rn, int _Rm, unsigned int _Rotation)|
+|_arm_sxtah|SXTAH|int _arm_sxtah(int _Rn, int _Rm, unsigned int _Rotation)|
+|_arm_uxtab|UXTAB|unsigned int _arm_uxtab(unsigned int _Rn, unsigned int _Rm, unsigned int _Rotation)|
+|_arm_uxtab16|UXTAB16|unsigned int _arm_uxta16b(unsigned int _Rn, unsigned int _Rm, unsigned int _Rotation)|
+|_arm_uxtah|UXTAH|unsigned int _arm_uxtah(unsigned int _Rn, unsigned int _Rm, unsigned int _Rotation)|
+|_arm_sxtb|SXTB|int _arm_sxtb(int _Rn, unsigned int _Rotation)|
+|_arm_sxtb16|SXTB16|int _arm_sxtb16(int _Rn, unsigned int _Rotation)|
+|_arm_sxth|SXTH|int _arm_sxth(int _Rn, unsigned int _Rotation)|
+|_arm_uxtb|UXTB|unsigned int _arm_uxtb(unsigned int _Rn, unsigned int _Rotation)|
+|_arm_uxtb16|UXTB16|unsigned int _arm_uxtb16(unsigned int _Rn, unsigned int _Rotation)|
+|_arm_uxth|UXTH|unsigned int _arm_uxth(unsigned int _Rn, unsigned int _Rotation)|
+|_arm_pkhbt|PKHBT|int _arm_pkhbt(int _Rn, int _Rm, unsigned int _Lsl_imm)|
+|_arm_pkhtb|PKHTB|int _arm_pkhtb(int _Rn, int _Rm, unsigned int _Asr_imm)|
+|_arm_usad8|USAD8|unsigned int _arm_usad8(unsigned int _Rn, unsigned int _Rm)|
+|_arm_usada8|USADA8|unsigned int _arm_usada8(unsigned int _Rn, unsigned int _Rm, unsigned int _Ra)|
+|_arm_ssat|SSAT|int _arm_ssat(unsigned int _Sat_imm, _int _Rn, _ARMINTR_SHIFT_T _Shift_type, unsigned int _Shift_imm)|
+|_arm_usat|USAT|int _arm_usat(unsigned int _Sat_imm, _int _Rn, _ARMINTR_SHIFT_T _Shift_type, unsigned int _Shift_imm)|
+|_arm_ssat16|SSAT16|int _arm_ssat16(unsigned int _Sat_imm, _int _Rn)|
+|_arm_usat16|USAT16|int _arm_usat16(unsigned int _Sat_imm, _int _Rn)|
+|_arm_rev|REV|unsigned int _arm_rev(unsigned int _Rm)|
+|_arm_rev16|REV16|unsigned int _arm_rev16(unsigned int _Rm)|
+|_arm_revsh|REVSH|unsigned int _arm_revsh(unsigned int _Rm)|
+|_arm_smlad|SMLAD|int _arm_smlad(int _Rn, int _Rm, int _Ra)|
+|_arm_smladx|SMLADX|int _arm_smladx(int _Rn, int _Rm, int _Ra)|
+|_arm_smlsd|SMLSD|int _arm_smlsd(int _Rn, int _Rm, int _Ra)|
+|_arm_smlsdx|SMLSDX|int _arm_smlsdx(int _Rn, int _Rm, int _Ra)|
+|_arm_smmla|SMMLA|int _arm_smmla(int _Rn, int _Rm, int _Ra)|
+|_arm_smmlar|SMMLAR|int _arm_smmlar(int _Rn, int _Rm, int _Ra)|
+|_arm_smmls|SMMLS|int _arm_smmls(int _Rn, int _Rm, int _Ra)|
+|_arm_smmlsr|SMMLSR|int _arm_smmlsr(int _Rn, int _Rm, int _Ra)|
+|_arm_smmul|SMMUL|int _arm_smmul(int _Rn, int _Rm)|
+|_arm_smmulr|SMMULR|int _arm_smmulr(int _Rn, int _Rm)|
+|_arm_smlald|SMLALD|__int64 _arm_smlald (\___int64 _RdHiLo, _Rn Int, Int _Rm)|
+|_arm_smlaldx|SMLALDX|__int64 _arm_smlaldx (\___int64 _RdHiLo, _Rn Int, Int _Rm)|
+|_arm_smlsld|SMLSLD|__int64 _arm_smlsld (\___int64 _RdHiLo, _Rn Int, Int _Rm)|
+|_arm_smlsldx|SMLSLDX|__int64 _arm_smlsldx (\___int64 _RdHiLo, _Rn Int, Int _Rm)|
+|_arm_smuad|SMUAD|int _arm_smuad(int _Rn, int _Rm)|
+|_arm_smuadx|SMUADX|int _arm_muadxs(int _Rn, int _Rm)|
+|_arm_smusd|SMUSD|int _arm_smusd(int _Rn, int _Rm)|
+|_arm_smusdx|SMUSDX|int _arm_smusdx(int _Rn, int _Rm)|
+|_arm_smull|SMULL|__int64 _arm_smull(int _Rn, int _Rm)|
+|_arm_umull|UMULL|unsigned __int64 _arm_umull(unsigned int _Rn, unsigned int _Rm)|
+|_arm_umaal|UMAAL|unsigned __int64 _arm_umaal(unsigned int _RdLo, unsigned int _RdHi, unsigned int _Rn, unsigned int _Rm)|
+|_arm_bfc|BFC|unsigned int _arm_bfc(unsigned int _Rd, unsigned int _Lsb, unsigned int _Width)|
+|_arm_bfi|BFI|unsigned int _arm_bfi(unsigned int _Rd, unsigned int _Rn, unsigned int _Lsb, unsigned int _Width)|
+|_arm_rbit|RBIT|unsigned int _arm_rbit(unsigned int _Rm)|
+|_arm_sbfx|SBFX|int _arm_sbfx(int _Rn, unsigned int _Lsb, unsigned int _Width)|
+|_arm_ubfx|UBFX|unsigned int _arm_ubfx(unsigned int _Rn, unsigned int _Lsb, unsigned int _Width)|
+|_arm_sdiv|SDIV|int _arm_sdiv(int _Rn, int _Rm)|
+|_arm_udiv|UDIV|unsigned int _arm_udiv(unsigned int _Rn, unsigned int _Rm)|
+|__cps|CPS|void __cps(unsigned int _Ops, unsigned int _Flags, unsigned int _Mode)|
+|__dmb|DMB|void __dmb(unsigned int `_Type`)<br /><br /> Fügt einen Speicherabgrenzungsvorgang in den Anweisungsstream ein. Der Parameter `_Type` gibt die Art der Einschränkung an, die die Grenze erzwingt.<br /><br /> Weitere Informationen zu den Arten von Beschränkungen, die erzwungen werden können, finden Sie unter [Einschränkungen der Speicherabgrenzung](#BarrierRestrictions).|
+|__dsb|DSB|void __dsb(unsigned int _Type)<br /><br /> Fügt einen Speicherabgrenzungsvorgang in den Anweisungsstream ein. Der Parameter `_Type` gibt die Art der Einschränkung an, die die Grenze erzwingt.<br /><br /> Weitere Informationen zu den Arten von Beschränkungen, die erzwungen werden können, finden Sie unter [Einschränkungen der Speicherabgrenzung](#BarrierRestrictions).|
+|__isb|ISB|void __isb(unsigned int _Type)<br /><br /> Fügt einen Speicherabgrenzungsvorgang in den Anweisungsstream ein. Der Parameter `_Type` gibt die Art der Einschränkung an, die die Grenze erzwingt.<br /><br /> Weitere Informationen zu den Arten von Beschränkungen, die erzwungen werden können, finden Sie unter [Einschränkungen der Speicherabgrenzung](#BarrierRestrictions).|
+|__emit||"void" __emit (ohne Vorzeichen \___int32 Opcode)<br /><br /> Fügt eine angegebene Anweisung in den Anweisungsstream ein, der vom Compiler ausgegeben wird.<br /><br /> Der Wert von `opcode` muss ein konstanter Ausdruck sein, der zum Zeitpunkt der Kompilierung bekannt ist. Die Größe eines Anweisungsworts beträgt 16 Bit, und die höchstwertigen 16 Bits von `opcode` werden ignoriert.<br /><br /> Der Compiler unternimmt keinen Versuch, die Interpretation des Inhalts von `opcode` zu interpretieren und garantiert keinen CPU- oder Speicherstatus, bevor die eingefügte Anweisung ausgeführt wird.<br /><br /> Der Compiler geht davon aus, dass der CPU- und Speicherstatus nicht geändert wurde, nachdem die eingefügte Anweisung ausgeführt wird. Aus diesem Grund können Anweisungen, die den Status ändern, negative Auswirkungen auf normalen Code haben, der vom Compiler generiert wird.<br /><br /> Verwenden Sie daher `emit` nur, um Anweisungen einzufügen, die einen CPU-Status beeinflussen, den der Compiler normalerweise nicht verarbeitet, z. B. den Coprozessorstatus – oder um Funktionen zu implementieren, die mit `declspec(naked)` deklariert werden.|
+|__hvc|HVC|unsigned int __hvc(unsigned int, ...)|
+|__iso_volatile_load16||__int16 \__iso_volatile_load16 (const Volatile \___int16 \*)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|
+|__iso_volatile_load32||__int32 \__iso_volatile_load32 (const Volatile \___int32 \*)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|
+|__iso_volatile_load64||__int64 \__iso_volatile_load64 (const Volatile \___int64 \*)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|
+|__iso_volatile_load8||__int8 \__iso_volatile_load8 (const Volatile \__int8 \*)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|
+|__iso_volatile_store16||"void" __iso_volatile_store16 (Volatile \___int16 \*, \___int16)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|
+|__iso_volatile_store32||"void" __iso_volatile_store32 (Volatile \___int32 \*, \___int32)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|
+|__iso_volatile_store64||"void" __iso_volatile_store64 (Volatile \___int64 \*, \___int64)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|
+|__iso_volatile_store8||"void" __iso_volatile_store8 (Volatile \__int8 \*, \__int8)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|
+|__ldrexd|LDREXD|__int64 \__ldrexd (const Volatile \___int64 \*)|
+|__prefetch|PLD|"void" __cdecl \__prefetch (const Void \*)<br /><br /> Stellt einen `PLD`-Speicherhinweis für das System bereit, dass auf den Speicher an oder in der Nähe der angegebenen Adresse bald zugegriffen werden kann. Einige Systeme führen möglicherweise eine Optimierung für dieses Speicherzugriffsmuster aus, um die Leistung zur Laufzeit zu verbessern. Aus Sicht der C++-Sprache hat die Funktion jedoch keine sichtbaren Auswirkungen und hat möglicherweise gar keinen Nutzen.|
+|__rdpmccntr64||__int64 ohne Vorzeichen \__rdpmccntr64(void)|
+|__sev|SEV|void __sev(void)|
+|__static_assert||"void" __static_assert (Int, const Char \*)|
+|__swi|SVC|unsigned int __swi(unsigned int, ...)|
+|__trap|BKPT|int __trap(int, ...)|
+|__wfe|WFE|void __wfe(void)|
+|__wfi|WFI|void __wfi(void)|
+|_AddSatInt|QADD|int _AddSatInt(int, int)|
+|_CopyDoubleFromInt64||Doppelte _CopyDoubleFromInt64 (\___int64)|
+|_CopyFloatFromInt32||float _CopyFloatFromInt32(\__int32)|
+|_CopyInt32FromFloat||__int32 _CopyInt32FromFloat(float)|
+|_CopyInt64FromDouble||__int64 _CopyInt64FromDouble(double)|
+|_CountLeadingOnes||unsigned int _CountLeadingOnes(unsigned long)|
+|_CountLeadingOnes64||unsigned Int _CountLeadingOnes64 (ohne Vorzeichen \___int64)|
+|_CountLeadingSigns||unsigned int _CountLeadingSigns(long)|
+|_CountLeadingSigns64||ganze Zahl ohne Vorzeichen _CountLeadingSigns64 (\___int64)|
+|_CountLeadingZeros||unsigned int _CountLeadingZeros(unsigned long)|
+|_CountLeadingZeros64||unsigned Int _CountLeadingZeros64 (ohne Vorzeichen \___int64)|
+|_CountOneBits||unsigned int _CountOneBits(unsigned long)|
+|_CountOneBits64||unsigned Int _CountOneBits64 (ohne Vorzeichen \___int64)|
+|_DAddSatInt|QDADD|int _DAddSatInt(int, int)|
+|_DSubSatInt|QDSUB|int _DSubSatInt(int, int)|
+|_isunordered||int _isunordered(double, double)|
+|_isunorderedf||int _isunorderedf(float, float)|
+|_MoveFromCoprocessor|MRC|unsigned int _MoveFromCoprocessor(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Liest Daten mithilfe der Coprozessor-Datenübertragungsanweisungen aus einem ARM-Coprozessor. Weitere Informationen finden Sie unter [, _MoveFromCoprocessor _MoveFromCoprocessor2](#MoveFromCo).|
+|_MoveFromCoprocessor2|MRC2|unsigned int _MoveFromCoprocessor2(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Liest Daten mithilfe der Coprozessor-Datenübertragungsanweisungen aus einem ARM-Coprozessor. Weitere Informationen finden Sie unter [, _MoveFromCoprocessor _MoveFromCoprocessor2](#MoveFromCo).|
+|_MoveFromCoprocessor64|MRRC|unsigned __int64 _MoveFromCoprocessor64(unsigned int, unsigned int, unsigned int)<br /><br /> Liest Daten mithilfe der Coprozessor-Datenübertragungsanweisungen aus einem ARM-Coprozessor. Weitere Informationen finden Sie unter [_MoveFromCoprocessor64](#MoveFromCo64).|
+|_MoveToCoprocessor|MCR|void _MoveToCoprocessor(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Liest Daten mithilfe der Coprozessor-Datenübertragungsanweisungen aus einem ARM-Coprozessor. Weitere Informationen finden Sie unter [_MoveToCoprocessor, _MoveToCoprocessor2](#MoveToCo).|
+|_MoveToCoprocessor2|MCR2|void _MoveToCoprocessor2(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Liest Daten mithilfe der Coprozessor-Datenübertragungsanweisungen aus einem ARM-Coprozessor. Weitere Informationen finden Sie unter [_MoveToCoprocessor, _MoveToCoprocessor2](#MoveToCo).|
+|_MoveToCoprocessor64|MCRR|"void" _MoveToCoprocessor64 (ohne Vorzeichen \___int64 "," unsigned Int und "unsigned Int und unsigned Int)<br /><br /> Liest Daten mithilfe der Coprozessor-Datenübertragungsanweisungen aus einem ARM-Coprozessor. Weitere Informationen finden Sie unter [_MoveToCoprocessor64](#MoveToCo64).|
+|_MulHigh||long _MulHigh(long, long)|
+|_MulUnsignedHigh||unsigned long _MulUnsignedHigh(unsigned long, unsigned long)|
+|_ReadBankedReg|MRS|int _ReadBankedReg(int _Reg)|
+|_ReadStatusReg|MRS|int _ReadStatusReg(int)|
+|_SubSatInt|QSUB|int _SubSatInt(int, int)|
+|_WriteBankedReg|MSR|void _WriteBankedReg(int _Value, int _Reg)|
+|_WriteStatusReg|MSR|void _WriteStatusReg(int, int, int)|
+
+[[NEON](#top)]
+
+###  <a name="BarrierRestrictions"></a> Einschränkungen der Speicherabgrenzung
+
+Die systeminterne Funktionen `__dmb` (Datenspeicherabgrenzung) `__dsb` (Datensynchronisierungsabgrenzung) und `__isb` (Anweisungssynchronisierungsabgrezung) verwenden die folgenden vordefinierten Werte, um die Speicherabgrenzungseinschränkung in Bezug auf das Freigeben der Domäne und der Art des Zugriffs an, die von dem Vorgang betroffen sind.
+
+|Einschränkungswert|Beschreibung|
+|-----------------------|-----------------|
+|_ARM_BARRIER_SY|Gesamtes System, Lese- und Schreibvorgänge.|
+|_ARM_BARRIER_ST|Gesamtes System, nur Schreibvorgänge.|
+|_ARM_BARRIER_ISH|Innen teilbar, Lese- und Schreibvorgänge.|
+|_ARM_BARRIER_ISHST|Innen teilbar, nur Schreibvorgänge.|
+|_ARM_BARRIER_NSH|Nicht teilbar, Lese- und Schreibvorgänge.|
+|_ARM_BARRIER_NSHST|Nicht teilbar, nur Schreibvorgänge.|
+|_ARM_BARRIER_OSH|Außen teilbar, Lese- und Schreibvorgänge.|
+|_ARM_BARRIER_OSHST|Außen teilbar, nur Schreibvorgänge.|
+
+Für die systeminterne Funktion `__isb` ist _ARM_BARRIER_SY die einzig derzeit gültige Einschränkung; alle anderen Werte werden von der Architektur reserviert.
+
+###  <a name="IsoVolatileLoadStore"></a> __iso_volatile_load/Store instrinsics
+
+Diese intrinsischen Funktionen führen explizit Lade- und Speichervorgänge aus, die nicht Compileroptimierungen unterliegen.
+
+```
+__int16 __iso_volatile_load16(const volatile __int16 * Location)
+__int32 __iso_volatile_load32(const volatile __int32 * Location)
+__int64 __iso_volatile_load64(const volatile __int64 * Location)
+__int8 __iso_volatile_load8(const volatile __int8 * Location)
+
+void __iso_volatile_store16(volatile __int16 * Location, __int16 Value)
+void __iso_volatile_store32(volatile __int32 * Location, __int32 Value)
+void __iso_volatile_store64(volatile __int64 * Location, __int64 Value)
+void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
+
+```
+
+#### <a name="parameters"></a>Parameter
+
 *Position*<br/>
-Die Adresse eines Speicherbereichs für Lese- oder Schreibvorgänge.  
-  
+Die Adresse eines Speicherbereichs für Lese- oder Schreibvorgänge.
+
 *Wert*<br/>
-Der Wert, der in der angegebenen Speicheradresse (nur systeminterne Store Funktionen) zu schreiben.  
-  
- **Der Rückgabewert (systeminterne Funktionen zum Laden nur)**  
-  
- Der Wert des Speicherbereichs, der durch `Location` angegeben wird.  
-  
- **Hinweise**  
-  
- Sie können die systeminternen Funktionen `__iso_volatile_load8/16/32/64` und `__iso_volatile_store8/16/32/64` verwenden, um explizit Speicherzugriffe durchzuführen, die nicht Compileroptimierungen unterliegen. Der Compiler kann die relative Reihenfolge dieser Vorgänge nicht entfernen, zusammenfassen oder ändern, es werden jedoch keine impliziten Hardwarespeicherabgrenzungen generiert. Aus diesem Grund kann die Hardware die sichtbaren Speicherzugriffe möglicherweise immer noch über mehrere Threads hinweg neu anordnen. Genauer gesagt, diese systeminternen Funktionen entsprechen den folgenden Ausdrücken wie unter kompilierten **/volatile:iso**.  
-  
+Der Wert, der in der angegebenen Speicheradresse (nur systeminterne Store Funktionen) zu schreiben.
+
+#### <a name="return-value-load-intrinsics-only"></a>Der Rückgabewert (nur systeminterne Funktionen zum Laden)
+
+Der Wert des Speicherbereichs, der durch `Location` angegeben wird.
+
+#### <a name="remarks"></a>Hinweise
+
+Sie können die systeminternen Funktionen `__iso_volatile_load8/16/32/64` und `__iso_volatile_store8/16/32/64` verwenden, um explizit Speicherzugriffe durchzuführen, die nicht Compileroptimierungen unterliegen. Der Compiler kann die relative Reihenfolge dieser Vorgänge nicht entfernen, zusammenfassen oder ändern, es werden jedoch keine impliziten Hardwarespeicherabgrenzungen generiert. Aus diesem Grund kann die Hardware die sichtbaren Speicherzugriffe möglicherweise immer noch über mehrere Threads hinweg neu anordnen. Genauer gesagt, diese systeminternen Funktionen entsprechen den folgenden Ausdrücken wie unter kompilierten **/volatile:iso**.
+
 ```cpp
-int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;   
-__iso_volatile_store32(p, a);        // equivalent to: *(volatile __int32*)p = a;  
-```  
-  
- Beachten Sie, dass die systeminternen Funktionen flüchtige Zeiger verwenden, um flüchtige Variablen zu berücksichtigen. Es ist jedoch keine Voraussetzung oder Empfehlung, flüchtige Zeiger als Argumente zu verwenden. Die Semantik dieser Vorgänge ist genau die gleiche, wenn ein regulärer, nicht flüchtiger Typ verwendet wird.  
-  
- Weitere Informationen zu den **/volatile:iso** Befehlszeilenargument finden Sie unter [/volatile (Interpretation des volatile-Schlüsselwort)](../build/reference/volatile-volatile-keyword-interpretation.md).  
-  
-###  <a name="MoveFromCo"></a> _MoveFromCoprocessor, _MoveFromCoprocessor2  
- Diese intrinsischen Funktionen lesen von Daten aus ARM-Coprozessoren mithilfe der Coprozessor-Datenübertragungsanweisungen.  
-  
-```  
-int _MoveFromCoprocessor(  
-      unsigned int coproc,  
-      unsigned int opcode1,  
-      unsigned int crn,  
-      unsigned int crm,  
-      unsigned int opcode2  
-);  
-  
-int _MoveFromCoprocessor2(  
-      unsigned int coproc,  
-      unsigned int opcode1,  
-      unsigned int crn,  
-      unsigned int crm,  
-      unsigned int opcode2  
-);  
-  
-```  
-  
- **Parameter**  
-  
+int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;
+__iso_volatile_store32(p, a);        // equivalent to: *(volatile __int32*)p = a;
+```
+
+Beachten Sie, dass die systeminternen Funktionen flüchtige Zeiger verwenden, um flüchtige Variablen zu berücksichtigen. Es ist jedoch keine Voraussetzung oder Empfehlung, flüchtige Zeiger als Argumente zu verwenden. Die Semantik dieser Vorgänge ist genau die gleiche, wenn ein regulärer, nicht flüchtiger Typ verwendet wird.
+
+Weitere Informationen zu den **/volatile:iso** Befehlszeilenargument finden Sie unter [/volatile (Interpretation des volatile-Schlüsselwort)](../build/reference/volatile-volatile-keyword-interpretation.md).
+
+###  <a name="MoveFromCo"></a> _MoveFromCoprocessor, _MoveFromCoprocessor2
+
+Diese intrinsischen Funktionen lesen von Daten aus ARM-Coprozessoren mithilfe der Coprozessor-Datenübertragungsanweisungen.
+
+```
+int _MoveFromCoprocessor(
+      unsigned int coproc,
+      unsigned int opcode1,
+      unsigned int crn,
+      unsigned int crm,
+      unsigned int opcode2
+);
+
+int _MoveFromCoprocessor2(
+      unsigned int coproc,
+      unsigned int opcode1,
+      unsigned int crn,
+      unsigned int crm,
+      unsigned int opcode2
+);
+
+```
+
+#### <a name="parameters"></a>Parameter
+
 *coproc*<br/>
-Coprozessorzahl im Bereich 0 bis 15.  
-  
+Coprozessorzahl im Bereich 0 bis 15.
+
 *opcode1*<br/>
-Coprozessorspezifischer Opcode im Bereich von 0 bis 7.  
-  
+Coprozessorspezifischer Opcode im Bereich von 0 bis 7.
+
 *CRN*<br/>
-Coprozessorregisternummer im Bereich 0 bis 15, die den ersten Operanden für die Anweisung angibt.  
-  
+Coprozessorregisternummer im Bereich 0 bis 15, die den ersten Operanden für die Anweisung angibt.
+
 *CRM*<br/>
-Coprozessorregisternummer im Bereich 0 bis 15, die einen zusätzlichen Quell- oder Zieloperanden angibt.  
-  
+Coprozessorregisternummer im Bereich 0 bis 15, die einen zusätzlichen Quell- oder Zieloperanden angibt.
+
 *opcode2*<br/>
-Zusätzlicher coprozessorspezifischer Opcode im Bereich von 0 bis 7.  
-  
- **Rückgabewert**  
-  
- Der Wert, der aus dem Coprozessor gelesen wird.  
-  
- **Hinweise**  
-  
- Die Werte aller fünf Parameter dieser systeminternen Funktion müssen konstante Ausdrücke sein, die zum Zeitpunkt der Kompilierung bekannt sind.  
-  
- `_MoveFromCoprocessor` verwendet die MRC-Anweisung; `_MoveFromCoprocessor2` verwendet MRC2. Die Parameter entsprechen den Bitfeldern, die direkt in das Befehlswort codiert werden. Die Interpretation der Parameter ist vom Coprozessor abhängig. Weitere Informationen finden Sie im Handbuch für den betreffenden Coprozessor.  
-  
-###  <a name="MoveFromCo64"></a> _MoveFromCoprocessor64  
- Liest Daten mithilfe der Coprozessor-Datenübertragungsanweisungen aus ARM-Coprozessoren.  
-  
-```  
-unsigned __int64 _MoveFromCoprocessor64(  
-      unsigned int coproc,  
-      unsigned int opcode1,  
-      unsigned int crm,  
-);  
-  
-```  
-  
- **Parameter**  
-  
+Zusätzlicher coprozessorspezifischer Opcode im Bereich von 0 bis 7.
+
+#### <a name="return-value"></a>Rückgabewert
+
+Der Wert, der aus dem Coprozessor gelesen wird.
+
+#### <a name="remarks"></a>Hinweise
+
+Die Werte aller fünf Parameter dieser systeminternen Funktion müssen konstante Ausdrücke sein, die zum Zeitpunkt der Kompilierung bekannt sind.
+
+`_MoveFromCoprocessor` verwendet die MRC-Anweisung; `_MoveFromCoprocessor2` verwendet MRC2. Die Parameter entsprechen den Bitfeldern, die direkt in das Befehlswort codiert werden. Die Interpretation der Parameter ist vom Coprozessor abhängig. Weitere Informationen finden Sie im Handbuch für den betreffenden Coprozessor.
+
+###  <a name="MoveFromCo64"></a> _MoveFromCoprocessor64
+
+Liest Daten mithilfe der Coprozessor-Datenübertragungsanweisungen aus ARM-Coprozessoren.
+
+```
+unsigned __int64 _MoveFromCoprocessor64(
+      unsigned int coproc,
+      unsigned int opcode1,
+      unsigned int crm,
+);
+
+```
+
+#### <a name="parameters"></a>Parameter
+
 *coproc*<br/>
-Coprozessorzahl im Bereich 0 bis 15.  
-  
+Coprozessorzahl im Bereich 0 bis 15.
+
 *opcode1*<br/>
-Coprozessorspezifischer Opcode im Bereich von 0 bis 15.  
-  
+Coprozessorspezifischer Opcode im Bereich von 0 bis 15.
+
 *CRM*<br/>
-Coprozessorregisternummer im Bereich 0 bis 15, die einen zusätzlichen Quell- oder Zieloperanden angibt.  
-  
- **Gibt den Wert**  
-  
- Der Wert, der aus dem Coprozessor gelesen wird.  
-  
- **Hinweise**  
-  
- Die Werte aller drei Parameter dieser systeminternen Funktion müssen konstante Ausdrücke sein, die zum Zeitpunkt der Kompilierung bekannt sind.  
-  
- `_MoveFromCoprocessor64` verwendet die MRRC-Anweisung. Die Parameter entsprechen den Bitfeldern, die direkt in das Befehlswort codiert werden. Die Interpretation der Parameter ist vom Coprozessor abhängig. Weitere Informationen finden Sie im Handbuch für den betreffenden Coprozessor.  
-  
-###  <a name="MoveToCo"></a> _MoveToCoprocessor, _MoveToCoprocessor2  
- Diese intrinsischen Funktionen schreiben Daten an ARM-Coprozessoren mithilfe der Coprozessor-Datenübertragungsanweisungen.  
-  
-```  
-void _MoveToCoprocessor(  
-      unsigned int value,  
-      unsigned int coproc,  
-      unsigned int opcode1,  
-      unsigned int crn,  
-      unsigned int crm,  
-      unsigned int opcode2  
-);  
-  
-void _MoveToCoprocessor2(  
-      unsigned int value,  
-      unsigned int coproc,  
-      unsigned int opcode1,  
-      unsigned int crn,  
-      unsigned int crm,  
-      unsigned int opcode2  
-);  
-  
-```  
-  
- **Parameter**  
-  
+Coprozessorregisternummer im Bereich 0 bis 15, die einen zusätzlichen Quell- oder Zieloperanden angibt.
+
+**Gibt den Wert**
+
+Der Wert, der aus dem Coprozessor gelesen wird.
+
+#### <a name="remarks"></a>Hinweise
+
+Die Werte aller drei Parameter dieser systeminternen Funktion müssen konstante Ausdrücke sein, die zum Zeitpunkt der Kompilierung bekannt sind.
+
+`_MoveFromCoprocessor64` verwendet die MRRC-Anweisung. Die Parameter entsprechen den Bitfeldern, die direkt in das Befehlswort codiert werden. Die Interpretation der Parameter ist vom Coprozessor abhängig. Weitere Informationen finden Sie im Handbuch für den betreffenden Coprozessor.
+
+###  <a name="MoveToCo"></a> _MoveToCoprocessor, _MoveToCoprocessor2
+
+Diese intrinsischen Funktionen schreiben Daten an ARM-Coprozessoren mithilfe der Coprozessor-Datenübertragungsanweisungen.
+
+```
+void _MoveToCoprocessor(
+      unsigned int value,
+      unsigned int coproc,
+      unsigned int opcode1,
+      unsigned int crn,
+      unsigned int crm,
+      unsigned int opcode2
+);
+
+void _MoveToCoprocessor2(
+      unsigned int value,
+      unsigned int coproc,
+      unsigned int opcode1,
+      unsigned int crn,
+      unsigned int crm,
+      unsigned int opcode2
+);
+
+```
+
+#### <a name="parameters"></a>Parameter
+
 *Wert*<br/>
-Der Wert, der in den Coprozessor geschrieben werden soll.  
-  
+Der Wert, der in den Coprozessor geschrieben werden soll.
+
 *coproc*<br/>
-Coprozessorzahl im Bereich 0 bis 15.  
-  
+Coprozessorzahl im Bereich 0 bis 15.
+
 *opcode1*<br/>
-Coprozessorspezifischer Opcode im Bereich von 0 bis 7.  
-  
+Coprozessorspezifischer Opcode im Bereich von 0 bis 7.
+
 *CRN*<br/>
-Coprozessorregisternummer im Bereich 0 bis 15, die den ersten Operanden für die Anweisung angibt.  
-  
+Coprozessorregisternummer im Bereich 0 bis 15, die den ersten Operanden für die Anweisung angibt.
+
 *CRM*<br/>
-Coprozessorregisternummer im Bereich 0 bis 15, die einen zusätzlichen Quell- oder Zieloperanden angibt.  
-  
+Coprozessorregisternummer im Bereich 0 bis 15, die einen zusätzlichen Quell- oder Zieloperanden angibt.
+
 *opcode2*<br/>
-Zusätzlicher coprozessorspezifischer Opcode im Bereich von 0 bis 7.  
-  
- **Rückgabewert**  
-  
- Keine  
-  
- **Hinweise**  
-  
- Die Werte der Parameter `coproc`, `opcode1`, `crn`, `crm` und `opcode2` dieser systeminternen Funktion müssen konstante Ausdrücke sein, die zum Zeitpunkt der Kompilierung bekannt sind.  
-  
- `_MoveToCoprocessor` verwendet die MCR-Anweisung. `_MoveToCoprocessor2` verwendet MCR2. Die Parameter entsprechen den Bitfeldern, die direkt in das Befehlswort codiert werden. Die Interpretation der Parameter ist vom Coprozessor abhängig. Weitere Informationen finden Sie im Handbuch für den betreffenden Coprozessor.  
-  
-###  <a name="MoveToCo64"></a> _MoveToCoprocessor64  
- Diese intrinsischen Funktionen schreiben Daten an ARM-Coprozessoren mithilfe der Coprozessor-Datenübertragungsanweisungen.  
-  
-```  
-void _MoveFromCoprocessor64(  
-      unsigned __int64 value,  
-      unsigned int coproc,  
-      unsigned int opcode1,  
-      unsigned int crm,  
-);  
-  
-```  
-  
- **Parameter**  
-  
+Zusätzlicher coprozessorspezifischer Opcode im Bereich von 0 bis 7.
+
+#### <a name="return-value"></a>Rückgabewert
+
+Keine.
+
+#### <a name="remarks"></a>Hinweise
+
+Die Werte der Parameter `coproc`, `opcode1`, `crn`, `crm` und `opcode2` dieser systeminternen Funktion müssen konstante Ausdrücke sein, die zum Zeitpunkt der Kompilierung bekannt sind.
+
+`_MoveToCoprocessor` verwendet die MCR-Anweisung. `_MoveToCoprocessor2` verwendet MCR2. Die Parameter entsprechen den Bitfeldern, die direkt in das Befehlswort codiert werden. Die Interpretation der Parameter ist vom Coprozessor abhängig. Weitere Informationen finden Sie im Handbuch für den betreffenden Coprozessor.
+
+###  <a name="MoveToCo64"></a> _MoveToCoprocessor64
+
+Diese intrinsischen Funktionen schreiben Daten an ARM-Coprozessoren mithilfe der Coprozessor-Datenübertragungsanweisungen.
+
+```
+void _MoveFromCoprocessor64(
+      unsigned __int64 value,
+      unsigned int coproc,
+      unsigned int opcode1,
+      unsigned int crm,
+);
+
+```
+
+#### <a name="parameters"></a>Parameter
+
 *coproc*<br/>
-Coprozessorzahl im Bereich 0 bis 15.  
-  
+Coprozessorzahl im Bereich 0 bis 15.
+
 *opcode1*<br/>
-Coprozessorspezifischer Opcode im Bereich von 0 bis 15.  
-  
+Coprozessorspezifischer Opcode im Bereich von 0 bis 15.
+
 *CRM*<br/>
-Coprozessorregisternummer im Bereich 0 bis 15, die einen zusätzlichen Quell- oder Zieloperanden angibt.  
-  
- **Rückgabewert**  
-  
- Keine  
-  
- **Hinweise**  
-  
- Die Werte der Parameter `coproc`, `opcode1` und `crm` dieser systeminternen Funktion müssen konstante Ausdrücke sein, die zum Zeitpunkt der Kompilierung bekannt sind.  
-  
- `_MoveFromCoprocessor64` verwendet die MCRR-Anweisung. Die Parameter entsprechen den Bitfeldern, die direkt in das Befehlswort codiert werden. Die Interpretation der Parameter ist vom Coprozessor abhängig. Weitere Informationen finden Sie im Handbuch für den betreffenden Coprozessor.  
-  
-##  <a name="I"></a> ARM-Unterstützung für systeminterne Funktionen aus anderen Architekturen  
- Die folgende Tabelle enthält die systeminternen Funktionen von anderen Architekturen, die auf ARM-Plattformen unterstützt werden. Wenn sich das Verhalten einer syteminternen Funktion bei ARM von dem Verhalten auf anderen Hardwarearchitekturen unterscheidet, sind zusätzliche Details aufgeführt.  
-  
-|Funktionsname|Funktionsprototyp|  
-|-------------------|------------------------|  
-|__assume|void __assume(int)|  
-|__code_seg|"void" __code_seg (const Char \*)|  
-|__debugbreak|"void" __cdecl \__debugbreak(void)|  
-|__fastfail|__declspec(noreturn) void \__fastfail(unsigned int)|  
-|__nop|"void" __nop(void) **Hinweis:** auf ARM-Plattformen generiert diese Funktion eine NOP-Anweisung aus, wenn eine in der Zielarchitektur implementiert wird; andernfalls ist eine alternative Anweisung, die nicht den Zustand des Programms oder der CPU ändert generiert – beispielsweise `MOV r8, r8`. Dies ist funktionell gleichwertig mit der \__nop systeminterne für andere Hardware-Architekturen. Da eine Anweisung, die keine Auswirkungen auf den Status des Programms oder der CPU hat, von der Zielarchitektur als Optimierung ignoriert werden kann, verbraucht die Anweisung nicht unbedingt CPU-Zyklen. Aus diesem Grund verwenden Sie nicht die \__nop systemintern, um die Ausführungszeit einer Codesequenz zu bearbeiten, es sei denn, Sie sind sich über wird das Verhalten der CPU. Sie können stattdessen die \__nop systeminterne Anpassung an die nächste Anweisung eine bestimmte Grenze von 32-Bit-Adresse.|  
-|__yield|"void" __yield(void) **Hinweis:** auf ARM-Plattformen generiert diese Funktion die YIELD-Anweisung, die angibt, dass der Thread eine Aufgabe ausführt, die vorübergehend unterbrochen werden kann von der Ausführung, z. B. ein Spinlock – ohne beeinträchtigt die Anwendung an. Dadurch kann die CPU andere Aufgaben während der Ausführungszyklen ausführen, die andernfalls verloren gehen würden.|  
-|_AddressOfReturnAddress|"void" \* _AddressOfReturnAddress(void)|  
-|_BitScanForward|unsigned Char _BitScanForward (unsigned long \* _Index "," unsigned long _Mask)|  
-|_BitScanReverse|unsigned Char _BitScanReverse (unsigned long \* _Index "," unsigned long _Mask)|  
-|_bittest|unsigned Char _bittest (lange const \*, long)|  
-|_bittestandcomplement|unsigned Char _bittestandcomplement (lange \*, long)|  
-|_bittestandreset|unsigned Char _bittestandreset (lange \*, long)|  
-|_bittestandset|unsigned Char _bittestandset (lange \*, long)|  
-|_byteswap_uint64|__int64 ohne Vorzeichen \__cdecl _byteswap_uint64 (ohne Vorzeichen \___int64)|  
-|_byteswap_ulong|unsigned long __cdecl _byteswap_ulong(unsigned long)|  
-|_byteswap_ushort|unsigned short __cdecl _byteswap_ushort(unsigned short)|  
-|_disable|"void" __cdecl _disable(void) **Hinweis:** auf ARM-Plattformen generiert diese Funktion die CPSID-Anweisung, sondern nur als systeminterne Funktion verfügbar.|  
-|_enable|"void" __cdecl _enable(void) **Hinweis:** auf ARM-Plattformen generiert diese Funktion die CPSIE-Anweisung, sondern nur als systeminterne Funktion verfügbar.|  
-|_lrotl|unsigned long __cdecl _lrotl(unsigned long, int)|  
-|_lrotr|unsigned long __cdecl _lrotr(unsigned long, int)|  
-|_ReadBarrier|void _ReadBarrier(void)|  
-|_ReadWriteBarrier|void _ReadWriteBarrier(void)|  
-|_ReturnAddress|"void" \* _ReturnAddress(void)|  
-|_rotl|unsigned int __cdecl _rotl(unsigned int _Value, int _Shift)|  
-|_rotl16|unsigned short _rotl16(unsigned short _Value, unsigned char _Shift)|  
-|_rotl64|__int64 ohne Vorzeichen \__cdecl _rotl64 (ohne Vorzeichen \___int64 "_value" Int _Shift)|  
-|_rotl8|unsigned char _rotl8(unsigned char _Value, unsigned char _Shift)|  
-|_rotr|unsigned int __cdecl _rotr(unsigned int _Value, int _Shift)|  
-|_rotr16|unsigned short _rotr16(unsigned short _Value, unsigned char _Shift)|  
-|_rotr64|__int64 ohne Vorzeichen \__cdecl _rotr64 (ohne Vorzeichen \___int64 "_value" Int _Shift)|  
-|_rotr8|unsigned char _rotr8(unsigned char _Value, unsigned char _Shift)|  
-|_setjmpex|int __cdecl _setjmpex(jmp_buf)|  
-|_WriteBarrier|void _WriteBarrier(void)|  
-  
- [[NEON](#top)]  
-  
-## <a name="interlocked-intrinsics"></a>Ineinandergreifende systeminterne Funktionen  
- Ineinandergreifende systeminterne Funktionen sind eine Reihe von systeminternen Funktionen, die zum Ausführen atomarer Lese-Änderungs-Schreib-Vorgänge verwendet werden. Einige davon sind auf allen Plattformen verfügbar. Sie werden hier separat aufgeführt, da es eine große Anzahl davon gibt. Da ihre Definitionen jedoch meist redundant sind, ist es einfacher ist, über diese Begriffe im Allgemeinen nachzudenken. Die genauen Verhaltensweisen können von den Namen abgeleitet werden.  
-  
- In der folgenden Tabelle ist die ARM-Unterstützung der ineinandergreifenden systeminternen "non-bittest"-Funktionen zusammengefasst. Jede Zelle in der Tabelle entspricht einem Namen, der durch Anhängen des Vorgangsnamens in der am weitesten links befindlichen Zelle der Zeile und des Typnamens in der obersten Zelle der Spalte an `_Interlocked` abgeleitet wird. Z. B. die Zelle am Schnittpunkt der `Xor` Zeile und die **8** Spalte entspricht `_InterlockedXor8` und wird vollständig unterstützt. Die meisten unterstützten Funktionen bieten diese optionalen Suffixe: `_acq`, `_rel` und `_nf`. Das `_acq`-Suffix gibt eine "Acquire"-Semantik zum Abrufen an, und das `_rel`-Suffix gibt eine "Release"-Semantik zum Freigeben an. Das Suffix `_nf` bzw. "no fence" kommt nur bei ARM vor und wird im nächsten Abschnitt erläutert.  
-  
-||8|16|32|64|P|  
-|-|-------|--------|--------|--------|-------|  
-|Hinzufügen|Keine|Keine|Vollständig|Vollständig|Keine|  
-|And|Vollständig|Vollständig|Vollständig|Vollständig|Keine|  
-|CompareExchange|Vollständig|Vollständig|Vollständig|Vollständig|Vollständig|  
-|Dekrement|Keine|Vollständig|Vollständig|Vollständig|Keine|  
-|Exchange|Partial|Partial|Partial|Partial|Partial|  
-|ExchangeAdd|Vollständig|Vollständig|Vollständig|Vollständig|Keine|  
-|Inkrement|Keine|Vollständig|Vollständig|Vollständig|Keine|  
-|Oder|Vollständig|Vollständig|Vollständig|Vollständig|Keine|  
-|Xor|Vollständig|Vollständig|Vollständig|Vollständig|Keine|  
-  
- Key:  
-  
--   **Vollständige**: unterstützt Plain, `_acq`, `_rel`, und `_nf` Forms.  
-  
--   **Partielle**: unterstützt Plain, `_acq`, und `_nf` Forms.  
-  
--   **Keine**: nicht unterstützt  
-  
-###  <a name="nf_suffix"></a> _nf (keine Fence)-Suffix  
- Die `_nf`- bzw. "no fence"-Suffix gibt an, dass sich der Vorgang nicht wie eine Art Speicherabgrenzung verhält. Dies steht im Gegensatz zu den anderen drei Formen (plain, `_acq` und `_rel`), die sich alle wie eine Art Begrenzung verhalten. Eine mögliche Verwendung der `_nf`-Formen besteht in der Verwaltung eines Statistikzählers, der gleichzeitig von mehreren Threads aktualisiert wird, dessen Wert jedoch während der Ausführung mehrerer Threads nicht anderweitig verwendet wird.  
-  
-### <a name="list-of-interlocked-intrinsics"></a>Liste der ineinandergreifenden systeminternen Funktionen  
-  
-|Funktionsname|Funktionsprototyp|  
-|-------------------|------------------------|  
-|_InterlockedAdd|lange _InterlockedAdd (lange _volatile \*, long)|  
-|_InterlockedAdd64|__int64 _InterlockedAdd64 (\___int64 volatile \*, \___int64)|  
-|_InterlockedAdd64_acq|__int64 _InterlockedAdd64_acq (\___int64 volatile \*, \___int64)|  
-|_InterlockedAdd64_nf|__int64 _InterlockedAdd64_nf (\___int64 volatile \*, \___int64)|  
-|_InterlockedAdd64_rel|__int64 _InterlockedAdd64_rel (\___int64 volatile \*, \___int64)|  
-|_InterlockedAdd_acq|lange _InterlockedAdd_acq (long volatile \*, long)|  
-|_InterlockedAdd_nf|lange _InterlockedAdd_nf (long volatile \*, long)|  
-|_InterlockedAdd_rel|lange _InterlockedAdd_rel (long volatile \*, long)|  
-|_InterlockedAnd|Long _InterlockedAnd (long volatile \*, long)|  
-|_InterlockedAnd16|Short _InterlockedAnd16 (short Volatile \*, short)|  
-|_InterlockedAnd16_acq|kurze _InterlockedAnd16_acq (short Volatile \*, short)|  
-|_InterlockedAnd16_nf|kurze _InterlockedAnd16_nf (short Volatile \*, short)|  
-|_InterlockedAnd16_rel|kurze _InterlockedAnd16_rel (short Volatile \*, short)|  
-|_InterlockedAnd64|__int64 _InterlockedAnd64 (\___int64 volatile \*, \___int64)|  
-|_InterlockedAnd64_acq|__int64 _InterlockedAnd64_acq (\___int64 volatile \*, \___int64)|  
-|_InterlockedAnd64_nf|__int64 _InterlockedAnd64_nf (\___int64 volatile \*, \___int64)|  
-|_InterlockedAnd64_rel|__int64 _InterlockedAnd64_rel (\___int64 volatile \*, \___int64)|  
-|_InterlockedAnd8|Char _InterlockedAnd8 (Char Volatile \*, Char)|  
-|_InterlockedAnd8_acq|_InterlockedAnd8_acq char (Char Volatile \*, Char)|  
-|_InterlockedAnd8_nf|_InterlockedAnd8_nf char (Char Volatile \*, Char)|  
-|_InterlockedAnd8_rel|_InterlockedAnd8_rel char (Char Volatile \*, Char)|  
-|_InterlockedAnd_acq|lange _InterlockedAnd_acq (long volatile \*, long)|  
-|_InterlockedAnd_nf|lange _InterlockedAnd_nf (long volatile \*, long)|  
-|_InterlockedAnd_rel|lange _InterlockedAnd_rel (long volatile \*, long)|  
-|_InterlockedCompareExchange|lange __cdecl _InterlockedCompareExchange (long volatile \*, long, long)|  
-|_InterlockedCompareExchange16|kurze _InterlockedCompareExchange16 (short Volatile \*, short, short)|  
-|_InterlockedCompareExchange16_acq|kurze _InterlockedCompareExchange16_acq (short Volatile \*, short, short)|  
-|_InterlockedCompareExchange16_nf|kurze _InterlockedCompareExchange16_nf (short Volatile \*, short, short)|  
-|_InterlockedCompareExchange16_rel|kurze _InterlockedCompareExchange16_rel (short Volatile \*, short, short)|  
-|_InterlockedCompareExchange64|__int64 _InterlockedCompareExchange64 (\___int64 volatile \*, \___int64, \___int64)|  
-|_InterlockedCompareExchange64_acq|__int64 _InterlockedCompareExchange64_acq (\___int64 volatile \*, \___int64, \___int64)|  
-|_InterlockedCompareExchange64_nf|__int64 _InterlockedCompareExchange64_nf (\___int64 volatile \*, \___int64, \___int64)|  
-|_InterlockedCompareExchange64_rel|__int64 _InterlockedCompareExchange64_rel (\___int64 volatile \*, \___int64, \___int64)|  
-|_InterlockedCompareExchange8|_InterlockedCompareExchange8 char (Char Volatile \*, char, char)|  
-|_InterlockedCompareExchange8_acq|_InterlockedCompareExchange8_acq char (Char Volatile \*, char, char)|  
-|_InterlockedCompareExchange8_nf|_InterlockedCompareExchange8_nf char (Char Volatile \*, char, char)|  
-|_InterlockedCompareExchange8_rel|_InterlockedCompareExchange8_rel char (Char Volatile \*, char, char)|  
-|_InterlockedCompareExchangePointer|"void" \* _InterlockedCompareExchangePointer (Void \* Volatile \*, "void" \*, "void" \*)|  
-|_InterlockedCompareExchangePointer_acq|"void" \* _InterlockedCompareExchangePointer_acq ("void" \* Volatile \*, "void" \*, "void" \*)|  
-|_InterlockedCompareExchangePointer_nf|"void" \* _InterlockedCompareExchangePointer_nf ("void" \* Volatile \*, "void" \*, "void" \*)|  
-|_InterlockedCompareExchangePointer_rel|"void" \* _InterlockedCompareExchangePointer_rel ("void" \* Volatile \*, "void" \*, "void" \*)|  
-|_InterlockedCompareExchange_acq|lange _InterlockedCompareExchange_acq (long volatile \*, long, long)|  
-|_InterlockedCompareExchange_nf|lange _InterlockedCompareExchange_nf (long volatile \*, long, long)|  
-|_InterlockedCompareExchange_rel|lange _InterlockedCompareExchange_rel (long volatile \*, long, long)|  
-|_InterlockedDecrement|lange __cdecl _InterlockedDecrement (long volatile \*)|  
-|_InterlockedDecrement16|kurze _InterlockedDecrement16 (short Volatile \*)|  
-|_InterlockedDecrement16_acq|kurze _InterlockedDecrement16_acq (short Volatile \*)|  
-|_InterlockedDecrement16_nf|kurze _InterlockedDecrement16_nf (short Volatile \*)|  
-|_InterlockedDecrement16_rel|kurze _InterlockedDecrement16_rel (short Volatile \*)|  
-|_InterlockedDecrement64|__int64 _InterlockedDecrement64 (\___int64 volatile \*)|  
-|_InterlockedDecrement64_acq|__int64 _InterlockedDecrement64_acq (\___int64 volatile \*)|  
-|_InterlockedDecrement64_nf|__int64 _InterlockedDecrement64_nf (\___int64 volatile \*)|  
-|_InterlockedDecrement64_rel|__int64 _InterlockedDecrement64_rel (\___int64 volatile \*)|  
-|_InterlockedDecrement_acq|lange _InterlockedDecrement_acq (long volatile \*)|  
-|_InterlockedDecrement_nf|lange _InterlockedDecrement_nf (long volatile \*)|  
-|_InterlockedDecrement_rel|lange _InterlockedDecrement_rel (long volatile \*)|  
-|_InterlockedExchange|lange __cdecl _InterlockedExchange (long volatile \* a_ndroid, long)|  
-|_InterlockedExchange16|kurze _InterlockedExchange16 (short Volatile \* a_ndroid, short)|  
-|_InterlockedExchange16_acq|kurze _InterlockedExchange16_acq (short Volatile \* a_ndroid, short)|  
-|_InterlockedExchange16_nf|kurze _InterlockedExchange16_nf (short Volatile \* a_ndroid, short)|  
-|_InterlockedExchange64|__int64 _InterlockedExchange64 (\___int64 volatile \* a_ndroid, \___int64)|  
-|_InterlockedExchange64_acq|__int64 _InterlockedExchange64_acq (\___int64 volatile \* a_ndroid, \___int64)|  
-|_InterlockedExchange64_nf|__int64 _InterlockedExchange64_nf (\___int64 volatile \* a_ndroid, \___int64)|  
-|_InterlockedExchange8|_InterlockedExchange8 char (Char Volatile \* a_ndroid, Char)|  
-|_InterlockedExchange8_acq|_InterlockedExchange8_acq char (Char Volatile \* a_ndroid, Char)|  
-|_InterlockedExchange8_nf|_InterlockedExchange8_nf char (Char Volatile \* a_ndroid, Char)|  
-|_InterlockedExchangeAdd|lange __cdecl _InterlockedExchangeAdd (long volatile \*, long)|  
-|_InterlockedExchangeAdd16|Short _InterlockedExchangeAdd16 (short Volatile \*, short)|  
-|_InterlockedExchangeAdd16_acq|kurze _InterlockedExchangeAdd16_acq (short Volatile \*, short)|  
-|_InterlockedExchangeAdd16_nf|kurze _InterlockedExchangeAdd16_nf (short Volatile \*, short)|  
-|_InterlockedExchangeAdd16_rel|kurze _InterlockedExchangeAdd16_rel (short Volatile \*, short)|  
-|_InterlockedExchangeAdd64|__int64 _InterlockedExchangeAdd64 (\___int64 volatile \*, \___int64)|  
-|_InterlockedExchangeAdd64_acq|__int64 _InterlockedExchangeAdd64_acq (\___int64 volatile \*, \___int64)|  
-|_InterlockedExchangeAdd64_nf|__int64 _InterlockedExchangeAdd64_nf (\___int64 volatile \*, \___int64)|  
-|_InterlockedExchangeAdd64_rel|__int64 _InterlockedExchangeAdd64_rel (\___int64 volatile \*, \___int64)|  
-|_InterlockedExchangeAdd8|Char _InterlockedExchangeAdd8 (Char Volatile \*, Char)|  
-|_InterlockedExchangeAdd8_acq|_InterlockedExchangeAdd8_acq char (Char Volatile \*, Char)|  
-|_InterlockedExchangeAdd8_nf|_InterlockedExchangeAdd8_nf char (Char Volatile \*, Char)|  
-|_InterlockedExchangeAdd8_rel|_InterlockedExchangeAdd8_rel char (Char Volatile \*, Char)|  
-|_InterlockedExchangeAdd_acq|lange _InterlockedExchangeAdd_acq (long volatile \*, long)|  
-|_InterlockedExchangeAdd_nf|lange _InterlockedExchangeAdd_nf (long volatile \*, long)|  
-|_InterlockedExchangeAdd_rel|lange _InterlockedExchangeAdd_rel (long volatile \*, long)|  
-|_InterlockedExchangePointer|"void" \* _InterlockedExchangePointer ("void" \* Volatile \* a_ndroid, "void" \*)|  
-|_InterlockedExchangePointer_acq|"void" \* _InterlockedExchangePointer_acq ("void" \* Volatile \* a_ndroid, "void" \*)|  
-|_InterlockedExchangePointer_nf|"void" \* _InterlockedExchangePointer_nf ("void" \* Volatile \* a_ndroid, "void" \*)|  
-|_InterlockedExchange_acq|lange _InterlockedExchange_acq (long volatile \* a_ndroid, long)|  
-|_InterlockedExchange_nf|lange _InterlockedExchange_nf (long volatile \* a_ndroid, long)|  
-|_InterlockedIncrement|lange __cdecl _InterlockedIncrement (long volatile \*)|  
-|_InterlockedIncrement16|kurze _InterlockedIncrement16 (short Volatile \*)|  
-|_InterlockedIncrement16_acq|kurze _InterlockedIncrement16_acq (short Volatile \*)|  
-|_InterlockedIncrement16_nf|kurze _InterlockedIncrement16_nf (short Volatile \*)|  
-|_InterlockedIncrement16_rel|kurze _InterlockedIncrement16_rel (short Volatile \*)|  
-|_InterlockedIncrement64|__int64 _InterlockedIncrement64 (\___int64 volatile \*)|  
-|_InterlockedIncrement64_acq|__int64 _InterlockedIncrement64_acq (\___int64 volatile \*)|  
-|_InterlockedIncrement64_nf|__int64 _InterlockedIncrement64_nf (\___int64 volatile \*)|  
-|_InterlockedIncrement64_rel|__int64 _InterlockedIncrement64_rel (\___int64 volatile \*)|  
-|_InterlockedIncrement_acq|lange _InterlockedIncrement_acq (long volatile \*)|  
-|_InterlockedIncrement_nf|lange _InterlockedIncrement_nf (long volatile \*)|  
-|_InterlockedIncrement_rel|lange _InterlockedIncrement_rel (long volatile \*)|  
-|_InterlockedOr|Long _InterlockedOr (long volatile \*, long)|  
-|_InterlockedOr16|Short _InterlockedOr16 (short Volatile \*, short)|  
-|_InterlockedOr16_acq|kurze _InterlockedOr16_acq (short Volatile \*, short)|  
-|_InterlockedOr16_nf|kurze _InterlockedOr16_nf (short Volatile \*, short)|  
-|_InterlockedOr16_rel|kurze _InterlockedOr16_rel (short Volatile \*, short)|  
-|_InterlockedOr64|__int64 _InterlockedOr64 (\___int64 volatile \*, \___int64)|  
-|_InterlockedOr64_acq|__int64 _InterlockedOr64_acq (\___int64 volatile \*, \___int64)|  
-|_InterlockedOr64_nf|__int64 _InterlockedOr64_nf (\___int64 volatile \*, \___int64)|  
-|_InterlockedOr64_rel|__int64 _InterlockedOr64_rel (\___int64 volatile \*, \___int64)|  
-|_InterlockedOr8|Char _InterlockedOr8 (Char Volatile \*, Char)|  
-|_InterlockedOr8_acq|_InterlockedOr8_acq char (Char Volatile \*, Char)|  
-|_InterlockedOr8_nf|_InterlockedOr8_nf char (Char Volatile \*, Char)|  
-|_InterlockedOr8_rel|_InterlockedOr8_rel char (Char Volatile \*, Char)|  
-|_InterlockedOr_acq|lange _InterlockedOr_acq (long volatile \*, long)|  
-|_InterlockedOr_nf|lange _InterlockedOr_nf (long volatile \*, long)|  
-|_InterlockedOr_rel|lange _InterlockedOr_rel (long volatile \*, long)|  
-|_InterlockedXor|Long _InterlockedXor (long volatile \*, long)|  
-|_InterlockedXor16|Short _InterlockedXor16 (short Volatile \*, short)|  
-|_InterlockedXor16_acq|kurze _InterlockedXor16_acq (short Volatile \*, short)|  
-|_InterlockedXor16_nf|kurze _InterlockedXor16_nf (short Volatile \*, short)|  
-|_InterlockedXor16_rel|kurze _InterlockedXor16_rel (short Volatile \*, short)|  
-|_InterlockedXor64|__int64 _InterlockedXor64 (\___int64 volatile \*, \___int64)|  
-|_InterlockedXor64_acq|__int64 _InterlockedXor64_acq (\___int64 volatile \*, \___int64)|  
-|_InterlockedXor64_nf|__int64 _InterlockedXor64_nf (\___int64 volatile \*, \___int64)|  
-|_InterlockedXor64_rel|__int64 _InterlockedXor64_rel (\___int64 volatile \*, \___int64)|  
-|_InterlockedXor8|Char _InterlockedXor8 (Char Volatile \*, Char)|  
-|_InterlockedXor8_acq|_InterlockedXor8_acq char (Char Volatile \*, Char)|  
-|_InterlockedXor8_nf|_InterlockedXor8_nf char (Char Volatile \*, Char)|  
-|_InterlockedXor8_rel|_InterlockedXor8_rel char (Char Volatile \*, Char)|  
-|_InterlockedXor_acq|lange _InterlockedXor_acq (long volatile \*, long)|  
-|_InterlockedXor_nf|lange _InterlockedXor_nf (long volatile \*, long)|  
-|_InterlockedXor_rel|lange _InterlockedXor_rel (long volatile \*, long)|  
-  
- [[NEON](#top)]  
-  
-### <a name="interlockedbittest-intrinsics"></a>_interlockedbittest Intrinsics  
- Die systeminternen Funktionen "plain interlocked bittest" gibt es auf allen Plattformen. ARM fügt `_acq`, `_rel`, und `_nf` Varianten, die nur die abgrenzungssemantik eines Vorgangs ändern, wie in beschrieben [_nf (keine Fence)-Suffix](#nf_suffix) weiter oben in diesem Artikel.  
-  
-|Funktionsname|Funktionsprototyp|  
-|-------------------|------------------------|  
-|_interlockedbittestandreset|unsigned Char _interlockedbittestandreset (long volatile \*, long)|  
-|_interlockedbittestandreset_acq|unsigned Char _interlockedbittestandreset_acq (long volatile \*, long)|  
-|_interlockedbittestandreset_nf|unsigned Char _interlockedbittestandreset_nf (long volatile \*, long)|  
-|_interlockedbittestandreset_rel|unsigned Char _interlockedbittestandreset_rel (long volatile \*, long)|  
-|_interlockedbittestandset|unsigned Char _interlockedbittestandset (long volatile \*, long)|  
-|_interlockedbittestandset_acq|unsigned Char _interlockedbittestandset_acq (long volatile \*, long)|  
-|_interlockedbittestandset_nf|unsigned Char _interlockedbittestandset_nf (long volatile \*, long)|  
-|_interlockedbittestandset_rel|unsigned Char _interlockedbittestandset_rel (long volatile \*, long)|  
-  
- [[NEON](#top)]  
-  
-## <a name="see-also"></a>Siehe auch  
- [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)   
- [Referenz zum ARM-Assembler](../assembler/arm/arm-assembler-reference.md)   
- [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)
+Coprozessorregisternummer im Bereich 0 bis 15, die einen zusätzlichen Quell- oder Zieloperanden angibt.
+
+#### <a name="return-value"></a>Rückgabewert
+
+Keine.
+
+#### <a name="remarks"></a>Hinweise
+
+Die Werte der Parameter `coproc`, `opcode1` und `crm` dieser systeminternen Funktion müssen konstante Ausdrücke sein, die zum Zeitpunkt der Kompilierung bekannt sind.
+
+`_MoveFromCoprocessor64` verwendet die MCRR-Anweisung. Die Parameter entsprechen den Bitfeldern, die direkt in das Befehlswort codiert werden. Die Interpretation der Parameter ist vom Coprozessor abhängig. Weitere Informationen finden Sie im Handbuch für den betreffenden Coprozessor.
+
+##  <a name="I"></a> ARM-Unterstützung für systeminterne Funktionen aus anderen Architekturen
+
+Die folgende Tabelle enthält die systeminternen Funktionen von anderen Architekturen, die auf ARM-Plattformen unterstützt werden. Wenn sich das Verhalten einer syteminternen Funktion bei ARM von dem Verhalten auf anderen Hardwarearchitekturen unterscheidet, sind zusätzliche Details aufgeführt.
+
+|Funktionsname|Funktionsprototyp|
+|-------------------|------------------------|
+|__assume|void __assume(int)|
+|__code_seg|"void" __code_seg (const Char \*)|
+|__debugbreak|"void" __cdecl \__debugbreak(void)|
+|__fastfail|__declspec(noreturn) void \__fastfail(unsigned int)|
+|__nop|"void" __nop(void) **Hinweis:** auf ARM-Plattformen generiert diese Funktion eine NOP-Anweisung aus, wenn eine in der Zielarchitektur implementiert wird; andernfalls ist eine alternative Anweisung, die nicht den Zustand des Programms oder der CPU ändert generiert – beispielsweise `MOV r8, r8`. Dies ist funktionell gleichwertig mit der \__nop systeminterne für andere Hardware-Architekturen. Da eine Anweisung, die keine Auswirkungen auf den Status des Programms oder der CPU hat, von der Zielarchitektur als Optimierung ignoriert werden kann, verbraucht die Anweisung nicht unbedingt CPU-Zyklen. Aus diesem Grund verwenden Sie nicht die \__nop systemintern, um die Ausführungszeit einer Codesequenz zu bearbeiten, es sei denn, Sie sind sich über wird das Verhalten der CPU. Sie können stattdessen die \__nop systeminterne Anpassung an die nächste Anweisung eine bestimmte Grenze von 32-Bit-Adresse.|
+|__yield|"void" __yield(void) **Hinweis:** auf ARM-Plattformen generiert diese Funktion die YIELD-Anweisung, die angibt, dass der Thread eine Aufgabe ausführt, die vorübergehend unterbrochen werden kann von der Ausführung, z. B. ein Spinlock – ohne beeinträchtigt die Anwendung an. Dadurch kann die CPU andere Aufgaben während der Ausführungszyklen ausführen, die andernfalls verloren gehen würden.|
+|_AddressOfReturnAddress|"void" \* _AddressOfReturnAddress(void)|
+|_BitScanForward|unsigned Char _BitScanForward (unsigned long \* _Index "," unsigned long _Mask)|
+|_BitScanReverse|unsigned Char _BitScanReverse (unsigned long \* _Index "," unsigned long _Mask)|
+|_bittest|unsigned Char _bittest (lange const \*, long)|
+|_bittestandcomplement|unsigned Char _bittestandcomplement (lange \*, long)|
+|_bittestandreset|unsigned Char _bittestandreset (lange \*, long)|
+|_bittestandset|unsigned Char _bittestandset (lange \*, long)|
+|_byteswap_uint64|__int64 ohne Vorzeichen \__cdecl _byteswap_uint64 (ohne Vorzeichen \___int64)|
+|_byteswap_ulong|unsigned long __cdecl _byteswap_ulong(unsigned long)|
+|_byteswap_ushort|unsigned short __cdecl _byteswap_ushort(unsigned short)|
+|_disable|"void" __cdecl _disable(void) **Hinweis:** auf ARM-Plattformen generiert diese Funktion die CPSID-Anweisung, sondern nur als systeminterne Funktion verfügbar.|
+|_enable|"void" __cdecl _enable(void) **Hinweis:** auf ARM-Plattformen generiert diese Funktion die CPSIE-Anweisung, sondern nur als systeminterne Funktion verfügbar.|
+|_lrotl|unsigned long __cdecl _lrotl(unsigned long, int)|
+|_lrotr|unsigned long __cdecl _lrotr(unsigned long, int)|
+|_ReadBarrier|void _ReadBarrier(void)|
+|_ReadWriteBarrier|void _ReadWriteBarrier(void)|
+|_ReturnAddress|"void" \* _ReturnAddress(void)|
+|_rotl|unsigned int __cdecl _rotl(unsigned int _Value, int _Shift)|
+|_rotl16|unsigned short _rotl16(unsigned short _Value, unsigned char _Shift)|
+|_rotl64|__int64 ohne Vorzeichen \__cdecl _rotl64 (ohne Vorzeichen \___int64 "_value" Int _Shift)|
+|_rotl8|unsigned char _rotl8(unsigned char _Value, unsigned char _Shift)|
+|_rotr|unsigned int __cdecl _rotr(unsigned int _Value, int _Shift)|
+|_rotr16|unsigned short _rotr16(unsigned short _Value, unsigned char _Shift)|
+|_rotr64|__int64 ohne Vorzeichen \__cdecl _rotr64 (ohne Vorzeichen \___int64 "_value" Int _Shift)|
+|_rotr8|unsigned char _rotr8(unsigned char _Value, unsigned char _Shift)|
+|_setjmpex|int __cdecl _setjmpex(jmp_buf)|
+|_WriteBarrier|void _WriteBarrier(void)|
+
+[[NEON](#top)]
+
+## <a name="interlocked-intrinsics"></a>Ineinandergreifende systeminterne Funktionen
+
+Ineinandergreifende systeminterne Funktionen sind eine Reihe von systeminternen Funktionen, die zum Ausführen atomarer Lese-Änderungs-Schreib-Vorgänge verwendet werden. Einige davon sind auf allen Plattformen verfügbar. Sie werden hier separat aufgeführt, da es eine große Anzahl davon gibt. Da ihre Definitionen jedoch meist redundant sind, ist es einfacher ist, über diese Begriffe im Allgemeinen nachzudenken. Die genauen Verhaltensweisen können von den Namen abgeleitet werden.
+
+In der folgenden Tabelle ist die ARM-Unterstützung der ineinandergreifenden systeminternen "non-bittest"-Funktionen zusammengefasst. Jede Zelle in der Tabelle entspricht einem Namen, der durch Anhängen des Vorgangsnamens in der am weitesten links befindlichen Zelle der Zeile und des Typnamens in der obersten Zelle der Spalte an `_Interlocked` abgeleitet wird. Z. B. die Zelle am Schnittpunkt der `Xor` Zeile und die **8** Spalte entspricht `_InterlockedXor8` und wird vollständig unterstützt. Die meisten unterstützten Funktionen bieten diese optionalen Suffixe: `_acq`, `_rel` und `_nf`. Das `_acq`-Suffix gibt eine "Acquire"-Semantik zum Abrufen an, und das `_rel`-Suffix gibt eine "Release"-Semantik zum Freigeben an. Das Suffix `_nf` bzw. "no fence" kommt nur bei ARM vor und wird im nächsten Abschnitt erläutert.
+
+||8|16|32|64|P|
+|-|-------|--------|--------|--------|-------|
+|Hinzufügen|Keine|Keine|Vollständig|Vollständig|Keine|
+|And|Vollständig|Vollständig|Vollständig|Vollständig|Keine|
+|CompareExchange|Vollständig|Vollständig|Vollständig|Vollständig|Vollständig|
+|Dekrement|Keine|Vollständig|Vollständig|Vollständig|Keine|
+|Exchange|Partial|Partial|Partial|Partial|Partial|
+|ExchangeAdd|Vollständig|Vollständig|Vollständig|Vollständig|Keine|
+|Inkrement|Keine|Vollständig|Vollständig|Vollständig|Keine|
+|Oder|Vollständig|Vollständig|Vollständig|Vollständig|Keine|
+|Xor|Vollständig|Vollständig|Vollständig|Vollständig|Keine|
+
+Key:
+
+- **Vollständige**: unterstützt Plain, `_acq`, `_rel`, und `_nf` Forms.
+
+- **Partielle**: unterstützt Plain, `_acq`, und `_nf` Forms.
+
+- **Keine**: nicht unterstützt
+
+###  <a name="nf_suffix"></a> _nf (keine Fence)-Suffix
+
+Die `_nf`- bzw. "no fence"-Suffix gibt an, dass sich der Vorgang nicht wie eine Art Speicherabgrenzung verhält. Dies steht im Gegensatz zu den anderen drei Formen (plain, `_acq` und `_rel`), die sich alle wie eine Art Begrenzung verhalten. Eine mögliche Verwendung der `_nf`-Formen besteht in der Verwaltung eines Statistikzählers, der gleichzeitig von mehreren Threads aktualisiert wird, dessen Wert jedoch während der Ausführung mehrerer Threads nicht anderweitig verwendet wird.
+
+### <a name="list-of-interlocked-intrinsics"></a>Liste der ineinandergreifenden systeminternen Funktionen
+
+|Funktionsname|Funktionsprototyp|
+|-------------------|------------------------|
+|_InterlockedAdd|lange _InterlockedAdd (lange _volatile \*, long)|
+|_InterlockedAdd64|__int64 _InterlockedAdd64 (\___int64 volatile \*, \___int64)|
+|_InterlockedAdd64_acq|__int64 _InterlockedAdd64_acq (\___int64 volatile \*, \___int64)|
+|_InterlockedAdd64_nf|__int64 _InterlockedAdd64_nf (\___int64 volatile \*, \___int64)|
+|_InterlockedAdd64_rel|__int64 _InterlockedAdd64_rel (\___int64 volatile \*, \___int64)|
+|_InterlockedAdd_acq|lange _InterlockedAdd_acq (long volatile \*, long)|
+|_InterlockedAdd_nf|lange _InterlockedAdd_nf (long volatile \*, long)|
+|_InterlockedAdd_rel|lange _InterlockedAdd_rel (long volatile \*, long)|
+|_InterlockedAnd|Long _InterlockedAnd (long volatile \*, long)|
+|_InterlockedAnd16|Short _InterlockedAnd16 (short Volatile \*, short)|
+|_InterlockedAnd16_acq|kurze _InterlockedAnd16_acq (short Volatile \*, short)|
+|_InterlockedAnd16_nf|kurze _InterlockedAnd16_nf (short Volatile \*, short)|
+|_InterlockedAnd16_rel|kurze _InterlockedAnd16_rel (short Volatile \*, short)|
+|_InterlockedAnd64|__int64 _InterlockedAnd64 (\___int64 volatile \*, \___int64)|
+|_InterlockedAnd64_acq|__int64 _InterlockedAnd64_acq (\___int64 volatile \*, \___int64)|
+|_InterlockedAnd64_nf|__int64 _InterlockedAnd64_nf (\___int64 volatile \*, \___int64)|
+|_InterlockedAnd64_rel|__int64 _InterlockedAnd64_rel (\___int64 volatile \*, \___int64)|
+|_InterlockedAnd8|Char _InterlockedAnd8 (Char Volatile \*, Char)|
+|_InterlockedAnd8_acq|_InterlockedAnd8_acq char (Char Volatile \*, Char)|
+|_InterlockedAnd8_nf|_InterlockedAnd8_nf char (Char Volatile \*, Char)|
+|_InterlockedAnd8_rel|_InterlockedAnd8_rel char (Char Volatile \*, Char)|
+|_InterlockedAnd_acq|lange _InterlockedAnd_acq (long volatile \*, long)|
+|_InterlockedAnd_nf|lange _InterlockedAnd_nf (long volatile \*, long)|
+|_InterlockedAnd_rel|lange _InterlockedAnd_rel (long volatile \*, long)|
+|_InterlockedCompareExchange|lange __cdecl _InterlockedCompareExchange (long volatile \*, long, long)|
+|_InterlockedCompareExchange16|kurze _InterlockedCompareExchange16 (short Volatile \*, short, short)|
+|_InterlockedCompareExchange16_acq|kurze _InterlockedCompareExchange16_acq (short Volatile \*, short, short)|
+|_InterlockedCompareExchange16_nf|kurze _InterlockedCompareExchange16_nf (short Volatile \*, short, short)|
+|_InterlockedCompareExchange16_rel|kurze _InterlockedCompareExchange16_rel (short Volatile \*, short, short)|
+|_InterlockedCompareExchange64|__int64 _InterlockedCompareExchange64 (\___int64 volatile \*, \___int64, \___int64)|
+|_InterlockedCompareExchange64_acq|__int64 _InterlockedCompareExchange64_acq (\___int64 volatile \*, \___int64, \___int64)|
+|_InterlockedCompareExchange64_nf|__int64 _InterlockedCompareExchange64_nf (\___int64 volatile \*, \___int64, \___int64)|
+|_InterlockedCompareExchange64_rel|__int64 _InterlockedCompareExchange64_rel (\___int64 volatile \*, \___int64, \___int64)|
+|_InterlockedCompareExchange8|_InterlockedCompareExchange8 char (Char Volatile \*, char, char)|
+|_InterlockedCompareExchange8_acq|_InterlockedCompareExchange8_acq char (Char Volatile \*, char, char)|
+|_InterlockedCompareExchange8_nf|_InterlockedCompareExchange8_nf char (Char Volatile \*, char, char)|
+|_InterlockedCompareExchange8_rel|_InterlockedCompareExchange8_rel char (Char Volatile \*, char, char)|
+|_InterlockedCompareExchangePointer|"void" \* _InterlockedCompareExchangePointer (Void \* Volatile \*, "void" \*, "void" \*)|
+|_InterlockedCompareExchangePointer_acq|"void" \* _InterlockedCompareExchangePointer_acq ("void" \* Volatile \*, "void" \*, "void" \*)|
+|_InterlockedCompareExchangePointer_nf|"void" \* _InterlockedCompareExchangePointer_nf ("void" \* Volatile \*, "void" \*, "void" \*)|
+|_InterlockedCompareExchangePointer_rel|"void" \* _InterlockedCompareExchangePointer_rel ("void" \* Volatile \*, "void" \*, "void" \*)|
+|_InterlockedCompareExchange_acq|lange _InterlockedCompareExchange_acq (long volatile \*, long, long)|
+|_InterlockedCompareExchange_nf|lange _InterlockedCompareExchange_nf (long volatile \*, long, long)|
+|_InterlockedCompareExchange_rel|lange _InterlockedCompareExchange_rel (long volatile \*, long, long)|
+|_InterlockedDecrement|lange __cdecl _InterlockedDecrement (long volatile \*)|
+|_InterlockedDecrement16|kurze _InterlockedDecrement16 (short Volatile \*)|
+|_InterlockedDecrement16_acq|kurze _InterlockedDecrement16_acq (short Volatile \*)|
+|_InterlockedDecrement16_nf|kurze _InterlockedDecrement16_nf (short Volatile \*)|
+|_InterlockedDecrement16_rel|kurze _InterlockedDecrement16_rel (short Volatile \*)|
+|_InterlockedDecrement64|__int64 _InterlockedDecrement64 (\___int64 volatile \*)|
+|_InterlockedDecrement64_acq|__int64 _InterlockedDecrement64_acq (\___int64 volatile \*)|
+|_InterlockedDecrement64_nf|__int64 _InterlockedDecrement64_nf (\___int64 volatile \*)|
+|_InterlockedDecrement64_rel|__int64 _InterlockedDecrement64_rel (\___int64 volatile \*)|
+|_InterlockedDecrement_acq|lange _InterlockedDecrement_acq (long volatile \*)|
+|_InterlockedDecrement_nf|lange _InterlockedDecrement_nf (long volatile \*)|
+|_InterlockedDecrement_rel|lange _InterlockedDecrement_rel (long volatile \*)|
+|_InterlockedExchange|lange __cdecl _InterlockedExchange (long volatile \* a_ndroid, long)|
+|_InterlockedExchange16|kurze _InterlockedExchange16 (short Volatile \* a_ndroid, short)|
+|_InterlockedExchange16_acq|kurze _InterlockedExchange16_acq (short Volatile \* a_ndroid, short)|
+|_InterlockedExchange16_nf|kurze _InterlockedExchange16_nf (short Volatile \* a_ndroid, short)|
+|_InterlockedExchange64|__int64 _InterlockedExchange64 (\___int64 volatile \* a_ndroid, \___int64)|
+|_InterlockedExchange64_acq|__int64 _InterlockedExchange64_acq (\___int64 volatile \* a_ndroid, \___int64)|
+|_InterlockedExchange64_nf|__int64 _InterlockedExchange64_nf (\___int64 volatile \* a_ndroid, \___int64)|
+|_InterlockedExchange8|_InterlockedExchange8 char (Char Volatile \* a_ndroid, Char)|
+|_InterlockedExchange8_acq|_InterlockedExchange8_acq char (Char Volatile \* a_ndroid, Char)|
+|_InterlockedExchange8_nf|_InterlockedExchange8_nf char (Char Volatile \* a_ndroid, Char)|
+|_InterlockedExchangeAdd|lange __cdecl _InterlockedExchangeAdd (long volatile \*, long)|
+|_InterlockedExchangeAdd16|Short _InterlockedExchangeAdd16 (short Volatile \*, short)|
+|_InterlockedExchangeAdd16_acq|kurze _InterlockedExchangeAdd16_acq (short Volatile \*, short)|
+|_InterlockedExchangeAdd16_nf|kurze _InterlockedExchangeAdd16_nf (short Volatile \*, short)|
+|_InterlockedExchangeAdd16_rel|kurze _InterlockedExchangeAdd16_rel (short Volatile \*, short)|
+|_InterlockedExchangeAdd64|__int64 _InterlockedExchangeAdd64 (\___int64 volatile \*, \___int64)|
+|_InterlockedExchangeAdd64_acq|__int64 _InterlockedExchangeAdd64_acq (\___int64 volatile \*, \___int64)|
+|_InterlockedExchangeAdd64_nf|__int64 _InterlockedExchangeAdd64_nf (\___int64 volatile \*, \___int64)|
+|_InterlockedExchangeAdd64_rel|__int64 _InterlockedExchangeAdd64_rel (\___int64 volatile \*, \___int64)|
+|_InterlockedExchangeAdd8|Char _InterlockedExchangeAdd8 (Char Volatile \*, Char)|
+|_InterlockedExchangeAdd8_acq|_InterlockedExchangeAdd8_acq char (Char Volatile \*, Char)|
+|_InterlockedExchangeAdd8_nf|_InterlockedExchangeAdd8_nf char (Char Volatile \*, Char)|
+|_InterlockedExchangeAdd8_rel|_InterlockedExchangeAdd8_rel char (Char Volatile \*, Char)|
+|_InterlockedExchangeAdd_acq|lange _InterlockedExchangeAdd_acq (long volatile \*, long)|
+|_InterlockedExchangeAdd_nf|lange _InterlockedExchangeAdd_nf (long volatile \*, long)|
+|_InterlockedExchangeAdd_rel|lange _InterlockedExchangeAdd_rel (long volatile \*, long)|
+|_InterlockedExchangePointer|"void" \* _InterlockedExchangePointer ("void" \* Volatile \* a_ndroid, "void" \*)|
+|_InterlockedExchangePointer_acq|"void" \* _InterlockedExchangePointer_acq ("void" \* Volatile \* a_ndroid, "void" \*)|
+|_InterlockedExchangePointer_nf|"void" \* _InterlockedExchangePointer_nf ("void" \* Volatile \* a_ndroid, "void" \*)|
+|_InterlockedExchange_acq|lange _InterlockedExchange_acq (long volatile \* a_ndroid, long)|
+|_InterlockedExchange_nf|lange _InterlockedExchange_nf (long volatile \* a_ndroid, long)|
+|_InterlockedIncrement|lange __cdecl _InterlockedIncrement (long volatile \*)|
+|_InterlockedIncrement16|kurze _InterlockedIncrement16 (short Volatile \*)|
+|_InterlockedIncrement16_acq|kurze _InterlockedIncrement16_acq (short Volatile \*)|
+|_InterlockedIncrement16_nf|kurze _InterlockedIncrement16_nf (short Volatile \*)|
+|_InterlockedIncrement16_rel|kurze _InterlockedIncrement16_rel (short Volatile \*)|
+|_InterlockedIncrement64|__int64 _InterlockedIncrement64 (\___int64 volatile \*)|
+|_InterlockedIncrement64_acq|__int64 _InterlockedIncrement64_acq (\___int64 volatile \*)|
+|_InterlockedIncrement64_nf|__int64 _InterlockedIncrement64_nf (\___int64 volatile \*)|
+|_InterlockedIncrement64_rel|__int64 _InterlockedIncrement64_rel (\___int64 volatile \*)|
+|_InterlockedIncrement_acq|lange _InterlockedIncrement_acq (long volatile \*)|
+|_InterlockedIncrement_nf|lange _InterlockedIncrement_nf (long volatile \*)|
+|_InterlockedIncrement_rel|lange _InterlockedIncrement_rel (long volatile \*)|
+|_InterlockedOr|Long _InterlockedOr (long volatile \*, long)|
+|_InterlockedOr16|Short _InterlockedOr16 (short Volatile \*, short)|
+|_InterlockedOr16_acq|kurze _InterlockedOr16_acq (short Volatile \*, short)|
+|_InterlockedOr16_nf|kurze _InterlockedOr16_nf (short Volatile \*, short)|
+|_InterlockedOr16_rel|kurze _InterlockedOr16_rel (short Volatile \*, short)|
+|_InterlockedOr64|__int64 _InterlockedOr64 (\___int64 volatile \*, \___int64)|
+|_InterlockedOr64_acq|__int64 _InterlockedOr64_acq (\___int64 volatile \*, \___int64)|
+|_InterlockedOr64_nf|__int64 _InterlockedOr64_nf (\___int64 volatile \*, \___int64)|
+|_InterlockedOr64_rel|__int64 _InterlockedOr64_rel (\___int64 volatile \*, \___int64)|
+|_InterlockedOr8|Char _InterlockedOr8 (Char Volatile \*, Char)|
+|_InterlockedOr8_acq|_InterlockedOr8_acq char (Char Volatile \*, Char)|
+|_InterlockedOr8_nf|_InterlockedOr8_nf char (Char Volatile \*, Char)|
+|_InterlockedOr8_rel|_InterlockedOr8_rel char (Char Volatile \*, Char)|
+|_InterlockedOr_acq|lange _InterlockedOr_acq (long volatile \*, long)|
+|_InterlockedOr_nf|lange _InterlockedOr_nf (long volatile \*, long)|
+|_InterlockedOr_rel|lange _InterlockedOr_rel (long volatile \*, long)|
+|_InterlockedXor|Long _InterlockedXor (long volatile \*, long)|
+|_InterlockedXor16|Short _InterlockedXor16 (short Volatile \*, short)|
+|_InterlockedXor16_acq|kurze _InterlockedXor16_acq (short Volatile \*, short)|
+|_InterlockedXor16_nf|kurze _InterlockedXor16_nf (short Volatile \*, short)|
+|_InterlockedXor16_rel|kurze _InterlockedXor16_rel (short Volatile \*, short)|
+|_InterlockedXor64|__int64 _InterlockedXor64 (\___int64 volatile \*, \___int64)|
+|_InterlockedXor64_acq|__int64 _InterlockedXor64_acq (\___int64 volatile \*, \___int64)|
+|_InterlockedXor64_nf|__int64 _InterlockedXor64_nf (\___int64 volatile \*, \___int64)|
+|_InterlockedXor64_rel|__int64 _InterlockedXor64_rel (\___int64 volatile \*, \___int64)|
+|_InterlockedXor8|Char _InterlockedXor8 (Char Volatile \*, Char)|
+|_InterlockedXor8_acq|_InterlockedXor8_acq char (Char Volatile \*, Char)|
+|_InterlockedXor8_nf|_InterlockedXor8_nf char (Char Volatile \*, Char)|
+|_InterlockedXor8_rel|_InterlockedXor8_rel char (Char Volatile \*, Char)|
+|_InterlockedXor_acq|lange _InterlockedXor_acq (long volatile \*, long)|
+|_InterlockedXor_nf|lange _InterlockedXor_nf (long volatile \*, long)|
+|_InterlockedXor_rel|lange _InterlockedXor_rel (long volatile \*, long)|
+
+[[NEON](#top)]
+
+### <a name="interlockedbittest-intrinsics"></a>_interlockedbittest Intrinsics
+
+Die systeminternen Funktionen "plain interlocked bittest" gibt es auf allen Plattformen. ARM fügt `_acq`, `_rel`, und `_nf` Varianten, die nur die abgrenzungssemantik eines Vorgangs ändern, wie in beschrieben [_nf (keine Fence)-Suffix](#nf_suffix) weiter oben in diesem Artikel.
+
+|Funktionsname|Funktionsprototyp|
+|-------------------|------------------------|
+|_interlockedbittestandreset|unsigned Char _interlockedbittestandreset (long volatile \*, long)|
+|_interlockedbittestandreset_acq|unsigned Char _interlockedbittestandreset_acq (long volatile \*, long)|
+|_interlockedbittestandreset_nf|unsigned Char _interlockedbittestandreset_nf (long volatile \*, long)|
+|_interlockedbittestandreset_rel|unsigned Char _interlockedbittestandreset_rel (long volatile \*, long)|
+|_interlockedbittestandset|unsigned Char _interlockedbittestandset (long volatile \*, long)|
+|_interlockedbittestandset_acq|unsigned Char _interlockedbittestandset_acq (long volatile \*, long)|
+|_interlockedbittestandset_nf|unsigned Char _interlockedbittestandset_nf (long volatile \*, long)|
+|_interlockedbittestandset_rel|unsigned Char _interlockedbittestandset_rel (long volatile \*, long)|
+
+[[NEON](#top)]
+
+## <a name="see-also"></a>Siehe auch
+
+[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
+[Verweis auf den ARM-Assembler](../assembler/arm/arm-assembler-reference.md)<br/>
+[C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)

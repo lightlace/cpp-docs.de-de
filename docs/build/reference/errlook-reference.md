@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8646ad544b6c481ea394add9e6e8faa82919e15
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 09db7dbb2af9294e215ab60c716f73eee821b29a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725035"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438573"
 ---
 # <a name="errlook-reference"></a>ERRLOOK-Referenz
 
@@ -30,14 +30,19 @@ Die Zugriffstasten für kopieren (STRG + C), Ausschneiden (STRG + X) und einfüg
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Steuerelement bearbeiten Wert](../../build/reference/value-edit-control.md) beschreibt den Wert in ERRLOOK enthaltene Bearbeitungssteuerelement.
+[Edit-Steuerelement für Werte](../../build/reference/value-edit-control.md)<br/>
+Beschreibt das in ERRLOOK enthaltene Bearbeitungssteuerelement für Werte.
 
-[Steuerelement für Fehlermeldungen bearbeiten](../../build/reference/error-message-edit-control.md) das Bearbeitungssteuerelement für Fehlermeldungen in ERRLOOK enthaltene beschreibt.
+[Edit-Steuerelement für Fehlermeldungen](../../build/reference/error-message-edit-control.md)<br/>
+Beschreibt das in ERRLOOK enthaltene Bearbeitungssteuerelement für Fehlermeldungen.
 
-[Schaltfläche "Module"](../../build/reference/modules-button.md) wird beschrieben, die in ERRLOOK enthaltene Schaltfläche "Module".
+[Schaltfläche „Module“](../../build/reference/modules-button.md)<br/>
+Beschreibt die in ERRLOOK enthaltene Schaltfläche "Module".
 
-[Suchen (Schaltfläche)](../../build/reference/look-up-button.md) beschreibt die in ERRLOOK enthaltene Schaltfläche Suchen.
+[Schaltfläche „Suchen“](../../build/reference/look-up-button.md)<br/>
+Beschreibt die in ERRLOOK enthaltene Schaltfläche "Suchen".
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-[C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md) enthält Links zu Themen, in denen die C/C++-Buildtools in Visual C++ bereitgestellt.
+[C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md)<br/>
+Enthält Links zu Themen über die mit Visual C++ gelieferten C/C++-Buildtools.

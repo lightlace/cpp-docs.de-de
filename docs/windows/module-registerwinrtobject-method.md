@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a7f5879a3a76e9af795a5dfc808423b43515662a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 496b1ccac5b998ba08f4e2eccfe31ffd18f2c37d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609300"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431787"
 ---
 # <a name="moduleregisterwinrtobject-method"></a>Module::RegisterWinRTObject-Methode
 
@@ -39,16 +39,16 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
 
 ### <a name="parameters"></a>Parameter
 
-*ServerName*  
+*ServerName*<br/>
 Ein Name, der eine Teilmenge der von diesem Vorgang betroffenen Objekte angibt.
 
-*activatableClassIds*  
+*activatableClassIds*<br/>
 Ein Array von aktivierbare CLSIDs registrieren.
 
-*Cookie*  
+*Cookie*<br/>
 Ein Wert, der die Objekte der Klasse identifiziert, die registriert wurden. Dieser Wert wird später verwendet, um die Registrierung aufzuheben.
 
-*count*  
+*count*<br/>
 Die Anzahl von Objekten zu registrieren.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -62,4 +62,5 @@ S_OK, wenn erfolgreich; andernfalls ein Fehler HRESULT, z. B. CO_E_OBJISREG, die
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Siehe auch
+
 [Module-Klasse](../windows/module-class.md)

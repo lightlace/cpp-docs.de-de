@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b50466fc2c357c1d57fca272ff343cd56f3689c5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7092153e49fdb40fc32fb1cbee5bc2376080ff4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604265"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391877"
 ---
 # <a name="runtimeclassbasetasiid-method"></a>RuntimeClassBaseT::AsIID-Methode
 
@@ -41,16 +41,16 @@ __forceinline static HRESULT AsIID(
 
 ### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Ein Typ, die Schnittstellen-ID, die vom Parameter angegebene implementiert *Riid*.
 
-*Implementiert*  
+*Implementiert*<br/>
 Eine Variable des Typs von Template-Parameter angegebenen *T*.
 
-*riid*  
+*riid*<br/>
 Die Schnittstellen-ID abgerufen werden soll.
 
-*ppvObject*  
+*ppvObject*<br/>
 Wenn dieser Vorgang erfolgreich ist, wird ein Zeiger-auf-a-Zeiger auf die Schnittstelle vom-Parameter angegebenen *Riid*.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -69,5 +69,5 @@ Ruft einen Zeiger auf die angegebene Schnittstellen-ID.
 
 ## <a name="see-also"></a>Siehe auch
 
-[RuntimeClassBaseT-Struktur](../windows/runtimeclassbaset-structure.md)  
+[RuntimeClassBaseT-Struktur](../windows/runtimeclassbaset-structure.md)<br/>
 [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: 4.1 OMP_SCHEDULE | Microsoft Docs
+title: 4.1 OMP_SCHEDULE | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,27 +12,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e13332077a40e741f56b5602ac5197bbdfef071
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cbdad5ab56ea6979ae2b5952b092b5e85c7bdfa8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691049"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433451"
 ---
 # <a name="41-ompschedule"></a>4.1 OMP_SCHEDULE
-**OMP_SCHEDULE** gilt nur für **für** und **für parallele** Direktiven, die den Typ "Zeitplan" haben **Runtime**. Die Zeitplan-Typ und Block Größe für alle solchen Schleifen kann zur Laufzeit festgelegt werden, durch diese Umgebungsvariable festlegen, um den Zeitplan erkannten Typen und eine optionale *Chunk_size*.  
-  
- Für **für** und **für parallele** Direktiven, die einen Zeitplantyp anders als **Runtime**, **OMP_SCHEDULE** wird ignoriert. Der Standardwert für diese Umgebungsvariable wird die Implementierung definiert. Wenn das optionale *Chunk_size* festgelegt ist, wird der Wert muss positiv sein. Wenn *Chunk_size* ist nicht festgelegt ist, wird der Wert 1 wird davon ausgegangen, außer im Fall von einem **statische** Zeitplan. Für eine **statische** Zeitplan, die Standardblockgröße festgelegt ist, die Schleife Iteration Speicherplatz geteilt durch die Anzahl der Threads, die auf die Schleife angewendet.  
-  
- Beispiel:  
-  
-```  
-setenv OMP_SCHEDULE "guided,4"  
-setenv OMP_SCHEDULE "dynamic"  
-```  
-  
-## <a name="cross-references"></a>Referenzen:  
-  
--   **für** -Direktive finden Sie unter [Abschnitt 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) auf Seite "11".  
-  
--   **für die parallele** -Direktive finden Sie unter [Abschnitt 2.5.1](../../parallel/openmp/2-5-1-parallel-for-construct.md) auf Seite "16".
+
+**OMP_SCHEDULE** gilt nur für **für** und **für parallele** Direktiven, die den Zeitplantyp **Runtime**. Der Zeitplan Typ und die Block-Größe für alle Schleifen kann zur Laufzeit festgelegt werden, durch Festlegen dieser Umgebungsvariablen, um einen der Zeitplantypen erkannt und ein optionales *Chunk_size*.
+
+Für **für** und **für parallele** Direktiven, die einen Zeitplantyp aufweisen **Runtime**, **OMP_SCHEDULE** wird ignoriert. Der Standardwert für diese Umgebungsvariable wird die Implementierung definiert. Wenn der optionale *Chunk_size* festgelegt ist, wird der Wert muss positiv sein. Wenn *Chunk_size* ist nicht festgelegt ist, wird der Wert 1 wird davon ausgegangen werden, außer im Fall von einem **statische** Zeitplan. Für eine **statische** planen, die standardmäßige Segmentgröße zum Bereich Iteration Schleife geteilt durch die Anzahl der Threads, die angewendet werden, um die Schleife festgelegt ist.
+
+Beispiel:
+
+```
+setenv OMP_SCHEDULE "guided,4"
+setenv OMP_SCHEDULE "dynamic"
+```
+
+## <a name="cross-references"></a>Datenbankübergreifende Verweise:
+
+- **für** -Anweisung finden Sie unter [Abschnitt 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) auf Seite "11".
+
+- **für die parallele** -Anweisung finden Sie unter [Abschnitt 2.5.1](../../parallel/openmp/2-5-1-parallel-for-construct.md) auf Seite "16".

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4422dea0b0bfb07904d0c4defad8f33281a51bec
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c4dd68a3c678b7877db63167fd2c0d48a1daa7ad
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609861"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411832"
 ---
 # <a name="makeallocatorallocate-method"></a>MakeAllocator::Allocate-Methode
 
@@ -54,5 +54,5 @@ Ein Entwickler benötigt, um nur überschreiben die **Allocate()** zu einer ande
 
 ## <a name="see-also"></a>Siehe auch
 
-[MakeAllocator-Klasse](../windows/makeallocator-class.md)  
+[MakeAllocator-Klasse](../windows/makeallocator-class.md)<br/>
 [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

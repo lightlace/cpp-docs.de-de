@@ -1,5 +1,5 @@
 ---
-title: Einzelne 9 Dokumentieren Using-Direktiven | Microsoft Docs
+title: A. 9 Verwenden einzelner Direktiven | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc0e0e08b0b7bdea05bf4c627ae33cc42298c6dc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5a3a201450d54355aa96f0ea712ad9fa0f70f63f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690380"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448089"
 ---
 # <a name="a9---using-single-directives"></a>A.9   Verwenden einzelner Direktiven
-Das folgende Beispiel veranschaulicht die `single` Richtlinie ([Abschnitt 2.4.3](../../parallel/openmp/2-4-3-single-construct.md) auf Seite "15"). Im Beispiel nur ein Thread (in der Regel der erste Thread, der erkennt die `single` Richtlinie) fortschrittsmeldung druckt. Der Benutzer muss keine Annahmen wie auszuführende Bestimmung des Threads wird die `single` Abschnitt. Alle anderen Threads überspringt die `single` Abschnitt, und beenden Sie die Grenze am Ende der `single` erstellen. Wenn andere Threads fortgesetzt werden können, ohne zu warten, der vom Thread ausgeführten der `single` Abschnitt eine `nowait` -Klausel angegeben werden kann, auf die `single` Richtlinie.  
-  
-```  
-#pragma omp parallel  
-{  
-    #pragma omp single  
-        printf_s("Beginning work1.\n");  
-    work1();  
-    #pragma omp single  
-        printf_s("Finishing work1.\n");  
-    #pragma omp single nowait  
-        printf_s("Finished work1 and beginning work2.\n");  
-    work2();  
-}  
+
+Das folgende Beispiel zeigt die `single` Richtlinie ([Abschnitt 2.4.3](../../parallel/openmp/2-4-3-single-construct.md) auf Seite 15). Im Beispiel ist nur ein Thread (normalerweise der erste Thread, der erkennt die `single` Richtlinie) gibt die Meldung von Fortschritt. Der Benutzer muss keine Annahmen zu welchem Thread ausgeführt, wird die `single` Abschnitt. Alle anderen Threads werden übersprungen. die `single` aus, und beenden Sie die Barriere am Ende der `single` zu erstellen. Wenn andere Threads fortgesetzt werden können, ohne zu warten, für die Threadausführung den `single` Abschnitt eine `nowait` Klausel kann angegeben werden, auf die `single` Richtlinie.
+
+```
+#pragma omp parallel
+{
+    #pragma omp single
+        printf_s("Beginning work1.\n");
+    work1();
+    #pragma omp single
+        printf_s("Finishing work1.\n");
+    #pragma omp single nowait
+        printf_s("Finished work1 and beginning work2.\n");
+    work2();
+}
 ```

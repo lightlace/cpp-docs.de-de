@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d700f19235ac18af27fa958420aa4ed467807624
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: e5798c7515c411b9abf9d10229a6185e01bb92f7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538633"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400197"
 ---
 # <a name="exclude-import"></a>exclude (#import)
 **C++-spezifisch**  
@@ -49,5 +49,5 @@ Typbibliotheken können Definitionen der Elemente enthalten, die in Systemheader
   
 ## <a name="see-also"></a>Siehe auch  
  
-[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)   
+[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)

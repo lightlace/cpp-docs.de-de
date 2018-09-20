@@ -16,40 +16,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27afaee16a87ddf428570f7854212eed34634d38
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 424bb8eaa41e3bbb0cf697df108adcef116e1b04
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059328"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379579"
 ---
 # <a name="copyin"></a>copyin
-Ermöglicht die Threads der master-Thread-Wert, für den Zugriff auf eine [Threadprivate](../../../parallel/openmp/reference/threadprivate.md) Variable.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-copyin(var)  
-```  
-  
+
+Ermöglicht die Threads der master-Thread-Wert, für den Zugriff auf eine [Threadprivate](../../../parallel/openmp/reference/threadprivate.md) Variable.
+
+## <a name="syntax"></a>Syntax
+
+```
+copyin(var)
+```
+
 ## <a name="parameters"></a>Parameter
-  
+
 *var*<br/>
-Die `threadprivate` Variable, die mit dem Wert der Variablen in der master-Thread initialisiert wird, wie sie vor dem das parallele Konstrukt vorhanden ist.  
-  
-## <a name="remarks"></a>Hinweise  
- `copyin` gilt für die folgenden Anweisungen:  
-  
--   [parallel](../../../parallel/openmp/reference/parallel.md)  
-  
--   [for](../../../parallel/openmp/reference/for-openmp.md)  
-  
--   [Abschnitte](../../../parallel/openmp/reference/sections-openmp.md)  
-  
- Weitere Informationen finden Sie unter [2.7.2.7 Copyin](../../../parallel/openmp/2-7-2-7-copyin.md).  
-  
-## <a name="example"></a>Beispiel  
- Finden Sie unter [Threadprivate](../../../parallel/openmp/reference/threadprivate.md) ein Beispiel der Verwendung von `copyin`.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klauseln](../../../parallel/openmp/reference/openmp-clauses.md)
+Die `threadprivate` Variable, die mit dem Wert der Variablen in der master-Thread initialisiert wird, wie sie vor dem das parallele Konstrukt vorhanden ist.
+
+## <a name="remarks"></a>Hinweise
+
+`copyin` gilt für die folgenden Anweisungen:
+
+- [parallel](../../../parallel/openmp/reference/parallel.md)
+
+- [for](../../../parallel/openmp/reference/for-openmp.md)
+
+- [Abschnitte](../../../parallel/openmp/reference/sections-openmp.md)
+
+Weitere Informationen finden Sie unter [2.7.2.7 Copyin](../../../parallel/openmp/2-7-2-7-copyin.md).
+
+## <a name="example"></a>Beispiel
+
+Finden Sie unter [Threadprivate](../../../parallel/openmp/reference/threadprivate.md) ein Beispiel der Verwendung von `copyin`.
+
+## <a name="see-also"></a>Siehe auch
+
+[Klauseln](../../../parallel/openmp/reference/openmp-clauses.md)

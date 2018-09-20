@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47fcbdb82501744c8155432e4f4cf220ed945dec
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6140b6764efe530664a1904940f3a8426e6fee02
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709903"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445855"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -43,7 +43,7 @@ Erstellt einen OLE DB-Befehl.
 
 ### <a name="parameters"></a>Parameter
 
-*command*  
+*command*<br/>
 Eine Befehlszeichenfolge, die den Text eines OLE DB-Befehls enthält. Ein einfaches Beispiel lautet:
 
 ```cpp
@@ -64,15 +64,15 @@ Dabei gilt:
 
 - **\[** *BindType* **]** ist eine der folgenden Zeichenfolgen, Groß-/Kleinschreibung:
 
-  -   **\[Db_column]** bindet die einzelnen Membervariablen an eine Spalte in einem Rowset.
+  - **\[Db_column]** bindet die einzelnen Membervariablen an eine Spalte in einem Rowset.
 
-  -   **\[BindTo]** (identisch mit  **\[Db_column]**).
+  - **\[BindTo]** (identisch mit  **\[Db_column]**).
 
-  -   **\[in]** bindet Membervariablen als Eingabeparameter.
+  - **\[in]** bindet Membervariablen als Eingabeparameter.
 
-  -   **\[Out]** bindet Membervariablen als Ausgabeparameter.
+  - **\[Out]** bindet Membervariablen als Ausgabeparameter.
 
-  -   **\[in, Out]** bindet Membervariablen als ein-/Ausgabeparameter.
+  - **\[in, Out]** bindet Membervariablen als ein-/Ausgabeparameter.
 
 - *SzVarX*, *nVarX* wird in einer Membervariablen im aktuellen Gültigkeitsbereich aufgelöst.
 
@@ -99,25 +99,25 @@ TCHAR m_state[3] = 'CA';
 ]
 ```
 
-*name*  
+*name*<br/>
 (Optional) Der Name des Handles, die Sie verwenden, um die Arbeit mit dem Rowset. Wenn Sie *name*angeben, generiert **db_command** eine Klasse mit dem angegebenen *Namen*, das verwendet werden kann, um das Rowset zu traversieren oder mehrere Aktionsabfragen auszuführen. Wenn Sie *name*nicht angeben, ist es nicht möglich, mehr als eine Zeile mit Ergebnissen an den Benutzer zurückzugeben.
 
-*source_name*  
+*source_name*<br/>
 (Optional) Die `CSession` Variable oder eine Instanz einer Klasse, die die `db_source` -Attribut angewendet, auf dem der Befehl ausgeführt wird. Informationen hierzu finden Sie unter [db_source](../windows/db-source.md).
 
 **db_command** stellt sicher, dass die Variable für *source_name* gültig ist, um den Gültigkeitsbereich der angegebenen Variablen auf eine Funktion oder als global festzulegen.
 
-*HRESULT*  
+*HRESULT*<br/>
 (Optional) Identifiziert die Variable, die das HRESULT des diesem Datenbankbefehl erhält. Wenn die Variable nicht existiert, wird sie automatisch durch das Attribut eingefügt.
 
-*bindings*  
+*bindings*<br/>
 (Optional) Ermöglicht Ihnen die Bindungsparameter vom OLE DB-Befehl zu trennen.
 
 Bei Angabe ein Werts für *Bindungen*, **Db_command** analysiert den zugeordneten Wert und nicht die \[ *Bindtype*] Parameter. Dies ermöglicht Ihnen die Verwendung der OLE DB-Anbietersyntax. Geben Sie zum Deaktivieren der Analyse ohne Bindungsparameter `Bindings=""`.
 
 Wenn Sie einen Wert für nicht angeben *Bindungen*, **Db_command** analysiert Bindung Parameterblock, Suche nach "**(**", gefolgt von **\[** _Bindtype_**]** in Klammern, gefolgt von einem oder mehreren zuvor deklarierten C++-Membervariablen, gefolgt von "**)**". Der in Klammern gefasste Text wird aus dem sich ergebenden Befehl entfernt, und diese Parameter werden verwendet, um die Spalten- und Parameterbindungen für diesen Befehl zu erstellen.
 
-*bulk_fetch*  
+*bulk_fetch*<br/>
 (Optional) Ein ganzzahliger Wert, der die Anzahl der abzurufenden Zeilen angibt.
 
 Mit dem Standardwert 1 werden die Zeilen einzeln abgerufen (das Rowset ist vom Typ [CRowset](../data/oledb/crowset-class.md)).
@@ -266,5 +266,5 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 
 ## <a name="see-also"></a>Siehe auch
 
-[OLE DB-Consumerattribute](../windows/ole-db-consumer-attributes.md)  
+[OLE DB-Consumerattribute](../windows/ole-db-consumer-attributes.md)<br/>
 [Eigenständige Attribute](../windows/stand-alone-attributes.md)  

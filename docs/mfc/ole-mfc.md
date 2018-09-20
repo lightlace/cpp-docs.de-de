@@ -1,5 +1,5 @@
 ---
-title: OLE (MFC) | Microsoft Docs
+title: OLE (MFC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0490c6383327531ff04ab3f484aeb4b085ef9106
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86c0178f0ea3bdccf9bd467aa24edc016a767530
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349225"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389108"
 ---
 # <a name="ole-mfc"></a>OLE (MFC)
-Implementieren von OLE-Funktionalität in Ihrem Programm wirkt sich auf der Benutzeroberfläche auf verschiedene Weise aus:  
-  
--   Visuelle Bearbeitung (direkte Aktivierung) wird die Benutzeroberfläche von einem anderen Programm angezeigt wird, in das Programm Windows und des Programms Menüs mit Elementen des anderen Programms ändert.  
-  
--   Drag & Drop können Benutzer Objekte innerhalb und zwischen Windows und auch zwischen Programmen ziehen.  
-  
--   Rahmenstile visuellen Hinweise auf den Zustand der Objekte während des visuelle Bearbeitung bereitstellen und Drag & drop.  
-  
- Weitere Informationen finden Sie unter:  
-  
--   [OLE und MFC](../mfc/ole-in-mfc.md)  
-  
--   [Visuelle Bearbeitung (Aktivierung)](../mfc/activation-cpp.md)  
-  
--   [Drag & Drop](../mfc/drag-and-drop-ole.md)  
-  
--   [Tracker](../mfc/trackers.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Benutzeroberflächenelemente](../mfc/user-interface-elements-mfc.md)
+
+Implementieren von OLE-Funktionalität in Ihrem Programm wirkt sich auf der Benutzeroberfläche auf verschiedene Arten aus:
+
+- Visuelle Bearbeitung (direkte Aktivierung) zeigt die Benutzeroberfläche von einem anderen Programm in den Fenstern und Ihres Programms Menüs mit Elementen des anderen Programms ändert.
+
+- Drag & Drop ermöglicht, Objekte, die innerhalb und zwischen Windows und auch zwischen Programmen zu ziehen.
+
+- Tracker visuelle Hinweise auf den Zustand der Objekte bereitzustellen, während der visuelle Bearbeitung und Drag & drop.
+
+Weitere Informationen finden Sie unter:
+
+- [OLE- und MFC](../mfc/ole-in-mfc.md)
+
+- [Visuelle Bearbeitung (Aktivierung)](../mfc/activation-cpp.md)
+
+- [Drag & Drop](../mfc/drag-and-drop-ole.md)
+
+- [Tracker](../mfc/trackers.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Elemente der Benutzeroberfläche](../mfc/user-interface-elements-mfc.md)

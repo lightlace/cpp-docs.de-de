@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae2d5121e17a9325ec45143e7e90e7d2a211f380
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2892f957cf8937b5b030e7624bf3e39f546a7103
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223097"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437604"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -38,7 +38,7 @@ Gibt eine Zeichenfolge an, die zum Beschreiben des Elements verwendet wird, auf 
 
 ### <a name="parameters"></a>Parameter
 
-*string*  
+*string*<br/>
 Der Text des Hilfe-Zeichenfolge.
 
 ## <a name="remarks"></a>Hinweise
@@ -64,10 +64,10 @@ Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-c
 
 ## <a name="see-also"></a>Siehe auch
 
-[IDL-Attribute](../windows/idl-attributes.md)  
-[Schnittstellenattribut](../windows/interface-attributes.md)  
-[Klassenattribute](../windows/class-attributes.md)  
-[Methodenattribut](../windows/method-attributes.md)  
-[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  
-[helpfile](../windows/helpfile.md)  
+[IDL-Attribute](../windows/idl-attributes.md)<br/>
+[Schnittstellenattribut](../windows/interface-attributes.md)<br/>
+[Klassenattribute](../windows/class-attributes.md)<br/>
+[Methodenattribut](../windows/method-attributes.md)<br/>
+[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[helpfile](../windows/helpfile.md)<br/>
 [helpcontext](../windows/helpcontext.md)  

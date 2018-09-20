@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6dca289631f3289a7976b6dc3482770bf5f3fe7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9f755ee59c7f0b6e4ae9897535cdc536537ba32f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200617"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446505"
 ---
 # <a name="support-for-ansi"></a>Unterstützung von ANSI
-Die meisten MFC-Klassen und Methoden unterstützt die ANSI-Zeichensatz auf, aber MFC-Frameworks als Ganzes sich allmählich in Richtung unterstützen nur die Unicode-Zeichensatz. Aufgrund der laufenden Verbesserungen in Windows Vista und Windows-Standardsteuerelemente Version 6.1 ist die Unterstützung für verschiedene ANSI-Klassen und Methoden veraltet.  Weitere Informationen finden Sie unter [ANSI-APIs als veraltet markiert](../mfc/deprecated-ansi-apis.md) und [-Unterstützung für Unicode](../text/support-for-unicode.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Unterstützung für Unicode](../text/support-for-unicode.md)   
- [Veraltete ANSI-APIs](../mfc/deprecated-ansi-apis.md)   
- [Shell und allgemeine Steuerelemente-Versionen](https://msdn.microsoft.com/library/windows/desktop/bb776779)
+
+Die meisten MFC-Klassen und Methoden unterstützt die ANSI-Zeichensatz auf, aber MFC-Frameworks als Ganzes sich allmählich in Richtung unterstützen nur die Unicode-Zeichensatz. Aufgrund der laufenden Verbesserungen in Windows Vista und Windows-Standardsteuerelemente Version 6.1 ist die Unterstützung für verschiedene ANSI-Klassen und Methoden veraltet.  Weitere Informationen finden Sie unter [ANSI-APIs als veraltet markiert](../mfc/deprecated-ansi-apis.md) und [-Unterstützung für Unicode](../text/support-for-unicode.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Unterstützung für Unicode](../text/support-for-unicode.md)<br/>
+[Veraltete ANSI-APIs](../mfc/deprecated-ansi-apis.md)<br/>
+[Shell und allgemeine Steuerelemente-Versionen](https://msdn.microsoft.com/library/windows/desktop/bb776779)

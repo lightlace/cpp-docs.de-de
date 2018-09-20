@@ -1,5 +1,5 @@
 ---
-title: Datei-e-A-Klassen | Microsoft Docs
+title: Datei-e / A-Klassen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,52 +25,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b11996aadd58b456aa919d4ff888c783b4ba486e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fad854b054ca32819597126c5a4c0b9652df9210
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356185"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442135"
 ---
 # <a name="file-io-classes"></a>Klassen für Datei-E/A
-Diese Klassen bieten eine Schnittstelle zu herkömmlichen Datenträgerdateien, in-Memory-Dateien, aktive Streams und Windows-Sockets. Alle Klassen abgeleitet `CFile` kann verwendet werden, mit einem `CArchive` -Objekt, die Serialisierungen durchführen.  
-  
- Verwenden Sie die folgenden Klassen, insbesondere `CArchive` und `CFile`, wenn Sie eine eigene e/a-Verarbeitung schreiben. Sie müssen normalerweise nicht von diesen Klassen abgeleitet werden. Bei Verwendung von Anwendungsframeworks, standardmäßigen Implementierungen von der **öffnen** und **speichern** Befehle der **Datei** behandelt im Menü Datei-e/a (Klasse mit`CArchive`), sofern Sie Ihr Dokuments überschreiben `Serialize` Funktion geben Sie details zur wie ein Dokument mit dessen Inhalt serialisiert. Weitere Informationen zu den Dateiklassen und die Serialisierung finden Sie im Artikel [Dateien in MFC](../mfc/files-in-mfc.md) und im Artikel [Serialisierung](../mfc/serialization-in-mfc.md).  
-  
- [CFile](../mfc/reference/cfile-class.md)  
- Stellt eine Schnittstelle auf binäre Datenträgerdateien bereit.  
-  
- [CStdioFile](../mfc/reference/cstdiofile-class.md)  
- Bietet eine `CFile` Schnittstelle, um den gepufferten Datenstrom Datenträgerdateien, die in der Regel im Textmodus.  
-  
- [CMemFile](../mfc/reference/cmemfile-class.md)  
- Bietet eine `CFile` Schnittstelle, um in-Memory-Datendateien.  
-  
- [CSharedFile](../mfc/reference/csharedfile-class.md)  
- Bietet eine `CFile` Schnittstelle, um freigegebene in-Memory-Datendateien.  
-  
- [COleStreamFile](../mfc/reference/colestreamfile-class.md)  
- Die COM verwendet `IStream` Schnittstelle `CFile` Zugriff auf Dateien, zusammengesetzte.  
-  
- [CSocketFile](../mfc/reference/csocketfile-class.md)  
- Bietet eine `CFile` Schnittstelle, um einen Windows Socket.  
-  
-## <a name="related-classes"></a>Verwandte Klassen  
- [CArchive](../mfc/reference/carchive-class.md)  
- Arbeitet mit einem `CFile` Objekt permanenten Speicher für Objekte, die über die Serialisierung implementiert (finden Sie unter [Einfügeoperatoren](../mfc/reference/cobject-class.md#serialize)).  
-  
- [CArchiveException](../mfc/reference/carchiveexception-class.md)  
- Eine Ausnahme Archiv.  
-  
- [CFileException](../mfc/reference/cfileexception-class.md)  
- Eine Datei-orientierte-Ausnahme.  
-  
- [CFileDialog](../mfc/reference/cfiledialog-class.md)  
- Stellt ein Standarddialogfeld zum Öffnen oder Speichern einer Datei an.  
-  
- [CRecentFileList](../mfc/reference/crecentfilelist-class.md)  
- Verwaltet die zuletzt verwendeten Dateiliste (MRU).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+
+Diese Klassen bieten eine Schnittstelle zu der herkömmlichen Datenträgerdateien, in-Memory-Dateien, aktive Streams und Windows-Sockets. Alle Klassen abgeleitet `CFile` kann verwendet werden, mit einem `CArchive` Objekt zur Serialisierung.
+
+Verwenden Sie die folgenden Klassen, insbesondere `CArchive` und `CFile`, wenn Sie Ihre eigene e/a-Verarbeitung schreiben. Normalerweise müssen Sie nicht von diesen Klassen abgeleitet werden. Wenn die Anwendung, die standardimplementierungen der Verwendung von der **öffnen** und **speichern** von Befehlen auf der der **Datei** behandelt im Menü Datei-e/a (verwenden -Klasse`CArchive`), solange Sie außer Kraft des Dokuments setzen `Serialize` Funktion geben Sie details zur wie ein Dokument für seinen Inhalt serialisiert. Weitere Informationen zu den Dateiklassen und die Serialisierung finden Sie im Artikel [Dateien in MFC](../mfc/files-in-mfc.md) und im Artikel [Serialisierung](../mfc/serialization-in-mfc.md).
+
+[CFile](../mfc/reference/cfile-class.md)<br/>
+Stellt eine Datei-Schnittstelle für binäre Dateien.
+
+[CStdioFile](../mfc/reference/cstdiofile-class.md)<br/>
+Stellt eine `CFile` Schnittstelle gepufferten Stream auf Dateien auf Datenträgern, in der Regel im Textmodus.
+
+[CMemFile](../mfc/reference/cmemfile-class.md)<br/>
+Stellt eine `CFile` Schnittstelle für InMemory-Dateien.
+
+[CSharedFile](../mfc/reference/csharedfile-class.md)<br/>
+Stellt eine `CFile` Schnittstelle, um freigegebene in-Memory-Dateien.
+
+[COleStreamFile](../mfc/reference/colestreamfile-class.md)<br/>
+Die COM verwendet `IStream` -Schnittstelle zur Bereitstellung `CFile` Zugriff auf Dateien zusammengesetzte.
+
+[CSocketFile](../mfc/reference/csocketfile-class.md)<br/>
+Stellt eine `CFile` Schnittstelle, um einen Windows Socket.
+
+## <a name="related-classes"></a>Verwandte Klassen
+
+[CArchive](../mfc/reference/carchive-class.md)<br/>
+Arbeitet mit einem `CFile` Objekt das Implementieren des permanenten Speicher für Objekte, die über die Serialisierung (finden Sie unter [CObject:: Serialize](../mfc/reference/cobject-class.md#serialize)).
+
+[CArchiveException](../mfc/reference/carchiveexception-class.md)<br/>
+Ausnahme "Archiv".
+
+[CFileException](../mfc/reference/cfileexception-class.md)<br/>
+Eine Ausnahme dateiorientierte.
+
+[CFileDialog](../mfc/reference/cfiledialog-class.md)<br/>
+Stellt ein Standarddialogfeld für öffnen oder Speichern einer Datei bereit.
+
+[CRecentFileList](../mfc/reference/crecentfilelist-class.md)<br/>
+Verwaltet die zuletzt verwendeten Dateiliste (MRU).
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../mfc/class-library-overview.md)
 

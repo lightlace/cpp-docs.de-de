@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a9d59ca1d404e56e7d85a8f0edfe653dc5692558
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7d1addd96456a33b30259182e4490df70335d0d3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584320"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408361"
 ---
 # <a name="invokehelperinvoke-method"></a>InvokeHelper::Invoke-Methode
 
@@ -65,31 +65,31 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parameter
 
-*arg1*  
+*arg1*<br/>
 Das Argument 1.
 
-*Arg2*  
+*Arg2*<br/>
 Argument 2.
 
-*Arg3*  
+*Arg3*<br/>
 Argument 3.
 
-*Arg4*  
+*Arg4*<br/>
 4-Argument.
 
-*Arg5*  
+*Arg5*<br/>
 5-Argument.
 
-*Arg6*  
+*Arg6*<br/>
 6-Argument.
 
-*Arg7*  
+*Arg7*<br/>
 7-Argument.
 
-*Arg8*  
+*Arg8*<br/>
 8-Argument.
 
-*Arg9*  
+*Arg9*<br/>
 9-Argument.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -108,5 +108,5 @@ Ruft den Ereignishandler, dessen Signatur mit die angegebene Anzahl von Argument
 
 ## <a name="see-also"></a>Siehe auch
 
-[InvokeHelper-Struktur](../windows/invokehelper-structure.md)  
+[InvokeHelper-Struktur](../windows/invokehelper-structure.md)<br/>
 [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

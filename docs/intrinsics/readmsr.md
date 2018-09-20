@@ -18,47 +18,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26fb2637c5a92a430d72e496cabeb8f5749ccaa1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d21d33d1e90d7c4aac9ea833d0c5bd80f5172312
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711792"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416603"
 ---
 # <a name="readmsr"></a>__readmsr
-**Microsoft-spezifisch**  
-  
- Generiert die `rdmsr` -Anweisung, die das modellspezifische Register gemäß liest `register` und den Wert zurückgibt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-__int64 __readmsr(   
-   int register   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+
+**Microsoft-spezifisch**
+
+Generiert die `rdmsr` -Anweisung, die das modellspezifische Register gemäß liest `register` und den Wert zurückgibt.
+
+## <a name="syntax"></a>Syntax
+
+```
+__int64 __readmsr( 
+   int register 
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
 *register*<br/>
-[in] Das Modell bestimmte Register lesen.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Der Wert im angegebenen Register.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Systemintern|Architektur|  
-|---------------|------------------|  
-|`__readmsr`|x86, x64|  
-  
- **Headerdatei** \<intrin.h >  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Funktion ist nur im Kernelmodus verfügbar, und die Routine ist nur als systeminterne Funktion verfügbar.  
-  
- Weitere Informationen finden Sie in der AMD-Dokumentation.  
-  
-**Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[in] Das Modell bestimmte Register lesen.
+
+## <a name="return-value"></a>Rückgabewert
+
+Der Wert im angegebenen Register.
+
+## <a name="requirements"></a>Anforderungen
+
+|Systemintern|Architektur|
+|---------------|------------------|
+|`__readmsr`|x86, x64|
+
+**Headerdatei** \<intrin.h >
+
+## <a name="remarks"></a>Hinweise
+
+Diese Funktion ist nur im Kernelmodus verfügbar, und die Routine ist nur als systeminterne Funktion verfügbar.
+
+Weitere Informationen finden Sie in der AMD-Dokumentation.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

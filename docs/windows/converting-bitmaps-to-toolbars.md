@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed77f1df88bb3f3572c3ea819ffac5cb9a1f45b1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 03b12e22adafcbca37910ea556ab9c8a33f9e4d0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317226"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444865"
 ---
 # <a name="converting-bitmaps-to-toolbars-c"></a>Konvertieren von Bitmaps in Symbolleisten (C++)
 
@@ -51,5 +51,5 @@ MFC oder ATL
 
 ## <a name="see-also"></a>Siehe auch
 
-[Erstellen neuer Symbolleisten](../windows/creating-new-toolbars.md)  
+[Erstellen neuer Symbolleisten](../windows/creating-new-toolbars.md)<br/>
 [Symbolleisten-Editor](../windows/toolbar-editor.md)

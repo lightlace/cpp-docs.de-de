@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 096658359ba46744a233d73bba52823dd9997841
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2f63a29e416a0b3331cdc9e5a2153435d765aaa0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315729"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407725"
 ---
 # <a name="associating-an-accelerator-key-with-a-menu-item-c"></a>Verknüpfen einer Zugriffstaste zu einem Menüeintrag (C++)
 
@@ -33,5 +33,5 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zugriffstasten-Editor](../windows/accelerator-editor.md)  
+[Zugriffstasten-Editor](../windows/accelerator-editor.md)<br/>
 [Ressourcen-Editor](../windows/resource-editors.md)

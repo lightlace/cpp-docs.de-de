@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cc0fc8f3177baa01742df84c926a3c6421aa9a16
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 05f4fbfba70b0c97341749fd7e71064487eef9a3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314576"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439899"
 ---
 # <a name="how-to-copy-resources-c"></a>Vorgehensweise: Kopieren von Ressourcen (C++)
 
@@ -74,6 +74,6 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Vorgehensweise: Öffnen einer Ressourcenskriptdatei außerhalb eines Projekts (eigenständig)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)  
-[Ressourcendateien](../windows/resource-files-visual-studio.md)  
+[Vorgehensweise: Öffnen einer Ressourcenskriptdatei außerhalb eines Projekts (eigenständig)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)<br/>
+[Ressourcendateien](../windows/resource-files-visual-studio.md)<br/>
 [Ressourcen-Editor](../windows/resource-editors.md)

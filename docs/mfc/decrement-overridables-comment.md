@@ -1,5 +1,5 @@
 ---
-title: --Overridables-Kommentar | Microsoft Docs
+title: --Overridables-Kommentar | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a1b9b04647717fc5892421f2b45947ebd079a0c
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: d50fb62767f2130e89cb75df5d66f8c18ce2a097
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928726"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428056"
 ---
 # <a name="-overridables-comment"></a>// Overridables-Kommentar
-Die `// Overridables` Abschnitt der Deklaration eines MFC-Klasse enthält virtuelle Funktionen, die Sie in einer abgeleiteten Klasse überschreiben können, wenn Sie das Verhalten der Basisklasse ändern müssen. Sie sind in der Regel mit dem Namen beginnend mit "On", obwohl dies nicht unbedingt erforderlich ist. Hier Funktionen dienen zur außer Kraft gesetzt werden, und häufig zu implementieren oder geben Sie irgendeine der "Callback" oder "verknüpfen". In der Regel sind diese Member geschützt.  
-  
- In MFC selbst werden reine virtuelle Funktionen immer in diesem Abschnitt platziert. Eine reine virtuelle Funktion in C++ ist eine von der Form:  
-  
- `virtual void OnDraw( ) = 0;`  
-  
- In der Stichprobe, die von Klasse auflisten `CStdioFile`im [ein Beispiel für die Kommentare](../mfc/an-example-of-the-comments.md), die Liste enthält keine Overridables-Abschnitt. Klasse `CDocument`, andererseits, ungefähr 10 überschreibbare Memberfunktionen aufgeführt.  
-  
- In einige Klassen möglicherweise auch den Kommentar angezeigt `// Advanced Overridables`. Hierbei handelt es sich um Funktionen, die nur von erfahrenen Programmierern sollten versuchen, um zu überschreiben. Sie benötigen wahrscheinlich nie sie zu überschreiben.  
-  
+
+Die `// Overridables` Teil einer MFC-Klassendeklaration enthält virtuelle Funktionen, die Sie in einer abgeleiteten Klasse überschreiben können, wenn Sie das Verhalten des Basis-Klasse ändern müssen. Sie werden in der Regel mit dem Namen beginnend mit "On", obwohl dies nicht unbedingt erforderlich ist. Hier Funktionen dienen der außer Kraft gesetzt werden, und häufig zu implementieren oder geben Sie eine Art "Callback" oder "verknüpfen". In der Regel sind diese Elemente geschützt.
+
+In MFC selbst sind reine virtuelle Funktionen immer in diesem Abschnitt platziert. Eine reine virtuelle Funktion in C++ ist eine der Form:
+
+`virtual void OnDraw( ) = 0;`
+
+In diesem Beispiel aus der Klasse auflisten `CStdioFile`im [ein Beispiel für die Kommentare](../mfc/an-example-of-the-comments.md), die Liste enthält keine / / Overridables-Abschnitt. Klasse `CDocument`, listet Sie auf der anderen Seite ungefähr 10 überschreibbare Memberfunktionen.
+
+In einigen Klassen, Sie sehen möglicherweise auch den Kommentar `// Advanced Overridables`. Hierbei handelt es sich um Funktionen, die nur von erfahrenen Programmierern versuchen soll, eine Verbindung zu überschreiben. Sie benötigen wahrscheinlich nie um sie zu überschreiben.
+
 > [!NOTE]
->  Die Konventionen, die in diesem Artikel beschriebenen auch funktionieren gut, im Allgemeinen für Automation (früher OLE-Automatisierung) Methoden und Eigenschaften. Automatisierungsmethoden ähneln MFC-Vorgänge. Automatisierungseigenschaften ähneln MFC-Attribute. Überschreibbare Memberfunktionen von MFC ähneln Automatisierungsereignisse (unterstützt für ActiveX-Steuerelemente, früher OLE-Steuerelemente).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden der MFC-Quelldateien](../mfc/using-the-mfc-source-files.md)   
- [Ein Beispiel für Kommentare](../mfc/an-example-of-the-comments.md)   
- [/ / Implementierungskommentar](../mfc/decrement-implementation-comment.md)   
- [Konstruktoren Kommentar](../mfc/decrement-constructors-comment.md)   
- [Attributekommentar](../mfc/decrement-attributes-comment.md)   
- [Vorgänge-Kommentar](../mfc/decrement-operations-comment.md)
+>  Die Konventionen, die in diesem Artikel beschriebenen funktionieren auch gut, im Allgemeinen für Automation (früher als OLE-Automatisierung) Methoden und Eigenschaften. Automatisierungsmethoden ähneln MFC-Vorgänge. Automatisierungseigenschaften ähneln MFC-Attribute. Benutzeroberflächenautomatisierungs-Ereignissen (unterstützt für ActiveX-Steuerelemente, früher bekannt als OLE-Steuerelemente) ähneln MFC überschreibbare Memberfunktionen.
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden der MFC-Quelldateien](../mfc/using-the-mfc-source-files.md)<br/>
+[Ein Beispiel für die Kommentare](../mfc/an-example-of-the-comments.md)<br/>
+[/ / Implementierungskommentar](../mfc/decrement-implementation-comment.md)<br/>
+[/ Constructors-Kommentar](../mfc/decrement-constructors-comment.md)<br/>
+[Attributekommentar](../mfc/decrement-attributes-comment.md)<br/>
+[Vorgänge-Kommentar](../mfc/decrement-operations-comment.md)
 

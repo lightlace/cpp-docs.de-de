@@ -1,5 +1,5 @@
 ---
-title: Implementieren der Statusleiste in MFC | Microsoft Docs
+title: Implementieren der Statusleiste in MFC | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,39 +26,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cadb06076ff7a3dd481a1bcedc9cd0afe4989f28
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: e593227daabb2d2c25d593cfb58ef23ba7855be7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950447"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436714"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Implementieren der Statusleiste mit MFC
-Ein [CStatusBar](../mfc/reference/cstatusbar-class.md) Objekt ist eine Steuerleiste mit einer Zeile von Textausgabebereichen. Die Ausgabebereiche werden häufig als Nachricht Linien und als Statusindikatoren verwendet. Beispiele sind im Menü Hilfe-Nachricht Zeilen, die den ausgewählten Menübefehl kurz und die Indikatoren, die den Status von Rollen, NUM- und andere Schlüssel anzuzeigen.  
-  
- Ab MFC 4.0 werden Statusleisten implementiert, mit der Klasse [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), die eine Statusleiste Standardsteuerelements kapselt. Für die Abwärtskompatibilität behält MFC die ältere Status Befehlsleisten-Standardimplementierung in Klasse `COldStatusBar`. Die Dokumentation für frühere Versionen von MFC beschreibt `COldStatusBar` unter `CStatusBar`.  
-  
- [GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl), eine Memberfunktion neue MFC 4.0, können Sie das allgemeine Windows-Steuerelement-Unterstützung für Statusleiste Anpassung und zusätzliche Funktionen nutzen. `CStatusBar` Memberfunktionen geben Ihnen die meisten Funktionen des allgemeinen Windows-Steuerelemente; allerdings beim Aufruf `GetStatusBarCtrl`, Ihre Statusleisten noch länger die Merkmale einer Statusleiste erteilen. Beim Aufruf `GetStatusBarCtrl`, er wird zurückgegeben, einen Verweis auf ein `CStatusBarCtrl` Objekt. Dieser Verweis können Sie um das StatusBar-Steuerelement zu bearbeiten.  
-  
- Die folgende Abbildung zeigt eine Statusleiste, in dem mehrere Indikatoren angezeigt.  
-  
- ![Statusleiste](../mfc/media/vc37dy1.gif "vc37dy1")  
-Statusleiste  
-  
- Wie die Symbolleiste das Statusleiste Objekt ist in seiner übergeordneten Rahmenfensters eingebettet und wird automatisch erstellt, wenn das Rahmenfenster erstellt wird. Die Statusleiste, wie alle Steuerleisten automatisch ebenfalls zerstört, wenn der übergeordneten Frame zerstört wird.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
-  
--   [Aktualisieren des Textes in der eine Status-Leistenbereich](../mfc/updating-the-text-of-a-status-bar-pane.md)  
-  
--   MFC-Klassen [CStatusBar](../mfc/reference/cstatusbar-class.md) und [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)  
-  
--   [Steuerleisten](../mfc/control-bars.md)  
-  
--   [Dialogleisten](../mfc/dialog-bars.md)  
-  
--   [Symbolleisten (MFC-Symbolleistenimplementierung)](../mfc/mfc-toolbar-implementation.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Statusleisten](../mfc/status-bars.md)
+
+Ein [CStatusBar](../mfc/reference/cstatusbar-class.md) Objekt ist eine Steuerleiste mit einer Zeile von Textausgabebereichen. Die Ausgabebereiche werden häufig als Nachricht Zeilen und Statusindikatoren verwendet. Beispiele sind im Menü hilfemeldung Zeilen, die der ausgewählten Menübefehls kurz erläutert wird und die Indikatoren, die den Status des Rollen-Taste, NUM- und andere Product Keys anzuzeigen.
+
+Ab MFC 4.0, Statusleisten werden durch-Klasse implementiert [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), die eine Statusleiste Standardsteuerelements kapselt. Für die Abwärtskompatibilität behält MFC die ältere Status Befehlsleisten-Standardimplementierung in Klasse `COldStatusBar`. Die Dokumentation für frühere Versionen von MFC beschreibt `COldStatusBar` unter `CStatusBar`.
+
+[GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl), eine Memberfunktion neue MFC 4.0, können Sie das allgemeine Windows-Steuerelement-Unterstützung für die Statusleiste anpassen und zusätzliche Funktionen nutzen. `CStatusBar` Member-Funktionen bieten Ihnen die meisten Funktionen der allgemeinen Windows-Steuerelemente; Wenn Sie jedoch aufrufen, `GetStatusBarCtrl`, Sie können den Statusleisten erteilen, sogar noch mehr Merkmale der Statusleiste. Beim Aufruf `GetStatusBarCtrl`, es gibt einen Verweis auf eine `CStatusBarCtrl` Objekt. Sie können diesen Verweis verwenden, das StatusBar-Steuerelement zu bearbeiten.
+
+Die folgende Abbildung zeigt eine Statusleiste, in dem mehrere Indikatoren angezeigt.
+
+![Statusleiste](../mfc/media/vc37dy1.gif "vc37dy1") eine Statusleiste
+
+Wie die Symbolleiste wird das Objekt mit der Statusleiste in seiner übergeordneten Rahmenfensters eingebettet ist, und wird automatisch erstellt, wenn das Rahmenfenster erstellt wird. Die Statusleiste, wie alle Steuerleisten, automatisch auch zerstört, wenn der übergeordneten Frame zerstört wird.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+
+- [Aktualisieren des Textes einen Statusleistenbereich](../mfc/updating-the-text-of-a-status-bar-pane.md)
+
+- MFC-Klassen [CStatusBar](../mfc/reference/cstatusbar-class.md) und [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)
+
+- [Steuerleisten](../mfc/control-bars.md)
+
+- [Dialogleisten](../mfc/dialog-bars.md)
+
+- [Symbolleisten (MFC-Symbolleisten-Implementierung)](../mfc/mfc-toolbar-implementation.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Statusleisten](../mfc/status-bars.md)
 

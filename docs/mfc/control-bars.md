@@ -1,5 +1,5 @@
 ---
-title: Steuerleisten | Microsoft Docs
+title: Steuerleisten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,51 +24,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 179e959ce4d6a516f51576712e50408ef41d5c7e
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 8583b0ceba041ba9b99cb78e523d78bba71414a5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931790"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439626"
 ---
 # <a name="control-bars"></a>Steuerleisten
-"Steuerleiste" ist der allgemeine Name für Symbolleisten, Statusleisten und Dialogleisten. MFC-Klassen `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, und `CReBar` Klasse ableiten [CControlBar](../mfc/reference/ccontrolbar-class.md), der ihre allgemeine Funktionen implementiert.  
-  
- Steuerleisten sind Fenster, die Zeilen der Steuerelemente angezeigt, mit dem Benutzer können Optionen auswählen, Ausführen von Befehlen oder Programminformationen zu erhalten. Steuerleisten Anweisungstypen Dialogleisten, Symbolleisten und Statusleisten.  
-  
--   Symbolleisten in der Klasse [CToolBar](../mfc/reference/ctoolbar-class.md)  
-  
--   Statusleisten, in der Klasse [CStatusBar](../mfc/reference/cstatusbar-class.md)  
-  
--   Dialogleisten in Klasse [CDialogBar](../mfc/reference/cdialogbar-class.md)  
-  
--   Infoleisten in der Klasse [CReBar](../mfc/reference/crebar-class.md)  
-  
+
+"" Ist der allgemeine Name für Symbolleisten, Statusleisten und Dialogleisten. MFC-Klassen `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, und `CReBar` Klasse abgeleitet [CControlBar](../mfc/reference/ccontrolbar-class.md), der ihre allgemeine Funktionen implementiert.
+
+Steuerleisten sind Fenster, die Reihen von Steuerelementen angezeigt, mit dem Benutzer können Optionen auswählen, führen Sie Befehle oder erhalten Informationen zum Programm, an. Steuerleisten zählen Dialogleisten, Symbolleisten und Statusleisten.
+
+- Symbolleisten in der Klasse [CToolBar](../mfc/reference/ctoolbar-class.md)
+
+- Statusleisten, in der Klasse [CStatusBar](../mfc/reference/cstatusbar-class.md)
+
+- Dialogleisten in der Klasse [CDialogBar](../mfc/reference/cdialogbar-class.md)
+
+- Infoleisten in der Klasse [CReBar](../mfc/reference/crebar-class.md)
+
 > [!IMPORTANT]
->  Ab MFC-Version 4.0, Symbolleisten, Statusleisten und Tools werden Tipps implementiert, mit der Systemfunktionalität implementiert die *comctl32.dll* anstelle der vorherigen, MFC-spezifischen Implementierung. MFC-Version 6.0 `CReBar`, die auch comctl32.dll-Funktionalität umschließt hinzugefügt wurde.  
-  
- Führen Sie die kurze Einführungen in die Steuerleiste Typen. Weitere Informationen finden Sie unter den Links unten.  
-  
-## <a name="control-bars"></a>Steuerleisten  
- Steuerleisten erweitern erheblich Verwendbarkeit eines Programms schnell, mit nur einem Schritt Befehlsaktionen bereitstellen. Klasse `CControlBar` stellt die allgemeine Funktionen aller Symbolleisten, Statusleisten und Dialogleisten bereit. `CControlBar` Stellt die Funktionalität zum Positionieren der Steuerleiste in seiner übergeordneten Rahmenfensters bereit. Da eine Steuerleiste, die in der Regel ein untergeordnetes Fenster eines übergeordneten Rahmenfensters ist, ist es ein gleichgeordnetes "Element" auf der Clientansicht oder des MDI-Clients des Rahmenfensters. Eine Steuerleiste Objekt verwendet Informationen Clientrechteck des übergeordneten Fensters, um sich selbst zu positionieren. Klicken Sie dann ändert es des übergeordneten Elements verbleibenden Clientfenster Rechteck, damit der Clientansicht oder des MDI-Client-Fenster den Rest des Clientfensters ausgegeben wird.  
-  
+>  Ab MFC-Version 4.0, Symbolleisten, Statusleisten und Tools werden Tipps implementiert, mithilfe von Systemfunktionen in implementiert die *comctl32.dll* anstelle der vorherigen, MFC-spezifischen Implementierung. MFC-Version 6.0 `CReBar`, die auch comctl32.dll Funktionalität umschließt wurde hinzugefügt.
+
+Führen Sie die kurze Einführungen in die Typen der Steuerleiste. Weitere Informationen finden Sie unter folgenden Links.
+
+## <a name="control-bars"></a>Steuerleisten
+
+Steuerleisten zur Verbesserung der erheblich eines Programms Verwendbarkeit schnell, Befehlsaktionen in einem Schritt bereitstellen. Klasse `CControlBar` stellt die allgemeine Funktionalität alle Symbolleisten, Statusleisten und Dialogleisten bereit. `CControlBar` Stellt die Funktionalität für die Positionierung der Steuerleiste des übergeordneten Frame-Fensters bereit. Da eine Steuerleiste, die in der Regel ein untergeordnetes Fenster eines übergeordneten Rahmenfensters ist, ist es ein gleichgeordnetes "Element" auf der Clientansicht oder des MDI-Clients des Rahmenfensters. Ein Objekt der Steuerleiste verwendet Informationen über Clientrechteck des übergeordneten Fensters zum eigenen positionieren. Und dann die verbleibenden-Clientfenster-Rechteck des übergeordneten Elements ändert, damit der Clientansicht oder des MDI-Clientfenster den Rest der Clientfenster füllt.
+
 > [!NOTE]
->  Wenn eine Schaltfläche auf der Steuerleiste besitzt eine **Befehl** oder **UPDATE_COMMAND_UI** Handler auf, das Framework automatisch die Schaltfläche deaktiviert.  
-  
-## <a name="toolbars"></a>Symbolleisten  
- Eine Symbolleiste ist eine Steuerleiste, die eine Zeile mit Bitmapschaltflächen anzeigt, die Befehle auszuführen. Drücken eine Symbolleisten-Schaltfläche entspricht der Auswahl eines Menüelements; Er ruft den gleichen Handler, ein Menüelement zugeordnet werden, wenn das Menüelement die gleiche ID wie die Symbolleisten-Schaltfläche verfügt. Die Schaltflächen können angezeigt und verhält sich wie Druckknöpfe, Optionsfelder und Kontrollkästchen konfiguriert werden. Eine Symbolleiste ist in der Regel am oberen Rand eines Rahmenfensters ausgerichtet, aber eine MFC-Symbolleiste kann "andocken" auf jeder Seite des übergeordneten Fensters oder "float" in einem eigenen Minirahmenfenster. Eine Symbolleiste kann auch "float" und können Sie seine Größe ändern und mit der Maus ziehen. Eine Symbolleiste kann auch QuickInfos anzeigen, wenn der Benutzer die Maus über die Schaltflächen der Symbolleiste bewegt. Eine QuickInfo ist eine kleine Popupfenster, der den Zweck der Schaltfläche kurz beschreibt.  
-  
+>  Wenn eine Schaltfläche auf der Steuerleiste besitzt eine **Befehl** oder **wähle ich UPDATE_COMMAND_UI** Handler auf, das Framework automatisch die Schaltfläche deaktiviert.
+
+## <a name="toolbars"></a>Symbolleisten
+
+Eine Symbolleiste ist eine Steuerleiste, die eine Zeile mit Bitmapschaltflächen anzeigt, die Befehle ausführen. Eine Symbolleisten-Schaltfläche drücken entspricht der Auswahl eines Menüelements. Sie ruft den gleichen Handler an ein Menüelement zugeordnet ist, wenn das Menüelement die gleiche ID wie die Symbolleisten-Schaltfläche verfügt. Die Schaltflächen können angezeigt und verhält sich wie Druckknöpfe, Kontrollkästchen oder Optionsfelder konfiguriert werden. Eine Symbolleiste ist in der Regel am oberen Rand eines Rahmenfensters ausgerichtet, aber eine MFC-Symbolleiste kann "andocken" auf jeder Seite des übergeordneten Fensters oder "float" in einem eigenen kleinen Rahmenfenster-Fenster. Eine Symbolleiste kann auch "float", und Sie seine Größe ändern können, und ziehen Sie es mit der Maus. Eine Symbolleiste kann auch QuickInfos angezeigt, wenn der Benutzer die Maus über die Schaltflächen der Symbolleiste bewegt. Eine QuickInfo ist eine kleine Popupfenster, das beschreibt den Zweck der Schaltfläche.
+
 > [!NOTE]
->  Ab MFC 4.0-Klasse [CToolBar](../mfc/reference/ctoolbar-class.md) der allgemeinen Windows-Symbolleisten-Steuerelements verwendet. Ein `CToolBar` enthält eine [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md). Ältere Symbolleisten werden weiterhin unterstützt. Finden Sie im Artikel [Symbolleisten](../mfc/mfc-toolbar-implementation.md).  
-  
-## <a name="status-bars"></a>Statusleisten  
- Eine Statusleiste ist eine Steuerleiste, die enthält Bereiche der Ausgabe von Text, oder "Indikatoren" genannt. Die Ausgabebereiche werden häufig als Nachricht Linien und als Statusindikatoren verwendet. Nachricht zählen Zeile die Hilfetext Befehlszeilen, die dem ausgewählten Menü oder die Befehle der Hilfesymbolleiste im linken Bereich der vom MFC-Anwendungs-Assistenten erstellte Standard-Statusleiste kurz erläutert. Beispiele für Statusanzeigen umfassen Rollen, NUM- und andere Schlüssel. Statusleisten sind in der Regel an den unteren Rand eines Rahmenfensters ausgerichtet. Siehe Klasse [CStatusBar](../mfc/reference/cstatusbar-class.md) und Klasse [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md).  
-  
-## <a name="dialog-bars"></a>Dialogleisten  
- Eine Dialogleiste ist eine Steuerleiste, die basierend auf einer Dialogfeldvorlagen-Ressource mit der Funktionalität eines nicht modalen Dialogfelds an. Dialogleisten darf Windows, benutzerdefinierte oder ActiveX-Steuerelemente. Wie in einem Dialogfeld kann der Benutzer zwischen den Steuerelementen auf der Registerkarte. Dialogleisten können nach oben, unten, links oder rechts Rand eines Rahmenfensters ausgerichtet werden, und sie können auch in ihre eigenen Rahmenfenster umfließt. Siehe Klasse [CDialogBar](../mfc/reference/cdialogbar-class.md).  
-  
-## <a name="rebars"></a>Infoleisten  
- Ein [Grundleisten](../mfc/using-crebarctrl.md) ist eine Steuerleiste, die andocken, Layout, Status und Persistenz Informationen für Grundleisten-Steuerelemente bereitstellt. Ein Grundleisten-Objekt kann eine Vielzahl von untergeordnete Fenster, in der Regel andere Steuerelemente, einschließlich Bearbeitungsfelder, Symbolleisten und Listenfelder enthalten. Ein Grundleisten-Objekt kann über eine angegebene Bitmap zugehöriges untergeordnetes Fenster anzuzeigen. Es kann automatisch oder manuell geändert werden durch Klicken oder ziehen die Ziehpunktleiste. Siehe Klasse [CReBar](../mfc/reference/crebar-class.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Benutzeroberflächenelemente](../mfc/user-interface-elements-mfc.md)
+>  Ab MFC 4.0, Klasse [CToolBar](../mfc/reference/ctoolbar-class.md) verwendet die allgemeine Windows-Symbolleisten-Steuerelement. Ein `CToolBar` enthält eine [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md). Ältere Symbolleisten werden jedoch weiterhin unterstützt. Finden Sie im Artikel [Symbolleisten](../mfc/mfc-toolbar-implementation.md).
+
+## <a name="status-bars"></a>Statusleisten
+
+Eine Statusleiste ist eine Steuerleiste, die Text-Ausgabebereiche oder "Indikatoren" enthält Die Ausgabebereiche werden häufig als Nachricht Zeilen und Statusindikatoren verwendet. Beispiele für Zeile enthalten die hilfemeldung Befehlszeilen, die dem ausgewählten Menü oder die Befehle der Hilfesymbolleiste im Bereich der vom MFC-Anwendungs-Assistenten erstellten Standard-Statusleiste am weitesten links stehende kurz erläutern. Beispiele für Statusanzeigen enthalten, die Rollen-Taste, NUM- und andere Schlüssel. StatusBar-Steuerelemente werden in der Regel am unteren Rand eines Rahmenfensters ausgerichtet. Finden Sie unter Klasse [CStatusBar](../mfc/reference/cstatusbar-class.md) und Klasse [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md).
+
+## <a name="dialog-bars"></a>Dialogleisten
+
+Eine Dialogleiste ist eine Steuerleiste, die basierend auf einer Dialogfeldvorlagen-Ressource, mit der Funktionalität eines nicht modalen Dialogfelds an. Dialogleisten darf Windows, benutzerdefinierte oder ActiveX-Steuerelemente. Wie in einem Dialogfeld kann der Benutzer zwischen den Steuerelementen Registerkarte. Dialogleisten, oben, unten, links oder rechts Rand eines Rahmenfensters ausgerichtet werden können, und sie können auch in ihre eigenen Rahmenfenster abgedockt werden. Finden Sie unter Klasse [CDialogBar](../mfc/reference/cdialogbar-class.md).
+
+## <a name="rebars"></a>Infoleisten
+
+Ein [Infoleiste](../mfc/using-crebarctrl.md) ist eine Steuerleiste, die andocken, Layout, Status und Persistenz Informationen für Grundleisten-Steuerelemente bereitstellt. Einem Grundleisten-Objekt kann es sich um eine Vielzahl untergeordneter Fenster, in der Regel andere Steuerelemente, einschließlich Bearbeitungsfelder, Symbolleisten und Listenfelder enthalten. Zugehöriges untergeordnetes Fenster kann von einem Grundleisten-Objekt über eine angegebene Bitmap anzeigen. Dann kann automatisch oder manuell geändert werden durch Klicken oder ziehen die Ziehpunktleiste. Finden Sie unter Klasse [CReBar](../mfc/reference/crebar-class.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Elemente der Benutzeroberfläche](../mfc/user-interface-elements-mfc.md)

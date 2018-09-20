@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a39b4147bd997659f264b60fb1fc88956784bbaf
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: d72e37b8625480779620025dfd1e1eda1101b824
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318187"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430552"
 ---
 # <a name="working-with-resource-files"></a>Arbeiten mit Ressourcendateien
 
@@ -39,24 +39,24 @@ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Ressourcendateien](../windows/resource-files-visual-studio.md)  
+[Ressourcendateien](../windows/resource-files-visual-studio.md)<br/>
 Beschreibt die Ressourcendateien und wie sie in Windows-Desktopanwendungen verwendet werden. Bietet auch Links zu Themen, unter denen beschrieben wird, wie die Ressourcendateien verwendet werden.
 
-[Symbole: Ressourcenbezeichner](../windows/symbols-resource-identifiers.md)  
+[Symbole: Ressourcenbezeichner](../windows/symbols-resource-identifiers.md)<br/>
 Beschreiben Symbole und bieten Informationen zur Verwendung des Dialogfelds **Ressourcensymbole** , um Symbole in Ihren Projekten zu verwalten.
 
-[Ressourcen-Editor](../windows/resource-editors.md)  
+[Ressourcen-Editor](../windows/resource-editors.md)<br/>
 Beschreibt die Ressourcen-Editoren, die in Visual Studio bereitgestellt werden, die Arten an Ressourcen, die Sie mit jedem Editor ändern können, und bietet Links zu detaillierten Informationen über den Einsatz jedes Editors.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-[Visual C++](../visual-cpp-in-visual-studio.md)  
+[Visual C++](../visual-cpp-in-visual-studio.md)<br/>
 Enthält Links zur Visual C++-Dokumentation
 
-[Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)  
+[Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)<br/>
 Bietet Links zu Informationen über die Verwendung des Dokumentationssatzes, Support-Kontaktdaten sowie über die Bereitstellung von Barrierefreiheitsfunktionen.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Windows-Desktop-Anwendungen](../windows/windows-desktop-applications-cpp.md)  
+[Windows-Desktop-Anwendungen](../windows/windows-desktop-applications-cpp.md)<br/>
 [Menüs und weitere Ressourcen](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

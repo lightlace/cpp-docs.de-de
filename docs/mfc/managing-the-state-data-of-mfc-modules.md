@@ -1,5 +1,5 @@
 ---
-title: Verwalten der Statusdaten von MFC-Modulen | Microsoft Docs
+title: Verwalten der Statusdaten von MFC-Modulen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,37 +22,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5c2bced4f7f04cf75c72e68db0f99e0f89d2566
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: f1077128ec417ab0cd3e1fb0d5b7e57e1ffaec37
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930515"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442798"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>Verwalten der Statusdaten von MFC-Modulen
-Dieser Artikel beschreibt die Statusdaten von MFC-Modulen und wie dieser Status aktualisiert wird, wenn Sie der Fluss der Ausführung (im Path-Code findet sich durch eine Anwendung, für die Ausführung) erreicht oder verlässt ein Modul. Wechseln mit den Makros AFX_MANAGE_STATE und METHOD_PROLOGUE Modulzustände wird ebenfalls erläutert.  
-  
+
+Dieser Artikel beschreibt die Statusdaten von MFC-Modulen und wie dieser Status aktualisiert wird, wenn es sich bei der Ablauf der Ausführung (im Path-Code wird sich durch eine Anwendung, wenn die Ausführung) gibt, und bewirkt, dass ein Modul. Modulzustände mit den Makros AFX_MANAGE_STATE und METHOD_PROLOGUE wechseln, wird ebenfalls erläutert.
+
 > [!NOTE]
->  Das Begriff "Modul" Hier bezieht sich auf ein ausführbares Programm oder eine DLL (oder einen Satz von DLLs) an, die unabhängig von der Rest der Anwendung ausgeführt werden, verwendet jedoch eine gemeinsame Kopie der MFC-DLL. Ein ActiveX-Steuerelement ist ein typisches Beispiel für ein Modul.  
-  
- Wie in der folgenden Abbildung dargestellt, hat MFC Statusdaten für jedes Modul in einer Anwendung verwendet. Beispiele für diese Daten sind Windows-Instanz-Handles (verwendet zum Laden von Ressourcen), Zeiger auf den aktuellen `CWinApp` und `CWinThread` Objekte von einer Anwendung, Verweiszähler für OLE-Modul und eine Vielzahl von Zuordnungen, die die Verbindungen zwischen verwalten Windows-Objekt behandelt und entsprechenden Instanzen von MFC-Objekten. Wenn eine Anwendung mehrere Module verwendet, das die Zustandsdaten der einzelnen Module ist jedoch nicht Anwendung breit. Stattdessen verfügt jedes Modul über eine eigene Kopie der Daten für die MFC-Zustand.  
-  
- ![Zustandsdaten eines einzelmoduls &#40;Anwendung&#41;](../mfc/media/vc387n1.gif "vc387n1")  
-Zustandsdaten eines Einzelmoduls (Anwendung)  
-  
- Statusdaten für ein Modul ist in einer Struktur enthalten und ist immer über einen Zeiger auf dieser Struktur verfügbar. Wenn der Fluss der Ausführung ein bestimmtes Moduls eingibt, wie in der folgenden Abbildung gezeigt, muss der Status dieses Moduls den Status "Aktuell" oder "effektive" sein. Deshalb hat jede Threadobjekt einen Zeiger auf die gültige Statusstruktur dieser Anwendung. This-Zeiger überhaupt aktualisiert das schützen Zeiten ist ausschlaggebend, Verwalten von globalen Status der Anwendung sowie die Integrität des Status für jedes Modul. Eine fehlerhafte Verwaltung des globalen Status kann zu unvorhersehbarem Anwendungsverhalten führen.  
-  
- ![Zustandsdaten mehrerer Module](../mfc/media/vc387n2.gif "vc387n2")  
-Zustandsdaten mehrerer Module  
-  
- Das heißt, ist jedes Modul für ordnungsgemäß Wechsel zwischen den Modulzustände aller seiner Einstiegspunkte verantwortlich. Ein "Einstiegspunkt" ist eine beliebige Stelle, in der Fluss der Ausführung des Moduls Code eingeben können. Einstiegspunkte sind:  
-  
--   [Exportierte Funktionen in einer DLL](../mfc/exported-dll-function-entry-points.md)  
-  
--   [Memberfunktionen von COM-Schnittstellen](../mfc/com-interface-entry-points.md)  
-  
--   [Fensterprozeduren](../mfc/window-procedure-entry-points.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Allgemeine MFC-Themen](../mfc/general-mfc-topics.md)
+>  Das Begriff "Modul" Hier bezieht sich ein ausführbares Programm oder eine DLL (oder einen Satz von DLLs) an, die unabhängig vom Rest der Anwendung ausgeführt werden, verwendet jedoch eine gemeinsame Kopie der MFC-DLL. Ein ActiveX-Steuerelement ist ein typisches Beispiel für ein Modul.
+
+Wie in der folgenden Abbildung gezeigt wird, hat MFC Statusdaten für jedes Modul in einer Anwendung verwendet. Beispiele für diese Daten sind, wird der Windows-Instanz (für das Laden von Ressourcen verwendet), Zeiger auf die aktuelle `CWinApp` und `CWinThread` Objekte von einer Anwendung, einen Zähler für OLE-Modul und eine Vielzahl von Zuordnungen, die die Verbindungen zwischen verwalten Windows Objekt behandelt und die entsprechenden Instanzen von MFC-Objekten. Wenn eine Anwendung mehrere Module verwendet, die Daten der einzelnen Module ist jedoch nicht Anwendung breit. Stattdessen verfügt jedes Modul eine eigene Kopie der Daten für die MFC Zustand.
+
+![Zustandsdaten eines einzelmoduls &#40;Anwendung&#41;](../mfc/media/vc387n1.gif "vc387n1") Zustandsdaten eines Einzelmoduls (Anwendung)
+
+Zustandsdaten des Moduls in einer Struktur enthalten ist, und es ist immer verfügbar, über einen Zeiger auf dieser Struktur. Wenn der Ausführungsablauf von einem bestimmten Modul eingibt, wie in der folgenden Abbildung gezeigt, muss der Status dieses Moduls den Status "current" oder "effektive" sein. Daher muss jeder Thread-Objekt einen Zeiger auf den effektiven Statusstruktur der Anwendung. Halten diesen Zeiger, die stets Zeiten ist wichtig, Verwalten des globalen Status der Anwendung und die Wahrung der Integrität des Moduls Zustand. Eine fehlerhafte Verwaltung des globalen Status kann zu unvorhersehbarem Anwendungsverhalten führen.
+
+![Zustandsdaten mehrerer Module](../mfc/media/vc387n2.gif "vc387n2") Statusdaten von mehreren Modulen
+
+Das heißt, ist jedes Modul für ordnungsgemäß Wechseln zwischen Modulzustände alle den-Einstiegspunkten verantwortlich. Ein "Einstiegspunkt" ist eine beliebige Stelle, über der Ablauf der Ausführung des Moduls Code eingeben können. Einstiegspunkte sind:
+
+- [Exportierte Funktionen in einer DLL](../mfc/exported-dll-function-entry-points.md)
+
+- [Memberfunktionen von COM-Schnittstellen](../mfc/com-interface-entry-points.md)
+
+- [Fensterprozeduren](../mfc/window-procedure-entry-points.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Allgemeine MFC-Themen](../mfc/general-mfc-topics.md)
 

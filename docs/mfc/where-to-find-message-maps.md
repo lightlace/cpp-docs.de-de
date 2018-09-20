@@ -1,5 +1,5 @@
 ---
-title: Wo sich Meldungszuordnungen befinden | Microsoft Docs
+title: Wo sich Meldungszuordnungen befinden | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19dfaec7d97bed560665fce25c2ddf2cc816a483
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81958eda508a3e0b4b93ac0d169f3aa3bfece2a2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383392"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434270"
 ---
 # <a name="where-to-find-message-maps"></a>Wo sich Meldungszuordnungen befinden
-Wenn Sie eine neue skelettanwendung mit dem Assistenten zum Erstellen, schreibt der Anwendungs-Assistent eine meldungszuordnung für jede Befehlsziel Klasse, die es erstellt für Sie. Dies schließt die abgeleiteten Anwendung, Dokument anzeigen und Rahmenfensterklassen. Einige dieser meldungszuordnungen wurde bereits die Einträge, die vom Anwendungs-Assistenten für bestimmte Nachrichten und die vordefinierten Befehle bereitgestellt, und einige sind einfach Platzhalter für Handler, die hinzugefügt wird.  
-  
- Meldungszuordnung für eine Klasse befindet sich der. CPP-Datei für die Klasse. Arbeiten mit den grundlegenden meldungszuordnungen, die die Anwendungs-Assistent erstellt, verwenden Sie das Eigenschaftenfenster zum Hinzufügen von Einträgen für die Meldungen und Befehle, die jede Klasse behandelt. Nachdem Sie einige Einträge hinzufügen, könnte eine typische Nachricht, die Zuordnung wie folgt aussehen:  
-  
- [!code-cpp[NVC_MFCMessageHandling#1](../mfc/codesnippet/cpp/where-to-find-message-maps_1.cpp)]  
-  
- Die meldungszuordnung besteht aus einer Auflistung von Makros. Zwei Makros [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) und [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map), Klammer die meldungszuordnung. Andere Makros, wie z. B. `ON_COMMAND`, füllen Sie die meldungszuordnung Inhalt.  
-  
+
+Wenn Sie eine neue Skelette-Anwendung mit der Anwendungs-Assistenten erstellen, schreibt der Anwendungs-Assistent eine meldungszuordnung für jede Befehlsziel Klasse, die sie erstellt für Sie. Dies schließt Ihre abgeleiteten Anwendung, Dokument, Ansicht und Rahmenfensterklassen. Einige diese meldungszuordnungen verfügen bereits über die Einträge, die vom Anwendungs-Assistenten für bestimmte Nachrichten und die vordefinierten Befehle bereitgestellt, und einige sind nur Platzhalter für Handler, die Sie hinzufügen möchten.
+
+Meldungszuordnung für eine Klasse befindet sich in der. CPP-Datei für die Klasse. Arbeiten mit den grundlegenden meldungszuordnungen, die die Anwendungs-Assistent erstellt, verwenden Sie das Fenster "Eigenschaften", fügen Sie Einträge für die Meldungen und Befehle, die jede Klasse behandelt. Eine typische Nachricht, die Zuordnung kann wie folgt aussehen, nachdem Sie einige Einträge hinzugefügt:
+
+[!code-cpp[NVC_MFCMessageHandling#1](../mfc/codesnippet/cpp/where-to-find-message-maps_1.cpp)]
+
+Die meldungszuordnung besteht aus einer Auflistung von Makros. Zwei Makros [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) und [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map), Zuordnen von Klammern die meldungszuordnung. Andere Makros, wie z. B. `ON_COMMAND`, geben Sie in der meldungszuordnung Inhalt.
+
 > [!NOTE]
->  Die Meldungszuordnungsmakros folgt sind nicht durch Semikolons getrennt ein.  
-  
- Wenn Sie die Klasse hinzufügen-Assistenten verwenden, um eine neue Klasse zu erstellen, stellt er eine meldungszuordnung für die Klasse. Alternativ können Sie eine meldungszuordnung, die manuell mit dem Quellcode-Editors erstellen.  
-  
-## <a name="see-also"></a>Siehe auch  
- [So durchsucht das Framework Meldungszuordnungen](../mfc/how-the-framework-searches-message-maps.md)
+>  Die Meldungszuordnungsmakros sind nicht durch ein Semikolon folgen.
+
+Wenn Sie den Assistenten zum Hinzufügen von Klassen verwenden, um eine neue Klasse zu erstellen, wird eine meldungszuordnung für die Klasse angegeben. Alternativ können Sie eine meldungszuordnung, die manuell mit dem Quellcode-Editor erstellen.
+
+## <a name="see-also"></a>Siehe auch
+
+[So durchsucht das Framework Meldungszuordnungen](../mfc/how-the-framework-searches-message-maps.md)
 

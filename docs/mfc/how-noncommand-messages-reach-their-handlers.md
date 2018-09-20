@@ -1,5 +1,5 @@
 ---
-title: Wie nicht befehlsbasierte Meldungen ihre Handler erreichen | Microsoft Docs
+title: Wie nicht befehlsbasierte Meldungen ihre Handler erreichen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3999c74bf7a612acb998e7a044c12948d7679d9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5c38a1d4294993170cfeff64be6a83700fa7497
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343881"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373437"
 ---
 # <a name="how-noncommand-messages-reach-their-handlers"></a>Wie nicht befehlsbasierte Meldungen ihre Handler erreichen
-Im Gegensatz zu den Befehlen standard-Windows-Meldungen werden nicht durch eine Kette von Befehlsziele weitergeleitet jedoch werden in der Regel vom Fenster, Windows die Nachricht sendet, verarbeitet. Das Fenster möglicherweise einem Hauptrahmenfenster, ein untergeordnetes MDI-Fenster, ein Standardsteuerelement, ein Dialogfeld, eine Sicht oder eine andere Art von untergeordnetes Fenster.  
-  
- Zur Laufzeit, jede Windows-Fenster mit einem Fensterobjekt angefügt ist (direkt oder indirekt von abgeleiteten `CWnd`), das über eigene zugeordnete Meldung Karten- und Handler Funktionen verfügt. Das Framework verwendet die meldungszuordnung – wie bei einem Befehl – eingehende Nachrichten an Handler zugeordnet.  
-  
-## <a name="see-also"></a>Siehe auch  
- [So ruft das Framework einen Handler auf](../mfc/how-the-framework-calls-a-handler.md)
+
+Im Gegensatz zu den Befehlen standard-Windows-Nachrichten werden nicht durch eine Kette von Befehlsziele weitergeleitet, aber erfolgt in der Regel durch das Fenster, die an den Windows die Nachricht sendet. Das Fenster möglicherweise ein Hauptrahmenfenster, eines untergeordneten MDI-Fensters, ein Standardsteuerelement, ein Dialogfeld, eine Sicht oder eine andere Art von untergeordneten Fensters.
+
+Bei der Ausführung jedes Windows-Fenster an ein Window-Objekt angefügt ist (direkt oder indirekt von abgeleiteten `CWnd`), die eigene Funktionen zugeordnete Meldung, Zuordnung und der Handler hat. Das Framework verwendet die meldungszuordnung – wie für einen Befehl, eingehende Nachrichten an die Handler zugeordnet.
+
+## <a name="see-also"></a>Siehe auch
+
+[So ruft das Framework einen Handler auf](../mfc/how-the-framework-calls-a-handler.md)
 

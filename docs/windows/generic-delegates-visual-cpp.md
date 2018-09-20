@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a9613dbc28b3e1f263133c15ae88d20294962e9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 94b6d94b59e1088501a22f44a219177b926dd02e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702532"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440874"
 ---
 # <a name="generic-delegates-visual-c"></a>Generische Delegaten (Visual C++)
 
@@ -39,25 +39,25 @@ generic < [class | typename] type-parameter-identifiers>
 
 ### <a name="parameters"></a>Parameter
 
-*Attribute*  
+*Attribute*<br/>
 (Optional) Zusätzliche deklarative Informationen. Weitere Informationen zu Attributen und Attributklassen finden Sie unter "Attribute".
 
-*type-parameter-identifier(s)*  
+*type-parameter-identifier(s)*<br/>
 Durch Trennzeichen getrennte Liste der Bezeichner für die Typparameter an.
 
-*Type-Parameter-Einschränkungen-Klauseln*  
+*Type-Parameter-Einschränkungen-Klauseln*<br/>
 Nimmt die Form, die im angegebenen [Einschränkungen für generische Typparameter (C++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*Zugriffsmodifizierer*  
+*Zugriffsmodifizierer*<br/>
 (Optional) Zugriffsmodifizierer (z. B. **öffentliche**, **private**).
 
-*result-type*  
+*result-type*<br/>
 Der Rückgabetyp des Delegaten.
 
-*identifier*  
+*identifier*<br/>
 Der Name des Delegaten.
 
-*Formal-parameters*  
+*Formal-parameters*<br/>
 (Optional) Die Parameterliste des Delegaten.
 
 ## <a name="example"></a>Beispiel

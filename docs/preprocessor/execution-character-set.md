@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f6851813172c39cd3c8c5dfe19b4d12ba81d090
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: a387b051bbecedd1c6c4dba8fc3881a3c1f3a4b9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42545780"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446815"
 ---
 # <a name="executioncharacterset"></a>execution_character_set
 Gibt an, die ausführungszeichengruppe für Zeichenfolgen- und Zeichenliterale verwendet. Diese Richtlinie ist für Literale, die mit dem Präfix U8 versehenes markiert nicht erforderlich.  
@@ -50,6 +50,6 @@ Standardmäßig verwendet Visual Studio die aktuelle Codepage als des quellzeich
   
 ## <a name="see-also"></a>Siehe auch  
  
-[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
-[/ Execution-CharSet (Ausführungszeichensatz festlegen)](../build/reference/execution-charset-set-execution-character-set.md)   
+[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
+[/ Execution-CharSet (Ausführungszeichensatz festlegen)](../build/reference/execution-charset-set-execution-character-set.md)<br/>
 [/utf-8 (Quelle und ausführbare Zeichensätze auf UTF-8 festlegen)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

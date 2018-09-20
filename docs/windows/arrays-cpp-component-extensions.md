@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbfcedd2bc17e21b94de46c63edd95bf58f576a7
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 836017dcec969db85a0725a49193d7b8e8a88875
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714446"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402849"
 ---
 # <a name="arrays-c-component-extensions"></a>Arrays (Komponentenerweiterungen für C++)
 
@@ -65,16 +65,16 @@ Im ersten Beispiel der Syntax wird die **Ref neue** -aggregatschlüsselwort ein 
 *Qualifizierer*<br/>
 (Optional) Eine oder mehrere der folgenden Speicherklassenspezifizierer: [änderbare](../cpp/mutable-data-members-cpp.md), [flüchtige](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), ["extern"](../cpp/using-extern-to-specify-linkage.md), [statische](../cpp/static-members-cpp.md).
 
-*Array-Typ*  
+*Array-Typ*<br/>
 Der Typ der Arrayvariablen. Gültige Typen sind Windows-Runtime-Klassen und grundlegenden Typen, Verweisklassen und Strukturen, Wertklassen und Strukturen und nativen Zeigern (`type*`).
 
 *rank*<br/>
 (Optional) Die Anzahl der Dimensionen des Arrays. 1 muss sein.
 
-*identifier*  
+*identifier*<br/>
 Der Name der Arrayvariablen.
 
-*Initialisierung-Typ*  
+*Initialisierung-Typ*<br/>
 Der Typ der Werte, die das Array initialisiert werden. In der Regel *Arraytyp* und *Initialisierung vom Typ* denselben Typ aufweisen. Die Typen kann jedoch anders, wenn es eine Konvertierung von erfolgt *Initialisierung vom Typ* zu *Arraytyp*– z. B. wenn *Initialisierung vom Typ* abgeleitetist*Arraytyp*.
 
 *Initialisierungsliste*<br/>
@@ -121,19 +121,19 @@ Im ersten Beispiel der Syntax wird die **Gcnew** Schlüsselwort, um ein Array zu
 *Qualifizierer*<br/>
 (Optional) Eine oder mehrere der folgenden Speicherklassenspezifizierer: [änderbare](../cpp/mutable-data-members-cpp.md), [flüchtige](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), ["extern"](../cpp/using-extern-to-specify-linkage.md), [statische](../cpp/static-members-cpp.md).
 
-*Array-Typ*  
+*Array-Typ*<br/>
 Der Typ der Arrayvariablen. Gültige Typen sind Windows-Runtime-Klassen und grundlegenden Typen, Verweisklassen und Strukturen, Wertklassen und Strukturen, systemeigene Zeiger (`type*`), und Typen für native POD (plain old Data).
 
 *rank*<br/>
 (Optional) Die Anzahl der Dimensionen des Arrays. Der Standardwert ist 1. Der Höchstwert beträgt 32. Jede Dimension des Arrays ist selbst ein Array.
 
-*identifier*  
+*identifier*<br/>
 Der Name der Arrayvariablen.
 
-*Initialisierung-Typ*  
+*Initialisierung-Typ*<br/>
 Der Typ der Werte, die das Array initialisiert werden. In der Regel *Arraytyp* und *Initialisierung vom Typ* denselben Typ aufweisen. Die Typen kann jedoch anders, wenn es eine Konvertierung von erfolgt *Initialisierung vom Typ* zu *Arraytyp*– z. B. wenn *Initialisierung vom Typ* abgeleitetist*Arraytyp*.
 
-*Liste der Rank-Größe*  
+*Liste der Rank-Größe*<br/>
 Eine durch Trennzeichen getrennte Liste der Größe der einzelnen Dimensionen im Array. Auch wenn die *Initialisierungsliste* -Parameter angegeben wird, kann der Compiler die Größe der einzelnen Dimensionen folgern und *Rang-Größe-List* kann ausgelassen werden.
 
 *Initialisierungsliste*<br/>

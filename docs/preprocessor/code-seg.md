@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9b9be3cd2de53c957074d2acdee18183d688852
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ae4c8834609552c469eff8ca382a4e14ca077cfd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719120"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428179"
 ---
 # <a name="codeseg"></a>code_seg
 Gibt das Textsegment an, in dem Funktionen in der OBJ-Datei gespeichert werden.  
@@ -96,5 +96,5 @@ Sie können auch Abschnitte für initialisierte Daten angeben ([Data_seg](../pre
   
 ## <a name="see-also"></a>Siehe auch  
  
-[code_seg (__declspec)](../cpp/code-seg-declspec.md)   
+[code_seg (__declspec)](../cpp/code-seg-declspec.md)<br/>
 [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

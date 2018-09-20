@@ -16,92 +16,95 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90638ad00f120e23e4c9168710d1e099c2c74d09
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c93382886587520e09e2a4035964d33b529b38c7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716949"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412573"
 ---
 # <a name="critical"></a>critical
-Gibt an, dass der Code ist nur in einem Thread zu einem Zeitpunkt ausgeführt werden.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-#pragma omp critical [(name)]  
-{  
-   code_block  
-}  
-```  
-  
+
+Gibt an, dass der Code ist nur in einem Thread zu einem Zeitpunkt ausgeführt werden.
+
+## <a name="syntax"></a>Syntax
+
+```
+#pragma omp critical [(name)]
+{
+   code_block
+}
+```
+
 ## <a name="arguments"></a>Argumente
 
 *name*<br/>
-(Optional) Ein Name zur Identifizierung des kritischen Codes. Beachten Sie, dass dieser Name in Klammern eingeschlossen werden muss.  
-  
-## <a name="remarks"></a>Hinweise  
- Die **kritische** -Anweisung unterstützt keine OpenMP-Klauseln.  
-  
- Weitere Informationen finden Sie unter [2.6.2 kritische erstellen](../../../parallel/openmp/2-6-2-critical-construct.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// omp_critical.cpp  
-// compile with: /openmp   
-#include <omp.h>  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-#define SIZE 10  
-  
-int main()   
-{  
-    int i;  
-    int max;  
-    int a[SIZE];  
-  
-    for (i = 0; i < SIZE; i++)   
-    {  
-        a[i] = rand();  
-        printf_s("%d\n", a[i]);  
-    }  
-  
-    max = a[0];  
-    #pragma omp parallel for num_threads(4)  
-        for (i = 1; i < SIZE; i++)   
-        {  
-            if (a[i] > max)  
-            {  
-                #pragma omp critical  
-                {  
-                    // compare a[i] and max again because max   
-                    // could have been changed by another thread after   
-                    // the comparison outside the critical section  
-                    if (a[i] > max)  
-                        max = a[i];  
-                }  
-            }  
-        }  
-  
-    printf_s("max = %d\n", max);  
-}  
-```  
-  
-```Output  
-41  
-18467  
-6334  
-26500  
-19169  
-15724  
-11478  
-29358  
-26962  
-24464  
-max = 29358  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Anweisungen](../../../parallel/openmp/reference/openmp-directives.md)
+(Optional) Ein Name zur Identifizierung des kritischen Codes. Beachten Sie, dass dieser Name in Klammern eingeschlossen werden muss.
+
+## <a name="remarks"></a>Hinweise
+
+Die **kritische** -Anweisung unterstützt keine OpenMP-Klauseln.
+
+Weitere Informationen finden Sie unter [2.6.2 kritische erstellen](../../../parallel/openmp/2-6-2-critical-construct.md).
+
+## <a name="example"></a>Beispiel
+
+```
+// omp_critical.cpp
+// compile with: /openmp
+#include <omp.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+#define SIZE 10
+
+int main()
+{
+    int i;
+    int max;
+    int a[SIZE];
+
+    for (i = 0; i < SIZE; i++)
+    {
+        a[i] = rand();
+        printf_s("%d\n", a[i]);
+    }
+
+    max = a[0];
+    #pragma omp parallel for num_threads(4)
+        for (i = 1; i < SIZE; i++)
+        {
+            if (a[i] > max)
+            {
+                #pragma omp critical
+                {
+                    // compare a[i] and max again because max
+                    // could have been changed by another thread after
+                    // the comparison outside the critical section
+                    if (a[i] > max)
+                        max = a[i];
+                }
+            }
+        }
+
+    printf_s("max = %d\n", max);
+}
+```
+
+```Output
+41
+18467
+6334
+26500
+19169
+15724
+11478
+29358
+26962
+24464
+max = 29358
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Anweisungen](../../../parallel/openmp/reference/openmp-directives.md)

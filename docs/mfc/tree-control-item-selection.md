@@ -17,19 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd6632a44dd4806b8f13683b50cad76b5eebe27a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9aa9c82a57ff8504c8e3eba7becff1e1cdccaae2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212580"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431566"
 ---
 # <a name="tree-control-item-selection"></a>Wechseln der Auswahl in einem Struktursteuerelement
-Wenn die Auswahl ändert sich von einem Element zu einem anderen ein Strukturansicht-Steuerelement ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) sendet [TVN_SELCHANGING](/windows/desktop/Controls/tvn-selchanging) und [eine TVN_SELCHANGED](/windows/desktop/Controls/tvn-selchanged) benachrichtigungsmeldungen. Beide Benachrichtigungen enthalten einen Wert, der angibt, ob die Änderung das Ergebnis klicken mit der Maus oder Drücken einer Taste ist. Die Benachrichtigungen umfassen auch Informationen über das Element, das die Auswahl Zustand wechselt und das Element, das die Auswahl entfernt wird. Sie können diese Informationen verwenden, Elementattribute festlegen, die abhängig von den Auswahlzustand des Elements. Zurückgeben von **"true"** als Reaktion auf `TVN_SELCHANGING` wird verhindert, dass die Auswahl ändern; zurückgeben **"false"** ermöglicht die Änderung.  
-  
- Eine Anwendung kann die Auswahl ändern, durch den Aufruf der [SelectItem](../mfc/reference/ctreectrl-class.md#selectitem) Member-Funktion.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+
+Wenn die Auswahl ändert sich von einem Element zu einem anderen ein Strukturansicht-Steuerelement ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) sendet [TVN_SELCHANGING](/windows/desktop/Controls/tvn-selchanging) und [eine TVN_SELCHANGED](/windows/desktop/Controls/tvn-selchanged) benachrichtigungsmeldungen. Beide Benachrichtigungen enthalten einen Wert, der angibt, ob die Änderung das Ergebnis klicken mit der Maus oder Drücken einer Taste ist. Die Benachrichtigungen umfassen auch Informationen über das Element, das die Auswahl Zustand wechselt und das Element, das die Auswahl entfernt wird. Sie können diese Informationen verwenden, Elementattribute festlegen, die abhängig von den Auswahlzustand des Elements. Zurückgeben von **"true"** als Reaktion auf `TVN_SELCHANGING` wird verhindert, dass die Auswahl ändern; zurückgeben **"false"** ermöglicht die Änderung.
+
+Eine Anwendung kann die Auswahl ändern, durch den Aufruf der [SelectItem](../mfc/reference/ctreectrl-class.md#selectitem) Member-Funktion.
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
+[Steuerelemente](../mfc/controls-mfc.md)
 

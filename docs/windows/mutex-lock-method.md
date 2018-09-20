@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38bd11620f8d403bbd1667ab6fa4f3f827362c88
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8bb04b8be33f81931106574152d0ccb6ba535295
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600872"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427835"
 ---
 # <a name="mutexlock-method"></a>Mutex::Lock-Methode
 
@@ -43,10 +43,10 @@ static SyncLock Lock(
 
 ### <a name="parameters"></a>Parameter
 
-*Millisekunden*  
+*Millisekunden*<br/>
 Das Timeoutintervall in Millisekunden. Der Standardwert ist UNENDLICH sein, was die unbegrenzt wartet.
 
-*h*  
+*h*<br/>
 Das Handle für ein **Mutex** Objekt.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -58,4 +58,5 @@ Das Handle für ein **Mutex** Objekt.
 **Namespace:** Microsoft::WRL::Wrappers
 
 ## <a name="see-also"></a>Siehe auch
+
 [Mutex-Klasse](../windows/mutex-class1.md)

@@ -19,64 +19,69 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ede37cec7b654c2d5ead32f117e4fe76f28fa60
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f8639e70e74f122da8ffa2d58501ad04884aa306
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101695"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437143"
 ---
 # <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error-Klasse
-Diese Klasse beschreibt eine Ausnahme, die aufgrund eines Fehlers ausgelöst wird, um in der Concurrency Runtime eine wichtige Ressource abzurufen.  
-  
-## <a name="syntax"></a>Syntax  
-  
+
+Diese Klasse beschreibt eine Ausnahme, die aufgrund eines Fehlers ausgelöst wird, um in der Concurrency Runtime eine wichtige Ressource abzurufen.
+
+## <a name="syntax"></a>Syntax
+
 ```
 class scheduler_resource_allocation_error : public std::exception;
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[scheduler_resource_allocation_error](#ctor)|Überladen. Erstellt ein `scheduler_resource_allocation_error`-Objekt.|  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[get_error_code](#get_error_code)|Gibt den Fehlercode zurück, der die Ausnahme verursacht hat.|  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Ausnahme wird in der Regel ausgelöst, wenn ein Aufruf an das Betriebssystem aus, in der Concurrency Runtime fehlschlägt. Der Fehlercode, die normalerweise von einem Aufruf der Win32-Methode zurückgegeben werden würde `GetLastError` wird in einen Wert vom Typ konvertiert `HRESULT` und können abgerufen werden, mithilfe der `get_error_code` Methode.  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `exception`  
-  
- `scheduler_resource_allocation_error`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h hinzu  
-  
- **Namespace:** Parallelität  
-  
-##  <a name="get_error_code"></a> get_error_code 
+```
 
- Gibt den Fehlercode zurück, der die Ausnahme verursacht hat.  
-  
+## <a name="members"></a>Member
+
+### <a name="public-constructors"></a>Öffentliche Konstruktoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[scheduler_resource_allocation_error](#ctor)|Überladen. Erstellt ein `scheduler_resource_allocation_error`-Objekt.|
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[get_error_code](#get_error_code)|Gibt den Fehlercode zurück, der die Ausnahme verursacht hat.|
+
+## <a name="remarks"></a>Hinweise
+
+Diese Ausnahme wird in der Regel ausgelöst, wenn ein Aufruf an das Betriebssystem aus, in der Concurrency Runtime fehlschlägt. Der Fehlercode, die normalerweise von einem Aufruf der Win32-Methode zurückgegeben werden würde `GetLastError` wird in einen Wert vom Typ konvertiert `HRESULT` und können abgerufen werden, mithilfe der `get_error_code` Methode.
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`exception`
+
+`scheduler_resource_allocation_error`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** concrt.h hinzu
+
+**Namespace:** Parallelität
+
+##  <a name="get_error_code"></a> get_error_code
+
+Gibt den Fehlercode zurück, der die Ausnahme verursacht hat.
+
 ```
 HRESULT get_error_code() const throw();
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Die `HRESULT` Wert des Fehlers, der die Ausnahme verursacht hat.  
-  
-##  <a name="ctor"></a> scheduler_resource_allocation_error 
+```
 
- Erstellt ein `scheduler_resource_allocation_error`-Objekt.  
-  
+### <a name="return-value"></a>Rückgabewert
+
+Die `HRESULT` Wert des Fehlers, der die Ausnahme verursacht hat.
+
+##  <a name="ctor"></a> scheduler_resource_allocation_error
+
+Erstellt ein `scheduler_resource_allocation_error`-Objekt.
+
 ```
 scheduler_resource_allocation_error(
     _In_z_ const char* _Message,
@@ -84,14 +89,16 @@ scheduler_resource_allocation_error(
 
 explicit _CRTIMP scheduler_resource_allocation_error(
     HRESULT _Hresult) throw();
-```  
-  
-### <a name="parameters"></a>Parameter  
+```
+
+### <a name="parameters"></a>Parameter
+
 *_Nachricht*<br/>
-Eine beschreibende Fehlermeldung.  
-  
+Eine beschreibende Fehlermeldung.
+
 *_Hresult*<br/>
-Die `HRESULT` Wert des Fehlers, der die Ausnahme verursacht hat.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Concurrency-Namespace](concurrency-namespace.md)
+Die `HRESULT` Wert des Fehlers, der die Ausnahme verursacht hat.
+
+## <a name="see-also"></a>Siehe auch
+
+[Concurrency-Namespace](concurrency-namespace.md)
