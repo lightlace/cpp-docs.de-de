@@ -14,27 +14,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08407f26e3c3d9064fded1620538262b0c91e2ba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2bd1f1a9f441a8c4b5e2cf9418653a6a0544380e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391206"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759082"
 ---
 # <a name="return-statement-c"></a>return-Anweisung (C)
 Mithilfe der `return`-Anweisung wird die Ausführung einer Funktion beendet, und die Steuerung wird an die aufrufende Funktion zurückgegeben. Die Ausführung wird in der aufrufenden Funktion an dem Punkt fortgesetzt, der dem Aufruf unmittelbar folgt. Eine `return`-Anweisung kann den Wert auch an die aufrufende Funktion zurückgeben. Weitere Informationen finden Sie unter [Rückgabetyp](../c-language/return-type.md).  
   
-## <a name="syntax"></a>Syntax  
- *jump-statement*:  
- **return**  *expression* opt **;**  
+## <a name="syntax"></a>Syntax
+
+*jump-statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**return** *expression*<sub>opt</sub> **;**
+
+Der *expression*-Wert wird, sofern er vorhanden ist, an die aufrufende Funktion zurückgegeben. Wenn *expression* ausgelassen wird, wird der Rückgabewert der Funktion nicht definiert. Der Ausdruck wird, sofern er vorhanden ist, ausgewertet und dann in den von der Funktion zurückgegebenen Typ konvertiert. Wenn die Funktion mit Rückgabetyp `void` deklariert wurde, generiert eine `return`-Anweisung, die einen Ausdruck enthält, eine Warnung, und der Ausdruck wird nicht ausgewertet.  
   
- Der *expression*-Wert wird, sofern er vorhanden ist, an die aufrufende Funktion zurückgegeben. Wenn *expression* ausgelassen wird, wird der Rückgabewert der Funktion nicht definiert. Der Ausdruck wird, sofern er vorhanden ist, ausgewertet und dann in den von der Funktion zurückgegebenen Typ konvertiert. Wenn die Funktion mit Rückgabetyp `void` deklariert wurde, generiert eine `return`-Anweisung, die einen Ausdruck enthält, eine Warnung, und der Ausdruck wird nicht ausgewertet.  
+Wenn keine `return`-Anweisung in einer Funktionsdefinition steht, kehrt die Steuerung nach Ausführen der letzten Anweisung der aufgerufenen Funktion automatisch zur aufrufenden Funktion zurück. In diesem Fall ist der Rückgabewert der aufgerufenen Funktion nicht definiert. Ist der Rückgabewert nicht erforderlich, deklarieren Sie die Funktion mit dem Rückgabetyp `void`. Andernfalls ist der Rückgabetyp `int`.  
   
- Wenn keine `return`-Anweisung in einer Funktionsdefinition steht, kehrt die Steuerung nach Ausführen der letzten Anweisung der aufgerufenen Funktion automatisch zur aufrufenden Funktion zurück. In diesem Fall ist der Rückgabewert der aufgerufenen Funktion nicht definiert. Ist der Rückgabewert nicht erforderlich, deklarieren Sie die Funktion mit dem Rückgabetyp `void`. Andernfalls ist der Rückgabetyp `int`.  
+Viele Programmierer schließen das *expression*-Argument der `return`-Anweisung in Klammern ein. Allerdings erfordert C die Klammern nicht.  
   
- Viele Programmierer schließen das *expression*-Argument der `return`-Anweisung in Klammern ein. Allerdings erfordert C die Klammern nicht.  
-  
- In diesem Beispiel wird die `return`-Anweisung veranschaulicht.  
+In diesem Beispiel wird die `return`-Anweisung veranschaulicht.  
   
 ```  
 #include <limits.h>  
@@ -68,13 +69,13 @@ void draw( int i, long long ll )
   
 ```  
   
- In diesem Beispiel werden von der `main`-Funktion zwei Funktionen aufgerufen: `sq` und `draw`. Die `sq`-Funktion gibt den Wert von `x * x` an `main` zurück. Dort wird der Rückgabewert `y` zugewiesen. Die Klammern um den Rückgabeausdruck in `sq` werden als Teil des Ausdrucks ausgewertet und sind für die return-Anweisung nicht erforderlich. Da der Rückgabeausdruck vor der Konvertierung in den Rückgabetyp ausgewertet wird, erzwingt `sq` zur Vermeidung eines möglichen Ganzzahlüberlaufs, der zu unerwarteten Ergebnissen führen könnte, den Ausdruckstyp mit einer Umwandlung der Rückgabetyp zu sein. Die Funktion `draw` wird als `void`-Funktion deklariert. Sie gibt die Werte der Parameter aus, und die Funktion wird dann von der leeren return-Anweisung beendet, und es wird kein Wert zurückgegeben. Ein Versuch, den Rückgabewert von `draw` zuzuweisen, würde die Ausgabe einer Diagnosemeldung bewirken. Die `main`-Funktion gibt dann den Wert `x` an das Betriebssystem zurück.  
+In diesem Beispiel werden von der `main`-Funktion zwei Funktionen aufgerufen: `sq` und `draw`. Die `sq`-Funktion gibt den Wert von `x * x` an `main` zurück. Dort wird der Rückgabewert `y` zugewiesen. Die Klammern um den Rückgabeausdruck in `sq` werden als Teil des Ausdrucks ausgewertet und sind für die return-Anweisung nicht erforderlich. Da der Rückgabeausdruck vor der Konvertierung in den Rückgabetyp ausgewertet wird, erzwingt `sq` zur Vermeidung eines möglichen Ganzzahlüberlaufs, der zu unerwarteten Ergebnissen führen könnte, den Ausdruckstyp mit einer Umwandlung der Rückgabetyp zu sein. Die Funktion `draw` wird als `void`-Funktion deklariert. Sie gibt die Werte der Parameter aus, und die Funktion wird dann von der leeren return-Anweisung beendet, und es wird kein Wert zurückgegeben. Ein Versuch, den Rückgabewert von `draw` zuzuweisen, würde die Ausgabe einer Diagnosemeldung bewirken. Die `main`-Funktion gibt dann den Wert `x` an das Betriebssystem zurück.  
   
- Die Ausgabe der Beispiele sieht wie folgt aus:  
+Die Ausgabe der Beispiele sieht wie folgt aus:  
   
 ```Output  
 i = 2147483647, ll = 4611686014132420609  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Anweisungen](../c-language/statements-c.md)
+[Anweisungen](../c-language/statements-c.md)
