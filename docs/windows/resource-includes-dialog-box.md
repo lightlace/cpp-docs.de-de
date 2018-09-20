@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1263b5037d9e5ed3cf81eaa55f6e4accb8737e6b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 626327fec8efda873551e6d9ee502d7405eec5a7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705847"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46371978"
 ---
 # <a name="resource-includes-dialog-box-c"></a>Ressourcenincludes (Dialogfeld) (C++)
 
@@ -58,7 +58,7 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Vorgehensweise: Festlegen von Includeverzeichnissen für Ressourcen](../windows/how-to-specify-include-directories-for-resources.md)  
-[Symbole: Ressourcenbezeichner](../windows/symbols-resource-identifiers.md)  
-[Ressourcendateien](../windows/resource-files-visual-studio.md)  
+[Vorgehensweise: Festlegen von Includeverzeichnissen für Ressourcen](../windows/how-to-specify-include-directories-for-resources.md)<br/>
+[Symbole: Ressourcenbezeichner](../windows/symbols-resource-identifiers.md)<br/>
+[Ressourcendateien](../windows/resource-files-visual-studio.md)<br/>
 [Ressourcen-Editor](../windows/resource-editors.md)
