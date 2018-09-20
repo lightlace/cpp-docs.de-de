@@ -1,5 +1,5 @@
 ---
-title: Behandeln von reflektierten Meldungen | Microsoft Docs
+title: Behandeln von reflektierten Meldungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,25 +15,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b317f4c1b55e04f61aa0639bbd6953e5f36187a
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 99fc9c30ea85ba3f94fa811464f023da0eeea37e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931839"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438677"
 ---
 # <a name="handling-reflected-messages"></a>Behandeln von reflektierten Meldungen
-Nachricht Reflektion können Sie die Meldungen für ein Steuerelement zu verarbeiten, z. B. **WM_CTLCOLOR**, **WM_COMMAND**, und **WM_NOTIFY**, innerhalb des Steuerelements selbst. Dadurch wird das Steuerelement mehr unabhängige und übertragbare. Der Mechanismus funktioniert mit allgemeinen Windows-Steuerelemente sowie mit ActiveX-Steuerelementen (früher OLE-Steuerelemente).  
-  
- Nachricht Reflektion können Sie die Wiederverwendung der `CWnd`-schneller abgeleitete Klassen. Reflektion funktioniert über Message [CWnd:: OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify), mit speziellen **ON_XXX_REFLECT** Nachricht Zuordnungseinträge: z. B. **ON_CTLCOLOR_REFLECT** und **ON_CONTROL_REFLECT**. [Technische Hinweis 62](../mfc/tn062-message-reflection-for-windows-controls.md) Meldungsreflektion ausführlicher erläutert.  
-  
-## <a name="what-do-you-want-to-do"></a>Was möchten Sie tun  
-  
--   [Erfahren Sie mehr über meldungsreflexion](../mfc/tn062-message-reflection-for-windows-controls.md)  
-  
--   [Implementieren von Meldungsreflektion für ein allgemeines Steuerelement](../mfc/tn062-message-reflection-for-windows-controls.md)  
-  
--   [Implementieren von Meldungsreflektion für ein ActiveX-Steuerelement](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Deklarieren von Meldungshandlerfunktionen](../mfc/declaring-message-handler-functions.md)
+
+Nachricht, die Reflektion können Sie die Meldungen für ein Steuerelement, z. B. behandeln **WM_CTLCOLOR**, **WM_COMMAND**, und **WM_NOTIFY**, innerhalb des Steuerelements selbst. Dadurch wird das Steuerelement mehr unabhängige und übertragbare. Der Mechanismus funktioniert mit Windows-Standardsteuerelemente sowie mit ActiveX-Steuerelementen (früher OLE-Steuerelemente).
+
+Nachricht, die Reflektion können Sie die Wiederverwendung Ihrer `CWnd`-leichter abgeleiteten Klassen. Reflektion funktioniert über Message [CWnd:: OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify), mithilfe von speziellen **ON_XXX_REFLECT** message-Zuordnungseinträge: z. B. **ON_CTLCOLOR_REFLECT** und **ON_CONTROL_REFLECT**. [Technischer Hinweis 62](../mfc/tn062-message-reflection-for-windows-controls.md) Meldungsreflektion ausführlicher erläutert.
+
+## <a name="what-do-you-want-to-do"></a>Was möchten Sie tun
+
+- [Erfahren Sie mehr über Meldungsreflektion](../mfc/tn062-message-reflection-for-windows-controls.md)
+
+- [Implementieren von Meldungsreflektion für ein allgemeines Steuerelement](../mfc/tn062-message-reflection-for-windows-controls.md)
+
+- [Implementieren von Meldungsreflektion für ein ActiveX-Steuerelement](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Deklarieren von Meldungshandlerfunktionen](../mfc/declaring-message-handler-functions.md)

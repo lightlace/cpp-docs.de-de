@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 36b438662fb42cdeeb894906753a38168208f5ae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 37e5db99d97bc65f1f4a75e2e56e1f0e719dd9ab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218818"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427172"
 ---
 # <a name="uuid-c-attributes"></a>uuid (C++-Attribute)
 
@@ -38,7 +38,7 @@ Gibt die eindeutige ID für eine Klasse oder Schnittstelle an.
 
 ### <a name="parameters"></a>Parameter
 
-*uuid*  
+*uuid*<br/>
 Ein 128-Bit, eindeutigen Bezeichner.
 
 ## <a name="remarks"></a>Hinweise
@@ -70,8 +70,8 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 
 ## <a name="see-also"></a>Siehe auch
 
-[IDL-Attribute](../windows/idl-attributes.md)  
-[Schnittstellenattribut](../windows/interface-attributes.md)  
-[Klassenattribute](../windows/class-attributes.md)  
-[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  
+[IDL-Attribute](../windows/idl-attributes.md)<br/>
+[Schnittstellenattribut](../windows/interface-attributes.md)<br/>
+[Klassenattribute](../windows/class-attributes.md)<br/>
+[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [uuid](/windows/desktop/Midl/uuid)  

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2eeadca20a722cc0e7e63d903f470cb3aced6d32
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: d9a8952ccdf4477f263a2fb960020e7abba19546
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313676"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418150"
 ---
 # <a name="using-the-256-color-palette-image-editor-for-icons"></a>Verwenden der 256-Farben-Palette (Bildbearbeitung für Symbole)
 
@@ -50,6 +50,6 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
-[Erstellen eines Symbols oder Cursors mit 256 Farben](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md)  
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[Erstellen eines Symbols oder Cursors mit 256 Farben](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md)<br/>
 [Symbole und Cursor: Bildressourcen für Anzeigegeräte](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

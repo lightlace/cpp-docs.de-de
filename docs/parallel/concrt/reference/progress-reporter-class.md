@@ -19,69 +19,76 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d4a1b76966216a6dc7b2e7249bddb1ac629376f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8dfb224fb0c0f641e4b7ef8809268fa4fad58890
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016766"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438794"
 ---
 # <a name="progressreporter-class"></a>progress_reporter-Klasse
-Die Status-Reporter-Klasse ermöglicht Benachrichtigungen zum Status der Berichterstellung eines bestimmten Typs. Jedes progress_reporter-Objekt ist an eine bestimmte asynchrone Aktion bzw. einen Vorgang gebunden.  
-  
-## <a name="syntax"></a>Syntax  
-  
+
+Die Status-Reporter-Klasse ermöglicht Benachrichtigungen zum Status der Berichterstellung eines bestimmten Typs. Jedes progress_reporter-Objekt ist an eine bestimmte asynchrone Aktion bzw. einen Vorgang gebunden.
+
+## <a name="syntax"></a>Syntax
+
 ```
 template<typename _ProgressType>
 class progress_reporter;
-```  
-  
-#### <a name="parameters"></a>Parameter  
+```
+
+#### <a name="parameters"></a>Parameter
+
 *_ProgressType*<br/>
-Der Nutzlasttyp jeder Statusbenachrichtigung, die vom Status-Reporter gemeldet wird.  
-  
-## <a name="members"></a>Mitglieder  
-  
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[progress_reporter](#ctor)||  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[Bericht](#report)|Sendet einen Statusbericht an die asynchrone Aktion oder den asynchronen Vorgang, an die bzw. an den dieser Status-Reporter gebunden ist.|  
-  
-## <a name="remarks"></a>Hinweise  
- Dieser Typ ist nur für Windows-Runtime-apps verfügbar.  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `progress_reporter`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** ppltasks.h  
-  
- **Namespace:** Parallelität  
-  
-##  <a name="ctor"></a> "progress_reporter" 
+Der Nutzlasttyp jeder Statusbenachrichtigung, die vom Status-Reporter gemeldet wird.
+
+## <a name="members"></a>Mitglieder
+
+### <a name="public-constructors"></a>Öffentliche Konstruktoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[progress_reporter](#ctor)||
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[Bericht](#report)|Sendet einen Statusbericht an die asynchrone Aktion oder den asynchronen Vorgang, an die bzw. an den dieser Status-Reporter gebunden ist.|
+
+## <a name="remarks"></a>Hinweise
+
+Dieser Typ ist nur für Windows-Runtime-apps verfügbar.
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`progress_reporter`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** ppltasks.h
+
+**Namespace:** Parallelität
+
+##  <a name="ctor"></a> "progress_reporter"
 
 ```
 progress_reporter();
-```  
-  
-##  <a name="report"></a> Bericht 
+```
 
- Sendet einen Statusbericht an die asynchrone Aktion oder den asynchronen Vorgang, an die bzw. an den dieser Status-Reporter gebunden ist.  
-  
+##  <a name="report"></a> Bericht
+
+Sendet einen Statusbericht an die asynchrone Aktion oder den asynchronen Vorgang, an die bzw. an den dieser Status-Reporter gebunden ist.
+
 ```
 void report(const _ProgressType& val) const;
-```  
-  
-### <a name="parameters"></a>Parameter  
+```
+
+### <a name="parameters"></a>Parameter
+
 *val*<br/>
-Die Nutzlast, über die mit einer Statusbenachrichtigung berichtet werden soll.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Concurrency-Namespace](concurrency-namespace.md)
+Die Nutzlast, über die mit einer Statusbenachrichtigung berichtet werden soll.
+
+## <a name="see-also"></a>Siehe auch
+
+[Concurrency-Namespace](concurrency-namespace.md)

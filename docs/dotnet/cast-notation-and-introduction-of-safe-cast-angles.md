@@ -1,5 +1,5 @@
 ---
-title: Umwandlungsnotation und Einführung in Safe_cast&lt; &gt; | Microsoft Docs
+title: Umwandlungsnotation und Einführung von "safe_cast"&lt; &gt; | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,122 +17,124 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6b9432b40099f9893d7fd270faf5375646fb0493
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 88e8165bde08b65b4f078c4b48863c2088132fca
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111639"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427862"
 ---
 # <a name="cast-notation-and-introduction-of-safecastltgt"></a>Umwandlungsnotation und Einführung von "safe_cast"&lt;&gt;
-Die Umwandlungsnotation hat gegenüber Managed Extensions für C++ in Visual C++ geändert.  
-  
- Ändern einer vorhandenen Struktur umfasst eine unterschiedlich und schwieriger als das Erstellen der ursprünglichen Struktur. Es gibt weniger Freiheitsgrade, und die Lösung tendiert einen Kompromiss zwischen einem idealen Umstrukturierung und was bei Berücksichtigung der vorhandenen strukturellen Abhängigkeiten durchführbar ist.  
-  
- Erweiterung der Sprache ist ein weiteres Beispiel. Als objektorientierte Programmierung ein wichtiger Paradigma wurde, wurde die Notwendigkeit für eine Verweisklasse als typsicherer-Funktion in der C++ zurück in den frühen 1990ern drücken. Downcasting ist der Benutzer explizite Konvertierung einer Basisklasse Zeiger oder Verweis auf einen Zeiger oder Verweis von einer abgeleiteten Klasse. Downcasting ist eine explizite Umwandlung erforderlich. Der Grund hierfür ist, dass der tatsächliche Typ des Zeigers Basisklasse einen Aspekt der Laufzeit ist; aus diesem Grund kann der Compiler nicht überprüfen. Oder um, die zu formulieren, erfordert eine Verweisklasse Einrichtung, genau wie einen virtuellen Funktionsaufruf, eine Form der dynamische Auflösung. Dies löst zwei Fragen:  
-  
--   Warum sollte eine Umwandlung in die objektorientierte Paradigma nicht erforderlich? Ist der nicht Mechanismus der virtuellen Funktion ausreichend? D. h. behaupten kann nicht warum eine, dass eine Umwandlung (oder eine Umwandlung irgendeiner Art) müssen einen Entwurf handelt?  
-  
--   Warum sollten Unterstützung für eine Verweisklasse in C++ ein Problem werden? Nachdem alle, es ist kein Problem in objektorientierten Sprachen wie z. B. Smalltalk (oder später, Java und c#)? Was ist C++, die macht Ihre Unterstützung einer Verweisklasse Einrichtung schwierig?  
-  
- Eine virtuelle Funktion stellt einen allgemeine typabhängige-Algorithmus für eine Familie von Typen dar. (Es werden nicht unter Berücksichtigung der Schnittstellen, die in ISO C++ nicht unterstützt, jedoch stehen im CLR-Programmierung und die Alternative Entwurf interessante darstellen). Das Design dieser Familie ist in der Regel von einer Klassenhierarchie dargestellt in dem es eine abstrakte Basisklasse ist, deklarieren die allgemeine Schnittstelle (den virtuellen Funktionen) und einen Satz von konkrete abgeleitete Klassen, die die tatsächlichen Familie Typen in der Anwendung darstellen Domäne.  
-  
- Ein `Light` Hierarchie in einer generierten Bilder CGI (Computer) Anwendungsdomäne, z. B. haben dieselben Attribute wie z. B. `color`, `intensity`, `position`, `on`, `off`und so weiter. Eine kann mehrere Leuchten steuern, über die allgemeine Schnittstelle unabhängig von, ob eine bestimmte eine Spotlight, eine direktionale, eine hell nicht direktionale (Reaktionszeiten der Sonne), oder vielleicht ein Streifen Tür Licht leuchtet. Downcasting auf einen bestimmten Light-Typ, der die virtuelle Schnittstelle ist in diesem Fall nicht erforderlich. In einer produktionsumgebung unbedingt jedoch Geschwindigkeit. Eine Verweisklasse kann und jede Methode explizit aufzurufen, wenn dadurch Inlineausführung der Aufrufe ausgeführt werden kann, anstatt Sie mithilfe des Mechanismus der virtuellen.  
-  
- Ein Grund für das Verweisklasse in C++ ist den virtuelle Mechanismus gegen einen erheblichen Leistungsgewinn in Leistung zur Laufzeit zu unterdrücken. (Beachten Sie, dass die Automatisierung von manuellen Optimierung einer aktiven Forschungsbereich ist. Allerdings ist es schwieriger, und Ersetzen Sie dabei die ausdrückliche Verwendung von gelöst der `register` oder `inline` Schlüsselwort.)  
-  
- Ein zweiter Grund für Downcasting liegt außerhalb des gültigen dualer Aufbau von Polymorphie. Eine Möglichkeit, die von Polymorphie ist in ein paar passiven und dynamische Formulare unterteilt wird.  
-  
- Ein virtueller Aufruf (und eine Verweisklasse Einrichtung) darstellt dynamische Verwendungen von Polymorphie: eine führt eine Aktion basierend auf den tatsächlichen Typ des Zeigers Basisklasse auf diese spezielle Instanz der Ausführung des Programms.  
-  
- Ein abgeleitetes Klassenobjekt seiner Basisklassenzeiger zuweisen, ist jedoch eine passive Form der Polymorphie. Es wird die Polymorphie als Transportmechanismus verwendet. Dies ist die haupteinsatzmöglichkeit `Object`, z. B. in vorab generische CLR-Programmierung. Wenn Passiv verwendet, bietet der Basisklasse Zeiger ausgewählt für Transport und Speicherung in der Regel eine Schnittstelle, die zu abstrakt ist. `Object`, z. B. bietet ungefähr fünf Methoden über die Schnittstelle; jedes spezifische Verhalten erfordert eine explizite Umwandlung. Z. B. wenn wir den Winkel des unsere Spotlight oder der Rate der fallen off anpassen möchten, würden wir umgewandelt explizit haben. Eine virtuelle Schnittstelle innerhalb einer Familie von Untertypen nicht Untertypen eine Obermenge aller möglichen Methoden der vielen untergeordneten, und daher eine Verweisklasse Funktion immer benötigt werden innerhalb einer objektorientierten Programmiersprachen.  
-  
- Wenn eine Verweisklasse Safe ist Facility in eine objektorientierte Sprache erforderlich, und warum C++ so lange dauert einen hinzufügen? Das Problem wird wie die Informationen bezüglich der Laufzeittyp des Zeigers verfügbar zu machen. Im Fall einer virtuellen Funktion wird die Laufzeitinformationen in zwei Teilen durch den Compiler einrichten:  
-  
--   Das Klassenobjekt enthält einen zusätzliche virtuelle Tabelle Zeiger-Member (entweder am Anfang oder Ende des Klassenobjekts; die verfügt über eine interessante Verlauf in sich selbst), die die entsprechende virtuelle Tabelle behandelt. Z. B. Adressen Spotlight-Objekt, eine virtuelle Spotlight-Tabelle, ein gerichtetes Licht, direktionale hell virtuelle Tabelle usw.  
-  
--   Jede virtuelle Funktion verfügt über eine zugeordnete feste Slot in der Tabelle, und die tatsächliche Instanz zum Aufrufen durch die Adresse, die in der Tabelle gespeicherten dargestellt wird. Z. B. das virtuelle `Light` Destruktor möglicherweise Einschubfach 0 (null) zugeordnet werden `Color` mit slot 1 und so weiter. Dies ist eine effizient, wenn unflexibel Strategie, da er zum Zeitpunkt der Kompilierung festgelegt ist, und stellt einen minimalen Aufwand dar.  
-  
- Das Problem ist, wie Sie die Typinformationen für den Zeiger verfügbar gemacht werden kann, ohne die Größe der C++-Zeiger, entweder indem Sie eine zweite Adresse hinzufügen oder indem Sie direkt irgendeine der Codierung des Typs. Dies würde nicht zulässig, diese Programmierer (und Programme) sein, die nicht das Paradigma objektorientierte - verwenden weiterhin die vorherrschende Benutzercommunity war möchten. Eine weitere Möglichkeit zum Einfügen eines speziellen Zeigers für polymorphe Klassentypen wurde, aber dies verwirrend sein, und der beiden, insbesondere hinsichtlich der Zeigerarithmetik erschweren. Dies würde auch nicht zulässig, eine Tabelle zur Laufzeit zu verwalten, die ordnet jeden Zeiger mit seinem aktuell zugeordneten Typ, und es dynamisch zu aktualisieren.  
-  
- Das Problem ist ein Paar von Benutzercommunitys, die verschiedenen, aber legitime Programmieransätze. Die Lösung muss ein Kompromiss zwischen den zwei Communitys, sodass jeder nicht nur für umsetzbar als jedoch für die Fähigkeit, zusammenarbeiten sein. Dies bedeutet, dass die Lösungen, die von beiden Seiten angeboten werden wahrscheinlich unmöglich ist, und schließlich kleiner als genau Implementieren der Lösung. Die Lösung besteht in der Definition einer polymorphen Klasse: eine polymorphe Klasse ist eine virtuelle Funktion enthält. Eine polymorphe Klasse unterstützt eine dynamische, typsichere Downcasting. Dies löst das Beibehalten der-Zeiger-als Adresse-Problem, da alle polymorphe Klassen dieses zusätzlichen Zeigers-Element, um die zugeordnete virtuelle Tabelle enthalten sind. Die zugeordneten Typinformationen kann daher in einer erweiterten virtuellen Tabellenstruktur gespeichert werden. Die Kosten für die typsichere Downcasting ist für Benutzer der Funktion (fast) lokalisiert.  
-  
- Das nächste Problem mit der typsichere Downcasting wurde in der Syntax. Da es sich um eine Umwandlung handelt, verwendet der ursprüngliche Vorschlag die ISO-C++-Committee Umwandlungssyntax, wie in diesem Beispiel:  
-  
-```  
-spot = ( SpotLight* ) plight;  
-```  
-  
- aber dies wurde durch die Committee zurückgewiesen, weil er nicht, dass den Benutzer zum Kontrollieren der Kosten der Umwandlung zuließ. Verfügt die dynamische, typsichere Downcasting die gleiche Syntax wie zuvor unsafe jedoch statische Umwandlungsnotation, und es wird eine Ersetzung, und der Benutzer hat keine Möglichkeit, die die Laufzeit-Overhead zu unterdrücken, wenn es nicht erforderlich und möglicherweise zu teuer ist.  
-  
- Im Allgemeinen in C++ ist es immer ein Mechanismus, mit dem Compiler unterstützten Funktionen zu unterdrücken. Beispielsweise können wir virtuelle Mechanismus deaktivieren, indem Sie entweder mit der Klasse Bereichsoperator (`Box::rotate(angle)`), oder rufen die virtuelle Methode über ein Klassenobjekt (statt einem Zeiger oder Verweis von dieser Klasse). Dieses zweite Unterdrückung ist nicht erforderlich, von der Programmiersprache jedoch ist ein Qualität der Implementierungsproblem, ähnlich wie die Unterdrückung der Konstruktion eines temporären in einer Deklaration des Formulars:  
-  
-```  
-// compilers are free to optimize away the temporary  
-X x = X::X( 10 );  
-```  
-  
- Damit Vorschlag wieder für weitere Überlegung verfügten, und mehrere alternative Notationen berücksichtigt wurden und die zurück an den Ausschuss geschaltet des Formulars war (`?type`), dem angegebenen unbestimmt -, also der dynamischen Natur. Dies führte zu dem Benutzer die Möglichkeit zum Umschalten zwischen den beiden Formaten - statische oder dynamische - aber niemand zu zufrieden wurde. Damit sie wieder zum Zeichnen Board war. Die dritte und erfolgreiche Notation ist jetzt standard `dynamic_cast<type>`, die auf einen Satz von vier neue Formatvorlage Umwandlungsnotationen generalisiert wurde.  
-  
- In ISO-C++- `dynamic_cast` gibt `0` Wenn auf einen falschen Zeigertyp angewendet, und löst eine `std::bad_cast` Ausnahme bei Anwendung auf einen Referenztyp darstellt. In Managed Extensions for C++ Anwenden von `dynamic_cast` in eine verwaltete Verweise (aufgrund der Darstellung als Zeiger) immer zurückgegebenen Typ `0`. `__try_cast<type>` Analog eingeführt wurde, auf die Ausnahme auslösen Variante des der `dynamic_cast`, außer dass es löst `System::InvalidCastException` schlägt die Umwandlung fehl.  
-  
-```  
-public __gc class ItemVerb;  
-public __gc class ItemVerbCollection {  
-public:  
-   ItemVerb *EnsureVerbArray() [] {  
-      return __try_cast<ItemVerb *[]>  
-         (verbList->ToArray(__typeof(ItemVerb *)));  
-   }  
-};  
-```  
-  
- In der neuen Syntax `__try_cast` wurde als Nachrichtenfilter wurde `safe_cast`. Hier ist das gleiche Codefragment in der neuen Syntax:  
-  
-```  
-public ref class ItemVerb;  
-public ref class ItemVerbCollection {  
-public:  
-   array<ItemVerb^>^ EnsureVerbArray() {  
-      return safe_cast<array<ItemVerb^>^>  
-         ( verbList->ToArray( ItemVerb::typeid ));  
-   }  
-};  
-```  
-  
- In der verwalteten Umgebung ist es wichtig, um zu ermöglichen, indem Sie die Möglichkeit Programmierer mit sich bringen, die Umwandlung zwischen Typen in Methoden, die den Code nicht überprüfbaren verlassen einschränken überprüfbaren Code. Dies ist ein wichtiger Aspekt der dynamischen Programmierparadigma, dargestellt durch die neue Syntax. Aus diesem Grund Instanzen von Umwandlungen im alten Stil sind Nachrichtenfilter intern als zur Laufzeit Umwandlungen, also, beispielsweise:  
-  
-```  
-// internally recast into the   
-// equivalent safe_cast expression above  
-( array<ItemVerb^>^ ) verbList->ToArray( ItemVerb::typeid );   
-```  
-  
- Da Polymorphie einer aktiven und passiven Modus bietet, ist es hingegen, manchmal erforderlich, um eine Verweisklasse nur zum Zugriff auf die nicht virtuelle API eines Untertyps auszuführen. Dieses Problem kann auftreten, z. B. mit die Mitglieder einer Klasse, die den Adresse alle Typen innerhalb der Hierarchie (passive Polymorphie als Transportmechanismus), aber für die die aktuelle Instanz in einem bestimmten Programmkontext bekannt ist. In diesem Fall möglich müssen eine Überprüfung zur Laufzeit die Umwandlung einen unzulässigen Aufwand. Ist die neue Syntax als die Programmiersprache verwalteten Systemen verwendet werden, müssen sie Möglichkeiten zum Zulassen einer Kompilierung bereitstellen (d. h. statische) umgewandelt. Diesem Grund wird die Anwendung von der `static_cast` Notation ist eine Verweisklasse Kompilierzeit bleiben zulässig:  
-  
-```  
-// ok: cast performed at compile-time.   
-// No run-time check for type correctness  
-static_cast< array<ItemVerb^>^>(verbList->ToArray(ItemVerb::typeid));  
-```  
-  
- Das Problem besteht darin, dass es keine Möglichkeit zu gewährleisten, dass den Programmierer die `static_cast` ist richtig und Exploit; d. h. Es gibt keine Möglichkeit zum Erzwingen von verwalteten Codes zu überprüfbar zu sein. Dies geht dringenderen gemäß dem Programmierparadigma dynamische als bei systemeigenem Code, aber ist nicht ausreichend innerhalb eines Systems Programmiersprache, die Benutzer zu unterbinden, die Möglichkeit, zwischen einer statischen und zur Laufzeit umgewandelt zu wechseln.  
-  
- Es ist ein Trap für Leistung und Fehlers in der neuen Syntax, jedoch. In systemeigene Programmierung besteht kein Leistungsunterschied zwischen der Umwandlungsnotation im alten Stil und die neue Formatvorlage `static_cast` Notation. In der neuen Syntax der im alten Stil Umwandlungsnotation ist deutlich teurer als die Verwendung des neuen Formats jedoch `static_cast` Notation. Der Grund ist, dass der Compiler intern die Verwendung der im alten Stil Notation in eine laufzeitüberprüfung transformiert, die eine Ausnahme auslöst. Darüber hinaus wird auch geändert das Ausführungsprofil des Codes, da er bewirkt, dass eine nicht abgefangene Ausnahme, die der Anwendung – vielleicht mit Bedacht zu schalten, aber der gleiche Fehler würde nicht, wird diese Ausnahme aus, wenn die `static_cast` Notation verwendet wurden. Eine möglicherweise argumentieren, dass auf diese Weise werden Benutzer in der Verwendung der neuen-Schreibweise. Aber nur, wenn ein Fehler auftritt. Es wird hingegen bewirken, dass Programme mit der im alten Stil Notation eventuell deutlich langsamer ohne sichtbar zu verstehen und einen Grund ausgeführt der ersichtlichen ähnelt:  
-  
-```  
-// pitfall # 1:   
-// initialization can remove a temporary class object,   
-// assignment cannot  
-Matrix m;  
-m = another_matrix;  
-  
-// pitfall # 2: declaration of class objects far from their use  
-Matrix m( 2000, 2000 ), n( 2000, 2000 );  
-if ( ! mumble ) return;  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Allgemeine Sprachänderungen (C + c++ / CLI)](../dotnet/general-language-changes-cpp-cli.md)   
- [C-stilartige Umwandlungen mit/CLR (C + c++ / CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)   
- ["safe_cast"](../windows/safe-cast-cpp-component-extensions.md)
+
+Die Umwandlungsnotation wurde von Managed Extensions für C++ in Visual C++ geändert.
+
+Ändern einer vorhandenen Struktur ist eine Umgebung anders und schwieriger als das Erstellen der ursprünglichen Struktur. Es gibt weniger Freiheitsgrade, und die Lösung wird zumeist auf einen Kompromiss zwischen einer idealen umstrukturieren und was durchführbar ist, erhalten die vorhandenen strukturellen Abhängigkeiten.
+
+Erweiterung der Sprache ist ein weiteres Beispiel. Als objektorientierte Programmierung ein Paradigma wichtig ist, wurde die Notwendigkeit einer Typumwandlung typsichere-Einrichtung in C++ wieder in den frühen 1990er Jahren drücken. Typumwandlung ist der Benutzer explizite Konvertierung einer Basisklasse Zeiger oder Verweis auf einen Zeiger oder Verweis von einer abgeleiteten Klasse. Typumwandlung ist eine explizite Umwandlung erforderlich. Der Grund dafür ist, dass der tatsächliche Typ des Zeigers Basisklasse ein Aspekt der Laufzeit ist. aus diesem Grund kann der Compiler nicht überprüfen. Alternativ dazu können Sie zum formulieren, die Sie neu, erfordert eine Typumwandlung Einrichtung, genau wie einen virtuellen Funktionsaufruf, eine Form von dynamische Auflösung. Dies löst zwei Fragen:
+
+- Warum sollte eine Umwandlung in den objektorientierten Paradigma erforderlich sein? Nicht Mechanismus der virtuellen Funktion reicht aus? Also behaupten kann nicht warum zu, dass Notwendigkeit einer Typumwandlung (oder eine Umwandlung irgendeiner Art) ein Fehler Entwurf ist?
+
+- Warum sollte die Unterstützung für eine Typumwandlung in C++ ein Problem sein? Schließlich ist es möglich, es ist kein Problem in objektorientierten Sprachen wie z. B. Smalltalk (oder später, Java und c#)? Was ist das Informationen über C++, mit der Unterstützung einer Typumwandlung Einrichtung schwierig?
+
+Eine virtuelle Funktion stellt einen allgemeine typabhängige-Algorithmus für eine Reihe von Typen dar. (Wir sind nicht unter Berücksichtigung der Schnittstellen, die ISO-C++-werden nicht unterstützt, jedoch stehen im CLR-Programmierung und die eine interessante Alternative für den Entwurf darstellen). Das Design dieser Familie wird in der Regel durch eine Klassenhierarchie dargestellt in der es eine abstrakte Basisklasse deklarieren ist, die allgemeine Schnittstelle (die virtuellen Funktionen) und einen Satz von konkrete abgeleitete Klassen, die Darstellung der tatsächlichen Familien Typen in der Anwendung die Domäne.
+
+Ein `Light` besitzen-Hierarchie in einen Computer generierten Bilder (CGI), z. B. allgemeine Attribute wie z. B. `color`, `intensity`, `position`, `on`, `off`und so weiter. Eine kann mehrere Lichter, steuern, indem Sie die allgemeine Schnittstelle verwenden, ohne sich Gedanken machen, ob eine bestimmte eine Spotlight, eine direktionale Beleuchtung, eine nicht direktionale (Stellen Sie sich der Sonne), oder vielleicht ein innen nach außen-Tür Licht leuchtet. Typumwandlung in einen bestimmten Light-Typ, der die virtuelle Schnittstelle ist in diesem Fall nicht erforderlich. In einer produktionsumgebung unbedingt jedoch Geschwindigkeit. Eine Typumwandlung möglicherweise und jede Methode explizit aufzurufen, wenn hierfür Inlineausführung Aufrufe ausgeführt werden kann, statt mit dem virtuellen Mechanismus.
+
+Ein Grund für die Typumwandlung in C++ ist den virtuelle Mechanismus als Gegenleistung für einen erheblichen Leistungsgewinn Runtime unterdrückt werden sollen. (Beachten Sie, dass die Automatisierung dieser manuellen Optimierung einen lebendigen Bereich der Forschung. Es ist jedoch schwieriger zu lösen, die explizite Verwendung von ersetzt die `register` oder `inline` Schlüsselwort.)
+
+Ein zweiter Grund eine Umwandlung fällt aus der dualen Natur von Polymorphie. Eine Möglichkeit, Polymorphie betrachten, ist in ein paar passiven und dynamische Formulare unterteilt wird.
+
+Ein virtueller Aufruf (und eine Typumwandlung Einrichtung) stellt dynamische Verwendungen von Polymorphie: eine führt eine Aktion basierend auf der tatsächliche Typ des Zeigers Basisklasse auf diese spezielle Instanz der Ausführung des Programms.
+
+Der Zeiger für die Basisklasse ein abgeleitetes Klassenobjekt zuzuweisen, ist jedoch eine passive Form von Polymorphie. Es wird die Polymorphie als Transportmechanismus verwendet. Dies ist die haupteinsatzmöglichkeit `Object`, z. B. in bereits generische CLR-Programmierung. Wenn Passiv verwendet wird, bietet der Basisklasse Zeiger für den Transport und Speicher ausgewählt sind, in der Regel eine Schnittstelle, die zu abstrakt ist. `Object`, z. B. bietet ungefähr fünf Methoden über die Schnittstelle; spezifischeres Verhalten erfordert eine explizite Typumwandlung. Beispielsweise, wenn wir den Winkel des unserem Spotlight und die Rate der Fall deaktiviert anpassen möchten, müssten eine Umwandlung explizit wir. Eine virtuelle Schnittstelle in eine Familie von Untertypen nicht praktisch eine Obermenge aller möglichen Methoden viele seiner untergeordneten Elemente und daher eine Typumwandlung Funktion immer erforderlich, in eine objektorientierte Sprache.
+
+Wenn eine sichere Typumwandlung ist in einer objektorientierten Sprache Einrichtung erforderlich, und warum C++ so lange gedauert eine hinzufügen? Das Problem ist wie die Informationen bezüglich der Laufzeittyp des Zeigers verfügbar zu machen. Im Fall von einer virtuellen Funktion wird die Laufzeitinformationen in zwei Teile vom Compiler eingerichtet:
+
+- Das Klassenobjekt enthält einen zusätzliche virtuelle Tabelle Zeiger-Member (entweder am Anfang oder Ende des Klassenobjekts; der hat eine interessante Geschichte an sich) adressiert, die entsprechende virtuelle Tabelle. Z. B. behandelt ein Spotlight-Objekt, eine virtuelle Spotlight-Tabelle, eine direktionale Beleuchtung, eine direktionale hell virtuelle Tabelle und usw.
+
+- Jede virtuelle Funktion verfügt über eine zugeordnete festen Position in der Tabelle, und die tatsächliche Instanz zum Aufrufen wird dargestellt, durch die Adresse, die in der Tabelle gespeichert. Z. B. das virtuelle `Light` Destruktor möglicherweise gegen den Slot 0 (null) zugeordneten `Color` mit slot 1 und so weiter. Dies ist eine Strategie für die effiziente, wenn unflexibel, da er zum Zeitpunkt der Kompilierung eingerichtet ist, und einen minimalen Mehraufwand stellt.
+
+Das Problem ist, wie Sie die Typinformationen für den Zeiger verfügbar gemacht werden kann, ohne die Größe der C++-Zeiger ändern, indem Sie eine zweite Adresse oder durch das direkte hinzufügen eine Art der Codierung des Typs. Dies wäre nicht akzeptabel, die Programmierer (und Programme), die nicht den objektorientierten Paradigma - verwenden möchten, das immer noch die Benutzergemeinde wurde. Eine andere Möglichkeit bestand, einen speziellen Zeiger für polymorphe Klassentypen einzuführen, aber dies verwirrend sein, und machen es schwierig, zwischen die beiden, insbesondere hinsichtlich der Zeigerarithmetik zu kombinieren. Es wäre auch nicht akzeptabel, eine Laufzeit-Tabelle zu verwalten, die jeden Zeiger dynamisch aktualisiert wird, und der aktuell zugeordneten Typ zugeordnet.
+
+Das Problem ist ein Paar von Benutzergruppen für die verschiedenen, aber legitime Programmieransätze. Die Lösung muss ein Kompromiss zwischen den zwei Communitys, sodass jeder nicht nur umsetzbar, aber die Möglichkeit, die zusammenarbeiten. Dies bedeutet, dass die Lösungen von beiden Seiten sind wahrscheinlich nicht realisierbar, und zum Schluss der Lösung implementieren nicht immer perfekt sein. Die Lösung besteht in der Definition eine polymorphe Klasse: eine polymorphe Klasse ist eine virtuelle Funktion enthält. Eine polymorphe Klasse unterstützt eine dynamische, typsichere Typumwandlung. Das löst das Problem der Warten-der-Zeiger-als-Adresse, da alle polymorphe Klassen dieses Element zusätzliche Zeiger auf die zugeordnete virtuelle Tabelle enthalten. Die zugeordnete Typinformationen, kann daher in einer erweiterten virtuelle Tabelle gespeichert werden. Die Kosten für die Typumwandlung typsichere ist für Benutzer von der Funktion (fast) lokalisiert.
+
+Das nächste Problem bei der die Typumwandlung typsichere wurde die Syntax. Da es sich um eine Umwandlung ist, verwendet der ursprüngliche Vorschlag dem ISO-C++-Ausschuss der Umwandlungssyntax, wie im folgenden Beispiel aus:
+
+```
+spot = ( SpotLight* ) plight;
+```
+
+aber dies wurde vom Committee zurückgewiesen, weil es nicht, dass den Benutzer zum Kontrollieren der Kosten für die Typumwandlung zuließ. Verfügt die dynamische typsichere Typumwandlung dieselbe Syntax wie die zuvor verwendete unsichere aber statische Umwandlungsnotation, dann wird als Ersatz, und der Benutzer hat keine Möglichkeit, den Aufwand zur Laufzeit zu unterdrücken, wenn es nicht erforderlich und ist zu hoch ist.
+
+Im Allgemeinen in C++ besteht immer ein Mechanismus, mit dem Compiler unterstützten Funktionen unterdrückt werden sollen. Beispielsweise können wir virtuelle Mechanismus deaktivieren, indem Sie entweder mit dem Operator für (`Box::rotate(angle)`), oder rufen die virtuelle Methode über ein Objekt der Klasse (statt ein Zeiger oder Verweis von dieser Klasse). Diese zweite Unterdrückung ist von der Sprache nicht erforderlich, aber es ist eine Qualität der Implementierungsproblem, ähnlich wie die Unterdrückung der Erstellung eines temporären in einer Deklaration des Formulars:
+
+```
+// compilers are free to optimize away the temporary
+X x = X::X( 10 );
+```
+
+Damit das Angebot erneut, weiter berücksichtigen sollten erstellt wurde, mehrere alternative Schreibweisen berücksichtigt wurden und die zurückgesetzt des Ausschusses der Form war (`?type`), der angegebenen unbestimmt -, also die Dynamik. Erhielt des Benutzers die Möglichkeit zum Umschalten zwischen den beiden Formaten – statische oder dynamische –, aber niemand wurde zu zufrieden. So war es an das Board zeichnen. Die dritte und erfolgreiche Notation ist nun standard `dynamic_cast<type>`, die auf einen Satz von vier neuen-Typumwandlung Notationen generalisiert wurde.
+
+In ISO C++- `dynamic_cast` gibt `0` Wenn auf einen falschen Zeigertyp angewendet, und löst eine `std::bad_cast` Ausnahme bei Anwendung auf einen Verweistyp handelt. In Managed Extensions für C++ Anwenden von `dynamic_cast` in einen verwalteten Verweistyp (aufgrund der Darstellung als Zeiger) immer zurückgegeben `0`. `__try_cast<type>` wurde analog eingeführt, auf die Ausnahme auslösen Variante der `dynamic_cast`, außer dass löst `System::InvalidCastException` schlägt die Umwandlung fehl.
+
+```
+public __gc class ItemVerb;
+public __gc class ItemVerbCollection {
+public:
+   ItemVerb *EnsureVerbArray() [] {
+      return __try_cast<ItemVerb *[]>
+         (verbList->ToArray(__typeof(ItemVerb *)));
+   }
+};
+```
+
+In der neuen Syntax `__try_cast` umgeformt wurden `safe_cast`. Hier ist das gleiche Codefragment in der neuen Syntax ein:
+
+```
+public ref class ItemVerb;
+public ref class ItemVerbCollection {
+public:
+   array<ItemVerb^>^ EnsureVerbArray() {
+      return safe_cast<array<ItemVerb^>^>
+         ( verbList->ToArray( ItemVerb::typeid ));
+   }
+};
+```
+
+In der verwalteten Umgebung ist es wichtig, die überprüfbaren Code durch die Möglichkeit einschränken von Programmierern umzuwandelnde Differenzierung von Typen in der Weise, die den Code nicht überprüfbaren verlassen ermöglichen. Dies ist ein wichtiger Aspekt, der die dynamische Programmierparadigma, die durch die neue Syntax dargestellt wird. Aus diesem Grund Instanzen von Umwandlungen im alten Stil umgeformt intern als Laufzeit Umwandlungen, also, um beispielsweise:
+
+```
+// internally recast into the
+// equivalent safe_cast expression above
+( array<ItemVerb^>^ ) verbList->ToArray( ItemVerb::typeid );
+```
+
+Da Polymorphie sowohl einer aktiven und passiven Modus bietet, ist es andererseits, manchmal erforderlich, um eine Typumwandlung nur für den Zugriff auf die nicht virtuelle-API, der ein Untertyp auszuführen. Dies ist möglich, mit die Mitglieder einer Klasse, die z. B. Adresse alle Typen innerhalb der Hierarchie (passive Polymorphie als Transportmechanismus), aber für die die aktuelle Instanz in einem bestimmten Programmkontext bekannt ist. In diesem Fall möglich müssen eine laufzeitüberprüfung der Umwandlung ein akzeptabler Aufwand. Ist die neue Syntax als die Programmiersprache verwalteten Systemen verwendet werden, müssen sie angeben, dass einige bedeutet, dass eine während der Kompilierung zu ermöglichen (d. h. statische) Typumwandlung. Daher die Anwendung von der `static_cast` Notation ist zulässig, eine Typumwandlung Kompilierzeit bleiben:
+
+```
+// ok: cast performed at compile-time.
+// No run-time check for type correctness
+static_cast< array<ItemVerb^>^>(verbList->ToArray(ItemVerb::typeid));
+```
+
+Das Problem besteht darin, dass es keine Möglichkeit zu gewährleisten, dass den Programmierer die `static_cast` ist richtig und arglose; d.h., besteht keine Möglichkeit zum Erzwingen von verwalteten Codes, der überprüfbar sein. Dies ist ein größeres Problem dar, gemäß dem Programmierparadigma dynamische als bei systemeigenem Code, aber es ist nicht ausreichend innerhalb eines Systems, die Programmiersprache, die Benutzer zu unterbinden, der Möglichkeit zum Umschalten zwischen einem statischen und zur Laufzeit umgewandelt.
+
+Es gibt eine Leistungsfalle und fallen bei der neuen Syntax jedoch. In der Programmierung mit native, besteht kein Leistungsunterschied zwischen den alten Umwandlungsnotation und die neue Formatvorlage `static_cast` Notation. Aber in der neuen Syntax Umwandlungsnotation im alten Stil ist deutlich teurer als die Verwendung der neuen-Formatvorlage `static_cast` Notation. Der Grund ist, dass der Compiler intern die Verwendung der alten Notation in eine laufzeitüberprüfung transformiert, die eine Ausnahme auslöst. Darüber hinaus auch ändert das Ausführungsprofil des Codes, da eine nicht abgefangene Ausnahme führt der Anwendung – vielleicht klug, aber der gleiche Fehler würde diese Ausnahme nicht, wenn die `static_cast` Notation verwendet wurden. Eine sind vielleicht der Meinung, dass auf diese Weise werden Benutzer in die Verwendung der neuen-Schreibweise. Aber nur, wenn ein Fehler auftritt. Andernfalls wird Programme, die die alten Notation verwenden, ohne ein sichtbar Verständnis, warum, bedeutend langsamer ausgeführt der ersichtlichen ähnelt:
+
+```
+// pitfall # 1:
+// initialization can remove a temporary class object,
+// assignment cannot
+Matrix m;
+m = another_matrix;
+
+// pitfall # 2: declaration of class objects far from their use
+Matrix m( 2000, 2000 ), n( 2000, 2000 );
+if ( ! mumble ) return;
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Allgemeine Sprachänderungen (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)<br/>
+[C-stilartige Umwandlungen mit/CLR (C++ / CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)<br/>
+["safe_cast"](../windows/safe-cast-cpp-component-extensions.md)

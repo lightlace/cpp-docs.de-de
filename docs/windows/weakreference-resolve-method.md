@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59e748ef68d78f9cb77eb335f5c5cd44e058f0d4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1e0873b366c84e89b23ddbaa6c64f6b484f921e0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601155"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446334"
 ---
 # <a name="weakreferenceresolve-method"></a>WeakReference::Resolve-Methode
 
@@ -39,10 +39,10 @@ STDMETHOD(Resolve)
 
 ### <a name="parameters"></a>Parameter
 
-*riid*  
+*riid*<br/>
 Eine Schnittstellen-ID.
 
-*ppvObject*  
+*ppvObject*<br/>
 Wenn dieser Vorgang abgeschlossen ist, eine Kopie der aktuellen starken Verweis, wenn die Anzahl der starken Verweis ungleich NULL ist.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -65,5 +65,5 @@ Legt den angegebenen Zeiger auf den aktuellen Wert der starken Verweis fest, wen
 
 ## <a name="see-also"></a>Siehe auch
 
-[WeakReference-Klasse](../windows/weakreference-class1.md)  
+[WeakReference-Klasse](../windows/weakreference-class1.md)<br/>
 [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

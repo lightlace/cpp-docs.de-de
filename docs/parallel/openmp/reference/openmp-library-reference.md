@@ -1,5 +1,5 @@
 ---
-title: OpenMP-Bibliotheksverweis | Microsoft Docs
+title: OpenMP-Bibliotheksverweis | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,24 +12,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45f6206960b023bac7b99b867966703a210d7b1e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f3812f698f034b5610f90c57b94b56f0b8648417
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694432"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403799"
 ---
 # <a name="openmp-library-reference"></a>OpenMP-Bibliotheksverweis
-Enthält Links zu Konstrukte, die in der OpenMP-API verwendet.  
-  
- Die Visual C++-Implementierung der OpenMP-Standard umfasst die folgenden Konstrukte.  
-  
-|Konstrukt|Beschreibung|  
-|---------------|-----------------|  
-|[Bibliotheken](../../../parallel/openmp/reference/openmp-libraries.md)|Erläutert die LIB-Dateien, aus denen die OpenMP-Laufzeitbibliotheken in Visual C++ besteht.|  
-|[Datentypen](../../../parallel/openmp/reference/openmp-data-types.md)|Enthält Links zu den Datentypen, die in der OpenMP-API verwendet.|  
-|[Umgebungsvariablen](../../../parallel/openmp/reference/openmp-environment-variables.md)|Enthält Links zu Umgebungsvariablen in der OpenMP-API verwendet.|  
-|[Funktionen](../../../parallel/openmp/reference/openmp-functions.md)|Enthält Links zu den Funktionen, die in der OpenMP-API verwendet.|  
-  
-## <a name="see-also"></a>Siehe auch  
- [OpenMP](../../../parallel/openmp/openmp-in-visual-cpp.md)
+
+Enthält Links zu Konstrukten, die in der OpenMP-API verwendet.
+
+Die Visual C++-Implementierung des OpenMP umfasst die folgenden Konstrukte.
+
+|Konstrukt|Beschreibung|
+|---------------|-----------------|
+|[Bibliotheken](../../../parallel/openmp/reference/openmp-libraries.md)|Erläutert die LIB-Dateien, aus denen die OpenMP-Laufzeitbibliotheken in Visual C++ besteht.|
+|[Datentypen](../../../parallel/openmp/reference/openmp-data-types.md)|Enthält Links zu den Datentypen, die in der OpenMP-API verwendet.|
+|[Umgebungsvariablen](../../../parallel/openmp/reference/openmp-environment-variables.md)|Enthält Links zu den Umgebungsvariablen, die in der OpenMP-API verwendet.|
+|[Funktionen](../../../parallel/openmp/reference/openmp-functions.md)|Enthält Links zu Funktionen, die in der OpenMP-API verwendet.|
+
+## <a name="see-also"></a>Siehe auch
+
+[OpenMP](../../../parallel/openmp/openmp-in-visual-cpp.md)

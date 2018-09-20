@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ca09463a2934db0097c09d6a4f928f108fd0760
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: cc933905cf4056d2be6c692728c621913687a6fa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316301"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425534"
 ---
 # <a name="new-toolbar-resource-dialog-box-c"></a>Neue Symbolleiste Ressource (Dialogfeld) (C++)
 
@@ -46,6 +46,6 @@ MFC oder ATL
 
 ## <a name="see-also"></a>Siehe auch
 
-[Eigenschaften von Symbolleisten-Schaltflächen](../windows/toolbar-button-properties.md)  
-[Konvertieren von Bitmaps in Symbolleisten](../windows/converting-bitmaps-to-toolbars.md)  
+[Eigenschaften von Symbolleisten-Schaltflächen](../windows/toolbar-button-properties.md)<br/>
+[Konvertieren von Bitmaps in Symbolleisten](../windows/converting-bitmaps-to-toolbars.md)<br/>
 [Symbolleisten-Editor](../windows/toolbar-editor.md)

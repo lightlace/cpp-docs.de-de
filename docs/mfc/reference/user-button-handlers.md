@@ -1,5 +1,5 @@
 ---
-title: Benutzerschaltflächen | Microsoft Docs
+title: Benutzerschaltflächen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,25 +27,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81cf497e73987e2a7c8ef285a705bc6e7554f7ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5b7a93afaee003f093e479cbdf9c9e14731cef7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373858"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447311"
 ---
 # <a name="user-button-handlers"></a>Handler für Benutzerschaltflächen
-Die folgenden Zuordnungseinträge entsprechen der Funktionsprototypen.  
-  
-|Eintrag für die Zuordnung|Funktionsprototyp|  
-|---------------|------------------------|  
-|ON_BN_CLICKED ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-|ON_BN_DISABLE ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-|ON_BN_DOUBLECLICKED ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-|ON_BN_HILITE ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-|ON_BN_PAINT ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-|ON_BN_UNHILITE ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-  
-## <a name="see-also"></a>Siehe auch  
- [Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)
+
+Die folgenden Einträge der Karte entsprechen der Funktionsprototypen.
+
+|Zuordnungseintrag|Funktionsprototyp|
+|---------------|------------------------|
+|ON_BN_CLICKED ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+|ON_BN_DISABLE ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+|ON_BN_DOUBLECLICKED ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+|ON_BN_HILITE ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+|ON_BN_PAINT ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+|ON_BN_UNHILITE ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+
+## <a name="see-also"></a>Siehe auch
+
+[Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)
 

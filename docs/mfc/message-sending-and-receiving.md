@@ -1,5 +1,5 @@
 ---
-title: Senden und Empfangen von Meldungen | Microsoft Docs
+title: Senden und Empfangen von Meldungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,28 +19,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55f450085c446503ebf86960dbee1b0d930691c2
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: e28f35fc87b78ac4e04df0f8147d76571c51320e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36932003"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438820"
 ---
 # <a name="message-sending-and-receiving"></a>Senden und Empfangen von Meldungen
-Betrachten Sie den Sendevorgang des Prozesses und wie das Framework reagiert.  
-  
- Die meisten Nachrichten ergeben durch eine Benutzerinteraktion mit dem Programm haben. Befehle werden von Mausklicks auf Menüelemente und Symbolleisten-Schaltflächen oder durch Drücken von Zugriffstasten generiert. Der Benutzer wird generiert auch Windows-Meldungen, z. B. verschieben oder Ändern der Größe eines Fensters. Anderen Windows-Meldungen werden gesendet, wenn z. B. Programmstart oder Beendigung Ereignissen wie Windows abzurufen oder den Fokus verliert und so weiter. Steuerelemente-benachrichtigungsmeldungen werden vom Mausklicks oder andere Benutzerinteraktionen mit einem Steuerelement, z. B. eine Schaltfläche oder im Listenfeld-Steuerelement in einem Dialogfeld generiert.  
-  
- Die `Run` Memberfunktion der Klasse `CWinApp` ruft Nachrichten ab und sendet sie an das entsprechende Fenster. Die meisten befehlsmeldungen werden an das Hauptrahmenfenster der Anwendung gesendet. Die `WindowProc` durch die Klasse Bibliothek ruft Nachrichten vorab definiert und diese unterschiedlich, abhängig von der Kategorie der empfangenen Nachricht weiterleitet.  
-  
- Nun sehen wir uns die empfangenden Teil des Prozesses.  
-  
- Der erste Empfänger einer Nachricht muss einem Fensterobjekt. Windows-Meldungen werden in der Regel direkt vom Fensterobjekt behandelt. Command-Meldungen, stammen in der Regel im Hauptrahmenfenster für die Anwendung, auf die Befehlsziel Kette, die in beschriebenen weitergeleitet [Befehlsrouting](../mfc/command-routing.md).  
-  
- Jedes Objekt, das Empfangen von Nachrichten oder Befehle verfügt über eine eigene Nachricht diese Paare eine Nachricht oder einen Befehl mit dem Namen des entsprechenden Handler zugeordnet.  
-  
- Wenn eine Befehlszielobjekt eine Nachricht oder einen Befehl empfängt, werden seine meldungszuordnung, nach einer Übereinstimmung gesucht. Wenn einen Ereignishandler für die Nachricht gefunden wird, ruft er den Handler. Weitere Informationen dazu, wie meldungszuordnungen durchsucht werden, finden Sie unter [wie das Framework sucht Meldungszuordnungen](../mfc/how-the-framework-searches-message-maps.md). Finden Sie in der Abbildung erneut [Befehle im Framework](../mfc/user-interface-objects-and-command-ids.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [So ruft das Framework einen Handler auf](../mfc/how-the-framework-calls-a-handler.md)
+
+Betrachten Sie den Sendevorgang des Prozesses und das Framework wie reagiert werden soll.
+
+Die meisten Nachrichten ergeben sich aus der Benutzerinteraktion mit dem Programm. Befehle werden von Mausklicks auf Menüelemente und Symbolleisten-Schaltflächen oder durch Drücken von Zugriffstasten generiert. Der Benutzer generiert Windows-Nachrichten nach, auch z. B. verschieben oder Ändern der Größe eines Fensters. Andere Windows-Meldungen werden immer dann gesendet, wenn z. B. beim Programmstart oder Beendigung Ereignissen wie Windows abzurufen oder den Fokus verliert und so weiter. Steuerelemente-benachrichtigungsmeldungen werden von Mausklicks oder anderen Benutzerinteraktionen mit einem Steuerelement, z. B. eine Schaltfläche oder ein Listenfeld-Steuerelement in einem Dialogfeld generiert.
+
+Die `Run` Memberfunktion der Klasse `CWinApp` ruft Nachrichten ab und verteilt sie an das entsprechende Fenster. Die meisten befehlsmeldungen werden an das Hauptrahmenfenster der Anwendung gesendet. Die `WindowProc` vordefiniert durch die Klasse Bibliothek ruft Nachrichten aus, und diese unterschiedlich, abhängig von der Kategorie der empfangenen Nachricht weiterleitet.
+
+Betrachten Sie nun die empfangenden Teil des Prozesses.
+
+Der erste Empfänger einer Nachricht muss ein Window-Objekt. Windows-Nachrichten werden in der Regel direkt vom, Window-Objekt behandelt. Command-Meldungen, stammen in der Regel in der Anwendung Hauptrahmenfenster, auf die Befehlsziel Kette, die in beschriebenen weitergeleitet [Befehlsrouting](../mfc/command-routing.md).
+
+Jedes Objekt, das Empfangen von Nachrichten oder Befehle verfügt über eine eigene Nachricht diese Paare eine Nachricht oder einen Befehl mit dem Namen der der Handler zugeordnet.
+
+Wenn ein Befehlsziel Objekt eine Nachricht oder einen Befehl empfängt, werden seine meldungszuordnung, nach einer Übereinstimmung gesucht. Wenn sie einen Handler für die Nachricht findet, wird den Handler. Weitere Informationen dazu, wie meldungszuordnungen durchsucht werden, finden Sie unter [wie das Framework sucht Meldungszuordnungen](../mfc/how-the-framework-searches-message-maps.md). Finden Sie in der Abbildung erneut [Befehle im Framework](../mfc/user-interface-objects-and-command-ids.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[So ruft das Framework einen Handler auf](../mfc/how-the-framework-calls-a-handler.md)
 

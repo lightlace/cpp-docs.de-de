@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2e9e13f7b5838cb13497dd874f7f0cf42f34e98
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6ec12275291321751c539d095c60fa9dabffa2b7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200145"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445177"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet-Klasse
 
@@ -181,7 +181,7 @@ void AddPage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parameter
 
-*P_seite*  
+*P_seite*<br/>
 Zeigt auf der Seite, um das Eigenschaftenblatt hinzugefügt werden. Darf nicht NULL sein.
 
 ### <a name="remarks"></a>Hinweise
@@ -237,25 +237,25 @@ void Construct(
 
 ### <a name="parameters"></a>Parameter
 
-*nIDCaption*  
+*nIDCaption*<br/>
 Die ID der Beschriftung für das Eigenschaftenblatt verwendet werden.
 
-*pParentWnd*  
+*pParentWnd*<br/>
 Zeiger auf das übergeordnete Fenster des Eigenschaftenblatts. Wenn der Wert NULL ist, wird das übergeordnete Fenster das Hauptfenster der Anwendung sein.
 
-*iSelectPage*  
+*iSelectPage*<br/>
 Der Index der Seite, die ursprünglich im Vordergrund. Standardmäßig ist die erste Seite in der Tabelle hinzugefügt.
 
-*pszCaption*  
+*pszCaption*<br/>
 Zeiger auf eine Zeichenfolge, enthält die Beschriftung für das Eigenschaftenblatt verwendet werden. Darf nicht NULL sein.
 
-*hbmWatermark*  
+*hbmWatermark*<br/>
 Handle für das Wasserzeichen-Bitmuster der Eigenschaftenseite.
 
-*hpalWatermark*  
+*hpalWatermark*<br/>
 Handle für die Palette der Bitmap für Wasserzeichen und/oder Header Bitmap.
 
-*hbmHeader*  
+*hbmHeader*<br/>
 Handle für die Bitmap "Header" der Eigenschaftenseite.
 
 ### <a name="remarks"></a>Hinweise
@@ -312,25 +312,25 @@ CPropertySheet(
 
 ### <a name="parameters"></a>Parameter
 
-*nIDCaption*  
+*nIDCaption*<br/>
 Die ID der Beschriftung für das Eigenschaftenblatt verwendet werden.
 
-*pParentWnd*  
+*pParentWnd*<br/>
 Zeigt für das übergeordnete Fenster des Eigenschaftenblatts. Wenn der Wert NULL ist, wird das übergeordnete Fenster das Hauptfenster der Anwendung sein.
 
-*iSelectPage*  
+*iSelectPage*<br/>
 Der Index der Seite, die ursprünglich im Vordergrund. Standardmäßig ist die erste Seite in der Tabelle hinzugefügt.
 
-*pszCaption*  
+*pszCaption*<br/>
 Verweist auf eine Zeichenfolge, enthält die Beschriftung für das Eigenschaftenblatt verwendet werden. Darf nicht NULL sein.
 
-*hbmWatermark*  
+*hbmWatermark*<br/>
 Ein Handle für das Hintergrundbild des Eigenschaftenblatts.
 
-*hpalWatermark*  
+*hpalWatermark*<br/>
 Ein Handle für die Palette der Bitmap für Wasserzeichen und/oder Header Bitmap.
 
-*hbmHeader*  
+*hbmHeader*<br/>
 Ein Handle für die Bitmap "Header" der Eigenschaftenseite.
 
 ### <a name="remarks"></a>Hinweise
@@ -357,13 +357,13 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 
 ### <a name="parameters"></a>Parameter
 
-*pParentWnd*  
+*pParentWnd*<br/>
 Verweist auf das übergeordnete Fenster. Wenn NULL, ist der übergeordnete Element dem Desktop.
 
-*dwStyle*  
+*dwStyle*<br/>
 Window-Stile für Eigenschaftenblatt. Eine vollständige Liste der verfügbaren Formate, finden Sie unter [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*dwExStyle*  
+*dwExStyle*<br/>
 Erweiterte Fensterstile für Eigenschaftenblatt. Eine vollständige Liste der verfügbaren Formate, finden Sie unter [erweiterte Fensterstile](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
 
 ### <a name="return-value"></a>Rückgabewert
@@ -445,7 +445,7 @@ void EnableStackedTabs(BOOL bStacked);
 
 ### <a name="parameters"></a>Parameter
 
-*bStacked*  
+*bStacked*<br/>
 Gibt an, ob es sich bei gestapelte Registerkarten im Eigenschaftenblatt aktiviert sind. Gestapelte Zeilen von Tags zu deaktivieren, indem *bStacked* auf "false".
 
 ### <a name="remarks"></a>Hinweise
@@ -468,7 +468,7 @@ void EndDialog(int nEndID);
 
 ### <a name="parameters"></a>Parameter
 
-*nEndID*  
+*nEndID*<br/>
 Der Bezeichner als Rückgabewert des Eigenschaftenblatts verwendet werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -527,7 +527,7 @@ CPropertyPage* GetPage(int nPage) const;
 
 ### <a name="parameters"></a>Parameter
 
-*. nSeite*  
+*. nSeite*<br/>
 Der gewünschten Seite bei 0 beginnenden Index. Muss zwischen 0 und kleiner als die Anzahl der Seiten im Eigenschaftenblatt, einschließlich sein.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -564,7 +564,7 @@ int GetPageIndex(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parameter
 
-*P_seite*  
+*P_seite*<br/>
 Zeigt auf der Seite mit dem Index gefunden werden. Darf nicht NULL sein.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -623,7 +623,7 @@ void MapDialogRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parameter
 
-*lpRect*  
+*lpRect*<br/>
 Verweist auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur oder [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das das Dialogfeld enthält koordiniert, konvertiert werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -664,7 +664,7 @@ void PressButton(int nButton);
 
 ### <a name="parameters"></a>Parameter
 
-*Nschaltfläche*  
+*Nschaltfläche*<br/>
 Nschaltfläche: identifiziert die Schaltfläche gedrückt wird. Dieser Parameter kann einen der folgenden Werte sein:
 
 - PSBTN_BACK wählt die zurück-Taste.
@@ -702,10 +702,10 @@ void RemovePage(int nPage);
 
 ### <a name="parameters"></a>Parameter
 
-*P_seite*  
+*P_seite*<br/>
 Zeigt auf der Seite aus dem Eigenschaftenblatt entfernt werden soll. Darf nicht NULL sein.
 
-*. nSeite*  
+*. nSeite*<br/>
 Der Index der Seite entfernt werden soll. Muss zwischen 0 und kleiner als die Anzahl der Seiten im Eigenschaftenblatt, einschließlich sein.
 
 ### <a name="remarks"></a>Hinweise
@@ -723,10 +723,10 @@ BOOL SetActivePage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parameter
 
-*. nSeite*  
+*. nSeite*<br/>
 Der Index der Seite festlegen. Es muss zwischen 0 und kleiner als die Anzahl der Seiten im Eigenschaftenblatt, einschließlich sein.
 
-*P_seite*  
+*P_seite*<br/>
 Zeigt auf der Seite, um Sie im Eigenschaftenfenster festgelegt. Es darf nicht NULL sein.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -751,7 +751,7 @@ void SetFinishText(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Parameter
 
-*lpszText*  
+*lpszText*<br/>
 Zeigt auf den Text auf die Schaltfläche "Fertig stellen" angezeigt werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -774,10 +774,10 @@ void SetTitle(
 
 ### <a name="parameters"></a>Parameter
 
-*nStyle*  
+*nStyle*<br/>
 Gibt an, der die Darstellung der Titel des Eigenschaftenblattes. Das Format muss 0 oder als PSH_PROPTITLE angegeben werden. Wenn das Format als PSH_PROPTITLE festgelegt ist, wird das Wort "Eigenschaften" nach dem Text, der als Beschriftung angegeben angezeigt. Zum Beispiel der Aufruf `SetTitle`("Einfach", PSH_PROPTITLE) führt zu einer Beschriftung Eigenschaft Blatt "Einfache Eigenschaften".
 
-*lpszText*  
+*lpszText*<br/>
 Zeigt auf den Text als Beschriftung in der Titelleiste des Eigenschaftenblatts verwendet werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -798,7 +798,7 @@ void SetWizardButtons(DWORD dwFlags);
 
 ### <a name="parameters"></a>Parameter
 
-*dwFlags*  
+*dwFlags*<br/>
 Ein Satz von Flags, die die Funktion und die Darstellung der Schaltflächen des Assistenten anpassen. Dieser Parameter kann eine Kombination der folgenden Werte sein:
 
 - Die Schaltfläche PSWIZB_BACK zurück
@@ -847,9 +847,9 @@ Rufen Sie `SetWizardMode` vor dem Aufruf [DoModal](#domodal). Nach dem Aufruf vo
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Beispiel CMNCTRL1](../../visual-cpp-samples.md)  
-[MFC-Beispiel CMNCTRL2](../../visual-cpp-samples.md)  
-[MFC-Beispiel PROPDLG](../../visual-cpp-samples.md)  
-[MFC-Beispiel SNAPVW](../../visual-cpp-samples.md)  
-[CWnd-Klasse](../../mfc/reference/cwnd-class.md)  
-[Hierarchiediagramm](../../mfc/hierarchy-chart.md)  
+[MFC-Beispiel CMNCTRL1](../../visual-cpp-samples.md)<br/>
+[MFC-Beispiel CMNCTRL2](../../visual-cpp-samples.md)<br/>
+[MFC-Beispiel PROPDLG](../../visual-cpp-samples.md)<br/>
+[MFC-Beispiel SNAPVW](../../visual-cpp-samples.md)<br/>
+[CWnd-Klasse](../../mfc/reference/cwnd-class.md)<br/>
+[Hierarchiediagramm](../../mfc/hierarchy-chart.md)

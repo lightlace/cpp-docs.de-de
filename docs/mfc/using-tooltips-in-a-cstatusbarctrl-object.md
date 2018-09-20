@@ -1,5 +1,5 @@
 ---
-title: Verwenden von QuickInfos in einem CStatusBarCtrl-Objekt | Microsoft Docs
+title: Verwenden von QuickInfos in einem CStatusBarCtrl-Objekt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,24 +18,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cce98e4a3b3ffd506607529b9fea6f0c1114cc3
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: f17dff6680209664e9d029404e4ef012b9f12046
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951265"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392358"
 ---
 # <a name="using-tooltips-in-a-cstatusbarctrl-object"></a>Verwenden von QuickInfos in einem CStatusBarCtrl-Objekt
-Erstellen Sie zum Aktivieren von QuickInfos für ein Statusleisten-Steuerelement die `CStatusBarCtrl` Objekt mit dem SBT_TOOLTIPS-Format.  
-  
+
+Erstellen Sie zum Aktivieren von QuickInfos für ein Statusleisten-Steuerelement die `CStatusBarCtrl` Objekt mit dem SBT_TOOLTIPS-Format.
+
 > [!NOTE]
->  Bei Verwendung einer `CStatusBar` Objekt, das die Statusleiste implementieren, verwenden Sie die `CStatusBar::CreateEx` Funktion. Sie können Sie weitere Formate für den eingebetteten angeben `CStatusBarCtrl` Objekt.  
-  
- Sobald die `CStatusBarCtrl` Objekt wurde erfolgreich erstellt wurde, verwenden Sie [CStatusBarCtrl:: setTipText](../mfc/reference/cstatusbarctrl-class.md#settiptext) und [CStatusBarCtrl::GetTipText](../mfc/reference/cstatusbarctrl-class.md#gettiptext) festlegen und Abrufen der QuickInfo-Text für einen bestimmten Bereich.  
-  
- Sobald die QuickInfo festgelegt wurde, wird es angezeigt, nur, wenn das Webpart besitzt, werden ein Symbol und kein Text oder gesamten Text innerhalb des Bereichs angezeigt werden kann. QuickInfos werden im einfachen Modus nicht unterstützt.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+>  Bei Verwendung einer `CStatusBar` Objekt, das die Statusleiste implementieren, verwenden Sie die `CStatusBar::CreateEx` Funktion. Damit können Sie weitere Formate für den eingebetteten angeben `CStatusBarCtrl` Objekt.
+
+Sobald die `CStatusBarCtrl` Objekt wurde erfolgreich erstellt wurde, verwenden Sie [CStatusBarCtrl:: setTipText](../mfc/reference/cstatusbarctrl-class.md#settiptext) und [CStatusBarCtrl::GetTipText](../mfc/reference/cstatusbarctrl-class.md#gettiptext) festlegen und Abrufen der QuickInfo-Text für einen bestimmten Bereich.
+
+Wenn die QuickInfo festgelegt wurde, wird es angezeigt, nur dann, wenn das Webpart ein Symbol und kein Text besitzt oder wenn der gesamte Text in das Webpart nicht angezeigt werden kann. QuickInfos werden im einfachen Modus nicht unterstützt.
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
+[Steuerelemente](../mfc/controls-mfc.md)
 

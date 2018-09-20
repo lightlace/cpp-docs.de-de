@@ -18,17 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca5545f7ebf828a04321db999d74aaa0d8a42187
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 899d51cf20d911d5ef0e46400330a59865cdd9af
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214732"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435076"
 ---
 # <a name="making-owner-drawn-header-controls"></a>Erstellen von Ownerdrawn-Headersteuerelementen
-Sie können einzelne Elemente von einem Kopfzeilen-Steuerelement definieren ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) ownerdrawn-Elemente sein. Weitere Informationen finden Sie unter [Drawn Headersteuerelemente](/windows/desktop/Controls/header-controls) im Windows SDK.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+
+Sie können einzelne Elemente von einem Kopfzeilen-Steuerelement definieren ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) ownerdrawn-Elemente sein. Weitere Informationen finden Sie unter [Drawn Headersteuerelemente](/windows/desktop/Controls/header-controls) im Windows SDK.
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
+[Steuerelemente](../mfc/controls-mfc.md)
 

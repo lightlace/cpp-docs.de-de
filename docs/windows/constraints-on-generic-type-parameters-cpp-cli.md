@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7abdc8f2deee962dc6ee5bcfa9857efb6f0bd847
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e0c6e860fa5d7633bd334d0c0a35d25936104636
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593903"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427705"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Einschränkungen für generische Typparameter (C++/CLI)
 
@@ -39,10 +39,10 @@ where type-parameter: constraint list
 
 ### <a name="parameters"></a>Parameter
 
-*Type-parameter*  
+*Type-parameter*<br/>
 Einer der Typparameter eingeschränkt werden.
 
-*Einschränkungsliste*  
+*Einschränkungsliste*<br/>
 *Einschränkungsliste* ist eine durch Trennzeichen getrennte Liste der Einschränkung-Spezifikationen. Die Liste zählen Schnittstellen, die durch den Typparameter implementiert werden.
 
 Die Liste kann auch eine Klasse enthalten. Für das Typargument eine basisklasseneinschränkung erfüllen muss es derselben Klasse wie die Einschränkung oder von der Einschränkung abgeleitet werden.

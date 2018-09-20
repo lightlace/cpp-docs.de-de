@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00ef28954a686dac72c8b7f55b86c88313e74643
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 566b21c911ba99d19fb16b564d0748cfcfd1eb71
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719719"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435973"
 ---
 # <a name="rdx"></a>rdx
 
@@ -40,13 +40,13 @@ Erstellt einen Registrierungsschlüssel oder ändert einen vorhandenen Registrie
 
 ### <a name="parameters"></a>Parameter
 
-*key*  
+*key*<br/>
 Der Name des Schlüssels erstellt oder geöffnet werden.
 
-*Wertname*  
+*Wertname*<br/>
 (Optional) Gibt das Wertfeld "festgelegt werden. Wenn ein Wertfeld mit diesem Namen im Schlüssel nicht bereits vorhanden ist, wird sie hinzugefügt.
 
-*regtype*  
+*regtype*<br/>
 Der Typ des Registrierungsschlüssels, der hinzugefügt wird. Kann einen der folgenden sein: `text`, `dword`, `binary`, oder `CString`.
 
 ## <a name="remarks"></a>Hinweise
@@ -93,5 +93,5 @@ public:
 
 ## <a name="see-also"></a>Siehe auch
 
-[COM-Attribute](../windows/com-attributes.md)  
+[COM-Attribute](../windows/com-attributes.md)<br/>
 [registration_script](../windows/registration-script.md)  

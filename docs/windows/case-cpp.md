@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 109ca7b833791aa982e17335801e8fe1fc538987
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e6b610ce888e91ed8029c4166fa79a847d700dba
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606635"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436519"
 ---
 # <a name="case-c"></a>case (C++)
 
@@ -38,7 +38,7 @@ Verwendung der [Switch_type](../windows/switch-type.md) -Attribut in einer **Uni
 
 #### <a name="parameters"></a>Parameter
 
-*Wert*  
+*Wert*<br/>
 Geben Sie ein möglicher Wert für die Sie verarbeiten möchten. Der Typ des **Wert** kann eine der folgenden Typen:
 
 - `int`
@@ -91,6 +91,6 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 
 ## <a name="see-also"></a>Siehe auch
 
-[IDL-Attribute](../windows/idl-attributes.md)  
-[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  
+[IDL-Attribute](../windows/idl-attributes.md)<br/>
+[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [Klassenattribute](../windows/class-attributes.md)  

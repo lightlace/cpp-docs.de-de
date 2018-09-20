@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88f8402cb6a01bc46aa25f99b2b8c60151a698ce
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6a23945ae4489ace4d2017d9418f719da0849f95
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604035"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400275"
 ---
 # <a name="eventtargetarraylength-method"></a>EventTargetArray::Length-Methode
 
@@ -50,5 +50,5 @@ Ruft die aktuelle Anzahl der Elemente in das interne Array der Ereignishandler a
 
 ## <a name="see-also"></a>Siehe auch
 
-[EventTargetArray-Klasse](../windows/eventtargetarray-class.md)  
+[EventTargetArray-Klasse](../windows/eventtargetarray-class.md)<br/>
 [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

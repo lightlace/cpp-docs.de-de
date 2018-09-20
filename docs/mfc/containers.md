@@ -1,5 +1,5 @@
 ---
-title: Container | Microsoft Docs
+title: Containern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,30 +18,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d942dde74c25a40b5110b74f783d41684d1fdbe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 914b2eccf1d9896285eca5cf714dbb4b78a4fe50
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342185"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440679"
 ---
 # <a name="containers"></a>Container
-Eine Steuerelementcontainer-Anwendung ist eine Anwendung, die eingebettete oder verknüpfte Elemente in einem eigenen Dokumente integrieren kann. Die Dokumente, die von einem Steuerelementcontainer-Anwendung verwaltet müssen speichern und Anzeigen von OLE-Verbunddokument-Komponenten sowie Daten, die von der Anwendung selbst erstellt werden. Eine Steuerelementcontainer-Anwendung muss auch Benutzern neue Elemente eingefügt oder Bearbeiten von vorhandenen Elementen.  
-  
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Implementieren eines Containers](../mfc/containers-implementing-a-container.md)  
-  
- [Container-Clientelemente](../mfc/containers-client-items.md)  
-  
- [Verwenden von Verbunddateien](../mfc/containers-compound-files.md)  
-  
- [Benutzeroberflächenprobleme Container](../mfc/containers-user-interface-issues.md)  
-  
- [Erweiterte Features von Containern](../mfc/containers-advanced-features.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [OLE](../mfc/ole-in-mfc.md)   
- [Server](../mfc/servers.md)   
- [Aktivierung](../mfc/activation-cpp.md)   
- [Menüs und Ressourcen (OLE)](../mfc/menus-and-resources-ole.md)
+
+Eine Container-Anwendung ist eine Anwendung, die eingebettete oder verknüpfte Elemente in ihre eigenen Dokumente integrieren kann. Die Dokumente, die von einer Anwendung mit Containern verwalteten muss zum Speichern und Anzeigen von OLE-Verbunddokument-Komponenten als auch für Daten, die von der Anwendung selbst erstellt werden können. Eine Container-Anwendung muss auch Benutzern neue Elemente einfügen oder Bearbeiten von vorhandenen Elementen.
+
+## <a name="in-this-section"></a>In diesem Abschnitt
+
+[Implementieren eines Containers](../mfc/containers-implementing-a-container.md)
+
+[Container-Clientelemente](../mfc/containers-client-items.md)
+
+[Verwenden von Verbunddateien](../mfc/containers-compound-files.md)
+
+[Probleme mit der Benutzeroberfläche von Container](../mfc/containers-user-interface-issues.md)
+
+[Erweiterte Features von Containern](../mfc/containers-advanced-features.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[OLE](../mfc/ole-in-mfc.md)<br/>
+[Server](../mfc/servers.md)<br/>
+[Activation (Aktivierung)](../mfc/activation-cpp.md)<br/>
+[Menüs und Ressourcen (OLE)](../mfc/menus-and-resources-ole.md)
 

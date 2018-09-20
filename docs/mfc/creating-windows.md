@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Zeitfenstern | Microsoft Docs
+title: Erstellen von Windows | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446ebb4904b8f34576b03f88988bfc58138736a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bf0263bfd67a2bfbd9489c7cfea6946ee2eda9f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341896"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394023"
 ---
 # <a name="creating-windows"></a>Erstellen von Fenstern
-Das Framework erstellt automatisch die meisten benötigten Windows in einem Frameworkprogramm. [Dokument-/Ansichtarchitektur Erstellung](../mfc/document-view-creation.md) wird gezeigt, wie das Framework das Rahmenfenster zugeordneten Dokumenten und Ansichten erstellt. Aber für besondere Zwecke können Sie eigene Windows erstellen – z. B. eine eigene untergeordnete Fenster Rahmenfenster oder Sichten – zusätzlich zu den vom Framework bereitgestellten Windows.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
-  
--   [Registrieren von Fensterklassen""](../mfc/registering-window-classes.md) (im Gegensatz zu C++-Fensterobjekte)  
-  
--   [Allgemeine Fenster bei der fenstererstellung](../mfc/general-window-creation-sequence.md)  
-  
--   [Zerstören von Fensterobjekten](../mfc/destroying-window-objects.md)  
-  
--   [Arbeiten mit Fensterobjekten](../mfc/working-with-window-objects.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Fensterobjekte](../mfc/window-objects.md)
+
+Das Framework erstellt automatisch die meisten der benötigten Windows in einem Frameworkprogramm. [Erstellen von Dokument/Ansicht](../mfc/document-view-creation.md) zeigt, wie das Framework das Rahmenfenster zugeordneten Dokumenten und Ansichten erstellt. Aber für besondere Zwecke können Sie Ihre eigenen Windows erstellen, einschließlich der untergeordneten Fenstern von Fenstern oder Ansichten – zusätzlich zu den vom Framework bereitgestellten Windows.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+
+- [Registrieren von Fensterklassen""](../mfc/registering-window-classes.md) (im Gegensatz zu C++-Fensterobjekte)
+
+- [Bei der fenstererstellung fensterverwaltung](../mfc/general-window-creation-sequence.md)
+
+- [Zerstören von Fensterobjekten](../mfc/destroying-window-objects.md)
+
+- [Arbeiten mit Fensterobjekten](../mfc/working-with-window-objects.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Fensterobjekte](../mfc/window-objects.md)
 

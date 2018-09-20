@@ -1,5 +1,5 @@
 ---
-title: PTR::GetInterface | Microsoft Docs
+title: PTR::GetInterface | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,157 +21,164 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 99a4163da3692d66c71eba8b4f1eacc872cbc560
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 189dc692c9883409f1b1890fd23a648f5526d719
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161056"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432879"
 ---
 # <a name="ptrgetinterface"></a>ptr::GetInterface
-Gibt einen Zeiger auf die im Besitz befindlichen COM-Objekt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-_interface_type * GetInterface();  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf das im Besitz befindlichen COM-Objekt.  
-  
-## <a name="exceptions"></a>Ausnahmen  
- Intern `QueryInterface` aufgerufen wird, auf das im Besitz befindlichen COM-Objekt und alle Fehler `HRESULT` wird konvertiert, um eine Ausnahme von <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `com::ptr` Fügt einen Verweis auf das COM-Objekt im Auftrag des Aufrufers und behält auch einen eigenen Verweis auf das COM-Objekt. Der Aufrufer muss letztlich Geben Sie den Verweis auf das zurückgegebene Objekt frei, oder werden nie gelöscht werden.  
-  
-## <a name="example"></a>Beispiel  
- In diesem Beispiel implementiert eine CLR-Klasse, verwendet eine `com::ptr` umschließen die privaten Member `IXMLDOMDocument` Objekt. Die `GetDocument` Memberfunktion verwendet `GetInterface` um einen Zeiger auf das COM-Objekt zurückzugeben.  
-  
-```  
-// comptr_getinterface.cpp  
-// compile with: /clr /link msxml2.lib  
-#include <msxml2.h>  
-#include <msclr\com\ptr.h>  
-  
-#import <msxml3.dll> raw_interfaces_only  
-  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-using namespace msclr;  
-  
-// a ref class that uses a com::ptr to contain an   
-// IXMLDOMDocument object  
-ref class XmlDocument {  
-public:  
-   // construct the internal com::ptr with a null interface  
-   // and use CreateInstance to fill it  
-   XmlDocument(String^ progid) {  
-      m_ptrDoc.CreateInstance(progid);     
-   }  
-  
-   // add a reference to and return the COM object  
-   // but keep an internal reference to the object  
-   IXMLDOMDocument* GetDocument() {  
-      return m_ptrDoc.GetInterface();  
-   }  
-  
-   // simplified function that only writes the first node  
-   void WriteDocument() {  
-      IXMLDOMNode* pNode = NULL;  
-      BSTR bstr = NULL;  
-  
-      try {  
-         // use operator -> to call XML Doc member  
-         Marshal::ThrowExceptionForHR(m_ptrDoc->get_firstChild(&pNode));  
-         if (NULL != pNode) {  
-            // write out the xml  
-            Marshal::ThrowExceptionForHR(pNode->get_nodeName(&bstr));  
-            String^ strName = gcnew String(bstr);  
-            Console::Write("<{0}>", strName);  
-            ::SysFreeString(bstr);  
-            bstr = NULL;  
-  
-            Marshal::ThrowExceptionForHR(pNode->get_text(&bstr));  
-            Console::Write(gcnew String(bstr));  
-            ::SysFreeString(bstr);  
-            bstr = NULL;  
-  
-            Console::WriteLine("</{0}>", strName);  
-         }  
-      }  
-      finally {  
-         if (NULL != pNode) {  
-            pNode->Release();  
-         }  
-         ::SysFreeString(bstr);  
-      }  
-   }  
-  
-   // note that the destructor will call the com::ptr destructor  
-   // and automatically release the reference to the COM object  
-  
-private:  
-   com::ptr<IXMLDOMDocument> m_ptrDoc;  
-};  
-  
-// unmanaged function that loads XML into a raw XML DOM Document object  
-HRESULT LoadXml(IXMLDOMDocument* pDoc, BSTR bstrXml) {  
-   HRESULT hr = S_OK;  
-   VARIANT_BOOL bSuccess;  
-   hr = pDoc->loadXML(bstrXml, &bSuccess);  
-   if (S_OK == hr && !bSuccess) {  
-      hr = E_FAIL;  
-   }  
-   return hr;  
-}  
-  
-// use the ref class to handle an XML DOM Document object  
-int main() {  
-   IXMLDOMDocument* pDoc = NULL;  
-   BSTR bstrXml = NULL;  
-  
-   try {  
-      // create the class from a progid string  
-      XmlDocument doc("Msxml2.DOMDocument.3.0");  
-  
-      bstrXml = ::SysAllocString(L"<word>persnickety</word>");  
-      if (NULL == bstrXml) {  
-         throw gcnew OutOfMemoryException("bstrXml");  
-      }  
-      // detach the document object from the ref class  
-      pDoc = doc.GetDocument();  
-      // use unmanaged function and raw object to load xml  
-      Marshal::ThrowExceptionForHR(LoadXml(pDoc, bstrXml));  
-      // release reference to document object (but ref class still references it)  
-      pDoc->Release();  
-      pDoc = NULL;  
-  
-      // call another function on the ref class  
-      doc.WriteDocument();  
-   }  
-   catch (Exception^ e) {  
-      Console::WriteLine(e);     
-   }  
-   finally {  
-      if (NULL != pDoc) {  
-         pDoc->Release();  
-      }  
-  
-   }  
-}  
-```  
-  
-```Output  
-<word>persnickety</word>  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
- **Headerdatei** \<msclr\com\ptr.h >  
-  
- **Namespace** msclr::com  
-  
-## <a name="see-also"></a>Siehe auch  
- [PTR-Member](../dotnet/ptr-members.md)   
- [ptr::QueryInterface](../dotnet/ptr-queryinterface.md)
+
+Gibt einen Zeiger auf die im Besitz des Benutzers COM-Objekt.
+
+## <a name="syntax"></a>Syntax
+
+```
+_interface_type * GetInterface();
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Ein Zeiger auf das im Besitz des Benutzers COM-Objekt.
+
+## <a name="exceptions"></a>Ausnahmen
+
+Intern `QueryInterface` aufgerufen wird, auf das im Besitz des Benutzers COM-Objekt und alle Fehler `HRESULT` konvertiert wird, um eine Ausnahme von <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
+
+## <a name="remarks"></a>Hinweise
+
+Die `com::ptr` Fügt einen Verweis auf das COM-Objekt, auf den Namen des Aufrufers erstellt und bleibt auch seinen eigenen Verweis auf das COM-Objekt. Der Aufrufer muss den Verweis auf das zurückgegebene Objekt letztlich freigeben, oder es wird nicht zerstört werden.
+
+## <a name="example"></a>Beispiel
+
+In diesem Beispiel implementiert eine CLR-Klasse, verwendet eine `com::ptr` , umschließen die privaten Member `IXMLDOMDocument` Objekt. Die `GetDocument` Memberfunktion verwendet `GetInterface` um einen Zeiger auf die COM-Objekt zurückzugeben.
+
+```
+// comptr_getinterface.cpp
+// compile with: /clr /link msxml2.lib
+#include <msxml2.h>
+#include <msclr\com\ptr.h>
+
+#import <msxml3.dll> raw_interfaces_only
+
+using namespace System;
+using namespace System::Runtime::InteropServices;
+using namespace msclr;
+
+// a ref class that uses a com::ptr to contain an
+// IXMLDOMDocument object
+ref class XmlDocument {
+public:
+   // construct the internal com::ptr with a null interface
+   // and use CreateInstance to fill it
+   XmlDocument(String^ progid) {
+      m_ptrDoc.CreateInstance(progid);
+   }
+
+   // add a reference to and return the COM object
+   // but keep an internal reference to the object
+   IXMLDOMDocument* GetDocument() {
+      return m_ptrDoc.GetInterface();
+   }
+
+   // simplified function that only writes the first node
+   void WriteDocument() {
+      IXMLDOMNode* pNode = NULL;
+      BSTR bstr = NULL;
+
+      try {
+         // use operator -> to call XML Doc member
+         Marshal::ThrowExceptionForHR(m_ptrDoc->get_firstChild(&pNode));
+         if (NULL != pNode) {
+            // write out the xml
+            Marshal::ThrowExceptionForHR(pNode->get_nodeName(&bstr));
+            String^ strName = gcnew String(bstr);
+            Console::Write("<{0}>", strName);
+            ::SysFreeString(bstr);
+            bstr = NULL;
+
+            Marshal::ThrowExceptionForHR(pNode->get_text(&bstr));
+            Console::Write(gcnew String(bstr));
+            ::SysFreeString(bstr);
+            bstr = NULL;
+
+            Console::WriteLine("</{0}>", strName);
+         }
+      }
+      finally {
+         if (NULL != pNode) {
+            pNode->Release();
+         }
+         ::SysFreeString(bstr);
+      }
+   }
+
+   // note that the destructor will call the com::ptr destructor
+   // and automatically release the reference to the COM object
+
+private:
+   com::ptr<IXMLDOMDocument> m_ptrDoc;
+};
+
+// unmanaged function that loads XML into a raw XML DOM Document object
+HRESULT LoadXml(IXMLDOMDocument* pDoc, BSTR bstrXml) {
+   HRESULT hr = S_OK;
+   VARIANT_BOOL bSuccess;
+   hr = pDoc->loadXML(bstrXml, &bSuccess);
+   if (S_OK == hr && !bSuccess) {
+      hr = E_FAIL;
+   }
+   return hr;
+}
+
+// use the ref class to handle an XML DOM Document object
+int main() {
+   IXMLDOMDocument* pDoc = NULL;
+   BSTR bstrXml = NULL;
+
+   try {
+      // create the class from a progid string
+      XmlDocument doc("Msxml2.DOMDocument.3.0");
+
+      bstrXml = ::SysAllocString(L"<word>persnickety</word>");
+      if (NULL == bstrXml) {
+         throw gcnew OutOfMemoryException("bstrXml");
+      }
+      // detach the document object from the ref class
+      pDoc = doc.GetDocument();
+      // use unmanaged function and raw object to load xml
+      Marshal::ThrowExceptionForHR(LoadXml(pDoc, bstrXml));
+      // release reference to document object (but ref class still references it)
+      pDoc->Release();
+      pDoc = NULL;
+
+      // call another function on the ref class
+      doc.WriteDocument();
+   }
+   catch (Exception^ e) {
+      Console::WriteLine(e);
+   }
+   finally {
+      if (NULL != pDoc) {
+         pDoc->Release();
+      }
+
+   }
+}
+```
+
+```Output
+<word>persnickety</word>
+```
+
+## <a name="requirements"></a>Anforderungen
+
+**Headerdatei** \<msclr\com\ptr.h >
+
+**Namespace** msclr::com
+
+## <a name="see-also"></a>Siehe auch
+
+[ptr-Member](../dotnet/ptr-members.md)<br/>
+[ptr::QueryInterface](../dotnet/ptr-queryinterface.md)

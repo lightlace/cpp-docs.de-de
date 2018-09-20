@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2aaf38745c02c5975eb2a46f135c51b6d7247610
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: df41d4fecf238c733ffee61ace6da525fae10a8a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213755"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447158"
 ---
 # <a name="switchis"></a>switch_is
 
@@ -57,6 +57,6 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 
 ## <a name="see-also"></a>Siehe auch
 
-[IDL-Attribute](../windows/idl-attributes.md)  
-[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  
+[IDL-Attribute](../windows/idl-attributes.md)<br/>
+[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [switch_type](../windows/switch-type.md)  

@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76a29a7ae4734e5d1f1930d5309163d1e1519aa4
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: f195a553c29c8a1cd0ef57f82c9f57a1f3672048
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540600"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405293"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Pragma-Anweisungen und das __Pragma-Schlüsselwort
 Pragma-Anweisungen geben computer- oder betriebssystemspezifische Compilerfunktionen an. Die **__pragma** -Schlüsselwort, das an den Microsoft-Compiler spezifisch ist, können Sie Code Pragma-Anweisungen innerhalb von Makrodefinitionen.  
@@ -117,6 +117,6 @@ return _hr; \
   
 ## <a name="see-also"></a>Siehe auch  
  
-[C/C++-Präprozessorreferenz](../preprocessor/c-cpp-preprocessor-reference.md)   
-[C-Pragmas](../c-language/c-pragmas.md)   
+[C/C++-Präprozessorreferenz](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
+[C-Pragmas](../c-language/c-pragmas.md)<br/>
 [Schlüsselwörter](../cpp/keywords-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Kombinationsfeldhandler | Microsoft Docs
+title: Kombinationsfeldhandler | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -37,30 +37,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e1dcd48bfadcc4ed5a4b64fd0dcdee334c1f1b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5751fbdd4bff0cf3d42231ad00bef0c3483ccfb9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368074"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424260"
 ---
 # <a name="combo-box-handlers"></a>Kombinationsfeldhandler
-Die folgenden Zuordnungseinträge entsprechen der Funktionsprototypen.  
-  
-|Eintrag für die Zuordnung|Funktionsprototyp|  
-|---------------|------------------------|  
-|ON_CBN_CLOSEUP ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn)|  
-|ON_CBN_DBLCLK ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-|ON_CBN_DROPDOWN ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-|ON_CBN_EDITCHANGE ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-|ON_CBN_EDITUPDATE ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-|ON_CBN_ERRSPACE ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-|ON_CBN_KILLFOCUS ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-|ON_CBN_SELCHANGE ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-|ON_CBN_SELENDCANCEL ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-|ON_CBN_SELENDOK ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-|ON_CBN_SETFOCUS ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-  
-## <a name="see-also"></a>Siehe auch  
- [Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)
+
+Die folgenden Einträge der Karte entsprechen der Funktionsprototypen.
+
+|Zuordnungseintrag|Funktionsprototyp|
+|---------------|------------------------|
+|ON_CBN_CLOSEUP ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn)|
+|ON_CBN_DBLCLK ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+|ON_CBN_DROPDOWN ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+|ON_CBN_EDITCHANGE ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+|ON_CBN_EDITUPDATE ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+|ON_CBN_ERRSPACE ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+|ON_CBN_KILLFOCUS ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+|ON_CBN_SELCHANGE ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+|ON_CBN_SELENDCANCEL ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+|ON_CBN_SELENDOK ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+|ON_CBN_SETFOCUS ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+
+## <a name="see-also"></a>Siehe auch
+
+[Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Menübeispiele | Microsoft Docs
+title: Menübeispiele | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,24 +14,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b9b1cc957dbc32978902d6efd072f032ae7508a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb28fb0b842cb551f3a53f126122b1ccddad4a75
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344307"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422024"
 ---
 # <a name="menu-sample-list"></a>Menübeispiele
-Finden Sie unter den folgenden Beispielprogramme, erstellen, bearbeiten und Aktualisieren von Menüs:  
-  
- *MDI-Beispiel: Aktivieren und Deaktivieren von Menüelementen*  
-  
--   [SCRIBBLE](../visual-cpp-samples.md)  
-  
- *Dynamische Menüs zu ändern*  
-  
--   [DYNAMENU](../visual-cpp-samples.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Menüs](../mfc/menus-mfc.md)
+
+Finden Sie in der folgenden Beispielprogramme, die veranschaulichen, erstellen, bearbeiten und Aktualisieren von Menüs:
+
+*MDI-Beispiel: Aktivieren und Deaktivieren von Menüelementen*
+
+- [SCRIBBLE](../visual-cpp-samples.md)
+
+*Dynamische Menüs ändern*
+
+- [DYNAMENU](../visual-cpp-samples.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Menüs](../mfc/menus-mfc.md)
 

@@ -1,5 +1,5 @@
 ---
-title: OLE-Serverklasse | Microsoft Docs
+title: OLE-Serverklasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,41 +19,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9d0c75325c62a92f65c56f2c76350bf752228fd
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 9994cdadb0ca2924a3ac773752ae40f3a750b74f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36932220"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442889"
 ---
 # <a name="ole-server-classes"></a>OLE-Server-Klassen
-Diese Klassen werden von serveranwendungen verwendet. Serverdokumente abgeleitet sind `COleServerDoc` anstatt von `CDocument`. Beachten Sie, dass, weil `COleServerDoc` stammt aus `COleLinkingDoc`, Serverdokumente können auch sein, Container, die Verknüpfung zu unterstützen.  
-  
- Die `COleServerItem` Klasse darstellt, ein Dokument oder einen Teil eines Dokuments, die in einem anderen Dokument eingebettet oder verknüpft werden kann.  
-  
- `COleIPFrameWnd` und `COleResizeBar` unterstützt direktes Bearbeiten, während das Objekt in einem Container befindet und `COleTemplateServer` unterstützt die Erstellung von Dokument-/Ansichtarchitektur Paare damit OLE-Objekte aus anderen Programmen bearbeitet werden können.  
-  
- [COleServerDoc](../mfc/reference/coleserverdoc-class.md)  
- Als Basisklasse verwendet für Server-Anwendung Document-Klassen. `COleServerDoc` -Objekte stellen den Großteil serverunterstützung durch Interaktionen mit `COleServerItem` Objekte. Verwendung der Klassenbibliothek Dokument-/Ansichtarchitektur Visual Bearbeitungsfunktionen bereitgestellt.  
-  
- [CDocItem](../mfc/reference/cdocitem-class.md)  
- Abstrakte Basisklasse von `COleClientItem` und `COleServerItem`. Objekte der Klassen abgeleitet `CDocItem` Dokumentteilen darstellen.  
-  
- [COleServerItem](../mfc/reference/coleserveritem-class.md)  
- Zur Darstellung von OLE-Schnittstelle, um `COleServerDoc` Elemente. Es ist in der Regel eine `COleServerDoc` Objekt, das die eingebetteten Teil eines Dokuments darstellt. Auf Servern, die Links zum Teilen von Dokumenten unterstützen, treten möglicherweise viele `COleServerItem` Objekte, von denen jedes einen Link zu einem Teil des Dokuments darstellt.  
-  
- [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)  
- Stellt das Rahmenfenster für eine Sicht, wenn Serverdokument direkt bearbeitet wird.  
-  
- [COleResizeBar](../mfc/reference/coleresizebar-class.md)  
- Stellt die Standardbenutzeroberfläche für das direkte Ändern der Größe. Objekte dieser Klasse werden immer in Verbindung mit verwendet `COleIPFrameWnd` Objekte.  
-  
- [COleTemplateServer](../mfc/reference/coletemplateserver-class.md)  
- Zum Erstellen von Dokumenten mithilfe des Frameworks Dokument-/Ansichtarchitektur verwendet. Ein `COleTemplateServer` Objekt delegiert Großteil der Arbeit an einem zugeordnete `CDocTemplate` Objekt.  
-  
- [COleException](../mfc/reference/coleexception-class.md)  
- Eine Ausnahme, die resultierenden nach einem Fehler bei der OLE-Verarbeitung. Diese Klasse wird von Container und Server.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+
+Diese Klassen werden von Server-Anwendungen verwendet. Serverdokumente davon abgeleitet sind `COleServerDoc` anstatt von `CDocument`. Beachten Sie, dass `COleServerDoc` ergibt sich aus `COleLinkingDoc`, Serverdokumente können auch sein, Container, die Verknüpfung zu unterstützen.
+
+Die `COleServerItem` Klasse darstellt, ein Dokument oder einen Teil eines Dokuments, die in einem anderen Dokument eingebettet oder verknüpft werden kann.
+
+`COleIPFrameWnd` und `COleResizeBar` unterstützen die direkte Bearbeitung, während das Objekt in einem Container befindet und `COleTemplateServer` unterstützt die Erstellung von Dokument/Ansicht-Paaren damit OLE-Objekte aus anderen Anwendungen, die bearbeitet werden können.
+
+[COleServerDoc](../mfc/reference/coleserverdoc-class.md)<br/>
+Als die Basisklasse verwendet für Serveranwendung Document-Klassen. `COleServerDoc` Objekte stellen den größten Teil der Unterstützung durch Interaktionen mit Server `COleServerItem` Objekte. Visual Bearbeitungsfunktionen unter Verwendung der Klassenbibliothek Dokument-/Ansichtarchitektur bereitgestellt.
+
+[CDocItem](../mfc/reference/cdocitem-class.md)<br/>
+Abstrakte Basisklasse von `COleClientItem` und `COleServerItem`. Objekte der Klassen abgeleitet `CDocItem` Teilen von Dokumenten darstellen.
+
+[Abgeleitete COleServerItem-Klasse](../mfc/reference/coleserveritem-class.md)<br/>
+Verwendet, um die OLE-Schnittstelle, um darzustellen `COleServerDoc` Elemente. Es ist in der Regel eine `COleServerDoc` -Objekt, das den eingebetteten Teil eines Dokuments darstellt. In der Server, die Links zu den Teilen von Dokumenten zu unterstützen, sind viele `COleServerItem` Objekte, von denen jedes einen Link auf einen Teil des Dokuments darstellt.
+
+[COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)<br/>
+Stellt das Rahmenfenster für eine Sicht, wenn Serverdokument direkt bearbeitet wird.
+
+[COleResizeBar](../mfc/reference/coleresizebar-class.md)<br/>
+Stellt die Standardbenutzeroberfläche für direkte größenänderungen. Objekte dieser Klasse werden immer in Verbindung mit verwendet `COleIPFrameWnd` Objekte.
+
+[COleTemplateServer](../mfc/reference/coletemplateserver-class.md)<br/>
+Zum Erstellen von Dokumenten mithilfe des Frameworks Dokument-/Ansichtarchitektur verwendet. Ein `COleTemplateServer` Objekt delegiert der Großteil der Arbeit auf ein zugeordnetes `CDocTemplate` Objekt.
+
+[COleException](../mfc/reference/coleexception-class.md)<br/>
+Eine Ausnahme, die nach einem Fehler bei der Verarbeitung von OLE. Diese Klasse wird von sowohl Container und Server verwendet.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../mfc/class-library-overview.md)
 

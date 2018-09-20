@@ -1,5 +1,5 @@
 ---
-title: Zuordnen von Meldungen | Microsoft Docs
+title: Zuordnen von Meldungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,18 +21,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f521145599a3d734a22dd3b2707ad4dd16df8e80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7324da5eaff15d240cabbaede2c2982021361257
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345985"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410978"
 ---
 # <a name="mapping-messages"></a>Zuordnen von Meldungen
-Jede Frameworkklasse, die Nachrichten oder Befehle empfangen kann hat ihre eigene "meldungszuordnung". Das Framework verwendet meldungszuordnungen Verbindung von Meldungen und Befehle zu Ihren jeweiligen Handlerfunktionen. Jede Klasse abgeleitete `CCmdTarget` eine meldungszuordnung haben können. Andere Artikel meldungszuordnungen ausführlich erläutert und beschrieben, wie sie verwendet.  
-  
- Trotz der Name "meldungszuordnung," Nachricht, die Handhabung von Zuordnungen sowohl Meldungen und Befehle – alle drei Kategorien von Nachrichten in aufgeführten [Meldungskategorien](../mfc/message-categories.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Meldungen und Befehle im Framework](../mfc/messages-and-commands-in-the-framework.md)
+
+Jedes Framework-Klasse, die Nachrichten oder Befehle empfangen kann verfügt über einen eigenen "Nachricht"zuordnen. Das Framework verwendet meldungszuordnungen Verbindung von Meldungen und Befehle mit Ihren jeweiligen Handlerfunktionen. Jede aus der Klasse abgeleitete `CCmdTarget` eine meldungszuordnung haben. Weitere Artikel meldungszuordnungen im Detail erläutert und beschrieben, wie Sie diese verwenden.
+
+Trotz der Name "meldungszuordnung," Nachricht, die Handhabung von Zuordnungen sowohl Meldungen und Befehle – alle drei Kategorien von Nachrichten, die in aufgeführten [Meldungskategorien](../mfc/message-categories.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Meldungen und Befehle im Framework](../mfc/messages-and-commands-in-the-framework.md)
 

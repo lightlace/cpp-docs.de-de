@@ -1,5 +1,5 @@
 ---
-title: 'TN051: Verwenden CTL3D jetzt und in der Zukunft | Microsoft Docs'
+title: 'TN051: Verwenden CTL3D jetzt und in der Zukunft | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a19077bcba252d252418b6c3554c6172ed1aaa2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dfffe63e80160cab1c85ef19de321b361e1c26cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382271"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388640"
 ---
 # <a name="tn051-using-ctl3d-now-and-in-the-future"></a>TN051: Verwenden von CTL3D jetzt und in der Zukunft
-Diese technischen Hinweis, der zuvor CTL3D und MFC erläutert ist mittlerweile veraltet. Die 3D-Effekt für Steuerelemente wird von MFC automatisch implementiert werden.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Technische Hinweise – nach Anzahl](../mfc/technical-notes-by-number.md)   
- [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
+
+Diese technische Hinweis an, die zuvor CTL3D und MFC erläutert, ist mittlerweile veraltet. Der 3D-Effekt für Steuerelemente wird automatisch von MFC implementiert.
+
+## <a name="see-also"></a>Siehe auch
+
+[Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
+[Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
 

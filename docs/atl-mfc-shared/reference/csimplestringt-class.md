@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98187d7f5946496af26e0cf4ff7929f12e5a6eb7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e7a4abff1faaa8fe93f15fb2d4a7e5ba15d6e434
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46088955"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434660"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT-Klasse
 
@@ -1174,5 +1174,5 @@ Rufen Sie diese Methode zerstört die `CSimpleStringT` Objekt.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+[Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [Freigegebene ATL-/MFC-Klassen](../../atl-mfc-shared/atl-mfc-shared-classes.md)

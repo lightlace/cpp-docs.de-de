@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21b9efe8fc1ce5cb7ab90edd30b38253d44dabc0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2f937c2cdaa4bb7f31b39b8a28c657274830fc36
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106807"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446607"
 ---
 # <a name="event-maps"></a>Ereigniszuordnungen
 
@@ -89,10 +89,10 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 ### <a name="parameters"></a>Parameter
 
-*theClass*  
+*theClass*<br/>
 Gibt an, dass der Name der Steuerelement-Klasse, dessen Ereignis eine Zuordnung, ist.
 
-*Basisklasse*  
+*Basisklasse*<br/>
 Gibt den Namen der Basisklasse der *TheClass*.
 
 ### <a name="remarks"></a>Hinweise
@@ -127,13 +127,13 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 
 ### <a name="parameters"></a>Parameter
 
-*pszName*  
+*pszName*<br/>
 Der Name des Ereignisses.
 
-*pfnFire*  
+*pfnFire*<br/>
 Der Name der das Auslösen der Funktion des Ereignisses.
 
-*vtsParams*  
+*vtsParams*<br/>
 Eine durch Leerzeichen getrennte Liste von einer oder mehrerer Konstanten, die Parameterliste der Funktion angeben.
 
 ### <a name="remarks"></a>Hinweise
@@ -197,16 +197,16 @@ EVENT_CUSTOM_ID(
 
 ### <a name="parameters"></a>Parameter
 
-*pszName*  
+*pszName*<br/>
 Der Name des Ereignisses.
 
-*DISPID*  
+*DISPID*<br/>
 Die Dispatch-ID, der vom Steuerelement verwendet wird, wenn das Ereignis ausgelöst wird.
 
-*pfnFire*  
+*pfnFire*<br/>
 Der Name der das Auslösen der Funktion des Ereignisses.
 
-*vtsParams*  
+*vtsParams*<br/>
 Eine Variable Liste von Parametern an den Steuerelementcontainer übergeben, wenn das Ereignis ausgelöst wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -268,10 +268,10 @@ ON_STDOLEVERB(iVerb, memberFxn)
 
 ### <a name="parameters"></a>Parameter
 
-*iVerb*  
+*iVerb*<br/>
 Der standard Verbindex für das Verb, das überschrieben wird.
 
-*memberFxn*  
+*memberFxn*<br/>
 Die Funktion, die vom Framework aufgerufen, wenn das Verb aufgerufen wird.
 
 ### <a name="remarks"></a>Hinweise

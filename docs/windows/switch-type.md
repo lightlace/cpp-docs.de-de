@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: faa2a3be7260eecb16599db967336bcb7b774c99
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0ed603a416e7f56e4415ce36ad4b3fd8059d311f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200125"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415745"
 ---
 # <a name="switchtype"></a>switch_type
 
@@ -38,7 +38,7 @@ type
 
 ### <a name="parameters"></a>Parameter
 
-*Typ*  
+*Typ*<br/>
 Der Switchtyp kann es sich um eine ganze Zahl "," Zeichen "," Boolesch "oder" Enumeration-Typ sein.
 
 ## <a name="remarks"></a>Hinweise
@@ -83,6 +83,6 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 
 ## <a name="see-also"></a>Siehe auch
 
-[IDL-Attribute](../windows/idl-attributes.md)  
-[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  
+[IDL-Attribute](../windows/idl-attributes.md)<br/>
+[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [export](../windows/export.md)  

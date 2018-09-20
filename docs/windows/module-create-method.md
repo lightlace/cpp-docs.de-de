@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ae4f50e6d2d614e444766babf8e55f5c9f83932
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a8b84bcaec7dbadfb7b735264df12f7e958dcd20
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609543"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444696"
 ---
 # <a name="modulecreate-method"></a>Module::Create-Methode
 
@@ -45,16 +45,16 @@ WRL_NOTHROW static Module& Create(
 
 ### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Modultyp.
 
-*Rückruf*  
+*Rückruf*<br/>
 Wird aufgerufen, wenn das letzte Instanzobjekt des Moduls freigegeben wird.
 
-*object*  
+*object*<br/>
 Die *Objekt* und *Methode* Parameter in Kombination verwendet werden. Verweist auf das letzte Instance-Objekt, wenn die letzte Instanzobjekt in das Modul veröffentlicht wird.
 
-*Methode*  
+*Methode*<br/>
 Die *Objekt* und *Methode* Parameter in Kombination verwendet werden. Zeigt auf die Methode des letzten Instance-Objekt, wenn die letzte Instanzobjekt in das Modul veröffentlicht wird.
 
 ## <a name="return-value"></a>Rückgabewert

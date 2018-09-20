@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18616b1010dfe6a23861c512b1113c30fe5251ce
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 27a2cfaaf4ddb5ae58cdcd212b5fdcb7ded73bb0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535352"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434725"
 ---
 # <a name="implements-structure"></a>Implements-Struktur
 
@@ -69,37 +69,37 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 
 ### <a name="parameters"></a>Parameter
 
-*I0*  
+*I0*<br/>
 Die nullte Schnittstellen-ID. (Erforderlich)
 
-*I1*  
+*I1*<br/>
 Die erste Schnittstellen-ID. (Optional)
 
-*I2*  
+*I2*<br/>
 Die zweite Schnittstellen-ID. (Optional)
 
-*I3*  
+*I3*<br/>
 Die dritte Schnittstellen-ID. (Optional)
 
-*I4*  
+*I4*<br/>
 Die vierte Schnittstellen-ID. (Optional)
 
-*I5*  
+*I5*<br/>
 Die fünfte Schnittstellen-ID. (Optional)
 
-*I6*  
+*I6*<br/>
 Die sechste Schnittstellen-ID. (Optional)
 
-*I7*  
+*I7*<br/>
 Die siebte Schnittstellen-ID. (Optional)
 
-*I8*  
+*I8*<br/>
 Die achte Schnittstellen-ID. (Optional)
 
-*I9*  
+*I9*<br/>
 Die neunte Schnittstellen-ID. (Optional)
 
-*flags*  
+*flags*<br/>
 Von konfigurationsflags für die Klasse. Eine oder mehrere [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) Enumerationen, die im angegebenen ein [RuntimeClassFlags](../windows/runtimeclassflags-structure.md) Struktur.
 
 ## <a name="remarks"></a>Hinweise
@@ -163,10 +163,10 @@ __forceinline HRESULT CanCastTo(
 
 ### <a name="parameters"></a>Parameter
 
-*riid*  
+*riid*<br/>
 Ein Verweis auf eine Schnittstellen-ID.
 
-*ppv*  
+*ppv*<br/>
 Wenn erfolgreich, ein Zeiger auf die Schnittstelle durch angegeben *Riid*.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -206,10 +206,10 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parameter
 
-*index*  
+*index*<br/>
 Ein nullbasierter Index, der das Startelement "Array" für diesen Vorgang angibt. Klicken Sie nach Abschluss dieses Vorgangs *Index* um 1 erhöht.
 
-*IIDs*  
+*IIDs*<br/>
 Ein Array vom Typ IID.
 
 ### <a name="remarks"></a>Hinweise

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 156191d09c88d8f19b3fe73108bcbca390b23f6e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ab2c857451e399e56e69d79240d4ace023a8b301
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760202"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424079"
 ---
 # <a name="basic-cstring-operations"></a>Grundlegende CString-Vorgänge
 
@@ -112,8 +112,8 @@ Ohne diese Umwandlung `cs` behandelt, als eine `void*` und `wcout` gibt die Adre
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zeichenfolgen (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
-[CStringT-Klasse](../atl-mfc-shared/reference/cstringt-class.md)   
-[Vorlagenspezialisierung](../cpp/template-specialization-cpp.md)   
+[Zeichenfolgen (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[CStringT-Klasse](../atl-mfc-shared/reference/cstringt-class.md)<br/>
+[Vorlagenspezialisierung](../cpp/template-specialization-cpp.md)<br/>
 [Vorgehensweise: Konvertieren zwischen verschiedenen Zeichenfolgentypen](../text/how-to-convert-between-various-string-types.md)
 

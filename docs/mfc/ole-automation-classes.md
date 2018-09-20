@@ -1,5 +1,5 @@
 ---
-title: OLE-Automatisierungsklassen | Microsoft Docs
+title: OLE-Automatisierungsklassen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,22 +20,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8316030ba65796d0e9811ca35384c8a4a2a3afa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea35e51296b2fc528657c4dd9f9b9b76b84aae83
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342877"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391513"
 ---
 # <a name="ole-automation-classes"></a>OLE-Automatisierungsklassen
-Diese Klassen unterstützen Automatisierungsclients (Anwendungen, die Steuern von anderen Anwendungen). Automatisierungsserver (Anwendungen, die von einer anderen Anwendung gesteuert werden können) werden unterstützt, über [Dispatchzuordnungen](../mfc/reference/dispatch-maps.md).  
-  
- [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)  
- Wird verwendet, um Automatisierungsserver aus Ihrer Automatisierungsclient aufzurufen. Wenn Sie eine Klasse hinzufügen, wird diese Klasse verwendet, typsicheren Klassen für Automatisierungsserver zu erstellen, die eine Typbibliothek bereitstellen.  
-  
- [COleDispatchException](../mfc/reference/coledispatchexception-class.md)  
- Eine Ausnahme aufgrund eines Fehlers während der OLE-Automatisierung. Automation-Ausnahmen werden von Automatisierungsserver ausgelöst und abgefangen von-Clients.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+
+Diese Klassen unterstützen die Benutzeroberflächenautomatisierungs-Clients (Anwendungen, die Steuern von anderen Anwendungen). Automatisierungsserver (Anwendungen, die von anderen Anwendungen gesteuert werden können) werden über unterstützt [Dispatchzuordnungen](../mfc/reference/dispatch-maps.md).
+
+[COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)<br/>
+Zum Aufrufen von Automatisierungsserver aus Ihrem Automatisierungsclient verwendet. Wenn Sie eine Klasse hinzufügen, wird diese Klasse verwendet, zum Erstellen von typsicheren Klassen für Automatisierungsserver, die eine Typbibliothek zu bieten.
+
+[COleDispatchException](../mfc/reference/coledispatchexception-class.md)<br/>
+Eine Ausnahme aufgrund eines Fehlers während der OLE-Automatisierung. Automation-Ausnahmen werden vom Automatisierungsserver ausgelöst und abgefangen, die von Benutzeroberflächenautomatisierungs-Clients.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../mfc/class-library-overview.md)
 

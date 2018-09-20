@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abad906c7fcc5c86a6901757ddfbb5dfeff2ec29
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2065b96875f2c441b24eb69f8ca51b06fe5717f0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704899"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444483"
 ---
 # <a name="generic-interfaces-visual-c"></a>Generische Schnittstellen (Visual C++)
 
@@ -42,31 +42,31 @@ Weitere Informationen zu den Schnittstellen, finden Sie unter [Schnittstellenkla
 
 ## <a name="remarks"></a>Hinweise
 
-*Attribute*  
+*Attribute*<br/>
 (Optional) Zusätzliche deklarative Informationen. Weitere Informationen zu Attributen und Attributklassen finden Sie unter **Attribute**.
 
-*Klassenschlüssel*  
+*Klassenschlüssel*<br/>
 **Klasse** oder **Typename**
 
-*type-parameter-identifier(s)*  
+*type-parameter-identifier(s)*<br/>
 Liste der durch Trennzeichen getrennte IDs.
 
-*Type-Parameter-Einschränkungen-Klauseln*  
+*Type-Parameter-Einschränkungen-Klauseln*<br/>
 Nimmt die Form, die im angegebenen [Einschränkungen für generische Typparameter (C++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*Zugriffsmodifizierer*  
+*Zugriffsmodifizierer*<br/>
 (Optional) Zugriffsmodifizierer (z. B. **öffentliche, private**).
 
-*identifier*  
+*identifier*<br/>
 Der Name der Schnittstelle.
 
-*Base-list*  
+*Base-list*<br/>
 (Optional) Eine Liste, die eine oder mehrere explizite Basisschnittstelle durch Kommas getrennt enthält.
 
-*Interface-body*  
+*Interface-body*<br/>
 Deklarationen der Schnittstellenmember.
 
-*Deklaratoren*  
+*Deklaratoren*<br/>
 (Optional) Deklarationen von Variablen, die auf diesem Typ basiert.
 
 ## <a name="example"></a>Beispiel

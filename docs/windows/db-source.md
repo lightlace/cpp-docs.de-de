@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c43139dd1d927d9e6173d9e78765d0fcdbddae6a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8faad93ae57e42e0e28bcb697ed300c11e766136
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716013"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376914"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -40,13 +40,13 @@ Erstellt eine Verbindung mit einer Datenquelle.
 
 ### <a name="parameters"></a>Parameter
 
-*db_source*  
+*db_source*<br/>
 Die Verbindungszeichenfolge für die Verbindung mit der Datenquelle verwendet wird. Das Format der Verbindungszeichenfolge finden Sie unter [Verbindungszeichenfolgen und Datenverknüpfungen](/previous-versions/windows/desktop/ms718376\(v=vs.85\)) in der Microsoft Data Access Components (MDAC) SDK.
 
-*name*  
+*name*<br/>
 (Optional) Bei Verwendung von **Db_source** für eine Klasse, *Namen* ist eine Instanz von einem Datenquellenobjekt an, die die **Db_source** angewendet werden (siehe Beispiel 1). Bei Verwendung von **Db_source** Inline in der Implementierung einer Methode *Namen* ist eine Variable (lokal in der Methode), die für den Datenzugriff verwendet werden kann (siehe Beispiel 2). Übergeben Sie das *Namen* auf die *Source_name* Parameter `db_command` , einen Befehl die Datenquelle zugeordnet werden soll.
 
-*HRESULT*  
+*HRESULT*<br/>
 (Optional) Identifiziert die Variable, die das HRESULT des diesem Datenbankbefehl erhält. Wenn die Variable nicht existiert, wird sie automatisch durch das Attribut eingefügt.
 
 ## <a name="remarks"></a>Hinweise

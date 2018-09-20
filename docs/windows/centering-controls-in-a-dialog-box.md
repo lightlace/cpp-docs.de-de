@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f21517d9a8151c853586b2fc4a0beb1821b114e9
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 3d1be489f345171142faa8f43387a0565899c016
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317003"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391292"
 ---
 # <a name="centering-controls-in-a-dialog-box-c"></a>Zentrieren von Steuerelementen in einem Dialogfeld (C++)
 
@@ -44,6 +44,6 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anordnung von Steuerelementen in Dialogfeldern](../windows/arrangement-of-controls-on-dialog-boxes.md)  
-[Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)  
+[Anordnung von Steuerelementen in Dialogfeldern](../windows/arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)<br/>
 [Steuerelemente](../mfc/controls-mfc.md)

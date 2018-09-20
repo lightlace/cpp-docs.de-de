@@ -2,7 +2,7 @@
 title: Installieren von C++-Unterstützung in Visual Studio 2017 | Microsoft-Dokumentation
 description: Installieren Sie Visual Studio-Unterstützung für Visual C++
 ms.custom: mvc
-ms.date: 06/21/2018
+ms.date: 09/17/2018
 ms.topic: tutorial
 ms.technology:
 - devlang-C++
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e0fef319fbe119118e3a915a66bea3546bbb9a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6c905df6fb406b9189bd46d20c6f199d3d90a722
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702896"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441940"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Installieren von C++-Unterstützung in Visual Studio
 
@@ -37,7 +37,7 @@ Weitere Informationen zu den freien Speicherplatz und den Anforderungen des Betr
 
 ## <a name="visual-studio-2015-installation"></a>Visual Studio 2015-Installation
 
-Auf der Seite [Downloads älterer Versionen von Visual Studio](https://www.visualstudio.com/vs/older-downloads/) können Sie Visual Studio 2015 herunterladen. Führen Sie das Setupprogramm aus, klicken Sie auf **Benutzerdefinierte Installation**, und wählen Sie die C++-Komponente aus.
+Auf der Seite [Downloads älterer Versionen von Visual Studio](https://www.visualstudio.com/vs/older-downloads/) können Sie Visual Studio 2015 herunterladen. Führen Sie das Setupprogramm aus, klicken Sie auf **Benutzerdefinierte Installation**, und wählen Sie die C++-Komponente aus. Um eine vorhandene Installation von Visual Studio 2015 C++-Unterstützung hinzuzufügen, klicken Sie auf die Schaltfläche "Windows Start", und geben auf **Software**. Öffnen Sie das Programm in der Ergebnisliste aus, und klicken Sie dann finden Sie die Installation von Visual Studio 2015 in der Liste der installierten Programme. Doppelklicken Sie darauf, und wählen Sie dann **ändern** , und wählen Sie die Visual C++, die zu installierenden Komponenten.
 
 In der Regel wird die Verwendung von Visual Studio 2017 empfohlen, auch wenn Sie dann Ihren Code mithilfe des Visual Studio 2015-Compilers kompilieren müssen. Weitere Informationen finden Sie unter [Use native multi-targeting in Visual Studio to build old projects (Verwenden der nativen Festlegung von Zielversionen in Visual Studio, um alte Projekte zu erstellen)](../porting/use-native-multi-targeting.md).
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2336562abb82ae89bd2f6864d0678023a3ccf69
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 87516cf45a39602bea462b8e94f17d3ef64ad0eb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600527"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431618"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper-Struktur
 
@@ -53,34 +53,34 @@ struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
 
 ### <a name="parameters"></a>Parameter
 
-*T0*  
+*T0*<br/>
 Template-Parameter 0 (null) ist erforderlich.
 
-*T1*  
+*T1*<br/>
 Template-Parameter 1, die standardmäßig nicht angegeben wird.
 
-*T2*  
+*T2*<br/>
 Vorlagenparameter 2, die standardmäßig nicht angegeben wird. Der dritte Vorlagenparameter.
 
-*T3*  
+*T3*<br/>
 Template-Parameter 3, die standardmäßig nicht angegeben wird.
 
-*T4*  
+*T4*<br/>
 Vorlagenparameter 4, die standardmäßig nicht angegeben wird.
 
-*T5*  
+*T5*<br/>
 Template-Parameter 5, die standardmäßig nicht angegeben wird.
 
-*T6*  
+*T6*<br/>
 Vorlagenparameter 6, die standardmäßig nicht angegeben wird.
 
-*T7*  
+*T7*<br/>
 Vorlagenparameter 7, die standardmäßig nicht angegeben wird.
 
-*T8*  
+*T8*<br/>
 Vorlagenparameter 8, die standardmäßig nicht angegeben wird.
 
-*T9*  
+*T9*<br/>
 Vorlagenparameter 9, die standardmäßig nicht angegeben wird.
 
 ## <a name="remarks"></a>Hinweise

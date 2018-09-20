@@ -1,5 +1,5 @@
 ---
-title: Dialogfeldbeispiele | Microsoft Docs
+title: Dialogfeldbeispiele | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,54 +14,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0edef5dc0c97985ba81b28c9df5233a8a2da6933
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 320f595606789ce2a3726971dfa21d7a92ea2bb1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343607"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434023"
 ---
 # <a name="dialog-sample-list"></a>Dialogfeldbeispiele
-Finden Sie unter folgenden Beispielprogramme, die angezeigten Dialogfelder und Eigenschaftenblätter veranschaulichen:  
-  
- *MDI-Beispielanwendung mit Dialogfeldern*  
-  
--   [SCRIBBLE](../visual-cpp-samples.md)  
-  
- *Nicht modalen Dialogfelds*  
-  
--   [OHNE MODUS](../visual-cpp-samples.md)  
-  
- *Eigenschaftenblattdialogfeld (Registerkarte)*  
-  
--   [PROPDLG](../visual-cpp-samples.md)  
-  
--   [CMNCTRL1](../visual-cpp-samples.md)  
-  
--   [CMNCTRL2](../visual-cpp-samples.md)  
-  
- *Anwendung basierend auf einem Dialogfeld*  
-  
--   [CMNCTRL1](../visual-cpp-samples.md)  
-  
--   [CMNCTRL2](../visual-cpp-samples.md)  
-  
- *Dialogfeld-Steuerelemente*  
-  
--   [CMNCTRL1](../visual-cpp-samples.md)  
-  
--   [CMNCTRL2](../visual-cpp-samples.md)  
-  
--   [CTRLTEST](../visual-cpp-samples.md)  
-  
- *Dialogfeld-ähnliche Formularansichten*  
-  
--   [VIEWEX](../visual-cpp-samples.md)  
-  
- *In-Memory-Dialogfeldvorlage*  
-  
--   [DLGTEMPL](../visual-cpp-samples.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Dialogfelder](../mfc/dialog-boxes.md)
+
+Finden Sie die folgenden Beispielprogramme, die angezeigten Dialogfelder und Eigenschaftenblätter veranschaulichen:
+
+*MDI-Beispielanwendung mit Dialogfeldern*
+
+- [SCRIBBLE](../visual-cpp-samples.md)
+
+*Nicht-modales Dialogfeld*
+
+- [OHNE MODUS](../visual-cpp-samples.md)
+
+*Eigenschaft-Tabelle (Dialogfeld) (Dialogfeld im Registerformat)*
+
+- [PROPDLG](../visual-cpp-samples.md)
+
+- [CMNCTRL1](../visual-cpp-samples.md)
+
+- [CMNCTRL2](../visual-cpp-samples.md)
+
+*In einem Dialogfeld basierende Anwendung*
+
+- [CMNCTRL1](../visual-cpp-samples.md)
+
+- [CMNCTRL2](../visual-cpp-samples.md)
+
+*Dialogfeld-Steuerelemente*
+
+- [CMNCTRL1](../visual-cpp-samples.md)
+
+- [CMNCTRL2](../visual-cpp-samples.md)
+
+- [CTRLTEST](../visual-cpp-samples.md)
+
+*Dialogfeld-ähnliche Formularansichten*
+
+- [VIEWEX](../visual-cpp-samples.md)
+
+*Vorlage für in-Memory-Dialogfeld*
+
+- [DLGTEMPL](../visual-cpp-samples.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Dialogfelder](../mfc/dialog-boxes.md)
 

@@ -36,145 +36,150 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7607083a50d98a1b531d6ea45e04866f253a7dfb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7a94bb2941662fc19fffa27f72497b04f79e7ac7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709526"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445476"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedAdd“
-**Microsoft-spezifisch**  
-  
- Führen Sie atomarische Addition aus, die sicherstellt, dass der Vorgang erfolgreich abgeschlossen wird, wenn mehrere Threads auf eine freigegebene Variable zugreifen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-long _InterlockedAdd(  
-   long volatile * Addend,  
-   long Value  
-);  
-long _InterlockedAdd_acq(  
-   long volatile * Addend,  
-   long Value  
-);  
-long _InterlockedAdd_nf(  
-   long volatile * Addend,  
-   long Value  
-);  
-long _InterlockedAdd_rel(  
-   long volatile * Addend,  
-   long Value  
-);  
-__int64 _InterlockedAdd64(  
-   __int64 volatile * Addend,  
-   __int64 Value  
-);  
-__int64 _InterlockedAdd64_acq(  
-   __int64 volatile * Addend,  
-   __int64 Value  
-);  
-__int64 _InterlockedAdd64_nf (  
-   __int64 volatile * Addend,  
-   __int64 Value  
-);  
-__int64 _InterlockedAdd64_rel(  
-   __int64 volatile * Addend,  
-   __int64 Value  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+
+**Microsoft-spezifisch**
+
+Führen Sie atomarische Addition aus, die sicherstellt, dass der Vorgang erfolgreich abgeschlossen wird, wenn mehrere Threads auf eine freigegebene Variable zugreifen.
+
+## <a name="syntax"></a>Syntax
+
+```
+long _InterlockedAdd(
+   long volatile * Addend,
+   long Value
+);
+long _InterlockedAdd_acq(
+   long volatile * Addend,
+   long Value
+);
+long _InterlockedAdd_nf(
+   long volatile * Addend,
+   long Value
+);
+long _InterlockedAdd_rel(
+   long volatile * Addend,
+   long Value
+);
+__int64 _InterlockedAdd64(
+   __int64 volatile * Addend,
+   __int64 Value
+);
+__int64 _InterlockedAdd64_acq(
+   __int64 volatile * Addend,
+   __int64 Value
+);
+__int64 _InterlockedAdd64_nf (
+   __int64 volatile * Addend,
+   __int64 Value
+);
+__int64 _InterlockedAdd64_rel(
+   __int64 volatile * Addend,
+   __int64 Value
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
 *Addend*<br/>
-[in, out] Zeiger auf die ganze Zahl, die hinzugefügt werden; ersetzt durch das Ergebnis der Addition.  
-  
+[in, out] Zeiger auf die ganze Zahl, die hinzugefügt werden; ersetzt durch das Ergebnis der Addition.
+
 *Wert*<br/>
-[in] Der hinzuzufügende Wert.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Beide Funktionen geben das Ergebnis der Addition zurück.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Systemintern|Architektur|  
-|---------------|------------------|  
-|`_InterlockedAdd`|ARM|  
-|`_InterlockedAdd_acq`|ARM|  
-|`_InterlockedAdd_nf`|ARM|  
-|`_InterlockedAdd_rel`|ARM|  
-|`_InterlockedAdd64`|ARM|  
-|`_InterlockedAdd64_acq`|ARM|  
-|`_InterlockedAdd64_nf`|ARM|  
-|`_InterlockedAdd64_rel`|ARM|  
-  
- **Headerdatei** \<intrin.h >  
-  
-## <a name="remarks"></a>Hinweise  
- Die Versionen dieser Funktionen mit den Suffixen `_acq` oder `_rel` führen eine ineinander greifende Addition gemäß der Semantiken zum Abrufen oder Freigeben durch. Mit Semantiken zum Abrufen (Acquire-Semantiken) ist gemeint, dass das Ergebnis des Vorgangs für alle Threads und Prozessoren sichtbar gemacht wird, bevor nachfolgende Speicherlese- und -schreibvorgänge durchgeführt werden. „Acquire“ ist bei der Eingabe eines kritischen Abschnitts nützlich. Mit Semantiken für die Freigabe (Release-Semantiken) ist gemeint, dass alle Speicherlese- und -schreibvorgänge für alle Threads und Prozessoren sichtbar gemacht werden, bevor das Ergebnis des Vorgangs selbst angezeigt wird. „Release“ ist beim Verlassen eines kritischen Abschnitts nützlich. Die systeminternen Funktionen mit einer `_nf`-Suffix ("no fence") fungieren nicht als Speicherbarriere.  
-  
- Diese Routinen sind nur als systeminterne Funktionen verfügbar.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// interlockedadd.cpp  
-// Compile with: /Oi /EHsc  
-// processor: ARM  
-#include <stdio.h>  
-#include <intrin.h>  
-  
-#pragma intrinsic(_InterlockedAdd)  
-  
-int main()  
-{  
-        long data1 = 0xFF00FF00;  
-        long data2 = 0x00FF0000;  
-        long retval;  
-        retval = _InterlockedAdd(&data1, data2);  
-        printf("0x%x 0x%x 0x%x", data1, data2, retval);  
-}  
-```  
-  
-## <a name="output"></a>Ausgabe  
-  
-```  
-0xffffff00 0xff0000 0xffffff00  
-```  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// interlockedadd64.cpp  
-// compile with: /Oi /EHsc  
-// processor: ARM  
-#include <iostream>  
-#include <intrin.h>  
-using namespace std;  
-  
-#pragma intrinsic(_InterlockedAdd64)  
-  
-int main()  
-{  
-        __int64 data1 = 0x0000FF0000000000;  
-        __int64 data2 = 0x00FF0000FFFFFFFF;  
-        __int64 retval;  
-        cout << hex << data1 << " + " << data2 << " = " ;  
-        retval = _InterlockedAdd64(&data1, data2);  
-        cout << data1 << endl;  
-        cout << "Return value: " << retval << endl;  
-}  
-```  
-  
-## <a name="output"></a>Ausgabe  
-  
-```  
-ff0000000000 + ff0000ffffffff = ffff00ffffffff  
-Return value: ffff00ffffffff  
-```  
-  
-**Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)   
- [Konflikt mit dem x86-Compiler](../build/conflicts-with-the-x86-compiler.md)
+[in] Der hinzuzufügende Wert.
+
+## <a name="return-value"></a>Rückgabewert
+
+Beide Funktionen geben das Ergebnis der Addition zurück.
+
+## <a name="requirements"></a>Anforderungen
+
+|Systemintern|Architektur|
+|---------------|------------------|
+|`_InterlockedAdd`|ARM|
+|`_InterlockedAdd_acq`|ARM|
+|`_InterlockedAdd_nf`|ARM|
+|`_InterlockedAdd_rel`|ARM|
+|`_InterlockedAdd64`|ARM|
+|`_InterlockedAdd64_acq`|ARM|
+|`_InterlockedAdd64_nf`|ARM|
+|`_InterlockedAdd64_rel`|ARM|
+
+**Headerdatei** \<intrin.h >
+
+## <a name="remarks"></a>Hinweise
+
+Die Versionen dieser Funktionen mit den Suffixen `_acq` oder `_rel` führen eine ineinander greifende Addition gemäß der Semantiken zum Abrufen oder Freigeben durch. Mit Semantiken zum Abrufen (Acquire-Semantiken) ist gemeint, dass das Ergebnis des Vorgangs für alle Threads und Prozessoren sichtbar gemacht wird, bevor nachfolgende Speicherlese- und -schreibvorgänge durchgeführt werden. „Acquire“ ist bei der Eingabe eines kritischen Abschnitts nützlich. Mit Semantiken für die Freigabe (Release-Semantiken) ist gemeint, dass alle Speicherlese- und -schreibvorgänge für alle Threads und Prozessoren sichtbar gemacht werden, bevor das Ergebnis des Vorgangs selbst angezeigt wird. „Release“ ist beim Verlassen eines kritischen Abschnitts nützlich. Die systeminternen Funktionen mit einer `_nf`-Suffix ("no fence") fungieren nicht als Speicherbarriere.
+
+Diese Routinen sind nur als systeminterne Funktionen verfügbar.
+
+## <a name="example"></a>Beispiel
+
+```
+// interlockedadd.cpp
+// Compile with: /Oi /EHsc
+// processor: ARM
+#include <stdio.h>
+#include <intrin.h>
+
+#pragma intrinsic(_InterlockedAdd)
+
+int main()
+{
+        long data1 = 0xFF00FF00;
+        long data2 = 0x00FF0000;
+        long retval;
+        retval = _InterlockedAdd(&data1, data2);
+        printf("0x%x 0x%x 0x%x", data1, data2, retval);
+}
+```
+
+## <a name="output"></a>Ausgabe
+
+```
+0xffffff00 0xff0000 0xffffff00
+```
+
+## <a name="example"></a>Beispiel
+
+```
+// interlockedadd64.cpp
+// compile with: /Oi /EHsc
+// processor: ARM
+#include <iostream>
+#include <intrin.h>
+using namespace std;
+
+#pragma intrinsic(_InterlockedAdd64)
+
+int main()
+{
+        __int64 data1 = 0x0000FF0000000000;
+        __int64 data2 = 0x00FF0000FFFFFFFF;
+        __int64 retval;
+        cout << hex << data1 << " + " << data2 << " = " ;
+        retval = _InterlockedAdd64(&data1, data2);
+        cout << data1 << endl;
+        cout << "Return value: " << retval << endl;
+}
+```
+
+## <a name="output"></a>Ausgabe
+
+```
+ff0000000000 + ff0000ffffffff = ffff00ffffffff
+Return value: ffff00ffffffff
+```
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
+[Konflikt mit dem x86-Compiler](../build/conflicts-with-the-x86-compiler.md)
