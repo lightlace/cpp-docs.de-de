@@ -22,94 +22,85 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69c9846b2ee192071b951d5b9b196d6e4b1968aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 265dfe599d4c3586b350787baab5977562326991
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389942"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757681"
 ---
 # <a name="c-function-definitions"></a>C-Funktionsdefinitionen
-Eine Funktionsdefinition gibt den Namen der Funktion, die Typen und die Zahl der Parameter, die sie erwartungsgemäß empfangen wird, und ihren Rückgabetyp an. Eine Funktionsdefinition enthält auch einen Funktionsrumpf mit den Deklarationen ihrer lokalen Variablen und die Anweisungen, die bestimmen, was die Funktion durchführt.  
-  
-## <a name="syntax"></a>Syntax  
- *translation-unit*:  
- *external-declaration*  
-  
- *translation-unit external-declaration*  
-  
- *external-declaration*: /\* Nur für externen (Datei-) Bereich zulässig \*/  
- *function-definition*  
-  
- `declaration`  
-  
- *function-definition*: /\* Der Deklarator hier ist der Funktionsdeklarator \*/  
- *declaration-specifiers* opt*attribute-seq* opt*declarator declaration-list* opt*compound-statement*  
-  
- /\* *attribute-seq* ist Microsoft-spezifisch */  
-  
- Prototypparameter sind:  
-  
- *declaration-specifiers*:  
- *storage-class-specifier declaration-specifiers* opt  
-  
- *type-specifier declaration-specifiers* opt  
-  
- *type-qualifier declaration-specifiers* opt  
-  
- *declaration-list*:  
- *declaration*  
-  
- *declaration-list-Deklaration*  
-  
- `declarator`:  
- *pointer* opt*direct-declarator*  
-  
- *direct-declarator*: /\* Ein Funktionsdeklarator \*/  
- *direct-declarator*  **(**  *parameter-type-list*  **)** /* Neuer Deklarator \*/  
-  
- *direct-declarator*  **(**  *identifier-list* opt **)** /* Veralteter Deklarator \*/  
-  
- Die Parameterliste in einer Definition verwendet diese Syntax:  
-  
- *parameter-type-list*: /\* Die Parameterliste \*/  
- *parameter-list*  
-  
- *parameter-list* **, ...**  
-  
- *parameter-list*:  
- *parameter-declaration*  
-  
- *parameter-list* **,**  *parameter-declaration*  
-  
- *parameter-declaration*:  
- *declaration-specifiers-Deklarator*  
-  
- *declaration-specifiers abstract declarator* opt  
-  
- Die Parameterliste in einer Funktionsdefinition im alten Format verwendet diese Syntax:  
-  
- *identifier-list*: /\* Verwendet in veralteten Funktionsdefinitionen und Deklarationen \*/  
- *identifier*  
-  
- *identifier-list* **,**  *identifier*  
-  
- Die Syntax für den Funktionsrumpf lautet:  
-  
- *compound-statement*: /\* Der Funktionsrumpf \*/  
- **{**  `declaration`-*list* opt*statement-list* opt **}**  
-  
- Die einzigen Speicherklassenspezifizierer, die eine Funktionsdeklaration ändern können, sind `extern` und **static**. Der Bezeichner `extern` gibt an, dass von anderen Dateien auf die Funktion verwiesen werden kann; das bedeutet, der Funktionsname wird in den Linker exportiert. Der **static**-Bezeichner gibt an, dass auf die Funktion nicht von anderen Dateien verwiesen werden kann, d.h., der Name wird nicht vom Linker exportiert. Wenn keine Speicherklasse in einer Funktionsdefinition steht, wird `extern` angenommen. In jedem Fall ist die Funktion stets vom Definitionspunkt bis an das Ende der Datei sichtbar.  
-  
- Der optionale *declaration-specifiers*-Bezeichner und der erforderliche `declarator`-Bezeichner geben gemeinsam den Rückgabetyp und den Namen der Funktion an. Der `declarator` ist eine Kombination aus dem Bezeichner, der die Funktion benennt, und den Klammern hinter dem Funktionsnamen. Der optionale *attribute-seq*-Nichtterminal ist eine Microsoft-spezifische Funktion, die unter [Funktionsattribute](../c-language/function-attributes.md) definiert wird.  
-  
- *direct-declarator* (in der `declarator`-Syntax) legt den Namen der Funktion fest, die definiert wird, sowie die Bezeichner ihrer Parameter. Wenn *direct-declarator* eine *parameter-type-list* enthält, gibt die Liste die Typen aller Parameter an. Eine solche Deklaration dient auch als Funktionsprototyp für spätere Aufrufe der Funktion.  
-  
- Eine `declaration` in der *declaration-list* in den Funktionsdefinitionen kann keinen *storage-class-specifier* außer **register** enthalten. *type-specifier* in der *declaration-specifiers*-Syntax kann nur dann weggelassen werden, wenn die **register**-Speicherklasse für einen Wert vom Typ `int` angegeben wird.  
-  
- Die *compound-statement* ist der Funktionsrumpf, der lokale Variablendeklarationen, Verweise auf extern deklarierte Elemente und Anweisungen enthält.  
-  
- Die Abschnitte [Funktionsattribute](../c-language/function-attributes.md), [Speicherklasse](../c-language/storage-class.md), [Rückgabetyp](../c-language/return-type.md), [Parameter](../c-language/parameters.md) und [Funktionsrumpf](../c-language/function-body.md) beschreiben die Komponenten der Funktionsdefinition im Detail.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Funktionen](../c-language/functions-c.md)
+Eine Funktionsdefinition gibt den Namen der Funktion, die Typen und die Zahl der Parameter, die sie erwartungsgemäß empfangen wird, und ihren Rückgabetyp an. Eine Funktionsdefinition enthält auch einen Funktionsrumpf mit den Deklarationen ihrer lokalen Variablen und die Anweisungen, die bestimmen, was die Funktion durchführt.
+
+## <a name="syntax"></a>Syntax
+
+*translation-unit*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*external-declaration* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
+
+*external-declaration*: /\* Nur für externen (Datei-) Bereich zulässig \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*function-definition*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration*
+
+*function-definition*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
+
+/\* *attribute-seq* ist Microsoft-spezifisch \*/
+
+Prototypparameter sind:
+
+*declaration-specifiers*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declaration-specifiers*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
+
+*declaration-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-list* *declaration*
+
+*declarator*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
+
+*direct-declarator*:/\* Ein Funktionsdeklarator \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)** /\* Neuer Deklarator \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)** /\* Veralteter Deklarator \*/
+
+Die Parameterliste in einer Definition verwendet diese Syntax:
+
+*parameter-type-list*: /\* Die Parameterliste \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **, ...**
+
+*parameter-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parameter-declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **,**  *parameter-declaration*
+
+*parameter-declaration*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *declarator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *abstract-declarator*<sub>opt</sub>
+
+Die Parameterliste in einer Funktionsdefinition im alten Format verwendet diese Syntax:
+
+*identifier-list*: /\* Verwendet in veralteten Funktionsdefinitionen und Deklarationen \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier-list* **,** *identifier*
+
+Die Syntax für den Funktionsrumpf lautet:
+
+*compound-statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+
+Die einzigen Speicherklassenspezifizierer, die eine Funktionsdeklaration ändern können, sind **extern** und **static**. Der Bezeichner **extern** gibt an, dass von anderen Dateien auf die Funktion verwiesen werden kann; das bedeutet, der Funktionsname wird in den Linker exportiert. Der **static**-Bezeichner gibt an, dass auf die Funktion nicht von anderen Dateien verwiesen werden kann, d.h., der Name wird nicht vom Linker exportiert. Wenn keine Speicherklasse in einer Funktionsdefinition steht, wird **extern** angenommen. In jedem Fall ist die Funktion stets vom Definitionspunkt bis an das Ende der Datei sichtbar.
+
+Die optionalen *declaration-specifiers* und der erforderliche *declarator* geben gemeinsam den Rückgabetyp und den Namen der Funktion an. Der *declarator* ist eine Kombination aus dem Bezeichner, der die Funktion benennt, und den Klammern hinter dem Funktionsnamen. Der optionale *attribute-seq*-Nichtterminal ist eine Microsoft-spezifische Funktion, die unter [Funktionsattribute](../c-language/function-attributes.md) definiert wird.
+
+Der *direct-declarator* (in der *declarator*-Syntax) legt den Namen der Funktion fest, die definiert wird, sowie die Bezeichner ihrer Parameter. Wenn *direct-declarator* eine *parameter-type-list* enthält, gibt die Liste die Typen aller Parameter an. Eine solche Deklaration dient auch als Funktionsprototyp für spätere Aufrufe der Funktion.
+
+Eine *declaration* in der *declaration-list* in den Funktionsdefinitionen kann keinen *storage-class-specifier* außer **register** enthalten. Der *type-specifier* in der *declaration-specifiers*-Syntax kann nur dann weggelassen werden, wenn die **register**-Speicherklasse für einen Wert vom Typ **int** angegeben wird.
+
+Die *compound-statement* ist der Funktionsrumpf, der lokale Variablendeklarationen, Verweise auf extern deklarierte Elemente und Anweisungen enthält.
+
+Die Abschnitte [Funktionsattribute](../c-language/function-attributes.md), [Speicherklasse](../c-language/storage-class.md), [Rückgabetyp](../c-language/return-type.md), [Parameter](../c-language/parameters.md) und [Funktionsrumpf](../c-language/function-body.md) beschreiben die Komponenten der Funktionsdefinition im Detail.
+
+## <a name="see-also"></a>Siehe auch
+[Funktionen](../c-language/functions-c.md)
