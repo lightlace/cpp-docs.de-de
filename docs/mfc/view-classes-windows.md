@@ -1,5 +1,5 @@
 ---
-title: Anzeigen von Klassen (Windows) | Microsoft Docs
+title: Anzeigen von Klassen (Windows) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,77 +18,82 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28dbcd246033dd53788861b97a0c678c1be2aa17
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b347fcc14b477ab83a3bc0b6dfa2c0c80adeb791
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384178"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428868"
 ---
 # <a name="view-classes-windows"></a>Ansichtsklassen (Windows)
-`CView` und die abgeleiteten Klassen sind untergeordnete Fenster, die den Clientbereich eines Rahmenfensters darstellen. Ansichten anzeigen von Daten und Eingaben für ein Dokument.  
-  
- View-Klasse, die einer Dokumentklasse und einem Rahmenfenster (Klasse) mit einem Dokument Template-Objekt zugeordnet ist.  
-  
- [CView](../mfc/reference/cview-class.md)  
- Die Basisklasse für eine anwendungsspezifische Ansicht der Daten eines Dokuments. Ansichten anzeigen von Daten und Benutzereingaben zum Bearbeiten, oder wählen Sie die Daten akzeptieren. Leiten Sie Ihre Ansichtsklasse oder Klassen von `CView`.  
-  
- [CScrollView](../mfc/reference/cscrollview-class.md)  
- Die Basisklasse für Ansichten mit Bildlauffunktionen. Leiten Sie Ihre Ansichtsklasse aus `CScrollView` für den automatischen Bildlauf.  
-  
-## <a name="form-and-record-views"></a>Formular und Datensatzansichten  
- Formularansichten sind auch Sichten Durchführen eines Bildlaufs. Sie basieren auf einer Dialogfeldvorlage.  
-  
- Formularansichten sind Datensatzansichten abgeleitet. Zusätzlich zu der Dialogfeldvorlage verfügen über eine Verbindung mit einer Datenbank.  
-  
- [CFormView](../mfc/reference/cformview-class.md)  
- Eine Scroll-Sicht, deren Layout in einer Dialogfeldvorlage definiert ist. Leiten Sie eine Klasse von `CFormView` eine Benutzeroberfläche, die basierend auf einer Dialogfeldvorlage implementieren.  
-  
- [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)  
- Stellt eine Form anzeigen, die direkt mit einem Recordset-Objekt (Datenzugriffsobjekt) verbunden. Alle Formularansichten, wie eine `CDaoRecordView` basiert auf einer Dialogfeldvorlage.  
-  
- [CRecordView](../mfc/reference/crecordview-class.md)  
- Stellt eine Form anzeigen, die direkt mit einer Open Database Connectivity (ODBC)-Recordset-Objekt verbunden. Alle Formularansichten, wie eine `CRecordView` basiert auf einer Dialogfeldvorlage.  
-  
- [CHtmlEditView](../mfc/reference/chtmleditview-class.md)  
- Eine Formularansicht, die die Funktionalität der WebBrowser HTML-Bearbeitung Plattform bereitstellt.  
-  
-## <a name="control-views"></a>Steuerelementansicht  
- Steuerelementansicht Anzeigen eines Steuerelements als eigene Ansicht.  
-  
- [CCtrlView](../mfc/reference/cctrlview-class.md)  
- Die Basisklasse für alle Ansichten, die Windows-Steuerelementen zugeordnet. Die Ansichten, die basierend auf Steuerelemente werden nachfolgend beschrieben.  
-  
- [CEditView](../mfc/reference/ceditview-class.md)  
- Bearbeitungssteuerelement für eine Sicht, einen Windows-Standard enthält (siehe [CEdit](../mfc/reference/cedit-class.md)). Bearbeiten Sie die Steuerelemente unterstützen Textbearbeitung, suchen, ersetzen und Bildlauffunktionen.  
-  
- [CRichEditView](../mfc/reference/cricheditview-class.md)  
- Eine Sicht, enthält eine umfangreiche Windows-Bearbeitungssteuerelements (finden Sie unter [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Zusätzlich zu den Funktionen eines Bearbeitungssteuerelements bearbeiten Rich Steuerelemente Unterstützung Schriftarten, Farben, absatzformatierung und eingebetteten OLE-Objekten.  
-  
- [CListView](../mfc/reference/clistview-class.md)  
- Eine Sicht, ein Windows-Listensteuerelement enthält (siehe [CListCtrl](../mfc/reference/clistctrl-class.md)). Ein Listenfeld-Steuerelement zeigt eine Auflistung von Elementen in der jedes ein Symbol und eine Bezeichnung, ähnlich wie in den rechten Bereich des Datei-Explorer besteht.  
-  
- [CTreeView](../mfc/reference/ctreeview-class.md)  
- Eine Sicht, ein Windows-Strukturansicht-Steuerelement enthält (siehe [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Ein Strukturansicht-Steuerelement zeigt eine hierarchische Liste der Symbole und Bezeichnungen auf ähnliche Weise im linken Bereich des Datei-Explorers auf bestimmte Weise angeordnet.  
-  
-## <a name="related-classes"></a>Verwandte Klassen  
- `CSplitterWnd` können Sie mehrere Ansichten in einem einzelnen Rahmenfenster haben. `CPrintDialog` und `CPrintInfo` Unterstützung für das Drucken und Druckvorschau Ansichten. `CRichEditDoc` und `CRichEditCntrItem` werden zusammen mit `CRichEditView` OLE-Container-Funktionen zu implementieren.  
-  
- [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)  
- Ein Fenster, das der Benutzer in mehrere Bereiche aufgeteilt werden kann. Diese Bereiche können durch den Benutzer oder eine feste Größe geändert werden.  
-  
- [CPrintDialog](../mfc/reference/cprintdialog-class.md)  
- Stellt ein Standarddialogfeld zum Drucken einer Datei an.  
-  
- [CPrintInfo](../mfc/reference/cprintinfo-structure.md)  
- Eine Struktur, die Informationen zu einem Auftrag Druckauftrags oder seitenansichtauftrags enthält. Verwendet von `CView`Architektur des drucken.  
-  
- [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)  
- Verwaltet die Liste der OLE-Client-Elemente, die in einem `CRichEditView`.  
-  
- [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)  
- Ermöglicht die clientseitige Zugriff auf ein Element in gespeicherten OLE eine `CRichEditView`.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+
+`CView` und die abgeleiteten Klassen sind untergeordnete Fenster, die darstellen, das den Clientbereich eines Rahmenfensters. Ansichten Daten anzeigen und akzeptieren eine Eingabe für ein Dokument.
+
+Eine Ansichtsklasse ist mit einer Dokumentklasse und einem Rahmenfenster (Klasse) mit einem Dokumentvorlagen-Objekt zugeordnet.
+
+[CView](../mfc/reference/cview-class.md)<br/>
+Die Basisklasse für anwendungsspezifische Sichten der Daten eines Dokuments. Ansichten anzeigen von Daten und Benutzereingaben, um zu bearbeiten, oder wählen Sie die Daten akzeptieren. Leiten Sie Ihre Ansichtsklasse oder Klassen von `CView`.
+
+[CScrollView](../mfc/reference/cscrollview-class.md)<br/>
+Die Basisklasse für Ansichten mit Bildlauffunktionen. Ableiten der Klasse "View" aus `CScrollView` für den automatischen Bildlauf.
+
+## <a name="form-and-record-views"></a>Formular und Datensatzansichten
+
+Formularansichten sind auch Ansichten Bildlauf. Sie basiert auf einer Dialogfeldvorlage.
+
+Datensatzansichten werden von Formularansichten abgeleitet. Zusätzlich zu der Dialogfeldvorlage haben sie auch eine Verbindung mit einer Datenbank.
+
+[CFormView](../mfc/reference/cformview-class.md)<br/>
+Eine Bildlaufansicht, deren Layout in eine Dialogfeldvorlage definiert ist. Leiten Sie eine Klasse von `CFormView` zur Implementierung einer Benutzeroberfläche, die basierend auf einer Dialogfeldvorlage.
+
+[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
+Stellt eine Form anzeigen, die direkt mit einem Recordset-Objekt (Data Access Object, DAO) verbunden. Alle Formularansichten, wie eine `CDaoRecordView` basiert auf einer Dialogfeldvorlage.
+
+[CRecordView](../mfc/reference/crecordview-class.md)<br/>
+Stellt eine Form anzeigen, die direkt mit einer Open Database Connectivity (ODBC)-Recordset-Objekt verbunden. Alle Formularansichten, wie eine `CRecordView` basiert auf einer Dialogfeldvorlage.
+
+[CHtmlEditView](../mfc/reference/chtmleditview-class.md)<br/>
+Eine Formularansicht, die die Funktionalität der WebBrowser HTML-Bearbeitung Plattform bereitstellt.
+
+## <a name="control-views"></a>Steuerelementansicht
+
+Steuerelementansicht Steuerelement, die als ihre Ansicht angezeigt wird.
+
+[CCtrlView](../mfc/reference/cctrlview-class.md)<br/>
+Die Basisklasse für alle Ansichten, die Windows-Steuerelementen zugeordnet. Die Ansichten, die basierend auf werden nachfolgend beschrieben.
+
+[CEditView](../mfc/reference/ceditview-class.md)<br/>
+Bearbeitungssteuerelement für eine Sicht, einen Windows-Standard enthält (siehe [CEdit](../mfc/reference/cedit-class.md)). Bearbeiten Sie die Steuerelemente unterstützen Text-Bearbeitung, suchen, ersetzen und Bildlauffunktionen.
+
+[CRichEditView](../mfc/reference/cricheditview-class.md)<br/>
+Eine Ansicht, enthält eine umfassende Windows-Bearbeitungssteuerelement (finden Sie unter [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Zusätzlich zu den Funktionen eines Steuerelements bearbeiten Bearbeiten umfangreiche Steuerelemente unterstützen Schriftarten, Farben, absatzformatierung und eingebettete OLE-Objekte.
+
+[CListView](../mfc/reference/clistview-class.md)<br/>
+Eine Sicht, ein Windows-Steuerelement enthält (siehe [CListCtrl](../mfc/reference/clistctrl-class.md)). Ein Listensteuerelement zeigt eine Auflistung von Elementen, jedes ein Symbol und eine Bezeichnung, ähnlich wie in den rechten Bereich des Datei-Explorers aus.
+
+[CTreeView](../mfc/reference/ctreeview-class.md)<br/>
+Eine Sicht, ein Windows-Strukturansicht-Steuerelement enthält (siehe [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Ein Strukturansicht-Steuerelement zeigt eine hierarchische Liste der Symbole und Bezeichnungen, die auf ähnliche Weise im linken Bereich des Datei-Explorers auf bestimmte Weise angeordnet.
+
+## <a name="related-classes"></a>Verwandte Klassen
+
+`CSplitterWnd` können Sie mehrere Sichten enthalten, in einem einzelnen Rahmenfenster. `CPrintDialog` und `CPrintInfo` Unterstützung für das Drucken und Druckvorschau der Ansichten. `CRichEditDoc` und `CRichEditCntrItem` dienen mit `CRichEditView` OLE-Container-Funktionen zu implementieren.
+
+[CSplitterWnd](../mfc/reference/csplitterwnd-class.md)<br/>
+Ein Fenster, die der Benutzer in mehrere Bereiche aufteilen können. Diese Bereiche möglich mit veränderbarer Größe durch den Benutzer oder eine feste Größe.
+
+[CPrintDialog](../mfc/reference/cprintdialog-class.md)<br/>
+Stellt ein Standarddialogfeld zum Drucken einer Datei bereit.
+
+[CPrintInfo](../mfc/reference/cprintinfo-structure.md)<br/>
+Eine Struktur, die Informationen zu einem Auftrag des Druckauftrags oder seitenansichtauftrags enthält. Ein, die `CView`die Druck-Architektur.
+
+[CRichEditDoc](../mfc/reference/cricheditdoc-class.md)<br/>
+Verwaltet die Liste der OLE-Client-Elemente, die in einem `CRichEditView`.
+
+[CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)<br/>
+Bietet eine clientseitige-Zugriff auf ein Element in gespeicherten OLE eine `CRichEditView`.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../mfc/class-library-overview.md)
 

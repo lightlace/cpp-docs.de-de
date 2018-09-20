@@ -34,24 +34,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07745d1488b22645200d7af155d2af9b2ea73838
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 560db57282f42b28f274b0498073e512e0ec33d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199868"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434517"
 ---
 # <a name="data-types-mfc"></a>Datentypen (MFC)
-Dieses Thema enthält die Datentypen, die am häufigsten in der Microsoft Foundation Class-Bibliothek. Die meisten Datentypen sind dieselben wie in der Platform Software Development Kit (SDK), während andere für MFC eindeutig sind.  
-  
- Informationen zu den Datentypen, die in den Windows-SDK und die MFC verwendet, finden Sie unter [Windows-Datentypen](/windows/desktop/WinProg/windows-data-types).  
-  
- Die folgenden: Datentypen, die nur für die Microsoft Foundation Class-Bibliothek  
-  
--   Positionieren Sie einen Wert verwendet, um die Position eines Elements in einer Sammlung anzugeben. von MFC-Auflistungsklassen verwendet.  
-  
--   Eine 32-Bit-Zeiger auf eine Konstante, die (nicht veränderbar) LPCRECT `RECT` Struktur.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../../mfc/class-library-overview.md)   
- [Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)
+
+Dieses Thema enthält die Datentypen, die am häufigsten in der Microsoft Foundation Class-Bibliothek. Die meisten Datentypen sind dieselben wie in der Platform Software Development Kit (SDK), während andere für MFC eindeutig sind.
+
+Informationen zu den Datentypen, die in den Windows-SDK und die MFC verwendet, finden Sie unter [Windows-Datentypen](/windows/desktop/WinProg/windows-data-types).
+
+Die folgenden: Datentypen, die nur für die Microsoft Foundation Class-Bibliothek
+
+- Positionieren Sie einen Wert verwendet, um die Position eines Elements in einer Sammlung anzugeben. von MFC-Auflistungsklassen verwendet.
+
+- Eine 32-Bit-Zeiger auf eine Konstante, die (nicht veränderbar) LPCRECT `RECT` Struktur.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../../mfc/class-library-overview.md)<br/>
+[Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)
