@@ -18,49 +18,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c81b62cee3a8c26b0d4ace61b8104f6eaee9db6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3d050ee426817c04518a41b515f30ac348bf7d86
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114383"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400171"
 ---
 # <a name="schedulerworkercreationerror-class"></a>scheduler_worker_creation_error-Klasse
-Diese Klasse beschreibt eine Ausnahme, die aufgrund eines Fehlers bei der Erstellung eines Workerausführungskontexts in der Concurrency Runtime ausgelöst wird.  
-  
-## <a name="syntax"></a>Syntax  
-  
+
+Diese Klasse beschreibt eine Ausnahme, die aufgrund eines Fehlers bei der Erstellung eines Workerausführungskontexts in der Concurrency Runtime ausgelöst wird.
+
+## <a name="syntax"></a>Syntax
+
 ```
 class scheduler_worker_creation_error : public scheduler_resource_allocation_error;
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[scheduler_worker_creation_error](#ctor)|Überladen. Erstellt ein `scheduler_worker_creation_error`-Objekt.|  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Ausnahme wird in der Regel ausgelöst, wenn ein Aufruf an das Betriebssystem zum Erstellen der Ausführungskontexte aus in der Concurrency Runtime fehlschlägt. Ausführungskontexte sind Threads, die Aufgaben in der Concurrency Runtime ausführen. Der Fehlercode, die normalerweise von einem Aufruf der Win32-Methode zurückgegeben werden sollen `GetLastError` wird in einen Wert vom Typ konvertiert `HRESULT` und können abgerufen werden, mithilfe der Methode der Basisklasse `get_error_code`.  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `exception`  
-  
- [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md)  
-  
- `scheduler_worker_creation_error`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** concrt.h hinzu  
-  
- **Namespace:** Parallelität  
-  
-##  <a name="ctor"></a> scheduler_worker_creation_error 
+```
 
- Erstellt ein `scheduler_worker_creation_error`-Objekt.  
-  
+## <a name="members"></a>Member
+
+### <a name="public-constructors"></a>Öffentliche Konstruktoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[scheduler_worker_creation_error](#ctor)|Überladen. Erstellt ein `scheduler_worker_creation_error`-Objekt.|
+
+## <a name="remarks"></a>Hinweise
+
+Diese Ausnahme wird in der Regel ausgelöst, wenn ein Aufruf an das Betriebssystem zum Erstellen der Ausführungskontexte aus in der Concurrency Runtime fehlschlägt. Ausführungskontexte sind Threads, die Aufgaben in der Concurrency Runtime ausführen. Der Fehlercode, die normalerweise von einem Aufruf der Win32-Methode zurückgegeben werden sollen `GetLastError` wird in einen Wert vom Typ konvertiert `HRESULT` und können abgerufen werden, mithilfe der Methode der Basisklasse `get_error_code`.
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`exception`
+
+[scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md)
+
+`scheduler_worker_creation_error`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** concrt.h hinzu
+
+**Namespace:** Parallelität
+
+##  <a name="ctor"></a> scheduler_worker_creation_error
+
+Erstellt ein `scheduler_worker_creation_error`-Objekt.
+
 ```
 scheduler_worker_creation_error(
     _In_z_ const char* _Message,
@@ -68,14 +72,16 @@ scheduler_worker_creation_error(
 
 explicit _CRTIMP scheduler_worker_creation_error(
     HRESULT _Hresult) throw();
-```  
-  
-### <a name="parameters"></a>Parameter  
+```
+
+### <a name="parameters"></a>Parameter
+
 *_Nachricht*<br/>
-Eine beschreibende Fehlermeldung.  
-  
+Eine beschreibende Fehlermeldung.
+
 *_Hresult*<br/>
-Die `HRESULT` Wert des Fehlers, der die Ausnahme verursacht hat.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Concurrency-Namespace](concurrency-namespace.md)
+Die `HRESULT` Wert des Fehlers, der die Ausnahme verursacht hat.
+
+## <a name="see-also"></a>Siehe auch
+
+[Concurrency-Namespace](concurrency-namespace.md)

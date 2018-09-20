@@ -1,5 +1,5 @@
 ---
-title: Debugging- und Ausnahmeklassen | Microsoft Docs
+title: Debugging- und Ausnahmeklassen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9adf6a585771336de9fb33abbebdd6bab97383ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b7c88c5d12f56318bbb37a825e28c2bfcbc132d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341760"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418176"
 ---
 # <a name="debugging-and-exception-classes"></a>Klassen für Debugging und Ausnahmen
-Diese Klassen bieten Unterstützung für das Debuggen der dynamischen speicherbelegung und für die Weitergabe von Informationen über die Ausnahme von der Funktion, in dem die Ausnahme ausgelöst, in dem abgefangen wird, an die Funktion.  
-  
- Verwenden Sie Klassen [CDumpContext](../mfc/reference/cdumpcontext-class.md) und [CMemoryState](../mfc/reference/cmemorystate-structure.md) während der Entwicklung zu debuggen, zu unterstützen, wie in beschrieben [MFC-Anwendungen Debuggen](/visualstudio/debugger/mfc-debugging-techniques). Verwendung [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) die Klasse eines Objekts zur Laufzeit zu bestimmen, wie im Artikel beschrieben [zugreifen auf Laufzeit-Klasseninformationen](../mfc/accessing-run-time-class-information.md). Das Framework verwendet `CRuntimeClass` Objekte einer bestimmten Klasse dynamisch zu erstellen.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+
+Diese Klassen bieten Unterstützung für das Debuggen die dynamische speicherbelegung und für die Übergabe von Informationen zur Ausnahme von der Funktion an die Funktion wird, in dem die Ausnahme ausgelöst, wo sie abgefangen wird.
+
+Verwenden Sie Klassen [CDumpContext](../mfc/reference/cdumpcontext-class.md) und [CMemoryState](../mfc/reference/cmemorystate-structure.md) während der Entwicklung, debugging, zur Unterstützung für Anwendungen unter [MFC-Anwendungen Debuggen](/visualstudio/debugger/mfc-debugging-techniques). Verwendung [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) die Klasse eines Objekts zur Laufzeit zu bestimmen, wie in diesem Artikel beschrieben [zugreifen auf Laufzeit-Klasseninformationen](../mfc/accessing-run-time-class-information.md). Das Framework verwendet `CRuntimeClass` Objekte einer bestimmten Klasse dynamisch zu erstellen.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../mfc/class-library-overview.md)
 

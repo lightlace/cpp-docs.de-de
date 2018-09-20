@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c23d35a1b6447d6d775c16dfcd12aaf009df9f5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 810f1cd8c1418d43e7428221d41e788ee5ec6a92
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602193"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399198"
 ---
 # <a name="creatormapservername-data-member"></a>CreatorMap::serverName-Datenmember
 
@@ -46,5 +46,5 @@ Speichert den Servernamen für die CreatorMap an.
 
 ## <a name="see-also"></a>Siehe auch
 
-[CreatorMap-Struktur](../windows/creatormap-structure.md)  
+[CreatorMap-Struktur](../windows/creatormap-structure.md)<br/>
 [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bc930fdc142dc7b044b4dbd60cfd459b7ce52aea
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b8c51b3468a636335a74b8a4206a6b533d3a200b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709142"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398858"
 ---
 # <a name="generic-functions-ccli"></a>Generische Funktionen (C++/CLI)
 
@@ -63,28 +63,28 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>Parameter
 
-*Attribute*  
+*Attribute*<br/>
 (Optional) Zusätzliche deklarative Informationen. Weitere Informationen zu Attributen und Attributklassen finden Sie unter "Attribute".
 
-*Modifizierer*  
+*Modifizierer*<br/>
 (Optional) Ein Modifizierer für die Funktion, wie z. B. statische.  **virtuelle** ist nicht zulässig, da virtuelle Methoden nicht generisch sein können.
 
-*Rückgabetyp*  
+*Rückgabetyp*<br/>
 Der Typ, der von der Methode zurückgegeben wird. Wenn der Rückgabetyp "void" ist, muss keinen Wert zurückgibt.
 
-*identifier*  
+*identifier*<br/>
 Der Funktionsname.
 
-*Typparameter Bezeichner*  
+*Typparameter Bezeichner*<br/>
 Liste der durch Trennzeichen getrennte IDs.
 
-*Formal-parameters*  
+*Formal-parameters*<br/>
 (Optional) Parameterliste.
 
-*Type-Parameter-Einschränkungen-Klauseln*  
+*Type-Parameter-Einschränkungen-Klauseln*<br/>
 Dies gibt die Einschränkungen für die Typen, die als Typargumente verwendet werden können, und nimmt die Form, die im angegebenen [Einschränkungen für generische Typparameter (C++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).
 
-*Funktionsrumpf*  
+*Funktionsrumpf*<br/>
 Der Text der Methode, die auf die Typ-Parameter-IDs verweisen kann.
 
 ### <a name="remarks"></a>Hinweise
@@ -193,5 +193,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)  
+[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Generika](../windows/generics-cpp-component-extensions.md)

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a73d5bb3ef67469ad1cc12b2a2c2757cf1ce137
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a2e61616ae6a481925bdb8b9b135f0a6a9fdfff7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712832"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407945"
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane-Klasse
 
@@ -183,9 +183,9 @@ virtual BOOL DetachPane(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *pBar*  
+[in] *pBar*
 
-[in] *bHide*  
+[in] *bHide*
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -225,9 +225,9 @@ virtual BOOL FloatTab(
 ### <a name="parameters"></a>Parameter
 
 *pBar*<br/>
-[in] [in] *nTabID*  
-*dockMethod*<br/>
-[in] [in] *bHide*  
+[in] [in] *nTabID*
+*DockMethod*<br/>
+[in] [in] *bHide*
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -308,6 +308,7 @@ Sie müssen diesen Wert festlegen, bevor ein Fenster mit Registerkarten erstellt
 Der Standardwert ist "false".
 
 ##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC
+
 Laufzeitklasseninformationen für ein benutzerdefiniertes `CMFCTabCtrl`-abgeleitetes Objekt.
 
 ```
@@ -351,8 +352,8 @@ Verwendung [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) aktivieren ode
 
 ## <a name="see-also"></a>Siehe auch
 
-[Hierarchiediagramm](../../mfc/hierarchy-chart.md)  
-[Klassen](../../mfc/reference/mfc-classes.md)  
-[CDockablePane-Klasse](../../mfc/reference/cdockablepane-class.md)  
-[CBaseTabbedPane-Klasse](../../mfc/reference/cbasetabbedpane-class.md)  
-[CMFCOutlookBar-Klasse](../../mfc/reference/cmfcoutlookbar-class.md)  
+[Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
+[Klassen](../../mfc/reference/mfc-classes.md)<br/>
+[CDockablePane-Klasse](../../mfc/reference/cdockablepane-class.md)<br/>
+[CBaseTabbedPane-Klasse](../../mfc/reference/cbasetabbedpane-class.md)<br/>
+[CMFCOutlookBar-Klasse](../../mfc/reference/cmfcoutlookbar-class.md)

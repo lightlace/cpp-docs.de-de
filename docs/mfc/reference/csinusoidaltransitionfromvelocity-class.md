@@ -1,5 +1,5 @@
 ---
-title: CSinusoidalTransitionFromVelocity-Klasse | Microsoft Docs
+title: CSinusoidalTransitionFromVelocity-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,101 +24,113 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9f5cc55adac2bf5900d9891635a025716b9c1f3
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: d69e3ed213d9ad207dbf664088598a7232d40a32
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078578"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401536"
 ---
 # <a name="csinusoidaltransitionfromvelocity-class"></a>CSinusoidalTransitionFromVelocity-Klasse
-Kapselt einen Übergang mit sinusförmiger Geschwindigkeit und einer Amplitude, die von der ursprünglichen Geschwindigkeit der Animationsvariablen bestimmt wird.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-class CSinusoidalTransitionFromVelocity : public CBaseTransition;  
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity](#csinusoidaltransitionfromvelocity)|Erstellt ein Übergangsobjekt.|  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CSinusoidalTransitionFromVelocity::Create](#create)|Ruft den Übergangsbibliothek, um die gekapselte COM-Übergangsobjekt zu erstellen. (Überschreibt [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|  
-  
-### <a name="public-data-members"></a>Öffentliche Datenmember  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CSinusoidalTransitionFromVelocity::m_duration](#m_duration)|Die Dauer des Übergangs.|  
-|[CSinusoidalTransitionFromVelocity::m_period](#m_period)|Der Zeitraum und angegebenem schwingungsbereich mit sinusförmiger Welle in Sekunden.|  
-  
-## <a name="remarks"></a>Hinweise  
- Der Wert der Animationsvariablen, um den anfänglichen Wert über die gesamte Dauer eines Übergangs mit sinusförmigem gekennzeichnet. Die Amplitude der und angegebenem schwingungsbereich wird durch die Geschwindigkeit der Animationsvariablen bestimmt, wenn der Übergang beginnt. Da alle Übergänge automatisch gelöscht werden, es wird empfohlen, belegt sie mit dem Operator new. Das gekapselte IUIAnimationTransition-COM-Objekt wird von CAnimationController:: erst erstellt, ist es auf NULL. Ändern Membervariablen, nach der Erstellung dieses COM-Objekt hat keine Auswirkung.  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
-  
- [CSinusoidalTransitionFromVelocity](../../mfc/reference/csinusoidaltransitionfromvelocity-class.md)  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** afxanimationcontroller.h  
-  
-##  <a name="create"></a>  CSinusoidalTransitionFromVelocity::Create  
- Ruft den Übergangsbibliothek, um die gekapselte COM-Übergangsobjekt zu erstellen.  
-  
-```  
+
+Kapselt einen Übergang mit sinusförmiger Geschwindigkeit und einer Amplitude, die von der ursprünglichen Geschwindigkeit der Animationsvariablen bestimmt wird.
+
+## <a name="syntax"></a>Syntax
+
+```
+class CSinusoidalTransitionFromVelocity : public CBaseTransition;
+```
+
+## <a name="members"></a>Member
+
+### <a name="public-constructors"></a>Öffentliche Konstruktoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity](#csinusoidaltransitionfromvelocity)|Erstellt einen Übergangsobjekt.|
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CSinusoidalTransitionFromVelocity::Create](#create)|Ruft den Übergangsbibliothek, um gekapselte COM-Übergangsobjekt zu erstellen. (Überschreibt [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
+
+### <a name="public-data-members"></a>Öffentliche Datenmember
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CSinusoidalTransitionFromVelocity::m_duration](#m_duration)|Die Dauer des Übergangs.|
+|[CSinusoidalTransitionFromVelocity::m_period](#m_period)|Der Zeitraum Oszillation der sinusförmiger Welle in Sekunden.|
+
+## <a name="remarks"></a>Hinweise
+
+Der Wert der Animationsvariablen oszilliert rund um den ursprünglichen Wert über die gesamte Dauer eines Übergangs sinusförmigem Bereich. Amplitude für das die Oszillation richtet sich nach Geschwindigkeit der Animationsvariable, wenn der Übergang beginnt. Da alle Übergänge automatisch gelöscht werden, es wird empfohlen, sie mit dem Operator new. Das gekapselte IUIAnimationTransition COM-Objekt wird von CAnimationController:: erst erstellt, ist es auf NULL. Ändern Membervariablen des Typs an, nach der Erstellung dieses COM-Objekt hat keine Auswirkungen.
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+
+[CSinusoidalTransitionFromVelocity](../../mfc/reference/csinusoidaltransitionfromvelocity-class.md)
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** afxanimationcontroller.h
+
+##  <a name="create"></a>  CSinusoidalTransitionFromVelocity::Create
+
+Ruft den Übergangsbibliothek, um gekapselte COM-Übergangsobjekt zu erstellen.
+
+```
 virtual BOOL Create(
-    IUIAnimationTransitionLibrary* pLibrary,  
+    IUIAnimationTransitionLibrary* pLibrary,
     IUIAnimationTransitionFactory* \*not used*\);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *pLibrary*  
- Ein Zeiger auf den Übergangsbibliothek, die für die Erstellung der standardmäßigen Übergänge verwendet wird.  
-  
-### <a name="return-value"></a>Rückgabewert  
- True, wenn der Übergang erfolgreich erstellt wurde. andernfalls "false".  
-  
-##  <a name="csinusoidaltransitionfromvelocity"></a>  CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity  
- Erstellt ein Übergangsobjekt.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+*pLibrary*<br/>
+Ein Zeiger auf den Übergangsbibliothek, die für die Erstellung der standard-Übergänge zuständig ist.
+
+### <a name="return-value"></a>Rückgabewert
+
+True, wenn der Übergang erfolgreich erstellt wurde. andernfalls "false".
+
+##  <a name="csinusoidaltransitionfromvelocity"></a>  CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity
+
+Erstellt einen Übergangsobjekt.
+
+```
 CSinusoidalTransitionFromVelocity(
-    UI_ANIMATION_SECONDS duration,  
+    UI_ANIMATION_SECONDS duration,
     UI_ANIMATION_SECONDS period);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *Dauer*  
- Die Dauer des Übergangs.  
-  
- *Zeitraum*  
- Der Zeitraum und angegebenem schwingungsbereich mit sinusförmiger Welle in Sekunden.  
-  
-##  <a name="m_duration"></a>  CSinusoidalTransitionFromVelocity::m_duration  
- Die Dauer des Übergangs.  
-  
-```  
-UI_ANIMATION_SECONDS m_duration;  
-```  
-  
-##  <a name="m_period"></a>  CSinusoidalTransitionFromVelocity::m_period  
- Der Zeitraum und angegebenem schwingungsbereich mit sinusförmiger Welle in Sekunden.  
-  
-```  
-UI_ANIMATION_SECONDS m_period;  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassen](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>Parameter
+
+*Dauer*<br/>
+Die Dauer des Übergangs.
+
+*Zeitraum*<br/>
+Der Zeitraum Oszillation der sinusförmiger Welle in Sekunden.
+
+##  <a name="m_duration"></a>  CSinusoidalTransitionFromVelocity::m_duration
+
+Die Dauer des Übergangs.
+
+```
+UI_ANIMATION_SECONDS m_duration;
+```
+
+##  <a name="m_period"></a>  CSinusoidalTransitionFromVelocity::m_period
+
+Der Zeitraum Oszillation der sinusförmiger Welle in Sekunden.
+
+```
+UI_ANIMATION_SECONDS m_period;
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Klassen](../../mfc/reference/mfc-classes.md)

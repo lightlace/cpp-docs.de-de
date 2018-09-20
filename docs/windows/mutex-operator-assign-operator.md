@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1b7cc38d595c6f6ad1aa92e584068ccb852dbbd4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ea5aee6f248487097462028a763a98b4e814a17a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42578687"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396791"
 ---
 # <a name="mutexoperator-operator"></a>Mutex::operator=-Operator
 
@@ -38,7 +38,7 @@ Mutex& operator=(
 
 ### <a name="parameters"></a>Parameter
 
-*h*  
+*h*<br/>
 Ein Rvalue-Verweis auf eine **Mutex** Objekt.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -56,4 +56,5 @@ Weitere Informationen finden Sie unter den **verschieben Semantik** Abschnitt [R
 **Namespace:** Microsoft::WRL::Wrappers
 
 ## <a name="see-also"></a>Siehe auch
+
 [Mutex-Klasse](../windows/mutex-class1.md)

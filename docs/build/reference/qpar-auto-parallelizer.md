@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a701183becc7a561ca778dea383fdb57181d8da4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9e69bc999721bf833f100418442315fc8bb69e6c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710774"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413899"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar (Automatische Parallelisierung)
 
@@ -53,9 +53,9 @@ Informationen zum Aktivieren von ausgehenden Nachrichten für den Auto-paralleli
 
 ## <a name="see-also"></a>Siehe auch
 
-[/ Q-Optionen (Operationen auf niedriger Ebene)](../../build/reference/q-options-low-level-operations.md)
-[/qpar-Report (Auto-Parallelizer-Berichtsebene)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)
+[/Q-Optionen (Vorgänge auf niedriger Ebene)](../../build/reference/q-options-low-level-operations.md)<br/>
+[/Qpar-report (Berichtebene der automatischen Parallelisierung)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
 [Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
-[#pragma loop()](../../preprocessor/loop.md)
-[zur parallelen Programmierung in systemeigenem Code](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)
+[#pragma loop()](../../preprocessor/loop.md)<br/>
+[Parallele Programmierung in systemeigenem Code](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

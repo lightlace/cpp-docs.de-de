@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 899c41a65a651f7464b11639d2106b3eaa51e21b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8ab2699781526ee12784f7c048cd9a833526fd30
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708655"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414996"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -80,8 +80,8 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 
 ## <a name="see-also"></a>Siehe auch
 
-[COM-Attribute](../windows/com-attributes.md)  
-[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Klassenattribute](../windows/class-attributes.md)  
-[Multithreadingunterstützung für älteren Code (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)  
+[COM-Attribute](../windows/com-attributes.md)<br/>
+[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[Klassenattribute](../windows/class-attributes.md)<br/>
+[Multithreadingunterstützung für älteren Code (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)<br/>
 [Neutrale-Apartments](/windows/desktop/cossdk/neutral-apartments)  

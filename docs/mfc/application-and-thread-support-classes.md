@@ -1,5 +1,5 @@
 ---
-title: Anwendung und Thread-Unterstützungsklassen | Microsoft Docs
+title: Anwendungs- und Thread-Unterstützungsklassen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,62 +21,67 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9f3877cf85e369756b15d565af1481fd6d258df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce9c799c8dbc2a98c7d45dfa9a2e444024c9a7a2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341309"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412318"
 ---
 # <a name="application-and-thread-support-classes"></a>Klassen zur Anwendungs- und Threadunterstützung
-Jede Anwendung hat nur eine Application-Objekt. Dieses Objekt andere Objekte in der ausgeführten Anwendung koordiniert und stammt aus `CWinApp`.  
-  
- Die Microsoft Foundation Class (MFC)-Bibliothek unterstützt mehrere Ausführungsthreads innerhalb einer Anwendung. Alle Anwendungen müssen mindestens einen Thread verfügen; der Thread verwendet werden, indem Sie Ihre `CWinApp` Objekt ist dieser primäre Thread.  
-  
- `CWinThread` Kapselt einen Teil des Betriebssystems threading-Funktionen. Um den Einsatz mehrerer Threads einfacher zu gestalten, MFC auch Synchronisierung stellt Objektklassen bereit, um eine C++-Schnittstelle, Win32-Synchronisierungsobjekte bereitzustellen.  
-  
-## <a name="application-and-thread-classes"></a>Klassen zur Anwendungs- und Threads  
- [CWinApp](../mfc/reference/cwinapp-class.md)  
- Kapselt den Code zum Initialisieren, auszuführen und die Anwendung beenden. Das Application-Objekt wird von dieser Klasse abgeleitet werden.  
-  
- [CWinThread](../mfc/reference/cwinthread-class.md)  
- Die Basisklasse für alle Threads. Direkt verwenden, oder leiten Sie eine Klasse von `CWinThread` , wenn der Thread der Benutzeroberfläche Funktionen ausführt. `CWinApp` wird von `CWinThread` abgeleitet.  
-  
-## <a name="synchronization-object-classes"></a>Synchronisierungsklassen-Objekt  
- [CSyncObject](../mfc/reference/csyncobject-class.md)  
- Die Basisklasse von Synchronisierungsklassen-Objekt.  
-  
- [CCriticalSection](../mfc/reference/ccriticalsection-class.md)  
- Eine Synchronisierungsklasse, die nur jeweils einem Thread innerhalb eines einzelnen Prozesses Zugriff auf ein Objekt ermöglicht.  
-  
- [CSemaphore](../mfc/reference/csemaphore-class.md)  
- Eine Synchronisierungsklasse, die zwischen 1 und eine angegebene Höchstanzahl von gleichzeitige Zugriffe auf ein Objekt ermöglicht.  
-  
- [CMutex](../mfc/reference/cmutex-class.md)  
- Eine Synchronisierungsklasse, die nur einen Thread in eine beliebige Anzahl von Prozessen an, auf ein Objekt zugreifen kann.  
-  
- [CEvent](../mfc/reference/cevent-class.md)  
- Eine Synchronisierungsklasse, die eine Anwendung benachrichtigt, wenn ein Ereignis aufgetreten ist.  
-  
- [CSingleLock](../mfc/reference/csinglelock-class.md)  
- In Memberfunktionen von threadsicheren Klassen auf ein Synchronisierungsobjekt, das zum Sperren verwendet.  
-  
- [CMultiLock](../mfc/reference/cmultilock-class.md)  
- In Memberfunktionen von threadsicheren Klassen verwendet, auf eine oder mehrere Synchronisierungsobjekte aus einem Array von Synchronisierungsobjekten gesperrt.  
-  
-## <a name="related-classes"></a>Verwandte Klassen  
- [CCommandLineInfo](../mfc/reference/ccommandlineinfo-class.md)  
- Analysiert die Befehlszeile, mit denen das Programm gestartet wurde.  
-  
- [CWaitCursor](../mfc/reference/cwaitcursor-class.md)  
- Setzt einen Wartecursor auf dem Bildschirm an. Während der langwierige Operationen verwendet.  
-  
- [CDockState](../mfc/reference/cdockstate-class.md)  
- Verarbeitet die persistente Speicherung von Zustandsdaten Steuerleisten andocken.  
-  
- [CRecentFileList](../mfc/reference/crecentfilelist-class.md)  
- Verwaltet die zuletzt verwendeten Dateiliste (MRU).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+
+Jede Anwendung verfügt über nur eine Application-Objekt; Dieses Objekt andere Objekte in das aktive Programm koordiniert und ergibt sich aus `CWinApp`.
+
+Die Microsoft Foundation Class (MFC)-Bibliothek unterstützt mehrere Ausführungsthreads innerhalb einer Anwendung. Alle Anwendungen müssen mindestens einen Thread; der Thread ein, die Ihre `CWinApp` Objekt ist dieser primäre Thread.
+
+`CWinThread` Kapselt einen Teil des Betriebssystems threading-Funktionen. Um mit mehreren Threads einfacher zu machen, MFC auch Synchronisierung stellt Objektklassen bereit, um eine C++-Schnittstelle, Win32-Synchronisierungsobjekte bereitzustellen.
+
+## <a name="application-and-thread-classes"></a>Klassen zur Anwendungs- und Threads
+
+[CWinApp](../mfc/reference/cwinapp-class.md)<br/>
+Kapselt den Code zum Initialisieren und Ausführen die Anwendung zu beenden. Diese Klasse wird das Anwendungsobjekt abgeleitet werden.
+
+[CWinThread](../mfc/reference/cwinthread-class.md)<br/>
+Die Basisklasse für alle Threads. Direkt verwenden oder leiten eine Klasse von `CWinThread` , wenn der Thread der Funktionen der Benutzeroberfläche führt. `CWinApp` wird von `CWinThread` abgeleitet.
+
+## <a name="synchronization-object-classes"></a>Synchronisierungsklassen-Objekt
+
+[CSyncObject](../mfc/reference/csyncobject-class.md)<br/>
+Basisklasse für die Synchronisierung Objektklassen.
+
+[CCriticalSection](../mfc/reference/ccriticalsection-class.md)<br/>
+Eine Synchronisierungsklasse, die nur ein Thread innerhalb eines einzelnen Prozesses Zugriff auf ein Objekt zulässt.
+
+[CSemaphore](../mfc/reference/csemaphore-class.md)<br/>
+Eine Synchronisierungsklasse, die zwischen 1 und eine angegebene Höchstanzahl von gleichzeitigen Zugriffen auf ein Objekt zulässt.
+
+[CMutex](../mfc/reference/cmutex-class.md)<br/>
+Eine Synchronisierungsklasse, die nur ein Thread in eine beliebige Anzahl von Prozessen auf ein Objekt zugreifen kann.
+
+[CEvent](../mfc/reference/cevent-class.md)<br/>
+Eine Synchronisierungsklasse, die eine Anwendung benachrichtigt, wenn ein Ereignis aufgetreten ist.
+
+[CSingleLock](../mfc/reference/csinglelock-class.md)<br/>
+Verwendet in Memberfunktionen von threadsicheren Klassen auf ein Synchronisierungsobjekt, das gesperrt.
+
+[CMultiLock](../mfc/reference/cmultilock-class.md)<br/>
+In Memberfunktionen von threadsicheren Klassen verwendet, um die Sperre auf eine oder mehrere Synchronisierungsobjekte aus einem Array von Synchronisierungsobjekten.
+
+## <a name="related-classes"></a>Verwandte Klassen
+
+[CCommandLineInfo](../mfc/reference/ccommandlineinfo-class.md)<br/>
+Analysiert die Befehlszeile, mit denen das Programm gestartet wurde.
+
+[CWaitCursor](../mfc/reference/cwaitcursor-class.md)<br/>
+Fügt einen Wartecursor auf dem Bildschirm an. Während der Vorgänge mit langer Ausführungsdauer verwendet.
+
+[CDockState](../mfc/reference/cdockstate-class.md)<br/>
+Verarbeitet die dauerhafte Speicherung von Zustandsdaten für Schiebeleisten-Steuerelemente andocken.
+
+[CRecentFileList](../mfc/reference/crecentfilelist-class.md)<br/>
+Verwaltet die zuletzt verwendeten Dateiliste (MRU).
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../mfc/class-library-overview.md)
 

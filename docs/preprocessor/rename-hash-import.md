@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2930ab9cbc5b847252e20f185b335a547317fa5b
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: ce1604e3ef7655d72a3ed692e27d6d6c9ae0cb12
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538440"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409076"
 ---
 # <a name="rename-import"></a>rename (#import)
 **C++-spezifisch**  
@@ -68,5 +68,5 @@ Dies ist darauf zurückzuführen, dass der Name `GetMyParent` nur in der resulti
   
 ## <a name="see-also"></a>Siehe auch  
  
-[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)   
+[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)

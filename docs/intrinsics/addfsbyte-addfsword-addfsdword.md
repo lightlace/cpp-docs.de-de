@@ -23,57 +23,61 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08a9948bb986ae57e42e37253b3b54737cf4d3f9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5831d109301fe400cf75110221c3c37204bf5b26
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714219"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414965"
 ---
 # <a name="addfsbyte-addfsword-addfsdword"></a>__addfsbyte, __addfsword, __addfsdword
-**Microsoft-spezifisch**  
-  
- Fügen Sie einen Wert an einem Speicherort, der als Offset relativ zum Beginn der `FS` Segment.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void __addfsbyte(   
-   unsigned long Offset,   
-   unsigned char Data   
-);  
-void __addfsword(   
-   unsigned long Offset,   
-   unsigned short Data   
-);  
-void __addfsdword(   
-   unsigned long Offset,   
-   unsigned long Data   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+
+**Microsoft-spezifisch**
+
+Fügen Sie einen Wert an einem Speicherort, der als Offset relativ zum Beginn der `FS` Segment.
+
+## <a name="syntax"></a>Syntax
+
+```
+void __addfsbyte( 
+   unsigned long Offset, 
+   unsigned char Data 
+);
+void __addfsword( 
+   unsigned long Offset, 
+   unsigned short Data 
+);
+void __addfsdword( 
+   unsigned long Offset, 
+   unsigned long Data 
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
 *Offset*<br/>
-[in] Der Offset vom Anfang des `FS`.  
-  
+[in] Der Offset vom Anfang des `FS`.
+
 *Data*<br/>
-[in] Der Wert der Speicheradresse hinzu.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Systemintern|Architektur|  
-|---------------|------------------|  
-|`__addfsbyte`|x86|  
-|`__addfsword`|x86|  
-|`__addfsdword`|x86|  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Routinen sind nur als systeminterne Funktionen verfügbar.  
-  
-**Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [__incfsbyte, \__incfsword, \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)   
- [__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
- [__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   
- [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[in] Der Wert der Speicheradresse hinzu.
+
+## <a name="requirements"></a>Anforderungen
+
+|Systemintern|Architektur|
+|---------------|------------------|
+|`__addfsbyte`|x86|
+|`__addfsword`|x86|
+|`__addfsdword`|x86|
+
+## <a name="remarks"></a>Hinweise
+
+Diese Routinen sind nur als systeminterne Funktionen verfügbar.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[__incfsbyte, \__incfsword, \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)<br/>
+[__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)<br/>
+[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)<br/>
+[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

@@ -1,5 +1,5 @@
 ---
-title: ODBC-Klassen | Microsoft Docs
+title: ODBC-Klassen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,40 +17,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98ef4509e7e7570d8c07013f0287fe01105e154a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97bbdb74d122e633574dcf76876f0907de8ef2c4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348139"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400578"
 ---
 # <a name="odbc-classes"></a>ODBC-Klassen
-Diese Klassen können mit der anderen Anwendung Framework-Klassen einfachen Zugriff auf eine Vielzahl von Datenbanken gewähren für die Open Database Connectivity (ODBC)-Treiber zur Verfügung stehen.  
-  
- Programme, die ODBC-Datenbanken zugreifen müssen mindestens eine `CDatabase` Objekt und ein `CRecordset` Objekt.  
-  
- [CDatabase](../mfc/reference/cdatabase-class.md)  
- Kapselt eine Verbindung mit einer Datenquelle, die über die Sie für die Datenquelle ausgeführt werden können.  
-  
- [CRecordset](../mfc/reference/crecordset-class.md)  
- Kapselt eine Gruppe von Datensätzen, die aus einer Datenquelle ausgewählt. Recordsets aktivieren Durchführen eines Bildlaufs von Datensatz zu Datensatz, Aktualisieren von Datensätzen (hinzufügen, bearbeiten und Löschen von Datensätzen), qualifizieren die Auswahl mit einem Filter, sortieren die Auswahl, und die Auswahl mit Informationen zu parametrisieren abgerufen oder zur Laufzeit berechnet.  
-  
- [CRecordView](../mfc/reference/crecordview-class.md)  
- Stellt eine Form anzeigen, die direkt mit einem Recordset-Objekt verbunden. Der Dialogdatenaustausch (DDX) Mechanismus Datenaustausch zwischen des Recordsets und die Steuerelemente der Datensatzansicht angezeigt. Wie alle Formularansichten basieren auf einer Dialogfeldvorlagen-Ressource eine Datensatzansicht. Datensatzansichten unterstützen auch Verschieben von Datensatz zu Datensatz im Recordset, Datensätze aktualisiert werden, und das zugehörigen Recordset schließen, wenn die Datensatzansicht geschlossen wird.  
-  
- [CDBException](../mfc/reference/cdbexception-class.md)  
- Eine Ausnahme, was bei Auftreten eines in den Datenzugriff Verarbeitung. Diese Klasse dient den gleichen Zweck wie andere Ausnahmeklassen in den Mechanismus zur Ausnahmebehandlung der Klassenbibliothek.  
-  
- [CDBException](../mfc/reference/cfieldexchange-class.md)  
- Stellt Kontextinformationen, Datensatzfeldaustausch (RFX), zu unterstützen, die Daten zwischen den Felddatenmembern und Parameterdatenmember von einem Recordset-Objekt und den entsprechenden Tabellenspalten in der Datenquelle austauscht. Analog zu Klasse [CDataExchange](../mfc/reference/cdataexchange-class.md), die auf ähnliche Weise für Dialogdatenaustausch (DDX) verwendet wird.  
-  
-## <a name="related-classes"></a>Verwandte Klassen  
- [CLongBinary](../mfc/reference/clongbinary-class.md)  
- Kapselt ein Handle für den Speicher für ein binary large Object (BLOB), z. B. eine Bitmap an. `CLongBinary` Objekte werden verwendet, um große Datenmengen-Objekte, die in Datenbanktabellen gespeichert zu verwalten.  
-  
- [CDBVariant](../mfc/reference/cdbvariant-class.md)  
- Können Sie einen Wert zu speichern, ohne befürchten Datentyp des Werts. `CDBVariant` verfolgt den Datentyp des aktuellen Werts, der in einer Union gespeichert wird.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+
+Diese Klassen funktionieren mit der anderen Anwendung Framework-Klassen einfachen Zugriff auf eine Vielzahl von Datenbanken zu gewähren, für die Open Database Connectivity (ODBC)-Treiber zur Verfügung stehen.
+
+Programme, die ODBC-Datenbanken verwenden müssen mindestens einen `CDatabase` Objekt und ein `CRecordset` Objekt.
+
+[CDatabase](../mfc/reference/cdatabase-class.md)<br/>
+Kapselt eine Verbindung mit einer Datenquelle, die über die Sie für die Datenquelle ausgeführt werden können.
+
+[CRecordset](../mfc/reference/crecordset-class.md)<br/>
+Kapselt einen Satz von Datensätzen aus einer Datenquelle ausgewählt. Durch Recordsets aktivieren, Durchführen eines Bildlaufs von Datensatz zu Datensatz, Aktualisieren von Datensätzen (hinzufügen, bearbeiten und Löschen von Datensätzen), qualifizieren die Auswahl mit einem Filter, sortieren die Auswahl, und parametrisieren die Auswahl mit den Informationen abgerufen oder zur Laufzeit berechnet.
+
+[CRecordView](../mfc/reference/crecordview-class.md)<br/>
+Stellt eine Form anzeigen, die direkt mit einem Recordset-Objekt verbunden. Die Dialogdatenaustausch (DDX)-Mechanismus eine Übertragung von Daten zwischen dem Recordset und der Steuerelemente der Datensatzansicht angezeigt. Wie alle Formularansichten ist eine Dialogfeldvorlagen-Ressource eine Datensatzansicht abhängig. Datensatzansichten unterstützen auch das Verschieben von Datensatz zu Datensatz im Recordset, Aktualisieren von Datensätzen und das zugehörigen Recordset schließen, wenn die Datensatzansicht geschlossen wird.
+
+[CDBException](../mfc/reference/cdbexception-class.md)<br/>
+Eine Ausnahme aus Fehlern beim Datenzugriff Verarbeitung. Diese Klasse dient demselben Zweck wie die anderen Ausnahmeklassen in der Mechanismus für die Ausnahmebehandlung der Klassenbibliothek.
+
+[CFieldExchange](../mfc/reference/cfieldexchange-class.md)<br/>
+Stellt Kontextinformationen für den Datensatzfeldaustausch (RFX), zu unterstützen, die Daten zwischen den Felddatenmembern und Parameterdatenmember von einem Recordset-Objekt und den entsprechenden Spalten in der Datenquelle austauscht. Analog zu Klasse [CDataExchange](../mfc/reference/cdataexchange-class.md), die auf ähnliche Weise für Dialogdatenaustausch (DDX) verwendet wird.
+
+## <a name="related-classes"></a>Verwandte Klassen
+
+[CLongBinary](../mfc/reference/clongbinary-class.md)<br/>
+Kapselt ein Handle für den Speicher für ein binary large Object (BLOB), z. B. eine Bitmap. `CLongBinary` Objekte werden verwendet, zum Verwalten von große Datenobjekte, die in Datenbanktabellen gespeichert.
+
+[CDBVariant](../mfc/reference/cdbvariant-class.md)<br/>
+ermöglicht es Ihnen, einen Wert zu speichern, ohne sich Gedanken über den Datentyp des Werts zu. `CDBVariant` verfolgt den Datentyp des aktuellen Werts, der in einer Union gespeichert wird.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../mfc/class-library-overview.md)
 
