@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6074519f472fff82af60695f37d0f96d9557f193
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2213266d281933c6a6a59775584532acaeb39d6e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313649"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412319"
 ---
 # <a name="exception-handling--c-component-extensions"></a>Ausnahmebehandlung (Komponentenerweiterungen für C++)
 
@@ -33,27 +33,27 @@ Anwendungen kompiliert wird, mit der `/ZW` Compileroption oder `/clr` Compilerop
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Grundlegende Konzepte zur Verwendung verwalteter Ausnahmen](../dotnet/basic-concepts-in-using-managed-exceptions.md)  
+[Grundlegende Konzepte zur Verwendung verwalteter Ausnahmen](../dotnet/basic-concepts-in-using-managed-exceptions.md)<br/>
 Beschreibt, Auslösen von Ausnahmen, und Verwenden von **versuchen**/**catch** Blöcke.
 
-[Unterschiede im Ausnahmebehandlungsverhalten unter/CLR](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
+[Unterschiede im Ausnahmebehandlungsverhalten unter/CLR](../dotnet/differences-in-exception-handling-behavior-under-clr.md)<br/>
 Erläutert die Unterschiede in das Standardverhalten der C++-Ausnahmebehandlung.
 
-[finally](../dotnet/finally.md)  
+[finally](../dotnet/finally.md)<br/>
 Erläutert, wie die finally-Schlüsselwort.
 
-[Vorgehensweise: Definieren und Installieren eines globalen Ausnahmehandlers](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
+[Vorgehensweise: Definieren und Installieren eines globalen Ausnahmehandlers](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
 Veranschaulicht, wie nicht behandelte Ausnahmen erfasst werden können.
 
-[Vorgehensweise: Abfangen von Ausnahmen, die von der MSIL ausgelöst wurden, in nativem Code](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)  
+[Vorgehensweise: Abfangen von Ausnahmen, die von der MSIL ausgelöst wurden, in nativem Code](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)<br/>
 Erläutert, wie zum Abfangen von CLR und C++-Ausnahmen in systemeigenem Code.
 
-[Vorgehensweise: Definieren und Installieren eines globalen Ausnahmehandlers](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
+[Vorgehensweise: Definieren und Installieren eines globalen Ausnahmehandlers](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
 Veranschaulicht, wie nicht behandelte Ausnahmen abgefangen.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-[Ausnahmebehandlung](../cpp/exception-handling-in-visual-cpp.md)  
+[Ausnahmebehandlung](../cpp/exception-handling-in-visual-cpp.md)<br/>
 Beschreibt die Behandlung von Ausnahmen in C++.
 
 ## <a name="see-also"></a>Siehe auch

@@ -463,14 +463,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d06bac8aef674472b817817fde4191f1d655365e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 575f21e03659f973a25b1ad2e7aae211f9dae187
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723228"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412105"
 ---
 # <a name="reference-concurrency-runtime"></a>Referenz (Concurrency Runtime)
+
 Dieser Abschnitt enthält Referenzinformationen für die Concurrency Runtime.
 
 > [!Note]
@@ -478,7 +479,8 @@ Dieser Abschnitt enthält Referenzinformationen für die Concurrency Runtime.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Concurrency-Namespace](concurrency-namespace.md) Concurrency-Namespace stellt Klassen bereit, und Funktionen, mit denen Sie Zugriff auf die Concurrency Runtime, ein Framework zur parallelen Programmierung für C++. Weitere Informationen finden Sie unter [Concurrency Runtime](../concurrency-runtime.md).
+[Concurrency-Namespace](concurrency-namespace.md)<br/>
+Concurrency-Namespace stellt Klassen bereit, und Funktionen, mit denen Sie Zugriff auf die Concurrency Runtime, ein Framework zur parallelen Programmierung für C++. Weitere Informationen finden Sie unter [Concurrency Runtime](../concurrency-runtime.md).
 
 [Std-namespace](std-namespace.md)
 

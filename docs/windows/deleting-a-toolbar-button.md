@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce8b3bd682c7d4a0b019bf339e1fb543553bfc03
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ad1e420aa1ffe33cffb9649fdfbaca398540b2a3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318053"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397535"
 ---
 # <a name="deleting-a-toolbar-button-c"></a>Löschen einer Symbolleisten-Schaltfläche (C++)
 
@@ -37,5 +37,5 @@ MFC oder ATL
 
 ## <a name="see-also"></a>Siehe auch
 
-[Erstellen, Verschieben und Bearbeiten von Schaltflächen der Symbolleiste](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[Erstellen, Verschieben und Bearbeiten von Schaltflächen der Symbolleiste](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [Symbolleisten-Editor](../windows/toolbar-editor.md)
