@@ -18,45 +18,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c209036f6d606bfd25cf41e828eb6488a1d16036
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 554cccba1d45cf172645c46e00fdb20c19ea42d4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712529"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389602"
 ---
 # <a name="indword"></a>__indword
-**Microsoft-spezifisch**  
-  
- Liest ein Doppelwort der Daten aus dem angegebenen Port mithilfe der `in` Anweisung.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-unsigned long __indword(  
-   unsigned short Port  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+
+**Microsoft-spezifisch**
+
+Liest ein Doppelwort der Daten aus dem angegebenen Port mithilfe der `in` Anweisung.
+
+## <a name="syntax"></a>Syntax
+
+```
+unsigned long __indword(
+   unsigned short Port
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
 *Port*<br/>
-[in] Der Port, der gelesen werden.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Lesen Sie das Wort aus den Port.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Systemintern|Architektur|  
-|---------------|------------------|  
-|`__indword`|x86, x64|  
-  
- **Headerdatei** \<intrin.h >  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Routine ist nur als systeminterne Funktion verfügbar.  
-  
-**Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[in] Der Port, der gelesen werden.
+
+## <a name="return-value"></a>Rückgabewert
+
+Lesen Sie das Wort aus den Port.
+
+## <a name="requirements"></a>Anforderungen
+
+|Systemintern|Architektur|
+|---------------|------------------|
+|`__indword`|x86, x64|
+
+**Headerdatei** \<intrin.h >
+
+## <a name="remarks"></a>Hinweise
+
+Diese Routine ist nur als systeminterne Funktion verfügbar.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

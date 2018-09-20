@@ -16,37 +16,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c539feaac9cac5bca3a41868cc03379a63bf6bb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1d40cd86cff4c3e58e88f9d17a551dc789bd1db4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204358"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398210"
 ---
 # <a name="rgndata-structure"></a>RGNDATA-Struktur
-Die `RGNDATA` Struktur enthält eine Kopfzeile und ein Array von Rechtecken, die zu eine Region gehören. Dieser Rechtecke, sortierte oben links nach rechts und nach unten überlappen nicht.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-typedef struct _RGNDATA { /* rgnd */  
-    RGNDATAHEADER rdh;  
-    char Buffer[1];  
-} RGNDATA;  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *Element angezeigt*  
- Gibt an, eine [RGNDATAHEADER](/windows/desktop/api/wingdi/ns-wingdi-_rgndataheader) Struktur. (Weitere Informationen zu dieser Struktur finden Sie im Windows SDK.) Die Elemente dieser Struktur Geben Sie den Typ des Bereichs (gibt an, ob es rechteckigen oder trapezoidförmiger ist), die Anzahl der Rechtecke, aus denen die Region, die Größe des Puffers, die die Rechteck-Strukturen enthält, und so weiter.  
-  
- *Buffer*  
- Gibt an, einen Puffer von beliebiger Größe, enthält die [RECT](../../mfc/reference/rect-structure1.md) Strukturen, die der Region bilden.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** wingdi.h  
-  
-## <a name="see-also"></a>Siehe auch  
- [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CRgn::CreateFromData](../../mfc/reference/crgn-class.md#createfromdata)   
- [CRgn::GetRegionData](../../mfc/reference/crgn-class.md#getregiondata)
+
+Die `RGNDATA` Struktur enthält eine Kopfzeile und ein Array von Rechtecken, die zu eine Region gehören. Dieser Rechtecke, sortierte oben links nach rechts und nach unten überlappen nicht.
+
+## <a name="syntax"></a>Syntax
+
+```
+typedef struct _RGNDATA { /* rgnd */
+    RGNDATAHEADER rdh;
+    char Buffer[1];
+} RGNDATA;
+```
+
+#### <a name="parameters"></a>Parameter
+
+*Element angezeigt*<br/>
+Gibt an, eine [RGNDATAHEADER](/windows/desktop/api/wingdi/ns-wingdi-_rgndataheader) Struktur. (Weitere Informationen zu dieser Struktur finden Sie im Windows SDK.) Die Elemente dieser Struktur Geben Sie den Typ des Bereichs (gibt an, ob es rechteckigen oder trapezoidförmiger ist), die Anzahl der Rechtecke, aus denen die Region, die Größe des Puffers, die die Rechteck-Strukturen enthält, und so weiter.
+
+*Buffer*<br/>
+Gibt an, einen Puffer von beliebiger Größe, enthält die [RECT](../../mfc/reference/rect-structure1.md) Strukturen, die der Region bilden.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** wingdi.h
+
+## <a name="see-also"></a>Siehe auch
+
+[Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CRgn::CreateFromData](../../mfc/reference/crgn-class.md#createfromdata)<br/>
+[CRgn::GetRegionData](../../mfc/reference/crgn-class.md#getregiondata)
 

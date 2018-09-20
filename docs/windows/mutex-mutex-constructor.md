@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 62a1fc796188c38dfbd3aff004eba15b7e30ea89
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b7436aeb470804bd47dcc647ff0fe9a13faaae95
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600504"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444280"
 ---
 # <a name="mutexmutex-constructor"></a>Mutex::Mutex-Konstruktor
 
@@ -42,7 +42,7 @@ Mutex(
 
 ### <a name="parameters"></a>Parameter
 
-*h*  
+*h*<br/>
 Ein Handle oder einen Rvalue-Verweis auf ein Handle, um eine **Mutex** Objekt.
 
 ## <a name="remarks"></a>Hinweise
@@ -56,4 +56,5 @@ Der erste Konstruktor initialisiert ein **Mutex** Objekt aus dem angegebenen Han
 **Namespace:** Microsoft::WRL::Wrappers
 
 ## <a name="see-also"></a>Siehe auch
+
 [Mutex-Klasse](../windows/mutex-class1.md)

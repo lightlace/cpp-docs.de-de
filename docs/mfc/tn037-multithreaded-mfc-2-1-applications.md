@@ -1,5 +1,5 @@
 ---
-title: 'TN037: Multithreaded MFC 2.1 Anwendungen | Microsoft Docs'
+title: 'TN037: Multithreaded MFC 2.1 Anwendungen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3444caa966907267edc1621936296ca55a3e6356
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a30ea081ba03ae9a5cb17d1139f3d1fcf385000a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382014"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415563"
 ---
 # <a name="tn037-multithreaded-mfc-21-applications"></a>TN037: Multithreaded MFC 2.1-Anwendungen
-In diesem technischen Hinweis beschrieben ursprünglich die Einschränkungen von Multithreadprogrammen mit MFC 2.1, stellte ursprünglich mit Visual C++ 1.0 für Windows NT. MFC 3.0 unterstützt das multithreading direkt dokumentiert ist. Finden Sie in dieser Referenz für Weitere Informationen.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Technische Hinweise – nach Anzahl](../mfc/technical-notes-by-number.md)   
- [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
+
+Diese technische Hinweis beschrieben ursprünglich die Einschränkungen von Multithread-Programme mit MFC 2.1, die ursprünglich mit Visual C++-1.0 for Windows NT bereitgestellt werden. MFC 3.0 unterstützt das multithreading direkt dokumentiert ist. Finden Sie in dieser Referenz für Weitere Informationen.
+
+## <a name="see-also"></a>Siehe auch
+
+[Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
+[Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
 

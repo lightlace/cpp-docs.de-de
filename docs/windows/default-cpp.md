@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6baefb7ef0af5054cb46ed4ad74b6a6bf80fbb61
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 28b162b63ad1fbd2363b4519817d466055e96bc9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699920"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429278"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -41,7 +41,7 @@ Gibt an, dass die benutzerdefinierte Schnittstelle oder Disp-Schnittstelle inner
 
 ### <a name="parameters"></a>Parameter
 
-*interface1*  
+*interface1*<br/>
 Die Standardschnittstelle, die für Skriptumgebungen verfügbar gemacht wird, die ein Objekt auf Grundlage der Klasse erstellen, die mit dem **default** -Attribut definiert ist.
 
 Wenn keine Standardschnittstelle angegeben wird, wird das erste Vorkommen einer Nicht-Quellschnittstelle als Standard verwendet.
@@ -125,6 +125,6 @@ Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-c
 
 ## <a name="see-also"></a>Siehe auch
 
-[IDL-Attribute](../windows/idl-attributes.md)  
-[Klassenattribute](../windows/class-attributes.md)  
+[IDL-Attribute](../windows/idl-attributes.md)<br/>
+[Klassenattribute](../windows/class-attributes.md)<br/>
 [coclass](../windows/coclass.md)  

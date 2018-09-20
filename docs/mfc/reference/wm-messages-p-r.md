@@ -1,5 +1,5 @@
 ---
-title: 'WM_-Meldungen: P - R | Microsoft Docs'
+title: 'WM_-Meldungen: P - R | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -43,35 +43,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37189490a955b2837fa974dfaad3efba0c615bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd4ccbe0d27d0828f8aa54406918612778f942f4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379553"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380274"
 ---
 # <a name="wm-messages-p---r"></a>WM_-Meldungen: P - R
-Die folgenden Zuordnungseinträge entsprechen der Funktionsprototypen:  
-  
-|Eintrag für die Zuordnung|Funktionsprototyp|  
-|---------------|------------------------|  
-|ON_WM_PAINT()|Afx_msg "void" [OnPaint](../../mfc/reference/cwnd-class.md#onpaint)(;)|  
-|ON_WM_PAINTCLIPBOARD()|Afx_msg "void" [OnPaintClipboard](../../mfc/reference/cwnd-class.md#onpaintclipboard)(CWnd *, HANDLE);|  
-|ON_WM_PALETTECHANGED()|Afx_msg "void" [OnPaletteChanged](../../mfc/reference/cwnd-class.md#onpalettechanged)(CWnd *);|  
-|ON_WM_PALETTEISCHANGING()|Afx_msg "void" [OnPaletteIsChanging](../../mfc/reference/cwnd-class.md#onpaletteischanging)(CWnd *);|  
-|ON_WM_PARENTNOTIFY()|Afx_msg "void" [OnParentNotify](../../mfc/reference/cwnd-class.md#onparentnotify)(UINT, LONG);|  
-|ON_WM_POWERBROADCAST()|Afx_msg "uint" [OnPowerBroadcast](../../mfc/reference/cwnd-class.md#onpowerbroadcast)("uint", "uint");|  
-|ON_WM_QUERYDRAGICON()|Afx_msg HCURSOR [OnQueryDragIcon](../../mfc/reference/cwnd-class.md#onquerydragicon)() ();|  
-|ON_WM_QUERYENDSESSION()|Afx_msg BOOL [OnQueryEndSession](../../mfc/reference/cwnd-class.md#onqueryendsession)() ();|  
-|ON_WM_QUERYNEWPALETTE()|Afx_msg BOOL [OnQueryNewPalette](../../mfc/reference/cwnd-class.md#onquerynewpalette)() ();|  
-|ON_WM_QUERYOPEN()|Afx_msg BOOL [OnQueryOpen](../../mfc/reference/cwnd-class.md#onqueryopen)() ();|  
-|ON_WM_RBUTTONDBLCLK()|Afx_msg "void" [OnRButtonDblClk](../../mfc/reference/cwnd-class.md#onrbuttondblclk)("uint", CPoint);|  
-|ON_WM_RBUTTONDOWN()|Afx_msg "void" [OnRButtonDown](../../mfc/reference/cwnd-class.md#onrbuttondown)("uint", CPoint);|  
-|ON_WM_RBUTTONUP()|Afx_msg "void" [OnRButtonUp](../../mfc/reference/cwnd-class.md#onrbuttonup)("uint", CPoint);|  
-|ON_WM_RENDERALLFORMATS()|Afx_msg "void" [OnRenderAllFormats](../../mfc/reference/cwnd-class.md#onrenderallformats)(;)|  
-|ON_WM_RENDERFORMAT()|Afx_msg "void" [OnRenderFormat](../../mfc/reference/cwnd-class.md#onrenderformat)("uint");|  
-  
-## <a name="see-also"></a>Siehe auch  
- [Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)   
- [Handler für WM_-Meldungen](../../mfc/reference/handlers-for-wm-messages.md)
+
+Die folgenden Zuordnungseinträge entsprechen der Funktionsprototypen:
+
+|Zuordnungseintrag|Funktionsprototyp|
+|---------------|------------------------|
+|ON_WM_PAINT()|die "void" Afx_msg [OnPaint](../../mfc/reference/cwnd-class.md#onpaint)();|
+|ON_WM_PAINTCLIPBOARD()|die "void" Afx_msg [OnPaintClipboard](../../mfc/reference/cwnd-class.md#onpaintclipboard)(CWnd *, HANDLE);|
+|ON_WM_PALETTECHANGED()|die "void" Afx_msg [OnPaletteChanged](../../mfc/reference/cwnd-class.md#onpalettechanged)(CWnd *);|
+|ON_WM_PALETTEISCHANGING()|die "void" Afx_msg [OnPaletteIsChanging](../../mfc/reference/cwnd-class.md#onpaletteischanging)(CWnd *);|
+|ON_WM_PARENTNOTIFY()|die "void" Afx_msg [OnParentNotify](../../mfc/reference/cwnd-class.md#onparentnotify)(UINT, LONG);|
+|ON_WM_POWERBROADCAST()|Afx_msg UINT [OnPowerBroadcast](../../mfc/reference/cwnd-class.md#onpowerbroadcast)("uint", "uint");|
+|ON_WM_QUERYDRAGICON()|Afx_msg HCURSOR [OnQueryDragIcon](../../mfc/reference/cwnd-class.md#onquerydragicon)() (-).|
+|ON_WM_QUERYENDSESSION()|Afx_msg "bool" [OnQueryEndSession](../../mfc/reference/cwnd-class.md#onqueryendsession)() (-).|
+|ON_WM_QUERYNEWPALETTE()|Afx_msg "bool" [OnQueryNewPalette](../../mfc/reference/cwnd-class.md#onquerynewpalette)() (-).|
+|ON_WM_QUERYOPEN()|Afx_msg "bool" [OnQueryOpen](../../mfc/reference/cwnd-class.md#onqueryopen)() (-).|
+|ON_WM_RBUTTONDBLCLK()|die "void" Afx_msg [OnRButtonDblClk](../../mfc/reference/cwnd-class.md#onrbuttondblclk)(UINT, CPoint);|
+|ON_WM_RBUTTONDOWN()|die "void" Afx_msg [OnRButtonDown](../../mfc/reference/cwnd-class.md#onrbuttondown)(UINT, CPoint);|
+|ON_WM_RBUTTONUP()|die "void" Afx_msg [OnRButtonUp](../../mfc/reference/cwnd-class.md#onrbuttonup)(UINT, CPoint);|
+|ON_WM_RENDERALLFORMATS()|die "void" Afx_msg [OnRenderAllFormats](../../mfc/reference/cwnd-class.md#onrenderallformats)();|
+|ON_WM_RENDERFORMAT()|die "void" Afx_msg [OnRenderFormat](../../mfc/reference/cwnd-class.md#onrenderformat)(UINT);|
+
+## <a name="see-also"></a>Siehe auch
+
+[Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)<br/>
+[Handler für WM_-Meldungen](../../mfc/reference/handlers-for-wm-messages.md)
 

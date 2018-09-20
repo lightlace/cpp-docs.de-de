@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b3c1ec84569058b11b20270ea1006bfc438288cf
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 48feb16696243479849492171732b0d070ce032f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717150"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427913"
 ---
 # <a name="safemodulus"></a>SafeModulus
 
@@ -71,7 +71,7 @@ Weitere Informationen zu den Vorlagentypen `T` und `U`, finden Sie unter [SafeIn
 
 ## <a name="see-also"></a>Siehe auch
 
-[SafeInt-Funktionen](../windows/safeint-functions.md)  
-[SafeInt-Bibliothek](../windows/safeint-library.md)  
-[SafeInt-Klasse](../windows/safeint-class.md)  
+[SafeInt-Funktionen](../windows/safeint-functions.md)<br/>
+[SafeInt-Bibliothek](../windows/safeint-library.md)<br/>
+[SafeInt-Klasse](../windows/safeint-class.md)<br/>
 [SafeDivide](../windows/safedivide.md)

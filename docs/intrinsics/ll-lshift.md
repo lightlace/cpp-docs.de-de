@@ -18,82 +18,87 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bfb567774191edb86a9eb34a38be69344f19575
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 99ca3fba4a385645795fb7b6bbd6fe3f33a9c95c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702077"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395231"
 ---
 # <a name="lllshift"></a>__ll_lshift
-**Microsoft-spezifisch**  
-  
- Verschiebt die angegebenen 64-Bit-Wert durch die angegebene Anzahl von Bits nach links.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-unsigned __int64 __ll_lshift(  
-   unsigned __int64 Mask,  
-   int nBit  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+
+**Microsoft-spezifisch**
+
+Verschiebt die angegebenen 64-Bit-Wert durch die angegebene Anzahl von Bits nach links.
+
+## <a name="syntax"></a>Syntax
+
+```
+unsigned __int64 __ll_lshift(
+   unsigned __int64 Mask,
+   int nBit
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
 *Maske*<br/>
-[in] Der 64-Bit-Ganzzahl-Wert, um nach links verschoben werden soll.  
-  
+[in] Der 64-Bit-Ganzzahl-Wert, um nach links verschoben werden soll.
+
 *nBit*<br/>
-[in] Die Anzahl der zu verschiebenden Bits.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Die Maske verschoben nach links durch `nBit` Bits.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Systemintern|Architektur|  
-|---------------|------------------|  
-|`__ll_lshift`|x86, x64|  
-  
- **Headerdatei** \<intrin.h >  
-  
-## <a name="remarks"></a>Hinweise  
- Wenn Sie das Programm mithilfe der 64-Bit-Architektur kompilieren und `nBit` ist größer als 63, ist die Anzahl der zu verschiebenden Bits `nBit` modulo-64. Wenn Sie das Programm, das die 32-Bit-Architektur kompilieren und `nBit` ist größer als 31, die Anzahl der zu verschiebenden Bits wird `nBit` modulo 32.  
-  
- Die `ll` im Namen gibt an, dass dieser eine Operation auf `long long` (`__int64`).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// ll_lshift.cpp  
-// compile with: /EHsc  
-// processor: x86, x64  
-#include <iostream>  
-#include <intrin.h>  
-using namespace std;  
-  
-#pragma intrinsic(__ll_lshift)  
-  
-int main()  
-{  
-   unsigned __int64 Mask = 0x100;  
-   int nBit = 8;  
-   Mask = __ll_lshift(Mask, nBit);  
-   cout << hex << Mask << endl;  
-}  
-```  
-  
-## <a name="output"></a>Ausgabe  
-  
-```  
-10000  
-```  
-  
- **Beachten Sie** keine nicht signierten Version des Vorgangs nach links verschieben vorhanden ist. Grund hierfür ist, `__ll_lshift` bereits ohne Vorzeichen Eingabeparameter verwendet. Im Gegensatz zu den nach rechts verschieben besteht es keine Abhängigkeit Anmeldung für die Verschiebung nach links, da das niederwertigste Bit im Ergebnis immer auf NULL, unabhängig vom Vorzeichen des Werts verschoben festgelegt ist.  
-  
-**Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [__ll_rshift](../intrinsics/ll-rshift.md)   
- [__ull_rshift](../intrinsics/ull-rshift.md)   
- [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[in] Die Anzahl der zu verschiebenden Bits.
+
+## <a name="return-value"></a>Rückgabewert
+
+Die Maske verschoben nach links durch `nBit` Bits.
+
+## <a name="requirements"></a>Anforderungen
+
+|Systemintern|Architektur|
+|---------------|------------------|
+|`__ll_lshift`|x86, x64|
+
+**Headerdatei** \<intrin.h >
+
+## <a name="remarks"></a>Hinweise
+
+Wenn Sie das Programm mithilfe der 64-Bit-Architektur kompilieren und `nBit` ist größer als 63, ist die Anzahl der zu verschiebenden Bits `nBit` modulo-64. Wenn Sie das Programm, das die 32-Bit-Architektur kompilieren und `nBit` ist größer als 31, die Anzahl der zu verschiebenden Bits wird `nBit` modulo 32.
+
+Die `ll` im Namen gibt an, dass dieser eine Operation auf `long long` (`__int64`).
+
+## <a name="example"></a>Beispiel
+
+```
+// ll_lshift.cpp
+// compile with: /EHsc
+// processor: x86, x64
+#include <iostream>
+#include <intrin.h>
+using namespace std;
+
+#pragma intrinsic(__ll_lshift)
+
+int main()
+{
+   unsigned __int64 Mask = 0x100;
+   int nBit = 8;
+   Mask = __ll_lshift(Mask, nBit);
+   cout << hex << Mask << endl;
+}
+```
+
+## <a name="output"></a>Ausgabe
+
+```
+10000
+```
+
+**Beachten Sie** keine nicht signierten Version des Vorgangs nach links verschieben vorhanden ist. Grund hierfür ist, `__ll_lshift` bereits ohne Vorzeichen Eingabeparameter verwendet. Im Gegensatz zu den nach rechts verschieben besteht es keine Abhängigkeit Anmeldung für die Verschiebung nach links, da das niederwertigste Bit im Ergebnis immer auf NULL, unabhängig vom Vorzeichen des Werts verschoben festgelegt ist.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[__ll_rshift](../intrinsics/ll-rshift.md)<br/>
+[__ull_rshift](../intrinsics/ull-rshift.md)<br/>
+[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

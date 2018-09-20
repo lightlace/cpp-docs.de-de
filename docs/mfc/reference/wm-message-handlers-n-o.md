@@ -1,5 +1,5 @@
 ---
-title: 'WM_-Meldungshandler: N - O | Microsoft Docs'
+title: 'WM_-Meldungshandler: N - O | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -47,43 +47,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e8b8a05afa68b080fa1b0be79c968e24f615af5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 52ad1893397c87f1d0e604f55b2758c5ba69f994
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380811"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389785"
 ---
 # <a name="wm-message-handlers-n---o"></a>WM_-Meldungshandler: N - O
-Die folgenden Zuordnungseinträge auf der linken Seite entsprechen auf der rechten Seite der Funktionsprototypen:  
-  
-|Eintrag für die Zuordnung|Funktionsprototyp|  
-|---------------|------------------------|  
-|ON_WM_NCACTIVATE()|Afx_msg BOOL [OnNcActivate](../../mfc/reference/cwnd-class.md#onncactivate)(BOOL);|  
-|ON_WM_NCCALCSIZE()|Afx_msg "void" [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)(BOOL, NCCALCSIZE_PARAMS FAR *);|  
-|ON_WM_NCCREATE()|Afx_msg BOOL [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)(LPCREATESTRUCT);|  
-|ON_WM_NCDESTROY()|Afx_msg "void" [OnNcDestroy](../../mfc/reference/cwnd-class.md#onncdestroy)(;)|  
-|ON_WM_NCHITTEST()|Afx_msg LRESULT [OnNcHitTest](../../mfc/reference/cwnd-class.md#onnchittest)(CPoint);|  
-|ON_WM_NCLBUTTONDBLCLK()|Afx_msg "void" [OnNcLButtonDblClk](../../mfc/reference/cwnd-class.md#onnclbuttondblclk)("uint", CPoint);|  
-|ON_WM_NCLBUTTONDOWN()|Afx_msg "void" [OnNcLButtonDown](../../mfc/reference/cwnd-class.md#onnclbuttondown)("uint", CPoint);|  
-|ON_WM_NCLBUTTONUP()|Afx_msg "void" [OnNcLButtonUp](../../mfc/reference/cwnd-class.md#onnclbuttonup)("uint", CPoint);|  
-|ON_WM_NCMBUTTONDBLCLK()|Afx_msg "void" [OnNcMButtonDblClk](../../mfc/reference/cwnd-class.md#onncmbuttondblclk)("uint", CPoint);|  
-|ON_WM_NCMBUTTONDOWN()|Afx_msg "void" [OnNcMButtonDown](../../mfc/reference/cwnd-class.md#onncmbuttondown)("uint", CPoint);|  
-|ON_WM_NCMBUTTONUP()|Afx_msg "void" [OnNcMButtonUp](../../mfc/reference/cwnd-class.md#onncmbuttonup)("uint", CPoint);|  
-|ON_WM_NCMOUSEHOVER()|Afx_msg "void" [OnNcMouseHover](../../mfc/reference/cwnd-class.md#onncmousehover)("uint", CPoint);|  
-|ON_WM_NCMOUSELEAVE()|Afx_msg "void" [OnNcMouseLeave](../../mfc/reference/cwnd-class.md#onncmouseleave)(;)|  
-|ON_WM_NCMOUSEMOVE()|Afx_msg "void" [OnNcMouseMove](../../mfc/reference/cwnd-class.md#onncmousemove)("uint", CPoint);|  
-|ON_WM_NCPAINT()|Afx_msg "void" [OnNcPaint](../../mfc/reference/cwnd-class.md#onncpaint)(;)|  
-|ON_WM_NCRBUTTONDBLCLK()|Afx_msg "void" [OnNcRButtonDblClk](../../mfc/reference/cwnd-class.md#onncrbuttondblclk)("uint", CPoint);|  
-|ON_WM_NCRBUTTONDOWN()|Afx_msg "void" [OnNcRButtonDown](../../mfc/reference/cwnd-class.md#onncrbuttondown)("uint", CPoint);|  
-|ON_WM_NCRBUTTONUP()|Afx_msg "void" [OnNcRButtonUp](../../mfc/reference/cwnd-class.md#onncrbuttonup)("uint", CPoint);|  
-|ON_WM_NCXBUTTONDBLCLK()|"void" [OnNcXButtonDblClk](../../mfc/reference/cwnd-class.md#onncxbuttondblclk)(kurzer Name, "uint", CPoint);|  
-|ON_WM_NCXBUTTONDOWN()|Afx_msg "void" [OnNcXButtonDown](../../mfc/reference/cwnd-class.md#onncxbuttondown)(kurzer Name, "uint", CPoint);|  
-|ON_WM_NCXBUTTONUP()|Afx_msg "void" [OnNcXButtonUp](../../mfc/reference/cwnd-class.md#onncxbuttonup)(kurzer Name, "uint", CPoint);|  
-|ON_WM_NEXTMENU()|Afx_msg "void" [OnNextMenu](../../mfc/reference/cwnd-class.md#onnextmenu)("uint", LPMDINEXTMENU);|  
-|ON_WM_NOTIFYFORMAT()|Afx_msg "uint" [OnNotifyFormat](../../mfc/reference/cwnd-class.md#onnotifyformat)(CWnd *, "uint");|  
-  
-## <a name="see-also"></a>Siehe auch  
- [Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)   
- [Handler für WM_-Meldungen](../../mfc/reference/handlers-for-wm-messages.md)
+
+Die folgenden Einträge der Karte auf der linken Seite entsprechen die Funktionsprototypen auf der rechten Seite:
+
+|Zuordnungseintrag|Funktionsprototyp|
+|---------------|------------------------|
+|ON_WM_NCACTIVATE()|Afx_msg "bool" [OnNcActivate](../../mfc/reference/cwnd-class.md#onncactivate)(BOOL);|
+|ON_WM_NCCALCSIZE()|die "void" Afx_msg [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)("bool", NCCALCSIZE_PARAMS weit *);|
+|ON_WM_NCCREATE()|Afx_msg "bool" [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)(LPCREATESTRUCT);|
+|ON_WM_NCDESTROY()|die "void" Afx_msg [OnNcDestroy](../../mfc/reference/cwnd-class.md#onncdestroy)();|
+|ON_WM_NCHITTEST()|Afx_msg LRESULT [OnNcHitTest](../../mfc/reference/cwnd-class.md#onnchittest)(CPoint);|
+|ON_WM_NCLBUTTONDBLCLK()|die "void" Afx_msg [OnNcLButtonDblClk](../../mfc/reference/cwnd-class.md#onnclbuttondblclk)(UINT, CPoint);|
+|ON_WM_NCLBUTTONDOWN()|die "void" Afx_msg [OnNcLButtonDown](../../mfc/reference/cwnd-class.md#onnclbuttondown)(UINT, CPoint);|
+|ON_WM_NCLBUTTONUP()|die "void" Afx_msg [OnNcLButtonUp](../../mfc/reference/cwnd-class.md#onnclbuttonup)(UINT, CPoint);|
+|ON_WM_NCMBUTTONDBLCLK()|die "void" Afx_msg [OnNcMButtonDblClk](../../mfc/reference/cwnd-class.md#onncmbuttondblclk)(UINT, CPoint);|
+|ON_WM_NCMBUTTONDOWN()|die "void" Afx_msg [OnNcMButtonDown](../../mfc/reference/cwnd-class.md#onncmbuttondown)(UINT, CPoint);|
+|ON_WM_NCMBUTTONUP()|die "void" Afx_msg [OnNcMButtonUp](../../mfc/reference/cwnd-class.md#onncmbuttonup)(UINT, CPoint);|
+|ON_WM_NCMOUSEHOVER()|die "void" Afx_msg [OnNcMouseHover](../../mfc/reference/cwnd-class.md#onncmousehover)(UINT, CPoint);|
+|ON_WM_NCMOUSELEAVE()|die "void" Afx_msg [OnNcMouseLeave](../../mfc/reference/cwnd-class.md#onncmouseleave)();|
+|ON_WM_NCMOUSEMOVE()|die "void" Afx_msg [OnNcMouseMove](../../mfc/reference/cwnd-class.md#onncmousemove)(UINT, CPoint);|
+|ON_WM_NCPAINT()|die "void" Afx_msg [OnNcPaint](../../mfc/reference/cwnd-class.md#onncpaint)();|
+|ON_WM_NCRBUTTONDBLCLK()|die "void" Afx_msg [OnNcRButtonDblClk](../../mfc/reference/cwnd-class.md#onncrbuttondblclk)(UINT, CPoint);|
+|ON_WM_NCRBUTTONDOWN()|die "void" Afx_msg [OnNcRButtonDown](../../mfc/reference/cwnd-class.md#onncrbuttondown)(UINT, CPoint);|
+|ON_WM_NCRBUTTONUP()|die "void" Afx_msg [OnNcRButtonUp](../../mfc/reference/cwnd-class.md#onncrbuttonup)(UINT, CPoint);|
+|ON_WM_NCXBUTTONDBLCLK()|"void" [OnNcXButtonDblClk](../../mfc/reference/cwnd-class.md#onncxbuttondblclk)(kurz, UINT, CPoint);|
+|ON_WM_NCXBUTTONDOWN()|die "void" Afx_msg [OnNcXButtonDown](../../mfc/reference/cwnd-class.md#onncxbuttondown)(kurz, UINT, CPoint);|
+|ON_WM_NCXBUTTONUP()|die "void" Afx_msg [OnNcXButtonUp](../../mfc/reference/cwnd-class.md#onncxbuttonup)(kurz, UINT, CPoint);|
+|ON_WM_NEXTMENU()|die "void" Afx_msg [OnNextMenu](../../mfc/reference/cwnd-class.md#onnextmenu)(UINT, LPMDINEXTMENU);|
+|ON_WM_NOTIFYFORMAT()|Afx_msg UINT [OnNotifyFormat](../../mfc/reference/cwnd-class.md#onnotifyformat)(CWnd *, "uint");|
+
+## <a name="see-also"></a>Siehe auch
+
+[Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)<br/>
+[Handler für WM_-Meldungen](../../mfc/reference/handlers-for-wm-messages.md)
 

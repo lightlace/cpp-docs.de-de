@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5644f99e15685f8f1784cc40886709b05a9a06bd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d9c2efecf34e5d58f633bc21e62801157b1b8955
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221283"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388588"
 ---
 # <a name="helpcontext"></a>helpcontext
 
@@ -38,7 +38,7 @@ Gibt eine Kontext-ID, mit dem die Benutzerinformationen zu diesem Element in der
 
 ### <a name="parameters"></a>Parameter
 
-*ID*  
+*ID*<br/>
 Die Kontext-ID des Hilfethemas. Finden Sie unter [HTML-Hilfe: kontextbezogene Hilfe für Programme](../mfc/html-help-context-sensitive-help-for-your-programs.md) Weitere Informationen zum Kontext-IDs.
 
 ## <a name="remarks"></a>Hinweise
@@ -64,10 +64,10 @@ Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-c
 
 ## <a name="see-also"></a>Siehe auch
 
-[IDL-Attribute](../windows/idl-attributes.md)  
-[Schnittstellenattribut](../windows/interface-attributes.md)  
-[Klassenattribute](../windows/class-attributes.md)  
-[Methodenattribut](../windows/method-attributes.md)  
-[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  
-[helpfile](../windows/helpfile.md)  
+[IDL-Attribute](../windows/idl-attributes.md)<br/>
+[Schnittstellenattribut](../windows/interface-attributes.md)<br/>
+[Klassenattribute](../windows/class-attributes.md)<br/>
+[Methodenattribut](../windows/method-attributes.md)<br/>
+[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[helpfile](../windows/helpfile.md)<br/>
 [helpstring](../windows/helpstring.md)  

@@ -1,5 +1,5 @@
 ---
-title: Registerkarten-Steuerelemente und Eigenschaftenblätter | Microsoft Docs
+title: Registerkarten-Steuerelemente und Eigenschaftenblätter | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 096c61a62ea382639356eca81483c9aacfe04b2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc03427847a64330d1ff2814d268997f63fac6bd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385871"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382543"
 ---
 # <a name="tab-controls-and-property-sheets"></a>Registerkarten-Steuerelemente und Eigenschaftenblätter
-Eigenschaftenblätter sind mehrseitige Dialogfelder oder "Registerkarten-Dialogfeldern, die bis zu 24 Ressourcen der Dialogfeldvorlage für den Benutzer angezeigt werden können. Beispiele von Eigenschaftenblättern finden Sie in das Dialogfeld Eigenschaften von Windows-Anzeige oder die folgenden MFC-beispielanwendung:  
-  
- [CMNCTRL1: Zeigt allgemeine Steuerelementklassen, Teil 1](../visual-cpp-samples.md)  
-  
- [CMNCTRL2: Zeigt allgemeine Steuerelementklassen, Teil 2](../visual-cpp-samples.md)  
-  
- Eigenschaftenblätter können leicht mit der MFC-Klasse implementiert werden [CPropertySheet](../mfc/reference/cpropertysheet-class.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von CTabCtrl](../mfc/using-ctabctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+
+Eigenschaftenblätter werden mehrseitige Dialogfelder oder "Registerkarten-Dialogfeldern, die bis zu 24 Dialogfeld-Vorlagenressourcen, die dem Benutzer angezeigt werden können. Beispiele für Eigenschaftenblätter finden Sie in das Dialogfeld Eigenschaften von Windows-Anzeige oder die folgende MFC-beispielanwendung:
+
+[CMNCTRL1: Zeigt die Klassen für allgemeine Steuerelemente, Teil 1](../visual-cpp-samples.md)
+
+[CMNCTRL2: Zeigt die Klassen für allgemeine Steuerelemente, Teil 2](../visual-cpp-samples.md)
+
+Eigenschaftenblätter können ganz einfach mit der MFC-Klasse implementiert werden [CPropertySheet](../mfc/reference/cpropertysheet-class.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von CTabCtrl](../mfc/using-ctabctrl.md)<br/>
+[Steuerelemente](../mfc/controls-mfc.md)
 

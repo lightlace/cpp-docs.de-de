@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f9b121b75e31fdd79313e36b9e1e19c1cf3200e
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 12fd66c7ff5a6f6fee7588aa7bd51ae2053ba7e8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691535"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386976"
 ---
 # <a name="weakref-class"></a>WeakRef-Klasse
 
@@ -141,10 +141,10 @@ HRESULT As(
 
 ### <a name="parameters"></a>Parameter
 
-*U*  
+*U*<br/>
 Eine Schnittstellen-ID.
 
-*ptr*  
+*ptr*<br/>
 Wenn dieser Vorgang abgeschlossen ist, ein Objekt, das Parameter repräsentiert *U*.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -176,10 +176,10 @@ HRESULT AsIID(
 
 ### <a name="parameters"></a>Parameter
 
-*riid*  
+*riid*<br/>
 Eine Schnittstellen-ID.
 
-*ptr*  
+*ptr*<br/>
 Wenn dieser Vorgang abgeschlossen ist, ein Objekt, das Parameter repräsentiert *Riid*.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -220,13 +220,13 @@ HRESULT CopyTo(
 
 ### <a name="parameters"></a>Parameter
 
-*U*  
+*U*<br/>
 Zeiger ein `IInspectable` Schnittstelle. Ein Fehler wird ausgegeben, wenn *U* stammt nicht aus `IInspectable`.
 
-*riid*  
+*riid*<br/>
 Eine Schnittstellen-ID. Ein Fehler wird ausgegeben, wenn *Riid* stammt nicht aus `IWeakReference`.
 
-*ptr*  
+*ptr*<br/>
 Ein doppelt indirekter Zeiger auf `IInspectable` oder `IWeakReference`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -284,7 +284,7 @@ WeakRef(
 
 ### <a name="parameters"></a>Parameter
 
-*ptr*  
+*ptr*<br/>
 Ein Zeiger, Verweis oder Rvalue-Verweis auf ein vorhandenes Objekt, das das aktuelle initialisiert `WeakRef` Objekt.
 
 ### <a name="remarks"></a>Hinweise

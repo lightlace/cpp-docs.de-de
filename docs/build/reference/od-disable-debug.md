@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adfa2e2feaf44f5f29c1a16b8e68642e438095fe
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1f0fa55b7ddfc97d1073211ad23c04d724aabe50
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703325"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404279"
 ---
 # <a name="od-disable-debug"></a>/Od (Deaktivieren (Debuggen))
 
@@ -59,7 +59,7 @@ Diese Option ist die Standardeinstellung. Da **/Od** unterdrückt die Verschiebu
 
 ## <a name="see-also"></a>Siehe auch
 
-[/ O-Optionen (Code optimieren)](../../build/reference/o-options-optimize-code.md)
+[/O-Optionen (Code optimieren)](../../build/reference/o-options-optimize-code.md)<br/>
 [Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
 [/Z7, /Zi, /ZI (Debuginformationsformat)](../../build/reference/z7-zi-zi-debug-information-format.md)

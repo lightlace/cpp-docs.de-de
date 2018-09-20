@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 876f2bde68c53a27c1c40e9206b6285b8562bd91
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d570eaf3872f5d281d769e77298f9186d35e5a26
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591138"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410428"
 ---
 # <a name="implementshelperfillarraywithiid-method"></a>ImplementsHelper::FillArrayWithIid-Methode
 
@@ -38,10 +38,10 @@ void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parameter
 
-*index*  
+*index*<br/>
 Ein nullbasierter Index, der das Startelement "Array" für diesen Vorgang angibt. Klicken Sie nach Abschluss dieses Vorgangs *Index* um 1 erhöht.
 
-*IIDs*  
+*IIDs*<br/>
 Ein Array vom Typ IIDs werden soll.
 
 ## <a name="remarks"></a>Hinweise
@@ -56,5 +56,5 @@ Fügt die Schnittstellen-ID, die durch den aktuellen nullten Vorlagenparameter a
 
 ## <a name="see-also"></a>Siehe auch
 
-[ImplementsHelper-Struktur](../windows/implementshelper-structure.md)  
+[ImplementsHelper-Struktur](../windows/implementshelper-structure.md)<br/>
 [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 54699888fc2988dd9b4ccec2a57b6d9df0d4e79e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 335b22b015bf244e39d67781eae21b3c43328256
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314772"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379787"
 ---
 # <a name="attribute"></a>Attribut
 
@@ -43,13 +43,13 @@ Ermöglicht Ihnen die Erstellung ein benutzerdefiniertes Attributs.
 
 ### <a name="parameters"></a>Parameter
 
-*AllowOn*  
+*AllowOn*<br/>
 Gibt die Language-Elemente, die auf denen das benutzerdefinierte Attribut angewendet werden kann. Der Standardwert ist `System::AttributeTargets::All` (finden Sie unter [System::AttributeTargets](https://msdn.microsoft.com/library/system.attributetargets.aspx)).
 
-*AllowMultiple*  
+*AllowMultiple*<br/>
 Gibt an, ob das benutzerdefinierte Attribut wiederholt für ein Konstrukt angewendet werden kann. Der Standardwert lautet FALSE.
 
-*Geerbt*  
+*Geerbt*<br/>
 Gibt an, ob das Attribut von Unterklassen geerbt werden. Der Compiler bietet keine spezielle Unterstützung für diese Funktion; Es ist die Aufgabe der Attribut-Consumer (`Reflection`, z. B.), die diese Informationen zu berücksichtigen. Wenn *geerbte* TRUE ist, wird das Attribut geerbt. Wenn *AllowMultiple* ist "true", das Attribut sammeln sich daher auf der abgeleitete Member; Wenn *AllowMultiple* ist "false", das Attribut wird außer Kraft setzen (oder ersetzen) bei der Vererbung. Wenn *geerbte* false festgelegt ist, wird das Attribut nicht geerbt werden. Der Standardwert ist TRUE.
 
 ## <a name="remarks"></a>Hinweise

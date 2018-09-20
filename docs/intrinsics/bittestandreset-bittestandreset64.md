@@ -21,91 +21,96 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84965abc66bf3aa58dce550dfb5e1b820fb25d12
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9f7924b396683e46df8f0fe55b02fb88bb522910
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715733"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397429"
 ---
 # <a name="bittestandreset-bittestandreset64"></a>_bittestandreset, _bittestandreset64
-**Microsoft-spezifisch**  
-  
- Erzeugen Sie die Anweisung, die Bit `b` der Adresse `a` untersucht, den aktuellen Wert zurückgibt und das Bit auf 0 zurücksetzt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-unsigned char _bittestandreset(  
-   long *a,  
-   long b  
-);  
-unsigned char _bittestandreset64(  
-   __int64 *a,  
-   __int64 b  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+
+**Microsoft-spezifisch**
+
+Erzeugen Sie die Anweisung, die Bit `b` der Adresse `a` untersucht, den aktuellen Wert zurückgibt und das Bit auf 0 zurücksetzt.
+
+## <a name="syntax"></a>Syntax
+
+```
+unsigned char _bittestandreset(
+   long *a,
+   long b
+);
+unsigned char _bittestandreset64(
+   __int64 *a,
+   __int64 b
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
 *a*<br/>
-[in, out] Ein Zeiger auf den zu untersuchenden Speicher.  
-  
+[in, out] Ein Zeiger auf den zu untersuchenden Speicher.
+
 *b*<br/>
-[in] Die zu testende Bitposition.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Das Bit an der angegebenen Position.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Systemintern|Architektur|  
-|---------------|------------------|  
-|`_bittestandreset`|X86, ARM, x64|  
-|`_bittestandreset64`|x64|  
-  
- **Headerdatei** \<intrin.h >  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Routine ist nur als systeminterne Funktion verfügbar.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// bittestandreset.cpp  
-// processor: x86, IPF, x64  
-#include <stdio.h>  
-#include <limits.h>  
-#include <intrin.h>  
-  
-#pragma intrinsic(_bittestandreset)  
-  
-// Check the sign bit and reset to 0 (taking the absolute value)  
-// Returns 0 if the number is positive or zero  
-// Returns 1 if the number is negative  
-unsigned char absolute_value(long* p)  
-{  
-   const int SIGN_BIT = 31;  
-   return _bittestandreset(p, SIGN_BIT);  
-}  
-  
-int main()  
-{  
-    long i = -112;  
-    unsigned char result;  
-  
-    // Check the sign bit and reset to 0 (taking the absolute value)  
-  
-    result = absolute_value(&i);  
-    if (result == 1)  
-        printf_s("The number was negative.\n");     
-}  
-```  
-  
-```Output  
-The number was negative.  
-```  
-  
-**Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[in] Die zu testende Bitposition.
+
+## <a name="return-value"></a>Rückgabewert
+
+Das Bit an der angegebenen Position.
+
+## <a name="requirements"></a>Anforderungen
+
+|Systemintern|Architektur|
+|---------------|------------------|
+|`_bittestandreset`|X86, ARM, x64|
+|`_bittestandreset64`|x64|
+
+**Headerdatei** \<intrin.h >
+
+## <a name="remarks"></a>Hinweise
+
+Diese Routine ist nur als systeminterne Funktion verfügbar.
+
+## <a name="example"></a>Beispiel
+
+```
+// bittestandreset.cpp
+// processor: x86, IPF, x64
+#include <stdio.h>
+#include <limits.h>
+#include <intrin.h>
+
+#pragma intrinsic(_bittestandreset)
+
+// Check the sign bit and reset to 0 (taking the absolute value)
+// Returns 0 if the number is positive or zero
+// Returns 1 if the number is negative
+unsigned char absolute_value(long* p)
+{
+   const int SIGN_BIT = 31;
+   return _bittestandreset(p, SIGN_BIT);
+}
+
+int main()
+{
+    long i = -112;
+    unsigned char result;
+
+    // Check the sign bit and reset to 0 (taking the absolute value)
+
+    result = absolute_value(&i);
+    if (result == 1)
+        printf_s("The number was negative.\n");
+}
+```
+
+```Output
+The number was negative.
+```
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

@@ -1,5 +1,5 @@
 ---
-title: CD2DBrushProperties-Klasse | Microsoft Docs
+title: CD2DBrushProperties-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,70 +20,77 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 897be7063385566f2fd0e717eba0f89b335c2c48
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 9c02c2b2e6b0c24ab4f12d0d6b9c04927b2cba8d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950412"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440549"
 ---
 # <a name="cd2dbrushproperties-class"></a>CD2DBrushProperties-Klasse
-Ein Wrapper für `D2D1_BRUSH_PROPERTIES`.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;  
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CD2DBrushProperties::CD2DBrushProperties](#cd2dbrushproperties)|Überladen. Erstellt eine `CD2D_BRUSH_PROPERTIES` Struktur|  
-  
-### <a name="protected-methods"></a>Geschützte Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CD2DBrushProperties::CommonInit](#commoninit)|Initialisiert das Objekt|  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `D2D1_BRUSH_PROPERTIES`  
-  
- `CD2DBrushProperties`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** afxrendertarget.h  
-  
-##  <a name="cd2dbrushproperties"></a>  CD2DBrushProperties::CD2DBrushProperties  
- Erstellt eine CD2D_BRUSH_PROPERTIES-Struktur  
-  
-```  
-CD2DBrushProperties();  
+
+Ein Wrapper für `D2D1_BRUSH_PROPERTIES`.
+
+## <a name="syntax"></a>Syntax
+
+```
+class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;
+```
+
+## <a name="members"></a>Member
+
+### <a name="public-constructors"></a>Öffentliche Konstruktoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CD2DBrushProperties::CD2DBrushProperties](#cd2dbrushproperties)|Überladen. Erstellt eine `CD2D_BRUSH_PROPERTIES` Struktur|
+
+### <a name="protected-methods"></a>Geschützte Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CD2DBrushProperties::CommonInit](#commoninit)|Initialisiert das Objekt|
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`D2D1_BRUSH_PROPERTIES`
+
+`CD2DBrushProperties`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** afxrendertarget.h
+
+##  <a name="cd2dbrushproperties"></a>  CD2DBrushProperties::CD2DBrushProperties
+
+Erstellt eine CD2D_BRUSH_PROPERTIES-Struktur
+
+```
+CD2DBrushProperties();
 CD2DBrushProperties(FLOAT _opacity);
 
- 
+
 CD2DBrushProperties(
-    D2D1_MATRIX_3X2_F _transform,  
+    D2D1_MATRIX_3X2_F _transform,
     FLOAT _opacity = 1.);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *_opacity*  
- Die Basis Deckkraft des Pinsels. Der Standardwert ist 1,0.  
-  
- *_transform*  
- Die Transformation, die auf den Pinsel angewendet  
-  
-##  <a name="commoninit"></a>  CD2DBrushProperties::CommonInit  
- Initialisiert das Objekt  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+*_opacity*<br/>
+Die Basis Durchlässigkeit des Pinsels. Der Standardwert ist 1,0.
+
+*_transform*<br/>
+Die Transformation, auf den Pinsel angewendet.
+
+##  <a name="commoninit"></a>  CD2DBrushProperties::CommonInit
+
+Initialisiert das Objekt
+
+```
 void CommonInit();
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassen](../../mfc/reference/mfc-classes.md)
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Klassen](../../mfc/reference/mfc-classes.md)

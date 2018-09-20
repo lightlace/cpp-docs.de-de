@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d89fef6c2ed3f8ff1a4211cdf8da59d8406e7031
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bde6909716b55298a515aac32580a24f26c823fc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715402"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406645"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -43,7 +43,7 @@ Bindet eine angegebene Spalte auf eine Variable im Rowset.
 
 #### <a name="parameters"></a>Parameter
 
-*Ordinal*  
+*Ordinal*<br/>
 Die Spaltenordnungszahl (`DBCOLUMNINFO` Ordnungszahl) oder einen Spaltennamen (ANSI oder Unicode-Zeichenfolge) für ein Feld in das Rowset, um Daten zu binden. Wenn Sie Zahlen verwenden, können Sie mit der überspringen aufeinander folgende Ordnungszahlen (z. B.: 1, 2, 3, 5). Der Name darf Leerzeichen enthalten, wenn der OLE DB-Anbieter, die, den Sie verwenden, dies unterstützt. Beispielsweise können Sie eine der folgenden Formate:
 
 ```cpp
@@ -51,19 +51,19 @@ Die Spaltenordnungszahl (`DBCOLUMNINFO` Ordnungszahl) oder einen Spaltennamen (A
 [db_column(L"city_name")] TCHAR szCity[30];
 ```
 
-*DbType*  
+*DbType*<br/>
 (Optional) OLE DB [Typindikator](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) für den Eintrag in der Spalte.
 
-*precision*  
+*precision*<br/>
 (Optional) Die Genauigkeit für den Eintrag in der Spalte verwendet werden soll. Weitere Informationen finden Sie unter der Beschreibung des der `bPrecision` Element der [DBBINDING-Struktur](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*Skalieren*  
+*Skalieren*<br/>
 (Optional) Die Dezimalstellen für den Eintrag in der Spalte verwendet werden soll. Weitere Informationen finden Sie unter der Beschreibung der `bScale` Element der [DBBINDING-Struktur](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*status*  
+*status*<br/>
 (Optional) Eine Membervariable verwendet, um den Status dieser Spalte zu speichern. Der Status gibt an, ob der Wert der Spalte einen Datenwert oder einen anderen Wert, z. B. die NULL ist. Mögliche Werte finden Sie unter [Status](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.
 
-*length*  
+*length*<br/>
 (Optional) Eine Membervariable verwendet, um die Größe der Spalte in Bytes zu speichern.
 
 ## <a name="remarks"></a>Hinweise
@@ -131,5 +131,5 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 
 ## <a name="see-also"></a>Siehe auch
 
-[OLE DB-Consumerattribute](../windows/ole-db-consumer-attributes.md)  
+[OLE DB-Consumerattribute](../windows/ole-db-consumer-attributes.md)<br/>
 [Klassenattribute](../windows/class-attributes.md)  

@@ -1,5 +1,5 @@
 ---
-title: 'WM_-Meldungshandler: A - C | Microsoft Docs'
+title: 'WM_-Meldungshandler: A - C | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -45,38 +45,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2605fe06ec6fc9d206047b09c82c178a8fca1ea6
-ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
+ms.openlocfilehash: 7628c21c899ac08de6dd3fbe4349559755b746cf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271271"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441212"
 ---
 # <a name="wm-message-handlers-a---c"></a>WM_-Meldungshandler: A - C
-Die folgenden Zuordnungseinträge auf der linken Seite entsprechen auf der rechten Seite der Funktionsprototypen:  
-  
-|Eintrag für die Zuordnung|Funktionsprototyp|  
-|---------------|------------------------|  
-|ON_WM_ACTIVATE()|Afx_msg "void" [OnActivate](../../mfc/reference/cwnd-class.md#onactivate)("uint", CWnd\*, BOOL);|  
-|ON_WM_ACTIVATEAPP()|Afx_msg "void" [OnActivateApp](../../mfc/reference/cwnd-class.md#onactivateapp)(BOOL, DWORD);|  
-|ON_WM_APPCOMMAND()|Afx_msg "void" [OnAppCommand](../../mfc/reference/cwnd-class.md#onappcommand)(CWnd\*, "uint", "uint", "uint");|  
-|ON_WM_ASKCBFORMATNAME()|Afx_msg "void" [OnAskCbFormatName](../../mfc/reference/cwnd-class.md#onaskcbformatname)("uint", LPSTR);|  
-|ON_WM_CANCELMODE()|Afx_msg "void" [OnCancelMode](../../mfc/reference/cwnd-class.md#oncancelmode)(;)|  
-|ON_WM_CAPTURECHANGED()|Afx_msg "void" [OnCaptureChanged](../../mfc/reference/cwnd-class.md#oncapturechanged)(CWnd\*);|  
-|ON_WM_CHANGECBCHAIN()|Afx_msg "void" [OnChangeCbChain](../../mfc/reference/cwnd-class.md#onchangecbchain)(HWND, HWND);|  
-|ON_WM_CHAR()|Afx_msg "void" [OnChar](../../mfc/reference/cwnd-class.md#onchar)("uint", "uint", "uint");|  
-|ON_WM_CHARTOITEM()|Afx_msg Int [OnCharToItem](../../mfc/reference/cwnd-class.md#onchartoitem)("uint", CWnd\*, "uint");|  
-|ON_WM_CHILDACTIVATE()|Afx_msg "void" [OnChildActivate](../../mfc/reference/cwnd-class.md#onchildactivate)(;)|  
-|ON_WM_CLIPBOARDUPDATE()|Afx_msg "void" [OnClipboardUpdate](../../mfc/reference/cwnd-class.md#onclipboardupdate)(;)|  
-|ON_WM_CLOSE()|Afx_msg "void" [OnClose](../../mfc/reference/cwnd-class.md#onclose)(;)|  
-|ON_WM_COMPACTING()|Afx_msg "void" [OnCompacting](../../mfc/reference/cwnd-class.md#oncompacting)("uint");|  
-|ON_WM_COMPAREITEM()|Afx_msg Int [OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem)(LPCOMPAREITEMSTRUCT);|  
-|ON_WM_CONTEXTMENU()|Afx_msg "void" [OnContextMenu](../../mfc/reference/cwnd-class.md#oncontextmenu)(CWnd\*, CPoint);|  
-|ON_WM_COPYDATA()|Afx_msg BOOL [OnCopyData](../../mfc/reference/cwnd-class.md#oncopydata)(CWnd\* pWnd COPYDATASTRUCT\* pCopyDataStruct);|  
-|ON_WM_CREATE()|Afx_msg Int [OnCreate](../../mfc/reference/cwnd-class.md#oncreate)(LPCREATESTRUCT);|  
-|ON_WM_CTLCOLOR()|Afx_msg HBRUSH [OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor)(CDC\*, CWnd\*, "uint");|  
-  
-## <a name="see-also"></a>Siehe auch  
- [Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)   
- [Handler für WM_-Meldungen](../../mfc/reference/handlers-for-wm-messages.md)
+
+Die folgenden Einträge der Karte auf der linken Seite entsprechen die Funktionsprototypen auf der rechten Seite:
+
+|Zuordnungseintrag|Funktionsprototyp|
+|---------------|------------------------|
+|ON_WM_ACTIVATE()|die "void" Afx_msg [OnActivate](../../mfc/reference/cwnd-class.md#onactivate)(UINT, CWnd\*, "bool");|
+|ON_WM_ACTIVATEAPP()|die "void" Afx_msg [OnActivateApp](../../mfc/reference/cwnd-class.md#onactivateapp)("bool", DWORD;)|
+|ON_WM_APPCOMMAND()|die "void" Afx_msg [OnAppCommand](../../mfc/reference/cwnd-class.md#onappcommand)(CWnd\*, "uint", "uint", "uint");|
+|ON_WM_ASKCBFORMATNAME()|die "void" Afx_msg [OnAskCbFormatName](../../mfc/reference/cwnd-class.md#onaskcbformatname)(UINT, LPSTR);|
+|ON_WM_CANCELMODE()|die "void" Afx_msg [OnCancelMode](../../mfc/reference/cwnd-class.md#oncancelmode)();|
+|ON_WM_CAPTURECHANGED()|die "void" Afx_msg [OnCaptureChanged](../../mfc/reference/cwnd-class.md#oncapturechanged)(CWnd\*);|
+|ON_WM_CHANGECBCHAIN()|die "void" Afx_msg [OnChangeCbChain](../../mfc/reference/cwnd-class.md#onchangecbchain)(HWND, HWND);|
+|ON_WM_CHAR()|die "void" Afx_msg [OnChar](../../mfc/reference/cwnd-class.md#onchar)("uint", "uint", "uint");|
+|ON_WM_CHARTOITEM()|Afx_msg Int [OnCharToItem](../../mfc/reference/cwnd-class.md#onchartoitem)(UINT, CWnd\*, "uint");|
+|ON_WM_CHILDACTIVATE()|die "void" Afx_msg [OnChildActivate](../../mfc/reference/cwnd-class.md#onchildactivate)();|
+|ON_WM_CLIPBOARDUPDATE()|die "void" Afx_msg [OnClipboardUpdate](../../mfc/reference/cwnd-class.md#onclipboardupdate)();|
+|ON_WM_CLOSE()|die "void" Afx_msg [OnClose](../../mfc/reference/cwnd-class.md#onclose)();|
+|ON_WM_COMPACTING()|die "void" Afx_msg [OnCompacting](../../mfc/reference/cwnd-class.md#oncompacting)(UINT);|
+|ON_WM_COMPAREITEM()|Afx_msg Int [OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem)(LPCOMPAREITEMSTRUCT);|
+|ON_WM_CONTEXTMENU()|die "void" Afx_msg [OnContextMenu](../../mfc/reference/cwnd-class.md#oncontextmenu)(CWnd\*, CPoint);|
+|ON_WM_COPYDATA()|Afx_msg "bool" [OnCopyData](../../mfc/reference/cwnd-class.md#oncopydata)(CWnd\* aufnehmen, COPYDATASTRUCT\* pCopyDataStruct);|
+|ON_WM_CREATE()|Afx_msg Int [OnCreate](../../mfc/reference/cwnd-class.md#oncreate)(LPCREATESTRUCT);|
+|ON_WM_CTLCOLOR()|Afx_msg HBRUSH [OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor)(CDC\*, CWnd\*, "uint");|
+
+## <a name="see-also"></a>Siehe auch
+
+[Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)<br/>
+[Handler für WM_-Meldungen](../../mfc/reference/handlers-for-wm-messages.md)
 

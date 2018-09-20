@@ -1,5 +1,5 @@
 ---
-title: Drag & Drop (OLE) | Microsoft Docs
+title: Drag & Drop (OLE) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,35 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc23c7695bf5afa22734c382ddc72e8418ff74c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 498644a159c6472ed197fcadd28ad0236d62ca0b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344332"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389641"
 ---
 # <a name="drag-and-drop-ole"></a>Drag & Drop (OLE)
-Die Drag-and-Drop-Funktion von OLE ist in erster Linie eine Verknüpfung zum Kopieren und Einfügen von Daten. Wenn Sie die Zwischenablage kopieren oder Einfügen von Daten verwenden, sind eine Reihe von Schritten erforderlich. Wählen Sie die Daten, klicken Sie auf **Ausschneiden** oder **Kopie** aus der **bearbeiten** Menü, wechseln Sie zu der Zieldatei, die im Fenster oder die Anwendung, platzieren Sie den Cursor in den gewünschten Speicherort ein, und klicken Sie auf **Einfügen** aus der **bearbeiten** Menü.  
-  
- OLE- Drag & Drop unterscheidet sich von den Manager für Dateiserver Drag-and-Drop-Mechanismus, der Dateinamen nur behandeln und wurde speziell für Dateinamen an Anwendungen übergeben. OLE-Drag und Drop ist weitaus Allgemein. Sie können Drag & drop-alle Daten, die auch in der Zwischenablage platziert werden konnte.  
-  
- Bei Verwendung von OLE- Drag & Drop entfernen Sie zwei Schritte des Prozesses an. Sie wählen Sie die Daten aus dem Quellcodefenster angezeigt (die "Ablagequelle"), ziehen Sie es an das gewünschte Ziel ("Drop Target") und löschen Sie es, indem Sie die Maustaste loslassen. Der Vorgang entfällt die Notwendigkeit für Menüs und ist schneller, als die Sequenz kopieren/einfügen. Die einzige Voraussetzung ist, dass die Drop-Quelle und die Drop-Ziel öffnen und zumindest teilweise auf dem Bildschirm sichtbar sein müssen.  
-  
- Verwenden OLE- Drag & Drop, können Daten von einem Speicherort zu einem anderen in einem Dokument, zwischen verschiedenen Dokumenten oder Anwendungen übertragen werden. In einem Container oder einer Server-Anwendung implementiert werden kann, und jede Anwendung kann eine Drop-Quelle, Drop-Ziel oder beides sein. Wenn eine Anwendung Drop-Quelle und Drop-Ziel unterstützt, ist Drag & Drop aktiviert zwischen untergeordneten Fenstern oder innerhalb eines Fensters. Diese Funktion kann die Anwendung wesentlich leichter machen.  
-  
- Wenn Sie nur die Drag-and-Drop-Funktionen von OLE verwenden möchten, finden Sie unter [Drag & Drop: Anpassen von](../mfc/drag-and-drop-customizing.md). Die Verfahren in diesem Artikel erläutert können Sie nicht-OLE-Anwendungen, die Quellen löschen machen. Der Artikel [Drag & Drop: Implementieren eines Drop-Ziels](../mfc/drag-and-drop-implementing-a-drop-target.md) beschreibt das Ablageziel Unterstützung für OLE und nicht-OLE-Anwendungen zu implementieren. Es ist auch hilfreich sein, überprüfen Sie die MFC-OLE-Beispiele [OCLIENT](../visual-cpp-samples.md) und [HIERSVR](../visual-cpp-samples.md).  
-  
- Wenn Sie nicht gelesen haben die [Datenobjekte und Datenquellen (OLE)](../mfc/data-objects-and-data-sources-ole.md) Artikelreihe, Sie sollten, dies jetzt nachzuholen. Dieser Artikel erläutert die Grundlagen der Datenübertragung und wie Sie es in Ihren Anwendungen implementieren.  
-  
- Weitere Informationen über Drag & Drop finden Sie unter:  
-  
--   [Drag &Drop: Implementieren einer Drag & Drop-Quelle](../mfc/drag-and-drop-implementing-a-drop-source.md)  
-  
--   [Drag & Drop: Implementieren eines Drag & Drop-Ziels](../mfc/drag-and-drop-implementing-a-drop-target.md)  
-  
--   [Drag & Drop: Anpassen](../mfc/drag-and-drop-customizing.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [OLE](../mfc/ole-in-mfc.md)   
- [Datenobjekte und Datenquellen (OLE)](../mfc/data-objects-and-data-sources-ole.md)
+
+Die Drag & Drop-Funktion von OLE ist in erster Linie eine Verknüpfung zum Kopieren und Einfügen von Daten. Wenn Sie die Zwischenablage kopieren oder Einfügen von Daten verwenden, sind eine Reihe von Schritten erforderlich. Sie wählen Sie die Daten, klicken Sie auf **Ausschneiden** oder **Kopie** aus der **bearbeiten** Menü verschieben in die Zieldatei, Fenster oder einer Anwendung, platzieren Sie den Cursor in den gewünschten Speicherort ein, und klicken Sie auf **Einfügen** aus der **bearbeiten** Menü.
+
+OLE- Drag & Drop unterscheidet sich von dem Manager für Dateiserver-Drag & Drop-Mechanismus, der Dateinamen kann nur behandeln und dient speziell zum Dateinamen an Anwendungen übergeben. OLE- Drag & Drop ist wesentlich allgemeineren. Sie können Drag & drop-Daten, die auch in der Zwischenablage platziert werden konnte.
+
+Bei Verwendung von OLE- Drag & Drop entfernt aus der Prozess zwei Schritte. Wählen Sie die Daten aus den Datenquellen-Fenster ("die Quelle"), ziehen Sie es auf das gewünschte Ziel (die "Drop Target"), und löschen sie die Maustaste loslassen. Der Vorgang entfällt die Notwendigkeit für Menüs und ist schneller als die Sequenz, kopieren und einfügen. Die einzige Voraussetzung ist, dass sowohl die Ziehquelle als auch das Ablageziel geöffnet und zumindest teilweise auf dem Bildschirm sichtbar sein müssen.
+
+Verwenden OLE- Drag & Drop, können Daten von einem Speicherort zu einem anderen in einem Dokument, das zwischen verschiedenen Dokumenten oder zwischen Anwendungen übertragen werden. In einem Container oder einer Server-Anwendung implementiert werden kann, und jede Anwendung kann eine Drop-Quelle, Ziel eines Ablegevorgangs oder beides sein. Wenn eine Anwendung sowohl die Drop-Quelle als auch die Drop-Ziel unterstützt ist, ist Drag & Drop aktiviert zwischen untergeordneten Fenster oder in einem Fenster. Diese Funktion möglich Ihre Anwendung viel einfacher zu verwenden.
+
+Wenn Sie nur die Drag & Drop-Funktionen von OLE verwenden möchten, finden Sie unter [Drag & Drop: Anpassen von](../mfc/drag-and-drop-customizing.md). In diesem Artikel erläuterten Techniken können zu nicht-OLE-Anwendungen, die Quellen zu löschen. Der Artikel [Drag & Drop: Implementieren eines Drop-Ziels](../mfc/drag-and-drop-implementing-a-drop-target.md) beschreibt, wie Sie die Drop-Ziel-Unterstützung für OLE und nicht-OLE-Anwendungen zu implementieren. Es ist auch hilfreich sein, überprüfen Sie die MFC-OLE-Beispiele [OCLIENT](../visual-cpp-samples.md) und [HIERSVR](../visual-cpp-samples.md).
+
+Wenn Sie nicht gelesen haben die [Datenobjekte und Datenquellen (OLE)](../mfc/data-objects-and-data-sources-ole.md) Artikelreihe, Sie möchten dies jetzt nachzuholen. In diesen Artikeln wird erläutert, die Grundlagen von Datenübertragung und wie Sie es in Ihren Anwendungen implementieren.
+
+Weitere Informationen zu Drag & Drop finden Sie unter:
+
+- [Drag &Drop: Implementieren einer Drag & Drop-Quelle](../mfc/drag-and-drop-implementing-a-drop-source.md)
+
+- [Drag & Drop: Implementieren eines Drag & Drop-Ziels](../mfc/drag-and-drop-implementing-a-drop-target.md)
+
+- [Drag & Drop: Anpassen](../mfc/drag-and-drop-customizing.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[OLE](../mfc/ole-in-mfc.md)<br/>
+[Datenobjekte und Datenquellen (OLE)](../mfc/data-objects-and-data-sources-ole.md)
 

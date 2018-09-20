@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c8924f7b22ed86adf7721018c4df3094a2069c1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4798cf5c283fc4a663da0e1af7110df63496a6c9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200694"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408244"
 ---
 # <a name="viprogid"></a>vi_progid
 
@@ -38,7 +38,7 @@ Gibt eine Art versionsunabhängige Programm-ID an.
 
 ### <a name="parameters"></a>Parameter
 
-*name*  
+*name*<br/>
 Die versionsunabhängigen-ProgID, die das Objekt darstellt.
 
 Versionsabhängige Programm-IDs präsentieren eine lesbaren Version von den Klassenbezeichner (CLSID) verwendet, um COM/ActiveX-Objekte zu identifizieren.
@@ -72,7 +72,7 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 
 ## <a name="see-also"></a>Siehe auch
 
-[IDL-Attribute](../windows/idl-attributes.md)  
-[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Klassenattribute](../windows/class-attributes.md)  
+[IDL-Attribute](../windows/idl-attributes.md)<br/>
+[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[Klassenattribute](../windows/class-attributes.md)<br/>
 [Programm-ID-Schlüssel](/windows/desktop/com/-progid--key)  

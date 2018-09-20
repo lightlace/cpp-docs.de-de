@@ -16,35 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 845ad544b83f3f73c31eebd00218945c6028a622
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 010e5f58f1d72a33cbab44438f085b52e8fe4be8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45534975"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387769"
 ---
 # <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>ActiveX-Steuerelementcontainer: Manuelles Aktivieren von ActiveX-Steuerelementcontainern
+
 Wenn Sie ActiveX-Steuerelemente unterstützen, wenn Sie den Assistenten zum MFC-Anwendungen verwendet, um generiert Ihre Anwendung nicht aktiviert haben, müssen Sie diese Unterstützung manuell hinzufügen. Dieser Artikel beschreibt den Prozess zum manuellen Hinzufügen von ActiveX-Steuerelementcontainern zu einer vorhandenen OLE-Container-Anwendung. Wenn Sie im Voraus wissen, dass Sie in der OLE-Container ActiveX-Steuerelemente unterstützen möchten, finden Sie im Artikel [Erstellen eines MFC-ActiveX-Steuerelementcontainers](../mfc/reference/creating-an-mfc-activex-control-container.md).
 
 >[!IMPORTANT]
-> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).  
-  
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
+
 > [!NOTE]
->  Diesem Artikel wird ein Dialogfeld-basierte ActiveX-Steuerelementcontainer-Projekt namens "Container" und ein eingebettetes Steuerelement mit dem Namen Circ als Beispiele in den Prozeduren und den Code.  
-  
- Um ActiveX-Steuerelemente zu unterstützen, müssen Sie eine Codezeile erforderlich, zwei der Dateien des Projekts hinzufügen.  
-  
--   Ändern des Hauptdialogfelds `InitInstance` -Funktion (wurde im CONTAINER gefunden. CPP) vom MFC-Anwendungs-Assistenten einem Aufruf an [AfxEnableControlContainer](reference/ole-initialization.md#afxenablecontrolcontainer), wie im folgenden Beispiel:  
-  
-     [!code-cpp[NVC_MFCOleContainer#34](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_1.cpp)]  
-    [!code-cpp[NVC_MFCOleContainer#35](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_2.cpp)]  
-  
--   Fügen Sie Folgendes, um Ihres Projekts STDAFX. H-Headerdatei:  
-  
-     [!code-cpp[NVC_MFCOleContainer#36](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_3.h)]  
-  
- Erstellen Sie Ihr Projekt, nachdem Sie diese Schritte abgeschlossen haben, neu, indem Sie auf **erstellen** auf die **erstellen** Menü.  
-  
-## <a name="see-also"></a>Siehe auch  
- [ActiveX-Steuerelementcontainer](../mfc/activex-control-containers.md)
+>  Diesem Artikel wird ein Dialogfeld-basierte ActiveX-Steuerelementcontainer-Projekt namens "Container" und ein eingebettetes Steuerelement mit dem Namen Circ als Beispiele in den Prozeduren und den Code.
+
+Um ActiveX-Steuerelemente zu unterstützen, müssen Sie eine Codezeile erforderlich, zwei der Dateien des Projekts hinzufügen.
+
+- Ändern des Hauptdialogfelds `InitInstance` -Funktion (wurde im CONTAINER gefunden. CPP) vom MFC-Anwendungs-Assistenten einem Aufruf an [AfxEnableControlContainer](reference/ole-initialization.md#afxenablecontrolcontainer), wie im folgenden Beispiel:
+
+     [!code-cpp[NVC_MFCOleContainer#34](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_1.cpp)]
+    [!code-cpp[NVC_MFCOleContainer#35](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_2.cpp)]
+
+- Fügen Sie Folgendes, um Ihres Projekts STDAFX. H-Headerdatei:
+
+     [!code-cpp[NVC_MFCOleContainer#36](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_3.h)]
+
+Erstellen Sie Ihr Projekt, nachdem Sie diese Schritte abgeschlossen haben, neu, indem Sie auf **erstellen** auf die **erstellen** Menü.
+
+## <a name="see-also"></a>Siehe auch
+
+[ActiveX-Steuerelementcontainer](../mfc/activex-control-containers.md)
 

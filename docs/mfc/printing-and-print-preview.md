@@ -1,5 +1,5 @@
 ---
-title: Drucken und Druckvorschau | Microsoft Docs
+title: Drucken und Druckvorschau | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a26bac196dbddc6c05df5850225d05f432bc566
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9aad5c69f6466ea8803cb466c5e5529f3dce1340
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346255"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374450"
 ---
 # <a name="printing-and-print-preview"></a>Drucken und Druckvorschau
-MFC unterstützt drucken und Druckvorschau für das Programm Dokumente über die Klasse [CView](../mfc/reference/cview-class.md). Für grundlegende drucken und Druckvorschau, überschreiben Sie einfach Ihrer Ansichtsklasse [OnDraw](../mfc/reference/cview-class.md#ondraw) Memberfunktion, wozu Sie dennoch verwenden müssen. Diese Funktion kann auf die Ansicht auf dem Bildschirm zu einem Drucker-Gerätekontext für einen Drucker, zeichnen, oder für einen Gerätekontext simuliert, die Ihre Drucker auf dem Bildschirm.  
-  
- Sie können auch Code zum Drucken von mehrseitigen Dokumenten und Vorschau, um die gedruckte Dokumente zu paginieren und Kopf- und Fußzeilen hinzugefügt werden verwalten hinzufügen.  
-  
- Diese Artikelreihe wird erläutert, wie das Drucken in der Microsoft Foundation Class-Bibliothek (MFC) implementiert wird und die Drucken Architektur, die bereits in das Framework integriert nutzen. Der Artikel wird auch erläutert, wie MFC für einfache Implementierung von Seitenansichtsfunktionen unterstützt und wie Sie verwenden können, und ändern diese Funktion.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
-  
--   [Drucken](../mfc/printing.md)  
-  
--   [Druckvorschauarchitektur](../mfc/print-preview-architecture.md)  
-  
--   [Beispiel](../visual-cpp-samples.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Benutzeroberflächenelemente](../mfc/user-interface-elements-mfc.md)
+
+MFC unterstützt drucken und Druckvorschau für Ihres Programms Dokumente über eine Klasse [CView](../mfc/reference/cview-class.md). Zum einfachen Drucken und Druckvorschau, einfach zu Ihrer Ansichtsklasse überschreiben [OnDraw](../mfc/reference/cview-class.md#ondraw) Memberfunktion, die Sie trotzdem ausführen müssen. Diese Funktion kann an die Ansicht auf dem Bildschirm für einen Drucker-Gerätekontext für einen Drucker, gezeichnet oder für einen Gerätekontext, die Ihr Drucker auf dem Bildschirm simuliert.
+
+Sie können auch Code zum Drucken von mehrseitige Dokumenten und für Ihre gedruckte Dokumente die Paginierung und Hinzufügen von Kopf- und Fußzeilen auf diese Vorschau verwalten hinzufügen.
+
+In dieser Artikelreihe wird erläutert, wie das Drucken in der Microsoft Foundation Class-Bibliothek (MFC) implementiert wird und zum Nutzen der Druckarchitektur, die bereits in das Framework integriert. Die Artikel wird auch erläutert, wie die einfache Implementierung von Seitenansichtsfunktionen in MFC unterstützt und wie Sie verwenden können, und ändern diese Funktion.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+
+- [Drucken](../mfc/printing.md)
+
+- [Druckvorschauarchitektur](../mfc/print-preview-architecture.md)
+
+- [Beispiel](../visual-cpp-samples.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Elemente der Benutzeroberfläche](../mfc/user-interface-elements-mfc.md)

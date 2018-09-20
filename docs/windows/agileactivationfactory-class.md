@@ -15,14 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3245c761ab998ff55ebe1c616542df79f937e9d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2d6b2ff0b9b23e8e3a540cf7bbcd6ae55ebab13d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604543"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435375"
 ---
 # <a name="agileactivationfactory-class"></a>AgileActivationFactory-Klasse
+
 Stellt eine geeignete Apartment aktivierungsfactory, die implementiert [FtmBase](../windows/ftmbase-class.md).
   
 ## <a name="syntax"></a>Syntax
@@ -38,10 +39,12 @@ class AgileActivationFactory :
 ```
   
 ## <a name="requirements"></a>Anforderungen
- **Header:** module.h
+
+**Header:** module.h
   
- **Namespace:** Microsoft::WRL
+**Namespace:** Microsoft::WRL
   
 ## <a name="see-also"></a>Siehe auch
- [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)  
- [ActivationFactory-Klasse](../windows/activationfactory-class.md)
+
+[Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)<br/>
+[ActivationFactory-Klasse](../windows/activationfactory-class.md)

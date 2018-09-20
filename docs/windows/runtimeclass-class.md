@@ -39,12 +39,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3bc016367495be8cc10c09605e8018811bde5ca9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5dfe6622edcd8446b844b5d3d7c03d1fd5d0197c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118907"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379410"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass-Klasse
 
@@ -61,10 +61,10 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 
 ### <a name="parameters"></a>Parameter
 
-*classFlags*  
+*classFlags*<br/>
 Optionale Parameter. Eine Kombination aus einem oder mehreren [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) -Enumerationswerte fest. Die `__WRL_CONFIGURATION_LEGACY__` Makro definiert werden kann, um den Standardwert ClassFlags für alle Common Language Runtime-Klassen im Projekt zu ändern. Wenn definiert, sind RuntimeClass-Instanzen standardmäßig nicht agile. Wenn Sie nicht definiert ist, sind RuntimeClass-Instanzen standardmäßig agile. Um zu vermeiden Mehrdeutigkeit Geben Sie immer die `Microsoft::WRL::FtmBase` in `TInterfaces` oder `RuntimeClassType::InhibitFtmBase`. Beachten Sie, wenn InhibitFtmBase und FtmBase sind, dass sowohl das Objekt verwendet, werden als agile.
 
-*TInterfaces*  
+*TInterfaces*<br/>
 Die Liste der Schnittstellen das Objekt implementiert, über `IUnknown`, `IInspectable` oder anderen Schnittstellen gesteuert durch [RuntimeClassType](../windows/runtimeclasstype-enumeration.md). Kann auch andere Klassen von, abgeleitet werden, insbesondere auflisten `Microsoft::WRL::FtmBase` agil machen, das Objekt, und dazu führen, dass implementieren `IMarshal`.
 
 ## <a name="members"></a>Member
@@ -152,10 +152,10 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parameter
 
-*iidCount*  
+*iidCount*<br/>
 Wenn dieser Vorgang abgeschlossen ist, die Gesamtzahl der Elemente im Array *Iids*.
 
-*IIDs*  
+*IIDs*<br/>
 Wenn dieser Vorgang abgeschlossen ist, einen Zeiger auf ein Array von Schnittstellen-IDs.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -174,7 +174,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 ### <a name="parameters"></a>Parameter
 
-*runtimeName*  
+*runtimeName*<br/>
 Wenn dieser Vorgang abgeschlossen ist, den Namen der Common Language Runtime-Klasse.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -197,7 +197,7 @@ STDMETHOD(GetTrustLevel)(
 
 ### <a name="parameters"></a>Parameter
 
-*trustLvl*  
+*trustLvl*<br/>
 Wenn dieser Vorgang abgeschlossen ist, die Vertrauensebene des aktuellen `RuntimeClass` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -220,7 +220,7 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parameter
 
-*weakReference*  
+*weakReference*<br/>
 Wenn dieser Vorgang abgeschlossen ist, einen Zeiger auf einen schwachen Verweis-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -253,10 +253,10 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parameter
 
-*riid*  
+*riid*<br/>
 Eine Schnittstellen-ID.
 
-*ppvObject*  
+*ppvObject*<br/>
 Wenn diese Opereation abgeschlossen ist, einen Zeiger auf die angegebene Schnittstelle die *Riid* Parameter.
 
 ### <a name="return-value"></a>Rückgabewert

@@ -1,5 +1,5 @@
 ---
-title: Erstellen neuer Dokumente, Fenster und Ansichten | Microsoft Docs
+title: Erstellen neuer Dokumente, Windows und Ansichten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,37 +34,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c0abc53e1a24d822605c9e5bfd7ab8276b32f82
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 0b4ccddbed0d347468331218614cad70cfd49a62
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931205"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427237"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Erstellen neuer Dokumente, Fenster und Ansichten
-Die folgenden Abbildungen erhalten einen Überblick der Erstellungsvorgang für Dokumente, Ansichten und Rahmenfenster. Anderen Artikeln, die für die beteiligten Objekte zu konzentrieren. angeben Weitere Details.  
-  
- Nach Abschluss dieses Vorgangs wird die kooperierender Objekte vorhanden sind, und Speichern von Zeigern miteinander. Die folgenden Abbildungen zeigen die Reihenfolge, in der Objekte erstellt werden. Sie können die Sequenz von Abbildung zu Abbildung entsprechen.  
-  
- ![Sequenz für die Erstellung eines Dokuments](../mfc/media/vc387l1.gif "vc387l1")  
-Reihenfolge beim Erstellen eines Dokuments  
-  
- ![Frame-Fenster bei der Fenstererstellung](../mfc/media/vc387l2.png "vc387l2")  
-Reihenfolge beim Erstellen eines Rahmenfensters  
-  
- ![Sequenz für die Erstellung einer Sicht](../mfc/media/vc387l3.gif "vc387l3")  
-Reihenfolge beim Erstellen einer Ansicht  
-  
- Informationen dazu, wie das Framework die neues Dokument, Ansicht und Rahmenfensterobjekt initialisiert, finden Sie in den Klassen [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), und [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) in der Verweis auf die MFC-Bibliothek. Siehe auch [technischen Hinweis 22](../mfc/tn022-standard-commands-implementation.md), dort die Erstellung und Initialisierung Prozesse weiter, unter dessen Erläuterung von Standardbefehlen, das Framework für die **neu** und **Öffnen** Elemente auf der **Datei** Menü.  
-  
-##  <a name="_core_initializing_your_own_additions_to_these_classes"></a> Initialisieren Ihre eigenen Ergänzungen für diese Klassen  
- Die vorhergehenden Abbildungen empfehlen auch die Punkte, an denen Sie, Memberfunktionen überschreiben können, um Ihre Anwendung Objekte zu initialisieren. Eine Überschreibung der `OnInitialUpdate` in Ihrer Ansicht Klasse ist die beste Stelle, um die Ansicht zu initialisieren. Die `OnInitialUpdate` Aufruf erfolgt sofort, nachdem das Rahmenfenster erstellt wird und die Ansicht im Rahmenfenster an sein Dokument angefügt ist. Angenommen, Ihre Ansicht einer Bildlaufleiste ist (abgeleitet `CScrollView` anstelle `CView`), sollten Sie die Größe der Ansicht basierend auf die Dokumentgröße in Festlegen Ihrer `OnInitialUpdate` außer Kraft setzen. (Dieser Prozess wird in der Beschreibung der Klasse beschrieben [CScrollView](../mfc/reference/cscrollview-class.md).) Sie können außer Kraft setzen die `CDocument` Memberfunktionen `OnNewDocument` und `OnOpenDocument` anwendungsspezifische Initialisierung des Dokuments angeben. In der Regel müssen Sie beide überschreiben, da ein Dokument auf zwei Arten erstellt werden kann.  
-  
- In den meisten Fällen sollten Ihre Überschreibung die Basisklassenversion aufrufen. Weitere Informationen finden Sie unter den benannten Memberfunktionen von Klassen [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), und [CWinApp](../mfc/reference/cwinapp-class.md) in MFC Bibliotheksverweis.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Dokumentvorlagen und der Erstellungsvorgang für die Dokument-/Ansichtarchitektur](../mfc/document-templates-and-the-document-view-creation-process.md)   
- [Erstellen von Dokumentvorlagen](../mfc/document-template-creation.md)   
- [Erstellen von Dokument/Ansicht](../mfc/document-view-creation.md)   
- [Beziehungen zwischen MFC-Objekten](../mfc/relationships-among-mfc-objects.md)
+
+Die folgenden Abbildungen geben einen Überblick über der Erstellungsvorgang für Dokumente, Ansichten und Rahmenfenster. Weitere Artikel, die sich auf die beteiligten Objekte konzentrieren bieten weitere Details.
+
+Nach Abschluss dieses Prozesses die kooperierender Objekte vorhanden, und Speichern von Zeigern miteinander. Die folgenden Abbildungen zeigen die Sequenz, in der Objekte erstellt werden. Sie können die Sequenz von Abbildung zu Abbildung folgen.
+
+![Sequenz für die Erstellung eines Dokuments](../mfc/media/vc387l1.gif "vc387l1") Reihenfolge beim Erstellen eines Dokuments
+
+![Frame-Fenster bei der Fenstererstellung](../mfc/media/vc387l2.png "vc387l2") Reihenfolge beim Erstellen eines Rahmenfensters
+
+![Sequenz zum Erstellen einer Ansicht](../mfc/media/vc387l3.gif "vc387l3") Reihenfolge beim Erstellen einer Ansicht
+
+Informationen wie das Framework für das neue Dokument, Ansicht und Rahmenfenster Objekte initialisiert werden, finden Sie unter Klassen [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), und [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) in der MFC-Bibliothek-Referenz. Siehe auch [technischen Hinweis 22](../mfc/tn022-standard-commands-implementation.md), dem erläutert wird, die Erstellung und Initialisierung Prozesse weiter unter der Erläuterung der des Frameworks-Standardbefehle für die **neu** und **Öffnen** Elemente auf der **Datei** Menü.
+
+##  <a name="_core_initializing_your_own_additions_to_these_classes"></a> Initialisieren Ihre eigenen Ergänzungen auf diese Klassen
+
+Die vorhergehenden Abbildungen empfiehlt es sich auch um die Punkte, an denen Sie die Memberfunktionen zum Initialisieren von Objekten der Anwendung überschreiben können. Eine Überschreibung der `OnInitialUpdate` in der Ansicht-Klasse ist der beste Ort für die Ansicht zu initialisieren. Die `OnInitialUpdate` Aufruf erfolgt, sobald das Rahmenfenster erstellt wird und die Ansicht im Rahmenfenster sein Dokument angefügt ist. Wenn Ihrer Ansicht einen Bildlauf ist z. B. (abgeleitet `CScrollView` statt `CView`), sollten Sie festlegen, die Größe der Ansicht basierend auf der Größe des Dokuments in Ihre `OnInitialUpdate` außer Kraft setzen. (Dieser Prozess wird beschrieben, in der Beschreibung der Klasse [CScrollView](../mfc/reference/cscrollview-class.md).) Können Sie überschreiben die `CDocument` Memberfunktionen `OnNewDocument` und `OnOpenDocument` anwendungsspezifische Initialisierung des Dokuments angeben. In der Regel müssen Sie beide überschreiben, da ein Dokument auf zwei Arten erstellt werden kann.
+
+In den meisten Fällen sollten Ihre Überschreibung die Basisklassenversion aufrufen. Weitere Informationen finden Sie auf die benannte Memberfunktionen von Klassen [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), und [CWinApp](../mfc/reference/cwinapp-class.md) in die MFC-Bibliothek Bibliotheksreferenz.
+
+## <a name="see-also"></a>Siehe auch
+
+[Dokumentvorlagen und der Erstellungsvorgang für Dokumente und Ansichten](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
+[Erstellen von Dokumentvorlagen](../mfc/document-template-creation.md)<br/>
+[Erstellen von Dokument/Ansicht](../mfc/document-view-creation.md)<br/>
+[Beziehungen zwischen MFC-Objekten](../mfc/relationships-among-mfc-objects.md)
 

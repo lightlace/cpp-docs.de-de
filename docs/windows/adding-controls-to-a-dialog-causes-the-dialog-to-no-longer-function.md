@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88990595fdf1f6cbb88efd40ec6247b70d90c586
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 89e4a639ad953593195401fe2eadeb5d7877a160
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314897"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445859"
 ---
 # <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function-c"></a>Hinzufügen von Steuerelementen zu einem Dialogfeld bewirkt, dass das Dialogfeld nicht mehr funktioniert (C++)
 
@@ -70,5 +70,5 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Problembehandlung beim Dialog-Editor](../windows/troubleshooting-the-dialog-editor.md)  
+[Problembehandlung beim Dialog-Editor](../windows/troubleshooting-the-dialog-editor.md)<br/>
 [Dialog-Editor](../windows/dialog-editor.md)

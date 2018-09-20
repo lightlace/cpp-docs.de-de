@@ -1,5 +1,5 @@
 ---
-title: 'Aktivierung: Verben | Microsoft Docs'
+title: 'Aktivierung: Verben | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,30 +20,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c484231eb87144a6546ff2b8b7061a5339820ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 63b21e4d7f40d87b35d2ea5650f86801294affaa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331073"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425716"
 ---
 # <a name="activation-verbs"></a>Aktivierung: Verben
-Dieser Artikel beschreibt die Rolle primären und sekundären Verben Play in OLE [Aktivierung](../mfc/activation-cpp.md).  
-  
- Doppelklicken Sie auf ein eingebettetes Element kann in der Regel die Benutzer zu bearbeiten. Bestimmte Elemente jedoch nicht auf diese Weise Verhalten. Beispielsweise wird durch Doppelklicken auf ein Element mit der Audiorecorder-Anwendung erstellt nicht die Server in einem separaten Fenster geöffnet; Stattdessen gibt er den Sound.  
-  
- Die Ursache für dieses Verhalten Unterschied ist, dass Audiorecorder Elementen ein anderes "primäres Verb." Primäre Verb ist die Aktion ausgeführt, wenn der Benutzer ein OLE-Element doppelklickt. Für die meisten Typen von OLE-Elementen ist das primäre Verb bearbeiten, das den Server startet, die das Element erstellt. Für einige Typen von Elementen, z. B. Audiorecorder-Elementen ist das primäre Verb wiedergeben.  
-  
- Viele Typen von OLE-Elementen unterstützt nur ein Verb, und bearbeiten ist die am häufigsten verwendeten. Einige Typen von Elementen unterstützen jedoch mehrere Verben. Audiorecorder Elementen unterstützt z. B. als sekundäre Verb bearbeiten.  
-  
- Ist eine andere häufig verwendete Verb "Open". Das Verb "Open" ist identisch mit "Bearbeiten", außer die Serveranwendung in einem separaten Fenster gestartet wird. Das Verb sollte verwendet werden, wenn der Container-Anwendung oder die Anwendung für die direkte Aktivierung nicht unterstützt.  
-  
- Alle Verben als primäres Verb müssen über ein Untermenübefehl aufgerufen werden, wenn das Element ausgewählt ist. Dieses Untermenü enthält alle Verben, die vom Element unterstützt und wird normalerweise durch die *Typename* **Objekt** Befehl die **bearbeiten** Menü. Informationen zu den *Typename* **Objekt** Befehl, finden Sie im Artikel [Menüs und Ressourcen: Containererweiterungen](../mfc/menus-and-resources-container-additions.md).  
-  
- Die Verben, die von die eine Server-Anwendung unterstützt werden in der Windows-Registrierung-Datenbank aufgeführt. Wenn die Server-Anwendung mit der Microsoft Foundation Class-Bibliothek geschrieben wird, wird es automatisch alle Verben registrieren, wenn der Server gestartet wird. Wenn dies nicht der Fall ist, sollten Sie diese während der Initialisierungsphase für die Server-Anwendung registrieren. Weitere Informationen finden Sie im Artikel [Registrierung](../mfc/registration.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Aktivierung](../mfc/activation-cpp.md)   
- [Containers](../mfc/containers.md)   
- [Server](../mfc/servers.md)
+
+In diesem Artikel wird erläutert, die primären und sekundären Verben Rollenspiele in OLE [Aktivierung](../mfc/activation-cpp.md).
+
+In der Regel durch Doppelklicken auf ein eingebettetes Element, wird die Benutzer zu bearbeiten kann. Allerdings sind bestimmte Elemente nicht auf diese Weise Verhalten. Beispielsweise wird durch Doppelklicken auf ein Element mit der Audiorecorder-Anwendung erstellt nicht die Server in einem separaten Fenster geöffnet; Stattdessen gibt den Sound wieder.
+
+Der Grund für diesen Unterschied Verhalten ist, dass Audiorecorder-Elementen ein anderes "primäres Verb." Primäre Verb ist die Aktion ausgeführt, wenn ein OLE-Element doppelgeklickt wird. Für die meisten Typen von OLE-Elementen ist das primäre Verb bearbeiten, der den Server gestartet wird, die das Element erstellt hat. Für einige Typen von Elementen wie Audiorecorder-Elementen ist das primäre Verb Play.
+
+Viele Arten von OLE-Elementen unterstützt nur ein Verb, und bearbeiten ist die am häufigsten verwendeten. Einige Elementtypen unterstützen jedoch mehrere Verben. Audiorecorder Elemente unterstützen z. B. als sekundären Verb bearbeiten.
+
+Eine andere häufig verwendete Verb ist "Open". Das Open-Verb ist identisch mit "Bearbeiten", außer die Serveranwendung in einem separaten Fenster gestartet wird. Dieses Verb sollte verwendet werden, wenn die containeranwendung oder die Serveranwendung die direkte Aktivierung nicht unterstützt.
+
+Alle Verben außer das primäre Verb müssen über ein Untermenübefehl aufgerufen werden, wenn das Element ausgewählt ist. Dieses Untermenü enthält alle Verben, die vom Element unterstützt und wird normalerweise durch die *Typename* **Objekt** Befehl die **bearbeiten** Menü. Informationen zu den *Typename* **Objekt** Befehl, finden Sie im Artikel [Menüs und Ressourcen: Containererweiterungen](../mfc/menus-and-resources-container-additions.md).
+
+Die Verben, die eine Server-Anwendung unterstützt werden in der Datenbank der Windows-Registrierung aufgeführt. Wenn die Server-Anwendung mit der Microsoft Foundation Class-Bibliothek geschrieben ist, wird automatisch alle Verben registriert, wenn der Server gestartet wurde. Wenn dies nicht der Fall ist, sollten Sie diese während der Initialisierungsphase der Serveranwendung registrieren. Weitere Informationen finden Sie im Artikel [Registrierung](../mfc/registration.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Activation (Aktivierung)](../mfc/activation-cpp.md)<br/>
+[Container](../mfc/containers.md)<br/>
+[Server](../mfc/servers.md)
 

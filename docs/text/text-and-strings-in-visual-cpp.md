@@ -34,38 +34,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16411db184b568051484554548cdfcc6119002f1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 555183de13728cc01509b87e8eca8c3340d2d68b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688075"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424056"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Text und Zeichenfolgen in Visual C++
-Ein wichtiger Aspekt bei der Entwicklung von Anwendungen für internationale Märkte ist die korrekte Darstellung lokaler Zeichensätze. Mit dem ASCII-Zeichensatz werden Zeichen im Bereich zwischen 0 x 00 und 0 x 7 F definiert. Von anderen Zeichensätzen (hauptsächlich europäischer Herkunft) werden wie beim ASCII-Zeichensatz die Zeichen innerhalb des Bereichs von 0 x 00 bis 0 x 7 F definiert; zusätzlich wird ein erweiterter Zeichensatz im Bereich von 0 x 80 bis 0 x FF definiert. Daher ist ein Einzelbyte-Zeichensatz (Single-Byte Character Set, SBCS) mit 8 Bits ausreichend, um den ASCII-Zeichensatz sowie viele andere Zeichensätze für europäische Sprachen darzustellen. Einige außereuropäische Zeichensätze, z. B. das japanische Kanji, enthalten jedoch so viele Zeichen, dass sie nicht mehr in Einzelbytecodierung dargestellt werden können. Sie müssen daher mit einem Mehrbyte-Zeichensatz (Multibyte Character Set, MBCS) codiert werden.  
-  
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Unicode und MBCS](../text/unicode-and-mbcs.md)  
- Beschreibt die Visual C++-Unterstützung für Unicode und MBCS-Programmierung.  
-  
- [Unterstützung für Unicode](../text/support-for-unicode.md)  
- Beschreibt Unicode, eine Spezifikation zur Unterstützung sämtlicher Zeichensätze, einschließlich Zeichensätzen, zu deren Darstellung mehr als ein Byte erforderlich ist.  
-  
- [Unterstützung von Mehrbyte-Zeichensätzen (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)  
- Beschreibt MBCS, eine Alternative zu Unicode für die Unterstützung von Zeichensätzen, die nicht mit einem Byte pro Zeichen dargestellt werden können, z. B. Japanisch und Chinesisch.  
-  
- [Zuordnungen für generischen Text in Tchar.h](../text/generic-text-mappings-in-tchar-h.md)  
- Enthält Microsoft-spezifische Zuordnungen für generischen Text für viele Datentypen, Routinen und andere Objekte.  
-  
- [Vorgehensweise: Konvertieren zwischen verschiedenen Zeichenfolgentypen](../text/how-to-convert-between-various-string-types.md)  
- Veranschaulicht, wie verschiedene Visual C++-Zeichenfolgentypen in andere Zeichenfolgen konvertiert werden.  
-  
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [Internationalisierung](../c-runtime-library/internationalization.md)  
- Beschreibt die internationale Unterstützung in der C-Laufzeitbibliothek.  
-  
- [Internationale Beispiele](https://github.com/Microsoft/VCSamples)  
- Enthält Verknüpfungen mit Beispielen, die die Internationalisierung in Visual C++ demonstrieren.  
-  
- [Zeichenfolgen in Sprach- und Länder-/Regionseinstellungen](../c-runtime-library/locale-names-languages-and-country-region-strings.md)  
- Stellt die Zeichenfolgen in Sprach- und Länder-/Regionseinstellungen in der C-Laufzeitbibliothek bereit.
+
+Ein wichtiger Aspekt bei der Entwicklung von Anwendungen für internationale Märkte ist die korrekte Darstellung lokaler Zeichensätze. Mit dem ASCII-Zeichensatz werden Zeichen im Bereich zwischen 0 x 00 und 0 x 7 F definiert. Von anderen Zeichensätzen (hauptsächlich europäischer Herkunft) werden wie beim ASCII-Zeichensatz die Zeichen innerhalb des Bereichs von 0 x 00 bis 0 x 7 F definiert; zusätzlich wird ein erweiterter Zeichensatz im Bereich von 0 x 80 bis 0 x FF definiert. Daher ist ein Einzelbyte-Zeichensatz (Single-Byte Character Set, SBCS) mit 8 Bits ausreichend, um den ASCII-Zeichensatz sowie viele andere Zeichensätze für europäische Sprachen darzustellen. Einige außereuropäische Zeichensätze, z. B. das japanische Kanji, enthalten jedoch so viele Zeichen, dass sie nicht mehr in Einzelbytecodierung dargestellt werden können. Sie müssen daher mit einem Mehrbyte-Zeichensatz (Multibyte Character Set, MBCS) codiert werden.
+
+## <a name="in-this-section"></a>In diesem Abschnitt
+
+[Unicode und MBCS](../text/unicode-and-mbcs.md)<br/>
+Beschreibt die Visual C++-Unterstützung für Unicode und MBCS-Programmierung.
+
+[Unterstützung für Unicode](../text/support-for-unicode.md)<br/>
+Beschreibt Unicode, eine Spezifikation zur Unterstützung sämtlicher Zeichensätze, einschließlich Zeichensätzen, zu deren Darstellung mehr als ein Byte erforderlich ist.
+
+[Unterstützung von Mehrbyte-Zeichensätzen (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)<br/>
+Beschreibt MBCS, eine Alternative zu Unicode für die Unterstützung von Zeichensätzen, die nicht mit einem Byte pro Zeichen dargestellt werden können, z. B. Japanisch und Chinesisch.
+
+[Zuordnungen für generischen Text in Tchar.h](../text/generic-text-mappings-in-tchar-h.md)<br/>
+Enthält Microsoft-spezifische Zuordnungen für generischen Text für viele Datentypen, Routinen und andere Objekte.
+
+[Vorgehensweise: Konvertieren zwischen verschiedenen Zeichenfolgentypen](../text/how-to-convert-between-various-string-types.md)<br/>
+Veranschaulicht, wie verschiedene Visual C++-Zeichenfolgentypen in andere Zeichenfolgen konvertiert werden.
+
+## <a name="related-sections"></a>Verwandte Abschnitte
+
+[Internationalisierung](../c-runtime-library/internationalization.md)<br/>
+Beschreibt die internationale Unterstützung in der C-Laufzeitbibliothek.
+
+[Internationale Beispiele](https://github.com/Microsoft/VCSamples)<br/>
+Enthält Verknüpfungen mit Beispielen, die die Internationalisierung in Visual C++ demonstrieren.
+
+[Zeichenfolgen in Sprach- und Länder-/Regionseinstellungen](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+Stellt die Zeichenfolgen in Sprach- und Länder-/Regionseinstellungen in der C-Laufzeitbibliothek bereit.

@@ -1,5 +1,5 @@
 ---
-title: Verwenden einer Dialogvorlage im Speicher | Microsoft Docs
+title: Verwenden einer Dialogvorlage im Speicher | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10364cffa393c8f0968a4d7dffe40224b76ecf3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 649f3aecc79a0b05355b67b1d42cfd3cc2726f18
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381237"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430838"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>Verwenden einer Dialogvorlage im Speicher
-Anstatt die Methoden, die im angegebenen der [Dialogfeld Erstellung Tabelle](../mfc/creating-a-dialog-class-with-code-wizards.md), können Sie beide Arten der im Dialogfeld aus einer Dialogvorlage im Speicher indirekt erstellen. Weitere Informationen finden Sie in der Klasse [CDialog](../mfc/reference/cdialog-class.md) in der *MFC-Referenz*.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)
+
+Anstatt die Methoden, die im angegebenen die [Dialogfeld Erstellung Tabelle](../mfc/creating-a-dialog-class-with-code-wizards.md), Sie können beide Arten von Dialogfeld indirekt aus einer Dialogfeldvorlage im Speicher erstellen. Weitere Informationen finden Sie in der Klasse [CDialog](../mfc/reference/cdialog-class.md) in die *MFC-Referenz*.
+
+## <a name="see-also"></a>Siehe auch
+
+[Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)
 

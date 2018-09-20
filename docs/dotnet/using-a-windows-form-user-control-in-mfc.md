@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 795c16a46356eb9599e02b43b51066b603b8b9ce
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4fef169cb0e2386c1629064ad7ea8a1a70a5c517
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222107"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382075"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Verwenden eines Windows Form-Benutzersteuerelements in MFC
 
@@ -85,5 +85,5 @@ Wenn die MFC-Anwendung Windows Forms verwendet, müssen Sie mfcmifc80.dll mit Ih
 
 ## <a name="see-also"></a>Siehe auch
 
-[Elemente der Benutzeroberfläche](../mfc/user-interface-elements-mfc.md)  
-[Formularansichten](../mfc/form-views-mfc.md)  
+[Elemente der Benutzeroberfläche](../mfc/user-interface-elements-mfc.md)<br/>
+[Formularansichten](../mfc/form-views-mfc.md)

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04a632e657b57519d02c013d9c03e558b9aec8e1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 60e388e18e6d3607dac1946c3fd9a511e948afd4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726621"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448375"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>Klassen und Strukturen (Komponentenerweiterungen für C++)
 
@@ -46,19 +46,19 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ### <a name="parameters"></a>Parameter
 
-*class_access*  
+*class_access*<br/>
 (Optional) Der Zugriff auf die Klasse oder Struktur, die außerhalb der Assembly. Mögliche Werte sind **öffentliche** und **private** (**private** ist die Standardeinstellung). Geschachtelte Klassen oder Strukturen können keine *Class_access* Spezifizierer.
 
-*name*  
+*name*<br/>
 Der Name der Klasse oder Struktur.
 
-*Modifizierer*  
+*Modifizierer*<br/>
 (Optional) [abstrakte](../windows/abstract-cpp-component-extensions.md) und [versiegelten](../windows/sealed-cpp-component-extensions.md) sind gültige Modifizierer.
 
-*inherit_access*  
+*inherit_access*<br/>
 (Optional) Der Zugriff auf *Base_type*. Der einzige zulässige Zugriff ist **öffentliche** (**öffentliche** ist die Standardeinstellung).
 
-*base_type*  
+*base_type*<br/>
 (Optional) Ein Basistyp. Jedoch kann ein Werttyp nicht als Basistyp dienen.
 
 Weitere Informationen finden Sie unter der sprachspezifische Beschreibungen für diesen Parameter in der Windows-Runtime und die Common Language Runtimesections.
@@ -97,7 +97,7 @@ Finden Sie unter [Verweisklassen und Strukturen](../cppcx/ref-classes-and-struct
 
 ### <a name="parameters"></a>Parameter
 
-*base_type*  
+*base_type*<br/>
 (Optional) Ein Basistyp. Ein **Verweisklasse** oder **Referenzstruktur** kann von NULL oder mehr Schnittstellen und 0 (null) oder ein erben **Ref** Typen. Ein **Wertklasse** oder **wertstruktur** kann nur von NULL oder mehr Schnittstellen erben.
 
 Beim Deklarieren eines Objekts mithilfe der **Verweisklasse** oder **Referenzstruktur** Schlüsselwörter, erfolgt das Objekt durch ein Handle für ein Objekt, d. h. einen Verweiszähler-Zeiger auf das Objekt. Wenn die deklarierte Variable den Gültigkeitsbereich verlässt, wird der Compiler automatisch das zugrunde liegende Objekt löschen. Wenn das Objekt als Parameter in einem Aufruf verwendet wird oder in einer Variablen gespeichert ist, wird ein Handle für das Objekt tatsächlich übergeben oder gespeichert.
@@ -116,7 +116,7 @@ Die folgende Tabelle enthält die Unterschiede zwischen der Syntax dargestellt, 
 
 ### <a name="parameters"></a>Parameter
 
-*base_type*  
+*base_type*<br/>
 (Optional) Ein Basistyp. Ein **Verweisklasse** oder **Referenzstruktur** erben kann, von 0 (null) oder mehr verwalteten Schnittstellen und NULL oder einem Referenztypen. Ein **Wertklasse** oder **wertstruktur** kann nur von NULL oder mehr verwalteten Schnittstellen erben.
 
 Die **Verweisklasse** und **Referenzstruktur** Schlüsselwörter teilen dem Compiler, der die Klasse oder Struktur, die auf dem Heap zugeordnet werden. Wenn das Objekt als Parameter in einem Aufruf verwendet wird oder in einer Variablen gespeichert ist, wird eine Referenz für das Objekt tatsächlich übergeben oder gespeichert.

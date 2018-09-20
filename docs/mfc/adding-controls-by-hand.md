@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von Steuerelementen von Hand | Microsoft Docs
+title: Hinzufügen von Steuerelementen von Hand | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,30 +20,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c39f2d7803630aaaef6e803e90bf332c74937a71
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 72170e3e21f5ca895b95da0d5905a2167375f721
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930614"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434543"
 ---
 # <a name="adding-controls-by-hand"></a>Manuelles Hinzufügen von Steuerelementen
-Sie können entweder [Hinzufügen von Steuerelementen zu einem Dialogfeld mit dem Dialog-Editor](../mfc/using-the-dialog-editor-to-add-controls.md) oder fügen Sie sie selbst, mit dem Code.  
-  
- Um ein Steuerelementobjekt selbst erstellen, werden Sie in der Regel die C++-Control-Objekt in einem C++-Dialog oder Rahmenfensterobjekt einbetten. Wie viele andere Objekte im Framework erfordern Steuerelemente zweistufige Konstruktion. Rufen Sie des Steuerelements **erstellen** Memberfunktion als Teil der Erstellung des übergeordneten Dialogfeld Feld oder den Frame-Fensters. Für Dialogfelder, dies erfolgt normalerweise [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), und für den Rahmenfenstern werden in [OnCreate](../mfc/reference/cwnd-class.md#oncreate).  
-  
- Das folgende Beispiel zeigt, wie Sie deklarieren, können eine `CEdit` Objekt in der Klassendeklaration von einer abgeleiteten Dialogfeldklasse, und rufen Sie anschließend die `Create` Memberfunktion in `OnInitDialog`. Da die `CEdit` Objekt als eingebettetes Objekt deklariert wird, es wird automatisch erstellt, wenn das Dialogfeldobjekt erstellt wird, jedoch mit einem eigenen noch initialisiert werden muss `Create` Memberfunktion.  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#1](../mfc/codesnippet/cpp/adding-controls-by-hand_1.h)]  
-  
- Die folgenden `OnInitDialog` Funktion richtet ein Rechteck ruft dann `Create` zum Erstellen von Windows-Bearbeitungssteuerelements und fügen Sie es an den nicht initialisierten `CEdit` Objekt.  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#2](../mfc/codesnippet/cpp/adding-controls-by-hand_2.cpp)]  
-  
- Nach dem Erstellen des Objekts bearbeiten, können Sie auch den Eingabefokus auf das Steuerelement festlegen, durch Aufrufen der `SetFocus` Memberfunktion. Schließlich Sie 0 aus zurückgeben `OnInitDialog` anzuzeigen, das der Fokus festgelegt werden. Wenn Sie einen Wert ungleich NULL zurückgeben, wird vom Dialogfeld-Manager den Fokus auf das erste Steuerelement ein Element in der Liste der Dialogfeld-Element. In den meisten Fällen sollten Sie das Hinzufügen von Steuerelementen in den Dialogfeldern mit dem Dialog-Editor.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Erstellen und Verwenden von Steuerelementen](../mfc/making-and-using-controls.md)   
- [Steuerelemente](../mfc/controls-mfc.md)   
- [CDialog::](../mfc/reference/cdialog-class.md#oninitdialog)
+
+Sie können entweder [Hinzufügen von Steuerelementen zu einem Dialogfeld mit den Dialog-Editor](../mfc/using-the-dialog-editor-to-add-controls.md) oder hinzufügen, selbst mit Code.
+
+Um ein Steuerelementobjekt selbst zu erstellen, werden Sie in der Regel die C++-Control-Objekt in einem C++-Dialog oder Rahmenfensterobjekt einbetten. Wie bei vielen anderen Objekten im Framework erfordern Steuerelemente Erstellung in zwei Schritten. Sie sollten des Steuerelements aufrufen **erstellen** Memberfunktion, die im Rahmen der Erstellung des übergeordnete Dialogfeld Feld oder den Frame-Fensters. Für Dialogfelder, dies erfolgt normalerweise [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), und für die Frame-Fensters, in [OnCreate](../mfc/reference/cwnd-class.md#oncreate).
+
+Das folgende Beispiel zeigt, wie Sie deklarieren, können ein `CEdit` -Objekt in der Deklaration einer Dialogfeldklasse abgeleiteten, und rufen Sie dann die `Create` -Memberfunktion im `OnInitDialog`. Da die `CEdit` Objekt als eingebettetes Objekt deklariert ist, es wird automatisch erstellt, wenn das Dialogfeldobjekt wird erstellt, aber es immer noch mit eigenem initialisiert werden muss `Create` Member-Funktion.
+
+[!code-cpp[NVC_MFCControlLadenDialog#1](../mfc/codesnippet/cpp/adding-controls-by-hand_1.h)]
+
+Die folgenden `OnInitDialog` Funktion richtet ein Rechteck, ruft dann `Create` erstellen das Steuerelement zum Bearbeiten von Windows, und fügen Sie ihn an den nicht initialisierten `CEdit` Objekt.
+
+[!code-cpp[NVC_MFCControlLadenDialog#2](../mfc/codesnippet/cpp/adding-controls-by-hand_2.cpp)]
+
+Nach der Edit-Objekt erstellt haben, können Sie auch den Eingabefokus auf das Steuerelement festlegen, durch Aufrufen der `SetFocus` Member-Funktion. Zum Schluss Sie 0 aus zurückgeben `OnInitDialog` an, dass der Fokus festgelegt. Wenn Sie einen Wert ungleich NULL zurückgegeben wird, setzt die Dialogfeld-Manager den Fokus auf das erste Steuerelement-Element in der Liste der Dialogfeld-Element. In den meisten Fällen sollten Sie die Steuerelemente in den Dialogfeldern der Dialog-Editor Hinzufügen.
+
+## <a name="see-also"></a>Siehe auch
+
+[Erstellen und Verwenden von Steuerelementen](../mfc/making-and-using-controls.md)<br/>
+[Steuerelemente](../mfc/controls-mfc.md)<br/>
+[CDialog::](../mfc/reference/cdialog-class.md#oninitdialog)
 

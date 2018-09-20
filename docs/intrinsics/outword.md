@@ -17,46 +17,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd5abaccb4adc9e642458669535cff369d963cfd
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: eac50ba9c4c1b4bc14ebb847b283b5c2da11605e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712576"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388797"
 ---
 # <a name="outword"></a>__outword
-**Microsoft-spezifisch**  
-  
- Generiert die `out` -Anweisung, die das Wort sendet `Data` der e/a-Port anhand des `Port`.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void __outword(   
-   unsigned short Port,   
-   unsigned short Data   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+
+**Microsoft-spezifisch**
+
+Generiert die `out` -Anweisung, die das Wort sendet `Data` der e/a-Port anhand des `Port`.
+
+## <a name="syntax"></a>Syntax
+
+```
+void __outword( 
+   unsigned short Port, 
+   unsigned short Data 
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
 *Port*<br/>
-[in] Der Port, der die Daten zu senden.  
-  
+[in] Der Port, der die Daten zu senden.
+
 *Data*<br/>
-[in] Die Daten gesendet werden.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Systemintern|Architektur|  
-|---------------|------------------|  
-|`__outword`|x86, x64|  
-  
- **Headerdatei** \<intrin.h >  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Routine ist nur als systeminterne Funktion verfügbar.  
-  
-**Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[in] Die Daten gesendet werden.
+
+## <a name="requirements"></a>Anforderungen
+
+|Systemintern|Architektur|
+|---------------|------------------|
+|`__outword`|x86, x64|
+
+**Headerdatei** \<intrin.h >
+
+## <a name="remarks"></a>Hinweise
+
+Diese Routine ist nur als systeminterne Funktion verfügbar.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

@@ -1,5 +1,5 @@
 ---
-title: Erstellen im Framework | Microsoft Docs
+title: Erstellen im Framework | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c10b9d0903901cfe564b161a250d58078d5a08c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ca0ebd9bf03df8725c14df8d2aca1f7858b7b65
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341553"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396180"
 ---
 # <a name="building-on-the-framework"></a>Erstellen im Framework
-Aufgaben bei der Konfiguration einer Anwendung mit dem MFC-Framework besteht darin, den anwendungsspezifischen Quellcode angeben und zum Verbinden der Komponenten definieren, welche Meldungen und Befehle, die auf die sie reagieren. Sie verwenden die C++-Sprache und die C++-Standardtechniken von von der Klassenbibliothek bereitgestellten eigene anwendungsspezifische Klassen abgeleitet werden, außer Kraft setzen und das Verhalten der Basisklasse erweitern.  
-  
- Verwandte Themen beschreiben in den folgenden Tabellen die allgemeine Abfolge der Vorgänge, die Sie in der Regel folgt und Ihre Zuständigkeiten im Vergleich zu der Framework-Aufgaben:  
-  
--   [Sequenz zum Erstellen einer Anwendung mit dem Framework](../mfc/sequence-of-operations-for-building-mfc-applications.md)  
-  
--   [Reihenfolge der Operationen zur Erstellung von OLE-Anwendungen](../mfc/sequence-of-operations-for-creating-ole-applications.md)  
-  
--   [Operationssequenz zur Erstellung von ActiveX-Steuerelementen](../mfc/sequence-of-operations-for-creating-activex-controls.md)  
-  
--   [Reihenfolge der Operationen zur Erstellung Datenbankanwendungen](../mfc/sequence-of-operations-for-creating-database-applications.md)  
-  
- Meistens, können Sie diese Tabellen als eine Abfolge von Schritten zum Erstellen einer MFC-Anwendung verwenden, obwohl einige der Schritte alternative Optionen sind. Die meisten Anwendungen verwenden z. B. eine Art von View-Klasse, von der mehrere Typen zur Verfügung.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Allgemeine MFC-Themen](../mfc/general-mfc-topics.md)
+
+Ihre Rolle beim Konfigurieren einer Anwendung mit dem MFC-Framework ist, geben Sie den Quellcode für die anwendungsspezifische und verbinden die Komponenten definieren, welche Meldungen und Befehle, die auf die sie reagieren. Können Sie die C++-Sprache und den standardmäßigen C++-Techniken eigene anwendungsspezifische Klassen abgeleitet, der von der Klassenbibliothek bereitgestellten und außer Kraft setzen und das Verhalten der Basisklasse zu erweitern.
+
+In verwandten Themen beschreiben die folgenden Tabellen die allgemeine Abfolge der Vorgänge, die Sie in der Regel folgt und Ihren Zuständigkeiten und die Framework Aufgaben:
+
+- [Sequenz zum Erstellen einer Anwendung mit dem Framework](../mfc/sequence-of-operations-for-building-mfc-applications.md)
+
+- [Reihenfolge der Operationen zur Erstellung von OLE-Anwendungen](../mfc/sequence-of-operations-for-creating-ole-applications.md)
+
+- [Operationssequenz zur Erstellung von ActiveX-Steuerelementen](../mfc/sequence-of-operations-for-creating-activex-controls.md)
+
+- [Reihenfolge der Operationen zur Erstellung Datenbankanwendungen](../mfc/sequence-of-operations-for-creating-database-applications.md)
+
+Zum größten Teil, können Sie diese Tabellen als eine Abfolge von Schritten zum Erstellen einer MFC-Anwendung folgen, auch wenn einige der Schritte alternative Optionen sind. Die meisten Anwendungen verwenden beispielsweise eine Art von View-Klasse, aus den verfügbaren Arten.
+
+## <a name="see-also"></a>Siehe auch
+
+[Allgemeine MFC-Themen](../mfc/general-mfc-topics.md)
 

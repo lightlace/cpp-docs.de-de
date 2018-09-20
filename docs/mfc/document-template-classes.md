@@ -1,5 +1,5 @@
 ---
-title: Dokumentvorlagenklassen | Microsoft Docs
+title: Dokumentvorlagenklassen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9958484633dd736426fc91321d0964abf0ad7e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87984bf06d8ca178d2a21ac8ff475f828690668e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343540"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406060"
 ---
 # <a name="document-template-classes"></a>Dokumentvorlagenklassen
-Dokumentvorlagen Objekte koordinieren die Erstellung des Dokuments, Ansicht und Fensterobjekte Frame, wenn ein neues Dokument oder Sicht erstellt wird.  
-  
- [CDocTemplate](../mfc/reference/cdoctemplate-class.md)  
- Die Basisklasse für Dokumentvorlagen. Diese Klasse wird nie direkt verwendet werden; Stattdessen verwenden Sie eine der anderen Dokumentvorlagenklassen von dieser Klasse abgeleitet.  
-  
- [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)  
- Eine Vorlage für Dokumente in die multiple Document Interface (MDI). MDI-Anwendungen können mehrere Dokumente gleichzeitig geöffnet haben.  
-  
- [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md)  
- Eine Vorlage für Dokumente in die single Document Interface (SDI). SDI-Anwendungen haben nur ein Dokument, die gleichzeitig geöffnet.  
-  
-## <a name="related-class"></a>Verknüpfte Klasse aus  
- [Angegeben ist und](../mfc/reference/ccreatecontext-structure.md)  
- Eine Struktur, die durch eine Dokumentvorlage an fenstererstellung Funktionen, um das Erstellen von Dokument und Ansicht Rahmenfenster Objekten zu koordinieren übergeben werden.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+
+Dokumentvorlage Objekte Koordination der Erstellung des Dokuments, Ansicht und Frame-Windows-Objekte, wenn ein neues Dokument oder Sicht erstellt wird.
+
+[CDocTemplate](../mfc/reference/cdoctemplate-class.md)<br/>
+Die Basisklasse für Dokumentvorlagen. Diese Klasse wird nie direkt verwendet werden; Stattdessen verwenden Sie eine der anderen Dokumentvorlage Klassen von dieser Klasse abgeleitet.
+
+[CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)<br/>
+Eine Vorlage für Dokumente in die multiple Document Interface (MDI). MDI-Anwendungen können mehrere Dokumente gleichzeitig geöffnet haben.
+
+[CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md)<br/>
+Eine Vorlage für Dokumente in die single Document Interface (SDI). SDI-Anwendungen müssen nur ein Dokument gleichzeitig öffnen.
+
+## <a name="related-class"></a>Verwandte Klasse
+
+[CCreateContext](../mfc/reference/ccreatecontext-structure.md)<br/>
+Eine Struktur, die von einer Dokumentvorlage an fenstererstellung Funktionen, um das Erstellen von Dokument, Ansicht und dem Rahmenfenster Objekten zu koordinieren übergeben werden.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../mfc/class-library-overview.md)
 

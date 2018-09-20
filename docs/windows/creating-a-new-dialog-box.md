@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 285444b5f9bfa29ab00fc6a2ca1b644208bc95a8
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: fae55d0b4ce4a766952afcec7f78ec6b20fbb258
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315794"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426639"
 ---
 # <a name="creating-a-new-dialog-box-c"></a>Erstellen eines neuen Dialogfelds (C++)
 
@@ -50,6 +50,6 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Vorgehensweise: Erstellen einer Ressource](../windows/how-to-create-a-resource.md)  
-[Ressourcendateien](../windows/resource-files-visual-studio.md)  
+[Vorgehensweise: Erstellen einer Ressource](../windows/how-to-create-a-resource.md)<br/>
+[Ressourcendateien](../windows/resource-files-visual-studio.md)<br/>
 [Dialog-Editor](../windows/dialog-editor.md)

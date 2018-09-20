@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d395053231f54570e1bf86ba79f6237b89681fc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1c44223dad2ac4d6306bf3896cd8ec7be84a5a2b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315547"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407763"
 ---
 # <a name="stand-alone-attributes"></a>Eigenständige Attribute
 Ein eigenständiges Attribut kann nicht ausgeführt werden, auf ein C++-Schlüsselwort jedoch eher wie eine einzige Zeile Code. Eigenständige Attribut-Anweisungen erfordern ein Semikolon am Ende der Zeile.
@@ -45,4 +45,5 @@ Ein eigenständiges Attribut kann nicht ausgeführt werden, auf ein C++-Schlüss
 |[pragma](../windows/pragma.md)|Gibt die angegebene Zeichenfolge verwendet werden, ohne die Anführungszeichen in der generierten IDL-Datei aus.|
   
 ## <a name="see-also"></a>Siehe auch
- [Attribute nach Verwendung](../windows/attributes-by-usage.md)
+
+[Attribute nach Verwendung](../windows/attributes-by-usage.md)

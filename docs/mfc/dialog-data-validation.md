@@ -1,5 +1,5 @@
 ---
-title: Validieren von Dialogfelddaten | Microsoft Docs
+title: Validieren von Dialogfelddaten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 229b4a5ffb32f4a167dcc8393a269bbb2e35b500
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83c1208d3001739ca78186972c629ea8a094c8d8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344879"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430890"
 ---
 # <a name="dialog-data-validation"></a>Validieren von Dialogfelddaten
-Sie können Überprüfung zusätzlich zu den Datenaustausch durch Aufrufen von DDV-Funktionen angeben, wie im Beispiel gezeigt [Dialogdatenaustausch](../mfc/dialog-data-exchange.md). Die `DDV_MaxChars` Aufruf im Beispiel wird überprüft, dass die in das Textfeld Steuerelement eingegebene Zeichenfolge nicht mehr als 20 Zeichen ist. DDV-Funktion Warnungen in der Regel den Benutzer ein Meldungsfeld an, wenn die Überprüfung schlägt fehl, und legt den Fokus auf dem betreffenden-Steuerelement, damit der Benutzer die Daten erneut eingeben kann. Eine DDV-Funktion für ein bestimmtes Steuerelement muss unmittelbar nach der DDX-Funktion für dasselbe Steuerelement aufgerufen werden.  
-  
- Sie können auch eigene benutzerdefinierte DDX- und DDV-Routinen definieren. Einzelheiten dazu und andere Aspekte der DDX- und DDV finden Sie unter [MFC technischer Hinweis 26](../mfc/tn026-ddx-and-ddv-routines.md).  
-  
- Die [Assistenten zum Hinzufügen von Membervariablen](../ide/add-member-variable-wizard.md) Schreiben aller der DDX und DDV-Aufrufe in der datenzuordnung für Sie.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Dialogfelddaten Dialogdatenaustausch und-Validierung](../mfc/dialog-data-exchange-and-validation.md)   
- [Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)   
- [Dialogdatenaustausch](../mfc/dialog-data-exchange.md)
+
+Sie können Überprüfung zusätzlich zu den Datenaustausch durch Aufrufen von Funktionen DDV angeben, wie im Beispiel gezeigt [Dialogdatenaustausch](../mfc/dialog-data-exchange.md). Die `DDV_MaxChars` Aufruf im Beispiel wird überprüft, dass die in das Textfeld Steuerelement eingegebene Zeichenfolge nicht mehr als 20 Zeichen ist. Die DDV-Funktion Warnungen in der Regel den Benutzer ein Meldungsfeld an, wenn die Überprüfung schlägt fehl, und legt den Fokus des betreffenden Steuerelements, sodass der Benutzer die Daten erneut eingeben kann. Eine DDV-Funktion für ein bestimmtes Steuerelement muss unmittelbar auf den DDX-Funktion für das gleiche Steuerelement aufgerufen werden.
+
+Sie können auch Ihre eigenen benutzerdefinierten DDX- und DDV-Routinen definieren. Weitere Informationen zu diesem und anderen Aspekte der DDX- und DDV finden Sie unter [MFC technischer Hinweis 26](../mfc/tn026-ddx-and-ddv-routines.md).
+
+Die [Assistenten zum Hinzufügen von Membervariablen](../ide/add-member-variable-wizard.md) Schreiben aller der DDX und DDV, die in der datenzuordnung für Sie aufruft.
+
+## <a name="see-also"></a>Siehe auch
+
+[Dialogdatenaustausch und -validierung](../mfc/dialog-data-exchange-and-validation.md)<br/>
+[Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[Dialogdatenaustausch](../mfc/dialog-data-exchange.md)
 

@@ -38,161 +38,158 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff3c05f1a96dd4717371d48b60cca6a549a94a7d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4a36cef1681722874350510f86e9cf767d7d019a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019952"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390798"
 ---
 # <a name="float2-class"></a>float_2-Klasse
-Stellt einen kurzen Vektor aus zwei Gleitkommazahlen dar.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-class float_2;  
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-typedefs"></a>Öffentliche Typedefs  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|`value_type`||  
-  
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[float_2-Konstruktor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|float_2:: get_X||  
-|float_2:: get_xy||  
-|float_2:: get_Y||  
-|float_2::get_yx||  
-|float_2::ref_g||  
-|float_2::ref_r||  
-|float_2::ref_x||  
-|float_2::ref_y||  
-|float_2:: set_X||  
-|float_2:: set_xy||  
-|float_2:: set_y||  
-|float_2:: set_yx||  
-  
-### <a name="public-operators"></a>Öffentliche Operatoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|float_2::-||  
-|float_2:::||  
-|float_2:: * =||  
-|float_2:: Operator / =||  
-|float_2:: Operator++-||  
-|float_2:: Operator +=||  
-|float_2::operator=||  
-|float_2:: Operator-=||  
-  
-### <a name="public-constants"></a>Öffentliche Konstanten  
-  
-|name|Beschreibung|  
-|----------|-----------------|  
-|[Size-Konstante](#float_2__size)||  
-  
-### <a name="public-data-members"></a>Öffentliche Datenmember  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|float_2:: g||  
-|float_2::gr||  
-|float_2:: r||  
-|float_2:: RG||  
-|float_2:: x||  
-|float_2:: XY||  
-|float_2:: y||  
-|float_2::yx||  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `float_2`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** amp_short_vectors.h  
-  
- **Namespace:** Concurrency:: Graphics  
-  
-##  <a name="ctor"></a> float_2 
 
- Standardkonstruktor, initialisiert alle Elemente mit 0.  
-  
-```  
+Stellt einen kurzen Vektor aus zwei Gleitkommazahlen dar.
+
+## <a name="syntax"></a>Syntax
+
+```
+class float_2;
+```
+
+## <a name="members"></a>Member
+
+### <a name="public-typedefs"></a>Öffentliche Typedefs
+
+|Name|Beschreibung|
+|----------|-----------------|
+|`value_type`||
+
+### <a name="public-constructors"></a>Öffentliche Konstruktoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[float_2-Konstruktor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|float_2:: get_X||
+|float_2:: get_xy||
+|float_2:: get_Y||
+|float_2::get_yx||
+|float_2::ref_g||
+|float_2::ref_r||
+|float_2::ref_x||
+|float_2::ref_y||
+|float_2:: set_X||
+|float_2:: set_xy||
+|float_2:: set_y||
+|float_2:: set_yx||
+
+### <a name="public-operators"></a>Öffentliche Operatoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|float_2::-||
+|float_2:::||
+|float_2:: * =||
+|float_2:: Operator / =||
+|float_2:: Operator++-||
+|float_2:: Operator +=||
+|float_2::operator=||
+|float_2:: Operator-=||
+
+### <a name="public-constants"></a>Öffentliche Konstanten
+
+|name|Beschreibung|
+|----------|-----------------|
+|[Size-Konstante](#float_2__size)||
+
+### <a name="public-data-members"></a>Öffentliche Datenmember
+
+|Name|Beschreibung|
+|----------|-----------------|
+|float_2:: g||
+|float_2::gr||
+|float_2:: r||
+|float_2:: RG||
+|float_2:: x||
+|float_2:: XY||
+|float_2:: y||
+|float_2::yx||
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`float_2`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** amp_short_vectors.h
+
+**Namespace:** Concurrency:: Graphics
+
+##  <a name="ctor"></a> float_2
+
+Standardkonstruktor, initialisiert alle Elemente mit 0.
+
+```
 float_2() restrict(amp,
     cpu);
 
- 
 float_2(
-    float _V0,  
+    float _V0,
     float _V1) restrict(amp,
     cpu);
 
- 
 float_2(
     float _V) restrict(amp,
     cpu);
 
- 
 float_2(
     const float_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_2(
     const uint_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_2(
     const int_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_2(
     const unorm_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_2(
     const norm_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_2(
     const double_2& _Other) restrict(amp,
     cpu);
-```  
-  
-### <a name="parameters"></a>Parameter  
-*_V0*<br/>
-Der Wert, der 0-Element zu initialisieren.  
-  
-*_V1*<br/>
-Der Wert 1 Element initialisiert werden.  
-  
-*_V*<br/>
-Der Wert für die Initialisierung.  
-  
-*_Sonstige*<br/>
-Das Objekt, das zum Initialisieren verwendet.  
-  
-##  <a name="float_2__size"></a> Größe 
+```
 
-```  
-static const int size = 2;  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)
+### <a name="parameters"></a>Parameter
+
+*_V0*<br/>
+Der Wert, der 0-Element zu initialisieren.
+
+*_V1*<br/>
+Der Wert 1 Element initialisiert werden.
+
+*_V*<br/>
+Der Wert für die Initialisierung.
+
+*_Sonstige*<br/>
+Das Objekt, das zum Initialisieren verwendet.
+
+##  <a name="float_2__size"></a> Größe
+
+```
+static const int size = 2;
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

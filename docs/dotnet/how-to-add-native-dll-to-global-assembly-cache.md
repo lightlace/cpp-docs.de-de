@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Hinzufügen einer systemeigenen DLL zum globalen Assemblycache | Microsoft Docs'
+title: 'Vorgehensweise: Hinzufügen einer systemeigenen DLL zum globalen Assemblycache | Microsoft-Dokumentation'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b7363de172eabc664bcde1e3bf42f8cc499e4251
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74b24b96b28d8c5805a075a5ac1eee41173fc427
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33129537"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431995"
 ---
 # <a name="how-to-add-native-dll-to-global-assembly-cache"></a>Gewusst wie: Hinzufügen einer systemeigenen DLL zum globalen Assemblycache
-Sie können eine systemeigene DLL (nicht COM) im globalen Assemblycache ablegen.  
-  
-## <a name="example"></a>Beispiel  
- **/ ASSEMBLYLINKRESOURCE** können Sie eine systemeigene DLL in eine Assembly einzubetten.  
-  
- Weitere Informationen finden Sie unter [/ASSEMBLYLINKRESOURCE (Mit .NET Framework-Ressource verknüpfen)](../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md).  
-  
-```  
-/ASSEMBLYLINKRESOURCE:MyComponent.dll  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+
+Sie können eine systemeigene DLL (nicht "COM") im globalen Assemblycache einfügen.
+
+## <a name="example"></a>Beispiel
+
+**/ ASSEMBLYLINKRESOURCE** können Sie eine systemeigene DLL in eine Assembly einzubetten.
+
+Weitere Informationen finden Sie unter [/ASSEMBLYLINKRESOURCE (Mit .NET Framework-Ressource verknüpfen)](../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md).
+
+```
+/ASSEMBLYLINKRESOURCE:MyComponent.dll
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

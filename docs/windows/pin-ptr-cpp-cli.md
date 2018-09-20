@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af0cfe6f3a94aa1bc2afc4e4857864f81099567e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: de7f4c94ec0d9cb5a9a57315ebda015b7737132c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591730"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392761"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
 
@@ -51,16 +51,16 @@ Ein *festen Zeiger* ein innerer Zeiger, der verhindert, das Objekt dass verweist
 
 ### <a name="parameters"></a>Parameter
 
-*cv_qualifier*  
+*cv_qualifier*<br/>
 **const** oder **flüchtige** Qualifizierer. Standardmäßig ist ein fester Zeiger **flüchtige**. Es ist redundant, jedoch nicht um einen Fehler, deklarieren einen festen Zeiger **flüchtige**.
 
-*Typ*  
+*Typ*<br/>
 Der Typ des *Initialisierer*.
 
-*var*  
+*var*<br/>
 Der Name des der **Pin_ptr** Variable.
 
-*initializer*  
+*initializer*<br/>
 Ein Member eines Verweistyps, Element eines verwalteten Arrays oder jedes andere Objekt, das Sie in einen systemeigenen Zeiger zuweisen können.
 
 ### <a name="remarks"></a>Hinweise

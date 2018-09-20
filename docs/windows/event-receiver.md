@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 23607eb9d59a5c860d89444205c675c95e2b907e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d30ac0d2e1d18b22c6130212503576f5fe343a8d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594068"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407535"
 ---
 # <a name="eventreceiver"></a>event_receiver
 
@@ -45,7 +45,7 @@ Erstellt einen Ereignisempfänger (Senke).
 
 ### <a name="parameters"></a>Parameter
 
-*Typ*  
+*Typ*<br/>
 Eine Enumeration von einem der folgenden Werte:
 
 - `native` für nicht verwalteten C/C++-Code (Standard für native Klassen).
@@ -58,7 +58,7 @@ Eine Enumeration von einem der folgenden Werte:
     #include <atlcom.h>
     ```
 
-*layout_dependent*  
+*layout_dependent*<br/>
 Geben Sie *Layout_dependent* nur, wenn `type` = **com**. *Layout_dependent* ist ein boolescher Wert:
 
 - **"true"** bedeutet, dass die Signatur des Delegaten, den Fall, dass Empfänger genau übereinstimmen muss, sie in dieser Quelle verknüpft sind. Der Empfänger Ereignishandlernamen müssen es sich um den in der Quellschnittstelle des relevanten Ereignisses angegebenen Namen übereinstimmen. Verwenden Sie `coclass` beim *Layout_dependent* ist **"true"**. Es ist etwas effizienter an **"true"**.
@@ -91,9 +91,9 @@ Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-c
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compilerattribute](../windows/compiler-attributes.md)  
-[event_source](../windows/event-source.md)  
-[__event](../cpp/event.md)  
-[__hook](../cpp/hook.md)  
-[__unhook](../cpp/unhook.md)  
+[Compilerattribute](../windows/compiler-attributes.md)<br/>
+[event_source](../windows/event-source.md)<br/>
+[__event](../cpp/event.md)<br/>
+[__hook](../cpp/hook.md)<br/>
+[__unhook](../cpp/unhook.md)<br/>
 [Klassenattribute](../windows/class-attributes.md)  

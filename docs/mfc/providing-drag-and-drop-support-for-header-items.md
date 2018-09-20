@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen von Drag-and-Drop-Unterstützung für Headerelemente | Microsoft Docs
+title: Bereitstellen von Drag & Drop-Unterstützung für Headerelemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf21021e204a6caf298453bab42db2aedff409c
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: b2eaa5040d34a442868a8fa6cb9f2aae08b0a6f3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928419"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407698"
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>Bereitstellen von Drag & Drop-Unterstützung für Headerelemente
-Drag & Drop-Unterstützung für Headerelemente geben an, um die HDS_DRAGDROP-Stil. Drag & Drop-Unterstützung für Headerelemente gewährt dem Benutzer die Möglichkeit, den Header-Elemente von einem Headersteuerelement neu anordnen. Standardmäßig enthält ein Bild halbtransparente ziehen Sie das Headerelement, das gezogen werden und ein visueller Indikator, der die neue Position, wenn das Headerelement gelöscht wird.  
-  
- Als können mit allgemeinen Drag-and-Drop-Funktionen Sie das Standardverhalten des Drag & Drop-erweitern, indem handlingbenachrichtigungen HDN_BEGINDRAG und HDN_ENDDRAG. Sie können die Darstellung des Bilds ziehen Sie auch anpassen, durch Überschreiben der [CHeaderCtrl::CreateDragImage](../mfc/reference/cheaderctrl-class.md#createdragimage) Memberfunktion.  
-  
+
+Drag & Drop-Unterstützung für Headerelemente geben an, um die HDS_DRAGDROP-Stil. Drag & Drop-Unterstützung für Headerelemente bietet dem Benutzer die Möglichkeit, die Headerelemente, die von einem Kopfzeilen-Steuerelement neu anzuordnen. Das Standardverhalten bietet eine halb transparente bilddarstellung des Headerelements, das gezogen wird, und einen visuellen Indikator, der die neue Position, wenn das Headerelement gelöscht wird.
+
+Wie können gemeinsame Drag & Drop-Funktionalität, Sie das Standardverhalten für Drag & Drop erweitern, indem die HDN_BEGINDRAG und HDN_ENDDRAG handlingbenachrichtigungen. Sie können die Darstellung des Bilds ziehen Sie auch anpassen, durch Überschreiben der [CHeaderCtrl::CreateDragImage](../mfc/reference/cheaderctrl-class.md#createdragimage) Member-Funktion.
+
 > [!NOTE]
->  Wenn Sie Drag & Drop-Unterstützung für ein eingebettetes Headersteuerelement in einem Listensteuerelement bereitstellen, finden Sie im Abschnitt "Erweiterte Formate" in der [Ändern der Stile von Listensteuerelementen](../mfc/changing-list-control-styles.md) Thema.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von CHeaderCtrl](../mfc/using-cheaderctrl.md)
+>  Wenn Sie Drag & Drop-Unterstützung für eine eingebettete Kopfzeilen-Steuerelement in einem Listensteuerelement bereitstellen, finden Sie im Abschnitt "Extended Style" in der [Ändern der Stile von Listensteuerelementen](../mfc/changing-list-control-styles.md) Thema.
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von CHeaderCtrl](../mfc/using-cheaderctrl.md)
 
