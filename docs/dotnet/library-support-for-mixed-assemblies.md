@@ -1,7 +1,7 @@
 ---
-title: Bibliotheksunterstützung für gemischte Assemblys | Microsoft Docs
+title: Bibliotheksunterstützung für gemischte Assemblys | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -18,41 +18,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d4b584e0bacb1cb93cad33efdff807bb5fa9c8e2
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 868cae6701e17c79c9856b3a16c63c1e25b67bda
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704110"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494516"
 ---
 # <a name="library-support-for-mixed-assemblies"></a>Bibliotheksunterstützung für verschiedene Assemblys
 
-Visual C++ unterstützt die Verwendung von der C++-Standardbibliothek der C-Laufzeitbibliothek (CRT), ATL und MFC für Anwendungen mit kompiliert [/CLR (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md). Dadurch können vorhandene Anwendungen, die diese Bibliotheken verwenden, um als auch .NET Framework-Funktionen zu verwenden.
+Visual C++ unterstützt die Verwendung von der C++-Standardbibliothek der C-Laufzeitbibliothek (CRT), ATL und MFC für Anwendungen, die mit kompiliert [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md). Dadurch können vorhandene Anwendungen, die diese Bibliotheken verwenden, um auch die .NET Framework-Funktionen zu verwenden.
 
 > [!IMPORTANT]
 > Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt werden.
 
 Diese Unterstützung umfasst die folgenden DLLs und Bibliotheken:
 
-- Msvcmrt [d] .lib beim Kompilieren mit **"/ CLR"**. Gemischte Assemblys Link in die Bibliothek importieren.
+- Msvcmrt [d]-lib, bei der Kompilierung mit **"/ CLR"**. Gemischte Assemblys-Link zu dieser Bibliothek importieren.
 
-Diese Unterstützung bietet mehrere Vorteile beziehen:
+Diese Unterstützung bietet mehrere Vorteile im Zusammenhang:
 
-- Die CRT- und C++-Standardbibliothek sind für gemischten Code verfügbar. Die CRT- und C++-Standardbibliothek, die bereitgestellt sind nicht überprüfbar. Ihre Aufrufe werden letztlich weiterhin auf dem CRT- und C++-Standardbibliothek weitergeleitet, wie Sie von systemeigenem Code verwenden.
+- Die CRT- und C++-Standardbibliothek sind für den gemischten Code verfügbar. Die CRT- und C++-Standardbibliothek, die bereitgestellt sind nicht überprüfbar. Letztendlich werden Ihre Aufrufe immer noch auf die gleiche CRT- und C++-Standardbibliothek weitergeleitet, wie die Verwendung von systemeigenem Code.
 
-- Beheben Sie einheitliche Ausnahmebehandlung in gemischten Bildern.
+- Richtige einheitliche Behandlung von Ausnahmen in gemischte Bilder.
 
-- Statischen Initialisierung der C++-Variablen im gemischten Bilder.
+- Statischen Initialisierung der C++-Variablen in gemischten Bildern.
 
-- Unterstützung für pro-AppDomain- und pro-Prozess-Variablen in verwaltetem Code.
+- Unterstützung für pro-AppDomain und prozessspezifische Variablen in verwaltetem Code.
 
-- Aufgelöst Loader Sperre Probleme, die in gemischten DLLs kompiliert in Visual Studio 2003 und früher angewendet wird.
+- Löst den Problemen mit Loadersperren, die auf den gemischten DLLs kompiliert in Visual Studio 2003 und früheren Versionen angewendet.
 
 Diese Unterstützung stellt darüber hinaus die folgenden Einschränkungen:
 
-- Nur die CRT-DLL-Modell wird unterstützt, um kompilierten Code mit **"/ CLR"**. Es sind keine statischen CRT-Bibliotheken, die Unterstützung **"/ CLR"** erstellt.
+- Nur die CRT-DLL-Modell wird unterstützt, für die Kompilierung von Code mit **"/ CLR"**. Es gibt keine statischen CRT-Bibliotheken, die Unterstützung von **"/ CLR"** erstellt.
 
-Sie sollten die common Language Runtime (CLR) auf die aktuelle Version aktualisieren, da nicht gewährleistet ist, arbeiten mit früheren Versionen. Mit diesen Änderungen erstellte Code wird nicht ausgeführt, in CLR-Version 1.x.
 
 ## <a name="see-also"></a>Siehe auch
 
