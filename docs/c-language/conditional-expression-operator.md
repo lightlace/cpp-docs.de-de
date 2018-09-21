@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94dffb5f52d84027cd59762478bd7d6b5f6738d6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2037d64aba025b9acf8279a3da9073611d11ce8e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751769"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107909"
 ---
 # <a name="conditional-expression-operator"></a>Bedingter Ausdrucksoperator
+
 C hat einen ternären Operator: den bedingten Ausdrucksoperator (**? :**).
 
 ## <a name="syntax"></a>Syntax
@@ -34,23 +35,23 @@ C hat einen ternären Operator: den bedingten Ausdrucksoperator (**? :**).
 
 Der Ausdruck für *logical-OR-expression* muss über Ganzzahl-, Gleitkomma- oder Zeigertypen verfügen. Er wird hinsichtlich seiner Übereinstimmung mit 0 ausgewertet. Ein Sequenzpunkt folgt dem Ausdruck für *logical-OR-expression*. Die Auswertung der Operanden wird wie folgt ausgeführt:
 
--   Wenn der Ausdruck für *logical-OR-expression* ungleich 0 ist, wird *expression* ausgewertet. Das Ergebnis der Auswertung des Ausdrucks wird durch den Nichtterminal *expression* angegeben. (Dies bedeutet, dass *expression* nur ausgewertet wird, wenn der Ausdruck für *logical-OR-expression* „true“ ist.)
+- Wenn der Ausdruck für *logical-OR-expression* ungleich 0 ist, wird *expression* ausgewertet. Das Ergebnis der Auswertung des Ausdrucks wird durch den Nichtterminal *expression* angegeben. (Dies bedeutet, dass *expression* nur ausgewertet wird, wenn der Ausdruck für *logical-OR-expression* „true“ ist.)
 
--   Wenn der Ausdruck für *logical-OR-expression* gleich 0 ist, wird *conditional-expression* ausgewertet. Das Ergebnis des Ausdrucks ist der Wert von *conditional-expression*. (Dies bedeutet, dass *conditional-expression* nur ausgewertet wird, wenn der Ausdruck für *logical-OR-expression* „false“ ist.)
+- Wenn der Ausdruck für *logical-OR-expression* gleich 0 ist, wird *conditional-expression* ausgewertet. Das Ergebnis des Ausdrucks ist der Wert von *conditional-expression*. (Dies bedeutet, dass *conditional-expression* nur ausgewertet wird, wenn der Ausdruck für *logical-OR-expression* „false“ ist.)
 
 Es wird entweder nur *expression* oder *conditional-expression* ausgewertet, jedoch nicht beide.
 
 Der Typ des Ergebnisses einer bedingten Operation hängt wie folgt vom Typ des Operands *expression* oder *conditional-expression* ab:
 
--   Wenn *expression* oder *conditional-expression* über einen Ganzzahl- oder Gleitkommatyp verfügt (ihre Typen können unterschiedlich sein), führt der Operator die üblichen arithmetischen Konvertierungen aus. Der Ergebnistyp ist der Typ der Operanden nach der Konvertierung.
+- Wenn *expression* oder *conditional-expression* über einen Ganzzahl- oder Gleitkommatyp verfügt (ihre Typen können unterschiedlich sein), führt der Operator die üblichen arithmetischen Konvertierungen aus. Der Ergebnistyp ist der Typ der Operanden nach der Konvertierung.
 
--   Wenn sowohl *expression* als auch *conditional-expression* denselben Struktur-, Union- oder Zeigertyp aufweisen, ist der Typ des Ergebnisses derselbe Struktur-, Union- oder Zeigertyp.
+- Wenn sowohl *expression* als auch *conditional-expression* denselben Struktur-, Union- oder Zeigertyp aufweisen, ist der Typ des Ergebnisses derselbe Struktur-, Union- oder Zeigertyp.
 
--   Wenn beide Operanden den Typ `void` haben, hat das Ergebnis den Typ `void`.
+- Wenn beide Operanden den Typ `void` haben, hat das Ergebnis den Typ `void`.
 
--   Wenn einer der Operanden ein Zeiger auf ein Objekt eines beliebigen Typs und der andere Operand ein Zeiger auf `void` ist, wird der Zeiger auf das Objekt in einen Zeiger auf einen `void` konvertiert, und das Ergebnis ist ein Zeiger auf `void`.
+- Wenn einer der Operanden ein Zeiger auf ein Objekt eines beliebigen Typs und der andere Operand ein Zeiger auf `void` ist, wird der Zeiger auf das Objekt in einen Zeiger auf einen `void` konvertiert, und das Ergebnis ist ein Zeiger auf `void`.
 
--   Wenn *expression* oder *conditional-expression* ein Zeiger und der andere Operand ein konstanter Ausdruck mit dem Wert 0 ist, ist der Typ des Ergebnisses der Zeigertyp.
+- Wenn *expression* oder *conditional-expression* ein Zeiger und der andere Operand ein konstanter Ausdruck mit dem Wert 0 ist, ist der Typ des Ergebnisses der Zeigertyp.
 
 Im Typvergleich für Zeiger sind alle Typqualifizierer (**const** oder `volatile`) in dem Typ, auf den der Zeiger weist, nicht signifikant. Der Ergebnistyp erbt jedoch die Qualifizierer von beiden Komponenten des bedingten Operators.
 
