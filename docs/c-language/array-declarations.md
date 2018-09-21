@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ee1c3be0ecc06dd2ccfb28882b6dc99912d7e13
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d776adab3404bf1244c7365e905866b4d041fc00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762475"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091908"
 ---
 # <a name="array-declarations"></a>Arraydeklarationen
 
@@ -48,9 +48,9 @@ Eine "Arraydeklaration" benennt das Array und gibt den Typ der Elemente an. Hier
 
 Da *constant-expression* optional ist, hat die Syntax zwei Formen:
 
--   Die erste Form definiert eine Arrayvariable. Das *constant-expression*-Argument innerhalb der Klammern gibt die Anzahl von Elementen im Array an. *constant-expression*, falls vorhanden, muss einen ganzzahligen Typ und einen Wert aufweisen, der größer als null ist. Jedes Element weist den Typ auf, der von *type-specifier* angegeben ist, der ein beliebiger Typ außer `void` sein kann. Ein Arrayelement darf kein Funktionstyp sein.
+- Die erste Form definiert eine Arrayvariable. Das *constant-expression*-Argument innerhalb der Klammern gibt die Anzahl von Elementen im Array an. *constant-expression*, falls vorhanden, muss einen ganzzahligen Typ und einen Wert aufweisen, der größer als null ist. Jedes Element weist den Typ auf, der von *type-specifier* angegeben ist, der ein beliebiger Typ außer `void` sein kann. Ein Arrayelement darf kein Funktionstyp sein.
 
--   Die zweite Form deklariert eine Variable, die an einer anderen Stelle definiert wurde. Sie lässt das *constant-expression*-Argument in Klammern weg, aber nicht die Klammern. Sie können diese Form nur dann verwenden, wenn Sie das Array zuvor initialisiert und als Parameter oder als Verweis auf ein Array deklariert haben, das explizit an anderer Stelle im Programm definiert ist.
+- Die zweite Form deklariert eine Variable, die an einer anderen Stelle definiert wurde. Sie lässt das *constant-expression*-Argument in Klammern weg, aber nicht die Klammern. Sie können diese Form nur dann verwenden, wenn Sie das Array zuvor initialisiert und als Parameter oder als Verweis auf ein Array deklariert haben, das explizit an anderer Stelle im Programm definiert ist.
 
 Bei beiden Formen vergibt *direct-declarator* den Namen der Variable und kann den Typ der Variable ändern. Die Klammern (**[ ]**) nach *direct-declarator* ändern den Deklarator in einen Arraytyp.
 
@@ -75,6 +75,7 @@ Die drei Spalten der ersten Zeile werden zuerst gespeichert, danach folgen die d
 Um auf ein einzelnes Element eines Arrays zu verweisen, verwenden Sie einen Subscriptausdruck, wie unter [Postfix-Operatoren](../c-language/postfix-operators.md) beschrieben.
 
 ## <a name="examples"></a>Beispiele
+
 Diese Beispiele veranschaulichen Arraydeklarationen:
 
 ```C

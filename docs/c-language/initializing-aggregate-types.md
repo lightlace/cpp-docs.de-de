@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bfd0715acd7eb18c4ccc83d496a1e9a98084fdf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8a58338d980db5acd8f41c71e23c37c1700a0761
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757948"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055116"
 ---
 # <a name="initializing-aggregate-types"></a>Initialisierung von Aggregattypen
 
@@ -109,13 +109,13 @@ triplet nlist[2][3] =
 
 In diesem Beispiel wird `nlist` als ein 2-mal-3-Array von Strukturen deklariert, wobei jede Struktur über drei Member verfügt. Zeile 1 der Initialisierung weist Werte zur ersten Zeile von `nlist` zu, und zwar wie folgt:
 
-1.  Die erste linke geschweifte Klammer in Zeile 1 signalisiert dem Compiler, dass die Initialisierung des ersten aggregierten Members von `nlist` (also `nlist[0]`) beginnt.
+1. Die erste linke geschweifte Klammer in Zeile 1 signalisiert dem Compiler, dass die Initialisierung des ersten aggregierten Members von `nlist` (also `nlist[0]`) beginnt.
 
-2.  Die zweite linke geschweifte Klammer gibt an, dass die Initialisierung des ersten aggregierten Members von `nlist[0]` (also die Struktur unter `nlist[0][0]`) beginnt.
+1. Die zweite linke geschweifte Klammer gibt an, dass die Initialisierung des ersten aggregierten Members von `nlist[0]` (also die Struktur unter `nlist[0][0]`) beginnt.
 
-3.  Die erste rechte geschweifte Klammer beendet die Initialisierung der Struktur `nlist[0][0]`. Die folgende linke geschweifte Klammer leitet die Initialisierung von `nlist[0][1]` ein.
+1. Die erste rechte geschweifte Klammer beendet die Initialisierung der Struktur `nlist[0][0]`. Die folgende linke geschweifte Klammer leitet die Initialisierung von `nlist[0][1]` ein.
 
-4.  Der Prozess wird bis zum Ende der Zeile fortgesetzt, in der die schließende rechte geschweifte Klammer die Initialisierung von `nlist[0]` beendet.
+1. Der Prozess wird bis zum Ende der Zeile fortgesetzt, in der die schließende rechte geschweifte Klammer die Initialisierung von `nlist[0]` beendet.
 
 Zeile 2 weist auf ähnliche Weise Werte zur zweiten Zeile von `nlist` zu. Beachten Sie, dass die äußeren Gruppen von geschweiften Klammern, welche die Initialisierer in den Zeilen 1 und 2 enthalten, erforderlich sind. Die folgende Konstruktion, in der die äußeren Klammern weggelassen sind, würde einen Fehler verursachen:
 

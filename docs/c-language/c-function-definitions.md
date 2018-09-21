@@ -22,14 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 265dfe599d4c3586b350787baab5977562326991
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cbfc7e7bd6a3f2ef727a0cc259f222afad0ab555
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757681"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055233"
 ---
 # <a name="c-function-definitions"></a>C-Funktionsdefinitionen
+
 Eine Funktionsdefinition gibt den Namen der Funktion, die Typen und die Zahl der Parameter, die sie erwartungsgemäß empfangen wird, und ihren Rückgabetyp an. Eine Funktionsdefinition enthält auch einen Funktionsrumpf mit den Deklarationen ihrer lokalen Variablen und die Anweisungen, die bestimmen, was die Funktion durchführt.
 
 ## <a name="syntax"></a>Syntax
@@ -103,4 +104,5 @@ Die *compound-statement* ist der Funktionsrumpf, der lokale Variablendeklaration
 Die Abschnitte [Funktionsattribute](../c-language/function-attributes.md), [Speicherklasse](../c-language/storage-class.md), [Rückgabetyp](../c-language/return-type.md), [Parameter](../c-language/parameters.md) und [Funktionsrumpf](../c-language/function-body.md) beschreiben die Komponenten der Funktionsdefinition im Detail.
 
 ## <a name="see-also"></a>Siehe auch
+
 [Funktionen](../c-language/functions-c.md)
