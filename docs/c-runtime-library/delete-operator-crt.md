@@ -25,12 +25,13 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d11aa80eb3c1f8e56ccd27d29319fe5c71e53c4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 72eb8f75a882912a9d481109f44a6a7a67c0bb1f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388395"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097704"
 ---
 # <a name="operator-deletecrt"></a>Operator delete(CRT)
-Ab Visual Studio 2013 unterstützt die Universal C Runtime (UCRT) die C++-spezifischen Funktionen „operator new“ und „operator delete“ nicht mehr. Diese gehören jetzt zur C++-Standardbibliothek. Weitere Informationen finden Sie in der C++-Sprachreferenz unter [Operatoren „new“ und „delete“](../cpp/new-and-delete-operators.md) und [Operator „delete“](../cpp/delete-operator-cpp.md). 
+
+Ab Visual Studio 2013 unterstützt die Universal C Runtime (UCRT) die C++-spezifischen Funktionen „operator new“ und „operator delete“ nicht mehr. Diese gehören jetzt zur C++-Standardbibliothek. Weitere Informationen finden Sie in der C++-Sprachreferenz unter [Operatoren „new“ und „delete“](../cpp/new-and-delete-operators.md) und [Operator „delete“](../cpp/delete-operator-cpp.md).
