@@ -18,39 +18,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd1dc3ba92201567f24aa84ff8dddcd96798b38
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 8ccd140a1e132cc260c47b00365e03c32acf5cdf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339195"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721580"
 ---
 # <a name="hlsl-property-pages-output-files"></a>Eigenschaftenseiten "HLSL": "Ausgabedateien"
 Verwenden Sie zum Konfigurieren der folgenden Eigenschaften des HLSL-Compilers („fxc.exe“) die Eigenschaft **Ausgabedateien**. Informationen über das Zugreifen auf die Eigenschaftenseite **Ausgabedateien** im Ordner „HLSL“ finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md).  
   
 ## <a name="uielement-list"></a>UIElement-Liste  
- **Header-Variablenname**  
- Gibt den Namen eines Arrays an, das zum Codieren von HLSL-Objektcode verwendet wird. Das Array ist in einer Headerdatei enthalten, die vom HLSL-Compiler ausgegeben wird. Der Name der Headerdatei wird von der Eigenschaft **Headerdateiname** angegeben.  
+- **Header-Variablenname**
+
+   Gibt den Namen eines Arrays an, das zum Codieren von HLSL-Objektcode verwendet wird. Das Array ist in einer Headerdatei enthalten, die vom HLSL-Compiler ausgegeben wird. Der Name der Headerdatei wird von der Eigenschaft **Headerdateiname** angegeben.  
   
  Diese Eigenschaft entspricht dem Befehlszeilenargument **/Vn[name]**.  
   
- **Headerdateiname**  
- Gibt den Namen der Headerdatei an, die vom HLSL-Compiler ausgegeben wird. Der Header enthält HLSL-Objektcode, der in ein Array codiert wird. Der Name des Arrays wird von der Eigenschaft **Header-Variablenname** angegeben.  
+- **Headerdateiname**
+
+   Gibt den Namen der Headerdatei an, die vom HLSL-Compiler ausgegeben wird. Der Header enthält HLSL-Objektcode, der in ein Array codiert wird. Der Name des Arrays wird von der Eigenschaft **Header-Variablenname** angegeben.  
   
  Diese Eigenschaft entspricht dem Befehlszeilenargument **/Fh[name]**.  
   
- **Objektdateiname**  
- Gibt den Namen der Objektdatei an, die vom HLSL-Compiler ausgegeben wird. Der Wert ist standardmäßig **$(OutDir)%(Filename).cso**.  
+- **Objektdateiname**
+
+   Gibt den Namen der Objektdatei an, die vom HLSL-Compiler ausgegeben wird. Der Wert ist standardmäßig **$(OutDir)%(Filename).cso**.  
   
  Diese Eigenschaft entspricht dem Befehlszeilenargument **/Fo[name]**.  
   
- **Assemblyausgabe**  
- Verwenden Sie **Nur die Assembly auflisten (/Fc)**, um nur Assemblysprachanweisungen auszugeben. Verwenden Sie **Assemblycode und -Hexadezimalwerte (/Fx)**, um Assemblysprachanweisungen und den entsprechenden Op-Code in hexadezimal auszugeben. Standardmäßig wird keine Auflistung ausgegeben.  
+- **Assemblyausgabe**
+
+   Verwenden Sie **Nur die Assembly auflisten (/Fc)**, um nur Assemblysprachanweisungen auszugeben. Verwenden Sie **Assemblycode und -Hexadezimalwerte (/Fx)**, um Assemblysprachanweisungen und den entsprechenden Op-Code in hexadezimal auszugeben. Standardmäßig wird keine Auflistung ausgegeben.  
   
- **Assembler-Ausgabedatei**  
- Gibt den Namen der Assemblylistingdatei an, die vom HLSL-Compiler ausgegeben wird.  
+- **Assembler-Ausgabedatei**
+
+   Gibt den Namen der Assemblylistingdatei an, die vom HLSL-Compiler ausgegeben wird.  
   
- Diese Eigenschaft entspricht den Befehlszeilenargumenten **/Fc[name]** und **/Fx [name]**.  
+   Diese Eigenschaft entspricht den Befehlszeilenargumenten **/Fc[name]** und **/Fx [name]**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [HLSL Property Pages (HLSL-Eigenschaftenseiten)](../ide/hlsl-property-pages.md)   

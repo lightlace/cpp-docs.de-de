@@ -15,16 +15,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: bbc19b4c8e698c520be2283376ac5297cdae33df
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 346e83461fd9dbfb7635b85e8765d241564d3157
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900511"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708005"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurieren eines Linux CMake-Projekts
 
-**Visual Studio 2017, Version 15.4 und höher**  
+**Visual Studio 2017, Version 15.4 und höher**<br/>
 Wenn Sie unter Linux die C++-Workload für Visual Studio installieren, ist standardmäßig CMake-Unterstützung für Linux aktiviert. Sie können nun an Ihrer bestehenden Codebasis arbeiten, die CMake-verwendet, ohne sie in ein Visual Studio-Projekt konvertieren zu müssen. Wenn Ihre Codebasis plattformübergreifend ist, können Sie sowohl Windows als auch Linux in Visual Studio als Ziel verwenden.
 
 Dieses Thema setzt voraus, dass Sie über grundlegende Kenntnisse der CMake-Unterstützung in Visual Studio verfügen. Weitere Informationen finden Sie unter [CMake-Tools für Visual C++](../ide/cmake-tools-for-visual-cpp.md). Weitere Informationen zu CMake selbst finden Sie unter [Erstellen, Testen und Paketerstellung Ihrer Software mit CMake](https://cmake.org/).
@@ -65,7 +65,7 @@ Nachdem Sie ein Linux-Ziel angegeben haben, wird Ihre Quelle auf den Linux-Compu
 
 ![Generieren des CMake-Caches unter Linux](media/cmake-linux-1.png "Generieren des CMake-Caches unter Linux")
 
-**Visual Studio 2017, Version 15.7 und höher**:  
+**Visual Studio 2017, Version 15.7 und höher**:<br/>
 Um IntelliSense-Unterstützung für Remoteheader bereitzustellen, kopiert Visual Studio diese automatisch in ein Verzeichnis auf dem lokalen Windows-Computer. Weitere Informationen finden Sie unter [IntelliSense für Remoteheader (Visual Studio 2017-Version 15.7 und höher)](configure-a-linux-project.md#remote_intellisense).
 
 ## <a name="debug-the-project"></a>Debuggen des Projekts

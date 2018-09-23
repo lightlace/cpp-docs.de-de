@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f3995b1a7227e4d2f0a531c86726b84e960d8ec
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c4e7d5fb707c455aa7b7fb9f0e14dff95ee5633f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340488"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703357"
 ---
 # <a name="specify-release-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>Einstellungen für Releasekonfiguration angeben, Assistent "Neues Projekt aus vorhandenen Codedateien erstellen"
 Verwenden Sie diese Seite des Assistenten zum Erstellen eines neuen Projekts aus vorhandenen Codedateien, um die Releasekonfiguration der Projekteinstellungen anzugeben.  
@@ -28,35 +28,45 @@ Verwenden Sie diese Seite des Assistenten zum Erstellen eines neuen Projekts aus
  [Vorgehensweise: Erstellen eines C++-Projekts aus vorhandenem Code](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
   
 ## <a name="uielement-list"></a>UIElement-Liste  
- **Identisch mit der Debugkonfiguration**  
- Gibt an, dass der Assistent die Projekteinstellungen der Releasekonfiguration identisch mit den Projekteinstellungen für die Debugkonfiguration erstellt. Diese Option ist standardmäßig aktiviert. Alle anderen Optionen auf dieser Seite sind inaktiv, es sei denn, Sie deaktivieren dieses Kontrollkästchen.  
+- **Identisch mit der Debugkonfiguration**
+
+   Gibt an, dass der Assistent die Projekteinstellungen der Releasekonfiguration identisch mit den Projekteinstellungen für die Debugkonfiguration erstellt. Diese Option ist standardmäßig aktiviert. Alle anderen Optionen auf dieser Seite sind inaktiv, es sei denn, Sie deaktivieren dieses Kontrollkästchen.  
   
- **Buildbefehlszeile**  
- Gibt die Befehlszeile an, mit der das neue Projekt erstellt wird. Geben Sie den Namen des Compilers einschließlich aller Parameter und Argumente an, den Sie zum Erstellen des neuen Projekts verwenden möchten. Diese Option ist aktiviert, wenn die Option **Use external build system** (Externes Buildsystem verwenden) auf der Seite **Projekteinstellungen angeben** ausgewählt ist.  
+- **Buildbefehlszeile**
+
+   Gibt die Befehlszeile an, mit der das neue Projekt erstellt wird. Geben Sie den Namen des Compilers einschließlich aller Parameter und Argumente an, den Sie zum Erstellen des neuen Projekts verwenden möchten. Diese Option ist aktiviert, wenn die Option **Use external build system** (Externes Buildsystem verwenden) auf der Seite **Projekteinstellungen angeben** ausgewählt ist.  
   
- **Neuerstellungsbefehlszeile**  
- Gibt die Befehlszeile an, mit der das neue Projekt neu erstellt wird. Diese Option ist aktiviert, wenn die Option **Use external build system** (Externes Buildsystem verwenden) auf der Seite **Projekteinstellungen angeben** ausgewählt ist.  
+- **Neuerstellungsbefehlszeile**
+
+   Gibt die Befehlszeile an, mit der das neue Projekt neu erstellt wird. Diese Option ist aktiviert, wenn die Option **Use external build system** (Externes Buildsystem verwenden) auf der Seite **Projekteinstellungen angeben** ausgewählt ist.  
   
- **Befehlszeile „Bereinigen“**  
- Gibt die Befehlszeile zum Löschen der von den Buildtools für das neue Projekt erstellten Unterstützungsdateien an. Diese Option ist aktiviert, wenn die Option **Use external build system** (Externes Buildsystem verwenden) auf der Seite **Projekteinstellungen angeben** ausgewählt ist.  
+- **Befehlszeile „Bereinigen“**
+
+   Gibt die Befehlszeile zum Löschen der von den Buildtools für das neue Projekt erstellten Unterstützungsdateien an. Diese Option ist aktiviert, wenn die Option **Use external build system** (Externes Buildsystem verwenden) auf der Seite **Projekteinstellungen angeben** ausgewählt ist.  
   
- **Ausgabe (zum Debuggen)**  
- Gibt den Verzeichnispfad der Ausgabedateien für die Debugkonfiguration des neuen Projekts an. Diese Option ist aktiviert, wenn die Option **Use external build system** (Externes Buildsystem verwenden) auf der Seite **Projekteinstellungen angeben** ausgewählt ist.  
+- **Ausgabe (zum Debuggen)**
+
+   Gibt den Verzeichnispfad der Ausgabedateien für die Debugkonfiguration des neuen Projekts an. Diese Option ist aktiviert, wenn die Option **Use external build system** (Externes Buildsystem verwenden) auf der Seite **Projekteinstellungen angeben** ausgewählt ist.  
   
- **Präprozessordefinitionen (/D)**  
- Definiert Präprozessorsymbole für das neue Projekt. Weitere Informationen finden Sie unter [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md).  
+- **Präprozessordefinitionen (/D)**
+
+   Definiert Präprozessorsymbole für das neue Projekt. Weitere Informationen finden Sie unter [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md).  
   
- **Includesuchpfad (/I)**  
- Gibt Verzeichnispfade an, die der Liste von Verzeichnissen hinzugefügt werden sollen, die der Compiler sucht, um Dateiverweise aufzulösen, die an Präprozessordirektiven im neuen Projekt übergeben werden. Weitere Informationen finden Sie unter [/I (Zusätzliche Includeverzeichnisse)](../build/reference/i-additional-include-directories.md).  
+- **Includesuchpfad (/I)**
+
+   Gibt Verzeichnispfade an, die der Liste von Verzeichnissen hinzugefügt werden sollen, die der Compiler sucht, um Dateiverweise aufzulösen, die an Präprozessordirektiven im neuen Projekt übergeben werden. Weitere Informationen finden Sie unter [/I (Zusätzliche Includeverzeichnisse)](../build/reference/i-additional-include-directories.md).  
   
- **Erzwungene Includedateien (/FI)**  
- Gibt Headerdateien an, die beim Erstellen des neuen Projekts verarbeitet werden. Weitere Informationen finden Sie unter [/FI (Name der expliziten Includedatei)](../build/reference/fi-name-forced-include-file.md).  
+- **Erzwungene Includedateien (/FI)**
+
+   Gibt Headerdateien an, die beim Erstellen des neuen Projekts verarbeitet werden. Weitere Informationen finden Sie unter [/FI (Name der expliziten Includedatei)](../build/reference/fi-name-forced-include-file.md).  
   
- **.NET-Assemblysuchpfad (/AI)**  
- Gibt die Verzeichnispfade an, die der Compiler durchsucht, um .NET-Assemblyverweise aufzulösen, die an Präprozessordirektiven im neuen Projekt übergeben werden. Weitere Informationen finden Sie unter [/AI (Metadatenverzeichnisse festlegen)](../build/reference/ai-specify-metadata-directories.md).  
+- **.NET-Assemblysuchpfad (/AI)**
+
+   Gibt die Verzeichnispfade an, die der Compiler durchsucht, um .NET-Assemblyverweise aufzulösen, die an Präprozessordirektiven im neuen Projekt übergeben werden. Weitere Informationen finden Sie unter [/AI (Metadatenverzeichnisse festlegen)](../build/reference/ai-specify-metadata-directories.md).  
   
- **Erzwungene Verwendung von .NET-Assemblys (/FU)**  
- Gibt .NET-Assemblys an, die beim Erstellen des neuen Projekts verarbeitet werden. Weitere Informationen finden Sie unter [/FU (Name der expliziten #using-Datei)](../build/reference/fu-name-forced-hash-using-file.md).  
+- **Erzwungene Verwendung von .NET-Assemblys (/FU)**
+
+   Gibt .NET-Assemblys an, die beim Erstellen des neuen Projekts verarbeitet werden. Weitere Informationen finden Sie unter [/FU (Name der expliziten #using-Datei)](../build/reference/fu-name-forced-hash-using-file.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Projekteinstellungen angeben, Assistent "Neues Projekt aus vorhandenen Codedateien erstellen"](../ide/specify-project-settings-create-new-project-from-existing-code-files-wizard.md)

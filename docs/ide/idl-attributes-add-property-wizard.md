@@ -14,27 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12fee7eadecbd81e3c4e410d254de50bcf3a9ac0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7da654321dfae520f458374654a21a9e8ebb98f5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208825"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706649"
 ---
 # <a name="idl-attributes-add-property-wizard"></a>IDL-Attribute, Assistent zum Hinzufügen von Eigenschaften
 Verwenden Sie diese Seite des Assistenten zum Hinzufügen von Eigenschaften, um IDL-Einstellungen (Interface Definiton Language) für die Eigenschaft anzugeben.  
   
- **ID**  
- Legt die numerische ID fest, die die Eigenschaft identifiziert. Diese Option ist nicht für Eigenschaften von benutzerdefinierten Schnittstellen verfügbar. Informationen finden Sie in der *MIDL-Referenz* unter [id](/windows/desktop/Midl/id).  
+- **ID**
+
+   Legt die numerische ID fest, die die Eigenschaft identifiziert. Diese Option ist nicht für Eigenschaften von benutzerdefinierten Schnittstellen verfügbar. Informationen finden Sie in der *MIDL-Referenz* unter [id](/windows/desktop/Midl/id).  
   
- **helpcontext**  
- Gibt eine Kontext-ID an, die das Anzeigen von Informationen über diese Eigenschaft in der Hilfedatei ermöglicht. Informationen finden Sie in der *MIDL-Referenz* unter [helpcontext](/windows/desktop/Midl/helpcontext).  
+- **helpcontext**
+
+   Gibt eine Kontext-ID an, die das Anzeigen von Informationen über diese Eigenschaft in der Hilfedatei ermöglicht. Informationen finden Sie in der *MIDL-Referenz* unter [helpcontext](/windows/desktop/Midl/helpcontext).  
   
- **helpstring**  
- Gibt eine Zeichenfolge an, die zum Beschreiben des Elements verwendet wird, auf das sie angewendet wird. Wird standardmäßig auf „property *Eigenschaftenname*“ festgelegt. Informationen finden Sie in der *MIDL-Referenz* unter [helpstring](/windows/desktop/Midl/helpstring).  
+- **helpstring**
+
+   Gibt eine Zeichenfolge an, die zum Beschreiben des Elements verwendet wird, auf das sie angewendet wird. Wird standardmäßig auf „property *Eigenschaftenname*“ festgelegt. Informationen finden Sie in der *MIDL-Referenz* unter [helpstring](/windows/desktop/Midl/helpstring).  
   
 ## <a name="other-options"></a>Weitere Optionen  
- Nicht alle Optionen sind für alle Eigenschaftentypen verfügbar.  
+
+Nicht alle Optionen sind für alle Eigenschaftentypen verfügbar.  
   
 |Option|Beschreibung |  
 |------------|-----------------|  
