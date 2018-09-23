@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0f59b802b5a24c1b449f78cccee4744538a5a0e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a75bb6034c8f4c5a80bb64238c26ea599395ff96
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33338945"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705612"
 ---
 # <a name="specify-project-settings-create-new-project-from-existing-code-files-wizard"></a>Projekteinstellungen angeben, Assistent "Neues Projekt aus vorhandenen Codedateien erstellen"
 Verwenden Sie diese Seite des Assistenten zum Erstellen eines neuen Projekts aus vorhandenen Codedateien, um Folgendes anzugeben:  
@@ -31,47 +31,60 @@ Verwenden Sie diese Seite des Assistenten zum Erstellen eines neuen Projekts aus
 -   Buildeinstellungen, die dem spezifischen Typ des zu erstellenden Projekts entsprechen  
   
 ## <a name="task-list"></a>Aufgabenliste  
- [Vorgehensweise: Erstellen eines C++-Projekts aus vorhandenem Code](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
+
+[Vorgehensweise: Erstellen eines C++-Projekts aus vorhandenem Code](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
   
 ## <a name="uielement-list"></a>UIElement-Liste  
- **Visual Studio verwenden**  
- Gibt an, dass Buildtools verwendet werden sollen, die zum Erstellen des neuen Projekts in Visual Studio enthalten sind. Diese Option ist standardmäßig ausgewählt.  
+- **Visual Studio verwenden**
+
+   Gibt an, dass Buildtools verwendet werden sollen, die zum Erstellen des neuen Projekts in Visual Studio enthalten sind. Diese Option ist standardmäßig ausgewählt.  
   
- **Projekttyp**  
- Gibt den Typ des Projekts an, das vom Assistenten generiert wird.  
+- **Projekttyp**
+
+   Gibt den Typ des Projekts an, das vom Assistenten generiert wird.  
   
- **Windows-Anwendungsprojekt**  
- Gibt an, dass der Assistent ein Projekt für eine ausführbare Windows-Anwendung generiert. Diese Option ist im Dropdownlistenfeld **Projekttyp** verfügbar.  
+- **Windows-Anwendungsprojekt**
+
+   Gibt an, dass der Assistent ein Projekt für eine ausführbare Windows-Anwendung generiert. Diese Option ist im Dropdownlistenfeld **Projekttyp** verfügbar.  
   
- **Konsolenanwendungsprojekt**  
- Gibt an, dass der Assistent ein Projekt für eine Konsolenanwendung generiert. Diese Option ist im Dropdownlistenfeld **Projekttyp** verfügbar.  
+- **Konsolenanwendungsprojekt**
+
+   Gibt an, dass der Assistent ein Projekt für eine Konsolenanwendung generiert. Diese Option ist im Dropdownlistenfeld **Projekttyp** verfügbar.  
   
- **DLL-Projekt (Dynamic Link Library)**  
- Gibt an, dass der Assistent ein Projekt für eine leere DLL-Anwendung generiert. Diese Option ist im Dropdownlistenfeld **Projekttyp** verfügbar.  
+- **DLL-Projekt (Dynamic Link Library)**
+
+   Gibt an, dass der Assistent ein Projekt für eine leere DLL-Anwendung generiert. Diese Option ist im Dropdownlistenfeld **Projekttyp** verfügbar.  
   
- **LIB-Projekt (Static Library, Statische Bibliothek)**  
- Gibt an, dass der Assistent ein Projekt für eine LIB-Anwendung generiert. Diese Option ist im Dropdownlistenfeld **Projekttyp** verfügbar.  
+- **LIB-Projekt (Static Library, Statische Bibliothek)**
+
+   Gibt an, dass der Assistent ein Projekt für eine LIB-Anwendung generiert. Diese Option ist im Dropdownlistenfeld **Projekttyp** verfügbar.  
   
- **ATL-Unterstützung hinzufügen**  
- Fügt dem neuen Projekt ATL-Unterstützung hinzu.  
+- **ATL-Unterstützung hinzufügen**
+
+   Fügt dem neuen Projekt ATL-Unterstützung hinzu.  
   
- **MFC-Unterstützung hinzufügen**  
- Fügt dem neuen Projekt MFC-Unterstützung hinzu.  
+- **MFC-Unterstützung hinzufügen**
+
+   Fügt dem neuen Projekt MFC-Unterstützung hinzu.  
   
- **CLR-Unterstützung hinzufügen**  
- Fügt dem neuen Projekt CLR-Programmierungsunterstützung hinzu.  
+- **CLR-Unterstützung hinzufügen**
+
+   Fügt dem neuen Projekt CLR-Programmierungsunterstützung hinzu.  
   
- **Common Language Runtime**  
- Legt fest, dass das neue Projekt mit CLR-Features konform sein muss.  
+- **Common Language Runtime**
+
+   Legt fest, dass das neue Projekt mit CLR-Features konform sein muss.  
   
- **Common Language Runtime (alte Syntax)**  
- Legt fest, dass das neue Projekt mit der Syntax „Managed Extensions for C++“ konform sein muss, was die CLR-Programmiersyntax vor Visual C++ 2005 war.  
+- **Common Language Runtime (alte Syntax)**
+
+   Legt fest, dass das neue Projekt mit der Syntax „Managed Extensions for C++“ konform sein muss, was die CLR-Programmiersyntax vor Visual C++ 2005 war.  
   
- **Externes Buildsystem verwenden**  
- Gibt an, dass Buildtools verwendet werden sollen, die zum Erstellen des neuen Projekts nicht in Visual Studio enthalten sind. Wenn diese Option ausgewählt ist, können Sie Buildbefehlszeilen auf den Seiten **Einstellungen für Debugkonfiguration angeben** und **Einstellungen für Releasekonfiguration angeben** angeben.  
+- **Externes Buildsystem verwenden**
+
+   Gibt an, dass Buildtools verwendet werden sollen, die zum Erstellen des neuen Projekts nicht in Visual Studio enthalten sind. Wenn diese Option ausgewählt ist, können Sie Buildbefehlszeilen auf den Seiten **Einstellungen für Debugkonfiguration angeben** und **Einstellungen für Releasekonfiguration angeben** angeben.  
   
-> [!NOTE]
->  Wenn die Option **Externes Buildsystem verwenden** aktiviert ist, erstellt die IDE das neue Projekt nicht, die Optionen „/D“, „/I“, „/FI“, „/AI“, und „/FU“ sind für die Kompilierung also nicht erforderlich. Diese Optionen müssen allerdings ordnungsgemäß festgelegt werden, damit IntelliSense ordnungsgemäß funktioniert.  
+   > [!NOTE]
+   > Wenn die Option **Externes Buildsystem verwenden** aktiviert ist, erstellt die IDE das neue Projekt nicht, die Optionen „/D“, „/I“, „/FI“, „/AI“, und „/FU“ sind für die Kompilierung also nicht erforderlich. Diese Optionen müssen allerdings ordnungsgemäß festgelegt werden, damit IntelliSense ordnungsgemäß funktioniert.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Specify Debug Configuration Settings, Create New Project From Existing Code Files Wizard (Einstellungen für Debugkonfiguration angeben, Assistent „Neues Projekt aus vorhandenen Codedateien erstellen“)](../ide/specify-debug-configuration-settings.md)   

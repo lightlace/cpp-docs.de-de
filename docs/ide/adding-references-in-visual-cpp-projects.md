@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda420768b1ff0819ba666f71d62bfffa86e2105
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1438b364dac817fe2dbe47f117d672165a7693d5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33336107"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722448"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Hinzufügen von Verweisen in Visual C++-Projekten
 Es kommt bei Programmen sehr häufig vor, dass in anderen Binärdateien (z. B. DLL-Dateien, Windows-Runtime-Komponenten, SDK-Erweiterungen, COM-Komponenten und .NET-Assemblys) APIs aufgerufen werden. Die Methode, mit der Ihr Programm diese anderen Binärdateien findet, hängt sowohl vom Projekttyp als auch vom Typ der Binärdatei ab.  
@@ -43,83 +43,105 @@ Es kommt bei Programmen sehr häufig vor, dass in anderen Binärdateien (z. B. D
 ### <a name="activex-reference-properties"></a>ActiveX-Verweiseigenschaften  
  ActiveX-Verweiseigenschaften sind nur für Verweise auf COM-Komponenten verfügbar. Diese Eigenschaften werden nur angezeigt, wenn eine COM-Komponente im Bereich **Verweise** ausgewählt ist. Die Eigenschaften können nicht geändert werden.  
   
- **Vollständiger Pfad des Steuerelements**  
- Zeigt den Verzeichnispfad des Steuerelements an, auf das verwiesen wird.  
+- **Vollständiger Pfad des Steuerelements**
+
+   Zeigt den Verzeichnispfad des Steuerelements an, auf das verwiesen wird.  
   
- **GUID des Steuerelements**  
- Zeigt de GUID für das ActiveX-Steuerelement an.  
+- **GUID des Steuerelements**
+
+   Zeigt de GUID für das ActiveX-Steuerelement an.  
   
- **Steuerelementversion**  
- Zeigt die Version des ActiveX-Steuerelements an, auf das verwiesen wird.  
+- **Steuerelementversion**
+
+   Zeigt die Version des ActiveX-Steuerelements an, auf das verwiesen wird.  
   
- **Typbibliotheksnamen**  
- Zeigt den Namen der Typbibliothek an, auf die verwiesen wird.  
+- **Typbibliotheksnamen**
+
+   Zeigt den Namen der Typbibliothek an, auf die verwiesen wird.  
   
- **Wrappertool**  
- Zeigt das Tool an, das zum Erstellen der Interop-Assembly aus der COM-Bibliothek oder dem ActiveX-Steuerelement verwendet wird, auf die bzw. das verwiesen wird.  
+- **Wrappertool**
+
+   Zeigt das Tool an, das zum Erstellen der Interop-Assembly aus der COM-Bibliothek oder dem ActiveX-Steuerelement verwendet wird, auf die bzw. das verwiesen wird.  
   
 ### <a name="assembly-reference-properties"></a>Assemblyverweiseigenschaften  
  Assemblyverweiseigenschaften sind nur für Verweise auf .NET Framework-Assemblys in C++/CLI-Projekten verfügbar. Diese Eigenschaften werden nur angezeigt, wenn eine .NET Framework-Assembly im Bereich **Verweise** ausgewählt ist. Die Eigenschaften können nicht geändert werden.  
   
- **Relativer Pfad**  
- Zeigt den relativen Pfad vom Projektverzeichnis zur Assembly an, auf die verwiesen wird.  
+- **Relativer Pfad**
+
+   Zeigt den relativen Pfad vom Projektverzeichnis zur Assembly an, auf die verwiesen wird.  
   
 ### <a name="build-properties"></a>Buildeigenschaften  
  Die folgenden Eigenschaften stehen für verschiedene Arten von Verweisen zur Verfügung. Sie ermöglichen Ihnen die Angabe, wie die Erstellung mit Verweisen erfolgen soll.  
   
- **Lokale Kopie**  
- Gibt an, ob die Assembly, auf die verwiesen wird, während eines Buildvorgangs automatisch an den Zielspeicherort kopiert wird.  
+- **Lokale Kopie**
+
+   Gibt an, ob die Assembly, auf die verwiesen wird, während eines Buildvorgangs automatisch an den Zielspeicherort kopiert wird.  
   
- **Lokale Satellitenassemblys kopieren**  
- Gibt an, ob die Satellitenassemblys der Assembly, auf die verwiesen wird, während eines Buildvorgangs automatisch an den Zielspeicherort kopiert werden. Wird nur verwendet, wenn **Lokale Kopie** den Wert `true`aufweist.  
+- **Lokale Satellitenassemblys kopieren**
+
+   Gibt an, ob die Satellitenassemblys der Assembly, auf die verwiesen wird, während eines Buildvorgangs automatisch an den Zielspeicherort kopiert werden. Wird nur verwendet, wenn **Lokale Kopie** den Wert `true`aufweist.  
   
- **Verweisassemblyausgabe**  
- Gibt an, dass die Assembly im Buildvorgang verwendet wird. Wenn `true`, wird die Assembly während des Buildvorgangs in der Befehlszeile des Compilers verwendet.  
+- **Verweisassemblyausgabe**
+
+   Gibt an, dass die Assembly im Buildvorgang verwendet wird. Wenn `true`, wird die Assembly während des Buildvorgangs in der Befehlszeile des Compilers verwendet.  
   
 ### <a name="project-to-project-reference-properties"></a>Interprojektverweiseigenschaften  
  Die folgenden Eigenschaften definieren einen *Verweis zwischen Projekten* von dem im Bereich **Verweise** ausgewählten Projekt auf ein anderes Projekt in derselben Projektmappe. Weitere Informationen finden Sie unter [Verwalten von Verweisen in einem Projekt](/visualstudio/ide/managing-references-in-a-project).  
   
- **Bibliothekabhängigkeiten verknüpfen**  
- Wenn diese Eigenschaft **True**ist, fügt das Projektsystem in das abhängige Projekt die LIB-Dateien ein, die vom unabhängigen Projekt erstellt werden. Normalerweise geben Sie **True**an.  
+- **Bibliothekabhängigkeiten verknüpfen**
+
+   Wenn diese Eigenschaft **True**ist, fügt das Projektsystem in das abhängige Projekt die LIB-Dateien ein, die vom unabhängigen Projekt erstellt werden. Normalerweise geben Sie **True**an.  
   
- **Projektbezeichner**  
- Identifiziert eindeutig das unabhängige Projekt. Der Eigenschaftswert ist eine interne System-GUID, die nicht geändert werden kann.  
+- **Projektbezeichner**
+
+   Identifiziert eindeutig das unabhängige Projekt. Der Eigenschaftswert ist eine interne System-GUID, die nicht geändert werden kann.  
   
- **Bibliothekabhängigkeitseingaben verwenden**  
- Wenn diese Eigenschaft **False**ist, fügt das Projektsystem nicht in das abhängige Projekt die OBJ-Dateien für die Bibliothek ein, die vom unabhängigen Projekt erstellt wurden. Folglich deaktiviert dieser Wert inkrementelles Verknüpfen. In der Regel geben Sie **False** an, da das Erstellen der Anwendung lange dauern kann, wenn viele unabhängige Projekte vorhanden sind.  
+- **Bibliothekabhängigkeitseingaben verwenden**
+
+   Wenn diese Eigenschaft **False**ist, fügt das Projektsystem nicht in das abhängige Projekt die OBJ-Dateien für die Bibliothek ein, die vom unabhängigen Projekt erstellt wurden. Folglich deaktiviert dieser Wert inkrementelles Verknüpfen. In der Regel geben Sie **False** an, da das Erstellen der Anwendung lange dauern kann, wenn viele unabhängige Projekte vorhanden sind.  
   
 ### <a name="reference-properties"></a>Verweiseigenschaften  
  Die folgenden Eigenschaften gelten für COM- und Assemblyverweise und können nicht geändert werden.  
   
- **Assemblyname**  
- Zeigt den Assemblynamen für die Assembly an, auf die verwiesen wird.  
+- **Assemblyname**
+
+   Zeigt den Assemblynamen für die Assembly an, auf die verwiesen wird.  
   
- **Kultur**  
- Zeigt die Kultur des ausgewählten Verweises an.  
+- **Kultur**
+
+   Zeigt die Kultur des ausgewählten Verweises an.  
   
- **Beschreibung**  
- Zeigt die Beschreibung des ausgewählten Verweises an.  
+- **Beschreibung**
+
+   Zeigt die Beschreibung des ausgewählten Verweises an.  
   
- **Vollständiger Pfad**  
- Zeigt den Verzeichnispfad der Assembly an, auf die verwiesen wird.  
+- **Vollständiger Pfad**
+
+   Zeigt den Verzeichnispfad der Assembly an, auf die verwiesen wird.  
   
- **Identity**  
- Für die .NET Framework-Assemblys wird der vollständige Pfad angezeigt. Zeigt die GUID für COM-Komponenten an.  
+- **Identity**
+
+   Für die .NET Framework-Assemblys wird der vollständige Pfad angezeigt. Zeigt die GUID für COM-Komponenten an.  
   
- **Bezeichnung**  
- Zeigt die Bezeichnung des Verweises an.  
+- **Bezeichnung**
+
+   Zeigt die Bezeichnung des Verweises an.  
   
- **Name**  
- Zeigt den Namen des Verweises an.  
+- **Name**
+
+   Zeigt den Namen des Verweises an.  
   
- **Öffentliches Schlüsseltoken**  
- Zeigt das öffentliche Schlüsseltoken zur Identifizierung der Assembly an, auf die verwiesen wird.  
+- **Öffentliches Schlüsseltoken**
+
+   Zeigt das öffentliche Schlüsseltoken zur Identifizierung der Assembly an, auf die verwiesen wird.  
   
- **Starker Name**  
- `true`, wenn die Assembly, auf die verwiesen wird, einen starken Namen hat. Eine Assembly mit starkem Namen verfügt über eine eindeutige Versionsangabe.  
+- **Starker Name**
+
+   `true`, wenn die Assembly, auf die verwiesen wird, einen starken Namen hat. Eine Assembly mit starkem Namen verfügt über eine eindeutige Versionsangabe.  
   
- **Version**  
- Zeigt die Version der Assembly an, auf die verwiesen wird.  
+- **Version**
+
+   Zeigt die Version der Assembly an, auf die verwiesen wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaftenseiten](../ide/property-pages-visual-cpp.md)   
