@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e78c8ace8b482baa29fbabaf102a8a1bccadd06
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 0a194e45fd79ae59dc91abb21a9fb038d3ec4008
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325395"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041687"
 ---
 # <a name="ltvaluegt-visual-c"></a>&lt;value&gt; (Visual C++)
 Mit dem Tag \<value> können Sie Eigenschaften und Eigenschaftenaccessormethoden beschreiben. Beachten Sie, dass beim Hinzufügen einer Eigenschaft mithilfe eines Code-Assistenten in der Visual Studio-IDE der neuen Eigenschaft ein [\<summary>](../ide/summary-visual-cpp.md)-Tag hinzugefügt wird. Sie sollten dann manuell ein \<value>-Tag hinzufügen, um den Wert zu beschreiben, den die Eigenschaft darstellt.  
@@ -35,8 +35,8 @@ Mit dem Tag \<value> können Sie Eigenschaften und Eigenschaftenaccessormethoden
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `property-description`  
- Eine Beschreibung der Eigenschaft  
+*property-description*<br/>
+Eine Beschreibung der Eigenschaft  
   
 ## <a name="remarks"></a>Hinweise  
  Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
