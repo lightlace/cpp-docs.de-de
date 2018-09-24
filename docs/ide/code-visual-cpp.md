@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 331828f5c2cd3001cef50a29388a10c0a6a26f1d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 508f6b41c791cdb3a62e7c6e3de8a8a633dff3e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330118"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038879"
 ---
 # <a name="ltcodegt-visual-c"></a>&lt;code&gt; (Visual C++)
 Das Tag \<code> ermöglicht es, mindestens eine Zeile als Code anzugeben.  
@@ -35,8 +35,8 @@ Das Tag \<code> ermöglicht es, mindestens eine Zeile als Code anzugeben.
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `content`  
- Der Text, der als Code gekennzeichnet werden soll.  
+*content*<br/>
+Der Text, der als Code gekennzeichnet werden soll.  
   
 ## <a name="remarks"></a>Hinweise  
  Verwenden Sie [\<c>](../ide/c-visual-cpp.md), um anzugeben, dass ein Teil des Texts als Code gekennzeichnet werden soll.  
