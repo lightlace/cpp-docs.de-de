@@ -18,19 +18,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc9b3901cb031a1cc08d911889dc97818cfb5a44
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b2ad7e22bf6ba366a33dd44ce49c1a384f88b87
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410180"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041258"
 ---
 # <a name="setapptype"></a>_set_app_type
-Eine beim Start verwendete interne Funktion, die die CRT mitteilen soll, ob die App eine Konsolen-App oder eine GUI-Anwendung ist.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
+
+Eine beim Start verwendete interne Funktion, die die CRT mitteilen soll, ob die App eine Konsolen-App oder eine GUI-Anwendung ist.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
 typedef enum _crt_app_type
 {
     _crt_unknown_app,
@@ -40,25 +41,27 @@ typedef enum _crt_app_type
 
 void __cdecl _set_app_type(
     _crt_app_type appType
-    ); 
-```  
-  
-## <a name="parameters"></a>Parameter  
- `appType`  
- Ein Wert, der den Anwendungstyp angibt. Mögliche Werte sind:  
-  
-|Wert|description|  
-|----------------|-----------------|  
-|_crt_unknown_app|Unbekannter Anwendungstyp.|  
-|_crt_console_app|(Befehlszeilen)-Konsolenanwendung.|  
-|_crt_gui_app|GUI-(Windows)-Anwendung.|  
-  
-## <a name="remarks"></a>Hinweise  
- In der Regel müssen Sie diese Funktion nicht aufrufen. Sie ist Teil des C-Laufzeitstartcodes, der ausgeführt wird, bevor `main` in Ihrer Anwendung aufgerufen wird.
- 
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
+    );
+```
+
+## <a name="parameters"></a>Parameter
+
+*appType*<br/>
+Ein Wert, der den Anwendungstyp angibt. Mögliche Werte sind:
+
+|Wert|Beschreibung |
+|----------------|-----------------|
+|_crt_unknown_app|Unbekannter Anwendungstyp.|
+|_crt_console_app|(Befehlszeilen)-Konsolenanwendung.|
+|_crt_gui_app|GUI-(Windows)-Anwendung.|
+
+## <a name="remarks"></a>Hinweise
+
+In der Regel müssen Sie diese Funktion nicht aufrufen. Sie ist Teil des C-Laufzeitstartcodes, der ausgeführt wird, bevor `main` in Ihrer Anwendung aufgerufen wird.
+
+## <a name="requirements"></a>Anforderungen
+
+|-Routine zurückgegebener Wert|Erforderlicher Header|
+|-------------|---------------------|
 |_set_app_type|process.h|
 

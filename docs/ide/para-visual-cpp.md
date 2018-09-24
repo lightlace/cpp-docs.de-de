@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ebf50e4672ee2a3398f6c484c42f8e36f231169
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 00110a0e821077231c0f386a0656dc2214b0267d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325116"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034719"
 ---
 # <a name="ltparagt-visual-c"></a>&lt;para&gt; (Visual C++)
 Das Tag \<para> ist für die Verwendung innerhalb eines Tags wie [\<summary>](../ide/summary-visual-cpp.md), [\<remarks>](../ide/remarks-visual-cpp.md) oder [\<returns>](../ide/returns-visual-cpp.md) gedacht und ermöglicht es Ihnen, den Text zu strukturieren.  
@@ -35,8 +35,8 @@ Das Tag \<para> ist für die Verwendung innerhalb eines Tags wie [\<summary>](..
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `content`  
- Der Text des Absatzes  
+*content*<br/>
+Der Text des Absatzes  
   
 ## <a name="remarks"></a>Hinweise  
  Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
