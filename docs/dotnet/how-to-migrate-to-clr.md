@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cf55b6f5dc422bb01babe0bdf8d8c27ce50371da
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: 210cf8d3183e9fcd94cfa51d875a0b26e4a8fa07
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494464"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029657"
 ---
 # <a name="how-to-migrate-to-clr"></a>Gewusst wie: Migrieren zu /clr
 
@@ -85,8 +85,6 @@ NewFunc2 = (MYPROC)GetProcAddress( hLib, "Func2" );
 C++ verlangt außerdem, dass Funktionen entweder einen Prototyp haben oder vollständig definiert sind, bevor auf sie verwiesen wird oder sie aufgerufen werden können.
 
 In C-Code verwendete Bezeichner, die in C++ Schlüsselwörter sind, (wie `virtual`, `new`, `delete`, `bool`, `true`, `false` usw.) müssen umbenannt werden. Dies kann im Allgemeinen durch einfache Such- und Ersetzungsvorgänge erfolgen.
-
-Schließlich erfordern von C-Stil COM-Aufrufe explizite Verwendung von V-Table und `this` -Zeiger ist, gilt nicht für C++:
 
 ```
 COMObj1->lpVtbl->Method(COMObj, args);  // C code
