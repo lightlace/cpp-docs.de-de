@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afce516f2718a76658846ed4f992aeabff75330b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 234ae9a67bcbc60ea156fbacb5169d0bd1573a91
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328025"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442759"
 ---
 # <a name="implement-pure-virtuals"></a>Implementieren von rein virtuellen Elementen
-**Zweck:**: Sofortiges Generieren des Codes, der zum Implementieren aller rein virtuellen Methoden in einer Klasse erforderlich ist. 
+**Zweck:**: Sofortiges Generieren des Codes, der zum Implementieren aller rein virtuellen Methoden in einer Klasse erforderlich ist.
 
-**Anwendung:** Sie möchten von einer Klasse mit rein virtuellen Funktionen erben.  
+**Anwendung:** Sie möchten von einer Klasse mit rein virtuellen Funktionen erben.
 
 **Grund**: Sie könnten alle rein virtuellen Features nacheinander manuell implementieren, doch bei diesem Feature werden alle Methodensignaturen automatisch generiert.
 

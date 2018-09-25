@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df30bdea71a890eed25f546a53e7f329fa330762
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: d4e7742afd3fecc4dd115624da0c1650dc662004
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132019"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412521"
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE und Tools für Visual C++-Entwicklung
 
@@ -29,7 +29,7 @@ Zusätzlich zu den gemeinsam verwendeten Tools in der integrierten Visual Studio
 
 ## <a name="creating-a-solution-and-projects"></a>Erstellen einer Projektmappe und von Projekten
 
-Ein *Projekt* ist im Grunde eine Reihe von Quellcodedateien und Ressourcen wie Bilder oder Datendateien, aus denen eine ausführbare Datei erstellt wird. 
+Ein *Projekt* ist im Grunde eine Reihe von Quellcodedateien und Ressourcen wie Bilder oder Datendateien, aus denen eine ausführbare Datei erstellt wird.
 
 Visual Studio 2015 unterstützt MSBuild-Projekte. Sie können Visual Studio-Erweiterungen für andere Buildsysteme wie Qt oder CMake herunterladen.
 
@@ -119,7 +119,7 @@ Sie können das Programm debuggen, indem Sie **F5** drücken, wenn die Projektko
 
 ## <a name="deploy-completed-applications"></a>Bereitstellen fertiger Anwendungen
 
-Sie stellen eine UWP-App über den Microsoft Store für Kunden bereit, indem Sie die Menüoption **Projekt** > **Store** verwenden. Die Bereitstellung von CRT wird automatisch im Hintergrund durchgeführt. Weitere Informationen finden Sie unter [Veröffentlichen von Windows-Apps und -Spielen](/windows/uwp/publish/). 
+Sie stellen eine UWP-App über den Microsoft Store für Kunden bereit, indem Sie die Menüoption **Projekt** > **Store** verwenden. Die Bereitstellung von CRT wird automatisch im Hintergrund durchgeführt. Weitere Informationen finden Sie unter [Veröffentlichen von Windows-Apps und -Spielen](/windows/uwp/publish/).
 
 Wenn Sie eine systemeigene C++-Desktopanwendung auf einem anderen Computer bereitstellen, müssen Sie die Anwendung selbst sowie alle Bibliotheksdateien, von denen die Anwendung abhängt, installieren. Es gibt drei Möglichkeiten zum Bereitstellen der universellen C++-Runtime (UCRT): die zentrale Bereitstellung, die lokale Bereitstellung oder die statische Verknüpfung. Weitere Informationen finden Sie unter [Bereitstellen von Desktopanwendungen](../ide/deploying-native-desktop-applications-visual-cpp.md).
 

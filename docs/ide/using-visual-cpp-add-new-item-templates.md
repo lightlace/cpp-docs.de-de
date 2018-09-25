@@ -17,51 +17,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94da3456cc7c4723875b6376d5d9b2411f3f7ca8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ef47b8371b17aa8620ccb7547ed875a8450317c1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197902"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391682"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Verwenden von Vorlagen zum Hinzufügen neuer Elemente in Visual C++
-Sie können problemlos Elemente hinzufügen, die in Visual C++-Projekten gleich sind, indem Sie den Befehl **Neues Element hinzufügen** verwenden. Wenn Sie den Befehl **Neues Element hinzufügen** verwenden, wird das Dialogfeld `Add New Item` mit einer Liste von Elementvorlagen angezeigt, die die entsprechenden Dateien in das Projekt einfügen.  
-  
- Die folgende Tabelle enthält eine alphabetische Liste von Vorlagen zum Hinzufügen neuer Elemente in Visual C++.  
-  
-|Vorlage|Beschreibung |  
-|--------------|-----------------|  
-|Assemblyressourcendatei (.resx)|Erstellt eine Datei mit CLR-Ressourcen.|  
-|Bitmapdatei (.bmp)|Erstellt eine Win32-Bitmapdatei.|  
-|C++-Datei (.cpp)|Erstellt eine C++-Quelldatei.|  
-|Klassendiagramm (.cd)|Erstellt ein leeres Klassendiagramm.|  
-|Codeanalyse-Regelsatz (.ruleset)|Erstellt eine Einstellungsdatei für die Konfiguration der Codeanalyse.|  
-|Konfigurationsdatei (app.config)|Erstellt eine leere Konfigurationsdatei.|  
-|Komponentenklasse|Fügt eine Komponentenklasse mit CLR-Features hinzu.|  
-|Cursordatei (.cur)|Erstellt eine Win32-Cursordatei.|  
-|Statische Discovery-Datei (.disco)|Erstellt eine statische Discovery-Datei, die ein XML-Dokument ist, das Links zu anderen Ressourcen enthält, die den XML-Webdienst beschreiben. Sie ermöglicht das programmgesteuerte Suchen nach einem XML-Webdienst.|  
-|Frameset (.htm)|Fügt eine HTML-Datei hinzu, die mehrere HTML-Seiten enthält.|  
-|Headerdatei (.h)|Erstellt eine C++-Headerdatei.|  
-|HTML-Seite (.htm)|Erstellt eine leere HTML-Datei.|  
-|Symboldatei (.ico)|Erstellt eine Win32-Symboldatei.|  
-|Installerklasse|Fügt eine Klasse hinzu, die mithilfe von CLR-Features von der [Installerklasse](https://msdn.microsoft.com/library/system.configuration.install.installer.aspx) erbt.|  
-|MIDL-Datei (.idl)|Erstellt eine IDL-Datei.|  
-|Moduldefinitionsdatei (.def)|Erstellt eine DLL-Exportdefinitionsdatei.|  
-|Eigenschaftenblatt (.props)|Erstellt eine Eigenschaftenblattdatei für das Visual C++.|  
-|Registrierungsskript (.rgs)|Erstellt eine ATL-Registrierungsskriptdatei.|  
-|Bericht (.rdlc)|Erstellt eine Berichtdatei.|  
-|Ressourcendatei (.rc)|Erstellt eine Win32-Ressourcendatei.|  
-|Ressourcenvorlagendatei (.rct)|Erstellt eine Ressourcenvorlagendatei.|  
-|Menüband (.mfcribbon-ms)|Erstellt eine Menübanddatei.|  
-|Serveranwortdatei (.srf)|Erstellt eine Serverantwortdatei, die mit ATL-Server verwendet wird.|  
-|SQL-Skriptdatei (.sql)|Erstellt eine SQL-Skriptdatei. **Hinweis:** Diese Vorlage ist kein Feature der Professional-Edition.|  
-|Stylesheet (.css)|Fügt ein Cascading Stylesheet zum Festlegen von HTML-Formaten hinzu.|  
-|Textdatei (.txt)|Fügt eine leere Textdatei hinzu.|  
-|Benutzersteuerelement|Fügt ein Benutzersteuerelement mit CLR-Features hinzu.|  
-|Windows Form|Fügt ein Windows-Formular mit CLR-Features hinzu.|  
-|XML-Datei (.xml)|Fügt eine leere XML-Datei hinzu.|  
-|XML-Schemadatei (.xsd)|Erstellt eine Datei zum Definieren eines Schemas für XML-Dokumente.|  
-|XSLT-Datei (.xslt)|Erstellt eine Datei zum Umwandeln von XML-Dokumenten.|  
-  
-## <a name="see-also"></a>Siehe auch  
- [Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../ide/adding-functionality-with-code-wizards-cpp.md)
+
+Sie können problemlos Elemente hinzufügen, die in Visual C++-Projekten gleich sind, indem Sie den Befehl **Neues Element hinzufügen** verwenden. Wenn Sie den Befehl **Neues Element hinzufügen** verwenden, wird das Dialogfeld `Add New Item` mit einer Liste von Elementvorlagen angezeigt, die die entsprechenden Dateien in das Projekt einfügen.
+
+Die folgende Tabelle enthält eine alphabetische Liste von Vorlagen zum Hinzufügen neuer Elemente in Visual C++.
+
+|Vorlage|Beschreibung |
+|--------------|-----------------|
+|Assemblyressourcendatei (.resx)|Erstellt eine Datei mit CLR-Ressourcen.|
+|Bitmapdatei (.bmp)|Erstellt eine Win32-Bitmapdatei.|
+|C++-Datei (.cpp)|Erstellt eine C++-Quelldatei.|
+|Klassendiagramm (.cd)|Erstellt ein leeres Klassendiagramm.|
+|Codeanalyse-Regelsatz (.ruleset)|Erstellt eine Einstellungsdatei für die Konfiguration der Codeanalyse.|
+|Konfigurationsdatei (app.config)|Erstellt eine leere Konfigurationsdatei.|
+|Komponentenklasse|Fügt eine Komponentenklasse mit CLR-Features hinzu.|
+|Cursordatei (.cur)|Erstellt eine Win32-Cursordatei.|
+|Statische Discovery-Datei (.disco)|Erstellt eine statische Discovery-Datei, die ein XML-Dokument ist, das Links zu anderen Ressourcen enthält, die den XML-Webdienst beschreiben. Sie ermöglicht das programmgesteuerte Suchen nach einem XML-Webdienst.|
+|Frameset (.htm)|Fügt eine HTML-Datei hinzu, die mehrere HTML-Seiten enthält.|
+|Headerdatei (.h)|Erstellt eine C++-Headerdatei.|
+|HTML-Seite (.htm)|Erstellt eine leere HTML-Datei.|
+|Symboldatei (.ico)|Erstellt eine Win32-Symboldatei.|
+|Installerklasse|Fügt eine Klasse hinzu, die mithilfe von CLR-Features von der [Installerklasse](https://msdn.microsoft.com/library/system.configuration.install.installer.aspx) erbt.|
+|MIDL-Datei (.idl)|Erstellt eine IDL-Datei.|
+|Moduldefinitionsdatei (.def)|Erstellt eine DLL-Exportdefinitionsdatei.|
+|Eigenschaftenblatt (.props)|Erstellt eine Eigenschaftenblattdatei für das Visual C++.|
+|Registrierungsskript (.rgs)|Erstellt eine ATL-Registrierungsskriptdatei.|
+|Bericht (.rdlc)|Erstellt eine Berichtdatei.|
+|Ressourcendatei (.rc)|Erstellt eine Win32-Ressourcendatei.|
+|Ressourcenvorlagendatei (.rct)|Erstellt eine Ressourcenvorlagendatei.|
+|Menüband (.mfcribbon-ms)|Erstellt eine Menübanddatei.|
+|Serveranwortdatei (.srf)|Erstellt eine Serverantwortdatei, die mit ATL-Server verwendet wird.|
+|SQL-Skriptdatei (.sql)|Erstellt eine SQL-Skriptdatei. **Hinweis:** Diese Vorlage ist kein Feature der Professional-Edition.|
+|Stylesheet (.css)|Fügt ein Cascading Stylesheet zum Festlegen von HTML-Formaten hinzu.|
+|Textdatei (.txt)|Fügt eine leere Textdatei hinzu.|
+|Benutzersteuerelement|Fügt ein Benutzersteuerelement mit CLR-Features hinzu.|
+|Windows Form|Fügt ein Windows-Formular mit CLR-Features hinzu.|
+|XML-Datei (.xml)|Fügt eine leere XML-Datei hinzu.|
+|XML-Schemadatei (.xsd)|Erstellt eine Datei zum Definieren eines Schemas für XML-Dokumente.|
+|XSLT-Datei (.xslt)|Erstellt eine Datei zum Umwandeln von XML-Dokumenten.|
+
+## <a name="see-also"></a>Siehe auch
+
+[Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../ide/adding-functionality-with-code-wizards-cpp.md)

@@ -1,28 +1,34 @@
 ---
 title: InvokeHelper-Struktur | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Details::InvokeHelper
+- event/Microsoft::WRL::Details::InvokeHelper::callback_
+- event/Microsoft::WRL::Details::InvokeHelper::Invoke
+- event/Microsoft::WRL::Details::InvokeHelper::InvokeHelper
 dev_langs:
 - C++
 helpviewer_keywords:
-- InvokeHelper structure
+- Microsoft::WRL::Details::InvokeHelper structure
+- Microsoft::WRL::Details::callback_ data member
+- Microsoft::WRL::Details::Invoke method
+- Microsoft::WRL::Details::InvokeHelper, constructor
 ms.assetid: 555ad2bc-4dd6-4e65-a2e2-1242c395f0e5
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ffef0c6a55116bf3a228d7d5da4bd698607d7fa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6eccc9a7eacf9cdd3b98796f575d966b7b566864
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431033"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169536"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper-Struktur
 
@@ -96,7 +102,7 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
 Der Typ des Ereignishandlerfunktion.
 
 *argCount*<br/>
-Die Anzahl von Argumenten in eine **InvokeHelper** Spezialisierung.
+Die Anzahl von Argumenten in eine `InvokeHelper` Spezialisierung.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -106,27 +112,27 @@ Stellt eine Implementierung der `Invoke()` -Methode basierend auf der angegebene
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
-|----------|-----------------|
-|`Traits`|Ein Synonym für die Klasse, die den Typ jedes Arguments der Ereignis-Handler definiert.|
+Name     | Beschreibung
+-------- | -----------------------------------------------------------------------------
+`Traits` | Ein Synonym für die Klasse, die den Typ jedes Arguments der Ereignis-Handler definiert.
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
-|----------|-----------------|
-|[InvokeHelper::InvokeHelper-Konstruktor](../windows/invokehelper-invokehelper-constructor.md)|Initialisiert eine neue Instanz der dem **InvokeHelper** Klasse.|
+Name                                        | Beschreibung
+------------------------------------------- | -------------------------------------------------------
+[InvokeHelper:: InvokeHelper](#invokehelper) | Initialisiert eine neue Instanz der `InvokeHelper`-Klasse.
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
-|----------|-----------------|
-|[InvokeHelper::Invoke-Methode](../windows/invokehelper-invoke-method.md)|Ruft den Ereignishandler, dessen Signatur mit die angegebene Anzahl von Argumenten enthält.|
+Name                            | Beschreibung
+------------------------------- | -----------------------------------------------------------------------------------
+[InvokeHelper:: Invoke](#invoke) | Ruft den Ereignishandler, dessen Signatur mit die angegebene Anzahl von Argumenten enthält.
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
-|Name|Beschreibung|
-|----------|-----------------|
-|[InvokeHelper::callback_-Datenmember](../windows/invokehelper-callback-data-member.md)|Stellt den Ereignishandler aufgerufen wird, wenn ein Ereignis auftritt.|
+Name                                 | Beschreibung
+------------------------------------ | ----------------------------------------------------------
+[InvokeHelper:: Callback_](#callback) | Stellt den Ereignishandler aufgerufen wird, wenn ein Ereignis auftritt.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -138,6 +144,111 @@ Stellt eine Implementierung der `Invoke()` -Methode basierend auf der angegebene
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Siehe auch
+## <a name="callback"></a>InvokeHelper:: Callback_
 
-[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+```cpp
+TCallback callback_;
+```
+
+### <a name="remarks"></a>Hinweise
+
+Stellt den Ereignishandler aufgerufen wird, wenn ein Ereignis auftritt.
+
+Die `TCallback` Template-Parameter gibt den Typ des ereignishandlers.
+
+## <a name="invoke"></a>InvokeHelper:: Invoke
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+```cpp
+STDMETHOD(
+   Invoke
+)();
+STDMETHOD(
+   Invoke
+)(typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+```
+
+### <a name="parameters"></a>Parameter
+
+*arg1*<br/>
+Das Argument 1.
+
+*Arg2*<br/>
+Argument 2.
+
+*Arg3*<br/>
+Argument 3.
+
+*Arg4*<br/>
+4-Argument.
+
+*Arg5*<br/>
+5-Argument.
+
+*Arg6*<br/>
+6-Argument.
+
+*Arg7*<br/>
+7-Argument.
+
+*Arg8*<br/>
+8-Argument.
+
+*Arg9*<br/>
+9-Argument.
+
+### <a name="return-value"></a>Rückgabewert
+
+S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler beschreibt.
+
+### <a name="remarks"></a>Hinweise
+
+Ruft den Ereignishandler, dessen Signatur mit die angegebene Anzahl von Argumenten enthält.
+
+## <a name="invokehelper"></a>InvokeHelper:: InvokeHelper
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+```cpp
+explicit InvokeHelper(
+   TCallback callback
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*Rückruf*<br/>
+Ein Ereignishandler.
+
+### <a name="remarks"></a>Hinweise
+
+Initialisiert eine neue Instanz der `InvokeHelper`-Klasse.
+
+Die `TCallback` Template-Parameter gibt den Typ des ereignishandlers.

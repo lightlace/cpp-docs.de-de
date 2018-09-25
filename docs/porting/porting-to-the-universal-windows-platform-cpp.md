@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eefb2347cfe3a46dabbf72a46fd46fcb16f57d38
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 01efc61d08204598cbce6d875bfe2c2293d8e711
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578403"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404266"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Portieren auf die universelle Windows-Plattform (C++)
 
@@ -118,5 +118,5 @@ Wenn Sie ein neues UWP-Projekt mithilfe von Visual Studio erstellt haben, sollte
 
 ## <a name="see-also"></a>Siehe auch
 
-[Visual C++: Portierungsanleitung](../porting/porting-to-the-universal-windows-platform-cpp.md)  
+[Visual C++: Portierungsanleitung](../porting/porting-to-the-universal-windows-platform-cpp.md)<br/>
 [Entwickeln von Apps für die universelle Windows-Plattform (UWP)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)  

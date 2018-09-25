@@ -22,33 +22,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 927ab1004336787131c8f92c247512d1c66caf69
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 32125de84e7aa2601c65ad7eb441fff915dcd9d0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212755"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414159"
 ---
 # <a name="midl-property-pages-output"></a>Eigenschaftenseiten "MIDL": "Ausgabe"
-Die Eigenschaftenseite **Ausgabe** im Ordner **MIDL** gibt die folgenden MIDL-Compileroptionen an:  
-  
--   Ausgabeverzeichnis ([/out](https://msdn.microsoft.com/library/windows/desktop/aa367358))  
-  
--   Headerdatei ([/h](https://msdn.microsoft.com/library/windows/desktop/aa367325))  
-  
--   DLL-Datendatei ([/dlldata](https://msdn.microsoft.com/library/windows/desktop/aa367322))  
-  
--   IID-Datei ([/iid](https://msdn.microsoft.com/library/windows/desktop/aa367329))  
-  
--   Proxydatei ([/proxy](https://msdn.microsoft.com/library/windows/desktop/aa367362))  
-  
--   Typbibliothek generieren ([/notlb](https://msdn.microsoft.com/library/windows/desktop/aa367343))  
-  
--   Typbibliothek ([/tlb](https://msdn.microsoft.com/library/windows/desktop/aa367372))  
-  
- Informationen über das Zugreifen auf die Eigenschaftenseite **Ausgabe** im Ordner **MIDL** finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md).  
-  
- Informationen über den programmgesteuerten Zugriff auf die MIDL-Optionen für C++-Projekte finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Eigenschaftenseiten "MIDL"](../ide/midl-property-pages.md)
+
+Die Eigenschaftenseite **Ausgabe** im Ordner **MIDL** gibt die folgenden MIDL-Compileroptionen an:
+
+- Ausgabeverzeichnis ([/out](https://msdn.microsoft.com/library/windows/desktop/aa367358))
+
+- Headerdatei ([/h](https://msdn.microsoft.com/library/windows/desktop/aa367325))
+
+- DLL-Datendatei ([/dlldata](https://msdn.microsoft.com/library/windows/desktop/aa367322))
+
+- IID-Datei ([/iid](https://msdn.microsoft.com/library/windows/desktop/aa367329))
+
+- Proxydatei ([/proxy](https://msdn.microsoft.com/library/windows/desktop/aa367362))
+
+- Typbibliothek generieren ([/notlb](https://msdn.microsoft.com/library/windows/desktop/aa367343))
+
+- Typbibliothek ([/tlb](https://msdn.microsoft.com/library/windows/desktop/aa367372))
+
+Informationen über das Zugreifen auf die Eigenschaftenseite **Ausgabe** im Ordner **MIDL** finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md).
+
+Informationen über den programmgesteuerten Zugriff auf die MIDL-Optionen für C++-Projekte finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.
+
+## <a name="see-also"></a>Siehe auch
+
+[Eigenschaftenseiten "MIDL"](../ide/midl-property-pages.md)
