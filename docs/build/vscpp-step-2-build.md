@@ -5,7 +5,7 @@ ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: tutorial
 ms.technology:
-- devlang-C++
+- cpp-tools
 ms.devlang: C++
 dev_langs:
 - C++
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05a5204234eb127da676e3b4a12ef875baecdad0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c9c32f6811a18fae00cb2943a9ca97a89cf159a1
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705782"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029592"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Erstellen Sie und führen Sie einer C++-Konsolen-app-Projekts aus
 
@@ -45,7 +45,7 @@ Wenn Visual Studio wie folgt aussieht, sind Sie bereit zum Erstellen und Ausfüh
 
    ![Starten Sie das Projekt](../build/media/vscpp-start-without-debugging.gif "starten Sie das Projekt")
 
-    Ein Konsolenfenster wird geöffnet, und klicken Sie dann wird die app ausgeführt. Wenn Sie eine Konsolen-app in Visual Studio starten, es den Code ausführt, gibt "drücken Sie dann eine beliebige Taste, um den Vorgang fortzusetzen. sein. ." dass Sie die Möglichkeit, die die Ausgabe angezeigt werden können.
+   Ein Konsolenfenster wird geöffnet, und klicken Sie dann wird die app ausgeführt. Wenn Sie eine Konsolen-app in Visual Studio starten, es den Code ausführt, gibt "drücken Sie dann eine beliebige Taste, um den Vorgang fortzusetzen. sein. ." dass Sie die Möglichkeit, die die Ausgabe angezeigt werden können.
 
 Herzlichen Glückwunsch! Sie erstellt haben, Ihre erste "Hello, World!" Konsolen-app in Visual Studio! Drücken Sie das Konsolenfenster zu schließen und zurück zu Visual Studio an.
 
